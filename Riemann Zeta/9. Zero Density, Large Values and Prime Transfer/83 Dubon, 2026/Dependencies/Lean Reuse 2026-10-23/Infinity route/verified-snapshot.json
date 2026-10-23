@@ -1,0 +1,37 @@
+{
+  "repository": "TauCetiProject/TauCeti",
+  "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+  "files": [
+    {
+      "name": "Basic.lean",
+      "sha": "f29c0c925bfca76bef11d94e5e7ef740ae81c9c9",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/InfinityPlace/Basic.lean",
+      "path": "E:/Lean/.tmp/dubon83/elliptic-infinity-reuse-20261023/Basic.lean.txt",
+      "bytes": 21436,
+      "sha256": "3CE6AF2297B568D5108AD0D7D57A5D2042DC36EDB92BFCAD7753B695F19F53D8",
+      "verifiedGitBlob": "f29c0c925bfca76bef11d94e5e7ef740ae81c9c9",
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Infinity route/Basic.lean.txt"
+    },
+    {
+      "name": "PoleOrder.lean",
+      "sha": "eed53cb9bdd01fe4d5c105577afabdba2db71f9a",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/InfinityPlace/PoleOrder.lean",
+      "path": "E:/Lean/.tmp/dubon83/elliptic-infinity-reuse-20261023/PoleOrder.lean.txt",
+      "bytes": 8954,
+      "sha256": "ED09D865DD81B117F5B6AABA8179915F96F2FAB6A12125B13AF3828713F68BB8",
+      "verifiedGitBlob": "eed53cb9bdd01fe4d5c105577afabdba2db71f9a",
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Infinity route/PoleOrder.lean.txt"
+    },
+    {
+      "name": "Norm.lean",
+      "sha": "1cb2cdac0678694e0fc169128d9c5cac88f584c2",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Norm.lean",
+      "path": "E:/Lean/.tmp/dubon83/elliptic-infinity-reuse-20261023/Norm.lean.txt",
+      "bytes": 6530,
+      "sha256": "E8CA415769FC60142B9866F173EAA694BE46655458B8107DBCF825CFE87011E8",
+      "verifiedGitBlob": "1cb2cdac0678694e0fc169128d9c5cac88f584c2",
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Infinity route/Norm.lean.txt"
+    }
+  ],
+  "archivedUTC": "2026-10-23T12:13:07.885605+00:00"
+}

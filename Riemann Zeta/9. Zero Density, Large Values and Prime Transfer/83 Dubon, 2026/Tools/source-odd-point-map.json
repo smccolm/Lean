@@ -1,0 +1,790 @@
+{
+  "date": "23 October 2026",
+  "modules": [
+    "Dubon2026.SourceEllipticOddCoordinatePullback",
+    "Dubon2026.SourceEllipticOddCoordinateIntegralImage",
+    "Dubon2026.SourceEllipticOddIntermediateRing",
+    "Dubon2026.SourceEllipticOddIntermediateFinite",
+    "Dubon2026.SourceEllipticOddPointNorm",
+    "Dubon2026.SourceEllipticKernelLocalization",
+    "Dubon2026.SourceEllipticKernelLocalCoordinates",
+    "Dubon2026.SourceEllipticOddIntermediateLocalization",
+    "Dubon2026.SourceEllipticKernelLocalEvaluation",
+    "Dubon2026.SourceEllipticKernelEvaluationCoordinates",
+    "Dubon2026.SourceEllipticVeluAffineEvaluation",
+    "Dubon2026.SourceEllipticOddAffineSpecialization",
+    "Dubon2026.SourceEllipticKernelPointIdeal",
+    "Dubon2026.SourceEllipticOddIntermediateEvaluation",
+    "Dubon2026.SourceEllipticOddIntermediateGalois",
+    "Dubon2026.SourceEllipticOddIntermediatePointIdeal",
+    "Dubon2026.SourceEllipticOddPointResidueDegree",
+    "Dubon2026.SourceEllipticOddPointIdealNorm",
+    "Dubon2026.SourceEllipticPointIdealClass",
+    "Dubon2026.SourceEllipticOddPointNormFormula",
+    "Dubon2026.SourceEllipticOddKernelNorm",
+    "Dubon2026.SourceEllipticOddKernelGeometry",
+    "Dubon2026.SourceEllipticOddPointSurjective",
+    "Dubon2026.SourceEllipticOddPointFibers"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original weight-two Frobenius/inertia -> actual modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census and wild differential contribution -> elliptic cyclic-subgroup inertia orbits -> actual cyclic-subgroup interpretation of integral modular-polynomial roots -> actual prime quotient homomorphisms and integral polynomial products.",
+  "discharged": "The actual odd quotient has an additive point map constructed by the relative ideal-class norm. The common integral closure is proved finite and Dedekind and equals the source coordinate ring with the actual kernel denominator inverted. Its affine evaluation, source point-ideal extension, target contraction, residue degree one and relative ideal norm are derived. The actual Galois field extension transfers to the canonical fraction rings used by the norm theorem. The native point-class equivalence proves that the actual additive map agrees with the literal finite Velu formulas off the kernel. At denominator roots the extended point ideal is the unit ideal. The actual map has kernel exactly AddSubgroup.zmultiples Q, is surjective, and every point fiber has cardinality 2n+1. All characteristics, including two and three, are retained. No common-ring, point-map formula, ideal-norm, kernel, surjectivity or fiber-cardinality premise remains.",
+  "boundary": "Odd-prime integral modular-polynomial products, specialization and finite-set reduction, cyclic-subgroup root correspondence, inertia orbit map, exceptional-fiber census and wild differential contributions remain required for unconditional reverse genus. Genus equality, place comparison, good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "The 6,900-module production aggregate and focused odd-point-map audit pass with zero diagnostics. Five declaration-value audits verify 171 required dependencies. Odd-prime integral modular-polynomial products, specialization and finite-set reduction, cyclic-subgroup root correspondence, inertia orbit map, exceptional-fiber census and wild differential contributions remain required for unconditional reverse genus. Genus equality, place comparison, good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification of this scope is pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceEllipticFunctionField.toClass_oddPointNorm",
+    "Dubon2026.SourceEllipticFunctionField.oddPointNorm_eq_iff",
+    "Dubon2026.SourceEllipticFunctionField.oddCoordinatePullback_X",
+    "Dubon2026.SourceEllipticFunctionField.oddCoordinatePullback_Y",
+    "Dubon2026.SourceEllipticFunctionField.mem_oddIntermediateRing_iff",
+    "Dubon2026.SourceEllipticFunctionField.oddSourceToIntermediate_coe",
+    "Dubon2026.SourceEllipticFunctionField.oddTargetToIntermediate_coe",
+    "Dubon2026.SourceEllipticFunctionField.isIntegral_genericX_oddCoordinate",
+    "Dubon2026.SourceEllipticFunctionField.oddIntermediateRing_eq_kernelLocalRing",
+    "Dubon2026.SourceEllipticFunctionField.map_XYIdeal_eq_kernelLocalEval_ker",
+    "Dubon2026.SourceEllipticFunctionField.isMaximal_kernelLocalEval_ker",
+    "Dubon2026.SourceEllipticFunctionField.comap_kernelLocalEval_ker_oddKernelPullback",
+    "Dubon2026.SourceEllipticFunctionField.oddPointNorm_some_ne_zero",
+    "Dubon2026.SourceEllipticFunctionField.card_fiber_oddPointNorm"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-23T12:32:36.293623+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticOddCoordinatePullback",
+        "SourceEllipticOddCoordinateIntegralImage",
+        "SourceEllipticOddIntermediateRing",
+        "SourceEllipticOddIntermediateFinite",
+        "SourceEllipticOddPointNorm"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddCoordinatePullback.lean",
+          "sha256": "66DF63286A87AEE3A4AD3CDFA28C59743EE4B8F7DE26DCFBF981270AFE5FECA3",
+          "oleanSha256": "8D40F68C78C7B1898A3F2D1060057D39F438A0626C5C63339CBE9511D16BB54A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddCoordinateIntegralImage.lean",
+          "sha256": "20DE6D0996B8F804131CA87FF282FD334920ADD25A067F87B98010B385C45320",
+          "oleanSha256": "0D82F0333719B0898A3687B688038296E4BA38432145C2EBA844FC99FB692B44"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddIntermediateRing.lean",
+          "sha256": "CDC2C9BA8E76C773C8891CD7B289E5AD3B0DC98CBDA143E285AF917807643BD9",
+          "oleanSha256": "14F96AF52E86526FB936C885372A8F02545CEA8A397EBE7B2C2D2244438F4F2C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddIntermediateFinite.lean",
+          "sha256": "D0536F86281BD81BAF027BA3567149A6F2F0C94084DBAF9B5E4A0D175678A6AB",
+          "oleanSha256": "60E9ABD2FF9E9108E97A2FAA498D0D049906A67D84F6CBF5F554AD305D346873"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddPointNorm.lean",
+          "sha256": "C7D2CB5452BD2E04D5A491EBF337DB2B8A5CAFF6617C8D326D0CDA791D355CE2",
+          "oleanSha256": "4BA505D849A85EFBC767521F8000CED8E9E054CD014D35C81FB8250CED5AA306"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticFunctionField.oddCoordinate_scalarTower",
+        "Dubon2026.SourceEllipticFunctionField.oddCoordinate_field_scalarTower",
+        "Dubon2026.SourceEllipticFunctionField.oddCoordinatePullback_injective",
+        "Dubon2026.SourceEllipticFunctionField.oddCoordinatePullback_X",
+        "Dubon2026.SourceEllipticFunctionField.oddCoordinatePullback_Y",
+        "Dubon2026.SourceEllipticFunctionField.isIntegral_oddCoordinate_of_polynomial",
+        "Dubon2026.SourceEllipticFunctionField.isIntegral_genericX_oddCoordinate",
+        "Dubon2026.SourceEllipticFunctionField.isIntegral_genericY_oddCoordinate",
+        "Dubon2026.SourceEllipticFunctionField.isIntegral_coordinate_oddCoordinate",
+        "Dubon2026.SourceEllipticFunctionField.mem_oddIntermediateRing_iff",
+        "Dubon2026.SourceEllipticFunctionField.oddSourceToIntermediate_coe",
+        "Dubon2026.SourceEllipticFunctionField.oddSourceToIntermediate_injective",
+        "Dubon2026.SourceEllipticFunctionField.oddTargetToIntermediate_coe",
+        "Dubon2026.SourceEllipticFunctionField.oddTargetToIntermediate_injective",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediate_scalarTower",
+        "Dubon2026.SourceEllipticFunctionField.isIntegralClosure_oddIntermediateRing",
+        "Dubon2026.SourceEllipticFunctionField.isDedekindDomain_oddCoordinate",
+        "Dubon2026.SourceEllipticFunctionField.moduleFinite_oddIntermediateRing",
+        "Dubon2026.SourceEllipticFunctionField.isDedekindDomain_oddIntermediateRing",
+        "Dubon2026.SourceEllipticFunctionField.isTorsionFree_oddIntermediateRing",
+        "Dubon2026.SourceEllipticFunctionField.toClass_oddPointNorm",
+        "Dubon2026.SourceEllipticFunctionField.oddPointNorm_eq_iff",
+        "Dubon2026.SourceEllipticFunctionField.oddCoordinatePullback",
+        "Dubon2026.SourceEllipticFunctionField.oddCoordinateAlgebra",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateRing",
+        "Dubon2026.SourceEllipticFunctionField.oddSourceToIntermediate",
+        "Dubon2026.SourceEllipticFunctionField.oddTargetToIntermediate",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateAlgebra",
+        "Dubon2026.SourceEllipticFunctionField.oddClassNorm",
+        "Dubon2026.SourceEllipticFunctionField.oddPointNorm"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticFunctionField.oddCoordinate_scalarTower",
+        "Dubon2026.SourceEllipticFunctionField.oddCoordinate_field_scalarTower",
+        "Dubon2026.SourceEllipticFunctionField.oddCoordinatePullback_injective",
+        "Dubon2026.SourceEllipticFunctionField.oddCoordinatePullback_X",
+        "Dubon2026.SourceEllipticFunctionField.oddCoordinatePullback_Y",
+        "Dubon2026.SourceEllipticFunctionField.isIntegral_oddCoordinate_of_polynomial",
+        "Dubon2026.SourceEllipticFunctionField.isIntegral_genericX_oddCoordinate",
+        "Dubon2026.SourceEllipticFunctionField.isIntegral_genericY_oddCoordinate",
+        "Dubon2026.SourceEllipticFunctionField.isIntegral_coordinate_oddCoordinate",
+        "Dubon2026.SourceEllipticFunctionField.mem_oddIntermediateRing_iff",
+        "Dubon2026.SourceEllipticFunctionField.oddSourceToIntermediate_coe",
+        "Dubon2026.SourceEllipticFunctionField.oddSourceToIntermediate_injective",
+        "Dubon2026.SourceEllipticFunctionField.oddTargetToIntermediate_coe",
+        "Dubon2026.SourceEllipticFunctionField.oddTargetToIntermediate_injective",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediate_scalarTower",
+        "Dubon2026.SourceEllipticFunctionField.isIntegralClosure_oddIntermediateRing",
+        "Dubon2026.SourceEllipticFunctionField.isDedekindDomain_oddCoordinate",
+        "Dubon2026.SourceEllipticFunctionField.moduleFinite_oddIntermediateRing",
+        "Dubon2026.SourceEllipticFunctionField.isDedekindDomain_oddIntermediateRing",
+        "Dubon2026.SourceEllipticFunctionField.isTorsionFree_oddIntermediateRing",
+        "Dubon2026.SourceEllipticFunctionField.toClass_oddPointNorm",
+        "Dubon2026.SourceEllipticFunctionField.oddPointNorm_eq_iff"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticFunctionField.oddCoordinatePullback",
+        "Dubon2026.SourceEllipticFunctionField.oddCoordinateAlgebra",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateRing",
+        "Dubon2026.SourceEllipticFunctionField.oddSourceToIntermediate",
+        "Dubon2026.SourceEllipticFunctionField.oddTargetToIntermediate",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateAlgebra",
+        "Dubon2026.SourceEllipticFunctionField.oddClassNorm",
+        "Dubon2026.SourceEllipticFunctionField.oddPointNorm"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddPointNormAudit5.log",
+      "logSha256": "9A9D202307A8802B1A6D5E31388BA5F74E882479BF2777D06F9D5139C640F804",
+      "auditSha256": "C5F0EE7A0ACC389BABC20330E5AD0A1356DC7BE6CC2D29B70B7F192C0FD6B94A",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 30,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 43,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOddPointNormDependencyAudit5.log",
+      "dependencyAuditSha256": "265438F6BBF3C918A619FA97F762664EEE4C0A406BF8A52838D8F07271ABA1BE",
+      "dependencyAuditSourceSha256": "8C69F333B9B4FAD2C6AAE95C90F5E24EF914433C2507A735C17F5F8961A6983B",
+      "consumers": [
+        "Dubon2026.SourceEllipticFunctionField.toClass_oddPointNorm",
+        "Dubon2026.SourceEllipticFunctionField.oddPointNorm_eq_iff",
+        "Dubon2026.SourceEllipticFunctionField.oddCoordinatePullback_X",
+        "Dubon2026.SourceEllipticFunctionField.oddCoordinatePullback_Y",
+        "Dubon2026.SourceEllipticFunctionField.mem_oddIntermediateRing_iff",
+        "Dubon2026.SourceEllipticFunctionField.oddSourceToIntermediate_coe",
+        "Dubon2026.SourceEllipticFunctionField.oddTargetToIntermediate_coe",
+        "Dubon2026.SourceEllipticFunctionField.isIntegral_genericX_oddCoordinate"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census -> elliptic inertia orbit map -> cyclic-subgroup interpretation of integral modular-polynomial roots -> odd-prime quotient maps and products -> actual odd quotient homomorphism -> norm-induced point map -> actual finite Dedekind intermediate integral closure and its norm-induced additive point map",
+      "discharged": "The actual quotient coordinate action is fixed by the literal field pullback. All original affine coordinate functions are integral over the actual quotient coordinate ring. The actual common integral closure has injective source and target embeddings, and is finite and Dedekind over the algebraically closed base, using the proved finite separable extension and actual quotient normality. Actual ideal extension and relative norm conjugated by the proved point-class equivalences give an additive map between the actual source and quotient point groups. The coefficient field is arbitrary in characteristic; algebraic closure is used exactly for the existing coordinate normality proof.",
+      "boundary": "Scratch only; production promotion and verification pending. The norm-induced additive map must still be proved equal to the literal affine coordinate formulas and have exactly the prescribed cyclic kernel. Its actual common ring must be identified sufficiently to evaluate affine point ideals and their norms. Odd-prime products, cyclic roots, inertia census, reverse genus, good reduction and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-odd-point-norm-5-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "D373B83A26BD3CFF0C181E49330725B69027295DFE4FA4A0420CB8647FDBC06A"
+    },
+    {
+      "recordedUTC": "2026-10-23T12:39:48.926994+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticKernelLocalization",
+        "SourceEllipticKernelLocalCoordinates",
+        "SourceEllipticOddIntermediateLocalization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticKernelLocalization.lean",
+          "sha256": "F004E08D73CDBC0D51438C6AA188F6F49814CF40C836620577CB2228E85ABA7E",
+          "oleanSha256": "ED89474177934CC699CA578A5FF25DCD53F1EAAF62F579E45401B109AC99EC30"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticKernelLocalCoordinates.lean",
+          "sha256": "8AB88001C419877B2838BCE1351072BF466341460EDDCD82F757F29804C73861",
+          "oleanSha256": "2A274544DEFD20FEC49496BDF9198911E3FFB377D5D039F687DC9A6BEDC31EDC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddIntermediateLocalization.lean",
+          "sha256": "C9E8EE0FAC051C42D118CA7549A8CE8A77CBC803F441CE51543845745FE755A6",
+          "oleanSha256": "12FF272138446A73FA58BC5A891FF2EDF2BB0C58726D0734E5E887481C1D1E64"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticFunctionField.kernelCoordinate_image",
+        "Dubon2026.SourceEllipticFunctionField.kernelCoordinate_ne_zero",
+        "Dubon2026.SourceEllipticFunctionField.kernelCoordinate_powers_le",
+        "Dubon2026.SourceEllipticFunctionField.isLocalization_kernelLocalRing",
+        "Dubon2026.SourceEllipticFunctionField.inverse_kernel_mem_local",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalRing_le",
+        "Dubon2026.SourceEllipticFunctionField.aeval_genericX_mem_kernelLocalRing",
+        "Dubon2026.SourceEllipticFunctionField.genericY_mem_kernelLocalRing",
+        "Dubon2026.SourceEllipticFunctionField.inverse_kernel_factor_mem_local",
+        "Dubon2026.SourceEllipticFunctionField.genericVeluX_mem_kernelLocalRing",
+        "Dubon2026.SourceEllipticFunctionField.genericVeluY_mem_kernelLocalRing",
+        "Dubon2026.SourceEllipticFunctionField.oddCoordinatePullback_mem_kernelLocalRing",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalRing_le_oddIntermediateRing",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateRing_eq_kernelLocalRing",
+        "Dubon2026.SourceEllipticFunctionField.kernelCoordinate",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalRing"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticFunctionField.kernelCoordinate_image",
+        "Dubon2026.SourceEllipticFunctionField.kernelCoordinate_ne_zero",
+        "Dubon2026.SourceEllipticFunctionField.kernelCoordinate_powers_le",
+        "Dubon2026.SourceEllipticFunctionField.isLocalization_kernelLocalRing",
+        "Dubon2026.SourceEllipticFunctionField.inverse_kernel_mem_local",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalRing_le",
+        "Dubon2026.SourceEllipticFunctionField.aeval_genericX_mem_kernelLocalRing",
+        "Dubon2026.SourceEllipticFunctionField.genericY_mem_kernelLocalRing",
+        "Dubon2026.SourceEllipticFunctionField.inverse_kernel_factor_mem_local",
+        "Dubon2026.SourceEllipticFunctionField.genericVeluX_mem_kernelLocalRing",
+        "Dubon2026.SourceEllipticFunctionField.genericVeluY_mem_kernelLocalRing",
+        "Dubon2026.SourceEllipticFunctionField.oddCoordinatePullback_mem_kernelLocalRing",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalRing_le_oddIntermediateRing",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateRing_eq_kernelLocalRing"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticFunctionField.kernelCoordinate",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalRing"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddKernelLocalizationAudit3.log",
+      "logSha256": "DE3FD3D807ECE13A8064568E2C9E8065046B4A8BCEB3694B5536248F86A88A88",
+      "auditSha256": "1EE785FCCAE081DD7F83B653846CBD271BE33B8E6BF2940C479BD5BF2D42AFD5",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 18,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 26,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOddKernelLocalizationDependencyAudit3.log",
+      "dependencyAuditSha256": "D4BB89AB9680E888B4476CF496D8216B18CE11B24A4A50E83481FFDAA4FCBAE9",
+      "dependencyAuditSourceSha256": "993B65E6265B05CC743D27D17E95FE48BBBEDD1345C686943979CB29B50F4CCD",
+      "consumers": [
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateRing_eq_kernelLocalRing"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census -> elliptic inertia orbit map -> cyclic-subgroup interpretation of integral modular-polynomial roots -> odd-prime quotient maps and products -> actual odd quotient homomorphism -> norm-induced point map -> actual intermediate integral closure equals original kernel localization, enabling affine evaluation and ideal norms",
+      "discharged": "The actual common integral closure is exactly the original affine coordinate ring localized at the actual finite kernel denominator, over the algebraically closed base in every characteristic. Every literal quotient coordinate function lies in that localization. Both inclusions are proved from actual denominator integrality and native localization normality; no localization or regularity input remains assumed.",
+      "boundary": "Scratch only; production promotion and verification pending. The norm-induced additive map still requires equality with the literal affine coordinate formulas and its exact cyclic kernel. Evaluation on the now identified localization and the resulting prime-ideal norm computation remain to be proved. Odd-prime products, cyclic roots, inertia census, reverse genus, good reduction and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-odd-kernel-localization-3-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "C8FA4A29DD319D9E3C28C68E2D30F23F6BDA31BD338D98DB09F430E0B6B7F57E"
+    },
+    {
+      "recordedUTC": "2026-10-23T12:58:53.846259+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticKernelLocalEvaluation",
+        "SourceEllipticKernelEvaluationCoordinates",
+        "SourceEllipticVeluAffineEvaluation",
+        "SourceEllipticOddAffineSpecialization",
+        "SourceEllipticKernelPointIdeal"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticKernelLocalEvaluation.lean",
+          "sha256": "900BB3B93FEC9765ED2183FB3E209F75F7029085CEDD51BFF018BA3EEDB975E5",
+          "oleanSha256": "43CB1A45683AB2DC565BAC25DA38210AA1B3EBC0EE19EE29337D3F27559226AF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticKernelEvaluationCoordinates.lean",
+          "sha256": "0242FF8A009D6A02FB65273556AEB9AADA426F5AD9D0BE093E809EDC622C4239",
+          "oleanSha256": "B809456C6A3F0E08A2DE33067AD522E4A61414C821B5C2814954AC5FF67B1633"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticVeluAffineEvaluation.lean",
+          "sha256": "06555974035DED3A6AC7FF694A3751CCF453A50F513B239513D37E49C7060445",
+          "oleanSha256": "66B3B53D49CDCEA1B921CB0D1D26E45D28F45FFAD918282D4128BC99BAD85C01"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddAffineSpecialization.lean",
+          "sha256": "D068071EC59D2E0CEA9A815088C37D8FD9582D0A2C6A694B5F5C9970893EF54E",
+          "oleanSha256": "39BC2A406AB844B0AA6F02445AE21597619381DB22F4AA9ED292038FE929097C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticKernelPointIdeal.lean",
+          "sha256": "CB03A11C0662287F6708E7B96EE174BBF3BF529B2D06FD03A69C10F9F96D0565",
+          "oleanSha256": "C0AC675CE61B9439FC54123AEA08F1D5E9099190CA1476993018CE0B7BB34CFC"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticFunctionField.eval_kernelCoordinate",
+        "Dubon2026.SourceEllipticFunctionField.eval_kernel_powers_isUnit",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalEval_algebraMap",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalEval_constant",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalEval_surjective",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalEval_genericX",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalEval_genericY",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalEval_inverse_factor",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalEval_genericVeluX",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalEval_genericVeluY",
+        "Dubon2026.SourceEllipticFunctionField.oddKernelPullback_X",
+        "Dubon2026.SourceEllipticFunctionField.oddKernelPullback_Y",
+        "Dubon2026.SourceEllipticFunctionField.oddAffineEval_X",
+        "Dubon2026.SourceEllipticFunctionField.oddAffineEval_Y",
+        "Dubon2026.SourceEllipticFunctionField.odd_veluAffine_equation",
+        "Dubon2026.SourceEllipticFunctionField.oddAffineEval_eq_evalAlgHom",
+        "Dubon2026.SourceEllipticFunctionField.ker_evalAlgHom_eq_XYIdeal",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalEval_ker_under",
+        "Dubon2026.SourceEllipticFunctionField.map_XYIdeal_eq_kernelLocalEval_ker",
+        "Dubon2026.SourceEllipticFunctionField.isMaximal_kernelLocalEval_ker",
+        "Dubon2026.SourceEllipticFunctionField.comap_kernelLocalEval_ker_oddKernelPullback",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalEval",
+        "Dubon2026.SourceEllipticFunctionField.veluAffineX",
+        "Dubon2026.SourceEllipticFunctionField.veluAffineY",
+        "Dubon2026.SourceEllipticFunctionField.oddKernelPullback",
+        "Dubon2026.SourceEllipticFunctionField.oddAffineEval"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticFunctionField.eval_kernelCoordinate",
+        "Dubon2026.SourceEllipticFunctionField.eval_kernel_powers_isUnit",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalEval_algebraMap",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalEval_constant",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalEval_surjective",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalEval_genericX",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalEval_genericY",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalEval_inverse_factor",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalEval_genericVeluX",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalEval_genericVeluY",
+        "Dubon2026.SourceEllipticFunctionField.oddKernelPullback_X",
+        "Dubon2026.SourceEllipticFunctionField.oddKernelPullback_Y",
+        "Dubon2026.SourceEllipticFunctionField.oddAffineEval_X",
+        "Dubon2026.SourceEllipticFunctionField.oddAffineEval_Y",
+        "Dubon2026.SourceEllipticFunctionField.odd_veluAffine_equation",
+        "Dubon2026.SourceEllipticFunctionField.oddAffineEval_eq_evalAlgHom",
+        "Dubon2026.SourceEllipticFunctionField.ker_evalAlgHom_eq_XYIdeal",
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalEval_ker_under",
+        "Dubon2026.SourceEllipticFunctionField.map_XYIdeal_eq_kernelLocalEval_ker",
+        "Dubon2026.SourceEllipticFunctionField.isMaximal_kernelLocalEval_ker",
+        "Dubon2026.SourceEllipticFunctionField.comap_kernelLocalEval_ker_oddKernelPullback"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticFunctionField.kernelLocalEval",
+        "Dubon2026.SourceEllipticFunctionField.veluAffineX",
+        "Dubon2026.SourceEllipticFunctionField.veluAffineY",
+        "Dubon2026.SourceEllipticFunctionField.oddKernelPullback",
+        "Dubon2026.SourceEllipticFunctionField.oddAffineEval"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddAffineSpecializationAudit5.log",
+      "logSha256": "BF70D2DAF917E5A3B2D3A010D7E4A639D87676010711054E54A4A7C5F4C83FF4",
+      "auditSha256": "46B538955B95258F92E5395081427D3665BC0FAED4BCDC3CD7D59754DB73ED62",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 33,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 34,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOddAffineSpecializationDependencyAudit5.log",
+      "dependencyAuditSha256": "992DAE019C7984B572A519C24DB3C27BE55BEAB970590188BF6397D9ABA24787",
+      "dependencyAuditSourceSha256": "DB3200F44071AE76067B7E92F6BCE0783F378C618961A985573DA1B76FF9FD08",
+      "consumers": [
+        "Dubon2026.SourceEllipticFunctionField.map_XYIdeal_eq_kernelLocalEval_ker",
+        "Dubon2026.SourceEllipticFunctionField.isMaximal_kernelLocalEval_ker",
+        "Dubon2026.SourceEllipticFunctionField.comap_kernelLocalEval_ker_oddKernelPullback"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census -> elliptic inertia orbit map -> cyclic-subgroup interpretation of integral modular-polynomial roots -> odd-prime quotient maps and products -> actual odd quotient homomorphism -> norm-induced point map -> literal affine coordinate specialization and actual source/target point-ideal identification, enabling relative ideal norms",
+      "discharged": "The actual generic finite Velu coordinates evaluate to the literal affine formulas. These formulas satisfy the actual odd quotient equation at every affine point off the kernel, in every characteristic. The original point ideal extends to the maximal localized evaluation kernel; its contraction under the actual quotient pullback equals the ideal of the literal quotient coordinates. Every equation and ideal comparison is derived.",
+      "boundary": "Scratch only; production promotion and verification pending. The relative ideal norm of the actual localized point ideal and its equality with the norm-induced additive point map remain required, followed by exact cyclic kernel, odd-prime products, cyclic-root correspondence, inertia census, reverse genus, good reduction and all-weight continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-odd-affine-specialization-5-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "81642B27F5AD8D37EA7F7308CA4EF25373F004623135ECF177485D4FB6D98FF6"
+    },
+    {
+      "recordedUTC": "2026-10-23T13:18:34.058515+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticOddIntermediateEvaluation",
+        "SourceEllipticOddIntermediateGalois",
+        "SourceEllipticOddIntermediatePointIdeal",
+        "SourceEllipticOddPointResidueDegree",
+        "SourceEllipticOddPointIdealNorm",
+        "SourceEllipticPointIdealClass",
+        "SourceEllipticOddPointNormFormula"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddIntermediateEvaluation.lean",
+          "sha256": "A9D2273CEAA1DBF99CD4BF299EE1C6D558368567AD8E323AF46737CDA55FF42F",
+          "oleanSha256": "CEC1542CD6E1B543305F18ACDFCD930AC698C8DEAACE560C706D228E329ECBA4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddIntermediateGalois.lean",
+          "sha256": "DD933EE870B72011E2966B37DBCA2BC8B5175A08B75A6B9E382B7D12C63A99D6",
+          "oleanSha256": "CEC55C96F3DD951862202009A3755370C98F7A1148C13CF387CEDF16EFE8616D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddIntermediatePointIdeal.lean",
+          "sha256": "E6C2AB7A1D1580EB400E83DA03BD78E093795486988BB483A4ED0C7BAD9606C4",
+          "oleanSha256": "12C6917382C4FA6BCF3B3B9CF01E0ADE012385B9FB0A760DC98B0E132FE67543"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddPointResidueDegree.lean",
+          "sha256": "71738B9C9210E33546C2F5A0D71337EB82D0D5AB95B17692784AD7A0F8CC4C9D",
+          "oleanSha256": "131E1DE307365E2EBCFFC5DA13156779E4ADD4E77EA6B7F7D98CE1B4B05D0E22"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddPointIdealNorm.lean",
+          "sha256": "C87150B13C45DE83FB05AD98F22345DF37EDD27ED8A8F4B84263B094FE608A60",
+          "oleanSha256": "04D92B9D6246F52476F5A478D90F7349ECB1AC589B526407CEC8E8153D15E470"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPointIdealClass.lean",
+          "sha256": "AAD33B3D48B30CB0D7B43E7C31CBCD52EE2E74D00212499C4731AC7100A2834E",
+          "oleanSha256": "481CA499BCB54192857D08BB5D85D1E552780C45F9095FA016D4A47872D4E221"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddPointNormFormula.lean",
+          "sha256": "1B583FA4FDEAC0B1694C7EE26AE20BFD1690CFF77B9CA2B37D0565822B3F70EA",
+          "oleanSha256": "F09A6833254AC3AC071291BFA9F0D1259DDC604E4EAD5320BC05C1227BA9E250"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateLocalizationEquiv_source",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateLocalizationEquiv_target",
+        "Dubon2026.SourceEllipticFunctionField.isLocalization_oddIntermediateRing",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateEval_source",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateEval_target",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateEval_surjective",
+        "Dubon2026.SourceEllipticFunctionField.isFractionRing_oddIntermediateRing",
+        "Dubon2026.SourceEllipticFunctionField.isGalois_oddIntermediateFractionRing",
+        "Dubon2026.SourceEllipticFunctionField.map_XYIdeal_eq_oddIntermediateEval_ker",
+        "Dubon2026.SourceEllipticFunctionField.isMaximal_oddIntermediateEval_ker",
+        "Dubon2026.SourceEllipticFunctionField.comap_oddIntermediateEval_ker_target",
+        "Dubon2026.SourceEllipticFunctionField.isMaximal_oddQuotientPointIdeal",
+        "Dubon2026.SourceEllipticFunctionField.inertiaDeg_oddPointIdeal",
+        "Dubon2026.SourceEllipticFunctionField.relNorm_oddIntermediateEval_ker",
+        "Dubon2026.SourceEllipticFunctionField.relNorm_map_XYIdeal_odd",
+        "Dubon2026.SourceEllipticFunctionField.XYIdeal_ne_zero",
+        "Dubon2026.SourceEllipticFunctionField.nonzeroPointIdeal_coe",
+        "Dubon2026.SourceEllipticFunctionField.toMul_toClass_some_eq_mk0",
+        "Dubon2026.SourceEllipticFunctionField.odd_veluAffine_nonsingular",
+        "Dubon2026.SourceEllipticFunctionField.oddPointNorm_some",
+        "Dubon2026.SourceEllipticFunctionField.oddPointNorm_some_ne_zero",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateLocalizationEquiv",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateSourceAlgebra",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateEval",
+        "Dubon2026.SourceEllipticFunctionField.nonzeroPointIdeal"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateLocalizationEquiv_source",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateLocalizationEquiv_target",
+        "Dubon2026.SourceEllipticFunctionField.isLocalization_oddIntermediateRing",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateEval_source",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateEval_target",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateEval_surjective",
+        "Dubon2026.SourceEllipticFunctionField.isFractionRing_oddIntermediateRing",
+        "Dubon2026.SourceEllipticFunctionField.isGalois_oddIntermediateFractionRing",
+        "Dubon2026.SourceEllipticFunctionField.map_XYIdeal_eq_oddIntermediateEval_ker",
+        "Dubon2026.SourceEllipticFunctionField.isMaximal_oddIntermediateEval_ker",
+        "Dubon2026.SourceEllipticFunctionField.comap_oddIntermediateEval_ker_target",
+        "Dubon2026.SourceEllipticFunctionField.isMaximal_oddQuotientPointIdeal",
+        "Dubon2026.SourceEllipticFunctionField.inertiaDeg_oddPointIdeal",
+        "Dubon2026.SourceEllipticFunctionField.relNorm_oddIntermediateEval_ker",
+        "Dubon2026.SourceEllipticFunctionField.relNorm_map_XYIdeal_odd",
+        "Dubon2026.SourceEllipticFunctionField.XYIdeal_ne_zero",
+        "Dubon2026.SourceEllipticFunctionField.nonzeroPointIdeal_coe",
+        "Dubon2026.SourceEllipticFunctionField.toMul_toClass_some_eq_mk0",
+        "Dubon2026.SourceEllipticFunctionField.odd_veluAffine_nonsingular",
+        "Dubon2026.SourceEllipticFunctionField.oddPointNorm_some",
+        "Dubon2026.SourceEllipticFunctionField.oddPointNorm_some_ne_zero"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateLocalizationEquiv",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateSourceAlgebra",
+        "Dubon2026.SourceEllipticFunctionField.oddIntermediateEval",
+        "Dubon2026.SourceEllipticFunctionField.nonzeroPointIdeal"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddPointNormFormulaAudit7.log",
+      "logSha256": "3A9C06159376571D7DBC273F7A666441BFC0A6EC322C81AA8D5DCC9D5B76E782",
+      "auditSha256": "DE60F41BF052D575AF273027C2EFA7FF59054A50622BF4EEDC64F35D0D9DFEFA",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 33,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 41,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOddPointNormFormulaDependencyAudit7.log",
+      "dependencyAuditSha256": "94FD03ADAF1B71F8C5B40A298D1DDE4472B1D76969AFE1050BC574A4368E9F0F",
+      "dependencyAuditSourceSha256": "EA3238D070F314B0C3AAD9AED8DA673F6CEA992CDC89DC3E8BA0B88226CF462A",
+      "consumers": [
+        "Dubon2026.SourceEllipticFunctionField.oddPointNorm_some_ne_zero"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census -> elliptic inertia orbit map -> cyclic-subgroup interpretation of integral modular-polynomial roots -> odd-prime quotient maps and products -> actual odd quotient homomorphism -> norm-induced point map -> actual relative point-ideal norm and equality of the additive point norm with the literal affine formulas",
+      "discharged": "The actual additive odd quotient point norm agrees with the literal finite affine Velu coordinates away from the actual kernel denominator and has nonzero image there. The actual common-ring point ideal, its contraction, residue degree one, and its relative ideal norm are proved. Native fraction-field equivalences transfer the actual Galois extension; the existing actual point-class equivalence yields equality of points. No coordinate-formula, norm, Galois or residue-degree input remains assumed.",
+      "boundary": "Scratch only; production promotion and verification pending. The actual norm map still requires its exact cyclic kernel, followed by odd-prime integral modular-polynomial products, cyclic-root correspondence, inertia census, reverse genus, good reduction, original Frobenius/inertia and all-weight continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-odd-point-norm-formula-7-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "8A896D8D6366CECD2F5FAFE11A5DE79FB313058C10201BA3110772BFD0CA9E29"
+    },
+    {
+      "recordedUTC": "2026-10-23T13:29:46.985528+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticOddKernelNorm",
+        "SourceEllipticOddKernelGeometry",
+        "SourceEllipticOddPointSurjective",
+        "SourceEllipticOddPointFibers"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddKernelNorm.lean",
+          "sha256": "24D848FE152C86E5E9C8EF5A6155E862894A1F019E899EF68D43034FB1CC72FF",
+          "oleanSha256": "62E6715F9732CCCD7FB186DD9BA06EB28C54BDEE1FD9BDB233570B1D4D8CD78D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddKernelGeometry.lean",
+          "sha256": "CCC9D352D6EC3E702427106B1C55EFA2DEBF85C3C555AEADDEC2E47AA46B0E1F",
+          "oleanSha256": "A8A31392D40AE86746F15036A4AB043F5E102D115935D2FB7C6642B7D48C4BF0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddPointSurjective.lean",
+          "sha256": "8AC403E6BEDD5A14E1584898B79DE964E043383425DAF56031AD2761D9DCA13A",
+          "oleanSha256": "37C7058F83E0E268017B5F271044EF9741BC9ACDCF8695BB6532856573F79983"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddPointFibers.lean",
+          "sha256": "A18379E7227CB4AADD585BE4A077D2A8A38DBE0FA3EE2C4815DED2B6C9AAED89",
+          "oleanSha256": "AE1D266E625CD297A0C51445916DBAF3DA510703D8D266B8911F33DFD0360493"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticFunctionField.map_XYIdeal_odd_eq_top",
+        "Dubon2026.SourceEllipticFunctionField.oddPointNorm_some_eq_zero_of_kernel",
+        "Dubon2026.SourceEllipticFunctionField.oddPointNorm_some_eq_zero_iff",
+        "Dubon2026.SourceEllipticFunctionField.eval_kernelPolynomial_eq_zero_iff",
+        "Dubon2026.SourceEllipticFunctionField.eval_oddKernel_eq_zero_iff_mem_zmultiples",
+        "Dubon2026.SourceEllipticFunctionField.ker_oddPointNorm",
+        "Dubon2026.SourceEllipticFunctionField.exists_odd_veluAffineX_preimage",
+        "Dubon2026.SourceEllipticFunctionField.oddPointNorm_surjective",
+        "Dubon2026.SourceEllipticFunctionField.card_ker_oddPointNorm",
+        "Dubon2026.SourceEllipticFunctionField.card_fiber_oddPointNorm"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticFunctionField.map_XYIdeal_odd_eq_top",
+        "Dubon2026.SourceEllipticFunctionField.oddPointNorm_some_eq_zero_of_kernel",
+        "Dubon2026.SourceEllipticFunctionField.oddPointNorm_some_eq_zero_iff",
+        "Dubon2026.SourceEllipticFunctionField.eval_kernelPolynomial_eq_zero_iff",
+        "Dubon2026.SourceEllipticFunctionField.eval_oddKernel_eq_zero_iff_mem_zmultiples",
+        "Dubon2026.SourceEllipticFunctionField.ker_oddPointNorm",
+        "Dubon2026.SourceEllipticFunctionField.exists_odd_veluAffineX_preimage",
+        "Dubon2026.SourceEllipticFunctionField.oddPointNorm_surjective",
+        "Dubon2026.SourceEllipticFunctionField.card_ker_oddPointNorm",
+        "Dubon2026.SourceEllipticFunctionField.card_fiber_oddPointNorm"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientKernelAudit4.log",
+      "logSha256": "BD598730C8FF1D8BD7F15CDB57C8356B41F266CA6156CDB73B183E69B6044FE0",
+      "auditSha256": "2C589583582CF16798AE111A504C18E2E488661CC146404F2FEF485806A1016E",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 21,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 27,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientKernelDependencyAudit4.log",
+      "dependencyAuditSha256": "FC77FA250CB253EC3F0FE40961CC002EEB01DC1A232A3B59E7E8AAB3A0ED517D",
+      "dependencyAuditSourceSha256": "21C8B84DA27D59F08BB5EC0A80BEA79F09AF5CA4C2E3A712B618F242377A1EE1",
+      "consumers": [
+        "Dubon2026.SourceEllipticFunctionField.card_fiber_oddPointNorm"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census -> elliptic inertia orbit map -> cyclic-subgroup interpretation of integral modular-polynomial roots -> odd-prime quotient maps and products -> actual odd quotient homomorphism -> norm-induced point map -> actual additive odd quotient map with literal formulas, exact cyclic kernel, surjectivity and exact point-fiber cardinality",
+      "discharged": "The actual additive odd quotient map has kernel precisely AddSubgroup.zmultiples Q for the actual point of order 2n+1, is surjective, and every actual point fiber has cardinality 2n+1. The actual kernel denominator roots extend to the unit ideal and map to infinity; the previously proved literal affine formula excludes all other affine points. Native finite-order indexing identifies the exact cyclic subgroup. Numerator degree, coprimality, existing affine y-existence and negation prove surjectivity, without a new geometric existence assumption. All characteristics are retained.",
+      "boundary": "Scratch only; production promotion and verification pending. Odd-prime integral modular-polynomial products, specialization and finite-set reduction, cyclic-subgroup root correspondence, inertia census and wild differential contribution, reverse genus, good reduction, original Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-odd-quotient-kernel-4-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "53AF7CBE4DCBACB6C36102DB021C90EC6041F848F055E8E9E768C697A4A11EF0"
+    }
+  ],
+  "reviews": [
+    "Tools/source-odd-point-norm-5-reuse-review-20261023.json",
+    "Tools/source-odd-kernel-localization-3-reuse-review-20261023.json",
+    "Tools/source-odd-affine-specialization-5-reuse-review-20261023.json",
+    "Tools/source-odd-point-norm-formula-7-reuse-review-20261023.json",
+    "Tools/source-odd-quotient-kernel-4-reuse-review-20261023.json"
+  ],
+  "additionalCurrentSearch": {
+    "path": "Tools/lean-reuse-supplemental-search-20261023.json",
+    "sha256": "29FD75771ABF0FE58A786B83D083782924F0534A8DF25AE432D85296658713BB"
+  },
+  "productionFocusedReceipt6900": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddPointNormDependencyAudit5Production6900.log",
+        "sha256": "265438F6BBF3C918A619FA97F762664EEE4C0A406BF8A52838D8F07271ABA1BE",
+        "requiredProofValueEdges": 43,
+        "consumers": [
+          "Dubon2026.SourceEllipticFunctionField.toClass_oddPointNorm",
+          "Dubon2026.SourceEllipticFunctionField.oddPointNorm_eq_iff",
+          "Dubon2026.SourceEllipticFunctionField.oddCoordinatePullback_X",
+          "Dubon2026.SourceEllipticFunctionField.oddCoordinatePullback_Y",
+          "Dubon2026.SourceEllipticFunctionField.mem_oddIntermediateRing_iff",
+          "Dubon2026.SourceEllipticFunctionField.oddSourceToIntermediate_coe",
+          "Dubon2026.SourceEllipticFunctionField.oddTargetToIntermediate_coe",
+          "Dubon2026.SourceEllipticFunctionField.isIntegral_genericX_oddCoordinate"
+        ],
+        "sourceSha256": "049B4225CCADCBF241C2137F0FFA67C1FF6334FEDAAA0A522BFC6173B08EA609"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddKernelLocalizationDependencyAudit3Production6900.log",
+        "sha256": "D4BB89AB9680E888B4476CF496D8216B18CE11B24A4A50E83481FFDAA4FCBAE9",
+        "requiredProofValueEdges": 26,
+        "consumers": [
+          "Dubon2026.SourceEllipticFunctionField.oddIntermediateRing_eq_kernelLocalRing"
+        ],
+        "sourceSha256": "AD8CEF7E20A7626A37649C4D85FC0BE2E576D637B1BB90187B45E91641AF00B0"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddAffineSpecializationDependencyAudit5Production6900.log",
+        "sha256": "992DAE019C7984B572A519C24DB3C27BE55BEAB970590188BF6397D9ABA24787",
+        "requiredProofValueEdges": 34,
+        "consumers": [
+          "Dubon2026.SourceEllipticFunctionField.map_XYIdeal_eq_kernelLocalEval_ker",
+          "Dubon2026.SourceEllipticFunctionField.isMaximal_kernelLocalEval_ker",
+          "Dubon2026.SourceEllipticFunctionField.comap_kernelLocalEval_ker_oddKernelPullback"
+        ],
+        "sourceSha256": "7C09CBB64DD336480687C7F474CDA3C3015E64669578AED35EEB71EBA547D0DA"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddPointNormFormulaDependencyAudit7Production6900.log",
+        "sha256": "94FD03ADAF1B71F8C5B40A298D1DDE4472B1D76969AFE1050BC574A4368E9F0F",
+        "requiredProofValueEdges": 41,
+        "consumers": [
+          "Dubon2026.SourceEllipticFunctionField.oddPointNorm_some_ne_zero"
+        ],
+        "sourceSha256": "9DDC6EE2221B39D0AA777F5A57FD342DFE45DC6ACB330355200F85AEE1CE8714"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientKernelDependencyAudit4Production6900.log",
+        "sha256": "FC77FA250CB253EC3F0FE40961CC002EEB01DC1A232A3B59E7E8AAB3A0ED517D",
+        "requiredProofValueEdges": 27,
+        "consumers": [
+          "Dubon2026.SourceEllipticFunctionField.card_fiber_oddPointNorm"
+        ],
+        "sourceSha256": "46C33C1A431BC2C27F9686647C0DF345065453671A587658779FAC25AF50CEDE"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddPointMapProductionAudit6900.log",
+    "sha256": "5C3C045FB810BF678B4D6EB22A920B20BB170D2FFDABEAF016516FA4DE8C0C3F",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-odd-point-map-production-build-6900.log",
+    "aggregateSha256": "E3C36644F9CC69EE31F0E1D07AAFA234F3250BF969D105FCE3B42A41BE20A803",
+    "productionModules": 6900,
+    "incrementModules": 24,
+    "axiomChecks": 107,
+    "exhaustiveIncrementTheorems": 135,
+    "linterScopes": 24,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 135,
+    "productionReuse": "Scratch imports are qualified and five module comments point to the assembled proved consumers; complete mathematical statements and proof bodies are retained. Native affine point groups, actual generic coordinates, rational functions, odd half-orbits, explicit Velu sums, integral closures and translations retain their actual definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 135,
+      "scratchDistinct": 135,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 135,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceEllipticOddCoordinatePullback",
+            "SourceEllipticOddCoordinateIntegralImage",
+            "SourceEllipticOddIntermediateRing",
+            "SourceEllipticOddIntermediateFinite",
+            "SourceEllipticOddPointNorm"
+          ],
+          "count": 30,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddPointMapScratchOwnership293For6900.log",
+            "sha256": "0EA77F17084550475765700DCE771951B36563B2B819C8A818C9140F2C626CFA",
+            "sourceSha256": "BA374E659CC20E3A64D15963B988B045C24808BBE129ACB0D39560236DB1CFB5"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticKernelLocalization",
+            "SourceEllipticKernelLocalCoordinates",
+            "SourceEllipticOddIntermediateLocalization"
+          ],
+          "count": 18,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddPointMapScratchOwnership294For6900.log",
+            "sha256": "0FA5EECA96A87C7CAB07E53640D8D75093997682C784D71FD8916AE1F80EA8B7",
+            "sourceSha256": "83D595F81D14EEB97C716EF4E264A6AEE6C4FBE07CF158FF5C8CC1F465753218"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticKernelLocalEvaluation",
+            "SourceEllipticKernelEvaluationCoordinates",
+            "SourceEllipticVeluAffineEvaluation",
+            "SourceEllipticOddAffineSpecialization",
+            "SourceEllipticKernelPointIdeal"
+          ],
+          "count": 33,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddPointMapScratchOwnership295For6900.log",
+            "sha256": "2B5095063F75B4F9861EE62025DEA0F9B7778D9E466D84620FC614CA753FAE6C",
+            "sourceSha256": "81806582131E1FA184099BD07F816BF7FAE34F4BE63BA1CB1E76D1AB7743EC32"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticOddIntermediateEvaluation",
+            "SourceEllipticOddIntermediateGalois",
+            "SourceEllipticOddIntermediatePointIdeal",
+            "SourceEllipticOddPointResidueDegree",
+            "SourceEllipticOddPointIdealNorm",
+            "SourceEllipticPointIdealClass",
+            "SourceEllipticOddPointNormFormula"
+          ],
+          "count": 33,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddPointMapScratchOwnership296For6900.log",
+            "sha256": "354E07F3ABD6752660C46EF0ECAAB587C60CB614508C310E70F1C940E487B17B",
+            "sourceSha256": "9C35D00859606D693AE8A4559326AD97054EE455BB88C8A3581A6E413DD4798D"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticOddKernelNorm",
+            "SourceEllipticOddKernelGeometry",
+            "SourceEllipticOddPointSurjective",
+            "SourceEllipticOddPointFibers"
+          ],
+          "count": 21,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddPointMapScratchOwnership297For6900.log",
+            "sha256": "C6C385271166D2C5FD605E3E38FC142F92F4B53EF7C6A49355A65890B49459EA",
+            "sourceSha256": "105BFE329ACC7D19596DAA9EF0CE83818220FDF562A364548E0684F639697213"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddPointMapOwnership6900.log",
+        "sha256": "DB845183B9C144392EFA80FF3A1548B302A01C2629315A73F1FD2D491C23E729",
+        "sourceSha256": "C5EC1D1EB0F03C6AA46AE37CC622096480F258EDF444AF95060A3B81DE134BE7"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261023-053232-109.log",
+        "sha256": "C389A589A1FF9E75E379E39FA1DF0933F0C3AAFC9D41B8BA402903B4A173ADDD"
+      }
+    },
+    "scratchToProductionCountReason": "All 135 distinct names from 135 exhaustive scratch checks are retained: 135 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Odd-prime integral modular-polynomial products, specialization and finite-set reduction, cyclic-subgroup root correspondence, inertia orbit map, exceptional-fiber census and wild differential contributions remain required for unconditional reverse genus. Genus equality, place comparison, good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

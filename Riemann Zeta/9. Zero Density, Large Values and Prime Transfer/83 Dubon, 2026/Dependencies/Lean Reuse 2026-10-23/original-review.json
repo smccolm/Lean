@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-23 America/Vancouver",
+  "purpose": "Targeted follow-up to the owner-requested public Lean proof search before further expanding the odd cyclic quotient dependency.",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight higher symmetric-power continuation -> arithmetic automorphy/residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> exceptional-fiber inertia census -> actual cyclic-subgroup interpretation of integral modular-polynomial roots -> odd-prime quotient maps and products -> explicit odd Velu quotient ellipticity.",
+  "queries": [
+    "Lean WeierstrassCurve veluQuotient isogeny github TauCeti",
+    "site:github.com \"veluQuotient\" \"discriminant\"",
+    "site:github.com \"Lean\" \"cyclicQuotientJ\""
+  ],
+  "snapshot": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\odd-quotient-reuse-20261023\\verified-snapshot.json",
+    "sha256": "4E9445BC20D7BF87202AB41CE4543991910201894207C52C69ECCEC092CEDCAA",
+    "verifiedGitBlobs": 12
+  },
+  "candidates": [
+    {
+      "repository": "TauCetiProject/TauCeti",
+      "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+      "committedUTC": "2026-10-23T04:01:01Z",
+      "lean": "4.36.0-rc1",
+      "license": "Apache-2.0",
+      "files": [
+        "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Coordinates.lean",
+        "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/FixedField.lean",
+        "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Equation.lean",
+        "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Isogeny.lean",
+        "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Descent.lean",
+        "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Exhaustive.lean",
+        "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/IsElliptic.lean"
+      ],
+      "theorems": [
+        "WeierstrassCurve.Affine.equation_veluX_veluY",
+        "WeierstrassCurve.Affine.eq_veluCurve_of_equation",
+        "WeierstrassCurve.Affine.degree_veluIsogeny",
+        "WeierstrassCurve.Affine.ker_veluIsogeny",
+        "WeierstrassCurve.Affine.isElliptic_veluCurve",
+        "WeierstrassCurve.Affine.existsUnique_comp_veluIsogeny_eq_iff_le_ker",
+        "WeierstrassCurve.exists_baseChange_eq_veluCurve"
+      ],
+      "findings": "Source proofs construct the actual translation-fixed quotient, its Weierstrass equation, separable isogeny of degree equal to the finite kernel cardinality, exact kernel, universal property, and ellipticity in every characteristic. Ellipticity follows by factoring multiplication through the quotient and excluding a rational source mapping to an elliptic curve. Coefficients of veluCurve are characterized but explicitly not computed.",
+      "decision": "A substantial source candidate for the future quotient-map, universal-property and Galois-descent obligations. It does not directly identify the quotient with the existing explicit veluQuotient coefficients. Adapting it now would require its elliptic function-field translation/place, genus, isogeny and factorization chain plus that coefficient bridge. Local searches found no existing matching IsWeierstrassCoordinates, translationFixedField or genus_functionField implementation. Continue the selected explicit discriminant calculation, which uses existing local objects and preserves all characteristics. Reassess this source before expanding the later point-homomorphism and reduction chains; do not duplicate its general foundations merely to avoid the explicit coefficient comparison."
+    },
+    {
+      "repository": "lana-agents/heights",
+      "commit": "f4379dbccc8cdc4faa894a236d5581a6a635c5b5",
+      "committedUTC": "2026-10-10T00:18:31Z",
+      "lean": "4.32.0",
+      "license": "Apache-2.0",
+      "files": [
+        "Heights/VeluProduct.lean"
+      ],
+      "theorems": [
+        "Heights.Velu.prod_mul_sum_sub_sum"
+      ],
+      "findings": "A finite-subgroup x-coordinate product identity for characteristic different from two and a subgroup without nonzero two-torsion. Its file explicitly constructs no quotient curve, isogeny or invariant differential.",
+      "decision": "The pair-coordinate and finite-orbit argument overlaps the already proved local chord identities and orbit trace. The product formula may inform the next norm factorization, but it neither proves quotient ellipticity nor covers characteristic two. Porting the complete generic subgroup package would duplicate the established cyclic half-orbit objects. Keep as source comparison, not as a discharged source obligation."
+    }
+  ],
+  "evidenceBoundary": "The twelve selected source/license/toolchain files match their exact Git blob hashes. They were read as source text, not imported or executed. No external build, exhaustive dependency closure, transitive axiom audit or pinned-toolchain replay is claimed. External code comments and repository status do not constitute local proof evidence.",
+  "route": "Use the already audited actual doubling formula, root packets, cyclic doubling permutation and orbit trace. Derive the explicit quotient cubic coefficients from the finite polynomial identity by native reflection and comparison modulo X^4; next prove the identity from actual translations and assemble the discriminant formula. Keep Tau Ceti as a scoped candidate for the later map and descent obligations.",
+  "sourceContractChanged": false,
+  "rootPinsChanged": false,
+  "proofStandardsChanged": false,
+  "gates": "16/20; DUB-17--20 OPEN; no acceptance gate closes through this research."
+}

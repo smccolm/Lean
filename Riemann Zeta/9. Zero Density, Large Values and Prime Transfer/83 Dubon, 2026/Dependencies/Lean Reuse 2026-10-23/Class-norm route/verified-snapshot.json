@@ -1,0 +1,61 @@
+{
+  "recordedUTC": "2026-10-23T08:43:06.619628+00:00",
+  "files": [
+    {
+      "repository": "TauCetiProject/TauCeti",
+      "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+      "path": "TauCeti/RingTheory/ClassGroup/ExtendedRelNorm.lean",
+      "sha": "1ad0b243f8806c06e69df6ef5c062db967cca2c7",
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Class-norm route/TauCetiProject/TauCeti/TauCeti/RingTheory/ClassGroup/ExtendedRelNorm.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/ClassGroup/ExtendedRelNorm.lean",
+      "sha256": "E9041C9A2B60CA248A353A40142E38E9796AD171605104D54833B53641D005F6"
+    },
+    {
+      "repository": "TauCetiProject/TauCeti",
+      "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+      "path": "TauCeti/RingTheory/ClassGroup/RelNorm.lean",
+      "sha": "f782fa7c162271aa52afd00c604014b310e295c6",
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Class-norm route/TauCetiProject/TauCeti/TauCeti/RingTheory/ClassGroup/RelNorm.lean.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/ClassGroup/RelNorm.lean",
+      "sha256": "F79454E1B85200C94BC6F840F6CD57FA921BC68F63A7010023F690F906CB38E6"
+    },
+    {
+      "repository": "TauCetiProject/TauCeti",
+      "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+      "path": "lake-manifest.json",
+      "sha": "0dbc0ac65a1ee0e98a92fe7f3de3b2a4de847af3",
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Class-norm route/TauCetiProject/TauCeti/lake-manifest.json.txt",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/lake-manifest.json",
+      "sha256": "78AAC12CD88437EA05C41CCDAE290D72A8CE40929CFC5D14640F88E734ADF9BE"
+    },
+    {
+      "repository": "leanprover-community/mathlib4",
+      "commit": "2cabef97b63d3275776b8b060d802de6a6fa1055",
+      "path": "Mathlib/RingTheory/ClassGroup/ExtendedHom.lean",
+      "sha": "99abb1db0ae629b90a71a75706749edf39c78d01",
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Class-norm route/leanprover-community/mathlib4/Mathlib/RingTheory/ClassGroup/ExtendedHom.lean.txt",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/2cabef97b63d3275776b8b060d802de6a6fa1055/Mathlib/RingTheory/ClassGroup/ExtendedHom.lean",
+      "sha256": "C704089F1FD378FE2E06B81EECA98BF2067F4B86C8C307B8E73C3869E42BB29A"
+    },
+    {
+      "repository": "leanprover-community/mathlib4",
+      "commit": "2cabef97b63d3275776b8b060d802de6a6fa1055",
+      "path": "LICENSE",
+      "sha": "8dada3edaf50dbc082c9a125058f25def75e625a",
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Class-norm route/leanprover-community/mathlib4/LICENSE.txt",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/2cabef97b63d3275776b8b060d802de6a6fa1055/LICENSE",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1"
+    },
+    {
+      "repository": "leanprover-community/mathlib4",
+      "commit": "2cabef97b63d3275776b8b060d802de6a6fa1055",
+      "path": "lean-toolchain",
+      "sha": "2afd38716ad6182657562d3dac3c98461c1385f2",
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Class-norm route/leanprover-community/mathlib4/lean-toolchain.txt",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/2cabef97b63d3275776b8b060d802de6a6fa1055/lean-toolchain",
+      "sha256": "D581A24B57A4AE9E0B2132CA8AC7CC3AC336A9FC2751FE6B29414E2D434D54C4"
+    }
+  ],
+  "scope": "Six exact source, license and pin blobs; source inspection only.",
+  "archivedUTC": "2026-10-23T08:58:27.485013+00:00"
+}

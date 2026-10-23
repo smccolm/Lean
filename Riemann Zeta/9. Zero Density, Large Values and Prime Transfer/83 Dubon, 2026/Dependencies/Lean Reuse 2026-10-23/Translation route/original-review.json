@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-23 America/Vancouver",
+  "repository": "TauCetiProject/TauCeti",
+  "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+  "license": "Apache-2.0",
+  "verifiedGitBlobs": 3,
+  "selected": [
+    "Translation/Basic.lean: actual generic translation, transcendence, field lift, composition and faithfulness.",
+    "Integrality.lean: integral x implies integral y for an actual Weierstrass point."
+  ],
+  "deferred": [
+    "Translation/Automorphism.lean: full semidirect-product classification, finite index and variable-change complement. These do not discharge the current quotient-equation prerequisite.",
+    "Integrality.lean: rational-root denominator, Nagell-Lutz and order-two scaling generalizations."
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census -> elliptic cyclic-subgroup inertia map -> cyclic-subgroup roots of the integral modular polynomial -> actual odd quotient map and products -> explicit quotient equation -> translation invariance of the actual coordinate functions.",
+  "localReuse": "Reuse native affine point base change and group law, the existing coordsOrZero and negation formula, and frozen actual generic coordinates, field-lift uniqueness and integral-image descent. The relative algebraic closure argument proves translated x transcendental in every characteristic without pole infrastructure or an algebraically closed base-field assumption. Adapt only the needed translation action from the source, retaining the pinned toolchain and proof limits.",
+  "evidenceBoundary": "Exact Git blobs were fetched and SHA-1 verified, with SHA-256 recorded. The upstream dependency closure was not built or audited here. Local kernel replay and its axiom, linter and declaration-value audits are separate requirements. No acceptance gate is claimed closed."
+}

@@ -1,0 +1,8 @@
+{
+  "dependency": "DUB-17/18 -> continuation -> automorphy -> Frobenius/inertia -> good reduction -> reverse genus/inertia census -> actual cyclic-subgroup roots -> explicit odd quotient map -> norm-induced point homomorphism -> extension and relative norm on actual ideal classes",
+  "reuse": "The pinned Mathlib already has relative ideal norms, their principal-ideal formula, ClassGroup.mk0 surjectivity/equality criterion and the monoid-congruence quotient. The new Mathlib ClassGroup.ExtendedHom source was inspected at the exact revision in Tau Ceti lake-manifest. Its general domain/fractional-ideal map is broader than required. Every coordinate and intermediate ring in the selected consumer is Dedekind, so descend the integral ideal map through mk0 directly, in the same way as the relative norm. This avoids new general class-map functoriality and fractional-ideal quotient APIs.",
+  "omitted": "No extension-then-norm power theorem, isomorphism functoriality, isogeny category, duals or general-domain map is needed for the pending explicit odd quotient consumer.",
+  "evidenceBoundary": "External blobs are source evidence only. Local compilation and complete proof-value/axiom audits are required before a proof claim.",
+  "rootPinsChanged": false,
+  "sourceContractChanged": false
+}

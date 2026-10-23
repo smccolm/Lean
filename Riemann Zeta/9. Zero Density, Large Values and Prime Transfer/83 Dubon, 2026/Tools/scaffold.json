@@ -32426,6 +32426,1474 @@
     {
       "path": "Tools/source-coefficient-global-residues.json",
       "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticSequenceRelations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticSequenceParity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticSequenceRecurrences.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticSequenceInduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticSequencePermutation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticSequenceNet.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticSequenceNormalized.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticSequenceSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticSequenceComplement.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticSequenceReducedInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticSequenceInvariantIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticDivisionCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticDivisionCoordinateMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticUniversalCurve.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticUniversalSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPolynomialSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticGenericSequence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticGenericXCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticGenericYCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticGenericAddition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticGenericMultiplication.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticGenericJacobian.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticGenericDoubling.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticGenericProjectiveAddition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPointSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPointMultiplication.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticDivisionZeros.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticDivisionCoprime.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticMultiplicationXFormula.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticNumeratorCoprime.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTorsionZeroCriterion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTorsionFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticMultiplicationSurjective.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticDoubleFiberCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTorsionFiberCardinality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTorsionCardinality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTorsionPrimeLinearAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTorsionPrimePowerStructure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTorsionCoprimeStructure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTorsionDivisorStructure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTorsionStructure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclicPairOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclicPairScaling.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclicProjectiveEquivalence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclicProjectiveCardinality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclicTorsionTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCyclicCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-elliptic-sequence-11-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-elliptic-universal-6-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-elliptic-multiplication-10-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-elliptic-torsion-9-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-elliptic-torsion-structure-5-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-elliptic-cyclic-count-6-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-elliptic-torsion.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVariableCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVariableNonsingular.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVariablePointEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVariableAdditionFormula.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVariableAddEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoDiscriminants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoNonsingular.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoEnumeration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoJInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeTwoPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeTwoSymmetricIdentities.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeTwoProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeTwoEnumeratedProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoRationalCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoEquation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoPointMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoNegation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoKernelTranslation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoLineRelations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoSecantCleared.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoTangentXCleared.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoTangentYCleared.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoSecantXRelations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoTangentYRelations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoAddCases.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoCollisionCases.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoSecantCompatibility.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoTangentXCompatibility.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoTangentYCompatibility.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoAdditivityCases.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoAdditivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoSurjective.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluTwoQuotientFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralPrimeConjugateProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralPrimeTwoProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralPrimeTwoDegreeBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceJFiniteCoefficientLists.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEtaSevenCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceJSevenCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeTwoLaurentNormalForms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeTwoLaurentProducts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeTwoExplicitCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralJFiniteCoefficientTest.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralPrimeTwoCoefficient0.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralPrimeTwoCoefficient1.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralPrimeTwoCoefficient2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralPrimeTwoIdentification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralPrimeTwoQuotientProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-elliptic-variable-change-5-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-elliptic-velu-4-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-elliptic-velu-two-3-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-prime-two-product-5-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-velu-two-point-map-4-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-velu-two-translation-2-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-velu-two-cleared-4-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-velu-two-hom-10-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-velu-two-fibers-2-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-integral-prime-product-3-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-j-seven-coefficients-3-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-integral-prime-two-9-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-elliptic-quotient.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddSummingSet.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddSummingStructure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddChordIdentities.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddTwoTorsionTranslation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddRootPackets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddDoublingFormula.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddDoublingPackets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddReindex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddOrbitTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddSummingFold.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddPolynomialReflection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddQuotientPolynomials.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddTruncatedIdentities.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddTruncatedExpansion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddPolynomialDegrees.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddReflectedQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddReflectedIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddPolynomialExpansion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddNormPolynomials.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddNormSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddNormCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddNormIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddNormFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddCubicFactors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddCubicPipeline.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddDiscriminantProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddCurveCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddOrbitDistinctness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddGoodAbscissae.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddCubicRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddOrbitInvariance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddActualDiscriminant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddShortQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddCharTwoSupersingular.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddCharTwoPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddCharTwoPolynomialRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddCharTwoCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddCharTwoNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddCharTwoTorsion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddCharTwoCosets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddCharTwoInvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddCharTwoQuotientCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddCharTwoKernelCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddCharTwoActualDiscriminant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddVariableEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddVariableCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddVariableQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddVariableSummingSet.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddNormalizedDiscriminant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticClassIdealFactorization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticClassCodimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticClassSmallNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticClassPointIdeals.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticClassReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticClassSurjective.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticClassLocalRegular.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticClassNormal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticClassRelativeNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticClassExtensionNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-odd-summing-set-2-reuse-review-20261022.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-discriminant-coordinates-8-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-polynomial-expansion-8-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-norm-factorization-8-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-actual-curve-7-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-characteristic-two-11-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-quotient-descent-7-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-elliptic-class-group-6-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-elliptic-normality-2-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-elliptic-class-norm-2-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-quotient-geometry.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Class-norm route/TauCetiProject/TauCeti/TauCeti/RingTheory/ClassGroup/ExtendedRelNorm.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Class-norm route/TauCetiProject/TauCeti/TauCeti/RingTheory/ClassGroup/RelNorm.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Class-norm route/TauCetiProject/TauCeti/lake-manifest.json.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Class-norm route/leanprover-community/mathlib4/LICENSE.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Class-norm route/leanprover-community/mathlib4/Mathlib/RingTheory/ClassGroup/ExtendedHom.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Class-norm route/leanprover-community/mathlib4/lean-toolchain.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Class-norm route/original-review.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Class-norm route/verified-snapshot.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Point-map route/CoordinateRing.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Eval.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/ToClass.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/XYIdealMaximal.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/FunctionField.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PointHom/Affine.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PointHom/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PushClass.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/LinearAlgebra/Dimension/Tower.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/RingTheory/ClassGroup/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/RingTheory/FractionalIdeal/Divisibility.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/RingTheory/FractionalIdeal/Operations.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/RingTheory/Ideal/Quotient/Finite.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/RingTheory/Ideal/Quotient/Invertible.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/RingTheory/PicardGroup/Quotient.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Point-map route/original-odd-isogeny-route-review-20261023.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Point-map route/original-review.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Point-map route/verified-snapshot.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/TauCetiProject/TauCeti/LICENSE.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/TauCetiProject/TauCeti/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/IsElliptic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/TauCetiProject/TauCeti/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Coordinates.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/TauCetiProject/TauCeti/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Descent.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/TauCetiProject/TauCeti/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Equation.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/TauCetiProject/TauCeti/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Exhaustive.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/TauCetiProject/TauCeti/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/FixedField.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/TauCetiProject/TauCeti/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Isogeny.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/TauCetiProject/TauCeti/lean-toolchain.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/lana-agents/heights/Heights/VeluProduct.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/lana-agents/heights/LICENSE.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/lana-agents/heights/lean-toolchain.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/original-retrieved-files.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/original-review.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/original-verified-snapshot.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/verified-snapshot.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Tools/lean-reuse-audit-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/lean-reuse-class-norm-route-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/lean-reuse-point-map-route-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Function-field route/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Finrank.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Function-field route/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/GenericPoint/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Function-field route/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Lift.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Function-field route/verified-snapshot.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Function-field route/original-review.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Tools/lean-reuse-function-field-route-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Translation route/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Translation route/Automorphism.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Translation route/Integrality.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Translation route/verified-snapshot.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Translation route/original-review.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Tools/lean-reuse-translation-route-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticFunctionEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticFunctionInjective.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticFunctionGeneric.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticFunctionLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticFunctionDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticFunctionRange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticRationalTranscendence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddGenericPolynomials.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddGenericCoordinate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddKernelCoprime.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticRationalDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddRationalDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddRationalEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddFieldTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticRationalIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticIntegralCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddCoordinateIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddKernelIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddGenericY.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPointIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPointCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTranslatedGenericPoint.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTranslationPullback.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTranslationAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTranslationCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-elliptic-function-field-6-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-generic-coordinate-3-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-field-degree-5-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-coordinate-integrality-5-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-elliptic-translation-6-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-function-field.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Infinity route/Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Infinity route/PoleOrder.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Infinity route/Norm.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Infinity route/verified-snapshot.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Infinity route/original-review.json",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Tools/lean-reuse-infinity-route-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTranslationTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddChordY.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddSubgroupSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTranslationPairs.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddTraceX.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddTraceY.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddTranslationInvariance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTranslationSubgroup.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTranslationFixedField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddFixedField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticIntegralQuadraticRelation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddQuadraticRelation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticFunctionNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticNormUltrametric.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticInfinityValuation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticInfinityBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluInfinityX.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluInfinityY.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluPolePolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluQuadraticDegrees.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluCubicDifference.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluLeadingCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddRelationShape.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluPolynomialVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluEquationError.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticInfinityProducts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticReciprocalExpansion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticReciprocalPowers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluExpansionX.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluYTermExpansion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluExpansionY.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluApproximationAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluApproximation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluApproximationError.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluErrorRemainder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddQuotientEquation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddQuotientPullback.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCoordinateImageDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddQuotientField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddExtensionStructure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-odd-translation-invariants-7-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-fixed-field-5-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-elliptic-infinity-6-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-relation-shape-6-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-quotient-equation-12-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-quotient-field-4-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-quotient-equation-field.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Supplemental search/ramanujan-petersson-lean-README.md.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Tools/lean-reuse-supplemental-search-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddCoordinatePullback.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddCoordinateIntegralImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddIntermediateRing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddIntermediateFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddPointNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticKernelLocalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticKernelLocalCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddIntermediateLocalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticKernelLocalEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticKernelEvaluationCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluAffineEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddAffineSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticKernelPointIdeal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddIntermediateEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddIntermediateGalois.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddIntermediatePointIdeal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddPointResidueDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddPointIdealNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPointIdealClass.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddPointNormFormula.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddKernelNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddKernelGeometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddPointSurjective.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddPointFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-odd-point-norm-5-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-kernel-localization-3-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-affine-specialization-5-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-point-norm-formula-7-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-quotient-kernel-4-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-point-map.json",
+      "role": "Tools"
     }
   ],
   "statusDocuments": [
@@ -39122,7 +40590,258 @@
     "SourceIntegralJCoordinate",
     "SourceExactIntegralModularPolynomial",
     "SourceCoefficientIntegralMinimalPolynomial",
-    "SourceModularCoefficientModularRoots"
+    "SourceModularCoefficientModularRoots",
+    "SourceEllipticSequenceRelations",
+    "SourceEllipticSequenceParity",
+    "SourceEllipticSequenceRecurrences",
+    "SourceEllipticSequenceInduction",
+    "SourceEllipticSequencePermutation",
+    "SourceEllipticSequenceNet",
+    "SourceEllipticSequenceNormalized",
+    "SourceEllipticSequenceSpecialization",
+    "SourceEllipticSequenceComplement",
+    "SourceEllipticSequenceReducedInvariant",
+    "SourceEllipticSequenceInvariantIdentity",
+    "SourceEllipticDivisionCoordinates",
+    "SourceEllipticDivisionCoordinateMap",
+    "SourceEllipticUniversalCurve",
+    "SourceEllipticUniversalSpecialization",
+    "SourceEllipticPolynomialSpecialization",
+    "SourceEllipticGenericSequence",
+    "SourceEllipticGenericXCoordinates",
+    "SourceEllipticGenericYCoordinates",
+    "SourceEllipticGenericAddition",
+    "SourceEllipticGenericMultiplication",
+    "SourceEllipticGenericJacobian",
+    "SourceEllipticGenericDoubling",
+    "SourceEllipticGenericProjectiveAddition",
+    "SourceEllipticPointSpecialization",
+    "SourceEllipticPointMultiplication",
+    "SourceEllipticDivisionZeros",
+    "SourceEllipticDivisionCoprime",
+    "SourceEllipticMultiplicationXFormula",
+    "SourceEllipticNumeratorCoprime",
+    "SourceEllipticTorsionZeroCriterion",
+    "SourceEllipticTorsionFibers",
+    "SourceEllipticMultiplicationSurjective",
+    "SourceEllipticDoubleFiberCount",
+    "SourceEllipticTorsionFiberCardinality",
+    "SourceEllipticTorsionCardinality",
+    "SourceTorsionPrimeLinearAlgebra",
+    "SourceTorsionPrimePowerStructure",
+    "SourceTorsionCoprimeStructure",
+    "SourceTorsionDivisorStructure",
+    "SourceEllipticTorsionStructure",
+    "SourceCyclicPairOrder",
+    "SourceCyclicPairScaling",
+    "SourceCyclicProjectiveEquivalence",
+    "SourceCyclicProjectiveCardinality",
+    "SourceCyclicTorsionTransport",
+    "SourceEllipticCyclicCount",
+    "SourceEllipticVariableCoordinates",
+    "SourceEllipticVariableNonsingular",
+    "SourceEllipticVariablePointEquiv",
+    "SourceEllipticVariableAdditionFormula",
+    "SourceEllipticVariableAddEquiv",
+    "SourceEllipticVeluCoefficients",
+    "SourceEllipticVeluQuotient",
+    "SourceEllipticVeluTwoQuotient",
+    "SourceEllipticVeluBaseChange",
+    "SourceEllipticVeluTwoDiscriminants",
+    "SourceEllipticVeluTwoNonsingular",
+    "SourceEllipticVeluTwoEnumeration",
+    "SourceEllipticVeluTwoJInvariant",
+    "SourcePrimeTwoPolynomial",
+    "SourcePrimeTwoSymmetricIdentities",
+    "SourcePrimeTwoProduct",
+    "SourcePrimeTwoEnumeratedProduct",
+    "SourceEllipticVeluTwoRationalCoordinates",
+    "SourceEllipticVeluTwoEquation",
+    "SourceEllipticVeluTwoPointMap",
+    "SourceEllipticVeluTwoKernel",
+    "SourceEllipticVeluTwoNegation",
+    "SourceEllipticVeluTwoKernelTranslation",
+    "SourceEllipticVeluTwoLineRelations",
+    "SourceEllipticVeluTwoSecantCleared",
+    "SourceEllipticVeluTwoTangentXCleared",
+    "SourceEllipticVeluTwoTangentYCleared",
+    "SourceEllipticVeluTwoSecantXRelations",
+    "SourceEllipticVeluTwoTangentYRelations",
+    "SourceEllipticVeluTwoAddCases",
+    "SourceEllipticVeluTwoCollisionCases",
+    "SourceEllipticVeluTwoSecantCompatibility",
+    "SourceEllipticVeluTwoTangentXCompatibility",
+    "SourceEllipticVeluTwoTangentYCompatibility",
+    "SourceEllipticVeluTwoAdditivityCases",
+    "SourceEllipticVeluTwoAdditivity",
+    "SourceEllipticVeluTwoHom",
+    "SourceEllipticVeluTwoSurjective",
+    "SourceEllipticVeluTwoQuotientFibers",
+    "SourceIntegralPrimeConjugateProduct",
+    "SourceIntegralPrimeTwoProduct",
+    "SourceIntegralPrimeTwoDegreeBounds",
+    "SourceJFiniteCoefficientLists",
+    "SourceEtaSevenCoefficients",
+    "SourceJSevenCoefficients",
+    "SourcePrimeTwoLaurentNormalForms",
+    "SourcePrimeTwoLaurentProducts",
+    "SourcePrimeTwoExplicitCoefficients",
+    "SourceIntegralJFiniteCoefficientTest",
+    "SourceIntegralPrimeTwoCoefficient0",
+    "SourceIntegralPrimeTwoCoefficient1",
+    "SourceIntegralPrimeTwoCoefficient2",
+    "SourceIntegralPrimeTwoIdentification",
+    "SourceIntegralPrimeTwoQuotientProduct",
+    "SourceEllipticOddSummingSet",
+    "SourceEllipticOddSummingStructure",
+    "SourceEllipticOddChordIdentities",
+    "SourceEllipticOddTwoTorsionTranslation",
+    "SourceEllipticOddRootPackets",
+    "SourceEllipticOddDoublingFormula",
+    "SourceEllipticOddDoublingPackets",
+    "SourceEllipticOddReindex",
+    "SourceEllipticOddOrbitTrace",
+    "SourceEllipticOddSummingFold",
+    "SourceEllipticOddPolynomialReflection",
+    "SourceEllipticOddQuotientPolynomials",
+    "SourceEllipticOddTruncatedIdentities",
+    "SourceEllipticOddTruncatedExpansion",
+    "SourceEllipticOddPolynomialDegrees",
+    "SourceEllipticOddReflectedQuotient",
+    "SourceEllipticOddReflectedIdentity",
+    "SourceEllipticOddPolynomialExpansion",
+    "SourceEllipticOddNormPolynomials",
+    "SourceEllipticOddNormSpecialization",
+    "SourceEllipticOddNormCoordinates",
+    "SourceEllipticOddNormIdentity",
+    "SourceEllipticOddNormFibers",
+    "SourceEllipticOddCubicFactors",
+    "SourceEllipticOddCubicPipeline",
+    "SourceEllipticOddDiscriminantProduct",
+    "SourceEllipticOddCurveCoordinates",
+    "SourceEllipticOddOrbitDistinctness",
+    "SourceEllipticOddGoodAbscissae",
+    "SourceEllipticOddCubicRoots",
+    "SourceEllipticOddOrbitInvariance",
+    "SourceEllipticOddActualDiscriminant",
+    "SourceEllipticOddShortQuotient",
+    "SourceEllipticOddCharTwoSupersingular",
+    "SourceEllipticOddCharTwoPolynomial",
+    "SourceEllipticOddCharTwoPolynomialRoots",
+    "SourceEllipticOddCharTwoCoefficients",
+    "SourceEllipticOddCharTwoNorm",
+    "SourceEllipticOddCharTwoTorsion",
+    "SourceEllipticOddCharTwoCosets",
+    "SourceEllipticOddCharTwoInvariants",
+    "SourceEllipticOddCharTwoQuotientCoefficients",
+    "SourceEllipticOddCharTwoKernelCoordinates",
+    "SourceEllipticOddCharTwoActualDiscriminant",
+    "SourceEllipticOddVariableEmbedding",
+    "SourceEllipticOddVariableCoefficients",
+    "SourceEllipticOddVariableQuotient",
+    "SourceEllipticOddVariableSummingSet",
+    "SourceEllipticOddBaseChange",
+    "SourceEllipticOddNormalizedDiscriminant",
+    "SourceEllipticOddQuotient",
+    "SourceEllipticClassIdealFactorization",
+    "SourceEllipticClassCodimension",
+    "SourceEllipticClassSmallNorm",
+    "SourceEllipticClassPointIdeals",
+    "SourceEllipticClassReduction",
+    "SourceEllipticClassSurjective",
+    "SourceEllipticClassLocalRegular",
+    "SourceEllipticClassNormal",
+    "SourceEllipticClassRelativeNorm",
+    "SourceEllipticClassExtensionNorm",
+    "SourceEllipticFunctionEvaluation",
+    "SourceEllipticFunctionInjective",
+    "SourceEllipticFunctionGeneric",
+    "SourceEllipticFunctionLift",
+    "SourceEllipticFunctionDegree",
+    "SourceEllipticFunctionRange",
+    "SourceEllipticRationalTranscendence",
+    "SourceEllipticOddGenericPolynomials",
+    "SourceEllipticOddGenericCoordinate",
+    "SourceEllipticOddKernelCoprime",
+    "SourceEllipticRationalDegree",
+    "SourceEllipticOddRationalDegree",
+    "SourceEllipticOddRationalEmbedding",
+    "SourceEllipticOddFieldTower",
+    "SourceEllipticRationalIntegral",
+    "SourceEllipticIntegralCoordinates",
+    "SourceEllipticOddCoordinateIntegral",
+    "SourceEllipticOddKernelIntegral",
+    "SourceEllipticOddGenericY",
+    "SourceEllipticPointIntegral",
+    "SourceEllipticPointCoordinates",
+    "SourceEllipticTranslatedGenericPoint",
+    "SourceEllipticTranslationPullback",
+    "SourceEllipticTranslationAction",
+    "SourceEllipticTranslationCoordinates",
+    "SourceEllipticTranslationTrace",
+    "SourceEllipticOddChordY",
+    "SourceEllipticOddSubgroupSum",
+    "SourceEllipticTranslationPairs",
+    "SourceEllipticOddTraceX",
+    "SourceEllipticOddTraceY",
+    "SourceEllipticOddTranslationInvariance",
+    "SourceEllipticTranslationSubgroup",
+    "SourceEllipticTranslationFixedField",
+    "SourceEllipticOddFixedField",
+    "SourceEllipticIntegralQuadraticRelation",
+    "SourceEllipticOddQuadraticRelation",
+    "SourceEllipticFunctionNorm",
+    "SourceEllipticNormUltrametric",
+    "SourceEllipticInfinityValuation",
+    "SourceEllipticInfinityBounds",
+    "SourceEllipticVeluInfinityX",
+    "SourceEllipticVeluInfinityY",
+    "SourceEllipticVeluPolePolynomial",
+    "SourceEllipticVeluQuadraticDegrees",
+    "SourceEllipticVeluCubicDifference",
+    "SourceEllipticVeluLeadingCoefficient",
+    "SourceEllipticOddRelationShape",
+    "SourceEllipticVeluPolynomialVanishing",
+    "SourceEllipticVeluEquationError",
+    "SourceEllipticInfinityProducts",
+    "SourceEllipticReciprocalExpansion",
+    "SourceEllipticReciprocalPowers",
+    "SourceEllipticVeluExpansionX",
+    "SourceEllipticVeluYTermExpansion",
+    "SourceEllipticVeluExpansionY",
+    "SourceEllipticVeluApproximationAlgebra",
+    "SourceEllipticVeluApproximation",
+    "SourceEllipticVeluApproximationError",
+    "SourceEllipticVeluErrorRemainder",
+    "SourceEllipticOddQuotientEquation",
+    "SourceEllipticOddQuotientPullback",
+    "SourceEllipticCoordinateImageDegree",
+    "SourceEllipticOddQuotientField",
+    "SourceEllipticOddExtensionStructure",
+    "SourceEllipticOddCoordinatePullback",
+    "SourceEllipticOddCoordinateIntegralImage",
+    "SourceEllipticOddIntermediateRing",
+    "SourceEllipticOddIntermediateFinite",
+    "SourceEllipticOddPointNorm",
+    "SourceEllipticKernelLocalization",
+    "SourceEllipticKernelLocalCoordinates",
+    "SourceEllipticOddIntermediateLocalization",
+    "SourceEllipticKernelLocalEvaluation",
+    "SourceEllipticKernelEvaluationCoordinates",
+    "SourceEllipticVeluAffineEvaluation",
+    "SourceEllipticOddAffineSpecialization",
+    "SourceEllipticKernelPointIdeal",
+    "SourceEllipticOddIntermediateEvaluation",
+    "SourceEllipticOddIntermediateGalois",
+    "SourceEllipticOddIntermediatePointIdeal",
+    "SourceEllipticOddPointResidueDegree",
+    "SourceEllipticOddPointIdealNorm",
+    "SourceEllipticPointIdealClass",
+    "SourceEllipticOddPointNormFormula",
+    "SourceEllipticOddKernelNorm",
+    "SourceEllipticOddKernelGeometry",
+    "SourceEllipticOddPointSurjective",
+    "SourceEllipticOddPointFibers"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

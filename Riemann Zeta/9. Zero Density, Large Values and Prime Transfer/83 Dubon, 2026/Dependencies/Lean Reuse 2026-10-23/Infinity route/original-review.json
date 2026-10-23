@@ -1,0 +1,64 @@
+{
+  "recordedUTC": "2026-10-23T11:15:11.071999+00:00",
+  "repository": "TauCetiProject/TauCeti",
+  "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+  "license": "Apache-2.0",
+  "verifiedFiles": [
+    {
+      "name": "Basic.lean",
+      "sha": "f29c0c925bfca76bef11d94e5e7ef740ae81c9c9",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/InfinityPlace/Basic.lean",
+      "path": "E:/Lean/.tmp/dubon83/elliptic-infinity-reuse-20261023/Basic.lean.txt",
+      "bytes": 21436,
+      "sha256": "3CE6AF2297B568D5108AD0D7D57A5D2042DC36EDB92BFCAD7753B695F19F53D8",
+      "verifiedGitBlob": "f29c0c925bfca76bef11d94e5e7ef740ae81c9c9"
+    },
+    {
+      "name": "PoleOrder.lean",
+      "sha": "eed53cb9bdd01fe4d5c105577afabdba2db71f9a",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/InfinityPlace/PoleOrder.lean",
+      "path": "E:/Lean/.tmp/dubon83/elliptic-infinity-reuse-20261023/PoleOrder.lean.txt",
+      "bytes": 8954,
+      "sha256": "ED09D865DD81B117F5B6AABA8179915F96F2FAB6A12125B13AF3828713F68BB8",
+      "verifiedGitBlob": "eed53cb9bdd01fe4d5c105577afabdba2db71f9a"
+    },
+    {
+      "name": "Norm.lean",
+      "sha": "1cb2cdac0678694e0fc169128d9c5cac88f584c2",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Norm.lean",
+      "path": "E:/Lean/.tmp/dubon83/elliptic-infinity-reuse-20261023/Norm.lean.txt",
+      "bytes": 6530,
+      "sha256": "E8CA415769FC60142B9866F173EAA694BE46655458B8107DBCF825CFE87011E8",
+      "verifiedGitBlob": "1cb2cdac0678694e0fc169128d9c5cac88f584c2"
+    }
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight higher symmetric-power continuation -> arithmetic automorphy/residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> finite exceptional-fiber census -> actual cyclic-subgroup interpretation of integral modular-polynomial roots -> explicit odd quotient map -> explicit quotient equation -> identification of the polynomial quadratic relation coefficients",
+  "selected": [
+    "Norm: integer degree of the native norm under coordinate-ring localization and common polynomial denominators.",
+    "InfinityPlace/Basic: only the norm-degree ultrametric inequality, actual valuation definition, coordinate values and triviality on the original base field."
+  ],
+  "deferred": [
+    "PoleOrder: inspected but general transported-valuation low-pole coordinate classification is unnecessary for the current coefficient comparison.",
+    "Uniformizer, discreteness, affine-place distinction, uniqueness, ramification and full divisor infrastructure are not needed for this coefficient computation."
+  ],
+  "localReuse": [
+    "SourceEllipticFunctionDegree: quadratic field degree and finite dimensionality.",
+    "SourceEllipticFunctionGeneric: actual coordinate embeddings and polynomial injectivity.",
+    "SourceEllipticOddQuadraticRelation: actual monic quadratic relation over the literal x-coordinate polynomial ring.",
+    "SourceEllipticOddGenericCoordinate/GenericY: literal finite coordinate formulas."
+  ],
+  "nativeReuse": [
+    "CoordinateRing.degree_norm_smul_basis, exists_smul_basis_eq",
+    "Algebra.norm_localization, norm_algebraMap, norm_ne_zero_iff",
+    "Algebra.IsAlgebraic localization instance for the polynomial subring",
+    "RatFunc.inftyValuation and intDegree"
+  ],
+  "shorterRoute": "Construct the actual infinity valuation by the native norm and native rational-function infinity valuation. Reuse degree_norm_smul_basis for the ultrametric bound and norm_localization for coordinate values. No full affine place, divisor, residue-field or automorphism-classification development is required. Then compare polynomial relation coefficients using the actual coordinate pole orders and finite correction formulas.",
+  "assumptionsToDischarge": [
+    "Existence of a valuation with the actual generic x and y values exp 2 and exp 3, trivial on F.",
+    "Degree bounds and leading-coefficient identification for the already proved quadratic relation."
+  ],
+  "status": "Verified external source inspection only; local adaptations and kernel audits pending. No full external build or acceptance gate closure claimed.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-23 America/Vancouver",
+  "purpose": "Targeted follow-up to the owner-requested public Lean proof search before further expanding the odd cyclic quotient dependency.",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight higher symmetric-power continuation -> arithmetic automorphy/residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> exceptional-fiber inertia census -> actual cyclic-subgroup interpretation of integral modular-polynomial roots -> odd-prime quotient maps and products -> explicit odd Velu quotient ellipticity.",
+  "queries": [
+    "Lean WeierstrassCurve veluQuotient isogeny github TauCeti",
+    "site:github.com \"veluQuotient\" \"discriminant\"",
+    "site:github.com \"Lean\" \"cyclicQuotientJ\""
+  ],
+  "snapshot": {
+    "path": "Dependencies/Lean Reuse 2026-10-23/verified-snapshot.json",
+    "sha256": "27010F65C14438A2D7572B26804C02E01E93BCB0C2F7A9565E39B9177111E526",
+    "verifiedGitBlobs": 12
+  },
+  "candidates": [
+    {
+      "repository": "TauCetiProject/TauCeti",
+      "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+      "committedUTC": "2026-10-23T04:01:01Z",
+      "lean": "4.36.0-rc1",
+      "license": "Apache-2.0",
+      "files": [
+        "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Coordinates.lean",
+        "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/FixedField.lean",
+        "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Equation.lean",
+        "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Isogeny.lean",
+        "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Descent.lean",
+        "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Exhaustive.lean",
+        "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/IsElliptic.lean"
+      ],
+      "theorems": [
+        "WeierstrassCurve.Affine.equation_veluX_veluY",
+        "WeierstrassCurve.Affine.eq_veluCurve_of_equation",
+        "WeierstrassCurve.Affine.degree_veluIsogeny",
+        "WeierstrassCurve.Affine.ker_veluIsogeny",
+        "WeierstrassCurve.Affine.isElliptic_veluCurve",
+        "WeierstrassCurve.Affine.existsUnique_comp_veluIsogeny_eq_iff_le_ker",
+        "WeierstrassCurve.exists_baseChange_eq_veluCurve"
+      ],
+      "findings": "Source proofs construct the actual translation-fixed quotient, its Weierstrass equation, separable isogeny of degree equal to the finite kernel cardinality, exact kernel, universal property, and ellipticity in every characteristic. Ellipticity follows by factoring multiplication through the quotient and excluding a rational source mapping to an elliptic curve. Coefficients of veluCurve are characterized but explicitly not computed.",
+      "decision": "A substantial source candidate for the future quotient-map, universal-property and Galois-descent obligations. It does not directly identify the quotient with the existing explicit veluQuotient coefficients. Adapting it now would require its elliptic function-field translation/place, genus, isogeny and factorization chain plus that coefficient bridge. Local searches found no existing matching IsWeierstrassCoordinates, translationFixedField or genus_functionField implementation. Continue the selected explicit discriminant calculation, which uses existing local objects and preserves all characteristics. Reassess this source before expanding the later point-homomorphism and reduction chains; do not duplicate its general foundations merely to avoid the explicit coefficient comparison."
+    },
+    {
+      "repository": "lana-agents/heights",
+      "commit": "f4379dbccc8cdc4faa894a236d5581a6a635c5b5",
+      "committedUTC": "2026-10-10T00:18:31Z",
+      "lean": "4.32.0",
+      "license": "Apache-2.0",
+      "files": [
+        "Heights/VeluProduct.lean"
+      ],
+      "theorems": [
+        "Heights.Velu.prod_mul_sum_sub_sum"
+      ],
+      "findings": "A finite-subgroup x-coordinate product identity for characteristic different from two and a subgroup without nonzero two-torsion. Its file explicitly constructs no quotient curve, isogeny or invariant differential.",
+      "decision": "The pair-coordinate and finite-orbit argument overlaps the already proved local chord identities and orbit trace. The product formula may inform the next norm factorization, but it neither proves quotient ellipticity nor covers characteristic two. Porting the complete generic subgroup package would duplicate the established cyclic half-orbit objects. Keep as source comparison, not as a discharged source obligation."
+    }
+  ],
+  "evidenceBoundary": "The twelve selected source/license/toolchain files match their exact Git blob hashes. They were read as source text, not imported or executed. No external build, exhaustive dependency closure, transitive axiom audit or pinned-toolchain replay is claimed. External code comments and repository status do not constitute local proof evidence.",
+  "route": "Use the already audited actual doubling formula, root packets, cyclic doubling permutation and orbit trace. Derive the explicit quotient cubic coefficients from the finite polynomial identity by native reflection and comparison modulo X^4; next prove the identity from actual translations and assemble the discriminant formula. Keep Tau Ceti as a scoped candidate for the later map and descent obligations.",
+  "sourceContractChanged": false,
+  "rootPinsChanged": false,
+  "proofStandardsChanged": false,
+  "gates": "16/20; DUB-17--20 OPEN; no acceptance gate closes through this research.",
+  "originalFrozenReview": {
+    "path": "Dependencies/Lean Reuse 2026-10-23/original-review.json",
+    "sha256": "16105FE958B2B66B5FDC28D45CA29E43DBF610458AD2E995A2D9A6DCC77519D6"
+  },
+  "archivedUTC": "2026-10-23T08:58:26.756288+00:00",
+  "pointMapFollowup": {
+    "path": "Tools/lean-reuse-point-map-route-20261023.json",
+    "sha256": "2CE30DB5D78C53F1D91E87D73E8A2ADEDD3D00779CF0957042E5A22EEEB8F9CB",
+    "verifiedAdditionalGitBlobs": 16,
+    "decision": "Adapt the direct affine ideal-class route, specializing the point-to-class proof to elliptic curves. Ellipticity derives nonsingularity, so omit the source's singular-curve cotangent argument. Reuse native norm-degree and invertible-module APIs; prove only the ideal-factorization, codimension and point-ideal classification lemmas used by this consumer. Defer the full Tau Ceti isogeny category, composition, duals, universal properties and arbitrary singular curves. Then construct the explicit quotient pullback and derive its norm point-map evaluation and exact cyclic kernel, using the existing all-characteristic quotient ellipticity. Reassess remaining place/intermediate-ring dependencies when the exact consumer requires them.",
+    "normalityDecision": "Tau Ceti proves normality over arbitrary fields using conjugation, integral trace/norm and prime-divisibility arguments. The exact next explicit quotient-map contract is over an algebraically closed field. Reuse the frozen FLT local-principal-ideal/DVR proof instead, replacing its coordinate classification and vanishing helpers with cohort 279. No arbitrary-field normality claim is made and no characteristic is excluded."
+  },
+  "classNormFollowup": {
+    "path": "Tools/lean-reuse-class-norm-route-20261023.json",
+    "sha256": "2DA5E0E980D292A897E280E1C1DEE5AF919AF0B5346B70A9E099682ED13DEEB8",
+    "verifiedAdditionalGitBlobs": 6,
+    "decision": "The pinned Mathlib already has relative ideal norms, their principal-ideal formula, ClassGroup.mk0 surjectivity/equality criterion and the monoid-congruence quotient. The new Mathlib ClassGroup.ExtendedHom source was inspected at the exact revision in Tau Ceti lake-manifest. Its general domain/fractional-ideal map is broader than required. Every coordinate and intermediate ring in the selected consumer is Dedekind, so descend the integral ideal map through mk0 directly, in the same way as the relative norm. This avoids new general class-map functoriality and fractional-ideal quotient APIs."
+  },
+  "totalSelectedVerifiedGitBlobs": 43,
+  "functionFieldFollowup": {
+    "path": "Tools/lean-reuse-function-field-route-20261023.json",
+    "sha256": "FFA733CBC7DBF80CFBDA66AAF385AECEA83F71F6BE5D49882B87A52B60ADA2F6",
+    "verifiedAdditionalGitBlobs": 3,
+    "decision": "The pinned native coordinate-ring basis and norm give injective evaluation at a transcendental first coordinate. Native fraction-ring lifting and range generation identify the resulting field embedding. Algebra.IsAlgebraic.finrank_of_isFractionRing proves the quadratic degree directly; no port of the newer IsFractionRing.finrank_eq or general function-field presentation package is needed. The newer Tau Ceti generic-point and lift proofs are specialized to the field case required here. Ellipticity and faithful polynomial action are derived explicitly because the pinned instance API differs. The field-range proof is a short local adaptation of native range-generation lemmas."
+  },
+  "translationFollowup": {
+    "path": "Tools/lean-reuse-translation-route-20261023.json",
+    "sha256": "D426089474F4309FA8868FE0C5CC324ACE8022603CD1786EE0B2940C481E60D3",
+    "verifiedAdditionalGitBlobs": 3,
+    "selectedSources": 2,
+    "deferredSource": 1,
+    "decision": "Reuse native affine point base change and group law, the existing coordsOrZero and negation formula, and frozen actual generic coordinates, field-lift uniqueness and integral-image descent. The relative algebraic closure argument proves translated x transcendental in every characteristic without pole infrastructure or an algebraically closed base-field assumption. Adapt only the needed translation action from the source, retaining the pinned toolchain and proof limits."
+  },
+  "infinityFollowup": {
+    "path": "Tools/lean-reuse-infinity-route-20261023.json",
+    "sha256": "9D723B314EE0BED5D19DB09E7971CA47FD9C013A72DBD0AF09821BE139A3120F",
+    "verifiedAdditionalGitBlobs": 3,
+    "selectedSources": 2,
+    "deferredSource": 1,
+    "decision": [
+      "SourceEllipticFunctionDegree: quadratic field degree and finite dimensionality.",
+      "SourceEllipticFunctionGeneric: actual coordinate embeddings and polynomial injectivity.",
+      "SourceEllipticOddQuadraticRelation: actual monic quadratic relation over the literal x-coordinate polynomial ring.",
+      "SourceEllipticOddGenericCoordinate/GenericY: literal finite coordinate formulas."
+    ]
+  }
+}

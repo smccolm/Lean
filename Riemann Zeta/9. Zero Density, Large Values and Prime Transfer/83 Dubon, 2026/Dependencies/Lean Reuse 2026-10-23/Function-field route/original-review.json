@@ -1,0 +1,52 @@
+{
+  "recordedUTC": "2026-10-23T09:16:18.949460+00:00",
+  "repository": "TauCetiProject/TauCeti",
+  "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+  "license": "Apache-2.0",
+  "sourceFiles": [
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Finrank.lean",
+      "sha": "9cc2476f3b9bd70d278f20a74572a2399df19145",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Finrank.lean",
+      "localPath": "E:/Lean/.tmp/dubon83/elliptic-function-field-reuse-20261023/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Finrank.lean.txt",
+      "bytes": 12783,
+      "sha256": "1C2215EEB268D195F47463FBF5ED63ACAABAA663B4D655CD654B9AA517DEA763",
+      "verifiedGitBlob": "9cc2476f3b9bd70d278f20a74572a2399df19145"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/GenericPoint/Basic.lean",
+      "sha": "a902e21e60b490502fa640ecaf9afc66128f254c",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/GenericPoint/Basic.lean",
+      "localPath": "E:/Lean/.tmp/dubon83/elliptic-function-field-reuse-20261023/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/GenericPoint/Basic.lean.txt",
+      "bytes": 19029,
+      "sha256": "FA6C78B962D8DE5B9C5BE670CFD756462EF57400EA61E2097D7B91FD90174512",
+      "verifiedGitBlob": "a902e21e60b490502fa640ecaf9afc66128f254c"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Lift.lean",
+      "sha": "b3b83ad2eef38c31ebc3242905099c6b9ca93feb",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Lift.lean",
+      "localPath": "E:/Lean/.tmp/dubon83/elliptic-function-field-reuse-20261023/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/FunctionField/Lift.lean.txt",
+      "bytes": 13316,
+      "sha256": "5BB186368A57B702B255A8F235398D1A597840E15C4B7B9D4A3E13CD7E199A94",
+      "verifiedGitBlob": "b3b83ad2eef38c31ebc3242905099c6b9ca93feb"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Eval.lean",
+      "sha": "18b25c4b921aa48d54688a1e2ab8f69c566adf91",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Eval.lean",
+      "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-isogeny-route-20261023\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\Affine\\Eval.lean.txt",
+      "sha256": "33A38582BD0577C47D4A7CD5587A1C14F6D83A013623539676C1FF11FC5ED9B7"
+    }
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> actual cyclic-subgroup root interpretation -> odd quotient homomorphism -> actual coordinate pullback and fraction-field embedding",
+  "reuseAssessment": "The pinned native coordinate-ring basis and norm give injective evaluation at a transcendental first coordinate. Native fraction-ring lifting and range generation identify the resulting field embedding. Algebra.IsAlgebraic.finrank_of_isFractionRing proves the quadratic degree directly; no port of the newer IsFractionRing.finrank_eq or general function-field presentation package is needed. The newer Tau Ceti generic-point and lift proofs are specialized to the field case required here. Ellipticity and faithful polynomial action are derived explicitly because the pinned instance API differs. The field-range proof is a short local adaptation of native range-generation lemmas.",
+  "omissions": [
+    "general ring-valued generic points",
+    "abstract function-field presentation equivalences",
+    "differential and separability APIs not yet consumed",
+    "general intermediate-field transport infrastructure"
+  ],
+  "evidenceBoundary": "Four exact source blobs verified. Six local modules, fifty exhaustive theorems, forty-one explicit axiom queries and forty-seven declaration-value edges pass; sixteen linters per module and zero diagnostics. No external repository build or closure audit is claimed. Production promotion is pending.",
+  "remaining": "The explicit odd quotient equation, transcendence of its x-coordinate, actual finite separable degree and intermediate integral closure, point homomorphism evaluation and exact cyclic kernel remain required. DUB-17--20 remain open; 16/20 gates."
+}

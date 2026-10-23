@@ -82,7 +82,7 @@
   "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original weight-two Frobenius/inertia -> actual modular-curve good reduction -> genus equality -> reverse genus inequality -> exact tame/wild genus criteria, finite exceptional-fiber census and wild differential contributions -> canonical degree and actual coefficient-field coordinate degree -> residue duality -> global residues -> actual completed trace sum and rational-generator residue theorem.",
   "discharged": "The actual coefficient-field global residue theorem is proved in every characteristic. The original and completed residues agree; the completed tensor product is the product of the actual place completions, and its trace is the sum of their field traces. This proves global residue transfer to the literal j-coordinate field. The rational-generator residue theorem follows from the proved parameter trace, partial-fraction span and signed divisor degree. Residue duality and Riemann--Roch give canonical degree equal to twice the existing source H1 genus minus two. The actual differential divisor of dj plus twice the j-pole divisor is effective, giving Hurwitz bounds. The existing all-level degree theorem gives finite-fiber multiplicity and total pole order psi(N) away from the level characteristic. The full j-pole set has cardinality cuspCount(N): actual slot embeddings give exact widths, leading coefficients prove distinctness, and the width sum exhausts the total pole degree. The numeric Hurwitz inequalities derive their coordinate degree, pole multiplicity and full cusp contribution. The tame reverse-genus deduction now has only the displayed finite exceptional-fiber census as its remaining mathematical input; the wild deduction has only the displayed finite differential contribution. These two deductions are conditional on those narrower open inputs. The literal coefficient field has a constructed simple presentation over its j-coordinate field. Its embeddings with a prescribed transcendental j-value correspond to roots of the actual j_N minimal polynomial. The original integral minimal polynomial has degree psi(N); its specialization is that same coefficient-field minimal polynomial. Thus actual embeddings correspond to roots of one constructed integral modular polynomial, with each root equal to the original j_N image. No integral polynomial existence, degree, specialization or root-map assumption is supplied. No global residue, duality, canonical-degree, finite-support, field-degree or characteristic-zero assumption is supplied to these actual consumers.",
   "boundary": "The elliptic cyclic-subgroup interpretation of the integral modular-polynomial roots and the actual inertia orbit map remain required for the finite census. The finite exceptional-fiber cardinalities and wild differential contributions in characteristics two and three remain required for the reverse genus inequality. Genus equality, place comparison and good reduction remain required. Original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
-  "status": "Global residues, residue duality, canonical degree, full cusp count, conditional exact genus criteria and actual modular-polynomial entry pass 444 exhaustive scratch theorem checks and 246 explicit axiom queries, with sixteen linters per module and zero diagnostics. Fifteen declaration-value audits verify 289 required dependencies. Production aggregate, focused audit and sequential foundation/paper verification of the 6,649-module scope are pending.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 6,649-module scope: all thirteen retained regressions, 45,214 exhaustive theorem checks, 20,117 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
   "rootPinsChanged": false,
   "proofLimitsChanged": false,
   "frozenReceiptProseCorrections": [],
@@ -1749,5 +1749,750 @@
       "change": "Reword the module comment so its line does not begin with the declaration keyword constant. All declarations, statements and proof bodies are unchanged; frozen scratch sources and receipts are untouched."
     }
   ],
-  "promotionChanges": "Only scratch import names are qualified; complete mathematical statements and proof bodies are retained. Actual completions, trace maps, global residue sums, canonical divisors, H1 genus and fiber multiplicities retain their literal definitions. No source contract is weakened. One pre-verification module comment is reworded to avoid a proof-integrity scanner keyword at the start of a prose line; declarations and proof bodies are unchanged. The exact source hashes and repair are recorded."
+  "promotionChanges": "Only scratch import names are qualified; complete mathematical statements and proof bodies are retained. Actual completions, trace maps, global residue sums, canonical divisors, H1 genus and fiber multiplicities retain their literal definitions. No source contract is weakened. One pre-verification module comment is reworded to avoid a proof-integrity scanner keyword at the start of a prose line; declarations and proof bodies are unchanged. The exact source hashes and repair are recorded.",
+  "productionFocusedReceipt6649": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientCompletionResiduesDependencyAudit5Production6649.log",
+        "sha256": "272B936399F37969FE5D1193A2C508AA383578F57588FAABB40CE7676A0FA19A",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_completion_residue_algebraMap_bijective",
+          "Dubon2026.SourceFunctionField.coeff_completion_principalParts_bijective",
+          "Dubon2026.SourceFunctionField.coeff_completion_integral_retraction",
+          "Dubon2026.SourceCurve.Place.completionResidueMap",
+          "Dubon2026.SourceCurve.Place.completionLinearMap",
+          "Dubon2026.SourceCurve.Place.completionPrincipalPartsMap",
+          "Dubon2026.SourceCurve.Place.completionPrincipalPartsEquiv",
+          "Dubon2026.SourceCurve.Place.completionOriginalPrincipalPart",
+          "Dubon2026.SourceCurve.Place.completionOriginalProjection",
+          "Dubon2026.SourceCurve.Place.completionOriginalRetraction"
+        ],
+        "sourceSha256": "3E3264EF67A46BAE68831981BA6444B2EE141B8665CE2C2267C951714058C504"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientCompletionTraceDependencyAudit3Production6649.log",
+        "sha256": "0D26E22D5786324161BC085064F560BCE2E6EA398496593B7AFF1B23E6AD84F3",
+        "requiredProofValueEdges": 15,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_completion_tateResidue_eq_canonical_differential",
+          "Dubon2026.SourceCurve.Place.completionIntegralInclusion",
+          "Dubon2026.SourceCurve.Place.completionCommutatorFactor"
+        ],
+        "sourceSha256": "55343C5E14F1AB096F0AB20EBE1DFE7FB11BA8534A6229DE11B05A0BC5F5210A"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientLocalFieldTraceDependencyAudit7Production6649.log",
+        "sha256": "56A128B439463F501067FF446D2C5843540945258CC53D8CEF3FC2014066B5DF",
+        "requiredProofValueEdges": 22,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_tateResidue_completion_fieldTrace_uniformizer",
+          "Dubon2026.SourceCurve.Place.completionBasisCoordinates",
+          "Dubon2026.SourceCurve.Place.completionIntegralCoordinatesMap",
+          "Dubon2026.SourceCurve.Place.completionIntegralCoordinates",
+          "Dubon2026.SourceCurve.Place.completionBasisRetraction",
+          "Dubon2026.SourceCurve.Place.completionMultiplicationMatrix"
+        ],
+        "sourceSha256": "E1D2D12F99D38142DCD218119E340E0E5DC98BAC2F840D6A83F4F308F0FAEAEA"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientCompletionDegreeDependencyAudit5Production6649.log",
+        "sha256": "54D507C78AEFB09A5EC66FE7F76113A827DFE2A8903E0646C19328610201A331",
+        "requiredProofValueEdges": 19,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_completion_finrank_eq_ramificationIndex",
+          "Dubon2026.SourceCurve.Place.completionUniformizer",
+          "Dubon2026.SourceCurve.Place.completedExtensionDegree"
+        ],
+        "sourceSha256": "A0DB20A0A774E8F1DCD0B4998B80A8FDF35B6225939300268F482445FDB2905B"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientCompletionSumDependencyAudit8Production6649.log",
+        "sha256": "43B7FE9CB231E28867688F26D7CC903274E6601F7F1E07A6595F705C74320F30",
+        "requiredProofValueEdges": 25,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_completionTraceSum",
+          "Dubon2026.SourceCurve.Place.fiberCompletionAlgebra",
+          "Dubon2026.SourceCurve.Place.fiberCompletionComponent",
+          "Dubon2026.SourceCurve.Place.fiberCompletionDiagonal",
+          "Dubon2026.SourceCurve.Place.fiberCompletionModule",
+          "Dubon2026.SourceCurve.Place.fiberCompletionProduct"
+        ],
+        "sourceSha256": "5F72AF166F9181D14AC904BC368AA77B0EE8B19D1E8A1F9821247E456252B007"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalTraceDependencyAudit6Production6649.log",
+        "sha256": "A0610AED0E15EF7B4B19B1758668917F07A78B147719B810AE6FF1E340560784",
+        "requiredProofValueEdges": 24,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_tateResidue_global_trace"
+        ],
+        "sourceSha256": "3E34B64A648D8046535480AD14C7EABF690C1CB6FB30CDD276BB1F5FA03887A7"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceRationalParameterTraceDependencyAudit7Production6649.log",
+        "sha256": "6A18AE4D92F694CF2E05FAF0663720F4015A9F61C08EEE22DF20A65A6DBA86A6",
+        "requiredProofValueEdges": 28,
+        "consumers": [
+          "Dubon2026.SourceCurve.rational_tateResidue_parameter_zpow",
+          "Dubon2026.SourceCurve.Place.parameterPoleClass",
+          "Dubon2026.SourceCurve.Place.parameterPrincipalPartLift",
+          "Dubon2026.SourceCurve.Place.parameterPrincipalPart",
+          "Dubon2026.SourceCurve.Place.parameterProj",
+          "Dubon2026.SourceCurve.Place.parameterIntegralRetraction",
+          "Dubon2026.SourceCurve.Place.parameterResidueScalar"
+        ],
+        "sourceSha256": "E523E125512A71F8D0167FEF8C39ABC593B4E71119362B04CEE96ABAAB90E45F"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesDependencyAudit11Production6649.log",
+        "sha256": "0805CEA5B30D424AA3811CA84D051E5CAB4EC2D2219289EC42BB5B44CA499D2A",
+        "requiredProofValueEdges": 42,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_canonical_degree_eq_genusFF",
+          "Dubon2026.SourceFunctionField.coeff_functionFieldRiemannRoch",
+          "Dubon2026.SourceCurve.rational_sum_tateResidue_X_eq_zero",
+          "Dubon2026.SourceCurve.globalTateFunctional",
+          "Dubon2026.SourceFunctionField.coeffPrincipalAdele",
+          "Dubon2026.SourceFunctionField.coeffResiduePairingEquiv"
+        ],
+        "sourceSha256": "906646BEA3A11770EC820D723D454206B58A0CCC83027A5445BC5476F7F1F55C"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientHurwitzDependencyAudit3Production6649.log",
+        "sha256": "D19F77F5D91F672F5299135D690426F52F1BFC38E14CBDED01CC82D6B0B93CCE",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_hurwitz_differential_bound",
+          "Dubon2026.SourceFunctionField.coeff_hurwitz_ramification_bound",
+          "Dubon2026.SourceFunctionField.coeffHurwitzDivisor"
+        ],
+        "sourceSha256": "BF6C8CEDE383D9F7F45305F18BF137A097E644616749CEC884F89F06332C24CD"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientDegreeSumsDependencyAudit3Production6649.log",
+        "sha256": "A073B8E2CA70C873C46D8D22C8E4ABE75F8CDF3FAD40EE3359BB9B34CA289444",
+        "requiredProofValueEdges": 12,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.sum_coeff_j_fiber_orders_finset",
+          "Dubon2026.SourceFunctionField.coeff_hurwitz_differential_numeric",
+          "Dubon2026.SourceFunctionField.coeff_hurwitz_ramification_numeric"
+        ],
+        "sourceSha256": "20A041498EA981760B1C2E754E70E601813F840630C1001B04E4885FDD969735"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientCuspWidthDependencyAudit5Production6649.log",
+        "sha256": "8BA08BDE3BC044DDACD508CCE12F631DC3FAB3BA00625B9D5C9EE53C2355EFA5",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_cusp_place_with_width"
+        ],
+        "sourceSha256": "F6AEB952FDE591AA736A6AF37F90730E8197D0B4E45428AA18ECDAC3404BF5AC"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientCuspCountDependencyAudit3Production6649.log",
+        "sha256": "F6D62016522B15D6AA69A4E159699F3F07FF2B189EBE51441333198ED6C84531",
+        "requiredProofValueEdges": 14,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.natCard_coeff_j_poles_eq_cuspCount",
+          "Dubon2026.SourceFunctionField.CoefficientCuspLabels.embedding",
+          "Dubon2026.SourceFunctionField.CoefficientCuspLabels.place"
+        ],
+        "sourceSha256": "DCE036B0258F2AB96A81B46B3C0C32587D67E98BF1A4A95431630498D9B4115D"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGenusCriteriaDependencyAudit3Production6649.log",
+        "sha256": "F6D4564B97DED6841265B256EB2292112346A809D7074385DDDB772FA36FBC39",
+        "requiredProofValueEdges": 11,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_genus_lower_of_exceptional_fiber_counts",
+          "Dubon2026.SourceFunctionField.coeff_genus_lower_of_wild_differential_contribution"
+        ],
+        "sourceSha256": "8A31FCADD78332C612438C19FFAF165F2BBE0D2D3AAB85309EFFB48A3DF2BBDC"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientEmbeddingRootsDependencyAudit4Production6649.log",
+        "sha256": "190B5DF2D665F9EFCB71C66FD0F361E97DAC82D0B609AB13EE3EBFEEB6B5195C",
+        "requiredProofValueEdges": 14,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.CoefficientPresentation.embeddingsEquivRoots_apply",
+          "Dubon2026.SourceFunctionField.CoefficientPresentation.specialized_level_minpoly_degree",
+          "Dubon2026.SourceFunctionField.CoefficientPresentation.fieldConstantsAlgebra",
+          "Dubon2026.SourceFunctionField.CoefficientPresentation.coordinateConstantsAlgebra",
+          "Dubon2026.SourceFunctionField.CoefficientPresentation.jN",
+          "Dubon2026.SourceFunctionField.CoefficientPresentation.adjoinLevelEquiv",
+          "Dubon2026.SourceFunctionField.CoefficientPresentation.coordinateSpecialization",
+          "Dubon2026.SourceFunctionField.CoefficientPresentation.coordinateAlgebra",
+          "Dubon2026.SourceFunctionField.CoefficientPresentation.embeddingsEquivCoordinateHom",
+          "Dubon2026.SourceFunctionField.CoefficientPresentation.embeddingsEquivRoots"
+        ],
+        "sourceSha256": "DB92BF03D07F10D1D8DF4C7311111072BABEFB499497175601F540B6128FAE1C"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralModularRootsDependencyAudit4Production6649.log",
+        "sha256": "D21ED62486AF52DAE0933DD4492C0C856FE4C4E4886CE8A91761B85BFDD8FFDE",
+        "requiredProofValueEdges": 19,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.CoefficientPresentation.embeddingsEquivModularRoots_apply",
+          "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_natDegree",
+          "Dubon2026.SourceFunctionField.IntegralJCoordinate.J",
+          "Dubon2026.SourceFunctionField.IntegralJCoordinate.evaluate",
+          "Dubon2026.SourceFunctionField.IntegralJCoordinate.coordinateAlgebra",
+          "Dubon2026.SourceFunctionField.IntegralJCoordinate.laurentAlgebra",
+          "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial",
+          "Dubon2026.SourceFunctionField.CoefficientPresentation.embeddingsEquivModularRoots"
+        ],
+        "sourceSha256": "3CA84EEC6614D819EE6BCEAD5BE64B2EFF51B2C00F6FD4359DB60B285AD6EEED"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesProductionAudit6649.log",
+    "sha256": "713AAE26493B05811BC0D319BC488DB83F712DC992EAAB00968288F2BCB4030C",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-coefficient-global-residues-production-build-6649.log",
+    "aggregateSha256": "4F6A32A96432AD524EC9AF5D4D1C93B6647E6104C9A8957F2A4CE42DA65DD477",
+    "productionModules": 6649,
+    "incrementModules": 77,
+    "axiomChecks": 246,
+    "exhaustiveIncrementTheorems": 444,
+    "linterScopes": 77,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 444,
+    "productionReuse": "Only scratch import names are qualified; complete mathematical statements and proof bodies are retained. Actual completions, trace maps, global residue sums, canonical divisors, H1 genus and fiber multiplicities retain their literal definitions. No source contract is weakened. One pre-verification module comment is reworded to avoid a proof-integrity scanner keyword at the start of a prose line; declarations and proof bodies are unchanged. The exact source hashes and repair are recorded.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 444,
+      "scratchDistinct": 444,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 444,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceCurveCompletionResidueApproximation",
+            "SourceCurveCompletionResidueField",
+            "SourceCurveCompletionPrincipalParts",
+            "SourceCurveCompletionRetraction",
+            "SourceModularCoefficientCompletionResidues"
+          ],
+          "count": 44,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership239For6649.log",
+            "sha256": "DE797029ABDC3F31ECC1DCEBB60ED273B0F7EEB66B6237633945B78BC3D2BF2B",
+            "sourceSha256": "606A40F09AD42ED0C224F21803904005EF3E7F1E5A95823028F148CE436C5195"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveCompletionTraceFactor",
+            "SourceCurveCompletionTateTrace",
+            "SourceModularCoefficientCompletionTrace"
+          ],
+          "count": 20,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership240For6649.log",
+            "sha256": "83AD4566D3219EF7F41AFE3B6615C58F19B1453797276E13F7A4E52C6C4016B6",
+            "sourceSha256": "F14DAC9F17B356D2041BDF00C706310F02F357BEF45F4AEC7315F62441785FB2"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveCompletionIntegralCoordinates",
+            "SourceCurveCompletionBasisRetraction",
+            "SourceCurveCompletionMatrixCoordinates",
+            "SourceCurveConjugateCommutator",
+            "SourceCurveCompletionLocalFieldTrace",
+            "SourceCurveCompletionTraceUniformizer",
+            "SourceModularCoefficientLocalFieldTrace"
+          ],
+          "count": 56,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership241For6649.log",
+            "sha256": "65989BCF4FF079C564D08BE63343D21EFAA745935188F754422F0C3AEBBE4360",
+            "sourceSha256": "6465B4DD75A8A5EB05F2C5B604E534EC95B76A1C5C0891EDD05011FDCCEA857C"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveCompletionIdealPowers",
+            "SourceCurveCompletionRamification",
+            "SourceCurveCompletionResidueExtension",
+            "SourceCurveCompletionDegree",
+            "SourceModularCoefficientCompletionDegree"
+          ],
+          "count": 39,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership242For6649.log",
+            "sha256": "A0E78D4D7B3EBFF2EA95F5502B847C1CE6B1990143ED40BCC2DE31D3F44473A9",
+            "sourceSha256": "31B1D85FBEF8B79756C2A7C6C32731F0EF54F16D447E01552900FEB4A869F5B8"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveFiberCompletions",
+            "SourceCurveFiberCompletionDegree",
+            "SourceCurveCompletionSpectralNorm",
+            "SourceCurveFiberCompletionKernels",
+            "SourceCurveFiberCompletionProduct",
+            "SourceCurveProductFieldTrace",
+            "SourceCurveFiberCompletionTrace",
+            "SourceModularCoefficientCompletionSum"
+          ],
+          "count": 65,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership243For6649.log",
+            "sha256": "C6EF57154B970C65C857E8D7F248FCD955EAA504B80BC2859B7EED4A7135AD77",
+            "sourceSha256": "B456E33B77A402FFE9E24A11DE60E7C5CC2C90B05833AA2DC07DC7C78C7739A0"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveFiberTateTrace",
+            "SourceCurveFiberResidueConstants",
+            "SourceCurveTateCanonicalSupport",
+            "SourceCurveGlobalTateTrace",
+            "SourceModularCoefficientTateSupport",
+            "SourceModularCoefficientGlobalTrace"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership244For6649.log",
+            "sha256": "E52192EFE9DAEABC3A7E3FBCD512AAD69B4C77289329D8871BA91683893592D4",
+            "sourceSha256": "2ECE3C42D97AF37F4C8E4829382A97022EBB1E0418026CE5E5EBE44460E6129E"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveParameterPoles",
+            "SourceCurveParameterApproximation",
+            "SourceCurveParameterPoleSpan",
+            "SourceCurveParameterProjection",
+            "SourceCurveParameterResidue",
+            "SourceCurveParameterTateTrace",
+            "SourceRationalParameterTateTrace"
+          ],
+          "count": 42,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership245For6649.log",
+            "sha256": "C0F0B1A34C48E4644AD3C764AEBA89D4B18F483912536D93C77E1CC8CB0DE8DF",
+            "sourceSha256": "F930EDEB083CCE62DCDC223D463581BF1F047497884F1B4FA2C025841D94ABD2"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveTateVanishing",
+            "SourceCurveTateInverse",
+            "SourceCurveGeneratorOrders",
+            "SourceCurveTateGlobalFunctional",
+            "SourceCurveGeneratorPowerResidues",
+            "SourceCurveGeneratorGlobalResidues",
+            "SourceCurveAdjoinGeneratorResidues",
+            "SourceModularCoefficientGlobalResidues",
+            "SourceModularCoefficientGlobalFunctional",
+            "SourceModularCoefficientResidueDuality",
+            "SourceModularCoefficientRiemannRoch"
+          ],
+          "count": 55,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership246For6649.log",
+            "sha256": "D2D1CEC5316DF1A2280DB2FBD2DED316D418F8C6468ADDAF19E78A593EE54041",
+            "sourceSha256": "72DE113D696DF507EC95AC0C782F28AAFC2FE602863BB9B801B1067E654235E9"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveEffectiveDivisorSum",
+            "SourceModularCoefficientHurwitzDivisor",
+            "SourceModularCoefficientHurwitzBound"
+          ],
+          "count": 16,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership247For6649.log",
+            "sha256": "34A7819A57424BB71632F03E6FCD501EDC20FAEC7E1C3630D593EDCA7103E75D",
+            "sourceSha256": "C9F45A2F06FDCA363BBEC796A2BA79058E470643F9FE122CA647349EAB392B0E"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularCoefficientJFiberDegree",
+            "SourceModularCoefficientJDegreeSums",
+            "SourceModularCoefficientHurwitzNumeric"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership248For6649.log",
+            "sha256": "0D6C14EC2B3562968275A25B4F6746FD59B944F5E1EB8B421A0629D5146387EC",
+            "sourceSha256": "CA0969273725A12618678AB0BDF0676EE29E6586150201774C753B8C13A29830"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularCoefficientSlotEmbedding",
+            "SourceModularCoefficientSlotPlaces",
+            "SourceModularCoefficientSlotRange",
+            "SourceModularCoefficientSlotWidth",
+            "SourceModularCoefficientCuspWidth"
+          ],
+          "count": 7,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership249For6649.log",
+            "sha256": "5D3EFD8BA17563953ABE6E4E03563C98BD8043DA1CA54CB0D994D128C960173D",
+            "sourceSha256": "05159E903B46DFF2AE653D2000BD1BD961932026E979E3819C33AAC97C40F958"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularCoefficientCuspDistinction",
+            "SourceModularCoefficientCuspFamily",
+            "SourceModularCoefficientCuspCount"
+          ],
+          "count": 13,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership250For6649.log",
+            "sha256": "63318E1928D1DC1186014EED90DB708DC3092BC26707E05C1356E84BED480F61",
+            "sourceSha256": "81EBD991A91852BFC7B055C24ACA58B4FE081581C9736B169DEA3BF9997E1B50"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularCoefficientHurwitzCuspBound",
+            "SourceModularCoefficientTameGenusCriterion",
+            "SourceModularCoefficientWildGenusCriterion"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership251For6649.log",
+            "sha256": "388C326B7D070127F5CB52CF03130942EBB669CDDF5E1603C0FFC0B81BF14B95",
+            "sourceSha256": "1697FFA6C994662FEBA8F744EF0191736EEFB2CDEAC73CD023A1D6DBC7AC12BB"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularCoefficientSimplePresentation",
+            "SourceModularCoefficientCoordinateSpecialization",
+            "SourceModularCoefficientHomSpecialization",
+            "SourceModularCoefficientRootEquivalence"
+          ],
+          "count": 39,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership252For6649.log",
+            "sha256": "A80ECDA8739FC0A8D9C6BC9B46C37FF1F6FDEC00B55784205B2D0985B2776605",
+            "sourceSha256": "E86AFA2F24612985535CD816FD6CB83851CF4D5C9722FD0C3B7659862C3E4003"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralJCoordinate",
+            "SourceExactIntegralModularPolynomial",
+            "SourceCoefficientIntegralMinimalPolynomial",
+            "SourceModularCoefficientModularRoots"
+          ],
+          "count": 22,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership253For6649.log",
+            "sha256": "C2C0DFA3157C1557E56F5777B1DDF6882B801932D18BBFB042F86459AD6BFAF5",
+            "sourceSha256": "037A6495C450173C9E0216D670A13AE4F111B519A2AF78EBDC17DCE854C8BB27"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesOwnership6649.log",
+        "sha256": "875D6E2A497260DAC0B884B32D45CCDB9697F68DDC6ACC324CE477AB96631186",
+        "sourceSha256": "394436FEEC0EC187338E43A453987D9AE390D18554B306F197671F63CCDF337C"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261022-191344-253.log",
+        "sha256": "C41C251C234D1B8C7E9FA2F90B12051DE3B1988F09C802DDB402B500F6477500"
+      }
+    },
+    "scratchToProductionCountReason": "All 444 distinct names from 444 exhaustive scratch checks are retained: 444 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The elliptic cyclic-subgroup interpretation of the integral modular-polynomial roots and the actual inertia orbit map remain required for the finite census. The finite exceptional-fiber cardinalities and wild differential contributions in characteristics two and three remain required for the reverse genus inequality. Genus equality, place comparison and good reduction remain required. Original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt6649": {
+    "recordedUTC": "2026-10-23T05:29:02.803639+00:00",
+    "log": "logs/dubon-build-20261022-210834-020.log",
+    "sha256": "F08D9308FEB60F4BECCE4AA2CD40322D15011608755D6FB2E4563BB80FC6C9D7",
+    "bytes": 11390563,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 6649,
+    "projectTheorems": 45214,
+    "registeredConsumers": 20117,
+    "registeredConstructions": 1612,
+    "declarations": 27539,
+    "generated": 26207,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261022_210524.log",
+    "foundationSha256": "8BB44F449B0A531C65964EB8B2DE4F256F9B69E13FDBE9C98663A84460311416",
+    "countReconciliation": {
+      "previousTheorems": 44770,
+      "focusedTheorems": 444,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 444,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesOwnership6649.log",
+      "ownershipSha256": "875D6E2A497260DAC0B884B32D45CCDB9697F68DDC6ACC324CE477AB96631186"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 444,
+      "scratchDistinct": 444,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 444,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceCurveCompletionResidueApproximation",
+            "SourceCurveCompletionResidueField",
+            "SourceCurveCompletionPrincipalParts",
+            "SourceCurveCompletionRetraction",
+            "SourceModularCoefficientCompletionResidues"
+          ],
+          "count": 44,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership239For6649.log",
+            "sha256": "DE797029ABDC3F31ECC1DCEBB60ED273B0F7EEB66B6237633945B78BC3D2BF2B",
+            "sourceSha256": "606A40F09AD42ED0C224F21803904005EF3E7F1E5A95823028F148CE436C5195"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveCompletionTraceFactor",
+            "SourceCurveCompletionTateTrace",
+            "SourceModularCoefficientCompletionTrace"
+          ],
+          "count": 20,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership240For6649.log",
+            "sha256": "83AD4566D3219EF7F41AFE3B6615C58F19B1453797276E13F7A4E52C6C4016B6",
+            "sourceSha256": "F14DAC9F17B356D2041BDF00C706310F02F357BEF45F4AEC7315F62441785FB2"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveCompletionIntegralCoordinates",
+            "SourceCurveCompletionBasisRetraction",
+            "SourceCurveCompletionMatrixCoordinates",
+            "SourceCurveConjugateCommutator",
+            "SourceCurveCompletionLocalFieldTrace",
+            "SourceCurveCompletionTraceUniformizer",
+            "SourceModularCoefficientLocalFieldTrace"
+          ],
+          "count": 56,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership241For6649.log",
+            "sha256": "65989BCF4FF079C564D08BE63343D21EFAA745935188F754422F0C3AEBBE4360",
+            "sourceSha256": "6465B4DD75A8A5EB05F2C5B604E534EC95B76A1C5C0891EDD05011FDCCEA857C"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveCompletionIdealPowers",
+            "SourceCurveCompletionRamification",
+            "SourceCurveCompletionResidueExtension",
+            "SourceCurveCompletionDegree",
+            "SourceModularCoefficientCompletionDegree"
+          ],
+          "count": 39,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership242For6649.log",
+            "sha256": "A0E78D4D7B3EBFF2EA95F5502B847C1CE6B1990143ED40BCC2DE31D3F44473A9",
+            "sourceSha256": "31B1D85FBEF8B79756C2A7C6C32731F0EF54F16D447E01552900FEB4A869F5B8"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveFiberCompletions",
+            "SourceCurveFiberCompletionDegree",
+            "SourceCurveCompletionSpectralNorm",
+            "SourceCurveFiberCompletionKernels",
+            "SourceCurveFiberCompletionProduct",
+            "SourceCurveProductFieldTrace",
+            "SourceCurveFiberCompletionTrace",
+            "SourceModularCoefficientCompletionSum"
+          ],
+          "count": 65,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership243For6649.log",
+            "sha256": "C6EF57154B970C65C857E8D7F248FCD955EAA504B80BC2859B7EED4A7135AD77",
+            "sourceSha256": "B456E33B77A402FFE9E24A11DE60E7C5CC2C90B05833AA2DC07DC7C78C7739A0"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveFiberTateTrace",
+            "SourceCurveFiberResidueConstants",
+            "SourceCurveTateCanonicalSupport",
+            "SourceCurveGlobalTateTrace",
+            "SourceModularCoefficientTateSupport",
+            "SourceModularCoefficientGlobalTrace"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership244For6649.log",
+            "sha256": "E52192EFE9DAEABC3A7E3FBCD512AAD69B4C77289329D8871BA91683893592D4",
+            "sourceSha256": "2ECE3C42D97AF37F4C8E4829382A97022EBB1E0418026CE5E5EBE44460E6129E"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveParameterPoles",
+            "SourceCurveParameterApproximation",
+            "SourceCurveParameterPoleSpan",
+            "SourceCurveParameterProjection",
+            "SourceCurveParameterResidue",
+            "SourceCurveParameterTateTrace",
+            "SourceRationalParameterTateTrace"
+          ],
+          "count": 42,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership245For6649.log",
+            "sha256": "C0F0B1A34C48E4644AD3C764AEBA89D4B18F483912536D93C77E1CC8CB0DE8DF",
+            "sourceSha256": "F930EDEB083CCE62DCDC223D463581BF1F047497884F1B4FA2C025841D94ABD2"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveTateVanishing",
+            "SourceCurveTateInverse",
+            "SourceCurveGeneratorOrders",
+            "SourceCurveTateGlobalFunctional",
+            "SourceCurveGeneratorPowerResidues",
+            "SourceCurveGeneratorGlobalResidues",
+            "SourceCurveAdjoinGeneratorResidues",
+            "SourceModularCoefficientGlobalResidues",
+            "SourceModularCoefficientGlobalFunctional",
+            "SourceModularCoefficientResidueDuality",
+            "SourceModularCoefficientRiemannRoch"
+          ],
+          "count": 55,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership246For6649.log",
+            "sha256": "D2D1CEC5316DF1A2280DB2FBD2DED316D418F8C6468ADDAF19E78A593EE54041",
+            "sourceSha256": "72DE113D696DF507EC95AC0C782F28AAFC2FE602863BB9B801B1067E654235E9"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveEffectiveDivisorSum",
+            "SourceModularCoefficientHurwitzDivisor",
+            "SourceModularCoefficientHurwitzBound"
+          ],
+          "count": 16,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership247For6649.log",
+            "sha256": "34A7819A57424BB71632F03E6FCD501EDC20FAEC7E1C3630D593EDCA7103E75D",
+            "sourceSha256": "C9F45A2F06FDCA363BBEC796A2BA79058E470643F9FE122CA647349EAB392B0E"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularCoefficientJFiberDegree",
+            "SourceModularCoefficientJDegreeSums",
+            "SourceModularCoefficientHurwitzNumeric"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership248For6649.log",
+            "sha256": "0D6C14EC2B3562968275A25B4F6746FD59B944F5E1EB8B421A0629D5146387EC",
+            "sourceSha256": "CA0969273725A12618678AB0BDF0676EE29E6586150201774C753B8C13A29830"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularCoefficientSlotEmbedding",
+            "SourceModularCoefficientSlotPlaces",
+            "SourceModularCoefficientSlotRange",
+            "SourceModularCoefficientSlotWidth",
+            "SourceModularCoefficientCuspWidth"
+          ],
+          "count": 7,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership249For6649.log",
+            "sha256": "5D3EFD8BA17563953ABE6E4E03563C98BD8043DA1CA54CB0D994D128C960173D",
+            "sourceSha256": "05159E903B46DFF2AE653D2000BD1BD961932026E979E3819C33AAC97C40F958"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularCoefficientCuspDistinction",
+            "SourceModularCoefficientCuspFamily",
+            "SourceModularCoefficientCuspCount"
+          ],
+          "count": 13,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership250For6649.log",
+            "sha256": "63318E1928D1DC1186014EED90DB708DC3092BC26707E05C1356E84BED480F61",
+            "sourceSha256": "81EBD991A91852BFC7B055C24ACA58B4FE081581C9736B169DEA3BF9997E1B50"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularCoefficientHurwitzCuspBound",
+            "SourceModularCoefficientTameGenusCriterion",
+            "SourceModularCoefficientWildGenusCriterion"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership251For6649.log",
+            "sha256": "388C326B7D070127F5CB52CF03130942EBB669CDDF5E1603C0FFC0B81BF14B95",
+            "sourceSha256": "1697FFA6C994662FEBA8F744EF0191736EEFB2CDEAC73CD023A1D6DBC7AC12BB"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularCoefficientSimplePresentation",
+            "SourceModularCoefficientCoordinateSpecialization",
+            "SourceModularCoefficientHomSpecialization",
+            "SourceModularCoefficientRootEquivalence"
+          ],
+          "count": 39,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership252For6649.log",
+            "sha256": "A80ECDA8739FC0A8D9C6BC9B46C37FF1F6FDEC00B55784205B2D0985B2776605",
+            "sourceSha256": "E86AFA2F24612985535CD816FD6CB83851CF4D5C9722FD0C3B7659862C3E4003"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralJCoordinate",
+            "SourceExactIntegralModularPolynomial",
+            "SourceCoefficientIntegralMinimalPolynomial",
+            "SourceModularCoefficientModularRoots"
+          ],
+          "count": 22,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesScratchOwnership253For6649.log",
+            "sha256": "C2C0DFA3157C1557E56F5777B1DDF6882B801932D18BBFB042F86459AD6BFAF5",
+            "sourceSha256": "037A6495C450173C9E0216D670A13AE4F111B519A2AF78EBDC17DCE854C8BB27"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientGlobalResiduesOwnership6649.log",
+        "sha256": "875D6E2A497260DAC0B884B32D45CCDB9697F68DDC6ACC324CE477AB96631186",
+        "sourceSha256": "394436FEEC0EC187338E43A453987D9AE390D18554B306F197671F63CCDF337C"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261022-191344-253.log",
+        "sha256": "C41C251C234D1B8C7E9FA2F90B12051DE3B1988F09C802DDB402B500F6477500"
+      }
+    },
+    "scratchToProductionCountReason": "All 444 distinct names from 444 exhaustive scratch checks are retained: 444 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The elliptic cyclic-subgroup interpretation of the integral modular-polynomial roots and the actual inertia orbit map remain required for the finite census. The finite exceptional-fiber cardinalities and wild differential contributions in characteristics two and three remain required for the reverse genus inequality. Genus equality, place comparison and good reduction remain required. Original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
 }

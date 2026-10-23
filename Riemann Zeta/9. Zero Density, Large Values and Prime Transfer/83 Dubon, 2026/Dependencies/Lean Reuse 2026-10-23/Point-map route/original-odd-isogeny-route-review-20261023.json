@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-23",
+  "repository": "TauCetiProject/TauCeti",
+  "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+  "license": "Apache-2.0, verified at this commit in the preceding twelve-blob snapshot",
+  "sourceSnapshots": ["odd-isogeny-route-20261023/verified-snapshot.json", "odd-isogeny-route-20261023/toclass-verified-snapshot.json"],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight symmetric-power continuation -> automorphy/residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> finite exceptional-fiber inertia census -> actual cyclic-subgroup roots of integral modular polynomials -> actual odd cyclic quotient homomorphism, kernel and coordinate formula -> point-to-class equivalence and norm-induced point map",
+  "exactNextContract": "For an actual elliptic W over an algebraically closed field, an odd prime p nonzero in the field, and an actual point Q of order p, construct an additive map to the explicit veluQuotient W (oddOrderSummingSet W Q (p/2)), with kernel AddSubgroup.zmultiples Q and the specified veluX/veluY coordinate formula off that kernel. Retain characteristic two when p is odd.",
+  "localReuse": [
+    "The arbitrary-field explicit odd quotient discriminant identity and ellipticity are proved in frozen cohort 278; no target ellipticity premise remains.",
+    "Pinned Mathlib supplies native point-to-class injectivity/additivity, coordinate-ring basis and norm degree, ideal Smith-coefficient quotient decomposition, fractional ideals, invertible modules, tensor quotient equivalence and rank-nullity.",
+    "Existing generic SourceCurvePicardPushforward principal-preservation and Pic0 pushforward carry CharZero; they cannot directly discharge the characteristic-two branch.",
+    "Existing actual odd summing sets, orbit translation invariance, doubling formula and finite fiber counts remain reusable for the coordinate comparison and kernel."
+  ],
+  "comparison": [
+    {
+      "route": "Frozen FLT genus-one place/Abel construction",
+      "finding": "The exact explicit odd point-map source builds coordinate-ring normality, principal divisors, genus-one place gates and Abel equivalences before a norm-induced map. It remains a source for the actual rational coordinate map, separability and kernel obligations, but its entire general place/Abel framework is unnecessary if point-to-class equivalence is constructed directly."
+    },
+    {
+      "route": "Tau Ceti affine ideal-class construction",
+      "finding": "Point/ToClass proves actual surjectivity by the degree of the norm of p+qY and codimension reduction of invertible ideals. PointHom/Basic constructs an additive map using class-group norm through an explicitly defined intermediate ring. PointHom/Affine derives actual point evaluation from place restriction and residue degree one; separable isogenies over separably closed fields discharge that residue condition. The route supports positive characteristic but does not by itself identify the abstract Velu equation with the existing explicit coefficients."
+    }
+  ],
+  "decision": "Adapt the direct affine ideal-class route, specializing the point-to-class proof to elliptic curves. Ellipticity derives nonsingularity, so omit the source's singular-curve cotangent argument. Reuse native norm-degree and invertible-module APIs; prove only the ideal-factorization, codimension and point-ideal classification lemmas used by this consumer. Defer the full Tau Ceti isogeny category, composition, duals, universal properties and arbitrary singular curves. Then construct the explicit quotient pullback and derive its norm point-map evaluation and exact cyclic kernel, using the existing all-characteristic quotient ellipticity. Reassess remaining place/intermediate-ring dependencies when the exact consumer requires them.",
+  "assumptionsToDischarge": ["Every affine ideal class is represented by an actual native point", "Normality of the actual elliptic coordinate ring", "The explicit quotient coordinate pullback defines a finite separable pointed field embedding", "The norm-induced map evaluates at the explicit Velu coordinates and kills exactly the actual cyclic subgroup"],
+  "evidenceBoundary": "Fifteen selected new source files match exact Git blobs; their transitive external import closure has not been built or axiom-audited. Only future pinned local kernel checks count as discharged obligations.",
+  "gates": "16/20; DUB-17--20 OPEN",
+  "sourceContractChanged": false,
+  "rootPinsChanged": false,
+  "proofStandardsChanged": false
+}

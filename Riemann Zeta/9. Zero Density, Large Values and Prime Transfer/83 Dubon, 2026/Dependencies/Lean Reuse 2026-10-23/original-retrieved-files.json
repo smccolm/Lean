@@ -1,0 +1,86 @@
+[
+  {
+    "repository": "TauCetiProject/TauCeti",
+    "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+    "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Coordinates.lean",
+    "sha": "ea034ae7b1776b793ca07a8e9dcadc729e48295f",
+    "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-quotient-reuse-20261023\\TauCetiProject\\TauCeti\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\Isogeny\\Velu\\Coordinates.lean.txt"
+  },
+  {
+    "repository": "TauCetiProject/TauCeti",
+    "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+    "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Equation.lean",
+    "sha": "5c24d569728c8d00a58bbfcb52c6f804b787aab6",
+    "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-quotient-reuse-20261023\\TauCetiProject\\TauCeti\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\Isogeny\\Velu\\Equation.lean.txt"
+  },
+  {
+    "repository": "TauCetiProject/TauCeti",
+    "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+    "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/FixedField.lean",
+    "sha": "71dbb252ca0e20ae59e1d7435bf517bd84b677c7",
+    "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-quotient-reuse-20261023\\TauCetiProject\\TauCeti\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\Isogeny\\Velu\\FixedField.lean.txt"
+  },
+  {
+    "repository": "TauCetiProject/TauCeti",
+    "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+    "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Isogeny.lean",
+    "sha": "f75d959d006476df6cc77fb6239035cb63e4b287",
+    "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-quotient-reuse-20261023\\TauCetiProject\\TauCeti\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\Isogeny\\Velu\\Isogeny.lean.txt"
+  },
+  {
+    "repository": "TauCetiProject/TauCeti",
+    "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+    "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Descent.lean",
+    "sha": "8241f70cf7d4b5502c58d964a01a4de6707b5727",
+    "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-quotient-reuse-20261023\\TauCetiProject\\TauCeti\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\Isogeny\\Velu\\Descent.lean.txt"
+  },
+  {
+    "repository": "TauCetiProject/TauCeti",
+    "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+    "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Exhaustive.lean",
+    "sha": "50ef80a68278d63fb4d58709108b84f79aa05a22",
+    "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-quotient-reuse-20261023\\TauCetiProject\\TauCeti\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\Isogeny\\Velu\\Exhaustive.lean.txt"
+  },
+  {
+    "repository": "TauCetiProject/TauCeti",
+    "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+    "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/IsElliptic.lean",
+    "sha": "536de62c72bdcde902b4c045f44a14435b407a69",
+    "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-quotient-reuse-20261023\\TauCetiProject\\TauCeti\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\Isogeny\\IsElliptic.lean.txt"
+  },
+  {
+    "repository": "lana-agents/heights",
+    "commit": "f4379dbccc8cdc4faa894a236d5581a6a635c5b5",
+    "path": "Heights/VeluProduct.lean",
+    "sha": "341ac281985750ab1721f0782a8f56eaf27e8dab",
+    "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-quotient-reuse-20261023\\lana-agents\\heights\\Heights\\VeluProduct.lean.txt"
+  },
+  {
+    "repository": "TauCetiProject/TauCeti",
+    "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+    "path": "lean-toolchain",
+    "sha": "2afd38716ad6182657562d3dac3c98461c1385f2",
+    "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-quotient-reuse-20261023\\TauCetiProject\\TauCeti\\lean-toolchain.txt"
+  },
+  {
+    "repository": "TauCetiProject/TauCeti",
+    "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+    "path": "LICENSE",
+    "sha": "8dada3edaf50dbc082c9a125058f25def75e625a",
+    "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-quotient-reuse-20261023\\TauCetiProject\\TauCeti\\LICENSE.txt"
+  },
+  {
+    "repository": "lana-agents/heights",
+    "commit": "f4379dbccc8cdc4faa894a236d5581a6a635c5b5",
+    "path": "lean-toolchain",
+    "sha": "94b9f495baff80fd9cb44aad8f4762cb3b2066fe",
+    "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-quotient-reuse-20261023\\lana-agents\\heights\\lean-toolchain.txt"
+  },
+  {
+    "repository": "lana-agents/heights",
+    "commit": "f4379dbccc8cdc4faa894a236d5581a6a635c5b5",
+    "path": "LICENSE",
+    "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+    "localPath": "E:\\Lean\\.tmp\\dubon83\\odd-quotient-reuse-20261023\\lana-agents\\heights\\LICENSE.txt"
+  }
+]

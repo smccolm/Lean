@@ -1,0 +1,129 @@
+{
+  "recordedUTC": "2026-10-23T08:58:27.143799+00:00",
+  "repository": "TauCetiProject/TauCeti",
+  "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+  "files": [
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Basic.lean",
+      "sha": "edd1feee1282a50318e525b8273ca86686a0ff27",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Basic.lean",
+      "sha256": "C6A5F85B8BFA9E704DBEE85374893F0D8287170355A13DF5B93CBFA38CA23429",
+      "bytes": 7423,
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Basic.lean.txt"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/FunctionField.lean",
+      "sha": "4bc4dc701f02481162e7ab6f35a83513edb68463",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/FunctionField.lean",
+      "sha256": "DAC424538BB061B278176B780C55B29789A263E59A6391EED3D95880350E5D73",
+      "bytes": 19428,
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/FunctionField.lean.txt"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PointHom/Basic.lean",
+      "sha": "8ed03e5fa56c168874d02752a67e53c730f7fb6c",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PointHom/Basic.lean",
+      "sha256": "036B0DB81B0FFED0F21A36A5FD9A9348C1AC33955520DEBEA8D47A886410EBD4",
+      "bytes": 8500,
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PointHom/Basic.lean.txt"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PointHom/Affine.lean",
+      "sha": "4a067e6cb996af9d2887379d2d739cf52aa06e7a",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PointHom/Affine.lean",
+      "sha256": "4F00B57B7969A43BC55D70E5AA47C974B50DD95F84F0191A6BEFE239F2BE2C28",
+      "bytes": 13695,
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PointHom/Affine.lean.txt"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PushClass.lean",
+      "sha": "8273142be58a3e9b527feccac7cf9a9c22627a42",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PushClass.lean",
+      "sha256": "071BB94A60E6A1379E464591CFF7F0756063FF221D36C5B3D0202BCA70FCD52D",
+      "bytes": 21285,
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/PushClass.lean.txt"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/ToClass.lean",
+      "sha": "adfff91183f70019a3b5e881b16001eba7fe3e24",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/ToClass.lean",
+      "sha256": "1FFA04406128A75910CFF0DA0C60C0180CBDC9C5286B9DCF62093A9AA0D3AA0B",
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/ToClass.lean.txt"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/XYIdealMaximal.lean",
+      "sha": "6ceed88c480c399df3845cd457c3390970ca0922",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/XYIdealMaximal.lean",
+      "sha256": "050C16730AADFF6D390697F9EB667340C85F9E9E720032811D455EF15DD0DACA",
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/XYIdealMaximal.lean.txt"
+    },
+    {
+      "path": "TauCeti/RingTheory/ClassGroup/Basic.lean",
+      "sha": "7b63e5ebe35329d369240a5935a5d6bf44e14cbd",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/ClassGroup/Basic.lean",
+      "sha256": "0DC10F15C477C9D87C9FDD614BBBD6F6A58E4FAD8D2C43EC35D538C57F7C9240",
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/RingTheory/ClassGroup/Basic.lean.txt"
+    },
+    {
+      "path": "TauCeti/RingTheory/FractionalIdeal/Divisibility.lean",
+      "sha": "43c7537f02bb1e34f03665c233b623872ad8a3e4",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/FractionalIdeal/Divisibility.lean",
+      "sha256": "793E61CE14783A3CA6B5D97737CC22062617BAD6B1C56FE159A7713418708EDC",
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/RingTheory/FractionalIdeal/Divisibility.lean.txt"
+    },
+    {
+      "path": "TauCeti/RingTheory/FractionalIdeal/Operations.lean",
+      "sha": "22445b58b0a847e7db9a5f837a9da58f796e12a5",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/FractionalIdeal/Operations.lean",
+      "sha256": "E28B4F892AF3D8881B2332040FF816C3557F8F27C9C5619FCA8F168F1C736B0D",
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/RingTheory/FractionalIdeal/Operations.lean.txt"
+    },
+    {
+      "path": "TauCeti/RingTheory/Ideal/Quotient/Invertible.lean",
+      "sha": "fba682947e46cdc3f61d94eb1a97f82757fea917",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/Ideal/Quotient/Invertible.lean",
+      "sha256": "472B89116EEB4A7EBA91B67D01F9CC67F7F38C7DAEDE6B5B7CA086FB68B74E4F",
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/RingTheory/Ideal/Quotient/Invertible.lean.txt"
+    },
+    {
+      "path": "TauCeti/RingTheory/PicardGroup/Quotient.lean",
+      "sha": "e5815c6af22d663496ba1d9626711f08e51ccee9",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/PicardGroup/Quotient.lean",
+      "sha256": "9819C725D7F0AC7646375C2B4054CA407BD1C85EE4A204CEFB97C330A3E420EC",
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/RingTheory/PicardGroup/Quotient.lean.txt"
+    },
+    {
+      "path": "TauCeti/RingTheory/Ideal/Quotient/Finite.lean",
+      "sha": "ff1a4059bf3c694ce37da4237aa43836a4ed3f9c",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/RingTheory/Ideal/Quotient/Finite.lean",
+      "sha256": "ED90D53DA4AEB0BB103FEE28EF04DEF80FC2D9244E41836B9284BEE45E6E4BC7",
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/RingTheory/Ideal/Quotient/Finite.lean.txt"
+    },
+    {
+      "path": "TauCeti/LinearAlgebra/Dimension/Tower.lean",
+      "sha": "21999b5522eab94ba36b653daef23f42bdf61c37",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/LinearAlgebra/Dimension/Tower.lean",
+      "sha256": "217B065FC65CA2577DF57B5552FCEA7A1FBD5DAC9B94101E0240F5BDF2E62A09",
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/LinearAlgebra/Dimension/Tower.lean.txt"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Eval.lean",
+      "sha": "18b25c4b921aa48d54688a1e2ab8f69c566adf91",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Eval.lean",
+      "sha256": "33A38582BD0577C47D4A7CD5587A1C14F6D83A013623539676C1FF11FC5ED9B7",
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Point-map route/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Eval.lean.txt"
+    },
+    {
+      "commit": "bfcff79b60964ba7bdb78b952828313686c327ba",
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/CoordinateRing.lean",
+      "sha": "e35b5302842f1598d40e0bf32537cdf9c78937be",
+      "sha256": "B0C0FAF892FB0EE8D4F575BEF954827A992840921CE261164EC69C33D9B06D4B",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/bfcff79b60964ba7bdb78b952828313686c327ba/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/CoordinateRing.lean",
+      "decision": "Tau Ceti proves normality over arbitrary fields using conjugation, integral trace/norm and prime-divisibility arguments. The exact next explicit quotient-map contract is over an algebraically closed field. Reuse the frozen FLT local-principal-ideal/DVR proof instead, replacing its coordinate classification and vanishing helpers with cohort 279. No arbitrary-field normality claim is made and no characteristic is excluded.",
+      "dependency": "DUB-17/18 -> continuation -> automorphy -> Frobenius/inertia -> good reduction -> reverse genus/inertia census -> cyclic quotient roots -> explicit quotient homomorphism -> ideal norm point map -> actual coordinate-ring Dedekind domain",
+      "evidenceBoundary": "Exact external source blob inspected only, not built or transitively audited.",
+      "localPath": "Dependencies/Lean Reuse 2026-10-23/Point-map route/CoordinateRing.lean.txt"
+    }
+  ],
+  "scope": "Sixteen selected exact Git blobs inspected as source; no external transitive build or axiom audit."
+}

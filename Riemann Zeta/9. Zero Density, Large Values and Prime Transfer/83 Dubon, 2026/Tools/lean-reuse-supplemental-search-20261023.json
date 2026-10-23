@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-23 America/Vancouver",
+  "scope": "Supplemental live discovery. Not an upstream build or transitive proof audit.",
+  "queries": [
+    "Lean formalization symmetric power automorphy Newton Thorne github",
+    "Lean Dubon Zero-Density Concentration",
+    "Lean automorphy higher weight modular forms 2026"
+  ],
+  "checked": [
+    {
+      "url": "https://github.com/lioristhmus/ramanujan-petersson/blob/main/lean/README.md",
+      "blobSha": "df7a71cf1864c79a96bdd9a6e6f8e2c3d17d056f",
+      "sha256": "4A6436422182D9BF12B2F6E86DDE003313D251D22F2B68EB07B42BB0542CEFFA",
+      "file": "Dependencies/Lean Reuse 2026-10-23/Supplemental search/ramanujan-petersson-lean-README.md.txt",
+      "result": "Explicitly retains Deligne representation construction, purity, and full Hecke multiplicativity/Euler products as abstraction boundaries. Does not discharge the corresponding actual-object obligations in DUB-17/18."
+    },
+    {
+      "url": "https://github.com/dozenalist/ModularFormsMod",
+      "result": "README advertises coefficient-ring modular forms, level-one bases, reductions and partition congruences. Potential local infrastructure reuse; it does not advertise the required all-weight symmetric-power automorphy. No new code imported or audited."
+    },
+    {
+      "url": "https://n-yamaguchi-0729.github.io/NYLL/modules/Nyll.AlgebraicCurves.Hilbert.SymmetricPowerData/",
+      "result": "Search hit only; direct documentation fetch failed with cache miss. No theorem or completeness claim accepted."
+    }
+  ],
+  "selectedRoute": "The selected TauCeti and FLT sources remain available. For the current odd quotient point-map obligation, proved local kernel localization plus pinned Mathlib ideal correspondence, fraction-field equivalences and Galois ideal norms is the shorter actual-object route. No proof assumption is replaced by an external claim.",
+  "limitations": "Search did not locate a verified complete drop-in proof of the remaining Dubon applications. This is a search result, not a proof that none exists.",
+  "rootPinsChanged": false,
+  "originalFrozenSearchReview": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-refresh-20261023-0608\\review.json",
+    "sha256": "20D216F03A10FB18E4C36ED76B75DB446E2D193E5735CAF0628793D7CCFA66AA"
+  }
+}

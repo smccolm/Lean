@@ -1,0 +1,2030 @@
+{
+  "date": "23 October 2026",
+  "modules": [
+    "Dubon2026.SourceEllipticOddSummingSet",
+    "Dubon2026.SourceEllipticOddSummingStructure",
+    "Dubon2026.SourceEllipticOddChordIdentities",
+    "Dubon2026.SourceEllipticOddTwoTorsionTranslation",
+    "Dubon2026.SourceEllipticOddRootPackets",
+    "Dubon2026.SourceEllipticOddDoublingFormula",
+    "Dubon2026.SourceEllipticOddDoublingPackets",
+    "Dubon2026.SourceEllipticOddReindex",
+    "Dubon2026.SourceEllipticOddOrbitTrace",
+    "Dubon2026.SourceEllipticOddSummingFold",
+    "Dubon2026.SourceEllipticOddPolynomialReflection",
+    "Dubon2026.SourceEllipticOddQuotientPolynomials",
+    "Dubon2026.SourceEllipticOddTruncatedIdentities",
+    "Dubon2026.SourceEllipticOddTruncatedExpansion",
+    "Dubon2026.SourceEllipticOddPolynomialDegrees",
+    "Dubon2026.SourceEllipticOddReflectedQuotient",
+    "Dubon2026.SourceEllipticOddReflectedIdentity",
+    "Dubon2026.SourceEllipticOddPolynomialExpansion",
+    "Dubon2026.SourceEllipticOddNormPolynomials",
+    "Dubon2026.SourceEllipticOddNormSpecialization",
+    "Dubon2026.SourceEllipticOddNormCoordinates",
+    "Dubon2026.SourceEllipticOddNormIdentity",
+    "Dubon2026.SourceEllipticOddNormFibers",
+    "Dubon2026.SourceEllipticOddCubicFactors",
+    "Dubon2026.SourceEllipticOddCubicPipeline",
+    "Dubon2026.SourceEllipticOddDiscriminantProduct",
+    "Dubon2026.SourceEllipticOddCurveCoordinates",
+    "Dubon2026.SourceEllipticOddOrbitDistinctness",
+    "Dubon2026.SourceEllipticOddGoodAbscissae",
+    "Dubon2026.SourceEllipticOddCubicRoots",
+    "Dubon2026.SourceEllipticOddOrbitInvariance",
+    "Dubon2026.SourceEllipticOddActualDiscriminant",
+    "Dubon2026.SourceEllipticOddShortQuotient",
+    "Dubon2026.SourceEllipticOddCharTwoSupersingular",
+    "Dubon2026.SourceEllipticOddCharTwoPolynomial",
+    "Dubon2026.SourceEllipticOddCharTwoPolynomialRoots",
+    "Dubon2026.SourceEllipticOddCharTwoCoefficients",
+    "Dubon2026.SourceEllipticOddCharTwoNorm",
+    "Dubon2026.SourceEllipticOddCharTwoTorsion",
+    "Dubon2026.SourceEllipticOddCharTwoCosets",
+    "Dubon2026.SourceEllipticOddCharTwoInvariants",
+    "Dubon2026.SourceEllipticOddCharTwoQuotientCoefficients",
+    "Dubon2026.SourceEllipticOddCharTwoKernelCoordinates",
+    "Dubon2026.SourceEllipticOddCharTwoActualDiscriminant",
+    "Dubon2026.SourceEllipticOddVariableEmbedding",
+    "Dubon2026.SourceEllipticOddVariableCoefficients",
+    "Dubon2026.SourceEllipticOddVariableQuotient",
+    "Dubon2026.SourceEllipticOddVariableSummingSet",
+    "Dubon2026.SourceEllipticOddBaseChange",
+    "Dubon2026.SourceEllipticOddNormalizedDiscriminant",
+    "Dubon2026.SourceEllipticOddQuotient",
+    "Dubon2026.SourceEllipticClassIdealFactorization",
+    "Dubon2026.SourceEllipticClassCodimension",
+    "Dubon2026.SourceEllipticClassSmallNorm",
+    "Dubon2026.SourceEllipticClassPointIdeals",
+    "Dubon2026.SourceEllipticClassReduction",
+    "Dubon2026.SourceEllipticClassSurjective",
+    "Dubon2026.SourceEllipticClassLocalRegular",
+    "Dubon2026.SourceEllipticClassNormal",
+    "Dubon2026.SourceEllipticClassRelativeNorm",
+    "Dubon2026.SourceEllipticClassExtensionNorm"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original weight-two Frobenius/inertia -> actual modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census and wild differential contribution -> elliptic cyclic-subgroup inertia orbits -> actual cyclic-subgroup interpretation of integral modular-polynomial roots -> actual prime quotient homomorphisms and integral polynomial products.",
+  "discharged": "For every actual elliptic curve W over any field and every native point Q of order 2n+1, the explicit odd Velu quotient satisfies delta(quotient) times the fourth power of the product of veluU over the actual half-orbit equals delta(W) to the power 2n+1. Consequently that explicit quotient is elliptic. The half-orbit has exactly n distinct coordinate pairs with nonzero y derivative. Actual chord identities, doubling permutation and orbit translation derive the finite norm factorization; comparison modulo X^4 gives the quotient cubic and its discriminant. A separate characteristic-two calculation covers both ordinary and supersingular models. Native normal forms, the existing point-group variable changes and injective base change descend the identity to the original arbitrary field. Characteristics two and three are retained. No summing-set, polynomial factorization, quotient ellipticity, normalization or descent premise remains. The native point-to-class map is an additive equivalence for every actual elliptic curve over any field. Its surjectivity is derived from the norm-degree bound, invertible-ideal codimension reduction and actual point-ideal classification; ellipticity supplies nonsingularity. Over algebraically closed fields in every characteristic, the actual coordinate ring is a Dedekind domain by its proved principal localizations. Actual ideal extension and finite relative norm descend to class groups with their integral-ideal computation formula. These remove the point-class dictionary, normality and class-norm compatibility prerequisites for the odd quotient map; its actual intermediate ring is still required.",
+  "boundary": "The explicit quotient coordinate pullback, its finite separable field embedding and actual intermediate integral closure, the resulting odd quotient additive homomorphism with exact cyclic kernel and coordinate formula, odd-prime integral modular-polynomial products, finite-set reduction, cyclic-subgroup root correspondence, inertia orbit map, finite exceptional-fiber census and wild differential contributions remain required for unconditional reverse genus. Genus equality, place comparison, good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 6,811-module scope: all thirteen retained regressions, 46,439 exhaustive theorem checks, 20,782 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceEllipticVelu.isOddVeluSet_oddOrderSummingSet",
+    "Dubon2026.SourceEllipticVelu.card_oddOrderSummingSet",
+    "Dubon2026.SourceEllipticVelu.coordsOrZero",
+    "Dubon2026.SourceEllipticVelu.oddOrderSummingSet",
+    "Dubon2026.SourceEllipticVelu.IsOddVeluSet",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.equation_b",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.chord_prod",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.chord_sum'",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.addX_two_torsion_sub_root",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.double_pack_esymm1",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.double_pack_esymm2",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.double_pack_esymm3",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.double_pack_esymm4",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.multiset_map_double",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.orbitTrace_add_smul",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.orbitTrace_fold",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.sum_oddOrderSummingSet_eq",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.prod_oddOrderSummingSet_eq",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.xiAt",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.fold2",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.unfold2",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.xvSum",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.orbitTrace",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.expansion",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.hP",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.AP",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.fP",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.φP",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.R4",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.π",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.eps",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.sc",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.pipeline",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.delta_identity",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.MM_eq_PP_of_infinite",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.spec_MM_eq_spec_PP_at",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.chord_factor",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.eval_SqP",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.eval_PqP",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.roots_cubic",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.AP_eval",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.SqP",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.PqP",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.MM",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.PP",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.spec",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.Xv",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.norm_identity'",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_hP",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.odd_quotient_isElliptic_of_short_model",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.xco",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.odd_quotient_isElliptic_supersingular",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.odd_quotient_isElliptic_of_ordinary_model",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.BtP",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.odd_quotient_isElliptic",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.vcInvEmbedding",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.pointMapHom",
+    "Dubon2026.SourceEllipticVelu.OddDiscriminant.vcInvEmbedding_apply",
+    "Dubon2026.SourceEllipticClassGroup.toClassEquiv",
+    "Dubon2026.SourceEllipticClassGroup.toClassEquiv_apply",
+    "Dubon2026.SourceEllipticClassGroup.isDedekindDomain_of_isAlgClosed'",
+    "Dubon2026.SourceEllipticClassGroup.extendedClassNorm_mk0",
+    "Dubon2026.SourceEllipticClassGroup.extendedIdeal_coe"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-23T06:45:32.562644+00:00",
+      "date": "2026-10-22 America/Vancouver",
+      "modules": [
+        "SourceEllipticOddSummingSet",
+        "SourceEllipticOddSummingStructure"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddSummingSet.lean",
+          "sha256": "51E3A253A8FD053BFCCABFAE14A276F5EA643D619B3BCE2C8B830178DAD7D903",
+          "oleanSha256": "0A36FB9238544BB61121BE209372813906BD31B152E36B0902A9440BF3ADEB49"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddSummingStructure.lean",
+          "sha256": "DB79BC5085A01B3BA753509C5A6DE6188ED23FFF276E09C99EDB4D7A569E68BE",
+          "oleanSha256": "4F4EFC4B8FBD91E00DC4D3D4D3497735F86E28F6473023EF2F58D266544C395E"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticVelu.mem_oddOrderSummingSet",
+        "Dubon2026.SourceEllipticVelu.isOddVeluSet_oddOrderSummingSet",
+        "Dubon2026.SourceEllipticVelu.coordsOrZero_odd_nsmul_injOn",
+        "Dubon2026.SourceEllipticVelu.card_oddOrderSummingSet",
+        "Dubon2026.SourceEllipticVelu.coordsOrZero",
+        "Dubon2026.SourceEllipticVelu.oddOrderSummingSet",
+        "Dubon2026.SourceEllipticVelu.IsOddVeluSet"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticVelu.mem_oddOrderSummingSet",
+        "Dubon2026.SourceEllipticVelu.isOddVeluSet_oddOrderSummingSet",
+        "Dubon2026.SourceEllipticVelu.coordsOrZero_odd_nsmul_injOn",
+        "Dubon2026.SourceEllipticVelu.card_oddOrderSummingSet"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticVelu.coordsOrZero",
+        "Dubon2026.SourceEllipticVelu.oddOrderSummingSet",
+        "Dubon2026.SourceEllipticVelu.IsOddVeluSet"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddSummingAudit2.log",
+      "logSha256": "F35FAC93F992FAF52478F2C57650A54AA6949135E5C926068CA11606A7EA5660",
+      "auditSha256": "AD287A8EC6877FC969C497CC9F7451E505997E9717B758F714B26DC472BE6E5C",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 23,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 8,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOddSummingDependencyAudit2.log",
+      "dependencyAuditSha256": "849802CB31C60DCF86943C6868998835A2E787C8BF6884B553F56C9BE91F797E",
+      "dependencyAuditSourceSha256": "349C182029EE628B6EDB2814DC77508EC674B1B0BE771EAA9F324662DEC94912",
+      "consumers": [
+        "Dubon2026.SourceEllipticVelu.isOddVeluSet_oddOrderSummingSet",
+        "Dubon2026.SourceEllipticVelu.card_oddOrderSummingSet",
+        "Dubon2026.SourceEllipticVelu.coordsOrZero",
+        "Dubon2026.SourceEllipticVelu.oddOrderSummingSet",
+        "Dubon2026.SourceEllipticVelu.IsOddVeluSet"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census -> elliptic inertia orbit map -> cyclic-subgroup interpretation of integral modular-polynomial roots -> odd-prime quotient maps and products -> odd Velu quotient ellipticity -> actual odd summing-set geometry and cardinality",
+      "discharged": "The first n positive multiples of an actual point of order 2n+1 give exactly n distinct coordinate pairs satisfying the curve equation, with nonzero Velu y derivative and pairwise distinct x-coordinates. All summing-set conditions are derived from the actual generator order over every field.",
+      "boundary": "Scratch only; production promotion and verification pending. The odd-degree quotient discriminant identity, odd-prime quotient maps and product identities, finite-set reduction, the cyclic-subgroup root correspondence, inertia orbit map, exceptional-fiber census and wild contribution, reverse genus, genus equality, place comparison, good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-odd-summing-set-2-reuse-review-20261022.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "449F4A9F9D8B6EB9B115E804A4B89010551F4CA1E48D7399DC82690E98DAA3AF"
+    },
+    {
+      "recordedUTC": "2026-10-23T07:04:45.425007+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticOddChordIdentities",
+        "SourceEllipticOddTwoTorsionTranslation",
+        "SourceEllipticOddRootPackets",
+        "SourceEllipticOddDoublingFormula",
+        "SourceEllipticOddDoublingPackets",
+        "SourceEllipticOddReindex",
+        "SourceEllipticOddOrbitTrace",
+        "SourceEllipticOddSummingFold"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddChordIdentities.lean",
+          "sha256": "59963EA41CE46651E26D4492472C7243F0D1D628CA216DE0021248496416C37F",
+          "oleanSha256": "027D92790CA331A9C46ADF761BE7D339E801A41BA538C2E919949A128EBDA324"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddTwoTorsionTranslation.lean",
+          "sha256": "E18CE13AE693BB9A1354778C1AF46E174640A7D933D3A2EAFCE0B31AAF39EA26",
+          "oleanSha256": "4C53081D8C26809300136290F015E72637167FADED1FDEA76503F8441C020DBD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddRootPackets.lean",
+          "sha256": "3F3BE0B0A7C27F106EDF5C62D6F82D52A08103092C7EA5B31AB746F3CBB8BA0C",
+          "oleanSha256": "8730A736CB03B4E39B00633054D66086213844C108EB5D73BC74D809995AF59B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddDoublingFormula.lean",
+          "sha256": "E609CDBBCE0DEA8CDEB98B15071CB8CC008B92FA78AF596D7B506A0518A189E5",
+          "oleanSha256": "F5D73FFE9926B580ED584E868CA0F616574E771833D2B913A8F87E9694B4A5C5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddDoublingPackets.lean",
+          "sha256": "E31DDFC2512F92BD9CFA52E816A99BBBEF9529D00744470FE40EFDD664D33B4B",
+          "oleanSha256": "25381D84591DF466E7B0944958500C4A896ECAE80F6B10991774551826BA8B40"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddReindex.lean",
+          "sha256": "68E2BD123136C7BE41FF400BF9DA97E490630C8E457BE6ABC516EF1B8E5CC448",
+          "oleanSha256": "6AF7A6E174FB4A8C2D9C6552DCD33D5214AFCA668795F20A287D40B65E3E743E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddOrbitTrace.lean",
+          "sha256": "70E5868D2E70D941A3EAC6EE69A2918DEF27A106BE72B0AB577A9E209D9FCC33",
+          "oleanSha256": "19B23A3AC880942662571C174F66AA349D03B39AE94DCB93351DA21865F7CB2E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddSummingFold.lean",
+          "sha256": "E9F7A689113467338EE4622E61DD0226B5D70BE8D63270E463504521AABDE249",
+          "oleanSha256": "57C28076E1C0A7F98B197443B91E73FC16980649CD933925CFDE286A75FCBE22"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.equation_b",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.chord_prod",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.chord_sum'",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.addX_two_torsion_sub_root",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.addX_two_torsion_sub_self",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.xiAt_closed",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.pack_esymm1",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.pack_esymm2",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.pack_esymm3",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.pack_esymm4",
+        "Dubon2026.SourceEllipticVelu.double_x_mul_psi2Sq",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.double_pack_esymm1",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.double_pack_esymm2",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.double_pack_esymm3",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.double_pack_esymm4",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.coordsOrZero_neg_fst",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.sub_smul_eq_neg_smul",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.coordsOrZero_sub_smul_fst",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.fold2_mem",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.unfold2_fold2",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.coordsOrZero_fold2_smul_fst",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.image_fold2_Icc",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.multiset_map_double",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.orbitTrace_add_right",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.orbitTrace_add_smul",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.orbitTrace_fold",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.sum_oddOrderSummingSet_eq",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.prod_oddOrderSummingSet_eq",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.xiAt",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.fold2",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.unfold2",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.xvSum",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.orbitTrace"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.equation_b",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.chord_prod",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.chord_sum'",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.addX_two_torsion_sub_root",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.addX_two_torsion_sub_self",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.xiAt_closed",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.pack_esymm1",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.pack_esymm2",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.pack_esymm3",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.pack_esymm4",
+        "Dubon2026.SourceEllipticVelu.double_x_mul_psi2Sq",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.double_pack_esymm1",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.double_pack_esymm2",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.double_pack_esymm3",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.double_pack_esymm4",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.coordsOrZero_neg_fst",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.sub_smul_eq_neg_smul",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.coordsOrZero_sub_smul_fst",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.fold2_mem",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.unfold2_fold2",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.coordsOrZero_fold2_smul_fst",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.image_fold2_Icc",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.multiset_map_double",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.orbitTrace_add_right",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.orbitTrace_add_smul",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.orbitTrace_fold",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.sum_oddOrderSummingSet_eq",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.prod_oddOrderSummingSet_eq"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.xiAt",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.fold2",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.unfold2",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.xvSum",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.orbitTrace"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddDiscriminantCoordinatesAudit8.log",
+      "logSha256": "3BD5F8F3C4CFABD45A3D1DE1DFD1F2E45A5BD22E02C43AEDC7C4FFED1157FDDD",
+      "auditSha256": "DBD3F1CDB059C8F5D2EAD4BE829684F087A16F3BD6A9AAEAFD401A9A3AD207AD",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 52,
+      "linterScopes": 8,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 34,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOddDiscriminantCoordinatesDependencyAudit8.log",
+      "dependencyAuditSha256": "A361D845362FB026A7D99A63798CBC9CC0F5541D07973597950ABBE68FFCCA03",
+      "dependencyAuditSourceSha256": "824AA6BC39980D17D42048E52F9E6B7AF646043D43F9E54A046FD2875F92A9E1",
+      "consumers": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.equation_b",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.chord_prod",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.chord_sum'",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.addX_two_torsion_sub_root",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.double_pack_esymm1",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.double_pack_esymm2",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.double_pack_esymm3",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.double_pack_esymm4",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.multiset_map_double",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.orbitTrace_add_smul",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.orbitTrace_fold",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.sum_oddOrderSummingSet_eq",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.prod_oddOrderSummingSet_eq",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.xiAt",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.fold2",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.unfold2",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.xvSum",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.orbitTrace"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census -> elliptic inertia orbit map -> cyclic-subgroup interpretation of integral modular-polynomial roots -> odd-prime quotient maps and products -> odd Velu quotient ellipticity -> actual doubling, orbit trace and coordinate identities",
+      "discharged": "The already proved actual point-multiplication theorem supplies the doubling quartic in every characteristic. All four elementary symmetric root-packet identities now have actual-double consumers with that quartic premise derived. Doubling permutes the half-orbit x-coordinate multiset of an actual odd-order point. Its full cyclic coordinate trace is translation invariant and folds into opposite pairs. Existing coordinate injectivity supplies the actual finite-set sums and products. Chord and two-torsion root-translation identities are independently proved for the next discriminant assembly.",
+      "boundary": "Scratch only; production promotion and verification pending. The global odd-degree quotient discriminant identity and ellipticity, odd-prime quotient maps and product identities, finite-set reduction, cyclic-subgroup root correspondence, inertia orbit map, exceptional-fiber census and wild contribution, reverse genus, genus equality, place comparison, good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-odd-discriminant-coordinates-8-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "5A424698821824436A0E40CDB3E321FAD51DD8323CAF0EC23250DF9CDB143A1D"
+    },
+    {
+      "recordedUTC": "2026-10-23T07:17:33.688192+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticOddPolynomialReflection",
+        "SourceEllipticOddQuotientPolynomials",
+        "SourceEllipticOddTruncatedIdentities",
+        "SourceEllipticOddTruncatedExpansion",
+        "SourceEllipticOddPolynomialDegrees",
+        "SourceEllipticOddReflectedQuotient",
+        "SourceEllipticOddReflectedIdentity",
+        "SourceEllipticOddPolynomialExpansion"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddPolynomialReflection.lean",
+          "sha256": "B53CA930361F84E2E47F2F11062D6A740452A128C3214AE109FE0ED8F2C3833F",
+          "oleanSha256": "15EBDB0BBB03A0D4159E8BCE3A806464C05EEB9469B40FA5188DA99BFFABADE7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddQuotientPolynomials.lean",
+          "sha256": "6662F337202AFDE0652450FF411F450043E3405042AF1FCAC34AB60C54A47701",
+          "oleanSha256": "7EA9FC08B27BC4A2971C70BAE0128FBEDD815B8B9AFB1D69CDB72F42033D379D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddTruncatedIdentities.lean",
+          "sha256": "E24400979DAD8753AD46A14639C6553B65B4E26165103872F63D0028D963F250",
+          "oleanSha256": "53A088C1EE792601B663E5663A5D0E41A6B79F81EDFF7A19BDF861CA7B70449B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddTruncatedExpansion.lean",
+          "sha256": "786D641B5B38FC37EDC03D839CD6E8DF6D148C272DB5B8D8BBDC55A8AF8E9687",
+          "oleanSha256": "73986C9370BF32E7218D2758D4850943BA6846C9CC722B7AF63A430E06CA93F7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddPolynomialDegrees.lean",
+          "sha256": "417A32021AF0657181259C963AAD8F174A73996CF0F3D38B406035EA26E2DB56",
+          "oleanSha256": "0A6CBA9EB93FDF382907CABDBAC58DF20D755C30AF2CAD46CBCC1BC8605D0607"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddReflectedQuotient.lean",
+          "sha256": "0B1102E6559D23EFEDCB09AE71A82D714894001B94823FE95975A49A8DA75910",
+          "oleanSha256": "224F06C09D8A464C4A2E28D8198383E6B30651456DECCE8CAE30DB782378F7C3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddReflectedIdentity.lean",
+          "sha256": "FD0B488B4F67CD384BBBFE78A156BFEFC72B22F5B241695A82DE466445D5575A",
+          "oleanSha256": "CFB2A99317E74AA73428B94FD49C52E6D291C6CA4C2F4AF77F3622F3B65E82FB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddPolynomialExpansion.lean",
+          "sha256": "27A13F22E734892A8A4FC39007984B2111AA8023AE3317E7F3232F4346D20514",
+          "oleanSha256": "39D8F05E1CC2A0A80908948CFA00470377DFD8A266B6873EBA6775B81B354541"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.reflect_sum'",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.reflect_prod_le",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.reflect_pow_le",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.reflect_X_sub_C",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_sub_le_of_le'",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_X_sub_C_le'",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.π_X_pow_four",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.eq_of_π_eq",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.prod_eq_of_map_eq",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.prod_one_add_sq_mul",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.eps_pow_four",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.π_X",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.π_C",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.trunc_unit",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.trunc_pow8",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.trunc_perq",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.trunc_lhs",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.trunc_alpha_summand",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.trunc_phi",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.trunc_num",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.expansion_core",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_hP_le",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_lin_le",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_Pq_le",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_AP_le",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_fP_le",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_φP_le",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_m_le",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.reflect_sq",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.reflect_hP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.reflect_AP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.fP_eq",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.reflect_fP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.reflect_m",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.reflect_diamond",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.expansion",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.hP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.AP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.fP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.φP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.R4",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.π",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.eps",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.sc"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.reflect_sum'",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.reflect_prod_le",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.reflect_pow_le",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.reflect_X_sub_C",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_sub_le_of_le'",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_X_sub_C_le'",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.π_X_pow_four",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.eq_of_π_eq",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.prod_eq_of_map_eq",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.prod_one_add_sq_mul",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.eps_pow_four",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.π_X",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.π_C",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.trunc_unit",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.trunc_pow8",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.trunc_perq",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.trunc_lhs",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.trunc_alpha_summand",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.trunc_phi",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.trunc_num",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.expansion_core",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_hP_le",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_lin_le",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_Pq_le",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_AP_le",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_fP_le",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_φP_le",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_m_le",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.reflect_sq",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.reflect_hP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.reflect_AP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.fP_eq",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.reflect_fP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.reflect_m",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.reflect_diamond",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.expansion"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.hP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.AP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.fP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.φP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.R4",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.π",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.eps",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.sc"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddPolynomialExpansionAudit8.log",
+      "logSha256": "EA8C43E24492291884E57D9AE0C9170EA133C962879C8079D4916BD325906CBC",
+      "auditSha256": "37E12AEF400C5A7CCCCF5CF4C3210469509386466A10B1142D9A179FE1136406",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 50,
+      "linterScopes": 8,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 40,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOddPolynomialExpansionDependencyAudit8.log",
+      "dependencyAuditSha256": "556B11EF9198B14C3C4A05B0A8ADCEC1E7FA1B44619D425A8015CACBD165B292",
+      "dependencyAuditSourceSha256": "867D60B7C7049C3219E9E8B0D8212DBAA78DB4485B992ECFA3D8FBCBD507680B",
+      "consumers": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.expansion",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.hP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.AP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.fP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.φP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.R4",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.π",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.eps",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.sc"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census -> elliptic inertia orbit map -> cyclic-subgroup interpretation of integral modular-polynomial roots -> odd-prime quotient maps and products -> odd Velu quotient ellipticity -> explicit quotient cubic coefficient comparison",
+      "discharged": "From the displayed finite polynomial factorization and doubling multiset permutation, reflection and comparison modulo X^4 derive the exact quotient cubic coefficients: c2=b2, c1=2*b4-20*sum(t), and c0=b6-4*b2*sum(t)-28*sum(u+x*t). The cleared numerator and denominator and doubling quartic are explicit polynomials. No coefficient-match premise is supplied. This is a conditional polynomial deduction; the actual curve factorization is not yet supplied.",
+      "boundary": "Scratch only; production promotion and verification pending. The finite polynomial factorization from actual elliptic translations, full odd-degree quotient discriminant identity and ellipticity, odd-prime quotient maps and product identities, finite-set reduction, cyclic-subgroup root correspondence, inertia orbit map, exceptional-fiber census and wild contribution, reverse genus, genus equality, place comparison, good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-odd-polynomial-expansion-8-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "6588394A7EFD418554A4732D690E6292A3461431587E344DC9BCA95757DCFF36"
+    },
+    {
+      "recordedUTC": "2026-10-23T07:37:15.755016+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticOddNormPolynomials",
+        "SourceEllipticOddNormSpecialization",
+        "SourceEllipticOddNormCoordinates",
+        "SourceEllipticOddNormIdentity",
+        "SourceEllipticOddNormFibers",
+        "SourceEllipticOddCubicFactors",
+        "SourceEllipticOddCubicPipeline",
+        "SourceEllipticOddDiscriminantProduct"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddNormPolynomials.lean",
+          "sha256": "03FD5EF78054F5D017CBD3E984A36A14B0E7FC0C1E4A47B0E18921559A7F3332",
+          "oleanSha256": "CFD110BEB5A2BEE5987575FADBCC47D0C13C174FE03EF63D8805CFF677FD37C5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddNormSpecialization.lean",
+          "sha256": "BC2871B35B3CE9EDFBEF2DD13E9DEAECB25A2B0E921406DEFE5B24B0859029AD",
+          "oleanSha256": "C120C3F30B5B21FCE28CA8F99A277870096BF0D881F85AB4977D9EA3E40727E8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddNormCoordinates.lean",
+          "sha256": "657EF2A23D344ACE3E995E70F43B1F9B2ADA48D69C4B718D9B1D442FE066E3A5",
+          "oleanSha256": "022361F446C12399C9A0434C2C7112C68B0967B06A15C08265E5E920C95EFCD1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddNormIdentity.lean",
+          "sha256": "F12E3825DB6565EDE7B8D951EAADAEA30375146A30FDA0AC5F288D86EDD9B09B",
+          "oleanSha256": "99922B110872B9E8A8833B9DB1A95CCBB024EAB3642B72974231FB8ABB4856E1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddNormFibers.lean",
+          "sha256": "997D3E0FD07AD51A48217580932CFDF81E12BC7C55F2BAC712F4774A1D0AC483",
+          "oleanSha256": "842786C2186C30F09130A5AA0AC9CDBE129BD50F163F66621957DC1C66A79ECE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddCubicFactors.lean",
+          "sha256": "79E697EC2B34B40DAEB949B16EB96E0B0962A954637ABEE6A209A46CCE717D54",
+          "oleanSha256": "6C5EA2AC3EF8F5812D3CFF16F3832CD6EAD4215654F3BB3C7B49E44F09DA1EA4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddCubicPipeline.lean",
+          "sha256": "DC095CE26E560C08B04EA427841714069D9A71AB66EA3C08C2E03003CBCEEB6A",
+          "oleanSha256": "109D2147D37AB13B8172C835B3F600B2A1E6C6037D89E38BCED62CDCC1B7CE7E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddDiscriminantProduct.lean",
+          "sha256": "B7173BC8413D53BB7E65C1912BAF0E767F96F7A5FEADA670571EBDFAEEB3DC27",
+          "oleanSha256": "5AAB15436484F271F53A53166AE57D465BB8D101A8234C4D38076F2F6C2CB046"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.hP_monic",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_hP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_AP_sum_le",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.degree_AP_sum_lt",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.AP_monic",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_AP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.spec_C",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.spec_map_C",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.spec_X",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.spec_PP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.spec_MM",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.MM_eq_PP_of_infinite",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.fiber_of_MM_eq_PP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.chord_factor",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.eval_SqP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.eval_PqP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.hP_eval",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.hP_eval_ne_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.AP_eval",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.norm_identity'",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.spec_MM_eq_spec_PP_at",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.fiber",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.fiber_to_diamond",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.cubic_eq_of_coeffs",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.roots_cubic",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.pipeline",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.delta_identity",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.SqP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.PqP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.MM",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.PP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.spec",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.Xv"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.hP_monic",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_hP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_AP_sum_le",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.degree_AP_sum_lt",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.AP_monic",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_AP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.spec_C",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.spec_map_C",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.spec_X",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.spec_PP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.spec_MM",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.MM_eq_PP_of_infinite",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.fiber_of_MM_eq_PP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.chord_factor",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.eval_SqP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.eval_PqP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.hP_eval",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.hP_eval_ne_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.AP_eval",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.norm_identity'",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.spec_MM_eq_spec_PP_at",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.fiber",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.fiber_to_diamond",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.cubic_eq_of_coeffs",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.roots_cubic",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.pipeline",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.delta_identity"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.SqP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.PqP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.MM",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.PP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.spec",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.Xv"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddNormFactorizationAudit8.log",
+      "logSha256": "5A67519E9741B8914DE7B6B26269D818405B4265CA76AC7C8D7559CC42C2EA8A",
+      "auditSha256": "4E18ED7E79E1FFC5CD359EAB480C5127F61AA150C1CCBC5C87A898468919B5FB",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 61,
+      "linterScopes": 8,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 31,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOddNormFactorizationDependencyAudit8.log",
+      "dependencyAuditSha256": "E0C4A1E4DA58A3495662717D2AEE56AEBDF24DFAD7189980B6A372A558830CC3",
+      "dependencyAuditSourceSha256": "DB83FD0BB19F5AA355C6FF6B2BB7BF7913FD19F5BF7C443924F8169FEBE3BFDF",
+      "consumers": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.pipeline",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.delta_identity",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.MM_eq_PP_of_infinite",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.spec_MM_eq_spec_PP_at",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.chord_factor",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.eval_SqP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.eval_PqP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.roots_cubic",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.AP_eval",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.SqP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.PqP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.MM",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.PP",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.spec",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.Xv",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.norm_identity'",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_hP"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census -> elliptic inertia orbit map -> cyclic-subgroup interpretation of integral modular-polynomial roots -> odd-prime quotient maps and products -> odd Velu quotient ellipticity -> actual-curve discriminant identity -> finite norm, three-fiber cubic and discriminant deductions",
+      "discharged": "Distinct paired roots with a common quotient coordinate determine the explicit cleared norm polynomial. The three prescribed fibers, the doubling packet identity and its multiset permutation give the exact quotient cubic; the finite product calculation derives the discriminant identity from the displayed root and translation formulas. These are conditional algebraic deductions. The norm identity and exact denominator degree are independently audited constructions for subsequent actual-curve assembly; their use in that assembly is not yet claimed.",
+      "boundary": "Scratch only; production promotion and verification pending. Actual elliptic translations, root formulas, quotient-coordinate invariance and infinite usable coordinates must discharge the algebraic premises. The full odd-degree quotient discriminant identity and ellipticity, odd-prime maps and products, finite-set reduction, cyclic-subgroup roots, inertia orbit map, exceptional-fiber census and wild contribution, reverse genus, good reduction, original Frobenius/inertia, residual association, automorphy and all-weight symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-odd-norm-factorization-8-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "0D6A3515288F6A320DCBDC3A44D869064CE7514C2C91C9E13C8E7CE81C7994A3"
+    },
+    {
+      "recordedUTC": "2026-10-23T07:43:47.177806+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticOddCurveCoordinates",
+        "SourceEllipticOddOrbitDistinctness",
+        "SourceEllipticOddGoodAbscissae",
+        "SourceEllipticOddCubicRoots",
+        "SourceEllipticOddOrbitInvariance",
+        "SourceEllipticOddActualDiscriminant",
+        "SourceEllipticOddShortQuotient"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddCurveCoordinates.lean",
+          "sha256": "1EB091D50A0CB60651BBD53022E4EE4A4D4C634573AA1614488F68A80C4E1405",
+          "oleanSha256": "24D04C16CBAFA8DD9F96922C420BE88BC44986C26D4A012FC24C927810AD4467"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddOrbitDistinctness.lean",
+          "sha256": "79ADD79066F7122B8DA3C516B3E39B4F8319854036C035C759EE5F88F0FF6717",
+          "oleanSha256": "54F703947BDDDEF91B86E642FC76E28E20E2A520DC04C06D9907487904009299"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddGoodAbscissae.lean",
+          "sha256": "EC4CEC8633FE6895D585F5404415E55E916E05A2A2CE759634159880F59B81E0",
+          "oleanSha256": "35C4482084AC7395749ACBBEB4D92C77C258CADFEF4A14E01C9A087952B7FC7A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddCubicRoots.lean",
+          "sha256": "3899C669B48E0C8F00AE75A01709382502AC90D417954B70FB3059F5850F1E94",
+          "oleanSha256": "604607229D42C70EB6002E9D77BFE243A5A085A79BF2839872BF3115D2B4D2E8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddOrbitInvariance.lean",
+          "sha256": "993059B9E91C842FDFCCBE148BB5D953F4BE4F049BBCECE088E3195E20C49B4A",
+          "oleanSha256": "74B995A220AFCEAE383D20F527FF450023680A87F8682810181B68916CDFD5E5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddActualDiscriminant.lean",
+          "sha256": "D77A042BB13389C244FB3E1B013849469506337A1E5BEC737A098E026377063A",
+          "oleanSha256": "06E43880E4D9CBE8B3C566904943132067466CB8AD677667B6A5C99527268A22"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddShortQuotient.lean",
+          "sha256": "4BEA2F03F3200E41EE786358948B94DB38FF1FF1639AA8DC5502B2A3CC89AB98",
+          "oleanSha256": "6348538281E14EBE2890C84F219443D5A11A38A21FF9EC5CB670C6BDC832A55D"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.two_torsion_chord_factor",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.affine_decomp",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.kernel_ne_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.b_model",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Ψ₂Sq_b_model",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.eq_or_eq_neg_of_xco_eq",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.good_add_nsmul_ne_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.good_xco_ne",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.good_xco_ne_kernel",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.good_distinct",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.doubling_fibre_finite",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.bad_finite",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.good_abscissae_infinite",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.delta_eq_prod_two_torsion_roots",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.two_torsion_root_symmetric_sums",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.exists_affine_coords_of_ne_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.xvSum_eq_orbitTrace'",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.xvSum_orbit_const'",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.odd_quotient_discriminant_of_split_short_model",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.odd_quotient_discriminant_of_short_model",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.odd_quotient_isElliptic_of_short_model",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.xco"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.two_torsion_chord_factor",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.affine_decomp",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.kernel_ne_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.b_model",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.Ψ₂Sq_b_model",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.eq_or_eq_neg_of_xco_eq",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.good_add_nsmul_ne_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.good_xco_ne",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.good_xco_ne_kernel",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.good_distinct",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.doubling_fibre_finite",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.bad_finite",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.good_abscissae_infinite",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.delta_eq_prod_two_torsion_roots",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.two_torsion_root_symmetric_sums",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.exists_affine_coords_of_ne_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.xvSum_eq_orbitTrace'",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.xvSum_orbit_const'",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.odd_quotient_discriminant_of_split_short_model",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.odd_quotient_discriminant_of_short_model",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.odd_quotient_isElliptic_of_short_model"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.xco"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddActualCurveAudit7.log",
+      "logSha256": "6C12006317634C09BE2F5BF7F9DCD0C96BA796896F18A9E5429624434980036F",
+      "auditSha256": "FC1B0D78BDA7965A856AE86F00DD5F8CEEC44F2EF2451FCC035F2DBBA095E8B4",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 58,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 49,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOddActualCurveDependencyAudit7.log",
+      "dependencyAuditSha256": "AF7CE897BEECAAABEBEFD9A912B17C2DBE81A580F9885E5ED06C7A99EFCB3EEA",
+      "dependencyAuditSourceSha256": "F5E61BDC161A9E5D6F02359BF2A3A2499427CABF968699CB5F84119CF781D79F",
+      "consumers": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.odd_quotient_isElliptic_of_short_model",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.xco"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census -> elliptic inertia orbit map -> cyclic-subgroup interpretation of integral modular-polynomial roots -> odd-prime quotient maps and products -> odd Velu quotient ellipticity -> actual short-model discriminant and ellipticity with all algebraic premises discharged",
+      "discharged": "For an actual elliptic curve over an algebraically closed field of characteristic different from two with a1=a3=0, the explicit quotient by an actual point of order 2n+1 satisfies the exact discriminant identity and is elliptic. The proof derives the norm factorization, quotient-coordinate translation invariance, three fibers, doubling packet, cubic roots and infinite usable-coordinate set internally. No algebraic-factorization, root-enumeration, translation-invariance, torsion-cardinality or quotient-ellipticity premise is supplied.",
+      "boundary": "Scratch only; production promotion and verification pending. General-model normalization and descent to arbitrary fields, the ordinary and supersingular characteristic-two cases, odd-prime quotient maps and product identities, finite-set reduction, cyclic-subgroup roots, inertia orbit map, exceptional-fiber census and wild contribution, reverse genus, good reduction, original Frobenius/inertia, residual association, automorphy and all-weight symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-odd-actual-curve-7-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "D4807319FF988BAC922280914EEA5D0288982ACC62C1B699296B9972A51FFB40"
+    },
+    {
+      "recordedUTC": "2026-10-23T07:53:09.073389+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticOddCharTwoSupersingular",
+        "SourceEllipticOddCharTwoPolynomial",
+        "SourceEllipticOddCharTwoPolynomialRoots",
+        "SourceEllipticOddCharTwoCoefficients",
+        "SourceEllipticOddCharTwoNorm",
+        "SourceEllipticOddCharTwoTorsion",
+        "SourceEllipticOddCharTwoCosets",
+        "SourceEllipticOddCharTwoInvariants",
+        "SourceEllipticOddCharTwoQuotientCoefficients",
+        "SourceEllipticOddCharTwoKernelCoordinates",
+        "SourceEllipticOddCharTwoActualDiscriminant"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddCharTwoSupersingular.lean",
+          "sha256": "275CD4FABFFA27306CF1A5C38CDD29E25652654C82C376118A24D013A7E74218",
+          "oleanSha256": "9E5B14A2F3584CA3B978448673978D1F9226B5144ECB5B891C04A41EC1777EBD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddCharTwoPolynomial.lean",
+          "sha256": "65C94AFAECA20557524DF558B8A764CF3C226D81F5D56CB100B7BCF00E12ED48",
+          "oleanSha256": "72A99DF69B2A68C1FC72509BA33E9A1847C68CB1AE6E355CDE3A221DF0152F2F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddCharTwoPolynomialRoots.lean",
+          "sha256": "1E9692B17473EDEAC528C8F894E99E417113109DF1028787B3C9C05A110AEEE7",
+          "oleanSha256": "2DD838730692649865CB1AA15EBCE386D1ECAF971CBDAEE546DB8BD1229FB528"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddCharTwoCoefficients.lean",
+          "sha256": "BD758FF9FAE3710619EBFB9A919842E35C12FCC535D4C6BDE151606C8F5AAC74",
+          "oleanSha256": "550E2F664757AABC611F436C693C5E227D39AAC7818A31F0EDB2A76D32728F5A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddCharTwoNorm.lean",
+          "sha256": "92FFEB959C729E7F0D1CF73BFB60403EF10FA6E3E3A287EDF9588FC4AC6E691F",
+          "oleanSha256": "0E2047A22ACD30B7A9E3389775A39FA815686C9234601DE2DCBC2BFEB1E73FD9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddCharTwoTorsion.lean",
+          "sha256": "7B0C2B81F115C81F1507E0333CF6B2233F49819F4B3BAFC0450E77C3FBE2D68E",
+          "oleanSha256": "366E7713889510E57D9A30189F99017FE1A01A316806688AE5AFF3AE7F0E18DE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddCharTwoCosets.lean",
+          "sha256": "65C036153C1820C6E858153705C49B6A5C41E50287A011A499341657EF0F4CB1",
+          "oleanSha256": "084DD6FAE2FC1FD7911F4F4F46C50FE676330D056AC6EDD5319E33DE6ACD55BA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddCharTwoInvariants.lean",
+          "sha256": "5DA52F82587C49CE77775EAD2D5ED420C0BEDF9E07AC00323033220C79F78B01",
+          "oleanSha256": "79962EAF8F1A5EDB6C50C190C73267D7DD3C73FD673D3FBB111D0130E7A98765"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddCharTwoQuotientCoefficients.lean",
+          "sha256": "045B4C01871EA024822D33D63952FFB4996E7CE7FF0E7423B5C792255AE031B8",
+          "oleanSha256": "AF0BDCC88B7A6C8BE0B9FB8470CE7F95C2F5082B4BAD0054CFB2C04A920ABC0C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddCharTwoKernelCoordinates.lean",
+          "sha256": "1B8B67FBD813B8A315133C37444AE8BE0EDC96742ACCFF85C90838317B98A70D",
+          "oleanSha256": "B1D4F4D5694682D49DCB5E81F854B2F98D4D740F28947491B4F5BFE76C18B3D6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddCharTwoActualDiscriminant.lean",
+          "sha256": "9B9FC5515781832E139408384AA57E8C7B99F1EEECB9600FAFA625C9FCB334BB",
+          "oleanSha256": "A4D4703C2BB73AF7525A54ADC19CD11AAD97F3C9A6BB9F3EE28F26A9FE2B3604"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.Δ_of_char_two",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.char_two_a₁_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.odd_quotient_isElliptic_supersingular",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.neg_eq_self_of_two",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.sub_sq_of_two",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.sum_sq_of_two",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.monic_prod_X_sub_C'",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.natDegree_prod_X_sub_C'",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.BtP_eval",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.BtP_eq_prod",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.one_add_sum_eq_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.BtP_eval_eq_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.read_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.read_pred",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.close_of_reads",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.char_two_chain",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.equation_ord",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.addX_twoTorsion",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.nonsingular_twoTorsion",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.negY_twoTorsion",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.coordsOrZero_twoTorsion_add_fst",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.two_torsion_ne_nsmul",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.coset_rel_nsmul",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.coset_add_nsmul_ne_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.coset_xco_ne_kernel",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.xco_nsmul_injOn",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.xvSum_coset",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.b₂_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.b₄_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.b₆_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.Δ_of_a₁_one_a₃_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.Δ_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.veluT_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.veluU_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.veluW_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.veluGy_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.veluTSum_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.veluWSum_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.prod_veluU_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.veluQuotient_coeffs",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.Δ_veluQuotient_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.kQ_equation",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.xk_ne_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.xvSum_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.row_iff_chain",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.odd_quotient_discriminant_of_ordinary_model",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.odd_quotient_isElliptic_of_ordinary_model",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.BtP"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.Δ_of_char_two",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.char_two_a₁_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.odd_quotient_isElliptic_supersingular",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.neg_eq_self_of_two",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.sub_sq_of_two",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.sum_sq_of_two",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.monic_prod_X_sub_C'",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.natDegree_prod_X_sub_C'",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.BtP_eval",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.BtP_eq_prod",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.one_add_sum_eq_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.BtP_eval_eq_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.read_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.read_pred",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.close_of_reads",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.char_two_chain",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.equation_ord",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.addX_twoTorsion",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.nonsingular_twoTorsion",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.negY_twoTorsion",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.coordsOrZero_twoTorsion_add_fst",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.two_torsion_ne_nsmul",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.coset_rel_nsmul",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.coset_add_nsmul_ne_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.coset_xco_ne_kernel",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.xco_nsmul_injOn",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.xvSum_coset",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.b₂_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.b₄_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.b₆_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.Δ_of_a₁_one_a₃_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.Δ_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.veluT_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.veluU_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.veluW_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.veluGy_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.veluTSum_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.veluWSum_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.prod_veluU_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.veluQuotient_coeffs",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.Δ_veluQuotient_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.kQ_equation",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.xk_ne_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.xvSum_V",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.row_iff_chain",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.odd_quotient_discriminant_of_ordinary_model",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.odd_quotient_isElliptic_of_ordinary_model"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.BtP"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddCharTwoAudit11.log",
+      "logSha256": "8FF165EB7F4644666025178A944E9E1B299E3CDBA97CF7F7398B5827851E3DA0",
+      "auditSha256": "96E3CBA15FF239880C9AC74A4C17958944F46DF5E2B38D9C985DE17D5AF70E6C",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 73,
+      "linterScopes": 11,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 57,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOddCharTwoDependencyAudit11.log",
+      "dependencyAuditSha256": "636097BD3EAC347159BB84987466463E129853271DFA5A790F965B266D488C10",
+      "dependencyAuditSourceSha256": "7A71DE91CD0C274F501C0C1C63AF981AB92BE56ECE8018914E27E542D3143FA0",
+      "consumers": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.odd_quotient_isElliptic_supersingular",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.odd_quotient_isElliptic_of_ordinary_model",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.BtP"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census -> elliptic inertia orbit map -> cyclic-subgroup interpretation of integral modular-polynomial roots -> odd-prime quotient maps and products -> odd Velu quotient ellipticity -> actual characteristic-two ordinary and supersingular discriminant identities",
+      "discharged": "In characteristic two the actual explicit odd quotient satisfies its exact discriminant identity and is elliptic for a supersingular model a1=0 over any field, and for an ordinary model a1=1,a3=a4=0 over an algebraically closed field. The actual two-torsion coset supplies the squared-coordinate norm roots; its two required coefficients yield the ordinary discriminant. All coordinate, nonvanishing, coset-invariance and finite-norm premises are derived from the original elliptic model and point of odd order.",
+      "boundary": "Scratch only; production promotion and verification pending. Model normalization and descent to arbitrary fields must assemble the full odd quotient discriminant and ellipticity theorem. Odd-prime quotient maps and product identities, finite-set reduction, cyclic-subgroup roots, inertia orbit map, exceptional-fiber census and wild contribution, reverse genus, good reduction, original Frobenius/inertia, residual association, automorphy and all-weight symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-odd-characteristic-two-11-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "779E3DA362AAE3D283CCDC2E945E8EEC510B0AAFB6375934DD2935D30E90A3CE"
+    },
+    {
+      "recordedUTC": "2026-10-23T08:06:01.534228+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticOddVariableEmbedding",
+        "SourceEllipticOddVariableCoefficients",
+        "SourceEllipticOddVariableQuotient",
+        "SourceEllipticOddVariableSummingSet",
+        "SourceEllipticOddBaseChange",
+        "SourceEllipticOddNormalizedDiscriminant",
+        "SourceEllipticOddQuotient"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddVariableEmbedding.lean",
+          "sha256": "E730BB275BE1FEFDC9AE230436567F8396A5EB228DD4C7897406E66C49C61A97",
+          "oleanSha256": "D8B2F82978FBCD54D048B647DB3687DDCEC7F83D7A14C07E09DC46085CF70799"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddVariableCoefficients.lean",
+          "sha256": "E4A579EA22727A559F7017397121F2F14D18D830B8D7591CF4618636F3CEFF3A",
+          "oleanSha256": "3D608FD652E175D0C86AD15E3D8E09637D7D7D05B6F5FEBCD162FF3B494F533C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddVariableQuotient.lean",
+          "sha256": "DF260D706FC95A5A1B0195E9FE3E66A57BEFA7AE79E9BC2B8204051AE16A32CE",
+          "oleanSha256": "B67D93C837AD99CF5059C609F16DCCA59F126A5A046E44B331554AD66798EB96"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddVariableSummingSet.lean",
+          "sha256": "AF6A9812F34720E355373ACF8285AB7D1D11968D165D8B1326AF87491C90650F",
+          "oleanSha256": "EB91EDCCE8DE23F91E62B9D762AB411D6BCA615D2A8D89A36C895525ADFB6782"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddBaseChange.lean",
+          "sha256": "D5F4B0D4B6621C8BD1DE6371433E1F2F0CF311B025454ECB86B1BB311B753ABB",
+          "oleanSha256": "1ADB3B396377ADE71465A091440B23E276048DDFC5BC9F040E9ACD7DFF6F17FC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddNormalizedDiscriminant.lean",
+          "sha256": "EB759EEF98F55AF3E0B665330CF86B2CD72368F56B33B459375F931B43576708",
+          "oleanSha256": "A4904A0A321D9EBFF784DF1FDFCDFECBDD42F7A67115176EF763496A59E0B2F2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddQuotient.lean",
+          "sha256": "3D242F0CE184935D727055FB7C8D18687D9AC436F4C373C1EE7F5BADE5543A81",
+          "oleanSha256": "FEF32B76401715199B8255762AAB79F236C7C37C77C574715CDECFF8A7E8F61A"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.vcInvEmbedding_apply",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChange_veluGy",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChange_veluT",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChange_veluU",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChange_veluW",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChange_veluTSum",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChange_veluWSum",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChange_veluQuotient",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChange_veluQuotient_Δ",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChange_prod_veluU",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.identity_variableChange_iff",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChangeAddEquiv_symm_apply_odd",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.coordsOrZero_vcInvFun_of_ne_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChange_oddOrderSummingSet",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.pointMapHom_injective",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.coordsOrZero_pointMapHom",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.map_veluU",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.map_prod_veluU",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.map_oddOrderSummingSet",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.identity_map_iff",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.odd_discriminant_of_variableChange",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.odd_quotient_discriminant_of_isAlgClosed",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.odd_quotient_discriminant",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.odd_quotient_isElliptic",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.vcInvEmbedding",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.pointMapHom"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.vcInvEmbedding_apply",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChange_veluGy",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChange_veluT",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChange_veluU",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChange_veluW",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChange_veluTSum",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChange_veluWSum",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChange_veluQuotient",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChange_veluQuotient_Δ",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChange_prod_veluU",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.identity_variableChange_iff",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChangeAddEquiv_symm_apply_odd",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.coordsOrZero_vcInvFun_of_ne_zero",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.variableChange_oddOrderSummingSet",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.pointMapHom_injective",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.coordsOrZero_pointMapHom",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.map_veluU",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.map_prod_veluU",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.map_oddOrderSummingSet",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.identity_map_iff",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.odd_discriminant_of_variableChange",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.odd_quotient_discriminant_of_isAlgClosed",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.odd_quotient_discriminant",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.odd_quotient_isElliptic"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.vcInvEmbedding",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.pointMapHom"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientDescentAudit7.log",
+      "logSha256": "2E117B53D6231E8B48FFD62CFD8AAE698FEFBA1032900A6B5502D0EC08C07130",
+      "auditSha256": "AB2C8DF5C086FB4C1F7EE51F0E3225F4507BED52B2425CD32D51666B84AFA3D9",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 30,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 37,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientDescentDependencyAudit7.log",
+      "dependencyAuditSha256": "B5E7C949CFA57351B425429921A38BF4180A5318C3EAC7383FEDF306200B1158",
+      "dependencyAuditSourceSha256": "E20B1AB872C11BCD3C8B7F60FCA8BAE2439BAE3D6327F4AC2310998E8BC3897F",
+      "consumers": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.odd_quotient_isElliptic",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.vcInvEmbedding",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.pointMapHom",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.vcInvEmbedding_apply"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census -> elliptic inertia orbit map -> cyclic-subgroup interpretation of integral modular-polynomial roots -> odd-prime quotient maps and products -> actual odd Velu quotient ellipticity over the original arbitrary field",
+      "discharged": "For every actual elliptic curve over any field and every actual point Q of order 2n+1, the explicit quotient by its half-orbit satisfies delta(quotient)*(product veluU)^4=delta(source)^(2n+1) and is elliptic. Every model-normalization and field-descent premise is derived. Native normal forms and the existing actual point-group equivalence transport all cases; the native base-change point homomorphism preserves order and the exact finite coordinate set, and injectivity descends the identity. No characteristic restriction remains, including two and three.",
+      "boundary": "Scratch only; production promotion and verification pending. The odd quotient homomorphism with exact cyclic kernel and affine coordinate formula, odd-prime modular-polynomial products, finite-set reduction, cyclic-subgroup roots, inertia orbit map, exceptional-fiber census and wild contribution, reverse genus, good reduction, original Frobenius/inertia, residual association, automorphy and all-weight symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-odd-quotient-descent-7-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "7E5BF86C6587F59D8080B0786B77F5D706D094BFFE3E21E5FB9918C76B430738"
+    },
+    {
+      "recordedUTC": "2026-10-23T08:35:26.989526+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticClassIdealFactorization",
+        "SourceEllipticClassCodimension",
+        "SourceEllipticClassSmallNorm",
+        "SourceEllipticClassPointIdeals",
+        "SourceEllipticClassReduction",
+        "SourceEllipticClassSurjective"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticClassIdealFactorization.lean",
+          "sha256": "B90A050742FED615A3FD41E14DBFED91D42AFD234E235C5D6805A887EA21384C",
+          "oleanSha256": "3C5ABCFC73F515311A34BFB43859D51F3CDDE5192F40FC59B30B9996DA51E0EC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticClassCodimension.lean",
+          "sha256": "DEB84E5445576D64C47612CED7469DA12054BA25CFB2DAFFD956C1358C7990A1",
+          "oleanSha256": "39A088150547C876E9ACFF6ED0ACCDF1DE4C516F9EAFBC60639245B36391C3EB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticClassSmallNorm.lean",
+          "sha256": "FB4392BE519B39430F9663CD5CA12BDDF8F839F8369F59EA7B492C2CBCFC97B8",
+          "oleanSha256": "FBC2617829B5C63490B689AFB4CB19386E5D011A6FA98D3194ADAE180EAA89DB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticClassPointIdeals.lean",
+          "sha256": "63411DF64C66D13A7E74E4E88AB893FE8DF23D9EB159BC5DC94FAE532A98C722",
+          "oleanSha256": "2EEC370AF0C9E8DBA36D707BCF14BAE6004380275AFD46303663AD3CE7DBFAC9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticClassReduction.lean",
+          "sha256": "D31E17A5C9D3B50AF9B5F090043301F7DC92E9ABA561A06084073628EA20AD74",
+          "oleanSha256": "EAE7E37AE25F66CBF0D24D4E2EECC1CC7FC0CF921ECF8E2071B8393164C80ACF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticClassSurjective.lean",
+          "sha256": "36D4A3D1CDA7D05833DCDA073B6038913D4C2C81C727FD63BEE8CD4346CFC404",
+          "oleanSha256": "5DD997E2DA0FD078B53C8FBF1B7CA597D4F24447349614654579A8DE86CC5764"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticClassGroup.isUnit_spanSingleton",
+        "Dubon2026.SourceEllipticClassGroup.isUnit_num_iff",
+        "Dubon2026.SourceEllipticClassGroup.mk_eq_one_iff_exists",
+        "Dubon2026.SourceEllipticClassGroup.mk_toPrincipalIdeal",
+        "Dubon2026.SourceEllipticClassGroup.mk_num",
+        "Dubon2026.SourceEllipticClassGroup.exists_isUnit_eq_mul_of_le",
+        "Dubon2026.SourceEllipticClassGroup.exists_isUnit_span_singleton_eq_mul",
+        "Dubon2026.SourceEllipticClassGroup.moduleInvertible_of_isUnit_fractionalIdeal",
+        "Dubon2026.SourceEllipticClassGroup.nonempty_quotientEquiv",
+        "Dubon2026.SourceEllipticClassGroup.smul_top_eq_comap_mul",
+        "Dubon2026.SourceEllipticClassGroup.nonempty_quotient_comap_mul_linearEquiv_quotient",
+        "Dubon2026.SourceEllipticClassGroup.rank_quotient_submoduleOf_tower",
+        "Dubon2026.SourceEllipticClassGroup.finrank_quotient_mul",
+        "Dubon2026.SourceEllipticClassGroup.finiteDimensional_quotient_of_ne_bot",
+        "Dubon2026.SourceEllipticClassGroup.natDegree_norm_basisComb_le",
+        "Dubon2026.SourceEllipticClassGroup.basisCombMap_ne_zero",
+        "Dubon2026.SourceEllipticClassGroup.exists_mem_norm_natDegree_le",
+        "Dubon2026.SourceEllipticClassGroup.algHom_mk_eq_evalEval",
+        "Dubon2026.SourceEllipticClassGroup.equation_of_algHom",
+        "Dubon2026.SourceEllipticClassGroup.mk_mem_XYIdeal_iff",
+        "Dubon2026.SourceEllipticClassGroup.finrank_quotient_eq_one_iff",
+        "Dubon2026.SourceEllipticClassGroup.exists_codimLEOne_inv_integral",
+        "Dubon2026.SourceEllipticClassGroup.exists_codimLEOne_inv",
+        "Dubon2026.SourceEllipticClassGroup.mk_eq_one_of_finrank_quotient_eq_zero",
+        "Dubon2026.SourceEllipticClassGroup.mk_eq_mk_XYIdeal'_of_finrank_quotient_eq_one",
+        "Dubon2026.SourceEllipticClassGroup.toClass_surjective_iff",
+        "Dubon2026.SourceEllipticClassGroup.toClass_surjective",
+        "Dubon2026.SourceEllipticClassGroup.toClassEquiv_apply",
+        "Dubon2026.SourceEllipticClassGroup.basisCombMap",
+        "Dubon2026.SourceEllipticClassGroup.toClassEquiv"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticClassGroup.isUnit_spanSingleton",
+        "Dubon2026.SourceEllipticClassGroup.isUnit_num_iff",
+        "Dubon2026.SourceEllipticClassGroup.mk_eq_one_iff_exists",
+        "Dubon2026.SourceEllipticClassGroup.mk_toPrincipalIdeal",
+        "Dubon2026.SourceEllipticClassGroup.mk_num",
+        "Dubon2026.SourceEllipticClassGroup.exists_isUnit_eq_mul_of_le",
+        "Dubon2026.SourceEllipticClassGroup.exists_isUnit_span_singleton_eq_mul",
+        "Dubon2026.SourceEllipticClassGroup.moduleInvertible_of_isUnit_fractionalIdeal",
+        "Dubon2026.SourceEllipticClassGroup.nonempty_quotientEquiv",
+        "Dubon2026.SourceEllipticClassGroup.smul_top_eq_comap_mul",
+        "Dubon2026.SourceEllipticClassGroup.nonempty_quotient_comap_mul_linearEquiv_quotient",
+        "Dubon2026.SourceEllipticClassGroup.rank_quotient_submoduleOf_tower",
+        "Dubon2026.SourceEllipticClassGroup.finrank_quotient_mul",
+        "Dubon2026.SourceEllipticClassGroup.finiteDimensional_quotient_of_ne_bot",
+        "Dubon2026.SourceEllipticClassGroup.natDegree_norm_basisComb_le",
+        "Dubon2026.SourceEllipticClassGroup.basisCombMap_ne_zero",
+        "Dubon2026.SourceEllipticClassGroup.exists_mem_norm_natDegree_le",
+        "Dubon2026.SourceEllipticClassGroup.algHom_mk_eq_evalEval",
+        "Dubon2026.SourceEllipticClassGroup.equation_of_algHom",
+        "Dubon2026.SourceEllipticClassGroup.mk_mem_XYIdeal_iff",
+        "Dubon2026.SourceEllipticClassGroup.finrank_quotient_eq_one_iff",
+        "Dubon2026.SourceEllipticClassGroup.exists_codimLEOne_inv_integral",
+        "Dubon2026.SourceEllipticClassGroup.exists_codimLEOne_inv",
+        "Dubon2026.SourceEllipticClassGroup.mk_eq_one_of_finrank_quotient_eq_zero",
+        "Dubon2026.SourceEllipticClassGroup.mk_eq_mk_XYIdeal'_of_finrank_quotient_eq_one",
+        "Dubon2026.SourceEllipticClassGroup.toClass_surjective_iff",
+        "Dubon2026.SourceEllipticClassGroup.toClass_surjective",
+        "Dubon2026.SourceEllipticClassGroup.toClassEquiv_apply"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticClassGroup.basisCombMap",
+        "Dubon2026.SourceEllipticClassGroup.toClassEquiv"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticClassGroupAudit6.log",
+      "logSha256": "7FA8AADA271FA9D7D10D7548FC1CDD1291347651CAE3372543C7AA8D767226E5",
+      "auditSha256": "42750AF519A77C5CBF10167C4FB0E9B3AFC2E5D42B788011DCD83844D2D72B74",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 46,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 37,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticClassGroupDependencyAudit6.log",
+      "dependencyAuditSha256": "B130B7784D386461E24187FAD161C350346D88D00DC8418B2A7A50B1399E128E",
+      "dependencyAuditSourceSha256": "8C5FD7F010142EC96EEF016D1FD3F62F84510914408EF10D4BF8F4FCFF62F747",
+      "consumers": [
+        "Dubon2026.SourceEllipticClassGroup.toClassEquiv",
+        "Dubon2026.SourceEllipticClassGroup.toClassEquiv_apply"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census -> elliptic inertia orbit map -> cyclic-subgroup interpretation of integral modular-polynomial roots -> odd-prime quotient maps and products -> actual odd quotient homomorphism -> norm-induced point map -> point-to-class equivalence",
+      "discharged": "Over any field, the native point-to-class homomorphism of an actual elliptic curve is bijective, yielding an additive equivalence with the actual affine ideal class group. Every invertible ideal class is reduced to codimension at most one using a nonzero coordinate function of norm degree at most its codimension plus one; degree-one ideals are classified as actual point ideals, and ellipticity supplies nonsingularity. No class-representability, genus-one place/Abel, normality or characteristic premise is supplied.",
+      "boundary": "Scratch only; production promotion and verification pending. Coordinate-ring normality, the explicit finite separable quotient pullback, norm point-map evaluation and exact cyclic kernel remain required. Odd-prime modular-polynomial products, cyclic-subgroup roots, inertia census, reverse genus, good reduction, original Frobenius/inertia, residual association, automorphy and all-weight symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-elliptic-class-group-6-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "38A20B0732070F1663DAB3171A5C1F4508B42024A176841BE7552EC8889475C8"
+    },
+    {
+      "recordedUTC": "2026-10-23T08:38:34.453475+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticClassLocalRegular",
+        "SourceEllipticClassNormal"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticClassLocalRegular.lean",
+          "sha256": "DFE93F77CE9493303C0D32698ABC8A39CF87E5F851109B6F32FBA5A21727A639",
+          "oleanSha256": "BD104C73486FF5AE8E26DEDAB7F96171112B23A1DBFA4C95EA0FEBE0C092FF58"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticClassNormal.lean",
+          "sha256": "01E7101C2434570FD4465D1854C288F9CAEDF3008DFBAE8A277A9F758EA83F9A",
+          "oleanSha256": "0B4DD902DBBA83B62025C46AD31B3A56145F09B44AD6759A2B79A84226E6862C"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticClassGroup.XYIdeal_ne_bot",
+        "Dubon2026.SourceEllipticClassGroup.span_pair_eq_span_singleton_of_mul_eq",
+        "Dubon2026.SourceEllipticClassGroup.map_XYIdeal",
+        "Dubon2026.SourceEllipticClassGroup.isPrincipal_maximalIdeal_localization",
+        "Dubon2026.SourceEllipticClassGroup.exists_eq_XYIdeal_of_isMaximal",
+        "Dubon2026.SourceEllipticClassGroup.isDiscreteValuationRing_localization_XYIdeal'",
+        "Dubon2026.SourceEllipticClassGroup.isMaximal_of_isPrime_of_ne_bot",
+        "Dubon2026.SourceEllipticClassGroup.isDedekindDomain_of_isAlgClosed'"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticClassGroup.XYIdeal_ne_bot",
+        "Dubon2026.SourceEllipticClassGroup.span_pair_eq_span_singleton_of_mul_eq",
+        "Dubon2026.SourceEllipticClassGroup.map_XYIdeal",
+        "Dubon2026.SourceEllipticClassGroup.isPrincipal_maximalIdeal_localization",
+        "Dubon2026.SourceEllipticClassGroup.exists_eq_XYIdeal_of_isMaximal",
+        "Dubon2026.SourceEllipticClassGroup.isDiscreteValuationRing_localization_XYIdeal'",
+        "Dubon2026.SourceEllipticClassGroup.isMaximal_of_isPrime_of_ne_bot",
+        "Dubon2026.SourceEllipticClassGroup.isDedekindDomain_of_isAlgClosed'"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticNormalityAudit2.log",
+      "logSha256": "740C48F992643D89E349CCAB5D9A3950B9F30DB2115562774BD917B4FE1ACBAD",
+      "auditSha256": "2CC0AF1A3E0D05A9320ACB1C898DB09EE62B26B0FACB1D757EF97DE32267FA99",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 9,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 14,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticNormalityDependencyAudit2.log",
+      "dependencyAuditSha256": "41122FBD1B94E56860F982B3C42D3CFC2F4C9B130231612DAF971C6CDE6E870E",
+      "dependencyAuditSourceSha256": "3C57B9764A4F2E79920738203F87B54E6C13BAC20A68BBD3E4590FC90453C3BC",
+      "consumers": [
+        "Dubon2026.SourceEllipticClassGroup.isDedekindDomain_of_isAlgClosed'"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census -> elliptic inertia orbit map -> cyclic-subgroup interpretation of integral modular-polynomial roots -> odd-prime quotient maps and products -> actual odd quotient homomorphism -> norm-induced point map -> actual coordinate-ring normality",
+      "discharged": "The actual coordinate ring of an elliptic Weierstrass curve over an algebraically closed field is a Dedekind domain in every characteristic. Every maximal ideal is an actual point ideal, its localization has a proved principal maximal ideal and is a discrete valuation ring, and nonzero prime ideals are maximal by integrality over the polynomial ring. This supplies coordinate-ring normality for the norm-induced odd quotient map without a genus-one place/Abel interface.",
+      "boundary": "Scratch only; production promotion and verification pending. The explicit finite separable quotient pullback, norm point-map evaluation and exact cyclic kernel remain required. Odd-prime modular-polynomial products, cyclic-subgroup roots, inertia census, reverse genus, good reduction, original Frobenius/inertia, residual association, automorphy and all-weight symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-elliptic-normality-2-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "B1DC27D4C0D400E3711EA3DAE9AF8EAC54415EE14F9DC11A55114761AEDFC083"
+    },
+    {
+      "recordedUTC": "2026-10-23T08:49:58.334211+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticClassRelativeNorm",
+        "SourceEllipticClassExtensionNorm"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticClassRelativeNorm.lean",
+          "sha256": "A9459E88605DCD817277D9727E7E9AEC863DFFD6A98010A372F0A5799426ADB9",
+          "oleanSha256": "E09D7DE77E4E94D3C93547C5A056D5DB1A2202FE0ABBE1C1A747D8093193F5B6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticClassExtensionNorm.lean",
+          "sha256": "C0AC549C4027BE42DB537D808CB8DD327A90DD296E3943877E91A05C53B63E89",
+          "oleanSha256": "12553023ABCBAD04927024A763F9EEFC854A156325703DD6819600F3809C11AC"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticClassGroup.coe_idealRelNorm",
+        "Dubon2026.SourceEllipticClassGroup.mk0_relNorm0_eq_of_mk0_eq",
+        "Dubon2026.SourceEllipticClassGroup.classRelNorm_mk0",
+        "Dubon2026.SourceEllipticClassGroup.extendedIdeal_coe",
+        "Dubon2026.SourceEllipticClassGroup.mk0_extendedIdeal_eq_of_mk0_eq",
+        "Dubon2026.SourceEllipticClassGroup.classExtendedHom_mk0",
+        "Dubon2026.SourceEllipticClassGroup.extendedClassNorm_mk0",
+        "Dubon2026.SourceEllipticClassGroup.idealRelNorm",
+        "Dubon2026.SourceEllipticClassGroup.classRelNorm",
+        "Dubon2026.SourceEllipticClassGroup.extendedIdeal",
+        "Dubon2026.SourceEllipticClassGroup.classExtendedHom",
+        "Dubon2026.SourceEllipticClassGroup.extendedClassNorm"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticClassGroup.coe_idealRelNorm",
+        "Dubon2026.SourceEllipticClassGroup.mk0_relNorm0_eq_of_mk0_eq",
+        "Dubon2026.SourceEllipticClassGroup.classRelNorm_mk0",
+        "Dubon2026.SourceEllipticClassGroup.extendedIdeal_coe",
+        "Dubon2026.SourceEllipticClassGroup.mk0_extendedIdeal_eq_of_mk0_eq",
+        "Dubon2026.SourceEllipticClassGroup.classExtendedHom_mk0",
+        "Dubon2026.SourceEllipticClassGroup.extendedClassNorm_mk0"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticClassGroup.idealRelNorm",
+        "Dubon2026.SourceEllipticClassGroup.classRelNorm",
+        "Dubon2026.SourceEllipticClassGroup.extendedIdeal",
+        "Dubon2026.SourceEllipticClassGroup.classExtendedHom",
+        "Dubon2026.SourceEllipticClassGroup.extendedClassNorm"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticClassNormAudit2.log",
+      "logSha256": "1EC760D2B57EC511A1A2357CE06E78C216D2038F649C97E57E19C723B52AF179",
+      "auditSha256": "A7940C656166E83B9F9A00E78E0ACA6FE651F6479A1BB37A4BBB59528A2B616E",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 23,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticClassNormDependencyAudit2.log",
+      "dependencyAuditSha256": "3012236F8F1A097D0ED99E605762B5671AF8634A12B16769AB1BB2C8DA15B9FE",
+      "dependencyAuditSourceSha256": "2809DC7A937D5A9363542F1530A6C37C7F20B3339D2908789F3815DBCF8A3787",
+      "consumers": [
+        "Dubon2026.SourceEllipticClassGroup.extendedClassNorm_mk0",
+        "Dubon2026.SourceEllipticClassGroup.extendedIdeal_coe"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census -> elliptic inertia orbit map -> cyclic-subgroup interpretation of integral modular-polynomial roots -> odd-prime quotient maps and products -> actual odd quotient homomorphism -> norm-induced point map -> actual integral-ideal class extension and norm",
+      "discharged": "The actual relative ideal norm in a finite torsion-free extension of Dedekind domains descends to an ideal-class homomorphism. The actual extension of ideals along an injective map of Dedekind domains also descends to class groups. Their composite is proved to take each nonzero integral ideal class to the class of its extended ideal norm. No compatibility-on-classes certificate is supplied. These algebraic maps are prerequisites for the explicit odd quotient point map; the required actual intermediate ring and its finite algebra structure have not yet been constructed.",
+      "boundary": "Scratch only; production promotion and verification pending. The actual explicit quotient coordinate pullback, its finite separable field embedding and intermediate integral closure, point-map evaluation and exact cyclic kernel remain required. Odd-prime modular-polynomial products, cyclic-subgroup roots, inertia census, reverse genus, good reduction, original Frobenius/inertia, residual association, automorphy and all-weight symmetric-power continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-elliptic-class-norm-2-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "98B2AB4889B5686B3F1C109C1462542BAAA868A733F4013F238E09FEAB551D97"
+    }
+  ],
+  "reviews": [
+    "Tools/source-odd-summing-set-2-reuse-review-20261022.json",
+    "Tools/source-odd-discriminant-coordinates-8-reuse-review-20261023.json",
+    "Tools/source-odd-polynomial-expansion-8-reuse-review-20261023.json",
+    "Tools/source-odd-norm-factorization-8-reuse-review-20261023.json",
+    "Tools/source-odd-actual-curve-7-reuse-review-20261023.json",
+    "Tools/source-odd-characteristic-two-11-reuse-review-20261023.json",
+    "Tools/source-odd-quotient-descent-7-reuse-review-20261023.json",
+    "Tools/source-elliptic-class-group-6-reuse-review-20261023.json",
+    "Tools/source-elliptic-normality-2-reuse-review-20261023.json",
+    "Tools/source-elliptic-class-norm-2-reuse-review-20261023.json"
+  ],
+  "productionFocusedReceipt6811": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddSummingDependencyAudit2Production6811.log",
+        "sha256": "849802CB31C60DCF86943C6868998835A2E787C8BF6884B553F56C9BE91F797E",
+        "requiredProofValueEdges": 8,
+        "consumers": [
+          "Dubon2026.SourceEllipticVelu.isOddVeluSet_oddOrderSummingSet",
+          "Dubon2026.SourceEllipticVelu.card_oddOrderSummingSet",
+          "Dubon2026.SourceEllipticVelu.coordsOrZero",
+          "Dubon2026.SourceEllipticVelu.oddOrderSummingSet",
+          "Dubon2026.SourceEllipticVelu.IsOddVeluSet"
+        ],
+        "sourceSha256": "2B614A13003FA4B4FFA472665F29F5B0FC4985590069BAA59F7E4AA24CD4C82E"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddDiscriminantCoordinatesDependencyAudit8Production6811.log",
+        "sha256": "A361D845362FB026A7D99A63798CBC9CC0F5541D07973597950ABBE68FFCCA03",
+        "requiredProofValueEdges": 34,
+        "consumers": [
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.equation_b",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.chord_prod",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.chord_sum'",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.addX_two_torsion_sub_root",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.double_pack_esymm1",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.double_pack_esymm2",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.double_pack_esymm3",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.double_pack_esymm4",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.multiset_map_double",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.orbitTrace_add_smul",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.orbitTrace_fold",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.sum_oddOrderSummingSet_eq",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.prod_oddOrderSummingSet_eq",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.xiAt",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.fold2",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.unfold2",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.xvSum",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.orbitTrace"
+        ],
+        "sourceSha256": "612DEA382E37806FD03ED398A643ED7731CC260854C61FFD3134C9B379B6F099"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddPolynomialExpansionDependencyAudit8Production6811.log",
+        "sha256": "556B11EF9198B14C3C4A05B0A8ADCEC1E7FA1B44619D425A8015CACBD165B292",
+        "requiredProofValueEdges": 40,
+        "consumers": [
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.expansion",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.hP",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.AP",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.fP",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.φP",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.R4",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.π",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.eps",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.sc"
+        ],
+        "sourceSha256": "72ACC8CC95B8C5F02BAD5833C443587C66AC465942C2706D64BB0F8AADF649F1"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddNormFactorizationDependencyAudit8Production6811.log",
+        "sha256": "E0C4A1E4DA58A3495662717D2AEE56AEBDF24DFAD7189980B6A372A558830CC3",
+        "requiredProofValueEdges": 31,
+        "consumers": [
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.pipeline",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.delta_identity",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.MM_eq_PP_of_infinite",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.spec_MM_eq_spec_PP_at",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.chord_factor",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.eval_SqP",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.eval_PqP",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.roots_cubic",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.AP_eval",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.SqP",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.PqP",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.MM",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.PP",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.spec",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.Xv",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.norm_identity'",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.Algebra.natDegree_hP"
+        ],
+        "sourceSha256": "AD8219EFF177BE207E1736337F7FF787B5CF0410022A96E1418877DC3622ED2D"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddActualCurveDependencyAudit7Production6811.log",
+        "sha256": "AF7CE897BEECAAABEBEFD9A912B17C2DBE81A580F9885E5ED06C7A99EFCB3EEA",
+        "requiredProofValueEdges": 49,
+        "consumers": [
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.odd_quotient_isElliptic_of_short_model",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.xco"
+        ],
+        "sourceSha256": "0178F613AB18E2E940A271304FFEF4AF5B493A9497728013C20CBEC6046F0A7F"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddCharTwoDependencyAudit11Production6811.log",
+        "sha256": "636097BD3EAC347159BB84987466463E129853271DFA5A790F965B266D488C10",
+        "requiredProofValueEdges": 57,
+        "consumers": [
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.odd_quotient_isElliptic_supersingular",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.odd_quotient_isElliptic_of_ordinary_model",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.CharTwo.BtP"
+        ],
+        "sourceSha256": "ABD034F6499D22BA6532E087D682364D2D9C988258DC6A92E97AFB0712EB8607"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientDescentDependencyAudit7Production6811.log",
+        "sha256": "B5E7C949CFA57351B425429921A38BF4180A5318C3EAC7383FEDF306200B1158",
+        "requiredProofValueEdges": 37,
+        "consumers": [
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.odd_quotient_isElliptic",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.vcInvEmbedding",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.pointMapHom",
+          "Dubon2026.SourceEllipticVelu.OddDiscriminant.vcInvEmbedding_apply"
+        ],
+        "sourceSha256": "6507550A98090DA49BB69866C051F25685ACFD699E272A489BE4FB3160DFBAC9"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticClassGroupDependencyAudit6Production6811.log",
+        "sha256": "B130B7784D386461E24187FAD161C350346D88D00DC8418B2A7A50B1399E128E",
+        "requiredProofValueEdges": 37,
+        "consumers": [
+          "Dubon2026.SourceEllipticClassGroup.toClassEquiv",
+          "Dubon2026.SourceEllipticClassGroup.toClassEquiv_apply"
+        ],
+        "sourceSha256": "C82CCB4BA9750F7191FC83BFAD1DDAC6E51824506A9D98CD03E632845E53CF15"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticNormalityDependencyAudit2Production6811.log",
+        "sha256": "41122FBD1B94E56860F982B3C42D3CFC2F4C9B130231612DAF971C6CDE6E870E",
+        "requiredProofValueEdges": 14,
+        "consumers": [
+          "Dubon2026.SourceEllipticClassGroup.isDedekindDomain_of_isAlgClosed'"
+        ],
+        "sourceSha256": "EB5A466307EF711DEFF0B025F34B0710DC83D946A3F21CE057F844B2E58EED75"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticClassNormDependencyAudit2Production6811.log",
+        "sha256": "3012236F8F1A097D0ED99E605762B5671AF8634A12B16769AB1BB2C8DA15B9FE",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.SourceEllipticClassGroup.extendedClassNorm_mk0",
+          "Dubon2026.SourceEllipticClassGroup.extendedIdeal_coe"
+        ],
+        "sourceSha256": "101C79C769C88511B7BAC2981B5BADD1863C2A10828EA1B62E0B94BF74C10C20"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryProductionAudit6811.log",
+    "sha256": "EC68860C58C370E9FD396FFF9CDC7DC31417EF5D8338B82BEA59FD9BFEBA9430",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-odd-quotient-geometry-production-build-6811.log",
+    "aggregateSha256": "D6FB0337EDA8853053CDFEFE170A4E15FC72C22F34F12C2F1D84FEDC5F484D47",
+    "productionModules": 6811,
+    "incrementModules": 61,
+    "axiomChecks": 263,
+    "exhaustiveIncrementTheorems": 425,
+    "linterScopes": 61,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 425,
+    "productionReuse": "Only scratch import names are qualified; complete mathematical statements and proof bodies are retained. Native affine point groups, odd half-orbits, explicit Velu coefficients, actual translations, variable changes and field maps retain their actual definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 425,
+      "scratchDistinct": 425,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 425,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceEllipticOddSummingSet",
+            "SourceEllipticOddSummingStructure"
+          ],
+          "count": 23,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryScratchOwnership272For6811.log",
+            "sha256": "9FF17E536A68220558B0E234FA6C052C3D8DF5DEEB9A65CBBA555C890DD60AC9",
+            "sourceSha256": "D23B08176E3B79D025298D8C60EFF77844E26B682973D1F424CA7AA592727DDC"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticOddChordIdentities",
+            "SourceEllipticOddTwoTorsionTranslation",
+            "SourceEllipticOddRootPackets",
+            "SourceEllipticOddDoublingFormula",
+            "SourceEllipticOddDoublingPackets",
+            "SourceEllipticOddReindex",
+            "SourceEllipticOddOrbitTrace",
+            "SourceEllipticOddSummingFold"
+          ],
+          "count": 52,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryScratchOwnership273For6811.log",
+            "sha256": "4B500D3C5D2181D9295655B2FA263A234D4953F95C9A2F708F78A78A48172F85",
+            "sourceSha256": "E4DDF7764340649F2502A6F8DB9C0CA571D3788C73C682D57EEC2034EA9B0D53"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticOddPolynomialReflection",
+            "SourceEllipticOddQuotientPolynomials",
+            "SourceEllipticOddTruncatedIdentities",
+            "SourceEllipticOddTruncatedExpansion",
+            "SourceEllipticOddPolynomialDegrees",
+            "SourceEllipticOddReflectedQuotient",
+            "SourceEllipticOddReflectedIdentity",
+            "SourceEllipticOddPolynomialExpansion"
+          ],
+          "count": 50,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryScratchOwnership274For6811.log",
+            "sha256": "35097D982CC3ED621B3363EDEBBEA6D582A9D0C1F59AE6A8AAC7A251AAECABA7",
+            "sourceSha256": "DCD4903C3B475065199BCC539F2CC85031F29FA5E36DDB93D4FCD9197E1EA1C4"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticOddNormPolynomials",
+            "SourceEllipticOddNormSpecialization",
+            "SourceEllipticOddNormCoordinates",
+            "SourceEllipticOddNormIdentity",
+            "SourceEllipticOddNormFibers",
+            "SourceEllipticOddCubicFactors",
+            "SourceEllipticOddCubicPipeline",
+            "SourceEllipticOddDiscriminantProduct"
+          ],
+          "count": 61,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryScratchOwnership275For6811.log",
+            "sha256": "2B69A2262C96330DAD9BEA8B9F1909412C9ADD7AFB4C031A11AD8012F930C703",
+            "sourceSha256": "2F932142DA0463E5CB044B058C9752C22F7A500D4173E8BB97BA97868036B101"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticOddCurveCoordinates",
+            "SourceEllipticOddOrbitDistinctness",
+            "SourceEllipticOddGoodAbscissae",
+            "SourceEllipticOddCubicRoots",
+            "SourceEllipticOddOrbitInvariance",
+            "SourceEllipticOddActualDiscriminant",
+            "SourceEllipticOddShortQuotient"
+          ],
+          "count": 58,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryScratchOwnership276For6811.log",
+            "sha256": "0249AAA89BCAB650E261E255A59EB0C24AA5230A21DFE88FCE2A8944B02B93CC",
+            "sourceSha256": "748AA511593BECC8F1C90D0A862A9CF53C6B77BDB46854003A802EACB91C4BAB"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticOddCharTwoSupersingular",
+            "SourceEllipticOddCharTwoPolynomial",
+            "SourceEllipticOddCharTwoPolynomialRoots",
+            "SourceEllipticOddCharTwoCoefficients",
+            "SourceEllipticOddCharTwoNorm",
+            "SourceEllipticOddCharTwoTorsion",
+            "SourceEllipticOddCharTwoCosets",
+            "SourceEllipticOddCharTwoInvariants",
+            "SourceEllipticOddCharTwoQuotientCoefficients",
+            "SourceEllipticOddCharTwoKernelCoordinates",
+            "SourceEllipticOddCharTwoActualDiscriminant"
+          ],
+          "count": 73,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryScratchOwnership277For6811.log",
+            "sha256": "E6F045EC5C5D31429BE27D7FB0C17861B2CC0AF6B2ADF17D3C20437D46D6DAB2",
+            "sourceSha256": "CD5DDD6719DB4BD86380A0657B1738285F845FD5D335DE9D5007C5F6946BF099"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticOddVariableEmbedding",
+            "SourceEllipticOddVariableCoefficients",
+            "SourceEllipticOddVariableQuotient",
+            "SourceEllipticOddVariableSummingSet",
+            "SourceEllipticOddBaseChange",
+            "SourceEllipticOddNormalizedDiscriminant",
+            "SourceEllipticOddQuotient"
+          ],
+          "count": 30,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryScratchOwnership278For6811.log",
+            "sha256": "ECABFFF63BD27BF6021C719D7C252D0B4A6FC210FEBE5A974671CA2EC49A6B3F",
+            "sourceSha256": "52ECA5914458B2BF917F9C8F13F5C8A541AED5F553CCCA2A9001EF6109F62B14"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticClassIdealFactorization",
+            "SourceEllipticClassCodimension",
+            "SourceEllipticClassSmallNorm",
+            "SourceEllipticClassPointIdeals",
+            "SourceEllipticClassReduction",
+            "SourceEllipticClassSurjective"
+          ],
+          "count": 46,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryScratchOwnership279For6811.log",
+            "sha256": "658D5D4ADDA4259AE466E28D330CE61D3EB3EAE913D0399BD8C503A23352AB4E",
+            "sourceSha256": "B0C03BAACBDFAB500CC2E49580DBE53DDD4A638CAA122760D4027B408191AE2D"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticClassLocalRegular",
+            "SourceEllipticClassNormal"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryScratchOwnership280For6811.log",
+            "sha256": "E58CD6206B9EE8A50438F5969BD0F3EB9EEE6A9FEDEAD043212008CCECB55432",
+            "sourceSha256": "337357AD25A2D155BEBAB25994A4F6A231C485B71F21C1F618461912F80266C0"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticClassRelativeNorm",
+            "SourceEllipticClassExtensionNorm"
+          ],
+          "count": 23,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryScratchOwnership281For6811.log",
+            "sha256": "897CDFAFEFDF282EF8AA8F43C5F751751340EB4C0318F14BE8B1F58B45DCE42E",
+            "sourceSha256": "91DDE004756021066C5B56CFD3E68C1B37D2E91F451AF49ED46BF3FD8C707890"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryOwnership6811.log",
+        "sha256": "4BD2254A9910E8EE2C58A5667FB87CB1A3D03EACABFF7B4175C75EBDE3F4DCCB",
+        "sourceSha256": "6CC6553647C261636DB440F51419803D6151401488D58BF682135C01AB2E24B3"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261023-003931-970.log",
+        "sha256": "CCAB9E91CCF54395F9ADC0EB526C4378EED77B56E27DF8952F2397A143222A9B"
+      }
+    },
+    "scratchToProductionCountReason": "All 425 distinct names from 425 exhaustive scratch checks are retained: 425 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The explicit quotient coordinate pullback, its finite separable field embedding and actual intermediate integral closure, the resulting odd quotient additive homomorphism with exact cyclic kernel and coordinate formula, odd-prime integral modular-polynomial products, finite-set reduction, cyclic-subgroup root correspondence, inertia orbit map, finite exceptional-fiber census and wild differential contributions remain required for unconditional reverse genus. Genus equality, place comparison, good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt6811": {
+    "recordedUTC": "2026-10-23T10:38:25.034168+00:00",
+    "log": "logs/dubon-build-20261023-022115-948.log",
+    "sha256": "730BCC796C87FA05589038F9771EA92B921CE3DC52C9C29725776FF41F2E61AF",
+    "bytes": 11723778,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 6811,
+    "projectTheorems": 46439,
+    "registeredConsumers": 20782,
+    "registeredConstructions": 1747,
+    "declarations": 28348,
+    "generated": 26802,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261023_021517.log",
+    "foundationSha256": "97A2CA243CBC90764238A35DE753A95BD18AE4A42D378907922897B9B3B3822D",
+    "countReconciliation": {
+      "previousTheorems": 46014,
+      "focusedTheorems": 425,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 425,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryOwnership6811.log",
+      "ownershipSha256": "4BD2254A9910E8EE2C58A5667FB87CB1A3D03EACABFF7B4175C75EBDE3F4DCCB"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 425,
+      "scratchDistinct": 425,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 425,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceEllipticOddSummingSet",
+            "SourceEllipticOddSummingStructure"
+          ],
+          "count": 23,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryScratchOwnership272For6811.log",
+            "sha256": "9FF17E536A68220558B0E234FA6C052C3D8DF5DEEB9A65CBBA555C890DD60AC9",
+            "sourceSha256": "D23B08176E3B79D025298D8C60EFF77844E26B682973D1F424CA7AA592727DDC"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticOddChordIdentities",
+            "SourceEllipticOddTwoTorsionTranslation",
+            "SourceEllipticOddRootPackets",
+            "SourceEllipticOddDoublingFormula",
+            "SourceEllipticOddDoublingPackets",
+            "SourceEllipticOddReindex",
+            "SourceEllipticOddOrbitTrace",
+            "SourceEllipticOddSummingFold"
+          ],
+          "count": 52,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryScratchOwnership273For6811.log",
+            "sha256": "4B500D3C5D2181D9295655B2FA263A234D4953F95C9A2F708F78A78A48172F85",
+            "sourceSha256": "E4DDF7764340649F2502A6F8DB9C0CA571D3788C73C682D57EEC2034EA9B0D53"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticOddPolynomialReflection",
+            "SourceEllipticOddQuotientPolynomials",
+            "SourceEllipticOddTruncatedIdentities",
+            "SourceEllipticOddTruncatedExpansion",
+            "SourceEllipticOddPolynomialDegrees",
+            "SourceEllipticOddReflectedQuotient",
+            "SourceEllipticOddReflectedIdentity",
+            "SourceEllipticOddPolynomialExpansion"
+          ],
+          "count": 50,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryScratchOwnership274For6811.log",
+            "sha256": "35097D982CC3ED621B3363EDEBBEA6D582A9D0C1F59AE6A8AAC7A251AAECABA7",
+            "sourceSha256": "DCD4903C3B475065199BCC539F2CC85031F29FA5E36DDB93D4FCD9197E1EA1C4"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticOddNormPolynomials",
+            "SourceEllipticOddNormSpecialization",
+            "SourceEllipticOddNormCoordinates",
+            "SourceEllipticOddNormIdentity",
+            "SourceEllipticOddNormFibers",
+            "SourceEllipticOddCubicFactors",
+            "SourceEllipticOddCubicPipeline",
+            "SourceEllipticOddDiscriminantProduct"
+          ],
+          "count": 61,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryScratchOwnership275For6811.log",
+            "sha256": "2B69A2262C96330DAD9BEA8B9F1909412C9ADD7AFB4C031A11AD8012F930C703",
+            "sourceSha256": "2F932142DA0463E5CB044B058C9752C22F7A500D4173E8BB97BA97868036B101"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticOddCurveCoordinates",
+            "SourceEllipticOddOrbitDistinctness",
+            "SourceEllipticOddGoodAbscissae",
+            "SourceEllipticOddCubicRoots",
+            "SourceEllipticOddOrbitInvariance",
+            "SourceEllipticOddActualDiscriminant",
+            "SourceEllipticOddShortQuotient"
+          ],
+          "count": 58,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryScratchOwnership276For6811.log",
+            "sha256": "0249AAA89BCAB650E261E255A59EB0C24AA5230A21DFE88FCE2A8944B02B93CC",
+            "sourceSha256": "748AA511593BECC8F1C90D0A862A9CF53C6B77BDB46854003A802EACB91C4BAB"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticOddCharTwoSupersingular",
+            "SourceEllipticOddCharTwoPolynomial",
+            "SourceEllipticOddCharTwoPolynomialRoots",
+            "SourceEllipticOddCharTwoCoefficients",
+            "SourceEllipticOddCharTwoNorm",
+            "SourceEllipticOddCharTwoTorsion",
+            "SourceEllipticOddCharTwoCosets",
+            "SourceEllipticOddCharTwoInvariants",
+            "SourceEllipticOddCharTwoQuotientCoefficients",
+            "SourceEllipticOddCharTwoKernelCoordinates",
+            "SourceEllipticOddCharTwoActualDiscriminant"
+          ],
+          "count": 73,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryScratchOwnership277For6811.log",
+            "sha256": "E6F045EC5C5D31429BE27D7FB0C17861B2CC0AF6B2ADF17D3C20437D46D6DAB2",
+            "sourceSha256": "CD5DDD6719DB4BD86380A0657B1738285F845FD5D335DE9D5007C5F6946BF099"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticOddVariableEmbedding",
+            "SourceEllipticOddVariableCoefficients",
+            "SourceEllipticOddVariableQuotient",
+            "SourceEllipticOddVariableSummingSet",
+            "SourceEllipticOddBaseChange",
+            "SourceEllipticOddNormalizedDiscriminant",
+            "SourceEllipticOddQuotient"
+          ],
+          "count": 30,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryScratchOwnership278For6811.log",
+            "sha256": "ECABFFF63BD27BF6021C719D7C252D0B4A6FC210FEBE5A974671CA2EC49A6B3F",
+            "sourceSha256": "52ECA5914458B2BF917F9C8F13F5C8A541AED5F553CCCA2A9001EF6109F62B14"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticClassIdealFactorization",
+            "SourceEllipticClassCodimension",
+            "SourceEllipticClassSmallNorm",
+            "SourceEllipticClassPointIdeals",
+            "SourceEllipticClassReduction",
+            "SourceEllipticClassSurjective"
+          ],
+          "count": 46,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryScratchOwnership279For6811.log",
+            "sha256": "658D5D4ADDA4259AE466E28D330CE61D3EB3EAE913D0399BD8C503A23352AB4E",
+            "sourceSha256": "B0C03BAACBDFAB500CC2E49580DBE53DDD4A638CAA122760D4027B408191AE2D"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticClassLocalRegular",
+            "SourceEllipticClassNormal"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryScratchOwnership280For6811.log",
+            "sha256": "E58CD6206B9EE8A50438F5969BD0F3EB9EEE6A9FEDEAD043212008CCECB55432",
+            "sourceSha256": "337357AD25A2D155BEBAB25994A4F6A231C485B71F21C1F618461912F80266C0"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticClassRelativeNorm",
+            "SourceEllipticClassExtensionNorm"
+          ],
+          "count": 23,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryScratchOwnership281For6811.log",
+            "sha256": "897CDFAFEFDF282EF8AA8F43C5F751751340EB4C0318F14BE8B1F58B45DCE42E",
+            "sourceSha256": "91DDE004756021066C5B56CFD3E68C1B37D2E91F451AF49ED46BF3FD8C707890"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientGeometryOwnership6811.log",
+        "sha256": "4BD2254A9910E8EE2C58A5667FB87CB1A3D03EACABFF7B4175C75EBDE3F4DCCB",
+        "sourceSha256": "6CC6553647C261636DB440F51419803D6151401488D58BF682135C01AB2E24B3"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261023-003931-970.log",
+        "sha256": "CCAB9E91CCF54395F9ADC0EB526C4378EED77B56E27DF8952F2397A143222A9B"
+      }
+    },
+    "scratchToProductionCountReason": "All 425 distinct names from 425 exhaustive scratch checks are retained: 425 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The explicit quotient coordinate pullback, its finite separable field embedding and actual intermediate integral closure, the resulting odd quotient additive homomorphism with exact cyclic kernel and coordinate formula, odd-prime integral modular-polynomial products, finite-set reduction, cyclic-subgroup root correspondence, inertia orbit map, finite exceptional-fiber census and wild differential contributions remain required for unconditional reverse genus. Genus equality, place comparison, good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}
