@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-23",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+  "precedingSearch": "Tools/cyclic-root-search-20261023.json",
+  "additionalSearches": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\specialization-reuse-search-324.json",
+      "sha256": "3EEEEA9722FFA6BEEFE6CE0C7FCA57FB3B41A2E1A4669BF0DC5F2CDC5D7165AF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\specialization-route-review-324.json",
+      "sha256": "7D17B8948301E2E2DAC7793607C165C9272F9A9D73B18963444EE9D19F62E2DA"
+    }
+  ],
+  "scratchReceipts": {
+    "source-finite-torsion-field-6-scratch-receipt.json": "48163D2BA3A82C8309F4B64AEBDC36C4BC65C5B7688EAAD6D320115C7D4C41E9",
+    "source-legendre-good-model-3-scratch-receipt.json": "70E92221145224F8BE46212F92D4144F7970BE422E48747A9B48BA1EDF15BAD6",
+    "source-legendre-galois-stage-6-scratch-receipt.json": "289923E7145C4C6429178BBEB197517E3955E380BD4EA50F82B6DAA024BEF5B8",
+    "source-integral-good-model-change-1-scratch-receipt.json": "0FA4B0D87F6B82064B849A43D947D73D8FF5A1B63D7867AEE4F6111188318B28",
+    "source-integral-inertia-cocycle-3-scratch-receipt.json": "FFA0F1CA93EE3C5AE287C36E6C445731B814D85B560085E48F38A39D4165FE47",
+    "source-actual-inertia-torsion-reduction-7-scratch-receipt.json": "46C0336D7F2CDB486F2DE4E46ADE4FFA1E683A6922075ADD51E1D47524F8274F",
+    "source-faithful-torsion-model-5-scratch-receipt.json": "A8CD369F9B655769104D31320D285E8BF85DE1FE4A8576CCE208FD3C573CFE19",
+    "source-rational-specialization-4-scratch-receipt.json": "203EDFDDB65FF8BBCF195D80D6C25CF883A44B1582CDED02679D2DEF5E29465E",
+    "source-ofj-specialization-3-scratch-receipt.json": "EA905EF68623213A470F2FCFE04B7864934D226B3F049D3B1809AF8991759B5C",
+    "source-faithful-inertia-hom-4-scratch-receipt.json": "13371A19F30D9792F50BEA1C6B493AF2C8EF56358D7CECEF8F670096A7C501E4",
+    "source-prescribed-inertia-action-4-scratch-receipt.json": "AB92A6411A5422041E3A4CABD94F4E3EA8060BBAECE021AB17A1737C1B9AF687",
+    "source-cyclic-specialization-3-scratch-receipt.json": "7CD104655746F6C7C920A4192551167A67A46D0B9317772CDCDB5AB841CB14A3",
+    "source-stabilizer-bounds-3-scratch-receipt.json": "4CF692E36EA3517C86E24785C246C5F0384207A00733FFEBB3C663C75F8A5481",
+    "source-specialization-order-4-scratch-receipt.json": "DEEA02DA275E40230114F56ED40CD586B00F1584C8FE013F5398200A93392D99"
+  },
+  "discharged": "For every invertible level N in characteristic at least five, the actual generic curve ofJ(X) has a derived finite Galois field containing all N-squared torsion points and an explicit faithful good model at a place over any prescribed elliptic j-value. Literal reduction gives injective N-torsion specialization into the prescribed elliptic curve; source and target torsion counts prove surjectivity and an actual cyclic-subgroup bijection. The integral coordinate-change cocycle gives an injective inertia homomorphism, stabilizes the prescribed curve and is equivariant on actual torsion points. Stabilizer bounds are six at j zero, four at j 1728 and two elsewhere. The actual good-model discriminant proves the positive-order divisibilities six and four and the order-versus-stabilizer dichotomy. Finite torsion fields, good models, specialization places, residue-field identification, faithfulness, equivariance, torsion lifting, subgroup transport and the stated order bounds are derived, not supplied as certificates.",
+  "remaining": "Equality of actual inertia cardinality with normalized place order, full stabilizer image up to sign, cyclic orbit and place-fiber comparison, numerical exceptional-fiber and ramification counts and wild differential contributions, reverse genus, genus equality and place comparison, modular-curve good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "shorterRoute": "The refreshed FLT and TauCeti search was checked against existing local and pinned native results before each expansion. Full torsion counts shorten division-polynomial separability and finite-field lifting; explicit Legendre coordinates retain the inertia faithfulness needed by the source. Only characteristic at least five is required for this genus application, so no characteristic-two/three model branches or extra two-torsion field are introduced. Existing positive-degree sums construct the place directly. Native point maps, coordinate conjugacy and subgroup-image equivalences transport actual reduction. Direct scaling injectivity and native c4/c6 identities replace normal-form stabilizer classification. Existing unequal-order addition replaces auxiliary residue-unit infrastructure. The frozen algebraically closed generic cyclic-reduction auxiliary from scope 324 is preserved as a historical optional result; the required finite Galois source version is fully proved in scope 336, so the unused auxiliary is deferred from this production increment. The next required link is actual inertia cardinality versus normalized order, using native Dedekind Galois cardinalities and the existing chart-center correspondence. Root pins, proof limits, source fidelity and completion criteria are unchanged.",
+  "deferredOptionalScope": {
+    "receipt": "source-cyclic-reduction-1-scratch-receipt.json",
+    "sha256": "E201308C81A3A27CE09B77508BCCB50B53E0750AE72A3680EEAA20802BEAACF2",
+    "reason": "The algebraically closed generic auxiliary is superseded for this exact dependency by the proved finite Galois specialization. All frozen artifacts remain preserved."
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

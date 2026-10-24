@@ -1,0 +1,432 @@
+{
+  "search": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "results": [
+        {
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/701f267d2326037c5580ff9c4ad5e8bc65a1c200/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/TorsionReduction.lean",
+          "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/TorsionReduction.lean",
+          "display_url": "https://github.com/TauCetiProject/TauCeti/blob/701f267d2326037c5580ff9c4ad5e8bc65a1c200/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/TorsionReduction.lean",
+          "display_title": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/TorsionReduction.lean",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "  of the reduced curve for `n ∉ u`.\n* `existsUnique_torsion_lift`: over the completed field with good reduction, every reduced\n  `n`-torsion point has a unique `n`-torsion lift, for `n ∉ u`.\n* `WeierstrassCurve.torsionReductionAddEquiv`: reduction identifies the `n`-torsion over the\n  completed field with the `n`-torsion of its reduction, for `n ∉ u`.\n* `valuation_xCoord_le_one_and_valuation_yCoord_le_one_of_nsmul_eq_zero_of_forall_prime_dvd`: a\n  nonzero point of `W(F)` killed by an integer `n ≠ 0` whose prime factors `p` satisfy",
+              "matches": [
+                {
+                  "text": "torsion",
+                  "indices": [
+                    54,
+                    61
+                  ]
+                },
+                {
+                  "text": "reduction",
+                  "indices": [
+                    104,
+                    113
+                  ]
+                },
+                {
+                  "text": "torsion",
+                  "indices": [
+                    135,
+                    142
+                  ]
+                },
+                {
+                  "text": "torsion",
+                  "indices": [
+                    166,
+                    173
+                  ]
+                },
+                {
+                  "text": "torsion",
+                  "indices": [
+                    215,
+                    222
+                  ]
+                },
+                {
+                  "text": "Reduction",
+                  "indices": [
+                    222,
+                    231
+                  ]
+                },
+                {
+                  "text": "reduction",
+                  "indices": [
+                    242,
+                    251
+                  ]
+                },
+                {
+                  "text": "torsion",
+                  "indices": [
+                    271,
+                    278
+                  ]
+                },
+                {
+                  "text": "torsion",
+                  "indices": [
+                    319,
+                    326
+                  ]
+                },
+                {
+                  "text": "reduction",
+                  "indices": [
+                    334,
+                    343
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/701f267d2326037c5580ff9c4ad5e8bc65a1c200/TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/Point/Torsion/Free.lean",
+          "path": "TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/Point/Torsion/Free.lean",
+          "display_url": "https://github.com/TauCetiProject/TauCeti/blob/701f267d2326037c5580ff9c4ad5e8bc65a1c200/TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/Point/Torsion/Free.lean",
+          "display_title": "TauCeti/AlgebraicGeometry/EllipticCurve/FormalGroup/Point/Torsion/Free.lean",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\n-- Named: anonymous `local instance`s here get the same generated names as the ones in\n-- `FormalGroup/Point/Torsion/Basic.lean`, and both modules are imported by\n-- `Affine/Point/TorsionReduction.lean`.\nlocal instance isLinearTopology_adicCompletionIntegers : IsLinearTopology O_u O_u :=\n  u.isAdic_maximalIdeal_adicCompletionIntegers (K := F) ▸ Ideal.isLinearTopology m_u\n",
+              "matches": [
+                {
+                  "text": "Torsion",
+                  "indices": [
+                    110,
+                    117
+                  ]
+                },
+                {
+                  "text": "Torsion",
+                  "indices": [
+                    181,
+                    188
+                  ]
+                },
+                {
+                  "text": "Reduction",
+                  "indices": [
+                    188,
+                    197
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/701f267d2326037c5580ff9c4ad5e8bc65a1c200/TauCeti/AlgebraicGeometry/EllipticCurve/TateModule/GoodReduction.lean",
+          "path": "TauCeti/AlgebraicGeometry/EllipticCurve/TateModule/GoodReduction.lean",
+          "display_url": "https://github.com/TauCetiProject/TauCeti/blob/701f267d2326037c5580ff9c4ad5e8bc65a1c200/TauCeti/AlgebraicGeometry/EllipticCurve/TateModule/GoodReduction.lean",
+          "display_title": "TauCeti/AlgebraicGeometry/EllipticCurve/TateModule/GoodReduction.lean",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "public import TauCeti.AlgebraicGeometry.EllipticCurve.TateModule.Unramified\npublic import TauCeti.NumberTheory.LocalField.Unramified.Basic\nimport TauCeti.AlgebraicGeometry.EllipticCurve.Affine.Point.Index.Bound\nimport TauCeti.AlgebraicGeometry.EllipticCurve.Affine.Point.TorsionReduction\nimport TauCeti.AlgebraicGeometry.EllipticCurve.Affine.Point.VariableChange\nimport TauCeti.AlgebraicGeometry.EllipticCurve.IntegralModel\nimport TauCeti.AlgebraicGeometry.EllipticCurve.MinimalModel.Basic",
+              "matches": [
+                {
+                  "text": "Torsion",
+                  "indices": [
+                    271,
+                    278
+                  ]
+                },
+                {
+                  "text": "Reduction",
+                  "indices": [
+                    278,
+                    287
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/701f267d2326037c5580ff9c4ad5e8bc65a1c200/TauCeti/AlgebraicGeometry/Curves/StableReduction/Picard/Torsion/Genus.lean",
+          "path": "TauCeti/AlgebraicGeometry/Curves/StableReduction/Picard/Torsion/Genus.lean",
+          "display_url": "https://github.com/TauCetiProject/TauCeti/blob/701f267d2326037c5580ff9c4ad5e8bc65a1c200/TauCeti/AlgebraicGeometry/Curves/StableReduction/Picard/Torsion/Genus.lean",
+          "display_title": "TauCeti/AlgebraicGeometry/Curves/StableReduction/Picard/Torsion/Genus.lean",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "public import TauCeti.AlgebraicGeometry.Curves.StableReduction.NumericalType.Genus.Comparison\npublic import TauCeti.AlgebraicGeometry.Curves.StableReduction.NumericalType.MultiplicityBound\npublic import TauCeti.AlgebraicGeometry.Curves.StableReduction.Picard.Contraction\npublic import TauCeti.AlgebraicGeometry.Curves.StableReduction.Picard.Torsion.Bound\n\n/-!\n# Bounding prime torsion by the genus",
+              "matches": [
+                {
+                  "text": "Reduction",
+                  "indices": [
+                    53,
+                    62
+                  ]
+                },
+                {
+                  "text": "Reduction",
+                  "indices": [
+                    147,
+                    156
+                  ]
+                },
+                {
+                  "text": "Reduction",
+                  "indices": [
+                    242,
+                    251
+                  ]
+                },
+                {
+                  "text": "Reduction",
+                  "indices": [
+                    324,
+                    333
+                  ]
+                },
+                {
+                  "text": "Torsion",
+                  "indices": [
+                    341,
+                    348
+                  ]
+                },
+                {
+                  "text": "torsion",
+                  "indices": [
+                    377,
+                    384
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/701f267d2326037c5580ff9c4ad5e8bc65a1c200/TauCeti/AlgebraicGeometry/Curves/StableReduction/Picard/Torsion/Bound.lean",
+          "path": "TauCeti/AlgebraicGeometry/Curves/StableReduction/Picard/Torsion/Bound.lean",
+          "display_url": "https://github.com/TauCetiProject/TauCeti/blob/701f267d2326037c5580ff9c4ad5e8bc65a1c200/TauCeti/AlgebraicGeometry/Curves/StableReduction/Picard/Torsion/Bound.lean",
+          "display_title": "TauCeti/AlgebraicGeometry/Curves/StableReduction/Picard/Torsion/Bound.lean",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "public import TauCeti.AlgebraicGeometry.Curves.StableReduction.NumericalType.Topology\npublic import TauCeti.AlgebraicGeometry.Curves.StableReduction.Picard.Torsion.Basic\npublic import TauCeti.LinearAlgebra.Matrix.Rank",
+              "matches": [
+                {
+                  "text": "Reduction",
+                  "indices": [
+                    53,
+                    62
+                  ]
+                },
+                {
+                  "text": "Reduction",
+                  "indices": [
+                    139,
+                    148
+                  ]
+                },
+                {
+                  "text": "Torsion",
+                  "indices": [
+                    156,
+                    163
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "[Stacks, Proposition 55.7.4](https://stacks.math.columbia.edu/tag/0C9X), which in turn is what\nforces a reduced nodal special fibre in the proof of semistable reduction.\n",
+              "matches": [
+                {
+                  "text": "reduction",
+                  "indices": [
+                    159,
+                    168
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/701f267d2326037c5580ff9c4ad5e8bc65a1c200/TauCeti/NumberTheory/Padics/GroupAlgebra/Reduction.lean",
+          "path": "TauCeti/NumberTheory/Padics/GroupAlgebra/Reduction.lean",
+          "display_url": "https://github.com/TauCetiProject/TauCeti/blob/701f267d2326037c5580ff9c4ad5e8bc65a1c200/TauCeti/NumberTheory/Padics/GroupAlgebra/Reduction.lean",
+          "display_title": "TauCeti/NumberTheory/Padics/GroupAlgebra/Reduction.lean",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\npublic import Mathlib.Algebra.Module.Torsion.Basic\npublic import Mathlib.Algebra.Module.Projective",
+              "matches": [
+                {
+                  "text": "Torsion",
+                  "indices": [
+                    38,
+                    45
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "/-!\n# Reduction of `p`-adic group-algebra modules\n",
+              "matches": [
+                {
+                  "text": "Reduction",
+                  "indices": [
+                    6,
+                    15
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/701f267d2326037c5580ff9c4ad5e8bc65a1c200/TauCeti/Algebra/Module/Torsion/Int.lean",
+          "path": "TauCeti/Algebra/Module/Torsion/Int.lean",
+          "display_url": "https://github.com/TauCetiProject/TauCeti/blob/701f267d2326037c5580ff9c4ad5e8bc65a1c200/TauCeti/Algebra/Module/Torsion/Int.lean",
+          "display_title": "TauCeti/Algebra/Module/Torsion/Int.lean",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "public import Mathlib.RingTheory.QuotSMulTop\n\n/-!\n# Torsion and reduction of abelian groups\n\nFor `n ≠ 0`, the `n`-torsion of a torsion-free abelian group `M`, such as `ℤ`, is zero, and the\nreduction `M ⧸ nM = QuotSMulTop n M` of a finitely generated abelian group is finite. These are",
+              "matches": [
+                {
+                  "text": "Torsion",
+                  "indices": [
+                    52,
+                    59
+                  ]
+                },
+                {
+                  "text": "reduction",
+                  "indices": [
+                    64,
+                    73
+                  ]
+                },
+                {
+                  "text": "torsion",
+                  "indices": [
+                    116,
+                    123
+                  ]
+                },
+                {
+                  "text": "torsion",
+                  "indices": [
+                    129,
+                    136
+                  ]
+                },
+                {
+                  "text": "reduction",
+                  "indices": [
+                    193,
+                    202
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/701f267d2326037c5580ff9c4ad5e8bc65a1c200/TauCeti/Algebra/Module/Torsion/Tensor.lean",
+          "path": "TauCeti/Algebra/Module/Torsion/Tensor.lean",
+          "display_url": "https://github.com/TauCetiProject/TauCeti/blob/701f267d2326037c5580ff9c4ad5e8bc65a1c200/TauCeti/Algebra/Module/Torsion/Tensor.lean",
+          "display_title": "TauCeti/Algebra/Module/Torsion/Tensor.lean",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "import TauCeti.Algebra.Module.ZMod.Extend\n\n/-!\n# Tensoring torsion–reduction sequences\n\nTensoring over `ℤ` preserves injections whose target is killed by a prime: the injection\nsplits additively. More generally it preserves exactness at any pair of maps whose final",
+              "matches": [
+                {
+                  "text": "torsion",
+                  "indices": [
+                    59,
+                    66
+                  ]
+                },
+                {
+                  "text": "reduction",
+                  "indices": [
+                    69,
+                    78
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "isError": false
+  },
+  "headSearch": {
+    "status": "fulfilled",
+    "value": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Action completed."
+        }
+      ],
+      "structuredContent": {
+        "commits": [
+          {
+            "sha": "f8431823ce1a8eb0842054d60ae3cbc502a0c817",
+            "message": "feat: shrink Bochner charts onto invariant balls (#20333)\n\nThis PR adds the \"shrink simultaneously, and average an inner product to obtain an invariant ball and the equivariant chart\" step of milestone O2.1 (retained-arrow charts at each object) in `Orbifolds/README.md`. It combines the existing finite Bochner chart (`OpenPartialHomeomorph.exists_equivariant_chart`, `TauCeti.exists_equivariant_chart_of_contMDiffAt`) with the existing invariant inner-product sublevel sets (`Representation.sumOfConjugatesInnerSublevel`). The result is the linear local model at a fixed point of a finite action: a chart, inside any prescribed neighbourhood, onto an invariant convex ball, with invariant preconnected domain. Every group element is retained, including ones that act trivially.\n\nChanges:\n- `Representation.convex_sumOfConjugatesInnerSublevel` (`TauCeti/RepresentationTheory/InvariantForm/InnerProduct.lean`): the orbit-sum inner sublevel sets are convex. The proof uses `ConvexOn` of `‖ρ g ·‖ ^ 2`, summed with `Finset.sum_induction`.\n- `OpenPartialHomeomorph.exists_target_eq_sumOfConjugatesInnerSublevel` (`TauCeti/Analysis/Calculus/BochnerLinearization.lean`): the hypotheses are a chart `e` centred at `x` with `G`-invariant domain, where `G` acts linearly through `σ : Representation ℝ G E` (`E` a finite-dimensional real inner product space), and a neighbourhood `s` of `x`. Under them, `e` restricts (same underlying map) to a chart whose domain lies in `e.source ∩ s` and is invariant and preconnected, whose target is exactly `σ.sumOfConjugatesInnerSublevel c` for some `c > 0`, and which is still equivariant.\n- `TauCeti.exists_equivariant_chart_target_eq_sumOfConjugatesInnerSublevel_of_contMDiffAt` (`TauCeti/Geometry/Manifold/GroupAction/GermKernel.lean`): the setting is a finite group acting continuously on a finite-dimensional real boundaryless manifold, fixing `y`, by maps that are `C¹` at `y`. Inside any neighbourhood of `y` there is a chart sending `y` to `0` onto an invariant ball, with invariant preconnected domain. In it `G` acts through a continuous representation `σ`, and `σ g = 1 ↔ g ∈ germKernel G y ↔ g` fixes every point of the chart domain. So the ineffective kernel of the local model is the pointwise kernel of the action on the chart.\n- `TauCeti.exists_equivariant_chart_of_contMDiffAt` now also records `e y = 0`, which its proof already had and the new theorem needs. Its one in-file use is updated.\n\nNothing is vendored. I searched pinned Mathlib and `TauCeti/` and found no convexity result for these sublevel sets or for quadratic-form sublevel sets. I also found no restriction of an equivariant chart to an invariant target. The mathematical source is the classical proof of Bochner linearization (S. Bochner, *Compact groups of differentiable transformations*, Ann. of Math. 46 (1945)), which is already cited in the touched files.\n\nWhat remains for O2.1 after this PR: the groupoid isomorphism `Γ|U ≅ Γ_x⋉U` itself. It needs the proper étale carrier of O1.1 (finiteness of `Γ_x` from properness and étaleness, local bisections, and excluding extra arrows near `(x,x)`). That carrier waits on LieGroupoidsPoisson G0, which is not yet available. This PR supplies the chart half of that isomorphism.\n\nRoadmap: Orbifolds\n\n<!--tauceti-target:v1 {\"focus\":\"Orbifolds\",\"id\":\"equivariant-chart-invariant-ball\",\"partial\":true}-->\n\n🤖 Prepared with Claude Code\n\nCo-authored-by: David Roe <roed.math@gmail.com>",
+            "url": "https://api.github.com/repos/TauCetiProject/TauCeti/commits/f8431823ce1a8eb0842054d60ae3cbc502a0c817",
+            "html_url": "https://github.com/TauCetiProject/TauCeti/commit/f8431823ce1a8eb0842054d60ae3cbc502a0c817",
+            "diff": null,
+            "files": null,
+            "repository_full_name": "TauCetiProject/TauCeti",
+            "comments": null,
+            "author": null,
+            "committer": null,
+            "created_at": "2026-10-23T15:54:12Z",
+            "git_author_email": null,
+            "display_url": "https://github.com/TauCetiProject/TauCeti/commit/f8431823ce1a8eb0842054d60ae3cbc502a0c817",
+            "display_title": "feat: shrink Bochner charts onto invariant balls (#20333)"
+          },
+          {
+            "sha": "af8ec720f6af7d711dccc8b8ba6c2177abb0c071",
+            "message": "feat: the self-extension of a module attached to a derivation (#20289)\n\nThis PR constructs the self-extension `E_δ(M)` of a module attached to a derivation, the module-theoretic half of the infinitesimal bridge in `GeometricRepresentationCategories/README.md`, milestone **R5.2 (The unconditional infinitesimal bridge)**. That paragraph asks: \"For a continuous derivation `δ` and a smooth `A`-module `M`, construct the smooth module `Eδ(M)=M⊕M` with `a·(u,v)=(a·u+δ(a)·v,a·v)`. Prove the short exact sequence `0→M→Eδ(M)→M→0` with injection `u↦(u,0)` and projection `(u,v)↦v`. For `δ'=δ+ad_b`, prove `(u,v)↦(u+b·v,v)` is the natural extension isomorphism `Eδ(M)→Eδ'(M)`. Lift the actual short complex, including both maps, to A5's continuous full subcategory using the proved continuity of Eδ and native `ObjectProperty.homMk`/`lift`. Prove `ShortExact` there.\" This PR does all of that for an arbitrary `R`-algebra `A` and a derivation `δ : TauCeti.derivationLieAlgebra R A` (the native carrier the README prescribes), with the continuous full subcategory being the existing `TauCeti.discreteModules A`.\n\nNew file `TauCeti/Algebra/Category/ModuleCat/DerivationExtension.lean` (483 lines):\n- `TauCeti.DerivationExtension δ M`: a two-field structure (coordinates `fst = u`, `snd = v`), with additive group transported from `M × M` along `equivProd`, and the `Module A` instance `a • (u, v) = (a • u + δ a • v, a • v)`. Associativity of the action is the Leibniz rule. Coordinate `simp` lemmas for `0`, `+`, `-`, `•`.\n- `inlHom`, `sndHom`: the inclusion `u ↦ (u, 0)` and the projection `(u, v) ↦ v` as `A`-linear maps, with `inlHom_injective`, `sndHom_surjective`, `exact_inlHom_sndHom`. `map` gives functoriality in `M` (`map_id`, `map_comp`, `map_comp_inlHom`, `sndHom_comp_map`).\n- `innerEquiv M h` for `h : δ' = δ + innerDerivation R b`: the `A`-linear equivalence `(u, v) ↦ (u + b • v, v)`. It is the identity on the sub and on the quotient (`innerEquiv_comp_inlHom`, `sndHom_comp_innerEquiv`) and natural in `M` (`map_comp_innerEquiv`). It also satisfies the identity and composition laws `innerEquiv_zero` (for `b = 0` it is `LinearEquiv.refl`), `innerEquiv_trans` (`b` then `b'` gives `b + b'`) and `innerEquiv_symm` (the inverse is the one for `-b`), which R5.3 later needs for its identity/addition/composition diagrams.\n- `shortComplex δ M` in `ModuleCat A` with `shortExact_shortComplex`; `functor δ : ModuleCat A ⥤ ShortComplex (ModuleCat A)`; `functorInnerIso h : functor δ ≅ functor δ'`, the natural isomorphism of extensions (identity on both ends).\n- `TauCeti.discreteModules_derivationExtension`: if `δ` is continuous and `M` is discrete, then `E_δ(M)` is discrete. Then `discreteShortComplex` is the lifted short complex in `(discreteModules A).FullSubcategory`, built with `ObjectProperty.homMk`, and `shortExact_discreteShortComplex` proves it is short exact there. It is deduced from the ambient statement with Mathlib's `ShortExact.reflects_shortExact_of_faithful`.\n\nThe bodies of `shortComplex`, `functor` and `discreteShortComplex` are `@[expose]`d because their objects and maps are the data consumers compute with and their `simps` lemmas are proved by unfolding; everything else stays unexposed with explicit API lemmas.\n\nAfter this PR, R5.2 still needs the following. First, `OutDer_cont(A)` and the map `θ : Ω¹_cont(Z) → OutDer_cont(A)`, which consume AffineLieAlgebras A6's deformation exports. Second, the `extClass` of `discreteShortComplex` and the generic Baer-sum/`extClass` comparison identifying `E_δ + E_η` with `E_(δ+η)`. Third, the Ext functoriality and the block-matrix/dual-number character formula on `Ccrit(p)`, which needs A8's critical characters. No Mathlib material is vendored. The construction is the standard first-order deformation `M[ε]` along `a ↦ a + ε δ a`. The module docstring cites Frenkel's *Langlands Correspondence for Loop Groups* for the setting.\n\nRoadmap: GeometricRepresentationCategories\n\n<!--tauceti-target:v1 {\"focus\":\"GeometricRepresentationCategories\",\"id\":\"derivation-self-extension\",\"partial\":true}-->\n\n🤖 Prepared with Claude Code\n\nCo-authored-by: David Roe <roed.math@gmail.com>\nCo-authored-by: Kim Morrison <kim@tqft.net>",
+            "url": "https://api.github.com/repos/TauCetiProject/TauCeti/commits/af8ec720f6af7d711dccc8b8ba6c2177abb0c071",
+            "html_url": "https://github.com/TauCetiProject/TauCeti/commit/af8ec720f6af7d711dccc8b8ba6c2177abb0c071",
+            "diff": null,
+            "files": null,
+            "repository_full_name": "TauCetiProject/TauCeti",
+            "comments": null,
+            "author": null,
+            "committer": null,
+            "created_at": "2026-10-23T15:54:12Z",
+            "git_author_email": null,
+            "display_url": "https://github.com/TauCetiProject/TauCeti/commit/af8ec720f6af7d711dccc8b8ba6c2177abb0c071",
+            "display_title": "feat: the self-extension of a module attached to a derivation (#20289)"
+          }
+        ]
+      },
+      "isError": false
+    }
+  },
+  "fetched": {
+    "encoding": "utf-8",
+    "sha": "16ab5e517ea4cbdfc3511120e8fb2bfdb3a813fa",
+    "display_url": "https://github.com/TauCetiProject/TauCeti/blob/f8431823ce1a8eb0842054d60ae3cbc502a0c817/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/TorsionReduction.lean",
+    "display_title": "TorsionReduction.lean"
+  },
+  "scope": "Read-only current source inspection. No TauCeti build or import claimed. Immediate integrality route instead uses the locally proved division-polynomial zero criterion and pinned native leading coefficients. General reduction/lifting remains under review."
+}

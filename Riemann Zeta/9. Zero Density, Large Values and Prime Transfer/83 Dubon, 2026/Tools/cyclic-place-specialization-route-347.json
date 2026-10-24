@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-23",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+  "precedingSearch": "Tools/faithful-specialization-route-338.json",
+  "scratchReceipts": {
+    "source-inertia-cardinality-6-scratch-receipt.json": "E90D87688461C64ECE1CC3F7F9A8D0DC53A4B9FEF9662D41C4AEA4D866D8E181",
+    "source-full-inertia-image-3-scratch-receipt.json": "5941B1F6FECDF4DE9434AA1B4FBC0E9CD6B2189D3C8CBC232D4D95E0F7093058",
+    "source-cyclic-orbits-5-scratch-receipt.json": "67FB722E3CD14E1FEA4A42374758475CA202B132C5E8EDB8F66E9DA5160BF00A",
+    "source-finite-roots-7-scratch-receipt.json": "9B8CC2333E0DA5DAFC9271C9DF66F578937F4BA2EB9626F669F1C82F6198A497",
+    "source-equivariant-roots-5-scratch-receipt.json": "63E952BB80FF551C72B69335394B0B2744B437A2EED7FE4CF0905010053BAD96",
+    "source-embedding-orbits-3-scratch-receipt.json": "8EB87870147469E69BCB707BDA845F0972500EB0381E52012F68917082281807",
+    "source-place-fibers-9-scratch-receipt.json": "062DB0EE881F8EC6DA8AB23FFF5C613E3B57EEDCCE1D00F4FAC9D0302DF44826",
+    "source-fiber-orders-5-scratch-receipt.json": "01EABBFCEE5D6A6E0684216D2852A7160157BC162C06F13205BC74CD6A48D45F",
+    "source-cyclic-classifier-1-scratch-receipt.json": "CA73A4E58FF8AA3AD7AF0C088FB29FAE5C78EF1B86AD3B1935337F33661FC94B"
+  },
+  "discharged": "For every invertible level N in characteristic at least five, the actual finite Galois ofJ(X) specialization has inertia cardinality equal to its normalized specialization order and full elliptic stabilizer image up to sign. Literal cyclic subgroups identify with descended finite-field quotient roots and original modular coefficient-field embeddings, equivariantly under actual Galois and inertia actions. Every place at the prescribed j-value is reached by restriction along these embeddings. Equality of restrictions is exactly the source variable-change relation on specialized cyclic subgroups; each normalized j-order equals the cardinality of its cyclic relation class. All finite-field root descent, normal lifting, place transitivity, rational residues, embedding finiteness, orbit and multiplicity hypotheses are derived from the original fields, models and maps.",
+  "remaining": "Numerical exceptional-orbit census in positive characteristic, the corresponding finite exceptional-fiber and ramification counts and wild differential contributions, reverse genus, genus equality and place comparison, modular-curve good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "shorterRoute": "The refreshed source search is shortened through existing local and pinned native theorems. Native Dedekind Galois cardinalities and the exact chart-center correspondence give inertia order. Existing torsion specialization and negation give the full image up to sign. Separable fixed-root descent and native normal lifting put literal quotient roots in the finite Galois field and prove their equivariance. The existing modular embedding/root equivalence supplies the original coefficient field. Working over the fixed RatFunc base derives every embedding extension hypothesis directly, avoiding a new coordinate-field normalization. Existing prime/place transitivity and the rational-generator degree-one sum give all actual place fibers. Native orbit-stabilizer and normalized ramification cancel the common positive factor. A direct cyclic-subgroup classifier avoids a separate moduli-point presentation. The complex-analytic exceptional counts are not silently reused in positive characteristic: the specific order-two and order-three automorphism counts remain the next required numerical inputs. Root pins, proof limits, source fidelity and completion criteria are unchanged.",
+  "retainedFailedAudit": {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceFiberOrdersDependencyAudit5.lean",
+    "sha256": "EF4747CD95743B806B28A0E1DE075034AE5D77125AD6B1F698989EE63C83A310",
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceFiberOrdersDependencyAudit5.log",
+    "logSha256": "6AD8CA5FDFB1D54A9965D2FDD33D623AD468F4E242E1BE0BF09A74B23D4A6058",
+    "reason": "The original traversal stopped at the already audited scratch restriction wrapper. R2 adds that exact intervening module to traversal; all ten required value edges remain unchanged."
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

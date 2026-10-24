@@ -1,0 +1,742 @@
+{
+  "date": "23 October 2026",
+  "modules": [
+    "Dubon2026.SourceReductionSingleChartMonic",
+    "Dubon2026.SourceReductionIntegralChartValues",
+    "Dubon2026.SourceReductionZeroChartValues",
+    "Dubon2026.SourceCurveDedekindValuationPlaces",
+    "Dubon2026.SourceCurveSeparableChartValuations",
+    "Dubon2026.SourceReductionChartPlaceExistence",
+    "Dubon2026.SourceCurveIntegralChartPlaceEquality",
+    "Dubon2026.SourceReductionChartPlaceUniqueness",
+    "Dubon2026.SourceModularTameChartPlace",
+    "Dubon2026.SourceModularTameInverseChartPlace",
+    "Dubon2026.SourceCurvePlaceConstantValues",
+    "Dubon2026.SourceReductionChartGluing",
+    "Dubon2026.SourceModularTameReductionPlaceMap",
+    "Dubon2026.SourceReductionIntegralChartImage",
+    "Dubon2026.SourceCurveIntegralChartUniformizer",
+    "Dubon2026.SourceCurveLocalJetDimension",
+    "Dubon2026.SourceReductionOffFiberVanishing",
+    "Dubon2026.SourceReductionChartPoleCancellation",
+    "Dubon2026.SourceCurveUniformizerJets",
+    "Dubon2026.SourceReductionLocalFiberOrder",
+    "Dubon2026.SourceModularTameLocalFiberOrder",
+    "Dubon2026.SourceIntegralChartCofactor",
+    "Dubon2026.SourceCurveFilteredOrders",
+    "Dubon2026.SourceCurveChartFactorDegree",
+    "Dubon2026.SourceReductionNormalizedFactors",
+    "Dubon2026.SourceReductionTotalChartOrderBound",
+    "Dubon2026.SourceReductionFactorOrderSum",
+    "Dubon2026.SourceReductionTotalChartOrderEquality",
+    "Dubon2026.SourceReductionIntegralFiberEquality",
+    "Dubon2026.SourceModularTameIntegralFiberIdentity",
+    "Dubon2026.SourceReductionIntegralMultiples",
+    "Dubon2026.SourceReductionArbitraryFiberEquality",
+    "Dubon2026.SourceReductionPrincipalDivisorMap",
+    "Dubon2026.SourceModularTamePrincipalDivisorMap",
+    "Dubon2026.SourceCurveConstantReductionR2",
+    "Dubon2026.SourceCurveReductionPicardR2",
+    "Dubon2026.SourceModularTameConstantReductionR2",
+    "Dubon2026.SourceModularTamePicardReductionR2",
+    "Dubon2026.SourceCurveReductionKummerData",
+    "Dubon2026.SourceCurveReductionKummerPower",
+    "Dubon2026.SourceModularTameKummerPower"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original weight-two Frobenius/inertia -> modular good reduction and prime-to-characteristic Picard torsion injectivity -> actual reduction places, principal pushforward, genus equality and Kummer power lifting.",
+  "discharged": "The actual tame modular Gauss reduction has a global map of places, built from its two coordinate charts. Exact local order sums prove that its finite-support pushforward carries every principal divisor to the divisor of the reduced function, with no chart integrality restriction on the function. Closed place residues and the existing genus equality give a degree-preserving constant reduction with equal original and residue genera. Its literal pushforward descends to the actual degree-zero Picard groups and preserves torsion. Every positive-order torsion class in its kernel supplies a normalized Kummer function whose residue is an actual power. The actual modular consumers assume no place map, divisor compatibility, constant-reduction object, genus equality, Picard map or residue power.",
+  "boundary": "Lifting the Kummer power to the original field remains necessary for prime-to-characteristic Picard torsion injectivity. Wild-characteristic genus and good reduction, original arithmetic-action compatibility, Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "The actual tame principal-divisor map, constant reduction, Picard map and residual Kummer power pass 150 exhaustive scratch theorem checks and 81 explicit axiom queries, with sixteen linters per module and zero diagnostics. Seven declaration-value audits verify 131 required dependencies. Production aggregate, focused audit and sequential foundation/paper verification of the 7,229-module scope are pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.GaussReduction.existsUnique_modular_j_chart_place_of_five_le",
+    "Dubon2026.SourceFunctionField.GaussReduction.existsUnique_modular_inverse_j_chart_place_of_five_le",
+    "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_place_map_of_five_le",
+    "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_map_with_finite_fiber_order_bound",
+    "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_map_with_integral_fiber_identity",
+    "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_principal_divisor_reduction_map_of_five_le",
+    "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_reduction_of_five_le",
+    "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_kummer_power_data_of_five_le"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-24T02:42:22.011422+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceReductionSingleChartMonic",
+        "SourceReductionIntegralChartValues",
+        "SourceReductionZeroChartValues",
+        "SourceCurveDedekindValuationPlaces",
+        "SourceCurveSeparableChartValuations",
+        "SourceReductionChartPlaceExistence",
+        "SourceCurveIntegralChartPlaceEquality",
+        "SourceReductionChartPlaceUniqueness",
+        "SourceModularTameChartPlace",
+        "SourceModularTameInverseChartPlace"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionSingleChartMonic.lean",
+          "sha256": "E14554B09EA5CED9A8D244404DAF1A5C88645C2B44C8AF5FFAD09C9E5BE28924",
+          "oleanSha256": "6F58964B2C65FF179E64DA6BFCB4BFC9CC2F1C40860A813379759BC0F4012D1F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionIntegralChartValues.lean",
+          "sha256": "94900EDBB6357219AC92EA7F9E931D75FFB7A37D63A69C5A6A0A3FBB57E44356",
+          "oleanSha256": "3AA0D49BA2A126C677DDD75219382F6DE0724223CDB9A3640EF13E8606FBF364"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionZeroChartValues.lean",
+          "sha256": "1231AD7691DCA2BA9DE85A910F91B9A065408F4674814748F68D76EADD63449E",
+          "oleanSha256": "A5B8A370CDFABC3D237D9356A3DA0C5EBDE3BCC18C86B53EF69B924606D259CA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveDedekindValuationPlaces.lean",
+          "sha256": "F27F6ECB81C90E51691843B2D53DE49C0CDBAE84CAA42CA474D597C586E26885",
+          "oleanSha256": "B1A9E25C78E0F552801F998BD55CA1C5A25D3D5B66BDA611E6CB3006B911D5C6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveSeparableChartValuations.lean",
+          "sha256": "FC1B466A15AFB67935E7204496D1DC31075D996F47911AFAE3C065BFB2F1E98C",
+          "oleanSha256": "B2F206F4F31F48B6DA9234E802D25C80DC2A91235F8532C174748D8E71BDFF53"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionChartPlaceExistence.lean",
+          "sha256": "EC58CF58B9384304C73BD9F0499926AFE4107139A99F4214CD7AF79CABF9092B",
+          "oleanSha256": "0B6A54A9BB154A3D58857E0FE98534ABDFBFBD1F25ECA31280564648F5545B2B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveIntegralChartPlaceEquality.lean",
+          "sha256": "F6AA07A21986CE61A32F39D2169DA3C0B10F5ABCCB0C489B0E70CE4027DED8A7",
+          "oleanSha256": "17F4BDEE358E03746CDE05553F0A463F16EDBEDDDF08ECECD2285A00FC0ABDAB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionChartPlaceUniqueness.lean",
+          "sha256": "15FA13EDC884123E2ADA86CAD50019108A95230A99435E9D0CBB2C425639FD45",
+          "oleanSha256": "088804453908078D53247F29BD6A66B7FD674C7341D7C5558C274C21BBFD6114"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularTameChartPlace.lean",
+          "sha256": "8C2A8B60E05EFC2802B35A52BFA8D9E55331D8AB15B17775FE678D7D293CD173",
+          "oleanSha256": "5DFDAF4C3F73143D366F27F2EF2B39F35EF1B2B8DEF0EF875BDBE68740021BD4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularTameInverseChartPlace.lean",
+          "sha256": "BF562F0AA1B68EE0C1E5DF110F13550EC6AB5A3AF421B93D8B975EA03958637D",
+          "oleanSha256": "58AE554838A2A6A0B26B8FCDB392EA6307DC8C9396151CEA97DF369528C46C7F"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.RegularProlongation.exists_monic_equation_of_integral_chart",
+        "Dubon2026.SourceCurve.RegularProlongation.mem_of_sub_algebraMap_mem_nonunits",
+        "Dubon2026.SourceCurve.RegularProlongation.mem_of_sub_mem_nonunits",
+        "Dubon2026.SourceCurve.RegularProlongation.mem_nonunits_of_residue_eq_zero",
+        "Dubon2026.SourceCurve.exists_place_of_dedekind_chart",
+        "Dubon2026.SourceCurve.exists_place_of_separable_chart",
+        "Dubon2026.SourceCurve.RegularProlongation.exists_reduction_chart_place",
+        "Dubon2026.SourceCurve.Place.eq_of_integral_chart_nonunits",
+        "Dubon2026.SourceCurve.RegularProlongation.existsUnique_reduction_chart_place",
+        "Dubon2026.SourceFunctionField.GaussReduction.existsUnique_modular_j_chart_place_of_five_le",
+        "Dubon2026.SourceFunctionField.GaussReduction.existsUnique_modular_inverse_j_chart_place_of_five_le"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.RegularProlongation.exists_monic_equation_of_integral_chart",
+        "Dubon2026.SourceCurve.RegularProlongation.mem_of_sub_algebraMap_mem_nonunits",
+        "Dubon2026.SourceCurve.RegularProlongation.mem_of_sub_mem_nonunits",
+        "Dubon2026.SourceCurve.RegularProlongation.mem_nonunits_of_residue_eq_zero",
+        "Dubon2026.SourceCurve.exists_place_of_dedekind_chart",
+        "Dubon2026.SourceCurve.exists_place_of_separable_chart",
+        "Dubon2026.SourceCurve.RegularProlongation.exists_reduction_chart_place",
+        "Dubon2026.SourceCurve.Place.eq_of_integral_chart_nonunits",
+        "Dubon2026.SourceCurve.RegularProlongation.existsUnique_reduction_chart_place",
+        "Dubon2026.SourceFunctionField.GaussReduction.existsUnique_modular_j_chart_place_of_five_le",
+        "Dubon2026.SourceFunctionField.GaussReduction.existsUnique_modular_inverse_j_chart_place_of_five_le"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceChartPlaceComparisonAudit10.log",
+      "logSha256": "158C372CAB2BE00A6B5959879B242879B209B50E576A8AC2C320D6C864819381",
+      "auditSha256": "203863303BCA6FE314D155150642878A85EBF2EA46AA8F3E73EE192CDA88D77D",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 17,
+      "linterScopes": 10,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 19,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceChartPlaceComparisonDependencyAudit10.log",
+      "dependencyAuditSha256": "9948341189E4169D91962CDDC484111D93A637108784730F988CC6EF6A0636DC",
+      "dependencyAuditSourceSha256": "628D8B16027103098291E0B9C5FDDF4CE778B17A590A0AC7ADB64DF97C6CAAC5",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.existsUnique_modular_j_chart_place_of_five_le",
+        "Dubon2026.SourceFunctionField.GaussReduction.existsUnique_modular_inverse_j_chart_place_of_five_le"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "For every actual original place with an integral j-value or inverse-j-value, the arithmetic modular Gauss reduction has one unique residue place compatible with all functions integral over that chart. The final tame consumers derive finite separability, coordinate degree equality and integral-chart lifting. No genus, chart-surjectivity or place certificate remains assumed.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Global compatibility and the principal-divisor pushforward identity, wild-characteristic differential contributions and genus comparison, modular good reduction, original Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-chart-place-comparison-10-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "E3CA904C370AD4B17390AA033F7B67C4340B1DFE2A3253EACFD2B7639930DCEC"
+    },
+    {
+      "recordedUTC": "2026-10-24T02:48:10.722959+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceCurvePlaceConstantValues",
+        "SourceReductionChartGluing",
+        "SourceModularTameReductionPlaceMap"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePlaceConstantValues.lean",
+          "sha256": "E8E738D7714437B8D62575228F9826343711FA83D6E3FE10D1C5D831A82E9B5F",
+          "oleanSha256": "66C9AEB848A91EB8E694229E3256857BF4C460859553474D55425D4CB80F77CD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionChartGluing.lean",
+          "sha256": "76648B4E02BA039BB858AE522139E4E889E21AD3DDE0859ED15304B961B784FD",
+          "oleanSha256": "C439BBE584DF5B47847311F2D1DCD34B2A6487277CCA043054E5A489067AD153"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularTameReductionPlaceMap.lean",
+          "sha256": "3CD7E7DDCEBD978B71277EF9DD6580F958E2606020660C1A18616890F18E4C69",
+          "oleanSha256": "4332A0BA3DC51FCC4DE7D2D2C7BF84B6E62856FC1B3E251DF19F9CA57F0DA1D4"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Place.valuation_algebraMap_eq_one",
+        "Dubon2026.SourceCurve.Place.const_unique",
+        "Dubon2026.SourceCurve.Place.inv_sub_inv_mem_nonunits",
+        "Dubon2026.SourceCurve.Place.exists_sub_algebraMap_mem_nonunits",
+        "Dubon2026.SourceCurve.Place.exists_inv_sub_mem_nonunits",
+        "Dubon2026.SourceCurve.Place.inv_const_eq",
+        "Dubon2026.SourceCurve.RegularProlongation.residue_mem_of_chart_reducesTo",
+        "Dubon2026.SourceCurve.RegularProlongation.exists_reduction_place_map_of_two_charts",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_place_map_of_five_le",
+        "Dubon2026.SourceCurve.RegularProlongation.ChartDomain",
+        "Dubon2026.SourceCurve.RegularProlongation.ChartReducesTo"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Place.valuation_algebraMap_eq_one",
+        "Dubon2026.SourceCurve.Place.const_unique",
+        "Dubon2026.SourceCurve.Place.inv_sub_inv_mem_nonunits",
+        "Dubon2026.SourceCurve.Place.exists_sub_algebraMap_mem_nonunits",
+        "Dubon2026.SourceCurve.Place.exists_inv_sub_mem_nonunits",
+        "Dubon2026.SourceCurve.Place.inv_const_eq",
+        "Dubon2026.SourceCurve.RegularProlongation.residue_mem_of_chart_reducesTo",
+        "Dubon2026.SourceCurve.RegularProlongation.exists_reduction_place_map_of_two_charts",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_place_map_of_five_le"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.RegularProlongation.ChartDomain",
+        "Dubon2026.SourceCurve.RegularProlongation.ChartReducesTo"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceReductionPlaceMapAudit3.log",
+      "logSha256": "6FCD8C080341CA669776734F8D913954FC6F68B865A404BDFD027332D2BAB5B3",
+      "auditSha256": "1BF68767DE53284937F6EEEE71434350C5D2A0BC450AA41EFDBB43515784E3F0",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 12,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 16,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceReductionPlaceMapDependencyAudit3.log",
+      "dependencyAuditSha256": "49E6874C38BB17B3A12603460AA35AB69B508DF015AC52C14AFB2BA61D17118D",
+      "dependencyAuditSourceSha256": "3EA5FC3F8EFC43AC5341AED3FD8819174F5B60E4096B4ED441C9494838B95CCD",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_place_map_of_five_le"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "The actual arithmetic modular Gauss reduction has a global map on all original places in residue characteristic at least five with N nonzero. Its finite-j and infinite-j fibers are exactly the original integral-coordinate domains with the literal integral-function reduction relation. Actual original residue surjectivity, chart coverage, overlap compatibility and both unique chart-place comparisons are derived. No place-map or chart certificate remains assumed.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The principal-divisor pushforward identity, wild-characteristic differential contributions and genus comparison, modular good reduction, original Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-reduction-place-map-3-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "AEBCC067BB3EE33DAD486100B922650320AFC0C44C637E88A4CF7820F857C9AB"
+    },
+    {
+      "recordedUTC": "2026-10-24T03:08:00.071996+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceReductionIntegralChartImage",
+        "SourceCurveIntegralChartUniformizer",
+        "SourceCurveLocalJetDimension",
+        "SourceReductionOffFiberVanishing",
+        "SourceReductionChartPoleCancellation",
+        "SourceCurveUniformizerJets",
+        "SourceReductionLocalFiberOrder",
+        "SourceModularTameLocalFiberOrder"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionIntegralChartImage.lean",
+          "sha256": "87BCF6B94AF5CF47CF4D4E97FF445CDC43F615EB1D4ABE1C791B9F93F7000811",
+          "oleanSha256": "7BD71AD19929742B95AD65619F98A22712F59FF5DF2272D71FBF1E5FE43B2EDD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveIntegralChartUniformizer.lean",
+          "sha256": "F6E9805A9B696BEE2FAAA9D7617AF74EA4C2E12758A5F1F98361D467C47BE1B7",
+          "oleanSha256": "6E8361F6CD8A4DE7629CC32AFF91C8414CA22EDA73261C1C29D816045BC11417"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveLocalJetDimension.lean",
+          "sha256": "005FC1DB637D94822AD63C2C4A5FFF38249EAFAC26BB6029410A785F18D23F2E",
+          "oleanSha256": "5177048E95D5DBFA6BB334FF1867860CAAB0BD4EF3ADD7DD258C67F88974CDC2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionOffFiberVanishing.lean",
+          "sha256": "7C1C7F39E02B819245E1F8E3AA7FB7C10676D521055AC6CE6701FC93C071EA81",
+          "oleanSha256": "BBAF3F44C55C53F1EAB1B36C1E8DE321BCC200B83998FB3B3D9B3B88943213C5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionChartPoleCancellation.lean",
+          "sha256": "50F69056CCC5E442D4783A3E5D88EE3A71729322D13977A2C2C300364FBDD421",
+          "oleanSha256": "D4D1F8C1FB7D17C83CFDC0B33BD9680B2F3E812E31D25AB18A71FACAFBC9DD14"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveUniformizerJets.lean",
+          "sha256": "143104A042F567427448DBFCD4AB4854C60B19E11B57A268BB7D932EFEC3D9A3",
+          "oleanSha256": "8EE8E6F8EC683F4D9800CD63FE43452007223B07DC5776F9AA8174BC2C4A968D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionLocalFiberOrder.lean",
+          "sha256": "7265EB2C1A0B0F62589BAF68211DF423FE7C315A3FA3A5F6781CF803E81A4C85",
+          "oleanSha256": "C4687FA427264534DA0576A94B27FC2A28E9F4A6B0DCACE2FFEFFE4124615EF1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularTameLocalFiberOrder.lean",
+          "sha256": "23FF76233E06160BD87C33E0119E2BE0D701D41EE54D78DDA6B8C5762B09A1AB",
+          "oleanSha256": "D798D7DFC7DD6FE1120F739176F4E47810E8B3646B461D8E3D1581B6BD7E3DB2"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.RegularProlongation.isIntegral_residue_of_integral_chart",
+        "Dubon2026.SourceCurve.Place.exists_chart_uniformizer",
+        "Dubon2026.SourceCurve.Place.exists_integral_chart_uniformizer",
+        "Dubon2026.SourceCurve.Place.le_ord_of_mem_maximalIdeal_pow",
+        "Dubon2026.SourceCurve.Place.finite_quotient_maximalIdeal_pow",
+        "Dubon2026.SourceCurve.RegularProlongation.exists_off_fiber_vanishing",
+        "Dubon2026.SourceCurve.RegularProlongation.chart_pole_cancellation",
+        "Dubon2026.SourceCurve.Place.coefficients_eq_zero_of_uniformizer_order",
+        "Dubon2026.SourceCurve.RegularProlongation.residue_order_le_sum_fiber_orders",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_map_with_finite_fiber_order_bound"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.RegularProlongation.isIntegral_residue_of_integral_chart",
+        "Dubon2026.SourceCurve.Place.exists_chart_uniformizer",
+        "Dubon2026.SourceCurve.Place.exists_integral_chart_uniformizer",
+        "Dubon2026.SourceCurve.Place.le_ord_of_mem_maximalIdeal_pow",
+        "Dubon2026.SourceCurve.Place.finite_quotient_maximalIdeal_pow",
+        "Dubon2026.SourceCurve.RegularProlongation.exists_off_fiber_vanishing",
+        "Dubon2026.SourceCurve.RegularProlongation.chart_pole_cancellation",
+        "Dubon2026.SourceCurve.Place.coefficients_eq_zero_of_uniformizer_order",
+        "Dubon2026.SourceCurve.RegularProlongation.residue_order_le_sum_fiber_orders",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_map_with_finite_fiber_order_bound"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceLocalFiberOrderAudit8.log",
+      "logSha256": "2DE85FDC52D09BC0A945BB7861BF261DCF8011827A11ACE866BA1ACF98F4899C",
+      "auditSha256": "243C4EBD921747F3BFB1AE6AB3F37899A051C82FA8320D45EBA06380AD8AD57C",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 37,
+      "linterScopes": 8,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 21,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceLocalFiberOrderDependencyAudit8.log",
+      "dependencyAuditSha256": "1FE591E578742D1336E79019B681D15A3180272E2E9BB3F5B39223BFF5AA2BDB",
+      "dependencyAuditSourceSha256": "4A1AAB7E2A16315540903C427B715EF1037D8632BA53BDC8A8C5F37AA091DAA9",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_map_with_finite_fiber_order_bound"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "For the actual tame modular reduction map, every integral j-chart function with nonzero reduction satisfies the local finite-j fiber-order inequality. Its exact fiber is the finite support of the original order divisor intersected with the map fiber. Separability, finite degree equality, chart lifting and reduction-map fiber descriptions are derived. No chart, map or order-bound certificate is assumed in the actual consumer.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Equality of total chart orders, exact local fiber equality and denominator clearing remain necessary for the principal-divisor pushforward identity. Wild-characteristic differential contributions and genus comparison, modular good reduction, original Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-local-fiber-order-8-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "2044E5088740C55FC3B02F46B89FAAC2655490DAFFFBE8D6ADA84D24C991EC11"
+    },
+    {
+      "recordedUTC": "2026-10-24T03:25:36.058209+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceIntegralChartCofactor",
+        "SourceCurveFilteredOrders",
+        "SourceCurveChartFactorDegree",
+        "SourceReductionNormalizedFactors",
+        "SourceReductionTotalChartOrderBound",
+        "SourceReductionFactorOrderSum",
+        "SourceReductionTotalChartOrderEquality",
+        "SourceReductionIntegralFiberEquality",
+        "SourceModularTameIntegralFiberIdentity"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralChartCofactor.lean",
+          "sha256": "A9E87F8D5CFA1B64ABE12F2FCA34707731440D3C72A9D6DD2B58E1F0A81102A9",
+          "oleanSha256": "C57F4D8D31729F1244749482459E969D57C1EE0188C83A6D899BF21D51F7CA0D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFilteredOrders.lean",
+          "sha256": "68C0EFB103AB098E509BF06701D3B8188353BBA6FD17814BE952C2E26460C0D9",
+          "oleanSha256": "2D4DED3179D9721793A229DB5F9613116DA14EE7DC738FFC380A87F052521CF9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveChartFactorDegree.lean",
+          "sha256": "7CC13C9EAE170341DA911BCC727CE3C0D3307EDDAE09C7B9C1EA9DE59C7F5FBF",
+          "oleanSha256": "C46BB1C4A268216D249295568F51D2851D9B65B819216AABB84084BC962DF780"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionNormalizedFactors.lean",
+          "sha256": "074825FDBB700849D1561E59E21C415C1E90E13CEF011A18703F1C29B14EA541",
+          "oleanSha256": "F430E3EE32BA0650BE28054DDE3600D5289F23F3A861E6D126AB12956450973A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionTotalChartOrderBound.lean",
+          "sha256": "E98C48D786B2EC05BF7EB72FE92B0B17F284E5207630C377E61114E16BB7C8DB",
+          "oleanSha256": "62B417423BE8D43C41D4765B07D3DD5937D10E33B5CB162CE1CA2A7D6927C0AD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionFactorOrderSum.lean",
+          "sha256": "BE9AADB9AD101BE67CC1028CCDE1C04FBD7077587187463FD67D81CE808A2803",
+          "oleanSha256": "E7FF77E4D2C70EEF8399941D0754E467F64621CF99CDB31E0B1FA7FDB4363178"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionTotalChartOrderEquality.lean",
+          "sha256": "337CB95034891104BD68DC6F1ED8433396A8CE70A0E4462733AFA59C8FAB7BDD",
+          "oleanSha256": "5D86336182238F2C564FE3A89E3CD1C91AEE55C74F16A8C94313E5034F8A65D9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionIntegralFiberEquality.lean",
+          "sha256": "27C0B9C1724DC500F1C14AF21E5B21F24BEC7CD936E809BA8514AEE4E59A7539",
+          "oleanSha256": "A71397F836779B92F130473FAF8D8799C5355489168787F345004E281F906292"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularTameIntegralFiberIdentity.lean",
+          "sha256": "1231D53FD30D04C05EE240CCFF5597F96E1F36AD0B2FA2971FC23FDA9F7EE51A",
+          "oleanSha256": "D15B0C8C1629D58B3067C2D6E99336B5698A8954C31D720726AB38860C804536"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.RegularProlongation.exists_integral_cofactor",
+        "Dubon2026.SourceCurve.principalOrderDivisor_apply",
+        "Dubon2026.SourceCurve.mem_support_principalOrderDivisor",
+        "Dubon2026.SourceCurve.chartOrderSum_eq_sum_filter",
+        "Dubon2026.SourceCurve.chartOrderSum_eq_sum",
+        "Dubon2026.SourceCurve.chartOrderSum_mul",
+        "Dubon2026.SourceCurve.chartOrderSum_eq_zero",
+        "Dubon2026.SourceCurve.chartOrderSum_one",
+        "Dubon2026.SourceCurve.chartOrderSum_multiset_prod",
+        "Dubon2026.SourceCurve.chartOrderSum_sub_algebraMap",
+        "Dubon2026.SourceCurve.RegularProlongation.chartFactorScalar_ne_zero",
+        "Dubon2026.SourceCurve.RegularProlongation.coe_normalizedChartFactor_of_mem",
+        "Dubon2026.SourceCurve.RegularProlongation.coe_normalizedChartFactor_of_not_mem",
+        "Dubon2026.SourceCurve.RegularProlongation.sub_eq_scalar_mul_normalizedChartFactor",
+        "Dubon2026.SourceCurve.RegularProlongation.residue_normalizedChartFactor_of_mem",
+        "Dubon2026.SourceCurve.RegularProlongation.residue_normalizedChartFactor_of_not_mem",
+        "Dubon2026.SourceCurve.RegularProlongation.residue_normalizedChartFactor_ne_zero",
+        "Dubon2026.SourceCurve.RegularProlongation.coe_normalizedChartFactor_ne_zero",
+        "Dubon2026.SourceCurve.RegularProlongation.isIntegral_normalizedChartFactor",
+        "Dubon2026.SourceCurve.RegularProlongation.residue_chartOrderSum_le",
+        "Dubon2026.SourceCurve.RegularProlongation.normalizedChartFactor_ord_eq_zero_of_not_mem",
+        "Dubon2026.SourceCurve.RegularProlongation.chartOrderSum_normalizedChartFactor_eq",
+        "Dubon2026.SourceCurve.RegularProlongation.chartOrderSum_eq_residue_chartOrderSum",
+        "Dubon2026.SourceCurve.RegularProlongation.sum_fiber_orders_eq_residue_order_of_integral_chart",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_map_with_integral_fiber_identity",
+        "Dubon2026.SourceCurve.principalOrderDivisor",
+        "Dubon2026.SourceCurve.chartOrderSum",
+        "Dubon2026.SourceCurve.RegularProlongation.normalizedChartFactor",
+        "Dubon2026.SourceCurve.RegularProlongation.chartFactorScalar"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.RegularProlongation.exists_integral_cofactor",
+        "Dubon2026.SourceCurve.principalOrderDivisor_apply",
+        "Dubon2026.SourceCurve.mem_support_principalOrderDivisor",
+        "Dubon2026.SourceCurve.chartOrderSum_eq_sum_filter",
+        "Dubon2026.SourceCurve.chartOrderSum_eq_sum",
+        "Dubon2026.SourceCurve.chartOrderSum_mul",
+        "Dubon2026.SourceCurve.chartOrderSum_eq_zero",
+        "Dubon2026.SourceCurve.chartOrderSum_one",
+        "Dubon2026.SourceCurve.chartOrderSum_multiset_prod",
+        "Dubon2026.SourceCurve.chartOrderSum_sub_algebraMap",
+        "Dubon2026.SourceCurve.RegularProlongation.chartFactorScalar_ne_zero",
+        "Dubon2026.SourceCurve.RegularProlongation.coe_normalizedChartFactor_of_mem",
+        "Dubon2026.SourceCurve.RegularProlongation.coe_normalizedChartFactor_of_not_mem",
+        "Dubon2026.SourceCurve.RegularProlongation.sub_eq_scalar_mul_normalizedChartFactor",
+        "Dubon2026.SourceCurve.RegularProlongation.residue_normalizedChartFactor_of_mem",
+        "Dubon2026.SourceCurve.RegularProlongation.residue_normalizedChartFactor_of_not_mem",
+        "Dubon2026.SourceCurve.RegularProlongation.residue_normalizedChartFactor_ne_zero",
+        "Dubon2026.SourceCurve.RegularProlongation.coe_normalizedChartFactor_ne_zero",
+        "Dubon2026.SourceCurve.RegularProlongation.isIntegral_normalizedChartFactor",
+        "Dubon2026.SourceCurve.RegularProlongation.residue_chartOrderSum_le",
+        "Dubon2026.SourceCurve.RegularProlongation.normalizedChartFactor_ord_eq_zero_of_not_mem",
+        "Dubon2026.SourceCurve.RegularProlongation.chartOrderSum_normalizedChartFactor_eq",
+        "Dubon2026.SourceCurve.RegularProlongation.chartOrderSum_eq_residue_chartOrderSum",
+        "Dubon2026.SourceCurve.RegularProlongation.sum_fiber_orders_eq_residue_order_of_integral_chart",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_map_with_integral_fiber_identity"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.principalOrderDivisor",
+        "Dubon2026.SourceCurve.chartOrderSum",
+        "Dubon2026.SourceCurve.RegularProlongation.normalizedChartFactor",
+        "Dubon2026.SourceCurve.RegularProlongation.chartFactorScalar"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralFiberIdentityAudit9.log",
+      "logSha256": "BA252D4F231E853EE47C8928765329427DB138A72F4701968246382F53526501",
+      "auditSha256": "6023C2937C8FC5F2C71149546E13E35A2DBC2D4C1B5C0DEE9D6FE04E16CB130B",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 43,
+      "linterScopes": 9,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 37,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralFiberIdentityDependencyAudit9.log",
+      "dependencyAuditSha256": "0A136CB35D9D7074C3E260B7E075FAC54C3E1618CCC079948C1F1877DBB68713",
+      "dependencyAuditSourceSha256": "AED556A994F61D3D84066CE29CEE8A38EF3765DD1466D2D28A5AF2C74E5DD668",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_map_with_integral_fiber_identity"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "For the actual tame modular reduction map, every integral j-chart function with nonzero reduction satisfies the exact finite-j fiber-order identity. The total original and residue chart orders are equal, and pointwise nonnegative fiber inequalities force equality at every target place, including those outside the residue divisor support. Principal-divisor existence, separability, coordinate degree equality, both chart lifts and actual map fibers are derived.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Arbitrary-function denominator clearing and the inverse-chart application remain necessary for the full principal-divisor pushforward identity. Wild-characteristic differential contributions and genus comparison, modular good reduction, original Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-integral-fiber-identity-9-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "8FDE8E6B7B3AA783E50E31FE054CC12C4FF911CFFB9D6359D37DFEED34ACED95"
+    },
+    {
+      "recordedUTC": "2026-10-24T03:33:02.015509+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceReductionIntegralMultiples",
+        "SourceReductionArbitraryFiberEquality",
+        "SourceReductionPrincipalDivisorMap",
+        "SourceModularTamePrincipalDivisorMap"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionIntegralMultiples.lean",
+          "sha256": "EAE7FDF239CEEB04649B882B1CE39C83A271AB8FD48AD670E2493E0D994B0895",
+          "oleanSha256": "C142D95617B11363BB7D9AA97BCF15618BEB55452040C2E34B8EB1AA5134B190"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionArbitraryFiberEquality.lean",
+          "sha256": "FC8DE363E585E901FBBFA3E612DC15352EE74FF521FE971E21622726DD7B2796",
+          "oleanSha256": "49945CF11FEE78892D22FA6A72CAFFBDF8625CC00C89E282B4F60D3EF482B44B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionPrincipalDivisorMap.lean",
+          "sha256": "AC9BACAFDCA1D4195034F4AB4D1CED8E41B00F8C9EFE769F6287CFDD6CA543D9",
+          "oleanSha256": "806367200ADE77E270E1CCD37E7A26133BD0EAD96643BEFE583EA7E1A9E0BF8B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularTamePrincipalDivisorMap.lean",
+          "sha256": "E2D8A5D9E974589E1EDA90D87ADA0DC5A0E33C956BD3DFB6B9F11A688C443654",
+          "oleanSha256": "26D8ACF490D349AD49DF15E606CD3FEBE4BBB627EBDC794E004B7FA91A4A0176"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.RegularProlongation.exists_chart_integral_multiple",
+        "Dubon2026.SourceCurve.RegularProlongation.exists_regular_chart_integral_multiple",
+        "Dubon2026.SourceCurve.RegularProlongation.sum_fiber_orders_eq_residue_order",
+        "Dubon2026.SourceCurve.RegularProlongation.exists_principal_divisor_reduction_map",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_principal_divisor_reduction_map_of_five_le"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.RegularProlongation.exists_chart_integral_multiple",
+        "Dubon2026.SourceCurve.RegularProlongation.exists_regular_chart_integral_multiple",
+        "Dubon2026.SourceCurve.RegularProlongation.sum_fiber_orders_eq_residue_order",
+        "Dubon2026.SourceCurve.RegularProlongation.exists_principal_divisor_reduction_map",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_principal_divisor_reduction_map_of_five_le"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrincipalDivisorMapAudit4.log",
+      "logSha256": "B19BE41CEDFBE79BC20DF85C943DFA4124CB61D9D0FE29D3EAEBA37BB9BA292E",
+      "auditSha256": "A53735FD006DB7862617397676C93AD2A264564177C2D9A880075EC0938F2E9F",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 15,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 14,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrincipalDivisorMapDependencyAudit4.log",
+      "dependencyAuditSha256": "50C283A0C30BE4B3C3BA5C9916F01934487747821BA38797C60B0A12A9595B9F",
+      "dependencyAuditSourceSha256": "3E112A37AC9ED25B698369081C4F6F54F1B7DA8C4B09D27E96D1E59BD7EEA9C2",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_principal_divisor_reduction_map_of_five_le"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "The actual arithmetic modular Gauss reduction in residue characteristic at least five with N nonzero has a place map whose literal finite-support pushforward takes every principal order divisor of a Gauss-integral function with nonzero reduction to the order divisor of its reduced function. Both charts and arbitrary functions are covered. No place-map, genus, chart-lifting or divisor-compatibility certificate remains assumed by the actual modular consumer.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Wild-characteristic differential contributions and genus comparison, the subsequent constant-reduction/Picard and original Frobenius/inertia applications, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-principal-divisor-map-4-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "EE0031EEDF89C2E7C44DD5428CBAC0DFFB418319F42D3576A9EC8DE839EFA441"
+    },
+    {
+      "recordedUTC": "2026-10-24T03:47:43.603798+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceCurveConstantReductionR2",
+        "SourceCurveReductionPicardR2",
+        "SourceModularTameConstantReductionR2",
+        "SourceModularTamePicardReductionR2"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveConstantReductionR2.lean",
+          "sha256": "D0330F33F2885A4560CDAFB2A2EE4BC24319978BE97F203CAB06A9AE85FE5FA2",
+          "oleanSha256": "891D88184BBB606843DDAE0DD5212408ACAE1DB47B287DA3747B7CF0D715B596"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveReductionPicardR2.lean",
+          "sha256": "6AE36C22C0BE9C8A4032C56870EB223ED3164F1FD3A0452C4C50620FE34EF4B4",
+          "oleanSha256": "9E895C79A80FC20C7B009CC1767103CFD5134CDC94573904CF8E35787FCA9119"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularTameConstantReductionR2.lean",
+          "sha256": "66A4BA5B5F2FB26F21296F3B77C7C5DC34EAA7D40A42DF262586C276679E433F",
+          "oleanSha256": "99CBDDB4771D4F11E33D3B7DACA4CD56E9BCFC72BEA72ABAFAC4D4B87859EB4C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularTamePicardReductionR2.lean",
+          "sha256": "2035B49E2B94FEC4397C508CC4D15718C623355805ABA6E709B2CA9652282F41",
+          "oleanSha256": "08B8B8E4FA9AA11C6F966DB1E8551F1AC5A0B981AA02175CD90CCC17015F0CC3"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.ConstantReduction.mapDomain_mem_principal",
+        "Dubon2026.SourceCurve.ConstantReduction.degree_mapDomain",
+        "Dubon2026.SourceCurve.ConstantReduction.mapDomain_mem_degZero",
+        "Dubon2026.SourceCurve.ConstantReduction.pic0Map_mk",
+        "Dubon2026.SourceCurve.ConstantReduction.pic0Map_mem_torsion",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_constant_reduction_of_five_le",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_reduction_of_five_le",
+        "Dubon2026.SourceCurve.ConstantReduction.ofPlaceMap",
+        "Dubon2026.SourceCurve.ConstantReduction.divMap",
+        "Dubon2026.SourceCurve.ConstantReduction.degZeroMap",
+        "Dubon2026.SourceCurve.ConstantReduction.pic0Map",
+        "Dubon2026.SourceCurve.ConstantReduction"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.ConstantReduction.mapDomain_mem_principal",
+        "Dubon2026.SourceCurve.ConstantReduction.degree_mapDomain",
+        "Dubon2026.SourceCurve.ConstantReduction.mapDomain_mem_degZero",
+        "Dubon2026.SourceCurve.ConstantReduction.pic0Map_mk",
+        "Dubon2026.SourceCurve.ConstantReduction.pic0Map_mem_torsion",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_constant_reduction_of_five_le",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_reduction_of_five_le"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.ConstantReduction.ofPlaceMap",
+        "Dubon2026.SourceCurve.ConstantReduction.divMap",
+        "Dubon2026.SourceCurve.ConstantReduction.degZeroMap",
+        "Dubon2026.SourceCurve.ConstantReduction.pic0Map",
+        "Dubon2026.SourceCurve.ConstantReduction"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceConstantPicardReductionAudit4R2.log",
+      "logSha256": "963FE8656F7F352C4E6234AB8855A935D632FB4579559ABEE6AD3DEB606D53AB",
+      "auditSha256": "54E3F3B269B04EF0B16470FC69C6AA19136254EFD031E3A2A97D426C6E08975E",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 22,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 17,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceConstantPicardReductionDependencyAudit4R3.log",
+      "dependencyAuditSha256": "BEA33C31127005ACB846FE0C1565C6C5836AF8861B42D879F054FA0BBDBBD2FC",
+      "dependencyAuditSourceSha256": "6F76E4440F5C98AE1F262562C37E260F83AC9987577456DB7029DB05B8B9476D",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_reduction_of_five_le"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy/residual association -> original Frobenius/inertia -> modular good reduction and Picard torsion injectivity -> constant reduction, principal pushforward and actual genus equality",
+      "discharged": "The actual tame modular Gauss reduction gives a constant reduction with degree-preserving places, all principal-divisor compatibility and proved original/residue genus equality. Literal divisor pushforward induces the actual degree-zero Picard homomorphism and preserves every n-torsion subgroup. No constant-reduction object, genus equality or Picard map is assumed by the actual modular existence consumer.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Prime-to-characteristic torsion injectivity, wild-characteristic good reduction, comparison with the original arithmetic action and Frobenius/inertia remain necessary for residual association, automorphy and all-weight continuation. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-constant-picard-reduction-4-r2-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "8B1C438C60D24F3B7A0240223BDB7C3BE2C4B9F9E1EB691CA676FEDEF8A73213"
+    },
+    {
+      "recordedUTC": "2026-10-24T03:48:31.610402+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceCurveReductionKummerData",
+        "SourceCurveReductionKummerPower",
+        "SourceModularTameKummerPower"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveReductionKummerData.lean",
+          "sha256": "0AFA6271D4C9C4A9189A7DF9A5BCF4AF72CD0133CF48FEDC674F47D200791CC0",
+          "oleanSha256": "08B23C6C5F82130F88E4AEA3DE058BB8F362AB6A95F520FDBF948C51ABFB483B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveReductionKummerPower.lean",
+          "sha256": "53B613468A550BFE380230758083161710374434FC9B9A278C11A4EE3F171112",
+          "oleanSha256": "FFDB8C5ABA5698E0954097669967D9FC7D95FFF69F3195117FBDCBFC2620BE60"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularTameKummerPower.lean",
+          "sha256": "302424E52D60229233D6C55841830C768E389257C0326CA201B08278C77EBAFF",
+          "oleanSha256": "A187871EA664D63B080C60EA201B3D0B1CBFB25717380E1B4ADDFF0997250DC7"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.ConstantReduction.exists_kummer_divisor_data",
+        "Dubon2026.SourceCurve.ConstantReduction.exists_residue_power_of_torsion_kernel",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_kummer_power_data_of_five_le"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.ConstantReduction.exists_kummer_divisor_data",
+        "Dubon2026.SourceCurve.ConstantReduction.exists_residue_power_of_torsion_kernel",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_kummer_power_data_of_five_le"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceKummerPowerAudit3.log",
+      "logSha256": "AEBE4581718AC86E483F26D470E9A8C6CA527595D0573AF4DD16AFECE77585A1",
+      "auditSha256": "3585BCF82B462765ED29346251D749759B956BB0B8EC8EFF055A711DA0119D71",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 4,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 7,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceKummerPowerDependencyAudit3.log",
+      "dependencyAuditSha256": "A9A5D3984DB42C5867941299808AEF1C8696704A374F0BE89C0B798DB696C562",
+      "dependencyAuditSourceSha256": "6529EF983643A32EB1F0931E534AE2C886C67207444C8B2E8AA11344BA048EB1",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_kummer_power_data_of_five_le"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy/residual association -> original Frobenius/inertia -> modular good reduction and Picard torsion injectivity -> constant reduction, principal pushforward and actual genus equality",
+      "discharged": "For every positive-order torsion class killed by the actual constructed tame modular Picard reduction, a degree-zero divisor representative and normalized Gauss-integral function exist, with all original orders equal to the torsion order times the divisor. The reduced function is proved to be a power of a nonzero residue-field function, removing the residual constant factor by the already proved global-constant theorem and algebraic closure. No residue power, Kummer data or Picard homomorphism is assumed by the actual modular existence consumer.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Lifting this power to the original function field remains necessary for prime-to-characteristic torsion injectivity. Its precise dependencies are unramified Kummer-cover genus and the genus inequality for all extending reductions. Wild good reduction, original arithmetic-action compatibility and Frobenius/inertia still precede residual association, automorphy and all-weight continuation. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-kummer-power-3-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "90950175E8BD24E4B7229875DDBD3B7868E07F9F15F21308F0A81FE5DF76484D"
+    }
+  ],
+  "reviews": [
+    "Tools/source-chart-place-comparison-10-reuse-review-20261023.json",
+    "Tools/source-reduction-place-map-3-reuse-review-20261023.json",
+    "Tools/source-local-fiber-order-8-reuse-review-20261023.json",
+    "Tools/source-integral-fiber-identity-9-reuse-review-20261023.json",
+    "Tools/source-principal-divisor-map-4-reuse-review-20261023.json",
+    "Tools/source-constant-picard-reduction-4-r2-reuse-review-20261023.json",
+    "Tools/source-kummer-power-3-reuse-review-20261023.json"
+  ],
+  "additionalCurrentSearch": {
+    "path": "Tools/principal-picard-reduction-route-363.json",
+    "sha256": "3E181B3A94486CBA3939AA9014D1DBBB1FC57C31576774C6B484B2FF3A0997E6"
+  }
+}

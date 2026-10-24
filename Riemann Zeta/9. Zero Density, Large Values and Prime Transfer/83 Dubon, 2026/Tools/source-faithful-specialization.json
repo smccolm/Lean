@@ -1,0 +1,2013 @@
+{
+  "date": "23 October 2026",
+  "modules": [
+    "Dubon2026.SourceEllipticSeparableCoordinates",
+    "Dubon2026.SourceEllipticTorsionAbscissaCount",
+    "Dubon2026.SourceEllipticTorsionDivisionRoot",
+    "Dubon2026.SourceEllipticPreDivisionSeparable",
+    "Dubon2026.SourceEllipticTorsionSeparable",
+    "Dubon2026.SourceEllipticFiniteTorsionField",
+    "Dubon2026.SourceEllipticLegendreValuation",
+    "Dubon2026.SourceEllipticLegendreCoordinates",
+    "Dubon2026.SourceEllipticLegendreGoodModel",
+    "Dubon2026.SourceEllipticLegendreGenerators",
+    "Dubon2026.SourceEllipticLegendreGaloisField",
+    "Dubon2026.SourceEllipticLegendreInertia",
+    "Dubon2026.SourceEllipticLegendreFieldRoots",
+    "Dubon2026.SourceEllipticLegendreFaithfulModel",
+    "Dubon2026.SourceEllipticLegendreGaloisModel",
+    "Dubon2026.SourceEllipticIntegralGoodModelChange",
+    "Dubon2026.SourceEllipticInertiaConjugate",
+    "Dubon2026.SourceEllipticIntegralInertiaCocycle",
+    "Dubon2026.SourceEllipticPositiveCharacteristicCocycle",
+    "Dubon2026.SourceEllipticInverseCoordinateNaturality",
+    "Dubon2026.SourceEllipticInverseCoordinateResidue",
+    "Dubon2026.SourceEllipticInertiaPointReduction",
+    "Dubon2026.SourceEllipticModelTorsionReduction",
+    "Dubon2026.SourceEllipticGaloisTorsionMap",
+    "Dubon2026.SourceEllipticModelTorsionEquivariance",
+    "Dubon2026.SourceEllipticActualInertiaTorsionReduction",
+    "Dubon2026.SourceEllipticTrivialInertiaTorsion",
+    "Dubon2026.SourceEllipticDivisionFieldRestriction",
+    "Dubon2026.SourceEllipticFullTorsionFieldExtension",
+    "Dubon2026.SourceEllipticFaithfulGoodModelField",
+    "Dubon2026.SourceEllipticFaithfulTorsionModel",
+    "Dubon2026.SourceCurveFiniteValuePlace",
+    "Dubon2026.SourceCurveClosedConstantResidue",
+    "Dubon2026.SourceRatFuncGaloisCoordinate",
+    "Dubon2026.SourceRatFuncFiniteValueSpecialization",
+    "Dubon2026.SourceEllipticGoodModelResidueJ",
+    "Dubon2026.SourceEllipticSpecializationFieldPlace",
+    "Dubon2026.SourceEllipticOfJSpecialization",
+    "Dubon2026.SourceEllipticResidueCocycleMultiplication",
+    "Dubon2026.SourceEllipticChosenInertiaCocycle",
+    "Dubon2026.SourceEllipticResidueInertiaHom",
+    "Dubon2026.SourceEllipticFaithfulSpecializationHom",
+    "Dubon2026.SourceEllipticResidueCurvePointEquiv",
+    "Dubon2026.SourceEllipticResidueActionConjugacy",
+    "Dubon2026.SourceEllipticResidueConjugateHom",
+    "Dubon2026.SourceEllipticPrescribedInertiaAction",
+    "Dubon2026.SourceEllipticSpecializationTorsionRange",
+    "Dubon2026.SourceEllipticCyclicTorsionSpecialization",
+    "Dubon2026.SourceEllipticPrescribedCyclicSpecialization",
+    "Dubon2026.SourceEllipticStabilizerScaling",
+    "Dubon2026.SourceEllipticStabilizerInvariantBounds",
+    "Dubon2026.SourceEllipticStabilizerBoundsFive",
+    "Dubon2026.SourceEllipticOfJDiscriminantOrder",
+    "Dubon2026.SourceEllipticOfJExceptionalOrders",
+    "Dubon2026.SourceEllipticSpecializationOrderBound",
+    "Dubon2026.SourceEllipticPrescribedOrderBound"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original weight-two Frobenius/inertia -> actual modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census and wild differential contribution -> elliptic cyclic-subgroup inertia orbits -> actual cyclic-subgroup interpretation of integral modular-polynomial roots -> actual prime quotient homomorphisms and integral polynomial products.",
+  "discharged": "For every invertible level N in characteristic at least five, the actual generic curve ofJ(X) has a derived finite Galois field containing all N-squared torsion points and an explicit faithful good model at a place over any prescribed elliptic j-value. Literal reduction gives injective N-torsion specialization into the prescribed elliptic curve; source and target torsion counts prove surjectivity and an actual cyclic-subgroup bijection. The integral coordinate-change cocycle gives an injective inertia homomorphism, stabilizes the prescribed curve and is equivariant on actual torsion points. Stabilizer bounds are six at j zero, four at j 1728 and two elsewhere. The actual good-model discriminant proves the positive-order divisibilities six and four and the order-versus-stabilizer dichotomy. Finite torsion fields, good models, specialization places, residue-field identification, faithfulness, equivariance, torsion lifting, subgroup transport and the stated order bounds are derived, not supplied as certificates.",
+  "boundary": "Equality of actual inertia cardinality with normalized place order, full stabilizer image up to sign, cyclic orbit and place-fiber comparison, numerical exceptional-fiber and ramification counts and wild differential contributions, reverse genus, genus equality and place comparison, modular-curve good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 7,104-module scope: all thirteen retained regressions, 47,803 exhaustive theorem checks, 21,573 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceEllipticDivisionField.exists_divisionField",
+    "Dubon2026.SourceEllipticLegendre.exists_legendre_good_model",
+    "Dubon2026.SourceEllipticLegendreStage.exists_galois_good_model_faithful",
+    "Dubon2026.SourceEllipticReduction.exists_integral_change_of_good_models",
+    "Dubon2026.SourceEllipticReduction.exists_integral_inertia_cocycle_of_five_le",
+    "Dubon2026.SourceEllipticReduction.exists_actual_inertia_torsion_reduction",
+    "Dubon2026.SourceEllipticDivisionField.exists_faithful_torsion_model",
+    "Dubon2026.SourceCurve.exists_rational_specialization_place",
+    "Dubon2026.SourceEllipticDivisionField.exists_faithful_ofJ_specialization",
+    "Dubon2026.SourceEllipticDivisionField.exists_faithful_ofJ_inertia_hom",
+    "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action",
+    "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_cyclic_specialization",
+    "Dubon2026.SourceEllipticStabilizer.stabilizer_bounds_of_five_le",
+    "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_order_bound"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-23T21:06:17.578809+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticSeparableCoordinates",
+        "SourceEllipticTorsionAbscissaCount",
+        "SourceEllipticTorsionDivisionRoot",
+        "SourceEllipticPreDivisionSeparable",
+        "SourceEllipticTorsionSeparable",
+        "SourceEllipticFiniteTorsionField"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticSeparableCoordinates.lean",
+          "sha256": "AC8A15329717E7FAC20AF3A6E623E10754E5BE72743329C58F41787C4CB0DB2F",
+          "oleanSha256": "F357591AF8C4AF7A73A2BF8969CB41AC7094C5AF1A58082C1A11B9FBE5063A6B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticTorsionAbscissaCount.lean",
+          "sha256": "AFE447C641454E375E6840535FEC16C706CE1A0E94272B968835BB35D8364470",
+          "oleanSha256": "7CC645D2442B3219AE8D9532C75831E4CAA86F4DA318321965827E0C447178A9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticTorsionDivisionRoot.lean",
+          "sha256": "E7BDF222A156744E4B8E388F3DCA43B7C81F825C20D65F087489F9B40B4A82C8",
+          "oleanSha256": "846B7FD12568C930774BCB90AFDD001D1C24AAB0C73BE013EE925837E777E315"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPreDivisionSeparable.lean",
+          "sha256": "C111B94BCCC434CF06D31E292BE7E5281B54B8C3B5B824DD1F8003A6A60C155E",
+          "oleanSha256": "859FC63EE7185C15CAB40F174C25F408CEF17A12DBCFF6E8AC6A0793405E91F9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticTorsionSeparable.lean",
+          "sha256": "3D5122A9735601CB3B1291E77EF6F9302A7ACF74D5B1324C6ECB47A3541F6D19",
+          "oleanSha256": "0B0E1552D3158B1E32D1F6DABF0038415F6453015D46830F7147C9E6E57DBE60"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticFiniteTorsionField.lean",
+          "sha256": "3C1897991D0EA00F75ECE1A8901F9DD4FFCEDDAD0FD630E237724E84FAA7B83C",
+          "oleanSha256": "53E43A676E0819CCB6ACAD6637ECD168E464CD16D3E34924A5F217ACA6827BBE"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticDivisionField.mem_separableClosure_of_root",
+        "Dubon2026.SourceEllipticDivisionField.separable_of_natDegree_le_card",
+        "Dubon2026.SourceEllipticDivisionField.some_mem_sepPoints_iff",
+        "Dubon2026.SourceEllipticDivisionField.Y_mem_of_X_mem",
+        "Dubon2026.SourceEllipticDivisionField.card_le_two_mul_card_abscissae",
+        "Dubon2026.SourceEllipticDivisionField.finite_and_ncard_torsion",
+        "Dubon2026.SourceEllipticDivisionField.mem_torsFinset",
+        "Dubon2026.SourceEllipticDivisionField.card_torsFinset",
+        "Dubon2026.SourceEllipticDivisionField.nsmul_eq_zero_iff_division_eval",
+        "Dubon2026.SourceEllipticDivisionField.two_nsmul_eq_zero_iff_division_eval",
+        "Dubon2026.SourceEllipticDivisionField.preDivision_eval_zero_of_torsion",
+        "Dubon2026.SourceEllipticDivisionField.preDivision_separable",
+        "Dubon2026.SourceEllipticDivisionField.natCast_ne_zero_of_ne_zero",
+        "Dubon2026.SourceEllipticDivisionField.natCast_ne_zero_of_dvd",
+        "Dubon2026.SourceEllipticDivisionField.mem_separableClosure_of_root_F",
+        "Dubon2026.SourceEllipticDivisionField.two_torsion_x_separable",
+        "Dubon2026.SourceEllipticDivisionField.mem_sepPoints_of_nsmul_eq_zero",
+        "Dubon2026.SourceEllipticDivisionField.mem_ptCoords_some_left",
+        "Dubon2026.SourceEllipticDivisionField.mem_ptCoords_some_right",
+        "Dubon2026.SourceEllipticDivisionField.exists_divisionField",
+        "Dubon2026.SourceEllipticDivisionField.sepPoints",
+        "Dubon2026.SourceEllipticDivisionField.torsFinset",
+        "Dubon2026.SourceEllipticDivisionField.ptCoords"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticDivisionField.mem_separableClosure_of_root",
+        "Dubon2026.SourceEllipticDivisionField.separable_of_natDegree_le_card",
+        "Dubon2026.SourceEllipticDivisionField.some_mem_sepPoints_iff",
+        "Dubon2026.SourceEllipticDivisionField.Y_mem_of_X_mem",
+        "Dubon2026.SourceEllipticDivisionField.card_le_two_mul_card_abscissae",
+        "Dubon2026.SourceEllipticDivisionField.finite_and_ncard_torsion",
+        "Dubon2026.SourceEllipticDivisionField.mem_torsFinset",
+        "Dubon2026.SourceEllipticDivisionField.card_torsFinset",
+        "Dubon2026.SourceEllipticDivisionField.nsmul_eq_zero_iff_division_eval",
+        "Dubon2026.SourceEllipticDivisionField.two_nsmul_eq_zero_iff_division_eval",
+        "Dubon2026.SourceEllipticDivisionField.preDivision_eval_zero_of_torsion",
+        "Dubon2026.SourceEllipticDivisionField.preDivision_separable",
+        "Dubon2026.SourceEllipticDivisionField.natCast_ne_zero_of_ne_zero",
+        "Dubon2026.SourceEllipticDivisionField.natCast_ne_zero_of_dvd",
+        "Dubon2026.SourceEllipticDivisionField.mem_separableClosure_of_root_F",
+        "Dubon2026.SourceEllipticDivisionField.two_torsion_x_separable",
+        "Dubon2026.SourceEllipticDivisionField.mem_sepPoints_of_nsmul_eq_zero",
+        "Dubon2026.SourceEllipticDivisionField.mem_ptCoords_some_left",
+        "Dubon2026.SourceEllipticDivisionField.mem_ptCoords_some_right",
+        "Dubon2026.SourceEllipticDivisionField.exists_divisionField"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticDivisionField.sepPoints",
+        "Dubon2026.SourceEllipticDivisionField.torsFinset",
+        "Dubon2026.SourceEllipticDivisionField.ptCoords"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteTorsionFieldAudit6R2.log",
+      "logSha256": "A2680B427C6AB500D8770A63FA0BE6FA55D080E630B3A8AA6083D81A271A0B2C",
+      "auditSha256": "EC7FD79D7D19524DEFA27423F36058CBB09897D023EF82D0EAF372219996D290",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 28,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 29,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteTorsionFieldDependencyAudit6R2.log",
+      "dependencyAuditSha256": "78062014A5EB74BC36DFD4FDCB138A286C936F7FAC19C99443279CD3CC8AC63A",
+      "dependencyAuditSourceSha256": "3F861CB279BA48C96F61375312B9AED26B627959F32824AE7DAB1EE50BDE5A2E",
+      "consumers": [
+        "Dubon2026.SourceEllipticDivisionField.exists_divisionField"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "Every point killed by an integer nonzero in the base field has separable coordinates. The actual finite torsion set and its at-most-two-to-one abscissa map fill the native pre-division-polynomial degree after removing infinity for odd order or the two-torsion for even order. This proves separability directly for all orders and characteristics without assuming a perfect base field. Adjoining the actual finite set of torsion coordinates gives a finite Galois intermediate field with the full N-squared torsion cardinality and faithful Galois action on those actual points.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The finite Galois reduction route still needs explicit good models, a place over each prescribed j-value, realized residue stabilizer actions, embeddings/place-fiber comparison and orbit counts. Reverse genus, modular-curve good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-finite-torsion-field-6-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "A01C5427903EF7379EB5FFC2F3C858C263322F22B4AC246601ECB72E4CEB96C7"
+    },
+    {
+      "recordedUTC": "2026-10-23T21:12:20.720097+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticLegendreValuation",
+        "SourceEllipticLegendreCoordinates",
+        "SourceEllipticLegendreGoodModel"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticLegendreValuation.lean",
+          "sha256": "51879F13DAA5262EA0D567CFF1627FB4F0566E6B2565D1354B15FDFB4509DC5A",
+          "oleanSha256": "9598FB22EC0ACEB0162B76E1E6FA4A222A9828590A6075F5BA88944272A10A98"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticLegendreCoordinates.lean",
+          "sha256": "9467F456202D806B8486FE02EC1DCFD2736257BD18DD19A4326085B40DC0E779",
+          "oleanSha256": "D1D6152381E1415B6C3CCF2FC6C4782A7E593CC8A7F936FBA0698B114F82A9FD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticLegendreGoodModel.lean",
+          "sha256": "B97147408276112D361C6F55B0BB38E93199FAC0561C6E1B7CC33B80D03C22A7",
+          "oleanSha256": "BDDCE0F7CD440701961F43639C832419DCD6612D7CE0E2C5F7E58D17FDDEA631"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticLegendre.val_lambda",
+        "Dubon2026.SourceEllipticLegendre.legendre_Δ",
+        "Dubon2026.SourceEllipticLegendre.legendre_c₄",
+        "Dubon2026.SourceEllipticLegendre.legendre_map",
+        "Dubon2026.SourceEllipticLegendre.variableChange_eq_legendre",
+        "Dubon2026.SourceEllipticLegendre.j_legendre_mul",
+        "Dubon2026.SourceEllipticLegendre.j_mul_of_legendre",
+        "Dubon2026.SourceEllipticLegendre.exists_legendre_good_model",
+        "Dubon2026.SourceEllipticLegendre.legendreCurve"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticLegendre.val_lambda",
+        "Dubon2026.SourceEllipticLegendre.legendre_Δ",
+        "Dubon2026.SourceEllipticLegendre.legendre_c₄",
+        "Dubon2026.SourceEllipticLegendre.legendre_map",
+        "Dubon2026.SourceEllipticLegendre.variableChange_eq_legendre",
+        "Dubon2026.SourceEllipticLegendre.j_legendre_mul",
+        "Dubon2026.SourceEllipticLegendre.j_mul_of_legendre",
+        "Dubon2026.SourceEllipticLegendre.exists_legendre_good_model"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticLegendre.legendreCurve"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceLegendreGoodModelAudit3.log",
+      "logSha256": "4462E89CDAD33ADC047E28DCDBE6EF1E0E626139866200DB76E11C47FDEE5DE0",
+      "auditSha256": "AB19F6FBE1099F75945CE1B250A4F265299102BC2F94A8A39FE1FAE90236BFE6",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 9,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceLegendreGoodModelDependencyAudit3.log",
+      "dependencyAuditSha256": "5B42AEAD591BE5C0C4E6FCE28899F546DBF5BB011531D8CC208C5CC8D4B879BC",
+      "dependencyAuditSourceSha256": "C62BFC5EB627C97A64F64E13F1B16DFC0D43EBE75AFA4BFFECDA009D1254EEDE",
+      "consumers": [
+        "Dubon2026.SourceEllipticLegendre.exists_legendre_good_model"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "Given the actual three two-torsion abscissae and a square root of their difference, integral j and a unit two construct a literal Legendre equation over the original valuation ring with unit discriminant. The exact coordinate-change coefficients are proved, including its scaling coordinate equal to the supplied square root. The valuations of lambda and lambda-minus-one are derived from the actual j relation; no unit-discriminant or good-model certificate is assumed.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The field containing the required two-torsion abscissae and square roots must still be constructed as a finite Galois stage, and faithfulness of the actual inertia action proved. A place over each prescribed j-value, realized residue stabilizer actions, embeddings/place-fiber comparison and orbit counts remain. Reverse genus, modular-curve good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-legendre-good-model-3-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "0EF674FBE7673CF42B330D59D3C4DA8D1C4782D78B4774459C72E1064140E87C"
+    },
+    {
+      "recordedUTC": "2026-10-23T21:19:14.078938+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticLegendreGenerators",
+        "SourceEllipticLegendreGaloisField",
+        "SourceEllipticLegendreInertia",
+        "SourceEllipticLegendreFieldRoots",
+        "SourceEllipticLegendreFaithfulModel",
+        "SourceEllipticLegendreGaloisModel"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticLegendreGenerators.lean",
+          "sha256": "1BB51CC2DF65CA98AAC8FC690964288F96A6A7D23E0F702E6A51AB9BE3D5E15D",
+          "oleanSha256": "68E8CB8545CC22BE97435BB6CFBAF41761FC56B0189ED2369FD36E448E0FD5E7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticLegendreGaloisField.lean",
+          "sha256": "E83AF8578C009316C5E88B6C7A5325CDA46A31784302FF59F74B0ADF3AC2D93A",
+          "oleanSha256": "2CEA212F20F7488908AA3454135E6259E26DB4A8DEFF0A98D28B1A018CB93FB2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticLegendreInertia.lean",
+          "sha256": "C7606C4DF6FAB8B39A32D36DE80879C6CDA3A9F8CFC7EF098F28ACB751C779A1",
+          "oleanSha256": "15AA9FA42DD6BDF6B3134F271134A046E7D3F792C075B6E6ECDA66F2739F8346"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticLegendreFieldRoots.lean",
+          "sha256": "C38C3082E267D728142D6C9CE75CD21F872C7CAA945BA1B5E1C906CF4FC8B5D6",
+          "oleanSha256": "27085EE100648BD56CFF241B9216A2C6060063116B1775AD60464F9AA9CAABCC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticLegendreFaithfulModel.lean",
+          "sha256": "1703C94A45A4094698FF15C5FC69535E14470BA4734A1BC663EF8C37F0E64848",
+          "oleanSha256": "6DB6B531C08F1EDC66ED61FF0F7E6284A12D6ED0E0E97E29C64619F7DCE391BE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticLegendreGaloisModel.lean",
+          "sha256": "641FC238D31CA6BD4AFA3708E1BE908982127235F7E7744DD92F350B0A1CAE61",
+          "oleanSha256": "EB9F10C0D5B2E1F56C5745EC2DBFF69E6874A716A06BD9BC5B8B2D49A5622AEA"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticLegendreStage.map_twoTorsionPolynomial",
+        "Dubon2026.SourceEllipticLegendreStage.four_ne_zero",
+        "Dubon2026.SourceEllipticLegendreStage.exists_roots",
+        "Dubon2026.SourceEllipticLegendreStage.separable_twoTorsion",
+        "Dubon2026.SourceEllipticLegendreStage.mem_gens_of_sq",
+        "Dubon2026.SourceEllipticLegendreStage.mem_gens_cases",
+        "Dubon2026.SourceEllipticLegendreStage.mem_diffs_iff",
+        "Dubon2026.SourceEllipticLegendreStage.sub_mem_diffs",
+        "Dubon2026.SourceEllipticLegendreStage.exists_of_mem_diffs",
+        "Dubon2026.SourceEllipticLegendreStage.root_iff",
+        "Dubon2026.SourceEllipticLegendreStage.exists_S",
+        "Dubon2026.SourceEllipticLegendreStage.sub_mem_maximalIdeal_of_inertia",
+        "Dubon2026.SourceEllipticLegendreStage.eq_of_inertia_of_sq_eq",
+        "Dubon2026.SourceEllipticLegendreStage.val_eq_one_of_sq",
+        "Dubon2026.SourceEllipticLegendreStage.mem_M_of_mem_gens",
+        "Dubon2026.SourceEllipticLegendreStage.e₁_mem_gens",
+        "Dubon2026.SourceEllipticLegendreStage.e₂_mem_gens",
+        "Dubon2026.SourceEllipticLegendreStage.e₃_mem_gens",
+        "Dubon2026.SourceEllipticLegendreStage.roots_M",
+        "Dubon2026.SourceEllipticLegendreStage.model_and_faithful",
+        "Dubon2026.SourceEllipticLegendreStage.exists_galois_good_model_faithful",
+        "Dubon2026.SourceEllipticLegendreStage.diffs",
+        "Dubon2026.SourceEllipticLegendreStage.gens"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticLegendreStage.map_twoTorsionPolynomial",
+        "Dubon2026.SourceEllipticLegendreStage.four_ne_zero",
+        "Dubon2026.SourceEllipticLegendreStage.exists_roots",
+        "Dubon2026.SourceEllipticLegendreStage.separable_twoTorsion",
+        "Dubon2026.SourceEllipticLegendreStage.mem_gens_of_sq",
+        "Dubon2026.SourceEllipticLegendreStage.mem_gens_cases",
+        "Dubon2026.SourceEllipticLegendreStage.mem_diffs_iff",
+        "Dubon2026.SourceEllipticLegendreStage.sub_mem_diffs",
+        "Dubon2026.SourceEllipticLegendreStage.exists_of_mem_diffs",
+        "Dubon2026.SourceEllipticLegendreStage.root_iff",
+        "Dubon2026.SourceEllipticLegendreStage.exists_S",
+        "Dubon2026.SourceEllipticLegendreStage.sub_mem_maximalIdeal_of_inertia",
+        "Dubon2026.SourceEllipticLegendreStage.eq_of_inertia_of_sq_eq",
+        "Dubon2026.SourceEllipticLegendreStage.val_eq_one_of_sq",
+        "Dubon2026.SourceEllipticLegendreStage.mem_M_of_mem_gens",
+        "Dubon2026.SourceEllipticLegendreStage.e₁_mem_gens",
+        "Dubon2026.SourceEllipticLegendreStage.e₂_mem_gens",
+        "Dubon2026.SourceEllipticLegendreStage.e₃_mem_gens",
+        "Dubon2026.SourceEllipticLegendreStage.roots_M",
+        "Dubon2026.SourceEllipticLegendreStage.model_and_faithful",
+        "Dubon2026.SourceEllipticLegendreStage.exists_galois_good_model_faithful"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticLegendreStage.diffs",
+        "Dubon2026.SourceEllipticLegendreStage.gens"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceLegendreGaloisStageAudit6.log",
+      "logSha256": "3FEEE6ED8D8F20E5A2448609C1E01A5B40707426AFB4C190A9CC6A14B1EA66E2",
+      "auditSha256": "A26106C1405DD775EC32D132D99B91D96CB8E470C925525FCE7759E9978D3280",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 26,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 28,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceLegendreGaloisStageDependencyAudit6.log",
+      "dependencyAuditSha256": "2AC0FB099DCE0D7EFF4B9A27B4824BCA4DD89194CFEE6A27616F846C030C9E6E",
+      "dependencyAuditSourceSha256": "EF4DC513A7FBC447C272B45D5D78DAF631AA9D41BF5E4E6AF73D93DB5A7735D9",
+      "consumers": [
+        "Dubon2026.SourceEllipticLegendreStage.exists_galois_good_model_faithful"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "The actual two-torsion abscissae and all square roots of their pairwise differences generate a finite Galois intermediate field. Over every containing field and valuation ring where two is a unit and the original j is integral, that field supplies a literal good model and the prescribed coordinate change. An inertia element fixing two-torsion whose induced coordinate change reduces to the identity fixes this finite field pointwise. The field and model are constructed; their normality, separability, unit discriminant and stated faithfulness are derived.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The model stage must be combined with the full torsion field and an actual place over each prescribed j-value. Integral coordinate changes, equivariant torsion specialization, full residue-stabilizer realization, embeddings/place-fiber comparison and orbit counts remain. Reverse genus, modular-curve good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-legendre-galois-stage-6-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "FAE815A409EDCCF15B492DFE5717845D6C87F2D715335538FAABFEA1E2AF1B7F"
+    },
+    {
+      "recordedUTC": "2026-10-23T21:23:43.639120+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticIntegralGoodModelChange"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticIntegralGoodModelChange.lean",
+          "sha256": "0DE94625F23BA916CA590EAC5ABFFAEADCD2F67A092F5703FBEA85A25E555DE3",
+          "oleanSha256": "9E66AE5F93EC6FE4857F1FC0BD6FA95F7CC75049EF1F31AA4C3D12817C0E7DDD"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticReduction.inverse_mem_of_unit",
+        "Dubon2026.SourceEllipticReduction.exists_integral_change_of_good_models"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticReduction.inverse_mem_of_unit",
+        "Dubon2026.SourceEllipticReduction.exists_integral_change_of_good_models"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralGoodModelChangeAudit1.log",
+      "logSha256": "57C0EBC4F6D50EA0CD87C20C38CEDA92F7D67406F8CBCC677D6D0FC8E17F3317",
+      "auditSha256": "AB900A399E31259C7BC9E661C04AE27D3F3A129810E489EA328E1388C15B69CF",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 2,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 4,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralGoodModelChangeDependencyAudit1.log",
+      "dependencyAuditSha256": "2A721B5150754AE97BA7EE8DD08CDFF9EEA23790C2FA677D8B76285E71E98029",
+      "dependencyAuditSourceSha256": "CAC6808B375D63026CCBECF20156E7DF5D8C27A3DCB5E8029E6A529E673F075E",
+      "consumers": [
+        "Dubon2026.SourceEllipticReduction.exists_integral_change_of_good_models"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "When two and three are units in the valuation ring, every field coordinate change between the actual two unit-discriminant models comes from a coordinate change over that ring. The discriminant identity derives unit valuation for its scaling coefficient. The first three Weierstrass coefficient identities then derive integrality of each translation coefficient. No integral lift is supplied as a hypothesis.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The unit-two and unit-three hypotheses remain explicit and must be derived at the required residue-characteristic-at-least-five consumer. Actual Galois cocycle descent and inertia-equivariant torsion specialization, a place over each prescribed j-value, full residue-stabilizer realization, place-fiber comparison and orbit counts remain. Reverse genus, modular-curve good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-integral-good-model-change-1-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "7059D9F848ADCA8BBEE951C17D89D8CF3FF705B30A0D6A9B12AD1C0CAC4BC983"
+    },
+    {
+      "recordedUTC": "2026-10-23T21:28:29.155056+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticInertiaConjugate",
+        "SourceEllipticIntegralInertiaCocycle",
+        "SourceEllipticPositiveCharacteristicCocycle"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticInertiaConjugate.lean",
+          "sha256": "1EA2041BB183942F2B3CD19A3862B90D9990CCC48376B39B3BA4048A3BC66125",
+          "oleanSha256": "24A9360376D0BB27BFBABDDC09C2EFE71C44FCC09CF2265CE3D65ED998E354DF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticIntegralInertiaCocycle.lean",
+          "sha256": "5114CFF041C9075E8EBC26C5A1941D393704FC0F285795F7F256D9492DFD6F4A",
+          "oleanSha256": "15280EC3A457DF82DD69831F60FFC733C7B8696A490B815BE24AD8C428FD4352"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPositiveCharacteristicCocycle.lean",
+          "sha256": "E4201ECB33FEF04B334A3252F363AA26B1046ABB452B710C7A9DB29317E4E07E",
+          "oleanSha256": "4001CEF6FC9197045BDC5985A64C9D4B5A9C65424366EBAA91678A71D006478E"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticReduction.subtype_comp_decompRingHom",
+        "Dubon2026.SourceEllipticReduction.residue_comp_decompRingHom",
+        "Dubon2026.SourceEllipticReduction.conjugateModel_map_subtype",
+        "Dubon2026.SourceEllipticReduction.conjugateModel_map_residue",
+        "Dubon2026.SourceEllipticReduction.isUnit_conjugateModel_discriminant",
+        "Dubon2026.SourceEllipticReduction.cocycle_smul_conjugate",
+        "Dubon2026.SourceEllipticReduction.exists_integral_inertia_cocycle",
+        "Dubon2026.SourceEllipticReduction.isUnit_two_three_of_five_le",
+        "Dubon2026.SourceEllipticReduction.exists_integral_inertia_cocycle_of_five_le",
+        "Dubon2026.SourceEllipticReduction.decompRingHom",
+        "Dubon2026.SourceEllipticReduction.conjugateModel"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticReduction.subtype_comp_decompRingHom",
+        "Dubon2026.SourceEllipticReduction.residue_comp_decompRingHom",
+        "Dubon2026.SourceEllipticReduction.conjugateModel_map_subtype",
+        "Dubon2026.SourceEllipticReduction.conjugateModel_map_residue",
+        "Dubon2026.SourceEllipticReduction.isUnit_conjugateModel_discriminant",
+        "Dubon2026.SourceEllipticReduction.cocycle_smul_conjugate",
+        "Dubon2026.SourceEllipticReduction.exists_integral_inertia_cocycle",
+        "Dubon2026.SourceEllipticReduction.isUnit_two_three_of_five_le",
+        "Dubon2026.SourceEllipticReduction.exists_integral_inertia_cocycle_of_five_le"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticReduction.decompRingHom",
+        "Dubon2026.SourceEllipticReduction.conjugateModel"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralInertiaCocycleAudit3.log",
+      "logSha256": "48E4AD13AB5E906D8CFD75C07C80321B8B91EB0F29F949F483B84D3095721ECE",
+      "auditSha256": "EAD856D8974702A2D21AEC238FF47BE901862DC225E8EDE378723D9A6CD645F1",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 15,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 14,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralInertiaCocycleDependencyAudit3.log",
+      "dependencyAuditSha256": "37EA02251DBD8E2C0443CDFA4BB7406AC0C6CB2224123BD3B725A8304459A7D0",
+      "dependencyAuditSourceSha256": "ACBD4E722878AA6DB765490CED9298FF6A6A0707935C388A242B8C8177FF8B66",
+      "consumers": [
+        "Dubon2026.SourceEllipticReduction.exists_integral_inertia_cocycle_of_five_le"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "The actual field automorphism is restricted to its stabilized valuation ring, and its coefficient conjugation reduces to the original equation for inertia. For a literal good model of the original curve, the Galois coordinate-change cocycle is proved to carry the conjugate model to that model, then is lifted to an integral coordinate change. Its residue change stabilizes the actual residue equation. The public characteristic-at-least-five consumer derives the unit-two and unit-three requirements from the actual constant-field algebra on the valuation ring; these are no longer supplied hypotheses.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Equivariance of this derived residue action with the actual prime-to-characteristic torsion-point reduction still needs assembly. A place over each prescribed j-value, full residue-stabilizer realization, place-fiber comparison and orbit counts remain. Reverse genus, modular-curve good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-integral-inertia-cocycle-3-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "A2F064A929CA336417E20CC17971E7141D0DC33E14D1F0BDB0C63066589276D5"
+    },
+    {
+      "recordedUTC": "2026-10-23T21:51:47.414535+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticInverseCoordinateNaturality",
+        "SourceEllipticInverseCoordinateResidue",
+        "SourceEllipticInertiaPointReduction",
+        "SourceEllipticModelTorsionReduction",
+        "SourceEllipticGaloisTorsionMap",
+        "SourceEllipticModelTorsionEquivariance",
+        "SourceEllipticActualInertiaTorsionReduction"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticInverseCoordinateNaturality.lean",
+          "sha256": "6455288881FC2AF05F89C728DE27D24577E32AA9D053BE8A8CE6B5C66D5E91F2",
+          "oleanSha256": "ECE4A703BC6B4B5D2BB48A1C6AE95773E36242357662DD9492B0DD7A64FE082B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticInverseCoordinateResidue.lean",
+          "sha256": "310241491E3077B8189A549AA80FD0E24D276DD1286B573D82A3852836485AB2",
+          "oleanSha256": "B17E355CE6F9DBC1671C087D37FE4F830056B4A963A2BD7D6A226EC4B39269BA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticInertiaPointReduction.lean",
+          "sha256": "179B0163471347EC1F354F6F02182E0FDF2BCA0BA19F5A1C5F1086174CC0A480",
+          "oleanSha256": "AEE883B8E6A2AD36B0F253BD06DDEEB0FC8EC5C702F3DA75E4B4434DC08AA419"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticModelTorsionReduction.lean",
+          "sha256": "29BF153B3674E5BDB969D9053FDEADD8E308F071CC8748E7C9839BC869EB8558",
+          "oleanSha256": "8633717EA315F0EBC4925F373781DE2D97BE857AD81ED7F37EBD08B276593DB2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticGaloisTorsionMap.lean",
+          "sha256": "5C26E17AF319B0900FC7863061D6E7B8A6324CB9BCC4BAEC9F6AA7BAD90CA240",
+          "oleanSha256": "49A45C80A9AD92D98AFB3CF49E131BC8F29A2E878187199422A72EB292902E96"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticModelTorsionEquivariance.lean",
+          "sha256": "B4529061783DCD6824D3055BE00F4080F0B7D1E2B585B63A820FAF575E4AE44D",
+          "oleanSha256": "A7B06B79E89A73685D95ED5CC5F6B7E8A057266709AC996066368D3FC74E683A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticActualInertiaTorsionReduction.lean",
+          "sha256": "88EE7CC0F168CF566167CB2FB8D7CD949978248D67AFAB794201EBBBB72FD853",
+          "oleanSha256": "47B85EE13892691BEBC517FC7E744092F1165F284992DD2EBCA353CA68BAC2D2"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticReduction.vcXInv_mul",
+        "Dubon2026.SourceEllipticReduction.vcYInv_mul",
+        "Dubon2026.SourceEllipticReduction.map_vcXInv",
+        "Dubon2026.SourceEllipticReduction.map_vcYInv",
+        "Dubon2026.SourceEllipticReduction.coe_map_u_inv",
+        "Dubon2026.SourceEllipticReduction.vcXInv_map_subtype",
+        "Dubon2026.SourceEllipticReduction.vcYInv_map_subtype",
+        "Dubon2026.SourceEllipticReduction.vcXInv_mem",
+        "Dubon2026.SourceEllipticReduction.vcYInv_mem",
+        "Dubon2026.SourceEllipticReduction.residue_vcXInv",
+        "Dubon2026.SourceEllipticReduction.residue_vcYInv",
+        "Dubon2026.SourceEllipticReduction.reducePoint_inertia_coordinates",
+        "Dubon2026.SourceEllipticReduction.modelPointEquiv_coords",
+        "Dubon2026.SourceEllipticReduction.modelTorsionReduction_apply",
+        "Dubon2026.SourceEllipticReduction.modelTorsionReduction_injective",
+        "Dubon2026.SourceEllipticReduction.galoisTorsionMap_apply",
+        "Dubon2026.SourceEllipticReduction.modelReduction_inertia_of_torsion",
+        "Dubon2026.SourceEllipticReduction.modelTorsionReduction_inertia",
+        "Dubon2026.SourceEllipticReduction.exists_actual_inertia_torsion_reduction",
+        "Dubon2026.SourceEllipticReduction.modelPointEquiv",
+        "Dubon2026.SourceEllipticReduction.modelTorsionMap",
+        "Dubon2026.SourceEllipticReduction.modelTorsionReduction",
+        "Dubon2026.SourceEllipticReduction.galoisTorsionMap"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticReduction.vcXInv_mul",
+        "Dubon2026.SourceEllipticReduction.vcYInv_mul",
+        "Dubon2026.SourceEllipticReduction.map_vcXInv",
+        "Dubon2026.SourceEllipticReduction.map_vcYInv",
+        "Dubon2026.SourceEllipticReduction.coe_map_u_inv",
+        "Dubon2026.SourceEllipticReduction.vcXInv_map_subtype",
+        "Dubon2026.SourceEllipticReduction.vcYInv_map_subtype",
+        "Dubon2026.SourceEllipticReduction.vcXInv_mem",
+        "Dubon2026.SourceEllipticReduction.vcYInv_mem",
+        "Dubon2026.SourceEllipticReduction.residue_vcXInv",
+        "Dubon2026.SourceEllipticReduction.residue_vcYInv",
+        "Dubon2026.SourceEllipticReduction.reducePoint_inertia_coordinates",
+        "Dubon2026.SourceEllipticReduction.modelPointEquiv_coords",
+        "Dubon2026.SourceEllipticReduction.modelTorsionReduction_apply",
+        "Dubon2026.SourceEllipticReduction.modelTorsionReduction_injective",
+        "Dubon2026.SourceEllipticReduction.galoisTorsionMap_apply",
+        "Dubon2026.SourceEllipticReduction.modelReduction_inertia_of_torsion",
+        "Dubon2026.SourceEllipticReduction.modelTorsionReduction_inertia",
+        "Dubon2026.SourceEllipticReduction.exists_actual_inertia_torsion_reduction"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticReduction.modelPointEquiv",
+        "Dubon2026.SourceEllipticReduction.modelTorsionMap",
+        "Dubon2026.SourceEllipticReduction.modelTorsionReduction",
+        "Dubon2026.SourceEllipticReduction.galoisTorsionMap"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceActualInertiaTorsionReductionAudit7R2.log",
+      "logSha256": "2593BAC79F63D3EBAE9D47213830F1A28C543D3974A9489A3BA31E1E4E772335",
+      "auditSha256": "88F1BD7CD699DBFC14FEE24B9BF0C77466FDCCE3F3A8499EEAF508E4D96226CC",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 39,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 28,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceActualInertiaTorsionReductionDependencyAudit7R2.log",
+      "dependencyAuditSha256": "FBB3BD08ED6DCB52B97F913428E3A8D0FC7D768711E50B3AF407B0569C6D1BAC",
+      "dependencyAuditSourceSha256": "9DFB9D8A9EE3BA591024780ED6C44410D4F508F909D2633131CF6B1D6CA7BC82",
+      "consumers": [
+        "Dubon2026.SourceEllipticReduction.exists_actual_inertia_torsion_reduction"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "Actual original-curve N-torsion has an injective additive reduction map through the specified good model. The original Galois point map is equivariant with the derived integral coordinate-change cocycle and its residue action. Point-coordinate integrality comes from the proved division-polynomial theorem, and the unit-N premise comes from N nonzero in the constant field. Units two and three, the integral cocycle and residue-model stabilization are derived by the preceding positive-characteristic consumer.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The finite Galois field and place over each prescribed j-value still need joint assembly. Faithfulness and full residue-stabilizer realization, place-fiber comparison and orbit counts remain. Reverse genus, modular-curve good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-actual-inertia-torsion-reduction-7-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "B7AC11D4DDD7FCC907DB592536B359187A4A045EA73579F9E69FF056FF3D3895"
+    },
+    {
+      "recordedUTC": "2026-10-23T22:00:07.086199+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticTrivialInertiaTorsion",
+        "SourceEllipticDivisionFieldRestriction",
+        "SourceEllipticFullTorsionFieldExtension",
+        "SourceEllipticFaithfulGoodModelField",
+        "SourceEllipticFaithfulTorsionModel"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticTrivialInertiaTorsion.lean",
+          "sha256": "70EA5C8D934678FB0F60142936DCE743CAC23F7C32B39A13DA8CBC83FA20066D",
+          "oleanSha256": "42A90CFF2DD490BB29064DA4A17F1C98E0357F39A336F8D789BD1977E34E0866"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticDivisionFieldRestriction.lean",
+          "sha256": "098592C76B464084902CB45081817689C96161BB760DB91AE5D9960ED136E196",
+          "oleanSha256": "E455A7DA5F724AF91EEEF3AF5F70C2F0C35D24A36D09F5F995737A2A88C76CBE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticFullTorsionFieldExtension.lean",
+          "sha256": "FD278A0B66BB76467B6E1710A978880894623C344E91FB6F100813D18E9FCF04",
+          "oleanSha256": "4BF2B106A4CA73C7CA2738552C7A96E294BBB1332024FBD6AA5D1EEE86036FCB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticFaithfulGoodModelField.lean",
+          "sha256": "E9AFFABCD47DC2E0400E44E299CF7BFD6CB60981A71FAB761DCF4FB211B0FCBF",
+          "oleanSha256": "05B27B47DFE81A960E63EC3BB9E418F9E118137D69D905418BF8EF69DCA700EF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticFaithfulTorsionModel.lean",
+          "sha256": "15B9A10BD2576156C71CF739267D7458EBEB3ED564CF26E9BFB011471A77B0F9",
+          "oleanSha256": "05BB38C2F332F0166A5F7BAC1F91E5749A4F437A50F66F4DBBAE1716BF7C1DC6"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticReduction.vcInvFun_one_heq",
+        "Dubon2026.SourceEllipticReduction.galois_fixes_torsion_of_residue_cocycle_one",
+        "Dubon2026.SourceEllipticDivisionField.fixes_division_field_of_fixes_torsion",
+        "Dubon2026.SourceEllipticDivisionField.card_torsion_of_containing_full_field",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_good_model_field",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_torsion_model"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticReduction.vcInvFun_one_heq",
+        "Dubon2026.SourceEllipticReduction.galois_fixes_torsion_of_residue_cocycle_one",
+        "Dubon2026.SourceEllipticDivisionField.fixes_division_field_of_fixes_torsion",
+        "Dubon2026.SourceEllipticDivisionField.card_torsion_of_containing_full_field",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_good_model_field",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_torsion_model"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulTorsionModelAudit5.log",
+      "logSha256": "B61BC367BA29C140C188E8BBD65A77AAE5AC77E94B600186445D41BADE19F8F7",
+      "auditSha256": "6AA4EE9A99AE4035A41914F3D597D02F522EF22D3456747FDA1D2D8DBCFFB4B2",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 9,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 14,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulTorsionModelDependencyAudit5.log",
+      "dependencyAuditSha256": "7788CCF90037E39711994CB1A50A24AB0E9A6B8ADE4CDE40825F1DE4F44A4DA6",
+      "dependencyAuditSourceSha256": "B75E70633DF12856B264ABE32C1E6223CD234C37D036823C26424386C1B0ADE5",
+      "consumers": [
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_torsion_model"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "One actual finite Galois compositum contains all N-squared torsion points and the explicit Legendre good-model field. Injective reduction and actual Galois equivariance imply that identity residue action fixes prime-to-characteristic torsion. Division-field and Legendre-generator faithfulness then force the field automorphism itself to be the identity. The final constant-field consumer also supplies the actual injective additive torsion reduction and derives every unit-two, unit-three and unit-N premise.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The finite field must still be paired with a place over each prescribed j-value and the model transported to the prescribed residue curve. Full residue-stabilizer realization, place-fiber comparison and orbit counts remain. Reverse genus, modular-curve good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-faithful-torsion-model-5-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "79E925A09D3887D8AE4643FE28673586376D6E31BAEEAEFB365BA3B861692E39"
+    },
+    {
+      "recordedUTC": "2026-10-23T22:07:59.100972+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceCurveFiniteValuePlace",
+        "SourceCurveClosedConstantResidue",
+        "SourceRatFuncGaloisCoordinate",
+        "SourceRatFuncFiniteValueSpecialization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFiniteValuePlace.lean",
+          "sha256": "80211D2A69C2A403C3D738F7144BD66574AD050242063F7165732B911EAF5BDD",
+          "oleanSha256": "0E5A64E380C77FC8ECB4040E0A01351D065219B0E193E605234F20C6751DDB0D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveClosedConstantResidue.lean",
+          "sha256": "1BBD9D7A2E545963C9E4D49DED2F6BA00A581D859C839AF82AB76A25FA52A82B",
+          "oleanSha256": "D320BC5871BB2A3146CB17CA5B05C0AEB66FD44666377173B2FECE1F7A5BC45A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRatFuncGaloisCoordinate.lean",
+          "sha256": "6CF2CD455DFF85191773C4CB9572DBA6E4EADF20D09942445CC893C85661AB49",
+          "oleanSha256": "C8BF5E832928318AB3F55F47C6B1A13AABFFBF34D528BCD78EF5A27909A6EC59"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRatFuncFiniteValueSpecialization.lean",
+          "sha256": "1BF4D2E69A7EF3F6D970B3A867900AC00F4917898066DA91BC2A7E898A5437EA",
+          "oleanSha256": "C5E6025F5B0F8EB651A0FA3E138A0E5130F928C6E365741B279DA54FDC2E633C"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.exists_place_over_finite_value",
+        "Dubon2026.SourceCurve.Place.residueConstantEquiv_algebraMap",
+        "Dubon2026.SourceCurve.Place.residueConstantMap_algebraMap",
+        "Dubon2026.SourceCurve.Place.residueConstantMap_coordinate",
+        "Dubon2026.SourceCurve.Place.mem_inertia_of_decomposition_of_finite_coordinate",
+        "Dubon2026.SourceCurve.rationalCoordinate_transcendental",
+        "Dubon2026.SourceCurve.rationalFunction_mem_coordinateField",
+        "Dubon2026.SourceCurve.finite_galois_coordinateField",
+        "Dubon2026.SourceCurve.exists_rational_specialization_place",
+        "Dubon2026.SourceCurve.Place.residueConstantEquiv",
+        "Dubon2026.SourceCurve.Place.residueConstantMap",
+        "Dubon2026.SourceCurve.rationalCoordinateMap"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.exists_place_over_finite_value",
+        "Dubon2026.SourceCurve.Place.residueConstantEquiv_algebraMap",
+        "Dubon2026.SourceCurve.Place.residueConstantMap_algebraMap",
+        "Dubon2026.SourceCurve.Place.residueConstantMap_coordinate",
+        "Dubon2026.SourceCurve.Place.mem_inertia_of_decomposition_of_finite_coordinate",
+        "Dubon2026.SourceCurve.rationalCoordinate_transcendental",
+        "Dubon2026.SourceCurve.rationalFunction_mem_coordinateField",
+        "Dubon2026.SourceCurve.finite_galois_coordinateField",
+        "Dubon2026.SourceCurve.exists_rational_specialization_place"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.Place.residueConstantEquiv",
+        "Dubon2026.SourceCurve.Place.residueConstantMap",
+        "Dubon2026.SourceCurve.rationalCoordinateMap"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceRationalSpecializationAudit4.log",
+      "logSha256": "260A9384D36F41C0AC3AF63EDA5641E0FD2332673B3E8971E47C282D6FA5B5E9",
+      "auditSha256": "F56D158C98277C1B173C7491E078AC793E24A7FADCBDCC999235FA953E27EC5C",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 23,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 16,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceRationalSpecializationDependencyAudit4.log",
+      "dependencyAuditSha256": "76CAA661BE5F4150D37AB74E59A2C8996B31BCB2C4279ACA4FF6ADCB11BDDD7B",
+      "dependencyAuditSourceSha256": "07D7D35188376D6442599B3B5357437CC30068FE1295C3DFCE72E0E331D6EF5F",
+      "consumers": [
+        "Dubon2026.SourceCurve.exists_rational_specialization_place"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "The actual finite Galois rational-function extension has a place over every prescribed finite value. Its residue field is identified with the algebraically closed constant field, its original coordinate reduces to that value, and every decomposition-group element lies in inertia. Existence, residue rationality and the constant field action are all proved from existing local degree and coordinate theorems.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The derived place must be assembled with the faithful torsion model and the reduced model transported to the prescribed elliptic curve. Full residue-stabilizer realization, place-fiber comparison and orbit counts remain. Reverse genus, modular-curve good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-rational-specialization-4-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "188549C085B9BBF94A7ADBF4B456D45DAB25BF645913686B8271D3DD207BC9A5"
+    },
+    {
+      "recordedUTC": "2026-10-23T22:17:31.393855+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticGoodModelResidueJ",
+        "SourceEllipticSpecializationFieldPlace",
+        "SourceEllipticOfJSpecialization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticGoodModelResidueJ.lean",
+          "sha256": "8CA8367AEB142CA9DF7F1EB2EFCB4B747CFC47EF812A88A49C39C4B787A3FD98",
+          "oleanSha256": "04D4DE9B8D54C50E8739B092A1A8C981C7995872C70635AA15A58F930DF55971"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticSpecializationFieldPlace.lean",
+          "sha256": "2CA4D3B11D9D691A738AA253ED53A7EA029B676090C7C36624314DA299960CEC",
+          "oleanSha256": "29860F2197382578C00C11307C41B08E0A8CC9C0D284C9E220929B956452E864"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOfJSpecialization.lean",
+          "sha256": "61FEA5378B593CAC24871374B3340940A90A06297F3BD767DFDA1261225D3C34",
+          "oleanSha256": "7C75812605039333A1BED0EAF9D18DF49647E1F401A746B62B10A661B9598A4B"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticReduction.goodModel_integral_j",
+        "Dubon2026.SourceEllipticReduction.goodModel_residue_j",
+        "Dubon2026.SourceEllipticReduction.exists_prescribed_residue_model_change",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_specialization_field_place",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_ofJ_specialization"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticReduction.goodModel_integral_j",
+        "Dubon2026.SourceEllipticReduction.goodModel_residue_j",
+        "Dubon2026.SourceEllipticReduction.exists_prescribed_residue_model_change",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_specialization_field_place",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_ofJ_specialization"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOfJSpecializationAudit3.log",
+      "logSha256": "AE0A3C366C77FBDF1D9BAC4C6627DB79CE3BCF4B3F5A478911AD6EA76F4E62B0",
+      "auditSha256": "A625E874586BBD22D3D59184C335026DC5CF45E2AC054B912A02130028869B5D",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 6,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 11,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOfJSpecializationDependencyAudit3.log",
+      "dependencyAuditSha256": "12AA4D65C567A3A34774DAF8D9FD42E87E7A825A52F06E8B8C24AF8870F869EC",
+      "dependencyAuditSourceSha256": "3FF14745B185DCE840895DFE034EE1A714DBAA07F063E860CC59E45527833537",
+      "consumers": [
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_ofJ_specialization"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "The actual source curve ofJ(X) has a derived finite Galois field containing all N-squared torsion points, an actual place over the prescribed residue j-invariant, a good model, and an explicit coordinate change from that reduced model to the prescribed elliptic curve. Its original N-torsion reduction remains injective and equivariant under decomposition-group elements, and identity residue action forces the field automorphism to be identity. The generic j premise and reduced model j identification are proved. Field choice, place existence, residue identification and faithful action are not supplied certificates.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The action must still be transported through the displayed residue-curve isomorphism and proved to realize the full elliptic stabilizer up to sign. The genuine group-homomorphism law is in progress. Place-fiber comparison, exceptional-fiber orbit counts, reverse genus, modular-curve good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-ofj-specialization-3-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "46E97FF8CE5D97691619ADE52F2EF7883197D087C8C83E44B0946FFB776C4D8B"
+    },
+    {
+      "recordedUTC": "2026-10-23T22:22:24.752498+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticResidueCocycleMultiplication",
+        "SourceEllipticChosenInertiaCocycle",
+        "SourceEllipticResidueInertiaHom",
+        "SourceEllipticFaithfulSpecializationHom"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticResidueCocycleMultiplication.lean",
+          "sha256": "B5E608B32FE3771191C6D930028E87A8010DE4FFC21D30B9154AA565BDF7FC56",
+          "oleanSha256": "385A29C8FBDAFC57803A9C7BF248BA23B16B49DAB1FE2BACCF55F7666DF67D4F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticChosenInertiaCocycle.lean",
+          "sha256": "B0BCB0596FE9DB3B9DEF5D16493A486E7C41230BC6FD8BD14378880DA41AC840",
+          "oleanSha256": "6C5B6A439DE33C06B366420A7C191741AB44D3D3B1DFFB5A9509B9F3695E4554"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticResidueInertiaHom.lean",
+          "sha256": "1C10A34127A934B70B7D7060060D17328AD6C6978EC82EE424077F08DBDFE0B1",
+          "oleanSha256": "81590978D6D2246AD18B2C10EFD1B1566D1B69519C3E4B884FB3E669F3EAD789"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticFaithfulSpecializationHom.lean",
+          "sha256": "53DDFB47739D0D4D805DE19EF6B2748F0B6B15F817FD17C8A51AF1B61886AA28",
+          "oleanSha256": "2789D3C6ED8C253D31E0281367D5AA38A00DC982E9B2E3BAF7B1C93B51DAE489"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticReduction.residue_cocycle_mul",
+        "Dubon2026.SourceEllipticReduction.integralInertiaCocycle_generic",
+        "Dubon2026.SourceEllipticReduction.integralInertiaCocycle_residue_stabilizes",
+        "Dubon2026.SourceEllipticReduction.integralInertiaCocycle_residue_mul",
+        "Dubon2026.SourceEllipticReduction.residueInertiaHom_eq_map",
+        "Dubon2026.SourceEllipticReduction.residueInertiaHom_stabilizes",
+        "Dubon2026.SourceEllipticReduction.residueInertiaHom_torsion_equivariance",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_ofJ_inertia_hom",
+        "Dubon2026.SourceEllipticReduction.integralInertiaCocycle",
+        "Dubon2026.SourceEllipticReduction.residueInertiaHom"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticReduction.residue_cocycle_mul",
+        "Dubon2026.SourceEllipticReduction.integralInertiaCocycle_generic",
+        "Dubon2026.SourceEllipticReduction.integralInertiaCocycle_residue_stabilizes",
+        "Dubon2026.SourceEllipticReduction.integralInertiaCocycle_residue_mul",
+        "Dubon2026.SourceEllipticReduction.residueInertiaHom_eq_map",
+        "Dubon2026.SourceEllipticReduction.residueInertiaHom_stabilizes",
+        "Dubon2026.SourceEllipticReduction.residueInertiaHom_torsion_equivariance",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_ofJ_inertia_hom"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticReduction.integralInertiaCocycle",
+        "Dubon2026.SourceEllipticReduction.residueInertiaHom"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulInertiaHomAudit4.log",
+      "logSha256": "C535AAB175DD3ADD89ED0C192C893A49F8833A52B067DB44D1B760CDD2714632",
+      "auditSha256": "1D79F880C4A5C3EEA9FAB35E5E66356D1C6359D8A40B0FAA209CD6E62CF48FCB",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 24,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 16,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulInertiaHomDependencyAudit4.log",
+      "dependencyAuditSha256": "BB26AB4304AD5C3D19D338E4DD4FDD80585EA33AFFD138F6B038EF267963572B",
+      "dependencyAuditSourceSha256": "0D1E488E2F1C2595CF1F549546FADF82C084EDEC75703410CE02A3738F54B60F",
+      "consumers": [
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_ofJ_inertia_hom"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "The actual ofJ(X) specialization has an injective homomorphism from the actual inertia subgroup to coordinate changes stabilizing the literal residue curve. Its action intertwines the original Galois torsion map and actual reduction. The generic coordinate cocycle, integral lift, residue multiplication law and kernel triviality are all proved. Agreement with every integral lift of the same generic cocycle proves that the action does not depend on a supplied choice certificate.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Transport of this faithful homomorphism and its point action through the displayed residue-field and residue-curve identifications remains. Full elliptic stabilizer image up to sign, place-fiber comparison, exceptional-fiber orbit counts, reverse genus, modular-curve good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-faithful-inertia-hom-4-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "00EB334FA48A7AFB71681ABE9FC202DA7449E3912F6E2FD32E81F2B4132647A3"
+    },
+    {
+      "recordedUTC": "2026-10-23T22:31:56.894871+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticResidueCurvePointEquiv",
+        "SourceEllipticResidueActionConjugacy",
+        "SourceEllipticResidueConjugateHom",
+        "SourceEllipticPrescribedInertiaAction"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticResidueCurvePointEquiv.lean",
+          "sha256": "0884CB8E65FEF0073F007CC3AB4F3891902B3DBB42C8DC5FBFAD13E4F121CE84",
+          "oleanSha256": "B0082CEBA6567BA32ECA106D2F0BDC6A23D030CE1496E4E66B4D9B4760B5EC15"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticResidueActionConjugacy.lean",
+          "sha256": "1737BF9A9A513770E3397B2FC30B5E2E6BB7681C6CA847CEA7134514E38F16B4",
+          "oleanSha256": "CCB9D81F917AC658F211450CD622079AC3804F1098AC21C3FE8E639664EF79A0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticResidueConjugateHom.lean",
+          "sha256": "CC684660509BEF5AFE793C569458086CA1B7DC9B2599FE5FAED7E0060F87F36B",
+          "oleanSha256": "38A549AED019B62F89CD020B693CFFCBCF182E976044DC49479374441433AFDE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPrescribedInertiaAction.lean",
+          "sha256": "848B876B9DE58A4AFE0714E904FED1C9CE91C2815B55D6D4D8D803C5C41F7E2A",
+          "oleanSha256": "B42D478B5F9500C8F563FB4F6576E3254071FA044654ED0A7B61DE96087FC75D"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticReduction.pointMapHom_surjective_of_equiv",
+        "Dubon2026.SourceEllipticReduction.residueCurvePointEquiv_some",
+        "Dubon2026.SourceEllipticReduction.residueCurvePointEquiv_some_coordinates",
+        "Dubon2026.SourceEllipticReduction.residueConjugate_stabilizes",
+        "Dubon2026.SourceEllipticReduction.residueCurvePointEquiv_equivariant",
+        "Dubon2026.SourceEllipticReduction.residueConjugateHom_injective",
+        "Dubon2026.SourceEllipticReduction.residueConjugateHom_stabilizes",
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action",
+        "Dubon2026.SourceEllipticReduction.pointFieldEquiv",
+        "Dubon2026.SourceEllipticReduction.residueCurvePointEquiv",
+        "Dubon2026.SourceEllipticReduction.residueConjugateHom"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticReduction.pointMapHom_surjective_of_equiv",
+        "Dubon2026.SourceEllipticReduction.residueCurvePointEquiv_some",
+        "Dubon2026.SourceEllipticReduction.residueCurvePointEquiv_some_coordinates",
+        "Dubon2026.SourceEllipticReduction.residueConjugate_stabilizes",
+        "Dubon2026.SourceEllipticReduction.residueCurvePointEquiv_equivariant",
+        "Dubon2026.SourceEllipticReduction.residueConjugateHom_injective",
+        "Dubon2026.SourceEllipticReduction.residueConjugateHom_stabilizes",
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticReduction.pointFieldEquiv",
+        "Dubon2026.SourceEllipticReduction.residueCurvePointEquiv",
+        "Dubon2026.SourceEllipticReduction.residueConjugateHom"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrescribedInertiaActionAudit4.log",
+      "logSha256": "CDFA5D55FAF29BE23EF16237BC59C733B1A12F5C5716B4867E2AF953175274DC",
+      "auditSha256": "A2214CE31794AA36CCE6D8618717802B02F28F030AFC5B2B2E64FE4CA596A9AA",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 12,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 20,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrescribedInertiaActionDependencyAudit4.log",
+      "dependencyAuditSha256": "59B65C6CF6CC52BF8CF3A42759761CF1AA2875484498C2A2BA7566D0124C630B",
+      "dependencyAuditSourceSha256": "ED8FF244D58787D2BF7D844822FBC13BEBED113C3075C875856CCBA1C10A1C80",
+      "consumers": [
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "The actual ofJ(X) finite Galois specialization now has an injective torsion reduction map into the prescribed elliptic curve and an injective inertia homomorphism into that curve's actual coordinate-change stabilizer. Exact coordinate conjugacy proves equivariance, including the point at infinity. The original integral generic-coordinate cocycle is retained. Neither point transport, action compatibility nor faithfulness is assumed.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Full elliptic stabilizer image up to sign, the actual cyclic-subgroup specialization bijection, place-fiber comparison, exceptional-fiber orbit counts, reverse genus, modular-curve good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-prescribed-inertia-action-4-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "0DC5FFE2D8D1E7AE71E0F65817B7AB2F131B51ACF73E43E641ACFCF7864AA8DE"
+    },
+    {
+      "recordedUTC": "2026-10-23T22:44:12.990018+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticSpecializationTorsionRange",
+        "SourceEllipticCyclicTorsionSpecialization",
+        "SourceEllipticPrescribedCyclicSpecialization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticSpecializationTorsionRange.lean",
+          "sha256": "4FD27F762AEB325226F0F27A70B5A0E936FAA0330D766B92D36EED6B533F782C",
+          "oleanSha256": "92893EEEBF64DFE00D756EABCC408C6BE8190F50C7DF8F9D7CC49D47E33EB330"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCyclicTorsionSpecialization.lean",
+          "sha256": "16F11C1D41D8065751BCE61FBD8B9D9958231FE85B1BEAD19E0631F0F24212B6",
+          "oleanSha256": "FE4B83807EBC417C8C5A37E4FD9A25FBCEF636ABB67C4CC026A4ED20115E105B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPrescribedCyclicSpecialization.lean",
+          "sha256": "DE7E301602A7B3C24181F31305A70C3D2CE4610ED079303845A58FB3EE22406B",
+          "oleanSha256": "0DD61218F177D3213AEAB6DFAD317F5B2581C76910A739C4F028933EB01A21F7"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticReduction.torsionTargetMap_injective",
+        "Dubon2026.SourceEllipticReduction.torsionTargetMap_surjective_of_full_card",
+        "Dubon2026.SourceEllipticReduction.torsion_mem_specialization_range",
+        "Dubon2026.SourceEllipticReduction.cyclicTorsionSpecializationEquiv_apply_coe",
+        "Dubon2026.SourceEllipticReduction.mem_ellipticCyclicSpecializationEquiv",
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_cyclic_specialization",
+        "Dubon2026.SourceEllipticReduction.torsionTargetMap",
+        "Dubon2026.SourceEllipticReduction.cyclicTorsionSpecializationEquiv",
+        "Dubon2026.SourceEllipticReduction.ellipticCyclicSpecializationEquiv"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticReduction.torsionTargetMap_injective",
+        "Dubon2026.SourceEllipticReduction.torsionTargetMap_surjective_of_full_card",
+        "Dubon2026.SourceEllipticReduction.torsion_mem_specialization_range",
+        "Dubon2026.SourceEllipticReduction.cyclicTorsionSpecializationEquiv_apply_coe",
+        "Dubon2026.SourceEllipticReduction.mem_ellipticCyclicSpecializationEquiv",
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_cyclic_specialization"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticReduction.torsionTargetMap",
+        "Dubon2026.SourceEllipticReduction.cyclicTorsionSpecializationEquiv",
+        "Dubon2026.SourceEllipticReduction.ellipticCyclicSpecializationEquiv"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCyclicSpecializationAudit3.log",
+      "logSha256": "D8944A3D094EA267037C2DE65E6407C51718749369E9BB6A1C45A8E9F0849DFA",
+      "auditSha256": "BAAB72B845628696F6A1052B689737DFE9452FED35F7289B011DFBCC89B2F8F5",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 18,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCyclicSpecializationDependencyAudit3.log",
+      "dependencyAuditSha256": "83DB5087B585E81745D13BF84F7BD00C090A076C205497165C92249B631A1C91",
+      "dependencyAuditSourceSha256": "7F846131BA63D2DB8D9FFF34C0F2EDA69F4AC6C706D4DC49ADB590FA4A3947B4",
+      "consumers": [
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_cyclic_specialization"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "The actual ofJ(X) finite Galois specialization now identifies actual cyclic subgroups of order N with those on the prescribed elliptic curve. Subgroup membership is exactly the image of original torsion points under literal reduction. The derived source N-squared torsion count and the existing target count prove torsion surjectivity, removing any lifting assumption. The faithful actual inertia homomorphism and point equivariance are retained.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Full elliptic stabilizer image up to sign, cyclic orbit and place-fiber comparison, exceptional-fiber orbit counts, reverse genus, modular-curve good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-cyclic-specialization-3-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "64FB19808AABD58971A337608C426489A38C2B0FAFA4FAC457D713CC63360ED8"
+    },
+    {
+      "recordedUTC": "2026-10-23T22:48:44.821213+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticStabilizerScaling",
+        "SourceEllipticStabilizerInvariantBounds",
+        "SourceEllipticStabilizerBoundsFive"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticStabilizerScaling.lean",
+          "sha256": "3002FE9914D902BEC700876DF2FAA941625C5698138C9A118A32DF9AB0527739",
+          "oleanSha256": "2F55D4F34CA23B45D6339F06C31430B34D4E41527641212BDF07AA820B418DEF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticStabilizerInvariantBounds.lean",
+          "sha256": "14059A9E2C18453362D14B1313DF0806D7AADD27B6DB445AD2E04D9B9A4C862F",
+          "oleanSha256": "04B00701C6E2977DDC1E7061139F2CAB4B6F80CE05C27EE051665F3755D9CA74"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticStabilizerBoundsFive.lean",
+          "sha256": "3F7B631184F84B6DBE88307B6169339B631EAD81E2F1AE924F07E75D5EC56883",
+          "oleanSha256": "BDE2C8345CBD3DE8C82B936ADA256CB9F0B514A84D6BF173DC448038B3BC9E44"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticStabilizer.scaling_injective",
+        "Dubon2026.SourceEllipticStabilizer.scaling_pow_of_invariant",
+        "Dubon2026.SourceEllipticStabilizer.scaling_pow_four",
+        "Dubon2026.SourceEllipticStabilizer.scaling_pow_six",
+        "Dubon2026.SourceEllipticStabilizer.scaling_pow_two",
+        "Dubon2026.SourceEllipticStabilizer.finite_and_card_le_of_scaling_power",
+        "Dubon2026.SourceEllipticStabilizer.j_eq_1728_of_c6_eq_zero",
+        "Dubon2026.SourceEllipticStabilizer.c6_ne_zero_of_j_ne_1728",
+        "Dubon2026.SourceEllipticStabilizer.stabilizer_card_le_four",
+        "Dubon2026.SourceEllipticStabilizer.stabilizer_card_le_six",
+        "Dubon2026.SourceEllipticStabilizer.stabilizer_card_le_two",
+        "Dubon2026.SourceEllipticStabilizer.stabilizer_bounds_of_five_le"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticStabilizer.scaling_injective",
+        "Dubon2026.SourceEllipticStabilizer.scaling_pow_of_invariant",
+        "Dubon2026.SourceEllipticStabilizer.scaling_pow_four",
+        "Dubon2026.SourceEllipticStabilizer.scaling_pow_six",
+        "Dubon2026.SourceEllipticStabilizer.scaling_pow_two",
+        "Dubon2026.SourceEllipticStabilizer.finite_and_card_le_of_scaling_power",
+        "Dubon2026.SourceEllipticStabilizer.j_eq_1728_of_c6_eq_zero",
+        "Dubon2026.SourceEllipticStabilizer.c6_ne_zero_of_j_ne_1728",
+        "Dubon2026.SourceEllipticStabilizer.stabilizer_card_le_four",
+        "Dubon2026.SourceEllipticStabilizer.stabilizer_card_le_six",
+        "Dubon2026.SourceEllipticStabilizer.stabilizer_card_le_two",
+        "Dubon2026.SourceEllipticStabilizer.stabilizer_bounds_of_five_le"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceStabilizerBoundsAudit3.log",
+      "logSha256": "B50A3DE088B8688AC03CAA0A1F26B7B55D76975AB282F6D6AA36A12E1EC431D6",
+      "auditSha256": "A3693D66B99567962E55D473B85C7C7262D3013F54F9EAECC5100D4721F70143",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 12,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 20,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceStabilizerBoundsDependencyAudit3.log",
+      "dependencyAuditSha256": "0351FD82F93107DA48F26BDA81F23954A491E4C40C964B5121C7E3A346EBD060",
+      "dependencyAuditSourceSha256": "A9971B732F46D12F531F0F5E428B4DD11D615B3126C4B0225D680ADA88AE0614",
+      "consumers": [
+        "Dubon2026.SourceEllipticStabilizer.stabilizer_bounds_of_five_le"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "For every actual elliptic curve in characteristic at least five, its coordinate-change stabilizer is finite, has at most six elements at j zero, at most four at j 1728 and at most two elsewhere. Native first-three coefficient equations prove scaling injectivity; native c4/c6 transformation laws and roots-of-unity counting give the bounds. No stabilizer classification or bound is assumed.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Full elliptic stabilizer image up to sign, cyclic orbit and place-fiber comparison, exceptional-fiber orbit counts, reverse genus, modular-curve good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-stabilizer-bounds-3-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "3690C7B13F3A4BB9A889AD1B66BBA995FD0FA7D09FDA43E3B1168E9335F50577"
+    },
+    {
+      "recordedUTC": "2026-10-23T22:53:48.345157+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticOfJDiscriminantOrder",
+        "SourceEllipticOfJExceptionalOrders",
+        "SourceEllipticSpecializationOrderBound",
+        "SourceEllipticPrescribedOrderBound"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOfJDiscriminantOrder.lean",
+          "sha256": "10C4D817BFCE6CAD84E742F71294F56CFBEA3DF19A2CAE7F4E8BE611A233A241",
+          "oleanSha256": "E6BF83B3511F3561D0CB84B6EBB53115A9826BBF12E590C19A6253FB1FD040CC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOfJExceptionalOrders.lean",
+          "sha256": "F34CD36F59D036922709E9BA790EDD8B2F415B17CA55B746BF73C7C7FC376A70",
+          "oleanSha256": "0801DF9AA37FA1A7C0FAE62A2F2C56D1C13A12687B2E9C0DB518AE28ED37B4E2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticSpecializationOrderBound.lean",
+          "sha256": "13A6EA89D2668D713F1E65FDCCB852048A90C82BFB21AEB597EDBF626F03510A",
+          "oleanSha256": "7339CA3C4B47CD0D080EADE85EB42C6368A92179B7D678215A47C0001EA661A3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPrescribedOrderBound.lean",
+          "sha256": "CB542528069EA2DFE3E5550CD073EFB6A10A329CF0E2412967C1CC1D2160F245",
+          "oleanSha256": "2DB6369BB004D1179327C58807DF2408D29EA902232F53BAA1FE4673BFC88C91"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticReduction.ofJ_X_baseChange_discriminant",
+        "Dubon2026.SourceEllipticReduction.ofJ_good_model_order_divisibility",
+        "Dubon2026.SourceEllipticReduction.ord_sub_constant_eq_zero_of_pos",
+        "Dubon2026.SourceEllipticReduction.ofJ_exceptional_order_divisibility",
+        "Dubon2026.SourceEllipticReduction.ofJ_specialization_stabilizer_order_bound",
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_order_bound"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticReduction.ofJ_X_baseChange_discriminant",
+        "Dubon2026.SourceEllipticReduction.ofJ_good_model_order_divisibility",
+        "Dubon2026.SourceEllipticReduction.ord_sub_constant_eq_zero_of_pos",
+        "Dubon2026.SourceEllipticReduction.ofJ_exceptional_order_divisibility",
+        "Dubon2026.SourceEllipticReduction.ofJ_specialization_stabilizer_order_bound",
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_order_bound"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceSpecializationOrderAudit4.log",
+      "logSha256": "F4FE061292521C4383901215B13226897EACA3976E4CBBB3B6B724E1F9C7132E",
+      "auditSha256": "66227309744C81ACF3F8AB9164CAA66FFC8CC74A9E03B4B1B5A9FDB06F9E5A2B",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 12,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceSpecializationOrderDependencyAudit4.log",
+      "dependencyAuditSha256": "26DCFF7E39ACE7DDEBBE3611FC7332BD3682FA4E5B5CFCDAA4A46AEEAD79327E",
+      "dependencyAuditSourceSha256": "8A624ED6A134859BF9B6179FC24693570E8CB8FB5752C1C74DE67745DE7ACAF9",
+      "consumers": [
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_order_bound"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "The actual ofJ(X) finite Galois specialization derives the exact order-versus-stabilizer dichotomy from its own good model: the stabilizer has at most the positive specialization order, or at most two elements. The literal discriminant forces twelve dividing twice ord X plus nine times ord(X-1728); existing unequal-order addition gives six dividing the positive order at zero and four at 1728. No discriminant identity, valuation-unit argument, divisibility or stabilizer bound remains assumed. The cyclic-subgroup bijection, literal torsion reduction and faithful equivariant inertia action are retained.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Equality of actual inertia cardinality with normalized place order, full elliptic stabilizer image up to sign, cyclic orbit and place-fiber comparison, exceptional-fiber orbit counts, reverse genus, modular-curve good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-specialization-order-4-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "982E197BB01437FE3B711A7204F25B5080DCF40FF95C59F340061069EA2C79D7"
+    }
+  ],
+  "reviews": [
+    "Tools/source-finite-torsion-field-6-reuse-review-20261023.json",
+    "Tools/source-legendre-good-model-3-reuse-review-20261023.json",
+    "Tools/source-legendre-galois-stage-6-reuse-review-20261023.json",
+    "Tools/source-integral-good-model-change-1-reuse-review-20261023.json",
+    "Tools/source-integral-inertia-cocycle-3-reuse-review-20261023.json",
+    "Tools/source-actual-inertia-torsion-reduction-7-reuse-review-20261023.json",
+    "Tools/source-faithful-torsion-model-5-reuse-review-20261023.json",
+    "Tools/source-rational-specialization-4-reuse-review-20261023.json",
+    "Tools/source-ofj-specialization-3-reuse-review-20261023.json",
+    "Tools/source-faithful-inertia-hom-4-reuse-review-20261023.json",
+    "Tools/source-prescribed-inertia-action-4-reuse-review-20261023.json",
+    "Tools/source-cyclic-specialization-3-reuse-review-20261023.json",
+    "Tools/source-stabilizer-bounds-3-reuse-review-20261023.json",
+    "Tools/source-specialization-order-4-reuse-review-20261023.json"
+  ],
+  "additionalCurrentSearch": {
+    "path": "Tools/faithful-specialization-route-338.json",
+    "sha256": "D9175E65069A82561EFDB9D23A6F7D82557D16158ABA0FDF76E37721E19875C6"
+  },
+  "productionFocusedReceipt7104": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteTorsionFieldDependencyAudit6R2Production7104.log",
+        "sha256": "78062014A5EB74BC36DFD4FDCB138A286C936F7FAC19C99443279CD3CC8AC63A",
+        "requiredProofValueEdges": 29,
+        "consumers": [
+          "Dubon2026.SourceEllipticDivisionField.exists_divisionField"
+        ],
+        "sourceSha256": "72361DCA2835FC9339B24EB33231CC5357B846AE256C12BDB6C59C20857D99C9"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceLegendreGoodModelDependencyAudit3Production7104.log",
+        "sha256": "5B42AEAD591BE5C0C4E6FCE28899F546DBF5BB011531D8CC208C5CC8D4B879BC",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceEllipticLegendre.exists_legendre_good_model"
+        ],
+        "sourceSha256": "3538B57DF557C104C74AD0B81E826B8F394BBEA761A97E49FF1800AF5C17B560"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceLegendreGaloisStageDependencyAudit6Production7104.log",
+        "sha256": "2AC0FB099DCE0D7EFF4B9A27B4824BCA4DD89194CFEE6A27616F846C030C9E6E",
+        "requiredProofValueEdges": 28,
+        "consumers": [
+          "Dubon2026.SourceEllipticLegendreStage.exists_galois_good_model_faithful"
+        ],
+        "sourceSha256": "3C0DA82F8D0BD2E8872754DD42726B67191FC1E2AC6D3069F22AADFDC7CDEF43"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralGoodModelChangeDependencyAudit1Production7104.log",
+        "sha256": "2A721B5150754AE97BA7EE8DD08CDFF9EEA23790C2FA677D8B76285E71E98029",
+        "requiredProofValueEdges": 4,
+        "consumers": [
+          "Dubon2026.SourceEllipticReduction.exists_integral_change_of_good_models"
+        ],
+        "sourceSha256": "BE806C829DA4F0A4DE384FD382C3AD0CCCACDCD04781F6CF8C2D0E79E5B8D7E3"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralInertiaCocycleDependencyAudit3Production7104.log",
+        "sha256": "37EA02251DBD8E2C0443CDFA4BB7406AC0C6CB2224123BD3B725A8304459A7D0",
+        "requiredProofValueEdges": 14,
+        "consumers": [
+          "Dubon2026.SourceEllipticReduction.exists_integral_inertia_cocycle_of_five_le"
+        ],
+        "sourceSha256": "74F86B688A66A438BE02C58C47156DDF60829909CCB3D93A97CECD415752D5F3"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceActualInertiaTorsionReductionDependencyAudit7R2Production7104.log",
+        "sha256": "FBB3BD08ED6DCB52B97F913428E3A8D0FC7D768711E50B3AF407B0569C6D1BAC",
+        "requiredProofValueEdges": 28,
+        "consumers": [
+          "Dubon2026.SourceEllipticReduction.exists_actual_inertia_torsion_reduction"
+        ],
+        "sourceSha256": "B95740BEE6192FE71C0E061F117A6594CF13C7FAEA7E940553ABF4E6F08DE2CE"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulTorsionModelDependencyAudit5Production7104.log",
+        "sha256": "7788CCF90037E39711994CB1A50A24AB0E9A6B8ADE4CDE40825F1DE4F44A4DA6",
+        "requiredProofValueEdges": 14,
+        "consumers": [
+          "Dubon2026.SourceEllipticDivisionField.exists_faithful_torsion_model"
+        ],
+        "sourceSha256": "E501CDBCFB51C51BCAED3635FF5D2BC88691F23C7A643E6E966180EA9E334506"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceRationalSpecializationDependencyAudit4Production7104.log",
+        "sha256": "76CAA661BE5F4150D37AB74E59A2C8996B31BCB2C4279ACA4FF6ADCB11BDDD7B",
+        "requiredProofValueEdges": 16,
+        "consumers": [
+          "Dubon2026.SourceCurve.exists_rational_specialization_place"
+        ],
+        "sourceSha256": "22EAAE91B098D8A14C6D488CFD90F166CA8E6703F9E712103CF8D890FED5D012"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOfJSpecializationDependencyAudit3Production7104.log",
+        "sha256": "12AA4D65C567A3A34774DAF8D9FD42E87E7A825A52F06E8B8C24AF8870F869EC",
+        "requiredProofValueEdges": 11,
+        "consumers": [
+          "Dubon2026.SourceEllipticDivisionField.exists_faithful_ofJ_specialization"
+        ],
+        "sourceSha256": "6C220AFAD13B5CF80FC1C02601D5A3D1A3E49CD6627CD628C583EA517B27137F"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulInertiaHomDependencyAudit4Production7104.log",
+        "sha256": "BB26AB4304AD5C3D19D338E4DD4FDD80585EA33AFFD138F6B038EF267963572B",
+        "requiredProofValueEdges": 16,
+        "consumers": [
+          "Dubon2026.SourceEllipticDivisionField.exists_faithful_ofJ_inertia_hom"
+        ],
+        "sourceSha256": "AAF55C861618AA29120B6698F4AD2E7F0C5C4380B6D201FA0058FA6CF35DD8FB"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrescribedInertiaActionDependencyAudit4Production7104.log",
+        "sha256": "59B65C6CF6CC52BF8CF3A42759761CF1AA2875484498C2A2BA7566D0124C630B",
+        "requiredProofValueEdges": 20,
+        "consumers": [
+          "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action"
+        ],
+        "sourceSha256": "1F914DB8CE614FA0BBBC69DBF24D6C88BA21C6B99D13964B241F440409088466"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCyclicSpecializationDependencyAudit3Production7104.log",
+        "sha256": "83DB5087B585E81745D13BF84F7BD00C090A076C205497165C92249B631A1C91",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_cyclic_specialization"
+        ],
+        "sourceSha256": "816F81F35425A40AD2B91100347DC21A12EF37660D49D98B269C96E0A1806721"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceStabilizerBoundsDependencyAudit3Production7104.log",
+        "sha256": "0351FD82F93107DA48F26BDA81F23954A491E4C40C964B5121C7E3A346EBD060",
+        "requiredProofValueEdges": 20,
+        "consumers": [
+          "Dubon2026.SourceEllipticStabilizer.stabilizer_bounds_of_five_le"
+        ],
+        "sourceSha256": "CE879322130A436521B6C5D9B3A28F91558F4BD07AFCB09C82316311325A9DF9"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceSpecializationOrderDependencyAudit4Production7104.log",
+        "sha256": "26DCFF7E39ACE7DDEBBE3611FC7332BD3682FA4E5B5CFCDAA4A46AEEAD79327E",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_order_bound"
+        ],
+        "sourceSha256": "6ECF9C8450E199C98D49CFCAB5BB6DA330A01C3FD0CF10C2A748B204570EED6C"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationProductionAudit7104.log",
+    "sha256": "0FCC948A803C11C20D160780C7E63294E3752FCE5A1153826949274D3C924792",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-faithful-specialization-production-build-7104.log",
+    "aggregateSha256": "2AC699AE7C01D817D09674AFDA0F18CA83BC436AA8318BB227A742D9664A78A4",
+    "productionModules": 7104,
+    "incrementModules": 56,
+    "axiomChecks": 162,
+    "exhaustiveIncrementTheorems": 234,
+    "linterScopes": 56,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 235,
+    "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The original finite Galois fields, places, good models, torsion points, cyclic subgroups, coordinate changes and inertia groups retain their definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 235,
+      "scratchDistinct": 235,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 234,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {
+        "WeierstrassCurve.baseChange.eq_1": [
+          {
+            "scope": "SourceFaithfulSpecializationScratchOwnership338For7104",
+            "module": "Dubon2026.SourceEllipticOfJDiscriminantOrder"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceEllipticSeparableCoordinates",
+            "SourceEllipticTorsionAbscissaCount",
+            "SourceEllipticTorsionDivisionRoot",
+            "SourceEllipticPreDivisionSeparable",
+            "SourceEllipticTorsionSeparable",
+            "SourceEllipticFiniteTorsionField"
+          ],
+          "count": 28,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership325For7104.log",
+            "sha256": "F327A3B649B001CBBE9D9DB20126FF98115803026C9B425E66A1136128A1D29B",
+            "sourceSha256": "CFE53F68EBCDE47BDD3B28BD119892AA34B2F5109A1776FBF1006A640EEADEB2"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticLegendreValuation",
+            "SourceEllipticLegendreCoordinates",
+            "SourceEllipticLegendreGoodModel"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership326For7104.log",
+            "sha256": "B8EBE6292BDEAF262C6244F92BE2B45BF27B1FA6E85D236B3904D675FBD93E8B",
+            "sourceSha256": "3EF8636CE53D9B9CD50B14038C5DE772E397F8C179546110652FE728EADF728D"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticLegendreGenerators",
+            "SourceEllipticLegendreGaloisField",
+            "SourceEllipticLegendreInertia",
+            "SourceEllipticLegendreFieldRoots",
+            "SourceEllipticLegendreFaithfulModel",
+            "SourceEllipticLegendreGaloisModel"
+          ],
+          "count": 26,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership327For7104.log",
+            "sha256": "411345067429C0DB464FF7FA13232A72F787C5CA5AC59338282AAE890FB1A8E3",
+            "sourceSha256": "0D1FA2793FFD36741F86C68B3E579E59B1B084C68116B87AC5FB6A0645B2A37C"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticIntegralGoodModelChange"
+          ],
+          "count": 2,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership328For7104.log",
+            "sha256": "4B74A37B02A63EAC024A2380EE780D1E162B2788C58E46B8288B1F1BE93244C3",
+            "sourceSha256": "E6414733779513DFDBD27AFEAED36725B5340B6E6CB8F38D5130960AAE9E61DA"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticInertiaConjugate",
+            "SourceEllipticIntegralInertiaCocycle",
+            "SourceEllipticPositiveCharacteristicCocycle"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership329For7104.log",
+            "sha256": "30827B1C1762C05FE91A0DA9390B5CBE8E9EBDBED35B449CD8299C01B77DA45F",
+            "sourceSha256": "5116B01FD389583D4EFA95C243CEE2B26EE7A845BC9FEC7F2DB004300C7A57AB"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticInverseCoordinateNaturality",
+            "SourceEllipticInverseCoordinateResidue",
+            "SourceEllipticInertiaPointReduction",
+            "SourceEllipticModelTorsionReduction",
+            "SourceEllipticGaloisTorsionMap",
+            "SourceEllipticModelTorsionEquivariance",
+            "SourceEllipticActualInertiaTorsionReduction"
+          ],
+          "count": 39,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership330For7104.log",
+            "sha256": "161DC29546B689583B103361F2227F780655807A26DCC6214AC7C25EC88443EC",
+            "sourceSha256": "5228840FF846E972EF4D679EC072D35D205791CEB20F3973A81190F1801EF096"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticTrivialInertiaTorsion",
+            "SourceEllipticDivisionFieldRestriction",
+            "SourceEllipticFullTorsionFieldExtension",
+            "SourceEllipticFaithfulGoodModelField",
+            "SourceEllipticFaithfulTorsionModel"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership331For7104.log",
+            "sha256": "4F234C2D3F7DB4404B628B1B54002C8C9A6C3A75FA8656DBF48CF7E66BB94655",
+            "sourceSha256": "4DB18815DA78852E6A52E72AE891299B94DD9B15557FB65195D9BEA61A7BA6D3"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveFiniteValuePlace",
+            "SourceCurveClosedConstantResidue",
+            "SourceRatFuncGaloisCoordinate",
+            "SourceRatFuncFiniteValueSpecialization"
+          ],
+          "count": 23,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership332For7104.log",
+            "sha256": "E27511373ABEC3B98515A5CB2AC88888641752F45E1B9BD962E401711CCE31AC",
+            "sourceSha256": "075946D86A017202B67B554C1618370239F9A74C4A393125DF00335D8AC70F24"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticGoodModelResidueJ",
+            "SourceEllipticSpecializationFieldPlace",
+            "SourceEllipticOfJSpecialization"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership333For7104.log",
+            "sha256": "66E90474177A2EAB3731D6C641820B5A424F28339DF1482C4D0D6C58226CDD5D",
+            "sourceSha256": "05E21302A1453EAD5E9DAF13634C640A93763377B174AC5C62673F12B9677BE8"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticResidueCocycleMultiplication",
+            "SourceEllipticChosenInertiaCocycle",
+            "SourceEllipticResidueInertiaHom",
+            "SourceEllipticFaithfulSpecializationHom"
+          ],
+          "count": 24,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership334For7104.log",
+            "sha256": "B745B622329B0ED777FDA51A202F865A4CD02255AEC7D06593C3F4B668085CDE",
+            "sourceSha256": "B8209A2957033998317B7B81B2DF2264FF32A5DBB8F2C9FD9440C3FB907DE479"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticResidueCurvePointEquiv",
+            "SourceEllipticResidueActionConjugacy",
+            "SourceEllipticResidueConjugateHom",
+            "SourceEllipticPrescribedInertiaAction"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership335For7104.log",
+            "sha256": "833493C49BA9188001897C565817FADBDCC4C13903710B7D04440712242AE4CF",
+            "sourceSha256": "2BA89EAB47F895A245F473D78361BF910A768392F46DA61F7CB4DD9535BC009E"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticSpecializationTorsionRange",
+            "SourceEllipticCyclicTorsionSpecialization",
+            "SourceEllipticPrescribedCyclicSpecialization"
+          ],
+          "count": 18,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership336For7104.log",
+            "sha256": "5D86869427C41E29C469804D3A0E59EE23239E269474B511F87BC14C60A73B0F",
+            "sourceSha256": "C08F7FBCB24CC59C051247C5E1868DDC929A140470200D06AF29CEA7E49804C9"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticStabilizerScaling",
+            "SourceEllipticStabilizerInvariantBounds",
+            "SourceEllipticStabilizerBoundsFive"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership337For7104.log",
+            "sha256": "A630E291D11B52CE0780815A0488F10012667A240156D29622490F5298D76E31",
+            "sourceSha256": "503290B96D759F6D68DFA8907AD8B48831C3C0739B100D377A808C39F4ED97C6"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticOfJDiscriminantOrder",
+            "SourceEllipticOfJExceptionalOrders",
+            "SourceEllipticSpecializationOrderBound",
+            "SourceEllipticPrescribedOrderBound"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership338For7104.log",
+            "sha256": "89817B73A70DBC50480762591CDC7A761CA846579FB94F8151D17335282E632C",
+            "sourceSha256": "B05E4349E6B55A192D14B35F6635A703E5B722D1531C2459D3EDA933E4DD9897"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationOwnership7104.log",
+        "sha256": "EB1251117AF21E8B52C70C4CAAEBB56ABF3957D599DA07443300474432417A70",
+        "sourceSha256": "1D627C339707FF82FD6C71A5821B09425AB5689EB001A9B130873C390DC63925"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261023-143151-975.log",
+        "sha256": "EA7881B7B83369EB260091497F2B089799AB826F6FE8581D83FCCBCD18BB483F"
+      },
+      "missingFromFocusedNativeReuse": [
+        "WeierstrassCurve.baseChange.eq_1"
+      ],
+      "nativeGeneratedReuse": {
+        "WeierstrassCurve.baseChange.eq_1": {
+          "ownershipQueries": [
+            {
+              "path": "E:\\Lean\\.tmp\\dubon83\\SourceBaseChangeOwnershipProduction7104R2.log",
+              "sha256": "686FF19ACCB1648A8C52C0EE386486970E290C562D051A66F535C887BB61D407",
+              "sourceSha256": "1CFA58F2E908163527C99EF9E3DBC5A842B36D6B05FAD04DB259258279CE55C5",
+              "owner": "Dubon2026.SourceEllipticUniversalCurve"
+            },
+            {
+              "path": "E:\\Lean\\.tmp\\dubon83\\SourceBaseChangeOwnershipScratch7104R2.log",
+              "sha256": "3325CAF9638751313EED18CB04058943FB7DBC89FE396BDDF40159D7B005613F",
+              "sourceSha256": "280991B4C9070B1E12CCED9FC7546529B60E68A2144BAD53967DA70036A20E09",
+              "owner": "SourceEllipticOfJDiscriminantOrder"
+            },
+            {
+              "path": "E:\\Lean\\.tmp\\dubon83\\SourceAssembledOwnership7104R3.log",
+              "sha256": "F577D49B9044084688C559A243727B4B44C3ED5987ED2EB4623BA87F051F7A58",
+              "sourceSha256": "6C407B6FDCFF08008A867EF8ED918CE4830BB1A98C0853BD7DBE99F5A8EDF9AE",
+              "owner": "Mathlib.AlgebraicGeometry.EllipticCurve.Reduction"
+            }
+          ],
+          "identicalPrintedDeclaration": "@[defeq] theorem WeierstrassCurve.baseChange.eq_1.{u, v} : ∀ {R : Type u} [inst : CommRing R] (W : WeierstrassCurve R)\n  (A : Type v) [inst_1 : CommRing A] [inst_2 : Algebra R A], W.baseChange A = W.map (algebraMap R A) :=\nfun {R} [CommRing R] W A [CommRing A] [Algebra R A] => Eq.refl (W.baseChange A)",
+          "axioms": [],
+          "reason": "The generated definitional equation has scratch ownership in OfJDiscriminantOrder, focused production ownership in the earlier UniversalCurve module, and assembled ownership in the pinned native Reduction module. All three fresh import-only queries prove the identical equation axiom-free. It is retained and explicitly audited, not removed or counted as a new project theorem."
+        }
+      },
+      "retainedInitialComparison": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\source-faithful-specialization-ownership-comparison-7104.json",
+        "sha256": "37BDC146BCFA6582E0A13C66BBEE2F35E2C5BEC517238195FAF140DC63132928",
+        "reason": "The original comparator correctly stopped on an unexplained ownership difference. This successor accounts for the exact declaration through fresh import-only evidence without changing any source, compiled module or used audit."
+      }
+    },
+    "scratchToProductionCountReason": "All 235 distinct names from 235 exhaustive scratch checks are retained: 234 in the production focused scope and 1 explicitly audited generated names with native assembled ownership. Exact name-set comparison and identical axiom-free declaration queries explain ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Equality of actual inertia cardinality with normalized place order, full stabilizer image up to sign, cyclic orbit and place-fiber comparison, numerical exceptional-fiber and ramification counts and wild differential contributions, reverse genus, genus equality and place comparison, modular-curve good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "postFocusedCommentRepair": {
+    "module": "Dubon2026.SourceCurveClosedConstantResidue",
+    "originalSource": "E:\\Lean\\.tmp\\dubon83\\SourceCurveClosedConstantResidue-production-before-comment-repair-7104.lean.txt",
+    "originalSourceSha256": "08E3A9F73F9E77730B6BBCDCE8479880C5CA5B77EA13A3098E3F34046C0486DE",
+    "originalOlean": "E:\\Lean\\.tmp\\dubon83\\SourceCurveClosedConstantResidue-production-before-comment-repair-7104.olean.frozen",
+    "originalOleanSha256": "4116D846A9E6B473B8D623845962CBDED971BB7097F42418D15624F451485867",
+    "failedFoundationLog": "logs/foundation_freeze_20261023_162356.log",
+    "failedFoundationSha256": "9149AEDBA64D5B33BD032C1A30FE2B1DA9BA82D030E725A3201A2A330EA2C318",
+    "reason": "The root raw-text scanner matches a documentation line beginning constant. Reword only that comment; all mathematical bodies, imports and proof dependencies are identical. Preserve the failed run, original production source, original compiled module and all focused evidence. A fresh sequential canonical run verifies the changed file and dependants without relaxing the scanner.",
+    "repairedSourceSha256": "8C607C9022E2DBBB25DF033258DC78A529542EA53951B2FEED9168CBE45A0CC6",
+    "additionalCommentRepairs": [
+      {
+        "module": "Dubon2026.SourceEllipticResidueActionConjugacy",
+        "originalSource": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticResidueActionConjugacy-production-before-comment-repair-7104.lean.txt",
+        "originalSourceSha256": "4F481062DE02BF2AA97B10A77E3A6645DFBBE65B81CD8065330074170AB410FC",
+        "originalOlean": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticResidueActionConjugacy-production-before-comment-repair-7104.olean.frozen",
+        "originalOleanSha256": "AE41F08E47F452050C3EFD710EA76C98F15D47A6049AE89F0FECE4EFCDE7924C",
+        "failedInventoryLog": "E:\\Lean\\.tmp\\dubon83\\resume-faithful-specialization-7104-r3.log",
+        "failedInventorySha256": "A30718B845752C72116BF78243389905F5CD5D03DF499C467BA30876CF374049",
+        "reason": "The paper raw-text scanner additionally rejects a comment line starting constant-field. Reword only this documentation line; preserve mathematical bodies, imports and all previous evidence. Preflight the exact scanner over every extension Lean file before the next sequential run.",
+        "repairedSourceSha256": "964341C2C87891E05D126BFEA7E22B04928C0D38814ABC51E6632698B17173D2"
+      }
+    ],
+    "postRepairVerification": {
+      "foundationLog": "logs/foundation_freeze_20261023_163658.log",
+      "foundationSha256": "FDE3491D951FCF714CF16BFBDF286EF75C3C4DDCF246C73D2F93C05B142F116F",
+      "paperLog": "logs/dubon-build-20261023-164008-986.log",
+      "paperSha256": "A3F0C9138668EFA8087F4390A81A1381F4D2495352E6AD6FF1777007B02A4B76",
+      "exit": 0,
+      "diagnostics": 0,
+      "reason": "The sequential canonical run recompiles changed production comments and dependants, checks every production theorem and reruns all thirteen regressions. Proof bodies remain identical to the focused scope."
+    }
+  },
+  "receipt7104": {
+    "recordedUTC": "2026-10-24T01:08:32.541312+00:00",
+    "log": "logs/dubon-build-20261023-164008-986.log",
+    "sha256": "A3F0C9138668EFA8087F4390A81A1381F4D2495352E6AD6FF1777007B02A4B76",
+    "bytes": 12104006,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 7104,
+    "projectTheorems": 47803,
+    "registeredConsumers": 21573,
+    "registeredConstructions": 1868,
+    "declarations": 29261,
+    "generated": 27384,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261023_163658.log",
+    "foundationSha256": "FDE3491D951FCF714CF16BFBDF286EF75C3C4DDCF246C73D2F93C05B142F116F",
+    "countReconciliation": {
+      "previousTheorems": 47569,
+      "focusedTheorems": 234,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 234,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationOwnership7104.log",
+      "ownershipSha256": "EB1251117AF21E8B52C70C4CAAEBB56ABF3957D599DA07443300474432417A70"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 235,
+      "scratchDistinct": 235,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 234,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {
+        "WeierstrassCurve.baseChange.eq_1": [
+          {
+            "scope": "SourceFaithfulSpecializationScratchOwnership338For7104",
+            "module": "Dubon2026.SourceEllipticOfJDiscriminantOrder"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceEllipticSeparableCoordinates",
+            "SourceEllipticTorsionAbscissaCount",
+            "SourceEllipticTorsionDivisionRoot",
+            "SourceEllipticPreDivisionSeparable",
+            "SourceEllipticTorsionSeparable",
+            "SourceEllipticFiniteTorsionField"
+          ],
+          "count": 28,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership325For7104.log",
+            "sha256": "F327A3B649B001CBBE9D9DB20126FF98115803026C9B425E66A1136128A1D29B",
+            "sourceSha256": "CFE53F68EBCDE47BDD3B28BD119892AA34B2F5109A1776FBF1006A640EEADEB2"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticLegendreValuation",
+            "SourceEllipticLegendreCoordinates",
+            "SourceEllipticLegendreGoodModel"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership326For7104.log",
+            "sha256": "B8EBE6292BDEAF262C6244F92BE2B45BF27B1FA6E85D236B3904D675FBD93E8B",
+            "sourceSha256": "3EF8636CE53D9B9CD50B14038C5DE772E397F8C179546110652FE728EADF728D"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticLegendreGenerators",
+            "SourceEllipticLegendreGaloisField",
+            "SourceEllipticLegendreInertia",
+            "SourceEllipticLegendreFieldRoots",
+            "SourceEllipticLegendreFaithfulModel",
+            "SourceEllipticLegendreGaloisModel"
+          ],
+          "count": 26,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership327For7104.log",
+            "sha256": "411345067429C0DB464FF7FA13232A72F787C5CA5AC59338282AAE890FB1A8E3",
+            "sourceSha256": "0D1FA2793FFD36741F86C68B3E579E59B1B084C68116B87AC5FB6A0645B2A37C"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticIntegralGoodModelChange"
+          ],
+          "count": 2,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership328For7104.log",
+            "sha256": "4B74A37B02A63EAC024A2380EE780D1E162B2788C58E46B8288B1F1BE93244C3",
+            "sourceSha256": "E6414733779513DFDBD27AFEAED36725B5340B6E6CB8F38D5130960AAE9E61DA"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticInertiaConjugate",
+            "SourceEllipticIntegralInertiaCocycle",
+            "SourceEllipticPositiveCharacteristicCocycle"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership329For7104.log",
+            "sha256": "30827B1C1762C05FE91A0DA9390B5CBE8E9EBDBED35B449CD8299C01B77DA45F",
+            "sourceSha256": "5116B01FD389583D4EFA95C243CEE2B26EE7A845BC9FEC7F2DB004300C7A57AB"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticInverseCoordinateNaturality",
+            "SourceEllipticInverseCoordinateResidue",
+            "SourceEllipticInertiaPointReduction",
+            "SourceEllipticModelTorsionReduction",
+            "SourceEllipticGaloisTorsionMap",
+            "SourceEllipticModelTorsionEquivariance",
+            "SourceEllipticActualInertiaTorsionReduction"
+          ],
+          "count": 39,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership330For7104.log",
+            "sha256": "161DC29546B689583B103361F2227F780655807A26DCC6214AC7C25EC88443EC",
+            "sourceSha256": "5228840FF846E972EF4D679EC072D35D205791CEB20F3973A81190F1801EF096"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticTrivialInertiaTorsion",
+            "SourceEllipticDivisionFieldRestriction",
+            "SourceEllipticFullTorsionFieldExtension",
+            "SourceEllipticFaithfulGoodModelField",
+            "SourceEllipticFaithfulTorsionModel"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership331For7104.log",
+            "sha256": "4F234C2D3F7DB4404B628B1B54002C8C9A6C3A75FA8656DBF48CF7E66BB94655",
+            "sourceSha256": "4DB18815DA78852E6A52E72AE891299B94DD9B15557FB65195D9BEA61A7BA6D3"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveFiniteValuePlace",
+            "SourceCurveClosedConstantResidue",
+            "SourceRatFuncGaloisCoordinate",
+            "SourceRatFuncFiniteValueSpecialization"
+          ],
+          "count": 23,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership332For7104.log",
+            "sha256": "E27511373ABEC3B98515A5CB2AC88888641752F45E1B9BD962E401711CCE31AC",
+            "sourceSha256": "075946D86A017202B67B554C1618370239F9A74C4A393125DF00335D8AC70F24"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticGoodModelResidueJ",
+            "SourceEllipticSpecializationFieldPlace",
+            "SourceEllipticOfJSpecialization"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership333For7104.log",
+            "sha256": "66E90474177A2EAB3731D6C641820B5A424F28339DF1482C4D0D6C58226CDD5D",
+            "sourceSha256": "05E21302A1453EAD5E9DAF13634C640A93763377B174AC5C62673F12B9677BE8"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticResidueCocycleMultiplication",
+            "SourceEllipticChosenInertiaCocycle",
+            "SourceEllipticResidueInertiaHom",
+            "SourceEllipticFaithfulSpecializationHom"
+          ],
+          "count": 24,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership334For7104.log",
+            "sha256": "B745B622329B0ED777FDA51A202F865A4CD02255AEC7D06593C3F4B668085CDE",
+            "sourceSha256": "B8209A2957033998317B7B81B2DF2264FF32A5DBB8F2C9FD9440C3FB907DE479"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticResidueCurvePointEquiv",
+            "SourceEllipticResidueActionConjugacy",
+            "SourceEllipticResidueConjugateHom",
+            "SourceEllipticPrescribedInertiaAction"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership335For7104.log",
+            "sha256": "833493C49BA9188001897C565817FADBDCC4C13903710B7D04440712242AE4CF",
+            "sourceSha256": "2BA89EAB47F895A245F473D78361BF910A768392F46DA61F7CB4DD9535BC009E"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticSpecializationTorsionRange",
+            "SourceEllipticCyclicTorsionSpecialization",
+            "SourceEllipticPrescribedCyclicSpecialization"
+          ],
+          "count": 18,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership336For7104.log",
+            "sha256": "5D86869427C41E29C469804D3A0E59EE23239E269474B511F87BC14C60A73B0F",
+            "sourceSha256": "C08F7FBCB24CC59C051247C5E1868DDC929A140470200D06AF29CEA7E49804C9"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticStabilizerScaling",
+            "SourceEllipticStabilizerInvariantBounds",
+            "SourceEllipticStabilizerBoundsFive"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership337For7104.log",
+            "sha256": "A630E291D11B52CE0780815A0488F10012667A240156D29622490F5298D76E31",
+            "sourceSha256": "503290B96D759F6D68DFA8907AD8B48831C3C0739B100D377A808C39F4ED97C6"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticOfJDiscriminantOrder",
+            "SourceEllipticOfJExceptionalOrders",
+            "SourceEllipticSpecializationOrderBound",
+            "SourceEllipticPrescribedOrderBound"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationScratchOwnership338For7104.log",
+            "sha256": "89817B73A70DBC50480762591CDC7A761CA846579FB94F8151D17335282E632C",
+            "sourceSha256": "B05E4349E6B55A192D14B35F6635A703E5B722D1531C2459D3EDA933E4DD9897"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulSpecializationOwnership7104.log",
+        "sha256": "EB1251117AF21E8B52C70C4CAAEBB56ABF3957D599DA07443300474432417A70",
+        "sourceSha256": "1D627C339707FF82FD6C71A5821B09425AB5689EB001A9B130873C390DC63925"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261023-143151-975.log",
+        "sha256": "EA7881B7B83369EB260091497F2B089799AB826F6FE8581D83FCCBCD18BB483F"
+      },
+      "missingFromFocusedNativeReuse": [
+        "WeierstrassCurve.baseChange.eq_1"
+      ],
+      "nativeGeneratedReuse": {
+        "WeierstrassCurve.baseChange.eq_1": {
+          "ownershipQueries": [
+            {
+              "path": "E:\\Lean\\.tmp\\dubon83\\SourceBaseChangeOwnershipProduction7104R2.log",
+              "sha256": "686FF19ACCB1648A8C52C0EE386486970E290C562D051A66F535C887BB61D407",
+              "sourceSha256": "1CFA58F2E908163527C99EF9E3DBC5A842B36D6B05FAD04DB259258279CE55C5",
+              "owner": "Dubon2026.SourceEllipticUniversalCurve"
+            },
+            {
+              "path": "E:\\Lean\\.tmp\\dubon83\\SourceBaseChangeOwnershipScratch7104R2.log",
+              "sha256": "3325CAF9638751313EED18CB04058943FB7DBC89FE396BDDF40159D7B005613F",
+              "sourceSha256": "280991B4C9070B1E12CCED9FC7546529B60E68A2144BAD53967DA70036A20E09",
+              "owner": "SourceEllipticOfJDiscriminantOrder"
+            },
+            {
+              "path": "E:\\Lean\\.tmp\\dubon83\\SourceAssembledOwnership7104R3.log",
+              "sha256": "F577D49B9044084688C559A243727B4B44C3ED5987ED2EB4623BA87F051F7A58",
+              "sourceSha256": "6C407B6FDCFF08008A867EF8ED918CE4830BB1A98C0853BD7DBE99F5A8EDF9AE",
+              "owner": "Mathlib.AlgebraicGeometry.EllipticCurve.Reduction"
+            }
+          ],
+          "identicalPrintedDeclaration": "@[defeq] theorem WeierstrassCurve.baseChange.eq_1.{u, v} : ∀ {R : Type u} [inst : CommRing R] (W : WeierstrassCurve R)\n  (A : Type v) [inst_1 : CommRing A] [inst_2 : Algebra R A], W.baseChange A = W.map (algebraMap R A) :=\nfun {R} [CommRing R] W A [CommRing A] [Algebra R A] => Eq.refl (W.baseChange A)",
+          "axioms": [],
+          "reason": "The generated definitional equation has scratch ownership in OfJDiscriminantOrder, focused production ownership in the earlier UniversalCurve module, and assembled ownership in the pinned native Reduction module. All three fresh import-only queries prove the identical equation axiom-free. It is retained and explicitly audited, not removed or counted as a new project theorem."
+        }
+      },
+      "retainedInitialComparison": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\source-faithful-specialization-ownership-comparison-7104.json",
+        "sha256": "37BDC146BCFA6582E0A13C66BBEE2F35E2C5BEC517238195FAF140DC63132928",
+        "reason": "The original comparator correctly stopped on an unexplained ownership difference. This successor accounts for the exact declaration through fresh import-only evidence without changing any source, compiled module or used audit."
+      }
+    },
+    "scratchToProductionCountReason": "All 235 distinct names from 235 exhaustive scratch checks are retained: 234 in the production focused scope and 1 explicitly audited generated names with native assembled ownership. Exact name-set comparison and identical axiom-free declaration queries explain ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Equality of actual inertia cardinality with normalized place order, full stabilizer image up to sign, cyclic orbit and place-fiber comparison, numerical exceptional-fiber and ramification counts and wild differential contributions, reverse genus, genus equality and place comparison, modular-curve good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

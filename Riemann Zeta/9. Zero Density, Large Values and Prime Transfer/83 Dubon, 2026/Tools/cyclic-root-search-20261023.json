@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-23",
+  "scope": "Targeted follow-up to the archived fresh torsion-reduction and residual-closure searches. Search results are discovery evidence, not a build or proof-integrity claim.",
+  "results": [
+    {
+      "query": "cyclic modularPolynomial",
+      "repositories": [
+        "TauCetiProject/TauCeti",
+        "anthropics/fermats-last-theorem"
+      ],
+      "results": [
+        {
+          "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/Theorems/Thm_WeierstrassCurve_map_modularPolynomial_j_eq_finprod_X_sub_C_cyclicQuotientJ.lean",
+          "path": "Theorems/Thm_WeierstrassCurve_map_modularPolynomial_j_eq_finprod_X_sub_C_cyclicQuotientJ.lean"
+        },
+        {
+          "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/Theorems/Thm_WeierstrassCurve_bijOn_cyclicQuotientJ_isRoot_modularPolynomial_of_transcendental_j.lean",
+          "path": "Theorems/Thm_WeierstrassCurve_bijOn_cyclicQuotientJ_isRoot_modularPolynomial_of_transcendental_j.lean"
+        },
+        {
+          "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_WeierstrassCurve_rootMultiplicity_map_modularPolynomial_j_eq_natCard_cyclicQuotientJ_eq.lean",
+          "path": "P2M/Sol/S_WeierstrassCurve_rootMultiplicity_map_modularPolynomial_j_eq_natCard_cyclicQuotientJ_eq.lean"
+        },
+        {
+          "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/Theorems/Thm_WeierstrassCurve_rootMultiplicity_map_modularPolynomial_j_eq_natCard_cyclicQuotientJ_eq.lean",
+          "path": "Theorems/Thm_WeierstrassCurve_rootMultiplicity_map_modularPolynomial_j_eq_natCard_cyclicQuotientJ_eq.lean"
+        },
+        {
+          "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/Theorems/Thm_WeierstrassCurve_exists_equiv_addSubgroup_isAddCyclic_isRoot_modularPolynomial_of_transcendental_j.lean",
+          "path": "Theorems/Thm_WeierstrassCurve_exists_equiv_addSubgroup_isAddCyclic_isRoot_modularPolynomial_of_transcendental_j.lean"
+        }
+      ]
+    },
+    {
+      "query": "inertia elliptic",
+      "repositories": [
+        "TauCetiProject/TauCeti",
+        "anthropics/fermats-last-theorem"
+      ],
+      "results": [
+        {
+          "url": "https://github.com/TauCetiProject/TauCeti/blob/315040461dd16f4333a14977d01a661f2c11e50a/TauCeti/AlgebraicGeometry/EllipticCurve/TateModule/Inertia.lean",
+          "path": "TauCeti/AlgebraicGeometry/EllipticCurve/TateModule/Inertia.lean"
+        },
+        {
+          "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_WeierstrassCurve_det_galoisRep_surjOn_inertia.lean",
+          "path": "P2M/Sol/S_WeierstrassCurve_det_galoisRep_surjOn_inertia.lean"
+        },
+        {
+          "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_FreyPackage_exists_inertia_cycloPinned_ne_one_v2.lean",
+          "path": "P2M/Sol/S_FreyPackage_exists_inertia_cycloPinned_ne_one_v2.lean"
+        },
+        {
+          "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/Theorems/Thm_WeierstrassCurve_exists_reductionKernel_absorbing_inertia.lean",
+          "path": "Theorems/Thm_WeierstrassCurve_exists_reductionKernel_absorbing_inertia.lean"
+        },
+        {
+          "url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_FreyPackage_frey_inertia_at_p_filtration_of_not_dvd_abc.lean",
+          "path": "P2M/Sol/S_FreyPackage_frey_inertia_at_p_filtration_of_not_dvd_abc.lean"
+        }
+      ]
+    }
+  ]
+}

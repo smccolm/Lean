@@ -29,7 +29,7 @@
   "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original weight-two Frobenius/inertia -> actual modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census and wild differential contribution -> elliptic cyclic-subgroup inertia orbits -> actual cyclic-subgroup interpretation of integral modular-polynomial roots -> actual prime quotient homomorphisms and integral polynomial products.",
   "discharged": "The actual odd quotient has an additive point map constructed by the relative ideal-class norm. The common integral closure is proved finite and Dedekind and equals the source coordinate ring with the actual kernel denominator inverted. Its affine evaluation, source point-ideal extension, target contraction, residue degree one and relative ideal norm are derived. The actual Galois field extension transfers to the canonical fraction rings used by the norm theorem. The native point-class equivalence proves that the actual additive map agrees with the literal finite Velu formulas off the kernel. At denominator roots the extended point ideal is the unit ideal. The actual map has kernel exactly AddSubgroup.zmultiples Q, is surjective, and every point fiber has cardinality 2n+1. All characteristics, including two and three, are retained. No common-ring, point-map formula, ideal-norm, kernel, surjectivity or fiber-cardinality premise remains.",
   "boundary": "Odd-prime integral modular-polynomial products, specialization and finite-set reduction, cyclic-subgroup root correspondence, inertia orbit map, exceptional-fiber census and wild differential contributions remain required for unconditional reverse genus. Genus equality, place comparison, good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
-  "status": "The 6,900-module production aggregate and focused odd-point-map audit pass with zero diagnostics. Five declaration-value audits verify 171 required dependencies. Odd-prime integral modular-polynomial products, specialization and finite-set reduction, cyclic-subgroup root correspondence, inertia orbit map, exceptional-fiber census and wild differential contributions remain required for unconditional reverse genus. Genus equality, place comparison, good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification of this scope is pending.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 6,900-module scope: all thirteen retained regressions, 46,911 exhaustive theorem checks, 21,079 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
   "rootPinsChanged": false,
   "proofLimitsChanged": false,
   "frozenReceiptProseCorrections": [],
@@ -686,6 +686,133 @@
     "productionReuse": "Scratch imports are qualified and five module comments point to the assembled proved consumers; complete mathematical statements and proof bodies are retained. Native affine point groups, actual generic coordinates, rational functions, odd half-orbits, explicit Velu sums, integral closures and translations retain their actual definitions. No source contract is weakened.",
     "omittedScratchTheorems": [],
     "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 135,
+      "scratchDistinct": 135,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 135,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceEllipticOddCoordinatePullback",
+            "SourceEllipticOddCoordinateIntegralImage",
+            "SourceEllipticOddIntermediateRing",
+            "SourceEllipticOddIntermediateFinite",
+            "SourceEllipticOddPointNorm"
+          ],
+          "count": 30,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddPointMapScratchOwnership293For6900.log",
+            "sha256": "0EA77F17084550475765700DCE771951B36563B2B819C8A818C9140F2C626CFA",
+            "sourceSha256": "BA374E659CC20E3A64D15963B988B045C24808BBE129ACB0D39560236DB1CFB5"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticKernelLocalization",
+            "SourceEllipticKernelLocalCoordinates",
+            "SourceEllipticOddIntermediateLocalization"
+          ],
+          "count": 18,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddPointMapScratchOwnership294For6900.log",
+            "sha256": "0FA5EECA96A87C7CAB07E53640D8D75093997682C784D71FD8916AE1F80EA8B7",
+            "sourceSha256": "83D595F81D14EEB97C716EF4E264A6AEE6C4FBE07CF158FF5C8CC1F465753218"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticKernelLocalEvaluation",
+            "SourceEllipticKernelEvaluationCoordinates",
+            "SourceEllipticVeluAffineEvaluation",
+            "SourceEllipticOddAffineSpecialization",
+            "SourceEllipticKernelPointIdeal"
+          ],
+          "count": 33,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddPointMapScratchOwnership295For6900.log",
+            "sha256": "2B5095063F75B4F9861EE62025DEA0F9B7778D9E466D84620FC614CA753FAE6C",
+            "sourceSha256": "81806582131E1FA184099BD07F816BF7FAE34F4BE63BA1CB1E76D1AB7743EC32"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticOddIntermediateEvaluation",
+            "SourceEllipticOddIntermediateGalois",
+            "SourceEllipticOddIntermediatePointIdeal",
+            "SourceEllipticOddPointResidueDegree",
+            "SourceEllipticOddPointIdealNorm",
+            "SourceEllipticPointIdealClass",
+            "SourceEllipticOddPointNormFormula"
+          ],
+          "count": 33,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddPointMapScratchOwnership296For6900.log",
+            "sha256": "354E07F3ABD6752660C46EF0ECAAB587C60CB614508C310E70F1C940E487B17B",
+            "sourceSha256": "9C35D00859606D693AE8A4559326AD97054EE455BB88C8A3581A6E413DD4798D"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticOddKernelNorm",
+            "SourceEllipticOddKernelGeometry",
+            "SourceEllipticOddPointSurjective",
+            "SourceEllipticOddPointFibers"
+          ],
+          "count": 21,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddPointMapScratchOwnership297For6900.log",
+            "sha256": "C6C385271166D2C5FD605E3E38FC142F92F4B53EF7C6A49355A65890B49459EA",
+            "sourceSha256": "105BFE329ACC7D19596DAA9EF0CE83818220FDF562A364548E0684F639697213"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOddPointMapOwnership6900.log",
+        "sha256": "DB845183B9C144392EFA80FF3A1548B302A01C2629315A73F1FD2D491C23E729",
+        "sourceSha256": "C5EC1D1EB0F03C6AA46AE37CC622096480F258EDF444AF95060A3B81DE134BE7"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261023-053232-109.log",
+        "sha256": "C389A589A1FF9E75E379E39FA1DF0933F0C3AAFC9D41B8BA402903B4A173ADDD"
+      }
+    },
+    "scratchToProductionCountReason": "All 135 distinct names from 135 exhaustive scratch checks are retained: 135 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Odd-prime integral modular-polynomial products, specialization and finite-set reduction, cyclic-subgroup root correspondence, inertia orbit map, exceptional-fiber census and wild differential contributions remain required for unconditional reverse genus. Genus equality, place comparison, good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt6900": {
+    "recordedUTC": "2026-10-23T15:33:49.771543+00:00",
+    "log": "logs/dubon-build-20261023-070731-582.log",
+    "sha256": "0495B8BB96F5D0139E4DBA0EDF18A70197FC286D0B8454D349355BF1382CA13F",
+    "bytes": 11859892,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 6900,
+    "projectTheorems": 46911,
+    "registeredConsumers": 21079,
+    "registeredConstructions": 1792,
+    "declarations": 28691,
+    "generated": 26976,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261023_070433.log",
+    "foundationSha256": "3FAC2D5AD308C0CCFFEA10D6841F20ADBB550F1C2204676EB14CFD253B3CA621",
+    "countReconciliation": {
+      "previousTheorems": 46776,
+      "focusedTheorems": 135,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 135,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOddPointMapOwnership6900.log",
+      "ownershipSha256": "DB845183B9C144392EFA80FF3A1548B302A01C2629315A73F1FD2D491C23E729"
+    },
     "scratchToProductionOwnership": {
       "scratchSum": 135,
       "scratchDistinct": 135,

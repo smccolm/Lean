@@ -1,0 +1,292 @@
+{
+  "date": "2026-10-23",
+  "purpose": "Refresh reuse search for the open DUB-17/18 higher symmetric-power continuation and odd-prime modular-polynomial dependencies.",
+  "searches": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "results": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "results": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "results": [
+            {
+              "url": "https://github.com/primaryhosting/brockian-mathematics/blob/29426ff65b6f1fd68d594e529632eb79b5be3089/aristotle/mined_lemmas/Math2_sato_tate/avg.lean",
+              "path": "aristotle/mined_lemmas/Math2_sato_tate/avg.lean",
+              "display_url": "https://github.com/primaryhosting/brockian-mathematics/blob/29426ff65b6f1fd68d594e529632eb79b5be3089/aristotle/mined_lemmas/Math2_sato_tate/avg.lean",
+              "display_title": "aristotle/mined_lemmas/Math2_sato_tate/avg.lean",
+              "text_matches": [
+                {
+                  "property": "content",
+                  "fragment": "/-!\n(The header comment above is placed directly after the `import` lines, since Lean 4 requires\n`import` commands to come first in a file.)",
+                  "matches": [
+                    {
+                      "text": "Lean",
+                      "indices": [
+                        81,
+                        85
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "property": "content",
+                  "fragment": "  primes of good reduction of `U n (cos θ_p)` tend to `0` for every `n ≥ 1`, where `U n` is\n  the `n`-th Chebyshev polynomial of the second kind (the character of the `n`-th symmetric\n  power of the standard representation of `SU(2)`).  This is exactly the statement supplied",
+                  "matches": [
+                    {
+                      "text": "symmetric",
+                      "indices": [
+                        177,
+                        186
+                      ]
+                    },
+                    {
+                      "text": "power",
+                      "indices": [
+                        189,
+                        194
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "url": "https://github.com/primaryhosting/brockian-mathematics/blob/29426ff65b6f1fd68d594e529632eb79b5be3089/aristotle/mined_lemmas/Math2_sato_tate/HasCM.lean",
+              "path": "aristotle/mined_lemmas/Math2_sato_tate/HasCM.lean",
+              "display_url": "https://github.com/primaryhosting/brockian-mathematics/blob/29426ff65b6f1fd68d594e529632eb79b5be3089/aristotle/mined_lemmas/Math2_sato_tate/HasCM.lean",
+              "display_title": "aristotle/mined_lemmas/Math2_sato_tate/HasCM.lean",
+              "text_matches": [
+                {
+                  "property": "content",
+                  "fragment": "/-!\n(The header comment above is placed directly after the `import` lines, since Lean 4 requires\n`import` commands to come first in a file.)",
+                  "matches": [
+                    {
+                      "text": "Lean",
+                      "indices": [
+                        81,
+                        85
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "property": "content",
+                  "fragment": "  primes of good reduction of `U n (cos θ_p)` tend to `0` for every `n ≥ 1`, where `U n` is\n  the `n`-th Chebyshev polynomial of the second kind (the character of the `n`-th symmetric\n  power of the standard representation of `SU(2)`).  This is exactly the statement supplied",
+                  "matches": [
+                    {
+                      "text": "symmetric",
+                      "indices": [
+                        177,
+                        186
+                      ]
+                    },
+                    {
+                      "text": "power",
+                      "indices": [
+                        189,
+                        194
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "url": "https://github.com/primaryhosting/brockian-mathematics/blob/29426ff65b6f1fd68d594e529632eb79b5be3089/aristotle/mined_lemmas/Math2_sato_tate/avg_add.lean",
+              "path": "aristotle/mined_lemmas/Math2_sato_tate/avg_add.lean",
+              "display_url": "https://github.com/primaryhosting/brockian-mathematics/blob/29426ff65b6f1fd68d594e529632eb79b5be3089/aristotle/mined_lemmas/Math2_sato_tate/avg_add.lean",
+              "display_title": "aristotle/mined_lemmas/Math2_sato_tate/avg_add.lean",
+              "text_matches": [
+                {
+                  "property": "content",
+                  "fragment": "/-!\n(The header comment above is placed directly after the `import` lines, since Lean 4 requires\n`import` commands to come first in a file.)",
+                  "matches": [
+                    {
+                      "text": "Lean",
+                      "indices": [
+                        81,
+                        85
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "property": "content",
+                  "fragment": "  primes of good reduction of `U n (cos θ_p)` tend to `0` for every `n ≥ 1`, where `U n` is\n  the `n`-th Chebyshev polynomial of the second kind (the character of the `n`-th symmetric\n  power of the standard representation of `SU(2)`).  This is exactly the statement supplied",
+                  "matches": [
+                    {
+                      "text": "symmetric",
+                      "indices": [
+                        177,
+                        186
+                      ]
+                    },
+                    {
+                      "text": "power",
+                      "indices": [
+                        189,
+                        194
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "url": "https://github.com/primaryhosting/brockian-mathematics/blob/29426ff65b6f1fd68d594e529632eb79b5be3089/aristotle/mined_lemmas/Math2_sato_tate/avg_mono.lean",
+              "path": "aristotle/mined_lemmas/Math2_sato_tate/avg_mono.lean",
+              "display_url": "https://github.com/primaryhosting/brockian-mathematics/blob/29426ff65b6f1fd68d594e529632eb79b5be3089/aristotle/mined_lemmas/Math2_sato_tate/avg_mono.lean",
+              "display_title": "aristotle/mined_lemmas/Math2_sato_tate/avg_mono.lean",
+              "text_matches": [
+                {
+                  "property": "content",
+                  "fragment": "/-!\n(The header comment above is placed directly after the `import` lines, since Lean 4 requires\n`import` commands to come first in a file.)",
+                  "matches": [
+                    {
+                      "text": "Lean",
+                      "indices": [
+                        81,
+                        85
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "property": "content",
+                  "fragment": "  primes of good reduction of `U n (cos θ_p)` tend to `0` for every `n ≥ 1`, where `U n` is\n  the `n`-th Chebyshev polynomial of the second kind (the character of the `n`-th symmetric\n  power of the standard representation of `SU(2)`).  This is exactly the statement supplied",
+                  "matches": [
+                    {
+                      "text": "symmetric",
+                      "indices": [
+                        177,
+                        186
+                      ]
+                    },
+                    {
+                      "text": "power",
+                      "indices": [
+                        189,
+                        194
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "url": "https://github.com/primaryhosting/brockian-mathematics/blob/29426ff65b6f1fd68d594e529632eb79b5be3089/aristotle/mined_lemmas/Math2_sato_tate/frobTrace.lean",
+              "path": "aristotle/mined_lemmas/Math2_sato_tate/frobTrace.lean",
+              "display_url": "https://github.com/primaryhosting/brockian-mathematics/blob/29426ff65b6f1fd68d594e529632eb79b5be3089/aristotle/mined_lemmas/Math2_sato_tate/frobTrace.lean",
+              "display_title": "aristotle/mined_lemmas/Math2_sato_tate/frobTrace.lean",
+              "text_matches": [
+                {
+                  "property": "content",
+                  "fragment": "/-!\n(The header comment above is placed directly after the `import` lines, since Lean 4 requires\n`import` commands to come first in a file.)",
+                  "matches": [
+                    {
+                      "text": "Lean",
+                      "indices": [
+                        81,
+                        85
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "property": "content",
+                  "fragment": "  primes of good reduction of `U n (cos θ_p)` tend to `0` for every `n ≥ 1`, where `U n` is\n  the `n`-th Chebyshev polynomial of the second kind (the character of the `n`-th symmetric\n  power of the standard representation of `SU(2)`).  This is exactly the statement supplied",
+                  "matches": [
+                    {
+                      "text": "symmetric",
+                      "indices": [
+                        177,
+                        186
+                      ]
+                    },
+                    {
+                      "text": "power",
+                      "indices": [
+                        189,
+                        194
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "isError": false
+      }
+    }
+  ],
+  "brockianLatest": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "commits": [
+        {
+          "sha": "29426ff65b6f1fd68d594e529632eb79b5be3089",
+          "message": "Merge pull request #16 from primaryhosting/repro/rh-slice-2026-09-18\n\nReproducibility: earn lake_build 'reproduced' for the RH slice (leg 1) via scoped CI build",
+          "url": "https://api.github.com/repos/primaryhosting/brockian-mathematics/commits/29426ff65b6f1fd68d594e529632eb79b5be3089",
+          "html_url": "https://github.com/primaryhosting/brockian-mathematics/commit/29426ff65b6f1fd68d594e529632eb79b5be3089",
+          "diff": null,
+          "files": null,
+          "repository_full_name": "primaryhosting/brockian-mathematics",
+          "comments": null,
+          "author": null,
+          "committer": null,
+          "created_at": "2026-09-18T19:32:52Z",
+          "git_author_email": null,
+          "display_url": "https://github.com/primaryhosting/brockian-mathematics/commit/29426ff65b6f1fd68d594e529632eb79b5be3089",
+          "display_title": "Merge pull request #16 from primaryhosting/repro/rh-slice-2026-09-18"
+        }
+      ]
+    },
+    "isError": false
+  },
+  "assessment": "The returned Brockian Sato-Tate files are at the same September 18 commit already inspected locally. The retained theorem sato_tate explicitly assumes hST : SatoTateHolds W, so it does not discharge the missing arithmetic theorem. No matching TauCeti files were returned by these targeted searches; that is a search limitation, not proof of absence. The existing local cardinality, base-change and polynomial-specialization proofs are reused for the quotient-product dependency. No upstream repository build is claimed.",
+  "sources": [
+    "https://github.com/primaryhosting/brockian-mathematics/blob/29426ff65b6f1fd68d594e529632eb79b5be3089/aristotle/mined_lemmas/Math2_sato_tate/sato_tate.lean",
+    "https://taucetiproject.org/docs/TauCeti/AlgebraicGeometry/EllipticCurve/Isogeny/Velu/Isogeny.html",
+    "https://github.com/anthropics/fermats-last-theorem"
+  ]
+}

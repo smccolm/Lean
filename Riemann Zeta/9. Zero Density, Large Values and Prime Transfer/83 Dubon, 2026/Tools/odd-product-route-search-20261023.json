@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-23",
+  "repository": "https://github.com/TauCetiProject/TauCeti",
+  "commit": "a6c9cf06cf6fc358b3528529246b69d043182d4e",
+  "commitTimeUTC": "2026-10-23T13:16:04Z",
+  "license": "Apache-2.0",
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\reuse-odd-product-route-20261023\\TateCurve-Basic.lean.txt",
+      "gitBlobSha1": "92b36d817c91198aedd8165d2c86b59f3b6574e7",
+      "sha256": "40B5BEBFF8330867536015F7D63B37F3875A82C5D8ECC3A6241AE21384131414"
+    }
+  ],
+  "assessment": "The actual integral Tate curve, c4/c6 invariants, discriminant order and leading j terms are proved in this source. This file does not establish the odd-prime quotient-product identity. The available local period-lattice Eisenstein comparison and native Weierstrass differential equation give a shorter route for the current complex-analytic link; no Tate-curve source is imported or built. Latest-head file matches the indexed source blob.",
+  "exactDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> arithmetic automorphy -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> inertia census -> cyclic-root correspondence -> odd-prime integral modular-polynomial product -> actual complex elliptic period curves",
+  "rootPinsChanged": false,
+  "upstreamBuildClaimed": false
+}

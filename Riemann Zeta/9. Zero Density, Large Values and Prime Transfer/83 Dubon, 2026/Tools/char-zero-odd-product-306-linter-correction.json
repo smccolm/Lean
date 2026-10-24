@@ -1,0 +1,8 @@
+{
+  "failedAudit": "E:\\Lean\\.tmp\\dubon83\\SourceCharZeroOddProductAudit6.lean",
+  "failedAuditSha256": "EAC825014B38469783AE0A421B731F2F2E07EDD072F01C9D4C86B983B5B7C3E4",
+  "failedLogSha256": "6430C815EF5E61E7F3977C9D1AF571AAEA68765A3C5A545C3D1ABF1DF8824811",
+  "successor": "E:\\Lean\\.tmp\\dubon83\\SourceCharZeroOddProductAudit6Minimal.lean",
+  "successorSha256": "EAC825014B38469783AE0A421B731F2F2E07EDD072F01C9D4C86B983B5B7C3E4",
+  "change": "Removed the unused Finite indexing typeclass from curvePointCoefficients. The finiteness theorem still requires and uses it. No theorem hypothesis or conclusion changed. The six modules retain the same exhaustive audit and all sixteen linters."
+}

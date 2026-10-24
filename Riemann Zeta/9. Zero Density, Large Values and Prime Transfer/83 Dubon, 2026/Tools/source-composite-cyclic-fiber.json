@@ -1,0 +1,1290 @@
+{
+  "date": "23 October 2026",
+  "modules": [
+    "Dubon2026.SourceIntegralPrimeLaurentRoots",
+    "Dubon2026.SourceIntegralTranscendentalSeparability",
+    "Dubon2026.SourceEllipticTranscendentalCyclicRoots",
+    "Dubon2026.SourceEllipticGenericCyclicRoots",
+    "Dubon2026.SourceEllipticTwoQuotientBaseChange",
+    "Dubon2026.SourceEllipticCyclicRootBaseChange",
+    "Dubon2026.SourceEllipticCyclicRootEquivariance",
+    "Dubon2026.SourceEllipticGenericCyclicOrbits",
+    "Dubon2026.SourceEllipticAbscissaQuotient",
+    "Dubon2026.SourceEllipticCyclicAbscissae",
+    "Dubon2026.SourceEllipticTwoCyclicAbscissae",
+    "Dubon2026.SourceEllipticPrimeAbscissaQuotient",
+    "Dubon2026.SourceEllipticPrimeAbscissaHom",
+    "Dubon2026.SourceCyclicQuotientOrder",
+    "Dubon2026.SourceEllipticPrimeAbscissaRoot",
+    "Dubon2026.SourceEllipticCyclicPrimeStep",
+    "Dubon2026.SourceCyclicPrimeKernel",
+    "Dubon2026.SourceEllipticCanonicalPrimeHom",
+    "Dubon2026.SourceEllipticCanonicalCyclicStep",
+    "Dubon2026.SourceEllipticAbscissaBaseChange",
+    "Dubon2026.SourceEllipticCyclicAbscissaBaseChange",
+    "Dubon2026.SourceEllipticCanonicalKernelBaseChange",
+    "Dubon2026.SourceEllipticAbscissaSubgroupEquality",
+    "Dubon2026.SourceEllipticAbscissaQuotientX",
+    "Dubon2026.SourceEllipticPrimeAbscissaHomX",
+    "Dubon2026.SourceEllipticPrimeImageBaseChange",
+    "Dubon2026.SourceCyclicQuotientPrimeArithmetic",
+    "Dubon2026.SourceEllipticCompositeCyclicQuotient",
+    "Dubon2026.SourceEllipticCompositeQuotientTransport",
+    "Dubon2026.SourceEllipticCompositeQuotientBaseChange",
+    "Dubon2026.SourceIntegralResultantCommonRoot",
+    "Dubon2026.SourceIntegralModularCompositionResultant",
+    "Dubon2026.SourceIntegralFiberComposition",
+    "Dubon2026.SourceEllipticIntrinsicPrimeProduct",
+    "Dubon2026.SourceEllipticPrimeFiberComposition",
+    "Dubon2026.SourceIntegralAllLevelGenericRoots",
+    "Dubon2026.SourceIntegralGenericIrreducibility",
+    "Dubon2026.SourceIntegralGenericRootConjugacy",
+    "Dubon2026.SourceIntegralPrimeRootTranscendence"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original weight-two Frobenius/inertia -> actual modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census and wild differential contribution -> elliptic cyclic-subgroup inertia orbits -> actual cyclic-subgroup interpretation of integral modular-polynomial roots -> actual prime quotient homomorphisms and integral polynomial products.",
+  "discharged": "The actual prime cyclic-subgroup root map is bijective at transcendental j and equivariant under the original field automorphisms. Intrinsic finite-kernel quotient curves have proved ellipticity, specific surjective quotient homomorphisms and exact kernels. Unique prime torsion subgroups and exact image orders construct the actual composite quotient recursively. Quotient curves and image subgroups commute with field embeddings at every admissible level. The exact integral composition resultant and complete prime quotient product prove that the product-level modular fiber divides the product of remaining-level fibers at actual prime quotient j-values. Existing coefficient-field proofs supply all-level separability, the exact generic root count, generic irreducibility and Galois transitivity. Prime modular roots of transcendental j remain transcendental. These conclusions assume no quotient, image-compatibility, product, separability or conjugacy certificates.",
+  "boundary": "The actual all-level cyclic-quotient root relation and generic bijection, composite variable-change transport, inertia specialization, exceptional-fiber census and wild differential contributions, reverse genus, genus equality and place comparison, modular-curve good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 7,026-module scope: all thirteen retained regressions, 47,494 exhaustive theorem checks, 21,395 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.IntegralJCoordinate.primeCyclicRootMap_bijective_transcendental",
+    "Dubon2026.SourceFunctionField.IntegralJCoordinate.generic_prime_cyclic_root_orbit_iff",
+    "Dubon2026.SourceEllipticVelu.exists_cyclic_prime_step",
+    "Dubon2026.SourceEllipticVelu.oddQuotient_eq_of_zmultiples_eq",
+    "Dubon2026.SourceEllipticVelu.canonical_cyclic_prime_step",
+    "Dubon2026.SourceEllipticVelu.primeAbscissaQuotient_map",
+    "Dubon2026.SourceEllipticVelu.cyclicPrimeKernel_pointMap",
+    "Dubon2026.SourceEllipticVelu.primeAbscissaHom_image_map",
+    "Dubon2026.SourceEllipticVelu.cyclicQuotientCurve_map",
+    "Dubon2026.SourceEllipticVelu.exists_prime_quotient_fiber_composition",
+    "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_root_card_transcendental",
+    "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_generic_roots_conjugate",
+    "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_root_transcendental"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-23T17:56:21.626690+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceIntegralPrimeLaurentRoots",
+        "SourceIntegralTranscendentalSeparability",
+        "SourceEllipticTranscendentalCyclicRoots"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralPrimeLaurentRoots.lean",
+          "sha256": "F6DBF63C5CD8361A62B36C9AF4201B5DAD8ECB5874AE7A6598449CFAD8C3ED77",
+          "oleanSha256": "4F3B4482D3A0AF33763028D3CC61F46539C72F2A61B7E3D662330B51C2E26161"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralTranscendentalSeparability.lean",
+          "sha256": "8FC84826E02C6CB5A488090440BADD59EC478F89165D2F327320BBC97B63BF55",
+          "oleanSha256": "58920E629CDA697DE1360EE578BB5EBF9E59D31DCEDEA4032F43222E5E9C25C8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticTranscendentalCyclicRoots.lean",
+          "sha256": "B4714D1DC52AC07AA1F6912DAC8A6AE07575978058F35BE6CAA8D5EB1609074D",
+          "oleanSha256": "943275711A8133D3E21DF39707519B7E173E11E6257B094F92DC99B3FE6C71EA"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_adjacent_relations",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_laurent_roots",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_laurent_splits",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_laurent_separable",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.relationAtSeed_separable_iff_ratFunc",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.transcendental_qExpand_jqModC",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_separable_transcendental",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_root_card_transcendental",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.primeCyclicRootMap_bijective_transcendental"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_adjacent_relations",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_laurent_roots",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_laurent_splits",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_laurent_separable",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.relationAtSeed_separable_iff_ratFunc",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.transcendental_qExpand_jqModC",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_separable_transcendental",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_root_card_transcendental",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.primeCyclicRootMap_bijective_transcendental"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalCyclicRootAudit3.log",
+      "logSha256": "5897250B2D4387D0B0C9DD782068658F139D018C62C4CB42280A54CE53DB0296",
+      "auditSha256": "539435B8B934360665FA43A278CBAD4B6A0E33C58824C235340670F0F53FCF9C",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 12,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 16,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalCyclicRootDependencyAudit3.log",
+      "dependencyAuditSha256": "0CBD9280749937551969EE16FA7318AF6AC8BF74A30F9A91DBFF6B36AB9D9C38",
+      "dependencyAuditSourceSha256": "F4B1EF3E96138679B492BBEB933028DF17608B32F5376BA798F68EFAF241ECB5",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.primeCyclicRootMap_bijective_transcendental"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "The exact integral prime modular polynomial has the complete distinct Laurent root multiset. Native rational-function embeddings transfer separability to transcendental j over algebraically closed constants in every characteristic away from the prime degree. The actual cyclic-subgroup map is bijective by its proved surjectivity and the two actual p+1 cardinalities. No separability, injectivity, endomorphism classification or root correspondence certificate is assumed.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. This is the prime generic-fiber result. Instantiation at the actual generic model, composite-level cyclic quotients if needed by the source census, inertia equivariance, exceptional-fiber and wild contributions, reverse genus, good reduction, residual association, automorphy and all-weight continuation remain required. It does not establish injectivity at every algebraic non-CM point. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-transcendental-cyclic-root-3-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "7D633E1D35CE83817B35832A885835BA33E86F6D9E1B6F6695B8C7D74E9BED01"
+    },
+    {
+      "recordedUTC": "2026-10-23T18:07:27.614259+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticGenericCyclicRoots",
+        "SourceEllipticTwoQuotientBaseChange",
+        "SourceEllipticCyclicRootBaseChange",
+        "SourceEllipticCyclicRootEquivariance",
+        "SourceEllipticGenericCyclicOrbits"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticGenericCyclicRoots.lean",
+          "sha256": "0A4D253780DDE1BEF65955D5CFD263BCB994A46FE865F03E3569106088AB762B",
+          "oleanSha256": "1745606773C7FE98FE9C6E5732C990995297F521D6B017906C6F6649993F2400"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticTwoQuotientBaseChange.lean",
+          "sha256": "CF412024CB4F2389785126491284168CD346A6F50E3644AE3A7CFB3476A6D0A1",
+          "oleanSha256": "C1A2DFAC2833FC7079A3057C1B23D5F0832A58BAB7C0E158757ED34AE117B962"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCyclicRootBaseChange.lean",
+          "sha256": "A03E806FF076B1140FBC47D79F0BBD4B9BFED8F512FB224F9A0279E48F144D4D",
+          "oleanSha256": "AB9ED4A8A882DB187142D14D91F3539D95CD866029529550EE9F2AC881983BC4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCyclicRootEquivariance.lean",
+          "sha256": "6ACC3C6907A285AB82344CA62A56D2354D16ECBCCE09ACBCA55116AC266711C9",
+          "oleanSha256": "CED60B09DD2EED1DCE401AE09A446F6584455DF5B3169AB01BD443589478B838"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticGenericCyclicOrbits.lean",
+          "sha256": "7BB21C0881280E377D0B8DE467724EB2B03EA165867FA8BB6273BAB0AFC7F5F9",
+          "oleanSha256": "B188DCAC5E385E8B187C3AB596006FC39DEEE5B0A0211CE7104B181DAAB6E73D"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.transcendental_generic_j",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.generic_primeCyclicRootMap_bijective",
+        "Dubon2026.SourceEllipticVelu.veluQuotient2_map",
+        "Dubon2026.SourceEllipticVelu.twoQuotientJ_map",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.oddPrimeCyclicRootMap_map",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.twoCyclicRootMap_map",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.primeCyclicRootMap_map",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.primeCyclicRootMap_fixedCurve",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.primeCyclicRootMap_galois",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.generic_prime_cyclic_root_orbit_iff",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.primeCyclicKernelMap",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.fixedCurveCyclicKernelMap"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.transcendental_generic_j",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.generic_primeCyclicRootMap_bijective",
+        "Dubon2026.SourceEllipticVelu.veluQuotient2_map",
+        "Dubon2026.SourceEllipticVelu.twoQuotientJ_map",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.oddPrimeCyclicRootMap_map",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.twoCyclicRootMap_map",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.primeCyclicRootMap_map",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.primeCyclicRootMap_fixedCurve",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.primeCyclicRootMap_galois",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.generic_prime_cyclic_root_orbit_iff"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.primeCyclicKernelMap",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.fixedCurveCyclicKernelMap"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGenericCyclicOrbitAudit5.log",
+      "logSha256": "2E1C8ACEC5F06365282488679B155176D6505C6378201274914C2A6CED7D6D20",
+      "auditSha256": "D90A4FCC5D0BB96BE096A229F97278130573DB79B58CE73C3FCDA9C08C1672D3",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 12,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 17,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGenericCyclicOrbitDependencyAudit5.log",
+      "dependencyAuditSha256": "61CC0AED16E94471689497BD6B75CD862FB6279590454F6E2DB61C7A6171C2F2",
+      "dependencyAuditSourceSha256": "6B3567FDF1A80657B4D0E3B59AE75C2D61C84821E6320DD2B75A6391C4C888A1",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.generic_prime_cyclic_root_orbit_iff"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "The literal generic curve is the native explicit model over the rational j-field, base changed to the algebraically closed extension. Its transcendence and cyclic-root bijection are derived. The actual subgroup image under a field point map retains its order. The odd and degree-two quotient j-values give all-prime field-map naturality; coefficient fixation is derived for every base-field automorphism. For every subgroup of those automorphisms, the original cyclic-subgroup orbit relation is equivalent to the exact modular-polynomial root orbit relation. No genericity, injectivity, equivariance or orbit-correspondence certificate is assumed.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The result is for prime degree. Composite-level cyclic quotients, explicit inertia and special-fiber orbit counts, ramification and wild contributions, reverse genus, good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-generic-cyclic-orbit-5-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "D2C4D82DB2BCEF50D39A7083AE0688C17C35AACA5774BEFE02638084337F2A35"
+    },
+    {
+      "recordedUTC": "2026-10-23T18:24:34.461699+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticAbscissaQuotient",
+        "SourceEllipticCyclicAbscissae",
+        "SourceEllipticTwoCyclicAbscissae",
+        "SourceEllipticPrimeAbscissaQuotient",
+        "SourceEllipticPrimeAbscissaHom",
+        "SourceCyclicQuotientOrder",
+        "SourceEllipticPrimeAbscissaRoot",
+        "SourceEllipticCyclicPrimeStep"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticAbscissaQuotient.lean",
+          "sha256": "22988FDC5BE9F4B0D98834D8DE57E367AFFFD2620F52282F17BCF92091603B8A",
+          "oleanSha256": "B94721C73A9B825ED19AE7C6F260C34B4C01DC0B30C13F34A16567E4206F9DAA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCyclicAbscissae.lean",
+          "sha256": "7C20E63BE4C42BAF11D1BB6042AC2B360839C2EC2CEA6D86765059D5FBD5C23B",
+          "oleanSha256": "E75E30E4BDA056822FCE3AA562885B4FD1CC37E10F2B51BEB9309D30B4269163"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticTwoCyclicAbscissae.lean",
+          "sha256": "239263731B2A9DC4C07888DC8DAA1023C8E5C1CF83E4051F84C2BD6F7F4C5293",
+          "oleanSha256": "F7729BE93F06F2ACCAFA1AABDB63180CD2A386A98DA30D1776B60F1C6EB9D537"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPrimeAbscissaQuotient.lean",
+          "sha256": "D58103E4BECF0BE1DDF8B61A7DB35A1CE81A3F555D0FEAD8450C1C1E21C90FD8",
+          "oleanSha256": "1AD4655885458CF5E555EE15144CD80E84984DD8C240A6337B876BDD49057B93"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPrimeAbscissaHom.lean",
+          "sha256": "CA1836903CB2EED3977F7212905D2DED4DB806C60452917EBB474EFA80067CA0",
+          "oleanSha256": "A9806277DCD7F128FE0266583AB9DDD01B0949CE8A1FF5A18BA5587E37ACDFF9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclicQuotientOrder.lean",
+          "sha256": "7705F945E7059126897BB175A7A4E6E02881CA6C49823ED61844B963DB7C396F",
+          "oleanSha256": "C9898710CCF95578361ED597AF6E6BB4513DD845DFC4D564140133068BB8E1BB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPrimeAbscissaRoot.lean",
+          "sha256": "E40C2A16B84C4FEE0F392F1ED9B1C30E585EE1CE9505D746B8CF272A8C15F15C",
+          "oleanSha256": "30F78FCDB16937C5E4D3B329FE18EC0AE5D8421B435B56851820D63F24F23F4F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCyclicPrimeStep.lean",
+          "sha256": "BC3C01A16F3663BEECA0B31C887D8E98CE4D9F672DE4DF1701452689D47179E4",
+          "oleanSha256": "4AD0C3A62C422F00C7CB3172004807D46066AB4ADEF9410572618ACBDE666962"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticVelu.abscissaVeluT_eq",
+        "Dubon2026.SourceEllipticVelu.abscissaVeluW_eq",
+        "Dubon2026.SourceEllipticVelu.abscissaQuotient_image",
+        "Dubon2026.SourceEllipticVelu.abscissaQuotient_oddOrderSummingSet",
+        "Dubon2026.SourceEllipticVelu.mem_cyclicAbscissae",
+        "Dubon2026.SourceEllipticVelu.cyclicAbscissae_eq_oddOrderSummingSet",
+        "Dubon2026.SourceEllipticVelu.oddQuotient_eq_abscissaQuotient",
+        "Dubon2026.SourceEllipticVelu.oddQuotient_eq_of_zmultiples_eq",
+        "Dubon2026.SourceEllipticVelu.cyclicAbscissae_two_singleton",
+        "Dubon2026.SourceEllipticVelu.two_torsion_y_eq",
+        "Dubon2026.SourceEllipticVelu.twoAbscissaQuotient_eq",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotient_two_eq",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotient_odd_eq",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotient_isElliptic",
+        "Dubon2026.SourceEllipticVelu.exists_primeAbscissaHom",
+        "Dubon2026.SourceEllipticCyclicCount.exists_cyclic_subgroup_card_factor",
+        "Dubon2026.SourceEllipticCyclicCount.cyclic_image_card_of_kernel",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotient_j_eq",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotient_isRoot",
+        "Dubon2026.SourceEllipticVelu.exists_cyclic_prime_step",
+        "Dubon2026.SourceEllipticVelu.abscissaVeluT",
+        "Dubon2026.SourceEllipticVelu.abscissaVeluW",
+        "Dubon2026.SourceEllipticVelu.abscissaQuotient",
+        "Dubon2026.SourceEllipticVelu.cyclicAbscissae",
+        "Dubon2026.SourceEllipticVelu.twoAbscissaG",
+        "Dubon2026.SourceEllipticVelu.twoAbscissaQuotient",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotient"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticVelu.abscissaVeluT_eq",
+        "Dubon2026.SourceEllipticVelu.abscissaVeluW_eq",
+        "Dubon2026.SourceEllipticVelu.abscissaQuotient_image",
+        "Dubon2026.SourceEllipticVelu.abscissaQuotient_oddOrderSummingSet",
+        "Dubon2026.SourceEllipticVelu.mem_cyclicAbscissae",
+        "Dubon2026.SourceEllipticVelu.cyclicAbscissae_eq_oddOrderSummingSet",
+        "Dubon2026.SourceEllipticVelu.oddQuotient_eq_abscissaQuotient",
+        "Dubon2026.SourceEllipticVelu.oddQuotient_eq_of_zmultiples_eq",
+        "Dubon2026.SourceEllipticVelu.cyclicAbscissae_two_singleton",
+        "Dubon2026.SourceEllipticVelu.two_torsion_y_eq",
+        "Dubon2026.SourceEllipticVelu.twoAbscissaQuotient_eq",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotient_two_eq",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotient_odd_eq",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotient_isElliptic",
+        "Dubon2026.SourceEllipticVelu.exists_primeAbscissaHom",
+        "Dubon2026.SourceEllipticCyclicCount.exists_cyclic_subgroup_card_factor",
+        "Dubon2026.SourceEllipticCyclicCount.cyclic_image_card_of_kernel",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotient_j_eq",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotient_isRoot",
+        "Dubon2026.SourceEllipticVelu.exists_cyclic_prime_step"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticVelu.abscissaVeluT",
+        "Dubon2026.SourceEllipticVelu.abscissaVeluW",
+        "Dubon2026.SourceEllipticVelu.abscissaQuotient",
+        "Dubon2026.SourceEllipticVelu.cyclicAbscissae",
+        "Dubon2026.SourceEllipticVelu.twoAbscissaG",
+        "Dubon2026.SourceEllipticVelu.twoAbscissaQuotient",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotient"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCyclicPrimeStepAudit8.log",
+      "logSha256": "1500F4FCE9841310169F23130782F711CA8952DAADCD886E2D6709454707E872",
+      "auditSha256": "6D1ADE876DDCD6CAD0319B4E1544EEBCC0898DF61A89493D3BC43102BC773E45",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 46,
+      "linterScopes": 8,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 33,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCyclicPrimeStepDependencyAudit8.log",
+      "dependencyAuditSha256": "75DA65F0B82025B71E8581EFBF558B5484D227C1D46086AA5B9A2B519DCAC352",
+      "dependencyAuditSourceSha256": "76DE766D2163C36FA40741105839B8EBB37B88E22DD1EB767448FCEC6AE10D30",
+      "consumers": [
+        "Dubon2026.SourceEllipticVelu.exists_cyclic_prime_step",
+        "Dubon2026.SourceEllipticVelu.oddQuotient_eq_of_zmultiples_eq"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "The literal odd quotient curve is independent of its generator, through its intrinsic finite subgroup abscissae. The intrinsic prime model equals the actual odd or degree-two quotient, and is elliptic. A surjective point homomorphism with exactly the original prime cyclic kernel is constructed from the existing norm and degree-two maps. An original cyclic subgroup of order p*m supplies a contained kernel of order p and its actual image is cyclic of order m. The quotient j satisfies the exact original prime modular polynomial. No coefficient invariance, ellipticity, kernel, surjectivity, image-order or prime-root certificate is assumed.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Composite-level root assembly, canonical successive point-map compatibility, inertia specialization and numerical exceptional-fiber counts, ramification and wild contributions, reverse genus, good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-cyclic-prime-step-8-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "2E00C18C8D5ECD331AC845E7CBE980002D2911DDF84BD06355692AD0423A8FE7"
+    },
+    {
+      "recordedUTC": "2026-10-23T18:32:21.556611+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceCyclicPrimeKernel",
+        "SourceEllipticCanonicalPrimeHom",
+        "SourceEllipticCanonicalCyclicStep"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclicPrimeKernel.lean",
+          "sha256": "A03C1B09858E316E1BA15931F2A112A5BC44FA727F4F88CA14E331DBBA7DC2D5",
+          "oleanSha256": "956FCEC12AA362F9CE3006DA1FC4E7DBA3BB23C39840DBFD1B5A561828D54A9D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCanonicalPrimeHom.lean",
+          "sha256": "1F0230813777AFACA3E6C1E82F4D1D4665A5A385AE2005C193D9C25AEBEDA0F9",
+          "oleanSha256": "D542427B20539F8E71E4F55736CCA3918A23DAE59B1B0E411577F57098E76B95"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCanonicalCyclicStep.lean",
+          "sha256": "45D33CA9B9B69D84C64C6C9B6C7E775273580086B91A4E7AA953F232F4091798",
+          "oleanSha256": "65CC0E39AC44E4FE9ACC6C75385724E9AAB5E04054860FD22BE5059000ECA80E"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticCyclicCount.mem_cyclicPrimeKernel",
+        "Dubon2026.SourceEllipticCyclicCount.cyclicPrimeKernel_eq_of_card",
+        "Dubon2026.SourceEllipticCyclicCount.cyclicPrimeKernel_cyclic_card",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaHom_ker",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaHom_surjective",
+        "Dubon2026.SourceEllipticVelu.canonical_cyclic_prime_step",
+        "Dubon2026.SourceEllipticCyclicCount.cyclicPrimeKernel",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaHom"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticCyclicCount.mem_cyclicPrimeKernel",
+        "Dubon2026.SourceEllipticCyclicCount.cyclicPrimeKernel_eq_of_card",
+        "Dubon2026.SourceEllipticCyclicCount.cyclicPrimeKernel_cyclic_card",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaHom_ker",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaHom_surjective",
+        "Dubon2026.SourceEllipticVelu.canonical_cyclic_prime_step"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticCyclicCount.cyclicPrimeKernel",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaHom"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCanonicalCyclicStepAudit3.log",
+      "logSha256": "0F8325DD25839CB17B8C3E424A998D955EEC599EA19A4C7BB804D180D68A366A",
+      "auditSha256": "6B58E1985C0B76AD04AEBAFFC0B1B62C262352BB9AFD3B8A944EFA51FD15DF17",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 20,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCanonicalCyclicStepDependencyAudit3.log",
+      "dependencyAuditSha256": "F5D80044B2BD9DE0435D924BDAB9E790F79F84FA66B13F4F4E9B3F649F95913C",
+      "dependencyAuditSourceSha256": "1248F989B8FE128560A85D475D58718805F87F5CF5FBD94246BE332DC1748D47",
+      "consumers": [
+        "Dubon2026.SourceEllipticVelu.canonical_cyclic_prime_step"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "The next prime kernel is the original cyclic subgroup intersected with actual p-torsion. Native torsion counting proves its exact order and cyclicity. The point map is defined explicitly by the existing degree-two coordinate map or odd ideal norm, followed only by equality transport to the intrinsic model. Its kernel, surjectivity and actual cyclic image order are proved, and the intrinsic quotient j satisfies the original prime modular polynomial. No unspecified group homomorphism is used as the map for subsequent iteration.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Composite iteration and the field-map compatibility of successive point maps, the composite polynomial relation, inertia specialization, numerical fiber counts, ramification and wild contributions, reverse genus, good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-canonical-cyclic-step-3-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "D2E1BB0F7C27C74B147E0B3241529D5B03A32228C38764CAC0D6CBBBD59DC366"
+    },
+    {
+      "recordedUTC": "2026-10-23T18:43:09.904224+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticAbscissaBaseChange",
+        "SourceEllipticCyclicAbscissaBaseChange",
+        "SourceEllipticCanonicalKernelBaseChange"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticAbscissaBaseChange.lean",
+          "sha256": "55998B378F9E5AB1A74DF063C39599B32A0A228B38B59A49B823D0F948C427DD",
+          "oleanSha256": "47AD5BEAD84E05898AA67CD20A960B2B7A08A42D469536003D1B6EF086AA61CB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCyclicAbscissaBaseChange.lean",
+          "sha256": "775E362D82BD6CE5DAB8C2B15CC7AD0B9AF3C4722B59C30D63A9DD808E020624",
+          "oleanSha256": "F021A8EC46CA0C7839F7D032658126A43F68DE82ADF169FCC20E76D9A95BB415"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCanonicalKernelBaseChange.lean",
+          "sha256": "A5504E08F5031250FB095D5E43E55A0C458DB3C1FCD2AC098B604A592374C6FD",
+          "oleanSha256": "5BAE14BDE9752159929288E27BC16C23F8F8B98100453A284FE8B8B13AFFFA47"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticVelu.map_abscissaVeluT",
+        "Dubon2026.SourceEllipticVelu.map_abscissaVeluW",
+        "Dubon2026.SourceEllipticVelu.map_twoAbscissaG",
+        "Dubon2026.SourceEllipticVelu.abscissaQuotient_map",
+        "Dubon2026.SourceEllipticVelu.twoAbscissaQuotient_map",
+        "Dubon2026.SourceEllipticVelu.cyclicAbscissae_map",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotient_map",
+        "Dubon2026.SourceEllipticVelu.cyclicPrimeKernel_pointMap"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticVelu.map_abscissaVeluT",
+        "Dubon2026.SourceEllipticVelu.map_abscissaVeluW",
+        "Dubon2026.SourceEllipticVelu.map_twoAbscissaG",
+        "Dubon2026.SourceEllipticVelu.abscissaQuotient_map",
+        "Dubon2026.SourceEllipticVelu.twoAbscissaQuotient_map",
+        "Dubon2026.SourceEllipticVelu.cyclicAbscissae_map",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotient_map",
+        "Dubon2026.SourceEllipticVelu.cyclicPrimeKernel_pointMap"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAbscissaBaseChangeAudit3.log",
+      "logSha256": "BFE015A92A04F9264C3AC92548D339FE19EF98EE13A60A9B75126FA4A408F9E7",
+      "auditSha256": "8BCCD3E349C68B45270F4AD21DC404444ED847C56D60ECD4F1E7D58224F11069",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 10,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 10,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceAbscissaBaseChangeDependencyAudit3.log",
+      "dependencyAuditSha256": "1F99B292C98D4E214263A455ABA5088CF9F42528016DE8ED57389F3BADA7D93C",
+      "dependencyAuditSourceSha256": "CD36C731BFC6AC4ADD4C64F40DD665DE945BE0975A5C40AEBB33CA64F8F0AAC7",
+      "consumers": [
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotient_map",
+        "Dubon2026.SourceEllipticVelu.cyclicPrimeKernel_pointMap"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "The intrinsic prime quotient curve and the literal next p-torsion kernel commute with the original field point map. The quotient identity transports the actual whole finite kernel abscissa set and coefficient sums; neither an assumed curve identity nor an assumed kernel transport is used.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Compatibility of the actual image subgroups under field embeddings, composite iteration and its polynomial root relation, inertia specialization and numerical fiber and ramification counts, reverse genus, good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-abscissa-base-change-3-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "A2194A610D3752D954F9C279F07EC6E4AC119D71EB15CFE16C71076BC6F973BC"
+    },
+    {
+      "recordedUTC": "2026-10-23T18:53:54.544601+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticAbscissaSubgroupEquality",
+        "SourceEllipticAbscissaQuotientX",
+        "SourceEllipticPrimeAbscissaHomX",
+        "SourceEllipticPrimeImageBaseChange"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticAbscissaSubgroupEquality.lean",
+          "sha256": "2FDDFABE07FC9540CAC1F632891F81C988321FC2E3A48291546515B26B24E9DB",
+          "oleanSha256": "3B3CE70064A74D3499D6E92FE8E5AC4A74CFC58B6662FC2D677F8263EF7C9502"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticAbscissaQuotientX.lean",
+          "sha256": "051DB8AF5CAB007B9362A05CC3A39F979D52EC0ABB31B53B157660B9C3CB9347",
+          "oleanSha256": "3C8812C2FA5F6F7A8B8CF8693CC721BCC90379C6EC46C284AC0CA621ACB1C105"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPrimeAbscissaHomX.lean",
+          "sha256": "294DEB5DDF92A21416BD32345D5569C577B8AB2C2FD55AD41A7A54CEE4740DEF",
+          "oleanSha256": "3377B4EC9F7F8FBF8076727B54685F36FFC8A3E213B9004FF61E98D815D79592"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPrimeImageBaseChange.lean",
+          "sha256": "C778EBF1F7FBEF56284D50B5BD0D77B7C3D73CF3B192154B37794980D9BA75FB",
+          "oleanSha256": "0AD0A3F6C689B8AD3DBBCDB909C25B1B0EB0269E93E2CABE008829BE080EB712"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticVelu.subgroup_le_of_cyclicAbscissae_subset",
+        "Dubon2026.SourceEllipticVelu.cyclicAbscissae_eq_iff",
+        "Dubon2026.SourceEllipticVelu.subgroup_map_eq_of_nonzero_abscissae",
+        "Dubon2026.SourceEllipticVelu.abscissaQuotientX_image",
+        "Dubon2026.SourceEllipticVelu.abscissaQuotientX_oddOrderSummingSet",
+        "Dubon2026.SourceEllipticVelu.abscissaQuotientX_map",
+        "Dubon2026.SourceEllipticVelu.twoAbscissaQuotientX_eq",
+        "Dubon2026.SourceEllipticVelu.twoAbscissaQuotientX_map",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotientX_map",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaHom_x",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaHom_image_map",
+        "Dubon2026.SourceEllipticVelu.abscissaQuotientX",
+        "Dubon2026.SourceEllipticVelu.twoAbscissaQuotientX",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotientX"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticVelu.subgroup_le_of_cyclicAbscissae_subset",
+        "Dubon2026.SourceEllipticVelu.cyclicAbscissae_eq_iff",
+        "Dubon2026.SourceEllipticVelu.subgroup_map_eq_of_nonzero_abscissae",
+        "Dubon2026.SourceEllipticVelu.abscissaQuotientX_image",
+        "Dubon2026.SourceEllipticVelu.abscissaQuotientX_oddOrderSummingSet",
+        "Dubon2026.SourceEllipticVelu.abscissaQuotientX_map",
+        "Dubon2026.SourceEllipticVelu.twoAbscissaQuotientX_eq",
+        "Dubon2026.SourceEllipticVelu.twoAbscissaQuotientX_map",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotientX_map",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaHom_x",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaHom_image_map"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticVelu.abscissaQuotientX",
+        "Dubon2026.SourceEllipticVelu.twoAbscissaQuotientX",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotientX"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeImageBaseChangeAudit4.log",
+      "logSha256": "ADF7D633CABEDBDC3E61F09756A262A4188218B1ED212F6E5F595DF4A53F6987",
+      "auditSha256": "FBEDB6AA0228F5C398EE0A4E1EAE7385F412CBA82C15BB2D78E72211ACFBA91B",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 17,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 19,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeImageBaseChangeDependencyAudit4.log",
+      "dependencyAuditSha256": "1C3FBC462CB768D7744630866AB331FB2D8B3604EBA776C4D9FA2AB147D7BB17",
+      "dependencyAuditSourceSha256": "4369892E7D8470C19D24D61A0925B9452EB028C8879B71599F79CA4D5F247AFF",
+      "consumers": [
+        "Dubon2026.SourceEllipticVelu.primeAbscissaHom_image_map"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "The actual image of every finite subgroup under the specific prime quotient map commutes with the original field embedding and the literal target-curve transport. Exact zero fibers and the intrinsic nonzero abscissa formulas are proved from the actual odd ideal norm and degree-two coordinate map. Native same-abscissa equality up to sign then proves equality of the actual image subgroups. No assumed compatibility remains in this prime image statement.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Composite iteration and its polynomial root relation, inertia specialization and numerical fiber and ramification counts, reverse genus, good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-prime-image-base-change-4-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "6D3B81CC98D754589F248ED1F17050B2D14128C6C65773D609EF0D18C667D589"
+    },
+    {
+      "recordedUTC": "2026-10-23T19:05:28.942174+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceCyclicQuotientPrimeArithmetic",
+        "SourceEllipticCompositeCyclicQuotient",
+        "SourceEllipticCompositeQuotientTransport",
+        "SourceEllipticCompositeQuotientBaseChange"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclicQuotientPrimeArithmetic.lean",
+          "sha256": "8D6A7610433379EF1896B42A6C6377E94100E39F9DF826F95ED46BEBA93F1A70",
+          "oleanSha256": "13CB67FF8B3D85D4FCE9991976E9BCFED0DE19BBFF26866858C9A0103C2B14EB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCompositeCyclicQuotient.lean",
+          "sha256": "F311AC5F5B0554C6EBA1EA7BDF86E4747F1705BBCFDAB469B9D908020B04C6E2",
+          "oleanSha256": "CA5A98D0489EA1AF501DD34E99F778FCDA7E898261AE971FAE09567800411A9C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCompositeQuotientTransport.lean",
+          "sha256": "26E8B84901E09D4974B0A6D53823A8F403AC56F9F713D18CFBAFA0FDDF286E1B",
+          "oleanSha256": "136CF9010D35A15D38A11C5F99FBB8ADA535B04C3416E070B6B36AE820B799A7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCompositeQuotientBaseChange.lean",
+          "sha256": "730CFC89B716350C1EC98FCF96E708C49A2EB9FD88B7702D19DF14B6BD5D72AF",
+          "oleanSha256": "E249FB9F61DF4772A99CC020E07DFAF94FCDF8533A6D2BB176192D9C9AE43657"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticCyclicCount.cast_ne_zero_of_dvd_order",
+        "Dubon2026.SourceEllipticCyclicCount.cyclicQuotient_prime_arithmetic",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientCurve_one",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientLeastKernel_map",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientCurve_cast",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientCurve_map",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientLeastKernel",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientCurve"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticCyclicCount.cast_ne_zero_of_dvd_order",
+        "Dubon2026.SourceEllipticCyclicCount.cyclicQuotient_prime_arithmetic",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientCurve_one",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientLeastKernel_map",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientCurve_cast",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientCurve_map"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientLeastKernel",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientCurve"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicQuotientAudit4.log",
+      "logSha256": "E6029FF20864BB4BCF94C1BC17D128230CFAF7497C4DDED602F5472E63DE8319",
+      "auditSha256": "949C17491085B0D21378568C614914CC333EACC0D3524EA5E540AA785FE227F9",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 50,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicQuotientDependencyAudit4.log",
+      "dependencyAuditSha256": "982AB4345A9F5A4AD02F31B55D35F197B0EACCE503C603EAD67CAD2E414F5E25",
+      "dependencyAuditSourceSha256": "D81D616E77840DC01B0F4BA5FA8FBFD082BBFAB5C8869CCDEA8D84B9CE195FEF",
+      "consumers": [
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientCurve_map"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "The actual composite cyclic quotient is constructed by successive least-prime quotients and actual subgroup images, with ellipticity and decreasing invertible orders proved at every step. Its literal curve commutes with the original field embedding at every level nonzero in the source field; target nonvanishing is derived. The induction consumes actual prime image compatibility, literal torsion-kernel transport and intrinsic quotient curve transport. No composite compatibility certificate is assumed.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The all-level modular-polynomial relation and generic cyclic-root bijection, inertia specialization and numerical fiber and ramification counts, reverse genus, good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-composite-cyclic-quotient-4-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "8FF3C9D6546D0A0CCD69D022C5D1ABCC9569AAD653A3866099A8AFCF9DBAF593"
+    },
+    {
+      "recordedUTC": "2026-10-23T19:21:31.409896+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceIntegralResultantCommonRoot",
+        "SourceIntegralModularCompositionResultant",
+        "SourceIntegralFiberComposition",
+        "SourceEllipticIntrinsicPrimeProduct",
+        "SourceEllipticPrimeFiberComposition"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralResultantCommonRoot.lean",
+          "sha256": "0C541A1957F6815214693E5D4C9FA5D74AB802D64609EF6657E3D306828EF5B8",
+          "oleanSha256": "7036359E7CD50921FCC2E511C8BEF1D9D5744188F090183A17FEF72C0C6320BD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralModularCompositionResultant.lean",
+          "sha256": "A3043A1CF90FC6DF4EC4A726DEA59F1DC30EFF69BC6E78512F8A6E02C8C24956",
+          "oleanSha256": "A2D9127A825A2CC23595D366FAC9E8993F1DC8D5F6EA0B740D693B4D8410851D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralFiberComposition.lean",
+          "sha256": "64D4249ED76BA0E4643397FC05C76B81388ABB9A1AE94622A56BC5AAA5DBE795",
+          "oleanSha256": "9BB4A3B0AAD949B09CAE9DE6B3CCA71E9064A399982D56D0D4BB644407A3C2AC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticIntrinsicPrimeProduct.lean",
+          "sha256": "B320D50A5C06104F334EDF5A9D8AA4CCE2BE72448D4644C978D00E8C2F21239A",
+          "oleanSha256": "29AF780586CB51F16EA1AE42F881EC8B19E0F230256DA1DFAA735B1476871A7C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPrimeFiberComposition.lean",
+          "sha256": "D7186435DD45369A15EA10A6FDA502D2394BF13755CF698DA543BDCA9887D3F5",
+          "oleanSha256": "466C38F12EDAC6125B3A1465629AEF7448AAA75A29B0AEE392FFDE6CFBC52F19"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.resultant_zero_of_common_root",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.qExpand_comp_evalAtJ",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_dvd_compositionResultant",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_fiber_dvd_product",
+        "Dubon2026.SourceEllipticVelu.exists_primeAbscissaQuotientProduct",
+        "Dubon2026.SourceEllipticVelu.exists_prime_quotient_fiber_composition"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.resultant_zero_of_common_root",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.qExpand_comp_evalAtJ",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_dvd_compositionResultant",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_fiber_dvd_product",
+        "Dubon2026.SourceEllipticVelu.exists_primeAbscissaQuotientProduct",
+        "Dubon2026.SourceEllipticVelu.exists_prime_quotient_fiber_composition"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceActualFiberCompositionAudit5.log",
+      "logSha256": "E7FE5C135BCF06836F42B34D3F0D640743BFC1886FBB5C09D50FA3DBB0F76766",
+      "auditSha256": "B5DC9E90741E7A3029D31257BE4DF10F0487E51F611C5540B1FF0F21E43B23DB",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 7,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 14,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceActualFiberCompositionDependencyAudit5.log",
+      "dependencyAuditSha256": "96542AE215AAA4A0BB1A694C3CFC22B32B2786CDE733A813EB4E71C58D0969E0",
+      "dependencyAuditSourceSha256": "580E86BBE2B3ED2647CA13BB7B801611D5A4AEFE41A42DAA813E1927BA0739C1",
+      "consumers": [
+        "Dubon2026.SourceEllipticVelu.exists_prime_quotient_fiber_composition"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "The exact integral level-ab modular polynomial divides the composition resultant, using the existing original minimal-polynomial identification and native monic division. A full enumeration of actual prime cyclic kernels gives the exact intrinsic quotient product, including multiplicities at special fibers. The product-level modular fiber then divides the product of remaining-level fibers at these actual quotient j-values. The final consumer assumes no factorization, enumeration or resultant identity.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The all-level cyclic-quotient root relation and generic bijection, inertia specialization and numerical fiber and ramification counts, reverse genus, good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-actual-fiber-composition-5-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "244282CB159BC52D84F8AB96266993E5BC6D9FC94C8527167626821712018745"
+    },
+    {
+      "recordedUTC": "2026-10-23T19:39:12.435342+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceIntegralAllLevelGenericRoots",
+        "SourceIntegralGenericIrreducibility",
+        "SourceIntegralGenericRootConjugacy",
+        "SourceIntegralPrimeRootTranscendence"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralAllLevelGenericRoots.lean",
+          "sha256": "47209F384282BE7866E00D9D32AF3995E8BE2F5145EF5F3E561FFCE6493FF382",
+          "oleanSha256": "090471108BD776DC6C1CEAD447A6224FE819EE408AEA0F5D039D0FB3D4F746A6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralGenericIrreducibility.lean",
+          "sha256": "097E614C84BDEE6196A0A70A4EA4897E3961568EBDCC9F5414F00D96BF38A18D",
+          "oleanSha256": "E6C6C3ED215E1309ADD2C42CDFF98A38F0A704924A0AE93C54A3FD14379E8C47"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralGenericRootConjugacy.lean",
+          "sha256": "C1F51DCFAB1BC7C5981529F52896F48D3FC76D8FD570D857BC21F30405262D3F",
+          "oleanSha256": "D777757141C258B77A99E76E0B9865B20FC3AD4D1F35D9AA089D996EB05DED69"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralPrimeRootTranscendence.lean",
+          "sha256": "89038FE060BAD7A8852BBD849B51C3C8BBA56343C1C3D422B8E0EF3A5AA6568F",
+          "oleanSha256": "3C1F40BF26F7762BA7E19A06263D36784594635D7A5E37BFA2B01951211F9A68"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_separable_transcendental",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_root_card_transcendental",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.coordinateSpecialization_ratFunc",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_irreducible_ratFunc",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_generic_roots_conjugate",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_root_transcendental"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_separable_transcendental",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_root_card_transcendental",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.coordinateSpecialization_ratFunc",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_irreducible_ratFunc",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_generic_roots_conjugate",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_root_transcendental"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGenericFiberArithmeticAudit4.log",
+      "logSha256": "0C7FDDF60213852C544C4D1CFC82093DAAEF1F8E08023188E01BEC1F7E8DFBA4",
+      "auditSha256": "B992905DE74A10114A90D0853DB38185DBA58C6E3210723D6251BA1A0741DC4F",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 8,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 10,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGenericFiberArithmeticDependencyAudit4.log",
+      "dependencyAuditSha256": "49E6C1B1F2016CEDF9A8C42D1223D770424D6F666AFA388B624DE516ECBEC6C9",
+      "dependencyAuditSourceSha256": "DBA04DA7B06B5BFB4E7BEC8FE8DB41D7ECF6775E65495B01E99178D39C9DBEE0",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_root_card_transcendental",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_generic_roots_conjugate",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_root_transcendental"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "For every invertible level N, the exact integral modular polynomial at a transcendental j is separable and has exactly psi(N) distinct roots. Over the rational j-field it is irreducible, and every pair of its roots in an algebraic closure is Galois conjugate. Each prime modular root of a transcendental j remains transcendental over the algebraically closed constant field. No separability, irreducibility, root count, conjugacy or prime-root transcendence certificate is assumed by the final consumers.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The actual all-level cyclic-quotient root relation and generic bijection, composite variable-change transport, inertia specialization and numerical fiber and ramification counts, reverse genus, good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-generic-fiber-arithmetic-4-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "9F65D87CA89F9F10796C1E344FF2C6BEA984EA31F295A2EDDE323DAEEDCAAB78"
+    }
+  ],
+  "reviews": [
+    "Tools/source-transcendental-cyclic-root-3-reuse-review-20261023.json",
+    "Tools/source-generic-cyclic-orbit-5-reuse-review-20261023.json",
+    "Tools/source-cyclic-prime-step-8-reuse-review-20261023.json",
+    "Tools/source-canonical-cyclic-step-3-reuse-review-20261023.json",
+    "Tools/source-abscissa-base-change-3-reuse-review-20261023.json",
+    "Tools/source-prime-image-base-change-4-reuse-review-20261023.json",
+    "Tools/source-composite-cyclic-quotient-4-reuse-review-20261023.json",
+    "Tools/source-actual-fiber-composition-5-reuse-review-20261023.json",
+    "Tools/source-generic-fiber-arithmetic-4-reuse-review-20261023.json"
+  ],
+  "additionalCurrentSearch": {
+    "path": "Tools/composite-cyclic-quotient-route-313.json",
+    "sha256": "C19206C585CC2A7427174E54D3648D6E6F5F844F0289D727DEA8B639AE160FCB"
+  },
+  "productionFocusedReceipt7026": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalCyclicRootDependencyAudit3Production7026.log",
+        "sha256": "0CBD9280749937551969EE16FA7318AF6AC8BF74A30F9A91DBFF6B36AB9D9C38",
+        "requiredProofValueEdges": 16,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.IntegralJCoordinate.primeCyclicRootMap_bijective_transcendental"
+        ],
+        "sourceSha256": "4332296AE6B240E5556AFCB4A0C53BAD26087E3096786BF5738E0DAE976ED70D"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGenericCyclicOrbitDependencyAudit5Production7026.log",
+        "sha256": "61CC0AED16E94471689497BD6B75CD862FB6279590454F6E2DB61C7A6171C2F2",
+        "requiredProofValueEdges": 17,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.IntegralJCoordinate.generic_prime_cyclic_root_orbit_iff"
+        ],
+        "sourceSha256": "8210257B2F2402731992B66E710DB922BFD029886FC75BD1E35B7A65AEE0DACC"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCyclicPrimeStepDependencyAudit8Production7026.log",
+        "sha256": "75DA65F0B82025B71E8581EFBF558B5484D227C1D46086AA5B9A2B519DCAC352",
+        "requiredProofValueEdges": 33,
+        "consumers": [
+          "Dubon2026.SourceEllipticVelu.exists_cyclic_prime_step",
+          "Dubon2026.SourceEllipticVelu.oddQuotient_eq_of_zmultiples_eq"
+        ],
+        "sourceSha256": "84EBD5632EF6253DF003D9D4CC1A2E8A306941BD4CF8B5D9B635EDF425A1B091"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCanonicalCyclicStepDependencyAudit3Production7026.log",
+        "sha256": "F5D80044B2BD9DE0435D924BDAB9E790F79F84FA66B13F4F4E9B3F649F95913C",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceEllipticVelu.canonical_cyclic_prime_step"
+        ],
+        "sourceSha256": "D4C98C2AA4AF35670D7B84CD841A1FA1068671BD34018A9B158F03C457C5EAC4"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceAbscissaBaseChangeDependencyAudit3Production7026.log",
+        "sha256": "1F99B292C98D4E214263A455ABA5088CF9F42528016DE8ED57389F3BADA7D93C",
+        "requiredProofValueEdges": 10,
+        "consumers": [
+          "Dubon2026.SourceEllipticVelu.primeAbscissaQuotient_map",
+          "Dubon2026.SourceEllipticVelu.cyclicPrimeKernel_pointMap"
+        ],
+        "sourceSha256": "88982A3CA46DA924F73AC8AD373A69409A2B492311D93C068D99C7178827FF2A"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeImageBaseChangeDependencyAudit4Production7026.log",
+        "sha256": "1C3FBC462CB768D7744630866AB331FB2D8B3604EBA776C4D9FA2AB147D7BB17",
+        "requiredProofValueEdges": 19,
+        "consumers": [
+          "Dubon2026.SourceEllipticVelu.primeAbscissaHom_image_map"
+        ],
+        "sourceSha256": "B03EBD331C8D17CC365A98D1C6C502D24CA4F8A371111AC3F9C4847279BFD938"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicQuotientDependencyAudit4Production7026.log",
+        "sha256": "982AB4345A9F5A4AD02F31B55D35F197B0EACCE503C603EAD67CAD2E414F5E25",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceEllipticVelu.cyclicQuotientCurve_map"
+        ],
+        "sourceSha256": "2595E123D8A173086B4D996CE61D8A6D4382AD8AB302D29B075C95A203015758"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceActualFiberCompositionDependencyAudit5Production7026.log",
+        "sha256": "96542AE215AAA4A0BB1A694C3CFC22B32B2786CDE733A813EB4E71C58D0969E0",
+        "requiredProofValueEdges": 14,
+        "consumers": [
+          "Dubon2026.SourceEllipticVelu.exists_prime_quotient_fiber_composition"
+        ],
+        "sourceSha256": "380A749D92BD435EBDD380CE37A4843E360469D226A7CE538921A40B6D2897F5"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGenericFiberArithmeticDependencyAudit4Production7026.log",
+        "sha256": "49E6C1B1F2016CEDF9A8C42D1223D770424D6F666AFA388B624DE516ECBEC6C9",
+        "requiredProofValueEdges": 10,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_root_card_transcendental",
+          "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_generic_roots_conjugate",
+          "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_root_transcendental"
+        ],
+        "sourceSha256": "AB405F0985CF1E61A6AE38E2FCB1633B672E38ED340B5C0ADC80D9696F643B40"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberProductionAudit7026.log",
+    "sha256": "318CD5BBBAAEEB28FDDE0948C6CFFBEA9203546239D004A16EF1D6F46BD81ECE",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-composite-cyclic-fiber-production-build-7026.log",
+    "aggregateSha256": "D870BD68713BB8CABE16BB660F2685297AD83080BE217F4842C8A7FC0B1760AE",
+    "productionModules": 7026,
+    "incrementModules": 39,
+    "axiomChecks": 98,
+    "exhaustiveIncrementTheorems": 182,
+    "linterScopes": 39,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 182,
+    "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The original curves, specific quotient homomorphisms, cyclic subgroups, coordinate fields and integral modular polynomial retain their definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 182,
+      "scratchDistinct": 182,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 182,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceIntegralPrimeLaurentRoots",
+            "SourceIntegralTranscendentalSeparability",
+            "SourceEllipticTranscendentalCyclicRoots"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberScratchOwnership311For7026.log",
+            "sha256": "A44391AC838A085979DE41C6E7EF098F633B366F33E01A343531FEA5608BFA5F",
+            "sourceSha256": "BDAEB01CC5CE2DE356E6FDE23486EAA9859A8EF825D004BDE1060B81F644AF8D"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticGenericCyclicRoots",
+            "SourceEllipticTwoQuotientBaseChange",
+            "SourceEllipticCyclicRootBaseChange",
+            "SourceEllipticCyclicRootEquivariance",
+            "SourceEllipticGenericCyclicOrbits"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberScratchOwnership312For7026.log",
+            "sha256": "8DB5A36B8402B97BB747CCAA36DA4E4DC7917BB2A0C5968D1C03FFD75A865C33",
+            "sourceSha256": "FD502B7F72882F939EDC62254E1FA82EB3EEA6138A467CA5219D4B0D9BD09143"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticAbscissaQuotient",
+            "SourceEllipticCyclicAbscissae",
+            "SourceEllipticTwoCyclicAbscissae",
+            "SourceEllipticPrimeAbscissaQuotient",
+            "SourceEllipticPrimeAbscissaHom",
+            "SourceCyclicQuotientOrder",
+            "SourceEllipticPrimeAbscissaRoot",
+            "SourceEllipticCyclicPrimeStep"
+          ],
+          "count": 46,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberScratchOwnership313For7026.log",
+            "sha256": "9741502D02181FCC77022AD264EEF6DEC2FAAF6C5CC617BFFD2816EF6764E1FF",
+            "sourceSha256": "65F11B32E9C8E4177374E12B9005CD394B1D180F9FC99861B5B0BB268406592A"
+          }
+        },
+        {
+          "modules": [
+            "SourceCyclicPrimeKernel",
+            "SourceEllipticCanonicalPrimeHom",
+            "SourceEllipticCanonicalCyclicStep"
+          ],
+          "count": 20,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberScratchOwnership314For7026.log",
+            "sha256": "DE6CBCE2D6E4F8CADEB1EBA1B3D722E6CFC1BBF05559238F01F012C94D053C88",
+            "sourceSha256": "000E83299EE9D551F265162B787BEA14D8D420D99D670F635D04D3CBDE97FBEE"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticAbscissaBaseChange",
+            "SourceEllipticCyclicAbscissaBaseChange",
+            "SourceEllipticCanonicalKernelBaseChange"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberScratchOwnership315For7026.log",
+            "sha256": "795B2BD48796D80134B1C3028DEFEA901D812E1D4F3558A002EA1CEFB83E8659",
+            "sourceSha256": "BFBFC9E8CBB033702142A636DF6818B309395F663425CF8B91AD1CE01E0A7177"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticAbscissaSubgroupEquality",
+            "SourceEllipticAbscissaQuotientX",
+            "SourceEllipticPrimeAbscissaHomX",
+            "SourceEllipticPrimeImageBaseChange"
+          ],
+          "count": 17,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberScratchOwnership316For7026.log",
+            "sha256": "976EE0426590DC467A6350C7D3CF15A7265FE517A0BA9AEF7926BF44A478FA8D",
+            "sourceSha256": "08A79A5861BA6060B0795710AB015E18FB090817950EAF4FA9DCB37A74E03C47"
+          }
+        },
+        {
+          "modules": [
+            "SourceCyclicQuotientPrimeArithmetic",
+            "SourceEllipticCompositeCyclicQuotient",
+            "SourceEllipticCompositeQuotientTransport",
+            "SourceEllipticCompositeQuotientBaseChange"
+          ],
+          "count": 50,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberScratchOwnership317For7026.log",
+            "sha256": "5FD076781494DC44D91B152DF1D9B1D385646D210A20D27BB64064ED0BF162CA",
+            "sourceSha256": "BACD1F97D22EF122FD28CD6E8E893C1D723961B66E8AAC8B23FA64EA3BA8F813"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralResultantCommonRoot",
+            "SourceIntegralModularCompositionResultant",
+            "SourceIntegralFiberComposition",
+            "SourceEllipticIntrinsicPrimeProduct",
+            "SourceEllipticPrimeFiberComposition"
+          ],
+          "count": 7,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberScratchOwnership318For7026.log",
+            "sha256": "4D616199C96D23F76C2B701FBBB1A44396DCEB7B471D31C5C1881715FAF12D71",
+            "sourceSha256": "457DFFBA2C01701C465F8B4D51933628C0D0935AE60464E9B0A02287D637024C"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralAllLevelGenericRoots",
+            "SourceIntegralGenericIrreducibility",
+            "SourceIntegralGenericRootConjugacy",
+            "SourceIntegralPrimeRootTranscendence"
+          ],
+          "count": 8,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberScratchOwnership319For7026.log",
+            "sha256": "2CCEB3ADED69A4628CC2217C1F20E3A8336B80F0A38C1D2F5B6940B473804B83",
+            "sourceSha256": "58F58664A155CE01B4B434A38F61F1822534195FC12F9800FC03BDC8E9746167"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberOwnership7026.log",
+        "sha256": "B9BD3740260D1D565FBCFE3E9ED2B8C1A4D14AD53D3AD1CCF412D7799FEF4D02",
+        "sourceSha256": "A20B8D898E0F8868DA46169B1DE25742802F28D8F10A03DA6C4ED276FD824C37"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261023-105949-655.log",
+        "sha256": "63579E9C58163E898FF794A44BE61E17191C3A004F90F2200541E9C00F42CAE9"
+      }
+    },
+    "scratchToProductionCountReason": "All 182 distinct names from 182 exhaustive scratch checks are retained: 182 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The actual all-level cyclic-quotient root relation and generic bijection, composite variable-change transport, inertia specialization, exceptional-fiber census and wild differential contributions, reverse genus, genus equality and place comparison, modular-curve good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt7026": {
+    "recordedUTC": "2026-10-23T21:17:34.687328+00:00",
+    "log": "logs/dubon-build-20261023-130036-711.log",
+    "sha256": "8F61E037A20294D09E6314459E372CCD282952A15B1766617CB44F06FCE86E2F",
+    "bytes": 12019889,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 7026,
+    "projectTheorems": 47494,
+    "registeredConsumers": 21395,
+    "registeredConstructions": 1843,
+    "declarations": 29058,
+    "generated": 27252,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261023_125720.log",
+    "foundationSha256": "5C52E0F470BA3AABBAFA873EFB4298AF5D8D13E78EE645E27908BF37C5E6AAEC",
+    "countReconciliation": {
+      "previousTheorems": 47313,
+      "focusedTheorems": 182,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial.congr_simp"
+      ],
+      "addedTheorems": 181,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberOwnership7026.log",
+      "ownershipSha256": "B9BD3740260D1D565FBCFE3E9ED2B8C1A4D14AD53D3AD1CCF412D7799FEF4D02"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 182,
+      "scratchDistinct": 182,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 182,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceIntegralPrimeLaurentRoots",
+            "SourceIntegralTranscendentalSeparability",
+            "SourceEllipticTranscendentalCyclicRoots"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberScratchOwnership311For7026.log",
+            "sha256": "A44391AC838A085979DE41C6E7EF098F633B366F33E01A343531FEA5608BFA5F",
+            "sourceSha256": "BDAEB01CC5CE2DE356E6FDE23486EAA9859A8EF825D004BDE1060B81F644AF8D"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticGenericCyclicRoots",
+            "SourceEllipticTwoQuotientBaseChange",
+            "SourceEllipticCyclicRootBaseChange",
+            "SourceEllipticCyclicRootEquivariance",
+            "SourceEllipticGenericCyclicOrbits"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberScratchOwnership312For7026.log",
+            "sha256": "8DB5A36B8402B97BB747CCAA36DA4E4DC7917BB2A0C5968D1C03FFD75A865C33",
+            "sourceSha256": "FD502B7F72882F939EDC62254E1FA82EB3EEA6138A467CA5219D4B0D9BD09143"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticAbscissaQuotient",
+            "SourceEllipticCyclicAbscissae",
+            "SourceEllipticTwoCyclicAbscissae",
+            "SourceEllipticPrimeAbscissaQuotient",
+            "SourceEllipticPrimeAbscissaHom",
+            "SourceCyclicQuotientOrder",
+            "SourceEllipticPrimeAbscissaRoot",
+            "SourceEllipticCyclicPrimeStep"
+          ],
+          "count": 46,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberScratchOwnership313For7026.log",
+            "sha256": "9741502D02181FCC77022AD264EEF6DEC2FAAF6C5CC617BFFD2816EF6764E1FF",
+            "sourceSha256": "65F11B32E9C8E4177374E12B9005CD394B1D180F9FC99861B5B0BB268406592A"
+          }
+        },
+        {
+          "modules": [
+            "SourceCyclicPrimeKernel",
+            "SourceEllipticCanonicalPrimeHom",
+            "SourceEllipticCanonicalCyclicStep"
+          ],
+          "count": 20,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberScratchOwnership314For7026.log",
+            "sha256": "DE6CBCE2D6E4F8CADEB1EBA1B3D722E6CFC1BBF05559238F01F012C94D053C88",
+            "sourceSha256": "000E83299EE9D551F265162B787BEA14D8D420D99D670F635D04D3CBDE97FBEE"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticAbscissaBaseChange",
+            "SourceEllipticCyclicAbscissaBaseChange",
+            "SourceEllipticCanonicalKernelBaseChange"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberScratchOwnership315For7026.log",
+            "sha256": "795B2BD48796D80134B1C3028DEFEA901D812E1D4F3558A002EA1CEFB83E8659",
+            "sourceSha256": "BFBFC9E8CBB033702142A636DF6818B309395F663425CF8B91AD1CE01E0A7177"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticAbscissaSubgroupEquality",
+            "SourceEllipticAbscissaQuotientX",
+            "SourceEllipticPrimeAbscissaHomX",
+            "SourceEllipticPrimeImageBaseChange"
+          ],
+          "count": 17,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberScratchOwnership316For7026.log",
+            "sha256": "976EE0426590DC467A6350C7D3CF15A7265FE517A0BA9AEF7926BF44A478FA8D",
+            "sourceSha256": "08A79A5861BA6060B0795710AB015E18FB090817950EAF4FA9DCB37A74E03C47"
+          }
+        },
+        {
+          "modules": [
+            "SourceCyclicQuotientPrimeArithmetic",
+            "SourceEllipticCompositeCyclicQuotient",
+            "SourceEllipticCompositeQuotientTransport",
+            "SourceEllipticCompositeQuotientBaseChange"
+          ],
+          "count": 50,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberScratchOwnership317For7026.log",
+            "sha256": "5FD076781494DC44D91B152DF1D9B1D385646D210A20D27BB64064ED0BF162CA",
+            "sourceSha256": "BACD1F97D22EF122FD28CD6E8E893C1D723961B66E8AAC8B23FA64EA3BA8F813"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralResultantCommonRoot",
+            "SourceIntegralModularCompositionResultant",
+            "SourceIntegralFiberComposition",
+            "SourceEllipticIntrinsicPrimeProduct",
+            "SourceEllipticPrimeFiberComposition"
+          ],
+          "count": 7,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberScratchOwnership318For7026.log",
+            "sha256": "4D616199C96D23F76C2B701FBBB1A44396DCEB7B471D31C5C1881715FAF12D71",
+            "sourceSha256": "457DFFBA2C01701C465F8B4D51933628C0D0935AE60464E9B0A02287D637024C"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralAllLevelGenericRoots",
+            "SourceIntegralGenericIrreducibility",
+            "SourceIntegralGenericRootConjugacy",
+            "SourceIntegralPrimeRootTranscendence"
+          ],
+          "count": 8,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberScratchOwnership319For7026.log",
+            "sha256": "2CCEB3ADED69A4628CC2217C1F20E3A8336B80F0A38C1D2F5B6940B473804B83",
+            "sourceSha256": "58F58664A155CE01B4B434A38F61F1822534195FC12F9800FC03BDC8E9746167"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeCyclicFiberOwnership7026.log",
+        "sha256": "B9BD3740260D1D565FBCFE3E9ED2B8C1A4D14AD53D3AD1CCF412D7799FEF4D02",
+        "sourceSha256": "A20B8D898E0F8868DA46169B1DE25742802F28D8F10A03DA6C4ED276FD824C37"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261023-105949-655.log",
+        "sha256": "63579E9C58163E898FF794A44BE61E17191C3A004F90F2200541E9C00F42CAE9"
+      }
+    },
+    "scratchToProductionCountReason": "All 182 distinct names from 182 exhaustive scratch checks are retained: 182 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The actual all-level cyclic-quotient root relation and generic bijection, composite variable-change transport, inertia specialization, exceptional-fiber census and wild differential contributions, reverse genus, genus equality and place comparison, modular-curve good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

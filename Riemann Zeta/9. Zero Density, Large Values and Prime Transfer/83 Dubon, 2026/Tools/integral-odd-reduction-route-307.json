@@ -1,0 +1,24 @@
+{
+  "sourceFiles": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_WeierstrassCurve_TorsionIntegral.lean.txt",
+      "sha256": "CCE6B96C159A22D389746550269B7EA988872E4B68A0059E5011D27830F6A879"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_WeierstrassCurve_ReductionMap.lean.txt",
+      "sha256": "0483924CD7CFD5FC325DE7BFE16EC769E9486CF615E715280E70D1CEBEF94911"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_WeierstrassCurve_ReduceHom.lean.txt",
+      "sha256": "EFF8AB2BD6C9514BC317A0FA0810C3DBA989AF83009A2618C692FC3809B8DC7C"
+    }
+  ],
+  "route": "The characteristic-zero product avoids transcendental perturbation. Division-polynomial leading coefficient n squared proves prime-to-residue torsion integrality. Only integral-point addition is needed to define reduction on the finite torsion subgroup. Existing torsion cardinality will give surjectivity after injectivity. Full formal-group kernels, mixed/nonintegral addition, general Hensel lifting and general stable reduction are deferred.",
+  "newSearch": "reuse-torsion-reduction-20261023/verification.json",
+  "nativeReuse": [
+    "WeierstrassCurve.leadingCoeff_?Sq",
+    "Polynomial.isIntegral_leadingCoeff_smul",
+    "Valuation.Integers.isIntegral_iff_v_le_one"
+  ],
+  "dischargedSoFar": "Integral x and y coordinates and literal generic integral odd quotient model compile; reduction compatibility still open."
+}

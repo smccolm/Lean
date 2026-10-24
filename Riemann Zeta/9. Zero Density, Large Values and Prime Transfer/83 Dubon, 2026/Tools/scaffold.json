@@ -33894,6 +33894,1686 @@
     {
       "path": "Tools/source-odd-point-map.json",
       "role": "Tools"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Odd product route/TateCurve-Basic.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Tools/odd-product-route-search-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/period-uniformization-reuse-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/odd-product-descent-current-search-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/standard-quotient-j-audit-304-utf8-correction.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCyclicGenerators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddPrimeQuotients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddQuotientBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddQuotientJ.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralOddQuotientProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralQuotientProductSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPeriodCurve.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPeriodInvariants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPeriodModularCurve.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAnalyticJSurjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticComplexPeriodModel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPeriodicLiouville.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticWeierstrassSurjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPeriodPoint.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPeriodPointSurjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticWeierstrassNonconstant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticWeierstrassDerivatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticWeierstrassAdditionCore.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticWeierstrassAdditionCoreOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticWeierstrassAdditionRemainder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticWeierstrassAdditionIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticWeierstrassAdditionDomain.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticWeierstrassAdditionRemovable.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticWeierstrassAdditionX.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPeriodSlopeDerivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticWeierstrassAdditionY.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPeriodGenericShift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPeriodPointAddition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPeriodUniformization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticComplexUniformization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPeriodCovering.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPeriodHolomorphicLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPeriodAffineLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPeriodScalarMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPeriodLocalCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPeriodLocalScalar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticVeluAnalytic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPeriodQuotientCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPeriodQuotientGerm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddQuotientScalar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddQuotientPeriodKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPeriodLatticeJ.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPeriodCyclicPreimage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticStandardQuotientLattices.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticStandardTorsion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticStandardCyclicDistinct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticStandardCyclicComplete.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddQuotientLatticeJ.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticStandardOddQuotientJ.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralPrimeAnalyticProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddQuotientGeneratorJ.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralComplexOddQuotientProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralEmbeddedOddQuotientProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-odd-product-descent-6-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-period-model-5-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-period-point-4-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-period-uniformization-15-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-period-scalar-6-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-quotient-scalar-5-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-standard-quotient-j-8-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-complex-odd-product-4-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-complex-odd-product.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Dependencies/Lean Reuse 2026-10-23/Torsion reduction/TorsionReduction.exact.lean.txt",
+      "role": "Dependencies"
+    },
+    {
+      "path": "Tools/torsion-reduction-search-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/torsion-reduction-blob-verification-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/integral-odd-reduction-route-307.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/char-zero-odd-product-306-linter-correction.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/complex-odd-product-6953-recorder-correction.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cyclic-root-injectivity-route-311.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/complex-odd-product-6953-canonical-ownership-resolution.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/complex-odd-product-6953-canonical-name-discrepancy.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCountableComplexEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralCountableOddQuotientProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticFiniteCoefficientField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticSubfieldPointLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralCountableModelProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralCharZeroOddQuotientProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTorsionIntegralCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticIntegralOddQuotientModel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticResidueArithmetic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticResiduePoint.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticResidueInverseSlope.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticResidueAdditionSlope.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticResidueIntegralAddition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTorsionReductionHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceValuationResidueAlgClosed.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTorsionReductionEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTorsionReductionCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticIntegralOddQuotientReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCyclicTorsionLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralResidueOddQuotientProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWittResidueLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWittValuationLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticWittModel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralPerfectOddQuotientProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralFieldOddQuotientProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrimeGeneratorFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralOddCyclicRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddPrimeGeneratorInvariant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOddCyclicRootMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTwoQuotientJ.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralTwoPointQuotientProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralTwoCyclicRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTwoCyclicRootMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrimeCyclicRootMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-char-zero-odd-product-6-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-integral-odd-reduction-14-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-field-odd-product-5-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-odd-cyclic-root-4-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-all-prime-cyclic-root-5-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-field-cyclic-roots.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cyclic-root-search-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/composite-cyclic-quotient-route-313.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralPrimeLaurentRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralTranscendentalSeparability.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTranscendentalCyclicRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticGenericCyclicRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTwoQuotientBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCyclicRootBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCyclicRootEquivariance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticGenericCyclicOrbits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticAbscissaQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCyclicAbscissae.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTwoCyclicAbscissae.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrimeAbscissaQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrimeAbscissaHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclicQuotientOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrimeAbscissaRoot.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCyclicPrimeStep.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclicPrimeKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCanonicalPrimeHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCanonicalCyclicStep.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticAbscissaBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCyclicAbscissaBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCanonicalKernelBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticAbscissaSubgroupEquality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticAbscissaQuotientX.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrimeAbscissaHomX.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrimeImageBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclicQuotientPrimeArithmetic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCompositeCyclicQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCompositeQuotientTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCompositeQuotientBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralResultantCommonRoot.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralModularCompositionResultant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralFiberComposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticIntrinsicPrimeProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrimeFiberComposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralAllLevelGenericRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralGenericIrreducibility.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralGenericRootConjugacy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralPrimeRootTranscendence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-transcendental-cyclic-root-3-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-generic-cyclic-orbit-5-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-cyclic-prime-step-8-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-canonical-cyclic-step-3-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-abscissa-base-change-3-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-prime-image-base-change-4-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-composite-cyclic-quotient-4-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-actual-fiber-composition-5-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-generic-fiber-arithmetic-4-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-composite-cyclic-fiber.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/all-level-cyclic-root-route-323.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticAbscissaVariableCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticAbscissaVariableQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCyclicVariableQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticAbscissaVariableX.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrimeVariableX.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrimeImageVariableChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCanonicalKernelVariableChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCompositeQuotientVariableChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCompositeQuotientJ.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclicFiberCounting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralCoordinateRootConjugacy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticQuotientRangeConjugacy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCompositeQuotientStep.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralCyclicInductionArithmetic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrimeFiberMultiplicity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticAlgebraicCyclicRootBijection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCyclicKernelBijection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCyclicBijectionTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclicCoordinateAlgebraicClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticAllLevelCyclicRootBijection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticAllLevelCyclicEquivariance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticAllLevelCyclicOrbits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-composite-variable-change-9-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-algebraic-cyclic-bijection-7-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-all-level-cyclic-bijection-4-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-all-level-cyclic-orbit-2-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-all-level-cyclic-roots.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/faithful-specialization-route-338.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticSeparableCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTorsionAbscissaCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTorsionDivisionRoot.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPreDivisionSeparable.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTorsionSeparable.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticFiniteTorsionField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticLegendreValuation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticLegendreCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticLegendreGoodModel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticLegendreGenerators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticLegendreGaloisField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticLegendreInertia.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticLegendreFieldRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticLegendreFaithfulModel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticLegendreGaloisModel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticIntegralGoodModelChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticInertiaConjugate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticIntegralInertiaCocycle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPositiveCharacteristicCocycle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticInverseCoordinateNaturality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticInverseCoordinateResidue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticInertiaPointReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticModelTorsionReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticGaloisTorsionMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticModelTorsionEquivariance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticActualInertiaTorsionReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticTrivialInertiaTorsion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticDivisionFieldRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticFullTorsionFieldExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticFaithfulGoodModelField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticFaithfulTorsionModel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiniteValuePlace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveClosedConstantResidue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRatFuncGaloisCoordinate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRatFuncFiniteValueSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticGoodModelResidueJ.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticSpecializationFieldPlace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOfJSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticResidueCocycleMultiplication.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticChosenInertiaCocycle.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticResidueInertiaHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticFaithfulSpecializationHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticResidueCurvePointEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticResidueActionConjugacy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticResidueConjugateHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrescribedInertiaAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticSpecializationTorsionRange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCyclicTorsionSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrescribedCyclicSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticStabilizerScaling.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticStabilizerInvariantBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticStabilizerBoundsFive.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOfJDiscriminantOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticOfJExceptionalOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticSpecializationOrderBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrescribedOrderBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-finite-torsion-field-6-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-legendre-good-model-3-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-legendre-galois-stage-6-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-integral-good-model-change-1-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-integral-inertia-cocycle-3-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-actual-inertia-torsion-reduction-7-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-faithful-torsion-model-5-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-rational-specialization-4-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-ofj-specialization-3-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-faithful-inertia-hom-4-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-prescribed-inertia-action-4-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-cyclic-specialization-3-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-stabilizer-bounds-3-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-specialization-order-4-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-faithful-specialization.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cyclic-place-specialization-route-347.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveGaloisPlaceCenter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveDecompositionCenterStabilizer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveDecompositionCardinality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRatFuncSpecializationOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRatFuncInertiaCardinality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrescribedInertiaCardinality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticNegationVariableChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticStabilizerImageUpToSign.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrescribedFullInertiaImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticStabilizerPointAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCyclicStabilizerRelation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticSubgroupSpecializationTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCyclicSpecializationOrbits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrescribedCyclicOrbits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticFullTorsionKernelMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSeparableFixedRootDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticFixedCurvePointMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCyclicRootFixed.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCyclicRootDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticFiniteFieldCyclicRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrescribedFiniteRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticFixedCurvePointNaturality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCyclicRootLiftNaturality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticDescendedCyclicGalois.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticFiniteRootOrbitComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrescribedEquivariantRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularEmbeddingRootActions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCyclicModularEmbeddings.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrescribedEmbeddingOrbits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalCoordinateEmbeddingTower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalCoordinateEmbeddingLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveGaloisFiberTransitivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiniteEmbeddingRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalCoordinatePlaceOrbits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrescribedPlaceOrbits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalFinitePlaceUniqueness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalCoordinateFiberSurjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrescribedPlaceFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalCoordinateEmbeddingAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalEmbeddingStabilizer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalEmbeddingStabilizerCardinality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalEmbeddingFiberOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticPrescribedFiberOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCyclicPlaceFiberClassification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-inertia-cardinality-6-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-full-inertia-image-3-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-cyclic-orbits-5-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-finite-roots-7-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-equivariant-roots-5-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-embedding-orbits-3-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-place-fibers-9-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-fiber-orders-5-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-cyclic-classifier-1-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-cyclic-place-specialization.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/tame-integral-charts-route-356.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclicPrimeTorsionCriterion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceZModQuadraticEigenkernelsR2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceZModEigenkernelPrimeBoundR2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceZModQuadraticStableCyclicCountR2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceInvariantCyclicTorsionTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTorsionEquivQuadraticFixedCounts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticQuadraticFixedCounts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticExceptionalCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeTorsionScalarAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticQuarticModel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticExceptionalDivision.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticQuarticDivisionComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticQuarticNonscalar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticFixedCoordinateSubgroups.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticQuarticFixedCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCubicModel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCubicAddition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCubicAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCubicDivisionComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCubicNonscalar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCubicFixedCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclicSubgroupPermutation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticShortStabilizer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticExceptionalOrbitCounts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticExceptionalStabilizers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticScalingComposition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticExceptionalSubgroupOrbits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticExceptionalCyclicRelation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclicOrbitClassification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticExceptionalJValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularExceptionalFiberCountsFive.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCoefficientGenusLowerFive.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalConormDivisorSpaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalConormDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalArithmeticGenus.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularTameResidueGenus.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularGenusPoleLifting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralChartPoleBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularIntegralChartLifting.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularTameIntegralCharts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-quadratic-counts-4-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-torsion-fixed-counts-3-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-exceptional-fixed-counts-14-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-exceptional-fiber-genus-11-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-arithmetic-tame-genus-4-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-integral-chart-lifting-4-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-tame-integral-charts.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/principal-picard-reduction-route-363.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionSingleChartMonic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionIntegralChartValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionZeroChartValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveDedekindValuationPlaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveSeparableChartValuations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionChartPlaceExistence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveIntegralChartPlaceEquality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionChartPlaceUniqueness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularTameChartPlace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularTameInverseChartPlace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePlaceConstantValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionChartGluing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularTameReductionPlaceMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionIntegralChartImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveIntegralChartUniformizer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveLocalJetDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionOffFiberVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionChartPoleCancellation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveUniformizerJets.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionLocalFiberOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularTameLocalFiberOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralChartCofactor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFilteredOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveChartFactorDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionNormalizedFactors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionTotalChartOrderBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionFactorOrderSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionTotalChartOrderEquality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionIntegralFiberEquality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularTameIntegralFiberIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionIntegralMultiples.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionArbitraryFiberEquality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionPrincipalDivisorMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularTamePrincipalDivisorMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveConstantReductionR2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveReductionPicardR2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularTameConstantReductionR2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularTamePicardReductionR2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveReductionKummerData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveReductionKummerPower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularTameKummerPower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-chart-place-comparison-10-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-reduction-place-map-3-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-local-fiber-order-8-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-integral-fiber-identity-9-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-principal-divisor-map-4-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-constant-picard-reduction-4-r2-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-kummer-power-3-reuse-review-20261023.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-principal-picard-reduction.json",
+      "role": "Tools"
     }
   ],
   "statusDocuments": [
@@ -40841,7 +42521,336 @@
     "SourceEllipticOddKernelNorm",
     "SourceEllipticOddKernelGeometry",
     "SourceEllipticOddPointSurjective",
-    "SourceEllipticOddPointFibers"
+    "SourceEllipticOddPointFibers",
+    "SourceEllipticCyclicGenerators",
+    "SourceEllipticOddPrimeQuotients",
+    "SourceEllipticOddQuotientBaseChange",
+    "SourceEllipticOddQuotientJ",
+    "SourceIntegralOddQuotientProduct",
+    "SourceIntegralQuotientProductSpecialization",
+    "SourceEllipticPeriodCurve",
+    "SourceEllipticPeriodInvariants",
+    "SourceEllipticPeriodModularCurve",
+    "SourceAnalyticJSurjectivity",
+    "SourceEllipticComplexPeriodModel",
+    "SourceEllipticPeriodicLiouville",
+    "SourceEllipticWeierstrassSurjectivity",
+    "SourceEllipticPeriodPoint",
+    "SourceEllipticPeriodPointSurjectivity",
+    "SourceEllipticWeierstrassNonconstant",
+    "SourceEllipticWeierstrassDerivatives",
+    "SourceEllipticWeierstrassAdditionCore",
+    "SourceEllipticWeierstrassAdditionCoreOrder",
+    "SourceEllipticWeierstrassAdditionRemainder",
+    "SourceEllipticWeierstrassAdditionIdentity",
+    "SourceEllipticWeierstrassAdditionDomain",
+    "SourceEllipticWeierstrassAdditionRemovable",
+    "SourceEllipticWeierstrassAdditionX",
+    "SourceEllipticPeriodSlopeDerivative",
+    "SourceEllipticWeierstrassAdditionY",
+    "SourceEllipticPeriodGenericShift",
+    "SourceEllipticPeriodPointAddition",
+    "SourceEllipticPeriodUniformization",
+    "SourceEllipticComplexUniformization",
+    "SourceEllipticPeriodCovering",
+    "SourceEllipticPeriodHolomorphicLift",
+    "SourceEllipticPeriodAffineLift",
+    "SourceEllipticPeriodScalarMap",
+    "SourceEllipticPeriodLocalCoordinates",
+    "SourceEllipticPeriodLocalScalar",
+    "SourceEllipticVeluAnalytic",
+    "SourceEllipticPeriodQuotientCoordinates",
+    "SourceEllipticPeriodQuotientGerm",
+    "SourceEllipticOddQuotientScalar",
+    "SourceEllipticOddQuotientPeriodKernel",
+    "SourceEllipticPeriodLatticeJ",
+    "SourceEllipticPeriodCyclicPreimage",
+    "SourceEllipticStandardQuotientLattices",
+    "SourceEllipticStandardTorsion",
+    "SourceEllipticStandardCyclicDistinct",
+    "SourceEllipticStandardCyclicComplete",
+    "SourceEllipticOddQuotientLatticeJ",
+    "SourceEllipticStandardOddQuotientJ",
+    "SourceIntegralPrimeAnalyticProduct",
+    "SourceEllipticOddQuotientGeneratorJ",
+    "SourceIntegralComplexOddQuotientProduct",
+    "SourceIntegralEmbeddedOddQuotientProduct",
+    "SourceCountableComplexEmbedding",
+    "SourceIntegralCountableOddQuotientProduct",
+    "SourceEllipticFiniteCoefficientField",
+    "SourceEllipticSubfieldPointLift",
+    "SourceIntegralCountableModelProduct",
+    "SourceIntegralCharZeroOddQuotientProduct",
+    "SourceEllipticTorsionIntegralCoordinates",
+    "SourceEllipticIntegralOddQuotientModel",
+    "SourceEllipticResidueArithmetic",
+    "SourceEllipticResiduePoint",
+    "SourceEllipticResidueInverseSlope",
+    "SourceEllipticResidueAdditionSlope",
+    "SourceEllipticResidueIntegralAddition",
+    "SourceEllipticTorsionReductionHom",
+    "SourceValuationResidueAlgClosed",
+    "SourceEllipticTorsionReductionEquiv",
+    "SourceEllipticTorsionReductionCoordinates",
+    "SourceEllipticIntegralOddQuotientReduction",
+    "SourceEllipticCyclicTorsionLift",
+    "SourceIntegralResidueOddQuotientProduct",
+    "SourceWittResidueLift",
+    "SourceWittValuationLift",
+    "SourceEllipticWittModel",
+    "SourceIntegralPerfectOddQuotientProduct",
+    "SourceIntegralFieldOddQuotientProduct",
+    "SourceEllipticPrimeGeneratorFamily",
+    "SourceIntegralOddCyclicRoots",
+    "SourceEllipticOddPrimeGeneratorInvariant",
+    "SourceEllipticOddCyclicRootMap",
+    "SourceEllipticTwoQuotientJ",
+    "SourceIntegralTwoPointQuotientProduct",
+    "SourceIntegralTwoCyclicRoots",
+    "SourceEllipticTwoCyclicRootMap",
+    "SourceEllipticPrimeCyclicRootMap",
+    "SourceIntegralPrimeLaurentRoots",
+    "SourceIntegralTranscendentalSeparability",
+    "SourceEllipticTranscendentalCyclicRoots",
+    "SourceEllipticGenericCyclicRoots",
+    "SourceEllipticTwoQuotientBaseChange",
+    "SourceEllipticCyclicRootBaseChange",
+    "SourceEllipticCyclicRootEquivariance",
+    "SourceEllipticGenericCyclicOrbits",
+    "SourceEllipticAbscissaQuotient",
+    "SourceEllipticCyclicAbscissae",
+    "SourceEllipticTwoCyclicAbscissae",
+    "SourceEllipticPrimeAbscissaQuotient",
+    "SourceEllipticPrimeAbscissaHom",
+    "SourceCyclicQuotientOrder",
+    "SourceEllipticPrimeAbscissaRoot",
+    "SourceEllipticCyclicPrimeStep",
+    "SourceCyclicPrimeKernel",
+    "SourceEllipticCanonicalPrimeHom",
+    "SourceEllipticCanonicalCyclicStep",
+    "SourceEllipticAbscissaBaseChange",
+    "SourceEllipticCyclicAbscissaBaseChange",
+    "SourceEllipticCanonicalKernelBaseChange",
+    "SourceEllipticAbscissaSubgroupEquality",
+    "SourceEllipticAbscissaQuotientX",
+    "SourceEllipticPrimeAbscissaHomX",
+    "SourceEllipticPrimeImageBaseChange",
+    "SourceCyclicQuotientPrimeArithmetic",
+    "SourceEllipticCompositeCyclicQuotient",
+    "SourceEllipticCompositeQuotientTransport",
+    "SourceEllipticCompositeQuotientBaseChange",
+    "SourceIntegralResultantCommonRoot",
+    "SourceIntegralModularCompositionResultant",
+    "SourceIntegralFiberComposition",
+    "SourceEllipticIntrinsicPrimeProduct",
+    "SourceEllipticPrimeFiberComposition",
+    "SourceIntegralAllLevelGenericRoots",
+    "SourceIntegralGenericIrreducibility",
+    "SourceIntegralGenericRootConjugacy",
+    "SourceIntegralPrimeRootTranscendence",
+    "SourceEllipticAbscissaVariableCoefficients",
+    "SourceEllipticAbscissaVariableQuotient",
+    "SourceEllipticCyclicVariableQuotient",
+    "SourceEllipticAbscissaVariableX",
+    "SourceEllipticPrimeVariableX",
+    "SourceEllipticPrimeImageVariableChange",
+    "SourceEllipticCanonicalKernelVariableChange",
+    "SourceEllipticCompositeQuotientVariableChange",
+    "SourceEllipticCompositeQuotientJ",
+    "SourceCyclicFiberCounting",
+    "SourceIntegralCoordinateRootConjugacy",
+    "SourceEllipticQuotientRangeConjugacy",
+    "SourceEllipticCompositeQuotientStep",
+    "SourceIntegralCyclicInductionArithmetic",
+    "SourceEllipticPrimeFiberMultiplicity",
+    "SourceEllipticAlgebraicCyclicRootBijection",
+    "SourceEllipticCyclicKernelBijection",
+    "SourceEllipticCyclicBijectionTransport",
+    "SourceCyclicCoordinateAlgebraicClosure",
+    "SourceEllipticAllLevelCyclicRootBijection",
+    "SourceEllipticAllLevelCyclicEquivariance",
+    "SourceEllipticAllLevelCyclicOrbits",
+    "SourceEllipticSeparableCoordinates",
+    "SourceEllipticTorsionAbscissaCount",
+    "SourceEllipticTorsionDivisionRoot",
+    "SourceEllipticPreDivisionSeparable",
+    "SourceEllipticTorsionSeparable",
+    "SourceEllipticFiniteTorsionField",
+    "SourceEllipticLegendreValuation",
+    "SourceEllipticLegendreCoordinates",
+    "SourceEllipticLegendreGoodModel",
+    "SourceEllipticLegendreGenerators",
+    "SourceEllipticLegendreGaloisField",
+    "SourceEllipticLegendreInertia",
+    "SourceEllipticLegendreFieldRoots",
+    "SourceEllipticLegendreFaithfulModel",
+    "SourceEllipticLegendreGaloisModel",
+    "SourceEllipticIntegralGoodModelChange",
+    "SourceEllipticInertiaConjugate",
+    "SourceEllipticIntegralInertiaCocycle",
+    "SourceEllipticPositiveCharacteristicCocycle",
+    "SourceEllipticInverseCoordinateNaturality",
+    "SourceEllipticInverseCoordinateResidue",
+    "SourceEllipticInertiaPointReduction",
+    "SourceEllipticModelTorsionReduction",
+    "SourceEllipticGaloisTorsionMap",
+    "SourceEllipticModelTorsionEquivariance",
+    "SourceEllipticActualInertiaTorsionReduction",
+    "SourceEllipticTrivialInertiaTorsion",
+    "SourceEllipticDivisionFieldRestriction",
+    "SourceEllipticFullTorsionFieldExtension",
+    "SourceEllipticFaithfulGoodModelField",
+    "SourceEllipticFaithfulTorsionModel",
+    "SourceCurveFiniteValuePlace",
+    "SourceCurveClosedConstantResidue",
+    "SourceRatFuncGaloisCoordinate",
+    "SourceRatFuncFiniteValueSpecialization",
+    "SourceEllipticGoodModelResidueJ",
+    "SourceEllipticSpecializationFieldPlace",
+    "SourceEllipticOfJSpecialization",
+    "SourceEllipticResidueCocycleMultiplication",
+    "SourceEllipticChosenInertiaCocycle",
+    "SourceEllipticResidueInertiaHom",
+    "SourceEllipticFaithfulSpecializationHom",
+    "SourceEllipticResidueCurvePointEquiv",
+    "SourceEllipticResidueActionConjugacy",
+    "SourceEllipticResidueConjugateHom",
+    "SourceEllipticPrescribedInertiaAction",
+    "SourceEllipticSpecializationTorsionRange",
+    "SourceEllipticCyclicTorsionSpecialization",
+    "SourceEllipticPrescribedCyclicSpecialization",
+    "SourceEllipticStabilizerScaling",
+    "SourceEllipticStabilizerInvariantBounds",
+    "SourceEllipticStabilizerBoundsFive",
+    "SourceEllipticOfJDiscriminantOrder",
+    "SourceEllipticOfJExceptionalOrders",
+    "SourceEllipticSpecializationOrderBound",
+    "SourceEllipticPrescribedOrderBound",
+    "SourceCurveGaloisPlaceCenter",
+    "SourceCurveDecompositionCenterStabilizer",
+    "SourceCurveDecompositionCardinality",
+    "SourceRatFuncSpecializationOrder",
+    "SourceRatFuncInertiaCardinality",
+    "SourceEllipticPrescribedInertiaCardinality",
+    "SourceEllipticNegationVariableChange",
+    "SourceEllipticStabilizerImageUpToSign",
+    "SourceEllipticPrescribedFullInertiaImage",
+    "SourceEllipticStabilizerPointAction",
+    "SourceEllipticCyclicStabilizerRelation",
+    "SourceEllipticSubgroupSpecializationTransport",
+    "SourceEllipticCyclicSpecializationOrbits",
+    "SourceEllipticPrescribedCyclicOrbits",
+    "SourceEllipticFullTorsionKernelMap",
+    "SourceSeparableFixedRootDescent",
+    "SourceEllipticFixedCurvePointMap",
+    "SourceEllipticCyclicRootFixed",
+    "SourceEllipticCyclicRootDescent",
+    "SourceEllipticFiniteFieldCyclicRoots",
+    "SourceEllipticPrescribedFiniteRoots",
+    "SourceEllipticFixedCurvePointNaturality",
+    "SourceEllipticCyclicRootLiftNaturality",
+    "SourceEllipticDescendedCyclicGalois",
+    "SourceEllipticFiniteRootOrbitComparison",
+    "SourceEllipticPrescribedEquivariantRoots",
+    "SourceModularEmbeddingRootActions",
+    "SourceEllipticCyclicModularEmbeddings",
+    "SourceEllipticPrescribedEmbeddingOrbits",
+    "SourceRationalCoordinateEmbeddingTower",
+    "SourceRationalCoordinateEmbeddingLift",
+    "SourceCurveGaloisFiberTransitivity",
+    "SourceCurveFiniteEmbeddingRestriction",
+    "SourceRationalCoordinatePlaceOrbits",
+    "SourceEllipticPrescribedPlaceOrbits",
+    "SourceRationalFinitePlaceUniqueness",
+    "SourceRationalCoordinateFiberSurjectivity",
+    "SourceEllipticPrescribedPlaceFibers",
+    "SourceRationalCoordinateEmbeddingAction",
+    "SourceRationalEmbeddingStabilizer",
+    "SourceRationalEmbeddingStabilizerCardinality",
+    "SourceRationalEmbeddingFiberOrder",
+    "SourceEllipticPrescribedFiberOrders",
+    "SourceEllipticCyclicPlaceFiberClassification",
+    "SourceCyclicPrimeTorsionCriterion",
+    "SourceZModQuadraticEigenkernelsR2",
+    "SourceZModEigenkernelPrimeBoundR2",
+    "SourceZModQuadraticStableCyclicCountR2",
+    "SourceInvariantCyclicTorsionTransport",
+    "SourceTorsionEquivQuadraticFixedCounts",
+    "SourceEllipticQuadraticFixedCounts",
+    "SourceEllipticExceptionalCoordinates",
+    "SourcePrimeTorsionScalarAction",
+    "SourceEllipticQuarticModel",
+    "SourceEllipticExceptionalDivision",
+    "SourceEllipticQuarticDivisionComparison",
+    "SourceEllipticQuarticNonscalar",
+    "SourceEllipticFixedCoordinateSubgroups",
+    "SourceEllipticQuarticFixedCount",
+    "SourceEllipticCubicModel",
+    "SourceEllipticCubicAddition",
+    "SourceEllipticCubicAction",
+    "SourceEllipticCubicDivisionComparison",
+    "SourceEllipticCubicNonscalar",
+    "SourceEllipticCubicFixedCount",
+    "SourceCyclicSubgroupPermutation",
+    "SourceEllipticShortStabilizer",
+    "SourceEllipticExceptionalOrbitCounts",
+    "SourceEllipticExceptionalStabilizers",
+    "SourceEllipticScalingComposition",
+    "SourceEllipticExceptionalSubgroupOrbits",
+    "SourceEllipticExceptionalCyclicRelation",
+    "SourceCyclicOrbitClassification",
+    "SourceEllipticExceptionalJValues",
+    "SourceModularExceptionalFiberCountsFive",
+    "SourceModularCoefficientGenusLowerFive",
+    "SourceOriginalConormDivisorSpaces",
+    "SourceOriginalConormDimension",
+    "SourceOriginalArithmeticGenus",
+    "SourceModularTameResidueGenus",
+    "SourceModularGenusPoleLifting",
+    "SourceIntegralChartPoleBound",
+    "SourceModularIntegralChartLifting",
+    "SourceModularTameIntegralCharts",
+    "SourceReductionSingleChartMonic",
+    "SourceReductionIntegralChartValues",
+    "SourceReductionZeroChartValues",
+    "SourceCurveDedekindValuationPlaces",
+    "SourceCurveSeparableChartValuations",
+    "SourceReductionChartPlaceExistence",
+    "SourceCurveIntegralChartPlaceEquality",
+    "SourceReductionChartPlaceUniqueness",
+    "SourceModularTameChartPlace",
+    "SourceModularTameInverseChartPlace",
+    "SourceCurvePlaceConstantValues",
+    "SourceReductionChartGluing",
+    "SourceModularTameReductionPlaceMap",
+    "SourceReductionIntegralChartImage",
+    "SourceCurveIntegralChartUniformizer",
+    "SourceCurveLocalJetDimension",
+    "SourceReductionOffFiberVanishing",
+    "SourceReductionChartPoleCancellation",
+    "SourceCurveUniformizerJets",
+    "SourceReductionLocalFiberOrder",
+    "SourceModularTameLocalFiberOrder",
+    "SourceIntegralChartCofactor",
+    "SourceCurveFilteredOrders",
+    "SourceCurveChartFactorDegree",
+    "SourceReductionNormalizedFactors",
+    "SourceReductionTotalChartOrderBound",
+    "SourceReductionFactorOrderSum",
+    "SourceReductionTotalChartOrderEquality",
+    "SourceReductionIntegralFiberEquality",
+    "SourceModularTameIntegralFiberIdentity",
+    "SourceReductionIntegralMultiples",
+    "SourceReductionArbitraryFiberEquality",
+    "SourceReductionPrincipalDivisorMap",
+    "SourceModularTamePrincipalDivisorMap",
+    "SourceCurveConstantReductionR2",
+    "SourceCurveReductionPicardR2",
+    "SourceModularTameConstantReductionR2",
+    "SourceModularTamePicardReductionR2",
+    "SourceCurveReductionKummerData",
+    "SourceCurveReductionKummerPower",
+    "SourceModularTameKummerPower"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

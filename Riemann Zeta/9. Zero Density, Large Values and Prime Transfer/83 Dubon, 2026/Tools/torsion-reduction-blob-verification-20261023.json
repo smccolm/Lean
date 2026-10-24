@@ -1,0 +1,9 @@
+{
+  "path": "E:\\Lean\\.tmp\\dubon83\\reuse-torsion-reduction-20261023\\TorsionReduction.exact.lean.txt",
+  "gitBlob": "16ab5e517ea4cbdfc3511120e8fb2bfdb3a813fa",
+  "sha256": "3E0ECC665DC8F7114C18A270EFA16D8F38EDC9FE31CC7F618524538F3277C04B",
+  "verified": true,
+  "commit": "f8431823ce1a8eb0842054d60ae3cbc502a0c817",
+  "license": "Apache-2.0",
+  "transportCorrection": "The first apply_patch copy added one terminal newline. It is preserved as TorsionReduction.lean.txt. The exact copy removes only that extra newline and matches the upstream Git blob."
+}

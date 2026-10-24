@@ -1,0 +1,678 @@
+{
+  "date": "23 October 2026",
+  "modules": [
+    "Dubon2026.SourceEllipticAbscissaVariableCoefficients",
+    "Dubon2026.SourceEllipticAbscissaVariableQuotient",
+    "Dubon2026.SourceEllipticCyclicVariableQuotient",
+    "Dubon2026.SourceEllipticAbscissaVariableX",
+    "Dubon2026.SourceEllipticPrimeVariableX",
+    "Dubon2026.SourceEllipticPrimeImageVariableChange",
+    "Dubon2026.SourceEllipticCanonicalKernelVariableChange",
+    "Dubon2026.SourceEllipticCompositeQuotientVariableChange",
+    "Dubon2026.SourceEllipticCompositeQuotientJ",
+    "Dubon2026.SourceCyclicFiberCounting",
+    "Dubon2026.SourceIntegralCoordinateRootConjugacy",
+    "Dubon2026.SourceEllipticQuotientRangeConjugacy",
+    "Dubon2026.SourceEllipticCompositeQuotientStep",
+    "Dubon2026.SourceIntegralCyclicInductionArithmetic",
+    "Dubon2026.SourceEllipticPrimeFiberMultiplicity",
+    "Dubon2026.SourceEllipticAlgebraicCyclicRootBijection",
+    "Dubon2026.SourceEllipticCyclicKernelBijection",
+    "Dubon2026.SourceEllipticCyclicBijectionTransport",
+    "Dubon2026.SourceCyclicCoordinateAlgebraicClosure",
+    "Dubon2026.SourceEllipticAllLevelCyclicRootBijection",
+    "Dubon2026.SourceEllipticAllLevelCyclicEquivariance",
+    "Dubon2026.SourceEllipticAllLevelCyclicOrbits"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original weight-two Frobenius/inertia -> actual modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census and wild differential contribution -> elliptic cyclic-subgroup inertia orbits -> actual cyclic-subgroup interpretation of integral modular-polynomial roots -> actual prime quotient homomorphisms and integral polynomial products.",
+  "discharged": "At every invertible level N and every transcendental j over an algebraically closed constant field, actual cyclic-subgroup quotient values biject with the exact integral modular-polynomial roots in any algebraically closed coefficient overfield. Literal quotient curves, image subgroups and j-values commute with the original coordinate changes and field embeddings. Strong induction derives every lower-level root bijection from the actual prime quotient products, exact kernel uniqueness, composition multiplicities and psi(N) counts. Native root conjugacy and model classification give range invariance; a strict degree bound determines the full root multiset. The auxiliary algebraicity of the ambient field is derived inside the actual j-field closure and removed by proved transport. The original all-level cyclic-subgroup and root orbit relations agree for every subgroup of base-field automorphisms, including inertia. No quotient, root-bijection, field-algebraicity, equivariance or orbit certificate remains assumed.",
+  "boundary": "Specialization to the residue elliptic curve and identification of the realized stabilizer action, numerical exceptional-fiber and ramification counts and wild differential contributions, reverse genus, genus equality and place comparison, modular-curve good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 7,048-module scope: all thirteen retained regressions, 47,569 exhaustive theorem checks, 21,434 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_variableChange",
+    "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_map",
+    "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_one",
+    "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_bijOn_transcendental_algebraic",
+    "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_bijOn_transcendental",
+    "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_galois_orbit_iff"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-23T19:59:16.868061+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticAbscissaVariableCoefficients",
+        "SourceEllipticAbscissaVariableQuotient",
+        "SourceEllipticCyclicVariableQuotient",
+        "SourceEllipticAbscissaVariableX",
+        "SourceEllipticPrimeVariableX",
+        "SourceEllipticPrimeImageVariableChange",
+        "SourceEllipticCanonicalKernelVariableChange",
+        "SourceEllipticCompositeQuotientVariableChange",
+        "SourceEllipticCompositeQuotientJ"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticAbscissaVariableCoefficients.lean",
+          "sha256": "351899DF8B5BB6BEB5A10B8E02A8E9F08328F20A4DBDC1F38795297C20D379A2",
+          "oleanSha256": "9356280D097FF8A9FCDCC944B973B532336B0723F5CD8A532A0D964060A975DB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticAbscissaVariableQuotient.lean",
+          "sha256": "50044A7F1E45400122991BBDA6FCC21330EA7F54E30C544311DAB7CCDFE8CE2A",
+          "oleanSha256": "E8F0A5F97D98625DCB4B3144F736294D0BC45BE91050A999A3B30D4C8DE988F7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCyclicVariableQuotient.lean",
+          "sha256": "5248784666F6B8F590EED357A8CFCF5221198BE216574889B0120A42FB372A6C",
+          "oleanSha256": "FB518FE0666F48A50962215364CCCA5C80F8F756393525F7CD9DAC7F447F1F76"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticAbscissaVariableX.lean",
+          "sha256": "759687DA25052B0E6A98016ACE22473180F422617AA6904C6AA73DE58187C747",
+          "oleanSha256": "FA9440E03CB0DB0EFB7A32D3B681F734F83786FFBE6B8AA172F4BADEE13041DA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPrimeVariableX.lean",
+          "sha256": "5F3806183222A9817EAEAD8B45C30A7D2474D96436FA375BB0BAF81109F4E87A",
+          "oleanSha256": "7135BB2523B45F66978187B55BC68D55FCD935B844556488FAB62AA0231433DA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPrimeImageVariableChange.lean",
+          "sha256": "3AEA42CA10B28D1FBCCBEDC1B530A3A0C9387631639F5B75EA38B42BF96A68E6",
+          "oleanSha256": "18A001865D3148E401C7AD49DC3AFF671C37AD1590E353E1625FD1E32C156127"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCanonicalKernelVariableChange.lean",
+          "sha256": "1224F0E6AD08BD765FBE7A20DF12D484570E2AC8FBFA724EB6AF647692ABE8E9",
+          "oleanSha256": "03B55924D35D275FF882C7638BEF24A51F54C96DB8F5C93FD1D237E21D11216A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCompositeQuotientVariableChange.lean",
+          "sha256": "3A99440310E79EE123F6C0BC213D08906E3B214EFC215D7BAB9594AEE6226E50",
+          "oleanSha256": "932225DC635DB9A1E5714C2DF9C98E7B06F53A0C5315123954C206857199ADE1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCompositeQuotientJ.lean",
+          "sha256": "1238D79F4181475A5511A4E8318426E802B11FF2F9F4111FD0FCA1EB565EABCB",
+          "oleanSha256": "20156135AFC7CFD29A94176376B12D39FADB6ECD28B9DDEC3B23F0E1D7A2050A"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticVelu.variableChange_abscissaVeluT",
+        "Dubon2026.SourceEllipticVelu.variableChange_secondDivision_eval",
+        "Dubon2026.SourceEllipticVelu.variableChange_abscissaVeluW",
+        "Dubon2026.SourceEllipticVelu.twoAbscissaG_eq_half",
+        "Dubon2026.SourceEllipticVelu.variableChange_twoAbscissaG",
+        "Dubon2026.SourceEllipticVelu.variableChange_abscissaQuotient",
+        "Dubon2026.SourceEllipticVelu.variableChange_twoAbscissaQuotient",
+        "Dubon2026.SourceEllipticVelu.cyclicAbscissae_variableChange",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotient_variableChange",
+        "Dubon2026.SourceEllipticVelu.variableChange_abscissaQuotientX",
+        "Dubon2026.SourceEllipticVelu.variableChange_twoAbscissaQuotientX",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotientX_variableChange",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaHom_image_variableChange",
+        "Dubon2026.SourceEllipticVelu.cyclicPrimeKernel_variableChange",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientLeastKernel_variableChange",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientCurve_variableChange",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_variableChange",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_map",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_one",
+        "Dubon2026.SourceEllipticVelu.cyclicKernelVariableChange",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticVelu.variableChange_abscissaVeluT",
+        "Dubon2026.SourceEllipticVelu.variableChange_secondDivision_eval",
+        "Dubon2026.SourceEllipticVelu.variableChange_abscissaVeluW",
+        "Dubon2026.SourceEllipticVelu.twoAbscissaG_eq_half",
+        "Dubon2026.SourceEllipticVelu.variableChange_twoAbscissaG",
+        "Dubon2026.SourceEllipticVelu.variableChange_abscissaQuotient",
+        "Dubon2026.SourceEllipticVelu.variableChange_twoAbscissaQuotient",
+        "Dubon2026.SourceEllipticVelu.cyclicAbscissae_variableChange",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotient_variableChange",
+        "Dubon2026.SourceEllipticVelu.variableChange_abscissaQuotientX",
+        "Dubon2026.SourceEllipticVelu.variableChange_twoAbscissaQuotientX",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaQuotientX_variableChange",
+        "Dubon2026.SourceEllipticVelu.primeAbscissaHom_image_variableChange",
+        "Dubon2026.SourceEllipticVelu.cyclicPrimeKernel_variableChange",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientLeastKernel_variableChange",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientCurve_variableChange",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_variableChange",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_map",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_one"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticVelu.cyclicKernelVariableChange",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeVariableChangeAudit9.log",
+      "logSha256": "03B449979D6ED6D726D69D1D8609F8B370417E6BAA968EB6760A6FF63D4FB3F6",
+      "auditSha256": "E22E83D6016789D792B332A12805A31AA8F2E13AEF7E618BC66D4EC2B8784658",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 44,
+      "linterScopes": 9,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 28,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeVariableChangeDependencyAudit9.log",
+      "dependencyAuditSha256": "EFA202FEBD24EFB6DAF93E3F50276586506517C3D34345CE3D03822C220EF116",
+      "dependencyAuditSourceSha256": "20283715A07BB9F97762D82AC356EA23DF8EEA4A763CAC7582EF0480F0047087",
+      "consumers": [
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_variableChange",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_map",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_one"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "The literal actual composite cyclic quotient curve transforms under every original Weierstrass coordinate change at every invertible level. The native additive point equivalence transports the actual kernel. Existing Velu scaling gives intrinsic quotient coefficients and x-coordinates; exact kernels and same-abscissa equality up to sign prove equality of actual finite image subgroups. Strong induction transports the whole quotient. Its actual j-value is constructed and proved invariant under model changes and natural under field embeddings. No coefficient, point-equivalence, image, curve or j-compatibility certificate is assumed.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The all-level cyclic-quotient root relation and generic bijection, including its finite-fiber counting application, inertia specialization and numerical fiber and ramification counts, reverse genus, good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-composite-variable-change-9-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "1D0EEE885FA6A3E4A0F2F9C7728B20D6F2BB641C13B769E29A81A51DE688F1AE"
+    },
+    {
+      "recordedUTC": "2026-10-23T20:23:27.972614+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceCyclicFiberCounting",
+        "SourceIntegralCoordinateRootConjugacy",
+        "SourceEllipticQuotientRangeConjugacy",
+        "SourceEllipticCompositeQuotientStep",
+        "SourceIntegralCyclicInductionArithmetic",
+        "SourceEllipticPrimeFiberMultiplicity",
+        "SourceEllipticAlgebraicCyclicRootBijection"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclicFiberCounting.lean",
+          "sha256": "CA6FA8F6C0FA3E313FB3ADE065048B909857903296726FA5070DD197E73016C2",
+          "oleanSha256": "522C79F9A08FA1097DBA802899F6B31C7FD5986832A80D47ED7BCD0AB5B86AFC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCoordinateRootConjugacy.lean",
+          "sha256": "35EC24A5518109D931B97E366C4A4FFD85E95F8EFE8DC89C7BE08F05106451D2",
+          "oleanSha256": "6329C4D101E09EA1029EF3E6477F2287B121C0FC21B2E231EE2A3FA73BF217A4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticQuotientRangeConjugacy.lean",
+          "sha256": "3087420FCA31813E3511836321545CE30D4F163E5336A9DB64B32D9AA8AEFA97",
+          "oleanSha256": "D6E7B8011D0896B77DC414AAF32C7B8DDB75FE79E83217173C09EE5F9D30F0FA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCompositeQuotientStep.lean",
+          "sha256": "5E78ADD4E66409797D4F3AAD0BB7A9F30EB0586CC7CA1E62A0590950E07C3FFA",
+          "oleanSha256": "6FE31CC6077CB99BF0D98755B809FC19C4C8B7BC113B039F3DFE33C2FAB54689"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCyclicInductionArithmetic.lean",
+          "sha256": "F70698162E02A8F7A7F1CF19477B234E13E685DE4F450DB3F8DBF45DC93381CF",
+          "oleanSha256": "05925E295313203A349E0242F57D4604A3E3C1FBFB5648FA95AB4B10316B0D78"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPrimeFiberMultiplicity.lean",
+          "sha256": "4D126EDB2618A0EE23E9A2DFFE23CCC836480228EAFA8F40BF4753E3C84AA020",
+          "oleanSha256": "A37BCF8C729C405E5CBDD97329EA9E54EAD33AE66883F1A0F1E41AFEAF43E1DC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticAlgebraicCyclicRootBijection.lean",
+          "sha256": "B4FDECE1CCDD29D34A9379AC01FB034F2D189951CD2ED2E2E3DC1685B567C9D9",
+          "oleanSha256": "997FD3CF61E50BA0E2B07E4BCF8E4F6B50CDC478A98728720C77B304EBEC7D15"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticCyclicCount.quotient_multiset_eq_of_transitive_support",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_irreducible_adjoin",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_coordinate_roots_conjugate",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_mem_range_map",
+        "Dubon2026.SourceEllipticVelu.modular_roots_quotient_range_iff",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_step",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_one",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_one_fiber",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.prime_composition_degree_lt",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_fiber_card_le_composition",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_bijOn_transcendental_algebraic"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticCyclicCount.quotient_multiset_eq_of_transitive_support",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_irreducible_adjoin",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_coordinate_roots_conjugate",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_mem_range_map",
+        "Dubon2026.SourceEllipticVelu.modular_roots_quotient_range_iff",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_step",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_one",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_one_fiber",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.prime_composition_degree_lt",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_fiber_card_le_composition",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_bijOn_transcendental_algebraic"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicCyclicBijectionAudit7.log",
+      "logSha256": "E6669B12BAA9C2D9C95BC8714258886DC972BAD6F291FF225A116191B4CECF93",
+      "auditSha256": "5A0831FA9084E0C33AC5E577556DC130D302FBFE188183537E431554A7EA93AD",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 23,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 22,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicCyclicBijectionDependencyAudit7.log",
+      "dependencyAuditSha256": "C4764752408F3AD9D010BC1D12764B42EF9F2BDDEA352BC416413E6364673D48",
+      "dependencyAuditSourceSha256": "49A31C84D9F879DB3F32E408FD4CA0F8513F8FDB303F038AFBA0881F7C32C1B7",
+      "consumers": [
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_bijOn_transcendental_algebraic"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "At every invertible level N, actual cyclic quotient values biject with the exact original integral modular roots at transcendental j, in an algebraically closed field algebraic over its j-coordinate field. The proof is a complete strong induction, discharging all lower-level bijection premises. Exact prime kernel uniqueness and actual subgroup images bound quotient multiplicities by the full composition polynomial. Existing coordinate exchange keeps the same field in the induction. The original generic minimal polynomial and native normal-extension theorem give conjugacy. Literal field/model compatibility and native same-j classification give range invariance. A multiset counting argument identifies all values and multiplicities from the strict degree bound and exact psi(N) count.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The algebraicity of the ambient field over its transcendental j-field is still an explicit assumption of this consumer. Transport to arbitrary algebraically closed overfields remains to remove it. Inertia specialization, numerical exceptional-fiber and ramification counts, reverse genus, good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-algebraic-cyclic-bijection-7-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "D86FCCA6DB4732FA65898BA8EB19673EB51B6FC68BE21D459449432D5C5FBD09"
+    },
+    {
+      "recordedUTC": "2026-10-23T20:32:14.139735+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticCyclicKernelBijection",
+        "SourceEllipticCyclicBijectionTransport",
+        "SourceCyclicCoordinateAlgebraicClosure",
+        "SourceEllipticAllLevelCyclicRootBijection"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCyclicKernelBijection.lean",
+          "sha256": "FDA3677E00E3BC4F462F4A7CC6B8A59DCC2F7D8B65DBC08A9C22452138DB3ECF",
+          "oleanSha256": "1FD68113A897635525B9D89EA8D3DD9363B5FFBDEA651FAC06D6FA9898599D2D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCyclicBijectionTransport.lean",
+          "sha256": "3BE4F0CD34BBB435E97093FFF7B2F64579BD92443485E36A0CA48F59D9354E64",
+          "oleanSha256": "DFC4C01C47EE51136B3A7DA9B48E3B07CC7C07C5806555C1B1C47D67D7653826"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclicCoordinateAlgebraicClosure.lean",
+          "sha256": "5A31EA359AB30C68C86DD1DD5E1F3EE9649383EA6200175D1EBF30126A7FF078",
+          "oleanSha256": "37552E7A5801DDD5B29B3F459679B3152552B49E75D33CB56961878AA1FFE306"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticAllLevelCyclicRootBijection.lean",
+          "sha256": "EA73D3AEF00568C7D466484C3C6AF5B712283426A0C92CE3A893649E456350C4",
+          "oleanSha256": "A802E9F6E219554263B67D17B0E9ED7414C3F29FBC7906E065D50D47D0ECC5D3"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticVelu.cyclicKernelMap_bijective",
+        "Dubon2026.SourceEllipticVelu.cyclicKernelVariableChange_bijective",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_bijOn_map",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_bijOn_variableChange",
+        "Dubon2026.SourceEllipticCyclicCount.isAlgebraic_mapped_coordinate_field",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_bijOn_transcendental"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticVelu.cyclicKernelMap_bijective",
+        "Dubon2026.SourceEllipticVelu.cyclicKernelVariableChange_bijective",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_bijOn_map",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_bijOn_variableChange",
+        "Dubon2026.SourceEllipticCyclicCount.isAlgebraic_mapped_coordinate_field",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_bijOn_transcendental"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelCyclicBijectionAudit4.log",
+      "logSha256": "3E0B7384E0091980BBC2384C26D3D861F27F58C3423DB16EC98B2497C04F5EA1",
+      "auditSha256": "F4682963F376B4EE724E3E4234C63E64A2B1278C91289D92F818AD34CD5DCCCF",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 6,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelCyclicBijectionDependencyAudit4.log",
+      "dependencyAuditSha256": "43DF9885A76784714DB1E32B5B4CC4373E9B475121E4170A07F21D4CF87BF5ED",
+      "dependencyAuditSourceSha256": "DE99228832C37856C0749AE7930E76F628C8B455E38ABCFCE394001DC2F84EDC",
+      "consumers": [
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_bijOn_transcendental"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "At every invertible level N and every transcendental j over an algebraically closed constant field, the original actual cyclic quotient values biject with the exact original integral modular roots in an arbitrary algebraically closed coefficient overfield. The ambient algebraicity hypothesis is removed: the actual internal algebraic closure of the j-field supplies the proved induction, native prescribed-j models and scalar-compatible coordinate-field transport supply its hypotheses, and proved field/model compatibility transports the conclusion to the original curve.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Inertia specialization, numerical exceptional-fiber and ramification counts, reverse genus, good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-all-level-cyclic-bijection-4-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "B3117D32F12E11CD31B325B2B1B5EC7DFED7C5FE84C7CDA4E38EC6D3F143172B"
+    },
+    {
+      "recordedUTC": "2026-10-23T20:36:19.585578+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticAllLevelCyclicEquivariance",
+        "SourceEllipticAllLevelCyclicOrbits"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticAllLevelCyclicEquivariance.lean",
+          "sha256": "17D493629501C723C2AEE33BC1F4D2B16518D50F06B5A1A81FB3D4040DAC9AE8",
+          "oleanSha256": "85ADDF21CA8DED753B32A707F1556E93C833221DFA84A90425B8FBFA3EBAB16F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticAllLevelCyclicOrbits.lean",
+          "sha256": "6C9CDF431A45F4A69F0D54CFEAAE84EF25EC4AF72756EEDEEDE4646DBAEF2624",
+          "oleanSha256": "CF8FCB598A5CAB3EDA4B7FC838325F1D88D7061DE5263F4D70008C88B2B7FADA"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_fixedCurve",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_galois",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_galois_orbit_iff"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_fixedCurve",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_galois",
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_galois_orbit_iff"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelCyclicOrbitAudit2.log",
+      "logSha256": "23C8CB7803116FC058DEE2B07859C9D90442BD4C7C323E728E5A5B8A8AE56E87",
+      "auditSha256": "8F1C328A74F60291FC4A51BE2AB5BB96A2993A5D5A844829F31986BE9C1E4EC9",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 3,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 5,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelCyclicOrbitDependencyAudit2.log",
+      "dependencyAuditSha256": "462ED8DF8E3577035811B445506D298009BE2E3D32107E40C9D175158C72DBA5",
+      "dependencyAuditSourceSha256": "EDDCCBDF83CD665C9B52AEF46550ED6C26BFA7E68A22F32AD4734F50ACDF76CC",
+      "consumers": [
+        "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_galois_orbit_iff"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+      "discharged": "At every invertible level and transcendental j, the actual cyclic-subgroup orbit relation agrees with the orbit relation on its exact modular roots for every subgroup of base-field automorphisms, including inertia. Actual all-level quotient field compatibility supplies equivariance. The proved all-level root bijection supplies injectivity. Coefficient-fixing is derived from the original base-changed curve; no orbit or compatibility certificate is assumed.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Specialization to the residue curve and identification of the realized stabilizer action, numerical exceptional-fiber and ramification counts, reverse genus, good reduction, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-all-level-cyclic-orbit-2-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "4AA9378D3ED03E9BB4DF1253C3BDC2EF41F13229AF5D741AC27335F2BAF98DC2"
+    }
+  ],
+  "reviews": [
+    "Tools/source-composite-variable-change-9-reuse-review-20261023.json",
+    "Tools/source-algebraic-cyclic-bijection-7-reuse-review-20261023.json",
+    "Tools/source-all-level-cyclic-bijection-4-reuse-review-20261023.json",
+    "Tools/source-all-level-cyclic-orbit-2-reuse-review-20261023.json"
+  ],
+  "additionalCurrentSearch": {
+    "path": "Tools/all-level-cyclic-root-route-323.json",
+    "sha256": "DBEEFD8DE8FBDFF5838CE99D3F1BC1ED650FB4D5CD638E127CD891F09D9830C2"
+  },
+  "productionFocusedReceipt7048": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCompositeVariableChangeDependencyAudit9Production7048.log",
+        "sha256": "EFA202FEBD24EFB6DAF93E3F50276586506517C3D34345CE3D03822C220EF116",
+        "requiredProofValueEdges": 28,
+        "consumers": [
+          "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_variableChange",
+          "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_map",
+          "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_one"
+        ],
+        "sourceSha256": "C832EE202EEDD6F7A00862495E115CB0162825322A6A90A945706163E428369B"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicCyclicBijectionDependencyAudit7Production7048.log",
+        "sha256": "C4764752408F3AD9D010BC1D12764B42EF9F2BDDEA352BC416413E6364673D48",
+        "requiredProofValueEdges": 22,
+        "consumers": [
+          "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_bijOn_transcendental_algebraic"
+        ],
+        "sourceSha256": "8E74B43FEC947B32EF619A6AE5D74EEF09ED96DBE47F4568B7DF59F3A37C58D9"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelCyclicBijectionDependencyAudit4Production7048.log",
+        "sha256": "43DF9885A76784714DB1E32B5B4CC4373E9B475121E4170A07F21D4CF87BF5ED",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_bijOn_transcendental"
+        ],
+        "sourceSha256": "36E8817E9C2E245DA77AD3DCA9AB0B0A7AC86AF82E4D725F37B9466C4F3C7D8A"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelCyclicOrbitDependencyAudit2Production7048.log",
+        "sha256": "462ED8DF8E3577035811B445506D298009BE2E3D32107E40C9D175158C72DBA5",
+        "requiredProofValueEdges": 5,
+        "consumers": [
+          "Dubon2026.SourceEllipticVelu.cyclicQuotientJ_galois_orbit_iff"
+        ],
+        "sourceSha256": "40FC543D9B57A90A22AB8C6EA18EAFCF6604023DB5760B6681C5EE2D8876F301"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelCyclicRootsProductionAudit7048.log",
+    "sha256": "A2E653FDBEFEAF27F81A22E7AA35BA34219C9605B8DD289898FB3DE7CC4DF9D2",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-all-level-cyclic-roots-production-build-7048.log",
+    "aggregateSha256": "3A09A86A2F6182FA443099448D9EDDF8B95685A97FD7FEA1C50FE9F7BCDF7FCC",
+    "productionModules": 7048,
+    "incrementModules": 22,
+    "axiomChecks": 41,
+    "exhaustiveIncrementTheorems": 76,
+    "linterScopes": 22,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 76,
+    "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The original curves, specific quotient homomorphisms, cyclic subgroups, coordinate fields and integral modular polynomial retain their definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 76,
+      "scratchDistinct": 76,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 76,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceEllipticAbscissaVariableCoefficients",
+            "SourceEllipticAbscissaVariableQuotient",
+            "SourceEllipticCyclicVariableQuotient",
+            "SourceEllipticAbscissaVariableX",
+            "SourceEllipticPrimeVariableX",
+            "SourceEllipticPrimeImageVariableChange",
+            "SourceEllipticCanonicalKernelVariableChange",
+            "SourceEllipticCompositeQuotientVariableChange",
+            "SourceEllipticCompositeQuotientJ"
+          ],
+          "count": 44,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelCyclicRootsScratchOwnership320For7048.log",
+            "sha256": "B388CCE955DF56575BFA3E0B7955F49D96320483F7C10010D5DE75DDAFCDD685",
+            "sourceSha256": "BEED757B7F6CABCA21ACBBCDB54D208A62F2A21D987277221A96B33E55042454"
+          }
+        },
+        {
+          "modules": [
+            "SourceCyclicFiberCounting",
+            "SourceIntegralCoordinateRootConjugacy",
+            "SourceEllipticQuotientRangeConjugacy",
+            "SourceEllipticCompositeQuotientStep",
+            "SourceIntegralCyclicInductionArithmetic",
+            "SourceEllipticPrimeFiberMultiplicity",
+            "SourceEllipticAlgebraicCyclicRootBijection"
+          ],
+          "count": 23,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelCyclicRootsScratchOwnership321For7048.log",
+            "sha256": "AABF5881118F72A4848A8411C4F2B22AFB116B0DDBA6CE0BB6F37890A1AD81C7",
+            "sourceSha256": "87D29A041A8C972207E0AC5471BDC679B26F8CB62964FD61A4568F7B8DC67E67"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticCyclicKernelBijection",
+            "SourceEllipticCyclicBijectionTransport",
+            "SourceCyclicCoordinateAlgebraicClosure",
+            "SourceEllipticAllLevelCyclicRootBijection"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelCyclicRootsScratchOwnership322For7048.log",
+            "sha256": "60536762F86FD64430358D5214FE3818791C12FB5A4DEDBA785FCC92B58E0D25",
+            "sourceSha256": "92177764493D37C942A1C327A651DAD88FBC1C2E82004EE67455575CD9D55E07"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticAllLevelCyclicEquivariance",
+            "SourceEllipticAllLevelCyclicOrbits"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelCyclicRootsScratchOwnership323For7048.log",
+            "sha256": "AB2268D1DC3B5B7BC610D1CD035FC23D3FCD85359D12832D941C967426D01959",
+            "sourceSha256": "7DF6686CBD22091600DBE82978C46DD9AF7E9AAAD04AC51C328BA864FBA6763E"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelCyclicRootsOwnership7048.log",
+        "sha256": "4CA348ECEACD4A7E22E3F17ECA9497BAFBECED46D7BC8CEE2087BF9D4245D252",
+        "sourceSha256": "A0AF942269251724352104936DFEC7AA61F0E9C1970A47B5140C149A17E41C78"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261023-130036-711.log",
+        "sha256": "8F61E037A20294D09E6314459E372CCD282952A15B1766617CB44F06FCE86E2F"
+      }
+    },
+    "scratchToProductionCountReason": "All 76 distinct names from 76 exhaustive scratch checks are retained: 76 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Specialization to the residue elliptic curve and identification of the realized stabilizer action, numerical exceptional-fiber and ramification counts and wild differential contributions, reverse genus, genus equality and place comparison, modular-curve good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt7048": {
+    "recordedUTC": "2026-10-23T22:50:35.979279+00:00",
+    "log": "logs/dubon-build-20261023-143151-975.log",
+    "sha256": "EA7881B7B83369EB260091497F2B089799AB826F6FE8581D83FCCBCD18BB483F",
+    "bytes": 12039295,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 7048,
+    "projectTheorems": 47569,
+    "registeredConsumers": 21434,
+    "registeredConstructions": 1845,
+    "declarations": 29099,
+    "generated": 27288,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261023_142846.log",
+    "foundationSha256": "8DBF12956590351613F5BF08D80717C95CB7B435232DF752B410E6287325E731",
+    "countReconciliation": {
+      "previousTheorems": 47494,
+      "focusedTheorems": 76,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourceEllipticVelu.primeAbscissaHom.congr_simp"
+      ],
+      "addedTheorems": 75,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelCyclicRootsOwnership7048.log",
+      "ownershipSha256": "4CA348ECEACD4A7E22E3F17ECA9497BAFBECED46D7BC8CEE2087BF9D4245D252"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 76,
+      "scratchDistinct": 76,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 76,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceEllipticAbscissaVariableCoefficients",
+            "SourceEllipticAbscissaVariableQuotient",
+            "SourceEllipticCyclicVariableQuotient",
+            "SourceEllipticAbscissaVariableX",
+            "SourceEllipticPrimeVariableX",
+            "SourceEllipticPrimeImageVariableChange",
+            "SourceEllipticCanonicalKernelVariableChange",
+            "SourceEllipticCompositeQuotientVariableChange",
+            "SourceEllipticCompositeQuotientJ"
+          ],
+          "count": 44,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelCyclicRootsScratchOwnership320For7048.log",
+            "sha256": "B388CCE955DF56575BFA3E0B7955F49D96320483F7C10010D5DE75DDAFCDD685",
+            "sourceSha256": "BEED757B7F6CABCA21ACBBCDB54D208A62F2A21D987277221A96B33E55042454"
+          }
+        },
+        {
+          "modules": [
+            "SourceCyclicFiberCounting",
+            "SourceIntegralCoordinateRootConjugacy",
+            "SourceEllipticQuotientRangeConjugacy",
+            "SourceEllipticCompositeQuotientStep",
+            "SourceIntegralCyclicInductionArithmetic",
+            "SourceEllipticPrimeFiberMultiplicity",
+            "SourceEllipticAlgebraicCyclicRootBijection"
+          ],
+          "count": 23,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelCyclicRootsScratchOwnership321For7048.log",
+            "sha256": "AABF5881118F72A4848A8411C4F2B22AFB116B0DDBA6CE0BB6F37890A1AD81C7",
+            "sourceSha256": "87D29A041A8C972207E0AC5471BDC679B26F8CB62964FD61A4568F7B8DC67E67"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticCyclicKernelBijection",
+            "SourceEllipticCyclicBijectionTransport",
+            "SourceCyclicCoordinateAlgebraicClosure",
+            "SourceEllipticAllLevelCyclicRootBijection"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelCyclicRootsScratchOwnership322For7048.log",
+            "sha256": "60536762F86FD64430358D5214FE3818791C12FB5A4DEDBA785FCC92B58E0D25",
+            "sourceSha256": "92177764493D37C942A1C327A651DAD88FBC1C2E82004EE67455575CD9D55E07"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticAllLevelCyclicEquivariance",
+            "SourceEllipticAllLevelCyclicOrbits"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelCyclicRootsScratchOwnership323For7048.log",
+            "sha256": "AB2268D1DC3B5B7BC610D1CD035FC23D3FCD85359D12832D941C967426D01959",
+            "sourceSha256": "7DF6686CBD22091600DBE82978C46DD9AF7E9AAAD04AC51C328BA864FBA6763E"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceAllLevelCyclicRootsOwnership7048.log",
+        "sha256": "4CA348ECEACD4A7E22E3F17ECA9497BAFBECED46D7BC8CEE2087BF9D4245D252",
+        "sourceSha256": "A0AF942269251724352104936DFEC7AA61F0E9C1970A47B5140C149A17E41C78"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261023-130036-711.log",
+        "sha256": "8F61E037A20294D09E6314459E372CCD282952A15B1766617CB44F06FCE86E2F"
+      }
+    },
+    "scratchToProductionCountReason": "All 76 distinct names from 76 exhaustive scratch checks are retained: 76 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Specialization to the residue elliptic curve and identification of the realized stabilizer action, numerical exceptional-fiber and ramification counts and wild differential contributions, reverse genus, genus equality and place comparison, modular-curve good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

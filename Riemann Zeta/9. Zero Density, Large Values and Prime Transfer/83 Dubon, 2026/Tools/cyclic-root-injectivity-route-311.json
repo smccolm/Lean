@@ -1,0 +1,30 @@
+{
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> reverse genus -> exceptional-fiber census -> cyclic-subgroup inertia orbits -> generic-fiber cyclic-root bijection",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceResiduePrimePolynomialRoots.lean",
+      "sha256": "2D54C2EDDBBF5492D0762D899E6072AC08A5DF8EDD6DF0E003F8CAB1C1DF3808"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimeConjugateRoots.lean",
+      "sha256": "9124C3CF53A491C95FFD5569077A582AE3B679419B56FE227F33126E812C3F32"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimeResidueRelations.lean",
+      "sha256": "CB8FCADFFC9E40A67CFEAA951D7095672EC94B50D107EDE170CE1BBDB2853A0B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralPrimeConjugateProduct.lean",
+      "sha256": "9A09B4184DA03D01DF726298D67A95507CABC8F44256A86134C6F6CACF0195D8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticCyclicCount.lean",
+      "sha256": "B596900DF3BBE3092D475F99B47B790D6D89C0A81CC3CBDF1C2C50D292493D20"
+    }
+  ],
+  "route": "The existing specialized integral relation has an explicit full multiset of p+1 distinct Laurent roots. Identify its monic prime relation with the existing modularPolynomial, transfer separability through the rational-function coordinate at a transcendental j, and combine its root cardinality with the already proved p+1 cyclic-subgroup count and surjective actual root map. This should prove the required generic-fiber injectivity without developing all positive-characteristic elliptic endomorphisms.",
+  "scope": "The proposed injectivity theorem is for the required transcendental generic j-fiber. It does not assert injectivity at CM exceptional fibers or at every algebraic non-CM j. The precise generic-curve application must derive the transcendence condition.",
+  "status": "Reuse assessment only. Separability transfer and generic-fiber bijection still require Lean proofs.",
+  "proofLimitsChanged": false,
+  "rootPinsChanged": false
+}

@@ -1,0 +1,1588 @@
+{
+  "date": "23 October 2026",
+  "modules": [
+    "Dubon2026.SourceEllipticCyclicGenerators",
+    "Dubon2026.SourceEllipticOddPrimeQuotients",
+    "Dubon2026.SourceEllipticOddQuotientBaseChange",
+    "Dubon2026.SourceEllipticOddQuotientJ",
+    "Dubon2026.SourceIntegralOddQuotientProduct",
+    "Dubon2026.SourceIntegralQuotientProductSpecialization",
+    "Dubon2026.SourceEllipticPeriodCurve",
+    "Dubon2026.SourceEllipticPeriodInvariants",
+    "Dubon2026.SourceEllipticPeriodModularCurve",
+    "Dubon2026.SourceAnalyticJSurjectivity",
+    "Dubon2026.SourceEllipticComplexPeriodModel",
+    "Dubon2026.SourceEllipticPeriodicLiouville",
+    "Dubon2026.SourceEllipticWeierstrassSurjectivity",
+    "Dubon2026.SourceEllipticPeriodPoint",
+    "Dubon2026.SourceEllipticPeriodPointSurjectivity",
+    "Dubon2026.SourceEllipticWeierstrassNonconstant",
+    "Dubon2026.SourceEllipticWeierstrassDerivatives",
+    "Dubon2026.SourceEllipticWeierstrassAdditionCore",
+    "Dubon2026.SourceEllipticWeierstrassAdditionCoreOrder",
+    "Dubon2026.SourceEllipticWeierstrassAdditionRemainder",
+    "Dubon2026.SourceEllipticWeierstrassAdditionIdentity",
+    "Dubon2026.SourceEllipticWeierstrassAdditionDomain",
+    "Dubon2026.SourceEllipticWeierstrassAdditionRemovable",
+    "Dubon2026.SourceEllipticWeierstrassAdditionX",
+    "Dubon2026.SourceEllipticPeriodSlopeDerivative",
+    "Dubon2026.SourceEllipticWeierstrassAdditionY",
+    "Dubon2026.SourceEllipticPeriodGenericShift",
+    "Dubon2026.SourceEllipticPeriodPointAddition",
+    "Dubon2026.SourceEllipticPeriodUniformization",
+    "Dubon2026.SourceEllipticComplexUniformization",
+    "Dubon2026.SourceEllipticPeriodCovering",
+    "Dubon2026.SourceEllipticPeriodHolomorphicLift",
+    "Dubon2026.SourceEllipticPeriodAffineLift",
+    "Dubon2026.SourceEllipticPeriodScalarMap",
+    "Dubon2026.SourceEllipticPeriodLocalCoordinates",
+    "Dubon2026.SourceEllipticPeriodLocalScalar",
+    "Dubon2026.SourceEllipticVeluAnalytic",
+    "Dubon2026.SourceEllipticPeriodQuotientCoordinates",
+    "Dubon2026.SourceEllipticPeriodQuotientGerm",
+    "Dubon2026.SourceEllipticOddQuotientScalar",
+    "Dubon2026.SourceEllipticOddQuotientPeriodKernel",
+    "Dubon2026.SourceEllipticPeriodLatticeJ",
+    "Dubon2026.SourceEllipticPeriodCyclicPreimage",
+    "Dubon2026.SourceEllipticStandardQuotientLattices",
+    "Dubon2026.SourceEllipticStandardTorsion",
+    "Dubon2026.SourceEllipticStandardCyclicDistinct",
+    "Dubon2026.SourceEllipticStandardCyclicComplete",
+    "Dubon2026.SourceEllipticOddQuotientLatticeJ",
+    "Dubon2026.SourceEllipticStandardOddQuotientJ",
+    "Dubon2026.SourceIntegralPrimeAnalyticProduct",
+    "Dubon2026.SourceEllipticOddQuotientGeneratorJ",
+    "Dubon2026.SourceIntegralComplexOddQuotientProduct",
+    "Dubon2026.SourceIntegralEmbeddedOddQuotientProduct"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original weight-two Frobenius/inertia -> actual modular-curve good reduction -> genus equality -> reverse genus -> finite exceptional-fiber census and wild differential contribution -> elliptic cyclic-subgroup inertia orbits -> actual cyclic-subgroup interpretation of integral modular-polynomial roots -> actual prime quotient homomorphisms and integral polynomial products.",
+  "discharged": "The actual complex elliptic curve has a genuine Weierstrass-function group uniformization, with proved addition, surjectivity and exact period lattice. The actual odd quotient norm is induced by a nonzero complex scalar; its single affine germ is derived from the literal Velu formulas and exact kernel denominator. The p+1 standard prime-order cyclic subgroups are proved distinct and exhaustive, their preimage lattices are computed, and each actual odd quotient j-value is identified with its analytic prime-Hecke value. The actual quotient j-value is independent of the chosen generator. The exact existing integral modular polynomial is the full product of these factors over the complex numbers, for any family of p+1 distinct cyclic subgroups. The identity descends through a complex embedding, constructed by native algebraically closed lifting for algebraic extensions of the rationals. Integral specialization is proved conditional on actual integral quotient models and their generic identity.",
+  "boundary": "General characteristic-zero coefficient-field descent, actual integral quotient lifts and reduction, finite-set specialization, cyclic-subgroup root correspondence, inertia orbit map, exceptional-fiber census and wild differential contributions remain required. Reverse genus, genus equality and place comparison, modular-curve good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 6,953-module scope: all thirteen retained regressions, 47,143 exhaustive theorem checks, 21,221 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceEllipticFunctionField.exists_odd_prime_cyclic_quotients",
+    "Dubon2026.SourceFunctionField.IntegralJCoordinate.oddQuotientProduct_monic",
+    "Dubon2026.SourceFunctionField.IntegralJCoordinate.oddQuotientProduct_natDegree",
+    "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_eq_oddQuotientProduct_map_iff",
+    "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_quotient_product_specializes",
+    "Dubon2026.SourceEllipticPeriod.exists_complex_period_model",
+    "Dubon2026.SourceEllipticPeriod.periodCurve_equation",
+    "Dubon2026.SourceEllipticPeriod.periodPoint_surjective",
+    "Dubon2026.SourceEllipticPeriod.periodPoint_eq_zero_iff",
+    "Dubon2026.SourceEllipticPeriod.periodPoint_add_mem",
+    "Dubon2026.SourceEllipticPeriod.periodPoint_neg",
+    "Dubon2026.SourceEllipticPeriod.exists_complex_uniformization",
+    "Dubon2026.SourceEllipticPeriod.periodQuotientEquiv_mk",
+    "Dubon2026.SourceEllipticPeriod.periodModelHom_apply",
+    "Dubon2026.SourceEllipticPeriod.scalar_map_of_affine_germ",
+    "Dubon2026.SourceEllipticPeriod.exists_odd_quotient_period_model",
+    "Dubon2026.SourceEllipticPeriod.standardOddQuotientJ_eq",
+    "Dubon2026.SourceEllipticPeriod.standardTorsionPoint_zmultiples_complete",
+    "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_eq_oddQuotientProduct_algebraic"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-23T14:11:02.477787+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticCyclicGenerators",
+        "SourceEllipticOddPrimeQuotients",
+        "SourceEllipticOddQuotientBaseChange",
+        "SourceEllipticOddQuotientJ",
+        "SourceIntegralOddQuotientProduct",
+        "SourceIntegralQuotientProductSpecialization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCyclicGenerators.lean",
+          "sha256": "30DCB34C6FD7DFF39D20CF47F3990D832CFD2778C7E294450130ADEA22159B7F",
+          "oleanSha256": "A46C618CBC766B36855ED4C38D153180ABC0DC325C6C03EF1F16BC62B9C16EAB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddPrimeQuotients.lean",
+          "sha256": "ABB04BCCC9DB2870C4DFC964404A1568F22CF2FE0FC26A22BEB8EBF82B8E2E3C",
+          "oleanSha256": "A79EB96D9B6A742AF77EB0D5993310FED16394B5A8363909DBA32BF6DA8695D6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddQuotientBaseChange.lean",
+          "sha256": "41E265A2D8D99200B0D1DFAC96769D3E3ED16FAD5E3BA29198C02FFE9B9796F4",
+          "oleanSha256": "6CA33B072C72134308C0FA9297D9A7D49C9C3175709DDBA57BD30F4D08E450D9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddQuotientJ.lean",
+          "sha256": "8B9F9CB15720B5185931EE1DECCB14F67B420DD10706031E607B076738CD7519",
+          "oleanSha256": "51BE3AD1AE0CAF7AD89DC788476BB5B75BC49EFBC5D0E9B253053A80A373D416"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralOddQuotientProduct.lean",
+          "sha256": "A8F5B620FB0BB076AA1FBCC1852D7DC9E976AF63D02F883F658C2F2F93F242C6",
+          "oleanSha256": "467CE63171EBF05E56C7C3C06B7495FE5ED82861EC066332720FF4033C0015AD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralQuotientProductSpecialization.lean",
+          "sha256": "93E7AFB8AF6DAC239E7A60CD5B19DD5512651C3982D939962B00DD4A24A5836A",
+          "oleanSha256": "1F9D2CF7AB10848CC04CAFAD7324780A1EB4919870C459748FB17B5711D71909"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticCyclicCount.exists_prime_cyclic_generators",
+        "Dubon2026.SourceEllipticFunctionField.exists_odd_prime_cyclic_quotients",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.oddQuotient_map",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.oddQuotient_j_map",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.oddQuotientJ_map",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.oddQuotientProduct_monic",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.oddQuotientProduct_natDegree",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.oddQuotientProduct_map",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_eq_oddQuotientProduct_map_iff",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_quotient_product_specializes",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.oddQuotientJ",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.oddQuotientProduct"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticCyclicCount.exists_prime_cyclic_generators",
+        "Dubon2026.SourceEllipticFunctionField.exists_odd_prime_cyclic_quotients",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.oddQuotient_map",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.oddQuotient_j_map",
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.oddQuotientJ_map",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.oddQuotientProduct_monic",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.oddQuotientProduct_natDegree",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.oddQuotientProduct_map",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_eq_oddQuotientProduct_map_iff",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_quotient_product_specializes"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.oddQuotientJ",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.oddQuotientProduct"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddProductDescentAudit6Aligned.log",
+      "logSha256": "464F83E7292E3B017B42284A742E8853B73BFE5132C21A56F1FBE710AC36AB06",
+      "auditSha256": "CBD2F1686186CCB70F6EDD99603A4C38952ADAB9DBC0616DD0D01011AA5FFD1A",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 15,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 24,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOddProductDescentDependencyAudit6Aligned.log",
+      "dependencyAuditSha256": "33C8E5FE64B05F2D6E0F19EDE953050D9951BB4467237A5429531FC54D24BE39",
+      "dependencyAuditSourceSha256": "E508FCC95745E2DA372120E78172E80FB2EDCFAF63142AB16397D9C265742F91",
+      "consumers": [
+        "Dubon2026.SourceEllipticFunctionField.exists_odd_prime_cyclic_quotients",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.oddQuotientProduct_monic",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.oddQuotientProduct_natDegree",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_eq_oddQuotientProduct_map_iff",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_quotient_product_specializes"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> exceptional-fiber census -> elliptic inertia orbit map -> cyclic-subgroup interpretation of integral modular-polynomial roots -> odd-prime quotient products -> actual cyclic quotient enumeration, field descent and integral specialization",
+      "discharged": "The actual p+1 prime-order cyclic subgroups have an enumerated generator family. Their actual odd quotient maps have exactly those kernels, are surjective, and have p-element fibers. The literal quotient curves and their j-invariants commute with field embeddings. Their actual product is monic of degree p+1. The exact modular-polynomial product identity is preserved and reflected by field embeddings. A generic-field identity for integral elliptic models specializes to the residue field. The identity itself and the integral quotient lifts remain required.",
+      "boundary": "Scratch only; production promotion and verification pending. The generic characteristic-zero odd-prime product identity, integral quotient lifts and finite-set reduction, cyclic-subgroup root correspondence, inertia census and wild differential contribution, reverse genus, good reduction, original Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-odd-product-descent-6-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "F1478945E6C3D9D98B70BF4EBE78E939D2AE52B31456D4939090680AAF415B81"
+    },
+    {
+      "recordedUTC": "2026-10-23T14:22:19.125179+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticPeriodCurve",
+        "SourceEllipticPeriodInvariants",
+        "SourceEllipticPeriodModularCurve",
+        "SourceAnalyticJSurjectivity",
+        "SourceEllipticComplexPeriodModel"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPeriodCurve.lean",
+          "sha256": "44DC0B6B66F3BFB5343DD2CADA33E52D2CBAAD7109E080120E06669C963DF3B6",
+          "oleanSha256": "5AB38D20A5AE5FC0D82B8BF54FE7D7C8577FBE2BD88BA782452F6B86A841E3EA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPeriodInvariants.lean",
+          "sha256": "37AA1DC9539972E1B0D1B8685F864BA8BCCEBC238EB5579AA7EAD2D4DCC71DC9",
+          "oleanSha256": "295DC67D9B3BCF9FAC69D96D3BF9ED1B118A0C408464524BD8317A0069FE5099"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPeriodModularCurve.lean",
+          "sha256": "758707ECFBF190CA8150C06C29E412534C74D0149073E7BD2C4BF3DAD31854E5",
+          "oleanSha256": "E65D08D7D6746AC5F4CB07D4FF4ADDA19500546D7F8D67D1EA92E9BD193C61C9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAnalyticJSurjectivity.lean",
+          "sha256": "B157B1C791BD0C5F60A3EA64BAE4F19E0A7E7F0A9AC7028DC61BAD66972CD5F2",
+          "oleanSha256": "DE73424E499519653E7F9D5E6A590B2D4062154C8A4A28D6A788D427D69C151F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticComplexPeriodModel.lean",
+          "sha256": "EBAB463E7E7F50B8332CF79223EF75E978DD2F679FF4517D8749801E5FFAFC88",
+          "oleanSha256": "CB395DE406C05B7098975BB8465E7002025989BE82D65E6A77EE1A49E9EFB989"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticPeriod.periodCurve_discriminant",
+        "Dubon2026.SourceEllipticPeriod.periodCurve_cFour",
+        "Dubon2026.SourceEllipticPeriod.periodCurve_equation",
+        "Dubon2026.SourceEllipticPeriod.riemannZeta_six",
+        "Dubon2026.SourceEllipticPeriod.gTwo_ofTau",
+        "Dubon2026.SourceEllipticPeriod.gThree_ofTau",
+        "Dubon2026.SourceEllipticPeriod.periodCurve_ofTau_discriminant",
+        "Dubon2026.SourceEllipticPeriod.periodCurve_ofTau_isElliptic",
+        "Dubon2026.SourceEllipticPeriod.periodCurve_ofTau_j",
+        "Dubon2026.SourceFunctionField.JMultiplicity.jPencil_smul",
+        "Dubon2026.SourceFunctionField.JMultiplicity.tendsto_jPencil_atImInfty",
+        "Dubon2026.SourceFunctionField.JMultiplicity.inv_jPencil_slash",
+        "Dubon2026.SourceFunctionField.JMultiplicity.jPencil_has_zero",
+        "Dubon2026.SourceFunctionField.JMultiplicity.jf_surjective",
+        "Dubon2026.SourceEllipticPeriod.exists_complex_period_model",
+        "Dubon2026.SourceEllipticPeriod.periodCurve",
+        "Dubon2026.SourceFunctionField.JMultiplicity.jPencil",
+        "Dubon2026.SourceFunctionField.JMultiplicity.inverseJPencil"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticPeriod.periodCurve_discriminant",
+        "Dubon2026.SourceEllipticPeriod.periodCurve_cFour",
+        "Dubon2026.SourceEllipticPeriod.periodCurve_equation",
+        "Dubon2026.SourceEllipticPeriod.riemannZeta_six",
+        "Dubon2026.SourceEllipticPeriod.gTwo_ofTau",
+        "Dubon2026.SourceEllipticPeriod.gThree_ofTau",
+        "Dubon2026.SourceEllipticPeriod.periodCurve_ofTau_discriminant",
+        "Dubon2026.SourceEllipticPeriod.periodCurve_ofTau_isElliptic",
+        "Dubon2026.SourceEllipticPeriod.periodCurve_ofTau_j",
+        "Dubon2026.SourceFunctionField.JMultiplicity.jPencil_smul",
+        "Dubon2026.SourceFunctionField.JMultiplicity.tendsto_jPencil_atImInfty",
+        "Dubon2026.SourceFunctionField.JMultiplicity.inv_jPencil_slash",
+        "Dubon2026.SourceFunctionField.JMultiplicity.jPencil_has_zero",
+        "Dubon2026.SourceFunctionField.JMultiplicity.jf_surjective",
+        "Dubon2026.SourceEllipticPeriod.exists_complex_period_model"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticPeriod.periodCurve",
+        "Dubon2026.SourceFunctionField.JMultiplicity.jPencil",
+        "Dubon2026.SourceFunctionField.JMultiplicity.inverseJPencil"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodModelAudit5Classified.log",
+      "logSha256": "473855E2454DA2E0A4CB9B229F1D8148297CC93DF26BCF6E01EA1DC3759A4039",
+      "auditSha256": "184C2F317902AF9FB4FE02662C3B6602FE90753CBCE7A87EBCFDF2477E146854",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 36,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 27,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodModelDependencyAudit5Classified.log",
+      "dependencyAuditSha256": "84829CECD2D87AC3C64D70F5859F437B77CEB499EE21088FE163D744D8FB5851",
+      "dependencyAuditSourceSha256": "73283759E634BA83C635DF071320B1A3CE4CC779647AAE76DE4651982BC74903",
+      "consumers": [
+        "Dubon2026.SourceEllipticPeriod.exists_complex_period_model",
+        "Dubon2026.SourceEllipticPeriod.periodCurve_equation"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> exceptional-fiber census -> elliptic inertia orbit map -> cyclic roots of integral modular polynomials -> odd-prime quotient products -> complex uniformization -> actual period models and analytic j-surjectivity",
+      "discharged": "The actual period curve satisfies the native Weierstrass differential equation. Exact zeta values and the existing Eisenstein comparison identify its discriminant and j-invariant. Ellipticity is derived for every upper-half-plane period pair. The existing analytic j-function is surjective by inverse-pencil negative-weight vanishing. Consequently every actual complex elliptic curve is a native change of variables of an actual period curve.",
+      "boundary": "Scratch only; production promotion and verification pending. The actual period-point addition law and uniformization, generic odd-prime quotient-product identity, integral quotient lifts and reduction, cyclic roots, inertia census and wild differential contribution, reverse genus, good reduction, original Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-period-model-5-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "F53BD7EAC48245BD854F04E01B2AA2786971585CED625919BCCCC55AB64D3CF0"
+    },
+    {
+      "recordedUTC": "2026-10-23T14:27:51.798848+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticPeriodicLiouville",
+        "SourceEllipticWeierstrassSurjectivity",
+        "SourceEllipticPeriodPoint",
+        "SourceEllipticPeriodPointSurjectivity"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPeriodicLiouville.lean",
+          "sha256": "3A57AB8224BAADCFE30312036D2579EBBCEEACF9B2CC48C2610E0CBD71230C40",
+          "oleanSha256": "DB0A38919212E659AEB54C85225D661D862B6C824658E6BC633B047A2ABC981D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticWeierstrassSurjectivity.lean",
+          "sha256": "1AA6BF1A8D2E68ED1283A930248AB9A987D3EF4E54C497C1B5C6EB6A758AF063",
+          "oleanSha256": "1901789A87C7D9C570EB56B0A99BEA794AF8BA22F00A87B905AF9658D709865B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPeriodPoint.lean",
+          "sha256": "00C5D8D66D80DBD0F5F7902651A170A4A6AD1A192641B086606EBBC5A5936EBB",
+          "oleanSha256": "E45F1860489652D3A772925664623C81C315B2EBD7727529999E7B2043711D94"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPeriodPointSurjectivity.lean",
+          "sha256": "5C6BF61BF0D87B47FCF1E350D061F745E21E450360DA43A97F6C926A02B345A7",
+          "oleanSha256": "7C8FD6B98605C38ED360D564389452129BCC04D265D628B202173AA2A27B46D0"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticPeriod.periodic_entire_constant",
+        "Dubon2026.SourceEllipticPeriod.compl_lattice_mem_nhdsNE",
+        "Dubon2026.SourceEllipticPeriod.tendsto_weierstrassP_cobounded",
+        "Dubon2026.SourceEllipticPeriod.weierstrassP_surjective",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_of_mem",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_of_notMem",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_zero",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_eq_zero_iff",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_add_mem",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_neg",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_surjective",
+        "Dubon2026.SourceEllipticPeriod.periodPoint"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticPeriod.periodic_entire_constant",
+        "Dubon2026.SourceEllipticPeriod.compl_lattice_mem_nhdsNE",
+        "Dubon2026.SourceEllipticPeriod.tendsto_weierstrassP_cobounded",
+        "Dubon2026.SourceEllipticPeriod.weierstrassP_surjective",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_of_mem",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_of_notMem",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_zero",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_eq_zero_iff",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_add_mem",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_neg",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_surjective"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticPeriod.periodPoint"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodPointAudit4.log",
+      "logSha256": "80F59713729253236912B2BCDB44351C12745EC0107D6000F2C46C283E9301F0",
+      "auditSha256": "6D3BD14093DD283F9C7FF363BFBE9A6EAC3F8346199F4E64930799CEC9EE294C",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 17,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodPointDependencyAudit4.log",
+      "dependencyAuditSha256": "8E26F4BA6424D552D93FC250E7EC92F81EEE54538BEAC40459B5A8B34E2A8453",
+      "dependencyAuditSourceSha256": "8AFD81F6B5E71B1688B27C08B537AB5EC5E30F9981021DF73EAAEA08DB48934B",
+      "consumers": [
+        "Dubon2026.SourceEllipticPeriod.periodPoint_surjective",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_eq_zero_iff",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_add_mem",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_neg"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> exceptional-fiber census -> elliptic inertia orbit map -> cyclic roots of integral modular polynomials -> odd-prime quotient products -> complex uniformization -> surjectivity and exact lattice zero fiber of the actual period-point map",
+      "discharged": "The native Weierstrass function attains every complex x-coordinate away from its lattice. The actual period-point map is surjective, has exactly the lattice as its zero fiber, respects negation and is invariant under lattice translation. The map has the explicit ellipticity hypothesis already derived for upper-half-plane period pairs. No addition law or full uniformization is assumed or claimed.",
+      "boundary": "Scratch only; production promotion and verification pending. The addition law for the actual period-point map, full uniformization, generic odd-prime product identity, integral quotient lifts and reduction, cyclic roots, inertia census and wild differential contribution, reverse genus, good reduction, original Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-period-point-4-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "22B578812C870864DAC5ED7CAF7692DD9B2350E2FF6C5A5F490104BFDF7F332D"
+    },
+    {
+      "recordedUTC": "2026-10-23T14:53:46.686057+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticWeierstrassNonconstant",
+        "SourceEllipticWeierstrassDerivatives",
+        "SourceEllipticWeierstrassAdditionCore",
+        "SourceEllipticWeierstrassAdditionCoreOrder",
+        "SourceEllipticWeierstrassAdditionRemainder",
+        "SourceEllipticWeierstrassAdditionIdentity",
+        "SourceEllipticWeierstrassAdditionDomain",
+        "SourceEllipticWeierstrassAdditionRemovable",
+        "SourceEllipticWeierstrassAdditionX",
+        "SourceEllipticPeriodSlopeDerivative",
+        "SourceEllipticWeierstrassAdditionY",
+        "SourceEllipticPeriodGenericShift",
+        "SourceEllipticPeriodPointAddition",
+        "SourceEllipticPeriodUniformization",
+        "SourceEllipticComplexUniformization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticWeierstrassNonconstant.lean",
+          "sha256": "B2906AF550B77724BCD7FEC0DEF8E9C2356390B8FA7C34B464959203E96D55CE",
+          "oleanSha256": "EDC0F69BED95579F92214FD0A4218D197C9059920D9A7ACE0648FE285B428FEE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticWeierstrassDerivatives.lean",
+          "sha256": "898B8CD06269945D345AF93C9184EB2E05FC1976550F0203C8E919D9A1D13FCB",
+          "oleanSha256": "6A69CE325824B37DFE8A8E903D44B54513F6D0D65B8749A8012CB39D7456DA4C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticWeierstrassAdditionCore.lean",
+          "sha256": "BD0C3B48F6DBEC4C7ACB5248D7275507F523B439876A116AD52E6536A983DD93",
+          "oleanSha256": "86E35673B5B7EE5958C7CF29DF556E2539EE9785BDCB11EA118E0C8853D7B736"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticWeierstrassAdditionCoreOrder.lean",
+          "sha256": "213B7DBFF85ADB7F51352C64E54AB6ED7F256190D91E325B5F290A1546DFA3F4",
+          "oleanSha256": "1D5748B3B1EB1A7B5BB972882293F07A1C87FED5C2E1D449EFD56626CF8D1BDC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticWeierstrassAdditionRemainder.lean",
+          "sha256": "8187497BAB94B17EF80C6E1701E50DA0AC4AF8DA0AC481D08E2DAF3B8C943363",
+          "oleanSha256": "68FDE8D7FA6A9A2592B2145C9CADD3747F522930B6D4B257E4EC8B3B48E72A14"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticWeierstrassAdditionIdentity.lean",
+          "sha256": "1C9FB54340E48AD1B2E4E678B83A4EE056ECF1291FC87BA2439625E900D51FEA",
+          "oleanSha256": "0752EB30E3DBAAFEE137752CAADA4F76B7F7D53450A26E79F9D36B8A9FCA8AB2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticWeierstrassAdditionDomain.lean",
+          "sha256": "9A64C65A02676E5C4D7938E1AB2CA67231605ACE5A66CE624D992AFBDF9963F3",
+          "oleanSha256": "704FCDD5A9727AB31C4C6AE8D78D61B683908F29215AA8C4796C9F4BD5B7101A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticWeierstrassAdditionRemovable.lean",
+          "sha256": "9E1BF2C4DF105C1A10264D953D199EA016E7C250C2C4EABC0A822F94974DEDB6",
+          "oleanSha256": "03E0C3E08886D983B06370B2487A93E7BA35A7DBC0445199E85A5A3A5AABA020"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticWeierstrassAdditionX.lean",
+          "sha256": "F554D22B82B26B650467CE2C306BEB839A450DC57CD3A6C429266C87D282DD46",
+          "oleanSha256": "985DDC126E41ABDA5F69595065D6AC5C10C973680CBBC844845EC726ED70CC0B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPeriodSlopeDerivative.lean",
+          "sha256": "38A5D0315EE2696C83F750597433438CA02003EDB797B35EEEDE9D8B15815E34",
+          "oleanSha256": "D6E97535596A99B416DC82C27ACA8725E9E4E1B308AD58DCE6394ED46E1485FD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticWeierstrassAdditionY.lean",
+          "sha256": "8438A25F0D5BCE96DB59CCB3C8ACAF9B92FAA6B8841B62C5E7E8730DD487CD4C",
+          "oleanSha256": "5CB4E29EF8E126C34C952E69CAA860F096B8E950730B120A15D996C97B6716BE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPeriodGenericShift.lean",
+          "sha256": "4B98003F2368B82354ACE50ABC2ED301372B06ADC501A18E453718BED9728440",
+          "oleanSha256": "EDA052181E6F4D6CF120E893957F2D0F89F3705FDBA16665F5CB45B26BB7723C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPeriodPointAddition.lean",
+          "sha256": "B128C61C1310AA95237AF400E64CAA364620CB4F5B54FF066CC6068B770E9319",
+          "oleanSha256": "1CA0C583EE231A7DA77131DDC493552FB4A8ACC33DAD76CF5DF4D19B96EBDA30"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPeriodUniformization.lean",
+          "sha256": "EA640C799C18A6884E28BB60FBD9BE737AE7066DF6BB31F38566C8AC488A8F37",
+          "oleanSha256": "C432D21931CD768639CB029868A8A8E328554F13096C3F810D7CC94CDCC72D65"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticComplexUniformization.lean",
+          "sha256": "366A516BCF896E389086CF2826F2E2638743662F75F80EA86524697FB7D5655A",
+          "oleanSha256": "5DE5F374126A6B2FD1F2B0FD6E8DCD4DED7A5E5FEED19407F98AD46C5F539B5D"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticPeriod.isPreconnected_compl_lattice",
+        "Dubon2026.SourceEllipticPeriod.weierstrassP_not_eventually_const",
+        "Dubon2026.SourceEllipticPeriod.analyticOrderAt_weierstrassP_sub_self_ne_top",
+        "Dubon2026.SourceEllipticPeriod.analyticOrderAt_derivWeierstrassP",
+        "Dubon2026.SourceEllipticPeriod.exists_derivWeierstrassP_ne_zero",
+        "Dubon2026.SourceEllipticPeriod.two_mul_deriv_derivWeierstrassP_mul",
+        "Dubon2026.SourceEllipticPeriod.deriv_derivWeierstrassP",
+        "Dubon2026.SourceEllipticPeriod.deriv2_derivWeierstrassP",
+        "Dubon2026.SourceEllipticPeriod.hasDerivAt_weierstrassP_add",
+        "Dubon2026.SourceEllipticPeriod.add_notMem_mem_nhds_zero",
+        "Dubon2026.SourceEllipticPeriod.analyticAt_weierstrassP_add_zero",
+        "Dubon2026.SourceEllipticPeriod.analyticAt_additionCore",
+        "Dubon2026.SourceEllipticPeriod.additionCore_zero",
+        "Dubon2026.SourceEllipticPeriod.hasDerivAt_additionCore",
+        "Dubon2026.SourceEllipticPeriod.deriv_additionCore_eqNhds",
+        "Dubon2026.SourceEllipticPeriod.deriv_additionCore_zero",
+        "Dubon2026.SourceEllipticPeriod.hasDerivAt_additionCore₁",
+        "Dubon2026.SourceEllipticPeriod.deriv2_additionCore_eqNhds",
+        "Dubon2026.SourceEllipticPeriod.deriv2_additionCore_zero",
+        "Dubon2026.SourceEllipticPeriod.hasDerivAt_additionCore₂",
+        "Dubon2026.SourceEllipticPeriod.deriv3_additionCore_eqNhds",
+        "Dubon2026.SourceEllipticPeriod.deriv3_additionCore_zero",
+        "Dubon2026.SourceEllipticPeriod.additionCore_order_ge_four",
+        "Dubon2026.SourceEllipticPeriod.weierstrassPExcept_zero_order_ge_two",
+        "Dubon2026.SourceEllipticPeriod.analyticAt_additionTail",
+        "Dubon2026.SourceEllipticPeriod.analyticAt_additionRemainder",
+        "Dubon2026.SourceEllipticPeriod.additionRemainder_order_ge_four",
+        "Dubon2026.SourceEllipticPeriod.additionPhi_diffEq",
+        "Dubon2026.SourceEllipticPeriod.addBridge_identity",
+        "Dubon2026.SourceEllipticPeriod.additionCore_add_R_order_ge_four",
+        "Dubon2026.SourceEllipticPeriod.isOpen_additionPhiDomain",
+        "Dubon2026.SourceEllipticPeriod.additionPhi_periodic",
+        "Dubon2026.SourceEllipticPeriod.additionPhi_self_eq_zero",
+        "Dubon2026.SourceEllipticPeriod.analyticAt_weierstrassP_add",
+        "Dubon2026.SourceEllipticPeriod.analyticOnNhd_additionPhi",
+        "Dubon2026.SourceEllipticPeriod.additionPhi_removable_at_zero",
+        "Dubon2026.SourceEllipticPeriod.sq_mul_weierstrassP_add_eq",
+        "Dubon2026.SourceEllipticPeriod.additionPhi_removable_at_neg",
+        "Dubon2026.SourceEllipticPeriod.elliptic_Liouville_zero",
+        "Dubon2026.SourceEllipticPeriod.additionPhi_eq_zero",
+        "Dubon2026.SourceEllipticPeriod.weierstrassP_add_eq_addX",
+        "Dubon2026.SourceEllipticPeriod.periodSlope_eq_slope",
+        "Dubon2026.SourceEllipticPeriod.hasDerivAt_periodSlope",
+        "Dubon2026.SourceEllipticPeriod.weierstrassP_add_eq_periodSlope",
+        "Dubon2026.SourceEllipticPeriod.derivWeierstrassP_add_eq_addY",
+        "Dubon2026.SourceEllipticPeriod.countable_lattice",
+        "Dubon2026.SourceEllipticPeriod.countable_analytic_level",
+        "Dubon2026.SourceEllipticPeriod.countable_weierstrassP_eq",
+        "Dubon2026.SourceEllipticPeriod.exists_generic_period_shift",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_add_generic",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_add",
+        "Dubon2026.SourceEllipticPeriod.periodHom_surjective",
+        "Dubon2026.SourceEllipticPeriod.ker_periodHom",
+        "Dubon2026.SourceEllipticPeriod.periodQuotientEquiv_mk",
+        "Dubon2026.SourceEllipticPeriod.periodModelHom_apply",
+        "Dubon2026.SourceEllipticPeriod.periodModelHom_surjective",
+        "Dubon2026.SourceEllipticPeriod.ker_periodModelHom",
+        "Dubon2026.SourceEllipticPeriod.exists_complex_uniformization",
+        "Dubon2026.SourceEllipticPeriod.additionCore",
+        "Dubon2026.SourceEllipticPeriod.additionCoreOne",
+        "Dubon2026.SourceEllipticPeriod.additionCoreTwo",
+        "Dubon2026.SourceEllipticPeriod.additionTail",
+        "Dubon2026.SourceEllipticPeriod.additionRemainder",
+        "Dubon2026.SourceEllipticPeriod.additionPhi",
+        "Dubon2026.SourceEllipticPeriod.additionPhiDomain",
+        "Dubon2026.SourceEllipticPeriod.periodSlope",
+        "Dubon2026.SourceEllipticPeriod.periodHom",
+        "Dubon2026.SourceEllipticPeriod.periodQuotientEquiv",
+        "Dubon2026.SourceEllipticPeriod.periodModelHom"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticPeriod.isPreconnected_compl_lattice",
+        "Dubon2026.SourceEllipticPeriod.weierstrassP_not_eventually_const",
+        "Dubon2026.SourceEllipticPeriod.analyticOrderAt_weierstrassP_sub_self_ne_top",
+        "Dubon2026.SourceEllipticPeriod.analyticOrderAt_derivWeierstrassP",
+        "Dubon2026.SourceEllipticPeriod.exists_derivWeierstrassP_ne_zero",
+        "Dubon2026.SourceEllipticPeriod.two_mul_deriv_derivWeierstrassP_mul",
+        "Dubon2026.SourceEllipticPeriod.deriv_derivWeierstrassP",
+        "Dubon2026.SourceEllipticPeriod.deriv2_derivWeierstrassP",
+        "Dubon2026.SourceEllipticPeriod.hasDerivAt_weierstrassP_add",
+        "Dubon2026.SourceEllipticPeriod.add_notMem_mem_nhds_zero",
+        "Dubon2026.SourceEllipticPeriod.analyticAt_weierstrassP_add_zero",
+        "Dubon2026.SourceEllipticPeriod.analyticAt_additionCore",
+        "Dubon2026.SourceEllipticPeriod.additionCore_zero",
+        "Dubon2026.SourceEllipticPeriod.hasDerivAt_additionCore",
+        "Dubon2026.SourceEllipticPeriod.deriv_additionCore_eqNhds",
+        "Dubon2026.SourceEllipticPeriod.deriv_additionCore_zero",
+        "Dubon2026.SourceEllipticPeriod.hasDerivAt_additionCore₁",
+        "Dubon2026.SourceEllipticPeriod.deriv2_additionCore_eqNhds",
+        "Dubon2026.SourceEllipticPeriod.deriv2_additionCore_zero",
+        "Dubon2026.SourceEllipticPeriod.hasDerivAt_additionCore₂",
+        "Dubon2026.SourceEllipticPeriod.deriv3_additionCore_eqNhds",
+        "Dubon2026.SourceEllipticPeriod.deriv3_additionCore_zero",
+        "Dubon2026.SourceEllipticPeriod.additionCore_order_ge_four",
+        "Dubon2026.SourceEllipticPeriod.weierstrassPExcept_zero_order_ge_two",
+        "Dubon2026.SourceEllipticPeriod.analyticAt_additionTail",
+        "Dubon2026.SourceEllipticPeriod.analyticAt_additionRemainder",
+        "Dubon2026.SourceEllipticPeriod.additionRemainder_order_ge_four",
+        "Dubon2026.SourceEllipticPeriod.additionPhi_diffEq",
+        "Dubon2026.SourceEllipticPeriod.addBridge_identity",
+        "Dubon2026.SourceEllipticPeriod.additionCore_add_R_order_ge_four",
+        "Dubon2026.SourceEllipticPeriod.isOpen_additionPhiDomain",
+        "Dubon2026.SourceEllipticPeriod.additionPhi_periodic",
+        "Dubon2026.SourceEllipticPeriod.additionPhi_self_eq_zero",
+        "Dubon2026.SourceEllipticPeriod.analyticAt_weierstrassP_add",
+        "Dubon2026.SourceEllipticPeriod.analyticOnNhd_additionPhi",
+        "Dubon2026.SourceEllipticPeriod.additionPhi_removable_at_zero",
+        "Dubon2026.SourceEllipticPeriod.sq_mul_weierstrassP_add_eq",
+        "Dubon2026.SourceEllipticPeriod.additionPhi_removable_at_neg",
+        "Dubon2026.SourceEllipticPeriod.elliptic_Liouville_zero",
+        "Dubon2026.SourceEllipticPeriod.additionPhi_eq_zero",
+        "Dubon2026.SourceEllipticPeriod.weierstrassP_add_eq_addX",
+        "Dubon2026.SourceEllipticPeriod.periodSlope_eq_slope",
+        "Dubon2026.SourceEllipticPeriod.hasDerivAt_periodSlope",
+        "Dubon2026.SourceEllipticPeriod.weierstrassP_add_eq_periodSlope",
+        "Dubon2026.SourceEllipticPeriod.derivWeierstrassP_add_eq_addY",
+        "Dubon2026.SourceEllipticPeriod.countable_lattice",
+        "Dubon2026.SourceEllipticPeriod.countable_analytic_level",
+        "Dubon2026.SourceEllipticPeriod.countable_weierstrassP_eq",
+        "Dubon2026.SourceEllipticPeriod.exists_generic_period_shift",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_add_generic",
+        "Dubon2026.SourceEllipticPeriod.periodPoint_add",
+        "Dubon2026.SourceEllipticPeriod.periodHom_surjective",
+        "Dubon2026.SourceEllipticPeriod.ker_periodHom",
+        "Dubon2026.SourceEllipticPeriod.periodQuotientEquiv_mk",
+        "Dubon2026.SourceEllipticPeriod.periodModelHom_apply",
+        "Dubon2026.SourceEllipticPeriod.periodModelHom_surjective",
+        "Dubon2026.SourceEllipticPeriod.ker_periodModelHom",
+        "Dubon2026.SourceEllipticPeriod.exists_complex_uniformization"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticPeriod.additionCore",
+        "Dubon2026.SourceEllipticPeriod.additionCoreOne",
+        "Dubon2026.SourceEllipticPeriod.additionCoreTwo",
+        "Dubon2026.SourceEllipticPeriod.additionTail",
+        "Dubon2026.SourceEllipticPeriod.additionRemainder",
+        "Dubon2026.SourceEllipticPeriod.additionPhi",
+        "Dubon2026.SourceEllipticPeriod.additionPhiDomain",
+        "Dubon2026.SourceEllipticPeriod.periodSlope",
+        "Dubon2026.SourceEllipticPeriod.periodHom",
+        "Dubon2026.SourceEllipticPeriod.periodQuotientEquiv",
+        "Dubon2026.SourceEllipticPeriod.periodModelHom"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodUniformizationAudit15Documented.log",
+      "logSha256": "803B73FE73FDE3B536F774C11686EADBC9D5FD9660DDABCD4659338856337EE5",
+      "auditSha256": "3DB71A5AA5C1E6BB5BBC9DF668614DCDD1D8E1D0479DBCB25E78BBEEEFD52711",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 96,
+      "linterScopes": 15,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 81,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodUniformizationDependencyAudit15Documented.log",
+      "dependencyAuditSha256": "4D7B23E0A28C4393EAC4D9A86EE97538C7CA6E946F670CD213D557FE2BF0C634",
+      "dependencyAuditSourceSha256": "7AF0E4373769FFA747AA08B5CB258D232A4B1E6DCDBF53CCE597E891ECB2D50F",
+      "consumers": [
+        "Dubon2026.SourceEllipticPeriod.exists_complex_uniformization",
+        "Dubon2026.SourceEllipticPeriod.periodQuotientEquiv_mk",
+        "Dubon2026.SourceEllipticPeriod.periodModelHom_apply"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> exceptional-fiber census -> elliptic inertia orbit map -> cyclic roots of integral modular polynomials -> odd-prime quotient products -> actual complex elliptic-curve uniformization and quotient compatibility",
+      "discharged": "The actual Weierstrass-function point map is additive in every case, surjective and has exactly the actual period lattice as kernel. Its actual lattice quotient is additively isomorphic to the period curve, with the representative formula proved. Every actual complex elliptic curve has a surjective additive uniformization with exact period lattice, obtained by the previously proved period model and literal inverse variable change. No uniformization hypothesis is retained in that conclusion.",
+      "boundary": "Scratch only; production promotion and verification pending. Compatibility of the actual odd quotient maps with complex scalar maps, generic odd-prime modular-polynomial product identity, integral quotient lifts and reduction, cyclic roots, inertia census and wild differential contribution, reverse genus, good reduction, original Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-period-uniformization-15-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "3F9E699E443C0C0A93569E9F880256A032CC0D4C3C15C8652DEBA9C89E9A6FE1"
+    },
+    {
+      "recordedUTC": "2026-10-23T15:09:43.311491+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticPeriodCovering",
+        "SourceEllipticPeriodHolomorphicLift",
+        "SourceEllipticPeriodAffineLift",
+        "SourceEllipticPeriodScalarMap",
+        "SourceEllipticPeriodLocalCoordinates",
+        "SourceEllipticPeriodLocalScalar"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPeriodCovering.lean",
+          "sha256": "0D81B9C130FBF87BF4AB5E5B371CB500D298BCE82D2C9564330A2D85563FC70A",
+          "oleanSha256": "055BCFD5FE0F288A4760F97DF01A274A5A74C0BCC367F31A54FC2402634BF541"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPeriodHolomorphicLift.lean",
+          "sha256": "E45F60AFAF35D49FE46C91CF688420ABA2217CAE5FC05D95729D6564CB5ECAC1",
+          "oleanSha256": "BC8B32E7B7E0DDB0BC4E2C002CC48F309C55D8424136DE7F5C5BA8BE7490F5DB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPeriodAffineLift.lean",
+          "sha256": "E7D7E2184D768B5BEF9E0F1C8AC4D5C52845DF80A7A4C685C0E93982C53FE54A",
+          "oleanSha256": "DAF7A3A48D3D9DEF3D1611817338B32291C2F49B0D8F5F26990B4D32C674EE9C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPeriodScalarMap.lean",
+          "sha256": "5CCFF32F3E6000E26B5A465E57459BF165993265AC05AF66C65C936CA00573BC",
+          "oleanSha256": "6D228F5F926213FF42CCD671771B3AC7B08F634677A79EA40791993D24EC3B3E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPeriodLocalCoordinates.lean",
+          "sha256": "CD381EC76DB62EBA6BDF5DC4D4B62FDCBC4A943E8A49CCD2487E15B588F60E1C",
+          "oleanSha256": "14BB6B061D583149F25DE07ABD490839FA2CFDA0EA7B5EEFEEDAFB6CB816A0FB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPeriodLocalScalar.lean",
+          "sha256": "DE465A6A98E8066391770F603858A4D90D43263C8CFF663F1633031ED2D18A9B",
+          "oleanSha256": "00611600E2C6967B2059EE7B027351726FAB7DF4D0DF00323C1FDFC7658D6955"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticPeriod.isDiscrete_lattice",
+        "Dubon2026.SourceEllipticPeriod.isCoveringMap_mk_lattice",
+        "Dubon2026.SourceEllipticPeriod.differentiable_of_local_lifts",
+        "Dubon2026.SourceEllipticPeriod.exists_holomorphic_lift",
+        "Dubon2026.SourceEllipticPeriod.continuous_lattice_valued_constant",
+        "Dubon2026.SourceEllipticPeriod.affine_of_period_differences",
+        "Dubon2026.SourceEllipticPeriod.scalar_map_of_local_lifts",
+        "Dubon2026.SourceEllipticPeriod.local_lift_of_affine_coordinates",
+        "Dubon2026.SourceEllipticPeriod.local_lifts_of_one",
+        "Dubon2026.SourceEllipticPeriod.scalar_map_of_affine_germ"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticPeriod.isDiscrete_lattice",
+        "Dubon2026.SourceEllipticPeriod.isCoveringMap_mk_lattice",
+        "Dubon2026.SourceEllipticPeriod.differentiable_of_local_lifts",
+        "Dubon2026.SourceEllipticPeriod.exists_holomorphic_lift",
+        "Dubon2026.SourceEllipticPeriod.continuous_lattice_valued_constant",
+        "Dubon2026.SourceEllipticPeriod.affine_of_period_differences",
+        "Dubon2026.SourceEllipticPeriod.scalar_map_of_local_lifts",
+        "Dubon2026.SourceEllipticPeriod.local_lift_of_affine_coordinates",
+        "Dubon2026.SourceEllipticPeriod.local_lifts_of_one",
+        "Dubon2026.SourceEllipticPeriod.scalar_map_of_affine_germ"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodScalarAudit6.log",
+      "logSha256": "0FFEF7073CAB42571A7FB965A4C679246491EF01EC7C58D221295CF255C5732A",
+      "auditSha256": "2CEC566CFFF501CFD0C0E5ED5A3F3ED06E1372EC363B648AF791D127487C099A",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 14,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodScalarDependencyAudit6.log",
+      "dependencyAuditSha256": "15C60DD5AEDA28A1FC1B9C6B662A167BE1BDF2734C7BB94BEA288FD674031593",
+      "dependencyAuditSourceSha256": "1F8AD8F7712BBB134BFE579B1B5D1CF051FEC4344CD7D920CE01B4B68C83AF41",
+      "consumers": [
+        "Dubon2026.SourceEllipticPeriod.scalar_map_of_affine_germ"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> exceptional-fiber census -> elliptic inertia orbit map -> cyclic roots of integral modular polynomials -> odd-prime quotient products -> actual complex elliptic-curve uniformization and quotient compatibility",
+      "discharged": "A surjective homomorphism between actual period curves is induced by a nonzero complex scalar once one local holomorphic affine germ with nonzero y coordinate is supplied. The scalar sends the actual source lattice into the target lattice and intertwines the actual point maps. The single germ remains explicit and must be derived for the actual odd quotient map.",
+      "boundary": "Scratch only; production promotion and verification pending. The actual odd quotient affine germ, generic odd-prime modular-polynomial product identity, integral quotient lifts and reduction, cyclic roots, inertia census, reverse genus, good reduction, original Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-period-scalar-6-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "A53042F8DCC5307A89AF0416094994FC654C40DA0B7092A2C18B14225971583E"
+    },
+    {
+      "recordedUTC": "2026-10-23T15:23:03.511195+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticVeluAnalytic",
+        "SourceEllipticPeriodQuotientCoordinates",
+        "SourceEllipticPeriodQuotientGerm",
+        "SourceEllipticOddQuotientScalar",
+        "SourceEllipticOddQuotientPeriodKernel"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticVeluAnalytic.lean",
+          "sha256": "FF0C530BDC3F3C6E96A9CC6C228B1B57AEF24C84E0930A320E39FA954FB14652",
+          "oleanSha256": "EC9336BFC179EA984E0A655E48A9B517DB4BCE5458FD86B613DDF27913B8989D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPeriodQuotientCoordinates.lean",
+          "sha256": "D3B70E79D49FA7BB8B68BED54C57817963326F17A022B3DDF3644A0BEC6AC3DC",
+          "oleanSha256": "A36E1B1343AEAC91DC3136C7FD4552C00D18735B8E58B8AD69F07D9BA23C6443"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPeriodQuotientGerm.lean",
+          "sha256": "EBDD4353704A617CE3EFE6193990A4E67451C3EDC7F80C768B2D65FCF1A3B191",
+          "oleanSha256": "8006153D5F5461A40C3515C0F6DEE53F9AD8480619618AEA0434BB2909FA6784"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddQuotientScalar.lean",
+          "sha256": "12AAA77F364206A5D878D3DB4764245AD620E07BD4479BD7464D0CFE8278A8C4",
+          "oleanSha256": "92489DB17CAEE29464EDECEA3B5BD94FC2E4542BC8D68F86620BC721526AF007"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddQuotientPeriodKernel.lean",
+          "sha256": "E503F667391BF8E45417FD471ABED634C07E29D6AED35CA5DFE1388AA2978CFB",
+          "oleanSha256": "43158828E29DD984EF5AF09D38FDFA41CC9A12EF84D7B54DCFD7950D50D6A22F"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticFunctionField.analyticAt_veluAffineX",
+        "Dubon2026.SourceEllipticFunctionField.analyticAt_veluAffineY",
+        "Dubon2026.SourceEllipticPeriod.point_cast_some",
+        "Dubon2026.SourceEllipticPeriod.periodOddNorm_surjective",
+        "Dubon2026.SourceEllipticPeriod.periodOddNorm_affine",
+        "Dubon2026.SourceEllipticPeriod.periodOddNorm_eq_zero_iff",
+        "Dubon2026.SourceEllipticPeriod.exists_periodOddNorm_affine_germ",
+        "Dubon2026.SourceEllipticPeriod.periodOddNorm_scalar",
+        "Dubon2026.SourceEllipticPeriod.oddPointNorm_periodModel_scalar",
+        "Dubon2026.SourceEllipticPeriod.oddPointNorm_periodModel_scalar_kernel",
+        "Dubon2026.SourceEllipticPeriod.exists_odd_quotient_period_model",
+        "Dubon2026.SourceEllipticPeriod.periodOddNorm"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticFunctionField.analyticAt_veluAffineX",
+        "Dubon2026.SourceEllipticFunctionField.analyticAt_veluAffineY",
+        "Dubon2026.SourceEllipticPeriod.point_cast_some",
+        "Dubon2026.SourceEllipticPeriod.periodOddNorm_surjective",
+        "Dubon2026.SourceEllipticPeriod.periodOddNorm_affine",
+        "Dubon2026.SourceEllipticPeriod.periodOddNorm_eq_zero_iff",
+        "Dubon2026.SourceEllipticPeriod.exists_periodOddNorm_affine_germ",
+        "Dubon2026.SourceEllipticPeriod.periodOddNorm_scalar",
+        "Dubon2026.SourceEllipticPeriod.oddPointNorm_periodModel_scalar",
+        "Dubon2026.SourceEllipticPeriod.oddPointNorm_periodModel_scalar_kernel",
+        "Dubon2026.SourceEllipticPeriod.exists_odd_quotient_period_model"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticPeriod.periodOddNorm"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientScalarAudit5.log",
+      "logSha256": "F7FC6CA967298490114B48AC380DF30B3B946CF8DFD3B8A56724A4E8EEF0E46E",
+      "auditSha256": "F8356C0CAEBF6376C8BBAE2CDC6B7CDE3A882B2BF623B0120E7E4E55AC81F238",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 16,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 23,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientScalarDependencyAudit5.log",
+      "dependencyAuditSha256": "B70BC3C1B18121A55606F4334442AC70D949564FCB1CF7368F481DBE536094DD",
+      "dependencyAuditSourceSha256": "AEC6776499CC6AF14222B340023EF244AC9FA863621DE96E5F99E0EFF66B94BA",
+      "consumers": [
+        "Dubon2026.SourceEllipticPeriod.exists_odd_quotient_period_model"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> exceptional-fiber census -> elliptic inertia orbit map -> cyclic roots of integral modular polynomials -> odd-prime quotient products -> actual complex elliptic-curve uniformization and quotient compatibility",
+      "discharged": "The actual odd quotient norm is induced by a nonzero complex scalar between actual period models, and its scalar preimage lattice is exactly the inverse image of its cyclic subgroup. The target period model is constructed. The local affine germ is proved from the literal norm formulas and exact kernel denominator; no holomorphic-lift or scalar-compatibility assumption remains.",
+      "boundary": "Scratch only; production promotion and verification pending. The explicit prime cyclic-kernel lattice census, generic odd-prime modular-polynomial product identity, integral quotient lifts and reduction, cyclic roots, inertia census, reverse genus, good reduction, original Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-odd-quotient-scalar-5-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "9F6B49DED78EBEC5CD3222459C05FDAAFDF77B695693757E7297A622DE4BCB1E"
+    },
+    {
+      "recordedUTC": "2026-10-23T15:40:54.401931+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceEllipticPeriodLatticeJ",
+        "SourceEllipticPeriodCyclicPreimage",
+        "SourceEllipticStandardQuotientLattices",
+        "SourceEllipticStandardTorsion",
+        "SourceEllipticStandardCyclicDistinct",
+        "SourceEllipticStandardCyclicComplete",
+        "SourceEllipticOddQuotientLatticeJ",
+        "SourceEllipticStandardOddQuotientJ"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPeriodLatticeJ.lean",
+          "sha256": "70F164FC041819B83B5BF1CD812C7F9890899037B1728F1F70F76BA8DAE3264D",
+          "oleanSha256": "74D6A21B3626B70BAC892FEA0913FBC65E102D2648509F7FC8A4E039233A90CA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticPeriodCyclicPreimage.lean",
+          "sha256": "CFE514BB7C66E0D98CE15DC63DF6E2AFF6E36C3CCC24E4141ACD49E1A0C10A37",
+          "oleanSha256": "B88D868A6BCDC3B29C9F71E09BA9C2C3EC3E4A56B1641A1EBE413938FC65C73E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticStandardQuotientLattices.lean",
+          "sha256": "CF15457DEF46E00234C2EB6BA278BECFFD34F96B0027577503C01AC5B567F995",
+          "oleanSha256": "6FB9871FFABFFD8BE75653A71A1CCF01301C209A1BBAA514239BA946FEDD11D2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticStandardTorsion.lean",
+          "sha256": "A385C2FBD1CD9F4C35F8195BA1444E9A0C4CD9542B6B2465868E32D89FD4DF41",
+          "oleanSha256": "1AE7768B9D9B7C1754AF99EB66906C06318C4A3899C73E682C71515628ACBAAE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticStandardCyclicDistinct.lean",
+          "sha256": "E55BA1D54EB89D7AAD82FE3C86672FEFB2E1BCBB0369D56F3927FA97642BA6D2",
+          "oleanSha256": "9E377B2D24AB8E4C063A10DF36C2B3B6EDD71FCF339B6AD10939C1D7D5562957"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticStandardCyclicComplete.lean",
+          "sha256": "34B936FABF1C94A100B40C1C3EFA7B5D2D3A5790E9E27D5647BF5E91BEFC4372",
+          "oleanSha256": "29F63147922E35ED7EFFC70C87355E39D7ADEC7040756764DD2AE40155645F0F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddQuotientLatticeJ.lean",
+          "sha256": "64B608DE529DF6D0B3C33D35E57436AFA321CFBD65495339A274F00F741DB0A6",
+          "oleanSha256": "23A9532E12CC52BB92E4A11BAFA7EE5CBE6E0ED05967A750161E3B089F31EC2F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticStandardOddQuotientJ.lean",
+          "sha256": "C8D9E79B8031EAB0DEC3A3D0E40C6B6AC210B56BF4C759A2EA57506C0ECD4768",
+          "oleanSha256": "6216C21F2F24E42EAEC1C8187CA0306072928FA7096C1F42741AF88411FBA77B"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticPeriod.periodCurve_eq_of_lattice_eq",
+        "Dubon2026.SourceEllipticPeriod.periodCurve_scale",
+        "Dubon2026.SourceEllipticPeriod.periodCurve_scale_isElliptic",
+        "Dubon2026.SourceEllipticPeriod.periodCurve_scale_j",
+        "Dubon2026.SourceEllipticPeriod.periodCurve_j_eq_of_scaled_lattice_eq",
+        "Dubon2026.SourceEllipticPeriod.periodModelHom_mem_zmultiples_iff",
+        "Dubon2026.SourceEllipticPeriod.standard_diagonal_quotient_lattice",
+        "Dubon2026.SourceEllipticPeriod.standard_upper_quotient_lattice",
+        "Dubon2026.SourceEllipticPeriod.fraction_mem_period_lattice_iff",
+        "Dubon2026.SourceEllipticPeriod.periodModelHom_fraction_order",
+        "Dubon2026.SourceEllipticPeriod.standardTorsionPoint_order",
+        "Dubon2026.SourceEllipticPeriod.standard_upper_not_mem_diagonal",
+        "Dubon2026.SourceEllipticPeriod.standard_upper_mem_upper",
+        "Dubon2026.SourceEllipticPeriod.standardTorsionPoint_zmultiples_injective",
+        "Dubon2026.SourceEllipticPeriod.standardTorsionPoint_zmultiples_complete",
+        "Dubon2026.SourceEllipticPeriod.oddQuotientJ_eq_periodCurve_j_of_kernel_lattice",
+        "Dubon2026.SourceEllipticPeriod.standardOddQuotientJ_eq",
+        "Dubon2026.SourceEllipticPeriod.standardTorsionPoint"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticPeriod.periodCurve_eq_of_lattice_eq",
+        "Dubon2026.SourceEllipticPeriod.periodCurve_scale",
+        "Dubon2026.SourceEllipticPeriod.periodCurve_scale_isElliptic",
+        "Dubon2026.SourceEllipticPeriod.periodCurve_scale_j",
+        "Dubon2026.SourceEllipticPeriod.periodCurve_j_eq_of_scaled_lattice_eq",
+        "Dubon2026.SourceEllipticPeriod.periodModelHom_mem_zmultiples_iff",
+        "Dubon2026.SourceEllipticPeriod.standard_diagonal_quotient_lattice",
+        "Dubon2026.SourceEllipticPeriod.standard_upper_quotient_lattice",
+        "Dubon2026.SourceEllipticPeriod.fraction_mem_period_lattice_iff",
+        "Dubon2026.SourceEllipticPeriod.periodModelHom_fraction_order",
+        "Dubon2026.SourceEllipticPeriod.standardTorsionPoint_order",
+        "Dubon2026.SourceEllipticPeriod.standard_upper_not_mem_diagonal",
+        "Dubon2026.SourceEllipticPeriod.standard_upper_mem_upper",
+        "Dubon2026.SourceEllipticPeriod.standardTorsionPoint_zmultiples_injective",
+        "Dubon2026.SourceEllipticPeriod.standardTorsionPoint_zmultiples_complete",
+        "Dubon2026.SourceEllipticPeriod.oddQuotientJ_eq_periodCurve_j_of_kernel_lattice",
+        "Dubon2026.SourceEllipticPeriod.standardOddQuotientJ_eq"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticPeriod.standardTorsionPoint"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceStandardQuotientJAudit8.log",
+      "logSha256": "3EF687A738C9B6F77F37D58949C29A229F15EED6E479D483FEA3C21801A42423",
+      "auditSha256": "ACF7225840C0F8D78C4C921923AAE1A1EE7C22E902AB15E79397BA8D34E895E7",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 33,
+      "linterScopes": 8,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 27,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceStandardQuotientJDependencyAudit8Utf8.log",
+      "dependencyAuditSha256": "5162EA4ADA4FA667150049AE1FC598011E0C97B77876693A1654D7A673BA1144",
+      "dependencyAuditSourceSha256": "F0141723739C2962C1E8BEA52C2558F07B4465C9773F2DC685AF9D5E60366A8C",
+      "consumers": [
+        "Dubon2026.SourceEllipticPeriod.standardOddQuotientJ_eq",
+        "Dubon2026.SourceEllipticPeriod.standardTorsionPoint_zmultiples_complete"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> exceptional-fiber census -> elliptic inertia orbit map -> cyclic roots of integral modular polynomials -> odd-prime quotient products -> actual complex elliptic-curve uniformization and quotient compatibility",
+      "discharged": "The p+1 literal standard points have exact prime order and generate distinct cyclic subgroups exhausting all actual prime-order cyclic subgroups. Their quotient kernel lattices are computed explicitly. The actual odd norm scalar comparison and actual period invariants identify every standard odd quotient j-value with its corresponding analytic prime-Hecke j-value.",
+      "boundary": "Scratch only; production promotion and verification pending. The full integral modular-polynomial product identity, generator-independent quotient transport, integral quotient lifts and reduction, cyclic roots, inertia census, reverse genus, good reduction, original Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-standard-quotient-j-8-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "5FB5762F43A40EB41DD1C0B266A407430231E52F368F871B2DE0B7816141E394"
+    },
+    {
+      "recordedUTC": "2026-10-23T15:50:06.161216+00:00",
+      "date": "2026-10-23 America/Vancouver",
+      "modules": [
+        "SourceIntegralPrimeAnalyticProduct",
+        "SourceEllipticOddQuotientGeneratorJ",
+        "SourceIntegralComplexOddQuotientProduct",
+        "SourceIntegralEmbeddedOddQuotientProduct"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralPrimeAnalyticProduct.lean",
+          "sha256": "673E08E33D7CF4E0DF1618C1AEA6B89DEF479397BF41301E6C851D7BE8D430EE",
+          "oleanSha256": "63762C4786CBCA38CF244EEDE76029890E53D1B36573E47E71E665C5B58A82AB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddQuotientGeneratorJ.lean",
+          "sha256": "AFC0EB1415CDEABB053C75F774C3CF9292104C45DABF108940D394219576DA11",
+          "oleanSha256": "2CE9AE4476C44ECDC21696CCBCBAC7DC9CBEADBEC19737BFCC86294092B873B2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralComplexOddQuotientProduct.lean",
+          "sha256": "46765D830AD1AF7FB258582C33B62EAF5BCFD6596709423AB10D7C97B976FFF9",
+          "oleanSha256": "5651E422F9F4083BA5D2EDFBB05E0B49373C5FD03B7661F53AE98F68C5098297"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralEmbeddedOddQuotientProduct.lean",
+          "sha256": "79A806FAA046F798EA59117D686EBA355EB659DAF634679E9F5E3393DD807AB1",
+          "oleanSha256": "F71795B7783C362964401BA7A15F2AE42FE82AEA3A1BACDB185BA2B466A19B98"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.realL_evalAtJ",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_analytic_product_of_root",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_analytic_product",
+        "Dubon2026.SourceEllipticPeriod.mem_scaled_lattice_iff",
+        "Dubon2026.SourceEllipticPeriod.oddQuotientJ_eq_of_zmultiples_eq_period_model",
+        "Dubon2026.SourceEllipticPeriod.oddQuotientJ_eq_of_zmultiples_eq",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_eq_oddQuotientProduct_period_model",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_eq_oddQuotientProduct_complex",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_eq_oddQuotientProduct_of_complex_embedding",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_eq_oddQuotientProduct_algebraic"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.realL_evalAtJ",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_analytic_product_of_root",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_prime_analytic_product",
+        "Dubon2026.SourceEllipticPeriod.mem_scaled_lattice_iff",
+        "Dubon2026.SourceEllipticPeriod.oddQuotientJ_eq_of_zmultiples_eq_period_model",
+        "Dubon2026.SourceEllipticPeriod.oddQuotientJ_eq_of_zmultiples_eq",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_eq_oddQuotientProduct_period_model",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_eq_oddQuotientProduct_complex",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_eq_oddQuotientProduct_of_complex_embedding",
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_eq_oddQuotientProduct_algebraic"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductAudit4.log",
+      "logSha256": "B85DCAA7B9094C6E3339F23045F41994DC962B74516921056A552CC202B2E073",
+      "auditSha256": "1B3391DAF97FDA7895E34BEA6D0BA84FAF94F5F469F4D30E68F7C733B20B9018",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 13,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductDependencyAudit4.log",
+      "dependencyAuditSha256": "F33F3B29978B5EF8A9976E3C427A03427C583981481FF9EE9607BF365DB8EDE4",
+      "dependencyAuditSourceSha256": "E95D794EEEA6772FD898F4E179110633D34B414916E6C169EC89C1C88CAE9D37",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_eq_oddQuotientProduct_algebraic"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original Frobenius/inertia -> modular-curve good reduction -> genus equality -> reverse genus -> exceptional-fiber census -> elliptic inertia orbit map -> cyclic roots of integral modular polynomials -> odd-prime quotient products -> actual complex elliptic-curve uniformization and quotient compatibility",
+      "discharged": "The exact existing integral modular polynomial is the full product of actual odd-prime cyclic quotient j-factors over the complex numbers for arbitrary generators of p+1 distinct subgroups. The actual quotient j-value is generator-independent. The identity descends through a complex embedding, and native algebraically closed lifting supplies the embedding for algebraic rational coefficient fields.",
+      "boundary": "Scratch only; production promotion and verification pending. Broader characteristic-zero coefficient-field descent, integral quotient lifts and reduction, cyclic roots and inertia census, reverse genus, good reduction, original Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-complex-odd-product-4-reuse-review-20261023.json",
+      "frozenReceiptProseCorrections": [],
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "69792719079EE3BF18375FC9428F3E738375E16F90AE9AA0350E67B31B8D51D2"
+    }
+  ],
+  "reviews": [
+    "Tools/source-odd-product-descent-6-reuse-review-20261023.json",
+    "Tools/source-period-model-5-reuse-review-20261023.json",
+    "Tools/source-period-point-4-reuse-review-20261023.json",
+    "Tools/source-period-uniformization-15-reuse-review-20261023.json",
+    "Tools/source-period-scalar-6-reuse-review-20261023.json",
+    "Tools/source-odd-quotient-scalar-5-reuse-review-20261023.json",
+    "Tools/source-standard-quotient-j-8-reuse-review-20261023.json",
+    "Tools/source-complex-odd-product-4-reuse-review-20261023.json"
+  ],
+  "additionalCurrentSearch": {
+    "path": "Tools/period-uniformization-reuse-20261023.json",
+    "sha256": "FAA99F141E79BD85B9C56BF0954AFFD91FE2E6A39119130DEE0076035F5E86CD"
+  },
+  "productionFocusedReceipt6953": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddProductDescentDependencyAudit6AlignedProduction6953.log",
+        "sha256": "33C8E5FE64B05F2D6E0F19EDE953050D9951BB4467237A5429531FC54D24BE39",
+        "requiredProofValueEdges": 24,
+        "consumers": [
+          "Dubon2026.SourceEllipticFunctionField.exists_odd_prime_cyclic_quotients",
+          "Dubon2026.SourceFunctionField.IntegralJCoordinate.oddQuotientProduct_monic",
+          "Dubon2026.SourceFunctionField.IntegralJCoordinate.oddQuotientProduct_natDegree",
+          "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_eq_oddQuotientProduct_map_iff",
+          "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_quotient_product_specializes"
+        ],
+        "sourceSha256": "85801D9D5D0D31CD9E1ED8E567EB6BFF6BE0FC9CCBEA238AE04D65E0776F1342"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodModelDependencyAudit5ClassifiedProduction6953.log",
+        "sha256": "84829CECD2D87AC3C64D70F5859F437B77CEB499EE21088FE163D744D8FB5851",
+        "requiredProofValueEdges": 27,
+        "consumers": [
+          "Dubon2026.SourceEllipticPeriod.exists_complex_period_model",
+          "Dubon2026.SourceEllipticPeriod.periodCurve_equation"
+        ],
+        "sourceSha256": "48DC50725295F9A18C455ECE9A8F56AE0E519CB7382078DEFD80AC90CBA740F0"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodPointDependencyAudit4Production6953.log",
+        "sha256": "8E26F4BA6424D552D93FC250E7EC92F81EEE54538BEAC40459B5A8B34E2A8453",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.SourceEllipticPeriod.periodPoint_surjective",
+          "Dubon2026.SourceEllipticPeriod.periodPoint_eq_zero_iff",
+          "Dubon2026.SourceEllipticPeriod.periodPoint_add_mem",
+          "Dubon2026.SourceEllipticPeriod.periodPoint_neg"
+        ],
+        "sourceSha256": "ADD00B9E173E7D19E99543B7BD1A6463F925173266E2851C7659D974497DD6A1"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodUniformizationDependencyAudit15DocumentedProduction6953.log",
+        "sha256": "4D7B23E0A28C4393EAC4D9A86EE97538C7CA6E946F670CD213D557FE2BF0C634",
+        "requiredProofValueEdges": 81,
+        "consumers": [
+          "Dubon2026.SourceEllipticPeriod.exists_complex_uniformization",
+          "Dubon2026.SourceEllipticPeriod.periodQuotientEquiv_mk",
+          "Dubon2026.SourceEllipticPeriod.periodModelHom_apply"
+        ],
+        "sourceSha256": "449923C018573DAEC25379DC507D5C1EF7554E2DA459292FD190F6FDCFF5D153"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodScalarDependencyAudit6Production6953.log",
+        "sha256": "15C60DD5AEDA28A1FC1B9C6B662A167BE1BDF2734C7BB94BEA288FD674031593",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.SourceEllipticPeriod.scalar_map_of_affine_germ"
+        ],
+        "sourceSha256": "975F70DB2C460A6CE39A40227057E1B374C44721DE727DBBB2FE62247713DDE9"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddQuotientScalarDependencyAudit5Production6953.log",
+        "sha256": "B70BC3C1B18121A55606F4334442AC70D949564FCB1CF7368F481DBE536094DD",
+        "requiredProofValueEdges": 23,
+        "consumers": [
+          "Dubon2026.SourceEllipticPeriod.exists_odd_quotient_period_model"
+        ],
+        "sourceSha256": "D6D6A2C956BBBD81CF78CA26ED55B7EDE94D89298AAEA14DEE46E64DBC59E8C1"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceStandardQuotientJDependencyAudit8Utf8Production6953.log",
+        "sha256": "5162EA4ADA4FA667150049AE1FC598011E0C97B77876693A1654D7A673BA1144",
+        "requiredProofValueEdges": 27,
+        "consumers": [
+          "Dubon2026.SourceEllipticPeriod.standardOddQuotientJ_eq",
+          "Dubon2026.SourceEllipticPeriod.standardTorsionPoint_zmultiples_complete"
+        ],
+        "sourceSha256": "73EB0745364B13C25D095B3BB4593D127BE0F411E0CF14E29C893CDE94F3CD3C"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductDependencyAudit4Production6953.log",
+        "sha256": "F33F3B29978B5EF8A9976E3C427A03427C583981481FF9EE9607BF365DB8EDE4",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial_eq_oddQuotientProduct_algebraic"
+        ],
+        "sourceSha256": "BDC0D2D10D7EEA0E8B675CEEEE21C692713109290725B2749193F09F32F57CB0"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductProductionAudit6953.log",
+    "sha256": "3994055E837028E79C75ECC950A2A985B0BB5BBB606DE8C6FF0D06F5FE938C72",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-complex-odd-product-production-build-6953.log",
+    "aggregateSha256": "ED87DC48C1C36967D1D9F1DBCD4A89F50D72FA5EA3683E5E2CFCE5F2A1299D63",
+    "productionModules": 6953,
+    "incrementModules": 53,
+    "axiomChecks": 161,
+    "exhaustiveIncrementTheorems": 236,
+    "linterScopes": 53,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 240,
+    "productionReuse": "Scratch imports are qualified and thirteen module comments identify the assembled consumers. Every mathematical statement and proof body is preserved. Actual period lattices, Weierstrass functions, coordinate changes, ideal norm maps, cyclic subgroups, integral modular polynomial and coefficient maps retain their definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 240,
+      "scratchDistinct": 236,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 236,
+      "duplicateScratchNames": {
+        "WeierstrassCurve.j.congr_simp": [
+          {
+            "scope": "SourceComplexOddProductScratchOwnership298For6953",
+            "module": "Dubon2026.SourceIntegralQuotientProductSpecialization"
+          },
+          {
+            "scope": "SourceComplexOddProductScratchOwnership304For6953",
+            "module": "Dubon2026.SourceEllipticPeriodLatticeJ"
+          }
+        ],
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial.congr_simp": [
+          {
+            "scope": "SourceComplexOddProductScratchOwnership298For6953",
+            "module": "Dubon2026.SourceIntegralQuotientProductSpecialization"
+          },
+          {
+            "scope": "SourceComplexOddProductScratchOwnership305For6953",
+            "module": "Dubon2026.SourceIntegralPrimeAnalyticProduct"
+          }
+        ],
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.oddQuotientJ.congr_simp": [
+          {
+            "scope": "SourceComplexOddProductScratchOwnership298For6953",
+            "module": "Dubon2026.SourceIntegralOddQuotientProduct"
+          },
+          {
+            "scope": "SourceComplexOddProductScratchOwnership304For6953",
+            "module": "Dubon2026.SourceEllipticStandardOddQuotientJ"
+          }
+        ],
+        "Dubon2026.SourceFunctionField.JMultiplicity.jf.eq_1": [
+          {
+            "scope": "SourceComplexOddProductScratchOwnership299For6953",
+            "module": "Dubon2026.SourceEllipticPeriodModularCurve"
+          },
+          {
+            "scope": "SourceComplexOddProductScratchOwnership305For6953",
+            "module": "Dubon2026.SourceIntegralPrimeAnalyticProduct"
+          }
+        ]
+      },
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceEllipticCyclicGenerators",
+            "SourceEllipticOddPrimeQuotients",
+            "SourceEllipticOddQuotientBaseChange",
+            "SourceEllipticOddQuotientJ",
+            "SourceIntegralOddQuotientProduct",
+            "SourceIntegralQuotientProductSpecialization"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership298For6953.log",
+            "sha256": "ED5631DAE547DE6EBD445F298E7C18E483026018FBC9B0A0BE42AE8922991385",
+            "sourceSha256": "17D5F06504498784BCB73BF6AFB35BA6EF7D4FC60EA980A9D76FB153E22D0042"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticPeriodCurve",
+            "SourceEllipticPeriodInvariants",
+            "SourceEllipticPeriodModularCurve",
+            "SourceAnalyticJSurjectivity",
+            "SourceEllipticComplexPeriodModel"
+          ],
+          "count": 36,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership299For6953.log",
+            "sha256": "64BA519F89B920C5F8E79076622AE3AD7B3DC45B473D3B443F25B2A1FA384E3C",
+            "sourceSha256": "1500B6C64D6270C59ABEE6A64EEF277175FD74D38CE1ECDB138B41225F570367"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticPeriodicLiouville",
+            "SourceEllipticWeierstrassSurjectivity",
+            "SourceEllipticPeriodPoint",
+            "SourceEllipticPeriodPointSurjectivity"
+          ],
+          "count": 17,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership300For6953.log",
+            "sha256": "F3A93BE5597D42FCAFB891DB70963833511285B51776E62553311F50DC86F665",
+            "sourceSha256": "74AA35363222B4A1F6F890FE27F8B1BB3E441715329A5F0B32CD3AB5DD99D709"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticWeierstrassNonconstant",
+            "SourceEllipticWeierstrassDerivatives",
+            "SourceEllipticWeierstrassAdditionCore",
+            "SourceEllipticWeierstrassAdditionCoreOrder",
+            "SourceEllipticWeierstrassAdditionRemainder",
+            "SourceEllipticWeierstrassAdditionIdentity",
+            "SourceEllipticWeierstrassAdditionDomain",
+            "SourceEllipticWeierstrassAdditionRemovable",
+            "SourceEllipticWeierstrassAdditionX",
+            "SourceEllipticPeriodSlopeDerivative",
+            "SourceEllipticWeierstrassAdditionY",
+            "SourceEllipticPeriodGenericShift",
+            "SourceEllipticPeriodPointAddition",
+            "SourceEllipticPeriodUniformization",
+            "SourceEllipticComplexUniformization"
+          ],
+          "count": 96,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership301For6953.log",
+            "sha256": "64F3F8931DF15D0BD8772C96615D6DF6AFE66168CCA0944DFBE459148A607CB3",
+            "sourceSha256": "4060EBDE32B381A8800F734698AC7D441B1FFDF3508EA41CFC0AF79794AB3A8C"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticPeriodCovering",
+            "SourceEllipticPeriodHolomorphicLift",
+            "SourceEllipticPeriodAffineLift",
+            "SourceEllipticPeriodScalarMap",
+            "SourceEllipticPeriodLocalCoordinates",
+            "SourceEllipticPeriodLocalScalar"
+          ],
+          "count": 14,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership302For6953.log",
+            "sha256": "8BDDCE447B23BE6797456E455C4272D3037444F6FD1AE50850AD3A633FABA1A3",
+            "sourceSha256": "D084C7FABA234535D6401912AD033223CC5611CA9359422B1856D137593EA509"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticVeluAnalytic",
+            "SourceEllipticPeriodQuotientCoordinates",
+            "SourceEllipticPeriodQuotientGerm",
+            "SourceEllipticOddQuotientScalar",
+            "SourceEllipticOddQuotientPeriodKernel"
+          ],
+          "count": 16,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership303For6953.log",
+            "sha256": "DE84B872588F8A5974B4CFB9EA4635DB989531CEDFBCF1A83E6E6CEE7162010E",
+            "sourceSha256": "E5A2EA68AA1C62FD7261E62D54B9C3110BCA6BFCDC8710B42B702A8E56FC19C2"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticPeriodLatticeJ",
+            "SourceEllipticPeriodCyclicPreimage",
+            "SourceEllipticStandardQuotientLattices",
+            "SourceEllipticStandardTorsion",
+            "SourceEllipticStandardCyclicDistinct",
+            "SourceEllipticStandardCyclicComplete",
+            "SourceEllipticOddQuotientLatticeJ",
+            "SourceEllipticStandardOddQuotientJ"
+          ],
+          "count": 33,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership304For6953.log",
+            "sha256": "AE348BF0F4812115CDF29DF49BB890A199825D56015A224AA21DE4115E6802BE",
+            "sourceSha256": "04568EEF193937094E58907E809FF7909529A2B04886283600A840AFB6EA806A"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralPrimeAnalyticProduct",
+            "SourceEllipticOddQuotientGeneratorJ",
+            "SourceIntegralComplexOddQuotientProduct",
+            "SourceIntegralEmbeddedOddQuotientProduct"
+          ],
+          "count": 13,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership305For6953.log",
+            "sha256": "D7496E6A13467B128B17F6C8BD09FE6BEBC93E72120A89E0CF5D33F63792ABD8",
+            "sourceSha256": "B942BC8AA92B41E66C2BE21D313B1FA06DAE4DADE5B7920DC265B9146E0D8FE4"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductOwnership6953.log",
+        "sha256": "463A4DD7900EBF8929B9825A39862B00332E4B132D0EA73CBECC7AFC04739AB1",
+        "sourceSha256": "8C868722BB218B3725866E63949FF5552B7D71607CE505531385C809CFDA2F2F"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261023-070731-582.log",
+        "sha256": "0495B8BB96F5D0139E4DBA0EDF18A70197FC286D0B8454D349355BF1382CA13F"
+      }
+    },
+    "scratchToProductionCountReason": "All 236 distinct names from 240 exhaustive scratch checks are retained: 236 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "General characteristic-zero coefficient-field descent, actual integral quotient lifts and reduction, finite-set specialization, cyclic-subgroup root correspondence, inertia orbit map, exceptional-fiber census and wild differential contributions remain required. Reverse genus, genus equality and place comparison, modular-curve good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt6953": {
+    "recordedUTC": "2026-10-23T17:43:43.225152+00:00",
+    "log": "logs/dubon-build-20261023-091153-595.log",
+    "sha256": "A250DFC102AA77E04F9935FEC64FC85D8309BA4DFF7919409B383EC68CF31112",
+    "bytes": 11920312,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 6953,
+    "projectTheorems": 47143,
+    "registeredConsumers": 21221,
+    "registeredConstructions": 1811,
+    "declarations": 28852,
+    "generated": 27071,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261023_090843.log",
+    "foundationSha256": "DB250B7EEC54F0F69F7B9DA4DAB8E163AE7113E7E15C283FD73C44F5A5A91A9D",
+    "countReconciliation": {
+      "previousTheorems": 46911,
+      "focusedTheorems": 236,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial.congr_simp",
+        "Dubon2026.SourceFunctionField.JMultiplicity.jf.eq_1",
+        "Dubon2026.heckeUpperPoint.eq_1"
+      ],
+      "addedTheorems": 232,
+      "nativeOwnedGeneratedNames": [
+        "WeierstrassCurve.j.congr_simp"
+      ],
+      "nativeOwnershipEvidence": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\complex-odd-product-6953-canonical-ownership-resolution.json",
+        "sha256": "92D48425FC358482F10C062EF776EF3EBC4AFD005EEC22EA987E8B0E98772FD9"
+      },
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductOwnership6953.log",
+      "ownershipSha256": "463A4DD7900EBF8929B9825A39862B00332E4B132D0EA73CBECC7AFC04739AB1"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 240,
+      "scratchDistinct": 236,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 236,
+      "duplicateScratchNames": {
+        "WeierstrassCurve.j.congr_simp": [
+          {
+            "scope": "SourceComplexOddProductScratchOwnership298For6953",
+            "module": "Dubon2026.SourceIntegralQuotientProductSpecialization"
+          },
+          {
+            "scope": "SourceComplexOddProductScratchOwnership304For6953",
+            "module": "Dubon2026.SourceEllipticPeriodLatticeJ"
+          }
+        ],
+        "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial.congr_simp": [
+          {
+            "scope": "SourceComplexOddProductScratchOwnership298For6953",
+            "module": "Dubon2026.SourceIntegralQuotientProductSpecialization"
+          },
+          {
+            "scope": "SourceComplexOddProductScratchOwnership305For6953",
+            "module": "Dubon2026.SourceIntegralPrimeAnalyticProduct"
+          }
+        ],
+        "Dubon2026.SourceEllipticVelu.OddDiscriminant.oddQuotientJ.congr_simp": [
+          {
+            "scope": "SourceComplexOddProductScratchOwnership298For6953",
+            "module": "Dubon2026.SourceIntegralOddQuotientProduct"
+          },
+          {
+            "scope": "SourceComplexOddProductScratchOwnership304For6953",
+            "module": "Dubon2026.SourceEllipticStandardOddQuotientJ"
+          }
+        ],
+        "Dubon2026.SourceFunctionField.JMultiplicity.jf.eq_1": [
+          {
+            "scope": "SourceComplexOddProductScratchOwnership299For6953",
+            "module": "Dubon2026.SourceEllipticPeriodModularCurve"
+          },
+          {
+            "scope": "SourceComplexOddProductScratchOwnership305For6953",
+            "module": "Dubon2026.SourceIntegralPrimeAnalyticProduct"
+          }
+        ]
+      },
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceEllipticCyclicGenerators",
+            "SourceEllipticOddPrimeQuotients",
+            "SourceEllipticOddQuotientBaseChange",
+            "SourceEllipticOddQuotientJ",
+            "SourceIntegralOddQuotientProduct",
+            "SourceIntegralQuotientProductSpecialization"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership298For6953.log",
+            "sha256": "ED5631DAE547DE6EBD445F298E7C18E483026018FBC9B0A0BE42AE8922991385",
+            "sourceSha256": "17D5F06504498784BCB73BF6AFB35BA6EF7D4FC60EA980A9D76FB153E22D0042"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticPeriodCurve",
+            "SourceEllipticPeriodInvariants",
+            "SourceEllipticPeriodModularCurve",
+            "SourceAnalyticJSurjectivity",
+            "SourceEllipticComplexPeriodModel"
+          ],
+          "count": 36,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership299For6953.log",
+            "sha256": "64BA519F89B920C5F8E79076622AE3AD7B3DC45B473D3B443F25B2A1FA384E3C",
+            "sourceSha256": "1500B6C64D6270C59ABEE6A64EEF277175FD74D38CE1ECDB138B41225F570367"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticPeriodicLiouville",
+            "SourceEllipticWeierstrassSurjectivity",
+            "SourceEllipticPeriodPoint",
+            "SourceEllipticPeriodPointSurjectivity"
+          ],
+          "count": 17,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership300For6953.log",
+            "sha256": "F3A93BE5597D42FCAFB891DB70963833511285B51776E62553311F50DC86F665",
+            "sourceSha256": "74AA35363222B4A1F6F890FE27F8B1BB3E441715329A5F0B32CD3AB5DD99D709"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticWeierstrassNonconstant",
+            "SourceEllipticWeierstrassDerivatives",
+            "SourceEllipticWeierstrassAdditionCore",
+            "SourceEllipticWeierstrassAdditionCoreOrder",
+            "SourceEllipticWeierstrassAdditionRemainder",
+            "SourceEllipticWeierstrassAdditionIdentity",
+            "SourceEllipticWeierstrassAdditionDomain",
+            "SourceEllipticWeierstrassAdditionRemovable",
+            "SourceEllipticWeierstrassAdditionX",
+            "SourceEllipticPeriodSlopeDerivative",
+            "SourceEllipticWeierstrassAdditionY",
+            "SourceEllipticPeriodGenericShift",
+            "SourceEllipticPeriodPointAddition",
+            "SourceEllipticPeriodUniformization",
+            "SourceEllipticComplexUniformization"
+          ],
+          "count": 96,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership301For6953.log",
+            "sha256": "64F3F8931DF15D0BD8772C96615D6DF6AFE66168CCA0944DFBE459148A607CB3",
+            "sourceSha256": "4060EBDE32B381A8800F734698AC7D441B1FFDF3508EA41CFC0AF79794AB3A8C"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticPeriodCovering",
+            "SourceEllipticPeriodHolomorphicLift",
+            "SourceEllipticPeriodAffineLift",
+            "SourceEllipticPeriodScalarMap",
+            "SourceEllipticPeriodLocalCoordinates",
+            "SourceEllipticPeriodLocalScalar"
+          ],
+          "count": 14,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership302For6953.log",
+            "sha256": "8BDDCE447B23BE6797456E455C4272D3037444F6FD1AE50850AD3A633FABA1A3",
+            "sourceSha256": "D084C7FABA234535D6401912AD033223CC5611CA9359422B1856D137593EA509"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticVeluAnalytic",
+            "SourceEllipticPeriodQuotientCoordinates",
+            "SourceEllipticPeriodQuotientGerm",
+            "SourceEllipticOddQuotientScalar",
+            "SourceEllipticOddQuotientPeriodKernel"
+          ],
+          "count": 16,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership303For6953.log",
+            "sha256": "DE84B872588F8A5974B4CFB9EA4635DB989531CEDFBCF1A83E6E6CEE7162010E",
+            "sourceSha256": "E5A2EA68AA1C62FD7261E62D54B9C3110BCA6BFCDC8710B42B702A8E56FC19C2"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticPeriodLatticeJ",
+            "SourceEllipticPeriodCyclicPreimage",
+            "SourceEllipticStandardQuotientLattices",
+            "SourceEllipticStandardTorsion",
+            "SourceEllipticStandardCyclicDistinct",
+            "SourceEllipticStandardCyclicComplete",
+            "SourceEllipticOddQuotientLatticeJ",
+            "SourceEllipticStandardOddQuotientJ"
+          ],
+          "count": 33,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership304For6953.log",
+            "sha256": "AE348BF0F4812115CDF29DF49BB890A199825D56015A224AA21DE4115E6802BE",
+            "sourceSha256": "04568EEF193937094E58907E809FF7909529A2B04886283600A840AFB6EA806A"
+          }
+        },
+        {
+          "modules": [
+            "SourceIntegralPrimeAnalyticProduct",
+            "SourceEllipticOddQuotientGeneratorJ",
+            "SourceIntegralComplexOddQuotientProduct",
+            "SourceIntegralEmbeddedOddQuotientProduct"
+          ],
+          "count": 13,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership305For6953.log",
+            "sha256": "D7496E6A13467B128B17F6C8BD09FE6BEBC93E72120A89E0CF5D33F63792ABD8",
+            "sourceSha256": "B942BC8AA92B41E66C2BE21D313B1FA06DAE4DADE5B7920DC265B9146E0D8FE4"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductOwnership6953.log",
+        "sha256": "463A4DD7900EBF8929B9825A39862B00332E4B132D0EA73CBECC7AFC04739AB1",
+        "sourceSha256": "8C868722BB218B3725866E63949FF5552B7D71607CE505531385C809CFDA2F2F"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261023-070731-582.log",
+        "sha256": "0495B8BB96F5D0139E4DBA0EDF18A70197FC286D0B8454D349355BF1382CA13F"
+      }
+    },
+    "scratchToProductionCountReason": "All 236 distinct names from 240 exhaustive scratch checks are retained: 236 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "General characteristic-zero coefficient-field descent, actual integral quotient lifts and reduction, finite-set specialization, cyclic-subgroup root correspondence, inertia orbit map, exceptional-fiber census and wild differential contributions remain required. Reverse genus, genus equality and place comparison, modular-curve good reduction, original Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

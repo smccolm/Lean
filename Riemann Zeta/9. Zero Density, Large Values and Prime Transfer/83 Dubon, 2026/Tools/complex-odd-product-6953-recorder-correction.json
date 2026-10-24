@@ -1,0 +1,209 @@
+{
+  "failedRecorder": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\record_source_original_complex_odd_product_6953.py",
+    "sha256": "FFBF266807DFE9C076C2B49E185DF2092D876AF1261E788ACE3E06B96F5F1E1F"
+  },
+  "successor": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\record_source_complex_odd_product_reconciled_6953.py",
+    "sha256": "E20CBE5242AF98D7DAAA929A80C17D17AC228BC57312988DD6BB028238537010"
+  },
+  "correction": "Two stale 530 assertions changed to the observed 240 scratch theorem checks. Exact set reconciliation remains mandatory; all 236 distinct declaration names are present and four generated names are shared across scratch batches. No proof, audit, receipt or evidence log changed.",
+  "observed": {
+    "scratchSum": 240,
+    "scratchDistinct": 236,
+    "generatedNameRenamings": {},
+    "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+    "generatedNameSourceEvidence": {},
+    "productionFocused": 236,
+    "duplicateScratchNames": {
+      "WeierstrassCurve.j.congr_simp": [
+        {
+          "scope": "SourceComplexOddProductScratchOwnership298For6953",
+          "module": "Dubon2026.SourceIntegralQuotientProductSpecialization"
+        },
+        {
+          "scope": "SourceComplexOddProductScratchOwnership304For6953",
+          "module": "Dubon2026.SourceEllipticPeriodLatticeJ"
+        }
+      ],
+      "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial.congr_simp": [
+        {
+          "scope": "SourceComplexOddProductScratchOwnership298For6953",
+          "module": "Dubon2026.SourceIntegralQuotientProductSpecialization"
+        },
+        {
+          "scope": "SourceComplexOddProductScratchOwnership305For6953",
+          "module": "Dubon2026.SourceIntegralPrimeAnalyticProduct"
+        }
+      ],
+      "Dubon2026.SourceEllipticVelu.OddDiscriminant.oddQuotientJ.congr_simp": [
+        {
+          "scope": "SourceComplexOddProductScratchOwnership298For6953",
+          "module": "Dubon2026.SourceIntegralOddQuotientProduct"
+        },
+        {
+          "scope": "SourceComplexOddProductScratchOwnership304For6953",
+          "module": "Dubon2026.SourceEllipticStandardOddQuotientJ"
+        }
+      ],
+      "Dubon2026.SourceFunctionField.JMultiplicity.jf.eq_1": [
+        {
+          "scope": "SourceComplexOddProductScratchOwnership299For6953",
+          "module": "Dubon2026.SourceEllipticPeriodModularCurve"
+        },
+        {
+          "scope": "SourceComplexOddProductScratchOwnership305For6953",
+          "module": "Dubon2026.SourceIntegralPrimeAnalyticProduct"
+        }
+      ]
+    },
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceEllipticCyclicGenerators",
+          "SourceEllipticOddPrimeQuotients",
+          "SourceEllipticOddQuotientBaseChange",
+          "SourceEllipticOddQuotientJ",
+          "SourceIntegralOddQuotientProduct",
+          "SourceIntegralQuotientProductSpecialization"
+        ],
+        "count": 15,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership298For6953.log",
+          "sha256": "ED5631DAE547DE6EBD445F298E7C18E483026018FBC9B0A0BE42AE8922991385",
+          "sourceSha256": "17D5F06504498784BCB73BF6AFB35BA6EF7D4FC60EA980A9D76FB153E22D0042"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticPeriodCurve",
+          "SourceEllipticPeriodInvariants",
+          "SourceEllipticPeriodModularCurve",
+          "SourceAnalyticJSurjectivity",
+          "SourceEllipticComplexPeriodModel"
+        ],
+        "count": 36,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership299For6953.log",
+          "sha256": "64BA519F89B920C5F8E79076622AE3AD7B3DC45B473D3B443F25B2A1FA384E3C",
+          "sourceSha256": "1500B6C64D6270C59ABEE6A64EEF277175FD74D38CE1ECDB138B41225F570367"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticPeriodicLiouville",
+          "SourceEllipticWeierstrassSurjectivity",
+          "SourceEllipticPeriodPoint",
+          "SourceEllipticPeriodPointSurjectivity"
+        ],
+        "count": 17,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership300For6953.log",
+          "sha256": "F3A93BE5597D42FCAFB891DB70963833511285B51776E62553311F50DC86F665",
+          "sourceSha256": "74AA35363222B4A1F6F890FE27F8B1BB3E441715329A5F0B32CD3AB5DD99D709"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticWeierstrassNonconstant",
+          "SourceEllipticWeierstrassDerivatives",
+          "SourceEllipticWeierstrassAdditionCore",
+          "SourceEllipticWeierstrassAdditionCoreOrder",
+          "SourceEllipticWeierstrassAdditionRemainder",
+          "SourceEllipticWeierstrassAdditionIdentity",
+          "SourceEllipticWeierstrassAdditionDomain",
+          "SourceEllipticWeierstrassAdditionRemovable",
+          "SourceEllipticWeierstrassAdditionX",
+          "SourceEllipticPeriodSlopeDerivative",
+          "SourceEllipticWeierstrassAdditionY",
+          "SourceEllipticPeriodGenericShift",
+          "SourceEllipticPeriodPointAddition",
+          "SourceEllipticPeriodUniformization",
+          "SourceEllipticComplexUniformization"
+        ],
+        "count": 96,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership301For6953.log",
+          "sha256": "64F3F8931DF15D0BD8772C96615D6DF6AFE66168CCA0944DFBE459148A607CB3",
+          "sourceSha256": "4060EBDE32B381A8800F734698AC7D441B1FFDF3508EA41CFC0AF79794AB3A8C"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticPeriodCovering",
+          "SourceEllipticPeriodHolomorphicLift",
+          "SourceEllipticPeriodAffineLift",
+          "SourceEllipticPeriodScalarMap",
+          "SourceEllipticPeriodLocalCoordinates",
+          "SourceEllipticPeriodLocalScalar"
+        ],
+        "count": 14,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership302For6953.log",
+          "sha256": "8BDDCE447B23BE6797456E455C4272D3037444F6FD1AE50850AD3A633FABA1A3",
+          "sourceSha256": "D084C7FABA234535D6401912AD033223CC5611CA9359422B1856D137593EA509"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticVeluAnalytic",
+          "SourceEllipticPeriodQuotientCoordinates",
+          "SourceEllipticPeriodQuotientGerm",
+          "SourceEllipticOddQuotientScalar",
+          "SourceEllipticOddQuotientPeriodKernel"
+        ],
+        "count": 16,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership303For6953.log",
+          "sha256": "DE84B872588F8A5974B4CFB9EA4635DB989531CEDFBCF1A83E6E6CEE7162010E",
+          "sourceSha256": "E5A2EA68AA1C62FD7261E62D54B9C3110BCA6BFCDC8710B42B702A8E56FC19C2"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticPeriodLatticeJ",
+          "SourceEllipticPeriodCyclicPreimage",
+          "SourceEllipticStandardQuotientLattices",
+          "SourceEllipticStandardTorsion",
+          "SourceEllipticStandardCyclicDistinct",
+          "SourceEllipticStandardCyclicComplete",
+          "SourceEllipticOddQuotientLatticeJ",
+          "SourceEllipticStandardOddQuotientJ"
+        ],
+        "count": 33,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership304For6953.log",
+          "sha256": "AE348BF0F4812115CDF29DF49BB890A199825D56015A224AA21DE4115E6802BE",
+          "sourceSha256": "04568EEF193937094E58907E809FF7909529A2B04886283600A840AFB6EA806A"
+        }
+      },
+      {
+        "modules": [
+          "SourceIntegralPrimeAnalyticProduct",
+          "SourceEllipticOddQuotientGeneratorJ",
+          "SourceIntegralComplexOddQuotientProduct",
+          "SourceIntegralEmbeddedOddQuotientProduct"
+        ],
+        "count": 13,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductScratchOwnership305For6953.log",
+          "sha256": "D7496E6A13467B128B17F6C8BD09FE6BEBC93E72120A89E0CF5D33F63792ABD8",
+          "sourceSha256": "B942BC8AA92B41E66C2BE21D313B1FA06DAE4DADE5B7920DC265B9146E0D8FE4"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexOddProductOwnership6953.log",
+      "sha256": "463A4DD7900EBF8929B9825A39862B00332E4B132D0EA73CBECC7AFC04739AB1",
+      "sourceSha256": "8C868722BB218B3725866E63949FF5552B7D71607CE505531385C809CFDA2F2F"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261023-070731-582.log",
+      "sha256": "0495B8BB96F5D0139E4DBA0EDF18A70197FC286D0B8454D349355BF1382CA13F"
+    }
+  }
+}

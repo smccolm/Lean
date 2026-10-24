@@ -1,0 +1,7 @@
+{
+  "reason": "PowerShell input encoding replaced two Unicode subscripts in the audit generator. The exhaustive kernel/linter audit passed. The original failed dependency audit and used generator remain frozen. This fresh audit restores the exact existing proved declaration names without changing the proof sources or omitting any dependency.",
+  "previous": "E:\\Lean\\.tmp\\dubon83\\SourceStandardQuotientJDependencyAudit8.lean",
+  "replacement": "E:\\Lean\\.tmp\\dubon83\\SourceStandardQuotientJDependencyAudit8Utf8.lean",
+  "sourceChanged": false,
+  "requiredEdges": 27
+}

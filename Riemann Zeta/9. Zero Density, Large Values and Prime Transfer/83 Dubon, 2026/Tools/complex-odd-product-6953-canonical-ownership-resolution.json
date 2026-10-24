@@ -1,0 +1,40 @@
+{
+  "recordedUTC": "2026-10-23T17:43:42.515951+00:00",
+  "canonicalProjectTheorems": 47143,
+  "previousProjectTheorems": 46911,
+  "focusedTheorems": 236,
+  "alreadyCountedProjectGeneratedNames": [
+    "Dubon2026.SourceFunctionField.IntegralJCoordinate.modularPolynomial.congr_simp",
+    "Dubon2026.SourceFunctionField.JMultiplicity.jf.eq_1",
+    "Dubon2026.heckeUpperPoint.eq_1"
+  ],
+  "nativeOwnedGeneratedNames": [
+    "WeierstrassCurve.j.congr_simp"
+  ],
+  "addedProjectTheorems": 232,
+  "removedProjectTheorems": [],
+  "unexpectedProjectTheorems": [],
+  "identicalTypeAndProofValue": true,
+  "comparisonSha256": "09DED178D4326F36E50EB746274C682ABABA6086422C64C7394CE373984D5210",
+  "queries": [
+    {
+      "scope": "Canonical",
+      "owner": "Mathlib.AlgebraicGeometry.EllipticCurve.IsomOfJ",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCanonicalGeneratedOwnership6953.log",
+      "sha256": "27D64B3ADC6B712E597297E44EA3469D3E246568E1AAF1461F2B4AAD28BEC042",
+      "sourceSha256": "5A0D938180030670ADE9B1DD2257CA80BC251D589B8FDAA93CEEB6E841E8453A"
+    },
+    {
+      "scope": "Focused",
+      "owner": "Dubon2026.SourceIntegralQuotientProductSpecialization",
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFocusedGeneratedOwnership6953.log",
+      "sha256": "2AE6ED219C7773F8BC67C79434537ABAA782099D110421E340985C7E1DDF8F40",
+      "sourceSha256": "3D47E0BCBCE0CAA85F0284649052B1B6C2C19956AA41ECA4CE7CB19A17A1F976"
+    }
+  ],
+  "discrepancy": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\complex-odd-product-6953-canonical-name-discrepancy.json",
+    "sha256": "4EAE178B0036DA9BE76E700E0AD7016EBB1488F60FF9D4B61A80435642E3543B"
+  },
+  "reason": "The full import graph owns this generated j congruence in Mathlib.AlgebraicGeometry.EllipticCurve.IsomOfJ; the focused graph owns the exact same type and proof value in SourceIntegralQuotientProductSpecialization. It is kernel-audited in both contexts with propext and Classical.choice only. No previous project theorem is removed. Three other generated names were already counted in the preceding scope. No public theorem or construction is omitted."
+}

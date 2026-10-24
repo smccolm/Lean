@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-23",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> residual association -> original Frobenius/inertia -> good reduction -> reverse genus -> all-level exceptional-fiber census -> all-level cyclic-subgroup root and inertia correspondence -> successive actual prime quotients",
+  "sourceRepository": "anthropics/fermats-last-theorem",
+  "sourceCommit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "sourceFiles": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_WeierstrassCurve_CyclicQuotientJ.lean.txt",
+      "sha256": "008C9A8D6F3F2959D313D1E51C0D3B80D4B2E31EA79075818F25E0A8856ED51C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_WeierstrassCurve_stepCurve_stepSubgroup_eq_of_prime_ne_two.lean.txt",
+      "sha256": "E3B07655AE682A8D8B251645789E49DA60B5FF6E3DE84239B14C7B76F887DA54"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_WeierstrassCurve_bijOn_cyclicQuotientJ_isRoot_modularPolynomial_of_transcendental_j.lean.txt",
+      "sha256": "83900A7AE8A09E240C6BD4DED2D12A8A0412B469DFF725119ADF92FF50800A67"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_elliptic_cycSub_orbitMap.lean.txt",
+      "sha256": "55F036F394DF02A35898788503631CB81D15EAA55A1067FD80070F5F99186BFA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_genusFF_modularFunctionFieldFullC_eq_genusFF_modularFunctionFieldBar_of_five_le.lean.txt",
+      "sha256": "9C19027D65D766A943F4B845D71D8555BF4E620C7683A166569B93CCBB4017D4"
+    }
+  ],
+  "reuse": "Existing odd point norm, exact cyclic kernel, surjectivity, degree-two homomorphism, native finite cyclic-group transport, and prime polynomial products. Existing veluT and division-polynomial U identities express the coefficients in the abscissa alone.",
+  "shorterRoute": "Identify each literal half-orbit quotient with the finite abscissa set of the whole cyclic kernel. This proves coefficient independence directly and enables successive prime quotients. Restrict constructions to actual finite cyclic subgroups rather than build behavior for arbitrary infinite subgroups. General endomorphism classification and a second quotient-isomorphism framework are deferred.",
+  "assumptionsToDischarge": [
+    "quotient coefficients independent of the chosen cyclic generator",
+    "actual prime kernel and image subgroup at each quotient step",
+    "correct order of the image cyclic subgroup",
+    "composite cyclic quotient roots and field-map compatibility"
+  ],
+  "boundary": "The audited prime generic orbit relation is retained; composite levels and all numerical fiber and ramification claims remain open. No acceptance gate closes. DUB-17--20 OPEN; 16/20."
+}

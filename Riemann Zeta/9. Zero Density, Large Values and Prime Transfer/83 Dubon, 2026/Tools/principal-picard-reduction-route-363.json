@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-23",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> automorphy and residual association -> original weight-two Frobenius/inertia -> modular good reduction and prime-to-characteristic Picard torsion injectivity -> actual reduction places, principal pushforward, genus equality and Kummer power lifting.",
+  "precedingSearch": "Tools/tame-integral-charts-route-356.json",
+  "scratchReceipts": {
+    "source-chart-place-comparison-10-scratch-receipt.json": "A2376DA6DCA5C8C0F7BC3D363B476581F092BC932C92395DB784A34CB39B8A1A",
+    "source-reduction-place-map-3-scratch-receipt.json": "0C1457F31950417E65BC260300F57EB0C5F64BF30EE657FACC21950329C91D2A",
+    "source-local-fiber-order-8-scratch-receipt.json": "C7F06DED4D01F3F9939A9F455D659577B9A333051A9C0216EB8348A443123133",
+    "source-integral-fiber-identity-9-scratch-receipt.json": "6C39C9AED551D657B936189BDEB8834815B46DD74DE48C6ABD49BD239D8F319D",
+    "source-principal-divisor-map-4-scratch-receipt.json": "5EBDA04C335474AC2AEA29EE1571E59F5F8D4FEA7A1D81B637F0299E20E4B7AA",
+    "source-constant-picard-reduction-4-r2-scratch-receipt.json": "4A768F37CE7ED55CDEF04731C5792E1150D95D11BA538A09EEB6AECFFFBB32C1",
+    "source-kummer-power-3-scratch-receipt.json": "961ED2E20649145E77133667D67882C889F9BE8194156F96E810569917FF8623"
+  },
+  "discharged": "The actual tame modular Gauss reduction has a global map of places, built from its two coordinate charts. Exact local order sums prove that its finite-support pushforward carries every principal divisor to the divisor of the reduced function, with no chart integrality restriction on the function. Closed place residues and the existing genus equality give a degree-preserving constant reduction with equal original and residue genera. Its literal pushforward descends to the actual degree-zero Picard groups and preserves torsion. Every positive-order torsion class in its kernel supplies a normalized Kummer function whose residue is an actual power. The actual modular consumers assume no place map, divisor compatibility, constant-reduction object, genus equality, Picard map or residue power.",
+  "remaining": "Lifting the Kummer power to the original field remains necessary for prime-to-characteristic Picard torsion injectivity. Wild-characteristic genus and good reduction, original arithmetic-action compatibility, Frobenius/inertia, residual association, automorphy and higher symmetric-power continuation at every source weight remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "shorterRoute": "Existing normalized place orders, Dedekind centers and finite-coordinate residues give chart comparison and uniqueness. Existing local jets and uniformizers give fiber order bounds; cofactor factorization and total-degree equality force exact orders. Native integral multiples and the existing polynomial normalizer clear arbitrary function denominators. Two-chart gluing proves the global principal-divisor map. Existing degree, genus and quotient-group proofs give constant and Picard reduction; the existing global-constant theorem removes the residual constant factor in Kummer data. These replacements avoid external valuation approximations, repeated normalization arguments and a general moduli framework. The next exact obstruction is original-field power lifting via unramified Kummer-cover genus and the genus inequality for extending reductions. Wild characteristics two and three remain required. Root pins, proof limits, source fidelity and completion criteria are unchanged.",
+  "retainedFailedEvidence": "The original scope-362 unused-argument audit and original modules remain frozen; audited R2 successors are promoted. The R2 dependency audit with a mistaken namespace remains frozen; the passing R3 audit checks the exact existing name. No failed or used evidence is rewritten.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}
