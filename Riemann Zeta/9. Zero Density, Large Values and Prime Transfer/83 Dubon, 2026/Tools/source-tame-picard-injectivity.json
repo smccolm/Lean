@@ -1,0 +1,1361 @@
+{
+  "date": "24 October 2026",
+  "modules": [
+    "Dubon2026.SourceValuationModuleTorsionBound",
+    "Dubon2026.SourceJointChartMonomialDenominators",
+    "Dubon2026.SourceJointChartIntegralAlgebras",
+    "Dubon2026.SourceJointChartNonunitNormalization",
+    "Dubon2026.SourceJointChartLocalizations",
+    "Dubon2026.SourceJointChartValuationUnits",
+    "Dubon2026.SourceJointChartLocalizedIntegrality",
+    "Dubon2026.SourceJointChartInverseClearing",
+    "Dubon2026.SourceJointChartResidueAlgebras",
+    "Dubon2026.SourceJointChartLocalizedIntersection",
+    "Dubon2026.SourceJointChartComponentConstants",
+    "Dubon2026.SourceJointChartOverlapTorsion",
+    "Dubon2026.SourceJointChartIndicators",
+    "Dubon2026.SourceJointChartIdempotentConstants",
+    "Dubon2026.SourceJointChartConstantsOfFiniteOverlap",
+    "Dubon2026.SourceModularJointOverlapSpace",
+    "Dubon2026.SourceModularKummerConstantsOfFiniteOverlap",
+    "Dubon2026.SourceJointChartPolynomialBasis",
+    "Dubon2026.SourceSeparableChartPolynomialGenerators",
+    "Dubon2026.SourceJointChartPolynomialGenerators",
+    "Dubon2026.SourceJointChartLiftedPolynomialBasis",
+    "Dubon2026.SourceJointChartPolynomialIndependence",
+    "Dubon2026.SourceJointChartPolynomialRank",
+    "Dubon2026.SourceJointChartBasisDegree",
+    "Dubon2026.SourceJointChartFullBasis",
+    "Dubon2026.SourceModularJointResidueVector",
+    "Dubon2026.SourceModularKummerFullChartBasis",
+    "Dubon2026.SourceJointChartIntegralPolynomialCoefficients",
+    "Dubon2026.SourceJointChartIntegralCoordinates",
+    "Dubon2026.SourceModularKummerIntegralChartBasis",
+    "Dubon2026.SourceJointChartLinearFactorResidues",
+    "Dubon2026.SourceJointChartSmallRootCancellation",
+    "Dubon2026.SourceJointChartRootFreeDenominators",
+    "Dubon2026.SourceJointChartRootFactorNormalization",
+    "Dubon2026.SourceJointChartGoodDenominators",
+    "Dubon2026.SourceModularKummerGoodChartBasis",
+    "Dubon2026.SourceJointChartMonomialFactors",
+    "Dubon2026.SourceJointChartIntegralCoprimality",
+    "Dubon2026.SourceJointChartIntegralPartialFractions",
+    "Dubon2026.SourceJointChartTwoChartFractions",
+    "Dubon2026.SourceJointChartFiniteJets",
+    "Dubon2026.SourceJointChartLaurentWindow",
+    "Dubon2026.SourceJointChartUniformInversePower",
+    "Dubon2026.SourceJointChartOverlapDecomposition",
+    "Dubon2026.SourceJointChartFiniteOverlap",
+    "Dubon2026.SourceModularKummerFiniteOverlap",
+    "Dubon2026.SourceModularKummerJointConstants",
+    "Dubon2026.SourceModularJointPoleDimension",
+    "Dubon2026.SourceModularJointGenusInequality",
+    "Dubon2026.SourceModularKummerJointGenusInequality",
+    "Dubon2026.SourceModularKummerPowerLifting",
+    "Dubon2026.SourceModularTamePowerLifting",
+    "Dubon2026.SourceCurveReductionPrimeKernel",
+    "Dubon2026.SourceModularTamePrimeKernel",
+    "Dubon2026.SourceModularTameTorsionKernel",
+    "Dubon2026.SourceModularTameTorsionInjectivity"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight symmetric-power continuation -> automorphy and residual association -> original weight-two Frobenius/inertia -> modular good reduction and prime-to-characteristic Picard torsion injectivity -> original-field Kummer power lifting -> common residue constants and total residue-genus inequality.",
+  "discharged": "The actual modular Kummer reductions have a finite localized overlap quotient and common residue constants, derived from full polynomial chart bases, integral coordinates, controlled denominators and a finite Laurent window. Their total residue genus is at most the original Kummer genus. The unramified genus identity then lifts nonzero residue q-th powers to the original modular field whenever the genera agree. Existing tame genus equality removes that premise in characteristic at least five. An actual tame constant reduction is constructed, and its literal degree-zero Picard map is injective on every torsion subgroup whose order is invertible in the residue field. No overlap finiteness, common constants, genus inequality, Kummer root, Picard map or torsion-injectivity certificate remains in the actual tame consumers.",
+  "boundary": "Wild genus equality and modular good reduction in characteristics two and three, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. The tame theorem preserves the full source scope and does not complete the wild cases. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 7,370-module scope: all thirteen retained regressions, 48,704 exhaustive theorem checks, 22,097 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_constants_of_finite_overlap",
+    "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_full_chart_basis",
+    "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_integral_coordinate_basis",
+    "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_good_denominator_basis",
+    "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_chart_constants",
+    "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_genus_inequality",
+    "Dubon2026.SourceFunctionField.GaussReduction.modular_exists_power_of_residue_power_of_five_le",
+    "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_torsion_injective_of_five_le"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-24T07:44:13.137962+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceValuationModuleTorsionBound",
+        "SourceJointChartMonomialDenominators",
+        "SourceJointChartIntegralAlgebras",
+        "SourceJointChartNonunitNormalization",
+        "SourceJointChartLocalizations",
+        "SourceJointChartValuationUnits",
+        "SourceJointChartLocalizedIntegrality",
+        "SourceJointChartInverseClearing",
+        "SourceJointChartResidueAlgebras",
+        "SourceJointChartLocalizedIntersection",
+        "SourceJointChartComponentConstants",
+        "SourceJointChartOverlapTorsion",
+        "SourceJointChartIndicators",
+        "SourceJointChartIdempotentConstants",
+        "SourceJointChartConstantsOfFiniteOverlap",
+        "SourceModularJointOverlapSpace",
+        "SourceModularKummerConstantsOfFiniteOverlap"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceValuationModuleTorsionBound.lean",
+          "sha256": "76DA167305CDEE79D478C3B5E6FDCFD55BF01A22EBFF8BEE16297A1AB317171F",
+          "oleanSha256": "16E236E52CA61FC8D23207050D5EA95254C9C393C0735CF00090FB49476B0279"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartMonomialDenominators.lean",
+          "sha256": "9B61E0E6510380199E1E1F4673EEDC27D1C928777E5CA7825039636001F11B33",
+          "oleanSha256": "2ED974E3CEAB56AA8EC0D7A9CA6309228313DB82C13EE7D58D355774260B093D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartIntegralAlgebras.lean",
+          "sha256": "CC20F85A937FCBCA20A7B6DF085975671AB63BB1380C9F0512CB7A101D6D8849",
+          "oleanSha256": "33D968BCC84CC74ED9F0663AA2DCFCA1A06D51ED5C1E3A3672778A4952814A2C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartNonunitNormalization.lean",
+          "sha256": "9288515CFDEC82062C10DAFFE8ADC3C774D8DDA5FAF3E6FE5FEAC4DD99CA9D8D",
+          "oleanSha256": "DFABFC0EFC290A8A8365AB9BC28EF0432C0A47490C9FE5A55E784CFCFCC770BB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartLocalizations.lean",
+          "sha256": "FAF6160FFBD5D4A9E011456548EA34C5B0897CA71F42DABB09A1F35B0308969C",
+          "oleanSha256": "2CA2B72678676E36337089B3641684617DF44B8D16AEEB6AF8B595A1162D99F4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartValuationUnits.lean",
+          "sha256": "326E8F3BF3C81AFD2EE8D032C07498A76ABB6A7ED4703357579FA4B5170D59E2",
+          "oleanSha256": "03621CA9B23E314ED3DDD6990D2DE134D84DFDCD4CE261FE0116846D2991766A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartLocalizedIntegrality.lean",
+          "sha256": "AC30AEC7C1D0B333E770A670FEB65779C2333D31DF7B95DBD20EACA30D7BCA82",
+          "oleanSha256": "C2D4F091967575DC24CD92F2DC7CA1B9FC780E751FBE72A075F718DC6D7EE37C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartInverseClearing.lean",
+          "sha256": "EB51072604403A0456FD84A4FD5C2565C7962A49792D2C20337AAFC3B7468148",
+          "oleanSha256": "872D4BCDD7FDF241966F426772957818331D59980C43CE8887FF13DE6EBB4A54"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartResidueAlgebras.lean",
+          "sha256": "0F89CB8F94B4A361F027AF61B11793CA96A01AB50C8F1533FA26C9505585C286",
+          "oleanSha256": "3325B2A13BDBE9EBE3F0A398DAD523E716E54CC8B4FCB19C9094C5FCB652B314"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartLocalizedIntersection.lean",
+          "sha256": "D3110EA497A4036B035925C3ABA39C778AC97F5EC8631E2C29B285E8CBE1FF5B",
+          "oleanSha256": "D0A93A3B0F5BAB45D1E60A52FAB0EFD352A433256FC3A7AA2C8088EE28784A93"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartComponentConstants.lean",
+          "sha256": "9338AEB7A7F485A9DD957FA83AB5CAFC329D4F5D96745264F87AED826CF981E1",
+          "oleanSha256": "3496EC0BF35CC977661CFB32946CC2511820F9216BD248145BB5D7D4977905AE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartOverlapTorsion.lean",
+          "sha256": "C4345207237FE3AF4ECFA8283277C636D9AAC4E7CA0C7E06ADDDDBBB88D1A7B2",
+          "oleanSha256": "A8300DCAEC7E99A82EEFF9C3871EE67E31FF9A0423A627966079A8424F8F7CDA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartIndicators.lean",
+          "sha256": "0A91366C49C4939F85119E49C9B9D2D7B845ED1977683C00DB1E332FBE6E8075",
+          "oleanSha256": "4EFE35366D30C202ECBB6700F53157E29A74FF9CCC4931A79D282F26C90B1800"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartIdempotentConstants.lean",
+          "sha256": "A71D5AF9525E4DA3E8AEFB85583B426CF94C9374E7F52578E17F706212BA45C9",
+          "oleanSha256": "E986074DA52769FE98AF6619DD57EB6CDAC2F8A44FC4386F4304224A8909D61E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartConstantsOfFiniteOverlap.lean",
+          "sha256": "7738409D5A8749414110AAAEB06C3226099B533D7E648694A3DC3FEA29862857",
+          "oleanSha256": "3040CD2C46CB5E251F009E42D0BC2157F13350E8D282855BA3D36BE193F5182F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularJointOverlapSpace.lean",
+          "sha256": "EB1A45A53E75CF35B4BBDB1369E48081A2EEB1F40A5360E974F29F62750D9699",
+          "oleanSha256": "124B6F9C9AF3261C826664CED44770F52EAA09F40F09ECC051EA0D09A41A1B17"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularKummerConstantsOfFiniteOverlap.lean",
+          "sha256": "FE42492F83EF4AF594657A865EF1C11A79526F8F18CC3535720738FB7715811F",
+          "oleanSha256": "C1A1F5B41BD6ABABC5831E353DB5D6AD63E6F9E93CAB74FF4567765AF66017CE"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_uniform_torsion_annihilator",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.IsGoodAt.valuation_le",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.IsGoodAt.coeff_mem",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.IsGoodAt.mul",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.IsGoodAt.X_pow",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.IsGoodAt.one",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.IsGoodAt.reflect",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.aeval_reflect_eq",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.mem_originalChart_iff",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.self_mem_originalChart",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.aeval_mem_originalChart",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.aeval_mem_Sg",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.self_mem_Sg",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_nonunit_factor_in_chart",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.Sg_le_Pg",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.Pg_le_Ppp",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.mem_Ppp_of_mul_mul_pow_mem",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.Pinv_le_Ppp",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.mem_iff_le",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.residue_eq_zero_iff",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.valuation_algebraMap_lt",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.valuation_constHom_eq_one",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.valuation_aeval_eq_one",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.mem_integers_of_mem_Pg",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.valuation_lt_of_mem_map",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_mul_pow_mem_Sg",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.residueChartAlgebra_toSubmodule",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.mem_residue_chart_iff",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.constant_of_mem_localized_charts",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.residue_chart_isIntegral",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_component_constants",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_chart_torsion_annihilator",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_indicator",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.subsingleton_of_maximalIdeal_eq_bot",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.forall_eq_one_of_idempotent_of_finite_overlap",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.common_constants_of_finite_overlap",
+        "Dubon2026.SourceFunctionField.GaussReduction.joint_chart_constants_of_modular_reductions_of_finite_overlap",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_constants_of_finite_overlap",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.IsGoodAt",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.originalChart",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.Sg",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.Pg",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.Ppp",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.residueChartAlgebra",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.overlapRelations",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.overlapQuotient",
+        "Dubon2026.SourceFunctionField.GaussReduction.modularJointOverlapQuotient"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_uniform_torsion_annihilator",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.IsGoodAt.valuation_le",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.IsGoodAt.coeff_mem",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.IsGoodAt.mul",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.IsGoodAt.X_pow",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.IsGoodAt.one",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.IsGoodAt.reflect",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.aeval_reflect_eq",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.mem_originalChart_iff",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.self_mem_originalChart",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.aeval_mem_originalChart",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.aeval_mem_Sg",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.self_mem_Sg",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_nonunit_factor_in_chart",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.Sg_le_Pg",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.Pg_le_Ppp",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.mem_Ppp_of_mul_mul_pow_mem",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.Pinv_le_Ppp",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.mem_iff_le",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.residue_eq_zero_iff",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.valuation_algebraMap_lt",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.valuation_constHom_eq_one",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.valuation_aeval_eq_one",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.mem_integers_of_mem_Pg",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.valuation_lt_of_mem_map",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_mul_pow_mem_Sg",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.residueChartAlgebra_toSubmodule",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.mem_residue_chart_iff",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.constant_of_mem_localized_charts",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.residue_chart_isIntegral",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_component_constants",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_chart_torsion_annihilator",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_indicator",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.subsingleton_of_maximalIdeal_eq_bot",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.forall_eq_one_of_idempotent_of_finite_overlap",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.common_constants_of_finite_overlap",
+        "Dubon2026.SourceFunctionField.GaussReduction.joint_chart_constants_of_modular_reductions_of_finite_overlap",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_constants_of_finite_overlap"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.IsGoodAt",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.originalChart",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.Sg",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.Pg",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.Ppp",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.residueChartAlgebra",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.overlapRelations",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.overlapQuotient",
+        "Dubon2026.SourceFunctionField.GaussReduction.modularJointOverlapQuotient"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartConstantsAssemblyAudit17.log",
+      "logSha256": "D016E92E9141EF93E51E2766FAF3B7F0770E1F8022010D639D4EB1EB29D21042",
+      "auditSha256": "3676619558392EBABCA229E95304B48E29876B115FF64E156E65ABDBBD8E1BDD",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 71,
+      "linterScopes": 17,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 57,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartConstantsAssemblyDependencyAudit17.log",
+      "dependencyAuditSha256": "071839C7B0AA2C65F4A036C3DEC724FD0090AE8D919BD59E061AC8CAAC3590D0",
+      "dependencyAuditSourceSha256": "46801DF2B6E5D38CEDC6481736323D4E3B51E7BBBB8A3EA3ED63BE5B445A5A11",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_constants_of_finite_overlap"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight symmetric-power continuation -> automorphy/residual association -> original weight-two Frobenius/inertia -> modular good reduction and prime-to-characteristic Picard torsion injectivity -> original-field Kummer power lifting -> unramified Kummer genus identity and sum-of-residue-genera inequality -> common residue constants -> finite localized overlap quotient and idempotent gluing",
+      "discharged": "The actual modular Kummer common residue-chart constants theorem is proved conditional only on finite generation of the actual localized overlap quotient. Componentwise constancy follows from joint integrality and the existing global-constant criterion. Native chart algebras, good-denominator localization, original-chart equalizers, inverse-chart clearing, a uniform torsion annihilator, finite interpolation and idempotent gluing prove equality of the component constants. Actual coordinate degrees, transcendence and coefficient Krull dimension are derived in the real Kummer consumer.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Finite generation of the actual overlap quotient is explicit and remains unproved. Thus unconditional common constants, the sum-of-genera inequality, original-field power lifting, prime-to-characteristic Picard torsion injectivity, wild good reduction, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-joint-chart-constants-assembly-17-reuse-review-20261024.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "581B04FC8C3A0B778FEAA3B6D907F6988BCE9D72C26EAF72B1F7901BDB6172C6"
+    },
+    {
+      "recordedUTC": "2026-10-24T08:09:19.001494+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceJointChartPolynomialBasis",
+        "SourceSeparableChartPolynomialGenerators",
+        "SourceJointChartPolynomialGenerators",
+        "SourceJointChartLiftedPolynomialBasis",
+        "SourceJointChartPolynomialIndependence",
+        "SourceJointChartPolynomialRank",
+        "SourceJointChartBasisDegree",
+        "SourceJointChartFullBasis",
+        "SourceModularJointResidueVector",
+        "SourceModularKummerFullChartBasis"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartPolynomialBasis.lean",
+          "sha256": "EBE9670BB4CEC266D57BE0EED27268F0BE17D37184C02877A5CD9A1A745B6ED1",
+          "oleanSha256": "2028B26757AFA7674F21B623C3F8637ED57121E236448CE34BBD3633F5C198F9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSeparableChartPolynomialGenerators.lean",
+          "sha256": "11BF516D41CACF16E9A1E36E7999982CF2FCD6A0B0BAE5EA2908746B947DDD3A",
+          "oleanSha256": "00A3EB9597AB1871FDB957CDD00E95348863D8FBE5B9DF79237A4EF30E13557A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartPolynomialGenerators.lean",
+          "sha256": "4ED4C9EFC71095D7EA00ED32435F24562F1FC0F6665A4EB09848BBB535F4B672",
+          "oleanSha256": "B0A8158BBA368F6937911EAF02A067A72005C4EF5A0BE967AEA1A79F5FC1FB16"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartLiftedPolynomialBasis.lean",
+          "sha256": "D3D24A1D9008DDA83C116087626710B630F627A9A29A23592F85C7A07BE05C89",
+          "oleanSha256": "76D619C55C3ABA9D87DB91C54DE0848404D4DF2455A8BDBF3F54FB633E8FB7F1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartPolynomialIndependence.lean",
+          "sha256": "42ED686D40E746F6E7EB1408A31FC46F6E1005C28AD5D87BEC4B194609E02E78",
+          "oleanSha256": "D3087F106DCD159B6DB07224E84EF4DF951390A47A019715B3717CBDF6430235"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartPolynomialRank.lean",
+          "sha256": "5347A99564A0BE1028518C74D7CDB9531A66DA0468485057107BB506F310EAC1",
+          "oleanSha256": "3915ECF5EF29F922DDE92860ECEB41BA420D1CF84E8B9B062CAFF87475207C31"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartBasisDegree.lean",
+          "sha256": "80992B6316FF8B101E9F00FC1DDE3AAA5108EF700ECAA7CD4FB8D2F490AA7788",
+          "oleanSha256": "5EAECFBBDC5884537D04A6039D46C78BF5DBF54AA848E947C4EF5D15515ED020"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartFullBasis.lean",
+          "sha256": "5478178EC2E9BCD9E1B05BD5B5F6DEF5C54A411DFF0660604326E8D8398E4B25",
+          "oleanSha256": "71ACA95EAD05E242D7D5FEBBECA0263C32D5513503EDE6E647EAAFA6B15058F6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularJointResidueVector.lean",
+          "sha256": "57B115AAE392C4BF7CFBDDB148166597A7AC05F9CBC78F23BEBBEE3160DB0CA7",
+          "oleanSha256": "713ADBEFFC666B0BCCECE69C8E7EBE9CF6BA472B98E3AE54B2E623056E845EA2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularKummerFullChartBasis.lean",
+          "sha256": "CFF5AD59D8015BEAAF1E9E309D9E6399F4E980CF543E4C70B4642E537CF59443",
+          "oleanSha256": "E1503B1CC78BF60C047E7661D0026217EC1B0F3456197AE39F3BBB32B99720D1"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_polynomial_basis",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_integral_chart_polynomial_generators",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_joint_integral_polynomial_generators",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_lifted_residue_polynomial_basis",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.linearIndependent_powers_of_polynomial_unique",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.linearIndependent_lifted_chart_basis",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.polynomial_unique_single_multiples",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.coordinate_finrank_le_chart_rank",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_full_lifted_residue_polynomial_basis",
+        "Dubon2026.SourceFunctionField.GaussReduction.joint_full_chart_basis_of_modular_reductions",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_full_chart_basis",
+        "Dubon2026.SourceFunctionField.GaussReduction.modularJointResidueVector"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_polynomial_basis",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_integral_chart_polynomial_generators",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_joint_integral_polynomial_generators",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_lifted_residue_polynomial_basis",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.linearIndependent_powers_of_polynomial_unique",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.linearIndependent_lifted_chart_basis",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.polynomial_unique_single_multiples",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.coordinate_finrank_le_chart_rank",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_full_lifted_residue_polynomial_basis",
+        "Dubon2026.SourceFunctionField.GaussReduction.joint_full_chart_basis_of_modular_reductions",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_full_chart_basis"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GaussReduction.modularJointResidueVector"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceFullChartBasisAudit10.log",
+      "logSha256": "CF339AB45730754FDCAF36D1883602320406681060A6ED09C001B0EE368C20AC",
+      "auditSha256": "C115A7E93E8D9462FFB8B58188FEEFBDDD045C59343FBF9765BB42FBCD586340",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 18,
+      "linterScopes": 10,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 21,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFullChartBasisDependencyAudit10.log",
+      "dependencyAuditSha256": "020579722AA43C3B7F63EA493A63C77E79415DF23A19E3F407BA3AD00D90CC0E",
+      "dependencyAuditSourceSha256": "806CD1AEB7AFB05B4A7C1F41E8F049FEB3A235997D0CE8F73280E99E72CC2346",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_full_chart_basis"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight symmetric-power continuation -> automorphy/residual association -> original weight-two Frobenius/inertia -> modular good reduction and prime-to-characteristic Picard torsion injectivity -> original-field Kummer power lifting -> unramified Kummer genus identity and sum-of-residue-genera inequality -> common residue constants -> finite localized overlap quotient and idempotent gluing",
+      "discharged": "The actual modular Kummer reductions have a finite polynomial basis of the simultaneous residue chart, lifted to original chart elements, with rank exactly the original coordinate-field degree. Actual coordinate integrality, residue separability, transcendence, degrees and finiteness are derived. Monic residue-chart multiples give the rank lower bound; native scalar-tower and joint-residue independence give the upper bound. No chart-basis or rank hypothesis remains.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Integral coordinate representations and controlled denominators must give finite generators of the actual overlap quotient. Unconditional common constants, sum-of-residue-genera inequality, original-field power lifting, Picard torsion injectivity, wild good reduction, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-full-chart-basis-10-reuse-review-20261024.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "88336D709A30D4C3BD6DE5BABEBAAE1F918C5E2F6718955ABA6F349490342DF7"
+    },
+    {
+      "recordedUTC": "2026-10-24T08:14:49.596051+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceJointChartIntegralPolynomialCoefficients",
+        "SourceJointChartIntegralCoordinates",
+        "SourceModularKummerIntegralChartBasis"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartIntegralPolynomialCoefficients.lean",
+          "sha256": "9C9E4675D49707693332D95344AC8F89CCD84760175E344CE42A659C5BE37580",
+          "oleanSha256": "4F33003CEE34A64DA9E189BE9995CC8684213124ABE95FFD7C103F5E7C0B848B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartIntegralCoordinates.lean",
+          "sha256": "7A8EFEF498DDD6CD997009E8F6F5F13B334A8314C9F243BBBC52E00DD01D6BE5",
+          "oleanSha256": "A050A18BB6F09BED7A7C2DC8C32A397BE9BBC2D890E881387CE27221826E1F74"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularKummerIntegralChartBasis.lean",
+          "sha256": "387644B692E8369B146FC4B07588F731920668D6ACCD190ED20E5DD22BEC8F5F",
+          "oleanSha256": "236921B7330EEF4020FE1D0C7F296493BB68B01AB501E89DEEC9DE92378E8C37"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.coeff_mem_of_polynomial_sum_integral",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_integral_coords_of_full_chart_basis",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_integral_coordinate_basis"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.coeff_mem_of_polynomial_sum_integral",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_integral_coords_of_full_chart_basis",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_integral_coordinate_basis"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralChartBasisAudit3.log",
+      "logSha256": "65522756706B534EBF250077392F7766CBBA771A10C205B973733D3C281F8C8A",
+      "auditSha256": "E8CC3BECD2AA66C4FBBE64EB12BB274121CFF8C3EB472DE4BCD605FCBEF77549",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 5,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 10,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralChartBasisDependencyAudit3.log",
+      "dependencyAuditSha256": "3EF85640BA11A965F42141ABFCBB88894784A33CDC99CEDAF14A1AFD8FE5C214",
+      "dependencyAuditSourceSha256": "E27AEB2D2A5C0153DD191E52A5F92B4127BF091D1DD7B739FB0E7EB972F5DFDB",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_integral_coordinate_basis"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight symmetric-power continuation -> automorphy/residual association -> original weight-two Frobenius/inertia -> modular good reduction and prime-to-characteristic Picard torsion injectivity -> original-field Kummer power lifting -> unramified Kummer genus identity and sum-of-residue-genera inequality -> common residue constants -> finite localized overlap quotient and idempotent gluing",
+      "discharged": "The actual full lifted modular Kummer chart basis represents every jointly integral function with jointly integral rational-coordinate coefficients. Polynomial coefficient integrality follows from the existing joint-residue criterion on power multiples. Native finite-family denominator clearing and the simultaneous unit normalizer prove integrality of the rational coordinates. Actual splitting-field and coordinate finiteness are derived.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Controlled denominators and a finite overlap generating set remain necessary. Unconditional common constants, sum-of-residue-genera inequality, original-field power lifting, Picard torsion injectivity, wild good reduction, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-integral-chart-basis-3-reuse-review-20261024.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "731DD71487895403D3E4BF4F3040F22E94EE9C89AFB8AA7857EDFF538BEBCFB6"
+    },
+    {
+      "recordedUTC": "2026-10-24T08:47:16.612750+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceJointChartLinearFactorResidues",
+        "SourceJointChartSmallRootCancellation",
+        "SourceJointChartRootFreeDenominators",
+        "SourceJointChartRootFactorNormalization",
+        "SourceJointChartGoodDenominators",
+        "SourceModularKummerGoodChartBasis"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartLinearFactorResidues.lean",
+          "sha256": "71721349E0C2358FB8BEAFE9F6EFB742DD83DF1BB90861BE0A90C9D826604685",
+          "oleanSha256": "B04306FC744B331233FCABB9729E1CB2DDBE72C9A7F63624A62A6B0576C9E3A3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartSmallRootCancellation.lean",
+          "sha256": "78CC82D87CCC221D78861B534A514BF92EAFFE4597CA695C77BA829190AB20F8",
+          "oleanSha256": "F7A626C4238C81A177B7B0ECB824C7BE620CE741E51E6D6931BCC704C54C374D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartRootFreeDenominators.lean",
+          "sha256": "320DFFC3629B481565237ED72FB87ED5D0A20834F22CFC5315EBC895F8E0FCCC",
+          "oleanSha256": "091BB60DC02FF73EDF05A783C9323C20929250207861CBF597BB36BCD7F50148"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartRootFactorNormalization.lean",
+          "sha256": "6087C2535C8B9A722EDCCA5803971DA4F62E156137E79950B13CBABD42B221A3",
+          "oleanSha256": "64DFE18661329062EB47EFD2306861EA566FF82665ED9DFBE417AAFA45E2E339"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartGoodDenominators.lean",
+          "sha256": "07FE0DC7012461F21C1CE70F7054DC64C5B7A80EFA092BCC98AF16E1E0FBCAA7",
+          "oleanSha256": "3DD44E9D00D317A5FEDF00DB9C7BDC86C9F0765876FAF586BCAACB0D703B4C4C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularKummerGoodChartBasis.lean",
+          "sha256": "545CC5C307FCAF9A7B81F8BC91692153DD3C2B2FD87FCA5F67B4D65E00674F3F",
+          "oleanSha256": "775C41F9F0B0851DCD392D35FF67189B1D51B74D6C95E0CC22E9DBEFD82C7BC2"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.residue_coeff_zero_of_chart_linear_factor",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_cancel_small_denominator_root",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_denominator_with_roots_outside",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.good_one_sub_C_mul_X",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.good_prod_one_sub",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_good_factor_of_roots_outside",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_good_coordinate_denominator",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_good_denominator_basis"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.residue_coeff_zero_of_chart_linear_factor",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_cancel_small_denominator_root",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_denominator_with_roots_outside",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.good_one_sub_C_mul_X",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.good_prod_one_sub",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_good_factor_of_roots_outside",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_good_coordinate_denominator",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_good_denominator_basis"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGoodChartBasisAudit6.log",
+      "logSha256": "54128A98EB19AB41391A3F0EF4A384E3CC488AC96D04A11672317C65C7A439BA",
+      "auditSha256": "7DBA2AA38B963717776E5FBD26A884F5554BEAD3BA2C6D23426D70D81AB1DFEB",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 12,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 15,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGoodChartBasisDependencyAudit6.log",
+      "dependencyAuditSha256": "B2E3DDC5D2C03A0B678195FB9776779C13B33B7D6A031BFB7C7F4F3E3EDB8EA8",
+      "dependencyAuditSourceSha256": "A902077D7BF87044DBC91B55D3CF0EE0A9672B5C8745120FF55F8A861D4F211A",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_good_denominator_basis"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight symmetric-power continuation -> automorphy/residual association -> original weight-two Frobenius/inertia -> modular good reduction and prime-to-characteristic Picard torsion injectivity -> original-field Kummer power lifting -> unramified Kummer genus identity and sum-of-residue-genera inequality -> common residue constants -> finite localized overlap quotient and idempotent gluing",
+      "discharged": "The actual modular Kummer polynomial chart basis represents every original joint chart function using a common good denominator and integral polynomial numerators. Direct polynomial residue-basis uniqueness and evaluation cancel every denominator root in the coefficient valuation ring; the remaining roots normalize using the existing root-product identity. Native finite-family denominator clearing and the proved polynomial integrality criterion discharge the coordinate denominator and numerator conditions.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Two-chart decomposition and finite overlap generation remain necessary. Unconditional common constants, sum-of-residue-genera inequality, original-field power lifting, Picard torsion injectivity, wild good reduction, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-good-chart-basis-6-reuse-review-20261024.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "03A8B729BE7D5AB9690B594615879C1AB491FE54B6F76B2E1F76CCC8C0398945"
+    },
+    {
+      "recordedUTC": "2026-10-24T09:12:56.003748+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceJointChartMonomialFactors",
+        "SourceJointChartIntegralCoprimality",
+        "SourceJointChartIntegralPartialFractions",
+        "SourceJointChartTwoChartFractions",
+        "SourceJointChartFiniteJets",
+        "SourceJointChartLaurentWindow",
+        "SourceJointChartUniformInversePower",
+        "SourceJointChartOverlapDecomposition",
+        "SourceJointChartFiniteOverlap",
+        "SourceModularKummerFiniteOverlap",
+        "SourceModularKummerJointConstants"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartMonomialFactors.lean",
+          "sha256": "E73FC0BC07058AFA7D4AB2DF3E529B3FD546110A2A0C94F8E266E3F46817DE15",
+          "oleanSha256": "2F65AF1D94D5C2BE46DAF1F0C7CF685536BC633A7BBB4C39A92664901954D5DB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartIntegralCoprimality.lean",
+          "sha256": "B7E0BE2B0EF8AF0CB0814ED269813D4F65D4F4530DE9843DE9C0DE25AA7571F8",
+          "oleanSha256": "3C7685C3BE9ABE02FE61013D6502E91BFEE4AF782047B46E8F3D2A6F9FB0ED4B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartIntegralPartialFractions.lean",
+          "sha256": "6B260B68A94E85BF65B08A1F53D581693FED010287F8D8E3C34B3E2DB822C9BC",
+          "oleanSha256": "08384E05F3771669165AC55019D458250EDEC0A21C456EE5D085B6035F22B444"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartTwoChartFractions.lean",
+          "sha256": "93465470DB7D16C35FEBE3DE566D22948AC5736C882AD898CF50BC2B88D77DDB",
+          "oleanSha256": "B7330D85720F086A71EA4AACA6388324299F569267BDBC1C08C9BED9AE4BD669"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartFiniteJets.lean",
+          "sha256": "F3C73FAFBF003A86DC680FC5CB2BB070632718BF40BC536AC94CD92B40FE2C37",
+          "oleanSha256": "9C6D458376E92A4E527D5CA85E2793360D145519B3E9884832E2BDC1E4E08509"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartLaurentWindow.lean",
+          "sha256": "B6CA4E672A05CB6D43F724373E719FD620E16BCAB8B07DF51F50A152363A392C",
+          "oleanSha256": "E984C0B1868C966576355C0433D1FF9CEF4DAB2508F3C121FCAA7D30E5ABF9CB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartUniformInversePower.lean",
+          "sha256": "FAACD4378960A90B66BECBF3362E538B5F5219CCAF285BD9B7EE4F19746C6925",
+          "oleanSha256": "0468C24E8D9473FB889769258A55A0266AE130A5F5E58751BADD1E366A2319BF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartOverlapDecomposition.lean",
+          "sha256": "1E4B3BFD07AAFDCB479184AB6644EF637FC956622AC6A87D9B6E3317E0968891",
+          "oleanSha256": "243BB61CC734B477F98CCE1A39A530C2B3875BD9DC2E61A814D71A3FD19CA00C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartFiniteOverlap.lean",
+          "sha256": "CF514B5F8DBBF9764F7CD0052FD65D6EAD7104872F8D9B576172C927E2B43778",
+          "oleanSha256": "1085818DAB18EC86E3AF9A29A65F5DC6CC482ED70FF5C6ED21CD0DE52043E53E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularKummerFiniteOverlap.lean",
+          "sha256": "1AC45F260453ED357CCAABCE41FB440529D49FE2ACA26DBF7B9549F37B176921",
+          "oleanSha256": "7341689F1CF16E2A56AF9CEB711A843D8AD349812BB6D4731443BDD65BB7FACA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularKummerJointConstants.lean",
+          "sha256": "AD234A8A6251D400BFD6C18FAEA2C118A97FB264CF2EF0692A16B5D32FB35963",
+          "oleanSha256": "F9ABFCD8B202244A9B107248278B3DFF169009A673564B811CC3564523129A9F"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.goodAt_X_sub_C",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.goodAt_prod_X_sub_C",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.valuation_ne_one_of_goodAt_root",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_monic_good_factors",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.isCoprime_of_monic_and_good",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_integral_partial_fraction_numerators",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.good_reflect_top",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_two_chart_fraction_decomposition",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_good_fraction_finite_jet",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_two_chart_laurent_window",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_uniform_inverse_chart_power",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.overlap_decomposition_of_good_basis",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.finite_overlap_of_good_basis",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_finite_overlap",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_chart_constants"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.goodAt_X_sub_C",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.goodAt_prod_X_sub_C",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.valuation_ne_one_of_goodAt_root",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_monic_good_factors",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.isCoprime_of_monic_and_good",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_integral_partial_fraction_numerators",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.good_reflect_top",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_two_chart_fraction_decomposition",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_good_fraction_finite_jet",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_two_chart_laurent_window",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.exists_uniform_inverse_chart_power",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.overlap_decomposition_of_good_basis",
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartConstants.finite_overlap_of_good_basis",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_finite_overlap",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_chart_constants"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteOverlapAudit11.log",
+      "logSha256": "53657119A7BAD69E7E83F34AD79249519C4F3BE4FFE9935D560349989AF1B02A",
+      "auditSha256": "A2505FE5E1500B2BF93966D02F59F30C586C25A32C023DC6B42D24E584BB6D37",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 19,
+      "linterScopes": 11,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 24,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteOverlapDependencyAudit11.log",
+      "dependencyAuditSha256": "4D2A23C9740F5C9CDA16587416562F07DFC6B3E9AC299605BD525D6584AAEC5E",
+      "dependencyAuditSourceSha256": "511A03DA98BD81011705F69B6CB7914899D357C958557B154A4E81A8C5D93E74",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_chart_constants"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight symmetric-power continuation -> automorphy/residual association -> original weight-two Frobenius/inertia -> modular good reduction and prime-to-characteristic Picard torsion injectivity -> original-field Kummer power lifting -> unramified Kummer genus identity and sum-of-residue-genera inequality -> common residue constants -> finite localized overlap quotient and idempotent gluing",
+      "discharged": "The actual modular Kummer overlap quotient is finite over the original valuation ring, with an explicit finite Laurent generating set. The actual two joint residue charts have only common constants. The good-denominator basis, pole-bound exponent, integral partial fractions, quotient spanning, uniform torsion annihilator and idempotent gluing are all consumed. Neither overlap finiteness nor common constants remain hypotheses of the actual Kummer consumer.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The sum-of-residue-genera inequality, original-field power lifting, Picard torsion injectivity, wild good reduction, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-finite-overlap-11-reuse-review-20261024.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "9BB9461544B7DE3D3E8C7EB9BCFEC0D02629951D830B58C51EC5915BC11F50F0"
+    },
+    {
+      "recordedUTC": "2026-10-24T09:22:20.935468+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceModularJointPoleDimension",
+        "SourceModularJointGenusInequality",
+        "SourceModularKummerJointGenusInequality"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularJointPoleDimension.lean",
+          "sha256": "5BF18A0EECFBE665294FF8AC77484AB8A3E91203FCE0691251C77081B4FF8EDD",
+          "oleanSha256": "DDFBF2DCF31118616013E5D558DE379CD0A2C95AC45ED5CDD59C7A34DBE00BA4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularJointGenusInequality.lean",
+          "sha256": "1EF062F014BD5E2696E85C8EEAE2EABC122E14C92724312C5E05C6F076A57535",
+          "oleanSha256": "F1BDB0126FE2EC3146508CC9418291879E879E9FD653A9F4ECB9B4D71440EAC9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularKummerJointGenusInequality.lean",
+          "sha256": "8A5189DFC354F2BD018BCB01A18E525947FC81EA076971C0476A06955F50C368",
+          "oleanSha256": "5BF7CADBAD492FBD0EBF57C0402C69F073C6176FA2112F18BF9B9CAF04E86839"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GaussReduction.joint_pole_dimension_bound_of_common_constants",
+        "Dubon2026.SourceFunctionField.GaussReduction.joint_genus_inequality_of_common_constants",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_genus_inequality"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GaussReduction.joint_pole_dimension_bound_of_common_constants",
+        "Dubon2026.SourceFunctionField.GaussReduction.joint_genus_inequality_of_common_constants",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_genus_inequality"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceJointGenusAudit3.log",
+      "logSha256": "5CF2C129AB187E682DB36C89F38CF0E12CF3A514A0799F6CF4BB0B0205CD8F11",
+      "auditSha256": "14F269531C044A4ED86BB2392414A8BFAA934516503BF0DBB53E6B12682D0BC7",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 13,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 14,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceJointGenusDependencyAudit3.log",
+      "dependencyAuditSha256": "4485F91888F08B4FBAB72085376784B7690765DA3ED8BB63C712E2BD04AE0C1C",
+      "dependencyAuditSourceSha256": "09151A8F45494ECE64E129E1B80244B9FEEB3E4CAB8C58C542C7927F1F3397E9",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_genus_inequality"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight symmetric-power continuation -> automorphy/residual association -> original weight-two Frobenius/inertia -> modular good reduction and prime-to-characteristic Picard torsion injectivity -> original-field Kummer power lifting -> unramified Kummer genus identity and sum-of-residue-genera inequality -> common residue constants -> finite localized overlap quotient and idempotent gluing",
+      "discharged": "The actual q modular residue copies have total source H1 genus at most the original Kummer field genus. Common constants bound the unweighted chart intersection by one; joint residue dimension bounds the weighted intersection below by the original pole-space dimension. Original and residue degree-dimension results cancel the exact total pole degrees, and the actual index bridge identifies both genera.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The contradiction with the unramified genus identity, original-field power lifting, Picard torsion injectivity, wild good reduction, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-joint-genus-3-reuse-review-20261024.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseReviewSha256": "ABCA50D1E50DEE9EE369A609FBA9080DD12DB1DAFA2FB68E241C67D736B88F77"
+    },
+    {
+      "recordedUTC": "2026-10-24T09:33:52.296887+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceModularKummerPowerLifting",
+        "SourceModularTamePowerLifting"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularKummerPowerLifting.lean",
+          "sha256": "571341586EDD2297635207D0C8D508EAB6664713DB73AE9CCEBE4E2F7A8548FB",
+          "oleanSha256": "7EBA6A7496BF728F686BA90EBD44279C963B284A20ABFC8AAB6F50CBCAD7843D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularTamePowerLifting.lean",
+          "sha256": "47049310FAD357A432B1D7D3343E031EF174CCEDCF927CC28FF0751EE56264A6",
+          "oleanSha256": "AB48CEE4A2EEE2E161E8F4B82CA967248024836364DB0EB3D47121CE51C4729B"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_exists_power_of_residue_power_of_genus_eq",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_exists_power_of_residue_power_of_five_le"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_exists_power_of_residue_power_of_genus_eq",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_exists_power_of_residue_power_of_five_le"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePowerLiftingAudit2.log",
+      "logSha256": "698655FE93CA62A3A696B2911FA079DCACA98220B675DBA9E91719739972F60C",
+      "auditSha256": "DFE96CC40D766D3BCC1834EDC4F4BE1042BD45C5CE96F1EB05374B025996457C",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 6,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 6,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePowerLiftingDependencyAudit2.log",
+      "dependencyAuditSha256": "AB7FA86B191F84E092FD7CA6847F53480BA1376461D702D9ED1B9A167AC55C6E",
+      "dependencyAuditSourceSha256": "1B8D55D9C9A7F5C921F97C4425C2EB7A2E9DFF1B5CB729695731C48212AB7634",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_exists_power_of_residue_power_of_five_le"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> prime-to-characteristic Picard torsion injectivity -> original-field Kummer power lifting",
+      "discharged": "An actual normalized modular function with prime-divisible original divisor and a nonzero residue q-th root has a q-th root in the original modular field whenever the actual genera agree. The actual tame consumer derives genus equality in characteristic at least five. The unramified identity and total residue-genus inequality contradict q>=2 for a non-power; no Kummer-extension or genus certificate remains in the tame consumer.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Picard torsion injectivity still needs the actual divisor-class consumer. Wild genus equality and good reduction in characteristics two and three, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-power-lifting-2-reuse-review-20261024.json",
+      "reuseReviewSha256": "715A8E32C6F2A3D84CCF5159A244E47010F0E7018084EBA44954AD9E9C13E9AF",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T09:41:58.741554+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceCurveReductionPrimeKernel",
+        "SourceModularTamePrimeKernel",
+        "SourceModularTameTorsionKernel",
+        "SourceModularTameTorsionInjectivity"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveReductionPrimeKernel.lean",
+          "sha256": "735AC821EC7B8A2FA4C2217FA26470E34E26C3DFFACBBE15DDB9AF56421291D5",
+          "oleanSha256": "CD4A7D7A9A1681B576C0EBE775D2BCB1BFBEDEC2FF59E1617A370499DCE35D4C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularTamePrimeKernel.lean",
+          "sha256": "4D2081788C05497C596E0E00DE6D12BB2976B5EB0C27E7C75BEA28772E6D4C16",
+          "oleanSha256": "4DDDBDD5F38830EAA2CF12BD86D1C0C99E63FD4DDF6A787FF49BE19926FE6868"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularTameTorsionKernel.lean",
+          "sha256": "2CF852220EBBCAD9F05E2C02A9D140F54DF30D50810DC760429AE6A1E6DBFCD1",
+          "oleanSha256": "22195587DDB93ECD99517DFA1E3C608F8A5BEADBCA33C7CF4276A478134EE135"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularTameTorsionInjectivity.lean",
+          "sha256": "79FAE51A040F065624BF28A71301D3DCB37FFDCE0C501590F7A982522561AA14",
+          "oleanSha256": "26559AF433A87651401E53BB0BD37162D1D46CB3FC5CDA487C26CA271E5B0156"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.ConstantReduction.pic0_eq_zero_of_power_lifting",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_pic0_eq_zero_of_prime_torsion_of_five_le",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_pic0_eq_zero_of_torsion_of_five_le",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_torsion_injective_of_five_le"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.ConstantReduction.pic0_eq_zero_of_power_lifting",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_pic0_eq_zero_of_prime_torsion_of_five_le",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_pic0_eq_zero_of_torsion_of_five_le",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_torsion_injective_of_five_le"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceTorsionInjectivityAudit4.log",
+      "logSha256": "122F7645BBE8028BE74C16D968C47EED643EADE86FF98DDA8D0C56EC1EA38D14",
+      "auditSha256": "C47E4FFC1832B93BA64D370C6BF842410A833C7EC494011AEA2959DEAE58B17E",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 4,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 8,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceTorsionInjectivityDependencyAudit4.log",
+      "dependencyAuditSha256": "789660C19A7D303C6B53B9F6BDCD7FF574CCC1652B3C022A2F8CD392EC363023",
+      "dependencyAuditSourceSha256": "356E9825CE627A0910281F13428D5F13949C58016315FA07878D094E88A0883D",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_torsion_injective_of_five_le"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> prime-to-characteristic Picard torsion injectivity -> original-field Kummer power lifting",
+      "discharged": "An actual tame modular constant reduction is constructed and its literal Picard map is injective on every torsion subgroup of order invertible in the residue field. Existing normalized Kummer data and the proved original-field root lifting make a prime-order kernel representative principal; strong induction gives all invertible torsion orders. No Picard map, Kummer data, root or torsion injectivity premise remains in the actual existence consumer.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Wild genus equality and good reduction in characteristics two and three, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-torsion-injectivity-4-reuse-review-20261024.json",
+      "reuseReviewSha256": "C067CC5C3C940704E99B95D4CFD35220EEB95D80CE915F334F6A1F0766A45A48",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-joint-chart-constants-assembly-17-reuse-review-20261024.json",
+    "Tools/source-full-chart-basis-10-reuse-review-20261024.json",
+    "Tools/source-integral-chart-basis-3-reuse-review-20261024.json",
+    "Tools/source-good-chart-basis-6-reuse-review-20261024.json",
+    "Tools/source-finite-overlap-11-reuse-review-20261024.json",
+    "Tools/source-joint-genus-3-reuse-review-20261024.json",
+    "Tools/source-power-lifting-2-reuse-review-20261024.json",
+    "Tools/source-torsion-injectivity-4-reuse-review-20261024.json"
+  ],
+  "additionalCurrentSearch": {
+    "path": "Tools/tame-picard-injectivity-route-388.json",
+    "sha256": "63DE7C5DF414E493C0B5DA1D26F1EA07CFE34A81DEBA4D053FB9DD6C01E0895B"
+  },
+  "productionFocusedReceipt7370": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceJointChartConstantsAssemblyDependencyAudit17Production7370.log",
+        "sha256": "071839C7B0AA2C65F4A036C3DEC724FD0090AE8D919BD59E061AC8CAAC3590D0",
+        "requiredProofValueEdges": 57,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_constants_of_finite_overlap"
+        ],
+        "sourceSha256": "B50439DA842FC2AD4BAF6309D7E8226C70B267B727D8F24D02CF878451412E88"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceFullChartBasisDependencyAudit10Production7370.log",
+        "sha256": "020579722AA43C3B7F63EA493A63C77E79415DF23A19E3F407BA3AD00D90CC0E",
+        "requiredProofValueEdges": 21,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_full_chart_basis"
+        ],
+        "sourceSha256": "C318943E3F588D7C47D8EE2DFAA1751AE9ED559C19F9F1A95E89B150AA8C5FD6"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralChartBasisDependencyAudit3Production7370.log",
+        "sha256": "3EF85640BA11A965F42141ABFCBB88894784A33CDC99CEDAF14A1AFD8FE5C214",
+        "requiredProofValueEdges": 10,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_integral_coordinate_basis"
+        ],
+        "sourceSha256": "E4067EA6D987785F3F75FD3DFE51F1692BAB70F5A15C3337AF9836315FA030FA"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGoodChartBasisDependencyAudit6Production7370.log",
+        "sha256": "B2E3DDC5D2C03A0B678195FB9776779C13B33B7D6A031BFB7C7F4F3E3EDB8EA8",
+        "requiredProofValueEdges": 15,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_good_denominator_basis"
+        ],
+        "sourceSha256": "0253FB3AA12CC9BD00FE80370DE1A9CC48C01711625F5C049B078691CF4AFCEC"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteOverlapDependencyAudit11Production7370.log",
+        "sha256": "4D2A23C9740F5C9CDA16587416562F07DFC6B3E9AC299605BD525D6584AAEC5E",
+        "requiredProofValueEdges": 24,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_chart_constants"
+        ],
+        "sourceSha256": "4CA264DB0502142DBB2941FA11C38DBDD9354F3510CD4FCC9B620E06DB51A1F1"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceJointGenusDependencyAudit3Production7370.log",
+        "sha256": "4485F91888F08B4FBAB72085376784B7690765DA3ED8BB63C712E2BD04AE0C1C",
+        "requiredProofValueEdges": 14,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GaussReduction.modular_kummer_joint_genus_inequality"
+        ],
+        "sourceSha256": "2E2DA7F353BFB1B94B661B280C603B853EFC9D99A94DFE172AEBBE00B1290DDB"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePowerLiftingDependencyAudit2Production7370.log",
+        "sha256": "AB7FA86B191F84E092FD7CA6847F53480BA1376461D702D9ED1B9A167AC55C6E",
+        "requiredProofValueEdges": 6,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GaussReduction.modular_exists_power_of_residue_power_of_five_le"
+        ],
+        "sourceSha256": "847D952620DD992FD8A3DD594C4012810CFFFFA9068E48E84291F32D14D4F05F"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceTorsionInjectivityDependencyAudit4Production7370.log",
+        "sha256": "789660C19A7D303C6B53B9F6BDCD7FF574CCC1652B3C022A2F8CD392EC363023",
+        "requiredProofValueEdges": 8,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_torsion_injective_of_five_le"
+        ],
+        "sourceSha256": "54ED0071AF80620F3F0FD6FFCB5F0DAD6FB493D65E467B18B6962134C3E9F657"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceTamePicardInjectivityProductionAudit7370.log",
+    "sha256": "4FABE860BE5A01D300BFA62ECFCBD5D1E25ED5DCE95AAD39BB40B6A55BDD2C1C",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-tame-picard-injectivity-production-build-7370.log",
+    "aggregateSha256": "8451D58C033EBBE3BAC7FAAA929E2D1A360BF91CDA895E9FCFFC38B43F46AE49",
+    "productionModules": 7370,
+    "incrementModules": 56,
+    "axiomChecks": 94,
+    "exhaustiveIncrementTheorems": 147,
+    "linterScopes": 56,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 148,
+    "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The actual modular places, coefficient fields, Gauss residue map, divisor orders, genera and Picard quotient retain their definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 148,
+      "scratchDistinct": 148,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 147,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartAssembly.rv.congr_simp": [
+          {
+            "scope": "SourceTamePicardInjectivityScratchOwnership381For7370",
+            "module": "Dubon2026.SourceJointChartLiftedPolynomialBasis"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartAssembly.rv.congr_simp"
+      ],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceValuationModuleTorsionBound",
+            "SourceJointChartMonomialDenominators",
+            "SourceJointChartIntegralAlgebras",
+            "SourceJointChartNonunitNormalization",
+            "SourceJointChartLocalizations",
+            "SourceJointChartValuationUnits",
+            "SourceJointChartLocalizedIntegrality",
+            "SourceJointChartInverseClearing",
+            "SourceJointChartResidueAlgebras",
+            "SourceJointChartLocalizedIntersection",
+            "SourceJointChartComponentConstants",
+            "SourceJointChartOverlapTorsion",
+            "SourceJointChartIndicators",
+            "SourceJointChartIdempotentConstants",
+            "SourceJointChartConstantsOfFiniteOverlap",
+            "SourceModularJointOverlapSpace",
+            "SourceModularKummerConstantsOfFiniteOverlap"
+          ],
+          "count": 71,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTamePicardInjectivityScratchOwnership380For7370.log",
+            "sha256": "12F7A170314A11D60C325055D9DD10CCB35FC5E4C45F5051A83264CC1DEAFA19",
+            "sourceSha256": "B6E167D4DE36BCF8DA29CEE5D6D4D1A1E5AAA4EF673ED3096627489D86F2B774"
+          }
+        },
+        {
+          "modules": [
+            "SourceJointChartPolynomialBasis",
+            "SourceSeparableChartPolynomialGenerators",
+            "SourceJointChartPolynomialGenerators",
+            "SourceJointChartLiftedPolynomialBasis",
+            "SourceJointChartPolynomialIndependence",
+            "SourceJointChartPolynomialRank",
+            "SourceJointChartBasisDegree",
+            "SourceJointChartFullBasis",
+            "SourceModularJointResidueVector",
+            "SourceModularKummerFullChartBasis"
+          ],
+          "count": 18,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTamePicardInjectivityScratchOwnership381For7370.log",
+            "sha256": "830A7E25762A4AA3BA0CCAC0B44C4DB9EC1F5345838402DC6ABD4BD65FC57FDC",
+            "sourceSha256": "A54E72A2D9B4019B281DB160DB6F4DF452B0F7A1166EE32DE8F1BB527E8E4B22"
+          }
+        },
+        {
+          "modules": [
+            "SourceJointChartIntegralPolynomialCoefficients",
+            "SourceJointChartIntegralCoordinates",
+            "SourceModularKummerIntegralChartBasis"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTamePicardInjectivityScratchOwnership382For7370.log",
+            "sha256": "EE15DF2586D5DA703BBDD42E9C6C83BA447E593C2152F9BCD15C3B7F4E9789DB",
+            "sourceSha256": "184FE4941777AE5529AC9A36E8BA8363FEDEAC0599A7ECC0E5F95ABAFEAD9425"
+          }
+        },
+        {
+          "modules": [
+            "SourceJointChartLinearFactorResidues",
+            "SourceJointChartSmallRootCancellation",
+            "SourceJointChartRootFreeDenominators",
+            "SourceJointChartRootFactorNormalization",
+            "SourceJointChartGoodDenominators",
+            "SourceModularKummerGoodChartBasis"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTamePicardInjectivityScratchOwnership384For7370.log",
+            "sha256": "FC75DDD64405DE127123A57DB7782D4228DB24B284A356BD8AE79A14ADC56C62",
+            "sourceSha256": "7676F309326C8A25A697C0DDE633277E04A1EF9F6BC17611A99B325083B586F8"
+          }
+        },
+        {
+          "modules": [
+            "SourceJointChartMonomialFactors",
+            "SourceJointChartIntegralCoprimality",
+            "SourceJointChartIntegralPartialFractions",
+            "SourceJointChartTwoChartFractions",
+            "SourceJointChartFiniteJets",
+            "SourceJointChartLaurentWindow",
+            "SourceJointChartUniformInversePower",
+            "SourceJointChartOverlapDecomposition",
+            "SourceJointChartFiniteOverlap",
+            "SourceModularKummerFiniteOverlap",
+            "SourceModularKummerJointConstants"
+          ],
+          "count": 19,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTamePicardInjectivityScratchOwnership385For7370.log",
+            "sha256": "493C35FF8A9E1E5D60C81D92DFA9DA602738B5EC6D760A0616C351613664AB3B",
+            "sourceSha256": "8A55D54FDBAC4D7B23BD4791A18826031F0D226A135825EF9B9791AE47BBD70F"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularJointPoleDimension",
+            "SourceModularJointGenusInequality",
+            "SourceModularKummerJointGenusInequality"
+          ],
+          "count": 13,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTamePicardInjectivityScratchOwnership386For7370.log",
+            "sha256": "3A1F070BC37CE51DF6683BC73317675EA80791314C6218D6A4D255A8CFDA2FF4",
+            "sourceSha256": "6DDF6E402B4277CE5E3EFCFB16303D7F8224E555EFB57D76030C63C5877AD387"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularKummerPowerLifting",
+            "SourceModularTamePowerLifting"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTamePicardInjectivityScratchOwnership387For7370.log",
+            "sha256": "4032F15695FBFE9198D521DA267E3FF25B435B331B907DCA4EBCC659579BE8AE",
+            "sourceSha256": "F68C56D129D6C44AF3FDC83FE7254B4B625CCAAE7CC5FF0EF6861441667406CA"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveReductionPrimeKernel",
+            "SourceModularTamePrimeKernel",
+            "SourceModularTameTorsionKernel",
+            "SourceModularTameTorsionInjectivity"
+          ],
+          "count": 4,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTamePicardInjectivityScratchOwnership388For7370.log",
+            "sha256": "B641A5D70E8C818A418C880FF3D4DBB7300F7F06E07D52F35E5DACA343D22663",
+            "sourceSha256": "7A99342B9BB37257BDE776858EF5B8363F6C300E99EE2A19791351CF108D87FE"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceTamePicardInjectivityOwnership7370.log",
+        "sha256": "2DABA1022C1DD934467D4D0967BBB583BF74089DFDD5CD7DFCCB1CB8C4EE737D",
+        "sourceSha256": "8EBF5127BFA0716C123E97E4ED347763B80D7030B95290AD6BBFB864A84BCF41"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-004925-910.log",
+        "sha256": "E4A923F7E0FDB1D4374CD741C6EBBF7BD4A2E73448F9A21141C0447E4C08042B"
+      }
+    },
+    "scratchToProductionCountReason": "All 148 distinct names from 148 exhaustive scratch checks are retained: 147 in the production focused scope and 1 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Wild genus equality and modular good reduction in characteristics two and three, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. The tame theorem preserves the full source scope and does not complete the wild cases. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt7370": {
+    "recordedUTC": "2026-10-24T11:34:45.247911+00:00",
+    "log": "logs/dubon-build-20261024-031818-476.log",
+    "sha256": "01B646767865D7353F3C79CA36C214051B891C6E2B9DD44DCAE8EB41694E9AF9",
+    "bytes": 12369530,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 7370,
+    "projectTheorems": 48704,
+    "registeredConsumers": 22097,
+    "registeredConstructions": 1922,
+    "declarations": 29875,
+    "generated": 28247,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261024_031215.log",
+    "foundationSha256": "72638B8008463CE5F16BCDA9D163DD99BD0AD7DDED0C69322A8F5A372FFC6918",
+    "countReconciliation": {
+      "previousTheorems": 48557,
+      "focusedTheorems": 147,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 147,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceTamePicardInjectivityOwnership7370.log",
+      "ownershipSha256": "2DABA1022C1DD934467D4D0967BBB583BF74089DFDD5CD7DFCCB1CB8C4EE737D"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 148,
+      "scratchDistinct": 148,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 147,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartAssembly.rv.congr_simp": [
+          {
+            "scope": "SourceTamePicardInjectivityScratchOwnership381For7370",
+            "module": "Dubon2026.SourceJointChartLiftedPolynomialBasis"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [
+        "Dubon2026.SourceCurve.RegularProlongation.JointChartAssembly.rv.congr_simp"
+      ],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceValuationModuleTorsionBound",
+            "SourceJointChartMonomialDenominators",
+            "SourceJointChartIntegralAlgebras",
+            "SourceJointChartNonunitNormalization",
+            "SourceJointChartLocalizations",
+            "SourceJointChartValuationUnits",
+            "SourceJointChartLocalizedIntegrality",
+            "SourceJointChartInverseClearing",
+            "SourceJointChartResidueAlgebras",
+            "SourceJointChartLocalizedIntersection",
+            "SourceJointChartComponentConstants",
+            "SourceJointChartOverlapTorsion",
+            "SourceJointChartIndicators",
+            "SourceJointChartIdempotentConstants",
+            "SourceJointChartConstantsOfFiniteOverlap",
+            "SourceModularJointOverlapSpace",
+            "SourceModularKummerConstantsOfFiniteOverlap"
+          ],
+          "count": 71,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTamePicardInjectivityScratchOwnership380For7370.log",
+            "sha256": "12F7A170314A11D60C325055D9DD10CCB35FC5E4C45F5051A83264CC1DEAFA19",
+            "sourceSha256": "B6E167D4DE36BCF8DA29CEE5D6D4D1A1E5AAA4EF673ED3096627489D86F2B774"
+          }
+        },
+        {
+          "modules": [
+            "SourceJointChartPolynomialBasis",
+            "SourceSeparableChartPolynomialGenerators",
+            "SourceJointChartPolynomialGenerators",
+            "SourceJointChartLiftedPolynomialBasis",
+            "SourceJointChartPolynomialIndependence",
+            "SourceJointChartPolynomialRank",
+            "SourceJointChartBasisDegree",
+            "SourceJointChartFullBasis",
+            "SourceModularJointResidueVector",
+            "SourceModularKummerFullChartBasis"
+          ],
+          "count": 18,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTamePicardInjectivityScratchOwnership381For7370.log",
+            "sha256": "830A7E25762A4AA3BA0CCAC0B44C4DB9EC1F5345838402DC6ABD4BD65FC57FDC",
+            "sourceSha256": "A54E72A2D9B4019B281DB160DB6F4DF452B0F7A1166EE32DE8F1BB527E8E4B22"
+          }
+        },
+        {
+          "modules": [
+            "SourceJointChartIntegralPolynomialCoefficients",
+            "SourceJointChartIntegralCoordinates",
+            "SourceModularKummerIntegralChartBasis"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTamePicardInjectivityScratchOwnership382For7370.log",
+            "sha256": "EE15DF2586D5DA703BBDD42E9C6C83BA447E593C2152F9BCD15C3B7F4E9789DB",
+            "sourceSha256": "184FE4941777AE5529AC9A36E8BA8363FEDEAC0599A7ECC0E5F95ABAFEAD9425"
+          }
+        },
+        {
+          "modules": [
+            "SourceJointChartLinearFactorResidues",
+            "SourceJointChartSmallRootCancellation",
+            "SourceJointChartRootFreeDenominators",
+            "SourceJointChartRootFactorNormalization",
+            "SourceJointChartGoodDenominators",
+            "SourceModularKummerGoodChartBasis"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTamePicardInjectivityScratchOwnership384For7370.log",
+            "sha256": "FC75DDD64405DE127123A57DB7782D4228DB24B284A356BD8AE79A14ADC56C62",
+            "sourceSha256": "7676F309326C8A25A697C0DDE633277E04A1EF9F6BC17611A99B325083B586F8"
+          }
+        },
+        {
+          "modules": [
+            "SourceJointChartMonomialFactors",
+            "SourceJointChartIntegralCoprimality",
+            "SourceJointChartIntegralPartialFractions",
+            "SourceJointChartTwoChartFractions",
+            "SourceJointChartFiniteJets",
+            "SourceJointChartLaurentWindow",
+            "SourceJointChartUniformInversePower",
+            "SourceJointChartOverlapDecomposition",
+            "SourceJointChartFiniteOverlap",
+            "SourceModularKummerFiniteOverlap",
+            "SourceModularKummerJointConstants"
+          ],
+          "count": 19,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTamePicardInjectivityScratchOwnership385For7370.log",
+            "sha256": "493C35FF8A9E1E5D60C81D92DFA9DA602738B5EC6D760A0616C351613664AB3B",
+            "sourceSha256": "8A55D54FDBAC4D7B23BD4791A18826031F0D226A135825EF9B9791AE47BBD70F"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularJointPoleDimension",
+            "SourceModularJointGenusInequality",
+            "SourceModularKummerJointGenusInequality"
+          ],
+          "count": 13,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTamePicardInjectivityScratchOwnership386For7370.log",
+            "sha256": "3A1F070BC37CE51DF6683BC73317675EA80791314C6218D6A4D255A8CFDA2FF4",
+            "sourceSha256": "6DDF6E402B4277CE5E3EFCFB16303D7F8224E555EFB57D76030C63C5877AD387"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularKummerPowerLifting",
+            "SourceModularTamePowerLifting"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTamePicardInjectivityScratchOwnership387For7370.log",
+            "sha256": "4032F15695FBFE9198D521DA267E3FF25B435B331B907DCA4EBCC659579BE8AE",
+            "sourceSha256": "F68C56D129D6C44AF3FDC83FE7254B4B625CCAAE7CC5FF0EF6861441667406CA"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveReductionPrimeKernel",
+            "SourceModularTamePrimeKernel",
+            "SourceModularTameTorsionKernel",
+            "SourceModularTameTorsionInjectivity"
+          ],
+          "count": 4,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceTamePicardInjectivityScratchOwnership388For7370.log",
+            "sha256": "B641A5D70E8C818A418C880FF3D4DBB7300F7F06E07D52F35E5DACA343D22663",
+            "sourceSha256": "7A99342B9BB37257BDE776858EF5B8363F6C300E99EE2A19791351CF108D87FE"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceTamePicardInjectivityOwnership7370.log",
+        "sha256": "2DABA1022C1DD934467D4D0967BBB583BF74089DFDD5CD7DFCCB1CB8C4EE737D",
+        "sourceSha256": "8EBF5127BFA0716C123E97E4ED347763B80D7030B95290AD6BBFB864A84BCF41"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-004925-910.log",
+        "sha256": "E4A923F7E0FDB1D4374CD741C6EBBF7BD4A2E73448F9A21141C0447E4C08042B"
+      }
+    },
+    "scratchToProductionCountReason": "All 148 distinct names from 148 exhaustive scratch checks are retained: 147 in the production focused scope and 1 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Wild genus equality and modular good reduction in characteristics two and three, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. The tame theorem preserves the full source scope and does not complete the wild cases. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

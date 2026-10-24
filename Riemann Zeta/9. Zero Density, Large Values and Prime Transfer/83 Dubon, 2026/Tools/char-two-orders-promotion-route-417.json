@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-24",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy and residual association -> original Frobenius/inertia -> modular good reduction and Picard torsion injectivity -> characteristic-two genus preservation -> actual Deuring inertia, modular Galois j orders and the order-twelve/fourteen differential bound.",
+  "renewedSearch": "Tools/curve-reuse-20261024-380/archive-manifest.json",
+  "scratchReceipts": {
+    "source-char-two-stabilizer-3-scratch-receipt.json": "38835D41786016B7723A641AD6165A65F18F8A6D81EAF4B0609401A2AE8051B7",
+    "source-char-two-sign-3-scratch-receipt.json": "00ACBFC3CA3800FC096D3C7461AFEF7B68D767F2C932D155D040DCAC6D3B833C",
+    "source-deuring-good-model-4-scratch-receipt-r2.json": "41455E08D4E1D48F55148906C68D13BA9DA57762689B35EC64E88F2DA9F560EB",
+    "source-deuring-galois-field-3-r2-scratch-receipt.json": "D5956755D546BFCB7119521F216C9A8007AEC79C710C5C19BE79EF0A84CE1F98",
+    "source-deuring-inertia-1-scratch-receipt.json": "FDE68B25E081EB213B736C26FAFD4277F61106C9313648D874D0FCB11324AB0D",
+    "source-deuring-faithful-field-3-scratch-receipt.json": "AB3BC8D00EDCDC967793D3A2601AEC9EBE084E0CF0F6570BC69798A1F7B7B8B5",
+    "source-deuring-specialization-5-scratch-receipt.json": "6AD9FFD9460B2226013309126CDA5C16B7596C7875DD2570A968030311B811F3",
+    "source-char-two-galois-orders-4-r2-scratch-receipt.json": "8CFDEFD1CFE8DD9C91F0CC99BD43F5995996D0DC8508BECF5714656F82452B0D",
+    "source-char-two-fourteen-2-scratch-receipt.json": "0EEFE4F46F9FA4535E1D0760C554E70820A506B87E60351BC746916EFC63A954"
+  },
+  "discharged": "The actual characteristic-two exceptional stabilizer has order twenty-four and its central elliptic-negation quotient has order twelve. A finite Galois Deuring field and an explicit integral good model are constructed, and injective torsion reduction proves faithful inertia. The actual prescribed elliptic specialization and modular embeddings then construct a normal field containing the original modular coefficient field in which every positive j-order divides twelve. Above an order-twelve modular place, ramification index one allows the existing all-characteristic wild estimate to descend, proving that the actual differential dj has order at least fourteen. No good-model, torsion, inertia, auxiliary-field or local-differential certificate remains in these consumers.",
+  "remaining": "The characteristic-two weighted exceptional-fiber census and genus/Picard assembly remain required. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation also remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "shorterRoute": "The renewed 24 October search supplies a shorter TauCeti monic-integrality argument: the explicit Deuring parameter satisfies a monic polynomial and its discriminant divides the unit 3^6. Existing local torsion counts, division fields, root separation and injective torsion reduction discharge the faithful-field construction. The actual sign quotient and existing normal fixing-field theorem give the order bound without first constructing the stronger full inertia image or orbit census. Existing all-characteristic wild different and unramified differential transfer give the fourteen bound. Only dependencies serving the exact open Dubon theorems are expanded; root pins, proof limits, source fidelity and full completion criteria are unchanged.",
+  "unpromotedLaterScope": 418,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

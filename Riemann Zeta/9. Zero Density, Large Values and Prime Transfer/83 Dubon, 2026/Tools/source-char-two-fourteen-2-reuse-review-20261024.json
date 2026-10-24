@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "characteristic-two modular genus/Picard -> weighted differential contribution -> order-twelve local differential lower bound fourteen",
+  "precedingScratchReceipts": {
+    "source-char-two-galois-orders-4-r2-scratch-receipt.json": "8CFDEFD1CFE8DD9C91F0CC99BD43F5995996D0DC8508BECF5714656F82452B0D"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRatFuncWildDifferent.lean",
+      "sha256": "A868BA25511F6D0C0A427F710CF57F67495001EBE0EF3C0BFA952E9ED35807B6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveUnramifiedDifferentialAllChar.lean",
+      "sha256": "CA28AECDA61B43CA9B746EDB38B00F8BA91BB7F815330CEE1782051808D0683E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCharThreeStrongDifferent.lean",
+      "sha256": "D218ABA52D3E5FD836B3F8F01E94F5B1196FF3EA282CA8093531FDA20DA768C5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCharThreeSeven.lean",
+      "sha256": "1754E73FF1F048F71C4D56EC35F3D7936F7827D9382550085BA194F9C7DBAD01"
+    }
+  ],
+  "routeAdjustment": "Adapt the existing order-six/seven transfer to order-twelve/fourteen, using the new actual normal field and the already proved p-power wild estimate.",
+  "discharged": "At every actual characteristic-two modular place with ord(j)=12, the actual differential dj has order at least fourteen. The constructed auxiliary normal field has positive j-orders dividing twelve, forcing ramification index one above the given place. The existing p-power wild estimate at p=2 and exponent=2 descends with unchanged differential order. No auxiliary-field, ramification or differential certificate remains.",
+  "remaining": "The characteristic-two weighted exceptional census and genus/Picard assembly, followed by original arithmetic-action comparison and automorphy, remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\char-two-fourteen-route-417.json",
+    "sha256": "29DE59A4705FAF94C7C65CC9A21B0489F1C0782AF20F3062F68E2B1BE2EBF04C",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "characteristic-two modular genus/Picard -> weighted differential contribution -> order-twelve local differential lower bound fourteen",
+      "reuseChecked": [
+        "The actual characteristic-two normal modular field has positive j-orders dividing twelve. Above a modular order-twelve place this forces ramification index one.",
+        "The existing all-characteristic rational_wild_different_bound at p=2 and exponent=2 gives 12-1+(4-1)=14. No new higher-ramification or different foundation is needed.",
+        "Existing ordDifferential_map_of_ramificationIndex_one_all_char and the characteristic-three transfer proof apply unchanged to the actual fields and differentials."
+      ],
+      "selectedRoute": "Adapt the existing order-six/seven transfer to order-twelve/fourteen, using the new actual normal field and the already proved p-power wild estimate.",
+      "assumptionsToDischarge": "At an actual characteristic-two modular place with ord(j)=12, derive ord(dj)>=14 from invertible level alone. Construct the auxiliary Galois field and remove all geometric input certificates.",
+      "boundary": "The characteristic-two weighted census and genus/Picard assembly, then original arithmetic-action comparison and automorphy, remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_fourteen_le_ordDiff_D_jqModC_of_ord_eq_twelve.lean.txt",
+    "sha256": "32D44FE8B2F524335122196A5E2E4B92F9C1EA2F891D8FE12AC0510E8B477B42",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The exact order-twelve/fourteen source contract is proved by adapting the locally verified characteristic-three transfer, using the actual characteristic-two field and existing all-characteristic wild bound. No external build or import is claimed."
+  }
+}

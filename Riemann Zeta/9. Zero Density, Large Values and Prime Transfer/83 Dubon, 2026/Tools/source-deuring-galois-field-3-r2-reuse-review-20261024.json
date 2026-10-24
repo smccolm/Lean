@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "characteristic-two modular genus and Picard preservation -> actual faithful inertia and modular fixing-field orders -> finite Galois good-model field -> three-division field and all cubic roots of nonzero three-torsion psi2 values",
+  "precedingScratchReceipts": {
+    "source-deuring-good-model-4-scratch-receipt-r2.json": "41455E08D4E1D48F55148906C68D13BA9DA57762689B35EC64E88F2DA9F560EB"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticFiniteTorsionField.lean",
+      "sha256": "D6AEBD4D936C3D52D03C746DCA972C48A708AA1C9E0A2774D122828F7713A27D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticTorsionAbscissaCount.lean",
+      "sha256": "BFB90C41378C19DA8A225AF9CC98175DDE8B083BCB3B709B4FC1B9C20E2ED049"
+    }
+  ],
+  "routeAdjustment": "Reuse the actual division-field and torsion-count proofs, then adjoin the finite Galois-stable set of cubic roots. Keep explicit generators for the next faithful-inertia consumer; do not develop a general good-reduction field framework.",
+  "discharged": "A nonzero actual three-torsion point exists. Its three-division field, with faithful action and all ambient torsion coordinates, together with all cubic roots of nonzero three-torsion psi2 values yields an actual finite Galois extension. Separability, finite generation and Galois stability are proved; no field or torsion-structure certificate is assumed.",
+  "remaining": "Faithful good-model inertia must be assembled, followed by prescribed characteristic-two residue models, modular fixing-field orders, the weighted census and strong differential bound, and genus/Picard assembly. Original arithmetic-action comparison and automorphy remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\deuring-galois-field-route-412.json",
+    "sha256": "5B24A370373D940D0DB57A28CB06F200459E770E53F3B5EA6E2FE5BEEB6376A3",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "characteristic-two modular genus and Picard preservation -> actual faithful inertia and modular fixing-field orders -> finite Galois good-model field -> three-division field and all cubic roots of nonzero three-torsion psi2 values",
+      "reuseChecked": [
+        "Existing finite_and_ncard_torsion provides the exact count nine directly, avoiding a fresh torsion-module structure theorem.",
+        "Existing exists_divisionField gives the finite Galois three-division field and its faithful action. Equal finite torsion cardinalities give the required coordinate containment.",
+        "The newly verified Deuring flex identity proves nonvanishing of psi2. Native finite nthRoots, separableClosure, intermediate-field adjoin and normality machinery provide the cubic extension.",
+        "The frozen FLT faithful Deuring field source constructs exactly these generators. A generic isomorphism-of-j field would not retain the generators needed by its inertia-faithfulness proof."
+      ],
+      "selectedRoute": "Reuse the actual division-field and torsion-count proofs, then adjoin the finite Galois-stable set of cubic roots. Keep explicit generators for the next faithful-inertia consumer; do not develop a general good-reduction field framework.",
+      "assumptionsToDischarge": "Derive nonzero three-torsion, finiteness and separability of the cubic generators, and finite Galoisness of their compositum with the faithful division field, from three nonzero in the base field.",
+      "boundary": "The explicit good model exists from these generators, but its faithful inertia and characteristic-two modular genus/Picard consumers still require assembly. Arithmetic-action comparison and automorphy remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_WeierstrassCurve_exists_isGalois_goodModel_inertia_faithful_of_three_ne_zero.lean.txt",
+    "sha256": "F63CF2BFB514FED3BF4A4250561B30F46A4A2C76933FB3213B38D723EF47E4FD",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The explicit Deuring generators and finite Galois construction are adapted using existing local torsion count and division-field proofs. No external build or import is claimed."
+  },
+  "preservedFailedAuditCorrection": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\deuring-galois-field-412-r2-reason.json",
+    "sha256": "C58B90D262546BBDD15915598240F9FEA6C0EB80115934018822C80A7819C7F2"
+  }
+}

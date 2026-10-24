@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> modular good reduction in characteristics two and three -> genus equality -> wild differential contribution -> local derivative orders",
+  "precedingScratchReceipts": {
+    "source-torsion-injectivity-4-scratch-receipt.json": "D85CDD9B3498FBC2D671CF15809D7F6A0AC4215C9E0C50351EC720BE25216998"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveExactDerivativeOrder.lean",
+      "sha256": "DDBEC9CA3FE003784331E009920F73D2D6644EDFB707029E1624773E84A90A36"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveIntegralDerivatives.lean",
+      "sha256": "841595FF3C6C556CDB4F399CE316B53C6859511BD0374466080BC4D9EC355A35"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCoefficientLocalDifferentials.lean",
+      "sha256": "6A9EAC48F5FEBA59A6E3586ACEE7C3D326D18011E459331AFDF55F1673254328"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCoefficientDerivativeOrders.lean",
+      "sha256": "A3FB25A19E70834CD5E512AE96C03EEBA084038B985CCDE9A0DEF93CF9A5A25F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCoefficientWildGenusCriterion.lean",
+      "sha256": "B58B6D5B18B3530A21D5B8129FFB7ABD45C4D09784751C1AD54937A486320DD7"
+    }
+  ],
+  "routeAdjustment": "Set the integer order coefficient to zero in the existing unit-times-uniformizer derivative formula. Integrality of the remaining unit derivative gives one extra order. Instantiate the actual modular field and the three required order/characteristic pairs.",
+  "discharged": "Vanishing of the integer function order in the coefficient field gives one extra differential order. Actual modular consumers prove derivative order at least three at j-order three in characteristic three, and at least four/six at the respective j-orders in characteristic two. All local finiteness, generation, integrality and differential nonvanishing hypotheses are derived.",
+  "remaining": "Wild exceptional-fiber census and the stronger differential bounds seven at order six in characteristic three and fourteen at order twelve in characteristic two still precede wild genus equality. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\wild-derivative-route-389.json",
+    "sha256": "8F16AA251606DA72A7876B7F14929F8BC45B7F803B7632B59F5BEDDBC353D5F8",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> modular good reduction in characteristics two and three -> genus equality -> wild differential contribution -> local derivative order at characteristic-divisible orders",
+      "reuseChecked": [
+        "SourceModularCoefficientWildGenusCriterion already reduces the reverse genus inequality to the exact finite differential contribution.",
+        "SourceCurveExactDerivativeOrder already proves the unit-times-uniformizer derivative coefficient formula without characteristic zero in that formula.",
+        "SourceCurveIntegralDerivatives proves integrality of the unit derivative coefficient; SourceModularCoefficientLocalDifferentials derives all required local instances.",
+        "The frozen FLT wild assembly needs derivative order at least three at j-order three in characteristic three, and at least four/six at orders four/six in characteristic two. Its longer uniformizer and finite-coordinate reconstruction is unnecessary locally."
+      ],
+      "selectedRoute": "Set the integer order coefficient to zero in the existing unit-times-uniformizer derivative formula. Integrality of the remaining unit derivative gives one extra order. Instantiate the actual modular field and the three required order/characteristic pairs.",
+      "stillRequired": "Wild exceptional-fiber census and the stronger derivative bounds seven at order six in characteristic three and fourteen at order twelve in characteristic two require the actual wild Galois geometry. This step does not close wild genus equality or DUB-17--20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

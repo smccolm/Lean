@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> wild modular good reduction -> genus equality -> strong wild differential orders -> actual decomposition wild different consumer -> fixed-field order gap and cardinality/order identity",
+  "precedingScratchReceipts": {
+    "source-curve-inertia-character-3-scratch-receipt.json": "08A9F02C92B48F3AB43FF9739B72B7D0457A39C7905804B25A4313E16FD1A43E"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveDecompositionCardinality.lean",
+      "sha256": "75B7D15FE6C3337D69EF88B255D368617816628EF7E72F80C1BD3788FB2BB4FC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveGaloisPlaceCenter.lean",
+      "sha256": "42A7C963F75759C7BFD7A47A21D0F43C4A8F53099993E8F74F53FB6C6F45AFAC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveResidueRestrictionConstants.lean",
+      "sha256": "A08580970355930BDBB997D2A8EFF1635EC886EBC7CC14FFCD9813A25D71C55C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRestrictionOrders.lean",
+      "sha256": "7F3BDC1E9165D19496D2E3B821686E945DACDBD93BD8277DB5B0444519407B7B"
+    }
+  ],
+  "nativeReuse": {
+    "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\Galois\\Basic.lean",
+    "sha256": "D4924352BEFDF0394818C8988F531A760686D3C7F0B50551534586B837DA69E6",
+    "theorem": "IntermediateField.subgroupEquivAlgEquiv"
+  },
+  "routeAdjustment": "Identify the actual decomposition fixed field, prove its full Galois group fixes the upper place, use the proved decomposition cardinality theorem and restricted rational residues to compute its ramification order, and derive divisibility for every fixed-field element by the existing order-scaling formula. Derive the original base-parameter cardinality identity by the same theorem.",
+  "discharged": "The actual decomposition fixed field is identified, and every automorphism over it fixes the upper place. Native Galois correspondence, the proved decomposition-cardinality theorem and normalized order scaling give the fixed-field order gap. The same cardinality theorem computes the upper order of an order-one base parameter. The actual Galois wild different consumer derives both geometric inputs, together with the action and character already constructed in scope 398.",
+  "remaining": "The nonzero base differential and local differential instances remain explicit inputs. They must be derived on the actual finite Galois auxiliary field before the strong modular differential bounds are claimed. Unramified transfer, wild census and genus equality, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\decomposition-order-gap-route-399.json",
+    "sha256": "D583AD0F7EB03EE8107366754A26CB642C3E24FDA2AA7D13261F0ADDCC869687",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> wild modular good reduction -> genus equality -> strong wild differential orders -> actual decomposition wild different consumer -> fixed-field order gap and cardinality/order identity",
+      "reuseChecked": [
+        "Scope 398 constructs the actual decomposition action and residue character with kernel displacement at least two; no higher ramification group framework is required.",
+        "Native IntermediateField.subgroupEquivAlgEquiv identifies the automorphisms over the decomposition fixed field with the original decomposition group.",
+        "Existing SourceCurveDecompositionCardinality proves decomposition cardinality equals actual mapped uniformizer order from rational residues.",
+        "Existing SourceCurveResidueRestrictionConstants.residue_algebraMap_surjective_restrict derives lower rational residues from upper rational residues. This avoids rebuilding finite-coordinate towers for each intermediate fixed field.",
+        "Existing SourceCurveRestrictionOrders gives exact normalized order scaling. Native fixed-field finite dimensionality, Galoisness and degree/cardinality then give the order gap.",
+        "Scope 396 already constructs the actual characteristic-three auxiliary Galois j-field with positive j orders dividing six; the resulting local estimate will be applied there and transferred through an unramified place."
+      ],
+      "selectedRoute": "Identify the actual decomposition fixed field, prove its full Galois group fixes the upper place, use the proved decomposition cardinality theorem and restricted rational residues to compute its ramification order, and derive divisibility for every fixed-field element by the existing order-scaling formula. Derive the original base-parameter cardinality identity by the same theorem.",
+      "boundary": "Local differential generation and nonzero base differential must also be established on the actual finite Galois field. The strong modular differential bounds, census and wild genus equality remain open until their actual consumers are assembled."
+    }
+  },
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_Place_sub_one_add_pow_sub_one_le_ordDiff_D_of_isGalois.lean.txt",
+    "sha256": "946BBAEC4478A30041350F7F2A47F166258AC59CE00BE36EE81D1859DE644DF1",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The fixed-field order-gap portion of the FLT wild different argument is adapted using native Galois correspondence and existing local decomposition cardinality. Restriction of rational residues avoids rebuilding finite-coordinate towers. No upstream build or import is claimed."
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

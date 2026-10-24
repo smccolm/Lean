@@ -268,6 +268,54 @@ function Test-ModuleClosure {
   return $true
 }
 
+function ConvertTo-LeanCommentMaskedText([string]$Text) {
+  # Preserve offsets and line numbers. Nested block comments and line comments
+  # are whitespace, but comment delimiters inside strings/quoted names are not.
+  $Chars = $Text.ToCharArray()
+  $Depth = 0
+  $LineComment = $false
+  $InString = $false
+  $InQuotedName = $false
+  $Escaped = $false
+  for ($i = 0; $i -lt $Chars.Length; $i++) {
+    $c = $Text[$i]
+    $Next = if ($i + 1 -lt $Chars.Length) { $Text[$i + 1] } else { [char]0 }
+    if ($c -eq "`n" -or $c -eq "`r") {
+      $LineComment = $false
+      continue
+    }
+    if ($LineComment) { $Chars[$i] = ' '; continue }
+    if ($Depth -gt 0) {
+      $Chars[$i] = ' '
+      if ($c -eq '/' -and $Next -eq '-') {
+        $Depth++; $i++; $Chars[$i] = ' '
+      } elseif ($c -eq '-' -and $Next -eq '/') {
+        $Depth--; $i++; $Chars[$i] = ' '
+      }
+      continue
+    }
+    if ($InString) {
+      if ($Escaped) { $Escaped = $false }
+      elseif ($c -eq '\') { $Escaped = $true }
+      elseif ($c -eq '"') { $InString = $false }
+      continue
+    }
+    if ($InQuotedName) {
+      if ([int]$c -eq 187) { $InQuotedName = $false }
+      continue
+    }
+    if ($c -eq '"') { $InString = $true; continue }
+    if ([int]$c -eq 171) { $InQuotedName = $true; continue }
+    if ($c -eq '/' -and $Next -eq '-') {
+      $Depth = 1; $Chars[$i] = ' '; $i++; $Chars[$i] = ' '
+    } elseif ($c -eq '-' -and $Next -eq '-') {
+      $LineComment = $true; $Chars[$i] = ' '; $i++; $Chars[$i] = ' '
+    }
+  }
+  if ($Depth -ne 0) { throw 'Unterminated Lean block comment in integrity scan' }
+  return -join $Chars
+}
+
 function Test-ProhibitedProofText {
   Write-VerificationLine ""
   Write-VerificationLine "[Repository proof-integrity scans]"
@@ -292,7 +340,24 @@ function Test-ProhibitedProofText {
       throw "Postulate scanner regression failed: $($Case.text)"
     }
   }
-  Write-VerificationLine 'PASS: postulate scanner regressions (declarations, fields, and comment punctuation)'
+  $CommentScanCases = @(
+    @{ text = "/-`nconstant reduction makes a divisor map.`n-/"; expected = 0 },
+    @{ text = "/- outer /- nested -/`nconstant values are units.`n-/"; expected = 0 },
+    @{ text = "-- constant forbidden : Nat`nconstant actual : Nat"; expected = 1 },
+    @{ text = '/- prose -/ axiom actual : True'; expected = 1 },
+    @{ text = "constant /- documentation -/ actual : Nat"; expected = 1 },
+    @{ text = "constant`n/- documentation -/`nactual : Nat"; expected = 1 },
+    @{ text = "def delimiter := `"/-`"`naxiom actual : True"; expected = 1 },
+    @{ text = 'axiom /- nested /- text -/ -/ actual : True'; expected = 1 }
+  )
+  foreach ($Case in $CommentScanCases) {
+    $Masked = ConvertTo-LeanCommentMaskedText $Case.text
+    $Count = @($Masked -split "`r?`n" | Where-Object { $_ -match $PostulatePattern }).Count
+    if ($Count -ne $Case.expected -or $Masked.Length -ne $Case.text.Length) {
+      throw "Comment-aware postulate scanner regression failed: $($Case.text)"
+    }
+  }
+  Write-VerificationLine 'PASS: postulate scanner regressions (declarations, fields, nested comments, and comment punctuation)'
   $Scans = @(
     [ordered]@{ name = "sorry/admit/sorryAx"; pattern = "\b(sorry|admit)\b|sorryAx" },
     [ordered]@{ name = "project axiom/constant"; pattern = $PostulatePattern },
@@ -303,11 +368,16 @@ function Test-ProhibitedProofText {
     $Hits = New-Object System.Collections.Generic.List[string]
     foreach ($File in $LeanFiles) {
       $LineNumber = 0
-      foreach ($Line in Get-Content -LiteralPath $File.FullName -Encoding UTF8) {
+      $OriginalText = [System.IO.File]::ReadAllText($File.FullName)
+      $ScanText = if ($Scan.name -eq 'project axiom/constant') {
+        ConvertTo-LeanCommentMaskedText $OriginalText
+      } else { $OriginalText }
+      $OriginalLines = $OriginalText -split "`r?`n"
+      foreach ($Line in $ScanText -split "`r?`n") {
         $LineNumber++
         if ($Line -match $Scan.pattern) {
           $Relative = $File.FullName.Substring($ProjectRoot.Length + 1)
-          $Hits.Add("${Relative}:${LineNumber}:$Line")
+          $Hits.Add("${Relative}:${LineNumber}:$($OriginalLines[$LineNumber - 1])")
         }
       }
     }

@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> wild modular good reduction -> genus equality -> characteristic-three order-six/seven and characteristic-two order-twelve/fourteen estimates -> actual Galois wild different consumer -> local differential generation and nonzero rational-coordinate differential",
+  "precedingScratchReceipts": {
+    "source-decomposition-order-gap-4-scratch-receipt.json": "2934F956FFB94F73509A9A87F3FCE6272DC2E6D9639644F9A970E38F68DA927A"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveLocalFinite.lean",
+      "sha256": "73B1D5EC0BF89296D6F525880D17AB3DD00C28F966560703328D90378C7D4446"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveIntegralDerivatives.lean",
+      "sha256": "841595FF3C6C556CDB4F399CE316B53C6859511BD0374466080BC4D9EC355A35"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRatFuncGaloisCoordinate.lean",
+      "sha256": "874A93F7450C9512D9AC698D67832AC74CE52A1A4DB0BED1510BF1CB3CF4B488"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRatFuncSpecializationOrder.lean",
+      "sha256": "788E677A45554C0EEBB5F28D238C6C19A81DF4172964D6D7F76A017C92C01CEF"
+    }
+  ],
+  "nativeReuse": {
+    "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Etale\\Kaehler.lean",
+    "sha256": "DF1347DD5B5BCCC7F57FC8241D6F738F35120A82062A27236C1EB402A47D1405",
+    "theorem": "KaehlerDifferential.tensorKaehlerEquivOfFormallyEtale"
+  },
+  "routeAdjustment": "Prove the wild different bound directly for every finite Galois extension of RatFunc K at positive X places, the exact form needed by the constructed modular auxiliary fields. Reuse native etale base change and the existing finite integral chart. Do not expand generic uniformizer separability or global all-place differential geometry merely to recover this local case.",
+  "discharged": "The full wild different bound is proved for every finite Galois extension of RatFunc K at a positive X place. Native polynomial differential basis and etale base change prove the nonzero rational-coordinate differential and rank one. Existing finite local charts and integral derivatives provide differential finiteness and uniformizer generation. The actual action, character, fixed-field gap and parameter cardinality are consumed from scopes 397-399. All local geometric premises of the Galois wild estimate are derived.",
+  "remaining": "Unramified transfer to the actual modular coefficient field and the exceptional-fiber census remain necessary for the characteristic-three wild genus comparison. Characteristic-two good models and auxiliary field, wild genus equality, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\rational-wild-differentials-route-400.json",
+    "sha256": "79CE872FAE445B7E816620F685FCEE25AAE57E4DB140A5E49B08CB57975BE3A6",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> wild modular good reduction -> genus equality -> characteristic-three order-six/seven and characteristic-two order-twelve/fourteen estimates -> actual Galois wild different consumer -> local differential generation and nonzero rational-coordinate differential",
+      "reuseChecked": [
+        "Scopes 397-399 derive the polynomial estimate, actual decomposition character, fixed-field order gap and cardinality/order identity. Only local differential instances and the nonzero base differential remain in the Galois-parameter consumer.",
+        "The actual auxiliary field in scopes 395-396 is already finite Galois over RatFunc K. The required coordinate is the image of RatFunc.X. Proving a new general separability theorem for arbitrary order-one coordinates is unnecessary for this source application.",
+        "Existing SourceCurveLocalFinite.essFiniteType_place_of_mem_X is valid in every characteristic and directly gives local differential finiteness at positive rational-coordinate places.",
+        "Native polynomial Kaehler basis and etale base change supply the nonzero rational-coordinate differential and rank one. Existing SourceDifferentialTranscendence proves the same basis construction after a more general coordinate equivalence; use the direct rational-function tower here.",
+        "Existing SourceCurveIntegralDerivatives supplies uniformizer generation on the integral ring. With a nonzero integral rational-coordinate differential, this proves the actual uniformizer differential is nonzero, and rank one gives DCoordGenerates.",
+        "Existing rationalCoordinate_transcendental, finite_galois_coordinateField, rational-place order classification and closed residue constants supply the remaining literal-coordinate premises."
+      ],
+      "selectedRoute": "Prove the wild different bound directly for every finite Galois extension of RatFunc K at positive X places, the exact form needed by the constructed modular auxiliary fields. Reuse native etale base change and the existing finite integral chart. Do not expand generic uniformizer separability or global all-place differential geometry merely to recover this local case.",
+      "boundary": "The strong modular differential bounds still require unramified transfer from the auxiliary field. Characteristic-three census, characteristic-two auxiliary field, wild genus equality and the original arithmetic/automorphy chain remain open."
+    }
+  },
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_Place_sub_one_add_pow_sub_one_le_ordDiff_D_of_isGalois.lean.txt",
+    "sha256": "946BBAEC4478A30041350F7F2A47F166258AC59CE00BE36EE81D1859DE644DF1",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The wild different argument is consumed on the actual rational-function extension. Native etale differential base change and existing local integral charts discharge the remaining differential premises. No upstream build or import is claimed."
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

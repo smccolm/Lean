@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-24",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy and residual association -> original Frobenius/inertia -> modular good reduction and invertible Picard torsion injectivity -> characteristic-three genus preservation -> wild different bounds and actual exceptional-fiber census.",
+  "renewedSearch": "Tools/curve-reuse-20261024-380/archive-manifest.json",
+  "scratchReceipts": {
+    "source-wild-different-11-scratch-receipt.json": "22DD9A85AD6C24B6A939FC5E43BA3A0391006A12FEACEEA378D4F2CC4F1A7EF5",
+    "source-curve-inertia-character-3-scratch-receipt.json": "08A9F02C92B48F3AB43FF9739B72B7D0457A39C7905804B25A4313E16FD1A43E",
+    "source-decomposition-order-gap-4-scratch-receipt.json": "2934F956FFB94F73509A9A87F3FCE6272DC2E6D9639644F9A970E38F68DA927A",
+    "source-rational-wild-differentials-3-scratch-receipt.json": "0181806CB1F1724397B283FA126D0E058F6479FFF4EBC936A8B680163C842935",
+    "source-modular-seven-4-scratch-receipt.json": "5A552C29275A60B3C88C21C4C07750ADA1D5D770B60EBC7C975814A074BC651C",
+    "source-dihedral-census-3-scratch-receipt.json": "EAB1215AB0424BF1A84F48D8E5313AD6A79807B17165EEAC8CE39B7422CB225B",
+    "source-char-three-cubic-count-4-scratch-receipt.json": "55E4053BD2CF041F17ECF250BFA11AE20ED6B1D86853CEDEFEBCBF009A9025B3",
+    "source-char-three-place-classification-4-scratch-receipt.json": "09DCEAF69A382CA4B52FC654CF5039047F20F2AAA92EC4E5115393B2E3E63FC9",
+    "source-char-three-six-actions-5-scratch-receipt.json": "CFE4BF42629C481983FD992C3D88950150F4071D0A46F14BDC71B809E35F8801",
+    "source-modular-char-three-census-2-scratch-receipt.json": "49B77051D422F2225F3369EE66257532CD8BB82092520A0BA0853A494D96B907",
+    "source-char-three-genus-3-scratch-receipt.json": "C2F9B01CD4354434046641FDE67832FD0D33318DC70CDDA207A1C2934D6DF2B3",
+    "source-char-three-picard-7-scratch-receipt.json": "9B73F5E99636E77EC366D2BF25CD1B50AFABD380A3602CB1BA635B2687E318F1"
+  },
+  "discharged": "The all-characteristic wild different bound is proved from actual inertia and differential data. In characteristic three, positive modular j orders are one, two, three or six; the order-six differential has order at least seven. Actual elliptic automorphisms and the modular place classifier give the two exact weighted exceptional-fiber counts. Their finite differential sum, the j-degree identity and Hurwitz prove genus preservation for the actual arithmetic Gauss residue field. Existing chart and principal-divisor machinery then constructs an actual constant reduction, and Kummer power lifting proves that its literal Picard map is injective on every torsion subgroup whose order is invertible in the residue field. No auxiliary field, census, local differential, genus, place map, divisor compatibility, power-lifting or torsion-injectivity certificate remains in the actual characteristic-three consumer.",
+  "remaining": "Characteristic-two good models, exceptional-fiber census, the strong order-twelve differential bound, genus equality and Picard torsion reduction remain required. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation also remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "shorterRoute": "The renewed 24 October search and frozen source proofs are reused through the existing integral-coordinate, modular-field and inertia constructions. Native fixed-field Galois theory and differential base change give the wild bound without a broader ramification framework. The proved finite dihedral census is applied to actual elliptic actions and modular places. Direct weighted summation closes the genus inequality. Existing chart lifting and the principal-divisor theorem avoid repeating the tame intermediate place construction; existing Kummer power lifting and strong induction close invertible Picard torsion injectivity. Only dependencies serving the exact open Dubon theorems are expanded. Root pins, proof limits, source fidelity and full completion criteria are unchanged.",
+  "unpromotedLaterScope": 409,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

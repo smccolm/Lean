@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "characteristic-two modular genus/Picard -> modular fixing-field order divisibility -> actual faithful good-model inertia with full N-torsion -> Deuring generators and injective torsion reduction",
+  "precedingScratchReceipts": {
+    "source-deuring-good-model-4-scratch-receipt-r2.json": "41455E08D4E1D48F55148906C68D13BA9DA57762689B35EC64E88F2DA9F560EB",
+    "source-deuring-galois-field-3-r2-scratch-receipt.json": "D5956755D546BFCB7119521F216C9A8007AEC79C710C5C19BE79EF0A84CE1F98",
+    "source-deuring-inertia-1-scratch-receipt.json": "FDE68B25E081EB213B736C26FAFD4277F61106C9313648D874D0FCB11324AB0D"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticDivisionFieldRestriction.lean",
+      "sha256": "9CC0A06616E3AFDCA00EDB4A0264DFADD34AB567592D825F965726B7F5F32238"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticFullTorsionFieldExtension.lean",
+      "sha256": "8AB0097E6EE68E5EDAAC673D4B63BBFDF635D36160A4942F8A36743FCB327C12"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticTrivialInertiaTorsion.lean",
+      "sha256": "1B77208379576C6EE4F9EF9D5D3E75B1ED8710CDC6CD20E1CCA879D6DEB295BE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\IntermediateFieldSupEmbeddings.lean",
+      "sha256": "7812E31D98BA420FDBB99846AB1A7A3460E198CE61BEB3177290B37185D4976E"
+    }
+  ],
+  "routeAdjustment": "Adapt the explicit generator-fixing proof, then reuse the established division-field compositum and torsion-reduction consumers. Derive faithfulness from residue-identity cocycles; no faithfulness or torsion-fixing certificate remains in the final field theorem.",
+  "discharged": "One actual finite Galois field contains all N-torsion and a good Deuring model at integral-j valuation places where three and N are units. An inertia element with identity reduced model cocycle is identity. The explicit Deuring generators and existing injective torsion reduction derive all torsion-fixing and faithfulness premises.",
+  "remaining": "The actual characteristic-two sign quotient must be applied to modular embeddings and the normal fixing field to obtain the order-twelve ramification bound. The weighted census, strong differential estimate and genus/Picard assembly, followed by original arithmetic-action comparison and automorphy, remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\deuring-faithful-field-route-414.json",
+    "sha256": "4E44523DE0277D945E7E108148B37BF6E6769E7AE6EDCBB87A592C98DF8CD576",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "characteristic-two modular genus/Picard -> modular fixing-field order divisibility -> actual faithful good-model inertia with full N-torsion -> Deuring generators and injective torsion reduction",
+      "reuseChecked": [
+        "The explicit Deuring coordinates and finite cubic-generator field now compile; their assumptions match the frozen FLT faithful-field proof.",
+        "Existing fixes_division_field_of_fixes_torsion replaces the repeated normal-restriction argument.",
+        "Existing galois_fixes_torsion_of_residue_cocycle_one is valid in every characteristic; it derives the three-torsion-fixing premise when three is invertible.",
+        "Existing card_torsion_of_containing_full_field and intermediateField_sup_inclusion_ranges assemble the N-division field with the Deuring field without new compositum infrastructure.",
+        "Existing local-domain root separation replaces the special cubic-root valuation argument."
+      ],
+      "selectedRoute": "Adapt the explicit generator-fixing proof, then reuse the established division-field compositum and torsion-reduction consumers. Derive faithfulness from residue-identity cocycles; no faithfulness or torsion-fixing certificate remains in the final field theorem.",
+      "assumptionsToDischarge": "Construct one finite Galois field with full N-torsion and a good model at integral-j places where three and N are units; prove that any inertia element with identity reduced model cocycle is identity.",
+      "boundary": "This supplies the actual characteristic-two inertia field. Prescribed residue model, exceptional stabilizer quotient, modular orders/census, strong differential bound and genus/Picard assembly remain required, followed by original arithmetic-action comparison and automorphy. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_WeierstrassCurve_exists_isGalois_goodModel_inertia_faithful_of_three_ne_zero.lean.txt",
+    "sha256": "F63CF2BFB514FED3BF4A4250561B30F46A4A2C76933FB3213B38D723EF47E4FD",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The explicit Deuring radical-fixing proof is adapted and assembled with existing division-field restriction, compositum generation and injective torsion reduction. No external build or import is claimed."
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> wild modular good reduction -> genus equality -> order-six/seven and order-twelve/fourteen differential estimates -> scope-397 wild different criterion -> actual residue-unit character and kernel displacement bound",
+  "precedingScratchReceipts": {
+    "source-wild-different-11-scratch-receipt.json": "22DD9A85AD6C24B6A939FC5E43BA3A0391006A12FEACEEA378D4F2CC4F1A7EF5"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\TameInertiaCharacter.lean",
+      "sha256": "6613F2611B0A6FF14BBBB38282A2A3B6F4B7E1882B4932EFB2C833BE483F395B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveUniformizerResidue.lean",
+      "sha256": "D259C540E112435BFE371A3ED588C9F0C7BDFC75A76E55872FCC8224EB3F8C56"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveLocalJetDimension.lean",
+      "sha256": "005FC1DB637D94822AD63C2C4A5FFF38249EAFAC26BB6029410A785F18D23F2E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveClosedConstantResidue.lean",
+      "sha256": "8C607C9022E2DBBB25DF033258DC78A529542EA53951B2FEED9168CBE45A0CC6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveGaloisPlaceCenter.lean",
+      "sha256": "42A7C963F75759C7BFD7A47A21D0F43C4A8F53099993E8F74F53FB6C6F45AFAC"
+    }
+  ],
+  "nativeReuse": {
+    "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Derivation\\MapCoeffs.lean",
+    "sha256": "961550973634597D627A7ECFBBD7C6E7678EC84D12C456F2E0D68D292B614A9E",
+    "theorem": "Derivation.apply_eval_eq"
+  },
+  "routeAdjustment": "Construct the character on the actual valuation-ring decomposition group by mapping it to the maximal ideal's inertia group, reuse the proved tame character, and transport its values along the actual residue-constant equivalence. Derive the kernel displacement bound through the existing ideal-power order theorem. Defer higher ramification groups and any finite-residue generalization.",
+  "discharged": "The actual valuation-ring decomposition action and its residue-unit character are constructed, and the character kernel moves the chosen actual uniformizer by order at least two. The existing constant-residue theorem identifies decomposition with inertia; the existing tame character and ideal-power order theorem supply the character and displacement bound. The actual wild different consumer discharges the action, residue-character, kernel-displacement and residue-surjectivity inputs of scope 397.",
+  "remaining": "Fixed-field order gap, cardinality/order identity and nonzero base differential remain explicit geometric inputs, as do the local differential instances. They must be derived on the actual Galois field before claiming the strong modular differential bounds. Wild census, genus equality, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-inertia-character-route-398.json",
+    "sha256": "BB95BAD79977DA0A05332ECC20C7FDE54F33355EB0224BB6F9AD79FCE284A178",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> wild modular good reduction -> genus equality -> order-six/seven and order-twelve/fourteen differential estimates -> scope-397 wild different criterion -> actual residue-unit character and kernel displacement bound",
+      "reuseChecked": [
+        "Scope 397 proves the conditional local wild different bound. It still requires the actual inertia character and its order-two displacement bound.",
+        "Existing TameInertiaCharacter.tameChar and tameChar_eq_one_iff do not need finite residue fields; use those generic theorems, not their finite-residue corollaries.",
+        "Existing SourceCurveUniformizerResidue.maximalIdeal_eq_span_uniformizer supplies the chosen actual uniformizer. Its span identity discharges both character construction hypotheses by divisibility and cancellation.",
+        "Existing SourceCurveLocalJetDimension.le_ord_of_mem_maximalIdeal_pow gives the displacement order directly from maximal-ideal-square membership.",
+        "Existing SourceCurveClosedConstantResidue identifies the actual residue field with the algebraically closed constant field and proves every decomposition element is inertia. Native valuation-ring decomposition actions and unit-map equivalences supply the transport."
+      ],
+      "selectedRoute": "Construct the character on the actual valuation-ring decomposition group by mapping it to the maximal ideal's inertia group, reuse the proved tame character, and transport its values along the actual residue-constant equivalence. Derive the kernel displacement bound through the existing ideal-power order theorem. Defer higher ramification groups and any finite-residue generalization.",
+      "boundary": "The fixed-field order gap and actual finite-Galois geometric consumer remain separate necessary inputs to the wild different estimate; this character alone closes no acceptance gate."
+    }
+  },
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_Place_sub_one_add_pow_sub_one_le_ordDiff_D_of_isGalois.lean.txt",
+    "sha256": "946BBAEC4478A30041350F7F2A47F166258AC59CE00BE36EE81D1859DE644DF1",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The scope-397 adaptation of the wild different argument is consumed with the actual decomposition action. Existing local tame-character and ideal-power proofs discharge its character inputs; no new external proof framework or upstream build is claimed."
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> prime-to-characteristic Picard torsion injectivity -> original-field Kummer power lifting",
+  "precedingScratchReceipts": {
+    "source-joint-genus-3-scratch-receipt.json": "E99706FAC2AFD63D7CB4190F410614AE4287DA6706721E27A913ADEB238F4E15"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularKummerJointGenusInequality.lean",
+      "sha256": "8A5189DFC354F2BD018BCB01A18E525947FC81EA076971C0476A06955F50C368"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularKummerGenus.lean",
+      "sha256": "1C733C88913BFCE9A71C579518BAB17042548406BF1EA1BE873D2976A49266EA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularTameResidueGenus.lean",
+      "sha256": "CD91F337FB87121151A0D30FEF1654FD6B18450C80FA9D94BF7D3A8D210C933D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalArithmeticGenus.lean",
+      "sha256": "D2135631236CC07D4720A9399CC5BB1E687F61D173061D8366D20CDFD464EB7A"
+    }
+  ],
+  "routeAdjustment": "Assume there is no q-th root in the original modular field, instantiate its actual polynomial splitting field, and combine the two proved genus statements with q>=2. First retain only the narrower genus-equality hypothesis; then discharge it in the actual tame-characteristic consumer.",
+  "discharged": "An actual normalized modular function with prime-divisible original divisor and a nonzero residue q-th root has a q-th root in the original modular field whenever the actual genera agree. The actual tame consumer derives genus equality in characteristic at least five. The unramified identity and total residue-genus inequality contradict q>=2 for a non-power; no Kummer-extension or genus certificate remains in the tame consumer.",
+  "remaining": "Picard torsion injectivity still needs the actual divisor-class consumer. Wild genus equality and good reduction in characteristics two and three, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-power-lifting-route-387.json",
+    "sha256": "43E214424DF26DFE76B26504171B2413C3ECDD0ECFD07DF09BD0FF47E23E63E0",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> modular good reduction and prime-to-characteristic Picard torsion injectivity -> original-field Kummer power lifting",
+      "reuseChecked": [
+        "Scope 367 modular_kummer_genus_sub_one proves g(E)-1=q*(g(F)-1) from the actual prime-divisible divisor.",
+        "Scope 386 modular_kummer_joint_genus_inequality proves q*g(residue F)<=g(E) for a hypothetical non-power whose residue is a nonzero q-th power.",
+        "SourceModularTameResidueGenus and coefficient_genusFF_eq_originalGenus derive residue/original genus equality in characteristic at least five.",
+        "Native Polynomial.SplittingField supplies the actual auxiliary Kummer extension and scalar-tower algebra."
+      ],
+      "selectedRoute": "Assume there is no q-th root in the original modular field, instantiate its actual polynomial splitting field, and combine the two proved genus statements with q>=2. First retain only the narrower genus-equality hypothesis; then discharge it in the actual tame-characteristic consumer.",
+      "boundary": "Wild-characteristic genus equality remains open. A tame power-lifting theorem does not close all-characteristic Picard torsion injectivity or DUB-17--20. Acceptance remains 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "characteristic-two modular genus/Picard -> faithful good-model inertia -> fixing the explicit Deuring cubic generators",
+  "precedingScratchReceipts": {},
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\LocalResidueRootSeparation.lean",
+      "sha256": "8B24F3023EAA80CA7143BEFC91AB1DECA65532B26CF9EBF74C6C84EA3B370622"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticWildGoodModelChange.lean",
+      "sha256": "E9F02FDA93FCF7E40FB5BB2D53744117848297C82870245B37E51C276A0FFE49"
+    }
+  ],
+  "routeAdjustment": "Bridge actual valuation-subring inertia to the existing local-domain root-separation theorem, then apply it to sigma(x)/x. Keep only the cubic specialization needed by the explicit Deuring field.",
+  "discharged": "Actual valuation-subring inertia fixes every unit cubic radical whose cube is fixed when three is invertible. The existing local-domain root-separation theorem supplies the essential rigidity, and the native ordered-group power theorem supplies valuation-unit detection. These replace a fresh cubic factorization and valuation framework.",
+  "remaining": "Faithful good-model inertia must be assembled, followed by prescribed characteristic-two residue models, modular fixing-field orders, the weighted census and strong differential bound, and genus/Picard assembly. Original arithmetic-action comparison and automorphy remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\deuring-inertia-route-413.json",
+    "sha256": "8DA57CE42E51A1F9E9865E74E58495AFD65DED072966797D4AD6E2B2BEA5C916",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "characteristic-two modular genus/Picard -> faithful good-model inertia -> fixing the explicit Deuring cubic generators",
+      "reuseChecked": [
+        "Existing local_eq_one_of_residue_eq_one_of_pow_eq_one applies to every local domain and every torsion order invertible in its residue field. It replaces the source special cubic factorization and valuation estimates.",
+        "Native pow_eq_one_iff_of_nonneg already used in SourceEllipticWildGoodModelChange replaces a new valuation trichotomy proof.",
+        "The actual valuation-subring decomposition and inertia actions already provide equality of residues; no new abstract inertia action is needed."
+      ],
+      "selectedRoute": "Bridge actual valuation-subring inertia to the existing local-domain root-separation theorem, then apply it to sigma(x)/x. Keep only the cubic specialization needed by the explicit Deuring field.",
+      "assumptionsToDischarge": "Inertia fixes a valuation-unit cubic radical when its cube is fixed and three is invertible. This removes the radical-fixing obstruction in the faithful good-model field proof.",
+      "boundary": "The point and cubic-root fields, explicit good model and this unit-radical fact must still be assembled into faithful inertia. Modular orders/census/genus/Picard and arithmetic/automorphy consumers remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_WeierstrassCurve_exists_isGalois_goodModel_inertia_faithful_of_three_ne_zero.lean.txt",
+    "sha256": "F63CF2BFB514FED3BF4A4250561B30F46A4A2C76933FB3213B38D723EF47E4FD",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The actual inertia and radical argument is adapted, replacing the source cubic root estimate by the existing local-domain root-separation theorem. No external build or import is claimed."
+  }
+}

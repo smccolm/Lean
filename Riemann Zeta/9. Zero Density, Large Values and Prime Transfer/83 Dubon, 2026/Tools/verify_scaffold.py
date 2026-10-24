@@ -28,6 +28,71 @@ def require(condition, message):
         raise ValueError(message)
 
 
+def mask_lean_comments(text):
+    """Preserve offsets while masking nested/line comments, respecting strings and names."""
+    out = list(text)
+    depth, line_comment, quoted, string, escaped = 0, False, False, False, False
+    i = 0
+    while i < len(text):
+        ch, pair = text[i], text[i:i+2]
+        if ch in '\r\n':
+            line_comment = False
+        elif line_comment:
+            out[i] = ' '
+        elif depth:
+            out[i] = ' '
+            if pair in {'/-', '-/'}:
+                depth += 1 if pair == '/-' else -1
+                i += 1
+                out[i] = ' '
+        elif string:
+            if escaped:
+                escaped = False
+            elif ch == '\\':
+                escaped = True
+            elif ch == '"':
+                string = False
+        elif quoted:
+            if ch == '»':
+                quoted = False
+        elif ch == '"':
+            string = True
+        elif ch == '«':
+            quoted = True
+        elif pair in {'/-', '--'}:
+            depth, line_comment = (1, False) if pair == '/-' else (0, True)
+            out[i] = out[i+1] = ' '
+            i += 1
+        i += 1
+    require(depth == 0, 'Unterminated Lean block comment in integrity scan')
+    return ''.join(out)
+
+
+def has_lean_postulate(text):
+    pattern = r'^\s*(?:axiom\b|constant(?:\s*$|\s+[^:\s]))'
+    return any(re.search(pattern, line) for line in mask_lean_comments(text).splitlines())
+
+
+def check_postulate_scanner():
+    cases = [
+        ('axiom forbidden : True', True),
+        ('constant forbidden : Nat', True),
+        ('constant\n/- comment -/\nforbidden : Nat', True),
+        ('  constant : Nat', False),
+        ('/-\nconstant reduction makes a divisor map.\n-/', False),
+        ('/- outer /- nested -/\nconstant values are units.\n-/', False),
+        ('-- constant forbidden : Nat\nconstant actual : Nat', True),
+        ('/- prose -/ axiom actual : True', True),
+        ('constant /- documentation -/ actual : Nat', True),
+        ('def delimiter := "/-"\naxiom actual : True', True),
+        ('axiom /- nested /- text -/ -/ actual : True', True),
+    ]
+    for text, expected in cases:
+        masked = mask_lean_comments(text)
+        require(len(masked) == len(text) and has_lean_postulate(text) == expected,
+                f'Postulate scanner regression failed: {text!r}')
+
+
 def retained(project):
     return {p.relative_to(project).as_posix() for p in project.rglob('*')
             if p.is_file() and not any(x in {'logs', '__pycache__', '.lake'}
@@ -100,6 +165,7 @@ def check_state(project, config, registry):
 
 
 def check_active(project, config):
+    check_postulate_scanner()
     namespace = 'Dubon2026'
     require(config['verificationModules'] == ['ArithmeticSemanticRegression', 'GeometricSemanticRegression', 'ContinuousCohomologySemanticRegression', 'LocalFieldSemanticRegression', 'LocalInvariantSemanticRegression', 'LocalDualitySemanticRegression', 'ArithmeticDualitySemanticRegression', 'GlobalNormSemanticRegression', 'GlobalCohomologySemanticRegression', 'GlobalReciprocitySemanticRegression', 'PrimeReciprocitySemanticRegression', 'ClassFormationSemanticRegression', 'SemanticRegression', 'Audit'],
             'All thirteen semantic regression modules and the audit are mandatory')
@@ -121,7 +187,8 @@ def check_active(project, config):
             'Root imports do not cover exactly all production modules')
     for relative in classified:
         body=(project/relative).read_text(encoding='utf-8')
-        require(not re.search(r'\b(sorry|admit|sorryAx|native_decide|implemented_by|unsafe)\b|^\s*(axiom|constant)\b',body,re.M),
+        require(not re.search(r'\b(sorry|admit|sorryAx|native_decide|implemented_by|unsafe)\b',body)
+                and not has_lean_postulate(body),
                 f'Proof-integrity violation: {relative}')
         require(not re.search(r'set_option\s+linter\S*\s+false',body),f'Linter suppression: {relative}')
     root=project.parents[1]

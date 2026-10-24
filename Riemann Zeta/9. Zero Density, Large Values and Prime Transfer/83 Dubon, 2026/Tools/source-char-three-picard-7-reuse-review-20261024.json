@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "all-weight continuation -> automorphy and residual association -> original Frobenius/inertia -> modular good reduction and invertible Picard torsion injectivity -> actual constant reduction and original-field Kummer power lifting -> genus preservation",
+  "precedingScratchReceipts": {
+    "source-char-three-genus-3-scratch-receipt.json": "C2F9B01CD4354434046641FDE67832FD0D33318DC70CDDA207A1C2934D6DF2B3"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularIntegralChartLifting.lean",
+      "sha256": "0C427022965C04CA8EE7E7E850AA1BA7AB7B02DE4C5EC727CAA855F96336BCF5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceReductionPrincipalDivisorMap.lean",
+      "sha256": "B2D502F6663BCE7E1CB96E1BCD01C26EB45BE290A0E33140FADEA1AB7DAD9B83"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveConstantReductionR2.lean",
+      "sha256": "D0330F33F2885A4560CDAFB2A2EE4BC24319978BE97F203CAB06A9AE85FE5FA2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularKummerPowerLifting.lean",
+      "sha256": "FA92A70C2FDC183A79D5C36CE21E57DEA1D2497D193E0B83DB5BA6B4DFF1E038"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveReductionPrimeKernel.lean",
+      "sha256": "39D129CD3F8C3D99C356BF410B88E10383A7D8B022F999089CC3C4601EDAB6F3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularTameTorsionKernel.lean",
+      "sha256": "F2184A36DC8A6C580BC46721766B951CAD17FACDFE26E81E12756E04CF608A19"
+    }
+  ],
+  "routeAdjustment": "Reuse the proved chart, principal-divisor and Kummer machinery through narrow explicit genus-equality interfaces, then discharge that premise in one actual characteristic-three constant-reduction and Picard torsion consumer.",
+  "discharged": "An actual characteristic-three modular constant reduction is constructed, preserves genus, and its literal Picard map is injective on every torsion subgroup whose order is invertible in the residue field. The actual genus theorem discharges the shared genus-equality premise. Existing integral chart lifting, direct principal-divisor assembly and original-field Kummer power lifting derive the geometric inputs; prime-order kernel triviality and strong induction derive full invertible torsion injectivity.",
+  "remaining": "Characteristic-two genus equality and Picard reduction, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain necessary. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\char-three-picard-route-408.json",
+    "sha256": "D3B36DE0AED28C52F09C0FF8ADAB5E61159FB7A9FAC7CB8A0071642540B1D012",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "all-weight continuation -> automorphy and residual association -> original Frobenius/inertia -> modular good reduction and invertible Picard torsion injectivity -> actual constant reduction and original-field Kummer power lifting -> genus preservation",
+      "reuseChecked": [
+        "SourceModularIntegralChartLifting already derives both chart lifts from genus equality in every characteristic.",
+        "SourceReductionPrincipalDivisorMap directly assembles the place map and exact principal pushforward from these chart lifts. Repeating the tame chart-place and local-fiber intermediate modules is unnecessary.",
+        "ConstantReduction.ofPlaceMap, closed coefficient-place residues and the coefficient genus comparison construct the actual constant reduction.",
+        "SourceModularKummerPowerLifting already proves original-field power lifting from genus equality. SourceCurveReductionPrimeKernel turns this into prime-order kernel triviality; the existing tame strong-induction argument extends it to every invertible torsion order.",
+        "Scope 407 supplies actual characteristic-three genus equality. The necessary shared genus-equality interfaces will also serve the still-required characteristic-two consumer; no unrelated generalization is included."
+      ],
+      "selectedRoute": "Reuse the proved chart, principal-divisor and Kummer machinery through narrow explicit genus-equality interfaces, then discharge that premise in one actual characteristic-three constant-reduction and Picard torsion consumer.",
+      "assumptionsToDischarge": "The actual characteristic-three consumer constructs its reduction map and derives genus equality, principal-divisor compatibility, power lifting and injectivity on every torsion order invertible in the residue field.",
+      "boundary": "Characteristic-two genus equality and the original arithmetic-action, Frobenius/inertia, residual association, automorphy and all-weight continuation remain necessary. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "all-weight continuation -> automorphy and residual association -> original Frobenius/inertia -> wild modular good reduction -> characteristic-three genus equality -> weighted differential contribution",
+  "precedingScratchReceipts": {
+    "source-modular-char-three-census-2-scratch-receipt.json": "49B77051D422F2225F3369EE66257532CD8BB82092520A0BA0853A494D96B907",
+    "source-modular-seven-4-scratch-receipt.json": "5A552C29275A60B3C88C21C4C07750ADA1D5D770B60EBC7C975814A074BC651C"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCoefficientWildGenusCriterion.lean",
+      "sha256": "B58B6D5B18B3530A21D5B8129FFB7ABD45C4D09784751C1AD54937A486320DD7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCoefficientJDegreeSums.lean",
+      "sha256": "B047258B97D44AD66DF764669D56DC9A85969D5C8BF2A2872D352FB8948A01CC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCoefficientDivisorSupport.lean",
+      "sha256": "D17903838E2EFBEF830F870E88B6A05E467F178BBFE2436CC652E725532CF272"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularReductionSourceGenus.lean",
+      "sha256": "C16A7129E0B43B947775E868E3D653B2A6B21800ABE51EB546699FAB38E88DCC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalArithmeticGenus.lean",
+      "sha256": "D2135631236CC07D4720A9399CC5BB1E687F61D173061D8366D20CDFD464EB7A"
+    }
+  ],
+  "routeAdjustment": "Sum the pointwise inequality 7e-3[ e=1 or 3 ]-4[ e=1 ]-8[ e=2 ] <= 6 ord(Dj), substitute the actual weighted census and j-degree, and use the proved genus criterion and reduction upper bound.",
+  "discharged": "The actual characteristic-three modular Gauss residue field has genus equal to the original arithmetic modular field. Exact local differential bounds at j orders one, two, three and six combine with the actual weighted census and fiber degree to prove the full wild differential contribution. Finite divisor support, Hurwitz and the reduction upper bound remove all auxiliary geometric assumptions from the equality.",
+  "remaining": "The actual characteristic-three principal-divisor and Picard reductions must consume the genus equality. Characteristic two and the original arithmetic-action, Frobenius/inertia, residual association, automorphy and all-weight continuation remain necessary. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\char-three-genus-route-407.json",
+    "sha256": "D4733F9ACD8323F5CAB75C8DEE2CE5720B92E91013347151F95A63212DB80494",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "all-weight continuation -> automorphy and residual association -> original Frobenius/inertia -> wild modular good reduction -> characteristic-three genus equality -> weighted differential contribution",
+      "reuseChecked": [
+        "Scope 406 derives the exact actual modular j-order census with no auxiliary geometric input.",
+        "The existing derivative lower bound handles orders one and two, the proved characteristic-three derivative bound handles order three, and scope 401 supplies the strong bound seven at order six.",
+        "Existing finite divisor support, the j-fiber degree sum and coeff_genus_lower_of_wild_differential_contribution supply all global curve inputs.",
+        "The existing arithmetic genus formula and reduction upper bound give equality for the actual Gauss residue field. No further Riemann--Hurwitz or general ramification framework is needed."
+      ],
+      "selectedRoute": "Sum the pointwise inequality 7e-3[ e=1 or 3 ]-4[ e=1 ]-8[ e=2 ] <= 6 ord(Dj), substitute the actual weighted census and j-degree, and use the proved genus criterion and reduction upper bound.",
+      "assumptionsToDischarge": "Finite positive-j support, local differential contributions, the finite weighted sum and residue genus equality are all derived from the source field, characteristic three and invertible level assumptions.",
+      "boundary": "Characteristic two and original arithmetic-action, Frobenius/inertia, residual association, automorphy and all-weight continuation remain necessary. DUB-17--20 remain open; acceptance stays 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

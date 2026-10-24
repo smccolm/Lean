@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "wild modular good reduction -> characteristic-three genus equality -> finite wild differential sum -> actual characteristic-three modular j-order census",
+  "precedingScratchReceipts": {
+    "source-dihedral-census-3-scratch-receipt.json": "EAB1215AB0424BF1A84F48D8E5313AD6A79807B17165EEAC8CE39B7422CB225B",
+    "source-char-three-cubic-count-4-scratch-receipt.json": "55E4053BD2CF041F17ECF250BFA11AE20ED6B1D86853CEDEFEBCBF009A9025B3",
+    "source-char-three-place-classification-4-scratch-receipt.json": "09DCEAF69A382CA4B52FC654CF5039047F20F2AAA92EC4E5115393B2E3E63FC9",
+    "source-char-three-six-actions-5-scratch-receipt.json": "CFE4BF42629C481983FD992C3D88950150F4071D0A46F14BDC71B809E35F8801"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCyclicSubgroupPermutation.lean",
+      "sha256": "5EB8C831E3DC665A05E385A18298EDE90DE0C61C0F702924BDCB485F5F4E2A62"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticExceptionalOrbitCounts.lean",
+      "sha256": "94A5C9851FF1F3BAD58E09E06AE2A5EADF10845ED6C14ABB8084C86A94D67C6A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticQuarticFixedCount.lean",
+      "sha256": "6A8239343A37D06E9E6BADAFBED8EBA0EF538F93DC2CD5B37E1B304990CF88F0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticCyclicCount.lean",
+      "sha256": "B596900DF3BBE3092D475F99B47B790D6D89C0A81CC3CBDF1C2C50D292493D20"
+    }
+  ],
+  "routeAdjustment": "Assemble the actual cyclic permutation relations and fixed counts, apply the proved finite census to the actual place classifier, and transport class cardinalities to normalized j orders. Preserve the source order alternatives and both weighted nuTwo/nuThree identities exactly.",
+  "discharged": "The actual characteristic-three modular coefficient field has positive j orders one, two, three or six. The odd-order fiber count is nuTwo, and the order-one count plus twice the order-two count is nuThree. Actual elliptic permutations, relations, fixed counts, modular place classification and order multiplicities are derived; the algebraic closure is chosen internally.",
+  "remaining": "The finite weighted differential sum and characteristic-three genus comparison still require assembly. Characteristic two and the original arithmetic/automorphy chains remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\char-three-modular-census-route-406.json",
+    "sha256": "9761BCEA031312B7A3A3AD7F7F1E9622A4097DCD3C928F9B3528F9603873DC41",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "wild modular good reduction -> characteristic-three genus equality -> finite wild differential sum -> actual characteristic-three modular j-order census",
+      "reuseChecked": [
+        "Scope 402 proves the exact weighted dihedral-three finite census, scope 404 constructs the actual modular place classifier and scope 405 identifies its full stabilizer relation with the six actions.",
+        "SourceCyclicSubgroupPermutation already proves the involution and cubic periods and transports fixed subgroup cardinalities. The concrete point conjugation is proved in scope 403.",
+        "The existing quartic fixed count applies in characteristic three since two is invertible. Scope 403 proves the actual cubic fixed count there. Actual cyclic subgroup cardinality provides finiteness; no new finite enumeration is needed.",
+        "The existing finite divisor support will supply the final finite set of positive-j places for genus assembly. This scope proves the census for every finite set satisfying the exact source membership condition."
+      ],
+      "selectedRoute": "Assemble the actual cyclic permutation relations and fixed counts, apply the proved finite census to the actual place classifier, and transport class cardinalities to normalized j orders. Preserve the source order alternatives and both weighted nuTwo/nuThree identities exactly.",
+      "assumptionsToDischarge": "The final census retains only the source field, level invertibility and exact finite-set membership hypotheses. All automorphisms, orbits, place maps, cardinalities and fixed-point counts are derived.",
+      "boundary": "The census must still be combined with the proved local differential estimates and existing Hurwitz criterion before characteristic-three genus equality is claimed. DUB-17--20 remain open; acceptance stays 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

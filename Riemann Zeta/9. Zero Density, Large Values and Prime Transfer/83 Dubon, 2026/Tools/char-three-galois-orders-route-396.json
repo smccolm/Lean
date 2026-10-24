@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-24",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy and residual association -> original Frobenius/inertia -> wild modular good reduction -> genus equality -> characteristic-three differential bound at order six -> actual auxiliary Galois field with positive j orders dividing six.",
+  "renewedSearch": "Tools/wild-reuse-20261024-390/archive-manifest.json",
+  "scratchReceipts": {
+    "source-wild-derivative-2-scratch-receipt.json": "0FA1DF81B0088025C7DDB3DA99689718470BB61D430E4BC7361B9481D2589D91",
+    "source-wild-integral-change-3-scratch-receipt.json": "C39C10FAC270A6DE248D32C624FF430F1D8E462B177D5A740D5C1D18F9D7F62E",
+    "source-odd-specialization-9-scratch-receipt.json": "9387F2E39F2CE404DCA6DB56814C7D402448D3B7EF28C5032DDEEBA777C25E20",
+    "source-char-three-image-6-scratch-receipt.json": "A56520AABB9E37948D52D44F1D4EA7852D893F6CC61D95AE750F144F4AAA179E",
+    "source-char-three-permutation-3-r2-scratch-receipt.json": "31B18B752879E144B1DB2D9358EEEF18C9F3F47E0AB2C291FFF5925DAEA8CB8F",
+    "source-char-three-embedding-3-scratch-receipt.json": "7B8448A69CB469175C8B78E4A85AB2C74F4FC605CFAA3B931607A1377EEF9F10",
+    "source-coordinate-fixing-field-4-scratch-receipt.json": "EA2E7F3C0DDAD953F53CF74BF39B9EF2CA1165D2B0F04DAF1E228FFDECF0429F",
+    "source-normal-field-order-4-scratch-receipt.json": "E179C1CCB8F674BA9480E09B500308F23711C16E0859CF9675D2B47075AE11A2"
+  },
+  "discharged": "Integral coordinate changes between good elliptic models and their inertia cocycles now work in every characteristic, using the verified TauCeti IntegralModel argument. Existing local Legendre models give actual characteristic-three specialization with faithful inertia and equivariant torsion reduction. The exceptional residue curve has stabilizer of order twelve; its action on the three roots of X^3-X has target permutation group of order six, and the kernel acts as identity or negation on torsion. It therefore fixes every original modular coefficient-field embedding. Their actual fixing field is finite Galois over the j-coordinate field, and every positive j order in it divides six. All field, torsion, action, embedding, place and order-divisibility inputs are derived. The elementary wild derivative bounds are also proved at the required orders three, four and six.",
+  "remaining": "The stronger wild different bounds at characteristic-three order six and characteristic-two order twelve, exceptional-fiber census and wild genus equality remain required. Characteristic-two good models, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. The auxiliary field does not by itself prove good reduction. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "shorterRoute": "The renewed 24 October search supplies a verified TauCeti integral-coordinate proof, adapted to the pinned local API without importing or claiming a build of TauCeti. Existing Legendre good models, full torsion, specialization and actual modular embeddings supply the characteristic-three objects. Native root counts, group indices and normal-field ranges shorten the exceptional inertia and order-divisibility proofs. The characteristic-three root-permutation R2 successors are used; the failed first linter audit and all original artifacts remain preserved. Incidental minimal-model machinery is deferred. Root pins, proof limits, source fidelity and full completion criteria are unchanged.",
+  "unpromotedLaterScope": 397,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

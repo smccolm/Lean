@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "characteristic-two modular genus preservation -> wild differential bound and census -> actual auxiliary Galois field and stabilizer quotient of order twelve -> central elliptic negation subgroup of order two",
+  "precedingScratchReceipts": {
+    "source-char-two-stabilizer-3-scratch-receipt.json": "38835D41786016B7723A641AD6165A65F18F8A6D81EAF4B0609401A2AE8051B7"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticNegationVariableChange.lean",
+      "sha256": "B518575BC1F531A5F4CEAF71DDE0F11B03C28F6FE1B952F52968B0FD35FDB6D3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticStabilizerPointAction.lean",
+      "sha256": "D3A911D326E3C25F90B74C25FA0D085ABDED248FCA75299DB103DB6CAEEC395D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticTrivialInertiaTorsion.lean",
+      "sha256": "1B77208379576C6EE4F9EF9D5D3E75B1ED8710CDC6CD20E1CCA879D6DEB295BE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\GroupTheory\\Index.lean",
+      "sha256": "7BBC19576301CC71FDEE53914526ECE929D48CBB04C6AEF7F344711DDC375E6F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\GroupTheory\\OrderOfElement.lean",
+      "sha256": "E1DAA65D815EA3752BDE0C3DD56E3EE803C940F596DB873F69B10A983E6EEA41"
+    }
+  ],
+  "routeAdjustment": "Use the existing literal negation change, prove its order two and centrality in the actual characteristic-two stabilizer, and derive index twelve together with its uniform identity-or-negation point action.",
+  "discharged": "The actual characteristic-two exceptional stabilizer has a central elliptic-negation subgroup of order two and an actual quotient of order twelve. Every element of the projection kernel acts uniformly as identity or negation on all elliptic points. The existing all-characteristic negation action and heterogeneous point-cast theorem are reused; the exceptional translation coordinate proves nonidentity without requiring two invertible.",
+  "remaining": "Actual characteristic-two good models and faithful inertia specialization, the modular fixing field and order divisibility, strong differential bound, weighted census and genus/Picard assembly remain necessary. Original arithmetic-action comparison and the automorphy chain also remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\char-two-sign-quotient-route-410.json",
+    "sha256": "B9A56AA1D1D9398402234218686F8B929A9AE465E2EF520B2E7E0755EA1BA6B7",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "characteristic-two modular genus preservation -> wild differential bound and census -> actual auxiliary Galois field and stabilizer quotient of order twelve -> central elliptic negation subgroup of order two",
+      "reuseChecked": [
+        "Scope 409 proves the actual ofJ0 stabilizer has cardinality twenty-four.",
+        "SourceEllipticNegationVariableChange already defines the actual negation coordinate change, proves stabilization and proves its point action in every characteristic. Only its old nonidentity argument required two invertible; the ofJ0 translation coordinate proves nonidentity directly in characteristic two.",
+        "The existing stabilizerPointEquiv_eq_iff_heq transports the actual negation action without repeating point-coordinate case proofs.",
+        "Native orderOf_eq_prime, Nat.card_zpowers, central subgroup closure and subgroup index arithmetic give the quotient size. No custom general sign-action group framework is required for this step."
+      ],
+      "selectedRoute": "Use the existing literal negation change, prove its order two and centrality in the actual characteristic-two stabilizer, and derive index twelve together with its uniform identity-or-negation point action.",
+      "assumptionsToDischarge": "The actual sign subgroup, its normality and order, quotient cardinality and point action are constructed.",
+      "boundary": "Characteristic-two good models and specialization, modular fixing-field orders, weighted census and genus/Picard assembly remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_isGalois_ord_jqModC_dvd_twelve_of_char_two.lean.txt",
+    "sha256": "EB64EEB9226FA3337D791F9685FC320F8B726303610C62C663CAF099DE0598FE",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The source sign quotient is realized using the existing local literal negation action and native subgroup cardinality and quotient machinery; repeated coordinate point-action proofs and a custom sign-action framework are unnecessary. No external build or import is claimed."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original Frobenius/inertia -> characteristic-two modular good reduction -> genus equality -> strong differential bound and exceptional-fiber census -> actual characteristic-two exceptional stabilizer and its order-twelve quotient",
+  "precedingScratchReceipts": {
+    "source-char-three-picard-7-scratch-receipt.json": "9B73F5E99636E77EC366D2BF25CD1B50AFABD380A3602CB1BA635B2687E318F1"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticNegationVariableChange.lean",
+      "sha256": "B518575BC1F531A5F4CEAF71DDE0F11B03C28F6FE1B952F52968B0FD35FDB6D3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticCharThreeStabilizerBound.lean",
+      "sha256": "89C46A8988DE738486D908B21065E2F7EF534748A0803F8C3C4E1E723F35BDA7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\AlgebraicGeometry\\EllipticCurve\\ModelsWithJ.lean",
+      "sha256": "44695862EB1693B5F3C7987BC780453AD1D8F57698310475B2E38ADDB1429822"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\SetTheory\\Cardinal\\Finite.lean",
+      "sha256": "1452E251CE0E991B6277FBCECBE9FAC763F2EB2C3EC05F2A58F5EF3F992080F1"
+    }
+  ],
+  "routeAdjustment": "Prove the stabilizer coordinate equations on Mathlib.ofJ0, count the three required separable root sets, and use a direct equivalence to the dependent coordinate fibers for exact cardinality twenty-four.",
+  "discharged": "The actual characteristic-two exceptional stabilizer on Mathlib.ofJ0 has cardinality twenty-four. The coordinate restrictions and counts of cube roots of one, fourth-power fixed points and Artin--Schreier fibers are proved. A direct dependent coordinate equivalence and native Nat.card_sigma replace a chosen-root construction.",
+  "remaining": "The central sign quotient of order twelve, actual characteristic-two good models and specialization, modular fixing-field orders, wild differential estimate, weighted census and genus/Picard assembly remain necessary. The original arithmetic and automorphy chains also remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\char-two-stabilizer-route-409.json",
+    "sha256": "D3E892A47AC46EA6B86EF13DAD97B69DC029E0D1F0EE3BB9A7F2B5DA4AA8E566",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original Frobenius/inertia -> characteristic-two modular good reduction -> genus equality -> strong differential bound and exceptional-fiber census -> actual characteristic-two exceptional stabilizer and its order-twelve quotient",
+      "reuseChecked": [
+        "Mathlib already defines the exact source exceptional model as WeierstrassCurve.ofJ0, with its invariants, ellipticity and j invariant. No duplicate curve definition is needed.",
+        "The existing full integral coordinate-change and torsion-specialization machinery applies in every characteristic. The characteristic-three stabilizer coordinate restriction does not cover characteristic two.",
+        "The frozen FLT source gives the exact coordinate equations for the ofJ0 stabilizer and its cardinality twenty-four. Native separable root-set cardinality proves the required counts three, four and two.",
+        "Native Nat.card_sigma counts the dependent Artin--Schreier fibers directly, avoiding the source's chosen-root translation function and its auxiliary identities."
+      ],
+      "selectedRoute": "Prove the stabilizer coordinate equations on Mathlib.ofJ0, count the three required separable root sets, and use a direct equivalence to the dependent coordinate fibers for exact cardinality twenty-four.",
+      "assumptionsToDischarge": "The exceptional stabilizer finiteness and cardinality are derived from the actual coordinate changes, characteristic two and algebraic closedness.",
+      "boundary": "The order-twelve quotient, actual characteristic-two good model and specialization, modular fixing field, wild differential bound, census and genus/Picard assembly remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_isGalois_ord_jqModC_dvd_twelve_of_char_two.lean.txt",
+    "sha256": "EB64EEB9226FA3337D791F9685FC320F8B726303610C62C663CAF099DE0598FE",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "Actual stabilizer coordinate equations and separable root counts adapted to the pinned API. The native ofJ0 definition and dependent-sum cardinality shorten the source route. No external build or import is claimed."
+  }
+}

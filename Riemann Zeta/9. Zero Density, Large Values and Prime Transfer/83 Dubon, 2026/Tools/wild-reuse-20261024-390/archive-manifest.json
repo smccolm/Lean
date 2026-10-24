@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "commit": "e177885ee120f8074a7610c3e60571ab00b20004",
+  "upstreamBuildVerified": false,
+  "files": [
+    {
+      "path": "Tools/wild-reuse-20261024-390/TauCeti/AlgebraicGeometry/EllipticCurve/VariableChange/Galois.lean.txt",
+      "sha256": "965D76EB1CD53439A6CE75FA38BEC0537B69A227D5A4AD06C0B8FF0ED70656F4"
+    },
+    {
+      "path": "Tools/wild-reuse-20261024-390/TauCeti/AlgebraicGeometry/EllipticCurve/MinimalModel/Basic.lean.txt",
+      "sha256": "4CFC82B37EC34067A89136E4D2B176EFEA453DCECC8F158582F380CA46285868"
+    },
+    {
+      "path": "Tools/wild-reuse-20261024-390/TauCeti/AlgebraicGeometry/EllipticCurve/IntegralModel.lean.txt",
+      "sha256": "83CE142D4B4DFB73E98DBF05AD94C1C1D1AD3756D7B301AF4C4ADEB6F7D7CB2A"
+    },
+    {
+      "path": "Tools/wild-reuse-20261024-390/verified-candidates.json",
+      "sha256": "F30614E180BD2370FFA86973F32F730D5453434EDDAE4695024F9AE675265F22"
+    }
+  ],
+  "report": "Dubon Reuse Search 2026-10-24 Supplement.md",
+  "reportSha256": "909CB93CC82FAA110B55CAE97ED800FDED0AC774C7A61D2713C18C1C8D6BED53"
+}

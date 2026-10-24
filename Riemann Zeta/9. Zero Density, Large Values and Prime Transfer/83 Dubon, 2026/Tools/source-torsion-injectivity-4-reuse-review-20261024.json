@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> prime-to-characteristic Picard torsion injectivity -> original-field Kummer power lifting",
+  "precedingScratchReceipts": {
+    "source-power-lifting-2-scratch-receipt.json": "87189650C19982794D2921302414B5A4E31A7641BA2D2D27116E2FABEE56ADFA"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularTamePowerLifting.lean",
+      "sha256": "47049310FAD357A432B1D7D3343E031EF174CCEDCF927CC28FF0751EE56264A6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveReductionKummerPower.lean",
+      "sha256": "FF3CAA145E022F3BE0721C1E96467270F0A7914DD914BAD777654749E191F927"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveReductionKummerData.lean",
+      "sha256": "FABB85A7A233620A6548A43F63B4746557D48DE9544518904BFE665C114052AC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularTameConstantReductionR2.lean",
+      "sha256": "9B9DC20C3573901488D6115D50A0E1ED3D1CDDF5A3EF4F9AB21DBA44CA5E43C3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveReductionPicardR2.lean",
+      "sha256": "5DF3B8782E80AC86F8EFA13BBCA1B3BEDDEF1499E8355B3D5FE6A569AC46E44C"
+    }
+  ],
+  "routeAdjustment": "Use the existing Kummer divisor representative. Lift its function power, cancel the nonzero prime in each place order, and exhibit that representative as principal. Strong induction on the torsion order then proves full prime-to-characteristic kernel triviality and injectivity on the actual torsion subgroup.",
+  "discharged": "An actual tame modular constant reduction is constructed and its literal Picard map is injective on every torsion subgroup of order invertible in the residue field. Existing normalized Kummer data and the proved original-field root lifting make a prime-order kernel representative principal; strong induction gives all invertible torsion orders. No Picard map, Kummer data, root or torsion injectivity premise remains in the actual existence consumer.",
+  "remaining": "Wild genus equality and good reduction in characteristics two and three, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\picard-torsion-route-388.json",
+    "sha256": "24AB6A6CEDB40E7F5DC10D63135A258F49B499A5F399F8E5B998BD15CF1E02C7",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> prime-to-characteristic Picard torsion injectivity",
+      "reuseChecked": [
+        "SourceCurveReductionKummerPower derives normalized Kummer data and an actual nonzero residue power for a torsion class in the actual Picard kernel.",
+        "Scope 387 lifts prime powers of functions in the actual tame modular field without a genus premise.",
+        "Existing Pic0 is the actual quotient of degree-zero divisors by principal divisors; native QuotientAddGroup.eq_zero_iff converts a constructed principal representative to zero.",
+        "Native strong induction and a prime divisor reduce arbitrary prime-to-characteristic torsion to the prime case."
+      ],
+      "selectedRoute": "Use the existing Kummer divisor representative. Lift its function power, cancel the nonzero prime in each place order, and exhibit that representative as principal. Strong induction on the torsion order then proves full prime-to-characteristic kernel triviality and injectivity on the actual torsion subgroup.",
+      "boundary": "Tame characteristic only until wild genus equality is proved. Original arithmetic-action comparison and Frobenius/inertia still remain; DUB-17--20 open, 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

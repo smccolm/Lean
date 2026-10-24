@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "characteristic-two modular genus/Picard -> actual exceptional inertia quotient -> prescribed ofJ inertia action -> faithful Deuring field and actual torsion specialization",
+  "precedingScratchReceipts": {
+    "source-deuring-faithful-field-3-scratch-receipt.json": "AB3BC8D00EDCDC967793D3A2601AEC9EBE084E0CF0F6570BC69798A1F7B7B8B5"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticOddFaithfulTorsionModel.lean",
+      "sha256": "F6C454C8A9D036A381ACA9A8142F9D920FD6218AD5F77D9A3F6BD184A4F3D5CF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticOddSpecializationFieldPlace.lean",
+      "sha256": "A7E52801D033CF1DA7E98399656DCC817439F8C8A3A05616B1F8C9318F3AC599"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticOddOfJSpecialization.lean",
+      "sha256": "CEB334B9631B81890B6E60011810ADE51275E0DD9C10B0BFC7706ACC570F36F7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticOddFaithfulSpecializationHom.lean",
+      "sha256": "B4E20DD8806430E2CEB82D9453B60D3FB6A257F7EBE78F4D56241BF057D496E0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticOddPrescribedInertiaAction.lean",
+      "sha256": "4750B10A29CEE23204E16B50AE8AD0037CC3C03A1C38740BF6B083F1B1A3E133"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticWildActualTorsionReduction.lean",
+      "sha256": "F6AE5F03EC059EA007853F3988FBC276013801C9A1B1AC82DDB6F664BD030327"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticGoodModelResidueJ.lean",
+      "sha256": "8D27896B3F7C04F72DB10450EAEE696536BF49BDBF8E449235BBA8F8F536333A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticResidueConjugateHom.lean",
+      "sha256": "21E0D67370991232C6CE1C82CE0C0253EADA0A45FC9764192049A2C3A2C13489"
+    }
+  ],
+  "routeAdjustment": "Adapt only the source-specific field-selection chain from two to three nonzero. Retain actual field/place/model/point maps and reuse all existing general reduction and conjugation results. No new abstract reduction or group-action framework.",
+  "discharged": "The actual finite Galois ofJ field specializes to any prescribed residue elliptic curve with full N-torsion, injective equivariant torsion reduction, and a faithful inertia homomorphism when three is nonzero. This includes characteristic two. All field, place, good-model, residue and equivariance certificates are constructed from the original hypotheses.",
+  "remaining": "The actual characteristic-two sign quotient must be applied to modular embeddings and the normal fixing field to obtain the order-twelve ramification bound. The weighted census, strong differential estimate and genus/Picard assembly, followed by original arithmetic-action comparison and automorphy, remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\deuring-specialization-route-415.json",
+    "sha256": "82DFDB062CD397F96D6E7624758A5825887EEA199570ED60CDF5A7707D4C1886",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "characteristic-two modular genus/Picard -> actual exceptional inertia quotient -> prescribed ofJ inertia action -> faithful Deuring field and actual torsion specialization",
+      "reuseChecked": [
+        "The proved odd-characteristic specialization chain uses invertibility of two only to choose the Legendre good-model field. All subsequent residue, point, conjugation and homomorphism proofs are valid in every characteristic.",
+        "The new finite Deuring field supplies the same stronger field interface with three invertible, so the existing proof bodies can be adapted without a fresh specialization framework.",
+        "Existing exists_actual_inertia_torsion_reduction_all_characteristics, exists_prescribed_residue_model_change, rational specialization places, residueInertiaHomAll and residueConjugateHom supply all intervening maps and their injectivity/equivariance."
+      ],
+      "selectedRoute": "Adapt only the source-specific field-selection chain from two to three nonzero. Retain actual field/place/model/point maps and reuse all existing general reduction and conjugation results. No new abstract reduction or group-action framework.",
+      "assumptionsToDischarge": "Construct the finite Galois ofJ field, prescribed residue elliptic curve, injective equivariant N-torsion reduction and faithful inertia homomorphism when three is nonzero. This includes characteristic two and removes all good-model and specialization certificates from the next modular-order consumer.",
+      "boundary": "The characteristic-two exceptional sign quotient must still be applied to this actual inertia action, followed by fixing-field orders, weighted census, strong differential bound, genus/Picard and original arithmetic/automorphy assembly. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_WeierstrassCurve_exists_isGalois_goodModel_inertia_faithful_of_three_ne_zero.lean.txt",
+    "sha256": "F63CF2BFB514FED3BF4A4250561B30F46A4A2C76933FB3213B38D723EF47E4FD",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The locally proved specialization chain is adapted by replacing its Legendre field input with the verified Deuring field; actual general reduction and conjugation proofs are reused unchanged. No external build or import is claimed."
+  }
+}

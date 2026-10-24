@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "wild modular good reduction -> characteristic-three genus equality -> exceptional-fiber census -> cubic fixed cyclic-subgroup count nuThree -> quadratic stable-cyclic counting -> nonscalar cubic action on prime torsion away from three",
+  "precedingScratchReceipts": {
+    "source-dihedral-census-3-scratch-receipt.json": "EAB1215AB0424BF1A84F48D8E5313AD6A79807B17165EEAC8CE39B7422CB225B"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimeTorsionScalarAction.lean",
+      "sha256": "95FF614C45444CDBEE995284F637510D5CADC266E7BAB8B4AF16CB19523D5D07"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticExceptionalCoordinates.lean",
+      "sha256": "BF5BB80BD74376E1D53BF45B6BD94B2E07627FF0288653EF3F09F2F8730CDA9B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticQuarticModel.lean",
+      "sha256": "43FE57EF2606008BE91428B6370B762706EF408FD20B02B03C1A27F0DA3148D8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticQuadraticFixedCounts.lean",
+      "sha256": "3CD410BE05BF5AFD78A899CE45781D1077A8D6136CB9C2A9D74FAC48825C2334"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticTorsionStructure.lean",
+      "sha256": "CF03D612293EDDD3D455A52F9C3DFACACC7389F0E93A3AC0F8CC7FA3560DAE97"
+    }
+  ],
+  "nativeReuse": {
+    "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\GroupTheory\\OrderOfElement.lean",
+    "sha256": "E1DAA65D815EA3752BDE0C3DD56E3EE803C940F596DB873F69B10A983E6EEA41",
+    "theorem": "addOrderOf_dvd_iff_zsmul_eq_zero"
+  },
+  "routeAdjustment": "Restrict the cubic additive map to actual prime torsion, use the proved common-scalar lemma, and contradict the conjugation relation together with beta squared plus beta plus identity equals zero. Keep the characteristic-three elliptic realization separate and consume this precise nonscalar lemma there.",
+  "discharged": "The actual characteristic-three translation (x,y) to (x-1,y) fixes exactly nuThree(N) cyclic subgroups. The cubic quadratic identity and quartic conjugation relation are proved with the existing actual point equivalences. The existing common-scalar theorem shortens the prime-torsion nonscalarity proof. Actual elliptic torsion structure and the existing quadratic fixed-count theorem discharge all fixed-subgroup counting premises.",
+  "remaining": "The dihedral stabilizer orbit classification and actual characteristic-three modular place-fiber map must still instantiate the weighted census. Characteristic-three genus equality, characteristic-two good models and strong differential bound, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\char-three-nonscalar-route-403.json",
+    "sha256": "F5D4FA058BD38CBB189A32CFDCBFB7C473582A11E49D8E23EDB693084A221829",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "wild modular good reduction -> characteristic-three genus equality -> exceptional-fiber census -> cubic fixed cyclic-subgroup count nuThree -> quadratic stable-cyclic counting -> nonscalar cubic action on prime torsion away from three",
+      "reuseChecked": [
+        "SourcePrimeTorsionScalarAction.exists_common_scalar already proves that an additive operator preserving every line in rank-two prime torsion acts by one common integer scalar.",
+        "The frozen FLT characteristic-three census proves the needed nonscalar lemma by repeating that rank-two coordinate calculation. Reusing the existing common-scalar theorem removes that repeated calculation.",
+        "SourceEllipticQuadraticFixedCounts.elliptic_stable_cyclic_card_eq_nuThree already derives the fixed subgroup count from the cubic quadratic identity and prime-torsion nonscalarity. Actual elliptic torsion structure is also already proved.",
+        "The characteristic-three quartic automorphism is an existing additive equivalence; injectivity and prime order preservation therefore need no new square-minus-one infrastructure."
+      ],
+      "selectedRoute": "Restrict the cubic additive map to actual prime torsion, use the proved common-scalar lemma, and contradict the conjugation relation together with beta squared plus beta plus identity equals zero. Keep the characteristic-three elliptic realization separate and consume this precise nonscalar lemma there.",
+      "assumptionsToDischarge": "The concrete elliptic consumer must derive the cubic quadratic identity and the quartic/cubic conjugation relation. The generic lemma retains only those algebraic relations, a genuine additive equivalence and the actual rank-two torsion equivalence.",
+      "boundary": "The generic nonscalar result does not by itself prove the modular census or wild genus equality. DUB-17--20 remain open; acceptance stays 16/20."
+    }
+  },
+  "additionalSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_WeierstrassCurve_exists_addMonoidHom_i_tau_vcInvFun_of_char_three.lean.txt",
+    "sha256": "EF6FC26AABBCB85D091DEBEA20A96BDF297B2D914D7D68BE5E45F46A8FCE605D"
+  },
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_ord_jqModC_census_of_char_three.lean.txt",
+    "sha256": "E5E85E50AC8539BE90CCAB5BED8A78683EB95FA681E33C5BB6EE166AB32E1431",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The nonscalar prime-torsion argument is shortened with the existing common-scalar theorem. The actual translation quadratic identity and quartic conjugation relation adapt S_WeierstrassCurve_exists_addMonoidHom_i_tau_vcInvFun_of_char_three using existing point coordinates and equivalences. No upstream build or import is claimed."
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

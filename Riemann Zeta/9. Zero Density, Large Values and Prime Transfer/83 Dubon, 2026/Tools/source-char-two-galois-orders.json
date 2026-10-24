@@ -1,0 +1,933 @@
+{
+  "date": "24 October 2026",
+  "modules": [
+    "Dubon2026.SourceEllipticCharTwoStabilizerCoordinates",
+    "Dubon2026.SourceEllipticCharTwoRootCounts",
+    "Dubon2026.SourceEllipticCharTwoStabilizerCard",
+    "Dubon2026.SourceEllipticCharTwoNegation",
+    "Dubon2026.SourceEllipticCharTwoSignQuotient",
+    "Dubon2026.SourceEllipticCharTwoSignAction",
+    "Dubon2026.SourceEllipticDeuringInvariants",
+    "Dubon2026.SourceEllipticDeuringIntegralParameter",
+    "Dubon2026.SourceEllipticThreeTorsionFlex",
+    "Dubon2026.SourceEllipticDeuringGoodModel",
+    "Dubon2026.SourceEllipticDeuringThreeTorsionR2",
+    "Dubon2026.SourceEllipticDeuringCubicRootsR2",
+    "Dubon2026.SourceEllipticDeuringGaloisFieldR2",
+    "Dubon2026.SourceEllipticDeuringInertia",
+    "Dubon2026.SourceEllipticDeuringFaithfulModel",
+    "Dubon2026.SourceEllipticDeuringGaloisModel",
+    "Dubon2026.SourceEllipticDeuringFaithfulField",
+    "Dubon2026.SourceEllipticDeuringFaithfulTorsionModel",
+    "Dubon2026.SourceEllipticDeuringSpecializationFieldPlace",
+    "Dubon2026.SourceEllipticDeuringOfJSpecialization",
+    "Dubon2026.SourceEllipticDeuringFaithfulSpecializationHom",
+    "Dubon2026.SourceEllipticDeuringPrescribedInertiaAction",
+    "Dubon2026.SourceEllipticCharTwoInertiaSign",
+    "Dubon2026.SourceEllipticCharTwoEmbeddingKernel",
+    "Dubon2026.SourceModularCharTwoNormalField",
+    "Dubon2026.SourceModularCharTwoGaloisOrder",
+    "Dubon2026.SourceModularCharTwoStrongDifferent",
+    "Dubon2026.SourceModularCharTwoFourteen"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy and residual association -> original Frobenius/inertia -> modular good reduction and Picard torsion injectivity -> characteristic-two genus preservation -> actual Deuring inertia, modular Galois j orders and the order-twelve/fourteen differential bound.",
+  "discharged": "The actual characteristic-two exceptional stabilizer has order twenty-four and its central elliptic-negation quotient has order twelve. A finite Galois Deuring field and an explicit integral good model are constructed, and injective torsion reduction proves faithful inertia. The actual prescribed elliptic specialization and modular embeddings then construct a normal field containing the original modular coefficient field in which every positive j-order divides twelve. Above an order-twelve modular place, ramification index one allows the existing all-characteristic wild estimate to descend, proving that the actual differential dj has order at least fourteen. No good-model, torsion, inertia, auxiliary-field or local-differential certificate remains in these consumers.",
+  "boundary": "The characteristic-two weighted exceptional-fiber census and genus/Picard assembly remain required. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation also remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "The 7,485-module production aggregate and focused characteristic-two Deuring inertia and strong differential audit pass with zero diagnostics. Nine declaration-value audits verify 104 required dependencies. The characteristic-two weighted exceptional-fiber census and genus/Picard assembly remain required. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation also remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification of this scope is pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceEllipticCharTwo.char_two_stabilizer_card",
+    "Dubon2026.SourceEllipticCharTwo.char_two_sign_quotient_data",
+    "Dubon2026.SourceEllipticDeuring.exists_deuring_good_model",
+    "Dubon2026.SourceEllipticDeuring.exists_S",
+    "Dubon2026.SourceEllipticDeuring.exists_three_torsion",
+    "Dubon2026.SourceEllipticDeuring.eq_of_inertia_of_cube_eq",
+    "Dubon2026.SourceEllipticDeuring.val_eq_one_of_pow",
+    "Dubon2026.SourceEllipticDivisionField.exists_faithful_deuring_good_model_field",
+    "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action_of_three_ne_zero",
+    "Dubon2026.SourceFunctionField.exists_char_two_modular_galois_orders_dvd_twelve",
+    "Dubon2026.SourceFunctionField.coeff_place_fourteen_le_D_j_of_char_two"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-24T13:19:23.976985+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceEllipticCharTwoStabilizerCoordinates",
+        "SourceEllipticCharTwoRootCounts",
+        "SourceEllipticCharTwoStabilizerCard"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoStabilizerCoordinates.lean",
+          "sha256": "D24DE14BD4A9B0C6927A49BDAFB6789E603111A6C413551935DACDD64F1C0506",
+          "oleanSha256": "7428FEB54151DBC4BA0517BA52ACCAF9665B3E52C9D026DC762D9C3A4184FEB2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoRootCounts.lean",
+          "sha256": "9F8A5169D7DC77C0B2ADACBB5B11710855F8699DE05573D48B192F76DF425A27",
+          "oleanSha256": "37E9DC2A003DB0C71C53FEF39346D522459E9354EBB6D858A3A523145024BD1F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoStabilizerCard.lean",
+          "sha256": "0898E9670546303B3AE58F86648C65EB877AD8982DB2652ABCD00BEE01E30038",
+          "oleanSha256": "8A0351A839498C09655249ED7D9290F8257B3239929EAC6E3894BC4F71771AC0"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticCharTwo.two_eq_zero",
+        "Dubon2026.SourceEllipticCharTwo.three_eq_one",
+        "Dubon2026.SourceEllipticCharTwo.stabilizer_coordinates_iff",
+        "Dubon2026.SourceEllipticCharTwo.natCard_eq_natDegree",
+        "Dubon2026.SourceEllipticCharTwo.natCard_cube_eq_one",
+        "Dubon2026.SourceEllipticCharTwo.natCard_units_cube_eq_one",
+        "Dubon2026.SourceEllipticCharTwo.natCard_pow_four_eq_self",
+        "Dubon2026.SourceEllipticCharTwo.natCard_artinSchreier",
+        "Dubon2026.SourceEllipticCharTwo.char_two_stabilizer_card"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticCharTwo.two_eq_zero",
+        "Dubon2026.SourceEllipticCharTwo.three_eq_one",
+        "Dubon2026.SourceEllipticCharTwo.stabilizer_coordinates_iff",
+        "Dubon2026.SourceEllipticCharTwo.natCard_eq_natDegree",
+        "Dubon2026.SourceEllipticCharTwo.natCard_cube_eq_one",
+        "Dubon2026.SourceEllipticCharTwo.natCard_units_cube_eq_one",
+        "Dubon2026.SourceEllipticCharTwo.natCard_pow_four_eq_self",
+        "Dubon2026.SourceEllipticCharTwo.natCard_artinSchreier",
+        "Dubon2026.SourceEllipticCharTwo.char_two_stabilizer_card"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoStabilizerAudit3.log",
+      "logSha256": "D624BFC16F3818FB7A2A8F1E4F6052501EC99FF5E4204CAFEFBB3446ED294115",
+      "auditSha256": "A5226DE5C4354C7A83850D90374042ECBE2A1FF755078C3901DC04682F356C3E",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 10,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 12,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoStabilizerDependencyAudit3.log",
+      "dependencyAuditSha256": "4D72AA0D1F8F65C10D07CD969F6D8FD497D1EFB9EA40DAE4BB2A094514C3DA6D",
+      "dependencyAuditSourceSha256": "F0320433F19256BB71C56C2174E7C2B9E0C5A1A3B3BC090F598FA3027D758CDC",
+      "consumers": [
+        "Dubon2026.SourceEllipticCharTwo.char_two_stabilizer_card"
+      ],
+      "dependency": "original Frobenius/inertia -> characteristic-two modular good reduction -> genus equality -> strong differential bound and exceptional-fiber census -> actual characteristic-two exceptional stabilizer and its order-twelve quotient",
+      "discharged": "The actual characteristic-two exceptional stabilizer on Mathlib.ofJ0 has cardinality twenty-four. The coordinate restrictions and counts of cube roots of one, fourth-power fixed points and Artin--Schreier fibers are proved. A direct dependent coordinate equivalence and native Nat.card_sigma replace a chosen-root construction.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The central sign quotient of order twelve, actual characteristic-two good models and specialization, modular fixing-field orders, wild differential estimate, weighted census and genus/Picard assembly remain necessary. The original arithmetic and automorphy chains also remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-char-two-stabilizer-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "112DC996938F95A108E6F300D907F2DD2B3FB1D9F2B7D78B64D7E1564AB69D50",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T13:29:18.485737+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceEllipticCharTwoNegation",
+        "SourceEllipticCharTwoSignQuotient",
+        "SourceEllipticCharTwoSignAction"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoNegation.lean",
+          "sha256": "1EEF2F1657E1E991BA62F02D4AC785E327A04B2B9F3CEEA21FF68E2D6A44F604",
+          "oleanSha256": "883F91DCED5203979CC637538601B443D3DCB3D17E0981B00D6A6C9D863557EA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoSignQuotient.lean",
+          "sha256": "8DC992ED4C9EEDB82EA4636086EA13900E95FDDC2072FE5AEE037AC7B26280C6",
+          "oleanSha256": "DAE7DEB9D7EC2ADF8B7A97924C614925F62123255D673E5DD5FA8576E11EC048"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoSignAction.lean",
+          "sha256": "FFBCBCEE7B4C8EBE3321A328A7FC68D20E272D896F555035F0DDF899DCDEFBF9",
+          "oleanSha256": "17F5B2488903D3FAE21974003267F504EDA0E0F18D954691644AED6BFCFC8F82"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticCharTwo.charTwoNegation_ne_one",
+        "Dubon2026.SourceEllipticCharTwo.charTwoNegation_square",
+        "Dubon2026.SourceEllipticCharTwo.charTwoNegation_order",
+        "Dubon2026.SourceEllipticCharTwo.charTwoNegation_central",
+        "Dubon2026.SourceEllipticCharTwo.charTwoNegation_point",
+        "Dubon2026.SourceEllipticCharTwo.charTwoSignSubgroup_card",
+        "Dubon2026.SourceEllipticCharTwo.mem_charTwoSignSubgroup_iff",
+        "Dubon2026.SourceEllipticCharTwo.charTwoSignSubgroup_normal",
+        "Dubon2026.SourceEllipticCharTwo.charTwoSignSubgroup_index",
+        "Dubon2026.SourceEllipticCharTwo.charTwoSignQuotient_card",
+        "Dubon2026.SourceEllipticCharTwo.charTwoSignProjection_kernel_point",
+        "Dubon2026.SourceEllipticCharTwo.char_two_sign_quotient_data",
+        "Dubon2026.SourceEllipticCharTwo.charTwoNegation",
+        "Dubon2026.SourceEllipticCharTwo.charTwoSignSubgroup",
+        "Dubon2026.SourceEllipticCharTwo.charTwoSignProjection"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticCharTwo.charTwoNegation_ne_one",
+        "Dubon2026.SourceEllipticCharTwo.charTwoNegation_square",
+        "Dubon2026.SourceEllipticCharTwo.charTwoNegation_order",
+        "Dubon2026.SourceEllipticCharTwo.charTwoNegation_central",
+        "Dubon2026.SourceEllipticCharTwo.charTwoNegation_point",
+        "Dubon2026.SourceEllipticCharTwo.charTwoSignSubgroup_card",
+        "Dubon2026.SourceEllipticCharTwo.mem_charTwoSignSubgroup_iff",
+        "Dubon2026.SourceEllipticCharTwo.charTwoSignSubgroup_normal",
+        "Dubon2026.SourceEllipticCharTwo.charTwoSignSubgroup_index",
+        "Dubon2026.SourceEllipticCharTwo.charTwoSignQuotient_card",
+        "Dubon2026.SourceEllipticCharTwo.charTwoSignProjection_kernel_point",
+        "Dubon2026.SourceEllipticCharTwo.char_two_sign_quotient_data"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticCharTwo.charTwoNegation",
+        "Dubon2026.SourceEllipticCharTwo.charTwoSignSubgroup",
+        "Dubon2026.SourceEllipticCharTwo.charTwoSignProjection"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoSignAudit3.log",
+      "logSha256": "1357276839B2C9D7F50E1CBE7C361D6147EA181284414C7F4DD4AB6B70073BA6",
+      "auditSha256": "E307C9CDD00E1C62C11365EE433DB3F57ED6C3B0804511504FC2B3B478C28A77",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 15,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 22,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoSignDependencyAudit3.log",
+      "dependencyAuditSha256": "B582C18A0F5776446D2322190F25F211A3411ACD0D92EC44588BE55629690697",
+      "dependencyAuditSourceSha256": "68CD6C3D93FB31F7BC45F5864B546A9B347220F8E6033E00CF1144E25A3B93BA",
+      "consumers": [
+        "Dubon2026.SourceEllipticCharTwo.char_two_sign_quotient_data"
+      ],
+      "dependency": "characteristic-two modular genus preservation -> wild differential bound and census -> actual auxiliary Galois field and stabilizer quotient of order twelve -> central elliptic negation subgroup of order two",
+      "discharged": "The actual characteristic-two exceptional stabilizer has a central elliptic-negation subgroup of order two and an actual quotient of order twelve. Every element of the projection kernel acts uniformly as identity or negation on all elliptic points. The existing all-characteristic negation action and heterogeneous point-cast theorem are reused; the exceptional translation coordinate proves nonidentity without requiring two invertible.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Actual characteristic-two good models and faithful inertia specialization, the modular fixing field and order divisibility, strong differential bound, weighted census and genus/Picard assembly remain necessary. Original arithmetic-action comparison and the automorphy chain also remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-char-two-sign-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "12ECAD068CFAA1214DA548D18A649D05EB7CE168339804F5F93F0292D7E1B519",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T13:42:21.787760+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceEllipticDeuringInvariants",
+        "SourceEllipticDeuringIntegralParameter",
+        "SourceEllipticThreeTorsionFlex",
+        "SourceEllipticDeuringGoodModel"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticDeuringInvariants.lean",
+          "sha256": "F0689B48D6A384B2B436FDBC4390DA95C407BBE136AFFED1B76DAB0CB44A5461",
+          "oleanSha256": "B8A517A7CEBC1E44CCF80B077E1A234C16CDC5275F9E932911440DF073A8E4B9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticDeuringIntegralParameter.lean",
+          "sha256": "5389213DFB1A7EEF8024CA5BF1C9DA7EC55D1FDDBEFD041E73FEC640705E7E29",
+          "oleanSha256": "9D8D450BED2845A48B8061107DAA1239BE231B91AFCEA9CF2E10492F2177868B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticThreeTorsionFlex.lean",
+          "sha256": "6A8733AE59A72E63B880C1BE1E384045D27282CD28AAD4BC9A6A56776937C553",
+          "oleanSha256": "2A39AD268C04BB9A9C47873B308CABAA13710AD99AABD335D4DE33B39FEAE459"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticDeuringGoodModel.lean",
+          "sha256": "0A66EA0C20BFBAF3A4AC090EDED992512F6C7600EF93D88750AAD0DD7AC16B59",
+          "oleanSha256": "5A94D37935F58EE81C3AED77108235E63AE7EE93D1E5F2569CF02D089D92370E"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticDeuring.deuring_Δ",
+        "Dubon2026.SourceEllipticDeuring.deuring_c₄",
+        "Dubon2026.SourceEllipticDeuring.deuring_map",
+        "Dubon2026.SourceEllipticDeuring.j_deuring_mul",
+        "Dubon2026.SourceEllipticDeuring.exists_integral_deuring_parameter",
+        "Dubon2026.SourceEllipticDeuring.flex_of_order_three",
+        "Dubon2026.SourceEllipticDeuring.exists_deuring_good_model"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticDeuring.deuring_Δ",
+        "Dubon2026.SourceEllipticDeuring.deuring_c₄",
+        "Dubon2026.SourceEllipticDeuring.deuring_map",
+        "Dubon2026.SourceEllipticDeuring.j_deuring_mul",
+        "Dubon2026.SourceEllipticDeuring.exists_integral_deuring_parameter",
+        "Dubon2026.SourceEllipticDeuring.flex_of_order_three",
+        "Dubon2026.SourceEllipticDeuring.exists_deuring_good_model"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceDeuringGoodModelAudit4.log",
+      "logSha256": "D804C5F02A4D4BE0B88BE0199EF52BF36C7FE3A581728EE94F5CCBAD3AF3E204",
+      "auditSha256": "85C21781C69F798A25571986ECAF7C94ED32646F2A18B9248A117C51BEDE13B0",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 14,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 8,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceDeuringGoodModelDependencyAudit4.log",
+      "dependencyAuditSha256": "3C5929838B04D51988FD3773BA400F34DE8D7372200550C60BDAD4231822FC53",
+      "dependencyAuditSourceSha256": "3D07F24525F935B697D1D04CE55BEAA31FE7AB96F8C1FD57FAB692121E09D689",
+      "consumers": [
+        "Dubon2026.SourceEllipticDeuring.exists_deuring_good_model"
+      ],
+      "dependency": "characteristic-two modular genus/Picard preservation -> actual inertia and modular fixing-field orders -> faithful finite good-model field -> explicit Deuring good model from nonzero three-torsion and a cubic root",
+      "discharged": "An actual nonzero affine three-torsion point and a cubic root of its psi2 value give explicit Deuring coordinates. The parameter is integral by a monic degree-twelve relation and the discriminant is a unit because it divides 3^6. These statements use integral j and invertible three. The exact coordinate formulas required by faithful inertia are retained.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The finite Galois field must supply the torsion point and cubic root; faithful inertia and the actual characteristic-two modular fixing-field orders, weighted census and genus/Picard assembly remain necessary. Arithmetic-action comparison and automorphy also remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-deuring-good-model-4-reuse-review-20261024-r2.json",
+      "reuseReviewSha256": "46DBA4FCE6807CDB23197FAAB8104D4C137123C8EF5D8F2C1D222ECFCF9A5F7E",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "supersedesReceipt": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\source-deuring-good-model-4-scratch-receipt.json",
+        "sha256": "DC636038B1C502C22E0F876C2B3A35A89197BD0EED7D3FE1416D5266FDDDF01F",
+        "reason": "Correct the repository organization to TauCetiProject, as established by the frozen renewed-search manifest. The exact revision, source bytes, local proofs and all verification evidence are unchanged."
+      }
+    },
+    {
+      "recordedUTC": "2026-10-24T13:51:00.200249+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceEllipticDeuringThreeTorsionR2",
+        "SourceEllipticDeuringCubicRootsR2",
+        "SourceEllipticDeuringGaloisFieldR2"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticDeuringThreeTorsionR2.lean",
+          "sha256": "8EDA9818194A8FFA1A43F114D6F7EB8CCF657424A1CF1D6A84D2AD4AA06BD024",
+          "oleanSha256": "1932027A998C803BBBD42D15294A53F31F975733F44A2CE4383070DF1786F1BA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticDeuringCubicRootsR2.lean",
+          "sha256": "5F944D98FF7F28878730E05CBF66C23F03B41CD79BEBDF336C2D3B1148E37117",
+          "oleanSha256": "271E6775F1E595DE4EB552CA876E89767E24A79AC09E5A234C1F674EB09E18C2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticDeuringGaloisFieldR2.lean",
+          "sha256": "8AD3F48EA5DF98CC2D16B7620B73037A55F2B0CF4CDD978F21A4AD2C0B08FE76",
+          "oleanSha256": "25641A9A6603EE5E417C9355C9FD2227B41EDEC5D2B71645F533A129918E9AC7"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticDeuring.psi2_some",
+        "Dubon2026.SourceEllipticDeuring.psi2_ne_zero",
+        "Dubon2026.SourceEllipticDeuring.psi2_map",
+        "Dubon2026.SourceEllipticDeuring.card_three_torsion",
+        "Dubon2026.SourceEllipticDeuring.finite_three_torsion",
+        "Dubon2026.SourceEllipticDeuring.exists_three_torsion",
+        "Dubon2026.SourceEllipticDeuring.finite_cubeRoots",
+        "Dubon2026.SourceEllipticDeuring.map_mem_cubeRoots",
+        "Dubon2026.SourceEllipticDeuring.exists_S",
+        "Dubon2026.SourceEllipticDeuring.psi2",
+        "Dubon2026.SourceEllipticDeuring.cubeRoots"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticDeuring.psi2_some",
+        "Dubon2026.SourceEllipticDeuring.psi2_ne_zero",
+        "Dubon2026.SourceEllipticDeuring.psi2_map",
+        "Dubon2026.SourceEllipticDeuring.card_three_torsion",
+        "Dubon2026.SourceEllipticDeuring.finite_three_torsion",
+        "Dubon2026.SourceEllipticDeuring.exists_three_torsion",
+        "Dubon2026.SourceEllipticDeuring.finite_cubeRoots",
+        "Dubon2026.SourceEllipticDeuring.map_mem_cubeRoots",
+        "Dubon2026.SourceEllipticDeuring.exists_S"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticDeuring.psi2",
+        "Dubon2026.SourceEllipticDeuring.cubeRoots"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceDeuringGaloisFieldAudit3R2.log",
+      "logSha256": "ED9A4D71C9A632665EA89CD7E1BD2B26F805C92D80B58BA79B076573E8910248",
+      "auditSha256": "3F32BE7CDA2AC30D9FE3B3EFD63BAADDADEABC29099FE4B4C5DC39BE1214D1F9",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 10,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 17,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceDeuringGaloisFieldDependencyAudit3R2.log",
+      "dependencyAuditSha256": "237759566C78E2C1EE88BEF78061A28753F17433BFF248A113824A77AE874F11",
+      "dependencyAuditSourceSha256": "72BCBDB33F622C3758A1A1BBBFC8242227FBBBE599161A9354B6F7A10A943C99",
+      "consumers": [
+        "Dubon2026.SourceEllipticDeuring.exists_S",
+        "Dubon2026.SourceEllipticDeuring.exists_three_torsion"
+      ],
+      "dependency": "characteristic-two modular genus and Picard preservation -> actual faithful inertia and modular fixing-field orders -> finite Galois good-model field -> three-division field and all cubic roots of nonzero three-torsion psi2 values",
+      "discharged": "A nonzero actual three-torsion point exists. Its three-division field, with faithful action and all ambient torsion coordinates, together with all cubic roots of nonzero three-torsion psi2 values yields an actual finite Galois extension. Separability, finite generation and Galois stability are proved; no field or torsion-structure certificate is assumed.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Faithful good-model inertia must be assembled, followed by prescribed characteristic-two residue models, modular fixing-field orders, the weighted census and strong differential bound, and genus/Picard assembly. Original arithmetic-action comparison and automorphy remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-deuring-galois-field-3-r2-reuse-review-20261024.json",
+      "reuseReviewSha256": "CFC053BCB4418A70EB2C837DF40D54DA6E48C704643A5FE5805A3724CFD639D1",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T13:51:00.330908+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceEllipticDeuringInertia"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticDeuringInertia.lean",
+          "sha256": "34DC43AED7EA79236618E06E1C94BBE7B162B96DCD78B0A8DA7CBBE83DBA8977",
+          "oleanSha256": "4342A0AC6A8B0C4EFF690DA97F764118D5EE1D372A5FF49EC52C1E9B42F2092A"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticDeuring.val_sub_lt_one_of_inertia",
+        "Dubon2026.SourceEllipticDeuring.smul_mem_of_decomposition",
+        "Dubon2026.SourceEllipticDeuring.eq_one_of_cube_eq_one",
+        "Dubon2026.SourceEllipticDeuring.eq_of_inertia_of_cube_eq",
+        "Dubon2026.SourceEllipticDeuring.val_eq_one_of_pow"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticDeuring.val_sub_lt_one_of_inertia",
+        "Dubon2026.SourceEllipticDeuring.smul_mem_of_decomposition",
+        "Dubon2026.SourceEllipticDeuring.eq_one_of_cube_eq_one",
+        "Dubon2026.SourceEllipticDeuring.eq_of_inertia_of_cube_eq",
+        "Dubon2026.SourceEllipticDeuring.val_eq_one_of_pow"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceDeuringInertiaAudit1.log",
+      "logSha256": "0B65511EC7AF07DB2A498BB90ADB797FA5387093307A39A1F63CF164A79AB2DF",
+      "auditSha256": "D16BFDE39D9D332E847F477E9B445B8EB76B554B1551524C146C4C29F7F7ED2F",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 12,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 6,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceDeuringInertiaDependencyAudit1.log",
+      "dependencyAuditSha256": "04937F0DC7B195B130F299954F62BF8A70DEE042257494B90BDA284DAC293B61",
+      "dependencyAuditSourceSha256": "0433B45C63136A0BEAA7943DE2326E4C883C5D855A309CBC267455FE8BAF10A4",
+      "consumers": [
+        "Dubon2026.SourceEllipticDeuring.eq_of_inertia_of_cube_eq",
+        "Dubon2026.SourceEllipticDeuring.val_eq_one_of_pow"
+      ],
+      "dependency": "characteristic-two modular genus/Picard -> faithful good-model inertia -> fixing the explicit Deuring cubic generators",
+      "discharged": "Actual valuation-subring inertia fixes every unit cubic radical whose cube is fixed when three is invertible. The existing local-domain root-separation theorem supplies the essential rigidity, and the native ordered-group power theorem supplies valuation-unit detection. These replace a fresh cubic factorization and valuation framework.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Faithful good-model inertia must be assembled, followed by prescribed characteristic-two residue models, modular fixing-field orders, the weighted census and strong differential bound, and genus/Picard assembly. Original arithmetic-action comparison and automorphy remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-deuring-inertia-1-reuse-review-20261024.json",
+      "reuseReviewSha256": "E4DFDC3AD79B00D102C4510CC600E326997A6B25BAA3C7E075F9EA09108AAF49",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T13:59:35.669843+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceEllipticDeuringFaithfulModel",
+        "SourceEllipticDeuringGaloisModel",
+        "SourceEllipticDeuringFaithfulField"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticDeuringFaithfulModel.lean",
+          "sha256": "C92946DD66173D220B6E6ED624C3A2679419748C11CF6FD307DA159BDB6EB6BD",
+          "oleanSha256": "D44A1C815E1BF0582859C436845200269AB3EDDC632859A87EBF39C7B395A3FC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticDeuringGaloisModel.lean",
+          "sha256": "D9612F5952EAADC01DB2A1FB91634CA235FFEA9DD3CEFF94A2992E9AD7E894DD",
+          "oleanSha256": "FC91CD7B4AED424C7D85E826BEEA079B0672D215565721443E6E67F466486115"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticDeuringFaithfulField.lean",
+          "sha256": "79EB04D3611B3487EB349068985485B8E8959903D5705670A656A3444D9FD734",
+          "oleanSha256": "68BF848D14941F6E48F687F3647880BB52AF1D4B835125DE6867B2407914DF33"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticDeuring.model_and_faithful",
+        "Dubon2026.SourceEllipticDeuring.exists_deuring_galois_model_faithful",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_deuring_good_model_field"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticDeuring.model_and_faithful",
+        "Dubon2026.SourceEllipticDeuring.exists_deuring_galois_model_faithful",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_deuring_good_model_field"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceDeuringFaithfulFieldAudit3.log",
+      "logSha256": "7BB6B06BEBCC7FE414ABC45034404B234A408467B606DCFB63EAF2B7A1D622DC",
+      "auditSha256": "5D80925A2B0D8D4B4660F022131EACE45035B32A7D5D8B7D2E4E6F9F0F7B33DB",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 3,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 12,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceDeuringFaithfulFieldDependencyAudit3.log",
+      "dependencyAuditSha256": "6047FF2F7D2ADC04CF88DF0EE5421FA6A40D083F12A0E4E3808B221CB5C8A17D",
+      "dependencyAuditSourceSha256": "D581F841433837EE63FE44739BD0BD33DCE7FFDE65CBE325E2F0E0205C3E2CFB",
+      "consumers": [
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_deuring_good_model_field"
+      ],
+      "dependency": "characteristic-two modular genus/Picard -> modular fixing-field order divisibility -> actual faithful good-model inertia with full N-torsion -> Deuring generators and injective torsion reduction",
+      "discharged": "One actual finite Galois field contains all N-torsion and a good Deuring model at integral-j valuation places where three and N are units. An inertia element with identity reduced model cocycle is identity. The explicit Deuring generators and existing injective torsion reduction derive all torsion-fixing and faithfulness premises.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The actual characteristic-two sign quotient must be applied to modular embeddings and the normal fixing field to obtain the order-twelve ramification bound. The weighted census, strong differential estimate and genus/Picard assembly, followed by original arithmetic-action comparison and automorphy, remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-deuring-faithful-field-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "FC09A07F55312EE9F2CDE47F41F5A94BD57C45EFAF232D398285FA7BCF261169",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T13:59:35.804636+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceEllipticDeuringFaithfulTorsionModel",
+        "SourceEllipticDeuringSpecializationFieldPlace",
+        "SourceEllipticDeuringOfJSpecialization",
+        "SourceEllipticDeuringFaithfulSpecializationHom",
+        "SourceEllipticDeuringPrescribedInertiaAction"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticDeuringFaithfulTorsionModel.lean",
+          "sha256": "183BBE370272AE7D541963D10E4F3ED611048D663A3E43CD66C2F85BF636730B",
+          "oleanSha256": "7C9206981F88CA9762E4336AC6C51E65B8B51C5F854B447031DA8982F34D6B96"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticDeuringSpecializationFieldPlace.lean",
+          "sha256": "A284DAE040A71F7F4ED07464F3BE5B7F99F4A9C709B1EEBD6EEBF6BD3295C9F3",
+          "oleanSha256": "D4D1BDEDB1B16DD4688DDE1C4372911B1D4A2A40C74C13B619158BC1E9E8203F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticDeuringOfJSpecialization.lean",
+          "sha256": "CCF0F9C3AA82EBB23F8D331CA6452D60B118E0563475410C29CC42628D5EFD78",
+          "oleanSha256": "78CEE3EB8BD8CFF6C01A3FD4CE54F0C057377370D35FDF36961FEC737C1D2B79"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticDeuringFaithfulSpecializationHom.lean",
+          "sha256": "BF6017A193170CEEF66DBD016F04A02AB86FAEE0870209FD0B29FA5F84640EA3",
+          "oleanSha256": "39116B58BA072165DBFF214F2585872028D516AEBCA62A66CC7FC98AD4E6F123"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticDeuringPrescribedInertiaAction.lean",
+          "sha256": "2FE01C1EE8AEAFA4254A0947DD484DDE8A169C3E34D31BDC973B1A772716FE28",
+          "oleanSha256": "A2908A03D9A5E9A61ED07F81410E20129F97A8A7B702AA3141B45FA6C2761490"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_torsion_model_of_three_ne_zero",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_specialization_field_place_of_three_ne_zero",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_ofJ_specialization_of_three_ne_zero",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_ofJ_inertia_hom_of_three_ne_zero",
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action_of_three_ne_zero"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_torsion_model_of_three_ne_zero",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_specialization_field_place_of_three_ne_zero",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_ofJ_specialization_of_three_ne_zero",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_ofJ_inertia_hom_of_three_ne_zero",
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action_of_three_ne_zero"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceDeuringSpecializationAudit5.log",
+      "logSha256": "1F87C07071213C0A6AB8049920F281CB7054361BFC0801C66191582BCC227B62",
+      "auditSha256": "97F5CDA2F1E5C15273EBFF9A5E4877D1B3546F01207F3E18A8BBAF26217640EF",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 5,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 10,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceDeuringSpecializationDependencyAudit5.log",
+      "dependencyAuditSha256": "A81218C21754C0BA31B80C4EFEBCFFA55635210DA06549F0B915F75F76392392",
+      "dependencyAuditSourceSha256": "3ED1F767EEA674071A0AB35EFB497BD71F9EC3F0EB1E12BA59D5DA541177C946",
+      "consumers": [
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action_of_three_ne_zero"
+      ],
+      "dependency": "characteristic-two modular genus/Picard -> actual exceptional inertia quotient -> prescribed ofJ inertia action -> faithful Deuring field and actual torsion specialization",
+      "discharged": "The actual finite Galois ofJ field specializes to any prescribed residue elliptic curve with full N-torsion, injective equivariant torsion reduction, and a faithful inertia homomorphism when three is nonzero. This includes characteristic two. All field, place, good-model, residue and equivariance certificates are constructed from the original hypotheses.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The actual characteristic-two sign quotient must be applied to modular embeddings and the normal fixing field to obtain the order-twelve ramification bound. The weighted census, strong differential estimate and genus/Picard assembly, followed by original arithmetic-action comparison and automorphy, remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-deuring-specialization-5-reuse-review-20261024.json",
+      "reuseReviewSha256": "B606AD650A05A0F7CDB2F903F55D51A7226B1F680D0EC72BBA1F06258E153A86",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T14:10:11.526185+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceEllipticCharTwoInertiaSign",
+        "SourceEllipticCharTwoEmbeddingKernel",
+        "SourceModularCharTwoNormalField",
+        "SourceModularCharTwoGaloisOrder"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoInertiaSign.lean",
+          "sha256": "742D7C4DBEA3322CCB6C64495135B2CB556AC7FADF51C8491C64FBB92446D012",
+          "oleanSha256": "75FB8C16FAF306A1E7FF8AE26B3B4D70831E7A5670C32D340993FA0781E16F8D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoEmbeddingKernel.lean",
+          "sha256": "9FF102A5D57ECB87D59AF54D663CF3474F3373CBAD016E864260FA76FFEA7F1D",
+          "oleanSha256": "A0B6C327CB836072F8A4729A6C41CF7E666D603C7B99BDE12E8DF5E4BAB42248"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularCharTwoNormalField.lean",
+          "sha256": "CFBD651C39AE66B0B98B7ABBFAAE51EBABE3410E551F3BA34D5674CA595E9DDD",
+          "oleanSha256": "884C59CE6843AF28196FDEDC545A55CF19D09945C3849993E3CE89F964865684"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularCharTwoGaloisOrder.lean",
+          "sha256": "12D3C116F3C49D3D49E9C8CC4DB9CC4D92C07418A8565A7369F64EABA1EB8021",
+          "oleanSha256": "5469626436FC899D9EE04FF0598D5D2FBC6B7E82C03F01731174A225D2DDF105"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticDivisionField.exists_char_two_exceptional_inertia_sign",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_two_exceptional_embedding_kernel",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_two_modular_normal_field",
+        "Dubon2026.SourceFunctionField.exists_char_two_modular_galois_orders_dvd_twelve"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticDivisionField.exists_char_two_exceptional_inertia_sign",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_two_exceptional_embedding_kernel",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_two_modular_normal_field",
+        "Dubon2026.SourceFunctionField.exists_char_two_modular_galois_orders_dvd_twelve"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersAudit4.log",
+      "logSha256": "C88C23EA8BE23C344BE88CE263C98154C7A3D462668FF7BAE11ED3B948693DC8",
+      "auditSha256": "0980DC9091B66BE1564761BABA88083D3BE780208D53CDD1EE43A652B6A53265",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 4,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 10,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersDependencyAudit4R2.log",
+      "dependencyAuditSha256": "DEABD3F4EBE0C6B51FD4B67C29C8B5D5F0ED93A2D28B153DA0A09A09FBA149DE",
+      "dependencyAuditSourceSha256": "E68463AD67928EA86ED9D7DC4A925B5744DCB8AEBB2D9E84EB360DB33FD00581",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.exists_char_two_modular_galois_orders_dvd_twelve"
+      ],
+      "dependency": "characteristic-two genus/Picard -> strong wild differential bound -> finite Galois modular field with positive j-orders dividing twelve -> actual Deuring inertia modulo elliptic sign",
+      "discharged": "The actual characteristic-two modular coefficient field embeds in an actual finite Galois extension of its original j-coordinate field in which every positive j-order divides twelve. The Deuring inertia action composed with the order-twelve sign quotient fixes actual modular embeddings through its kernel. Existing normal fixing-field and place-order theorems discharge all auxiliary field and ramification premises.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The characteristic-two weighted exceptional census and genus/Picard assembly, followed by original arithmetic-action comparison and automorphy, remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-char-two-galois-orders-4-r2-reuse-review-20261024.json",
+      "reuseReviewSha256": "BC1E72A883852082299C0484C0BBC896EE9E16AA69E0BAE4D4E285649F26B43E",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T14:10:11.675436+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceModularCharTwoStrongDifferent",
+        "SourceModularCharTwoFourteen"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularCharTwoStrongDifferent.lean",
+          "sha256": "8E161D6413D02DD97C039A5296B4FADC09CED15343CC075B70C57133CB6B6DFF",
+          "oleanSha256": "7FF061E39395D409FCBFF6D2372F2DFEF9CE2333D53F105F838C95C865CC148B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularCharTwoFourteen.lean",
+          "sha256": "62984DC0349BB686F424FFDFADFE68E878E95BE54D0A675605F330591521039B",
+          "oleanSha256": "59DABA82DA7BE4F92A96F276304650C98E73728E45B3239227C964E945796580"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.coeff_place_fourteen_le_D_j_of_char_two_auxiliary",
+        "Dubon2026.SourceFunctionField.coeff_place_fourteen_le_D_j_of_char_two_with_closure",
+        "Dubon2026.SourceFunctionField.coeff_place_fourteen_le_D_j_of_char_two"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.coeff_place_fourteen_le_D_j_of_char_two_auxiliary",
+        "Dubon2026.SourceFunctionField.coeff_place_fourteen_le_D_j_of_char_two_with_closure",
+        "Dubon2026.SourceFunctionField.coeff_place_fourteen_le_D_j_of_char_two"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoFourteenAudit2.log",
+      "logSha256": "119DD83496BAC86E1405616F3B76910E88319F30025288F42BB7732ECF0EC135",
+      "auditSha256": "1F599426C82E25BFD8A4BA4C2E32DA95AF3789274D8F629545798044361B3CFB",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 4,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 7,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoFourteenDependencyAudit2.log",
+      "dependencyAuditSha256": "44D48AE64B1F445A70EF8AFDD553FF1CF1243579AB6E1611DF881AF903CDA714",
+      "dependencyAuditSourceSha256": "7956CD8E96882AD7FE96D670BB17E042A2CC3F432D768C0804AC8E6DB2D9041C",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.coeff_place_fourteen_le_D_j_of_char_two"
+      ],
+      "dependency": "characteristic-two modular genus/Picard -> weighted differential contribution -> order-twelve local differential lower bound fourteen",
+      "discharged": "At every actual characteristic-two modular place with ord(j)=12, the actual differential dj has order at least fourteen. The constructed auxiliary normal field has positive j-orders dividing twelve, forcing ramification index one above the given place. The existing p-power wild estimate at p=2 and exponent=2 descends with unchanged differential order. No auxiliary-field, ramification or differential certificate remains.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The characteristic-two weighted exceptional census and genus/Picard assembly, followed by original arithmetic-action comparison and automorphy, remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-char-two-fourteen-2-reuse-review-20261024.json",
+      "reuseReviewSha256": "E61F036BA0A58F43AEA8A6E28817C74B86B62B68CF277D120FA14804378C16BB",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-char-two-stabilizer-3-reuse-review-20261024.json",
+    "Tools/source-char-two-sign-3-reuse-review-20261024.json",
+    "Tools/source-deuring-good-model-4-reuse-review-20261024-r2.json",
+    "Tools/source-deuring-galois-field-3-r2-reuse-review-20261024.json",
+    "Tools/source-deuring-inertia-1-reuse-review-20261024.json",
+    "Tools/source-deuring-faithful-field-3-reuse-review-20261024.json",
+    "Tools/source-deuring-specialization-5-reuse-review-20261024.json",
+    "Tools/source-char-two-galois-orders-4-r2-reuse-review-20261024.json",
+    "Tools/source-char-two-fourteen-2-reuse-review-20261024.json"
+  ],
+  "additionalCurrentSearch": {
+    "path": "Tools/char-two-orders-promotion-route-417.json",
+    "sha256": "1ECDF5A7E2F74766C29CB6B6637106B95C5356A1186F5AB030BBAE29059321D7"
+  },
+  "productionFocusedReceipt7485": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoStabilizerDependencyAudit3Production7485.log",
+        "sha256": "4D72AA0D1F8F65C10D07CD969F6D8FD497D1EFB9EA40DAE4BB2A094514C3DA6D",
+        "requiredProofValueEdges": 12,
+        "consumers": [
+          "Dubon2026.SourceEllipticCharTwo.char_two_stabilizer_card"
+        ],
+        "sourceSha256": "6D73CFD91F2BA9ED3037D73E465EF9B73244809F27F52C00899118821DBA7CA7"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoSignDependencyAudit3Production7485.log",
+        "sha256": "B582C18A0F5776446D2322190F25F211A3411ACD0D92EC44588BE55629690697",
+        "requiredProofValueEdges": 22,
+        "consumers": [
+          "Dubon2026.SourceEllipticCharTwo.char_two_sign_quotient_data"
+        ],
+        "sourceSha256": "596A048B1AE6B0E506168E74882DD3206A422A924AA0B283BD6792339E412B94"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceDeuringGoodModelDependencyAudit4Production7485.log",
+        "sha256": "3C5929838B04D51988FD3773BA400F34DE8D7372200550C60BDAD4231822FC53",
+        "requiredProofValueEdges": 8,
+        "consumers": [
+          "Dubon2026.SourceEllipticDeuring.exists_deuring_good_model"
+        ],
+        "sourceSha256": "F17DBC1D395075D92A92CA219C3AE63A69640F640D371A9940D920D234611606"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceDeuringGaloisFieldDependencyAudit3R2Production7485.log",
+        "sha256": "237759566C78E2C1EE88BEF78061A28753F17433BFF248A113824A77AE874F11",
+        "requiredProofValueEdges": 17,
+        "consumers": [
+          "Dubon2026.SourceEllipticDeuring.exists_S",
+          "Dubon2026.SourceEllipticDeuring.exists_three_torsion"
+        ],
+        "sourceSha256": "290AE19A0DD877C8699113D217DAABBACA3C090CBF31D7774ACBC039561AD532"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceDeuringInertiaDependencyAudit1Production7485.log",
+        "sha256": "04937F0DC7B195B130F299954F62BF8A70DEE042257494B90BDA284DAC293B61",
+        "requiredProofValueEdges": 6,
+        "consumers": [
+          "Dubon2026.SourceEllipticDeuring.eq_of_inertia_of_cube_eq",
+          "Dubon2026.SourceEllipticDeuring.val_eq_one_of_pow"
+        ],
+        "sourceSha256": "2103C8EF18356ADF6B10A13BE4097D35E4B4483B3E311FEC5F293C31E2C08BB6"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceDeuringFaithfulFieldDependencyAudit3Production7485.log",
+        "sha256": "6047FF2F7D2ADC04CF88DF0EE5421FA6A40D083F12A0E4E3808B221CB5C8A17D",
+        "requiredProofValueEdges": 12,
+        "consumers": [
+          "Dubon2026.SourceEllipticDivisionField.exists_faithful_deuring_good_model_field"
+        ],
+        "sourceSha256": "E569832005909BA7275F57C53828877784E09C0EE4F20622890AAE92DDC0DBE2"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceDeuringSpecializationDependencyAudit5Production7485.log",
+        "sha256": "A81218C21754C0BA31B80C4EFEBCFFA55635210DA06549F0B915F75F76392392",
+        "requiredProofValueEdges": 10,
+        "consumers": [
+          "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action_of_three_ne_zero"
+        ],
+        "sourceSha256": "4B6EFF966B017E94A2E1B1C7B2747ABE0081CCD252493B78C8CED5CE5E42FF44"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersDependencyAudit4R2Production7485.log",
+        "sha256": "DEABD3F4EBE0C6B51FD4B67C29C8B5D5F0ED93A2D28B153DA0A09A09FBA149DE",
+        "requiredProofValueEdges": 10,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.exists_char_two_modular_galois_orders_dvd_twelve"
+        ],
+        "sourceSha256": "F747B72DF36142BF0E71DA8AFB89AFF163DCE09C8B5B4035C6E8DCF34AF7A8C2"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoFourteenDependencyAudit2Production7485.log",
+        "sha256": "44D48AE64B1F445A70EF8AFDD553FF1CF1243579AB6E1611DF881AF903CDA714",
+        "requiredProofValueEdges": 7,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_place_fourteen_le_D_j_of_char_two"
+        ],
+        "sourceSha256": "65CF5901FBD9A31D5090E9FCBD3635BE942813FA1E01A740C8467306EF5559E7"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersProductionAudit7485.log",
+    "sha256": "F3777C86ECC5C0FF78AFEE58FA551B20BFC0D06489AF2B9728B10ABB74912A12",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-char-two-galois-orders-production-build-7485.log",
+    "aggregateSha256": "931CB9E1882D6396EE1263A17A2708B2592C10E4865B4D91403BDF1AB8CF5DBC",
+    "productionModules": 7485,
+    "incrementModules": 28,
+    "axiomChecks": 62,
+    "exhaustiveIncrementTheorems": 77,
+    "linterScopes": 28,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 77,
+    "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The actual modular places, coefficient fields, Gauss residue map, divisor orders, genera and Picard quotient retain their definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 77,
+      "scratchDistinct": 77,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 77,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceEllipticCharTwoStabilizerCoordinates",
+            "SourceEllipticCharTwoRootCounts",
+            "SourceEllipticCharTwoStabilizerCard"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership409For7485.log",
+            "sha256": "94CD5EC4E142F998A513886F603AA8E28E9420AF54E688951E688BA59682EF6C",
+            "sourceSha256": "FD964BDC3A80E4ABF495005C9868E2367DC8BAB60CFA0C9E7F315B331D640935"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticCharTwoNegation",
+            "SourceEllipticCharTwoSignQuotient",
+            "SourceEllipticCharTwoSignAction"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership410For7485.log",
+            "sha256": "040B500B927D243C18F73429EFBF7B0B2DE49F336B4F05C3C91E952BC8E85C83",
+            "sourceSha256": "84F19215B0B8226FAAFF4C2308F2E4C93173A39B59FAC095EDA61E2934E51235"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticDeuringInvariants",
+            "SourceEllipticDeuringIntegralParameter",
+            "SourceEllipticThreeTorsionFlex",
+            "SourceEllipticDeuringGoodModel"
+          ],
+          "count": 14,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership411For7485.log",
+            "sha256": "D8EF7CCC23C73A89CDC8D893C245BABDE14AF64BDEABA57880469DE79A35CF2B",
+            "sourceSha256": "79FC0BF427BB1718755D904EDDA4A47B498952FFA2AABC4A8EDB5F77BDF682E6"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticDeuringThreeTorsionR2",
+            "SourceEllipticDeuringCubicRootsR2",
+            "SourceEllipticDeuringGaloisFieldR2"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership412For7485.log",
+            "sha256": "7B301534BFF19EC77D848C2683FDAACC5FF8E7F0C49332233AE7C8B836F32A34",
+            "sourceSha256": "DEA53051574451710A9F7B4AD130B6E738A2DBB29C5E32C5098FB2E09B3386F2"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticDeuringInertia"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership413For7485.log",
+            "sha256": "82E5B06652035F8989885A96260E51B991694C92CAD14360CA8578E1E1C07E96",
+            "sourceSha256": "5D0B1BAC1BBC451B77FC16FFC7C5B32B08E4DEB805BE9286220FEF9D0B7B3A14"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticDeuringFaithfulModel",
+            "SourceEllipticDeuringGaloisModel",
+            "SourceEllipticDeuringFaithfulField"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership414For7485.log",
+            "sha256": "AE1A4A06908EFA297A55B560E27890CBF2DC3A2753C86297BECD9632FD9B0A3E",
+            "sourceSha256": "81789FEF6D10C76928223A5CE7FB940070D06121AAD9CFBDCCF27FAF805C5BE8"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticDeuringFaithfulTorsionModel",
+            "SourceEllipticDeuringSpecializationFieldPlace",
+            "SourceEllipticDeuringOfJSpecialization",
+            "SourceEllipticDeuringFaithfulSpecializationHom",
+            "SourceEllipticDeuringPrescribedInertiaAction"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership415For7485.log",
+            "sha256": "57AE9768387515A55FA2B95ED0E1DACE2BE8EC0B948D1A5375463FEBC54E7B8D",
+            "sourceSha256": "E28BA2368BD27FCFABB434E4C80D6B059E87B9721F094A049F038ECB0CF2BB38"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticCharTwoInertiaSign",
+            "SourceEllipticCharTwoEmbeddingKernel",
+            "SourceModularCharTwoNormalField",
+            "SourceModularCharTwoGaloisOrder"
+          ],
+          "count": 4,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership416For7485.log",
+            "sha256": "85AF85A07BFCFBF3A0BAA7F4A5EBF4B07A8171AF1B4C7AF8B281A508235CFEFD",
+            "sourceSha256": "237FEFCB984CF606BEC68B303CEE1199BBDDE88C83FE2642BA77F304BBFC6DE1"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularCharTwoStrongDifferent",
+            "SourceModularCharTwoFourteen"
+          ],
+          "count": 4,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership417For7485.log",
+            "sha256": "100EB44B8A81FBC622E89D3255BD20BA9C68E2A4A409E646621273B2712ED8AD",
+            "sourceSha256": "081E84D0CFDA7A2F247B830BC9058454E96BDC4B5FA4284196D816908CF8FA35"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersOwnership7485.log",
+        "sha256": "8310E0593B29EC54B642411B1B12D22CEC9EFFF0EB1D719DEDEE402BB4302038",
+        "sourceSha256": "75C874E62DE0329D60D18B1E1C46CF6A69D39658E05CFFFB856AF7EBE78411B9"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-064854-284.log",
+        "sha256": "15F1BED89A8C9DEDB4C173C643FA564E770D0BE612C063DBCB297017AE0C6048"
+      }
+    },
+    "scratchToProductionCountReason": "All 77 distinct names from 77 exhaustive scratch checks are retained: 77 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The characteristic-two weighted exceptional-fiber census and genus/Picard assembly remain required. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation also remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

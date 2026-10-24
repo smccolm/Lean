@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> wild modular good reduction -> wild genus equality -> exceptional-fiber census and differential bounds -> faithful inertia specialization -> integral good-model coordinate cocycle",
+  "precedingScratchReceipts": {
+    "source-wild-derivative-2-scratch-receipt.json": "0FA1DF81B0088025C7DDB3DA99689718470BB61D430E4BC7361B9481D2589D91"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticIntegralGoodModelChange.lean",
+      "sha256": "325738CA0769D0FF4D64C8F49CF0643C02EC38BB537C242DBE14431D4D3BB70C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticTorsionIntegralCoordinates.lean",
+      "sha256": "A38B0F00F2738F99F242AA22F196755D34FE4C0FF4519F5EBBB841A685311AC9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticIntegralInertiaCocycle.lean",
+      "sha256": "74E53B88405301B56975A8F25578D06EB745CC91196CA27FF5A0AE77C938905F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticInertiaConjugate.lean",
+      "sha256": "06B9161228AB564B83B862CDD56B1B4849DF5A3CC7BFC481D4D08F2BDA12FB82"
+    }
+  ],
+  "routeAdjustment": "Retain the existing discriminant argument for unit scaling. Adapt only the three monic polynomial identities, use the already proved local integral-closure bridge, and assemble the actual integral inertia cocycle without unit-two/three assumptions. No minimal-model or general integral-model framework is introduced.",
+  "discharged": "The actual change between two good elliptic models descends to the valuation ring in every residue characteristic. Unit scaling is derived from discriminants; a monic quartic and two monic quadratics give the translation parameters. The actual Galois coordinate cocycle consequently has an integral lift and stabilizes the actual residue model without assumptions that two or three are units.",
+  "remaining": "Actual wild good-model existence, stabilizer image and exceptional-fiber census, and stronger wild ramification bounds remain required for genus equality in characteristics two and three. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\wild-integral-change-route-390.json",
+    "sha256": "C26CC5FA24EC17E6624BDE80F7103B781DAAC5740D12108483A24DA9F10906FD",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> modular good reduction in characteristics two and three -> wild genus equality -> exceptional-fiber census and differential bounds -> faithful inertia specialization -> integral good-model coordinate cocycle",
+      "reuseChecked": [
+        "SourceEllipticIntegralGoodModelChange already derives unit scaling from the discriminant, but uses invertibility of two and three to solve the translations.",
+        "SourceEllipticTorsionIntegralCoordinates.mem_valuationSubring_of_integral already supplies the exact native valuation-ring integral-closure bridge.",
+        "Fresh TauCeti IntegralModel.lean at e177885ee120f8074a7610c3e60571ab00b20004, verified Git blob and SHA-256, supplies a shorter monic quartic for r and monic quadratics for s and t in every characteristic.",
+        "TauCeti VariableChange/Galois.lean concerns local constancy of algebraic coordinate conjugation; it does not establish integral descent. MinimalModel/Basic.lean adds minimal-model machinery unnecessary for two good models.",
+        "The frozen FLT proof establishes the same conclusion by forcing both three and four into the nonunit ideal. The quartic identity removes that longer valuation argument.",
+        "Existing conjugate-model identities and residue-cocycle multiplication are independent of residue characteristic and can consume the new integral descent directly."
+      ],
+      "selectedRoute": "Retain the existing discriminant argument for unit scaling. Adapt only the three monic polynomial identities, use the already proved local integral-closure bridge, and assemble the actual integral inertia cocycle without unit-two/three assumptions. No minimal-model or general integral-model framework is introduced.",
+      "externalEvidence": "wild-reuse-20261024-390/verified-candidates.json",
+      "boundary": "Good-model existence and the actual wild stabilizer/census and ramification bounds remain separate necessary inputs. DUB-17--20 remain open, 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "additionalRenewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\verified-candidates.json",
+    "sha256": "F30614E180BD2370FFA86973F32F730D5453434EDDAE4695024F9AE675265F22",
+    "commit": "e177885ee120f8074a7610c3e60571ab00b20004",
+    "upstreamBuildVerified": false
+  },
+  "externalReference": {
+    "repository": "https://github.com/TauCetiProject/TauCeti",
+    "commit": "e177885ee120f8074a7610c3e60571ab00b20004",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "TauCeti/AlgebraicGeometry/EllipticCurve/VariableChange/Galois.lean",
+        "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\VariableChange\\Galois.lean.txt",
+        "gitBlob": "36eb8a9d38711fcf820dc9a46c908463e1bf1116",
+        "sha256": "965D76EB1CD53439A6CE75FA38BEC0537B69A227D5A4AD06C0B8FF0ED70656F4",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/VariableChange/Galois.lean"
+      },
+      {
+        "path": "TauCeti/AlgebraicGeometry/EllipticCurve/MinimalModel/Basic.lean",
+        "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\MinimalModel\\Basic.lean.txt",
+        "gitBlob": "1ebd71a9c5ef5db021f2b3be6a0e3cce35940074",
+        "sha256": "4CFC82B37EC34067A89136E4D2B176EFEA453DCECC8F158582F380CA46285868",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/MinimalModel/Basic.lean"
+      },
+      {
+        "path": "TauCeti/AlgebraicGeometry/EllipticCurve/IntegralModel.lean",
+        "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\IntegralModel.lean.txt",
+        "gitBlob": "1b85012af8d1e7e650fe4fab1a07786a3354a2ed",
+        "sha256": "83CE142D4B4DFB73E98DBF05AD94C1C1D1AD3756D7B301AF4C4ADEB6F7D7CB2A",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/IntegralModel.lean"
+      }
+    ],
+    "role": "IntegralModel supplies the monic quartic and quadratic argument adapted to local actual valuation-ring models. The local discriminant and integral-closure bridges are reused. VariableChange/Galois concerns local constancy; MinimalModel/Basic adds unnecessary minimal-model theory. No external build or import is claimed."
+  }
+}

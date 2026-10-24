@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> wild modular good reduction -> genus equality -> characteristic-three order-six/seven bound -> rational wild different bound on the actual auxiliary Galois field -> differential-order transfer through an unramified place",
+  "precedingScratchReceipts": {
+    "source-rational-wild-differentials-3-scratch-receipt.json": "0181806CB1F1724397B283FA126D0E058F6479FFF4EBC936A8B680163C842935"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveUnramifiedDifferentialOrder.lean",
+      "sha256": "D46187E3D98C642B1BE11389EBFA5EEE8C4D519A44929FC7BF68A610EF367827"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveExactDerivativeOrder.lean",
+      "sha256": "DDBEC9CA3FE003784331E009920F73D2D6644EDFB707029E1624773E84A90A36"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalCoordinateEmbeddingTower.lean",
+      "sha256": "4237BB557B57102F67F4EB775B58A28E180A07D3C7CC269DA0E78736B987D271"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCharThreeNormalField.lean",
+      "sha256": "89FD39B7CEDAA91303F9FE093765D782893FA3E995CD7759C97F6F9E0204B5CE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceNormalFieldCoordinateOrder.lean",
+      "sha256": "310B93D678B7ED7FA06477FBF480E8B7DA03F9739862D20EC446C6F737E31483"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCoefficientLocalDifferentials.lean",
+      "sha256": "6A9EAC48F5FEBA59A6E3586ACEE7C3D326D18011E459331AFDF55F1673254328"
+    }
+  ],
+  "nativeReuse": {
+    "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Etale\\Kaehler.lean",
+    "sha256": "DF1347DD5B5BCCC7F57FC8241D6F738F35120A82062A27236C1EB402A47D1405",
+    "theorem": "KaehlerDifferential.tensorKaehlerEquivOfFormallyEtale"
+  },
+  "routeAdjustment": "Prove the differential order-zero formula only for an actual order-one parameter, then adapt the already proved exact pullback-order argument to every characteristic. Use it on the actual auxiliary-field place after deriving ramification index one from the order-dividing-six result and the original order-six place.",
+  "discharged": "On the actual modular coefficient field in characteristic three, every j-order-six place has differential order at least seven. The actual auxiliary finite Galois field, modular embedding, positive order divisibility by six and upper place are constructed. Order scaling forces ramification index one. The order-one parameter derivative formula in all characteristics and exact differential pullback transfer the full wild bound. All local geometric premises are derived; the algebraic closure is chosen internally.",
+  "remaining": "The characteristic-three exceptional-fiber census remains necessary for the wild genus comparison. Characteristic-two good models and auxiliary field, the order-twelve/fourteen estimate, wild genus equality, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\unramified-wild-transfer-route-401.json",
+    "sha256": "4C6B00E475DF9AB80F69DF699AC317055A9CA5BC5722D5DDDD8E503197750AF3",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> wild modular good reduction -> genus equality -> characteristic-three order-six/seven bound -> rational wild different bound on the actual auxiliary Galois field -> differential-order transfer through an unramified place",
+      "reuseChecked": [
+        "Scope 400 proves the full rational-function Galois wild different bound with every local geometric premise derived.",
+        "Existing SourceCurveUnramifiedDifferentialOrder proves the exact pullback identity but uses a characteristic-zero derivative-order theorem. Its valuation and Kaehler pullback argument is valid in every characteristic once the mapped order-one parameter has differential order zero.",
+        "Existing SourceCurveExactDerivativeOrder.differentialCoeff_D_unit_mul_zpow is valid in every characteristic. At exponent one it gives the required formula directly; no general tame derivative-order theorem is necessary.",
+        "Scope 397 OrdGe and unequal-order addition, together with the existing integral derivative theorem, show that the derivative of the unit-times-uniformizer parameter is a unit.",
+        "Existing SourceCurveRegularCoordinate and SourceCurveUnramifiedChart would require an additional formally-unramified chart premise; the order-one unit formula is the shorter route for this consumer."
+      ],
+      "selectedRoute": "Prove the differential order-zero formula only for an actual order-one parameter, then adapt the already proved exact pullback-order argument to every characteristic. Use it on the actual auxiliary-field place after deriving ramification index one from the order-dividing-six result and the original order-six place.",
+      "boundary": "The actual characteristic-three place lift, unramifiedness and modular derivative bound must still be assembled. The exceptional census and wild genus equality remain required."
+    }
+  },
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_seven_le_ordDiff_D_jqModC_of_ord_eq_six.lean.txt",
+    "sha256": "30B519239771E34F77E2878AC3FEAAD5404F8C5B257714C6B5911B611E40CC87",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The source strong wild estimate is adapted to the actual local modular field. Existing coordinate-preserving Galois towers and place restriction replace the longer adjoin transport, and the existing pullback proof is extended using the order-one derivative formula. No upstream build or import is claimed."
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

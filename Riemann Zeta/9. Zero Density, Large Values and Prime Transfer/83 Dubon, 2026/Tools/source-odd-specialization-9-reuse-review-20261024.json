@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> wild modular good reduction -> characteristic-three genus equality -> exceptional-fiber census and differential bounds -> actual faithful prescribed elliptic specialization",
+  "precedingScratchReceipts": {
+    "source-wild-integral-change-3-scratch-receipt.json": "C39C10FAC270A6DE248D32C624FF430F1D8E462B177D5A740D5C1D18F9D7F62E"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticFaithfulTorsionModel.lean",
+      "sha256": "2E7281ED7D2E4EE4AFF2F2841C2E205FE97E2D498FA4F94096694AAAA28DB00A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticSpecializationFieldPlace.lean",
+      "sha256": "85CBA5C2E0EDD1404A2A138C43329EFCE22C5A334AFEFF4761AEA2231977D7EB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticPrescribedInertiaAction.lean",
+      "sha256": "803AED91E9B1247446A465F159B513B98190A74AE6663EBA1EF3B1335CAD6DA8"
+    }
+  ],
+  "routeAdjustment": "Reuse all existing mathematical constructions. Provide successors using the proved all-characteristic integral cocycle, then instantiate the existing faithful Legendre model under two nonzero and obtain the actual prescribed-curve inertia action. A characteristic-three specialization will supply the exact next census input.",
+  "discharged": "For every permitted level, an actual finite Galois extension, full torsion model, good model at the prescribed j-value, faithful inertia action on the prescribed elliptic curve and equivariant injective torsion reduction are constructed when two is nonzero. The characteristic-three consumer has no assumed specialization, good-model or inertia-action witnesses. Existing Legendre field, torsion reduction, place and equal-j proofs are reused with the proved all-characteristic integral cocycle.",
+  "remaining": "Characteristic-two model existence, full wild stabilizer image, exceptional-fiber census and stronger wild differential bounds remain required. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\odd-specialization-route-391.json",
+    "sha256": "C87809F098152F533081A387BD2B18D7C7E8777D0C24D35E5374C78718877D31",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> wild good reduction -> characteristic-three genus equality -> exceptional-fiber census and ramification -> actual faithful prescribed elliptic specialization",
+      "reuseChecked": [
+        "The existing finite Galois Legendre model and its faithful generators require only two nonzero, so they already cover characteristic three.",
+        "Existing torsion reduction, conjugate-model identities, residue cocycle multiplication, rational specialization places and equal-j classification are characteristic independent.",
+        "The only earlier restriction in this chain came from unit-two/three coordinate descent. Scope 390 has discharged it.",
+        "The renewed TauCeti IntegralModel quartic argument avoids adding a new minimal-model framework."
+      ],
+      "selectedRoute": "Reuse all existing mathematical constructions. Provide successors using the proved all-characteristic integral cocycle, then instantiate the existing faithful Legendre model under two nonzero and obtain the actual prescribed-curve inertia action. A characteristic-three specialization will supply the exact next census input.",
+      "boundary": "Characteristic-two good-model existence still needs its separate Deuring branch. Full wild stabilizer image, census and stronger differential bounds remain required. DUB-17--20 open, 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "additionalRenewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\verified-candidates.json",
+    "sha256": "F30614E180BD2370FFA86973F32F730D5453434EDDAE4695024F9AE675265F22",
+    "commit": "e177885ee120f8074a7610c3e60571ab00b20004",
+    "upstreamBuildVerified": false
+  },
+  "externalReference": {
+    "repository": "https://github.com/TauCetiProject/TauCeti",
+    "commit": "e177885ee120f8074a7610c3e60571ab00b20004",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "TauCeti/AlgebraicGeometry/EllipticCurve/VariableChange/Galois.lean",
+        "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\VariableChange\\Galois.lean.txt",
+        "gitBlob": "36eb8a9d38711fcf820dc9a46c908463e1bf1116",
+        "sha256": "965D76EB1CD53439A6CE75FA38BEC0537B69A227D5A4AD06C0B8FF0ED70656F4",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/VariableChange/Galois.lean"
+      },
+      {
+        "path": "TauCeti/AlgebraicGeometry/EllipticCurve/MinimalModel/Basic.lean",
+        "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\MinimalModel\\Basic.lean.txt",
+        "gitBlob": "1ebd71a9c5ef5db021f2b3be6a0e3cce35940074",
+        "sha256": "4CFC82B37EC34067A89136E4D2B176EFEA453DCECC8F158582F380CA46285868",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/MinimalModel/Basic.lean"
+      },
+      {
+        "path": "TauCeti/AlgebraicGeometry/EllipticCurve/IntegralModel.lean",
+        "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\IntegralModel.lean.txt",
+        "gitBlob": "1b85012af8d1e7e650fe4fab1a07786a3354a2ed",
+        "sha256": "83CE142D4B4DFB73E98DBF05AD94C1C1D1AD3756D7B301AF4C4ADEB6F7D7CB2A",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/IntegralModel.lean"
+      }
+    ],
+    "role": "The previously audited IntegralModel adaptation in scope 390 supplies the all-characteristic integral cocycle consumed here. Existing local Legendre good models, faithful generators, torsion reduction, actual places and residue transport provide the remaining mathematical inputs. No external build or import is claimed."
+  }
+}

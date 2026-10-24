@@ -1,0 +1,62 @@
+{
+  "commit": "e177885ee120f8074a7610c3e60571ab00b20004",
+  "verifiedBlobs": [
+    {
+      "path": "TauCeti/AlgebraicGeometry/Curves/StableReduction/Picard/Torsion/Basic.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-20261024-380\\TauCeti\\AlgebraicGeometry\\Curves\\StableReduction\\Picard\\Torsion\\Basic.lean.txt",
+      "gitBlob": "6e30ea0416bdf036537e00e35d357e5a5e39f92d",
+      "sha256": "1A1000059FAE224343B2ED63418DB0314CEC93867D41BD5F87CAD23BC7083F7A",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/Curves/StableReduction/Picard/Torsion/Basic.lean"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/Curves/StableReduction/Picard/Torsion/Genus.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-20261024-380\\TauCeti\\AlgebraicGeometry\\Curves\\StableReduction\\Picard\\Torsion\\Genus.lean.txt",
+      "gitBlob": "ba63148a755937af5f6704ccbf8859e5504a6c67",
+      "sha256": "7B37BA2A1A173769B6D38EAE79CAE88726AA7665FC77DCC76330063D8E32C0CF",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/Curves/StableReduction/Picard/Torsion/Genus.lean"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/Curves/StableReduction/Picard/Basic.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-20261024-380\\TauCeti\\AlgebraicGeometry\\Curves\\StableReduction\\Picard\\Basic.lean.txt",
+      "gitBlob": "c6c94fa11aba6b50d60ad98708bd7d813962d75b",
+      "sha256": "54BA7042F469B7BF7C2EDB41543D3C2D8DA77822FF724BF6B508B58E616B9BCD",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/Curves/StableReduction/Picard/Basic.lean"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/Curves/Genus/BaseChange.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-20261024-380\\TauCeti\\AlgebraicGeometry\\Curves\\Genus\\BaseChange.lean.txt",
+      "gitBlob": "c3c2c116860e95d83a10eebf55fae7c76c0774b8",
+      "sha256": "6346ADB9D1B7BB75853CD5D46D02CCAC14B613A29950D1F98E45C9A60F1B0753",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/Curves/Genus/BaseChange.lean"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/TorsionReduction.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-20261024-380\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\Affine\\Point\\TorsionReduction.lean.txt",
+      "gitBlob": "16ab5e517ea4cbdfc3511120e8fb2bfdb3a813fa",
+      "sha256": "3E0ECC665DC8F7114C18A270EFA16D8F38EDC9FE31CC7F618524538F3277C04B",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/Affine/Point/TorsionReduction.lean"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/TateModule/GoodReduction.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-20261024-380\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\TateModule\\GoodReduction.lean.txt",
+      "gitBlob": "5727376ac5befb906f730149f1120158c979183e",
+      "sha256": "212DB621E3828180A6ACF9F3FF1AB9E9D39AF5513822492DE6F12DF690069B4E",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/TateModule/GoodReduction.lean"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/Geometrically/Connected.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-20261024-380\\TauCeti\\AlgebraicGeometry\\Geometrically\\Connected.lean.txt",
+      "gitBlob": "5e51eb8afca94027c375da4073039d2879559884",
+      "sha256": "17A07F588E1F142BEE17B1C20113C4211183145386D526B606616A887B5EDAF0",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/Geometrically/Connected.lean"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/MinimalModel/PotentialGoodReduction.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-20261024-380\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\MinimalModel\\PotentialGoodReduction.lean.txt",
+      "gitBlob": "7d9fd0f78784d4419438932e8699d9e0d3d2b542",
+      "sha256": "F593C37F4740D56CB4413C96EF88E040F4FA4576BF744AE43D49D0EE4045DF59",
+      "url": "https://github.com/TauCetiProject/TauCeti/blob/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/MinimalModel/PotentialGoodReduction.lean"
+    }
+  ],
+  "upstreamBuildVerified": false
+}

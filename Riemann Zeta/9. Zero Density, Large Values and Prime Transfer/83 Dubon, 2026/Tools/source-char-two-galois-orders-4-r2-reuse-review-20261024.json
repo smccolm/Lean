@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "characteristic-two genus/Picard -> strong wild differential bound -> finite Galois modular field with positive j-orders dividing twelve -> actual Deuring inertia modulo elliptic sign",
+  "precedingScratchReceipts": {
+    "source-char-two-sign-3-scratch-receipt.json": "00ACBFC3CA3800FC096D3C7461AFEF7B68D767F2C932D155D040DCAC6D3B833C",
+    "source-deuring-specialization-5-scratch-receipt.json": "6AD9FFD9460B2226013309126CDA5C16B7596C7875DD2570A968030311B811F3"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticFullTorsionModularEmbeddings.lean",
+      "sha256": "156F6DA60D85EDFE11E3AFD864C8F9DAE47A7C75E4749E5273F290DF69DA673B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticTorsionSignSubgroups.lean",
+      "sha256": "5C39914461E2E25081B6420C99BBA2E50D15F655CF0A54542A53076810A0EFF1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCoordinateEmbeddingFixedFieldMap.lean",
+      "sha256": "C5BED2A6845502371A762D6B9E17C21400C004BF7A58C35040A67FB0EFE73901"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceNormalFieldCoordinateOrder.lean",
+      "sha256": "310B93D678B7ED7FA06477FBF480E8B7DA03F9739862D20EC446C6F737E31483"
+    }
+  ],
+  "routeAdjustment": "Compose actual inertia with the order-twelve sign quotient, transfer its kernel through the existing modular embedding correspondence, and reuse the normal fixing-field/order theorem. Do not require the stronger full-image census first.",
+  "discharged": "The actual characteristic-two modular coefficient field embeds in an actual finite Galois extension of its original j-coordinate field in which every positive j-order divides twelve. The Deuring inertia action composed with the order-twelve sign quotient fixes actual modular embeddings through its kernel. Existing normal fixing-field and place-order theorems discharge all auxiliary field and ramification premises.",
+  "remaining": "The characteristic-two weighted exceptional census and genus/Picard assembly, followed by original arithmetic-action comparison and automorphy, remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\char-two-orders-route-416.json",
+    "sha256": "1C694F2826BC6A2E86E4B0113DE33B643BCAB915CACDB56D55BFE6372301B0B9",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "characteristic-two genus/Picard -> strong wild differential bound -> finite Galois modular field with positive j-orders dividing twelve -> actual Deuring inertia modulo elliptic sign",
+      "reuseChecked": [
+        "The actual Deuring prescribed inertia action and the existing characteristic-two stabilizer sign quotient give the kernel action directly.",
+        "Full inertia-image equality and cyclic specialization are unnecessary for the auxiliary order bound; they remain necessary for the later weighted census and are deferred to that chain.",
+        "Existing subgroup_map_eq_of_torsion_sign, actual full-torsion modular embedding correspondence, coordinateEmbeddingFixingField and normal_coordinate_order_dvd_of_inertia_kernel already provide all remaining steps."
+      ],
+      "selectedRoute": "Compose actual inertia with the order-twelve sign quotient, transfer its kernel through the existing modular embedding correspondence, and reuse the normal fixing-field/order theorem. Do not require the stronger full-image census first.",
+      "assumptionsToDischarge": "Construct an actual finite Galois extension containing the original modular coefficient field with every positive j-order dividing twelve, from characteristic two and invertible level alone.",
+      "boundary": "The order-twelve strong differential bound and weighted exceptional census must still yield characteristic-two genus/Picard preservation. Original arithmetic-action comparison and automorphy remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_isGalois_ord_jqModC_dvd_twelve_of_char_two.lean.txt",
+    "sha256": "EB64EEB9226FA3337D791F9685FC320F8B726303610C62C663CAF099DE0598FE",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The source auxiliary-field contract is realized with the proved Deuring inertia and sign quotient. Existing modular embeddings and normal fixed-field order results avoid constructing full inertia-image and cyclic-census infrastructure first. No external build or import is claimed."
+  },
+  "preservedDependencyAuditCorrection": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\char-two-orders-416-dependency-correction.json",
+    "sha256": "361E7FFF77216DD66F642C1E4A41B6DD17226BAE73BFD21D58339943FA3F744D"
+  }
+}

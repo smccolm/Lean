@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "wild modular good reduction -> characteristic-three genus equality -> exceptional-fiber census -> actual modular place orders equal cyclic-subgroup orbit sizes -> full-inertia specialization and actual modular embedding correspondence",
+  "precedingScratchReceipts": {
+    "source-char-three-cubic-count-4-scratch-receipt.json": "55E4053BD2CF041F17ECF250BFA11AE20ED6B1D86853CEDEFEBCBF009A9025B3"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticCharThreeCyclicSpecialization.lean",
+      "sha256": "4FF6D992113FA0DAAA90C3AE4A087346FD134898D4F7311E39846EE8BA9CB8FF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticFullTorsionModularEmbeddings.lean",
+      "sha256": "156F6DA60D85EDFE11E3AFD864C8F9DAE47A7C75E4749E5273F290DF69DA673B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticCyclicSpecializationOrbits.lean",
+      "sha256": "2099A3AAEA11435F78DAE4FF2EF62788B13D96FABFD3AA3011EB4D2BB8F2FC60"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticFiniteRootOrbitComparison.lean",
+      "sha256": "30194C8DED843F291EC4F8D63EECAFDFC16D2CC419FA6E12939A585D77525B7B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalCoordinatePlaceOrbits.lean",
+      "sha256": "BAD4A43DD7E4074AC73F25362E8CA1F0D55E1580FADA029356782728B9669514"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalCoordinateFiberSurjectivity.lean",
+      "sha256": "A3F52B42FA1E51DF8968EE5C047A12BDAC7608BC52607380F02BF38DF02A2CB9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalEmbeddingFiberOrder.lean",
+      "sha256": "C7D1DEDC1D0C07DBF8AC99B713B0749FD95DDD639B6A6BA020076741FECAC097"
+    }
+  ],
+  "nativeReuse": {
+    "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finite\\Card.lean",
+    "sha256": "6AC99AB8AD03BF2E65C2B41A8FB6220B8E9CD3DCB57D6420533D7F2EF8F02334",
+    "theorem": "Nat.card_congr"
+  },
+  "routeAdjustment": "Reflect Galois orbits directly through the existing modular-embedding equivalence, combine it with actual characteristic-three cyclic specialization, and reuse the existing all-characteristic place restriction and fiber-order theorems. Retain the exact actual cyclic-subgroup relation and modular place objects.",
+  "discharged": "The actual characteristic-three exceptional cyclic subgroups surject onto the actual modular positive-j places. Equality is exactly the full stabilizer relation, and each normalized j order is its relation-class cardinality. The finite Galois field, good model, torsion, full inertia, cyclic specialization and actual modular embeddings are constructed. Existing all-characteristic restriction, fiber surjectivity and order-cardinality theorems discharge the place data.",
+  "remaining": "The six-action stabilizer classification and the weighted census still must be applied to these actual places. Characteristic-three genus equality, the characteristic-two good-model and strong-different chain, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\char-three-place-census-route-404.json",
+    "sha256": "BB5D8740377ABB7AD758C13059196E83C932B8189AE78A736A7D583199272724",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "wild modular good reduction -> characteristic-three genus equality -> exceptional-fiber census -> actual modular place orders equal cyclic-subgroup orbit sizes -> full-inertia specialization and actual modular embedding correspondence",
+      "reuseChecked": [
+        "SourceEllipticCharThreeCyclicSpecialization already constructs the actual good model, full inertia image and equivariant cyclic specialization in characteristic three.",
+        "SourceEllipticFullTorsionModularEmbeddings already constructs the literal modular-embedding equivalence and its Galois naturality in all characteristics.",
+        "SourceEllipticCyclicSpecializationOrbits.cyclic_specialization_orbit_iff is characteristic independent and consumes the constructed full inertia image directly.",
+        "SourceEllipticFiniteRootOrbitComparison reflects orbits by constructing the actual image cyclic subgroup and applying equivalence injectivity. The same short proof applies directly to modular embeddings, avoiding reconstruction of the intermediate root data.",
+        "SourceRationalCoordinatePlaceOrbits, SourceRationalCoordinateFiberSurjectivity and SourceRationalEmbeddingFiberOrder already give restriction-orbit equality, fiber surjectivity and normalized fiber cardinality in every characteristic.",
+        "The existing prescribed-fiber assembly is restricted to characteristic at least five because of its good-model constructor. Its final valuation and equivalence steps are reusable after substituting the constructed characteristic-three model; duplicating the long retained witness signatures is unnecessary."
+      ],
+      "selectedRoute": "Reflect Galois orbits directly through the existing modular-embedding equivalence, combine it with actual characteristic-three cyclic specialization, and reuse the existing all-characteristic place restriction and fiber-order theorems. Retain the exact actual cyclic-subgroup relation and modular place objects.",
+      "assumptionsToDischarge": "The final characteristic-three place classifier must construct the finite Galois field, good model, full inertia image, specialization and embedding equivalences. Its output must be a surjective map to the actual j=0 places with equality exactly the stabilizer relation and each j order exactly its relation-class cardinality.",
+      "boundary": "The six-action stabilizer classification and weighted finite census still have to be applied to these actual places before characteristic-three genus equality is claimed. DUB-17--20 remain open; acceptance stays 16/20."
+    }
+  },
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_orbitMap_cyclicAddSubgroup_places_modularFunctionFieldFullC.lean.txt",
+    "sha256": "0D43D1C7B0594FD55771822801D2A900C8F06C81379D40C703E96DC08964F3C0",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The actual source orbit-to-place classifier is adapted using the already constructed characteristic-three specialization. Direct reflection through the modular embedding equivalence avoids rebuilding intermediate root witnesses. Existing all-characteristic place theorems are reused. No upstream build or import is claimed."
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

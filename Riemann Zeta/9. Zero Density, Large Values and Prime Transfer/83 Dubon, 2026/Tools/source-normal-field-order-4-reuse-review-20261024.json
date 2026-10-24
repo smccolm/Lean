@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> characteristic-three modular good reduction -> genus equality -> wild different bound at order six -> actual auxiliary finite Galois extension with positive j orders dividing six",
+  "precedingScratchReceipts": {
+    "source-coordinate-fixing-field-4-scratch-receipt.json": "EA2E7F3C0DDAD953F53CF74BF39B9EF2CA1165D2B0F04DAF1E228FFDECF0429F"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalCoordinateEmbeddingTower.lean",
+      "sha256": "4237BB557B57102F67F4EB775B58A28E180A07D3C7CC269DA0E78736B987D271"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalCoordinateFiberSurjectivity.lean",
+      "sha256": "A3F52B42FA1E51DF8968EE5C047A12BDAC7608BC52607380F02BF38DF02A2CB9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalEmbeddingFiberOrder.lean",
+      "sha256": "C7D1DEDC1D0C07DBF8AC99B713B0749FD95DDD639B6A6BA020076741FECAC097"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalEmbeddingStabilizerCardinality.lean",
+      "sha256": "6409DB696DCA73B9CEB38C1D0BB819002903209C10F125E5A70D8B34F377B914"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRatFuncGaloisCoordinate.lean",
+      "sha256": "874A93F7450C9512D9AC698D67832AC74CE52A1A4DB0BED1510BF1CB3CF4B488"
+    }
+  ],
+  "routeAdjustment": "Combine the existing actual place-fiber formulas with native normal-field range and group-index divisibility. Avoid rebuilding the external generic place/Galois framework. Specialize the result to the constructed characteristic-three normal field.",
+  "discharged": "The actual characteristic-three modular coefficient field embeds into a finite Galois extension of its original j-coordinate field in which every positive j order divides six. Existing actual place-restriction surjectivity, embedding-fiber order and inertia-orbit formulas identify each normalized order. Native normal-field range and group-index divisibility turn the constructed three-point inertia quotient into the required divisibility. Every field, embedding, place and action input is derived on the actual consumer.",
+  "remaining": "The stronger wild different bound, characteristic-three exceptional census and genus equality remain required. Characteristic-two good reduction and original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\normal-field-order-route-396.json",
+    "sha256": "35EFEDEF511923CFA76861FF25D695BA0BF55DDA04FC229D2EF90AD09CC06E14",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> characteristic-three good reduction -> genus equality -> wild different bound at order six -> actual auxiliary normal field with positive j orders dividing six",
+      "reuseChecked": [
+        "SourceRationalCoordinateFiberSurjectivity constructs all lower places from embeddings of a fixed upper place.",
+        "SourceRationalEmbeddingFiberOrder identifies each literal normalized order with the cardinality of its actual embedding fiber.",
+        "SourceRationalEmbeddingStabilizer identifies that fiber with the actual inertia orbit, and coordinateEmbeddingAction already supplies its action.",
+        "Native AlgHom.fieldRange_of_normal places every coordinate-preserving normal-field embedding in the same intermediate field.",
+        "Native stabilizer index, kernel index, index divisibility and subgroup cardinality give orbit divisibility from the proved kernel action.",
+        "Scope 395 constructs the actual finite normal field, original modular embedding, upper place and homomorphism into the group of order six."
+      ],
+      "selectedRoute": "Combine the existing actual place-fiber formulas with native normal-field range and group-index divisibility. Avoid rebuilding the external generic place/Galois framework. Specialize the result to the constructed characteristic-three normal field.",
+      "boundary": "The resulting order-dividing-six field serves the stronger wild different bound. That bound, the census and genus equality still need their actual consumers."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "additionalRenewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\verified-candidates.json",
+    "sha256": "F30614E180BD2370FFA86973F32F730D5453434EDDAE4695024F9AE675265F22",
+    "commit": "e177885ee120f8074a7610c3e60571ab00b20004",
+    "upstreamBuildVerified": false
+  },
+  "externalReference": {
+    "repository": "https://github.com/TauCetiProject/TauCeti",
+    "commit": "e177885ee120f8074a7610c3e60571ab00b20004",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "TauCeti/AlgebraicGeometry/EllipticCurve/VariableChange/Galois.lean",
+        "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\VariableChange\\Galois.lean.txt",
+        "gitBlob": "36eb8a9d38711fcf820dc9a46c908463e1bf1116",
+        "sha256": "965D76EB1CD53439A6CE75FA38BEC0537B69A227D5A4AD06C0B8FF0ED70656F4",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/VariableChange/Galois.lean"
+      },
+      {
+        "path": "TauCeti/AlgebraicGeometry/EllipticCurve/MinimalModel/Basic.lean",
+        "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\MinimalModel\\Basic.lean.txt",
+        "gitBlob": "1ebd71a9c5ef5db021f2b3be6a0e3cce35940074",
+        "sha256": "4CFC82B37EC34067A89136E4D2B176EFEA453DCECC8F158582F380CA46285868",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/MinimalModel/Basic.lean"
+      },
+      {
+        "path": "TauCeti/AlgebraicGeometry/EllipticCurve/IntegralModel.lean",
+        "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\IntegralModel.lean.txt",
+        "gitBlob": "1b85012af8d1e7e650fe4fab1a07786a3354a2ed",
+        "sha256": "83CE142D4B4DFB73E98DBF05AD94C1C1D1AD3756D7B301AF4C4ADEB6F7D7CB2A",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/IntegralModel.lean"
+      }
+    ],
+    "role": "The previously audited IntegralModel adaptation in scope 390 supplies the all-characteristic integral cocycle consumed here. Existing local Legendre good models, faithful generators, torsion reduction, actual places and residue transport provide the remaining mathematical inputs. No external build or import is claimed."
+  },
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_isGalois_ord_jqModC_dvd_six_of_char_three.lean.txt",
+    "sha256": "C0A6C8A0BDA955A3D676E0C7B1393367AFC58768B3072593147B051624C0CE03",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The source orbit-index divisibility argument is adapted directly using native group-index theorems. Existing local actual place-fiber formulas and native normal-field range replace the external generic Galois/place framework. No external import is added. No external build is claimed."
+  },
+  "consumerScope": "The exact auxiliary finite Galois field over the original j-coordinate field and its all-positive-place order-dividing-six property are proved. The source wild different estimate and genus equality are not claimed."
+}

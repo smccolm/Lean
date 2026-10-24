@@ -1,0 +1,64 @@
+{
+  "recordedUTC": "2026-10-24T09:29:40.405012+00:00",
+  "files": [
+    {
+      "path": "Tools\\curve-reuse-20261024-380\\search-results.json",
+      "sha256": "3C1B1B35E9540AFD99C53F8E357A5B26316DD7876A50051C7098BAB0FC5E38D1"
+    },
+    {
+      "path": "Tools\\curve-reuse-20261024-380\\verified-candidates.json",
+      "sha256": "FAB4467E9D997CC3E48B45D51A09D508344DFFADCFC3D595629A877263FE2A12"
+    },
+    {
+      "path": "Tools\\curve-reuse-20261024-380\\TauCeti-head.json",
+      "sha256": "541558966D94A4C0979BC8EF3297DD1FAE4812A38507F8A279575E94F32302F7"
+    },
+    {
+      "path": "Tools\\curve-reuse-20261024-380\\fermats-last-theorem-head.json",
+      "sha256": "E99D3522ADE3B6B1821C0E081B9D67DE169CFF212B4BA409AD9EF510A50BA17F"
+    },
+    {
+      "path": "Tools\\curve-reuse-20261024-380\\TauCeti-tree.json",
+      "sha256": "38D1C94DCBD674D5862BECEDA68577D3CA7853A83D327D0AE912969E58C78F0C"
+    },
+    {
+      "path": "Tools\\curve-reuse-20261024-380\\TauCeti\\AlgebraicGeometry\\Curves\\StableReduction\\Picard\\Torsion\\Basic.lean.txt",
+      "sha256": "1A1000059FAE224343B2ED63418DB0314CEC93867D41BD5F87CAD23BC7083F7A"
+    },
+    {
+      "path": "Tools\\curve-reuse-20261024-380\\TauCeti\\AlgebraicGeometry\\Curves\\StableReduction\\Picard\\Torsion\\Genus.lean.txt",
+      "sha256": "7B37BA2A1A173769B6D38EAE79CAE88726AA7665FC77DCC76330063D8E32C0CF"
+    },
+    {
+      "path": "Tools\\curve-reuse-20261024-380\\TauCeti\\AlgebraicGeometry\\Curves\\StableReduction\\Picard\\Basic.lean.txt",
+      "sha256": "54BA7042F469B7BF7C2EDB41543D3C2D8DA77822FF724BF6B508B58E616B9BCD"
+    },
+    {
+      "path": "Tools\\curve-reuse-20261024-380\\TauCeti\\AlgebraicGeometry\\Curves\\Genus\\BaseChange.lean.txt",
+      "sha256": "6346ADB9D1B7BB75853CD5D46D02CCAC14B613A29950D1F98E45C9A60F1B0753"
+    },
+    {
+      "path": "Tools\\curve-reuse-20261024-380\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\Affine\\Point\\TorsionReduction.lean.txt",
+      "sha256": "3E0ECC665DC8F7114C18A270EFA16D8F38EDC9FE31CC7F618524538F3277C04B"
+    },
+    {
+      "path": "Tools\\curve-reuse-20261024-380\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\TateModule\\GoodReduction.lean.txt",
+      "sha256": "212DB621E3828180A6ACF9F3FF1AB9E9D39AF5513822492DE6F12DF690069B4E"
+    },
+    {
+      "path": "Tools\\curve-reuse-20261024-380\\TauCeti\\AlgebraicGeometry\\Geometrically\\Connected.lean.txt",
+      "sha256": "17A07F588E1F142BEE17B1C20113C4211183145386D526B606616A887B5EDAF0"
+    },
+    {
+      "path": "Tools\\curve-reuse-20261024-380\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\MinimalModel\\PotentialGoodReduction.lean.txt",
+      "sha256": "F593C37F4740D56CB4413C96EF88E040F4FA4576BF744AE43D49D0EE4045DF59"
+    },
+    {
+      "path": "Tools\\curve-reuse-20261024-380\\assessment.json",
+      "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+    }
+  ],
+  "report": "Dubon Reuse Search 2026-10-24.md",
+  "reportSha256": "085A50F06B44910A194E411D7AAFAFDA8E2AB3266443A84A33558B252B7928F9",
+  "upstreamBuildVerified": false
+}

@@ -1,0 +1,28 @@
+{
+  "recordedUTC": "2026-10-24T09:48:31.883483+00:00",
+  "commit": "e177885ee120f8074a7610c3e60571ab00b20004",
+  "verifiedBlobs": [
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/VariableChange/Galois.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\VariableChange\\Galois.lean.txt",
+      "gitBlob": "36eb8a9d38711fcf820dc9a46c908463e1bf1116",
+      "sha256": "965D76EB1CD53439A6CE75FA38BEC0537B69A227D5A4AD06C0B8FF0ED70656F4",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/VariableChange/Galois.lean"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/MinimalModel/Basic.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\MinimalModel\\Basic.lean.txt",
+      "gitBlob": "1ebd71a9c5ef5db021f2b3be6a0e3cce35940074",
+      "sha256": "4CFC82B37EC34067A89136E4D2B176EFEA453DCECC8F158582F380CA46285868",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/MinimalModel/Basic.lean"
+    },
+    {
+      "path": "TauCeti/AlgebraicGeometry/EllipticCurve/IntegralModel.lean",
+      "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\IntegralModel.lean.txt",
+      "gitBlob": "1b85012af8d1e7e650fe4fab1a07786a3354a2ed",
+      "sha256": "83CE142D4B4DFB73E98DBF05AD94C1C1D1AD3756D7B301AF4C4ADEB6F7D7CB2A",
+      "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/IntegralModel.lean"
+    }
+  ],
+  "upstreamBuildVerified": false
+}

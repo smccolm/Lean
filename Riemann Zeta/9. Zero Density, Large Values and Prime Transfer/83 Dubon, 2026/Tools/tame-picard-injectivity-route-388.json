@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-24",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight symmetric-power continuation -> automorphy and residual association -> original weight-two Frobenius/inertia -> modular good reduction and prime-to-characteristic Picard torsion injectivity -> original-field Kummer power lifting -> common residue constants and total residue-genus inequality.",
+  "renewedSearch": "Tools/curve-reuse-20261024-380/assessment.json",
+  "scratchReceipts": {
+    "source-joint-chart-constants-assembly-17-scratch-receipt.json": "1B43CC9505FFB0419D6B9ECC5B8BF839DF157ED6F50C2F33774B5918150A7F17",
+    "source-full-chart-basis-10-scratch-receipt.json": "F7B89BB36083D25DA9C79560DF918EF83D00ACF7EF5FFCA11CA3C31D9215EAAC",
+    "source-integral-chart-basis-3-scratch-receipt.json": "7CB9D9D1993F49A53FC72EE451B0804DB53EF07E11410CFBCBC416240461AE0A",
+    "source-good-chart-basis-6-scratch-receipt.json": "5D465A4BF938A266A7796BBCC7E6795064C4392000B919CB8D067735D0531BCE",
+    "source-finite-overlap-11-scratch-receipt.json": "57AF27A6934F5DFA02AC60132FA1C69BD4CB5019E62FC6BC2817E7C6B66B9CE8",
+    "source-joint-genus-3-scratch-receipt.json": "E99706FAC2AFD63D7CB4190F410614AE4287DA6706721E27A913ADEB238F4E15",
+    "source-power-lifting-2-scratch-receipt.json": "87189650C19982794D2921302414B5A4E31A7641BA2D2D27116E2FABEE56ADFA",
+    "source-torsion-injectivity-4-scratch-receipt.json": "D85CDD9B3498FBC2D671CF15809D7F6A0AC4215C9E0C50351EC720BE25216998"
+  },
+  "discharged": "The actual modular Kummer reductions have a finite localized overlap quotient and common residue constants, derived from full polynomial chart bases, integral coordinates, controlled denominators and a finite Laurent window. Their total residue genus is at most the original Kummer genus. The unramified genus identity then lifts nonzero residue q-th powers to the original modular field whenever the genera agree. Existing tame genus equality removes that premise in characteristic at least five. An actual tame constant reduction is constructed, and its literal degree-zero Picard map is injective on every torsion subgroup whose order is invertible in the residue field. No overlap finiteness, common constants, genus inequality, Kummer root, Picard map or torsion-injectivity certificate remains in the actual tame consumers.",
+  "remaining": "Wild genus equality and modular good reduction in characteristics two and three, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. The tame theorem preserves the full source scope and does not complete the wild cases. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "shorterRoute": "The renewed 24 October source search is archived with exact FLT and TauCeti revisions and verified candidate bytes. Native PID bases and finite integral closure give full chart bases. Existing normalization and direct root cancellation give controlled denominators. The proved local resultant compatibility plus native integral Bezout and monic division replace the longer recursive partial-fraction framework. A finite Laurent window proves finite overlap and common constants. Existing degree-dimension maxima, pole stabilization and exact degrees give the genus inequality. The proved unramified identity and tame genus equality give power lifting; existing Kummer divisor data and native strong induction give torsion injectivity. The incidental scope-383 residual-correction framework is deferred. Only necessary dependencies are promoted; root pins, proof limits, source fidelity and completion criteria are unchanged.",
+  "deferredScopes": [
+    383
+  ],
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

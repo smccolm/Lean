@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> wild good reduction -> genus equality -> local differential contribution -> characteristic-three order-six bound seven and characteristic-two order-twelve bound fourteen -> Galois wild different estimate",
+  "precedingScratchReceipts": {
+    "source-normal-field-order-4-scratch-receipt.json": "E179C1CCB8F674BA9480E09B500308F23711C16E0859CF9675D2B47075AE11A2"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveCoordinateDerivation.lean",
+      "sha256": "FA14604EEE231ED7C4A0DE734125EAFDD2D593D888330DFEB21BCBC3A28DE082"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveIntegralDerivatives.lean",
+      "sha256": "841595FF3C6C556CDB4F399CE316B53C6859511BD0374466080BC4D9EC355A35"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveAdeleLocalQuotient.lean",
+      "sha256": "C2E347D991013CA65584D906BABA13083A0738EBDFC99EDDCACACB80A20C69FD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveOrders.lean",
+      "sha256": "B990460D97BED79BEA263DB6508EC89385CE5CABEC59A3EA82652F543C4AB977"
+    }
+  ],
+  "nativeReuse": {
+    "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Derivation\\MapCoeffs.lean",
+    "sha256": "961550973634597D627A7ECFBBD7C6E7678EC84D12C456F2E0D68D292B614A9E",
+    "theorem": "Derivation.apply_eval_eq"
+  },
+  "routeAdjustment": "Reuse the existing integral derivation and tame residue character. Prove only the group-kernel size and local conjugate-polynomial derivative estimates needed for the displayed wild different bound. Native Derivation.apply_eval_eq replaces expanded polynomial differentiation. Once the fixed-field derivative lower bound is proved, writing z=x*u with u a unit proves exact derivative order directly; the source's second residue expansion and its unused nonzero-residue helper are unnecessary. Use the polynomial indexed by every group element, retaining multiplicities: native prodXSubSMul uses distinct orbit values and would require a uniformizer-stabilizer argument not yet proved. Native finite-product factorization replaces auxiliary multiset erasure lemmas. Derive every geometric premise on the actual finite Galois coordinate field before using it on the modular auxiliary field.",
+  "discharged": "Conditional local wild different estimate: ord(dx) is at least e-1+(p^a-1) for a finite inertia action of cardinality e, with the fixed-field order gap and residue-character displacement bound explicitly supplied. The actual indexed conjugate polynomial, integral fixed coefficients, constant-term order, exact derivative order, displacement sum and p-primary kernel count are derived. Native coefficient-wise polynomial differentiation replaces an expanded derivation proof. A unit-factor argument avoids the external source's second residue expansion.",
+  "remaining": "The geometric inertia action, fixed-field order gap, actual residue-unit character and kernel displacement bound remain explicit inputs. They must be derived on the actual modular auxiliary Galois field before claiming the order-six/seven or order-twelve/fourteen bounds. Wild census, genus equality and all original arithmetic-action, Frobenius/inertia, residual-association, automorphy and all-weight obligations remain. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\wild-different-route-397.json",
+    "sha256": "EF0FAEC7F5AF062B4202E30E35BC2B8467106A9FD76BD7E8E9BB64EB95FEEFA1",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> wild good reduction -> genus equality -> local differential contribution -> characteristic-three order-six bound seven and characteristic-two order-twelve bound fourteen -> Galois wild different estimate",
+      "reuseChecked": [
+        "Scope 396 proves the actual characteristic-three auxiliary Galois field whose positive j orders divide six. The stronger local different estimate is now the missing ramification input.",
+        "Existing SourceCurveCoordinateDerivation and SourceCurveIntegralDerivatives provide the actual uniformizer derivation and integrality on the valuation ring.",
+        "Existing TameInertiaCharacter constructs the multiplicative residue-unit character and characterizes its kernel by uniformizer displacement modulo the square of the maximal ideal. Its generic part does not require a finite residue field.",
+        "Pinned Mathlib RamificationGroup defines decomposition and inertia groups but explicitly leaves higher groups as a TODO. No native different-sum theorem was found in the inspected files.",
+        "The frozen FLT Galois wild different proof uses a polynomial of conjugate uniformizers, differentiation of its coefficients and the residue-unit character. Its generic group-index argument can use native subgroup/kernel cardinality.",
+        "Existing TameWildOrder concerns orders of wild automorphisms, not the needed lower bound on the actual differential order. It does not replace this obligation."
+      ],
+      "selectedRoute": "Reuse the existing integral derivation and tame residue character. Prove only the group-kernel size and local conjugate-polynomial derivative estimates needed for the displayed wild different bound. Native Derivation.apply_eval_eq replaces expanded polynomial differentiation. Once the fixed-field derivative lower bound is proved, writing z=x*u with u a unit proves exact derivative order directly; the source's second residue expansion and its unused nonzero-residue helper are unnecessary. Use the polynomial indexed by every group element, retaining multiplicities: native prodXSubSMul uses distinct orbit values and would require a uniformizer-stabilizer argument not yet proved. Native finite-product factorization replaces auxiliary multiset erasure lemmas. Derive every geometric premise on the actual finite Galois coordinate field before using it on the modular auxiliary field.",
+      "boundary": "No different estimate, characteristic-three census, characteristic-two model or genus equality is claimed merely from these foundations."
+    }
+  },
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_Place_sub_one_add_pow_sub_one_le_ordDiff_D_of_isGalois.lean.txt",
+    "sha256": "946BBAEC4478A30041350F7F2A47F166258AC59CE00BE36EE81D1859DE644DF1",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The finite-induction fixed-field derivative bound and residue-character counting argument are adapted. Native local derivations and polynomial differentiation supply shorter rigorous replacements. No upstream build or import is claimed."
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

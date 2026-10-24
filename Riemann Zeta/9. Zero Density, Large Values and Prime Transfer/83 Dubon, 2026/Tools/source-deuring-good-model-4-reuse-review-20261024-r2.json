@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "characteristic-two modular genus/Picard preservation -> actual inertia and modular fixing-field orders -> faithful finite good-model field -> explicit Deuring good model from nonzero three-torsion and a cubic root",
+  "precedingScratchReceipts": {},
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticTorsionIntegralCoordinates.lean",
+      "sha256": "A38B0F00F2738F99F242AA22F196755D34FE4C0FF4519F5EBBB841A685311AC9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticPointMultiplication.lean",
+      "sha256": "9D51FFB8E3D0955E2ABB3C4DEA059D7474EB87FB253DF2958D8AD2DBBE00FCF4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\AlgebraicGeometry\\EllipticCurve\\VariableChange.lean",
+      "sha256": "06D219D9A4EE4AFBEAB7B07B39BD6EE377AE427D55433A61B438CBE254AEF3D5"
+    }
+  ],
+  "routeAdjustment": "Reuse the frozen coordinate and flex argument, replacing its longer valuation inequalities with the verified TauCeti monic-integrality and unit-divisibility proof. Retain every explicit coordinate formula needed for inertia faithfulness.",
+  "discharged": "An actual nonzero affine three-torsion point and a cubic root of its psi2 value give explicit Deuring coordinates. The parameter is integral by a monic degree-twelve relation and the discriminant is a unit because it divides 3^6. These statements use integral j and invertible three. The exact coordinate formulas required by faithful inertia are retained.",
+  "remaining": "The finite Galois field must supply the torsion point and cubic root; faithful inertia and the actual characteristic-two modular fixing-field orders, weighted census and genus/Picard assembly remain necessary. Arithmetic-action comparison and automorphy also remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\deuring-good-model-route-411.json",
+    "sha256": "1323A2F85D1D4FFF229B932811EEA519EC1E3A602C55813F55FDFCDAF070A628",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "characteristic-two modular genus/Picard preservation -> actual inertia and modular fixing-field orders -> faithful finite good-model field -> explicit Deuring good model from nonzero three-torsion and a cubic root",
+      "reuseChecked": [
+        "The frozen FLT Deuring local-model theorem supplies the exact coordinate-change formulas and flex identity required by the later faithful-field construction.",
+        "The renewed TauCeti PotentialGoodReduction proof has a shorter integrality argument: the parameter satisfies a monic degree-twelve polynomial, then the discriminant divides the unit 3^6.",
+        "The existing mem_valuationSubring_of_integral bridge and pinned native monicity! tactic support that argument directly. No new minimal-model or valuation-growth framework is needed.",
+        "The existing affine group law and nonzero three-torsion equation prove the flex identity. The exact torsion point and cubic root remain explicit until the next finite-Galois-field consumer constructs them."
+      ],
+      "selectedRoute": "Reuse the frozen coordinate and flex argument, replacing its longer valuation inequalities with the verified TauCeti monic-integrality and unit-divisibility proof. Retain every explicit coordinate formula needed for inertia faithfulness.",
+      "assumptionsToDischarge": "Parameter integrality, unit discriminant and the full good-model coordinate equation are derived from integral j, invertible three, an actual affine three-torsion point and the stated cubic root.",
+      "boundary": "The actual finite Galois field, torsion point, cubic root and faithful inertia action still require construction. Characteristic-two modular orders, census and genus/Picard assembly and the arithmetic/automorphy chain remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_WeierstrassCurve_exists_variableChange_eq_deuring_of_isUnit_three.lean.txt",
+    "sha256": "60771F5E185F50C80EB6A0ECF7161031B6F6A8DFD72374800340E57D043A101E",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "Exact Deuring invariants, flex identity and explicit coordinate formulas adapted to the pinned API. The integrality portion is shortened using the independently archived current TauCeti argument. No external build or import is claimed."
+  },
+  "tauCetiSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-20261024-380\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\MinimalModel\\PotentialGoodReduction.lean.txt",
+    "sha256": "F593C37F4740D56CB4413C96EF88E040F4FA4576BF744AE43D49D0EE4045DF59",
+    "repository": "https://github.com/TauCetiProject/TauCeti",
+    "commit": "e177885ee120f8074a7610c3e60571ab00b20004",
+    "license": "Apache-2.0",
+    "role": "The monic degree-twelve relation and explicit discriminant divisor of 3^6 replace the longer valuation estimates while preserving explicit Deuring coordinates. Adapted and audited locally; no external build or import is claimed."
+  },
+  "supersedesReview": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-deuring-good-model-4-reuse-review-20261024.json",
+    "sha256": "9B7111ACC54106D3D1DA46AD8539DFF8CE228A71B9522D713B8A16607D73F720",
+    "reason": "Correct the repository organization to TauCetiProject, as established by the frozen renewed-search manifest. The exact revision, source bytes, local proofs and all verification evidence are unchanged."
+  }
+}

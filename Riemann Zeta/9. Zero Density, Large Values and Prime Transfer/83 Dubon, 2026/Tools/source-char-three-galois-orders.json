@@ -1,0 +1,1094 @@
+{
+  "date": "24 October 2026",
+  "modules": [
+    "Dubon2026.SourceCurveWildDerivativeOrder",
+    "Dubon2026.SourceModularWildDerivativeOrders",
+    "Dubon2026.SourceEllipticIntegralChangeCoordinates",
+    "Dubon2026.SourceEllipticWildGoodModelChange",
+    "Dubon2026.SourceEllipticWildInertiaCocycle",
+    "Dubon2026.SourceEllipticWildActualTorsionReduction",
+    "Dubon2026.SourceEllipticWildChosenCocycle",
+    "Dubon2026.SourceEllipticWildResidueInertiaHom",
+    "Dubon2026.SourceEllipticOddFaithfulTorsionModel",
+    "Dubon2026.SourceEllipticOddSpecializationFieldPlace",
+    "Dubon2026.SourceEllipticOddOfJSpecialization",
+    "Dubon2026.SourceEllipticOddFaithfulSpecializationHom",
+    "Dubon2026.SourceEllipticOddPrescribedInertiaAction",
+    "Dubon2026.SourceEllipticCharThreePrescribedInertia",
+    "Dubon2026.SourceEllipticCharThreeModel",
+    "Dubon2026.SourceEllipticCharThreeStabilizerCoordinates",
+    "Dubon2026.SourceEllipticCharThreeStabilizerBound",
+    "Dubon2026.SourceEllipticCharThreeGoodModelOrder",
+    "Dubon2026.SourceEllipticCharThreeFullInertiaImage",
+    "Dubon2026.SourceEllipticCharThreeCyclicSpecialization",
+    "Dubon2026.SourceEllipticCharThreeRootPermutationR2",
+    "Dubon2026.SourceEllipticCharThreePermutationKernelR2",
+    "Dubon2026.SourceEllipticCharThreeInertiaPermutationR2",
+    "Dubon2026.SourceEllipticFullTorsionModularEmbeddings",
+    "Dubon2026.SourceEllipticTorsionSignSubgroups",
+    "Dubon2026.SourceEllipticCharThreeEmbeddingKernel",
+    "Dubon2026.SourceCoordinateEmbeddingFixingField",
+    "Dubon2026.SourceEllipticFullTorsionNonemptyCyclic",
+    "Dubon2026.SourceCoordinateEmbeddingFixedFieldMap",
+    "Dubon2026.SourceModularCharThreeNormalField",
+    "Dubon2026.SourceNormalCoordinateEmbeddingRange",
+    "Dubon2026.SourceKernelOrbitDivisibility",
+    "Dubon2026.SourceNormalFieldCoordinateOrder",
+    "Dubon2026.SourceModularCharThreeGaloisOrder"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy and residual association -> original Frobenius/inertia -> wild modular good reduction -> genus equality -> characteristic-three differential bound at order six -> actual auxiliary Galois field with positive j orders dividing six.",
+  "discharged": "Integral coordinate changes between good elliptic models and their inertia cocycles now work in every characteristic, using the verified TauCeti IntegralModel argument. Existing local Legendre models give actual characteristic-three specialization with faithful inertia and equivariant torsion reduction. The exceptional residue curve has stabilizer of order twelve; its action on the three roots of X^3-X has target permutation group of order six, and the kernel acts as identity or negation on torsion. It therefore fixes every original modular coefficient-field embedding. Their actual fixing field is finite Galois over the j-coordinate field, and every positive j order in it divides six. All field, torsion, action, embedding, place and order-divisibility inputs are derived. The elementary wild derivative bounds are also proved at the required orders three, four and six.",
+  "boundary": "The stronger wild different bounds at characteristic-three order six and characteristic-two order twelve, exceptional-fiber census and wild genus equality remain required. Characteristic-two good models, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. The auxiliary field does not by itself prove good reduction. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 7,404-module scope: all thirteen retained regressions, 48,828 exhaustive theorem checks, 22,151 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.coeff_place_three_le_D_j_of_char_three",
+    "Dubon2026.SourceFunctionField.coeff_place_four_le_D_j_of_char_two",
+    "Dubon2026.SourceFunctionField.coeff_place_six_le_D_j_of_char_two",
+    "Dubon2026.SourceEllipticReduction.exists_integral_inertia_cocycle_all_characteristics",
+    "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action_of_char_three",
+    "Dubon2026.SourceEllipticDivisionField.exists_char_three_exceptional_cyclic_specialization",
+    "Dubon2026.SourceEllipticDivisionField.exists_char_three_exceptional_inertia_permutation",
+    "Dubon2026.SourceEllipticDivisionField.exists_char_three_exceptional_embedding_kernel",
+    "Dubon2026.SourceEllipticDivisionField.exists_char_three_modular_normal_field",
+    "Dubon2026.SourceFunctionField.exists_char_three_modular_galois_orders_dvd_six"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-24T09:50:50.997226+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceCurveWildDerivativeOrder",
+        "SourceModularWildDerivativeOrders"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveWildDerivativeOrder.lean",
+          "sha256": "06D7264AD9B1C6052425169D40A5D91E3A98205465580C704AC888602AD30C6D",
+          "oleanSha256": "69CB03F07AD6C441883B57B20CAC2B2C1C1CA785919591869AA66CE80F292355"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularWildDerivativeOrders.lean",
+          "sha256": "6DE0F3626B27F372E1C61C2B18140945BF3A9A580FB38C2C2AD2DD11543B73A1",
+          "oleanSha256": "233BFDFA5BCB6746C30AA00182C0DE1D703E52D561B40183963815F1D95FF9B6"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Place.ord_le_ordDifferential_D_of_cast_eq_zero",
+        "Dubon2026.SourceFunctionField.coeff_place_ord_j_le_D_j_of_cast_eq_zero",
+        "Dubon2026.SourceFunctionField.coeff_place_three_le_D_j_of_char_three",
+        "Dubon2026.SourceFunctionField.coeff_place_four_le_D_j_of_char_two",
+        "Dubon2026.SourceFunctionField.coeff_place_six_le_D_j_of_char_two"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Place.ord_le_ordDifferential_D_of_cast_eq_zero",
+        "Dubon2026.SourceFunctionField.coeff_place_ord_j_le_D_j_of_cast_eq_zero",
+        "Dubon2026.SourceFunctionField.coeff_place_three_le_D_j_of_char_three",
+        "Dubon2026.SourceFunctionField.coeff_place_four_le_D_j_of_char_two",
+        "Dubon2026.SourceFunctionField.coeff_place_six_le_D_j_of_char_two"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceWildDerivativeAudit2.log",
+      "logSha256": "B0D26FC3E5028CD5A02544AAB8A9E6C696258E17AC9CF8D4570AFFAF45CCB3AA",
+      "auditSha256": "A45C5701803F4A8E92E759719AED7AADA6DBC3238429F526F7FC9A49AEAB5BF0",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 6,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 8,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceWildDerivativeDependencyAudit2.log",
+      "dependencyAuditSha256": "FE524344010A622655BB2334077D58CBD77265E308EF854093876D6A8DB424CA",
+      "dependencyAuditSourceSha256": "1ABD3E4F5F8990922ED0B8A01BDF465CB84AC63A871DE15DE12CB9D67D2F7B72",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.coeff_place_three_le_D_j_of_char_three",
+        "Dubon2026.SourceFunctionField.coeff_place_four_le_D_j_of_char_two",
+        "Dubon2026.SourceFunctionField.coeff_place_six_le_D_j_of_char_two"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> modular good reduction in characteristics two and three -> genus equality -> wild differential contribution -> local derivative orders",
+      "discharged": "Vanishing of the integer function order in the coefficient field gives one extra differential order. Actual modular consumers prove derivative order at least three at j-order three in characteristic three, and at least four/six at the respective j-orders in characteristic two. All local finiteness, generation, integrality and differential nonvanishing hypotheses are derived.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Wild exceptional-fiber census and the stronger differential bounds seven at order six in characteristic three and fourteen at order twelve in characteristic two still precede wild genus equality. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-wild-derivative-2-reuse-review-20261024.json",
+      "reuseReviewSha256": "0349522976D8D480E57AD8FD887625B7D469357654422FBCDF90E04588179C9E",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T09:58:12.054570+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceEllipticIntegralChangeCoordinates",
+        "SourceEllipticWildGoodModelChange",
+        "SourceEllipticWildInertiaCocycle"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticIntegralChangeCoordinates.lean",
+          "sha256": "63F0D6ABB61DBF89E052F5CEE5E32D8E60B2E8FFB4DAE4CF7E4650A5F3C63DFE",
+          "oleanSha256": "4106C9AEE1A96D2F3A899B787ADD37704F0987BC59B0D1DA3A64AE81C4AF5690"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticWildGoodModelChange.lean",
+          "sha256": "AAB847757D2592B9D565BB4A73777D4F3ADA6355F67EA4823D8AEA596F71107A",
+          "oleanSha256": "1C196D1D74F5DED720C001ABEF51E3307D73FE0D3CA518A750A97EC80FDB8D38"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticWildInertiaCocycle.lean",
+          "sha256": "A329DE74CFD164AC61F3ABE738CB6021245F4A1674431B34E42BA5D331ACB44C",
+          "oleanSha256": "1B8B1D756D8F9C6C947B82387A316CBCA1195D9CB26AC4BA0014DDA825D3F57D"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticReduction.mem_of_monic_quadratic",
+        "Dubon2026.SourceEllipticReduction.integral_change_r_mem",
+        "Dubon2026.SourceEllipticReduction.integral_change_s_mem",
+        "Dubon2026.SourceEllipticReduction.integral_change_t_mem",
+        "Dubon2026.SourceEllipticReduction.exists_integral_change_of_good_models_all_characteristics",
+        "Dubon2026.SourceEllipticReduction.exists_integral_inertia_cocycle_all_characteristics"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticReduction.mem_of_monic_quadratic",
+        "Dubon2026.SourceEllipticReduction.integral_change_r_mem",
+        "Dubon2026.SourceEllipticReduction.integral_change_s_mem",
+        "Dubon2026.SourceEllipticReduction.integral_change_t_mem",
+        "Dubon2026.SourceEllipticReduction.exists_integral_change_of_good_models_all_characteristics",
+        "Dubon2026.SourceEllipticReduction.exists_integral_inertia_cocycle_all_characteristics"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceWildIntegralChangeAudit3.log",
+      "logSha256": "A2988A83BC5868176B4EDBDA750FD242ABA436183BC664529C43B56DD09BC68A",
+      "auditSha256": "922AF92770CA8858923180CED8C956C856FBDB808C177321707635AEED443196",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 27,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 9,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceWildIntegralChangeDependencyAudit3.log",
+      "dependencyAuditSha256": "59F7172D5E4DD50914E84C1AE8AFC4EC42704E920C265663F1B5690DACAB0EF4",
+      "dependencyAuditSourceSha256": "C05A1BA14BB579BC93D018A2773792D80DE10A082C66D5D13A09083638C3DCA3",
+      "consumers": [
+        "Dubon2026.SourceEllipticReduction.exists_integral_inertia_cocycle_all_characteristics"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> wild modular good reduction -> wild genus equality -> exceptional-fiber census and differential bounds -> faithful inertia specialization -> integral good-model coordinate cocycle",
+      "discharged": "The actual change between two good elliptic models descends to the valuation ring in every residue characteristic. Unit scaling is derived from discriminants; a monic quartic and two monic quadratics give the translation parameters. The actual Galois coordinate cocycle consequently has an integral lift and stabilizes the actual residue model without assumptions that two or three are units.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Actual wild good-model existence, stabilizer image and exceptional-fiber census, and stronger wild ramification bounds remain required for genus equality in characteristics two and three. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-wild-integral-change-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "7E9F467E82DB6E3B8A23AB297B73E0656543C4D3E8ACD08B5062C3D0D39B9B63",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T10:10:10.506942+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceEllipticWildActualTorsionReduction",
+        "SourceEllipticWildChosenCocycle",
+        "SourceEllipticWildResidueInertiaHom",
+        "SourceEllipticOddFaithfulTorsionModel",
+        "SourceEllipticOddSpecializationFieldPlace",
+        "SourceEllipticOddOfJSpecialization",
+        "SourceEllipticOddFaithfulSpecializationHom",
+        "SourceEllipticOddPrescribedInertiaAction",
+        "SourceEllipticCharThreePrescribedInertia"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticWildActualTorsionReduction.lean",
+          "sha256": "44032E42D76597B21C75FD1465A3FDF498A05408346B4E8D4D3FA476BB322F12",
+          "oleanSha256": "F4178FA50A56CB20453C3B7644ECAA3184DC353C2DBB14B4099CB52C1DBA6547"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticWildChosenCocycle.lean",
+          "sha256": "0050DB4D5DE091D093B3D216251C7F55000BA72F71268FC1AA8D8437339C873E",
+          "oleanSha256": "099A9F97FD8942902A409D9444F6CE7F9D123FC24B180E808EF42F1EE938024E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticWildResidueInertiaHom.lean",
+          "sha256": "6D9BCF5FFA828F90BF963C8607974D133477ED7D8AC21921F503B98EDAC33C0E",
+          "oleanSha256": "49074A9AEB527DD9B2A6A3BF5366CEEA88A107F1CE2316619D75148F9CED551A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddFaithfulTorsionModel.lean",
+          "sha256": "0F30B7FE5DEB08EE27E1A4A0B601D3A187D374552BBB7BC82954B41BF02851F2",
+          "oleanSha256": "41F516D90B14A46FB8D470E4AF2D8C4FD022A75F137E7A2788BD55BA5990A455"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddSpecializationFieldPlace.lean",
+          "sha256": "0C097C01A1851BBB8B2C69A75E36658034A2A08A4602C580C15590C8626F22F1",
+          "oleanSha256": "7DF52BEFCDA87F4CC6FE8A4C92D289ACA9031E00F8BEFACDCB173661E23B05FA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddOfJSpecialization.lean",
+          "sha256": "F2F960ED2ACD53DE1B35755E4B0AAEF1F14E38D1E43771570FE32FE19B90CDD9",
+          "oleanSha256": "34B6B240EFB4460D2FD5F6F3F0594731E57E242A54A05844FC6CCBB3759A718C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddFaithfulSpecializationHom.lean",
+          "sha256": "1E20FE4C7E89A85ECAE83F7CD3AA7BBC3EAD652469AD792598E98EA8608144CA",
+          "oleanSha256": "119DE3F7D2BBB1901C7AA0EC8F01E9FF833779F19463ACA50A5208FC2D482EA7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticOddPrescribedInertiaAction.lean",
+          "sha256": "3369E92794126B8FDC9162EF42DA73607A1C53EFD124008CF548E1D14150FD57",
+          "oleanSha256": "BC332C9A26BA4D4627172633281986274CF68548080283A0FE4C3A4A6850F4BD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharThreePrescribedInertia.lean",
+          "sha256": "B99492D709B767C50D3E9A4CB5B87FDC21BFCAE76B859B290FA5292FDBB7E870",
+          "oleanSha256": "53171A1EB993421E2B4CD3B9BC2B2FD6BFBC8C051E69D383F2DD85E3B0B44D96"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticReduction.exists_actual_inertia_torsion_reduction_all_characteristics",
+        "Dubon2026.SourceEllipticReduction.integralInertiaCocycleAll_generic",
+        "Dubon2026.SourceEllipticReduction.integralInertiaCocycleAll_residue_stabilizes",
+        "Dubon2026.SourceEllipticReduction.integralInertiaCocycleAll_residue_mul",
+        "Dubon2026.SourceEllipticReduction.residueInertiaHomAll_eq_map",
+        "Dubon2026.SourceEllipticReduction.residueInertiaHomAll_stabilizes",
+        "Dubon2026.SourceEllipticReduction.residueInertiaHomAll_torsion_equivariance",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_torsion_model_of_two_ne_zero",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_specialization_field_place_of_two_ne_zero",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_ofJ_specialization_of_two_ne_zero",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_ofJ_inertia_hom_of_two_ne_zero",
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action_of_two_ne_zero",
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action_of_char_three",
+        "Dubon2026.SourceEllipticReduction.integralInertiaCocycleAll",
+        "Dubon2026.SourceEllipticReduction.residueInertiaHomAll"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticReduction.exists_actual_inertia_torsion_reduction_all_characteristics",
+        "Dubon2026.SourceEllipticReduction.integralInertiaCocycleAll_generic",
+        "Dubon2026.SourceEllipticReduction.integralInertiaCocycleAll_residue_stabilizes",
+        "Dubon2026.SourceEllipticReduction.integralInertiaCocycleAll_residue_mul",
+        "Dubon2026.SourceEllipticReduction.residueInertiaHomAll_eq_map",
+        "Dubon2026.SourceEllipticReduction.residueInertiaHomAll_stabilizes",
+        "Dubon2026.SourceEllipticReduction.residueInertiaHomAll_torsion_equivariance",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_torsion_model_of_two_ne_zero",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_specialization_field_place_of_two_ne_zero",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_ofJ_specialization_of_two_ne_zero",
+        "Dubon2026.SourceEllipticDivisionField.exists_faithful_ofJ_inertia_hom_of_two_ne_zero",
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action_of_two_ne_zero",
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action_of_char_three"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticReduction.integralInertiaCocycleAll",
+        "Dubon2026.SourceEllipticReduction.residueInertiaHomAll"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddSpecializationAudit9.log",
+      "logSha256": "32ADC2DD3D8CC1ECF5D9D59E260BA9CA5DA7B3A0EE638D764F349BDDF372D5CF",
+      "auditSha256": "3D633E4F7CA0C6F3B01F9F21861736CFF45D10940095BF128273726F0E0E6EF7",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 18,
+      "linterScopes": 9,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 19,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOddSpecializationDependencyAudit9.log",
+      "dependencyAuditSha256": "2A4E84B47581C3299A7F8092D79D7E32D2BB57543D5DE8832411BFA558AC11B7",
+      "dependencyAuditSourceSha256": "5FBA05EAA26D14B143A01BC00D870C89859B72518C8923F0103E3526AF489AF3",
+      "consumers": [
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action_of_char_three"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> wild modular good reduction -> characteristic-three genus equality -> exceptional-fiber census and differential bounds -> actual faithful prescribed elliptic specialization",
+      "discharged": "For every permitted level, an actual finite Galois extension, full torsion model, good model at the prescribed j-value, faithful inertia action on the prescribed elliptic curve and equivariant injective torsion reduction are constructed when two is nonzero. The characteristic-three consumer has no assumed specialization, good-model or inertia-action witnesses. Existing Legendre field, torsion reduction, place and equal-j proofs are reused with the proved all-characteristic integral cocycle.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Characteristic-two model existence, full wild stabilizer image, exceptional-fiber census and stronger wild differential bounds remain required. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-odd-specialization-9-reuse-review-20261024.json",
+      "reuseReviewSha256": "3D99051DEB722027E590D7F8FF147B82773342997AA8C9D709FDD43A73A025E4",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T10:18:51.175696+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceEllipticCharThreeModel",
+        "SourceEllipticCharThreeStabilizerCoordinates",
+        "SourceEllipticCharThreeStabilizerBound",
+        "SourceEllipticCharThreeGoodModelOrder",
+        "SourceEllipticCharThreeFullInertiaImage",
+        "SourceEllipticCharThreeCyclicSpecialization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharThreeModel.lean",
+          "sha256": "3D94681062438D2D35E0203CD5232B42F6801E9B75EE8B6C72F77C50BEA7AEEA",
+          "oleanSha256": "E3BE4A577C29E8484D07989BC1A0553AB0411A6F544ADCA1ADCAC525BFA23EF0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharThreeStabilizerCoordinates.lean",
+          "sha256": "C19474F1672004E8D01DC537D32DF38752554C8EAD3ABB2E7EC1654B7D9D7B19",
+          "oleanSha256": "7C6166649BC825FD4A0EBC4762CFEC1AB2892D32811D1B261C8977076EC98E20"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharThreeStabilizerBound.lean",
+          "sha256": "EE4A14FE4CBCC32C428D81AA35ED954CCE56A2448C2830A19310A8453B65ACC7",
+          "oleanSha256": "50A45C6C097022D30735252D62D3BC23DAEB461B1291F09A372704421F79A71C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharThreeGoodModelOrder.lean",
+          "sha256": "AF4812AB7A51B61FC4804E4FFEC75C2DF192049A4C742DA4682F7D2E0B8844FE",
+          "oleanSha256": "2E4952DD242030F656B654FCAFC4375776EC441EB29D9C734A6C996B06ABC6E5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharThreeFullInertiaImage.lean",
+          "sha256": "69D5A4761AF47E5E9FE4C8717B92A1E153108F4B521963C6499EF9B6035EEABA",
+          "oleanSha256": "1EC9157AF579EA560EDF90EFE8D942258B28053A701CBA9FC319807A92BFA024"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharThreeCyclicSpecialization.lean",
+          "sha256": "72EA16373C804458CB61C6200B6170FCA13AFE3483DDE999E11BE1A66B21DDD4",
+          "oleanSha256": "193F0520589C335A9AF0B20A9149BFA01D00ACED510D534937B43A9B15B492A5"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticExceptional.two_ne_zero_of_char_three",
+        "Dubon2026.SourceEllipticExceptional.EA_neg_one_discriminant_of_char_three",
+        "Dubon2026.SourceEllipticExceptional.isElliptic_EA_neg_one_of_char_three",
+        "Dubon2026.SourceEllipticExceptional.EA_neg_one_j_of_char_three",
+        "Dubon2026.SourceEllipticExceptional.char_three_stabilizer_coordinates",
+        "Dubon2026.SourceEllipticExceptional.cube_eq_self_iff_three_values",
+        "Dubon2026.SourceEllipticExceptional.char_three_stabilizer_card_le_twelve",
+        "Dubon2026.SourceEllipticReduction.ofJ_good_model_order_divisibility_of_char_three",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_three_exceptional_full_inertia_image",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_three_exceptional_cyclic_specialization"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticExceptional.two_ne_zero_of_char_three",
+        "Dubon2026.SourceEllipticExceptional.EA_neg_one_discriminant_of_char_three",
+        "Dubon2026.SourceEllipticExceptional.isElliptic_EA_neg_one_of_char_three",
+        "Dubon2026.SourceEllipticExceptional.EA_neg_one_j_of_char_three",
+        "Dubon2026.SourceEllipticExceptional.char_three_stabilizer_coordinates",
+        "Dubon2026.SourceEllipticExceptional.cube_eq_self_iff_three_values",
+        "Dubon2026.SourceEllipticExceptional.char_three_stabilizer_card_le_twelve",
+        "Dubon2026.SourceEllipticReduction.ofJ_good_model_order_divisibility_of_char_three",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_three_exceptional_full_inertia_image",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_three_exceptional_cyclic_specialization"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeImageAudit6.log",
+      "logSha256": "B10289155ECB7B1F5D16A45C61D3EA9F1B1386D12F1C42B4B6F087FA4BA4A381",
+      "auditSha256": "1C2F9A400219F72016AC1E850D6E1E708F5E25065789D3B1DC8E078488645AD2",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 15,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeImageDependencyAudit6.log",
+      "dependencyAuditSha256": "992C30D1DF91B1A1443A2CA02C5156FC846571064A38299EE1CB823D4CCF9C0B",
+      "dependencyAuditSourceSha256": "B4E632D5019C549215F82BC029F6CC0678A02BE7FEDD9BD0A1935CACA42788AE",
+      "consumers": [
+        "Dubon2026.SourceEllipticDivisionField.exists_char_three_exceptional_cyclic_specialization"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> characteristic-three modular good reduction -> genus equality -> wild exceptional-fiber census -> actual full inertia image and cyclic-subgroup specialization",
+      "discharged": "The actual characteristic-three exceptional curve is the existing EA(-1). Its stabilizer has cardinality at most twelve by literal coordinate root counts. The existing good-model discriminant forces twelve to divide the actual specialization order of j. The constructed faithful inertia action and proved inertia-order identity therefore give inertia order twelve and surjectivity onto the entire elliptic stabilizer. The existing torsion classification supplies the actual equivariant cyclic-subgroup specialization bijection. No good-model, inertia-action, cardinality or full-image witness is assumed on the final consumer.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The characteristic-three exceptional census, auxiliary Galois field with orders dividing six and stronger wild derivative bound remain required. Characteristic-two good reduction and original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-char-three-image-6-reuse-review-20261024.json",
+      "reuseReviewSha256": "85F2EEEBDA067864B191281C4A885F12FBD71E57CFDC370F4982A25897FBAE5C",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T10:31:35.597562+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceEllipticCharThreeRootPermutationR2",
+        "SourceEllipticCharThreePermutationKernelR2",
+        "SourceEllipticCharThreeInertiaPermutationR2"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharThreeRootPermutationR2.lean",
+          "sha256": "051C642020AED0804A055B328E6A82F238E0D439A315E75692D61FC1BD7EEB1B",
+          "oleanSha256": "A3B5EE7228FEC7D056E0EFA714C0EBF2B49EC477380C27C127F150FB0AE724CE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharThreePermutationKernelR2.lean",
+          "sha256": "D4AFD50D2F66D291EBB0970ADA64E7729BEB9D2FAB4EF7D9753ABAF8A589E26B",
+          "oleanSha256": "FABF473577B9121B29202248FEC6FED15B002622036D80558F5394FCE1458A51"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharThreeInertiaPermutationR2.lean",
+          "sha256": "7B67665BC5486316BC721D0B0CD757C8DBEAF04B7EF7FE9BF3AF2E1EDE9A82BA",
+          "oleanSha256": "DC1BCEDDB900C0819B90FE984A0CD89807898208327C0A40EE1F7A00221FEFC4"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticExceptional.charThreeRoots_card",
+        "Dubon2026.SourceEllipticExceptional.charThreeRoots_perm_card",
+        "Dubon2026.SourceEllipticExceptional.charThreeRootPerm_apply_val",
+        "Dubon2026.SourceEllipticExceptional.eq_one_or_negation_of_charThreeRootPermHom_eq_one",
+        "Dubon2026.SourceEllipticExceptional.charThreeInertiaPermHom_kernel",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_three_exceptional_inertia_permutation",
+        "Dubon2026.SourceEllipticExceptional.charThreeRoots",
+        "Dubon2026.SourceEllipticExceptional.charThreeRootsFintype",
+        "Dubon2026.SourceEllipticExceptional.charThreeRootPerm",
+        "Dubon2026.SourceEllipticExceptional.charThreeRootPermHom",
+        "Dubon2026.SourceEllipticExceptional.charThreeInertiaPermHom"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticExceptional.charThreeRoots_card",
+        "Dubon2026.SourceEllipticExceptional.charThreeRoots_perm_card",
+        "Dubon2026.SourceEllipticExceptional.charThreeRootPerm_apply_val",
+        "Dubon2026.SourceEllipticExceptional.eq_one_or_negation_of_charThreeRootPermHom_eq_one",
+        "Dubon2026.SourceEllipticExceptional.charThreeInertiaPermHom_kernel",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_three_exceptional_inertia_permutation"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticExceptional.charThreeRoots",
+        "Dubon2026.SourceEllipticExceptional.charThreeRootsFintype",
+        "Dubon2026.SourceEllipticExceptional.charThreeRootPerm",
+        "Dubon2026.SourceEllipticExceptional.charThreeRootPermHom",
+        "Dubon2026.SourceEllipticExceptional.charThreeInertiaPermHom"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreePermutationAudit3R2.log",
+      "logSha256": "649332A628A2B93D8451D964021A11D7C03643F23DEEADE9BF06BC709C8A6B7C",
+      "auditSha256": "07942F4689D8F60A74D6CF1FA486CE4F71DD16EB8BBF1CDE88F77CA99581980A",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 29,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 14,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreePermutationDependencyAudit3R2.log",
+      "dependencyAuditSha256": "66AF8B9351B7DBF1C1141E6B96E9E6E58B0DA2ED28A03D95BE56C4F470568E83",
+      "dependencyAuditSourceSha256": "693D2ECBC5706144AACF0D1536C57730F4351A207F7FDF4332000ADEE0AF9076",
+      "consumers": [
+        "Dubon2026.SourceEllipticDivisionField.exists_char_three_exceptional_inertia_permutation"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> characteristic-three modular good reduction -> genus equality -> wild different bound at order six -> auxiliary normal field with orders dividing six -> actual three-root inertia action and its negation kernel",
+      "discharged": "The actual exceptional stabilizer acts on the three literal roots of x^3=x. The target permutation group has cardinality six. Its kernel consists only of identity and the existing actual elliptic negation. On the constructed characteristic-three finite Galois field, each kernel element therefore acts uniformly on all N-torsion points as identity or negation. All full good-model, faithful-action and cyclic-specialization witnesses remain available in the actual consumer.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The auxiliary normal fixed field, actual place-order comparison, wild exceptional census and stronger derivative bound remain required. Characteristic-two good reduction and original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-char-three-permutation-3-r2-reuse-review-20261024.json",
+      "reuseReviewSha256": "5E7694B7EF626490D88D7BCAC09D12AE8937CCA14EB865B75C5CC5CB2671F5DE",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T10:35:59.749319+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceEllipticFullTorsionModularEmbeddings",
+        "SourceEllipticTorsionSignSubgroups",
+        "SourceEllipticCharThreeEmbeddingKernel"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticFullTorsionModularEmbeddings.lean",
+          "sha256": "70C799AB722AE097A2861A7E56D11D588948946CBE373BB44CF3EF272757EE54",
+          "oleanSha256": "770D6DFE6DF2BFFB8C69034F40A72AA22084E003D4C301F7C726C699376B726A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticTorsionSignSubgroups.lean",
+          "sha256": "F2D4856D4D57040E2C1B2F0C4F1D2DEB8DCCCC9FEEB4AC2702B027B4557E5ACE",
+          "oleanSha256": "BF50F44B8843584733F5C3DFB81E6269A44B9ABCBC9FA3F70C557B1C64DBCAAC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharThreeEmbeddingKernel.lean",
+          "sha256": "D84329CC2AEA1A88D015FCEAB4EFE68B0EB75E1910474BC7F59ED217141FFCC9",
+          "oleanSha256": "188F0A4E260A5F0483A0BFC2F25E207F5421077724FBE0AFA826574EE6F7CD42"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticDivisionField.exists_equivariant_modular_embeddings_of_full_torsion",
+        "Dubon2026.SourceEllipticReduction.subgroup_map_eq_of_torsion_sign",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_three_exceptional_embedding_kernel"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticDivisionField.exists_equivariant_modular_embeddings_of_full_torsion",
+        "Dubon2026.SourceEllipticReduction.subgroup_map_eq_of_torsion_sign",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_three_exceptional_embedding_kernel"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeEmbeddingAudit3.log",
+      "logSha256": "0CFA3DB951A0E004E3D6D4E621DD1ED222DAAC590ADFF252B6A5901134519097",
+      "auditSha256": "B765F2904F350E1A9F7B8565F5216DC69B6A9F7C77918D403DE4F091732CB373",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 3,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 8,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeEmbeddingDependencyAudit3.log",
+      "dependencyAuditSha256": "AC6FAE134E598496347021E189A9B14DC9C50912AFBF8CEBE75BF120D481D910",
+      "dependencyAuditSourceSha256": "E483D41C4AFAC107F5078F063A3EF789A9FF2EA5D666E203B2036EFAAE342407",
+      "consumers": [
+        "Dubon2026.SourceEllipticDivisionField.exists_char_three_exceptional_embedding_kernel"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> characteristic-three modular good reduction -> genus equality -> wild different bound at order six -> auxiliary normal field with orders dividing six -> inertia-kernel action on actual modular-field embeddings",
+      "discharged": "Existing literal modular roots, all-level cyclic quotients and Galois naturality give the actual equivariant modular coefficient-field embedding correspondence over the full-torsion field. The constructed characteristic-three three-point inertia kernel fixes every original modular-field embedding, because its uniform identity-or-negation action fixes every subgroup of order N. The final consumer constructs its finite Galois field, positive-j place, permutation homomorphism and embedding equivalence; none is assumed.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The normal fixed field, actual place-order comparison, wild exceptional census and stronger derivative bound remain required. Characteristic-two good reduction and original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-char-three-embedding-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "A108E3BDA4A7A87ABA1C768D82226C2ABBD9D444BABA49A18CF7949B37061490",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T10:42:16.402117+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceCoordinateEmbeddingFixingField",
+        "SourceEllipticFullTorsionNonemptyCyclic",
+        "SourceCoordinateEmbeddingFixedFieldMap",
+        "SourceModularCharThreeNormalField"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoordinateEmbeddingFixingField.lean",
+          "sha256": "762DFC6A11C6FE164CDFDA7AD5CB78616A26399CB119DB1C27DE188A56092DB0",
+          "oleanSha256": "51DBDE37E15F3EA86A538AEBA719C66FA5658E8E175EBFD2CE800A6A85258EC3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticFullTorsionNonemptyCyclic.lean",
+          "sha256": "8C496583FF8C2259BBAC28A52821D4C2D6C371A80D24396679F230F4015391EE",
+          "oleanSha256": "345B631EDB03DB2372B2909CE29281BFF327ADCD691C9FFE13E112279E2595FF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoordinateEmbeddingFixedFieldMap.lean",
+          "sha256": "8CCB6BBC871189ECD780F80EE8D29272AD80A971EECDF63A82E9E9189C58B9E3",
+          "oleanSha256": "6213126FE3EE80AEB883E5C547F222F8B6C9FFBC47B0F3B6245467ECB7C843A8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularCharThreeNormalField.lean",
+          "sha256": "F11E2CC67A6DB519A15D535C858B287C2ABFF836785499789D5EF96CF5561B7F",
+          "oleanSha256": "3D7CC8B3E1EA90909D289666E04478E28D6C451C6F37257388BEEB03AE2AF5FA"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.mem_coordinateEmbeddingPermHom_ker_iff",
+        "Dubon2026.SourceCurve.coordinateEmbedding_value_mem_fixingField",
+        "Dubon2026.SourceCurve.coordinateEmbedding_fixingField_fixed",
+        "Dubon2026.SourceCurve.coordinateEmbedding_fixingField_isGalois",
+        "Dubon2026.SourceEllipticVelu.nonempty_cyclic_subgroups_of_full_torsion",
+        "Dubon2026.SourceCurve.coordinateEmbeddingIntoFixingField_coordinate",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_three_modular_normal_field",
+        "Dubon2026.SourceCurve.coordinateEmbeddingPermHom",
+        "Dubon2026.SourceCurve.coordinateEmbeddingFixingField",
+        "Dubon2026.SourceCurve.coordinateEmbeddingIntoFixingField"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.mem_coordinateEmbeddingPermHom_ker_iff",
+        "Dubon2026.SourceCurve.coordinateEmbedding_value_mem_fixingField",
+        "Dubon2026.SourceCurve.coordinateEmbedding_fixingField_fixed",
+        "Dubon2026.SourceCurve.coordinateEmbedding_fixingField_isGalois",
+        "Dubon2026.SourceEllipticVelu.nonempty_cyclic_subgroups_of_full_torsion",
+        "Dubon2026.SourceCurve.coordinateEmbeddingIntoFixingField_coordinate",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_three_modular_normal_field"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.coordinateEmbeddingPermHom",
+        "Dubon2026.SourceCurve.coordinateEmbeddingFixingField",
+        "Dubon2026.SourceCurve.coordinateEmbeddingIntoFixingField"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoordinateFixingFieldAudit4.log",
+      "logSha256": "96779F3AF3E65D76C72A7590AAD25268E1DD17941E0ECCF185375C5A1315B369",
+      "auditSha256": "BBB81B882E95252C3E5B9BD4D7300C77E9743A578F9CE8954F3C3F62CDF66D8F",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 22,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 14,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCoordinateFixingFieldDependencyAudit4.log",
+      "dependencyAuditSha256": "6C3D00E494618A25E74DE0208F670DE4B150482367F1E56E557FFC9834B0868C",
+      "dependencyAuditSourceSha256": "F9DF5A7AE2F15349B231862E344AA9E742C9E0C28906741D924FD179E35BFF6F",
+      "consumers": [
+        "Dubon2026.SourceEllipticDivisionField.exists_char_three_modular_normal_field"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> characteristic-three modular good reduction -> genus equality -> wild different bound at order six -> auxiliary normal field with orders dividing six -> actual normal fixed field of the original modular-embedding action",
+      "discharged": "The original modular coefficient field embeds into the constructed finite normal fixed field of the actual coordinate-embedding action kernel. The original j coordinate is preserved literally. At the constructed positive-j place upstairs, the kernel of the three-root inertia homomorphism fixes this entire normal field. Native normal kernels and Galois fixed-field theory, the existing coordinate action and full-torsion cyclic-subgroup cardinality discharge every field, embedding and action witness.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The actual positive-j place order-dividing-six comparison, wild exceptional census and stronger derivative bound remain required. Characteristic-two good reduction and original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-coordinate-fixing-field-4-reuse-review-20261024.json",
+      "reuseReviewSha256": "734E1A69ECA56A5612F6C8F217BFA025E86152AC48E6F36964C3C16F661D9B16",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T10:49:31.185293+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceNormalCoordinateEmbeddingRange",
+        "SourceKernelOrbitDivisibility",
+        "SourceNormalFieldCoordinateOrder",
+        "SourceModularCharThreeGaloisOrder"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceNormalCoordinateEmbeddingRange.lean",
+          "sha256": "FF9DC177DE00EA4B025DB64AED235FEE81AE90B6CC954F84FFC8217E2F2F7172",
+          "oleanSha256": "1C78EC3A79C36D5A89F53C98C06F018F95A33BE471ADBEAE3C30047EBEB897C7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceKernelOrbitDivisibility.lean",
+          "sha256": "7B61FDC2B35B358161825F521DF1A741DB43488B11E0E4AEDE04243AF1D5008E",
+          "oleanSha256": "257F0B8A62E91C20F725C2F2DE92562C4A881B0E6DC32B2D0E19BFE3FB673A6C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceNormalFieldCoordinateOrder.lean",
+          "sha256": "43ABE343FEE5601D3F700A656EFA0D7BD037FF95663081FEEB6B32B2D85B2D4A",
+          "oleanSha256": "ABBE13F30241FA623E84A03FDA43FF901464AC37AE21CEDA326CA9AB4BE138D7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularCharThreeGaloisOrder.lean",
+          "sha256": "F018C2403AA423175554F6BABF2BBAB2A14D8228C6CA7BEBD4ECC9CDB8FD7D33",
+          "oleanSha256": "B10D7FABBC40AF260379088A0D081BD561537F86F823154EEA3EBE5C6718B207"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.normal_coordinate_embedding_mem",
+        "Dubon2026.SourceCurve.orbit_card_dvd_of_kernel_fixes",
+        "Dubon2026.SourceCurve.Place.normal_coordinate_order_dvd_of_inertia_kernel",
+        "Dubon2026.SourceFunctionField.exists_char_three_modular_galois_orders_dvd_six"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.normal_coordinate_embedding_mem",
+        "Dubon2026.SourceCurve.orbit_card_dvd_of_kernel_fixes",
+        "Dubon2026.SourceCurve.Place.normal_coordinate_order_dvd_of_inertia_kernel",
+        "Dubon2026.SourceFunctionField.exists_char_three_modular_galois_orders_dvd_six"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceNormalFieldOrderAudit4.log",
+      "logSha256": "207A0D718EA6B129BDE811FC82754F601A6DC5A74D372BC74A77D20E28391B4D",
+      "auditSha256": "2358A54CD26DB4C19EF00A7C630392E257B76F9F6BBCFCD45DF36ACF09DB0C0A",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 5,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 9,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceNormalFieldOrderDependencyAudit4.log",
+      "dependencyAuditSha256": "331E3EF88273C705BFC61AAAACDF9EE606D81F2533D70EC38B06D9C036D6CA4F",
+      "dependencyAuditSourceSha256": "E8DF3530541265424DE2984B391AC29DAD481D815624BC670CCDC486DE7C30B1",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.exists_char_three_modular_galois_orders_dvd_six"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> characteristic-three modular good reduction -> genus equality -> wild different bound at order six -> actual auxiliary finite Galois extension with positive j orders dividing six",
+      "discharged": "The actual characteristic-three modular coefficient field embeds into a finite Galois extension of its original j-coordinate field in which every positive j order divides six. Existing actual place-restriction surjectivity, embedding-fiber order and inertia-orbit formulas identify each normalized order. Native normal-field range and group-index divisibility turn the constructed three-point inertia quotient into the required divisibility. Every field, embedding, place and action input is derived on the actual consumer.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The stronger wild different bound, characteristic-three exceptional census and genus equality remain required. Characteristic-two good reduction and original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-normal-field-order-4-reuse-review-20261024.json",
+      "reuseReviewSha256": "CF82E426303906775EC8B43D1ABAA96A64DF7A192FB4B842A34DC0782C25A4EE",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-wild-derivative-2-reuse-review-20261024.json",
+    "Tools/source-wild-integral-change-3-reuse-review-20261024.json",
+    "Tools/source-odd-specialization-9-reuse-review-20261024.json",
+    "Tools/source-char-three-image-6-reuse-review-20261024.json",
+    "Tools/source-char-three-permutation-3-r2-reuse-review-20261024.json",
+    "Tools/source-char-three-embedding-3-reuse-review-20261024.json",
+    "Tools/source-coordinate-fixing-field-4-reuse-review-20261024.json",
+    "Tools/source-normal-field-order-4-reuse-review-20261024.json"
+  ],
+  "additionalCurrentSearch": {
+    "path": "Tools/char-three-galois-orders-route-396.json",
+    "sha256": "110A763EFF06AE2C893B885F8B92DF750E5F0A9AE00120C8A4F583086D85CF1B"
+  },
+  "productionFocusedReceipt7404": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceWildDerivativeDependencyAudit2Production7404.log",
+        "sha256": "FE524344010A622655BB2334077D58CBD77265E308EF854093876D6A8DB424CA",
+        "requiredProofValueEdges": 8,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_place_three_le_D_j_of_char_three",
+          "Dubon2026.SourceFunctionField.coeff_place_four_le_D_j_of_char_two",
+          "Dubon2026.SourceFunctionField.coeff_place_six_le_D_j_of_char_two"
+        ],
+        "sourceSha256": "8B9D5EAD5FA9672ED80B3A45AD8E6C1DEDFFFB4B38A1447D2C3CC8198DACB671"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceWildIntegralChangeDependencyAudit3Production7404.log",
+        "sha256": "59F7172D5E4DD50914E84C1AE8AFC4EC42704E920C265663F1B5690DACAB0EF4",
+        "requiredProofValueEdges": 9,
+        "consumers": [
+          "Dubon2026.SourceEllipticReduction.exists_integral_inertia_cocycle_all_characteristics"
+        ],
+        "sourceSha256": "4DDF8C46D99B3D226908B4FC391D1C161C958A43515FEFD1BBEF4B7784A177B7"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOddSpecializationDependencyAudit9Production7404.log",
+        "sha256": "2A4E84B47581C3299A7F8092D79D7E32D2BB57543D5DE8832411BFA558AC11B7",
+        "requiredProofValueEdges": 19,
+        "consumers": [
+          "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action_of_char_three"
+        ],
+        "sourceSha256": "A909476076419DA809B8676200DBD266F737559EF25F876A22528658C4788DB4"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeImageDependencyAudit6Production7404.log",
+        "sha256": "992C30D1DF91B1A1443A2CA02C5156FC846571064A38299EE1CB823D4CCF9C0B",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceEllipticDivisionField.exists_char_three_exceptional_cyclic_specialization"
+        ],
+        "sourceSha256": "9062706FDFB4CC005C8BC5695775D4EE4D3F1CD30360040B84FD07C912EB2FD6"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreePermutationDependencyAudit3R2Production7404.log",
+        "sha256": "66AF8B9351B7DBF1C1141E6B96E9E6E58B0DA2ED28A03D95BE56C4F470568E83",
+        "requiredProofValueEdges": 14,
+        "consumers": [
+          "Dubon2026.SourceEllipticDivisionField.exists_char_three_exceptional_inertia_permutation"
+        ],
+        "sourceSha256": "C12AAAF5C102208FCA7CD1D1E1940CEBCD6E97992C94BA4F3DB27CB978CCAAB9"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeEmbeddingDependencyAudit3Production7404.log",
+        "sha256": "AC6FAE134E598496347021E189A9B14DC9C50912AFBF8CEBE75BF120D481D910",
+        "requiredProofValueEdges": 8,
+        "consumers": [
+          "Dubon2026.SourceEllipticDivisionField.exists_char_three_exceptional_embedding_kernel"
+        ],
+        "sourceSha256": "0AA63C0B0CEBC82A4CF75F8C3D545FA9B8699960C0969CC68E5C44865EFEB238"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCoordinateFixingFieldDependencyAudit4Production7404.log",
+        "sha256": "6C3D00E494618A25E74DE0208F670DE4B150482367F1E56E557FFC9834B0868C",
+        "requiredProofValueEdges": 14,
+        "consumers": [
+          "Dubon2026.SourceEllipticDivisionField.exists_char_three_modular_normal_field"
+        ],
+        "sourceSha256": "F33BC5E6C3DED59958251DA23159BDF78CBB76013B3784FDB96EB07C2583EC7B"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceNormalFieldOrderDependencyAudit4Production7404.log",
+        "sha256": "331E3EF88273C705BFC61AAAACDF9EE606D81F2533D70EC38B06D9C036D6CA4F",
+        "requiredProofValueEdges": 9,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.exists_char_three_modular_galois_orders_dvd_six"
+        ],
+        "sourceSha256": "7C69930421EF0CCD8FCEF8BF10D8723DA0720C982A9F14B13CE11BB26CCF31E3"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeGaloisOrdersProductionAudit7404.log",
+    "sha256": "E1E9FC270922345D3A9E6E4C5B63C433185B90EB0A116BCE6FF4B59BF7463A9D",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-char-three-galois-orders-production-build-7404.log",
+    "aggregateSha256": "89F606D8EBC63F33400E050FC09F7F1758AE7549AB95CAD36C1221CA5C2BD903",
+    "productionModules": 7404,
+    "incrementModules": 34,
+    "axiomChecks": 64,
+    "exhaustiveIncrementTheorems": 125,
+    "linterScopes": 34,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 125,
+    "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The actual modular places, coefficient fields, Gauss residue map, divisor orders, genera and Picard quotient retain their definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 125,
+      "scratchDistinct": 125,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 125,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceCurveWildDerivativeOrder",
+            "SourceModularWildDerivativeOrders"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeGaloisOrdersScratchOwnership389For7404.log",
+            "sha256": "4663AE21ACC8F9CE32C404A642477A7DCB11852C9A61CE2C69431C15757266A8",
+            "sourceSha256": "2FB9AA2CFDEB0CD2F2591E41659D7C372395251BF49A40B8B1E5E49B4560478B"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticIntegralChangeCoordinates",
+            "SourceEllipticWildGoodModelChange",
+            "SourceEllipticWildInertiaCocycle"
+          ],
+          "count": 27,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeGaloisOrdersScratchOwnership390For7404.log",
+            "sha256": "A62BA996C3498C719122B061528BBD9C92286F3DCE371B6ECA15472A410FCA35",
+            "sourceSha256": "02928BFAD61992166AF9F1DFEE378C4EE12B497D07F8F58CEFDBF164FAE3D249"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticWildActualTorsionReduction",
+            "SourceEllipticWildChosenCocycle",
+            "SourceEllipticWildResidueInertiaHom",
+            "SourceEllipticOddFaithfulTorsionModel",
+            "SourceEllipticOddSpecializationFieldPlace",
+            "SourceEllipticOddOfJSpecialization",
+            "SourceEllipticOddFaithfulSpecializationHom",
+            "SourceEllipticOddPrescribedInertiaAction",
+            "SourceEllipticCharThreePrescribedInertia"
+          ],
+          "count": 18,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeGaloisOrdersScratchOwnership391For7404.log",
+            "sha256": "93CA3AAAE2967192D086A6E00412A56380F511704CB9B82422B67C2BA3705370",
+            "sourceSha256": "0B444EF0C4BAD3CEDC0E2C4A50E98BC042D2E5A4180D6248CAF16F9E535350E8"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticCharThreeModel",
+            "SourceEllipticCharThreeStabilizerCoordinates",
+            "SourceEllipticCharThreeStabilizerBound",
+            "SourceEllipticCharThreeGoodModelOrder",
+            "SourceEllipticCharThreeFullInertiaImage",
+            "SourceEllipticCharThreeCyclicSpecialization"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeGaloisOrdersScratchOwnership392For7404.log",
+            "sha256": "1202E430CFBD3AC808D80D48385238D0877F3B9159AC18127C53A466FA82225E",
+            "sourceSha256": "F030FA1D6109C78867756B0E0ECC822B29FD330C8AB28CE99C5161D98462FCA0"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticCharThreeRootPermutationR2",
+            "SourceEllipticCharThreePermutationKernelR2",
+            "SourceEllipticCharThreeInertiaPermutationR2"
+          ],
+          "count": 29,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeGaloisOrdersScratchOwnership393For7404.log",
+            "sha256": "1B4E67B7BF9D93AAB8FC7F8E1D2A0D0D2E032590E12EA1DB52EDE3EB549BE8B4",
+            "sourceSha256": "219B04CADEE0F2D2AEE071A2DE2C39D7F7CC690178F715BDA74DAC09D8D6622F"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticFullTorsionModularEmbeddings",
+            "SourceEllipticTorsionSignSubgroups",
+            "SourceEllipticCharThreeEmbeddingKernel"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeGaloisOrdersScratchOwnership394For7404.log",
+            "sha256": "D207AFA0DCDD037341D14CE8BBDE6BFC6F7BE681F87E4393961E5BDC293E5A5F",
+            "sourceSha256": "95DBE26FE8A68272632E14DC91239E009C550A98BD263C800E5F64B9E0EFB4E2"
+          }
+        },
+        {
+          "modules": [
+            "SourceCoordinateEmbeddingFixingField",
+            "SourceEllipticFullTorsionNonemptyCyclic",
+            "SourceCoordinateEmbeddingFixedFieldMap",
+            "SourceModularCharThreeNormalField"
+          ],
+          "count": 22,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeGaloisOrdersScratchOwnership395For7404.log",
+            "sha256": "39DE15DE16DAC752EFA9971A6FCE8943B2008EBAFDC1E780C6BE01B3A32DDB32",
+            "sourceSha256": "3A4266F11165902B4C55DB340196224AB2B4C19E8FA7796154DF3E43D5870956"
+          }
+        },
+        {
+          "modules": [
+            "SourceNormalCoordinateEmbeddingRange",
+            "SourceKernelOrbitDivisibility",
+            "SourceNormalFieldCoordinateOrder",
+            "SourceModularCharThreeGaloisOrder"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeGaloisOrdersScratchOwnership396For7404.log",
+            "sha256": "544A9960F4E826B6B0F0588640CEE49156DCF191FB8C13BB25768A510B16EF03",
+            "sourceSha256": "37BFD4076FC7FE26A0F7431F7A8FD4EEE9A594A6DA5C1EAD910A3BF9B9DE4C97"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeGaloisOrdersOwnership7404.log",
+        "sha256": "235AA837063A4FC32FDD19DD9FA9CBE25F8D2EEB08EFB56E5E050DCA4E93AC09",
+        "sourceSha256": "FCF54CEBFD6B71F0BA1031693B5786893A275D345DC3FAC302F9B68671A6B5DB"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-031818-476.log",
+        "sha256": "01B646767865D7353F3C79CA36C214051B891C6E2B9DD44DCAE8EB41694E9AF9"
+      }
+    },
+    "scratchToProductionCountReason": "All 125 distinct names from 125 exhaustive scratch checks are retained: 125 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The stronger wild different bounds at characteristic-three order six and characteristic-two order twelve, exceptional-fiber census and wild genus equality remain required. Characteristic-two good models, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. The auxiliary field does not by itself prove good reduction. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt7404": {
+    "recordedUTC": "2026-10-24T13:13:05.341363+00:00",
+    "log": "logs/dubon-build-20261024-045659-373.log",
+    "sha256": "90278FBE5ED9E4002C96901CAA85DE8030AA37C8F612BF4529BB3BBD84477117",
+    "bytes": 12404295,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 7404,
+    "projectTheorems": 48828,
+    "registeredConsumers": 22151,
+    "registeredConstructions": 1932,
+    "declarations": 29939,
+    "generated": 28317,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261024_045200.log",
+    "foundationSha256": "BE574F6B055610740AFD78E3D7DE6DBDC91D22C65ACCB915FF975F3C0050AD1D",
+    "countReconciliation": {
+      "previousTheorems": 48704,
+      "focusedTheorems": 125,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourceCurve.Place.restrictAlongFinite.congr_simp"
+      ],
+      "addedTheorems": 124,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeGaloisOrdersOwnership7404.log",
+      "ownershipSha256": "235AA837063A4FC32FDD19DD9FA9CBE25F8D2EEB08EFB56E5E050DCA4E93AC09"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 125,
+      "scratchDistinct": 125,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 125,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceCurveWildDerivativeOrder",
+            "SourceModularWildDerivativeOrders"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeGaloisOrdersScratchOwnership389For7404.log",
+            "sha256": "4663AE21ACC8F9CE32C404A642477A7DCB11852C9A61CE2C69431C15757266A8",
+            "sourceSha256": "2FB9AA2CFDEB0CD2F2591E41659D7C372395251BF49A40B8B1E5E49B4560478B"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticIntegralChangeCoordinates",
+            "SourceEllipticWildGoodModelChange",
+            "SourceEllipticWildInertiaCocycle"
+          ],
+          "count": 27,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeGaloisOrdersScratchOwnership390For7404.log",
+            "sha256": "A62BA996C3498C719122B061528BBD9C92286F3DCE371B6ECA15472A410FCA35",
+            "sourceSha256": "02928BFAD61992166AF9F1DFEE378C4EE12B497D07F8F58CEFDBF164FAE3D249"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticWildActualTorsionReduction",
+            "SourceEllipticWildChosenCocycle",
+            "SourceEllipticWildResidueInertiaHom",
+            "SourceEllipticOddFaithfulTorsionModel",
+            "SourceEllipticOddSpecializationFieldPlace",
+            "SourceEllipticOddOfJSpecialization",
+            "SourceEllipticOddFaithfulSpecializationHom",
+            "SourceEllipticOddPrescribedInertiaAction",
+            "SourceEllipticCharThreePrescribedInertia"
+          ],
+          "count": 18,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeGaloisOrdersScratchOwnership391For7404.log",
+            "sha256": "93CA3AAAE2967192D086A6E00412A56380F511704CB9B82422B67C2BA3705370",
+            "sourceSha256": "0B444EF0C4BAD3CEDC0E2C4A50E98BC042D2E5A4180D6248CAF16F9E535350E8"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticCharThreeModel",
+            "SourceEllipticCharThreeStabilizerCoordinates",
+            "SourceEllipticCharThreeStabilizerBound",
+            "SourceEllipticCharThreeGoodModelOrder",
+            "SourceEllipticCharThreeFullInertiaImage",
+            "SourceEllipticCharThreeCyclicSpecialization"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeGaloisOrdersScratchOwnership392For7404.log",
+            "sha256": "1202E430CFBD3AC808D80D48385238D0877F3B9159AC18127C53A466FA82225E",
+            "sourceSha256": "F030FA1D6109C78867756B0E0ECC822B29FD330C8AB28CE99C5161D98462FCA0"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticCharThreeRootPermutationR2",
+            "SourceEllipticCharThreePermutationKernelR2",
+            "SourceEllipticCharThreeInertiaPermutationR2"
+          ],
+          "count": 29,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeGaloisOrdersScratchOwnership393For7404.log",
+            "sha256": "1B4E67B7BF9D93AAB8FC7F8E1D2A0D0D2E032590E12EA1DB52EDE3EB549BE8B4",
+            "sourceSha256": "219B04CADEE0F2D2AEE071A2DE2C39D7F7CC690178F715BDA74DAC09D8D6622F"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticFullTorsionModularEmbeddings",
+            "SourceEllipticTorsionSignSubgroups",
+            "SourceEllipticCharThreeEmbeddingKernel"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeGaloisOrdersScratchOwnership394For7404.log",
+            "sha256": "D207AFA0DCDD037341D14CE8BBDE6BFC6F7BE681F87E4393961E5BDC293E5A5F",
+            "sourceSha256": "95DBE26FE8A68272632E14DC91239E009C550A98BD263C800E5F64B9E0EFB4E2"
+          }
+        },
+        {
+          "modules": [
+            "SourceCoordinateEmbeddingFixingField",
+            "SourceEllipticFullTorsionNonemptyCyclic",
+            "SourceCoordinateEmbeddingFixedFieldMap",
+            "SourceModularCharThreeNormalField"
+          ],
+          "count": 22,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeGaloisOrdersScratchOwnership395For7404.log",
+            "sha256": "39DE15DE16DAC752EFA9971A6FCE8943B2008EBAFDC1E780C6BE01B3A32DDB32",
+            "sourceSha256": "3A4266F11165902B4C55DB340196224AB2B4C19E8FA7796154DF3E43D5870956"
+          }
+        },
+        {
+          "modules": [
+            "SourceNormalCoordinateEmbeddingRange",
+            "SourceKernelOrbitDivisibility",
+            "SourceNormalFieldCoordinateOrder",
+            "SourceModularCharThreeGaloisOrder"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeGaloisOrdersScratchOwnership396For7404.log",
+            "sha256": "544A9960F4E826B6B0F0588640CEE49156DCF191FB8C13BB25768A510B16EF03",
+            "sourceSha256": "37BFD4076FC7FE26A0F7431F7A8FD4EEE9A594A6DA5C1EAD910A3BF9B9DE4C97"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreeGaloisOrdersOwnership7404.log",
+        "sha256": "235AA837063A4FC32FDD19DD9FA9CBE25F8D2EEB08EFB56E5E050DCA4E93AC09",
+        "sourceSha256": "FCF54CEBFD6B71F0BA1031693B5786893A275D345DC3FAC302F9B68671A6B5DB"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-031818-476.log",
+        "sha256": "01B646767865D7353F3C79CA36C214051B891C6E2B9DD44DCAE8EB41694E9AF9"
+      }
+    },
+    "scratchToProductionCountReason": "All 125 distinct names from 125 exhaustive scratch checks are retained: 125 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The stronger wild different bounds at characteristic-three order six and characteristic-two order twelve, exceptional-fiber census and wild genus equality remain required. Characteristic-two good models, original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. The auxiliary field does not by itself prove good reduction. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

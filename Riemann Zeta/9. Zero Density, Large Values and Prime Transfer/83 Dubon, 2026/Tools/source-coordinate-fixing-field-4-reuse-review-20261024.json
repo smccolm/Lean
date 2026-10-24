@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> characteristic-three modular good reduction -> genus equality -> wild different bound at order six -> auxiliary normal field with orders dividing six -> actual normal fixed field of the original modular-embedding action",
+  "precedingScratchReceipts": {
+    "source-char-three-embedding-3-scratch-receipt.json": "7B8448A69CB469175C8B78E4A85AB2C74F4FC605CFAA3B931607A1377EEF9F10"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalCoordinateEmbeddingAction.lean",
+      "sha256": "00F8159679B3C86A2F206993023EB70E96C05773199ACBC4AD5209B9AAA684A8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticFullTorsionKernelMap.lean",
+      "sha256": "122967518A6E15DA38AA0ECCAE61C0589604E647D557B9BAB5F0D962BFFA5E7A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticCyclicCount.lean",
+      "sha256": "B596900DF3BBE3092D475F99B47B790D6D89C0A81CC3CBDF1C2C50D292493D20"
+    }
+  ],
+  "routeAdjustment": "Take the fixed field of the native permutation-action kernel. Prove that all original embedding values lie in it and that the three-point inertia kernel fixes it. Construct the actual embedding using the existing nonempty cyclic-subgroup correspondence. Reuse the rational coordinate place-orbit and order identities for the subsequent divisibility comparison.",
+  "discharged": "The original modular coefficient field embeds into the constructed finite normal fixed field of the actual coordinate-embedding action kernel. The original j coordinate is preserved literally. At the constructed positive-j place upstairs, the kernel of the three-root inertia homomorphism fixes this entire normal field. Native normal kernels and Galois fixed-field theory, the existing coordinate action and full-torsion cyclic-subgroup cardinality discharge every field, embedding and action witness.",
+  "remaining": "The actual positive-j place order-dividing-six comparison, wild exceptional census and stronger derivative bound remain required. Characteristic-two good reduction and original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\coordinate-fixing-field-route-395.json",
+    "sha256": "62FC44BAA7D95A82542B9C7E69C89312FFCE51D36D108354EA43DC25B31FAC10",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> characteristic-three modular good reduction -> genus equality -> wild different bound at order six -> auxiliary normal field with orders dividing six -> normal fixed field of the original modular-embedding action",
+      "reuseChecked": [
+        "SourceRationalCoordinateEmbeddingAction already defines the literal postcomposition action on all coordinate-preserving embeddings.",
+        "Pinned Mathlib supplies MulAction.toPermHom, its normal kernel, IntermediateField.fixedField and IsGalois.of_fixedField_normal_subgroup.",
+        "Existing full-torsion cyclic-kernel bijection and actual cyclic-subgroup cardinality provide nonempty embeddings; no new torsion classification is needed.",
+        "Scope 394 proves the actual three-point inertia kernel fixes every original modular embedding."
+      ],
+      "selectedRoute": "Take the fixed field of the native permutation-action kernel. Prove that all original embedding values lie in it and that the three-point inertia kernel fixes it. Construct the actual embedding using the existing nonempty cyclic-subgroup correspondence. Reuse the rational coordinate place-orbit and order identities for the subsequent divisibility comparison.",
+      "boundary": "The normal field alone is not the order-dividing-six theorem. The exact place-order comparison and wild different bound remain required."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "additionalRenewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\verified-candidates.json",
+    "sha256": "F30614E180BD2370FFA86973F32F730D5453434EDDAE4695024F9AE675265F22",
+    "commit": "e177885ee120f8074a7610c3e60571ab00b20004",
+    "upstreamBuildVerified": false
+  },
+  "externalReference": {
+    "repository": "https://github.com/TauCetiProject/TauCeti",
+    "commit": "e177885ee120f8074a7610c3e60571ab00b20004",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "TauCeti/AlgebraicGeometry/EllipticCurve/VariableChange/Galois.lean",
+        "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\VariableChange\\Galois.lean.txt",
+        "gitBlob": "36eb8a9d38711fcf820dc9a46c908463e1bf1116",
+        "sha256": "965D76EB1CD53439A6CE75FA38BEC0537B69A227D5A4AD06C0B8FF0ED70656F4",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/VariableChange/Galois.lean"
+      },
+      {
+        "path": "TauCeti/AlgebraicGeometry/EllipticCurve/MinimalModel/Basic.lean",
+        "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\MinimalModel\\Basic.lean.txt",
+        "gitBlob": "1ebd71a9c5ef5db021f2b3be6a0e3cce35940074",
+        "sha256": "4CFC82B37EC34067A89136E4D2B176EFEA453DCECC8F158582F380CA46285868",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/MinimalModel/Basic.lean"
+      },
+      {
+        "path": "TauCeti/AlgebraicGeometry/EllipticCurve/IntegralModel.lean",
+        "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\IntegralModel.lean.txt",
+        "gitBlob": "1b85012af8d1e7e650fe4fab1a07786a3354a2ed",
+        "sha256": "83CE142D4B4DFB73E98DBF05AD94C1C1D1AD3756D7B301AF4C4ADEB6F7D7CB2A",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/IntegralModel.lean"
+      }
+    ],
+    "role": "The previously audited IntegralModel adaptation in scope 390 supplies the all-characteristic integral cocycle consumed here. Existing local Legendre good models, faithful generators, torsion reduction, actual places and residue transport provide the remaining mathematical inputs. No external build or import is claimed."
+  },
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_isGalois_ord_jqModC_dvd_six_of_char_three.lean.txt",
+    "sha256": "C0A6C8A0BDA955A3D676E0C7B1393367AFC58768B3072593147B051624C0CE03",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "Source comparison for the actual fixed-field construction. Existing local coordinate action and cyclic count plus native normal kernels and Galois fixed fields replace the external fixer subgroup infrastructure. No external import is added. No external build is claimed."
+  },
+  "consumerScope": "The exact auxiliary normal field and its original modular embedding are constructed. The subsequent order-dividing-six result is not claimed by this receipt."
+}

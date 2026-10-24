@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> wild modular good reduction -> characteristic-three genus equality -> weighted exceptional-fiber census -> dihedral-three cyclic-subgroup orbit sizes and fixed-point counts",
+  "precedingScratchReceipts": {
+    "source-modular-seven-4-scratch-receipt.json": "5A552C29275A60B3C88C21C4C07750ADA1D5D770B60EBC7C975814A074BC651C"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceManinOrbitCount.lean",
+      "sha256": "9337C9AB742D19EA2AD277E4685581C9C43C1EE5214E1A3925DE5E32BD011CF8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticQuadraticFixedCounts.lean",
+      "sha256": "3CD410BE05BF5AFD78A899CE45781D1077A8D6136CB9C2A9D74FAC48825C2334"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticCharThreeCyclicSpecialization.lean",
+      "sha256": "4FF6D992113FA0DAAA90C3AE4A087346FD134898D4F7311E39846EE8BA9CB8FF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticPrescribedFiberOrders.lean",
+      "sha256": "5353715E815837EB13BDC5DB43361980C0E4142F94272213DABED3010FCFD1F6"
+    }
+  ],
+  "nativeReuse": {
+    "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Data\\Finset\\Card.lean",
+    "sha256": "190463A0663D60D8D65620C8629AA034BAA773A28BDB8805194A17791F242706",
+    "theorem": "Finset.card_bij"
+  },
+  "routeAdjustment": "Adapt only the exact dihedral-three finite-set census and its used supporting lemmas. Then instantiate it with the actual characteristic-three elliptic automorphisms and modular place-fiber map. Omit unused injectivity helpers and do not expand a general group-action census framework.",
+  "discharged": "The exact weighted finite-set census is proved from involution, order-three, conjugation, fiber and image hypotheses. Fibers have sizes one, two, three or six. The number of odd-size fibers equals the number of involution-fixed points; the number of size-one fibers plus twice the size-two fibers equals the number of order-three-generator fixed points. The proof uses equal or disjoint three-cycles, a fixed-point bijection and finite disjoint-union cardinality.",
+  "remaining": "The concrete characteristic-three elliptic operators, their quadratic identities and nonscalar torsion action, their nuTwo/nuThree fixed-point counts, and the actual modular place-fiber consumer must still discharge the census hypotheses. No actual modular census or genus equality is claimed by this scope. The characteristic-two and arithmetic/automorphy chains remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\dihedral-census-route-402.json",
+    "sha256": "93B8F2CD0037E016DCC7D03FD953A71188D364E1F3C2BAB4EB4C0D506CF0B4E3",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> wild modular good reduction -> characteristic-three genus equality -> weighted exceptional-fiber census -> dihedral-three cyclic-subgroup orbit sizes and fixed-point counts",
+      "reuseChecked": [
+        "Scope 401 proves the actual characteristic-three order-six/seven differential contribution. The other required local derivative estimates are already proved in production.",
+        "Existing actual cyclic-subgroup specialization and place-fiber results identify modular orders with orbit sizes. Existing quadratic stable-cyclic counts supply nuTwo and nuThree after the concrete automorphisms and nonscalar conditions are verified.",
+        "The repository has cyclic orbit counts but no dihedral-three weighted census. Native Burnside's lemma counts total orbits; it does not directly give the separate odd-size and size-one/two identities required by the source.",
+        "The frozen FLT proof S_Function_orbitCensus_of_dihedralThree_relations gives the exact finite-set census. Its decomposition into equal or disjoint three-cycles and the fixed-point bijections are shorter here than introducing and classifying all subgroups of an abstract S3 action."
+      ],
+      "selectedRoute": "Adapt only the exact dihedral-three finite-set census and its used supporting lemmas. Then instantiate it with the actual characteristic-three elliptic automorphisms and modular place-fiber map. Omit unused injectivity helpers and do not expand a general group-action census framework.",
+      "assumptionsToDischarge": "The census initially has explicit involution, order-three, conjugation, fiber and image hypotheses. Subsequent concrete elliptic and modular consumers must derive all of these, together with the nuTwo/nuThree fixed-point counts.",
+      "boundary": "A conditional finite-set census is not the actual modular census or genus equality. Those obligations and DUB-17--20 remain open; acceptance stays 16/20."
+    }
+  },
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_Function_orbitCensus_of_dihedralThree_relations.lean.txt",
+    "sha256": "C4EA55C7EB0DC11CF8BCCE2DBFC21217D8175154CF5FDF5B1301EF7F230AB794",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The exact dihedral-three finite-set census is adapted with unused source helpers omitted and all section assumptions checked. Native finite-set bijection and disjoint-union cardinality are consumed. No upstream build or import is claimed."
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> characteristic-three modular good reduction -> genus equality -> wild exceptional-fiber census -> actual full inertia image and cyclic-subgroup specialization",
+  "precedingScratchReceipts": {
+    "source-odd-specialization-9-scratch-receipt.json": "9387F2E39F2CE404DCA6DB56814C7D402448D3B7EF28C5032DDEEBA777C25E20"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticQuarticModel.lean",
+      "sha256": "43FE57EF2606008BE91428B6370B762706EF408FD20B02B03C1A27F0DA3148D8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticOfJDiscriminantOrder.lean",
+      "sha256": "8707CB6958A294D58706CEE26647A4E33645C26521587CFEAA5CEF7F1C1A7E01"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRatFuncInertiaCardinality.lean",
+      "sha256": "682B448F8A67CE19833AAE14506960B9EE5BFDB61856F238577032D84DBC4603"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticStabilizerImageUpToSign.lean",
+      "sha256": "6FC145AD491B7853F000D25D64929F5F435BFCD5E5FB8D51A862549F9D63247D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticPrescribedCyclicSpecialization.lean",
+      "sha256": "2C744A5319838F504142BBDA0B17A7835C5C63522B961AB2CA307F1A8584BAEA"
+    }
+  ],
+  "routeAdjustment": "Use the actual EA(-1) model, prove its stabilizer coordinates and cardinality bound twelve, specialize the existing discriminant divisibility, and combine the actual faithful inertia action with the existing inertia-order identity. Defer general characteristic-three normal forms and unrelated minimal-model theory.",
+  "discharged": "The actual characteristic-three exceptional curve is the existing EA(-1). Its stabilizer has cardinality at most twelve by literal coordinate root counts. The existing good-model discriminant forces twelve to divide the actual specialization order of j. The constructed faithful inertia action and proved inertia-order identity therefore give inertia order twelve and surjectivity onto the entire elliptic stabilizer. The existing torsion classification supplies the actual equivariant cyclic-subgroup specialization bijection. No good-model, inertia-action, cardinality or full-image witness is assumed on the final consumer.",
+  "remaining": "The characteristic-three exceptional census, auxiliary Galois field with orders dividing six and stronger wild derivative bound remain required. Characteristic-two good reduction and original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\char-three-image-route-392.json",
+    "sha256": "F63A631B75B21CA1FFA5C8F6359332D1C83C45B3FCBCEBC53BE6BC1223849B2A",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> characteristic-three modular good reduction -> genus equality -> wild exceptional-fiber census -> actual full inertia image at j=0",
+      "reuseChecked": [
+        "Existing EA(-1) is the literal characteristic-three exceptional curve; its discriminant, ellipticity and quartic point action are already proved.",
+        "Existing ofJ_good_model_order_divisibility is characteristic independent. In characteristic three, 1728=0, so its 12-divisibility condition gives 12 dividing the j order directly.",
+        "Existing rational specialization inertia-cardinality identity is characteristic independent.",
+        "Scope 391 constructs the actual prescribed inertia action in characteristic three without assumed good-model or torsion-specialization witnesses.",
+        "Frozen FLT S_ModularCurve_exists_isGalois_ord_jqModC_dvd_six_of_char_three provides explicit stabilizer equations. Native root counting bounds the two remaining coordinates by 4 times 3 without importing its permutation framework yet."
+      ],
+      "selectedRoute": "Use the actual EA(-1) model, prove its stabilizer coordinates and cardinality bound twelve, specialize the existing discriminant divisibility, and combine the actual faithful inertia action with the existing inertia-order identity. Defer general characteristic-three normal forms and unrelated minimal-model theory.",
+      "boundary": "The exceptional orbit census, auxiliary Galois extension with orders dividing six, and stronger wild derivative bound remain needed. No acceptance gate closes."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "additionalRenewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\verified-candidates.json",
+    "sha256": "F30614E180BD2370FFA86973F32F730D5453434EDDAE4695024F9AE675265F22",
+    "commit": "e177885ee120f8074a7610c3e60571ab00b20004",
+    "upstreamBuildVerified": false
+  },
+  "externalReference": {
+    "repository": "https://github.com/TauCetiProject/TauCeti",
+    "commit": "e177885ee120f8074a7610c3e60571ab00b20004",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "TauCeti/AlgebraicGeometry/EllipticCurve/VariableChange/Galois.lean",
+        "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\VariableChange\\Galois.lean.txt",
+        "gitBlob": "36eb8a9d38711fcf820dc9a46c908463e1bf1116",
+        "sha256": "965D76EB1CD53439A6CE75FA38BEC0537B69A227D5A4AD06C0B8FF0ED70656F4",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/VariableChange/Galois.lean"
+      },
+      {
+        "path": "TauCeti/AlgebraicGeometry/EllipticCurve/MinimalModel/Basic.lean",
+        "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\MinimalModel\\Basic.lean.txt",
+        "gitBlob": "1ebd71a9c5ef5db021f2b3be6a0e3cce35940074",
+        "sha256": "4CFC82B37EC34067A89136E4D2B176EFEA453DCECC8F158582F380CA46285868",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/MinimalModel/Basic.lean"
+      },
+      {
+        "path": "TauCeti/AlgebraicGeometry/EllipticCurve/IntegralModel.lean",
+        "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\IntegralModel.lean.txt",
+        "gitBlob": "1b85012af8d1e7e650fe4fab1a07786a3354a2ed",
+        "sha256": "83CE142D4B4DFB73E98DBF05AD94C1C1D1AD3756D7B301AF4C4ADEB6F7D7CB2A",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/IntegralModel.lean"
+      }
+    ],
+    "role": "The previously audited IntegralModel adaptation in scope 390 supplies the all-characteristic integral cocycle consumed here. Existing local Legendre good models, faithful generators, torsion reduction, actual places and residue transport provide the remaining mathematical inputs. No external build or import is claimed."
+  },
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_isGalois_ord_jqModC_dvd_six_of_char_three.lean.txt",
+    "sha256": "C0A6C8A0BDA955A3D676E0C7B1393367AFC58768B3072593147B051624C0CE03",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "Literal exceptional-model stabilizer coordinate equations adapted to existing EA(-1). Native root counting and existing actual discriminant and inertia-cardinality proofs give the shorter full-image route. No external build is claimed."
+  }
+}

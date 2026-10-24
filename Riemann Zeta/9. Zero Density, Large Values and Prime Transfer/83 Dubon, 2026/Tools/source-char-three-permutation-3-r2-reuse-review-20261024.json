@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> characteristic-three modular good reduction -> genus equality -> wild different bound at order six -> auxiliary normal field with orders dividing six -> actual three-root inertia action and its negation kernel",
+  "precedingScratchReceipts": {
+    "source-char-three-image-6-scratch-receipt.json": "A56520AABB9E37948D52D44F1D4EA7852D893F6CC61D95AE750F144F4AAA179E"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticNegationVariableChange.lean",
+      "sha256": "B518575BC1F531A5F4CEAF71DDE0F11B03C28F6FE1B952F52968B0FD35FDB6D3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticGaloisTorsionMap.lean",
+      "sha256": "AD683395D546355225D5A2CEB67C384B2D3C8E7B216EB97515B90B7082684EDD"
+    }
+  ],
+  "routeAdjustment": "Adapt only the three-root action and its identity-or-negation kernel, then consume it on the actual inertia action and torsion specialization. Reuse native group-index results for the subsequent orbit bound.",
+  "discharged": "The actual exceptional stabilizer acts on the three literal roots of x^3=x. The target permutation group has cardinality six. Its kernel consists only of identity and the existing actual elliptic negation. On the constructed characteristic-three finite Galois field, each kernel element therefore acts uniformly on all N-torsion points as identity or negation. All full good-model, faithful-action and cyclic-specialization witnesses remain available in the actual consumer.",
+  "remaining": "The auxiliary normal fixed field, actual place-order comparison, wild exceptional census and stronger derivative bound remain required. Characteristic-two good reduction and original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\char-three-permutation-route-393.json",
+    "sha256": "4BCDDBF1641981FD424061DE8369B751B8FC13524066A6EC2B5F7C37CD7576A4",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "all-weight continuation -> automorphy/residual association -> original Frobenius/inertia -> characteristic-three modular good reduction -> genus equality -> wild different bound at order six -> auxiliary Galois field with orders dividing six -> inertia action modulo negation on three roots",
+      "reuseChecked": [
+        "Scope 392 constructs the actual characteristic-three specialization, full inertia image and cyclic-subgroup bijection.",
+        "Existing negationChange and vcInvFun_negationChange_heq already identify the actual elliptic negation map in every characteristic.",
+        "Pinned Mathlib supplies stabilizer index, kernel index, divisibility of subgroup index and subgroup cardinality; no new orbit-stabilizer theory is needed.",
+        "The frozen FLT characteristic-three order-dividing-six proof supplies the literal three-root permutation and its kernel equations. Its generic place and Galois machinery will be compared separately with existing actual rational-place proofs before expansion."
+      ],
+      "selectedRoute": "Adapt only the three-root action and its identity-or-negation kernel, then consume it on the actual inertia action and torsion specialization. Reuse native group-index results for the subsequent orbit bound.",
+      "boundary": "The auxiliary normal field, actual place order comparison, census and stronger wild different bound still require assembly."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "additionalRenewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\verified-candidates.json",
+    "sha256": "F30614E180BD2370FFA86973F32F730D5453434EDDAE4695024F9AE675265F22",
+    "commit": "e177885ee120f8074a7610c3e60571ab00b20004",
+    "upstreamBuildVerified": false
+  },
+  "externalReference": {
+    "repository": "https://github.com/TauCetiProject/TauCeti",
+    "commit": "e177885ee120f8074a7610c3e60571ab00b20004",
+    "license": "Apache-2.0",
+    "selectedFiles": [
+      {
+        "path": "TauCeti/AlgebraicGeometry/EllipticCurve/VariableChange/Galois.lean",
+        "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\VariableChange\\Galois.lean.txt",
+        "gitBlob": "36eb8a9d38711fcf820dc9a46c908463e1bf1116",
+        "sha256": "965D76EB1CD53439A6CE75FA38BEC0537B69A227D5A4AD06C0B8FF0ED70656F4",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/VariableChange/Galois.lean"
+      },
+      {
+        "path": "TauCeti/AlgebraicGeometry/EllipticCurve/MinimalModel/Basic.lean",
+        "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\MinimalModel\\Basic.lean.txt",
+        "gitBlob": "1ebd71a9c5ef5db021f2b3be6a0e3cce35940074",
+        "sha256": "4CFC82B37EC34067A89136E4D2B176EFEA453DCECC8F158582F380CA46285868",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/MinimalModel/Basic.lean"
+      },
+      {
+        "path": "TauCeti/AlgebraicGeometry/EllipticCurve/IntegralModel.lean",
+        "local": "E:\\Lean\\.tmp\\dubon83\\wild-reuse-20261024-390\\TauCeti\\AlgebraicGeometry\\EllipticCurve\\IntegralModel.lean.txt",
+        "gitBlob": "1b85012af8d1e7e650fe4fab1a07786a3354a2ed",
+        "sha256": "83CE142D4B4DFB73E98DBF05AD94C1C1D1AD3756D7B301AF4C4ADEB6F7D7CB2A",
+        "url": "https://raw.githubusercontent.com/TauCetiProject/TauCeti/e177885ee120f8074a7610c3e60571ab00b20004/TauCeti/AlgebraicGeometry/EllipticCurve/IntegralModel.lean"
+      }
+    ],
+    "role": "The previously audited IntegralModel adaptation in scope 390 supplies the all-characteristic integral cocycle consumed here. Existing local Legendre good models, faithful generators, torsion reduction, actual places and residue transport provide the remaining mathematical inputs. No external build or import is claimed."
+  },
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_isGalois_ord_jqModC_dvd_six_of_char_three.lean.txt",
+    "sha256": "C0A6C8A0BDA955A3D676E0C7B1393367AFC58768B3072593147B051624C0CE03",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "Literal three-root permutation and kernel proof adapted to existing EA(-1), its proved coordinate equations and existing actual elliptic negation. The constructed inertia and torsion consumer discharges all action witnesses. No external build is claimed."
+  },
+  "preservedFailedPredecessor": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharThreePermutationAudit3.log",
+    "sha256": "08B8AF6DDF4105B9309B767F7ED4E107ACE09E1412DD5AB4AF6094A065389DBE",
+    "reason": "Two public permutation definitions lacked docstrings. The axiom and value-dependency checks passed; the linter correctly failed. Fresh R2 source successors add only the missing comments and import renaming. No audited source, proof body, old audit or log was overwritten."
+  }
+}
