@@ -1,0 +1,1069 @@
+{
+  "date": "24 October 2026",
+  "modules": [
+    "Dubon2026.SourceOriginalWeilKummerRadicand",
+    "Dubon2026.SourceCurveKummerRootAutomorphism",
+    "Dubon2026.SourceOriginalWeilKummerCover",
+    "Dubon2026.SourceTateTorusCoordinateLift",
+    "Dubon2026.SourceOriginalTateCoordinateLift",
+    "Dubon2026.SourceOriginalTateWeilDetection",
+    "Dubon2026.SourceOriginalFiniteCoverGeometry",
+    "Dubon2026.SourceOriginalWeilKummerGeometry",
+    "Dubon2026.SourceCurveRationalEvaluationLaws",
+    "Dubon2026.SourceCurveRationalDivisorEvaluation",
+    "Dubon2026.SourceOriginalWeilCoverEvaluation",
+    "Dubon2026.SourceCurveRationalDivisorNorm",
+    "Dubon2026.SourceOriginalWeilCoverNorm",
+    "Dubon2026.SourceCurveRationalCoordinateReciprocity",
+    "Dubon2026.SourceCurveRationalDivisorConstants",
+    "Dubon2026.SourceCurveFiniteCoordinateReciprocity",
+    "Dubon2026.SourceOriginalWeilCoverReciprocity",
+    "Dubon2026.SourceCurveRationalEvaluationEquiv",
+    "Dubon2026.SourceCurvePicardDivisionPrincipal",
+    "Dubon2026.SourceOriginalWeilKummerPointDifference",
+    "Dubon2026.SourceOriginalWeilKummerPointEvaluation",
+    "Dubon2026.SourceOriginalWeilKummerDivisionNorm",
+    "Dubon2026.SourceCurveKummerRootPullback",
+    "Dubon2026.SourceOriginalWeilKummerMoving",
+    "Dubon2026.SourceCurveKummerDetectingEvaluation",
+    "Dubon2026.SourceCurveKummerNormAvoidance",
+    "Dubon2026.SourceOriginalWeilKummerNormAvoidance",
+    "Dubon2026.SourceOriginalWeilDatumAssembly",
+    "Dubon2026.SourceCurveKummerMovedEvaluation",
+    "Dubon2026.SourceOriginalWeilKummerMovedDatum",
+    "Dubon2026.SourceOriginalWeilKummerDetectingDatum",
+    "Dubon2026.SourceOriginalWeilKummerDetection",
+    "Dubon2026.SourceOriginalTateWeilKummerDetection"
+  ],
+  "dependency": "actual residual association -> primitive Frobenius determinant -> nonzero required Hecke-component pairing -> original Tate nondegeneracy -> auxiliary Kummer point-difference division",
+  "discharged": "Actual Kummer field/root entry, finite coordinate geometry, residue evaluations, finite-map norm identities, cover reciprocity, point-difference eigenvalue, conditional norm torsion data, original moving and corrected detecting Weil datum, finite detection, and Tate detection/injectivity from explicit point-difference division.",
+  "boundary": "The point-difference division hypothesis is not proved. Unconditional nondegeneracy, nonzero required Hecke-component restriction, determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN; no gate closed.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 7,706-module scope: all thirteen retained regressions, 50,171 exhaustive theorem checks, 22,825 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.originalPic0_nonzero_torsion_kummer_cover",
+    "Dubon2026.SourceFunctionField.originalTateWeilBilinear_injective_of_finiteLevel",
+    "Dubon2026.SourceFunctionField.originalWeilKummerCover_finite_coordinate",
+    "Dubon2026.SourceFunctionField.originalWeilKummerCover_curve",
+    "Dubon2026.SourceFunctionField.originalWeilKummerCover_residue_bijective",
+    "Dubon2026.SourceFunctionField.originalDivisorEval_eq_rationalDivisorEval",
+    "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_single",
+    "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_ne_zero",
+    "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_mul",
+    "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_add",
+    "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_pow",
+    "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_nsmul",
+    "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval",
+    "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_finitePullback",
+    "Dubon2026.SourceFunctionField.originalDivisorEval_kummer_geometricPushforward",
+    "Dubon2026.SourceFunctionField.originalWeilKummerCover_reciprocity",
+    "Dubon2026.SourceFunctionField.originalWeilKummerPointDifference_eval",
+    "Dubon2026.SourceFunctionField.exists_originalWeilKummerDivision_norm_data",
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_detects_of_kummer_point_division",
+    "Dubon2026.SourceFunctionField.originalTateWeilBilinear_injective_of_kummer_point_division"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-25T00:09:08.750310+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalWeilKummerRadicand",
+        "SourceCurveKummerRootAutomorphism",
+        "SourceOriginalWeilKummerCover"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilKummerRadicand.lean",
+          "sha256": "4838AC2DCD169F84DD2636233C9A77E4E7C7E685C989DA1ADA0F8DD52B447E49",
+          "oleanSha256": "60F2D69DEDFB27885F512E0F756DEC0C425FE48BFF694B79C09C69DE8ADA6EFB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveKummerRootAutomorphism.lean",
+          "sha256": "F64B38A5BC69BA5EABC416E31DC21C3C821A2E28E24FE6D61F561C102828D0AE",
+          "oleanSha256": "429A8101D19938EB931A11A3B06CE79613F8E9A70A741668F40EE279CDE15820"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilKummerCover.lean",
+          "sha256": "0EE7D00D97865C2469DD22D70B716968053E49F26CEBC72D4A6A0CB1A3590855",
+          "oleanSha256": "9A9013B3461A3D22BE50C02CD705A6857A2C389F2905CEF7087427630C6E15FF"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.originalPic0_function_not_power",
+        "Dubon2026.SourceFunctionField.originalPic0_nonzero_torsion_kummer_data",
+        "Dubon2026.SourceCurve.KummerCover.root_of_unity_mem_constant_range",
+        "Dubon2026.SourceCurve.KummerCover.exists_root_moved_by_constant",
+        "Dubon2026.SourceFunctionField.originalPic0_nonzero_torsion_kummer_cover"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.originalPic0_function_not_power",
+        "Dubon2026.SourceFunctionField.originalPic0_nonzero_torsion_kummer_data",
+        "Dubon2026.SourceCurve.KummerCover.root_of_unity_mem_constant_range",
+        "Dubon2026.SourceCurve.KummerCover.exists_root_moved_by_constant",
+        "Dubon2026.SourceFunctionField.originalPic0_nonzero_torsion_kummer_cover"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilKummerAudit3.log",
+      "logSha256": "1C769EC635BD6F3691F3816FB910024AA800020682E4BE6D9059B8D87A02CAEF",
+      "auditSha256": "55B123D372894A84804EFDDDD500EE228D1F0D50D0AD570532D68F63DD11CD78",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 5,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 10,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilKummerDependencyAudit3.log",
+      "dependencyAuditSha256": "F268D81D79F7BC03C7FF354ED5231D7B7C331BB1F369A2CFA2534EDEAFEC1782",
+      "dependencyAuditSourceSha256": "A344EF932FEF7E5149AC9023C2B565ECCBC125E4F94F073E8F2F464446AC71B4",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalPic0_nonzero_torsion_kummer_cover"
+      ],
+      "dependency": "modular concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nonzero Hecke-component pairing -> original Weil nondegeneracy -> Kummer cover of the actual nonzero Picard torsion class",
+      "discharged": "Every nonzero actual original Picard n-torsion class yields a degree-zero representative and nonzero principal function with orders n times that divisor, and the function is not an n-th power. Its literal polynomial splitting field contains a root moved by an actual automorphism through a constant unequal to one.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Auxiliary-cover Picard divisibility and evaluation/reciprocity transfer, construction of the detecting second torsion class, Weil nondegeneracy and the nonzero required Hecke-component pairing, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. Scratch only; production promotion and assembled verification pending. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-weil-kummer-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "896699F34FB82FBAC5E5208922E8C5E48CBCF62A2E6B1D53E0CAEB7CAFE01A3D",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-25T00:31:33.629564+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceTateTorusCoordinateLift",
+        "SourceOriginalTateCoordinateLift",
+        "SourceOriginalTateWeilDetection"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateTorusCoordinateLift.lean",
+          "sha256": "258BB6B23FE16AF02C1948F567452391F501F2241095F9732CC0DC6A2C146949",
+          "oleanSha256": "6E1784729F561960218034F95A0F4E685412C5E73ABD531A5FBA12384C289E53"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateCoordinateLift.lean",
+          "sha256": "4E35ABAB86A6C2F0378FE79235A1EE9A1DB3BA7095E2C2F6E002BA4EDE7228D2",
+          "oleanSha256": "7A57CE0B9F92AA030FE1A26A19DDDDAD7747D5B93355DFE06DC4E313A735CE80"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilDetection.lean",
+          "sha256": "FAA387275F28600AF5DE1CD5BCEDEF3F350627F4F2724E50B1221C79174AFDD2",
+          "oleanSha256": "C40EB71A33707C4D73B1AEA14E1800E7B9306C65460310DD366129228920E8D3"
+        }
+      ],
+      "queries": [
+        "Dubon2026.TateModule.Period.exists_tate_coordinate_of_torsion",
+        "Dubon2026.TateModule.Period.exists_tate_coordinate_of_torsion_image",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTateTorsionCoordinate_surjective_of_basis",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTateTorsionCoordinate_surjective",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_detects_of_finiteLevel",
+        "Dubon2026.SourceFunctionField.originalTateWeilBilinear_injective_of_finiteLevel"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.TateModule.Period.exists_tate_coordinate_of_torsion",
+        "Dubon2026.TateModule.Period.exists_tate_coordinate_of_torsion_image",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTateTorsionCoordinate_surjective_of_basis",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalTateTorsionCoordinate_surjective",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_detects_of_finiteLevel",
+        "Dubon2026.SourceFunctionField.originalTateWeilBilinear_injective_of_finiteLevel"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateDetectionAudit3.log",
+      "logSha256": "D198115AFE1EAF09C1B5483C348EA93B7C1424D3706B707FB4556E6C05A3D296",
+      "auditSha256": "F1EDE766DC63360A4A7337391E9D0914478C427CAE789E2D73872F05F5C20F9E",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 6,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 14,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateDetectionDependencyAudit3R2.log",
+      "dependencyAuditSha256": "7BBDAA870BFAFD95104EA359AD40CDE0644DAE651EB52D2240EB4F3A526A5667",
+      "dependencyAuditSourceSha256": "CA28148BD8E69BB19CB36194E54794B1230456D0C75E5B630E137A0AEA33B21F",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalTateWeilBilinear_injective_of_finiteLevel"
+      ],
+      "dependency": "residual association -> Frobenius characteristic polynomial -> determinant -> nonzero Hecke-component pairing -> Tate Weil nondegeneracy -> finite-level Weil nondegeneracy plus lifting detecting torsion classes",
+      "discharged": "Every original p-power torsion class lifts to the existing arithmetic Tate module. Finite-level detection implies detection and injectivity for the actual arithmetic Tate Weil pairing.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The finite-level detection hypothesis is still open locally. The pinned NYLL nondegeneracy source offers a candidate auxiliary-cover divisibility proof but is not imported or locally built. Auxiliary-cover divisibility/evaluation transfer, nonzero restriction to the required Hecke component, determinant, residual association, automorphy and all-weight continuation remain required. Scratch only; finite-level nondegeneracy remains an explicit upstream hypothesis. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-tate-detection-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "68DD2C2B08532727438C1693D4D2A616FA0518A0855A8C03B87F273A607D1F2C",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-25T00:41:57.477238+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalFiniteCoverGeometry",
+        "SourceOriginalWeilKummerGeometry"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFiniteCoverGeometry.lean",
+          "sha256": "629C625F0B9BC4312BCB8CD713615403930367BCCCC659AC7B055EF5388AA06F",
+          "oleanSha256": "9C3D06E3163897CFBDE5DFFFBE0FAE2BCF0B0904153FA7E8FA3F9BF3CD829BF4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilKummerGeometry.lean",
+          "sha256": "2817E335E63A6C00078092E3903B6418F23C961D2BDAD68E6CC42223DD3D67A4",
+          "oleanSha256": "4B23366C25A316DFC7E2F81D032844CA6FFCDA0D56C8822E05B7074CBD14947E"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.original_extension_finite_coordinate",
+        "Dubon2026.SourceFunctionField.original_extension_curve",
+        "Dubon2026.SourceFunctionField.original_extension_residue_bijective",
+        "Dubon2026.SourceFunctionField.originalWeilKummerCover_finite_coordinate",
+        "Dubon2026.SourceFunctionField.originalWeilKummerCover_curve",
+        "Dubon2026.SourceFunctionField.originalWeilKummerCover_residue_bijective"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.original_extension_finite_coordinate",
+        "Dubon2026.SourceFunctionField.original_extension_curve",
+        "Dubon2026.SourceFunctionField.original_extension_residue_bijective",
+        "Dubon2026.SourceFunctionField.originalWeilKummerCover_finite_coordinate",
+        "Dubon2026.SourceFunctionField.originalWeilKummerCover_curve",
+        "Dubon2026.SourceFunctionField.originalWeilKummerCover_residue_bijective"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerGeometryAudit2.log",
+      "logSha256": "2BD8CC3B4F66357DC2A2EB45A6BD3FA87A943F561BC262AD26FF7EC373032545",
+      "auditSha256": "E924FD1EF56A4180A224B3BC45E7CB35AD9D67CD53E340C33E89D5DC6C43F16B",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 6,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerGeometryDependencyAudit2.log",
+      "dependencyAuditSha256": "A455C8775B784E9943855EDCB85B63C023B397E02C81A3DF589D0B7CCD8FEA25",
+      "dependencyAuditSourceSha256": "8A9336675552100BD701C9F308B6DB1A3EB488D4411196C0CCB0B15AB2A64D4C",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalWeilKummerCover_finite_coordinate",
+        "Dubon2026.SourceFunctionField.originalWeilKummerCover_curve",
+        "Dubon2026.SourceFunctionField.originalWeilKummerCover_residue_bijective"
+      ],
+      "dependency": "residual association -> Frobenius determinant -> Hecke-component nonzero pairing -> Weil nondegeneracy -> Kummer detecting class -> actual finite-cover curve structure and closed residues",
+      "discharged": "The original finite extensions, in particular the actual Kummer splitting field, have a finite transcendental coordinate, genuine curve structure and constant residue fields.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Auxiliary-cover Picard divisibility, evaluation/reciprocity transfer, detecting second torsion class, finite-level Weil nondegeneracy and the required Hecke-component restriction remain open; determinant, residual association, automorphy and all-weight continuation are not established. Scratch only; production promotion and assembled verification pending. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-geometry-2-reuse-review-20261024.json",
+      "reuseReviewSha256": "3307E569CDE280CFAE3BBCE57F3C4A503EBCAB071AA291BFE756D36D63A08FEA",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-25T00:55:29.769395+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceCurveRationalEvaluationLaws",
+        "SourceCurveRationalDivisorEvaluation",
+        "SourceOriginalWeilCoverEvaluation",
+        "SourceCurveRationalDivisorNorm",
+        "SourceOriginalWeilCoverNorm"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveRationalEvaluationLaws.lean",
+          "sha256": "9298F2E2B9002688EF9F1FE30B67EA71247DD6E7681BCFB93471D6E83B7C4E8A",
+          "oleanSha256": "7EEB53AFB1769B76C39BF60EF51EAB1EBD2D50BDF1D3F7A3A3269E584CEE4E1C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveRationalDivisorEvaluation.lean",
+          "sha256": "E997903A97AC88337D7C73443E28C0D0F387A2398D26AEE0830442251DA9DF76",
+          "oleanSha256": "21E36C647F8F22083B3EA00C1E38F8C3F6CBE5E0D81B4B5459066C1AA5116F41"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverEvaluation.lean",
+          "sha256": "EC6D72156F382763818805F3C5212C16B0649B2240ECB4FFDBF16D4B7DF868FA",
+          "oleanSha256": "F7E59EB87D4EF262255A507B56C030FD9664F5FD064B1CCDE2FB299CF3BF1401"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveRationalDivisorNorm.lean",
+          "sha256": "A9734AF6BD0B30570D82467549D543FA4CFC385D1A791C637F64172C89D1C8B3",
+          "oleanSha256": "661470AA1B28D5A719021C1FD0125FD341118FE7E087F009D51C64BF7A0551A2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNorm.lean",
+          "sha256": "DBEE2843A643DB2BE60489CAD16C291E5CDEE8FC9C44CB62F03C886E1EA8BC0C",
+          "oleanSha256": "9D54C2F6B078FD37DA030058E3EA721F3B8304032CD45829B7DDC1EE95A70000"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Place.rationalEval_ne_zero_of_ord_eq_zero",
+        "Dubon2026.SourceCurve.Place.rationalEval_mul_of_mem",
+        "Dubon2026.SourceCurve.Place.rationalEval_pow_of_mem",
+        "Dubon2026.SourceCurve.rationalDivisorEval_single",
+        "Dubon2026.SourceCurve.rationalDivisorEval_ne_zero",
+        "Dubon2026.SourceCurve.rationalDivisorEval_mul",
+        "Dubon2026.SourceCurve.rationalDivisorEval_add",
+        "Dubon2026.SourceCurve.rationalDivisorEval_pow",
+        "Dubon2026.SourceCurve.rationalDivisorEval_nsmul",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_eq_rationalDivisorEval",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_single",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_ne_zero",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_mul",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_add",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_pow",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_nsmul",
+        "Dubon2026.SourceCurve.rationalDivisorEval_finitePullback",
+        "Dubon2026.SourceCurve.rationalDivisorEval_geometricPushforward",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_finitePullback",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_kummer_geometricPushforward",
+        "Dubon2026.SourceCurve.rationalDivisorEval",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Place.rationalEval_ne_zero_of_ord_eq_zero",
+        "Dubon2026.SourceCurve.Place.rationalEval_mul_of_mem",
+        "Dubon2026.SourceCurve.Place.rationalEval_pow_of_mem",
+        "Dubon2026.SourceCurve.rationalDivisorEval_single",
+        "Dubon2026.SourceCurve.rationalDivisorEval_ne_zero",
+        "Dubon2026.SourceCurve.rationalDivisorEval_mul",
+        "Dubon2026.SourceCurve.rationalDivisorEval_add",
+        "Dubon2026.SourceCurve.rationalDivisorEval_pow",
+        "Dubon2026.SourceCurve.rationalDivisorEval_nsmul",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_eq_rationalDivisorEval",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_single",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_ne_zero",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_mul",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_add",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_pow",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_nsmul",
+        "Dubon2026.SourceCurve.rationalDivisorEval_finitePullback",
+        "Dubon2026.SourceCurve.rationalDivisorEval_geometricPushforward",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_finitePullback",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_kummer_geometricPushforward"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.rationalDivisorEval",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerEvaluationAudit5.log",
+      "logSha256": "BF0C41374F8BBE712EBD9C4028B23C00A250117DC775B5662F8272EFB0D9BD62",
+      "auditSha256": "66650D6FA705A117A17CD21BDF75BEFBA0D1061E5B1DD3296DDFE91000B07633",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 25,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 28,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerEvaluationDependencyAudit5.log",
+      "dependencyAuditSha256": "06C9DAAC117E9293CF69B0512202C686D819D1C8E315842163E9763CD6FE98F6",
+      "dependencyAuditSourceSha256": "D2F409885666E5C48EE80024C31F268F703FCC032953EFC6E4183DDC02A309B4",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalDivisorEval_eq_rationalDivisorEval",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_single",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_ne_zero",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_mul",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_add",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_pow",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_nsmul",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_finitePullback",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_kummer_geometricPushforward"
+      ],
+      "dependency": "actual Weil nondegeneracy -> Kummer norm detecting divisor -> reciprocity and one Picard division on the literal cover",
+      "discharged": "Nonzero regular evaluations and their finite divisor products on the actual Kummer cover, with multiplication, powers, divisor addition and natural scaling. Actual norm/pullback evaluation and pushforward/pulled-back-function evaluation on this same cover.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Auxiliary-cover reciprocity and point-difference Picard division remain to be established. No finite-level or Tate nondegeneracy, nonzero component restriction or determinant gate is claimed. Scratch only; production verification pending. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-evaluation-5-reuse-review-20261024.json",
+      "reuseReviewSha256": "CE4CD05CE708DC3261A28ACD0426125CAE9D1A9A79A976582C93A210F250724E",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-25T01:06:02.596791+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceCurveRationalCoordinateReciprocity",
+        "SourceCurveRationalDivisorConstants",
+        "SourceCurveFiniteCoordinateReciprocity",
+        "SourceOriginalWeilCoverReciprocity"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveRationalCoordinateReciprocity.lean",
+          "sha256": "43231DB76F8C6AE4314E30197220D22C564CB8364289BDF5923EBB8101A65C75",
+          "oleanSha256": "7427785D82E7BB9E1A0A9A3F8635B4743ECCB1E707897ECCE2C399B0A1F88F48"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveRationalDivisorConstants.lean",
+          "sha256": "E51306CDC5FFF0F28EB431CFCFB7BF6CAFDE3AEBF347D951558890830F7F74D9",
+          "oleanSha256": "8C3A87803ED7BD61F261E47FFE29EBE6163499E87EFF3B96B3FCB3AB402EF57D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFiniteCoordinateReciprocity.lean",
+          "sha256": "F927F77094BC12455ADE6D8FA6E13489033404BFAB0141E211C38D14DD4CF9DC",
+          "oleanSha256": "32E9D20D243C3D539F97470538B6A3008B06A7A747EE4B12A87532576D3732D5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverReciprocity.lean",
+          "sha256": "D1821941B7C8D557C51F7BA06A19B240584CCEFFEF500352067880F584418B47",
+          "oleanSha256": "788F2C16E5B4AE596FCC87FF7DAD71F0BB8152D3D6B0D3AEADC4CD7279FAD1C0"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.rationalExtensionPrincipalDivisor_pullback",
+        "Dubon2026.SourceCurve.rationalExtensionPrincipalDivisor_pushforward",
+        "Dubon2026.SourceCurve.rationalExtension_norm_ord_zero_of_fiber",
+        "Dubon2026.SourceCurve.rationalExtension_coordinate_weil_reciprocity",
+        "Dubon2026.SourceCurve.rationalDivisorEval_zero",
+        "Dubon2026.SourceCurve.rationalDivisorEval_constant_degree_zero",
+        "Dubon2026.SourceCurve.finite_coordinate_ratfunc_hom_finite",
+        "Dubon2026.SourceCurve.finite_coordinate_weil_reciprocity",
+        "Dubon2026.SourceFunctionField.originalWeilKummerCover_reciprocity"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.rationalExtensionPrincipalDivisor_pullback",
+        "Dubon2026.SourceCurve.rationalExtensionPrincipalDivisor_pushforward",
+        "Dubon2026.SourceCurve.rationalExtension_norm_ord_zero_of_fiber",
+        "Dubon2026.SourceCurve.rationalExtension_coordinate_weil_reciprocity",
+        "Dubon2026.SourceCurve.rationalDivisorEval_zero",
+        "Dubon2026.SourceCurve.rationalDivisorEval_constant_degree_zero",
+        "Dubon2026.SourceCurve.finite_coordinate_ratfunc_hom_finite",
+        "Dubon2026.SourceCurve.finite_coordinate_weil_reciprocity",
+        "Dubon2026.SourceFunctionField.originalWeilKummerCover_reciprocity"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerReciprocityAudit4.log",
+      "logSha256": "0E3AD7A87CAEC35A1F01458CDD8BB78A5A3E819303BFAA30CC0929AF316BAD5B",
+      "auditSha256": "BCA4ED899ED89DB87EC9C70794C042AA4ACEC94D35D688588A86AD0CC9AC222C",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 9,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 17,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerReciprocityDependencyAudit4.log",
+      "dependencyAuditSha256": "48DAFD7813821EBD392A52AC08A910B88ED8718EAD3E14C585914BE87AAB37F6",
+      "dependencyAuditSourceSha256": "08FF5C9A69FF862EC7DDB38E03EA996A163E7552C6C08B6E8E56BF292E85CD3B",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalWeilKummerCover_reciprocity"
+      ],
+      "dependency": "actual residual association -> original primitive Frobenius determinant -> nondegenerate Hecke-component pairing -> finite Weil nondegeneracy -> Kummer norm detecting divisor -> auxiliary-cover reciprocity",
+      "discharged": "Reciprocity for the actual divisor evaluations on the literal auxiliary Kummer cover, with the geometry, finiteness, residue and disjointness prerequisites derived.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The particular point-difference Picard division and detecting-divisor construction remain; no finite or Tate nondegeneracy, component restriction, determinant or acceptance gate is claimed. Scratch development. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-reciprocity-4-reuse-review-20261024.json",
+      "reuseReviewSha256": "D6748FBD41AC75F080ED6026961A983DF8BEDA52FF062EC96474D5462DF700DF",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-25T01:19:41.353338+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceCurveRationalEvaluationEquiv",
+        "SourceCurvePicardDivisionPrincipal",
+        "SourceOriginalWeilKummerPointDifference",
+        "SourceOriginalWeilKummerPointEvaluation",
+        "SourceOriginalWeilKummerDivisionNorm"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveRationalEvaluationEquiv.lean",
+          "sha256": "1E848CAB60CC55A20B3AD95FEF4A859713009F2312B4FBC3EE5424D49A27EC7B",
+          "oleanSha256": "41E1A330485188B3D2AD174721089BA33549F149412F16EE31034B5A5C9D9F55"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePicardDivisionPrincipal.lean",
+          "sha256": "7ED30C43FE7539156CBF30EB7FF610B25AAB82700F9F839AE0046661F9689397",
+          "oleanSha256": "E4D9ECE1CD48301C0A5E4EEC2E040CC822E223FA424CFB896CAF89C484F205AE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilKummerPointDifference.lean",
+          "sha256": "A414AC76AAC454945531AEE024166D292F0981CF101C470CD1BAEFFC859E0A44",
+          "oleanSha256": "859D1A2981496D55E03F9E3DAE65791DF3786AE1FB01F6F182ADF3F502C5B7E7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilKummerPointEvaluation.lean",
+          "sha256": "F3A0FD05E71E1E2CFC631A4408B9D040FC9F5B76AB7F41756CE40FD8FC78DF1D",
+          "oleanSha256": "A142BA87A6643DB09B3B4CBB898B477BC0BC910B958373E6673C692D8FAA6CD7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilKummerDivisionNorm.lean",
+          "sha256": "56DEBCE76106075FD3C115CC95467D2E6F03BB4BEC6D86FDA28508F2274F08DA",
+          "oleanSha256": "32AF151E9C33C22C68447953615726ABF80187906202AD454521DD3FDAE601A1"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Place.rationalEval_comapEquiv_of_mem",
+        "Dubon2026.SourceCurve.Pic0.exists_principal_of_nsmul_mk",
+        "Dubon2026.SourceFunctionField.originalWeilKummerPointDifference_pushforward",
+        "Dubon2026.SourceFunctionField.originalWeilKummerPoint_eval",
+        "Dubon2026.SourceFunctionField.originalWeilKummerPointDifference_eval",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivision_principal",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivision_norm_orders",
+        "Dubon2026.SourceFunctionField.exists_originalWeilKummerDivision_norm_data",
+        "Dubon2026.SourceFunctionField.originalWeilKummerPointDifference"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Place.rationalEval_comapEquiv_of_mem",
+        "Dubon2026.SourceCurve.Pic0.exists_principal_of_nsmul_mk",
+        "Dubon2026.SourceFunctionField.originalWeilKummerPointDifference_pushforward",
+        "Dubon2026.SourceFunctionField.originalWeilKummerPoint_eval",
+        "Dubon2026.SourceFunctionField.originalWeilKummerPointDifference_eval",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivision_principal",
+        "Dubon2026.SourceFunctionField.originalWeilKummerDivision_norm_orders",
+        "Dubon2026.SourceFunctionField.exists_originalWeilKummerDivision_norm_data"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.originalWeilKummerPointDifference"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPointAudit5.log",
+      "logSha256": "E79503DEAFE139F4DEA1B310F1AFC9004C17FD9F8C10B45010461EBD1A1F1853",
+      "auditSha256": "B95C5C2A0C57DC82A870B0A48149D3D37DED44AC6C3E2E01E948CDA5C61161BF",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 18,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 15,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPointDependencyAudit5.log",
+      "dependencyAuditSha256": "55A3BD6AB42A93B11C992EB9C2F5021D84A193C3CB07660C60C132802977A0A7",
+      "dependencyAuditSourceSha256": "042EF4948505136066E0AC7ABBF1C00659E1BCDBA31E790FEAE33A14CD3C2178",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalWeilKummerPointDifference_eval",
+        "Dubon2026.SourceFunctionField.exists_originalWeilKummerDivision_norm_data"
+      ],
+      "dependency": "actual residual association -> original primitive Frobenius determinant -> nondegenerate Hecke-component pairing -> finite Weil detection -> Kummer point-difference division and norm divisor",
+      "discharged": "The actual auxiliary-cover point-difference class, zero norm divisor and eigenfunction evaluation; extraction of a norm torsion representative from the explicit division premise.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Existence of division of the specified point-difference class and the detecting-class assembly remain. No nondegeneracy, component restriction, determinant or acceptance-gate completion is claimed. Scratch development. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-point-5-reuse-review-20261024.json",
+      "reuseReviewSha256": "BC784C353FCC66A471FB2C99C202A783540B6822AEA003A15D167BF4F2B8F642",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-25T02:11:23.208196+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceCurveKummerRootPullback",
+        "SourceOriginalWeilKummerMoving",
+        "SourceCurveKummerDetectingEvaluation",
+        "SourceCurveKummerNormAvoidance",
+        "SourceOriginalWeilKummerNormAvoidance",
+        "SourceOriginalWeilDatumAssembly",
+        "SourceCurveKummerMovedEvaluation",
+        "SourceOriginalWeilKummerMovedDatum",
+        "SourceOriginalWeilKummerDetectingDatum",
+        "SourceOriginalWeilKummerDetection",
+        "SourceOriginalTateWeilKummerDetection"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveKummerRootPullback.lean",
+          "sha256": "C87D74862A9EE84CBEBD6689DB33CBB19E87B15282E2D72CBD72E2161089E812",
+          "oleanSha256": "836519D76941F92DA41DE450D8A953C6D4ABBCF7CB7D924A6036CEA5A6A42507"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilKummerMoving.lean",
+          "sha256": "7F13957C23AE1AE5D5F0D8FDD515E15CA7721BA47DF68DD52614BE579576B4C1",
+          "oleanSha256": "58393EDB0BF8C3D515499587B164137AD1F47831291C2985749E7EE7A4A8560A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveKummerDetectingEvaluation.lean",
+          "sha256": "850E1251262BD3D5C8C4694E1A3BD3D86D8BBF647D24BB879C42FF6FF32639C5",
+          "oleanSha256": "DD3316B9BAF989C5F80F2107EBA4DF8F5FC12201409A4AF7F74A3B7E713CAD78"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveKummerNormAvoidance.lean",
+          "sha256": "3AE77BCC8ADEC4F49F2C35D50B4542D16A7C84D2635993EBAEA512E75215AF38",
+          "oleanSha256": "AA789787B655CD3D4D5418C5748173978785E245984A45B6D94882B2875E8C5F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilKummerNormAvoidance.lean",
+          "sha256": "96782DA8C67AA0B5CAA4952A220FF735EEAE361C739941AF3F7A1F78F637B85D",
+          "oleanSha256": "F76517D776990F4C0454CB7D57D45254776D5CC89DA1AF120F577E1302131603"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilDatumAssembly.lean",
+          "sha256": "A2F70333B894976043E9ACC8DF95086102606E0FFEEB8BC3B1F47D06EB8BF9EA",
+          "oleanSha256": "ABC9A77B296E93B54C2AD71C434E07D0CA4A656EF95F72DCAC119F4C777DD1C8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveKummerMovedEvaluation.lean",
+          "sha256": "55771806FD2F587C24E5141864315DE44029A35E3051B991ECBAC27A674CD9DF",
+          "oleanSha256": "433DCDF4CE6D0A655D0226821D726117B6F3613E5C401D28162716E8A060178F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilKummerMovedDatum.lean",
+          "sha256": "7FBE2D6541A2316CF28C25990D2A396B01C2B96AF527F578B419FF9330EB4227",
+          "oleanSha256": "94B4DE38B2FE0C28D52E9D998FA15B9F35976AAA201304141472E63AD189A253"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilKummerDetectingDatum.lean",
+          "sha256": "4EB1B9B9D9B176116A6CA993411C05D29AC1EF58D83560866129492B3A4E4D6F",
+          "oleanSha256": "050E71353AADA95D05ADF5FB43B39F93AEF3FBAB4B318B51CA4BFB4A7BDE9013"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilKummerDetection.lean",
+          "sha256": "B7C933DBEB7FF26CAEFD113B6569AF53F7D8ED1BC13DA9CDC5A478625A25955E",
+          "oleanSha256": "3E0E170A704001387E4C5143E6D70CAEB0A5E90169429D2BA768238E56248F56"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilKummerDetection.lean",
+          "sha256": "534491D96C6CBD3D076C9D2B7EB78D09A23C4631F7246D549D4FE940648D0635",
+          "oleanSha256": "0A1831B76A57273BAF3AEBA2465C2CFCFF0EB53AB3E88804EAEC2B06918279D5"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.finitePullback_apply_zero_of_restrict",
+        "Dubon2026.SourceCurve.disjoint_geometricPushforward_of_avoiding",
+        "Dubon2026.SourceCurve.ord_eq_finitePullback_of_pow_eq",
+        "Dubon2026.SourceFunctionField.originalWeil_move_divisor_with_correction",
+        "Dubon2026.SourceCurve.kummer_norm_detecting_ratio",
+        "Dubon2026.SourceCurve.kummer_norm_avoidance",
+        "Dubon2026.SourceCurve.exists_kummer_norm_avoiding",
+        "Dubon2026.SourceFunctionField.exists_originalWeilKummer_norm_avoiding",
+        "Dubon2026.SourceFunctionField.exists_originalWeilDatum_of_degree_zero",
+        "Dubon2026.SourceCurve.exists_kummer_moved_evaluation",
+        "Dubon2026.SourceFunctionField.exists_originalWeilKummer_moved_datum",
+        "Dubon2026.SourceFunctionField.exists_originalWeilKummer_detecting_datum",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_detects_of_kummer_point_division",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_detects_of_kummer_point_division",
+        "Dubon2026.SourceFunctionField.originalTateWeilBilinear_injective_of_kummer_point_division"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.finitePullback_apply_zero_of_restrict",
+        "Dubon2026.SourceCurve.disjoint_geometricPushforward_of_avoiding",
+        "Dubon2026.SourceCurve.ord_eq_finitePullback_of_pow_eq",
+        "Dubon2026.SourceFunctionField.originalWeil_move_divisor_with_correction",
+        "Dubon2026.SourceCurve.kummer_norm_detecting_ratio",
+        "Dubon2026.SourceCurve.kummer_norm_avoidance",
+        "Dubon2026.SourceCurve.exists_kummer_norm_avoiding",
+        "Dubon2026.SourceFunctionField.exists_originalWeilKummer_norm_avoiding",
+        "Dubon2026.SourceFunctionField.exists_originalWeilDatum_of_degree_zero",
+        "Dubon2026.SourceCurve.exists_kummer_moved_evaluation",
+        "Dubon2026.SourceFunctionField.exists_originalWeilKummer_moved_datum",
+        "Dubon2026.SourceFunctionField.exists_originalWeilKummer_detecting_datum",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_detects_of_kummer_point_division",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_detects_of_kummer_point_division",
+        "Dubon2026.SourceFunctionField.originalTateWeilBilinear_injective_of_kummer_point_division"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionAudit11.log",
+      "logSha256": "10516CE076FA66D525FAE8FCB1B4430D21010D1903DB3ACF6D561C403C569C4C",
+      "auditSha256": "0E259AF3ADFC58A2F5C0623E05D0F48A3CCF79D0BB7539E526F7FFCAB3636DCD",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 15,
+      "linterScopes": 11,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 29,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionDependencyAudit11R2.log",
+      "dependencyAuditSha256": "13C3850A641B9AB95DCD08D4BF5F34A026BC10C013586A5DAF64F850828A6A8D",
+      "dependencyAuditSourceSha256": "80E5FA2ABA74E9B60F70335A893D6CB0D27EE59DD1885CE1F43098DFAF313684",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_detects_of_kummer_point_division",
+        "Dubon2026.SourceFunctionField.originalTateWeilBilinear_injective_of_kummer_point_division"
+      ],
+      "dependency": "actual residual association -> original primitive Frobenius determinant -> nondegenerate Hecke-component pairing -> finite Weil detection -> original moving, cover norm and reciprocity",
+      "discharged": "The original moving correction and finite support conditions; corrected root order, power and multiplier; norm/reciprocity ratio equal to the inverse nontrivial multiplier; actual detecting Weil datum and descended finite torsion partner; actual Tate detection and injectivity conditional only on the explicitly displayed auxiliary point-difference division input.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Existence of n-division of the actual auxiliary point-difference classes, unconditional finite/Tate nondegeneracy, Hecke-component restriction, determinant and downstream acceptance gates. Scratch development. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-detection-11-reuse-review-20261024.json",
+      "reuseReviewSha256": "E6F0C80ACBF193C587ADF0C662BAD4863CFFD5A4BE53CC338BB76894D957A1D9",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-original-weil-kummer-3-reuse-review-20261024.json",
+    "Tools/source-original-tate-detection-3-reuse-review-20261024.json",
+    "Tools/source-original-kummer-geometry-2-reuse-review-20261024.json",
+    "Tools/source-original-kummer-evaluation-5-reuse-review-20261024.json",
+    "Tools/source-original-kummer-reciprocity-4-reuse-review-20261024.json",
+    "Tools/source-original-kummer-point-5-reuse-review-20261024.json",
+    "Tools/source-original-kummer-detection-11-reuse-review-20261024.json"
+  ],
+  "additionalCurrentSearch": {
+    "path": "Tools/original-kummer-detection-promotion-route-489.json",
+    "sha256": "7034826CB4991D434EE71BB53E3ECAA12A91FDFB49351C6D87BA84A30DC8CB6C"
+  },
+  "renewedSourceArchive": {
+    "manifest": "Tools/kummer-reuse-20261024-489/archive-manifest.json",
+    "sha256": "35904E0E8DF4E56C6EBC6F51DDC12B4471320F049D1D01B893A8064BBA3AE936",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt7706": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilKummerDependencyAudit3Production7706.log",
+        "sha256": "F268D81D79F7BC03C7FF354ED5231D7B7C331BB1F369A2CFA2534EDEAFEC1782",
+        "requiredProofValueEdges": 10,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalPic0_nonzero_torsion_kummer_cover"
+        ],
+        "sourceSha256": "001A13687A4645A9D737DB94FE17F96288DF8D67796EC7AA21363EBF03DC88E5"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateDetectionDependencyAudit3R2Production7706.log",
+        "sha256": "7BBDAA870BFAFD95104EA359AD40CDE0644DAE651EB52D2240EB4F3A526A5667",
+        "requiredProofValueEdges": 14,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalTateWeilBilinear_injective_of_finiteLevel"
+        ],
+        "sourceSha256": "01FB27484FC5478DDA7E2215E4B976F553D4B01ECDB8296B39AC7B9BD8D1BB38"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerGeometryDependencyAudit2Production7706.log",
+        "sha256": "A455C8775B784E9943855EDCB85B63C023B397E02C81A3DF589D0B7CCD8FEA25",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalWeilKummerCover_finite_coordinate",
+          "Dubon2026.SourceFunctionField.originalWeilKummerCover_curve",
+          "Dubon2026.SourceFunctionField.originalWeilKummerCover_residue_bijective"
+        ],
+        "sourceSha256": "4D62361C5E62D8E0A160881E8CDA66B4DF0076E2C99B8AE91E1BF7862C484122"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerEvaluationDependencyAudit5Production7706.log",
+        "sha256": "06C9DAAC117E9293CF69B0512202C686D819D1C8E315842163E9763CD6FE98F6",
+        "requiredProofValueEdges": 28,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalDivisorEval_eq_rationalDivisorEval",
+          "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_single",
+          "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_ne_zero",
+          "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_mul",
+          "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_add",
+          "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_pow",
+          "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_nsmul",
+          "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval",
+          "Dubon2026.SourceFunctionField.originalWeilKummerDivisorEval_finitePullback",
+          "Dubon2026.SourceFunctionField.originalDivisorEval_kummer_geometricPushforward"
+        ],
+        "sourceSha256": "40681FB918A00FA698F2BB11C2D2007FC1B7FE862F8A28739D080BA63D3B762E"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerReciprocityDependencyAudit4Production7706.log",
+        "sha256": "48DAFD7813821EBD392A52AC08A910B88ED8718EAD3E14C585914BE87AAB37F6",
+        "requiredProofValueEdges": 17,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalWeilKummerCover_reciprocity"
+        ],
+        "sourceSha256": "753F516F443951C747F2C31D18D6AF355BD7676761CEA2A6A52F647BB5B1BF85"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPointDependencyAudit5Production7706.log",
+        "sha256": "55A3BD6AB42A93B11C992EB9C2F5021D84A193C3CB07660C60C132802977A0A7",
+        "requiredProofValueEdges": 15,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalWeilKummerPointDifference_eval",
+          "Dubon2026.SourceFunctionField.exists_originalWeilKummerDivision_norm_data"
+        ],
+        "sourceSha256": "1CF638495607661E62F83DF731ECFE8031164EF4628F858981FD8AD0B3795E7B"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionDependencyAudit11R2Production7706.log",
+        "sha256": "13C3850A641B9AB95DCD08D4BF5F34A026BC10C013586A5DAF64F850828A6A8D",
+        "requiredProofValueEdges": 29,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalTateWeilPairing_detects_of_kummer_point_division",
+          "Dubon2026.SourceFunctionField.originalTateWeilBilinear_injective_of_kummer_point_division"
+        ],
+        "sourceSha256": "732F41FC17493098C4C064F787C9A6B818263EC01854961D97D473232367615C"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionProductionAudit7706.log",
+    "sha256": "5439A185CED2FFC3CA6239763757582BA1704E9E9A74D9EFF40DA162271BAAC0",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-detection-production-build-7706.log",
+    "aggregateSha256": "05EE68D478C442442DB8A81FBC0359CA24C0B7627FF3815B196545164B3CE254",
+    "productionModules": 7706,
+    "incrementModules": 33,
+    "axiomChecks": 72,
+    "exhaustiveIncrementTheorems": 84,
+    "linterScopes": 33,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 84,
+    "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The actual original function fields, normalized place orders, residue evaluations, divisor maps and Picard quotient retain their definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 84,
+      "scratchDistinct": 84,
+      "generatedNameRenamings": {},
+      "productionFocused": 84,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceOriginalWeilKummerRadicand",
+            "SourceCurveKummerRootAutomorphism",
+            "SourceOriginalWeilKummerCover"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionScratchOwnership478For7706.log",
+            "sha256": "6E509C053921BCB92326580FD6313B84A962BF0A49DBD92F72D95AF000494843",
+            "sourceSha256": "4CA62110A2D4BB708251D0D11911A055DE470B8199D24CF43D15114E458E83DA"
+          }
+        },
+        {
+          "modules": [
+            "SourceTateTorusCoordinateLift",
+            "SourceOriginalTateCoordinateLift",
+            "SourceOriginalTateWeilDetection"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionScratchOwnership480For7706.log",
+            "sha256": "973FE703CF02146FBBC2A98C5054283655071B3F2F1184E5ED12C5212091B1EB",
+            "sourceSha256": "F3B911AED932B9B934FA41B48C52D21DE9D0CB169D137D67B2CF458516D9D674"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalFiniteCoverGeometry",
+            "SourceOriginalWeilKummerGeometry"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionScratchOwnership481For7706.log",
+            "sha256": "2198BA02E478A8F0B208D03E434C8B1C8734579C6226B551267EF699254E709C",
+            "sourceSha256": "A4D58007AD24D9EB2FA36B4FDEB12444FA23295B9774087CE5B4BD1D9467F58B"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveRationalEvaluationLaws",
+            "SourceCurveRationalDivisorEvaluation",
+            "SourceOriginalWeilCoverEvaluation",
+            "SourceCurveRationalDivisorNorm",
+            "SourceOriginalWeilCoverNorm"
+          ],
+          "count": 25,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionScratchOwnership483For7706.log",
+            "sha256": "0A002BF8C7F91A89FDA75C9F98F04A7CE87CE7E2BC8D48492878AD50AE610E96",
+            "sourceSha256": "289D6D1AC4802FD588F7FE99E8D2F63A1947D41D1360C4146CC0BC5DDDA8BBDD"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveRationalCoordinateReciprocity",
+            "SourceCurveRationalDivisorConstants",
+            "SourceCurveFiniteCoordinateReciprocity",
+            "SourceOriginalWeilCoverReciprocity"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionScratchOwnership484For7706.log",
+            "sha256": "19BA6DCD9BAF43199B7E3AF7EFF1C7D4EF7A5718EE7C9968A77D97A699DDE468",
+            "sourceSha256": "5816C8D6581F119E6E9B389A3B0C15F654525E23B42951657165BF082AD05EF6"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveRationalEvaluationEquiv",
+            "SourceCurvePicardDivisionPrincipal",
+            "SourceOriginalWeilKummerPointDifference",
+            "SourceOriginalWeilKummerPointEvaluation",
+            "SourceOriginalWeilKummerDivisionNorm"
+          ],
+          "count": 18,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionScratchOwnership485For7706.log",
+            "sha256": "AE690DEF90A8E28AF9FB90F4815A59DBE1DA0A6DE477E4C126F84AA551C12D7B",
+            "sourceSha256": "72ABBCAEF8B24EABE606D8F7B64FC094FC4AD4F893E3A27AEB202F5A71BA40C4"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveKummerRootPullback",
+            "SourceOriginalWeilKummerMoving",
+            "SourceCurveKummerDetectingEvaluation",
+            "SourceCurveKummerNormAvoidance",
+            "SourceOriginalWeilKummerNormAvoidance",
+            "SourceOriginalWeilDatumAssembly",
+            "SourceCurveKummerMovedEvaluation",
+            "SourceOriginalWeilKummerMovedDatum",
+            "SourceOriginalWeilKummerDetectingDatum",
+            "SourceOriginalWeilKummerDetection",
+            "SourceOriginalTateWeilKummerDetection"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionScratchOwnership486For7706.log",
+            "sha256": "8492414D41E59809F3A88377EB43E6ADF4E542F0EB86BDD92FD238D4832DB13E",
+            "sourceSha256": "2EC2A3E08BF0B08ED3AD30393D1F2E567903A83CD121C44A1B6AD0284A25E9CE"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionOwnership7706.log",
+        "sha256": "4FB482F5C81D95796037C274E174369F40E5530089A45335D08E4537F7568A1E",
+        "sourceSha256": "769F8CF8E255929690C89067D4AA3169F34CF47770EEDC2779F129CC64A7633A"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-173822-568.log",
+        "sha256": "3D8FCDAAE86D3E4E5261E46C6532F5B732F0B688D32C1B7C8D0148BCB7F7465F"
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 84 distinct names from 84 exhaustive scratch checks are retained: 84 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The point-difference division hypothesis is not proved. Unconditional nondegeneracy, nonzero required Hecke-component restriction, determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN; no gate closed."
+  },
+  "receipt7706": {
+    "recordedUTC": "2026-10-25T03:55:05.139892+00:00",
+    "log": "logs/dubon-build-20261024-193423-174.log",
+    "sha256": "CFFB3DBC2DA844E3EEDB5A3BE60BB12C98AB707F01716339D7A6EE20D118FA5B",
+    "bytes": 12775942,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 7706,
+    "projectTheorems": 50171,
+    "registeredConsumers": 22825,
+    "registeredConstructions": 2036,
+    "declarations": 30740,
+    "generated": 29597,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261024_192908.log",
+    "foundationSha256": "87294E6B13A4438B8D2C04762A0F95C985CB27478A9E2E087BD74D579D2601A3",
+    "countReconciliation": {
+      "previousTheorems": 50087,
+      "focusedTheorems": 84,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 84,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionOwnership7706.log",
+      "ownershipSha256": "4FB482F5C81D95796037C274E174369F40E5530089A45335D08E4537F7568A1E"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 84,
+      "scratchDistinct": 84,
+      "generatedNameRenamings": {},
+      "productionFocused": 84,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceOriginalWeilKummerRadicand",
+            "SourceCurveKummerRootAutomorphism",
+            "SourceOriginalWeilKummerCover"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionScratchOwnership478For7706.log",
+            "sha256": "6E509C053921BCB92326580FD6313B84A962BF0A49DBD92F72D95AF000494843",
+            "sourceSha256": "4CA62110A2D4BB708251D0D11911A055DE470B8199D24CF43D15114E458E83DA"
+          }
+        },
+        {
+          "modules": [
+            "SourceTateTorusCoordinateLift",
+            "SourceOriginalTateCoordinateLift",
+            "SourceOriginalTateWeilDetection"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionScratchOwnership480For7706.log",
+            "sha256": "973FE703CF02146FBBC2A98C5054283655071B3F2F1184E5ED12C5212091B1EB",
+            "sourceSha256": "F3B911AED932B9B934FA41B48C52D21DE9D0CB169D137D67B2CF458516D9D674"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalFiniteCoverGeometry",
+            "SourceOriginalWeilKummerGeometry"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionScratchOwnership481For7706.log",
+            "sha256": "2198BA02E478A8F0B208D03E434C8B1C8734579C6226B551267EF699254E709C",
+            "sourceSha256": "A4D58007AD24D9EB2FA36B4FDEB12444FA23295B9774087CE5B4BD1D9467F58B"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveRationalEvaluationLaws",
+            "SourceCurveRationalDivisorEvaluation",
+            "SourceOriginalWeilCoverEvaluation",
+            "SourceCurveRationalDivisorNorm",
+            "SourceOriginalWeilCoverNorm"
+          ],
+          "count": 25,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionScratchOwnership483For7706.log",
+            "sha256": "0A002BF8C7F91A89FDA75C9F98F04A7CE87CE7E2BC8D48492878AD50AE610E96",
+            "sourceSha256": "289D6D1AC4802FD588F7FE99E8D2F63A1947D41D1360C4146CC0BC5DDDA8BBDD"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveRationalCoordinateReciprocity",
+            "SourceCurveRationalDivisorConstants",
+            "SourceCurveFiniteCoordinateReciprocity",
+            "SourceOriginalWeilCoverReciprocity"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionScratchOwnership484For7706.log",
+            "sha256": "19BA6DCD9BAF43199B7E3AF7EFF1C7D4EF7A5718EE7C9968A77D97A699DDE468",
+            "sourceSha256": "5816C8D6581F119E6E9B389A3B0C15F654525E23B42951657165BF082AD05EF6"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveRationalEvaluationEquiv",
+            "SourceCurvePicardDivisionPrincipal",
+            "SourceOriginalWeilKummerPointDifference",
+            "SourceOriginalWeilKummerPointEvaluation",
+            "SourceOriginalWeilKummerDivisionNorm"
+          ],
+          "count": 18,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionScratchOwnership485For7706.log",
+            "sha256": "AE690DEF90A8E28AF9FB90F4815A59DBE1DA0A6DE477E4C126F84AA551C12D7B",
+            "sourceSha256": "72ABBCAEF8B24EABE606D8F7B64FC094FC4AD4F893E3A27AEB202F5A71BA40C4"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveKummerRootPullback",
+            "SourceOriginalWeilKummerMoving",
+            "SourceCurveKummerDetectingEvaluation",
+            "SourceCurveKummerNormAvoidance",
+            "SourceOriginalWeilKummerNormAvoidance",
+            "SourceOriginalWeilDatumAssembly",
+            "SourceCurveKummerMovedEvaluation",
+            "SourceOriginalWeilKummerMovedDatum",
+            "SourceOriginalWeilKummerDetectingDatum",
+            "SourceOriginalWeilKummerDetection",
+            "SourceOriginalTateWeilKummerDetection"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionScratchOwnership486For7706.log",
+            "sha256": "8492414D41E59809F3A88377EB43E6ADF4E542F0EB86BDD92FD238D4832DB13E",
+            "sourceSha256": "2EC2A3E08BF0B08ED3AD30393D1F2E567903A83CD121C44A1B6AD0284A25E9CE"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionOwnership7706.log",
+        "sha256": "4FB482F5C81D95796037C274E174369F40E5530089A45335D08E4537F7568A1E",
+        "sourceSha256": "769F8CF8E255929690C89067D4AA3169F34CF47770EEDC2779F129CC64A7633A"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-173822-568.log",
+        "sha256": "3D8FCDAAE86D3E4E5261E46C6532F5B732F0B688D32C1B7C8D0148BCB7F7465F"
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 84 distinct names from 84 exhaustive scratch checks are retained: 84 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The point-difference division hypothesis is not proved. Unconditional nondegeneracy, nonzero required Hecke-component restriction, determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN; no gate closed."
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "recordedUTC": "2026-10-25T12:50:07.004998+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceOriginalWeilCoverNormalizedAbelReadings",
+    "SourceFiniteSkewBilinearSwap",
+    "SourceOriginalWeilCoverCellResidueReciprocity",
+    "SourceOriginalWeilCoverThirdKindPolygonData",
+    "SourceOriginalWeilCoverThirdKindPolygon",
+    "SourceOriginalWeilCoverThirdKindCycleData"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNormalizedAbelReadings.lean",
+      "sha256": "29D17700F3178FE5E6EB770D65A746F959993C5B671B4B0A5FC210112FB7A0FB",
+      "oleanSha256": "D47227D0B22E808061ADAF186262A43E4C3F9D2B0BC1F54376960C3B9A91F74C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteSkewBilinearSwap.lean",
+      "sha256": "4CAB26C433D1C43FB44182A637668E8CE9E4786F2B8D69F48D53359E2EA6B8F2",
+      "oleanSha256": "00B970E0398B576C04D2308F402C821E7E47F129513986573FBD8AF3C0163358"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellResidueReciprocity.lean",
+      "sha256": "503CF83777AE3452A9938F0CE9AAEECCD44786BC01AA250F7455323F9EE55BBB",
+      "oleanSha256": "561FDEA07F35AA31288894591F4D5A671E3D4DFB2417EB90F2E8CB628E91235E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverThirdKindPolygonData.lean",
+      "sha256": "3FDF7C152C80A61EF225010B0D7B995E9605BDE4D69E3EC051596DD292379D1F",
+      "oleanSha256": "EECCF55630F2DC8EF220902FBA74F48539130C331C2CA87B2F0F4CC51F8436B3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverThirdKindPolygon.lean",
+      "sha256": "1B22E26B13F5B7B0D754C95B3A9465FBF94640D042062E9E41A26F2704E90D02",
+      "oleanSha256": "BFD1AB7580A626D5932C895796390079282D281AF1FD8B5AF3265CF800EBC094"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverThirdKindCycleData.lean",
+      "sha256": "023F2F5AAF61C3B94268C77E54C003322D2CC74A5D8C4600B2F1A6BABEA629EA",
+      "oleanSha256": "95BF8E3CBB32DEF05DEDA3A831CDC92872FB631E45A0E5E36A55E355E7125DF2"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_abel_vector_eq_reading_add_periods",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_readings_eq_abel_add_periods",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.finite_skew_bilinear_swap",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_residue_reciprocity_of_weighted_cells",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_third_kind_reciprocity_of_polygon",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_third_kind_cycle_data",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverThirdKindCyclePeriodPolygonConclusion",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverThirdKindCycleData"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_abel_vector_eq_reading_add_periods",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_readings_eq_abel_add_periods",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.finite_skew_bilinear_swap",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_residue_reciprocity_of_weighted_cells",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_third_kind_reciprocity_of_polygon",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_third_kind_cycle_data"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverThirdKindCyclePeriodPolygonConclusion",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverThirdKindCycleData"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerThirdKindAudit6.log",
+  "logSha256": "9C4F05F97F1116A2D4F550058D1439D5A91999486A09336F142F595EA310FB3E",
+  "auditSha256": "F607FAA7E3C911B37445F185D2E80AE895EAE12F47468652945C53FF19990602",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 21,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 10,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerThirdKindDependencyAudit6.log",
+  "dependencyAuditSha256": "5CE921757FA81B7A84FC0165E8DF7AB247DA8984A4D6CBD2EE9A3E40077C22CE",
+  "dependencyAuditSourceSha256": "3557A17CE7D3E7650F27FF82D8C4D4FBF9F3515200A4F9968FC54565F515C87D",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_third_kind_cycle_data"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> third-kind reciprocity -> common integer correction between actual Abel paths and normalized cell readings",
+  "discharged": "The actual chosen Abel paths and proved path-to-jump identity give one common integer period correction for all basis coordinates. Existing zero-residue pole removal supplies regularity off the divisor support. Finite skew symmetry turns the weighted residue identity into exact third-kind Abel-divisor reciprocity on the same constructed complementary edges. The existence consumer retains the same actual word, skew-symmetric unimodular matrix, loops, normalized primitives, bilinear identities and regular-loop generation. No Abel-path comparison or third-kind identity remains as an assumption. Final 2g reindexing and meromorphic generation remain required.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Meromorphic loop generation and final common reindexing to the prescribed 2g coordinates, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-third-kind-6-reuse-review-20261025.json",
+  "reuseReviewSha256": "251A40065889125693615DC830CAF771EDF958B9565227A4BEA96AC23DEB5F27",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,33 @@
+{
+  "scope": 554,
+  "scopeIds": [
+    546,
+    547,
+    548,
+    "549b",
+    "550b",
+    551,
+    552,
+    "553b"
+  ],
+  "receipts": {
+    "source-original-kummer-simple-pole-basis-3-scratch-receipt.json": "8DA585162B4B602D3AA3D2BD69BA961A52D9226A9B08B0935D113C35617482F0",
+    "source-original-kummer-meromorphic-primitives-8-scratch-receipt.json": "35A333255B385CA909F6372D282448862E6429A753543F8C5644510F28302518",
+    "source-original-kummer-logarithmic-jumps-10-scratch-receipt.json": "2EDE025DC130C6B7188D568631A84B4619BE96B8F64CFA31841EBCE6E61FE4E7",
+    "source-original-kummer-residue-quotient-13b-scratch-receipt.json": "94B2AD00A1191787A5DE8E067ECEC47EC51964C7E80C02463FD4160071C1D184",
+    "source-original-kummer-meromorphic-generation-18b-scratch-receipt.json": "46DAA6B570640237B71ADCC537B9EFED5A62B50F8A87F83D841A68D792EB038A",
+    "source-original-kummer-abel-converse-7-scratch-receipt.json": "768FA21A9C8FDB82CAE3DE61B24F6448FBE8D8F1B610124BDAF8DFFDD26D97B5",
+    "source-original-kummer-point-division-6-scratch-receipt.json": "78FA804B364AD70E8E49F224BC17004DEFCBA6AA5E312B16DDF97831A4A82147",
+    "source-original-kummer-weil-nondegeneracy-5b-scratch-receipt.json": "F9AA428926FD14B87861CFD0CEF527066B2881A1063E2094EC692FDD4AE6B1D6"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive Frobenius determinant -> nonzero required Hecke-component pairing -> original Tate nondegeneracy -> arithmetic finite detection -> complex finite detection -> auxiliary Kummer point-class division -> actual cover Abel converse and Jacobi inversion",
+  "discharged": "The same actual cover dissection now generates every allowed meromorphic loop period with one common integer cycle vector and literal residue correction. The constructed regular/meromorphic generation and both reciprocity identities are reindexed together to the prescribed 2g coordinates. The existing raw-reciprocity argument proves the actual cover Abel converse. Proved Jacobi inversion then divides every degree-zero cover class, including the exact automorphism point difference required by the native NYLL-adapted norm argument. Each nonzero complex torsion class supplies its own n-divisible radicand orders, so that argument produces a nontrivial Weil partner without an auxiliary division premise. Exact constant-field place evaluation and divisor-ratio compatibility, together with the existing arithmetic-to-complex torsion bijection, descend detection to the original arithmetic Picard group. Existing finite-coordinate lifting then proves detection and injectivity of the actual original Tate bilinear pairing, with no remaining finite-detection hypothesis.",
+  "remaining": "Nonzero restriction to the required Hecke component, the separate primitive Frobenius determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "route": "Reuse the existing finite residue space, local logarithmic primitives, integer cycle decomposition, raw-reciprocity Abel-converse argument and actual cover Jacobi inversion. Reindex finite algebra before specialization to the actual field. Use the n-divisible radicand orders furnished by the torsion input, avoiding arbitrary ramified-cover divisibility. Reuse the proved constant-field place extension, arithmetic torsion bijection and Tate-coordinate lifts; add only the exact evaluation and pairing bridges. No Jacobian representability development, period-discreteness generalization, external local build/import, root pin change or proof-limit change is introduced.",
+  "precedingCanonicalScope": 8005,
+  "mathematicalSource": "Frozen Dubon arXiv2609.17875v1; complete original goal unchanged.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalLocalBuild": false,
+  "externalImport": false
+}

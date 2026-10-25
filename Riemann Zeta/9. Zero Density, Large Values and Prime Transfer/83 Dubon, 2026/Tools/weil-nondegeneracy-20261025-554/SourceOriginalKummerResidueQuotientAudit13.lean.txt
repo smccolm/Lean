@@ -1,0 +1,103 @@
+import SourceRadialQuotientArcValues
+import SourceRadialQuotientVertexValues
+import SourceRadialQuotientWordIdentity
+import SourceRadialQuotientCycleReduction
+import SourceRadialResiduePeriodQuotient
+import SourceRadialMeromorphicSignedEndpoints
+import SourceRadialQuotientArcGeometry
+import SourceRadialMeromorphicQuotientArcValues
+import SourceOriginalWeilCoverMeromorphicQuotientArcValues
+import SourceRadialMeromorphicJumpPeriodClosure
+import SourceOriginalWeilCoverMeromorphicJumpPeriodClosure
+import SourceOriginalWeilCoverMeromorphicJumpData
+import SourceOriginalWeilCoverMeromorphicJumpCycleData
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sv_arcOf
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ev_arcOf
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.kirchhoff
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.vval_sv
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.B_eq_vval
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.A_eq_vval
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.vval_eq_of_link
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.corner
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.B_sub_A
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.word_identity
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sum_word_eq_sum_wordChainA
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sum_chain_smulA
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.jump_formula
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.jump_mem_closure
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.zvA_Iq
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.solely
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.IsJumpH.neg_endpoint_increment
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.IsJumpH.signed_endpoint_increment
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sv_injective
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.arcValuesH
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_quotient_arc_values
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.residue_quotient_decomposition_of_lift
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.jump_mem_sup
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_jump_mem_sup
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_jump_data_of_normalized
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_jump_cycle_data
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.FlowDecomp
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sv
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ev
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.mk
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.vval
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sgn
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.zvA
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.Λres
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.Aq
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.Bq
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.Iq
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverMeromorphicJumpData
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceRadialQuotientArcValues, `SourceRadialQuotientVertexValues, `SourceRadialQuotientWordIdentity, `SourceRadialQuotientCycleReduction, `SourceRadialResiduePeriodQuotient, `SourceRadialMeromorphicSignedEndpoints, `SourceRadialQuotientArcGeometry, `SourceRadialMeromorphicQuotientArcValues, `SourceOriginalWeilCoverMeromorphicQuotientArcValues, `SourceRadialMeromorphicJumpPeriodClosure, `SourceOriginalWeilCoverMeromorphicJumpPeriodClosure, `SourceOriginalWeilCoverMeromorphicJumpData, `SourceOriginalWeilCoverMeromorphicJumpCycleData]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sv_arcOf, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ev_arcOf, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.kirchhoff, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.vval_sv, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.B_eq_vval, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.A_eq_vval, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.vval_eq_of_link, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.corner, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.B_sub_A, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.word_identity, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sum_word_eq_sum_wordChainA, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sum_chain_smulA, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.jump_formula, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.jump_mem_closure, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.zvA_Iq, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.solely, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.IsJumpH.neg_endpoint_increment, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.IsJumpH.signed_endpoint_increment, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sv_injective, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.arcValuesH, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_quotient_arc_values, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.residue_quotient_decomposition_of_lift, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.jump_mem_sup, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_jump_mem_sup, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_jump_data_of_normalized, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_jump_cycle_data]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.FlowDecomp, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sv, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ev, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.mk, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.vval, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sgn, `Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.zvA, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.Λres, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.Aq, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.Bq, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.Iq, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverMeromorphicJumpData]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Kummer Residue Quotient postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Kummer Residue Quotient theorems discovered"
+  logInfo m!"SOURCE ORIGINAL KUMMER RESIDUE QUOTIENT AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceRadialQuotientArcValues
+#lint in SourceRadialQuotientVertexValues
+#lint in SourceRadialQuotientWordIdentity
+#lint in SourceRadialQuotientCycleReduction
+#lint in SourceRadialResiduePeriodQuotient
+#lint in SourceRadialMeromorphicSignedEndpoints
+#lint in SourceRadialQuotientArcGeometry
+#lint in SourceRadialMeromorphicQuotientArcValues
+#lint in SourceOriginalWeilCoverMeromorphicQuotientArcValues
+#lint in SourceRadialMeromorphicJumpPeriodClosure
+#lint in SourceOriginalWeilCoverMeromorphicJumpPeriodClosure
+#lint in SourceOriginalWeilCoverMeromorphicJumpData
+#lint in SourceOriginalWeilCoverMeromorphicJumpCycleData

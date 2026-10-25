@@ -1,0 +1,85 @@
+import SourceRadialDissectionArcPaths
+import SourceRadialDissectionEdgePaths
+import SourceRadialEdgeSkeleton
+import SourceRadialSkeletonIntegral
+import SourceRadialTreeWalkIntegrals
+import SourceRadialCycleChainIdentification
+import SourceRadialFundamentalCycleLoops
+import SourceOriginalWeilCoverSkeletonIntegrals
+import SourceOriginalWeilCoverFundamentalLoops
+import SourceOriginalWeilCoverCycleLoopFamily
+import SourceOriginalWeilCoverCycleLoops
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.side_arcOf
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCell.continuous_bdry
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCell.arcPath_mem_arc
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.vert_fst_eq
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.vert_snd_eq
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.edgePath_mem_arc
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.edgePath_mem_skeleton
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.vert_mem_skeleton
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.mem_skeleton_trans
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.integral_cast
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.exists_path_of_walk
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.cycle_eq_edge_add_return_chain
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.endpoint_walk_of_integer_walk
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.exists_fundamental_cycle_loop
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_skeleton_integral
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_fundamental_cycle_loop
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_cycle_loops_of_cycle_system
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cycle_loops
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.arcOf
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.skeleton
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCell.arcPath
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.edgePath
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.SkeletonIntegral
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.SkeletonIntegral.mk
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverCycleLoops
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceRadialDissectionArcPaths, `SourceRadialDissectionEdgePaths, `SourceRadialEdgeSkeleton, `SourceRadialSkeletonIntegral, `SourceRadialTreeWalkIntegrals, `SourceRadialCycleChainIdentification, `SourceRadialFundamentalCycleLoops, `SourceOriginalWeilCoverSkeletonIntegrals, `SourceOriginalWeilCoverFundamentalLoops, `SourceOriginalWeilCoverCycleLoopFamily, `SourceOriginalWeilCoverCycleLoops]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.side_arcOf, `Dubon2026.SourceFunctionField.CellGeometry.RadialCell.continuous_bdry, `Dubon2026.SourceFunctionField.CellGeometry.RadialCell.arcPath_mem_arc, `Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.vert_fst_eq, `Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.vert_snd_eq, `Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.edgePath_mem_arc, `Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.edgePath_mem_skeleton, `Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.vert_mem_skeleton, `Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.mem_skeleton_trans, `Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.integral_cast, `Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.exists_path_of_walk, `Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.cycle_eq_edge_add_return_chain, `Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.endpoint_walk_of_integer_walk, `Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.exists_fundamental_cycle_loop, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_skeleton_integral, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_fundamental_cycle_loop, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_cycle_loops_of_cycle_system, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cycle_loops]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.arcOf, `Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.skeleton, `Dubon2026.SourceFunctionField.CellGeometry.RadialCell.arcPath, `Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.edgePath, `Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.SkeletonIntegral, `Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.SkeletonIntegral.mk, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverCycleLoops]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Kummer Cycle Loops postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Kummer Cycle Loops theorems discovered"
+  logInfo m!"SOURCE ORIGINAL KUMMER CYCLE LOOPS AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceRadialDissectionArcPaths
+#lint in SourceRadialDissectionEdgePaths
+#lint in SourceRadialEdgeSkeleton
+#lint in SourceRadialSkeletonIntegral
+#lint in SourceRadialTreeWalkIntegrals
+#lint in SourceRadialCycleChainIdentification
+#lint in SourceRadialFundamentalCycleLoops
+#lint in SourceOriginalWeilCoverSkeletonIntegrals
+#lint in SourceOriginalWeilCoverFundamentalLoops
+#lint in SourceOriginalWeilCoverCycleLoopFamily
+#lint in SourceOriginalWeilCoverCycleLoops

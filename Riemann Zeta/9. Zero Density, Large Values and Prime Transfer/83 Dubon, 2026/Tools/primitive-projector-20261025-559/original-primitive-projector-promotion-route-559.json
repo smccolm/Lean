@@ -1,0 +1,25 @@
+{
+  "scope": 559,
+  "scopeIds": [
+    555,
+    556,
+    557,
+    558
+  ],
+  "receipts": {
+    "source-original-rational-weil-6-scratch-receipt.json": "E8418D11FCD1A6F09D2178342758A698D5CB16FEEB2711EC89C13F9D6D413738",
+    "source-original-primitive-good-projection-8-scratch-receipt.json": "29EA354FB739F2931D8078567A302BD8CB9286202CBAA2C5E3A5909182E04A32",
+    "source-original-primitive-coefficient-projection-5-scratch-receipt.json": "D068D7BC6E7E6CA097BD8051789E619262DA8700D2824A1E2E9338C8ACF5DF80",
+    "source-original-primitive-tensor-projection-8-scratch-receipt.json": "8A4F06266411A70513C5B5920A29DFADD56F0CCBAB809A1D0B19BC3D6B646E2D"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive Frobenius determinant -> nonzero pairing on the required primitive Tate component -> actual rational Weil nondegeneracy and original Tate realization of a nonzero arithmetic primitive idempotent -> finite good-prime separation and faithful integral Hecke coefficient extension",
+  "discharged": "The original Tate Weil pairing now has a proved injective rational base change, with its actual alternating, good-prime Hecke adjointness and cyclotomic multiplier identities. Existing good-prime multiplicity one and finite dimensionality give a finite separating set. A self-adjoint sum of squared shifted Hecke operators has kernel exactly the prescribed primitive cusp-form line. Its annihilating polynomial, derived from the finite integral Hecke algebra, yields a projector over the prescribed coefficient field. The already proved complex-independent integral Hecke basis makes the coefficient-field tensor realization faithful, so the projector lifts to the actual arithmetic tensor algebra with idempotence and every positive-index Hecke eigencharacter identity. Its primitive eigencharacter is one, proving the arithmetic projector nonzero. These conclusions have no separation, polynomial-projector, faithfulness or nonzero-normalization hypotheses remaining.",
+  "remaining": "Realizing this arithmetic projector on the original Tate module, restricting the actual pairing nondegenerately to its required primitive component, the separate primitive Frobenius determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "route": "Reuse native fraction-field tensor injection, finite good-prime multiplicity one, the actual Petersson inner product, finite integral Hecke algebra, complex-independent integral Hecke basis and primitive Hecke character. Keep the literal root-valued Tate target. The projector uses only good-prime self-adjoint operators; no full-Hecke adjointness is inferred. Continue through the existing original lattice/cusp Hecke equivalence and rank-two Tate realization. No coefficient-field reality theory, generic Jacobian representability, root pin change, external import or proof-limit change is needed.",
+  "precedingCanonicalScope": 8075,
+  "mathematicalSource": "Frozen Dubon arXiv2609.17875v1; complete original goal unchanged.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalLocalBuild": false,
+  "externalImport": false
+}

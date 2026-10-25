@@ -38154,6 +38154,4610 @@
     {
       "path": "Tools/source-original-tate-weil.json",
       "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-ATTRIBUTION.md",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-commit.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-lake-manifest.json.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-lean-toolchain",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-LICENSE",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-NOTICE",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-p2m-tree.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-root-tree.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-S_AlgebraicCurve_DivisorialWeilPairingData_toHom_injective_of_divisible.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-S_AlgebraicCurve_Pic0_exists_jacobianPack_of_isAlgClosed.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-S_AlgebraicCurve_Pic0_exists_zsmul_eq_of_finiteDimensional_ratFunc_of_forall_pow_eq_self.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-sol-tree.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-ATTRIBUTION.md",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-commit.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-lake-manifest.json.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-lean-toolchain",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-LICENSE",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-NOTICE",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-p2m-tree.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-root-tree.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-S_AlgebraicCurve_DivisorialWeilPairingData_toHom_injective_of_divisible.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-S_AlgebraicCurve_Pic0_exists_jacobianPack_of_isAlgClosed.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-S_AlgebraicCurve_Pic0_exists_zsmul_eq_of_finiteDimensional_ratFunc_of_forall_pow_eq_self.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-sol-tree.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/attribution-download-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/branches.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/download-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/main-ref.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-divisibility-routes-488/download-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-divisibility-routes-488/S_AlgebraicCurve_DivisorialWeilPairingData_toHom_injective_of_isCurveOver.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-divisibility-routes-488/S_AlgebraicCurve_Pic0_exists_injective_addMonoidHom_torsion_dlog.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-divisibility-routes-488/S_AlgebraicCurve_Pic0_exists_nsmul_eq.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-divisibility-routes-488/S_AlgebraicCurve_Pic0_exists_zsmul_eq_of_finiteDimensional_ratFunc.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-point-division-routes-488b/download-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-point-division-routes-488b/S_AlgebraicCurve_Place_exists_natCast_dvd_ord_sub_single_sub_single.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/flt-point-division-routes-488b/S_AlgebraicCurve_Place_exists_natCast_dvd_ord_sub_single_sub_single_complex.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/nyll-detection-482/download-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/nyll-detection-482/LICENSE.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/nyll-detection-482/NOTICE.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/nyll-detection-482/Nyll/JacobianVarieties/WeilPairing/DivisionDifference.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/nyll-detection-482/Nyll/JacobianVarieties/WeilPairing/DivisorialPairingPerfect.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/nyll-detection-482/Nyll/JacobianVarieties/WeilPairing/DivisorialPairingToHomInjectiveDivisible.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/flt-ports-review-487.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-kummer-detection-review-482.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-detection-dependency-repair-486.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-tate-detection-assembled-import-repair-486.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-kummer-detection-promotion-route-489.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Dubon Reuse Search 2026-10-24 FLT provenance supplement.md",
+      "role": "documentation"
+    },
+    {
+      "path": "Dubon Reuse Search 2026-10-24 Divisibility Routes.md",
+      "role": "documentation"
+    },
+    {
+      "path": "Tools/kummer-reuse-20261024-489/archive-manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilKummerRadicand.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveKummerRootAutomorphism.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilKummerCover.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTateTorusCoordinateLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTateCoordinateLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTateWeilDetection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFiniteCoverGeometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilKummerGeometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRationalEvaluationLaws.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRationalDivisorEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRationalDivisorNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRationalCoordinateReciprocity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRationalDivisorConstants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiniteCoordinateReciprocity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverReciprocity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRationalEvaluationEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePicardDivisionPrincipal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilKummerPointDifference.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilKummerPointEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilKummerDivisionNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveKummerRootPullback.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilKummerMoving.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveKummerDetectingEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveKummerNormAvoidance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilKummerNormAvoidance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilDatumAssembly.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveKummerMovedEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilKummerMovedDatum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilKummerDetectingDatum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilKummerDetection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTateWeilKummerDetection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-weil-kummer-3-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-tate-detection-3-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-geometry-2-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-evaluation-5-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-reciprocity-4-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-point-5-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-detection-11-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-detection.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/original-kummer-manifold-promotion-route-495.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/source-original-kummer-analytic-entry-audit-kind-repair-490.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerAnalyticEntryAudit15.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerAnalyticEntryAudit15.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerAnalyticEntryAudit15.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/source-original-kummer-analytic-entry-15-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/source-original-kummer-place-family-6-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/source-original-kummer-parameter-5-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/source-original-kummer-compatibility-8-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/source-original-kummer-manifold-4-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerAnalyticEntryAudit15R2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerAnalyticEntryAudit15R2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerAnalyticEntryAudit15R2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerAnalyticEntryDependencyAudit15.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerAnalyticEntryDependencyAudit15.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerAnalyticEntryDependencyAudit15.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerPlaceFamilyAudit6.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerPlaceFamilyAudit6.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerPlaceFamilyAudit6.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerPlaceFamilyDependencyAudit6.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerPlaceFamilyDependencyAudit6.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerPlaceFamilyDependencyAudit6.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerParameterAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerParameterAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerParameterAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerParameterDependencyAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerParameterDependencyAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerParameterDependencyAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerCompatibilityAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerCompatibilityAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerCompatibilityAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerCompatibilityDependencyAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerCompatibilityDependencyAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerCompatibilityDependencyAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerManifoldAudit4.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerManifoldAudit4.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerManifoldAudit4.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerManifoldDependencyAudit4.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerManifoldDependencyAudit4.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerManifoldDependencyAudit4.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-manifold-20261024-495/archive-manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMeromorphicKummerRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilLocalKummerRoot.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMeromorphicLaurentRealization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalChartLaurentHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilConvergentKummerRoot.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilLocalSplittingField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveNormalizedLaurentPlace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRealizedLaurentPlace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilLocalCoverPlace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveConvergentCommonDisc.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveConvergentGaloisPlaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveConvergentKummerPlaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilEveryLocalCover.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveNormalizedCommonDisc.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverDisc.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveConvergentDiscGerms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveConvergentDiscOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveConvergentDiscUniformizer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveConvergentDiscPlaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveConvergentPlaceFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPlaceFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveConvergentDiscResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveConvergentEvaluationFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveAnalyticPlaceParameter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveConvergentPlaceChart.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverParameter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRationalChartValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveAnalyticChartOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveAnalyticChartComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveAnalyticChartDifferenceOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveAnalyticChartBranchEquality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverChartPackage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCharts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverChartTransitions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverManifold.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverChartOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRationalPlaceSeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverHausdorff.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-kummer-analytic-entry-15-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-place-family-6-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-parameter-5-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-compatibility-8-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-manifold-4-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-manifold.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/original-kummer-abel-promotion-route-503.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/source-original-kummer-compact-7-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/source-original-kummer-connected-5-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/source-original-kummer-meromorphic-10-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/source-original-kummer-differential-10-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/source-original-kummer-abel-vector-5-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/source-original-kummer-jacobi-inversion-8-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/source-original-kummer-two-pole-5-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerCompactAudit7.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerCompactAudit7.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerCompactAudit7.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerCompactDependencyAudit7.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerCompactDependencyAudit7.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerCompactDependencyAudit7.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerConnectedAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerConnectedAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerConnectedAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerConnectedDependencyAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerConnectedDependencyAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerConnectedDependencyAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerMeromorphicAudit10.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerMeromorphicAudit10.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerMeromorphicAudit10.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerMeromorphicDependencyAudit10.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerMeromorphicDependencyAudit10.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerMeromorphicDependencyAudit10.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerDifferentialAudit10.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerDifferentialAudit10.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerDifferentialAudit10.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerDifferentialDependencyAudit10.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerDifferentialDependencyAudit10.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerDifferentialDependencyAudit10.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerAbelVectorAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerAbelVectorAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerAbelVectorAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerAbelVectorDependencyAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerAbelVectorDependencyAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerAbelVectorDependencyAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerJacobiInversionAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerJacobiInversionAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerJacobiInversionAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerJacobiInversionDependencyAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerJacobiInversionDependencyAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerJacobiInversionDependencyAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerTwoPoleAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerTwoPoleAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerTwoPoleAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerTwoPoleDependencyAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerTwoPoleDependencyAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerTwoPoleDependencyAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-abel-20261024-503/archive-manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFiniteFiberOpenMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveUnramifiedFiberCard.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveUnramifiedChartRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAnalyticRestrictionTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilRestrictionComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilRestrictionTopology.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCompact.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiniteCoordinateOnePole.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverEvaluationContinuity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverOnePole.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverClopenObstruction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverConnected.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiniteCoordinateDimensionBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverDimensionBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicDimension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicPoleBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverReadGerms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverReadFieldLaws.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverGermBasisRelation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverOnePoleComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicPoleClearing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicFunctionComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverLocalDifferentials.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverDifferentialReadings.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverChartGermHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverChartDerivativeGerms.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverChartGermDerivation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverDifferentialRegularity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverDifferentialTransitions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverChartPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPathLocalPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPathPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPathIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPathIntegralLaws.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverAbelJacobiPeriods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverChartPathIntegrals.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverLocalAbelJacobi.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCanonicalSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverDifferentialReadingLinear.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverRegularEvaluationSeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverRegularEvaluationFrame.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverAbelJacobiImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverAbelJacobiOpenImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverJacobiInversion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverJacobiInversionAssembled.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverRiemannRoch.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveTwoPoleDimensions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverTwoPoleDimensions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveTwoPoleDifferential.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverTwoPoleDifferential.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-kummer-compact-7-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-connected-5-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-meromorphic-10-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-differential-10-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-abel-vector-5-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-jacobi-inversion-8-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-two-pole-5-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-abel.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/original-kummer-reciprocity-promotion-route-512.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/source-original-kummer-prescribed-residue-5-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/source-original-kummer-meromorphic-path-8-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/source-original-kummer-local-exponential-4-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/source-original-kummer-integral-period-10-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/source-original-kummer-raw-reciprocity-11-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/source-original-kummer-covering-map-3-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/source-original-kummer-cell-lift-4-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/source-original-kummer-cell-family-3-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerPrescribedResidueAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerPrescribedResidueAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerPrescribedResidueAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerPrescribedResidueDependencyAudit5R2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerPrescribedResidueDependencyAudit5R2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerPrescribedResidueDependencyAudit5R2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerMeromorphicPathAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerMeromorphicPathAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerMeromorphicPathAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerMeromorphicPathDependencyAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerMeromorphicPathDependencyAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerMeromorphicPathDependencyAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerLocalExponentialAudit4.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerLocalExponentialAudit4.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerLocalExponentialAudit4.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerLocalExponentialDependencyAudit4.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerLocalExponentialDependencyAudit4.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerLocalExponentialDependencyAudit4.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerIntegralPeriodAudit10.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerIntegralPeriodAudit10.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerIntegralPeriodAudit10.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerIntegralPeriodDependencyAudit10.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerIntegralPeriodDependencyAudit10.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerIntegralPeriodDependencyAudit10.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerRawReciprocityAudit11.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerRawReciprocityAudit11.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerRawReciprocityAudit11.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerRawReciprocityDependencyAudit11.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerRawReciprocityDependencyAudit11.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerRawReciprocityDependencyAudit11.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCoveringMapAudit3R2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCoveringMapAudit3R2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCoveringMapAudit3R2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCoveringMapDependencyAudit3R2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCoveringMapDependencyAudit3R2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCoveringMapDependencyAudit3R2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellLiftAudit4.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellLiftAudit4.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellLiftAudit4.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellLiftDependencyAudit4.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellLiftDependencyAudit4.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellLiftDependencyAudit4.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellFamilyAudit3.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellFamilyAudit3.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellFamilyAudit3.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellFamilyDependencyAudit3.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellFamilyDependencyAudit3.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellFamilyDependencyAudit3.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-reciprocity-20261024-512/archive-manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRationalResidueTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverDifferentialResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverSimplePoleBounds.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverTwoPoleResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPrescribedResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicPrincipalDivisor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverRegularDifferentialSubtraction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverSimplePoleRegularPart.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverLocalRegularPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverRegularPathLocalPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverRegularPathPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPathIntegralSubtraction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverRegularPathIntegralLaws.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverLogarithmicReading.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverLocalExponentialModel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverFinitePuncturePaths.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverDivisorAvoidingPaths.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverRegularChartReadingAt.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverLocalChartPathPrimitive.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverLocalChartPathIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverIntegralPeriodPathIndependence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPeriodExponential.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPeriodExponentialConsumer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverExponentialLocalTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverExponentialChartDerivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverExponentialMeromorphicOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverIntegralPeriodsPrincipal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverDifferentialReadingFaithfulness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverRealAbelPotential.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPeriodAnnihilator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPathIntegralLinearCombination.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverFinitePeriodGeneration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodMatrixInjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverLoopPeriodInjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodRawCorrection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverGeneratorPeriodCorrection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverIntegralPeriodsFromGenerators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverAbelConverseFromRawReciprocity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAnalyticCoveringComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilRestrictionLocalHomeomorph.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilRestrictionCovering.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCoverStarConvexLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCoverLiftedCoordinate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverLiftedCoordinateAnalytic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCellLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCoverStarConvexLiftFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCoverLiftedCoordinateFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCellLiftFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-kummer-prescribed-residue-5-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-meromorphic-path-8-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-local-exponential-4-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-integral-period-10-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-raw-reciprocity-11-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-covering-map-3-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-cell-lift-4-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-cell-family-3-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-reciprocity.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/original-kummer-dissection-promotion-route-521.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/source-original-kummer-unramified-genus-3-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/source-original-kummer-global-cell-arcs-3-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/source-original-kummer-boundary-transport-4-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/source-original-kummer-global-arc-pairing-3-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/source-original-kummer-intersection-chains-5-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/source-original-kummer-dissection-9-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/source-original-kummer-centered-dissection-4-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/source-original-kummer-euler-dissection-8-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerUnramifiedGenusAudit3.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerUnramifiedGenusAudit3.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerUnramifiedGenusAudit3.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerUnramifiedGenusDependencyAudit3.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerUnramifiedGenusDependencyAudit3.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerUnramifiedGenusDependencyAudit3.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalCellArcsAudit3.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalCellArcsAudit3.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalCellArcsAudit3.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalCellArcsDependencyAudit3.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalCellArcsDependencyAudit3.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalCellArcsDependencyAudit3.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerBoundaryTransportAudit4.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerBoundaryTransportAudit4.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerBoundaryTransportAudit4.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerBoundaryTransportDependencyAudit4.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerBoundaryTransportDependencyAudit4.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerBoundaryTransportDependencyAudit4.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalArcPairingAudit3R3.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalArcPairingAudit3R3.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalArcPairingAudit3R3.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalArcPairingDependencyAudit3R3.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalArcPairingDependencyAudit3R3.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalArcPairingDependencyAudit3R3.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerIntersectionChainsAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerIntersectionChainsAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerIntersectionChainsAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerIntersectionChainsDependencyAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerIntersectionChainsDependencyAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerIntersectionChainsDependencyAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerDissectionAudit9.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerDissectionAudit9.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerDissectionAudit9.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerDissectionDependencyAudit9.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerDissectionDependencyAudit9.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerDissectionDependencyAudit9.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerCenteredDissectionAudit4R2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerCenteredDissectionAudit4R2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerCenteredDissectionAudit4R2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerCenteredDissectionDependencyAudit4R2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerCenteredDissectionDependencyAudit4R2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerCenteredDissectionDependencyAudit4R2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerEulerDissectionAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerEulerDissectionAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerEulerDissectionAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerEulerDissectionDependencyAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerEulerDissectionDependencyAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerEulerDissectionDependencyAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-dissection-20261025-521/archive-manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiniteCoordinateRegularGenus.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiniteCoordinateUnramifiedGenus.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverUnramifiedGenus.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverLiftedArcEquality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverLiftedArcMatching.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverGlobalCellCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCoverSheetFiberBijection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCellFiberEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverArcSheetTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverBoundaryTransportAssembled.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellPairingLiftIndices.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverLiftedArcPairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverGlobalArcPairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialReversedArcImages.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalLiftedPairArcImages.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCoverLiftedCellIncidence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCoverLiftedIntersectionChains.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverGlobalIntersection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFiniteClosedCoverAdjacency.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellPairingLiftSides.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellPairingLiftVertices.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalLiftedCoverAdjacency.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverGlobalAdjacency.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCellPairingLiftDissectionSides.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialCellDissection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalLiftedDissectionAssembly.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverDissectionConstructed.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalLiftedVertexIncidence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCoverLiftedMarkedCells.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalLiftedDissectionIncidence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCenteredDissection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalLiftedVertexFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFiniteFiberPreimageCard.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverLiftedVertexCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalLiftedEulerMultiplicity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverLiftedEuler.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalLiftedMarkedEulerAssembly.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverEulerDissectionData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverEulerDissection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-kummer-unramified-genus-3-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-global-cell-arcs-3-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-boundary-transport-4-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-global-arc-pairing-3-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-intersection-chains-5-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-dissection-9-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-centered-dissection-4-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-euler-dissection-8-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-dissection.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/original-kummer-cycles-promotion-route-533.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/source-original-kummer-tree-cotree-5-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/source-original-kummer-nontrivial-dissection-5-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/source-original-kummer-polygon-8-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/source-original-kummer-cycle-loops-11-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/source-original-kummer-coordinate-inverse-2-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/source-original-kummer-cell-calculus-7-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/source-original-kummer-cell-primitives-3-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/source-original-kummer-coordinate-loops-8-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/source-original-kummer-normalized-jumps-7-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerTreeCotreeAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerTreeCotreeAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerTreeCotreeAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerTreeCotreeDependencyAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerTreeCotreeDependencyAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerTreeCotreeDependencyAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNontrivialDissectionAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNontrivialDissectionAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNontrivialDissectionAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNontrivialDissectionDependencyAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNontrivialDissectionDependencyAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNontrivialDissectionDependencyAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerPolygonAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerPolygonAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerPolygonAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerPolygonDependencyAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerPolygonDependencyAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerPolygonDependencyAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCycleLoopsAudit11.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCycleLoopsAudit11.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCycleLoopsAudit11.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCycleLoopsDependencyAudit11.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCycleLoopsDependencyAudit11.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCycleLoopsDependencyAudit11.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateInverseAudit2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateInverseAudit2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateInverseAudit2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateInverseDependencyAudit2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateInverseDependencyAudit2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateInverseDependencyAudit2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellCalculusAudit7.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellCalculusAudit7.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellCalculusAudit7.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellCalculusDependencyAudit7.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellCalculusDependencyAudit7.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellCalculusDependencyAudit7.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellPrimitivesAudit3.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellPrimitivesAudit3.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellPrimitivesAudit3.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellPrimitivesDependencyAudit3.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellPrimitivesDependencyAudit3.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellPrimitivesDependencyAudit3.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateLoopsAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateLoopsAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateLoopsAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateLoopsDependencyAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateLoopsDependencyAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateLoopsDependencyAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNormalizedJumpsAudit7.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNormalizedJumpsAudit7.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNormalizedJumpsAudit7.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNormalizedJumpsDependencyAudit7.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNormalizedJumpsDependencyAudit7.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNormalizedJumpsDependencyAudit7.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-cycles-20261025-533/archive-manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialDissectionBoundaryChains.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialDissectionGraphConnectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialCotreeComplementConnectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialDissectionTreeCotree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverTreeCotree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverVertexNontrivial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalLiftedMarkedEulerNontrivialAssembly.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverNontrivialEulerData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverNontrivialEulerDissection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverNontrivialTreeCotree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialPolygonCorners.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialPolygonState.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialPolygonGluing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialPolygonWordCycles.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialDissectionPolygonWord.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialFundamentalCycleSystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPolygonWord.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCycleSystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialDissectionArcPaths.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialDissectionEdgePaths.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialEdgeSkeleton.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialSkeletonIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialTreeWalkIntegrals.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialCycleChainIdentification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialFundamentalCycleLoops.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverSkeletonIntegrals.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverFundamentalLoops.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCycleLoopFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCycleLoops.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAnalyticCoordinateInverse.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCoordinateInverse.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverOneFormAt.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverRegularNeighborhood.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverOneFormLaw.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCellCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCellRegularCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCellCoefficientPullback.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCellCoefficientTransition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCellPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCellPrimitiveFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverRegularCellPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialCellBoundaryCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPathPrimitiveDerivative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverBoundaryCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialAffinePrimitiveIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverArcPathIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverEdgePathIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCoordinateCycleLoops.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCoordinateCyclePrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCoordinateTransition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialPairedArcOverlap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCellPrimitiveJumps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverDissectionPrimitiveJumps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialDualTreeNormalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverNormalizedCellPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverNormalizedCyclePrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-kummer-tree-cotree-5-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-nontrivial-dissection-5-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-polygon-8-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-cycle-loops-11-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-coordinate-inverse-2-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-cell-calculus-7-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-cell-primitives-3-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-coordinate-loops-8-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-normalized-jumps-7-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-cycles.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/original-kummer-period-relations-promotion-route-545.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-jump-reduction-4-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-signed-primitives-4-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-primitive-polygon-6-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-period-matrix-7-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-regular-generation-11-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-unimodular-8-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-cell-residues-3-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-weighted-edges-5-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-weighted-residues-9-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-bilinear-periods-5-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-third-kind-6-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerJumpReductionAudit4.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerJumpReductionAudit4.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerJumpReductionAudit4.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerJumpReductionDependencyAudit4.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerJumpReductionDependencyAudit4.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerJumpReductionDependencyAudit4.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerSignedPrimitivesAudit4.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerSignedPrimitivesAudit4.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerSignedPrimitivesAudit4.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerSignedPrimitivesDependencyAudit4.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerSignedPrimitivesDependencyAudit4.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerSignedPrimitivesDependencyAudit4.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPrimitivePolygonAudit6.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPrimitivePolygonAudit6.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPrimitivePolygonAudit6.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPrimitivePolygonDependencyAudit6.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPrimitivePolygonDependencyAudit6.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPrimitivePolygonDependencyAudit6.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPeriodMatrixAudit7.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPeriodMatrixAudit7.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPeriodMatrixAudit7.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPeriodMatrixDependencyAudit7.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPeriodMatrixDependencyAudit7.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPeriodMatrixDependencyAudit7.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerRegularGenerationAudit11.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerRegularGenerationAudit11.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerRegularGenerationAudit11.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerRegularGenerationDependencyAudit11.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerRegularGenerationDependencyAudit11.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerRegularGenerationDependencyAudit11.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerUnimodularAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerUnimodularAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerUnimodularAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerUnimodularDependencyAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerUnimodularDependencyAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerUnimodularDependencyAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerCellResiduesAudit3.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerCellResiduesAudit3.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerCellResiduesAudit3.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerCellResiduesDependencyAudit3.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerCellResiduesDependencyAudit3.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerCellResiduesDependencyAudit3.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedEdgesAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedEdgesAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedEdgesAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedEdgesDependencyAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedEdgesDependencyAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedEdgesDependencyAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedResiduesAudit9.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedResiduesAudit9.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedResiduesAudit9.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedResiduesDependencyAudit9.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedResiduesDependencyAudit9.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedResiduesDependencyAudit9.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerBilinearPeriodsAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerBilinearPeriodsAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerBilinearPeriodsAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerBilinearPeriodsDependencyAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerBilinearPeriodsDependencyAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerBilinearPeriodsDependencyAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerThirdKindAudit6.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerThirdKindAudit6.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerThirdKindAudit6.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerThirdKindDependencyAudit6.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerThirdKindDependencyAudit6.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerThirdKindDependencyAudit6.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/kummer-period-relations-20261025-545/archive-manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialArcIndexInverse.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialPrimitiveJumpCirculation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialJumpCycleReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverReducedCellJumps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPrimitiveArcIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialPrimitiveEndpointReversal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverSignedPrimitiveArcValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverSignedCellPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialPolygonPrimitiveData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialPolygonPrimitiveEndpoints.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialPolygonCornerPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialPolygonWordPrimitiveSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialPrimitivePolygonWord.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPrimitivePolygon.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialCycleIntegralSums.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialWordPeriodMatrix.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialJumpPeriodClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialCyclePeriodPolygonData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialCyclePeriodMatrixAssembly.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPeriodMatrix.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCyclePeriodData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialCellClosedCarriers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialCellCarrierNeighborhoods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialPairedArcEquality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialCellJumpDifferences.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCoordinatePrimitiveComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPathPrimitiveData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCellPrimitiveLocalDifference.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialPrimitiveAtlas.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPathPrimitiveJumps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverRegularLoopGeneration.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverRegularCycleData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialComplementaryWordMatrix.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodGeneratorsRealSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverComplementaryPeriodCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverComplementaryPeriodSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverComplementaryWordMatrix.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialUnimodularPeriodPolygon.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverUnimodularPeriodPolygon.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverUnimodularCycleData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPuncturedOneFormLaw.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCellPuncturedCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCellResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverWeightedArcIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverReversedArcIntegrand.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverWeightedArcReversal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverWeightedEdgeCancellation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverNormalizedWeightedEdges.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialCellInteriors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialPoleSkeleton.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialCellArcPartition.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialPairedBoundarySum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCellCenteredResidue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverDissectionCellResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialPoleCarrierSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverWeightedResidueJumpSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverNormalizedWeightedResidues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialWeightedCycleSums.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCycleResidueBilinear.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverBilinearPeriodPolygonData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverBilinearPeriodPolygon.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverBilinearCycleData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverNormalizedAbelReadings.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFiniteSkewBilinearSwap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverCellResidueReciprocity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverThirdKindPolygonData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverThirdKindPolygon.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverThirdKindCycleData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-kummer-jump-reduction-4-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-signed-primitives-4-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-primitive-polygon-6-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-period-matrix-7-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-regular-generation-11-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-unimodular-8-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-cell-residues-3-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-weighted-edges-5-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-weighted-residues-9-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-bilinear-periods-5-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-third-kind-6-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-period-relations.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/original-weil-nondegeneracy-promotion-route-554.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-simple-pole-basis-3-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-meromorphic-primitives-8-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-logarithmic-jumps-10-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-residue-quotient-13b-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-meromorphic-generation-18b-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-abel-converse-7-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-point-division-6-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-weil-nondegeneracy-5b-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/kummer-simple-pole-basis-route-546.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/kummer-meromorphic-primitives-route-547.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/kummer-logarithmic-jumps-route-548.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/kummer-residue-quotient-route-549b.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/kummer-meromorphic-generation-route-550b.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/kummer-abel-converse-route-551.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/kummer-point-division-route-552.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/weil-nondegeneracy-route-553b.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-simple-pole-basis-3-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-simple-pole-basis-3-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-meromorphic-primitives-8-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-meromorphic-primitives-8-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-logarithmic-jumps-10-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-logarithmic-jumps-10-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-residue-quotient-13b-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-residue-quotient-13b-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-meromorphic-generation-18b-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-meromorphic-generation-18b-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-abel-converse-7-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-abel-converse-7-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-point-division-6-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-point-division-6-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-weil-nondegeneracy-5b-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-weil-nondegeneracy-5b-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerResidueQuotientAudit13.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerResidueQuotientAudit13.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerResidueQuotientAudit13.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicGenerationAudit18.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicGenerationAudit18.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicGenerationAudit18.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerWeilNondegeneracyDependencyAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerWeilNondegeneracyDependencyAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerWeilNondegeneracyDependencyAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-residue-quotient-13-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/kummer-residue-quotient-route-549.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-meromorphic-generation-18-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/kummer-meromorphic-generation-route-550.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/meromorphic-generation-successor-550b.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-weil-nondegeneracy-5-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/weil-nondegeneracy-route-553.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicLoopPeriods.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicLoopPeriods.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicLoopPeriods.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicLoopPeriods.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicBasisExtension.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicBasisExtension.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicBasisExtension.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicBasisExtension.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicGeneration.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicGeneration.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicGeneration.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicGeneration.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverFullCycleData.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverFullCycleData.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverFullCycleData.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverFullCycleData.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerSimplePoleBasisAudit3.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerSimplePoleBasisAudit3.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerSimplePoleBasisAudit3.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerSimplePoleBasisDependencyAudit3.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerSimplePoleBasisDependencyAudit3.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerSimplePoleBasisDependencyAudit3.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicPrimitivesAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicPrimitivesAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicPrimitivesAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicPrimitivesDependencyAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicPrimitivesDependencyAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicPrimitivesDependencyAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerLogarithmicJumpsAudit10.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerLogarithmicJumpsAudit10.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerLogarithmicJumpsAudit10.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerLogarithmicJumpsDependencyAudit10.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerLogarithmicJumpsDependencyAudit10.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerLogarithmicJumpsDependencyAudit10.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerResidueQuotientAudit13B.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerResidueQuotientAudit13B.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerResidueQuotientAudit13B.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerResidueQuotientDependencyAudit13B.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerResidueQuotientDependencyAudit13B.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerResidueQuotientDependencyAudit13B.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicGenerationAudit18B.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicGenerationAudit18B.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicGenerationAudit18B.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicGenerationDependencyAudit18B.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicGenerationDependencyAudit18B.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicGenerationDependencyAudit18B.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerAbelConverseAudit7.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerAbelConverseAudit7.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerAbelConverseAudit7.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerAbelConverseDependencyAudit7.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerAbelConverseDependencyAudit7.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerAbelConverseDependencyAudit7.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerPointDivisionAudit6.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerPointDivisionAudit6.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerPointDivisionAudit6.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerPointDivisionDependencyAudit6.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerPointDivisionDependencyAudit6.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerPointDivisionDependencyAudit6.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerWeilNondegeneracyAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerWeilNondegeneracyAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerWeilNondegeneracyAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerWeilNondegeneracyDependencyAudit5B.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerWeilNondegeneracyDependencyAudit5B.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerWeilNondegeneracyDependencyAudit5B.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/weil-nondegeneracy-20261025-554/archive-manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverSimplePoleSpace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverSimplePoleSpaceFinite.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverSimplePoleBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialMeromorphicPoleData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialMeromorphicPoleNeighborhoods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceComplexResidueSubtractedCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverRegularizedCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialMeromorphicCellPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicCellPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicPrimitiveData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicCycleData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialMeromorphicBoundaryValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicBoundaryValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicBoundaryFTC.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialMeromorphicBoundaryJumps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicBoundaryJumps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialMeromorphicNormalizedJumps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicBoundaryPeriod.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicNormalizedJumps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverNormalizedMeromorphicData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverNormalizedMeromorphicCycleData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialQuotientArcValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialQuotientVertexValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialQuotientWordIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialQuotientCycleReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialResiduePeriodQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialMeromorphicSignedEndpoints.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialQuotientArcGeometry.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialMeromorphicQuotientArcValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicQuotientArcValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialMeromorphicJumpPeriodClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicJumpPeriodClosure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicJumpData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicJumpCycleData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceComplexZeroResidueCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialMeromorphicPrimitiveValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialMeromorphicCellDifferences.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialPoleAvoidingNeighborhoods.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverZeroResidueCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicLocalPrimitives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialMeromorphicLocalAtlasData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicLocalAtlas.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialMeromorphicAtlasOverlap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRadialMeromorphicAtlasLocality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicPathComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicPathAtlas.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicLoopPeriodsV2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPathIntegralFiniteRegularity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFiniteCycleResidueLinearity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicBasisExtensionV2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverMeromorphicGenerationV2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverFullCycleDataV2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverRawReciprocityData.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFiniteIntegerGenerationReindex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverGenerationReindex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFiniteThirdKindReindex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverReciprocityReindex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverReindexedReciprocity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverAbelConverse.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodDivision.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePicardDivisionFromPrincipal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePicardDivisionFromAbel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverClassDivision.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCoverPointDivision.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalComplexWeilDetection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilComplexEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilComplexDatum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilComplexComparison.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalArithmeticWeilDetection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTateWeilNondegeneracy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-kummer-simple-pole-basis-3-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-meromorphic-primitives-8-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-logarithmic-jumps-10-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-residue-quotient-13b-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-meromorphic-generation-18b-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-abel-converse-7-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-point-division-6-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-kummer-weil-nondegeneracy-5b-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-weil-nondegeneracy.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/original-primitive-projector-promotion-route-559.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/source-original-rational-weil-6-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/source-original-primitive-good-projection-8-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/source-original-primitive-coefficient-projection-5-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/source-original-primitive-tensor-projection-8-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/rational-weil-route-555.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/primitive-good-projection-route-556.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/primitive-coefficient-projection-route-557.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/primitive-tensor-projection-route-558.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/source-original-rational-weil-6-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/source-original-rational-weil-6-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/source-original-primitive-good-projection-8-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/source-original-primitive-good-projection-8-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/source-original-primitive-coefficient-projection-5-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/source-original-primitive-coefficient-projection-5-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/source-original-primitive-tensor-projection-8-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/source-original-primitive-tensor-projection-8-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalRationalWeilAudit6.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalRationalWeilAudit6.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalRationalWeilAudit6.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalRationalWeilDependencyAudit6.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalRationalWeilDependencyAudit6.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalRationalWeilDependencyAudit6.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveGoodProjectionAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveGoodProjectionAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveGoodProjectionAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveGoodProjectionDependencyAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveGoodProjectionDependencyAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveGoodProjectionDependencyAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveCoefficientProjectionAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveCoefficientProjectionAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveCoefficientProjectionAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveCoefficientProjectionDependencyAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveCoefficientProjectionDependencyAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveCoefficientProjectionDependencyAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveTensorProjectionAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveTensorProjectionAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveTensorProjectionAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveTensorProjectionDependencyAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveTensorProjectionDependencyAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveTensorProjectionDependencyAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/archive-manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFractionBilinearInjective.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTateRationalInjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRationalWeilNondegeneracy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTateWeilSkew.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBilinearBaseChangeLaws.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRationalWeilLaws.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveFiniteGoodEigensystem.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSymmetricSumSquaresKernel.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveGoodAnnihilator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceKernelPowerReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePolynomialKernelProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSymmetricKernelReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePolynomialKernelProjectionLaws.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveGoodPolynomialProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFiniteOperatorCoefficientAnnihilator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveGoodCoefficientAnnihilator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMappedKernelProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveGoodCoefficientProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveGoodProjectionHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegerCoefficientExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegerCoefficientExtensionInjective.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHeckeCoefficientFaithfulness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegerCoefficientExtensionLaws.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveTensorOperators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveTensorProjection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveTensorEigencharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveTensorProjectionNonzero.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-rational-weil-6-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-primitive-good-projection-8-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-primitive-coefficient-projection-5-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-primitive-tensor-projection-8-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-primitive-projector.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/canonical-recorder-archive-format-8102b.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/canonical-recorder-successor-8102b.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/record_source_original_primitive_projector_8102b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourcePrimitiveProjectorFocusedGenerated8102b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourcePrimitiveProjectorFocusedGenerated8102b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourcePrimitiveProjectorFocusedGenerated8102b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourcePrimitiveProjectorGlobalGenerated8102b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourcePrimitiveProjectorGlobalGenerated8102b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourcePrimitiveProjectorGlobalGenerated8102b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/original-primitive-tate-image-promotion-route-563.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-coefficient-weil-6-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-primitive-tate-restriction-8-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-primitive-rank-two-17-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/coefficient-weil-route-560.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/primitive-tate-restriction-route-561.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/primitive-rank-two-route-562b.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/prepare_primitive_tate_restriction_audit_561.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/prepare_primitive_tate_restriction_audit_561b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/prepare_primitive_rank_two_audit_562.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/prepare_primitive_rank_two_dependency_successor_562b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/primitive-rank-two-route-562.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-primitive-rank-two-17-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoDependencyAudit17.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoDependencyAudit17.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoDependencyAudit17.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/record_coefficient_weil_560.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/record_primitive_tate_restriction_561.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/record_primitive_rank_two_562.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-coefficient-weil-6-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-primitive-tate-restriction-8-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-primitive-rank-two-17-audit-config-562b.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-coefficient-weil-6-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-primitive-tate-restriction-8-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-primitive-rank-two-17-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalCoefficientWeilAudit6.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalCoefficientWeilAudit6.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalCoefficientWeilAudit6.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalCoefficientWeilDependencyAudit6.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalCoefficientWeilDependencyAudit6.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalCoefficientWeilDependencyAudit6.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateRestrictionAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateRestrictionAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateRestrictionAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateRestrictionDependencyAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateRestrictionDependencyAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateRestrictionDependencyAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoAudit17.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoAudit17.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoAudit17.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoDependencyAudit17b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoDependencyAudit17b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoDependencyAudit17b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/primitive-tate-image-20261025-563/archive-manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFiniteBilinearBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCoefficientWeilNondegeneracy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBilinearBaseChangeAlternating.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCoefficientWeilLaws.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBilinearPolynomialAdjoint.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIdempotentBilinearRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeCoordinateRelations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspRationalTateHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegerCoefficientExtensionOne.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegerCoefficientEndExtension.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveOriginalTateEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveOriginalTateAdjoint.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEndIdempotentPairingRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveOriginalTateRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCharacterIdempotentLine.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCharacterIdempotentRankTwo.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGeneratedCharacterIdempotent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTensorCharacterIdempotent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspPadicHeckeMap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegerCoefficientExtensionCharacter.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveHeckeAlgebraEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveHeckeAlgebraProjector.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRankTwoSurjectiveDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCuspTateRankTwo.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRankTwoBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegerCoefficientRankTwo.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntertwinedRangeEquiv.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRankTwoCharacterRange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveHeckeAlgebraRankTwo.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveOriginalTateRankTwo.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimitiveOriginalTateNondegenerateRankTwo.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-coefficient-weil-6-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-primitive-tate-restriction-8-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-primitive-rank-two-17-reuse-review-20261025.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-primitive-tate-image.json",
+      "role": "Tools"
     }
   ],
   "statusDocuments": [
@@ -45874,7 +50478,467 @@
     "SourceOriginalTateWeilHecke",
     "SourceOriginalTateWeilCyclotomic",
     "SourceTateScalarFaithfulness",
-    "SourceOriginalTateWeilMultiplier"
+    "SourceOriginalTateWeilMultiplier",
+    "SourceOriginalWeilKummerRadicand",
+    "SourceCurveKummerRootAutomorphism",
+    "SourceOriginalWeilKummerCover",
+    "SourceTateTorusCoordinateLift",
+    "SourceOriginalTateCoordinateLift",
+    "SourceOriginalTateWeilDetection",
+    "SourceOriginalFiniteCoverGeometry",
+    "SourceOriginalWeilKummerGeometry",
+    "SourceCurveRationalEvaluationLaws",
+    "SourceCurveRationalDivisorEvaluation",
+    "SourceOriginalWeilCoverEvaluation",
+    "SourceCurveRationalDivisorNorm",
+    "SourceOriginalWeilCoverNorm",
+    "SourceCurveRationalCoordinateReciprocity",
+    "SourceCurveRationalDivisorConstants",
+    "SourceCurveFiniteCoordinateReciprocity",
+    "SourceOriginalWeilCoverReciprocity",
+    "SourceCurveRationalEvaluationEquiv",
+    "SourceCurvePicardDivisionPrincipal",
+    "SourceOriginalWeilKummerPointDifference",
+    "SourceOriginalWeilKummerPointEvaluation",
+    "SourceOriginalWeilKummerDivisionNorm",
+    "SourceCurveKummerRootPullback",
+    "SourceOriginalWeilKummerMoving",
+    "SourceCurveKummerDetectingEvaluation",
+    "SourceCurveKummerNormAvoidance",
+    "SourceOriginalWeilKummerNormAvoidance",
+    "SourceOriginalWeilDatumAssembly",
+    "SourceCurveKummerMovedEvaluation",
+    "SourceOriginalWeilKummerMovedDatum",
+    "SourceOriginalWeilKummerDetectingDatum",
+    "SourceOriginalWeilKummerDetection",
+    "SourceOriginalTateWeilKummerDetection",
+    "SourceMeromorphicKummerRoots",
+    "SourceOriginalWeilLocalKummerRoot",
+    "SourceMeromorphicLaurentRealization",
+    "SourceOriginalChartLaurentHom",
+    "SourceOriginalWeilConvergentKummerRoot",
+    "SourceOriginalWeilLocalSplittingField",
+    "SourceCurveNormalizedLaurentPlace",
+    "SourceCurveRealizedLaurentPlace",
+    "SourceOriginalWeilLocalCoverPlace",
+    "SourceCurveConvergentCommonDisc",
+    "SourceCurveConvergentGaloisPlaces",
+    "SourceCurveConvergentKummerPlaces",
+    "SourceOriginalWeilEveryLocalCover",
+    "SourceCurveNormalizedCommonDisc",
+    "SourceOriginalWeilCoverDisc",
+    "SourceCurveConvergentDiscGerms",
+    "SourceCurveConvergentDiscOrders",
+    "SourceCurveConvergentDiscUniformizer",
+    "SourceCurveConvergentDiscPlaces",
+    "SourceCurveConvergentPlaceFamily",
+    "SourceOriginalWeilCoverPlaceFamily",
+    "SourceCurveConvergentDiscResidues",
+    "SourceCurveConvergentEvaluationFamily",
+    "SourceCurveAnalyticPlaceParameter",
+    "SourceCurveConvergentPlaceChart",
+    "SourceOriginalWeilCoverParameter",
+    "SourceCurveRationalChartValues",
+    "SourceCurveAnalyticChartOrders",
+    "SourceCurveAnalyticChartComparison",
+    "SourceCurveAnalyticChartDifferenceOrders",
+    "SourceCurveAnalyticChartBranchEquality",
+    "SourceOriginalWeilCoverChartPackage",
+    "SourceOriginalWeilCoverCharts",
+    "SourceOriginalWeilCoverChartTransitions",
+    "SourceOriginalWeilCoverManifold",
+    "SourceOriginalWeilCoverChartOrders",
+    "SourceCurveRationalPlaceSeparation",
+    "SourceOriginalWeilCoverHausdorff",
+    "SourceFiniteFiberOpenMap",
+    "SourceCurveUnramifiedFiberCard",
+    "SourceCurveUnramifiedChartRestriction",
+    "SourceAnalyticRestrictionTopology",
+    "SourceOriginalWeilRestrictionComparison",
+    "SourceOriginalWeilRestrictionTopology",
+    "SourceOriginalWeilCoverCompact",
+    "SourceCurveFiniteCoordinateOnePole",
+    "SourceOriginalWeilCoverEvaluationContinuity",
+    "SourceOriginalWeilCoverOnePole",
+    "SourceOriginalWeilCoverClopenObstruction",
+    "SourceOriginalWeilCoverConnected",
+    "SourceCurveFiniteCoordinateDimensionBounds",
+    "SourceOriginalWeilCoverDimensionBounds",
+    "SourceOriginalWeilCoverMeromorphicDimension",
+    "SourceOriginalWeilCoverMeromorphicPoleBound",
+    "SourceOriginalWeilCoverReadGerms",
+    "SourceOriginalWeilCoverReadFieldLaws",
+    "SourceOriginalWeilCoverGermBasisRelation",
+    "SourceOriginalWeilCoverOnePoleComparison",
+    "SourceOriginalWeilCoverMeromorphicPoleClearing",
+    "SourceOriginalWeilCoverMeromorphicFunctionComparison",
+    "SourceOriginalWeilCoverLocalDifferentials",
+    "SourceOriginalWeilCoverDifferentialReadings",
+    "SourceOriginalWeilCoverChartGermHom",
+    "SourceOriginalWeilCoverChartDerivativeGerms",
+    "SourceOriginalWeilCoverChartGermDerivation",
+    "SourceOriginalWeilCoverDifferentialRegularity",
+    "SourceOriginalWeilCoverDifferentialTransitions",
+    "SourceOriginalWeilCoverChartPrimitives",
+    "SourceOriginalWeilCoverPathLocalPrimitives",
+    "SourceOriginalWeilCoverPathPrimitives",
+    "SourceOriginalWeilCoverPathIntegral",
+    "SourceOriginalWeilCoverPathIntegralLaws",
+    "SourceOriginalWeilCoverAbelJacobiPeriods",
+    "SourceOriginalWeilCoverChartPathIntegrals",
+    "SourceOriginalWeilCoverLocalAbelJacobi",
+    "SourceOriginalWeilCoverCanonicalSupport",
+    "SourceOriginalWeilCoverDifferentialReadingLinear",
+    "SourceOriginalWeilCoverRegularEvaluationSeparation",
+    "SourceOriginalWeilCoverRegularEvaluationFrame",
+    "SourceOriginalWeilCoverAbelJacobiImage",
+    "SourceOriginalWeilCoverAbelJacobiOpenImage",
+    "SourceOriginalWeilCoverJacobiInversion",
+    "SourceOriginalWeilCoverJacobiInversionAssembled",
+    "SourceOriginalWeilCoverRiemannRoch",
+    "SourceCurveTwoPoleDimensions",
+    "SourceOriginalWeilCoverTwoPoleDimensions",
+    "SourceCurveTwoPoleDifferential",
+    "SourceOriginalWeilCoverTwoPoleDifferential",
+    "SourceCurveRationalResidueTrace",
+    "SourceOriginalWeilCoverDifferentialResidues",
+    "SourceOriginalWeilCoverSimplePoleBounds",
+    "SourceOriginalWeilCoverTwoPoleResidues",
+    "SourceOriginalWeilCoverPrescribedResidues",
+    "SourceOriginalWeilCoverMeromorphicPrincipalDivisor",
+    "SourceOriginalWeilCoverRegularDifferentialSubtraction",
+    "SourceOriginalWeilCoverSimplePoleRegularPart",
+    "SourceOriginalWeilCoverLocalRegularPrimitives",
+    "SourceOriginalWeilCoverRegularPathLocalPrimitives",
+    "SourceOriginalWeilCoverRegularPathPrimitives",
+    "SourceOriginalWeilCoverPathIntegralSubtraction",
+    "SourceOriginalWeilCoverRegularPathIntegralLaws",
+    "SourceOriginalWeilCoverLogarithmicReading",
+    "SourceOriginalWeilCoverLocalExponentialModel",
+    "SourceOriginalWeilCoverFinitePuncturePaths",
+    "SourceOriginalWeilCoverDivisorAvoidingPaths",
+    "SourceOriginalWeilCoverRegularChartReadingAt",
+    "SourceOriginalWeilCoverLocalChartPathPrimitive",
+    "SourceOriginalWeilCoverLocalChartPathIntegral",
+    "SourceOriginalWeilCoverIntegralPeriodPathIndependence",
+    "SourceOriginalWeilCoverPeriodExponential",
+    "SourceOriginalWeilCoverPeriodExponentialConsumer",
+    "SourceOriginalWeilCoverExponentialLocalTransport",
+    "SourceOriginalWeilCoverExponentialChartDerivative",
+    "SourceOriginalWeilCoverExponentialMeromorphicOrders",
+    "SourceOriginalWeilCoverIntegralPeriodsPrincipal",
+    "SourceOriginalWeilCoverDifferentialReadingFaithfulness",
+    "SourceOriginalWeilCoverRealAbelPotential",
+    "SourceOriginalWeilCoverPeriodAnnihilator",
+    "SourceOriginalWeilCoverPathIntegralLinearCombination",
+    "SourceOriginalWeilCoverFinitePeriodGeneration",
+    "SourcePeriodMatrixInjectivity",
+    "SourceOriginalWeilCoverLoopPeriodInjectivity",
+    "SourcePeriodRawCorrection",
+    "SourceOriginalWeilCoverGeneratorPeriodCorrection",
+    "SourceOriginalWeilCoverIntegralPeriodsFromGenerators",
+    "SourceOriginalWeilCoverAbelConverseFromRawReciprocity",
+    "SourceAnalyticCoveringComparison",
+    "SourceOriginalWeilRestrictionLocalHomeomorph",
+    "SourceOriginalWeilRestrictionCovering",
+    "SourceCoverStarConvexLift",
+    "SourceCoverLiftedCoordinate",
+    "SourceOriginalWeilCoverLiftedCoordinateAnalytic",
+    "SourceOriginalWeilCoverCellLift",
+    "SourceCoverStarConvexLiftFamily",
+    "SourceCoverLiftedCoordinateFamily",
+    "SourceOriginalWeilCoverCellLiftFamily",
+    "SourceCurveFiniteCoordinateRegularGenus",
+    "SourceCurveFiniteCoordinateUnramifiedGenus",
+    "SourceOriginalWeilCoverUnramifiedGenus",
+    "SourceOriginalWeilCoverLiftedArcEquality",
+    "SourceOriginalWeilCoverLiftedArcMatching",
+    "SourceOriginalWeilCoverGlobalCellCoordinates",
+    "SourceCoverSheetFiberBijection",
+    "SourceOriginalWeilCoverCellFiberEquiv",
+    "SourceOriginalWeilCoverArcSheetTransport",
+    "SourceOriginalWeilCoverBoundaryTransportAssembled",
+    "SourceOriginalCellPairingLiftIndices",
+    "SourceOriginalWeilCoverLiftedArcPairing",
+    "SourceOriginalWeilCoverGlobalArcPairing",
+    "SourceRadialReversedArcImages",
+    "SourceOriginalLiftedPairArcImages",
+    "SourceCoverLiftedCellIncidence",
+    "SourceOriginalCoverLiftedIntersectionChains",
+    "SourceOriginalWeilCoverGlobalIntersection",
+    "SourceFiniteClosedCoverAdjacency",
+    "SourceOriginalCellPairingLiftSides",
+    "SourceOriginalCellPairingLiftVertices",
+    "SourceOriginalLiftedCoverAdjacency",
+    "SourceOriginalWeilCoverGlobalAdjacency",
+    "SourceOriginalCellPairingLiftDissectionSides",
+    "SourceRadialCellDissection",
+    "SourceOriginalLiftedDissectionAssembly",
+    "SourceOriginalWeilCoverDissectionConstructed",
+    "SourceOriginalLiftedVertexIncidence",
+    "SourceCoverLiftedMarkedCells",
+    "SourceOriginalLiftedDissectionIncidence",
+    "SourceOriginalWeilCoverCenteredDissection",
+    "SourceOriginalLiftedVertexFibers",
+    "SourceFiniteFiberPreimageCard",
+    "SourceOriginalWeilCoverLiftedVertexCount",
+    "SourceOriginalLiftedEulerMultiplicity",
+    "SourceOriginalWeilCoverLiftedEuler",
+    "SourceOriginalLiftedMarkedEulerAssembly",
+    "SourceOriginalWeilCoverEulerDissectionData",
+    "SourceOriginalWeilCoverEulerDissection",
+    "SourceRadialDissectionBoundaryChains",
+    "SourceRadialDissectionGraphConnectivity",
+    "SourceRadialCotreeComplementConnectivity",
+    "SourceRadialDissectionTreeCotree",
+    "SourceOriginalWeilCoverTreeCotree",
+    "SourceOriginalWeilCoverVertexNontrivial",
+    "SourceOriginalLiftedMarkedEulerNontrivialAssembly",
+    "SourceOriginalWeilCoverNontrivialEulerData",
+    "SourceOriginalWeilCoverNontrivialEulerDissection",
+    "SourceOriginalWeilCoverNontrivialTreeCotree",
+    "SourceRadialPolygonCorners",
+    "SourceRadialPolygonState",
+    "SourceRadialPolygonGluing",
+    "SourceRadialPolygonWordCycles",
+    "SourceRadialDissectionPolygonWord",
+    "SourceRadialFundamentalCycleSystem",
+    "SourceOriginalWeilCoverPolygonWord",
+    "SourceOriginalWeilCoverCycleSystem",
+    "SourceRadialDissectionArcPaths",
+    "SourceRadialDissectionEdgePaths",
+    "SourceRadialEdgeSkeleton",
+    "SourceRadialSkeletonIntegral",
+    "SourceRadialTreeWalkIntegrals",
+    "SourceRadialCycleChainIdentification",
+    "SourceRadialFundamentalCycleLoops",
+    "SourceOriginalWeilCoverSkeletonIntegrals",
+    "SourceOriginalWeilCoverFundamentalLoops",
+    "SourceOriginalWeilCoverCycleLoopFamily",
+    "SourceOriginalWeilCoverCycleLoops",
+    "SourceAnalyticCoordinateInverse",
+    "SourceOriginalWeilCoverCoordinateInverse",
+    "SourceOriginalWeilCoverOneFormAt",
+    "SourceOriginalWeilCoverRegularNeighborhood",
+    "SourceOriginalWeilCoverOneFormLaw",
+    "SourceOriginalWeilCoverCellCoefficient",
+    "SourceOriginalWeilCoverCellRegularCoefficient",
+    "SourceOriginalWeilCoverCellCoefficientPullback",
+    "SourceOriginalWeilCoverCellCoefficientTransition",
+    "SourceOriginalWeilCoverCellPrimitives",
+    "SourceOriginalWeilCoverCellPrimitiveFamily",
+    "SourceOriginalWeilCoverRegularCellPrimitives",
+    "SourceRadialCellBoundaryCoordinates",
+    "SourceOriginalWeilCoverPathPrimitiveDerivative",
+    "SourceOriginalWeilCoverBoundaryCoefficient",
+    "SourceRadialAffinePrimitiveIntegral",
+    "SourceOriginalWeilCoverArcPathIntegral",
+    "SourceOriginalWeilCoverEdgePathIntegral",
+    "SourceOriginalWeilCoverCoordinateCycleLoops",
+    "SourceOriginalWeilCoverCoordinateCyclePrimitives",
+    "SourceOriginalWeilCoverCoordinateTransition",
+    "SourceRadialPairedArcOverlap",
+    "SourceOriginalWeilCoverCellPrimitiveJumps",
+    "SourceOriginalWeilCoverDissectionPrimitiveJumps",
+    "SourceRadialDualTreeNormalization",
+    "SourceOriginalWeilCoverNormalizedCellPrimitives",
+    "SourceOriginalWeilCoverNormalizedCyclePrimitives",
+    "SourceRadialArcIndexInverse",
+    "SourceRadialPrimitiveJumpCirculation",
+    "SourceRadialJumpCycleReduction",
+    "SourceOriginalWeilCoverReducedCellJumps",
+    "SourceOriginalWeilCoverPrimitiveArcIntegral",
+    "SourceRadialPrimitiveEndpointReversal",
+    "SourceOriginalWeilCoverSignedPrimitiveArcValues",
+    "SourceOriginalWeilCoverSignedCellPrimitives",
+    "SourceRadialPolygonPrimitiveData",
+    "SourceRadialPolygonPrimitiveEndpoints",
+    "SourceRadialPolygonCornerPrimitives",
+    "SourceRadialPolygonWordPrimitiveSum",
+    "SourceRadialPrimitivePolygonWord",
+    "SourceOriginalWeilCoverPrimitivePolygon",
+    "SourceRadialCycleIntegralSums",
+    "SourceRadialWordPeriodMatrix",
+    "SourceRadialJumpPeriodClosure",
+    "SourceRadialCyclePeriodPolygonData",
+    "SourceRadialCyclePeriodMatrixAssembly",
+    "SourceOriginalWeilCoverPeriodMatrix",
+    "SourceOriginalWeilCoverCyclePeriodData",
+    "SourceRadialCellClosedCarriers",
+    "SourceRadialCellCarrierNeighborhoods",
+    "SourceRadialPairedArcEquality",
+    "SourceRadialCellJumpDifferences",
+    "SourceOriginalWeilCoverCoordinatePrimitiveComparison",
+    "SourceOriginalWeilCoverPathPrimitiveData",
+    "SourceOriginalWeilCoverCellPrimitiveLocalDifference",
+    "SourceRadialPrimitiveAtlas",
+    "SourceOriginalWeilCoverPathPrimitiveJumps",
+    "SourceOriginalWeilCoverRegularLoopGeneration",
+    "SourceOriginalWeilCoverRegularCycleData",
+    "SourceRadialComplementaryWordMatrix",
+    "SourcePeriodGeneratorsRealSpan",
+    "SourceOriginalWeilCoverComplementaryPeriodCoordinates",
+    "SourceOriginalWeilCoverComplementaryPeriodSpan",
+    "SourceOriginalWeilCoverComplementaryWordMatrix",
+    "SourceRadialUnimodularPeriodPolygon",
+    "SourceOriginalWeilCoverUnimodularPeriodPolygon",
+    "SourceOriginalWeilCoverUnimodularCycleData",
+    "SourceOriginalWeilCoverPuncturedOneFormLaw",
+    "SourceOriginalWeilCoverCellPuncturedCoefficient",
+    "SourceOriginalWeilCoverCellResidues",
+    "SourceOriginalWeilCoverWeightedArcIntegral",
+    "SourceOriginalWeilCoverReversedArcIntegrand",
+    "SourceOriginalWeilCoverWeightedArcReversal",
+    "SourceOriginalWeilCoverWeightedEdgeCancellation",
+    "SourceOriginalWeilCoverNormalizedWeightedEdges",
+    "SourceRadialCellInteriors",
+    "SourceRadialPoleSkeleton",
+    "SourceRadialCellArcPartition",
+    "SourceRadialPairedBoundarySum",
+    "SourceOriginalWeilCoverCellCenteredResidue",
+    "SourceOriginalWeilCoverDissectionCellResidues",
+    "SourceRadialPoleCarrierSum",
+    "SourceOriginalWeilCoverWeightedResidueJumpSum",
+    "SourceOriginalWeilCoverNormalizedWeightedResidues",
+    "SourceRadialWeightedCycleSums",
+    "SourceOriginalWeilCoverCycleResidueBilinear",
+    "SourceOriginalWeilCoverBilinearPeriodPolygonData",
+    "SourceOriginalWeilCoverBilinearPeriodPolygon",
+    "SourceOriginalWeilCoverBilinearCycleData",
+    "SourceOriginalWeilCoverNormalizedAbelReadings",
+    "SourceFiniteSkewBilinearSwap",
+    "SourceOriginalWeilCoverCellResidueReciprocity",
+    "SourceOriginalWeilCoverThirdKindPolygonData",
+    "SourceOriginalWeilCoverThirdKindPolygon",
+    "SourceOriginalWeilCoverThirdKindCycleData",
+    "SourceOriginalWeilCoverSimplePoleSpace",
+    "SourceOriginalWeilCoverSimplePoleSpaceFinite",
+    "SourceOriginalWeilCoverSimplePoleBasis",
+    "SourceRadialMeromorphicPoleData",
+    "SourceRadialMeromorphicPoleNeighborhoods",
+    "SourceComplexResidueSubtractedCoefficient",
+    "SourceOriginalWeilCoverRegularizedCoefficient",
+    "SourceRadialMeromorphicCellPrimitives",
+    "SourceOriginalWeilCoverMeromorphicCellPrimitives",
+    "SourceOriginalWeilCoverMeromorphicPrimitiveData",
+    "SourceOriginalWeilCoverMeromorphicCycleData",
+    "SourceRadialMeromorphicBoundaryValues",
+    "SourceOriginalWeilCoverMeromorphicBoundaryValues",
+    "SourceOriginalWeilCoverMeromorphicBoundaryFTC",
+    "SourceRadialMeromorphicBoundaryJumps",
+    "SourceOriginalWeilCoverMeromorphicBoundaryJumps",
+    "SourceRadialMeromorphicNormalizedJumps",
+    "SourceOriginalWeilCoverMeromorphicBoundaryPeriod",
+    "SourceOriginalWeilCoverMeromorphicNormalizedJumps",
+    "SourceOriginalWeilCoverNormalizedMeromorphicData",
+    "SourceOriginalWeilCoverNormalizedMeromorphicCycleData",
+    "SourceRadialQuotientArcValues",
+    "SourceRadialQuotientVertexValues",
+    "SourceRadialQuotientWordIdentity",
+    "SourceRadialQuotientCycleReduction",
+    "SourceRadialResiduePeriodQuotient",
+    "SourceRadialMeromorphicSignedEndpoints",
+    "SourceRadialQuotientArcGeometry",
+    "SourceRadialMeromorphicQuotientArcValues",
+    "SourceOriginalWeilCoverMeromorphicQuotientArcValues",
+    "SourceRadialMeromorphicJumpPeriodClosure",
+    "SourceOriginalWeilCoverMeromorphicJumpPeriodClosure",
+    "SourceOriginalWeilCoverMeromorphicJumpData",
+    "SourceOriginalWeilCoverMeromorphicJumpCycleData",
+    "SourceComplexZeroResidueCoefficient",
+    "SourceRadialMeromorphicPrimitiveValues",
+    "SourceRadialMeromorphicCellDifferences",
+    "SourceRadialPoleAvoidingNeighborhoods",
+    "SourceOriginalWeilCoverZeroResidueCoefficient",
+    "SourceOriginalWeilCoverMeromorphicLocalPrimitives",
+    "SourceRadialMeromorphicLocalAtlasData",
+    "SourceOriginalWeilCoverMeromorphicLocalAtlas",
+    "SourceRadialMeromorphicAtlasOverlap",
+    "SourceRadialMeromorphicAtlasLocality",
+    "SourceOriginalWeilCoverMeromorphicPathComparison",
+    "SourceOriginalWeilCoverMeromorphicPathAtlas",
+    "SourceOriginalWeilCoverMeromorphicLoopPeriodsV2",
+    "SourceOriginalWeilCoverPathIntegralFiniteRegularity",
+    "SourceFiniteCycleResidueLinearity",
+    "SourceOriginalWeilCoverMeromorphicBasisExtensionV2",
+    "SourceOriginalWeilCoverMeromorphicGenerationV2",
+    "SourceOriginalWeilCoverFullCycleDataV2",
+    "SourceOriginalWeilCoverRawReciprocityData",
+    "SourceFiniteIntegerGenerationReindex",
+    "SourceOriginalWeilCoverGenerationReindex",
+    "SourceFiniteThirdKindReindex",
+    "SourceOriginalWeilCoverReciprocityReindex",
+    "SourceOriginalWeilCoverReindexedReciprocity",
+    "SourceOriginalWeilCoverAbelConverse",
+    "SourcePeriodDivision",
+    "SourceCurvePicardDivisionFromPrincipal",
+    "SourceCurvePicardDivisionFromAbel",
+    "SourceOriginalWeilCoverClassDivision",
+    "SourceOriginalWeilCoverPointDivision",
+    "SourceOriginalComplexWeilDetection",
+    "SourceOriginalWeilComplexEvaluation",
+    "SourceOriginalWeilComplexDatum",
+    "SourceOriginalWeilComplexComparison",
+    "SourceOriginalArithmeticWeilDetection",
+    "SourceOriginalTateWeilNondegeneracy",
+    "SourceFractionBilinearInjective",
+    "SourceTateRationalInjection",
+    "SourceOriginalRationalWeilNondegeneracy",
+    "SourceOriginalTateWeilSkew",
+    "SourceBilinearBaseChangeLaws",
+    "SourceOriginalRationalWeilLaws",
+    "SourcePrimitiveFiniteGoodEigensystem",
+    "SourceSymmetricSumSquaresKernel",
+    "SourcePrimitiveGoodAnnihilator",
+    "SourceKernelPowerReduction",
+    "SourcePolynomialKernelProjection",
+    "SourceSymmetricKernelReduction",
+    "SourcePolynomialKernelProjectionLaws",
+    "SourcePrimitiveGoodPolynomialProjection",
+    "SourceFiniteOperatorCoefficientAnnihilator",
+    "SourcePrimitiveGoodCoefficientAnnihilator",
+    "SourceMappedKernelProjection",
+    "SourcePrimitiveGoodCoefficientProjection",
+    "SourcePrimitiveGoodProjectionHecke",
+    "SourceIntegerCoefficientExtension",
+    "SourceIntegerCoefficientExtensionInjective",
+    "SourceOriginalHeckeCoefficientFaithfulness",
+    "SourceIntegerCoefficientExtensionLaws",
+    "SourcePrimitiveTensorOperators",
+    "SourcePrimitiveTensorProjection",
+    "SourcePrimitiveTensorEigencharacter",
+    "SourcePrimitiveTensorProjectionNonzero",
+    "SourceFiniteBilinearBaseChange",
+    "SourceOriginalCoefficientWeilNondegeneracy",
+    "SourceBilinearBaseChangeAlternating",
+    "SourceOriginalCoefficientWeilLaws",
+    "SourceBilinearPolynomialAdjoint",
+    "SourceIdempotentBilinearRestriction",
+    "SourceHeckeCoordinateRelations",
+    "SourceOriginalCuspRationalTateHecke",
+    "SourceIntegerCoefficientExtensionOne",
+    "SourceIntegerCoefficientEndExtension",
+    "SourcePrimitiveOriginalTateEvaluation",
+    "SourcePrimitiveOriginalTateAdjoint",
+    "SourceEndIdempotentPairingRestriction",
+    "SourcePrimitiveOriginalTateRestriction",
+    "SourceCharacterIdempotentLine",
+    "SourceCharacterIdempotentRankTwo",
+    "SourceGeneratedCharacterIdempotent",
+    "SourceTensorCharacterIdempotent",
+    "SourceOriginalCuspPadicHeckeMap",
+    "SourceIntegerCoefficientExtensionCharacter",
+    "SourcePrimitiveHeckeAlgebraEvaluation",
+    "SourcePrimitiveHeckeAlgebraProjector",
+    "SourceRankTwoSurjectiveDescent",
+    "SourceOriginalCuspTateRankTwo",
+    "SourceRankTwoBaseChange",
+    "SourceIntegerCoefficientRankTwo",
+    "SourceIntertwinedRangeEquiv",
+    "SourceRankTwoCharacterRange",
+    "SourcePrimitiveHeckeAlgebraRankTwo",
+    "SourcePrimitiveOriginalTateRankTwo",
+    "SourcePrimitiveOriginalTateNondegenerateRankTwo"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

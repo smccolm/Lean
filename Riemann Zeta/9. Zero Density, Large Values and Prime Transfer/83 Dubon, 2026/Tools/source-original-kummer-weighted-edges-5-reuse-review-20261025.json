@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> weighted residue reciprocity -> weighted paired-edge cancellation",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeightedArcIntegral.lean",
+      "sha256": "2A153830FA4603BF7EBC1A7373E86C392D2B7622D220C68C42316CCFF72B901F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalReversedArcIntegrand.lean",
+      "sha256": "50B1B3820AB78CF18BDA158EB02B5A53E0FE2BA4830E853189DF629B0E729F39"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeightedArcReversal.lean",
+      "sha256": "FE6CC9F4618DFB7F9EFE67A19B6CCC352A8AAB42D7ADAF2F5DA53F92BDDF1479"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeightedEdgeCancellation.lean",
+      "sha256": "646D0A1196E31EA4E8A69D72914C7D80A5D6496A6EE5EA28D6481F0BFB4826EA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalNormalizedWeightedEdges.lean",
+      "sha256": "F18D9DFD3133305AA607DF7A738985CEB96C79B0C41210C815B1E37E4547557E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellArcIntegralExtension.lean",
+      "sha256": "46C890E58C64921E7F4ABB0FB1BBFCDE254A84A89C63F3595670B0634BE388F5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverBoundaryCoefficient.lean",
+      "sha256": "62CADA25827F0CED01F0C9077FA11A06F6B4D9C9BF47380325BB6E515617E13A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellCoefficientTransition.lean",
+      "sha256": "07DA15316D1CAC54FB1BFF7CE17D0364DA6ECE379E716110522A3A103B311336"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCoordinateTransition.lean",
+      "sha256": "7F70859F71DFB987E1B1B1C444D1853F87D8D3BB066D515CC86804E5ACAF8574"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialPairedArcOverlap.lean",
+      "sha256": "F6732C5FCAB49C760194B6377B3135EB9EC8B7C477BD79F48DDBEE43F924E871"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPathPrimitiveData.lean",
+      "sha256": "6AAB12EC225E811B323843A53E79ABBE4D16E3F9CE784466252FDB8B9F7CB4FE"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-weighted-edges-route-541.json",
+    "sha256": "4D2CFF386492EADA84AB5B66929A868C53BAD5335E6239FDD3381CD66C6C6FD8",
+    "review": {
+      "scope": 541,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> weighted residue reciprocity -> weighted paired-edge cancellation",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeightedArcIntegral.lean",
+          "sha256": "2A153830FA4603BF7EBC1A7373E86C392D2B7622D220C68C42316CCFF72B901F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalReversedArcIntegrand.lean",
+          "sha256": "50B1B3820AB78CF18BDA158EB02B5A53E0FE2BA4830E853189DF629B0E729F39"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeightedArcReversal.lean",
+          "sha256": "FE6CC9F4618DFB7F9EFE67A19B6CCC352A8AAB42D7ADAF2F5DA53F92BDDF1479"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeightedEdgeCancellation.lean",
+          "sha256": "646D0A1196E31EA4E8A69D72914C7D80A5D6496A6EE5EA28D6481F0BFB4826EA"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalNormalizedWeightedEdges.lean",
+          "sha256": "F18D9DFD3133305AA607DF7A738985CEB96C79B0C41210C815B1E37E4547557E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellArcIntegralExtension.lean",
+          "sha256": "46C890E58C64921E7F4ABB0FB1BBFCDE254A84A89C63F3595670B0634BE388F5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverBoundaryCoefficient.lean",
+          "sha256": "62CADA25827F0CED01F0C9077FA11A06F6B4D9C9BF47380325BB6E515617E13A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellCoefficientTransition.lean",
+          "sha256": "07DA15316D1CAC54FB1BFF7CE17D0364DA6ECE379E716110522A3A103B311336"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCoordinateTransition.lean",
+          "sha256": "7F70859F71DFB987E1B1B1C444D1853F87D8D3BB066D515CC86804E5ACAF8574"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialPairedArcOverlap.lean",
+          "sha256": "F6732C5FCAB49C760194B6377B3135EB9EC8B7C477BD79F48DDBEE43F924E871"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPathPrimitiveData.lean",
+          "sha256": "6AAB12EC225E811B323843A53E79ABBE4D16E3F9CE784466252FDB8B9F7CB4FE"
+        }
+      ],
+      "shorterRoute": "Reuse the existing continuous-extension and C1 reversed-arc integral theorems unchanged. Adapt the coefficient consumers using the already proved actual cover coordinate law and paired-arc overlap. Primitive derivatives imply the needed continuity; the existing exact jump clause gives cancellation. No new integration theory or geometric overlap theorem is needed.",
+      "assumptionsToDischarge": "The exact weighted arc reversal and paired-edge cancellation identities for the actual cover coefficient, from explicit constructed primitive derivatives, constant jumps and skeleton regularity.",
+      "remaining": "Global residue summation, meromorphic loop generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20."
+    }
+  },
+  "discharged": "The exact weighted reversal and paired-edge cancellation identities hold for the actual cover differential coefficient. Existing continuous-extension integration and C1 substitution, actual coordinate transformation and paired overlap supply reversal. Constructed primitive derivatives supply continuity and their constant jumps supply the exact edge multiplier. No reversal or cancellation identity is assumed; the explicit primitive data and skeleton regularity are the narrower upstream inputs.",
+  "remaining": "Global residue summation, meromorphic loop generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-cell-residues-3-scratch-receipt.json",
+    "sha256": "B2B95376EC71DA4128241F8076B479A21489260EA75CFB72E2C441C5A6520913"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

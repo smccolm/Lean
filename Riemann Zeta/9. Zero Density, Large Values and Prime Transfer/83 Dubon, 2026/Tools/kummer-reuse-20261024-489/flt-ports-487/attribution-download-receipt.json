@@ -1,0 +1,19 @@
+{
+  "recordedUTC": "2026-10-25T02:01:38.204306+00:00",
+  "files": [
+    {
+      "path": "6e837e75355538c7f80bab5b956861e86c4eacc2-ATTRIBUTION.md",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/ATTRIBUTION.md",
+      "gitBlob": "ac80b9de81c8132d3bccc57f13463b293a340422",
+      "bytes": 50635,
+      "sha256": "698FB76C8D80B2ED78EBD48B271F2EE5815B3654FB8EC5C699B21B16CE0D9698"
+    },
+    {
+      "path": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-ATTRIBUTION.md",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef/ATTRIBUTION.md",
+      "gitBlob": "ac80b9de81c8132d3bccc57f13463b293a340422",
+      "bytes": 50635,
+      "sha256": "698FB76C8D80B2ED78EBD48B271F2EE5815B3654FB8EC5C699B21B16CE0D9698"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+import SourceFiniteOperatorCoefficientAnnihilator
+import SourcePrimitiveGoodCoefficientAnnihilator
+import SourceMappedKernelProjection
+import SourcePrimitiveGoodCoefficientProjection
+import SourcePrimitiveGoodProjectionHecke
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.exists_primitive_good_coefficient_hecke_projection]
+  let localModules : Array Name := #[`SourceFiniteOperatorCoefficientAnnihilator, `SourcePrimitiveGoodCoefficientAnnihilator, `SourceMappedKernelProjection, `SourcePrimitiveGoodCoefficientProjection, `SourcePrimitiveGoodProjectionHecke, `SourcePrimitiveFiniteGoodEigensystem, `SourceSymmetricSumSquaresKernel, `SourcePrimitiveGoodAnnihilator, `SourceKernelPowerReduction, `SourcePolynomialKernelProjection, `SourceSymmetricKernelReduction, `SourcePolynomialKernelProjectionLaws, `SourcePrimitiveGoodPolynomialProjection]
+  let required : Array Name := #[`Dubon2026.finite_operator_coefficient_annihilator, `Dubon2026.primitiveGoodAnnihilator_coefficient_polynomial, `Dubon2026.exists_mapped_kernel_projector_polynomial, `Dubon2026.exists_primitive_good_coefficient_projection, `Dubon2026.primitive_projection_hecke_scalar, `Dubon2026.exists_primitive_good_coefficient_hecke_projection, `Dubon2026.sourceOriginalIntegralHeckeAlgebra_finite, `Dubon2026.primitiveCuspForm_eigenvector_all, `Dubon2026.exists_primitive_good_annihilator, `Dubon2026.symmetric_apply_eq_zero_of_square, `Dubon2026.end_pow_zero_implies_apply_zero, `Dubon2026.kernel_projector_polynomial_range, `Dubon2026.kernel_projector_polynomial_idempotent, `IsIntegral.of_finite, `AlgHom.liftEquiv, `Polynomial.exists_eq_pow_rootMultiplicity_mul_and_not_dvd]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL PRIMITIVE COEFFICIENT PROJECTION DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual coefficient-field primitive projector. Only declaration values are traversed. The proved finite integral Hecke algebra and native finite scalar extension construct an annihilator over the literal Fourier coefficient field. Root factorization retains that field in the projector polynomial. Its actual complex evaluation is idempotent with exactly the primitive line as range and has the prescribed scalar action at every positive Hecke index, including bad indices. Original Tate transport, nonzero primitive pairing restriction, determinant and DUB-17--20 remain open; 16/20."
+
+#eval runPlanarPairingDependencyAudit

@@ -1,0 +1,83 @@
+{
+  "recordedUTC": "2026-10-25T16:07:17.132056+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourcePeriodDivision",
+    "SourceCurvePicardDivisionFromPrincipal",
+    "SourceCurvePicardDivisionFromAbel",
+    "SourceOriginalWeilCoverClassDivision",
+    "SourceOriginalWeilCoverPointDivision",
+    "SourceOriginalComplexWeilDetection"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodDivision.lean",
+      "sha256": "116B885F2F67BE47A91B1E85BE360CCA25B2D0F8D9759ED9B3204125DCFC022D",
+      "oleanSha256": "1D93DBB3BAEDE88032F7AEBC2289728A66CD853061552036EE917324441EE158"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePicardDivisionFromPrincipal.lean",
+      "sha256": "55CA0BD4850C4C5AC73CF4F1FEC804C23A52F07C2CCD0FBAE9B1E556C1618229",
+      "oleanSha256": "BA1966EED2FE1DE059A22B50E306274493886ADA960FE27D89F81D221EFFFDA6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePicardDivisionFromAbel.lean",
+      "sha256": "FD726C5A11B10E569384721E018746037F7D10D561160173050369FDCD9F4CF1",
+      "oleanSha256": "2059CA08DAA926F3937FB2B0FF7B277CBF574D70661C923B1EF2C1B1A1BB7DC8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverClassDivision.lean",
+      "sha256": "35CFB1179C84D7FD1786137A86E71CE3F0E9448BF473FED722071EDAB984027F",
+      "oleanSha256": "F8638DFFC802E96B0860BC409CBBF2A065FC1A8C53609B1CE4DE3E2A826D407E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPointDivision.lean",
+      "sha256": "1712B7F387B30C00C0E491314494AA642475AACBAA3016CBC124F695DB46EAC7",
+      "oleanSha256": "F8984B8E608201C9E7E0A0298CB7E9D9EA0AD56E6C2BF477C240E13D01723B6F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalComplexWeilDetection.lean",
+      "sha256": "ADE753896AB2302659D66EB03EB8D2F893FA0B7191B271E23CE0E177A03E1B2F",
+      "oleanSha256": "6B54BF6E669C0190155A53C29B67E0C2744923CB0EDFF86A2DCC0BF02A4CD10D"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.PeriodDivision.integer_multiple_mem_of_scaled_difference",
+    "Dubon2026.SourceCurve.Pic0.exists_nsmul_mk_of_principal_difference",
+    "Dubon2026.SourceCurve.Pic0.exists_nsmul_mk_of_abel_data",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_degree_zero_class_has_division",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_point_difference_has_division",
+    "Dubon2026.SourceFunctionField.originalComplexWeilPairing_detects"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.PeriodDivision.integer_multiple_mem_of_scaled_difference",
+    "Dubon2026.SourceCurve.Pic0.exists_nsmul_mk_of_principal_difference",
+    "Dubon2026.SourceCurve.Pic0.exists_nsmul_mk_of_abel_data",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_degree_zero_class_has_division",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_point_difference_has_division",
+    "Dubon2026.SourceFunctionField.originalComplexWeilPairing_detects"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPointDivisionAudit6.log",
+  "logSha256": "314F54C1736EB1427444D6A91A67399DD72A004F2B5AA618127148B89D256C80",
+  "auditSha256": "A569637F6D2D636C8E34151EEF309C9E17A008DC94E210BAA5DF6410E1DE3711",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 13,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 16,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPointDivisionDependencyAudit6.log",
+  "dependencyAuditSha256": "9A88BE5D0EEBBD5F7C124AD9926B9C05327931B029DD60401C2BE611CADD1584",
+  "dependencyAuditSourceSha256": "5A402BB9B2089F9DE4C9DA165327B229B0111FF82CC693C541B432D5151E7EE6",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.originalComplexWeilPairing_detects"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> finite Weil detection -> auxiliary point division",
+  "discharged": "Actual cover Jacobi inversion and Abel converse divide every degree-zero cover class, hence the exact automorphism point difference required by the native norm construction. The nonzero original complex torsion class supplies the n-divisible radicand orders itself. The existing moving, norm, reciprocity and pairing-descent proofs then produce a nontrivial Weil partner without any remaining auxiliary division assumption on this complex consumer. Arithmetic descent, Tate nondegeneracy and the component/determinant consumers remain separate obligations.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Arithmetic descent of finite detection, original Tate nondegeneracy, required Hecke-component restriction, primitive Frobenius determinant, residual association, automorphy and all-weight continuation remain open; 16/20, DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-point-division-6-reuse-review-20261025.json",
+  "reuseReviewSha256": "8E981389DF39D5E408D9CAEE8F1B7E774F5D7A2CE8E554EB3DECC0E7A7B780CB",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

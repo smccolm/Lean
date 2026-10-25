@@ -1,0 +1,204 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-kummer-manifold-promotion-route-495.json",
+      "path": "Tools/kummer-manifold-20261024-495/original-kummer-manifold-promotion-route-495.json",
+      "sha256": "1A369DC00CB67FE85EA780A24B3D2EB1CBB689528DEAC1214B5C47D0870CE71F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-analytic-entry-audit-kind-repair-490.json",
+      "path": "Tools/kummer-manifold-20261024-495/source-original-kummer-analytic-entry-audit-kind-repair-490.json",
+      "sha256": "47332DC2E390EDB699030A0EDC4D654C0A99DBAF255F7DBCD21B8420DF61CEE2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAnalyticEntryAudit15.lean",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerAnalyticEntryAudit15.lean.txt",
+      "sha256": "34A5AE63E9420499978083189E0511CC63855A0837B115AACED695C94363054A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAnalyticEntryAudit15.log",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerAnalyticEntryAudit15.log",
+      "sha256": "0C4A59526CE3766E2414BC66191D0F83A75283345C77E8D3B13750B6119AEB29"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAnalyticEntryAudit15.exit",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerAnalyticEntryAudit15.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-analytic-entry-15-scratch-receipt.json",
+      "path": "Tools/kummer-manifold-20261024-495/source-original-kummer-analytic-entry-15-scratch-receipt.json",
+      "sha256": "6F6E56DE3CC0725E238746FE2991183E9D60C3753C932239C5CCF3D7F664022B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-place-family-6-scratch-receipt.json",
+      "path": "Tools/kummer-manifold-20261024-495/source-original-kummer-place-family-6-scratch-receipt.json",
+      "sha256": "3554A42076451F8B850AC1576D3A37DAE58FE05CD6B66E995C88431672716D1D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-parameter-5-scratch-receipt.json",
+      "path": "Tools/kummer-manifold-20261024-495/source-original-kummer-parameter-5-scratch-receipt.json",
+      "sha256": "6A2EDAE5AC5AAD985D55D6E09ECD05D031006458592E35014E23F56006CDCA78"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-compatibility-8-scratch-receipt.json",
+      "path": "Tools/kummer-manifold-20261024-495/source-original-kummer-compatibility-8-scratch-receipt.json",
+      "sha256": "2E46515578E4EEEB979CF85B6B0F1CFC6789832394DC1439180FB26897029FAC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-manifold-4-scratch-receipt.json",
+      "path": "Tools/kummer-manifold-20261024-495/source-original-kummer-manifold-4-scratch-receipt.json",
+      "sha256": "12AEB3D521439672A58153E1BF4814DDFC097244F758D5C6920C95E2F67B7979"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAnalyticEntryAudit15R2.log",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerAnalyticEntryAudit15R2.log",
+      "sha256": "2B5095ACAF58ACCC7240D0343A80A857E002FF07C76142F0D6F98E78A40C966E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAnalyticEntryAudit15R2.lean",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerAnalyticEntryAudit15R2.lean.txt",
+      "sha256": "3A6EAD52F44E2A5BEE289C92DD6E83D4E7FA4B4CC2E9D6F40FAD6BE16A357753"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAnalyticEntryAudit15R2.exit",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerAnalyticEntryAudit15R2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAnalyticEntryDependencyAudit15.log",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerAnalyticEntryDependencyAudit15.log",
+      "sha256": "6DFDEA8BFA7A17CADD214CC8FE5F1FD3C6BE044EE8BCE9A2FF2E7BF60E7D4B13"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAnalyticEntryDependencyAudit15.lean",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerAnalyticEntryDependencyAudit15.lean.txt",
+      "sha256": "061D3B373E1A7B7D4D1EFFE6AF84869DB29C01E4775CDEB078EB818802435531"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAnalyticEntryDependencyAudit15.exit",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerAnalyticEntryDependencyAudit15.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPlaceFamilyAudit6.log",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerPlaceFamilyAudit6.log",
+      "sha256": "2EEFA757217FB537521FFBBEA9ED1CEA897D433F9D72EF3D7BE15FF565944FA8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPlaceFamilyAudit6.lean",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerPlaceFamilyAudit6.lean.txt",
+      "sha256": "230044805178455AE0F07B95F5489FEA99902DF38F498A570C2BDD4823887222"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPlaceFamilyAudit6.exit",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerPlaceFamilyAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPlaceFamilyDependencyAudit6.log",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerPlaceFamilyDependencyAudit6.log",
+      "sha256": "50F9545FFD1CC544B4FAE1284B09656B4ACA2039B1F8F674567921917F79C3BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPlaceFamilyDependencyAudit6.lean",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerPlaceFamilyDependencyAudit6.lean.txt",
+      "sha256": "8D9E4F3F4B2589DEB7355DE387D7EF3CEBC8E1BB99B133982DF345C0761BC3AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPlaceFamilyDependencyAudit6.exit",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerPlaceFamilyDependencyAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerParameterAudit5.log",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerParameterAudit5.log",
+      "sha256": "23CF2A4BF20EAE3EBC5B3174DAC07AC94BBE331AB6C96D16DF578CE5ACCA8596"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerParameterAudit5.lean",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerParameterAudit5.lean.txt",
+      "sha256": "72CCF27DB36D4B63E0013B3E8350C1277009694F24598CA75CCFA04018408A68"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerParameterAudit5.exit",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerParameterAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerParameterDependencyAudit5.log",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerParameterDependencyAudit5.log",
+      "sha256": "265BD614EA9CE756870A7C4FE482B66BD38886E5B8803BB32384C204715981B8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerParameterDependencyAudit5.lean",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerParameterDependencyAudit5.lean.txt",
+      "sha256": "89C4A5EEB5460BAB1CA297E3227006650C1AA2D8035EE88FFC43E723337EBD51"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerParameterDependencyAudit5.exit",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerParameterDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCompatibilityAudit8.log",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerCompatibilityAudit8.log",
+      "sha256": "E124BC6E2CF42A7F1DC28C0286AEBAAF893EAA94716B2576C4D97CD2F77A7152"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCompatibilityAudit8.lean",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerCompatibilityAudit8.lean.txt",
+      "sha256": "C5D7E4F3D8AE033D67B8965F7F5237ABE84F4D525AD9118CF380FAF61FEDC197"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCompatibilityAudit8.exit",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerCompatibilityAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCompatibilityDependencyAudit8.log",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerCompatibilityDependencyAudit8.log",
+      "sha256": "797702E915585CB522D13962FEBC41B157F6FB8C11C47327C719FDC9067272D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCompatibilityDependencyAudit8.lean",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerCompatibilityDependencyAudit8.lean.txt",
+      "sha256": "44A84245592B9B9D3DCC47A2F8191DDFE289132D3997CFB8B965FB337D7D7153"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCompatibilityDependencyAudit8.exit",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerCompatibilityDependencyAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerManifoldAudit4.log",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerManifoldAudit4.log",
+      "sha256": "68D40D85C22D9DA47B0611646AC9B0D60D17C85B544372C62BD37CF1353D54ED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerManifoldAudit4.lean",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerManifoldAudit4.lean.txt",
+      "sha256": "A8AB0B2BE127BC7FEC8E8CF600147EADF0D53335189FE44746F557F03A66829C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerManifoldAudit4.exit",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerManifoldAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerManifoldDependencyAudit4.log",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerManifoldDependencyAudit4.log",
+      "sha256": "F9049F7EF2CA9108A59E3C2F07E26E118F748215DDD53D79A5BF4E79DE9972D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerManifoldDependencyAudit4.lean",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerManifoldDependencyAudit4.lean.txt",
+      "sha256": "779FD8B691B10E5B135BFBC9FD2EFA6A6421949E27E95C8BB05E705686930998"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerManifoldDependencyAudit4.exit",
+      "path": "Tools/kummer-manifold-20261024-495/SourceOriginalKummerManifoldDependencyAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ]
+}

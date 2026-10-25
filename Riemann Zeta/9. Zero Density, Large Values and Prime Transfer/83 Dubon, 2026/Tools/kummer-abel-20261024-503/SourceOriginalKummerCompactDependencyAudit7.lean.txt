@@ -1,0 +1,34 @@
+import SourceFiniteFiberOpenMap
+import SourceCurveUnramifiedFiberCard
+import SourceCurveUnramifiedChartRestriction
+import SourceAnalyticRestrictionTopology
+import SourceOriginalWeilRestrictionComparison
+import SourceOriginalWeilRestrictionTopology
+import SourceOriginalWeilCoverCompact
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_compactSpace]
+  let localModules : Array Name := #[`SourceFiniteFiberOpenMap, `SourceCurveUnramifiedFiberCard, `SourceCurveUnramifiedChartRestriction, `SourceAnalyticRestrictionTopology, `SourceOriginalWeilRestrictionComparison, `SourceOriginalWeilRestrictionTopology, `SourceOriginalWeilCoverCompact, `SourceMeromorphicKummerRoots, `SourceOriginalWeilLocalKummerRoot, `SourceMeromorphicLaurentRealization, `SourceOriginalChartLaurentHom, `SourceOriginalWeilConvergentKummerRoot, `SourceOriginalWeilLocalSplittingField, `SourceCurveNormalizedLaurentPlace, `SourceCurveRealizedLaurentPlace, `SourceOriginalWeilLocalCoverPlace, `SourceCurveConvergentCommonDisc, `SourceCurveConvergentGaloisPlaces, `SourceCurveConvergentKummerPlaces, `SourceOriginalWeilEveryLocalCover, `SourceCurveNormalizedCommonDisc, `SourceOriginalWeilCoverDisc, `SourceCurveConvergentDiscGerms, `SourceCurveConvergentDiscOrders, `SourceCurveConvergentDiscUniformizer, `SourceCurveConvergentDiscPlaces, `SourceCurveConvergentPlaceFamily, `SourceOriginalWeilCoverPlaceFamily, `SourceCurveConvergentDiscResidues, `SourceCurveConvergentEvaluationFamily, `SourceCurveAnalyticPlaceParameter, `SourceCurveConvergentPlaceChart, `SourceOriginalWeilCoverParameter, `SourceCurveRationalChartValues, `SourceCurveAnalyticChartOrders, `SourceCurveAnalyticChartComparison, `SourceCurveAnalyticChartDifferenceOrders, `SourceCurveAnalyticChartBranchEquality, `SourceOriginalWeilCoverChartPackage, `SourceOriginalWeilCoverCharts, `SourceOriginalWeilCoverChartTransitions, `SourceOriginalWeilCoverManifold, `SourceOriginalWeilCoverChartOrders, `SourceCurveRationalPlaceSeparation, `SourceOriginalWeilCoverHausdorff]
+  let required : Array Name := #[`Dubon2026.SourceCurve.isClosedMap_of_open_constant_finite_fibers, `Dubon2026.SourceCurve.compactSpace_of_open_constant_finite_fibers, `Dubon2026.SourceCurve.Place.card_unramified_restriction_fiber, `Dubon2026.SourceCurve.AnalyticChart.Orders.restrict_unramified, `Dubon2026.SourceCurve.map_nhds_eq_of_analytic_chart_comparison, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.restriction_family_orders, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.restriction_chart_comparison, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.restriction_map_nhds, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.continuous_restriction, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isOpenMap_restriction, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.card_restriction_fiber, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_compactSpace, `Dubon2026.SourceFunctionField.OriginalChart.originalWeil_complex_kummer_unramified, `Dubon2026.SourceCurve.Place.sum_fiber_ramification, `Dubon2026.SourceCurve.Place.rationalEval_algebraMap_restrict, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.eventually_place_eq, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.deriv_transition_ne_zero, `Dubon2026.SourceFunctionField.OriginalChart.place_compactSpace, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_t2Space]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL KUMMER COMPACT DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the literal complex Kummer cover compactness consumer. Only declaration values are traversed. Actual unramified residue charts prove continuity and openness of restriction, the native degree sum gives constant finite fiber cardinality, and the proper-map criterion transfers compactness from the original base. Connectedness, cover Abel comparison, auxiliary point division, arithmetic descent and original pairing nondegeneracy remain open; DUB-17--20 OPEN, 16/20."
+
+#eval runPlanarPairingDependencyAudit

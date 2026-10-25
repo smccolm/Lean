@@ -1,0 +1,84 @@
+{
+  "recordedUTC": "2026-10-25T05:16:28.781159+00:00",
+  "date": "2026-10-24 America/Vancouver",
+  "modules": [
+    "SourceOriginalWeilCoverRiemannRoch",
+    "SourceCurveTwoPoleDimensions",
+    "SourceOriginalWeilCoverTwoPoleDimensions",
+    "SourceCurveTwoPoleDifferential",
+    "SourceOriginalWeilCoverTwoPoleDifferential"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRiemannRoch.lean",
+      "sha256": "93762EACB8EF724F3AE1D9D766A50BF22E59BF29448668464489814D36094078",
+      "oleanSha256": "BE51A493FB1310B160624AA91416E338E63ABD37C2C5EA72E19020C28C9CA008"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveTwoPoleDimensions.lean",
+      "sha256": "2684102D12C601DD1B02A6B704293D2E10B1861C6F093B1C49D6DCC062B8E000",
+      "oleanSha256": "DE011CCC41A2B0714898EE2A3067C8608A58CFE89DA84184B187D5131CDAC99A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverTwoPoleDimensions.lean",
+      "sha256": "4CB2FA490F41639A91B47EDA715A8A11D250BD342C282DFD5CF77713AD89909B",
+      "oleanSha256": "42B7D35D779354AA45064551CE460529E341F0A4B09D99E3A9C6B787D5E350F0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveTwoPoleDifferential.lean",
+      "sha256": "21494FDEDF1420319FAAEF5B48BADFE6D164230E8D9F1BFD8685BBAC03DBFC78",
+      "oleanSha256": "0A79113C6DE5474AE8B835831B27DACE09D4628A68CD53738971EB1ADBA5B9E8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverTwoPoleDifferential.lean",
+      "sha256": "E97C67538D8AB33C3751F1D731CA8378326C4B9F193F9693A684487B4784457F",
+      "oleanSha256": "350F4DB00BAF7B62DB24D8EAE10904443A61F665930A20D107C0BB32AAEFA14F"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverCanonicalDivisor_apply",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_riemann_roch_constant",
+    "Dubon2026.SourceCurve.two_pole_dimensions_of_riemann_roch",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_two_pole_dimensions",
+    "Dubon2026.SourceCurve.exists_two_pole_function_of_dimensions",
+    "Dubon2026.SourceCurve.exists_two_pole_differential_of_function",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_two_pole_function",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_two_pole_differential",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverCanonicalDivisor"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverCanonicalDivisor_apply",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_riemann_roch_constant",
+    "Dubon2026.SourceCurve.two_pole_dimensions_of_riemann_roch",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_two_pole_dimensions",
+    "Dubon2026.SourceCurve.exists_two_pole_function_of_dimensions",
+    "Dubon2026.SourceCurve.exists_two_pole_differential_of_function",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_two_pole_function",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_two_pole_differential"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverCanonicalDivisor"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerTwoPoleAudit5.log",
+  "logSha256": "528F7E3436EC2C033942C08D835486A4FC02F2CD96474A7B18400579BCB9F6F7",
+  "auditSha256": "331877F6217739FF1881D0CF4E06BDF793A81A292C701E7D5CF2BAFF3B45C23D",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 15,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 13,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerTwoPoleDependencyAudit5.log",
+  "dependencyAuditSha256": "1C36296A4453D9E7BC92E9EC48C767CC4DB04AB8CFF1A224DF5D6393F7F00243",
+  "dependencyAuditSourceSha256": "A91F270AEADB3B25E1DBA34A306ED5167731CEC72371AB8717106DD4293B0A34",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_two_pole_differential"
+  ],
+  "dependency": "actual residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary point division -> cover Abel converse -> prescribed third-kind residues -> two-pole differential existence",
+  "discharged": "The actual cover canonical order divisor satisfies the Riemann-Roch identity with a common proved integer constant. Native finite-coordinate index and residue duality supply that identity. The constant cancels in two-pole dimension growth; the native two-subspace and local-order deductions then construct a nonzero actual differential with exactly two simple poles at any two distinct cover places and regularity everywhere else. No numerical genus, dimension difference or two-pole existence premise remains. Residue normalization and the cover Abel converse remain required.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Normalized prescribed residues, cover Abel converse and actual auxiliary point division remain required. Cover Jacobi inversion is independently scratch-audited. Original nondegeneracy, component determinant, residual association, automorphy and all-weight continuation remain open; DUB-17--20 OPEN, 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-two-pole-5-reuse-review-20261024.json",
+  "reuseReviewSha256": "E1869E8EA6AC2292808EB4A9ABCDBDB03F39EB35B24FA2CA123128BB0F7670D3",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

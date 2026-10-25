@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric reciprocity -> actual paired cover dissection -> constructed global lifted-arc involution and C1 reversal",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverArcSheetTransport.lean",
+      "sha256": "F85643ABAB75056C42E0B28D169EDC78E55948759CE852CCA7E991BA21217E65"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellLiftFamily.lean",
+      "sha256": "8C6FD0BB170082354DD2065CEF4A67AF494B6AB5CFC333334F4E102435FE2DB0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPairing.lean",
+      "sha256": "10C44E882B3A20ACBA0BFD838D0A5F2BCD4BF6CCCB908DCEC4899772CB5B5C7F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalGlobalCellPairing.lean",
+      "sha256": "3E7806301528F1222B4FBD5A24BA6EA4DACFE4D85884F7E64CB0B4CDDBD1145A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionOfPairing.lean",
+      "sha256": "04B1CDA31029B34E00BE06C0EE5D4DEDD3FA81D7DF003AD66F974B3AC92ECCC4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellIntersectionChains.lean",
+      "sha256": "779B07C0C6EA7FA75A70F38ED4148B48035E45103CF82445FEC0828A981F1821"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-global-arc-pairing-route-516.json",
+    "sha256": "04AE6079878265CB6CBACC841462E165D61B3DAE66869D73B42C839575519945",
+    "review": {
+      "scope": 516,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric reciprocity -> actual paired cover dissection -> constructed global lifted-arc involution and C1 reversal",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverArcSheetTransport.lean",
+          "sha256": "F85643ABAB75056C42E0B28D169EDC78E55948759CE852CCA7E991BA21217E65"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellLiftFamily.lean",
+          "sha256": "8C6FD0BB170082354DD2065CEF4A67AF494B6AB5CFC333334F4E102435FE2DB0"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPairing.lean",
+          "sha256": "10C44E882B3A20ACBA0BFD838D0A5F2BCD4BF6CCCB908DCEC4899772CB5B5C7F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalGlobalCellPairing.lean",
+          "sha256": "3E7806301528F1222B4FBD5A24BA6EA4DACFE4D85884F7E64CB0B4CDDBD1145A"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionOfPairing.lean",
+          "sha256": "04B1CDA31029B34E00BE06C0EE5D4DEDD3FA81D7DF003AD66F974B3AC92ECCC4"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellIntersectionChains.lean",
+          "sha256": "779B07C0C6EA7FA75A70F38ED4148B48035E45103CF82445FEC0828A981F1821"
+        }
+      ],
+      "shorterRoute": "Reuse the proved original global cover, its pairing and exact edge/sign equivalence. Reindex the actual lifted arcs by positive base edges and the two sheet sets; conjugate the swap induced by the already proved sheet equivalences and their inverses. This avoids independent negative-side matching or a new triangulation. The actual family theorem discharges all sheet/exhaustion hypotheses.",
+      "assumptionsToDischarge": "Actual global analytic sheet families, pairing involution, projection, opposite orientation, and whole C1 boundary reversal. The constructed consumer accepts only the original actual unramified Kummer cover hypotheses and a finite marked base set.",
+      "remaining": "Cover vertices and pointwise intersection chains, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20."
+    }
+  },
+  "discharged": "The actual original global cover and its proved base pairing, actual exhaustive analytic sheet families and invertible boundary transports construct a global lifted pairing. It is involutive, projects exactly to the base pairing, reverses orientation and retains the complete C1 reversed-arc identity. All global-cover, sheet-family and pairing premises are discharged. CoverGlobalPairedCoordinates is the exact construction statement; its actual existence is proved by the consumer.",
+  "remaining": "Cover vertices and pointwise intersection chains, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-boundary-transport-4-scratch-receipt.json",
+    "sha256": "13ED46E78CAA8B73575DA72E1D72D8EDC5E4E369AAD07F34EAA0AB1C737D4532"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

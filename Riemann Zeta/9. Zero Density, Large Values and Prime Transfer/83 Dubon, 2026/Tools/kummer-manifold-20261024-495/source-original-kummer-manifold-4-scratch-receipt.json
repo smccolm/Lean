@@ -1,0 +1,92 @@
+{
+  "recordedUTC": "2026-10-25T03:33:09.403255+00:00",
+  "date": "2026-10-24 America/Vancouver",
+  "modules": [
+    "SourceOriginalWeilCoverManifold",
+    "SourceOriginalWeilCoverChartOrders",
+    "SourceCurveRationalPlaceSeparation",
+    "SourceOriginalWeilCoverHausdorff"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverManifold.lean",
+      "sha256": "D885E682BF56E3507297A08538516E8E5938BC34149A87D8403D1BD02AC5FEAB",
+      "oleanSha256": "9B972875F41CB584B1DCD737983A88D1A7FBF3273B72FF43D6688DBC6E37F2B4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverChartOrders.lean",
+      "sha256": "BAA0137ADA298250C33DAAF82AEA34E245579F51FDE555C4203240CA5BB34DA0",
+      "oleanSha256": "A53B376ECC4C526B9FA20E72F1A25A62CF3B30051A5615B1EB180E1433AD8AD5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveRationalPlaceSeparation.lean",
+      "sha256": "777690747D0911253AC6434A84C54EAB851CD76601E7B70C3DC55992D886071E",
+      "oleanSha256": "3014138D3ECEBF0F7B4D65CE11047BA9E20778C0893BB31556EFF2D483B1F3B2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverHausdorff.lean",
+      "sha256": "D27AC0CB579D0DC2D31C3CED4E0723040F3941DEC78D7A0189C886D312AD61BF",
+      "oleanSha256": "FEFE7BB2F61B47DBB5E0196304428D047558235FE83E5050B3785550BBDAE354"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeChart_self",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.mem_place_atlas_iff",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_isManifold",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.extPlaceChart_symm_apply",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.extPlaceChart_self",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_place_chart_order",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.continuousOn_placeFamily",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isOpen_placeFamily_image",
+    "Dubon2026.SourceCurve.Place.exists_order_separating_function",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_small_place_disc",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_t2Space",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeCore",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeTopology",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeChartedSpace"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeChart_self",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.mem_place_atlas_iff",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_isManifold",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.extPlaceChart_symm_apply",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.extPlaceChart_self",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_place_chart_order",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.continuousOn_placeFamily",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isOpen_placeFamily_image",
+    "Dubon2026.SourceCurve.Place.exists_order_separating_function",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_small_place_disc",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_t2Space"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeCore",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeTopology",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeChartedSpace"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerManifoldAudit4.log",
+  "logSha256": "68D40D85C22D9DA47B0611646AC9B0D60D17C85B544372C62BD37CF1353D54ED",
+  "auditSha256": "A8AB0B2BE127BC7FEC8E8CF600147EADF0D53335189FE44746F557F03A66829C",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 24,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 16,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerManifoldDependencyAudit4.log",
+  "dependencyAuditSha256": "F9049F7EF2CA9108A59E3C2F07E26E118F748215DDD53D79A5BF4E79DE9972D6",
+  "dependencyAuditSourceSha256": "779FD8B691B10E5B135BFBC9FD2EFA6A6421949E27E95C8BB05E705686930998",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_isManifold",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_t2Space",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_place_chart_order",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.continuousOn_placeFamily",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isOpen_placeFamily_image"
+  ],
+  "dependency": "residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> auxiliary Kummer point division -> cover Abel comparison -> compact connected complex cover -> native complex atlas and Hausdorff separation",
+  "discharged": "The actual place set of the literal original complex torsion cover carries a constructed native complex analytic charted-space/manifold structure and is Hausdorff. Its native extended charts have genuine residue-value readings with exact normalized place orders. Actual inverse chart families are continuous and have open images. The proof uses the constructed compatible uniformizer charts and an actual function separating distinct rank-one valuation rings; no topology, atlas, separation or evaluation-order premise remains in these consumers.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending; 16/20; DUB-17--20 OPEN. Compactness and connectedness of the actual cover, Abel comparison and point division, arithmetic descent, original nondegeneracy, component determinant and DUB-17--20 remain open.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-manifold-4-reuse-review-20261024.json",
+  "reuseReviewSha256": "304795DE68D25BD568E9EA178FF7AFA72D88541A1B171EEDEDBCCBAAF25C5A48",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

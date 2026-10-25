@@ -1,0 +1,91 @@
+{
+  "recordedUTC": "2026-10-25T16:16:06.367317+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceOriginalWeilComplexEvaluation",
+    "SourceOriginalWeilComplexDatum",
+    "SourceOriginalWeilComplexComparison",
+    "SourceOriginalArithmeticWeilDetection",
+    "SourceOriginalTateWeilNondegeneracy"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilComplexEvaluation.lean",
+      "sha256": "E10EE287AAE8D51633E7ECB95593702C8A7D939E5EE925BDBB5000C7DB861E53",
+      "oleanSha256": "6BE8B5F59E3F6EAB6B28CD9C4F0D1619863B2702F12B6277A7AEA5965CE647CC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilComplexDatum.lean",
+      "sha256": "304AE4A0E0A352B63F2C93E9AC9C12C0DF2B1E6765332C1A09E359D07CC8BB0A",
+      "oleanSha256": "4F801896B8368856D359E5578E618645C2085EABA13ECC1D7494AC2B44510041"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilComplexComparison.lean",
+      "sha256": "5744B735D41B8C33A5BECBA5B4E16B037ADE16AC24C7802C9F63BFF31325E524",
+      "oleanSha256": "7F81354DB1237B6450C598C6DC1AC4D1B185247AC6D4F840B2F1F276ED1C4FCD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticWeilDetection.lean",
+      "sha256": "A9C67D52CFE4C3C7FCD4F97053BFD121A12C825A71941630551F6ACB7262EEAC",
+      "oleanSha256": "9D1961CD349DEAAA1C3126BE9779AC078F5E6E3B9A9875E6B801578DACDE5EE1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilNondegeneracy.lean",
+      "sha256": "65FBDE01DBEDC8B2EBA5150130B374517857E01361F27B033B0CBD176C677F95",
+      "oleanSha256": "B72692E8A2A792D3FE284A30E8005B26855D186B64B8B80BF396E1DB34D338DD"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalPlaceEval_liftPlace",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalDivisorEval_conorm",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.ord_fieldMap_of_multiple",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.conorm_disjoint",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilComplexDatum_pairing",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilComplexDatum_classLeft",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilComplexDatum_classRight",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilPairing_complex",
+    "Dubon2026.SourceFunctionField.originalArithmeticWeilPairing_detects",
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_detects",
+    "Dubon2026.SourceFunctionField.originalTateWeilBilinear_injective",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilComplexDatum"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalPlaceEval_liftPlace",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalDivisorEval_conorm",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.ord_fieldMap_of_multiple",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.conorm_disjoint",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilComplexDatum_pairing",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilComplexDatum_classLeft",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilComplexDatum_classRight",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilPairing_complex",
+    "Dubon2026.SourceFunctionField.originalArithmeticWeilPairing_detects",
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_detects",
+    "Dubon2026.SourceFunctionField.originalTateWeilBilinear_injective"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilComplexDatum"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeilNondegeneracyAudit5.log",
+  "logSha256": "C50EF7E353926A292000E8AFDACBEB98F5DED46A1D3D9EC977E73111E0307DA6",
+  "auditSha256": "D7F0112A052E85A4A963D93381C54C76FA8D9B0227F9EC3834D43144687FC930",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 21,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 21,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeilNondegeneracyDependencyAudit5B.log",
+  "dependencyAuditSha256": "4B38C0E5DAE8868ED38352C7025C832D809B058BD4EC13AEBD26B56BCFBDCC69",
+  "dependencyAuditSourceSha256": "70C8B3CE2689BE7BF066FFD466F05F096F263961E6023CBF4A9F6219399C7D7E",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_detects",
+    "Dubon2026.SourceFunctionField.originalTateWeilBilinear_injective"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> arithmetic finite detection -> complex finite detection",
+  "discharged": "The actual constant-field place extension preserves residue evaluation and divisor products. Its complex Weil datum represents the existing Picard comparison and has the same ratio after the fixed coefficient embedding. Proved torsion bijectivity descends the complex detecting partner to the arithmetic original Picard group. Existing finite-coordinate lifting then proves original Tate detection and injectivity of its actual bilinear pairing, with no auxiliary division or finite-detection hypothesis remaining. The required Hecke-component restriction and determinant remain separate obligations.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Nonzero restriction to the required Hecke component, primitive Frobenius determinant, residual association, automorphy and all-weight continuation remain open; 16/20, DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-weil-nondegeneracy-5b-reuse-review-20261025.json",
+  "reuseReviewSha256": "44F900CAD2304E8FA08A64A17154BE9EC651190ED8D59FC4ED513C57CB0809AF",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

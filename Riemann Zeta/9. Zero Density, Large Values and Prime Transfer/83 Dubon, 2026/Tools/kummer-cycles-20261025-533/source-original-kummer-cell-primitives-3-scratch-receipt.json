@@ -1,0 +1,62 @@
+{
+  "recordedUTC": "2026-10-25T10:08:05.843925+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceOriginalWeilCoverCellPrimitives",
+    "SourceOriginalWeilCoverCellPrimitiveFamily",
+    "SourceOriginalWeilCoverRegularCellPrimitives"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellPrimitives.lean",
+      "sha256": "65B296B460EEC34150DD309B28E6516CB439EB6C52E6761BDA87D1CF2279A43F",
+      "oleanSha256": "1EEBE7149A3DDD550A85F645D7D06356EFC9DEE92D46CF355784D23B80AB8337"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellPrimitiveFamily.lean",
+      "sha256": "1F81787A48633856E5FC1C3A64A02DCB8105BA259AEC3F02E17D6DD21F97F289",
+      "oleanSha256": "17A1286D732F97CD498DC7975185B11EDA33B4FB0F7D3BD345938BB2C10EDDE5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRegularCellPrimitives.lean",
+      "sha256": "660B1DB837B595D23846ACD9303890BDB449A95DE3C5D9DEE990F0555992A02B",
+      "oleanSha256": "C844DB91A4860B0CAEC951302FD027CDF9AAAF2FCB05C0638E316C0056A683B8"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_cell_exists_regular_primitives",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_cell_primitives_of_coordinates",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_regular_cell_primitives",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverCellPrimitives"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_cell_exists_regular_primitives",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_cell_primitives_of_coordinates",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_regular_cell_primitives"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverCellPrimitives"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellPrimitivesAudit3.log",
+  "logSha256": "705E55E18068360AD51E2E4C64386BB925FABA17D3B9579D7D2C5E169811AF81",
+  "auditSha256": "71A7733CD3A39D88FE263F797646F2E8F3A58E1321CD94227EC1CD4F7D9D9E3C",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 8,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 8,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellPrimitivesDependencyAudit3.log",
+  "dependencyAuditSha256": "5861995BD53A95EA3D10D586811583CFE2C44BFD256C3CA6683EB86D254AB31B",
+  "dependencyAuditSourceSha256": "1DC0CFE22902FD257677AAD5312F6D3DC0DF6391121C36B05649B9A84F6BF63A",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_regular_cell_primitives"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> normalized actual cell primitives",
+  "discharged": "For every actual regular differential family, the actual constructed marked analytic Euler dissection has open star-convex neighborhoods and normalized primitives of its literal cell coefficients. The same witness retains its tree/cotree, polygon word, integer cycle system and actual cycle loops. No primitive-domain, primitive-existence or extra coordinate assumption remains on the assembled consumer.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Coordinate edge-integral comparison, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-cell-primitives-3-reuse-review-20261025.json",
+  "reuseReviewSha256": "4963E0340E295E2481F2907CF4EC463BF44980861A6609E313B6267F76650FFE",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

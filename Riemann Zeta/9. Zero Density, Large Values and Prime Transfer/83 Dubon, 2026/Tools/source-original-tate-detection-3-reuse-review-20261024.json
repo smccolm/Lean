@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "residual association -> Frobenius characteristic polynomial -> determinant -> nonzero Hecke-component pairing -> Tate Weil nondegeneracy -> finite-level Weil nondegeneracy plus lifting detecting torsion classes",
+  "precedingScratchReceipts": {
+    "source-original-tate-cyclotomic-3-scratch-receipt.json": "E5F0CF4D972B0831871A183153869D7303FC3A92A366D334BECC5A21824DE5F3"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTateTorusCoordinates.lean",
+      "sha256": "A020EB25F0DFEFD7192373425DD82DB9967DCC79BDD1193C5E01166E40CFA0D3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTatePeriod.lean",
+      "sha256": "B51C9841BA4C165775E8842C575EC4DFC0341EEBBE60B4785F60C135CB7AEFB2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateComparison.lean",
+      "sha256": "E1C153FE7E6F651BD93416FC115DB294E802D73CDB89A143368027AAD5932DA1"
+    }
+  ],
+  "routeAdjustment": "Use the already proved divided-lattice sequence, actual Abel equivalence and arithmetic/complex Tate comparison to lift every original p-power torsion class. Then derive Tate nondegeneracy from finite-level detection, retaining only the explicit finite-level nondegeneracy premise. No generic inverse-limit surjectivity or new original-curve Picard divisibility development is needed.",
+  "discharged": "Every original p-power torsion class lifts to the existing arithmetic Tate module. Finite-level detection implies detection and injectivity for the actual arithmetic Tate Weil pairing.",
+  "remaining": "The finite-level detection hypothesis is still open locally. The pinned NYLL nondegeneracy source offers a candidate auxiliary-cover divisibility proof but is not imported or locally built. Auxiliary-cover divisibility/evaluation transfer, nonzero restriction to the required Hecke component, determinant, residual association, automorphy and all-weight continuation remain required. Scratch only; finite-level nondegeneracy remains an explicit upstream hypothesis. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\nyll-reuse-20261024-479-archive-manifest.json",
+    "sha256": "B063EEFBC68FFBF7AC1BF3200918AE80B4694100EA7F2610D8F8355CCB8EECCF"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-tate-nondegeneracy-lift-route-480.json",
+    "sha256": "B94FC8A2B1144F8A63E2192CE9FF3F1978DC17DE579B3182F072BC31F1A38D35",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "residual association -> Frobenius characteristic polynomial -> determinant -> nonzero Hecke-component pairing -> Tate Weil nondegeneracy -> finite-level Weil nondegeneracy plus lifting detecting torsion classes",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTateTorusCoordinates.lean",
+          "sha256": "A020EB25F0DFEFD7192373425DD82DB9967DCC79BDD1193C5E01166E40CFA0D3"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTatePeriod.lean",
+          "sha256": "B51C9841BA4C165775E8842C575EC4DFC0341EEBBE60B4785F60C135CB7AEFB2"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateComparison.lean",
+          "sha256": "E1C153FE7E6F651BD93416FC115DB294E802D73CDB89A143368027AAD5932DA1"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPicardAbelMap.lean",
+          "sha256": "7890BE46139EB5D9F453A7386A6C0770C7F9E830DAD7A2054493BA7E3613F2C3"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateGalois.lean",
+          "sha256": "D40030B05BD21BC27E08C463F266E7F103CB92F77E109C621081A7BE87711F5E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilPairing.lean",
+          "sha256": "E20BBA6F485664849C5C71AF2C4764AF3875A25AAD3207A3D01C5C803257E80D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilLinearity.lean",
+          "sha256": "E523DC605F0F231116B0BC7C3A9B0D1BF8503A5CEA904B5B1ACE92AC4601F27E"
+        }
+      ],
+      "selectedRoute": "Use the already proved divided-lattice sequence, actual Abel equivalence and arithmetic/complex Tate comparison to lift every original p-power torsion class. Then derive Tate nondegeneracy from finite-level detection, retaining only the explicit finite-level nondegeneracy premise. No generic inverse-limit surjectivity or new original-curve Picard divisibility development is needed.",
+      "discharged": "Every original p-power torsion class lifts to the existing arithmetic Tate module. Finite-level detection implies detection and injectivity for the actual arithmetic Tate Weil pairing.",
+      "remaining": "The finite-level detection hypothesis is still open locally. The pinned NYLL nondegeneracy source offers a candidate auxiliary-cover divisibility proof but is not imported or locally built. Auxiliary-cover divisibility/evaluation transfer, nonzero restriction to the required Hecke component, determinant, residual association, automorphy and all-weight continuation remain required.",
+      "boundary": "Scratch only; finite-level nondegeneracy remains an explicit upstream hypothesis. DUB-17--20 OPEN; 16/20. No acceptance gate closes."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "dependencyAuditCorrection": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-tate-detection-dependency-repair-480.json",
+    "sha256": "82C60F7699FEED38B24CEB056ADE87CDFF2C1771BE56DC5882D59138F81FCAE3",
+    "record": {
+      "recordedUTC": "2026-10-25T00:30:44.447314+00:00",
+      "failedAudit": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateDetectionDependencyAudit3.lean",
+        "sha256": "16000E8900DDC94C0EF4F8FA34E9D1121CC7EFCEEE869C93129B6394CAFF471A",
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateDetectionDependencyAudit3.log",
+        "logSha256": "3C7DF717E6D4113A2DA72A93760BB636658222007D4A9281FB95E73FCA7DBFCB"
+      },
+      "diagnosis": "The coordinate theorem is a definitional equality and simplification does not retain its declaration constant in the elaborated proof value. All other thirteen required values were present. Inspect the actual pairing construction as the fourteenth edge instead; statements and proof bodies remain frozen and unchanged.",
+      "successor": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateDetectionDependencyAudit3R2.lean",
+        "sha256": "CA28148BD8E69BB19CB36194E54794B1230456D0C75E5B630E137A0AEA33B21F",
+        "config": "E:\\Lean\\.tmp\\dubon83\\source-original-tate-detection-3-audit-config-r2.json",
+        "configSha256": "3EA6B8043C7416A56F390FC6BB76C11188DB7D0E26CB4290A20C4F8D97F9B08A"
+      },
+      "changedExpectedEdge": {
+        "previous": "Dubon2026.SourceFunctionField.originalTateWeilPairing_coordinate",
+        "current": "Dubon2026.SourceFunctionField.originalTateWeilPairing"
+      },
+      "sourceChanged": false,
+      "requiredProofValueEdges": 14
+    }
+  }
+}

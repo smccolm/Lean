@@ -1,0 +1,148 @@
+{
+  "recordedUTC": "2026-10-25T07:59:53.472629+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceFiniteClosedCoverAdjacency",
+    "SourceOriginalCellPairingLiftSides",
+    "SourceOriginalCellPairingLiftVertices",
+    "SourceOriginalLiftedCoverAdjacency",
+    "SourceOriginalWeilCoverGlobalAdjacency",
+    "SourceOriginalCellPairingLiftDissectionSides",
+    "SourceRadialCellDissection",
+    "SourceOriginalLiftedDissectionAssembly",
+    "SourceOriginalWeilCoverDissectionConstructed"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteClosedCoverAdjacency.lean",
+      "sha256": "DBCB7E339DCFBE0EF989372B985CEDBB776371340DFB9CED230E845EABB17D4B",
+      "oleanSha256": "8CA2BAC7CA85B9D196972E2E3A49667821FF7D683BFB57BD9A422C212CAC0668"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellPairingLiftSides.lean",
+      "sha256": "F0C6C70BE5E7296CF194503CE5CCCC081B619E9F27834B7D15990CD35C6D9AC8",
+      "oleanSha256": "AB7F2C9E23D1D974C22F0633A281E2047641A52A14FB9991B903DD4CC513FE53"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellPairingLiftVertices.lean",
+      "sha256": "1CEC95F2C7E381CBCB658914B8B8DCF8D5A613430C6E171D631EE24E3BCF9F44",
+      "oleanSha256": "5A934B80258BB009A6DF33A1290FEE1C2A6F73D5CDF136429ADD45174034955C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLiftedCoverAdjacency.lean",
+      "sha256": "EB41EEB43FA7C51355F7B13E5669D9FDB0C499A9827F9B7EC1CEBCEB52B36777",
+      "oleanSha256": "DB67AA22D5AF97ABB3A04C2B1AFB05CB26F4C69E79C8EE8B61C63E3A1C1659BF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverGlobalAdjacency.lean",
+      "sha256": "E6F2F4225B63304806F40DC442011DA8536DE6F2D09BA6E4E733D398C850AA55",
+      "oleanSha256": "A248519AB65EA70E31EA640298A61DB1F6AB1129136D2D45C4BC7F7AAABD8131"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellPairingLiftDissectionSides.lean",
+      "sha256": "91398F7CEFABF1E4A4C5884DFCF0E359FF0BFD4BA9C9E6CED44ADE7F54AEA374",
+      "oleanSha256": "84DE99E2CD519EFF61F0487170BFF0B78956E4B2D98DB404D6C80786224016EA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialCellDissection.lean",
+      "sha256": "910EE895C0BB76F317722E58FBB6F4C03F0539E0890722670248285B49BD14F7",
+      "oleanSha256": "258578504FC1A5E4599C9D613F70972E6D698C4B0CE1A1D0219E6C5C841F30B4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLiftedDissectionAssembly.lean",
+      "sha256": "1D018912BE09CBA379A00EEDCE8F78D91CCBFB3624731968A27A454A7DD9CB4A",
+      "oleanSha256": "D68783BDBE84B4612F6049F7C2063650111022F5E7688BB23B532A79C447B7A1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDissectionConstructed.lean",
+      "sha256": "E2EBC11208C90CE63F53950D64F2DCFC8C85AC0470FF316C77327B42004AF1C7",
+      "oleanSha256": "1CED5E20091E5935370F8582BEDE77811166F77196511B8301769FB303ADDED2"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.SheetCover.finite_closed_cover_reachable",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSideEquiv_symm_true",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSideEquiv_symm_false",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSideEquiv_pair",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_endpoint_reversal",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_arc_endpoints",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_vertex_injective",
+    "Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.lifted_cover_adjacency",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_global_adjacency",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_pair_of_same_edge",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_reversed_side_arcs",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cell_dissection",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_actual_cover_cell_dissection",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSideEquiv",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedEndpoint",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.LiftedVertex",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedEndpointVertex",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedEnds",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedArcReindex",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedCellSideEquiv",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.carrier",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.bdry",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.arc",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.mk",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.mk",
+    "Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.toLiftedDissection",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.instFintypeElemLiftedVertex"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.SheetCover.finite_closed_cover_reachable",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSideEquiv_symm_true",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSideEquiv_symm_false",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSideEquiv_pair",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_endpoint_reversal",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_arc_endpoints",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_vertex_injective",
+    "Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.lifted_cover_adjacency",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_global_adjacency",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_pair_of_same_edge",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_reversed_side_arcs",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cell_dissection",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_actual_cover_cell_dissection"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSideEquiv",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedEndpoint",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.LiftedVertex",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedEndpointVertex",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedEnds",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedArcReindex",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedCellSideEquiv",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.carrier",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.bdry",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.arc",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.mk",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.mk",
+    "Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.toLiftedDissection",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.instFintypeElemLiftedVertex"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDissectionAudit9.log",
+  "logSha256": "4E39F4E44324886F1CE0414DFF7056DD8A049729023ED081CBF74EB129B4682C",
+  "auditSha256": "E2CB0858ACDD44941474D1BFE88F66EED4125A9A2E6D3EC1E1322C4A7898BB02",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 42,
+  "linterScopes": 9,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 18,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDissectionDependencyAudit9.log",
+  "dependencyAuditSha256": "081360CFC27FEE9715A99D48EDA41DA536101C8EC1B040EC4041A4BE422E4C31",
+  "dependencyAuditSourceSha256": "B2F9C5BFE4A01738F3D4A56C126120248CACD547DB9C1869FF0EE14E0E09F6BF",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_actual_cover_cell_dissection"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric reciprocity -> fully constructed actual analytic cover dissection",
+  "discharged": "The actual cover has a complete finite source-format geometric cell dissection: exact side bijection, literal endpoint-range vertices, endpoint orientation laws, full C1 reversal, global coverage, pointwise intersection chains and global adjacency. The cover connectedness, Hausdorffness and finite fibers discharge the adjacency assumptions. The constructed existence theorem proves injective actual vertices and analytic nonsingular coordinates. The structure declarations alone are construction obligations; all their fields are constructed by the consumer.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Marked centering/separation and vertex incidence, Euler/cycle count, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-dissection-9-reuse-review-20261025.json",
+  "reuseReviewSha256": "016633B94A988902A36189428465DE8358A89473AAD4EBB8FB5249C49BCDBE7C",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

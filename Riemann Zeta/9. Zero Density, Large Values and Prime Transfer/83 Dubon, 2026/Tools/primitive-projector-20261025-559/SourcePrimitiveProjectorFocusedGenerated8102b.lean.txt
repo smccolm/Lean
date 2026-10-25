@@ -1,0 +1,40 @@
+import Dubon2026.SourceFractionBilinearInjective
+import Dubon2026.SourceTateRationalInjection
+import Dubon2026.SourceOriginalRationalWeilNondegeneracy
+import Dubon2026.SourceOriginalTateWeilSkew
+import Dubon2026.SourceBilinearBaseChangeLaws
+import Dubon2026.SourceOriginalRationalWeilLaws
+import Dubon2026.SourcePrimitiveFiniteGoodEigensystem
+import Dubon2026.SourceSymmetricSumSquaresKernel
+import Dubon2026.SourcePrimitiveGoodAnnihilator
+import Dubon2026.SourceKernelPowerReduction
+import Dubon2026.SourcePolynomialKernelProjection
+import Dubon2026.SourceSymmetricKernelReduction
+import Dubon2026.SourcePolynomialKernelProjectionLaws
+import Dubon2026.SourcePrimitiveGoodPolynomialProjection
+import Dubon2026.SourceFiniteOperatorCoefficientAnnihilator
+import Dubon2026.SourcePrimitiveGoodCoefficientAnnihilator
+import Dubon2026.SourceMappedKernelProjection
+import Dubon2026.SourcePrimitiveGoodCoefficientProjection
+import Dubon2026.SourcePrimitiveGoodProjectionHecke
+import Dubon2026.SourceIntegerCoefficientExtension
+import Dubon2026.SourceIntegerCoefficientExtensionInjective
+import Dubon2026.SourceOriginalHeckeCoefficientFaithfulness
+import Dubon2026.SourceIntegerCoefficientExtensionLaws
+import Dubon2026.SourcePrimitiveTensorOperators
+import Dubon2026.SourcePrimitiveTensorProjection
+import Dubon2026.SourcePrimitiveTensorEigencharacter
+import Dubon2026.SourcePrimitiveTensorProjectionNonzero
+import Lean
+
+open Lean
+#print axioms AlgHom.liftEquiv.congr_simp
+private def inspectGenerated : CoreM Unit := do
+  let env <- getEnv
+  let name := `AlgHom.liftEquiv.congr_simp
+  let some idx := env.getModuleIdxFor? name | throwError "missing owner"
+  let some (.thmInfo info) := env.find? name | throwError "missing theorem"
+  logInfo m!"GENERATED_OWNER {env.allImportedModuleNames[idx.toNat]!}"
+  logInfo m!"GENERATED_TYPE_HASH {hash info.type}"
+  logInfo m!"GENERATED_VALUE_HASH {hash info.value}"
+#eval inspectGenerated

@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary point-difference division -> cover Abel converse -> prescribed residues",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateGlobalResidues.lean",
+      "sha256": "4F62D6BF9784A9C2C935CD5CD4230528907E251E579E351D25F85B8A78532C2D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveCanonicalResidueData.lean",
+      "sha256": "084C643433313C39700A0916E6764A8D3E21F6C35492A3BE4C81E86BE02CE4AA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDifferentialResidues.lean",
+      "sha256": "267D9DBFD289AC683F3F65BEA2CCEBCB77B1997966CF8A16471C7F248EFFA942"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalSimplePoleBounds.lean",
+      "sha256": "9DF9D80931113C77C3237F12F8B3E05DE08075CEE9AE6399C8982A3EF18C1BC7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTwoPoleResidues.lean",
+      "sha256": "7719EF0EBCDAB28D3C35D617244CE38B25EDDEC9D1F1540041277BD6F6279214"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrescribedResidues.lean",
+      "sha256": "FC7DDDA116747FAB5524991C724F3B2170A7A38EC13791A929B1BCC11CB6197E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilKummerGeometry.lean",
+      "sha256": "02B87ABA8F7C72024F84401D7FCBEA1C2840665A2B3A7CA82C3149DBCA968C0F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverTwoPoleDifferential.lean",
+      "sha256": "E97C67538D8AB33C3751F1D731CA8378326C4B9F193F9693A684487B4784457F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLocalDifferentials.lean",
+      "sha256": "0D9A76382D0CDF88EAB0B6BC18D2A640A4D3146372B0D3094B6164EB8ADB4DE8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCanonicalSupport.lean",
+      "sha256": "0FA1C4DE0E53292A3040CB9ED377837954CA810EAC400C506302BB99E4743917"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-prescribed-residue-route-504.json",
+    "sha256": "15CDF8E2606F59D24AEA968507DDD5DC5EF955DA1A4104BEB9DF1AB4B8F590E9",
+    "review": {
+      "scope": 504,
+      "exactDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary point-difference division -> cover Abel converse -> prescribed residues",
+      "reuseChecked": [
+        "SourceCurveFiniteCoordinateGlobalResidues.finite_coordinate_global_residue_sum_zero",
+        "SourceCurveCanonicalResidueData canonical residue normalization",
+        "SourceOriginalDifferentialResidues",
+        "SourceOriginalSimplePoleBounds",
+        "SourceOriginalTwoPoleResidues",
+        "SourceOriginalPrescribedResidues",
+        "SourceOriginalWeilCoverTwoPoleDifferential.exists_cover_two_pole_differential",
+        "SourceOriginalWeilKummerGeometry.originalWeilKummerCover_residue_bijective"
+      ],
+      "shorterRoute": "Apply native global residue theorem directly to the actual finite coordinate; normalize the existing two-pole differential and sum finitely. No new Riemann-Roch, genus, period rank or general Jacobian infrastructure.",
+      "assumptionsToDischarge": "Existence of an actual algebraic differential with simple poles and prescribed degree-zero divisor residues on the literal complex cover.",
+      "stillOpen": "Abel converse, actual point division, arithmetic descent, pairing nondegeneracy, required component, determinant and residual association. 16/20 gates."
+    }
+  },
+  "discharged": "Every degree-zero divisor on the literal complex Kummer cover has an actual algebraic differential with simple poles and exactly its integer residues. The native finite-coordinate global residue theorem normalizes the proved two-pole differentials; their finite linear combination cancels the auxiliary base-place contribution by degree zero. No prescribed-residue existence or global residue premise remains.",
+  "remaining": "Abel converse, actual point division, arithmetic descent, pairing nondegeneracy, required component, determinant and residual association. 16/20 gates.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-two-pole-5-scratch-receipt.json",
+    "sha256": "A5E6E3EAEFE8E6F1CBBBA01910F3DF373B7926DFE95CDBA11970CA7C5396DFD1"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "auditSuccessorReason": "Inherited projection is Place.LocalResidueData.res_simplePole; prior attempted name was absent. Failed dependency audit preserved; no mathematical source changed.",
+  "preservedFailedDependencyAudit": {
+    "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPrescribedResidueDependencyAudit5.lean",
+    "sourceSha256": "9A9BE0D8383E3F6EDB6E36233A96915A2205EE335B8189D5BFAFED19A2FFAE32",
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPrescribedResidueDependencyAudit5.log",
+    "logSha256": "FA0C9CB09A20640F05121BC6314A4002218C24233FC74ADAEDA2BE6BE41A1525",
+    "exit": 1
+  }
+}

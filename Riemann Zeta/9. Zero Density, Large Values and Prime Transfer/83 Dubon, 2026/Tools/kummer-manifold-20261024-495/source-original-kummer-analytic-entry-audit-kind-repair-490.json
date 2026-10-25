@@ -1,0 +1,12 @@
+{
+  "reason": "Lean records the three proposition-valued local instances as theorems, not constructions. Correct only the registration kinds; preserve all proof sources, queries, allowed axioms, exhaustive discovery, linters and VALUE-only dependency edges.",
+  "reclassified": [
+    "Dubon2026.SourceCurve.Place.kummerFinite",
+    "Dubon2026.SourceCurve.Place.kummerIntegral",
+    "Dubon2026.SourceFunctionField.OriginalChart.coverIntegral"
+  ],
+  "failedAuditSourceSha256": "34A5AE63E9420499978083189E0511CC63855A0837B115AACED695C94363054A",
+  "failedLogSha256": "0C4A59526CE3766E2414BC66191D0F83A75283345C77E8D3B13750B6119AEB29",
+  "successorSource": "SourceOriginalKummerAnalyticEntryAudit15R2.lean",
+  "proofSourcesUnchanged": true
+}

@@ -1,0 +1,67 @@
+{
+  "recordedUTC": "2026-10-25T06:31:23.086368+00:00",
+  "date": "2026-10-24 America/Vancouver",
+  "modules": [
+    "SourceCoverStarConvexLift",
+    "SourceCoverLiftedCoordinate",
+    "SourceOriginalWeilCoverLiftedCoordinateAnalytic",
+    "SourceOriginalWeilCoverCellLift"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoverStarConvexLift.lean",
+      "sha256": "F210DB4DC46825ABB97D9A4BC2439D072BFCB36FE99BFFD7C27DFCDF2AA3E412",
+      "oleanSha256": "BA9CF3D9F964301B29CE853EC7FF9D274951C859DB51E7E5181D561044321D77"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoverLiftedCoordinate.lean",
+      "sha256": "E8F72BCE0FA5AF70A17DA6922BB82056EA011AD65E604EE88445C33E9ACD2224",
+      "oleanSha256": "338F55B0B7B6293EBA608F93BDC0A516F42A040E44F8DD91E66405B4D408EF58"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLiftedCoordinateAnalytic.lean",
+      "sha256": "64021867F0FF2E65FEC7E90DFE8925D6B3DD4144CBCEE0FB5B1C0442682E80E9",
+      "oleanSha256": "70738AF978504CEB0CE6234672297FB841F7AB57DA64D9FAF418878617D32043"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellLift.lean",
+      "sha256": "3DEF22FBDB278BE8152A7608750B518E4E6671D40C51E724B82A8AEDBE254336",
+      "oleanSha256": "D620438F26305E386ADE1BEE49D928389A77A265C61B3F2F05E4171441F59823"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.SheetCover.exists_open_lift_of_starConvex",
+    "Dubon2026.SourceFunctionField.SheetCover.exists_coordinate_of_open_lift",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.analytic_lifted_coordinate",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cell_lift"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.SheetCover.exists_open_lift_of_starConvex",
+    "Dubon2026.SourceFunctionField.SheetCover.exists_coordinate_of_open_lift",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.analytic_lifted_coordinate",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cell_lift"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellLiftAudit4.log",
+  "logSha256": "466265E99808C733D06FCEB6333D2CDEC897632B8BE6EE268E2D1C4857F6F884",
+  "auditSha256": "5E0CFA1A91397EFC1EA0CEDADBBF40429F6D0C0D75661801C9EF39C5B9DB79DC",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 4,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 8,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellLiftDependencyAudit4.log",
+  "dependencyAuditSha256": "623E686309A4111A07D8C6226B59601A510C95AE731C2D839F6B1FC97F6DF583",
+  "dependencyAuditSourceSha256": "57487350DE87578B28C4ECC0002555FDBCDE2F6BCB6BE94860F12D22092D883C",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cell_lift"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> raw geometric reciprocity -> lift the original cell dissection -> analytic lifts of entire original cells",
+  "discharged": "Every original radial cell lifts through every chosen actual point above its center on an open star-convex neighborhood of the entire compact carrier. The lifted coordinate has the exact place-restriction formula and analytic transitions with nonzero derivative to the actual Kummer charts. No covering-map, local-lift or lifted-analyticity hypothesis remains.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Finite global lifted dissection and its bilinear/third-kind reciprocity identities, unconditional cover Abel converse and actual point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-cell-lift-4-reuse-review-20261024.json",
+  "reuseReviewSha256": "E00335C4685E18D0E3A11ABF7D6EF72D18F6067E4BFC76BC7E5706B339FE0F4A",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

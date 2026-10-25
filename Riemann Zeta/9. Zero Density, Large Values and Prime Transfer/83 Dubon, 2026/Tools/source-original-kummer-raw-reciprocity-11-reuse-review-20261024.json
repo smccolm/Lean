@@ -1,0 +1,122 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> cover Abel converse -> integral-period correction from raw reciprocity",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRealAbelPotential.lean",
+      "sha256": "B366F617FB0C1F45CF7DD115FD53741157B9520BD67E7E7F766CB9A5854BE4B9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPeriodAnnihilator.lean",
+      "sha256": "AD67CD272E245DD480885C77418CE88D368F7BD0E351060891ADEDA598C4A2C2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPathIntegralLinearCombination.lean",
+      "sha256": "E127C17E652F282404BC6467716F2705C4E24E518D86E93B721D05FEF53ECA0B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFinitePeriodGeneration.lean",
+      "sha256": "72DDB59A3F73830F657AFD7470029F713E2E32A5812DFF4854E876EFEE25D189"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDifferentialReadingLinear.lean",
+      "sha256": "444A863F206EF32504E7CB34ACCD3837323A8DFCECA3E2C3A1FE6E3E7DDEAACB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalLoopPeriodInjectivity.lean",
+      "sha256": "72A0887B1BA809BD37D8291ABC112011110911601AD74BCD1CE50AE66AE05848"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDiscretePeriodsOfLoops.lean",
+      "sha256": "5DFDC58D4CB0790910417ABE5554262B2C4FAA283610064370E443E5C9DC5157"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalGeneratorPeriodCorrection.lean",
+      "sha256": "E29B8245B632FB4FD650A32F845C16173E12AF31100550E07C73693FF9B5A033"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalIntegralPeriodsFromGenerators.lean",
+      "sha256": "C62DAC2EDDE5AB7438A1D98072E0DDE72BB105FFEE1345D2BBF6D0D24961508D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAbelConverseFromRawReciprocity.lean",
+      "sha256": "17E1A95E147B5DFB629484995E3FD43089AD231B7E7DA994C12B16822B90EE73"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPrescribedResidues.lean",
+      "sha256": "B9C2F8EEDFDBB6D1FF5F3175777B18A8B6871D410E938A4531FF974509F8229B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverIntegralPeriodsPrincipal.lean",
+      "sha256": "401352FF075DA824E52A5382250F98EAE50D1D7755AF986C81093CBE0B323D48"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLocalAbelJacobi.lean",
+      "sha256": "BABD006F8DFB9EC145133F1D927EC7AEA5FCF42463CA7C0A1A8BFDBD083C27F7"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-raw-reciprocity-correction-route-508.json",
+    "sha256": "47CDEB66C61EF5BB87A5FBBA29472E4FA093802091F83A6B57E2E32B58E73232",
+    "review": {
+      "scope": 508,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> cover Abel converse -> integral-period correction from raw reciprocity",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRealAbelPotential.lean",
+          "sha256": "B366F617FB0C1F45CF7DD115FD53741157B9520BD67E7E7F766CB9A5854BE4B9"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPeriodAnnihilator.lean",
+          "sha256": "AD67CD272E245DD480885C77418CE88D368F7BD0E351060891ADEDA598C4A2C2"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPathIntegralLinearCombination.lean",
+          "sha256": "E127C17E652F282404BC6467716F2705C4E24E518D86E93B721D05FEF53ECA0B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFinitePeriodGeneration.lean",
+          "sha256": "72DDB59A3F73830F657AFD7470029F713E2E32A5812DFF4854E876EFEE25D189"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDifferentialReadingLinear.lean",
+          "sha256": "444A863F206EF32504E7CB34ACCD3837323A8DFCECA3E2C3A1FE6E3E7DDEAACB"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalLoopPeriodInjectivity.lean",
+          "sha256": "72A0887B1BA809BD37D8291ABC112011110911601AD74BCD1CE50AE66AE05848"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDiscretePeriodsOfLoops.lean",
+          "sha256": "5DFDC58D4CB0790910417ABE5554262B2C4FAA283610064370E443E5C9DC5157"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalGeneratorPeriodCorrection.lean",
+          "sha256": "E29B8245B632FB4FD650A32F845C16173E12AF31100550E07C73693FF9B5A033"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalIntegralPeriodsFromGenerators.lean",
+          "sha256": "C62DAC2EDDE5AB7438A1D98072E0DDE72BB105FFEE1345D2BBF6D0D24961508D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAbelConverseFromRawReciprocity.lean",
+          "sha256": "17E1A95E147B5DFB629484995E3FD43089AD231B7E7DA994C12B16822B90EE73"
+        }
+      ],
+      "shorterRoute": "Use the native compact maximum-principle annihilator argument on the already proved cover Abel map. Prove period-matrix injectivity directly by applying the annihilator result to real and imaginary parts of its kernel functional. Integer period coordinates are proved by span induction. Defer the native full-real-span, real basis, lattice discreteness and freeness infrastructure because it is unnecessary for this exact correction consumer.",
+      "assumptionsToDischarge": "Injectivity of the regular period matrix and the algebraic period-correction step, leaving the actual geometric loop-generation and raw bilinear/third-kind reciprocity clauses explicit.",
+      "remaining": "Actual cover raw reciprocity / geometric dissection, Abel converse and point division, arithmetic descent and the remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+      "elaborationAdjustment": "The exact period-matrix injectivity calculation and raw double-sum conversion are isolated over symbolic finite matrices, then instantiated with the proved actual cover data. Equality composition replaces a large rewrite. No proof limit or mathematical hypothesis is changed.",
+      "rawClauseInterface": "CoverRawThirdKindReciprocity states exactly the existing fully quantified raw third-kind geometric clause. It is explicitly an unproved input statement, not a theorem or the desired Abel converse. Naming this clause separately prevents cumulative elaboration of the long source signature from exceeding existing limits. The conditional theorem still consumes it as a named hypothesis and performs the actual correction/principality deduction."
+    }
+  },
+  "discharged": "The actual cover compact maximum principle proves vanishing of real period annihilators; integer coordinates then prove period-matrix injectivity directly, without a real period basis, discreteness or freeness. Native finite matrix correction and the actual integral laws subtract a regular differential preserving residues and producing integral periods on all avoiding loops. Together with prescribed residues and integral-period principality this proves the conditional Abel converse from the explicit raw geometric loop-generation and bilinear/third-kind reciprocity clauses. CoverRawThirdKindReciprocity only states its still-unproved geometric input; it is not an existence theorem. The geometric clauses, unconditional Abel converse and actual point division remain open.",
+  "remaining": "Actual cover raw reciprocity / geometric dissection, Abel converse and point division, arithmetic descent and the remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-integral-period-10-scratch-receipt.json",
+    "sha256": "CF272655C55495B4F881531CD87847E8A630C9B75DE0865FB3513BFDFEB860FF"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

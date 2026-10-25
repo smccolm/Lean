@@ -1,0 +1,569 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-weil-nondegeneracy-promotion-route-554.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/original-weil-nondegeneracy-promotion-route-554.json",
+      "sha256": "FA2C4E31EBB9A26750D4F5DD45EA37C9383909E4D3C3B6A12E2B53BF0FFA6B72"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-simple-pole-basis-3-scratch-receipt.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-simple-pole-basis-3-scratch-receipt.json",
+      "sha256": "8DA585162B4B602D3AA3D2BD69BA961A52D9226A9B08B0935D113C35617482F0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-meromorphic-primitives-8-scratch-receipt.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-meromorphic-primitives-8-scratch-receipt.json",
+      "sha256": "35A333255B385CA909F6372D282448862E6429A753543F8C5644510F28302518"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-logarithmic-jumps-10-scratch-receipt.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-logarithmic-jumps-10-scratch-receipt.json",
+      "sha256": "2EDE025DC130C6B7188D568631A84B4619BE96B8F64CFA31841EBCE6E61FE4E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-residue-quotient-13b-scratch-receipt.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-residue-quotient-13b-scratch-receipt.json",
+      "sha256": "94B2AD00A1191787A5DE8E067ECEC47EC51964C7E80C02463FD4160071C1D184"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-meromorphic-generation-18b-scratch-receipt.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-meromorphic-generation-18b-scratch-receipt.json",
+      "sha256": "46DAA6B570640237B71ADCC537B9EFED5A62B50F8A87F83D841A68D792EB038A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-abel-converse-7-scratch-receipt.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-abel-converse-7-scratch-receipt.json",
+      "sha256": "768FA21A9C8FDB82CAE3DE61B24F6448FBE8D8F1B610124BDAF8DFFDD26D97B5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-point-division-6-scratch-receipt.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-point-division-6-scratch-receipt.json",
+      "sha256": "78FA804B364AD70E8E49F224BC17004DEFCBA6AA5E312B16DDF97831A4A82147"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-weil-nondegeneracy-5b-scratch-receipt.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-weil-nondegeneracy-5b-scratch-receipt.json",
+      "sha256": "F9AA428926FD14B87861CFD0CEF527066B2881A1063E2094EC692FDD4AE6B1D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\kummer-simple-pole-basis-route-546.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/kummer-simple-pole-basis-route-546.json",
+      "sha256": "B6AC2651037357C7E1A6534CD2A3AEE8970524D8F43407E69342BA242D6D2993"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\kummer-meromorphic-primitives-route-547.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/kummer-meromorphic-primitives-route-547.json",
+      "sha256": "11061DFA33CC1401E598C30A3C32FB101D7108AD81581853E5C389F9272EB91F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\kummer-logarithmic-jumps-route-548.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/kummer-logarithmic-jumps-route-548.json",
+      "sha256": "334AE4DEB8015BD44D5E4673086CF3BE8142D1BE9CB321387136CEB1BFE65CA0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\kummer-residue-quotient-route-549b.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/kummer-residue-quotient-route-549b.json",
+      "sha256": "445C1F590D3703B9CB32CA42CF2A20AD93ADF4D6185DE3AECB0ABC0B98C56244"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\kummer-meromorphic-generation-route-550b.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/kummer-meromorphic-generation-route-550b.json",
+      "sha256": "D9752E359972D51F1273C27CAEFBE67ED034DA017CC52DD2B7AF93186C9AC8FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\kummer-abel-converse-route-551.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/kummer-abel-converse-route-551.json",
+      "sha256": "C420167407893D5823D220E2DB495D71DEC4DCA90ABB6D3FF038BB1DE195CBC4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\kummer-point-division-route-552.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/kummer-point-division-route-552.json",
+      "sha256": "03CC8E589C8D024816CB9811D40CE0A10A4F1C68405E2272A01B557B0B13A867"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-nondegeneracy-route-553b.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/weil-nondegeneracy-route-553b.json",
+      "sha256": "40AAECC0F2DAF59C34E41E4D88786257B8DFC50748E3B8008F34FA8169BC421B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-simple-pole-basis-3-reuse-review-20261025.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-simple-pole-basis-3-reuse-review-20261025.json",
+      "sha256": "C413827EB85897DD191CE30596B792D3264B0DBCAD61F58C7E24AB5C53660B5F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-simple-pole-basis-3-audit-config.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-simple-pole-basis-3-audit-config.json",
+      "sha256": "5994A6188B30A24DE9C4259B8D92C9BFA314E6BBEF2C835C05264D45F18A66A8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-meromorphic-primitives-8-reuse-review-20261025.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-meromorphic-primitives-8-reuse-review-20261025.json",
+      "sha256": "28668FF107F901DC84ABE2B51A71206AE13559A3DFC7566C80E2692C614EA025"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-meromorphic-primitives-8-audit-config.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-meromorphic-primitives-8-audit-config.json",
+      "sha256": "9E5DA5F6B4E9ED16A9F7ABDC089C1E9C3B2E21D2FA32D32B63E04D417F3E28E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-logarithmic-jumps-10-reuse-review-20261025.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-logarithmic-jumps-10-reuse-review-20261025.json",
+      "sha256": "C34A9CB338B8213C5E978FFE0261DFD7BC5F346C992FDDA618B7828365AD958F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-logarithmic-jumps-10-audit-config.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-logarithmic-jumps-10-audit-config.json",
+      "sha256": "D0254210B6C8F0AF1681F9913032B9419C601309AF576AEEF71475334450BC3B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-residue-quotient-13b-reuse-review-20261025.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-residue-quotient-13b-reuse-review-20261025.json",
+      "sha256": "421A93E1B0AF3EE15A4ABAA060C2B23F2F39C0EEDCAD9E25130CC20CDFA245C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-residue-quotient-13b-audit-config.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-residue-quotient-13b-audit-config.json",
+      "sha256": "41ECBF6B65131E6869DD71BF3C526FBB49E070E27900F9DFB9B31E62DD203052"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-meromorphic-generation-18b-reuse-review-20261025.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-meromorphic-generation-18b-reuse-review-20261025.json",
+      "sha256": "2F4EB73434A3ABBF95BE0AB5E0A13E3FBEBF0368267FBBEC0FF9DF45695C2414"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-meromorphic-generation-18b-audit-config.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-meromorphic-generation-18b-audit-config.json",
+      "sha256": "2A6E8AC919307D03555315F275F6FBB7780A2F61CDD9D133E4E97DD100442EDF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-abel-converse-7-reuse-review-20261025.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-abel-converse-7-reuse-review-20261025.json",
+      "sha256": "D78AB2253861DFA71D27625E5C432FDE08D6894578F1E67FF12F7A5820C0DA23"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-abel-converse-7-audit-config.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-abel-converse-7-audit-config.json",
+      "sha256": "3B090D19233CA6C3100396CB9243AB84CD92A7C83B954EE18DBB4A95EE197B0D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-point-division-6-reuse-review-20261025.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-point-division-6-reuse-review-20261025.json",
+      "sha256": "8E981389DF39D5E408D9CAEE8F1B7E774F5D7A2CE8E554EB3DECC0E7A7B780CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-point-division-6-audit-config.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-point-division-6-audit-config.json",
+      "sha256": "CFF50A7AFE4B7F148DB24F8A9B5126A622967BE2A8532EA2BB47FCAA575DC314"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-weil-nondegeneracy-5b-reuse-review-20261025.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-weil-nondegeneracy-5b-reuse-review-20261025.json",
+      "sha256": "44F900CAD2304E8FA08A64A17154BE9EC651190ED8D59FC4ED513C57CB0809AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-weil-nondegeneracy-5b-audit-config.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-weil-nondegeneracy-5b-audit-config.json",
+      "sha256": "B675948FFB0BC8FBDBDF054E47887F275BFB1FCD58DE372141488DABE6FE4A00"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerResidueQuotientAudit13.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerResidueQuotientAudit13.lean.txt",
+      "sha256": "F6115B580F543530E51B1157E78B3BA4C6B5F55139CC5E21F44DEB179492BEBD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerResidueQuotientAudit13.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerResidueQuotientAudit13.log",
+      "sha256": "6CC7733C825F35EA7CE786039B27EE70C27D796C55FE831FA84338945E5E44FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerResidueQuotientAudit13.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerResidueQuotientAudit13.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicGenerationAudit18.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicGenerationAudit18.lean.txt",
+      "sha256": "AEA5DF794F5B88CE4FA5E53821364FD7522A0A129695B14886547126D0C655DE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicGenerationAudit18.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicGenerationAudit18.log",
+      "sha256": "C0CC159E42422BFB2C262EC117ABB2A1057AA1805CDB9A258BED44331BD64377"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicGenerationAudit18.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicGenerationAudit18.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeilNondegeneracyDependencyAudit5.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerWeilNondegeneracyDependencyAudit5.lean.txt",
+      "sha256": "3DC34F9044B13E74ABE27F06FB78CAD14AA0152CE125B123DC49615EA3B87489"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeilNondegeneracyDependencyAudit5.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerWeilNondegeneracyDependencyAudit5.log",
+      "sha256": "CE972E087D82143B6F10E08E4491BD13569E1F7494056DFB3BFC89634B45D87D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeilNondegeneracyDependencyAudit5.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerWeilNondegeneracyDependencyAudit5.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-residue-quotient-13-audit-config.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-residue-quotient-13-audit-config.json",
+      "sha256": "ED5BC3B56ADBD9F6B12CD3DBB79137486F67A562CCC2F5FF1A180ABC1B0BF0FD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\kummer-residue-quotient-route-549.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/kummer-residue-quotient-route-549.json",
+      "sha256": "C0572E15B787327874A6BD58CC47DDC0F3E14F170D6952B096BA21B3C55C293E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-meromorphic-generation-18-audit-config.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-meromorphic-generation-18-audit-config.json",
+      "sha256": "464EAC39596993F0C07E09F35AE8B4982EC71390E52D3CD57904CDB418554646"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\kummer-meromorphic-generation-route-550.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/kummer-meromorphic-generation-route-550.json",
+      "sha256": "D9752E359972D51F1273C27CAEFBE67ED034DA017CC52DD2B7AF93186C9AC8FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\meromorphic-generation-successor-550b.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/meromorphic-generation-successor-550b.json",
+      "sha256": "FD0B6400091C029D2C7EA2BBB9BB16662789148435E47A81C24161BF21D4DEA0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-weil-nondegeneracy-5-audit-config.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/source-original-kummer-weil-nondegeneracy-5-audit-config.json",
+      "sha256": "D99E549A1695F02D233298405740715D02562FABD767B1AA7A588834B188CC84"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weil-nondegeneracy-route-553.json",
+      "path": "Tools/weil-nondegeneracy-20261025-554/weil-nondegeneracy-route-553.json",
+      "sha256": "A506F5DA96F44C2E0B0DE9CEBE7E16F9E4C5FBA0B202399433C872071BE143D8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicLoopPeriods.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicLoopPeriods.lean.txt",
+      "sha256": "BA08EE641C3F71730D7967490C94E2E7589D52B842B9FF2A5B805285395586BD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicLoopPeriods.olean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicLoopPeriods.olean",
+      "sha256": "7AC4552F9AD0BEB37AD017A7EC78BB4C4C64E51DB7C1ADECBEED65ECBF58E332"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicLoopPeriods.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicLoopPeriods.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicLoopPeriods.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicLoopPeriods.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicBasisExtension.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicBasisExtension.lean.txt",
+      "sha256": "E9BD4EB70E19239D6173B39C37306B3F74AD9FC44B5398D0DEB99983BD00B0C2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicBasisExtension.olean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicBasisExtension.olean",
+      "sha256": "8AC30EA3775E6945EC8A6E651BFC51F3BA8747C377BFA4152376BA49A0D5E04F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicBasisExtension.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicBasisExtension.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicBasisExtension.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicBasisExtension.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicGeneration.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicGeneration.lean.txt",
+      "sha256": "49DD1A23417669E29050CA0B3018C22A5524CFC8A81CDAC1B8B7EDA9C191DAF3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicGeneration.olean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicGeneration.olean",
+      "sha256": "CFD872F9F4992623979A635D170BE006EE31F5DE1AEB2F2752F9EDCB12567D4C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicGeneration.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicGeneration.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicGeneration.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverMeromorphicGeneration.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverFullCycleData.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverFullCycleData.lean.txt",
+      "sha256": "59DE59049B834B37149DD5E8D08B9F3543A1D36434D0BED7F77D289F6501F970"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverFullCycleData.olean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverFullCycleData.olean",
+      "sha256": "218DC4DB49CDDC1E0DB3E891AAD7BC35692C221AF72BA3C28158505D589C1C13"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverFullCycleData.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverFullCycleData.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverFullCycleData.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalWeilCoverFullCycleData.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerSimplePoleBasisAudit3.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerSimplePoleBasisAudit3.log",
+      "sha256": "EB9579DCDA6FDAA23B5DB9AF1381D6ECC56F1BE8EA8F35AE25D733666337EFE9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerSimplePoleBasisAudit3.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerSimplePoleBasisAudit3.lean.txt",
+      "sha256": "DFEEABCB049908332BF37D627DCF0937CD555A02A8FE48B97E1FFB206E97CE75"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerSimplePoleBasisAudit3.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerSimplePoleBasisAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerSimplePoleBasisDependencyAudit3.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerSimplePoleBasisDependencyAudit3.log",
+      "sha256": "9D55885E9A72F26D23D92419598E4720E09B53B8B02BC282088C928E252A3F05"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerSimplePoleBasisDependencyAudit3.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerSimplePoleBasisDependencyAudit3.lean.txt",
+      "sha256": "2ADD0AB8FB2050CBEC52B0D504822FE857E2170343E9353A1E7476FB144D6CFD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerSimplePoleBasisDependencyAudit3.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerSimplePoleBasisDependencyAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicPrimitivesAudit8.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicPrimitivesAudit8.log",
+      "sha256": "100906490C9B3BC4587C2CC8D3D9DC228E6C43D90DECD3B349E07E4983D123F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicPrimitivesAudit8.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicPrimitivesAudit8.lean.txt",
+      "sha256": "A9CE04B486C78A95ACA42CD6D49CC7F9BBE1FB96CDC19E2270A3E27C74347E13"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicPrimitivesAudit8.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicPrimitivesAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicPrimitivesDependencyAudit8.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicPrimitivesDependencyAudit8.log",
+      "sha256": "53077BC3A331174BE98AB4FEDE5244700A67703A4AC7C88CEDD809EDFEEABAF1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicPrimitivesDependencyAudit8.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicPrimitivesDependencyAudit8.lean.txt",
+      "sha256": "11A65098B8463F7B01417FA5E875A576FF4F8E56E2A51CFDFA59D2B095C916CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicPrimitivesDependencyAudit8.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicPrimitivesDependencyAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerLogarithmicJumpsAudit10.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerLogarithmicJumpsAudit10.log",
+      "sha256": "1D0A8C989607810D9E958C0AB927B77C92916F079C85B217485434D8018AB8C9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerLogarithmicJumpsAudit10.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerLogarithmicJumpsAudit10.lean.txt",
+      "sha256": "9374B9D766C09E833EAE86F547AB23BB10828CA36D476426832536182554486E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerLogarithmicJumpsAudit10.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerLogarithmicJumpsAudit10.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerLogarithmicJumpsDependencyAudit10.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerLogarithmicJumpsDependencyAudit10.log",
+      "sha256": "146454CD45F905434F069662331ACC9DAD8AEA156E4B9872690EC45D7845C4FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerLogarithmicJumpsDependencyAudit10.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerLogarithmicJumpsDependencyAudit10.lean.txt",
+      "sha256": "7EC892B6814E8DCF5832394DCB6F1398B328FCD8D16A0451FD9611E62ACADA1D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerLogarithmicJumpsDependencyAudit10.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerLogarithmicJumpsDependencyAudit10.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerResidueQuotientAudit13B.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerResidueQuotientAudit13B.log",
+      "sha256": "EF044EEEAF4AA7B458D2D22829D60C34A00001DB5A4BA8AF371F08772BF90E93"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerResidueQuotientAudit13B.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerResidueQuotientAudit13B.lean.txt",
+      "sha256": "D548D6CD8F6AE2FED094C6D55B088A2AA8A41F22400F355EF06840B08CDD57CA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerResidueQuotientAudit13B.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerResidueQuotientAudit13B.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerResidueQuotientDependencyAudit13B.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerResidueQuotientDependencyAudit13B.log",
+      "sha256": "D6AA8D0F795D20D8110345663FF5952D1DE668030BD383B2EF4A1725CDA2ED17"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerResidueQuotientDependencyAudit13B.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerResidueQuotientDependencyAudit13B.lean.txt",
+      "sha256": "CD25D7494E27D713B3EC82086942D0CF9A8EBB145B091027C6C8622C61619289"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerResidueQuotientDependencyAudit13B.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerResidueQuotientDependencyAudit13B.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicGenerationAudit18B.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicGenerationAudit18B.log",
+      "sha256": "C2B95B3CBEF10B1B3844B379E8DCCC54BCDF468C26CC14993F7A470624BCAEEF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicGenerationAudit18B.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicGenerationAudit18B.lean.txt",
+      "sha256": "BDE7F9CF024301629B661ED738EE708E50B73B45A33AB12F3706E685D7638A9D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicGenerationAudit18B.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicGenerationAudit18B.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicGenerationDependencyAudit18B.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicGenerationDependencyAudit18B.log",
+      "sha256": "CE667C2E704DFB78FAB8C2B61BC4E62501F9BD84AD8A166CF6502D403F37CBB2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicGenerationDependencyAudit18B.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicGenerationDependencyAudit18B.lean.txt",
+      "sha256": "851BD27A08E796338D8BA66B93CAAD9B761C7E5ACE3263D3AF9801DA5D61EA19"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicGenerationDependencyAudit18B.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerMeromorphicGenerationDependencyAudit18B.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAbelConverseAudit7.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerAbelConverseAudit7.log",
+      "sha256": "C68B05D52D407F7FA2E40E94980CA9AC0DB5CB54143EF7A55DA740B7102FCCA7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAbelConverseAudit7.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerAbelConverseAudit7.lean.txt",
+      "sha256": "C415DEE8F19EACFBD1BCA2BCB9B6EBACAD9779FD2F765D91140477572551E4EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAbelConverseAudit7.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerAbelConverseAudit7.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAbelConverseDependencyAudit7.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerAbelConverseDependencyAudit7.log",
+      "sha256": "40E6DF7F5574B184D697A5E9C0B879B4C0B70546B192AE007DD81947074F50CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAbelConverseDependencyAudit7.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerAbelConverseDependencyAudit7.lean.txt",
+      "sha256": "F096F0E25FA34ECFFF8B34AB3878DC0766E1D4A482D978B54B1DC616942554B3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAbelConverseDependencyAudit7.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerAbelConverseDependencyAudit7.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPointDivisionAudit6.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerPointDivisionAudit6.log",
+      "sha256": "314F54C1736EB1427444D6A91A67399DD72A004F2B5AA618127148B89D256C80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPointDivisionAudit6.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerPointDivisionAudit6.lean.txt",
+      "sha256": "A569637F6D2D636C8E34151EEF309C9E17A008DC94E210BAA5DF6410E1DE3711"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPointDivisionAudit6.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerPointDivisionAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPointDivisionDependencyAudit6.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerPointDivisionDependencyAudit6.log",
+      "sha256": "9A88BE5D0EEBBD5F7C124AD9926B9C05327931B029DD60401C2BE611CADD1584"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPointDivisionDependencyAudit6.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerPointDivisionDependencyAudit6.lean.txt",
+      "sha256": "5A402BB9B2089F9DE4C9DA165327B229B0111FF82CC693C541B432D5151E7EE6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPointDivisionDependencyAudit6.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerPointDivisionDependencyAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeilNondegeneracyAudit5.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerWeilNondegeneracyAudit5.log",
+      "sha256": "C50EF7E353926A292000E8AFDACBEB98F5DED46A1D3D9EC977E73111E0307DA6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeilNondegeneracyAudit5.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerWeilNondegeneracyAudit5.lean.txt",
+      "sha256": "D7F0112A052E85A4A963D93381C54C76FA8D9B0227F9EC3834D43144687FC930"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeilNondegeneracyAudit5.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerWeilNondegeneracyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeilNondegeneracyDependencyAudit5B.log",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerWeilNondegeneracyDependencyAudit5B.log",
+      "sha256": "4B38C0E5DAE8868ED38352C7025C832D809B058BD4EC13AEBD26B56BCFBDCC69"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeilNondegeneracyDependencyAudit5B.lean",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerWeilNondegeneracyDependencyAudit5B.lean.txt",
+      "sha256": "70C8B3CE2689BE7BF066FFD466F05F096F263961E6023CBF4A9F6219399C7D7E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeilNondegeneracyDependencyAudit5B.exit",
+      "path": "Tools/weil-nondegeneracy-20261025-554/SourceOriginalKummerWeilNondegeneracyDependencyAudit5B.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ]
+}

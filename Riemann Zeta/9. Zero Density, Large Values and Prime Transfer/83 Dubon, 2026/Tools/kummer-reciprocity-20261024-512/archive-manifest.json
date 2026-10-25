@@ -1,0 +1,289 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-kummer-reciprocity-promotion-route-512.json",
+      "path": "Tools/kummer-reciprocity-20261024-512/original-kummer-reciprocity-promotion-route-512.json",
+      "sha256": "7F333F80962BB19C56B0FB3D9CFF1199C791B774602132C86842E566857BDFAB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-prescribed-residue-5-scratch-receipt.json",
+      "path": "Tools/kummer-reciprocity-20261024-512/source-original-kummer-prescribed-residue-5-scratch-receipt.json",
+      "sha256": "B27A2AE160842336F837B38569847CC55187E17D7A1E8CC062DF863C40FD2D6B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-meromorphic-path-8-scratch-receipt.json",
+      "path": "Tools/kummer-reciprocity-20261024-512/source-original-kummer-meromorphic-path-8-scratch-receipt.json",
+      "sha256": "C7D0E352095A47A3C1F871089BC23E2687199CEA49D1A14B4EB97B71DA48EADE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-local-exponential-4-scratch-receipt.json",
+      "path": "Tools/kummer-reciprocity-20261024-512/source-original-kummer-local-exponential-4-scratch-receipt.json",
+      "sha256": "CA8154B158ADFA8EC3056CC31C2D7A1FDF1B6B53C02C12C5210385725CB049D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-integral-period-10-scratch-receipt.json",
+      "path": "Tools/kummer-reciprocity-20261024-512/source-original-kummer-integral-period-10-scratch-receipt.json",
+      "sha256": "CF272655C55495B4F881531CD87847E8A630C9B75DE0865FB3513BFDFEB860FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-raw-reciprocity-11-scratch-receipt.json",
+      "path": "Tools/kummer-reciprocity-20261024-512/source-original-kummer-raw-reciprocity-11-scratch-receipt.json",
+      "sha256": "A7CE63FE69D56CF11B0B18A043EBCC234392B534C6082A580B882D9AE82682C9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-covering-map-3-scratch-receipt.json",
+      "path": "Tools/kummer-reciprocity-20261024-512/source-original-kummer-covering-map-3-scratch-receipt.json",
+      "sha256": "889A2738D394A755C88E258A90690D2661E6EE1C08C7EF3DCE22935016BDD4D0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-cell-lift-4-scratch-receipt.json",
+      "path": "Tools/kummer-reciprocity-20261024-512/source-original-kummer-cell-lift-4-scratch-receipt.json",
+      "sha256": "362F29D2719B6CF7AC51599E923D669F3203790079D5DD80815267153F7A9D06"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-cell-family-3-scratch-receipt.json",
+      "path": "Tools/kummer-reciprocity-20261024-512/source-original-kummer-cell-family-3-scratch-receipt.json",
+      "sha256": "235CB389196C4D8A8BF729004F619E26ABED12BFCAD7B173CA9FEDB80F5FA044"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPrescribedResidueAudit5.log",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerPrescribedResidueAudit5.log",
+      "sha256": "49FBDCA0F9FBAA5A741D002DCB8016453976B96FC1B0ED1C644BD92D20053F13"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPrescribedResidueAudit5.lean",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerPrescribedResidueAudit5.lean.txt",
+      "sha256": "136381B1145F9FFE0C682CFDE5C6EA99E59BD3C7BFC3A6C2B2A852C5025DBB9A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPrescribedResidueAudit5.exit",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerPrescribedResidueAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPrescribedResidueDependencyAudit5R2.log",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerPrescribedResidueDependencyAudit5R2.log",
+      "sha256": "EDBB79AEB06B163300B474CDF011C2A147D93225A23C32AA906C4ED5CA31BF75"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPrescribedResidueDependencyAudit5R2.lean",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerPrescribedResidueDependencyAudit5R2.lean.txt",
+      "sha256": "9D452CBE93B8E77BA721BD5C7D8A7F2E21E12C626288802CC38FCD5ACBB12223"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPrescribedResidueDependencyAudit5R2.exit",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerPrescribedResidueDependencyAudit5R2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicPathAudit8.log",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerMeromorphicPathAudit8.log",
+      "sha256": "ED9B33D64308BF4F9BC9AB5B7390D7742F28BA7F0CDBD037B30FDD2B54CC15CA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicPathAudit8.lean",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerMeromorphicPathAudit8.lean.txt",
+      "sha256": "D2B99C9FC2FDE212947578F6A7F7DE63CE4F96EFB5C8A36D5134AD48671E75E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicPathAudit8.exit",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerMeromorphicPathAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicPathDependencyAudit8.log",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerMeromorphicPathDependencyAudit8.log",
+      "sha256": "24F79D0013A351AC37DA2D6A1B5A4B9A91B8B4516B9327CDA9CA83C78E0C7CF2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicPathDependencyAudit8.lean",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerMeromorphicPathDependencyAudit8.lean.txt",
+      "sha256": "6FC8CCB2754868208562C30BF7B13F842DB231DA70F8ACFB5F9B06CD2CD437C6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicPathDependencyAudit8.exit",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerMeromorphicPathDependencyAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerLocalExponentialAudit4.log",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerLocalExponentialAudit4.log",
+      "sha256": "77BC13AA6E366F4F93657F1C22B60EF099E9EC216FDA492D14A1FF203A2D7129"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerLocalExponentialAudit4.lean",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerLocalExponentialAudit4.lean.txt",
+      "sha256": "88EC3333C62CFA2E545373719108D7D8ACB2CB4478CC08A9573C6EA4A81AA807"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerLocalExponentialAudit4.exit",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerLocalExponentialAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerLocalExponentialDependencyAudit4.log",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerLocalExponentialDependencyAudit4.log",
+      "sha256": "05B59622FE77B0FAE107520B80703896A086C3AD5946F74BD374B2BD4D052C90"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerLocalExponentialDependencyAudit4.lean",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerLocalExponentialDependencyAudit4.lean.txt",
+      "sha256": "D475D2EEA9562E7A39C3AFD301557C93739E2E25AF63B02FC46679B269888C9B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerLocalExponentialDependencyAudit4.exit",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerLocalExponentialDependencyAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerIntegralPeriodAudit10.log",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerIntegralPeriodAudit10.log",
+      "sha256": "6982D9B694195A14D2CE8B658E6BC5F515701371B8A1E7388C06204575C84CE3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerIntegralPeriodAudit10.lean",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerIntegralPeriodAudit10.lean.txt",
+      "sha256": "08A898CF12DFB472FE309D3324AD8108A5F90372F009904D9A14AFABAA3E056E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerIntegralPeriodAudit10.exit",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerIntegralPeriodAudit10.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerIntegralPeriodDependencyAudit10.log",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerIntegralPeriodDependencyAudit10.log",
+      "sha256": "A340C8663357584E9C2BDC2CD640B3351594CDD86DDECF45504A12129185CA6A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerIntegralPeriodDependencyAudit10.lean",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerIntegralPeriodDependencyAudit10.lean.txt",
+      "sha256": "DC9424FE909A886D670A0F0D612F2E097F60C3CB3773F2E0D776BF80B572D5D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerIntegralPeriodDependencyAudit10.exit",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerIntegralPeriodDependencyAudit10.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerRawReciprocityAudit11.log",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerRawReciprocityAudit11.log",
+      "sha256": "BE853569AB80C8E5E08E6A915B9B080CC04D6FE113CFE83A88EC695CFF40EA8D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerRawReciprocityAudit11.lean",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerRawReciprocityAudit11.lean.txt",
+      "sha256": "4CD1A1F4E15A7749929659DDE7A39EAF624B4953B912FAF08E85D0F55F8D06DA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerRawReciprocityAudit11.exit",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerRawReciprocityAudit11.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerRawReciprocityDependencyAudit11.log",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerRawReciprocityDependencyAudit11.log",
+      "sha256": "79D75F9909A1326A74DFF83547967257BE4AC2C590DA072B2D6A09125A14C4D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerRawReciprocityDependencyAudit11.lean",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerRawReciprocityDependencyAudit11.lean.txt",
+      "sha256": "61D237B8625EB19EB42F71F8045B8286FCB744497FEDBC8790E55F2963F42626"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerRawReciprocityDependencyAudit11.exit",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerRawReciprocityDependencyAudit11.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoveringMapAudit3R2.log",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCoveringMapAudit3R2.log",
+      "sha256": "AFCCC34EF0161474E675EBB771579A438AEBA44ADBCA5E0DD2B6133CA6DE471B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoveringMapAudit3R2.lean",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCoveringMapAudit3R2.lean.txt",
+      "sha256": "CA0B37854FBCC78092EA76F2C72E06FE14A03ABCC7EAC642C2C04CEB4BC6B687"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoveringMapAudit3R2.exit",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCoveringMapAudit3R2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoveringMapDependencyAudit3R2.log",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCoveringMapDependencyAudit3R2.log",
+      "sha256": "4E0DCB71E50C1C0355B5DDE5BE13B575D66275027315CEFBDFD8DA48A97E4D4E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoveringMapDependencyAudit3R2.lean",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCoveringMapDependencyAudit3R2.lean.txt",
+      "sha256": "3A8DC56BD553CAB4D0BD22A163D6F0C2CCB9AB163720B8E3423D992AD1F0D596"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoveringMapDependencyAudit3R2.exit",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCoveringMapDependencyAudit3R2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellLiftAudit4.log",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellLiftAudit4.log",
+      "sha256": "466265E99808C733D06FCEB6333D2CDEC897632B8BE6EE268E2D1C4857F6F884"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellLiftAudit4.lean",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellLiftAudit4.lean.txt",
+      "sha256": "5E0CFA1A91397EFC1EA0CEDADBBF40429F6D0C0D75661801C9EF39C5B9DB79DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellLiftAudit4.exit",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellLiftAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellLiftDependencyAudit4.log",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellLiftDependencyAudit4.log",
+      "sha256": "623E686309A4111A07D8C6226B59601A510C95AE731C2D839F6B1FC97F6DF583"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellLiftDependencyAudit4.lean",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellLiftDependencyAudit4.lean.txt",
+      "sha256": "57487350DE87578B28C4ECC0002555FDBCDE2F6BCB6BE94860F12D22092D883C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellLiftDependencyAudit4.exit",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellLiftDependencyAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellFamilyAudit3.log",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellFamilyAudit3.log",
+      "sha256": "CF94D6BC01D44085A4487D12F683F8605F282B4AFC89455C678453318241F1C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellFamilyAudit3.lean",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellFamilyAudit3.lean.txt",
+      "sha256": "E35CA5A43721AB76C15F2CE6CB197E3A448F11AB9C4C89C32A4DA2974B92E0D9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellFamilyAudit3.exit",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellFamilyAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellFamilyDependencyAudit3.log",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellFamilyDependencyAudit3.log",
+      "sha256": "F1C30E8A730B42450915F32066F6DDDE780566198F66314BC6865680FE78EA3D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellFamilyDependencyAudit3.lean",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellFamilyDependencyAudit3.lean.txt",
+      "sha256": "FF73D0CD91623C308BF0FDE282329356362D51A5F539C563BEA7AB8B2AE2F3F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellFamilyDependencyAudit3.exit",
+      "path": "Tools/kummer-reciprocity-20261024-512/SourceOriginalKummerCellFamilyDependencyAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ]
+}

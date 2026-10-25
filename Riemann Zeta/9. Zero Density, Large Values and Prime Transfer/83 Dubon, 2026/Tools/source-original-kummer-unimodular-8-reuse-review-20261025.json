@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> integral period correction and raw reciprocity -> exact skew-symmetric unimodular cover word matrix",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplementaryPeriodSpan.lean",
+      "sha256": "FBA158C14404CDF14014473558020E3C0A580E533B59A71077250DA35294E46E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplementaryWordMatrix.lean",
+      "sha256": "1DA37BB344685A4830B1917E24386D02F2130E96277F4A0F1F6C692922796DC5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalUnimodularPeriodPolygon.lean",
+      "sha256": "84032BB48BFD39880BA619FCB86F91A199C3BDF84442249A97D21580E4E021D2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedUnimodularPeriods.lean",
+      "sha256": "48DFAAA7AF3BE80D6F7A83E26FCCC6719DDEC4DD14816F631907A79DAC9E6258"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellPolygonWordAntisymmetry.lean",
+      "sha256": "625F0C06D1269A203BF1A5D845CDBBB7CEC5FFD5A8FA5A439F4424C4A7B50FCD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePeriodMatrixLatticeUnimodularity.lean",
+      "sha256": "9662E1BB6C73CACA6166ED920A3744CB50E5D255011B4F20943130C37FD9D547"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPeriodsFullRealSpan.lean",
+      "sha256": "4AB386C58CF25D89065DE00FC703ADB1264F33FCB011F16C57C7AA4F366872EC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPeriodAnnihilator.lean",
+      "sha256": "D80A124B1D92E4EF1561EECA429775B52A679E9A73BCBE6B180CA9E058C31511"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverFinitePeriodGeneration.lean",
+      "sha256": "EC9F276C9F5BD837EA21CC19B85AD3DA65B77B801992B8AC192EA5DA4F8286AC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRegularCycleData.lean",
+      "sha256": "85CF2497192A9BCED42DE3EB7642CD3368E61E3D164D31BB767AF4F96D579CB5"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-unimodular-route-539.json",
+    "sha256": "07F3863EB2A1D4933B7ED1234599E53890278576F3BF3E3598687E59CC66C953",
+    "review": {
+      "scope": 539,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> integral period correction and raw reciprocity -> exact skew-symmetric unimodular cover word matrix",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplementaryPeriodSpan.lean",
+          "sha256": "FBA158C14404CDF14014473558020E3C0A580E533B59A71077250DA35294E46E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplementaryWordMatrix.lean",
+          "sha256": "1DA37BB344685A4830B1917E24386D02F2130E96277F4A0F1F6C692922796DC5"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalUnimodularPeriodPolygon.lean",
+          "sha256": "84032BB48BFD39880BA619FCB86F91A199C3BDF84442249A97D21580E4E021D2"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedUnimodularPeriods.lean",
+          "sha256": "48DFAAA7AF3BE80D6F7A83E26FCCC6719DDEC4DD14816F631907A79DAC9E6258"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellPolygonWordAntisymmetry.lean",
+          "sha256": "625F0C06D1269A203BF1A5D845CDBBB7CEC5FFD5A8FA5A439F4424C4A7B50FCD"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePeriodMatrixLatticeUnimodularity.lean",
+          "sha256": "9662E1BB6C73CACA6166ED920A3744CB50E5D255011B4F20943130C37FD9D547"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPeriodsFullRealSpan.lean",
+          "sha256": "4AB386C58CF25D89065DE00FC703ADB1264F33FCB011F16C57C7AA4F366872EC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPeriodAnnihilator.lean",
+          "sha256": "D80A124B1D92E4EF1561EECA429775B52A679E9A73BCBE6B180CA9E058C31511"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverFinitePeriodGeneration.lean",
+          "sha256": "EC9F276C9F5BD837EA21CC19B85AD3DA65B77B801992B8AC192EA5DA4F8286AC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRegularCycleData.lean",
+          "sha256": "85CF2497192A9BCED42DE3EB7642CD3368E61E3D164D31BB767AF4F96D579CB5"
+        }
+      ],
+      "shorterRoute": "Reuse the already proved actual cover maximum-principle annihilator, generic cyclic-word antisymmetry and generic lattice determinant theorem unchanged. Direct native integer-span membership supplies complementary coordinates; a small pure real-duality lemma separates linear algebra from large field expressions. The actual Euler count and reverse loop-to-jump generation supply the determinant inputs. No period lattice discreteness, freeness or separate real basis is developed.",
+      "assumptionsToDischarge": "The exact same constructed complementary integer word matrix is skew-symmetric and has unit determinant; its nondegeneracy follows from actual regular-basis periods and the proved geometric generation and Euler count.",
+      "remaining": "Meromorphic loop generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20."
+    }
+  },
+  "discharged": "The exact complementary integer word matrix on the same actual cover dissection is skew-symmetric and unimodular. Actual regular-loop generation gives integer period coordinates, and the existing cover maximum-principle annihilator proves their full real span. Native word antisymmetry and the existing lattice determinant theorem consume the actual jump-period rows, reverse loop-to-jump generation and Euler count. The assembled actual regular-basis consumer supplies every input; no matrix nondegeneracy or unimodularity premise remains.",
+  "remaining": "Meromorphic loop generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-regular-generation-11-scratch-receipt.json",
+    "sha256": "F4083D25749679AD8A1B1E7B2F1E884873B912762993447624DD94F0B3B578B6"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

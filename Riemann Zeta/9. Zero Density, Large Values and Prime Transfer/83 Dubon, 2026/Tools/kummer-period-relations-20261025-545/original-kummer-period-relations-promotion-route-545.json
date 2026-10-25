@@ -1,0 +1,42 @@
+{
+  "recordedUTC": "2026-10-25T12:50:07.176095+00:00",
+  "scopeIds": [
+    534,
+    535,
+    536,
+    537,
+    538,
+    539,
+    540,
+    541,
+    542,
+    543,
+    544
+  ],
+  "receipts": {
+    "source-original-kummer-jump-reduction-4-scratch-receipt.json": "9D9B87F15DE9F3FB834823995D2C87C0AF01F6FB83020674A6B898B487684AD9",
+    "source-original-kummer-signed-primitives-4-scratch-receipt.json": "95EA5C2F8435EF2140BC036B90A891DF165B29D93E9725854D61BE8CEBF10BBD",
+    "source-original-kummer-primitive-polygon-6-scratch-receipt.json": "96AB322985DE94718958C493901F493E20B7F4D2BD4A0CA6E38E95D3177D45C7",
+    "source-original-kummer-period-matrix-7-scratch-receipt.json": "B405083791BF05E0027658A529EA14F70B9A387A1C88897BF5EC5EF3A2E6499A",
+    "source-original-kummer-regular-generation-11-scratch-receipt.json": "F4083D25749679AD8A1B1E7B2F1E884873B912762993447624DD94F0B3B578B6",
+    "source-original-kummer-unimodular-8-scratch-receipt.json": "1BDF051E096F3AA3EFE01BFAA4784AC70F72E1FA68779E45C10223BDE3469687",
+    "source-original-kummer-cell-residues-3-scratch-receipt.json": "B2B95376EC71DA4128241F8076B479A21489260EA75CFB72E2C441C5A6520913",
+    "source-original-kummer-weighted-edges-5-scratch-receipt.json": "402FEF0194ACBBA51D9C5633050C7783E415CF53B52EFE27EF804662C7667EF3",
+    "source-original-kummer-weighted-residues-9-scratch-receipt.json": "B149B65FBB6FFEFC2EB6A174B2ED2BCEF6254D9DF7207CC02C05E6F2F32D1EF9",
+    "source-original-kummer-bilinear-periods-5-scratch-receipt.json": "7397D821795D34355FF74E353F37AB5279BC4C85DCA14112785CB00744E62AEC",
+    "source-original-kummer-third-kind-6-scratch-receipt.json": "9B70502859FF3B812676E4CE6DC64F330A4D0F3CC64ADBEB8B19F1E4E44A6096"
+  },
+  "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+  "chain": "actual residual association -> primitive Frobenius determinant -> nonzero required Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary Kummer point division -> cover Abel converse -> regular/meromorphic loop generation and bilinear/third-kind reciprocity -> actual regular-loop generation, unimodular word matrix and exact Abel-divisor reciprocity",
+  "discharged": "On the same actual marked analytic cover dissection, normalized primitive jumps satisfy circulation and the exact signed polygon formula. Their integer rows in the constructed complementary loop periods are proved. Every actual regular loop has one common integer coefficient vector in those 2g periods. The same word matrix is skew-symmetric and unimodular, using the already proved compact maximum-principle annihilator. The literal cell coefficient has its exact rational-residue simple-pole expansion; native reversed-arc substitution and centered planar residues yield weighted cancellation and the global residue sum. The same actual loops and matrix satisfy the regular bilinear relation and the exact weighted residue relation. The actual chosen Abel paths and path-to-jump theorem supply one integer correction common to all basis coordinates, giving third-kind Abel-divisor reciprocity on those same complementary edges. The final existence consumer retains the actual geometry, normalization, integer cycles, loops, matrix and regular-loop generation without any generation, determinant or reciprocity premise for these proved clauses.",
+  "remaining": "Meromorphic loop generation for all allowed simple-pole differentials and final common reindexing to the prescribed 2g coordinates remain required. Unconditional cover Abel converse and actual auxiliary point-difference division remain open. Arithmetic descent, original pairing nondegeneracy, nonzero required Hecke-component restriction, separate Frobenius determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "reuse": "Each scope records the exact proved sources checked before expansion. Reuse the existing integer circulation/cycle decomposition, polygon word identities, path-atlas jump theorem, compact maximum-principle annihilator, lattice determinant criterion, complex simple-pole pullback, reversed-arc integration and centered planar residue theorem. Reuse the actual cover regularity, logarithmic reading, chosen Abel paths and zero-residue pole removal. Isolate finite algebra from actual-field elaboration without changing proof limits. Retain third-kind reciprocity on the existing complementary edges and defer the redundant intermediate subtype matrix; perform only the final required 2g reindexing. No general Jacobian representability stack, period-discreteness theory, new topological homology, external import or root pin change is introduced.",
+  "promotion": "Qualify only scratch imports and preserve audited mathematical statements, proof bodies and comments. Reconcile exact scratch and production declaration ownership. Completed sequential canonical 7937 verification is a hard prerequisite to production mutation. The unaudited intermediate subtype-matrix route is excluded from this promotion and is not claimed as proved.",
+  "modules": 68,
+  "explicitQueries": 123,
+  "theoremRegistrations": 94,
+  "constructionRegistrations": 29,
+  "exhaustiveScratchSum": 201,
+  "proofValueEdges": 145,
+  "expectedProductionModules": 8005
+}

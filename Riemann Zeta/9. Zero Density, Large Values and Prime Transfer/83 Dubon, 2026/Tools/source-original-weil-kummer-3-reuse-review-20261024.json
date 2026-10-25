@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "modular concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nonzero Hecke-component pairing -> original Weil nondegeneracy -> Kummer cover of the actual nonzero Picard torsion class",
+  "precedingScratchReceipts": {
+    "source-original-tate-cyclotomic-3-scratch-receipt.json": "E5F0CF4D972B0831871A183153869D7303FC3A92A366D334BECC5A21824DE5F3"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPicardGroup.lean",
+      "sha256": "AD2FC4358F4637A2CC79A6D4D9740D77848CBB041DFE5EFB185466EACF2F311A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardGroup.lean",
+      "sha256": "FDD3E9F7FEAB972C7A3E284A89527B61C2442549D29EC437F60EF98570CEA58B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveKummerUnramified.lean",
+      "sha256": "CDE508F69DED8505F024EC2EDCA04B53B252AA135B739473404BCDFBB49A451C"
+    }
+  ],
+  "routeAdjustment": "Reuse the exact original torsion representative and principal-class criterion. Adapt only the short native Kummer fixed-field/root-of-unity argument to derive the literal splitting-field witness. The external nondegeneracy theorem requires Picard divisibility on auxiliary covers, which the original modular-curve Abel comparison does not supply. A direct analytic Weil/period comparison is also absent. Defer wholesale generic-curve or higher-level infrastructure until that exact remaining cover/analytic route is assessed; this entry witness is necessary for the checked Kummer proof and introduces no divisibility or nondegeneracy premise.",
+  "discharged": "Every nonzero actual original Picard n-torsion class yields a degree-zero representative and nonzero principal function with orders n times that divisor, and the function is not an n-th power. Its literal polynomial splitting field contains a root moved by an actual automorphism through a constant unequal to one.",
+  "remaining": "Auxiliary-cover Picard divisibility and evaluation/reciprocity transfer, construction of the detecting second torsion class, Weil nondegeneracy and the nonzero required Hecke-component pairing, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. Scratch only; production promotion and assembled verification pending. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-weil-kummer-route-478.json",
+    "sha256": "6CE19D422801A79B69308358A9949B4B2BE2B03AE7305BC9456FEC8CE5497483",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "modular concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nonzero Hecke-component pairing -> original Weil nondegeneracy -> Kummer cover of the actual nonzero Picard torsion class",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPicardGroup.lean",
+          "sha256": "AD2FC4358F4637A2CC79A6D4D9740D77848CBB041DFE5EFB185466EACF2F311A"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardGroup.lean",
+          "sha256": "FDD3E9F7FEAB972C7A3E284A89527B61C2442549D29EC437F60EF98570CEA58B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\OriginalPrimeKummerWitness.lean",
+          "sha256": "359F37A1E3DD06926DEB1DEFE313F2D45BB8634012B733BDAAB2286858484530"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveKummerUnramified.lean",
+          "sha256": "CDE508F69DED8505F024EC2EDCA04B53B252AA135B739473404BCDFBB49A451C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPicardAbelMap.lean",
+          "sha256": "7890BE46139EB5D9F453A7386A6C0770C7F9E830DAD7A2054493BA7E3613F2C3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_DivisorialWeilPairingData_toHom_injective_of_divisible.lean.txt",
+          "sha256": "C30F9E5A24E8001C1EEA5F1D76B6B2E3C802CF9EA0C872EA26CA8646A4257785"
+        }
+      ],
+      "selectedRoute": "Reuse the exact original torsion representative and principal-class criterion. Adapt only the short native Kummer fixed-field/root-of-unity argument to derive the literal splitting-field witness. The external nondegeneracy theorem requires Picard divisibility on auxiliary covers, which the original modular-curve Abel comparison does not supply. A direct analytic Weil/period comparison is also absent. Defer wholesale generic-curve or higher-level infrastructure until that exact remaining cover/analytic route is assessed; this entry witness is necessary for the checked Kummer proof and introduces no divisibility or nondegeneracy premise.",
+      "discharged": "Every nonzero actual original Picard n-torsion class yields a degree-zero representative and nonzero principal function with orders n times that divisor, and the function is not an n-th power. Its literal polynomial splitting field contains a root moved by an actual automorphism through a constant unequal to one.",
+      "remaining": "Auxiliary-cover Picard divisibility and evaluation/reciprocity transfer, construction of the detecting second torsion class, Weil nondegeneracy and the nonzero required Hecke-component pairing, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. DUB-17--20 OPEN; 16/20. No acceptance gate closes."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

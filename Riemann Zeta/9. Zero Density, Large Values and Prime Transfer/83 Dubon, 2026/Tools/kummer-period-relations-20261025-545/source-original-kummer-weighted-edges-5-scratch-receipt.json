@@ -1,0 +1,75 @@
+{
+  "recordedUTC": "2026-10-25T12:02:13.166324+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceOriginalWeilCoverWeightedArcIntegral",
+    "SourceOriginalWeilCoverReversedArcIntegrand",
+    "SourceOriginalWeilCoverWeightedArcReversal",
+    "SourceOriginalWeilCoverWeightedEdgeCancellation",
+    "SourceOriginalWeilCoverNormalizedWeightedEdges"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverWeightedArcIntegral.lean",
+      "sha256": "A13A95F737A9E7EEE90F1CDBF4F6CC1CD0AFA268877882D58CC42AF281B01AE8",
+      "oleanSha256": "4AE7F15A46EDB1EBDE319E8AC384D250285C7973FEE6A3AA40D4E53D86F8F944"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverReversedArcIntegrand.lean",
+      "sha256": "614CC1990F45A2452FC1DA4DA5BA023EA0FF9C27B2A94D95A130E7A00BC2C6DF",
+      "oleanSha256": "B72DADA4D34D4D712CCF0E296DA800524907F7F43114747663FDE24FD32CB5F9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverWeightedArcReversal.lean",
+      "sha256": "D0B41AEC4B42E822713DB6492808AC1A4F3E0D7E002C4BB0C3DF20630E11E14B",
+      "oleanSha256": "20C57D4046EA87E8BADE581E497F47781812A113B98A7B11D7F821D0D6A0EE31"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverWeightedEdgeCancellation.lean",
+      "sha256": "96018A4960B07E0AF457958BBA3479FCA49C108486BCC53DFCDADBB1466C2EE9",
+      "oleanSha256": "AC1081F6563A39EC5CDE93BE7E5950D647E912600A617E5D86C5887D00E22909"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNormalizedWeightedEdges.lean",
+      "sha256": "BDBBDD995153AA7F88D97A25686618A5A8B62E55FDAA72ED454716E95AC53558",
+      "oleanSha256": "F4A69A1E6957F9ECB1547CEA53A5633312C8FDD899AEAADBCD80DE0B21BA2898"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_arc_integral_extension",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_reversed_arc_integrand",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_reversed_arc_integral",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_edge_cancellation",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalized_weighted_edge_cancellation"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_arc_integral_extension",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_reversed_arc_integrand",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_reversed_arc_integral",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_edge_cancellation",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalized_weighted_edge_cancellation"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeightedEdgesAudit5.log",
+  "logSha256": "073757215D75462EA7ADEF6958BE51C739B839BE2B7FDA9E2AF1A2942A7605EB",
+  "auditSha256": "36CCCEF03460309E53A56B62D97D8F4DEB68057B8A3C22E7E9B230FDC3770BF1",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 5,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 11,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeightedEdgesDependencyAudit5.log",
+  "dependencyAuditSha256": "F134175EE9A88B7079F550447ADEA8D8B6217D48FB1E93897664C4FC83EEC1DB",
+  "dependencyAuditSourceSha256": "00FBC35F3C8B814E7BA4B6F064B2A407101E0E2C3545D1B2789587FA03F1C3A9",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalized_weighted_edge_cancellation"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> weighted residue reciprocity -> weighted paired-edge cancellation",
+  "discharged": "The exact weighted reversal and paired-edge cancellation identities hold for the actual cover differential coefficient. Existing continuous-extension integration and C1 substitution, actual coordinate transformation and paired overlap supply reversal. Constructed primitive derivatives supply continuity and their constant jumps supply the exact edge multiplier. No reversal or cancellation identity is assumed; the explicit primitive data and skeleton regularity are the narrower upstream inputs.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Global residue summation, meromorphic loop generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-weighted-edges-5-reuse-review-20261025.json",
+  "reuseReviewSha256": "D3304F28579DD330B8E845F296C8CD4B02259B528679110AC3ABE9E4642F24D5",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

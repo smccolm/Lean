@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric reciprocity -> fully constructed actual analytic cover dissection",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellDissection.lean",
+      "sha256": "3FE7D6100C044D836931E8A5851655FE9F13ADBD346589AEA0C31FD07FED2D5A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPairingVertices.lean",
+      "sha256": "E400F6DD4CF69D4203311C2F45D39E0A8B11FEC371101405A53F57796F530713"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPairingSides.lean",
+      "sha256": "100D30208BEE7FD0FB20617EE3BDE6C6FA274860C58A8029866BBD30C6B56DE6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellCoverConnectivity.lean",
+      "sha256": "05A15F821094D306201CA4FA3C0520B6863C28702D39916002AFE6105D74A05A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedRawReciprocity.lean",
+      "sha256": "DC027F62924C06F4D04C7D63C2F2DA029FA3213E0D19071CA1B0152718FAD729"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverGlobalIntersection.lean",
+      "sha256": "06E30835E7C0E9BC3D6AA511DA4BB033267A263A8CEF957FDBB83B77AA991045"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverUnramifiedGenus.lean",
+      "sha256": "EDA86B956A88B255979BBA49C173A7C96E2B609A10DA74517E6BF4C45888094D"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-dissection-route-518.json",
+    "sha256": "CFC9FB964D506ED7F479BB58CD064C739D589514B8C482A170D3292E521156C1",
+    "review": {
+      "scope": 518,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric reciprocity -> fully constructed actual analytic cover dissection",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellDissection.lean",
+          "sha256": "3FE7D6100C044D836931E8A5851655FE9F13ADBD346589AEA0C31FD07FED2D5A"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPairingVertices.lean",
+          "sha256": "E400F6DD4CF69D4203311C2F45D39E0A8B11FEC371101405A53F57796F530713"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPairingSides.lean",
+          "sha256": "100D30208BEE7FD0FB20617EE3BDE6C6FA274860C58A8029866BBD30C6B56DE6"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellCoverConnectivity.lean",
+          "sha256": "05A15F821094D306201CA4FA3C0520B6863C28702D39916002AFE6105D74A05A"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedRawReciprocity.lean",
+          "sha256": "DC027F62924C06F4D04C7D63C2F2DA029FA3213E0D19071CA1B0152718FAD729"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverGlobalIntersection.lean",
+          "sha256": "06E30835E7C0E9BC3D6AA511DA4BB033267A263A8CEF957FDBB83B77AA991045"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverUnramifiedGenus.lean",
+          "sha256": "EDA86B956A88B255979BBA49C173A7C96E2B609A10DA74517E6BF4C45888094D"
+        }
+      ],
+      "shorterRoute": "Reuse the proved base pairing/sign equivalence, original endpoint-range vertex construction and finite closed-cover connectivity argument. The original CellDissection type hardcodes the base field, so its full minimal geometric fields are retained in RadialCellDissection and instantiated on the literal cover place space. Exact analytic/nonzero-derivative properties are proved for every resulting coordinate. This avoids changing frozen base modules, a second planar construction, or a new topological connectivity proof.",
+      "assumptionsToDischarge": "Every source geometric dissection field: finite cells/edges/vertices, bijective sides, actual endpoints, complete C1 reversal, coverage, common-point intersection chains and global adjacency. Actual dissection existence, injective actual vertices and analytic nonsingular coordinates are proved with only the original Kummer cover hypotheses.",
+      "remaining": "Marked centering/separation and vertex incidence, Euler/cycle count, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20."
+    }
+  },
+  "discharged": "The actual cover has a complete finite source-format geometric cell dissection: exact side bijection, literal endpoint-range vertices, endpoint orientation laws, full C1 reversal, global coverage, pointwise intersection chains and global adjacency. The cover connectedness, Hausdorffness and finite fibers discharge the adjacency assumptions. The constructed existence theorem proves injective actual vertices and analytic nonsingular coordinates. The structure declarations alone are construction obligations; all their fields are constructed by the consumer.",
+  "remaining": "Marked centering/separation and vertex incidence, Euler/cycle count, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-intersection-chains-5-scratch-receipt.json",
+    "sha256": "30A680081807AFA0C66053909CC7C75E0EE83955502C75127D58B46C24B91B4F"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

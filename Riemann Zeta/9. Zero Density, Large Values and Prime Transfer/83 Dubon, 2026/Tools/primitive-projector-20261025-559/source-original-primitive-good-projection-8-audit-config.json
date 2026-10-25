@@ -1,0 +1,78 @@
+{
+  "modules": [
+    "SourcePrimitiveFiniteGoodEigensystem",
+    "SourceSymmetricSumSquaresKernel",
+    "SourcePrimitiveGoodAnnihilator",
+    "SourceKernelPowerReduction",
+    "SourcePolynomialKernelProjection",
+    "SourceSymmetricKernelReduction",
+    "SourcePolynomialKernelProjectionLaws",
+    "SourcePrimitiveGoodPolynomialProjection"
+  ],
+  "theorems": [
+    "Dubon2026.exists_primitive_finite_good_eigensystem",
+    "Dubon2026.symmetric_sum_squares_eq_zero_iff",
+    "Dubon2026.primitiveGoodShift_selfAdjoint",
+    "Dubon2026.primitiveGoodAnnihilator_selfAdjoint",
+    "Dubon2026.primitiveGoodAnnihilator_eq_zero_iff",
+    "Dubon2026.exists_primitive_good_annihilator",
+    "Dubon2026.end_pow_zero_implies_apply_zero",
+    "Dubon2026.exists_kernel_projector_polynomial_of_isIntegral",
+    "Dubon2026.exists_kernel_projector_polynomial",
+    "Dubon2026.symmetric_apply_eq_zero_of_square",
+    "Dubon2026.kernel_projector_polynomial_fixes",
+    "Dubon2026.kernel_projector_polynomial_range",
+    "Dubon2026.kernel_projector_polynomial_idempotent",
+    "Dubon2026.exists_primitive_good_polynomial_projection"
+  ],
+  "constructions": [
+    "Dubon2026.primitiveGoodShift",
+    "Dubon2026.primitiveGoodAnnihilator"
+  ],
+  "queries": [
+    "Dubon2026.exists_primitive_finite_good_eigensystem",
+    "Dubon2026.symmetric_sum_squares_eq_zero_iff",
+    "Dubon2026.primitiveGoodShift_selfAdjoint",
+    "Dubon2026.primitiveGoodAnnihilator_selfAdjoint",
+    "Dubon2026.primitiveGoodAnnihilator_eq_zero_iff",
+    "Dubon2026.exists_primitive_good_annihilator",
+    "Dubon2026.end_pow_zero_implies_apply_zero",
+    "Dubon2026.exists_kernel_projector_polynomial_of_isIntegral",
+    "Dubon2026.exists_kernel_projector_polynomial",
+    "Dubon2026.symmetric_apply_eq_zero_of_square",
+    "Dubon2026.kernel_projector_polynomial_fixes",
+    "Dubon2026.kernel_projector_polynomial_range",
+    "Dubon2026.kernel_projector_polynomial_idempotent",
+    "Dubon2026.exists_primitive_good_polynomial_projection",
+    "Dubon2026.primitiveGoodShift",
+    "Dubon2026.primitiveGoodAnnihilator"
+  ],
+  "proofEdges": [
+    "Dubon2026.exists_primitive_finite_good_eigensystem",
+    "Dubon2026.symmetric_sum_squares_eq_zero_iff",
+    "Dubon2026.primitiveGoodShift_selfAdjoint",
+    "Dubon2026.primitiveGoodAnnihilator_selfAdjoint",
+    "Dubon2026.primitiveGoodAnnihilator_eq_zero_iff",
+    "Dubon2026.exists_primitive_good_annihilator",
+    "Dubon2026.end_pow_zero_implies_apply_zero",
+    "Dubon2026.exists_kernel_projector_polynomial_of_isIntegral",
+    "Dubon2026.exists_kernel_projector_polynomial",
+    "Dubon2026.symmetric_apply_eq_zero_of_square",
+    "Dubon2026.kernel_projector_polynomial_fixes",
+    "Dubon2026.kernel_projector_polynomial_range",
+    "Dubon2026.kernel_projector_polynomial_idempotent",
+    "Dubon2026.exists_primitive_good_polynomial_projection",
+    "Dubon2026.primitiveCuspForm_good_prime_eigensystem_scalar",
+    "Dubon2026.primitiveCuspForm_eigenvector",
+    "Dubon2026.primitiveCuspForm_coefficient_conj",
+    "Dubon2026.cuspHeckeLinear_coprime_selfAdjoint",
+    "Dubon2026.cuspPeterssonCore",
+    "Finset.exists_inf_le",
+    "LinearMap.exists_monic_and_aeval_eq_zero",
+    "Polynomial.exists_eq_pow_rootMultiplicity_mul_and_not_dvd",
+    "Module.End.aeval_apply_of_mem_apply_eq_smul"
+  ],
+  "roots": [
+    "Dubon2026.exists_primitive_good_polynomial_projection"
+  ]
+}

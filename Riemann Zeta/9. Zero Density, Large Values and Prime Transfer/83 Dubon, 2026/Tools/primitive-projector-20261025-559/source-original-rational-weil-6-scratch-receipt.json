@@ -1,0 +1,99 @@
+{
+  "recordedUTC": "2026-10-25T16:51:25.233323+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceFractionBilinearInjective",
+    "SourceTateRationalInjection",
+    "SourceOriginalRationalWeilNondegeneracy",
+    "SourceOriginalTateWeilSkew",
+    "SourceBilinearBaseChangeLaws",
+    "SourceOriginalRationalWeilLaws"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFractionBilinearInjective.lean",
+      "sha256": "A0C9B7436A338DC9FE26225DDA3A1C00EC1D92B4D794F511FBAB15FB7C64BB80",
+      "oleanSha256": "C70C0828E1F37294622105B4049B3ACE5BB2CDDFF530AAA2690F0E57D0F24DD0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateRationalInjection.lean",
+      "sha256": "756AE564B3C837B75FE9BC3BE7C93D89F75C0A3E1D85A0649A3A46EE9BEA5F17",
+      "oleanSha256": "9AC132726025C5FDCC7E4E1C67FBC6F6B97C571C7EED924C65CF4E570470898A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalWeilNondegeneracy.lean",
+      "sha256": "F773E726DADDD50B31E86F3279F5BC44A915D4DDFEE7CC4E8B0B1A7B1AA25303",
+      "oleanSha256": "E78208771EC32AB41AF0FC2C8C138879C0796B011D20BA832B39DF00EAE90516"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilSkew.lean",
+      "sha256": "61373B4DA5E8D6713B5BB01C639EBFFF0FD13B562CC841E8DC2136675EBF5A0F",
+      "oleanSha256": "F88E26E032ECF0B1C40FC2D6FBC97A64A8FF5A01F4B49F911E0F5890C4F15248"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBilinearBaseChangeLaws.lean",
+      "sha256": "99EE2BD3BFB94E87D18E1E0B304F58211BF93805E978E8BAB347BD15451F8617",
+      "oleanSha256": "AA1341159969D0C5E1F27A9AB567D84E2A4C66698C68C7E6FEF14CCEEB4E06F0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalWeilLaws.lean",
+      "sha256": "811749E1F6316F238EF50B045E2311CC984431EE47AAF810D3D169AD913DBDB8",
+      "oleanSha256": "1C6B6B13DAFD1325019DAFEFFAB6233B56EFCB25A55F3A0BD92BA451D691D86B"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceFraction_bilinear_baseChange_injective",
+    "Dubon2026.TateModule.rational_one_tmul_injective",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_injective",
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_skew",
+    "Dubon2026.SourceFunctionField.originalTateWeilBilinear_self",
+    "Dubon2026.sourceBilinear_baseChange_skew",
+    "Dubon2026.sourceBilinear_baseChange_adjoint",
+    "Dubon2026.sourceBilinear_baseChange_multiplier",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_self",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_hecke",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_cyclotomic",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceFraction_bilinear_baseChange_injective",
+    "Dubon2026.TateModule.rational_one_tmul_injective",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_injective",
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_skew",
+    "Dubon2026.SourceFunctionField.originalTateWeilBilinear_self",
+    "Dubon2026.sourceBilinear_baseChange_skew",
+    "Dubon2026.sourceBilinear_baseChange_adjoint",
+    "Dubon2026.sourceBilinear_baseChange_multiplier",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_self",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_hecke",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_cyclotomic"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalWeilAudit6.log",
+  "logSha256": "E092D97A6DDADC3B77B8D076A99CC27341B99C0B07479DC493FF985A3C6D697C",
+  "auditSha256": "7EA9EA621DB95EF8BB14C2969A28EB31F9B144463419EFE02A62B420FBDE6FC6",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 12,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 19,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalWeilDependencyAudit6.log",
+  "dependencyAuditSha256": "B41AFFFC2DFAE13560944ECA3F224E612E28DF2477DFDD68B9839137C79E889F",
+  "dependencyAuditSourceSha256": "D99F929F737AA1F0645AB74C51742B1600B957B730E2CC5A2B1B6CC1914A8EA2",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_injective",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_self",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_hecke",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_cyclotomic"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> nonzero required component pairing -> actual rational original Weil pairing -> integral original Tate nondegeneracy",
+  "discharged": "Native localization and faithful Tate scalar multiplication prove injectivity of the actual rational original Weil pairing into its literal rational root-valued Tate target. Finite Weil skew symmetry and scalar faithfulness prove integral alternation at every prime, including two; the rational pairing inherits it. Native bilinear base change preserves the actual Hecke adjointness at primes away from the level and the actual cyclotomic Galois multiplier. No nondegeneracy, alternation, adjointness or multiplier premise remains on these actual rational consumers. Primitive-component restriction and determinant remain separate obligations.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Nonzero restriction to the required primitive Hecke component, primitive Frobenius determinant, residual association, automorphy and all-weight continuation remain open; 16/20, DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-rational-weil-6-reuse-review-20261025.json",
+  "reuseReviewSha256": "61F435FCE1DEDAA1EC4400762B2C24AA348BE54CC0B61F7EA078C76ADBA18E49",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

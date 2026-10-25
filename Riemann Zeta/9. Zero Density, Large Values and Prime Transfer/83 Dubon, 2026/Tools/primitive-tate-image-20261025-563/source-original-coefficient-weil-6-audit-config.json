@@ -1,0 +1,67 @@
+{
+  "modules": [
+    "SourceFiniteBilinearBaseChange",
+    "SourceOriginalCoefficientWeilNondegeneracy",
+    "SourceBilinearBaseChangeAlternating",
+    "SourceOriginalCoefficientWeilLaws",
+    "SourceBilinearPolynomialAdjoint",
+    "SourceIdempotentBilinearRestriction"
+  ],
+  "theorems": [
+    "Dubon2026.finite_bilinear_baseChange_injective",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_injective",
+    "Dubon2026.sourceBilinear_baseChange_alternating",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_self",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_hecke",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_cyclotomic",
+    "Dubon2026.bilinear_selfAdjoint_pow",
+    "Dubon2026.bilinear_selfAdjoint_aeval",
+    "Dubon2026.bilinear_selfAdjoint_sum_shifted_squares",
+    "Dubon2026.idempotent_bilinear_restriction_injective"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear"
+  ],
+  "queries": [
+    "Dubon2026.finite_bilinear_baseChange_injective",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_injective",
+    "Dubon2026.sourceBilinear_baseChange_alternating",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_self",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_hecke",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_cyclotomic",
+    "Dubon2026.bilinear_selfAdjoint_pow",
+    "Dubon2026.bilinear_selfAdjoint_aeval",
+    "Dubon2026.bilinear_selfAdjoint_sum_shifted_squares",
+    "Dubon2026.idempotent_bilinear_restriction_injective",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear"
+  ],
+  "proofEdges": [
+    "Dubon2026.finite_bilinear_baseChange_injective",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_injective",
+    "Dubon2026.sourceBilinear_baseChange_alternating",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_self",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_hecke",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_cyclotomic",
+    "Dubon2026.bilinear_selfAdjoint_pow",
+    "Dubon2026.bilinear_selfAdjoint_aeval",
+    "Dubon2026.bilinear_selfAdjoint_sum_shifted_squares",
+    "Dubon2026.idempotent_bilinear_restriction_injective",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_injective",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_self",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_hecke",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_cyclotomic",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalRationalTate_finite",
+    "IsBaseChange.linearMapRight",
+    "Module.Flat.lTensor_preserves_injective_linearMap",
+    "TensorProduct.isBaseChange"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_injective",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_self",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_hecke",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_cyclotomic",
+    "Dubon2026.bilinear_selfAdjoint_aeval",
+    "Dubon2026.bilinear_selfAdjoint_sum_shifted_squares",
+    "Dubon2026.idempotent_bilinear_restriction_injective"
+  ]
+}

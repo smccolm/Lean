@@ -1,0 +1,138 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "actual residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> auxiliary Kummer point division -> analytic cover Abel comparison -> local meromorphic realization of the literal torsion cover",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAnalyticUnitRoots.lean",
+      "sha256": "C08DDD9F02F363798B46F90E15642AEB3E7020E1EA708807DDB71ACA4033FC87"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartFiberData.lean",
+      "sha256": "161A3D374B9F94CBDD8163CA077A9916C072E7F38EDDA91F0E8F6DD9FE86137C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartGermHom.lean",
+      "sha256": "2C4CEA27BB8E4EDF63C41EF25984FCA64E7D577D51DAD5E9E2B4E0B48115E1A8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAnalyticLaurentQuotients.lean",
+      "sha256": "B4F67E14C7EDFFE4587C68E0773AD85AFED8FA282D25D34F0430B0C6B645FDF2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspMeromorphicGerms.lean",
+      "sha256": "A75421FC5D89D6B695F1D12A44CAF0D2562EF7A3CAD0E413AF5FACDA02C41C6A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTaylorQuotientGerms.lean",
+      "sha256": "5EE28407E70FAFA16649298E53C4BDE552B1EB50326AD012C8AF98398F71FD93"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspDiscRealization.lean",
+      "sha256": "71330E8C0EE0AEB04A69CA285F736BE4E9271C01887DE99D1130D0EFD6B39460"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveLaurentPlaces.lean",
+      "sha256": "112C81727024264C85A1B9A180D56E486F8FCF9E7287D4B0B38468CC9D9B60CA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveGaloisFiberTransitivity.lean",
+      "sha256": "24ECB1ADDA1751FA1FBD8FF904117BE17A2CD06A2D5DE32FC7CD2E2F3099BC35"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveOrderOnePlaces.lean",
+      "sha256": "9B0C9CE9F9EFD6CB045AA3B5D2DA19F633036D485F4F77CAAE22C13247F79337"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCuspDiscRealization.lean",
+      "sha256": "7D730C5D17B1B5D8DB70C187CF0CFAB9C0FAD98E4DAA360A9E314C58CDB415CE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveKummerUnramified.lean",
+      "sha256": "CDE508F69DED8505F024EC2EDCA04B53B252AA135B739473404BCDFBB49A451C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilKummerGeometry.lean",
+      "sha256": "02B87ABA8F7C72024F84401D7FCBEA1C2840665A2B3A7CA82C3149DBCA968C0F"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-analytic-entry-route-490.json",
+    "sha256": "DA9357580FB58F4E731D9962887BC6160770F2CF79122EB224CC73EA1AE31D5F",
+    "review": {
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "actual residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> auxiliary Kummer point division -> analytic cover Abel comparison -> local meromorphic realization of the literal torsion cover",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAnalyticUnitRoots.lean",
+          "sha256": "C08DDD9F02F363798B46F90E15642AEB3E7020E1EA708807DDB71ACA4033FC87"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartFiberData.lean",
+          "sha256": "161A3D374B9F94CBDD8163CA077A9916C072E7F38EDDA91F0E8F6DD9FE86137C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartGermHom.lean",
+          "sha256": "2C4CEA27BB8E4EDF63C41EF25984FCA64E7D577D51DAD5E9E2B4E0B48115E1A8"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAnalyticLaurentQuotients.lean",
+          "sha256": "B4F67E14C7EDFFE4587C68E0773AD85AFED8FA282D25D34F0430B0C6B645FDF2"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspMeromorphicGerms.lean",
+          "sha256": "A75421FC5D89D6B695F1D12A44CAF0D2562EF7A3CAD0E413AF5FACDA02C41C6A"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTaylorQuotientGerms.lean",
+          "sha256": "5EE28407E70FAFA16649298E53C4BDE552B1EB50326AD012C8AF98398F71FD93"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspDiscRealization.lean",
+          "sha256": "71330E8C0EE0AEB04A69CA285F736BE4E9271C01887DE99D1130D0EFD6B39460"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveLaurentPlaces.lean",
+          "sha256": "112C81727024264C85A1B9A180D56E486F8FCF9E7287D4B0B38468CC9D9B60CA"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveGaloisFiberTransitivity.lean",
+          "sha256": "24ECB1ADDA1751FA1FBD8FF904117BE17A2CD06A2D5DE32FC7CD2E2F3099BC35"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveOrderOnePlaces.lean",
+          "sha256": "9B0C9CE9F9EFD6CB045AA3B5D2DA19F633036D485F4F77CAAE22C13247F79337"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCuspDiscRealization.lean",
+          "sha256": "7D730C5D17B1B5D8DB70C187CF0CFAB9C0FAD98E4DAA360A9E314C58CDB415CE"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveKummerUnramified.lean",
+          "sha256": "CDE508F69DED8505F024EC2EDCA04B53B252AA135B739473404BCDFBB49A451C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilKummerGeometry.lean",
+          "sha256": "02B87ABA8F7C72024F84401D7FCBEA1C2840665A2B3A7CA82C3149DBCA968C0F"
+        }
+      ],
+      "externalRoutes": [
+        "NYLL actual Jacobian scheme representability and multiplication surjectivity, reviewed in scopes 479/487.",
+        "FLT characteristic-zero point-divisor division via complex Abel comparison, exact proofs and dependencies reviewed in scope 488/488b."
+      ],
+      "selectedNextStep": "Test the narrower torsion-cover analytic entry before building generic curve representability. Since ord(f)=nD, the already-proved original charts and analytic unit-root theorem give local meromorphic n-th roots. Reuse the existing field of convergent Taylor quotients and its uniqueness/order theorems to embed the literal Kummer splitting field locally. This supplies a concrete prerequisite for analytic cover charts; it does not assume that the cover already has Abel comparison or Picard divisibility.",
+      "discharged": "For every place of the literal complex Kummer splitting field of a nonzero original torsion radicand, a convergent Laurent-field embedding extends the original base chart and preserves all actual normalized orders. Its ramification index is one for every nonzero torsion order. The finite-coordinate cover admits a common positive meromorphic disk at every such place, with exact center orders and finite orders for all nonzero functions throughout the disk.",
+      "remaining": "Global compatible cover charts and compact/connected geometry, cover Abel comparison and actual auxiliary point-difference division; original nondegeneracy, component restriction, separate determinant and downstream gates remain open.",
+      "shorterRouteAssessment": "A full Jacobian representability port introduces a scheme/Picard stack absent locally. Extending the original analytic machinery to unramified torsion covers can reuse its existing root, Laurent quotient and finite-map tools; this first local construction is also needed for a direct analytic pairing comparison. No generalization to arbitrary covers is being attempted here. Select the global route only after this exact entry has been checked. The existing algebraic ramification-index-one proof covers prime Kummer extensions; it is retained and not rebuilt. Here all positive torsion orders are needed, and the analytic embeddings themselves are necessary for the cover charts, so the ramification corollary records the normalization already proved by that construction. Native Galois fiber transitivity transports one constructed place to every specified place. Finite-coordinate finite generation and the existing disk intermediate field supply a common disk without inventing a new field of germs.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending; 16/20; DUB-17--20 OPEN."
+    }
+  },
+  "discharged": "For every place of the literal complex Kummer splitting field of a nonzero original torsion radicand, a convergent Laurent-field embedding extends the original base chart and preserves all actual normalized orders. Its ramification index is one for every nonzero torsion order. The finite-coordinate cover admits a common positive meromorphic disk at every such place, with exact center orders and finite orders for all nonzero functions throughout the disk.",
+  "remaining": "Global compatible cover charts and compact/connected geometry, cover Abel comparison and actual auxiliary point-difference division; original nondegeneracy, component restriction, separate determinant and downstream gates remain open.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending; 16/20; DUB-17--20 OPEN.",
+  "auditRepair": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-analytic-entry-audit-kind-repair-490.json",
+    "sha256": "47332DC2E390EDB699030A0EDC4D654C0A99DBAF255F7DBCD21B8420DF61CEE2"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

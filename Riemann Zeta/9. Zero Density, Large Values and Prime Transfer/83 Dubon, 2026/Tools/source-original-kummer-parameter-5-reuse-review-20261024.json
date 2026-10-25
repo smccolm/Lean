@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> auxiliary Kummer point division -> analytic cover Abel comparison -> actual analytic place charts -> residue evaluation and local injectivity",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCuspResidueValues.lean",
+      "sha256": "3B2F1B534316525BBDA54ED4BC59ACBD70682CCBC0BF173963F5F20721E81B44"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCuspEvaluationFamily.lean",
+      "sha256": "8FED450B3B26EDA258A1D444ADB37DE02DA57A6C494204B745AC48F97D637A8C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRationalFunctionEvaluation.lean",
+      "sha256": "530ED4333262D527C5121F216E52E5966CDCAFBFDC0A968AA4CF08F1AE0FDD1D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRationalResidueValues.lean",
+      "sha256": "6867EEF679E559185D713F8EAAF414EA0ACD302069B8767AC95A0ED732F69DEB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilKummerGeometry.lean",
+      "sha256": "02B87ABA8F7C72024F84401D7FCBEA1C2840665A2B3A7CA82C3149DBCA968C0F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCuspChartParameters.lean",
+      "sha256": "BCD327E23AA1D3558FADEF2ECF60C0AEED8BDE392636E603FEDFFF92F0EBEF09"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-analytic-evaluation-route-492.json",
+    "sha256": "0863F323AE64D993F4F62D4BA8AFBE3F3B68495772AD90D8441425967FA38AC9",
+    "review": {
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> auxiliary Kummer point division -> analytic cover Abel comparison -> actual analytic place charts -> residue evaluation and local injectivity",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCuspResidueValues.lean",
+          "sha256": "3B2F1B534316525BBDA54ED4BC59ACBD70682CCBC0BF173963F5F20721E81B44"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCuspEvaluationFamily.lean",
+          "sha256": "8FED450B3B26EDA258A1D444ADB37DE02DA57A6C494204B745AC48F97D637A8C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRationalFunctionEvaluation.lean",
+          "sha256": "530ED4333262D527C5121F216E52E5966CDCAFBFDC0A968AA4CF08F1AE0FDD1D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRationalResidueValues.lean",
+          "sha256": "6867EEF679E559185D713F8EAAF414EA0ACD302069B8767AC95A0ED732F69DEB"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilKummerGeometry.lean",
+          "sha256": "02B87ABA8F7C72024F84401D7FCBEA1C2840665A2B3A7CA82C3149DBCA968C0F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCuspChartParameters.lean",
+          "sha256": "BCD327E23AA1D3558FADEF2ECF60C0AEED8BDE392636E603FEDFFF92F0EBEF09"
+        }
+      ],
+      "selectedNextStep": "Reuse the actual rationalEval already used for cover reciprocity. Adapt the existing cusp proof that positive order of a function minus its normal-form value identifies its residue. The constructed cover family then has genuinely meromorphic residue-evaluation functions with exact orders and an analytic uniformizer coordinate. Shrink using the pinned analytic inverse-function theorem to obtain an injective chart.",
+      "shorterRouteAssessment": "No new evaluation, residue field or function-field model is required. The actual finite-cover residue bijection is already proved. The existing original cusp proof is field-independent after those inputs, so expose just those parameters and instantiate the literal Kummer cover.",
+      "remaining": "Compatible transitions, global compact connected cover geometry, Abel comparison and point division, arithmetic descent to the original coefficient field, nondegeneracy and component determinant remain open.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending; 16/20; DUB-17--20 OPEN.",
+      "discharged": "Every actual place of the literal original complex torsion cover has an injective local parameter family centered at that place. The genuine rational residue evaluation of its uniformizer equals the parameter. All nonzero field-element readings are meromorphic with their exact normalized place orders, and regular readings are analytic. The proof consumes the native cover residue bijection, the constructed place family, equality of residue and analytic normal-form values, and the pinned analytic inverse-function theorem."
+    }
+  },
+  "discharged": "Every actual place of the literal original complex torsion cover has an injective local parameter family centered at that place. The genuine rational residue evaluation of its uniformizer equals the parameter. All nonzero field-element readings are meromorphic with their exact normalized place orders, and regular readings are analytic. The proof consumes the native cover residue bijection, the constructed place family, equality of residue and analytic normal-form values, and the pinned analytic inverse-function theorem.",
+  "remaining": "Compatible transitions, global compact connected cover geometry, Abel comparison and point division, arithmetic descent to the original coefficient field, nondegeneracy and component determinant remain open.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending; 16/20; DUB-17--20 OPEN.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-place-family-6-scratch-receipt.json",
+    "sha256": "3554A42076451F8B850AC1576D3A37DAE58FE05CD6B66E995C88431672716D1D"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

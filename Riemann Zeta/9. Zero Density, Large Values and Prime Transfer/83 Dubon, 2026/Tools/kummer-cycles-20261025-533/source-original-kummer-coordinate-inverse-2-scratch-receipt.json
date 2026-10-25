@@ -1,0 +1,53 @@
+{
+  "recordedUTC": "2026-10-25T09:26:41.068404+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceAnalyticCoordinateInverse",
+    "SourceOriginalWeilCoverCoordinateInverse"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAnalyticCoordinateInverse.lean",
+      "sha256": "5B09DDF7B715273436A9E21643774A478292516A01A5B7FDD6651D863DA98E16",
+      "oleanSha256": "4F13B10DB7EFA5EB325A31D936F0F6B0BBE37A1A82057E1030997FF788C628E4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCoordinateInverse.lean",
+      "sha256": "AE510047EBBA4ED4F54C352A7830283E105EF9434BA624ABB281631B8A2432A2",
+      "oleanSha256": "6F1191377E65450C2747561C7E64DBCA90FCF76BAD4B5EBBF4CD5A545988B68F"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.SheetCover.coordinate_local_inverse",
+    "Dubon2026.SourceFunctionField.SheetCover.analyticAt_coordinate_inverse",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coordinate_inverse"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.SheetCover.coordinate_local_inverse",
+    "Dubon2026.SourceFunctionField.SheetCover.analyticAt_coordinate_inverse",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coordinate_inverse"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoordinateInverseAudit2.log",
+  "logSha256": "C534FAC38BC6FE7AF332ABD5AEAD386E053A39CD9BA3D0F0EAB04712CEB66E2F",
+  "auditSha256": "048E2C500AE2B6E70FAC89970120D83D5F9B4569555D3ED6CBF5DC082D4DB32B",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 3,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 7,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoordinateInverseDependencyAudit2.log",
+  "dependencyAuditSha256": "E9BA5D25AB4F62914D8206DD478F9DAEE9A3C4A09979CAF13A4C8B93745FA8B2",
+  "dependencyAuditSourceSha256": "6C81B72E2C8B51EBBD540CEB13B594296D75C98BB4367A8F7B423737FE0F9C03",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coordinate_inverse"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> coordinate edge integrals and cell primitives -> inverse cell coordinate calculus",
+  "discharged": "Inverse analyticity and the exact reciprocal derivative in an actual cover coordinate follow from its forward analyticity and nonzero derivative in the proved cover chart. Native local inverse differentiation and analyticity from eventual differentiability are reused. The forward conditions are explicit and already supplied for every constructed lifted cell; no inverse-calculus assumption is added.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Coordinate coefficient calculus, coordinate edge-integral comparison, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-coordinate-inverse-2-reuse-review-20261025.json",
+  "reuseReviewSha256": "6A90A2D2375B6A6F2715B9EC57F65B2254384005DBA5677D39C5C8EDC2E25FF5",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

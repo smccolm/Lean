@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> raw geometric reciprocity -> lifted dissection has exactly twice the regular differential dimension many essential cycles -> actual unramified cover genus multiplicity",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateCanonicalDegree.lean",
+      "sha256": "E6E48B592C2C6D0190677D89F4E03F7433BDB0F31944F7E4048438D2A32D8179"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateResidueDuality.lean",
+      "sha256": "D8C72859B889ADFE47D2CF805242EAD5E2A3468BAA76E6368CB5929FF4028C78"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRegularComparison.lean",
+      "sha256": "90EB97779E0C49CEA1EDC0AA088D2DC5EDDDA75EF57D0799D6AE3DBABA80C1C2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveUnramifiedCanonicalDegree.lean",
+      "sha256": "DD0705FDEC1BAAED535668A6FA4A6FE78166E68110B47BCC182BF75FC3034362"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularKummerGenus.lean",
+      "sha256": "1C733C88913BFCE9A71C579518BAB17042548406BF1EA1BE873D2976A49266EA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionGenusCount.lean",
+      "sha256": "75BCB31B9D329CD2D5E01F96565FE41A2E59992751D0D518B21AD9F771AC4245"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCanonicalSupport.lean",
+      "sha256": "0FA1C4DE0E53292A3040CB9ED377837954CA810EAC400C506302BB99E4743917"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilEveryLocalCover.lean",
+      "sha256": "6FA6556E3952AED79BA0226A82AC6D1196602ABF17B56F33BD407DE0056936B9"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-unramified-genus-route-513.json",
+    "sha256": "FF4430D767D11A48F46EFFE14FFD522A447B3D0DB5553321153B7E7CFFB1B125",
+    "review": {
+      "scope": 513,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> raw geometric reciprocity -> lifted dissection has exactly twice the regular differential dimension many essential cycles -> actual unramified cover genus multiplicity",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateCanonicalDegree.lean",
+          "sha256": "E6E48B592C2C6D0190677D89F4E03F7433BDB0F31944F7E4048438D2A32D8179"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateResidueDuality.lean",
+          "sha256": "D8C72859B889ADFE47D2CF805242EAD5E2A3468BAA76E6368CB5929FF4028C78"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRegularComparison.lean",
+          "sha256": "90EB97779E0C49CEA1EDC0AA088D2DC5EDDDA75EF57D0799D6AE3DBABA80C1C2"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveUnramifiedCanonicalDegree.lean",
+          "sha256": "DD0705FDEC1BAAED535668A6FA4A6FE78166E68110B47BCC182BF75FC3034362"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularKummerGenus.lean",
+          "sha256": "1C733C88913BFCE9A71C579518BAB17042548406BF1EA1BE873D2976A49266EA"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionGenusCount.lean",
+          "sha256": "75BCB31B9D329CD2D5E01F96565FE41A2E59992751D0D518B21AD9F771AC4245"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCanonicalSupport.lean",
+          "sha256": "0FA1C4DE0E53292A3040CB9ED377837954CA810EAC400C506302BB99E4743917"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilEveryLocalCover.lean",
+          "sha256": "6FA6556E3952AED79BA0226A82AC6D1196602ABF17B56F33BD407DE0056936B9"
+        }
+      ],
+      "shorterRoute": "The existing unramified canonical-degree pullback already proves the needed ramification-free case. Native finite-coordinate residue duality and the canonical-space linear equivalence identify the regular-differential dimension with the actual H1 genus. Apply these to the original field and literal splitting field, avoiding a new Riemann-Hurwitz development. A generic finite-coordinate deduction avoids expanding the splitting field during typeclass elaboration; all actual coordinate, differential, residue and unramified inputs are discharged by proved original-cover results.",
+      "assumptionsToDischarge": "The exact formula 2-2g(cover) = [cover:base]*(2-2g(base)), where both g are actual dimensions of regular differentials, needed to match the lifted dissection Euler count to the reciprocity matrix size.",
+      "remaining": "Actual global lifted dissection and paired boundary arcs, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20."
+    }
+  },
+  "discharged": "The actual regular-differential dimensions satisfy 2-2g(cover) = [cover:base]*(2-2g(base)). Finite-coordinate residue duality and canonical-space comparison identify the actual dimension with H1 genus; the existing unramified canonical-degree pullback gives the exact multiplicity. No differential-dimension, numerical genus or Riemann-Hurwitz hypothesis remains.",
+  "remaining": "Actual global lifted dissection and paired boundary arcs, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-cell-family-3-scratch-receipt.json",
+    "sha256": "235CB389196C4D8A8BF729004F619E26ABED12BFCAD7B173CA9FEDB80F5FA044"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

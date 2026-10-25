@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> cover Abel converse -> integral-period differential is principal",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularChartReadingAt.lean",
+      "sha256": "BF295E25D05ADC99F7EF010BA7FB31943774DEC3404A69F64AA4D8CE42004A7C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalLocalChartPathPrimitive.lean",
+      "sha256": "08FE98BA383AFBDD917A9B78677EC8BCB47831ACB6AF8E1B9EC2F87213A3CF79"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalLocalChartPathIntegral.lean",
+      "sha256": "52BFC8066939FC91AF761407ADE22568CA4224EF26A99E8A4BA4B8509D7A4F10"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalIntegralPeriodPathIndependence.lean",
+      "sha256": "6F316D0D4ABD953A6C23B82BA89D4441DDB05907775594EE5C51E864B9E7EA3E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPeriodExponential.lean",
+      "sha256": "22FB5AC6E71C2106F433FD08734DCBB8D41AA49B7D3169C62AF9E42023403FF3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPeriodExponentialConsumer.lean",
+      "sha256": "6A9188C4E8C1EBC67B3C517386595EE49C4F3C858D13963E8E52BDADE170C2F3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalExponentialLocalTransport.lean",
+      "sha256": "B30A6F3F17D3AC431CA124095D8A4BA8F0D79C284D888BBC1284EB65F029E49D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalExponentialChartDerivative.lean",
+      "sha256": "AA8DF4A065AABF7E3C98E0A0DEA8A2EC11C157CDBB905CBEC5F09966D68B7483"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalExponentialMeromorphicOrders.lean",
+      "sha256": "E4D61B14982B38C157E7849009F4DC6513B1DEA11AAE319B753322267E981038"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalIntegralPeriodsPrincipal.lean",
+      "sha256": "90365A4965AE6428DF18C0A7EE04D8CAE243C8323952164CE03178F4F4DF12E9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceMeromorphicLogDerivativeComparison.lean",
+      "sha256": "C46D49A8B6FD6B459EBCF56D816FC41D7539B3CA8DD27C826ABDE4A366AE4682"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceChartFiniteAvoidance.lean",
+      "sha256": "81356D74890436B93FCF02874E10D9D42FC44C0F65B4CF03937414450A8C6F47"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLocalExponentialModel.lean",
+      "sha256": "C6C495A1CAAD1C68CDE5D253429F4A3336F73F076491472B6C00D0C78FC6BB9A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDivisorAvoidingPaths.lean",
+      "sha256": "506C92D9715DFE87893B376DE2559A91BF38FE83CC9BD07996FEFF8F5CE1BD68"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicPrincipalDivisor.lean",
+      "sha256": "9CFBE6B315556C772E68922A5076B227C93E6FE634A86DABD77EDADE189633F6"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-integral-period-principality-route-507.json",
+    "sha256": "590BD849DC61155C607DB056FECBBDC677216AF5CB00AE33E0FFF002E8E914D9",
+    "review": {
+      "scope": 507,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> cover Abel converse -> integral-period differential is principal",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularChartReadingAt.lean",
+          "sha256": "BF295E25D05ADC99F7EF010BA7FB31943774DEC3404A69F64AA4D8CE42004A7C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalLocalChartPathPrimitive.lean",
+          "sha256": "08FE98BA383AFBDD917A9B78677EC8BCB47831ACB6AF8E1B9EC2F87213A3CF79"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalLocalChartPathIntegral.lean",
+          "sha256": "52BFC8066939FC91AF761407ADE22568CA4224EF26A99E8A4BA4B8509D7A4F10"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalIntegralPeriodPathIndependence.lean",
+          "sha256": "6F316D0D4ABD953A6C23B82BA89D4441DDB05907775594EE5C51E864B9E7EA3E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPeriodExponential.lean",
+          "sha256": "22FB5AC6E71C2106F433FD08734DCBB8D41AA49B7D3169C62AF9E42023403FF3"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPeriodExponentialConsumer.lean",
+          "sha256": "6A9188C4E8C1EBC67B3C517386595EE49C4F3C858D13963E8E52BDADE170C2F3"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalExponentialLocalTransport.lean",
+          "sha256": "B30A6F3F17D3AC431CA124095D8A4BA8F0D79C284D888BBC1284EB65F029E49D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalExponentialChartDerivative.lean",
+          "sha256": "AA8DF4A065AABF7E3C98E0A0DEA8A2EC11C157CDBB905CBEC5F09966D68B7483"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalExponentialMeromorphicOrders.lean",
+          "sha256": "E4D61B14982B38C157E7849009F4DC6513B1DEA11AAE319B753322267E981038"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalIntegralPeriodsPrincipal.lean",
+          "sha256": "90365A4965AE6428DF18C0A7EE04D8CAE243C8323952164CE03178F4F4DF12E9"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceMeromorphicLogDerivativeComparison.lean",
+          "sha256": "C46D49A8B6FD6B459EBCF56D816FC41D7539B3CA8DD27C826ABDE4A366AE4682"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceChartFiniteAvoidance.lean",
+          "sha256": "81356D74890436B93FCF02874E10D9D42FC44C0F65B4CF03937414450A8C6F47"
+        }
+      ],
+      "shorterRoute": "Use the native path-exponential argument and generic logarithmic-derivative comparison. Actual cover residue data, path primitives, divisor-avoiding paths, local integer-order models and same-field meromorphic comparison are already constructed. No period lattice rank or general Jacobian infrastructure is needed for this implication.",
+      "assumptionsToDischarge": "Global exponential existence, path independence, local meromorphic gluing and exact principal divisor, conditional on explicitly integral loop periods. The period hypothesis is strictly narrower and remains the input for raw reciprocity and regular period correction.",
+      "remaining": "Actual integral-period correction / raw reciprocity, cover Abel converse and point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20."
+    }
+  },
+  "discharged": "An actual cover simple-pole differential with prescribed divisor residues and explicitly integral periods on all divisor-avoiding loops gives that exact principal divisor. Actual avoiding paths construct the exponential; integral periods prove path independence and transport. Local primitives differentiate it, native logarithmic-derivative comparison glues the exact integer-order meromorphic models, and the same-field comparison produces the principal function. No path, exponential, local gluing or meromorphic-comparison premise remains. Integral-period correction is still required for the Abel converse.",
+  "remaining": "Actual integral-period correction / raw reciprocity, cover Abel converse and point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-local-exponential-4-scratch-receipt.json",
+    "sha256": "CA8154B158ADFA8EC3056CC31C2D7A1FDF1B6B53C02C12C5210385725CB049D4"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

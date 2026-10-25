@@ -1,0 +1,60 @@
+import SourceOriginalWeilCoverManifold
+import SourceOriginalWeilCoverChartOrders
+import SourceCurveRationalPlaceSeparation
+import SourceOriginalWeilCoverHausdorff
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeChart_self
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.mem_place_atlas_iff
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_isManifold
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.extPlaceChart_symm_apply
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.extPlaceChart_self
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_place_chart_order
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.continuousOn_placeFamily
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isOpen_placeFamily_image
+#print axioms Dubon2026.SourceCurve.Place.exists_order_separating_function
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_small_place_disc
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_t2Space
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeCore
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeTopology
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeChartedSpace
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceOriginalWeilCoverManifold, `SourceOriginalWeilCoverChartOrders, `SourceCurveRationalPlaceSeparation, `SourceOriginalWeilCoverHausdorff]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeChart_self, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.mem_place_atlas_iff, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_isManifold, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.extPlaceChart_symm_apply, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.extPlaceChart_self, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_place_chart_order, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.continuousOn_placeFamily, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isOpen_placeFamily_image, `Dubon2026.SourceCurve.Place.exists_order_separating_function, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_small_place_disc, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_t2Space]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeCore, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeTopology, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeChartedSpace]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Kummer Manifold postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Kummer Manifold theorems discovered"
+  logInfo m!"SOURCE ORIGINAL KUMMER MANIFOLD AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceOriginalWeilCoverManifold
+#lint in SourceOriginalWeilCoverChartOrders
+#lint in SourceCurveRationalPlaceSeparation
+#lint in SourceOriginalWeilCoverHausdorff

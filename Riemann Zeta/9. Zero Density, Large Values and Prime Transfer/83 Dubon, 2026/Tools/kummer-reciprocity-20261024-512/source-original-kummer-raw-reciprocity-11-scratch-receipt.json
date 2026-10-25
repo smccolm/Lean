@@ -1,0 +1,134 @@
+{
+  "recordedUTC": "2026-10-25T06:13:09.434585+00:00",
+  "date": "2026-10-24 America/Vancouver",
+  "modules": [
+    "SourceOriginalWeilCoverDifferentialReadingFaithfulness",
+    "SourceOriginalWeilCoverRealAbelPotential",
+    "SourceOriginalWeilCoverPeriodAnnihilator",
+    "SourceOriginalWeilCoverPathIntegralLinearCombination",
+    "SourceOriginalWeilCoverFinitePeriodGeneration",
+    "SourcePeriodMatrixInjectivity",
+    "SourceOriginalWeilCoverLoopPeriodInjectivity",
+    "SourcePeriodRawCorrection",
+    "SourceOriginalWeilCoverGeneratorPeriodCorrection",
+    "SourceOriginalWeilCoverIntegralPeriodsFromGenerators",
+    "SourceOriginalWeilCoverAbelConverseFromRawReciprocity"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDifferentialReadingFaithfulness.lean",
+      "sha256": "F106FA2A132D8D2B3236B9B924390CE9D9DEC404A655A499F10E57A558A2CEC0",
+      "oleanSha256": "2B6F4241851C4992D6A6A9FE45D061288D3E0F9FC4662C1B872993CA82FAADBE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRealAbelPotential.lean",
+      "sha256": "9EBB1BB1AF45444E5DBD692F600379B9742A475CB0DB35B3EB12FE3D3D814EA1",
+      "oleanSha256": "86CCFD100F9AFF9C7731F2F15E12E4291200ADBBBE1FDE91F0F4122FB5CCA8CC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPeriodAnnihilator.lean",
+      "sha256": "D80A124B1D92E4EF1561EECA429775B52A679E9A73BCBE6B180CA9E058C31511",
+      "oleanSha256": "744ADF431C0E24D1977533A56345EF8EFEFC67FBA18ED3BD3CDE4ED1E5C3F7EA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPathIntegralLinearCombination.lean",
+      "sha256": "03A553A8691B39D23A74CC7F936422FD68A47C36AB68C81A98A63478C1C77212",
+      "oleanSha256": "CF9D8AE99897B6185E2505B84174397B5548C9F13512BF25CA2718CE94AFB919"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverFinitePeriodGeneration.lean",
+      "sha256": "EC9F276C9F5BD837EA21CC19B85AD3DA65B77B801992B8AC192EA5DA4F8286AC",
+      "oleanSha256": "5EF7657BF55965AA8636C7596E936005420D9FD879477566059E9F8146CD0E54"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodMatrixInjectivity.lean",
+      "sha256": "B7DE520E836E3AB760FFCD2E90275C01E40B09F67B353FC26B1519562E4636FA",
+      "oleanSha256": "9732EF785D2B29E9A2AFD27366501484E4EEA38D7EE408008C4BADEBD4E018AA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLoopPeriodInjectivity.lean",
+      "sha256": "602BB0A5D1CBDAC8ECF2A1B5B91EC347EAF1DECFDD5BA1743468C6E16B1AB0D7",
+      "oleanSha256": "EEA878653A0A9CD5459F4405B57724C723324CDBCCD0570D86EB3D19F713B1D7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodRawCorrection.lean",
+      "sha256": "92B72B63E4FB04D133BFBFDAA4EDBAEA59DF4883BB68A30C40A62B30AB8453D7",
+      "oleanSha256": "D4BCBF6F5D2ECE6724C310B4477765B114485537762D88FB287D65032CDF05DE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverGeneratorPeriodCorrection.lean",
+      "sha256": "741B13C21CA1F3B6C102B20D7D2D3B50C85299F99DD01CA655B16206376ED9AA",
+      "oleanSha256": "F1D7B86E2506A9BE7B86FDD29B503D8DC505050CD6BE3E3695BBF58CC3E57341"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverIntegralPeriodsFromGenerators.lean",
+      "sha256": "620A20570DC07B70A2661A6155210AF80265B0E39CC0C412E827CB3EA7C185A0",
+      "oleanSha256": "08599103B1EABD8C1F4F8C1394EF9C9A136D2366739E6A7AE6FC3FD13BE84505"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverAbelConverseFromRawReciprocity.lean",
+      "sha256": "DB912D0B4DAE9274C2E6DBE467127F005847C02A9E516BECCD507AB6BA3FEB04",
+      "oleanSha256": "7B6EB72E5AB5F0DB5E042691796F0CE4F8E37B74D11E39A0F7A0A85C9E5965D1"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eq_zero_of_readDifferential_eventually_eq_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.realAbelPotential_local",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.continuous_realAbelPotential",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coefficients_eq_zero_of_annihilates_periods",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eq_zero_of_annihilates_periods",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_sum_smul",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_sum_smul",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_period_coordinates",
+    "Dubon2026.SourceFunctionField.PeriodCorrection.matrix_mulVecLin_injective_of_period_annihilator",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_loop_period_matrix_injective",
+    "Dubon2026.SourceFunctionField.PeriodCorrection.exists_integer_correction_of_raw_reciprocity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_generator_period_correction",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_integral_periods_of_generators",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_raw_reciprocity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.realAbelPotential",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverRawThirdKindReciprocity"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eq_zero_of_readDifferential_eventually_eq_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.realAbelPotential_local",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.continuous_realAbelPotential",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coefficients_eq_zero_of_annihilates_periods",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eq_zero_of_annihilates_periods",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_sum_smul",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_sum_smul",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_period_coordinates",
+    "Dubon2026.SourceFunctionField.PeriodCorrection.matrix_mulVecLin_injective_of_period_annihilator",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_loop_period_matrix_injective",
+    "Dubon2026.SourceFunctionField.PeriodCorrection.exists_integer_correction_of_raw_reciprocity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_generator_period_correction",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_integral_periods_of_generators",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_raw_reciprocity"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.realAbelPotential",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverRawThirdKindReciprocity"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerRawReciprocityAudit11.log",
+  "logSha256": "BE853569AB80C8E5E08E6A915B9B080CC04D6FE113CFE83A88EC695CFF40EA8D",
+  "auditSha256": "4CD1A1F4E15A7749929659DDE7A39EAF624B4953B912FAF08E85D0F55F8D06DA",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 31,
+  "linterScopes": 11,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 20,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerRawReciprocityDependencyAudit11.log",
+  "dependencyAuditSha256": "79D75F9909A1326A74DFF83547967257BE4AC2C590DA072B2D6A09125A14C4D6",
+  "dependencyAuditSourceSha256": "61D237B8625EB19EB42F71F8045B8286FCB744497FEDBC8790E55F2963F42626",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_raw_reciprocity"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> cover Abel converse -> integral-period correction from raw reciprocity",
+  "discharged": "The actual cover compact maximum principle proves vanishing of real period annihilators; integer coordinates then prove period-matrix injectivity directly, without a real period basis, discreteness or freeness. Native finite matrix correction and the actual integral laws subtract a regular differential preserving residues and producing integral periods on all avoiding loops. Together with prescribed residues and integral-period principality this proves the conditional Abel converse from the explicit raw geometric loop-generation and bilinear/third-kind reciprocity clauses. CoverRawThirdKindReciprocity only states its still-unproved geometric input; it is not an existence theorem. The geometric clauses, unconditional Abel converse and actual point division remain open.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Actual cover raw reciprocity / geometric dissection, Abel converse and point division, arithmetic descent and the remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-raw-reciprocity-11-reuse-review-20261024.json",
+  "reuseReviewSha256": "148EA800778F21CD7F010FCAFF2F4957EF4B7CE6508EAEDBE601ABC868F67D46",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

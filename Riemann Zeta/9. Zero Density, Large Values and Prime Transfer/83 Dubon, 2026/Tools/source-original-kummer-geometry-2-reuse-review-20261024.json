@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "residual association -> Frobenius determinant -> Hecke-component nonzero pairing -> Weil nondegeneracy -> Kummer detecting class -> actual finite-cover curve structure and closed residues",
+  "precedingScratchReceipts": {
+    "source-original-weil-kummer-3-scratch-receipt.json": "B5B33A2ECB3670542BF6CA18F038F63747EE580A47CA8F060F7FB2C0083C7F85"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateGeometry.lean",
+      "sha256": "6E79C5185E685A85D5E9269CB54A13ECE57417FC7F0B4CDE43F50DD75F4C1B05"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateExtension.lean",
+      "sha256": "3F8517072BD0E3205025466DA836D9DB0A45533B6E2A4219282447592D5A30FD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDifferentialRank.lean",
+      "sha256": "8AD4EE0D765753A2E38188CF02BB69917A77CC19C8996742FB68BFB8130AA8F7"
+    }
+  ],
+  "routeAdjustment": "Reuse the native finite-coordinate tower degree, nonzero original j differential and separable differential base change. Instantiate native finite-coordinate curve geometry and residue algebraicity on the literal Kummer polynomial splitting field. This is common to the algebraic and analytic nondegeneracy routes; do not import a generic external curve construction or add canonical-divisor/general scheme infrastructure here.",
+  "discharged": "The original finite extensions, in particular the actual Kummer splitting field, have a finite transcendental coordinate, genuine curve structure and constant residue fields.",
+  "remaining": "Auxiliary-cover Picard divisibility, evaluation/reciprocity transfer, detecting second torsion class, finite-level Weil nondegeneracy and the required Hecke-component restriction remain open; determinant, residual association, automorphy and all-weight continuation are not established. Scratch only; production promotion and assembled verification pending. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\nyll-reuse-20261024-479-archive-manifest.json",
+    "sha256": "B063EEFBC68FFBF7AC1BF3200918AE80B4694100EA7F2610D8F8355CCB8EECCF"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-finite-kummer-geometry-route-481.json",
+    "sha256": "534958F9540C60D8C9ADEB8D4EC2C66452042975C0D3B45CB176231EAD8FEF84",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "residual association -> Frobenius determinant -> Hecke-component nonzero pairing -> Weil nondegeneracy -> Kummer detecting class -> actual finite-cover curve structure and closed residues",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateGeometry.lean",
+          "sha256": "6E79C5185E685A85D5E9269CB54A13ECE57417FC7F0B4CDE43F50DD75F4C1B05"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateExtension.lean",
+          "sha256": "3F8517072BD0E3205025466DA836D9DB0A45533B6E2A4219282447592D5A30FD"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveSeparableDifferentialBaseChange.lean",
+          "sha256": "8F8ABA66EC99C32CFA1CB381C73B50E5C22F5FEABE751BCC89DF5D5CEB4EDA2E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDifferentialRank.lean",
+          "sha256": "8AD4EE0D765753A2E38188CF02BB69917A77CC19C8996742FB68BFB8130AA8F7"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularKummerCurve.lean",
+          "sha256": "6F15ED3033D248802C218DEE3AA6A1B6B3FE378395C3AE4AFA4EF91423ECB634"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateResidues.lean",
+          "sha256": "356DDF30E51274536FA6B3478789CADBA4CC77CFCC2C2C1873017015C476416C"
+        }
+      ],
+      "selectedRoute": "Reuse the native finite-coordinate tower degree, nonzero original j differential and separable differential base change. Instantiate native finite-coordinate curve geometry and residue algebraicity on the literal Kummer polynomial splitting field. This is common to the algebraic and analytic nondegeneracy routes; do not import a generic external curve construction or add canonical-divisor/general scheme infrastructure here.",
+      "discharged": "The original finite extensions, in particular the actual Kummer splitting field, have a finite transcendental coordinate, genuine curve structure and constant residue fields.",
+      "remaining": "Auxiliary-cover Picard divisibility, evaluation/reciprocity transfer, detecting second torsion class, finite-level Weil nondegeneracy and the required Hecke-component restriction remain open; determinant, residual association, automorphy and all-weight continuation are not established.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. DUB-17--20 OPEN; 16/20. No acceptance gate closes."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

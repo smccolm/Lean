@@ -1,0 +1,66 @@
+{
+  "recordedUTC": "2026-10-25T13:09:50.369926+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceOriginalWeilCoverSimplePoleSpace",
+    "SourceOriginalWeilCoverSimplePoleSpaceFinite",
+    "SourceOriginalWeilCoverSimplePoleBasis"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverSimplePoleSpace.lean",
+      "sha256": "888BB6A472276D67774824884D3B7AA2DFF9F92186474D77A70B2AA1971BAFE2",
+      "oleanSha256": "B1CD380F85B663C28AFAFCD1708F62DCCC63F1CD5D7D607E149F825F11E1EDAD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverSimplePoleSpaceFinite.lean",
+      "sha256": "52154C8ABDD67E4CC2396DDCAC1EF648274D884210A026FA9AD54B2BB3A44E1B",
+      "oleanSha256": "63710BC8D337A8C41FEA85B4B4FE0BAFC54873FD4616C37159A107C0DF03329E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverSimplePoleBasis.lean",
+      "sha256": "6354218978D2F2FF0338C1B51438F98496EBF86255EFD54CC90397901D986BAF",
+      "oleanSha256": "655B3ECF8227C305DE054469B5FC54F5B873303817F11B46835DC1AE75DEEC99"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_regular_of_residue_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_kernel_regular",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.finite_cover_simplePoleSpace",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_simple_pole_basis",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverSimplePoleSpace",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverSimplePoleResidues"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_regular_of_residue_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_kernel_regular",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.finite_cover_simplePoleSpace",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_simple_pole_basis"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverSimplePoleSpace",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverSimplePoleResidues"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerSimplePoleBasisAudit3.log",
+  "logSha256": "EB9579DCDA6FDAA23B5DB9AF1381D6ECC56F1BE8EA8F35AE25D733666337EFE9",
+  "auditSha256": "DFEEABCB049908332BF37D627DCF0937CD555A02A8FE48B97E1FFB206E97CE75",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 21,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 9,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerSimplePoleBasisDependencyAudit3.log",
+  "dependencyAuditSha256": "9D55885E9A72F26D23D92419598E4720E09B53B8B02BC282088C928E252A3F05",
+  "dependencyAuditSourceSha256": "2ADD0AB8FB2050CBEC52B0D504822FE857E2170343E9353A1E7476FB144D6CFD",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_simple_pole_basis"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> meromorphic loop generation for every allowed differential -> finite basis of the actual simple-pole space",
+  "discharged": "The actual cover differentials with at most simple poles in the specified finite set form a finite dimensional complex submodule. The actual residue map has a kernel injecting into the already finite dimensional regular differential space, using zero-residue pole removal. The constructed finite basis spans every allowed actual differential. This removes the finite-family reduction needed for a common meromorphic loop formula; that formula and the unconditional cover Abel converse remain open.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Residue-subtracted cell primitives, their periodic logarithmic boundary terms, meromorphic path generation and extension to all simple-pole forms, final prescribed 2g reindexing, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-simple-pole-basis-3-reuse-review-20261025.json",
+  "reuseReviewSha256": "C413827EB85897DD191CE30596B792D3264B0DBCAD61F58C7E24AB5C53660B5F",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

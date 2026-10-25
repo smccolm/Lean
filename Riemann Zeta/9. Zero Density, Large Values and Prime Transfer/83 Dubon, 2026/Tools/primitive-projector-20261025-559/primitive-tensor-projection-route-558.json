@@ -1,0 +1,42 @@
+{
+  "scope": 558,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive Frobenius determinant -> nonzero required primitive component pairing -> original Tate realization of the nonzero arithmetic primitive idempotent -> faithful coefficient extension of the actual integral Hecke algebra",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralHeckeComplexIndependence.lean",
+      "sha256": "946A7999B04A24B0449B9E7126AE30F15D79CEADADC1F4A602FF64712BD99889"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralHeckeComplexBasis.lean",
+      "sha256": "CE8047624AA57919C059163652D8E45785133A280DAA27B64E669414A32121D1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralHeckeBasisCoordinates.lean",
+      "sha256": "B1ACB5E2DF6F57CEA3C1AC95278F427700C9516674AE02873CE29E4DE676952E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveFieldHeckeCharacter.lean",
+      "sha256": "A6D7297B2CFBD82BC5BD82A7448B93F23D21F4D2A90B1978A6E92504DF6A9B75"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalLatticeCuspHeckeEquiv.lean",
+      "sha256": "38FCFECC925C33AA61D6AEBE4225E7B2B052A4A43ED6D14E0B4D75EEFD39A7CD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalExplicitHeckeRankTwo.lean",
+      "sha256": "8CA1F94C71379D045ECA444BABF142511D8BC832A522C839F7BBAEEBFF77C3E7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveTateSpecialization.lean",
+      "sha256": "EA57AE948FBDCBC737C4FA0673CEA2970D19E0E0866FFD9564CED1FCDA2685B9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGoodProjectionHecke.lean",
+      "sha256": "ED312E71179EC9F17D2D0465F3A0DB20F5A0276088C6D499528C7E4F78184360"
+    }
+  ],
+  "shorterRoute": "Reuse the existing integral Hecke basis and its actual complex linear independence. Native basis scalar extension and the tensor universal property make the literal coefficient realization injective, avoiding a new rational Fourier or coefficient-reality construction. Faithfulness lifts the already proved complex identities into the actual coefficient-field tensor algebra. The original primitive field-valued Hecke character supplies the idempotent normalization one and proves nonzeroness. No full-Hecke adjointness is assumed: the idempotent remains a polynomial in the original finite good-prime annihilator.",
+  "assumptionsToDischarge": "Faithfulness of the actual coefficient-field Hecke realization, arithmetic idempotence and full positive-index scalar identities, and nonzero normalization at the prescribed primitive character.",
+  "remaining": "The literal arithmetic primitive idempotent is nonzero, has the prescribed character value one, and satisfies every positive-index Hecke scalar identity. Its realization on the original rational Tate module, nonzero restriction of the actual Weil pairing, primitive Frobenius determinant, residual association, automorphy and all-weight continuation remain open; 16/20, DUB-17--20 OPEN.",
+  "nextDependencies": "Evaluate this same arithmetic idempotent using the existing original lattice/cusp Hecke equivalence and rational Tate operators after extension to the actual common coefficient field. Reuse the original rank-two realization to identify its image with the prescribed two-dimensional specialization. Transfer actual Weil nondegeneracy through finite-dimensional field extension, retain self-adjointness from the good-prime polynomial construction, and deduce a nonzero component pairing and the cyclotomic determinant."
+}

@@ -1,0 +1,100 @@
+{
+  "recordedUTC": "2026-10-25T18:51:15.439713+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceFiniteBilinearBaseChange",
+    "SourceOriginalCoefficientWeilNondegeneracy",
+    "SourceBilinearBaseChangeAlternating",
+    "SourceOriginalCoefficientWeilLaws",
+    "SourceBilinearPolynomialAdjoint",
+    "SourceIdempotentBilinearRestriction"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteBilinearBaseChange.lean",
+      "sha256": "0CED27246C22EA37EF733968C7B5EBCA668E6D5011B4CD2D133D6B1DEF8B377F",
+      "oleanSha256": "07793C97F7D488ED2EEDABB778925B734F159A24A770151CCB6C31DABD17407E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientWeilNondegeneracy.lean",
+      "sha256": "94B6C143866CB5516FB38C68960B3D9E1053A6D3C7EA3B7E03C43535EB65DE4E",
+      "oleanSha256": "2CAA800264DD672F68B4598866EDF989094B885DF4D837F7FA1F38DFC7FE4D1E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBilinearBaseChangeAlternating.lean",
+      "sha256": "2824AD88F6C0D59A1E4A37DBD78DD70784034159D61DA057A20EEA660BA7E8FF",
+      "oleanSha256": "9A20B23AAD215A80C358683AF607F3C033FC4040DCE8AB223D181F51E8D85F93"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientWeilLaws.lean",
+      "sha256": "BB0DF679C606E81146C0C3028813F1DAC8EC4F7F41C1EBB3412E22DEA8F4CEF5",
+      "oleanSha256": "0E5F5B69A7CA856391323CE2CFF4B284B784B88B0CAFCCB6C66E39EF670038CF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBilinearPolynomialAdjoint.lean",
+      "sha256": "6C9D359C9EB58A9218A48A1CF282A9919159EC9F793C37B5B0539FB29D158279",
+      "oleanSha256": "D7B765748BF2F377C18D14178147B792ED27D11D7232E564678C10A5291C19E9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIdempotentBilinearRestriction.lean",
+      "sha256": "BC0D1AC3F0E479FEAC88229164CD92A8E8298E366B06F58E10743BFB3D1A2833",
+      "oleanSha256": "A13554FA0537AB86A2A9CD2BB8FA1DD2F449531B97B67F4AF99D4DECA602EF81"
+    }
+  ],
+  "queries": [
+    "Dubon2026.finite_bilinear_baseChange_injective",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_injective",
+    "Dubon2026.sourceBilinear_baseChange_alternating",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_self",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_hecke",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_cyclotomic",
+    "Dubon2026.bilinear_selfAdjoint_pow",
+    "Dubon2026.bilinear_selfAdjoint_aeval",
+    "Dubon2026.bilinear_selfAdjoint_sum_shifted_squares",
+    "Dubon2026.idempotent_bilinear_restriction_injective",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.finite_bilinear_baseChange_injective",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_injective",
+    "Dubon2026.sourceBilinear_baseChange_alternating",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_self",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_hecke",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_cyclotomic",
+    "Dubon2026.bilinear_selfAdjoint_pow",
+    "Dubon2026.bilinear_selfAdjoint_aeval",
+    "Dubon2026.bilinear_selfAdjoint_sum_shifted_squares",
+    "Dubon2026.idempotent_bilinear_restriction_injective"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientWeilAudit6.log",
+  "logSha256": "DEA24812F5306382662E73F51E71FD1E2AF98E4A4D11373363176BC3FC0817FA",
+  "auditSha256": "E660327ACC35B69113FBDD2FBAA0B4DE15B71D0935FA76C4AC624F1A101FF087",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 13,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 18,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientWeilDependencyAudit6.log",
+  "dependencyAuditSha256": "F2D47D5E55AA89095907439F60C03A928FFE58B19C309A26900F5D4B75AD1BE4",
+  "dependencyAuditSourceSha256": "D6F3187600343C5E8D7AA57D00FFA7D5300BE42F77B1C44DCCBB8D07E6FD6A9D",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_injective",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_self",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_hecke",
+    "Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_cyclotomic",
+    "Dubon2026.bilinear_selfAdjoint_aeval",
+    "Dubon2026.bilinear_selfAdjoint_sum_shifted_squares",
+    "Dubon2026.idempotent_bilinear_restriction_injective"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> nonzero required primitive component pairing -> actual original Weil pairing over the common coefficient field -> finite-source Hom base change and original rational nondegeneracy",
+  "discharged": "Native finite-source Hom base change and flat tensor injection prove injectivity of the actual original Weil pairing after arbitrary coefficient-field extension, retaining its literal root-valued tensor target. The actual rational Tate finiteness theorem discharges the finite-source input. Alternation, adjointness at primes away from the level and the actual cyclotomic multiplier are preserved. No coefficient-extension nondegeneracy or pairing-law premise remains. Separate supporting lemmas prove adjointness of the precise sum of squared shifted operators and its polynomial, and injectivity on the image of a self-adjoint idempotent. Those generic lemmas retain explicit operator conditions until the actual Tate projector supplies them; they do not yet identify the required nonzero rank-two component.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Arithmetic primitive projector realization on the original Tate module, its nonzero rank-two image identification, primitive determinant, residual association, automorphy and all-weight continuation remain open; 16/20, DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-coefficient-weil-6-reuse-review-20261025.json",
+  "reuseReviewSha256": "18C575B6A171E991D12BBFB141074427535F6043C439D76F1941E64BE43910EC",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

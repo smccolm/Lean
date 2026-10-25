@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> auxiliary Kummer point division -> cover Abel comparison -> compatible analytic cover charts",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartEvaluation.lean",
+      "sha256": "509B5A53E866B1D2948A7BA1E8AA2C004CD1538EEA4CFB508CEFC51069A84767"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartComparison.lean",
+      "sha256": "6144E293B043E021DCF31C48C5DE6B8FFC8995D3867B6A9B07BA2FD9B1652D21"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartDifferenceOrders.lean",
+      "sha256": "DBE765129BED69CB01268CB856516121BD77D0115887EBB959032574898D20F6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartBranchEquality.lean",
+      "sha256": "D5411CEB9EE73AF80F210438DC43FA193C94BE3056DC33F086BB8C1630F97FA5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPlaceChartTransitions.lean",
+      "sha256": "6C0A3D4536C553558603E84EFB1ACD940D82326602092A00FB1A52AAE1A67F99"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPlaceInverseValues.lean",
+      "sha256": "C512298D6A71DFE4BC5314C2772AF27B53F573B482D31E2C382FC544378474D2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveLocalDifferentials.lean",
+      "sha256": "EF1FAD476235EE8D939714B4A7D348417288CD13F2D32E6C869CD024C321A316"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRationalResidueValues.lean",
+      "sha256": "6867EEF679E559185D713F8EAAF414EA0ACD302069B8767AC95A0ED732F69DEB"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-analytic-compatibility-route-493.json",
+    "sha256": "E294B6865C9D9FC6F6BF5771ED1CEAD2A5DB991FD2A5AAFFA3AFEB093001942C",
+    "review": {
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> auxiliary Kummer point division -> cover Abel comparison -> compatible analytic cover charts",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartEvaluation.lean",
+          "sha256": "509B5A53E866B1D2948A7BA1E8AA2C004CD1538EEA4CFB508CEFC51069A84767"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartComparison.lean",
+          "sha256": "6144E293B043E021DCF31C48C5DE6B8FFC8995D3867B6A9B07BA2FD9B1652D21"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartDifferenceOrders.lean",
+          "sha256": "DBE765129BED69CB01268CB856516121BD77D0115887EBB959032574898D20F6"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartBranchEquality.lean",
+          "sha256": "D5411CEB9EE73AF80F210438DC43FA193C94BE3056DC33F086BB8C1630F97FA5"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPlaceChartTransitions.lean",
+          "sha256": "6C0A3D4536C553558603E84EFB1ACD940D82326602092A00FB1A52AAE1A67F99"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPlaceInverseValues.lean",
+          "sha256": "C512298D6A71DFE4BC5314C2772AF27B53F573B482D31E2C382FC544378474D2"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveLocalDifferentials.lean",
+          "sha256": "EF1FAD476235EE8D939714B4A7D348417288CD13F2D32E6C869CD024C321A316"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRationalResidueValues.lean",
+          "sha256": "6867EEF679E559185D713F8EAAF414EA0ACD302069B8767AC95A0ED732F69DEB"
+        }
+      ],
+      "selectedNextStep": "Adapt the already-proved original uniformizer-division branch-uniqueness argument to the literal cover using its existing rational residue evaluation. The newly proved actual parameter theorem discharges the order/regularity inputs. Repeated division forces equality of local analytic readings to every order; connected meromorphic uniqueness then identifies actual valuation rings and places, proving overlap compatibility.",
+      "shorterRouteAssessment": "The original comparison proof is independent of modular generators after exact normalized residue-reading orders and an order-one uniformizer coordinate. Expose only the field and its proved residue bijections. Reuse native order, residue, analytic identity and order-one results. For uniformizer-minus-constant nonvanishing, use the existing order-zero identity for constants directly, avoiding a separate transcendence argument.",
+      "remaining": "Global compact connected cover geometry, cover Abel comparison and actual auxiliary point division, arithmetic descent, original nondegeneracy and component determinant remain open.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending; 16/20; DUB-17--20 OPEN.",
+      "discharged": "Actual uniformizer parameter charts cover every place of the literal complex Kummer torsion cover. Their overlap domains are open and their transition functions are analytic. Repeated division by the actual uniformizer forces equality of regular residue readings to every order, inversion handles poles, and connected meromorphic uniqueness identifies the actual normalized valuation rings and place branches. The actual cover parameters supply every comparison input; no compatibility hypothesis is retained."
+    }
+  },
+  "discharged": "Actual uniformizer parameter charts cover every place of the literal complex Kummer torsion cover. Their overlap domains are open and their transition functions are analytic. Repeated division by the actual uniformizer forces equality of regular residue readings to every order, inversion handles poles, and connected meromorphic uniqueness identifies the actual normalized valuation rings and place branches. The actual cover parameters supply every comparison input; no compatibility hypothesis is retained.",
+  "remaining": "Global compact connected cover geometry, cover Abel comparison and actual auxiliary point division, arithmetic descent, original nondegeneracy and component determinant remain open.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending; 16/20; DUB-17--20 OPEN.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-parameter-5-scratch-receipt.json",
+    "sha256": "6A2EDAE5AC5AAD985D55D6E09ECD05D031006458592E35014E23F56006CDCA78"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

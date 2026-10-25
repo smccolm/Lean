@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> bilinear/third-kind geometric reciprocity -> finite cycle count -> full marked analytic cover dissection with exact Euler genus",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionEulerIdentity.lean",
+      "sha256": "3BA71C62984FFF7153D03C8B6C6FB509FDAFBA3773B76840C662FBBED0CC04B4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPairedCellCounts.lean",
+      "sha256": "5EC12605C2A117BC61738A4877A1C4F022DE26B4604FE6CF42DDF7ACAAE19061"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalEulerCellDissection.lean",
+      "sha256": "F1B23ECF961F10AAEE0D7C9A8765ABC50B3EB96579EA6B6325A18DE1EFD54E62"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverUnramifiedGenus.lean",
+      "sha256": "EDA86B956A88B255979BBA49C173A7C96E2B609A10DA74517E6BF4C45888094D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCompact.lean",
+      "sha256": "3D70B9D04B80CF72E682451696B55065329369ACA52D7EF749ACDBF0B0D2473D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCenteredDissection.lean",
+      "sha256": "2A46721EE3BBF9B56D65F8A2A9AFA4A4256F961D7C1D83C773C94D376A0CD361"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Logic\\Equiv\\Basic.lean",
+      "sha256": "E37073886591383D270B98DE36ACB9FA905C77E0467D0F107911EEA67F201B14"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\SetTheory\\Cardinal\\Finite.lean",
+      "sha256": "1452E251CE0E991B6277FBCECBE9FAC763F2EB2C3EC05F2A58F5EF3F992080F1"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-euler-dissection-route-520.json",
+    "sha256": "0D7998E3B340A01240E54C5BE2AC0512B5065B93A11B91E0ED10F61B13008DD9",
+    "review": {
+      "scope": 520,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> bilinear/third-kind geometric reciprocity -> finite cycle count -> full marked analytic cover dissection with exact Euler genus",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionEulerIdentity.lean",
+          "sha256": "3BA71C62984FFF7153D03C8B6C6FB509FDAFBA3773B76840C662FBBED0CC04B4"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPairedCellCounts.lean",
+          "sha256": "5EC12605C2A117BC61738A4877A1C4F022DE26B4604FE6CF42DDF7ACAAE19061"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalEulerCellDissection.lean",
+          "sha256": "F1B23ECF961F10AAEE0D7C9A8765ABC50B3EB96579EA6B6325A18DE1EFD54E62"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverUnramifiedGenus.lean",
+          "sha256": "EDA86B956A88B255979BBA49C173A7C96E2B609A10DA74517E6BF4C45888094D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCompact.lean",
+          "sha256": "3D70B9D04B80CF72E682451696B55065329369ACA52D7EF749ACDBF0B0D2473D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCenteredDissection.lean",
+          "sha256": "2A46721EE3BBF9B56D65F8A2A9AFA4A4256F961D7C1D83C773C94D376A0CD361"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Logic\\Equiv\\Basic.lean",
+          "sha256": "E37073886591383D270B98DE36ACB9FA905C77E0467D0F107911EEA67F201B14"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\SetTheory\\Cardinal\\Finite.lean",
+          "sha256": "1452E251CE0E991B6277FBCECBE9FAC763F2EB2C3EC05F2A58F5EF3F992080F1"
+        }
+      ],
+      "shorterRoute": "Reuse the proved base dissection Euler identity, exact actual restriction fiber count and unramified canonical-degree/genus multiplicity. Prove that the literal lifted vertex set is precisely the inverse image of the base vertex set, then use the native sigma-fiber equivalence and finite cardinal sum. Cell and edge sheet indices give the remaining factors directly. This avoids a new Riemann-Hurwitz theorem, a topological genus theory, or a second planar count. A small coordinate-family assembly avoids expansion of the literal splitting field while preserving every marked and analytic clause.",
+      "assumptionsToDischarge": "Actual vertex/cell/edge multiplicities and the cover Euler identity for the actual regular-differential genus. The final construction discharges all geometric, marked-centering, separation, incidence, analytic-coordinate and Euler premises simultaneously for every actual basepoint and finite marked set.",
+      "remaining": "Cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20."
+    }
+  },
+  "discharged": "The literal lifted vertex set equals the full inverse image of the base vertex set. Proved finite restriction fibers and native sigma cardinality give exact vertex, edge and cell multiplicities; the proved base Euler identity and unramified genus multiplicity yield the cover Euler identity for its actual regular-differential dimension. The final consumer constructs the complete analytic dissection for every actual basepoint and finite marked set with exact centers, separation, injective vertices, incidence and Euler identity. No geometric or Euler premise remains.",
+  "remaining": "Cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-centered-dissection-4-scratch-receipt.json",
+    "sha256": "0471DF6D369B4AF0B807CC0F50B325C105D16E538597DA4020FA686D74A0EBB6"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

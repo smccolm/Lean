@@ -1,0 +1,53 @@
+import SourceOriginalWeilCoverWeightedArcIntegral
+import SourceOriginalWeilCoverReversedArcIntegrand
+import SourceOriginalWeilCoverWeightedArcReversal
+import SourceOriginalWeilCoverWeightedEdgeCancellation
+import SourceOriginalWeilCoverNormalizedWeightedEdges
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_arc_integral_extension
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_reversed_arc_integrand
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_reversed_arc_integral
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_edge_cancellation
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalized_weighted_edge_cancellation
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceOriginalWeilCoverWeightedArcIntegral, `SourceOriginalWeilCoverReversedArcIntegrand, `SourceOriginalWeilCoverWeightedArcReversal, `SourceOriginalWeilCoverWeightedEdgeCancellation, `SourceOriginalWeilCoverNormalizedWeightedEdges]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_arc_integral_extension, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_reversed_arc_integrand, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_reversed_arc_integral, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_edge_cancellation, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalized_weighted_edge_cancellation]
+  let constructions : Array Name := #[]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Kummer Weighted Edges postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Kummer Weighted Edges theorems discovered"
+  logInfo m!"SOURCE ORIGINAL KUMMER WEIGHTED EDGES AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceOriginalWeilCoverWeightedArcIntegral
+#lint in SourceOriginalWeilCoverReversedArcIntegrand
+#lint in SourceOriginalWeilCoverWeightedArcReversal
+#lint in SourceOriginalWeilCoverWeightedEdgeCancellation
+#lint in SourceOriginalWeilCoverNormalizedWeightedEdges

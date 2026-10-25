@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> normalized actual cell primitives",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPrimitives.lean",
+      "sha256": "45AA16E21D0E3717F975683AA302F10FC73BB4AD596D8B96F67A186B1556EBCB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellRadialPrimitive.lean",
+      "sha256": "7E6F86B0B7D082ACAC5F595BA31AD66CC21419964B36F5B1C3FD92024CC4F084"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellRadialNeighborhood.lean",
+      "sha256": "FFAA4D4A7B2AFF0CFB0410AC99CC11B89CFAD25315591459251E503D2A3602AF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellRegularCoefficient.lean",
+      "sha256": "80D7321CEAA53B7A22F314303F6B1AD2DF044027000A5C1DC08652E5FD46DBC3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCycleLoops.lean",
+      "sha256": "155F761946CDFC1AE39C5522FDF074BF3AE997EB1C6119BF28071AAC5E2831E2"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-cell-primitives-route-530.json",
+    "sha256": "33A07E067EF0F67E3EFFCDD5E7B610CC7CBA49C6386BE889F3243CCD117E3CEA",
+    "review": {
+      "scope": 530,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> normalized actual cell primitives",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPrimitives.lean",
+          "sha256": "45AA16E21D0E3717F975683AA302F10FC73BB4AD596D8B96F67A186B1556EBCB"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellRadialPrimitive.lean",
+          "sha256": "7E6F86B0B7D082ACAC5F595BA31AD66CC21419964B36F5B1C3FD92024CC4F084"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellRadialNeighborhood.lean",
+          "sha256": "FFAA4D4A7B2AFF0CFB0410AC99CC11B89CFAD25315591459251E503D2A3602AF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellRegularCoefficient.lean",
+          "sha256": "80D7321CEAA53B7A22F314303F6B1AD2DF044027000A5C1DC08652E5FD46DBC3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCycleLoops.lean",
+          "sha256": "155F761946CDFC1AE39C5522FDF074BF3AE997EB1C6119BF28071AAC5E2831E2"
+        }
+      ],
+      "shorterRoute": "Reuse the existing radial neighborhood and radial primitive theorems unchanged. Apply them to the proved actual cover coefficient and assemble on the same marked dissection, using its already proved forward coordinates. No general representability or additional integration framework is introduced.",
+      "assumptionsToDischarge": "Existence of open star-convex cell neighborhoods and normalized primitives for every actual regular differential family, on the same actual dissection and cycle-loop witness.",
+      "remaining": "Coordinate edge-integral comparison, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20."
+    }
+  },
+  "discharged": "For every actual regular differential family, the actual constructed marked analytic Euler dissection has open star-convex neighborhoods and normalized primitives of its literal cell coefficients. The same witness retains its tree/cotree, polygon word, integer cycle system and actual cycle loops. No primitive-domain, primitive-existence or extra coordinate assumption remains on the assembled consumer.",
+  "remaining": "Coordinate edge-integral comparison, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-cell-calculus-7-scratch-receipt.json",
+    "sha256": "BF01AAE5E208B13AD2B51727E76FE8355E6C30F7335EB35E775BE2F2C8CA6477"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

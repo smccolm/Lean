@@ -1,0 +1,155 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> meromorphic loop generation -> normalized jumps reduce to cycle integrals and residue periods",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellQuotientArcValues.lean",
+      "sha256": "470A76A2B79625F97887DF256105617F7CAA98BA13262F5A27C5E1F79D5C2C0E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellQuotientVertexValues.lean",
+      "sha256": "9565D935277CB1A39E8406397BDC4702CC8C3768F81B9DA82344139724811405"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellQuotientWordIdentity.lean",
+      "sha256": "4FC76E8A4FF5BC3D3B4B4B96179DC7B1ED5ABD68E5391184575CDD992CF192EC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellQuotientCycleReduction.lean",
+      "sha256": "E5BA92B5FEFFDD75BDAC134C4DA89AB2DDF471A35730FFA4DC4FC61E204C1188"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalResiduePeriodQuotient.lean",
+      "sha256": "3D60E9A094D56328B5FF1CF5DACA1FF5EC4D89BA1A2DB27D9AF960F4F8CAB4C9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalQuotientArcGeometry.lean",
+      "sha256": "A4AEB52E868558B61DCE19631DE520680C0A9C98BC7607A18A1B74B773BC2EB6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicQuotientArcValues.lean",
+      "sha256": "499A947AABB91861D10B7A175FED1CDCDEEDEC513F42A0DB1B9006E774EDF4A5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicJumpPeriodClosure.lean",
+      "sha256": "958F57C30AD6B4DDDB07574A8930F494E7F94AB003A4A214CC1A9319B60EB79D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialWordPeriodMatrix.lean",
+      "sha256": "80DEA84492F7D4AB46D11C3DA1E6AA2F3BB8F61D95BBBDB73982386563645C87"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialFundamentalCycleSystem.lean",
+      "sha256": "B71621775D7C470E00804D98DF11B52D2B2A412B139176FBAB4981D2DBC21440"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNormalizedMeromorphicCycleData.lean",
+      "sha256": "063CAC2D0AE1C9A416ACAB33E84696EA8086DD35A4A7F34E45D076A33D531857"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicBoundaryFTC.lean",
+      "sha256": "C458291DB30E034B9125EFA2659819E9618E60E80C63E9196736DE67E0BCA1E9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialMeromorphicBoundaryJumps.lean",
+      "sha256": "E262A7FB6A71FFF7873274763DFFE78068ADF46A6378FB7BBA2477D6B8C43831"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverSignedPrimitiveArcValues.lean",
+      "sha256": "62F6C8B75AD7AE69F1CC5046EE485FB791A07B6A11BDAB9F338DDBAE68A0859A"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-residue-quotient-route-549b.json",
+    "sha256": "445C1F590D3703B9CB32CA42CF2A20AD93ADF4D6185DE3AECB0ABC0B98C56244",
+    "review": {
+      "scope": 549,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> meromorphic loop generation -> normalized jumps reduce to cycle integrals and residue periods",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellQuotientArcValues.lean",
+          "sha256": "470A76A2B79625F97887DF256105617F7CAA98BA13262F5A27C5E1F79D5C2C0E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellQuotientVertexValues.lean",
+          "sha256": "9565D935277CB1A39E8406397BDC4702CC8C3768F81B9DA82344139724811405"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellQuotientWordIdentity.lean",
+          "sha256": "4FC76E8A4FF5BC3D3B4B4B96179DC7B1ED5ABD68E5391184575CDD992CF192EC"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellQuotientCycleReduction.lean",
+          "sha256": "E5BA92B5FEFFDD75BDAC134C4DA89AB2DDF471A35730FFA4DC4FC61E204C1188"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalResiduePeriodQuotient.lean",
+          "sha256": "3D60E9A094D56328B5FF1CF5DACA1FF5EC4D89BA1A2DB27D9AF960F4F8CAB4C9"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalQuotientArcGeometry.lean",
+          "sha256": "A4AEB52E868558B61DCE19631DE520680C0A9C98BC7607A18A1B74B773BC2EB6"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicQuotientArcValues.lean",
+          "sha256": "499A947AABB91861D10B7A175FED1CDCDEEDEC513F42A0DB1B9006E774EDF4A5"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicJumpPeriodClosure.lean",
+          "sha256": "958F57C30AD6B4DDDB07574A8930F494E7F94AB003A4A214CC1A9319B60EB79D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialWordPeriodMatrix.lean",
+          "sha256": "80DEA84492F7D4AB46D11C3DA1E6AA2F3BB8F61D95BBBDB73982386563645C87"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialFundamentalCycleSystem.lean",
+          "sha256": "B71621775D7C470E00804D98DF11B52D2B2A412B139176FBAB4981D2DBC21440"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNormalizedMeromorphicCycleData.lean",
+          "sha256": "063CAC2D0AE1C9A416ACAB33E84696EA8086DD35A4A7F34E45D076A33D531857"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicBoundaryFTC.lean",
+          "sha256": "C458291DB30E034B9125EFA2659819E9618E60E80C63E9196736DE67E0BCA1E9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialMeromorphicBoundaryJumps.lean",
+          "sha256": "E262A7FB6A71FFF7873274763DFFE78068ADF46A6378FB7BBA2477D6B8C43831"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverSignedPrimitiveArcValues.lean",
+          "sha256": "62F6C8B75AD7AE69F1CC5046EE485FB791A07B6A11BDAB9F338DDBAE68A0859A"
+        }
+      ],
+      "shorterRoute": "Adapt the existing additive arc-value/polygon proof to the already constructed radial dissection. Reuse exact integer word chains, cycle decomposition, native cyclic-index lemmas and radial injectivity. The paired endpoint jump directly gives the negative sign, so another weighted integration-substitution specialization is unnecessary. Integer cycle sums commute with the additive residue quotient; native quotient and subgroup APIs lift the result. Keep the same actual witnesses and source quantifiers, with unchanged proof limits.",
+      "assumptionsToDischarge": "Every normalized actual meromorphic jump belongs to the subgroup generated by the same complementary integer cycle integrals and literal cell residue periods, for the common finite basis of all allowed simple-pole differentials.",
+      "remaining": "Pole-avoiding local logarithmic primitive atlas, meromorphic loop generation and extension to every allowed differential, final prescribed 2g indexing, unconditional cover Abel converse and auxiliary point division, arithmetic descent and DUB-17--20 remain open; 16/20.",
+      "auditRegistrationCorrection": {
+        "reason": "A line of prose beginning theorem solely inside a source comment was misread as a declaration by the registration generator. Re-scan with comments removed: all 25 real public theorems and all 13 constructions remain. The exhaustive module scan and all sixteen linters remain unchanged. No Lean proof source or olean changed.",
+        "failedSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerResidueQuotientAudit13.lean",
+          "sha256": "F6115B580F543530E51B1157E78B3BA4C6B5F55139CC5E21F44DEB179492BEBD"
+        },
+        "failedLog": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerResidueQuotientAudit13.log",
+          "sha256": "6CC7733C825F35EA7CE786039B27EE70C27D796C55FE831FA84338945E5E44FF"
+        },
+        "failedConfig": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-residue-quotient-13-audit-config.json",
+          "sha256": "ED5BC3B56ADBD9F6B12CD3DBB79137486F67A562CCC2F5FF1A180ABC1B0BF0FD"
+        }
+      }
+    }
+  },
+  "discharged": "The exact additive polygon identities apply to the actual logarithmic boundary readings in the quotient by literal cell residue periods. Positive FTC and existing paired endpoint jumps give both signs; native cyclic-index and radial-injectivity facts give all remaining arc-value clauses. The same constructed polygon and fundamental cycles give exact quotient jump formulas. Lifting them proves every actual normalized meromorphic jump belongs to complementary integer cycle integrals plus literal residue periods. The actual existence consumer preserves the same dissection, 2g count, regular loops and all matrix/reciprocity identities. The failed first audit registration, which mistook a comment for a theorem name, is preserved; this successor checks all real declarations and unchanged proof sources.",
+  "remaining": "Pole-avoiding local logarithmic primitive atlas, meromorphic loop generation and extension to every allowed differential, final prescribed 2g indexing, unconditional cover Abel converse and auxiliary point division, arithmetic descent and DUB-17--20 remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-logarithmic-jumps-10-scratch-receipt.json",
+    "sha256": "2EDE025DC130C6B7188D568631A84B4619BE96B8F64CFA31841EBCE6E61FE4E7"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

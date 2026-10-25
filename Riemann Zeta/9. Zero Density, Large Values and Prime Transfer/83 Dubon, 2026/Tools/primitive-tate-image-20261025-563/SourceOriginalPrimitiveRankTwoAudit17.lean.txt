@@ -1,0 +1,107 @@
+import SourceCharacterIdempotentLine
+import SourceCharacterIdempotentRankTwo
+import SourceGeneratedCharacterIdempotent
+import SourceTensorCharacterIdempotent
+import SourceOriginalCuspPadicHeckeMap
+import SourceIntegerCoefficientExtensionCharacter
+import SourcePrimitiveHeckeAlgebraEvaluation
+import SourcePrimitiveHeckeAlgebraProjector
+import SourceRankTwoSurjectiveDescent
+import SourceOriginalCuspTateRankTwo
+import SourceRankTwoBaseChange
+import SourceIntegerCoefficientRankTwo
+import SourceIntertwinedRangeEquiv
+import SourceRankTwoCharacterRange
+import SourcePrimitiveHeckeAlgebraRankTwo
+import SourcePrimitiveOriginalTateRankTwo
+import SourcePrimitiveOriginalTateNondegenerateRankTwo
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.characterIdempotentRankTwoEquiv_symm_val
+#print axioms Dubon2026.characterIdempotentRankTwoEquiv_apply
+#print axioms Dubon2026.character_scalar_action_of_generators
+#print axioms Dubon2026.coefficientTensorCharacter_tmul
+#print axioms Dubon2026.tensor_character_idempotent_scalar
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_word
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_prime
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_character
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_generates
+#print axioms Dubon2026.integerCoefficientExtension_character
+#print axioms Dubon2026.integerCoefficientExtension_eigen_identity
+#print axioms Dubon2026.primitiveHeckeAlgebraEvaluation_integral
+#print axioms Dubon2026.primitiveHeckeAlgebraEvaluation_character
+#print axioms Dubon2026.primitiveHeckeAlgebraProjector_character
+#print axioms Dubon2026.primitiveHeckeAlgebraProjector_eigen
+#print axioms Dubon2026.primitiveHeckeAlgebraProjector_scalar
+#print axioms Dubon2026.rankTwo_surjective_descent
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspTate_rankTwo
+#print axioms Dubon2026.rankTwoBaseChangeEquiv_tmul
+#print axioms Dubon2026.rankTwoBaseChangeEquiv_operator
+#print axioms Dubon2026.integerCoefficient_rankTwo_coordinates
+#print axioms Dubon2026.exists_integerCoefficient_rankTwo_coordinates
+#print axioms Dubon2026.intertwinedRangeEquiv_apply
+#print axioms Dubon2026.rankTwoCharacterRangeEquiv_apply
+#print axioms Dubon2026.exists_primitive_heckeAction_rankTwo
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_rankTwo
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_nondegenerate_rankTwo
+#print axioms Dubon2026.characterIdempotentLeftIdealEquiv
+#print axioms Dubon2026.characterIdempotentRankTwoEquiv
+#print axioms Dubon2026.coefficientTensorCharacter
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap
+#print axioms Dubon2026.primitiveHeckeAlgebraEvaluation
+#print axioms Dubon2026.rankTwoBaseChangeEquiv
+#print axioms Dubon2026.intertwinedRangeEquiv
+#print axioms Dubon2026.rankTwoCharacterRangeEquiv
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceCharacterIdempotentLine, `SourceCharacterIdempotentRankTwo, `SourceGeneratedCharacterIdempotent, `SourceTensorCharacterIdempotent, `SourceOriginalCuspPadicHeckeMap, `SourceIntegerCoefficientExtensionCharacter, `SourcePrimitiveHeckeAlgebraEvaluation, `SourcePrimitiveHeckeAlgebraProjector, `SourceRankTwoSurjectiveDescent, `SourceOriginalCuspTateRankTwo, `SourceRankTwoBaseChange, `SourceIntegerCoefficientRankTwo, `SourceIntertwinedRangeEquiv, `SourceRankTwoCharacterRange, `SourcePrimitiveHeckeAlgebraRankTwo, `SourcePrimitiveOriginalTateRankTwo, `SourcePrimitiveOriginalTateNondegenerateRankTwo]
+  let theorems : Array Name := #[`Dubon2026.characterIdempotentRankTwoEquiv_symm_val, `Dubon2026.characterIdempotentRankTwoEquiv_apply, `Dubon2026.character_scalar_action_of_generators, `Dubon2026.coefficientTensorCharacter_tmul, `Dubon2026.tensor_character_idempotent_scalar, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_word, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_prime, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_character, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_generates, `Dubon2026.integerCoefficientExtension_character, `Dubon2026.integerCoefficientExtension_eigen_identity, `Dubon2026.primitiveHeckeAlgebraEvaluation_integral, `Dubon2026.primitiveHeckeAlgebraEvaluation_character, `Dubon2026.primitiveHeckeAlgebraProjector_character, `Dubon2026.primitiveHeckeAlgebraProjector_eigen, `Dubon2026.primitiveHeckeAlgebraProjector_scalar, `Dubon2026.rankTwo_surjective_descent, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspTate_rankTwo, `Dubon2026.rankTwoBaseChangeEquiv_tmul, `Dubon2026.rankTwoBaseChangeEquiv_operator, `Dubon2026.integerCoefficient_rankTwo_coordinates, `Dubon2026.exists_integerCoefficient_rankTwo_coordinates, `Dubon2026.intertwinedRangeEquiv_apply, `Dubon2026.rankTwoCharacterRangeEquiv_apply, `Dubon2026.exists_primitive_heckeAction_rankTwo, `Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_rankTwo, `Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_nondegenerate_rankTwo]
+  let constructions : Array Name := #[`Dubon2026.characterIdempotentLeftIdealEquiv, `Dubon2026.characterIdempotentRankTwoEquiv, `Dubon2026.coefficientTensorCharacter, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap, `Dubon2026.primitiveHeckeAlgebraEvaluation, `Dubon2026.rankTwoBaseChangeEquiv, `Dubon2026.intertwinedRangeEquiv, `Dubon2026.rankTwoCharacterRangeEquiv]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Primitive Rank Two postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Primitive Rank Two theorems discovered"
+  logInfo m!"SOURCE ORIGINAL PRIMITIVE RANK TWO AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceCharacterIdempotentLine
+#lint in SourceCharacterIdempotentRankTwo
+#lint in SourceGeneratedCharacterIdempotent
+#lint in SourceTensorCharacterIdempotent
+#lint in SourceOriginalCuspPadicHeckeMap
+#lint in SourceIntegerCoefficientExtensionCharacter
+#lint in SourcePrimitiveHeckeAlgebraEvaluation
+#lint in SourcePrimitiveHeckeAlgebraProjector
+#lint in SourceRankTwoSurjectiveDescent
+#lint in SourceOriginalCuspTateRankTwo
+#lint in SourceRankTwoBaseChange
+#lint in SourceIntegerCoefficientRankTwo
+#lint in SourceIntertwinedRangeEquiv
+#lint in SourceRankTwoCharacterRange
+#lint in SourcePrimitiveHeckeAlgebraRankTwo
+#lint in SourcePrimitiveOriginalTateRankTwo
+#lint in SourcePrimitiveOriginalTateNondegenerateRankTwo

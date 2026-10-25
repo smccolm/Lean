@@ -1,0 +1,300 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\6e837e75355538c7f80bab5b956861e86c4eacc2-ATTRIBUTION.md",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-ATTRIBUTION.md",
+      "sha256": "698FB76C8D80B2ED78EBD48B271F2EE5815B3654FB8EC5C699B21B16CE0D9698",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\6e837e75355538c7f80bab5b956861e86c4eacc2-commit.json",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-commit.json",
+      "sha256": "7C917616547172D5FC24AD6AB653A5CC75D95D5EA97AE5E7CCCFF4FE80FA6520",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\6e837e75355538c7f80bab5b956861e86c4eacc2-lake-manifest.json.txt",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-lake-manifest.json.txt",
+      "sha256": "435FE2AB2550E2B82C0A93FD421C96D197D6DD55BC739481E2A4A07E04B979BF",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\6e837e75355538c7f80bab5b956861e86c4eacc2-lean-toolchain",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-lean-toolchain",
+      "sha256": "3AAC669C7A910EC2389F4E4F921B605ADF6EBF2D1E0C9B9CD0BE4D33F3F5DB71",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\6e837e75355538c7f80bab5b956861e86c4eacc2-LICENSE",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-LICENSE",
+      "sha256": "746BC52848EABF8765635FE532E0680756A10B18E7B3FB26E7433AB4EDF34034",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\6e837e75355538c7f80bab5b956861e86c4eacc2-NOTICE",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-NOTICE",
+      "sha256": "42B1821F19A6AAA25E6811D22AB8F2FDC6433D4A37BC810B1CFAFA5B6DD6B0B6",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\6e837e75355538c7f80bab5b956861e86c4eacc2-p2m-tree.json",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-p2m-tree.json",
+      "sha256": "8F7B8FCAE62BC34DB091F5BF2AA988DECA333D4A32258480CE1FBAE5E0C3D690",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\6e837e75355538c7f80bab5b956861e86c4eacc2-root-tree.json",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-root-tree.json",
+      "sha256": "81361A6402B3BC6400288E3894B46F13BB605864DE6928F5A6109FF44FFBC13D",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\6e837e75355538c7f80bab5b956861e86c4eacc2-S_AlgebraicCurve_DivisorialWeilPairingData_toHom_injective_of_divisible.lean.txt",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-S_AlgebraicCurve_DivisorialWeilPairingData_toHom_injective_of_divisible.lean.txt",
+      "sha256": "C30F9E5A24E8001C1EEA5F1D76B6B2E3C802CF9EA0C872EA26CA8646A4257785",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\6e837e75355538c7f80bab5b956861e86c4eacc2-S_AlgebraicCurve_Pic0_exists_jacobianPack_of_isAlgClosed.lean.txt",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-S_AlgebraicCurve_Pic0_exists_jacobianPack_of_isAlgClosed.lean.txt",
+      "sha256": "97E167B44F772FBEFF991FC3B1269550D969530E3F054AA24EF0B32515F5554C",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\6e837e75355538c7f80bab5b956861e86c4eacc2-S_AlgebraicCurve_Pic0_exists_zsmul_eq_of_finiteDimensional_ratFunc_of_forall_pow_eq_self.lean.txt",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-S_AlgebraicCurve_Pic0_exists_zsmul_eq_of_finiteDimensional_ratFunc_of_forall_pow_eq_self.lean.txt",
+      "sha256": "6894E8444EDD1849D1C98B109F7B4A9086112C13CD7D58F1C9CCC6D96D904F92",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\6e837e75355538c7f80bab5b956861e86c4eacc2-sol-tree.json",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/6e837e75355538c7f80bab5b956861e86c4eacc2-sol-tree.json",
+      "sha256": "3B506BB00922F18D66EF82A022FDD7EE56116473FE460FD6FD705098FF4EEC68",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-ATTRIBUTION.md",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-ATTRIBUTION.md",
+      "sha256": "698FB76C8D80B2ED78EBD48B271F2EE5815B3654FB8EC5C699B21B16CE0D9698",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-commit.json",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-commit.json",
+      "sha256": "CCDAA17594DD0B46A2C0686882281B7CDA7D413D71654336D2559D9F973AC4A5",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-lake-manifest.json.txt",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-lake-manifest.json.txt",
+      "sha256": "435FE2AB2550E2B82C0A93FD421C96D197D6DD55BC739481E2A4A07E04B979BF",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-lean-toolchain",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-lean-toolchain",
+      "sha256": "3AAC669C7A910EC2389F4E4F921B605ADF6EBF2D1E0C9B9CD0BE4D33F3F5DB71",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-LICENSE",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-LICENSE",
+      "sha256": "746BC52848EABF8765635FE532E0680756A10B18E7B3FB26E7433AB4EDF34034",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-NOTICE",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-NOTICE",
+      "sha256": "42B1821F19A6AAA25E6811D22AB8F2FDC6433D4A37BC810B1CFAFA5B6DD6B0B6",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-p2m-tree.json",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-p2m-tree.json",
+      "sha256": "8F7B8FCAE62BC34DB091F5BF2AA988DECA333D4A32258480CE1FBAE5E0C3D690",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-root-tree.json",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-root-tree.json",
+      "sha256": "7354364AE6AF5EF3737F7807677CF21B77C41E582A66E9932791E28A8D9EA80B",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-S_AlgebraicCurve_DivisorialWeilPairingData_toHom_injective_of_divisible.lean.txt",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-S_AlgebraicCurve_DivisorialWeilPairingData_toHom_injective_of_divisible.lean.txt",
+      "sha256": "C30F9E5A24E8001C1EEA5F1D76B6B2E3C802CF9EA0C872EA26CA8646A4257785",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-S_AlgebraicCurve_Pic0_exists_jacobianPack_of_isAlgClosed.lean.txt",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-S_AlgebraicCurve_Pic0_exists_jacobianPack_of_isAlgClosed.lean.txt",
+      "sha256": "97E167B44F772FBEFF991FC3B1269550D969530E3F054AA24EF0B32515F5554C",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-S_AlgebraicCurve_Pic0_exists_zsmul_eq_of_finiteDimensional_ratFunc_of_forall_pow_eq_self.lean.txt",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-S_AlgebraicCurve_Pic0_exists_zsmul_eq_of_finiteDimensional_ratFunc_of_forall_pow_eq_self.lean.txt",
+      "sha256": "6894E8444EDD1849D1C98B109F7B4A9086112C13CD7D58F1C9CCC6D96D904F92",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-sol-tree.json",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-sol-tree.json",
+      "sha256": "3B506BB00922F18D66EF82A022FDD7EE56116473FE460FD6FD705098FF4EEC68",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\attribution-download-receipt.json",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/attribution-download-receipt.json",
+      "sha256": "3B865B65C5066203535597BD356B076F41CE1626940C4CFD66C149786957DA45",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\branches.json",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/branches.json",
+      "sha256": "F8060422F1DD89FB60C27DF6757068BA006D3E8586C161FBBDB81515F4D35BDF",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\download-receipt.json",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/download-receipt.json",
+      "sha256": "BD94210B5073FB1706CD7090F66E5AC74813E0777ECF5AC35C6A3C0CD131DC23",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-487\\main-ref.json",
+      "path": "Tools/kummer-reuse-20261024-489/flt-ports-487/main-ref.json",
+      "sha256": "596CECC868B1500E839458CCF44C48F9781538056B04869C10B1338C2D328417",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-divisibility-routes-488\\download-receipt.json",
+      "path": "Tools/kummer-reuse-20261024-489/flt-divisibility-routes-488/download-receipt.json",
+      "sha256": "F8309186FEEF62AAD752E1A1273EE9F4809CF4B0183C8B1F8F5F490466AC3345",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-divisibility-routes-488\\S_AlgebraicCurve_DivisorialWeilPairingData_toHom_injective_of_isCurveOver.lean.txt",
+      "path": "Tools/kummer-reuse-20261024-489/flt-divisibility-routes-488/S_AlgebraicCurve_DivisorialWeilPairingData_toHom_injective_of_isCurveOver.lean.txt",
+      "sha256": "F3BA1866D28C8AAA7ACE207818ADAACDEEA919CC4CE54DCB1FDDF5681059E765",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-divisibility-routes-488\\S_AlgebraicCurve_Pic0_exists_injective_addMonoidHom_torsion_dlog.lean.txt",
+      "path": "Tools/kummer-reuse-20261024-489/flt-divisibility-routes-488/S_AlgebraicCurve_Pic0_exists_injective_addMonoidHom_torsion_dlog.lean.txt",
+      "sha256": "664EDBF3C518A3297FF8C84065F151FC2EE9AC8B95AFE8F4E8580D10A9F7DB74",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-divisibility-routes-488\\S_AlgebraicCurve_Pic0_exists_nsmul_eq.lean.txt",
+      "path": "Tools/kummer-reuse-20261024-489/flt-divisibility-routes-488/S_AlgebraicCurve_Pic0_exists_nsmul_eq.lean.txt",
+      "sha256": "8C081A339FF3EE42371FD9A072DAD43C0060064481830304018774AD44B6DADA",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-divisibility-routes-488\\S_AlgebraicCurve_Pic0_exists_zsmul_eq_of_finiteDimensional_ratFunc.lean.txt",
+      "path": "Tools/kummer-reuse-20261024-489/flt-divisibility-routes-488/S_AlgebraicCurve_Pic0_exists_zsmul_eq_of_finiteDimensional_ratFunc.lean.txt",
+      "sha256": "9B627FE076BD379435C9EBED0AFF7278083A1EBB209BF333A56F1276E8C93D4E",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-point-division-routes-488b\\download-receipt.json",
+      "path": "Tools/kummer-reuse-20261024-489/flt-point-division-routes-488b/download-receipt.json",
+      "sha256": "16F8AFEA66E0564D9C264688C273FD9A53418B986C534EBB1C28E557C468A1CD",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-point-division-routes-488b\\S_AlgebraicCurve_Place_exists_natCast_dvd_ord_sub_single_sub_single.lean.txt",
+      "path": "Tools/kummer-reuse-20261024-489/flt-point-division-routes-488b/S_AlgebraicCurve_Place_exists_natCast_dvd_ord_sub_single_sub_single.lean.txt",
+      "sha256": "7DD9FFA332055D1359861DE279CFE2B0F0EEBE9035B3095E6EAF8D5B3519E6EC",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-point-division-routes-488b\\S_AlgebraicCurve_Place_exists_natCast_dvd_ord_sub_single_sub_single_complex.lean.txt",
+      "path": "Tools/kummer-reuse-20261024-489/flt-point-division-routes-488b/S_AlgebraicCurve_Place_exists_natCast_dvd_ord_sub_single_sub_single_complex.lean.txt",
+      "sha256": "A314C44652154FF209F30343A81E93BB2C5F9BDCE70CAF05E7A0736320D3CE12",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-detection-482\\download-receipt.json",
+      "path": "Tools/kummer-reuse-20261024-489/nyll-detection-482/download-receipt.json",
+      "sha256": "FA1D46BE4E0CE0E79F57C7CC6D017A4F5B8832C65F0EFAD1E4DB73767B3AB0B5",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-detection-482\\LICENSE.txt",
+      "path": "Tools/kummer-reuse-20261024-489/nyll-detection-482/LICENSE.txt",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-detection-482\\NOTICE.txt",
+      "path": "Tools/kummer-reuse-20261024-489/nyll-detection-482/NOTICE.txt",
+      "sha256": "05FA26E5335FA16519AF1B179BC1EBCE5DA0D6B208CFF68241B5540C1878B59C",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-detection-482\\Nyll\\JacobianVarieties\\WeilPairing\\DivisionDifference.lean.txt",
+      "path": "Tools/kummer-reuse-20261024-489/nyll-detection-482/Nyll/JacobianVarieties/WeilPairing/DivisionDifference.lean.txt",
+      "sha256": "82C7CBA135E556E56CA99AC368A70DB8803B946EE5DBAD9305E504EC1492A75D",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-detection-482\\Nyll\\JacobianVarieties\\WeilPairing\\DivisorialPairingPerfect.lean.txt",
+      "path": "Tools/kummer-reuse-20261024-489/nyll-detection-482/Nyll/JacobianVarieties/WeilPairing/DivisorialPairingPerfect.lean.txt",
+      "sha256": "DBF69D33455ABFC112A84E1495C2A656B9D1B96693FCE9900D31B844E23446A8",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-detection-482\\Nyll\\JacobianVarieties\\WeilPairing\\DivisorialPairingToHomInjectiveDivisible.lean.txt",
+      "path": "Tools/kummer-reuse-20261024-489/nyll-detection-482/Nyll/JacobianVarieties/WeilPairing/DivisorialPairingToHomInjectiveDivisible.lean.txt",
+      "sha256": "96F191C9106B322195766562F08E09788FF76CE4E14E56D8D1B2CD9ADD5EE327",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\flt-ports-review-487.json",
+      "path": "Tools/flt-ports-review-487.json",
+      "sha256": "7C4787F65C16C24B03A8F1C0B91AFD44F0879CC2ED65F2052F1314F48C5A76AF",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-kummer-detection-review-482.json",
+      "path": "Tools/nyll-kummer-detection-review-482.json",
+      "sha256": "34A73CEA2AB13B28B051EA5F2648FA8AE304ADDF1D1EAD8B91EA8B52905C66EF",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-detection-dependency-repair-486.json",
+      "path": "Tools/source-original-kummer-detection-dependency-repair-486.json",
+      "sha256": "25D338E790677D3C6F33138DF583CAB26A3FD74F23F6F05366E421E62F18D6EE",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-tate-detection-assembled-import-repair-486.json",
+      "path": "Tools/source-original-tate-detection-assembled-import-repair-486.json",
+      "sha256": "A9833366F8961D0D5F32EB3FB83612A6907702A28908A3C46DD2AA4A21944D23",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-kummer-detection-promotion-route-489.json",
+      "path": "Tools/original-kummer-detection-promotion-route-489.json",
+      "sha256": "7034826CB4991D434EE71BB53E3ECAA12A91FDFB49351C6D87BA84A30DC8CB6C",
+      "role": "Tools"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Dubon Reuse Search 2026-10-24 FLT provenance supplement.md",
+      "path": "Dubon Reuse Search 2026-10-24 FLT provenance supplement.md",
+      "sha256": "4280D98F18B1DEC747093C8BD9074590329CCEFB17CF8F815A9E1DFEFBBF1B8E",
+      "role": "documentation"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\Dubon Reuse Search 2026-10-24 Divisibility Routes.md",
+      "path": "Dubon Reuse Search 2026-10-24 Divisibility Routes.md",
+      "sha256": "E8AB0F107F5E4A3FDEEA001E1DDE13A6EA9B2D562E8F182E4B401F0465CB1BAB",
+      "role": "documentation"
+    }
+  ],
+  "externalLocalBuild": false,
+  "externalImport": false
+}

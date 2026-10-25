@@ -1,0 +1,76 @@
+import SourceOriginalWeilCoverDifferentialReadingFaithfulness
+import SourceOriginalWeilCoverRealAbelPotential
+import SourceOriginalWeilCoverPeriodAnnihilator
+import SourceOriginalWeilCoverPathIntegralLinearCombination
+import SourceOriginalWeilCoverFinitePeriodGeneration
+import SourcePeriodMatrixInjectivity
+import SourceOriginalWeilCoverLoopPeriodInjectivity
+import SourcePeriodRawCorrection
+import SourceOriginalWeilCoverGeneratorPeriodCorrection
+import SourceOriginalWeilCoverIntegralPeriodsFromGenerators
+import SourceOriginalWeilCoverAbelConverseFromRawReciprocity
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eq_zero_of_readDifferential_eventually_eq_zero
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.realAbelPotential_local
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.continuous_realAbelPotential
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coefficients_eq_zero_of_annihilates_periods
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eq_zero_of_annihilates_periods
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_sum_smul
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_sum_smul
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_period_coordinates
+#print axioms Dubon2026.SourceFunctionField.PeriodCorrection.matrix_mulVecLin_injective_of_period_annihilator
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_loop_period_matrix_injective
+#print axioms Dubon2026.SourceFunctionField.PeriodCorrection.exists_integer_correction_of_raw_reciprocity
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_generator_period_correction
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_integral_periods_of_generators
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_raw_reciprocity
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.realAbelPotential
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverRawThirdKindReciprocity
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceOriginalWeilCoverDifferentialReadingFaithfulness, `SourceOriginalWeilCoverRealAbelPotential, `SourceOriginalWeilCoverPeriodAnnihilator, `SourceOriginalWeilCoverPathIntegralLinearCombination, `SourceOriginalWeilCoverFinitePeriodGeneration, `SourcePeriodMatrixInjectivity, `SourceOriginalWeilCoverLoopPeriodInjectivity, `SourcePeriodRawCorrection, `SourceOriginalWeilCoverGeneratorPeriodCorrection, `SourceOriginalWeilCoverIntegralPeriodsFromGenerators, `SourceOriginalWeilCoverAbelConverseFromRawReciprocity]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eq_zero_of_readDifferential_eventually_eq_zero, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.realAbelPotential_local, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.continuous_realAbelPotential, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coefficients_eq_zero_of_annihilates_periods, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eq_zero_of_annihilates_periods, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_sum_smul, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_sum_smul, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_period_coordinates, `Dubon2026.SourceFunctionField.PeriodCorrection.matrix_mulVecLin_injective_of_period_annihilator, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_loop_period_matrix_injective, `Dubon2026.SourceFunctionField.PeriodCorrection.exists_integer_correction_of_raw_reciprocity, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_generator_period_correction, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_integral_periods_of_generators, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_raw_reciprocity]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.OriginalWeilCoverChart.realAbelPotential, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverRawThirdKindReciprocity]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Kummer Raw Reciprocity postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Kummer Raw Reciprocity theorems discovered"
+  logInfo m!"SOURCE ORIGINAL KUMMER RAW RECIPROCITY AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceOriginalWeilCoverDifferentialReadingFaithfulness
+#lint in SourceOriginalWeilCoverRealAbelPotential
+#lint in SourceOriginalWeilCoverPeriodAnnihilator
+#lint in SourceOriginalWeilCoverPathIntegralLinearCombination
+#lint in SourceOriginalWeilCoverFinitePeriodGeneration
+#lint in SourcePeriodMatrixInjectivity
+#lint in SourceOriginalWeilCoverLoopPeriodInjectivity
+#lint in SourcePeriodRawCorrection
+#lint in SourceOriginalWeilCoverGeneratorPeriodCorrection
+#lint in SourceOriginalWeilCoverIntegralPeriodsFromGenerators
+#lint in SourceOriginalWeilCoverAbelConverseFromRawReciprocity

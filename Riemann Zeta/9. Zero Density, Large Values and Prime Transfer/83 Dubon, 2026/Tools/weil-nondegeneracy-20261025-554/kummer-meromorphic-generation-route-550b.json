@@ -1,0 +1,69 @@
+{
+  "scope": 550,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> common meromorphic loop generation on the constructed reciprocity cycles",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicLocalPrimitives.lean",
+      "sha256": "1185F9A2B7D07025F38D527C9E00D7396D8649D9BCD9DE446062552F9BD737D4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicLocalAtlas.lean",
+      "sha256": "F8E7AE109C97BF249F279D62A8C1C9C4DE32AE391C43F29F49039FFAFB3F62F3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicPrimitiveValues.lean",
+      "sha256": "8464103CB514F25A0AFACA7D11A463068577C62761B82758DC63FCC8E659606D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicCellDifferences.lean",
+      "sha256": "08792231721A9D30F1A168C4BC6A7ECB719C5789F375D86C184702147A84691E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicPathAtlas.lean",
+      "sha256": "DBA722D283735EF43354D1CDF76BCBFF701898EE1952FA1669BB5E26531C31B1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicLoopPeriods.lean",
+      "sha256": "B484EBF8D1FB8A025111CC42F519349BBCF35E3B3D00DF27FA59B843F8FC0EC4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicBasisExtension.lean",
+      "sha256": "C3CE37DCE7B2BEB7970946BDF90ED85AF6D6E5B6DAC348961067E517BCC8E0A0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPathIntegralFiniteRegularity.lean",
+      "sha256": "51DC60608D6F4F560FAFE81F6373CB2CCF83AA1AC3A4AE8065BD6FAA565935AF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceMeromorphicLocalLog.lean",
+      "sha256": "09EFD2447A2E70BE69EAE3A6C4A412D997B8043E7B71E11DE8B7396C0AB5781E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePathAtlasJumpClosure.lean",
+      "sha256": "153AC655373A4994DF7CEE29FB9BA36F0FBD14B04301F08BCDB91892771C6C05"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicJumpCycleData.lean",
+      "sha256": "7AC45BCCF6EFE3798E91A64E9AAA6720234D06E8BE16EBB27A59BCD0343DFC48"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCoordinatePrimitiveComparison.lean",
+      "sha256": "FF4C06A733EA175EFB18BFA92AF3A6E2CDA31A4D67F92A07F67F431C61B3161D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDifferentialReadingLinear.lean",
+      "sha256": "661229A45AD674A130AC7133C4EC7D475C7023A6C6F7059EF2A199E469948E0F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDifferentialResidues.lean",
+      "sha256": "7D09F00C7EFAEA4C714EE6ADBCD083CDA449C19A46FD759C63110DABCF9ADA84"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverThirdKindCycleData.lean",
+      "sha256": "023F2F5AAF61C3B94268C77E54C003322D2CC74A5D8C4600B2F1A6BABEA629EA"
+    }
+  ],
+  "shorterRoute": "Reuse the existing local logarithm, connected-path atlas, integer-span and basis-extension arguments. Derive actual logarithmic derivatives from the already proved residue-subtracted primitives; the zero-residue case uses actual simple-pole regularity. Adapt the finite-sum path-integral law only to regularity along the traversed paths. Factor the exact finite coefficient identity and use local definitions instead of global context rewriting, with unchanged proof limits. Consume the same actual jump/cycle data and preserve the common-coefficient quantifier order; no new geometric existence or generation premise remains on the final consumer.",
+  "assumptionsToDischarge": "Every loop avoiding the prescribed finite pole set has one integer cycle-and-literal-residue formula valid simultaneously for every differential with at most simple poles in that set, on the same actual constructed complementary loops used by reciprocity.",
+  "remaining": "Final prescribed 2g reindexing, unconditional cover Abel converse and auxiliary point division, arithmetic descent, original pairing nondegeneracy, required Hecke-component restriction, primitive Frobenius determinant, residual association, automorphy and all-weight continuation remain open; 16/20, DUB-17--20 OPEN."
+}

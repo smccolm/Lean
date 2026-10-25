@@ -1,0 +1,72 @@
+import SourceOriginalWeilCoverPathIntegral
+import SourceOriginalWeilCoverPathIntegralLaws
+import SourceOriginalWeilCoverAbelJacobiPeriods
+import SourceOriginalWeilCoverChartPathIntegrals
+import SourceOriginalWeilCoverLocalAbelJacobi
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_eq_of_isPrimitiveAlong
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.IsPrimitiveAlong.add_const
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.IsPrimitiveAlong.continuous
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_normalized_path_primitive
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_symm
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_trans_left
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_trans_right
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_trans
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_symm
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_pathConnectedSpace
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiDiv_single
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.mem_pathPeriodLattice_of_loop
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiVec_sub_mem
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_of_chart_primitive
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_chart_path
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_chart_path_integrals
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiVec_chart_primitive
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_abelJacobiVec_chart_primitive
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiDiv_chart_difference
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverPath
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiVec
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiDiv
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathPeriodLattice
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceOriginalWeilCoverPathIntegral, `SourceOriginalWeilCoverPathIntegralLaws, `SourceOriginalWeilCoverAbelJacobiPeriods, `SourceOriginalWeilCoverChartPathIntegrals, `SourceOriginalWeilCoverLocalAbelJacobi]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_eq_of_isPrimitiveAlong, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.IsPrimitiveAlong.add_const, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.IsPrimitiveAlong.continuous, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_normalized_path_primitive, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_symm, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_trans_left, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_trans_right, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_trans, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_symm, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_pathConnectedSpace, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiDiv_single, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.mem_pathPeriodLattice_of_loop, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiVec_sub_mem, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_of_chart_primitive, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_chart_path, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_chart_path_integrals, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiVec_chart_primitive, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_abelJacobiVec_chart_primitive, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiDiv_chart_difference]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverPath, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiVec, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiDiv, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathPeriodLattice]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Kummer Abel Vector postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Kummer Abel Vector theorems discovered"
+  logInfo m!"SOURCE ORIGINAL KUMMER ABEL VECTOR AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceOriginalWeilCoverPathIntegral
+#lint in SourceOriginalWeilCoverPathIntegralLaws
+#lint in SourceOriginalWeilCoverAbelJacobiPeriods
+#lint in SourceOriginalWeilCoverChartPathIntegrals
+#lint in SourceOriginalWeilCoverLocalAbelJacobi

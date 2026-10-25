@@ -1,0 +1,74 @@
+import SourceHeckeCoordinateRelations
+import SourceOriginalCuspRationalTateHecke
+import SourceIntegerCoefficientExtensionOne
+import SourceIntegerCoefficientEndExtension
+import SourcePrimitiveOriginalTateEvaluation
+import SourcePrimitiveOriginalTateAdjoint
+import SourceEndIdempotentPairingRestriction
+import SourcePrimitiveOriginalTateRestriction
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.hecke_relation_of_injective_coordinates
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalRationalTateHeckeWord_of_cusp_relation
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspRationalTateHecke_word
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspRationalTateHecke_prime
+#print axioms Dubon2026.integerCoefficientExtension_one_tmul
+#print axioms Dubon2026.integerCoefficientEndExtension_one_tmul
+#print axioms Dubon2026.integerCoefficientEndExtension_shifted_squares
+#print axioms Dubon2026.integerCoefficientEndExtension_aeval
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke_prime
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_hecke
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_annihilator
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_projector
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_annihilator_selfAdjoint
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_projector_selfAdjoint
+#print axioms Dubon2026.mapped_idempotent_pairing_restriction
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_pairing_restriction
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspRationalTateHecke
+#print axioms Dubon2026.integerCoefficientEndExtension
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceHeckeCoordinateRelations, `SourceOriginalCuspRationalTateHecke, `SourceIntegerCoefficientExtensionOne, `SourceIntegerCoefficientEndExtension, `SourcePrimitiveOriginalTateEvaluation, `SourcePrimitiveOriginalTateAdjoint, `SourceEndIdempotentPairingRestriction, `SourcePrimitiveOriginalTateRestriction]
+  let theorems : Array Name := #[`Dubon2026.hecke_relation_of_injective_coordinates, `Dubon2026.SourceFunctionField.OriginalChart.originalRationalTateHeckeWord_of_cusp_relation, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspRationalTateHecke_word, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspRationalTateHecke_prime, `Dubon2026.integerCoefficientExtension_one_tmul, `Dubon2026.integerCoefficientEndExtension_one_tmul, `Dubon2026.integerCoefficientEndExtension_shifted_squares, `Dubon2026.integerCoefficientEndExtension_aeval, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke_prime, `Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_hecke, `Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_annihilator, `Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_projector, `Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_annihilator_selfAdjoint, `Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_projector_selfAdjoint, `Dubon2026.mapped_idempotent_pairing_restriction, `Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_pairing_restriction]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.OriginalChart.originalCuspRationalTateHecke, `Dubon2026.integerCoefficientEndExtension, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke, `Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Primitive Tate Restriction postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Primitive Tate Restriction theorems discovered"
+  logInfo m!"SOURCE ORIGINAL PRIMITIVE TATE RESTRICTION AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceHeckeCoordinateRelations
+#lint in SourceOriginalCuspRationalTateHecke
+#lint in SourceIntegerCoefficientExtensionOne
+#lint in SourceIntegerCoefficientEndExtension
+#lint in SourcePrimitiveOriginalTateEvaluation
+#lint in SourcePrimitiveOriginalTateAdjoint
+#lint in SourceEndIdempotentPairingRestriction
+#lint in SourcePrimitiveOriginalTateRestriction

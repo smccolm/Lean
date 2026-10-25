@@ -1,0 +1,61 @@
+{
+  "recordedUTC": "2026-10-25T06:50:07.675900+00:00",
+  "date": "2026-10-24 America/Vancouver",
+  "modules": [
+    "SourceCurveFiniteCoordinateRegularGenus",
+    "SourceCurveFiniteCoordinateUnramifiedGenus",
+    "SourceOriginalWeilCoverUnramifiedGenus"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFiniteCoordinateRegularGenus.lean",
+      "sha256": "84BF512262102860CC83F30AF3AB28D12066A1130B83ABBFC8F3CDD289E238CF",
+      "oleanSha256": "F37708E599C1EC57CD37C4405E2BAB1EEC447F6EB3F632DB954210973C80FE06"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFiniteCoordinateUnramifiedGenus.lean",
+      "sha256": "CA628FCDD4EE0278D2D1233183AE45674AE31304F1A15C53FB529CA9B9221C0E",
+      "oleanSha256": "0D5A2F968347834AEAD2247345B89E161FBA63A5DCFA6D56FF582D12290D4F5B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverUnramifiedGenus.lean",
+      "sha256": "EDA86B956A88B255979BBA49C173A7C96E2B609A10DA74517E6BF4C45888094D",
+      "oleanSha256": "62C6B1A121E67687DDAE3980CF890793A3027BA455E30279B4DA85F402FEF16E"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceCurve.finite_coordinate_finrank_regular_eq_genusFF",
+    "Dubon2026.SourceCurve.finite_coordinate_canonical_degree_eq_regular_dimension",
+    "Dubon2026.SourceCurve.finite_coordinate_euler_genus_of_unramified",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_euler_genus_multiplicity"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceCurve.finite_coordinate_finrank_regular_eq_genusFF",
+    "Dubon2026.SourceCurve.finite_coordinate_canonical_degree_eq_regular_dimension",
+    "Dubon2026.SourceCurve.finite_coordinate_euler_genus_of_unramified",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_euler_genus_multiplicity"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerUnramifiedGenusAudit3.log",
+  "logSha256": "972416DD55C9B5FD131A0A98EB0F40518F56B7BF2D9B2A54A6455001FF1225B0",
+  "auditSha256": "38CDEEF5A3ACE473B02E0EC7B17784C8890E53F84F6F67E47117544063419E37",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 4,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 9,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerUnramifiedGenusDependencyAudit3.log",
+  "dependencyAuditSha256": "65681F4B6C0B79330CA3618D09F90792AB921DBE6E6EF1225C020E744806E5BA",
+  "dependencyAuditSourceSha256": "81068605F4AD18183014FA6CE3405E31CD9216A65D5A3EF90FA2D643D8AA515C",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_euler_genus_multiplicity"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> raw geometric reciprocity -> lifted dissection has exactly twice the regular differential dimension many essential cycles -> actual unramified cover genus multiplicity",
+  "discharged": "The actual regular-differential dimensions satisfy 2-2g(cover) = [cover:base]*(2-2g(base)). Finite-coordinate residue duality and canonical-space comparison identify the actual dimension with H1 genus; the existing unramified canonical-degree pullback gives the exact multiplicity. No differential-dimension, numerical genus or Riemann-Hurwitz hypothesis remains.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Actual global lifted dissection and paired boundary arcs, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-unramified-genus-3-reuse-review-20261024.json",
+  "reuseReviewSha256": "46FF392C07B915CC10BA45F35C20A75E5264B098A69F14B5A1C39157DB74365F",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

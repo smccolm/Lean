@@ -1,0 +1,49 @@
+{
+  "scope": 557,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive Frobenius determinant -> nonzero required primitive component pairing -> actual arithmetic primitive projector -> finite integral Hecke algebra and good-prime isolation",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalIntegralHecke.lean",
+      "sha256": "50E521F29790D80E93C966505D7EDA52FEBCFE0C61A7945F022D515D04CBEF1E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveFieldHeckeCharacter.lean",
+      "sha256": "A6D7297B2CFBD82BC5BD82A7448B93F23D21F4D2A90B1978A6E92504DF6A9B75"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\PrimitiveFullEigen.lean",
+      "sha256": "BA31BEA33C21876BA27FF2EFF75D46E7222B20702EA5180BC0CAB3258F73A688"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralHeckeComplexIndependence.lean",
+      "sha256": "946A7999B04A24B0449B9E7126AE30F15D79CEADADC1F4A602FF64712BD99889"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralHeckeComplexBasis.lean",
+      "sha256": "CE8047624AA57919C059163652D8E45785133A280DAA27B64E669414A32121D1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralHeckeBasisCoordinates.lean",
+      "sha256": "B1ACB5E2DF6F57CEA3C1AC95278F427700C9516674AE02873CE29E4DE676952E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalLatticeCuspHeckeEquiv.lean",
+      "sha256": "38FCFECC925C33AA61D6AEBE4225E7B2B052A4A43ED6D14E0B4D75EEFD39A7CD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCuspRealHeckeMatrix.lean",
+      "sha256": "F8116DE06CFDD68069E639DBA629F142867E3903411AC75CD4B4B4B9FF4E78EA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveTateSpecialization.lean",
+      "sha256": "EA57AE948FBDCBC737C4FA0673CEA2970D19E0E0866FFD9564CED1FCDA2685B9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGoodPolynomialProjection.lean",
+      "sha256": "F5B37FEDAC81872ADE62B336CFBC4D41EE2E97A9F0E5C0A23A27AB90A8F60772"
+    }
+  ],
+  "shorterRoute": "Reuse the actual finite integral Hecke algebra and native finite tensor scalar extension to obtain an annihilator over the literal Fourier coefficient field. Factor and normalize that polynomial over the same field, using the already proved zero-power reduction. The full primitive eigenline theorem supplies all positive-index scalar identities on the constructed range. Reuse review found that the original integral Hecke basis already remains complex-linearly independent, with an exact complex basis and integral coordinates. This is the next faithful arithmetic-relation transport route; a separate whole-coefficient-field reality argument is unnecessary and deferred.",
+  "assumptionsToDischarge": "Arithmetic coefficient-field definition of the primitive projector, its exact range and idempotence on the actual cusp space, and its prescribed full positive-index Hecke action.",
+  "remaining": "The projector polynomial now belongs to the actual Fourier coefficient field. Its complex realization has the exact primitive range and full positive-index eigencharacter. Transfer of these arithmetic identities to the original rational Tate representation, nonzero restriction of its pairing, primitive Frobenius determinant, residual association, automorphy and all-weight continuation remain open; 16/20, DUB-17--20 OPEN."
+}

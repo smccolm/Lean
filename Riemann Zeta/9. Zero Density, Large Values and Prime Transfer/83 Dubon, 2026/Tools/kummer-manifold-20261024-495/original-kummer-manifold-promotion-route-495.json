@@ -1,0 +1,30 @@
+{
+  "recordedUTC": "2026-10-25T03:33:54.383029+00:00",
+  "scopeIds": [
+    490,
+    491,
+    492,
+    493,
+    494
+  ],
+  "receipts": {
+    "source-original-kummer-analytic-entry-15-scratch-receipt.json": "6F6E56DE3CC0725E238746FE2991183E9D60C3753C932239C5CCF3D7F664022B",
+    "source-original-kummer-place-family-6-scratch-receipt.json": "3554A42076451F8B850AC1576D3A37DAE58FE05CD6B66E995C88431672716D1D",
+    "source-original-kummer-parameter-5-scratch-receipt.json": "6A2EDAE5AC5AAD985D55D6E09ECD05D031006458592E35014E23F56006CDCA78",
+    "source-original-kummer-compatibility-8-scratch-receipt.json": "2E46515578E4EEEB979CF85B6B0F1CFC6789832394DC1439180FB26897029FAC",
+    "source-original-kummer-manifold-4-scratch-receipt.json": "12AEB3D521439672A58153E1BF4814DDFC097244F758D5C6920C95E2F67B7979"
+  },
+  "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+  "chain": "actual residual association -> primitive Frobenius determinant -> nonzero required Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary Kummer point division -> cover Abel comparison -> compact connected cover geometry -> actual Hausdorff analytic cover atlas",
+  "discharged": "For the literal complex splitting field of an actual original torsion radicand, every place has a normalized convergent local embedding and ramification index one. Common meromorphic disks yield actual place families and injective uniformizer residue parameters. Repeated uniformizer division proves analytic overlap compatibility. The resulting native complex analytic manifold is Hausdorff and retains exact residue-reading orders.",
+  "remaining": "The cover is not yet proved compact or connected, Abel comparison and actual point-difference division are unproved, and arithmetic descent still needs its exact consumer. Original pairing nondegeneracy, nonzero required Hecke-component restriction, separate determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "reuse": "All five scope receipts record the native results checked before expansion. The renewed NYLL/FLT analytic divisibility route motivated the cover prerequisite; the existing original analytic chart and valuation proofs were adapted to the actual auxiliary field. No external toolchain or library was imported, and pins/proof limits were unchanged.",
+  "promotion": "Qualify scratch project imports only; preserve every audited statement, proof body and comment. Require exact scratch-to-production theorem ownership before accepting the focused count. Wait for the 7706 sequential canonical receipt before production mutation.",
+  "modules": 38,
+  "explicitQueries": 118,
+  "theoremRegistrations": 105,
+  "constructionRegistrations": 13,
+  "exhaustiveScratchSum": 183,
+  "proofValueEdges": 129,
+  "expectedProductionModules": 7744
+}

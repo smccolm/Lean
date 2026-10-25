@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> raw geometric reciprocity -> actual finite paired lifted dissection -> finite global lifted coordinates and unique adjacent boundary-sheet match",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellLiftFamily.lean",
+      "sha256": "8C6FD0BB170082354DD2065CEF4A67AF494B6AB5CFC333334F4E102435FE2DB0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRestrictionCovering.lean",
+      "sha256": "FDF683FD954B0859AC648F3DDF0CEE2DD9F8D5F770A00CCEA032138FE5FF2775"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalGlobalCellCover.lean",
+      "sha256": "24EB8DF861ED74BF28F54E4F3E10FAF0D6E946C2DFE1D05E468272118C395D1B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPairing.lean",
+      "sha256": "10C44E882B3A20ACBA0BFD838D0A5F2BCD4BF6CCCB908DCEC4899772CB5B5C7F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellBoundaryGeometry.lean",
+      "sha256": "F2E02E9CEEADE3182E7C880EF84E74800D01E142B6C9885B7C3DBB7D0FEC5508"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Covering\\Basic.lean",
+      "sha256": "8A3BA40E8F453C783001ECC56B5BB95D6E40E9FC1713D22F95F61326DDEF2A55"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-global-cell-arcs-route-514.json",
+    "sha256": "08384A6FE868FFC0ED4F7EAF4190C8199399CA2DD28385BD04314DE03DD5AB4C",
+    "review": {
+      "scope": 514,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> raw geometric reciprocity -> actual finite paired lifted dissection -> finite global lifted coordinates and unique adjacent boundary-sheet match",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellLiftFamily.lean",
+          "sha256": "8C6FD0BB170082354DD2065CEF4A67AF494B6AB5CFC333334F4E102435FE2DB0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRestrictionCovering.lean",
+          "sha256": "FDF683FD954B0859AC648F3DDF0CEE2DD9F8D5F770A00CCEA032138FE5FF2775"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalGlobalCellCover.lean",
+          "sha256": "24EB8DF861ED74BF28F54E4F3E10FAF0D6E946C2DFE1D05E468272118C395D1B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPairing.lean",
+          "sha256": "10C44E882B3A20ACBA0BFD838D0A5F2BCD4BF6CCCB908DCEC4899772CB5B5C7F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellBoundaryGeometry.lean",
+          "sha256": "F2E02E9CEEADE3182E7C880EF84E74800D01E142B6C9885B7C3DBB7D0FEC5508"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Covering\\Basic.lean",
+          "sha256": "8A3BA40E8F453C783001ECC56B5BB95D6E40E9FC1713D22F95F61326DDEF2A55"
+        }
+      ],
+      "shorterRoute": "Use the constructed OriginalGlobalCellCover and its actual coverage, with the audited complete sheet families and finite restriction fibers. Native covering uniqueness on a connected interval lifts the existing base arc reparameterization without an inverse-function or new contour calculation. Exhaustion gives a matching neighboring sheet; disjointness gives uniqueness. The fixed original global cover is an explicit parameter, allowing the previously proved centered-cover construction to be chosen later; the theorem does not replace that construction with a hypothesis of global cover existence.",
+      "assumptionsToDischarge": "The finite total lifted-cell coverage and uniqueness of a neighboring sheet carrying each lifted base boundary arc. Matching retains the exact original reparameterization. The global involution, vertex/intersection data and reciprocity remain separate obligations.",
+      "remaining": "The actual paired cover dissection, lifted arc involution and vertex/intersection construction, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20."
+    }
+  },
+  "discharged": "Every fixed constructed original global cell cover lifts to finite actual coordinate families whose compact radial carriers cover every cover place. On adjacent base cells, the original arc reparameterization lifts unchanged once endpoints agree. Exhaustion and disjoint sheets prove a unique neighboring match. These are geometric construction and matching lemmas; the pairing involution, vertex/intersection data and global reciprocity are still separate obligations.",
+  "remaining": "The actual paired cover dissection, lifted arc involution and vertex/intersection construction, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-unramified-genus-3-scratch-receipt.json",
+    "sha256": "86A8F4652516373F6F89E7E42F55A6C6A8BAFEC4C488A19AB70EF1F8D6DBEFA7"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "DUB-17/18 -> original Tate pairing nondegeneracy -> auxiliary point division -> cover Abel converse -> meromorphic exponential with prescribed integer orders",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalLogarithmicReading.lean",
+      "sha256": "195DB0DB431FEFE73CBA395CC0B50C4314AB78C13BFF8AD73ECFE4318FF8FC52"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalLocalExponentialModel.lean",
+      "sha256": "75FCEC59287CD440C6972DF47C9F3CE9848A24B1D0A822C4006923F92A3E9157"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFinitePuncturePaths.lean",
+      "sha256": "2BCD468BBFB63B4C6126388081342822BA06D521E95B708E0DFED45DD99F08E0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDivisorAvoidingPaths.lean",
+      "sha256": "449DD2FE6E0B2561B4A8A194A1A77EDDAE47856A7815DD58D492E87E755FDBC8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceChartFinitePuncturePaths.lean",
+      "sha256": "632359B04040DACE2CDDA17915C5D26D1B393954C271220A23543F8D2F1C4D0E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverSimplePoleRegularPart.lean",
+      "sha256": "BACA1FAACF1AD54F26AF78566FB78AC72A79DCAD64DCC6C1D5EA106365149B31"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLocalRegularPrimitives.lean",
+      "sha256": "9C8A46171D1BF8498B0F751A5B281A22ABF8E40C126E65D69FAB9D350FF19901"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverConnected.lean",
+      "sha256": "CF1FA04E40D3FB81A1C4834BF80F75BC6DD68B5DDDBF595015431AEC40DAAB16"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-exponential-local-route-506.json",
+    "sha256": "47035B6D40DBE9BE15E6986FDC7BF51A8A3F60BC78E4F80220FC8EF4EAD50B77",
+    "review": {
+      "scope": 506,
+      "chain": "DUB-17/18 -> original Tate pairing nondegeneracy -> auxiliary point division -> cover Abel converse -> meromorphic exponential with prescribed integer orders",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalLogarithmicReading.lean",
+          "sha256": "195DB0DB431FEFE73CBA395CC0B50C4314AB78C13BFF8AD73ECFE4318FF8FC52"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalLocalExponentialModel.lean",
+          "sha256": "75FCEC59287CD440C6972DF47C9F3CE9848A24B1D0A822C4006923F92A3E9157"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFinitePuncturePaths.lean",
+          "sha256": "2BCD468BBFB63B4C6126388081342822BA06D521E95B708E0DFED45DD99F08E0"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDivisorAvoidingPaths.lean",
+          "sha256": "449DD2FE6E0B2561B4A8A194A1A77EDDAE47856A7815DD58D492E87E755FDBC8"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceChartFinitePuncturePaths.lean",
+          "sha256": "632359B04040DACE2CDDA17915C5D26D1B393954C271220A23543F8D2F1C4D0E"
+        }
+      ],
+      "shorterRoute": "Reuse the generic finite-puncture path theorem on the proved actual connected Hausdorff cover. Reuse the exact uniformizer/logarithmic local model and native analytic primitive, using proved residue regular parts. No new surface connectivity or ODE framework.",
+      "assumptionsToDischarge": "Existence of paths away from the prescribed finite divisor support and local meromorphic exponential models with exact integer orders.",
+      "remaining": "Global exponential gluing, integral period correction and Abel converse, point division, arithmetic descent and the remaining DUB-17--20 arithmetic obligations are open; 16/20."
+    }
+  },
+  "discharged": "At every actual cover place a simple-pole differential with integer residue has a local meromorphic exponential model of exactly that integer order. The native finite-puncture theorem applies to the proved connected Hausdorff cover, supplying a base point and actual continuous paths outside every finite divisor support. No path-existence or local-exponential assumption remains.",
+  "remaining": "Global exponential gluing, integral period correction and Abel converse, point division, arithmetic descent and the remaining DUB-17--20 arithmetic obligations are open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-meromorphic-path-8-scratch-receipt.json",
+    "sha256": "C7D0E352095A47A3C1F871089BC23E2687199CEA49D1A14B4EB97B71DA48EADE"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

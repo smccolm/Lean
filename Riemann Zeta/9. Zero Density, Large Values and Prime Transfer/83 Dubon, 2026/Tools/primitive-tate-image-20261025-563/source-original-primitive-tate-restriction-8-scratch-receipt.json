@@ -1,0 +1,125 @@
+{
+  "recordedUTC": "2026-10-25T19:12:50.621494+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceHeckeCoordinateRelations",
+    "SourceOriginalCuspRationalTateHecke",
+    "SourceIntegerCoefficientExtensionOne",
+    "SourceIntegerCoefficientEndExtension",
+    "SourcePrimitiveOriginalTateEvaluation",
+    "SourcePrimitiveOriginalTateAdjoint",
+    "SourceEndIdempotentPairingRestriction",
+    "SourcePrimitiveOriginalTateRestriction"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeCoordinateRelations.lean",
+      "sha256": "04F9B9828508713D987CCCA94041A92AD95C1E140FA8A71147B5E1413AB4E42E",
+      "oleanSha256": "AC07AB13BCFD00238421F9F00FDD391C62C4BC372E882698138DC91033627CF5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspRationalTateHecke.lean",
+      "sha256": "9D0D65FEEBA0F713E11FA54C9C016B00EF01A557BDFB7AE851CF25D4E4436CE7",
+      "oleanSha256": "3367AE2FA6159D4C00C3B65BDF2C88CC2D2E6223BF6C0FDAFC907299F3A84098"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegerCoefficientExtensionOne.lean",
+      "sha256": "12603B4F7B52603ACECCA39DE41BB5EEAC1F834994FD3C350B437956F63D979B",
+      "oleanSha256": "2C362D49C156F2013B00416465FDE94496A09B46518385D1927A771BF422F40A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegerCoefficientEndExtension.lean",
+      "sha256": "8E77DFA7C3319F3E5E65173BA5A07C962D0EF4EC58B91464DBEBD045030EB832",
+      "oleanSha256": "CB378CA23906634B928B5ACE3BC6A7547000A85D4A3A59C4469C50E08A08BB15"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveOriginalTateEvaluation.lean",
+      "sha256": "8BA9B472550F7F27389B02B49FC944E9F7074594D7FFD670F9A90671B0D1263B",
+      "oleanSha256": "2B34EFC8ED1B6924DF3B76B1D47AC0013D2F9C316CD2EC74602F9B894677287F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveOriginalTateAdjoint.lean",
+      "sha256": "9C284D9143DD332398721B7B2D10CB7E8BDDDB8F60F23BCA14D77F120F447EAA",
+      "oleanSha256": "9480113F600DDD5DD32D3483B9943D37585BE50025E6F079182D340E14D686FD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceEndIdempotentPairingRestriction.lean",
+      "sha256": "A02A2F960D6D656956A0F0FB51A778ACA8DB65B66B9011FC7E517F3949D0471C",
+      "oleanSha256": "051046F8206AC533B9E4559FBA003052FC0EAFB877602219439450447BE89A6D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveOriginalTateRestriction.lean",
+      "sha256": "6FFE96A5E35CFBCC40CB9B9CBD48B728E061123ACBBD4797A902E88CF4720BAE",
+      "oleanSha256": "AABD5AF39BE2CC87D3AC0C85A056C3C377BED6BB9A3087DE2E32006EEA0CDDC5"
+    }
+  ],
+  "queries": [
+    "Dubon2026.hecke_relation_of_injective_coordinates",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalRationalTateHeckeWord_of_cusp_relation",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspRationalTateHecke_word",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspRationalTateHecke_prime",
+    "Dubon2026.integerCoefficientExtension_one_tmul",
+    "Dubon2026.integerCoefficientEndExtension_one_tmul",
+    "Dubon2026.integerCoefficientEndExtension_shifted_squares",
+    "Dubon2026.integerCoefficientEndExtension_aeval",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke_prime",
+    "Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_hecke",
+    "Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_annihilator",
+    "Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_projector",
+    "Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_annihilator_selfAdjoint",
+    "Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_projector_selfAdjoint",
+    "Dubon2026.mapped_idempotent_pairing_restriction",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_pairing_restriction",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspRationalTateHecke",
+    "Dubon2026.integerCoefficientEndExtension",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke",
+    "Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.hecke_relation_of_injective_coordinates",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalRationalTateHeckeWord_of_cusp_relation",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspRationalTateHecke_word",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspRationalTateHecke_prime",
+    "Dubon2026.integerCoefficientExtension_one_tmul",
+    "Dubon2026.integerCoefficientEndExtension_one_tmul",
+    "Dubon2026.integerCoefficientEndExtension_shifted_squares",
+    "Dubon2026.integerCoefficientEndExtension_aeval",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke_prime",
+    "Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_hecke",
+    "Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_annihilator",
+    "Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_projector",
+    "Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_annihilator_selfAdjoint",
+    "Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_projector_selfAdjoint",
+    "Dubon2026.mapped_idempotent_pairing_restriction",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_pairing_restriction"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspRationalTateHecke",
+    "Dubon2026.integerCoefficientEndExtension",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke",
+    "Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateRestrictionAudit8.log",
+  "logSha256": "D3F7BC113739C69C394E2E654F900D2474DF1B33C0AE34CC76DF17AA52561E6B",
+  "auditSha256": "1B9911DCACE4BC6A8FEC7835E824C713B39263258ABAB56A02BECB135FCD5512",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 47,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 28,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateRestrictionDependencyAudit8.log",
+  "dependencyAuditSha256": "B3958F30F70A830CD40B00EEE3BAE4013491AAF54D748313A4FA8F5047257E19",
+  "dependencyAuditSourceSha256": "0760ED7F3A0B6060DE73321977BC4C813E3EA7C8BF5D30BAB57771E53E6F48F6",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_pairing_restriction",
+    "Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_hecke"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> nonzero required primitive component pairing -> original Tate realization of the arithmetic primitive projector, its self-adjointness and injective restricted pairing",
+  "discharged": "The original cusp/lattice word relations and actual Tate coordinates factor the original rational Tate action through the literal integral cusp Hecke algebra. Its coefficient extension evaluates the same arithmetic primitive projector, retaining exact prime operators and the same coefficient polynomial. The existing good-prime Weil adjointness proves the actual squared annihilator and projector self-adjoint. Arithmetic idempotence maps to the actual Tate operator, and the injective original coefficient-field pairing stays injective on its image. The assembled existential consumer obtains the projector from the already proved arithmetic construction; no action-comparison, idempotence, self-adjointness or restricted-injectivity hypothesis is supplied. Nonzero rank-two identification of this image with the prescribed specialization remains open.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The transported projector image must still be proved nonzero and identified with the prescribed two-dimensional specialization. Primitive determinant, residual association, automorphy and all-weight continuation remain open; 16/20, DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-tate-restriction-8-reuse-review-20261025.json",
+  "reuseReviewSha256": "721A63A1B69E215ABE7375E5342646F8102D4A6BBF32849516575484B038B2B8",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

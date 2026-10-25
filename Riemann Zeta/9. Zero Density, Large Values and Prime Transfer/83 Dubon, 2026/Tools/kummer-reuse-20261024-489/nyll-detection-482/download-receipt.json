@@ -1,0 +1,27 @@
+{
+  "retrievedUTC": "2026-10-25T00:34:45.489368+00:00",
+  "commit": "8c1b16d10afaca09e0dc72753c6575e230d31a55",
+  "files": [
+    {
+      "path": "Nyll/JacobianVarieties/WeilPairing/DivisionDifference.lean",
+      "gitBlob": "05d8b7cd711e2452f3696f7261fc9ab035f4782b",
+      "sha256": "82C7CBA135E556E56CA99AC368A70DB8803B946EE5DBAD9305E504EC1492A75D",
+      "bytes": 8424,
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/JacobianVarieties/WeilPairing/DivisionDifference.lean"
+    },
+    {
+      "path": "Nyll/JacobianVarieties/WeilPairing/DivisorialPairingPerfect.lean",
+      "gitBlob": "c55b5c3cb66d3b9d00f1979066f3327a19f27b28",
+      "sha256": "DBF69D33455ABFC112A84E1495C2A656B9D1B96693FCE9900D31B844E23446A8",
+      "bytes": 6236,
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/JacobianVarieties/WeilPairing/DivisorialPairingPerfect.lean"
+    },
+    {
+      "path": "Nyll/JacobianVarieties/WeilPairing/DivisorialPairingToHomInjectiveDivisible.lean",
+      "gitBlob": "ff31c2e7ade2eb65a95c9efd9effc1725433b1e1",
+      "sha256": "96F191C9106B322195766562F08E09788FF76CE4E14E56D8D1B2CD9ADD5EE327",
+      "bytes": 28411,
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/JacobianVarieties/WeilPairing/DivisorialPairingToHomInjectiveDivisible.lean"
+    }
+  ]
+}

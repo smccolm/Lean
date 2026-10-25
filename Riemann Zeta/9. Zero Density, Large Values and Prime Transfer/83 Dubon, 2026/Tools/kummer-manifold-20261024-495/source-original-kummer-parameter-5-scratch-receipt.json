@@ -1,0 +1,77 @@
+{
+  "recordedUTC": "2026-10-25T03:10:17.381268+00:00",
+  "date": "2026-10-24 America/Vancouver",
+  "modules": [
+    "SourceCurveConvergentDiscResidues",
+    "SourceCurveConvergentEvaluationFamily",
+    "SourceCurveAnalyticPlaceParameter",
+    "SourceCurveConvergentPlaceChart",
+    "SourceOriginalWeilCoverParameter"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveConvergentDiscResidues.lean",
+      "sha256": "B5D34061E2A39C9C28B71FCD72DB99EDD3814E4C3A4F78902060637F9328F7B6",
+      "oleanSha256": "9C46037F6C8E00789C3ACAD5D1C21DD7AF5A3B2094A97115B5FD447FEE72B4C7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveConvergentEvaluationFamily.lean",
+      "sha256": "7E707A8F4AFF512E9B42DDA808BE946300CFF9C8B03D96F51F4DAE7402EBF572",
+      "oleanSha256": "49C65EA7E21C04E6A234B13FC621EA3D65FB3ADFB387AC8F4E74BA9E335C647C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveAnalyticPlaceParameter.lean",
+      "sha256": "EC60F7135F6FE3F385D2A0720456CB7C27B506BE852A234075D671C7B7B0EE68",
+      "oleanSha256": "9103313471D51C763384124CF6B497FA0F15347F23A3AA7A8090736B2B92034B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveConvergentPlaceChart.lean",
+      "sha256": "763683614AD698EB55364E321C1FF05AF16FF6E8991F4D41DF5E30B2A7BF297E",
+      "oleanSha256": "F455D9DA15489C753FBEBE4EDA1F5A78F94F920A08DE74DB3EB27E767078E02B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverParameter.lean",
+      "sha256": "0DC98F497232D5448B1A8BE62DD1E6EE07A8163886E311647204371D3F2D64C1",
+      "oleanSha256": "C37D173883C8B0A216A67315E2D839A4ED1EB6DF36C89C8B1FF3F10B73D0FF1C"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceCurve.AnalyticDisc.rationalEval_eq_normal",
+    "Dubon2026.SourceCurve.AnalyticDisc.evaluation_germ",
+    "Dubon2026.SourceCurve.AnalyticDisc.evaluation_orders",
+    "Dubon2026.SourceCurve.AnalyticDisc.exists_parameter_of_evaluation_family",
+    "Dubon2026.SourceCurve.AnalyticDisc.exists_parameter_of_convergent_family",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_cover_parameter"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceCurve.AnalyticDisc.rationalEval_eq_normal",
+    "Dubon2026.SourceCurve.AnalyticDisc.evaluation_germ",
+    "Dubon2026.SourceCurve.AnalyticDisc.evaluation_orders",
+    "Dubon2026.SourceCurve.AnalyticDisc.exists_parameter_of_evaluation_family",
+    "Dubon2026.SourceCurve.AnalyticDisc.exists_parameter_of_convergent_family",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_cover_parameter"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerParameterAudit5.log",
+  "logSha256": "23CF2A4BF20EAE3EBC5B3174DAC07AC94BBE331AB6C96D16DF578CE5ACCA8596",
+  "auditSha256": "72CCF27DB36D4B63E0013B3E8350C1277009694F24598CA75CCFA04018408A68",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 8,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 13,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerParameterDependencyAudit5.log",
+  "dependencyAuditSha256": "265BD614EA9CE756870A7C4FE482B66BD38886E5B8803BB32384C204715981B8",
+  "dependencyAuditSourceSha256": "89C4A5EEB5460BAB1CA297E3227006650C1AA2D8035EE88FFC43E723337EBD51",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_cover_parameter"
+  ],
+  "dependency": "residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> auxiliary Kummer point division -> analytic cover Abel comparison -> actual analytic place charts -> residue evaluation and local injectivity",
+  "discharged": "Every actual place of the literal original complex torsion cover has an injective local parameter family centered at that place. The genuine rational residue evaluation of its uniformizer equals the parameter. All nonzero field-element readings are meromorphic with their exact normalized place orders, and regular readings are analytic. The proof consumes the native cover residue bijection, the constructed place family, equality of residue and analytic normal-form values, and the pinned analytic inverse-function theorem.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending; 16/20; DUB-17--20 OPEN. Compatible transitions, global compact connected cover geometry, Abel comparison and point division, arithmetic descent to the original coefficient field, nondegeneracy and component determinant remain open.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-parameter-5-reuse-review-20261024.json",
+  "reuseReviewSha256": "4280D6BD215C03C3DA70D9EEA1EFEFDA729733E62C9FE388C1A63BDC21212A4A",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

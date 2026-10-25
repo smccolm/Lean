@@ -1,0 +1,59 @@
+{
+  "recordedUTC": "2026-10-25T06:37:25.202712+00:00",
+  "date": "2026-10-24 America/Vancouver",
+  "modules": [
+    "SourceCoverStarConvexLiftFamily",
+    "SourceCoverLiftedCoordinateFamily",
+    "SourceOriginalWeilCoverCellLiftFamily"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoverStarConvexLiftFamily.lean",
+      "sha256": "A3B7AB913E24F112A9EF9F8651C53891F5DC031713A6ABF26FF6065FC1BB5FFF",
+      "oleanSha256": "4FE313CD9C141012EE393CAB87953D986FF1CD8839FAA6C7E99B67457B8E168D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoverLiftedCoordinateFamily.lean",
+      "sha256": "ADC583C1C8243A1E06A26988CA9CCA5C6E7C68DB83ECDC0F1AFDF4D87E1FF733",
+      "oleanSha256": "93C0AE8D2D9EFBC1C96A494F5C7BB9822612E004797F080925176B68A2B5E2EC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellLiftFamily.lean",
+      "sha256": "8C6FD0BB170082354DD2065CEF4A67AF494B6AB5CFC333334F4E102435FE2DB0",
+      "oleanSha256": "81B3CC448794801F3AE387049130FC9E7C1BF119EEE917E54F3C3FC5283BDA1F"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.SheetCover.exists_open_lift_family_of_starConvex",
+    "Dubon2026.SourceFunctionField.SheetCover.exists_coordinate_family_of_starConvex",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cell_lift_family"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.SheetCover.exists_open_lift_family_of_starConvex",
+    "Dubon2026.SourceFunctionField.SheetCover.exists_coordinate_family_of_starConvex",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cell_lift_family"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellFamilyAudit3.log",
+  "logSha256": "CF94D6BC01D44085A4487D12F683F8605F282B4AFC89455C678453318241F1C8",
+  "auditSha256": "E35CA5A43721AB76C15F2CE6CB197E3A448F11AB9C4C89C32A4DA2974B92E0D9",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 3,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 9,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellFamilyDependencyAudit3.log",
+  "dependencyAuditSha256": "F1C30E8A730B42450915F32066F6DDDE780566198F66314BC6865680FE78EA3D",
+  "dependencyAuditSourceSha256": "FF73D0CD91623C308BF0FDE282329356362D51A5F539C563BEA7AB8B2AE2F3F7",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cell_lift_family"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> raw geometric reciprocity -> finite lifted dissection -> disjoint exhaustive analytic lifts of each original cell",
+  "discharged": "Each original cell has a disjoint exhaustive family of analytic coordinate lifts indexed by its literal center fiber. The actual fiber cardinal is the splitting-field degree. The lifted radial carriers exhaust the exact restriction preimage of the original carrier, and all transitions are analytic with nonzero derivative. No sheet-existence, sheet-count, exhaustion or analytic-transition premise remains.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Global lifted cell dissection, paired boundary arcs and reciprocity, unconditional cover Abel converse and actual point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-cell-family-3-reuse-review-20261024.json",
+  "reuseReviewSha256": "0AD54C22A518901F0825623A0506A06D876D1B73DDD080487EC1078E1E314BB1",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

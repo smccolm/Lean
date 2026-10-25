@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary Kummer point division -> cover Abel comparison -> compact connected cover geometry",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateGenusMaximum.lean",
+      "sha256": "BAA2D207D95AAFA97811DA449958297C510503237450685BEF4C376554BFB668"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalOnePoleFunction.lean",
+      "sha256": "FAE8182E1A5A61E726A032E3A0FDF782B8CA33CFD143020A80B311DD6DAF02DE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalEvaluationContinuity.lean",
+      "sha256": "B5D00FDEAA10714BEE6A52913C57F0224A92B03BF2A82CF01714CCF2CFA3BCA0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalClopenObstruction.lean",
+      "sha256": "83D88CC0ECB84E0BB7A3355B81B0C016FAF1B3BEAEA06A527B6526B95D474966"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexConnected.lean",
+      "sha256": "40B70BE83BAB0705003B6B0311973B5962233EE239F1D96D0D228EB58EDEF5AD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCompact.lean",
+      "sha256": "3D70B9D04B80CF72E682451696B55065329369ACA52D7EF749ACDBF0B0D2473D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveAnalyticChartOrders.lean",
+      "sha256": "65445F0639F45377454667301F713F62897407CDB4FADC0BC07514828BF1C0DD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverChartOrders.lean",
+      "sha256": "BAA0137ADA298250C33DAAF82AEA34E245579F51FDE555C4203240CA5BB34DA0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Complex\\AbsMax.lean",
+      "sha256": "3E96B93B6B31F83FE103ADA2D8F2F07BAF06466D0977D40A7ED10CF7EB2F181A"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-connectedness-route-497.json",
+    "sha256": "5F63CDF23AEEC858F8ABF54D8CB09821D4D97A77E3C451E821F0552B18F6F0BB",
+    "review": {
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary Kummer point division -> cover Abel comparison -> compact connected cover geometry",
+      "reuseChecked": [
+        "SourceCurve.finite_coordinate_degree_dimension_maximum already applies to the actual finite cover coordinate",
+        "SourceOriginalOnePoleFunction has the needed dimension-versus-constants argument",
+        "SourceOriginalClopenObstruction and SourceOriginalComplexConnected already prove the short maximum-modulus connectedness route",
+        "The scratch-audited actual cover charts have exact normalized reading orders; compactness has now compiled and is under audit"
+      ],
+      "shorterRoute": "The degree-dimension maximum alone gives ell((gamma+1)[v]) >= 2. Reuse that bound to produce a nonconstant function regular away from v, without reconstructing the global index formula. Adapt the original maximum-modulus obstruction to genuine cover residue readings and use the actual nonempty place set from the finite coordinate.",
+      "scope": "Only the one-pole function, regular evaluation continuity and clopen obstruction needed for connectedness of this actual cover. No general Picard representability or new Riemann-Roch framework.",
+      "remaining": "After compactness and connectedness, Abel comparison, actual point-difference division and its arithmetic descent remain unproved. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "discharged": "The literal complex Kummer splitting field has a connected native place manifold. The actual finite coordinate supplies nonemptiness and a nonconstant function regular away from any specified place. Only the already proved degree-dimension maximum is needed for the latter. Actual regular residue readings are continuous; compact maximum modulus excludes every proper nonempty clopen subset because local constancy would contradict the exact finite normalized order of a nonzero field element. No connectedness, one-pole-function or evaluation-continuity premise remains.",
+  "remaining": "Auxiliary cover Abel comparison, actual point-difference division and arithmetic descent remain unproved. Original pairing nondegeneracy, nonzero required Hecke-component restriction, separate determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-compact-7-scratch-receipt.json",
+    "sha256": "8F32E368401FE2C4DCAD91CBE965B31BFB7B0DDAE02ECD5E06B5D5E57B867E45"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

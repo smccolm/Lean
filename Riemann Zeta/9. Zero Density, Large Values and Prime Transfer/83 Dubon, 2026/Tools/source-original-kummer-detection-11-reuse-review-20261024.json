@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "actual residual association -> original primitive Frobenius determinant -> nondegenerate Hecke-component pairing -> finite Weil detection -> original moving, cover norm and reciprocity",
+  "precedingScratchReceipts": {
+    "source-original-kummer-point-5-scratch-receipt.json": "E3A5B1124A1D26C419C41E34314C2AF6F9103034FA2B4C15E6C17CBC9923A49C"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePlaceTransport.lean",
+      "sha256": "8E5124CBDFDEB8F3C8343B5DC5650735F428B5F9BA9FAF8ACAE2F033DE0A3439"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveGaloisPlaceCenter.lean",
+      "sha256": "42A7C963F75759C7BFD7A47A21D0F43C4A8F53099993E8F74F53FB6C6F45AFAC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardGroup.lean",
+      "sha256": "FDD3E9F7FEAB972C7A3E284A89527B61C2442549D29EC437F60EF98570CEA58B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardPushforward.lean",
+      "sha256": "5AFD11FF786364DB2844F7E3F5168AEC2B50B66089B007B8BCA251C649F48EAA"
+    }
+  ],
+  "routeAdjustment": "Keep the existing original Picard quotient, actual WeilDatum and descended original pairing. Native moving avoids the finite restrictions of the norm divisor and the two cover points. The actual principal correction preserves the root equation and Galois multiplier. Native normalized order restriction identifies the root divisor. Scopes 483-485 provide the actual norm adjunction, cover reciprocity, point evaluation and conditional norm torsion representative. Assemble the literal ratio equal to the inverse multiplier, with the one point-difference division premise still exposed. Keep the finite-support and corrected-function calculation at the generic field level, then instantiate the literal original cover once. This avoids repeated elaboration of the original function field without changing proof limits. The four unused original corrected-function wrappers and separate intermediate actual ratio consumer are excluded from this production scope; the assembled consumer uses the generic proofs directly.",
+  "discharged": "The original moving correction and finite support conditions; corrected root order, power and multiplier; norm/reciprocity ratio equal to the inverse nontrivial multiplier; actual detecting Weil datum and descended finite torsion partner; actual Tate detection and injectivity conditional only on the explicitly displayed auxiliary point-difference division input.",
+  "remaining": "Existence of n-division of the actual auxiliary point-difference classes, unconditional finite/Tate nondegeneracy, Hecke-component restriction, determinant and downstream acceptance gates. Scratch development. 16/20; DUB-17--20 OPEN.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\nyll-reuse-20261024-479-archive-manifest.json",
+    "sha256": "B063EEFBC68FFBF7AC1BF3200918AE80B4694100EA7F2610D8F8355CCB8EECCF"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-detection-route-486.json",
+    "sha256": "BD4971BC4C98205080B8ACE373E0AB608B51E5D6B527904AFA0127B9AA93F159",
+    "review": {
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "actual residual association -> original primitive Frobenius determinant -> nondegenerate Hecke-component pairing -> finite Weil detection -> original moving, cover norm and reciprocity",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalClosedPicardMoving.lean",
+          "sha256": "2D8D3E01FDCD4605E2BCFEB0EFEA9E0DB01E349754487AA74FFBE6420E4FC2DA"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilPrincipalInvariance.lean",
+          "sha256": "DF26E2C5B58AB0C010B36D0AD2F4CB7722791EB8C4FCFEB77DAC922E24F51E13"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardGroup.lean",
+          "sha256": "FDD3E9F7FEAB972C7A3E284A89527B61C2442549D29EC437F60EF98570CEA58B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveDivisorPullback.lean",
+          "sha256": "D78262F7756E810E2F7FBC4201AC9E5DC67A644FD62970C3419E64A06F708422"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRestrictionOrders.lean",
+          "sha256": "7F3BDC1E9165D19496D2E3B821686E945DACDBD93BD8277DB5B0444519407B7B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilPairingDescent.lean",
+          "sha256": "BE351E3269C8A3D2C86B52E990D9808B71646B3D1B452A000311F3FB5E0D7DF6"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilDatum.lean",
+          "sha256": "C82E3938519B9ADB1BBF78C6202792A98AB9397096E7578D4FFE0B853A2D400F"
+        }
+      ],
+      "sourceReview": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\nyll-kummer-detection-review-482.json",
+        "sha256": "34A73CEA2AB13B28B051EA5F2648FA8AE304ADDF1D1EAD8B91EA8B52905C66EF"
+      },
+      "selectedRoute": "Keep the existing original Picard quotient, actual WeilDatum and descended original pairing. Native moving avoids the finite restrictions of the norm divisor and the two cover points. The actual principal correction preserves the root equation and Galois multiplier. Native normalized order restriction identifies the root divisor. Scopes 483-485 provide the actual norm adjunction, cover reciprocity, point evaluation and conditional norm torsion representative. Assemble the literal ratio equal to the inverse multiplier, with the one point-difference division premise still exposed. Keep the finite-support and corrected-function calculation at the generic field level, then instantiate the literal original cover once. This avoids repeated elaboration of the original function field without changing proof limits. The four unused original corrected-function wrappers and separate intermediate actual ratio consumer are excluded from this production scope; the assembled consumer uses the generic proofs directly.",
+      "discharged": "The original moving correction and finite support conditions; corrected root order, power and multiplier; norm/reciprocity ratio equal to the inverse nontrivial multiplier; actual detecting Weil datum and descended finite torsion partner; actual Tate detection and injectivity conditional only on the explicitly displayed auxiliary point-difference division input.",
+      "remaining": "Existence of n-division of the actual auxiliary point-difference classes, unconditional finite/Tate nondegeneracy, Hecke-component restriction, determinant and downstream acceptance gates.",
+      "boundary": "Scratch development. 16/20; DUB-17--20 OPEN.",
+      "assemblyImportRepair": {
+        "reason": "Frozen scope 480 predates promotion 7673. Its scratch pairing imports clash with production declarations used by the new assembled cover proof. Preserve scope 480 source and audit, compile this fresh import-only copy, and map both source module names to the one production module on promotion.",
+        "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilDetection.lean",
+        "sourceSha256": "FAA387275F28600AF5DE1CD5BCEDEF3F350627F4F2724E50B1221C79174AFDD2",
+        "successor": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilDetectionAssembled.lean",
+        "successorSha256": "A8D3290C97705F60C3653FD0F4C477C067A03E6B3963E5482A2AFBE1F72817D9",
+        "replacement": [
+          "import SourceOriginalTateWeilLinearity",
+          "import Dubon2026.SourceOriginalTateWeilLinearity"
+        ],
+        "bodyIdentical": true
+      }
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

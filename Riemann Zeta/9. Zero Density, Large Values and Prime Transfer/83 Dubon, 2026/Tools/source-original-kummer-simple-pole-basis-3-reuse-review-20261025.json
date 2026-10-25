@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> meromorphic loop generation for every allowed differential -> finite basis of the actual simple-pole space",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalSimplePoleSpace.lean",
+      "sha256": "1F6B40558E04C6FA69C18D87AA1F427E64A0FC06DF997C8F02D4290BA1FFD9AF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalSimplePoleSpaceFinite.lean",
+      "sha256": "C5985F6967D57C8223EE14CFFD556EBD5BD62A77FD145A5FA4B9B593FE73B962"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalSimplePoleBasis.lean",
+      "sha256": "F34313EE0677D1F6B996A80C4244DA601DD1F9FA0AE61CC89ABBC95D82067F73"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateCanonical.lean",
+      "sha256": "20BF79050CA13A8A5DBEC7E86760BD028878A6DF4D2BD7E3A96A3B4E939AC33F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverSimplePoleBounds.lean",
+      "sha256": "2E96B611EDA502138D5AAD889753CE4FA88C5657D3D9DE891D5AEB0E70B58FB2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDifferentialResidues.lean",
+      "sha256": "7D09F00C7EFAEA4C714EE6ADBCD083CDA449C19A46FD759C63110DABCF9ADA84"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCanonicalSupport.lean",
+      "sha256": "0FA1C4DE0E53292A3040CB9ED377837954CA810EAC400C506302BB99E4743917"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-simple-pole-basis-route-546.json",
+    "sha256": "B6AC2651037357C7E1A6534CD2A3AEE8970524D8F43407E69342BA242D6D2993",
+    "review": {
+      "scope": 546,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> meromorphic loop generation for every allowed differential -> finite basis of the actual simple-pole space",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalSimplePoleSpace.lean",
+          "sha256": "1F6B40558E04C6FA69C18D87AA1F427E64A0FC06DF997C8F02D4290BA1FFD9AF"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalSimplePoleSpaceFinite.lean",
+          "sha256": "C5985F6967D57C8223EE14CFFD556EBD5BD62A77FD145A5FA4B9B593FE73B962"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalSimplePoleBasis.lean",
+          "sha256": "F34313EE0677D1F6B996A80C4244DA601DD1F9FA0AE61CC89ABBC95D82067F73"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateCanonical.lean",
+          "sha256": "20BF79050CA13A8A5DBEC7E86760BD028878A6DF4D2BD7E3A96A3B4E939AC33F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverSimplePoleBounds.lean",
+          "sha256": "2E96B611EDA502138D5AAD889753CE4FA88C5657D3D9DE891D5AEB0E70B58FB2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDifferentialResidues.lean",
+          "sha256": "7D09F00C7EFAEA4C714EE6ADBCD083CDA449C19A46FD759C63110DABCF9ADA84"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCanonicalSupport.lean",
+          "sha256": "0FA1C4DE0E53292A3040CB9ED377837954CA810EAC400C506302BB99E4743917"
+        }
+      ],
+      "shorterRoute": "The actual cover regular space and linear residue maps are already proved. Reuse the original finite residue-kernel argument and native finite-module theorem instead of building another bounded differential/divisor comparison. The existing simple-pole bounds form the exact allowed submodule; native finBasis supplies a span with no period or new geometry hypotheses.",
+      "assumptionsToDischarge": "Finite-dimensionality and a finite spanning basis for all actual differentials with at most simple poles in the specified finite set. This is necessary to prove one common integer loop formula on a finite family and extend it to every permitted differential by linearity.",
+      "remaining": "Residue-subtracted cell primitives, their periodic logarithmic boundary terms, meromorphic path generation and extension to all simple-pole forms, final prescribed 2g reindexing, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20."
+    }
+  },
+  "discharged": "The actual cover differentials with at most simple poles in the specified finite set form a finite dimensional complex submodule. The actual residue map has a kernel injecting into the already finite dimensional regular differential space, using zero-residue pole removal. The constructed finite basis spans every allowed actual differential. This removes the finite-family reduction needed for a common meromorphic loop formula; that formula and the unconditional cover Abel converse remain open.",
+  "remaining": "Residue-subtracted cell primitives, their periodic logarithmic boundary terms, meromorphic path generation and extension to all simple-pole forms, final prescribed 2g reindexing, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-third-kind-6-scratch-receipt.json",
+    "sha256": "9B70502859FF3B812676E4CE6DC64F330A4D0F3CC64ADBEB8B19F1E4E44A6096"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

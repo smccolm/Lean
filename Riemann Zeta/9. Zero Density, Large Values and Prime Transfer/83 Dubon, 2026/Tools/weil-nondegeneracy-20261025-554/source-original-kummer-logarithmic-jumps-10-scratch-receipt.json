@@ -1,0 +1,146 @@
+{
+  "recordedUTC": "2026-10-25T13:59:25.451860+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceRadialMeromorphicBoundaryValues",
+    "SourceOriginalWeilCoverMeromorphicBoundaryValues",
+    "SourceOriginalWeilCoverMeromorphicBoundaryFTC",
+    "SourceRadialMeromorphicBoundaryJumps",
+    "SourceOriginalWeilCoverMeromorphicBoundaryJumps",
+    "SourceRadialMeromorphicNormalizedJumps",
+    "SourceOriginalWeilCoverMeromorphicBoundaryPeriod",
+    "SourceOriginalWeilCoverMeromorphicNormalizedJumps",
+    "SourceOriginalWeilCoverNormalizedMeromorphicData",
+    "SourceOriginalWeilCoverNormalizedMeromorphicCycleData"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialMeromorphicBoundaryValues.lean",
+      "sha256": "6A162871C08260F2F3C4A61582B98CDB65CCC1F1D6E6B7AC0849E03A06558A9A",
+      "oleanSha256": "05F9D17937D292D6E0B2A90E1ACBA297701D8722EA54B173922F7DB78C8CE161"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicBoundaryValues.lean",
+      "sha256": "8B85B79E4DFBBA355FCB84F94356D720771E2B846014AC1363BD6F425B39C286",
+      "oleanSha256": "8EC536B9562DBCCD4AFE8574442F1B28B00A109C7DE42AED7088AC90D7964FCF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicBoundaryFTC.lean",
+      "sha256": "C458291DB30E034B9125EFA2659819E9618E60E80C63E9196736DE67E0BCA1E9",
+      "oleanSha256": "71064EC2B29AD68126DC28BC3E328C59FCC47B290264038190500202F308CB0E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialMeromorphicBoundaryJumps.lean",
+      "sha256": "E262A7FB6A71FFF7873274763DFFE78068ADF46A6378FB7BBA2477D6B8C43831",
+      "oleanSha256": "E79C3F1A518C0AD1CD2B6509DCC58CDF9519F9458167A742FC5CD26E481C96C3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicBoundaryJumps.lean",
+      "sha256": "6DA8CDECA8D9BF03CCC7A95208F75AA9CDC004D7046830EBA55A5DF83187947F",
+      "oleanSha256": "1CD9D80FAA88223B14BD4A6D201520A6C9AD9CE73F15D29D4E9CDAA667935DA3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialMeromorphicNormalizedJumps.lean",
+      "sha256": "2523D386DE6BE9B17CBA7E2078691BC5D057DF1F2F6A1308A3C024059411220F",
+      "oleanSha256": "E293DBD6AE2205948E725B3346893D96469155F3BDBC8513AE1DEDC1CB96E8F8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicBoundaryPeriod.lean",
+      "sha256": "9095E0ED01569ECC674D7445390FA2123E2B61F193CD989950BDBB8F1DE4E0CD",
+      "oleanSha256": "E0D4EC1CD0F3680097E519FE148EE0E68B89654B1F9BBD569496CBBE78609CC6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicNormalizedJumps.lean",
+      "sha256": "0D07A9C2C346835D9C32E9825ABFB94A61E4756EA2E195AC03A8ACB5C9B57774",
+      "oleanSha256": "FEB20B5DDE6490AE2F9D4D2EAD1A9D68B483910E02F2F9F322081F0D901C827C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNormalizedMeromorphicData.lean",
+      "sha256": "91DDB4489F0EBB7CB43633B392253B65C732199735D556F513D48D7CFB48A8B7",
+      "oleanSha256": "D3DE167E5AB02C808309D74943F2461C0D459096BE2B25F6F26F295806A02DE4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNormalizedMeromorphicCycleData.lean",
+      "sha256": "063CAC2D0AE1C9A416ACAB33E84696EA8086DD35A4A7F34E45D076A33D531857",
+      "oleanSha256": "079800F5B2BB6C10E3AA39E089F7912F3A951E11880B220B2FD087F7BEFAB421"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.logTerm_add_two_pi",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.hfun_add_two_pi",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.continuous_logTerm",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.hasDerivAt_logTerm",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.hasDerivAt_hfun",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.continuous_hfun",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_hasDerivAt_meromorphicBoundary",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_continuous_meromorphicBoundary",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_boundary_regular",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_boundary_ftc",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.edge_pair_boundary",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_boundary_jumps",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.regPrimData_add_const",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.hfun_add_const",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.isJumpH_add_const",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.normalize_regPrimData",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_boundary_period",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalize_meromorphic_primitives",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalized_meromorphic_primitives_of_data",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_normalized_meromorphic_cycle_data",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.logTerm",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.hfun",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverMeromorphicBoundaryValue",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.IsJumpH",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverNormalizedMeromorphicPrimitives"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.logTerm_add_two_pi",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.hfun_add_two_pi",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.continuous_logTerm",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.hasDerivAt_logTerm",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.hasDerivAt_hfun",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.continuous_hfun",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_hasDerivAt_meromorphicBoundary",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_continuous_meromorphicBoundary",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_boundary_regular",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_boundary_ftc",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.edge_pair_boundary",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_boundary_jumps",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.regPrimData_add_const",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.hfun_add_const",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.isJumpH_add_const",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.normalize_regPrimData",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_boundary_period",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalize_meromorphic_primitives",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalized_meromorphic_primitives_of_data",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_normalized_meromorphic_cycle_data"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.logTerm",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.hfun",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverMeromorphicBoundaryValue",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.IsJumpH",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverNormalizedMeromorphicPrimitives"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerLogarithmicJumpsAudit10.log",
+  "logSha256": "1D0A8C989607810D9E958C0AB927B77C92916F079C85B217485434D8018AB8C9",
+  "auditSha256": "9374B9D766C09E833EAE86F547AB23BB10828CA36D476426832536182554486E",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 57,
+  "linterScopes": 10,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 25,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerLogarithmicJumpsDependencyAudit10.log",
+  "dependencyAuditSha256": "146454CD45F905434F069662331ACC9DAD8AEA156E4B9872690EC45D7845C4FF",
+  "dependencyAuditSourceSha256": "7EC892B6814E8DCF5832394DCB6F1398B328FCD8D16A0451FD9611E62ACADA1D",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_normalized_meromorphic_cycle_data"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> meromorphic loop generation -> logarithmic boundary increments and normalized paired-edge jumps",
+  "discharged": "The actual logarithmic boundary reading has the literal differential integrand as derivative and its exact cell residue period as increment. Actual marked-pole geometry gives boundary regularity, and existing integrability plus FTC identifies every arc integral with its endpoint increment. The actual reversed-integrand law yields constant paired-edge jumps; existing dual-tree transport kills those jumps by changing only primitive constants. The actual existence consumer retains the same dissection, 2g count, polygon, integer cycles, regular loops and all matrix/reciprocity identities, together with normalized primitives for a basis spanning all allowed simple-pole forms. No boundary derivative, arc integral, jump or normalization premise remains on that consumer.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Residue-quotient jump-to-period reduction, pole-avoiding path atlas and meromorphic loop generation, extension to all allowed forms, final prescribed 2g indexing, unconditional cover Abel converse and auxiliary point division, arithmetic descent and DUB-17--20 remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-logarithmic-jumps-10-reuse-review-20261025.json",
+  "reuseReviewSha256": "C34A9CB338B8213C5E978FFE0261DFD7BC5F346C992FDDA618B7828365AD958F",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

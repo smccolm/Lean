@@ -1,0 +1,106 @@
+{
+  "recordedUTC": "2026-10-25T10:13:35.940234+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceRadialCellBoundaryCoordinates",
+    "SourceOriginalWeilCoverPathPrimitiveDerivative",
+    "SourceOriginalWeilCoverBoundaryCoefficient",
+    "SourceRadialAffinePrimitiveIntegral",
+    "SourceOriginalWeilCoverArcPathIntegral",
+    "SourceOriginalWeilCoverEdgePathIntegral",
+    "SourceOriginalWeilCoverCoordinateCycleLoops",
+    "SourceOriginalWeilCoverCoordinateCyclePrimitives"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialCellBoundaryCoordinates.lean",
+      "sha256": "1716E66762390C9AC1AE2E2AB764BBCBCDB864F0E051EB550F61E6466CF6A677",
+      "oleanSha256": "D2D77704347B01FB92DE9BBED32850D210A2B475BB6F00CD7A1B7B9BFD4ED913"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPathPrimitiveDerivative.lean",
+      "sha256": "B9A00C6789A97CCC3AE108E483A4AA401CDFFF45637703B57F93A9EE958A1432",
+      "oleanSha256": "6BE769CACBB45FCDFB16674A548CD56E0C30FDA4AD7B16F61E141B4B9996FD6D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverBoundaryCoefficient.lean",
+      "sha256": "62CADA25827F0CED01F0C9077FA11A06F6B4D9C9BF47380325BB6E515617E13A",
+      "oleanSha256": "F89A12A5327D8E1121268F153597513E15D8B79198DDCD512176F8BC60321232"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialAffinePrimitiveIntegral.lean",
+      "sha256": "7D0C416AA8E9EC2A1D67A3A0932BF41DF346C659E2C92AB4FB6D94864024E62E",
+      "oleanSha256": "70D68868D772F8394FB806F0C0C534B54D510C31B8EF3D88E78E011C212D2B20"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverArcPathIntegral.lean",
+      "sha256": "5ADAF323A56DDD706AB74B22A78BBA6F91CE263D9E87EDC1E8005F3E24B9A9B0",
+      "oleanSha256": "A1E22DA3E92FB49DB55CB692329EA45A215001382E1B2856E6CB4B744650AE1C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverEdgePathIntegral.lean",
+      "sha256": "C2C597C1430A7142BD6192D4692DAE72312AD08891D11060260BC8E50F032242",
+      "oleanSha256": "3DBC7CF87CD6E9DFFA12B48C1BCA3A262AC8AD992E7DD3A6DEEC460B27F54951"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCoordinateCycleLoops.lean",
+      "sha256": "B64304D91795FF4FB3351251ABBCFE95FAA59317F351F04B2B3C0FA36CF1C864",
+      "oleanSha256": "A694BA52A612B746C224E80B66B12C900079956D222917E0773AB67D0EC20167"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCoordinateCyclePrimitives.lean",
+      "sha256": "D49DA89037DAE7F55EECF7D2679CAEF2D0ED9331DBB07AF1094EAE69A1AF2001",
+      "oleanSha256": "83F5C1ABFEA276785B015F2120F0BAFEDA6C974CF2C3A4D14B0E38E6216331EC"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.bdry_coordinates",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_hasDerivAt_path_primitive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_continuousOn_boundary_coefficient",
+    "Dubon2026.SourceFunctionField.CellGeometry.OriginalEdgePaths.arc_integral_eq_primitive_sub",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_pathIntegral_arcPath",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_pathIntegral_edgePath",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coordinate_cycle_loops",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_coordinate_cycle_primitives",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverBoundaryIntegrand",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverEdgeIntegral",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverCoordinateCycleLoops"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.bdry_coordinates",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_hasDerivAt_path_primitive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_continuousOn_boundary_coefficient",
+    "Dubon2026.SourceFunctionField.CellGeometry.OriginalEdgePaths.arc_integral_eq_primitive_sub",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_pathIntegral_arcPath",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_pathIntegral_edgePath",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coordinate_cycle_loops",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_coordinate_cycle_primitives"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverBoundaryIntegrand",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverEdgeIntegral",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverCoordinateCycleLoops"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoordinateLoopsAudit8.log",
+  "logSha256": "10EDDD90667EBB6DE725DE9AA4C973F3259944678780EAFE7A8DA1767B4F33DF",
+  "auditSha256": "8AC02A2FF064F0DF2798FD65745B0AA1780E91370741263DCA54E1516F36B334",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 21,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 16,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoordinateLoopsDependencyAudit8.log",
+  "dependencyAuditSha256": "B41A0A5B284882E875312C6B23FB37A75ACB00D3413EA1FCBC21F6C4C9D2F8A6",
+  "dependencyAuditSourceSha256": "54EC8D90CA6ACCBD7A959D0486F95322FF419591826440D64D953D4A6EAF8CF2",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_coordinate_cycle_primitives"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> coordinate-integral identities for actual cycle loops",
+  "discharged": "The actual cover local-primitive chain rule and boundary coefficient continuity give arc and edge path-integral comparisons by native interval FTC and affine substitution. The same constructed cycle loops now satisfy the literal coordinate edge-sum formula for every differential regular on the skeleton. The same actual marked dissection retains all geometry, trees, polygon, integer cycles and normalized regular cell primitives; no coordinate-integral comparison premise remains.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-coordinate-loops-8-reuse-review-20261025.json",
+  "reuseReviewSha256": "301E8629251E85647F394E2CC74F89BA41FA4128F75B8A6DF7546AA74C076525",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

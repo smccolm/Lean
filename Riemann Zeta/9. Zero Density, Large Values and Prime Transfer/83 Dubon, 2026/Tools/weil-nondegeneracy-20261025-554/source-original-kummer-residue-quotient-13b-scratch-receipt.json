@@ -1,0 +1,190 @@
+{
+  "recordedUTC": "2026-10-25T14:20:52.276082+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceRadialQuotientArcValues",
+    "SourceRadialQuotientVertexValues",
+    "SourceRadialQuotientWordIdentity",
+    "SourceRadialQuotientCycleReduction",
+    "SourceRadialResiduePeriodQuotient",
+    "SourceRadialMeromorphicSignedEndpoints",
+    "SourceRadialQuotientArcGeometry",
+    "SourceRadialMeromorphicQuotientArcValues",
+    "SourceOriginalWeilCoverMeromorphicQuotientArcValues",
+    "SourceRadialMeromorphicJumpPeriodClosure",
+    "SourceOriginalWeilCoverMeromorphicJumpPeriodClosure",
+    "SourceOriginalWeilCoverMeromorphicJumpData",
+    "SourceOriginalWeilCoverMeromorphicJumpCycleData"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialQuotientArcValues.lean",
+      "sha256": "82EBB23247FDF47F45298BB8AB495D11533535B65FDB4B799E0389D6DB3F28D9",
+      "oleanSha256": "EF833449FFD7A6FC6779D865818BC97F092B18EA8D2DEA3CF7AC94CE6DB4721C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialQuotientVertexValues.lean",
+      "sha256": "D88955EA9A99A1EBF00B9D60F810547F1C1D5D16FCA3F672345217A73FE8ACCF",
+      "oleanSha256": "8CD9594DA0E35F98D96E8C133FF8493BC29DD730318BE05E2EAF2126E0DBF1A4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialQuotientWordIdentity.lean",
+      "sha256": "BD9952E78554DA73AAE49DDD1BA704C756D8AFB317E1861DF44D9FFDFF181A83",
+      "oleanSha256": "527A219EACC05B6DBDD84712E8CE5A984F09E5A18337A3E02634F727E7D75FA1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialQuotientCycleReduction.lean",
+      "sha256": "82C7DEFCA0C979D26A9A1BBB33443F9090ABF72B2C7AB39FA48519F53F34FAB8",
+      "oleanSha256": "9BC0EE22EE32D3954B1A0D14DA050ADC48ECC6733976225F85AAE0BD27E0AA93"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialResiduePeriodQuotient.lean",
+      "sha256": "8ED0859829DBD90DA3AC9AAB0618853821ED6488C4155318C6115ADAFCE2C85D",
+      "oleanSha256": "3B736B31479C3D2BBCECA8131FA93CD0EADAD58336BC1A7E02EA9B21084A75F5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialMeromorphicSignedEndpoints.lean",
+      "sha256": "A6C09D0F3702B87A23A2F5671EC3AC1F587375B7921E215202688268CE29209F",
+      "oleanSha256": "25034A1C1C408010D1F3E05456047C7390248397013B15325F46EF6D5ADEF28D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialQuotientArcGeometry.lean",
+      "sha256": "C42D276701A9628DF8BD3F0FED07A7C35F44423A830C00C6828F8ABB57D83F9F",
+      "oleanSha256": "4DC38236174C811DE8DC71E9CAF6DC77EA72F30A7EDE2E11668985EB521EA76E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialMeromorphicQuotientArcValues.lean",
+      "sha256": "EA290F96B0A8ECAD2073304112B0C6F69305D2A9EE05F6A58289CECDFBAEC64D",
+      "oleanSha256": "A7279A2624E2DA04F9720ACEDD62415C9256FBCDE1ED7AD3CFE41E3C1999D7E2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicQuotientArcValues.lean",
+      "sha256": "8A18B83511A4C368948BAC3089E1D349193004695FF4291DF4734716E3A19A0D",
+      "oleanSha256": "773AD4BA84D96D23223AA7F0862574E2EA74558DA11AE1EAB3B789BA71ACE55D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialMeromorphicJumpPeriodClosure.lean",
+      "sha256": "F4240527829A9F16BC71B2E4294B0838FCD7E3E4764D72DAF0A760EB50964144",
+      "oleanSha256": "495FA189C554960158E7F47119B7DA2FCCA3AB294254A6790C3974C8F63A97C4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicJumpPeriodClosure.lean",
+      "sha256": "308E5533AA41DD745E6FB08DD52F3F68C1EBAB835D73F72ED01AA1DF08A01671",
+      "oleanSha256": "9D6CAF1719137F58D6BD0BC33C016F01F1F6B625E450B5B401E0EFED3EE97795"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicJumpData.lean",
+      "sha256": "435C67D4AB177ED26EBB0706C58021C39AC0BC08A6FFB67FA3EF4D5BC682B1C2",
+      "oleanSha256": "008CEE98015C0D56EB0A6273A7F7B3CD3B626E27970DBB851B0565F02F43DFFA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicJumpCycleData.lean",
+      "sha256": "7AC45BCCF6EFE3798E91A64E9AAA6720234D06E8BE16EBB27A59BCD0343DFC48",
+      "oleanSha256": "944609A8E271367B5FF5E11F91DB590B6A729519569FEF27DA11D5BD699D81D7"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sv_arcOf",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ev_arcOf",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.kirchhoff",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.vval_sv",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.B_eq_vval",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.A_eq_vval",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.vval_eq_of_link",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.corner",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.B_sub_A",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.word_identity",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sum_word_eq_sum_wordChainA",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sum_chain_smulA",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.jump_formula",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.jump_mem_closure",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.zvA_Iq",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.IsJumpH.neg_endpoint_increment",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.IsJumpH.signed_endpoint_increment",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sv_injective",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.arcValuesH",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_quotient_arc_values",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.residue_quotient_decomposition_of_lift",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.jump_mem_sup",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_jump_mem_sup",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_jump_data_of_normalized",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_jump_cycle_data",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.FlowDecomp",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sv",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ev",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.mk",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.vval",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sgn",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.zvA",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.\u039bres",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.Aq",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.Bq",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.Iq",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverMeromorphicJumpData"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sv_arcOf",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ev_arcOf",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.kirchhoff",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.vval_sv",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.B_eq_vval",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.A_eq_vval",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.vval_eq_of_link",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.corner",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.B_sub_A",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.word_identity",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sum_word_eq_sum_wordChainA",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sum_chain_smulA",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.jump_formula",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.jump_mem_closure",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.zvA_Iq",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.IsJumpH.neg_endpoint_increment",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.IsJumpH.signed_endpoint_increment",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sv_injective",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.arcValuesH",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_quotient_arc_values",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.residue_quotient_decomposition_of_lift",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.jump_mem_sup",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_jump_mem_sup",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_jump_data_of_normalized",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_jump_cycle_data"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.FlowDecomp",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sv",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ev",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.ArcValues.mk",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.vval",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.sgn",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialArcPeriods.zvA",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.\u039bres",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.Aq",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.Bq",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.Iq",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverMeromorphicJumpData"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerResidueQuotientAudit13B.log",
+  "logSha256": "EF044EEEAF4AA7B458D2D22829D60C34A00001DB5A4BA8AF371F08772BF90E93",
+  "auditSha256": "D548D6CD8F6AE2FED094C6D55B088A2AA8A41F22400F355EF06840B08CDD57CA",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 71,
+  "linterScopes": 13,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 32,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerResidueQuotientDependencyAudit13B.log",
+  "dependencyAuditSha256": "D6AA8D0F795D20D8110345663FF5952D1DE668030BD383B2EF4A1725CDA2ED17",
+  "dependencyAuditSourceSha256": "CD25D7494E27D713B3EC82086942D0CF9A8EBB145B091027C6C8622C61619289",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_jump_cycle_data"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> meromorphic loop generation -> normalized jumps reduce to cycle integrals and residue periods",
+  "discharged": "The exact additive polygon identities apply to the actual logarithmic boundary readings in the quotient by literal cell residue periods. Positive FTC and existing paired endpoint jumps give both signs; native cyclic-index and radial-injectivity facts give all remaining arc-value clauses. The same constructed polygon and fundamental cycles give exact quotient jump formulas. Lifting them proves every actual normalized meromorphic jump belongs to complementary integer cycle integrals plus literal residue periods. The actual existence consumer preserves the same dissection, 2g count, regular loops and all matrix/reciprocity identities. The failed first audit registration, which mistook a comment for a theorem name, is preserved; this successor checks all real declarations and unchanged proof sources.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Pole-avoiding local logarithmic primitive atlas, meromorphic loop generation and extension to every allowed differential, final prescribed 2g indexing, unconditional cover Abel converse and auxiliary point division, arithmetic descent and DUB-17--20 remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-residue-quotient-13b-reuse-review-20261025.json",
+  "reuseReviewSha256": "421A93E1B0AF3EE15A4ABAA060C2B23F2F39C0EEDCAD9E25130CC20CDFA245C5",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

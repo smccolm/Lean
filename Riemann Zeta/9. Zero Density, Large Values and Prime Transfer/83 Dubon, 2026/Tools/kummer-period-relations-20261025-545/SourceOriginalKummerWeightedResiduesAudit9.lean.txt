@@ -1,0 +1,74 @@
+import SourceRadialCellInteriors
+import SourceRadialPoleSkeleton
+import SourceRadialCellArcPartition
+import SourceRadialPairedBoundarySum
+import SourceOriginalWeilCoverCellCenteredResidue
+import SourceOriginalWeilCoverDissectionCellResidues
+import SourceRadialPoleCarrierSum
+import SourceOriginalWeilCoverWeightedResidueJumpSum
+import SourceOriginalWeilCoverNormalizedWeightedResidues
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCell.interior_subset_carrier
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCell.bdry_not_mem_interior
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.eq_of_interior_mem_carrier
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.pole_center_on_carrier
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.interior_of_pole_mem_carrier
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.pole_not_mem_skeleton
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.bdry_mem_skeleton
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.integral_eq_sum_arcInt
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.sum_cell_integrals_eq_sum_paired
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_cell_analyticAt_coeff_off_center
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_cell_centered_weighted_residue
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_cell_residue
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.sum_pole_carriers
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_regular_on_skeleton
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_residue_jump_sum
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalized_primitive_analytic
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalized_weighted_residue_sum
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.arcInt
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceRadialCellInteriors, `SourceRadialPoleSkeleton, `SourceRadialCellArcPartition, `SourceRadialPairedBoundarySum, `SourceOriginalWeilCoverCellCenteredResidue, `SourceOriginalWeilCoverDissectionCellResidues, `SourceRadialPoleCarrierSum, `SourceOriginalWeilCoverWeightedResidueJumpSum, `SourceOriginalWeilCoverNormalizedWeightedResidues]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.CellGeometry.RadialCell.interior_subset_carrier, `Dubon2026.SourceFunctionField.CellGeometry.RadialCell.bdry_not_mem_interior, `Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.eq_of_interior_mem_carrier, `Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.pole_center_on_carrier, `Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.interior_of_pole_mem_carrier, `Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.pole_not_mem_skeleton, `Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.bdry_mem_skeleton, `Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.integral_eq_sum_arcInt, `Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.sum_cell_integrals_eq_sum_paired, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_cell_analyticAt_coeff_off_center, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_cell_centered_weighted_residue, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_cell_residue, `Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.sum_pole_carriers, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_regular_on_skeleton, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_residue_jump_sum, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalized_primitive_analytic, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalized_weighted_residue_sum]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.arcInt]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Kummer Weighted Residues postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Kummer Weighted Residues theorems discovered"
+  logInfo m!"SOURCE ORIGINAL KUMMER WEIGHTED RESIDUES AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceRadialCellInteriors
+#lint in SourceRadialPoleSkeleton
+#lint in SourceRadialCellArcPartition
+#lint in SourceRadialPairedBoundarySum
+#lint in SourceOriginalWeilCoverCellCenteredResidue
+#lint in SourceOriginalWeilCoverDissectionCellResidues
+#lint in SourceRadialPoleCarrierSum
+#lint in SourceOriginalWeilCoverWeightedResidueJumpSum
+#lint in SourceOriginalWeilCoverNormalizedWeightedResidues

@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> regular bilinear and third-kind reciprocity -> exact residue bilinear relation on the constructed unimodular loop family",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeightedCycleSums.lean",
+      "sha256": "AA6C40A09C8EE210A8D410F4852ECA7E05CA61C7F05A12556BCE2B43157F3F6E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCycleResidueBilinear.lean",
+      "sha256": "C12902C2A91554D03A7588884260694775C812C7630395891707E7423A0B2BA0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalBilinearPeriodPolygon.lean",
+      "sha256": "8313C780234B5DF451DFAE736ADCD77A7A84503BCFFC24E1EAB2221CFBDC49E6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedBilinearPeriods.lean",
+      "sha256": "E2E473E4397924453B803D2170830A88589C3FAC67F330B4DD5CF4EDC9005467"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverUnimodularCycleData.lean",
+      "sha256": "D3C3849CA4C4B3EE7BA969D9ACD55B7E97F790A5894A901F689008EC1918F52E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNormalizedWeightedResidues.lean",
+      "sha256": "7ED1EB326D5F1A7A0A631F55722022103624A68DC6E6C34C600209972EF388E0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialFundamentalCycleSystem.lean",
+      "sha256": "B71621775D7C470E00804D98DF11B52D2B2A412B139176FBAB4981D2DBC21440"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialJumpCycleReduction.lean",
+      "sha256": "9440F600A8081D8FD9B34387250C6BC7383E2793081876BAFA698D486E1C54CB"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-bilinear-periods-route-543.json",
+    "sha256": "3FC86B273D074C1540D459746D36057BCCE15102C1460264CD244E4F7CED7187",
+    "review": {
+      "scope": 543,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> regular bilinear and third-kind reciprocity -> exact residue bilinear relation on the constructed unimodular loop family",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeightedCycleSums.lean",
+          "sha256": "AA6C40A09C8EE210A8D410F4852ECA7E05CA61C7F05A12556BCE2B43157F3F6E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCycleResidueBilinear.lean",
+          "sha256": "C12902C2A91554D03A7588884260694775C812C7630395891707E7423A0B2BA0"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalBilinearPeriodPolygon.lean",
+          "sha256": "8313C780234B5DF451DFAE736ADCD77A7A84503BCFFC24E1EAB2221CFBDC49E6"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedBilinearPeriods.lean",
+          "sha256": "E2E473E4397924453B803D2170830A88589C3FAC67F330B4DD5CF4EDC9005467"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverUnimodularCycleData.lean",
+          "sha256": "D3C3849CA4C4B3EE7BA969D9ACD55B7E97F790A5894A901F689008EC1918F52E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNormalizedWeightedResidues.lean",
+          "sha256": "7ED1EB326D5F1A7A0A631F55722022103624A68DC6E6C34C600209972EF388E0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialFundamentalCycleSystem.lean",
+          "sha256": "B71621775D7C470E00804D98DF11B52D2B2A412B139176FBAB4981D2DBC21440"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialJumpCycleReduction.lean",
+          "sha256": "9440F600A8081D8FD9B34387250C6BC7383E2793081876BAFA698D486E1C54CB"
+        }
+      ],
+      "shorterRoute": "Reuse the proved finite weighted-cycle sum argument and actual weighted residue identity. The existing scalar-lift bridge handles the universe of the already proved cycle decomposition. Unpack the same actual unimodular construction and attach the regular and residue bilinear identities without rebuilding geometry, loops, real spanning or determinant theory.",
+      "assumptionsToDischarge": "The zero bilinear relation for regular differentials and exact weighted residue bilinear relation on the same actual cycle loops and skew-symmetric unimodular matrix. The existence consumer constructs all data from the actual regular basis, base point and finite pole set.",
+      "remaining": "Abel-path comparison for the third-kind relation, meromorphic loop generation, common-index reindexing and the unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20."
+    }
+  },
+  "discharged": "The constructed actual cover cycle loops and skew-symmetric unimodular word matrix now satisfy the zero regular bilinear relation and the exact weighted residue bilinear relation. The consumer unpacks the actual unimodular construction and derives both identities from the weighted residue sum and integer cycle decomposition. The same marked dissection, normalized primitives, loop witnesses and regular-loop-generation clauses are retained. No bilinear identity or separate loop witness remains as an assumption of the existence theorem.",
+  "remaining": "Abel-path comparison for the third-kind relation, meromorphic loop generation, common-index reindexing and the unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-weighted-residues-9-scratch-receipt.json",
+    "sha256": "B149B65FBB6FFEFC2EB6A174B2ED2BCEF6254D9DF7207CC02C05E6F2F32D1EF9"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

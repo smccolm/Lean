@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric cycle generation and reciprocity -> disjoint actual primal/dual trees with exactly 2g remaining edges",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionBoundaryChains.lean",
+      "sha256": "EE0D2683D79588BC6A5B67DAEC7C446709126C71B1FE91A73563D8EF92B68EFF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionGraphConnectivity.lean",
+      "sha256": "7CEE5161C29BF2F417911B53C6C15096363C8EE0D2D7897BDC4942306AAD2C79"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCotreeComplementConnectivity.lean",
+      "sha256": "6A9956B946F908A1F3868C3E13392AD99AF92A95C5EDADCD6DC4CFFB1D2B56ED"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionTreeCotree.lean",
+      "sha256": "D3C610AE89536EE6D205DEE5770F954B870F91D9CB8D2953790264AE955FF5DF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellIntegerSpanningTree.lean",
+      "sha256": "822BB78143E5C530DACAE0BFB823750EBC8AF20664BB80C9BDA5D673D97DC00E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellIntegerTreeCardinality.lean",
+      "sha256": "73031C680C4E4B643F55A60A033F0BEF2BF3849CB1C89B9BAABECD48045E22E8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedCycleSystem.lean",
+      "sha256": "A9DC52344116B994A76E341A090CC3E06DDE250D18F66E87728DEA89F928FEC9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverEulerDissection.lean",
+      "sha256": "F2629D0752468FA505BFDD007A6F15C60305B8CC989B8A6A87A8763F19D1319B"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-tree-cotree-route-522.json",
+    "sha256": "FEF6C45DF37C5DD607CC263793D5EF1E49C0984506C988F4C03842993E9680D2",
+    "review": {
+      "scope": 522,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric cycle generation and reciprocity -> disjoint actual primal/dual trees with exactly 2g remaining edges",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionBoundaryChains.lean",
+          "sha256": "EE0D2683D79588BC6A5B67DAEC7C446709126C71B1FE91A73563D8EF92B68EFF"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionGraphConnectivity.lean",
+          "sha256": "7CEE5161C29BF2F417911B53C6C15096363C8EE0D2D7897BDC4942306AAD2C79"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCotreeComplementConnectivity.lean",
+          "sha256": "6A9956B946F908A1F3868C3E13392AD99AF92A95C5EDADCD6DC4CFFB1D2B56ED"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionTreeCotree.lean",
+          "sha256": "D3C610AE89536EE6D205DEE5770F954B870F91D9CB8D2953790264AE955FF5DF"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellIntegerSpanningTree.lean",
+          "sha256": "822BB78143E5C530DACAE0BFB823750EBC8AF20664BB80C9BDA5D673D97DC00E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellIntegerTreeCardinality.lean",
+          "sha256": "73031C680C4E4B643F55A60A033F0BEF2BF3849CB1C89B9BAABECD48045E22E8"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedCycleSystem.lean",
+          "sha256": "A9DC52344116B994A76E341A090CC3E06DDE250D18F66E87728DEA89F928FEC9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverEulerDissection.lean",
+          "sha256": "F2629D0752468FA505BFDD007A6F15C60305B8CC989B8A6A87A8763F19D1319B"
+        }
+      ],
+      "shorterRoute": "The repository already proves integer graph spanning trees, tree cardinality and cyclic-index identities without a specific curve. Reuse those results unchanged. Adapt only the original dissection boundary chains, primal/dual connectivity and cotree-complement proof to the full actual radial dissection. The constructed cover Euler dissection supplies every geometric input. This avoids a new graph theory, homology theory or independent cycle-count proof.",
+      "assumptionsToDischarge": "Existence of disjoint actual primal and dual trees on the constructed marked analytic cover dissection, the exact 2g remaining-edge count and primal walk connectivity. All geometric, vertex-incidence and Euler inputs are discharged by the actual cover consumer.",
+      "remaining": "Polygon word assembly, analytic loop realization, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20."
+    }
+  },
+  "discharged": "The actual marked analytic cover dissection has disjoint primal and dual trees, exactly twice its actual regular-differential genus many remaining edges, and primal walk connectivity. The proved original boundary-chain and cotree-complement arguments are instantiated on the actual radial dissection; native cyclic-index, integer spanning-tree and tree-cardinality results are reused unchanged. All geometric, vertex-incidence and Euler inputs are discharged.",
+  "remaining": "Polygon word assembly, analytic loop realization, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-euler-dissection-8-scratch-receipt.json",
+    "sha256": "11FDA95162CC02DBECF775A91AA1D37ED0EFFEA95A0020210A079EA377C4540B"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "actual residual association -> original primitive Frobenius determinant -> nondegenerate Hecke-component pairing -> finite Weil detection -> Kummer point-difference division and norm divisor",
+  "precedingScratchReceipts": {
+    "source-original-kummer-reciprocity-4-scratch-receipt.json": "A1600D0044E067CE452B77E089C91AB87EFE58E8BE821964AB19EB04E4548469"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePlaceTransport.lean",
+      "sha256": "8E5124CBDFDEB8F3C8343B5DC5650735F428B5F9BA9FAF8ACAE2F033DE0A3439"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveGaloisPlaceCenter.lean",
+      "sha256": "42A7C963F75759C7BFD7A47A21D0F43C4A8F53099993E8F74F53FB6C6F45AFAC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardGroup.lean",
+      "sha256": "FDD3E9F7FEAB972C7A3E284A89527B61C2442549D29EC437F60EF98570CEA58B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardPushforward.lean",
+      "sha256": "5AFD11FF786364DB2844F7E3F5168AEC2B50B66089B007B8BCA251C649F48EAA"
+    }
+  ],
+  "routeAdjustment": "Use the existing comapEquiv action, normalized orders, closed residue evaluation and Pic0 quotient. The actual point difference has degree zero and zero pushforward. Expose only its n-division as the narrower upstream premise; extract the corresponding principal function and literal norm divisor. Native moving representatives and original Weil pairing descent serve the later detecting-class assembly. Perform the actual quotient deduction at the abstract field level and instantiate it once on the cover; this avoids repeated elaboration of the splitting-field construction without increasing proof limits.",
+  "discharged": "The actual auxiliary-cover point-difference class, zero norm divisor and eigenfunction evaluation; extraction of a norm torsion representative from the explicit division premise.",
+  "remaining": "Existence of division of the specified point-difference class and the detecting-class assembly remain. No nondegeneracy, component restriction, determinant or acceptance-gate completion is claimed. Scratch development. 16/20; DUB-17--20 OPEN.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\nyll-reuse-20261024-479-archive-manifest.json",
+    "sha256": "B063EEFBC68FFBF7AC1BF3200918AE80B4694100EA7F2610D8F8355CCB8EECCF"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-point-division-route-485.json",
+    "sha256": "6EE056F49DA663DE0865CD96DF13C8C907107D32470896DC3815426AB3DEE434",
+    "review": {
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "actual residual association -> original primitive Frobenius determinant -> nondegenerate Hecke-component pairing -> finite Weil detection -> Kummer point-difference division and norm divisor",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePlaceTransport.lean",
+          "sha256": "8E5124CBDFDEB8F3C8343B5DC5650735F428B5F9BA9FAF8ACAE2F033DE0A3439"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveGaloisPlaceCenter.lean",
+          "sha256": "42A7C963F75759C7BFD7A47A21D0F43C4A8F53099993E8F74F53FB6C6F45AFAC"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardGroup.lean",
+          "sha256": "FDD3E9F7FEAB972C7A3E284A89527B61C2442549D29EC437F60EF98570CEA58B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardPushforward.lean",
+          "sha256": "5AFD11FF786364DB2844F7E3F5168AEC2B50B66089B007B8BCA251C649F48EAA"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalClosedPicardMoving.lean",
+          "sha256": "2D8D3E01FDCD4605E2BCFEB0EFEA9E0DB01E349754487AA74FFBE6420E4FC2DA"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilDatum.lean",
+          "sha256": "C82E3938519B9ADB1BBF78C6202792A98AB9397096E7578D4FFE0B853A2D400F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilPairingDescent.lean",
+          "sha256": "BE351E3269C8A3D2C86B52E990D9808B71646B3D1B452A000311F3FB5E0D7DF6"
+        }
+      ],
+      "sourceReview": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\nyll-kummer-detection-review-482.json",
+        "sha256": "34A73CEA2AB13B28B051EA5F2648FA8AE304ADDF1D1EAD8B91EA8B52905C66EF"
+      },
+      "selectedRoute": "Use the existing comapEquiv action, normalized orders, closed residue evaluation and Pic0 quotient. The actual point difference has degree zero and zero pushforward. Expose only its n-division as the narrower upstream premise; extract the corresponding principal function and literal norm divisor. Native moving representatives and original Weil pairing descent serve the later detecting-class assembly. Perform the actual quotient deduction at the abstract field level and instantiate it once on the cover; this avoids repeated elaboration of the splitting-field construction without increasing proof limits.",
+      "discharged": "The actual auxiliary-cover point-difference class, zero norm divisor and eigenfunction evaluation; extraction of a norm torsion representative from the explicit division premise.",
+      "remaining": "Existence of division of the specified point-difference class and the detecting-class assembly remain. No nondegeneracy, component restriction, determinant or acceptance-gate completion is claimed.",
+      "boundary": "Scratch development. 16/20; DUB-17--20 OPEN."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

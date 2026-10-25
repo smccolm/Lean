@@ -1,0 +1,30 @@
+{
+  "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+  "receipts": {
+    "source-original-weil-kummer-3-scratch-receipt.json": "B5B33A2ECB3670542BF6CA18F038F63747EE580A47CA8F060F7FB2C0083C7F85",
+    "source-original-tate-detection-3-scratch-receipt.json": "D402BE383A04591976EEE675A39BC4654CEC40135A710B7A4E47A68E340B9888",
+    "source-original-kummer-geometry-2-scratch-receipt.json": "4685DBF8DE3C8817BBB0C8492831E006D59EACC930E1A4CD2E6A7DEA34E14D0A",
+    "source-original-kummer-evaluation-5-scratch-receipt.json": "099C6B955A1BC4DA730E0F20B42718607E87E7758CF120A7213DF440D9AB92C9",
+    "source-original-kummer-reciprocity-4-scratch-receipt.json": "A1600D0044E067CE452B77E089C91AB87EFE58E8BE821964AB19EB04E4548469",
+    "source-original-kummer-point-5-scratch-receipt.json": "E3A5B1124A1D26C419C41E34314C2AF6F9103034FA2B4C15E6C17CBC9923A49C",
+    "source-original-kummer-detection-11-scratch-receipt.json": "C7B3DB6ED7763039D5351D02E670B652316D84848253253673589FA716DC9691"
+  },
+  "scopeIds": [
+    478,
+    480,
+    481,
+    483,
+    484,
+    485,
+    486
+  ],
+  "previousCanonicalReceipt": "appliedSourceOriginalTateWeil.receipt7673",
+  "chain": "actual residual association -> primitive Frobenius determinant -> nonzero required Hecke-component pairing -> original Tate nondegeneracy -> auxiliary Kummer point-difference division",
+  "discharged": "Actual Kummer field/root entry, finite coordinate geometry, residue evaluations, finite-map norm identities, cover reciprocity, point-difference eigenvalue, conditional norm torsion data, original moving and corrected detecting Weil datum, finite detection, and Tate detection/injectivity from explicit point-difference division.",
+  "remaining": "The point-difference division hypothesis is not proved. Unconditional nondegeneracy, nonzero required Hecke-component restriction, determinant, residual association, automorphy and all-weight continuation remain open.",
+  "route": "Reuse native original pairing/quotient, curve geometry, reciprocity, finite maps and actual Tate coordinate lifts. The exact norm-detecting argument from the renewed NYLL review is now locally audited. Before expanding auxiliary divisibility, compare the genuine Jacobian-representability route with the older FLT analytic Abel/point-divisor route, both now identified at exact source commits. Do not port incidental generalizations. Root pins and proof limits remain unchanged.",
+  "sourceModuleAliases": {
+    "SourceOriginalTateWeilDetectionAssembled": "SourceOriginalTateWeilDetection"
+  },
+  "boundary": "16/20; DUB-17--20 OPEN; no gate closed."
+}

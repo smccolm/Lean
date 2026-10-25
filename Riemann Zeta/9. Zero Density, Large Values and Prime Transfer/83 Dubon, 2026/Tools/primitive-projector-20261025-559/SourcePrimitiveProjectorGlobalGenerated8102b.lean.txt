@@ -1,0 +1,14 @@
+import Lean.Util.CollectAxioms
+import Dubon2026.SemanticRegression
+
+open Lean
+#print axioms AlgHom.liftEquiv.congr_simp
+private def inspectGenerated : CoreM Unit := do
+  let env <- getEnv
+  let name := `AlgHom.liftEquiv.congr_simp
+  let some idx := env.getModuleIdxFor? name | throwError "missing owner"
+  let some (.thmInfo info) := env.find? name | throwError "missing theorem"
+  logInfo m!"GENERATED_OWNER {env.allImportedModuleNames[idx.toNat]!}"
+  logInfo m!"GENERATED_TYPE_HASH {hash info.type}"
+  logInfo m!"GENERATED_VALUE_HASH {hash info.value}"
+#eval inspectGenerated

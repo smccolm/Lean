@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> coordinate edge integrals and cell primitives -> actual cell differential coefficients",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDifferentialRegularNeighborhood.lean",
+      "sha256": "DB791D91D7212249FB7B03F2E13BBA967DD8B7A4DD1815D586546AD9DB5F1690"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartOneFormLaw.lean",
+      "sha256": "0A574F44AF328E823FD2603ECCD442DC1D993BFDD36F1AC981934CFE78B40E24"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellRegularCoefficient.lean",
+      "sha256": "99479AF5F6036440C975AB6EFBA5ED424CF8E97DA220D9D1AF808C7679B39E3B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellCoefficientPullback.lean",
+      "sha256": "886FC3BC57B16047A4CAF15A14151C5689E547396D7974125D29C35B01434A43"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellCoefficientTransition.lean",
+      "sha256": "2B95C7CC59EFD4126E7083BDBE342BA531D9AD4F22C4A1C335CBE9B8273022C7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPrimitives.lean",
+      "sha256": "45AA16E21D0E3717F975683AA302F10FC73BB4AD596D8B96F67A186B1556EBCB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLocalRegularPrimitives.lean",
+      "sha256": "9C8A46171D1BF8498B0F751A5B281A22ABF8E40C126E65D69FAB9D350FF19901"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCanonicalSupport.lean",
+      "sha256": "0FA1C4DE0E53292A3040CB9ED377837954CA810EAC400C506302BB99E4743917"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCoordinateInverse.lean",
+      "sha256": "AE510047EBBA4ED4F54C352A7830283E105EF9434BA624ABB281631B8A2432A2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCycleLoops.lean",
+      "sha256": "155F761946CDFC1AE39C5522FDF074BF3AE997EB1C6119BF28071AAC5E2831E2"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-cell-calculus-route-529.json",
+    "sha256": "52F085D28E926E716E838DD01D4459E85070E3CA1B9F28D4DD5D9E87B19BBE3B",
+    "review": {
+      "scope": 529,
+      "developmentScopes": [
+        527,
+        528
+      ],
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> coordinate edge integrals and cell primitives -> actual cell differential coefficients",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDifferentialRegularNeighborhood.lean",
+          "sha256": "DB791D91D7212249FB7B03F2E13BBA967DD8B7A4DD1815D586546AD9DB5F1690"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartOneFormLaw.lean",
+          "sha256": "0A574F44AF328E823FD2603ECCD442DC1D993BFDD36F1AC981934CFE78B40E24"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellRegularCoefficient.lean",
+          "sha256": "99479AF5F6036440C975AB6EFBA5ED424CF8E97DA220D9D1AF808C7679B39E3B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellCoefficientPullback.lean",
+          "sha256": "886FC3BC57B16047A4CAF15A14151C5689E547396D7974125D29C35B01434A43"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellCoefficientTransition.lean",
+          "sha256": "2B95C7CC59EFD4126E7083BDBE342BA531D9AD4F22C4A1C335CBE9B8273022C7"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPrimitives.lean",
+          "sha256": "45AA16E21D0E3717F975683AA302F10FC73BB4AD596D8B96F67A186B1556EBCB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLocalRegularPrimitives.lean",
+          "sha256": "9C8A46171D1BF8498B0F751A5B281A22ABF8E40C126E65D69FAB9D350FF19901"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCanonicalSupport.lean",
+          "sha256": "0FA1C4DE0E53292A3040CB9ED377837954CA810EAC400C506302BB99E4743917"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCoordinateInverse.lean",
+          "sha256": "AE510047EBBA4ED4F54C352A7830283E105EF9434BA624ABB281631B8A2432A2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCycleLoops.lean",
+          "sha256": "155F761946CDFC1AE39C5522FDF074BF3AE997EB1C6119BF28071AAC5E2831E2"
+        }
+      ],
+      "shorterRoute": "Reuse the proved actual cover regular-at-a-place change law to obtain the one-form law directly from inverse chart identities; omit a redundant Kaehler-expression calculation. Reuse finite differential support and the Hausdorff topology for the open regular locus. Adapt the native moving-chart coefficient, local fixed-chart equality, pullback and transition proofs using the already proved inverse coordinate calculus. Only the forward coordinate conditions already retained by the actual dissection are used.",
+      "assumptionsToDischarge": "The cover one-form transformation law, openness of the regular differential locus, analyticity and local fixed-chart equality of the literal cell coefficient, its pullback to the normalized reading and its exact change-of-coordinate identity. The coordinate calculus explicitly retains the forward analytic/nonzero derivative conditions already proved for each actual constructed cell.",
+      "remaining": "Cell primitives, coordinate edge-integral comparison, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20."
+    }
+  },
+  "discharged": "The actual cover regular differential locus is open, and the one-form transformation law follows from the proved cover change law and inverse chart identities. The literal cell coefficient equals its fixed-chart pullback locally, is analytic at regular centers, pulls back to the normalized differential reading and satisfies the exact change-of-coordinate identity. The explicit forward coordinate conditions are already supplied for every constructed cell; no coefficient, pullback or inverse-calculus identity is assumed.",
+  "remaining": "Cell primitives, coordinate edge-integral comparison, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-coordinate-inverse-2-scratch-receipt.json",
+    "sha256": "CD6E89C1F3C8D4D8A0E8DCC2CE69E909B4D51FDF3971049293B2A84A4CED3BA3"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

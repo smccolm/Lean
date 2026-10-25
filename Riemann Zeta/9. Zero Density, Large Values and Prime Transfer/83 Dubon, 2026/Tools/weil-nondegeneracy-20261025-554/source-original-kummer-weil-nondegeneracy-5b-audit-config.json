@@ -1,0 +1,66 @@
+{
+  "modules": [
+    "SourceOriginalWeilComplexEvaluation",
+    "SourceOriginalWeilComplexDatum",
+    "SourceOriginalWeilComplexComparison",
+    "SourceOriginalArithmeticWeilDetection",
+    "SourceOriginalTateWeilNondegeneracy"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalPlaceEval_liftPlace",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalDivisorEval_conorm",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.ord_fieldMap_of_multiple",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.conorm_disjoint",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilComplexDatum_pairing",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilComplexDatum_classLeft",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilComplexDatum_classRight",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilPairing_complex",
+    "Dubon2026.SourceFunctionField.originalArithmeticWeilPairing_detects",
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_detects",
+    "Dubon2026.SourceFunctionField.originalTateWeilBilinear_injective"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilComplexDatum"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalPlaceEval_liftPlace",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalDivisorEval_conorm",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.ord_fieldMap_of_multiple",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.conorm_disjoint",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilComplexDatum_pairing",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilComplexDatum_classLeft",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilComplexDatum_classRight",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilPairing_complex",
+    "Dubon2026.SourceFunctionField.originalArithmeticWeilPairing_detects",
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_detects",
+    "Dubon2026.SourceFunctionField.originalTateWeilBilinear_injective",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilComplexDatum"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalPlaceEval_liftPlace",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalDivisorEval_conorm",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.ord_fieldMap_of_multiple",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.conorm_disjoint",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilComplexDatum_pairing",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilComplexDatum_classLeft",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilComplexDatum_classRight",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.originalWeilPairing_complex",
+    "Dubon2026.SourceFunctionField.originalArithmeticWeilPairing_detects",
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_detects",
+    "Dubon2026.SourceFunctionField.originalTateWeilBilinear_injective",
+    "Dubon2026.SourceFunctionField.originalComplexWeilPairing_detects",
+    "Dubon2026.SourceFunctionField.originalWeilPairing_eq_pairing",
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_detects_of_finiteLevel",
+    "Dubon2026.SourceFunctionField.originalTateWeilBilinear_injective_of_finiteLevel",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalTateTorsionCoordinate_surjective",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.exists_original_torsion_preimage",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap_injective",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.complexPicardMap_mk",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.ord_liftPlace",
+    "Dubon2026.SourceFunctionField.OriginalConstantField.ord_phi_of_forall_ne"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_detects",
+    "Dubon2026.SourceFunctionField.originalTateWeilBilinear_injective"
+  ]
+}

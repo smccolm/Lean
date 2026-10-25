@@ -1,0 +1,83 @@
+import SourceRadialMeromorphicBoundaryValues
+import SourceOriginalWeilCoverMeromorphicBoundaryValues
+import SourceOriginalWeilCoverMeromorphicBoundaryFTC
+import SourceRadialMeromorphicBoundaryJumps
+import SourceOriginalWeilCoverMeromorphicBoundaryJumps
+import SourceRadialMeromorphicNormalizedJumps
+import SourceOriginalWeilCoverMeromorphicBoundaryPeriod
+import SourceOriginalWeilCoverMeromorphicNormalizedJumps
+import SourceOriginalWeilCoverNormalizedMeromorphicData
+import SourceOriginalWeilCoverNormalizedMeromorphicCycleData
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.logTerm_add_two_pi
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.hfun_add_two_pi
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.continuous_logTerm
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.hasDerivAt_logTerm
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.hasDerivAt_hfun
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.continuous_hfun
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_hasDerivAt_meromorphicBoundary
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_continuous_meromorphicBoundary
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_boundary_regular
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_boundary_ftc
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.edge_pair_boundary
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_boundary_jumps
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.regPrimData_add_const
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.hfun_add_const
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.isJumpH_add_const
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.normalize_regPrimData
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_boundary_period
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalize_meromorphic_primitives
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalized_meromorphic_primitives_of_data
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_normalized_meromorphic_cycle_data
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.logTerm
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.hfun
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverMeromorphicBoundaryValue
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.IsJumpH
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverNormalizedMeromorphicPrimitives
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceRadialMeromorphicBoundaryValues, `SourceOriginalWeilCoverMeromorphicBoundaryValues, `SourceOriginalWeilCoverMeromorphicBoundaryFTC, `SourceRadialMeromorphicBoundaryJumps, `SourceOriginalWeilCoverMeromorphicBoundaryJumps, `SourceRadialMeromorphicNormalizedJumps, `SourceOriginalWeilCoverMeromorphicBoundaryPeriod, `SourceOriginalWeilCoverMeromorphicNormalizedJumps, `SourceOriginalWeilCoverNormalizedMeromorphicData, `SourceOriginalWeilCoverNormalizedMeromorphicCycleData]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.logTerm_add_two_pi, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.hfun_add_two_pi, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.continuous_logTerm, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.hasDerivAt_logTerm, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.hasDerivAt_hfun, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.continuous_hfun, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_hasDerivAt_meromorphicBoundary, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_continuous_meromorphicBoundary, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_boundary_regular, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_boundary_ftc, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.edge_pair_boundary, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_boundary_jumps, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.regPrimData_add_const, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.hfun_add_const, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.isJumpH_add_const, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.normalize_regPrimData, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_boundary_period, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalize_meromorphic_primitives, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalized_meromorphic_primitives_of_data, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_normalized_meromorphic_cycle_data]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.logTerm, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.hfun, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverMeromorphicBoundaryValue, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.IsJumpH, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverNormalizedMeromorphicPrimitives]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Kummer Logarithmic Jumps postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Kummer Logarithmic Jumps theorems discovered"
+  logInfo m!"SOURCE ORIGINAL KUMMER LOGARITHMIC JUMPS AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceRadialMeromorphicBoundaryValues
+#lint in SourceOriginalWeilCoverMeromorphicBoundaryValues
+#lint in SourceOriginalWeilCoverMeromorphicBoundaryFTC
+#lint in SourceRadialMeromorphicBoundaryJumps
+#lint in SourceOriginalWeilCoverMeromorphicBoundaryJumps
+#lint in SourceRadialMeromorphicNormalizedJumps
+#lint in SourceOriginalWeilCoverMeromorphicBoundaryPeriod
+#lint in SourceOriginalWeilCoverMeromorphicNormalizedJumps
+#lint in SourceOriginalWeilCoverNormalizedMeromorphicData
+#lint in SourceOriginalWeilCoverNormalizedMeromorphicCycleData

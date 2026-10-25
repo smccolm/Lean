@@ -1,0 +1,106 @@
+{
+  "recordedUTC": "2026-10-25T05:31:50.210870+00:00",
+  "date": "2026-10-24 America/Vancouver",
+  "modules": [
+    "SourceCurveRationalResidueTrace",
+    "SourceOriginalWeilCoverDifferentialResidues",
+    "SourceOriginalWeilCoverSimplePoleBounds",
+    "SourceOriginalWeilCoverTwoPoleResidues",
+    "SourceOriginalWeilCoverPrescribedResidues"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveRationalResidueTrace.lean",
+      "sha256": "A8E45459086663AE096D82AF88AEB82CFEDF610EF550286D687036CBB9870ADF",
+      "oleanSha256": "6D572FC9045BE8B14ED80D73EDC8E24A971B9AB8655FB6CE7405AF9254B9FFAB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDifferentialResidues.lean",
+      "sha256": "7D09F00C7EFAEA4C714EE6ADBCD083CDA449C19A46FD759C63110DABCF9ADA84",
+      "oleanSha256": "77A683149D0C99B6E78F3ECA7503BAF6148411E83B87596548B305F654FF1413"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverSimplePoleBounds.lean",
+      "sha256": "2E96B611EDA502138D5AAD889753CE4FA88C5657D3D9DE891D5AEB0E70B58FB2",
+      "oleanSha256": "A5B8B39529E97853992632B6B8228D08CAFE341F5386EAD783B5B4D62AF97B3D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverTwoPoleResidues.lean",
+      "sha256": "9A751E4129F65E77A716F61102A7224EA85F8E88196F3904AEEFE22AA05AC012",
+      "oleanSha256": "22AA632530EEB3C4D7823992CA2B332ADA40C6C946FDBA1CA3775AB48CF41B78"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPrescribedResidues.lean",
+      "sha256": "B9C2F8EEDFDBB6D1FF5F3175777B18A8B6871D410E938A4531FF974509F8229B",
+      "oleanSha256": "5FEA961F6524A0F9BC2A3BC9AB7DC9D9CD2A99742EE6E890DC5ACAE238B2D2C6"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceCurve.Place.trace_residue_eq_rationalEval",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDifferentialCoeff_apply",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDifferentialResidue_apply",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_bound_iff",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDifferentialResidue_simplePole",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDifferentialResidue_eq_zero_of_regular",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDifferentialResidue_ne_zero_of_simplePole",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_zero_bound",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_add_bound",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_smul_bound",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_sum_bound",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDifferentialResidue_finsum",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_two_pole_residue_sum",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_normalized_two_pole_differential",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_divisor_sum_support",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_differential_with_prescribed_residues",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_third_kind_differential",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverCanonicalLocalResidueData",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDifferentialCoeff",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDifferentialResidue"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceCurve.Place.trace_residue_eq_rationalEval",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDifferentialCoeff_apply",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDifferentialResidue_apply",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_bound_iff",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDifferentialResidue_simplePole",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDifferentialResidue_eq_zero_of_regular",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDifferentialResidue_ne_zero_of_simplePole",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_zero_bound",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_add_bound",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_smul_bound",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_sum_bound",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDifferentialResidue_finsum",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_two_pole_residue_sum",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_normalized_two_pole_differential",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_divisor_sum_support",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_differential_with_prescribed_residues",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_third_kind_differential"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverCanonicalLocalResidueData",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDifferentialCoeff",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDifferentialResidue"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPrescribedResidueAudit5.log",
+  "logSha256": "49FBDCA0F9FBAA5A741D002DCB8016453976B96FC1B0ED1C644BD92D20053F13",
+  "auditSha256": "136381B1145F9FFE0C682CFDE5C6EA99E59BD3C7BFC3A6C2B2A852C5025DBB9A",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 43,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 19,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPrescribedResidueDependencyAudit5R2.log",
+  "dependencyAuditSha256": "EDBB79AEB06B163300B474CDF011C2A147D93225A23C32AA906C4ED5CA31BF75",
+  "dependencyAuditSourceSha256": "9D452CBE93B8E77BA721BD5C7D8A7F2E21E12C626288802CC38FCD5ACBB12223",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_third_kind_differential"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary point-difference division -> cover Abel converse -> prescribed residues",
+  "discharged": "Every degree-zero divisor on the literal complex Kummer cover has an actual algebraic differential with simple poles and exactly its integer residues. The native finite-coordinate global residue theorem normalizes the proved two-pole differentials; their finite linear combination cancels the auxiliary base-place contribution by degree zero. No prescribed-residue existence or global residue premise remains.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Abel converse, actual point division, arithmetic descent, pairing nondegeneracy, required component, determinant and residual association. 16/20 gates.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-prescribed-residue-5-reuse-review-20261024.json",
+  "reuseReviewSha256": "F7CC314A4709D86BD6287D507D0F54EC26595FAE5A800BC3131D2D558D8A5FD7",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

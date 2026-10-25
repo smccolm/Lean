@@ -1,0 +1,209 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-primitive-projector-promotion-route-559.json",
+      "path": "Tools/primitive-projector-20261025-559/original-primitive-projector-promotion-route-559.json",
+      "sha256": "0AE7746DE34B42E39CF644F7CEA8849A1FA919DD060E904853DB6446F25C1FC5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-rational-weil-6-scratch-receipt.json",
+      "path": "Tools/primitive-projector-20261025-559/source-original-rational-weil-6-scratch-receipt.json",
+      "sha256": "E8418D11FCD1A6F09D2178342758A698D5CB16FEEB2711EC89C13F9D6D413738"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-good-projection-8-scratch-receipt.json",
+      "path": "Tools/primitive-projector-20261025-559/source-original-primitive-good-projection-8-scratch-receipt.json",
+      "sha256": "29EA354FB739F2931D8078567A302BD8CB9286202CBAA2C5E3A5909182E04A32"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-coefficient-projection-5-scratch-receipt.json",
+      "path": "Tools/primitive-projector-20261025-559/source-original-primitive-coefficient-projection-5-scratch-receipt.json",
+      "sha256": "D068D7BC6E7E6CA097BD8051789E619262DA8700D2824A1E2E9338C8ACF5DF80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-tensor-projection-8-scratch-receipt.json",
+      "path": "Tools/primitive-projector-20261025-559/source-original-primitive-tensor-projection-8-scratch-receipt.json",
+      "sha256": "8A4F06266411A70513C5B5920A29DFADD56F0CCBAB809A1D0B19BC3D6B646E2D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\rational-weil-route-555.json",
+      "path": "Tools/primitive-projector-20261025-559/rational-weil-route-555.json",
+      "sha256": "9CDD70829DE0A5B8650C0B9D3B8ADD6FC42F037BB6E61B7419114EBA35568678"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-good-projection-route-556.json",
+      "path": "Tools/primitive-projector-20261025-559/primitive-good-projection-route-556.json",
+      "sha256": "FEBF9DDCC9CE457F274FE9F38E10C7BC022FE07D26406D2D4E0CF305A21D4849"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-coefficient-projection-route-557.json",
+      "path": "Tools/primitive-projector-20261025-559/primitive-coefficient-projection-route-557.json",
+      "sha256": "F22B0418B64981D7E33EDABB197DD895332F21AF11BDAA03DBD45913F4CEFAD5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-tensor-projection-route-558.json",
+      "path": "Tools/primitive-projector-20261025-559/primitive-tensor-projection-route-558.json",
+      "sha256": "AFB392CBB759A2B37AACA1DEB4820BEF505BB6315170140CD75173228D82E681"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-rational-weil-6-reuse-review-20261025.json",
+      "path": "Tools/primitive-projector-20261025-559/source-original-rational-weil-6-reuse-review-20261025.json",
+      "sha256": "61F435FCE1DEDAA1EC4400762B2C24AA348BE54CC0B61F7EA078C76ADBA18E49"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-rational-weil-6-audit-config.json",
+      "path": "Tools/primitive-projector-20261025-559/source-original-rational-weil-6-audit-config.json",
+      "sha256": "0B416C15A17C5BF6A6DEEE2A51F4EBD2C023C9E01BAAE841812FD7B4F562310C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-good-projection-8-reuse-review-20261025.json",
+      "path": "Tools/primitive-projector-20261025-559/source-original-primitive-good-projection-8-reuse-review-20261025.json",
+      "sha256": "EDB318A89752AC9CF8083AFFCCEC66011D67D1F639B26E9EC64D77EB2DC8605F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-good-projection-8-audit-config.json",
+      "path": "Tools/primitive-projector-20261025-559/source-original-primitive-good-projection-8-audit-config.json",
+      "sha256": "B7E0589CF38DB86024BDA7E5D1172752C2D30E5E0D8B69914C5D356DAE544780"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-coefficient-projection-5-reuse-review-20261025.json",
+      "path": "Tools/primitive-projector-20261025-559/source-original-primitive-coefficient-projection-5-reuse-review-20261025.json",
+      "sha256": "1C7A070FBD0B1C049E53B74A95EDAC527D0C55A8C7006B9DE5125C8FF010550D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-coefficient-projection-5-audit-config.json",
+      "path": "Tools/primitive-projector-20261025-559/source-original-primitive-coefficient-projection-5-audit-config.json",
+      "sha256": "509F7B47EC244826D3C0B8427ACB50D900536BEAEF9E21BD8BC579A3EA83AA2E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-tensor-projection-8-reuse-review-20261025.json",
+      "path": "Tools/primitive-projector-20261025-559/source-original-primitive-tensor-projection-8-reuse-review-20261025.json",
+      "sha256": "71CD5FFFF6A11606074EC1EC9E48B03DBECDD44D507B9B32DA3BEE557E61E21D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-tensor-projection-8-audit-config.json",
+      "path": "Tools/primitive-projector-20261025-559/source-original-primitive-tensor-projection-8-audit-config.json",
+      "sha256": "FAB18A06C53CFB11B7F36F71C3DB9300D3EACFD9514039816B8283AD569D94CE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalWeilAudit6.log",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalRationalWeilAudit6.log",
+      "sha256": "E092D97A6DDADC3B77B8D076A99CC27341B99C0B07479DC493FF985A3C6D697C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalWeilAudit6.lean",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalRationalWeilAudit6.lean.txt",
+      "sha256": "7EA9EA621DB95EF8BB14C2969A28EB31F9B144463419EFE02A62B420FBDE6FC6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalWeilAudit6.exit",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalRationalWeilAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalWeilDependencyAudit6.log",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalRationalWeilDependencyAudit6.log",
+      "sha256": "B41AFFFC2DFAE13560944ECA3F224E612E28DF2477DFDD68B9839137C79E889F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalWeilDependencyAudit6.lean",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalRationalWeilDependencyAudit6.lean.txt",
+      "sha256": "D99F929F737AA1F0645AB74C51742B1600B957B730E2CC5A2B1B6CC1914A8EA2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalWeilDependencyAudit6.exit",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalRationalWeilDependencyAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveGoodProjectionAudit8.log",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveGoodProjectionAudit8.log",
+      "sha256": "8983BD144D5A2F087B6AE07AAA363CB669CA6755139ED3A37C6F7592BDA886A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveGoodProjectionAudit8.lean",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveGoodProjectionAudit8.lean.txt",
+      "sha256": "077E64D78C83F34D08EC8486133C52C51877FAEBC506C5BA5A38B203057841BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveGoodProjectionAudit8.exit",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveGoodProjectionAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveGoodProjectionDependencyAudit8.log",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveGoodProjectionDependencyAudit8.log",
+      "sha256": "620EF9CE7698950398754DCC70E30C3542F262B277D2716DFA06A232A0729503"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveGoodProjectionDependencyAudit8.lean",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveGoodProjectionDependencyAudit8.lean.txt",
+      "sha256": "6D7F2C12C05CADAC7BB8E9EDBDC57E8171BF01EEAC9A5BB34BA4F3004984EFDD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveGoodProjectionDependencyAudit8.exit",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveGoodProjectionDependencyAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCoefficientProjectionAudit5.log",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveCoefficientProjectionAudit5.log",
+      "sha256": "8C34CE7928E3F0F7F5CC4DC9D325E6327BED737D1FB51F48676AF4B9EAF05AE6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCoefficientProjectionAudit5.lean",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveCoefficientProjectionAudit5.lean.txt",
+      "sha256": "193B52C103B8F086E9FEE168E7D0E2F0C479F5CBC0B809159B6ED4B6E6230823"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCoefficientProjectionAudit5.exit",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveCoefficientProjectionAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCoefficientProjectionDependencyAudit5.log",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveCoefficientProjectionDependencyAudit5.log",
+      "sha256": "22D63E53FA88E289DC26CFEB1007C3BAFB9C826B59B083008C0BEA85FC5BE17B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCoefficientProjectionDependencyAudit5.lean",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveCoefficientProjectionDependencyAudit5.lean.txt",
+      "sha256": "CB79593EF07DEE208DB391DAC5EDFCD643B3EE76DC9335F5F348AB7E7BBDC415"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCoefficientProjectionDependencyAudit5.exit",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveCoefficientProjectionDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTensorProjectionAudit8.log",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveTensorProjectionAudit8.log",
+      "sha256": "505DF277679B0A46CF96195E1E6050BB7B2B614D4EEBE75D81CA3A9DCFE35BC4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTensorProjectionAudit8.lean",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveTensorProjectionAudit8.lean.txt",
+      "sha256": "09DE7C00F2C1F70A3B8B4B080EC8C5770AD80A6AEC37B5B816F7A29E024B56E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTensorProjectionAudit8.exit",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveTensorProjectionAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTensorProjectionDependencyAudit8.log",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveTensorProjectionDependencyAudit8.log",
+      "sha256": "73707E6847E3B2A87901CA2D2714BF84AA97EF2D7569D01D5E87FB5A197D5AFE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTensorProjectionDependencyAudit8.lean",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveTensorProjectionDependencyAudit8.lean.txt",
+      "sha256": "7EA75744F12BE99E7057E78585BA63716E96A02C264E025EA05527ACA0C73781"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTensorProjectionDependencyAudit8.exit",
+      "path": "Tools/primitive-projector-20261025-559/SourceOriginalPrimitiveTensorProjectionDependencyAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ]
+}

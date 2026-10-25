@@ -1,0 +1,116 @@
+{
+  "recordedUTC": "2026-10-25T17:20:46.720648+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourcePrimitiveFiniteGoodEigensystem",
+    "SourceSymmetricSumSquaresKernel",
+    "SourcePrimitiveGoodAnnihilator",
+    "SourceKernelPowerReduction",
+    "SourcePolynomialKernelProjection",
+    "SourceSymmetricKernelReduction",
+    "SourcePolynomialKernelProjectionLaws",
+    "SourcePrimitiveGoodPolynomialProjection"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteGoodEigensystem.lean",
+      "sha256": "B45C2E9C18A69872DFA96503A1655B2DE07D3CF1854C0C34D74D4DFAD0FCA207",
+      "oleanSha256": "B6935C4E1F361B9EADA026F3B9342299587EAE755F124E9DDBDFB47550465112"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSymmetricSumSquaresKernel.lean",
+      "sha256": "F152B74BAEB9C9942AE56A7B7CE59BCB7A356FB70A01923A72227CD769F42E20",
+      "oleanSha256": "BB691BFD96298286D40BFBBC89724F413ADD97F4A31EAADB30EDDED2203C984A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGoodAnnihilator.lean",
+      "sha256": "9261ACBE7D90F1D48DBD29C10C38C1CCFB5C66C1CF29D2338C8062B9DFDE2927",
+      "oleanSha256": "2203439268DC8AEE862BB347DDBDF9CB52590ECF10A49386EB2983BFB8DE4A51"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceKernelPowerReduction.lean",
+      "sha256": "B5FABAF8C3F6468714ECE77D135DA859635A41EC76F6CC77414E626E1EBC70EB",
+      "oleanSha256": "9E1CC6EB2FC278941A08DFF2F0C531A3A5AA56566F207930E3694CFECBE228A9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePolynomialKernelProjection.lean",
+      "sha256": "8F9BB9916C2DF550F63F1823621702629B8889B6007D35510B0565381D8A5B81",
+      "oleanSha256": "0BD1359AB524DE89E5125B0FDB675E5F6FFCF9F65BBE1FC2C61F01AB94B56F8B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSymmetricKernelReduction.lean",
+      "sha256": "A0C93F97CFB9D583AE5CB02A25ACE36B26FEFD57FDD19E01140517AB1211D6ED",
+      "oleanSha256": "480E1C7EEED01C96EE5E3DB5EBF7AA7E5557BFA2C3BC2325E340D8A61AC0D30F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePolynomialKernelProjectionLaws.lean",
+      "sha256": "7070F52D0DB49A02090ACEF5E29D6F9666EA9143BCE6F379F3F56E6A61960E95",
+      "oleanSha256": "552E710DD8F73DDCEF7F52F58C78A429A37D67F74B800F088933C95690ECEE73"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGoodPolynomialProjection.lean",
+      "sha256": "F5B37FEDAC81872ADE62B336CFBC4D41EE2E97A9F0E5C0A23A27AB90A8F60772",
+      "oleanSha256": "6500D863987B827DD69D42A6CC7216C9C5C5D0597AD5A826040A03B48BED8A31"
+    }
+  ],
+  "queries": [
+    "Dubon2026.exists_primitive_finite_good_eigensystem",
+    "Dubon2026.symmetric_sum_squares_eq_zero_iff",
+    "Dubon2026.primitiveGoodShift_selfAdjoint",
+    "Dubon2026.primitiveGoodAnnihilator_selfAdjoint",
+    "Dubon2026.primitiveGoodAnnihilator_eq_zero_iff",
+    "Dubon2026.exists_primitive_good_annihilator",
+    "Dubon2026.end_pow_zero_implies_apply_zero",
+    "Dubon2026.exists_kernel_projector_polynomial_of_isIntegral",
+    "Dubon2026.exists_kernel_projector_polynomial",
+    "Dubon2026.symmetric_apply_eq_zero_of_square",
+    "Dubon2026.kernel_projector_polynomial_fixes",
+    "Dubon2026.kernel_projector_polynomial_range",
+    "Dubon2026.kernel_projector_polynomial_idempotent",
+    "Dubon2026.exists_primitive_good_polynomial_projection",
+    "Dubon2026.primitiveGoodShift",
+    "Dubon2026.primitiveGoodAnnihilator"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.exists_primitive_finite_good_eigensystem",
+    "Dubon2026.symmetric_sum_squares_eq_zero_iff",
+    "Dubon2026.primitiveGoodShift_selfAdjoint",
+    "Dubon2026.primitiveGoodAnnihilator_selfAdjoint",
+    "Dubon2026.primitiveGoodAnnihilator_eq_zero_iff",
+    "Dubon2026.exists_primitive_good_annihilator",
+    "Dubon2026.end_pow_zero_implies_apply_zero",
+    "Dubon2026.exists_kernel_projector_polynomial_of_isIntegral",
+    "Dubon2026.exists_kernel_projector_polynomial",
+    "Dubon2026.symmetric_apply_eq_zero_of_square",
+    "Dubon2026.kernel_projector_polynomial_fixes",
+    "Dubon2026.kernel_projector_polynomial_range",
+    "Dubon2026.kernel_projector_polynomial_idempotent",
+    "Dubon2026.exists_primitive_good_polynomial_projection"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.primitiveGoodShift",
+    "Dubon2026.primitiveGoodAnnihilator"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveGoodProjectionAudit8.log",
+  "logSha256": "8983BD144D5A2F087B6AE07AAA363CB669CA6755139ED3A37C6F7592BDA886A4",
+  "auditSha256": "077E64D78C83F34D08EC8486133C52C51877FAEBC506C5BA5A38B203057841BE",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 20,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 23,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveGoodProjectionDependencyAudit8.log",
+  "dependencyAuditSha256": "620EF9CE7698950398754DCC70E30C3542F262B277D2716DFA06A232A0729503",
+  "dependencyAuditSourceSha256": "6D7F2C12C05CADAC7BB8E9EDBDC57E8171BF01EEAC9A5BB34BA4F3004984EFDD",
+  "consumers": [
+    "Dubon2026.exists_primitive_good_polynomial_projection"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive Frobenius determinant -> nonzero required primitive component pairing -> actual self-adjoint primitive projector -> finite good-prime multiplicity-one isolation",
+  "discharged": "The existing original-level good-prime multiplicity-one theorem and native finite intersection select finitely many permitted equations cutting out exactly the primitive cusp line. The sum of squared shifted actual Hecke operators is self-adjoint for the actual Petersson pairing and has exactly that kernel. Petersson positivity excludes nontrivial zero Jordan chains. Native polynomial annihilation and root factorization produce a polynomial which is one at zero, whose evaluation is idempotent, and whose range is exactly the primitive cusp line. No spectral-isolation or projector premise remains. Coefficient-field and original Tate transport remain separate obligations.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The actual complex primitive projector is established. Coefficient-field descent, transport to the original rational Tate representation, nonzero restriction of its pairing, primitive Frobenius determinant, residual association, automorphy and all-weight continuation remain open; 16/20, DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-good-projection-8-reuse-review-20261025.json",
+  "reuseReviewSha256": "EDB318A89752AC9CF8083AFFCCEC66011D67D1F639B26E9EC64D77EB2DC8605F",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

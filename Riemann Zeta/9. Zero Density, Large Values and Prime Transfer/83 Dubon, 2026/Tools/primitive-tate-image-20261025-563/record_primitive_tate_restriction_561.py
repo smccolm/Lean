@@ -1,0 +1,11 @@
+from pathlib import Path
+p=Path(__file__).parent
+s=(p/'record_original_kummer_cell_calculus_529.py').read_text(encoding='utf-8-sig')
+s=s.replace('source-original-kummer-cell-calculus-7','source-original-primitive-tate-restriction-8').replace('SourceOriginalKummerCellCalculusAudit7','SourceOriginalPrimitiveTateRestrictionAudit8').replace('SourceOriginalKummerCellCalculusDependencyAudit7','SourceOriginalPrimitiveTateRestrictionDependencyAudit8')
+s=s.replace('==(7,7,13)','==(8,20,28)').replace('KUMMER CELL CALCULUS','PRIMITIVE TATE RESTRICTION').replace('count==18','count==47').replace('all 13 required','all 28 required')
+s=s.replace("==7\ncount=","==8\ncount=").replace('linterScopes=7','linterScopes=8')
+s=s.replace('kummer-cell-calculus-route-529','primitive-tate-restriction-route-561').replace('requiredProofValueEdges=13','requiredProofValueEdges=28').replace('modules=7,queries=7','modules=8,queries=20').replace('proofEdges=13','proofEdges=28')
+start=s.index("discharged='");end=s.index('\nremaining=',start)
+s=s[:start]+"discharged='The original cusp/lattice word relations and actual Tate coordinates factor the original rational Tate action through the literal integral cusp Hecke algebra. Its coefficient extension evaluates the same arithmetic primitive projector, retaining exact prime operators and the same coefficient polynomial. The existing good-prime Weil adjointness proves the actual squared annihilator and projector self-adjoint. Arithmetic idempotence maps to the actual Tate operator, and the injective original coefficient-field pairing stays injective on its image. The assembled existential consumer obtains the projector from the already proved arithmetic construction; no action-comparison, idempotence, self-adjointness or restricted-injectivity hypothesis is supplied. Nonzero rank-two identification of this image with the prescribed specialization remains open.'"+s[end:]
+s=s.replace('source-original-kummer-coordinate-inverse-2-scratch-receipt','source-original-coefficient-weil-6-scratch-receipt').replace('CD6E89C1F3C8D4D8A0E8DCC2CE69E909B4D51FDF3971049293B2A84A4CED3BA3','25FD2B53BA26434FC6CE33B0C52EBEF8C02BA9C2318B8D9FBE7F93B5A8F1F85B')
+exec(compile(s,str(__file__)+' generated','exec'))

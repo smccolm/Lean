@@ -1,0 +1,67 @@
+{
+  "recordedUTC": "2026-10-25T07:13:16.494576+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceCoverSheetFiberBijection",
+    "SourceOriginalWeilCoverCellFiberEquiv",
+    "SourceOriginalWeilCoverArcSheetTransport",
+    "SourceOriginalWeilCoverBoundaryTransportAssembled"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoverSheetFiberBijection.lean",
+      "sha256": "C20E888C7E1F04666EFB0A833217F72B4030D1A811363D3826147CFD6119AC93",
+      "oleanSha256": "284EA441ACACEE607A5E4F6674CD46FCA9F0C59896EF60DA134B6AC8852A7039"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellFiberEquiv.lean",
+      "sha256": "AD92356D7DDB1EF97FF86B4540CD1C922B03037170B9A57155679F16AEF362AF",
+      "oleanSha256": "4E5A1B98D40ECB051C9D028F07C733439C6EA412B1ACE4A5DB13860E3FAE526E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverArcSheetTransport.lean",
+      "sha256": "F85643ABAB75056C42E0B28D169EDC78E55948759CE852CCA7E991BA21217E65",
+      "oleanSha256": "8A950C3C4F4A525078006411A87074CDECFBC273D05A7FEF859315001B6310E5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverBoundaryTransportAssembled.lean",
+      "sha256": "2B05459F07BD1347D02B0AEC9B970A221AB4819120CCD148F010082E7E00EAE2",
+      "oleanSha256": "20571CB673EF162DFA50D65AE784772B0BF2773FA2834BDD7088546B99F2F97B"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.SheetCover.sheet_fiber_bijective",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cell_sheet_fiber_equiv",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_boundary_sheet_equiv",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_boundary_sheet_transport"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.SheetCover.sheet_fiber_bijective",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cell_sheet_fiber_equiv",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_boundary_sheet_equiv",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_boundary_sheet_transport"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerBoundaryTransportAudit4.log",
+  "logSha256": "C5FB2019467ED7D75B47A7CA6C45EE1056144546F19DB28B413B8216D7E88209",
+  "auditSha256": "C8D1B20B7D4C3BD438F47E07371E3581A7E4A195179880EF24413F1F6906DBE8",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 4,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 7,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerBoundaryTransportDependencyAudit4.log",
+  "dependencyAuditSha256": "12B11446AB1ADFA6A22C83AB034DA57C04B601056410C286B9F27A3B5BCE7E48",
+  "dependencyAuditSourceSha256": "2F33A5C6A328207ED17820D20972D06A3AFBC256001F7D7948ADF8ED43932139",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_boundary_sheet_transport"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> raw geometric reciprocity -> paired lifted dissection -> arc-pairing involution -> inverse sheet equivalence preserving the whole original boundary arc",
+  "discharged": "Actual sheet indices are bijective with every actual fiber on the original cell carrier. A common boundary point then gives an equivalence between neighboring sheet sets, preserving the entire original reparameterized arc by covering uniqueness. The assembled consumer constructs both analytic sheet families and discharges all sheet, exhaustion, disjointness, coordinate and transport premises. Only the original base-arc data remain explicit upstream inputs.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Assembly of the global lifted pairing involution and its vertex/intersection data, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-boundary-transport-4-reuse-review-20261025.json",
+  "reuseReviewSha256": "F9A73E4A5B3019A2D8C54950E92DF54A1D9F16F47BE7170144B2572334A391A0",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

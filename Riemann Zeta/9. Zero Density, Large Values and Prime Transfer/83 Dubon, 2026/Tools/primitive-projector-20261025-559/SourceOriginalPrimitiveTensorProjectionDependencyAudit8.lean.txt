@@ -1,0 +1,35 @@
+import SourceIntegerCoefficientExtension
+import SourceIntegerCoefficientExtensionInjective
+import SourceOriginalHeckeCoefficientFaithfulness
+import SourceIntegerCoefficientExtensionLaws
+import SourcePrimitiveTensorOperators
+import SourcePrimitiveTensorProjection
+import SourcePrimitiveTensorEigencharacter
+import SourcePrimitiveTensorProjectionNonzero
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.exists_nonzero_primitive_tensor_projection]
+  let localModules : Array Name := #[`SourceIntegerCoefficientExtension, `SourceIntegerCoefficientExtensionInjective, `SourceOriginalHeckeCoefficientFaithfulness, `SourceIntegerCoefficientExtensionLaws, `SourcePrimitiveTensorOperators, `SourcePrimitiveTensorProjection, `SourcePrimitiveTensorEigencharacter, `SourcePrimitiveTensorProjectionNonzero, `SourcePrimitiveFiniteGoodEigensystem, `SourceSymmetricSumSquaresKernel, `SourcePrimitiveGoodAnnihilator, `SourceKernelPowerReduction, `SourcePolynomialKernelProjection, `SourceSymmetricKernelReduction, `SourcePolynomialKernelProjectionLaws, `SourcePrimitiveGoodPolynomialProjection, `SourceFiniteOperatorCoefficientAnnihilator, `SourcePrimitiveGoodCoefficientAnnihilator, `SourceMappedKernelProjection, `SourcePrimitiveGoodCoefficientProjection, `SourcePrimitiveGoodProjectionHecke]
+  let required : Array Name := #[`Dubon2026.integerCoefficientExtension_tmul, `Dubon2026.integerCoefficientExtension_injective, `Dubon2026.originalHecke_coefficient_extension_injective, `Dubon2026.integerCoefficientExtension_algebraMap, `Dubon2026.integerCoefficientExtension_smul, `Dubon2026.integerCoefficientExtension_aeval, `Dubon2026.integerCoefficientExtension_shifted_squares, `Dubon2026.integerCoefficientExtension_mul_eq_zero, `Dubon2026.integerCoefficientExtension_idempotent, `Dubon2026.integerCoefficientExtension_mul_eq_smul, `Dubon2026.primitiveCoefficientCuspEvaluation_injective, `Dubon2026.primitiveCoefficientCuspEvaluation_hecke, `Dubon2026.primitiveCoefficientCuspEvaluation_annihilator, `Dubon2026.primitiveCoefficientCuspEvaluation_projector, `Dubon2026.exists_primitive_tensor_projection, `Dubon2026.primitiveTensorEigencharacter_hecke, `Dubon2026.primitiveTensorEigencharacter_annihilator, `Dubon2026.primitiveTensorEigencharacter_projector, `Dubon2026.primitiveGoodTensorProjector_ne_zero, `Dubon2026.exists_nonzero_primitive_tensor_projection, `Dubon2026.sourceOriginalIntegralHecke_linearIndependent_complex, `Dubon2026.sourceIntegralHeckeBasis, `Dubon2026.exists_primitive_good_coefficient_hecke_projection, `Dubon2026.sourcePrimitiveFieldHeckeCharacter_hecke, `AlgHom.liftEquiv, `Module.Basis.injective_constr_of_linearIndependent]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL PRIMITIVE TENSOR PROJECTION DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual nonzero arithmetic primitive idempotent. Only declaration values are traversed. The existing complex-independent integral Hecke basis proves faithfulness of the literal coefficient extension. It lifts the actual projector, its annihilator identity, idempotence and every positive-index Hecke scalar identity to the arithmetic tensor algebra. The prescribed primitive character evaluates the idempotent to one, proving it nonzero. Original Tate realization, nonzero pairing restriction, determinant and DUB-17--20 remain open; 16/20."
+
+#eval runPlanarPairingDependencyAudit

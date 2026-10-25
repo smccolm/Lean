@@ -1,0 +1,74 @@
+{
+  "recordedUTC": "2026-10-25T08:09:57.844848+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceOriginalLiftedVertexIncidence",
+    "SourceCoverLiftedMarkedCells",
+    "SourceOriginalLiftedDissectionIncidence",
+    "SourceOriginalWeilCoverCenteredDissection"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLiftedVertexIncidence.lean",
+      "sha256": "359D9A451224EA41C2A59CF2455D4DE109399CB70604DB5C94DDA01C339218FE",
+      "oleanSha256": "9C9A62EB532ED91833AF1B5A46BBA6E4886634CABE048FF4C11B25F14DD177C4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoverLiftedMarkedCells.lean",
+      "sha256": "BB07BED235C65A7BF897DD0850B1561F1B5968BABBBFAB156B74B8A5D0531ECC",
+      "oleanSha256": "B21F4E34D669D8DF01274101EB5AA0DDE997AB50C93D1EBF181BD65B2B155358"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLiftedDissectionIncidence.lean",
+      "sha256": "5AB39640E70B9444758F24100293F0237EE651B5343DF74CCF83D0742B17518F",
+      "oleanSha256": "67A66CB69289C0B6F66839320638272DB34D1E614A63A24FC01CDA71EC2189C0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCenteredDissection.lean",
+      "sha256": "2A46721EE3BBF9B56D65F8A2A9AFA4A4256F961D7C1D83C773C94D376A0CD361",
+      "oleanSha256": "BBAFB5AC0A36DF0F3942EA5F0731819BCB6C35E8129B612BD4C53589F3D90E0F"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_vertex_incident",
+    "Dubon2026.SourceFunctionField.SheetCover.lifted_carrier_injOn",
+    "Dubon2026.SourceFunctionField.SheetCover.lifted_cell_center",
+    "Dubon2026.SourceFunctionField.SheetCover.lifted_marked_separation",
+    "Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.lifted_dissection_vertex_incidence",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_centered_cell_dissection",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.interior'"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_vertex_incident",
+    "Dubon2026.SourceFunctionField.SheetCover.lifted_carrier_injOn",
+    "Dubon2026.SourceFunctionField.SheetCover.lifted_cell_center",
+    "Dubon2026.SourceFunctionField.SheetCover.lifted_marked_separation",
+    "Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.lifted_dissection_vertex_incidence",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_centered_cell_dissection"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.interior'"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCenteredDissectionAudit4R2.log",
+  "logSha256": "693B83AC3BC1723FEFD85AB0E40ED476D3F08408F9DBCEB6FE49760F2A709CEF",
+  "auditSha256": "328B04088ADAB3331F8468BAEC8A898E1DFD3E3DE1BC3C640F2A279978E62371",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 6,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 11,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCenteredDissectionDependencyAudit4R2.log",
+  "dependencyAuditSha256": "3890506B96A909F48BD44FCCB82F3A0E0426DBA7647611F417CD7DDDCC4F1DBE",
+  "dependencyAuditSourceSha256": "5C8420CF6228F966964D6A643BECADAE8755038FF8983EFD267D050B963B4E87",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_centered_cell_dissection"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> third-kind geometric reciprocity -> actual marked centered separated analytic dissection",
+  "discharged": "For every actual basepoint and finite marked set on the literal cover, the complete analytic dissection has every mark in a cell interior at its exact center, at most one marked point per carrier, injective actual vertices and incidence of every vertex to an actual edge. The proved original centered-cover theorem applies to the projected marked set; injective sheet projection transfers centers and separation without any assumption on distinctness of their base images.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Euler/cycle count, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-centered-dissection-4-reuse-review-20261025.json",
+  "reuseReviewSha256": "E87E4D88E7DBF0DECC397D9FD60A541016011E47E5E73A1050E7193B93C53147",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

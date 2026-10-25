@@ -1,0 +1,80 @@
+{
+  "recordedUTC": "2026-10-25T17:43:07.144154+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceFiniteOperatorCoefficientAnnihilator",
+    "SourcePrimitiveGoodCoefficientAnnihilator",
+    "SourceMappedKernelProjection",
+    "SourcePrimitiveGoodCoefficientProjection",
+    "SourcePrimitiveGoodProjectionHecke"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteOperatorCoefficientAnnihilator.lean",
+      "sha256": "B4CC08BC0BEE5A2C90ACE5DDB22AB483F196141ECE1A71C6B14FD29214DC0B88",
+      "oleanSha256": "2E6D6210D7746440A77C7A2DD9B2A9046637B761E1B729F09FBB42DFC036DACC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGoodCoefficientAnnihilator.lean",
+      "sha256": "E39A81DA22600E13015434C4A5A98C23842AA709EDBD94F469F9871F5702A229",
+      "oleanSha256": "C46A796C46E052EF85BDBACF7CAAD2B2108E4DBA4047C871BA91C241EC9F961A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMappedKernelProjection.lean",
+      "sha256": "C8D9AA81164EBBCD8FBBC03800E3C9E48DF79F61ED5718B112055AB64EC428E8",
+      "oleanSha256": "A652880157025CF5CC25F45FAB75B554E3D7312EDE12430A01022A3AE70E1A39"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGoodCoefficientProjection.lean",
+      "sha256": "8753A844FE5147E3C12C61DB8F73DEC032C3268185B2A8FD1ED95BB398A9FE42",
+      "oleanSha256": "E312ABFF3BF6F9A69204E2FA16CB8CCE14517694E52DC9663105AC3FFAABD7C3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGoodProjectionHecke.lean",
+      "sha256": "ED312E71179EC9F17D2D0465F3A0DB20F5A0276088C6D499528C7E4F78184360",
+      "oleanSha256": "9FDD9BF792ACDCCF543D4B8AFDD85B1A5DFA659BBD6C3DE5C992E422AA268665"
+    }
+  ],
+  "queries": [
+    "Dubon2026.finite_operator_coefficient_annihilator",
+    "Dubon2026.primitiveGoodAnnihilator_coefficient_polynomial",
+    "Dubon2026.exists_mapped_kernel_projector_polynomial",
+    "Dubon2026.exists_primitive_good_coefficient_projection",
+    "Dubon2026.primitive_projection_hecke_scalar",
+    "Dubon2026.exists_primitive_good_coefficient_hecke_projection",
+    "Dubon2026.primitiveGoodCoefficientProjector"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.finite_operator_coefficient_annihilator",
+    "Dubon2026.primitiveGoodAnnihilator_coefficient_polynomial",
+    "Dubon2026.exists_mapped_kernel_projector_polynomial",
+    "Dubon2026.exists_primitive_good_coefficient_projection",
+    "Dubon2026.primitive_projection_hecke_scalar",
+    "Dubon2026.exists_primitive_good_coefficient_hecke_projection"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.primitiveGoodCoefficientProjector"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCoefficientProjectionAudit5.log",
+  "logSha256": "8C34CE7928E3F0F7F5CC4DC9D325E6327BED737D1FB51F48676AF4B9EAF05AE6",
+  "auditSha256": "193B52C103B8F086E9FEE168E7D0E2F0C479F5CBC0B809159B6ED4B6E6230823",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 12,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 16,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCoefficientProjectionDependencyAudit5.log",
+  "dependencyAuditSha256": "22D63E53FA88E289DC26CFEB1007C3BAFB9C826B59B083008C0BEA85FC5BE17B",
+  "dependencyAuditSourceSha256": "CB79593EF07DEE208DB391DAC5EDFCD643B3EE76DC9335F5F348AB7E7BBDC415",
+  "consumers": [
+    "Dubon2026.exists_primitive_good_coefficient_hecke_projection"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive Frobenius determinant -> nonzero required primitive component pairing -> actual arithmetic primitive projector -> finite integral Hecke algebra and good-prime isolation",
+  "discharged": "The actual finite integral Hecke algebra and native finite tensor scalar extension supply an annihilating polynomial over the literal primitive Fourier coefficient field. Root factorization and the proved zero-power reduction retain this field in the kernel projector. Its actual complex realization is idempotent, has exactly the primitive cusp line as its range, and has the prescribed scalar action for every positive Hecke index, including bad indices. No coefficient-field polynomial, isolation, projector or full eigencharacter identity is assumed. Original Tate transport and the nonzero pairing restriction remain separate obligations.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The projector polynomial now belongs to the actual Fourier coefficient field. Its complex realization has the exact primitive range and full positive-index eigencharacter. Transfer of these arithmetic identities to the original rational Tate representation, nonzero restriction of its pairing, primitive Frobenius determinant, residual association, automorphy and all-weight continuation remain open; 16/20, DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-coefficient-projection-5-reuse-review-20261025.json",
+  "reuseReviewSha256": "1C7A070FBD0B1C049E53B74A95EDAC527D0C55A8C7006B9DE5125C8FF010550D",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

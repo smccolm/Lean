@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "actual residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary point division -> cover Abel converse -> prescribed third-kind residues -> two-pole differential existence",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateResidueDuality.lean",
+      "sha256": "D8C72859B889ADFE47D2CF805242EAD5E2A3468BAA76E6368CB5929FF4028C78"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateGenusMaximum.lean",
+      "sha256": "BAA2D207D95AAFA97811DA449958297C510503237450685BEF4C376554BFB668"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveGlobalIndex.lean",
+      "sha256": "3A21535CCE7BB3BA96F8023471205E1B1BA7C0EBC82561552A2D3A7B0E910F07"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTwoPoleDimensions.lean",
+      "sha256": "3F926FEB106B7DEAE627B2481AD22ACDFC3AF7D7D49F49E8F379A0A855C8D5E5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTwoPoleDifferential.lean",
+      "sha256": "828BA0E9EE180CED4D11E402E1262E1910A30E55C5E4BF06F454E5623C1DE2BB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCanonicalSupport.lean",
+      "sha256": "0FA1C4DE0E53292A3040CB9ED377837954CA810EAC400C506302BB99E4743917"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDimensionBounds.lean",
+      "sha256": "CC19E7B30B6C3B0A4B90FCD7AD09E35FA67E0FA04E92F99545527225E45F41FF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLocalDifferentials.lean",
+      "sha256": "0D9A76382D0CDF88EAB0B6BC18D2A640A4D3146372B0D3094B6164EB8ADB4DE8"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-two-pole-route-502.json",
+    "sha256": "86DFE0CCB1D85B48EE4C942147F8F701102375ADD0EF89C863F2BB7E82007146",
+    "review": {
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "actual residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary point division -> cover Abel converse -> prescribed third-kind residues -> two-pole differential existence",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateResidueDuality.lean",
+          "sha256": "D8C72859B889ADFE47D2CF805242EAD5E2A3468BAA76E6368CB5929FF4028C78"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateGenusMaximum.lean",
+          "sha256": "BAA2D207D95AAFA97811DA449958297C510503237450685BEF4C376554BFB668"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveGlobalIndex.lean",
+          "sha256": "3A21535CCE7BB3BA96F8023471205E1B1BA7C0EBC82561552A2D3A7B0E910F07"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTwoPoleDimensions.lean",
+          "sha256": "3F926FEB106B7DEAE627B2481AD22ACDFC3AF7D7D49F49E8F379A0A855C8D5E5"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTwoPoleDifferential.lean",
+          "sha256": "828BA0E9EE180CED4D11E402E1262E1910A30E55C5E4BF06F454E5623C1DE2BB"
+        }
+      ],
+      "shorterRoute": "Native finite-coordinate residue duality and the degree-dimension maximum supply a common Riemann-Roch constant directly. Its value cancels in the two-pole dimension differences. No numerical genus, canonical degree or regular-differential dimension formula is needed. The existing two-subspace argument then constructs an actual differential with exactly two simple poles. Separate the native dimension and local-order deductions over the abstract field, then instantiate them with the actual cover. This prevents repeated reduction of its Laurent-series presentation without changing the statements or proof limits.",
+      "scope": "Actual canonical order divisor, the needed Riemann-Roch identity and two-simple-pole differential existence. Residue normalization and the global Abel converse are separate, not assumed.",
+      "remaining": "Normalized prescribed residues, cover Abel converse and actual auxiliary point division remain required. Cover Jacobi inversion is independently scratch-audited. Original nondegeneracy, component determinant, residual association, automorphy and all-weight continuation remain open; DUB-17--20 OPEN, 16/20."
+    }
+  },
+  "discharged": "The actual cover canonical order divisor satisfies the Riemann-Roch identity with a common proved integer constant. Native finite-coordinate index and residue duality supply that identity. The constant cancels in two-pole dimension growth; the native two-subspace and local-order deductions then construct a nonzero actual differential with exactly two simple poles at any two distinct cover places and regularity everywhere else. No numerical genus, dimension difference or two-pole existence premise remains. Residue normalization and the cover Abel converse remain required.",
+  "remaining": "Normalized prescribed residues, cover Abel converse and actual auxiliary point division remain required. Cover Jacobi inversion is independently scratch-audited. Original nondegeneracy, component determinant, residual association, automorphy and all-weight continuation remain open; DUB-17--20 OPEN, 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-jacobi-inversion-8-scratch-receipt.json",
+    "sha256": "556CB3D27535825B73930132F3C349F44A628A4A91C0C890D6B953B76355AF9E"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

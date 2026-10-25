@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel comparison -> integrals of actual algebraic differentials -> analytic differential readings and coordinate compatibility",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateGeometry.lean",
+      "sha256": "6E79C5185E685A85D5E9269CB54A13ECE57417FC7F0B4CDE43F50DD75F4C1B05"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveExactDerivativeOrder.lean",
+      "sha256": "DDBEC9CA3FE003784331E009920F73D2D6644EDFB707029E1624773E84A90A36"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilKummerGeometry.lean",
+      "sha256": "02B87ABA8F7C72024F84401D7FCBEA1C2840665A2B3A7CA82C3149DBCA968C0F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartDifferentials.lean",
+      "sha256": "151FC207D2417EE2DA294E2B81497CF8975AC21C17C57E219A5820E14D14DE4B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartGermHom.lean",
+      "sha256": "2C4CEA27BB8E4EDF63C41EF25984FCA64E7D577D51DAD5E9E2B4E0B48115E1A8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartDerivativeGerms.lean",
+      "sha256": "E15DEF200DE023ECD94F6F8034805E574AEA775B2C618A397FFAB2D7E89296B5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartGermDerivation.lean",
+      "sha256": "AFB7A72C902D96EC77AB9B17BB6F540C90AAEF38E025A688623C765C922B7FEA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartDifferentialRegularity.lean",
+      "sha256": "4726EA87C343ADAC421DD0FA0A92E7655CF2654A506CE3917E966F03CA816725"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDifferentialTransitions.lean",
+      "sha256": "2C931787BEDBCB6F9DDA1E4B25DE91154AC0326D1DFA780C76E888728418DE5D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartPrimitives.lean",
+      "sha256": "4B444A3E81B45DEA907267AF57D7759C3DFC548BB0F6598621BEC9C01D5CB713"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPathLocalPrimitives.lean",
+      "sha256": "51E197C8642414091F78A3064E0185EC147C5FA5D3A6EC79F6D1421ACA1FC967"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPathPrimitives.lean",
+      "sha256": "A1D37482685DC9276E23782FC2561E5B214EF6CF0418BA716FB21417E8745AC7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceComplexPrimitiveGluing.lean",
+      "sha256": "E2F9079ACFF451019F15165420075289F91152A2A584356513DD2A00BE059DF1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCompact.lean",
+      "sha256": "3D70B9D04B80CF72E682451696B55065329369ACA52D7EF749ACDBF0B0D2473D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverConnected.lean",
+      "sha256": "CF1FA04E40D3FB81A1C4834BF80F75BC6DD68B5DDDBF595015431AEC40DAAB16"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverEvaluationContinuity.lean",
+      "sha256": "E2F0AE024DCC3CEB92A028A8168BF45D73A47F87EB51DFB0F3AC8EB27F359948"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-differential-reading-route-499.json",
+    "sha256": "A1312ADFA8B13465138522F9D4B7D3F699E8B4883E88D5419B5EB40F46D0D60E",
+    "review": {
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel comparison -> integrals of actual algebraic differentials -> analytic differential readings and coordinate compatibility",
+      "reuseChecked": [
+        "SourceCurve.finite_coordinate_place_dCoordGenerates already proves local spanning for the actual finite cover coordinate",
+        "originalWeilKummerCover_curve already gives differential rank one; no new rank or separability proof is needed",
+        "SourceOriginalChartDifferentials, SourceOriginalChartDerivativeGerms and SourceOriginalChartGermDerivation give the exact residue-germ/Kaehler universal-map argument",
+        "SourceOriginalPathLocalPrimitives and SourceOriginalPathPrimitives use native analytic primitives and the already generic OriginalPrimitiveGlue machinery"
+      ],
+      "shorterRoute": "Reuse the proved actual cover residue germs and uniformizer charts. Instantiate finite-coordinate local differential spanning, then adapt the existing derivative-germ derivation and Kaehler universal map to the literal splitting field. The resulting expression compatibility is the input to local analytic primitives and path integration. No new differential algebra or analytic manifold library is needed. The existing finite-coordinate local differential finiteness and residue separability instantiate exact derivative orders directly; no new local algebra is developed. Only the single-differential disk primitive is adapted here; the unused finite-family wrapper is deferred.",
+      "scope": "Actual cover differential coefficient regularity, normalized residue readings, derivative field laws, Kaehler expression compatibility, whole-chart regularity, coordinate-change law and existence/uniqueness of primitives along actual continuous paths. Period-lattice rank/freeness and Hecke comparison are deferred.",
+      "remaining": "Cover path integration and Abel comparison, actual point division and arithmetic descent remain unproved. 16/20; DUB-17--20 OPEN.",
+      "exactReuseSources": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateGeometry.lean",
+          "sha256": "6E79C5185E685A85D5E9269CB54A13ECE57417FC7F0B4CDE43F50DD75F4C1B05"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveExactDerivativeOrder.lean",
+          "sha256": "DDBEC9CA3FE003784331E009920F73D2D6644EDFB707029E1624773E84A90A36"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilKummerGeometry.lean",
+          "sha256": "02B87ABA8F7C72024F84401D7FCBEA1C2840665A2B3A7CA82C3149DBCA968C0F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartDifferentials.lean",
+          "sha256": "151FC207D2417EE2DA294E2B81497CF8975AC21C17C57E219A5820E14D14DE4B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartGermHom.lean",
+          "sha256": "2C4CEA27BB8E4EDF63C41EF25984FCA64E7D577D51DAD5E9E2B4E0B48115E1A8"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartDerivativeGerms.lean",
+          "sha256": "E15DEF200DE023ECD94F6F8034805E574AEA775B2C618A397FFAB2D7E89296B5"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartGermDerivation.lean",
+          "sha256": "AFB7A72C902D96EC77AB9B17BB6F540C90AAEF38E025A688623C765C922B7FEA"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartDifferentialRegularity.lean",
+          "sha256": "4726EA87C343ADAC421DD0FA0A92E7655CF2654A506CE3917E966F03CA816725"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDifferentialTransitions.lean",
+          "sha256": "2C931787BEDBCB6F9DDA1E4B25DE91154AC0326D1DFA780C76E888728418DE5D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartPrimitives.lean",
+          "sha256": "4B444A3E81B45DEA907267AF57D7759C3DFC548BB0F6598621BEC9C01D5CB713"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPathLocalPrimitives.lean",
+          "sha256": "51E197C8642414091F78A3064E0185EC147C5FA5D3A6EC79F6D1421ACA1FC967"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPathPrimitives.lean",
+          "sha256": "A1D37482685DC9276E23782FC2561E5B214EF6CF0418BA716FB21417E8745AC7"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceComplexPrimitiveGluing.lean",
+          "sha256": "E2F9079ACFF451019F15165420075289F91152A2A584356513DD2A00BE059DF1"
+        }
+      ]
+    }
+  },
+  "discharged": "Every actual regular differential on the literal complex Kummer cover has an analytic primitive along every actual continuous path, and two such primitives differ by their initial values. The native finite coordinate supplies local spanning, finiteness and exact derivative orders. The residue-germ derivation and Kaehler universal map prove expression compatibility; whole-chart regularity and coordinate changes enable native interval primitive gluing. No differential spanning, exact derivative order, coordinate compatibility or path-primitive existence premise remains.",
+  "remaining": "Cover path integration and Abel comparison, actual point division and arithmetic descent remain unproved. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-meromorphic-10-scratch-receipt.json",
+    "sha256": "CBBD54D0E0BAFEAEF6F16118641E8CF4622A96029DFC629AAB8DF167BDB83E15"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

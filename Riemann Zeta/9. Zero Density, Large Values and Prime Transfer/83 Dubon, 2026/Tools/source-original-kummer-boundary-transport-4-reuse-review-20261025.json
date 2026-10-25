@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> raw geometric reciprocity -> paired lifted dissection -> arc-pairing involution -> inverse sheet equivalence preserving the whole original boundary arc",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoverLiftedCoordinateFamily.lean",
+      "sha256": "ADC583C1C8243A1E06A26988CA9CCA5C6E7C68DB83ECDC0F1AFDF4D87E1FF733"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellLiftFamily.lean",
+      "sha256": "8C6FD0BB170082354DD2065CEF4A67AF494B6AB5CFC333334F4E102435FE2DB0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLiftedArcEquality.lean",
+      "sha256": "8D7D2393518446EF39BC38888B0964F66790CEDF9CD2354D7DB6F7C3288C7F27"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLiftedArcMatching.lean",
+      "sha256": "D411FA9413D6232BCB803074045455F9CA271E813DEF59393C22022F834A5D99"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPairing.lean",
+      "sha256": "10C44E882B3A20ACBA0BFD838D0A5F2BCD4BF6CCCB908DCEC4899772CB5B5C7F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Covering\\Basic.lean",
+      "sha256": "8A3BA40E8F453C783001ECC56B5BB95D6E40E9FC1713D22F95F61326DDEF2A55"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-boundary-transport-route-515.json",
+    "sha256": "E365B047D85BE22D96ABB881547ACB9CE8C6D660015A6B0666A47F48099B89BC",
+    "review": {
+      "scope": 515,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> raw geometric reciprocity -> paired lifted dissection -> arc-pairing involution -> inverse sheet equivalence preserving the whole original boundary arc",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoverLiftedCoordinateFamily.lean",
+          "sha256": "ADC583C1C8243A1E06A26988CA9CCA5C6E7C68DB83ECDC0F1AFDF4D87E1FF733"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellLiftFamily.lean",
+          "sha256": "8C6FD0BB170082354DD2065CEF4A67AF494B6AB5CFC333334F4E102435FE2DB0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLiftedArcEquality.lean",
+          "sha256": "8D7D2393518446EF39BC38888B0964F66790CEDF9CD2354D7DB6F7C3288C7F27"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLiftedArcMatching.lean",
+          "sha256": "D411FA9413D6232BCB803074045455F9CA271E813DEF59393C22022F834A5D99"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPairing.lean",
+          "sha256": "10C44E882B3A20ACBA0BFD838D0A5F2BCD4BF6CCCB908DCEC4899772CB5B5C7F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Covering\\Basic.lean",
+          "sha256": "8A3BA40E8F453C783001ECC56B5BB95D6E40E9FC1713D22F95F61326DDEF2A55"
+        }
+      ],
+      "shorterRoute": "The disjoint exhaustive coordinate families identify each sheet set with every actual fiber on its radial carrier. Transport across a common boundary point is a composition of those fiber equivalences. Native covering uniqueness then preserves the full original reparameterized arc. Reverse transport can use the inverse equivalence; no independent sheet matching choice is needed. Existing generic sheet decomposition and original pairing were checked before adding this exact transport deduction.",
+      "assumptionsToDischarge": "The existence of actual neighboring sheet equivalences preserving a whole original boundary arc. The assembled consumer constructs both coordinate families and discharges all sheet, exhaustion, disjointness, coordinate and transport inputs. Only the original base cells and their continuous arc reparameterization/equality remain explicit upstream geometric data.",
+      "remaining": "Assembly of the global lifted pairing involution and its vertex/intersection data, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20."
+    }
+  },
+  "discharged": "Actual sheet indices are bijective with every actual fiber on the original cell carrier. A common boundary point then gives an equivalence between neighboring sheet sets, preserving the entire original reparameterized arc by covering uniqueness. The assembled consumer constructs both analytic sheet families and discharges all sheet, exhaustion, disjointness, coordinate and transport premises. Only the original base-arc data remain explicit upstream inputs.",
+  "remaining": "Assembly of the global lifted pairing involution and its vertex/intersection data, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-global-cell-arcs-3-scratch-receipt.json",
+    "sha256": "55C9350D4E2D7F019E641E9911E0998E7DDC8CA1665F7E36BB80ADEF2F5258C4"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

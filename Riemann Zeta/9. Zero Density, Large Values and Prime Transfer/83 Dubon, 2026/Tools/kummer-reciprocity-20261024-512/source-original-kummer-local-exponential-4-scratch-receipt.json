@@ -1,0 +1,75 @@
+{
+  "recordedUTC": "2026-10-25T05:46:10.746636+00:00",
+  "date": "2026-10-24 America/Vancouver",
+  "modules": [
+    "SourceOriginalWeilCoverLogarithmicReading",
+    "SourceOriginalWeilCoverLocalExponentialModel",
+    "SourceOriginalWeilCoverFinitePuncturePaths",
+    "SourceOriginalWeilCoverDivisorAvoidingPaths"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLogarithmicReading.lean",
+      "sha256": "8C68FC7AAE63E87A2B6C3421C84CCEE0D9067AB70E00F2987B8B8D7E233DCEEA",
+      "oleanSha256": "002DE771FAC9353BE6A9321E4972BD75B7ACF8F25D831F29C9F62F4D628F59D7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLocalExponentialModel.lean",
+      "sha256": "C6C495A1CAAD1C68CDE5D253429F4A3336F73F076491472B6C00D0C78FC6BB9A",
+      "oleanSha256": "DFD70B4FF85330C95850B6ADA00E5AD9346CCE7D4E9ABC09868537295BD83F0A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverFinitePuncturePaths.lean",
+      "sha256": "08A0DD008233F59D204E3AE6D1252AD4D8D82A6509571AE2C103BF2DE677D80F",
+      "oleanSha256": "ED794D0851A9204E41EEBBD13CBCBE50AFA8A7A9ECDCC8C65476AB35EFE2436C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDivisorAvoidingPaths.lean",
+      "sha256": "506C92D9715DFE87893B376DE2559A91BF38FE83CC9BD07996FEFF8F5CE1BD68",
+      "oleanSha256": "0374BD81BBAA230AE015B8B7787A137A9F7B9EC2223E0D7B55507CAE7CB0A935"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_logarithmic_reading",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_logarithmic_primitive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_local_exponential_model",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_place_outside_finite",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPathConnected_compl_finite",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_divisor_base_point",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_path_avoiding_divisor"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_logarithmic_reading",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_logarithmic_primitive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_local_exponential_model",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_place_outside_finite",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPathConnected_compl_finite",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_divisor_base_point",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_path_avoiding_divisor"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerLocalExponentialAudit4.log",
+  "logSha256": "77BC13AA6E366F4F93657F1C22B60EF099E9EC216FDA492D14A1FF203A2D7129",
+  "auditSha256": "88EC3333C62CFA2E545373719108D7D8ACB2CB4478CC08A9573C6EA4A81AA807",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 7,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 10,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerLocalExponentialDependencyAudit4.log",
+  "dependencyAuditSha256": "05B59622FE77B0FAE107520B80703896A086C3AD5946F74BD374B2BD4D052C90",
+  "dependencyAuditSourceSha256": "D475D2EEA9562E7A39C3AFD301557C93739E2E25AF63B02FC46679B269888C9B",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_local_exponential_model",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_divisor_base_point",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_path_avoiding_divisor"
+  ],
+  "dependency": "DUB-17/18 -> original Tate pairing nondegeneracy -> auxiliary point division -> cover Abel converse -> meromorphic exponential with prescribed integer orders",
+  "discharged": "At every actual cover place a simple-pole differential with integer residue has a local meromorphic exponential model of exactly that integer order. The native finite-puncture theorem applies to the proved connected Hausdorff cover, supplying a base point and actual continuous paths outside every finite divisor support. No path-existence or local-exponential assumption remains.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Global exponential gluing, integral period correction and Abel converse, point division, arithmetic descent and the remaining DUB-17--20 arithmetic obligations are open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-local-exponential-4-reuse-review-20261024.json",
+  "reuseReviewSha256": "E200956400973EF71B753DC5409057DD6A031EBDEA37734A7D1E7CFEDEEEDE0C",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

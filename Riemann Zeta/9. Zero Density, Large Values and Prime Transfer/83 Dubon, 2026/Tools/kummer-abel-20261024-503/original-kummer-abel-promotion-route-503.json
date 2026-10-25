@@ -1,0 +1,34 @@
+{
+  "recordedUTC": "2026-10-25T05:16:34.134596+00:00",
+  "scopeIds": [
+    496,
+    497,
+    498,
+    499,
+    500,
+    501,
+    502
+  ],
+  "receipts": {
+    "source-original-kummer-compact-7-scratch-receipt.json": "8F32E368401FE2C4DCAD91CBE965B31BFB7B0DDAE02ECD5E06B5D5E57B867E45",
+    "source-original-kummer-connected-5-scratch-receipt.json": "F3CFF050E67BA6660635E1D3710F3FEBD8DFBE847CC20D917999EAC6E7A857FA",
+    "source-original-kummer-meromorphic-10-scratch-receipt.json": "CBBD54D0E0BAFEAEF6F16118641E8CF4622A96029DFC629AAB8DF167BDB83E15",
+    "source-original-kummer-differential-10-scratch-receipt.json": "7759F4D5CEB402C336F340EAECC094D9A1CEF1033288679BCE71FA8F768E09CC",
+    "source-original-kummer-abel-vector-5-scratch-receipt.json": "9654F7E85FE4B9424A0165837328B5FE280FC08DAD555B83168E55D6624109CD",
+    "source-original-kummer-jacobi-inversion-8-scratch-receipt.json": "556CB3D27535825B73930132F3C349F44A628A4A91C0C890D6B953B76355AF9E",
+    "source-original-kummer-two-pole-5-scratch-receipt.json": "A5E6E3EAEFE8E6F1CBBBA01910F3DF373B7926DFE95CDBA11970CA7C5396DFD1"
+  },
+  "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+  "chain": "actual residual association -> primitive Frobenius determinant -> nonzero required Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary Kummer point division -> cover Abel converse and Jacobi inversion -> actual compact connected cover, meromorphic function comparison, path integration and prescribed-residue foundations",
+  "discharged": "The literal complex Kummer cover is compact and connected. Every function meromorphic in its constructed charts comes from the same splitting field. Actual regular differentials have compatible primitives along every continuous path; their integrals give the local Abel divisor formula modulo actual loop periods. A constructed finite basis and the inverse function theorem prove Jacobi inversion for actual degree-zero cover divisors. Native finite-coordinate residue duality also supplies a nonzero differential with exactly two simple poles at any distinct pair of cover places, regular elsewhere.",
+  "remaining": "Prescribed-residue normalization, the cover Abel converse and actual point-difference division remain unproved. Arithmetic descent still needs its exact consumer. Original pairing nondegeneracy, nonzero required Hecke-component restriction, separate determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "reuse": "Each scope records the proved results checked before expansion. Native finite-coordinate geometry, compact meromorphic-function bounds, differential algebra, primitive gluing and the original Abel/inverse-function arguments supply the actual cover consumers. A finite open restriction map gives compactness directly; finite-coordinate dimension bounds avoid numerical genus and full Riemann-Roch where unnecessary. Only the later two-pole construction consumes the existing residue-duality identity, whose genus constant cancels. External NYLL/FLT proofs motivated the route; no external library or toolchain was imported. Pins and proof limits remain unchanged.",
+  "promotion": "Qualify scratch project imports only and preserve every audited statement, proof body and comment. Require exact scratch-to-production ownership reconciliation. Complete the 7744 sequential canonical receipt before production mutation.",
+  "modules": 50,
+  "explicitQueries": 141,
+  "theoremRegistrations": 126,
+  "constructionRegistrations": 15,
+  "exhaustiveScratchSum": 237,
+  "proofValueEdges": 167,
+  "expectedProductionModules": 7794
+}

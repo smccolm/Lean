@@ -1,0 +1,115 @@
+{
+  "recordedUTC": "2026-10-25T04:54:38.759415+00:00",
+  "date": "2026-10-24 America/Vancouver",
+  "modules": [
+    "SourceOriginalWeilCoverPathIntegral",
+    "SourceOriginalWeilCoverPathIntegralLaws",
+    "SourceOriginalWeilCoverAbelJacobiPeriods",
+    "SourceOriginalWeilCoverChartPathIntegrals",
+    "SourceOriginalWeilCoverLocalAbelJacobi"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPathIntegral.lean",
+      "sha256": "3579530776D9A79F186FA8B193D70A7C5D1B98A4DC381A333031400A660A79EF",
+      "oleanSha256": "04346F5A885A1408164C51CF24AD23A76B3F43C2E8B91B98895B8F50A167E291"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPathIntegralLaws.lean",
+      "sha256": "AFF917F14061579C4B6FF2F4030F3E16C3BB08F5E6A1CB18D1CEC5D133A59EF4",
+      "oleanSha256": "04E40C9DE8B133213835FE15D0DC0208789C82A68272829538B9B296AB260C0F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverAbelJacobiPeriods.lean",
+      "sha256": "B9CCE18095EF286D15B77D2175E6ED445B9734A8032AC4AD84C7F18F4AF70F3F",
+      "oleanSha256": "F31320F3549477FA9B6DBC4E8140569390BEA4F05EBE01E3420DAA6C8FAC4025"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverChartPathIntegrals.lean",
+      "sha256": "8F8EAAB22701C6C8479D31AE47FA2263324E35E11F119ACF8AD1649A2AA8E485",
+      "oleanSha256": "DBD052BFA07D6E71052210EEB83D8179194F1D5749383E4B562FD5885EBF5310"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLocalAbelJacobi.lean",
+      "sha256": "BABD006F8DFB9EC145133F1D927EC7AEA5FCF42463CA7C0A1A8BFDBD083C27F7",
+      "oleanSha256": "356134467F2E280852C70CFA5BA0251D22F183C95C1ECBF0698A7933D152F994"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_eq_of_isPrimitiveAlong",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.IsPrimitiveAlong.add_const",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.IsPrimitiveAlong.continuous",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_normalized_path_primitive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_symm",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_trans_left",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_trans_right",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_trans",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_symm",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_pathConnectedSpace",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiDiv_single",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.mem_pathPeriodLattice_of_loop",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiVec_sub_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_of_chart_primitive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_chart_path",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_chart_path_integrals",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiVec_chart_primitive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_abelJacobiVec_chart_primitive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiDiv_chart_difference",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverPath",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiVec",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiDiv",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathPeriodLattice"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_eq_of_isPrimitiveAlong",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.IsPrimitiveAlong.add_const",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.IsPrimitiveAlong.continuous",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_normalized_path_primitive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_symm",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_trans_left",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_trans_right",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_trans",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_symm",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_pathConnectedSpace",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiDiv_single",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.mem_pathPeriodLattice_of_loop",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiVec_sub_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_of_chart_primitive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_chart_path",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_chart_path_integrals",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiVec_chart_primitive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_abelJacobiVec_chart_primitive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiDiv_chart_difference"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverPath",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiVec",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiDiv",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathPeriodLattice"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAbelVectorAudit5.log",
+  "logSha256": "0EAEDD8D14BDA8FDD6D2D50A0590CFC1B4A4370BDDA5F331AC19DA33DBD20516",
+  "auditSha256": "A641BECB34464AD9472E80E359A06B09DA50763C7474DE40E425E9624E532152",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 43,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 24,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAbelVectorDependencyAudit5.log",
+  "dependencyAuditSha256": "845711954E3D39587C355977DF1E7736E0929646622121A59AADFD65A2E829AE",
+  "dependencyAuditSourceSha256": "7265B320C07953CAC9E02C7510ED022AA1368C738DE7BDFB08FD774A0BD309D7",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiDiv_chart_difference",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_normalized_path_primitive"
+  ],
+  "dependency": "actual residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary point division -> cover Abel comparison -> cover Abel vectors and local primitive formula",
+  "discharged": "Actual cover path primitives define integrals with proved reversal and concatenation laws. The connected complex atlas supplies actual paths, and path ambiguity lies in the integer span of actual loop integrals. For an actual point-difference divisor in a cover chart, its Abel vector agrees modulo those periods with the difference of constructed analytic primitives. Normalized continuous path primitives also exist. No path existence, integral law or local Abel-formula hypothesis remains.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Jacobi inversion and Abel converse for the cover, auxiliary point division, arithmetic descent, unconditional original pairing nondegeneracy, Hecke-component restriction and determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-abel-vector-5-reuse-review-20261024.json",
+  "reuseReviewSha256": "DD326CCAA2185E88F16DA5F54CD6ED2BE4A64C0A7A388189B1A0C2C30800A856",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

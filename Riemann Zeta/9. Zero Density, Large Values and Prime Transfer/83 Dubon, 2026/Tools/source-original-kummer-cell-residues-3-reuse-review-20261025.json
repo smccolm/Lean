@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> meromorphic loop generation and weighted residue reciprocity -> exact actual cell simple-pole coefficient expansion",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPuncturedOneFormLaw.lean",
+      "sha256": "F4E15EB0482812BA1C4D4105B63668BE0C8BB843832DBF1504D3CEBDE1DFC489"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPuncturedCoefficient.lean",
+      "sha256": "044FC6A5744EA989827C0344B0C26A8747AA14BEBB17495175FE8D5F7B518B1B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellResidues.lean",
+      "sha256": "EAC255F3D93CB0468B8E8DA24F3A7E2D999118EC203AD029200A1F757A54CC7F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceComplexSimplePolePullback.lean",
+      "sha256": "D8B9D9077DA020753021978A91C08962296BCD3C79324C5FB0608B5143DB9398"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRegularNeighborhood.lean",
+      "sha256": "ED114EDAC0DA4C136D07F38945A7BF1EFE4BC62520693C8C8674485F0DC9D433"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverOneFormAt.lean",
+      "sha256": "28BF9FC883FAAE7BAFE81028968B33F33AD7365D7C007ECDD4D3ABDD26249724"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellRegularCoefficient.lean",
+      "sha256": "80D7321CEAA53B7A22F314303F6B1AD2DF044027000A5C1DC08652E5FD46DBC3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCoordinateInverse.lean",
+      "sha256": "AE510047EBBA4ED4F54C352A7830283E105EF9434BA624ABB281631B8A2432A2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLogarithmicReading.lean",
+      "sha256": "8C68FC7AAE63E87A2B6C3421C84CCEE0D9067AB70E00F2987B8B8D7E233DCEEA"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-cell-residues-route-540.json",
+    "sha256": "C6553F8C243EAAC40958761846F9AE123E20EE1ED8A4F40081E61B734B21EE90",
+    "review": {
+      "scope": 540,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> meromorphic loop generation and weighted residue reciprocity -> exact actual cell simple-pole coefficient expansion",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPuncturedOneFormLaw.lean",
+          "sha256": "F4E15EB0482812BA1C4D4105B63668BE0C8BB843832DBF1504D3CEBDE1DFC489"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPuncturedCoefficient.lean",
+          "sha256": "044FC6A5744EA989827C0344B0C26A8747AA14BEBB17495175FE8D5F7B518B1B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellResidues.lean",
+          "sha256": "EAC255F3D93CB0468B8E8DA24F3A7E2D999118EC203AD029200A1F757A54CC7F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceComplexSimplePolePullback.lean",
+          "sha256": "D8B9D9077DA020753021978A91C08962296BCD3C79324C5FB0608B5143DB9398"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRegularNeighborhood.lean",
+          "sha256": "ED114EDAC0DA4C136D07F38945A7BF1EFE4BC62520693C8C8674485F0DC9D433"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverOneFormAt.lean",
+          "sha256": "28BF9FC883FAAE7BAFE81028968B33F33AD7365D7C007ECDD4D3ABDD26249724"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellRegularCoefficient.lean",
+          "sha256": "80D7321CEAA53B7A22F314303F6B1AD2DF044027000A5C1DC08652E5FD46DBC3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCoordinateInverse.lean",
+          "sha256": "AE510047EBBA4ED4F54C352A7830283E105EF9434BA624ABB281631B8A2432A2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLogarithmicReading.lean",
+          "sha256": "8C68FC7AAE63E87A2B6C3421C84CCEE0D9067AB70E00F2987B8B8D7E233DCEEA"
+        }
+      ],
+      "shorterRoute": "Reuse the already proved finite cover differential support, pointwise one-form law, coordinate inverse and logarithmic reading. The generic complex simple-pole pullback theorem is unchanged. Only the punctured coordinate consumers are adapted; existing actual chart inverse identities suffice without a new injectivity theorem or a duplicate meromorphic field.",
+      "assumptionsToDischarge": "Punctured transformation of the actual cell differential coefficient and its exact rational-residue-over-coordinate plus analytic remainder formula, from explicit analytic nonsingular chart conditions already constructed for each cover cell.",
+      "remaining": "Weighted edge cancellation and residue summation, meromorphic loop generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20."
+    }
+  },
+  "discharged": "For every actual analytic nonsingular cover coordinate, the literal differential coefficient obeys the punctured one-form pullback identity and its simple-pole expansion is the actual rational residue divided by the coordinate difference plus an analytic remainder. Finite actual differential support, existing chart identities, inverse coordinate calculus, the existing logarithmic reading and the generic complex simple-pole pullback theorem discharge these identities. The explicit forward chart conditions are supplied by each constructed cell. Global weighted cancellation and reciprocity remain separate obligations.",
+  "remaining": "Weighted edge cancellation and residue summation, meromorphic loop generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-regular-generation-11-scratch-receipt.json",
+    "sha256": "F4083D25749679AD8A1B1E7B2F1E884873B912762993447624DD94F0B3B578B6"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

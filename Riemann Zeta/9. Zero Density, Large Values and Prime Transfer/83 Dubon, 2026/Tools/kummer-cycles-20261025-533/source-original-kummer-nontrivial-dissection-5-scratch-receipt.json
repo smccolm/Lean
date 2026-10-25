@@ -1,0 +1,75 @@
+{
+  "recordedUTC": "2026-10-25T08:51:24.343994+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceOriginalWeilCoverVertexNontrivial",
+    "SourceOriginalLiftedMarkedEulerNontrivialAssembly",
+    "SourceOriginalWeilCoverNontrivialEulerData",
+    "SourceOriginalWeilCoverNontrivialEulerDissection",
+    "SourceOriginalWeilCoverNontrivialTreeCotree"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverVertexNontrivial.lean",
+      "sha256": "D31C22A6D7E20AA36BD003430714FDDE82B512630CCBC09A24D48F725D0152FD",
+      "oleanSha256": "0E1F671E2105CEDDF799B6D702E6AB7166EA2C9599DA1ADEC9A430A3AD9A17F7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLiftedMarkedEulerNontrivialAssembly.lean",
+      "sha256": "9AC035F1231C69D39EE2A6B4E089E9FC8DE614F2CB5D7DA13CCD96F73F0DA906",
+      "oleanSha256": "0B3F3C9E088AF1EB56948AF9D55960369C54FE4945213C2D9E6F4965CE145664"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNontrivialEulerData.lean",
+      "sha256": "39D308D45F581E819D68487636930201DB641966A5F47BEECA689C9FE39000BA",
+      "oleanSha256": "6477235EA544C95C0E836EE5186F70C447380EAF99665A9C70A31F77083FFF1B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNontrivialEulerDissection.lean",
+      "sha256": "B2B2F3F493768BB0292BAF4CB78B3116E51D530B599786525003076710EB5660",
+      "oleanSha256": "05E07A8BD363480D54FBA423EC2E898D0B8C011D5BF488BB7C0765C4F7293303"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNontrivialTreeCotree.lean",
+      "sha256": "49DF869247EE39B2C5D82787CAA58D53E3EB1D4180A339B902937E78F7F1DEB9",
+      "oleanSha256": "43A3AE85E775C84A95706C475009DB235E43815CDBD61848AB447990A2698071"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_lifted_vertex_count_ge_two",
+    "Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.exists_lifted_marked_euler_dissection_nontrivial",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_nontrivial_euler_dissection_of_centered_base",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_nontrivial_euler_cell_dissection",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_nontrivial_tree_cotree"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_lifted_vertex_count_ge_two",
+    "Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.exists_lifted_marked_euler_dissection_nontrivial",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_nontrivial_euler_dissection_of_centered_base",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_nontrivial_euler_cell_dissection",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_nontrivial_tree_cotree"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerNontrivialDissectionAudit5.log",
+  "logSha256": "F830372C64292F4B6492A44F0FA3657E31C8C856AEB155B2D91973C3EA24B9CC",
+  "auditSha256": "FCC15164680E130855D11AC59C763C80E263C9512B5A4508177ED14D7CBA3490",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 5,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 9,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerNontrivialDissectionDependencyAudit5.log",
+  "dependencyAuditSha256": "E7024E48E92F609E55666EEF49755A83EB40319BF1C5EEE54617C226F67F9C88",
+  "dependencyAuditSourceSha256": "7860F1C21FE4C6F5029F8B5B373D86C85715900E52426BAFFCC6BC20E15191FF",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_nontrivial_tree_cotree"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric loop generation and reciprocity -> actual polygon word -> nonempty cotree complement",
+  "discharged": "The same actual marked analytic Euler dissection and tree/cotree witness has at least two vertices, including genus zero. The exact lifted vertex count and proved original two-vertex bound discharge the additional condition needed for a nonempty cotree complement. No positive-genus premise is introduced; all previous geometric, analytic, Euler and tree conclusions are retained.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Polygon word assembly, analytic loop realization, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-nontrivial-dissection-5-reuse-review-20261025.json",
+  "reuseReviewSha256": "5C1E53BE5C256ACE09430AE4CDB3BB2FA88A8D86FC80128D09890F9EE0555808",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

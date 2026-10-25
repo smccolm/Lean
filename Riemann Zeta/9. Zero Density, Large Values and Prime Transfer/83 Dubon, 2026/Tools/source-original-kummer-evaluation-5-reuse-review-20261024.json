@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "actual Weil nondegeneracy -> Kummer norm detecting divisor -> reciprocity and one Picard division on the literal cover",
+  "precedingScratchReceipts": {
+    "source-original-kummer-geometry-2-scratch-receipt.json": "4685DBF8DE3C8817BBB0C8492831E006D59EACC930E1A4CD2E6A7DEA34E14D0A"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFieldNormEvaluation.lean",
+      "sha256": "6D6B7DC9B9007A3FD2F3D024088F3C883C6A799561ADED2E19FF1F12FF88A402"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveEvaluationRestriction.lean",
+      "sha256": "0D6C7E4D20169DB92B96BE620C88FCBA16923686F5E5965308CDA9E45EBB85FF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePullbackEvaluationProduct.lean",
+      "sha256": "D93FE3BEF2DBE5E86C80C12FF6C05C295B6C6DDE45ADFD55C9EEE1EC87FA7DB6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardPushforward.lean",
+      "sha256": "5AFD11FF786364DB2844F7E3F5168AEC2B50B66089B007B8BCA251C649F48EAA"
+    }
+  ],
+  "routeAdjustment": "Retain actual rational residue evaluation and its zero-at-poles convention. Generalize only the finite-product laws used by the checked detecting-class proof; instantiate them on the literal Kummer splitting field using the proved residue bijections. Do not add general Picard representability, all-characteristic theory or perfect duality. Native Pic0.geometricPushforward already provides the cover norm on divisor classes, so do not reconstruct it; the norm fiber and finite-product theorems already prove the two evaluation adjunctions.",
+  "discharged": "Nonzero regular evaluations and their finite divisor products on the actual Kummer cover, with multiplication, powers, divisor addition and natural scaling. Actual norm/pullback evaluation and pushforward/pulled-back-function evaluation on this same cover.",
+  "remaining": "Auxiliary-cover reciprocity and point-difference Picard division remain to be established. No finite-level or Tate nondegeneracy, nonzero component restriction or determinant gate is claimed. Scratch only; production verification pending. 16/20; DUB-17--20 OPEN.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\nyll-reuse-20261024-479-archive-manifest.json",
+    "sha256": "B063EEFBC68FFBF7AC1BF3200918AE80B4694100EA7F2610D8F8355CCB8EECCF"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-divisor-evaluation-route-483.json",
+    "sha256": "8931712398FEC56CD92A790F5B7582F3D0D0D61462EBCEF10641ECA9DAA3C45F",
+    "review": {
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "actual Weil nondegeneracy -> Kummer norm detecting divisor -> reciprocity and one Picard division on the literal cover",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRationalResidueValues.lean",
+          "sha256": "6867EEF679E559185D713F8EAAF414EA0ACD302069B8767AC95A0ED732F69DEB"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRationalEvaluation.lean",
+          "sha256": "6043AFA729024727854E291DDBCDDE9ED6B400007DAFBA00C872DC408B2C8AED"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilEvaluation.lean",
+          "sha256": "53EE9C5201DA39456A5F3813AA2F4FAE1A0BE5C0ACA2910C6C9DE030DA36A5E9"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilEvaluationPowers.lean",
+          "sha256": "372337C05A42BF050BD953307F9B205607F13D55702631FFA71FCE0689E5A437"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilTorsionValues.lean",
+          "sha256": "5B68FB1B63F06E4CADB7AC5926C08B47EEDECDC5CEBF34A38F1376C019A458C1"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRationalNormEvaluation.lean",
+          "sha256": "DEF4CB3A86DB2B86AD49FF030E358ABD2D05B66479F0C686B4368F6795B5118C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFiniteDivisorEvaluationPushforward.lean",
+          "sha256": "105EED43F334A953D8E1535BAE91F0351D80D5D3A2064149191008AE593CB304"
+        }
+      ],
+      "selectedRoute": "Retain actual rational residue evaluation and its zero-at-poles convention. Generalize only the finite-product laws used by the checked detecting-class proof; instantiate them on the literal Kummer splitting field using the proved residue bijections. Do not add general Picard representability, all-characteristic theory or perfect duality. Native Pic0.geometricPushforward already provides the cover norm on divisor classes, so do not reconstruct it; the norm fiber and finite-product theorems already prove the two evaluation adjunctions.",
+      "sourceReview": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\nyll-kummer-detection-review-482.json",
+        "sha256": "34A73CEA2AB13B28B051EA5F2648FA8AE304ADDF1D1EAD8B91EA8B52905C66EF"
+      },
+      "discharged": "Nonzero regular evaluations and their finite divisor products on the actual Kummer cover, with multiplication, powers, divisor addition and natural scaling. Actual norm/pullback evaluation and pushforward/pulled-back-function evaluation on this same cover.",
+      "remaining": "Auxiliary-cover reciprocity and point-difference Picard division remain to be established. No finite-level or Tate nondegeneracy, nonzero component restriction or determinant gate is claimed.",
+      "boundary": "Scratch only; production verification pending. 16/20; DUB-17--20 OPEN."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

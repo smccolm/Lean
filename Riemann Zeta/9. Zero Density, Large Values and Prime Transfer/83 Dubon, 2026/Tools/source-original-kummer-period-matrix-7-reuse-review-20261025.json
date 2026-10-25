@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> actual jump-to-loop-period integer matrix and generation",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellPolygonWordChains.lean",
+      "sha256": "98AE85173E34111AE6501F3C0E554CBD7174160D7EE960883CCEC7E353B37F1F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCycleIntegralSums.lean",
+      "sha256": "72DD2D89F8068C1077518AED0AD1847E771F35C307C796A6CFEB5E39169C9B93"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWordPeriodMatrix.lean",
+      "sha256": "14FC95C3D8D26AC292BFAFBE77927DEA23A5AD26BCA121D7FCAD3702EDCB09E8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalJumpPeriodClosure.lean",
+      "sha256": "AD24DAE98F1AA187779E9D634C172A3A231B500003CE4B0676B11971199D0EF9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCyclePeriodPolygonData.lean",
+      "sha256": "DB19568DBE459A708C132A537B4BCADED7791B7E18CD8B477B1D4B454EFE2BEB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCyclePeriodMatrixAssembly.lean",
+      "sha256": "2ECEF492ACD4EF363CE011773DE11FE41FBCBBC003C85D6E0D16F89A4329C6F8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPrimitivePolygon.lean",
+      "sha256": "7E6582F2A7197B03882ECDB9E8DD765C516E22DFBE3C1AF5AEC72F3882F7F043"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCoordinateCycleLoops.lean",
+      "sha256": "B64304D91795FF4FB3351251ABBCFE95FAA59317F351F04B2B3C0FA36CF1C864"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialFundamentalCycleSystem.lean",
+      "sha256": "B71621775D7C470E00804D98DF11B52D2B2A412B139176FBAB4981D2DBC21440"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-period-matrix-route-537.json",
+    "sha256": "0B42C94C25476BDB8969EB1A954CC65CBAA5EA64599B18B84B165ED52D561079",
+    "review": {
+      "scope": 537,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> actual jump-to-loop-period integer matrix and generation",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellPolygonWordChains.lean",
+          "sha256": "98AE85173E34111AE6501F3C0E554CBD7174160D7EE960883CCEC7E353B37F1F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCycleIntegralSums.lean",
+          "sha256": "72DD2D89F8068C1077518AED0AD1847E771F35C307C796A6CFEB5E39169C9B93"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWordPeriodMatrix.lean",
+          "sha256": "14FC95C3D8D26AC292BFAFBE77927DEA23A5AD26BCA121D7FCAD3702EDCB09E8"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalJumpPeriodClosure.lean",
+          "sha256": "AD24DAE98F1AA187779E9D634C172A3A231B500003CE4B0676B11971199D0EF9"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCyclePeriodPolygonData.lean",
+          "sha256": "DB19568DBE459A708C132A537B4BCADED7791B7E18CD8B477B1D4B454EFE2BEB"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCyclePeriodMatrixAssembly.lean",
+          "sha256": "2ECEF492ACD4EF363CE011773DE11FE41FBCBBC003C85D6E0D16F89A4329C6F8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPrimitivePolygon.lean",
+          "sha256": "7E6582F2A7197B03882ECDB9E8DD765C516E22DFBE3C1AF5AEC72F3882F7F043"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCoordinateCycleLoops.lean",
+          "sha256": "B64304D91795FF4FB3351251ABBCFE95FAA59317F351F04B2B3C0FA36CF1C864"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialFundamentalCycleSystem.lean",
+          "sha256": "B71621775D7C470E00804D98DF11B52D2B2A412B139176FBAB4981D2DBC21440"
+        }
+      ],
+      "shorterRoute": "Reuse the existing generic signed integer subword and reindexing theorems unchanged. Adapt only the dissection-indexed finite cycle sums and matrix assembly to the actual radial dissection. The actual cover consumer identifies every cycle edge sum with its already proved loop period and consumes the proved primitive-word identity and jump reduction. No additional topological or period-lattice theory is needed.",
+      "assumptionsToDischarge": "Exact integer matrix rows expressing actual primitive jumps in the constructed loop periods, and containment of the full jump subgroup in the subgroup generated by the 2g complementary periods, with all actual geometric, primitive and loop inputs discharged.",
+      "remaining": "Arbitrary path-to-jump generation, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20."
+    }
+  },
+  "discharged": "The existing signed integer subword reindexing and proved fundamental-cycle decomposition give exact integer rows for primitive jumps. The actual cover coordinate loop identities identify the cycle edge sums with periods of the constructed loops. Every primitive jump lies in the subgroup generated by the 2g complementary loop periods, with the same actual dissection, normalized primitives and polygon witness. No jump-to-period matrix or subgroup-containment premise remains.",
+  "remaining": "Arbitrary path-to-jump generation, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-primitive-polygon-6-scratch-receipt.json",
+    "sha256": "96AB322985DE94718958C493901F493E20B7F4D2BD4A0CA6E38E95D3177D45C7"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

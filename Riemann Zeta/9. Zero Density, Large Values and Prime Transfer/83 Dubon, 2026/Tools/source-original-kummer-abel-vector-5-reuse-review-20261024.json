@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "actual residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary point division -> cover Abel comparison -> cover Abel vectors and local primitive formula",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPathIntegral.lean",
+      "sha256": "0AC3783E1F6740BC8CCB4B126E0DCFF231041563AB0E7013AFCF54BA2EE95BFD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPathIntegralLaws.lean",
+      "sha256": "D53C103ADF54185BB321B24A5319CFF72D9C596C52B43556E1493CB6073539FF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAbelJacobiPeriods.lean",
+      "sha256": "3037BD6A46CEB8333C836678E9016EDC9ED474BA3BE274C424CE9F87189EAC44"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartPathIntegrals.lean",
+      "sha256": "BC911E7294EBD60F57CEA5DE77B35CA5EA55AD161C2B709D37F7EBBBB38C9914"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalLocalAbelJacobi.lean",
+      "sha256": "5722C0DC8AA021702243CD7D95D2BF36E0D2E969E9851E60134917E831899DB5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCompact.lean",
+      "sha256": "3D70B9D04B80CF72E682451696B55065329369ACA52D7EF749ACDBF0B0D2473D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverConnected.lean",
+      "sha256": "CF1FA04E40D3FB81A1C4834BF80F75BC6DD68B5DDDBF595015431AEC40DAAB16"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverEvaluationContinuity.lean",
+      "sha256": "E2F0AE024DCC3CEB92A028A8168BF45D73A47F87EB51DFB0F3AC8EB27F359948"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-abel-vector-route-500.json",
+    "sha256": "79130FB332862BC2966930EAB5F5BAD7E9346C9346436BF1894A776CC8E78E2E",
+    "review": {
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "actual residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary point division -> cover Abel comparison -> cover Abel vectors and local primitive formula",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPathIntegral.lean",
+          "sha256": "0AC3783E1F6740BC8CCB4B126E0DCFF231041563AB0E7013AFCF54BA2EE95BFD"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPathIntegralLaws.lean",
+          "sha256": "D53C103ADF54185BB321B24A5319CFF72D9C596C52B43556E1493CB6073539FF"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAbelJacobiPeriods.lean",
+          "sha256": "3037BD6A46CEB8333C836678E9016EDC9ED474BA3BE274C424CE9F87189EAC44"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartPathIntegrals.lean",
+          "sha256": "BC911E7294EBD60F57CEA5DE77B35CA5EA55AD161C2B709D37F7EBBBB38C9914"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalLocalAbelJacobi.lean",
+          "sha256": "5722C0DC8AA021702243CD7D95D2BF36E0D2E969E9851E60134917E831899DB5"
+        }
+      ],
+      "shorterRoute": "Use the established cover path primitives and connected native complex atlas. The existing path reversal/concatenation and Abel-vector proofs apply to those actual primitives. Native chart-disk path connectedness supplies chart paths; no explicit segment parameterization or new integration theory is needed.",
+      "scope": "Actual cover path integrals, reversal and concatenation, constructed paths and Abel divisor vectors, and their local primitive formula modulo the integer span of actual loop periods. No period rank/discreteness or principal-divisor kernel is claimed.",
+      "remaining": "Jacobi inversion and Abel converse for the cover, auxiliary point division, arithmetic descent, unconditional original pairing nondegeneracy, Hecke-component restriction and determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN."
+    }
+  },
+  "discharged": "Actual cover path primitives define integrals with proved reversal and concatenation laws. The connected complex atlas supplies actual paths, and path ambiguity lies in the integer span of actual loop integrals. For an actual point-difference divisor in a cover chart, its Abel vector agrees modulo those periods with the difference of constructed analytic primitives. Normalized continuous path primitives also exist. No path existence, integral law or local Abel-formula hypothesis remains.",
+  "remaining": "Jacobi inversion and Abel converse for the cover, auxiliary point division, arithmetic descent, unconditional original pairing nondegeneracy, Hecke-component restriction and determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-differential-10-scratch-receipt.json",
+    "sha256": "7759F4D5CEB402C336F340EAECC094D9A1CEF1033288679BCE71FA8F768E09CC"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

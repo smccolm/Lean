@@ -1,0 +1,33 @@
+{
+  "reason": "The initial canonical recorder failed after the sequential Lean run passed. A generated congruence theorem is owned by Mathlib in the full import environment. Fresh paired ownership/axiom audits show identical type and value hashes. The successor records the exact name-set reconciliation without changing source, oleans, previous scripts, or verification logs.",
+  "files": [
+    {
+      "path": "Tools/primitive-projector-20261025-559/record_source_original_primitive_projector_8102b.py",
+      "sha256": "7AA30532C538D106EA17CDE5ACD6302665CB4B534274CACBAF829A79F37A49FC"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourcePrimitiveProjectorFocusedGenerated8102b.lean",
+      "sha256": "92EDCA6D3AA7F7F6E308331C72AA055ACF1F6C4ED3FA58D641F92612113056BE"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourcePrimitiveProjectorFocusedGenerated8102b.log",
+      "sha256": "BA33B0F8EF7A0AFA8E2178711C9BCC365A6BD498F0B36517A5D2E676A8F0EFE0"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourcePrimitiveProjectorFocusedGenerated8102b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourcePrimitiveProjectorGlobalGenerated8102b.lean",
+      "sha256": "5F596041BC9E23C99E5D23746A7ACF8A5F919A12B3893F78E06C0A8CDF1A600E"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourcePrimitiveProjectorGlobalGenerated8102b.log",
+      "sha256": "730AA7B465F54688EA4F13498CA7D57DD35F174517A03C628B5C8150E290A20F"
+    },
+    {
+      "path": "Tools/primitive-projector-20261025-559/SourcePrimitiveProjectorGlobalGenerated8102b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ]
+}

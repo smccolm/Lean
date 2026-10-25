@@ -1,0 +1,56 @@
+import SourceCurveFiniteCoordinateOnePole
+import SourceOriginalWeilCoverEvaluationContinuity
+import SourceOriginalWeilCoverOnePole
+import SourceOriginalWeilCoverClopenObstruction
+import SourceOriginalWeilCoverConnected
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceCurve.exists_nonconstant_regular_away_of_finite_coordinate
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.analyticAt_place_reading
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeFamily_continuousAt_zero
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.continuousAt_place_eval
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.nonempty_cover_place
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_nonconstant_regular_away
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.false_of_proper_clopen
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_connectedSpace
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceCurveFiniteCoordinateOnePole, `SourceOriginalWeilCoverEvaluationContinuity, `SourceOriginalWeilCoverOnePole, `SourceOriginalWeilCoverClopenObstruction, `SourceOriginalWeilCoverConnected]
+  let theorems : Array Name := #[`Dubon2026.SourceCurve.exists_nonconstant_regular_away_of_finite_coordinate, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.analyticAt_place_reading, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeFamily_continuousAt_zero, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.continuousAt_place_eval, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.nonempty_cover_place, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_nonconstant_regular_away, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.false_of_proper_clopen, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_connectedSpace]
+  let constructions : Array Name := #[]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Kummer Connected postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Kummer Connected theorems discovered"
+  logInfo m!"SOURCE ORIGINAL KUMMER CONNECTED AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceCurveFiniteCoordinateOnePole
+#lint in SourceOriginalWeilCoverEvaluationContinuity
+#lint in SourceOriginalWeilCoverOnePole
+#lint in SourceOriginalWeilCoverClopenObstruction
+#lint in SourceOriginalWeilCoverConnected

@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric reciprocity -> actual paired dissection -> pointwise lifted intersection chains",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPairedArcOverlap.lean",
+      "sha256": "78DD4097BB2927ADE44C664B57E569C2C827EB8BBD9BFF35D85409D0631FA529"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellArcGeometry.lean",
+      "sha256": "FCB715E56355EF44A36976FBB4F7C53DD7E67FBA9AF3B2A06EC900D705C8FA1D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellIntersectionChains.lean",
+      "sha256": "779B07C0C6EA7FA75A70F38ED4148B48035E45103CF82445FEC0828A981F1821"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPairedIntersectionStep.lean",
+      "sha256": "EB751C11C49EE702A54487E7198238587E4EC1EB30F97AF2DBA8472D0610078E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverGlobalArcPairing.lean",
+      "sha256": "C55F8B4487E9FC42B136C4B0290D4A0BE4920A7B3696770DDB8418CC39F522BD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoverSheetFiberBijection.lean",
+      "sha256": "C20E888C7E1F04666EFB0A833217F72B4030D1A811363D3826147CFD6119AC93"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-intersection-chains-route-517.json",
+    "sha256": "8957E56E8A5EB9E9E78B5416AAE5D4A54252BF03543BE76EE8C014B323DA4EAA",
+    "review": {
+      "scope": 517,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric reciprocity -> actual paired dissection -> pointwise lifted intersection chains",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPairedArcOverlap.lean",
+          "sha256": "78DD4097BB2927ADE44C664B57E569C2C827EB8BBD9BFF35D85409D0631FA529"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellArcGeometry.lean",
+          "sha256": "FCB715E56355EF44A36976FBB4F7C53DD7E67FBA9AF3B2A06EC900D705C8FA1D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellIntersectionChains.lean",
+          "sha256": "779B07C0C6EA7FA75A70F38ED4148B48035E45103CF82445FEC0828A981F1821"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPairedIntersectionStep.lean",
+          "sha256": "EB751C11C49EE702A54487E7198238587E4EC1EB30F97AF2DBA8472D0610078E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverGlobalArcPairing.lean",
+          "sha256": "C55F8B4487E9FC42B136C4B0290D4A0BE4920A7B3696770DDB8418CC39F522BD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoverSheetFiberBijection.lean",
+          "sha256": "C20E888C7E1F04666EFB0A833217F72B4030D1A811363D3826147CFD6119AC93"
+        }
+      ],
+      "shorterRoute": "Lift the already proved base intersection chain through the fixed cover point. The original reversed-arc endpoints and native intermediate value theorem give equality of full paired lifted images; disjoint sheet domains identify the last cell. This avoids rebuilding the base planar star argument or making a new triangulation.",
+      "assumptionsToDischarge": "Actual pointwise intersection chains between every pair of lifted cell carriers containing a common cover place. The constructed consumer discharges all coordinate, sheet, paired-image and chain premises from the actual Kummer-cover data.",
+      "remaining": "Finite vertex assembly, global adjacency, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20."
+    }
+  },
+  "discharged": "Full positive arc reversal and native intermediate value give equality of paired lifted arc images in both orientations. Exact coordinate projection lifts the existing base intersection chain through each common cover point; disjoint sheets identify the final cell. The assembled actual global-coordinate consumer constructs and retains all pairing and intersection-chain data, discharging every new chain premise.",
+  "remaining": "Finite vertex assembly, global adjacency, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-global-arc-pairing-3-scratch-receipt.json",
+    "sha256": "C71D9329E3C280AFBD79D6A3B95CF36D8C7372720C761D8CA82C654300709C97"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive Frobenius determinant -> nonzero required primitive component pairing -> actual self-adjoint primitive projector -> finite good-prime multiplicity-one isolation",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\PrimitivePrimeMultiplicityOne.lean",
+      "sha256": "F355E616DC798F2A2D9364DE9C5F4CEE95ED7E89756C1B0F77472A02D2F0CD37"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\PrimitiveCoefficientReality.lean",
+      "sha256": "E10C4D5EC06D7FDABFDCEF2C7A565C00A94EE3416413E5D8E80FC6469EF831FE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\HeckeGoodAdjoint.lean",
+      "sha256": "563AAC44F0D12944E48CA647B9FC0B0830046E8B78A694EF13E2AEEF1AEBCB55"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CuspPeterssonCore.lean",
+      "sha256": "BFFA8A596B8BDF48EF4D01B2FD474E093E3A25610120E41D3790DD0F349F385B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ModularFiniteDimension.lean",
+      "sha256": "FB5FB1112D5A8A381D506D6A79DA5E30D9DCB667A25AA8D75BFF1D55738DE3B4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalIntegralHecke.lean",
+      "sha256": "50E521F29790D80E93C966505D7EDA52FEBCFE0C61A7945F022D515D04CBEF1E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalLatticeCuspHeckeEquiv.lean",
+      "sha256": "38FCFECC925C33AA61D6AEBE4225E7B2B052A4A43ED6D14E0B4D75EEFD39A7CD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCuspRealHeckeMatrix.lean",
+      "sha256": "F8116DE06CFDD68069E639DBA629F142867E3903411AC75CD4B4B4B9FF4E78EA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveTateSpecialization.lean",
+      "sha256": "EA57AE948FBDCBC737C4FA0673CEA2970D19E0E0866FFD9564CED1FCDA2685B9"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\primitive-good-projection-route-556.json",
+    "sha256": "FEBF9DDCC9CE457F274FE9F38E10C7BC022FE07D26406D2D4E0CF305A21D4849",
+    "review": {
+      "scope": 556,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive Frobenius determinant -> nonzero required primitive component pairing -> actual self-adjoint primitive projector -> finite good-prime multiplicity-one isolation",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\PrimitivePrimeMultiplicityOne.lean",
+          "sha256": "F355E616DC798F2A2D9364DE9C5F4CEE95ED7E89756C1B0F77472A02D2F0CD37"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\PrimitiveCoefficientReality.lean",
+          "sha256": "E10C4D5EC06D7FDABFDCEF2C7A565C00A94EE3416413E5D8E80FC6469EF831FE"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\HeckeGoodAdjoint.lean",
+          "sha256": "563AAC44F0D12944E48CA647B9FC0B0830046E8B78A694EF13E2AEEF1AEBCB55"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CuspPeterssonCore.lean",
+          "sha256": "BFFA8A596B8BDF48EF4D01B2FD474E093E3A25610120E41D3790DD0F349F385B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ModularFiniteDimension.lean",
+          "sha256": "FB5FB1112D5A8A381D506D6A79DA5E30D9DCB667A25AA8D75BFF1D55738DE3B4"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalIntegralHecke.lean",
+          "sha256": "50E521F29790D80E93C966505D7EDA52FEBCFE0C61A7945F022D515D04CBEF1E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalLatticeCuspHeckeEquiv.lean",
+          "sha256": "38FCFECC925C33AA61D6AEBE4225E7B2B052A4A43ED6D14E0B4D75EEFD39A7CD"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCuspRealHeckeMatrix.lean",
+          "sha256": "F8116DE06CFDD68069E639DBA629F142867E3903411AC75CD4B4B4B9FF4E78EA"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveTateSpecialization.lean",
+          "sha256": "EA57AE948FBDCBC737C4FA0673CEA2970D19E0E0866FFD9564CED1FCDA2685B9"
+        }
+      ],
+      "shorterRoute": "Reuse the existing original-level good-prime multiplicity-one theorem, native Artinian finite intersection, actual Petersson positivity and native polynomial annihilation. The literal sum of squared shifted good Hecke operators has exactly the primitive line as its kernel. Positivity removes all higher zero powers, and factoring one annihilator at zero constructs a kernel projector without developing a spectral decomposition. The integral version of the polynomial lemma is retained for coefficient-field descent using the already finite original integral Hecke algebra. Full-Hecke self-adjointness is not inferred from away-from-level adjointness.",
+      "assumptionsToDischarge": "Finite isolation of the prescribed primitive eigensystem, exact kernel of the good-prime annihilator, absence of zero Jordan chains, and existence and exact range of its polynomial projector on the actual cusp space.",
+      "remaining": "The actual complex primitive projector is established. Coefficient-field descent, transport to the original rational Tate representation, nonzero restriction of its pairing, primitive Frobenius determinant, residual association, automorphy and all-weight continuation remain open; 16/20, DUB-17--20 OPEN."
+    }
+  },
+  "discharged": "The existing original-level good-prime multiplicity-one theorem and native finite intersection select finitely many permitted equations cutting out exactly the primitive cusp line. The sum of squared shifted actual Hecke operators is self-adjoint for the actual Petersson pairing and has exactly that kernel. Petersson positivity excludes nontrivial zero Jordan chains. Native polynomial annihilation and root factorization produce a polynomial which is one at zero, whose evaluation is idempotent, and whose range is exactly the primitive cusp line. No spectral-isolation or projector premise remains. Coefficient-field and original Tate transport remain separate obligations.",
+  "remaining": "The actual complex primitive projector is established. Coefficient-field descent, transport to the original rational Tate representation, nonzero restriction of its pairing, primitive Frobenius determinant, residual association, automorphy and all-weight continuation remain open; 16/20, DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-rational-weil-6-scratch-receipt.json",
+    "sha256": "E8418D11FCD1A6F09D2178342758A698D5CB16FEEB2711EC89C13F9D6D413738"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

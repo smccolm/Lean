@@ -1,0 +1,394 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-kummer-period-relations-promotion-route-545.json",
+      "path": "Tools/kummer-period-relations-20261025-545/original-kummer-period-relations-promotion-route-545.json",
+      "sha256": "9D91E59D8A2572CC525F3321BCB68542C08C9404FA0DAD761536789478078496"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-jump-reduction-4-scratch-receipt.json",
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-jump-reduction-4-scratch-receipt.json",
+      "sha256": "9D9B87F15DE9F3FB834823995D2C87C0AF01F6FB83020674A6B898B487684AD9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-signed-primitives-4-scratch-receipt.json",
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-signed-primitives-4-scratch-receipt.json",
+      "sha256": "95EA5C2F8435EF2140BC036B90A891DF165B29D93E9725854D61BE8CEBF10BBD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-primitive-polygon-6-scratch-receipt.json",
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-primitive-polygon-6-scratch-receipt.json",
+      "sha256": "96AB322985DE94718958C493901F493E20B7F4D2BD4A0CA6E38E95D3177D45C7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-period-matrix-7-scratch-receipt.json",
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-period-matrix-7-scratch-receipt.json",
+      "sha256": "B405083791BF05E0027658A529EA14F70B9A387A1C88897BF5EC5EF3A2E6499A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-regular-generation-11-scratch-receipt.json",
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-regular-generation-11-scratch-receipt.json",
+      "sha256": "F4083D25749679AD8A1B1E7B2F1E884873B912762993447624DD94F0B3B578B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-unimodular-8-scratch-receipt.json",
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-unimodular-8-scratch-receipt.json",
+      "sha256": "1BDF051E096F3AA3EFE01BFAA4784AC70F72E1FA68779E45C10223BDE3469687"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-cell-residues-3-scratch-receipt.json",
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-cell-residues-3-scratch-receipt.json",
+      "sha256": "B2B95376EC71DA4128241F8076B479A21489260EA75CFB72E2C441C5A6520913"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-weighted-edges-5-scratch-receipt.json",
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-weighted-edges-5-scratch-receipt.json",
+      "sha256": "402FEF0194ACBBA51D9C5633050C7783E415CF53B52EFE27EF804662C7667EF3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-weighted-residues-9-scratch-receipt.json",
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-weighted-residues-9-scratch-receipt.json",
+      "sha256": "B149B65FBB6FFEFC2EB6A174B2ED2BCEF6254D9DF7207CC02C05E6F2F32D1EF9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-bilinear-periods-5-scratch-receipt.json",
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-bilinear-periods-5-scratch-receipt.json",
+      "sha256": "7397D821795D34355FF74E353F37AB5279BC4C85DCA14112785CB00744E62AEC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-third-kind-6-scratch-receipt.json",
+      "path": "Tools/kummer-period-relations-20261025-545/source-original-kummer-third-kind-6-scratch-receipt.json",
+      "sha256": "9B70502859FF3B812676E4CE6DC64F330A4D0F3CC64ADBEB8B19F1E4E44A6096"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerJumpReductionAudit4.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerJumpReductionAudit4.log",
+      "sha256": "79423B59465DB5EA60821361831C085BB836F157C09BB05EE77D1C5F79518A54"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerJumpReductionAudit4.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerJumpReductionAudit4.lean.txt",
+      "sha256": "47E704AC929904254FCA22177160EDF596E351195979D54E78AE95EC243F10CE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerJumpReductionAudit4.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerJumpReductionAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerJumpReductionDependencyAudit4.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerJumpReductionDependencyAudit4.log",
+      "sha256": "F9DE58993F9AD64C53C51EB49853B8E04BA55D7EA06C170586EFF92444E59588"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerJumpReductionDependencyAudit4.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerJumpReductionDependencyAudit4.lean.txt",
+      "sha256": "84ED0262DBA4C1DFFADB032E7E16BC2658D610870AF67B418B8D6CE97388BADA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerJumpReductionDependencyAudit4.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerJumpReductionDependencyAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerSignedPrimitivesAudit4.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerSignedPrimitivesAudit4.log",
+      "sha256": "E5072DCD5F8B3498F076545A408E84DECA05118FA02420F261B1740685E3DD74"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerSignedPrimitivesAudit4.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerSignedPrimitivesAudit4.lean.txt",
+      "sha256": "07AB30CF899E21974AD426E3246B400B06D00AB1C0C07A0CA1A1DAEB8E01EBB9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerSignedPrimitivesAudit4.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerSignedPrimitivesAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerSignedPrimitivesDependencyAudit4.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerSignedPrimitivesDependencyAudit4.log",
+      "sha256": "42814F4034A14717780CB58AE9BDF072A6D004874154FD52305C7B539433C2D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerSignedPrimitivesDependencyAudit4.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerSignedPrimitivesDependencyAudit4.lean.txt",
+      "sha256": "F6296A5736DF995C97BE77BD2975288CAE11AD52A6E433DCDE17731C0F8FA287"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerSignedPrimitivesDependencyAudit4.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerSignedPrimitivesDependencyAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPrimitivePolygonAudit6.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPrimitivePolygonAudit6.log",
+      "sha256": "571A6F9C8BBEF0538577A9D8B91FDC9D5D0EB2B660661962D9DF6F40AE0C6798"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPrimitivePolygonAudit6.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPrimitivePolygonAudit6.lean.txt",
+      "sha256": "C704E7364DD172C2186744A4DE06824BA3384A69DDB4BF1B502CD93E7267FD75"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPrimitivePolygonAudit6.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPrimitivePolygonAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPrimitivePolygonDependencyAudit6.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPrimitivePolygonDependencyAudit6.log",
+      "sha256": "FAA90D74CBF9AA50F2038159CFA470783420EEBBA0B11C2A16365F347DEDC58F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPrimitivePolygonDependencyAudit6.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPrimitivePolygonDependencyAudit6.lean.txt",
+      "sha256": "B536AE9BAA8CEE7BB6C71B6CA48BA238B89B2B2F2894318ECEB223C2D2F0A67A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPrimitivePolygonDependencyAudit6.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPrimitivePolygonDependencyAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPeriodMatrixAudit7.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPeriodMatrixAudit7.log",
+      "sha256": "B6FA888DD24EC26D6C8EE26B233AA21160C557604F38FD6C2FECD036F5BB16AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPeriodMatrixAudit7.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPeriodMatrixAudit7.lean.txt",
+      "sha256": "93962E679B1B1B6AD7EC737A97ECD4E4747117C6767C2855AE6AAB213BE7D644"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPeriodMatrixAudit7.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPeriodMatrixAudit7.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPeriodMatrixDependencyAudit7.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPeriodMatrixDependencyAudit7.log",
+      "sha256": "10EB0A94C5C2285A96F8A6ECA6BE5676AD5910CAC83007954C2B7A17E9A261E4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPeriodMatrixDependencyAudit7.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPeriodMatrixDependencyAudit7.lean.txt",
+      "sha256": "55174FF01C1047290972369D43642682BEB64178630723E6DE7DA29AEF4E3F55"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPeriodMatrixDependencyAudit7.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerPeriodMatrixDependencyAudit7.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerRegularGenerationAudit11.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerRegularGenerationAudit11.log",
+      "sha256": "AF61E70EC7945CB364C7951291CDC805A372B2E90D2FB928F19AD3EAC9F7ABF1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerRegularGenerationAudit11.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerRegularGenerationAudit11.lean.txt",
+      "sha256": "8A9AE0C21F1B3A1E2D4009446F0D364B5B81042BF863B3594CC5C71393D3E36C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerRegularGenerationAudit11.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerRegularGenerationAudit11.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerRegularGenerationDependencyAudit11.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerRegularGenerationDependencyAudit11.log",
+      "sha256": "19C7F99EEB41E4D77F083DB024FB6850B3B5FBA5B76F75F5F330AFB6633B8B13"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerRegularGenerationDependencyAudit11.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerRegularGenerationDependencyAudit11.lean.txt",
+      "sha256": "CE78FD13F2B996E1C13C935470D40DA0E1F660EB30BBDB9A86D7827B71DE6138"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerRegularGenerationDependencyAudit11.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerRegularGenerationDependencyAudit11.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerUnimodularAudit8.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerUnimodularAudit8.log",
+      "sha256": "AFFB1FF59C261D4F1326C278404DDDE0AB8C082CC45ECB8AEFBF0EAA65458723"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerUnimodularAudit8.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerUnimodularAudit8.lean.txt",
+      "sha256": "95BEBD801DB55C42CB319B5610712A548137A5607E934CF302789D53C985E081"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerUnimodularAudit8.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerUnimodularAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerUnimodularDependencyAudit8.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerUnimodularDependencyAudit8.log",
+      "sha256": "62AF3F79792229EE5A0515E44411CEA897EE7C679C54A3CB19D77ABCF9F8E13A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerUnimodularDependencyAudit8.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerUnimodularDependencyAudit8.lean.txt",
+      "sha256": "995AD7808543D273F151638EBEB299C1778C6263C14C0FEEB08711BE789B998D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerUnimodularDependencyAudit8.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerUnimodularDependencyAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellResiduesAudit3.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerCellResiduesAudit3.log",
+      "sha256": "96DACCE18F8D46B736BD2A7A39A1BE4E04CD4AA214BA6F59B3F229DE8922527C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellResiduesAudit3.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerCellResiduesAudit3.lean.txt",
+      "sha256": "726BE3C3E3B712C7D06BC409879E833F165A6C4B745E62282AC63E54C66C1763"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellResiduesAudit3.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerCellResiduesAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellResiduesDependencyAudit3.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerCellResiduesDependencyAudit3.log",
+      "sha256": "50C01D5B2A267C7CAEB28081D0D991066F54B5A50DECB1F82F3608077EDF88B8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellResiduesDependencyAudit3.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerCellResiduesDependencyAudit3.lean.txt",
+      "sha256": "0F229587B4E3BD813AB15D3C6C8A431F990A7029E078719AF07423510E20E073"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellResiduesDependencyAudit3.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerCellResiduesDependencyAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeightedEdgesAudit5.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedEdgesAudit5.log",
+      "sha256": "073757215D75462EA7ADEF6958BE51C739B839BE2B7FDA9E2AF1A2942A7605EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeightedEdgesAudit5.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedEdgesAudit5.lean.txt",
+      "sha256": "36CCCEF03460309E53A56B62D97D8F4DEB68057B8A3C22E7E9B230FDC3770BF1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeightedEdgesAudit5.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedEdgesAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeightedEdgesDependencyAudit5.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedEdgesDependencyAudit5.log",
+      "sha256": "F134175EE9A88B7079F550447ADEA8D8B6217D48FB1E93897664C4FC83EEC1DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeightedEdgesDependencyAudit5.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedEdgesDependencyAudit5.lean.txt",
+      "sha256": "00FBC35F3C8B814E7BA4B6F064B2A407101E0E2C3545D1B2789587FA03F1C3A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeightedEdgesDependencyAudit5.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedEdgesDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeightedResiduesAudit9.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedResiduesAudit9.log",
+      "sha256": "284385A0D045F5D78A1D81CB82900DC8C3A64B9F85F4DD4D17C2BF5A36D52916"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeightedResiduesAudit9.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedResiduesAudit9.lean.txt",
+      "sha256": "89734A0D9315F98B7666C420109E647EAC0D164F74F2C9322CCC436B92659B98"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeightedResiduesAudit9.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedResiduesAudit9.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeightedResiduesDependencyAudit9.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedResiduesDependencyAudit9.log",
+      "sha256": "881810727B6594AC5F871F27400819A9B6C8F2232730174E7DF54671D91F2AC3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeightedResiduesDependencyAudit9.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedResiduesDependencyAudit9.lean.txt",
+      "sha256": "57018AF2AEAB0B628CB3F0707ECFDE3B855E8A47E1C0273F34E25FCF15E662C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeightedResiduesDependencyAudit9.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerWeightedResiduesDependencyAudit9.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerBilinearPeriodsAudit5.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerBilinearPeriodsAudit5.log",
+      "sha256": "F556C823384A90EE64F4DD8BF0C459F96029BD76B960D8C68A41A38FB091F5D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerBilinearPeriodsAudit5.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerBilinearPeriodsAudit5.lean.txt",
+      "sha256": "E84A17DEA024AF1CC89906E6D31C05531A80763D5A30BFBAFB3C5AEAF1A2BD3F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerBilinearPeriodsAudit5.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerBilinearPeriodsAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerBilinearPeriodsDependencyAudit5.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerBilinearPeriodsDependencyAudit5.log",
+      "sha256": "96990190B7964CFFA0B791296A414180F4118C6A2B8BA428D335F463E6E588FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerBilinearPeriodsDependencyAudit5.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerBilinearPeriodsDependencyAudit5.lean.txt",
+      "sha256": "3CBFB761BD22C1809DFC7AFF4908258D3B5DB8223CCB40B2D1138B535333F6D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerBilinearPeriodsDependencyAudit5.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerBilinearPeriodsDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerThirdKindAudit6.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerThirdKindAudit6.log",
+      "sha256": "9C4F05F97F1116A2D4F550058D1439D5A91999486A09336F142F595EA310FB3E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerThirdKindAudit6.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerThirdKindAudit6.lean.txt",
+      "sha256": "F607FAA7E3C911B37445F185D2E80AE895EAE12F47468652945C53FF19990602"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerThirdKindAudit6.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerThirdKindAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerThirdKindDependencyAudit6.log",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerThirdKindDependencyAudit6.log",
+      "sha256": "5CE921757FA81B7A84FC0165E8DF7AB247DA8984A4D6CBD2EE9A3E40077C22CE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerThirdKindDependencyAudit6.lean",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerThirdKindDependencyAudit6.lean.txt",
+      "sha256": "3557A17CE7D3E7650F27FF82D8C4D4FBF9F3515200A4F9968FC54565F515C87D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerThirdKindDependencyAudit6.exit",
+      "path": "Tools/kummer-period-relations-20261025-545/SourceOriginalKummerThirdKindDependencyAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ]
+}

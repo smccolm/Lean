@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> meromorphic loop generation -> residue-subtracted cell primitives for the actual finite simple-pole basis",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicPoleData.lean",
+      "sha256": "B78071F2B64BF504981FC1032F035E485F071F56C580E198CC6BB1A9E01B8FBF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicPoleNeighborhoods.lean",
+      "sha256": "CC6B1E701312E5F7CFE17E38678B2AC436E2E6CC2C912D039D989AACA9D3425D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicRegularizedCoefficient.lean",
+      "sha256": "15CF6429FC34F8C6390CD66B3C7B58ACDEFD7E3E2F907FCED3CC4057B6A0B937"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicCellPrimitives.lean",
+      "sha256": "DB9177852E4F7A67606BC4E7265E21B0C92F577F26C368B6850DC606588030BA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellRadialPrimitive.lean",
+      "sha256": "7E6F86B0B7D082ACAC5F595BA31AD66CC21419964B36F5B1C3FD92024CC4F084"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellResidues.lean",
+      "sha256": "79EA59A3D970E7A82750E4E1FF27F5F0C4B0BD658A2B82A724FFA837451CB56F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellRegularCoefficient.lean",
+      "sha256": "80D7321CEAA53B7A22F314303F6B1AD2DF044027000A5C1DC08652E5FD46DBC3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverSimplePoleBasis.lean",
+      "sha256": "6354218978D2F2FF0338C1B51438F98496EBF86255EFD54CC90397901D986BAF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverThirdKindCycleData.lean",
+      "sha256": "023F2F5AAF61C3B94268C77E54C003322D2CC74A5D8C4600B2F1A6BABEA629EA"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-meromorphic-primitives-route-547.json",
+    "sha256": "11061DFA33CC1401E598C30A3C32FB101D7108AD81581853E5C389F9272EB91F",
+    "review": {
+      "scope": 547,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> meromorphic loop generation -> residue-subtracted cell primitives for the actual finite simple-pole basis",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicPoleData.lean",
+          "sha256": "B78071F2B64BF504981FC1032F035E485F071F56C580E198CC6BB1A9E01B8FBF"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicPoleNeighborhoods.lean",
+          "sha256": "CC6B1E701312E5F7CFE17E38678B2AC436E2E6CC2C912D039D989AACA9D3425D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicRegularizedCoefficient.lean",
+          "sha256": "15CF6429FC34F8C6390CD66B3C7B58ACDEFD7E3E2F907FCED3CC4057B6A0B937"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicCellPrimitives.lean",
+          "sha256": "DB9177852E4F7A67606BC4E7265E21B0C92F577F26C368B6850DC606588030BA"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellRadialPrimitive.lean",
+          "sha256": "7E6F86B0B7D082ACAC5F595BA31AD66CC21419964B36F5B1C3FD92024CC4F084"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellResidues.lean",
+          "sha256": "79EA59A3D970E7A82750E4E1FF27F5F0C4B0BD658A2B82A724FFA837451CB56F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellRegularCoefficient.lean",
+          "sha256": "80D7321CEAA53B7A22F314303F6B1AD2DF044027000A5C1DC08652E5FD46DBC3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverSimplePoleBasis.lean",
+          "sha256": "6354218978D2F2FF0338C1B51438F98496EBF86255EFD54CC90397901D986BAF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverThirdKindCycleData.lean",
+          "sha256": "023F2F5AAF61C3B94268C77E54C003322D2CC74A5D8C4600B2F1A6BABEA629EA"
+        }
+      ],
+      "shorterRoute": "Adapt the already proved original pole-exclusion geometry and radial primitive theorem. The actual simple-pole expansion provides a known analytic remainder, so equality near the center directly identifies the removable limit; no new boundedness/removable-singularity theory is needed. Separate this scalar calculation and finite-basis construction from the large actual-field cycle theorem, retaining its exact witnesses and without changing proof limits.",
+      "assumptionsToDischarge": "A common pole-excluded neighborhood and analytic residue-subtracted primitives for a basis spanning every permitted actual simple-pole differential, on the same already constructed dissection and regular cycle/matrix/reciprocity witnesses.",
+      "remaining": "Logarithmic boundary increments and jumps, meromorphic loop generation and extension to all allowed differentials, final prescribed 2g indexing, unconditional cover Abel converse and auxiliary point division, arithmetic descent and DUB-17--20 remain open; 16/20."
+    }
+  },
+  "discharged": "The actual cycle existence consumer retains the same cover dissection, loops, matrix and reciprocity witnesses. Centered separated poles give common pole-excluded cell neighborhoods. The actual simple-pole expansion and a removable-limit calculation prove analyticity of the literal rational-residue-subtracted coefficient. Existing radial primitive existence constructs common primitives for a finite basis spanning every allowed actual simple-pole differential. No pole geometry, analytic remainder, primitive or finite-basis premise remains on this actual existence theorem. Logarithmic boundary jumps, meromorphic loop generation, final indexing and the unconditional cover Abel converse remain required.",
+  "remaining": "Logarithmic boundary increments and jumps, meromorphic loop generation and extension to all allowed differentials, final prescribed 2g indexing, unconditional cover Abel converse and auxiliary point division, arithmetic descent and DUB-17--20 remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-simple-pole-basis-3-scratch-receipt.json",
+    "sha256": "8DA585162B4B602D3AA3D2BD69BA961A52D9226A9B08B0935D113C35617482F0"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

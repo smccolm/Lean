@@ -1,0 +1,101 @@
+{
+  "recordedUTC": "2026-10-25T08:27:24.514096+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceOriginalLiftedVertexFibers",
+    "SourceFiniteFiberPreimageCard",
+    "SourceOriginalWeilCoverLiftedVertexCount",
+    "SourceOriginalLiftedEulerMultiplicity",
+    "SourceOriginalWeilCoverLiftedEuler",
+    "SourceOriginalLiftedMarkedEulerAssembly",
+    "SourceOriginalWeilCoverEulerDissectionData",
+    "SourceOriginalWeilCoverEulerDissection"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLiftedVertexFibers.lean",
+      "sha256": "591FB5316F6BCA8217E6BC810DF50DF4819223AEC50DFFE11B683041AEF56243",
+      "oleanSha256": "723653116307FBD7B99EAD6F4881950E4F09403A3348D1F86EDA3311DFA89D1B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteFiberPreimageCard.lean",
+      "sha256": "9158BD38609A0D6AC861754D1BF24B019DF6A033009D3C3E2F7727CD60825675",
+      "oleanSha256": "5AC89CD86CF5F522C8D9667560016DAC0C7AD775081908E808DB48DCF3B4EA7D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLiftedVertexCount.lean",
+      "sha256": "5CEF9ADAE4AC59028C18CD719E887F98B6A1C2C22B032876E0AAF22AC2D1D1E7",
+      "oleanSha256": "A93B51236DD504EBF6E2392440153DB495BBD6EE274C862A6286A8019A552958"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLiftedEulerMultiplicity.lean",
+      "sha256": "0F58BCFA122A6EE0FB3F8CDE5C4F9ECE5282C76B8EF537236B50A74D6D3B25B2",
+      "oleanSha256": "4D91C6F9CCE8015A61197ED29976E8C5867A28756E0265119C167C152B5CFA2B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLiftedEuler.lean",
+      "sha256": "8BCE3A9774C3BB52A7075522FED4452C9DB884A7C9E5F159DBC62CB86ADD9452",
+      "oleanSha256": "8512FD2180AE07097E21F157D458FD4C789344912CC997C234CE3E876740901B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLiftedMarkedEulerAssembly.lean",
+      "sha256": "8B6F780F7C9511C77EEBB17C6CC77C27900D8027C260CE9CDEB8FB25E6CB036B",
+      "oleanSha256": "FD4299BAB0FF7DA7CED99504292765381CFB5389C03C14A30F3F7266BA0656E0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverEulerDissectionData.lean",
+      "sha256": "1274A91ED569401441FAE4E3CE51E24A7427F5F448E507C822EEB815BC82CA41",
+      "oleanSha256": "A619B0F391F3D137273F623107948E8D246A57ACFA48D237E3481C704C1A73D9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverEulerDissection.lean",
+      "sha256": "F2629D0752468FA505BFDD007A6F15C60305B8CC989B8A6A87A8763F19D1319B",
+      "oleanSha256": "D47B4DF2AFEC86F5EDD6B1A8F30410ABDE46B8DBAFF96096B46EC7EDD47D126C"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_endpoint_projects",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_vertices_eq_preimage",
+    "Dubon2026.SourceFunctionField.SheetCover.card_preimage_of_constant_fibers",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_lifted_vertex_count",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_euler_multiplicity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_lifted_euler_identity",
+    "Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.exists_lifted_marked_euler_dissection",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_euler_dissection_of_centered_base",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_euler_cell_dissection"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_endpoint_projects",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_vertices_eq_preimage",
+    "Dubon2026.SourceFunctionField.SheetCover.card_preimage_of_constant_fibers",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_lifted_vertex_count",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_euler_multiplicity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_lifted_euler_identity",
+    "Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.exists_lifted_marked_euler_dissection",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_euler_dissection_of_centered_base",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_euler_cell_dissection"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerEulerDissectionAudit8.log",
+  "logSha256": "5B78090629637D2654B1795CD3ACE1C868F1674DDFDC34F4798F1F0F856E94BA",
+  "auditSha256": "A872F4810B5F2DDB13A76A93C6B0B85A2F76AC5265A327B8FF5C6201B296005B",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 9,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 17,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerEulerDissectionDependencyAudit8.log",
+  "dependencyAuditSha256": "BCE06FCA82BE6E860433F517A7219ADA80B0341FA4F8F0F9E255F81EEF653F10",
+  "dependencyAuditSourceSha256": "637BB6E0B65308073ACF93F047350A1DE98A138CE4468BA959ABEF398B755520",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_euler_cell_dissection"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> bilinear/third-kind geometric reciprocity -> finite cycle count -> full marked analytic cover dissection with exact Euler genus",
+  "discharged": "The literal lifted vertex set equals the full inverse image of the base vertex set. Proved finite restriction fibers and native sigma cardinality give exact vertex, edge and cell multiplicities; the proved base Euler identity and unramified genus multiplicity yield the cover Euler identity for its actual regular-differential dimension. The final consumer constructs the complete analytic dissection for every actual basepoint and finite marked set with exact centers, separation, injective vertices, incidence and Euler identity. No geometric or Euler premise remains.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-euler-dissection-8-reuse-review-20261025.json",
+  "reuseReviewSha256": "6066FFDF562D6D828E9824CB46879DE8FE3FD39AFB4730FC7CE60DE6F3D32B57",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

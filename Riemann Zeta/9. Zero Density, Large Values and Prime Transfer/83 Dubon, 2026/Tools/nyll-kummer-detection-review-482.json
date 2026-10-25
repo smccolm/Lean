@@ -1,0 +1,37 @@
+{
+  "commit": "8c1b16d10afaca09e0dc72753c6575e230d31a55",
+  "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+  "chain": "actual Weil nondegeneracy -> Kummer norm detecting divisor -> reciprocity and one Picard division on the literal cover",
+  "inspected": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\nyll-detection-482\\download-receipt.json",
+      "sha256": "FA1D46BE4E0CE0E79F57C7CC6D017A4F5B8832C65F0EFAD1E4DB73767B3AB0B5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\nyll-detection-482\\LICENSE.txt",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\nyll-detection-482\\NOTICE.txt",
+      "sha256": "05FA26E5335FA16519AF1B179BC1EBCE5DA0D6B208CFF68241B5540C1878B59C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\nyll-detection-482\\Nyll\\JacobianVarieties\\WeilPairing\\DivisionDifference.lean.txt",
+      "sha256": "82C7CBA135E556E56CA99AC368A70DB8803B946EE5DBAD9305E504EC1492A75D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\nyll-detection-482\\Nyll\\JacobianVarieties\\WeilPairing\\DivisorialPairingPerfect.lean.txt",
+      "sha256": "DBF69D33455ABFC112A84E1495C2A656B9D1B96693FCE9900D31B844E23446A8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\nyll-detection-482\\Nyll\\JacobianVarieties\\WeilPairing\\DivisorialPairingToHomInjectiveDivisible.lean.txt",
+      "sha256": "96F191C9106B322195766562F08E09788FF76CE4E14E56D8D1B2CD9ADD5EE327"
+    }
+  ],
+  "finding": "The private detecting-class proof in DivisorialPairingToHomInjectiveDivisible.lean, lines 209-408, uses divisibility only once: the class of the difference of an automorphism translate of a cover point and that point. The final pairing is the inverse of the nontrivial constant root multiplier. DivisionDifference.lean and perfection/bijective duality are not required for this detecting argument.",
+  "selectedRoute": "Adapt the norm-detecting-divisor argument with the exact needed division premise exposed; retain native original moving representatives and pairing descent. First extend the already proved rational residue evaluation and norm formulas to the actual finite cover, using scope 481 to discharge geometry/residue inputs. Reprove neither the norm fiber formula nor rational-base reciprocity. Full auxiliary Picard divisibility remains a candidate NYLL dependency, and the original analytic comparison does not establish it.",
+  "localBuild": false,
+  "rootPinsChanged": false,
+  "remaining": "Auxiliary-cover evaluation transfer/reciprocity and the point-difference division remain to be established. No finite-level or Tate nondegeneracy, nonzero component restriction or determinant gate is claimed.",
+  "gates": "16/20; DUB-17--20 OPEN"
+}

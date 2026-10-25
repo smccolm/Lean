@@ -1,0 +1,35 @@
+import SourceCurveRationalChartValues
+import SourceCurveAnalyticChartOrders
+import SourceCurveAnalyticChartComparison
+import SourceCurveAnalyticChartDifferenceOrders
+import SourceCurveAnalyticChartBranchEquality
+import SourceOriginalWeilCoverChartPackage
+import SourceOriginalWeilCoverCharts
+import SourceOriginalWeilCoverChartTransitions
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isOpen_placeChart_trans_source, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.analyticOnNhd_placeChart_transition, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeChart_source, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeChart_target, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.mem_placeChart_source]
+  let localModules : Array Name := #[`SourceCurveRationalChartValues, `SourceCurveAnalyticChartOrders, `SourceCurveAnalyticChartComparison, `SourceCurveAnalyticChartDifferenceOrders, `SourceCurveAnalyticChartBranchEquality, `SourceOriginalWeilCoverChartPackage, `SourceOriginalWeilCoverCharts, `SourceOriginalWeilCoverChartTransitions, `SourceMeromorphicKummerRoots, `SourceOriginalWeilLocalKummerRoot, `SourceMeromorphicLaurentRealization, `SourceOriginalChartLaurentHom, `SourceOriginalWeilConvergentKummerRoot, `SourceOriginalWeilLocalSplittingField, `SourceCurveNormalizedLaurentPlace, `SourceCurveRealizedLaurentPlace, `SourceOriginalWeilLocalCoverPlace, `SourceCurveConvergentCommonDisc, `SourceCurveConvergentGaloisPlaces, `SourceCurveConvergentKummerPlaces, `SourceOriginalWeilEveryLocalCover, `SourceCurveNormalizedCommonDisc, `SourceOriginalWeilCoverDisc, `SourceCurveConvergentDiscGerms, `SourceCurveConvergentDiscOrders, `SourceCurveConvergentDiscUniformizer, `SourceCurveConvergentDiscPlaces, `SourceCurveConvergentPlaceFamily, `SourceOriginalWeilCoverPlaceFamily, `SourceCurveConvergentDiscResidues, `SourceCurveConvergentEvaluationFamily, `SourceCurveAnalyticPlaceParameter, `SourceCurveConvergentPlaceChart, `SourceOriginalWeilCoverParameter]
+  let required : Array Name := #[`Dubon2026.SourceCurve.Place.rationalEval_zero, `Dubon2026.SourceCurve.Place.rationalEval_inv, `Dubon2026.SourceCurve.Place.rationalEval_decomp, `Dubon2026.SourceCurve.AnalyticChart.Orders.analyticAt, `Dubon2026.SourceCurve.AnalyticChart.Orders.eventually_mem, `Dubon2026.SourceCurve.AnalyticChart.Orders.meromorphicOrderAt_sub_const, `Dubon2026.SourceCurve.AnalyticChart.Orders.uniformizer_sub_order, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.sub_ne_zero, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.uniformizer_mem, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.transition_self, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.analyticAt_transition, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.tendsto_transition, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.order_transition, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.eventually_mem', `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.eventually_mem, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.analyticAt_difference, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.decomp, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.difference_step, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.le_difference_order, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.difference_order_top_of_mem, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.eventuallyEq_of_mem, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.eventuallyEq, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.difference_order_top, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.deriv_transition_ne_zero, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.eventually_good, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.meromorphicAt_difference, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.ord_eq_of_difference_order_top, `Dubon2026.SourceCurve.AnalyticChart.ComparisonData.eventually_place_eq, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_parameter_package, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_spec, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_eval_uniformizer, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeChart_source, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeChart_target, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.mem_placeChart_source, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeChart_trans_source, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isOpen_placeChart_trans_source, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.analyticOnNhd_placeChart_transition, `Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_cover_parameter, `Dubon2026.SourceFunctionField.originalWeilKummerCover_residue_bijective, `Dubon2026.SourceCurve.Place.rationalEval_eq_zero_iff_ord_pos, `Dubon2026.SourceCurve.Place.ord_algebraMap]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL KUMMER COMPATIBILITY DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the literal torsion-cover chart consumers. Only declaration values are traversed. Actual cover parameters supply every comparison input. Repeated uniformizer division and connected meromorphic uniqueness identify the actual place branches; the actual partial charts have open overlap domains and analytic transitions. Global topology, compact connected cover geometry, Abel comparison, auxiliary point division and original pairing nondegeneracy remain open; DUB-17--20 OPEN, 16/20."
+
+#eval runPlanarPairingDependencyAudit

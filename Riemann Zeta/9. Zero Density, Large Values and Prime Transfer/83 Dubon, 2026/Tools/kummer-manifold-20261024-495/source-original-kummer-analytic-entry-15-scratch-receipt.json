@@ -1,0 +1,195 @@
+{
+  "recordedUTC": "2026-10-25T02:55:56.552089+00:00",
+  "date": "2026-10-24 America/Vancouver",
+  "modules": [
+    "SourceMeromorphicKummerRoots",
+    "SourceOriginalWeilLocalKummerRoot",
+    "SourceMeromorphicLaurentRealization",
+    "SourceOriginalChartLaurentHom",
+    "SourceOriginalWeilConvergentKummerRoot",
+    "SourceOriginalWeilLocalSplittingField",
+    "SourceCurveNormalizedLaurentPlace",
+    "SourceCurveRealizedLaurentPlace",
+    "SourceOriginalWeilLocalCoverPlace",
+    "SourceCurveConvergentCommonDisc",
+    "SourceCurveConvergentGaloisPlaces",
+    "SourceCurveConvergentKummerPlaces",
+    "SourceOriginalWeilEveryLocalCover",
+    "SourceCurveNormalizedCommonDisc",
+    "SourceOriginalWeilCoverDisc"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicKummerRoots.lean",
+      "sha256": "0C757F668CB36F7228D9691965B048ECC9FB6B188283967B2D2B3452D885D301",
+      "oleanSha256": "DAFD6C39AC2D0F0053FA016D869392B37B3BC830EC2B211C9B93D1135470A7AC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilLocalKummerRoot.lean",
+      "sha256": "50010047B56AEA25631E54DF4E46D4D41C38971CEDA729318533DD00487EBDCD",
+      "oleanSha256": "50311E741D53561262308A8941F1A7D6C999066F1AFA3B6D99E86F0DB4E81A5D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicLaurentRealization.lean",
+      "sha256": "E1107B007C4346B8D41C85D2B25CEF685E7C40BC0C632086CC3AE66AE4FCE4FF",
+      "oleanSha256": "CABF0A484C28130E0B89539F78D9D92E826CC29C3F454E9DD28CEC91830F858F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalChartLaurentHom.lean",
+      "sha256": "56A84210927DE2DC9C171D2C68042FD2C2268421E1B36F2288C8C8290807833C",
+      "oleanSha256": "D410B48039B492BA554BA963DCF88E5F28059C4D1E8358FBB96484A1542D54F6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilConvergentKummerRoot.lean",
+      "sha256": "1A1E8FCD5A342CAFE18E180B96D6CD3792F722ECD32BACDA6EB82AD2B6803FAD",
+      "oleanSha256": "8D834CB1CB1271C8B102FE9932AB20AFBBA49A0B336CDA568D79772502FB2B48"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilLocalSplittingField.lean",
+      "sha256": "789EAB444F42940E6D9EE74140F4AF43D819F67510A8E00941D4CA8E338CDE4B",
+      "oleanSha256": "77857578A34BFA58A48EAB5E8B1349D2BAB124A3D5828BA25D7363DECDC4D18A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveNormalizedLaurentPlace.lean",
+      "sha256": "BDE0B82FFCF9E655DCB7727883EA2171D86373EB3958D444C878CFDC4AE48319",
+      "oleanSha256": "B194EAE20685CA9E96CEA3F217F5B9C755F692CE68CCA8963E3580D3002958BC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveRealizedLaurentPlace.lean",
+      "sha256": "9D48DA2BB9FF63126AB6ABB450423E432380FBBD77DA0C50298000BF3B081FAF",
+      "oleanSha256": "D6520481226C3D9687F493FF1E6516FD5A61C9F865D83C54D32AA7C8EF6E7AE5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilLocalCoverPlace.lean",
+      "sha256": "5714A41D55EE75175B4ECC68FDCA957EDE88981B2F13D9C36B94AF7CDA22988A",
+      "oleanSha256": "339428F077FCBD15669DEBF619969D0C574592944F5B9BF2D6949DA23D11B4B8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveConvergentCommonDisc.lean",
+      "sha256": "F535A36B66D32D765ABAD88048891CE5A58C911CA5A41B50EAB0D7B71E7C2F76",
+      "oleanSha256": "4FEBF3A0DD1E6AB6A0E9AC3B1500B4490FB6E8D3BBEE181B179A5224E3D61472"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveConvergentGaloisPlaces.lean",
+      "sha256": "28D13DF6BBBE2BF134E9AB0475419BE0FC11D21C91B2AC6BCF9291E08876B217",
+      "oleanSha256": "80461DB95B0AC48A3F55634BBF8A7928C6EDD21356EDF5DBD0B7806B2B335484"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveConvergentKummerPlaces.lean",
+      "sha256": "E1B06B39BA1A8647B13590097E55FD0F71D646061D8EBCF7D8F4CA914E7FF962",
+      "oleanSha256": "E7C6D46B5F5C1E0D33180DC031F62E7C887AD6BE10E0680E07328B7FD89E1B7F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilEveryLocalCover.lean",
+      "sha256": "6FA6556E3952AED79BA0226A82AC6D1196602ABF17B56F33BD407DE0056936B9",
+      "oleanSha256": "761D2090FF325456F59FE5C2B1C90C49E8D4DC50168C3593F7A2D25B57B58915"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveNormalizedCommonDisc.lean",
+      "sha256": "4FC5ED8C7FFD8670F158455EA2BB7680F4B2B5EAEBE98BE284A536BC6AABCCB4",
+      "oleanSha256": "5FC7FA1F9DB49D848D5BCE3E6700163384E59A969D10FEDBC617AAC0F79A3F33"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDisc.lean",
+      "sha256": "B4FF59008740D3614834A2AADD1E469C9F28CBF75074C960A9B55B54042FBCA6",
+      "oleanSha256": "C7D0D41A8863069DB264540245108F745D0A9CE8367F5CA53EA3DD9F1B5C8034"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.AnalyticFiber.exists_analytic_unit_kummer_factor",
+    "Dubon2026.SourceFunctionField.AnalyticFiber.exists_meromorphic_kummer_root",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalWeil_local_kummer_root",
+    "Dubon2026.SourceFunctionField.CuspTaylor.represents_analytic",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.pow",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.zpow",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.eq_series",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.mem_realizedField",
+    "Dubon2026.SourceFunctionField.CuspTaylor.exists_realized_represents",
+    "Dubon2026.SourceFunctionField.OriginalChart.chartLaurent_represents",
+    "Dubon2026.SourceFunctionField.OriginalChart.chartLaurent_algebraMap",
+    "Dubon2026.SourceFunctionField.OriginalChart.chartLaurent_add",
+    "Dubon2026.SourceFunctionField.OriginalChart.chartLaurent_mul",
+    "Dubon2026.SourceFunctionField.OriginalChart.chartLaurentHom_order",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_convergent_kummer_root",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_local_splittingField",
+    "Dubon2026.SourceCurve.Place.exists_place_of_laurent_order_one",
+    "Dubon2026.SourceCurve.Place.exists_place_of_laurent_extension",
+    "Dubon2026.SourceCurve.Place.exists_place_of_realized_laurent_extension",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_local_cover_place",
+    "Dubon2026.SourceFunctionField.CuspTaylor.exists_common_disc_of_generators",
+    "Dubon2026.SourceFunctionField.CuspTaylor.exists_common_disc_of_finite_coordinate",
+    "Dubon2026.SourceCurve.Place.exists_normalized_convergent_embedding",
+    "Dubon2026.SourceCurve.Place.exists_normalized_convergent_kummer_embedding",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_normalized_local_embedding",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalWeil_complex_kummer_unramified",
+    "Dubon2026.SourceFunctionField.CuspTaylor.exists_normalized_common_disc",
+    "Dubon2026.SourceFunctionField.CuspTaylor.exists_normalized_common_disc_with",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_cover_common_disc",
+    "Dubon2026.SourceFunctionField.OriginalChart.chartLaurent",
+    "Dubon2026.SourceFunctionField.OriginalChart.chartLaurentHom",
+    "Dubon2026.SourceCurve.Place.kummerFinite",
+    "Dubon2026.SourceCurve.Place.kummerIntegral",
+    "Dubon2026.SourceFunctionField.OriginalChart.coverIntegral"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.AnalyticFiber.exists_analytic_unit_kummer_factor",
+    "Dubon2026.SourceFunctionField.AnalyticFiber.exists_meromorphic_kummer_root",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalWeil_local_kummer_root",
+    "Dubon2026.SourceFunctionField.CuspTaylor.represents_analytic",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.pow",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.zpow",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.eq_series",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.mem_realizedField",
+    "Dubon2026.SourceFunctionField.CuspTaylor.exists_realized_represents",
+    "Dubon2026.SourceFunctionField.OriginalChart.chartLaurent_represents",
+    "Dubon2026.SourceFunctionField.OriginalChart.chartLaurent_algebraMap",
+    "Dubon2026.SourceFunctionField.OriginalChart.chartLaurent_add",
+    "Dubon2026.SourceFunctionField.OriginalChart.chartLaurent_mul",
+    "Dubon2026.SourceFunctionField.OriginalChart.chartLaurentHom_order",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_convergent_kummer_root",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_local_splittingField",
+    "Dubon2026.SourceCurve.Place.exists_place_of_laurent_order_one",
+    "Dubon2026.SourceCurve.Place.exists_place_of_laurent_extension",
+    "Dubon2026.SourceCurve.Place.exists_place_of_realized_laurent_extension",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_local_cover_place",
+    "Dubon2026.SourceFunctionField.CuspTaylor.exists_common_disc_of_generators",
+    "Dubon2026.SourceFunctionField.CuspTaylor.exists_common_disc_of_finite_coordinate",
+    "Dubon2026.SourceCurve.Place.exists_normalized_convergent_embedding",
+    "Dubon2026.SourceCurve.Place.exists_normalized_convergent_kummer_embedding",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_normalized_local_embedding",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalWeil_complex_kummer_unramified",
+    "Dubon2026.SourceFunctionField.CuspTaylor.exists_normalized_common_disc",
+    "Dubon2026.SourceFunctionField.CuspTaylor.exists_normalized_common_disc_with",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_cover_common_disc",
+    "Dubon2026.SourceCurve.Place.kummerFinite",
+    "Dubon2026.SourceCurve.Place.kummerIntegral",
+    "Dubon2026.SourceFunctionField.OriginalChart.coverIntegral"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalChart.chartLaurent",
+    "Dubon2026.SourceFunctionField.OriginalChart.chartLaurentHom"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAnalyticEntryAudit15R2.log",
+  "logSha256": "2B5095ACAF58ACCC7240D0343A80A857E002FF07C76142F0D6F98E78A40C966E",
+  "auditSha256": "3A6EAD52F44E2A5BEE289C92DD6E83D4E7FA4B4CC2E9D6F40FAD6BE16A357753",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 45,
+  "linterScopes": 15,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 36,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAnalyticEntryDependencyAudit15.log",
+  "dependencyAuditSha256": "6DFDEA8BFA7A17CADD214CC8FE5F1FD3C6BE044EE8BCE9A2FF2E7BF60E7D4B13",
+  "dependencyAuditSourceSha256": "061D3B373E1A7B7D4D1EFFE6AF84869DB29C01E4775CDEB078EB818802435531",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_cover_common_disc",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalWeil_complex_kummer_unramified"
+  ],
+  "dependency": "actual residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> auxiliary Kummer point division -> analytic cover Abel comparison -> local meromorphic realization of the literal torsion cover",
+  "discharged": "For every place of the literal complex Kummer splitting field of a nonzero original torsion radicand, a convergent Laurent-field embedding extends the original base chart and preserves all actual normalized orders. Its ramification index is one for every nonzero torsion order. The finite-coordinate cover admits a common positive meromorphic disk at every such place, with exact center orders and finite orders for all nonzero functions throughout the disk.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending; 16/20; DUB-17--20 OPEN. Global compatible cover charts and compact/connected geometry, cover Abel comparison and actual auxiliary point-difference division; original nondegeneracy, component restriction, separate determinant and downstream gates remain open.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-analytic-entry-15-reuse-review-20261024.json",
+  "reuseReviewSha256": "DD8B2E94272745435C969FCF8A8ADEA1345FF2E7565792043D082D2EFAA9BB07",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

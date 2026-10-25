@@ -1,0 +1,94 @@
+{
+  "recordedUTC": "2026-10-25T10:22:51.211648+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceOriginalWeilCoverCoordinateTransition",
+    "SourceRadialPairedArcOverlap",
+    "SourceOriginalWeilCoverCellPrimitiveJumps",
+    "SourceOriginalWeilCoverDissectionPrimitiveJumps",
+    "SourceRadialDualTreeNormalization",
+    "SourceOriginalWeilCoverNormalizedCellPrimitives",
+    "SourceOriginalWeilCoverNormalizedCyclePrimitives"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCoordinateTransition.lean",
+      "sha256": "7F70859F71DFB987E1B1B1C444D1853F87D8D3BB066D515CC86804E5ACAF8574",
+      "oleanSha256": "4C929C1A716E1381F63E470A85594EA3B84CC197E04F80F0CA0B947D926F881E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialPairedArcOverlap.lean",
+      "sha256": "F6732C5FCAB49C760194B6377B3135EB9EC8B7C477BD79F48DDBEE43F924E871",
+      "oleanSha256": "734ACAB49186F1C83B2B72B7A45200F180276E103D853B94555EBD6895AE8F07"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellPrimitiveJumps.lean",
+      "sha256": "B39279AC5467DD26EE5023A86CB468F125292F568D0D2E734B26E742FE2D9355",
+      "oleanSha256": "FB1CD77D1845CB826ABFD0A46A81983973E76C7CC702DF8EFB0B332DF18A32DB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDissectionPrimitiveJumps.lean",
+      "sha256": "6556348685C13CC7478A79A30C79F038188FACEAFD393BD46F1EFA798FC5FD63",
+      "oleanSha256": "672AE061820C2C7B9D1B3D18D62DF0F34576FEB2AB281EE7E2BA7D50D70EB205"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialDualTreeNormalization.lean",
+      "sha256": "B7616D17F2A7AD44E7C4F0A176727E34F31E3D5CF5CE1592459C41BAAD1112E9",
+      "oleanSha256": "9C2D0F4A9B0BAA95B68EDBA87B01DDE739E49C6DE5ECA959A70D211855956588"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNormalizedCellPrimitives.lean",
+      "sha256": "4F28DF197EDBFE9FB998B810DCF2F76AEA81EA287A61A76C046308FD560BD199",
+      "oleanSha256": "E51645BDB2527F9EC67717E4B444493FF6D84B6F7DA5EC8C85CC137103C26381"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNormalizedCyclePrimitives.lean",
+      "sha256": "651C5EB01D1EB5E77858410DBDED44ED3F54B57A89E5246F4D03CCA03EB6DF4B",
+      "oleanSha256": "E049A1416FBC651FA017DB2F5B082B9C1E5B2EBB4096FF642D6CB3EF9ECF09D6"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_analyticAt_coordinate_transition",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.paired_arc_overlap",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_primitive_jump_on_arc",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_exists_regular_primitives_and_jumps",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.exists_normalising_constants",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_exists_normalized_primitives_and_jumps",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_normalized_cycle_primitives",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverNormalizedCellPrimitives"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_analyticAt_coordinate_transition",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.paired_arc_overlap",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_primitive_jump_on_arc",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_exists_regular_primitives_and_jumps",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.exists_normalising_constants",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_exists_normalized_primitives_and_jumps",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_normalized_cycle_primitives"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverNormalizedCellPrimitives"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerNormalizedJumpsAudit7.log",
+  "logSha256": "42EC29A9CEA33D0DE4936CEEBAF1899A8AEB2879CDB31FC40E3246E3A82323AA",
+  "auditSha256": "B124D42F3AFE503FCCF41945BE9DB09EF5BED41B25BAEE4A86482BE5199A89FF",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 15,
+  "linterScopes": 7,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 15,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerNormalizedJumpsDependencyAudit7.log",
+  "dependencyAuditSha256": "2191E33C206ADDBB42C83981D6498B180FFA14E8635A3C11C365A9268837BCCB",
+  "dependencyAuditSourceSha256": "2DB42D065A299AF59FD460D1A075604AD338E5D8B86CA6DA020EFEAE6022790C",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_normalized_cycle_primitives"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> normalized constant jumps of actual cell primitives",
+  "discharged": "The actual cover coordinate transition is analytic and the proved reversed arc-image equality supplies paired overlaps. The actual coefficient law and native interval FTC construct constant primitive jumps including both endpoints. Integer boundary algebra transports additive constants along the actual dual tree, makes all its jumps zero and normalizes the root primitive value. The same actual marked dissection retains geometry, integer cycles and coordinate loop identities. No primitive, jump or normalization existence premise remains on the assembled consumer.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Jump circulation and reduction, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-normalized-jumps-7-reuse-review-20261025.json",
+  "reuseReviewSha256": "0F74B0F6004EC04DD93A9A0EC223004DA57B80AE0BD54C54FF0A5692AC395E45",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

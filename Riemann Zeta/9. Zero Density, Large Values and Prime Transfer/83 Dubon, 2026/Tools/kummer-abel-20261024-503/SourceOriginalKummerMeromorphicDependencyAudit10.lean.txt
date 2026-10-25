@@ -1,0 +1,37 @@
+import SourceCurveFiniteCoordinateDimensionBounds
+import SourceOriginalWeilCoverDimensionBounds
+import SourceOriginalWeilCoverMeromorphicDimension
+import SourceOriginalWeilCoverMeromorphicPoleBound
+import SourceOriginalWeilCoverReadGerms
+import SourceOriginalWeilCoverReadFieldLaws
+import SourceOriginalWeilCoverGermBasisRelation
+import SourceOriginalWeilCoverOnePoleComparison
+import SourceOriginalWeilCoverMeromorphicPoleClearing
+import SourceOriginalWeilCoverMeromorphicFunctionComparison
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_function_of_meromorphicAt]
+  let localModules : Array Name := #[`SourceCurveFiniteCoordinateDimensionBounds, `SourceOriginalWeilCoverDimensionBounds, `SourceOriginalWeilCoverMeromorphicDimension, `SourceOriginalWeilCoverMeromorphicPoleBound, `SourceOriginalWeilCoverReadGerms, `SourceOriginalWeilCoverReadFieldLaws, `SourceOriginalWeilCoverGermBasisRelation, `SourceOriginalWeilCoverOnePoleComparison, `SourceOriginalWeilCoverMeromorphicPoleClearing, `SourceOriginalWeilCoverMeromorphicFunctionComparison, `SourceMeromorphicKummerRoots, `SourceOriginalWeilLocalKummerRoot, `SourceMeromorphicLaurentRealization, `SourceOriginalChartLaurentHom, `SourceOriginalWeilConvergentKummerRoot, `SourceOriginalWeilLocalSplittingField, `SourceCurveNormalizedLaurentPlace, `SourceCurveRealizedLaurentPlace, `SourceOriginalWeilLocalCoverPlace, `SourceCurveConvergentCommonDisc, `SourceCurveConvergentGaloisPlaces, `SourceCurveConvergentKummerPlaces, `SourceOriginalWeilEveryLocalCover, `SourceCurveNormalizedCommonDisc, `SourceOriginalWeilCoverDisc, `SourceCurveConvergentDiscGerms, `SourceCurveConvergentDiscOrders, `SourceCurveConvergentDiscUniformizer, `SourceCurveConvergentDiscPlaces, `SourceCurveConvergentPlaceFamily, `SourceOriginalWeilCoverPlaceFamily, `SourceCurveConvergentDiscResidues, `SourceCurveConvergentEvaluationFamily, `SourceCurveAnalyticPlaceParameter, `SourceCurveConvergentPlaceChart, `SourceOriginalWeilCoverParameter, `SourceCurveRationalChartValues, `SourceCurveAnalyticChartOrders, `SourceCurveAnalyticChartComparison, `SourceCurveAnalyticChartDifferenceOrders, `SourceCurveAnalyticChartBranchEquality, `SourceOriginalWeilCoverChartPackage, `SourceOriginalWeilCoverCharts, `SourceOriginalWeilCoverChartTransitions, `SourceOriginalWeilCoverManifold, `SourceOriginalWeilCoverChartOrders, `SourceCurveRationalPlaceSeparation, `SourceOriginalWeilCoverHausdorff, `SourceFiniteFiberOpenMap, `SourceCurveUnramifiedFiberCard, `SourceCurveUnramifiedChartRestriction, `SourceAnalyticRestrictionTopology, `SourceOriginalWeilRestrictionComparison, `SourceOriginalWeilRestrictionTopology, `SourceOriginalWeilCoverCompact, `SourceCurveFiniteCoordinateOnePole, `SourceOriginalWeilCoverEvaluationContinuity, `SourceOriginalWeilCoverOnePole, `SourceOriginalWeilCoverClopenObstruction, `SourceOriginalWeilCoverConnected]
+  let required : Array Name := #[`Dubon2026.SourceCurve.exists_natural_degree_dimension_bound, `Dubon2026.SourceCurve.finite_coordinate_degree_single, `Dubon2026.SourceCurve.exists_pole_clearing_function_of_finite_coordinate, `Dubon2026.SourceCurve.one_place_dimension_sum_gt_of_bound, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.finite_cover_lSpace, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_degree_dimension_bound, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_pole_clearing_function, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_one_place_dimension_sum_gt, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_relation, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_effective_meromorphic_pole_bound, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_algebraMap, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_zero, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_one, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.meromorphicAt_chartRead, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eventually_chartRead_regular, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_add, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_mul, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.meromorphicOrderAt_chartRead, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eq_zero_of_chartRead_eventuallyEq_zero, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_eventually_ne_zero, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_smul, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_neg, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_inv, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_sum_smul, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_lSpace_order_bound, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_function_of_basis_germ_relation, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_function_of_one_pole_bound, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_pole_clearing, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_function_of_meromorphicAt, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_compactSpace, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_connectedSpace, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_spec, `Dubon2026.SourceCurve.finite_coordinate_degree_dimension_maximum, `Dubon2026.SourceFunctionField.MeromorphicCompact.exists_relation_of_degree_lt_card, `Dubon2026.SourceFunctionField.MeromorphicCompact.exists_effective_pole_bound, `Dubon2026.SourceCurve.Place.rationalEval_mul_of_mem, `Dubon2026.SourceFunctionField.originalWeilKummerCover_finite_coordinate]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL KUMMER MEROMORPHIC DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the literal cover function-field comparison consumer. Only declaration values are traversed. Actual compact connected cover charts instantiate the native analytic dimension and pole bounds. Finite coordinate divisor-space bounds provide a nonzero pole-clearing multiplier and two bases; their faithful residue-germ relation identifies the analytic meromorphic function with one element of the same Kummer splitting field. Cover Abel comparison, point division, arithmetic descent and original pairing nondegeneracy remain open; DUB-17--20 OPEN, 16/20."
+
+#eval runPlanarPairingDependencyAudit

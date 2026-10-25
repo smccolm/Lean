@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> third-kind geometric reciprocity -> actual marked centered separated analytic dissection",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellCenters.lean",
+      "sha256": "FC1D0A38107F43640D196A030A43013D88CA0E897AB9C72313F24F902E27C1F5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedCellDissection.lean",
+      "sha256": "C5B82A963D9B979387311C1C4B0C53C1F5FE9574FEB1C723381030E945913234"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPairedCellCounts.lean",
+      "sha256": "5EC12605C2A117BC61738A4877A1C4F022DE26B4604FE6CF42DDF7ACAAE19061"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalGlobalCellPairing.lean",
+      "sha256": "3E7806301528F1222B4FBD5A24BA6EA4DACFE4D85884F7E64CB0B4CDDBD1145A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoverLiftedCellIncidence.lean",
+      "sha256": "ABDC94BC29266FC2F81F6E9CE4947345844106A1FBC71779400D2483F698B12C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDissectionConstructed.lean",
+      "sha256": "E2EBC11208C90CE63F53950D64F2DCFC8C85AC0470FF316C77327B42004AF1C7"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-centered-dissection-route-519.json",
+    "sha256": "501485D25A9EBAB6D542EEAFFFFC757AB0C29461C5F0A0766BCA8F7B65791E9D",
+    "review": {
+      "scope": 519,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> third-kind geometric reciprocity -> actual marked centered separated analytic dissection",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellCenters.lean",
+          "sha256": "FC1D0A38107F43640D196A030A43013D88CA0E897AB9C72313F24F902E27C1F5"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedCellDissection.lean",
+          "sha256": "C5B82A963D9B979387311C1C4B0C53C1F5FE9574FEB1C723381030E945913234"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPairedCellCounts.lean",
+          "sha256": "5EC12605C2A117BC61738A4877A1C4F022DE26B4604FE6CF42DDF7ACAAE19061"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalGlobalCellPairing.lean",
+          "sha256": "3E7806301528F1222B4FBD5A24BA6EA4DACFE4D85884F7E64CB0B4CDDBD1145A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoverLiftedCellIncidence.lean",
+          "sha256": "ABDC94BC29266FC2F81F6E9CE4947345844106A1FBC71779400D2483F698B12C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDissectionConstructed.lean",
+          "sha256": "E2EBC11208C90CE63F53950D64F2DCFC8C85AC0470FF316C77327B42004AF1C7"
+        }
+      ],
+      "shorterRoute": "Apply the existing original centered-global-cover theorem to the image of the finite marked cover set. Within a lifted radial carrier, exact projection and injective original coordinates give injectivity and transfer the source center. Thus base marked separation suffices even if several cover marks project to the same place. Reuse the existing endpoint-range incidence proof and native radial-center interior theorem.",
+      "assumptionsToDischarge": "For every actual basepoint and finite marked cover set, construct the full analytic dissection with all marks in interiors at exact centers, at most one marked point per carrier, injective actual vertices and incidence of every vertex. No marked-dissection or separation premise remains.",
+      "remaining": "Euler/cycle count, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20."
+    }
+  },
+  "discharged": "For every actual basepoint and finite marked set on the literal cover, the complete analytic dissection has every mark in a cell interior at its exact center, at most one marked point per carrier, injective actual vertices and incidence of every vertex to an actual edge. The proved original centered-cover theorem applies to the projected marked set; injective sheet projection transfers centers and separation without any assumption on distinctness of their base images.",
+  "remaining": "Euler/cycle count, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-dissection-9-scratch-receipt.json",
+    "sha256": "B21553C226FF2E25F975784EE12A7854990F3DF21207FD1A334C3EB818117BC0"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

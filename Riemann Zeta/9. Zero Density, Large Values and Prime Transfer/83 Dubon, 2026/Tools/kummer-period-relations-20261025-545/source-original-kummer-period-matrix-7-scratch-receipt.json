@@ -1,0 +1,104 @@
+{
+  "recordedUTC": "2026-10-25T11:04:01.469398+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceRadialCycleIntegralSums",
+    "SourceRadialWordPeriodMatrix",
+    "SourceRadialJumpPeriodClosure",
+    "SourceRadialCyclePeriodPolygonData",
+    "SourceRadialCyclePeriodMatrixAssembly",
+    "SourceOriginalWeilCoverPeriodMatrix",
+    "SourceOriginalWeilCoverCyclePeriodData"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialCycleIntegralSums.lean",
+      "sha256": "EB16083E425D8FEFAACE064E39FA839A2E0C14EC4D592AC0ED276FB81FA6E5EE",
+      "oleanSha256": "E424B7D0244956DF6E699EC1891CC56857A8DAE569A2EBE0D9C8A7857CEB421D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialWordPeriodMatrix.lean",
+      "sha256": "80DEA84492F7D4AB46D11C3DA1E6AA2F3BB8F61D95BBBDB73982386563645C87",
+      "oleanSha256": "DE7890FC990EB98463A4F43CC8372B5D7ABD29A49693E1187D556055D7136C01"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialJumpPeriodClosure.lean",
+      "sha256": "CF5A6A55075196F76FA1FF1805CF2F658A7733BB5EA8BF6EA4EDDD786B9D2E11",
+      "oleanSha256": "4377584C7B955968CC8C14F0C3D96A93EE2E04C1B45D13BFA86E11566A0DC598"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialCyclePeriodPolygonData.lean",
+      "sha256": "AABBDC5BCA28BE135ADF66ECF4D0E29ED09E3DDB495B76A22CBE3DDFFCB591A7",
+      "oleanSha256": "E691D7E31D11D12ABA6E4F68DCEB906EDE8C417296940F6908EEDAF095BB0D3C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialCyclePeriodMatrixAssembly.lean",
+      "sha256": "A55C1628793B1E8001A9AE1BAB617EE508060C792DD698AADAE1A0166484FF2F",
+      "oleanSha256": "A3178A8C7ABB2A829900C504B8C5A3328285D94F1BB52615AD47F5EC7793A5A2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPeriodMatrix.lean",
+      "sha256": "A6719F1BE7C342BC355E00F8B2CB4B449009740937661F7EAC2D06A0D16E9A8B",
+      "oleanSha256": "1B8ABF979E723749A9FEAC4D7B3D4890894B36BE0594CFAB3B75DC66F961435B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCyclePeriodData.lean",
+      "sha256": "6411ACC69197AA3CACE1E30BA714D4164207BBDB099690C283589F6A5E9127A4",
+      "oleanSha256": "0A4E8575C43B70974C7CA7F12E9B83CE94AFE35C16218CD375CF3CDA2346802E"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.integer_decomposition_of_lift",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.sum_chain_smul",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.wordMatrix_of_not_mem",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.jump_formula_of_word",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.closure_generated_jumps_le_periods",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.period_matrix_of_primitive_word",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_period_matrix_of_primitive_word",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cycle_period_data",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.zv",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.wordMatrix",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.JumpFormula",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.CyclePeriodPolygonConclusion",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverCyclePeriodData"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.integer_decomposition_of_lift",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.sum_chain_smul",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.wordMatrix_of_not_mem",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.jump_formula_of_word",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.closure_generated_jumps_le_periods",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.period_matrix_of_primitive_word",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_period_matrix_of_primitive_word",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cycle_period_data"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.zv",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.wordMatrix",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.JumpFormula",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.CyclePeriodPolygonConclusion",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverCyclePeriodData"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPeriodMatrixAudit7.log",
+  "logSha256": "B6FA888DD24EC26D6C8EE26B233AA21160C557604F38FD6C2FECD036F5BB16AB",
+  "auditSha256": "93962E679B1B1B6AD7EC737A97ECD4E4747117C6767C2855AE6AAB213BE7D644",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 18,
+  "linterScopes": 7,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 13,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPeriodMatrixDependencyAudit7.log",
+  "dependencyAuditSha256": "10EB0A94C5C2285A96F8A6ECA6BE5676AD5910CAC83007954C2B7A17E9A261E4",
+  "dependencyAuditSourceSha256": "55174FF01C1047290972369D43642682BEB64178630723E6DE7DA29AEF4E3F55",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cycle_period_data"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> actual jump-to-loop-period integer matrix and generation",
+  "discharged": "The existing signed integer subword reindexing and proved fundamental-cycle decomposition give exact integer rows for primitive jumps. The actual cover coordinate loop identities identify the cycle edge sums with periods of the constructed loops. Every primitive jump lies in the subgroup generated by the 2g complementary loop periods, with the same actual dissection, normalized primitives and polygon witness. No jump-to-period matrix or subgroup-containment premise remains.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Arbitrary path-to-jump generation, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-period-matrix-7-reuse-review-20261025.json",
+  "reuseReviewSha256": "4DFDC9181A76129839853F19AD5FAB5785F472EA58FBE9887D3C37C65CD1871F",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,136 @@
+{
+  "recordedUTC": "2026-10-25T18:09:23.002732+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceIntegerCoefficientExtension",
+    "SourceIntegerCoefficientExtensionInjective",
+    "SourceOriginalHeckeCoefficientFaithfulness",
+    "SourceIntegerCoefficientExtensionLaws",
+    "SourcePrimitiveTensorOperators",
+    "SourcePrimitiveTensorProjection",
+    "SourcePrimitiveTensorEigencharacter",
+    "SourcePrimitiveTensorProjectionNonzero"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegerCoefficientExtension.lean",
+      "sha256": "D584EDA025A9EEF1AC553B6A6491F9888B628786A30420020D0376B79517F75E",
+      "oleanSha256": "BCAB5D5C016593CCF5021770B2BE17F406A879B593A70B46725526387562835B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegerCoefficientExtensionInjective.lean",
+      "sha256": "67AFA3C41615E55756351FCD0B6C79F9242E25A06D5748074DE8A9941E4CFF49",
+      "oleanSha256": "CCA9BDF50317AAD18537CFFF92F96BB3469C357977B6F9DD7028108173AA25F2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeCoefficientFaithfulness.lean",
+      "sha256": "BD9A5E9A911017D63EECB52F63A01FC784455035CA8C268C99C2184625C4A297",
+      "oleanSha256": "578449A8FF1623A93B66CBF6FC26E895B2E552CE54507FB7EDFA08E6BA1F18EC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegerCoefficientExtensionLaws.lean",
+      "sha256": "B8B7C9CB5E9B90A5DDEEA26D5D6AB993B20A5C445FC8E376EBDDFC73A4EEE6FA",
+      "oleanSha256": "F270278F312B1063DEC613C8474BEAAAE41D5763A0A19A7ACEAA57C95356B040"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveTensorOperators.lean",
+      "sha256": "F717D878B459F067A7409E79CE712E070665D99C669182EF63B389F0C91C9642",
+      "oleanSha256": "0E7DCB62D42A0B672608A71E760CD7681417B75404589C0504D41033544EFD90"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveTensorProjection.lean",
+      "sha256": "1A857E08A6ED59907B8BFB9201CDB75BF823802A8EB781ADA7DAD0A650D842BC",
+      "oleanSha256": "6ADB688F9EF18FD8A654621452D72E579F2337085C0F49D549B78795A3020ACD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveTensorEigencharacter.lean",
+      "sha256": "A5740AF66C1FD7E015E41907D2B7EFA35D542D3C02FBE57DA96B4FF4B9FF68A0",
+      "oleanSha256": "A58567AFAD6AF53FB77025EDDABF667EB64C02398B7806FF3152776A59D40E31"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveTensorProjectionNonzero.lean",
+      "sha256": "D87B49D182CB11A0E8EF1581193C12EA0D1D10325A7DF6E41B7F2CD1414D000D",
+      "oleanSha256": "391696BF0BA13B1BD8E6D445AFDA65D79DABAAA961AF24229F72F75429A717CC"
+    }
+  ],
+  "queries": [
+    "Dubon2026.integerCoefficientExtension_tmul",
+    "Dubon2026.integerCoefficientExtension_injective",
+    "Dubon2026.originalHecke_coefficient_extension_injective",
+    "Dubon2026.integerCoefficientExtension_algebraMap",
+    "Dubon2026.integerCoefficientExtension_smul",
+    "Dubon2026.integerCoefficientExtension_aeval",
+    "Dubon2026.integerCoefficientExtension_shifted_squares",
+    "Dubon2026.integerCoefficientExtension_mul_eq_zero",
+    "Dubon2026.integerCoefficientExtension_idempotent",
+    "Dubon2026.integerCoefficientExtension_mul_eq_smul",
+    "Dubon2026.primitiveCoefficientCuspEvaluation_injective",
+    "Dubon2026.primitiveCoefficientCuspEvaluation_hecke",
+    "Dubon2026.primitiveCoefficientCuspEvaluation_annihilator",
+    "Dubon2026.primitiveCoefficientCuspEvaluation_projector",
+    "Dubon2026.exists_primitive_tensor_projection",
+    "Dubon2026.primitiveTensorEigencharacter_hecke",
+    "Dubon2026.primitiveTensorEigencharacter_annihilator",
+    "Dubon2026.primitiveTensorEigencharacter_projector",
+    "Dubon2026.primitiveGoodTensorProjector_ne_zero",
+    "Dubon2026.exists_nonzero_primitive_tensor_projection",
+    "Dubon2026.integerCoefficientExtension",
+    "Dubon2026.primitiveIntegralHeckeIndex",
+    "Dubon2026.primitiveCoefficientCuspEvaluation",
+    "Dubon2026.primitiveGoodTensorAnnihilator",
+    "Dubon2026.primitiveGoodTensorProjector",
+    "Dubon2026.primitiveTensorEigencharacter"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.integerCoefficientExtension_tmul",
+    "Dubon2026.integerCoefficientExtension_injective",
+    "Dubon2026.originalHecke_coefficient_extension_injective",
+    "Dubon2026.integerCoefficientExtension_algebraMap",
+    "Dubon2026.integerCoefficientExtension_smul",
+    "Dubon2026.integerCoefficientExtension_aeval",
+    "Dubon2026.integerCoefficientExtension_shifted_squares",
+    "Dubon2026.integerCoefficientExtension_mul_eq_zero",
+    "Dubon2026.integerCoefficientExtension_idempotent",
+    "Dubon2026.integerCoefficientExtension_mul_eq_smul",
+    "Dubon2026.primitiveCoefficientCuspEvaluation_injective",
+    "Dubon2026.primitiveCoefficientCuspEvaluation_hecke",
+    "Dubon2026.primitiveCoefficientCuspEvaluation_annihilator",
+    "Dubon2026.primitiveCoefficientCuspEvaluation_projector",
+    "Dubon2026.exists_primitive_tensor_projection",
+    "Dubon2026.primitiveTensorEigencharacter_hecke",
+    "Dubon2026.primitiveTensorEigencharacter_annihilator",
+    "Dubon2026.primitiveTensorEigencharacter_projector",
+    "Dubon2026.primitiveGoodTensorProjector_ne_zero",
+    "Dubon2026.exists_nonzero_primitive_tensor_projection"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.integerCoefficientExtension",
+    "Dubon2026.primitiveIntegralHeckeIndex",
+    "Dubon2026.primitiveCoefficientCuspEvaluation",
+    "Dubon2026.primitiveGoodTensorAnnihilator",
+    "Dubon2026.primitiveGoodTensorProjector",
+    "Dubon2026.primitiveTensorEigencharacter"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTensorProjectionAudit8.log",
+  "logSha256": "505DF277679B0A46CF96195E1E6050BB7B2B614D4EEBE75D81CA3A9DCFE35BC4",
+  "auditSha256": "09DE7C00F2C1F70A3B8B4B080EC8C5770AD80A6AEC37B5B816F7A29E024B56E8",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 45,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 26,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTensorProjectionDependencyAudit8.log",
+  "dependencyAuditSha256": "73707E6847E3B2A87901CA2D2714BF84AA97EF2D7569D01D5E87FB5A197D5AFE",
+  "dependencyAuditSourceSha256": "7EA75744F12BE99E7057E78585BA63716E96A02C264E025EA05527ACA0C73781",
+  "consumers": [
+    "Dubon2026.exists_nonzero_primitive_tensor_projection"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive Frobenius determinant -> nonzero required primitive component pairing -> original Tate realization of the nonzero arithmetic primitive idempotent -> faithful coefficient extension of the actual integral Hecke algebra",
+  "discharged": "The existing complex-independent integral Hecke basis proves faithfulness of the literal coefficient-field tensor realization on actual cusp forms. Exact scalar and polynomial evaluation identities lift the constructed good-prime projector, its annihilator relation, idempotence and every positive-index Hecke scalar identity to the actual arithmetic tensor algebra. The prescribed primitive eigencharacter evaluates this idempotent to one, proving it nonzero. No faithful-realization, arithmetic projector, full Hecke eigencharacter or nonzero-normalization premise remains. Original Tate realization and nonzero pairing restriction remain separate obligations.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The literal arithmetic primitive idempotent is nonzero, has the prescribed character value one, and satisfies every positive-index Hecke scalar identity. Its realization on the original rational Tate module, nonzero restriction of the actual Weil pairing, primitive Frobenius determinant, residual association, automorphy and all-weight continuation remain open; 16/20, DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-tensor-projection-8-reuse-review-20261025.json",
+  "reuseReviewSha256": "71CD5FFFF6A11606074EC1EC9E48B03DBECDD44D507B9B32DA3BEE557E61E21D",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

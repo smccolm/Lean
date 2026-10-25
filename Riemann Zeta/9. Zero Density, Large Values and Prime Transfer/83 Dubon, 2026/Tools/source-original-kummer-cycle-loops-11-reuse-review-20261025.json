@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric loop generation and reciprocity -> actual cycle loops and integral identities",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalBoundaryArcPaths.lean",
+      "sha256": "8D95D6AA0E7F9810877F22C9544555A3EA4B12274B8572D37CD8009CEB91D6A8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionEdgePaths.lean",
+      "sha256": "C968E5A1CEB8E79C2648935A2066DFDA6DDD54B776D682375AE96E8408EDBE63"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalEdgePathIntegral.lean",
+      "sha256": "4D33D3B1D5F09A843071C19ADFA6679A0E55DFE149699CCFB4A40C27C50E4E76"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTreeWalkPaths.lean",
+      "sha256": "6A7F15814D2C716C3C61475C7A4DA5482E55A9506EB154C1C18C7541D3393911"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCycleChainIdentification.lean",
+      "sha256": "D3813456A98AF0BE951207F3082FF25B639F4CE253CA3BF0D66A1F47EAE6D884"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFundamentalCycleLoops.lean",
+      "sha256": "50C4919417EE379B570D8C70C4798A0EF4BF14A108641B8E6E04D22A76EA8ED4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilCoverRegularPathIntegralLaws.lean",
+      "sha256": "6ADE8C688CBCEB7113244E243EFB4DDB5CD3B5B7E746FD37E431B5F6EFE65781"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilCoverRegularPathPrimitives.lean",
+      "sha256": "2ACEE1F39D7FD0978FF06D414D146372805B9E20217C73AD9AC69A3BF7F195DA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCycleSystem.lean",
+      "sha256": "F9A5938E8CED508A5F782F2CCA70171C508DB197CA1D4096B806C3808973B94A"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-cycle-loops-route-525.json",
+    "sha256": "B0650B1A626650E5E280B53174E79B359B86974DDEF1FD66A54EB4A4162DEC5E",
+    "review": {
+      "scope": 525,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric loop generation and reciprocity -> actual cycle loops and integral identities",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalBoundaryArcPaths.lean",
+          "sha256": "8D95D6AA0E7F9810877F22C9544555A3EA4B12274B8572D37CD8009CEB91D6A8"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionEdgePaths.lean",
+          "sha256": "C968E5A1CEB8E79C2648935A2066DFDA6DDD54B776D682375AE96E8408EDBE63"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalEdgePathIntegral.lean",
+          "sha256": "4D33D3B1D5F09A843071C19ADFA6679A0E55DFE149699CCFB4A40C27C50E4E76"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTreeWalkPaths.lean",
+          "sha256": "6A7F15814D2C716C3C61475C7A4DA5482E55A9506EB154C1C18C7541D3393911"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCycleChainIdentification.lean",
+          "sha256": "D3813456A98AF0BE951207F3082FF25B639F4CE253CA3BF0D66A1F47EAE6D884"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFundamentalCycleLoops.lean",
+          "sha256": "50C4919417EE379B570D8C70C4798A0EF4BF14A108641B8E6E04D22A76EA8ED4"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilCoverRegularPathIntegralLaws.lean",
+          "sha256": "6ADE8C688CBCEB7113244E243EFB4DDB5CD3B5B7E746FD37E431B5F6EFE65781"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilCoverRegularPathPrimitives.lean",
+          "sha256": "2ACEE1F39D7FD0978FF06D414D146372805B9E20217C73AD9AC69A3BF7F195DA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCycleSystem.lean",
+          "sha256": "F9A5938E8CED508A5F782F2CCA70171C508DB197CA1D4096B806C3808973B94A"
+        }
+      ],
+      "shorterRoute": "Reuse the native affine radial-arc parameter and integer boundary algebra unchanged. Adapt the existing geometric tree-walk and fundamental-loop construction through precisely its three elementary complex integral laws on skeleton paths: constant, reverse and concatenate. The actual cover regular-along-path integral theorems discharge those laws for every differential regular on the skeleton. This chooses each geometric loop before the differential and avoids repeating actual-field elaboration throughout the combinatorial proof. Coordinate integrals and generalizations to arbitrary additive targets are deferred.",
+      "assumptionsToDischarge": "Existence of actual skeleton loops realizing the integer fundamental cycles, with local primitives and integral identities simultaneously for every actual differential regular on the skeleton. All path-law premises are discharged on the actual cover consumer, and the constructed dissection/tree/polygon/cycle witness is retained.",
+      "remaining": "Coordinate-integral comparison, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20."
+    }
+  },
+  "discharged": "The same actual marked analytic Euler dissection, tree/cotree, polygon and integer cycle system has actual loops in its skeleton, chosen before the differential. Every actual differential regular there has a primitive along each loop and an integral equal to the fundamental-cycle integer sum of actual positive edge-path integrals. The three elementary skeleton integral laws are all discharged from the proved cover regular-along-path laws; no integral-law or loop-existence premise remains on the actual constructed consumer.",
+  "remaining": "Coordinate-integral comparison, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-polygon-8-scratch-receipt.json",
+    "sha256": "1CB18C017CC258C0946F98403E530EA799A3D574D0FB39D301E88F1C560B2DF6"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

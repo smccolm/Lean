@@ -1,0 +1,23 @@
+{
+  "scope": 563,
+  "scopeIds": [
+    560,
+    561,
+    562
+  ],
+  "receipts": {
+    "source-original-coefficient-weil-6-scratch-receipt.json": "25FD2B53BA26434FC6CE33B0C52EBEF8C02BA9C2318B8D9FBE7F93B5A8F1F85B",
+    "source-original-primitive-tate-restriction-8-scratch-receipt.json": "A2685A2906062D51BA45D445940FA864D0BABC19FCFD726372D899D7BBB526F6",
+    "source-original-primitive-rank-two-17-scratch-receipt.json": "7099AF0A154C358655F3DB2D704BCAF04E7D34885A80A0A23C5007128DAD1616"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive Frobenius determinant -> nonzero required primitive component pairing -> nondegenerate rank-two image of the actual arithmetic projector on the original coefficient-extended Tate module",
+  "discharged": "The original rational Weil pairing remains injective after extension to the actual coefficient field, with its alternating, good-prime Hecke adjointness and cyclotomic multiplier identities. The proved integral cusp/lattice relations factor the actual original Tate action through the same integral Hecke algebra used by the arithmetic projector. Literal coefficient extension preserves its prime operators and polynomial, so the actual projected operator is idempotent and self-adjoint. Existing all-word original rank-two Tate coordinates and native finite-product scalar extension identify its image: the prescribed p-adic Hecke character has value one on the projector and gives its scalar action, making the actual image rank two. The same projector therefore has a nonzero rank-two image with an injective restriction of the literal root-valued Weil pairing. Action comparison, generator, character-compatibility, image-dimension and restricted-nondegeneracy assumptions are all discharged by actual upstream objects.",
+  "remaining": "Comparison of this image with the existing spanning primitive specialization, the separate primitive Frobenius determinant, residual association, arithmetic automorphy and all-weight continuation remain required. The Frobenius quadratic identity alone does not prove the determinant. 16/20; DUB-17--20 OPEN.",
+  "route": "Reuse native finite-source Hom base change and flat tensor injection, with no finiteness assumption on the root-valued target. Reuse the original cusp/lattice Hecke relations, all-word rank-two Tate coordinates, prescribed p-adic eigencharacter, algebraIdempotentLeftIdeal and native range/finite-product equivalences. Only good-prime adjointness enters the projector. The same arithmetic projector supplies both rank two and restricted Weil nondegeneracy. Next reuse native range_liftBaseChange to compare with the existing spanning specialization; retain the original representation. No second determinant descent, new eigencharacter, generic Jacobian representability, external import, root pin change or proof-limit change is introduced.",
+  "precedingCanonicalScope": 8102,
+  "mathematicalSource": "Frozen Dubon arXiv2609.17875v1; complete original goal unchanged.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalLocalBuild": false,
+  "externalImport": false
+}

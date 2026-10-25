@@ -1,0 +1,72 @@
+{
+  "recordedUTC": "2026-10-25T10:43:51.892957+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceOriginalWeilCoverPrimitiveArcIntegral",
+    "SourceRadialPrimitiveEndpointReversal",
+    "SourceOriginalWeilCoverSignedPrimitiveArcValues",
+    "SourceOriginalWeilCoverSignedCellPrimitives"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPrimitiveArcIntegral.lean",
+      "sha256": "2AE46C7928B793743C989DBC8FC64696BEA15D5A9570AB06278DEE004FEC9238",
+      "oleanSha256": "3F9664E4D6416ACD4A4CB9A248D4F010C02171680814057C8C447C34D4A91D58"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialPrimitiveEndpointReversal.lean",
+      "sha256": "C4E84918AB9DECA7DA498BB2BE47758406728596B7E5CB710FB594D34F33D5F0",
+      "oleanSha256": "7E397B29698FE3FC2AF54F3456609A2AB9A9CE52872D454CEFE4E3D5239CB6C7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverSignedPrimitiveArcValues.lean",
+      "sha256": "62F6C8B75AD7AE69F1CC5046EE485FB791A07B6A11BDAB9F338DDBAE68A0859A",
+      "oleanSha256": "63BADD36F38768E1C6C6D3BE994C6F537544305B355EE8112DE817E6CC03C540"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverSignedCellPrimitives.lean",
+      "sha256": "2666AA26FE2DFC5336EF73A66CBDE9CDD899914BA85398A4F345B5BB7981467A",
+      "oleanSha256": "3B9EA6480A51F7AAA5E3A406A09FA9D988D5981BFD97ADEE4B616BA2BAC96657"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_arc_integrable",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_primitive_arc_integral",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.primitive_endpoint_reversal",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_signed_primitive_arc_values",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_signed_cell_primitives",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverSignedCellPrimitives"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_arc_integrable",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_primitive_arc_integral",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.primitive_endpoint_reversal",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_signed_primitive_arc_values",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_signed_cell_primitives"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverSignedCellPrimitives"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerSignedPrimitivesAudit4.log",
+  "logSha256": "E5072DCD5F8B3498F076545A408E84DECA05118FA02420F261B1740685E3DD74",
+  "auditSha256": "07AB30CF899E21974AD426E3246B400B06D00AB1C0C07A0CA1A1DAEB8E01EBB9",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 10,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 10,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerSignedPrimitivesDependencyAudit4.log",
+  "dependencyAuditSha256": "42814F4034A14717780CB58AE9BDF072A6D004874154FD52305C7B539433C2D4",
+  "dependencyAuditSourceSha256": "F6296A5736DF995C97BE77BD2975288CAE11AD52A6E433DCDE17731C0F8FA287",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_signed_cell_primitives"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> polygon jump formula -> signed primitive endpoint-integral identities",
+  "discharged": "Arc integrability and native interval FTC give the positive primitive endpoint difference. The constant jump and actual paired endpoints give its reversed sign directly, avoiding the more general weighted meromorphic reversal argument at the regular polygon step. The same actual normalized primitive witness retains circulation, complementary-edge reduction and exact signed coordinate-integral identities; no signed-integral premise remains on the actual consumer.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Polygon telescoping, path-to-jump and jump-to-period generation, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-signed-primitives-4-reuse-review-20261025.json",
+  "reuseReviewSha256": "2FB3F01CD4530571A6E0D7AD10445C52941E070F209E5AC7BD70735DACA91A99",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

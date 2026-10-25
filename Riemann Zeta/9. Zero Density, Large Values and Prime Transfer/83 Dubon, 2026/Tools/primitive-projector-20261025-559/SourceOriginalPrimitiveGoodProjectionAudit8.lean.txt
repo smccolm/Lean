@@ -1,0 +1,70 @@
+import SourcePrimitiveFiniteGoodEigensystem
+import SourceSymmetricSumSquaresKernel
+import SourcePrimitiveGoodAnnihilator
+import SourceKernelPowerReduction
+import SourcePolynomialKernelProjection
+import SourceSymmetricKernelReduction
+import SourcePolynomialKernelProjectionLaws
+import SourcePrimitiveGoodPolynomialProjection
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.exists_primitive_finite_good_eigensystem
+#print axioms Dubon2026.symmetric_sum_squares_eq_zero_iff
+#print axioms Dubon2026.primitiveGoodShift_selfAdjoint
+#print axioms Dubon2026.primitiveGoodAnnihilator_selfAdjoint
+#print axioms Dubon2026.primitiveGoodAnnihilator_eq_zero_iff
+#print axioms Dubon2026.exists_primitive_good_annihilator
+#print axioms Dubon2026.end_pow_zero_implies_apply_zero
+#print axioms Dubon2026.exists_kernel_projector_polynomial_of_isIntegral
+#print axioms Dubon2026.exists_kernel_projector_polynomial
+#print axioms Dubon2026.symmetric_apply_eq_zero_of_square
+#print axioms Dubon2026.kernel_projector_polynomial_fixes
+#print axioms Dubon2026.kernel_projector_polynomial_range
+#print axioms Dubon2026.kernel_projector_polynomial_idempotent
+#print axioms Dubon2026.exists_primitive_good_polynomial_projection
+#print axioms Dubon2026.primitiveGoodShift
+#print axioms Dubon2026.primitiveGoodAnnihilator
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourcePrimitiveFiniteGoodEigensystem, `SourceSymmetricSumSquaresKernel, `SourcePrimitiveGoodAnnihilator, `SourceKernelPowerReduction, `SourcePolynomialKernelProjection, `SourceSymmetricKernelReduction, `SourcePolynomialKernelProjectionLaws, `SourcePrimitiveGoodPolynomialProjection]
+  let theorems : Array Name := #[`Dubon2026.exists_primitive_finite_good_eigensystem, `Dubon2026.symmetric_sum_squares_eq_zero_iff, `Dubon2026.primitiveGoodShift_selfAdjoint, `Dubon2026.primitiveGoodAnnihilator_selfAdjoint, `Dubon2026.primitiveGoodAnnihilator_eq_zero_iff, `Dubon2026.exists_primitive_good_annihilator, `Dubon2026.end_pow_zero_implies_apply_zero, `Dubon2026.exists_kernel_projector_polynomial_of_isIntegral, `Dubon2026.exists_kernel_projector_polynomial, `Dubon2026.symmetric_apply_eq_zero_of_square, `Dubon2026.kernel_projector_polynomial_fixes, `Dubon2026.kernel_projector_polynomial_range, `Dubon2026.kernel_projector_polynomial_idempotent, `Dubon2026.exists_primitive_good_polynomial_projection]
+  let constructions : Array Name := #[`Dubon2026.primitiveGoodShift, `Dubon2026.primitiveGoodAnnihilator]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Primitive Good Projection postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Primitive Good Projection theorems discovered"
+  logInfo m!"SOURCE ORIGINAL PRIMITIVE GOOD PROJECTION AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourcePrimitiveFiniteGoodEigensystem
+#lint in SourceSymmetricSumSquaresKernel
+#lint in SourcePrimitiveGoodAnnihilator
+#lint in SourceKernelPowerReduction
+#lint in SourcePolynomialKernelProjection
+#lint in SourceSymmetricKernelReduction
+#lint in SourcePolynomialKernelProjectionLaws
+#lint in SourcePrimitiveGoodPolynomialProjection

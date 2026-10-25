@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> meromorphic loop generation -> logarithmic boundary increments and normalized paired-edge jumps",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicBoundaryValues.lean",
+      "sha256": "E2DD2BB279A54EE989229E9677C102572D90E1E3D692167F43D3C4ED9568ED63"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicBoundaryFTC.lean",
+      "sha256": "6EC3053870DBCA9096B0754122AEA4FCF02548B546F95A462E150ECDE7655454"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicBoundaryJumps.lean",
+      "sha256": "37E8C147C76FE19BC4BB32D5B65A8B36F868DB39EE7F43376A8FF404B0D67AFF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicNormalizedJumps.lean",
+      "sha256": "47528576BBE721D212291A9876C2277B9F3CF426CBF672AB0A6D1DF44FD10FE7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellBoundaryDifferentiation.lean",
+      "sha256": "4BAF9C373DB23A59CABB3933094816C708491851C8E90784E03CD29A796AD55D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicCycleData.lean",
+      "sha256": "6C012C69D601F8E672B17A3AB8D3F532319BEA3978D8DFB7D3681CCFF8D84458"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverReversedArcIntegrand.lean",
+      "sha256": "614CC1990F45A2452FC1DA4DA5BA023EA0FF9C27B2A94D95A130E7A00BC2C6DF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPrimitiveArcIntegral.lean",
+      "sha256": "2AE46C7928B793743C989DBC8FC64696BEA15D5A9570AB06278DEE004FEC9238"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialDualTreeNormalization.lean",
+      "sha256": "B7616D17F2A7AD44E7C4F0A176727E34F31E3D5CF5CE1592459C41BAAD1112E9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverWeightedResidueJumpSum.lean",
+      "sha256": "4C26317C8644374FD0B6EECBDEB3CB5CF2CAC523E2684A01B6A0329BE311CF61"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-logarithmic-jumps-route-548.json",
+    "sha256": "334AE4DEB8015BD44D5E4673086CF3BE8142D1BE9CB321387136CEB1BFE65CA0",
+    "review": {
+      "scope": 548,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> meromorphic loop generation -> logarithmic boundary increments and normalized paired-edge jumps",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicBoundaryValues.lean",
+          "sha256": "E2DD2BB279A54EE989229E9677C102572D90E1E3D692167F43D3C4ED9568ED63"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicBoundaryFTC.lean",
+          "sha256": "6EC3053870DBCA9096B0754122AEA4FCF02548B546F95A462E150ECDE7655454"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicBoundaryJumps.lean",
+          "sha256": "37E8C147C76FE19BC4BB32D5B65A8B36F868DB39EE7F43376A8FF404B0D67AFF"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicNormalizedJumps.lean",
+          "sha256": "47528576BBE721D212291A9876C2277B9F3CF426CBF672AB0A6D1DF44FD10FE7"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellBoundaryDifferentiation.lean",
+          "sha256": "4BAF9C373DB23A59CABB3933094816C708491851C8E90784E03CD29A796AD55D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicCycleData.lean",
+          "sha256": "6C012C69D601F8E672B17A3AB8D3F532319BEA3978D8DFB7D3681CCFF8D84458"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverReversedArcIntegrand.lean",
+          "sha256": "614CC1990F45A2452FC1DA4DA5BA023EA0FF9C27B2A94D95A130E7A00BC2C6DF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPrimitiveArcIntegral.lean",
+          "sha256": "2AE46C7928B793743C989DBC8FC64696BEA15D5A9570AB06278DEE004FEC9238"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialDualTreeNormalization.lean",
+          "sha256": "B7616D17F2A7AD44E7C4F0A176727E34F31E3D5CF5CE1592459C41BAAD1112E9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverWeightedResidueJumpSum.lean",
+          "sha256": "4C26317C8644374FD0B6EECBDEB3CB5CF2CAC523E2684A01B6A0329BE311CF61"
+        }
+      ],
+      "shorterRoute": "Reuse native radial logarithm differentiation, actual reversed-arc coefficient law, arc regularity/integrability and FTC, then the already proved exact dual-tree constant transport. Separate scalar boundary calculus from actual-field elaboration. Choose the normalization root by the already constructed cellOf function. The consumer returns exactly the geometry, 2g count, cycles and regular reciprocity data needed downstream; redundant intermediate regular-primitive wrappers and earlier construction metadata remain proved upstream. No source theorem clause, needed witness or proof limit is weakened.",
+      "assumptionsToDischarge": "Exact actual boundary derivatives, residue periods, arc-integral endpoint identities, constant paired-edge jumps and zero dual-tree jumps for a common basis of all allowed actual simple-pole differentials, on the same dissection and regular cycle/reciprocity witnesses.",
+      "remaining": "Residue-quotient jump-to-period reduction, pole-avoiding path atlas and meromorphic loop generation, extension to all allowed forms, final prescribed 2g indexing, unconditional cover Abel converse and auxiliary point division, arithmetic descent and DUB-17--20 remain open; 16/20."
+    }
+  },
+  "discharged": "The actual logarithmic boundary reading has the literal differential integrand as derivative and its exact cell residue period as increment. Actual marked-pole geometry gives boundary regularity, and existing integrability plus FTC identifies every arc integral with its endpoint increment. The actual reversed-integrand law yields constant paired-edge jumps; existing dual-tree transport kills those jumps by changing only primitive constants. The actual existence consumer retains the same dissection, 2g count, polygon, integer cycles, regular loops and all matrix/reciprocity identities, together with normalized primitives for a basis spanning all allowed simple-pole forms. No boundary derivative, arc integral, jump or normalization premise remains on that consumer.",
+  "remaining": "Residue-quotient jump-to-period reduction, pole-avoiding path atlas and meromorphic loop generation, extension to all allowed forms, final prescribed 2g indexing, unconditional cover Abel converse and auxiliary point division, arithmetic descent and DUB-17--20 remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-meromorphic-primitives-8-scratch-receipt.json",
+    "sha256": "35A333255B385CA909F6372D282448862E6429A753543F8C5644510F28302518"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,130 @@
+{
+  "recordedUTC": "2026-10-25T05:52:51.939464+00:00",
+  "date": "2026-10-24 America/Vancouver",
+  "modules": [
+    "SourceOriginalWeilCoverRegularChartReadingAt",
+    "SourceOriginalWeilCoverLocalChartPathPrimitive",
+    "SourceOriginalWeilCoverLocalChartPathIntegral",
+    "SourceOriginalWeilCoverIntegralPeriodPathIndependence",
+    "SourceOriginalWeilCoverPeriodExponential",
+    "SourceOriginalWeilCoverPeriodExponentialConsumer",
+    "SourceOriginalWeilCoverExponentialLocalTransport",
+    "SourceOriginalWeilCoverExponentialChartDerivative",
+    "SourceOriginalWeilCoverExponentialMeromorphicOrders",
+    "SourceOriginalWeilCoverIntegralPeriodsPrincipal"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRegularChartReadingAt.lean",
+      "sha256": "E479B334DBC6564D378F52B5117DC023623FBD2F9D4EFB56B7B1BB159553988C",
+      "oleanSha256": "3DDD925EAD6FEC0545328D6471D44DF343250AF2B7C738AFEC0A70F36FB35F98"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLocalChartPathPrimitive.lean",
+      "sha256": "45E0E0904A09A9886BB46482B8506B3D7861478C60D09BA651982E188454F807",
+      "oleanSha256": "DC28B1A2342AA08B8DCC9257E51EE8C20E5363B7BD6FA264F49B7699EDD567C1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLocalChartPathIntegral.lean",
+      "sha256": "AAFBBAD00E103DE0C370E0C69DB0D566CA154C3267256817C235DAC00B9E43D2",
+      "oleanSha256": "0474C02499305E7D51D34EB9659A5EF22056C4CB9114908F3D52326A6B145BA1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverIntegralPeriodPathIndependence.lean",
+      "sha256": "9A6F9D6A75DC08B349F0D1B222D2BA6F06B6AF1DC4ED86794FCD61200A1C347C",
+      "oleanSha256": "AD0CAD3F120061F725776C4629EB7F4CEA9AA56D34CC80113CA637CE505728DB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPeriodExponential.lean",
+      "sha256": "3AFC489C5FBA742D68E3C20CFF7B86E79292F56EAC23AF33D02371FF720E5747",
+      "oleanSha256": "3DD92BDF336B72AB33874E2D9495240DE17EB4F4AF90CC916139679B98DC1276"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPeriodExponentialConsumer.lean",
+      "sha256": "2E0900D76FFD73EDC3734BC5F897FDD493BBF87239363B4B2A4E68C5D7450FE3",
+      "oleanSha256": "7A0B6F8F4695CA61857526F0F1D38A76CD9E10B8F9316B99D13F129BA56173DD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverExponentialLocalTransport.lean",
+      "sha256": "1D2071F29B14D48B5C96639EF52512BD3598E750F6E9211E583605E99ED21412",
+      "oleanSha256": "86852F769A422E0871D9C4779AB0C5D20A7FAD58AC764E187877B1DC74875249"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverExponentialChartDerivative.lean",
+      "sha256": "A5CF1DEC5D3FB0D1075E6619DBF2A357377419DF0B12DA1302C7B8106BDA4102",
+      "oleanSha256": "B91183A2F6142610AF5954554450662A6CAAE9075C1CF33ECF9A7F098ECF842C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverExponentialMeromorphicOrders.lean",
+      "sha256": "F14628B13AE120C3C7DE68B6B2F9EB82FAF6D45249A26E097D03E3777065AB35",
+      "oleanSha256": "CD777050D7917F10AC3231C06404978E0EF5D4F34F9B2DDCB3E9CDBFDFB07CC4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverIntegralPeriodsPrincipal.lean",
+      "sha256": "401352FF075DA824E52A5382250F98EAE50D1D7755AF986C81093CBE0B323D48",
+      "oleanSha256": "3F6E26BA0A14AE257C787498C856C5C5FA7CB9CB9341C9909823C874095EA7F7"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.analyticAt_readDifferential_at_of_coeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_of_local_chart_primitive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_local_chart_path_integral",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coeff_regular_off_divisor",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exp_pathIntegral_eq_of_integral_periods",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDivisorAvoidingPath_avoids",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverPeriodExponential_ne_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverPeriodExponential_eq_path",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverPeriodExponential_transport",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_period_exponential",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_exponential_local_transport",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.hasDerivAt_cover_exponential_chart",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_orders_of_exponential_transport",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_orders_of_integral_periods",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_integral_periods",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDivisorAvoidingPath",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverPeriodExponential"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.analyticAt_readDifferential_at_of_coeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_of_local_chart_primitive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_local_chart_path_integral",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coeff_regular_off_divisor",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exp_pathIntegral_eq_of_integral_periods",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDivisorAvoidingPath_avoids",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverPeriodExponential_ne_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverPeriodExponential_eq_path",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverPeriodExponential_transport",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_period_exponential",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_exponential_local_transport",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.hasDerivAt_cover_exponential_chart",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_orders_of_exponential_transport",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_orders_of_integral_periods",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_integral_periods"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDivisorAvoidingPath",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverPeriodExponential"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerIntegralPeriodAudit10.log",
+  "logSha256": "6982D9B694195A14D2CE8B658E6BC5F515701371B8A1E7388C06204575C84CE3",
+  "auditSha256": "08A898CF12DFB472FE309D3324AD8108A5F90372F009904D9A14AFABAA3E056E",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 22,
+  "linterScopes": 10,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 20,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerIntegralPeriodDependencyAudit10.log",
+  "dependencyAuditSha256": "A340C8663357584E9C2BDC2CD640B3351594CDD86DDECF45504A12129185CA6A",
+  "dependencyAuditSourceSha256": "DC9424FE909A886D670A0F0D612F2E097F60C3CB3773F2E0D776BF80B572D5D4",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_integral_periods"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> cover Abel converse -> integral-period differential is principal",
+  "discharged": "An actual cover simple-pole differential with prescribed divisor residues and explicitly integral periods on all divisor-avoiding loops gives that exact principal divisor. Actual avoiding paths construct the exponential; integral periods prove path independence and transport. Local primitives differentiate it, native logarithmic-derivative comparison glues the exact integer-order meromorphic models, and the same-field comparison produces the principal function. No path, exponential, local gluing or meromorphic-comparison premise remains. Integral-period correction is still required for the Abel converse.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Actual integral-period correction / raw reciprocity, cover Abel converse and point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-integral-period-10-reuse-review-20261024.json",
+  "reuseReviewSha256": "C99D02AAE5996C0841E1171FC2BE651AABACDFDBF1680FCDCF3FCB901BE3FD94",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

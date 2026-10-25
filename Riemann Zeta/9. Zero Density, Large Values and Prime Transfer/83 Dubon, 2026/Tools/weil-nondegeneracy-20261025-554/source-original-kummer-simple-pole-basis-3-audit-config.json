@@ -1,0 +1,39 @@
+{
+  "modules": [
+    "SourceOriginalWeilCoverSimplePoleSpace",
+    "SourceOriginalWeilCoverSimplePoleSpaceFinite",
+    "SourceOriginalWeilCoverSimplePoleBasis"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_regular_of_residue_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_kernel_regular",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.finite_cover_simplePoleSpace",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_simple_pole_basis"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverSimplePoleSpace",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverSimplePoleResidues"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_regular_of_residue_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_kernel_regular",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.finite_cover_simplePoleSpace",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_simple_pole_basis",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverSimplePoleSpace",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverSimplePoleResidues"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_regular_of_residue_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_kernel_regular",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.finite_cover_simplePoleSpace",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_simple_pole_basis",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.finite_cover_regularDifferentials",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverDifferentialResidue_ne_zero_of_simplePole",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_zero_bound",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_add_bound",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_smul_bound"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_simple_pole_basis"
+  ]
+}

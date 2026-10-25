@@ -1,0 +1,289 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-kummer-dissection-promotion-route-521.json",
+      "path": "Tools/kummer-dissection-20261025-521/original-kummer-dissection-promotion-route-521.json",
+      "sha256": "BB71695E5545CA1FB31E5EC06AA1A5DECA9E7F46750737F858A9ACB18F7379F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-unramified-genus-3-scratch-receipt.json",
+      "path": "Tools/kummer-dissection-20261025-521/source-original-kummer-unramified-genus-3-scratch-receipt.json",
+      "sha256": "86A8F4652516373F6F89E7E42F55A6C6A8BAFEC4C488A19AB70EF1F8D6DBEFA7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-global-cell-arcs-3-scratch-receipt.json",
+      "path": "Tools/kummer-dissection-20261025-521/source-original-kummer-global-cell-arcs-3-scratch-receipt.json",
+      "sha256": "55C9350D4E2D7F019E641E9911E0998E7DDC8CA1665F7E36BB80ADEF2F5258C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-boundary-transport-4-scratch-receipt.json",
+      "path": "Tools/kummer-dissection-20261025-521/source-original-kummer-boundary-transport-4-scratch-receipt.json",
+      "sha256": "13ED46E78CAA8B73575DA72E1D72D8EDC5E4E369AAD07F34EAA0AB1C737D4532"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-global-arc-pairing-3-scratch-receipt.json",
+      "path": "Tools/kummer-dissection-20261025-521/source-original-kummer-global-arc-pairing-3-scratch-receipt.json",
+      "sha256": "C71D9329E3C280AFBD79D6A3B95CF36D8C7372720C761D8CA82C654300709C97"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-intersection-chains-5-scratch-receipt.json",
+      "path": "Tools/kummer-dissection-20261025-521/source-original-kummer-intersection-chains-5-scratch-receipt.json",
+      "sha256": "30A680081807AFA0C66053909CC7C75E0EE83955502C75127D58B46C24B91B4F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-dissection-9-scratch-receipt.json",
+      "path": "Tools/kummer-dissection-20261025-521/source-original-kummer-dissection-9-scratch-receipt.json",
+      "sha256": "B21553C226FF2E25F975784EE12A7854990F3DF21207FD1A334C3EB818117BC0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-centered-dissection-4-scratch-receipt.json",
+      "path": "Tools/kummer-dissection-20261025-521/source-original-kummer-centered-dissection-4-scratch-receipt.json",
+      "sha256": "0471DF6D369B4AF0B807CC0F50B325C105D16E538597DA4020FA686D74A0EBB6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-euler-dissection-8-scratch-receipt.json",
+      "path": "Tools/kummer-dissection-20261025-521/source-original-kummer-euler-dissection-8-scratch-receipt.json",
+      "sha256": "11FDA95162CC02DBECF775A91AA1D37ED0EFFEA95A0020210A079EA377C4540B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerUnramifiedGenusAudit3.log",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerUnramifiedGenusAudit3.log",
+      "sha256": "972416DD55C9B5FD131A0A98EB0F40518F56B7BF2D9B2A54A6455001FF1225B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerUnramifiedGenusAudit3.lean",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerUnramifiedGenusAudit3.lean.txt",
+      "sha256": "38CDEEF5A3ACE473B02E0EC7B17784C8890E53F84F6F67E47117544063419E37"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerUnramifiedGenusAudit3.exit",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerUnramifiedGenusAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerUnramifiedGenusDependencyAudit3.log",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerUnramifiedGenusDependencyAudit3.log",
+      "sha256": "65681F4B6C0B79330CA3618D09F90792AB921DBE6E6EF1225C020E744806E5BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerUnramifiedGenusDependencyAudit3.lean",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerUnramifiedGenusDependencyAudit3.lean.txt",
+      "sha256": "81068605F4AD18183014FA6CE3405E31CD9216A65D5A3EF90FA2D643D8AA515C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerUnramifiedGenusDependencyAudit3.exit",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerUnramifiedGenusDependencyAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerGlobalCellArcsAudit3.log",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalCellArcsAudit3.log",
+      "sha256": "2F9AF38BB3EB6DD14863541590FC3F1A00341A1BAF6EE04520FC36AC880B856F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerGlobalCellArcsAudit3.lean",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalCellArcsAudit3.lean.txt",
+      "sha256": "B4F77E976E06403F4C78A40B9061163463DDDC2205BAE8F93798732BA0ABC2DA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerGlobalCellArcsAudit3.exit",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalCellArcsAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerGlobalCellArcsDependencyAudit3.log",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalCellArcsDependencyAudit3.log",
+      "sha256": "6B489C24F03456EC70F849162D1207DB3F89DABDA15120C3C0D4240373BE1822"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerGlobalCellArcsDependencyAudit3.lean",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalCellArcsDependencyAudit3.lean.txt",
+      "sha256": "161A3586A571789B4B5D5E4FBAF53ECD3524AF1ED6BBD4F0C46819F1AFB59D6E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerGlobalCellArcsDependencyAudit3.exit",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalCellArcsDependencyAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerBoundaryTransportAudit4.log",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerBoundaryTransportAudit4.log",
+      "sha256": "C5FB2019467ED7D75B47A7CA6C45EE1056144546F19DB28B413B8216D7E88209"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerBoundaryTransportAudit4.lean",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerBoundaryTransportAudit4.lean.txt",
+      "sha256": "C8D1B20B7D4C3BD438F47E07371E3581A7E4A195179880EF24413F1F6906DBE8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerBoundaryTransportAudit4.exit",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerBoundaryTransportAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerBoundaryTransportDependencyAudit4.log",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerBoundaryTransportDependencyAudit4.log",
+      "sha256": "12B11446AB1ADFA6A22C83AB034DA57C04B601056410C286B9F27A3B5BCE7E48"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerBoundaryTransportDependencyAudit4.lean",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerBoundaryTransportDependencyAudit4.lean.txt",
+      "sha256": "2F33A5C6A328207ED17820D20972D06A3AFBC256001F7D7948ADF8ED43932139"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerBoundaryTransportDependencyAudit4.exit",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerBoundaryTransportDependencyAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerGlobalArcPairingAudit3R3.log",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalArcPairingAudit3R3.log",
+      "sha256": "1CFA4E34C922AB47238E8A8E41F4E8A417D9AAB109405C93969A44845C579759"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerGlobalArcPairingAudit3R3.lean",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalArcPairingAudit3R3.lean.txt",
+      "sha256": "377F25215E786495237B181C104B30F7EA5DF3E42939BA757E22F04A5E3C088D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerGlobalArcPairingAudit3R3.exit",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalArcPairingAudit3R3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerGlobalArcPairingDependencyAudit3R3.log",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalArcPairingDependencyAudit3R3.log",
+      "sha256": "E37B080003352DD60D1825BE11072862131512BBF6F5CAF8E1B789876FEB35D8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerGlobalArcPairingDependencyAudit3R3.lean",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalArcPairingDependencyAudit3R3.lean.txt",
+      "sha256": "E3CB42736DA6AA937BCF0B3BCB3DA7DF3B5A3122C933E9410CCD84D3D4DC2B69"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerGlobalArcPairingDependencyAudit3R3.exit",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerGlobalArcPairingDependencyAudit3R3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerIntersectionChainsAudit5.log",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerIntersectionChainsAudit5.log",
+      "sha256": "C1C2132986F7FFC1146F0046A7437784A2C0C82DE6A89B383CC14653BC871D24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerIntersectionChainsAudit5.lean",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerIntersectionChainsAudit5.lean.txt",
+      "sha256": "6AC202A9FDC0B0FDE6BCF59FFA796601D654C956C955B2B45408E931B89534E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerIntersectionChainsAudit5.exit",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerIntersectionChainsAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerIntersectionChainsDependencyAudit5.log",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerIntersectionChainsDependencyAudit5.log",
+      "sha256": "BA21E6D3D5BF38227223E4687457D0D8EA7F5B0196CA1FD6210060C08BACE8D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerIntersectionChainsDependencyAudit5.lean",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerIntersectionChainsDependencyAudit5.lean.txt",
+      "sha256": "447E2906194625C9AE9F79660EAFB0A4AAAF68B675EA10241F90EDB10A89931D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerIntersectionChainsDependencyAudit5.exit",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerIntersectionChainsDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDissectionAudit9.log",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerDissectionAudit9.log",
+      "sha256": "4E39F4E44324886F1CE0414DFF7056DD8A049729023ED081CBF74EB129B4682C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDissectionAudit9.lean",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerDissectionAudit9.lean.txt",
+      "sha256": "E2CB0858ACDD44941474D1BFE88F66EED4125A9A2E6D3EC1E1322C4A7898BB02"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDissectionAudit9.exit",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerDissectionAudit9.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDissectionDependencyAudit9.log",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerDissectionDependencyAudit9.log",
+      "sha256": "081360CFC27FEE9715A99D48EDA41DA536101C8EC1B040EC4041A4BE422E4C31"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDissectionDependencyAudit9.lean",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerDissectionDependencyAudit9.lean.txt",
+      "sha256": "B2F9C5BFE4A01738F3D4A56C126120248CACD547DB9C1869FF0EE14E0E09F6BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDissectionDependencyAudit9.exit",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerDissectionDependencyAudit9.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCenteredDissectionAudit4R2.log",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerCenteredDissectionAudit4R2.log",
+      "sha256": "693B83AC3BC1723FEFD85AB0E40ED476D3F08408F9DBCEB6FE49760F2A709CEF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCenteredDissectionAudit4R2.lean",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerCenteredDissectionAudit4R2.lean.txt",
+      "sha256": "328B04088ADAB3331F8468BAEC8A898E1DFD3E3DE1BC3C640F2A279978E62371"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCenteredDissectionAudit4R2.exit",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerCenteredDissectionAudit4R2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCenteredDissectionDependencyAudit4R2.log",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerCenteredDissectionDependencyAudit4R2.log",
+      "sha256": "3890506B96A909F48BD44FCCB82F3A0E0426DBA7647611F417CD7DDDCC4F1DBE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCenteredDissectionDependencyAudit4R2.lean",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerCenteredDissectionDependencyAudit4R2.lean.txt",
+      "sha256": "5C8420CF6228F966964D6A643BECADAE8755038FF8983EFD267D050B963B4E87"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCenteredDissectionDependencyAudit4R2.exit",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerCenteredDissectionDependencyAudit4R2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerEulerDissectionAudit8.log",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerEulerDissectionAudit8.log",
+      "sha256": "5B78090629637D2654B1795CD3ACE1C868F1674DDFDC34F4798F1F0F856E94BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerEulerDissectionAudit8.lean",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerEulerDissectionAudit8.lean.txt",
+      "sha256": "A872F4810B5F2DDB13A76A93C6B0B85A2F76AC5265A327B8FF5C6201B296005B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerEulerDissectionAudit8.exit",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerEulerDissectionAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerEulerDissectionDependencyAudit8.log",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerEulerDissectionDependencyAudit8.log",
+      "sha256": "BCE06FCA82BE6E860433F517A7219ADA80B0341FA4F8F0F9E255F81EEF653F10"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerEulerDissectionDependencyAudit8.lean",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerEulerDissectionDependencyAudit8.lean.txt",
+      "sha256": "637BB6E0B65308073ACF93F047350A1DE98A138CE4468BA959ABEF398B755520"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerEulerDissectionDependencyAudit8.exit",
+      "path": "Tools/kummer-dissection-20261025-521/SourceOriginalKummerEulerDissectionDependencyAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ]
+}

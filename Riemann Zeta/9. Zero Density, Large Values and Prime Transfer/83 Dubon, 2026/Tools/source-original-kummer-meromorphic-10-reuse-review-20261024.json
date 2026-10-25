@@ -1,0 +1,137 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> auxiliary point division -> Abel converse -> identification of analytic meromorphic functions with actual cover field elements",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceMeromorphicDimensionBound.lean",
+      "sha256": "F460D508BD771B0083FC4FF57C58ED9EAB4E93A5D27EC48B1094F15AC4914C69"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceMeromorphicEffectivePoleBound.lean",
+      "sha256": "D4677AA3307B62506369AB660C1E0CC34533B21844CABCC579C93B8088F6CD90"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicDimension.lean",
+      "sha256": "366F4CC2461A473A6D4F0DFB0125465433983D3033DEEB354E640982DD57601B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicPoleBound.lean",
+      "sha256": "EADFEA1E23A1DC4738B86805E0BDB044908F710CD29811DFC523F5C4A1D093A9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalOnePoleComparison.lean",
+      "sha256": "71E4FF495BA28A30F136DADF3D00AFFD10BC9898D2926B5A59D135C84DBFD299"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalGermBasisRelation.lean",
+      "sha256": "A6F5D030D2FEB51402F1DAF5D6488C87DFA0159FBAA600C256140052A45659F1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicFunctionComparison.lean",
+      "sha256": "70D2D6BECCE1D8FFE948818A8DEE98CA0E28C0BCA4879EAF3DF41D16D036BA7A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartGermHom.lean",
+      "sha256": "2C4CEA27BB8E4EDF63C41EF25984FCA64E7D577D51DAD5E9E2B4E0B48115E1A8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartReadFieldLaws.lean",
+      "sha256": "C36A82B83B6C95F3D18AFBAB57414A30A389DD6A5E1D701E4DBBD4933D96D0C0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicRRBounds.lean",
+      "sha256": "0839904664157FDA4EB4C2A41D35AD0D7AECB686030B50378A8DC81741306A41"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicPoleClearing.lean",
+      "sha256": "741F36F780740F4153E1E49F9C1F7C598B7AC1D3CD1A5FB27079717030DB59FD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateGenusMaximum.lean",
+      "sha256": "BAA2D207D95AAFA97811DA449958297C510503237450685BEF4C376554BFB668"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCompact.lean",
+      "sha256": "3D70B9D04B80CF72E682451696B55065329369ACA52D7EF749ACDBF0B0D2473D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverConnected.lean",
+      "sha256": "CF1FA04E40D3FB81A1C4834BF80F75BC6DD68B5DDDBF595015431AEC40DAAB16"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverEvaluationContinuity.lean",
+      "sha256": "E2F0AE024DCC3CEB92A028A8168BF45D73A47F87EB51DFB0F3AC8EB27F359948"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-meromorphic-comparison-route-498.json",
+    "sha256": "068FF30CDAA86A475E48E2EC3F68CD8F895D8DE684A9274F95BB3474E69B6C04",
+    "review": {
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> auxiliary point division -> Abel converse -> identification of analytic meromorphic functions with actual cover field elements",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceMeromorphicDimensionBound.lean",
+          "sha256": "F460D508BD771B0083FC4FF57C58ED9EAB4E93A5D27EC48B1094F15AC4914C69"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceMeromorphicEffectivePoleBound.lean",
+          "sha256": "D4677AA3307B62506369AB660C1E0CC34533B21844CABCC579C93B8088F6CD90"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicDimension.lean",
+          "sha256": "366F4CC2461A473A6D4F0DFB0125465433983D3033DEEB354E640982DD57601B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicPoleBound.lean",
+          "sha256": "EADFEA1E23A1DC4738B86805E0BDB044908F710CD29811DFC523F5C4A1D093A9"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalOnePoleComparison.lean",
+          "sha256": "71E4FF495BA28A30F136DADF3D00AFFD10BC9898D2926B5A59D135C84DBFD299"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalGermBasisRelation.lean",
+          "sha256": "A6F5D030D2FEB51402F1DAF5D6488C87DFA0159FBAA600C256140052A45659F1"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicFunctionComparison.lean",
+          "sha256": "70D2D6BECCE1D8FFE948818A8DEE98CA0E28C0BCA4879EAF3DF41D16D036BA7A"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartGermHom.lean",
+          "sha256": "2C4CEA27BB8E4EDF63C41EF25984FCA64E7D577D51DAD5E9E2B4E0B48115E1A8"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalChartReadFieldLaws.lean",
+          "sha256": "C36A82B83B6C95F3D18AFBAB57414A30A389DD6A5E1D701E4DBBD4933D96D0C0"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicRRBounds.lean",
+          "sha256": "0839904664157FDA4EB4C2A41D35AD0D7AECB686030B50378A8DC81741306A41"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicPoleClearing.lean",
+          "sha256": "741F36F780740F4153E1E49F9C1F7C598B7AC1D3CD1A5FB27079717030DB59FD"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateGenusMaximum.lean",
+          "sha256": "BAA2D207D95AAFA97811DA449958297C510503237450685BEF4C376554BFB668"
+        }
+      ],
+      "shorterRoute": "Instantiate the existing generic compact-manifold meromorphic dimension bound and effective pole bound on the actual cover. Do not port their proofs. The already proved finite-coordinate degree-dimension maximum will supply the two finite divisor spaces and a pole-clearing multiplier; their germ relation will identify the analytic function with an element of the same splitting field. The immediate scope is only the analytic dimension and finite-pole consumers.",
+      "deferred": "Period-lattice freeness/rank, Hecke comparison and canonical-genus identification are unnecessary for point division and are deferred.",
+      "remaining": "Cover differential/path and Abel comparison, actual point-difference division and arithmetic descent remain unproved. Original pairing nondegeneracy and required nonzero Hecke-component restriction, determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN.",
+      "scopeProgress": "The complete analytic-to-actual-field comparison now compiles. It uses the already reviewed pole-clearing and basis-relation argument, with a natural bound from the native finite-coordinate degree-dimension maximum. A copied standalone constant-germ wrapper was removed before auditing because the generic dimension theorem already uses its own constancy proof; no downstream field-comparison input needed that wrapper."
+    }
+  },
+  "discharged": "Every function meromorphic in the constructed actual complex Kummer cover charts agrees in every punctured chart germ with one element of the literal splitting field. The existing generic compact-manifold results supply analytic dimension and effective pole bounds. The native finite-coordinate degree-dimension maximum supplies finite divisor spaces, a pole-clearing multiplier and two sufficiently large bases. Their faithful residue-germ relation identifies the analytic function as a quotient in the same field. No analytic/algebraic comparison, geometric compactness or connectedness, canonical genus, Riemann-Roch or dimension-bound hypothesis remains.",
+  "remaining": "Cover differential/path and Abel comparison, actual point-difference division and arithmetic descent remain unproved. Original pairing nondegeneracy and required nonzero Hecke-component restriction, determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-connected-5-scratch-receipt.json",
+    "sha256": "F3CFF050E67BA6660635E1D3710F3FEBD8DFBE847CC20D917999EAC6E7A857FA"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

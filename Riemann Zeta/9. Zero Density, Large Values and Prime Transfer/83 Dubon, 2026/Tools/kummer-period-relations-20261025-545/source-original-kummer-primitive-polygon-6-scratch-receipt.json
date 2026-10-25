@@ -1,0 +1,100 @@
+{
+  "recordedUTC": "2026-10-25T10:48:42.555263+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceRadialPolygonPrimitiveData",
+    "SourceRadialPolygonPrimitiveEndpoints",
+    "SourceRadialPolygonCornerPrimitives",
+    "SourceRadialPolygonWordPrimitiveSum",
+    "SourceRadialPrimitivePolygonWord",
+    "SourceOriginalWeilCoverPrimitivePolygon"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialPolygonPrimitiveData.lean",
+      "sha256": "F895A754162EF9BE3783AB6F1F67615BA919D68666F1F4157C4F26CCA69482E8",
+      "oleanSha256": "407A67F4C8A985A5A4A70AFDA844AED5910894188DB16482A9A67E6C69500F1C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialPolygonPrimitiveEndpoints.lean",
+      "sha256": "ABBBC86B8E09E4D77F09CF9B3AE471DFA4F2A2FBFDD0D6844387A42EF3ECC993",
+      "oleanSha256": "828F3C871461AECFD5E9787027959809585037B3C3EEE1A76171E7AAC72EBF4D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialPolygonCornerPrimitives.lean",
+      "sha256": "11D4CD00527CEE13AC83A2DABD5B1ECCDFF28470AD308D62F811ADAA8175E4D0",
+      "oleanSha256": "16B675AA3DAEEF98D175B0A4E3FDAF3D9584C4AA3ED6E195E96D27031F553FA4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialPolygonWordPrimitiveSum.lean",
+      "sha256": "CF943E3A87D774C63FA92E7759B9103FAB0C032879718EAD2277785F71D5CB20",
+      "oleanSha256": "B1DBAB4D3AEC9FC8CC93AE2C884D510A8141B80138D1145F588F909A5DBF819D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialPrimitivePolygonWord.lean",
+      "sha256": "717270D79C34525519C27061D727D69FF71DF5AEAE72F2A4B1AE95AAF87FBBB4",
+      "oleanSha256": "B4836FE2D706BA1C903087DDB5E2D511EBF2AA0DCA00F9DFE92814612C6DB679"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPrimitivePolygon.lean",
+      "sha256": "7E6582F2A7197B03882ECDB9E8DD765C516E22DFBE3C1AF5AEC72F3882F7F043",
+      "oleanSha256": "BEF11AEFF4C4360BD8A76C628F1C6D0831D71C777F3AD4C531803CA79BC2419A"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.jump_eq_Bvec_sub_Avec",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.gvec_eq_of_link",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.Bvec_eq_gvec",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.Avec_eq_gvec",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.corner",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.word_identity",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.exists_primitive_polygon_word",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_primitive_polygon",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.IsJump",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.gvec",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.Avec",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.Bvec",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.PrimitivePolygonConclusion",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverPrimitivePolygonData"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.jump_eq_Bvec_sub_Avec",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.gvec_eq_of_link",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.Bvec_eq_gvec",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.Avec_eq_gvec",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.corner",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.word_identity",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.exists_primitive_polygon_word",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_primitive_polygon"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.IsJump",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.gvec",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.Avec",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.Bvec",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.PrimitivePolygonConclusion",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverPrimitivePolygonData"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPrimitivePolygonAudit6.log",
+  "logSha256": "571A6F9C8BBEF0538577A9D8B91FDC9D5D0EB2B660661962D9DF6F40AE0C6798",
+  "auditSha256": "C704E7364DD172C2186744A4DE06824BA3384A69DDB4BF1B502CD93E7267FD75",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 27,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 11,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPrimitivePolygonDependencyAudit6.log",
+  "dependencyAuditSha256": "FAA90D74CBF9AA50F2038159CFA470783420EEBBA0B11C2A16365F347DEDC58F",
+  "dependencyAuditSourceSha256": "B536AE9BAA8CEE7BB6C71B6CA48BA238B89B2B2F2894318ECEB223C2D2F0A67A",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_primitive_polygon"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> polygon jump formula in actual edge integrals",
+  "discharged": "Zero dual-tree jumps identify actual primitive readings at consecutive polygon corners. The existing finite cyclic telescoping proof gives the exact signed edge-integral sum over the source strict interval between opposite letters. The actual cover consumer supplies every signed endpoint, normalized primitive, jump and polygon input. The same word retains actual matching corners and closed integer subwords; no polygon jump-formula premise remains.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Path-to-jump and jump-to-period generation, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-primitive-polygon-6-reuse-review-20261025.json",
+  "reuseReviewSha256": "B16AB041BEA909A0CC76CD3A1BED0F437BF2C70BD6BE67F641B2D5D7EDB97AE5",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

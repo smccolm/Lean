@@ -1,0 +1,55 @@
+{
+  "modules": [
+    "SourceOriginalWeilCoverRawReciprocityData",
+    "SourceFiniteIntegerGenerationReindex",
+    "SourceOriginalWeilCoverGenerationReindex",
+    "SourceFiniteThirdKindReindex",
+    "SourceOriginalWeilCoverReciprocityReindex",
+    "SourceOriginalWeilCoverReindexedReciprocity",
+    "SourceOriginalWeilCoverAbelConverse"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.CellGeometry.reindex_integer_generation",
+    "Dubon2026.SourceFunctionField.CellGeometry.reindex_integer_generation_with_residues",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_regular_generation_reindex",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_generation_reindex",
+    "Dubon2026.SourceFunctionField.CellGeometry.reindex_third_kind_reciprocity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.reindex_cover_reciprocity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_reindexed_reciprocity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_abelJacobi_mem"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverRawReciprocityData"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CellGeometry.reindex_integer_generation",
+    "Dubon2026.SourceFunctionField.CellGeometry.reindex_integer_generation_with_residues",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_regular_generation_reindex",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_generation_reindex",
+    "Dubon2026.SourceFunctionField.CellGeometry.reindex_third_kind_reciprocity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.reindex_cover_reciprocity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_reindexed_reciprocity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_abelJacobi_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverRawReciprocityData"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.CellGeometry.reindex_integer_generation",
+    "Dubon2026.SourceFunctionField.CellGeometry.reindex_integer_generation_with_residues",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_regular_generation_reindex",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_generation_reindex",
+    "Dubon2026.SourceFunctionField.CellGeometry.reindex_third_kind_reciprocity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.reindex_cover_reciprocity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_reindexed_reciprocity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_abelJacobi_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_full_cycle_data",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_raw_reciprocity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_third_kind_differential",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_generator_period_correction",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_integral_periods",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_integral_periods_of_generators",
+    "Matrix.det_submatrix_equiv_self"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_abelJacobi_mem"
+  ]
+}

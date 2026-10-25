@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "DUB-17/18 -> auxiliary point division -> actual cover Abel converse -> cover_isPrincipal_of_raw_reciprocity geometric clauses (loop generation, bilinear/third-kind reciprocity) -> lift the existing original dissection -> actual restriction is a covering map",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Covering\\Basic.lean",
+      "sha256": "8A3BA40E8F453C783001ECC56B5BB95D6E40E9FC1713D22F95F61326DDEF2A55"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\IsLocalHomeomorph.lean",
+      "sha256": "B6EAE663E7A2A5B88EC34EBAE6D15310BDB29E3A96B067BF5C04171ED432FD7E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Homotopy\\Lifting.lean",
+      "sha256": "6F43A4D64A7053876A55EE261E37A73044F2DF293CE5A4DB6AFC33ADD3D65B7C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Calculus\\InverseFunctionTheorem\\Deriv.lean",
+      "sha256": "E3D2496BEC898C3F0462AF4678732EF093A80F9697A1E15CEF5074298E44A795"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRestrictionTopology.lean",
+      "sha256": "65313F82B1590A704891B0DF7160899C81C72E3C90817AE85661F54867C21435"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRestrictionComparison.lean",
+      "sha256": "12756B0A2A8FA5785F92CF649B2697C905FDD8C7AC64D6B83D2760A7D9F64D1E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCompact.lean",
+      "sha256": "3D70B9D04B80CF72E682451696B55065329369ACA52D7EF749ACDBF0B0D2473D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalGlobalCellCover.lean",
+      "sha256": "24EB8DF861ED74BF28F54E4F3E10FAF0D6E946C2DFE1D05E468272118C395D1B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticCellCoordinates.lean",
+      "sha256": "08AABE5A35B662B6017ED99993531D8697C52952F19A4B6FE83AA7C5CD6536FB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticCells.lean",
+      "sha256": "AA18CDD9BED34F32E38389D4EFB6EC10F7E1CA7E7022F0759226ED13FE2F6430"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-covering-map-route-509.json",
+    "sha256": "93506E03588DE200A0046FE018FB5AABE26D42EB0A0045AB4CC3048404544EC9",
+    "review": {
+      "scope": 509,
+      "chain": "DUB-17/18 -> auxiliary point division -> actual cover Abel converse -> cover_isPrincipal_of_raw_reciprocity geometric clauses (loop generation, bilinear/third-kind reciprocity) -> lift the existing original dissection -> actual restriction is a covering map",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Covering\\Basic.lean",
+          "sha256": "8A3BA40E8F453C783001ECC56B5BB95D6E40E9FC1713D22F95F61326DDEF2A55"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\IsLocalHomeomorph.lean",
+          "sha256": "B6EAE663E7A2A5B88EC34EBAE6D15310BDB29E3A96B067BF5C04171ED432FD7E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Homotopy\\Lifting.lean",
+          "sha256": "6F43A4D64A7053876A55EE261E37A73044F2DF293CE5A4DB6AFC33ADD3D65B7C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Calculus\\InverseFunctionTheorem\\Deriv.lean",
+          "sha256": "E3D2496BEC898C3F0462AF4678732EF093A80F9697A1E15CEF5074298E44A795"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRestrictionTopology.lean",
+          "sha256": "65313F82B1590A704891B0DF7160899C81C72E3C90817AE85661F54867C21435"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRestrictionComparison.lean",
+          "sha256": "12756B0A2A8FA5785F92CF649B2697C905FDD8C7AC64D6B83D2760A7D9F64D1E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCompact.lean",
+          "sha256": "3D70B9D04B80CF72E682451696B55065329369ACA52D7EF749ACDBF0B0D2473D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalGlobalCellCover.lean",
+          "sha256": "24EB8DF861ED74BF28F54E4F3E10FAF0D6E946C2DFE1D05E468272118C395D1B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticCellCoordinates.lean",
+          "sha256": "08AABE5A35B662B6017ED99993531D8697C52952F19A4B6FE83AA7C5CD6536FB"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticCells.lean",
+          "sha256": "AA18CDD9BED34F32E38389D4EFB6EC10F7E1CA7E7022F0759226ED13FE2F6430"
+        }
+      ],
+      "shorterRoute": "The actual restriction already has nonzero-derivative chart comparison, continuity, openness and a compact Hausdorff source. Use the native inverse-function local inverse to prove local injectivity, then the pinned Mathlib covering criterion. Native homotopy and simply-connected lifting theorems can then support lifting existing base cells, avoiding a new base-coordinate grid construction. No arbitrary manifold triangulation or new covering-space theory is proposed.",
+      "assumptionsToDischarge": "The local-homeomorphism and covering-map properties of the literal unramified place restriction, needed for actual cell lifts.",
+      "remaining": "Actual analytic cell lifts and cover dissection/reciprocity, unconditional cover Abel converse, point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations stay open; 16/20."
+    }
+  },
+  "discharged": "The actual unramified place restriction is a local homeomorphism and a covering map. Nonzero-derivative chart comparison gives local injectivity, already proved continuity and openness supply the local homeomorphism, and native compact Hausdorff covering theory supplies the covering property. No covering-map or local-homeomorphism premise remains.",
+  "remaining": "Actual analytic cell lifts and cover dissection/reciprocity, unconditional cover Abel converse, point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations stay open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-raw-reciprocity-11-scratch-receipt.json",
+    "sha256": "A7CE63FE69D56CF11B0B18A043EBCC234392B534C6082A580B882D9AE82682C9"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

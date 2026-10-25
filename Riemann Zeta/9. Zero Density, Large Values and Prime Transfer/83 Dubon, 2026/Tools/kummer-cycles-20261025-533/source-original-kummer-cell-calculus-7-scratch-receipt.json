@@ -1,0 +1,93 @@
+{
+  "recordedUTC": "2026-10-25T09:49:45.071269+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceOriginalWeilCoverOneFormAt",
+    "SourceOriginalWeilCoverRegularNeighborhood",
+    "SourceOriginalWeilCoverOneFormLaw",
+    "SourceOriginalWeilCoverCellCoefficient",
+    "SourceOriginalWeilCoverCellRegularCoefficient",
+    "SourceOriginalWeilCoverCellCoefficientPullback",
+    "SourceOriginalWeilCoverCellCoefficientTransition"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverOneFormAt.lean",
+      "sha256": "28BF9FC883FAAE7BAFE81028968B33F33AD7365D7C007ECDD4D3ABDD26249724",
+      "oleanSha256": "8C997EACA6C2A6EF80FDB90B85D255AF5C2C58B7079F2EB6E8105798985E20A4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRegularNeighborhood.lean",
+      "sha256": "ED114EDAC0DA4C136D07F38945A7BF1EFE4BC62520693C8C8674485F0DC9D433",
+      "oleanSha256": "0F495CF0FE831E5361CA3BA2045B0A3D6C35A2F918D4716F60711E06459103EF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverOneFormLaw.lean",
+      "sha256": "E548659BC8CE79389EDF8916346EC981CE0E615E12BB92C3E3BA0945A75D0854",
+      "oleanSha256": "00057DA73958BE49F172B923BA7B8DA068A01C8B8CC3F4CD13D5817D91B5218B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellCoefficient.lean",
+      "sha256": "B8120DA48790A8C07BA79D968F2F81EFFA3A0B477D5A4B64C72069612BF6F78F",
+      "oleanSha256": "3225DFA4273FEC20263C6BCFEAE4B5DBF90F8F9CB55A3D58A2400484477AE431"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellRegularCoefficient.lean",
+      "sha256": "80D7321CEAA53B7A22F314303F6B1AD2DF044027000A5C1DC08652E5FD46DBC3",
+      "oleanSha256": "C9C73C269656B8BC266E886786DBB92DDBAC4485F6E56FA9D14EB277A115B566"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellCoefficientPullback.lean",
+      "sha256": "9E263300CE8111BD3BC1F68C38BE260858F8AE00D41EFF69F25D62415DD0F21C",
+      "oleanSha256": "EF5844B462C56DE15B4EAAD5E3188BF03CA87263A21065AF86B41679C1AFB211"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellCoefficientTransition.lean",
+      "sha256": "07DA15316D1CAC54FB1BFF7CE17D0364DA6ECE379E716110522A3A103B311336",
+      "oleanSha256": "D815123DB16706C894486B42256EB21E5D5EAC7F79849B7E86C23AAE41FDF33B"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_one_form_law_at",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_eventually_differentialCoeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_one_form_law",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coeff_eq_near",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coeff_comp_mul_deriv",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coeff_transition",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverCoeffIn"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_one_form_law_at",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_eventually_differentialCoeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_one_form_law",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coeff_eq_near",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coeff_comp_mul_deriv",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coeff_transition"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverCoeffIn"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellCalculusAudit7.log",
+  "logSha256": "2ED1531BFA8ED811CAF3AAA57098CEF4D9729567FC24861D7EC4865A5ADA55F0",
+  "auditSha256": "86691CFFD91A7A271C8A344939B6A780EBF0017037BFA2B8DF86E0B6D859B526",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 18,
+  "linterScopes": 7,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 13,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellCalculusDependencyAudit7.log",
+  "dependencyAuditSha256": "5FB9B6843A6E1BC0A29F4483FED15679104A15AECBBE09A39ABD4101CB1DC63F",
+  "dependencyAuditSourceSha256": "75D26FAA1506684D84746AFE14E1235F429C9E626B8FBE6537F3A7D24A4D0482",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coeff_comp_mul_deriv",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coeff_transition"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> coordinate edge integrals and cell primitives -> actual cell differential coefficients",
+  "discharged": "The actual cover regular differential locus is open, and the one-form transformation law follows from the proved cover change law and inverse chart identities. The literal cell coefficient equals its fixed-chart pullback locally, is analytic at regular centers, pulls back to the normalized differential reading and satisfies the exact change-of-coordinate identity. The explicit forward coordinate conditions are already supplied for every constructed cell; no coefficient, pullback or inverse-calculus identity is assumed.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Cell primitives, coordinate edge-integral comparison, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-cell-calculus-7-reuse-review-20261025.json",
+  "reuseReviewSha256": "0D52CD399400C4D9A8C2781657FBF7CC14C1511C14E1820386DC27D678C34226",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

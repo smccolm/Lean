@@ -1,0 +1,152 @@
+{
+  "recordedUTC": "2026-10-25T09:20:35.813959+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceRadialDissectionArcPaths",
+    "SourceRadialDissectionEdgePaths",
+    "SourceRadialEdgeSkeleton",
+    "SourceRadialSkeletonIntegral",
+    "SourceRadialTreeWalkIntegrals",
+    "SourceRadialCycleChainIdentification",
+    "SourceRadialFundamentalCycleLoops",
+    "SourceOriginalWeilCoverSkeletonIntegrals",
+    "SourceOriginalWeilCoverFundamentalLoops",
+    "SourceOriginalWeilCoverCycleLoopFamily",
+    "SourceOriginalWeilCoverCycleLoops"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialDissectionArcPaths.lean",
+      "sha256": "8D1B378C53CBE23D847B0B29E37A80DE283AB44ABD299C2FC859FD27D5CBED61",
+      "oleanSha256": "E4E74B3EF1674842EB06C8BC193BF501A796A73998101271791F08942D235073"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialDissectionEdgePaths.lean",
+      "sha256": "6259A7E827210A02CDB9175B2B1BBDBFD73BD199EFCA9A8A3B0ABCD5F0BF7549",
+      "oleanSha256": "49D6E6A0BEF510E2289B8A72AFE1ECAF5B23848225C7999BC37A4D0A5A878231"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialEdgeSkeleton.lean",
+      "sha256": "CD40ED30162BDBF7575A9DC7A0C34DEF9E17E4757313BE5E044DFD0BFD5EAF4B",
+      "oleanSha256": "FC78463BBC934E75ED6ABD05001CF94D0EA70C5D7CA4A4534A3A3091A5E268DD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialSkeletonIntegral.lean",
+      "sha256": "591D6FBE14670FE0076EA915AB7B6DECA7D57ADFE991B4EDC7D683471658EFEB",
+      "oleanSha256": "63497DD3B6B7E7155A0FC8F59B6757DE5E82ED0E96A5E69DA6A4E00C156A7393"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialTreeWalkIntegrals.lean",
+      "sha256": "7FA1D4DC5AF5404FD8F6BB890B1C4FE660EE410E63341E2497C1AA98611DD3A5",
+      "oleanSha256": "57617313CC2F99D041B53362639D4EE5F906C5D1867C0E4545AB418F7D7C9BB8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialCycleChainIdentification.lean",
+      "sha256": "98F14541E5E35E3EE9B3350EC0E6F50619B70309F9C0B4F7AC07CD65EDA41A60",
+      "oleanSha256": "6996D2EA0588B1A83D277E69588CEB54AA51979B6A9CA00C4727CC5DE9BA9A49"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialFundamentalCycleLoops.lean",
+      "sha256": "84C2C82B8EEF258FAE033D0B0CCD926F1D17A38B86317AE39ADFA1A3C9E5D0D8",
+      "oleanSha256": "8F13E9126F884177AAD70DDC640B120E01324A5770BDED93564BB4ECC47C634B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverSkeletonIntegrals.lean",
+      "sha256": "262C21E8DF2A754CE9EE470AF65B47577B354094A1345AA7C70F5828A6A1E790",
+      "oleanSha256": "013DE1F7B7CEBA34E61E321714960B10F380A8459002A9846E5811C63ECA3C8C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverFundamentalLoops.lean",
+      "sha256": "94F0915FCB93B7203DE13DB338BCE0B59CB421637DA70D905553DCCDA1AC7E11",
+      "oleanSha256": "82A66FDA372AD10418C8F47A32CEA767547AAE988B8EBABE36DDD71555E541C8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCycleLoopFamily.lean",
+      "sha256": "BB0C659278D3D5A3D975B26DABFF8AAA01EB6D72D116874AA6743F133B74153D",
+      "oleanSha256": "119B76651FBB71127A1D345A639729C8554A5D860FF689D4A48FC8969A873BD7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCycleLoops.lean",
+      "sha256": "155F761946CDFC1AE39C5522FDF074BF3AE997EB1C6119BF28071AAC5E2831E2",
+      "oleanSha256": "5BC6CE52C8B845ECCDF0CF9568AB22C55C68BBFA4C7D77ED94E055D479431D3B"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.side_arcOf",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.continuous_bdry",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.arcPath_mem_arc",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.vert_fst_eq",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.vert_snd_eq",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.edgePath_mem_arc",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.edgePath_mem_skeleton",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.vert_mem_skeleton",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.mem_skeleton_trans",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.integral_cast",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.exists_path_of_walk",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.cycle_eq_edge_add_return_chain",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.endpoint_walk_of_integer_walk",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.exists_fundamental_cycle_loop",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_skeleton_integral",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_fundamental_cycle_loop",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_cycle_loops_of_cycle_system",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cycle_loops",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.arcOf",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.skeleton",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.arcPath",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.edgePath",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.SkeletonIntegral",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.SkeletonIntegral.mk",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverCycleLoops"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.side_arcOf",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.continuous_bdry",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.arcPath_mem_arc",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.vert_fst_eq",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.vert_snd_eq",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.edgePath_mem_arc",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.edgePath_mem_skeleton",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.vert_mem_skeleton",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.mem_skeleton_trans",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.integral_cast",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.exists_path_of_walk",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.cycle_eq_edge_add_return_chain",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.endpoint_walk_of_integer_walk",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.exists_fundamental_cycle_loop",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_skeleton_integral",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_fundamental_cycle_loop",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_cycle_loops_of_cycle_system",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cycle_loops"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.arcOf",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.skeleton",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.arcPath",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.edgePath",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.SkeletonIntegral",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialEdgePaths.SkeletonIntegral.mk",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverCycleLoops"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCycleLoopsAudit11.log",
+  "logSha256": "E721DE8A5B51576CAC2C11CB81F9ED64546D8CBF7F3CA96ED6A046D28537E2F9",
+  "auditSha256": "E7D6081BF0AECC762FEE09BA0D1B8D6790649C192CAEE15E79903D7D7BA6A81E",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 32,
+  "linterScopes": 11,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 25,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCycleLoopsDependencyAudit11.log",
+  "dependencyAuditSha256": "1251886D935B731417AAB1F9414DA98A3A3ABE2761D6222593C6D54E43074EB6",
+  "dependencyAuditSourceSha256": "26C859DAB6EBCEDCA204A05355C6C42C0189667DB33D3DD114A916D3E5FD28B2",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cycle_loops"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric loop generation and reciprocity -> actual cycle loops and integral identities",
+  "discharged": "The same actual marked analytic Euler dissection, tree/cotree, polygon and integer cycle system has actual loops in its skeleton, chosen before the differential. Every actual differential regular there has a primitive along each loop and an integral equal to the fundamental-cycle integer sum of actual positive edge-path integrals. The three elementary skeleton integral laws are all discharged from the proved cover regular-along-path laws; no integral-law or loop-existence premise remains on the actual constructed consumer.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Coordinate-integral comparison, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-cycle-loops-11-reuse-review-20261025.json",
+  "reuseReviewSha256": "FCC93FC5903EF6FC7758B1E4EA5FDDEAA999DE56436A7BC9EA74F6D47C448DDB",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

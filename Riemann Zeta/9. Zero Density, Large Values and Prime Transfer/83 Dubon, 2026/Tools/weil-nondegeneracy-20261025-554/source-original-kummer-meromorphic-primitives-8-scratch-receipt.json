@@ -1,0 +1,136 @@
+{
+  "recordedUTC": "2026-10-25T13:33:20.347929+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceRadialMeromorphicPoleData",
+    "SourceRadialMeromorphicPoleNeighborhoods",
+    "SourceComplexResidueSubtractedCoefficient",
+    "SourceOriginalWeilCoverRegularizedCoefficient",
+    "SourceRadialMeromorphicCellPrimitives",
+    "SourceOriginalWeilCoverMeromorphicCellPrimitives",
+    "SourceOriginalWeilCoverMeromorphicPrimitiveData",
+    "SourceOriginalWeilCoverMeromorphicCycleData"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialMeromorphicPoleData.lean",
+      "sha256": "7206A19C623D0F953DC916027C66C2DB4E9A66174AA5729C4DDBE7342A454B46",
+      "oleanSha256": "F37926D11B1726CEFD2CEC5578ACA04636F021E6FA314BFBBC2492C8277CF678"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialMeromorphicPoleNeighborhoods.lean",
+      "sha256": "AF4CBE6CCBB1AF5676AEA7D42DA5B594E3D2304D0C1FFA927442BAFA6EAE0F04",
+      "oleanSha256": "F149378D680F7E57A9892C178248435E090D018DAD05827C30E8CDAE547CF43A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexResidueSubtractedCoefficient.lean",
+      "sha256": "04307CFC24A909653839A49EFBD2DCEF8D5F87A067BFBB0063DFD867B826CD8F",
+      "oleanSha256": "EFC9C85CB56EC75B4117F303637F376B217014B43B6AAA169D7636B23EA053FD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRegularizedCoefficient.lean",
+      "sha256": "B1F8B906DC68BF808116CDEB67C8F0BED6E097F88B66734F88C54CE2F33581EE",
+      "oleanSha256": "070ABE21C1B9687C514D0E7167F8DB40E5EE9644AC8B7A3F25367CAF58088486"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialMeromorphicCellPrimitives.lean",
+      "sha256": "7896359D3A3104632C35248430E346756AC1EEA815E8200D0EEA693788D1BA7A",
+      "oleanSha256": "8E054863767D1EEE55D6847E63CF38C58B2189DC39DD226B4D937BE2EB2CB827"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicCellPrimitives.lean",
+      "sha256": "F4BD7854C635CCBB790BEB3A0C465722129C5A5C2733AC41E5416B5E24F5A165",
+      "oleanSha256": "2B05CB6D9C61491613DAD38C678518BA391168C96E4CE8894A85B14318C729B6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicPrimitiveData.lean",
+      "sha256": "31BDFF37F57596D41D508DDDCD93D9B00E3464EEF1736D010DEA666E8DA25910",
+      "oleanSha256": "EB0661F4E39BEBF33C5877091E05732A7D4FEF4AE8B76DF34AA8431F2A0ED95E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicCycleData.lean",
+      "sha256": "6C012C69D601F8E672B17A3AB8D3F532319BEA3978D8DFB7D3681CCFF8D84458",
+      "oleanSha256": "7512B5A9ACD652C9846468DE538E683CB13E6F751B4407285DBE49741BD59D81"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.PolePos.center",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.\u03c1_eq_of_mem",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.\u03c1_eq_zero",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.badPts_finite",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.isOpen_goodSet",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.K_subset_goodSet",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.goodSet_pole",
+    "Dubon2026.SourceFunctionField.CellGeometry.residueSubtractedCoefficient_of_ne",
+    "Dubon2026.SourceFunctionField.CellGeometry.analyticAt_residueSubtractedCoefficient_center",
+    "Dubon2026.SourceFunctionField.CellGeometry.analyticAt_residueSubtractedCoefficient_of_ne",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_analyticAt_coeff_of_regular",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_analyticAt_regCoeff",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.exists_regPrimData",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_regPrimData",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_primitives",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_cycle_data",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.\u03c1",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.PolePos",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.PolePos.mk",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.badPts",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.goodSet",
+    "Dubon2026.SourceFunctionField.CellGeometry.residueSubtractedCoefficient",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverRegCoeff",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.RegPrimData",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.RegPrimData.mk",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverMeromorphicPrimitives"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.PolePos.center",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.\u03c1_eq_of_mem",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.\u03c1_eq_zero",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.badPts_finite",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.isOpen_goodSet",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.K_subset_goodSet",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.goodSet_pole",
+    "Dubon2026.SourceFunctionField.CellGeometry.residueSubtractedCoefficient_of_ne",
+    "Dubon2026.SourceFunctionField.CellGeometry.analyticAt_residueSubtractedCoefficient_center",
+    "Dubon2026.SourceFunctionField.CellGeometry.analyticAt_residueSubtractedCoefficient_of_ne",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_analyticAt_coeff_of_regular",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_analyticAt_regCoeff",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.exists_regPrimData",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_regPrimData",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_primitives",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_cycle_data"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.\u03c1",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.PolePos",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.PolePos.mk",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.badPts",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.goodSet",
+    "Dubon2026.SourceFunctionField.CellGeometry.residueSubtractedCoefficient",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverRegCoeff",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.RegPrimData",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.RegPrimData.mk",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverMeromorphicPrimitives"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicPrimitivesAudit8.log",
+  "logSha256": "100906490C9B3BC4587C2CC8D3D9DC228E6C43D90DECD3B349E07E4983D123F1",
+  "auditSha256": "A9CE04B486C78A95ACA42CD6D49CC7F9BBE1FB96CDC19E2270A3E27C74347E13",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 40,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 22,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicPrimitivesDependencyAudit8.log",
+  "dependencyAuditSha256": "53077BC3A331174BE98AB4FEDE5244700A67703A4AC7C88CEDD809EDFEEABAF1",
+  "dependencyAuditSourceSha256": "11A65098B8463F7B01417FA5E875A576FF4F8E56E2A51CFDFA59D2B095C916CC",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_cycle_data"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> meromorphic loop generation -> residue-subtracted cell primitives for the actual finite simple-pole basis",
+  "discharged": "The actual cycle existence consumer retains the same cover dissection, loops, matrix and reciprocity witnesses. Centered separated poles give common pole-excluded cell neighborhoods. The actual simple-pole expansion and a removable-limit calculation prove analyticity of the literal rational-residue-subtracted coefficient. Existing radial primitive existence constructs common primitives for a finite basis spanning every allowed actual simple-pole differential. No pole geometry, analytic remainder, primitive or finite-basis premise remains on this actual existence theorem. Logarithmic boundary jumps, meromorphic loop generation, final indexing and the unconditional cover Abel converse remain required.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Logarithmic boundary increments and jumps, meromorphic loop generation and extension to all allowed differentials, final prescribed 2g indexing, unconditional cover Abel converse and auxiliary point division, arithmetic descent and DUB-17--20 remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-meromorphic-primitives-8-reuse-review-20261025.json",
+  "reuseReviewSha256": "28668FF107F901DC84ABE2B51A71206AE13559A3DFC7566C80E2692C614EA025",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

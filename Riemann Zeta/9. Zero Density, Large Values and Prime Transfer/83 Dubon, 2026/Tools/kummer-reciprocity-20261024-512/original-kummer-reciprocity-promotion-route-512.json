@@ -1,0 +1,36 @@
+{
+  "recordedUTC": "2026-10-25T06:37:53.685812+00:00",
+  "scopeIds": [
+    504,
+    505,
+    506,
+    507,
+    508,
+    509,
+    510,
+    511
+  ],
+  "receipts": {
+    "source-original-kummer-prescribed-residue-5-scratch-receipt.json": "B27A2AE160842336F837B38569847CC55187E17D7A1E8CC062DF863C40FD2D6B",
+    "source-original-kummer-meromorphic-path-8-scratch-receipt.json": "C7D0E352095A47A3C1F871089BC23E2687199CEA49D1A14B4EB97B71DA48EADE",
+    "source-original-kummer-local-exponential-4-scratch-receipt.json": "CA8154B158ADFA8EC3056CC31C2D7A1FDF1B6B53C02C12C5210385725CB049D4",
+    "source-original-kummer-integral-period-10-scratch-receipt.json": "CF272655C55495B4F881531CD87847E8A630C9B75DE0865FB3513BFDFEB860FF",
+    "source-original-kummer-raw-reciprocity-11-scratch-receipt.json": "A7CE63FE69D56CF11B0B18A043EBCC234392B534C6082A580B882D9AE82682C9",
+    "source-original-kummer-covering-map-3-scratch-receipt.json": "889A2738D394A755C88E258A90690D2661E6EE1C08C7EF3DCE22935016BDD4D0",
+    "source-original-kummer-cell-lift-4-scratch-receipt.json": "362F29D2719B6CF7AC51599E923D669F3203790079D5DD80815267153F7A9D06",
+    "source-original-kummer-cell-family-3-scratch-receipt.json": "235CB389196C4D8A8BF729004F619E26ABED12BFCAD7B173CA9FEDB80F5FA044"
+  },
+  "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+  "chain": "actual residual association -> primitive Frobenius determinant -> nonzero required Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary Kummer point division -> cover Abel converse -> prescribed residues, integral-period principality and raw reciprocity -> actual finite lifted cell dissection",
+  "discharged": "Every actual degree-zero cover divisor has a differential with its prescribed residues. Regularity along paths suffices for the required primitive and integral laws. Integral periods yield a global meromorphic exponential with exactly the prescribed orders and hence a principal divisor in the same Kummer field. Vanishing real period annihilators prove matrix injectivity directly; raw geometric loop-generation and bilinear/third-kind reciprocity clauses then imply the cover Abel converse. This last theorem remains conditional on those explicitly stated geometric clauses. The literal restriction is a covering map, and each original cell has disjoint exhaustive analytic lifts indexed by its actual fiber, with exact cardinal equal to the field degree.",
+  "remaining": "The actual global lifted dissection, loop generation and bilinear/third-kind reciprocity remain unproved. CoverRawThirdKindReciprocity states its unproved geometric input and is not an existence theorem. Unconditional cover Abel converse and actual auxiliary point-difference division remain open. Arithmetic descent, original pairing nondegeneracy, nonzero required Hecke-component restriction, separate determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "reuse": "Each scope records the exact proved results checked before expansion. Native residues, local primitives, exponential gluing and same-field meromorphic comparison supply integral-period principality. Direct period annihilator and integer-coordinate arguments avoid separate cover period discreteness, freeness and a real period basis. Pinned Mathlib covering lifts, open sections and lift uniqueness reuse the existing original radial cell neighborhoods, avoiding a new base grid or slit-plane construction. No external package is imported; source contracts, root pins and proof limits remain unchanged.",
+  "promotion": "Qualify only scratch project imports; preserve audited statements, proof bodies and comments. Reconcile all scratch-to-production declaration ownership exactly. Finish the 7794 sequential canonical receipt before any production mutation.",
+  "modules": 48,
+  "explicitQueries": 89,
+  "theoremRegistrations": 82,
+  "constructionRegistrations": 7,
+  "exhaustiveScratchSum": 142,
+  "proofValueEdges": 117,
+  "expectedProductionModules": 7842
+}

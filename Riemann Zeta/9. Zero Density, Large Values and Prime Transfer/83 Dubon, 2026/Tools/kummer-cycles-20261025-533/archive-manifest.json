@@ -1,0 +1,324 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-kummer-cycles-promotion-route-533.json",
+      "path": "Tools/kummer-cycles-20261025-533/original-kummer-cycles-promotion-route-533.json",
+      "sha256": "D145E9C5121F16C561019634983542CB401668541B9DBC85970752159D464FC6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-tree-cotree-5-scratch-receipt.json",
+      "path": "Tools/kummer-cycles-20261025-533/source-original-kummer-tree-cotree-5-scratch-receipt.json",
+      "sha256": "973DF3378BC914C1ECFECD74282628014B1C2B8C9297356329BD2C56A0096762"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-nontrivial-dissection-5-scratch-receipt.json",
+      "path": "Tools/kummer-cycles-20261025-533/source-original-kummer-nontrivial-dissection-5-scratch-receipt.json",
+      "sha256": "98DCC87FF86E7926C6258673FF02A26BDA3E97940F0BDB14C845E6C9F97B7EA0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-polygon-8-scratch-receipt.json",
+      "path": "Tools/kummer-cycles-20261025-533/source-original-kummer-polygon-8-scratch-receipt.json",
+      "sha256": "1CB18C017CC258C0946F98403E530EA799A3D574D0FB39D301E88F1C560B2DF6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-cycle-loops-11-scratch-receipt.json",
+      "path": "Tools/kummer-cycles-20261025-533/source-original-kummer-cycle-loops-11-scratch-receipt.json",
+      "sha256": "963AED4FBA0C83DF76868A74F41BEA4C972CA1A266CA67ADBF4933D88FB32965"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-coordinate-inverse-2-scratch-receipt.json",
+      "path": "Tools/kummer-cycles-20261025-533/source-original-kummer-coordinate-inverse-2-scratch-receipt.json",
+      "sha256": "CD6E89C1F3C8D4D8A0E8DCC2CE69E909B4D51FDF3971049293B2A84A4CED3BA3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-cell-calculus-7-scratch-receipt.json",
+      "path": "Tools/kummer-cycles-20261025-533/source-original-kummer-cell-calculus-7-scratch-receipt.json",
+      "sha256": "BF01AAE5E208B13AD2B51727E76FE8355E6C30F7335EB35E775BE2F2C8CA6477"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-cell-primitives-3-scratch-receipt.json",
+      "path": "Tools/kummer-cycles-20261025-533/source-original-kummer-cell-primitives-3-scratch-receipt.json",
+      "sha256": "300854E8DFE19659BECEB7EF326909E4B4DB1F23E07CA21BBB97C024B92791AC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-coordinate-loops-8-scratch-receipt.json",
+      "path": "Tools/kummer-cycles-20261025-533/source-original-kummer-coordinate-loops-8-scratch-receipt.json",
+      "sha256": "467AE0FA631D6C2C4ECCE744D2C8CAB8B46D4154A54E545C9CBD7618A4BD4AE2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-normalized-jumps-7-scratch-receipt.json",
+      "path": "Tools/kummer-cycles-20261025-533/source-original-kummer-normalized-jumps-7-scratch-receipt.json",
+      "sha256": "3840143736B80A6EC3B379F56547774A90EF33D8F29F5F736368E8BDF68E5E27"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerTreeCotreeAudit5.log",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerTreeCotreeAudit5.log",
+      "sha256": "9582E51521E7F514100673C958A6AC526901F850E1F2E3E3CB96D60143BE6D40"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerTreeCotreeAudit5.lean",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerTreeCotreeAudit5.lean.txt",
+      "sha256": "73E1D83756D2535B99FC89ABFF31F77A7AC829F1E4EF2112A5820915690F96F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerTreeCotreeAudit5.exit",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerTreeCotreeAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerTreeCotreeDependencyAudit5.log",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerTreeCotreeDependencyAudit5.log",
+      "sha256": "38788A0C586B9D0F5C85C19050A0C7EA94A16011840374E5516DA8B948E418FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerTreeCotreeDependencyAudit5.lean",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerTreeCotreeDependencyAudit5.lean.txt",
+      "sha256": "18DE922010259C79A741AB27E73CEB3F3F0AEA9887F3E982FA50323C1C9996D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerTreeCotreeDependencyAudit5.exit",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerTreeCotreeDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerNontrivialDissectionAudit5.log",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNontrivialDissectionAudit5.log",
+      "sha256": "F830372C64292F4B6492A44F0FA3657E31C8C856AEB155B2D91973C3EA24B9CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerNontrivialDissectionAudit5.lean",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNontrivialDissectionAudit5.lean.txt",
+      "sha256": "FCC15164680E130855D11AC59C763C80E263C9512B5A4508177ED14D7CBA3490"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerNontrivialDissectionAudit5.exit",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNontrivialDissectionAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerNontrivialDissectionDependencyAudit5.log",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNontrivialDissectionDependencyAudit5.log",
+      "sha256": "E7024E48E92F609E55666EEF49755A83EB40319BF1C5EEE54617C226F67F9C88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerNontrivialDissectionDependencyAudit5.lean",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNontrivialDissectionDependencyAudit5.lean.txt",
+      "sha256": "7860F1C21FE4C6F5029F8B5B373D86C85715900E52426BAFFCC6BC20E15191FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerNontrivialDissectionDependencyAudit5.exit",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNontrivialDissectionDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPolygonAudit8.log",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerPolygonAudit8.log",
+      "sha256": "769CDD87E6794B6E805D217FD09D24D951D0F9D21B9914DE454C1FD45092F8A0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPolygonAudit8.lean",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerPolygonAudit8.lean.txt",
+      "sha256": "0A2A91B9D5AD7FE483401733E6D4EEA43592B0F43374286A3D2A1099770C0431"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPolygonAudit8.exit",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerPolygonAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPolygonDependencyAudit8.log",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerPolygonDependencyAudit8.log",
+      "sha256": "B78B6165AEEB4F5A3C82E2039FE2BA23FFF8BD08AE399E903BE3D4CD7331F2D9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPolygonDependencyAudit8.lean",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerPolygonDependencyAudit8.lean.txt",
+      "sha256": "35D3FA08C7985B194FC60A4DB7AF5D8FBA11F59FEFF27EDAB3961AFFCB4A62B2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPolygonDependencyAudit8.exit",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerPolygonDependencyAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCycleLoopsAudit11.log",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCycleLoopsAudit11.log",
+      "sha256": "E721DE8A5B51576CAC2C11CB81F9ED64546D8CBF7F3CA96ED6A046D28537E2F9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCycleLoopsAudit11.lean",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCycleLoopsAudit11.lean.txt",
+      "sha256": "E7D6081BF0AECC762FEE09BA0D1B8D6790649C192CAEE15E79903D7D7BA6A81E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCycleLoopsAudit11.exit",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCycleLoopsAudit11.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCycleLoopsDependencyAudit11.log",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCycleLoopsDependencyAudit11.log",
+      "sha256": "1251886D935B731417AAB1F9414DA98A3A3ABE2761D6222593C6D54E43074EB6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCycleLoopsDependencyAudit11.lean",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCycleLoopsDependencyAudit11.lean.txt",
+      "sha256": "26C859DAB6EBCEDCA204A05355C6C42C0189667DB33D3DD114A916D3E5FD28B2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCycleLoopsDependencyAudit11.exit",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCycleLoopsDependencyAudit11.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoordinateInverseAudit2.log",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateInverseAudit2.log",
+      "sha256": "C534FAC38BC6FE7AF332ABD5AEAD386E053A39CD9BA3D0F0EAB04712CEB66E2F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoordinateInverseAudit2.lean",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateInverseAudit2.lean.txt",
+      "sha256": "048E2C500AE2B6E70FAC89970120D83D5F9B4569555D3ED6CBF5DC082D4DB32B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoordinateInverseAudit2.exit",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateInverseAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoordinateInverseDependencyAudit2.log",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateInverseDependencyAudit2.log",
+      "sha256": "E9BA5D25AB4F62914D8206DD478F9DAEE9A3C4A09979CAF13A4C8B93745FA8B2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoordinateInverseDependencyAudit2.lean",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateInverseDependencyAudit2.lean.txt",
+      "sha256": "6C81B72E2C8B51EBBD540CEB13B594296D75C98BB4367A8F7B423737FE0F9C03"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoordinateInverseDependencyAudit2.exit",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateInverseDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellCalculusAudit7.log",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellCalculusAudit7.log",
+      "sha256": "2ED1531BFA8ED811CAF3AAA57098CEF4D9729567FC24861D7EC4865A5ADA55F0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellCalculusAudit7.lean",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellCalculusAudit7.lean.txt",
+      "sha256": "86691CFFD91A7A271C8A344939B6A780EBF0017037BFA2B8DF86E0B6D859B526"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellCalculusAudit7.exit",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellCalculusAudit7.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellCalculusDependencyAudit7.log",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellCalculusDependencyAudit7.log",
+      "sha256": "5FB9B6843A6E1BC0A29F4483FED15679104A15AECBBE09A39ABD4101CB1DC63F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellCalculusDependencyAudit7.lean",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellCalculusDependencyAudit7.lean.txt",
+      "sha256": "75D26FAA1506684D84746AFE14E1235F429C9E626B8FBE6537F3A7D24A4D0482"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellCalculusDependencyAudit7.exit",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellCalculusDependencyAudit7.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellPrimitivesAudit3.log",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellPrimitivesAudit3.log",
+      "sha256": "705E55E18068360AD51E2E4C64386BB925FABA17D3B9579D7D2C5E169811AF81"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellPrimitivesAudit3.lean",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellPrimitivesAudit3.lean.txt",
+      "sha256": "71A7733CD3A39D88FE263F797646F2E8F3A58E1321CD94227EC1CD4F7D9D9E3C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellPrimitivesAudit3.exit",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellPrimitivesAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellPrimitivesDependencyAudit3.log",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellPrimitivesDependencyAudit3.log",
+      "sha256": "5861995BD53A95EA3D10D586811583CFE2C44BFD256C3CA6683EB86D254AB31B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellPrimitivesDependencyAudit3.lean",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellPrimitivesDependencyAudit3.lean.txt",
+      "sha256": "1DC0CFE22902FD257677AAD5312F6D3DC0DF6391121C36B05649B9A84F6BF63A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellPrimitivesDependencyAudit3.exit",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCellPrimitivesDependencyAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoordinateLoopsAudit8.log",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateLoopsAudit8.log",
+      "sha256": "10EDDD90667EBB6DE725DE9AA4C973F3259944678780EAFE7A8DA1767B4F33DF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoordinateLoopsAudit8.lean",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateLoopsAudit8.lean.txt",
+      "sha256": "8AC02A2FF064F0DF2798FD65745B0AA1780E91370741263DCA54E1516F36B334"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoordinateLoopsAudit8.exit",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateLoopsAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoordinateLoopsDependencyAudit8.log",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateLoopsDependencyAudit8.log",
+      "sha256": "B41A0A5B284882E875312C6B23FB37A75ACB00D3413EA1FCBC21F6C4C9D2F8A6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoordinateLoopsDependencyAudit8.lean",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateLoopsDependencyAudit8.lean.txt",
+      "sha256": "54EC8D90CA6ACCBD7A959D0486F95322FF419591826440D64D953D4A6EAF8CF2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoordinateLoopsDependencyAudit8.exit",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerCoordinateLoopsDependencyAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerNormalizedJumpsAudit7.log",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNormalizedJumpsAudit7.log",
+      "sha256": "42EC29A9CEA33D0DE4936CEEBAF1899A8AEB2879CDB31FC40E3246E3A82323AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerNormalizedJumpsAudit7.lean",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNormalizedJumpsAudit7.lean.txt",
+      "sha256": "B124D42F3AFE503FCCF41945BE9DB09EF5BED41B25BAEE4A86482BE5199A89FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerNormalizedJumpsAudit7.exit",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNormalizedJumpsAudit7.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerNormalizedJumpsDependencyAudit7.log",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNormalizedJumpsDependencyAudit7.log",
+      "sha256": "2191E33C206ADDBB42C83981D6498B180FFA14E8635A3C11C365A9268837BCCB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerNormalizedJumpsDependencyAudit7.lean",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNormalizedJumpsDependencyAudit7.lean.txt",
+      "sha256": "2DB42D065A299AF59FD460D1A075604AD338E5D8B86CA6DA020EFEAE6022790C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerNormalizedJumpsDependencyAudit7.exit",
+      "path": "Tools/kummer-cycles-20261025-533/SourceOriginalKummerNormalizedJumpsDependencyAudit7.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ]
+}

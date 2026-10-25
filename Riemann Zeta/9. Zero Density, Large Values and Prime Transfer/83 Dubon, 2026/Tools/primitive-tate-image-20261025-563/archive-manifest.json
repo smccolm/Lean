@@ -1,0 +1,219 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-primitive-tate-image-promotion-route-563.json",
+      "path": "Tools/primitive-tate-image-20261025-563/original-primitive-tate-image-promotion-route-563.json",
+      "sha256": "184B019EC3209DF23754EBDE38F380A1509F913340989C142773C7AAE0894C22"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-coefficient-weil-6-scratch-receipt.json",
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-coefficient-weil-6-scratch-receipt.json",
+      "sha256": "25FD2B53BA26434FC6CE33B0C52EBEF8C02BA9C2318B8D9FBE7F93B5A8F1F85B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-tate-restriction-8-scratch-receipt.json",
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-primitive-tate-restriction-8-scratch-receipt.json",
+      "sha256": "A2685A2906062D51BA45D445940FA864D0BABC19FCFD726372D899D7BBB526F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-rank-two-17-scratch-receipt.json",
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-primitive-rank-two-17-scratch-receipt.json",
+      "sha256": "7099AF0A154C358655F3DB2D704BCAF04E7D34885A80A0A23C5007128DAD1616"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\coefficient-weil-route-560.json",
+      "path": "Tools/primitive-tate-image-20261025-563/coefficient-weil-route-560.json",
+      "sha256": "40EEDBDF0920E1FBBF2799444554AF048F86721A682C0174F6A729E1505A7280"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-tate-restriction-route-561.json",
+      "path": "Tools/primitive-tate-image-20261025-563/primitive-tate-restriction-route-561.json",
+      "sha256": "C781B8CB6E378A2F11567E25825D885086154EEF19F9E8A33A38D0884043F1A6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-rank-two-route-562b.json",
+      "path": "Tools/primitive-tate-image-20261025-563/primitive-rank-two-route-562b.json",
+      "sha256": "350053EC6C0375531295571FF09216997192CF857FEC156CDF692D5AA019971D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_tate_restriction_audit_561.py",
+      "path": "Tools/primitive-tate-image-20261025-563/prepare_primitive_tate_restriction_audit_561.py",
+      "sha256": "B1D3933C0DF48AC16E9AE0E011758F6AE71B1CF6AE68E3F382DA00BB1E783CEC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_tate_restriction_audit_561b.py",
+      "path": "Tools/primitive-tate-image-20261025-563/prepare_primitive_tate_restriction_audit_561b.py",
+      "sha256": "37CF0C5A6C2BF50EEE880D361682A069A8B51B950765FB8248FB68BDFE4D1521"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_rank_two_audit_562.py",
+      "path": "Tools/primitive-tate-image-20261025-563/prepare_primitive_rank_two_audit_562.py",
+      "sha256": "FC49BAE74ED049251AF56A4A490955525494451ECC0660C73E8BA7157F81E125"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_rank_two_dependency_successor_562b.py",
+      "path": "Tools/primitive-tate-image-20261025-563/prepare_primitive_rank_two_dependency_successor_562b.py",
+      "sha256": "98172BAD1CC3BBACEA88CFD14D79CCB3C15B65A0FD70E0EB7C4BC72B0130CFCC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-rank-two-route-562.json",
+      "path": "Tools/primitive-tate-image-20261025-563/primitive-rank-two-route-562.json",
+      "sha256": "2EF0C6FBCF913ADC48FED6365AB34F4B2F8CDF47A4A488DA108C71D09195568F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-rank-two-17-audit-config.json",
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-primitive-rank-two-17-audit-config.json",
+      "sha256": "8CBC0FDA31012B2416534CDE7FC18AFA43D03874856552A5D0089662B2E0D68E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveRankTwoDependencyAudit17.lean",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoDependencyAudit17.lean.txt",
+      "sha256": "F4D1FBC718B1ECAAAD77B2C8BED2992C21B30C4E6E6389D37349AF66747D3E70"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveRankTwoDependencyAudit17.log",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoDependencyAudit17.log",
+      "sha256": "2EA2E23A08676967A985395E0A6DC3B48B9D2F743DABB7ADCDAFAE4A560C35EA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveRankTwoDependencyAudit17.exit",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoDependencyAudit17.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_coefficient_weil_560.py",
+      "path": "Tools/primitive-tate-image-20261025-563/record_coefficient_weil_560.py",
+      "sha256": "E39F29AC784BDA1C14AC51FE8E1C41A6AC6EE6C90E8271D4B003D5A25D0422F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_tate_restriction_561.py",
+      "path": "Tools/primitive-tate-image-20261025-563/record_primitive_tate_restriction_561.py",
+      "sha256": "D3EA3C0DDF2772FC342498155C2A0974BA8317C3258E822D9B352DB6C7B2FF04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_rank_two_562.py",
+      "path": "Tools/primitive-tate-image-20261025-563/record_primitive_rank_two_562.py",
+      "sha256": "332AC6BD3D434BCF88051A943E81EB05060B52BD9F517E7117133E6947DDFB3E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-coefficient-weil-6-audit-config.json",
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-coefficient-weil-6-audit-config.json",
+      "sha256": "8F3F674B3C58DCDD94D2C2EA34480BD254BAC93E512D8E46CFDE94C7AFC80244"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-tate-restriction-8-audit-config.json",
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-primitive-tate-restriction-8-audit-config.json",
+      "sha256": "7F3F6B7ECC24F188D606CD6F60117D63427C70EEDD5884309B8373CB4F134BAE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-rank-two-17-audit-config-562b.json",
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-primitive-rank-two-17-audit-config-562b.json",
+      "sha256": "57B510BB6AFC39F785C1FF94BA42708CE873B80C4CE6DA8236F415ACA6014E48"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-coefficient-weil-6-reuse-review-20261025.json",
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-coefficient-weil-6-reuse-review-20261025.json",
+      "sha256": "18C575B6A171E991D12BBFB141074427535F6043C439D76F1941E64BE43910EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-tate-restriction-8-reuse-review-20261025.json",
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-primitive-tate-restriction-8-reuse-review-20261025.json",
+      "sha256": "721A63A1B69E215ABE7375E5342646F8102D4A6BBF32849516575484B038B2B8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-rank-two-17-reuse-review-20261025.json",
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-primitive-rank-two-17-reuse-review-20261025.json",
+      "sha256": "1FA2587EE392AACC2858F548195A5CCAF876A2CAFF7A8A31AE20A1F10BCC577A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientWeilAudit6.log",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalCoefficientWeilAudit6.log",
+      "sha256": "DEA24812F5306382662E73F51E71FD1E2AF98E4A4D11373363176BC3FC0817FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientWeilAudit6.lean",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalCoefficientWeilAudit6.lean.txt",
+      "sha256": "E660327ACC35B69113FBDD2FBAA0B4DE15B71D0935FA76C4AC624F1A101FF087"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientWeilAudit6.exit",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalCoefficientWeilAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientWeilDependencyAudit6.log",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalCoefficientWeilDependencyAudit6.log",
+      "sha256": "F2D47D5E55AA89095907439F60C03A928FFE58B19C309A26900F5D4B75AD1BE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientWeilDependencyAudit6.lean",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalCoefficientWeilDependencyAudit6.lean.txt",
+      "sha256": "D6F3187600343C5E8D7AA57D00FFA7D5300BE42F77B1C44DCCBB8D07E6FD6A9D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientWeilDependencyAudit6.exit",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalCoefficientWeilDependencyAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateRestrictionAudit8.log",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateRestrictionAudit8.log",
+      "sha256": "D3F7BC113739C69C394E2E654F900D2474DF1B33C0AE34CC76DF17AA52561E6B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateRestrictionAudit8.lean",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateRestrictionAudit8.lean.txt",
+      "sha256": "1B9911DCACE4BC6A8FEC7835E824C713B39263258ABAB56A02BECB135FCD5512"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateRestrictionAudit8.exit",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateRestrictionAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateRestrictionDependencyAudit8.log",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateRestrictionDependencyAudit8.log",
+      "sha256": "B3958F30F70A830CD40B00EEE3BAE4013491AAF54D748313A4FA8F5047257E19"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateRestrictionDependencyAudit8.lean",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateRestrictionDependencyAudit8.lean.txt",
+      "sha256": "0760ED7F3A0B6060DE73321977BC4C813E3EA7C8BF5D30BAB57771E53E6F48F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateRestrictionDependencyAudit8.exit",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateRestrictionDependencyAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveRankTwoAudit17.log",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoAudit17.log",
+      "sha256": "2B32AD4C086CA3D9C56157DA0F1E712A7BFC51DDFE5C58A35BF9AA889B02D460"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveRankTwoAudit17.lean",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoAudit17.lean.txt",
+      "sha256": "ABF8CDDFF82039F09D0F8FCBDD02199A03C312D6E72A88AA8503B2E37B01EB18"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveRankTwoAudit17.exit",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoAudit17.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveRankTwoDependencyAudit17b.log",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoDependencyAudit17b.log",
+      "sha256": "FD2E6294E0AE089255D07A30456CBD8544B7ED56661522B8D9F9694BB3F91FDE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveRankTwoDependencyAudit17b.lean",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoDependencyAudit17b.lean.txt",
+      "sha256": "08FBBFE6EE538FA76DEF78BA2E7A5ABAA2312C62927FA3E29104A148D58BB6E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveRankTwoDependencyAudit17b.exit",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoDependencyAudit17b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ]
+}

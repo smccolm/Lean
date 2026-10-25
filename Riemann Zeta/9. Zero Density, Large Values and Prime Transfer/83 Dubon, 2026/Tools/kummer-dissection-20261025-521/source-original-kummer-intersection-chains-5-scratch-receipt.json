@@ -1,0 +1,88 @@
+{
+  "recordedUTC": "2026-10-25T07:39:10.877882+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceRadialReversedArcImages",
+    "SourceOriginalLiftedPairArcImages",
+    "SourceCoverLiftedCellIncidence",
+    "SourceOriginalCoverLiftedIntersectionChains",
+    "SourceOriginalWeilCoverGlobalIntersection"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialReversedArcImages.lean",
+      "sha256": "F68B25E2B35AA88DA78E123DCE0F492E5DF21D82799E7C365CC386C0B745582F",
+      "oleanSha256": "6785ACE52E6615B2059054245B5AA8595754B483337C74355496A6318ED39103"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLiftedPairArcImages.lean",
+      "sha256": "9E1C252BEF7432944A9DFF7D130445CC4F48BABB50402445B2D56B4B8CD69EDA",
+      "oleanSha256": "090316195BE709DF9345EB843A009DE591CA0B91E37E6673805ED04309A0E55B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoverLiftedCellIncidence.lean",
+      "sha256": "ABDC94BC29266FC2F81F6E9CE4947345844106A1FBC71779400D2483F698B12C",
+      "oleanSha256": "96F627E551C97E0F5CC131C902CAA301DF31DD3D3432D1D26848EB50E26688A4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoverLiftedIntersectionChains.lean",
+      "sha256": "07FC227AE1A02E473E670A514645B39DEA04D673CD758D4842743BA2A7F0BC9D",
+      "oleanSha256": "4663F065848B85A622C4494955F79889AF5F546E7E640FE685105A460E5E3755"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverGlobalIntersection.lean",
+      "sha256": "06E30835E7C0E9BC3D6AA511DA4BB033267A263A8CEF957FDBB83B77AA991045",
+      "oleanSha256": "C4013721C936516B476315602455513D5BAFFAB8B6358555335CC442CFF2D51F"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.reversed_arc_images",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedPair_arc_images",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedPair_arc_images_of_reversal",
+    "Dubon2026.SourceFunctionField.SheetCover.lifted_carrier_projects",
+    "Dubon2026.SourceFunctionField.SheetCover.lifted_arc_iff_over_arc",
+    "Dubon2026.SourceFunctionField.SheetCover.lifted_carrier_unique",
+    "Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.lifted_intersection_chain",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_global_intersection_coordinates",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_global_intersection_coordinates",
+    "Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.LiftedPointStep",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverGlobalIntersectionCoordinates"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialRegion.reversed_arc_images",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedPair_arc_images",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedPair_arc_images_of_reversal",
+    "Dubon2026.SourceFunctionField.SheetCover.lifted_carrier_projects",
+    "Dubon2026.SourceFunctionField.SheetCover.lifted_arc_iff_over_arc",
+    "Dubon2026.SourceFunctionField.SheetCover.lifted_carrier_unique",
+    "Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.lifted_intersection_chain",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_global_intersection_coordinates",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_global_intersection_coordinates"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.LiftedPointStep",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverGlobalIntersectionCoordinates"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerIntersectionChainsAudit5.log",
+  "logSha256": "C1C2132986F7FFC1146F0046A7437784A2C0C82DE6A89B383CC14653BC871D24",
+  "auditSha256": "6AC202A9FDC0B0FDE6BCF59FFA796601D654C956C955B2B45408E931B89534E9",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 18,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 11,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerIntersectionChainsDependencyAudit5.log",
+  "dependencyAuditSha256": "BA21E6D3D5BF38227223E4687457D0D8EA7F5B0196CA1FD6210060C08BACE8D7",
+  "dependencyAuditSourceSha256": "447E2906194625C9AE9F79660EAFB0A4AAAF68B675EA10241F90EDB10A89931D",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_global_intersection_coordinates"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric reciprocity -> actual paired dissection -> pointwise lifted intersection chains",
+  "discharged": "Full positive arc reversal and native intermediate value give equality of paired lifted arc images in both orientations. Exact coordinate projection lifts the existing base intersection chain through each common cover point; disjoint sheets identify the final cell. The assembled actual global-coordinate consumer constructs and retains all pairing and intersection-chain data, discharging every new chain premise.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Finite vertex assembly, global adjacency, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-intersection-chains-5-reuse-review-20261025.json",
+  "reuseReviewSha256": "A734EDEFDA3365235F50DC044A8D17593024995EDD50D41A9B321A8FA58CD620",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

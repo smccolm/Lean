@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "actual residual association -> original primitive Frobenius determinant -> nondegenerate Hecke-component pairing -> finite Weil nondegeneracy -> Kummer norm detecting divisor -> auxiliary-cover reciprocity",
+  "precedingScratchReceipts": {
+    "source-original-kummer-evaluation-5-scratch-receipt.json": "099C6B955A1BC4DA730E0F20B42718607E87E7758CF120A7213DF440D9AB92C9"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalCoordinateWeilReciprocity.lean",
+      "sha256": "9860CCC097EB9C203CC3A6C82D236BA452258F2A73AA0613403095C3E580375B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCoordinateWeilReciprocity.lean",
+      "sha256": "D35378E80853008BDA3DA817B0C50084F1F860339CB915566C8B0655645DF6E4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateResidues.lean",
+      "sha256": "356DDF30E51274536FA6B3478789CADBA4CC77CFCC2C2C1873017015C476416C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveClosedSeparatingPrincipalDivisors.lean",
+      "sha256": "111FF2E93CA4BD369A0158A0DDA0FDF863011B54754DB0A417B78CEF953B8314"
+    }
+  ],
+  "routeAdjustment": "Transfer the proved rational-coordinate reciprocity through the actual norm using scope 483 adjunctions. Reuse coordinate exchange for every nonconstant second function and native principal degree zero for constants. State general transfer with actual order-divisor witnesses and instantiate on the literal Kummer splitting field; no new Picard representation or general tame-symbol theory is required.",
+  "discharged": "Reciprocity for the actual divisor evaluations on the literal auxiliary Kummer cover, with the geometry, finiteness, residue and disjointness prerequisites derived.",
+  "remaining": "The particular point-difference Picard division and detecting-divisor construction remain; no finite or Tate nondegeneracy, component restriction, determinant or acceptance gate is claimed. Scratch development. 16/20; DUB-17--20 OPEN.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\nyll-reuse-20261024-479-archive-manifest.json",
+    "sha256": "B063EEFBC68FFBF7AC1BF3200918AE80B4694100EA7F2610D8F8355CCB8EECCF"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-reciprocity-route-484.json",
+    "sha256": "172A9A0A65387405049A0176EA44D91A4F991A4421C97F0588354F5FBECB2BAC",
+    "review": {
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "actual residual association -> original primitive Frobenius determinant -> nondegenerate Hecke-component pairing -> finite Weil nondegeneracy -> Kummer norm detecting divisor -> auxiliary-cover reciprocity",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCoordinateWeilReciprocity.lean",
+          "sha256": "D35378E80853008BDA3DA817B0C50084F1F860339CB915566C8B0655645DF6E4"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeilReciprocity.lean",
+          "sha256": "7B3C61DAEC60D3074581CAB737A243E93B825F4A71AC9F4644F35FE4BEE3B4C8"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstantWeilReciprocity.lean",
+          "sha256": "242B2C60BF3816CB3A87BB7F011425B0865E2E67A07F1AC152D1702D03E35456"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRationalCoordinateWeilReciprocity.lean",
+          "sha256": "9860CCC097EB9C203CC3A6C82D236BA452258F2A73AA0613403095C3E580375B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateResidues.lean",
+          "sha256": "356DDF30E51274536FA6B3478789CADBA4CC77CFCC2C2C1873017015C476416C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveClosedSeparatingPrincipalDivisors.lean",
+          "sha256": "111FF2E93CA4BD369A0158A0DDA0FDF863011B54754DB0A417B78CEF953B8314"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardGroup.lean",
+          "sha256": "FDD3E9F7FEAB972C7A3E284A89527B61C2442549D29EC437F60EF98570CEA58B"
+        }
+      ],
+      "selectedRoute": "Transfer the proved rational-coordinate reciprocity through the actual norm using scope 483 adjunctions. Reuse coordinate exchange for every nonconstant second function and native principal degree zero for constants. State general transfer with actual order-divisor witnesses and instantiate on the literal Kummer splitting field; no new Picard representation or general tame-symbol theory is required.",
+      "discharged": "Reciprocity for the actual divisor evaluations on the literal auxiliary Kummer cover, with the geometry, finiteness, residue and disjointness prerequisites derived.",
+      "remaining": "The particular point-difference Picard division and detecting-divisor construction remain; no finite or Tate nondegeneracy, component restriction, determinant or acceptance gate is claimed.",
+      "boundary": "Scratch development. 16/20; DUB-17--20 OPEN."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

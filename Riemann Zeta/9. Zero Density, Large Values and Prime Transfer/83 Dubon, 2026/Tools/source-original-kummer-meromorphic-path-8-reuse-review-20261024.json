@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "DUB-17/18 -> residual association -> primitive determinant -> required component pairing -> Tate nondegeneracy -> auxiliary point division -> cover Abel converse -> integral-period exponential and principality",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicPrincipalDivisor.lean",
+      "sha256": "22CC046CF89EFD2638F4D268672B431F6CC0AC9088C69F259E886BD1EF86D051"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularDifferentialSubtraction.lean",
+      "sha256": "695E82F0B694893A74CE65C7A9DEDEC5227033C1CD14155EBF875665DD051CF4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalSimplePoleRegularPart.lean",
+      "sha256": "CFDCF287A5A786E1E40D7A1CA9D6A24273884BD692E732B391E8AB9A90419D30"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalLocalRegularPrimitives.lean",
+      "sha256": "33698D9BBD2B3130DC0320E06C7144BD733E1ADA8E41F83CA4779A13C72B4997"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularPathLocalPrimitives.lean",
+      "sha256": "2BD73EE89A558C0B0ED24E65A84289A551999E105272AF84C5002F6B780743E1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularPathPrimitives.lean",
+      "sha256": "574FDA59087F15555F3F3086EF7C3F7C8518A440B9D49FF7A826E82681BA77F1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPathIntegralSubtraction.lean",
+      "sha256": "BCAE13DD06FC2244272634F05B3FDB9A65BFF183ED0F8D96C9068A1E5CA1E2EE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularPathIntegralLaws.lean",
+      "sha256": "458700CFED4655D8350111E5BFA3335061D5FC1BBA9E92BB1A7F9DF372D7496F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDifferentialResidues.lean",
+      "sha256": "7D09F00C7EFAEA4C714EE6ADBCD083CDA449C19A46FD759C63110DABCF9ADA84"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicFunctionComparison.lean",
+      "sha256": "FD72C3EB427502A1B1C98BF52D36975A88BD492687124632E217B02153D15D52"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPathIntegralLaws.lean",
+      "sha256": "AFF917F14061579C4B6FF2F4030F3E16C3BB08F5E6A1CB18D1CEC5D133A59EF4"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-meromorphic-path-route-505.json",
+    "sha256": "196978B8BA5BD06BACDC5DC5DE15F43CC473A06D227F4098EC13B25FEE36E3BE",
+    "review": {
+      "scope": 505,
+      "chain": "DUB-17/18 -> residual association -> primitive determinant -> required component pairing -> Tate nondegeneracy -> auxiliary point division -> cover Abel converse -> integral-period exponential and principality",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicPrincipalDivisor.lean",
+          "sha256": "22CC046CF89EFD2638F4D268672B431F6CC0AC9088C69F259E886BD1EF86D051"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularDifferentialSubtraction.lean",
+          "sha256": "695E82F0B694893A74CE65C7A9DEDEC5227033C1CD14155EBF875665DD051CF4"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalSimplePoleRegularPart.lean",
+          "sha256": "CFDCF287A5A786E1E40D7A1CA9D6A24273884BD692E732B391E8AB9A90419D30"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalLocalRegularPrimitives.lean",
+          "sha256": "33698D9BBD2B3130DC0320E06C7144BD733E1ADA8E41F83CA4779A13C72B4997"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularPathLocalPrimitives.lean",
+          "sha256": "2BD73EE89A558C0B0ED24E65A84289A551999E105272AF84C5002F6B780743E1"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularPathPrimitives.lean",
+          "sha256": "574FDA59087F15555F3F3086EF7C3F7C8518A440B9D49FF7A826E82681BA77F1"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPathIntegralSubtraction.lean",
+          "sha256": "BCAE13DD06FC2244272634F05B3FDB9A65BFF183ED0F8D96C9068A1E5CA1E2EE"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularPathIntegralLaws.lean",
+          "sha256": "458700CFED4655D8350111E5BFA3335061D5FC1BBA9E92BB1A7F9DF372D7496F"
+        }
+      ],
+      "shorterRoute": "Reuse native local primitives and primitive gluing, existing actual cover integral, canonical residue functional and same-field meromorphic comparison. Need only regularity on traversed paths; do not build a second integral or period rank infrastructure.",
+      "assumptionsToDischarge": "Primitives and integral laws for third-kind differentials away from poles; preservation of residues under regular period correction; meromorphic exact orders imply actual principality.",
+      "remaining": "Exponential construction, raw reciprocity and period correction, Abel converse, point division and arithmetic descent remain. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "discharged": "Actual cover differential readings have local primitives at every regular place and these glue along every continuous path where the differential is regular. The existing cover integral satisfies subtraction, concatenation and reversal there. Subtracting a regular differential preserves all prescribed residues. A meromorphic function with prescribed chart orders gives that exact principal divisor in the same literal cover field. No global regularity or separate meromorphic-to-field comparison hypothesis is retained.",
+  "remaining": "Exponential construction, raw reciprocity and period correction, Abel converse, point division and arithmetic descent remain. DUB-17--20 OPEN; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-prescribed-residue-5-scratch-receipt.json",
+    "sha256": "B27A2AE160842336F837B38569847CC55187E17D7A1E8CC062DF863C40FD2D6B"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

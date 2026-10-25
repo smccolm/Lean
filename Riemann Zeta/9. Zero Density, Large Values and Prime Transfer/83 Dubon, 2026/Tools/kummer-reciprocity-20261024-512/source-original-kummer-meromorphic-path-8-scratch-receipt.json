@@ -1,0 +1,125 @@
+{
+  "recordedUTC": "2026-10-25T05:43:37.436584+00:00",
+  "date": "2026-10-24 America/Vancouver",
+  "modules": [
+    "SourceOriginalWeilCoverMeromorphicPrincipalDivisor",
+    "SourceOriginalWeilCoverRegularDifferentialSubtraction",
+    "SourceOriginalWeilCoverSimplePoleRegularPart",
+    "SourceOriginalWeilCoverLocalRegularPrimitives",
+    "SourceOriginalWeilCoverRegularPathLocalPrimitives",
+    "SourceOriginalWeilCoverRegularPathPrimitives",
+    "SourceOriginalWeilCoverPathIntegralSubtraction",
+    "SourceOriginalWeilCoverRegularPathIntegralLaws"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicPrincipalDivisor.lean",
+      "sha256": "9CFBE6B315556C772E68922A5076B227C93E6FE634A86DABD77EDADE189633F6",
+      "oleanSha256": "B570CC9EF4A2C190510E4B5ED4FE790BE3F4947D9982E7AD1DE7C8D15E0D3403"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRegularDifferentialSubtraction.lean",
+      "sha256": "03822A28A9687652910C20F76ADB08EDB04E2BDF290BC7C24923D19B3EE53675",
+      "oleanSha256": "CA598D0A38553E27EE2DAD7B66798147287E98E2F740039C0CB8A7EC664CEC77"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverSimplePoleRegularPart.lean",
+      "sha256": "BACA1FAACF1AD54F26AF78566FB78AC72A79DCAD64DCC6C1D5EA106365149B31",
+      "oleanSha256": "C995ADE0DA387F846F3062A3CE30F3E7AB58DD0FB7FDF0B864E0E0715B3DA4E8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLocalRegularPrimitives.lean",
+      "sha256": "9C8A46171D1BF8498B0F751A5B281A22ABF8E40C126E65D69FAB9D350FF19901",
+      "oleanSha256": "A6480767690BA5BF997E1B8614E6926C5C2DB7E8A9EA6B296CA2D229236217EE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRegularPathLocalPrimitives.lean",
+      "sha256": "094A74C2BC374F3F96B0578D798A7E36C7EA8C45B4853BE39DF82B4FFE580EB9",
+      "oleanSha256": "4E43FEAC7C3A14EACA7DE12BB6F9737A8777B0152C7B16418CB6559C8B520A7D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRegularPathPrimitives.lean",
+      "sha256": "F16208E19B7400459D025BA2F631BB6F87B50154849B4BC39D52C0E501C8C8F8",
+      "oleanSha256": "305885FCD9C60FC6C6DF57D4BBA910F2558708486CC3A80630883FFA0B5602BA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPathIntegralSubtraction.lean",
+      "sha256": "1768A6B5F04830C39CA6D6C15E1220D61FB4E1C686FC738F706D0AAC1D6636AC",
+      "oleanSha256": "882FC5EA7CBCCC6C86D7A43C93DF0E5EDEC3B92B33615135264D5C53267E690A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRegularPathIntegralLaws.lean",
+      "sha256": "2C0115CB8BEA1D5DDEB866C8293DC04BC9C6F81E80573B6A0FC4C4822AD6FF5C",
+      "oleanSha256": "1E55B42BA22FFF6FBE6C9BA93A28EB3DEF875365198E2D1FDEBBB8A842929F33"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_meromorphic_orders",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_poles_sub_regular",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_residues_sub_regular",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_regular_part",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.analyticAt_readDifferential_of_coeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_readDifferential_local_primitive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chart_differentialCoeff_regular_at",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.readDifferential_change_of_coeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_path_local_primitive_of_coeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_isPrimitiveAlong_of_coeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_isPrimitiveAlong_of_simplePole_residue_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_differentialCoeff_sub",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.readDifferential_sub_of_coeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_sub_of_coeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_sub_of_coeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_trans_of_primitive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_trans_of_coeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_symm_of_coeff_mem"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_meromorphic_orders",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_poles_sub_regular",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_residues_sub_regular",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_regular_part",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.analyticAt_readDifferential_of_coeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_readDifferential_local_primitive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chart_differentialCoeff_regular_at",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.readDifferential_change_of_coeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_path_local_primitive_of_coeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_isPrimitiveAlong_of_coeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_isPrimitiveAlong_of_simplePole_residue_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_differentialCoeff_sub",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.readDifferential_sub_of_coeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isPrimitiveAlong_sub_of_coeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_sub_of_coeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_trans_of_primitive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_trans_of_coeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_symm_of_coeff_mem"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicPathAudit8.log",
+  "logSha256": "ED9B33D64308BF4F9BC9AB5B7390D7742F28BA7F0CDBD037B30FDD2B54CC15CA",
+  "auditSha256": "D2B99C9FC2FDE212947578F6A7F7DE63CE4F96EFB5C8A36D5134AD48671E75E9",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 28,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 22,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicPathDependencyAudit8.log",
+  "dependencyAuditSha256": "24F79D0013A351AC37DA2D6A1B5A4B9A91B8B4516B9327CDA9CA83C78E0C7CF2",
+  "dependencyAuditSourceSha256": "6FC8CCB2754868208562C30BF7B13F842DB231DA70F8ACFB5F9B06CD2CD437C6",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_meromorphic_orders",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_residues_sub_regular",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_simple_pole_regular_part",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_isPrimitiveAlong_of_simplePole_residue_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_sub_of_coeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_trans_of_coeff_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.pathIntegral_symm_of_coeff_mem"
+  ],
+  "dependency": "DUB-17/18 -> residual association -> primitive determinant -> required component pairing -> Tate nondegeneracy -> auxiliary point division -> cover Abel converse -> integral-period exponential and principality",
+  "discharged": "Actual cover differential readings have local primitives at every regular place and these glue along every continuous path where the differential is regular. The existing cover integral satisfies subtraction, concatenation and reversal there. Subtracting a regular differential preserves all prescribed residues. A meromorphic function with prescribed chart orders gives that exact principal divisor in the same literal cover field. No global regularity or separate meromorphic-to-field comparison hypothesis is retained.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Exponential construction, raw reciprocity and period correction, Abel converse, point division and arithmetic descent remain. DUB-17--20 OPEN; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-meromorphic-path-8-reuse-review-20261024.json",
+  "reuseReviewSha256": "FE57D68DC1B14D5083EDF5BA9B6AD27DEF4DFEDAF1DFB525C00DCFBF76B2B8CA",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

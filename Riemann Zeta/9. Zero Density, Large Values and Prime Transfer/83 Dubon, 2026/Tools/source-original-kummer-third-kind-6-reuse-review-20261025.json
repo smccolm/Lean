@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> third-kind reciprocity -> common integer correction between actual Abel paths and normalized cell readings",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalNormalizedAbelReadings.lean",
+      "sha256": "6B3525D48FC5B1C6F6789684F17DA82DF906B279C0C1147FF1CAD011D4F05DAF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellResidueReciprocity.lean",
+      "sha256": "34C4A9C51A5CE090C16EA448DBCF2E4694E4021ECD5141706423B95941B7FE69"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalBasisPeriodReciprocity.lean",
+      "sha256": "A3CA52902C64E2199B52957FCC58E241E7E6FDCE2495176CE36479195E24767C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedRawReciprocity.lean",
+      "sha256": "DC027F62924C06F4D04C7D63C2F2DA029FA3213E0D19071CA1B0152718FAD729"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPathPrimitiveJumps.lean",
+      "sha256": "BD6A8AA914B72395F234A2F973F3AE6FE53BE784EE9C2647803F61148B175E19"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverAbelJacobiPeriods.lean",
+      "sha256": "B9CCE18095EF286D15B77D2175E6ED445B9734A8032AC4AD84C7F18F4AF70F3F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverIntegralPeriodPathIndependence.lean",
+      "sha256": "9A6F9D6A75DC08B349F0D1B222D2BA6F06B6AF1DC4ED86794FCD61200A1C347C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverBilinearCycleData.lean",
+      "sha256": "96B21E8ADD22FDF726C9C39DB849CEF22C0BCC89CE9FC79D935E254772588100"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-third-kind-route-544.json",
+    "sha256": "C968788D9633BE8496A329BE5EE72E3D8462D47F9D51EB5EF20C8AB20263242B",
+    "review": {
+      "scope": 544,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> third-kind reciprocity -> common integer correction between actual Abel paths and normalized cell readings",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalNormalizedAbelReadings.lean",
+          "sha256": "6B3525D48FC5B1C6F6789684F17DA82DF906B279C0C1147FF1CAD011D4F05DAF"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellResidueReciprocity.lean",
+          "sha256": "34C4A9C51A5CE090C16EA448DBCF2E4694E4021ECD5141706423B95941B7FE69"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalBasisPeriodReciprocity.lean",
+          "sha256": "A3CA52902C64E2199B52957FCC58E241E7E6FDCE2495176CE36479195E24767C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedRawReciprocity.lean",
+          "sha256": "DC027F62924C06F4D04C7D63C2F2DA029FA3213E0D19071CA1B0152718FAD729"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPathPrimitiveJumps.lean",
+          "sha256": "BD6A8AA914B72395F234A2F973F3AE6FE53BE784EE9C2647803F61148B175E19"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverAbelJacobiPeriods.lean",
+          "sha256": "B9CCE18095EF286D15B77D2175E6ED445B9734A8032AC4AD84C7F18F4AF70F3F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverIntegralPeriodPathIndependence.lean",
+          "sha256": "9A6F9D6A75DC08B349F0D1B222D2BA6F06B6AF1DC4ED86794FCD61200A1C347C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverBilinearCycleData.lean",
+          "sha256": "96B21E8ADD22FDF726C9C39DB849CEF22C0BCC89CE9FC79D935E254772588100"
+        }
+      ],
+      "shorterRoute": "Reuse the proved actual path-to-jump theorem, chosen Abel paths, integer-span extraction and zero-residue pole removal. Isolate the existing finite skew-symmetry calculation from actual-field elaboration. The original route introduces a subtype matrix before final 2g reindexing; retain the exact third-kind identity on the existing complementary edges and defer this redundant intermediate conversion. This direct same-word construction passes normal proof limits.",
+      "assumptionsToDischarge": "The actual Abel vector differs from its normalized cell reading by one common integer period combination. The weighted divisor identity and skew word matrix then give exact third-kind reciprocity on the same actual loops and matrix. The existence theorem derives all these clauses from the actual regular basis, base point and finite pole set.",
+      "deferred": "The unaudited intermediate subtype-matrix route (SourceFiniteBilinearIndexRestriction, SourceOriginalWeilCoverRestrictedResidueReciprocity, SourceOriginalWeilCoverBasisPeriodReciprocity and SourceOriginalWeilCoverReciprocityCycleData) is not in this scope, is not claimed as verified, and is unnecessary before the single final prescribed 2g reindexing.",
+      "remaining": "Meromorphic loop generation and final common reindexing to the prescribed 2g coordinates, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20."
+    }
+  },
+  "discharged": "The actual chosen Abel paths and proved path-to-jump identity give one common integer period correction for all basis coordinates. Existing zero-residue pole removal supplies regularity off the divisor support. Finite skew symmetry turns the weighted residue identity into exact third-kind Abel-divisor reciprocity on the same constructed complementary edges. The existence consumer retains the same actual word, skew-symmetric unimodular matrix, loops, normalized primitives, bilinear identities and regular-loop generation. No Abel-path comparison or third-kind identity remains as an assumption. Final 2g reindexing and meromorphic generation remain required.",
+  "remaining": "Meromorphic loop generation and final common reindexing to the prescribed 2g coordinates, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-bilinear-periods-5-scratch-receipt.json",
+    "sha256": "7397D821795D34355FF74E353F37AB5279BC4C85DCA14112785CB00744E62AEC"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

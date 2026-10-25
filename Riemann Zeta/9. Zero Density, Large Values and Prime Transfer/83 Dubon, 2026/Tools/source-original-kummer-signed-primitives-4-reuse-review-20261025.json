@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> polygon jump formula -> signed primitive endpoint-integral identities",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPrimitiveArcIntegral.lean",
+      "sha256": "57E8652CDD84A81AF1D2ADFF9BBFA2E54980C655B143FC21AACFDC35B36C943D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeightedArcReversal.lean",
+      "sha256": "FE6CC9F4618DFB7F9EFE67A19B6CCC352A8AAB42D7ADAF2F5DA53F92BDDF1479"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPolygonPrimitiveEndpoints.lean",
+      "sha256": "E54A61E713A579308569EA272FCEA2C7AB53B392F9ED182B6146ED0227EAE0F6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalSignedPrimitiveArcIntegral.lean",
+      "sha256": "7B688878C4710C477E0A35CB848D81EE97100732C52E2812EFED94EAC8F04382"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverBoundaryCoefficient.lean",
+      "sha256": "62CADA25827F0CED01F0C9077FA11A06F6B4D9C9BF47380325BB6E515617E13A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverReducedCellJumps.lean",
+      "sha256": "0C7204D8E5DA753632E98FF7B98BE25E48C467843CFD70E7EDB68BC4C2998E6E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNormalizedCellPrimitives.lean",
+      "sha256": "4F28DF197EDBFE9FB998B810DCF2F76AEA81EA287A61A76C046308FD560BD199"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-signed-primitives-route-535.json",
+    "sha256": "3697623FB78C767BEA88279674CCCC9B5B5551319FE8353F4C5F535117AA24DC",
+    "review": {
+      "scope": 535,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> polygon jump formula -> signed primitive endpoint-integral identities",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPrimitiveArcIntegral.lean",
+          "sha256": "57E8652CDD84A81AF1D2ADFF9BBFA2E54980C655B143FC21AACFDC35B36C943D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeightedArcReversal.lean",
+          "sha256": "FE6CC9F4618DFB7F9EFE67A19B6CCC352A8AAB42D7ADAF2F5DA53F92BDDF1479"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPolygonPrimitiveEndpoints.lean",
+          "sha256": "E54A61E713A579308569EA272FCEA2C7AB53B392F9ED182B6146ED0227EAE0F6"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalSignedPrimitiveArcIntegral.lean",
+          "sha256": "7B688878C4710C477E0A35CB848D81EE97100732C52E2812EFED94EAC8F04382"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverBoundaryCoefficient.lean",
+          "sha256": "62CADA25827F0CED01F0C9077FA11A06F6B4D9C9BF47380325BB6E515617E13A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverReducedCellJumps.lean",
+          "sha256": "0C7204D8E5DA753632E98FF7B98BE25E48C467843CFD70E7EDB68BC4C2998E6E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNormalizedCellPrimitives.lean",
+          "sha256": "4F28DF197EDBFE9FB998B810DCF2F76AEA81EA287A61A76C046308FD560BD199"
+        }
+      ],
+      "shorterRoute": "Reuse the proved boundary coefficient continuity, continuous-extension integral lemma and native interval FTC for the positive arc. For the negative sign use the already constructed constant jump and the actual paired endpoint equalities directly. This satisfies the regular polygon endpoint contract without first adapting the more general weighted meromorphic reversal argument; that separate argument is deferred until reciprocity needs it.",
+      "assumptionsToDischarge": "Arc integrability and exact signed endpoint differences of the actual normalized cell primitives in terms of the literal coordinate edge integrals, on the same actual dissection and jump witness.",
+      "remaining": "Polygon telescoping, path-to-jump and jump-to-period generation, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20."
+    }
+  },
+  "discharged": "Arc integrability and native interval FTC give the positive primitive endpoint difference. The constant jump and actual paired endpoints give its reversed sign directly, avoiding the more general weighted meromorphic reversal argument at the regular polygon step. The same actual normalized primitive witness retains circulation, complementary-edge reduction and exact signed coordinate-integral identities; no signed-integral premise remains on the actual consumer.",
+  "remaining": "Polygon telescoping, path-to-jump and jump-to-period generation, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-jump-reduction-4-scratch-receipt.json",
+    "sha256": "9D9B87F15DE9F3FB834823995D2C87C0AF01F6FB83020674A6B898B487684AD9"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

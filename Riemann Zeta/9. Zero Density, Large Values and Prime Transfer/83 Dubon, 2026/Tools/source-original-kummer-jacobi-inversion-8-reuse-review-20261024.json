@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "actual residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary point division -> cover Abel comparison -> Jacobi inversion and finite regular differential basis",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDifferentialReadingLinear.lean",
+      "sha256": "444A863F206EF32504E7CB34ACCD3837323A8DFCECA3E2C3A1FE6E3E7DDEAACB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularEvaluationSeparation.lean",
+      "sha256": "5F2A95F856A4E507912BFDE37879D5E3173DAE6A553FEBDB682B82CF445AC51E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularEvaluationFrame.lean",
+      "sha256": "379553E546C8EC35DF9B7F9132AC994EE77CD20E546DAB7D7C89AF9B9005D06D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAbelJacobiImage.lean",
+      "sha256": "819A7C12B30E496344478E6CDF3E91263BCDDE993B5E47F40792806D42DF0B1A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAbelJacobiOpenImage.lean",
+      "sha256": "25CB14D4CA3CBC9D81698483B4E7BA280641707D20D93057670ABEDFFBC91C9C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalJacobiInversion.lean",
+      "sha256": "75B2ED19D0F24019F705A7AD13C361FE88192DEDD11D0D258994C45773D37E28"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularFinite.lean",
+      "sha256": "DFDA2D0CCAA21B432A7218E27723B76201CAB4D996B454599DCCFDDDF52EA590"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateCanonical.lean",
+      "sha256": "20BF79050CA13A8A5DBEC7E86760BD028878A6DF4D2BD7E3A96A3B4E939AC33F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRegularComparison.lean",
+      "sha256": "90EB97779E0C49CEA1EDC0AA088D2DC5EDDDA75EF57D0799D6AE3DBABA80C1C2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCompact.lean",
+      "sha256": "3D70B9D04B80CF72E682451696B55065329369ACA52D7EF749ACDBF0B0D2473D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverConnected.lean",
+      "sha256": "CF1FA04E40D3FB81A1C4834BF80F75BC6DD68B5DDDBF595015431AEC40DAAB16"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverEvaluationContinuity.lean",
+      "sha256": "E2F0AE024DCC3CEB92A028A8168BF45D73A47F87EB51DFB0F3AC8EB27F359948"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-jacobi-inversion-route-501.json",
+    "sha256": "8361969A50967803BA448052C96E1A7DDF68DC308FD16BAB35350D8A5361CE96",
+    "review": {
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "actual residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary point division -> cover Abel comparison -> Jacobi inversion and finite regular differential basis",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDifferentialReadingLinear.lean",
+          "sha256": "444A863F206EF32504E7CB34ACCD3837323A8DFCECA3E2C3A1FE6E3E7DDEAACB"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularEvaluationSeparation.lean",
+          "sha256": "5F2A95F856A4E507912BFDE37879D5E3173DAE6A553FEBDB682B82CF445AC51E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularEvaluationFrame.lean",
+          "sha256": "379553E546C8EC35DF9B7F9132AC994EE77CD20E546DAB7D7C89AF9B9005D06D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAbelJacobiImage.lean",
+          "sha256": "819A7C12B30E496344478E6CDF3E91263BCDDE993B5E47F40792806D42DF0B1A"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAbelJacobiOpenImage.lean",
+          "sha256": "25CB14D4CA3CBC9D81698483B4E7BA280641707D20D93057670ABEDFFBC91C9C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalJacobiInversion.lean",
+          "sha256": "75B2ED19D0F24019F705A7AD13C361FE88192DEDD11D0D258994C45773D37E28"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularFinite.lean",
+          "sha256": "DFDA2D0CCAA21B432A7218E27723B76201CAB4D996B454599DCCFDDDF52EA590"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateCanonical.lean",
+          "sha256": "20BF79050CA13A8A5DBEC7E86760BD028878A6DF4D2BD7E3A96A3B4E939AC33F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRegularComparison.lean",
+          "sha256": "90EB97779E0C49CEA1EDC0AA088D2DC5EDDDA75EF57D0799D6AE3DBABA80C1C2"
+        }
+      ],
+      "shorterRoute": "The generic finite-coordinate theorem already supplies finite canonical support. Its canonical divisor space and the already proved cover divisor-space finiteness yield a finite regular-differential basis without numerical genus or Riemann-Roch reconstruction. Native evaluation separation and inverse-function image arguments then establish Jacobi inversion. The vanishing-germ lemma and full real period-span argument are unnecessary here and are omitted.",
+      "remaining": "Cover Abel converse, actual point division and arithmetic descent remain unproved. Original pairing nondegeneracy, Hecke-component restriction and determinant, residual association, automorphy and all-weight continuation remain open. DUB-17--20 OPEN;16/20."
+    }
+  },
+  "discharged": "The actual regular differential space of the literal complex Kummer cover is finite dimensional and has a constructed basis. Its center evaluations separate and span; a proved evaluation frame and the native inverse function theorem make the actual degree-zero Abel image open. Connected complex coordinate space makes that image the whole space. Every coordinate vector is therefore represented by an actual degree-zero cover divisor modulo actual loop periods. No finite-dimensionality, basis, frame, local-surjectivity or Jacobi-inversion hypothesis remains. The principal-divisor converse is still required for auxiliary point division.",
+  "remaining": "Cover Abel converse, actual point division and arithmetic descent remain unproved. Original pairing nondegeneracy, Hecke-component restriction and determinant, residual association, automorphy and all-weight continuation remain open. DUB-17--20 OPEN;16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-abel-vector-5-scratch-receipt.json",
+    "sha256": "9654F7E85FE4B9424A0165837328B5FE280FC08DAD555B83168E55D6624109CD"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

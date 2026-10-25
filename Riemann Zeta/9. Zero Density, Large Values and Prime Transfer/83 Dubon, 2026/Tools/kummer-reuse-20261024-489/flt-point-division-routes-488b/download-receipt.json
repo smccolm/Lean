@@ -1,0 +1,19 @@
+{
+  "recordedUTC": "2026-10-25T02:09:34.093102+00:00",
+  "files": [
+    {
+      "path": "S_AlgebraicCurve_Place_exists_natCast_dvd_ord_sub_single_sub_single.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_AlgebraicCurve_Place_exists_natCast_dvd_ord_sub_single_sub_single.lean",
+      "gitBlob": "e38cb05c1d43529953ad11764ef147b4fb711e3d",
+      "bytes": 22827,
+      "sha256": "7DD9FFA332055D1359861DE279CFE2B0F0EEBE9035B3095E6EAF8D5B3519E6EC"
+    },
+    {
+      "path": "S_AlgebraicCurve_Place_exists_natCast_dvd_ord_sub_single_sub_single_complex.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_AlgebraicCurve_Place_exists_natCast_dvd_ord_sub_single_sub_single_complex.lean",
+      "gitBlob": "9a9e7925c6ff3004db18a1583f1aca6d06ad47ce",
+      "bytes": 16183,
+      "sha256": "A314C44652154FF209F30343A81E93BB2C5F9BDCE70CAF05E7A0736320D3CE12"
+    }
+  ]
+}

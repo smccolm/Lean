@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric loop generation and reciprocity -> actual polygon word and integer cycles",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPolygonCorners.lean",
+      "sha256": "264B3F2904C1646C452AC82274F96E7CE18240473A8F39D9C4B3498DEBBEC3A9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPolygonState.lean",
+      "sha256": "6D43338A2D8BA09FBEE185A7547E2C2B97CAA1703C6CC3B1BF110E7C3F856B07"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPolygonGluing.lean",
+      "sha256": "AE004AF7A8F2BF88B8468C1D2979E5DE5804B7883764C4650ED68FDA22018578"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPolygonWordCycles.lean",
+      "sha256": "409C22F99CFEFCAE77AF583AE213AE6C4DE63E478AB5D4579D9C91EFC80A9141"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionPolygonWord.lean",
+      "sha256": "746628FE67E69D533077DDEDA8243D431BE07583F5FB9ACAEF267774B487B59C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedPolygonWord.lean",
+      "sha256": "BBAB3847FB7CB6DE9D0B5D4360AE7E32C2E45DB0720E1FB74BCDB3FF5460180C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedCycleSystem.lean",
+      "sha256": "A9DC52344116B994A76E341A090CC3E06DDE250D18F66E87728DEA89F928FEC9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellCyclicBoundaryWords.lean",
+      "sha256": "C5DBB6B33C569CA25FDC7367D5D3A1AA4E318147CFD6F2CEB95F110C5EE79102"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellIntegerTreeCut.lean",
+      "sha256": "349AE00C7344DF6B3C9AA20DFFBDAEC0EA1FB9160A9A3CAFC7C0FABBFD33BCED"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellIntegerFundamentalCycles.lean",
+      "sha256": "E465A011FCCCDF7479D2CB7A1BA1E01B75F41EEDC4E7A54B00036F43635C6277"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNontrivialTreeCotree.lean",
+      "sha256": "49DF869247EE39B2C5D82787CAA58D53E3EB1D4180A339B902937E78F7F1DEB9"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-polygon-route-524.json",
+    "sha256": "1C8BE2E1833A864CE66BB50B1378683AE6047100AA7E989602A27BEBDF045FCE",
+    "review": {
+      "scope": 524,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric loop generation and reciprocity -> actual polygon word and integer cycles",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPolygonCorners.lean",
+          "sha256": "264B3F2904C1646C452AC82274F96E7CE18240473A8F39D9C4B3498DEBBEC3A9"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPolygonState.lean",
+          "sha256": "6D43338A2D8BA09FBEE185A7547E2C2B97CAA1703C6CC3B1BF110E7C3F856B07"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPolygonGluing.lean",
+          "sha256": "AE004AF7A8F2BF88B8468C1D2979E5DE5804B7883764C4650ED68FDA22018578"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPolygonWordCycles.lean",
+          "sha256": "409C22F99CFEFCAE77AF583AE213AE6C4DE63E478AB5D4579D9C91EFC80A9141"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionPolygonWord.lean",
+          "sha256": "746628FE67E69D533077DDEDA8243D431BE07583F5FB9ACAEF267774B487B59C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedPolygonWord.lean",
+          "sha256": "BBAB3847FB7CB6DE9D0B5D4360AE7E32C2E45DB0720E1FB74BCDB3FF5460180C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedCycleSystem.lean",
+          "sha256": "A9DC52344116B994A76E341A090CC3E06DDE250D18F66E87728DEA89F928FEC9"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellCyclicBoundaryWords.lean",
+          "sha256": "C5DBB6B33C569CA25FDC7367D5D3A1AA4E318147CFD6F2CEB95F110C5EE79102"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellIntegerTreeCut.lean",
+          "sha256": "349AE00C7344DF6B3C9AA20DFFBDAEC0EA1FB9160A9A3CAFC7C0FABBFD33BCED"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellIntegerFundamentalCycles.lean",
+          "sha256": "E465A011FCCCDF7479D2CB7A1BA1E01B75F41EEDC4E7A54B00036F43635C6277"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNontrivialTreeCotree.lean",
+          "sha256": "49DF869247EE39B2C5D82787CAA58D53E3EB1D4180A339B902937E78F7F1DEB9"
+        }
+      ],
+      "shorterRoute": "Reuse the existing generic cyclic-word splicing, integer tree-cut and fundamental-cycle theorems unchanged. Adapt only the dissection-specific corner, state and polygon argument to the fully constructed actual radial cover dissection. The actual two-vertex bound supplies the nonempty cotree complement in every genus. A transparent exact fundamental-cycle proposition avoids repeated elaboration of the large actual-field expression without changing any clause or proof limit.",
+      "assumptionsToDischarge": "Existence of a polygon word with actual vertex matching, cotree crossing chains and closed integer subwords, and of integer fundamental cycles with their full universal additive decomposition, all on the same actual marked analytic Euler dissection and tree/cotree witness.",
+      "remaining": "Analytic loop realization, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20."
+    }
+  },
+  "discharged": "The same actual marked analytic Euler dissection and tree/cotree witness has a complete polygon word with actual vertex matching, cotree crossing paths and closed integer subwords. It carries integer fundamental cycles with circulation, complement delta identities, vanishing on the tree and universal additive decomposition. Native cyclic splicing, integer tree cuts and fundamental-cycle proofs are reused; no polygon or cycle-system existence premise remains on the actual consumer.",
+  "remaining": "Analytic loop realization, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-nontrivial-dissection-5-scratch-receipt.json",
+    "sha256": "98DCC87FF86E7926C6258673FF02A26BDA3E97940F0BDB14C845E6C9F97B7EA0"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,80 @@
+{
+  "recordedUTC": "2026-10-25T07:30:39.536785+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceOriginalCellPairingLiftIndices",
+    "SourceOriginalWeilCoverLiftedArcPairing",
+    "SourceOriginalWeilCoverGlobalArcPairing"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCellPairingLiftIndices.lean",
+      "sha256": "A25E30212819E46F76B8253AD4E76E2DF686EFDA6FACC8EF3E396FD06E19383C",
+      "oleanSha256": "0F11A38EDB44E155C3D3ED75C2060235115F9F8E8FE7196A3D12D34915CA5AE4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLiftedArcPairing.lean",
+      "sha256": "35B8EB7C16EAB489FE214296BE215D0A343540A4C5348A18812D8FF2C1031B8F",
+      "oleanSha256": "A88392BDFDC9109261F5CE648D385CDAA73B9C537E7D3BD6FC14FB77A49C198F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverGlobalArcPairing.lean",
+      "sha256": "C55F8B4487E9FC42B136C4B0290D4A0BE4920A7B3696770DDB8418CC39F522BD",
+      "oleanSha256": "D00AB5E652A98CC515CE296479D949C2B7A41B3FA28750C2A2C83330B6AB53FA"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSheetSwap_involutive",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedPair_involutive",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedPair_base",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedPair_orientation",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSignedEquiv_apply_positive",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedPair_positive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_lifted_pairing_transports",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_global_paired_coordinates",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_global_paired_coordinates",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSignedEquiv",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSheetSwap",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedPair",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverGlobalPairedCoordinates"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSheetSwap_involutive",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedPair_involutive",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedPair_base",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedPair_orientation",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSignedEquiv_apply_positive",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedPair_positive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_lifted_pairing_transports",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_global_paired_coordinates",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_global_paired_coordinates"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSignedEquiv",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSheetSwap",
+    "Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedPair",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverGlobalPairedCoordinates"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerGlobalArcPairingAudit3R3.log",
+  "logSha256": "1CFA4E34C922AB47238E8A8E41F4E8A417D9AAB109405C93969A44845C579759",
+  "auditSha256": "377F25215E786495237B181C104B30F7EA5DF3E42939BA757E22F04A5E3C088D",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 24,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 14,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerGlobalArcPairingDependencyAudit3R3.log",
+  "dependencyAuditSha256": "E37B080003352DD60D1825BE11072862131512BBF6F5CAF8E1B789876FEB35D8",
+  "dependencyAuditSourceSha256": "E3CB42736DA6AA937BCF0B3BCB3DA7DF3B5A3122C933E9410CCD84D3D4DC2B69",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_global_paired_coordinates"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric reciprocity -> actual paired cover dissection -> constructed global lifted-arc involution and C1 reversal",
+  "discharged": "The actual original global cover and its proved base pairing, actual exhaustive analytic sheet families and invertible boundary transports construct a global lifted pairing. It is involutive, projects exactly to the base pairing, reverses orientation and retains the complete C1 reversed-arc identity. All global-cover, sheet-family and pairing premises are discharged. CoverGlobalPairedCoordinates is the exact construction statement; its actual existence is proved by the consumer.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Cover vertices and pointwise intersection chains, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-global-arc-pairing-3-reuse-review-20261025.json",
+  "reuseReviewSha256": "894FB2A7CF22E620DD35B4E8404464E64286CBE2CA4B2E3544A9751EFEBB875D",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

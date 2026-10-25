@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> auxiliary Kummer point division -> cover Abel comparison -> compact connected complex cover -> native complex atlas and Hausdorff separation",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexChartedSpace.lean",
+      "sha256": "5A2713EBF52DFC4D23381C8CF27BCB5FFB5FC96D5E7D8A6399AA24F88A8B319B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexChartOrders.lean",
+      "sha256": "7729DE07600EE7E9BDA96CA88A055A1DAA04D1FB1745BF22218AA765775D1FBF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexHausdorff.lean",
+      "sha256": "DF966D5DEF9A2B6E2729F2EB064FE838799D939F55172CEB4AECE1C09E43BED6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPlaceSeparation.lean",
+      "sha256": "C123EC387F676F183B9DB6FE0A21A3597F7242B1B183FE29BCCBAD050E3425AA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexCompact.lean",
+      "sha256": "0302502337DED5124E48EA06E5696DC852C4A2BC88B302AB6129409DE7A6AA4B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexConnected.lean",
+      "sha256": "40B70BE83BAB0705003B6B0311973B5962233EE239F1D96D0D228EB58EDEF5AD"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-analytic-manifold-route-494.json",
+    "sha256": "13CB6309467464522B9BFD884AD1DB7058B8D0EEC97E173216C6FFB5ABCE1986",
+    "review": {
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> auxiliary Kummer point division -> cover Abel comparison -> compact connected complex cover -> native complex atlas and Hausdorff separation",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexChartedSpace.lean",
+          "sha256": "5A2713EBF52DFC4D23381C8CF27BCB5FFB5FC96D5E7D8A6399AA24F88A8B319B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexChartOrders.lean",
+          "sha256": "7729DE07600EE7E9BDA96CA88A055A1DAA04D1FB1745BF22218AA765775D1FBF"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexHausdorff.lean",
+          "sha256": "DF966D5DEF9A2B6E2729F2EB064FE838799D939F55172CEB4AECE1C09E43BED6"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPlaceSeparation.lean",
+          "sha256": "C123EC387F676F183B9DB6FE0A21A3597F7242B1B183FE29BCCBAD050E3425AA"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexCompact.lean",
+          "sha256": "0302502337DED5124E48EA06E5696DC852C4A2BC88B302AB6129409DE7A6AA4B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexConnected.lean",
+          "sha256": "40B70BE83BAB0705003B6B0311973B5962233EE239F1D96D0D228EB58EDEF5AD"
+        }
+      ],
+      "selectedNextStep": "Use the existing native ChartedSpaceCore construction on the already-proved actual Kummer partial charts, preserving their residue coordinate and exact orders in extended charts. Derive Hausdorffness by the existing incomparable rank-one valuation-ring separating function and small residue-value disks.",
+      "shorterRouteAssessment": "No scheme analytification or general simultaneous approximation is needed. The existing original manifold/valuation separation proof applies after the actual local chart inputs now proved for the cover. Global compactness requires its own finite-coordinate fiber-cover argument and connectedness its own clopen obstruction; neither follows just from the atlas and neither is being assumed here.",
+      "remaining": "Compactness and connectedness of the actual cover, Abel comparison and point division, arithmetic descent, original nondegeneracy, component determinant and DUB-17--20 remain open.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending; 16/20; DUB-17--20 OPEN.",
+      "discharged": "The actual place set of the literal original complex torsion cover carries a constructed native complex analytic charted-space/manifold structure and is Hausdorff. Its native extended charts have genuine residue-value readings with exact normalized place orders. Actual inverse chart families are continuous and have open images. The proof uses the constructed compatible uniformizer charts and an actual function separating distinct rank-one valuation rings; no topology, atlas, separation or evaluation-order premise remains in these consumers."
+    }
+  },
+  "discharged": "The actual place set of the literal original complex torsion cover carries a constructed native complex analytic charted-space/manifold structure and is Hausdorff. Its native extended charts have genuine residue-value readings with exact normalized place orders. Actual inverse chart families are continuous and have open images. The proof uses the constructed compatible uniformizer charts and an actual function separating distinct rank-one valuation rings; no topology, atlas, separation or evaluation-order premise remains in these consumers.",
+  "remaining": "Compactness and connectedness of the actual cover, Abel comparison and point division, arithmetic descent, original nondegeneracy, component determinant and DUB-17--20 remain open.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending; 16/20; DUB-17--20 OPEN.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-compatibility-8-scratch-receipt.json",
+    "sha256": "2E46515578E4EEEB979CF85B6B0F1CFC6789832394DC1439180FB26897029FAC"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

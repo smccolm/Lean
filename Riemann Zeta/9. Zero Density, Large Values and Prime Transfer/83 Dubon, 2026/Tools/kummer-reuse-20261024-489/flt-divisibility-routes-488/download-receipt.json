@@ -1,0 +1,33 @@
+{
+  "recordedUTC": "2026-10-25T02:08:40.878280+00:00",
+  "files": [
+    {
+      "path": "S_AlgebraicCurve_Pic0_exists_nsmul_eq.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_AlgebraicCurve_Pic0_exists_nsmul_eq.lean",
+      "gitBlob": "1e25f735edcd54d05e08dd4b224e7a6c62c50e8c",
+      "bytes": 16671,
+      "sha256": "8C081A339FF3EE42371FD9A072DAD43C0060064481830304018774AD44B6DADA"
+    },
+    {
+      "path": "S_AlgebraicCurve_Pic0_exists_zsmul_eq_of_finiteDimensional_ratFunc.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_AlgebraicCurve_Pic0_exists_zsmul_eq_of_finiteDimensional_ratFunc.lean",
+      "gitBlob": "ec6a260eb0f2175ee5061cc7519bed2322e07a93",
+      "bytes": 13506,
+      "sha256": "9B627FE076BD379435C9EBED0AFF7278083A1EBB209BF333A56F1276E8C93D4E"
+    },
+    {
+      "path": "S_AlgebraicCurve_DivisorialWeilPairingData_toHom_injective_of_isCurveOver.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_AlgebraicCurve_DivisorialWeilPairingData_toHom_injective_of_isCurveOver.lean",
+      "gitBlob": "68307ad5001751b5bd688d8f0dddba8de4dd4aa3",
+      "bytes": 16717,
+      "sha256": "F3BA1866D28C8AAA7ACE207818ADAACDEEA919CC4CE54DCB1FDDF5681059E765"
+    },
+    {
+      "path": "S_AlgebraicCurve_Pic0_exists_injective_addMonoidHom_torsion_dlog.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_AlgebraicCurve_Pic0_exists_injective_addMonoidHom_torsion_dlog.lean",
+      "gitBlob": "0b7b5fd101464df60e1171aae4798429dd4dba5b",
+      "bytes": 9210,
+      "sha256": "664EDBF3C518A3297FF8C84065F151FC2EE9AC8B95AFE8F4E8580D10A9F7DB74"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+import SourceRadialDissectionBoundaryChains
+import SourceRadialDissectionGraphConnectivity
+import SourceRadialCotreeComplementConnectivity
+import SourceRadialDissectionTreeCotree
+import SourceOriginalWeilCoverTreeCotree
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.cell_bdry_periodic
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.bd_cellBdryChain
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.Cside_eq_iff
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.sum_side_indicator
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.cellBdryChain_eq
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.Γconn
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.Γstar_conn
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.Γconn_sdiff_cotree
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.exists_tree_cotree
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_tree_cotree
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.hdΓ
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.tlΓ
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.Cside
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.cellBdryChain
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceRadialDissectionBoundaryChains, `SourceRadialDissectionGraphConnectivity, `SourceRadialCotreeComplementConnectivity, `SourceRadialDissectionTreeCotree, `SourceOriginalWeilCoverTreeCotree]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.cell_bdry_periodic, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.bd_cellBdryChain, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.Cside_eq_iff, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.sum_side_indicator, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.cellBdryChain_eq, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.Γconn, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.Γstar_conn, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.Γconn_sdiff_cotree, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.exists_tree_cotree, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_tree_cotree]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.hdΓ, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.tlΓ, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.Cside, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.cellBdryChain]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Kummer Tree Cotree postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Kummer Tree Cotree theorems discovered"
+  logInfo m!"SOURCE ORIGINAL KUMMER TREE COTREE AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceRadialDissectionBoundaryChains
+#lint in SourceRadialDissectionGraphConnectivity
+#lint in SourceRadialCotreeComplementConnectivity
+#lint in SourceRadialDissectionTreeCotree
+#lint in SourceOriginalWeilCoverTreeCotree

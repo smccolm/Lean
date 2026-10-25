@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> coordinate-integral identities for actual cycle loops",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPathPrimitiveDerivative.lean",
+      "sha256": "E4169EFAD7D05A65DF21E4732BBD3422534DAA40F92CB412BB86FC9A7E56EB22"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalArcPathIntegral.lean",
+      "sha256": "C57E658C62613BF25C5A8AE7CDEA970682B037C02DB07C6B832F4D597325D63D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalEdgePathIntegral.lean",
+      "sha256": "4D33D3B1D5F09A843071C19ADFA6679A0E55DFE149699CCFB4A40C27C50E4E76"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalBoundaryArcPaths.lean",
+      "sha256": "8D95D6AA0E7F9810877F22C9544555A3EA4B12274B8572D37CD8009CEB91D6A8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellArcIntegralExtension.lean",
+      "sha256": "46C890E58C64921E7F4ABB0FB1BBFCDE254A84A89C63F3595670B0634BE388F5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellRegularCoefficient.lean",
+      "sha256": "80D7321CEAA53B7A22F314303F6B1AD2DF044027000A5C1DC08652E5FD46DBC3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCoordinateInverse.lean",
+      "sha256": "AE510047EBBA4ED4F54C352A7830283E105EF9434BA624ABB281631B8A2432A2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCycleLoopFamily.lean",
+      "sha256": "BB0C659278D3D5A3D975B26DABFF8AAA01EB6D72D116874AA6743F133B74153D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRegularCellPrimitives.lean",
+      "sha256": "660B1DB837B595D23846ACD9303890BDB449A95DE3C5D9DEE990F0555992A02B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRegularPathPrimitives.lean",
+      "sha256": "F16208E19B7400459D025BA2F631BB6F87B50154849B4BC39D52C0E501C8C8F8"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-coordinate-loops-route-531.json",
+    "sha256": "AC83542E6E91CAE938C0BBAA8A5A0330821B5118DFC9356417F134C49CF09642",
+    "review": {
+      "scope": 531,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> coordinate-integral identities for actual cycle loops",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPathPrimitiveDerivative.lean",
+          "sha256": "E4169EFAD7D05A65DF21E4732BBD3422534DAA40F92CB412BB86FC9A7E56EB22"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalArcPathIntegral.lean",
+          "sha256": "C57E658C62613BF25C5A8AE7CDEA970682B037C02DB07C6B832F4D597325D63D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalEdgePathIntegral.lean",
+          "sha256": "4D33D3B1D5F09A843071C19ADFA6679A0E55DFE149699CCFB4A40C27C50E4E76"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalBoundaryArcPaths.lean",
+          "sha256": "8D95D6AA0E7F9810877F22C9544555A3EA4B12274B8572D37CD8009CEB91D6A8"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellArcIntegralExtension.lean",
+          "sha256": "46C890E58C64921E7F4ABB0FB1BBFCDE254A84A89C63F3595670B0634BE388F5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellRegularCoefficient.lean",
+          "sha256": "80D7321CEAA53B7A22F314303F6B1AD2DF044027000A5C1DC08652E5FD46DBC3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCoordinateInverse.lean",
+          "sha256": "AE510047EBBA4ED4F54C352A7830283E105EF9434BA624ABB281631B8A2432A2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCycleLoopFamily.lean",
+          "sha256": "BB0C659278D3D5A3D975B26DABFF8AAA01EB6D72D116874AA6743F133B74153D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRegularCellPrimitives.lean",
+          "sha256": "660B1DB837B595D23846ACD9303890BDB449A95DE3C5D9DEE990F0555992A02B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRegularPathPrimitives.lean",
+          "sha256": "F16208E19B7400459D025BA2F631BB6F87B50154849B4BC39D52C0E501C8C8F8"
+        }
+      ],
+      "shorterRoute": "Reuse the original affine arc parameter, native interval FTC and change of variables, and the existing continuous-extension lemma. Isolate the real-variable calculation from the actual cover field to avoid duplicated analysis and large elaboration. Apply the proved actual inverse-coordinate calculus and local path primitives, then transfer directly to the existing edge paths and cycle loops.",
+      "assumptionsToDischarge": "The actual cover local-primitive chain rule, boundary coefficient continuity, arc and edge path-integral comparison, and coordinate edge-sum formula for the same constructed cycle loops for every differential regular on the skeleton.",
+      "remaining": "Regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20."
+    }
+  },
+  "discharged": "The actual cover local-primitive chain rule and boundary coefficient continuity give arc and edge path-integral comparisons by native interval FTC and affine substitution. The same constructed cycle loops now satisfy the literal coordinate edge-sum formula for every differential regular on the skeleton. The same actual marked dissection retains all geometry, trees, polygon, integer cycles and normalized regular cell primitives; no coordinate-integral comparison premise remains.",
+  "remaining": "Regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-cell-primitives-3-scratch-receipt.json",
+    "sha256": "300854E8DFE19659BECEB7EF326909E4B4DB1F23E07CA21BBB97C024B92791AC"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

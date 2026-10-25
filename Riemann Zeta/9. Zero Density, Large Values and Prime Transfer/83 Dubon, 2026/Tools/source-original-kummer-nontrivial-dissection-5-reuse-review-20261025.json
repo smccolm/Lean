@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric loop generation and reciprocity -> actual polygon word -> nonempty cotree complement",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedPolygonWord.lean",
+      "sha256": "BBAB3847FB7CB6DE9D0B5D4360AE7E32C2E45DB0720E1FB74BCDB3FF5460180C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLiftedVertexCount.lean",
+      "sha256": "5CEF9ADAE4AC59028C18CD719E887F98B6A1C2C22B032876E0AAF22AC2D1D1E7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLiftedMarkedEulerAssembly.lean",
+      "sha256": "8B6F780F7C9511C77EEBB17C6CC77C27900D8027C260CE9CDEB8FB25E6CB036B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverEulerDissectionData.lean",
+      "sha256": "1274A91ED569401441FAE4E3CE51E24A7427F5F448E507C822EEB815BC82CA41"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverEulerDissection.lean",
+      "sha256": "F2629D0752468FA505BFDD007A6F15C60305B8CC989B8A6A87A8763F19D1319B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverTreeCotree.lean",
+      "sha256": "4B85685213C89C3378FBCD4C8CB74CCD193295F127B8952899E3105795AE3128"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-nontrivial-dissection-route-523.json",
+    "sha256": "58A44978B235FF59046BA7B3EA2456E0DE5FFE92752457493B11A041142819A1",
+    "review": {
+      "scope": 523,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric loop generation and reciprocity -> actual polygon word -> nonempty cotree complement",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedPolygonWord.lean",
+          "sha256": "BBAB3847FB7CB6DE9D0B5D4360AE7E32C2E45DB0720E1FB74BCDB3FF5460180C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLiftedVertexCount.lean",
+          "sha256": "5CEF9ADAE4AC59028C18CD719E887F98B6A1C2C22B032876E0AAF22AC2D1D1E7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalLiftedMarkedEulerAssembly.lean",
+          "sha256": "8B6F780F7C9511C77EEBB17C6CC77C27900D8027C260CE9CDEB8FB25E6CB036B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverEulerDissectionData.lean",
+          "sha256": "1274A91ED569401441FAE4E3CE51E24A7427F5F448E507C822EEB815BC82CA41"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverEulerDissection.lean",
+          "sha256": "F2629D0752468FA505BFDD007A6F15C60305B8CC989B8A6A87A8763F19D1319B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverTreeCotree.lean",
+          "sha256": "4B85685213C89C3378FBCD4C8CB74CCD193295F127B8952899E3105795AE3128"
+        }
+      ],
+      "shorterRoute": "Reuse the proved original two-vertex bound and exact lifted-vertex count, multiplying by the positive actual finite field degree. Retain this bound in the constructed marked analytic Euler dissection and the existing tree/cotree witness. This supplies a nonempty cotree complement even in genus zero; no new positive-genus assumption or independent cover triangulation is needed.",
+      "assumptionsToDischarge": "At least two vertices in the same actual cover dissection/tree witness needed by the existing polygon-word route. Every other geometric, analytic, Euler and tree/cotree conclusion is retained.",
+      "remaining": "Polygon word assembly, analytic loop realization, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20."
+    }
+  },
+  "discharged": "The same actual marked analytic Euler dissection and tree/cotree witness has at least two vertices, including genus zero. The exact lifted vertex count and proved original two-vertex bound discharge the additional condition needed for a nonempty cotree complement. No positive-genus premise is introduced; all previous geometric, analytic, Euler and tree conclusions are retained.",
+  "remaining": "Polygon word assembly, analytic loop realization, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-tree-cotree-5-scratch-receipt.json",
+    "sha256": "973DF3378BC914C1ECFECD74282628014B1C2B8C9297356329BD2C56A0096762"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

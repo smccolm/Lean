@@ -1,0 +1,88 @@
+import SourceCurveFiniteCoordinateDimensionBounds
+import SourceOriginalWeilCoverDimensionBounds
+import SourceOriginalWeilCoverMeromorphicDimension
+import SourceOriginalWeilCoverMeromorphicPoleBound
+import SourceOriginalWeilCoverReadGerms
+import SourceOriginalWeilCoverReadFieldLaws
+import SourceOriginalWeilCoverGermBasisRelation
+import SourceOriginalWeilCoverOnePoleComparison
+import SourceOriginalWeilCoverMeromorphicPoleClearing
+import SourceOriginalWeilCoverMeromorphicFunctionComparison
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceCurve.exists_natural_degree_dimension_bound
+#print axioms Dubon2026.SourceCurve.finite_coordinate_degree_single
+#print axioms Dubon2026.SourceCurve.exists_pole_clearing_function_of_finite_coordinate
+#print axioms Dubon2026.SourceCurve.one_place_dimension_sum_gt_of_bound
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.finite_cover_lSpace
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_degree_dimension_bound
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_pole_clearing_function
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_one_place_dimension_sum_gt
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_relation
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_effective_meromorphic_pole_bound
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_algebraMap
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_zero
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_one
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.meromorphicAt_chartRead
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eventually_chartRead_regular
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_add
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_mul
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.meromorphicOrderAt_chartRead
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eq_zero_of_chartRead_eventuallyEq_zero
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_eventually_ne_zero
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_smul
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_neg
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_inv
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_sum_smul
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_lSpace_order_bound
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_function_of_basis_germ_relation
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_function_of_one_pole_bound
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_pole_clearing
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_function_of_meromorphicAt
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceCurveFiniteCoordinateDimensionBounds, `SourceOriginalWeilCoverDimensionBounds, `SourceOriginalWeilCoverMeromorphicDimension, `SourceOriginalWeilCoverMeromorphicPoleBound, `SourceOriginalWeilCoverReadGerms, `SourceOriginalWeilCoverReadFieldLaws, `SourceOriginalWeilCoverGermBasisRelation, `SourceOriginalWeilCoverOnePoleComparison, `SourceOriginalWeilCoverMeromorphicPoleClearing, `SourceOriginalWeilCoverMeromorphicFunctionComparison]
+  let theorems : Array Name := #[`Dubon2026.SourceCurve.exists_natural_degree_dimension_bound, `Dubon2026.SourceCurve.finite_coordinate_degree_single, `Dubon2026.SourceCurve.exists_pole_clearing_function_of_finite_coordinate, `Dubon2026.SourceCurve.one_place_dimension_sum_gt_of_bound, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.finite_cover_lSpace, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_degree_dimension_bound, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_pole_clearing_function, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_one_place_dimension_sum_gt, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_relation, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_effective_meromorphic_pole_bound, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_algebraMap, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_zero, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_one, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.meromorphicAt_chartRead, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eventually_chartRead_regular, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_add, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_mul, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.meromorphicOrderAt_chartRead, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eq_zero_of_chartRead_eventuallyEq_zero, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_eventually_ne_zero, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_smul, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_neg, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_inv, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_sum_smul, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_lSpace_order_bound, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_function_of_basis_germ_relation, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_function_of_one_pole_bound, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_pole_clearing, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_function_of_meromorphicAt]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Kummer Meromorphic postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Kummer Meromorphic theorems discovered"
+  logInfo m!"SOURCE ORIGINAL KUMMER MEROMORPHIC AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceCurveFiniteCoordinateDimensionBounds
+#lint in SourceOriginalWeilCoverDimensionBounds
+#lint in SourceOriginalWeilCoverMeromorphicDimension
+#lint in SourceOriginalWeilCoverMeromorphicPoleBound
+#lint in SourceOriginalWeilCoverReadGerms
+#lint in SourceOriginalWeilCoverReadFieldLaws
+#lint in SourceOriginalWeilCoverGermBasisRelation
+#lint in SourceOriginalWeilCoverOnePoleComparison
+#lint in SourceOriginalWeilCoverMeromorphicPoleClearing
+#lint in SourceOriginalWeilCoverMeromorphicFunctionComparison

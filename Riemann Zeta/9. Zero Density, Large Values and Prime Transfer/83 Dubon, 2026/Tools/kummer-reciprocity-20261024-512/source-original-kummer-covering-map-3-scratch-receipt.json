@@ -1,0 +1,61 @@
+{
+  "recordedUTC": "2026-10-25T06:21:53.439171+00:00",
+  "date": "2026-10-24 America/Vancouver",
+  "modules": [
+    "SourceAnalyticCoveringComparison",
+    "SourceOriginalWeilRestrictionLocalHomeomorph",
+    "SourceOriginalWeilRestrictionCovering"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAnalyticCoveringComparison.lean",
+      "sha256": "A27747D4DB4E1E0F76C72480C4D1EE63BFD612E03AEF80FD40D464C600791A6B",
+      "oleanSha256": "5FD689F918032ADDC30DB4B882B38AEA9D478FCA5F0E95AF2BC1453DBFCC7843"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRestrictionLocalHomeomorph.lean",
+      "sha256": "77F9991D5D2D27EC8EEC234A32C6E42C2700D2F3CD000977B2155A31303C5D35",
+      "oleanSha256": "4571411CD2DB7F586D232609B1FE372A8C9883CAFB1741C7E73164E8C55387A2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRestrictionCovering.lean",
+      "sha256": "FDF683FD954B0859AC648F3DDF0CEE2DD9F8D5F770A00CCEA032138FE5FF2775",
+      "oleanSha256": "0CD9724F04C7C86D85EADF27D65C7D0F960A76CA3FCD467EE4DE6B8586A74637"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceCurve.exists_nhds_injOn_of_analytic_chart_comparison",
+    "Dubon2026.SourceCurve.isLocalHomeomorph_of_continuous_open_locally_injective",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isLocalHomeomorph_restriction",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isCoveringMap_restriction"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceCurve.exists_nhds_injOn_of_analytic_chart_comparison",
+    "Dubon2026.SourceCurve.isLocalHomeomorph_of_continuous_open_locally_injective",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isLocalHomeomorph_restriction",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isCoveringMap_restriction"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoveringMapAudit3R2.log",
+  "logSha256": "AFCCC34EF0161474E675EBB771579A438AEBA44ADBCA5E0DD2B6133CA6DE471B",
+  "auditSha256": "CA0B37854FBCC78092EA76F2C72E06FE14A03ABCC7EAC642C2C04CEB4BC6B687",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 4,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 9,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCoveringMapDependencyAudit3R2.log",
+  "dependencyAuditSha256": "4E0DCB71E50C1C0355B5DDE5BE13B575D66275027315CEFBDFD8DA48A97E4D4E",
+  "dependencyAuditSourceSha256": "3A8DC56BD553CAB4D0BD22A163D6F0C2CCB9AB163720B8E3423D992AD1F0D596",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isCoveringMap_restriction"
+  ],
+  "dependency": "DUB-17/18 -> auxiliary point division -> actual cover Abel converse -> cover_isPrincipal_of_raw_reciprocity geometric clauses (loop generation, bilinear/third-kind reciprocity) -> lift the existing original dissection -> actual restriction is a covering map",
+  "discharged": "The actual unramified place restriction is a local homeomorphism and a covering map. Nonzero-derivative chart comparison gives local injectivity, already proved continuity and openness supply the local homeomorphism, and native compact Hausdorff covering theory supplies the covering property. No covering-map or local-homeomorphism premise remains.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Actual analytic cell lifts and cover dissection/reciprocity, unconditional cover Abel converse, point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations stay open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-covering-map-3-reuse-review-20261024.json",
+  "reuseReviewSha256": "76DCFF16FF24EE4848A72DB878851DA0995154F9A67F79B8B8008EF50E6AA08A",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

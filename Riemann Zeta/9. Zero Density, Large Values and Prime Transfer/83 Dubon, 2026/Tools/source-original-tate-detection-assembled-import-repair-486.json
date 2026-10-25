@@ -1,0 +1,12 @@
+{
+  "reason": "Frozen scope 480 predates promotion 7673. Its scratch pairing imports clash with production declarations used by the new assembled cover proof. Preserve scope 480 source and audit, compile this fresh import-only copy, and map both source module names to the one production module on promotion.",
+  "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilDetection.lean",
+  "sourceSha256": "FAA387275F28600AF5DE1CD5BCEDEF3F350627F4F2724E50B1221C79174AFDD2",
+  "successor": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilDetectionAssembled.lean",
+  "successorSha256": "A8D3290C97705F60C3653FD0F4C477C067A03E6B3963E5482A2AFBE1F72817D9",
+  "replacement": [
+    "import SourceOriginalTateWeilLinearity",
+    "import Dubon2026.SourceOriginalTateWeilLinearity"
+  ],
+  "bodyIdentical": true
+}

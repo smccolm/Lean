@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> regular and meromorphic period generation and reciprocity -> arbitrary regular-loop generation by constructed complementary periods",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticCells.lean",
+      "sha256": "AA18CDD9BED34F32E38389D4EFB6EC10F7E1CA7E7022F0759226ED13FE2F6430"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellCarrierNeighborhoods.lean",
+      "sha256": "335CFA1727955C80E312CD7574C8B96D8CE0DBEF68FD2021F1ED813CA7BBFF24"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPairedArcEquality.lean",
+      "sha256": "7489A2188698343333E9001B450493D17A0482BB988D7DB7D0A07725E93819D5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellJumpDifferences.lean",
+      "sha256": "EC4DC1AD9CC2805814F5E73D720B47FC0353098FB165AE586B97FD874B95FA37"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCoordinatePrimitiveComparison.lean",
+      "sha256": "6C045BA4CA9E915B256FEDA61D2D47417218774C31EBBED7C93BBD7EF4265856"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPrimitiveLocalDifference.lean",
+      "sha256": "35B4CBBBB260DE5B7DF8634E152B953F1EB5F971738CA5D719D8711541DEF703"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePathAtlasJumpClosure.lean",
+      "sha256": "153AC655373A4994DF7CEE29FB9BA36F0FBD14B04301F08BCDB91892771C6C05"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPathPrimitiveJumps.lean",
+      "sha256": "57443D55967B87182FFB7D98FF2ED15D6790FDC31CA9C626906C39CCBA87F894"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularLoopJumpClosure.lean",
+      "sha256": "482C7A14F151EBA43C7FC56283F8DF6D2374ED64D8DB6BCF648A64513C4AB6C0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCyclePeriodData.lean",
+      "sha256": "6411ACC69197AA3CACE1E30BA714D4164207BBDB099690C283589F6A5E9127A4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellCoefficientPullback.lean",
+      "sha256": "9E263300CE8111BD3BC1F68C38BE260858F8AE00D41EFF69F25D62415DD0F21C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialReversedArcImages.lean",
+      "sha256": "F68B25E2B35AA88DA78E123DCE0F492E5DF21D82799E7C365CC386C0B745582F"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-regular-generation-route-538.json",
+    "sha256": "7EB5E26822EC1CF7F864E59D825627571950A770D7655AF674B3D0AB85E17390",
+    "review": {
+      "scope": 538,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> regular and meromorphic period generation and reciprocity -> arbitrary regular-loop generation by constructed complementary periods",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticCells.lean",
+          "sha256": "AA18CDD9BED34F32E38389D4EFB6EC10F7E1CA7E7022F0759226ED13FE2F6430"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellCarrierNeighborhoods.lean",
+          "sha256": "335CFA1727955C80E312CD7574C8B96D8CE0DBEF68FD2021F1ED813CA7BBFF24"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPairedArcEquality.lean",
+          "sha256": "7489A2188698343333E9001B450493D17A0482BB988D7DB7D0A07725E93819D5"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellJumpDifferences.lean",
+          "sha256": "EC4DC1AD9CC2805814F5E73D720B47FC0353098FB165AE586B97FD874B95FA37"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCoordinatePrimitiveComparison.lean",
+          "sha256": "6C045BA4CA9E915B256FEDA61D2D47417218774C31EBBED7C93BBD7EF4265856"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPrimitiveLocalDifference.lean",
+          "sha256": "35B4CBBBB260DE5B7DF8634E152B953F1EB5F971738CA5D719D8711541DEF703"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePathAtlasJumpClosure.lean",
+          "sha256": "153AC655373A4994DF7CEE29FB9BA36F0FBD14B04301F08BCDB91892771C6C05"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPathPrimitiveJumps.lean",
+          "sha256": "57443D55967B87182FFB7D98FF2ED15D6790FDC31CA9C626906C39CCBA87F894"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularLoopJumpClosure.lean",
+          "sha256": "482C7A14F151EBA43C7FC56283F8DF6D2374ED64D8DB6BCF648A64513C4AB6C0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCyclePeriodData.lean",
+          "sha256": "6411ACC69197AA3CACE1E30BA714D4164207BBDB099690C283589F6A5E9127A4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellCoefficientPullback.lean",
+          "sha256": "9E263300CE8111BD3BC1F68C38BE260858F8AE00D41EFF69F25D62415DD0F21C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialReversedArcImages.lean",
+          "sha256": "F68B25E2B35AA88DA78E123DCE0F492E5DF21D82799E7C365CC386C0B745582F"
+        }
+      ],
+      "shorterRoute": "Reuse the generic path-atlas theorem unchanged, the already proved actual coefficient pullback and primitive uniqueness, and native integer-span membership. Reuse reversed radial arc images rather than reprove the intermediate-value argument. Adapt only the necessary closed-carrier, local cell-comparison and path-to-jump consumers to the actual cover. No new homotopy, period-discreteness or period-basis construction is needed for this obligation.",
+      "assumptionsToDischarge": "Every actual regular loop has common integer coefficients for the finite regular-differential family in the same 2g complementary loop periods, with all geometric, analytic, primitive and integer-matrix inputs supplied by the actual construction.",
+      "remaining": "Meromorphic loop generation, exact word-matrix unimodularity, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20."
+    }
+  },
+  "discharged": "Every actual loop has common integer coefficients for the finite regular-differential family in the same 2g complementary loop periods. Actual compact carriers, paired arcs and intersection chains construct the atlas. The existing coefficient pullback and primitive uniqueness compare arbitrary path primitives to cell readings, and the unchanged atlas theorem places the loop vector in the jump subgroup. The actual jump-period matrix and native integer-span membership give the coefficients. The assembled actual consumer supplies all coordinate, regularity, primitive, jump and matrix inputs; no regular-loop-generation hypothesis remains.",
+  "remaining": "Meromorphic loop generation, exact word-matrix unimodularity, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-period-matrix-7-scratch-receipt.json",
+    "sha256": "B405083791BF05E0027658A529EA14F70B9A387A1C88897BF5EC5EF3A2E6499A"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

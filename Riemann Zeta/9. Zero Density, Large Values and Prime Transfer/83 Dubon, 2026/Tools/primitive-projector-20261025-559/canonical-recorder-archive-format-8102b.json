@@ -1,0 +1,15 @@
+{
+  "reason": "Archived Lean audit sources use the established .lean.txt convention; bytes, original scratch sources, used logs and receipt hashes are unchanged.",
+  "renamed": [
+    {
+      "previous": "Tools/primitive-projector-20261025-559/SourcePrimitiveProjectorFocusedGenerated8102b.lean",
+      "current": "Tools/primitive-projector-20261025-559/SourcePrimitiveProjectorFocusedGenerated8102b.lean.txt",
+      "sha256": "92EDCA6D3AA7F7F6E308331C72AA055ACF1F6C4ED3FA58D641F92612113056BE"
+    },
+    {
+      "previous": "Tools/primitive-projector-20261025-559/SourcePrimitiveProjectorGlobalGenerated8102b.lean",
+      "current": "Tools/primitive-projector-20261025-559/SourcePrimitiveProjectorGlobalGenerated8102b.lean.txt",
+      "sha256": "5F596041BC9E23C99E5D23746A7ACF8A5F919A12B3893F78E06C0A8CDF1A600E"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+import SourceMeromorphicKummerRoots
+import SourceOriginalWeilLocalKummerRoot
+import SourceMeromorphicLaurentRealization
+import SourceOriginalChartLaurentHom
+import SourceOriginalWeilConvergentKummerRoot
+import SourceOriginalWeilLocalSplittingField
+import SourceCurveNormalizedLaurentPlace
+import SourceCurveRealizedLaurentPlace
+import SourceOriginalWeilLocalCoverPlace
+import SourceCurveConvergentCommonDisc
+import SourceCurveConvergentGaloisPlaces
+import SourceCurveConvergentKummerPlaces
+import SourceOriginalWeilEveryLocalCover
+import SourceCurveNormalizedCommonDisc
+import SourceOriginalWeilCoverDisc
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.AnalyticFiber.exists_analytic_unit_kummer_factor
+#print axioms Dubon2026.SourceFunctionField.AnalyticFiber.exists_meromorphic_kummer_root
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalWeil_local_kummer_root
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.represents_analytic
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.pow
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.zpow
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.eq_series
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.mem_realizedField
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.exists_realized_represents
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.chartLaurent_represents
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.chartLaurent_algebraMap
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.chartLaurent_add
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.chartLaurent_mul
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.chartLaurentHom_order
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_convergent_kummer_root
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_local_splittingField
+#print axioms Dubon2026.SourceCurve.Place.exists_place_of_laurent_order_one
+#print axioms Dubon2026.SourceCurve.Place.exists_place_of_laurent_extension
+#print axioms Dubon2026.SourceCurve.Place.exists_place_of_realized_laurent_extension
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_local_cover_place
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.exists_common_disc_of_generators
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.exists_common_disc_of_finite_coordinate
+#print axioms Dubon2026.SourceCurve.Place.exists_normalized_convergent_embedding
+#print axioms Dubon2026.SourceCurve.Place.exists_normalized_convergent_kummer_embedding
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_normalized_local_embedding
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalWeil_complex_kummer_unramified
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.exists_normalized_common_disc
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.exists_normalized_common_disc_with
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_cover_common_disc
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.chartLaurent
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.chartLaurentHom
+#print axioms Dubon2026.SourceCurve.Place.kummerFinite
+#print axioms Dubon2026.SourceCurve.Place.kummerIntegral
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.coverIntegral
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceMeromorphicKummerRoots, `SourceOriginalWeilLocalKummerRoot, `SourceMeromorphicLaurentRealization, `SourceOriginalChartLaurentHom, `SourceOriginalWeilConvergentKummerRoot, `SourceOriginalWeilLocalSplittingField, `SourceCurveNormalizedLaurentPlace, `SourceCurveRealizedLaurentPlace, `SourceOriginalWeilLocalCoverPlace, `SourceCurveConvergentCommonDisc, `SourceCurveConvergentGaloisPlaces, `SourceCurveConvergentKummerPlaces, `SourceOriginalWeilEveryLocalCover, `SourceCurveNormalizedCommonDisc, `SourceOriginalWeilCoverDisc]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.AnalyticFiber.exists_analytic_unit_kummer_factor, `Dubon2026.SourceFunctionField.AnalyticFiber.exists_meromorphic_kummer_root, `Dubon2026.SourceFunctionField.OriginalChart.originalWeil_local_kummer_root, `Dubon2026.SourceFunctionField.CuspTaylor.represents_analytic, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.pow, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.zpow, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.eq_series, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.mem_realizedField, `Dubon2026.SourceFunctionField.CuspTaylor.exists_realized_represents, `Dubon2026.SourceFunctionField.OriginalChart.chartLaurent_represents, `Dubon2026.SourceFunctionField.OriginalChart.chartLaurent_algebraMap, `Dubon2026.SourceFunctionField.OriginalChart.chartLaurent_add, `Dubon2026.SourceFunctionField.OriginalChart.chartLaurent_mul, `Dubon2026.SourceFunctionField.OriginalChart.chartLaurentHom_order, `Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_convergent_kummer_root, `Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_local_splittingField, `Dubon2026.SourceCurve.Place.exists_place_of_laurent_order_one, `Dubon2026.SourceCurve.Place.exists_place_of_laurent_extension, `Dubon2026.SourceCurve.Place.exists_place_of_realized_laurent_extension, `Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_local_cover_place, `Dubon2026.SourceFunctionField.CuspTaylor.exists_common_disc_of_generators, `Dubon2026.SourceFunctionField.CuspTaylor.exists_common_disc_of_finite_coordinate, `Dubon2026.SourceCurve.Place.exists_normalized_convergent_embedding, `Dubon2026.SourceCurve.Place.exists_normalized_convergent_kummer_embedding, `Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_normalized_local_embedding, `Dubon2026.SourceFunctionField.OriginalChart.originalWeil_complex_kummer_unramified, `Dubon2026.SourceFunctionField.CuspTaylor.exists_normalized_common_disc, `Dubon2026.SourceFunctionField.CuspTaylor.exists_normalized_common_disc_with, `Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_cover_common_disc]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.OriginalChart.chartLaurent, `Dubon2026.SourceFunctionField.OriginalChart.chartLaurentHom, `Dubon2026.SourceCurve.Place.kummerFinite, `Dubon2026.SourceCurve.Place.kummerIntegral, `Dubon2026.SourceFunctionField.OriginalChart.coverIntegral]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Kummer Analytic Entry postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Kummer Analytic Entry theorems discovered"
+  logInfo m!"SOURCE ORIGINAL KUMMER ANALYTIC ENTRY AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceMeromorphicKummerRoots
+#lint in SourceOriginalWeilLocalKummerRoot
+#lint in SourceMeromorphicLaurentRealization
+#lint in SourceOriginalChartLaurentHom
+#lint in SourceOriginalWeilConvergentKummerRoot
+#lint in SourceOriginalWeilLocalSplittingField
+#lint in SourceCurveNormalizedLaurentPlace
+#lint in SourceCurveRealizedLaurentPlace
+#lint in SourceOriginalWeilLocalCoverPlace
+#lint in SourceCurveConvergentCommonDisc
+#lint in SourceCurveConvergentGaloisPlaces
+#lint in SourceCurveConvergentKummerPlaces
+#lint in SourceOriginalWeilEveryLocalCover
+#lint in SourceCurveNormalizedCommonDisc
+#lint in SourceOriginalWeilCoverDisc

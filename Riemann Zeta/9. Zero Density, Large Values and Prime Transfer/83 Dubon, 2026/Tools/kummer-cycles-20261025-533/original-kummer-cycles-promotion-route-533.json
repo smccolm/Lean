@@ -1,0 +1,38 @@
+{
+  "recordedUTC": "2026-10-25T10:25:27.048304+00:00",
+  "scopeIds": [
+    522,
+    523,
+    524,
+    525,
+    526,
+    529,
+    530,
+    531,
+    532
+  ],
+  "receipts": {
+    "source-original-kummer-tree-cotree-5-scratch-receipt.json": "973DF3378BC914C1ECFECD74282628014B1C2B8C9297356329BD2C56A0096762",
+    "source-original-kummer-nontrivial-dissection-5-scratch-receipt.json": "98DCC87FF86E7926C6258673FF02A26BDA3E97940F0BDB14C845E6C9F97B7EA0",
+    "source-original-kummer-polygon-8-scratch-receipt.json": "1CB18C017CC258C0946F98403E530EA799A3D574D0FB39D301E88F1C560B2DF6",
+    "source-original-kummer-cycle-loops-11-scratch-receipt.json": "963AED4FBA0C83DF76868A74F41BEA4C972CA1A266CA67ADBF4933D88FB32965",
+    "source-original-kummer-coordinate-inverse-2-scratch-receipt.json": "CD6E89C1F3C8D4D8A0E8DCC2CE69E909B4D51FDF3971049293B2A84A4CED3BA3",
+    "source-original-kummer-cell-calculus-7-scratch-receipt.json": "BF01AAE5E208B13AD2B51727E76FE8355E6C30F7335EB35E775BE2F2C8CA6477",
+    "source-original-kummer-cell-primitives-3-scratch-receipt.json": "300854E8DFE19659BECEB7EF326909E4B4DB1F23E07CA21BBB97C024B92791AC",
+    "source-original-kummer-coordinate-loops-8-scratch-receipt.json": "467AE0FA631D6C2C4ECCE744D2C8CAB8B46D4154A54E545C9CBD7618A4BD4AE2",
+    "source-original-kummer-normalized-jumps-7-scratch-receipt.json": "3840143736B80A6EC3B379F56547774A90EF33D8F29F5F736368E8BDF68E5E27"
+  },
+  "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+  "chain": "actual residual association -> primitive Frobenius determinant -> nonzero required Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary Kummer point division -> cover Abel converse -> regular/meromorphic period generation and bilinear/third-kind reciprocity -> actual cycle loops, coordinate edge integrals and normalized primitive jumps",
+  "discharged": "The same actual marked analytic Euler dissection has at least two vertices in every genus, a primal tree and dual tree with exactly 2g complementary edges, a complete polygon word and integer fundamental cycles with universal additive decomposition. Actual skeleton loops are chosen before the differential and satisfy the coordinate edge-sum formula for every differential regular on the skeleton. The actual cover regular locus, inverse-coordinate and one-form calculus, analytic cell coefficients and coefficient transition are proved. Native interval FTC identifies actual path integrals with literal coordinate boundary integrals. Every actual regular differential family has constructed cell neighborhoods and primitives. Actual paired overlaps and coefficient transformations construct constant edge jumps; integer-tree transport makes dual-tree jumps zero and normalizes the root primitive. The final actual consumer retains all geometric and analytic data on the same dissection without tree, polygon, loop, integral-comparison, primitive, jump or normalization existence premises.",
+  "remaining": "Regular and meromorphic period generation and bilinear/third-kind reciprocity remain unproved on this actual cover dissection. Unconditional cover Abel converse and actual auxiliary point-difference division remain open. Arithmetic descent, original pairing nondegeneracy, nonzero required Hecke-component restriction, separate determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "reuse": "Each scope records exact native proofs checked before expansion. Reuse the original integer graph/tree/cotree, cyclic word splicing, fundamental cycles, affine arc parameters, radial neighborhoods and primitives, native interval FTC and substitution, finite differential support, actual chart transition and path primitive laws. The proved cover change law supplies the one-form law directly, avoiding another Kaehler-expression calculation. Isolating the pure affine FTC calculation controls elaboration without raising proof limits. Existing reversed arc-image equality supplies paired overlap; the original integer boundary calculation normalizes jumps. Adapt only the source consumers tied to the base field to the literal cover. No general Jacobian representability stack, new topological homology theory, external package or changed root pins is introduced.",
+  "promotion": "Qualify only scratch imports and preserve audited mathematical statements, proof bodies and comments. Reconcile exact scratch and production declaration ownership. Completed sequential canonical 7881 verification remains a hard prerequisite to production mutation.",
+  "modules": 56,
+  "explicitQueries": 109,
+  "theoremRegistrations": 82,
+  "constructionRegistrations": 27,
+  "exhaustiveScratchSum": 169,
+  "proofValueEdges": 139,
+  "expectedProductionModules": 7937
+}

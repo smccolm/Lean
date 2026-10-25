@@ -1,0 +1,254 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-kummer-abel-promotion-route-503.json",
+      "path": "Tools/kummer-abel-20261024-503/original-kummer-abel-promotion-route-503.json",
+      "sha256": "0913536FF70F09925714F4535E1097CCDA0AEBEDA7702FF79101E72E87146D2F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-compact-7-scratch-receipt.json",
+      "path": "Tools/kummer-abel-20261024-503/source-original-kummer-compact-7-scratch-receipt.json",
+      "sha256": "8F32E368401FE2C4DCAD91CBE965B31BFB7B0DDAE02ECD5E06B5D5E57B867E45"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-connected-5-scratch-receipt.json",
+      "path": "Tools/kummer-abel-20261024-503/source-original-kummer-connected-5-scratch-receipt.json",
+      "sha256": "F3CFF050E67BA6660635E1D3710F3FEBD8DFBE847CC20D917999EAC6E7A857FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-meromorphic-10-scratch-receipt.json",
+      "path": "Tools/kummer-abel-20261024-503/source-original-kummer-meromorphic-10-scratch-receipt.json",
+      "sha256": "CBBD54D0E0BAFEAEF6F16118641E8CF4622A96029DFC629AAB8DF167BDB83E15"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-differential-10-scratch-receipt.json",
+      "path": "Tools/kummer-abel-20261024-503/source-original-kummer-differential-10-scratch-receipt.json",
+      "sha256": "7759F4D5CEB402C336F340EAECC094D9A1CEF1033288679BCE71FA8F768E09CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-abel-vector-5-scratch-receipt.json",
+      "path": "Tools/kummer-abel-20261024-503/source-original-kummer-abel-vector-5-scratch-receipt.json",
+      "sha256": "9654F7E85FE4B9424A0165837328B5FE280FC08DAD555B83168E55D6624109CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-jacobi-inversion-8-scratch-receipt.json",
+      "path": "Tools/kummer-abel-20261024-503/source-original-kummer-jacobi-inversion-8-scratch-receipt.json",
+      "sha256": "556CB3D27535825B73930132F3C349F44A628A4A91C0C890D6B953B76355AF9E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-two-pole-5-scratch-receipt.json",
+      "path": "Tools/kummer-abel-20261024-503/source-original-kummer-two-pole-5-scratch-receipt.json",
+      "sha256": "A5E6E3EAEFE8E6F1CBBBA01910F3DF373B7926DFE95CDBA11970CA7C5396DFD1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCompactAudit7.log",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerCompactAudit7.log",
+      "sha256": "B9D51DBB12189D49EFF8371130201FB5CC8A49D1242E12CC165B3694A1702A23"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCompactAudit7.lean",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerCompactAudit7.lean.txt",
+      "sha256": "6C34C8F1D72201030E6CE108B1DC4F8BFC24E815D40E15DCAE97879FAA59B499"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCompactAudit7.exit",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerCompactAudit7.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCompactDependencyAudit7.log",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerCompactDependencyAudit7.log",
+      "sha256": "6895D17F40EC7AF51F909E315A98A228908998FF050C6F7F64E41B7FF4B3302E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCompactDependencyAudit7.lean",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerCompactDependencyAudit7.lean.txt",
+      "sha256": "D6D172624EE4C70BF0A73516CE99D2CC04FE0CF1D89AF3903CFB7ADDD08A1220"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCompactDependencyAudit7.exit",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerCompactDependencyAudit7.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerConnectedAudit5.log",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerConnectedAudit5.log",
+      "sha256": "026ECBD1E413975BB3766DF4278AB9084C1B30DF1A45692E6FB79C00CAD5642D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerConnectedAudit5.lean",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerConnectedAudit5.lean.txt",
+      "sha256": "059E0BFD46B1D67130D7B5C4ACA23EB19FC3ABFB5E2D032FB1B0D0B61ACCF3C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerConnectedAudit5.exit",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerConnectedAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerConnectedDependencyAudit5.log",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerConnectedDependencyAudit5.log",
+      "sha256": "8E28AD722C749BF9B208E47537D008615486283FDCD143EF9C0D18D6CD0A4CA2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerConnectedDependencyAudit5.lean",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerConnectedDependencyAudit5.lean.txt",
+      "sha256": "D89542347F3FAD400648FDBD886B875B6E35BD57C1F5CB6D5C29E65BE3851C37"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerConnectedDependencyAudit5.exit",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerConnectedDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicAudit10.log",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerMeromorphicAudit10.log",
+      "sha256": "866F5633A177F6B831A5D3BBABE395B84CD6CE5986E9739489C11630E414852E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicAudit10.lean",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerMeromorphicAudit10.lean.txt",
+      "sha256": "B47F2921329B63205B608F55489E82AF9AD8F3A960F7D79A5D65E45F2214113C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicAudit10.exit",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerMeromorphicAudit10.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicDependencyAudit10.log",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerMeromorphicDependencyAudit10.log",
+      "sha256": "1CF97FF8EB4C60646AFAA1E45280E56178ADD5F257137AC061795AB5136BAB7C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicDependencyAudit10.lean",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerMeromorphicDependencyAudit10.lean.txt",
+      "sha256": "ED152E514E69A6E88B73FEFAC7AD886C4783829FEC83738B894FA6EFF4DCAAB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicDependencyAudit10.exit",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerMeromorphicDependencyAudit10.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDifferentialAudit10.log",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerDifferentialAudit10.log",
+      "sha256": "5510E63CA4B29704DA328BD2622949109CF295CF7DB2AF79680B28CA44932BCD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDifferentialAudit10.lean",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerDifferentialAudit10.lean.txt",
+      "sha256": "7116F2A49507696E8BF5055E94A6083AD91AEBE2614B65DB359D88E223D0194F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDifferentialAudit10.exit",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerDifferentialAudit10.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDifferentialDependencyAudit10.log",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerDifferentialDependencyAudit10.log",
+      "sha256": "6DC6F678604DC21BD0E1FE0988DD364FF9EFEBB56251953611EAA056B69FA4F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDifferentialDependencyAudit10.lean",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerDifferentialDependencyAudit10.lean.txt",
+      "sha256": "F64760E700082F55DA43E9F4CA269D433EACB80E780367324AE4E68075966697"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDifferentialDependencyAudit10.exit",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerDifferentialDependencyAudit10.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAbelVectorAudit5.log",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerAbelVectorAudit5.log",
+      "sha256": "0EAEDD8D14BDA8FDD6D2D50A0590CFC1B4A4370BDDA5F331AC19DA33DBD20516"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAbelVectorAudit5.lean",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerAbelVectorAudit5.lean.txt",
+      "sha256": "A641BECB34464AD9472E80E359A06B09DA50763C7474DE40E425E9624E532152"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAbelVectorAudit5.exit",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerAbelVectorAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAbelVectorDependencyAudit5.log",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerAbelVectorDependencyAudit5.log",
+      "sha256": "845711954E3D39587C355977DF1E7736E0929646622121A59AADFD65A2E829AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAbelVectorDependencyAudit5.lean",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerAbelVectorDependencyAudit5.lean.txt",
+      "sha256": "7265B320C07953CAC9E02C7510ED022AA1368C738DE7BDFB08FD774A0BD309D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAbelVectorDependencyAudit5.exit",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerAbelVectorDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerJacobiInversionAudit8.log",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerJacobiInversionAudit8.log",
+      "sha256": "A264BD1A213E7F7C076266375E67D65A0994C95DCCD40574F249D6501DC8642C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerJacobiInversionAudit8.lean",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerJacobiInversionAudit8.lean.txt",
+      "sha256": "783D8FECF6204D70D032C6D146CFB7F93764D672B9C163B2D4007CE87E37B23F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerJacobiInversionAudit8.exit",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerJacobiInversionAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerJacobiInversionDependencyAudit8.log",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerJacobiInversionDependencyAudit8.log",
+      "sha256": "9701C7040A129B345CAE090383D686ED4518F34A99954107D2264A9CF1C11911"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerJacobiInversionDependencyAudit8.lean",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerJacobiInversionDependencyAudit8.lean.txt",
+      "sha256": "F1FD11F954F4D5DCA0A0ECFCBB971C3104C6801A89BF89F0937E52C85F3ACD6F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerJacobiInversionDependencyAudit8.exit",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerJacobiInversionDependencyAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerTwoPoleAudit5.log",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerTwoPoleAudit5.log",
+      "sha256": "528F7E3436EC2C033942C08D835486A4FC02F2CD96474A7B18400579BCB9F6F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerTwoPoleAudit5.lean",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerTwoPoleAudit5.lean.txt",
+      "sha256": "331877F6217739FF1881D0CF4E06BDF793A81A292C701E7D5CF2BAFF3B45C23D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerTwoPoleAudit5.exit",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerTwoPoleAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerTwoPoleDependencyAudit5.log",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerTwoPoleDependencyAudit5.log",
+      "sha256": "1C36296A4453D9E7BC92E9EC48C767CC4DB04AB8CFF1A224DF5D6393F7F00243"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerTwoPoleDependencyAudit5.lean",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerTwoPoleDependencyAudit5.lean.txt",
+      "sha256": "A91F270AEADB3B25E1DBA34A306ED5167731CEC72371AB8717106DD4293B0A34"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerTwoPoleDependencyAudit5.exit",
+      "path": "Tools/kummer-abel-20261024-503/SourceOriginalKummerTwoPoleDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ]
+}

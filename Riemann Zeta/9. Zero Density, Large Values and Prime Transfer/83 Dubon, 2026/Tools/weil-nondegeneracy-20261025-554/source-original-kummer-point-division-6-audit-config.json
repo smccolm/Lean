@@ -1,0 +1,48 @@
+{
+  "modules": [
+    "SourcePeriodDivision",
+    "SourceCurvePicardDivisionFromPrincipal",
+    "SourceCurvePicardDivisionFromAbel",
+    "SourceOriginalWeilCoverClassDivision",
+    "SourceOriginalWeilCoverPointDivision",
+    "SourceOriginalComplexWeilDetection"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.PeriodDivision.integer_multiple_mem_of_scaled_difference",
+    "Dubon2026.SourceCurve.Pic0.exists_nsmul_mk_of_principal_difference",
+    "Dubon2026.SourceCurve.Pic0.exists_nsmul_mk_of_abel_data",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_degree_zero_class_has_division",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_point_difference_has_division",
+    "Dubon2026.SourceFunctionField.originalComplexWeilPairing_detects"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.PeriodDivision.integer_multiple_mem_of_scaled_difference",
+    "Dubon2026.SourceCurve.Pic0.exists_nsmul_mk_of_principal_difference",
+    "Dubon2026.SourceCurve.Pic0.exists_nsmul_mk_of_abel_data",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_degree_zero_class_has_division",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_point_difference_has_division",
+    "Dubon2026.SourceFunctionField.originalComplexWeilPairing_detects"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.PeriodDivision.integer_multiple_mem_of_scaled_difference",
+    "Dubon2026.SourceCurve.Pic0.exists_nsmul_mk_of_principal_difference",
+    "Dubon2026.SourceCurve.Pic0.exists_nsmul_mk_of_abel_data",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_degree_zero_class_has_division",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_point_difference_has_division",
+    "Dubon2026.SourceFunctionField.originalComplexWeilPairing_detects",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_jacobi_divisor",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_abelJacobi_mem",
+    "Dubon2026.SourceFunctionField.originalPic0_nonzero_torsion_kummer_cover",
+    "Dubon2026.SourceFunctionField.exists_originalWeilKummer_detecting_datum",
+    "Dubon2026.SourceFunctionField.originalWeilPairing_eq_pairing",
+    "Dubon2026.SourceFunctionField.originalWeilKummerDivision_principal",
+    "Dubon2026.SourceFunctionField.originalWeilKummerDivision_norm_orders",
+    "Dubon2026.SourceFunctionField.exists_originalWeilKummer_norm_avoiding",
+    "Dubon2026.SourceFunctionField.exists_originalWeilKummer_moved_datum",
+    "Dubon2026.SourceCurve.Pic0.mk_eq_zero_iff"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.originalComplexWeilPairing_detects"
+  ]
+}

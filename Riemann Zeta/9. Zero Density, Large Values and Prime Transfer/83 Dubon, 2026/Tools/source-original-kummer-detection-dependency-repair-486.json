@@ -1,0 +1,10 @@
+{
+  "reason": "The first expected edge omitted the actual OriginalChart namespace. Preserve failed audit and point the successor to the existing proved coordinate-surjectivity declaration; no proof or dependency requirement is removed.",
+  "failedSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionDependencyAudit11.lean",
+  "failedLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionDependencyAudit11.log",
+  "failedSha256": "E9C4A4AE7F8F9E5685F9D7CE7F942DFB6AF0D4FED055814A12B1594BAD448493",
+  "old": "Dubon2026.SourceFunctionField.originalTateTorsionCoordinate_surjective",
+  "new": "Dubon2026.SourceFunctionField.OriginalChart.originalTateTorsionCoordinate_surjective",
+  "successor": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerDetectionDependencyAudit11R2.lean",
+  "proofEdits": false
+}

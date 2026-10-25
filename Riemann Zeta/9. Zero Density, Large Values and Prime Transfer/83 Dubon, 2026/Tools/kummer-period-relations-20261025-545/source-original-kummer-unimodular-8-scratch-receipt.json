@@ -1,0 +1,106 @@
+{
+  "recordedUTC": "2026-10-25T11:47:37.654884+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceRadialComplementaryWordMatrix",
+    "SourcePeriodGeneratorsRealSpan",
+    "SourceOriginalWeilCoverComplementaryPeriodCoordinates",
+    "SourceOriginalWeilCoverComplementaryPeriodSpan",
+    "SourceOriginalWeilCoverComplementaryWordMatrix",
+    "SourceRadialUnimodularPeriodPolygon",
+    "SourceOriginalWeilCoverUnimodularPeriodPolygon",
+    "SourceOriginalWeilCoverUnimodularCycleData"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialComplementaryWordMatrix.lean",
+      "sha256": "44E20208DB91B2ADD7B3A693FDD7DE68EFE5FB37BE5AAF841645E64399A0E8DA",
+      "oleanSha256": "6E84D02776ED0B16C9F748DFCB41BD69EBC95FC67C16284AB8ECED60BCE7ACF8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodGeneratorsRealSpan.lean",
+      "sha256": "8F4E23580842330A0BA9ECA8D3D6460E4CAB4B55C51FF5CB5A50AD9002ABBDFF",
+      "oleanSha256": "23316CF9A7B01E0487E7020C0F78A43AF100657ADBE32DFED989A798780DE4B9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverComplementaryPeriodCoordinates.lean",
+      "sha256": "CD73414EC1D9998D128E1049847E1F4E88BC91F35C2DF27781EBB03F94F5FD63",
+      "oleanSha256": "19B99BBF1B9F995463063F36EA9F38C6F4CB934AAA8072D08D8DF85FE7598927"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverComplementaryPeriodSpan.lean",
+      "sha256": "325EE678029BA79A3AB0540F11A7FAF2BEAC02D6ED7DDA772AE7AA04B07BF206",
+      "oleanSha256": "E7A5C443FF92666B8B03FD9D62D7DFB41B75E40B9F9E381E0CAD5CCF3A5E6F2C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverComplementaryWordMatrix.lean",
+      "sha256": "1883BBC63BFF28919E2CDB8B951C2B68F43BE85F17577829D47E9EB5086D9C8D",
+      "oleanSha256": "9B6C54C268330CBEA20CA2B85735BAF4BA5B475F2345EE1331BB31B1365610AC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialUnimodularPeriodPolygon.lean",
+      "sha256": "219C1C3D2DDB8753023FAE10A7A8214FF7437D2CA64671CC6EC37C64A745B5BC",
+      "oleanSha256": "64CD977CBC4DFCCE358EF1ACB71E14B71A09F8C73F02A0F3FB7462154754A7C6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverUnimodularPeriodPolygon.lean",
+      "sha256": "80C52E2CC0A3B1E969B385A6AB4FCE8D2FE7CC2332D60453D07FF5F17A485F23",
+      "oleanSha256": "2F5E672AC95CADE7548CC3A8774CD9C6ACF3524495841C63C3D6E0676F58D596"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverUnimodularCycleData.lean",
+      "sha256": "D3C3849CA4C4B3EE7BA969D9ACD55B7E97F790A5894A901F689008EC1918F52E",
+      "oleanSha256": "1C877114EC25571893F1F898BB85C367DAE593702EF1E6699691E56FE5C62098"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.complementaryWordMatrix_transpose",
+    "Dubon2026.SourceFunctionField.PeriodRealDual.integer_coordinates_of_finset_generators",
+    "Dubon2026.SourceFunctionField.PeriodRealDual.span_top_of_integer_coordinates",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_complementary_period_coordinates",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_complementary_periods_span_real",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_complementaryWordMatrix_isUnit",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_unimodular_period_polygon_of_basis",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_unimodular_cycle_data",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.complementaryWordMatrix",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.UnimodularCyclePeriodPolygonConclusion",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverUnimodularCycleData"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.complementaryWordMatrix_transpose",
+    "Dubon2026.SourceFunctionField.PeriodRealDual.integer_coordinates_of_finset_generators",
+    "Dubon2026.SourceFunctionField.PeriodRealDual.span_top_of_integer_coordinates",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_complementary_period_coordinates",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_complementary_periods_span_real",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_complementaryWordMatrix_isUnit",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_unimodular_period_polygon_of_basis",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_unimodular_cycle_data"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.complementaryWordMatrix",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.UnimodularCyclePeriodPolygonConclusion",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverUnimodularCycleData"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerUnimodularAudit8.log",
+  "logSha256": "AFFB1FF59C261D4F1326C278404DDDE0AB8C082CC45ECB8AEFBF0EAA65458723",
+  "auditSha256": "95BEBD801DB55C42CB319B5610712A548137A5607E934CF302789D53C985E081",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 17,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 13,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerUnimodularDependencyAudit8.log",
+  "dependencyAuditSha256": "62AF3F79792229EE5A0515E44411CEA897EE7C679C54A3CB19D77ABCF9F8E13A",
+  "dependencyAuditSourceSha256": "995AD7808543D273F151638EBEB299C1778C6263C14C0FEEB08711BE789B998D",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_unimodular_cycle_data"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> integral period correction and raw reciprocity -> exact skew-symmetric unimodular cover word matrix",
+  "discharged": "The exact complementary integer word matrix on the same actual cover dissection is skew-symmetric and unimodular. Actual regular-loop generation gives integer period coordinates, and the existing cover maximum-principle annihilator proves their full real span. Native word antisymmetry and the existing lattice determinant theorem consume the actual jump-period rows, reverse loop-to-jump generation and Euler count. The assembled actual regular-basis consumer supplies every input; no matrix nondegeneracy or unimodularity premise remains.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Meromorphic loop generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-unimodular-8-reuse-review-20261025.json",
+  "reuseReviewSha256": "7AA4EEF1914FFAF4681EE3919C6F02B112E54BB29C51204C673E7A54D7CDD7F3",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

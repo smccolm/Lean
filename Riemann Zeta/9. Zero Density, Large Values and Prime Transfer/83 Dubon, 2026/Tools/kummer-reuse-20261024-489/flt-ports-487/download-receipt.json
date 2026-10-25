@@ -1,0 +1,184 @@
+{
+  "recordedUTC": "2026-10-25T01:49:53.865949+00:00",
+  "status": "complete",
+  "files": [
+    {
+      "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/branches?per_page=100&review=20261025014944",
+      "status": 200,
+      "retrievedUTC": "2026-10-25T01:49:44.985893+00:00",
+      "path": "branches.json",
+      "bytes": 212,
+      "sha256": "F8060422F1DD89FB60C27DF6757068BA006D3E8586C161FBBDB81515F4D35BDF"
+    },
+    {
+      "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/git/ref/heads/main?review=20261025014944",
+      "status": 200,
+      "retrievedUTC": "2026-10-25T01:49:45.390689+00:00",
+      "path": "main-ref.json",
+      "bytes": 360,
+      "sha256": "596CECC868B1500E839458CCF44C48F9781538056B04869C10B1338C2D328417"
+    },
+    {
+      "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/git/commits/6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "status": 200,
+      "retrievedUTC": "2026-10-25T01:49:45.721902+00:00",
+      "path": "6e837e75355538c7f80bab5b956861e86c4eacc2-commit.json",
+      "bytes": 2666,
+      "sha256": "7C917616547172D5FC24AD6AB653A5CC75D95D5EA97AE5E7CCCFF4FE80FA6520"
+    },
+    {
+      "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/git/trees/443edf11d3610bc14f267534862c19124f2cb7a4",
+      "status": 200,
+      "retrievedUTC": "2026-10-25T01:49:46.067082+00:00",
+      "path": "6e837e75355538c7f80bab5b956861e86c4eacc2-root-tree.json",
+      "bytes": 4326,
+      "sha256": "81361A6402B3BC6400288E3894B46F13BB605864DE6928F5A6109FF44FFBC13D"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/lean-toolchain",
+      "path": "6e837e75355538c7f80bab5b956861e86c4eacc2-lean-toolchain",
+      "bytes": 25,
+      "gitBlob": "a8afa7d1b02d96f0671eba854a8dc4b416beb473",
+      "sha256": "3AAC669C7A910EC2389F4E4F921B605ADF6EBF2D1E0C9B9CD0BE4D33F3F5DB71"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/lake-manifest.json",
+      "path": "6e837e75355538c7f80bab5b956861e86c4eacc2-lake-manifest.json.txt",
+      "bytes": 3158,
+      "gitBlob": "2b5a9ec02a1d760170e6034ebcd43e72fa9a42c3",
+      "sha256": "435FE2AB2550E2B82C0A93FD421C96D197D6DD55BC739481E2A4A07E04B979BF"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/LICENSE",
+      "path": "6e837e75355538c7f80bab5b956861e86c4eacc2-LICENSE",
+      "bytes": 11345,
+      "gitBlob": "6f101c9faa913e222f966b68c5ce9890fe50344f",
+      "sha256": "746BC52848EABF8765635FE532E0680756A10B18E7B3FB26E7433AB4EDF34034"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/NOTICE",
+      "path": "6e837e75355538c7f80bab5b956861e86c4eacc2-NOTICE",
+      "bytes": 7128,
+      "gitBlob": "5411679f5f1878e72d1622a88c54b8fbb3f29282",
+      "sha256": "42B1821F19A6AAA25E6811D22AB8F2FDC6433D4A37BC810B1CFAFA5B6DD6B0B6"
+    },
+    {
+      "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/git/trees/33b47c70085a36c9438d4dce3767aab0df3e5634",
+      "status": 200,
+      "retrievedUTC": "2026-10-25T01:49:47.264995+00:00",
+      "path": "6e837e75355538c7f80bab5b956861e86c4eacc2-p2m-tree.json",
+      "bytes": 860,
+      "sha256": "8F7B8FCAE62BC34DB091F5BF2AA988DECA333D4A32258480CE1FBAE5E0C3D690"
+    },
+    {
+      "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/git/trees/de7258d401c4837ba43428afd7ae9b21f86e93e0",
+      "status": 200,
+      "retrievedUTC": "2026-10-25T01:49:49.602177+00:00",
+      "path": "6e837e75355538c7f80bab5b956861e86c4eacc2-sol-tree.json",
+      "bytes": 9239922,
+      "sha256": "3B506BB00922F18D66EF82A022FDD7EE56116473FE460FD6FD705098FF4EEC68"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_AlgebraicCurve_Pic0_exists_jacobianPack_of_isAlgClosed.lean",
+      "path": "6e837e75355538c7f80bab5b956861e86c4eacc2-S_AlgebraicCurve_Pic0_exists_jacobianPack_of_isAlgClosed.lean.txt",
+      "bytes": 31351,
+      "gitBlob": "3c0a142d562374e18d35d7acfd1393f1e2cf3576",
+      "sha256": "97E167B44F772FBEFF991FC3B1269550D969530E3F054AA24EF0B32515F5554C"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_AlgebraicCurve_Pic0_exists_zsmul_eq_of_finiteDimensional_ratFunc_of_forall_pow_eq_self.lean",
+      "path": "6e837e75355538c7f80bab5b956861e86c4eacc2-S_AlgebraicCurve_Pic0_exists_zsmul_eq_of_finiteDimensional_ratFunc_of_forall_pow_eq_self.lean.txt",
+      "bytes": 39468,
+      "gitBlob": "7f03cbedad853a2ddc5ba41fbf0e749e6206407e",
+      "sha256": "6894E8444EDD1849D1C98B109F7B4A9086112C13CD7D58F1C9CCC6D96D904F92"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_AlgebraicCurve_DivisorialWeilPairingData_toHom_injective_of_divisible.lean",
+      "path": "6e837e75355538c7f80bab5b956861e86c4eacc2-S_AlgebraicCurve_DivisorialWeilPairingData_toHom_injective_of_divisible.lean.txt",
+      "bytes": 28588,
+      "gitBlob": "1480b8348ec96768e27a46836213b0989be56456",
+      "sha256": "C30F9E5A24E8001C1EEA5F1D76B6B2E3C802CF9EA0C872EA26CA8646A4257785"
+    },
+    {
+      "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/git/commits/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef",
+      "status": 200,
+      "retrievedUTC": "2026-10-25T01:49:50.889911+00:00",
+      "path": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-commit.json",
+      "bytes": 2776,
+      "sha256": "CCDAA17594DD0B46A2C0686882281B7CDA7D413D71654336D2559D9F973AC4A5"
+    },
+    {
+      "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/git/trees/8bb1c43c8f26f1c127591dddeffdead2b5094eb7",
+      "status": 200,
+      "retrievedUTC": "2026-10-25T01:49:51.294977+00:00",
+      "path": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-root-tree.json",
+      "bytes": 4326,
+      "sha256": "7354364AE6AF5EF3737F7807677CF21B77C41E582A66E9932791E28A8D9EA80B"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef/lean-toolchain",
+      "path": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-lean-toolchain",
+      "bytes": 25,
+      "gitBlob": "a8afa7d1b02d96f0671eba854a8dc4b416beb473",
+      "sha256": "3AAC669C7A910EC2389F4E4F921B605ADF6EBF2D1E0C9B9CD0BE4D33F3F5DB71"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef/lake-manifest.json",
+      "path": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-lake-manifest.json.txt",
+      "bytes": 3158,
+      "gitBlob": "2b5a9ec02a1d760170e6034ebcd43e72fa9a42c3",
+      "sha256": "435FE2AB2550E2B82C0A93FD421C96D197D6DD55BC739481E2A4A07E04B979BF"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef/LICENSE",
+      "path": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-LICENSE",
+      "bytes": 11345,
+      "gitBlob": "6f101c9faa913e222f966b68c5ce9890fe50344f",
+      "sha256": "746BC52848EABF8765635FE532E0680756A10B18E7B3FB26E7433AB4EDF34034"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef/NOTICE",
+      "path": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-NOTICE",
+      "bytes": 7128,
+      "gitBlob": "5411679f5f1878e72d1622a88c54b8fbb3f29282",
+      "sha256": "42B1821F19A6AAA25E6811D22AB8F2FDC6433D4A37BC810B1CFAFA5B6DD6B0B6"
+    },
+    {
+      "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/git/trees/33b47c70085a36c9438d4dce3767aab0df3e5634",
+      "status": 200,
+      "retrievedUTC": "2026-10-25T01:49:52.167065+00:00",
+      "path": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-p2m-tree.json",
+      "bytes": 860,
+      "sha256": "8F7B8FCAE62BC34DB091F5BF2AA988DECA333D4A32258480CE1FBAE5E0C3D690"
+    },
+    {
+      "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/git/trees/de7258d401c4837ba43428afd7ae9b21f86e93e0",
+      "status": 200,
+      "retrievedUTC": "2026-10-25T01:49:53.156015+00:00",
+      "path": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-sol-tree.json",
+      "bytes": 9239922,
+      "sha256": "3B506BB00922F18D66EF82A022FDD7EE56116473FE460FD6FD705098FF4EEC68"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef/P2M/Sol/S_AlgebraicCurve_Pic0_exists_jacobianPack_of_isAlgClosed.lean",
+      "path": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-S_AlgebraicCurve_Pic0_exists_jacobianPack_of_isAlgClosed.lean.txt",
+      "bytes": 31351,
+      "gitBlob": "3c0a142d562374e18d35d7acfd1393f1e2cf3576",
+      "sha256": "97E167B44F772FBEFF991FC3B1269550D969530E3F054AA24EF0B32515F5554C"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef/P2M/Sol/S_AlgebraicCurve_Pic0_exists_zsmul_eq_of_finiteDimensional_ratFunc_of_forall_pow_eq_self.lean",
+      "path": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-S_AlgebraicCurve_Pic0_exists_zsmul_eq_of_finiteDimensional_ratFunc_of_forall_pow_eq_self.lean.txt",
+      "bytes": 39468,
+      "gitBlob": "7f03cbedad853a2ddc5ba41fbf0e749e6206407e",
+      "sha256": "6894E8444EDD1849D1C98B109F7B4A9086112C13CD7D58F1C9CCC6D96D904F92"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef/P2M/Sol/S_AlgebraicCurve_DivisorialWeilPairingData_toHom_injective_of_divisible.lean",
+      "path": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef-S_AlgebraicCurve_DivisorialWeilPairingData_toHom_injective_of_divisible.lean.txt",
+      "bytes": 28588,
+      "gitBlob": "1480b8348ec96768e27a46836213b0989be56456",
+      "sha256": "C30F9E5A24E8001C1EEA5F1D76B6B2E3C802CF9EA0C872EA26CA8646A4257785"
+    }
+  ]
+}

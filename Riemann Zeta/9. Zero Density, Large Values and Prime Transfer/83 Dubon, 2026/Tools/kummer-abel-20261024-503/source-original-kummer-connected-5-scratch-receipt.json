@@ -1,0 +1,81 @@
+{
+  "recordedUTC": "2026-10-25T04:08:34.111833+00:00",
+  "date": "2026-10-24 America/Vancouver",
+  "modules": [
+    "SourceCurveFiniteCoordinateOnePole",
+    "SourceOriginalWeilCoverEvaluationContinuity",
+    "SourceOriginalWeilCoverOnePole",
+    "SourceOriginalWeilCoverClopenObstruction",
+    "SourceOriginalWeilCoverConnected"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFiniteCoordinateOnePole.lean",
+      "sha256": "E55FA1241DF4C30824C72EF6F6333A5ADD447A375735C1ECFACB6A128840B9CE",
+      "oleanSha256": "0CAA14BDBED2B366E490CF07748B2CBBAFF29330F84598148672D10C7D015F4E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverEvaluationContinuity.lean",
+      "sha256": "E2F0AE024DCC3CEB92A028A8168BF45D73A47F87EB51DFB0F3AC8EB27F359948",
+      "oleanSha256": "865EDAE7F80A238B445BD06AD105DEC657519BB58A35004E40D9BC853D55D2C0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverOnePole.lean",
+      "sha256": "A221233DFFCD97ED2FB07F57C44CE6066737A72EFEB47539A87A14DFF9A703A1",
+      "oleanSha256": "BB03858559102F1FA5599D326DB517D6009E03C379B1A5215EA8DAAEE3618275"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverClopenObstruction.lean",
+      "sha256": "CE96E24E798C69AB64CBA217D330745441079DB29686E6AC19BFFEA691907D12",
+      "oleanSha256": "28A00F853F04DC10D4AA9A68B2604233C6BF711DAD926B9B890C1756108CB44D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverConnected.lean",
+      "sha256": "CF1FA04E40D3FB81A1C4834BF80F75BC6DD68B5DDDBF595015431AEC40DAAB16",
+      "oleanSha256": "004019C3AF87E6FC917B612DA96D02047D1BA0D0A92AC6C3556EF2585D5AB8CA"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceCurve.exists_nonconstant_regular_away_of_finite_coordinate",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.analyticAt_place_reading",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeFamily_continuousAt_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.continuousAt_place_eval",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.nonempty_cover_place",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_nonconstant_regular_away",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.false_of_proper_clopen",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_connectedSpace"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceCurve.exists_nonconstant_regular_away_of_finite_coordinate",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.analyticAt_place_reading",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeFamily_continuousAt_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.continuousAt_place_eval",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.nonempty_cover_place",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_nonconstant_regular_away",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.false_of_proper_clopen",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_connectedSpace"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerConnectedAudit5.log",
+  "logSha256": "026ECBD1E413975BB3766DF4278AB9084C1B30DF1A45692E6FB79C00CAD5642D",
+  "auditSha256": "059E0BFD46B1D67130D7B5C4ACA23EB19FC3ABFB5E2D032FB1B0D0B61ACCF3C5",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 10,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 14,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerConnectedDependencyAudit5.log",
+  "dependencyAuditSha256": "8E28AD722C749BF9B208E47537D008615486283FDCD143EF9C0D18D6CD0A4CA2",
+  "dependencyAuditSourceSha256": "D89542347F3FAD400648FDBD886B875B6E35BD57C1F5CB6D5C29E65BE3851C37",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_connectedSpace"
+  ],
+  "dependency": "residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary Kummer point division -> cover Abel comparison -> compact connected cover geometry",
+  "discharged": "The literal complex Kummer splitting field has a connected native place manifold. The actual finite coordinate supplies nonemptiness and a nonconstant function regular away from any specified place. Only the already proved degree-dimension maximum is needed for the latter. Actual regular residue readings are continuous; compact maximum modulus excludes every proper nonempty clopen subset because local constancy would contradict the exact finite normalized order of a nonzero field element. No connectedness, one-pole-function or evaluation-continuity premise remains.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Auxiliary cover Abel comparison, actual point-difference division and arithmetic descent remain unproved. Original pairing nondegeneracy, nonzero required Hecke-component restriction, separate determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-connected-5-reuse-review-20261024.json",
+  "reuseReviewSha256": "543E0B3B7776ED9734080065394D0979FCF8F88D723A180FCCCDAC1877982B79",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

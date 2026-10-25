@@ -1,0 +1,94 @@
+{
+  "recordedUTC": "2026-10-25T08:39:23.483027+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceRadialDissectionBoundaryChains",
+    "SourceRadialDissectionGraphConnectivity",
+    "SourceRadialCotreeComplementConnectivity",
+    "SourceRadialDissectionTreeCotree",
+    "SourceOriginalWeilCoverTreeCotree"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialDissectionBoundaryChains.lean",
+      "sha256": "12DD18A93A7FBF831ADED7AE4950392C07AF53481E3B574BD63D2A1991CD4311",
+      "oleanSha256": "35AA205AA68FF6D28840771E892BFE10C1CAF63935529F1F0476E622379FC26B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialDissectionGraphConnectivity.lean",
+      "sha256": "172DEBA82558F084A98498F4311EED1B7182C3932546BAB2BD43657518DA0929",
+      "oleanSha256": "6E3FE64C82258B33FDE86D26311F2ABC1BB4F9040E833790A28255A72530097D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialCotreeComplementConnectivity.lean",
+      "sha256": "DE54F24EBD68F6069DA590CF0BBB0F695C13490211DA20EB447C649091F68778",
+      "oleanSha256": "EE11EC052969FF17482B7289B89A9A693A06AB831F1138014A422E85D2528A89"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialDissectionTreeCotree.lean",
+      "sha256": "1EC5946A99FD320CFCB4EC596AB6C235F21F4532228333FB92EE8310DAF6CF42",
+      "oleanSha256": "BCD3147CD06A17CBB28B8E076436DCC71906A6E60F896549936C79A71FFE2D16"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverTreeCotree.lean",
+      "sha256": "4B85685213C89C3378FBCD4C8CB74CCD193295F127B8952899E3105795AE3128",
+      "oleanSha256": "40501FC2473771A37CB93CD70467E4AAE233C8F27EB3BE0B79C5B351AEDBA742"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.cell_bdry_periodic",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.bd_cellBdryChain",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.Cside_eq_iff",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.sum_side_indicator",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.cellBdryChain_eq",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.\u0393conn",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.\u0393star_conn",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.\u0393conn_sdiff_cotree",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.exists_tree_cotree",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_tree_cotree",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.hd\u0393",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.tl\u0393",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.Cside",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.cellBdryChain"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.cell_bdry_periodic",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.bd_cellBdryChain",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.Cside_eq_iff",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.sum_side_indicator",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.cellBdryChain_eq",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.\u0393conn",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.\u0393star_conn",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.\u0393conn_sdiff_cotree",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.exists_tree_cotree",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_tree_cotree"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.hd\u0393",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.tl\u0393",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.Cside",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.cellBdryChain"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerTreeCotreeAudit5.log",
+  "logSha256": "9582E51521E7F514100673C958A6AC526901F850E1F2E3E3CB96D60143BE6D40",
+  "auditSha256": "73E1D83756D2535B99FC89ABFF31F77A7AC829F1E4EF2112A5820915690F96F7",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 18,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 17,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerTreeCotreeDependencyAudit5.log",
+  "dependencyAuditSha256": "38788A0C586B9D0F5C85C19050A0C7EA94A16011840374E5516DA8B948E418FA",
+  "dependencyAuditSourceSha256": "18DE922010259C79A741AB27E73CEB3F3F0AEA9887F3E982FA50323C1C9996D6",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_tree_cotree"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric cycle generation and reciprocity -> disjoint actual primal/dual trees with exactly 2g remaining edges",
+  "discharged": "The actual marked analytic cover dissection has disjoint primal and dual trees, exactly twice its actual regular-differential genus many remaining edges, and primal walk connectivity. The proved original boundary-chain and cotree-complement arguments are instantiated on the actual radial dissection; native cyclic-index, integer spanning-tree and tree-cardinality results are reused unchanged. All geometric, vertex-incidence and Euler inputs are discharged.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Polygon word assembly, analytic loop realization, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-tree-cotree-5-reuse-review-20261025.json",
+  "reuseReviewSha256": "BC237E1D3BCDD4490437198B3A43D9A4680E0279DF48DF67B15567FCE6461A73",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

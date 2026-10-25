@@ -1,0 +1,85 @@
+import SourceRadialCellClosedCarriers
+import SourceRadialCellCarrierNeighborhoods
+import SourceRadialPairedArcEquality
+import SourceRadialCellJumpDifferences
+import SourceOriginalWeilCoverCoordinatePrimitiveComparison
+import SourceOriginalWeilCoverPathPrimitiveData
+import SourceOriginalWeilCoverCellPrimitiveLocalDifference
+import SourceRadialPrimitiveAtlas
+import SourceOriginalWeilCoverPathPrimitiveJumps
+import SourceOriginalWeilCoverRegularLoopGeneration
+import SourceOriginalWeilCoverRegularCycleData
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCell.carrier_isCompact
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCell.carrier_isClosed
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.isClosed_badCarrierSet
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.not_mem_badCarrierSet_self
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.mem_carrier_of_not_mem_badCarrierSet
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.exists_mem_carrier
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.mem_cellOf
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.arc_subset_of_arc_rev
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.arc_eq_of_side
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.gvec_sub_mem_of_linkedAt
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.gvec_sub_mem
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_hasDerivAt_coordPrimitive
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_eventually_coordPrimitive_sub_eq
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_eventually_gvec_sub
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_path_sub_mem_closure_jumps
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_loop_period_mem_jumps
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_regular_cycle_generation
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_regular_cycle_data
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.badCarrierSet
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.cellOf
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.LinkedAt
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverPrimData
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.Gchart
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverRegularCycleGeneration
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverRegularCycleData
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceRadialCellClosedCarriers, `SourceRadialCellCarrierNeighborhoods, `SourceRadialPairedArcEquality, `SourceRadialCellJumpDifferences, `SourceOriginalWeilCoverCoordinatePrimitiveComparison, `SourceOriginalWeilCoverPathPrimitiveData, `SourceOriginalWeilCoverCellPrimitiveLocalDifference, `SourceRadialPrimitiveAtlas, `SourceOriginalWeilCoverPathPrimitiveJumps, `SourceOriginalWeilCoverRegularLoopGeneration, `SourceOriginalWeilCoverRegularCycleData]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.CellGeometry.RadialCell.carrier_isCompact, `Dubon2026.SourceFunctionField.CellGeometry.RadialCell.carrier_isClosed, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.isClosed_badCarrierSet, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.not_mem_badCarrierSet_self, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.mem_carrier_of_not_mem_badCarrierSet, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.exists_mem_carrier, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.mem_cellOf, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.arc_subset_of_arc_rev, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.arc_eq_of_side, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.gvec_sub_mem_of_linkedAt, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.gvec_sub_mem, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_hasDerivAt_coordPrimitive, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_eventually_coordPrimitive_sub_eq, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_eventually_gvec_sub, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_path_sub_mem_closure_jumps, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_loop_period_mem_jumps, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_regular_cycle_generation, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_regular_cycle_data]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.badCarrierSet, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.cellOf, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.LinkedAt, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverPrimData, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.Gchart, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverRegularCycleGeneration, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverRegularCycleData]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Kummer Regular Generation postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Kummer Regular Generation theorems discovered"
+  logInfo m!"SOURCE ORIGINAL KUMMER REGULAR GENERATION AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceRadialCellClosedCarriers
+#lint in SourceRadialCellCarrierNeighborhoods
+#lint in SourceRadialPairedArcEquality
+#lint in SourceRadialCellJumpDifferences
+#lint in SourceOriginalWeilCoverCoordinatePrimitiveComparison
+#lint in SourceOriginalWeilCoverPathPrimitiveData
+#lint in SourceOriginalWeilCoverCellPrimitiveLocalDifference
+#lint in SourceRadialPrimitiveAtlas
+#lint in SourceOriginalWeilCoverPathPrimitiveJumps
+#lint in SourceOriginalWeilCoverRegularLoopGeneration
+#lint in SourceOriginalWeilCoverRegularCycleData

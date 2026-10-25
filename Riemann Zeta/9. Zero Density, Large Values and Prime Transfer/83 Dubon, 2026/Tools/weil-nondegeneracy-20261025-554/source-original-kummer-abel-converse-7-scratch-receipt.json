@@ -1,0 +1,96 @@
+{
+  "recordedUTC": "2026-10-25T15:47:41.077015+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceOriginalWeilCoverRawReciprocityData",
+    "SourceFiniteIntegerGenerationReindex",
+    "SourceOriginalWeilCoverGenerationReindex",
+    "SourceFiniteThirdKindReindex",
+    "SourceOriginalWeilCoverReciprocityReindex",
+    "SourceOriginalWeilCoverReindexedReciprocity",
+    "SourceOriginalWeilCoverAbelConverse"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRawReciprocityData.lean",
+      "sha256": "8203EB24426203BF2A6960D6147A51DB56247464FA83CDD5368D867F9BC1605F",
+      "oleanSha256": "3AFFB860A5040AD9BC9EC5A897DF0B70D00841841671F408ADDC3B5E1D4C17CD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteIntegerGenerationReindex.lean",
+      "sha256": "09B0FF70092FDDF556D513ADD7D8A4E8D58B15A2BDC81035FA897600987D75D4",
+      "oleanSha256": "85F38B01FBFE78DB71F79071DB678FB27CC0262D166824C300B08D49AF5A7E06"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverGenerationReindex.lean",
+      "sha256": "1F18E7E11ECB102D32A83050E24F596915924C0CE774F539BFC89B065715BE84",
+      "oleanSha256": "665181FB9D435E5403A76471F198CCB4D6C9E09DF4CD40E25932235C270C230D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteThirdKindReindex.lean",
+      "sha256": "D9E184AD0A4B41CCE34C489942E478F22F092736281011BD695DFC95AA43A6A8",
+      "oleanSha256": "3960892F0571D4E8005BE7DE2578322728F88D7C72277476E09CE33F8CB9A173"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverReciprocityReindex.lean",
+      "sha256": "FAAA1A0200DBCA509490642B665DE5F04A3A8D4E52DC99FC496B4D7253DB768C",
+      "oleanSha256": "2B815FF0A8CEF04F3D29BB61E5AAE253307238CCF7728834F1E2F846E907E8E2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverReindexedReciprocity.lean",
+      "sha256": "F0F27278C5A31C0FD7B15FCE28AF35E652DF02267B6B44AF7F4E2FAE159C3B5B",
+      "oleanSha256": "3BA54D9307C1BC029A28D8B1231BC5DE610B4A505480258BA2DA7C421ED7AB9D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverAbelConverse.lean",
+      "sha256": "B53F21A04007A08E862215ECA2DA1C7A84C6A1B718130C718C12DB00D669B7C2",
+      "oleanSha256": "A3C9024ACB4068B07BA525746945AC30E5824379A740FFE4C210DEFCC48598AE"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CellGeometry.reindex_integer_generation",
+    "Dubon2026.SourceFunctionField.CellGeometry.reindex_integer_generation_with_residues",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_regular_generation_reindex",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_generation_reindex",
+    "Dubon2026.SourceFunctionField.CellGeometry.reindex_third_kind_reciprocity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.reindex_cover_reciprocity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_reindexed_reciprocity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_abelJacobi_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverRawReciprocityData"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.reindex_integer_generation",
+    "Dubon2026.SourceFunctionField.CellGeometry.reindex_integer_generation_with_residues",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_regular_generation_reindex",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_meromorphic_generation_reindex",
+    "Dubon2026.SourceFunctionField.CellGeometry.reindex_third_kind_reciprocity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.reindex_cover_reciprocity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_reindexed_reciprocity",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_abelJacobi_mem"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverRawReciprocityData"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAbelConverseAudit7.log",
+  "logSha256": "C68B05D52D407F7FA2E40E94980CA9AC0DB5CB54143EF7A55DA740B7102FCCA7",
+  "auditSha256": "C415DEE8F19EACFBD1BCA2BCB9B6EBACAD9779FD2F765D91140477572551E4EC",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 17,
+  "linterScopes": 7,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 15,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerAbelConverseDependencyAudit7.log",
+  "dependencyAuditSha256": "40E6DF7F5574B184D697A5E9C0B879B4C0B70546B192AE007DD81947074F50CC",
+  "dependencyAuditSourceSha256": "F096F0E25FA34ECFFF8B34AB3878DC0766E1D4A482D978B54B1DC616942554B3",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_isPrincipal_of_abelJacobi_mem"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse",
+  "discharged": "Every required raw geometric clause is constructed on the prescribed 2g cycle index. The same actual loops, common integer coefficients, unimodular word matrix and regular/third-kind reciprocity identities are transported together. The existing actual prescribed-residue, period-correction and meromorphic exponential argument then proves principality for every degree-zero cover divisor whose actual Abel vector lies in its actual path-period lattice. No generation, reciprocity or period-discreteness hypothesis remains. Auxiliary point-class division and the arithmetic DUB-17--20 deductions remain separate obligations.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Actual auxiliary point-class division, arithmetic descent, original pairing nondegeneracy, required Hecke-component restriction, primitive Frobenius determinant, residual association, automorphy and all-weight continuation remain open; 16/20, DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-abel-converse-7-reuse-review-20261025.json",
+  "reuseReviewSha256": "D78AB2253861DFA71D27625E5C432FDE08D6894578F1E67FF12F7A5820C0DA23",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

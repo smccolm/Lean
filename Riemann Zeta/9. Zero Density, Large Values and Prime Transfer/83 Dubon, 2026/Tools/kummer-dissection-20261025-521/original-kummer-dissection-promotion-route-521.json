@@ -1,0 +1,36 @@
+{
+  "recordedUTC": "2026-10-25T08:28:06.803549+00:00",
+  "scopeIds": [
+    513,
+    514,
+    515,
+    516,
+    517,
+    518,
+    519,
+    520
+  ],
+  "receipts": {
+    "source-original-kummer-unramified-genus-3-scratch-receipt.json": "86A8F4652516373F6F89E7E42F55A6C6A8BAFEC4C488A19AB70EF1F8D6DBEFA7",
+    "source-original-kummer-global-cell-arcs-3-scratch-receipt.json": "55C9350D4E2D7F019E641E9911E0998E7DDC8CA1665F7E36BB80ADEF2F5258C4",
+    "source-original-kummer-boundary-transport-4-scratch-receipt.json": "13ED46E78CAA8B73575DA72E1D72D8EDC5E4E369AAD07F34EAA0AB1C737D4532",
+    "source-original-kummer-global-arc-pairing-3-scratch-receipt.json": "C71D9329E3C280AFBD79D6A3B95CF36D8C7372720C761D8CA82C654300709C97",
+    "source-original-kummer-intersection-chains-5-scratch-receipt.json": "30A680081807AFA0C66053909CC7C75E0EE83955502C75127D58B46C24B91B4F",
+    "source-original-kummer-dissection-9-scratch-receipt.json": "B21553C226FF2E25F975784EE12A7854990F3DF21207FD1A334C3EB818117BC0",
+    "source-original-kummer-centered-dissection-4-scratch-receipt.json": "0471DF6D369B4AF0B807CC0F50B325C105D16E538597DA4020FA686D74A0EBB6",
+    "source-original-kummer-euler-dissection-8-scratch-receipt.json": "11FDA95162CC02DBECF775A91AA1D37ED0EFFEA95A0020210A079EA377C4540B"
+  },
+  "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+  "chain": "actual residual association -> primitive Frobenius determinant -> nonzero required Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary Kummer point division -> cover Abel converse -> geometric cycle generation and bilinear/third-kind reciprocity -> actual marked analytic dissection and Euler identity",
+  "discharged": "The actual unramified cover has the canonical-degree genus multiplicity. Original cell families lift to disjoint exhaustive analytic coordinate families with invertible neighboring-sheet transports. The constructed global pairing is involutive, projects to the base pairing, reverses orientation and preserves the full C1 boundary reversal. Existing base intersection chains lift through each cover point. Literal finite endpoint vertices, side bijection, vertex laws, covering and global adjacency construct every source dissection field. Projected marked sets give exact centered interiors, separation and vertex incidence. The literal lifted vertex set equals the inverse image of the base vertex set; actual fiber counts, native finite sigma cardinality, the proved base Euler identity and unramified genus multiplicity yield the exact cover Euler identity for its actual regular-differential dimension. The final existence theorem supplies all these marked, analytic and Euler clauses with no remaining geometric or count premise.",
+  "remaining": "Cycle generation and bilinear/third-kind reciprocity on this actual cover dissection remain unproved. Unconditional cover Abel converse and actual auxiliary point-difference division remain open. Arithmetic descent, original pairing nondegeneracy, nonzero required Hecke-component restriction, separate determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "reuse": "Each scope records the exact native proofs checked before expansion. Reuse the original global radial cover, pairing and intersection chains; native covering uniqueness; finite endpoint-range vertices; finite closed-cover connectivity; original marked centering and separation; original Euler counts; actual unramified canonical degree; and Mathlib finite fiber equivalences. The original dissection type hardcodes the base field, so its complete minimal geometric fields are retained in RadialCellDissection and instantiated on the literal cover, with analytic nonsingular coordinates proved by the actual consumer. No new planar decomposition, general topological genus theory, new Riemann-Hurwitz theorem, external package or raised proof limit is used.",
+  "promotion": "Qualify only scratch imports and preserve all audited mathematical statements, proof bodies and module comments. Reconcile exact declaration ownership. Finish the 7842 sequential canonical receipt before production mutation.",
+  "modules": 39,
+  "explicitQueries": 80,
+  "theoremRegistrations": 57,
+  "constructionRegistrations": 23,
+  "exhaustiveScratchSum": 110,
+  "proofValueEdges": 95,
+  "expectedProductionModules": 7881
+}

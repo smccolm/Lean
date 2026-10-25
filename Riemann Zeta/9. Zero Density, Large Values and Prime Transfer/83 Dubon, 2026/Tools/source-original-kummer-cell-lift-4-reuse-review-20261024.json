@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> raw geometric reciprocity -> lift the original cell dissection -> analytic lifts of entire original cells",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Homotopy\\Lifting.lean",
+      "sha256": "6F43A4D64A7053876A55EE261E37A73044F2DF293CE5A4DB6AFC33ADD3D65B7C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\IsLocalHomeomorph.lean",
+      "sha256": "B6EAE663E7A2A5B88EC34EBAE6D15310BDB29E3A96B067BF5C04171ED432FD7E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\OpenPartialHomeomorph\\Constructions.lean",
+      "sha256": "42F32DA93A5A88B6A54328115A4ACBB156B661E2B7255B8F99FB64934A566A0E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Convex\\Contractible.lean",
+      "sha256": "C8A4E06111C7677188449A439329F7CEA09C28F4CAB80E633E4422105496C554"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceSimplyConnectedCovering.lean",
+      "sha256": "E352DC8784FD52936703713967C1F0C3B5F0AD6D553CABAE025B1762A2DB0CA9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCoveringSheetDecomposition.lean",
+      "sha256": "E4690775042FDA997A813FA89ED5618A74ABB27D3F7AAE76CB8B1E243F034A52"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticCells.lean",
+      "sha256": "AA18CDD9BED34F32E38389D4EFB6EC10F7E1CA7E7022F0759226ED13FE2F6430"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticCellCoordinates.lean",
+      "sha256": "08AABE5A35B662B6017ED99993531D8697C52952F19A4B6FE83AA7C5CD6536FB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRestrictionCovering.lean",
+      "sha256": "FDF683FD954B0859AC648F3DDF0CEE2DD9F8D5F770A00CCEA032138FE5FF2775"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRestrictionComparison.lean",
+      "sha256": "12756B0A2A8FA5785F92CF649B2697C905FDD8C7AC64D6B83D2760A7D9F64D1E"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-cell-lift-route-510.json",
+    "sha256": "BB9BC0BC18B9FCDC6F4624B57A2D7F5669E3E4C35F762CB65A8AC2E4F534E9A9",
+    "review": {
+      "scope": 510,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> raw geometric reciprocity -> lift the original cell dissection -> analytic lifts of entire original cells",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Homotopy\\Lifting.lean",
+          "sha256": "6F43A4D64A7053876A55EE261E37A73044F2DF293CE5A4DB6AFC33ADD3D65B7C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\IsLocalHomeomorph.lean",
+          "sha256": "B6EAE663E7A2A5B88EC34EBAE6D15310BDB29E3A96B067BF5C04171ED432FD7E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\OpenPartialHomeomorph\\Constructions.lean",
+          "sha256": "42F32DA93A5A88B6A54328115A4ACBB156B661E2B7255B8F99FB64934A566A0E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Convex\\Contractible.lean",
+          "sha256": "C8A4E06111C7677188449A439329F7CEA09C28F4CAB80E633E4422105496C554"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceSimplyConnectedCovering.lean",
+          "sha256": "E352DC8784FD52936703713967C1F0C3B5F0AD6D553CABAE025B1762A2DB0CA9"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCoveringSheetDecomposition.lean",
+          "sha256": "E4690775042FDA997A813FA89ED5618A74ABB27D3F7AAE76CB8B1E243F034A52"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticCells.lean",
+          "sha256": "AA18CDD9BED34F32E38389D4EFB6EC10F7E1CA7E7022F0759226ED13FE2F6430"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticCellCoordinates.lean",
+          "sha256": "08AABE5A35B662B6017ED99993531D8697C52952F19A4B6FE83AA7C5CD6536FB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRestrictionCovering.lean",
+          "sha256": "FDF683FD954B0859AC648F3DDF0CEE2DD9F8D5F770A00CCEA032138FE5FF2775"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRestrictionComparison.lean",
+          "sha256": "12756B0A2A8FA5785F92CF649B2697C905FDD8C7AC64D6B83D2760A7D9F64D1E"
+        }
+      ],
+      "shorterRoute": "The original Cell.exists_primitive_domain supplies the star-convex neighborhood of the entire radial carrier. Pinned Mathlib simply-connected lifting and open-section theorems produce a sheet through each chosen fiber point. Existing open-embedding extension supplies its actual coordinate. The literal unramified chart comparison proves analytic nonsingular transition to cover charts. The existing generic covering trivialization and sheet decomposition were checked; the direct lift API is shorter for a single cell with a prescribed center lift. No original grid or plane slit construction is rebuilt.",
+      "assumptionsToDischarge": "Existence of an analytic nonsingular coordinate lifting each original cell through a chosen actual cover point above its center, on a neighborhood of the full compact cell carrier.",
+      "remaining": "Finite global lifted dissection and its bilinear/third-kind reciprocity identities, unconditional cover Abel converse and actual point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20."
+    }
+  },
+  "discharged": "Every original radial cell lifts through every chosen actual point above its center on an open star-convex neighborhood of the entire compact carrier. The lifted coordinate has the exact place-restriction formula and analytic transitions with nonzero derivative to the actual Kummer charts. No covering-map, local-lift or lifted-analyticity hypothesis remains.",
+  "remaining": "Finite global lifted dissection and its bilinear/third-kind reciprocity identities, unconditional cover Abel converse and actual point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-covering-map-3-scratch-receipt.json",
+    "sha256": "889A2738D394A755C88E258A90690D2661E6EE1C08C7EF3DCE22935016BDD4D0"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

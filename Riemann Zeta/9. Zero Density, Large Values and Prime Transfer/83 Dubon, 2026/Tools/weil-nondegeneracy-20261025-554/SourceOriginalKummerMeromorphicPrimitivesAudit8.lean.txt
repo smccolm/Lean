@@ -1,0 +1,80 @@
+import SourceRadialMeromorphicPoleData
+import SourceRadialMeromorphicPoleNeighborhoods
+import SourceComplexResidueSubtractedCoefficient
+import SourceOriginalWeilCoverRegularizedCoefficient
+import SourceRadialMeromorphicCellPrimitives
+import SourceOriginalWeilCoverMeromorphicCellPrimitives
+import SourceOriginalWeilCoverMeromorphicPrimitiveData
+import SourceOriginalWeilCoverMeromorphicCycleData
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.PolePos.center
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.ρ_eq_of_mem
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.ρ_eq_zero
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.badPts_finite
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.isOpen_goodSet
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.K_subset_goodSet
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.goodSet_pole
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.residueSubtractedCoefficient_of_ne
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.analyticAt_residueSubtractedCoefficient_center
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.analyticAt_residueSubtractedCoefficient_of_ne
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_analyticAt_coeff_of_regular
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_analyticAt_regCoeff
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.exists_regPrimData
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_regPrimData
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_primitives
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_cycle_data
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.ρ
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.PolePos
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.PolePos.mk
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.badPts
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.goodSet
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.residueSubtractedCoefficient
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverRegCoeff
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.RegPrimData
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.RegPrimData.mk
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverMeromorphicPrimitives
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceRadialMeromorphicPoleData, `SourceRadialMeromorphicPoleNeighborhoods, `SourceComplexResidueSubtractedCoefficient, `SourceOriginalWeilCoverRegularizedCoefficient, `SourceRadialMeromorphicCellPrimitives, `SourceOriginalWeilCoverMeromorphicCellPrimitives, `SourceOriginalWeilCoverMeromorphicPrimitiveData, `SourceOriginalWeilCoverMeromorphicCycleData]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.PolePos.center, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.ρ_eq_of_mem, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.ρ_eq_zero, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.badPts_finite, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.isOpen_goodSet, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.K_subset_goodSet, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.goodSet_pole, `Dubon2026.SourceFunctionField.CellGeometry.residueSubtractedCoefficient_of_ne, `Dubon2026.SourceFunctionField.CellGeometry.analyticAt_residueSubtractedCoefficient_center, `Dubon2026.SourceFunctionField.CellGeometry.analyticAt_residueSubtractedCoefficient_of_ne, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_analyticAt_coeff_of_regular, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_analyticAt_regCoeff, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.exists_regPrimData, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_regPrimData, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_primitives, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_cycle_data]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.ρ, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.PolePos, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.PolePos.mk, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.badPts, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.goodSet, `Dubon2026.SourceFunctionField.CellGeometry.residueSubtractedCoefficient, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverRegCoeff, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.RegPrimData, `Dubon2026.SourceFunctionField.CellGeometry.RadialMeromorphicPeriods.RegPrimData.mk, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverMeromorphicPrimitives]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Kummer Meromorphic Primitives postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Kummer Meromorphic Primitives theorems discovered"
+  logInfo m!"SOURCE ORIGINAL KUMMER MEROMORPHIC PRIMITIVES AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceRadialMeromorphicPoleData
+#lint in SourceRadialMeromorphicPoleNeighborhoods
+#lint in SourceComplexResidueSubtractedCoefficient
+#lint in SourceOriginalWeilCoverRegularizedCoefficient
+#lint in SourceRadialMeromorphicCellPrimitives
+#lint in SourceOriginalWeilCoverMeromorphicCellPrimitives
+#lint in SourceOriginalWeilCoverMeromorphicPrimitiveData
+#lint in SourceOriginalWeilCoverMeromorphicCycleData

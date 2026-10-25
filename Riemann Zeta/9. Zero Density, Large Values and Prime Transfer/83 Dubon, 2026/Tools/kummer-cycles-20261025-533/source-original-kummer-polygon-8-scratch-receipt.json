@@ -1,0 +1,148 @@
+{
+  "recordedUTC": "2026-10-25T09:02:03.635289+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceRadialPolygonCorners",
+    "SourceRadialPolygonState",
+    "SourceRadialPolygonGluing",
+    "SourceRadialPolygonWordCycles",
+    "SourceRadialDissectionPolygonWord",
+    "SourceRadialFundamentalCycleSystem",
+    "SourceOriginalWeilCoverPolygonWord",
+    "SourceOriginalWeilCoverCycleSystem"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialPolygonCorners.lean",
+      "sha256": "7DFDD2DFAB32881768973DD3B24BD333979C31D11656EC12C0A0065E1275AB2C",
+      "oleanSha256": "D4A4E9B1AEE91A3BB5888D5092691FE8A93E4D8778F19E1F30B4F85B4395DC6D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialPolygonState.lean",
+      "sha256": "79D2FDBFA670D54DD6BFC989FA899E936468C9745F5961518968C303565F5D24",
+      "oleanSha256": "87B0849C290EA43D9D2B0A93CAFA1B92183F911F2F4A49936E8EFDA1AF79BEB3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialPolygonGluing.lean",
+      "sha256": "6F76B43F6C00106BC05DF6182B28AE430AAA0C6F71C3D6E548B448AFB826CA41",
+      "oleanSha256": "FF60CF1342A5708FB7939FDB6BF318682E25931C8D0F54CF0A1E6C2136F7C290"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialPolygonWordCycles.lean",
+      "sha256": "640314676EF594777EC4EAF20B3FE2BC0EA08AA8B718FC08A95790B82D6A9BEA",
+      "oleanSha256": "6A4BB8CFAC84216F8CCBAD169EB3C9779052B7B1F1A6F8E45CA22724EFCF5C35"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialDissectionPolygonWord.lean",
+      "sha256": "5AE5E47C5FB4E5FC536EEE0BAB4E4ABD567952335DBC9358CE4249C6DAAAD633",
+      "oleanSha256": "06DC18739702CE8E010D576E2A07220625357B10B7C462177CF088B594885409"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialFundamentalCycleSystem.lean",
+      "sha256": "B71621775D7C470E00804D98DF11B52D2B2A412B139176FBAB4981D2DBC21440",
+      "oleanSha256": "36AFF264A956365722ECAA79C1F256B66AC63324701DFB3B5EA63061FDE7E673"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPolygonWord.lean",
+      "sha256": "156205074BA80846A67FFECD254168C3738E925C17F3987F8CACD5E41FC32D53",
+      "oleanSha256": "FDF705435628A5A798C79C114D23E1A0514AC41738BF7BAB11324CF4E4D5F2D3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCycleSystem.lean",
+      "sha256": "F9A5938E8CED508A5F782F2CCA70171C508DB197CA1D4096B806C3808973B94A",
+      "oleanSha256": "A4213F48576F716F1F520FFAB603A2F31E9167FE2F9192557E91EA019DA53441"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.eV_not",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.sV_mem_ends",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.Cs_side",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.side_injective",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.corner_arc",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.crossAt_mono",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.corner_mono",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.crossAt_pair",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.corner_junction",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.mem_arcs",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.arcs_nodup",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.cyc_arcs",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.state_init",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.state_step",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.state_final",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.filter_indicator",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.letter_bd",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.w3_of_w1",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.exists_polygon_word",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.exists_fundamental_cycle_system",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_polygon_word",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cycle_system",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.Cs",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.sV",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.eV",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.crossAt",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.Corner",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.arcs",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.State",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.State.mk",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.PolygonWordConclusion",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.FundamentalCycleSystem"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.eV_not",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.sV_mem_ends",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.Cs_side",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.side_injective",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.corner_arc",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.crossAt_mono",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.corner_mono",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.crossAt_pair",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.corner_junction",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.mem_arcs",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.arcs_nodup",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.cyc_arcs",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.state_init",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.state_step",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.state_final",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.filter_indicator",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.letter_bd",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.w3_of_w1",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.exists_polygon_word",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.exists_fundamental_cycle_system",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_polygon_word",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cycle_system"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.Cs",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.sV",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.eV",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.crossAt",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.Corner",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.arcs",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.State",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.State.mk",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPolygon.PolygonWordConclusion",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionTrees.FundamentalCycleSystem"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPolygonAudit8.log",
+  "logSha256": "769CDD87E6794B6E805D217FD09D24D951D0F9D21B9914DE454C1FD45092F8A0",
+  "auditSha256": "0A2A91B9D5AD7FE483401733E6D4EEA43592B0F43374286A3D2A1099770C0431",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 49,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 29,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPolygonDependencyAudit8.log",
+  "dependencyAuditSha256": "B78B6165AEEB4F5A3C82E2039FE2BA23FFF8BD08AE399E903BE3D4CD7331F2D9",
+  "dependencyAuditSourceSha256": "35D3FA08C7985B194FC60A4DB7AF5D8FBA11F59FEFF27EDAB3961AFFCB4A62B2",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cycle_system"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> geometric loop generation and reciprocity -> actual polygon word and integer cycles",
+  "discharged": "The same actual marked analytic Euler dissection and tree/cotree witness has a complete polygon word with actual vertex matching, cotree crossing paths and closed integer subwords. It carries integer fundamental cycles with circulation, complement delta identities, vanishing on the tree and universal additive decomposition. Native cyclic splicing, integer tree cuts and fundamental-cycle proofs are reused; no polygon or cycle-system existence premise remains on the actual consumer.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Analytic loop realization, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-polygon-8-reuse-review-20261025.json",
+  "reuseReviewSha256": "BBE214004C1E851DEDDB729B5525E32DEE43B83D3DE63356C7677E20F4AD06C8",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

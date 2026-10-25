@@ -1,0 +1,31 @@
+import SourceOriginalWeilCoverManifold
+import SourceOriginalWeilCoverChartOrders
+import SourceCurveRationalPlaceSeparation
+import SourceOriginalWeilCoverHausdorff
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_isManifold, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_t2Space, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_place_chart_order, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.continuousOn_placeFamily, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isOpen_placeFamily_image]
+  let localModules : Array Name := #[`SourceOriginalWeilCoverManifold, `SourceOriginalWeilCoverChartOrders, `SourceCurveRationalPlaceSeparation, `SourceOriginalWeilCoverHausdorff, `SourceMeromorphicKummerRoots, `SourceOriginalWeilLocalKummerRoot, `SourceMeromorphicLaurentRealization, `SourceOriginalChartLaurentHom, `SourceOriginalWeilConvergentKummerRoot, `SourceOriginalWeilLocalSplittingField, `SourceCurveNormalizedLaurentPlace, `SourceCurveRealizedLaurentPlace, `SourceOriginalWeilLocalCoverPlace, `SourceCurveConvergentCommonDisc, `SourceCurveConvergentGaloisPlaces, `SourceCurveConvergentKummerPlaces, `SourceOriginalWeilEveryLocalCover, `SourceCurveNormalizedCommonDisc, `SourceOriginalWeilCoverDisc, `SourceCurveConvergentDiscGerms, `SourceCurveConvergentDiscOrders, `SourceCurveConvergentDiscUniformizer, `SourceCurveConvergentDiscPlaces, `SourceCurveConvergentPlaceFamily, `SourceOriginalWeilCoverPlaceFamily, `SourceCurveConvergentDiscResidues, `SourceCurveConvergentEvaluationFamily, `SourceCurveAnalyticPlaceParameter, `SourceCurveConvergentPlaceChart, `SourceOriginalWeilCoverParameter, `SourceCurveRationalChartValues, `SourceCurveAnalyticChartOrders, `SourceCurveAnalyticChartComparison, `SourceCurveAnalyticChartDifferenceOrders, `SourceCurveAnalyticChartBranchEquality, `SourceOriginalWeilCoverChartPackage, `SourceOriginalWeilCoverCharts, `SourceOriginalWeilCoverChartTransitions]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeChart_self, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.mem_place_atlas_iff, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_isManifold, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.extPlaceChart_symm_apply, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.extPlaceChart_self, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_place_chart_order, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.continuousOn_placeFamily, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isOpen_placeFamily_image, `Dubon2026.SourceCurve.Place.exists_order_separating_function, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_small_place_disc, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_t2Space, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.placeCore, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isOpen_placeChart_trans_source, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.analyticOnNhd_placeChart_transition, `Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_cover_parameter, `Dubon2026.SourceCurve.Place.rationalEval_inv]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL KUMMER MANIFOLD DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the literal torsion-cover manifold, Hausdorff and exact-order consumers. Only declaration values are traversed. The actual compatible uniformizer charts construct the native complex analytic manifold. Incomparable actual place rings and genuine residue readings prove Hausdorff separation. Native extended-chart readings retain exact place orders. Compactness, connectedness, cover Abel comparison, auxiliary point division and original pairing nondegeneracy remain open; DUB-17--20 OPEN, 16/20."
+
+#eval runPlanarPairingDependencyAudit

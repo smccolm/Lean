@@ -1,0 +1,112 @@
+{
+  "recordedUTC": "2026-10-25T03:02:34.383983+00:00",
+  "date": "2026-10-24 America/Vancouver",
+  "modules": [
+    "SourceCurveConvergentDiscGerms",
+    "SourceCurveConvergentDiscOrders",
+    "SourceCurveConvergentDiscUniformizer",
+    "SourceCurveConvergentDiscPlaces",
+    "SourceCurveConvergentPlaceFamily",
+    "SourceOriginalWeilCoverPlaceFamily"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveConvergentDiscGerms.lean",
+      "sha256": "021B2E103CD085474A57B6BE8DA67C7778FDB1093F3F904037389675C0973826",
+      "oleanSha256": "D9F51585E8076A1A5902F10F51540D7B9DE22D959E6EFB00A49367E3BDD22694"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveConvergentDiscOrders.lean",
+      "sha256": "12C639D5589D35D74F48CFB19976111FFC960FAEB3C2948BC1B22E4947431CF4",
+      "oleanSha256": "CFEAC978D1F547DEB781B91BBC7D00002E6E40669A8227C8AFD95E9C4819C570"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveConvergentDiscUniformizer.lean",
+      "sha256": "206CB5E772C3096E14D66D0D5C55D4E7E731FEFF2599A2386A99EA55EDBE2851",
+      "oleanSha256": "B2438271C55F6D5946F8040110C6F05DE970441B16C61B69C4D15080B71916CC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveConvergentDiscPlaces.lean",
+      "sha256": "48A987D9855F42AE138072271A987925DA1251D63534BD4186FF3D7F11653363",
+      "oleanSha256": "13000896981B54FE9093F4242124FCC256C8B0CE8A8460D06ACE604A404705B5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveConvergentPlaceFamily.lean",
+      "sha256": "86E8D29BF1C797B7D391266220CA4A447F682C51FEF4ABC850EAFEF44889FCBF",
+      "oleanSha256": "4095E69F30D559BFD3AA2234A2EE9DB5C2195A323319E5F3258184647E6838C7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPlaceFamily.lean",
+      "sha256": "7F7DD4427D1C0F947024E1D3082193B7333A0A1CFB4D692883020B23EF120F92",
+      "oleanSha256": "733C4DD08D2D5D6B6734016AB81F95A081674937C7739B8128B53470CBDE407C"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceCurve.AnalyticDisc.realize_const",
+    "Dubon2026.SourceCurve.AnalyticDisc.realize_add",
+    "Dubon2026.SourceCurve.AnalyticDisc.realize_mul",
+    "Dubon2026.SourceCurve.AnalyticDisc.realize_sub_const",
+    "Dubon2026.SourceCurve.AnalyticDisc.order_ne_top",
+    "Dubon2026.SourceCurve.AnalyticDisc.order_zero",
+    "Dubon2026.SourceCurve.AnalyticDisc.order_eq_top_iff",
+    "Dubon2026.SourceCurve.AnalyticDisc.order_const",
+    "Dubon2026.SourceCurve.AnalyticDisc.order_mul",
+    "Dubon2026.SourceCurve.AnalyticDisc.order_add",
+    "Dubon2026.SourceCurve.AnalyticDisc.normal_germ",
+    "Dubon2026.SourceCurve.AnalyticDisc.normal_form",
+    "Dubon2026.SourceCurve.AnalyticDisc.normal_uniformizer",
+    "Dubon2026.SourceCurve.AnalyticDisc.order_sub_uniformizer_one",
+    "Dubon2026.SourceCurve.AnalyticDisc.exists_normalized_place",
+    "Dubon2026.SourceCurve.AnalyticDisc.exists_place_family",
+    "Dubon2026.SourceCurve.AnalyticDisc.exists_place_family_of_common_disc",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_cover_place_family",
+    "Dubon2026.SourceFunctionField.OriginalChart.coverFamilyIntegral",
+    "Dubon2026.SourceCurve.AnalyticDisc.normal"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceCurve.AnalyticDisc.realize_const",
+    "Dubon2026.SourceCurve.AnalyticDisc.realize_add",
+    "Dubon2026.SourceCurve.AnalyticDisc.realize_mul",
+    "Dubon2026.SourceCurve.AnalyticDisc.realize_sub_const",
+    "Dubon2026.SourceCurve.AnalyticDisc.order_ne_top",
+    "Dubon2026.SourceCurve.AnalyticDisc.order_zero",
+    "Dubon2026.SourceCurve.AnalyticDisc.order_eq_top_iff",
+    "Dubon2026.SourceCurve.AnalyticDisc.order_const",
+    "Dubon2026.SourceCurve.AnalyticDisc.order_mul",
+    "Dubon2026.SourceCurve.AnalyticDisc.order_add",
+    "Dubon2026.SourceCurve.AnalyticDisc.normal_germ",
+    "Dubon2026.SourceCurve.AnalyticDisc.normal_form",
+    "Dubon2026.SourceCurve.AnalyticDisc.normal_uniformizer",
+    "Dubon2026.SourceCurve.AnalyticDisc.order_sub_uniformizer_one",
+    "Dubon2026.SourceCurve.AnalyticDisc.exists_normalized_place",
+    "Dubon2026.SourceCurve.AnalyticDisc.exists_place_family",
+    "Dubon2026.SourceCurve.AnalyticDisc.exists_place_family_of_common_disc",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_cover_place_family",
+    "Dubon2026.SourceFunctionField.OriginalChart.coverFamilyIntegral"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceCurve.AnalyticDisc.normal"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPlaceFamilyAudit6.log",
+  "logSha256": "2EEFA757217FB537521FFBBEA9ED1CEA897D433F9D72EF3D7BE15FF565944FA8",
+  "auditSha256": "230044805178455AE0F07B95F5489FEA99902DF38F498A570C2BDD4823887222",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 19,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 23,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerPlaceFamilyDependencyAudit6.log",
+  "dependencyAuditSha256": "50F9545FFD1CC544B4FAE1284B09656B4ACA2039B1F8F674567921917F79C3BF",
+  "dependencyAuditSourceSha256": "8D9E4F3F4B2589DEB7355DE387D7EF3CEBC8E1BB99B133982DF345C0761BC3AF",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_originalWeil_cover_place_family"
+  ],
+  "dependency": "residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> auxiliary Kummer point division -> analytic cover Abel comparison -> compatible cover place charts",
+  "discharged": "Every specified place of the literal original complex torsion cover is the center of a positive-disk family of actual normalized cover places. The chosen disk functions retain their exact convergent Laurent representations; membership and order agree with each family place. The original cover uniformizer is analytic with nonzero derivative throughout a smaller disk. These facts consume the local splitting-field realization and native order-one place construction, without assuming a chart or divisor-class division.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending; 16/20; DUB-17--20 OPEN. Compatibility and injectivity of these place families, global compact connected cover geometry, Abel comparison and division; original nondegeneracy, Hecke-component determinant and DUB-17--20 remain open.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-place-family-6-reuse-review-20261024.json",
+  "reuseReviewSha256": "CF6971DD04CB2380D49A9FAE831CBD79C4D6BE3931AB40B94E61D30C639FFAE7",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

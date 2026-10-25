@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> bilinear and third-kind reciprocity -> exact global weighted residue sum",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellDissectionInteriors.lean",
+      "sha256": "593F2C225626BA2B504DB5ABBED4E8F3185726AFD9D9EEEE914D2763010F6238"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionSkeletonRegularity.lean",
+      "sha256": "9179C9C3D1AB03A052D05310A125E532A621AA3CFC2E387B3B6C85A3EA3DF42C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellArcPartition.lean",
+      "sha256": "C1E1D48D843FF70737F519DB08483ED797620BCF8E8890DFBF3EA63562A4992B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPairedBoundarySum.lean",
+      "sha256": "6CE5957686B9E3473A2766C0C67527D30779C050E71E7725FF568BE4F21334FB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellCenteredResidue.lean",
+      "sha256": "4D44B501AAF8F6D22C7BC100009B27F40E3CF21E9BA718026224C5067D13FA1A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionCellResidues.lean",
+      "sha256": "A6F124B508FC87F7ED204DB402B85834CDE1354054E7C845205523C6CB0C52BE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPoleCarrierSum.lean",
+      "sha256": "124CF30E07B27C5DFE585CFB0B9B9E461219FD48EEA87A13D42F82061044E9B6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeightedResidueJumpSum.lean",
+      "sha256": "833475E2217E53FD7144D80370342C9425BB0B55867BD3A5434A18BF0CE01670"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalNormalizedWeightedEdges.lean",
+      "sha256": "F18D9DFD3133305AA607DF7A738985CEB96C79B0C41210C815B1E37E4547557E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellCenteredResidue.lean",
+      "sha256": "8BBE8428972FC708F96B9EC753EAA4987EF313C0304D37F0D9AFB65F816BF9D5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellResidues.lean",
+      "sha256": "79EA59A3D970E7A82750E4E1FF27F5F0C4B0BD658A2B82A724FFA837451CB56F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNormalizedWeightedEdges.lean",
+      "sha256": "BDBBDD995153AA7F88D97A25686618A5A8B62E55FDAA72ED454716E95AC53558"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPathPrimitiveData.lean",
+      "sha256": "6AAB12EC225E811B323843A53E79ABBE4D16E3F9CE784466252FDB8B9F7CB4FE"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-weighted-residues-route-542.json",
+    "sha256": "9A71086AB9483119BFD575C9F092ABF2B870B27EE92E821C813BB598DD39CA5B",
+    "review": {
+      "scope": 542,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> bilinear and third-kind reciprocity -> exact global weighted residue sum",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellDissectionInteriors.lean",
+          "sha256": "593F2C225626BA2B504DB5ABBED4E8F3185726AFD9D9EEEE914D2763010F6238"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionSkeletonRegularity.lean",
+          "sha256": "9179C9C3D1AB03A052D05310A125E532A621AA3CFC2E387B3B6C85A3EA3DF42C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellArcPartition.lean",
+          "sha256": "C1E1D48D843FF70737F519DB08483ED797620BCF8E8890DFBF3EA63562A4992B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPairedBoundarySum.lean",
+          "sha256": "6CE5957686B9E3473A2766C0C67527D30779C050E71E7725FF568BE4F21334FB"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellCenteredResidue.lean",
+          "sha256": "4D44B501AAF8F6D22C7BC100009B27F40E3CF21E9BA718026224C5067D13FA1A"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionCellResidues.lean",
+          "sha256": "A6F124B508FC87F7ED204DB402B85834CDE1354054E7C845205523C6CB0C52BE"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPoleCarrierSum.lean",
+          "sha256": "124CF30E07B27C5DFE585CFB0B9B9E461219FD48EEA87A13D42F82061044E9B6"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalWeightedResidueJumpSum.lean",
+          "sha256": "833475E2217E53FD7144D80370342C9425BB0B55867BD3A5434A18BF0CE01670"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalNormalizedWeightedEdges.lean",
+          "sha256": "F18D9DFD3133305AA607DF7A738985CEB96C79B0C41210C815B1E37E4547557E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCellCenteredResidue.lean",
+          "sha256": "8BBE8428972FC708F96B9EC753EAA4987EF313C0304D37F0D9AFB65F816BF9D5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellResidues.lean",
+          "sha256": "79EA59A3D970E7A82750E4E1FF27F5F0C4B0BD658A2B82A724FFA837451CB56F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNormalizedWeightedEdges.lean",
+          "sha256": "BDBBDD995153AA7F88D97A25686618A5A8B62E55FDAA72ED454716E95AC53558"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPathPrimitiveData.lean",
+          "sha256": "6AAB12EC225E811B323843A53E79ABBE4D16E3F9CE784466252FDB8B9F7CB4FE"
+        }
+      ],
+      "shorterRoute": "Reuse the existing planar centered residue theorem unchanged. Constructed pole-centered cells and one-pole carrier separation make a more general contour residue theorem unnecessary. Adapt only the literal coefficient and finite dissection consumers. Existing interval additivity and side bijection assemble the exact cell integrals; actual weighted cancellation and unique carriers produce the single pole sum.",
+      "assumptionsToDischarge": "The global identity between 2*pi*I times the actual rational-residue/primitive sum and the weighted edge-jump sum, from the same constructed primitive derivatives and jumps, centered pole geometry and simple-pole regularity. Every residue formula, arc integral and sum-reindexing identity is proved.",
+      "remaining": "Bilinear and third-kind identities on the same actual loop witnesses, meromorphic loop generation, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20."
+    }
+  },
+  "discharged": "The exact global weighted residue identity holds for the actual cover coefficient and actual rational residues. Constructed pole centers and carrier separation supply the centered-contour hypotheses; the existing planar residue theorem consumes the proved simple-pole expansion. Finite interval partition and side pairing assemble the cell sum, proved weighted cancellation supplies the edge-jump sum, and unique carriers collapse the residue sum. Primitive derivatives supply analyticity. No residue identity is assumed; the remaining inputs are the narrower constructed geometric and primitive data and the differential simple-pole conditions.",
+  "remaining": "Bilinear and third-kind identities on the same actual loop witnesses, meromorphic loop generation, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-weighted-edges-5-scratch-receipt.json",
+    "sha256": "402FEF0194ACBBA51D9C5633050C7783E415CF53B52EFE27EF804662C7667EF3"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

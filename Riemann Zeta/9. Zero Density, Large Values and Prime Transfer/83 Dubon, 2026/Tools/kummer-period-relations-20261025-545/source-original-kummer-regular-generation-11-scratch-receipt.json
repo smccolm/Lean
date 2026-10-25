@@ -1,0 +1,152 @@
+{
+  "recordedUTC": "2026-10-25T11:20:03.965040+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceRadialCellClosedCarriers",
+    "SourceRadialCellCarrierNeighborhoods",
+    "SourceRadialPairedArcEquality",
+    "SourceRadialCellJumpDifferences",
+    "SourceOriginalWeilCoverCoordinatePrimitiveComparison",
+    "SourceOriginalWeilCoverPathPrimitiveData",
+    "SourceOriginalWeilCoverCellPrimitiveLocalDifference",
+    "SourceRadialPrimitiveAtlas",
+    "SourceOriginalWeilCoverPathPrimitiveJumps",
+    "SourceOriginalWeilCoverRegularLoopGeneration",
+    "SourceOriginalWeilCoverRegularCycleData"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialCellClosedCarriers.lean",
+      "sha256": "44C56FFE85AEE4B79894143C583ADBA305849DAB5C1D7C209B23907DB48E0518",
+      "oleanSha256": "D40F457783505E466D9E934F89619E3139BB2D1C34396F9D6BBC7B56E30BE263"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialCellCarrierNeighborhoods.lean",
+      "sha256": "FFB70550FA00000F47165D5B31B990363FCAC3F990F8E7B86FDA48A357CE40F1",
+      "oleanSha256": "2F84B6E0E2E8E1F68F518CD9E9AF6A1CEB96B7AB8715F01C60C8D54C8108DAA5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialPairedArcEquality.lean",
+      "sha256": "6933DB2037CB41111751249C081D3BA4E0177E597CADA1DB6EF6FF78032B20D3",
+      "oleanSha256": "2B8D92CB903DC5025DCCD27B2427E02C573A628E60DF7B909B841D6FD4B910C9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialCellJumpDifferences.lean",
+      "sha256": "100D32A32546992AE1021874488B5CB552FD08298A3F33B1BD4678A37CF00DFD",
+      "oleanSha256": "67CF94E89A9B6F79410571418025D661C812B637E72E0DC3DD7CFAADDC221EF1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCoordinatePrimitiveComparison.lean",
+      "sha256": "FF4C06A733EA175EFB18BFA92AF3A6E2CDA31A4D67F92A07F67F431C61B3161D",
+      "oleanSha256": "03A6BC4B77242A1305B0CC2940BEF5187A83D5D13C29E3CA73D8C967978C808D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPathPrimitiveData.lean",
+      "sha256": "6AAB12EC225E811B323843A53E79ABBE4D16E3F9CE784466252FDB8B9F7CB4FE",
+      "oleanSha256": "D6033E54BA7465240FB0906A39A6EFD8B981AF6503D2C92E7DB6BB3615424D7D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellPrimitiveLocalDifference.lean",
+      "sha256": "3B0E5E6142424939EC89241816E609CD3AC7D5BAD18D005D0CAB0BC509FBF44D",
+      "oleanSha256": "1CC7D5F008AE3CB4E70FC9ED0A07B90F01F3F52D5DA82E4EC112B4141A1D8185"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialPrimitiveAtlas.lean",
+      "sha256": "394CCB920E3FD11BD6B693DF8A5706A8F7B53366157BEB7AA718B15F2C4F8144",
+      "oleanSha256": "D2AFABAF887690C29079F4326F2AB56FB9AC6D00F2553F259CDE1F4A8378114C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPathPrimitiveJumps.lean",
+      "sha256": "BD6A8AA914B72395F234A2F973F3AE6FE53BE784EE9C2647803F61148B175E19",
+      "oleanSha256": "751ED7E0BEE82FB8391F804C0C8A5D9C587C1A25A53ABACDEE3D2CC9614589F2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRegularLoopGeneration.lean",
+      "sha256": "7A8D1A7BD1218DFEA6C769749A8F87BA8B92000B232F2155C9E5081407DF55F6",
+      "oleanSha256": "19408F9A2FB5F6762485A6BEA8BCBB27DD574D09349F9FE849E7592B679F7311"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRegularCycleData.lean",
+      "sha256": "85CF2497192A9BCED42DE3EB7642CD3368E61E3D164D31BB767AF4F96D579CB5",
+      "oleanSha256": "081CC6DCB4F4EA7B24F734329D5ED9E71310F2DEC8864062A453A1ECDB7940A9"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.carrier_isCompact",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.carrier_isClosed",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.isClosed_badCarrierSet",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.not_mem_badCarrierSet_self",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.mem_carrier_of_not_mem_badCarrierSet",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.exists_mem_carrier",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.mem_cellOf",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.arc_subset_of_arc_rev",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.arc_eq_of_side",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.gvec_sub_mem_of_linkedAt",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.gvec_sub_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_hasDerivAt_coordPrimitive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_eventually_coordPrimitive_sub_eq",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_eventually_gvec_sub",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_path_sub_mem_closure_jumps",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_loop_period_mem_jumps",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_regular_cycle_generation",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_regular_cycle_data",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.badCarrierSet",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.cellOf",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.LinkedAt",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverPrimData",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.Gchart",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverRegularCycleGeneration",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverRegularCycleData"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.carrier_isCompact",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.carrier_isClosed",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.isClosed_badCarrierSet",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.not_mem_badCarrierSet_self",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.mem_carrier_of_not_mem_badCarrierSet",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.exists_mem_carrier",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.mem_cellOf",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.arc_subset_of_arc_rev",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.arc_eq_of_side",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.gvec_sub_mem_of_linkedAt",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.gvec_sub_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_hasDerivAt_coordPrimitive",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_eventually_coordPrimitive_sub_eq",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_eventually_gvec_sub",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_path_sub_mem_closure_jumps",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_loop_period_mem_jumps",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_regular_cycle_generation",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_regular_cycle_data"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.badCarrierSet",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.cellOf",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.LinkedAt",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverPrimData",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.Gchart",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverRegularCycleGeneration",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverRegularCycleData"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerRegularGenerationAudit11.log",
+  "logSha256": "AF61E70EC7945CB364C7951291CDC805A372B2E90D2FB928F19AD3EAC9F7ABF1",
+  "auditSha256": "8A9AE0C21F1B3A1E2D4009446F0D364B5B81042BF863B3594CC5C71393D3E36C",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 38,
+  "linterScopes": 11,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 24,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerRegularGenerationDependencyAudit11.log",
+  "dependencyAuditSha256": "19C7F99EEB41E4D77F083DB024FB6850B3B5FBA5B76F75F5F330AFB6633B8B13",
+  "dependencyAuditSourceSha256": "CE78FD13F2B996E1C13C935470D40DA0E1F660EB30BBDB9A86D7827B71DE6138",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_regular_cycle_data"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> regular and meromorphic period generation and reciprocity -> arbitrary regular-loop generation by constructed complementary periods",
+  "discharged": "Every actual loop has common integer coefficients for the finite regular-differential family in the same 2g complementary loop periods. Actual compact carriers, paired arcs and intersection chains construct the atlas. The existing coefficient pullback and primitive uniqueness compare arbitrary path primitives to cell readings, and the unchanged atlas theorem places the loop vector in the jump subgroup. The actual jump-period matrix and native integer-span membership give the coefficients. The assembled actual consumer supplies all coordinate, regularity, primitive, jump and matrix inputs; no regular-loop-generation hypothesis remains.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Meromorphic loop generation, exact word-matrix unimodularity, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-regular-generation-11-reuse-review-20261025.json",
+  "reuseReviewSha256": "C857127EEEE5DEB2ADC91C3C9E61ABA50F655D3842F7EED73C816E453F67E087",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

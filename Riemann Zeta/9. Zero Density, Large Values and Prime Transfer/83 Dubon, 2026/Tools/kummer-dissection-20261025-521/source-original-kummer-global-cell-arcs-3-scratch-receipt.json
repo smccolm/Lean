@@ -1,0 +1,60 @@
+{
+  "recordedUTC": "2026-10-25T06:58:28.495799+00:00",
+  "date": "2026-10-24 America/Vancouver",
+  "modules": [
+    "SourceOriginalWeilCoverLiftedArcEquality",
+    "SourceOriginalWeilCoverLiftedArcMatching",
+    "SourceOriginalWeilCoverGlobalCellCoordinates"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLiftedArcEquality.lean",
+      "sha256": "8D7D2393518446EF39BC38888B0964F66790CEDF9CD2354D7DB6F7C3288C7F27",
+      "oleanSha256": "32BE2094C12E2C1467D18149251AEF34700BDE022335B66D72237DFAAE2C144C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLiftedArcMatching.lean",
+      "sha256": "D411FA9413D6232BCB803074045455F9CA271E813DEF59393C22022F834A5D99",
+      "oleanSha256": "B72D977E43814A9ECD6AF8E6B9F8944184972791818801E15129863F2AC18386"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverGlobalCellCoordinates.lean",
+      "sha256": "0289183E002F5EEFC6CBC852E60C51575D70146D01B641CA15D7AA3F2CE344DC",
+      "oleanSha256": "0D2A7D59A170D3D076AFFD8A254DD79FD37DBAAB7327CD83A325A241232F2851"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.lifted_boundary_arcs_eq_of_endpoint",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.existsUnique_lifted_boundary_arc",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_global_cell_coordinates"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.lifted_boundary_arcs_eq_of_endpoint",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.existsUnique_lifted_boundary_arc",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_global_cell_coordinates"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerGlobalCellArcsAudit3.log",
+  "logSha256": "2F9AF38BB3EB6DD14863541590FC3F1A00341A1BAF6EE04520FC36AC880B856F",
+  "auditSha256": "B4F77E976E06403F4C78A40B9061163463DDDC2205BAE8F93798732BA0ABC2DA",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 3,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 8,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerGlobalCellArcsDependencyAudit3.log",
+  "dependencyAuditSha256": "6B489C24F03456EC70F849162D1207DB3F89DABDA15120C3C0D4240373BE1822",
+  "dependencyAuditSourceSha256": "161A3586A571789B4B5D5E4FBAF53ECD3524AF1ED6BBD4F0C46819F1AFB59D6E",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.existsUnique_lifted_boundary_arc",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_global_cell_coordinates"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> raw geometric reciprocity -> actual finite paired lifted dissection -> finite global lifted coordinates and unique adjacent boundary-sheet match",
+  "discharged": "Every fixed constructed original global cell cover lifts to finite actual coordinate families whose compact radial carriers cover every cover place. On adjacent base cells, the original arc reparameterization lifts unchanged once endpoints agree. Exhaustion and disjoint sheets prove a unique neighboring match. These are geometric construction and matching lemmas; the pairing involution, vertex/intersection data and global reciprocity are still separate obligations.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The actual paired cover dissection, lifted arc involution and vertex/intersection construction, cycle generation and bilinear/third-kind reciprocity, unconditional cover Abel converse and point division, arithmetic descent and remaining DUB-17--20 arithmetic obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-global-cell-arcs-3-reuse-review-20261024.json",
+  "reuseReviewSha256": "8AA1F31BBAD5C2F207930F2AC5A26462703A208DCBD27A78BFEA4EDD31A9F8B7",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

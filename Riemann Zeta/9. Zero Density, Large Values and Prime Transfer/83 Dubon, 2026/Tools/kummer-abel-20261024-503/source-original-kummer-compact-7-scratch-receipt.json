@@ -1,0 +1,110 @@
+{
+  "recordedUTC": "2026-10-25T04:01:04.829697+00:00",
+  "date": "2026-10-24 America/Vancouver",
+  "modules": [
+    "SourceFiniteFiberOpenMap",
+    "SourceCurveUnramifiedFiberCard",
+    "SourceCurveUnramifiedChartRestriction",
+    "SourceAnalyticRestrictionTopology",
+    "SourceOriginalWeilRestrictionComparison",
+    "SourceOriginalWeilRestrictionTopology",
+    "SourceOriginalWeilCoverCompact"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteFiberOpenMap.lean",
+      "sha256": "602ADB5B83CB202250C4C4D8632D8C2E1CF5E437FC82B3DC0C9EB6327C38E5A7",
+      "oleanSha256": "3D348513993EDD18A5684E11A5DCDAE68168971A352249628ABD61336E79898F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveUnramifiedFiberCard.lean",
+      "sha256": "FD64D148099E15EE70910DE9681CC67A7B6337E2EA2CADE78DFFE41EA447B001",
+      "oleanSha256": "33BCA43F28F74B4BD5D89B5F26731993F3BBAA2AD47206698F6A01DE5334D8B3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveUnramifiedChartRestriction.lean",
+      "sha256": "303B0294E028D8C92807EEF423A98D091CDE41A37BB5E7D3F82774BAB0C88E11",
+      "oleanSha256": "22EA4D5917352F1CDA9A2B6C89D1F23981E3C81783D6D903BC3F08AA3F819032"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAnalyticRestrictionTopology.lean",
+      "sha256": "4C0F8752E3F48C0D94238F63AE3BD21C4426CDAD7088ED5BA31ABF067A23C52E",
+      "oleanSha256": "3E8326F62580C3DDDC491041A894B2B9B107C8940A68177B52125D30262AE0D4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRestrictionComparison.lean",
+      "sha256": "12756B0A2A8FA5785F92CF649B2697C905FDD8C7AC64D6B83D2760A7D9F64D1E",
+      "oleanSha256": "71AD164846C08C7718E85234E19AC015C58516753ADA74CC56D4CF06AF43643B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRestrictionTopology.lean",
+      "sha256": "65313F82B1590A704891B0DF7160899C81C72E3C90817AE85661F54867C21435",
+      "oleanSha256": "411EE3D74F509F3A92B327CD245265929AA2E082FA5E00B44BC354EB40802C59"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCompact.lean",
+      "sha256": "3D70B9D04B80CF72E682451696B55065329369ACA52D7EF749ACDBF0B0D2473D",
+      "oleanSha256": "564BFF6D3FF758B6175363156BD9C29F4260786A22CDDE18EC12DCEB4A4581EF"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceCurve.isClosedMap_of_open_constant_finite_fibers",
+    "Dubon2026.SourceCurve.compactSpace_of_open_constant_finite_fibers",
+    "Dubon2026.SourceCurve.Place.card_unramified_restriction_fiber",
+    "Dubon2026.SourceCurve.AnalyticChart.Orders.restrict_unramified",
+    "Dubon2026.SourceCurve.map_nhds_eq_of_analytic_chart_comparison",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.restriction_family_orders",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.restriction_chart_comparison",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.restriction_map_nhds",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.continuous_restriction",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isOpenMap_restriction",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.restrictionIntegral",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.card_restriction_fiber",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_compactSpace",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.compactCoverFinite",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.compactCoverIntegral",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.restrictionComparison"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceCurve.isClosedMap_of_open_constant_finite_fibers",
+    "Dubon2026.SourceCurve.compactSpace_of_open_constant_finite_fibers",
+    "Dubon2026.SourceCurve.Place.card_unramified_restriction_fiber",
+    "Dubon2026.SourceCurve.AnalyticChart.Orders.restrict_unramified",
+    "Dubon2026.SourceCurve.map_nhds_eq_of_analytic_chart_comparison",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.restriction_family_orders",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.restriction_chart_comparison",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.restriction_map_nhds",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.continuous_restriction",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.isOpenMap_restriction",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.restrictionIntegral",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.card_restriction_fiber",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_compactSpace",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.compactCoverFinite",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.compactCoverIntegral"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.restrictionComparison"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCompactAudit7.log",
+  "logSha256": "B9D51DBB12189D49EFF8371130201FB5CC8A49D1242E12CC165B3694A1702A23",
+  "auditSha256": "6C34C8F1D72201030E6CE108B1DC4F8BFC24E815D40E15DCAE97879FAA59B499",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 36,
+  "linterScopes": 7,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 19,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCompactDependencyAudit7.log",
+  "dependencyAuditSha256": "6895D17F40EC7AF51F909E315A98A228908998FF050C6F7F64E41B7FF4B3302E",
+  "dependencyAuditSourceSha256": "D6D172624EE4C70BF0A73516CE99D2CC04FE0CF1D89AF3903CFB7ADDD08A1220",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_compactSpace"
+  ],
+  "dependency": "residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary Kummer point division -> cover Abel comparison -> compact connected cover geometry",
+  "discharged": "The literal complex splitting field of an actual original torsion radicand has a compact place manifold. The native residue evaluation restriction law and ramification index one preserve the exact reading orders. The constructed chart comparison transports neighborhood filters and proves that actual restriction is continuous and open. The native ramification-degree sum gives its constant finite fiber cardinality. Disjoint neighborhoods and cardinal exhaustion prove closedness without a compact-source premise, and the pinned proper-map criterion transfers compactness from the already compact original curve.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Connectedness, auxiliary cover Abel comparison, actual point-difference division and arithmetic descent remain unproved. Original pairing nondegeneracy, nonzero required Hecke-component restriction, separate determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-compact-7-reuse-review-20261024.json",
+  "reuseReviewSha256": "951C95FE3CA294B5AC2A3A1326E4E3DACEBDC575EE9D3BD00AF6696A98696319",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

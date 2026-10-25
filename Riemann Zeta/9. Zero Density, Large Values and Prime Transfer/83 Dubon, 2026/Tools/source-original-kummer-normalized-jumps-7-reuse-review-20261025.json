@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> normalized constant jumps of actual cell primitives",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellCoordinateTransition.lean",
+      "sha256": "0C6049B3585921D321EC7759C56DC0815B88488E76DB58AAA842F5767928DC6E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPrimitiveJumps.lean",
+      "sha256": "35E25150185FDCD90E82A27066FF7BBFF9CEC775751E595B0E9C4ABBD5F41231"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPairedArcOverlap.lean",
+      "sha256": "78DD4097BB2927ADE44C664B57E569C2C827EB8BBD9BFF35D85409D0631FA529"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionPrimitiveJumps.lean",
+      "sha256": "DA70B862F10131BBDDD3C9DDACCFD12EDCC47D5FE584E11479E402BA69F06322"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDualTreeNormalization.lean",
+      "sha256": "353F8726033B79F3A474C935223F0E90C0978FA7B2AC47BF7ED7ECFBF8E1A566"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalNormalizedCellPrimitives.lean",
+      "sha256": "E5467D210B6678EED6091CFF2F24FF40577AB32983C65F4B638572097A218FCF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedNormalizedPrimitives.lean",
+      "sha256": "3571265359CE0AF99C13A85E61660730E44CEE680D8E3DD7BEF9359E06F938DC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellCoefficientTransition.lean",
+      "sha256": "07DA15316D1CAC54FB1BFF7CE17D0364DA6ECE379E716110522A3A103B311336"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialReversedArcImages.lean",
+      "sha256": "F68B25E2B35AA88DA78E123DCE0F492E5DF21D82799E7C365CC386C0B745582F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCoordinateCyclePrimitives.lean",
+      "sha256": "D49DA89037DAE7F55EECF7D2679CAEF2D0ED9331DBB07AF1094EAE69A1AF2001"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-normalized-jumps-route-532.json",
+    "sha256": "C824F7D58039826998EF409DCD1E8F7A8D406ADEF2F738DCDCD46F3B508AF924",
+    "review": {
+      "scope": 532,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> normalized constant jumps of actual cell primitives",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellCoordinateTransition.lean",
+          "sha256": "0C6049B3585921D321EC7759C56DC0815B88488E76DB58AAA842F5767928DC6E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPrimitiveJumps.lean",
+          "sha256": "35E25150185FDCD90E82A27066FF7BBFF9CEC775751E595B0E9C4ABBD5F41231"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPairedArcOverlap.lean",
+          "sha256": "78DD4097BB2927ADE44C664B57E569C2C827EB8BBD9BFF35D85409D0631FA529"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDissectionPrimitiveJumps.lean",
+          "sha256": "DA70B862F10131BBDDD3C9DDACCFD12EDCC47D5FE584E11479E402BA69F06322"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDualTreeNormalization.lean",
+          "sha256": "353F8726033B79F3A474C935223F0E90C0978FA7B2AC47BF7ED7ECFBF8E1A566"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalNormalizedCellPrimitives.lean",
+          "sha256": "E5467D210B6678EED6091CFF2F24FF40577AB32983C65F4B638572097A218FCF"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedNormalizedPrimitives.lean",
+          "sha256": "3571265359CE0AF99C13A85E61660730E44CEE680D8E3DD7BEF9359E06F938DC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellCoefficientTransition.lean",
+          "sha256": "07DA15316D1CAC54FB1BFF7CE17D0364DA6ECE379E716110522A3A103B311336"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialReversedArcImages.lean",
+          "sha256": "F68B25E2B35AA88DA78E123DCE0F492E5DF21D82799E7C365CC386C0B745582F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCoordinateCyclePrimitives.lean",
+          "sha256": "D49DA89037DAE7F55EECF7D2679CAEF2D0ED9331DBB07AF1094EAE69A1AF2001"
+        }
+      ],
+      "shorterRoute": "Use the already proved reversed arc-image equality for both endpoint overlaps. Adapt the existing primitive-jump proof with the proved actual coefficient transition and inverse coordinates; native interval FTC is unchanged. Transport constants with the existing integer-tree boundary calculation and assemble on the same actual marked dissection and coordinate cycles.",
+      "assumptionsToDischarge": "Analytic transitions between actual cover cell coordinates, paired coordinate overlaps, constancy and existence of actual primitive jumps, vanishing of all dual-tree jumps and root primitive normalization. The actual assembled consumer supplies the coordinate, tree and primitive inputs.",
+      "remaining": "Jump circulation and reduction, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20."
+    }
+  },
+  "discharged": "The actual cover coordinate transition is analytic and the proved reversed arc-image equality supplies paired overlaps. The actual coefficient law and native interval FTC construct constant primitive jumps including both endpoints. Integer boundary algebra transports additive constants along the actual dual tree, makes all its jumps zero and normalizes the root primitive value. The same actual marked dissection retains geometry, integer cycles and coordinate loop identities. No primitive, jump or normalization existence premise remains on the assembled consumer.",
+  "remaining": "Jump circulation and reduction, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-coordinate-loops-8-scratch-receipt.json",
+    "sha256": "467AE0FA631D6C2C4ECCE744D2C8CAB8B46D4154A54E545C9CBD7618A4BD4AE2"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

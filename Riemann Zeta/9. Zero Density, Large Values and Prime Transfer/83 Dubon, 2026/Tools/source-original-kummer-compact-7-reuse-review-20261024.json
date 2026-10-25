@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary Kummer point division -> cover Abel comparison -> compact connected cover geometry",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiberDegreeSum.lean",
+      "sha256": "7032980723B606D2F61584558C7BFF8D285EC651ED3F321B7DB17647C734FC08"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiberPrimes.lean",
+      "sha256": "D3D03DD915E514A2A2DE740F995A88D0CE98A92ECFEB0B40EE6EC2B638EBD000"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveEvaluationRestriction.lean",
+      "sha256": "0D6C7E4D20169DB92B96BE620C88FCBA16923686F5E5965308CDA9E45EBB85FF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRestrictionOrders.lean",
+      "sha256": "7F3BDC1E9165D19496D2E3B821686E945DACDBD93BD8277DB5B0444519407B7B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalComplexCompact.lean",
+      "sha256": "0302502337DED5124E48EA06E5696DC852C4A2BC88B302AB6129409DE7A6AA4B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalJCovering.lean",
+      "sha256": "311A28BAA0B15F8409DE6C95A3F224DD4C2FEE550FD23D2CF63EFDEFFAE4FDA6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilEveryLocalCover.lean",
+      "sha256": "6FA6556E3952AED79BA0226A82AC6D1196602ABF17B56F33BD407DE0056936B9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveAnalyticChartBranchEquality.lean",
+      "sha256": "FA9E1F1302950CDD73FD4ADE6C2D4DDB4C39276F3CF263EA9A87AAA4BC199736"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverHausdorff.lean",
+      "sha256": "D27AC0CB579D0DC2D31C3CED4E0723040F3941DEC78D7A0189C886D312AD61BF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Maps\\Proper\\Basic.lean",
+      "sha256": "13733744DB104566A8C988476CA5FEBB51FFAD6A261A2AB264EE31CCA26F86E5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Covering\\Basic.lean",
+      "sha256": "8A3BA40E8F453C783001ECC56B5BB95D6E40E9FC1713D22F95F61326DDEF2A55"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-compactness-route-496.json",
+    "sha256": "FCA2481EFD298DB98D8A94961B02FED9A133584D76CDCCE047A7E4661179EF7E",
+    "review": {
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary Kummer point division -> cover Abel comparison -> compact connected cover geometry",
+      "requiredObstacle": "Compactness of the actual unramified complex Kummer cover is not yet proved.",
+      "reuseChecked": [
+        "SourceCurve.Place.sum_fiber_ramification and finite_placeFiber: genuine normalized place fiber degree sum and finiteness",
+        "OriginalChart.originalWeil_complex_kummer_unramified: all ramification indices are one for div(f)=nD, n nonzero",
+        "SourceCurve.Place.rationalEval_algebraMap_restrict: exact actual residue reading compatibility",
+        "OriginalWeilCoverChart.place_isManifold and place_t2Space: actual auxiliary cover topology and analytic charts",
+        "OriginalChart compact original curve; native inverse-function and analytic chart comparison proofs",
+        "Pinned Mathlib isProperMap_iff_isClosedMap_and_compact_fibers and IsProperMap.isCompact_preimage"
+      ],
+      "shorterRoute": "A continuous open map from a Hausdorff space with finite fibers of constant cardinal is closed: disjoint neighborhoods of a fiber supply that many distinct nearby preimages and cardinality exhausts each nearby fiber. The pinned proper-map theorem then transfers compactness from the original base. Prove the actual restriction is locally a homeomorphism using unramified residue charts and evaluation restriction. This avoids reconstructing general finite-coordinate compactification.",
+      "circularityCheck": "The existing IsClosedMap covering constructor needs closedness and the alternative constructor assumes compactness of the cover. Neither is used to obtain its own input. The new closed-map argument uses finite cardinality and open neighborhoods only.",
+      "scope": "Only constant finite fibers, the closed/proper-map deduction, and actual normalized restriction charts needed for this cover. Defer general branched covering or arbitrary curve compactification.",
+      "remaining": "Actual local-homeomorphism and compactness consumers, connectedness, Abel comparison, point division and arithmetic descent must still be proved. No acceptance gate closes."
+    }
+  },
+  "discharged": "The literal complex splitting field of an actual original torsion radicand has a compact place manifold. The native residue evaluation restriction law and ramification index one preserve the exact reading orders. The constructed chart comparison transports neighborhood filters and proves that actual restriction is continuous and open. The native ramification-degree sum gives its constant finite fiber cardinality. Disjoint neighborhoods and cardinal exhaustion prove closedness without a compact-source premise, and the pinned proper-map criterion transfers compactness from the already compact original curve.",
+  "remaining": "Connectedness, auxiliary cover Abel comparison, actual point-difference division and arithmetic descent remain unproved. Original pairing nondegeneracy, nonzero required Hecke-component restriction, separate determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-manifold-4-scratch-receipt.json",
+    "sha256": "12AEB3D521439672A58153E1BF4814DDFC097244F758D5C6920C95E2F67B7979"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,118 @@
+{
+  "recordedUTC": "2026-10-25T05:09:14.048483+00:00",
+  "date": "2026-10-24 America/Vancouver",
+  "modules": [
+    "SourceOriginalWeilCoverCanonicalSupport",
+    "SourceOriginalWeilCoverDifferentialReadingLinear",
+    "SourceOriginalWeilCoverRegularEvaluationSeparation",
+    "SourceOriginalWeilCoverRegularEvaluationFrame",
+    "SourceOriginalWeilCoverAbelJacobiImage",
+    "SourceOriginalWeilCoverAbelJacobiOpenImage",
+    "SourceOriginalWeilCoverJacobiInversion",
+    "SourceOriginalWeilCoverJacobiInversionAssembled"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCanonicalSupport.lean",
+      "sha256": "0FA1C4DE0E53292A3040CB9ED377837954CA810EAC400C506302BB99E4743917",
+      "oleanSha256": "A29ECA58BDFF6E6AB7D048B45769CE9DD44838AEFFBA45E7DC9A14B4BA260B82"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDifferentialReadingLinear.lean",
+      "sha256": "661229A45AD674A130AC7133C4EC7D475C7023A6C6F7059EF2A199E469948E0F",
+      "oleanSha256": "9D6BBDC693C2EB570B2A5556E31C858B5441BCAB531067DA54EFE3712944E83C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRegularEvaluationSeparation.lean",
+      "sha256": "2A7B1F9E78FACAD8139184F5ECEE1774A6123085EF3DCED7791322B32729EECB",
+      "oleanSha256": "EBC0356E20C0C8A4346941F8F464278CC6AE7703A938FF3D731282FC31293811"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverRegularEvaluationFrame.lean",
+      "sha256": "0AC8420FA78D4273EB7AC593450075ECAA58387B954276B2EA2ED20654929A6C",
+      "oleanSha256": "E7FD8BF6F12E0140A89D4FEDFDC869328D2989BBC189A9BE9C96DE181A9D01F8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverAbelJacobiImage.lean",
+      "sha256": "078CB0286437090B7076F9A3D048B89AE0222E2875695754EF112600F8C4DE9E",
+      "oleanSha256": "F0A0B46A211BC966A8FA9583CA8F94019C29E2834E92ACC4CEC9A1B92BE42851"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverAbelJacobiOpenImage.lean",
+      "sha256": "41F20B1FF9EBDF439E4E584BB4A449186789CC855ECB0C2916C9D025177EA851",
+      "oleanSha256": "97EB45783F1BBBC2B5F4BBBE0F1D2422183E21647E0C1E0A38B97DF32A0AD150"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverJacobiInversion.lean",
+      "sha256": "45043ED5BB5DFB60A3DD140B2833927681936EF3FD0BF0F18EE546EE88101F23",
+      "oleanSha256": "9D823C3C67449BBF69623288B0C0E54F17F53B4C7129EEF39FA0EB32B7C94109"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverJacobiInversionAssembled.lean",
+      "sha256": "684BBC2A1DB750B451F9011358DDD503056E90B48C1E4CB1A915111A91F8DDAE",
+      "oleanSha256": "CA2A5C6270712AC735ECE932990F356AB7473036DE6D4405C5DAFE3010358E63"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coordinate_differential_ne_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.finite_cover_differential_support",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.finite_cover_regularDifferentials",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_differentialCoeff_sum_smul",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_eval_sum_mul_of_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.readDifferential_sum_smul",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_infinite",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.readDifferential_center",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eq_zero_of_forall_readDifferential_center",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.span_readDifferential_center_eq_top",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_evaluation_frame",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.local_primitive_sum_mem_abelJacobiImage",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiImage_mem_nhds_of_frame",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_jacobi_inversion",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_jacobi_divisor",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiImage",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverRegularBasis"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coordinate_differential_ne_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.finite_cover_differential_support",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.finite_cover_regularDifferentials",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_differentialCoeff_sum_smul",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_eval_sum_mul_of_mem",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.readDifferential_sum_smul",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_infinite",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.readDifferential_center",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eq_zero_of_forall_readDifferential_center",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.span_readDifferential_center_eq_top",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_evaluation_frame",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.local_primitive_sum_mem_abelJacobiImage",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiImage_mem_nhds_of_frame",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_jacobi_inversion",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_jacobi_divisor"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiImage",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverRegularBasis"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerJacobiInversionAudit8.log",
+  "logSha256": "A264BD1A213E7F7C076266375E67D65A0994C95DCCD40574F249D6501DC8642C",
+  "auditSha256": "783D8FECF6204D70D032C6D146CFB7F93764D672B9C163B2D4007CE87E37B23F",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 30,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 21,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerJacobiInversionDependencyAudit8.log",
+  "dependencyAuditSha256": "9701C7040A129B345CAE090383D686ED4518F34A99954107D2264A9CF1C11911",
+  "dependencyAuditSourceSha256": "F1FD11F954F4D5DCA0A0ECFCBB971C3104C6801A89BF89F0937E52C85F3ACD6F",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_jacobi_divisor"
+  ],
+  "dependency": "actual residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> actual auxiliary point division -> cover Abel comparison -> Jacobi inversion and finite regular differential basis",
+  "discharged": "The actual regular differential space of the literal complex Kummer cover is finite dimensional and has a constructed basis. Its center evaluations separate and span; a proved evaluation frame and the native inverse function theorem make the actual degree-zero Abel image open. Connected complex coordinate space makes that image the whole space. Every coordinate vector is therefore represented by an actual degree-zero cover divisor modulo actual loop periods. No finite-dimensionality, basis, frame, local-surjectivity or Jacobi-inversion hypothesis remains. The principal-divisor converse is still required for auxiliary point division.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Cover Abel converse, actual point division and arithmetic descent remain unproved. Original pairing nondegeneracy, Hecke-component restriction and determinant, residual association, automorphy and all-weight continuation remain open. DUB-17--20 OPEN;16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-jacobi-inversion-8-reuse-review-20261024.json",
+  "reuseReviewSha256": "B044AE239DEED13EEE5653250B63E985CE47FC1E4700F897B17AF65CFCE03239",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

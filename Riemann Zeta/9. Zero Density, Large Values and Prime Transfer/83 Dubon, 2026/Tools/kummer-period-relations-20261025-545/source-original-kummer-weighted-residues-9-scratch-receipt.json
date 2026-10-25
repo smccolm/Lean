@@ -1,0 +1,126 @@
+{
+  "recordedUTC": "2026-10-25T12:17:56.898263+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceRadialCellInteriors",
+    "SourceRadialPoleSkeleton",
+    "SourceRadialCellArcPartition",
+    "SourceRadialPairedBoundarySum",
+    "SourceOriginalWeilCoverCellCenteredResidue",
+    "SourceOriginalWeilCoverDissectionCellResidues",
+    "SourceRadialPoleCarrierSum",
+    "SourceOriginalWeilCoverWeightedResidueJumpSum",
+    "SourceOriginalWeilCoverNormalizedWeightedResidues"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialCellInteriors.lean",
+      "sha256": "155ADA243D56DEFCD4AFC4CE1EFA8923861581297305181C024575D59C88DA40",
+      "oleanSha256": "18A11F3CC36E278742DE769E2440A1F5B1F3B53C2B673CD84959A187C6956F44"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialPoleSkeleton.lean",
+      "sha256": "2164CD7C46F2CDC84F3D64ED8666230DCFC152EC8033D5804EC95792E4314EE3",
+      "oleanSha256": "2DEEDDAB6E405999BD669D2017ABA1B3B7A6C28CA0FDC2137C8095FAA850D03C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialCellArcPartition.lean",
+      "sha256": "58F6FEACD507673D61EAFB1B369CB6ADCB6356F16B0ED9A7AA1761D52F81ED54",
+      "oleanSha256": "6C02A49EBDAD3E888B2DDD8DA3778F47FAF9A86DB95AF2516F8A1EE395B9C055"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialPairedBoundarySum.lean",
+      "sha256": "14F23DDC6DF8270DD42E84E3E91173A32969AF61D2E50B0595EC1D385E4DE7DD",
+      "oleanSha256": "396F295DF7678A339E42CEE2999926E19304740D5D416D1FF645C387A5621C17"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellCenteredResidue.lean",
+      "sha256": "347B467064D0AA54AEE0B1AAA7C96E1609DD22A1B874C1CA4B5DF143F3E9098A",
+      "oleanSha256": "66414B70BE685871480C99C3B4370655B26CF85062B8422AB224A134E2B5D158"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDissectionCellResidues.lean",
+      "sha256": "951807F7BE900F191EDB8BABFE23B66167599E2BCB1752FBBBDE68181E382542",
+      "oleanSha256": "186FD91F5F14DCE01447516F486D44D8B92A403F30131CB60C963E7983A53AE6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialPoleCarrierSum.lean",
+      "sha256": "C3D883B0A2196178E93220A158F3A8F3ADD20761FDD7C830D029A56C9C7CF014",
+      "oleanSha256": "1E0F80EE5D4693338CEB7EA31E2ADF15F155F142E7D561531B5B198947149CBF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverWeightedResidueJumpSum.lean",
+      "sha256": "4C26317C8644374FD0B6EECBDEB3CB5CF2CAC523E2684A01B6A0329BE311CF61",
+      "oleanSha256": "9AAC11E82B944D012072B43B36C03596EE82C793B070B395A6A9CF7B4BED33DA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverNormalizedWeightedResidues.lean",
+      "sha256": "7ED1EB326D5F1A7A0A631F55722022103624A68DC6E6C34C600209972EF388E0",
+      "oleanSha256": "5BD1FBCA1CE681237BCD9C19C14EAD924855A367C13BA7C35926E4866F4CEE3C"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.interior_subset_carrier",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.bdry_not_mem_interior",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.eq_of_interior_mem_carrier",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.pole_center_on_carrier",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.interior_of_pole_mem_carrier",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.pole_not_mem_skeleton",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.bdry_mem_skeleton",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.integral_eq_sum_arcInt",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.sum_cell_integrals_eq_sum_paired",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_cell_analyticAt_coeff_off_center",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_cell_centered_weighted_residue",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_cell_residue",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.sum_pole_carriers",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_regular_on_skeleton",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_residue_jump_sum",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalized_primitive_analytic",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalized_weighted_residue_sum",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.arcInt"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.interior_subset_carrier",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCell.bdry_not_mem_interior",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.eq_of_interior_mem_carrier",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.pole_center_on_carrier",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.interior_of_pole_mem_carrier",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.pole_not_mem_skeleton",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.bdry_mem_skeleton",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.integral_eq_sum_arcInt",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.sum_cell_integrals_eq_sum_paired",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_cell_analyticAt_coeff_off_center",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_cell_centered_weighted_residue",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_cell_residue",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.sum_pole_carriers",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_regular_on_skeleton",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_weighted_residue_jump_sum",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalized_primitive_analytic",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalized_weighted_residue_sum"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.arcInt"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeightedResiduesAudit9.log",
+  "logSha256": "284385A0D045F5D78A1D81CB82900DC8C3A64B9F85F4DD4D17C2BF5A36D52916",
+  "auditSha256": "89734A0D9315F98B7666C420109E647EAC0D164F74F2C9322CCC436B92659B98",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 21,
+  "linterScopes": 9,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 23,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerWeightedResiduesDependencyAudit9.log",
+  "dependencyAuditSha256": "881810727B6594AC5F871F27400819A9B6C8F2232730174E7DF54671D91F2AC3",
+  "dependencyAuditSourceSha256": "57018AF2AEAB0B628CB3F0707ECFDE3B855E8A47E1C0273F34E25FCF15E662C8",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_normalized_weighted_residue_sum"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> bilinear and third-kind reciprocity -> exact global weighted residue sum",
+  "discharged": "The exact global weighted residue identity holds for the actual cover coefficient and actual rational residues. Constructed pole centers and carrier separation supply the centered-contour hypotheses; the existing planar residue theorem consumes the proved simple-pole expansion. Finite interval partition and side pairing assemble the cell sum, proved weighted cancellation supplies the edge-jump sum, and unique carriers collapse the residue sum. Primitive derivatives supply analyticity. No residue identity is assumed; the remaining inputs are the narrower constructed geometric and primitive data and the differential simple-pole conditions.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Bilinear and third-kind identities on the same actual loop witnesses, meromorphic loop generation, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-weighted-residues-9-reuse-review-20261025.json",
+  "reuseReviewSha256": "0F744394E8367344CFA691D7ECFF6C05EE3B8A87C45AE54BF7B8D9E5B9F4AB23",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

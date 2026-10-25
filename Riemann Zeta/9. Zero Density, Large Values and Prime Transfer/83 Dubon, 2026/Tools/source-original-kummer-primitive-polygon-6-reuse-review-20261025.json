@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> polygon jump formula in actual edge integrals",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPolygonPrimitiveData.lean",
+      "sha256": "B6B876AEF674DDCF0502F4EDF0FAB154358D7D38F3152BDA79F6889B11B4F6A1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPolygonPrimitiveEndpoints.lean",
+      "sha256": "E54A61E713A579308569EA272FCEA2C7AB53B392F9ED182B6146ED0227EAE0F6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPolygonCornerPrimitives.lean",
+      "sha256": "457D6C2E90A6EBE6136EF3BBC0034FF1E94756E95CFB69E72B4E5744258A9D5F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPolygonWordPrimitiveSum.lean",
+      "sha256": "7B6157A386A68E2A4E89358A1B770474F300720C0025DF297C7A81A5A6A3F04F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitivePolygonWord.lean",
+      "sha256": "5B16791DFDDA6F02903958DDCD115F16EDFD8C41B1CE17A8AD181F84A884C330"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedPrimitivePolygon.lean",
+      "sha256": "94F9CC04BE37B225089059B3CE7DA9F0B18B8B1EDE283F9FC5DF0253641187EC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverSignedCellPrimitives.lean",
+      "sha256": "2666AA26FE2DFC5336EF73A66CBDE9CDD899914BA85398A4F345B5BB7981467A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialDissectionPolygonWord.lean",
+      "sha256": "5AE5E47C5FB4E5FC536EEE0BAB4E4ABD567952335DBC9358CE4249C6DAAAD633"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-primitive-polygon-route-536.json",
+    "sha256": "4A6336B488D47D34D9E70E6C5F2013FA774048A59409BA5F4ED85AA6DB6B18D7",
+    "review": {
+      "scope": 536,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> polygon jump formula in actual edge integrals",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPolygonPrimitiveData.lean",
+          "sha256": "B6B876AEF674DDCF0502F4EDF0FAB154358D7D38F3152BDA79F6889B11B4F6A1"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPolygonPrimitiveEndpoints.lean",
+          "sha256": "E54A61E713A579308569EA272FCEA2C7AB53B392F9ED182B6146ED0227EAE0F6"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPolygonCornerPrimitives.lean",
+          "sha256": "457D6C2E90A6EBE6136EF3BBC0034FF1E94756E95CFB69E72B4E5744258A9D5F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPolygonWordPrimitiveSum.lean",
+          "sha256": "7B6157A386A68E2A4E89358A1B770474F300720C0025DF297C7A81A5A6A3F04F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitivePolygonWord.lean",
+          "sha256": "5B16791DFDDA6F02903958DDCD115F16EDFD8C41B1CE17A8AD181F84A884C330"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConstructedPrimitivePolygon.lean",
+          "sha256": "94F9CC04BE37B225089059B3CE7DA9F0B18B8B1EDE283F9FC5DF0253641187EC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverSignedCellPrimitives.lean",
+          "sha256": "2666AA26FE2DFC5336EF73A66CBDE9CDD899914BA85398A4F345B5BB7981467A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialDissectionPolygonWord.lean",
+          "sha256": "5AE5E47C5FB4E5FC536EEE0BAB4E4ABD567952335DBC9358CE4249C6DAAAD633"
+        }
+      ],
+      "shorterRoute": "Retain the existing finite cyclic telescoping and corner-chain argument, separating its literal endpoint readings and edge-integral vector from the base-field-specific differential type. The actual cover consumer proves and supplies every signed endpoint identity using the shorter constant-jump reversal route. No new integration framework, general homology theory or additional primitive hypothesis is introduced.",
+      "assumptionsToDischarge": "The exact signed polygon-word integral formula for actual primitive jumps, with the source strict cyclic interval, actual corner matching and closed integer subwords all retained on the same actual constructed word.",
+      "remaining": "Path-to-jump and jump-to-period generation, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20."
+    }
+  },
+  "discharged": "Zero dual-tree jumps identify actual primitive readings at consecutive polygon corners. The existing finite cyclic telescoping proof gives the exact signed edge-integral sum over the source strict interval between opposite letters. The actual cover consumer supplies every signed endpoint, normalized primitive, jump and polygon input. The same word retains actual matching corners and closed integer subwords; no polygon jump-formula premise remains.",
+  "remaining": "Path-to-jump and jump-to-period generation, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-signed-primitives-4-scratch-receipt.json",
+    "sha256": "95EA5C2F8435EF2140BC036B90A891DF165B29D93E9725854D61BE8CEBF10BBD"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

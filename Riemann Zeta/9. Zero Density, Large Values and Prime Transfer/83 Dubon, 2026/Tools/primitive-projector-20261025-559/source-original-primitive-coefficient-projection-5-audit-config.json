@@ -1,0 +1,50 @@
+{
+  "modules": [
+    "SourceFiniteOperatorCoefficientAnnihilator",
+    "SourcePrimitiveGoodCoefficientAnnihilator",
+    "SourceMappedKernelProjection",
+    "SourcePrimitiveGoodCoefficientProjection",
+    "SourcePrimitiveGoodProjectionHecke"
+  ],
+  "theorems": [
+    "Dubon2026.finite_operator_coefficient_annihilator",
+    "Dubon2026.primitiveGoodAnnihilator_coefficient_polynomial",
+    "Dubon2026.exists_mapped_kernel_projector_polynomial",
+    "Dubon2026.exists_primitive_good_coefficient_projection",
+    "Dubon2026.primitive_projection_hecke_scalar",
+    "Dubon2026.exists_primitive_good_coefficient_hecke_projection"
+  ],
+  "constructions": [
+    "Dubon2026.primitiveGoodCoefficientProjector"
+  ],
+  "queries": [
+    "Dubon2026.finite_operator_coefficient_annihilator",
+    "Dubon2026.primitiveGoodAnnihilator_coefficient_polynomial",
+    "Dubon2026.exists_mapped_kernel_projector_polynomial",
+    "Dubon2026.exists_primitive_good_coefficient_projection",
+    "Dubon2026.primitive_projection_hecke_scalar",
+    "Dubon2026.exists_primitive_good_coefficient_hecke_projection",
+    "Dubon2026.primitiveGoodCoefficientProjector"
+  ],
+  "proofEdges": [
+    "Dubon2026.finite_operator_coefficient_annihilator",
+    "Dubon2026.primitiveGoodAnnihilator_coefficient_polynomial",
+    "Dubon2026.exists_mapped_kernel_projector_polynomial",
+    "Dubon2026.exists_primitive_good_coefficient_projection",
+    "Dubon2026.primitive_projection_hecke_scalar",
+    "Dubon2026.exists_primitive_good_coefficient_hecke_projection",
+    "Dubon2026.sourceOriginalIntegralHeckeAlgebra_finite",
+    "Dubon2026.primitiveCuspForm_eigenvector_all",
+    "Dubon2026.exists_primitive_good_annihilator",
+    "Dubon2026.symmetric_apply_eq_zero_of_square",
+    "Dubon2026.end_pow_zero_implies_apply_zero",
+    "Dubon2026.kernel_projector_polynomial_range",
+    "Dubon2026.kernel_projector_polynomial_idempotent",
+    "IsIntegral.of_finite",
+    "AlgHom.liftEquiv",
+    "Polynomial.exists_eq_pow_rootMultiplicity_mul_and_not_dvd"
+  ],
+  "roots": [
+    "Dubon2026.exists_primitive_good_coefficient_hecke_projection"
+  ]
+}

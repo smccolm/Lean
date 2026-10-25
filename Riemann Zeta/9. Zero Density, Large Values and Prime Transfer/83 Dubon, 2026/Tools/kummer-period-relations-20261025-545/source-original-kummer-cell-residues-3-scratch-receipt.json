@@ -1,0 +1,65 @@
+{
+  "recordedUTC": "2026-10-25T11:47:43.805714+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceOriginalWeilCoverPuncturedOneFormLaw",
+    "SourceOriginalWeilCoverCellPuncturedCoefficient",
+    "SourceOriginalWeilCoverCellResidues"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverPuncturedOneFormLaw.lean",
+      "sha256": "14CA23B4FE3C14F7758A1A026E54FBC9C0752244CBE790AF2DAC80B57D7E99E2",
+      "oleanSha256": "9017BEF6ABCFB8A85F5BE10564D0EC46C2FA1AB254ABC14C124F6AA576ABB857"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellPuncturedCoefficient.lean",
+      "sha256": "0F0B89DF64E6127710C4F886D3996A7B8B0C6C89F53191FFF02B1E1750AD7AB8",
+      "oleanSha256": "241DD35BF730B6A1877D4030D62871103E89D3BADDA86BD901B0C24181093022"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCellResidues.lean",
+      "sha256": "79EA59A3D970E7A82750E4E1FF27F5F0C4B0BD658A2B82A724FFA837451CB56F",
+      "oleanSha256": "CDE73B8DA7673DAED767A29B539877B1278D487656F12874ACAD1A1418CC6CFD"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_eventually_differentialCoeff_mem_punctured",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_placeFamily_tendsto_punctured",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_one_form_law_punctured",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_inverse_tendsto_punctured",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coeff_eq_near_punctured",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coeff_simple_pole"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_eventually_differentialCoeff_mem_punctured",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_placeFamily_tendsto_punctured",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_one_form_law_punctured",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_inverse_tendsto_punctured",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coeff_eq_near_punctured",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coeff_simple_pole"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellResiduesAudit3.log",
+  "logSha256": "96DACCE18F8D46B736BD2A7A39A1BE4E04CD4AA214BA6F59B3F229DE8922527C",
+  "auditSha256": "726BE3C3E3B712C7D06BC409879E833F165A6C4B745E62282AC63E54C66C1763",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 6,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 11,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerCellResiduesDependencyAudit3.log",
+  "dependencyAuditSha256": "50C01D5B2A267C7CAEB28081D0D991066F54B5A50DECB1F82F3608077EDF88B8",
+  "dependencyAuditSourceSha256": "0F229587B4E3BD813AB15D3C6C8A431F990A7029E078719AF07423510E20E073",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coeff_simple_pole"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> meromorphic loop generation and weighted residue reciprocity -> exact actual cell simple-pole coefficient expansion",
+  "discharged": "For every actual analytic nonsingular cover coordinate, the literal differential coefficient obeys the punctured one-form pullback identity and its simple-pole expansion is the actual rational residue divided by the coordinate difference plus an analytic remainder. Finite actual differential support, existing chart identities, inverse coordinate calculus, the existing logarithmic reading and the generic complex simple-pole pullback theorem discharge these identities. The explicit forward chart conditions are supplied by each constructed cell. Global weighted cancellation and reciprocity remain separate obligations.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Weighted edge cancellation and residue summation, meromorphic loop generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-cell-residues-3-reuse-review-20261025.json",
+  "reuseReviewSha256": "91DD8D5235179FE0293C7B921C8D77B024D44EFEEEB0F28AFC8ACCB9B03073E8",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

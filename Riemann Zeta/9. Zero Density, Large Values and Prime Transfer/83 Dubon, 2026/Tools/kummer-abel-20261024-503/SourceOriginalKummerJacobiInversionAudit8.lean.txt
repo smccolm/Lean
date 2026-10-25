@@ -1,0 +1,71 @@
+import SourceOriginalWeilCoverCanonicalSupport
+import SourceOriginalWeilCoverDifferentialReadingLinear
+import SourceOriginalWeilCoverRegularEvaluationSeparation
+import SourceOriginalWeilCoverRegularEvaluationFrame
+import SourceOriginalWeilCoverAbelJacobiImage
+import SourceOriginalWeilCoverAbelJacobiOpenImage
+import SourceOriginalWeilCoverJacobiInversion
+import SourceOriginalWeilCoverJacobiInversionAssembled
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coordinate_differential_ne_zero
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.finite_cover_differential_support
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.finite_cover_regularDifferentials
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_differentialCoeff_sum_smul
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_eval_sum_mul_of_mem
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.readDifferential_sum_smul
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_infinite
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.readDifferential_center
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eq_zero_of_forall_readDifferential_center
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.span_readDifferential_center_eq_top
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_evaluation_frame
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.local_primitive_sum_mem_abelJacobiImage
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiImage_mem_nhds_of_frame
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_jacobi_inversion
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_jacobi_divisor
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiImage
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverRegularBasis
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceOriginalWeilCoverCanonicalSupport, `SourceOriginalWeilCoverDifferentialReadingLinear, `SourceOriginalWeilCoverRegularEvaluationSeparation, `SourceOriginalWeilCoverRegularEvaluationFrame, `SourceOriginalWeilCoverAbelJacobiImage, `SourceOriginalWeilCoverAbelJacobiOpenImage, `SourceOriginalWeilCoverJacobiInversion, `SourceOriginalWeilCoverJacobiInversionAssembled]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_coordinate_differential_ne_zero, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.finite_cover_differential_support, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.finite_cover_regularDifferentials, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_differentialCoeff_sum_smul, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_eval_sum_mul_of_mem, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.readDifferential_sum_smul, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.place_infinite, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.readDifferential_center, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eq_zero_of_forall_readDifferential_center, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.span_readDifferential_center_eq_top, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_evaluation_frame, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.local_primitive_sum_mem_abelJacobiImage, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiImage_mem_nhds_of_frame, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_jacobi_inversion, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_jacobi_divisor]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.OriginalWeilCoverChart.abelJacobiImage, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverRegularBasis]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Kummer Jacobi Inversion postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Kummer Jacobi Inversion theorems discovered"
+  logInfo m!"SOURCE ORIGINAL KUMMER JACOBI INVERSION AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceOriginalWeilCoverCanonicalSupport
+#lint in SourceOriginalWeilCoverDifferentialReadingLinear
+#lint in SourceOriginalWeilCoverRegularEvaluationSeparation
+#lint in SourceOriginalWeilCoverRegularEvaluationFrame
+#lint in SourceOriginalWeilCoverAbelJacobiImage
+#lint in SourceOriginalWeilCoverAbelJacobiOpenImage
+#lint in SourceOriginalWeilCoverJacobiInversion
+#lint in SourceOriginalWeilCoverJacobiInversionAssembled

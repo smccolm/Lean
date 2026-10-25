@@ -1,0 +1,85 @@
+import SourceFiniteClosedCoverAdjacency
+import SourceOriginalCellPairingLiftSides
+import SourceOriginalCellPairingLiftVertices
+import SourceOriginalLiftedCoverAdjacency
+import SourceOriginalWeilCoverGlobalAdjacency
+import SourceOriginalCellPairingLiftDissectionSides
+import SourceRadialCellDissection
+import SourceOriginalLiftedDissectionAssembly
+import SourceOriginalWeilCoverDissectionConstructed
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.SheetCover.finite_closed_cover_reachable
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSideEquiv_symm_true
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSideEquiv_symm_false
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSideEquiv_pair
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_endpoint_reversal
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_arc_endpoints
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_vertex_injective
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.lifted_cover_adjacency
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_global_adjacency
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_pair_of_same_edge
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_reversed_side_arcs
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cell_dissection
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_actual_cover_cell_dissection
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSideEquiv
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedEndpoint
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.CellPairing.LiftedVertex
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedEndpointVertex
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedEnds
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedArcReindex
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedCellSideEquiv
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCell
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCell.carrier
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCell.bdry
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCell.arc
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCell.mk
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.mk
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.toLiftedDissection
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.CellPairing.instFintypeElemLiftedVertex
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceFiniteClosedCoverAdjacency, `SourceOriginalCellPairingLiftSides, `SourceOriginalCellPairingLiftVertices, `SourceOriginalLiftedCoverAdjacency, `SourceOriginalWeilCoverGlobalAdjacency, `SourceOriginalCellPairingLiftDissectionSides, `SourceRadialCellDissection, `SourceOriginalLiftedDissectionAssembly, `SourceOriginalWeilCoverDissectionConstructed]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.SheetCover.finite_closed_cover_reachable, `Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSideEquiv_symm_true, `Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSideEquiv_symm_false, `Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSideEquiv_pair, `Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_endpoint_reversal, `Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_arc_endpoints, `Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_vertex_injective, `Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.lifted_cover_adjacency, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_global_adjacency, `Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_pair_of_same_edge, `Dubon2026.SourceFunctionField.CellGeometry.CellPairing.lifted_reversed_side_arcs, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_cell_dissection, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_actual_cover_cell_dissection]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedSideEquiv, `Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedEndpoint, `Dubon2026.SourceFunctionField.CellGeometry.CellPairing.LiftedVertex, `Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedEndpointVertex, `Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedEnds, `Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedArcReindex, `Dubon2026.SourceFunctionField.CellGeometry.CellPairing.liftedCellSideEquiv, `Dubon2026.SourceFunctionField.CellGeometry.RadialCell, `Dubon2026.SourceFunctionField.CellGeometry.RadialCell.carrier, `Dubon2026.SourceFunctionField.CellGeometry.RadialCell.bdry, `Dubon2026.SourceFunctionField.CellGeometry.RadialCell.arc, `Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection, `Dubon2026.SourceFunctionField.CellGeometry.RadialCell.mk, `Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.mk, `Dubon2026.SourceFunctionField.CellGeometry.OriginalGlobalCellCover.toLiftedDissection, `Dubon2026.SourceFunctionField.CellGeometry.CellPairing.instFintypeElemLiftedVertex]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Kummer Dissection postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Kummer Dissection theorems discovered"
+  logInfo m!"SOURCE ORIGINAL KUMMER DISSECTION AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceFiniteClosedCoverAdjacency
+#lint in SourceOriginalCellPairingLiftSides
+#lint in SourceOriginalCellPairingLiftVertices
+#lint in SourceOriginalLiftedCoverAdjacency
+#lint in SourceOriginalWeilCoverGlobalAdjacency
+#lint in SourceOriginalCellPairingLiftDissectionSides
+#lint in SourceRadialCellDissection
+#lint in SourceOriginalLiftedDissectionAssembly
+#lint in SourceOriginalWeilCoverDissectionConstructed

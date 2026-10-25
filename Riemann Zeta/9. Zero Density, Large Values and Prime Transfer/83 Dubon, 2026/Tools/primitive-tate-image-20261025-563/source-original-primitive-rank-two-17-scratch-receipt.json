@@ -1,0 +1,232 @@
+{
+  "recordedUTC": "2026-10-25T20:03:37.660150+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceCharacterIdempotentLine",
+    "SourceCharacterIdempotentRankTwo",
+    "SourceGeneratedCharacterIdempotent",
+    "SourceTensorCharacterIdempotent",
+    "SourceOriginalCuspPadicHeckeMap",
+    "SourceIntegerCoefficientExtensionCharacter",
+    "SourcePrimitiveHeckeAlgebraEvaluation",
+    "SourcePrimitiveHeckeAlgebraProjector",
+    "SourceRankTwoSurjectiveDescent",
+    "SourceOriginalCuspTateRankTwo",
+    "SourceRankTwoBaseChange",
+    "SourceIntegerCoefficientRankTwo",
+    "SourceIntertwinedRangeEquiv",
+    "SourceRankTwoCharacterRange",
+    "SourcePrimitiveHeckeAlgebraRankTwo",
+    "SourcePrimitiveOriginalTateRankTwo",
+    "SourcePrimitiveOriginalTateNondegenerateRankTwo"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharacterIdempotentLine.lean",
+      "sha256": "2025995DADBF7F185BAD98877563EB0844434CB6A9488634945431DAAF504076",
+      "oleanSha256": "1D3FAE6211D02BEA7CA3E7536A41D464BD57E0BD8477AC08EC9E6367A33509FB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharacterIdempotentRankTwo.lean",
+      "sha256": "2CDD6FCD7EEC447A17B09021E00EBEF95E4AFB35C2466515851DBF5DB6329699",
+      "oleanSha256": "FA5AC97E97E6D7B937B503B3B729106BA78891CBA89AE2336EE3C6521E106CA0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGeneratedCharacterIdempotent.lean",
+      "sha256": "DEBFA4478EC63303032D2477DDEC5B670555537797C2DD1E68A859CE9222CA21",
+      "oleanSha256": "C8308F2C7E115A420083E6347741C752714FE02D69DC41DCA1492EA7FCCA59C1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTensorCharacterIdempotent.lean",
+      "sha256": "8DBB32E30A9B54262C19AA6A41D61E7A29D1B11A66903F6A8BAB2E8A911FA109",
+      "oleanSha256": "4D22E05C484F788ABC8DC4EBE49914BA0B36CD81FBCA4C40EFEF8CF6F1EF6EFE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspPadicHeckeMap.lean",
+      "sha256": "E9ED9FAE506D4F119B2019A535ECDC6617981669AFA89F8CB97859811D336C6B",
+      "oleanSha256": "C4DFE2E7D329B6D04DA8D6C24570D274C74E3C0890EC854FCCF24FB0028CDDB7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegerCoefficientExtensionCharacter.lean",
+      "sha256": "84C1C3EF9F99304EAC45B97D34D4862F27F56758A17B8BE26ED69E397D3F37D0",
+      "oleanSha256": "D813D1CB29283D987D276EAE087F6C626F78CA3A1C59CA3E7A924A842015FE12"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveHeckeAlgebraEvaluation.lean",
+      "sha256": "CE98A1E8F97B68EF727F6B60A57B7B0C0CAC6CA3664D28AFB7EAD071208E2927",
+      "oleanSha256": "5BBFD789921FAC27E7F66A97E96BDCAE955CE0494724A74F05C6D45CBDC9133C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveHeckeAlgebraProjector.lean",
+      "sha256": "4D23737001F36D45F62B4A1B1F684A99C66973F8ED2766A496BD9BC998193B03",
+      "oleanSha256": "AF1B49880E3A4F2F4475CE11D697A67BF1BE737F71D1820ECDED65B180AE958F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRankTwoSurjectiveDescent.lean",
+      "sha256": "8D4D51C328D862EE6D1931347B46787034B1FB371529FDB388F9129CA99F5928",
+      "oleanSha256": "1E8507B380DBCCB4DC4159B520CDE4E702226657122569784ADAA1E42E925E19"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCuspTateRankTwo.lean",
+      "sha256": "FA87D4E4E3E0CEE1F108C683DB02EBC04BE0E986E666428751672CCDF57016EC",
+      "oleanSha256": "C8AB865C5D42DD50B4FFFF8E8944878324E1F9CF2A106A658AF720A4C2D91BF3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRankTwoBaseChange.lean",
+      "sha256": "D5E416ACD081CFB186F60A8AE733B706A7187F15D102F6282E5DA7E499FB3328",
+      "oleanSha256": "7D8FD4342FA76BBC3BA4C08C98EFF05D1C457D87839943BD07229B2EFB59513B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegerCoefficientRankTwo.lean",
+      "sha256": "92A4EACF32CD3FD8A3E8BF9EA2B8C76DF109E4B41D1EEDAFBCEA9244215BD447",
+      "oleanSha256": "24B898794E3FB807296656EC4D42D86E07AEA9F26CB37C4BD04163148EDDE3DA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntertwinedRangeEquiv.lean",
+      "sha256": "B0FEEFC70EFF7551A8E69642AAE148C71631C81D0D2DB0E49D794C38E703113A",
+      "oleanSha256": "744475CA9187085DFAA200A256F87F589A02F9C53468E85E95564C8446E4B3D7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRankTwoCharacterRange.lean",
+      "sha256": "29D7EFF8AED8CCCFED5F746777372DDE3471BF8FA88E80F5E344373CB913C0C3",
+      "oleanSha256": "A0C00AB6E4CC9A806656E6939DF428772E5CC2F23CAC048DFD9BE683CBC467DA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveHeckeAlgebraRankTwo.lean",
+      "sha256": "608D1541CDBD43F49A048B2F54D76E697765AA19BC3B6129D7682F5A60A89CA2",
+      "oleanSha256": "A45EB8DF7C4B79864FF7047B872A307450194C75B8D96FE1F71876AAFD08DABB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveOriginalTateRankTwo.lean",
+      "sha256": "73D11747D3F66FEAB88C5CCBEE1D2A1F640EF88C2718F30F3F0D9B0B3895AB69",
+      "oleanSha256": "85907372FA52B317EB80FFA2E4E5BBDD479098ACC6FCE6B7C58AD7302E289005"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveOriginalTateNondegenerateRankTwo.lean",
+      "sha256": "C514E23CCA30C3365987E4120950ACAE86CE2EEB62575BEA4A7A05580D5BE371",
+      "oleanSha256": "570AC0707985EE5F36DD1B6410D20C27BBDC62196C4508AD9EA5DC2FFCF567C6"
+    }
+  ],
+  "queries": [
+    "Dubon2026.characterIdempotentRankTwoEquiv_symm_val",
+    "Dubon2026.characterIdempotentRankTwoEquiv_apply",
+    "Dubon2026.character_scalar_action_of_generators",
+    "Dubon2026.coefficientTensorCharacter_tmul",
+    "Dubon2026.tensor_character_idempotent_scalar",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_word",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_prime",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_character",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_generates",
+    "Dubon2026.integerCoefficientExtension_character",
+    "Dubon2026.integerCoefficientExtension_eigen_identity",
+    "Dubon2026.primitiveHeckeAlgebraEvaluation_integral",
+    "Dubon2026.primitiveHeckeAlgebraEvaluation_character",
+    "Dubon2026.primitiveHeckeAlgebraProjector_character",
+    "Dubon2026.primitiveHeckeAlgebraProjector_eigen",
+    "Dubon2026.primitiveHeckeAlgebraProjector_scalar",
+    "Dubon2026.rankTwo_surjective_descent",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspTate_rankTwo",
+    "Dubon2026.rankTwoBaseChangeEquiv_tmul",
+    "Dubon2026.rankTwoBaseChangeEquiv_operator",
+    "Dubon2026.integerCoefficient_rankTwo_coordinates",
+    "Dubon2026.exists_integerCoefficient_rankTwo_coordinates",
+    "Dubon2026.intertwinedRangeEquiv_apply",
+    "Dubon2026.rankTwoCharacterRangeEquiv_apply",
+    "Dubon2026.exists_primitive_heckeAction_rankTwo",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_rankTwo",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_nondegenerate_rankTwo",
+    "Dubon2026.characterIdempotentLeftIdealEquiv",
+    "Dubon2026.characterIdempotentRankTwoEquiv",
+    "Dubon2026.coefficientTensorCharacter",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap",
+    "Dubon2026.primitiveHeckeAlgebraEvaluation",
+    "Dubon2026.rankTwoBaseChangeEquiv",
+    "Dubon2026.intertwinedRangeEquiv",
+    "Dubon2026.rankTwoCharacterRangeEquiv"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.characterIdempotentRankTwoEquiv_symm_val",
+    "Dubon2026.characterIdempotentRankTwoEquiv_apply",
+    "Dubon2026.character_scalar_action_of_generators",
+    "Dubon2026.coefficientTensorCharacter_tmul",
+    "Dubon2026.tensor_character_idempotent_scalar",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_word",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_prime",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_character",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_generates",
+    "Dubon2026.integerCoefficientExtension_character",
+    "Dubon2026.integerCoefficientExtension_eigen_identity",
+    "Dubon2026.primitiveHeckeAlgebraEvaluation_integral",
+    "Dubon2026.primitiveHeckeAlgebraEvaluation_character",
+    "Dubon2026.primitiveHeckeAlgebraProjector_character",
+    "Dubon2026.primitiveHeckeAlgebraProjector_eigen",
+    "Dubon2026.primitiveHeckeAlgebraProjector_scalar",
+    "Dubon2026.rankTwo_surjective_descent",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspTate_rankTwo",
+    "Dubon2026.rankTwoBaseChangeEquiv_tmul",
+    "Dubon2026.rankTwoBaseChangeEquiv_operator",
+    "Dubon2026.integerCoefficient_rankTwo_coordinates",
+    "Dubon2026.exists_integerCoefficient_rankTwo_coordinates",
+    "Dubon2026.intertwinedRangeEquiv_apply",
+    "Dubon2026.rankTwoCharacterRangeEquiv_apply",
+    "Dubon2026.exists_primitive_heckeAction_rankTwo",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_rankTwo",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_nondegenerate_rankTwo"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.characterIdempotentLeftIdealEquiv",
+    "Dubon2026.characterIdempotentRankTwoEquiv",
+    "Dubon2026.coefficientTensorCharacter",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap",
+    "Dubon2026.primitiveHeckeAlgebraEvaluation",
+    "Dubon2026.rankTwoBaseChangeEquiv",
+    "Dubon2026.intertwinedRangeEquiv",
+    "Dubon2026.rankTwoCharacterRangeEquiv"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveRankTwoAudit17.log",
+  "logSha256": "2B32AD4C086CA3D9C56157DA0F1E712A7BFC51DDFE5C58A35BF9AA889B02D460",
+  "auditSha256": "ABF8CDDFF82039F09D0F8FCBDD02199A03C312D6E72A88AA8503B2E37B01EB18",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 80,
+  "linterScopes": 17,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 45,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveRankTwoDependencyAudit17b.log",
+  "dependencyAuditSha256": "FD2E6294E0AE089255D07A30456CBD8544B7ED56661522B8D9F9694BB3F91FDE",
+  "dependencyAuditSourceSha256": "08FBBFE6EE538FA76DEF78BA2E7A5ABAA2312C62927FA3E29104A148D58BB6E2",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_nondegenerate_rankTwo",
+    "Dubon2026.rankTwoCharacterRangeEquiv_apply"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive Frobenius determinant -> nonzero required primitive component pairing -> actual nondegenerate rank-two arithmetic-projector Tate image",
+  "discharged": "The literal arithmetic primitive projector now has a nonzero rank-two image on the actual coefficient-extended original Tate module. Its same image has an injective restriction of the original root-valued Weil pairing. The original integral cusp Hecke presentation, all-word rank-two Tate coordinates, native finite-product scalar extension, prescribed p-adic eigencharacter and character-normalized idempotent ideal supply the coordinate equivalence. Generator, character-compatibility, image-dimension and nondegeneracy premises are derived for the actual consumer. Comparison to the existing spanning primitive specialization and the separate Frobenius determinant remain required.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The image coordinate equivalence still needs comparison with the existing spanning primitive specialization. The cyclotomic law must yield the separate primitive Frobenius determinant; the quadratic identity alone is insufficient. Residual association, arithmetic automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-rank-two-17-reuse-review-20261025.json",
+  "reuseReviewSha256": "1FA2587EE392AACC2858F548195A5CCAF876A2CAFF7A8A31AE20A1F10BCC577A",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "dependencyAuditLineage": {
+    "failedAudit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveRankTwoDependencyAudit17.log",
+    "failedAuditSha256": "2EA2E23A08676967A985395E0A6DC3B48B9D2F743DABB7ADCDAFAE4A560C35EA",
+    "failedAuditSourceSha256": "F4D1FBC718B1ECAAAD77B2C8BED2992C21B30C4E6E6389D37349AF66747D3E70",
+    "failure": "The axiom/exhaustive/linter audit passed. The first value audit required named dependencies on three rfl coordinate lemmas whose references are eliminated by definitional reduction. All other 45 required value dependencies were present.",
+    "correction": {
+      "names": [
+        "Dubon2026.characterIdempotentRankTwoEquiv_symm_val",
+        "Dubon2026.rankTwoBaseChangeEquiv_tmul",
+        "Dubon2026.intertwinedRangeEquiv_apply"
+      ],
+      "reason": "Each of these three public coordinate identities has proof rfl. The terminal proof reduces through their definitions and does not retain a reference to the named theorem. They remain in the full explicit axiom and exhaustive checks; no transitive named-value dependency is claimed for them."
+    },
+    "sourceOrOleanChanged": false
+  },
+  "separatelyAxiomCheckedDefinitionalLaws": {
+    "names": [
+      "Dubon2026.characterIdempotentRankTwoEquiv_symm_val",
+      "Dubon2026.rankTwoBaseChangeEquiv_tmul",
+      "Dubon2026.intertwinedRangeEquiv_apply"
+    ],
+    "reason": "Each of these three public coordinate identities has proof rfl. The terminal proof reduces through their definitions and does not retain a reference to the named theorem. They remain in the full explicit axiom and exhaustive checks; no transitive named-value dependency is claimed for them."
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "recordedUTC": "2026-10-25T04:27:18.683687+00:00",
+  "date": "2026-10-24 America/Vancouver",
+  "modules": [
+    "SourceCurveFiniteCoordinateDimensionBounds",
+    "SourceOriginalWeilCoverDimensionBounds",
+    "SourceOriginalWeilCoverMeromorphicDimension",
+    "SourceOriginalWeilCoverMeromorphicPoleBound",
+    "SourceOriginalWeilCoverReadGerms",
+    "SourceOriginalWeilCoverReadFieldLaws",
+    "SourceOriginalWeilCoverGermBasisRelation",
+    "SourceOriginalWeilCoverOnePoleComparison",
+    "SourceOriginalWeilCoverMeromorphicPoleClearing",
+    "SourceOriginalWeilCoverMeromorphicFunctionComparison"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFiniteCoordinateDimensionBounds.lean",
+      "sha256": "D8C45225183A489964A8BC63125BA934E76685D53D4EC0A6A962AFA8BF3A2B3B",
+      "oleanSha256": "A85C52C5C491BC8D07FA7825EFA4D2AC7E7364FDFE4E7AC89E556A7B3C55361F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDimensionBounds.lean",
+      "sha256": "CC19E7B30B6C3B0A4B90FCD7AD09E35FA67E0FA04E92F99545527225E45F41FF",
+      "oleanSha256": "2528B87644048214F3EB47109A1E88D5F53286CE9E546F1670203A60ECF0DE8A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicDimension.lean",
+      "sha256": "3999057DEBFA6BC469C1745996D67A03480578B06297CE91C5F9BF32EE0F9BE7",
+      "oleanSha256": "A54DECBAA0DC570B9BCDB646E59B3D8F0A97CA52A33AF8D90890B2820E72C781"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicPoleBound.lean",
+      "sha256": "721C23E7E937E1F4E9FCD3A5DF830F077E61FBF821C4E17D410698D82EF07418",
+      "oleanSha256": "076C50BA2A27BEF89BF8F10A0B3E8A2229C6D0CFC50347B75DAE57E3D8B7198F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverReadGerms.lean",
+      "sha256": "06C807143E23189CFADDAD5BE1949376C91B90D8BDD6EE586009EAEEC37C8D22",
+      "oleanSha256": "14EB7717D4880A3BCF1802586A6E3169025D7BC28E867CB4B585FE85028E66D9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverReadFieldLaws.lean",
+      "sha256": "01C64A69B35BD869FBE6C2D2082F05E8AAC517BD2914FDA68046F685463A2CE3",
+      "oleanSha256": "50EDC7ECEE6E4A90A77D3B7DB8C0C3ADFDFF02796AFC78039D1719ED8DEE0CFD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverGermBasisRelation.lean",
+      "sha256": "91EFA14A57D149A8EC8558DE4FE596C502995247CE1330E322E7D9A252031E98",
+      "oleanSha256": "D8A2C1E2F854DB2251DD319A35D9364FD1C00E0F97D306ACD7375B461C1FFC01"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverOnePoleComparison.lean",
+      "sha256": "68F240FF606A4730C05F4956BC47C1F6FE1CF9A9647ADFB254F8CCBD17517E79",
+      "oleanSha256": "3D7DD94F56F3FD75AAFD16571F3D54B08E28ADCCBAF5164682A84026B75FE79B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicPoleClearing.lean",
+      "sha256": "CBF1B517B94E255694EDFB3069D9BDA58853A043952204FF7F5F7DFFD6FFD384",
+      "oleanSha256": "CCDA40B36D1083EC185355A9B69DAB3A99E4AF0045570C9B5FD1F2042D56C5BB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicFunctionComparison.lean",
+      "sha256": "FD72C3EB427502A1B1C98BF52D36975A88BD492687124632E217B02153D15D52",
+      "oleanSha256": "CF84244B56CD754864AE9F096AC80CA942CB187E25846F79AB54A75851B744E8"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceCurve.exists_natural_degree_dimension_bound",
+    "Dubon2026.SourceCurve.finite_coordinate_degree_single",
+    "Dubon2026.SourceCurve.exists_pole_clearing_function_of_finite_coordinate",
+    "Dubon2026.SourceCurve.one_place_dimension_sum_gt_of_bound",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.finite_cover_lSpace",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_degree_dimension_bound",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_pole_clearing_function",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_one_place_dimension_sum_gt",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_relation",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_effective_meromorphic_pole_bound",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_algebraMap",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_one",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.meromorphicAt_chartRead",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eventually_chartRead_regular",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_add",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_mul",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.meromorphicOrderAt_chartRead",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eq_zero_of_chartRead_eventuallyEq_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_eventually_ne_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_smul",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_neg",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_inv",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_sum_smul",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_lSpace_order_bound",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_function_of_basis_germ_relation",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_function_of_one_pole_bound",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_pole_clearing",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_function_of_meromorphicAt",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceCurve.exists_natural_degree_dimension_bound",
+    "Dubon2026.SourceCurve.finite_coordinate_degree_single",
+    "Dubon2026.SourceCurve.exists_pole_clearing_function_of_finite_coordinate",
+    "Dubon2026.SourceCurve.one_place_dimension_sum_gt_of_bound",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.finite_cover_lSpace",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_degree_dimension_bound",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_pole_clearing_function",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_one_place_dimension_sum_gt",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_relation",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_effective_meromorphic_pole_bound",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_algebraMap",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_one",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.meromorphicAt_chartRead",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eventually_chartRead_regular",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_add",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_mul",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.meromorphicOrderAt_chartRead",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.eq_zero_of_chartRead_eventuallyEq_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_eventually_ne_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_smul",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_neg",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_inv",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_sum_smul",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead_lSpace_order_bound",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_function_of_basis_germ_relation",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_function_of_one_pole_bound",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_meromorphic_pole_clearing",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_function_of_meromorphicAt"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.chartRead"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicAudit10.log",
+  "logSha256": "866F5633A177F6B831A5D3BBABE395B84CD6CE5986E9739489C11630E414852E",
+  "auditSha256": "B47F2921329B63205B608F55489E82AF9AD8F3A960F7D79A5D65E45F2214113C",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 45,
+  "linterScopes": 10,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 37,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicDependencyAudit10.log",
+  "dependencyAuditSha256": "1CF97FF8EB4C60646AFAA1E45280E56178ADD5F257137AC061795AB5136BAB7C",
+  "dependencyAuditSourceSha256": "ED152E514E69A6E88B73FEFAC7AD886C4783829FEC83738B894FA6EFF4DCAAB8",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_function_of_meromorphicAt"
+  ],
+  "dependency": "residual association -> primitive Frobenius determinant -> nonzero Hecke-component pairing -> original Tate nondegeneracy -> auxiliary point division -> Abel converse -> identification of analytic meromorphic functions with actual cover field elements",
+  "discharged": "Every function meromorphic in the constructed actual complex Kummer cover charts agrees in every punctured chart germ with one element of the literal splitting field. The existing generic compact-manifold results supply analytic dimension and effective pole bounds. The native finite-coordinate degree-dimension maximum supplies finite divisor spaces, a pole-clearing multiplier and two sufficiently large bases. Their faithful residue-germ relation identifies the analytic function as a quotient in the same field. No analytic/algebraic comparison, geometric compactness or connectedness, canonical genus, Riemann-Roch or dimension-bound hypothesis remains.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Cover differential/path and Abel comparison, actual point-difference division and arithmetic descent remain unproved. Original pairing nondegeneracy and required nonzero Hecke-component restriction, determinant, residual association, automorphy and all-weight continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-meromorphic-10-reuse-review-20261024.json",
+  "reuseReviewSha256": "C03C5443AA8DF9A66B9F6FB32E4E59549146F6347E8A64854614225F5785F3EA",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

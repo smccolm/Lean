@@ -1,0 +1,67 @@
+{
+  "modules": [
+    "SourceFractionBilinearInjective",
+    "SourceTateRationalInjection",
+    "SourceOriginalRationalWeilNondegeneracy",
+    "SourceOriginalTateWeilSkew",
+    "SourceBilinearBaseChangeLaws",
+    "SourceOriginalRationalWeilLaws"
+  ],
+  "theorems": [
+    "Dubon2026.sourceFraction_bilinear_baseChange_injective",
+    "Dubon2026.TateModule.rational_one_tmul_injective",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_injective",
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_skew",
+    "Dubon2026.SourceFunctionField.originalTateWeilBilinear_self",
+    "Dubon2026.sourceBilinear_baseChange_skew",
+    "Dubon2026.sourceBilinear_baseChange_adjoint",
+    "Dubon2026.sourceBilinear_baseChange_multiplier",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_self",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_hecke",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_cyclotomic"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear"
+  ],
+  "queries": [
+    "Dubon2026.sourceFraction_bilinear_baseChange_injective",
+    "Dubon2026.TateModule.rational_one_tmul_injective",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_injective",
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_skew",
+    "Dubon2026.SourceFunctionField.originalTateWeilBilinear_self",
+    "Dubon2026.sourceBilinear_baseChange_skew",
+    "Dubon2026.sourceBilinear_baseChange_adjoint",
+    "Dubon2026.sourceBilinear_baseChange_multiplier",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_self",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_hecke",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_cyclotomic",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceFraction_bilinear_baseChange_injective",
+    "Dubon2026.TateModule.rational_one_tmul_injective",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_injective",
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_skew",
+    "Dubon2026.SourceFunctionField.originalTateWeilBilinear_self",
+    "Dubon2026.sourceBilinear_baseChange_skew",
+    "Dubon2026.sourceBilinear_baseChange_adjoint",
+    "Dubon2026.sourceBilinear_baseChange_multiplier",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_self",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_hecke",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_cyclotomic",
+    "Dubon2026.SourceFunctionField.originalTateWeilBilinear_injective",
+    "Dubon2026.SourceFunctionField.originalWeilPairing_symm",
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_hecke_self_adjoint",
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_cyclotomic",
+    "Dubon2026.TateModule.eq_zero_of_nonzero_scalar_smul_eq_zero",
+    "IsLocalizedModule.injective_of_map_eq",
+    "IsLocalizedModule.injective_iff_isRegular",
+    "TensorProduct.isBaseChange"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_injective",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_self",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_hecke",
+    "Dubon2026.SourceFunctionField.originalRationalWeilBilinear_cyclotomic"
+  ]
+}

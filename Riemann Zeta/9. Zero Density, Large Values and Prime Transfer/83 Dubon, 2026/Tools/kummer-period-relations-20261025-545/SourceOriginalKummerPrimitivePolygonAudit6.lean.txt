@@ -1,0 +1,64 @@
+import SourceRadialPolygonPrimitiveData
+import SourceRadialPolygonPrimitiveEndpoints
+import SourceRadialPolygonCornerPrimitives
+import SourceRadialPolygonWordPrimitiveSum
+import SourceRadialPrimitivePolygonWord
+import SourceOriginalWeilCoverPrimitivePolygon
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.jump_eq_Bvec_sub_Avec
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.gvec_eq_of_link
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.Bvec_eq_gvec
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.Avec_eq_gvec
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.corner
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.word_identity
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.exists_primitive_polygon_word
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_primitive_polygon
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.IsJump
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.gvec
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.Avec
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.Bvec
+#print axioms Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.PrimitivePolygonConclusion
+#print axioms Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverPrimitivePolygonData
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceRadialPolygonPrimitiveData, `SourceRadialPolygonPrimitiveEndpoints, `SourceRadialPolygonCornerPrimitives, `SourceRadialPolygonWordPrimitiveSum, `SourceRadialPrimitivePolygonWord, `SourceOriginalWeilCoverPrimitivePolygon]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.jump_eq_Bvec_sub_Avec, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.gvec_eq_of_link, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.Bvec_eq_gvec, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.Avec_eq_gvec, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.corner, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.word_identity, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.exists_primitive_polygon_word, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_primitive_polygon]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.IsJump, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.gvec, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.Avec, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.Bvec, `Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.PrimitivePolygonConclusion, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverPrimitivePolygonData]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Kummer Primitive Polygon postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Kummer Primitive Polygon theorems discovered"
+  logInfo m!"SOURCE ORIGINAL KUMMER PRIMITIVE POLYGON AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceRadialPolygonPrimitiveData
+#lint in SourceRadialPolygonPrimitiveEndpoints
+#lint in SourceRadialPolygonCornerPrimitives
+#lint in SourceRadialPolygonWordPrimitiveSum
+#lint in SourceRadialPrimitivePolygonWord
+#lint in SourceOriginalWeilCoverPrimitivePolygon

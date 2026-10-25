@@ -1,0 +1,32 @@
+import SourceOriginalWeilCoverRiemannRoch
+import SourceCurveTwoPoleDimensions
+import SourceOriginalWeilCoverTwoPoleDimensions
+import SourceCurveTwoPoleDifferential
+import SourceOriginalWeilCoverTwoPoleDifferential
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_two_pole_differential]
+  let localModules : Array Name := #[`SourceOriginalWeilCoverRiemannRoch, `SourceCurveTwoPoleDimensions, `SourceOriginalWeilCoverTwoPoleDimensions, `SourceCurveTwoPoleDifferential, `SourceOriginalWeilCoverTwoPoleDifferential, `SourceMeromorphicKummerRoots, `SourceOriginalWeilLocalKummerRoot, `SourceMeromorphicLaurentRealization, `SourceOriginalChartLaurentHom, `SourceOriginalWeilConvergentKummerRoot, `SourceOriginalWeilLocalSplittingField, `SourceCurveNormalizedLaurentPlace, `SourceCurveRealizedLaurentPlace, `SourceOriginalWeilLocalCoverPlace, `SourceCurveConvergentCommonDisc, `SourceCurveConvergentGaloisPlaces, `SourceCurveConvergentKummerPlaces, `SourceOriginalWeilEveryLocalCover, `SourceCurveNormalizedCommonDisc, `SourceOriginalWeilCoverDisc, `SourceCurveConvergentDiscGerms, `SourceCurveConvergentDiscOrders, `SourceCurveConvergentDiscUniformizer, `SourceCurveConvergentDiscPlaces, `SourceCurveConvergentPlaceFamily, `SourceOriginalWeilCoverPlaceFamily, `SourceCurveConvergentDiscResidues, `SourceCurveConvergentEvaluationFamily, `SourceCurveAnalyticPlaceParameter, `SourceCurveConvergentPlaceChart, `SourceOriginalWeilCoverParameter, `SourceCurveRationalChartValues, `SourceCurveAnalyticChartOrders, `SourceCurveAnalyticChartComparison, `SourceCurveAnalyticChartDifferenceOrders, `SourceCurveAnalyticChartBranchEquality, `SourceOriginalWeilCoverChartPackage, `SourceOriginalWeilCoverCharts, `SourceOriginalWeilCoverChartTransitions, `SourceOriginalWeilCoverManifold, `SourceOriginalWeilCoverChartOrders, `SourceCurveRationalPlaceSeparation, `SourceOriginalWeilCoverHausdorff, `SourceFiniteFiberOpenMap, `SourceCurveUnramifiedFiberCard, `SourceCurveUnramifiedChartRestriction, `SourceAnalyticRestrictionTopology, `SourceOriginalWeilRestrictionComparison, `SourceOriginalWeilRestrictionTopology, `SourceOriginalWeilCoverCompact, `SourceCurveFiniteCoordinateOnePole, `SourceOriginalWeilCoverEvaluationContinuity, `SourceOriginalWeilCoverOnePole, `SourceOriginalWeilCoverClopenObstruction, `SourceOriginalWeilCoverConnected, `SourceCurveFiniteCoordinateDimensionBounds, `SourceOriginalWeilCoverDimensionBounds, `SourceOriginalWeilCoverMeromorphicDimension, `SourceOriginalWeilCoverMeromorphicPoleBound, `SourceOriginalWeilCoverReadGerms, `SourceOriginalWeilCoverReadFieldLaws, `SourceOriginalWeilCoverGermBasisRelation, `SourceOriginalWeilCoverOnePoleComparison, `SourceOriginalWeilCoverMeromorphicPoleClearing, `SourceOriginalWeilCoverMeromorphicFunctionComparison, `SourceOriginalWeilCoverLocalDifferentials, `SourceOriginalWeilCoverDifferentialReadings, `SourceOriginalWeilCoverChartGermHom, `SourceOriginalWeilCoverChartDerivativeGerms, `SourceOriginalWeilCoverChartGermDerivation, `SourceOriginalWeilCoverDifferentialRegularity, `SourceOriginalWeilCoverDifferentialTransitions, `SourceOriginalWeilCoverChartPrimitives, `SourceOriginalWeilCoverPathLocalPrimitives, `SourceOriginalWeilCoverPathPrimitives, `SourceOriginalWeilCoverPathIntegral, `SourceOriginalWeilCoverPathIntegralLaws, `SourceOriginalWeilCoverAbelJacobiPeriods, `SourceOriginalWeilCoverChartPathIntegrals, `SourceOriginalWeilCoverLocalAbelJacobi, `SourceOriginalWeilCoverCanonicalSupport, `SourceOriginalWeilCoverDifferentialReadingLinear, `SourceOriginalWeilCoverRegularEvaluationSeparation, `SourceOriginalWeilCoverRegularEvaluationFrame, `SourceOriginalWeilCoverAbelJacobiImage, `SourceOriginalWeilCoverAbelJacobiOpenImage, `SourceOriginalWeilCoverJacobiInversion, `SourceOriginalWeilCoverJacobiInversionAssembled]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.OriginalWeilCoverChart.coverCanonicalDivisor_apply, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_riemann_roch_constant, `Dubon2026.SourceCurve.two_pole_dimensions_of_riemann_roch, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_two_pole_dimensions, `Dubon2026.SourceCurve.exists_two_pole_function_of_dimensions, `Dubon2026.SourceCurve.exists_two_pole_differential_of_function, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_two_pole_function, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_two_pole_differential, `Dubon2026.SourceCurve.finite_coordinate_index_eq_canonical_complement, `Dubon2026.SourceCurve.indexOfSpecialty_eq_of_genusReached, `Dubon2026.SourceCurve.finite_coordinate_degree_dimension_maximum, `Dubon2026.SourceFunctionField.OriginalWeilCoverChart.finite_cover_differential_support, `Dubon2026.SourceCurve.ell_eq_zero_of_degree_neg]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL KUMMER TWO POLE DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual cover two-pole consumer. Only declaration values are traversed. Native finite-coordinate index and residue duality supply the required Riemann-Roch identity. Its constant cancels in the dimension growth; the two-subspace argument and actual canonical orders yield a nonzero differential with exactly two simple poles and regularity at every other place. No genus, dimension or two-pole existence hypothesis is supplied. Residue normalization, cover Abel converse, auxiliary point division and original nondegeneracy remain open; DUB-17--20 OPEN, 16/20."
+
+#eval runPlanarPairingDependencyAudit

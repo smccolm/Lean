@@ -1,0 +1,74 @@
+{
+  "recordedUTC": "2026-10-25T10:31:31.261627+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceRadialArcIndexInverse",
+    "SourceRadialPrimitiveJumpCirculation",
+    "SourceRadialJumpCycleReduction",
+    "SourceOriginalWeilCoverReducedCellJumps"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialArcIndexInverse.lean",
+      "sha256": "51F1F8B069437AFEA3E9ADD2D76D12AC6EF0AEC1BCAE6977D6B507D6CC6830A9",
+      "oleanSha256": "E1780FD308C24A438F5E56E1C6ACE083016AD293552737488A576F98CDEC7C9F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialPrimitiveJumpCirculation.lean",
+      "sha256": "95D9CF8D2AB3863DB0D5E545B20B2AD6927FA07F3D19E32C264312503FC91516",
+      "oleanSha256": "512B61D834DDC101D35F4DE3F981858F207CAB0DDB3B4A56051421DDC19B68F3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialJumpCycleReduction.lean",
+      "sha256": "9440F600A8081D8FD9B34387250C6BC7383E2793081876BAFA698D486E1C54CB",
+      "oleanSha256": "BBA0C2F67845E05651A183289BE5EA3324AE952466CF515CFCEA76108190E9FC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverReducedCellJumps.lean",
+      "sha256": "0C7204D8E5DA753632E98FF7B98BE25E48C467843CFD70E7EDB68BC4C2998E6E",
+      "oleanSha256": "056E10D3667F0C5C22DAE9A195C4C2D8E0B065455535B7C2D50BFCCFDD777A01"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.arcOf_side",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.jump_kirchhoff",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.vector_decomposition_of_scalar_lift",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.jumps_kirchhoff",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.closure_jumps_le",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_reduced_cell_jumps",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverReducedCellJumps"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialCellDissection.arcOf_side",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.jump_kirchhoff",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.vector_decomposition_of_scalar_lift",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.jumps_kirchhoff",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.closure_jumps_le",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_reduced_cell_jumps"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverReducedCellJumps"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerJumpReductionAudit4.log",
+  "logSha256": "79423B59465DB5EA60821361831C085BB836F157C09BB05EE77D1C5F79518A54",
+  "auditSha256": "47E704AC929904254FCA22177160EDF596E351195979D54E78AE95EC243F10CE",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 15,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 9,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerJumpReductionDependencyAudit4.log",
+  "dependencyAuditSha256": "F9DE58993F9AD64C53C51EB49853B8E04BA55D7EA06C170586EFF92444E59588",
+  "dependencyAuditSourceSha256": "84ED0262DBA4C1DFFADB032E7E16BC2658D610870AF67B418B8D6CE97388BADA",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_reduced_cell_jumps"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> circulation and complementary-edge reduction of actual primitive jumps",
+  "discharged": "The actual paired endpoints telescope around each cell and give the vertex circulation law for the normalized primitive jumps. The already proved universal integer fundamental-cycle decomposition and vanishing dual-tree jumps reduce the full jump subgroup to the subgroup of the 2g complementary-edge jumps. The same actual dissection retains normalized primitives and coordinate cycle integrals; neither circulation nor jump reduction is assumed.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Path-to-jump and jump-to-period generation, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-jump-reduction-4-reuse-review-20261025.json",
+  "reuseReviewSha256": "2D974A0CDA7D55D56EDB9BFF90C5ADE4E8C1D242BE989035C000CFDCD39AADE5",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

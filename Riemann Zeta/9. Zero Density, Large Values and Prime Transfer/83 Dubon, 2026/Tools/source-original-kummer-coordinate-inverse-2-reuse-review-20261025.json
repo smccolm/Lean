@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> coordinate edge integrals and cell primitives -> inverse cell coordinate calculus",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellCoordinateInverse.lean",
+      "sha256": "2DCDD7FAA3D83BF1C0B432E63A926B278FD0BE5D397EAA4BA352400981EDB57C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellCoefficientPullback.lean",
+      "sha256": "886FC3BC57B16047A4CAF15A14151C5689E547396D7974125D29C35B01434A43"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPrimitives.lean",
+      "sha256": "45AA16E21D0E3717F975683AA302F10FC73BB4AD596D8B96F67A186B1556EBCB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverManifold.lean",
+      "sha256": "D885E682BF56E3507297A08538516E8E5938BC34149A87D8403D1BD02AC5FEAB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverEulerDissection.lean",
+      "sha256": "F2629D0752468FA505BFDD007A6F15C60305B8CC989B8A6A87A8763F19D1319B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLocalRegularPrimitives.lean",
+      "sha256": "9C8A46171D1BF8498B0F751A5B281A22ABF8E40C126E65D69FAB9D350FF19901"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCycleLoops.lean",
+      "sha256": "155F761946CDFC1AE39C5522FDF074BF3AE997EB1C6119BF28071AAC5E2831E2"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-coordinate-inverse-route-526.json",
+    "sha256": "B204939BED1AD4F65779276AD0E5A9EE445F4FB9DC989B1782D2A46BB79A30F1",
+    "review": {
+      "scope": 526,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> period generation and reciprocity -> coordinate edge integrals and cell primitives -> inverse cell coordinate calculus",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellCoordinateInverse.lean",
+          "sha256": "2DCDD7FAA3D83BF1C0B432E63A926B278FD0BE5D397EAA4BA352400981EDB57C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellCoefficientPullback.lean",
+          "sha256": "886FC3BC57B16047A4CAF15A14151C5689E547396D7974125D29C35B01434A43"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCellPrimitives.lean",
+          "sha256": "45AA16E21D0E3717F975683AA302F10FC73BB4AD596D8B96F67A186B1556EBCB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverManifold.lean",
+          "sha256": "D885E682BF56E3507297A08538516E8E5938BC34149A87D8403D1BD02AC5FEAB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverEulerDissection.lean",
+          "sha256": "F2629D0752468FA505BFDD007A6F15C60305B8CC989B8A6A87A8763F19D1319B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverLocalRegularPrimitives.lean",
+          "sha256": "9C8A46171D1BF8498B0F751A5B281A22ABF8E40C126E65D69FAB9D350FF19901"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCycleLoops.lean",
+          "sha256": "155F761946CDFC1AE39C5522FDF074BF3AE997EB1C6119BF28071AAC5E2831E2"
+        }
+      ],
+      "shorterRoute": "The native original-cell local inverse argument needs only two actual open partial homeomorphisms, forward analyticity and a nonzero derivative. Adapt exactly this argument and apply it to the proved cover chart. Reuse pinned inverse differentiation and eventual-differentiability analyticity. The existing lifted cell theorem already proves the two forward conditions. No new manifold theory or inverse-analyticity assumption is needed.",
+      "assumptionsToDischarge": "Inverse coordinate analyticity and the inverse derivative formula at every source point from the exact forward-coordinate conditions retained by the constructed cover dissection. The local calculus theorem explicitly retains those already-proved forward conditions; it does not assert existence of a new coordinate.",
+      "remaining": "Coordinate coefficient calculus, coordinate edge-integral comparison, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20."
+    }
+  },
+  "discharged": "Inverse analyticity and the exact reciprocal derivative in an actual cover coordinate follow from its forward analyticity and nonzero derivative in the proved cover chart. Native local inverse differentiation and analyticity from eventual differentiability are reused. The forward conditions are explicit and already supplied for every constructed lifted cell; no inverse-calculus assumption is added.",
+  "remaining": "Coordinate coefficient calculus, coordinate edge-integral comparison, regular and meromorphic period generation, bilinear/third-kind reciprocity, unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-cycle-loops-11-scratch-receipt.json",
+    "sha256": "963AED4FBA0C83DF76868A74F41BEA4C972CA1A266CA67ADBF4933D88FB32965"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

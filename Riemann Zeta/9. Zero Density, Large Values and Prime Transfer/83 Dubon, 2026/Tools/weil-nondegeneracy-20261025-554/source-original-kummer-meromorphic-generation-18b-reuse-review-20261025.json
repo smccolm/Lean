@@ -1,0 +1,183 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> common meromorphic loop generation on the constructed reciprocity cycles",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicLocalPrimitives.lean",
+      "sha256": "1185F9A2B7D07025F38D527C9E00D7396D8649D9BCD9DE446062552F9BD737D4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicLocalAtlas.lean",
+      "sha256": "F8E7AE109C97BF249F279D62A8C1C9C4DE32AE391C43F29F49039FFAFB3F62F3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicPrimitiveValues.lean",
+      "sha256": "8464103CB514F25A0AFACA7D11A463068577C62761B82758DC63FCC8E659606D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicCellDifferences.lean",
+      "sha256": "08792231721A9D30F1A168C4BC6A7ECB719C5789F375D86C184702147A84691E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicPathAtlas.lean",
+      "sha256": "DBA722D283735EF43354D1CDF76BCBFF701898EE1952FA1669BB5E26531C31B1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicLoopPeriods.lean",
+      "sha256": "B484EBF8D1FB8A025111CC42F519349BBCF35E3B3D00DF27FA59B843F8FC0EC4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicBasisExtension.lean",
+      "sha256": "C3CE37DCE7B2BEB7970946BDF90ED85AF6D6E5B6DAC348961067E517BCC8E0A0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPathIntegralFiniteRegularity.lean",
+      "sha256": "51DC60608D6F4F560FAFE81F6373CB2CCF83AA1AC3A4AE8065BD6FAA565935AF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceMeromorphicLocalLog.lean",
+      "sha256": "09EFD2447A2E70BE69EAE3A6C4A412D997B8043E7B71E11DE8B7396C0AB5781E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePathAtlasJumpClosure.lean",
+      "sha256": "153AC655373A4994DF7CEE29FB9BA36F0FBD14B04301F08BCDB91892771C6C05"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicJumpCycleData.lean",
+      "sha256": "7AC45BCCF6EFE3798E91A64E9AAA6720234D06E8BE16EBB27A59BCD0343DFC48"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCoordinatePrimitiveComparison.lean",
+      "sha256": "FF4C06A733EA175EFB18BFA92AF3A6E2CDA31A4D67F92A07F67F431C61B3161D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDifferentialReadingLinear.lean",
+      "sha256": "661229A45AD674A130AC7133C4EC7D475C7023A6C6F7059EF2A199E469948E0F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDifferentialResidues.lean",
+      "sha256": "7D09F00C7EFAEA4C714EE6ADBCD083CDA449C19A46FD759C63110DABCF9ADA84"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverThirdKindCycleData.lean",
+      "sha256": "023F2F5AAF61C3B94268C77E54C003322D2CC74A5D8C4600B2F1A6BABEA629EA"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\kummer-meromorphic-generation-route-550b.json",
+    "sha256": "D9752E359972D51F1273C27CAEFBE67ED034DA017CC52DD2B7AF93186C9AC8FA",
+    "review": {
+      "scope": 550,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> common meromorphic loop generation on the constructed reciprocity cycles",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicLocalPrimitives.lean",
+          "sha256": "1185F9A2B7D07025F38D527C9E00D7396D8649D9BCD9DE446062552F9BD737D4"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicLocalAtlas.lean",
+          "sha256": "F8E7AE109C97BF249F279D62A8C1C9C4DE32AE391C43F29F49039FFAFB3F62F3"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicPrimitiveValues.lean",
+          "sha256": "8464103CB514F25A0AFACA7D11A463068577C62761B82758DC63FCC8E659606D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicCellDifferences.lean",
+          "sha256": "08792231721A9D30F1A168C4BC6A7ECB719C5789F375D86C184702147A84691E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicPathAtlas.lean",
+          "sha256": "DBA722D283735EF43354D1CDF76BCBFF701898EE1952FA1669BB5E26531C31B1"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicLoopPeriods.lean",
+          "sha256": "B484EBF8D1FB8A025111CC42F519349BBCF35E3B3D00DF27FA59B843F8FC0EC4"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicBasisExtension.lean",
+          "sha256": "C3CE37DCE7B2BEB7970946BDF90ED85AF6D6E5B6DAC348961067E517BCC8E0A0"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPathIntegralFiniteRegularity.lean",
+          "sha256": "51DC60608D6F4F560FAFE81F6373CB2CCF83AA1AC3A4AE8065BD6FAA565935AF"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceMeromorphicLocalLog.lean",
+          "sha256": "09EFD2447A2E70BE69EAE3A6C4A412D997B8043E7B71E11DE8B7396C0AB5781E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePathAtlasJumpClosure.lean",
+          "sha256": "153AC655373A4994DF7CEE29FB9BA36F0FBD14B04301F08BCDB91892771C6C05"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicJumpCycleData.lean",
+          "sha256": "7AC45BCCF6EFE3798E91A64E9AAA6720234D06E8BE16EBB27A59BCD0343DFC48"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCoordinatePrimitiveComparison.lean",
+          "sha256": "FF4C06A733EA175EFB18BFA92AF3A6E2CDA31A4D67F92A07F67F431C61B3161D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDifferentialReadingLinear.lean",
+          "sha256": "661229A45AD674A130AC7133C4EC7D475C7023A6C6F7059EF2A199E469948E0F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverDifferentialResidues.lean",
+          "sha256": "7D09F00C7EFAEA4C714EE6ADBCD083CDA449C19A46FD759C63110DABCF9ADA84"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverThirdKindCycleData.lean",
+          "sha256": "023F2F5AAF61C3B94268C77E54C003322D2CC74A5D8C4600B2F1A6BABEA629EA"
+        }
+      ],
+      "shorterRoute": "Reuse the existing local logarithm, connected-path atlas, integer-span and basis-extension arguments. Derive actual logarithmic derivatives from the already proved residue-subtracted primitives; the zero-residue case uses actual simple-pole regularity. Adapt the finite-sum path-integral law only to regularity along the traversed paths. Factor the exact finite coefficient identity and use local definitions instead of global context rewriting, with unchanged proof limits. Consume the same actual jump/cycle data and preserve the common-coefficient quantifier order; no new geometric existence or generation premise remains on the final consumer.",
+      "assumptionsToDischarge": "Every loop avoiding the prescribed finite pole set has one integer cycle-and-literal-residue formula valid simultaneously for every differential with at most simple poles in that set, on the same actual constructed complementary loops used by reciprocity.",
+      "remaining": "Final prescribed 2g reindexing, unconditional cover Abel converse and auxiliary point division, arithmetic descent, original pairing nondegeneracy, required Hecke-component restriction, primitive Frobenius determinant, residual association, automorphy and all-weight continuation remain open; 16/20, DUB-17--20 OPEN."
+    }
+  },
+  "discharged": "The actual pole-avoiding path atlas follows from proved residue-subtracted cell primitives, local logarithms and actual coordinate comparisons. Endpoint cancellation and jump containment give common integer cycle and residue coefficients for the finite simple-pole basis. Pathwise integral linearity, actual linear residues and exact finite coefficient algebra extend this formula to every allowed differential. The final consumer constructs the same 2g complementary loops with regular and meromorphic generation, unimodularity and both reciprocity identities; no geometric generation or reciprocity premise remains on that consumer. Final prescribed indexing and the Abel-converse application remain. The first audit found a missing definition docstring; all original sources and failed evidence are preserved, and a documented successor retains the identical mathematical proof bodies.",
+  "remaining": "Final prescribed 2g reindexing, unconditional cover Abel converse and auxiliary point division, arithmetic descent, original pairing nondegeneracy, required Hecke-component restriction, primitive Frobenius determinant, residual association, automorphy and all-weight continuation remain open; 16/20, DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "precedingScratchReceipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-residue-quotient-13b-scratch-receipt.json",
+    "sha256": "94B2AD00A1191787A5DE8E067ECEC47EC51964C7E80C02463FD4160071C1D184"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "preservedFailedPredecessor": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\meromorphic-generation-successor-550b.json",
+    "sha256": "FD0B6400091C029D2C7EA2BBB9BB16662789148435E47A81C24161BF21D4DEA0",
+    "record": {
+      "reason": "The first exhaustive audit accepted all proof dependencies and found one missing documentation string on CoverMeromorphicFamilyGeneration. Preserve every audited source, olean and audit log. Successor modules change only that docstring and the four affected import paths; all public declarations and mathematical proofs are retained.",
+      "failedAudit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerMeromorphicGenerationAudit18.log",
+      "failedAuditSha256": "C0CC159E42422BFB2C262EC117ABB2A1057AA1805CDB9A258BED44331BD64377",
+      "sources": [
+        {
+          "original": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicLoopPeriods.lean",
+          "originalSha256": "BA08EE641C3F71730D7967490C94E2E7589D52B842B9FF2A5B805285395586BD",
+          "successor": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicLoopPeriodsV2.lean",
+          "successorSha256": "6673B4346C7CFDD9585EB9FC53EA51CBEF4393B5E31FF402E899168783B68AF8"
+        },
+        {
+          "original": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicBasisExtension.lean",
+          "originalSha256": "E9BD4EB70E19239D6173B39C37306B3F74AD9FC44B5398D0DEB99983BD00B0C2",
+          "successor": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicBasisExtensionV2.lean",
+          "successorSha256": "4A1999A6B4415B10C1A1CF24C849E90CF3F750D3983993F17018D5AD1BAAE4CF"
+        },
+        {
+          "original": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicGeneration.lean",
+          "originalSha256": "49DD1A23417669E29050CA0B3018C22A5524CFC8A81CDAC1B8B7EDA9C191DAF3",
+          "successor": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverMeromorphicGenerationV2.lean",
+          "successorSha256": "EBAD33C54FF1621E33785CFB39D05793D299EA1ACD2506A79CB23B72B6607A2D"
+        },
+        {
+          "original": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverFullCycleData.lean",
+          "originalSha256": "59DE59049B834B37149DD5E8D08B9F3543A1D36434D0BED7F77D289F6501F970",
+          "successor": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverFullCycleDataV2.lean",
+          "successorSha256": "B6964CDC91EEB58F370A8B0B102A867D6E1FFF61FA66430E54502DB60B4734BA"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "recordedUTC": "2026-10-25T12:29:53.410336+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceRadialWeightedCycleSums",
+    "SourceOriginalWeilCoverCycleResidueBilinear",
+    "SourceOriginalWeilCoverBilinearPeriodPolygonData",
+    "SourceOriginalWeilCoverBilinearPeriodPolygon",
+    "SourceOriginalWeilCoverBilinearCycleData"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRadialWeightedCycleSums.lean",
+      "sha256": "12CD29608D2888FDE3D9503E69D6413E3F349B08F10A167676F98F6C2841189A",
+      "oleanSha256": "53A9CFC04BD8B84F0C4DD2B8B69A17E9E6F02FB2F8D8B5FB86085C4CC1F0BB4C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverCycleResidueBilinear.lean",
+      "sha256": "80DC4040BA9871680DF0F60BF145B837C1CE07FB595F71BE1B0FFBB245832B2A",
+      "oleanSha256": "B69BA1557AEC3917225151533A815106D0CBBE12C8FBF1208C7770FED225B2CB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverBilinearPeriodPolygonData.lean",
+      "sha256": "CA748A06058E72A47330CF0AE4EDE4B681C34C7C77987D836CD4B3FA98974004",
+      "oleanSha256": "A36114A33B6C3E9A7FE8D5CF4CC1BFDBD5585A0B4D5195BD4D3A70F143EA552E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverBilinearPeriodPolygon.lean",
+      "sha256": "D2FF673F0ACE83059777141CB48F61EF6A5058C5A5E08FE055A2AC099AB28F5F",
+      "oleanSha256": "4F9C47B71F60975A4251091C5BFF3EDE979DDA760A5B98D1AE2D86D97454061E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCoverBilinearCycleData.lean",
+      "sha256": "96B21E8ADD22FDF726C9C39DB849CEF22C0BCC89CE9FC79D935E254772588100",
+      "oleanSha256": "0113BA3F65A5B00D0EFF51C8A49D2DF349E859D3459D73A0DC8A8120426E52B2"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.sum_smul_eq_sum_cycle",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.sum_mul_jump_eq_cycle_bilinear",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_loop_bilinear_eq_neg_edge_jumps",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_cycle_bilinear_eq_neg_residue",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_riemann_cycle_bilinear",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_bilinear_period_polygon_of_primitives",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_bilinear_cycle_data",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.cycleScalarIntegral",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverBilinearCyclePeriodPolygonConclusion",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverBilinearCycleData"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.sum_smul_eq_sum_cycle",
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.sum_mul_jump_eq_cycle_bilinear",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_loop_bilinear_eq_neg_edge_jumps",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_cycle_bilinear_eq_neg_residue",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_riemann_cycle_bilinear",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.cover_bilinear_period_polygon_of_primitives",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_bilinear_cycle_data"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.CellGeometry.RadialDissectionPeriods.cycleScalarIntegral",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverBilinearCyclePeriodPolygonConclusion",
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.CoverBilinearCycleData"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerBilinearPeriodsAudit5.log",
+  "logSha256": "F556C823384A90EE64F4DD8BF0C459F96029BD76B960D8C68A41A38FB091F5D4",
+  "auditSha256": "E84A17DEA024AF1CC89906E6D31C05531A80763D5A30BFBAFB3C5AEAF1A2BD3F",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 23,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 10,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalKummerBilinearPeriodsDependencyAudit5.log",
+  "dependencyAuditSha256": "96990190B7964CFFA0B791296A414180F4118C6A2B8BA428D335F463E6E588FC",
+  "dependencyAuditSourceSha256": "3CBFB761BD22C1809DFC7AFF4908258D3B5DB8223CCB40B2D1138B535333F6D5",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilCoverChart.exists_cover_bilinear_cycle_data"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive determinant -> required component pairing -> original Tate nondegeneracy -> auxiliary point division -> actual cover Abel converse -> regular bilinear and third-kind reciprocity -> exact residue bilinear relation on the constructed unimodular loop family",
+  "discharged": "The constructed actual cover cycle loops and skew-symmetric unimodular word matrix now satisfy the zero regular bilinear relation and the exact weighted residue bilinear relation. The consumer unpacks the actual unimodular construction and derives both identities from the weighted residue sum and integer cycle decomposition. The same marked dissection, normalized primitives, loop witnesses and regular-loop-generation clauses are retained. No bilinear identity or separate loop witness remains as an assumption of the existence theorem.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Abel-path comparison for the third-kind relation, meromorphic loop generation, common-index reindexing and the unconditional cover Abel converse and auxiliary point division, arithmetic descent and remaining DUB-17--20 obligations remain open; 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-kummer-bilinear-periods-5-reuse-review-20261025.json",
+  "reuseReviewSha256": "6AF468C9DE23B7EDE0481AFDC94FCA4C982A2B1A081B1AF2A9DBCA9DD0DA4AA1",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}
