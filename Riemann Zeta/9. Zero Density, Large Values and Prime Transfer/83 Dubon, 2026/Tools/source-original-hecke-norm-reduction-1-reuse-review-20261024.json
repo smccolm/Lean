@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original Tate Frobenius quadratic relation -> Hecke compatibility on torsion -> agreement on principal divisors -> original integral Hecke norm residue",
+  "precedingScratchReceipts": {
+    "source-hecke-norm-product-4-scratch-receipt.json": "61689CFC1B14EE5421F1384E9988080754477113BE844498D10C0EF53CCDB7D7"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeNormProduct.lean",
+      "sha256": "831CDDE8D000CF4A1CBEF57D4912EFA1BFEA0652A280D7657643041004ABCA35"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeLaurentNormExtraction.lean",
+      "sha256": "2826C22B098C6BAC28E4540F2D3ED474B4335F85F54CBF6927754ABED28DC392"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckePrimeRootReduction.lean",
+      "sha256": "E319B63B3720CD47BA01B00F6B210D60FDEB4482435B6BBBAE0A2E497A1C1C47"
+    }
+  ],
+  "routeAdjustment": "Choose a native prime root of unity in the actual rational algebraic closure, identify its valuation-ring unit with the coefficient-field unit, and feed the proved norm identity into the existing integral extraction theorem.",
+  "discharged": "The actual original Hecke norm of every integral Laurent modular function has an integral Laurent representative whose coefficient reduction is coefficient Frobenius times geometric Frobenius. The expanded product assumption from the earlier extraction lemma is now discharged by the actual norm theorem.",
+  "remaining": "Principal-divisor agreement, Hecke compatibility on torsion, the original Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-hecke-norm-reduction-route-447.json",
+    "sha256": "F7BE0BB9A071A8364FAE8A290D2719A0EDFEA2DE5447EC1B4912AF3FBD771C1D",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original Tate Frobenius quadratic relation -> Hecke compatibility on torsion -> agreement on principal divisors -> original integral Hecke norm residue",
+      "reuseChecked": [
+        "The audited exists_integral_laurent_reduction_of_hecke_product already constructs the integral Laurent preimage and proves its Frobenius-product residue, conditional only on a literal expanded product identity.",
+        "original_hecke_norm_expanded_product now proves exactly that identity for the actual original Hecke norm, using the proved degree, Atkin involution and complete embedding census.",
+        "Existing primeRootValuationUnit and coeffMap_qTwist_commRing identify the valuation-ring product with this original-field norm product. No new valuation or support foundation is needed."
+      ],
+      "selectedRoute": "Choose a native prime root of unity in the actual rational algebraic closure, identify its valuation-ring unit with the coefficient-field unit, and feed the proved norm identity into the existing integral extraction theorem.",
+      "assumptionsToDischarge": "The expanded product identity in the conditional integral extraction theorem. The final actual norm integrality and residue formula has no degree, Atkin, census or product-identity premise.",
+      "boundary": "Principal-divisor agreement, Hecke compatibility on torsion, the quadratic relation, residual association, automorphy and all-weight continuation remain open. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

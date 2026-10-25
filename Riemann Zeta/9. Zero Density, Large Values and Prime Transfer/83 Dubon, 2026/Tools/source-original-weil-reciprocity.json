@@ -1,0 +1,1403 @@
+{
+  "date": "24 October 2026",
+  "modules": [
+    "Dubon2026.SourceOriginalWeilEvaluation",
+    "Dubon2026.SourceOriginalWeilEvaluationGalois",
+    "Dubon2026.SourceOriginalWeilDatum",
+    "Dubon2026.SourceResidueAlgebraNorm",
+    "Dubon2026.SourceResidueAlgebraNormPi",
+    "Dubon2026.SourceRamifiedResidueNorm",
+    "Dubon2026.SourceCurveResidueNormBaseChange",
+    "Dubon2026.SourceCurveResidueNormFactors",
+    "Dubon2026.SourceCurveRationalEvaluation",
+    "Dubon2026.SourceCurveRationalNormEvaluation",
+    "Dubon2026.SourceCurveNormFiberEvaluation",
+    "Dubon2026.SourceCurveFiberRegularIntegrality",
+    "Dubon2026.SourceCurveRationalFunctionEvaluation",
+    "Dubon2026.SourceCurveFieldNormEvaluation",
+    "Dubon2026.SourceOriginalNormEvaluation",
+    "Dubon2026.SourceCurvePullbackEvaluationProduct",
+    "Dubon2026.SourceOriginalPullbackEvaluation",
+    "Dubon2026.SourceCurveEvaluationRestriction",
+    "Dubon2026.SourceOriginalEvaluationRestriction",
+    "Dubon2026.SourceFiniteDivisorEvaluationPushforward",
+    "Dubon2026.SourceOriginalPushforwardEvaluation",
+    "Dubon2026.SourceRationalInfinityPlace",
+    "Dubon2026.SourceRationalPlaceClassification",
+    "Dubon2026.SourceRationalPointPlaces",
+    "Dubon2026.SourceRationalPointOrders",
+    "Dubon2026.SourceRationalPlaceEvaluation",
+    "Dubon2026.SourceCurveRationalResidueValues",
+    "Dubon2026.SourceRationalInfinityEvaluation",
+    "Dubon2026.SourceRationalRootDivisors",
+    "Dubon2026.SourceRationalDivisorEvaluation",
+    "Dubon2026.SourceRationalCoordinateReciprocity",
+    "Dubon2026.SourceRationalCoordinateWeilReciprocity",
+    "Dubon2026.SourceOriginalRationalCoordinate",
+    "Dubon2026.SourceOriginalRationalNormEvaluation",
+    "Dubon2026.SourceOriginalRationalDivisorEvaluation",
+    "Dubon2026.SourceOriginalRationalPrincipalDivisors",
+    "Dubon2026.SourceOriginalCoordinateWeilReciprocity",
+    "Dubon2026.SourceOriginalConstantWeilReciprocity",
+    "Dubon2026.SourceOriginalWeilReciprocity",
+    "Dubon2026.SourceOriginalWeilTorsionValues",
+    "Dubon2026.SourceOriginalClosedPlaceSeparation",
+    "Dubon2026.SourceOriginalClosedFiniteSeparation",
+    "Dubon2026.SourceOriginalClosedPrescribedOrders",
+    "Dubon2026.SourceOriginalClosedPicardMoving",
+    "Dubon2026.SourceOriginalWeilClasses",
+    "Dubon2026.SourceOriginalWeilRepresentatives"
+  ],
+  "dependency": "modular concentration -> actual residual association -> original primitive-form Frobenius characteristic polynomial -> separate determinant -> nondegenerate Hecke-adjoint Tate pairing -> original divisorial Weil pairing -> actual reciprocity, roots-of-unity values and disjoint torsion representatives",
+  "discharged": "Actual original Weil reciprocity for nonzero functions with disjoint principal-divisor support; the literal divisorial Weil ratio has nth power one; every pair of actual Picard n-torsion classes has disjoint function/divisor representatives. All norm, evaluation, residue, finiteness, degree-zero and moving inputs in those consumers are derived.",
+  "boundary": "Pairing representative independence and descent, nondegeneracy, Hecke adjointness, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 7,637-module scope: all thirteen retained regressions, 49,919 exhaustive theorem checks, 22,677 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_ne_zero",
+    "Dubon2026.SourceFunctionField.OriginalWeilDatum.symm_pairing",
+    "Dubon2026.SourceFunctionField.OriginalWeilDatum.arithmetic_pairing",
+    "Dubon2026.SourceFunctionField.OriginalWeilDatum.addLeft_pairing",
+    "Dubon2026.SourceFunctionField.originalPlaceEval_normAlong_eq_finprod_fiber",
+    "Dubon2026.SourceFunctionField.originalPlaceEval_eq_rationalEval",
+    "Dubon2026.SourceCurve.Place.rationalEval_algebraMap",
+    "Dubon2026.SourceFunctionField.originalDivisorEval_finitePullbackAlong",
+    "Dubon2026.SourceFunctionField.originalDivisorEval_geometricPushforwardAlong",
+    "Dubon2026.SourceCurve.RationalFunction.coordinate_weil_reciprocity",
+    "Dubon2026.SourceFunctionField.original_weil_reciprocity",
+    "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_pow_eq_one",
+    "Dubon2026.SourceFunctionField.exists_original_weil_representative"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-24T20:36:37.232193+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalWeilEvaluation",
+        "SourceOriginalWeilEvaluationGalois",
+        "SourceOriginalWeilDatum"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilEvaluation.lean",
+          "sha256": "DB15FD42A02B0F5C8FFDA60F284FCC3FE6820DB8077D2F718774089A34D64514",
+          "oleanSha256": "61505B20EAC462CFEAA8A97FE7F0093536FF5E8752D252BFA814EB257BB9AC25"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilEvaluationGalois.lean",
+          "sha256": "E4434F7CCAFFC34B3410D88AB0B273B9D12487C0B4230E28F8CE0CA228BB06F4",
+          "oleanSha256": "FFCE69B4286C57CAA4115B3DC71454C217E03E7EF32A74B48E6EDD815071A12F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilDatum.lean",
+          "sha256": "AEFB6BC69E35E909BD3A736D3E459F7442ED7AE87EB561FD5EEAA87D1214E839",
+          "oleanSha256": "DCE656EC92608886E9D3BE405783735298BAB7F213C29FE38AACCE8C37522BD4"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.originalPlaceEval_one",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_mul_of_mem",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_ne_zero_of_ord_eq_zero",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_zero",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_single",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_ne_zero",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_mul",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_add",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_arithmetic",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_arithmetic",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_ne_zero",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.symm_pairing",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.arithmetic_pairing",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.addLeft_pairing",
+        "Dubon2026.SourceFunctionField.originalDivisorEval",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.symm",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.arithmetic",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.addLeft"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.originalPlaceEval_one",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_mul_of_mem",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_ne_zero_of_ord_eq_zero",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_zero",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_single",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_ne_zero",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_mul",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_add",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_arithmetic",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_arithmetic",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_ne_zero",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.symm_pairing",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.arithmetic_pairing",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.addLeft_pairing"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.originalDivisorEval",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.symm",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.arithmetic",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.addLeft"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilDatumAudit3.log",
+      "logSha256": "C1F156CB42FD5CCD9A756543E172D04B353491BB63086FD07ECDF254C3E91722",
+      "auditSha256": "EF0825E8C43C06835BDBCDD416FEAF80920302D81C124E2A549CBD23A6D2F587",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 41,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 21,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilDatumDependencyAudit3.log",
+      "dependencyAuditSha256": "5EB5AAB5AAF31966A61B320A9983FCC65949A7A352F22FE995931EBFE730FA44",
+      "dependencyAuditSourceSha256": "293CC8594598CA7FEA090288B1D6241E0CD6F631CE3883D35D937DE3190454E9",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_ne_zero",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.symm_pairing",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.arithmetic_pairing",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.addLeft_pairing"
+      ],
+      "dependency": "genuine modular-form concentration -> actual residual Galois association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint alternating Tate pairing with cyclotomic arithmetic action -> actual original divisorial Weil pairing -> literal divisor evaluation and Galois compatibility",
+      "discharged": "The literal original divisorial Weil ratio is nonzero, reverses by inversion, is multiplicative under compatible addition and transforms semilinearly under the actual coefficient Galois action. Rationality and residue evaluation are supplied by proved original place constructions. These are properties of actual representatives; reciprocity, independence of representatives, Picard-torsion descent, nondegeneracy, Hecke adjointness and the determinant remain required. DUB-17--20 OPEN; 16/20.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Prove reciprocity and independence of representatives, move actual representatives, descend to Picard torsion and establish nondegeneracy and Hecke adjointness before claiming any Tate pairing or determinant. The existing original complex period and torsion comparisons are candidates for a shorter nondegeneracy route; their compatibility with the divisorial pairing is not yet proved. Scratch only. No Picard pairing, determinant, characteristic polynomial or additional acceptance gate is claimed. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-weil-datum-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "39B2B3795769CE3A1185AA9BA54CB841B76FAA9556D759E29E0568EE3EB81AC9",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T21:15:12.876480+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceResidueAlgebraNorm",
+        "SourceResidueAlgebraNormPi",
+        "SourceRamifiedResidueNorm",
+        "SourceCurveResidueNormBaseChange",
+        "SourceCurveResidueNormFactors",
+        "SourceCurveRationalEvaluation",
+        "SourceCurveRationalNormEvaluation",
+        "SourceCurveNormFiberEvaluation",
+        "SourceCurveFiberRegularIntegrality",
+        "SourceCurveRationalFunctionEvaluation",
+        "SourceCurveFieldNormEvaluation",
+        "SourceOriginalNormEvaluation"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueAlgebraNorm.lean",
+          "sha256": "1EA44B6527414E21E7213DA0A5A483293F16226C58C5948772C7FEC5248F2BCF",
+          "oleanSha256": "E38F892CCE29A7E0DA98C075EA28464AB3D86D3FCB39A94F8B0B18EB86C62573"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueAlgebraNormPi.lean",
+          "sha256": "2A1FA18550B75F711B2910D54FB4714C3AAE98213BEAE868AE92BE713A189733",
+          "oleanSha256": "FDAC29E20B591CEEA76A53F5F6361D5F4862E054C3747CE6826C1F5459940505"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRamifiedResidueNorm.lean",
+          "sha256": "69CFE1E587D882A59C4E44D033A7F9BD1C4CFC57916682CB92E9065D182B9EA2",
+          "oleanSha256": "7B9EF4060533A4A767C623BF98CC29515D590163291828406F2D68D95F113A8B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveResidueNormBaseChange.lean",
+          "sha256": "AD863FE08871E5656735CA45C9106740843F7879816C2E565D2325EE9727602D",
+          "oleanSha256": "B270D9555DBBD1D07A78A7143FBDD1E78DC5DE4E4B8ACC99936A4A015AF7F43D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveResidueNormFactors.lean",
+          "sha256": "63CA3EE48B46A5C0C124AC1A45575A812CF2B345C40C9BD21A350DED1452B3F0",
+          "oleanSha256": "6826EAEBCB584149AD09BACA62CEB27F7CB0B9372D15D298DA40A262AD6A6EFA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveRationalEvaluation.lean",
+          "sha256": "9B976230F087462B0AB5974DCE80CACA003AA4111967C1BBF610A9A341484E3A",
+          "oleanSha256": "0D0ABB0BEAEE9617789765ABA81013E15EEB5199DEF1400A05CC62162F699A62"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveRationalNormEvaluation.lean",
+          "sha256": "44D108796F2B8F3876226E260213453C6A0FDAA05CC5847A0C922F711D11B6D4",
+          "oleanSha256": "2E3F650B11D37E74C2395D9A6FBA1F429234A190F18B0BCF75F123E7461CE126"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveNormFiberEvaluation.lean",
+          "sha256": "3E46DAC69421CB97FD15AF12FF62D3E60DB883748A53D8EAEEF7429AED2BAB58",
+          "oleanSha256": "18B276D880FB35EF033730C0D84D46AA9FFF43BBC04A8C9FFDAAEF3B866A9CDB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFiberRegularIntegrality.lean",
+          "sha256": "77D67ED6E57613B924AD4E346E5DE7D35DD46D6655163FEA65CB4EEB9433809F",
+          "oleanSha256": "79891E44B59B9D8D1F65770F1B7630DE9CBFA0A78722E19FD24642CA57AA62CB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveRationalFunctionEvaluation.lean",
+          "sha256": "66BD42A496B757B7D772F5C5199FEED3FC6A85CFEC40B5C77CCE09ABA7AF86B3",
+          "oleanSha256": "22A0E61E90D97E1845ECAA7FE6D7EC91A892EF974098F56027CA0DE1026BC7F7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveFieldNormEvaluation.lean",
+          "sha256": "9C1F701361DA4BA5C3305DF4A7A9E8938DFFA1FC29596342C8F40F5B92F0A781",
+          "oleanSha256": "8AFB086E8DD6ABFD99EB5A6DD6C090A8DC34470D511B93CCF5B68096C6DA194E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNormEvaluation.lean",
+          "sha256": "1B6969736C4CB2234ADEF484ECBB0AB7F14F3904695720C460D89D41BA6A613E",
+          "oleanSha256": "09F32C347ACD64A2C3314200104A36C5FB08F680CCD8BB1B2065983B3D4E1661"
+        }
+      ],
+      "queries": [
+        "Dubon2026.algebra_norm_nilpotent_scalar",
+        "Dubon2026.algebra_norm_product",
+        "Dubon2026.algebra_norm_subsingleton",
+        "Dubon2026.algebra_norm_finite_pi",
+        "Dubon2026.norm_residue_quotient_eq_prod",
+        "Dubon2026.norm_ramified_factor_eq_residue_pow",
+        "Dubon2026.SourceCurve.Place.residueFiberIdeal_ne_bot",
+        "Dubon2026.SourceCurve.Place.residue_norm_eq_norm_residueFiber",
+        "Dubon2026.SourceCurve.Place.residue_norm_eq_prod_ramified_factors",
+        "Dubon2026.SourceCurve.Place.residue_rationalRegularEval",
+        "Dubon2026.SourceCurve.Place.rationalRegularEval_algebraMap",
+        "Dubon2026.SourceCurve.Place.sub_rationalRegularEval_mem_center",
+        "Dubon2026.SourceCurve.Place.rationalRegularEval_norm_eq_prod_factors",
+        "Dubon2026.SourceCurve.Place.rationalRegularEval_norm_eq_finprod_fiber",
+        "Dubon2026.SourceCurve.Place.exists_integralClosureAt_of_fiber_ord_nonneg",
+        "Dubon2026.SourceCurve.Place.rationalEval_of_mem",
+        "Dubon2026.SourceCurve.Place.rationalEval_algebraMap",
+        "Dubon2026.SourceCurve.Place.algebraMap_norm_integralClosureAt",
+        "Dubon2026.SourceCurve.Place.norm_mem_of_fiber_ord_nonneg",
+        "Dubon2026.SourceCurve.Place.rationalEval_norm_eq_finprod_fiber",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_eq_rationalEval",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_normAlong_eq_finprod_fiber",
+        "Dubon2026.SourceFunctionField.originalNormCharZero",
+        "Dubon2026.SourceCurve.Place.residueFiberIdeal",
+        "Dubon2026.SourceCurve.Place.residueFiberQuotientAlgebra",
+        "Dubon2026.SourceCurve.Place.residueRamifiedFactorAlgebra",
+        "Dubon2026.SourceCurve.Place.rationalRegularEval",
+        "Dubon2026.SourceCurve.Place.rationalEval"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.algebra_norm_nilpotent_scalar",
+        "Dubon2026.algebra_norm_product",
+        "Dubon2026.algebra_norm_subsingleton",
+        "Dubon2026.algebra_norm_finite_pi",
+        "Dubon2026.norm_residue_quotient_eq_prod",
+        "Dubon2026.norm_ramified_factor_eq_residue_pow",
+        "Dubon2026.SourceCurve.Place.residueFiberIdeal_ne_bot",
+        "Dubon2026.SourceCurve.Place.residue_norm_eq_norm_residueFiber",
+        "Dubon2026.SourceCurve.Place.residue_norm_eq_prod_ramified_factors",
+        "Dubon2026.SourceCurve.Place.residue_rationalRegularEval",
+        "Dubon2026.SourceCurve.Place.rationalRegularEval_algebraMap",
+        "Dubon2026.SourceCurve.Place.sub_rationalRegularEval_mem_center",
+        "Dubon2026.SourceCurve.Place.rationalRegularEval_norm_eq_prod_factors",
+        "Dubon2026.SourceCurve.Place.rationalRegularEval_norm_eq_finprod_fiber",
+        "Dubon2026.SourceCurve.Place.exists_integralClosureAt_of_fiber_ord_nonneg",
+        "Dubon2026.SourceCurve.Place.rationalEval_of_mem",
+        "Dubon2026.SourceCurve.Place.rationalEval_algebraMap",
+        "Dubon2026.SourceCurve.Place.algebraMap_norm_integralClosureAt",
+        "Dubon2026.SourceCurve.Place.norm_mem_of_fiber_ord_nonneg",
+        "Dubon2026.SourceCurve.Place.rationalEval_norm_eq_finprod_fiber",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_eq_rationalEval",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_normAlong_eq_finprod_fiber",
+        "Dubon2026.SourceFunctionField.originalNormCharZero"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.Place.residueFiberIdeal",
+        "Dubon2026.SourceCurve.Place.residueFiberQuotientAlgebra",
+        "Dubon2026.SourceCurve.Place.residueRamifiedFactorAlgebra",
+        "Dubon2026.SourceCurve.Place.rationalRegularEval",
+        "Dubon2026.SourceCurve.Place.rationalEval"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNormEvaluationAudit12.log",
+      "logSha256": "EBB5DB37FAB941FE1CF125F7B9D09C0A49090288161C8F5D516C3041E0640E4C",
+      "auditSha256": "BA58D02E08F91728427A886B961937F008D3B29BC836D87FE6A67F27F6DD21E7",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 36,
+      "linterScopes": 12,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 40,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNormEvaluationDependencyAudit12.log",
+      "dependencyAuditSha256": "15652582CFEB6B4E264394AF2D7FBFCC5E7ADE64037EC777B24842C364E3ADB1",
+      "dependencyAuditSourceSha256": "E8F273C8B5C022945695879435C38B54767DE2CD4AFF0F935EB82763806F4345",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalPlaceEval_normAlong_eq_finprod_fiber",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_eq_rationalEval",
+        "Dubon2026.SourceCurve.Place.rationalEval_algebraMap"
+      ],
+      "dependency": "modular-form concentration -> actual residual Galois association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Weil pairing -> reciprocity and correspondence adjointness -> norm evaluation on actual place fibers",
+      "discharged": "The actual field norm on an original modular function field evaluates to the product of actual function values over the full place fiber, with normalized ramification exponents. Native field-map finiteness and residue bijections discharge geometric premises. Fiber regularity supplies integrality; determinant base change, the pinned ramified CRT, nilpotent scalar norms and native prime/place comparisons prove the formula. Only regularity of the function on that fiber remains as the natural function condition. Divisor pullback evaluation, Weil reciprocity, pairing descent, nondegeneracy, Hecke adjointness, determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Assemble divisor pullback evaluation and Weil reciprocity, prove representative independence and nondegeneracy, then Hecke adjointness and the Frobenius determinant. The original complex period comparison remains a candidate to shorten nondegeneracy, but its divisorial compatibility is unproved. Scratch only; production promotion and assembled verification pending. No additional acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-norm-evaluation-12-reuse-review-20261024.json",
+      "reuseReviewSha256": "22F5A1ABDB2D1D4CD06614B6FECC901165AFD107C376A3F523286ADA39C3EC4A",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T21:23:22.547809+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceCurvePullbackEvaluationProduct",
+        "SourceOriginalPullbackEvaluation"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePullbackEvaluationProduct.lean",
+          "sha256": "582901E41E62F6364AF3DF3083272D9AB6924A4A27C828E4341B9BE5A39DCA72",
+          "oleanSha256": "9BF5E5803CC6CC9000579A2A2D1CAA1A54758427974DA3893557818432AEADCF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPullbackEvaluation.lean",
+          "sha256": "9C60AEF9B8B5EB302AD0557E5A12F9F62E18222A804B7B9726838CC18762AAFD",
+          "oleanSha256": "7074AE304CDEE40761B5091C79BEE76D987C7223AF24ED9F7C69C8CEAE639CE0"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Divisor.finitePullback_prod_zpow",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_finitePullbackAlong"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Divisor.finitePullback_prod_zpow",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_finitePullbackAlong"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPullbackEvaluationAudit2.log",
+      "logSha256": "7F29737388CB4EB07323D8CB74FEEB2D4C96DE867ACA5774B15D3736227D7219",
+      "auditSha256": "8A1220ED86ED04221B7D0CAB95B93BB6362DF6F0BD9CB12BA0C79151599F1E52",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 2,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 8,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPullbackEvaluationDependencyAudit2.log",
+      "dependencyAuditSha256": "38FA6839852F075516937C2969B03F185A086B120F2A2BF76327A1E5FC382278",
+      "dependencyAuditSourceSha256": "C37C844B8700DA16FDB658F01E3FBD198106181823F5DF2CA98BD759F34B964E",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalDivisorEval_finitePullbackAlong"
+      ],
+      "dependency": "modular-form concentration -> actual residual Galois association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Weil pairing -> reciprocity and correspondence adjointness -> norm evaluation on actual place fibers -> evaluation on pulled-back original divisors",
+      "discharged": "Actual original divisor evaluation on the existing finite pullback equals evaluation of the actual field norm on the base divisor. Native disjoint fibers and ramification orders expand the pullback, and the proved original norm evaluation discharges every fiber identity. Only regularity above the divisor support is required; no norm or evaluation compatibility is assumed. Weil reciprocity, representative independence, Picard-torsion descent, nondegeneracy, Hecke adjointness and the Frobenius determinant remain required. DUB-17--20 OPEN; 16/20.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Prove rational-function reciprocity and transfer it through the actual finite norm/pullback and pushforward identities; then assemble the original divisorial Weil pairing and the remaining determinant dependencies. Scratch only; production promotion and assembled verification pending. No additional acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-pullback-evaluation-2-reuse-review-20261024.json",
+      "reuseReviewSha256": "B00441C73B68B961084245D95849AB67123A1588847F1998048241D331FE9AC9",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T21:33:01.137181+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceCurveEvaluationRestriction",
+        "SourceOriginalEvaluationRestriction",
+        "SourceFiniteDivisorEvaluationPushforward",
+        "SourceOriginalPushforwardEvaluation"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveEvaluationRestriction.lean",
+          "sha256": "D1D4A9871E12B4EA81EAAB2DE78F5A07D9B9423DA36582D95CA2942B88B0C4FA",
+          "oleanSha256": "6738084EF891FD4A714C48F0DB4088A11955D57AC0646F1514F6A80926DF44C1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalEvaluationRestriction.lean",
+          "sha256": "25E9820BF3CFF06F8B4E2758A4B08A19837E8862C6768CA93230D3C1F5270623",
+          "oleanSha256": "AC9952CA9B0A1FD755B355B5F4CCE23C2CC4332B07C6EFE12A177EB694A8886D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteDivisorEvaluationPushforward.lean",
+          "sha256": "34CBA123916DF29F59248BF1629583CC5A468C4C3DC9D610421AD1797755A6E9",
+          "oleanSha256": "137C811FEBB5D21DFF328F0D00A4CBC8CBC97AEF5B42B7DB89EE57AB592A63AB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPushforwardEvaluation.lean",
+          "sha256": "2692D1210D1EA0C8BF6071F0090C13435FFE440631331A009373A27B0509B1B1",
+          "oleanSha256": "778D4CBD4CC4A7A05B9E0CB11C0DD6082B9CAE60821656B2BE8B660E94F644D5"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Place.rationalRegularEval_restrictInclusion",
+        "Dubon2026.SourceCurve.Place.rationalEval_algebraMap_restrict",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_map_restrictAlong",
+        "Dubon2026.finsupp_prod_zpow_mapDomain",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_geometricPushforwardAlong"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Place.rationalRegularEval_restrictInclusion",
+        "Dubon2026.SourceCurve.Place.rationalEval_algebraMap_restrict",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_map_restrictAlong",
+        "Dubon2026.finsupp_prod_zpow_mapDomain",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_geometricPushforwardAlong"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPushforwardEvaluationAudit4.log",
+      "logSha256": "88EB1C99D6F89CAADAA52CD5FB3EC78CFA295FBAA40535D53487514DF92CA64C",
+      "auditSha256": "B8F9ADFA6EE9A811E955FE41DC9E6848DC4EF2C8F3F90FE20C6594C3FCCFE931",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 8,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 12,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPushforwardEvaluationDependencyAudit4.log",
+      "dependencyAuditSha256": "F514B5BF82A10216288CAAF28B585B60E483D123E8EE5A53420FFF6719C1703E",
+      "dependencyAuditSourceSha256": "DC7C44D12C5161E5E41C1B5CCD8091A0C2A144E3B918CB2309D2A840B7C8B101",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalDivisorEval_geometricPushforwardAlong"
+      ],
+      "dependency": "modular-form concentration -> actual residual Galois association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Weil pairing -> reciprocity and correspondence adjointness -> norm evaluation on actual place fibers -> evaluation on pushed-forward original divisors",
+      "discharged": "Actual original divisor evaluation on the existing geometric pushforward equals evaluation of the pulled-back function on the source divisor. Existing local residue restriction proves the value compatibility. Disjointness supplies precisely the nonvanishing needed when integer divisor coefficients cancel in a fiber. All field-map finiteness and residue identifications are discharged. Weil reciprocity, representative independence, Picard-torsion descent, nondegeneracy, Hecke adjointness and the Frobenius determinant remain required. DUB-17--20 OPEN; 16/20.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Assemble the rational-coordinate case of Weil reciprocity and its finite norm transfer. The full external rational reciprocity proof is broader than needed if the second nonconstant function is used as the rational coordinate; validate that shorter route before porting its general polynomial/linear-factor induction. Scratch only; production promotion and assembled verification pending. No additional acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-pushforward-evaluation-4-reuse-review-20261024.json",
+      "reuseReviewSha256": "A62B426B29B7944B1E18DA405B326C2DB33122F40CB850BABFC0AC6F44A86B2C",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T22:01:01.451096+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceRationalInfinityPlace",
+        "SourceRationalPlaceClassification",
+        "SourceRationalPointPlaces",
+        "SourceRationalPointOrders",
+        "SourceRationalPlaceEvaluation",
+        "SourceCurveRationalResidueValues",
+        "SourceRationalInfinityEvaluation",
+        "SourceRationalRootDivisors",
+        "SourceRationalDivisorEvaluation",
+        "SourceRationalCoordinateReciprocity",
+        "SourceRationalCoordinateWeilReciprocity"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalInfinityPlace.lean",
+          "sha256": "61B0B3C1DB4AFEED22E091968D7BD5090523CC3C197592A9D6411087AB2C8726",
+          "oleanSha256": "3C6A1DE8B329EBD51516FBC6BCE2880AB1728C609941AEF243279530651AEC55"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalPlaceClassification.lean",
+          "sha256": "8FF666066A2BDABFA34488810DC8C1B5E264A79F56B4999972741993107361A2",
+          "oleanSha256": "B9F88CB002D44965400B323952F8D0BF2D7C86E56A867ACB7C33C37ED5C64E64"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalPointPlaces.lean",
+          "sha256": "601D52296109F3B5CD2D0D21082E4313A013CF42FD4E61849B8470C269B5AE33",
+          "oleanSha256": "62728C03E3511B588E781DFBB7AC6882574EFEF68B7069348B3E7130E066B4FC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalPointOrders.lean",
+          "sha256": "C7F1D9CDD02836BE4AD52617415E0E6BBB8E9F82A728AD43A32A36899E73A6A1",
+          "oleanSha256": "1EAD27091560FFB76458DD0712137F96A69E38D6C9A9FCFFB71AD5B3E2A215FE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalPlaceEvaluation.lean",
+          "sha256": "8F42CA8AD8BC3BE4C4A13DA7C270212C0B6050D601E1B0F1B8A75FB66242D944",
+          "oleanSha256": "8C3C06737C7554B76F47FE19341F1297351020BD7B37C6AD376361B51BC81F26"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveRationalResidueValues.lean",
+          "sha256": "AABDF385E75C2F554CF66A76128F72479FCDB01CE9B8848F88C2418EEAA99AB4",
+          "oleanSha256": "D6B50637E71008240AB4A67713E3AC0947959AF83DF2EF6025D26E05900153AD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalInfinityEvaluation.lean",
+          "sha256": "B8C41957EF98B0C9E88BD694CF8C3949DCEED6735B59D823D08498C7C1EAA0BB",
+          "oleanSha256": "803C62619B24EF79BFCD7E84AA1C5EAB911BD6A248D107F53ECAB7B24BF3CF80"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalRootDivisors.lean",
+          "sha256": "F935ADE613848A2964420BAA6491E92300EAD0F302963264AFA8C9B7D36943F0",
+          "oleanSha256": "0EACEF5881AA9AF25DC4C649CF76E98599899CAAFC2D4975A7E0DD3A81AAD4B7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalDivisorEvaluation.lean",
+          "sha256": "E955D34D2EBA8051F7AC50EC69487C181523633D262CA3391346EEDF5952B271",
+          "oleanSha256": "AE71CBAA9D5082FAD28D359A7EADFD255B805765721BBE76B20078BECC567459"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalCoordinateReciprocity.lean",
+          "sha256": "3C0A2150714CAD7BC84D68FDF1A099507964F1B7B4DF78743C118093A36358EA",
+          "oleanSha256": "7AF1DAEA08744907BFD519ECB8373BD62D311A4B1A0F66AB831D63CE0F65F7B6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalCoordinateWeilReciprocity.lean",
+          "sha256": "92A38F71D1B43093B8C0859405911DE60F31854FE82ED2969311E693696ADD1F",
+          "oleanSha256": "DC4C076E9175927D208528BDA73AF7DDB3EAA4039E9B273C40D00DCCAC0C417D"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.RationalFunction.infinityPlace_ord",
+        "Dubon2026.SourceCurve.RationalFunction.infinityPlace_ord_X",
+        "Dubon2026.SourceCurve.RationalFunction.infinityPlace_ne_prime",
+        "Dubon2026.SourceCurve.RationalFunction.eq_prime_or_infinity",
+        "Dubon2026.SourceCurve.RationalFunction.pointPlace_ord_parameter",
+        "Dubon2026.SourceCurve.RationalFunction.prime_eq_point",
+        "Dubon2026.SourceCurve.RationalFunction.eq_point_or_infinity",
+        "Dubon2026.SourceCurve.RationalFunction.pointPlace_ord_polynomial_eq_zero_iff",
+        "Dubon2026.SourceCurve.RationalFunction.pointPlace_ord_polynomial",
+        "Dubon2026.SourceCurve.RationalFunction.placeEval_polynomial",
+        "Dubon2026.SourceCurve.RationalFunction.placeEval_algebraMap",
+        "Dubon2026.SourceCurve.RationalFunction.placeEval_X",
+        "Dubon2026.SourceCurve.RationalFunction.pointPlace_injective",
+        "Dubon2026.SourceCurve.Place.rationalEval_sub_algebraMap",
+        "Dubon2026.SourceCurve.Place.rationalEval_eq_zero_iff_ord_pos",
+        "Dubon2026.SourceCurve.Place.rationalEval_eq_of_ord_sub_pos",
+        "Dubon2026.SourceCurve.Place.rationalEval_div_of_ord_eq_zero",
+        "Dubon2026.SourceCurve.RationalFunction.placeEval_infinity_eq",
+        "Dubon2026.SourceCurve.RationalFunction.placeEval_infinity_div_polynomial",
+        "Dubon2026.SourceCurve.RationalFunction.rootDivisor_point",
+        "Dubon2026.SourceCurve.RationalFunction.rootDivisor_infinity",
+        "Dubon2026.SourceCurve.RationalFunction.principalDivisor_polynomial",
+        "Dubon2026.SourceCurve.RationalFunction.principalDivisor_div_polynomial",
+        "Dubon2026.SourceCurve.RationalFunction.divisorEval_sub",
+        "Dubon2026.SourceCurve.RationalFunction.divisorEval_single",
+        "Dubon2026.SourceCurve.RationalFunction.rootDivisor_support_subset",
+        "Dubon2026.SourceCurve.RationalFunction.divisorEval_X_rootDivisor",
+        "Dubon2026.SourceCurve.RationalFunction.placeEval_X_ne_zero_on_rootDivisor",
+        "Dubon2026.SourceCurve.RationalFunction.principalDivisor_X",
+        "Dubon2026.SourceCurve.RationalFunction.placeEval_point_div_polynomial",
+        "Dubon2026.SourceCurve.RationalFunction.root_products_ratio",
+        "Dubon2026.SourceCurve.RationalFunction.coordinate_reciprocity_polynomial_quotient",
+        "Dubon2026.SourceCurve.RationalFunction.num_denom_eval_ne_zero_of_point_ord_eq_zero",
+        "Dubon2026.SourceCurve.RationalFunction.coordinate_weil_reciprocity",
+        "Dubon2026.SourceCurve.RationalFunction.infinityPlace",
+        "Dubon2026.SourceCurve.RationalFunction.pointPrime",
+        "Dubon2026.SourceCurve.RationalFunction.pointPlace",
+        "Dubon2026.SourceCurve.RationalFunction.placeEval",
+        "Dubon2026.SourceCurve.RationalFunction.rootDivisor",
+        "Dubon2026.SourceCurve.RationalFunction.divisorEval"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.RationalFunction.infinityPlace_ord",
+        "Dubon2026.SourceCurve.RationalFunction.infinityPlace_ord_X",
+        "Dubon2026.SourceCurve.RationalFunction.infinityPlace_ne_prime",
+        "Dubon2026.SourceCurve.RationalFunction.eq_prime_or_infinity",
+        "Dubon2026.SourceCurve.RationalFunction.pointPlace_ord_parameter",
+        "Dubon2026.SourceCurve.RationalFunction.prime_eq_point",
+        "Dubon2026.SourceCurve.RationalFunction.eq_point_or_infinity",
+        "Dubon2026.SourceCurve.RationalFunction.pointPlace_ord_polynomial_eq_zero_iff",
+        "Dubon2026.SourceCurve.RationalFunction.pointPlace_ord_polynomial",
+        "Dubon2026.SourceCurve.RationalFunction.placeEval_polynomial",
+        "Dubon2026.SourceCurve.RationalFunction.placeEval_algebraMap",
+        "Dubon2026.SourceCurve.RationalFunction.placeEval_X",
+        "Dubon2026.SourceCurve.RationalFunction.pointPlace_injective",
+        "Dubon2026.SourceCurve.Place.rationalEval_sub_algebraMap",
+        "Dubon2026.SourceCurve.Place.rationalEval_eq_zero_iff_ord_pos",
+        "Dubon2026.SourceCurve.Place.rationalEval_eq_of_ord_sub_pos",
+        "Dubon2026.SourceCurve.Place.rationalEval_div_of_ord_eq_zero",
+        "Dubon2026.SourceCurve.RationalFunction.placeEval_infinity_eq",
+        "Dubon2026.SourceCurve.RationalFunction.placeEval_infinity_div_polynomial",
+        "Dubon2026.SourceCurve.RationalFunction.rootDivisor_point",
+        "Dubon2026.SourceCurve.RationalFunction.rootDivisor_infinity",
+        "Dubon2026.SourceCurve.RationalFunction.principalDivisor_polynomial",
+        "Dubon2026.SourceCurve.RationalFunction.principalDivisor_div_polynomial",
+        "Dubon2026.SourceCurve.RationalFunction.divisorEval_sub",
+        "Dubon2026.SourceCurve.RationalFunction.divisorEval_single",
+        "Dubon2026.SourceCurve.RationalFunction.rootDivisor_support_subset",
+        "Dubon2026.SourceCurve.RationalFunction.divisorEval_X_rootDivisor",
+        "Dubon2026.SourceCurve.RationalFunction.placeEval_X_ne_zero_on_rootDivisor",
+        "Dubon2026.SourceCurve.RationalFunction.principalDivisor_X",
+        "Dubon2026.SourceCurve.RationalFunction.placeEval_point_div_polynomial",
+        "Dubon2026.SourceCurve.RationalFunction.root_products_ratio",
+        "Dubon2026.SourceCurve.RationalFunction.coordinate_reciprocity_polynomial_quotient",
+        "Dubon2026.SourceCurve.RationalFunction.num_denom_eval_ne_zero_of_point_ord_eq_zero",
+        "Dubon2026.SourceCurve.RationalFunction.coordinate_weil_reciprocity"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.RationalFunction.infinityPlace",
+        "Dubon2026.SourceCurve.RationalFunction.pointPrime",
+        "Dubon2026.SourceCurve.RationalFunction.pointPlace",
+        "Dubon2026.SourceCurve.RationalFunction.placeEval",
+        "Dubon2026.SourceCurve.RationalFunction.rootDivisor",
+        "Dubon2026.SourceCurve.RationalFunction.divisorEval"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceRationalCoordinateReciprocityAudit11.log",
+      "logSha256": "14CFDB440B694522A1E98F18426E641A6A4307EF1DC8A6933B3AF64A57D7DC7D",
+      "auditSha256": "1E54AF8F2BEEBF6E9A2D6855B8869BDCBF22D0B9FC84DFA3B93E26912076FCC1",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 81,
+      "linterScopes": 11,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 48,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceRationalCoordinateReciprocityDependencyAudit11.log",
+      "dependencyAuditSha256": "DC0FD703F41B0E665C9D80A68CAFD3E39BF6554250499CDC454E2B11EC79A5A7",
+      "dependencyAuditSourceSha256": "260127C6DE47F422653B917AC7A7421E4011BFD5CA5AC986315F0013B1439ADD",
+      "consumers": [
+        "Dubon2026.SourceCurve.RationalFunction.coordinate_weil_reciprocity"
+      ],
+      "dependency": "modular-form concentration -> actual residual Galois association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Weil pairing -> original reciprocity -> norm transfer using the second nonconstant function as rational coordinate -> reciprocity with X",
+      "discharged": "Actual Weil reciprocity with the rational coordinate X is proved for every nonzero rational function whose divisor avoids zero and infinity. The actual place census, normalized point orders, finite and infinity residues, principal-divisor formulas, root multiplicities, root products and numerator/denominator nonvanishing are derived, not assumed. This closes the rational-coordinate calculation required by the original finite norm-transfer route. That transfer, pairing descent and nondegeneracy, Hecke adjointness, Frobenius determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Construct the finite rational-coordinate map into the original modular function field and apply actual norm/pullback and pushforward evaluation formulas. Their original-to-original specializations do not directly typecheck for a RatFunc base: a narrow RatFunc-to-original consumer must use the proved generic field-norm and divisor formulas. Constant second functions use existing principal-divisor degree zero. Pairing descent, nondegeneracy and determinant remain separate. Scratch only; production promotion and assembled verification pending. No additional acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-rational-coordinate-reciprocity-11-reuse-review-20261024.json",
+      "reuseReviewSha256": "24593BF47E03738CF6DAE201F3A4BA253E37A19011F342545AF23EDC9BDDC4CE",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T22:13:46.870740+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalRationalCoordinate",
+        "SourceOriginalRationalNormEvaluation",
+        "SourceOriginalRationalDivisorEvaluation",
+        "SourceOriginalRationalPrincipalDivisors",
+        "SourceOriginalCoordinateWeilReciprocity",
+        "SourceOriginalConstantWeilReciprocity",
+        "SourceOriginalWeilReciprocity"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalCoordinate.lean",
+          "sha256": "9BC0BC55963B4DD2D57E3DFDB7C544A3D5756302EB74CD795D4FA9E05F5E5AF0",
+          "oleanSha256": "F9378D54A1D4C4F064A6308C65DE9E2BDED95FF3452598D0CAD4DCF6575A4DD8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalNormEvaluation.lean",
+          "sha256": "6A6BE145EC6B8B6EDEBB45D6DB12D314C4806383493DFD8B9D0FCFE25793F461",
+          "oleanSha256": "B0B1D5BF47EC3A02D097FA43056436D527DC8C9DEEC55D09BF93D286AAC07844"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalDivisorEvaluation.lean",
+          "sha256": "322BAF7E34D678C1316B7A5E63EE66A542E38CE0FFA454FA0E922D53DEBFBDF2",
+          "oleanSha256": "A7938702FACC8E487C2BE619AD0A99AB7FE5F7E9FEA2CE283102CC921D03369D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalRationalPrincipalDivisors.lean",
+          "sha256": "608A84F15551E5D71BB965B5A5C41E1F9EAE7E19F8C091C9619A5CC3907D3B22",
+          "oleanSha256": "A27075AC931B207AF94F9F3BE8C58970AC8FEC7407793ED62CA190C44236010B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoordinateWeilReciprocity.lean",
+          "sha256": "6E88A3B57EE0CA7EE7ADE73BD5973C4DBC961134852AF501B7B1445AD439A327",
+          "oleanSha256": "2D4631594FB087C0304D9F6B73692321C8F4C74B4697A56B910A08793370201E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalConstantWeilReciprocity.lean",
+          "sha256": "2C94AFACE5F36B7F48F33E7E62563F6EB5911A6429A28F3947F39A602945DD4B",
+          "oleanSha256": "190F1DF849A06E7B69E4223B1B35187397E4CBFDC0FD515046F424BAA8254F77"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilReciprocity.lean",
+          "sha256": "9946806105115C9BB6B839D301F13729BC36179C81CADBDDBD548C6494BFCFF1",
+          "oleanSha256": "250BFDE2CFA96CD9654A060145B95FE18308A56F5AA969E1F930B034D2BE12D4"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.rationalCoordinate_X",
+        "Dubon2026.SourceFunctionField.original_ratfunc_hom_finite",
+        "Dubon2026.SourceFunctionField.rationalPlaceEval_original_norm_eq_finprod_fiber",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_ratfunc_map_restrict",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_ratfunc_finitePullback",
+        "Dubon2026.SourceFunctionField.rationalDivisorEval_original_geometricPushforward",
+        "Dubon2026.SourceFunctionField.originalPrincipalDivisor_ratfunc_pullback",
+        "Dubon2026.SourceFunctionField.originalPrincipalDivisor_ratfunc_pushforward",
+        "Dubon2026.SourceFunctionField.original_ord_zero_above_coordinate_support",
+        "Dubon2026.SourceFunctionField.original_norm_ord_zero_of_fiber",
+        "Dubon2026.SourceFunctionField.original_weil_reciprocity_coordinate",
+        "Dubon2026.SourceFunctionField.originalPrincipalDivisor_algebraMap",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_constant_principal",
+        "Dubon2026.SourceFunctionField.original_weil_reciprocity_constant",
+        "Dubon2026.SourceFunctionField.original_weil_reciprocity",
+        "Dubon2026.SourceCurve.rationalCoordinate"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.rationalCoordinate_X",
+        "Dubon2026.SourceFunctionField.original_ratfunc_hom_finite",
+        "Dubon2026.SourceFunctionField.rationalPlaceEval_original_norm_eq_finprod_fiber",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_ratfunc_map_restrict",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_ratfunc_finitePullback",
+        "Dubon2026.SourceFunctionField.rationalDivisorEval_original_geometricPushforward",
+        "Dubon2026.SourceFunctionField.originalPrincipalDivisor_ratfunc_pullback",
+        "Dubon2026.SourceFunctionField.originalPrincipalDivisor_ratfunc_pushforward",
+        "Dubon2026.SourceFunctionField.original_ord_zero_above_coordinate_support",
+        "Dubon2026.SourceFunctionField.original_norm_ord_zero_of_fiber",
+        "Dubon2026.SourceFunctionField.original_weil_reciprocity_coordinate",
+        "Dubon2026.SourceFunctionField.originalPrincipalDivisor_algebraMap",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_constant_principal",
+        "Dubon2026.SourceFunctionField.original_weil_reciprocity_constant",
+        "Dubon2026.SourceFunctionField.original_weil_reciprocity"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceCurve.rationalCoordinate"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilReciprocityAudit7.log",
+      "logSha256": "55DA8870C82B40B1A8AF90072A307219605C57AFD16FAF663BC7DA29F37C22BF",
+      "auditSha256": "D23C74A8DBA53A104E449505B991FF33E6806D3023B0B6558108857FF3D0F75B",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 20,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 29,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilReciprocityDependencyAudit7.log",
+      "dependencyAuditSha256": "1D586CD135B55166F3C9FDA41E78B838DAFE57B7FCF68D9019DC74B9F5BAB981",
+      "dependencyAuditSourceSha256": "6B7D5A17412D0F5840A8F9981D999A96D2CA0D918C1B9BB58683710A0E647B23",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_weil_reciprocity"
+      ],
+      "dependency": "modular-form concentration -> actual residual Galois association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Weil pairing -> original Weil reciprocity -> actual finite rational coordinate and norm transfer",
+      "discharged": "Weil reciprocity is proved on the actual original modular function field over algebraically closed rational-algebra constants: f evaluated on the actual principal divisor of g equals g evaluated on that of f for nonzero f and g with disjoint order support. The constant case uses proved principal degree zero; the nonconstant case constructs the actual finite rational coordinate and transfers coordinate reciprocity through actual norm, pullback and pushforward identities. Finiteness, residue identifications, fiber regularity, norm endpoint orders and reciprocity are not caller assumptions. Pairing representative independence and descent, nondegeneracy, Hecke adjointness, determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Use this actual reciprocity theorem to prove representative independence and roots-of-unity values for the original divisorial Weil pairing, then descend to Picard torsion. Prove nondegeneracy and Hecke adjointness and pass to the Tate pairing. The Frobenius determinant is still not proved; the original Frobenius quadratic is already verified separately. Scratch only; production promotion and assembled verification pending. No additional acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-weil-reciprocity-7-reuse-review-20261024.json",
+      "reuseReviewSha256": "7CE80E144B6A915D3EF316DF21408251B317A52B1CD91258AA4B350C14B22F2E",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T22:19:55.216543+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalWeilTorsionValues"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilTorsionValues.lean",
+          "sha256": "43D75C018D02011D8613210537E98691385953F2A89103B86F45E10E5376C075",
+          "oleanSha256": "C0CE01F2200617A45039B17E1263422594BB57F5908C5DCB39F24F87724367BA"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.originalDivisorEval_nsmul",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.principalDivisor_first",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.principalDivisor_second",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_pow_eq_one"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.originalDivisorEval_nsmul",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.principalDivisor_first",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.principalDivisor_second",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_pow_eq_one"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilTorsionValuesAudit1.log",
+      "logSha256": "8E0B6F9B0908249072D21B3FC3D2BA12F1ABE641BE673FBAA9655008E526D19B",
+      "auditSha256": "5B7DA3EC3F239B259C3B02DED036A89B87E4400F0C52042D03244B51979B7061",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 4,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 7,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilTorsionValuesDependencyAudit1.log",
+      "dependencyAuditSha256": "DCCB1E2FDBC5D332E3F0C3EFE4B178142A9D2ADB5B9CFA8E7C0543F114A48646",
+      "dependencyAuditSourceSha256": "99F60E2AD1F7CB9BDFC913486FEC0E6A571614A8C4BEBC48EA7BF04284BD9E6D",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_pow_eq_one"
+      ],
+      "dependency": "modular-form concentration -> actual residual Galois association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Weil pairing -> original Weil reciprocity -> actual finite rational coordinate and norm transfer -> nth-root-of-unity values of actual original divisorial representatives",
+      "discharged": "The literal original Weil ratio has nth power one on actual disjoint n-torsion divisor/function representatives. Actual original reciprocity is a proved dependency, not a premise. Representative independence, Picard-torsion descent, nondegeneracy, Hecke adjointness, determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Descend the actual ratio through divisor representatives. Reuse original_lSpace_zero_eq_range for global units and existing prescribed-order/finite-place-indicator machinery for moving representatives. Existing pair separation over complex constants has a direct all-closed-constants proof with the already proved original residue fields; implement only that required extension. Nondegeneracy and Hecke adjointness then remain. Scratch only; production promotion and assembled verification pending. No additional acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-weil-torsion-values-1-reuse-review-20261024.json",
+      "reuseReviewSha256": "C7484C7E67E4968F0DC185444DD9A798C9B264A979C6D9B72D4803EE04509806",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T22:26:04.554314+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalClosedPlaceSeparation",
+        "SourceOriginalClosedFiniteSeparation",
+        "SourceOriginalClosedPrescribedOrders",
+        "SourceOriginalClosedPicardMoving",
+        "SourceOriginalWeilClasses",
+        "SourceOriginalWeilRepresentatives"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalClosedPlaceSeparation.lean",
+          "sha256": "7B8067C3781EE8216EBD7D100FEBF33C8A72551C735D37E0BADD413AF0C4D3C6",
+          "oleanSha256": "7C75376021F9C7777F4C1AEDE695BC17A7267C5C1BB121D6EE528B8D25F62F81"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalClosedFiniteSeparation.lean",
+          "sha256": "1B322DF22D7970C07ED3561B35E7F0ADC58558BDDA294F2127D18F8D4920D3AD",
+          "oleanSha256": "9AB1BDDD1531146589F99B47F24E5E8D26C40F20427C957233ECE2A293607639"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalClosedPrescribedOrders.lean",
+          "sha256": "965D37DDD15BAA0713BB29B2E350897FB0407615625BD582FFF39029F45C4109",
+          "oleanSha256": "249128E99CEE507146FE65B70B0D8679A3BDACB6F5E5DD9BBEB757D16BD321D9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalClosedPicardMoving.lean",
+          "sha256": "6C30773DA6FFAAA7A76DB920FB0420001231318A65ED223FC7A6478A44E0CBC4",
+          "oleanSha256": "871E1817AA516F60385178BE57749B98CD7794B22D7FC8B50F6D13C4AC33C63B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilClasses.lean",
+          "sha256": "337E842EE0F47FC1E6AB2021D57E08ED0AAE28455B903F191F92434B24E7A377",
+          "oleanSha256": "4CD5958E98B5C9F78AF0D29CD5261523C86DFBE2E4F5D473CBE1C98CF58E7CC3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRepresentatives.lean",
+          "sha256": "3D76223B9177A7C9B8860DE553088A22B34E496C899061D93850F6E89176FB71",
+          "oleanSha256": "30F2897F7D5049CE8C16F8C7040E2C3A0DB80BAED880938CB187EF039AF6A5A4"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.original_closed_places_separating_function",
+        "Dubon2026.SourceFunctionField.exists_original_closed_polar_regular_separator",
+        "Dubon2026.SourceFunctionField.exists_original_closed_prescribed_place_orders",
+        "Dubon2026.SourceFunctionField.originalPic0_representative_avoiding",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.degree_first",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.degree_second",
+        "Dubon2026.SourceFunctionField.exists_original_weil_representative",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.classLeft",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.classRight"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.original_closed_places_separating_function",
+        "Dubon2026.SourceFunctionField.exists_original_closed_polar_regular_separator",
+        "Dubon2026.SourceFunctionField.exists_original_closed_prescribed_place_orders",
+        "Dubon2026.SourceFunctionField.originalPic0_representative_avoiding",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.degree_first",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.degree_second",
+        "Dubon2026.SourceFunctionField.exists_original_weil_representative"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.classLeft",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.classRight"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRepresentativesAudit6.log",
+      "logSha256": "256B13E6E324DB8EF5AF394BB52543CFC0BF1DB00363D4A8DC9BF3265A1FCB2C",
+      "auditSha256": "3E876D421436CDBF6CE84242557BD2CAD3172D2A9E087CFA83A55B1E78EF2A72",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 27,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 15,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRepresentativesDependencyAudit6.log",
+      "dependencyAuditSha256": "F1D5B4E0A162932BE244D5098AE75E29CAF7F3874822FE613D44A18B193DC95E",
+      "dependencyAuditSourceSha256": "126550173ADDF9CAB1E6EAF59B5AF08E359B762D5454A6A83523A0796C0B847A",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.exists_original_weil_representative"
+      ],
+      "dependency": "modular-form concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Picard Weil pairing -> representative independence -> existence of disjoint arithmetic torsion representatives",
+      "discharged": "Every pair of actual original Picard n-torsion classes, for nonzero n over every algebraically closed rational-algebra coefficient field, has disjoint original divisor/function representatives. Moving uses actual principal divisors and preserves the class; their normalized orders give the principal multiples. No moving, approximation, degree-zero or representative-existence premise remains. Pairing choice independence, descent, nondegeneracy, Hecke adjointness, determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Prove pairing independence under changing principal function choices and principal shifts of the divisors, using original_lSpace_zero_eq_range and the already proved reciprocity. Then descend to actual Picard torsion and prove nondegeneracy and Hecke adjointness. Scratch only; production promotion and assembled verification pending. No additional acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-weil-representatives-6-reuse-review-20261024.json",
+      "reuseReviewSha256": "961CDFCE556E50DD2CA8CF235486F6B61FE8732122FBDD96777F2D5E3A118DDB",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-original-weil-datum-3-reuse-review-20261024.json",
+    "Tools/source-original-norm-evaluation-12-reuse-review-20261024.json",
+    "Tools/source-original-pullback-evaluation-2-reuse-review-20261024.json",
+    "Tools/source-original-pushforward-evaluation-4-reuse-review-20261024.json",
+    "Tools/source-rational-coordinate-reciprocity-11-reuse-review-20261024.json",
+    "Tools/source-original-weil-reciprocity-7-reuse-review-20261024.json",
+    "Tools/source-original-weil-torsion-values-1-reuse-review-20261024.json",
+    "Tools/source-original-weil-representatives-6-reuse-review-20261024.json"
+  ],
+  "additionalCurrentSearch": {
+    "path": "Tools/original-weil-reciprocity-promotion-route-470.json",
+    "sha256": "219A4EFBDC97833F774D19C5CD3C7AE759FD274C424EBD7E5837DA51369CC5BE"
+  },
+  "productionFocusedReceipt7637": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilDatumDependencyAudit3Production7637.log",
+        "sha256": "5EB5AAB5AAF31966A61B320A9983FCC65949A7A352F22FE995931EBFE730FA44",
+        "requiredProofValueEdges": 21,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_ne_zero",
+          "Dubon2026.SourceFunctionField.OriginalWeilDatum.symm_pairing",
+          "Dubon2026.SourceFunctionField.OriginalWeilDatum.arithmetic_pairing",
+          "Dubon2026.SourceFunctionField.OriginalWeilDatum.addLeft_pairing"
+        ],
+        "sourceSha256": "366BC74A3E30A37F03D6399F782812F3058358B463A22581C918EEAC08D3FCC2"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNormEvaluationDependencyAudit12Production7637.log",
+        "sha256": "15652582CFEB6B4E264394AF2D7FBFCC5E7ADE64037EC777B24842C364E3ADB1",
+        "requiredProofValueEdges": 40,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalPlaceEval_normAlong_eq_finprod_fiber",
+          "Dubon2026.SourceFunctionField.originalPlaceEval_eq_rationalEval",
+          "Dubon2026.SourceCurve.Place.rationalEval_algebraMap"
+        ],
+        "sourceSha256": "D71B02DD878BCFE7BE27B05101CB06469427BA127F201BD9F7A297E6E94905AE"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPullbackEvaluationDependencyAudit2Production7637.log",
+        "sha256": "38FA6839852F075516937C2969B03F185A086B120F2A2BF76327A1E5FC382278",
+        "requiredProofValueEdges": 8,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalDivisorEval_finitePullbackAlong"
+        ],
+        "sourceSha256": "394FFBF5892DBA55EF6570145FCE51EC9B2D0628AF93F4FCBF97C4FF6184493C"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPushforwardEvaluationDependencyAudit4Production7637.log",
+        "sha256": "F514B5BF82A10216288CAAF28B585B60E483D123E8EE5A53420FFF6719C1703E",
+        "requiredProofValueEdges": 12,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalDivisorEval_geometricPushforwardAlong"
+        ],
+        "sourceSha256": "AF7CBD77377B3056DC431970CCF75145B9632B26F518877CA94A14FE8BFE5E7E"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceRationalCoordinateReciprocityDependencyAudit11Production7637.log",
+        "sha256": "DC0FD703F41B0E665C9D80A68CAFD3E39BF6554250499CDC454E2B11EC79A5A7",
+        "requiredProofValueEdges": 48,
+        "consumers": [
+          "Dubon2026.SourceCurve.RationalFunction.coordinate_weil_reciprocity"
+        ],
+        "sourceSha256": "3FE762C768E533C8587C8CF775E6BC6E3186128C1EAF3648297E8377A6AE9EF3"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilReciprocityDependencyAudit7Production7637.log",
+        "sha256": "1D586CD135B55166F3C9FDA41E78B838DAFE57B7FCF68D9019DC74B9F5BAB981",
+        "requiredProofValueEdges": 29,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_weil_reciprocity"
+        ],
+        "sourceSha256": "3C083E76ECC3A1AAD003AECED0A47F4AA244C9B837BD3221C59E6843A9431751"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilTorsionValuesDependencyAudit1Production7637.log",
+        "sha256": "DCCB1E2FDBC5D332E3F0C3EFE4B178142A9D2ADB5B9CFA8E7C0543F114A48646",
+        "requiredProofValueEdges": 7,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_pow_eq_one"
+        ],
+        "sourceSha256": "409830634982E690708AB0EBB5902914762678C0CFBA7C67EFB40D5C82F84E44"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRepresentativesDependencyAudit6Production7637.log",
+        "sha256": "F1D5B4E0A162932BE244D5098AE75E29CAF7F3874822FE613D44A18B193DC95E",
+        "requiredProofValueEdges": 15,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.exists_original_weil_representative"
+        ],
+        "sourceSha256": "BBC868E1D319D1897365F95F5FEB666B7398A821FFB8004EC556FBB4D6EBBDFB"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilProductionAudit7637.log",
+    "sha256": "E4EABABAB6D9F855A986325F2EAD0648BA2BDDC6F07DF2AE2A2E34A24B42FB7E",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-weil-reciprocity-production-build-7637.log",
+    "aggregateSha256": "279EBB031D8B3E53DA74A56A4545CA48BA9C4DD84A2774623AB9992AC62F8436",
+    "productionModules": 7637,
+    "incrementModules": 46,
+    "axiomChecks": 124,
+    "exhaustiveIncrementTheorems": 215,
+    "linterScopes": 46,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 219,
+    "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The actual original function fields, normalized place orders, residue evaluations, divisor maps and Picard quotient retain their definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 219,
+      "scratchDistinct": 217,
+      "generatedNameRenamings": {},
+      "productionFocused": 215,
+      "duplicateScratchNames": {
+        "Dubon2026.SourceFunctionField.originalDivisorEval.congr_simp": [
+          {
+            "scope": "SourceOriginalWeilScratchOwnership462For7637",
+            "module": "Dubon2026.SourceOriginalWeilDatum"
+          },
+          {
+            "scope": "SourceOriginalWeilScratchOwnership467For7637",
+            "module": "Dubon2026.SourceOriginalWeilReciprocity"
+          }
+        ],
+        "Dubon2026.SourceCurve.Place.rationalRegularEval.congr_simp": [
+          {
+            "scope": "SourceOriginalWeilScratchOwnership465For7637",
+            "module": "Dubon2026.SourceCurveEvaluationRestriction"
+          },
+          {
+            "scope": "SourceOriginalWeilScratchOwnership466For7637",
+            "module": "Dubon2026.SourceRationalPlaceEvaluation"
+          }
+        ]
+      },
+      "missingFromFocused": {
+        "Dubon2026.SourceFunctionField.originalPrincipalDivisor.congr_simp": [
+          {
+            "scope": "SourceOriginalWeilScratchOwnership467For7637",
+            "module": "Dubon2026.SourceOriginalConstantWeilReciprocity"
+          }
+        ],
+        "Dubon2026.SourceCurve.Place.restrict.congr_simp": [
+          {
+            "scope": "SourceOriginalWeilScratchOwnership465For7637",
+            "module": "Dubon2026.SourceCurveEvaluationRestriction"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [
+        "Dubon2026.SourceCurve.Place.restrict.congr_simp",
+        "Dubon2026.SourceFunctionField.originalPrincipalDivisor.congr_simp"
+      ],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceOriginalWeilEvaluation",
+            "SourceOriginalWeilEvaluationGalois",
+            "SourceOriginalWeilDatum"
+          ],
+          "count": 41,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership462For7637.log",
+            "sha256": "63624509DA4FBF01B94824A6ED42E6DC78B40CADE988659188321871130110F0",
+            "sourceSha256": "D7D0212AAE917CEE871F46A5013C4659AA01411332E656191F982AEF92CD62B8"
+          }
+        },
+        {
+          "modules": [
+            "SourceResidueAlgebraNorm",
+            "SourceResidueAlgebraNormPi",
+            "SourceRamifiedResidueNorm",
+            "SourceCurveResidueNormBaseChange",
+            "SourceCurveResidueNormFactors",
+            "SourceCurveRationalEvaluation",
+            "SourceCurveRationalNormEvaluation",
+            "SourceCurveNormFiberEvaluation",
+            "SourceCurveFiberRegularIntegrality",
+            "SourceCurveRationalFunctionEvaluation",
+            "SourceCurveFieldNormEvaluation",
+            "SourceOriginalNormEvaluation"
+          ],
+          "count": 36,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership463For7637.log",
+            "sha256": "3B79B8DA9270E4CD91AC6CA4BA6891E835B0D6B987316147B916562A7D50CB0C",
+            "sourceSha256": "326017443F23F0B010D7E6013C338BD90F64E16874251B41DAE696821227D7DD"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurvePullbackEvaluationProduct",
+            "SourceOriginalPullbackEvaluation"
+          ],
+          "count": 2,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership464For7637.log",
+            "sha256": "E2C000DCB2912CBEABE016BF3FB0C2A3C14FB901AB41B455B6D3256FDF9DB6B7",
+            "sourceSha256": "3FA732593E39B7A7F06510D741BA8C458F4D552312A3D7BB75B1659C3A0E6288"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveEvaluationRestriction",
+            "SourceOriginalEvaluationRestriction",
+            "SourceFiniteDivisorEvaluationPushforward",
+            "SourceOriginalPushforwardEvaluation"
+          ],
+          "count": 8,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership465For7637.log",
+            "sha256": "D6E916D660E2CA98C3BE7ECA2EBA642381B879E146574CC5D0FA3BD818A36047",
+            "sourceSha256": "C4D13FEA17449454B92EC7FE892FE1C3D7C6CC136F6101FE83097FD71553590C"
+          }
+        },
+        {
+          "modules": [
+            "SourceRationalInfinityPlace",
+            "SourceRationalPlaceClassification",
+            "SourceRationalPointPlaces",
+            "SourceRationalPointOrders",
+            "SourceRationalPlaceEvaluation",
+            "SourceCurveRationalResidueValues",
+            "SourceRationalInfinityEvaluation",
+            "SourceRationalRootDivisors",
+            "SourceRationalDivisorEvaluation",
+            "SourceRationalCoordinateReciprocity",
+            "SourceRationalCoordinateWeilReciprocity"
+          ],
+          "count": 81,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership466For7637.log",
+            "sha256": "7EAD1497A951AE35C53D9F82DC7BDB13932D92E9E14A9EFC8A67E1CE2145EE87",
+            "sourceSha256": "4F5B2A4708CAE8D9351150FC5389F5BE25C30D0B391C7342C838E6D99912826C"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalRationalCoordinate",
+            "SourceOriginalRationalNormEvaluation",
+            "SourceOriginalRationalDivisorEvaluation",
+            "SourceOriginalRationalPrincipalDivisors",
+            "SourceOriginalCoordinateWeilReciprocity",
+            "SourceOriginalConstantWeilReciprocity",
+            "SourceOriginalWeilReciprocity"
+          ],
+          "count": 20,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership467For7637.log",
+            "sha256": "C13DE1CFE0F908C69BB06F56190932204388C01278EEA249FF1796CBDEF428B2",
+            "sourceSha256": "BF284391AF927E209E893C17CBE6977779BFC0D9E52105EF9E018E9471463116"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalWeilTorsionValues"
+          ],
+          "count": 4,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership468For7637.log",
+            "sha256": "99AA70061402071412968670769A55CD084C71FC0644BA04A034A19B48953259",
+            "sourceSha256": "DDB33043EA1D7C966B0907F96248D09E346A87CC6294D453E2DA8E5134F40826"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalClosedPlaceSeparation",
+            "SourceOriginalClosedFiniteSeparation",
+            "SourceOriginalClosedPrescribedOrders",
+            "SourceOriginalClosedPicardMoving",
+            "SourceOriginalWeilClasses",
+            "SourceOriginalWeilRepresentatives"
+          ],
+          "count": 27,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership469For7637.log",
+            "sha256": "31CD1A2C4218804823C9807C5BC77974CAF18C428143F1DFEABF237684986081",
+            "sourceSha256": "7FED84BAEFD6362DB607F7CAB9D3A1A437D08914548A92BB10AB75B398AC40F0"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilOwnership7637.log",
+        "sha256": "5CFE5E75A9F7B138BD81BCD8EA230E24FFDD6D131E94E15F28CD69F027A2429C",
+        "sourceSha256": "96CFB4E6E8E16F93EE465A385A58FE0225624BA1FFC8E75DC1E18DB71E5F31E5"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-142442-365.log",
+        "sha256": "A34A9F97CAAC3A7C5D5782FB8B32FA3857358A3B288C13352482CD7D745F5079"
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 217 distinct names from 219 exhaustive scratch checks are retained: 215 in the production focused scope and 2 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Pairing representative independence and descent, nondegeneracy, Hecke adjointness, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes."
+  },
+  "receipt7637": {
+    "recordedUTC": "2026-10-25T00:23:14.299881+00:00",
+    "log": "logs/dubon-build-20261024-160017-952.log",
+    "sha256": "3DCC04011F0CF1745D31C916DA7F4C29AC9E051B0704D74A91C20E430EA37B47",
+    "bytes": 12705445,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 7637,
+    "projectTheorems": 49919,
+    "registeredConsumers": 22677,
+    "registeredConstructions": 2018,
+    "declarations": 30574,
+    "generated": 29384,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261024_155410.log",
+    "foundationSha256": "BF61F776375743625324D056137EE9848CFDD75388EA43018026D00F0593A9D4",
+    "countReconciliation": {
+      "previousTheorems": 49704,
+      "focusedTheorems": 215,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 215,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilOwnership7637.log",
+      "ownershipSha256": "5CFE5E75A9F7B138BD81BCD8EA230E24FFDD6D131E94E15F28CD69F027A2429C"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 219,
+      "scratchDistinct": 217,
+      "generatedNameRenamings": {},
+      "productionFocused": 215,
+      "duplicateScratchNames": {
+        "Dubon2026.SourceFunctionField.originalDivisorEval.congr_simp": [
+          {
+            "scope": "SourceOriginalWeilScratchOwnership462For7637",
+            "module": "Dubon2026.SourceOriginalWeilDatum"
+          },
+          {
+            "scope": "SourceOriginalWeilScratchOwnership467For7637",
+            "module": "Dubon2026.SourceOriginalWeilReciprocity"
+          }
+        ],
+        "Dubon2026.SourceCurve.Place.rationalRegularEval.congr_simp": [
+          {
+            "scope": "SourceOriginalWeilScratchOwnership465For7637",
+            "module": "Dubon2026.SourceCurveEvaluationRestriction"
+          },
+          {
+            "scope": "SourceOriginalWeilScratchOwnership466For7637",
+            "module": "Dubon2026.SourceRationalPlaceEvaluation"
+          }
+        ]
+      },
+      "missingFromFocused": {
+        "Dubon2026.SourceFunctionField.originalPrincipalDivisor.congr_simp": [
+          {
+            "scope": "SourceOriginalWeilScratchOwnership467For7637",
+            "module": "Dubon2026.SourceOriginalConstantWeilReciprocity"
+          }
+        ],
+        "Dubon2026.SourceCurve.Place.restrict.congr_simp": [
+          {
+            "scope": "SourceOriginalWeilScratchOwnership465For7637",
+            "module": "Dubon2026.SourceCurveEvaluationRestriction"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [
+        "Dubon2026.SourceCurve.Place.restrict.congr_simp",
+        "Dubon2026.SourceFunctionField.originalPrincipalDivisor.congr_simp"
+      ],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceOriginalWeilEvaluation",
+            "SourceOriginalWeilEvaluationGalois",
+            "SourceOriginalWeilDatum"
+          ],
+          "count": 41,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership462For7637.log",
+            "sha256": "63624509DA4FBF01B94824A6ED42E6DC78B40CADE988659188321871130110F0",
+            "sourceSha256": "D7D0212AAE917CEE871F46A5013C4659AA01411332E656191F982AEF92CD62B8"
+          }
+        },
+        {
+          "modules": [
+            "SourceResidueAlgebraNorm",
+            "SourceResidueAlgebraNormPi",
+            "SourceRamifiedResidueNorm",
+            "SourceCurveResidueNormBaseChange",
+            "SourceCurveResidueNormFactors",
+            "SourceCurveRationalEvaluation",
+            "SourceCurveRationalNormEvaluation",
+            "SourceCurveNormFiberEvaluation",
+            "SourceCurveFiberRegularIntegrality",
+            "SourceCurveRationalFunctionEvaluation",
+            "SourceCurveFieldNormEvaluation",
+            "SourceOriginalNormEvaluation"
+          ],
+          "count": 36,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership463For7637.log",
+            "sha256": "3B79B8DA9270E4CD91AC6CA4BA6891E835B0D6B987316147B916562A7D50CB0C",
+            "sourceSha256": "326017443F23F0B010D7E6013C338BD90F64E16874251B41DAE696821227D7DD"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurvePullbackEvaluationProduct",
+            "SourceOriginalPullbackEvaluation"
+          ],
+          "count": 2,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership464For7637.log",
+            "sha256": "E2C000DCB2912CBEABE016BF3FB0C2A3C14FB901AB41B455B6D3256FDF9DB6B7",
+            "sourceSha256": "3FA732593E39B7A7F06510D741BA8C458F4D552312A3D7BB75B1659C3A0E6288"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveEvaluationRestriction",
+            "SourceOriginalEvaluationRestriction",
+            "SourceFiniteDivisorEvaluationPushforward",
+            "SourceOriginalPushforwardEvaluation"
+          ],
+          "count": 8,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership465For7637.log",
+            "sha256": "D6E916D660E2CA98C3BE7ECA2EBA642381B879E146574CC5D0FA3BD818A36047",
+            "sourceSha256": "C4D13FEA17449454B92EC7FE892FE1C3D7C6CC136F6101FE83097FD71553590C"
+          }
+        },
+        {
+          "modules": [
+            "SourceRationalInfinityPlace",
+            "SourceRationalPlaceClassification",
+            "SourceRationalPointPlaces",
+            "SourceRationalPointOrders",
+            "SourceRationalPlaceEvaluation",
+            "SourceCurveRationalResidueValues",
+            "SourceRationalInfinityEvaluation",
+            "SourceRationalRootDivisors",
+            "SourceRationalDivisorEvaluation",
+            "SourceRationalCoordinateReciprocity",
+            "SourceRationalCoordinateWeilReciprocity"
+          ],
+          "count": 81,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership466For7637.log",
+            "sha256": "7EAD1497A951AE35C53D9F82DC7BDB13932D92E9E14A9EFC8A67E1CE2145EE87",
+            "sourceSha256": "4F5B2A4708CAE8D9351150FC5389F5BE25C30D0B391C7342C838E6D99912826C"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalRationalCoordinate",
+            "SourceOriginalRationalNormEvaluation",
+            "SourceOriginalRationalDivisorEvaluation",
+            "SourceOriginalRationalPrincipalDivisors",
+            "SourceOriginalCoordinateWeilReciprocity",
+            "SourceOriginalConstantWeilReciprocity",
+            "SourceOriginalWeilReciprocity"
+          ],
+          "count": 20,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership467For7637.log",
+            "sha256": "C13DE1CFE0F908C69BB06F56190932204388C01278EEA249FF1796CBDEF428B2",
+            "sourceSha256": "BF284391AF927E209E893C17CBE6977779BFC0D9E52105EF9E018E9471463116"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalWeilTorsionValues"
+          ],
+          "count": 4,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership468For7637.log",
+            "sha256": "99AA70061402071412968670769A55CD084C71FC0644BA04A034A19B48953259",
+            "sourceSha256": "DDB33043EA1D7C966B0907F96248D09E346A87CC6294D453E2DA8E5134F40826"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalClosedPlaceSeparation",
+            "SourceOriginalClosedFiniteSeparation",
+            "SourceOriginalClosedPrescribedOrders",
+            "SourceOriginalClosedPicardMoving",
+            "SourceOriginalWeilClasses",
+            "SourceOriginalWeilRepresentatives"
+          ],
+          "count": 27,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership469For7637.log",
+            "sha256": "31CD1A2C4218804823C9807C5BC77974CAF18C428143F1DFEABF237684986081",
+            "sourceSha256": "7FED84BAEFD6362DB607F7CAB9D3A1A437D08914548A92BB10AB75B398AC40F0"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilOwnership7637.log",
+        "sha256": "5CFE5E75A9F7B138BD81BCD8EA230E24FFDD6D131E94E15F28CD69F027A2429C",
+        "sourceSha256": "96CFB4E6E8E16F93EE465A385A58FE0225624BA1FFC8E75DC1E18DB71E5F31E5"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-142442-365.log",
+        "sha256": "A34A9F97CAAC3A7C5D5782FB8B32FA3857358A3B288C13352482CD7D745F5079"
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 217 distinct names from 219 exhaustive scratch checks are retained: 215 in the production focused scope and 2 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Pairing representative independence and descent, nondegeneracy, Hecke adjointness, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes."
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original primitive-form residual association -> Frobenius quadratic and trace identity -> original arithmetic Frobenius commutes with reduction -> residue coefficient Frobenius action on the literal modular field and the same two charts",
+  "precedingScratchReceipts": {
+    "source-original-primitive-unramified-2-scratch-receipt.json": "0FA1E4B07D008BDE61E797E50F790B00C0E7748C8ED40D82FD153B429354E2CD"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceResidueIntegralSpecialization.lean",
+      "sha256": "7A5DD50EACB9CF0BA5A6086D5F4BF198A1A596DA5038E7D7DEBA7C26C13F7B4F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularGaussResidueHom.lean",
+      "sha256": "6CDAC407711B121CABF174930E57CF31917999D2D27C51C0F286461CDF2833FE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaGaussAction.lean",
+      "sha256": "06C2925649E295356F1275B0A09B4B9862331B3DFAA9C589451533E8E3EBF967"
+    }
+  ],
+  "routeAdjustment": "Restrict the literal coefficient automorphism to the existing divisor-generated field, then apply it to the residue Frobenius. Derive the function and place compatibility needed for the same modular reduction.",
+  "discharged": "The actual original decomposition action preserves the Gauss ring and commutes with its actual modular residue homomorphism through the native residue coefficient automorphism. Under the exact source prime-power residue condition this is arithmetic Frobenius. Its literal coefficient formula, fixed j coordinate and action by prime powers on constants are derived. Fraction denominators remain nonzero by the native residue automorphism; the existing witness-independence theorem gives the actual residue equality.",
+  "remaining": "Original-place and Picard Frobenius comparison, geometric Frobenius and Hecke compatibility, the quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\residue-coefficient-frobenius-route-436.json",
+    "sha256": "B1EA102645F2906475F7C5531B23077A804F6A86458B5373CF2D5B1127430948",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original primitive-form residual association -> Frobenius quadratic and trace identity -> original arithmetic Frobenius commutes with reduction -> residue coefficient Frobenius action on the literal modular field and the same two charts",
+      "reuseChecked": [
+        "SourceResidueIntegralSpecialization.coefficientMap_j_expansion fixes each literal divisor generator under any coefficient homomorphism. Native IntermediateField.adjoin_induction adds rational functions.",
+        "The original characteristic-zero arithmetic action is already proved but requires a rational algebra structure; it cannot be instantiated on the residue field. A restriction of the actual residue coefficient automorphism is the necessary missing object.",
+        "Scopes 429--432 prove the exact Gauss residue and two-chart method for inertia. Extending the residue identity from the identity automorphism to the actual coefficient Frobenius retains that route and avoids the frozen source global divisor-rigidity argument at this stage."
+      ],
+      "selectedRoute": "Restrict the literal coefficient automorphism to the existing divisor-generated field, then apply it to the residue Frobenius. Derive the function and place compatibility needed for the same modular reduction.",
+      "assumptionsToDischarge": "The residue arithmetic Frobenius acts on the same modular field, fixes the j chart coordinate and agrees with the original coefficient action after reduction.",
+      "boundary": "Geometric Frobenius and Hecke comparison, the Frobenius quadratic relation and trace/determinant consequences, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

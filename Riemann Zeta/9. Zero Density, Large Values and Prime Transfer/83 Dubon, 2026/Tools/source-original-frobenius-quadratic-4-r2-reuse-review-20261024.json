@@ -1,0 +1,318 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "genuine non-CM modular-form concentration -> actual residual modular Galois association -> original primitive weight-two Frobenius characteristic polynomial -> Frobenius quadratic identity and separate determinant -> original rational Tate identity -> finite Picard torsion comparison under the actual constructed reduction",
+  "precedingScratchReceipts": {
+    "source-arithmetic-frobenius-residue-3-scratch-receipt.json": "B66A91FB92908FBD83FA671E57AEEA31A1D0E7402D37218A8648B9D440F54017",
+    "source-frobenius-place-reduction-3-scratch-receipt.json": "DF5D96CD77601EE967330A7B51FBF86EA5F5928EAB89E9960408DD65C9ED1573",
+    "source-frobenius-picard-reduction-5-scratch-receipt.json": "102E5F244AC1122EC7132953FD7C6F9917B6CE92175F100E33319D134A452AAF",
+    "source-geometric-frobenius-3-scratch-receipt.json": "B099FD3CE9765D387CBC7257D7B193814B5934F637282211C2615FD638459A28",
+    "source-geometric-picard-reduction-3-scratch-receipt.json": "47EFBD64F1102B29AB902B548A4F6E9541B06649AD0CE44BF1A44535742BB1D1",
+    "source-hecke-laurent-reduction-3-scratch-receipt.json": "0AAFAE07BD4AC3F47B2758BF1780C9C144F0D16FFC7C772C2897D2C6B621203E",
+    "source-atkin-embedding-2-scratch-receipt.json": "A65A05AD5E975DB8F05A894572BD48EA17DD6E211AFF6FE324D374710C6FED4A",
+    "source-atkin-involution-3-scratch-receipt.json": "AEA0BAAC1C90D5DD9268C381C20FA55AF52E3884A42C94977E4BB7DD78D54B4C",
+    "source-atkin-coefficient-3-r2-scratch-receipt.json": "3853627F21D96FE82FBD56EBC2BCEC83001AD5498C1ABDF6B4CD9C6028AA199B",
+    "source-hecke-norm-product-4-scratch-receipt.json": "61689CFC1B14EE5421F1384E9988080754477113BE844498D10C0EF53CCDB7D7",
+    "source-original-hecke-norm-reduction-1-scratch-receipt.json": "D792B65EC4F99F2FF082523B5EE1D696DCC31FDDF10E7CDBBC3ECEB2840BC804",
+    "source-original-torsion-agreement-2-scratch-receipt.json": "04954F4C9C3C1BAC3B12EBD1828B35A9A16ADA1612E4388237A52A9B9320C7EB",
+    "source-residue-frobenius-operator-1-scratch-receipt.json": "3C2A8680087929C14AEB2FD5D9907BBDEE06FCC6274085BB22AF8FD24FD1084A",
+    "source-original-hecke-principal-norm-2-scratch-receipt.json": "DA5B78D5745FB03708F28B72EE40A1912EF1DF83DC765C67DA33933913B87506",
+    "source-original-hecke-integral-agreement-2-r2-scratch-receipt.json": "67B71B7B70970C10C83B9EB0386A2774650A7E39816DC8369BE469B9A6B0CF6B",
+    "source-residue-frobenius-picard-operator-1-scratch-receipt.json": "7A1DC5BA3D9B65698FEDABC50C5AC5FA626D3A19700EB85D033738F81A28FA3B",
+    "source-original-specialization-quadratic-2-scratch-receipt.json": "1D69210B05A0CEF5AC383D9EF90C7895D03E9AFD9F9B0F2A698C2E7928A52CF9"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalSpecializationInertia.lean",
+      "sha256": "BEE6EBC796BCFB5121F4A631DBEA6625CE0E26CBD2D4FC7019B5876EF93B8A04"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRationalTateGalois.lean",
+      "sha256": "EEE871FD2722A8CFA4D07A5E77913200A1E7DB463A7B732B924974FA0DCCBBA0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveUnramifiedRealization.lean",
+      "sha256": "E786280C0FA8F8CAAF4711D143D9E181DFF41BBFFEF578F76C24D76966F3631A"
+    }
+  ],
+  "routeAdjustment": "Use only the finite torsion layers required by actual Tate coordinates. The main Picard consumer constructs the same reduction and supplies its compatibilities. Isolate the scalar-extension ring-homomorphism calculation to avoid elaborating the large original Tate type during rewriting; instantiate it immediately. Transfer the identity to the existing realization through its proved spanning specialization.",
+  "discharged": "The actual original Hecke correspondence and arithmetic Frobenius satisfy the quadratic identity on every residue-invertible Picard torsion subgroup, on actual integral and rational Tate space, and on the same constructed continuous unramified rank-two primitive weight-two realization. The reduction, Hecke agreement, torsion injectivity and specialization assumptions are supplied by proved constructions. Determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "remaining": "The quadratic identity alone does not prove determinant or trace. No characteristic polynomial, residual association, automorphy or additional acceptance gate is claimed. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-frobenius-quadratic-route-460.json",
+    "sha256": "BFB1AD6AA5E971D3F1D3625F63D7239D947D6F7938901085B329C98B8660AF92",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "genuine non-CM modular-form concentration -> actual residual modular Galois association -> original primitive weight-two Frobenius characteristic polynomial -> Frobenius quadratic identity and separate determinant -> original rational Tate identity -> finite Picard torsion comparison under the actual constructed reduction",
+      "reuseChecked": [
+        "Actual modular reduction preserves genus and is injective on residue-invertible torsion",
+        "Actual Hecke norm residue and native principal divisor identities discharge integral-principal comparison",
+        "Primitive fraction normalization and torsion-free integer divisors extend comparison to finite Picard torsion",
+        "Existing original Tate coordinate maps, endomorphism base change, spanning specialization and continuous unramified primitive realization"
+      ],
+      "selectedRoute": "Use only the finite torsion layers required by actual Tate coordinates. The main Picard consumer constructs the same reduction and supplies its compatibilities. Isolate the scalar-extension ring-homomorphism calculation to avoid elaborating the large original Tate type during rewriting; instantiate it immediately. Transfer the identity to the existing realization through its proved spanning specialization.",
+      "assumptionsDischarged": "The actual original Hecke correspondence and arithmetic Frobenius satisfy the quadratic identity on every residue-invertible Picard torsion subgroup, on actual integral and rational Tate space, and on the same constructed continuous unramified rank-two primitive weight-two realization. The reduction, Hecke agreement, torsion injectivity and specialization assumptions are supplied by proved constructions. Determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "boundary": "The quadratic identity alone does not prove determinant or trace. No characteristic polynomial, residual association, automorphy or additional acceptance gate is claimed. DUB-17--20 OPEN; 16/20.",
+      "staging": "Canonical 7544 verification remains independent. The already audited 41-module increment is imported from its isolated production-qualified stage; promotion must verify exact scratch-to-production ownership."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "isolatedStagedDependencies": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceResidueCoefficientAutomorphism.lean",
+      "sha256": "CF6CA5E4465B8643B0BF489FEBAE187011C2FE99C9A48336B000C2D916A765D2",
+      "oleanSha256": "985474E9DCC48334CE5F3DD604B267E18C05CFF49036699BE0DDFDEC13589CD1",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceDecompositionGaussAction.lean",
+      "sha256": "ACA2D2C97948CB7CEC9B690B996C5FAD09611FE6D8DBE4DF2B2CAE0AFDD09D8D",
+      "oleanSha256": "F07009FCF50FDC629550A80315AFFA05F9C65824587D0FCA4B4FCB129EB2D906",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceArithmeticFrobeniusResidue.lean",
+      "sha256": "A49DFDE8EA4FB7B5E950C53CD590B5FB29558255BDC213336D710106421A15A2",
+      "oleanSha256": "A917455B5C27D47EBFC101B86B42A4D126CE10768EF836A7BA9780D95F090990",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceResidueCoefficientPlaces.lean",
+      "sha256": "F30C9235D1080EBF4B5929E9598A2D54535F4A938F7D40EDFFDB3FEC63D8B8E8",
+      "oleanSha256": "1E1978E6D6601C48D556BC9644908BF23B70AEBBFC8356381674F78DB2CCE96B",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceDecompositionChartTransport.lean",
+      "sha256": "C63CDD2CDA4B760B40E26BA90F3E732656B28539A3FE9AB3D7A0439C06DC70CE",
+      "oleanSha256": "0307A3417FE2282FE7A335C1E893A1F5D7ECD3AC5BF7EB980BA908AD2E77E409",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceModularDecompositionPlaceReduction.lean",
+      "sha256": "B436356159658E1E448C9446DBA46E78B7B945223F4C585436ECA01BE7D46FF0",
+      "oleanSha256": "EA75C90D7A0AD3266EFAFB581FE3AE1290CFAE48D7F3B933D416A8440C3A8554",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceResidueCoefficientPlaceOrders.lean",
+      "sha256": "6E155094C0B34B02D6A11310BE8724A3800CB4ECC2207FEFAF446BA72206FB10",
+      "oleanSha256": "E8FA43139D8349E608627444357BD7788D3B120FBA0643D3366E2D42B25DD46C",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceResidueCoefficientDivisors.lean",
+      "sha256": "09D33D164511C3A9DE85E478F9DF9D3A8E387CE2088966925EF6DE78F40EDA69",
+      "oleanSha256": "DDFA38A49CA96497FC1A7BEE3EE4D77396720549CB36E5D152C61304839C67EF",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceResidueCoefficientPicard.lean",
+      "sha256": "21FB29B3096903C1C033A589649F89EFF5C3696AA6F31EB22FB07E51A2EEB38C",
+      "oleanSha256": "C42F72F47BEF6E2FE1246A42905C3575094855535BF9BEA98738BAE6822A8FCD",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalDecompositionDivisorReduction.lean",
+      "sha256": "CD2A316F4B4433D1B18A2B2F149A2F48AA2344FB3F21D26B94C0633D9240671A",
+      "oleanSha256": "E5BB330F49505862F70057FF85F4961C6E7D1C65E6070FCFF5079207254B1902",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalFrobeniusPicardReduction.lean",
+      "sha256": "08E2BFC38BE3A8935B55DB2D6B34186AD1E4F8DA5B6EFA655B78F93C87937489",
+      "oleanSha256": "53BCB357974E2B440B759B440A68949C1E37D33895D27D42EC55F9476906E056",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceLaurentFrobenius.lean",
+      "sha256": "BF17EF6BBB546B763DF392A2F04B8C6C4D234D243A1EE799D97B2FF800217F25",
+      "oleanSha256": "F70BADB044CBE3CEFA2C044441C907364DFC5A10F2E9713ECBF0AAB616917A5D",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceResidueGeometricFrobenius.lean",
+      "sha256": "C339D2DEB8AD5A2308D10E8DB949DF80B9E2CFE1253DEB127D02C22B839D6472",
+      "oleanSha256": "23B799F2D8B34C54559D42101B7808949C08401691784BAD06889077290C4927",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceResidueGeometricFrobeniusPlaces.lean",
+      "sha256": "C9EF841C320994845CE661F7F4690E9894EB479C18898F76AF6D4399C02F4540",
+      "oleanSha256": "316241F1E7E55B510475CAB7E498C6E0E07FE0A9D5A533AF61D53D1659EC4354",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceResidueGeometricFrobeniusDivisors.lean",
+      "sha256": "E095069775BF5118A54FCFC68AD34306A261A7A3390EBFCDAE2E8A68E2B82BE4",
+      "oleanSha256": "70819336D977122661D2793EB246C6B7595DAF52479DBE165A31EF0E5A14958F",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceResidueGeometricFrobeniusPicard.lean",
+      "sha256": "2E2584BEAAC60EE33653546E9D3D00129181029F5BF6B51C4F1E2C68572B1185",
+      "oleanSha256": "EC048780C3A73AABC95B811A5A00673A1DE308AEEF9585A67AD66A582F6B2FCE",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalGeometricFrobeniusReduction.lean",
+      "sha256": "9021409E41EC257FE3EDF97FD82645EE1949D7EFB0FBA1539E7358E58DEDC9C3",
+      "oleanSha256": "9D279EF37E829EBBD7927B9B04888962F35FCED62D018E94B431DF47A60FDB56",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceHeckePrimeRootReduction.lean",
+      "sha256": "86112EA6C6EA5A112C7001D2B03D9E31AAC158CA10E83F0B36A30574B3D68E58",
+      "oleanSha256": "4988B4AAE4867E9B89AC9E28AFAE1D45314A48E336208A396B2C27735C93A4BA",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceHeckeLaurentProductReduction.lean",
+      "sha256": "E62A2F566AEAE2401E0D7EC746ED1C8278E6312B022D8D7EDC0223BA03EBD534",
+      "oleanSha256": "0B0DFC5BFD3DA0D12F08DC217ACADB2EF8F96CA5EB1A99D05B1CF3F8602B6B82",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceHeckeLaurentNormExtraction.lean",
+      "sha256": "E02BC3F001113716FB476E399329C50B96401E4CCCC345BFA7806A6C1C27D6CE",
+      "oleanSha256": "97946D38C109A661794A9D8766A3AF1EED5CDF74BD8B7890BDA4FACB2300E108",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalAtkinPrimePolynomial.lean",
+      "sha256": "B416C2804525F233B11F7F7F8849C3FDED47E2138DA629A8CFC77467080084B4",
+      "oleanSha256": "6FD225E8AC3EAD296E8D5CC6A060F8558A953DA60C9753E68729323BD4ADFFBB",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalAtkinEmbedding.lean",
+      "sha256": "D31328D39C3AA842E22C6EB18ACE83956AA07842936757132D0398B521BF416F",
+      "oleanSha256": "C21292CE6657A914C4390BD3848007813E0E2535DCC3B43CEA094C61D54E53F9",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalAdjacentRootUniqueness.lean",
+      "sha256": "D90A04610A7486CD1B33612941771F294F15E5B50FD960657F6B0708560AE9BA",
+      "oleanSha256": "7A987AB7B000FF96B88E1524351A95E4F3CFC64066754C3DA38C43BE20B2CE20",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalAtkinGeneratorImages.lean",
+      "sha256": "35024387AC85EAA733421EE83FE037798B4DC717746B2A14E38591C23A823ADE",
+      "oleanSha256": "602BB8F0CBF97EDEEAA82758FA02028F99D87DB76ECF9EB959FBEAB96046B512",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalAtkinInvolution.lean",
+      "sha256": "A16B19DCF466FED1B297835B6CE93C52D41EDA3466202396728D0EA8E37C9500",
+      "oleanSha256": "E7B839387C78F029124D6586FFAD7FB3086A0451CB5ADF39D600B7DAE126D94C",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalTensorCoefficientMapR2.lean",
+      "sha256": "8C72C19B97D9687D11320B0042692B890E65B16E3AC09BD0B39D254C0A97CDB2",
+      "oleanSha256": "764858AF4EDCC54CBCBD7416693D4B7CAF464E0176F53B89F6344B0F76777E4C",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalTensorCoefficientEquivR2.lean",
+      "sha256": "9422BC370A75D91617395D2A64642EFC0E9C5D2B0B242A25CFBAAE526C2506E4",
+      "oleanSha256": "443D1A50F40F110FA9EC2E2B888825133D1067A9AA4838A69A2480F3EF759116",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalAtkinCoefficientExtensionR2.lean",
+      "sha256": "EAD4F897C7E28D960ED31D5F20A76DC536087479043221A90026D4CF4F4D99D2",
+      "oleanSha256": "D5289AB83CD59B1F2FD25234D48B60D32F60989EF3C7E636AFFE7DEE346676B6",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalHeckePrimeDegree.lean",
+      "sha256": "7643829E7C0118FB698C09416F5F96B66BEE0D836CAA59E2DBCE8D6D37DBC479",
+      "oleanSha256": "B2AB47CF36BB20F52A8955557F8247129B38F309B2FB4F6F80C9B81E4DE75A62",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalHeckeNormEmbeddings.lean",
+      "sha256": "D47A21A1D428DEA12283AD597AC3E7A9DD88739ABF6F3E00310160350E536D61",
+      "oleanSha256": "37B2FD61F3690B0754B883E586CCD405E39FD29116C7903DCCC67D95708DBDCE",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalHeckeEmbeddingCensus.lean",
+      "sha256": "F38948E97A6EFF67B1BEEC20785D52ADE73669D779B09AFFD237DE7FA908F311",
+      "oleanSha256": "68EA3DFF175FC5942AC68C2DAB96FEF031FF47B24BD9C3975FC93893C9246F60",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalHeckeNormProduct.lean",
+      "sha256": "7E6A45D463AA8A6B68D31B2257D2B5EEA5CA696A24E71647442A2AA460842CF5",
+      "oleanSha256": "06839A413CA47F83062610909F6D592F9DF23A433730B6D84D1E0D45AC96E678",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalHeckeNormReduction.lean",
+      "sha256": "938DB4594404EBBD1AFFECC3678DEAB0F93A17ED9CBB9B2E27030CA3EFC5755C",
+      "oleanSha256": "62271D851FC83EB87F5892B2E93695597EC0AEF9843E37385F3CB3537AAC7B1A",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalIntegralPrincipalDifference.lean",
+      "sha256": "0E27234550B253CE5933E086F27E74774EDC834FB29FFC437590CEBBA99823EB",
+      "oleanSha256": "03BFB0386DB709148921329BDA4E02CD30088DCA4A09D0578141BFF964B4E087",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalTorsionDivisorAgreement.lean",
+      "sha256": "5FCC796A0A28C6EB2C8ADC40FCB169F129AB13483CFA0308146E914B0561DC31",
+      "oleanSha256": "D668A4EA1CBD313B297E7D9E5224B8D0F8E1B03439C018767982B9C3931329B6",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceResidueFrobeniusDivisorOperator.lean",
+      "sha256": "79D2E8B17D00937ECBB2DC1BC525B9CB81E98539D9A6734E7A87848BFC720BD8",
+      "oleanSha256": "A4FBF860095DC8899D3C76CB05D448782CA6AD8C4839A4990DC253CC7BDF2E38",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceCurveCorrespondencePrincipalOrder.lean",
+      "sha256": "C56726DEB4538FD30891131F99C4BA2E26F7034E8EE930B647B9D49B1699DC15",
+      "oleanSha256": "D3ABF310FB86E7A9DE45CCB2C4A8CF149CDFEF1B41E2E7A151CDED3782A67767",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalHeckePrincipalNorm.lean",
+      "sha256": "A281E311709C679CF18C1163285D902AA1C7771A3AF9280443D476E20C575317",
+      "oleanSha256": "5DBCA777E229457E3F9C79E91F3CCDED770BDE06841B14AE5072C1026ADAE709",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalIntegralDivisorReduction.lean",
+      "sha256": "6DF8BA90DC0AF3814B3B50C0251CC89C98A13BBE59831D0D4F392476E81E1538",
+      "oleanSha256": "3821E09A7EF41292A3FD6B7BD982ECBF98ADBFC068DAE387DEA01B42CB381E65",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceOriginalHeckeIntegralAgreement.lean",
+      "sha256": "EF8DE380ADD791414F1FE8E7B409E1F97FDF03AFD8262DE22BA2DE972A62E591",
+      "oleanSha256": "5A7932A655FCE14827A58A8135F2FF240DC3F320FCB597C4829143DF248B3123",
+      "mathematicalBodyUnchanged": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\Dubon2026\\SourceResidueFrobeniusPicardOperator.lean",
+      "sha256": "EC6CDC5E4A12898D8067718F17A4950C85C6AAEE08CEC9934BEE4D3DBBD8259D",
+      "oleanSha256": "6566F43E651C04DFB96B13F1E85E82583738D9383F2ABC9516B481DB6D499BEB",
+      "mathematicalBodyUnchanged": true
+    }
+  ],
+  "stagedManifest": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\staged-hecke-frobenius-7585-r3\\manifest.json",
+    "sha256": "8DB5457999DE99ECA27FF0ECD48F8AA3DFFCC9F1E88D78A90AF3D1E39C10E3FF"
+  }
+}

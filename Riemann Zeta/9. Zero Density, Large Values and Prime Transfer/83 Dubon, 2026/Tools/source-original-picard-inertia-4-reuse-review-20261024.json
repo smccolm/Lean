@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original residual association -> original Tate inertia -> original Picard torsion inertia -> actual reduction injectivity and original-place inertia invariance -> identify original and coefficient Picard classes through the literal field equality",
+  "precedingScratchReceipts": {
+    "source-original-inertia-place-reduction-3-scratch-receipt.json": "29857D7A72AC5BC33D22E76E0B5E1AD7DC2E689BE5ACF6E392ED63F44C66EEC0"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePrincipalDivisorTransport.lean",
+      "sha256": "D0954572CF81E8772AC3777EF44D7909333F8E0C781F66CE6CDB11E15AB84576"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalArithmeticPicard.lean",
+      "sha256": "4F41EFC799472312C08F6D9A33E58A55AC68FAC2CD3ED3EE95EBD0DDB313972E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveReductionPicardR2.lean",
+      "sha256": "5DF3B8782E80AC86F8EFA13BBCA1B3BEDDEF1499E8355B3D5FE6A569AC46E44C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaPlaceReduction.lean",
+      "sha256": "CC8AB26FAD5D20FFF60BBC8D531179D8A513F114AECE0E21F047B196094A3ECA"
+    }
+  ],
+  "routeAdjustment": "Transport actual divisors, restrict the additive equivalence to degree zero, and use the native quotient equivalence after proving principal-divisor preservation in both directions. Then descend original-place inertia invariance and use the proved injectivity on torsion.",
+  "discharged": "Native arithmetic inertia acts trivially on every residue-invertible torsion subgroup of the actual original modular Picard group when the level is invertible, in every prime residue characteristic. The identity on the literal Laurent-series fields induces an actual Picard equivalence. Original-place invariance descends through finite divisors and the quotient; actual reduction injectivity proves the action is the identity. No genus, place/Picard equivariance or injectivity certificate is assumed.",
+  "remaining": "Original Tate inertia, the Frobenius relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-coefficient-picard-route-433.json",
+    "sha256": "C7F905E3CBCCF47B5403CC890F05C2C7EC21FC2DCE0AB342571D00F6DDD11749",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original residual association -> original Tate inertia -> original Picard torsion inertia -> actual reduction injectivity and original-place inertia invariance -> identify original and coefficient Picard classes through the literal field equality",
+      "reuseChecked": [
+        "SourceOriginalCoefficientPlaceAction identifies actual places through the identity on Laurent series. SourceCurvePrincipalDivisorTransport already proves order and degree transport. Original and coefficient place residues are proved to equal their constants.",
+        "SourceCurvePicardPullback is for finite extensions and would introduce a scalar tower and ramification route for two equal fields. A direct native Finsupp.domCongr and QuotientAddGroup.congr construction uses exactly the existing degree and principal-divisor proofs.",
+        "SourceOriginalArithmeticPicard_mk and ConstantReduction.pic0Map_mk expose the exact quotient action and specialization. No Picard divisibility or new abelian-variety formalism is needed."
+      ],
+      "selectedRoute": "Transport actual divisors, restrict the additive equivalence to degree zero, and use the native quotient equivalence after proving principal-divisor preservation in both directions. Then descend original-place inertia invariance and use the proved injectivity on torsion.",
+      "assumptionsToDischarge": "The original Picard action and actual specialization use the same divisor classes; their comparison is proved, not supplied as equivariance data.",
+      "boundary": "Original Tate inertia, the Frobenius relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

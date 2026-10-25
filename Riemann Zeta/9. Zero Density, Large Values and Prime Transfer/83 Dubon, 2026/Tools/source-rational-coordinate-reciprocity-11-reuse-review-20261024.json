@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "modular-form concentration -> actual residual Galois association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Weil pairing -> original reciprocity -> norm transfer using the second nonconstant function as rational coordinate -> reciprocity with X",
+  "precedingScratchReceipts": {
+    "source-original-pushforward-evaluation-4-scratch-receipt.json": "3D86F96F6EBD5DE64B59958578AD49F405DFC0180F76035AA8C26FB7E9D0F399"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePrimePlaces.lean",
+      "sha256": "98648C9DC97C53AF09099B394F2604127931CCFCD9F5A78F9F9D6CD1642DA40B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveChartOrders.lean",
+      "sha256": "E12BDD1240CFC424F7A749ED1BB038014B844C84669E2F19C9258281B86B1EC0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRationalExtensionDivisors.lean",
+      "sha256": "A1620240338E2260D2E438827407D2C034048F2B941DB2DCDDE65187170D5F70"
+    }
+  ],
+  "routeAdjustment": "Use pinned Ostrowski classification and native normalized-order uniqueness. Use pinned polynomial maximal root factorization, split root products and reduced rational numerator/denominator. Prove only reciprocity with X; after choosing the second nonconstant function as coordinate, this suffices for norm transfer. It avoids porting the external full arbitrary-pair rational reciprocity induction and its duplicate place normalization.",
+  "discharged": "Actual Weil reciprocity with the rational coordinate X is proved for every nonzero rational function whose divisor avoids zero and infinity. The actual place census, normalized point orders, finite and infinity residues, principal-divisor formulas, root multiplicities, root products and numerator/denominator nonvanishing are derived, not assumed. This closes the rational-coordinate calculation required by the original finite norm-transfer route. That transfer, pairing descent and nondegeneracy, Hecke adjointness, Frobenius determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "remaining": "Construct the finite rational-coordinate map into the original modular function field and apply actual norm/pullback and pushforward evaluation formulas. Their original-to-original specializations do not directly typecheck for a RatFunc base: a narrow RatFunc-to-original consumer must use the proved generic field-norm and divisor formulas. Constant second functions use existing principal-divisor degree zero. Pairing descent, nondegeneracy and determinant remain separate. Scratch only; production promotion and assembled verification pending. No additional acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\rational-coordinate-reciprocity-route-466.json",
+    "sha256": "2DA979EEFFB4F270C6C9ED5A499037B0EB7AB05A37204EC261976A1B9DE66C8B",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "modular-form concentration -> actual residual Galois association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Weil pairing -> original reciprocity -> norm transfer using the second nonconstant function as rational coordinate -> reciprocity with X",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\RatFunc\\Ostrowski.lean",
+          "sha256": "20630689CCCF47B77DA889981FE4607B712BC1116BC09A59A508E81598DD9290"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\RatFunc\\Valuation.lean",
+          "sha256": "B704BCB1455CE8CA3A9BCC4128F6D678E28A92A419D5146D2DDB9FC56361C940"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Polynomial\\Div.lean",
+          "sha256": "32D3A42F89ABB04F4DB7A2837DA80C1B569C9AF6D440D8F3F29D0335F21F6294"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Polynomial\\Splits.lean",
+          "sha256": "75FDF6B8B0AA5F4D18C0008E6E020CD14DDB331088C36580C2649B30A2B32BD4"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\RatFunc\\Basic.lean",
+          "sha256": "DCBAD2AF95FC783F13AAA61514BEDD6731ED44B053EF2DDC7C8706F9A8A31D56"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveChartOrders.lean",
+          "sha256": "E12BDD1240CFC424F7A749ED1BB038014B844C84669E2F19C9258281B86B1EC0"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePrimePlaces.lean",
+          "sha256": "98648C9DC97C53AF09099B394F2604127931CCFCD9F5A78F9F9D6CD1642DA40B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePlaceCenters.lean",
+          "sha256": "F2746CA61E2DB176D765788BD8A0CEFCCFD507F79D98ED96A2FFCA4A3DFDAC2B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRationalExtensionDivisors.lean",
+          "sha256": "A1620240338E2260D2E438827407D2C034048F2B941DB2DCDDE65187170D5F70"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPlaceEvaluation.lean",
+          "sha256": "EC2B8CCA1D7B7A2067967D9C0F3A4A5C42C25F7238AA29C8756565CA74374819"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_RationalFunctionField_weilReciprocity.lean.txt",
+          "sha256": "5676FD0850CDB6DFB1F6CC10061710F857977E2A9BDA2E6B67D49B6279FA0419"
+        }
+      ],
+      "selectedRoute": "Use pinned Ostrowski classification and native normalized-order uniqueness. Use pinned polynomial maximal root factorization, split root products and reduced rational numerator/denominator. Prove only reciprocity with X; after choosing the second nonconstant function as coordinate, this suffices for norm transfer. It avoids porting the external full arbitrary-pair rational reciprocity induction and its duplicate place normalization.",
+      "scopeDecision": "Every new lemma is consumed by the one actual coordinate reciprocity theorem. No arbitrary-pair rational reciprocity, valuation generalization, new proof limits or pin changes.",
+      "discharged": "Actual Weil reciprocity with the rational coordinate X is proved for every nonzero rational function whose divisor avoids zero and infinity. The actual place census, normalized point orders, finite and infinity residues, principal-divisor formulas, root multiplicities, root products and numerator/denominator nonvanishing are derived, not assumed. This closes the rational-coordinate calculation required by the original finite norm-transfer route. That transfer, pairing descent and nondegeneracy, Hecke adjointness, Frobenius determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "remaining": "Construct the finite rational-coordinate map into the original modular function field and apply actual norm/pullback and pushforward evaluation formulas. Their original-to-original specializations do not directly typecheck for a RatFunc base: a narrow RatFunc-to-original consumer must use the proved generic field-norm and divisor formulas. Constant second functions use existing principal-divisor degree zero. Pairing descent, nondegeneracy and determinant remain separate.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. No additional acceptance gate closes. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

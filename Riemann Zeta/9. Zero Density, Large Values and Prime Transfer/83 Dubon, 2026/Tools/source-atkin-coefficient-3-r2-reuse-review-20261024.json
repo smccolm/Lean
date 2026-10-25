@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original Tate Frobenius quadratic relation -> Hecke norm reduction -> explicit norm product -> embedding census over algebraic-closure coefficients -> base change of the proved rational Atkin-Lehner involution",
+  "precedingScratchReceipts": {
+    "source-atkin-involution-3-scratch-receipt.json": "AEA0BAAC1C90D5DD9268C381C20FA55AF52E3884A42C94977E4BB7DD78D54B4C"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentCoefficientIndependence.lean",
+      "sha256": "E68ABE73D90E5986A3543FA58BC78B4E85188C6CB0E07D5B553D4DE1903F6244"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPairBaseChange.lean",
+      "sha256": "A95159A25724B6FE947EBB072B4CC80F819B7D81116EC39B6307B1212CB5C166"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeDegeneracy.lean",
+      "sha256": "96DA2DF837D536B52DD79ABA02B7DCA6F3CD3DE60A32D2D11E18424ECE0FDBA1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAtkinInvolution.lean",
+      "sha256": "19F581B936A69C79AA4811A85D6DB36C794BFABC427AD1353A89AEFCD109360E"
+    }
+  ],
+  "routeAdjustment": "Reuse coefficient independence to prove the literal tensor evaluation injective, identify its image with the actual Laurent coefficient extension using the algebraic coefficient-field hypothesis, and conjugate the rational involution through this equivalence. Retain exact formulas on coefficient embeddings for the two degeneracy maps.",
+  "discharged": "The actual coefficient tensor evaluation is injective by the existing coefficient-independence theorem and realizes the original coefficient extension for algebraic coefficient fields. Transport of the proved rational involution through this equivalence yields an actual coefficient-field automorphism, involutive and exchanging both original Hecke degeneracy maps on every element. No extension or compatibility premise remains.",
+  "remaining": "The actual degeneracy norm-product identity must still be proved, followed by Hecke/Picard compatibility, the quadratic relation, residual association, automorphy and all-weight continuation. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\atkin-coefficient-extension-route-445.json",
+    "sha256": "38DFA7D7C1A4DD242F489CF4E7DBD3626BF1019A93AD93C56C0964FF9330B81A",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original Tate Frobenius quadratic relation -> Hecke norm reduction -> explicit norm product -> embedding census over algebraic-closure coefficients -> base change of the proved rational Atkin-Lehner involution",
+      "reuseChecked": [
+        "SourceLaurentCoefficientIndependence.linearIndependent_coeffEmb already proves the exact tensor injectivity input.",
+        "The local Laurent base change and finite-degree transport do not yet transport an arbitrary rational automorphism. The frozen external Def_ModularCurve_GeometricBaseChange supplies a tensor-product realization for algebraic coefficient extensions.",
+        "Mathlib Algebra.TensorProduct.isField_of_isAlgebraic and TensorProduct.congr supply the field and automorphism transport. No new linear independence proof, global domain instance, or scalar-disjointness package is necessary."
+      ],
+      "selectedRoute": "Reuse coefficient independence to prove the literal tensor evaluation injective, identify its image with the actual Laurent coefficient extension using the algebraic coefficient-field hypothesis, and conjugate the rational involution through this equivalence. Retain exact formulas on coefficient embeddings for the two degeneracy maps.",
+      "assumptionsToDischarge": "Existence and action of the Atkin-Lehner automorphism over the actual algebraic-closure coefficient field, without an assumed extension or norm certificate.",
+      "boundary": "Embedding census and actual norm-product identification, Hecke/Picard compatibility, the quadratic relation, residual association, automorphy and all-weight continuation remain open. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "preservedFailedAuditAndDocumentationRepair": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\atkin-coefficient-doc-repair-445-r2.json",
+    "sha256": "3B2D0522916135F6DF6281A668D42E0C8D6D401DED3AB4ED056422D5890D25FE",
+    "evidence": {
+      "recordedUTC": "2026-10-24T18:36:55.138573+00:00",
+      "reason": "The original audit rejected four undocumented public definitions. Preserve all failed sources and audit evidence; successor changes add only documentation and corresponding local import qualification.",
+      "failedAudit": "E:\\Lean\\.tmp\\dubon83\\SourceAtkinCoefficientAudit3.log",
+      "failedAuditSha256": "24C7429C3558D0C4AD74860C79A0DA82DBB931F4D2EC3B24FFB8560EE59CC53C",
+      "failedAuditSourceSha256": "3872D4786C9B035A639018B51B86BB5B410F86E1FEAF123D0906E90A695275B7",
+      "changes": [
+        {
+          "original": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTensorCoefficientMap.lean",
+          "originalSha256": "D6C7586C982307C721EAB9B97686D541BA0C37901036B4E62F7B7A956F628844",
+          "successor": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTensorCoefficientMapR2.lean",
+          "successorSha256": "8C72C19B97D9687D11320B0042692B890E65B16E3AC09BD0B39D254C0A97CDB2",
+          "mathematicalBodiesIdentical": true
+        },
+        {
+          "original": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTensorCoefficientEquiv.lean",
+          "originalSha256": "DA9F56E73191798304861B338B173EDAAC0A48BE3BE86F1DF7CB8C13672D509E",
+          "successor": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTensorCoefficientEquivR2.lean",
+          "successorSha256": "A99FFA72C06CB9810995FFB5475D7A473FDC65066DB32BE2ED2A054BB40F174E",
+          "mathematicalBodiesIdentical": true
+        },
+        {
+          "original": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAtkinCoefficientExtension.lean",
+          "originalSha256": "1D4F4F1BB447DE3EC01D5376522E5F8853B04D3F8CB7C75322A525A2B643FAE6",
+          "successor": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAtkinCoefficientExtensionR2.lean",
+          "successorSha256": "5A8ABA05D94D131F1004327903B2D2827A0356A7F823021428FEE17088E7EF98",
+          "mathematicalBodiesIdentical": true
+        }
+      ],
+      "definitionsDocumented": {
+        "baseChangeRatAlgHom": "Evaluate the actual rational tensor product by constant multiplication and Laurent coefficient embedding.",
+        "baseChangeHom": "The actual tensor evaluation as a homomorphism over the coefficient field.",
+        "baseChangeEquiv": "Identify the actual Laurent coefficient extension with its algebraic tensor realization.",
+        "geomAut": "Extend a rational field automorphism through the literal tensor coefficient realization."
+      },
+      "builder": "E:\\Lean\\.tmp\\dubon83\\build_atkin_coefficient_audit_445_r2.py",
+      "builderSha256": "124AA2C3400214BE590446B1544E460507184E9699F4021A6E60B5CDCDD81D4E"
+    }
+  }
+}

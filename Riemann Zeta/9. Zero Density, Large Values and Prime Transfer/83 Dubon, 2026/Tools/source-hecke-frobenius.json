@@ -1,0 +1,2148 @@
+{
+  "date": "24 October 2026",
+  "modules": [
+    "Dubon2026.SourceResidueCoefficientAutomorphism",
+    "Dubon2026.SourceDecompositionGaussAction",
+    "Dubon2026.SourceArithmeticFrobeniusResidue",
+    "Dubon2026.SourceResidueCoefficientPlaces",
+    "Dubon2026.SourceDecompositionChartTransport",
+    "Dubon2026.SourceModularDecompositionPlaceReduction",
+    "Dubon2026.SourceResidueCoefficientPlaceOrders",
+    "Dubon2026.SourceResidueCoefficientDivisors",
+    "Dubon2026.SourceResidueCoefficientPicard",
+    "Dubon2026.SourceOriginalDecompositionDivisorReduction",
+    "Dubon2026.SourceOriginalFrobeniusPicardReduction",
+    "Dubon2026.SourceLaurentFrobenius",
+    "Dubon2026.SourceResidueGeometricFrobenius",
+    "Dubon2026.SourceResidueGeometricFrobeniusPlaces",
+    "Dubon2026.SourceResidueGeometricFrobeniusDivisors",
+    "Dubon2026.SourceResidueGeometricFrobeniusPicard",
+    "Dubon2026.SourceOriginalGeometricFrobeniusReduction",
+    "Dubon2026.SourceHeckePrimeRootReduction",
+    "Dubon2026.SourceHeckeLaurentProductReduction",
+    "Dubon2026.SourceHeckeLaurentNormExtraction",
+    "Dubon2026.SourceOriginalAtkinPrimePolynomial",
+    "Dubon2026.SourceOriginalAtkinEmbedding",
+    "Dubon2026.SourceOriginalAdjacentRootUniqueness",
+    "Dubon2026.SourceOriginalAtkinGeneratorImages",
+    "Dubon2026.SourceOriginalAtkinInvolution",
+    "Dubon2026.SourceOriginalTensorCoefficientMapR2",
+    "Dubon2026.SourceOriginalTensorCoefficientEquivR2",
+    "Dubon2026.SourceOriginalAtkinCoefficientExtensionR2",
+    "Dubon2026.SourceOriginalHeckePrimeDegree",
+    "Dubon2026.SourceOriginalHeckeNormEmbeddings",
+    "Dubon2026.SourceOriginalHeckeEmbeddingCensus",
+    "Dubon2026.SourceOriginalHeckeNormProduct",
+    "Dubon2026.SourceOriginalHeckeNormReduction",
+    "Dubon2026.SourceOriginalIntegralPrincipalDifference",
+    "Dubon2026.SourceOriginalTorsionDivisorAgreement",
+    "Dubon2026.SourceResidueFrobeniusDivisorOperator",
+    "Dubon2026.SourceCurveCorrespondencePrincipalOrder",
+    "Dubon2026.SourceOriginalHeckePrincipalNorm",
+    "Dubon2026.SourceOriginalIntegralDivisorReduction",
+    "Dubon2026.SourceOriginalHeckeIntegralAgreement",
+    "Dubon2026.SourceResidueFrobeniusPicardOperator",
+    "Dubon2026.SourceSpanningSpecializationQuadratic",
+    "Dubon2026.SourceOriginalSpecializationQuadratic",
+    "Dubon2026.SourceOriginalHeckeTorsionReduction",
+    "Dubon2026.SourceOriginalPicardFrobeniusQuadratic",
+    "Dubon2026.SourceOriginalTateFrobeniusQuadratic",
+    "Dubon2026.SourceOriginalPrimitiveFrobeniusQuadraticRealization"
+  ],
+  "dependency": "genuine non-CM modular-form concentration -> actual residual modular Galois association -> original primitive weight-two Frobenius characteristic polynomial -> Frobenius quadratic identity and separate determinant -> original rational Tate identity -> finite Picard torsion comparison under the actual constructed reduction",
+  "discharged": "The actual original Hecke correspondence satisfies the Frobenius quadratic identity on every residue-invertible Picard torsion subgroup, on the original integral and rational Tate modules, and on the same constructed continuous unramified rank-two primitive weight-two realization. The proof constructs the same modular reduction, supplies its arithmetic-Frobenius compatibility and torsion injectivity, proves the literal Hecke norm product and integral-principal reduction, extends that comparison using principal differences and torsion-free integer divisors, and transfers the residue identity through actual Tate coordinates and the existing spanning specialization. No Hecke-agreement, reduction-injectivity, Tate-quadratic or specialization premise remains in the primitive-form consumer.",
+  "boundary": "The separate Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. The quadratic identity alone does not prove determinant or trace. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 7,591-module scope: all thirteen retained regressions, 49,704 exhaustive theorem checks, 22,573 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.GaussReduction.original_arithmeticFrobenius_modularResidue",
+    "Dubon2026.SourceFunctionField.GaussReduction.residueArithmeticFrobenius_chart",
+    "Dubon2026.SourceFunctionField.GaussReduction.residueArithmeticFrobenius_coe",
+    "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_arithmeticFrobenius_equivariant",
+    "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_arithmeticFrobenius_picard",
+    "Dubon2026.SourceFunctionField.residueCoefficientPicard_mk",
+    "Dubon2026.SourceFunctionField.residueGeometricFrobenius_coe",
+    "Dubon2026.SourceFunctionField.residueGeometricFrobenius_isIntegral",
+    "Dubon2026.SourceFunctionField.residueGeometricFrobenius_place_order",
+    "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_geometricFrobenius_picard",
+    "Dubon2026.SourceFunctionField.exists_integral_laurent_reduction_of_hecke_product",
+    "Dubon2026.SourceFunctionField.primeRootValuationUnit_coe",
+    "Dubon2026.SourceFunctionField.exists_original_atkin_embedding",
+    "Dubon2026.SourceFunctionField.exists_original_atkin_involution",
+    "Dubon2026.SourceFunctionField.exists_original_atkin_over",
+    "Dubon2026.SourceFunctionField.HeckeNorm.original_hecke_norm_expanded_product",
+    "Dubon2026.SourceFunctionField.original_hecke_norm_integral_reduction",
+    "Dubon2026.SourceFunctionField.original_divisor_hom_eq_on_torsion",
+    "Dubon2026.SourceFunctionField.residueFrobeniusDivisorOperator_order",
+    "Dubon2026.SourceFunctionField.originalHeckeDivisor_principal_norm",
+    "Dubon2026.SourceFunctionField.GaussReduction.original_hecke_reduction_integral_principal",
+    "Dubon2026.SourceFunctionField.residueFrobeniusPicardOperator_mk",
+    "Dubon2026.SourceFunctionField.residueFrobeniusPicardOperator_coefficient",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_quadratic",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_quadratic_realization"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-24T17:14:59.493150+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceResidueCoefficientAutomorphism",
+        "SourceDecompositionGaussAction",
+        "SourceArithmeticFrobeniusResidue"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueCoefficientAutomorphism.lean",
+          "sha256": "D818DC036033E977BF11D484735FCB774F57A6798DA374FEA828E92B41F94137",
+          "oleanSha256": "D32D75C546CFBC423B54AD1F3AF376857E0D9524BA7EB2B02360AC95CC1D9607"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceDecompositionGaussAction.lean",
+          "sha256": "1F5885C4DAD925A3D4E29A39B4757FDBDB332CE7CA02A36E3FC45C7CE37D6726",
+          "oleanSha256": "0D97C98753C3D84DD82636F2EBDF41D080040B3D42FFAD0CDF81EF7FDCDF4DBD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticFrobeniusResidue.lean",
+          "sha256": "C90BB5366C97DF26DF5FEA777BD1E136C151AE56991AEC4F6BEEF7D5FD0F4E8B",
+          "oleanSha256": "2A4AEF6E489BC37D8EC2FF9C925E7509BB80948FB5960857F6B667EDDD0CFDE2"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.coefficientMap_mem_divisor_field",
+        "Dubon2026.SourceFunctionField.residueCoefficientRingAut_coe",
+        "Dubon2026.SourceFunctionField.residueCoefficientRingAut_constants",
+        "Dubon2026.SourceFunctionField.residueCoefficientRingAut_j",
+        "Dubon2026.SourceFunctionField.GaussReduction.coeffMap_residue_decomposition",
+        "Dubon2026.SourceFunctionField.GaussReduction.isInt_coeffMap_decomposition",
+        "Dubon2026.SourceFunctionField.GaussReduction.decompositionGaussHom_resHom",
+        "Dubon2026.SourceFunctionField.GaussReduction.decompositionGaussHom_modularResidue",
+        "Dubon2026.SourceFunctionField.GaussReduction.residueArithmeticFrobenius_coe",
+        "Dubon2026.SourceFunctionField.GaussReduction.residueArithmeticFrobenius_chart",
+        "Dubon2026.SourceFunctionField.GaussReduction.original_arithmeticFrobenius_modularResidue",
+        "Dubon2026.SourceFunctionField.residueCoefficientRingAut",
+        "Dubon2026.SourceFunctionField.GaussReduction.decompositionGaussHom",
+        "Dubon2026.SourceFunctionField.GaussReduction.residueArithmeticFrobenius"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.coefficientMap_mem_divisor_field",
+        "Dubon2026.SourceFunctionField.residueCoefficientRingAut_coe",
+        "Dubon2026.SourceFunctionField.residueCoefficientRingAut_constants",
+        "Dubon2026.SourceFunctionField.residueCoefficientRingAut_j",
+        "Dubon2026.SourceFunctionField.GaussReduction.coeffMap_residue_decomposition",
+        "Dubon2026.SourceFunctionField.GaussReduction.isInt_coeffMap_decomposition",
+        "Dubon2026.SourceFunctionField.GaussReduction.decompositionGaussHom_resHom",
+        "Dubon2026.SourceFunctionField.GaussReduction.decompositionGaussHom_modularResidue",
+        "Dubon2026.SourceFunctionField.GaussReduction.residueArithmeticFrobenius_coe",
+        "Dubon2026.SourceFunctionField.GaussReduction.residueArithmeticFrobenius_chart",
+        "Dubon2026.SourceFunctionField.GaussReduction.original_arithmeticFrobenius_modularResidue"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.residueCoefficientRingAut",
+        "Dubon2026.SourceFunctionField.GaussReduction.decompositionGaussHom",
+        "Dubon2026.SourceFunctionField.GaussReduction.residueArithmeticFrobenius"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticFrobeniusResidueAudit3.log",
+      "logSha256": "92AD9850E2161945C9DC7806F404757C7A0B8BD311FF991CFB933486B4C4E6C2",
+      "auditSha256": "CA4652EF3E269B5CB38DB3F5CFDB4EEAE9889061452FF956CF6F58028A700CE4",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 35,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 22,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticFrobeniusResidueDependencyAudit3.log",
+      "dependencyAuditSha256": "0BB8F287544A4249F0D5BA574B4912A31D507BAC835671434856AE10BCC7534B",
+      "dependencyAuditSourceSha256": "5EB68E0BEED759ABC1FE54DC114C2B8E7268BDC0B5EFF7A540281B04817CF7FC",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.original_arithmeticFrobenius_modularResidue",
+        "Dubon2026.SourceFunctionField.GaussReduction.residueArithmeticFrobenius_chart",
+        "Dubon2026.SourceFunctionField.GaussReduction.residueArithmeticFrobenius_coe"
+      ],
+      "dependency": "original primitive-form residual association -> Frobenius quadratic and trace identity -> original arithmetic Frobenius commutes with reduction -> residue coefficient Frobenius action on the literal modular field and the same two charts",
+      "discharged": "The actual original decomposition action preserves the Gauss ring and commutes with its actual modular residue homomorphism through the native residue coefficient automorphism. Under the exact source prime-power residue condition this is arithmetic Frobenius. Its literal coefficient formula, fixed j coordinate and action by prime powers on constants are derived. Fraction denominators remain nonzero by the native residue automorphism; the existing witness-independence theorem gives the actual residue equality.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Original-place and Picard Frobenius comparison, geometric Frobenius and Hecke compatibility, the quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-arithmetic-frobenius-residue-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "0D95C43F1F66DF33E1018B22249AD3D8DA38EC3E1DD06B179BB81AF4CEEE259A",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T17:31:20.586317+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceResidueCoefficientPlaces",
+        "SourceDecompositionChartTransport",
+        "SourceModularDecompositionPlaceReduction"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueCoefficientPlaces.lean",
+          "sha256": "0CC00A6ACE482A8BDDA9BFC17F23E9D445E23965F2F65E942D105E58568A0D5A",
+          "oleanSha256": "D04C5A0933F4716DFBC3865667DA60E9FBC6BCE478FC0CBFF06D56956D8DCC67"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceDecompositionChartTransport.lean",
+          "sha256": "AF1F3BADA1CEAF86EB758992CC35196DCA90771599B39E895A1362AE28CE81BF",
+          "oleanSha256": "57AC1B21BABD7BB3954C35DC24886C900360ABC3BFBFB5137A8238053E0DD7FD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularDecompositionPlaceReduction.lean",
+          "sha256": "B104B935FB37D4A4600401BCC3B02A1D7DC61BA7E67B1976A42F77C04C7E5475",
+          "oleanSha256": "5BC8D96D0B5FBA216BE2FB3D95FC555FBF48FC3ACE687ACE7D8BD0772F8F6117"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.mem_residueCoefficientPlace_iff",
+        "Dubon2026.SourceFunctionField.nonunit_residueCoefficientPlace_iff",
+        "Dubon2026.SourceFunctionField.residueCoefficientPlace_j_mem",
+        "Dubon2026.SourceFunctionField.GaussReduction.chartReducesTo_decomposition",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_decomposition_equivariant",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_arithmeticFrobenius_equivariant",
+        "Dubon2026.SourceFunctionField.residueCoefficientValuationEquiv",
+        "Dubon2026.SourceFunctionField.residueCoefficientPlace"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.mem_residueCoefficientPlace_iff",
+        "Dubon2026.SourceFunctionField.nonunit_residueCoefficientPlace_iff",
+        "Dubon2026.SourceFunctionField.residueCoefficientPlace_j_mem",
+        "Dubon2026.SourceFunctionField.GaussReduction.chartReducesTo_decomposition",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_decomposition_equivariant",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_arithmeticFrobenius_equivariant"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.residueCoefficientValuationEquiv",
+        "Dubon2026.SourceFunctionField.residueCoefficientPlace"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusPlaceReductionAudit3.log",
+      "logSha256": "04BFFAA96BA0630A365E616945861C4F3E1B5F147239998D136378144E266710",
+      "auditSha256": "1C45B2EBD48DA2D86B11FCFFEF102E5066E116CE7DBA0F4EA0800FC4F6877F51",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 24,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 17,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusPlaceReductionDependencyAudit3.log",
+      "dependencyAuditSha256": "216C3D3CA32214125A845C9A81530C770926F3233414FD386BFDBACA97302175",
+      "dependencyAuditSourceSha256": "8141E17FBB37629C26330364137E99EECE8632A2119F3B042732F7EA2A4B0F14",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_arithmeticFrobenius_equivariant"
+      ],
+      "dependency": "original primitive-form Frobenius relation -> original Picard reduction and arithmetic Frobenius -> actual original-place reduction equivariance -> residue coefficient action preserves the exact two chart conditions",
+      "discharged": "The same actual modular reduction, with all-prime genus equality and invertible Picard-torsion injectivity, intertwines the original arithmetic decomposition action on places with the native residue coefficient action. Under the exact source arithmetic Frobenius condition it intertwines original Frobenius with residue coefficient Frobenius. Both chart conditions are derived using the actual Gauss residue homomorphism; no assumed place-equivariance certificate, global divisor rigidity or Picard divisibility is needed for this comparison.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Picard descent, geometric Frobenius and Hecke compatibility, the quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-frobenius-place-reduction-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "F96D634AB9D4696C16C5318180939C77DD2274BB10EB966C400EB582FA803556",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T17:47:19.912381+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceResidueCoefficientPlaceOrders",
+        "SourceResidueCoefficientDivisors",
+        "SourceResidueCoefficientPicard",
+        "SourceOriginalDecompositionDivisorReduction",
+        "SourceOriginalFrobeniusPicardReduction"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueCoefficientPlaceOrders.lean",
+          "sha256": "9862A46D4116D1C1B4594EE0B361E6544EFA63CB3E7EDBF2972BDEB091D69E3E",
+          "oleanSha256": "2A89019E0C2324FEE2D0AE928235541CEDA269E9B4224FA4A004ABDE6E048A5C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueCoefficientDivisors.lean",
+          "sha256": "9C7564E1145BA56702E13BAE124DF2B3760165E23CA22BA98E909F766FBED156",
+          "oleanSha256": "46B776FDB309367D2B85F1B39369FB37FEAC54DD0C9AB06B5A14F7BE585B0B3B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueCoefficientPicard.lean",
+          "sha256": "C43B0402636B08509BDAF1D639C38A5CDC9840A06F94D360C542993552E01BF0",
+          "oleanSha256": "79BA1FCB766DB1A9BE010D684FB898CF481B2D9DCE4DA26DCB2702219DD2F341"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDecompositionDivisorReduction.lean",
+          "sha256": "83D1B8FADA80EEE076747094389044ACBF8B791A33E54A55A421418C78AA9168",
+          "oleanSha256": "39687D3BA5187878CAFEBFBBFE7282AEA22CDC34DA95CE6870B985A914FADD1F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFrobeniusPicardReduction.lean",
+          "sha256": "DCA9A9B3DCD8508E1936CD933592E95738DED5028320D00D2A104DBA560E6D08",
+          "oleanSha256": "DBF94DDC29CB61F308E71BAF4F23FAB4BCC2E909690A8A35EACEC1A2D43DCCD8"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.residueCoefficientPlace_ord",
+        "Dubon2026.SourceFunctionField.residueCoefficientPlace_ord_action",
+        "Dubon2026.SourceFunctionField.residueCoefficientDivisorEquiv_apply",
+        "Dubon2026.SourceFunctionField.residueCoefficientDivisor_degree",
+        "Dubon2026.SourceFunctionField.residueCoefficientDivisor_principal",
+        "Dubon2026.SourceFunctionField.residueCoefficientPicard_mk",
+        "Dubon2026.SourceFunctionField.GaussReduction.reduction_originalArithmeticDivisor_equivariant",
+        "Dubon2026.SourceFunctionField.GaussReduction.reduction_originalArithmeticPicard_equivariant",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_arithmeticFrobenius_picard",
+        "Dubon2026.SourceFunctionField.residueCoefficientPlaceEquiv",
+        "Dubon2026.SourceFunctionField.residueCoefficientDivisorEquiv",
+        "Dubon2026.SourceFunctionField.residueCoefficientDegZero",
+        "Dubon2026.SourceFunctionField.residueCoefficientPicard"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.residueCoefficientPlace_ord",
+        "Dubon2026.SourceFunctionField.residueCoefficientPlace_ord_action",
+        "Dubon2026.SourceFunctionField.residueCoefficientDivisorEquiv_apply",
+        "Dubon2026.SourceFunctionField.residueCoefficientDivisor_degree",
+        "Dubon2026.SourceFunctionField.residueCoefficientDivisor_principal",
+        "Dubon2026.SourceFunctionField.residueCoefficientPicard_mk",
+        "Dubon2026.SourceFunctionField.GaussReduction.reduction_originalArithmeticDivisor_equivariant",
+        "Dubon2026.SourceFunctionField.GaussReduction.reduction_originalArithmeticPicard_equivariant",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_arithmeticFrobenius_picard"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.residueCoefficientPlaceEquiv",
+        "Dubon2026.SourceFunctionField.residueCoefficientDivisorEquiv",
+        "Dubon2026.SourceFunctionField.residueCoefficientDegZero",
+        "Dubon2026.SourceFunctionField.residueCoefficientPicard"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusPicardReductionAudit5.log",
+      "logSha256": "05504085C0B7646345233CD775CDDA7B0CD68CA86C5D9170D0DCB13D76DC803C",
+      "auditSha256": "3D7DDC40050372955B64BB8A9D90C5425FFE760951239B33A542C77A3A54294B",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 27,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 24,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusPicardReductionDependencyAudit5.log",
+      "dependencyAuditSha256": "783C93B6A6AA0FCF42A5A69FBACD3FE4B37B9C803F34A8525F71812442F16082",
+      "dependencyAuditSourceSha256": "CB81A4720425E5B043780264E0A340A1B90B0D557C408EA2AC5118D9E6B51927",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_arithmeticFrobenius_picard",
+        "Dubon2026.SourceFunctionField.residueCoefficientPicard_mk"
+      ],
+      "dependency": "original primitive-form Frobenius quadratic relation -> original Tate and Picard reduction -> arithmetic Frobenius on the actual residue Picard quotient -> order, degree and principal-divisor preservation of the proved residue place permutation",
+      "discharged": "The same actual modular reduction, with genus equality and invertible Picard-torsion injectivity, intertwines original arithmetic Frobenius on genuine original Picard classes with residue coefficient Frobenius. Normalized orders, divisor degrees and principal divisors are transported by proved equations; finite-support induction and the native Picard quotient give descent. No place, divisor or Picard equivariance certificate remains an assumption of the final theorem.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Geometric Frobenius and Hecke compatibility, the quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-frobenius-picard-reduction-5-reuse-review-20261024.json",
+      "reuseReviewSha256": "86184010E4A30651ECC2E8A70E81D3A9ED17464E19EDC7615B1C62637115FF33",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T17:47:20.044730+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceLaurentFrobenius",
+        "SourceResidueGeometricFrobenius",
+        "SourceResidueGeometricFrobeniusPlaces"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentFrobenius.lean",
+          "sha256": "9D20070B1C986C4E32B0B9E25F2C7AC7CB12CCE0441CD9169A8E26A7CD5C9624",
+          "oleanSha256": "B9F7EAC2169B810189E1AF5DC6E90F79A2850289B37463DF8665228FAEF61576"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueGeometricFrobenius.lean",
+          "sha256": "FEE041B0560AB2192DFACDEF189D206622FD697F31A0443D194F9D6BFEDCC8EA",
+          "oleanSha256": "B20492AD3CCCF5D1AE66FDAA958F98358791989E902320B2F769BC532F2E0812"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueGeometricFrobeniusPlaces.lean",
+          "sha256": "5231375FD0EA14138827D0813B91F466447E2AD1BEA4150EB7A5E568C4E62BC6",
+          "oleanSha256": "06A8A1187DBFF4F111F98D5980C7EE42E552DC5CAC58217CD4F508BA08943604"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.pow_char_single_one_eq",
+        "Dubon2026.SourceFunctionField.pow_char_ofPowerSeries_eq",
+        "Dubon2026.SourceFunctionField.pow_char_eq_coeffMap_frobenius_qExpand",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobenius_eq_inverse_coefficient_pow",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobenius_coe",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobenius_coefficient",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobenius_isIntegral",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobenius_comap_eq",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusPlace_eq_coefficient",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobenius_place_order",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobenius",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusPlace"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.pow_char_single_one_eq",
+        "Dubon2026.SourceFunctionField.pow_char_ofPowerSeries_eq",
+        "Dubon2026.SourceFunctionField.pow_char_eq_coeffMap_frobenius_qExpand",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobenius_eq_inverse_coefficient_pow",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobenius_coe",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobenius_coefficient",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobenius_isIntegral",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobenius_comap_eq",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusPlace_eq_coefficient",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobenius_place_order"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.residueGeometricFrobenius",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusPlace"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGeometricFrobeniusAudit3.log",
+      "logSha256": "596CCB77056FE4BC0A72C1835FF9F906FD6483102D33AF079BCDC716DE5AED59",
+      "auditSha256": "E385247588F15960878779B73ED7F2B2D025523EF31A40841C381FE86B5F701B",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 23,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 20,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGeometricFrobeniusDependencyAudit3.log",
+      "dependencyAuditSha256": "6B258833CE43CFDB432CCC26982734C4901A469F30555676E8A5B00D6F9F2B46",
+      "dependencyAuditSourceSha256": "D48682141EC79B3DFEA24312EC66D8D43B564F4D41FABDAD67B821483F4F9321",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.residueGeometricFrobenius_coe",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobenius_isIntegral",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobenius_place_order"
+      ],
+      "dependency": "original primitive-form Frobenius quadratic relation -> geometric Frobenius correspondence on residue Picard classes -> arithmetic coefficient Frobenius equals geometric place pushforward -> literal q-expansion Frobenius and its integral field endomorphism",
+      "discharged": "The actual residue geometric field endomorphism has literal Laurent expansion q -> q^p and an explicit monic integral equation. Its literal valuation-ring comap is the proved arithmetic coefficient place, and its normalized order equation has ramification factor p. Existing power-series Frobenius, coefficient transport and Laurent decomposition prove the formula; existing place discreteness proves the geometric restriction without a general finite-morphism construction.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Divisor/Picard geometric pushforward, Hecke compatibility, the quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-geometric-frobenius-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "652E74995B3479A41213D624BCFDB868B4B08F788C2EDB1479EC07DA0C8CB7E8",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T17:55:21.008590+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceResidueGeometricFrobeniusDivisors",
+        "SourceResidueGeometricFrobeniusPicard",
+        "SourceOriginalGeometricFrobeniusReduction"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueGeometricFrobeniusDivisors.lean",
+          "sha256": "D735FEBB04A9F76F86B26834C9B4AFD21098CCB6522CDCA955F7204F5429187B",
+          "oleanSha256": "CC1C657961114A727A5456588A670559B01257B50EC36E746AADC6481E80A0F6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueGeometricFrobeniusPicard.lean",
+          "sha256": "A4616179946868DE4ACBDD043711EE923EADD1AA6CBCA373144CBF29BBE325E4",
+          "oleanSha256": "A4BB54186AF619FBE6440B19DD6F635295C538E53E2CD42D29152A905E345694"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalGeometricFrobeniusReduction.lean",
+          "sha256": "B3BB053E4FB0CB2A1212C91CD683D8637F4DCEF2F59972573C681A20174C8DEE",
+          "oleanSha256": "7DA5C9BF0BA766779E8AE12080BE79C4253C94C90BBF68AEB2099509BF70C00B"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusDivisor_eq_coefficient",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusDivisor_degree",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusDivisor_principal",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusPicard_mk",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusPicard_eq_coefficient",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_geometricFrobenius_picard",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusDivisor",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusDegZero",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusPicard"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusDivisor_eq_coefficient",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusDivisor_degree",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusDivisor_principal",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusPicard_mk",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusPicard_eq_coefficient",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_geometricFrobenius_picard"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusDivisor",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusDegZero",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusPicard"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGeometricPicardReductionAudit3.log",
+      "logSha256": "85F315F637C94917D66D6E8DD5A7283E455D31F2A65F70BCAAAE809DF9C9D36C",
+      "auditSha256": "2CBA6F9B34707374CF8D132FDD893AC5A90F15AF8E0717D8657F95D0341202B7",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 20,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 17,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGeometricPicardReductionDependencyAudit3.log",
+      "dependencyAuditSha256": "CCE35C319FC3C947B9EB5A10AB7A305480E4E5467AB0F55182FDB2F37B0EF8B6",
+      "dependencyAuditSourceSha256": "E2E33886036AD1339AE3EFDA638DA12E9A1B57CBAA85DF10A5CFFF0C31050AD3",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_geometricFrobenius_picard"
+      ],
+      "dependency": "original primitive-form Frobenius quadratic relation -> reduction intertwines original arithmetic Frobenius with geometric Frobenius on residue Picard classes -> literal geometric place pushforward equals the proved coefficient permutation on finite divisors",
+      "discharged": "The same actual modular reduction intertwines original arithmetic Frobenius with literal geometric Frobenius pushforward on genuine Picard classes. The geometric place map is the actual valuation-ring comap, and its finite divisor pushforward equals the proved coefficient permutation. Degree and principal-divisor preservation give native quotient descent; genus equality and invertible-torsion injectivity remain on the same reduction.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Hecke reduction compatibility and the geometric quadratic correspondence, the original Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-geometric-picard-reduction-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "B0BD40803B68D82ADF3B11684DFCCC9ECAF1D146F03CF513205CF076CA853CA6",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T18:03:54.758718+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceHeckePrimeRootReduction",
+        "SourceHeckeLaurentProductReduction",
+        "SourceHeckeLaurentNormExtraction"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckePrimeRootReduction.lean",
+          "sha256": "E319B63B3720CD47BA01B00F6B210D60FDEB4482435B6BBBAE0A2E497A1C1C47",
+          "oleanSha256": "89D8A92F27B7A33073486006AF48DE842A05C4BE7F8BA7194A1CAF4AA7EA50E4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeLaurentProductReduction.lean",
+          "sha256": "0D754664F63A1520ADB0F80A0C2242FA97B11BEB5FD155A8435A2357EB2FA2AC",
+          "oleanSha256": "FFBFA2CA7793F73614A43884AC422413ADB60FCAA615175BD86AE5E4EFBCB649"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeLaurentNormExtraction.lean",
+          "sha256": "2826C22B098C6BAC28E4540F2D3ED474B4335F85F54CBF6927754ABED28DC392",
+          "oleanSha256": "D24BB66A0161415E5C7211C3C4122A63D24B1B7E1009FA5634D14E5FB19B2128"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.coeffMap_qTwist_commRing",
+        "Dubon2026.SourceFunctionField.primeRoot_mem_valuation",
+        "Dubon2026.SourceFunctionField.primeRootValuationUnit_coe",
+        "Dubon2026.SourceFunctionField.primeRootValuationUnit_residue",
+        "Dubon2026.SourceFunctionField.heckeLaurentProduct_residue",
+        "Dubon2026.SourceFunctionField.qExpand_heckeLaurentUnexpand",
+        "Dubon2026.SourceFunctionField.exists_integral_laurent_reduction_of_hecke_product",
+        "Dubon2026.SourceFunctionField.primeRootValuationUnit",
+        "Dubon2026.SourceFunctionField.heckeLaurentProduct",
+        "Dubon2026.SourceFunctionField.heckeLaurentUnexpand"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.coeffMap_qTwist_commRing",
+        "Dubon2026.SourceFunctionField.primeRoot_mem_valuation",
+        "Dubon2026.SourceFunctionField.primeRootValuationUnit_coe",
+        "Dubon2026.SourceFunctionField.primeRootValuationUnit_residue",
+        "Dubon2026.SourceFunctionField.heckeLaurentProduct_residue",
+        "Dubon2026.SourceFunctionField.qExpand_heckeLaurentUnexpand",
+        "Dubon2026.SourceFunctionField.exists_integral_laurent_reduction_of_hecke_product"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.primeRootValuationUnit",
+        "Dubon2026.SourceFunctionField.heckeLaurentProduct",
+        "Dubon2026.SourceFunctionField.heckeLaurentUnexpand"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeLaurentReductionAudit3.log",
+      "logSha256": "EC594BCA02CE3469ABE36273D059560D3D0B4643577BF111E1D5C35110ACC40A",
+      "auditSha256": "FDACFDA0760F7DCAF1AF48082A0E9D4D6883EDCE439A1B71F7C732A746E3094F",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 18,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 15,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeLaurentReductionDependencyAudit3.log",
+      "dependencyAuditSha256": "93E034B8B319848214B966858D443693A765A5B669F0498BB46CAE974F8F5241",
+      "dependencyAuditSourceSha256": "77424C036307FD174E95B869E279048394A70A0A9F6462D8A0E56412A6B8489A",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.exists_integral_laurent_reduction_of_hecke_product",
+        "Dubon2026.SourceFunctionField.primeRootValuationUnit_coe"
+      ],
+      "dependency": "original Tate Frobenius quadratic relation -> Hecke reduction compatibility -> reduction of the actual degeneracy norm -> integral Laurent norm product and collapse of prime-order twists in residue characteristic p",
+      "discharged": "The actual prime-order valuation-ring unit reduces to one, so the literal integral Laurent Hecke product reduces to the q-expansion of coefficient Frobenius times geometric Frobenius. Given the narrower explicit q-expanded product identity, Laurent support and q-expansion injectivity construct an integral preimage with exactly that residue. This final consumer is conditional on the expanded product identity; no actual Hecke norm identification is claimed.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The actual degeneracy norm-product identity must still be proved, followed by Hecke/Picard compatibility, the quadratic relation, residual association, automorphy and all-weight continuation. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-hecke-laurent-reduction-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "D03E2A9679712C8CAA827B8A1FBAAA164384BFE5670D84EAEB7CE0487CD5569F",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T18:17:27.859159+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalAtkinPrimePolynomial",
+        "SourceOriginalAtkinEmbedding"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAtkinPrimePolynomial.lean",
+          "sha256": "A26305B160E66D3C89BAB3A6603C68AFE3226EBB6C03636540D8FD0A339ADD56",
+          "oleanSha256": "11F53C8B6FDB63BD775453092CEA68CC6B57567BB16F2A7A94E2FB7CBECE4873"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAtkinEmbedding.lean",
+          "sha256": "100DA388FC31F269D60A9D87B2B315B50D6EE4BECD1D2F8611C2840813C7EF0F",
+          "oleanSha256": "F7F979379BB6E24D93B560BBBF5142EEC6DE5C6C8D9D0EF48F6F5B36E980A142"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.atkinPrime_minpoly_natDegree",
+        "Dubon2026.SourceFunctionField.atkinPrime_minpoly_eq",
+        "Dubon2026.SourceFunctionField.atkinPrime_minpoly_reverse_root",
+        "Dubon2026.SourceFunctionField.atkin_extension_generation",
+        "Dubon2026.SourceFunctionField.exists_original_atkin_embedding",
+        "Dubon2026.SourceFunctionField.atkinBase",
+        "Dubon2026.SourceFunctionField.atkinPrimePolynomial"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.atkinPrime_minpoly_natDegree",
+        "Dubon2026.SourceFunctionField.atkinPrime_minpoly_eq",
+        "Dubon2026.SourceFunctionField.atkinPrime_minpoly_reverse_root",
+        "Dubon2026.SourceFunctionField.atkin_extension_generation",
+        "Dubon2026.SourceFunctionField.exists_original_atkin_embedding"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.atkinBase",
+        "Dubon2026.SourceFunctionField.atkinPrimePolynomial"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAtkinEmbeddingAudit2.log",
+      "logSha256": "AD7E0C55C8FCFBEB458229D090D049D5F52C543356CFA7BEBCCE9435ADD51326",
+      "auditSha256": "FD3C21A64144F243BC5D22F79424157DD5F02EBE6813F86A6873F013B692B7AD",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 9,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceAtkinEmbeddingDependencyAudit2.log",
+      "dependencyAuditSha256": "960AA5998965E33E3607B1C975F6D18DB33F7AC6FFB74F2F0486EA14807F4703",
+      "dependencyAuditSourceSha256": "6A274AB961F43CFABF07F0E426B61B3DE6950D6B5BA47FF55F993382FB789F86",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.exists_original_atkin_embedding"
+      ],
+      "dependency": "original Tate Frobenius quadratic relation -> actual Hecke norm reduction -> explicit degeneracy norm product -> full embedding census -> Atkin-Lehner field involution exchanging the original degeneracy maps",
+      "discharged": "The prime minimal polynomial over the actual lower modular field equals the exact integral prime relation and has the required reverse root. Existing simple-extension lifting and mixed-level generation construct an actual level Np embedding with q-expansion on the lower field and j_p mapped to j. This discharges root lifting without a polynomial symmetry assumption; generator preservation and involution remain separate obligations.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The actual degeneracy norm-product identity must still be proved, followed by Hecke/Picard compatibility, the quadratic relation, residual association, automorphy and all-weight continuation. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-atkin-embedding-2-reuse-review-20261024.json",
+      "reuseReviewSha256": "D74A123AC813505395F4B2D01E14E3EEB0867A8B68B6EF94E31590B9F559BF30",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T18:31:21.397967+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalAdjacentRootUniqueness",
+        "SourceOriginalAtkinGeneratorImages",
+        "SourceOriginalAtkinInvolution"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAdjacentRootUniqueness.lean",
+          "sha256": "A5C859F65E2F6C38E87E4046D398590095CC393A19AE522934E840252B865A2E",
+          "oleanSha256": "55AC3F838D4A89EAA7C9FE940855309AA5C0B0F92A577EEA8EFF11AA1D0E29AB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAtkinGeneratorImages.lean",
+          "sha256": "827561A356A8A811241080A6C0353A5DF7491E97C34A14DE029C3CD341814FEA",
+          "oleanSha256": "9EAEC1E9915FEE051DB3712FAAF484828307BB23D709A92B8860DDCE98D31D22"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAtkinInvolution.lean",
+          "sha256": "19F581B936A69C79AA4811A85D6DB36C794BFABC427AD1353A89AEFCD109360E",
+          "oleanSha256": "04C1F026539DE1967077717B01DCD911AE9F4BCC7F9210A96A05939886F72CC0"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_eq_integral_relation",
+        "Dubon2026.SourceFunctionField.original_adjacent_common_root_unique",
+        "Dubon2026.SourceFunctionField.exists_original_atkin_generator_embedding",
+        "Dubon2026.SourceFunctionField.original_full_internal_pair_adjoin_top",
+        "Dubon2026.SourceFunctionField.exists_original_atkin_involution"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.expandedJMinpoly_eq_integral_relation",
+        "Dubon2026.SourceFunctionField.original_adjacent_common_root_unique",
+        "Dubon2026.SourceFunctionField.exists_original_atkin_generator_embedding",
+        "Dubon2026.SourceFunctionField.original_full_internal_pair_adjoin_top",
+        "Dubon2026.SourceFunctionField.exists_original_atkin_involution"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAtkinInvolutionAudit3.log",
+      "logSha256": "23ED43C8767B32D23AB2A17E9DFF2B5B7A43E7C909A46ED49B15FABCC30D625A",
+      "auditSha256": "DB5D2858D7C30F48617B627DADF1BEB5C5CB2BA1833DEC11792C01B3FCB59511",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 5,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 12,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceAtkinInvolutionDependencyAudit3.log",
+      "dependencyAuditSha256": "ED53C35BEDFE39954C9C5412824640045BE8864E3F65677C1D28B14A4FFE403B",
+      "dependencyAuditSourceSha256": "DADEC58D41753C8CACA6894A7116403B7A9EA9DAC5963C81A8EC1A53927B07AC",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.exists_original_atkin_involution"
+      ],
+      "dependency": "original Tate Frobenius quadratic relation -> actual Hecke norm reduction -> explicit degeneracy norm product -> complete embedding census -> Atkin-Lehner involution -> exact images of original divisor generators",
+      "discharged": "The common-root theorem derived from existing all-level conjugate products pins j_(Np) to j_N. The proved two-generator description gives preservation of the actual level Np field and an involution, with q-expansion on the entire lower field. This removes generator preservation and involution assumptions from the norm-product route without a new prime-factor induction or polynomial-symmetry premise.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The actual degeneracy norm-product identity must still be proved, followed by Hecke/Picard compatibility, the quadratic relation, residual association, automorphy and all-weight continuation. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-atkin-involution-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "70FCD94DB33EB28AD2CDA1C7D386BB1AFE930726C40F13A575643EA4310ECBC9",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T18:43:11.275346+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalTensorCoefficientMapR2",
+        "SourceOriginalTensorCoefficientEquivR2",
+        "SourceOriginalAtkinCoefficientExtensionR2"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTensorCoefficientMapR2.lean",
+          "sha256": "8C72C19B97D9687D11320B0042692B890E65B16E3AC09BD0B39D254C0A97CDB2",
+          "oleanSha256": "2B801FBE7879CFBA98CD6F1DC9C490854FE2F4911DA88C771749F6C6FA78A870"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTensorCoefficientEquivR2.lean",
+          "sha256": "A99FFA72C06CB9810995FFB5475D7A473FDC65066DB32BE2ED2A054BB40F174E",
+          "oleanSha256": "673BCB7B5DCD7C3DF259E056CA291761C78B7F0703E7E6D020EF252EB2517C72"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAtkinCoefficientExtensionR2.lean",
+          "sha256": "5A8ABA05D94D131F1004327903B2D2827A0356A7F823021428FEE17088E7EF98",
+          "oleanSha256": "6345CA4DAE9DE7CFA05FD14BD22BE7BAB4629303F087FD0CBD32B1518570AB64"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.baseChangeRatAlgHom_tmul",
+        "Dubon2026.SourceFunctionField.baseChangeHom_tmul",
+        "Dubon2026.SourceFunctionField.baseChangeHom_one_tmul",
+        "Dubon2026.SourceFunctionField.baseChangeHom_injective",
+        "Dubon2026.SourceFunctionField.baseChangeHom_mem",
+        "Dubon2026.SourceFunctionField.isField_tensorProduct",
+        "Dubon2026.SourceFunctionField.exists_baseChangeHom_eq",
+        "Dubon2026.SourceFunctionField.baseChangeEquiv_one_tmul",
+        "Dubon2026.SourceFunctionField.geomAut_apply",
+        "Dubon2026.SourceFunctionField.geomAut_baseChangeEquiv_tmul",
+        "Dubon2026.SourceFunctionField.geomAut_coeffEmb",
+        "Dubon2026.SourceFunctionField.coe_geomAut_coeffEmb",
+        "Dubon2026.SourceFunctionField.exists_original_atkin_over",
+        "Dubon2026.SourceFunctionField.baseChangeRatAlgHom",
+        "Dubon2026.SourceFunctionField.baseChangeHom",
+        "Dubon2026.SourceFunctionField.baseChangeEquiv",
+        "Dubon2026.SourceFunctionField.geomAut"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.baseChangeRatAlgHom_tmul",
+        "Dubon2026.SourceFunctionField.baseChangeHom_tmul",
+        "Dubon2026.SourceFunctionField.baseChangeHom_one_tmul",
+        "Dubon2026.SourceFunctionField.baseChangeHom_injective",
+        "Dubon2026.SourceFunctionField.baseChangeHom_mem",
+        "Dubon2026.SourceFunctionField.isField_tensorProduct",
+        "Dubon2026.SourceFunctionField.exists_baseChangeHom_eq",
+        "Dubon2026.SourceFunctionField.baseChangeEquiv_one_tmul",
+        "Dubon2026.SourceFunctionField.geomAut_apply",
+        "Dubon2026.SourceFunctionField.geomAut_baseChangeEquiv_tmul",
+        "Dubon2026.SourceFunctionField.geomAut_coeffEmb",
+        "Dubon2026.SourceFunctionField.coe_geomAut_coeffEmb",
+        "Dubon2026.SourceFunctionField.exists_original_atkin_over"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.baseChangeRatAlgHom",
+        "Dubon2026.SourceFunctionField.baseChangeHom",
+        "Dubon2026.SourceFunctionField.baseChangeEquiv",
+        "Dubon2026.SourceFunctionField.geomAut"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAtkinCoefficientAudit3R2.log",
+      "logSha256": "58C04914F1AF972698097A732BC1629A73353D0695F63CED6C410BF9D77217F3",
+      "auditSha256": "A113DC1AA2187CDE353DCA41ECD0243537031C0152F21AA53FB9EC895EBA4B15",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 47,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 23,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceAtkinCoefficientDependencyAudit3R2.log",
+      "dependencyAuditSha256": "68D7239D28FB211E030D12BA74EAD1BBE5F2752BF7774906152ADACC4C9EDF53",
+      "dependencyAuditSourceSha256": "23EC8180954E2512E3BE23E57630A6213F80C2DEFD472A87BE903D3E344C9CA2",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.exists_original_atkin_over"
+      ],
+      "dependency": "original Tate Frobenius quadratic relation -> Hecke norm reduction -> explicit norm product -> embedding census over algebraic-closure coefficients -> base change of the proved rational Atkin-Lehner involution",
+      "discharged": "The actual coefficient tensor evaluation is injective by the existing coefficient-independence theorem and realizes the original coefficient extension for algebraic coefficient fields. Transport of the proved rational involution through this equivalence yields an actual coefficient-field automorphism, involutive and exchanging both original Hecke degeneracy maps on every element. No extension or compatibility premise remains.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The actual degeneracy norm-product identity must still be proved, followed by Hecke/Picard compatibility, the quadratic relation, residual association, automorphy and all-weight continuation. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-atkin-coefficient-3-r2-reuse-review-20261024.json",
+      "reuseReviewSha256": "F75AC7B3B3876481D9B41655E7B18E74C1B9341211DD85C5B4A1050A7A6C1144",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T19:01:50.943432+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalHeckePrimeDegree",
+        "SourceOriginalHeckeNormEmbeddings",
+        "SourceOriginalHeckeEmbeddingCensus",
+        "SourceOriginalHeckeNormProduct"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckePrimeDegree.lean",
+          "sha256": "DD55851A43FC66E74B9DB4105C92C981A499E710D70309BBAECA83DCACED7556",
+          "oleanSha256": "54C889F8B522CF46FE6E81601A2C8D8C388F74D78251765C41B857C58553914E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeNormEmbeddings.lean",
+          "sha256": "FB3DD32AFD002A371B4CD3C71DEB6332A61C596A777607B505B25FE227CBC32A",
+          "oleanSha256": "9E8697FBD577795A9B732D00AB8DD67C2C6F0A7E187D7E625EDF5899B568F1A6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeEmbeddingCensus.lean",
+          "sha256": "7D9685A53E388F2B811027DD9B4521F43BA3E71CF90DA432DEBC417A9FCEFC91",
+          "oleanSha256": "D67C2BCCB95D3A9C98B3FB8CA6C23BC2E9E5FB70CD4926D194F19410134752AA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeNormProduct.lean",
+          "sha256": "831CDDE8D000CF4A1CBEF57D4912EFA1BFEA0652A280D7657643041004ABCA35",
+          "oleanSha256": "38B4DF119E818FC2D5D28E7EAFA3ED15CA04285C930BBEEC20D5BCCD6FF73916"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.original_over_prime_relfinrank",
+        "Dubon2026.SourceFunctionField.originalHeckeAlpha_finrank",
+        "Dubon2026.SourceFunctionField.HeckeNorm.lastEmbedding_commutes",
+        "Dubon2026.SourceFunctionField.HeckeNorm.embedding_zero_apply",
+        "Dubon2026.SourceFunctionField.HeckeNorm.embedding_succ_apply",
+        "Dubon2026.SourceFunctionField.HeckeNorm.embedding_jBeta",
+        "Dubon2026.SourceFunctionField.HeckeNorm.primeConjugates_injective",
+        "Dubon2026.SourceFunctionField.HeckeNorm.embedding_injective",
+        "Dubon2026.SourceFunctionField.HeckeNorm.embedding_bijective",
+        "Dubon2026.SourceFunctionField.HeckeNorm.qExpand_norm",
+        "Dubon2026.SourceFunctionField.HeckeNorm.original_hecke_norm_expanded_product",
+        "Dubon2026.SourceFunctionField.HeckeNorm.alphaAlgebra",
+        "Dubon2026.SourceFunctionField.HeckeNorm.targetAlgebra",
+        "Dubon2026.SourceFunctionField.HeckeNorm.twistEmbedding",
+        "Dubon2026.SourceFunctionField.HeckeNorm.lastEmbedding",
+        "Dubon2026.SourceFunctionField.HeckeNorm.embedding"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.original_over_prime_relfinrank",
+        "Dubon2026.SourceFunctionField.originalHeckeAlpha_finrank",
+        "Dubon2026.SourceFunctionField.HeckeNorm.lastEmbedding_commutes",
+        "Dubon2026.SourceFunctionField.HeckeNorm.embedding_zero_apply",
+        "Dubon2026.SourceFunctionField.HeckeNorm.embedding_succ_apply",
+        "Dubon2026.SourceFunctionField.HeckeNorm.embedding_jBeta",
+        "Dubon2026.SourceFunctionField.HeckeNorm.primeConjugates_injective",
+        "Dubon2026.SourceFunctionField.HeckeNorm.embedding_injective",
+        "Dubon2026.SourceFunctionField.HeckeNorm.embedding_bijective",
+        "Dubon2026.SourceFunctionField.HeckeNorm.qExpand_norm",
+        "Dubon2026.SourceFunctionField.HeckeNorm.original_hecke_norm_expanded_product"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.HeckeNorm.alphaAlgebra",
+        "Dubon2026.SourceFunctionField.HeckeNorm.targetAlgebra",
+        "Dubon2026.SourceFunctionField.HeckeNorm.twistEmbedding",
+        "Dubon2026.SourceFunctionField.HeckeNorm.lastEmbedding",
+        "Dubon2026.SourceFunctionField.HeckeNorm.embedding"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeNormProductAudit4.log",
+      "logSha256": "E6D715AB035B431174C5323F53C1575621CD21CDC4E67227A9F59AA72F390D63",
+      "auditSha256": "20A67A9C1D2F4C852EE9F5CB68921F53576B607B56F54D653935CFFAED5D83DA",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 21,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 23,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeNormProductDependencyAudit4.log",
+      "dependencyAuditSha256": "41CD633BC5C8D2BEC680446CB34932C72FFFB3F1B67F2A4CA0DFEF74B20FE16B",
+      "dependencyAuditSourceSha256": "D138050E12D47D3B1C1D84D33486622CA144EC4C821354322B9CB2497ADC5A80",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.HeckeNorm.original_hecke_norm_expanded_product"
+      ],
+      "dependency": "original Tate Frobenius quadratic relation -> Hecke/Picard reduction compatibility -> actual degeneracy norm reduction -> Laurent norm-product identity -> complete p+1 embedding census",
+      "discharged": "The actual original inclusion has degree p+1. The explicit twisted Atkin embeddings and final expansion form the entire embedding set, using existing twisted-series injectivity. The native norm product formula and the proved Atkin compatibility give the actual original expanded Hecke norm identity, without degree, automorphism, census or product assumptions.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Principal-divisor agreement, Hecke compatibility on torsion, the original Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-hecke-norm-product-4-reuse-review-20261024.json",
+      "reuseReviewSha256": "40D7BF218F0E3B663F2EE1932800C88F80C5181F6AC7C5A109F666E24E1C0398",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T19:01:51.083504+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalHeckeNormReduction"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeNormReduction.lean",
+          "sha256": "878F358F4ABAB4ED56BE784559D3D60DD54A606F4904AFB0FD4DF1A52345A30D",
+          "oleanSha256": "A4A3E83B4B02BBA214DD7C6DB0414FC49F583C02E51DDD789AF18FE52F87C41E"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.original_hecke_norm_integral_reduction"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.original_hecke_norm_integral_reduction"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeNormReductionAudit1.log",
+      "logSha256": "E031565C1B3C60A4055EE7F6C679F196E092559673935B63098127CBEC0033AE",
+      "auditSha256": "575FB3B05D28FE1ED50084673E4CCA45B9649917F4976C7CC5AD984ADF050240",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 1,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 5,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeNormReductionDependencyAudit1.log",
+      "dependencyAuditSha256": "1162E4A4BBF5AF653FD8F59AD2F731F9EF436F789650838F0FD033AE12651B91",
+      "dependencyAuditSourceSha256": "815078897ECDBD58142DEE1F6688ACB96832EF32EAFA9D4BA2FF8E2520D484B6",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_hecke_norm_integral_reduction"
+      ],
+      "dependency": "original Tate Frobenius quadratic relation -> Hecke compatibility on torsion -> agreement on principal divisors -> original integral Hecke norm residue",
+      "discharged": "The actual original Hecke norm of every integral Laurent modular function has an integral Laurent representative whose coefficient reduction is coefficient Frobenius times geometric Frobenius. The expanded product assumption from the earlier extraction lemma is now discharged by the actual norm theorem.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Principal-divisor agreement, Hecke compatibility on torsion, the original Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-hecke-norm-reduction-1-reuse-review-20261024.json",
+      "reuseReviewSha256": "78845321C5574AFE536D4BEDE18F3B37D730C9782816FBFE2025CFB494251196",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T19:25:37.676446+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalIntegralPrincipalDifference",
+        "SourceOriginalTorsionDivisorAgreement"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralPrincipalDifference.lean",
+          "sha256": "4C23A5312A148D7165EA92F944B557BCABAD76426B36AB448DFF2373D30FE36A",
+          "oleanSha256": "6D00A1E265C28286CAD9ACE225B9D45FEC027934254F40CAF9751C942906AD51"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionDivisorAgreement.lean",
+          "sha256": "497ED4D34A03299BD640B73C6FBACCF66B5F1763AAF926199FF9CDA30DAB2228",
+          "oleanSha256": "167C1EE472E966349D2E0E69D5F88A20BD0F7EE9E8C5E95F32084D2EBC60822B"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.original_integral_fraction_form",
+        "Dubon2026.SourceFunctionField.original_principal_difference_of_mul_eq",
+        "Dubon2026.SourceFunctionField.original_principal_divisor_integral_difference",
+        "Dubon2026.SourceFunctionField.original_divisor_hom_eq_on_principal",
+        "Dubon2026.SourceFunctionField.original_divisor_hom_eq_on_torsion"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.original_integral_fraction_form",
+        "Dubon2026.SourceFunctionField.original_principal_difference_of_mul_eq",
+        "Dubon2026.SourceFunctionField.original_principal_divisor_integral_difference",
+        "Dubon2026.SourceFunctionField.original_divisor_hom_eq_on_principal",
+        "Dubon2026.SourceFunctionField.original_divisor_hom_eq_on_torsion"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionAgreementAudit1.log",
+      "logSha256": "7CFC9451351A0313A07093CC14444546BBD92C5C57BA7FC54E8A540B01F8646B",
+      "auditSha256": "A50B6A15A6AAC379518C16551C001AFB418F0245EE5124CF02763FDD23018C14",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 6,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 10,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionAgreementDependencyAudit1.log",
+      "dependencyAuditSha256": "D296309311C8B9BC2CA00D9421AED2EF63B166192C8C54D514658B5B7844A4FE",
+      "dependencyAuditSourceSha256": "C7007A44208E1068E4E0641C7284A7D50352C67C3F2F4620076EA1B5C110ECDA",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_divisor_hom_eq_on_torsion"
+      ],
+      "dependency": "original Tate Frobenius quadratic relation -> Hecke compatibility on every finite Tate torsion layer -> vanishing of the divisor discrepancy on torsion classes -> agreement on all principal divisors -> agreement on integral Laurent principal divisors",
+      "discharged": "Every principal divisor of the actual original field over Qbar is a difference of two integral Laurent principal divisors with nonzero reductions. Agreement on these narrower divisors implies agreement on all finite torsion classes by cancelling a nonzero principal multiple in the torsion-free target divisor group. The actual Hecke integral-principal agreement must still be discharged; global Picard divisibility is unnecessary for this finite-layer route.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Actual Hecke reduction on torsion, the original Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-torsion-agreement-2-reuse-review-20261024.json",
+      "reuseReviewSha256": "C07D62229F1E4600071F6F2C7DD3DD8A8B59BF93EB57C013B3978EE3AFE132A0",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T19:25:37.822286+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceResidueFrobeniusDivisorOperator"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueFrobeniusDivisorOperator.lean",
+          "sha256": "F1B67A5A1FB900BAB49B7B6F1EB73B7A496525F9EEDA4AE2BE5341650EEC2DD3",
+          "oleanSha256": "F48B45A5E330BEA54D3063F09F343D6B95CA2354063118EC1539F38B7328EA54"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.residueCoefficientDivisorEquiv_order",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusPullbackDivisor_apply",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusPullbackDivisor_order",
+        "Dubon2026.SourceFunctionField.residueFrobeniusDivisorOperator_order",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusPullbackDivisor",
+        "Dubon2026.SourceFunctionField.residueFrobeniusDivisorOperator"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.residueCoefficientDivisorEquiv_order",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusPullbackDivisor_apply",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusPullbackDivisor_order",
+        "Dubon2026.SourceFunctionField.residueFrobeniusDivisorOperator_order"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.residueGeometricFrobeniusPullbackDivisor",
+        "Dubon2026.SourceFunctionField.residueFrobeniusDivisorOperator"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceResidueFrobeniusOperatorAudit1.log",
+      "logSha256": "E16D9C22A0A8C7928423A1A7C4C27C07091CDF321885C269C6B8C0179C14D25D",
+      "auditSha256": "829835EFF92E9565E876EDE7865268A5219CFD4588E39535E46D505ECDD8E05A",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 8,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 10,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceResidueFrobeniusOperatorDependencyAudit1.log",
+      "dependencyAuditSha256": "7D2151B661DFE8B40F82F65A6CA635E10A10F37B45365FCA64A35B693E08F856",
+      "dependencyAuditSourceSha256": "2696AFFCC0A5F10B138AF99A17B669CD9D556AC69317F3BC9CD918F795E9E175",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.residueFrobeniusDivisorOperator_order"
+      ],
+      "dependency": "original Tate Frobenius quadratic relation -> Hecke reduction on torsion -> integral-principal agreement -> residue divisor of coefficient Frobenius times geometric Frobenius",
+      "discharged": "The pullback uses the actual geometric place restriction and its proved ramification p. Its sum with the actual pushforward sends div(f) to the divisor of coefficient Frobenius(f) times geometric Frobenius(f). This supplies the residue-side principal divisor in the actual Hecke norm reduction, without introducing a general inseparable finite-morphism package.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Actual Hecke reduction on torsion, the original Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-residue-frobenius-operator-1-reuse-review-20261024.json",
+      "reuseReviewSha256": "38B144EB13BEE949A2371BA88AB9050AAC1DF2F54A3B8C530B622C4F900783FC",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T19:26:10.235836+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceCurveCorrespondencePrincipalOrder",
+        "SourceOriginalHeckePrincipalNorm"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCorrespondencePrincipalOrder.lean",
+          "sha256": "ECBFF46B7AF339E1599AE521E45B885099F48B052D1004D754BE3E705A50BA95",
+          "oleanSha256": "BBEFC84956B11660B09BED62047BD232692C2FB8C45751E1DF14B6FE729300C0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckePrincipalNorm.lean",
+          "sha256": "CCF6248E965D8BFF82E812A7F8CC7AF97BAE9033C0D68D513557401CAA5AE82C",
+          "oleanSha256": "D2B41607053C1EF2EAC4428926504FDD05A2B02F82B160F495F6D255704E2678"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.Divisor.finitePullbackAlong_order",
+        "Dubon2026.SourceCurve.Divisor.geometricCorrespondence_order",
+        "Dubon2026.SourceFunctionField.originalHeckeDivisor_principal_norm"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.Divisor.finitePullbackAlong_order",
+        "Dubon2026.SourceCurve.Divisor.geometricCorrespondence_order",
+        "Dubon2026.SourceFunctionField.originalHeckeDivisor_principal_norm"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckePrincipalNormAudit1.log",
+      "logSha256": "B5E7EF62B71D06BA75048B048D49FD43E4152CCBFFBFE9AC6644FCDE52C1FFE3",
+      "auditSha256": "0C28585CD88A6108136BF22B479C86E79A485ACB86006CF0755142D66EF26E2F",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 3,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 10,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckePrincipalNormDependencyAudit1.log",
+      "dependencyAuditSha256": "0317AAB5B7BD6AAD09F21CD9B0738B72E3C01DE0F4C375481E5B31494CB77F86",
+      "dependencyAuditSourceSha256": "7E9668BBDC0D86C60180AFCBE8C7A4D345AA3C75F707EA57A7B4097A9E9165EE",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalHeckeDivisor_principal_norm"
+      ],
+      "dependency": "original Tate Frobenius quadratic relation -> Hecke compatibility on finite torsion layers -> integral principal agreement -> original Hecke principal divisor equals the principal divisor of the actual degeneracy norm",
+      "discharged": "The literal original Hecke divisor correspondence sends the principal divisor of every nonzero function f to the principal divisor of norm_alpha(beta(f)). Existing pullback ramification and pushforward norm orders prove this equality; original modular finiteness and residue field identifications discharge all geometric premises.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Actual Hecke reduction on torsion, the original Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-hecke-principal-norm-2-reuse-review-20261024.json",
+      "reuseReviewSha256": "C4C72321F59ED5D9665F917D0790838DBA93E923A5F69C9C934C5156356250E6",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T19:34:31.192101+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalIntegralDivisorReduction",
+        "SourceOriginalHeckeIntegralAgreement"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalIntegralDivisorReduction.lean",
+          "sha256": "6D18D0F1EC18CC14700337232FBE4FC3A2613B26E16D099078D9AA28CEE0CA4F",
+          "oleanSha256": "1E3588BA1DDAF263CEC3070A93417BB0268DB722FE3C49F5EFDE1F7F33F54403"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeIntegralAgreement.lean",
+          "sha256": "D0655E0408BAE74D02A08FFD5DA8B40DDFD1D3D859D802FA28C55709334C1EDB",
+          "oleanSha256": "FDB224CCFD7ECCF8B71F9D1B5E2EB0499895C39AB6005436843B5B1A899FD553"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_prolongation_integral_laurent",
+        "Dubon2026.SourceFunctionField.GaussReduction.original_reduction_integral_divisor_order",
+        "Dubon2026.SourceFunctionField.GaussReduction.original_hecke_reduction_integral_principal"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_prolongation_integral_laurent",
+        "Dubon2026.SourceFunctionField.GaussReduction.original_reduction_integral_divisor_order",
+        "Dubon2026.SourceFunctionField.GaussReduction.original_hecke_reduction_integral_principal"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeIntegralAgreementAudit2.log",
+      "logSha256": "B2F09E28F62EEDD095A42F15F002E376E47CCA1946F86F53ED0A140ED052E787",
+      "auditSha256": "2E2DA8F97B52C70FEEA7CF52D0A6963E0819B57869EDA4E87DD93DAB0D6B03D5",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 3,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 10,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeIntegralAgreementDependencyAudit2R2.log",
+      "dependencyAuditSha256": "B6395AD63E924A69B289991A129A0A154219C92ED616C8E09AAF5F1E154B7846",
+      "dependencyAuditSourceSha256": "DA63E04DEA21EF1253A43D92E5BCCD42136F2099A9A2ACF134E96C92B7EE9380",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.original_hecke_reduction_integral_principal"
+      ],
+      "dependency": "original Tate Frobenius quadratic relation -> Hecke compatibility on finite torsion -> agreement on integral principal divisors -> exact original norm principal divisor and its coefficient/geometric Frobenius residue",
+      "discharged": "Reducing the actual original Hecke divisor of an integral Laurent principal divisor with nonzero residue equals the actual residue Frobenius pushforward-plus-pullback applied to its reduction. The same modular constant reduction supplies the exact principal-order identity. Actual norm integrality and its explicit Frobenius residue discharge the Hecke integral-principal agreement premise; no Hecke compatibility certificate remains. Descent to torsion Picard classes, the Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Original Hecke torsion descent, the original Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-hecke-integral-agreement-2-r2-reuse-review-20261024.json",
+      "reuseReviewSha256": "10C11F2AD711FAD6CBC9ED8522E81B20D5B4315CCD51D38EC7A9D7BB8A39E00E",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T19:34:31.330735+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceResidueFrobeniusPicardOperator"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueFrobeniusPicardOperator.lean",
+          "sha256": "322A659AABD06DFE788F6B86D546BF6DC175EE5E3BA28D580232314FA2235B1F",
+          "oleanSha256": "7E08C4B93BCC27AE824CAE3A43D41D4C3DCBA90255D3A39D42197A3B7C109A08"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.residueCoefficientDivisorEquiv_symm",
+        "Dubon2026.SourceFunctionField.residueCoefficientPicard_inverse",
+        "Dubon2026.SourceFunctionField.residueFrobeniusDivisorOperator_eq",
+        "Dubon2026.SourceFunctionField.residueFrobeniusDivisorOperator_mem_degZero",
+        "Dubon2026.SourceFunctionField.residueFrobeniusPicardOperator_mk",
+        "Dubon2026.SourceFunctionField.residueFrobeniusPicardOperator_coefficient",
+        "Dubon2026.SourceFunctionField.residueFrobeniusPicardOperator"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.residueCoefficientDivisorEquiv_symm",
+        "Dubon2026.SourceFunctionField.residueCoefficientPicard_inverse",
+        "Dubon2026.SourceFunctionField.residueFrobeniusDivisorOperator_eq",
+        "Dubon2026.SourceFunctionField.residueFrobeniusDivisorOperator_mem_degZero",
+        "Dubon2026.SourceFunctionField.residueFrobeniusPicardOperator_mk",
+        "Dubon2026.SourceFunctionField.residueFrobeniusPicardOperator_coefficient"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.residueFrobeniusPicardOperator"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceResidueFrobeniusPicardOperatorAudit1.log",
+      "logSha256": "E92655779681577909134477D68293E4432459D157113D4DF59DF20943FDEDFE",
+      "auditSha256": "42269991EB2DC49E819DDB2C58EF342F425C3588A1E55A3FB8F072118CE6C92E",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 13,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 10,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceResidueFrobeniusPicardOperatorDependencyAudit1.log",
+      "dependencyAuditSha256": "BEA7DE729AF49720BF3206F6277DEF186423A064425EC56F51CEE69F26654F3E",
+      "dependencyAuditSourceSha256": "3AFAFF03793BE4E6346A4657CE662030EF139277B2269D9925E1240396A422B5",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.residueFrobeniusPicardOperator_mk",
+        "Dubon2026.SourceFunctionField.residueFrobeniusPicardOperator_coefficient"
+      ],
+      "dependency": "original Tate quadratic relation -> original Picard torsion quadratic relation -> residue Frobenius correspondence composed with coefficient Frobenius -> inverse coefficient permutation on actual divisor classes",
+      "discharged": "The actual residue Frobenius divisor operator descends to the native degree-zero Picard quotient. Its composition with actual coefficient Frobenius is Frobenius squared plus multiplication by p, proved through the inverse place permutation and the existing quotient construction. Original Hecke torsion descent, the original Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Original Hecke torsion descent, the original Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-residue-frobenius-picard-operator-1-reuse-review-20261024.json",
+      "reuseReviewSha256": "9EAEBE3AF55A322922F327B51CCF3C75D2C3F98EEA0C96BAE3F02353FB7E0FC7",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T19:57:36.542760+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceSpanningSpecializationQuadratic",
+        "SourceOriginalSpecializationQuadratic"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningSpecializationQuadratic.lean",
+          "sha256": "37A2DFE9863011A19AF41AEEE48CDF26A8FFCD816922A387BAFB47817C4BC51E",
+          "oleanSha256": "F930B0B498362D9830991EDA1B1367229119FFCA6B83E2BBCE8C1418CA0D2292"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSpecializationQuadratic.lean",
+          "sha256": "973EBA1A5FFE7C6EB788B11C175772CC4B993DC9AD9B199388E7575F5212BEC6",
+          "oleanSha256": "5296ED8062C37A4E414DEC5EDF0C413FDCB81AA840E60E2237078788E373FCCD"
+        }
+      ],
+      "queries": [
+        "Dubon2026.quadratic_identity_on_spanning_specialization",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_quadratic"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.quadratic_identity_on_spanning_specialization",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_quadratic"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSpecializationQuadraticAudit2.log",
+      "logSha256": "A68F3EE2CCA1827CEAE587D53063601519CE66195EE2382044607B62A1F237DC",
+      "auditSha256": "7376CE7B3F0D06005F7E42FC4C7E1C153A4C25424FC06498975BE8CF4EBD6337",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 2,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 5,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSpecializationQuadraticDependencyAudit2.log",
+      "dependencyAuditSha256": "48CEEF1940CB08847BC1013A4A731D689FBD4143C4ECE5B16BBF686513A100AD",
+      "dependencyAuditSourceSha256": "8BB5DE85025F828975A29FCA690F1559CF679EFF0DAB59DC44D62C94898D4A4D",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_quadratic"
+      ],
+      "dependency": "actual primitive-form Frobenius polynomial -> transfer to the same spanning specialization -> actual original rational Tate quadratic identity",
+      "discharged": "The explicit quadratic identity on the actual original rational Tate space transfers along the existing spanning specialization with its Hecke eigenvalue and original arithmetic intertwining to the same rank-two representation. This consumer remains conditional on that narrower Tate identity; the actual Frobenius consumer must supply it. No new representation, determinant or trace is postulated. Original Frobenius assembly, the determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The actual original Frobenius identity must supply the explicit rational Tate premise. Determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-specialization-quadratic-2-reuse-review-20261024.json",
+      "reuseReviewSha256": "9336C2FA9F06784FA43264AFC0D8560CAD66BF5087A181BF524F25B3CFFC88E9",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T20:20:11.098950+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalHeckeTorsionReduction",
+        "SourceOriginalPicardFrobeniusQuadratic",
+        "SourceOriginalTateFrobeniusQuadratic",
+        "SourceOriginalPrimitiveFrobeniusQuadraticRealization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeTorsionReduction.lean",
+          "sha256": "5097F65F46B9509DA1A2C6322AE273946FC37E26ABB5ED8B3B7AA071ADB1D2BA",
+          "oleanSha256": "FCD8FD26AF0F44B8C07048A48942245FD2E0B5E68C3B8E47AB90A5365148FF1E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardFrobeniusQuadratic.lean",
+          "sha256": "99FE74693CE4497BF34D8DB5A50837F0699073094F2275B0D3AE2EC247C3241E",
+          "oleanSha256": "4533D2A4216ACA167CDBB3D7D0314702F153CA09E35F6F0C31BA25B4301D2426"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateFrobeniusQuadratic.lean",
+          "sha256": "2342F4701F86289AE97B2459263C92FC04913367CF82FC651D09DCCF77E35E97",
+          "oleanSha256": "3900DC6681E41CCA9B6E1993598085B03C3A234EF7387723B0523B45388A6C8C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusQuadraticRealization.lean",
+          "sha256": "7AFD499F33D0FD359F44CF412651FBEC79DFE71A6147E8693E993BE62ADE3B76",
+          "oleanSha256": "4C2664A88D2DE0D4AD3C7A77BA5DEED8A645BD7F8BA05094EB9782A26F56C275"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GaussReduction.original_hecke_reduction_torsion_divisor",
+        "Dubon2026.SourceFunctionField.GaussReduction.original_hecke_reduction_torsion_picard",
+        "Dubon2026.SourceFunctionField.GaussReduction.original_hecke_frobenius_reduction_quadratic",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalArithmeticPicard_frobenius_quadratic",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalTateGaloisRep_frobenius_quadratic",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalRationalTateGaloisRep_frobenius_quadratic",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalRationalTateGaloisRep_frobenius_quadratic_away",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_quadratic_realization"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GaussReduction.original_hecke_reduction_torsion_divisor",
+        "Dubon2026.SourceFunctionField.GaussReduction.original_hecke_reduction_torsion_picard",
+        "Dubon2026.SourceFunctionField.GaussReduction.original_hecke_frobenius_reduction_quadratic",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalArithmeticPicard_frobenius_quadratic",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalTateGaloisRep_frobenius_quadratic",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalRationalTateGaloisRep_frobenius_quadratic",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalRationalTateGaloisRep_frobenius_quadratic_away",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_quadratic_realization"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFrobeniusQuadraticAudit4R2.log",
+      "logSha256": "5B6F35D24569872C84C1FB503D9FC71F3B2739BCA1EA467BDBAECF7A337767F8",
+      "auditSha256": "40B21BF1427EA7E941C289536578268DBA166346DDCF83B0B275449C13C76E20",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 10,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 16,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFrobeniusQuadraticDependencyAudit4R2.log",
+      "dependencyAuditSha256": "92A8D1F3406786301FEC15ACBFF86633C2C7912241ECD50E6A2FE4DB60A2051E",
+      "dependencyAuditSourceSha256": "8CB43CCBB3130E492C1DAD3CBBEB7F83504BF3DED4ECA7BDDC7D56257923FE48",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_quadratic_realization"
+      ],
+      "dependency": "genuine non-CM modular-form concentration -> actual residual modular Galois association -> original primitive weight-two Frobenius characteristic polynomial -> Frobenius quadratic identity and separate determinant -> original rational Tate identity -> finite Picard torsion comparison under the actual constructed reduction",
+      "discharged": "The actual original Hecke correspondence and arithmetic Frobenius satisfy the quadratic identity on every residue-invertible Picard torsion subgroup, on actual integral and rational Tate space, and on the same constructed continuous unramified rank-two primitive weight-two realization. The reduction, Hecke agreement, torsion injectivity and specialization assumptions are supplied by proved constructions. Determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The quadratic identity alone does not prove determinant or trace. No characteristic polynomial, residual association, automorphy or additional acceptance gate is claimed. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-frobenius-quadratic-4-r2-reuse-review-20261024.json",
+      "reuseReviewSha256": "51308C9F09C83290C47C3FF5412F1F465D13544481762D39402B2E70C4F5F61A",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-arithmetic-frobenius-residue-3-reuse-review-20261024.json",
+    "Tools/source-frobenius-place-reduction-3-reuse-review-20261024.json",
+    "Tools/source-frobenius-picard-reduction-5-reuse-review-20261024.json",
+    "Tools/source-geometric-frobenius-3-reuse-review-20261024.json",
+    "Tools/source-geometric-picard-reduction-3-reuse-review-20261024.json",
+    "Tools/source-hecke-laurent-reduction-3-reuse-review-20261024.json",
+    "Tools/source-atkin-embedding-2-reuse-review-20261024.json",
+    "Tools/source-atkin-involution-3-reuse-review-20261024.json",
+    "Tools/source-atkin-coefficient-3-r2-reuse-review-20261024.json",
+    "Tools/source-hecke-norm-product-4-reuse-review-20261024.json",
+    "Tools/source-original-hecke-norm-reduction-1-reuse-review-20261024.json",
+    "Tools/source-original-torsion-agreement-2-reuse-review-20261024.json",
+    "Tools/source-residue-frobenius-operator-1-reuse-review-20261024.json",
+    "Tools/source-original-hecke-principal-norm-2-reuse-review-20261024.json",
+    "Tools/source-original-hecke-integral-agreement-2-r2-reuse-review-20261024.json",
+    "Tools/source-residue-frobenius-picard-operator-1-reuse-review-20261024.json",
+    "Tools/source-original-specialization-quadratic-2-reuse-review-20261024.json",
+    "Tools/source-original-frobenius-quadratic-4-r2-reuse-review-20261024.json"
+  ],
+  "additionalCurrentSearch": {
+    "path": "Tools/hecke-frobenius-promotion-route-461.json",
+    "sha256": "A6D0881C468B09A3BB65319ED5864429E91FCDEF773CE3265735B530ADD14561"
+  },
+  "productionFocusedReceipt7591": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticFrobeniusResidueDependencyAudit3Production7591.log",
+        "sha256": "0BB8F287544A4249F0D5BA574B4912A31D507BAC835671434856AE10BCC7534B",
+        "requiredProofValueEdges": 22,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GaussReduction.original_arithmeticFrobenius_modularResidue",
+          "Dubon2026.SourceFunctionField.GaussReduction.residueArithmeticFrobenius_chart",
+          "Dubon2026.SourceFunctionField.GaussReduction.residueArithmeticFrobenius_coe"
+        ],
+        "sourceSha256": "AD36E16DB6E231E8FDD8CB74C8F34A4D26DC9A2697F826C8824114C0FC03DD43"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusPlaceReductionDependencyAudit3Production7591.log",
+        "sha256": "216C3D3CA32214125A845C9A81530C770926F3233414FD386BFDBACA97302175",
+        "requiredProofValueEdges": 17,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_arithmeticFrobenius_equivariant"
+        ],
+        "sourceSha256": "FD666A33D7A2D33BC4896D2962586922A8BD48228DC134E823EF45A70CA4EF82"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusPicardReductionDependencyAudit5Production7591.log",
+        "sha256": "783C93B6A6AA0FCF42A5A69FBACD3FE4B37B9C803F34A8525F71812442F16082",
+        "requiredProofValueEdges": 24,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_arithmeticFrobenius_picard",
+          "Dubon2026.SourceFunctionField.residueCoefficientPicard_mk"
+        ],
+        "sourceSha256": "A67347982C588D12D279069142BF78F7D3998AD033B17CFE85B369BED69B58AD"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGeometricFrobeniusDependencyAudit3Production7591.log",
+        "sha256": "6B258833CE43CFDB432CCC26982734C4901A469F30555676E8A5B00D6F9F2B46",
+        "requiredProofValueEdges": 20,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.residueGeometricFrobenius_coe",
+          "Dubon2026.SourceFunctionField.residueGeometricFrobenius_isIntegral",
+          "Dubon2026.SourceFunctionField.residueGeometricFrobenius_place_order"
+        ],
+        "sourceSha256": "07997AD1AFCC6B27B0709068033AE812F724F62627DB6A281CD8B40BE535BB25"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGeometricPicardReductionDependencyAudit3Production7591.log",
+        "sha256": "CCE35C319FC3C947B9EB5A10AB7A305480E4E5467AB0F55182FDB2F37B0EF8B6",
+        "requiredProofValueEdges": 17,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_geometricFrobenius_picard"
+        ],
+        "sourceSha256": "5D0DE19D40922B62199F22030A65A77748E6A2A097B7A19227CEB6127008D633"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeLaurentReductionDependencyAudit3Production7591.log",
+        "sha256": "93E034B8B319848214B966858D443693A765A5B669F0498BB46CAE974F8F5241",
+        "requiredProofValueEdges": 15,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.exists_integral_laurent_reduction_of_hecke_product",
+          "Dubon2026.SourceFunctionField.primeRootValuationUnit_coe"
+        ],
+        "sourceSha256": "AC88A5F9C03AF42DF929F7C91EA3A80C215B649A173E4C678695E022A4FBE0A1"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceAtkinEmbeddingDependencyAudit2Production7591.log",
+        "sha256": "960AA5998965E33E3607B1C975F6D18DB33F7AC6FFB74F2F0486EA14807F4703",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.exists_original_atkin_embedding"
+        ],
+        "sourceSha256": "8D2F3A0629A3A6239B07C0DA4C6F3EC65D688D6B3C095D820A8D1772B673CA98"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceAtkinInvolutionDependencyAudit3Production7591.log",
+        "sha256": "ED53C35BEDFE39954C9C5412824640045BE8864E3F65677C1D28B14A4FFE403B",
+        "requiredProofValueEdges": 12,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.exists_original_atkin_involution"
+        ],
+        "sourceSha256": "D12F18A05788E4B674367580B87BB3129C9B0B6B66FF2D36A6F7787C1102170A"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceAtkinCoefficientDependencyAudit3R2Production7591.log",
+        "sha256": "68D7239D28FB211E030D12BA74EAD1BBE5F2752BF7774906152ADACC4C9EDF53",
+        "requiredProofValueEdges": 23,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.exists_original_atkin_over"
+        ],
+        "sourceSha256": "A2DE4938D4B62CBE64B3024DF57CE6E4EE86D3A3FA53C91F434E0A388AFAF3CA"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeNormProductDependencyAudit4Production7591.log",
+        "sha256": "41CD633BC5C8D2BEC680446CB34932C72FFFB3F1B67F2A4CA0DFEF74B20FE16B",
+        "requiredProofValueEdges": 23,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.HeckeNorm.original_hecke_norm_expanded_product"
+        ],
+        "sourceSha256": "5EC348C64FE7DC76A4BA650CFB190D0025DD5CDD7BA8A21795863895CBDC7F50"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeNormReductionDependencyAudit1Production7591.log",
+        "sha256": "1162E4A4BBF5AF653FD8F59AD2F731F9EF436F789650838F0FD033AE12651B91",
+        "requiredProofValueEdges": 5,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_hecke_norm_integral_reduction"
+        ],
+        "sourceSha256": "D85FE492B35FD61BAEB47A1293B7E5A4334608B741BD0B7F528552C7E217748F"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionAgreementDependencyAudit1Production7591.log",
+        "sha256": "D296309311C8B9BC2CA00D9421AED2EF63B166192C8C54D514658B5B7844A4FE",
+        "requiredProofValueEdges": 10,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_divisor_hom_eq_on_torsion"
+        ],
+        "sourceSha256": "74C70DC192B7C491D0F69D3EF26D2F36535FF3DD347E08FD22B5BE6F931A540E"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceResidueFrobeniusOperatorDependencyAudit1Production7591.log",
+        "sha256": "7D2151B661DFE8B40F82F65A6CA635E10A10F37B45365FCA64A35B693E08F856",
+        "requiredProofValueEdges": 10,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.residueFrobeniusDivisorOperator_order"
+        ],
+        "sourceSha256": "47A6DCF72619D1D5BCD36D9CE5E429915D487D3F60D7328DC7C3A99BFE24A3D6"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckePrincipalNormDependencyAudit1Production7591.log",
+        "sha256": "0317AAB5B7BD6AAD09F21CD9B0738B72E3C01DE0F4C375481E5B31494CB77F86",
+        "requiredProofValueEdges": 10,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalHeckeDivisor_principal_norm"
+        ],
+        "sourceSha256": "86A63215DDA56EFCABECB96A4BE64D1921B1C8B8C3F6028D76829FA42EAB08E4"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeIntegralAgreementDependencyAudit2R2Production7591.log",
+        "sha256": "B6395AD63E924A69B289991A129A0A154219C92ED616C8E09AAF5F1E154B7846",
+        "requiredProofValueEdges": 10,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GaussReduction.original_hecke_reduction_integral_principal"
+        ],
+        "sourceSha256": "7EA99CDEE1F7A16C6E00BFA08FB0D0B4329A593746280ED83BAF62CC203CAD0D"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceResidueFrobeniusPicardOperatorDependencyAudit1Production7591.log",
+        "sha256": "BEA7DE729AF49720BF3206F6277DEF186423A064425EC56F51CEE69F26654F3E",
+        "requiredProofValueEdges": 10,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.residueFrobeniusPicardOperator_mk",
+          "Dubon2026.SourceFunctionField.residueFrobeniusPicardOperator_coefficient"
+        ],
+        "sourceSha256": "DFFC1A71F12BCB2E7BD90E0DB565B6CA71D60F31A53AD5C83B258F3A05A816D8"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSpecializationQuadraticDependencyAudit2Production7591.log",
+        "sha256": "48CEEF1940CB08847BC1013A4A731D689FBD4143C4ECE5B16BBF686513A100AD",
+        "requiredProofValueEdges": 5,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_quadratic"
+        ],
+        "sourceSha256": "0B735F5C75B999FA67E6BCAEBE1D2550CCADB4D76EED0360E9A892EB20474AD0"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFrobeniusQuadraticDependencyAudit4R2Production7591.log",
+        "sha256": "92A8D1F3406786301FEC15ACBFF86633C2C7912241ECD50E6A2FE4DB60A2051E",
+        "requiredProofValueEdges": 16,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_quadratic_realization"
+        ],
+        "sourceSha256": "86617EB63862361A0D022DE1C79E85C12FA0368A4FF7B61770E6C9D23F013D5A"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusProductionAudit7591.log",
+    "sha256": "B51FDAF600CB4F6C500B5C156312F1A41E8EDC4683FF4C77153D99B2D94418E7",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-hecke-frobenius-production-build-7591.log",
+    "aggregateSha256": "CCA8D000FDA0048F75A391D8310D2A8F3A75F3F352E664848660752E155FA22C",
+    "productionModules": 7591,
+    "incrementModules": 47,
+    "axiomChecks": 146,
+    "exhaustiveIncrementTheorems": 275,
+    "linterScopes": 47,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 275,
+    "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The actual modular places, coefficient fields, Gauss residue map, divisor orders, genera and Picard quotient retain their definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 275,
+      "scratchDistinct": 275,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusQuadraticRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveFrobeniusQuadraticRealization": "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusQuadraticRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026"
+      },
+      "generatedNameReason": "Lean names anonymous local instances using the module root. Import qualification changes that root to Dubon2026. Each of the one pair has the same owning source module, byte-identical mathematical source after import qualification, identical full declaration type and identical full kernel proof expression. No theorem is omitted or weakened.",
+      "generatedNameSourceEvidence": {
+        "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusQuadraticRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveFrobeniusQuadraticRealization": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusQuadraticRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "owningModule": "SourceOriginalPrimitiveFrobeniusQuadraticRealization",
+          "exactDeclarationType": "Lean.Expr.forallE\n  `q\n  (Lean.Expr.const `Nat.Primes [])\n  (Lean.Expr.app\n    (Lean.Expr.app\n      (Lean.Expr.app (Lean.Expr.const `NeZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `MulZeroClass.toZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.const `Nat.instMulZeroClass [])))\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lam\n          `p\n          (Lean.Expr.const `Nat [])\n          (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n          (Lean.BinderInfo.default)))\n      (Lean.Expr.bvar 0)))\n  (Lean.BinderInfo.default)",
+          "exactProofValue": "Lean.Expr.lam\n  `q\n  (Lean.Expr.const `Nat.Primes [])\n  (Lean.Expr.app\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `NeZero.mk [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `MulZeroClass.toZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.const `Nat.instMulZeroClass [])))\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lam\n            `p\n            (Lean.Expr.const `Nat [])\n            (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n            (Lean.BinderInfo.default)))\n        (Lean.Expr.bvar 0)))\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.const `Nat.Prime.ne_zero [])\n        (Lean.Expr.app\n          (Lean.Expr.app\n            (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n            (Lean.Expr.lam\n              `p\n              (Lean.Expr.const `Nat [])\n              (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n              (Lean.BinderInfo.default)))\n          (Lean.Expr.bvar 0)))\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app\n            (Lean.Expr.const `Subtype.property [Lean.Level.succ (Lean.Level.zero)])\n            (Lean.Expr.const `Nat []))\n          (Lean.Expr.lam\n            `p\n            (Lean.Expr.const `Nat [])\n            (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n            (Lean.BinderInfo.default)))\n        (Lean.Expr.bvar 0))))\n  (Lean.BinderInfo.default)",
+          "typeSha256": "874E72092F3708117CC135BEF7A0E751A630C7940DB8DA202EBB8FD435673A1F",
+          "proofValueSha256": "43813E1D6FA8CAB5F660471853956C4E309E02A962E79732C126D7D6E9106FF0",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusQuadraticRealization.lean",
+            "sha256": "7AFD499F33D0FD359F44CF412651FBEC79DFE71A6147E8693E993BE62ADE3B76"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveFrobeniusQuadraticRealization.lean",
+            "sha256": "346D2FFF226B66520284C59193080FB1377099C27DFEB0588967844C4F1C6849"
+          },
+          "onlyImportQualification": true
+        }
+      },
+      "productionFocused": 275,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceResidueCoefficientAutomorphism",
+            "SourceDecompositionGaussAction",
+            "SourceArithmeticFrobeniusResidue"
+          ],
+          "count": 35,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership436For7591.log",
+            "sha256": "0CDD3F8F073B278B61588F8D7F6631F238DA6C0B1FA666A15055AC4E44DDE7E0",
+            "sourceSha256": "B267D113A6DEC9E92DFD3880BEBE508C38258C23FFBB381552FED6D9887205EC"
+          }
+        },
+        {
+          "modules": [
+            "SourceResidueCoefficientPlaces",
+            "SourceDecompositionChartTransport",
+            "SourceModularDecompositionPlaceReduction"
+          ],
+          "count": 24,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership438For7591.log",
+            "sha256": "4A27A42C1A7A54842EDDF5A4654CB3C603DDAEF85C4F6381CD22A1CE9A839070",
+            "sourceSha256": "2FDB002F519403A2899D91105522AF6F80B3E13A72914F46A23608529754285A"
+          }
+        },
+        {
+          "modules": [
+            "SourceResidueCoefficientPlaceOrders",
+            "SourceResidueCoefficientDivisors",
+            "SourceResidueCoefficientPicard",
+            "SourceOriginalDecompositionDivisorReduction",
+            "SourceOriginalFrobeniusPicardReduction"
+          ],
+          "count": 27,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership439For7591.log",
+            "sha256": "4374E3A988AC85F0C301DE4EBF73D69DB6BC75BC15997DD7003857DFE7938B77",
+            "sourceSha256": "105FEE4F9EEC9AF6364BCD504ABAFAA96053AF58CA5CD06C54C455D90D4219EB"
+          }
+        },
+        {
+          "modules": [
+            "SourceLaurentFrobenius",
+            "SourceResidueGeometricFrobenius",
+            "SourceResidueGeometricFrobeniusPlaces"
+          ],
+          "count": 23,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership440For7591.log",
+            "sha256": "5892A702ACD3F67D40D762E83ADD92EDDD28438F6B466376BAAA5F7914023DBF",
+            "sourceSha256": "C30ED66B7AE374C0677C3E2CB409C3244D05A93AA4D44FB8EA9666EC598A1B9D"
+          }
+        },
+        {
+          "modules": [
+            "SourceResidueGeometricFrobeniusDivisors",
+            "SourceResidueGeometricFrobeniusPicard",
+            "SourceOriginalGeometricFrobeniusReduction"
+          ],
+          "count": 20,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership441For7591.log",
+            "sha256": "DB44725A5E0E1CE2458419D2A001084F9957BB2A8B28B9A6D688B7E4604DFF10",
+            "sourceSha256": "2ACA81F3EEB53FD7AE280E56D0D2291986035A8FAD84AAD185E917E84BD1CDEA"
+          }
+        },
+        {
+          "modules": [
+            "SourceHeckePrimeRootReduction",
+            "SourceHeckeLaurentProductReduction",
+            "SourceHeckeLaurentNormExtraction"
+          ],
+          "count": 18,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership442For7591.log",
+            "sha256": "DA6A047B2A582C5C14D1E692E94FA53C9D6F4D0DE42626DEB8D65D4DB0A8492C",
+            "sourceSha256": "6593E58DDDD1ADA903C19C62590E48889517B81EDE087E693647EA95E7149CC7"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalAtkinPrimePolynomial",
+            "SourceOriginalAtkinEmbedding"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership443For7591.log",
+            "sha256": "85B3394D8916317F732A396C26599C1984A279AB54B24085EF3FE4719D99C237",
+            "sourceSha256": "5D6120EA2F8D9AFC98EB50171B8ED7FFDF9FD143B81E169543D7CE9A99E78FB9"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalAdjacentRootUniqueness",
+            "SourceOriginalAtkinGeneratorImages",
+            "SourceOriginalAtkinInvolution"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership444For7591.log",
+            "sha256": "A5987B4E5B4B02D66CB1ECE50FBECA9DD28FBF70DD89106538F564802C2B12AF",
+            "sourceSha256": "5AE431E0BE17AFA13E6CAE1EDF77D498896F60321DFD3460A54861A5C7E130AF"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalTensorCoefficientMapR2",
+            "SourceOriginalTensorCoefficientEquivR2",
+            "SourceOriginalAtkinCoefficientExtensionR2"
+          ],
+          "count": 47,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership445For7591.log",
+            "sha256": "EF623998468BEC4DB7293B630D5FAC668C3FAA866727E445CFBA8CCB27E36088",
+            "sourceSha256": "967B23C40EA6039D19E5604C7583E4A08AB0F5C81FC4E85094E805DCB0C1A2E8"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalHeckePrimeDegree",
+            "SourceOriginalHeckeNormEmbeddings",
+            "SourceOriginalHeckeEmbeddingCensus",
+            "SourceOriginalHeckeNormProduct"
+          ],
+          "count": 21,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership446For7591.log",
+            "sha256": "46923C884E222C7E5DE1AEFD72497E39D63A0DB48566B1B526EE0201EA3C4BE6",
+            "sourceSha256": "F037DE3A0B4FC5FD514373996A8D4B6D6F3E2F33FD54C35D3A58F7BFDC49CAA7"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalHeckeNormReduction"
+          ],
+          "count": 1,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership447For7591.log",
+            "sha256": "E36400C5E0B4BC9822D8E7C70F91F822D4D00FC1028604DB111E70AA1C21EC9F",
+            "sourceSha256": "CF2016B549051C7398378E7730E000FD4D269D3C21F1FC068226B9FD9C528971"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalIntegralPrincipalDifference",
+            "SourceOriginalTorsionDivisorAgreement"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership448For7591.log",
+            "sha256": "DCC1C87B5D2F0EC92DAE5D9524918853E5316A6BF218BE0838D8841B662EBBD5",
+            "sourceSha256": "E9389505FB70BD29A9BAC594B9ED8D042083E2BFF7B00410C27204F33DCF5510"
+          }
+        },
+        {
+          "modules": [
+            "SourceResidueFrobeniusDivisorOperator"
+          ],
+          "count": 8,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership449For7591.log",
+            "sha256": "74D7474C3404443F9CF9C925D7E62CB6577BFF97ECD90151671E0AA691D4600E",
+            "sourceSha256": "779C8598F717171F0510E425E66878C18E9B989237EAB084B3FDC96020991059"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveCorrespondencePrincipalOrder",
+            "SourceOriginalHeckePrincipalNorm"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership450For7591.log",
+            "sha256": "34E4AA062B9621CAE5422F4FFCA7720D2C505E0922D3CB5E95DB538614BC2AA8",
+            "sourceSha256": "166A2726BD80AFDFAA674F2466EC47D9327EE75A3392C16A0F1AAB91D1E6D062"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalIntegralDivisorReduction",
+            "SourceOriginalHeckeIntegralAgreement"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership451For7591.log",
+            "sha256": "1CA61E076658ECE4DB688C75DEE99BA0588FAEEF3971C1178A47A17603120DDE",
+            "sourceSha256": "FA5261FFF1B5461E91349B987B4FBBDD6657784D2198C3BAF353427D6988A11D"
+          }
+        },
+        {
+          "modules": [
+            "SourceResidueFrobeniusPicardOperator"
+          ],
+          "count": 13,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership453For7591.log",
+            "sha256": "F03FD38FCCEFC2EE6DC1BDB97128062386590D77BCF3AF2E5F8F8797F18DB83F",
+            "sourceSha256": "3974EF480A9211C3CAB4B1D58C0B807EFE03901EE19A3217DBBD92043C79A5B6"
+          }
+        },
+        {
+          "modules": [
+            "SourceSpanningSpecializationQuadratic",
+            "SourceOriginalSpecializationQuadratic"
+          ],
+          "count": 2,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership459For7591.log",
+            "sha256": "E8279E6E67C08EB793307255ED799B2893FC8018594FC8ECDF81386DC09C550F",
+            "sourceSha256": "8B07053BEBD923B17273F0E36E96DD6224C3723ACBDA4D9DB2BDC6A44A51EB75"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalHeckeTorsionReduction",
+            "SourceOriginalPicardFrobeniusQuadratic",
+            "SourceOriginalTateFrobeniusQuadratic",
+            "SourceOriginalPrimitiveFrobeniusQuadraticRealization"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership460For7591.log",
+            "sha256": "532F3CA4ECA2F96DBED21625198011D87397F852AA24E58F613567F3EFE347D9",
+            "sourceSha256": "A14E08AFB51D3B20C4FC803969800842539BF8B211C5659751A60D649F0BBD04"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusOwnership7591.log",
+        "sha256": "E8B5EF664AF71B4BA17FBDCEB3B5071BF1EEB5D4277B854B65C264FA8C354E15",
+        "sourceSha256": "7B1FCE66C9BF53AF1FB4B8B3899AA7AB662A7F516E56EC112631D04A2D9E675B"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-122305-446.log",
+        "sha256": "E3C0C0FB4DACE3EA6E1CF2742B4261561DD8FF852B837D8EEEA56A20BC684869"
+      },
+      "generatedNameInspectionEvidence": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\hecke-frobenius-generated-name-evidence-7591.json",
+        "sha256": "A0DD8FE242116244CCDF2E9A1B0AD29A2E3D5508BB55F9353F6B58CDBE839ED3"
+      },
+      "precedingComparisonProgram": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\compare_hecke_frobenius_ownership_7591.py",
+        "sha256": "F321B24A5ACF8C9EED637637E6C312DD00A084EDF6C053E66D8A487A77AA2607",
+        "correction": "The initial program omitted loading its recorded generated-name evidence and referred to undefined generatedData. This successor loads and hash-checks that evidence before exact name-set comparison. No Lean source or previous evidence is changed."
+      }
+    },
+    "scratchToProductionCountReason": "All 275 distinct names from 275 exhaustive scratch checks are retained: 275 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "ownershipComparisonRepair": {
+      "precedingProgram": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\compare_hecke_frobenius_ownership_7591.py",
+        "sha256": "F321B24A5ACF8C9EED637637E6C312DD00A084EDF6C053E66D8A487A77AA2607",
+        "correction": "The initial program omitted loading its recorded generated-name evidence and referred to undefined generatedData. This successor loads and hash-checks that evidence before exact name-set comparison. No Lean source or previous evidence is changed."
+      },
+      "comparisonProgram": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\compare_hecke_frobenius_ownership_7591_r2.py",
+        "sha256": "B8AB37D112AF4DB83680988E832B107A9411EE9AF09711180F91F7FDAF9AB392"
+      },
+      "evidence": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\hecke-frobenius-generated-name-evidence-7591.json",
+        "sha256": "A0DD8FE242116244CCDF2E9A1B0AD29A2E3D5508BB55F9353F6B58CDBE839ED3"
+      },
+      "reason": "Bookkeeping-only successor; all mathematical sources, compiled objects and completed audit evidence are preserved."
+    },
+    "boundary": "The separate Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. The quadratic identity alone does not prove determinant or trace. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt7591": {
+    "recordedUTC": "2026-10-24T22:44:03.882511+00:00",
+    "log": "logs/dubon-build-20261024-142442-365.log",
+    "sha256": "A34A9F97CAAC3A7C5D5782FB8B32FA3857358A3B288C13352482CD7D745F5079",
+    "bytes": 12645346,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 7591,
+    "projectTheorems": 49704,
+    "registeredConsumers": 22573,
+    "registeredConstructions": 1998,
+    "declarations": 30439,
+    "generated": 29260,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261024_141913.log",
+    "foundationSha256": "7C76507F87F74026FF63938C6FECBD08AE937B9970BBD586D72D5FF3CB91C507",
+    "countReconciliation": {
+      "previousTheorems": 49430,
+      "focusedTheorems": 275,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourceFunctionField.originalHeckeBeta.congr_simp"
+      ],
+      "addedTheorems": 274,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusOwnership7591.log",
+      "ownershipSha256": "E8B5EF664AF71B4BA17FBDCEB3B5071BF1EEB5D4277B854B65C264FA8C354E15"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 275,
+      "scratchDistinct": 275,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusQuadraticRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveFrobeniusQuadraticRealization": "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusQuadraticRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026"
+      },
+      "generatedNameReason": "Lean names anonymous local instances using the module root. Import qualification changes that root to Dubon2026. Each of the one pair has the same owning source module, byte-identical mathematical source after import qualification, identical full declaration type and identical full kernel proof expression. No theorem is omitted or weakened.",
+      "generatedNameSourceEvidence": {
+        "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusQuadraticRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveFrobeniusQuadraticRealization": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusQuadraticRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "owningModule": "SourceOriginalPrimitiveFrobeniusQuadraticRealization",
+          "exactDeclarationType": "Lean.Expr.forallE\n  `q\n  (Lean.Expr.const `Nat.Primes [])\n  (Lean.Expr.app\n    (Lean.Expr.app\n      (Lean.Expr.app (Lean.Expr.const `NeZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `MulZeroClass.toZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.const `Nat.instMulZeroClass [])))\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lam\n          `p\n          (Lean.Expr.const `Nat [])\n          (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n          (Lean.BinderInfo.default)))\n      (Lean.Expr.bvar 0)))\n  (Lean.BinderInfo.default)",
+          "exactProofValue": "Lean.Expr.lam\n  `q\n  (Lean.Expr.const `Nat.Primes [])\n  (Lean.Expr.app\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `NeZero.mk [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `MulZeroClass.toZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.const `Nat.instMulZeroClass [])))\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lam\n            `p\n            (Lean.Expr.const `Nat [])\n            (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n            (Lean.BinderInfo.default)))\n        (Lean.Expr.bvar 0)))\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.const `Nat.Prime.ne_zero [])\n        (Lean.Expr.app\n          (Lean.Expr.app\n            (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n            (Lean.Expr.lam\n              `p\n              (Lean.Expr.const `Nat [])\n              (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n              (Lean.BinderInfo.default)))\n          (Lean.Expr.bvar 0)))\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app\n            (Lean.Expr.const `Subtype.property [Lean.Level.succ (Lean.Level.zero)])\n            (Lean.Expr.const `Nat []))\n          (Lean.Expr.lam\n            `p\n            (Lean.Expr.const `Nat [])\n            (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n            (Lean.BinderInfo.default)))\n        (Lean.Expr.bvar 0))))\n  (Lean.BinderInfo.default)",
+          "typeSha256": "874E72092F3708117CC135BEF7A0E751A630C7940DB8DA202EBB8FD435673A1F",
+          "proofValueSha256": "43813E1D6FA8CAB5F660471853956C4E309E02A962E79732C126D7D6E9106FF0",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusQuadraticRealization.lean",
+            "sha256": "7AFD499F33D0FD359F44CF412651FBEC79DFE71A6147E8693E993BE62ADE3B76"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveFrobeniusQuadraticRealization.lean",
+            "sha256": "346D2FFF226B66520284C59193080FB1377099C27DFEB0588967844C4F1C6849"
+          },
+          "onlyImportQualification": true
+        }
+      },
+      "productionFocused": 275,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceResidueCoefficientAutomorphism",
+            "SourceDecompositionGaussAction",
+            "SourceArithmeticFrobeniusResidue"
+          ],
+          "count": 35,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership436For7591.log",
+            "sha256": "0CDD3F8F073B278B61588F8D7F6631F238DA6C0B1FA666A15055AC4E44DDE7E0",
+            "sourceSha256": "B267D113A6DEC9E92DFD3880BEBE508C38258C23FFBB381552FED6D9887205EC"
+          }
+        },
+        {
+          "modules": [
+            "SourceResidueCoefficientPlaces",
+            "SourceDecompositionChartTransport",
+            "SourceModularDecompositionPlaceReduction"
+          ],
+          "count": 24,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership438For7591.log",
+            "sha256": "4A27A42C1A7A54842EDDF5A4654CB3C603DDAEF85C4F6381CD22A1CE9A839070",
+            "sourceSha256": "2FDB002F519403A2899D91105522AF6F80B3E13A72914F46A23608529754285A"
+          }
+        },
+        {
+          "modules": [
+            "SourceResidueCoefficientPlaceOrders",
+            "SourceResidueCoefficientDivisors",
+            "SourceResidueCoefficientPicard",
+            "SourceOriginalDecompositionDivisorReduction",
+            "SourceOriginalFrobeniusPicardReduction"
+          ],
+          "count": 27,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership439For7591.log",
+            "sha256": "4374E3A988AC85F0C301DE4EBF73D69DB6BC75BC15997DD7003857DFE7938B77",
+            "sourceSha256": "105FEE4F9EEC9AF6364BCD504ABAFAA96053AF58CA5CD06C54C455D90D4219EB"
+          }
+        },
+        {
+          "modules": [
+            "SourceLaurentFrobenius",
+            "SourceResidueGeometricFrobenius",
+            "SourceResidueGeometricFrobeniusPlaces"
+          ],
+          "count": 23,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership440For7591.log",
+            "sha256": "5892A702ACD3F67D40D762E83ADD92EDDD28438F6B466376BAAA5F7914023DBF",
+            "sourceSha256": "C30ED66B7AE374C0677C3E2CB409C3244D05A93AA4D44FB8EA9666EC598A1B9D"
+          }
+        },
+        {
+          "modules": [
+            "SourceResidueGeometricFrobeniusDivisors",
+            "SourceResidueGeometricFrobeniusPicard",
+            "SourceOriginalGeometricFrobeniusReduction"
+          ],
+          "count": 20,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership441For7591.log",
+            "sha256": "DB44725A5E0E1CE2458419D2A001084F9957BB2A8B28B9A6D688B7E4604DFF10",
+            "sourceSha256": "2ACA81F3EEB53FD7AE280E56D0D2291986035A8FAD84AAD185E917E84BD1CDEA"
+          }
+        },
+        {
+          "modules": [
+            "SourceHeckePrimeRootReduction",
+            "SourceHeckeLaurentProductReduction",
+            "SourceHeckeLaurentNormExtraction"
+          ],
+          "count": 18,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership442For7591.log",
+            "sha256": "DA6A047B2A582C5C14D1E692E94FA53C9D6F4D0DE42626DEB8D65D4DB0A8492C",
+            "sourceSha256": "6593E58DDDD1ADA903C19C62590E48889517B81EDE087E693647EA95E7149CC7"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalAtkinPrimePolynomial",
+            "SourceOriginalAtkinEmbedding"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership443For7591.log",
+            "sha256": "85B3394D8916317F732A396C26599C1984A279AB54B24085EF3FE4719D99C237",
+            "sourceSha256": "5D6120EA2F8D9AFC98EB50171B8ED7FFDF9FD143B81E169543D7CE9A99E78FB9"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalAdjacentRootUniqueness",
+            "SourceOriginalAtkinGeneratorImages",
+            "SourceOriginalAtkinInvolution"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership444For7591.log",
+            "sha256": "A5987B4E5B4B02D66CB1ECE50FBECA9DD28FBF70DD89106538F564802C2B12AF",
+            "sourceSha256": "5AE431E0BE17AFA13E6CAE1EDF77D498896F60321DFD3460A54861A5C7E130AF"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalTensorCoefficientMapR2",
+            "SourceOriginalTensorCoefficientEquivR2",
+            "SourceOriginalAtkinCoefficientExtensionR2"
+          ],
+          "count": 47,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership445For7591.log",
+            "sha256": "EF623998468BEC4DB7293B630D5FAC668C3FAA866727E445CFBA8CCB27E36088",
+            "sourceSha256": "967B23C40EA6039D19E5604C7583E4A08AB0F5C81FC4E85094E805DCB0C1A2E8"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalHeckePrimeDegree",
+            "SourceOriginalHeckeNormEmbeddings",
+            "SourceOriginalHeckeEmbeddingCensus",
+            "SourceOriginalHeckeNormProduct"
+          ],
+          "count": 21,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership446For7591.log",
+            "sha256": "46923C884E222C7E5DE1AEFD72497E39D63A0DB48566B1B526EE0201EA3C4BE6",
+            "sourceSha256": "F037DE3A0B4FC5FD514373996A8D4B6D6F3E2F33FD54C35D3A58F7BFDC49CAA7"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalHeckeNormReduction"
+          ],
+          "count": 1,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership447For7591.log",
+            "sha256": "E36400C5E0B4BC9822D8E7C70F91F822D4D00FC1028604DB111E70AA1C21EC9F",
+            "sourceSha256": "CF2016B549051C7398378E7730E000FD4D269D3C21F1FC068226B9FD9C528971"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalIntegralPrincipalDifference",
+            "SourceOriginalTorsionDivisorAgreement"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership448For7591.log",
+            "sha256": "DCC1C87B5D2F0EC92DAE5D9524918853E5316A6BF218BE0838D8841B662EBBD5",
+            "sourceSha256": "E9389505FB70BD29A9BAC594B9ED8D042083E2BFF7B00410C27204F33DCF5510"
+          }
+        },
+        {
+          "modules": [
+            "SourceResidueFrobeniusDivisorOperator"
+          ],
+          "count": 8,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership449For7591.log",
+            "sha256": "74D7474C3404443F9CF9C925D7E62CB6577BFF97ECD90151671E0AA691D4600E",
+            "sourceSha256": "779C8598F717171F0510E425E66878C18E9B989237EAB084B3FDC96020991059"
+          }
+        },
+        {
+          "modules": [
+            "SourceCurveCorrespondencePrincipalOrder",
+            "SourceOriginalHeckePrincipalNorm"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership450For7591.log",
+            "sha256": "34E4AA062B9621CAE5422F4FFCA7720D2C505E0922D3CB5E95DB538614BC2AA8",
+            "sourceSha256": "166A2726BD80AFDFAA674F2466EC47D9327EE75A3392C16A0F1AAB91D1E6D062"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalIntegralDivisorReduction",
+            "SourceOriginalHeckeIntegralAgreement"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership451For7591.log",
+            "sha256": "1CA61E076658ECE4DB688C75DEE99BA0588FAEEF3971C1178A47A17603120DDE",
+            "sourceSha256": "FA5261FFF1B5461E91349B987B4FBBDD6657784D2198C3BAF353427D6988A11D"
+          }
+        },
+        {
+          "modules": [
+            "SourceResidueFrobeniusPicardOperator"
+          ],
+          "count": 13,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership453For7591.log",
+            "sha256": "F03FD38FCCEFC2EE6DC1BDB97128062386590D77BCF3AF2E5F8F8797F18DB83F",
+            "sourceSha256": "3974EF480A9211C3CAB4B1D58C0B807EFE03901EE19A3217DBBD92043C79A5B6"
+          }
+        },
+        {
+          "modules": [
+            "SourceSpanningSpecializationQuadratic",
+            "SourceOriginalSpecializationQuadratic"
+          ],
+          "count": 2,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership459For7591.log",
+            "sha256": "E8279E6E67C08EB793307255ED799B2893FC8018594FC8ECDF81386DC09C550F",
+            "sourceSha256": "8B07053BEBD923B17273F0E36E96DD6224C3723ACBDA4D9DB2BDC6A44A51EB75"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalHeckeTorsionReduction",
+            "SourceOriginalPicardFrobeniusQuadratic",
+            "SourceOriginalTateFrobeniusQuadratic",
+            "SourceOriginalPrimitiveFrobeniusQuadraticRealization"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership460For7591.log",
+            "sha256": "532F3CA4ECA2F96DBED21625198011D87397F852AA24E58F613567F3EFE347D9",
+            "sourceSha256": "A14E08AFB51D3B20C4FC803969800842539BF8B211C5659751A60D649F0BBD04"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusOwnership7591.log",
+        "sha256": "E8B5EF664AF71B4BA17FBDCEB3B5071BF1EEB5D4277B854B65C264FA8C354E15",
+        "sourceSha256": "7B1FCE66C9BF53AF1FB4B8B3899AA7AB662A7F516E56EC112631D04A2D9E675B"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-122305-446.log",
+        "sha256": "E3C0C0FB4DACE3EA6E1CF2742B4261561DD8FF852B837D8EEEA56A20BC684869"
+      },
+      "generatedNameInspectionEvidence": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\hecke-frobenius-generated-name-evidence-7591.json",
+        "sha256": "A0DD8FE242116244CCDF2E9A1B0AD29A2E3D5508BB55F9353F6B58CDBE839ED3"
+      },
+      "precedingComparisonProgram": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\compare_hecke_frobenius_ownership_7591.py",
+        "sha256": "F321B24A5ACF8C9EED637637E6C312DD00A084EDF6C053E66D8A487A77AA2607",
+        "correction": "The initial program omitted loading its recorded generated-name evidence and referred to undefined generatedData. This successor loads and hash-checks that evidence before exact name-set comparison. No Lean source or previous evidence is changed."
+      }
+    },
+    "scratchToProductionCountReason": "All 275 distinct names from 275 exhaustive scratch checks are retained: 275 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "ownershipComparisonRepair": {
+      "precedingProgram": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\compare_hecke_frobenius_ownership_7591.py",
+        "sha256": "F321B24A5ACF8C9EED637637E6C312DD00A084EDF6C053E66D8A487A77AA2607",
+        "correction": "The initial program omitted loading its recorded generated-name evidence and referred to undefined generatedData. This successor loads and hash-checks that evidence before exact name-set comparison. No Lean source or previous evidence is changed."
+      },
+      "comparisonProgram": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\compare_hecke_frobenius_ownership_7591_r2.py",
+        "sha256": "B8AB37D112AF4DB83680988E832B107A9411EE9AF09711180F91F7FDAF9AB392"
+      },
+      "evidence": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\hecke-frobenius-generated-name-evidence-7591.json",
+        "sha256": "A0DD8FE242116244CCDF2E9A1B0AD29A2E3D5508BB55F9353F6B58CDBE839ED3"
+      },
+      "reason": "Bookkeeping-only successor; all mathematical sources, compiled objects and completed audit evidence are preserved."
+    },
+    "boundary": "The separate Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. The quadratic identity alone does not prove determinant or trace. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

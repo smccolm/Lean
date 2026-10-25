@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original residual association -> original Tate/Picard inertia -> place reduction invariant under arithmetic inertia -> exact two-chart specification retained by the principal-divisor reduction map",
+  "precedingScratchReceipts": {
+    "source-char-two-genus-picard-5-scratch-receipt.json": "36B4244D8766017117FC2A44B05131597DC8029E6FE6EFD4CF92439FECB5B4C7"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceReductionChartGluing.lean",
+      "sha256": "C4896876ED174E532AB6C4E01836B32F323B70FE60AA5F3F9350B9A69EE00AB5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceReductionArbitraryFiberEquality.lean",
+      "sha256": "47E90E3017E4C0224706653D1541C9A234AE67ABEEA2DD78BA077D00929FA20B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceReductionPrincipalDivisorMap.lean",
+      "sha256": "B2D502F6663BCE7E1CB96E1BCD01C26EB45BE290A0E33140FADEA1AB7DAD9B83"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularGenusTorsionKernel.lean",
+      "sha256": "406DAB42986D891CC43CC155EF6F5926954E14749B13AE68DF05D1A16DEDAB40"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularPrimePicardInjectivity.lean",
+      "sha256": "44FFD3E09D72100883276A2514821543FE32C2B0A679E528C91158FFCF6F4960"
+    }
+  ],
+  "routeAdjustment": "Retain the exact chart witnesses from the existing construction in one strengthened consumer, reusing the proved uniqueness and fiber sums. No Picard divisibility or new curve foundation.",
+  "discharged": "For every prime residue characteristic the same actual modular constant reduction retains both exact chart descriptions, principal-divisor compatibility, genus preservation and injectivity on all residue-invertible Picard torsion. Existing chart gluing and fiber identities are reused; both wild and tame genus results supply the geometric input.",
+  "remaining": "Original arithmetic place and Picard invariance, the Frobenius relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\principal-divisor-charts-route-431.json",
+    "sha256": "41BDE84634CD0E1D88440015A3B2E0CDC1F33EBB6520F9B37E64DCDE4BA8788D",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original residual association -> original Tate/Picard inertia -> place reduction invariant under arithmetic inertia -> exact two-chart specification retained by the principal-divisor reduction map",
+      "reuseChecked": [
+        "SourceReductionChartGluing constructs both exact chart fiber descriptions. SourceReductionArbitraryFiberEquality already proves each principal-divisor fiber sum.",
+        "SourceReductionPrincipalDivisorMap consumes these proofs but existentially discards both chart specifications; its exposed conclusion cannot recover them."
+      ],
+      "selectedRoute": "Retain the exact chart witnesses from the existing construction in one strengthened consumer, reusing the proved uniqueness and fiber sums. No Picard divisibility or new curve foundation.",
+      "assumptionsToDischarge": "Use genus equality to supply the actual two integral-chart lifts; then apply chart preservation and actual residue inertia to prove place-map invariance.",
+      "boundary": "Inertia on Picard classes, Frobenius, residual association, automorphy and all-weight continuation remain required; DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

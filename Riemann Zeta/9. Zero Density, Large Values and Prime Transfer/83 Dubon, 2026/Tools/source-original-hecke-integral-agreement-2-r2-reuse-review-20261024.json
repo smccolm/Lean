@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original Tate Frobenius quadratic relation -> Hecke compatibility on finite torsion -> agreement on integral principal divisors -> exact original norm principal divisor and its coefficient/geometric Frobenius residue",
+  "precedingScratchReceipts": {
+    "source-original-hecke-norm-reduction-1-scratch-receipt.json": "D792B65EC4F99F2FF082523B5EE1D696DCC31FDDF10E7CDBBC3ECEB2840BC804"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckePrincipalNorm.lean",
+      "sha256": "CCF6248E965D8BFF82E812A7F8CC7AF97BAE9033C0D68D513557401CAA5AE82C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeNormReduction.lean",
+      "sha256": "878F358F4ABAB4ED56BE784559D3D60DD54A606F4904AFB0FD4DF1A52345A30D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueFrobeniusDivisorOperator.lean",
+      "sha256": "F1B67A5A1FB900BAB49B7B6F1EB73B7A496525F9EEDA4AE2BE5341650EEC2DD3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveConstantReductionR2.lean",
+      "sha256": "D0330F33F2885A4560CDAFB2A2EE4BC24319978BE97F203CAB06A9AE85FE5FA2"
+    }
+  ],
+  "routeAdjustment": "Compose the exact original Hecke principal-norm identity with the already proved integral norm residue. Transport principal orders through the same modular constant reduction and identify the residue function literally with coefficient Frobenius times geometric Frobenius. No additional geometric or divisibility infrastructure is needed.",
+  "discharged": "Reducing the actual original Hecke divisor of an integral Laurent principal divisor with nonzero residue equals the actual residue Frobenius pushforward-plus-pullback applied to its reduction. The same modular constant reduction supplies the exact principal-order identity. Actual norm integrality and its explicit Frobenius residue discharge the Hecke integral-principal agreement premise; no Hecke compatibility certificate remains. Descent to torsion Picard classes, the Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "remaining": "Original Hecke torsion descent, the original Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-hecke-integral-agreement-route-451.json",
+    "sha256": "BD6306316DFB4D78BFE62FEFAE0775C0D5011FB975667AC690CB67EA9AC7DAFC",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original Tate Frobenius quadratic relation -> Hecke compatibility on finite torsion -> agreement on integral principal divisors -> exact original norm principal divisor and its coefficient/geometric Frobenius residue",
+      "reuseChecked": [
+        "ConstantReduction.mapDomain_placeMap and the actual modularRegularProlongation",
+        "originalCoefficientEquiv, divisorTransform_orders, resHom_?",
+        "originalHeckeDivisor_principal_norm, original_hecke_norm_integral_reduction, residueFrobeniusDivisorOperator_order"
+      ],
+      "selectedRoute": "Compose the exact original Hecke principal-norm identity with the already proved integral norm residue. Transport principal orders through the same modular constant reduction and identify the residue function literally with coefficient Frobenius times geometric Frobenius. No additional geometric or divisibility infrastructure is needed.",
+      "assumptionsToDischarge": "The integral-principal agreement parameter of original_divisor_hom_eq_on_torsion, specialized to the actual Hecke and residue Frobenius operators.",
+      "boundary": "Reducing the actual original Hecke divisor of an integral Laurent principal divisor with nonzero residue equals the actual residue Frobenius pushforward-plus-pullback applied to its reduction. The same modular constant reduction supplies the exact principal-order identity. Actual norm integrality and its explicit Frobenius residue discharge the Hecke integral-principal agreement premise; no Hecke compatibility certificate remains. Descent to torsion Picard classes, the Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "auditIdentifierRepair": {
+    "reason": "The first dependency audit used an ASCII replacement character in the resHom iota constant name. The fresh audit uses the exact existing declaration; all ten required edges and mathematical source remain unchanged.",
+    "failedSourceSha256": "8D6340F7093790C56F6BDA5C5E16A37DEB3D9E0CAD3DD8EE9B16AE86D62E772E",
+    "failedLogSha256": "B21A8838787B1882D891FF4DC9626895BBF1A3618A90C43DC51BD8BBB635FF3B",
+    "failedExit": "1"
+  }
+}

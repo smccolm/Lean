@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "characteristic-two genus/Picard -> weighted exceptional census -> full inertia image of order twenty-four -> eighth-power factorization -> actual nonzero three-torsion in the specialization field",
+  "precedingScratchReceipts": {
+    "source-deuring-specialization-5-scratch-receipt.json": "6AD9FFD9460B2226013309126CDA5C16B7596C7875DD2570A968030311B811F3"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticFullTorsionFieldExtension.lean",
+      "sha256": "8AB0097E6EE68E5EDAAC673D4B63BBFDF635D36160A4942F8A36743FCB327C12"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticTorsionAbscissaCount.lean",
+      "sha256": "BFB90C41378C19DA8A225AF9CC98175DDE8B083BCB3B709B4FC1B9C20E2ED049"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticDeuringPrescribedInertiaAction.lean",
+      "sha256": "2FE01C1EE8AEAFA4254A0947DD484DDE8A169C3E34D31BDC973B1A772716FE28"
+    }
+  ],
+  "routeAdjustment": "Prove the exact full-torsion divisor count, then restrict the existing 3N specialization. Defer incidental torsion classifications and field-construction generalizations.",
+  "discharged": "The existing faithful finite Galois specialization at level 3N is restricted to N, while its actual field retains all nine three-torsion points. The full-torsion divisor count follows from the proved closure cardinality and actual injective point map. No separate three-torsion or faithful-field hypothesis remains.",
+  "remaining": "The characteristic-two weighted exceptional census and genus/Picard assembly, followed by original arithmetic-action comparison and automorphy, remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\full-torsion-specialization-route-419.json",
+    "sha256": "4D84C07C35AC3AE9BA9309305075ADBB2FEDF4C052AB30BC7D854F01283DD601",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "characteristic-two genus/Picard -> weighted exceptional census -> full inertia image of order twenty-four -> eighth-power factorization -> actual nonzero three-torsion in the specialization field",
+      "reuseChecked": [
+        "The existing Deuring prescribed specialization constructs all n^2 torsion points for every invertible n. Calling it with n=3N preserves the same actual good model, point reduction and faithful inertia map.",
+        "Existing finite_and_ncard_torsion and native actual point-map injectivity make the n-torsion map into the closure bijective. Its restriction to each divisor gives the exact m^2 count.",
+        "Native torsionBy_le_torsionBy_of_dvd and Submodule.inclusion restrict the actual reduction homomorphism. No new division-field or faithful-field chain is needed."
+      ],
+      "selectedRoute": "Prove the exact full-torsion divisor count, then restrict the existing 3N specialization. Defer incidental torsion classifications and field-construction generalizations.",
+      "assumptionsToDischarge": "Supply all nine actual three-torsion points in the same finite Galois field as the prescribed faithful N-torsion specialization.",
+      "boundary": "The eighth-power and discriminant divisibilities must still be combined for the full characteristic-two inertia image; the weighted census, genus/Picard and arithmetic/automorphy consumers remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_equivariant_torsion_reduction_ofJ.lean.txt",
+    "sha256": "D1B7BD7F829F929F92FD9D8C8D787BC18F2F86A7C13D5EE0C5D3C4BE0BCD5A1F",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The source full-image argument requires actual three-torsion in its specialization field. The locally proved level-3N specialization and native torsion inclusion supply it without rebuilding the field construction. No external build or import is claimed."
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "characteristic-two genus/Picard -> weighted exceptional census -> actual cyclic-to-place classifier with exact j-order class cardinalities",
+  "precedingScratchReceipts": {
+    "source-char-two-full-inertia-3-scratch-receipt.json": "F117D929A8A3E793232F947390899775A45C36940B810C2307CD6E84ACA69209"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticCharThreeCyclicSpecialization.lean",
+      "sha256": "4FF6D992113FA0DAAA90C3AE4A087346FD134898D4F7311E39846EE8BA9CB8FF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticCharThreeEmbeddingOrbits.lean",
+      "sha256": "D0C4DF6F665530192607EC4F385D2CF454E3944B06340ADFA0BDEAB0FBB32382"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticCharThreePlaceFibers.lean",
+      "sha256": "0334E360DBFF304C72EC3C7357E4256DA44B4712207EA7C287363430DD8398BE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticCharThreePlaceClassification.lean",
+      "sha256": "C837C90E263A9EB44EC918260122224A77BAC4CFE9C73E33E03D4D49F75E605E"
+    }
+  ],
+  "routeAdjustment": "Reuse the four actual consumers with the new full-image provider. Do not expand general place or point-transport infrastructure.",
+  "discharged": "All actual characteristic-two modular j=0 places are classified by cyclic subgroups of the actual exceptional elliptic curve. Equality is exactly stabilizer-relatedness, and normalized j orders equal relation-class cardinalities. Existing torsion specialization, embedding-orbit reflection and rational-coordinate fiber theorems consume the constructed full inertia image. No field, image, specialization or place-fiber certificate remains.",
+  "remaining": "The characteristic-two weighted exceptional census and genus/Picard assembly, followed by original arithmetic-action comparison and automorphy, remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\char-two-place-classifier-route-421.json",
+    "sha256": "7E0CE97EDF9FC0E2A35C0DF6CFCC2A27949C3CB3B8F114BB659761B4F6FE9F61",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "characteristic-two genus/Picard -> weighted exceptional census -> actual cyclic-to-place classifier with exact j-order class cardinalities",
+      "reuseChecked": [
+        "The existing ellipticCyclicSpecializationEquiv applies unchanged to the constructed characteristic-two torsion map.",
+        "Existing cyclic_specialization_orbit_iff and modularEmbeddingEquiv_galois_orbit_iff consume the new full stabilizer image.",
+        "Existing rational-coordinate place restriction, inertia-orbit equality, fiber surjectivity and order/cardinality theorems are characteristic-independent. The verified characteristic-three consumer is specialized to native ofJ0."
+      ],
+      "selectedRoute": "Reuse the four actual consumers with the new full-image provider. Do not expand general place or point-transport infrastructure.",
+      "assumptionsToDischarge": "Construct a surjective map from actual cyclic subgroups to all modular j=0 places; prove equality iff actual stabilizer-related and j-order equal to relation-class cardinality.",
+      "boundary": "The order-twelve quotient marks and fixed cyclic-subgroup counts must still produce the weighted census, then characteristic-two genus/Picard and original arithmetic/automorphy. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_orbitMap_cyclicAddSubgroup_places_modularFunctionFieldFullC.lean.txt",
+    "sha256": "0D43D1C7B0594FD55771822801D2A900C8F06C81379D40C703E96DC08964F3C0",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The actual cyclic-to-place classifier is obtained from the already proved local consumers, with the new characteristic-two full-image provider. Generic point, cyclic, embedding and place proofs are reused unchanged. No external build or import is claimed."
+  }
+}

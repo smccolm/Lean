@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original Tate Frobenius quadratic relation -> Hecke compatibility on finite torsion layers -> integral principal agreement -> original Hecke principal divisor equals the principal divisor of the actual degeneracy norm",
+  "precedingScratchReceipts": {
+    "source-original-hecke-norm-reduction-1-scratch-receipt.json": "D792B65EC4F99F2FF082523B5EE1D696DCC31FDDF10E7CDBBC3ECEB2840BC804"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveDivisorPullback.lean",
+      "sha256": "D78262F7756E810E2F7FBC4201AC9E5DC67A644FD62970C3419E64A06F708422"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveNormFiber.lean",
+      "sha256": "E520CCC04C216018AE815938DD60D5ED27E8AB5960C33B0BACB95C442FF245DB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckePicard.lean",
+      "sha256": "192007D5D7C75ACD8F31B78B9C1A9CBA753211EB4FAC1FAAA5D9CAC273D27DCD"
+    }
+  ],
+  "routeAdjustment": "Retain the exact norm witness in the existing principal-preservation proof. Compose the two proved order identities, then instantiate the literal original correspondence. No new divisor, norm or finite-map infrastructure is needed.",
+  "discharged": "The literal original Hecke divisor correspondence sends the principal divisor of every nonzero function f to the principal divisor of norm_alpha(beta(f)). Existing pullback ramification and pushforward norm orders prove this equality; original modular finiteness and residue field identifications discharge all geometric premises.",
+  "remaining": "Actual Hecke reduction on torsion, the original Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-hecke-principal-norm-route-450.json",
+    "sha256": "D2AD7226C3B83C1B3AE3E5C0EE69E4DF49ECCC610BA1DEB522675AEAB470D960",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original Tate Frobenius quadratic relation -> Hecke compatibility on finite torsion layers -> integral principal agreement -> original Hecke principal divisor equals the principal divisor of the actual degeneracy norm",
+      "reuseChecked": [
+        "Divisor.finitePullback_apply and Place.ord_algebraMap_restrict",
+        "Place.ord_norm_eq_sum_fiber and Divisor.geometricPushforward_apply",
+        "originalHeckeAlpha_finite, originalHeckeBeta_finite, original_place_residue_algebraMap_bijective"
+      ],
+      "selectedRoute": "Retain the exact norm witness in the existing principal-preservation proof. Compose the two proved order identities, then instantiate the literal original correspondence. No new divisor, norm or finite-map infrastructure is needed.",
+      "assumptionsToDischarge": "The identity between the actual original Hecke principal divisor and the divisor of the degeneracy norm, needed to apply the integral Laurent norm reduction.",
+      "boundary": "Reduction compatibility on torsion and the Tate quadratic relation remain to be assembled. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

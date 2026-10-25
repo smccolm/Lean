@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "modular concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Picard Weil pairing -> finite norm/pullback adjunction and transposed correspondence",
+  "precedingScratchReceipts": {
+    "source-original-weil-descent-7-scratch-receipt.json": "085C7FF7FE6C61B4D1622668C4B2120FE0ABC541DCF7EB841D6842744D322A3D"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardPullback.lean",
+      "sha256": "4598F3E9040C95D6F53C8720A71FE0304A81EA34739F86806161FB2DB333CA3F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardPushforward.lean",
+      "sha256": "5AFD11FF786364DB2844F7E3F5168AEC2B50B66089B007B8BCA251C649F48EAA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveNormFiber.lean",
+      "sha256": "E520CCC04C216018AE815938DD60D5ED27E8AB5960C33B0BACB95C442FF245DB"
+    }
+  ],
+  "routeAdjustment": "Reuse the actual norm evaluation and divisor evaluation identities, native finite Picard maps, native norm orders and existing moving theorem. Positive ramification preserves the necessary disjointness. Separate exact constructors and class identities keep elaboration inside unchanged proof limits; no general cover theory is needed for this adjunction.",
+  "discharged": "For every finite map between actual original function fields and arbitrary actual Picard n-torsion classes, the norm is adjoint to pullback for the root-valued Weil pairing. Consequently every actual norm-after-pullback correspondence is adjoint to its transposed correspondence. Compatible representatives, norm-divisor identities, residue identifications, finiteness and disjointness are derived.",
+  "remaining": "Nondegeneracy, identification of the needed Hecke transpose, Tate compatibility, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. Scratch only; production promotion and assembled verification pending. No acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-weil-adjunction-route-473.json",
+    "sha256": "935E00B43989D813E311DE441D16C60D5343F9D3324E01D9616040941F04F2A3",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "modular concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Picard Weil pairing -> finite norm/pullback adjunction and transposed correspondence",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardPullback.lean",
+          "sha256": "4598F3E9040C95D6F53C8720A71FE0304A81EA34739F86806161FB2DB333CA3F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardPushforward.lean",
+          "sha256": "5AFD11FF786364DB2844F7E3F5168AEC2B50B66089B007B8BCA251C649F48EAA"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveNormFiber.lean",
+          "sha256": "E520CCC04C216018AE815938DD60D5ED27E8AB5960C33B0BACB95C442FF245DB"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveCorrespondenceRamification.lean",
+          "sha256": "62AB21C26EEF5D4F9A246B5CB3E39A49AEE5497D5DB5D5885CF11B3B95A67234"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPullbackEvaluation.lean",
+          "sha256": "9C60AEF9B8B5EB302AD0557E5A12F9F62E18222A804B7B9726838CC18762AAFD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPushforwardEvaluation.lean",
+          "sha256": "2692D1210D1EA0C8BF6071F0090C13435FFE440631331A009373A27B0509B1B1"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPicardAbelMap.lean",
+          "sha256": "7890BE46139EB5D9F453A7386A6C0770C7F9E830DAD7A2054493BA7E3613F2C3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_DivisorialWeilPairingData_toHom_injective_of_divisible.lean.txt",
+          "sha256": "C30F9E5A24E8001C1EEA5F1D76B6B2E3C802CF9EA0C872EA26CA8646A4257785"
+        }
+      ],
+      "selectedRoute": "Reuse the actual norm evaluation and divisor evaluation identities, native finite Picard maps, native norm orders and existing moving theorem. Positive ramification preserves the necessary disjointness. Separate exact constructors and class identities keep elaboration inside unchanged proof limits; no general cover theory is needed for this adjunction.",
+      "alternativeAssessment": "The archived FLT nondegeneracy proof requires Picard divisibility on auxiliary Kummer splitting fields. The existing analytic Picard-period equivalence is specific to the original modular curve and does not directly supply that hypothesis. No equivalence of the divisorial Weil pairing with an analytic period pairing is assumed. Advance the independent necessary adjunction branch first.",
+      "discharged": "For every finite map between actual original function fields and arbitrary actual Picard n-torsion classes, the norm is adjoint to pullback for the root-valued Weil pairing. Consequently every actual norm-after-pullback correspondence is adjoint to its transposed correspondence. Compatible representatives, norm-divisor identities, residue identifications, finiteness and disjointness are derived.",
+      "remaining": "Nondegeneracy, identification of the needed Hecke transpose, Tate compatibility, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. No acceptance gate closes. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

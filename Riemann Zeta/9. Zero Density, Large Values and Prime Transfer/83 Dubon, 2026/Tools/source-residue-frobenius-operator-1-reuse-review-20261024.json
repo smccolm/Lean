@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original Tate Frobenius quadratic relation -> Hecke reduction on torsion -> integral-principal agreement -> residue divisor of coefficient Frobenius times geometric Frobenius",
+  "precedingScratchReceipts": {
+    "source-geometric-picard-reduction-3-scratch-receipt.json": "47EFBD64F1102B29AB902B548A4F6E9541B06649AD0CE44BF1A44535742BB1D1"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueGeometricFrobeniusPlaces.lean",
+      "sha256": "5231375FD0EA14138827D0813B91F466447E2AD1BEA4150EB7A5E568C4E62BC6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueGeometricFrobeniusDivisors.lean",
+      "sha256": "D735FEBB04A9F76F86B26834C9B4AFD21098CCB6522CDCA955F7204F5429187B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueCoefficientPlaceOrders.lean",
+      "sha256": "9862A46D4116D1C1B4594EE0B361E6544EFA63CB3E7EDBF2972BDEB091D69E3E"
+    }
+  ],
+  "routeAdjustment": "Define the geometric pullback by the actual inverse place permutation weighted by the proved ramification p, and prove its pointwise formula against literal restriction. Add the existing geometric pushforward. Derive the exact order formula for the Frobenius product appearing in original_hecke_norm_integral_reduction, then descend to degree-zero classes for the required torsion comparison.",
+  "discharged": "The pullback uses the actual geometric place restriction and its proved ramification p. Its sum with the actual pushforward sends div(f) to the divisor of coefficient Frobenius(f) times geometric Frobenius(f). This supplies the residue-side principal divisor in the actual Hecke norm reduction, without introducing a general inseparable finite-morphism package.",
+  "remaining": "Actual Hecke reduction on torsion, the original Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\residue-frobenius-divisor-route-449.json",
+    "sha256": "27167E29B26FEB3775C2DE074203DD83697B728EF6D8901FBA9B4B7F8B0E3A74",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original Tate Frobenius quadratic relation -> Hecke reduction on torsion -> integral-principal agreement -> residue divisor of coefficient Frobenius times geometric Frobenius",
+      "reuseChecked": [
+        "residueGeometricFrobeniusPlace is already the literal valuation-ring restriction along q-expansion and equals the coefficient Frobenius place permutation.",
+        "residueGeometricFrobenius_place_order already proves ramification p at every place. Its bijective place map therefore gives the literal weighted inverse-permutation pullback directly.",
+        "residueGeometricFrobeniusDivisor already gives literal pushforward. Existing coefficient place-order transport identifies its action on principal divisors. These exact place identities avoid a fresh general inseparable-morphism finiteness or norm package."
+      ],
+      "selectedRoute": "Define the geometric pullback by the actual inverse place permutation weighted by the proved ramification p, and prove its pointwise formula against literal restriction. Add the existing geometric pushforward. Derive the exact order formula for the Frobenius product appearing in original_hecke_norm_integral_reduction, then descend to degree-zero classes for the required torsion comparison.",
+      "assumptionsToDischarge": "The residue-side principal-divisor formula needed to turn the actual norm residue identity into Hecke compatibility. All place permutation and ramification facts are already proved, not assumed.",
+      "boundary": "Actual original principal-divisor norm comparison and assembled Hecke compatibility, the Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

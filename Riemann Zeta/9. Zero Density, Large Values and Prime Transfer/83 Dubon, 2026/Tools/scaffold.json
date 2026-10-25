@@ -36938,6 +36938,1222 @@
     {
       "path": "Tools/source-char-two-galois-orders.json",
       "role": "Tools"
+    },
+    {
+      "path": "Tools/prime-picard-promotion-route-428.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoAuxiliaryRootUnits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoThreeDivisionRelation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoEighthPower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticFullTorsionDivisor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticDeuringThreeTorsionSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoOfJFamily.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoGoodModelOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoFullInertiaImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoCyclicSpecialization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoEmbeddingOrbits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoPlaceFibers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoPlaceClassification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOrderTwelveBasic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOrderTwelveSylowNonNormal.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOrderTwelveElementCounts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOrderTwelveInvolutionConjugacy.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOrderTwelveCubicCentralizer.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOrderTwelveTransitiveMarks.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePrimeTorsionCommonScalar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceQuaternionQuarticNonscalar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceQuaternionCubicNonscalar.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticStabilizerPointHom.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoCubicParameters.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoQuarticChanges.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoQuaternionStabilizers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoQuarticFixedCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoCubicPoint.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoCubicCommutator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoCubicFixedCount.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoFixedCounts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoSignExponent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoMarkedElements.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoCyclicAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoCyclicOrbits.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoOrbitMarks.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoCensusSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEllipticCharTwoWeightedCensus.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCharTwoCensus.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCharTwoDifferentialSum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCharTwoGenusLower.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCharTwoResidueGenus.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularCharTwoPicardInjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularPrimePicardInjectivity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-char-two-eighth-power-3-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-full-torsion-specialization-2-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-char-two-full-inertia-3-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-char-two-place-classifier-4-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-order-twelve-marks-6-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-quaternion-nonscalar-3-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-char-two-fixed-counts-9-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-char-two-quotient-action-5-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-char-two-weighted-census-3-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-char-two-genus-picard-5-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-prime-picard.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-inertia-promotion-route-437.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalInertiaIntegralFunctions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalInertiaGaussAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalArithmeticIntegralCharts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceReductionPrincipalDivisorCharts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularPrincipalDivisorCharts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularConstantReductionCharts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCoefficientPlaceAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalInertiaChartTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalInertiaPlaceReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCoefficientDivisors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCoefficientPicard.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalInertiaDivisorReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalInertiaPicard.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTateInertia.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalSpecializationInertia.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPrimitiveUnramifiedRealization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-inertia-functions-2-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-arithmetic-integral-charts-1-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-modular-reduction-charts-3-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-inertia-place-reduction-3-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-picard-inertia-4-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-tate-inertia-1-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-primitive-unramified-2-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-inertia.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/hecke-frobenius-promotion-route-461.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueCoefficientAutomorphism.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceDecompositionGaussAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceArithmeticFrobeniusResidue.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueCoefficientPlaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceDecompositionChartTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceModularDecompositionPlaceReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueCoefficientPlaceOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueCoefficientDivisors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueCoefficientPicard.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalDecompositionDivisorReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFrobeniusPicardReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLaurentFrobenius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueGeometricFrobenius.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueGeometricFrobeniusPlaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueGeometricFrobeniusDivisors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueGeometricFrobeniusPicard.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalGeometricFrobeniusReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckePrimeRootReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeLaurentProductReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHeckeLaurentNormExtraction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAtkinPrimePolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAtkinEmbedding.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAdjacentRootUniqueness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAtkinGeneratorImages.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAtkinInvolution.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTensorCoefficientMapR2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTensorCoefficientEquivR2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalAtkinCoefficientExtensionR2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHeckePrimeDegree.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHeckeNormEmbeddings.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHeckeEmbeddingCensus.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHeckeNormProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHeckeNormReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalIntegralPrincipalDifference.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTorsionDivisorAgreement.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueFrobeniusDivisorOperator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCorrespondencePrincipalOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHeckePrincipalNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalIntegralDivisorReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHeckeIntegralAgreement.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueFrobeniusPicardOperator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceSpanningSpecializationQuadratic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalSpecializationQuadratic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalHeckeTorsionReduction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPicardFrobeniusQuadratic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTateFrobeniusQuadratic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPrimitiveFrobeniusQuadraticRealization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-arithmetic-frobenius-residue-3-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-frobenius-place-reduction-3-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-frobenius-picard-reduction-5-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-geometric-frobenius-3-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-geometric-picard-reduction-3-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-hecke-laurent-reduction-3-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-atkin-embedding-2-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-atkin-involution-3-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-atkin-coefficient-3-r2-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-hecke-norm-product-4-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-hecke-norm-reduction-1-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-torsion-agreement-2-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-residue-frobenius-operator-1-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-hecke-principal-norm-2-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-hecke-integral-agreement-2-r2-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-residue-frobenius-picard-operator-1-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-specialization-quadratic-2-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-frobenius-quadratic-4-r2-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-hecke-frobenius.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-weil-reciprocity-promotion-route-470.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilEvaluationGalois.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilDatum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueAlgebraNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceResidueAlgebraNormPi.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRamifiedResidueNorm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveResidueNormBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveResidueNormFactors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRationalEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRationalNormEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveNormFiberEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFiberRegularIntegrality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRationalFunctionEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveFieldNormEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalNormEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePullbackEvaluationProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPullbackEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveEvaluationRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalEvaluationRestriction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFiniteDivisorEvaluationPushforward.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPushforwardEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalInfinityPlace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalPlaceClassification.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalPointPlaces.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalPointOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalPlaceEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveRationalResidueValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalInfinityEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalRootDivisors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalDivisorEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalCoordinateReciprocity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalCoordinateWeilReciprocity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRationalCoordinate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRationalNormEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRationalDivisorEvaluation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalRationalPrincipalDivisors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalCoordinateWeilReciprocity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalConstantWeilReciprocity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilReciprocity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilTorsionValues.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalClosedPlaceSeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalClosedFiniteSeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalClosedPrescribedOrders.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalClosedPicardMoving.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilClasses.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilRepresentatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-weil-datum-3-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-norm-evaluation-12-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-pullback-evaluation-2-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-pushforward-evaluation-4-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-rational-coordinate-reciprocity-11-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-weil-reciprocity-7-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-weil-torsion-values-1-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-weil-representatives-6-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-weil-reciprocity.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/original-tate-weil-promotion-route-477.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/.github/scripts/proof-manifest-config.json.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/.github/scripts/publication/verification/ExportSelected.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/.github/scripts/publication/verification/Inventory.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/.github/scripts/publication/verification/README.md.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/.github/scripts/publication/verification/ReplayKernel.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/.github/scripts/publication/verification/scope.py.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/.github/scripts/publication/verification/verify.py.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/.github/workflows/proof-check.yml.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/checks.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/commit.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/dependency-download-receipt-1.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/dependency-download-receipt-2.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/download-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/lake-manifest.json.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/lakefile.toml.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/lean-toolchain.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/LICENSE.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/NOTICE.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/Divisors/ClassGroup/ClassGroup.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/Divisors/ClassGroup/PicardZero.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/Divisors/Maps/EvaluationMaps.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/Divisors/Maps/Maps.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/Divisors/Maps/Semilinear.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/Divisors/Norm/PushforwardDivSeparable.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/Divisors/Semilinear/AlgAutSmulPlace.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/FunctionFields/Transcendence/CurveOver.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/FunctionFields/Transcendence/CurveTranscendentalSeparable.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/FunctionFields/Transcendence/SeparatingTranscendental.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/Geometry/Picard/GroupLaw/RelativeGroupLaw.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/Geometry/Picard/RelSubPic/Group.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/Geometry/Picard/Representability/RepresentsRelSubPicGroup.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/Geometry/Schemes/Smooth/EtaleFormallyUnramifiedStalkMap.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/Geometry/WeilReciprocityAlgClosed.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/Models/Construction/Basic.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/Models/Construction/BasicPerfectField.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/Places/Degree/IsRationalAlgClosed.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/Places/Ramification/InertiaDegEqOneIsRational.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/Places/Restriction/RestrictEq.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/AlgebraicCurves/Places/Restriction/RestrictionComposition.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/JacobianVarieties/Pic0/DivisorialWeilPairingDataAlgClosed.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/JacobianVarieties/Pic0/JacobianPackAlgClosed.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/JacobianVarieties/Pic0/NsmulEqJacobianPack.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/JacobianVarieties/Pic0/OrdEqMulPowNeNeZero.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/JacobianVarieties/Pic0/ZsmulEqFiniteDimensionalRatFunc.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/JacobianVarieties/Picard/Representability/AlgEquivZeroCutAlgClosed.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/JacobianVarieties/Picard/Representability/CurveModelPicardRepresentabilityAbelJacobi.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/JacobianVarieties/WeilPairing/CharZeroNondegeneracy.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/JacobianVarieties/WeilPairing/Divisorial.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/JacobianVarieties/WeilPairing/DivisorialPairingToHomInjectiveDivisibleCoprime.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/JacobianVarieties/WeilPairing/HasPrincipalDivisorsFiniteDimensional.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/Nyll/SchemeTheory/Morphisms/ReducedSmooth.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/README.md.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/repository.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/tree.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/workflowRuns.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Dubon Reuse Search 2026-10-24 NYLL.md",
+      "role": "documentation"
+    },
+    {
+      "path": "Tools/nyll-reuse-20261024-479/archive-manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilFunctionChoice.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilSameDivisors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilEvaluationPowers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilPrincipalShift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilPrincipalInvariance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilClassInvariance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilPairingDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCommonRepresentatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilBilinearity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilAlternation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilArithmetic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilNormAdjunction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurvePullbackPushforwardDisjoint.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilNormDatum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalPicardFiniteMaps.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilPullbackDatum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilMapClasses.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilAdjunctionWitness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilAdjunctionRepresentatives.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilAdjunction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilCorrespondenceAdjunction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilHeckeTranspose.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilTateHeckeCoordinate.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCurveCorrespondenceSwap.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilHeckeSelfAdjoint.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilTateHeckeSelfAdjoint.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilLevelDatum.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilLevelCompatibility.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalWeilTateCompatibility.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTateWeilPairing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTateWeilLinearity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTateWeilArithmetic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTateWeilHecke.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTateWeilCyclotomic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTateScalarFaithfulness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalTateWeilMultiplier.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-original-weil-descent-7-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-weil-laws-4-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-weil-adjunction-10-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-weil-hecke-5-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-tate-weil-7-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-tate-cyclotomic-3-reuse-review-20261024.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-original-tate-weil.json",
+      "role": "Tools"
     }
   ],
   "statusDocuments": [
@@ -44470,7 +45686,195 @@
     "SourceModularCharTwoNormalField",
     "SourceModularCharTwoGaloisOrder",
     "SourceModularCharTwoStrongDifferent",
-    "SourceModularCharTwoFourteen"
+    "SourceModularCharTwoFourteen",
+    "SourceEllipticCharTwoAuxiliaryRootUnits",
+    "SourceEllipticCharTwoThreeDivisionRelation",
+    "SourceEllipticCharTwoEighthPower",
+    "SourceEllipticFullTorsionDivisor",
+    "SourceEllipticDeuringThreeTorsionSpecialization",
+    "SourceEllipticCharTwoOfJFamily",
+    "SourceEllipticCharTwoGoodModelOrder",
+    "SourceEllipticCharTwoFullInertiaImage",
+    "SourceEllipticCharTwoCyclicSpecialization",
+    "SourceEllipticCharTwoEmbeddingOrbits",
+    "SourceEllipticCharTwoPlaceFibers",
+    "SourceEllipticCharTwoPlaceClassification",
+    "SourceOrderTwelveBasic",
+    "SourceOrderTwelveSylowNonNormal",
+    "SourceOrderTwelveElementCounts",
+    "SourceOrderTwelveInvolutionConjugacy",
+    "SourceOrderTwelveCubicCentralizer",
+    "SourceOrderTwelveTransitiveMarks",
+    "SourcePrimeTorsionCommonScalar",
+    "SourceQuaternionQuarticNonscalar",
+    "SourceQuaternionCubicNonscalar",
+    "SourceEllipticStabilizerPointHom",
+    "SourceEllipticCharTwoCubicParameters",
+    "SourceEllipticCharTwoQuarticChanges",
+    "SourceEllipticCharTwoQuaternionStabilizers",
+    "SourceEllipticCharTwoQuarticFixedCount",
+    "SourceEllipticCharTwoCubicPoint",
+    "SourceEllipticCharTwoCubicCommutator",
+    "SourceEllipticCharTwoCubicFixedCount",
+    "SourceEllipticCharTwoFixedCounts",
+    "SourceEllipticCharTwoSignExponent",
+    "SourceEllipticCharTwoMarkedElements",
+    "SourceEllipticCharTwoCyclicAction",
+    "SourceEllipticCharTwoCyclicOrbits",
+    "SourceEllipticCharTwoOrbitMarks",
+    "SourceEllipticCharTwoCensusSum",
+    "SourceEllipticCharTwoWeightedCensus",
+    "SourceModularCharTwoCensus",
+    "SourceModularCharTwoDifferentialSum",
+    "SourceModularCharTwoGenusLower",
+    "SourceModularCharTwoResidueGenus",
+    "SourceModularCharTwoPicardInjectivity",
+    "SourceModularPrimePicardInjectivity",
+    "SourceOriginalInertiaIntegralFunctions",
+    "SourceOriginalInertiaGaussAction",
+    "SourceOriginalArithmeticIntegralCharts",
+    "SourceReductionPrincipalDivisorCharts",
+    "SourceModularPrincipalDivisorCharts",
+    "SourceModularConstantReductionCharts",
+    "SourceOriginalCoefficientPlaceAction",
+    "SourceOriginalInertiaChartTransport",
+    "SourceOriginalInertiaPlaceReduction",
+    "SourceOriginalCoefficientDivisors",
+    "SourceOriginalCoefficientPicard",
+    "SourceOriginalInertiaDivisorReduction",
+    "SourceOriginalInertiaPicard",
+    "SourceOriginalTateInertia",
+    "SourceOriginalSpecializationInertia",
+    "SourceOriginalPrimitiveUnramifiedRealization",
+    "SourceResidueCoefficientAutomorphism",
+    "SourceDecompositionGaussAction",
+    "SourceArithmeticFrobeniusResidue",
+    "SourceResidueCoefficientPlaces",
+    "SourceDecompositionChartTransport",
+    "SourceModularDecompositionPlaceReduction",
+    "SourceResidueCoefficientPlaceOrders",
+    "SourceResidueCoefficientDivisors",
+    "SourceResidueCoefficientPicard",
+    "SourceOriginalDecompositionDivisorReduction",
+    "SourceOriginalFrobeniusPicardReduction",
+    "SourceLaurentFrobenius",
+    "SourceResidueGeometricFrobenius",
+    "SourceResidueGeometricFrobeniusPlaces",
+    "SourceResidueGeometricFrobeniusDivisors",
+    "SourceResidueGeometricFrobeniusPicard",
+    "SourceOriginalGeometricFrobeniusReduction",
+    "SourceHeckePrimeRootReduction",
+    "SourceHeckeLaurentProductReduction",
+    "SourceHeckeLaurentNormExtraction",
+    "SourceOriginalAtkinPrimePolynomial",
+    "SourceOriginalAtkinEmbedding",
+    "SourceOriginalAdjacentRootUniqueness",
+    "SourceOriginalAtkinGeneratorImages",
+    "SourceOriginalAtkinInvolution",
+    "SourceOriginalTensorCoefficientMapR2",
+    "SourceOriginalTensorCoefficientEquivR2",
+    "SourceOriginalAtkinCoefficientExtensionR2",
+    "SourceOriginalHeckePrimeDegree",
+    "SourceOriginalHeckeNormEmbeddings",
+    "SourceOriginalHeckeEmbeddingCensus",
+    "SourceOriginalHeckeNormProduct",
+    "SourceOriginalHeckeNormReduction",
+    "SourceOriginalIntegralPrincipalDifference",
+    "SourceOriginalTorsionDivisorAgreement",
+    "SourceResidueFrobeniusDivisorOperator",
+    "SourceCurveCorrespondencePrincipalOrder",
+    "SourceOriginalHeckePrincipalNorm",
+    "SourceOriginalIntegralDivisorReduction",
+    "SourceOriginalHeckeIntegralAgreement",
+    "SourceResidueFrobeniusPicardOperator",
+    "SourceSpanningSpecializationQuadratic",
+    "SourceOriginalSpecializationQuadratic",
+    "SourceOriginalHeckeTorsionReduction",
+    "SourceOriginalPicardFrobeniusQuadratic",
+    "SourceOriginalTateFrobeniusQuadratic",
+    "SourceOriginalPrimitiveFrobeniusQuadraticRealization",
+    "SourceOriginalWeilEvaluation",
+    "SourceOriginalWeilEvaluationGalois",
+    "SourceOriginalWeilDatum",
+    "SourceResidueAlgebraNorm",
+    "SourceResidueAlgebraNormPi",
+    "SourceRamifiedResidueNorm",
+    "SourceCurveResidueNormBaseChange",
+    "SourceCurveResidueNormFactors",
+    "SourceCurveRationalEvaluation",
+    "SourceCurveRationalNormEvaluation",
+    "SourceCurveNormFiberEvaluation",
+    "SourceCurveFiberRegularIntegrality",
+    "SourceCurveRationalFunctionEvaluation",
+    "SourceCurveFieldNormEvaluation",
+    "SourceOriginalNormEvaluation",
+    "SourceCurvePullbackEvaluationProduct",
+    "SourceOriginalPullbackEvaluation",
+    "SourceCurveEvaluationRestriction",
+    "SourceOriginalEvaluationRestriction",
+    "SourceFiniteDivisorEvaluationPushforward",
+    "SourceOriginalPushforwardEvaluation",
+    "SourceRationalInfinityPlace",
+    "SourceRationalPlaceClassification",
+    "SourceRationalPointPlaces",
+    "SourceRationalPointOrders",
+    "SourceRationalPlaceEvaluation",
+    "SourceCurveRationalResidueValues",
+    "SourceRationalInfinityEvaluation",
+    "SourceRationalRootDivisors",
+    "SourceRationalDivisorEvaluation",
+    "SourceRationalCoordinateReciprocity",
+    "SourceRationalCoordinateWeilReciprocity",
+    "SourceOriginalRationalCoordinate",
+    "SourceOriginalRationalNormEvaluation",
+    "SourceOriginalRationalDivisorEvaluation",
+    "SourceOriginalRationalPrincipalDivisors",
+    "SourceOriginalCoordinateWeilReciprocity",
+    "SourceOriginalConstantWeilReciprocity",
+    "SourceOriginalWeilReciprocity",
+    "SourceOriginalWeilTorsionValues",
+    "SourceOriginalClosedPlaceSeparation",
+    "SourceOriginalClosedFiniteSeparation",
+    "SourceOriginalClosedPrescribedOrders",
+    "SourceOriginalClosedPicardMoving",
+    "SourceOriginalWeilClasses",
+    "SourceOriginalWeilRepresentatives",
+    "SourceOriginalWeilFunctionChoice",
+    "SourceOriginalWeilSameDivisors",
+    "SourceOriginalWeilEvaluationPowers",
+    "SourceOriginalWeilPrincipalShift",
+    "SourceOriginalWeilPrincipalInvariance",
+    "SourceOriginalWeilClassInvariance",
+    "SourceOriginalWeilPairingDescent",
+    "SourceOriginalWeilCommonRepresentatives",
+    "SourceOriginalWeilBilinearity",
+    "SourceOriginalWeilAlternation",
+    "SourceOriginalWeilArithmetic",
+    "SourceOriginalWeilNormAdjunction",
+    "SourceCurvePullbackPushforwardDisjoint",
+    "SourceOriginalWeilNormDatum",
+    "SourceOriginalPicardFiniteMaps",
+    "SourceOriginalWeilPullbackDatum",
+    "SourceOriginalWeilMapClasses",
+    "SourceOriginalWeilAdjunctionWitness",
+    "SourceOriginalWeilAdjunctionRepresentatives",
+    "SourceOriginalWeilAdjunction",
+    "SourceOriginalWeilCorrespondenceAdjunction",
+    "SourceOriginalWeilHeckeTranspose",
+    "SourceOriginalWeilTateHeckeCoordinate",
+    "SourceCurveCorrespondenceSwap",
+    "SourceOriginalWeilHeckeSelfAdjoint",
+    "SourceOriginalWeilTateHeckeSelfAdjoint",
+    "SourceOriginalWeilLevelDatum",
+    "SourceOriginalWeilLevelCompatibility",
+    "SourceOriginalWeilTateCompatibility",
+    "SourceOriginalTateWeilPairing",
+    "SourceOriginalTateWeilLinearity",
+    "SourceOriginalTateWeilArithmetic",
+    "SourceOriginalTateWeilHecke",
+    "SourceOriginalTateWeilCyclotomic",
+    "SourceTateScalarFaithfulness",
+    "SourceOriginalTateWeilMultiplier"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

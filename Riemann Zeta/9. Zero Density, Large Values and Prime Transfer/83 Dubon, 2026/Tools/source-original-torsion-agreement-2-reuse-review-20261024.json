@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original Tate Frobenius quadratic relation -> Hecke compatibility on every finite Tate torsion layer -> vanishing of the divisor discrepancy on torsion classes -> agreement on all principal divisors -> agreement on integral Laurent principal divisors",
+  "precedingScratchReceipts": {
+    "source-original-hecke-norm-reduction-1-scratch-receipt.json": "D792B65EC4F99F2FF082523B5EE1D696DCC31FDDF10E7CDBBC3ECEB2840BC804"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularPrimitiveFractionForm.lean",
+      "sha256": "8D792E8D554B88799756FC9E5AF34C390B9B0316789B99EA080C842B874C24C2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCoefficientPlaceAction.lean",
+      "sha256": "773340837F7AC927A9C3E4F855230F556FEB177D45AE534D09DCBA657C8DB235"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardGroup.lean",
+      "sha256": "FDD3E9F7FEAB972C7A3E284A89527B61C2442549D29EC437F60EF98570CEA58B"
+    }
+  ],
+  "routeAdjustment": "Prove the actual integral-principal difference formula, extend integral-principal agreement by additivity to all principal divisors, then cancel a nonzero principal multiple for each torsion divisor class. Apply this engine to the actual Hecke reduction discrepancy after proving its integral-principal agreement from the norm residue formula.",
+  "discharged": "Every principal divisor of the actual original field over Qbar is a difference of two integral Laurent principal divisors with nonzero reductions. Agreement on these narrower divisors implies agreement on all finite torsion classes by cancelling a nonzero principal multiple in the torsion-free target divisor group. The actual Hecke integral-principal agreement must still be discharged; global Picard divisibility is unnecessary for this finite-layer route.",
+  "remaining": "Actual Hecke reduction on torsion, the original Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\hecke-torsion-principal-route-448.json",
+    "sha256": "5A9AA03277E82433C57BDF2A4C8E68D5707B55360289F44FBA42CE63ECF40EBA",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original Tate Frobenius quadratic relation -> Hecke compatibility on every finite Tate torsion layer -> vanishing of the divisor discrepancy on torsion classes -> agreement on all principal divisors -> agreement on integral Laurent principal divisors",
+      "reuseChecked": [
+        "GaussReduction.exists_frac_form already writes each nonzero actual modular function as a nonzero constant times a quotient of two integral Laurent modular functions with nonzero coefficient reductions. original_field_eq_coefficient_field transports it to the paper's original field.",
+        "The originalPrincipalDivisor construction and normalized-order multiplication and constant formulas turn this fraction into a difference of two literal principal divisors.",
+        "Pic0.mk_mem_torsion_iff identifies a torsion class with a principal multiple of its divisor. Mathlib torsion-freeness of finite integer divisors then cancels that nonzero multiple.",
+        "The frozen external reductionModL_heckeOperatorBar proves compatibility for all Picard classes using full Picard divisibility. The required original Tate quadratic relation only uses finite torsion layers. Once principal agreement is proved, torsion-freeness supplies those layers directly; no full Picard divisibility theorem is required for this dependency chain."
+      ],
+      "selectedRoute": "Prove the actual integral-principal difference formula, extend integral-principal agreement by additivity to all principal divisors, then cancel a nonzero principal multiple for each torsion divisor class. Apply this engine to the actual Hecke reduction discrepancy after proving its integral-principal agreement from the norm residue formula.",
+      "assumptionsToDischarge": "Principal-generation and global Picard-divisibility inputs from the external proof route. The temporary engine's only compatibility premise is explicit agreement on integral Laurent principal divisors, a strictly narrower identified upstream obligation.",
+      "boundary": "This proves compatibility only on the torsion classes needed for the full original Tate theorem; it does not claim the stronger global Picard identity. Actual integral-principal Hecke agreement, the quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

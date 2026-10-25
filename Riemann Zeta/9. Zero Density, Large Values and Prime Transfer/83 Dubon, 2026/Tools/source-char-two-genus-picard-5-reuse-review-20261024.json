@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "non-CM modular-form application -> source modularity prerequisites -> actual modular good reduction and Picard torsion injectivity in characteristic two",
+  "precedingScratchReceipts": {
+    "source-char-two-weighted-census-3-scratch-receipt.json": "B9DDF7A1E39EFD910360E571CA817318FBA9D3B500E8ABABA31767D98449C494"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCoefficientWildGenusCriterion.lean",
+      "sha256": "B58B6D5B18B3530A21D5B8129FFB7ABD45C4D09784751C1AD54937A486320DD7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCharThreeDifferentialSum.lean",
+      "sha256": "ADD8D530575AB3BF4669ABE68C48CD4DC7FE3871894C6E704E03A881C87A2890"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularGenusTorsionInjectivity.lean",
+      "sha256": "481AC59AA70E8717EEA432E5944B3216C35B8EF7E29656049829E2FA7D4A4410"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularTameResidueGenus.lean",
+      "sha256": "CD91F337FB87121151A0D30FEF1654FD6B18450C80FA9D94BF7D3A8D210C933D"
+    }
+  ],
+  "routeAdjustment": "Derive the one characteristic-two weighted local inequality, sum it using the exact census, then apply the already proved genus and Picard theorems. No new Hurwitz, divisor, residue, Kummer or torsion foundations.",
+  "discharged": "The actual characteristic-two modular Gauss reduction preserves genus and has a Picard map injective on every residue-invertible torsion subgroup. The exact census and local derivative bounds discharge the full wild differential contribution. Combining the tame and both wild cases supplies actual genus equality and the same Picard injectivity at every prime residue characteristic, under only level invertibility.",
+  "remaining": "Original arithmetic-action comparison, Frobenius/inertia compatibility, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\char-two-genus-picard-route-427.json",
+    "sha256": "70EA8BFAF32F87037FE1F0BD2E3D2B23C753D2B0FD2C76288F915C95EE6A0EFF",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "non-CM modular-form application -> source modularity prerequisites -> actual modular good reduction and Picard torsion injectivity in characteristic two",
+      "reuseChecked": [
+        "Scope 426 proves the exact characteristic-two weighted census. Existing ordinary derivative-order bounds, the characteristic-two order-4/order-6 wild bounds and scope 417 order-12 bound of 14 match every census case.",
+        "Existing sum_coeff_j_fiber_orders_finset and coeff_genus_lower_of_wild_differential_contribution give the finite sum and lower genus comparison.",
+        "Existing upper reduction bound, original arithmetic genus identity and exists_modular_picard_torsion_injective_of_genus_eq supply the remaining genus and Picard transfer. The verified characteristic-three assembly demonstrates the exact interfaces."
+      ],
+      "selectedRoute": "Derive the one characteristic-two weighted local inequality, sum it using the exact census, then apply the already proved genus and Picard theorems. No new Hurwitz, divisor, residue, Kummer or torsion foundations.",
+      "assumptionsToDischarge": "The characteristic-two weighted differential contribution, reverse genus inequality, actual Gauss residue genus equality and Picard injectivity on every residue-invertible torsion subgroup.",
+      "boundary": "Original arithmetic-action comparison, Frobenius/inertia compatibility, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "primeAssembly": "The original arithmetic Frobenius/inertia comparison requires arbitrary prime residue characteristic. Assemble the existing tame and characteristic-three genus equalities with the new characteristic-two equality, then apply the same generic Picard torsion theorem. This removes a case restriction without adding new foundations."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_le_six_mul_sum_ordDiff_D_jqModC_of_lt_five.lean.txt",
+    "sha256": "44F4D9D2093DF96DBB6DEF10022FC43B199E9CD0B4B6F03D66CD0EC8110ADF42",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The exact source characteristic-two local inequality and weighted sum are assembled with the existing actual degree, Hurwitz criterion, genus comparison and Picard torsion theorem. No residue, divisor, Kummer or curve foundation is rebuilt. No external build or import is claimed."
+  },
+  "preservedAuditCorrection": {
+    "reason": "Correct the declared namespace of the already used coefficient-to-original genus identity. No mathematical source or required dependency is removed.",
+    "originalDependencyAudit": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGenusPicardDependencyAudit5.lean",
+    "originalSourceSha256": "8C0C7252794D3C9B134EBBD8A745335F0B8FC4DE2ED5C8A9A49795F3804C06F6",
+    "originalFailureLog": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGenusPicardDependencyAudit5.log",
+    "originalFailureLogSha256": "4B469ED73074E78C54AA6F9140FE85FBA771471147ADBA2EBFCDE2B22307679C"
+  }
+}

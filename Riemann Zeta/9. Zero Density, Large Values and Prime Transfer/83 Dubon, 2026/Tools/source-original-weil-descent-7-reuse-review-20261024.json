@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "modular concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Picard Weil pairing -> representative independence and root-valued descent",
+  "precedingScratchReceipts": {
+    "source-original-weil-representatives-6-scratch-receipt.json": "ACDBD4891C48FBD21F56F642674647CBB1F60081C41C88D542DB9F76B3295E9C"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularFinite.lean",
+      "sha256": "DFDA2D0CCAA21B432A7218E27723B76201CAB4D996B454599DCCFDDDF52EA590"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardGroup.lean",
+      "sha256": "FDD3E9F7FEAB972C7A3E284A89527B61C2442549D29EC437F60EF98570CEA58B"
+    }
+  ],
+  "routeAdjustment": "Reuse original global regular functions = constants for independence of principal functions, actual Weil reciprocity for principal shifts, the existing Picard quotient for class equality, and one moved divisor avoiding both second supports. This avoids the external two-function constant-correction argument and derives every reciprocity, moving and constant-function input.",
+  "discharged": "The literal divisorial Weil ratio is independent of every divisor and function representative of the two actual Picard n-torsion classes. It defines a pairing into actual nth roots of unity and swapping its arguments inverts its value.",
+  "remaining": "Bilinearity, alternation, nondegeneracy, Hecke adjointness, Tate compatibility, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. Scratch only; production promotion and assembled verification pending. No acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-weil-descent-route-471.json",
+    "sha256": "DC2D511699A280E06D2C3BD2D79095EC43746A2CE0E8128CE1F4ED32D67028B3",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "modular concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Picard Weil pairing -> representative independence and root-valued descent",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularFinite.lean",
+          "sha256": "DFDA2D0CCAA21B432A7218E27723B76201CAB4D996B454599DCCFDDDF52EA590"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardGroup.lean",
+          "sha256": "FDD3E9F7FEAB972C7A3E284A89527B61C2442549D29EC437F60EF98570CEA58B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilReciprocity.lean",
+          "sha256": "9946806105115C9BB6B839D301F13729BC36179C81CADBDDBD548C6494BFCFF1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRepresentatives.lean",
+          "sha256": "3D76223B9177A7C9B8860DE553088A22B34E496C899061D93850F6E89176FB71"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_WeilDatum_pairing_eq_of_isPrincipal_sub.lean.txt",
+          "sha256": "55100FE4CC2C4E0E4B5FEEC4247E49A4038B8E7688D57853EB9989B60F144F56"
+        }
+      ],
+      "selectedRoute": "Reuse original global regular functions = constants for independence of principal functions, actual Weil reciprocity for principal shifts, the existing Picard quotient for class equality, and one moved divisor avoiding both second supports. This avoids the external two-function constant-correction argument and derives every reciprocity, moving and constant-function input.",
+      "discharged": "The literal divisorial Weil ratio is independent of every divisor and function representative of the two actual Picard n-torsion classes. It defines a pairing into actual nth roots of unity and swapping its arguments inverts its value.",
+      "remaining": "Bilinearity, alternation, nondegeneracy, Hecke adjointness, Tate compatibility, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. No acceptance gate closes. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

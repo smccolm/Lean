@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "non-CM modular-form application -> source modularity prerequisites -> characteristic-two genus/Picard -> weighted exceptional census on the actual coefficient modular field",
+  "precedingScratchReceipts": {
+    "source-char-two-quotient-action-5-scratch-receipt.json": "84B54EAE5B6BDA1795CB845BA7E48305AC652D872B67D1AD7242625EEACDEA0D"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimeTorsionScalarAction.lean",
+      "sha256": "95FF614C45444CDBEE995284F637510D5CADC266E7BAB8B4AF16CB19523D5D07"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceDihedralCubicNonscalar.lean",
+      "sha256": "D3E37C2915F5087657757EA74CB9302D628BE16BE7D63990440D3EA5FEA2CE25"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticQuadraticFixedCounts.lean",
+      "sha256": "3CD410BE05BF5AFD78A899CE45781D1077A8D6136CB9C2A9D74FAC48825C2334"
+    }
+  ],
+  "routeAdjustment": "Use the existing cyclic-subgroup cardinality for finiteness, the native fiberwise-cardinality identity for the two weighted sums, and the actual classifier directly. Avoid a second general action or point-map theory.",
+  "discharged": "The actual modular coefficient field has positive-j orders 1,3,4,6,12, with #1+3#3+2#6=nuTwo(N) and #1+#4=nuThree(N). The actual full-inertia classifier, sign-quotient marks, elliptic fixed-subgroup counts and native finite-fiber sum discharge every geometric/action/count input. The closure parameter is eliminated in the public consumer.",
+  "remaining": "The weighted local differential contribution and characteristic-two genus/Picard assembly remain, followed by original arithmetic-action comparison and automorphy. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\char-two-weighted-census-route-426.json",
+    "sha256": "92FE6859C328DAC3DF75AC19768FC043F3918CC299D3CCDA61882BFD08FC624C",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "non-CM modular-form application -> source modularity prerequisites -> characteristic-two genus/Picard -> weighted exceptional census on the actual coefficient modular field",
+      "reuseChecked": [
+        "Scope 425 derives every hypothesis for the order-twelve marks on the actual quotient action, and identifies its orbits with the existing classifier relation.",
+        "Scope 421 supplies the actual surjective modular-place classifier and identifies orders with orbit sizes.",
+        "The existing characteristic-three census shows the actual cyclic-subgroup count and algebraic-closure elimination route. Mathlib Finset.card_eq_sum_card_fiberwise provides the exact finite summation; Burnside sums over all group elements and is not the required two marked-element identity."
+      ],
+      "selectedRoute": "Use the existing cyclic-subgroup cardinality for finiteness, the native fiberwise-cardinality identity for the two weighted sums, and the actual classifier directly. Avoid a second general action or point-map theory.",
+      "assumptionsToDischarge": "The actual positive-j place orders are 1,3,4,6,12; counts satisfy #1+3#3+2#6=nuTwo and #1+#4=nuThree. No field, inertia, action, torsion or census certificate remains.",
+      "boundary": "The differential contribution, characteristic-two genus/Picard assembly, original arithmetic-action comparison and automorphy remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_ord_jqModC_census_of_char_two.lean.txt",
+    "sha256": "5D9DB75E32CCC39AAB2483D9D9C7A16E98952759A0704647D74A46C2F033EA7F",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The source weighted census is adapted using the actual classifier and quotient-action marks, with Mathlib finite-fiber cardinalities and the existing elliptic cyclic-subgroup count. Repeated source orbit/action foundations are unnecessary. No external build or import is claimed."
+  }
+}

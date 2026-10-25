@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original Tate Frobenius quadratic relation -> actual Hecke norm reduction -> explicit degeneracy norm product -> full embedding census -> Atkin-Lehner field involution exchanging the original degeneracy maps",
+  "precedingScratchReceipts": {
+    "source-hecke-laurent-reduction-3-scratch-receipt.json": "0AAFAE07BD4AC3F47B2758BF1780C9C144F0D16FFC7C772C2897D2C6B621203E"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConjugateEmbedding.lean",
+      "sha256": "288C604E47B757F7D5FDFFAFE5B4AA56559C2265BFB231D5AC5CC04450DE6BFE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralPrimeLaurentRoots.lean",
+      "sha256": "D425339BEB89B0D6E1A622A56B58EBF2146107B757C262C7454AC08016979DD7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceMixedPrimePowerFields.lean",
+      "sha256": "D1B063D5453C2D29B67F91114610387AF6C78AC9B2E7991C19A1BE4D2B0E06E6"
+    }
+  ],
+  "routeAdjustment": "Identify the actual prime minimal polynomial over the original lower field, transport its coefficients by q-expansion, use the proved reverse adjacent relation to lift j_p to j, and identify the resulting simple-extension embedding with the actual level Np field. Complete generator-image preservation and involution before using it in the norm census.",
+  "discharged": "The prime minimal polynomial over the actual lower modular field equals the exact integral prime relation and has the required reverse root. Existing simple-extension lifting and mixed-level generation construct an actual level Np embedding with q-expansion on the lower field and j_p mapped to j. This discharges root lifting without a polynomial symmetry assumption; generator preservation and involution remain separate obligations.",
+  "remaining": "The actual degeneracy norm-product identity must still be proved, followed by Hecke/Picard compatibility, the quadratic relation, residual association, automorphy and all-weight continuation. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\hecke-atkin-embedding-route-443.json",
+    "sha256": "50776C9C74F1A9A84E4F7CDABF2447F96DB51E9A58A14CB1E9CF7A7676A0563C",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original Tate Frobenius quadratic relation -> actual Hecke norm reduction -> explicit degeneracy norm product -> full embedding census -> Atkin-Lehner field involution exchanging the original degeneracy maps",
+      "reuseChecked": [
+        "The external Atkin-Lehner proof builds a root-lift embedding and then pins its generator images using adjacent prime relations. Local exact all-level generation/degree, rational prime-step degree, coprime nonmembership, and mixed-prime field generation already discharge the early inputs.",
+        "The exact integral modularPolynomial_prime_adjacent_relations supplies the reverse relation directly. Thus the initial root lift needs no new bivariate symmetry theorem or ModularPolynomialData certificate.",
+        "An analytic matrix-normalizer route was assessed: it would need a new global meromorphic pullback and rational/coefficient-field descent. The existing original Laurent field and root-lift APIs provide a shorter verified entry. Before expanding the generator-image step, reuse the local conjugate root and uniqueness lemmas already proved for all-level degree."
+      ],
+      "selectedRoute": "Identify the actual prime minimal polynomial over the original lower field, transport its coefficients by q-expansion, use the proved reverse adjacent relation to lift j_p to j, and identify the resulting simple-extension embedding with the actual level Np field. Complete generator-image preservation and involution before using it in the norm census.",
+      "assumptionsToDischarge": "The actual Atkin-Lehner involution and embedding census needed for the explicit Hecke norm product; no assumed automorphism, symmetry, degree or norm certificate.",
+      "boundary": "Generator-image preservation and involution, actual norm-product identification, Hecke/Picard reduction compatibility, quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

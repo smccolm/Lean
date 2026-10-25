@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "non-CM modular-form application -> original residual association -> original Tate/Picard inertia action -> equivariance of actual modular reduction -> inertia invariance of integral Laurent functions",
+  "precedingScratchReceipts": {
+    "source-char-two-genus-picard-5-scratch-receipt.json": "36B4244D8766017117FC2A44B05131597DC8029E6FE6EFD4CF92439FECB5B4C7"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalArithmeticFieldAction.lean",
+      "sha256": "C64515970E7B1AD3D0021BF2165AB65521CDCCDBA8AF851B915768ABB2CC72F5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceResidueOriginalSpecialization.lean",
+      "sha256": "8C1F66BB1D19F5413B84E1F425759982523EEF43BB3F51E93A9715FB8F714FDA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularGaussResidueHom.lean",
+      "sha256": "6CDAC407711B121CABF174930E57CF31917999D2D27C51C0F286461CDF2833FE"
+    }
+  ],
+  "routeAdjustment": "First prove the exact original-function reduction identity from actual inertia membership. Then use existing chart uniqueness if it can supply point invariance while retaining the same actual Gauss reduction and Picard map.",
+  "discharged": "Native inertia membership gives an integral Laurent representative for the original arithmetic image with exactly the same residue series. The literal original arithmetic automorphism on the identified coefficient field preserves the actual Gauss ring and fixes modularResidueHom. Existing integral fractions and their choice independence derive the residue compatibility.",
+  "remaining": "Integral-chart, place and Picard action comparison, the Frobenius relation, residual association, automorphy and all-weight continuation remain required. No unramifiedness claim follows from this function-level result alone. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-inertia-function-route-429.json",
+    "sha256": "4BC586F6F1ACCEECE36E7C4D7C8C827B0D7E9ECF7765E017C9A61DAE8C22CEA2",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "non-CM modular-form application -> original residual association -> original Tate/Picard inertia action -> equivariance of actual modular reduction -> inertia invariance of integral Laurent functions",
+      "reuseChecked": [
+        "Existing originalArithmeticRingAut is the literal coefficient action on the original field; original_field_eq_coefficient_field already identifies it with the Gauss model. No new field isomorphism wrapper is needed.",
+        "Mathlib decomposition-subgroup action and residue action kernel construct the integral coefficient action and prove its trivial residue action. Laurent coefficient extensionality proves both composition identities directly.",
+        "The source reductionModL inertia proof proceeds from these exact function identities to place/Picard invariance via a general principal-divisor rigidity theorem. The local project instead already has unique integral-chart reduction and principal-divisor sums. Investigate that shorter direct chart route before introducing source-wide rigidity and divisibility infrastructure."
+      ],
+      "selectedRoute": "First prove the exact original-function reduction identity from actual inertia membership. Then use existing chart uniqueness if it can supply point invariance while retaining the same actual Gauss reduction and Picard map.",
+      "assumptionsToDischarge": "The original arithmetic image of an integral Laurent representative has an integral representative with exactly the same residue series, derived from native inertia membership.",
+      "boundary": "Place and Picard action comparison, Frobenius relation, residual association, automorphy and all-weight continuation remain required. This function-level identity alone does not prove unramifiedness. DUB-17--20 OPEN; 16/20.",
+      "completedScope": "Includes the actual Gauss-ring inertia homomorphism and equality under modularResidueHom, by existing integral fraction witnesses and resHom_eq.",
+      "sourceInertiaConvention": "Definitions/Def_FLTPrelim_Ramification.lean.txt defines inertiaSubgroupIn exactly as the native inertia subgroup mapped along the decomposition-subgroup inclusion. The public theorem states this image directly; no new subgroup convention is introduced.",
+      "routeAdjustment": "Equivalence-conjugation normalization hit the unchanged kernel limit. The coefficient automorphism instead evaluates originalArithmeticRingAut literally on the same Laurent function, with membership transferred by the proved field equality. Its pointwise coefficient identity is immediate and used explicitly in Gauss-ring restriction.",
+      "nextRouteAssessment": "RegularProlongation already provides scalar normalization, but a local search found no Picard divisibility theorem matching the source rigidity argument. Existing unique chart reduction is therefore the candidate shorter next route; it still requires proof of integral-chart and place compatibility."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_reductionModL_smul_eq_self_of_mem_inertiaSubgroupIn.lean.txt",
+    "sha256": "F5DB9C8D5F7D075CB52566A40D02A04B37C8A804EB43483A8B6581D4F960C842",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The source coefficient-action identities are adapted to the existing original arithmetic action and actual Gauss fraction/residue construction. Native inertia is used through its literal image in the original Galois group, exactly as the source definition. No external build or import is claimed."
+  }
+}

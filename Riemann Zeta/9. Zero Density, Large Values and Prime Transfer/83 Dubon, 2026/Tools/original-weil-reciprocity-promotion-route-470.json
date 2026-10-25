@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "scope": "Promotion of actual original Weil reciprocity, nth-root values and disjoint Picard torsion representatives",
+  "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+  "chain": "modular concentration -> actual residual association -> original primitive-form Frobenius characteristic polynomial -> separate determinant -> nondegenerate Hecke-adjoint Tate pairing -> original divisorial Weil pairing -> actual reciprocity, roots-of-unity values and disjoint torsion representatives",
+  "priorScope": 7591,
+  "targetScope": 7637,
+  "prerequisite": "Complete zero-diagnostic canonical ROOT then PAPER verification of 7591 before promotion.",
+  "counts": {
+    "modules": 46,
+    "queries": 124,
+    "theorems": 104,
+    "constructions": 20,
+    "exhaustive": 219,
+    "proofEdges": 180
+  },
+  "scratchReceipts": {
+    "source-original-weil-datum-3-scratch-receipt.json": "DA01456CE1AA2141941EEFA0A07A8CA2036B0161028DF8D7A079413B6FD6A65A",
+    "source-original-norm-evaluation-12-scratch-receipt.json": "9AA64846F56C5C281CC50F73BAF95E88FB1D9D8F0FA95B451EDD76E25232C5D9",
+    "source-original-pullback-evaluation-2-scratch-receipt.json": "4DDFE906E49709D7024118CF3B4CE636BC8E2E5CD2EBA19D7FE5F038BCAFF204",
+    "source-original-pushforward-evaluation-4-scratch-receipt.json": "3D86F96F6EBD5DE64B59958578AD49F405DFC0180F76035AA8C26FB7E9D0F399",
+    "source-rational-coordinate-reciprocity-11-scratch-receipt.json": "3F95A72F0A5ABD4CDCBBD5CEB14B93F08B23E091D819AEDE1DB93A41466B55F5",
+    "source-original-weil-reciprocity-7-scratch-receipt.json": "7E169C1DDEE4A0AB5C9DEA177E63EA8BF609B03DF7FE0857AA3434EEEE521F2F",
+    "source-original-weil-torsion-values-1-scratch-receipt.json": "5D183B9E52BAECC889FB25CB31DC5BCF723471B0518DB867EE0ACDFBABB0D7C2",
+    "source-original-weil-representatives-6-scratch-receipt.json": "ACDBD4891C48FBD21F56F642674647CBB1F60081C41C88D542DB9F76B3295E9C"
+  },
+  "reuseDecision": "Use the pinned ramified Chinese remainder theorem and native factor dimensions for norm evaluation; pinned rational-function Ostrowski classification and native order uniqueness for the place census; polynomial root products for coordinate reciprocity; native finite coordinate, norm orders, divisor maps and global degree zero for original reciprocity. Extend the already proved complex separation argument to the exact arithmetic closed fields and reuse finite-place indicators and the actual Picard quotient. No full arbitrary-pair rational reciprocity induction or general approximation library is required.",
+  "discharged": "Actual original Weil reciprocity for nonzero functions with disjoint principal-divisor support; the literal divisorial Weil ratio has nth power one; every pair of actual Picard n-torsion classes has disjoint function/divisor representatives. All norm, evaluation, residue, finiteness, degree-zero and moving inputs in those consumers are derived.",
+  "remaining": "Pairing representative independence and descent, nondegeneracy, Hecke adjointness, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+  "productionChanges": "Only project scratch import qualification; all audited mathematical statements, proof bodies and comments remain identical.",
+  "verification": "Production aggregate; 124 explicit axiom queries; exhaustive focused theorem and construction audit; sixteen linters per module; eight value-only dependency audits; exact scratch-to-production ownership comparison and exact union with the preceding global audit; ROOT then PAPER with all thirteen regressions. Pins and proof limits unchanged."
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+  "chain": "genuine non-CM modular-form concentration -> actual residual modular Galois association -> original primitive weight-two Frobenius characteristic polynomial -> Frobenius quadratic identity and separate determinant -> original rational Tate identity -> finite Picard torsion comparison under the actual constructed reduction",
+  "reuseChecked": [
+    "Actual modular reduction preserves genus and is injective on residue-invertible torsion",
+    "Actual Hecke norm residue and native principal divisor identities discharge integral-principal comparison",
+    "Primitive fraction normalization and torsion-free integer divisors extend comparison to finite Picard torsion",
+    "Existing original Tate coordinate maps, endomorphism base change, spanning specialization and continuous unramified primitive realization"
+  ],
+  "selectedRoute": "Use only the finite torsion layers required by actual Tate coordinates. The main Picard consumer constructs the same reduction and supplies its compatibilities. Isolate the scalar-extension ring-homomorphism calculation to avoid elaborating the large original Tate type during rewriting; instantiate it immediately. Transfer the identity to the existing realization through its proved spanning specialization.",
+  "assumptionsDischarged": "The actual original Hecke correspondence and arithmetic Frobenius satisfy the quadratic identity on every residue-invertible Picard torsion subgroup, on actual integral and rational Tate space, and on the same constructed continuous unramified rank-two primitive weight-two realization. The reduction, Hecke agreement, torsion injectivity and specialization assumptions are supplied by proved constructions. Determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "boundary": "The quadratic identity alone does not prove determinant or trace. No characteristic polynomial, residual association, automorphy or additional acceptance gate is claimed. DUB-17--20 OPEN; 16/20.",
+  "staging": "Canonical 7544 verification remains independent. The already audited 41-module increment is imported from its isolated production-qualified stage; promotion must verify exact scratch-to-production ownership.",
+  "promotionSelection": "Combine the audited 41-module reduction/norm branch, two-module specialization bridge and four-module actual quadratic consumers in one 47-module promotion after the preceding 7544 canonical verification. Preserve unused 7585 preparation as history. This avoids a redundant full verification of an intermediate state while retaining every focused proof-value audit and exact ownership comparison."
+}

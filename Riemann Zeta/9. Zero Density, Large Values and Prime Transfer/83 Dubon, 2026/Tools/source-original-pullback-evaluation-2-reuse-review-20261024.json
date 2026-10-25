@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "modular-form concentration -> actual residual Galois association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Weil pairing -> reciprocity and correspondence adjointness -> norm evaluation on actual place fibers -> evaluation on pulled-back original divisors",
+  "precedingScratchReceipts": {
+    "source-original-norm-evaluation-12-scratch-receipt.json": "9AA64846F56C5C281CC50F73BAF95E88FB1D9D8F0FA95B451EDD76E25232C5D9"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPlaceEvaluation.lean",
+      "sha256": "EC2B8CCA1D7B7A2067967D9C0F3A4A5C42C25F7238AA29C8756565CA74374819"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeFinite.lean",
+      "sha256": "536367F99D427FCF03E99A47C3CF11A5AAFABE6DEC6C53AE984074DD0FAAAF80"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiberDegrees.lean",
+      "sha256": "100B8917A1BA4E9A3975FEDD55E619B2B713EC6D40C916D889063F5A1B69FD28"
+    }
+  ],
+  "routeAdjustment": "Reuse the native finitePullback definition, its exact value formula and actual finite fibers. Expand the finite product once and apply the proved original field-norm evaluation. No additional correspondence, rationality or norm certificate is introduced.",
+  "discharged": "Actual original divisor evaluation on the existing finite pullback equals evaluation of the actual field norm on the base divisor. Native disjoint fibers and ramification orders expand the pullback, and the proved original norm evaluation discharges every fiber identity. Only regularity above the divisor support is required; no norm or evaluation compatibility is assumed. Weil reciprocity, representative independence, Picard-torsion descent, nondegeneracy, Hecke adjointness and the Frobenius determinant remain required. DUB-17--20 OPEN; 16/20.",
+  "remaining": "Prove rational-function reciprocity and transfer it through the actual finite norm/pullback and pushforward identities; then assemble the original divisorial Weil pairing and the remaining determinant dependencies. Scratch only; production promotion and assembled verification pending. No additional acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-pullback-evaluation-route-464.json",
+    "sha256": "1758531BB9F50B5CB46980EB4FEF7654859FF95F11260C0A498B8D4B0B05FDD8",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "modular-form concentration -> actual residual Galois association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Weil pairing -> reciprocity and correspondence adjointness -> norm evaluation on actual place fibers -> evaluation on pulled-back original divisors",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\RamificationInertia\\Basic.lean",
+          "sha256": "8DBA1B8F2A556BBD64E8A25DAD5222CBE56210DE2909B39E5F290A7BC57CE960"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\IntegralClosure\\IntegralRestrict.lean",
+          "sha256": "1E60F91DBFEDF16CC1542014E1EFF810D2D9DD4B234E62E9D17E39227F29B423"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiberChart.lean",
+          "sha256": "EFCB4C154C87B6533816502665498A7A1FA0733597908FAFB221E3ED683D2A18"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiberPlaces.lean",
+          "sha256": "8353780F540AE20EE6220E05C7A9F540BE8275D0E5E16B2C8B3E6E8977C430BF"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiberPrimes.lean",
+          "sha256": "D3D03DD915E514A2A2DE740F995A88D0CE98A92ECFEB0B40EE6EC2B638EBD000"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiberDegrees.lean",
+          "sha256": "100B8917A1BA4E9A3975FEDD55E619B2B713EC6D40C916D889063F5A1B69FD28"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePrimeNormOrders.lean",
+          "sha256": "8F3D60C93ECA78D77736228BEB278AD05F7254B8D8641A5CFDCBE57F4C7B5C81"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePlaceCenters.lean",
+          "sha256": "F2746CA61E2DB176D765788BD8A0CEFCCFD507F79D98ED96A2FFCA4A3DFDAC2B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPlaceEvaluation.lean",
+          "sha256": "EC2B8CCA1D7B7A2067967D9C0F3A4A5C42C25F7238AA29C8756565CA74374819"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeFinite.lean",
+          "sha256": "536367F99D427FCF03E99A47C3CF11A5AAFABE6DEC6C53AE984074DD0FAAAF80"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalResidueFinite.lean",
+          "sha256": "364140071ED84A644BBC5C9710EA2AA815971C37665343EBAB875C4C84BD51DD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_Place_evalAt_norm_eq_prod_fiber.lean.txt",
+          "sha256": "B950C4BE4093AF44AFF0BE2A4F82794D8146FABE3F04F9FB8587D2348704FA40"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_Place_exists_integralClosureAt_of_ord_fiber_nonneg.lean.txt",
+          "sha256": "35DC29141F41C215099CF893022DBB053A7A2B2E409D744444C60C443061D938"
+        }
+      ],
+      "selectedRoute": "Reuse the native finitePullback definition, its exact value formula and actual finite fibers. Expand the finite product once and apply the proved original field-norm evaluation. No additional correspondence, rationality or norm certificate is introduced.",
+      "scopeDecision": "Keep only the finite-algebra calculations consumed by the actual norm theorem. The unused properness lemma for the fiber ideal was removed before auditing. No general arbitrary-curve Picard divisibility or additional valuation infrastructure is introduced.",
+      "discharged": "Actual original divisor evaluation on the existing finite pullback equals evaluation of the actual field norm on the base divisor. Native disjoint fibers and ramification orders expand the pullback, and the proved original norm evaluation discharges every fiber identity. Only regularity above the divisor support is required; no norm or evaluation compatibility is assumed. Weil reciprocity, representative independence, Picard-torsion descent, nondegeneracy, Hecke adjointness and the Frobenius determinant remain required. DUB-17--20 OPEN; 16/20.",
+      "remaining": "Prove rational-function reciprocity and transfer it through the actual finite norm/pullback and pushforward identities; then assemble the original divisorial Weil pairing and the remaining determinant dependencies.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. No additional acceptance gate closes. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

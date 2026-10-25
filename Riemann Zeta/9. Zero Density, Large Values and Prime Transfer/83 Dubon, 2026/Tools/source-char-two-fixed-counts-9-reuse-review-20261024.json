@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "characteristic-two genus/Picard -> weighted exceptional census -> fixed cyclic-subgroup counts -> actual quaternion automorphism relations and nonscalar prime torsion",
+  "precedingScratchReceipts": {
+    "source-quaternion-nonscalar-3-scratch-receipt.json": "432B9BA71B0ADDC924904A8859EA6C826EFEE6EAE2D0B9B255EE19C48967EEC6"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimeTorsionScalarAction.lean",
+      "sha256": "95FF614C45444CDBEE995284F637510D5CADC266E7BAB8B4AF16CB19523D5D07"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceDihedralCubicNonscalar.lean",
+      "sha256": "D3E37C2915F5087657757EA74CB9302D628BE16BE7D63990440D3EA5FEA2CE25"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticQuadraticFixedCounts.lean",
+      "sha256": "3CD410BE05BF5AFD78A899CE45781D1077A8D6136CB9C2A9D74FAC48825C2334"
+    }
+  ],
+  "routeAdjustment": "Construct only the explicit source changes and exact relations consumed by the two fixed-subgroup counts; reuse native point maps and existing coordinate theorems.",
+  "discharged": "A constructed cubic parameter gives actual quartic and cubic stabilizer automorphisms of native ofJ0. Their fixed cyclic-subgroup counts are exactly nuTwo(N) and nuThree(N). The native point homomorphism, addition law, quaternion relations, common-scalar nonscalarity and actual prime-torsion equivalences discharge every action, relation and torsion-count premise.",
+  "remaining": "Combine the actual sign-quotient action with the order-twelve marks, paired fixed counts and modular-place classifier to derive the weighted exceptional census. Characteristic-two genus/Picard, original arithmetic-action comparison and automorphy remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\char-two-quaternion-changes-route-424.json",
+    "sha256": "8A4E879037261B0FD36DA41CD4E97F95DCF492BFE65FC7D575780BD1EE8F876B",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "characteristic-two genus/Picard -> weighted exceptional census -> fixed cyclic-subgroup counts -> actual quaternion automorphism relations and nonscalar prime torsion",
+      "reuseChecked": [
+        "Scopes 409/410 already provide the actual native ofJ0 stabilizer coordinates and point negation. The source cubic-coordinate variant follows immediately from s^4=s.",
+        "Existing exists_cubic_scaling constructs the parameter; native CharTwo identities replace repeated elementary characteristic-two lemmas.",
+        "Existing xy_stabilizerPointEquiv, coordinate injectivity and vcXInv_mul/vcYInv_mul prove the actual stabilizer-to-point homomorphism. Native homomorphism power/inverse transport will supply the exact point relations.",
+        "Scope 423 then discharges the nonscalar condition using the existing actual prime-torsion equivalence; no repeated rank-two coordinate proof is needed."
+      ],
+      "selectedRoute": "Construct only the explicit source changes and exact relations consumed by the two fixed-subgroup counts; reuse native point maps and existing coordinate theorems.",
+      "assumptionsToDischarge": "Derive the displayed quaternion relations on actual ofJ0 points, then apply the proved nonscalar lemmas and torsion structure.",
+      "boundary": "The actual fixed-subgroup counts and sign-quotient orbit census must still be assembled, followed by characteristic-two genus/Picard and original arithmetic/automorphy. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_WeierstrassCurve_natCard_isAddCyclic_addSubgroup_card_eq_fixed_vcInvFun_eq_nuTwo_of_char_two.lean.txt",
+    "sha256": "ADCB4C59D60E0C6BE27274E9BD61CF282DBE7A87A3EA6711BA435A32145ECCBC",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The source explicit changes and quaternion relations are adapted to native ofJ0. Existing coordinate composition supplies the point homomorphism; the cubic commutator square follows algebraically from the already established quaternion relation. Existing torsion and stable-subgroup counting theorems close both actual counts. No external build or import is claimed."
+  },
+  "additionalDirectSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_WeierstrassCurve_natCard_isAddCyclic_addSubgroup_card_eq_fixed_vcInvFun_eq_nuThree_of_char_two.lean.txt",
+    "sha256": "3012ED176E91DAB12FF3D5054D473A2F91562CF6FBFD262712CE16F40FCFFA94",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The source explicit changes and quaternion relations are adapted to native ofJ0. Existing coordinate composition supplies the point homomorphism; the cubic commutator square follows algebraically from the already established quaternion relation. Existing torsion and stable-subgroup counting theorems close both actual counts. No external build or import is claimed."
+  }
+}

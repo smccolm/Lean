@@ -33,7 +33,7 @@
   "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy and residual association -> original Frobenius/inertia -> modular good reduction and Picard torsion injectivity -> characteristic-two genus preservation -> actual Deuring inertia, modular Galois j orders and the order-twelve/fourteen differential bound.",
   "discharged": "The actual characteristic-two exceptional stabilizer has order twenty-four and its central elliptic-negation quotient has order twelve. A finite Galois Deuring field and an explicit integral good model are constructed, and injective torsion reduction proves faithful inertia. The actual prescribed elliptic specialization and modular embeddings then construct a normal field containing the original modular coefficient field in which every positive j-order divides twelve. Above an order-twelve modular place, ramification index one allows the existing all-characteristic wild estimate to descend, proving that the actual differential dj has order at least fourteen. No good-model, torsion, inertia, auxiliary-field or local-differential certificate remains in these consumers.",
   "boundary": "The characteristic-two weighted exceptional-fiber census and genus/Picard assembly remain required. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation also remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
-  "status": "The 7,485-module production aggregate and focused characteristic-two Deuring inertia and strong differential audit pass with zero diagnostics. Nine declaration-value audits verify 104 required dependencies. The characteristic-two weighted exceptional-fiber census and genus/Picard assembly remain required. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation also remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification of this scope is pending.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 7,485-module scope: all thirteen retained regressions, 49,059 exhaustive theorem checks, 22,318 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
   "rootPinsChanged": false,
   "proofLimitsChanged": false,
   "frozenReceiptProseCorrections": [],
@@ -785,6 +785,177 @@
     "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The actual modular places, coefficient fields, Gauss residue map, divisor orders, genera and Picard quotient retain their definitions. No source contract is weakened.",
     "omittedScratchTheorems": [],
     "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 77,
+      "scratchDistinct": 77,
+      "generatedNameRenamings": {},
+      "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+      "generatedNameSourceEvidence": {},
+      "productionFocused": 77,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceEllipticCharTwoStabilizerCoordinates",
+            "SourceEllipticCharTwoRootCounts",
+            "SourceEllipticCharTwoStabilizerCard"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership409For7485.log",
+            "sha256": "94CD5EC4E142F998A513886F603AA8E28E9420AF54E688951E688BA59682EF6C",
+            "sourceSha256": "FD964BDC3A80E4ABF495005C9868E2367DC8BAB60CFA0C9E7F315B331D640935"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticCharTwoNegation",
+            "SourceEllipticCharTwoSignQuotient",
+            "SourceEllipticCharTwoSignAction"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership410For7485.log",
+            "sha256": "040B500B927D243C18F73429EFBF7B0B2DE49F336B4F05C3C91E952BC8E85C83",
+            "sourceSha256": "84F19215B0B8226FAAFF4C2308F2E4C93173A39B59FAC095EDA61E2934E51235"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticDeuringInvariants",
+            "SourceEllipticDeuringIntegralParameter",
+            "SourceEllipticThreeTorsionFlex",
+            "SourceEllipticDeuringGoodModel"
+          ],
+          "count": 14,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership411For7485.log",
+            "sha256": "D8EF7CCC23C73A89CDC8D893C245BABDE14AF64BDEABA57880469DE79A35CF2B",
+            "sourceSha256": "79FC0BF427BB1718755D904EDDA4A47B498952FFA2AABC4A8EDB5F77BDF682E6"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticDeuringThreeTorsionR2",
+            "SourceEllipticDeuringCubicRootsR2",
+            "SourceEllipticDeuringGaloisFieldR2"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership412For7485.log",
+            "sha256": "7B301534BFF19EC77D848C2683FDAACC5FF8E7F0C49332233AE7C8B836F32A34",
+            "sourceSha256": "DEA53051574451710A9F7B4AD130B6E738A2DBB29C5E32C5098FB2E09B3386F2"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticDeuringInertia"
+          ],
+          "count": 12,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership413For7485.log",
+            "sha256": "82E5B06652035F8989885A96260E51B991694C92CAD14360CA8578E1E1C07E96",
+            "sourceSha256": "5D0B1BAC1BBC451B77FC16FFC7C5B32B08E4DEB805BE9286220FEF9D0B7B3A14"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticDeuringFaithfulModel",
+            "SourceEllipticDeuringGaloisModel",
+            "SourceEllipticDeuringFaithfulField"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership414For7485.log",
+            "sha256": "AE1A4A06908EFA297A55B560E27890CBF2DC3A2753C86297BECD9632FD9B0A3E",
+            "sourceSha256": "81789FEF6D10C76928223A5CE7FB940070D06121AAD9CFBDCCF27FAF805C5BE8"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticDeuringFaithfulTorsionModel",
+            "SourceEllipticDeuringSpecializationFieldPlace",
+            "SourceEllipticDeuringOfJSpecialization",
+            "SourceEllipticDeuringFaithfulSpecializationHom",
+            "SourceEllipticDeuringPrescribedInertiaAction"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership415For7485.log",
+            "sha256": "57AE9768387515A55FA2B95ED0E1DACE2BE8EC0B948D1A5375463FEBC54E7B8D",
+            "sourceSha256": "E28BA2368BD27FCFABB434E4C80D6B059E87B9721F094A049F038ECB0CF2BB38"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticCharTwoInertiaSign",
+            "SourceEllipticCharTwoEmbeddingKernel",
+            "SourceModularCharTwoNormalField",
+            "SourceModularCharTwoGaloisOrder"
+          ],
+          "count": 4,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership416For7485.log",
+            "sha256": "85AF85A07BFCFBF3A0BAA7F4A5EBF4B07A8171AF1B4C7AF8B281A508235CFEFD",
+            "sourceSha256": "237FEFCB984CF606BEC68B303CEE1199BBDDE88C83FE2642BA77F304BBFC6DE1"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularCharTwoStrongDifferent",
+            "SourceModularCharTwoFourteen"
+          ],
+          "count": 4,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership417For7485.log",
+            "sha256": "100EB44B8A81FBC622E89D3255BD20BA9C68E2A4A409E646621273B2712ED8AD",
+            "sourceSha256": "081E84D0CFDA7A2F247B830BC9058454E96BDC4B5FA4284196D816908CF8FA35"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersOwnership7485.log",
+        "sha256": "8310E0593B29EC54B642411B1B12D22CEC9EFFF0EB1D719DEDEE402BB4302038",
+        "sourceSha256": "75C874E62DE0329D60D18B1E1C46CF6A69D39658E05CFFFB856AF7EBE78411B9"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-064854-284.log",
+        "sha256": "15F1BED89A8C9DEDB4C173C643FA564E770D0BE612C063DBCB297017AE0C6048"
+      }
+    },
+    "scratchToProductionCountReason": "All 77 distinct names from 77 exhaustive scratch checks are retained: 77 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The characteristic-two weighted exceptional-fiber census and genus/Picard assembly remain required. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation also remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt7485": {
+    "recordedUTC": "2026-10-24T16:46:06.180172+00:00",
+    "log": "logs/dubon-build-20261024-082619-008.log",
+    "sha256": "1DC7C99AEA3767322924FB5B18AC9808FBEE9483EBE56CF633C0E9E31EE420F8",
+    "bytes": 12464144,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 7485,
+    "projectTheorems": 49059,
+    "registeredConsumers": 22318,
+    "registeredConstructions": 1943,
+    "declarations": 30117,
+    "generated": 28472,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261024_082108.log",
+    "foundationSha256": "B51654623E015A94FD6074D0629EF5AD3A2C548F284DA3B88C86938F893AB47C",
+    "countReconciliation": {
+      "previousTheorems": 48982,
+      "focusedTheorems": 77,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 77,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersOwnership7485.log",
+      "ownershipSha256": "8310E0593B29EC54B642411B1B12D22CEC9EFFF0EB1D719DEDEE402BB4302038"
+    },
     "scratchToProductionOwnership": {
       "scratchSum": 77,
       "scratchDistinct": 77,

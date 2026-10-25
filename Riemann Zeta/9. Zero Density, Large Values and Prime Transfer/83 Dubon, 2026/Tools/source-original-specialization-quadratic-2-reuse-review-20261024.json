@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "actual primitive-form Frobenius polynomial -> transfer to the same spanning specialization -> actual original rational Tate quadratic identity",
+  "precedingScratchReceipts": {
+    "source-original-primitive-unramified-2-scratch-receipt.json": "0FA1E4B07D008BDE61E797E50F790B00C0E7748C8ED40D82FD153B429354E2CD"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalSpecializationInertia.lean",
+      "sha256": "BEE6EBC796BCFB5121F4A631DBEA6625CE0E26CBD2D4FC7019B5876EF93B8A04"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRationalTateGalois.lean",
+      "sha256": "EEE871FD2722A8CFA4D07A5E77913200A1E7DB463A7B732B924974FA0DCCBBA0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveUnramifiedRealization.lean",
+      "sha256": "E786280C0FA8F8CAAF4711D143D9E181DFF41BBFFEF578F76C24D76966F3631A"
+    }
+  ],
+  "routeAdjustment": "Isolate the finite linear-algebra calculation to avoid elaborator reduction of the large original Tate type, then instantiate it for that exact type and its actual Hecke and arithmetic operators. This is the necessary specialization bridge; no general representation package or new model is introduced.",
+  "discharged": "The explicit quadratic identity on the actual original rational Tate space transfers along the existing spanning specialization with its Hecke eigenvalue and original arithmetic intertwining to the same rank-two representation. This consumer remains conditional on that narrower Tate identity; the actual Frobenius consumer must supply it. No new representation, determinant or trace is postulated. Original Frobenius assembly, the determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "remaining": "The actual original Frobenius identity must supply the explicit rational Tate premise. Determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-specialization-quadratic-route-459.json",
+    "sha256": "34B877EA36E00940660246DBB101DEF1D80C9A30B89A3586A7268C8BF63B2D05",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "actual primitive-form Frobenius polynomial -> transfer to the same spanning specialization -> actual original rational Tate quadratic identity",
+      "reuseChecked": [
+        "LinearMap.ext_on_range already transfers inertia to the constructed primitive realization",
+        "Original rational Tate Hecke action and originalRationalTateGaloisRep retain literal actions",
+        "Matrix multiplication on vectors and additive/natural scalar preservation of the existing specialization"
+      ],
+      "selectedRoute": "Isolate the finite linear-algebra calculation to avoid elaborator reduction of the large original Tate type, then instantiate it for that exact type and its actual Hecke and arithmetic operators. This is the necessary specialization bridge; no general representation package or new model is introduced.",
+      "assumptionsToDischarge": "The explicit narrower actual rational Tate quadratic identity, to be supplied by the original Frobenius theorem; Hecke and arithmetic intertwining and spanning will come from the existing primitive-form realization.",
+      "boundary": "The explicit quadratic identity on the actual original rational Tate space transfers along the existing spanning specialization with its Hecke eigenvalue and original arithmetic intertwining to the same rank-two representation. This consumer remains conditional on that narrower Tate identity; the actual Frobenius consumer must supply it. No new representation, determinant or trace is postulated. Original Frobenius assembly, the determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original Tate quadratic relation -> original Picard torsion quadratic relation -> residue Frobenius correspondence composed with coefficient Frobenius -> inverse coefficient permutation on actual divisor classes",
+  "precedingScratchReceipts": {
+    "source-residue-frobenius-operator-1-scratch-receipt.json": "3C2A8680087929C14AEB2FD5D9907BBDEE06FCC6274085BB22AF8FD24FD1084A"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueCoefficientPicard.lean",
+      "sha256": "C43B0402636B08509BDAF1D639C38A5CDC9840A06F94D360C542993552E01BF0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueFrobeniusDivisorOperator.lean",
+      "sha256": "F1B67A5A1FB900BAB49B7B6F1EB73B7A496525F9EEDA4AE2BE5341650EEC2DD3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardGroup.lean",
+      "sha256": "FDD3E9F7FEAB972C7A3E284A89527B61C2442549D29EC437F60EF98570CEA58B"
+    }
+  ],
+  "routeAdjustment": "Use the already proved inverse place permutation to descend the operator as coefficient Frobenius plus p times its inverse. Verify the native quotient representative formula and composition identity. No general Picard automorphism framework is needed.",
+  "discharged": "The actual residue Frobenius divisor operator descends to the native degree-zero Picard quotient. Its composition with actual coefficient Frobenius is Frobenius squared plus multiplication by p, proved through the inverse place permutation and the existing quotient construction. Original Hecke torsion descent, the original Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "remaining": "Original Hecke torsion descent, the original Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\residue-frobenius-picard-operator-route-453.json",
+    "sha256": "8D4B60331B75200CD6CEC786EEFC31AABD0586477CE3D895769EC7E9F1BD5C46",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original Tate quadratic relation -> original Picard torsion quadratic relation -> residue Frobenius correspondence composed with coefficient Frobenius -> inverse coefficient permutation on actual divisor classes",
+      "reuseChecked": [
+        "residueCoefficientPlaceEquiv, residueCoefficientDivisorEquiv and residueCoefficientPicard",
+        "residueGeometricFrobeniusDivisor_eq_coefficient and residueFrobeniusDivisorOperator",
+        "native Pic0.mk_surjective and its additive homomorphism structure"
+      ],
+      "selectedRoute": "Use the already proved inverse place permutation to descend the operator as coefficient Frobenius plus p times its inverse. Verify the native quotient representative formula and composition identity. No general Picard automorphism framework is needed.",
+      "assumptionsToDischarge": "The residue quotient and quadratic-composition identities required to transport Hecke compatibility through the injective modular reduction.",
+      "boundary": "The actual residue Frobenius divisor operator descends to the native degree-zero Picard quotient. Its composition with actual coefficient Frobenius is Frobenius squared plus multiplication by p, proved through the inverse place permutation and the existing quotient construction. Original Hecke torsion descent, the original Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

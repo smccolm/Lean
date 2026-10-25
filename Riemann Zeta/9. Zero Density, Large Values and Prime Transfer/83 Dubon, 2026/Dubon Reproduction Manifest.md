@@ -1,6 +1,26 @@
 # Dubon 2026 — reproduction manifest
 
-Actual characteristic-two Deuring inertia and strong differential bound (24 October 2026): The actual characteristic-two exceptional stabilizer has order twenty-four and its central elliptic-negation quotient has order twelve. A finite Galois Deuring field and an explicit integral good model are constructed, and injective torsion reduction proves faithful inertia. The actual prescribed elliptic specialization and modular embeddings then construct a normal field containing the original modular coefficient field in which every positive j-order divides twelve. Above an order-twelve modular place, ramification index one allows the existing all-characteristic wild estimate to descend, proving that the actual differential dj has order at least fourteen. No good-model, torsion, inertia, auxiliary-field or local-differential certificate remains in these consumers. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy and residual association -> original Frobenius/inertia -> modular good reduction and Picard torsion injectivity -> characteristic-two genus preservation -> actual Deuring inertia, modular Galois j orders and the order-twelve/fourteen differential bound. The characteristic-two weighted exceptional-fiber census and genus/Picard assembly remain required. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation also remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. The 7,485-module production aggregate and focused characteristic-two Deuring inertia and strong differential audit pass with zero diagnostics. Nine declaration-value audits verify 104 required dependencies. The characteristic-two weighted exceptional-fiber census and genus/Picard assembly remain required. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation also remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification of this scope is pending. The preceding 7,457-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. The renewed 24 October search supplies a shorter TauCeti monic-integrality argument: the explicit Deuring parameter satisfies a monic polynomial and its discriminant divides the unit 3^6. Existing local torsion counts, division fields, root separation and injective torsion reduction discharge the faithful-field construction. The actual sign quotient and existing normal fixing-field theorem give the order bound without first constructing the stronger full inertia image or orbit census. Existing all-characteristic wild different and unramified differential transfer give the fourteen bound. Only dependencies serving the exact open Dubon theorems are expanded; root pins, proof limits, source fidelity and full completion criteria are unchanged.
+Actual original arithmetic Tate pairing and cyclotomic multiplier (24 October 2026): Representative independence and root-valued Picard pairing descent; bilinearity and odd-order alternation; finite norm/pullback and correspondence adjunction; self-adjointness of the existing Hecke operators away from level; torsion-level compatibility; actual p-adic bilinear Tate pairing with Galois covariance; the pinned cyclotomic scalar action and uniqueness of its multiplier at a nonzero pairing value. Source dependency chain: modular concentration -> residual association -> original primitive-form Frobenius characteristic polynomial -> separate determinant -> nondegenerate Hecke-component pairing -> actual divisorial pairing descent, adjunction, compatible Tate assembly and cyclotomic multiplier Nondegeneracy and the required nonzero Hecke-component pairing remain unproved. The determinant-to-pairing identity on that component, actual Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. Scalar-multiplier uniqueness explicitly assumes a nonzero pairing value and does not discharge that assumption. DUB-17--20 OPEN; 16/20. No acceptance gate closes. Sequential foundation/paper verification passes with zero diagnostics for the 7,673-module scope: all thirteen retained regressions, 50,087 exhaustive theorem checks, 22,756 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 7,637-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. Reuse actual Picard representatives and quotient, native finite maps, already-proved Atkin involution, existing Tate module and scalar coordinates, and pinned cyclotomicCharacter.spec. Faithful Tate scalar cancellation avoids constructing a separate rank-one target basis. Only scratch imports will be qualified; all audited mathematical statements and proof bodies are retained. The renewed FLT/TauCeti sources and the newly discovered NYLL characteristic-zero nondegeneracy source are archived, with an exact dependency and compatibility assessment in Dubon Reuse Search 2026-10-24 NYLL.md. NYLL offers an upstream proof of auxiliary-cover Picard divisibility through Jacobian representability; it has not been imported or built locally. No external build is claimed. Root pins, proof limits and completion criteria are unchanged.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Actual original Weil reciprocity and arithmetic torsion representatives (24 October 2026): Actual original Weil reciprocity for nonzero functions with disjoint principal-divisor support; the literal divisorial Weil ratio has nth power one; every pair of actual Picard n-torsion classes has disjoint function/divisor representatives. All norm, evaluation, residue, finiteness, degree-zero and moving inputs in those consumers are derived. Source dependency chain: modular concentration -> actual residual association -> original primitive-form Frobenius characteristic polynomial -> separate determinant -> nondegenerate Hecke-adjoint Tate pairing -> original divisorial Weil pairing -> actual reciprocity, roots-of-unity values and disjoint torsion representatives Pairing representative independence and descent, nondegeneracy, Hecke adjointness, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes. Sequential foundation/paper verification passes with zero diagnostics for the 7,637-module scope: all thirteen retained regressions, 49,919 exhaustive theorem checks, 22,677 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 7,591-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. Use the pinned ramified Chinese remainder theorem and native factor dimensions for norm evaluation; pinned rational-function Ostrowski classification and native order uniqueness for the place census; polynomial root products for coordinate reciprocity; native finite coordinate, norm orders, divisor maps and global degree zero for original reciprocity. Extend the already proved complex separation argument to the exact arithmetic closed fields and reuse finite-place indicators and the actual Picard quotient. No full arbitrary-pair rational reciprocity induction or general approximation library is required. The renewed FLT/TauCeti search and frozen sources remain archived; no external build is claimed. Root pins, proof limits and full completion criteria are unchanged.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Actual original primitive-form Frobenius quadratic realization (24 October 2026): The actual original Hecke correspondence satisfies the Frobenius quadratic identity on every residue-invertible Picard torsion subgroup, on the original integral and rational Tate modules, and on the same constructed continuous unramified rank-two primitive weight-two realization. The proof constructs the same modular reduction, supplies its arithmetic-Frobenius compatibility and torsion injectivity, proves the literal Hecke norm product and integral-principal reduction, extends that comparison using principal differences and torsion-free integer divisors, and transfers the residue identity through actual Tate coordinates and the existing spanning specialization. No Hecke-agreement, reduction-injectivity, Tate-quadratic or specialization premise remains in the primitive-form consumer. Source dependency chain: genuine non-CM modular-form concentration -> actual residual modular Galois association -> original primitive weight-two Frobenius characteristic polynomial -> Frobenius quadratic identity and separate determinant -> original rational Tate identity -> finite Picard torsion comparison under the actual constructed reduction The separate Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. The quadratic identity alone does not prove determinant or trace. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification passes with zero diagnostics for the 7,591-module scope: all thirteen retained regressions, 49,704 exhaustive theorem checks, 22,573 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 7,544-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. Reuse the existing all-level conjugates, coefficient independence, native norm-over-embeddings, Laurent reduction, normalized place orders, Picard quotient, Tate functor and spanning primitive-form realization. Finite-torsion cancellation suffices for this quadratic branch and avoids assuming global Picard divisibility. Small scalar-extension and finite-linear-algebra proofs instantiate the actual original operators. The separate determinant branch still needs its own nondegeneracy and arithmetic pairing proof; the finite-torsion shortcut makes no claim to settle those requirements. The renewed FLT/TauCeti search and frozen sources remain archived; no external build is claimed. Root pins, proof limits and full completion criteria are unchanged.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Actual original Picard/Tate inertia and primitive-form unramified realization (24 October 2026): Native arithmetic inertia acts trivially on every residue-invertible torsion subgroup of the actual original modular Picard group when the level is invertible. The same constructed modular reduction has invariant original places, preserves genus and is injective on invertible Picard torsion. The identity on the Laurent-series fields induces the actual Picard equivalence. Exact chart descriptions, native integral transport and residue invariance discharge arithmetic compatibility. The actual integral and rational Tate representations therefore send inertia to the identity at every prime not dividing level times Tate prime. The same actually constructed continuous primitive weight-two Galois realization retains its finite coefficient field, spanning specialization, prime Fourier eigenvalues and original arithmetic action, and is unramified away from those primes. No genus, chart, Picard, equivariance, spanning or inertia certificate remains in the final realization theorem. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy and residual association -> actual primitive weight-two unramified realization -> original rational/integral Tate inertia -> original Picard torsion inertia -> actual modular reduction on original places, with all-prime genus preservation and torsion injectivity. The Frobenius relation and trace/determinant consequences, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification passes with zero diagnostics for the 7,544-module scope: all thirteen retained regressions, 49,430 exhaustive theorem checks, 22,458 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 7,528-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. Reuse the proved Gauss fraction witnesses, both integral charts and their uniqueness, original arithmetic places and Picard quotient, and existing Tate and primitive-form specialization constructions. Native integral-equation transport, finite-support pushforward, quotient equivalence, scalar extension and linear-map extensionality on the proved spanning image complete the arithmetic chain. The chart route avoids importing the source global divisor-rigidity and Picard-divisibility framework at this stage. The literal source LiesOverPrime and inertia image conventions are preserved. The renewed FLT/TauCeti search and frozen sources remain archived; no external build is claimed. Root pins, proof limits and full completion criteria are unchanged.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Actual characteristic-two census and all-prime modular Picard injectivity (24 October 2026): A full three-torsion specialization field and the exact eighth-power factorization force the actual characteristic-two inertia image to have order twenty-four. Actual cyclic subgroups classify the modular j=0 places. The sign quotient, quaternion automorphisms and native elliptic torsion give the exact order-twelve orbit marks and fixed counts nuTwo(N) and nuThree(N). The actual positive-j orders are 1,3,4,6,12, with #1+3#3+2#6=nuTwo(N) and #1+#4=nuThree(N). These identities and the proved local differential bounds yield the wild genus inequality, actual characteristic-two genus preservation and injectivity on every residue-invertible Picard torsion subgroup. Combining both wild cases with the proved tame case gives the same actual reduction at every prime residue characteristic. Only the original level and torsion invertibility conditions remain; no good-model, inertia, census, differential or genus certificate is assumed. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy and residual association -> original Frobenius/inertia -> actual modular good reduction and Picard torsion injectivity at every prime residue characteristic -> characteristic-two full inertia, weighted exceptional census and wild genus equality. Original arithmetic-action comparison, Frobenius/inertia compatibility, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification passes with zero diagnostics for the 7,528-module scope: all thirteen retained regressions, 49,317 exhaustive theorem checks, 22,419 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 7,485-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. Reuse the frozen FLT full-inertia, quaternion and order-twelve arguments while replacing repeated point-coordinate, common-scalar and finite-fiber foundations with proved local and Mathlib results. The existing full-torsion divisor theorem keeps three-torsion in the actual specialization field. The native point homomorphism and prime-torsion scalar theorem shorten the quaternion count proofs; the existing place classifier, cyclic-subgroup count and Mathlib fiber sum assemble the census. Existing Hurwitz, Gauss genus and Picard specialization results then finish the geometric input. The renewed search and prior TauCeti Deuring adaptation remain preserved; no external build is claimed. Root pins, proof limits, source fidelity and full completion criteria are unchanged.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Actual characteristic-two Deuring inertia and strong differential bound (24 October 2026): The actual characteristic-two exceptional stabilizer has order twenty-four and its central elliptic-negation quotient has order twelve. A finite Galois Deuring field and an explicit integral good model are constructed, and injective torsion reduction proves faithful inertia. The actual prescribed elliptic specialization and modular embeddings then construct a normal field containing the original modular coefficient field in which every positive j-order divides twelve. Above an order-twelve modular place, ramification index one allows the existing all-characteristic wild estimate to descend, proving that the actual differential dj has order at least fourteen. No good-model, torsion, inertia, auxiliary-field or local-differential certificate remains in these consumers. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy and residual association -> original Frobenius/inertia -> modular good reduction and Picard torsion injectivity -> characteristic-two genus preservation -> actual Deuring inertia, modular Galois j orders and the order-twelve/fourteen differential bound. The characteristic-two weighted exceptional-fiber census and genus/Picard assembly remain required. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation also remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification passes with zero diagnostics for the 7,485-module scope: all thirteen retained regressions, 49,059 exhaustive theorem checks, 22,318 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 7,457-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. The renewed 24 October search supplies a shorter TauCeti monic-integrality argument: the explicit Deuring parameter satisfies a monic polynomial and its discriminant divides the unit 3^6. Existing local torsion counts, division fields, root separation and injective torsion reduction discharge the faithful-field construction. The actual sign quotient and existing normal fixing-field theorem give the order bound without first constructing the stronger full inertia image or orbit census. Existing all-characteristic wild different and unramified differential transfer give the fourteen bound. Only dependencies serving the exact open Dubon theorems are expanded; root pins, proof limits, source fidelity and full completion criteria are unchanged.
 
 Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
 
@@ -40836,7 +40856,7 @@ Characteristic-two good models, exceptional-fiber census, the strong order-twelv
 
 ## Production actual characteristic-two Deuring inertia and strong differential bound pending full run - 24 October 2026
 
-The 7,485-module production aggregate and focused characteristic-two Deuring inertia and strong differential audit pass with zero diagnostics. Nine declaration-value audits verify 104 required dependencies. The characteristic-two weighted exceptional-fiber census and genus/Picard assembly remain required. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation also remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here. Sequential foundation/paper verification of this scope is pending.
+Sequential foundation/paper verification passes with zero diagnostics for the 7,485-module scope: all thirteen retained regressions, 49,059 exhaustive theorem checks, 22,318 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
 
 The characteristic-two weighted exceptional-fiber census and genus/Picard assembly remain required. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation also remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
 
@@ -41087,5 +41107,3270 @@ The characteristic-two weighted exceptional-fiber census and genus/Picard assemb
   },
   "scratchToProductionCountReason": "All 77 distinct names from 77 exhaustive scratch checks are retained: 77 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
   "boundary": "The characteristic-two weighted exceptional-fiber census and genus/Picard assembly remain required. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation also remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Verified actual characteristic-two Deuring inertia and strong differential bound - 24 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 7,485-module scope: all thirteen retained regressions, 49,059 exhaustive theorem checks, 22,318 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The characteristic-two weighted exceptional-fiber census and genus/Picard assembly remain required. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation also remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "recordedUTC": "2026-10-24T16:46:06.180172+00:00",
+  "log": "logs/dubon-build-20261024-082619-008.log",
+  "sha256": "1DC7C99AEA3767322924FB5B18AC9808FBEE9483EBE56CF633C0E9E31EE420F8",
+  "bytes": 12464144,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 7485,
+  "projectTheorems": 49059,
+  "registeredConsumers": 22318,
+  "registeredConstructions": 1943,
+  "declarations": 30117,
+  "generated": 28472,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261024_082108.log",
+  "foundationSha256": "B51654623E015A94FD6074D0629EF5AD3A2C548F284DA3B88C86938F893AB47C",
+  "countReconciliation": {
+    "previousTheorems": 48982,
+    "focusedTheorems": 77,
+    "sharedGeneratedNames": [],
+    "addedTheorems": 77,
+    "removedTheorems": [],
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersOwnership7485.log",
+    "ownershipSha256": "8310E0593B29EC54B642411B1B12D22CEC9EFFF0EB1D719DEDEE402BB4302038"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 77,
+    "scratchDistinct": 77,
+    "generatedNameRenamings": {},
+    "generatedNameReason": "Private module prefixes are qualified explicitly. Any additional generated-name changes require exact observed pairs and complete source-body agreement; none are presumed.",
+    "generatedNameSourceEvidence": {},
+    "productionFocused": 77,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceEllipticCharTwoStabilizerCoordinates",
+          "SourceEllipticCharTwoRootCounts",
+          "SourceEllipticCharTwoStabilizerCard"
+        ],
+        "count": 10,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership409For7485.log",
+          "sha256": "94CD5EC4E142F998A513886F603AA8E28E9420AF54E688951E688BA59682EF6C",
+          "sourceSha256": "FD964BDC3A80E4ABF495005C9868E2367DC8BAB60CFA0C9E7F315B331D640935"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticCharTwoNegation",
+          "SourceEllipticCharTwoSignQuotient",
+          "SourceEllipticCharTwoSignAction"
+        ],
+        "count": 15,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership410For7485.log",
+          "sha256": "040B500B927D243C18F73429EFBF7B0B2DE49F336B4F05C3C91E952BC8E85C83",
+          "sourceSha256": "84F19215B0B8226FAAFF4C2308F2E4C93173A39B59FAC095EDA61E2934E51235"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticDeuringInvariants",
+          "SourceEllipticDeuringIntegralParameter",
+          "SourceEllipticThreeTorsionFlex",
+          "SourceEllipticDeuringGoodModel"
+        ],
+        "count": 14,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership411For7485.log",
+          "sha256": "D8EF7CCC23C73A89CDC8D893C245BABDE14AF64BDEABA57880469DE79A35CF2B",
+          "sourceSha256": "79FC0BF427BB1718755D904EDDA4A47B498952FFA2AABC4A8EDB5F77BDF682E6"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticDeuringThreeTorsionR2",
+          "SourceEllipticDeuringCubicRootsR2",
+          "SourceEllipticDeuringGaloisFieldR2"
+        ],
+        "count": 10,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership412For7485.log",
+          "sha256": "7B301534BFF19EC77D848C2683FDAACC5FF8E7F0C49332233AE7C8B836F32A34",
+          "sourceSha256": "DEA53051574451710A9F7B4AD130B6E738A2DBB29C5E32C5098FB2E09B3386F2"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticDeuringInertia"
+        ],
+        "count": 12,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership413For7485.log",
+          "sha256": "82E5B06652035F8989885A96260E51B991694C92CAD14360CA8578E1E1C07E96",
+          "sourceSha256": "5D0B1BAC1BBC451B77FC16FFC7C5B32B08E4DEB805BE9286220FEF9D0B7B3A14"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticDeuringFaithfulModel",
+          "SourceEllipticDeuringGaloisModel",
+          "SourceEllipticDeuringFaithfulField"
+        ],
+        "count": 3,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership414For7485.log",
+          "sha256": "AE1A4A06908EFA297A55B560E27890CBF2DC3A2753C86297BECD9632FD9B0A3E",
+          "sourceSha256": "81789FEF6D10C76928223A5CE7FB940070D06121AAD9CFBDCCF27FAF805C5BE8"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticDeuringFaithfulTorsionModel",
+          "SourceEllipticDeuringSpecializationFieldPlace",
+          "SourceEllipticDeuringOfJSpecialization",
+          "SourceEllipticDeuringFaithfulSpecializationHom",
+          "SourceEllipticDeuringPrescribedInertiaAction"
+        ],
+        "count": 5,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership415For7485.log",
+          "sha256": "57AE9768387515A55FA2B95ED0E1DACE2BE8EC0B948D1A5375463FEBC54E7B8D",
+          "sourceSha256": "E28BA2368BD27FCFABB434E4C80D6B059E87B9721F094A049F038ECB0CF2BB38"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticCharTwoInertiaSign",
+          "SourceEllipticCharTwoEmbeddingKernel",
+          "SourceModularCharTwoNormalField",
+          "SourceModularCharTwoGaloisOrder"
+        ],
+        "count": 4,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership416For7485.log",
+          "sha256": "85AF85A07BFCFBF3A0BAA7F4A5EBF4B07A8171AF1B4C7AF8B281A508235CFEFD",
+          "sourceSha256": "237FEFCB984CF606BEC68B303CEE1199BBDDE88C83FE2642BA77F304BBFC6DE1"
+        }
+      },
+      {
+        "modules": [
+          "SourceModularCharTwoStrongDifferent",
+          "SourceModularCharTwoFourteen"
+        ],
+        "count": 4,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersScratchOwnership417For7485.log",
+          "sha256": "100EB44B8A81FBC622E89D3255BD20BA9C68E2A4A409E646621273B2712ED8AD",
+          "sourceSha256": "081E84D0CFDA7A2F247B830BC9058454E96BDC4B5FA4284196D816908CF8FA35"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGaloisOrdersOwnership7485.log",
+      "sha256": "8310E0593B29EC54B642411B1B12D22CEC9EFFF0EB1D719DEDEE402BB4302038",
+      "sourceSha256": "75C874E62DE0329D60D18B1E1C46CF6A69D39658E05CFFFB856AF7EBE78411B9"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-064854-284.log",
+      "sha256": "15F1BED89A8C9DEDB4C173C643FA564E770D0BE612C063DBCB297017AE0C6048"
+    }
+  },
+  "scratchToProductionCountReason": "All 77 distinct names from 77 exhaustive scratch checks are retained: 77 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "The characteristic-two weighted exceptional-fiber census and genus/Picard assembly remain required. Original arithmetic-action comparison, Frobenius/inertia, residual association, automorphy and all-weight continuation also remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Production actual characteristic-two census and all-prime modular Picard injectivity pending full run - 24 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 7,528-module scope: all thirteen retained regressions, 49,317 exhaustive theorem checks, 22,419 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Original arithmetic-action comparison, Frobenius/inertia compatibility, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoEighthPowerDependencyAudit3Production7528.log",
+      "sha256": "4F18AFE98C4729522AA71F838BAB20268014F97C4BCD94BE54E6ECCFE0C3B4B1",
+      "requiredProofValueEdges": 7,
+      "consumers": [
+        "Dubon2026.SourceEllipticCharTwo.exists_unit_mul_eighth_power"
+      ],
+      "sourceSha256": "5834382177DF8CFF16F72D58DEFE88A99001C2F460842324E4DD5E926EF9F1F4"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceFullTorsionSpecializationDependencyAudit2Production7528.log",
+      "sha256": "3C39968B3D262B102633AC6106A52A18B95BAA36E984C15A247AC07BC1353CA2",
+      "requiredProofValueEdges": 4,
+      "consumers": [
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action_with_three_torsion"
+      ],
+      "sourceSha256": "00E92A0188687D898055740EE0342C91B6C0B522819F5CF55D33C9AE68DE7F2B"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoFullInertiaDependencyAudit3Production7528.log",
+      "sha256": "6C5D74A09443553A42816F6F3BF4A15A1B02B78D93811799EA07DE2C14BC7304",
+      "requiredProofValueEdges": 10,
+      "consumers": [
+        "Dubon2026.SourceEllipticDivisionField.exists_char_two_exceptional_full_inertia_image"
+      ],
+      "sourceSha256": "9047CB66CF41802DC2E451E4E28DBC63CEB97F0EA0CABC78C27A5FCB6D6BDFC3"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoPlaceClassifierDependencyAudit4Production7528.log",
+      "sha256": "79A56E25178A720EC317550FFAE3AC75F88A267FE9D4F4FE8FA94E24215C7375",
+      "requiredProofValueEdges": 10,
+      "consumers": [
+        "Dubon2026.SourceEllipticDivisionField.exists_char_two_cyclic_modular_place_classification"
+      ],
+      "sourceSha256": "368DE4AB3CCE8529755BAAD38D063109A7D28872FE0BC998D27AADDB544E725B"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveMarksDependencyAudit6Production7528.log",
+      "sha256": "E443F89031EAC39D205657AB6A0A2BB6267D3A0F92B8F41228CF1CE2F99BC9C8",
+      "requiredProofValueEdges": 28,
+      "consumers": [
+        "Dubon2026.SourceOrderTwelve.marks"
+      ],
+      "sourceSha256": "7A3C4471E4CA8FB1A3CD62D416BF1B3C872766B4EB17B1B8BB143ED2C8DDBEF2"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceQuaternionNonscalarDependencyAudit3Production7528.log",
+      "sha256": "01C42090B561DB8FCF3D4BE6B839158C62FF5159EE1ACA0D617F15E3DE756ECB",
+      "requiredProofValueEdges": 4,
+      "consumers": [
+        "Dubon2026.SourceEllipticExceptional.quartic_nonscalar_of_quaternion_relations",
+        "Dubon2026.SourceEllipticExceptional.cubic_nonscalar_of_quaternion_commutator"
+      ],
+      "sourceSha256": "6110BF4D02AA7E205D03EE6004A96877AC8812DCEB08DD8493C3C036B786CD33"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoFixedCountsDependencyAudit9Production7528.log",
+      "sha256": "CC4D512F3A1B4AA06BF975F1B293E72EE84FF7A9142A984BD3DB55EE3A61D1D0",
+      "requiredProofValueEdges": 46,
+      "consumers": [
+        "Dubon2026.SourceEllipticCharTwo.exists_char_two_exceptional_fixed_counts"
+      ],
+      "sourceSha256": "3A64F3619CD24095A4345954222301282DA1B67D58566989C099886F635837B6"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoQuotientActionDependencyAudit5Production7528.log",
+      "sha256": "187ECE5318B49C77D0941332511E34445D2E25AF47056396CD5868CF1BBB4EC8",
+      "requiredProofValueEdges": 30,
+      "consumers": [
+        "Dubon2026.SourceEllipticCharTwo.cyclic_orbit_marks",
+        "Dubon2026.SourceEllipticCharTwo.cyclicStabilizerRelated_iff_sign_orbit",
+        "Dubon2026.SourceEllipticCharTwo.char_two_cyclic_action_fixed_counts"
+      ],
+      "sourceSha256": "804FA5BA7BA58FA6B933C65E9A053220829DC08DC3BAD2E2C633C2D5E339C99E"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoWeightedCensusDependencyAudit3Production7528.log",
+      "sha256": "5B35AAB2DDE1F320D5FC963D12A7E5D5484D18BCCB1236CC2ECA4ED72584F952",
+      "requiredProofValueEdges": 13,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.coeff_char_two_order_census"
+      ],
+      "sourceSha256": "383F32015BD6444673EF9E608C6CBD0D7B7C65F3A6724703AE0B0D9D9DEFB96D"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGenusPicardDependencyAudit5R2Production7528.log",
+      "sha256": "05F52E5D920D20FE28DFCCD37DD657DE29239FC77151C926916E0919ABA89454",
+      "requiredProofValueEdges": 20,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_torsion_injective_of_char_two",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_torsion_injective_of_prime"
+      ],
+      "sourceSha256": "6C710DD8932A170D14CD02AB3D80428508DE5EC24D1539F30AB762A3F37B2A18"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardProductionAudit7528.log",
+  "sha256": "1D6C22440963D009BA61C5F3D1229EC020F311B75BDF652C6E0BF4B003ADC087",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-prime-picard-production-build-7528.log",
+  "aggregateSha256": "A5891148796CA7C90E900E2DA6072D952EAE35E53A095D75B2486776277CF091",
+  "productionModules": 7528,
+  "incrementModules": 43,
+  "axiomChecks": 116,
+  "exhaustiveIncrementTheorems": 260,
+  "linterScopes": 43,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 260,
+  "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The actual modular places, coefficient fields, Gauss residue map, divisor orders, genera and Picard quotient retain their definitions. No source contract is weakened.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 260,
+    "scratchDistinct": 260,
+    "generatedNameRenamings": {
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveCubicCentralizer_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_9",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveElementCounts_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_5",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveBasic_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_1",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveCubicCentralizer": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_8",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveBasic": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveTransitiveMarks": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_10",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveSylowNonNormal_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_3",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveSylowNonNormal": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_2",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveInvolutionConjugacy": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_6",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveInvolutionConjugacy_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_7",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveTransitiveMarks_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_11",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveElementCounts": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_4"
+    },
+    "generatedNameReason": "Lean names anonymous local instances using the module root. Import qualification changes that root to Dubon2026. Each of the twelve pairs has the same owning source module, byte-identical mathematical source after import qualification, identical full declaration type and identical full kernel proof expression. No theorem is omitted or weakened.",
+    "generatedNameSourceEvidence": {
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveCubicCentralizer_1": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_9",
+        "owningModule": "SourceOrderTwelveCubicCentralizer",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+        "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+        "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveCubicCentralizer.lean",
+          "sha256": "A2B96A1F80F079C433846B9EDA8B04202A2BCC9F36D930B00C7CF5F10B94EC4F"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveCubicCentralizer.lean",
+          "sha256": "962E8B7F3DB21EED693B92B32190692475C7837AA9C32C5360E5EAFD557E5E81"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveElementCounts_1": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_5",
+        "owningModule": "SourceOrderTwelveElementCounts",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+        "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+        "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveElementCounts.lean",
+          "sha256": "7D7B8CA2A422711851F443F561F974198ABF8DD7FDA6DEECBF85D50F8224BACB"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveElementCounts.lean",
+          "sha256": "2F54B7C574FC2841F5C28C9A92DEB11CDC3B5FA23D085055E40D5516E1E3EE08"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveBasic_1": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_1",
+        "owningModule": "SourceOrderTwelveBasic",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+        "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+        "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveBasic.lean",
+          "sha256": "49FBC92E28F94400022E1BFA8924194C92A8F68FC56FA396F160F8726E671CCB"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveBasic.lean",
+          "sha256": "80F65E3CB1D177F9D503DAB1891EE1BD00F510B2337BA8523A3A6410DDF31D38"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveCubicCentralizer": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_8",
+        "owningModule": "SourceOrderTwelveCubicCentralizer",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+        "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+        "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveCubicCentralizer.lean",
+          "sha256": "A2B96A1F80F079C433846B9EDA8B04202A2BCC9F36D930B00C7CF5F10B94EC4F"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveCubicCentralizer.lean",
+          "sha256": "962E8B7F3DB21EED693B92B32190692475C7837AA9C32C5360E5EAFD557E5E81"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveBasic": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026",
+        "owningModule": "SourceOrderTwelveBasic",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+        "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+        "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveBasic.lean",
+          "sha256": "49FBC92E28F94400022E1BFA8924194C92A8F68FC56FA396F160F8726E671CCB"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveBasic.lean",
+          "sha256": "80F65E3CB1D177F9D503DAB1891EE1BD00F510B2337BA8523A3A6410DDF31D38"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveTransitiveMarks": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_10",
+        "owningModule": "SourceOrderTwelveTransitiveMarks",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+        "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+        "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveTransitiveMarks.lean",
+          "sha256": "73879FF0C5499D92363E72092E32C12ACAFDD7BD9250F8032070573EB34760E9"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveTransitiveMarks.lean",
+          "sha256": "8B6902D96EA53FC659A5291E079B41714EF67B801C28DEAC7C2D67D6A0D8EF88"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveSylowNonNormal_1": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_3",
+        "owningModule": "SourceOrderTwelveSylowNonNormal",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+        "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+        "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveSylowNonNormal.lean",
+          "sha256": "DDD12819547D3C15C34466C6E94551AD061CA88647D8963A9F8AD5AF2E3ACA4B"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveSylowNonNormal.lean",
+          "sha256": "D84AC4A981063B7313998007D699DB15475A22F04E6B56689BD9F5D2CCA5997D"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveSylowNonNormal": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_2",
+        "owningModule": "SourceOrderTwelveSylowNonNormal",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+        "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+        "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveSylowNonNormal.lean",
+          "sha256": "DDD12819547D3C15C34466C6E94551AD061CA88647D8963A9F8AD5AF2E3ACA4B"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveSylowNonNormal.lean",
+          "sha256": "D84AC4A981063B7313998007D699DB15475A22F04E6B56689BD9F5D2CCA5997D"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveInvolutionConjugacy": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_6",
+        "owningModule": "SourceOrderTwelveInvolutionConjugacy",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+        "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+        "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveInvolutionConjugacy.lean",
+          "sha256": "C4AF4EDB2A5DC1553A2FFF899BABF871FE35209FCEB19685A16C52E1D00F859B"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveInvolutionConjugacy.lean",
+          "sha256": "816D9C52DC486C2B282A98113275648DC65DE589D4F8F442BADF9710B8FC48E1"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveInvolutionConjugacy_1": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_7",
+        "owningModule": "SourceOrderTwelveInvolutionConjugacy",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+        "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+        "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveInvolutionConjugacy.lean",
+          "sha256": "C4AF4EDB2A5DC1553A2FFF899BABF871FE35209FCEB19685A16C52E1D00F859B"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveInvolutionConjugacy.lean",
+          "sha256": "816D9C52DC486C2B282A98113275648DC65DE589D4F8F442BADF9710B8FC48E1"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveTransitiveMarks_1": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_11",
+        "owningModule": "SourceOrderTwelveTransitiveMarks",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+        "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+        "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveTransitiveMarks.lean",
+          "sha256": "73879FF0C5499D92363E72092E32C12ACAFDD7BD9250F8032070573EB34760E9"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveTransitiveMarks.lean",
+          "sha256": "8B6902D96EA53FC659A5291E079B41714EF67B801C28DEAC7C2D67D6A0D8EF88"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveElementCounts": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_4",
+        "owningModule": "SourceOrderTwelveElementCounts",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+        "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+        "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveElementCounts.lean",
+          "sha256": "7D7B8CA2A422711851F443F561F974198ABF8DD7FDA6DEECBF85D50F8224BACB"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveElementCounts.lean",
+          "sha256": "2F54B7C574FC2841F5C28C9A92DEB11CDC3B5FA23D085055E40D5516E1E3EE08"
+        },
+        "onlyImportQualification": true
+      }
+    },
+    "productionFocused": 260,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceEllipticCharTwoAuxiliaryRootUnits",
+          "SourceEllipticCharTwoThreeDivisionRelation",
+          "SourceEllipticCharTwoEighthPower"
+        ],
+        "count": 4,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership418For7528.log",
+          "sha256": "A2242025A11406B294C25E1785B9CA14F2E4C5327F013FCCE9B32694D957EE66",
+          "sourceSha256": "CB95988FC8543BBF5530ECE765D5C902AADFE1FC54AF307F1E1CAC15C145A1DB"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticFullTorsionDivisor",
+          "SourceEllipticDeuringThreeTorsionSpecialization"
+        ],
+        "count": 2,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership419For7528.log",
+          "sha256": "4EFE8893B188F1DF6F7B1C5B03325874F0509FCE85F873DAB9579029F162DA9B",
+          "sourceSha256": "5448D5449D276288ECAFF3171B6561CFD8925A5A8536E87861703F01B7D7BE69"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticCharTwoOfJFamily",
+          "SourceEllipticCharTwoGoodModelOrder",
+          "SourceEllipticCharTwoFullInertiaImage"
+        ],
+        "count": 7,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership420For7528.log",
+          "sha256": "D4A06D8AA19B00302A81692F244C19474AEFA534D81D82BF686BB87CF8B87FFA",
+          "sourceSha256": "4EB6357C103760F5DF56FEA2C45E92438A2F60B61DB3B4E91B4C56B499C518E3"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticCharTwoCyclicSpecialization",
+          "SourceEllipticCharTwoEmbeddingOrbits",
+          "SourceEllipticCharTwoPlaceFibers",
+          "SourceEllipticCharTwoPlaceClassification"
+        ],
+        "count": 5,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership421For7528.log",
+          "sha256": "762DAF78AFC346F5AE4ED0CC63C81D986BC65DEB2602B7D6C5770CD000271E52",
+          "sourceSha256": "E27B4D98178203E64389B20FA4000BF008D0AA68A8C15E97232D489422354CD6"
+        }
+      },
+      {
+        "modules": [
+          "SourceOrderTwelveBasic",
+          "SourceOrderTwelveSylowNonNormal",
+          "SourceOrderTwelveElementCounts",
+          "SourceOrderTwelveInvolutionConjugacy",
+          "SourceOrderTwelveCubicCentralizer",
+          "SourceOrderTwelveTransitiveMarks"
+        ],
+        "count": 146,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership422For7528.log",
+          "sha256": "F686436B60BC12E584E21EF4EB51027D21FE387BB982819E05EAAF406E0F77F9",
+          "sourceSha256": "D0FC964E456A9FA1CF23B3B4C4F9071A5530AF0A1A2A595CB4DDF4864C241A26"
+        }
+      },
+      {
+        "modules": [
+          "SourcePrimeTorsionCommonScalar",
+          "SourceQuaternionQuarticNonscalar",
+          "SourceQuaternionCubicNonscalar"
+        ],
+        "count": 3,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership423For7528.log",
+          "sha256": "A12171A1206F8918FC52A00286636DE191551350E2713451253328692387965B",
+          "sourceSha256": "A96A5BA10DF3EFCBEE8BD5BCA13D1F3C77E43BBCB13FF0354D74C915C4A4CC8B"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticStabilizerPointHom",
+          "SourceEllipticCharTwoCubicParameters",
+          "SourceEllipticCharTwoQuarticChanges",
+          "SourceEllipticCharTwoQuaternionStabilizers",
+          "SourceEllipticCharTwoQuarticFixedCount",
+          "SourceEllipticCharTwoCubicPoint",
+          "SourceEllipticCharTwoCubicCommutator",
+          "SourceEllipticCharTwoCubicFixedCount",
+          "SourceEllipticCharTwoFixedCounts"
+        ],
+        "count": 47,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership424For7528.log",
+          "sha256": "8E63A1C6660AAC406EFF5EB13E0D711CB917D1FB5C20F8129407737207D54B74",
+          "sourceSha256": "E1486B5B26385642605098224D28DD273A0A11B8EA0305FF1317B3A7B4980F01"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticCharTwoSignExponent",
+          "SourceEllipticCharTwoMarkedElements",
+          "SourceEllipticCharTwoCyclicAction",
+          "SourceEllipticCharTwoCyclicOrbits",
+          "SourceEllipticCharTwoOrbitMarks"
+        ],
+        "count": 22,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership425For7528.log",
+          "sha256": "597400B24CE5A1CF51A9909A5B5DAD1AEEC36C4683A622A8318DB64D3306B432",
+          "sourceSha256": "F00C498C28C250E2E22EFB9DB01809E3BE501D867CD7DC3E9C84770D55C15699"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticCharTwoCensusSum",
+          "SourceEllipticCharTwoWeightedCensus",
+          "SourceModularCharTwoCensus"
+        ],
+        "count": 10,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership426For7528.log",
+          "sha256": "8BF886CC67E5B0A0F072CE848193584A9B0910FF51A994319C271EDD55078FF9",
+          "sourceSha256": "C446E16BD307B8C5561513BFA92B5106E624305212BF0F1DFABD509F67918F36"
+        }
+      },
+      {
+        "modules": [
+          "SourceModularCharTwoDifferentialSum",
+          "SourceModularCharTwoGenusLower",
+          "SourceModularCharTwoResidueGenus",
+          "SourceModularCharTwoPicardInjectivity",
+          "SourceModularPrimePicardInjectivity"
+        ],
+        "count": 14,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership427For7528.log",
+          "sha256": "7F39F148778347ED876F13059EF3BFD81DCEB787C3A42DA590AACCACFB202D2B",
+          "sourceSha256": "B0F620AAEB4BE2A9DFA912A54EE62A3608CE83D179BCCF07688E3A52FD44A108"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardOwnership7528.log",
+      "sha256": "D569E39598AB1698F4302DBEC5BC2445335AE0A8D825B480B4AFB3BBB1B17981",
+      "sourceSha256": "38D799B1B6B4434E9E079642800D8C1B68D24BF7136F8403CC222D2610F456AD"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-082619-008.log",
+      "sha256": "1DC7C99AEA3767322924FB5B18AC9808FBEE9483EBE56CF633C0E9E31EE420F8"
+    },
+    "generatedNameInspectionEvidence": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prime-picard-generated-name-evidence-7528-r2.json",
+      "sha256": "7FBACE89D383104E78D2D1AC56730C37F4812E13B308AB11BAB43431C16D626F"
+    },
+    "precedingFailedComparison": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-prime-picard-ownership-comparison-7528.json",
+      "sha256": "05CB1EE27E4F73CB1186F8C975DBEFCD60FC466611A8A1860B9927B2F6A53E99"
+    }
+  },
+  "scratchToProductionCountReason": "All 260 distinct names from 260 exhaustive scratch checks are retained: 260 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Original arithmetic-action comparison, Frobenius/inertia compatibility, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Verified actual characteristic-two census and all-prime modular Picard injectivity - 24 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 7,528-module scope: all thirteen retained regressions, 49,317 exhaustive theorem checks, 22,419 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Original arithmetic-action comparison, Frobenius/inertia compatibility, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "recordedUTC": "2026-10-24T18:44:35.168107+00:00",
+  "log": "logs/dubon-build-20261024-102615-950.log",
+  "sha256": "58510FF3D9A2010A7A58D57FF8910578705AB66155926D180DCC94BA4CDDAAF7",
+  "bytes": 12526891,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 7528,
+  "projectTheorems": 49317,
+  "registeredConsumers": 22419,
+  "registeredConstructions": 1958,
+  "declarations": 30245,
+  "generated": 28647,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261024_102121.log",
+  "foundationSha256": "FA755339A52C102B6A820D521A6D8B5860750A5FBD59C86857358C79B4ABC38E",
+  "countReconciliation": {
+    "previousTheorems": 49059,
+    "focusedTheorems": 260,
+    "sharedGeneratedNames": [
+      "Dubon2026.SourceCurve.Place.restrictAlongFinite.congr_simp",
+      "Dubon2026.SourceEllipticStabilizer.stabilizerPointEquiv.congr_simp"
+    ],
+    "addedTheorems": 258,
+    "removedTheorems": [],
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardOwnership7528.log",
+    "ownershipSha256": "D569E39598AB1698F4302DBEC5BC2445335AE0A8D825B480B4AFB3BBB1B17981"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 260,
+    "scratchDistinct": 260,
+    "generatedNameRenamings": {
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveCubicCentralizer_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_9",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveElementCounts_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_5",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveBasic_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_1",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveCubicCentralizer": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_8",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveBasic": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveTransitiveMarks": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_10",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveSylowNonNormal_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_3",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveSylowNonNormal": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_2",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveInvolutionConjugacy": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_6",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveInvolutionConjugacy_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_7",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveTransitiveMarks_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_11",
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveElementCounts": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_4"
+    },
+    "generatedNameReason": "Lean names anonymous local instances using the module root. Import qualification changes that root to Dubon2026. Each of the twelve pairs has the same owning source module, byte-identical mathematical source after import qualification, identical full declaration type and identical full kernel proof expression. No theorem is omitted or weakened.",
+    "generatedNameSourceEvidence": {
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveCubicCentralizer_1": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_9",
+        "owningModule": "SourceOrderTwelveCubicCentralizer",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+        "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+        "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveCubicCentralizer.lean",
+          "sha256": "A2B96A1F80F079C433846B9EDA8B04202A2BCC9F36D930B00C7CF5F10B94EC4F"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveCubicCentralizer.lean",
+          "sha256": "962E8B7F3DB21EED693B92B32190692475C7837AA9C32C5360E5EAFD557E5E81"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveElementCounts_1": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_5",
+        "owningModule": "SourceOrderTwelveElementCounts",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+        "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+        "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveElementCounts.lean",
+          "sha256": "7D7B8CA2A422711851F443F561F974198ABF8DD7FDA6DEECBF85D50F8224BACB"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveElementCounts.lean",
+          "sha256": "2F54B7C574FC2841F5C28C9A92DEB11CDC3B5FA23D085055E40D5516E1E3EE08"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveBasic_1": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_1",
+        "owningModule": "SourceOrderTwelveBasic",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+        "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+        "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveBasic.lean",
+          "sha256": "49FBC92E28F94400022E1BFA8924194C92A8F68FC56FA396F160F8726E671CCB"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveBasic.lean",
+          "sha256": "80F65E3CB1D177F9D503DAB1891EE1BD00F510B2337BA8523A3A6410DDF31D38"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveCubicCentralizer": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_8",
+        "owningModule": "SourceOrderTwelveCubicCentralizer",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+        "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+        "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveCubicCentralizer.lean",
+          "sha256": "A2B96A1F80F079C433846B9EDA8B04202A2BCC9F36D930B00C7CF5F10B94EC4F"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveCubicCentralizer.lean",
+          "sha256": "962E8B7F3DB21EED693B92B32190692475C7837AA9C32C5360E5EAFD557E5E81"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveBasic": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026",
+        "owningModule": "SourceOrderTwelveBasic",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+        "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+        "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveBasic.lean",
+          "sha256": "49FBC92E28F94400022E1BFA8924194C92A8F68FC56FA396F160F8726E671CCB"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveBasic.lean",
+          "sha256": "80F65E3CB1D177F9D503DAB1891EE1BD00F510B2337BA8523A3A6410DDF31D38"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveTransitiveMarks": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_10",
+        "owningModule": "SourceOrderTwelveTransitiveMarks",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+        "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+        "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveTransitiveMarks.lean",
+          "sha256": "73879FF0C5499D92363E72092E32C12ACAFDD7BD9250F8032070573EB34760E9"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveTransitiveMarks.lean",
+          "sha256": "8B6902D96EA53FC659A5291E079B41714EF67B801C28DEAC7C2D67D6A0D8EF88"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveSylowNonNormal_1": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_3",
+        "owningModule": "SourceOrderTwelveSylowNonNormal",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+        "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+        "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveSylowNonNormal.lean",
+          "sha256": "DDD12819547D3C15C34466C6E94551AD061CA88647D8963A9F8AD5AF2E3ACA4B"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveSylowNonNormal.lean",
+          "sha256": "D84AC4A981063B7313998007D699DB15475A22F04E6B56689BD9F5D2CCA5997D"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveSylowNonNormal": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_2",
+        "owningModule": "SourceOrderTwelveSylowNonNormal",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+        "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+        "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveSylowNonNormal.lean",
+          "sha256": "DDD12819547D3C15C34466C6E94551AD061CA88647D8963A9F8AD5AF2E3ACA4B"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveSylowNonNormal.lean",
+          "sha256": "D84AC4A981063B7313998007D699DB15475A22F04E6B56689BD9F5D2CCA5997D"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveInvolutionConjugacy": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_6",
+        "owningModule": "SourceOrderTwelveInvolutionConjugacy",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+        "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+        "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveInvolutionConjugacy.lean",
+          "sha256": "C4AF4EDB2A5DC1553A2FFF899BABF871FE35209FCEB19685A16C52E1D00F859B"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveInvolutionConjugacy.lean",
+          "sha256": "816D9C52DC486C2B282A98113275648DC65DE589D4F8F442BADF9710B8FC48E1"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveInvolutionConjugacy_1": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_7",
+        "owningModule": "SourceOrderTwelveInvolutionConjugacy",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+        "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+        "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveInvolutionConjugacy.lean",
+          "sha256": "C4AF4EDB2A5DC1553A2FFF899BABF871FE35209FCEB19685A16C52E1D00F859B"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveInvolutionConjugacy.lean",
+          "sha256": "816D9C52DC486C2B282A98113275648DC65DE589D4F8F442BADF9710B8FC48E1"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveTransitiveMarks_1": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_11",
+        "owningModule": "SourceOrderTwelveTransitiveMarks",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+        "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+        "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveTransitiveMarks.lean",
+          "sha256": "73879FF0C5499D92363E72092E32C12ACAFDD7BD9250F8032070573EB34760E9"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveTransitiveMarks.lean",
+          "sha256": "8B6902D96EA53FC659A5291E079B41714EF67B801C28DEAC7C2D67D6A0D8EF88"
+        },
+        "onlyImportQualification": true
+      },
+      "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveElementCounts": {
+        "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_4",
+        "owningModule": "SourceOrderTwelveElementCounts",
+        "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+        "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+        "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+        "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveElementCounts.lean",
+          "sha256": "7D7B8CA2A422711851F443F561F974198ABF8DD7FDA6DEECBF85D50F8224BACB"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveElementCounts.lean",
+          "sha256": "2F54B7C574FC2841F5C28C9A92DEB11CDC3B5FA23D085055E40D5516E1E3EE08"
+        },
+        "onlyImportQualification": true
+      }
+    },
+    "productionFocused": 260,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceEllipticCharTwoAuxiliaryRootUnits",
+          "SourceEllipticCharTwoThreeDivisionRelation",
+          "SourceEllipticCharTwoEighthPower"
+        ],
+        "count": 4,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership418For7528.log",
+          "sha256": "A2242025A11406B294C25E1785B9CA14F2E4C5327F013FCCE9B32694D957EE66",
+          "sourceSha256": "CB95988FC8543BBF5530ECE765D5C902AADFE1FC54AF307F1E1CAC15C145A1DB"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticFullTorsionDivisor",
+          "SourceEllipticDeuringThreeTorsionSpecialization"
+        ],
+        "count": 2,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership419For7528.log",
+          "sha256": "4EFE8893B188F1DF6F7B1C5B03325874F0509FCE85F873DAB9579029F162DA9B",
+          "sourceSha256": "5448D5449D276288ECAFF3171B6561CFD8925A5A8536E87861703F01B7D7BE69"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticCharTwoOfJFamily",
+          "SourceEllipticCharTwoGoodModelOrder",
+          "SourceEllipticCharTwoFullInertiaImage"
+        ],
+        "count": 7,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership420For7528.log",
+          "sha256": "D4A06D8AA19B00302A81692F244C19474AEFA534D81D82BF686BB87CF8B87FFA",
+          "sourceSha256": "4EB6357C103760F5DF56FEA2C45E92438A2F60B61DB3B4E91B4C56B499C518E3"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticCharTwoCyclicSpecialization",
+          "SourceEllipticCharTwoEmbeddingOrbits",
+          "SourceEllipticCharTwoPlaceFibers",
+          "SourceEllipticCharTwoPlaceClassification"
+        ],
+        "count": 5,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership421For7528.log",
+          "sha256": "762DAF78AFC346F5AE4ED0CC63C81D986BC65DEB2602B7D6C5770CD000271E52",
+          "sourceSha256": "E27B4D98178203E64389B20FA4000BF008D0AA68A8C15E97232D489422354CD6"
+        }
+      },
+      {
+        "modules": [
+          "SourceOrderTwelveBasic",
+          "SourceOrderTwelveSylowNonNormal",
+          "SourceOrderTwelveElementCounts",
+          "SourceOrderTwelveInvolutionConjugacy",
+          "SourceOrderTwelveCubicCentralizer",
+          "SourceOrderTwelveTransitiveMarks"
+        ],
+        "count": 146,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership422For7528.log",
+          "sha256": "F686436B60BC12E584E21EF4EB51027D21FE387BB982819E05EAAF406E0F77F9",
+          "sourceSha256": "D0FC964E456A9FA1CF23B3B4C4F9071A5530AF0A1A2A595CB4DDF4864C241A26"
+        }
+      },
+      {
+        "modules": [
+          "SourcePrimeTorsionCommonScalar",
+          "SourceQuaternionQuarticNonscalar",
+          "SourceQuaternionCubicNonscalar"
+        ],
+        "count": 3,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership423For7528.log",
+          "sha256": "A12171A1206F8918FC52A00286636DE191551350E2713451253328692387965B",
+          "sourceSha256": "A96A5BA10DF3EFCBEE8BD5BCA13D1F3C77E43BBCB13FF0354D74C915C4A4CC8B"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticStabilizerPointHom",
+          "SourceEllipticCharTwoCubicParameters",
+          "SourceEllipticCharTwoQuarticChanges",
+          "SourceEllipticCharTwoQuaternionStabilizers",
+          "SourceEllipticCharTwoQuarticFixedCount",
+          "SourceEllipticCharTwoCubicPoint",
+          "SourceEllipticCharTwoCubicCommutator",
+          "SourceEllipticCharTwoCubicFixedCount",
+          "SourceEllipticCharTwoFixedCounts"
+        ],
+        "count": 47,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership424For7528.log",
+          "sha256": "8E63A1C6660AAC406EFF5EB13E0D711CB917D1FB5C20F8129407737207D54B74",
+          "sourceSha256": "E1486B5B26385642605098224D28DD273A0A11B8EA0305FF1317B3A7B4980F01"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticCharTwoSignExponent",
+          "SourceEllipticCharTwoMarkedElements",
+          "SourceEllipticCharTwoCyclicAction",
+          "SourceEllipticCharTwoCyclicOrbits",
+          "SourceEllipticCharTwoOrbitMarks"
+        ],
+        "count": 22,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership425For7528.log",
+          "sha256": "597400B24CE5A1CF51A9909A5B5DAD1AEEC36C4683A622A8318DB64D3306B432",
+          "sourceSha256": "F00C498C28C250E2E22EFB9DB01809E3BE501D867CD7DC3E9C84770D55C15699"
+        }
+      },
+      {
+        "modules": [
+          "SourceEllipticCharTwoCensusSum",
+          "SourceEllipticCharTwoWeightedCensus",
+          "SourceModularCharTwoCensus"
+        ],
+        "count": 10,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership426For7528.log",
+          "sha256": "8BF886CC67E5B0A0F072CE848193584A9B0910FF51A994319C271EDD55078FF9",
+          "sourceSha256": "C446E16BD307B8C5561513BFA92B5106E624305212BF0F1DFABD509F67918F36"
+        }
+      },
+      {
+        "modules": [
+          "SourceModularCharTwoDifferentialSum",
+          "SourceModularCharTwoGenusLower",
+          "SourceModularCharTwoResidueGenus",
+          "SourceModularCharTwoPicardInjectivity",
+          "SourceModularPrimePicardInjectivity"
+        ],
+        "count": 14,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership427For7528.log",
+          "sha256": "7F39F148778347ED876F13059EF3BFD81DCEB787C3A42DA590AACCACFB202D2B",
+          "sourceSha256": "B0F620AAEB4BE2A9DFA912A54EE62A3608CE83D179BCCF07688E3A52FD44A108"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardOwnership7528.log",
+      "sha256": "D569E39598AB1698F4302DBEC5BC2445335AE0A8D825B480B4AFB3BBB1B17981",
+      "sourceSha256": "38D799B1B6B4434E9E079642800D8C1B68D24BF7136F8403CC222D2610F456AD"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-082619-008.log",
+      "sha256": "1DC7C99AEA3767322924FB5B18AC9808FBEE9483EBE56CF633C0E9E31EE420F8"
+    },
+    "generatedNameInspectionEvidence": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prime-picard-generated-name-evidence-7528-r2.json",
+      "sha256": "7FBACE89D383104E78D2D1AC56730C37F4812E13B308AB11BAB43431C16D626F"
+    },
+    "precedingFailedComparison": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-prime-picard-ownership-comparison-7528.json",
+      "sha256": "05CB1EE27E4F73CB1186F8C975DBEFCD60FC466611A8A1860B9927B2F6A53E99"
+    }
+  },
+  "scratchToProductionCountReason": "All 260 distinct names from 260 exhaustive scratch checks are retained: 260 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Original arithmetic-action comparison, Frobenius/inertia compatibility, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Production actual original Picard/Tate inertia and primitive-form unramified realization pending full run - 24 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 7,544-module scope: all thirteen retained regressions, 49,430 exhaustive theorem checks, 22,458 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The Frobenius relation and trace/determinant consequences, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaFunctionsDependencyAudit2Production7544.log",
+      "sha256": "6432C31F8CDB21A042F14F94E6A6AA021156BA1A829CFF630477A222EAEB506F",
+      "requiredProofValueEdges": 15,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_integral_reduction_inertia",
+        "Dubon2026.SourceFunctionField.GaussReduction.inertiaGaussHom_modularResidue"
+      ],
+      "sourceSha256": "140385FEB82AFC053FCCAC6EA9590AD94C9B5BD0AAF116464D582D06F1CECF83"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticIntegralChartsDependencyAudit1Production7544.log",
+      "sha256": "21E924723EB31B151CFF3AA1C8959A124A196308220A904A3C44D5D0751085B5",
+      "requiredProofValueEdges": 11,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmetic_integral_charts"
+      ],
+      "sourceSha256": "9DE333B0898E7AEA06A77F0518CCC94CC4333251E8736001C4B1E6B262994761"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceModularReductionChartsDependencyAudit3Production7544.log",
+      "sha256": "B4277CF67AD5C39A7E32133CBF6E443BCC44CCED962C5318E011403749BA2B0C",
+      "requiredProofValueEdges": 10,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_constant_reduction_with_charts_of_prime"
+      ],
+      "sourceSha256": "9FBE9EE2F0BEB4888DCCB6F29C8C77503338AB16BF77EC715108D495E433E8B4"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaPlaceReductionDependencyAudit3Production7544.log",
+      "sha256": "4668EC09E84B6B6A78D17A0B618C39A3D8CF1FDA2F00089AD9FB3A0D570CE267",
+      "requiredProofValueEdges": 20,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_invariant_on_original_places"
+      ],
+      "sourceSha256": "6939BB82211A2591AD5740E847711B0BC8D18A015228B31451E72CFFC1DED537"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardInertiaDependencyAudit4Production7544.log",
+      "sha256": "640DCE7954F68B16AEDD9FE87A691CE81E841B0E20E939AC7ACC28AAA7B7E737",
+      "requiredProofValueEdges": 19,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.originalArithmeticPicard_eq_self_of_inertia_of_torsion"
+      ],
+      "sourceSha256": "41EF43D2F2A2698B2721D9F063F60429893128F58332EC4DE84DD56DEF7FBA57"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateInertiaDependencyAudit1Production7544.log",
+      "sha256": "DE604741AFA4E82482826FCAB291FCB953635876A0E36997D3960FE0B5FBF581",
+      "requiredProofValueEdges": 9,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.originalTateGaloisRep_eq_one_away_level_prime"
+      ],
+      "sourceSha256": "47F88917091BB8CC85AF843982ED81DEAF74F0FC3368DBB200796D5655D59883"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveUnramifiedDependencyAudit2Production7544.log",
+      "sha256": "993C8ABA58072DA3D119B304928FC15A4883AA43884B5A8BEAAD6A91056609BD",
+      "requiredProofValueEdges": 6,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_galois_realization"
+      ],
+      "sourceSha256": "661E88553B0692CAF5B5E96A976059FB86BC95EE6D3766803CC474674B4D90FB"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaProductionAudit7544.log",
+  "sha256": "064D76E124A4119F999770F760BAD6DA35C01A694C636A6BA1B7F005B7611144",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-inertia-production-build-7544.log",
+  "aggregateSha256": "D2E31027B1B1849431032123A5687C7E11F718000C5E35A2063615EB9F6D2362",
+  "productionModules": 7544,
+  "incrementModules": 16,
+  "axiomChecks": 48,
+  "exhaustiveIncrementTheorems": 114,
+  "linterScopes": 16,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 114,
+  "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The actual modular places, coefficient fields, Gauss residue map, divisor orders, genera and Picard quotient retain their definitions. No source contract is weakened.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 114,
+    "scratchDistinct": 114,
+    "generatedNameRenamings": {
+      "_private.Dubon2026.SourceOriginalPrimitiveUnramifiedRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveUnramifiedRealization": "_private.Dubon2026.SourceOriginalPrimitiveUnramifiedRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026"
+    },
+    "generatedNameReason": "Lean names anonymous local instances using the module root. Import qualification changes that root to Dubon2026. Each of the one pair has the same owning source module, byte-identical mathematical source after import qualification, identical full declaration type and identical full kernel proof expression. No theorem is omitted or weakened.",
+    "generatedNameSourceEvidence": {
+      "_private.Dubon2026.SourceOriginalPrimitiveUnramifiedRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveUnramifiedRealization": {
+        "productionName": "_private.Dubon2026.SourceOriginalPrimitiveUnramifiedRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "owningModule": "SourceOriginalPrimitiveUnramifiedRealization",
+        "exactDeclarationType": "Lean.Expr.forallE\n  `q\n  (Lean.Expr.const `Nat.Primes [])\n  (Lean.Expr.app\n    (Lean.Expr.app\n      (Lean.Expr.app (Lean.Expr.const `NeZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `MulZeroClass.toZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.const `Nat.instMulZeroClass [])))\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lam\n          `p\n          (Lean.Expr.const `Nat [])\n          (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n          (Lean.BinderInfo.default)))\n      (Lean.Expr.bvar 0)))\n  (Lean.BinderInfo.default)",
+        "exactProofValue": "Lean.Expr.lam\n  `q\n  (Lean.Expr.const `Nat.Primes [])\n  (Lean.Expr.app\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `NeZero.mk [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `MulZeroClass.toZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.const `Nat.instMulZeroClass [])))\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lam\n            `p\n            (Lean.Expr.const `Nat [])\n            (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n            (Lean.BinderInfo.default)))\n        (Lean.Expr.bvar 0)))\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.const `Nat.Prime.ne_zero [])\n        (Lean.Expr.app\n          (Lean.Expr.app\n            (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n            (Lean.Expr.lam\n              `p\n              (Lean.Expr.const `Nat [])\n              (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n              (Lean.BinderInfo.default)))\n          (Lean.Expr.bvar 0)))\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app\n            (Lean.Expr.const `Subtype.property [Lean.Level.succ (Lean.Level.zero)])\n            (Lean.Expr.const `Nat []))\n          (Lean.Expr.lam\n            `p\n            (Lean.Expr.const `Nat [])\n            (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n            (Lean.BinderInfo.default)))\n        (Lean.Expr.bvar 0))))\n  (Lean.BinderInfo.default)",
+        "typeSha256": "874E72092F3708117CC135BEF7A0E751A630C7940DB8DA202EBB8FD435673A1F",
+        "proofValueSha256": "43813E1D6FA8CAB5F660471853956C4E309E02A962E79732C126D7D6E9106FF0",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveUnramifiedRealization.lean",
+          "sha256": "5DEB7FB97710B7F7D564102DBEA4670CF6FFA31C698E7F1082DB76433B54D615"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveUnramifiedRealization.lean",
+          "sha256": "E786280C0FA8F8CAAF4711D143D9E181DFF41BBFFEF578F76C24D76966F3631A"
+        },
+        "onlyImportQualification": true
+      }
+    },
+    "productionFocused": 114,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceOriginalInertiaIntegralFunctions",
+          "SourceOriginalInertiaGaussAction"
+        ],
+        "count": 35,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership429For7544.log",
+          "sha256": "7B94A21989FA94C1BBFF637F7CC8CD54DE54B56BAE925F57AA5ADD1DB4C0CE26",
+          "sourceSha256": "9295FC2F4D0E9500FAA275EAFD8FF8501524C56986694D84CFC76048BDF4175C"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalArithmeticIntegralCharts"
+        ],
+        "count": 17,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership430For7544.log",
+          "sha256": "B81C50F70F666AB7970663C2DC5678FE9FA00EA0D55C1C63BBC56BE4E80F6701",
+          "sourceSha256": "391C5EF3271803B9E6BECE8E46FB137EDD445D4982CEF44832CB2DF3E6A9CD80"
+        }
+      },
+      {
+        "modules": [
+          "SourceReductionPrincipalDivisorCharts",
+          "SourceModularPrincipalDivisorCharts",
+          "SourceModularConstantReductionCharts"
+        ],
+        "count": 6,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership431For7544.log",
+          "sha256": "8648ED3CF921F0266DB3E8F2F2B2BCFDA101C5BCCA12A32AC7F70D0859646468",
+          "sourceSha256": "B4A8F9571F43E0851B79E90063CEED3228990971A9CE5397DCDF9A1D81BF9C67"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalCoefficientPlaceAction",
+          "SourceOriginalInertiaChartTransport",
+          "SourceOriginalInertiaPlaceReduction"
+        ],
+        "count": 24,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership432For7544.log",
+          "sha256": "E78C5DAEA39509D8A22388385D82BD6294C0BF6416297913D84B638D432F76AE",
+          "sourceSha256": "67F3D29B83674AA6E0BBEA89B0AA1C21472D76BDF9DD0499DC8AC3936F51C85F"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalCoefficientDivisors",
+          "SourceOriginalCoefficientPicard",
+          "SourceOriginalInertiaDivisorReduction",
+          "SourceOriginalInertiaPicard"
+        ],
+        "count": 25,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership433For7544.log",
+          "sha256": "1C3F4E6170692E9720FE52305B28263628B5ECEBF0804C9719E83984C0009B9A",
+          "sourceSha256": "60D9687C7331B29940E0A69A2BE85F9881059A698DA837F70BF8EC00ADC75ACB"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalTateInertia"
+        ],
+        "count": 4,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership434For7544.log",
+          "sha256": "DA6B115851BAA6602035E3EC15888E9229A9A07CF7DC6E9DC7A40F8C9C78D0B0",
+          "sourceSha256": "7D6F19A71F9A18CB3DE25C54004087C2D9216A35C5C94777218808C2CB08E8C2"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalSpecializationInertia",
+          "SourceOriginalPrimitiveUnramifiedRealization"
+        ],
+        "count": 3,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership435For7544.log",
+          "sha256": "E32AD8151BC40AE31EC6616D9F4FE9C3ECC4F4872F1D55F7AC7BABDA43DC4CB8",
+          "sourceSha256": "894232CB1A6FF352F2ABA30CB63E31C3C18A55004E12D835C3BF7E2C0ED26154"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaOwnership7544.log",
+      "sha256": "B045A050D48B0393E0E776E97AB1AA779EA260FCC65E86BEF3CBFA269C8A8126",
+      "sourceSha256": "99BD29FC49EAD8341D1A5A7B7F143D5C335F8ECD84831D4378A4D392272D8F71"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-102615-950.log",
+      "sha256": "58510FF3D9A2010A7A58D57FF8910578705AB66155926D180DCC94BA4CDDAAF7"
+    },
+    "generatedNameInspectionEvidence": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-inertia-generated-name-evidence-7544-r3.json",
+      "sha256": "38117814912CB945DCC3495AA7FA3F7E8A2029BA945DF5505778C52178A7997D"
+    },
+    "precedingFailedComparison": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-original-inertia-ownership-comparison-7544.json",
+      "sha256": "AECAA42E6EFFD45F1094879CE81AB7AB7A747CD9AFA57A44C23564DC5AB1F332"
+    }
+  },
+  "scratchToProductionCountReason": "All 114 distinct names from 114 exhaustive scratch checks are retained: 114 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "The Frobenius relation and trace/determinant consequences, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Verified actual original Picard/Tate inertia and primitive-form unramified realization - 24 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 7,544-module scope: all thirteen retained regressions, 49,430 exhaustive theorem checks, 22,458 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The Frobenius relation and trace/determinant consequences, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "recordedUTC": "2026-10-24T20:41:48.260314+00:00",
+  "log": "logs/dubon-build-20261024-122305-446.log",
+  "sha256": "E3C0C0FB4DACE3EA6E1CF2742B4261561DD8FF852B837D8EEEA56A20BC684869",
+  "bytes": 12563738,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 7544,
+  "projectTheorems": 49430,
+  "registeredConsumers": 22458,
+  "registeredConstructions": 1967,
+  "declarations": 30293,
+  "generated": 28850,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261024_121739.log",
+  "foundationSha256": "2150639291024D1A1A19D9B32155C39052F3F6BE5EE67AE64D34A59A55F805CB",
+  "countReconciliation": {
+    "previousTheorems": 49317,
+    "focusedTheorems": 114,
+    "sharedGeneratedNames": [
+      "Dubon2026.SourceFunctionField.GaussReduction.modularRegularProlongation.congr_simp"
+    ],
+    "addedTheorems": 113,
+    "removedTheorems": [],
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaOwnership7544.log",
+    "ownershipSha256": "B045A050D48B0393E0E776E97AB1AA779EA260FCC65E86BEF3CBFA269C8A8126"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 114,
+    "scratchDistinct": 114,
+    "generatedNameRenamings": {
+      "_private.Dubon2026.SourceOriginalPrimitiveUnramifiedRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveUnramifiedRealization": "_private.Dubon2026.SourceOriginalPrimitiveUnramifiedRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026"
+    },
+    "generatedNameReason": "Lean names anonymous local instances using the module root. Import qualification changes that root to Dubon2026. Each of the one pair has the same owning source module, byte-identical mathematical source after import qualification, identical full declaration type and identical full kernel proof expression. No theorem is omitted or weakened.",
+    "generatedNameSourceEvidence": {
+      "_private.Dubon2026.SourceOriginalPrimitiveUnramifiedRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveUnramifiedRealization": {
+        "productionName": "_private.Dubon2026.SourceOriginalPrimitiveUnramifiedRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "owningModule": "SourceOriginalPrimitiveUnramifiedRealization",
+        "exactDeclarationType": "Lean.Expr.forallE\n  `q\n  (Lean.Expr.const `Nat.Primes [])\n  (Lean.Expr.app\n    (Lean.Expr.app\n      (Lean.Expr.app (Lean.Expr.const `NeZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `MulZeroClass.toZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.const `Nat.instMulZeroClass [])))\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lam\n          `p\n          (Lean.Expr.const `Nat [])\n          (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n          (Lean.BinderInfo.default)))\n      (Lean.Expr.bvar 0)))\n  (Lean.BinderInfo.default)",
+        "exactProofValue": "Lean.Expr.lam\n  `q\n  (Lean.Expr.const `Nat.Primes [])\n  (Lean.Expr.app\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `NeZero.mk [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `MulZeroClass.toZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.const `Nat.instMulZeroClass [])))\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lam\n            `p\n            (Lean.Expr.const `Nat [])\n            (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n            (Lean.BinderInfo.default)))\n        (Lean.Expr.bvar 0)))\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.const `Nat.Prime.ne_zero [])\n        (Lean.Expr.app\n          (Lean.Expr.app\n            (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n            (Lean.Expr.lam\n              `p\n              (Lean.Expr.const `Nat [])\n              (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n              (Lean.BinderInfo.default)))\n          (Lean.Expr.bvar 0)))\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app\n            (Lean.Expr.const `Subtype.property [Lean.Level.succ (Lean.Level.zero)])\n            (Lean.Expr.const `Nat []))\n          (Lean.Expr.lam\n            `p\n            (Lean.Expr.const `Nat [])\n            (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n            (Lean.BinderInfo.default)))\n        (Lean.Expr.bvar 0))))\n  (Lean.BinderInfo.default)",
+        "typeSha256": "874E72092F3708117CC135BEF7A0E751A630C7940DB8DA202EBB8FD435673A1F",
+        "proofValueSha256": "43813E1D6FA8CAB5F660471853956C4E309E02A962E79732C126D7D6E9106FF0",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveUnramifiedRealization.lean",
+          "sha256": "5DEB7FB97710B7F7D564102DBEA4670CF6FFA31C698E7F1082DB76433B54D615"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveUnramifiedRealization.lean",
+          "sha256": "E786280C0FA8F8CAAF4711D143D9E181DFF41BBFFEF578F76C24D76966F3631A"
+        },
+        "onlyImportQualification": true
+      }
+    },
+    "productionFocused": 114,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceOriginalInertiaIntegralFunctions",
+          "SourceOriginalInertiaGaussAction"
+        ],
+        "count": 35,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership429For7544.log",
+          "sha256": "7B94A21989FA94C1BBFF637F7CC8CD54DE54B56BAE925F57AA5ADD1DB4C0CE26",
+          "sourceSha256": "9295FC2F4D0E9500FAA275EAFD8FF8501524C56986694D84CFC76048BDF4175C"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalArithmeticIntegralCharts"
+        ],
+        "count": 17,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership430For7544.log",
+          "sha256": "B81C50F70F666AB7970663C2DC5678FE9FA00EA0D55C1C63BBC56BE4E80F6701",
+          "sourceSha256": "391C5EF3271803B9E6BECE8E46FB137EDD445D4982CEF44832CB2DF3E6A9CD80"
+        }
+      },
+      {
+        "modules": [
+          "SourceReductionPrincipalDivisorCharts",
+          "SourceModularPrincipalDivisorCharts",
+          "SourceModularConstantReductionCharts"
+        ],
+        "count": 6,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership431For7544.log",
+          "sha256": "8648ED3CF921F0266DB3E8F2F2B2BCFDA101C5BCCA12A32AC7F70D0859646468",
+          "sourceSha256": "B4A8F9571F43E0851B79E90063CEED3228990971A9CE5397DCDF9A1D81BF9C67"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalCoefficientPlaceAction",
+          "SourceOriginalInertiaChartTransport",
+          "SourceOriginalInertiaPlaceReduction"
+        ],
+        "count": 24,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership432For7544.log",
+          "sha256": "E78C5DAEA39509D8A22388385D82BD6294C0BF6416297913D84B638D432F76AE",
+          "sourceSha256": "67F3D29B83674AA6E0BBEA89B0AA1C21472D76BDF9DD0499DC8AC3936F51C85F"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalCoefficientDivisors",
+          "SourceOriginalCoefficientPicard",
+          "SourceOriginalInertiaDivisorReduction",
+          "SourceOriginalInertiaPicard"
+        ],
+        "count": 25,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership433For7544.log",
+          "sha256": "1C3F4E6170692E9720FE52305B28263628B5ECEBF0804C9719E83984C0009B9A",
+          "sourceSha256": "60D9687C7331B29940E0A69A2BE85F9881059A698DA837F70BF8EC00ADC75ACB"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalTateInertia"
+        ],
+        "count": 4,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership434For7544.log",
+          "sha256": "DA6B115851BAA6602035E3EC15888E9229A9A07CF7DC6E9DC7A40F8C9C78D0B0",
+          "sourceSha256": "7D6F19A71F9A18CB3DE25C54004087C2D9216A35C5C94777218808C2CB08E8C2"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalSpecializationInertia",
+          "SourceOriginalPrimitiveUnramifiedRealization"
+        ],
+        "count": 3,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership435For7544.log",
+          "sha256": "E32AD8151BC40AE31EC6616D9F4FE9C3ECC4F4872F1D55F7AC7BABDA43DC4CB8",
+          "sourceSha256": "894232CB1A6FF352F2ABA30CB63E31C3C18A55004E12D835C3BF7E2C0ED26154"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaOwnership7544.log",
+      "sha256": "B045A050D48B0393E0E776E97AB1AA779EA260FCC65E86BEF3CBFA269C8A8126",
+      "sourceSha256": "99BD29FC49EAD8341D1A5A7B7F143D5C335F8ECD84831D4378A4D392272D8F71"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-102615-950.log",
+      "sha256": "58510FF3D9A2010A7A58D57FF8910578705AB66155926D180DCC94BA4CDDAAF7"
+    },
+    "generatedNameInspectionEvidence": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\original-inertia-generated-name-evidence-7544-r3.json",
+      "sha256": "38117814912CB945DCC3495AA7FA3F7E8A2029BA945DF5505778C52178A7997D"
+    },
+    "precedingFailedComparison": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-original-inertia-ownership-comparison-7544.json",
+      "sha256": "AECAA42E6EFFD45F1094879CE81AB7AB7A747CD9AFA57A44C23564DC5AB1F332"
+    }
+  },
+  "scratchToProductionCountReason": "All 114 distinct names from 114 exhaustive scratch checks are retained: 114 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "The Frobenius relation and trace/determinant consequences, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Production actual original primitive-form Frobenius quadratic realization pending full run - 24 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 7,591-module scope: all thirteen retained regressions, 49,704 exhaustive theorem checks, 22,573 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The separate Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. The quadratic identity alone does not prove determinant or trace. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticFrobeniusResidueDependencyAudit3Production7591.log",
+      "sha256": "0BB8F287544A4249F0D5BA574B4912A31D507BAC835671434856AE10BCC7534B",
+      "requiredProofValueEdges": 22,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.original_arithmeticFrobenius_modularResidue",
+        "Dubon2026.SourceFunctionField.GaussReduction.residueArithmeticFrobenius_chart",
+        "Dubon2026.SourceFunctionField.GaussReduction.residueArithmeticFrobenius_coe"
+      ],
+      "sourceSha256": "AD36E16DB6E231E8FDD8CB74C8F34A4D26DC9A2697F826C8824114C0FC03DD43"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusPlaceReductionDependencyAudit3Production7591.log",
+      "sha256": "216C3D3CA32214125A845C9A81530C770926F3233414FD386BFDBACA97302175",
+      "requiredProofValueEdges": 17,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_arithmeticFrobenius_equivariant"
+      ],
+      "sourceSha256": "FD666A33D7A2D33BC4896D2962586922A8BD48228DC134E823EF45A70CA4EF82"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrobeniusPicardReductionDependencyAudit5Production7591.log",
+      "sha256": "783C93B6A6AA0FCF42A5A69FBACD3FE4B37B9C803F34A8525F71812442F16082",
+      "requiredProofValueEdges": 24,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_arithmeticFrobenius_picard",
+        "Dubon2026.SourceFunctionField.residueCoefficientPicard_mk"
+      ],
+      "sourceSha256": "A67347982C588D12D279069142BF78F7D3998AD033B17CFE85B369BED69B58AD"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGeometricFrobeniusDependencyAudit3Production7591.log",
+      "sha256": "6B258833CE43CFDB432CCC26982734C4901A469F30555676E8A5B00D6F9F2B46",
+      "requiredProofValueEdges": 20,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.residueGeometricFrobenius_coe",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobenius_isIntegral",
+        "Dubon2026.SourceFunctionField.residueGeometricFrobenius_place_order"
+      ],
+      "sourceSha256": "07997AD1AFCC6B27B0709068033AE812F724F62627DB6A281CD8B40BE535BB25"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGeometricPicardReductionDependencyAudit3Production7591.log",
+      "sha256": "CCE35C319FC3C947B9EB5A10AB7A305480E4E5467AB0F55182FDB2F37B0EF8B6",
+      "requiredProofValueEdges": 17,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_geometricFrobenius_picard"
+      ],
+      "sourceSha256": "5D0DE19D40922B62199F22030A65A77748E6A2A097B7A19227CEB6127008D633"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeLaurentReductionDependencyAudit3Production7591.log",
+      "sha256": "93E034B8B319848214B966858D443693A765A5B669F0498BB46CAE974F8F5241",
+      "requiredProofValueEdges": 15,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.exists_integral_laurent_reduction_of_hecke_product",
+        "Dubon2026.SourceFunctionField.primeRootValuationUnit_coe"
+      ],
+      "sourceSha256": "AC88A5F9C03AF42DF929F7C91EA3A80C215B649A173E4C678695E022A4FBE0A1"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAtkinEmbeddingDependencyAudit2Production7591.log",
+      "sha256": "960AA5998965E33E3607B1C975F6D18DB33F7AC6FFB74F2F0486EA14807F4703",
+      "requiredProofValueEdges": 13,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.exists_original_atkin_embedding"
+      ],
+      "sourceSha256": "8D2F3A0629A3A6239B07C0DA4C6F3EC65D688D6B3C095D820A8D1772B673CA98"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAtkinInvolutionDependencyAudit3Production7591.log",
+      "sha256": "ED53C35BEDFE39954C9C5412824640045BE8864E3F65677C1D28B14A4FFE403B",
+      "requiredProofValueEdges": 12,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.exists_original_atkin_involution"
+      ],
+      "sourceSha256": "D12F18A05788E4B674367580B87BB3129C9B0B6B66FF2D36A6F7787C1102170A"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceAtkinCoefficientDependencyAudit3R2Production7591.log",
+      "sha256": "68D7239D28FB211E030D12BA74EAD1BBE5F2752BF7774906152ADACC4C9EDF53",
+      "requiredProofValueEdges": 23,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.exists_original_atkin_over"
+      ],
+      "sourceSha256": "A2DE4938D4B62CBE64B3024DF57CE6E4EE86D3A3FA53C91F434E0A388AFAF3CA"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeNormProductDependencyAudit4Production7591.log",
+      "sha256": "41CD633BC5C8D2BEC680446CB34932C72FFFB3F1B67F2A4CA0DFEF74B20FE16B",
+      "requiredProofValueEdges": 23,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.HeckeNorm.original_hecke_norm_expanded_product"
+      ],
+      "sourceSha256": "5EC348C64FE7DC76A4BA650CFB190D0025DD5CDD7BA8A21795863895CBDC7F50"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeNormReductionDependencyAudit1Production7591.log",
+      "sha256": "1162E4A4BBF5AF653FD8F59AD2F731F9EF436F789650838F0FD033AE12651B91",
+      "requiredProofValueEdges": 5,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_hecke_norm_integral_reduction"
+      ],
+      "sourceSha256": "D85FE492B35FD61BAEB47A1293B7E5A4334608B741BD0B7F528552C7E217748F"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTorsionAgreementDependencyAudit1Production7591.log",
+      "sha256": "D296309311C8B9BC2CA00D9421AED2EF63B166192C8C54D514658B5B7844A4FE",
+      "requiredProofValueEdges": 10,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_divisor_hom_eq_on_torsion"
+      ],
+      "sourceSha256": "74C70DC192B7C491D0F69D3EF26D2F36535FF3DD347E08FD22B5BE6F931A540E"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceResidueFrobeniusOperatorDependencyAudit1Production7591.log",
+      "sha256": "7D2151B661DFE8B40F82F65A6CA635E10A10F37B45365FCA64A35B693E08F856",
+      "requiredProofValueEdges": 10,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.residueFrobeniusDivisorOperator_order"
+      ],
+      "sourceSha256": "47A6DCF72619D1D5BCD36D9CE5E429915D487D3F60D7328DC7C3A99BFE24A3D6"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckePrincipalNormDependencyAudit1Production7591.log",
+      "sha256": "0317AAB5B7BD6AAD09F21CD9B0738B72E3C01DE0F4C375481E5B31494CB77F86",
+      "requiredProofValueEdges": 10,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalHeckeDivisor_principal_norm"
+      ],
+      "sourceSha256": "86A63215DDA56EFCABECB96A4BE64D1921B1C8B8C3F6028D76829FA42EAB08E4"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalHeckeIntegralAgreementDependencyAudit2R2Production7591.log",
+      "sha256": "B6395AD63E924A69B289991A129A0A154219C92ED616C8E09AAF5F1E154B7846",
+      "requiredProofValueEdges": 10,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.original_hecke_reduction_integral_principal"
+      ],
+      "sourceSha256": "7EA99CDEE1F7A16C6E00BFA08FB0D0B4329A593746280ED83BAF62CC203CAD0D"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceResidueFrobeniusPicardOperatorDependencyAudit1Production7591.log",
+      "sha256": "BEA7DE729AF49720BF3206F6277DEF186423A064425EC56F51CEE69F26654F3E",
+      "requiredProofValueEdges": 10,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.residueFrobeniusPicardOperator_mk",
+        "Dubon2026.SourceFunctionField.residueFrobeniusPicardOperator_coefficient"
+      ],
+      "sourceSha256": "DFFC1A71F12BCB2E7BD90E0DB565B6CA71D60F31A53AD5C83B258F3A05A816D8"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSpecializationQuadraticDependencyAudit2Production7591.log",
+      "sha256": "48CEEF1940CB08847BC1013A4A731D689FBD4143C4ECE5B16BBF686513A100AD",
+      "requiredProofValueEdges": 5,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_quadratic"
+      ],
+      "sourceSha256": "0B735F5C75B999FA67E6BCAEBE1D2550CCADB4D76EED0360E9A892EB20474AD0"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFrobeniusQuadraticDependencyAudit4R2Production7591.log",
+      "sha256": "92A8D1F3406786301FEC15ACBFF86633C2C7912241ECD50E6A2FE4DB60A2051E",
+      "requiredProofValueEdges": 16,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_quadratic_realization"
+      ],
+      "sourceSha256": "86617EB63862361A0D022DE1C79E85C12FA0368A4FF7B61770E6C9D23F013D5A"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusProductionAudit7591.log",
+  "sha256": "B51FDAF600CB4F6C500B5C156312F1A41E8EDC4683FF4C77153D99B2D94418E7",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-hecke-frobenius-production-build-7591.log",
+  "aggregateSha256": "CCA8D000FDA0048F75A391D8310D2A8F3A75F3F352E664848660752E155FA22C",
+  "productionModules": 7591,
+  "incrementModules": 47,
+  "axiomChecks": 146,
+  "exhaustiveIncrementTheorems": 275,
+  "linterScopes": 47,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 275,
+  "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The actual modular places, coefficient fields, Gauss residue map, divisor orders, genera and Picard quotient retain their definitions. No source contract is weakened.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 275,
+    "scratchDistinct": 275,
+    "generatedNameRenamings": {
+      "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusQuadraticRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveFrobeniusQuadraticRealization": "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusQuadraticRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026"
+    },
+    "generatedNameReason": "Lean names anonymous local instances using the module root. Import qualification changes that root to Dubon2026. Each of the one pair has the same owning source module, byte-identical mathematical source after import qualification, identical full declaration type and identical full kernel proof expression. No theorem is omitted or weakened.",
+    "generatedNameSourceEvidence": {
+      "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusQuadraticRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveFrobeniusQuadraticRealization": {
+        "productionName": "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusQuadraticRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "owningModule": "SourceOriginalPrimitiveFrobeniusQuadraticRealization",
+        "exactDeclarationType": "Lean.Expr.forallE\n  `q\n  (Lean.Expr.const `Nat.Primes [])\n  (Lean.Expr.app\n    (Lean.Expr.app\n      (Lean.Expr.app (Lean.Expr.const `NeZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `MulZeroClass.toZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.const `Nat.instMulZeroClass [])))\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lam\n          `p\n          (Lean.Expr.const `Nat [])\n          (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n          (Lean.BinderInfo.default)))\n      (Lean.Expr.bvar 0)))\n  (Lean.BinderInfo.default)",
+        "exactProofValue": "Lean.Expr.lam\n  `q\n  (Lean.Expr.const `Nat.Primes [])\n  (Lean.Expr.app\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `NeZero.mk [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `MulZeroClass.toZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.const `Nat.instMulZeroClass [])))\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lam\n            `p\n            (Lean.Expr.const `Nat [])\n            (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n            (Lean.BinderInfo.default)))\n        (Lean.Expr.bvar 0)))\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.const `Nat.Prime.ne_zero [])\n        (Lean.Expr.app\n          (Lean.Expr.app\n            (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n            (Lean.Expr.lam\n              `p\n              (Lean.Expr.const `Nat [])\n              (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n              (Lean.BinderInfo.default)))\n          (Lean.Expr.bvar 0)))\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app\n            (Lean.Expr.const `Subtype.property [Lean.Level.succ (Lean.Level.zero)])\n            (Lean.Expr.const `Nat []))\n          (Lean.Expr.lam\n            `p\n            (Lean.Expr.const `Nat [])\n            (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n            (Lean.BinderInfo.default)))\n        (Lean.Expr.bvar 0))))\n  (Lean.BinderInfo.default)",
+        "typeSha256": "874E72092F3708117CC135BEF7A0E751A630C7940DB8DA202EBB8FD435673A1F",
+        "proofValueSha256": "43813E1D6FA8CAB5F660471853956C4E309E02A962E79732C126D7D6E9106FF0",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusQuadraticRealization.lean",
+          "sha256": "7AFD499F33D0FD359F44CF412651FBEC79DFE71A6147E8693E993BE62ADE3B76"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveFrobeniusQuadraticRealization.lean",
+          "sha256": "346D2FFF226B66520284C59193080FB1377099C27DFEB0588967844C4F1C6849"
+        },
+        "onlyImportQualification": true
+      }
+    },
+    "productionFocused": 275,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceResidueCoefficientAutomorphism",
+          "SourceDecompositionGaussAction",
+          "SourceArithmeticFrobeniusResidue"
+        ],
+        "count": 35,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership436For7591.log",
+          "sha256": "0CDD3F8F073B278B61588F8D7F6631F238DA6C0B1FA666A15055AC4E44DDE7E0",
+          "sourceSha256": "B267D113A6DEC9E92DFD3880BEBE508C38258C23FFBB381552FED6D9887205EC"
+        }
+      },
+      {
+        "modules": [
+          "SourceResidueCoefficientPlaces",
+          "SourceDecompositionChartTransport",
+          "SourceModularDecompositionPlaceReduction"
+        ],
+        "count": 24,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership438For7591.log",
+          "sha256": "4A27A42C1A7A54842EDDF5A4654CB3C603DDAEF85C4F6381CD22A1CE9A839070",
+          "sourceSha256": "2FDB002F519403A2899D91105522AF6F80B3E13A72914F46A23608529754285A"
+        }
+      },
+      {
+        "modules": [
+          "SourceResidueCoefficientPlaceOrders",
+          "SourceResidueCoefficientDivisors",
+          "SourceResidueCoefficientPicard",
+          "SourceOriginalDecompositionDivisorReduction",
+          "SourceOriginalFrobeniusPicardReduction"
+        ],
+        "count": 27,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership439For7591.log",
+          "sha256": "4374E3A988AC85F0C301DE4EBF73D69DB6BC75BC15997DD7003857DFE7938B77",
+          "sourceSha256": "105FEE4F9EEC9AF6364BCD504ABAFAA96053AF58CA5CD06C54C455D90D4219EB"
+        }
+      },
+      {
+        "modules": [
+          "SourceLaurentFrobenius",
+          "SourceResidueGeometricFrobenius",
+          "SourceResidueGeometricFrobeniusPlaces"
+        ],
+        "count": 23,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership440For7591.log",
+          "sha256": "5892A702ACD3F67D40D762E83ADD92EDDD28438F6B466376BAAA5F7914023DBF",
+          "sourceSha256": "C30ED66B7AE374C0677C3E2CB409C3244D05A93AA4D44FB8EA9666EC598A1B9D"
+        }
+      },
+      {
+        "modules": [
+          "SourceResidueGeometricFrobeniusDivisors",
+          "SourceResidueGeometricFrobeniusPicard",
+          "SourceOriginalGeometricFrobeniusReduction"
+        ],
+        "count": 20,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership441For7591.log",
+          "sha256": "DB44725A5E0E1CE2458419D2A001084F9957BB2A8B28B9A6D688B7E4604DFF10",
+          "sourceSha256": "2ACA81F3EEB53FD7AE280E56D0D2291986035A8FAD84AAD185E917E84BD1CDEA"
+        }
+      },
+      {
+        "modules": [
+          "SourceHeckePrimeRootReduction",
+          "SourceHeckeLaurentProductReduction",
+          "SourceHeckeLaurentNormExtraction"
+        ],
+        "count": 18,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership442For7591.log",
+          "sha256": "DA6A047B2A582C5C14D1E692E94FA53C9D6F4D0DE42626DEB8D65D4DB0A8492C",
+          "sourceSha256": "6593E58DDDD1ADA903C19C62590E48889517B81EDE087E693647EA95E7149CC7"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalAtkinPrimePolynomial",
+          "SourceOriginalAtkinEmbedding"
+        ],
+        "count": 9,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership443For7591.log",
+          "sha256": "85B3394D8916317F732A396C26599C1984A279AB54B24085EF3FE4719D99C237",
+          "sourceSha256": "5D6120EA2F8D9AFC98EB50171B8ED7FFDF9FD143B81E169543D7CE9A99E78FB9"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalAdjacentRootUniqueness",
+          "SourceOriginalAtkinGeneratorImages",
+          "SourceOriginalAtkinInvolution"
+        ],
+        "count": 5,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership444For7591.log",
+          "sha256": "A5987B4E5B4B02D66CB1ECE50FBECA9DD28FBF70DD89106538F564802C2B12AF",
+          "sourceSha256": "5AE431E0BE17AFA13E6CAE1EDF77D498896F60321DFD3460A54861A5C7E130AF"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalTensorCoefficientMapR2",
+          "SourceOriginalTensorCoefficientEquivR2",
+          "SourceOriginalAtkinCoefficientExtensionR2"
+        ],
+        "count": 47,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership445For7591.log",
+          "sha256": "EF623998468BEC4DB7293B630D5FAC668C3FAA866727E445CFBA8CCB27E36088",
+          "sourceSha256": "967B23C40EA6039D19E5604C7583E4A08AB0F5C81FC4E85094E805DCB0C1A2E8"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalHeckePrimeDegree",
+          "SourceOriginalHeckeNormEmbeddings",
+          "SourceOriginalHeckeEmbeddingCensus",
+          "SourceOriginalHeckeNormProduct"
+        ],
+        "count": 21,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership446For7591.log",
+          "sha256": "46923C884E222C7E5DE1AEFD72497E39D63A0DB48566B1B526EE0201EA3C4BE6",
+          "sourceSha256": "F037DE3A0B4FC5FD514373996A8D4B6D6F3E2F33FD54C35D3A58F7BFDC49CAA7"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalHeckeNormReduction"
+        ],
+        "count": 1,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership447For7591.log",
+          "sha256": "E36400C5E0B4BC9822D8E7C70F91F822D4D00FC1028604DB111E70AA1C21EC9F",
+          "sourceSha256": "CF2016B549051C7398378E7730E000FD4D269D3C21F1FC068226B9FD9C528971"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalIntegralPrincipalDifference",
+          "SourceOriginalTorsionDivisorAgreement"
+        ],
+        "count": 6,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership448For7591.log",
+          "sha256": "DCC1C87B5D2F0EC92DAE5D9524918853E5316A6BF218BE0838D8841B662EBBD5",
+          "sourceSha256": "E9389505FB70BD29A9BAC594B9ED8D042083E2BFF7B00410C27204F33DCF5510"
+        }
+      },
+      {
+        "modules": [
+          "SourceResidueFrobeniusDivisorOperator"
+        ],
+        "count": 8,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership449For7591.log",
+          "sha256": "74D7474C3404443F9CF9C925D7E62CB6577BFF97ECD90151671E0AA691D4600E",
+          "sourceSha256": "779C8598F717171F0510E425E66878C18E9B989237EAB084B3FDC96020991059"
+        }
+      },
+      {
+        "modules": [
+          "SourceCurveCorrespondencePrincipalOrder",
+          "SourceOriginalHeckePrincipalNorm"
+        ],
+        "count": 3,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership450For7591.log",
+          "sha256": "34E4AA062B9621CAE5422F4FFCA7720D2C505E0922D3CB5E95DB538614BC2AA8",
+          "sourceSha256": "166A2726BD80AFDFAA674F2466EC47D9327EE75A3392C16A0F1AAB91D1E6D062"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalIntegralDivisorReduction",
+          "SourceOriginalHeckeIntegralAgreement"
+        ],
+        "count": 3,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership451For7591.log",
+          "sha256": "1CA61E076658ECE4DB688C75DEE99BA0588FAEEF3971C1178A47A17603120DDE",
+          "sourceSha256": "FA5261FFF1B5461E91349B987B4FBBDD6657784D2198C3BAF353427D6988A11D"
+        }
+      },
+      {
+        "modules": [
+          "SourceResidueFrobeniusPicardOperator"
+        ],
+        "count": 13,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership453For7591.log",
+          "sha256": "F03FD38FCCEFC2EE6DC1BDB97128062386590D77BCF3AF2E5F8F8797F18DB83F",
+          "sourceSha256": "3974EF480A9211C3CAB4B1D58C0B807EFE03901EE19A3217DBBD92043C79A5B6"
+        }
+      },
+      {
+        "modules": [
+          "SourceSpanningSpecializationQuadratic",
+          "SourceOriginalSpecializationQuadratic"
+        ],
+        "count": 2,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership459For7591.log",
+          "sha256": "E8279E6E67C08EB793307255ED799B2893FC8018594FC8ECDF81386DC09C550F",
+          "sourceSha256": "8B07053BEBD923B17273F0E36E96DD6224C3723ACBDA4D9DB2BDC6A44A51EB75"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalHeckeTorsionReduction",
+          "SourceOriginalPicardFrobeniusQuadratic",
+          "SourceOriginalTateFrobeniusQuadratic",
+          "SourceOriginalPrimitiveFrobeniusQuadraticRealization"
+        ],
+        "count": 10,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership460For7591.log",
+          "sha256": "532F3CA4ECA2F96DBED21625198011D87397F852AA24E58F613567F3EFE347D9",
+          "sourceSha256": "A14E08AFB51D3B20C4FC803969800842539BF8B211C5659751A60D649F0BBD04"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusOwnership7591.log",
+      "sha256": "E8B5EF664AF71B4BA17FBDCEB3B5071BF1EEB5D4277B854B65C264FA8C354E15",
+      "sourceSha256": "7B1FCE66C9BF53AF1FB4B8B3899AA7AB662A7F516E56EC112631D04A2D9E675B"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-122305-446.log",
+      "sha256": "E3C0C0FB4DACE3EA6E1CF2742B4261561DD8FF852B837D8EEEA56A20BC684869"
+    },
+    "generatedNameInspectionEvidence": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\hecke-frobenius-generated-name-evidence-7591.json",
+      "sha256": "A0DD8FE242116244CCDF2E9A1B0AD29A2E3D5508BB55F9353F6B58CDBE839ED3"
+    },
+    "precedingComparisonProgram": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_hecke_frobenius_ownership_7591.py",
+      "sha256": "F321B24A5ACF8C9EED637637E6C312DD00A084EDF6C053E66D8A487A77AA2607",
+      "correction": "The initial program omitted loading its recorded generated-name evidence and referred to undefined generatedData. This successor loads and hash-checks that evidence before exact name-set comparison. No Lean source or previous evidence is changed."
+    }
+  },
+  "scratchToProductionCountReason": "All 275 distinct names from 275 exhaustive scratch checks are retained: 275 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "ownershipComparisonRepair": {
+    "precedingProgram": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_hecke_frobenius_ownership_7591.py",
+      "sha256": "F321B24A5ACF8C9EED637637E6C312DD00A084EDF6C053E66D8A487A77AA2607",
+      "correction": "The initial program omitted loading its recorded generated-name evidence and referred to undefined generatedData. This successor loads and hash-checks that evidence before exact name-set comparison. No Lean source or previous evidence is changed."
+    },
+    "comparisonProgram": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_hecke_frobenius_ownership_7591_r2.py",
+      "sha256": "B8AB37D112AF4DB83680988E832B107A9411EE9AF09711180F91F7FDAF9AB392"
+    },
+    "evidence": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\hecke-frobenius-generated-name-evidence-7591.json",
+      "sha256": "A0DD8FE242116244CCDF2E9A1B0AD29A2E3D5508BB55F9353F6B58CDBE839ED3"
+    },
+    "reason": "Bookkeeping-only successor; all mathematical sources, compiled objects and completed audit evidence are preserved."
+  },
+  "boundary": "The separate Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. The quadratic identity alone does not prove determinant or trace. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Verified actual original primitive-form Frobenius quadratic realization - 24 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 7,591-module scope: all thirteen retained regressions, 49,704 exhaustive theorem checks, 22,573 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The separate Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. The quadratic identity alone does not prove determinant or trace. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.
+
+```json
+{
+  "recordedUTC": "2026-10-24T22:44:03.882511+00:00",
+  "log": "logs/dubon-build-20261024-142442-365.log",
+  "sha256": "A34A9F97CAAC3A7C5D5782FB8B32FA3857358A3B288C13352482CD7D745F5079",
+  "bytes": 12645346,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 7591,
+  "projectTheorems": 49704,
+  "registeredConsumers": 22573,
+  "registeredConstructions": 1998,
+  "declarations": 30439,
+  "generated": 29260,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261024_141913.log",
+  "foundationSha256": "7C76507F87F74026FF63938C6FECBD08AE937B9970BBD586D72D5FF3CB91C507",
+  "countReconciliation": {
+    "previousTheorems": 49430,
+    "focusedTheorems": 275,
+    "sharedGeneratedNames": [
+      "Dubon2026.SourceFunctionField.originalHeckeBeta.congr_simp"
+    ],
+    "addedTheorems": 274,
+    "removedTheorems": [],
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusOwnership7591.log",
+    "ownershipSha256": "E8B5EF664AF71B4BA17FBDCEB3B5071BF1EEB5D4277B854B65C264FA8C354E15"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 275,
+    "scratchDistinct": 275,
+    "generatedNameRenamings": {
+      "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusQuadraticRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveFrobeniusQuadraticRealization": "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusQuadraticRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026"
+    },
+    "generatedNameReason": "Lean names anonymous local instances using the module root. Import qualification changes that root to Dubon2026. Each of the one pair has the same owning source module, byte-identical mathematical source after import qualification, identical full declaration type and identical full kernel proof expression. No theorem is omitted or weakened.",
+    "generatedNameSourceEvidence": {
+      "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusQuadraticRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveFrobeniusQuadraticRealization": {
+        "productionName": "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusQuadraticRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "owningModule": "SourceOriginalPrimitiveFrobeniusQuadraticRealization",
+        "exactDeclarationType": "Lean.Expr.forallE\n  `q\n  (Lean.Expr.const `Nat.Primes [])\n  (Lean.Expr.app\n    (Lean.Expr.app\n      (Lean.Expr.app (Lean.Expr.const `NeZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `MulZeroClass.toZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.const `Nat.instMulZeroClass [])))\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lam\n          `p\n          (Lean.Expr.const `Nat [])\n          (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n          (Lean.BinderInfo.default)))\n      (Lean.Expr.bvar 0)))\n  (Lean.BinderInfo.default)",
+        "exactProofValue": "Lean.Expr.lam\n  `q\n  (Lean.Expr.const `Nat.Primes [])\n  (Lean.Expr.app\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `NeZero.mk [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `MulZeroClass.toZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.const `Nat.instMulZeroClass [])))\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lam\n            `p\n            (Lean.Expr.const `Nat [])\n            (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n            (Lean.BinderInfo.default)))\n        (Lean.Expr.bvar 0)))\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.const `Nat.Prime.ne_zero [])\n        (Lean.Expr.app\n          (Lean.Expr.app\n            (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n            (Lean.Expr.lam\n              `p\n              (Lean.Expr.const `Nat [])\n              (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n              (Lean.BinderInfo.default)))\n          (Lean.Expr.bvar 0)))\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app\n            (Lean.Expr.const `Subtype.property [Lean.Level.succ (Lean.Level.zero)])\n            (Lean.Expr.const `Nat []))\n          (Lean.Expr.lam\n            `p\n            (Lean.Expr.const `Nat [])\n            (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n            (Lean.BinderInfo.default)))\n        (Lean.Expr.bvar 0))))\n  (Lean.BinderInfo.default)",
+        "typeSha256": "874E72092F3708117CC135BEF7A0E751A630C7940DB8DA202EBB8FD435673A1F",
+        "proofValueSha256": "43813E1D6FA8CAB5F660471853956C4E309E02A962E79732C126D7D6E9106FF0",
+        "scratchSource": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusQuadraticRealization.lean",
+          "sha256": "7AFD499F33D0FD359F44CF412651FBEC79DFE71A6147E8693E993BE62ADE3B76"
+        },
+        "productionSource": {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveFrobeniusQuadraticRealization.lean",
+          "sha256": "346D2FFF226B66520284C59193080FB1377099C27DFEB0588967844C4F1C6849"
+        },
+        "onlyImportQualification": true
+      }
+    },
+    "productionFocused": 275,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceResidueCoefficientAutomorphism",
+          "SourceDecompositionGaussAction",
+          "SourceArithmeticFrobeniusResidue"
+        ],
+        "count": 35,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership436For7591.log",
+          "sha256": "0CDD3F8F073B278B61588F8D7F6631F238DA6C0B1FA666A15055AC4E44DDE7E0",
+          "sourceSha256": "B267D113A6DEC9E92DFD3880BEBE508C38258C23FFBB381552FED6D9887205EC"
+        }
+      },
+      {
+        "modules": [
+          "SourceResidueCoefficientPlaces",
+          "SourceDecompositionChartTransport",
+          "SourceModularDecompositionPlaceReduction"
+        ],
+        "count": 24,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership438For7591.log",
+          "sha256": "4A27A42C1A7A54842EDDF5A4654CB3C603DDAEF85C4F6381CD22A1CE9A839070",
+          "sourceSha256": "2FDB002F519403A2899D91105522AF6F80B3E13A72914F46A23608529754285A"
+        }
+      },
+      {
+        "modules": [
+          "SourceResidueCoefficientPlaceOrders",
+          "SourceResidueCoefficientDivisors",
+          "SourceResidueCoefficientPicard",
+          "SourceOriginalDecompositionDivisorReduction",
+          "SourceOriginalFrobeniusPicardReduction"
+        ],
+        "count": 27,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership439For7591.log",
+          "sha256": "4374E3A988AC85F0C301DE4EBF73D69DB6BC75BC15997DD7003857DFE7938B77",
+          "sourceSha256": "105FEE4F9EEC9AF6364BCD504ABAFAA96053AF58CA5CD06C54C455D90D4219EB"
+        }
+      },
+      {
+        "modules": [
+          "SourceLaurentFrobenius",
+          "SourceResidueGeometricFrobenius",
+          "SourceResidueGeometricFrobeniusPlaces"
+        ],
+        "count": 23,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership440For7591.log",
+          "sha256": "5892A702ACD3F67D40D762E83ADD92EDDD28438F6B466376BAAA5F7914023DBF",
+          "sourceSha256": "C30ED66B7AE374C0677C3E2CB409C3244D05A93AA4D44FB8EA9666EC598A1B9D"
+        }
+      },
+      {
+        "modules": [
+          "SourceResidueGeometricFrobeniusDivisors",
+          "SourceResidueGeometricFrobeniusPicard",
+          "SourceOriginalGeometricFrobeniusReduction"
+        ],
+        "count": 20,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership441For7591.log",
+          "sha256": "DB44725A5E0E1CE2458419D2A001084F9957BB2A8B28B9A6D688B7E4604DFF10",
+          "sourceSha256": "2ACA81F3EEB53FD7AE280E56D0D2291986035A8FAD84AAD185E917E84BD1CDEA"
+        }
+      },
+      {
+        "modules": [
+          "SourceHeckePrimeRootReduction",
+          "SourceHeckeLaurentProductReduction",
+          "SourceHeckeLaurentNormExtraction"
+        ],
+        "count": 18,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership442For7591.log",
+          "sha256": "DA6A047B2A582C5C14D1E692E94FA53C9D6F4D0DE42626DEB8D65D4DB0A8492C",
+          "sourceSha256": "6593E58DDDD1ADA903C19C62590E48889517B81EDE087E693647EA95E7149CC7"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalAtkinPrimePolynomial",
+          "SourceOriginalAtkinEmbedding"
+        ],
+        "count": 9,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership443For7591.log",
+          "sha256": "85B3394D8916317F732A396C26599C1984A279AB54B24085EF3FE4719D99C237",
+          "sourceSha256": "5D6120EA2F8D9AFC98EB50171B8ED7FFDF9FD143B81E169543D7CE9A99E78FB9"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalAdjacentRootUniqueness",
+          "SourceOriginalAtkinGeneratorImages",
+          "SourceOriginalAtkinInvolution"
+        ],
+        "count": 5,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership444For7591.log",
+          "sha256": "A5987B4E5B4B02D66CB1ECE50FBECA9DD28FBF70DD89106538F564802C2B12AF",
+          "sourceSha256": "5AE431E0BE17AFA13E6CAE1EDF77D498896F60321DFD3460A54861A5C7E130AF"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalTensorCoefficientMapR2",
+          "SourceOriginalTensorCoefficientEquivR2",
+          "SourceOriginalAtkinCoefficientExtensionR2"
+        ],
+        "count": 47,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership445For7591.log",
+          "sha256": "EF623998468BEC4DB7293B630D5FAC668C3FAA866727E445CFBA8CCB27E36088",
+          "sourceSha256": "967B23C40EA6039D19E5604C7583E4A08AB0F5C81FC4E85094E805DCB0C1A2E8"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalHeckePrimeDegree",
+          "SourceOriginalHeckeNormEmbeddings",
+          "SourceOriginalHeckeEmbeddingCensus",
+          "SourceOriginalHeckeNormProduct"
+        ],
+        "count": 21,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership446For7591.log",
+          "sha256": "46923C884E222C7E5DE1AEFD72497E39D63A0DB48566B1B526EE0201EA3C4BE6",
+          "sourceSha256": "F037DE3A0B4FC5FD514373996A8D4B6D6F3E2F33FD54C35D3A58F7BFDC49CAA7"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalHeckeNormReduction"
+        ],
+        "count": 1,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership447For7591.log",
+          "sha256": "E36400C5E0B4BC9822D8E7C70F91F822D4D00FC1028604DB111E70AA1C21EC9F",
+          "sourceSha256": "CF2016B549051C7398378E7730E000FD4D269D3C21F1FC068226B9FD9C528971"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalIntegralPrincipalDifference",
+          "SourceOriginalTorsionDivisorAgreement"
+        ],
+        "count": 6,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership448For7591.log",
+          "sha256": "DCC1C87B5D2F0EC92DAE5D9524918853E5316A6BF218BE0838D8841B662EBBD5",
+          "sourceSha256": "E9389505FB70BD29A9BAC594B9ED8D042083E2BFF7B00410C27204F33DCF5510"
+        }
+      },
+      {
+        "modules": [
+          "SourceResidueFrobeniusDivisorOperator"
+        ],
+        "count": 8,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership449For7591.log",
+          "sha256": "74D7474C3404443F9CF9C925D7E62CB6577BFF97ECD90151671E0AA691D4600E",
+          "sourceSha256": "779C8598F717171F0510E425E66878C18E9B989237EAB084B3FDC96020991059"
+        }
+      },
+      {
+        "modules": [
+          "SourceCurveCorrespondencePrincipalOrder",
+          "SourceOriginalHeckePrincipalNorm"
+        ],
+        "count": 3,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership450For7591.log",
+          "sha256": "34E4AA062B9621CAE5422F4FFCA7720D2C505E0922D3CB5E95DB538614BC2AA8",
+          "sourceSha256": "166A2726BD80AFDFAA674F2466EC47D9327EE75A3392C16A0F1AAB91D1E6D062"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalIntegralDivisorReduction",
+          "SourceOriginalHeckeIntegralAgreement"
+        ],
+        "count": 3,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership451For7591.log",
+          "sha256": "1CA61E076658ECE4DB688C75DEE99BA0588FAEEF3971C1178A47A17603120DDE",
+          "sourceSha256": "FA5261FFF1B5461E91349B987B4FBBDD6657784D2198C3BAF353427D6988A11D"
+        }
+      },
+      {
+        "modules": [
+          "SourceResidueFrobeniusPicardOperator"
+        ],
+        "count": 13,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership453For7591.log",
+          "sha256": "F03FD38FCCEFC2EE6DC1BDB97128062386590D77BCF3AF2E5F8F8797F18DB83F",
+          "sourceSha256": "3974EF480A9211C3CAB4B1D58C0B807EFE03901EE19A3217DBBD92043C79A5B6"
+        }
+      },
+      {
+        "modules": [
+          "SourceSpanningSpecializationQuadratic",
+          "SourceOriginalSpecializationQuadratic"
+        ],
+        "count": 2,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership459For7591.log",
+          "sha256": "E8279E6E67C08EB793307255ED799B2893FC8018594FC8ECDF81386DC09C550F",
+          "sourceSha256": "8B07053BEBD923B17273F0E36E96DD6224C3723ACBDA4D9DB2BDC6A44A51EB75"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalHeckeTorsionReduction",
+          "SourceOriginalPicardFrobeniusQuadratic",
+          "SourceOriginalTateFrobeniusQuadratic",
+          "SourceOriginalPrimitiveFrobeniusQuadraticRealization"
+        ],
+        "count": 10,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusScratchOwnership460For7591.log",
+          "sha256": "532F3CA4ECA2F96DBED21625198011D87397F852AA24E58F613567F3EFE347D9",
+          "sourceSha256": "A14E08AFB51D3B20C4FC803969800842539BF8B211C5659751A60D649F0BBD04"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceHeckeFrobeniusOwnership7591.log",
+      "sha256": "E8B5EF664AF71B4BA17FBDCEB3B5071BF1EEB5D4277B854B65C264FA8C354E15",
+      "sourceSha256": "7B1FCE66C9BF53AF1FB4B8B3899AA7AB662A7F516E56EC112631D04A2D9E675B"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-122305-446.log",
+      "sha256": "E3C0C0FB4DACE3EA6E1CF2742B4261561DD8FF852B837D8EEEA56A20BC684869"
+    },
+    "generatedNameInspectionEvidence": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\hecke-frobenius-generated-name-evidence-7591.json",
+      "sha256": "A0DD8FE242116244CCDF2E9A1B0AD29A2E3D5508BB55F9353F6B58CDBE839ED3"
+    },
+    "precedingComparisonProgram": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_hecke_frobenius_ownership_7591.py",
+      "sha256": "F321B24A5ACF8C9EED637637E6C312DD00A084EDF6C053E66D8A487A77AA2607",
+      "correction": "The initial program omitted loading its recorded generated-name evidence and referred to undefined generatedData. This successor loads and hash-checks that evidence before exact name-set comparison. No Lean source or previous evidence is changed."
+    }
+  },
+  "scratchToProductionCountReason": "All 275 distinct names from 275 exhaustive scratch checks are retained: 275 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "ownershipComparisonRepair": {
+    "precedingProgram": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_hecke_frobenius_ownership_7591.py",
+      "sha256": "F321B24A5ACF8C9EED637637E6C312DD00A084EDF6C053E66D8A487A77AA2607",
+      "correction": "The initial program omitted loading its recorded generated-name evidence and referred to undefined generatedData. This successor loads and hash-checks that evidence before exact name-set comparison. No Lean source or previous evidence is changed."
+    },
+    "comparisonProgram": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_hecke_frobenius_ownership_7591_r2.py",
+      "sha256": "B8AB37D112AF4DB83680988E832B107A9411EE9AF09711180F91F7FDAF9AB392"
+    },
+    "evidence": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\hecke-frobenius-generated-name-evidence-7591.json",
+      "sha256": "A0DD8FE242116244CCDF2E9A1B0AD29A2E3D5508BB55F9353F6B58CDBE839ED3"
+    },
+    "reason": "Bookkeeping-only successor; all mathematical sources, compiled objects and completed audit evidence are preserved."
+  },
+  "boundary": "The separate Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. The quadratic identity alone does not prove determinant or trace. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+}
+```
+
+## Production actual original Weil reciprocity and arithmetic torsion representatives pending full run - 24 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 7,637-module scope: all thirteen retained regressions, 49,919 exhaustive theorem checks, 22,677 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Pairing representative independence and descent, nondegeneracy, Hecke adjointness, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilDatumDependencyAudit3Production7637.log",
+      "sha256": "5EB5AAB5AAF31966A61B320A9983FCC65949A7A352F22FE995931EBFE730FA44",
+      "requiredProofValueEdges": 21,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_ne_zero",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.symm_pairing",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.arithmetic_pairing",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.addLeft_pairing"
+      ],
+      "sourceSha256": "366BC74A3E30A37F03D6399F782812F3058358B463A22581C918EEAC08D3FCC2"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNormEvaluationDependencyAudit12Production7637.log",
+      "sha256": "15652582CFEB6B4E264394AF2D7FBFCC5E7ADE64037EC777B24842C364E3ADB1",
+      "requiredProofValueEdges": 40,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalPlaceEval_normAlong_eq_finprod_fiber",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_eq_rationalEval",
+        "Dubon2026.SourceCurve.Place.rationalEval_algebraMap"
+      ],
+      "sourceSha256": "D71B02DD878BCFE7BE27B05101CB06469427BA127F201BD9F7A297E6E94905AE"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPullbackEvaluationDependencyAudit2Production7637.log",
+      "sha256": "38FA6839852F075516937C2969B03F185A086B120F2A2BF76327A1E5FC382278",
+      "requiredProofValueEdges": 8,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalDivisorEval_finitePullbackAlong"
+      ],
+      "sourceSha256": "394FFBF5892DBA55EF6570145FCE51EC9B2D0628AF93F4FCBF97C4FF6184493C"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPushforwardEvaluationDependencyAudit4Production7637.log",
+      "sha256": "F514B5BF82A10216288CAAF28B585B60E483D123E8EE5A53420FFF6719C1703E",
+      "requiredProofValueEdges": 12,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalDivisorEval_geometricPushforwardAlong"
+      ],
+      "sourceSha256": "AF7CBD77377B3056DC431970CCF75145B9632B26F518877CA94A14FE8BFE5E7E"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceRationalCoordinateReciprocityDependencyAudit11Production7637.log",
+      "sha256": "DC0FD703F41B0E665C9D80A68CAFD3E39BF6554250499CDC454E2B11EC79A5A7",
+      "requiredProofValueEdges": 48,
+      "consumers": [
+        "Dubon2026.SourceCurve.RationalFunction.coordinate_weil_reciprocity"
+      ],
+      "sourceSha256": "3FE762C768E533C8587C8CF775E6BC6E3186128C1EAF3648297E8377A6AE9EF3"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilReciprocityDependencyAudit7Production7637.log",
+      "sha256": "1D586CD135B55166F3C9FDA41E78B838DAFE57B7FCF68D9019DC74B9F5BAB981",
+      "requiredProofValueEdges": 29,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_weil_reciprocity"
+      ],
+      "sourceSha256": "3C083E76ECC3A1AAD003AECED0A47F4AA244C9B837BD3221C59E6843A9431751"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilTorsionValuesDependencyAudit1Production7637.log",
+      "sha256": "DCCB1E2FDBC5D332E3F0C3EFE4B178142A9D2ADB5B9CFA8E7C0543F114A48646",
+      "requiredProofValueEdges": 7,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_pow_eq_one"
+      ],
+      "sourceSha256": "409830634982E690708AB0EBB5902914762678C0CFBA7C67EFB40D5C82F84E44"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilRepresentativesDependencyAudit6Production7637.log",
+      "sha256": "F1D5B4E0A162932BE244D5098AE75E29CAF7F3874822FE613D44A18B193DC95E",
+      "requiredProofValueEdges": 15,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.exists_original_weil_representative"
+      ],
+      "sourceSha256": "BBC868E1D319D1897365F95F5FEB666B7398A821FFB8004EC556FBB4D6EBBDFB"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilProductionAudit7637.log",
+  "sha256": "E4EABABAB6D9F855A986325F2EAD0648BA2BDDC6F07DF2AE2A2E34A24B42FB7E",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-weil-reciprocity-production-build-7637.log",
+  "aggregateSha256": "279EBB031D8B3E53DA74A56A4545CA48BA9C4DD84A2774623AB9992AC62F8436",
+  "productionModules": 7637,
+  "incrementModules": 46,
+  "axiomChecks": 124,
+  "exhaustiveIncrementTheorems": 215,
+  "linterScopes": 46,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 219,
+  "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The actual original function fields, normalized place orders, residue evaluations, divisor maps and Picard quotient retain their definitions. No source contract is weakened.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 219,
+    "scratchDistinct": 217,
+    "generatedNameRenamings": {},
+    "productionFocused": 215,
+    "duplicateScratchNames": {
+      "Dubon2026.SourceFunctionField.originalDivisorEval.congr_simp": [
+        {
+          "scope": "SourceOriginalWeilScratchOwnership462For7637",
+          "module": "Dubon2026.SourceOriginalWeilDatum"
+        },
+        {
+          "scope": "SourceOriginalWeilScratchOwnership467For7637",
+          "module": "Dubon2026.SourceOriginalWeilReciprocity"
+        }
+      ],
+      "Dubon2026.SourceCurve.Place.rationalRegularEval.congr_simp": [
+        {
+          "scope": "SourceOriginalWeilScratchOwnership465For7637",
+          "module": "Dubon2026.SourceCurveEvaluationRestriction"
+        },
+        {
+          "scope": "SourceOriginalWeilScratchOwnership466For7637",
+          "module": "Dubon2026.SourceRationalPlaceEvaluation"
+        }
+      ]
+    },
+    "missingFromFocused": {
+      "Dubon2026.SourceFunctionField.originalPrincipalDivisor.congr_simp": [
+        {
+          "scope": "SourceOriginalWeilScratchOwnership467For7637",
+          "module": "Dubon2026.SourceOriginalConstantWeilReciprocity"
+        }
+      ],
+      "Dubon2026.SourceCurve.Place.restrict.congr_simp": [
+        {
+          "scope": "SourceOriginalWeilScratchOwnership465For7637",
+          "module": "Dubon2026.SourceCurveEvaluationRestriction"
+        }
+      ]
+    },
+    "missingFromFocusedAlreadyInPrevious": [
+      "Dubon2026.SourceCurve.Place.restrict.congr_simp",
+      "Dubon2026.SourceFunctionField.originalPrincipalDivisor.congr_simp"
+    ],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceOriginalWeilEvaluation",
+          "SourceOriginalWeilEvaluationGalois",
+          "SourceOriginalWeilDatum"
+        ],
+        "count": 41,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership462For7637.log",
+          "sha256": "63624509DA4FBF01B94824A6ED42E6DC78B40CADE988659188321871130110F0",
+          "sourceSha256": "D7D0212AAE917CEE871F46A5013C4659AA01411332E656191F982AEF92CD62B8"
+        }
+      },
+      {
+        "modules": [
+          "SourceResidueAlgebraNorm",
+          "SourceResidueAlgebraNormPi",
+          "SourceRamifiedResidueNorm",
+          "SourceCurveResidueNormBaseChange",
+          "SourceCurveResidueNormFactors",
+          "SourceCurveRationalEvaluation",
+          "SourceCurveRationalNormEvaluation",
+          "SourceCurveNormFiberEvaluation",
+          "SourceCurveFiberRegularIntegrality",
+          "SourceCurveRationalFunctionEvaluation",
+          "SourceCurveFieldNormEvaluation",
+          "SourceOriginalNormEvaluation"
+        ],
+        "count": 36,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership463For7637.log",
+          "sha256": "3B79B8DA9270E4CD91AC6CA4BA6891E835B0D6B987316147B916562A7D50CB0C",
+          "sourceSha256": "326017443F23F0B010D7E6013C338BD90F64E16874251B41DAE696821227D7DD"
+        }
+      },
+      {
+        "modules": [
+          "SourceCurvePullbackEvaluationProduct",
+          "SourceOriginalPullbackEvaluation"
+        ],
+        "count": 2,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership464For7637.log",
+          "sha256": "E2C000DCB2912CBEABE016BF3FB0C2A3C14FB901AB41B455B6D3256FDF9DB6B7",
+          "sourceSha256": "3FA732593E39B7A7F06510D741BA8C458F4D552312A3D7BB75B1659C3A0E6288"
+        }
+      },
+      {
+        "modules": [
+          "SourceCurveEvaluationRestriction",
+          "SourceOriginalEvaluationRestriction",
+          "SourceFiniteDivisorEvaluationPushforward",
+          "SourceOriginalPushforwardEvaluation"
+        ],
+        "count": 8,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership465For7637.log",
+          "sha256": "D6E916D660E2CA98C3BE7ECA2EBA642381B879E146574CC5D0FA3BD818A36047",
+          "sourceSha256": "C4D13FEA17449454B92EC7FE892FE1C3D7C6CC136F6101FE83097FD71553590C"
+        }
+      },
+      {
+        "modules": [
+          "SourceRationalInfinityPlace",
+          "SourceRationalPlaceClassification",
+          "SourceRationalPointPlaces",
+          "SourceRationalPointOrders",
+          "SourceRationalPlaceEvaluation",
+          "SourceCurveRationalResidueValues",
+          "SourceRationalInfinityEvaluation",
+          "SourceRationalRootDivisors",
+          "SourceRationalDivisorEvaluation",
+          "SourceRationalCoordinateReciprocity",
+          "SourceRationalCoordinateWeilReciprocity"
+        ],
+        "count": 81,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership466For7637.log",
+          "sha256": "7EAD1497A951AE35C53D9F82DC7BDB13932D92E9E14A9EFC8A67E1CE2145EE87",
+          "sourceSha256": "4F5B2A4708CAE8D9351150FC5389F5BE25C30D0B391C7342C838E6D99912826C"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalRationalCoordinate",
+          "SourceOriginalRationalNormEvaluation",
+          "SourceOriginalRationalDivisorEvaluation",
+          "SourceOriginalRationalPrincipalDivisors",
+          "SourceOriginalCoordinateWeilReciprocity",
+          "SourceOriginalConstantWeilReciprocity",
+          "SourceOriginalWeilReciprocity"
+        ],
+        "count": 20,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership467For7637.log",
+          "sha256": "C13DE1CFE0F908C69BB06F56190932204388C01278EEA249FF1796CBDEF428B2",
+          "sourceSha256": "BF284391AF927E209E893C17CBE6977779BFC0D9E52105EF9E018E9471463116"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalWeilTorsionValues"
+        ],
+        "count": 4,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership468For7637.log",
+          "sha256": "99AA70061402071412968670769A55CD084C71FC0644BA04A034A19B48953259",
+          "sourceSha256": "DDB33043EA1D7C966B0907F96248D09E346A87CC6294D453E2DA8E5134F40826"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalClosedPlaceSeparation",
+          "SourceOriginalClosedFiniteSeparation",
+          "SourceOriginalClosedPrescribedOrders",
+          "SourceOriginalClosedPicardMoving",
+          "SourceOriginalWeilClasses",
+          "SourceOriginalWeilRepresentatives"
+        ],
+        "count": 27,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership469For7637.log",
+          "sha256": "31CD1A2C4218804823C9807C5BC77974CAF18C428143F1DFEABF237684986081",
+          "sourceSha256": "7FED84BAEFD6362DB607F7CAB9D3A1A437D08914548A92BB10AB75B398AC40F0"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilOwnership7637.log",
+      "sha256": "5CFE5E75A9F7B138BD81BCD8EA230E24FFDD6D131E94E15F28CD69F027A2429C",
+      "sourceSha256": "96CFB4E6E8E16F93EE465A385A58FE0225624BA1FFC8E75DC1E18DB71E5F31E5"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-142442-365.log",
+      "sha256": "A34A9F97CAAC3A7C5D5782FB8B32FA3857358A3B288C13352482CD7D745F5079"
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 217 distinct names from 219 exhaustive scratch checks are retained: 215 in the production focused scope and 2 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Pairing representative independence and descent, nondegeneracy, Hecke adjointness, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes."
+}
+```
+
+## Verified actual original Weil reciprocity and arithmetic torsion representatives - 24 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 7,637-module scope: all thirteen retained regressions, 49,919 exhaustive theorem checks, 22,677 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Pairing representative independence and descent, nondegeneracy, Hecke adjointness, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes.
+
+```json
+{
+  "recordedUTC": "2026-10-25T00:23:14.299881+00:00",
+  "log": "logs/dubon-build-20261024-160017-952.log",
+  "sha256": "3DCC04011F0CF1745D31C916DA7F4C29AC9E051B0704D74A91C20E430EA37B47",
+  "bytes": 12705445,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 7637,
+  "projectTheorems": 49919,
+  "registeredConsumers": 22677,
+  "registeredConstructions": 2018,
+  "declarations": 30574,
+  "generated": 29384,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261024_155410.log",
+  "foundationSha256": "BF61F776375743625324D056137EE9848CFDD75388EA43018026D00F0593A9D4",
+  "countReconciliation": {
+    "previousTheorems": 49704,
+    "focusedTheorems": 215,
+    "sharedGeneratedNames": [],
+    "addedTheorems": 215,
+    "removedTheorems": [],
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilOwnership7637.log",
+    "ownershipSha256": "5CFE5E75A9F7B138BD81BCD8EA230E24FFDD6D131E94E15F28CD69F027A2429C"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 219,
+    "scratchDistinct": 217,
+    "generatedNameRenamings": {},
+    "productionFocused": 215,
+    "duplicateScratchNames": {
+      "Dubon2026.SourceFunctionField.originalDivisorEval.congr_simp": [
+        {
+          "scope": "SourceOriginalWeilScratchOwnership462For7637",
+          "module": "Dubon2026.SourceOriginalWeilDatum"
+        },
+        {
+          "scope": "SourceOriginalWeilScratchOwnership467For7637",
+          "module": "Dubon2026.SourceOriginalWeilReciprocity"
+        }
+      ],
+      "Dubon2026.SourceCurve.Place.rationalRegularEval.congr_simp": [
+        {
+          "scope": "SourceOriginalWeilScratchOwnership465For7637",
+          "module": "Dubon2026.SourceCurveEvaluationRestriction"
+        },
+        {
+          "scope": "SourceOriginalWeilScratchOwnership466For7637",
+          "module": "Dubon2026.SourceRationalPlaceEvaluation"
+        }
+      ]
+    },
+    "missingFromFocused": {
+      "Dubon2026.SourceFunctionField.originalPrincipalDivisor.congr_simp": [
+        {
+          "scope": "SourceOriginalWeilScratchOwnership467For7637",
+          "module": "Dubon2026.SourceOriginalConstantWeilReciprocity"
+        }
+      ],
+      "Dubon2026.SourceCurve.Place.restrict.congr_simp": [
+        {
+          "scope": "SourceOriginalWeilScratchOwnership465For7637",
+          "module": "Dubon2026.SourceCurveEvaluationRestriction"
+        }
+      ]
+    },
+    "missingFromFocusedAlreadyInPrevious": [
+      "Dubon2026.SourceCurve.Place.restrict.congr_simp",
+      "Dubon2026.SourceFunctionField.originalPrincipalDivisor.congr_simp"
+    ],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceOriginalWeilEvaluation",
+          "SourceOriginalWeilEvaluationGalois",
+          "SourceOriginalWeilDatum"
+        ],
+        "count": 41,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership462For7637.log",
+          "sha256": "63624509DA4FBF01B94824A6ED42E6DC78B40CADE988659188321871130110F0",
+          "sourceSha256": "D7D0212AAE917CEE871F46A5013C4659AA01411332E656191F982AEF92CD62B8"
+        }
+      },
+      {
+        "modules": [
+          "SourceResidueAlgebraNorm",
+          "SourceResidueAlgebraNormPi",
+          "SourceRamifiedResidueNorm",
+          "SourceCurveResidueNormBaseChange",
+          "SourceCurveResidueNormFactors",
+          "SourceCurveRationalEvaluation",
+          "SourceCurveRationalNormEvaluation",
+          "SourceCurveNormFiberEvaluation",
+          "SourceCurveFiberRegularIntegrality",
+          "SourceCurveRationalFunctionEvaluation",
+          "SourceCurveFieldNormEvaluation",
+          "SourceOriginalNormEvaluation"
+        ],
+        "count": 36,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership463For7637.log",
+          "sha256": "3B79B8DA9270E4CD91AC6CA4BA6891E835B0D6B987316147B916562A7D50CB0C",
+          "sourceSha256": "326017443F23F0B010D7E6013C338BD90F64E16874251B41DAE696821227D7DD"
+        }
+      },
+      {
+        "modules": [
+          "SourceCurvePullbackEvaluationProduct",
+          "SourceOriginalPullbackEvaluation"
+        ],
+        "count": 2,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership464For7637.log",
+          "sha256": "E2C000DCB2912CBEABE016BF3FB0C2A3C14FB901AB41B455B6D3256FDF9DB6B7",
+          "sourceSha256": "3FA732593E39B7A7F06510D741BA8C458F4D552312A3D7BB75B1659C3A0E6288"
+        }
+      },
+      {
+        "modules": [
+          "SourceCurveEvaluationRestriction",
+          "SourceOriginalEvaluationRestriction",
+          "SourceFiniteDivisorEvaluationPushforward",
+          "SourceOriginalPushforwardEvaluation"
+        ],
+        "count": 8,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership465For7637.log",
+          "sha256": "D6E916D660E2CA98C3BE7ECA2EBA642381B879E146574CC5D0FA3BD818A36047",
+          "sourceSha256": "C4D13FEA17449454B92EC7FE892FE1C3D7C6CC136F6101FE83097FD71553590C"
+        }
+      },
+      {
+        "modules": [
+          "SourceRationalInfinityPlace",
+          "SourceRationalPlaceClassification",
+          "SourceRationalPointPlaces",
+          "SourceRationalPointOrders",
+          "SourceRationalPlaceEvaluation",
+          "SourceCurveRationalResidueValues",
+          "SourceRationalInfinityEvaluation",
+          "SourceRationalRootDivisors",
+          "SourceRationalDivisorEvaluation",
+          "SourceRationalCoordinateReciprocity",
+          "SourceRationalCoordinateWeilReciprocity"
+        ],
+        "count": 81,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership466For7637.log",
+          "sha256": "7EAD1497A951AE35C53D9F82DC7BDB13932D92E9E14A9EFC8A67E1CE2145EE87",
+          "sourceSha256": "4F5B2A4708CAE8D9351150FC5389F5BE25C30D0B391C7342C838E6D99912826C"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalRationalCoordinate",
+          "SourceOriginalRationalNormEvaluation",
+          "SourceOriginalRationalDivisorEvaluation",
+          "SourceOriginalRationalPrincipalDivisors",
+          "SourceOriginalCoordinateWeilReciprocity",
+          "SourceOriginalConstantWeilReciprocity",
+          "SourceOriginalWeilReciprocity"
+        ],
+        "count": 20,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership467For7637.log",
+          "sha256": "C13DE1CFE0F908C69BB06F56190932204388C01278EEA249FF1796CBDEF428B2",
+          "sourceSha256": "BF284391AF927E209E893C17CBE6977779BFC0D9E52105EF9E018E9471463116"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalWeilTorsionValues"
+        ],
+        "count": 4,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership468For7637.log",
+          "sha256": "99AA70061402071412968670769A55CD084C71FC0644BA04A034A19B48953259",
+          "sourceSha256": "DDB33043EA1D7C966B0907F96248D09E346A87CC6294D453E2DA8E5134F40826"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalClosedPlaceSeparation",
+          "SourceOriginalClosedFiniteSeparation",
+          "SourceOriginalClosedPrescribedOrders",
+          "SourceOriginalClosedPicardMoving",
+          "SourceOriginalWeilClasses",
+          "SourceOriginalWeilRepresentatives"
+        ],
+        "count": 27,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilScratchOwnership469For7637.log",
+          "sha256": "31CD1A2C4218804823C9807C5BC77974CAF18C428143F1DFEABF237684986081",
+          "sourceSha256": "7FED84BAEFD6362DB607F7CAB9D3A1A437D08914548A92BB10AB75B398AC40F0"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilOwnership7637.log",
+      "sha256": "5CFE5E75A9F7B138BD81BCD8EA230E24FFDD6D131E94E15F28CD69F027A2429C",
+      "sourceSha256": "96CFB4E6E8E16F93EE465A385A58FE0225624BA1FFC8E75DC1E18DB71E5F31E5"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-142442-365.log",
+      "sha256": "A34A9F97CAAC3A7C5D5782FB8B32FA3857358A3B288C13352482CD7D745F5079"
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 217 distinct names from 219 exhaustive scratch checks are retained: 215 in the production focused scope and 2 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Pairing representative independence and descent, nondegeneracy, Hecke adjointness, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation. DUB-17--20 OPEN; 16/20. No acceptance gate closes."
+}
+```
+
+## Production actual original arithmetic Tate pairing and cyclotomic multiplier pending full run - 24 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 7,673-module scope: all thirteen retained regressions, 50,087 exhaustive theorem checks, 22,756 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Nondegeneracy and the required nonzero Hecke-component pairing remain unproved. The determinant-to-pairing identity on that component, actual Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. Scalar-multiplier uniqueness explicitly assumes a nonzero pairing value and does not discharge that assumption. DUB-17--20 OPEN; 16/20. No acceptance gate closes.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilDescentDependencyAudit7Production7673.log",
+      "sha256": "E7A26602ACC29416CCDC248A6105D7FAC4D82DA38242B67FEA5CC3C375BC0A68",
+      "requiredProofValueEdges": 23,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalWeilPairing_symm"
+      ],
+      "sourceSha256": "5A23DA5E1C9A96526D8D9DB4C5557DC1A8E421E7360536E93C02C20745FFEDF3"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilLawsDependencyAudit4R2Production7673.log",
+      "sha256": "4E155A622C669317F2F79F0EB02CC11F158D69B92C5BCA8B3439E57173EF9B51",
+      "requiredProofValueEdges": 24,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalWeilBilinear",
+        "Dubon2026.SourceFunctionField.originalWeilBilinear_self_of_odd",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_originalGalois"
+      ],
+      "sourceSha256": "0E29F9BDF93B847D438BA09085AA370BFD5BA2DA9F5685CEBA353C01376445C3"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilAdjunctionDependencyAudit10Production7673.log",
+      "sha256": "0FC3772248C7EB6F06EA0CA54F704AD555B95D7D3A7D8717AE81E23BDD32715D",
+      "requiredProofValueEdges": 30,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalWeilPairing_correspondence_adjunction"
+      ],
+      "sourceSha256": "58A0B8E430E83C61F20524A6E1D0C3D84C717749B04B3CD8BB6948FDC4EEEC51"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilHeckeDependencyAudit5Production7673.log",
+      "sha256": "9FE447C694D864A151825A8331877482E908042FF55AF127E08F47460AC10F9E",
+      "requiredProofValueEdges": 25,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalWeilPairing_tateHecke_self_adjoint",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_tateHecke_coordinate"
+      ],
+      "sourceSha256": "F641ADE04934A55672645782EA0589A430FA68E77954000DB847CD80865D5FDD"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilDependencyAudit7Production7673.log",
+      "sha256": "C2E2283C5C3DB5E94A74FA67C6AA145A64848EC011693BCEABFC62C35AC56F18",
+      "requiredProofValueEdges": 33,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalTateWeilBilinear",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_galois",
+        "Dubon2026.SourceFunctionField.originalTateWeilBilinear_self_of_odd",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_hecke_self_adjoint",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_zero_left",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_zero_right",
+        "Dubon2026.SourceFunctionField.originalTateRootsGalois"
+      ],
+      "sourceSha256": "90FDAF167ACD1026A48D77A0807F400B766201D7A730A63A72E96756B87BAF3F"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateCyclotomicDependencyAudit3Production7673.log",
+      "sha256": "F64AF459022FB64158436C95C38DAC8B3CAEBBAAF3E4D3BC8ADFEB22ED72D4E6",
+      "requiredProofValueEdges": 14,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_cyclotomic_multiplier_unique"
+      ],
+      "sourceSha256": "69343D160C7AF564812FD62435C4DA29BE6F9FAD18D9D9AF5A06F304827F2846"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilProductionAudit7673.log",
+  "sha256": "B9253D2189DCE1E8B045ECEFACB1F3D79C7682DE8B9843DF8EC83C46B452C508",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-tate-weil-production-build-7673.log",
+  "aggregateSha256": "08806C4BB5CAE63FD2B30EC98B171EB57D669ABAE6EA779176C7436676E36146",
+  "productionModules": 7673,
+  "incrementModules": 36,
+  "axiomChecks": 94,
+  "exhaustiveIncrementTheorems": 169,
+  "linterScopes": 36,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 169,
+  "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The actual original function fields, normalized place orders, residue evaluations, divisor maps and Picard quotient retain their definitions. No source contract is weakened.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 169,
+    "scratchDistinct": 169,
+    "generatedNameRenamings": {},
+    "productionFocused": 169,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceOriginalWeilFunctionChoice",
+          "SourceOriginalWeilSameDivisors",
+          "SourceOriginalWeilEvaluationPowers",
+          "SourceOriginalWeilPrincipalShift",
+          "SourceOriginalWeilPrincipalInvariance",
+          "SourceOriginalWeilClassInvariance",
+          "SourceOriginalWeilPairingDescent"
+        ],
+        "count": 21,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership471For7673.log",
+          "sha256": "4A21F60F134C580A01149E4280058EDEFAD6576137D6CE3A6C75CE4EEDA595CB",
+          "sourceSha256": "50AF48E3823377A6388E6D78A1FCDBE0DD5C23369DBCD226856EBE1E82BF186A"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalWeilCommonRepresentatives",
+          "SourceOriginalWeilBilinearity",
+          "SourceOriginalWeilAlternation",
+          "SourceOriginalWeilArithmetic"
+        ],
+        "count": 25,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership472For7673.log",
+          "sha256": "43945007E89C2D387EBE011A6206BF810F7117BB78A9351C6BF27AD9D9A88273",
+          "sourceSha256": "7E933FAE58EB20ED6BDBFEC03936873BB808EF0C32F84BF093C8C68106C719B3"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalWeilNormAdjunction",
+          "SourceCurvePullbackPushforwardDisjoint",
+          "SourceOriginalWeilNormDatum",
+          "SourceOriginalPicardFiniteMaps",
+          "SourceOriginalWeilPullbackDatum",
+          "SourceOriginalWeilMapClasses",
+          "SourceOriginalWeilAdjunctionWitness",
+          "SourceOriginalWeilAdjunctionRepresentatives",
+          "SourceOriginalWeilAdjunction",
+          "SourceOriginalWeilCorrespondenceAdjunction"
+        ],
+        "count": 42,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership473For7673.log",
+          "sha256": "485D40AB32B591D9D5E3C6D35FF20BF66C44FF715D08F762051BC602832E036E",
+          "sourceSha256": "88CEC9DA824800AC358A0A6A360D294CBE66010E82DE0F04F536092933DE91C4"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalWeilHeckeTranspose",
+          "SourceOriginalWeilTateHeckeCoordinate",
+          "SourceCurveCorrespondenceSwap",
+          "SourceOriginalWeilHeckeSelfAdjoint",
+          "SourceOriginalWeilTateHeckeSelfAdjoint"
+        ],
+        "count": 18,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership474For7673.log",
+          "sha256": "66FC90910815EE6805320FF024C082EFAD677125BF4453E978E78562D8044CC9",
+          "sourceSha256": "01454D7516F47A7A4C0C4630C9C100B520AF1EDF4A0AED6A68C7FA35F96B1EB3"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalWeilLevelDatum",
+          "SourceOriginalWeilLevelCompatibility",
+          "SourceOriginalWeilTateCompatibility",
+          "SourceOriginalTateWeilPairing",
+          "SourceOriginalTateWeilLinearity",
+          "SourceOriginalTateWeilArithmetic",
+          "SourceOriginalTateWeilHecke"
+        ],
+        "count": 53,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership475For7673.log",
+          "sha256": "82901FC88A2DF6C29C5956724F9F3A54FED540DA7FFB524FCEEF48D00E13D378",
+          "sourceSha256": "459DC4737843048360EDD0F130CC10A72271CFFAF576ABDE8FC49138287BC7C0"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalTateWeilCyclotomic",
+          "SourceTateScalarFaithfulness",
+          "SourceOriginalTateWeilMultiplier"
+        ],
+        "count": 10,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership476For7673.log",
+          "sha256": "B24FED2A246C89A507122B051491740B2171B1877A6611D3F9C2E8146742ABE7",
+          "sourceSha256": "02D6EF8F03E9C73EDDB02A1402E9C326F08F136F340051EAD7DF4F90B6DE4EDA"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilOwnership7673.log",
+      "sha256": "027D897B2E5AFDCA19D66316C8C3A52F66DD507BECABCAF54F941E8AB1CBA29E",
+      "sourceSha256": "6244F8D89D3220E16D01717D4BA0BEC09A5E7C64A59449E8AD1DFBEA32476975"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-160017-952.log",
+      "sha256": "3DCC04011F0CF1745D31C916DA7F4C29AC9E051B0704D74A91C20E430EA37B47"
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 169 distinct names from 169 exhaustive scratch checks are retained: 169 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Nondegeneracy and the required nonzero Hecke-component pairing remain unproved. The determinant-to-pairing identity on that component, actual Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. Scalar-multiplier uniqueness explicitly assumes a nonzero pairing value and does not discharge that assumption. DUB-17--20 OPEN; 16/20. No acceptance gate closes."
+}
+```
+
+## Verified actual original arithmetic Tate pairing and cyclotomic multiplier - 24 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 7,673-module scope: all thirteen retained regressions, 50,087 exhaustive theorem checks, 22,756 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Nondegeneracy and the required nonzero Hecke-component pairing remain unproved. The determinant-to-pairing identity on that component, actual Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. Scalar-multiplier uniqueness explicitly assumes a nonzero pairing value and does not discharge that assumption. DUB-17--20 OPEN; 16/20. No acceptance gate closes.
+
+```json
+{
+  "recordedUTC": "2026-10-25T02:01:03.880441+00:00",
+  "log": "logs/dubon-build-20261024-173822-568.log",
+  "sha256": "3D8FCDAAE86D3E4E5261E46C6532F5B732F0B688D32C1B7C8D0148BCB7F7465F",
+  "bytes": 12753212,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 7673,
+  "projectTheorems": 50087,
+  "registeredConsumers": 22756,
+  "registeredConstructions": 2033,
+  "declarations": 30668,
+  "generated": 29501,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261024_173240.log",
+  "foundationSha256": "057D8A65174642F4E2961164790DA8920DC1F195E298CA20917540484CE2C2C9",
+  "countReconciliation": {
+    "previousTheorems": 49919,
+    "focusedTheorems": 169,
+    "sharedGeneratedNames": [
+      "Dubon2026.SourceCurve.Place.ramificationAlong.eq_1"
+    ],
+    "addedTheorems": 168,
+    "removedTheorems": [],
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilOwnership7673.log",
+    "ownershipSha256": "027D897B2E5AFDCA19D66316C8C3A52F66DD507BECABCAF54F941E8AB1CBA29E"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 169,
+    "scratchDistinct": 169,
+    "generatedNameRenamings": {},
+    "productionFocused": 169,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceOriginalWeilFunctionChoice",
+          "SourceOriginalWeilSameDivisors",
+          "SourceOriginalWeilEvaluationPowers",
+          "SourceOriginalWeilPrincipalShift",
+          "SourceOriginalWeilPrincipalInvariance",
+          "SourceOriginalWeilClassInvariance",
+          "SourceOriginalWeilPairingDescent"
+        ],
+        "count": 21,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership471For7673.log",
+          "sha256": "4A21F60F134C580A01149E4280058EDEFAD6576137D6CE3A6C75CE4EEDA595CB",
+          "sourceSha256": "50AF48E3823377A6388E6D78A1FCDBE0DD5C23369DBCD226856EBE1E82BF186A"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalWeilCommonRepresentatives",
+          "SourceOriginalWeilBilinearity",
+          "SourceOriginalWeilAlternation",
+          "SourceOriginalWeilArithmetic"
+        ],
+        "count": 25,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership472For7673.log",
+          "sha256": "43945007E89C2D387EBE011A6206BF810F7117BB78A9351C6BF27AD9D9A88273",
+          "sourceSha256": "7E933FAE58EB20ED6BDBFEC03936873BB808EF0C32F84BF093C8C68106C719B3"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalWeilNormAdjunction",
+          "SourceCurvePullbackPushforwardDisjoint",
+          "SourceOriginalWeilNormDatum",
+          "SourceOriginalPicardFiniteMaps",
+          "SourceOriginalWeilPullbackDatum",
+          "SourceOriginalWeilMapClasses",
+          "SourceOriginalWeilAdjunctionWitness",
+          "SourceOriginalWeilAdjunctionRepresentatives",
+          "SourceOriginalWeilAdjunction",
+          "SourceOriginalWeilCorrespondenceAdjunction"
+        ],
+        "count": 42,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership473For7673.log",
+          "sha256": "485D40AB32B591D9D5E3C6D35FF20BF66C44FF715D08F762051BC602832E036E",
+          "sourceSha256": "88CEC9DA824800AC358A0A6A360D294CBE66010E82DE0F04F536092933DE91C4"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalWeilHeckeTranspose",
+          "SourceOriginalWeilTateHeckeCoordinate",
+          "SourceCurveCorrespondenceSwap",
+          "SourceOriginalWeilHeckeSelfAdjoint",
+          "SourceOriginalWeilTateHeckeSelfAdjoint"
+        ],
+        "count": 18,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership474For7673.log",
+          "sha256": "66FC90910815EE6805320FF024C082EFAD677125BF4453E978E78562D8044CC9",
+          "sourceSha256": "01454D7516F47A7A4C0C4630C9C100B520AF1EDF4A0AED6A68C7FA35F96B1EB3"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalWeilLevelDatum",
+          "SourceOriginalWeilLevelCompatibility",
+          "SourceOriginalWeilTateCompatibility",
+          "SourceOriginalTateWeilPairing",
+          "SourceOriginalTateWeilLinearity",
+          "SourceOriginalTateWeilArithmetic",
+          "SourceOriginalTateWeilHecke"
+        ],
+        "count": 53,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership475For7673.log",
+          "sha256": "82901FC88A2DF6C29C5956724F9F3A54FED540DA7FFB524FCEEF48D00E13D378",
+          "sourceSha256": "459DC4737843048360EDD0F130CC10A72271CFFAF576ABDE8FC49138287BC7C0"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalTateWeilCyclotomic",
+          "SourceTateScalarFaithfulness",
+          "SourceOriginalTateWeilMultiplier"
+        ],
+        "count": 10,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership476For7673.log",
+          "sha256": "B24FED2A246C89A507122B051491740B2171B1877A6611D3F9C2E8146742ABE7",
+          "sourceSha256": "02D6EF8F03E9C73EDDB02A1402E9C326F08F136F340051EAD7DF4F90B6DE4EDA"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilOwnership7673.log",
+      "sha256": "027D897B2E5AFDCA19D66316C8C3A52F66DD507BECABCAF54F941E8AB1CBA29E",
+      "sourceSha256": "6244F8D89D3220E16D01717D4BA0BEC09A5E7C64A59449E8AD1DFBEA32476975"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-160017-952.log",
+      "sha256": "3DCC04011F0CF1745D31C916DA7F4C29AC9E051B0704D74A91C20E430EA37B47"
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 169 distinct names from 169 exhaustive scratch checks are retained: 169 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Nondegeneracy and the required nonzero Hecke-component pairing remain unproved. The determinant-to-pairing identity on that component, actual Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. Scalar-multiplier uniqueness explicitly assumes a nonzero pairing value and does not discharge that assumption. DUB-17--20 OPEN; 16/20. No acceptance gate closes."
 }
 ```

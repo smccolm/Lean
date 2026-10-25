@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "modular-form concentration -> actual residual Galois association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Weil pairing -> original Weil reciprocity -> actual finite rational coordinate and norm transfer -> nth-root-of-unity values of actual original divisorial representatives",
+  "precedingScratchReceipts": {
+    "source-original-weil-reciprocity-7-scratch-receipt.json": "7E169C1DDEE4A0AB5C9DEA177E63EA8BF609B03DF7FE0857AA3434EEEE521F2F"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalUniformizerFinite.lean",
+      "sha256": "AC6FB240D25BC98E61AF69BFD213175AD1CD82ACB081EA3FD941D43DBE318C66"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrincipalDivisors.lean",
+      "sha256": "231062B499795FAFA62040712A05023394D290B23EE2D0ECFA737A0BEA072832"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveNormFiber.lean",
+      "sha256": "E520CCC04C216018AE815938DD60D5ED27E8AB5960C33B0BACB95C442FF245DB"
+    }
+  ],
+  "routeAdjustment": "Apply the newly proved original reciprocity to the actual two functions. Reuse native Finsupp support containment and finite products to identify evaluation on n times a divisor with the nth power. No roots-of-unity target or reciprocity is assumed.",
+  "discharged": "The literal original Weil ratio has nth power one on actual disjoint n-torsion divisor/function representatives. Actual original reciprocity is a proved dependency, not a premise. Representative independence, Picard-torsion descent, nondegeneracy, Hecke adjointness, determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "remaining": "Descend the actual ratio through divisor representatives. Reuse original_lSpace_zero_eq_range for global units and existing prescribed-order/finite-place-indicator machinery for moving representatives. Existing pair separation over complex constants has a direct all-closed-constants proof with the already proved original residue fields; implement only that required extension. Nondegeneracy and Hecke adjointness then remain. Scratch only; production promotion and assembled verification pending. No additional acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-weil-torsion-values-route-468.json",
+    "sha256": "C8B9B4BF267A42DA55B9A1BDC8CCFA71A45945B890171917E20058447B33C475",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "modular-form concentration -> actual residual Galois association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Weil pairing -> original Weil reciprocity -> actual finite rational coordinate and norm transfer -> nth-root-of-unity values of actual original divisorial representatives",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFiniteCoordinateHom.lean",
+          "sha256": "610917D767E662F56B65EA8C49C4A697E186DCF9C177B13E419CC46EC147DA6F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalUniformizerFinite.lean",
+          "sha256": "AC6FB240D25BC98E61AF69BFD213175AD1CD82ACB081EA3FD941D43DBE318C66"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveCorrespondencePlaces.lean",
+          "sha256": "917F20E813C1974C7AB133968AF6EC073A5E9D4139589621E29F6F731C157FF1"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveCorrespondenceRamification.lean",
+          "sha256": "62AB21C26EEF5D4F9A246B5CB3E39A49AEE5497D5DB5D5885CF11B3B95A67234"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveNormFiber.lean",
+          "sha256": "E520CCC04C216018AE815938DD60D5ED27E8AB5960C33B0BACB95C442FF245DB"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrincipalDivisors.lean",
+          "sha256": "231062B499795FAFA62040712A05023394D290B23EE2D0ECFA737A0BEA072832"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalResidueFinite.lean",
+          "sha256": "364140071ED84A644BBC5C9710EA2AA815971C37665343EBAB875C4C84BD51DD"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\AlgebraicClosure.lean",
+          "sha256": "F5D37B376CFE39B3B7100BED198865AA0E16D5576EA21D6008D369E88089E1A7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_weilReciprocity.lean.txt",
+          "sha256": "176098D3873DAB7441142BB3D28364CDBB8F60B29A8F9200FB6049D4A8769B0D"
+        }
+      ],
+      "selectedRoute": "Apply the newly proved original reciprocity to the actual two functions. Reuse native Finsupp support containment and finite products to identify evaluation on n times a divisor with the nth power. No roots-of-unity target or reciprocity is assumed.",
+      "scopeDecision": "Four directly consumed computation and power theorems; no new abstract pairing or quotient data is introduced.",
+      "discharged": "The literal original Weil ratio has nth power one on actual disjoint n-torsion divisor/function representatives. Actual original reciprocity is a proved dependency, not a premise. Representative independence, Picard-torsion descent, nondegeneracy, Hecke adjointness, determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "remaining": "Descend the actual ratio through divisor representatives. Reuse original_lSpace_zero_eq_range for global units and existing prescribed-order/finite-place-indicator machinery for moving representatives. Existing pair separation over complex constants has a direct all-closed-constants proof with the already proved original residue fields; implement only that required extension. Nondegeneracy and Hecke adjointness then remain.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. No additional acceptance gate closes. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

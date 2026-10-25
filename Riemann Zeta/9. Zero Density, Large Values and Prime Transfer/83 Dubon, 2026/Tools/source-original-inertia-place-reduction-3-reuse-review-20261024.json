@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original residual association -> inertia on original Picard classes -> original arithmetic place action commutes with modular reduction -> transport the existing original places to the equal coefficient field and preserve chart conditions",
+  "precedingScratchReceipts": {
+    "source-modular-reduction-charts-3-scratch-receipt.json": "33FE06F7EF8015D34826E15A619044B3B70621A95C39739CC5E6B1361C3695AB"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalArithmeticPlaces.lean",
+      "sha256": "E03749EB31ACF9CB30B4B7CF3D2AA3EC7119C2068D3BF2B3C62EB5F75F8A3035"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePlaceTransport.lean",
+      "sha256": "8E5124CBDFDEB8F3C8343B5DC5650735F428B5F9BA9FAF8ACAE2F033DE0A3439"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaGaussAction.lean",
+      "sha256": "06C2925649E295356F1275B0A09B4B9862331B3DFAA9C589451533E8E3EBF967"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticIntegralCharts.lean",
+      "sha256": "51BEB42F07A1D14F0B28937936BABF4A4F87078A48B01795CAAD48C51D737878"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularConstantReductionCharts.lean",
+      "sha256": "2E9A3A15845DB4ECF1667DA04E43F883D69C720354AA5D7C65641D56E9768A40"
+    }
+  ],
+  "routeAdjustment": "Use the identity-on-Laurent-series algebra equivalence and native place transport, keeping the original arithmetic action literal. Derive nonunit and chart transport using the actual coefficient action.",
+  "discharged": "The same actual modular constant reduction is invariant under native arithmetic inertia acting on the original modular places, and retains genus preservation and injectivity on every residue-invertible Picard torsion subgroup. The literal field identification, original place action, constant residue identity and both integral-chart comparisons are derived. The inertia subgroup is the exact native image used by the frozen source.",
+  "remaining": "Descent to the original Picard action and Tate torsion, the Frobenius relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-coefficient-place-route-432.json",
+    "sha256": "720C8817F490EBEE0D2C55B85759FA771E8537EC1E6D824358DA0B9F295FBB92",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original residual association -> inertia on original Picard classes -> original arithmetic place action commutes with modular reduction -> transport the existing original places to the equal coefficient field and preserve chart conditions",
+      "reuseChecked": [
+        "original_field_eq_coefficient_field identifies the literal Laurent-series fields. SourceOriginalArithmeticPlaces already constructs the actual arithmetic place action. SourceCurvePlaceTransport.placeEquiv transports genuine places along the constant-preserving field identification.",
+        "Mathlib ValuationSubring.mem_nonunits_iff_or reduces nonunit transport to field membership and inversion; new discrete-order or valuation foundations are unnecessary.",
+        "Scopes 429 and 430 supply actual residue invariance and preservation of both integral charts."
+      ],
+      "selectedRoute": "Use the identity-on-Laurent-series algebra equivalence and native place transport, keeping the original arithmetic action literal. Derive nonunit and chart transport using the actual coefficient action.",
+      "assumptionsToDischarge": "The original action on a place corresponds to inverse coefficient action on its functions, including zero and every chart function. Native inertia then preserves the actual chart reduction specification.",
+      "boundary": "Reduction-place uniqueness must yield invariance and then descend to original Picard/Tate torsion. Frobenius, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

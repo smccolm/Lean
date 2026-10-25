@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "modular concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Picard Weil pairing -> bilinearity, odd-order alternation and arithmetic equivariance",
+  "precedingScratchReceipts": {
+    "source-original-weil-descent-7-scratch-receipt.json": "085C7FF7FE6C61B4D1622668C4B2120FE0ABC541DCF7EB841D6842744D322A3D"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTorsionGalois.lean",
+      "sha256": "31AED0A847D3C17E10D54B3D094DC31327B9157E8B2B2B4F03C1870CDD09ACD9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalArithmeticPicard.lean",
+      "sha256": "4F41EFC799472312C08F6D9A33E58A55AC68FAC2CD3ED3EE95EBD0DDB313972E"
+    }
+  ],
+  "routeAdjustment": "Construct common second representatives using the existing moving theorem and reuse the literal addLeft formula. Derive both zero laws by group cancellation instead of constructing additional zero data. Odd-order alternation follows from skew symmetry and actual nth-root membership. The existing actual arithmetic Picard and torsion Galois representations supply the action; no second Galois representation is introduced.",
+  "discharged": "The actual root-valued original Picard pairing is additive in both arguments, is alternating for odd n, and is equivariant for every coefficient automorphism and for the existing Qbar torsion Galois representation. Common representatives and all action compatibility are proved.",
+  "remaining": "Even-order alternation is not claimed here. Nondegeneracy, correspondence/Hecke adjointness, Tate compatibility, determinant, residual association, automorphy and all-weight continuation remain required; the full source contract is unchanged. Scratch only; production promotion and assembled verification pending. No acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-weil-laws-route-472.json",
+    "sha256": "11B5F13F476134E7BF53088CFDBB912AB9C43336C39791FE4E0B7B970E308DB0",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "modular concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Picard Weil pairing -> bilinearity, odd-order alternation and arithmetic equivariance",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTorsionGalois.lean",
+          "sha256": "31AED0A847D3C17E10D54B3D094DC31327B9157E8B2B2B4F03C1870CDD09ACD9"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalArithmeticPicard.lean",
+          "sha256": "4F41EFC799472312C08F6D9A33E58A55AC68FAC2CD3ED3EE95EBD0DDB313972E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilDatum.lean",
+          "sha256": "AEFB6BC69E35E909BD3A736D3E459F7442ED7AE87EB561FD5EEAA87D1214E839"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilPairingDescent.lean",
+          "sha256": "37B3D5C896220CA31CE2595BFF29B69566B2E130F9F03C8BDB115E8571B51C17"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\Definitions\\Def_AlgebraicCurve_FunctionFieldWeilPairingDivisorial.lean.txt",
+          "sha256": "16E56C9DF83D1877080A51A7329550F52B4C4433362AC2BA6E8882C64A1EEA2B"
+        }
+      ],
+      "selectedRoute": "Construct common second representatives using the existing moving theorem and reuse the literal addLeft formula. Derive both zero laws by group cancellation instead of constructing additional zero data. Odd-order alternation follows from skew symmetry and actual nth-root membership. The existing actual arithmetic Picard and torsion Galois representations supply the action; no second Galois representation is introduced.",
+      "discharged": "The actual root-valued original Picard pairing is additive in both arguments, is alternating for odd n, and is equivariant for every coefficient automorphism and for the existing Qbar torsion Galois representation. Common representatives and all action compatibility are proved.",
+      "remaining": "Even-order alternation is not claimed here. Nondegeneracy, correspondence/Hecke adjointness, Tate compatibility, determinant, residual association, automorphy and all-weight continuation remain required; the full source contract is unchanged.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. No acceptance gate closes. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "dependencyAuditRepair": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-original-weil-laws-dependency-repair-472.json",
+    "sha256": "6D0C2BAE3A67DF491C592EBD685CB854961A8DEC5948D41CA30880AF3FA39583",
+    "record": {
+      "previousAudit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilLawsDependencyAudit4.lean",
+      "previousSha256": "CAF43914D196CABC3CC2E192B777FFDB684A4826F66DA1CBBF061A02CCFF75F0",
+      "previousLogSha256": "F9E38F9EB1D147560144A57DB1BA98A30F45159348EDD47A8071A651481963F3",
+      "successor": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilLawsDependencyAudit4R2.lean",
+      "successorSha256": "CF0EEA7AD6EC6FF4F0C2E6CF77AFB1C55A1516EF9653D020D0B9EA335F560388",
+      "reason": "The odd-self equality reduces definitionally to the scalar pairing and its proof value does not use the bilinear construction fields. Add the actual bilinear construction as an independent audited source consumer, alongside the odd-self and existing Galois compatibility theorems. Preserve all 24 required VALUE edges, every source and the failed audit.",
+      "requiredProofValueEdges": 24,
+      "sourceChanged": false
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original primitive-form Frobenius relation -> original Picard reduction and arithmetic Frobenius -> actual original-place reduction equivariance -> residue coefficient action preserves the exact two chart conditions",
+  "precedingScratchReceipts": {
+    "source-arithmetic-frobenius-residue-3-scratch-receipt.json": "B66A91FB92908FBD83FA671E57AEEA31A1D0E7402D37218A8648B9D440F54017"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalArithmeticPlaces.lean",
+      "sha256": "E03749EB31ACF9CB30B4B7CF3D2AA3EC7119C2068D3BF2B3C62EB5F75F8A3035"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularConstantReductionCharts.lean",
+      "sha256": "2E9A3A15845DB4ECF1667DA04E43F883D69C720354AA5D7C65641D56E9768A40"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaChartTransport.lean",
+      "sha256": "3471F01C3D250805DA4868241E7E26D859D41C367478A387DD7FD9114C1421DF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceDecompositionGaussAction.lean",
+      "sha256": "1F5885C4DAD925A3D4E29A39B4757FDBDB332CE7CA02A36E3FC45C7CE37D6726"
+    }
+  ],
+  "routeAdjustment": "Construct the actual residue coefficient place action, prove nonunit and j-chart membership transport, then combine inverse decomposition action on integral functions with native residue equivariance and the existing unique chart map.",
+  "discharged": "The same actual modular reduction, with all-prime genus equality and invertible Picard-torsion injectivity, intertwines the original arithmetic decomposition action on places with the native residue coefficient action. Under the exact source arithmetic Frobenius condition it intertwines original Frobenius with residue coefficient Frobenius. Both chart conditions are derived using the actual Gauss residue homomorphism; no assumed place-equivariance certificate, global divisor rigidity or Picard divisibility is needed for this comparison.",
+  "remaining": "Picard descent, geometric Frobenius and Hecke compatibility, the quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\frobenius-chart-places-route-438.json",
+    "sha256": "B3942F7C245C7BCDD48D665321FF52727C94F842AE1EEB009FC9B3FB2D37D7AF",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original primitive-form Frobenius relation -> original Picard reduction and arithmetic Frobenius -> actual original-place reduction equivariance -> residue coefficient action preserves the exact two chart conditions",
+      "reuseChecked": [
+        "Scope 436 identifies actual original arithmetic Frobenius on Gauss residue functions and fixes j; scope 430 preserves the original integral charts. Scope 431 constructs the same actual modular place map with both exact chart descriptions.",
+        "SourceOriginalArithmeticPlaces already gives the valuation-ring transport argument for characteristic zero; native Place.placeEquiv is constant-linear and cannot express the nontrivial residue constant action. Restricting the proved residue coefficient automorphism gives the exact missing action, with existing ring-isomorphism transport and the native nonunit criterion.",
+        "The inertia place proof can now be adapted to simultaneous original and residue actions. No Picard divisibility, global divisor rigidity or geometric Frobenius foundation is needed for this arithmetic place comparison."
+      ],
+      "selectedRoute": "Construct the actual residue coefficient place action, prove nonunit and j-chart membership transport, then combine inverse decomposition action on integral functions with native residue equivariance and the existing unique chart map.",
+      "assumptionsToDischarge": "The same actual reduction map intertwines original arithmetic Frobenius on places with the actual residue coefficient Frobenius; chart membership and reduction conditions are derived.",
+      "boundary": "Descend to original Picard classes and compare arithmetic coefficient Frobenius with geometric Frobenius and the Hecke correspondence; the Frobenius quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

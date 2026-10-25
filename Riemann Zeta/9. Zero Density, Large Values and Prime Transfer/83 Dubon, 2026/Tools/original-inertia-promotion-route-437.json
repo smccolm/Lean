@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy and residual association -> actual primitive weight-two unramified realization -> original rational/integral Tate inertia -> original Picard torsion inertia -> actual modular reduction on original places, with all-prime genus preservation and torsion injectivity.",
+  "discharged": "Native arithmetic inertia acts trivially on every residue-invertible torsion subgroup of the actual original modular Picard group when the level is invertible. The same constructed modular reduction has invariant original places, preserves genus and is injective on invertible Picard torsion. The identity on the Laurent-series fields induces the actual Picard equivalence. Exact chart descriptions, native integral transport and residue invariance discharge arithmetic compatibility. The actual integral and rational Tate representations therefore send inertia to the identity at every prime not dividing level times Tate prime. The same actually constructed continuous primitive weight-two Galois realization retains its finite coefficient field, spanning specialization, prime Fourier eigenvalues and original arithmetic action, and is unramified away from those primes. No genus, chart, Picard, equivariance, spanning or inertia certificate remains in the final realization theorem.",
+  "boundary": "The Frobenius relation and trace/determinant consequences, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "selectedRoute": "Reuse the proved Gauss fraction witnesses, both integral charts and their uniqueness, original arithmetic places and Picard quotient, and existing Tate and primitive-form specialization constructions. Native integral-equation transport, finite-support pushforward, quotient equivalence, scalar extension and linear-map extensionality on the proved spanning image complete the arithmetic chain. The chart route avoids importing the source global divisor-rigidity and Picard-divisibility framework at this stage. The literal source LiesOverPrime and inertia image conventions are preserved. The renewed FLT/TauCeti search and frozen sources remain archived; no external build is claimed. Root pins, proof limits and full completion criteria are unchanged.",
+  "scratchReceipts": {
+    "source-original-inertia-functions-2-scratch-receipt.json": "F5DE9AE74950E22F70166E04815A923868B77CCA163467E49F626415D0BAA092",
+    "source-original-arithmetic-integral-charts-1-scratch-receipt.json": "BFE079B2BE3EAD66557A17861B2075E45A5C24A50F90AEA150BE1436B893BAA3",
+    "source-modular-reduction-charts-3-scratch-receipt.json": "33FE06F7EF8015D34826E15A619044B3B70621A95C39739CC5E6B1361C3695AB",
+    "source-original-inertia-place-reduction-3-scratch-receipt.json": "29857D7A72AC5BC33D22E76E0B5E1AD7DC2E689BE5ACF6E392ED63F44C66EEC0",
+    "source-original-picard-inertia-4-scratch-receipt.json": "1B8161B0BFB25B0697511B4572D0F992A0698331A916821462F2BDF765E5018F",
+    "source-original-tate-inertia-1-scratch-receipt.json": "838EE46F2ADFF6AECCA153A5F526D4075E8550118241304824EE8AD744EDD89E",
+    "source-original-primitive-unramified-2-scratch-receipt.json": "0FA1E4B07D008BDE61E797E50F790B00C0E7748C8ED40D82FD153B429354E2CD"
+  },
+  "modules": 16,
+  "queries": 48,
+  "exhaustive": 114,
+  "proofEdges": 90,
+  "production": "Promotion pending the preceding assembled verification and preexecution review."
+}

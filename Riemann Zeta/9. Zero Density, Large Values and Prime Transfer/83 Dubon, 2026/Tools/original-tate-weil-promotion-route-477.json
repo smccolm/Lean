@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+  "chain": "modular concentration -> residual association -> original primitive-form Frobenius characteristic polynomial -> separate determinant -> nondegenerate Hecke-component pairing -> actual divisorial pairing descent, adjunction, compatible Tate assembly and cyclotomic multiplier",
+  "receipts": {
+    "source-original-weil-descent-7-scratch-receipt.json": "085C7FF7FE6C61B4D1622668C4B2120FE0ABC541DCF7EB841D6842744D322A3D",
+    "source-original-weil-laws-4-scratch-receipt.json": "6DF37E1A71B5798099FE961669DBA253C5F1BCFFA4D5764C55A2AC02713C0C7C",
+    "source-original-weil-adjunction-10-scratch-receipt.json": "28BDD097B108D2CF560522B69A6D631DD3B7801FC235D33E72E6756F09B4405B",
+    "source-original-weil-hecke-5-scratch-receipt.json": "F0531111ED406BC6DF81916F41AA984038B5283274ECAA389DAD33EAA0E339C2",
+    "source-original-tate-weil-7-scratch-receipt.json": "936154E316FD364EB5A90A74708623AA028DD8C204F2405557AD6C67CDB03EAC",
+    "source-original-tate-cyclotomic-3-scratch-receipt.json": "E5F0CF4D972B0831871A183153869D7303FC3A92A366D334BECC5A21824DE5F3"
+  },
+  "selectedRoute": "Reuse actual Picard representatives and quotient, native finite maps, already-proved Atkin involution, existing Tate module and scalar coordinates, and pinned cyclotomicCharacter.spec. Faithful Tate scalar cancellation avoids constructing a separate rank-one target basis. Only scratch imports will be qualified; all audited mathematical statements and proof bodies are retained.",
+  "discharged": "Representative independence and root-valued Picard pairing descent; bilinearity and odd-order alternation; finite norm/pullback and correspondence adjunction; self-adjointness of the existing Hecke operators away from level; torsion-level compatibility; actual p-adic bilinear Tate pairing with Galois covariance; the pinned cyclotomic scalar action and uniqueness of its multiplier at a nonzero pairing value.",
+  "remaining": "Nondegeneracy and the required nonzero Hecke-component pairing remain unproved. The determinant-to-pairing identity on that component, actual Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. Scalar-multiplier uniqueness explicitly assumes a nonzero pairing value and does not discharge that assumption.",
+  "boundary": "Production promotion and sequential assembled verification of this scope are pending. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "modules": 36,
+  "queries": 94,
+  "exhaustiveScratch": 169,
+  "proofValueEdges": 149
+}

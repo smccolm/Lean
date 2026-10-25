@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original primitive-form Frobenius quadratic relation -> original Tate and Picard reduction -> arithmetic Frobenius on the actual residue Picard quotient -> order, degree and principal-divisor preservation of the proved residue place permutation",
+  "precedingScratchReceipts": {
+    "source-frobenius-place-reduction-3-scratch-receipt.json": "DF5D96CD77601EE967330A7B51FBF86EA5F5928EAB89E9960408DD65C9ED1573"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalArithmeticPlaces.lean",
+      "sha256": "E03749EB31ACF9CB30B4B7CF3D2AA3EC7119C2068D3BF2B3C62EB5F75F8A3035"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalArithmeticDivisors.lean",
+      "sha256": "014C350B58D239FF3C8D55039C6C7C52F05BF69AA2EB0706DEEA05B99DB11D48"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCoefficientResidue.lean",
+      "sha256": "46DA05DB07430386C6E3AE846B59A54BA72A82232275DBF587A9C8AEF33B8543"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularDecompositionPlaceReduction.lean",
+      "sha256": "B104B935FB37D4A4600401BCC3B02A1D7DC61BA7E67B1976A42F77C04C7E5475"
+    }
+  ],
+  "routeAdjustment": "Adapt only normalized order transport, the inverse place permutation, divisor degree/principality and Pic0 quotient descent needed by the actual arithmetic Frobenius comparison. Use the proved same-reduction place equation, with no new global rigidity or Picard-divisibility foundation.",
+  "discharged": "The same actual modular reduction, with genus equality and invertible Picard-torsion injectivity, intertwines original arithmetic Frobenius on genuine original Picard classes with residue coefficient Frobenius. Normalized orders, divisor degrees and principal divisors are transported by proved equations; finite-support induction and the native Picard quotient give descent. No place, divisor or Picard equivariance certificate remains an assumption of the final theorem.",
+  "remaining": "Geometric Frobenius and Hecke compatibility, the quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\residue-picard-frobenius-route-439.json",
+    "sha256": "59D8603D09C3761A34992BBBA0D7A8D62D955773EFFA1079D8F06F8447EFB4FF",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original primitive-form Frobenius quadratic relation -> original Tate and Picard reduction -> arithmetic Frobenius on the actual residue Picard quotient -> order, degree and principal-divisor preservation of the proved residue place permutation",
+      "reuseChecked": [
+        "SourceOriginalArithmeticPlaces proves normalized order transport using native uniqueness and constructs the inverse place permutation. The identical proof applies to the already constructed residue coefficient automorphism without any characteristic-zero requirement.",
+        "SourceOriginalArithmeticDivisors and SourceOriginalArithmeticPicard already descend place transport through finite divisors and the actual Pic0 quotient. SourceModularCoefficientCurve and the closed finite-coordinate residue theorem discharge residue degree one in every characteristic.",
+        "Scope 438 supplies the same actual reduction with original arithmetic Frobenius place equivariance and Picard-torsion injectivity. Scope 433 already transports original divisor classes into the coefficient-field model. Finite-support induction and quotient surjectivity give the required Picard comparison directly."
+      ],
+      "selectedRoute": "Adapt only normalized order transport, the inverse place permutation, divisor degree/principality and Pic0 quotient descent needed by the actual arithmetic Frobenius comparison. Use the proved same-reduction place equation, with no new global rigidity or Picard-divisibility foundation.",
+      "assumptionsToDischarge": "Derive arithmetic Frobenius equivariance on the actual original Picard classes from the exact source Frobenius condition; no assumed divisor/Picard equivariance.",
+      "boundary": "Geometric Frobenius and Hecke compatibility, the quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,1070 @@
+{
+  "date": "24 October 2026",
+  "modules": [
+    "Dubon2026.SourceOriginalWeilFunctionChoice",
+    "Dubon2026.SourceOriginalWeilSameDivisors",
+    "Dubon2026.SourceOriginalWeilEvaluationPowers",
+    "Dubon2026.SourceOriginalWeilPrincipalShift",
+    "Dubon2026.SourceOriginalWeilPrincipalInvariance",
+    "Dubon2026.SourceOriginalWeilClassInvariance",
+    "Dubon2026.SourceOriginalWeilPairingDescent",
+    "Dubon2026.SourceOriginalWeilCommonRepresentatives",
+    "Dubon2026.SourceOriginalWeilBilinearity",
+    "Dubon2026.SourceOriginalWeilAlternation",
+    "Dubon2026.SourceOriginalWeilArithmetic",
+    "Dubon2026.SourceOriginalWeilNormAdjunction",
+    "Dubon2026.SourceCurvePullbackPushforwardDisjoint",
+    "Dubon2026.SourceOriginalWeilNormDatum",
+    "Dubon2026.SourceOriginalPicardFiniteMaps",
+    "Dubon2026.SourceOriginalWeilPullbackDatum",
+    "Dubon2026.SourceOriginalWeilMapClasses",
+    "Dubon2026.SourceOriginalWeilAdjunctionWitness",
+    "Dubon2026.SourceOriginalWeilAdjunctionRepresentatives",
+    "Dubon2026.SourceOriginalWeilAdjunction",
+    "Dubon2026.SourceOriginalWeilCorrespondenceAdjunction",
+    "Dubon2026.SourceOriginalWeilHeckeTranspose",
+    "Dubon2026.SourceOriginalWeilTateHeckeCoordinate",
+    "Dubon2026.SourceCurveCorrespondenceSwap",
+    "Dubon2026.SourceOriginalWeilHeckeSelfAdjoint",
+    "Dubon2026.SourceOriginalWeilTateHeckeSelfAdjoint",
+    "Dubon2026.SourceOriginalWeilLevelDatum",
+    "Dubon2026.SourceOriginalWeilLevelCompatibility",
+    "Dubon2026.SourceOriginalWeilTateCompatibility",
+    "Dubon2026.SourceOriginalTateWeilPairing",
+    "Dubon2026.SourceOriginalTateWeilLinearity",
+    "Dubon2026.SourceOriginalTateWeilArithmetic",
+    "Dubon2026.SourceOriginalTateWeilHecke",
+    "Dubon2026.SourceOriginalTateWeilCyclotomic",
+    "Dubon2026.SourceTateScalarFaithfulness",
+    "Dubon2026.SourceOriginalTateWeilMultiplier"
+  ],
+  "dependency": "modular concentration -> residual association -> original primitive-form Frobenius characteristic polynomial -> separate determinant -> nondegenerate Hecke-component pairing -> actual divisorial pairing descent, adjunction, compatible Tate assembly and cyclotomic multiplier",
+  "discharged": "Representative independence and root-valued Picard pairing descent; bilinearity and odd-order alternation; finite norm/pullback and correspondence adjunction; self-adjointness of the existing Hecke operators away from level; torsion-level compatibility; actual p-adic bilinear Tate pairing with Galois covariance; the pinned cyclotomic scalar action and uniqueness of its multiplier at a nonzero pairing value.",
+  "boundary": "Nondegeneracy and the required nonzero Hecke-component pairing remain unproved. The determinant-to-pairing identity on that component, actual Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. Scalar-multiplier uniqueness explicitly assumes a nonzero pairing value and does not discharge that assumption. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 7,673-module scope: all thirteen retained regressions, 50,087 exhaustive theorem checks, 22,756 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.originalWeilPairing_symm",
+    "Dubon2026.SourceFunctionField.originalWeilBilinear",
+    "Dubon2026.SourceFunctionField.originalWeilBilinear_self_of_odd",
+    "Dubon2026.SourceFunctionField.originalWeilPairing_originalGalois",
+    "Dubon2026.SourceFunctionField.originalWeilPairing_correspondence_adjunction",
+    "Dubon2026.SourceFunctionField.originalWeilPairing_tateHecke_self_adjoint",
+    "Dubon2026.SourceFunctionField.originalWeilPairing_tateHecke_coordinate",
+    "Dubon2026.SourceFunctionField.originalTateWeilBilinear",
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_galois",
+    "Dubon2026.SourceFunctionField.originalTateWeilBilinear_self_of_odd",
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_hecke_self_adjoint",
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_zero_left",
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_zero_right",
+    "Dubon2026.SourceFunctionField.originalTateRootsGalois",
+    "Dubon2026.SourceFunctionField.originalTateWeilPairing_cyclotomic_multiplier_unique"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-24T22:46:39.449637+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalWeilFunctionChoice",
+        "SourceOriginalWeilSameDivisors",
+        "SourceOriginalWeilEvaluationPowers",
+        "SourceOriginalWeilPrincipalShift",
+        "SourceOriginalWeilPrincipalInvariance",
+        "SourceOriginalWeilClassInvariance",
+        "SourceOriginalWeilPairingDescent"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilFunctionChoice.lean",
+          "sha256": "CB0B6FD64D5110C69F8830B0EF0A40696551DA7F92F18F02F73A8F9F8FE089FE",
+          "oleanSha256": "C524CBFF174E755BF823A3723FEEE8DD10646F8D27751B5B29C78497CBE092C5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilSameDivisors.lean",
+          "sha256": "C0F762F05CC91F1CAD8FFD8F6C59A599F520C2899985E66F1CBA65A5C887D1ED",
+          "oleanSha256": "ACF9F0CADDDC985BEFF667E759212018CD5FCD931837F3A917305A44A47CD5B7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilEvaluationPowers.lean",
+          "sha256": "8F4B60B3106B6CB640F3E5AE8A5F204B8F59650EBEFA3716D22EB9F8FD7453D3",
+          "oleanSha256": "B4D3A235943679FC005F67C21E7D285146DB2F217F26F05D8FBBE9472F371944"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilPrincipalShift.lean",
+          "sha256": "3BA37EEC1F352FDB849736E6EF1E38F2E783383618133078FAD4E6186D11ED4B",
+          "oleanSha256": "9185970A7E8F968E29511D7F33500E797907FC6514B14B27A68736BC2E2D71A1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilPrincipalInvariance.lean",
+          "sha256": "19D6AEA6F2B0A9B9B33CE864BA18566A74CEFDE2E0155ECC75761D90131F45BB",
+          "oleanSha256": "8B0BDBDAF1986A4DF9A8C3B4E0AB2769AE126A8B28C553328708DA669F0AE577"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilClassInvariance.lean",
+          "sha256": "AF460E6F465D7AAF6A60E7A0AA643F7AD2DE78A5342BD86C8A0A324F806C7DE0",
+          "oleanSha256": "813C89C0CD50F48C646D658FC811184AE91BA548F4AD8599D6CEB4EF604A9278"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilPairingDescent.lean",
+          "sha256": "37B3D5C896220CA31CE2595BFF29B69566B2E130F9F03C8BDB115E8571B51C17",
+          "oleanSha256": "5526D2AA5ECD421F1223C2D687CD0D187F2D30722A257BE9CFF7660A768AA1FE"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.original_constant_of_orders_zero",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_constant_of_degree_zero",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_eq_of_same_orders",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_eq_of_same_divisors",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_pow_of_mem",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_pow",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_eq_of_addPrincipalLeft",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_eq_of_isPrincipal_sub_left",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_eq_of_isPrincipal_sub_right",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_eq_of_classLeft_eq",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_eq_of_classRight_eq",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_eq_of_classes_eq",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_eq_pairing",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_symm",
+        "Dubon2026.SourceFunctionField.originalWeilPairing"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.original_constant_of_orders_zero",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_constant_of_degree_zero",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_eq_of_same_orders",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_eq_of_same_divisors",
+        "Dubon2026.SourceFunctionField.originalPlaceEval_pow_of_mem",
+        "Dubon2026.SourceFunctionField.originalDivisorEval_pow",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_eq_of_addPrincipalLeft",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_eq_of_isPrincipal_sub_left",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_eq_of_isPrincipal_sub_right",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_eq_of_classLeft_eq",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_eq_of_classRight_eq",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.pairing_eq_of_classes_eq",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_eq_pairing",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_symm"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.originalWeilPairing"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilDescentAudit7.log",
+      "logSha256": "2E4312107228CE4EB7766B3ED8973F019242C059EAD6A156984E185387A1E424",
+      "auditSha256": "0DB3C065FA788ECDCC0D231BDA9076437BD29E27FD80DC65C54DCA0CFC9A776F",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 21,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 23,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilDescentDependencyAudit7.log",
+      "dependencyAuditSha256": "E7A26602ACC29416CCDC248A6105D7FAC4D82DA38242B67FEA5CC3C375BC0A68",
+      "dependencyAuditSourceSha256": "49D7EF74090D070B06DBA7BB8EDC7B98922602ECDC737676449C4CA033C0EC49",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalWeilPairing_symm"
+      ],
+      "dependency": "modular concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Picard Weil pairing -> representative independence and root-valued descent",
+      "discharged": "The literal divisorial Weil ratio is independent of every divisor and function representative of the two actual Picard n-torsion classes. It defines a pairing into actual nth roots of unity and swapping its arguments inverts its value.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Bilinearity, alternation, nondegeneracy, Hecke adjointness, Tate compatibility, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. Scratch only; production promotion and assembled verification pending. No acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-weil-descent-7-reuse-review-20261024.json",
+      "reuseReviewSha256": "B423481B0161AE0F6CC4F61DC304C7C260B140CC46945C3BA904DE94B96162C1",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T22:57:50.196720+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalWeilCommonRepresentatives",
+        "SourceOriginalWeilBilinearity",
+        "SourceOriginalWeilAlternation",
+        "SourceOriginalWeilArithmetic"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCommonRepresentatives.lean",
+          "sha256": "0B21344994446C83E179511F6A56D9B93EA8D4D7525F2C910CFCB26C0ACC8C12",
+          "oleanSha256": "AB31CF75674506936282A9EAC6A478EA82662852AB9550288859D8868E5663AB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilBilinearity.lean",
+          "sha256": "F375B79D6E41C01AE26BE602C8C1AB91EBDFB5E7CD4D98873CEF4369506B2C79",
+          "oleanSha256": "1BEDBFFEE33D5844710E0B86B8BE4A22806B4C57167CD3501C67992012A5088B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilAlternation.lean",
+          "sha256": "4C5B5162DEEF9DE8DDC67165ACE0CA3E313E036A42761DCBE8C7FD1B9C5C0950",
+          "oleanSha256": "175BB305F1BC5645E1F41D9A67A630922CD2CAEE0E42166FC968B2D6D8C6FE95"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilArithmetic.lean",
+          "sha256": "D0CB8B56DA9DC36D0223607FBBB725FFD07CE3968BF2BB2BDCCF341E56A9C563",
+          "oleanSha256": "39EF3440C020D28B68073AE4E8F42F4B34BDE55A78CDA587AEA34C57C7232924"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.exists_original_weil_common_right",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.classLeft_addLeft",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.classRight_addLeft",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_add_left",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_add_right",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_zero_left",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_zero_right",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_self_of_odd",
+        "Dubon2026.SourceFunctionField.originalWeilBilinear_self_of_odd",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.classLeft_arithmetic",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.classRight_arithmetic",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_arithmetic",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_originalGalois",
+        "Dubon2026.SourceFunctionField.originalWeilBilinear"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.exists_original_weil_common_right",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.classLeft_addLeft",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.classRight_addLeft",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_add_left",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_add_right",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_zero_left",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_zero_right",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_self_of_odd",
+        "Dubon2026.SourceFunctionField.originalWeilBilinear_self_of_odd",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.classLeft_arithmetic",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.classRight_arithmetic",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_arithmetic",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_originalGalois"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.originalWeilBilinear"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilLawsAudit4.log",
+      "logSha256": "657A348E061DEBAF101674737565216C866A37BF51DF15A72B58879C0FB5F69B",
+      "auditSha256": "6218FCB4504BDB777D2818ED51EF5C2E454F41E00600093A045BDE4C0891C1BF",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 25,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 24,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilLawsDependencyAudit4R2.log",
+      "dependencyAuditSha256": "4E155A622C669317F2F79F0EB02CC11F158D69B92C5BCA8B3439E57173EF9B51",
+      "dependencyAuditSourceSha256": "CF0EEA7AD6EC6FF4F0C2E6CF77AFB1C55A1516EF9653D020D0B9EA335F560388",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalWeilBilinear",
+        "Dubon2026.SourceFunctionField.originalWeilBilinear_self_of_odd",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_originalGalois"
+      ],
+      "dependency": "modular concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Picard Weil pairing -> bilinearity, odd-order alternation and arithmetic equivariance",
+      "discharged": "The actual root-valued original Picard pairing is additive in both arguments, is alternating for odd n, and is equivariant for every coefficient automorphism and for the existing Qbar torsion Galois representation. Common representatives and all action compatibility are proved.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Even-order alternation is not claimed here. Nondegeneracy, correspondence/Hecke adjointness, Tate compatibility, determinant, residual association, automorphy and all-weight continuation remain required; the full source contract is unchanged. Scratch only; production promotion and assembled verification pending. No acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-weil-laws-4-reuse-review-20261024.json",
+      "reuseReviewSha256": "FB214AA53B69C73DBA9939D12F51881FF1A296A6D6F27B5E8B6BA48B8DF2220F",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T23:21:34.653890+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalWeilNormAdjunction",
+        "SourceCurvePullbackPushforwardDisjoint",
+        "SourceOriginalWeilNormDatum",
+        "SourceOriginalPicardFiniteMaps",
+        "SourceOriginalWeilPullbackDatum",
+        "SourceOriginalWeilMapClasses",
+        "SourceOriginalWeilAdjunctionWitness",
+        "SourceOriginalWeilAdjunctionRepresentatives",
+        "SourceOriginalWeilAdjunction",
+        "SourceOriginalWeilCorrespondenceAdjunction"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilNormAdjunction.lean",
+          "sha256": "BF081C1A595FCBDB19DE071561565379EDE2CC3B71BC9AE8F74209DFBE927E15",
+          "oleanSha256": "0303F7436BD1F7D24BD4A3AD24D60EA2339180E894D01321C92CA8D576829615"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurvePullbackPushforwardDisjoint.lean",
+          "sha256": "E1A626EF5838E4388F0DB2A3887DFDC257D398281BBAC9B75AADB43E4CBE153F",
+          "oleanSha256": "1C793771AAC14428DC1219232644C77A812FDE90C596CD82CFD7BBB11B818F71"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilNormDatum.lean",
+          "sha256": "CCE11416533F7A213443FED1908BBDDB92ABF5E020416305B4B558A01525C737",
+          "oleanSha256": "5C63C7EE70FF0C05C2FEEA911C45E86ED9C684BAA42C7B89ED54C735A3A01D9E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardFiniteMaps.lean",
+          "sha256": "3EDA23044A8F14CA1EC2C01B6EB7919F1AC29F7977469FDD3920D6C7EF10CA73",
+          "oleanSha256": "F992AE45AD391A70094DB6E721986AD1591A1AF419D5AC991C9BBB9AF9055792"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilPullbackDatum.lean",
+          "sha256": "F2501F69DE2F6A66DAD0819517AE476D502445907462718072CF709DA11F820D",
+          "oleanSha256": "9CE1FC874EC500C9665FD2BAE1F809CE3066BCB8CA6981E7A18B1C93BBF71F1A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilMapClasses.lean",
+          "sha256": "1CE6211F0C7C0A3B8178BB6BE63FB090E90443E1C941203482B96AD99075BD49",
+          "oleanSha256": "2F09CC63A3517AFDC2F6BF90CF3CB578E415623E3979D17265AF84061C5BB432"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilAdjunctionWitness.lean",
+          "sha256": "2894D70A4FB98F8FD7F944C46C196BE675F55CFE6CC559466A63837EB4E5EE88",
+          "oleanSha256": "3FF326AFC0145E943EA4ECD5D5EE87B66FF3509B6CEFE22E66367940E967AE8F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilAdjunctionRepresentatives.lean",
+          "sha256": "839B082CE5A4E8BC13F1FCD77B2DCD0152A196D0F9A2FB7442F73D90B7626ABC",
+          "oleanSha256": "E16C6A10262865DDEA3DAC97C9E707F4F6DF2D3B6AC61A7021F428D48AEC7FEC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilAdjunction.lean",
+          "sha256": "D502825D490B6BEF61C120A362BE02DF561F1FB47644EC7D7BFA7529AA9082D5",
+          "oleanSha256": "461358000BBE31D629530CF689B1E9FEC61E82CCA195490C4F2F288AB649FCBD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCorrespondenceAdjunction.lean",
+          "sha256": "101BF0C95B1069EC2D70A4C869F26829B8F5407BFF25DD4C1CCD0F3CA2C7FFE9",
+          "oleanSha256": "3440B3B82F2983FF08DCEB3217E3923F8B5BD025890681FDC2A2E203CD7D74EF"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.originalWeilDatum_norm_adjunction",
+        "Dubon2026.SourceCurve.Divisor.disjoint_pushforward_of_pullback",
+        "Dubon2026.SourceFunctionField.originalWeilNormDatum_pairing",
+        "Dubon2026.SourceFunctionField.originalPicardPullback_mk",
+        "Dubon2026.SourceFunctionField.originalPicardNorm_mk",
+        "Dubon2026.SourceFunctionField.originalWeilPullbackDatum_classLeft",
+        "Dubon2026.SourceFunctionField.originalWeilPullbackDatum_classRight",
+        "Dubon2026.SourceFunctionField.originalWeilNormDatum_classLeft",
+        "Dubon2026.SourceFunctionField.originalWeilNormDatum_classRight",
+        "Dubon2026.SourceFunctionField.exists_original_weil_adjunction_witness",
+        "Dubon2026.SourceFunctionField.exists_original_weil_adjunction_representatives",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_norm_adjunction",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_pullback_adjunction",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_correspondence_adjunction",
+        "Dubon2026.SourceFunctionField.originalWeilNormDatum",
+        "Dubon2026.SourceFunctionField.originalPicardPullback",
+        "Dubon2026.SourceFunctionField.originalPicardNorm",
+        "Dubon2026.SourceFunctionField.originalPicardPullbackTorsion",
+        "Dubon2026.SourceFunctionField.originalPicardNormTorsion",
+        "Dubon2026.SourceFunctionField.originalWeilPullbackDatum"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.originalWeilDatum_norm_adjunction",
+        "Dubon2026.SourceCurve.Divisor.disjoint_pushforward_of_pullback",
+        "Dubon2026.SourceFunctionField.originalWeilNormDatum_pairing",
+        "Dubon2026.SourceFunctionField.originalPicardPullback_mk",
+        "Dubon2026.SourceFunctionField.originalPicardNorm_mk",
+        "Dubon2026.SourceFunctionField.originalWeilPullbackDatum_classLeft",
+        "Dubon2026.SourceFunctionField.originalWeilPullbackDatum_classRight",
+        "Dubon2026.SourceFunctionField.originalWeilNormDatum_classLeft",
+        "Dubon2026.SourceFunctionField.originalWeilNormDatum_classRight",
+        "Dubon2026.SourceFunctionField.exists_original_weil_adjunction_witness",
+        "Dubon2026.SourceFunctionField.exists_original_weil_adjunction_representatives",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_norm_adjunction",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_pullback_adjunction",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_correspondence_adjunction"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.originalWeilNormDatum",
+        "Dubon2026.SourceFunctionField.originalPicardPullback",
+        "Dubon2026.SourceFunctionField.originalPicardNorm",
+        "Dubon2026.SourceFunctionField.originalPicardPullbackTorsion",
+        "Dubon2026.SourceFunctionField.originalPicardNormTorsion",
+        "Dubon2026.SourceFunctionField.originalWeilPullbackDatum"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilAdjunctionAudit10.log",
+      "logSha256": "EB767C87CE6AEFCD0A2304EFC350BF17FE5501905D04483F2D6AD9E099800CD1",
+      "auditSha256": "55318FFECF91A155ACAAB0A890F9BEF9EF57976145093737C0FA5B85005CD727",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 42,
+      "linterScopes": 10,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 30,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilAdjunctionDependencyAudit10.log",
+      "dependencyAuditSha256": "0FC3772248C7EB6F06EA0CA54F704AD555B95D7D3A7D8717AE81E23BDD32715D",
+      "dependencyAuditSourceSha256": "3ABBC8927AD189F418DD79F957982F648D55157AF57EA15818E6FDA8BD205A72",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalWeilPairing_correspondence_adjunction"
+      ],
+      "dependency": "modular concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Picard Weil pairing -> finite norm/pullback adjunction and transposed correspondence",
+      "discharged": "For every finite map between actual original function fields and arbitrary actual Picard n-torsion classes, the norm is adjoint to pullback for the root-valued Weil pairing. Consequently every actual norm-after-pullback correspondence is adjoint to its transposed correspondence. Compatible representatives, norm-divisor identities, residue identifications, finiteness and disjointness are derived.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Nondegeneracy, identification of the needed Hecke transpose, Tate compatibility, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. Scratch only; production promotion and assembled verification pending. No acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-weil-adjunction-10-reuse-review-20261024.json",
+      "reuseReviewSha256": "56217CC907ACBFD4565996920F5E74380D2D09D9A04E51943D7DDA12D3DE62A8",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T23:34:23.065565+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalWeilHeckeTranspose",
+        "SourceOriginalWeilTateHeckeCoordinate",
+        "SourceCurveCorrespondenceSwap",
+        "SourceOriginalWeilHeckeSelfAdjoint",
+        "SourceOriginalWeilTateHeckeSelfAdjoint"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilHeckeTranspose.lean",
+          "sha256": "67CC253EC8C545E0E4EDBD8C7FBBCBDF5F540D343F3552B8E8A4901CD95AAE71",
+          "oleanSha256": "3611BC98D3B89062EA31EDEAE679833F3989F1F109E3BA18787381B05563EAB8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilTateHeckeCoordinate.lean",
+          "sha256": "12E9421F9261A952E1C00E0DE95EC56C8421E8D1ED6E1081C6CCB5DC07230CC2",
+          "oleanSha256": "9D426CBF8AD7B38DE134BE43527915E176036C24DAE1A20E9F7238C95AC7CA8C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveCorrespondenceSwap.lean",
+          "sha256": "51BC90A77FA3B7C0804E34071B9E14DEAD7D97DB9E387D7BC33BCD8757119F2B",
+          "oleanSha256": "4133849922B186F25D4643A2A40E06B9F71C0DFEDF9FC647CDE665BA3E24718D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilHeckeSelfAdjoint.lean",
+          "sha256": "E319D83CD033B44CCC057642F00ED1982E626AF8CF3AF3EA0846B97177EC8577",
+          "oleanSha256": "6A0D19CD013C08675E6881558928870239731E8682B3DC958C1F83A5014DF1BF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilTateHeckeSelfAdjoint.lean",
+          "sha256": "C16E6B2129548F5DF95E81AD73F9C39AE46219EC1D6125A09FDF870A98126D7C",
+          "oleanSha256": "6B6D4FAD03135591E54896F66ED056CCAE9E88EE8B05EFE8EC2711AE534568DE"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.originalWeilHeckeTorsion_val",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_hecke_transpose",
+        "Dubon2026.SourceFunctionField.originalWeilHeckeTorsion_coordinate",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_tateHecke_coordinate",
+        "Dubon2026.SourceCurve.Place.restrictAlong_comapEquiv",
+        "Dubon2026.SourceCurve.Place.ramificationAlong_comapEquiv",
+        "Dubon2026.SourceCurve.Divisor.finitePullbackAlong_domCongr",
+        "Dubon2026.SourceCurve.Divisor.geometricPushforwardAlong_domCongr",
+        "Dubon2026.SourceCurve.Divisor.geometricCorrespondence_swap_of_equiv",
+        "Dubon2026.SourceFunctionField.originalWeilHeckeTranspose_eq",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_hecke_self_adjoint",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_tateHecke_self_adjoint",
+        "Dubon2026.SourceFunctionField.originalWeilHeckeTorsion",
+        "Dubon2026.SourceFunctionField.originalWeilHeckeTransposeTorsion"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.originalWeilHeckeTorsion_val",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_hecke_transpose",
+        "Dubon2026.SourceFunctionField.originalWeilHeckeTorsion_coordinate",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_tateHecke_coordinate",
+        "Dubon2026.SourceCurve.Place.restrictAlong_comapEquiv",
+        "Dubon2026.SourceCurve.Place.ramificationAlong_comapEquiv",
+        "Dubon2026.SourceCurve.Divisor.finitePullbackAlong_domCongr",
+        "Dubon2026.SourceCurve.Divisor.geometricPushforwardAlong_domCongr",
+        "Dubon2026.SourceCurve.Divisor.geometricCorrespondence_swap_of_equiv",
+        "Dubon2026.SourceFunctionField.originalWeilHeckeTranspose_eq",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_hecke_self_adjoint",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_tateHecke_self_adjoint"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.originalWeilHeckeTorsion",
+        "Dubon2026.SourceFunctionField.originalWeilHeckeTransposeTorsion"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilHeckeAudit5.log",
+      "logSha256": "4ADE46FB76E266F35E14994BD062D5A30C42DFE0A4AFDD70B141D371ACB3BD68",
+      "auditSha256": "D3E0251C3B8A25C801BED153D22B91460403CD018541881EDC0BE756D920C9F3",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 18,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 25,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilHeckeDependencyAudit5.log",
+      "dependencyAuditSha256": "9FE447C694D864A151825A8331877482E908042FF55AF127E08F47460AC10F9E",
+      "dependencyAuditSourceSha256": "748ADE1802589DE08E7758FB4FA4DE3C5A018F89790EFC247784230F9047291F",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalWeilPairing_tateHecke_self_adjoint",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_tateHecke_coordinate"
+      ],
+      "dependency": "modular concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Picard Weil pairing -> existing Hecke self-adjointness in finite Tate coordinates",
+      "discharged": "At every prime away from the level, the actual original Picard Hecke operator is self-adjoint for the actual root-valued Weil pairing over the algebraic closed arithmetic coefficient fields. Every finite coordinate of the existing Qbar Tate Hecke operator satisfies that identity. Atkin existence, transpose identification and coordinate comparison are proved dependencies.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Nondegeneracy, compatibility between torsion levels, the assembled Tate pairing, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. Scratch only; production promotion and assembled verification pending. No acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-weil-hecke-5-reuse-review-20261024.json",
+      "reuseReviewSha256": "E18B750703A41256A28BBD8FFB13DC543EE30E90926AA87605A9ED191DD8CA84",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T23:50:57.651815+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalWeilLevelDatum",
+        "SourceOriginalWeilLevelCompatibility",
+        "SourceOriginalWeilTateCompatibility",
+        "SourceOriginalTateWeilPairing",
+        "SourceOriginalTateWeilLinearity",
+        "SourceOriginalTateWeilArithmetic",
+        "SourceOriginalTateWeilHecke"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilLevelDatum.lean",
+          "sha256": "520D5CE86555CCC647917AD99AA00532B92DCBE76C56F9B29AC32055619A139A",
+          "oleanSha256": "9C18C111E0A8F1B5E1D7CB9836C880067EF349102E1BDDC4056CB5BBF86A52BE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilLevelCompatibility.lean",
+          "sha256": "50B2F638C04FDF9EA32A985164607154FA5332641559D36A2E8E4F5076CA61AF",
+          "oleanSha256": "2F54A8FFA036D1A8AA2458AB484E2E44DF03D70479EB7B770CE10583703D3FE2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilTateCompatibility.lean",
+          "sha256": "77AD0BEEB4AEF98F7A96E14076B9364D89AAD985D8067B4E002AFF279991D8D7",
+          "oleanSha256": "4B85C14BA0494109FD54131FF6C23024768FAEB84BBA84C744B82B02CAA99D43"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilPairing.lean",
+          "sha256": "E20BBA6F485664849C5C71AF2C4764AF3875A25AAD3207A3D01C5C803257E80D",
+          "oleanSha256": "38A8516DB3EDBEFC5E2A842C33C4C262A0A3977C413629DDFABEB5556337F93C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilLinearity.lean",
+          "sha256": "E523DC605F0F231116B0BC7C3A9B0D1BF8503A5CEA904B5B1ACE92AC4601F27E",
+          "oleanSha256": "5E19D9AB015FFBC0BD2DC6DF8395E530C009B93B2577994DE9F7C9492CAA5DAD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilArithmetic.lean",
+          "sha256": "1039DFAE983ACA3D3D7487D585BBAED340C19F3F81AF087097B54DAF9860768C",
+          "oleanSha256": "79214595B6364D8360B69C76C2162139D48A12F52CE99A0BB917AC53803FCFAB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilHecke.lean",
+          "sha256": "1504096930B423ED4DC0DC8DB120AD27146D868F12FEC6670DF1811992A125B5",
+          "oleanSha256": "2F7F0583C1B3E763E9D65072739251C9ED99C46123E58065EA2855D52168B23A"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.lower_pairing",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.lower_classLeft",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.lower_classRight",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_level_change",
+        "Dubon2026.SourceFunctionField.originalPicardTorsionLower_coordinate",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_tate_power_compat",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_coordinate",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_add_left",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_add_right",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_zero_left",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_zero_right",
+        "Dubon2026.SourceFunctionField.originalTateTorsionCoordinate_padic_smul",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_smul_left",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_smul_right",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_galois",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_self_of_odd",
+        "Dubon2026.SourceFunctionField.originalTateWeilBilinear_self_of_odd",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_hecke_self_adjoint",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.lower",
+        "Dubon2026.SourceFunctionField.originalPicardTorsionLower",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing",
+        "Dubon2026.SourceFunctionField.originalTateWeilBilinear",
+        "Dubon2026.SourceFunctionField.originalTateRootsGalois"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.lower_pairing",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.lower_classLeft",
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.lower_classRight",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_level_change",
+        "Dubon2026.SourceFunctionField.originalPicardTorsionLower_coordinate",
+        "Dubon2026.SourceFunctionField.originalWeilPairing_tate_power_compat",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_coordinate",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_add_left",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_add_right",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_zero_left",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_zero_right",
+        "Dubon2026.SourceFunctionField.originalTateTorsionCoordinate_padic_smul",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_smul_left",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_smul_right",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_galois",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_self_of_odd",
+        "Dubon2026.SourceFunctionField.originalTateWeilBilinear_self_of_odd",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_hecke_self_adjoint"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalWeilDatum.lower",
+        "Dubon2026.SourceFunctionField.originalPicardTorsionLower",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing",
+        "Dubon2026.SourceFunctionField.originalTateWeilBilinear",
+        "Dubon2026.SourceFunctionField.originalTateRootsGalois"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilAudit7.log",
+      "logSha256": "A1CD73CD70E58EE284BCE42DAFB52D484CA7800393D8FAFF8D17FE484905FFDB",
+      "auditSha256": "114CF98126725E9D0F1CFE2E129B35A185A8A3B3D819EC212059D2EDAF082888",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 53,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 33,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilDependencyAudit7.log",
+      "dependencyAuditSha256": "C2E2283C5C3DB5E94A74FA67C6AA145A64848EC011693BCEABFC62C35AC56F18",
+      "dependencyAuditSourceSha256": "35CB777A648EE1B41D05BD1161B7E448A222B0D31D62045ADD3B4F87BB30402A",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalTateWeilBilinear",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_galois",
+        "Dubon2026.SourceFunctionField.originalTateWeilBilinear_self_of_odd",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_hecke_self_adjoint",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_zero_left",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_zero_right",
+        "Dubon2026.SourceFunctionField.originalTateRootsGalois"
+      ],
+      "dependency": "modular concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> compatible arithmetic divisorial Weil pairing",
+      "discharged": "The actual root values form compatible Tate sequences. The assembled original arithmetic Tate pairing is p-adic bilinear, Galois covariant, alternating at odd primes and self-adjoint for existing Hecke operators at primes away from the level. No transition, scalar, Galois or Hecke pairing-law premise remains.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Nondegeneracy, cyclotomic rank-one identification, required Hecke-component restriction, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. Scratch only; production promotion and assembled verification pending. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-tate-weil-7-reuse-review-20261024.json",
+      "reuseReviewSha256": "4DBDB7810DBD65D2A597B827BD4A2792D00ECC78722574B11774BC60E17B09E7",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T23:59:05.927875+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalTateWeilCyclotomic",
+        "SourceTateScalarFaithfulness",
+        "SourceOriginalTateWeilMultiplier"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilCyclotomic.lean",
+          "sha256": "A65995FE7644450A76B919352D01AA64E3645A8479EB6F144AF54B3208BF5761",
+          "oleanSha256": "8B4F76A50AE12A8BDDA098B87C111516AD2F80021D1C8915F23E2F9296699F3C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTateScalarFaithfulness.lean",
+          "sha256": "DD3551686EEAF6880575E333F92A6D192896F4A7D7B456CD6C88DF8DBC956B54",
+          "oleanSha256": "DBE484E14C246BA3D90C28874F517C560F8D5C3A53FF652B13B5AFEB0E07B506"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilMultiplier.lean",
+          "sha256": "A2FDC32442E749476A3CD043AEFB9823337B465272D6D9AADD3F411B8FF3BDBF",
+          "oleanSha256": "601B32906ED3CAA4AF6A92D648C350488145805560C1A6E496843509B3ED2423"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.originalTateRoots_coordinate_pow",
+        "Dubon2026.SourceFunctionField.originalTateRootsGalois_eq_cyclotomic_smul",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_cyclotomic",
+        "Dubon2026.TateModule.eq_zero_of_prime_smul_eq_zero",
+        "Dubon2026.TateModule.eq_zero_of_prime_pow_smul_eq_zero",
+        "Dubon2026.TateModule.eq_zero_of_nonzero_scalar_smul_eq_zero",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_scalar_eq",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_cyclotomic_multiplier_unique"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.originalTateRoots_coordinate_pow",
+        "Dubon2026.SourceFunctionField.originalTateRootsGalois_eq_cyclotomic_smul",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_cyclotomic",
+        "Dubon2026.TateModule.eq_zero_of_prime_smul_eq_zero",
+        "Dubon2026.TateModule.eq_zero_of_prime_pow_smul_eq_zero",
+        "Dubon2026.TateModule.eq_zero_of_nonzero_scalar_smul_eq_zero",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_scalar_eq",
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_cyclotomic_multiplier_unique"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateCyclotomicAudit3.log",
+      "logSha256": "7C83E792D993E28631DF497039F3160EA1D9C958E1A329EEAF876F2F62BE96DB",
+      "auditSha256": "9CFFBC85A14058D36527F7090509655C87ED2F6E5D2479043F9CA14D4D3C03E9",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 10,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 14,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateCyclotomicDependencyAudit3.log",
+      "dependencyAuditSha256": "F64AF459022FB64158436C95C38DAC8B3CAEBBAAF3E4D3BC8ADFEB22ED72D4E6",
+      "dependencyAuditSourceSha256": "BB754B8B1E027198FC0A4ECD1319C41EB098C019978E24CB226E35AC30CD6B8E",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.originalTateWeilPairing_cyclotomic_multiplier_unique"
+      ],
+      "dependency": "modular concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nonzero alternating pairing on the required Hecke component -> cyclotomic covariance and faithful scalar cancellation",
+      "discharged": "The original coefficient Galois action on the actual Tate module of units equals multiplication by the pinned p-adic cyclotomic character. The assembled original Weil pairing has that covariance. No nonzero p-adic scalar annihilates a nonzero Tate sequence. A nonzero actual pairing value uniquely detects its cyclotomic multiplier.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Nondegeneracy and a nonzero pairing on the required Hecke component, the determinant-to-pairing identity on that component, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. The multiplier consumer retains its explicit nonzero-value hypothesis; no nondegeneracy claim is made. Scratch only; production promotion and assembled verification pending. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-tate-cyclotomic-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "A805DE02A4452F8C740C164F4EBCED325D4B7C87FB3AF62B96D095CF0726DCCE",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-original-weil-descent-7-reuse-review-20261024.json",
+    "Tools/source-original-weil-laws-4-reuse-review-20261024.json",
+    "Tools/source-original-weil-adjunction-10-reuse-review-20261024.json",
+    "Tools/source-original-weil-hecke-5-reuse-review-20261024.json",
+    "Tools/source-original-tate-weil-7-reuse-review-20261024.json",
+    "Tools/source-original-tate-cyclotomic-3-reuse-review-20261024.json"
+  ],
+  "additionalCurrentSearch": {
+    "path": "Tools/original-tate-weil-promotion-route-477.json",
+    "sha256": "06973BEEF93D6C73E199F7900D67B80034D954AA43B0D9ED12CE248689BCE5C9"
+  },
+  "nyllCurrentSearch": {
+    "report": "Dubon Reuse Search 2026-10-24 NYLL.md",
+    "reportSha256": "E788C45B03C2BF72EE89FC420B633D5DEB230599F9CEA0E94197E80EE10F4055",
+    "manifest": "Tools/nyll-reuse-20261024-479/archive-manifest.json",
+    "manifestSha256": "B063EEFBC68FFBF7AC1BF3200918AE80B4694100EA7F2610D8F8355CCB8EECCF",
+    "commit": "8c1b16d10afaca09e0dc72753c6575e230d31a55",
+    "localBuild": false,
+    "localImport": false
+  },
+  "productionFocusedReceipt7673": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilDescentDependencyAudit7Production7673.log",
+        "sha256": "E7A26602ACC29416CCDC248A6105D7FAC4D82DA38242B67FEA5CC3C375BC0A68",
+        "requiredProofValueEdges": 23,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalWeilPairing_symm"
+        ],
+        "sourceSha256": "5A23DA5E1C9A96526D8D9DB4C5557DC1A8E421E7360536E93C02C20745FFEDF3"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilLawsDependencyAudit4R2Production7673.log",
+        "sha256": "4E155A622C669317F2F79F0EB02CC11F158D69B92C5BCA8B3439E57173EF9B51",
+        "requiredProofValueEdges": 24,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalWeilBilinear",
+          "Dubon2026.SourceFunctionField.originalWeilBilinear_self_of_odd",
+          "Dubon2026.SourceFunctionField.originalWeilPairing_originalGalois"
+        ],
+        "sourceSha256": "0E29F9BDF93B847D438BA09085AA370BFD5BA2DA9F5685CEBA353C01376445C3"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilAdjunctionDependencyAudit10Production7673.log",
+        "sha256": "0FC3772248C7EB6F06EA0CA54F704AD555B95D7D3A7D8717AE81E23BDD32715D",
+        "requiredProofValueEdges": 30,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalWeilPairing_correspondence_adjunction"
+        ],
+        "sourceSha256": "58A0B8E430E83C61F20524A6E1D0C3D84C717749B04B3CD8BB6948FDC4EEEC51"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilHeckeDependencyAudit5Production7673.log",
+        "sha256": "9FE447C694D864A151825A8331877482E908042FF55AF127E08F47460AC10F9E",
+        "requiredProofValueEdges": 25,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalWeilPairing_tateHecke_self_adjoint",
+          "Dubon2026.SourceFunctionField.originalWeilPairing_tateHecke_coordinate"
+        ],
+        "sourceSha256": "F641ADE04934A55672645782EA0589A430FA68E77954000DB847CD80865D5FDD"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilDependencyAudit7Production7673.log",
+        "sha256": "C2E2283C5C3DB5E94A74FA67C6AA145A64848EC011693BCEABFC62C35AC56F18",
+        "requiredProofValueEdges": 33,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalTateWeilBilinear",
+          "Dubon2026.SourceFunctionField.originalTateWeilPairing_galois",
+          "Dubon2026.SourceFunctionField.originalTateWeilBilinear_self_of_odd",
+          "Dubon2026.SourceFunctionField.originalTateWeilPairing_hecke_self_adjoint",
+          "Dubon2026.SourceFunctionField.originalTateWeilPairing_zero_left",
+          "Dubon2026.SourceFunctionField.originalTateWeilPairing_zero_right",
+          "Dubon2026.SourceFunctionField.originalTateRootsGalois"
+        ],
+        "sourceSha256": "90FDAF167ACD1026A48D77A0807F400B766201D7A730A63A72E96756B87BAF3F"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateCyclotomicDependencyAudit3Production7673.log",
+        "sha256": "F64AF459022FB64158436C95C38DAC8B3CAEBBAAF3E4D3BC8ADFEB22ED72D4E6",
+        "requiredProofValueEdges": 14,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.originalTateWeilPairing_cyclotomic_multiplier_unique"
+        ],
+        "sourceSha256": "69343D160C7AF564812FD62435C4DA29BE6F9FAD18D9D9AF5A06F304827F2846"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilProductionAudit7673.log",
+    "sha256": "B9253D2189DCE1E8B045ECEFACB1F3D79C7682DE8B9843DF8EC83C46B452C508",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-tate-weil-production-build-7673.log",
+    "aggregateSha256": "08806C4BB5CAE63FD2B30EC98B171EB57D669ABAE6EA779176C7436676E36146",
+    "productionModules": 7673,
+    "incrementModules": 36,
+    "axiomChecks": 94,
+    "exhaustiveIncrementTheorems": 169,
+    "linterScopes": 36,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 169,
+    "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The actual original function fields, normalized place orders, residue evaluations, divisor maps and Picard quotient retain their definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 169,
+      "scratchDistinct": 169,
+      "generatedNameRenamings": {},
+      "productionFocused": 169,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceOriginalWeilFunctionChoice",
+            "SourceOriginalWeilSameDivisors",
+            "SourceOriginalWeilEvaluationPowers",
+            "SourceOriginalWeilPrincipalShift",
+            "SourceOriginalWeilPrincipalInvariance",
+            "SourceOriginalWeilClassInvariance",
+            "SourceOriginalWeilPairingDescent"
+          ],
+          "count": 21,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership471For7673.log",
+            "sha256": "4A21F60F134C580A01149E4280058EDEFAD6576137D6CE3A6C75CE4EEDA595CB",
+            "sourceSha256": "50AF48E3823377A6388E6D78A1FCDBE0DD5C23369DBCD226856EBE1E82BF186A"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalWeilCommonRepresentatives",
+            "SourceOriginalWeilBilinearity",
+            "SourceOriginalWeilAlternation",
+            "SourceOriginalWeilArithmetic"
+          ],
+          "count": 25,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership472For7673.log",
+            "sha256": "43945007E89C2D387EBE011A6206BF810F7117BB78A9351C6BF27AD9D9A88273",
+            "sourceSha256": "7E933FAE58EB20ED6BDBFEC03936873BB808EF0C32F84BF093C8C68106C719B3"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalWeilNormAdjunction",
+            "SourceCurvePullbackPushforwardDisjoint",
+            "SourceOriginalWeilNormDatum",
+            "SourceOriginalPicardFiniteMaps",
+            "SourceOriginalWeilPullbackDatum",
+            "SourceOriginalWeilMapClasses",
+            "SourceOriginalWeilAdjunctionWitness",
+            "SourceOriginalWeilAdjunctionRepresentatives",
+            "SourceOriginalWeilAdjunction",
+            "SourceOriginalWeilCorrespondenceAdjunction"
+          ],
+          "count": 42,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership473For7673.log",
+            "sha256": "485D40AB32B591D9D5E3C6D35FF20BF66C44FF715D08F762051BC602832E036E",
+            "sourceSha256": "88CEC9DA824800AC358A0A6A360D294CBE66010E82DE0F04F536092933DE91C4"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalWeilHeckeTranspose",
+            "SourceOriginalWeilTateHeckeCoordinate",
+            "SourceCurveCorrespondenceSwap",
+            "SourceOriginalWeilHeckeSelfAdjoint",
+            "SourceOriginalWeilTateHeckeSelfAdjoint"
+          ],
+          "count": 18,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership474For7673.log",
+            "sha256": "66FC90910815EE6805320FF024C082EFAD677125BF4453E978E78562D8044CC9",
+            "sourceSha256": "01454D7516F47A7A4C0C4630C9C100B520AF1EDF4A0AED6A68C7FA35F96B1EB3"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalWeilLevelDatum",
+            "SourceOriginalWeilLevelCompatibility",
+            "SourceOriginalWeilTateCompatibility",
+            "SourceOriginalTateWeilPairing",
+            "SourceOriginalTateWeilLinearity",
+            "SourceOriginalTateWeilArithmetic",
+            "SourceOriginalTateWeilHecke"
+          ],
+          "count": 53,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership475For7673.log",
+            "sha256": "82901FC88A2DF6C29C5956724F9F3A54FED540DA7FFB524FCEEF48D00E13D378",
+            "sourceSha256": "459DC4737843048360EDD0F130CC10A72271CFFAF576ABDE8FC49138287BC7C0"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalTateWeilCyclotomic",
+            "SourceTateScalarFaithfulness",
+            "SourceOriginalTateWeilMultiplier"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership476For7673.log",
+            "sha256": "B24FED2A246C89A507122B051491740B2171B1877A6611D3F9C2E8146742ABE7",
+            "sourceSha256": "02D6EF8F03E9C73EDDB02A1402E9C326F08F136F340051EAD7DF4F90B6DE4EDA"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilOwnership7673.log",
+        "sha256": "027D897B2E5AFDCA19D66316C8C3A52F66DD507BECABCAF54F941E8AB1CBA29E",
+        "sourceSha256": "6244F8D89D3220E16D01717D4BA0BEC09A5E7C64A59449E8AD1DFBEA32476975"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-160017-952.log",
+        "sha256": "3DCC04011F0CF1745D31C916DA7F4C29AC9E051B0704D74A91C20E430EA37B47"
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 169 distinct names from 169 exhaustive scratch checks are retained: 169 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Nondegeneracy and the required nonzero Hecke-component pairing remain unproved. The determinant-to-pairing identity on that component, actual Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. Scalar-multiplier uniqueness explicitly assumes a nonzero pairing value and does not discharge that assumption. DUB-17--20 OPEN; 16/20. No acceptance gate closes."
+  },
+  "receipt7673": {
+    "recordedUTC": "2026-10-25T02:01:03.880441+00:00",
+    "log": "logs/dubon-build-20261024-173822-568.log",
+    "sha256": "3D8FCDAAE86D3E4E5261E46C6532F5B732F0B688D32C1B7C8D0148BCB7F7465F",
+    "bytes": 12753212,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 7673,
+    "projectTheorems": 50087,
+    "registeredConsumers": 22756,
+    "registeredConstructions": 2033,
+    "declarations": 30668,
+    "generated": 29501,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261024_173240.log",
+    "foundationSha256": "057D8A65174642F4E2961164790DA8920DC1F195E298CA20917540484CE2C2C9",
+    "countReconciliation": {
+      "previousTheorems": 49919,
+      "focusedTheorems": 169,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourceCurve.Place.ramificationAlong.eq_1"
+      ],
+      "addedTheorems": 168,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilOwnership7673.log",
+      "ownershipSha256": "027D897B2E5AFDCA19D66316C8C3A52F66DD507BECABCAF54F941E8AB1CBA29E"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 169,
+      "scratchDistinct": 169,
+      "generatedNameRenamings": {},
+      "productionFocused": 169,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceOriginalWeilFunctionChoice",
+            "SourceOriginalWeilSameDivisors",
+            "SourceOriginalWeilEvaluationPowers",
+            "SourceOriginalWeilPrincipalShift",
+            "SourceOriginalWeilPrincipalInvariance",
+            "SourceOriginalWeilClassInvariance",
+            "SourceOriginalWeilPairingDescent"
+          ],
+          "count": 21,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership471For7673.log",
+            "sha256": "4A21F60F134C580A01149E4280058EDEFAD6576137D6CE3A6C75CE4EEDA595CB",
+            "sourceSha256": "50AF48E3823377A6388E6D78A1FCDBE0DD5C23369DBCD226856EBE1E82BF186A"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalWeilCommonRepresentatives",
+            "SourceOriginalWeilBilinearity",
+            "SourceOriginalWeilAlternation",
+            "SourceOriginalWeilArithmetic"
+          ],
+          "count": 25,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership472For7673.log",
+            "sha256": "43945007E89C2D387EBE011A6206BF810F7117BB78A9351C6BF27AD9D9A88273",
+            "sourceSha256": "7E933FAE58EB20ED6BDBFEC03936873BB808EF0C32F84BF093C8C68106C719B3"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalWeilNormAdjunction",
+            "SourceCurvePullbackPushforwardDisjoint",
+            "SourceOriginalWeilNormDatum",
+            "SourceOriginalPicardFiniteMaps",
+            "SourceOriginalWeilPullbackDatum",
+            "SourceOriginalWeilMapClasses",
+            "SourceOriginalWeilAdjunctionWitness",
+            "SourceOriginalWeilAdjunctionRepresentatives",
+            "SourceOriginalWeilAdjunction",
+            "SourceOriginalWeilCorrespondenceAdjunction"
+          ],
+          "count": 42,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership473For7673.log",
+            "sha256": "485D40AB32B591D9D5E3C6D35FF20BF66C44FF715D08F762051BC602832E036E",
+            "sourceSha256": "88CEC9DA824800AC358A0A6A360D294CBE66010E82DE0F04F536092933DE91C4"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalWeilHeckeTranspose",
+            "SourceOriginalWeilTateHeckeCoordinate",
+            "SourceCurveCorrespondenceSwap",
+            "SourceOriginalWeilHeckeSelfAdjoint",
+            "SourceOriginalWeilTateHeckeSelfAdjoint"
+          ],
+          "count": 18,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership474For7673.log",
+            "sha256": "66FC90910815EE6805320FF024C082EFAD677125BF4453E978E78562D8044CC9",
+            "sourceSha256": "01454D7516F47A7A4C0C4630C9C100B520AF1EDF4A0AED6A68C7FA35F96B1EB3"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalWeilLevelDatum",
+            "SourceOriginalWeilLevelCompatibility",
+            "SourceOriginalWeilTateCompatibility",
+            "SourceOriginalTateWeilPairing",
+            "SourceOriginalTateWeilLinearity",
+            "SourceOriginalTateWeilArithmetic",
+            "SourceOriginalTateWeilHecke"
+          ],
+          "count": 53,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership475For7673.log",
+            "sha256": "82901FC88A2DF6C29C5956724F9F3A54FED540DA7FFB524FCEEF48D00E13D378",
+            "sourceSha256": "459DC4737843048360EDD0F130CC10A72271CFFAF576ABDE8FC49138287BC7C0"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalTateWeilCyclotomic",
+            "SourceTateScalarFaithfulness",
+            "SourceOriginalTateWeilMultiplier"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilScratchOwnership476For7673.log",
+            "sha256": "B24FED2A246C89A507122B051491740B2171B1877A6611D3F9C2E8146742ABE7",
+            "sourceSha256": "02D6EF8F03E9C73EDDB02A1402E9C326F08F136F340051EAD7DF4F90B6DE4EDA"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateWeilOwnership7673.log",
+        "sha256": "027D897B2E5AFDCA19D66316C8C3A52F66DD507BECABCAF54F941E8AB1CBA29E",
+        "sourceSha256": "6244F8D89D3220E16D01717D4BA0BEC09A5E7C64A59449E8AD1DFBEA32476975"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-160017-952.log",
+        "sha256": "3DCC04011F0CF1745D31C916DA7F4C29AC9E051B0704D74A91C20E430EA37B47"
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 169 distinct names from 169 exhaustive scratch checks are retained: 169 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Nondegeneracy and the required nonzero Hecke-component pairing remain unproved. The determinant-to-pairing identity on that component, actual Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. Scalar-multiplier uniqueness explicitly assumes a nonzero pairing value and does not discharge that assumption. DUB-17--20 OPEN; 16/20. No acceptance gate closes."
+  }
+}

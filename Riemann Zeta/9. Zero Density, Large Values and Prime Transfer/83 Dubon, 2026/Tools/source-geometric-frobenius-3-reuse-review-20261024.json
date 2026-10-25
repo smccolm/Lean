@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original primitive-form Frobenius quadratic relation -> geometric Frobenius correspondence on residue Picard classes -> arithmetic coefficient Frobenius equals geometric place pushforward -> literal q-expansion Frobenius and its integral field endomorphism",
+  "precedingScratchReceipts": {
+    "source-frobenius-picard-reduction-5-scratch-receipt.json": "102E5F244AC1122EC7132953FD7C6F9917B6CE92175F100E33319D134A452AAF"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralPowerSeriesFrobenius.lean",
+      "sha256": "0ECA2C520B921E7E4A60F79E4B235850EF0EEBD3DE8C5F20F246B6151F345E22"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHasseCoefficientTransport.lean",
+      "sha256": "0117D8ABE912AFC182FA5EF7E81467325FE7F509F7113CF4FB8DE1C80A5AA466"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteEmbeddingRestriction.lean",
+      "sha256": "FD6A2B3D7FBB9559207108D49E2CA24908458B65AD3D63C44BA3A53FC7270D20"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueCoefficientPlaceOrders.lean",
+      "sha256": "9862A46D4116D1C1B4594EE0B361E6544EFA63CB3E7EDBF2972BDEB091D69E3E"
+    }
+  ],
+  "routeAdjustment": "Reuse the power-series expansion and coefficient transport lemmas for three Laurent identities, construct the actual geometric Frobenius as inverse coefficient Frobenius followed by pth power, prove its literal q-expansion formula and integrality, then identify its restriction on places with the already proved arithmetic coefficient action.",
+  "discharged": "The actual residue geometric field endomorphism has literal Laurent expansion q -> q^p and an explicit monic integral equation. Its literal valuation-ring comap is the proved arithmetic coefficient place, and its normalized order equation has ramification factor p. Existing power-series Frobenius, coefficient transport and Laurent decomposition prove the formula; existing place discreteness proves the geometric restriction without a general finite-morphism construction.",
+  "remaining": "Divisor/Picard geometric pushforward, Hecke compatibility, the quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\geometric-frobenius-route-440.json",
+    "sha256": "08613AF282AF65207D9CF563196DDD059465152C46E8DAA50D40DFF30F7D3E9C",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original primitive-form Frobenius quadratic relation -> geometric Frobenius correspondence on residue Picard classes -> arithmetic coefficient Frobenius equals geometric place pushforward -> literal q-expansion Frobenius and its integral field endomorphism",
+      "reuseChecked": [
+        "The pinned Mathlib power-series theorem MvPowerSeries.map_frobenius_expand and LaurentSeries.single_order_mul_powerSeriesPart supply the full Laurent calculation. Local SourceIntegralPowerSeriesFrobenius already proves qExpand_ofPowerSeries_eq_expand, and SourceHasseCoefficientTransport already proves coeffMap_ofPowerSeries.",
+        "The frozen Apache-2.0 FLT Definitions/Def_ModularCurve_FrobeniusModL.lean and S_ModularCurve_reductionModL_smul_of_isFrobeniusAt.lean contain the exact short Laurent and arithmetic/geometric comparison arguments. Existing residue coefficient automorphisms allow direct construction as inverse coefficient Frobenius followed by the pth-power homomorphism, then the Laurent calculation proves the literal qExpand formula.",
+        "Native Place restriction along an integral algebra homomorphism, normalized orders, and the existing divisor pushforward infrastructure will be inspected before extending beyond the field comparison. No independent semilinear automorphism framework is needed."
+      ],
+      "selectedRoute": "Reuse the power-series expansion and coefficient transport lemmas for three Laurent identities, construct the actual geometric Frobenius as inverse coefficient Frobenius followed by pth power, prove its literal q-expansion formula and integrality, then identify its restriction on places with the already proved arithmetic coefficient action.",
+      "assumptionsToDischarge": "The geometric/arithmetic Frobenius identification on actual residue modular fields and places; no assumed Frobenius formula or place comparison.",
+      "boundary": "Geometric divisor/Picard pushforward and Hecke compatibility, the quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "routeRefinement": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\geometric-frobenius-route-440-refinement.json",
+    "sha256": "834F1A35EA2603F25F8E5823E0FF8AA9BC1AD180D0C41C8269511EC70FDB3AE2",
+    "review": {
+      "parentRoute": "geometric-frobenius-route-440.json",
+      "exactTarget": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "dependency": "original primitive-form Frobenius quadratic relation -> geometric Frobenius correspondence on residue Picard classes -> arithmetic coefficient Frobenius equals geometric place pushforward -> literal q-expansion Frobenius and its integral field endomorphism",
+      "reuseAssessment": "SourceCurveFiniteEmbeddingRestriction requires a finite ring homomorphism; the older restrictAlong additionally assumes characteristic zero. For the required geometric/arithmetic place comparison, finiteness can be deferred: the literal valuation-ring comap equals the already proved residue coefficient place, which supplies its discreteness and nontriviality. This constructs exactly the required place and derives its normalized order equation, without a new general restriction API.",
+      "discharged": "Literal q-expansion Frobenius, explicit monic integral equation, actual geometric valuation-ring comap and arithmetic-place equality, and normalized ramification order p.",
+      "remaining": "Divisor/Picard geometric pushforward, Hecke compatibility, the quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20."
+    }
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "recordedUTC": "2026-10-25T00:17:34.899908+00:00",
+  "repository": "https://github.com/n-yamaguchi-0729/NYLL",
+  "commit": "8c1b16d10afaca09e0dc72753c6575e230d31a55",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\.github\\scripts\\proof-manifest-config.json.txt",
+      "path": ".github/scripts/proof-manifest-config.json.txt",
+      "sha256": "DB52707EDF163F4485843362FEA8199010EA6B45CD26449E0F135FEEE0890FBD",
+      "bytes": 2875
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\.github\\scripts\\publication\\verification\\ExportSelected.lean.txt",
+      "path": ".github/scripts/publication/verification/ExportSelected.lean.txt",
+      "sha256": "BA9A2426C26115A1F2843458DE7F8D613225720F592C0C325AAB9F555727F71F",
+      "bytes": 3702
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\.github\\scripts\\publication\\verification\\Inventory.lean.txt",
+      "path": ".github/scripts/publication/verification/Inventory.lean.txt",
+      "sha256": "4449213056A1CF1C1CB4B7D175E00539B57BE9C2D8F862E04D90E7AD70353FBE",
+      "bytes": 21975
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\.github\\scripts\\publication\\verification\\README.md.txt",
+      "path": ".github/scripts/publication/verification/README.md.txt",
+      "sha256": "82ED63583FA98BF4B884BC053A28A5BF7EE0326A4AD68A929AD5E25B9164B567",
+      "bytes": 2405
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\.github\\scripts\\publication\\verification\\ReplayKernel.lean.txt",
+      "path": ".github/scripts/publication/verification/ReplayKernel.lean.txt",
+      "sha256": "068090945D168CB21C627A3DEEFACE6C27C4D46AB0901071F8CE36070D41A549",
+      "bytes": 2803
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\.github\\scripts\\publication\\verification\\scope.py.txt",
+      "path": ".github/scripts/publication/verification/scope.py.txt",
+      "sha256": "7B103DAC437958F971609DB9282D43ED00DE0AB0AE06FF650B3ADF6746FBB1BD",
+      "bytes": 4641
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\.github\\scripts\\publication\\verification\\verify.py.txt",
+      "path": ".github/scripts/publication/verification/verify.py.txt",
+      "sha256": "73F6D1B1F13E8FF10984D1FFA51B57D65A153621858B9D6FDA3962A4DD9A0E0F",
+      "bytes": 27493
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\.github\\workflows\\proof-check.yml.txt",
+      "path": ".github/workflows/proof-check.yml.txt",
+      "sha256": "FBEB5621508004CCC5C03D2F8B87F6290D06F3F5ADDE85FD89707836649275BB",
+      "bytes": 5615
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\checks.json",
+      "path": "checks.json",
+      "sha256": "6DE78B8A4A99255DB0BA1E1F0A900C4E89CCC59B9AF6FD0C3BD4D781F9C4D72E",
+      "bytes": 95572
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\commit.json",
+      "path": "commit.json",
+      "sha256": "396431609C8273465517C0AEBEF3727C7BF8543821D03F32176814201D4557E6",
+      "bytes": 11753
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\dependency-download-receipt-1.json",
+      "path": "dependency-download-receipt-1.json",
+      "sha256": "2D0889341A3468775C7F5C69043C475132EEB90968C162D7DB6D20DABF09BA27",
+      "bytes": 8710
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\dependency-download-receipt-2.json",
+      "path": "dependency-download-receipt-2.json",
+      "sha256": "C034A2A25143944E4C5729AD98C5972D07372750CFA7693C00E1E201B07CE43C",
+      "bytes": 4390
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\download-receipt.json",
+      "path": "download-receipt.json",
+      "sha256": "723AA94AC8542608F4742CD59DE0B14351CEB32ADEB7D50ADE35D234A86A2A06",
+      "bytes": 1838
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\lake-manifest.json.txt",
+      "path": "lake-manifest.json.txt",
+      "sha256": "AD850380B47B59868A88C7B76F8775A3FA5A55E432E1D111A007FF2EBF056DED",
+      "bytes": 3558
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\lakefile.toml.txt",
+      "path": "lakefile.toml.txt",
+      "sha256": "2999FBF682C3754BA8B20DBA5F6839908A93994ED7DD8ADAEFACC2720FAE8FC6",
+      "bytes": 1099
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\lean-toolchain.txt",
+      "path": "lean-toolchain.txt",
+      "sha256": "8DC8D6F560141069D9073E370611716EF77ADA0DA8FFA37E2149F44B2E63AC7A",
+      "bytes": 29
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\LICENSE.txt",
+      "path": "LICENSE.txt",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+      "bytes": 11357
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\NOTICE.txt",
+      "path": "NOTICE.txt",
+      "sha256": "05FA26E5335FA16519AF1B179BC1EBCE5DA0D6B208CFF68241B5540C1878B59C",
+      "bytes": 238662
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\Divisors\\ClassGroup\\ClassGroup.lean.txt",
+      "path": "Nyll/AlgebraicCurves/Divisors/ClassGroup/ClassGroup.lean.txt",
+      "sha256": "B5FEC14592B7BD4CF94BFF9FC8C18250DD5E44BA2964382E75155EDC374A9FD1",
+      "bytes": 8955
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\Divisors\\ClassGroup\\PicardZero.lean.txt",
+      "path": "Nyll/AlgebraicCurves/Divisors/ClassGroup/PicardZero.lean.txt",
+      "sha256": "6B259923F9D9F284DBD72FDFA8224E811F909BB08E9CF7A0449AA5BD18D2ED13",
+      "bytes": 5768
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\Divisors\\Maps\\EvaluationMaps.lean.txt",
+      "path": "Nyll/AlgebraicCurves/Divisors/Maps/EvaluationMaps.lean.txt",
+      "sha256": "F8FA201BDDF18BDF73865FB2178062B5BA4E7667A56841B80296A390AFD126BD",
+      "bytes": 6798
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\Divisors\\Maps\\Maps.lean.txt",
+      "path": "Nyll/AlgebraicCurves/Divisors/Maps/Maps.lean.txt",
+      "sha256": "79C37699F5016E1AF7DD1B0F3447AE3D101448B5549B58B10F631CE0D26808B7",
+      "bytes": 30040
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\Divisors\\Maps\\Semilinear.lean.txt",
+      "path": "Nyll/AlgebraicCurves/Divisors/Maps/Semilinear.lean.txt",
+      "sha256": "AAD8882E91E0F2803C3B2B88A52849303AF782848CD68047B63653CFA5718F06",
+      "bytes": 14500
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\Divisors\\Norm\\PushforwardDivSeparable.lean.txt",
+      "path": "Nyll/AlgebraicCurves/Divisors/Norm/PushforwardDivSeparable.lean.txt",
+      "sha256": "C52D6F02C875E3096B3C5C6BA79170CFB28154FA8FB9B99FD743DD772DE5B71B",
+      "bytes": 1690
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\Divisors\\Semilinear\\AlgAutSmulPlace.lean.txt",
+      "path": "Nyll/AlgebraicCurves/Divisors/Semilinear/AlgAutSmulPlace.lean.txt",
+      "sha256": "E3433D30A35679AD80DFAD90CF7E186CB24266368CFC1F418D49398F2E705437",
+      "bytes": 2066
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\FunctionFields\\Transcendence\\CurveOver.lean.txt",
+      "path": "Nyll/AlgebraicCurves/FunctionFields/Transcendence/CurveOver.lean.txt",
+      "sha256": "25DB5AB8155AE7290CC991C38553F76FDD224C694BAD7AAB4E08BD6FABE57FD5",
+      "bytes": 3464
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\FunctionFields\\Transcendence\\CurveTranscendentalSeparable.lean.txt",
+      "path": "Nyll/AlgebraicCurves/FunctionFields/Transcendence/CurveTranscendentalSeparable.lean.txt",
+      "sha256": "14049230D8F9790D7133DD9DA38CFF41216B96F1D2BCBF3AE3CABFCE06780A08",
+      "bytes": 3589
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\FunctionFields\\Transcendence\\SeparatingTranscendental.lean.txt",
+      "path": "Nyll/AlgebraicCurves/FunctionFields/Transcendence/SeparatingTranscendental.lean.txt",
+      "sha256": "17A7A2FF981E25C0ED9C15130518E8E4C5D597B64345FD0CFA0E87044E858ECC",
+      "bytes": 7594
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\Geometry\\Picard\\GroupLaw\\RelativeGroupLaw.lean.txt",
+      "path": "Nyll/AlgebraicCurves/Geometry/Picard/GroupLaw/RelativeGroupLaw.lean.txt",
+      "sha256": "A6ECB82430E8FCB3F78544FA5BA0C6418B9940C99E5DC668930DD7F70E1719EE",
+      "bytes": 7534
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\Geometry\\Picard\\RelSubPic\\Group.lean.txt",
+      "path": "Nyll/AlgebraicCurves/Geometry/Picard/RelSubPic/Group.lean.txt",
+      "sha256": "D0F61B35AAECCB310B23FE71DC79B1A6C63427CE9EF6ABD5043FC12DE6CDAD61",
+      "bytes": 10198
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\Geometry\\Picard\\Representability\\RepresentsRelSubPicGroup.lean.txt",
+      "path": "Nyll/AlgebraicCurves/Geometry/Picard/Representability/RepresentsRelSubPicGroup.lean.txt",
+      "sha256": "4B5D17302ACEDF00E3C67B223E33A7A463C0F9430ACBC3616D7C3C4777D97C8A",
+      "bytes": 8177
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\Geometry\\Schemes\\Smooth\\EtaleFormallyUnramifiedStalkMap.lean.txt",
+      "path": "Nyll/AlgebraicCurves/Geometry/Schemes/Smooth/EtaleFormallyUnramifiedStalkMap.lean.txt",
+      "sha256": "B14B9E65682BB7DA9F7919920034209DAEFC1E7A7C685E77EED40E3D0206F290",
+      "bytes": 17228
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\Geometry\\WeilReciprocityAlgClosed.lean.txt",
+      "path": "Nyll/AlgebraicCurves/Geometry/WeilReciprocityAlgClosed.lean.txt",
+      "sha256": "5E76F8D15E1E7E11CAF1DFF9EE2713C747FEE3D2B7C45426AB8B6E4DF31B1037",
+      "bytes": 15306
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\Models\\Construction\\Basic.lean.txt",
+      "path": "Nyll/AlgebraicCurves/Models/Construction/Basic.lean.txt",
+      "sha256": "EE0318AC49A1FC74FD7862E71448A3F844633ADE1E9BF3360BD0D0183DB63084",
+      "bytes": 4643
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\Models\\Construction\\BasicPerfectField.lean.txt",
+      "path": "Nyll/AlgebraicCurves/Models/Construction/BasicPerfectField.lean.txt",
+      "sha256": "44D989D697BF2FCD3072628F0AFE26D55FABB2D048B6DE4C83111522212F7F68",
+      "bytes": 10894
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\Places\\Degree\\IsRationalAlgClosed.lean.txt",
+      "path": "Nyll/AlgebraicCurves/Places/Degree/IsRationalAlgClosed.lean.txt",
+      "sha256": "5F5EBFD18164D0D042BA497787A5F2BA6FB4839B0D52B8B92FFACCCC4CD41589",
+      "bytes": 7678
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\Places\\Ramification\\InertiaDegEqOneIsRational.lean.txt",
+      "path": "Nyll/AlgebraicCurves/Places/Ramification/InertiaDegEqOneIsRational.lean.txt",
+      "sha256": "66C7399F17B8DFD9935B8615FE250182212D933A5901878344DB8F8A087E6DE2",
+      "bytes": 1610
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\Places\\Restriction\\RestrictEq.lean.txt",
+      "path": "Nyll/AlgebraicCurves/Places/Restriction/RestrictEq.lean.txt",
+      "sha256": "ECD8A90A8332B2ABCA51CB21E3E2D932CC5E4B4534EE8668ACE64FFE92B4C76D",
+      "bytes": 3429
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\AlgebraicCurves\\Places\\Restriction\\RestrictionComposition.lean.txt",
+      "path": "Nyll/AlgebraicCurves/Places/Restriction/RestrictionComposition.lean.txt",
+      "sha256": "412D89197128E9FBEBC6DF32DEB2C91E5DDA211B64309AA5E1F7306E3EDD7585",
+      "bytes": 16499
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\JacobianVarieties\\Pic0\\DivisorialWeilPairingDataAlgClosed.lean.txt",
+      "path": "Nyll/JacobianVarieties/Pic0/DivisorialWeilPairingDataAlgClosed.lean.txt",
+      "sha256": "C6193C2AB1200A749CEBB6F5F9A16CE1C0CEFCDB13CE67E5A145B0F98F085827",
+      "bytes": 10438
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\JacobianVarieties\\Pic0\\JacobianPackAlgClosed.lean.txt",
+      "path": "Nyll/JacobianVarieties/Pic0/JacobianPackAlgClosed.lean.txt",
+      "sha256": "9A38DCB61BD39A8D40DCBCA9A3F7314369104CBB1E1BEABFE3CF371CC011AC73",
+      "bytes": 50998
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\JacobianVarieties\\Pic0\\NsmulEqJacobianPack.lean.txt",
+      "path": "Nyll/JacobianVarieties/Pic0/NsmulEqJacobianPack.lean.txt",
+      "sha256": "D23758FC54690001BBA3C00025584466CC200EE098ADB656139AED131A7C1E2A",
+      "bytes": 50936
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\JacobianVarieties\\Pic0\\OrdEqMulPowNeNeZero.lean.txt",
+      "path": "Nyll/JacobianVarieties/Pic0/OrdEqMulPowNeNeZero.lean.txt",
+      "sha256": "BC1766C922D7DB3ED29E9CE190A71791EC8077C451E553FC437D325226582931",
+      "bytes": 5670
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\JacobianVarieties\\Pic0\\ZsmulEqFiniteDimensionalRatFunc.lean.txt",
+      "path": "Nyll/JacobianVarieties/Pic0/ZsmulEqFiniteDimensionalRatFunc.lean.txt",
+      "sha256": "C0FA33AFC3179259D2158DB91BB8C80EA7B86C637CA16A0C27504E68597D9B7E",
+      "bytes": 53477
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\JacobianVarieties\\Picard\\Representability\\AlgEquivZeroCutAlgClosed.lean.txt",
+      "path": "Nyll/JacobianVarieties/Picard/Representability/AlgEquivZeroCutAlgClosed.lean.txt",
+      "sha256": "55401B94D782368D3E1C5D3F358FA6DAD4FE8A15E09BF3402BFA29A1DC223925",
+      "bytes": 67558
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\JacobianVarieties\\Picard\\Representability\\CurveModelPicardRepresentabilityAbelJacobi.lean.txt",
+      "path": "Nyll/JacobianVarieties/Picard/Representability/CurveModelPicardRepresentabilityAbelJacobi.lean.txt",
+      "sha256": "FD0AB36A96C70FF085F4A90CF39AB9804BF3339EA14F18D1F84CB6E8A058E556",
+      "bytes": 52784
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\JacobianVarieties\\WeilPairing\\CharZeroNondegeneracy.lean.txt",
+      "path": "Nyll/JacobianVarieties/WeilPairing/CharZeroNondegeneracy.lean.txt",
+      "sha256": "BB2CE4C7CBA3A97BE810AB6F52ED70478D596AD02E2204AF39F55E834BAF4952",
+      "bytes": 2426
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\JacobianVarieties\\WeilPairing\\Divisorial.lean.txt",
+      "path": "Nyll/JacobianVarieties/WeilPairing/Divisorial.lean.txt",
+      "sha256": "2A558AC95D2C6F3E0DFA8FEE508367440643D4AE81630FC19EFEC82D3D2BA82C",
+      "bytes": 31654
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\JacobianVarieties\\WeilPairing\\DivisorialPairingToHomInjectiveDivisibleCoprime.lean.txt",
+      "path": "Nyll/JacobianVarieties/WeilPairing/DivisorialPairingToHomInjectiveDivisibleCoprime.lean.txt",
+      "sha256": "384697868F31F43CC1635D466C0D8FC34F4697FC723016175A4E2E3576BA7F6B",
+      "bytes": 30102
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\JacobianVarieties\\WeilPairing\\HasPrincipalDivisorsFiniteDimensional.lean.txt",
+      "path": "Nyll/JacobianVarieties/WeilPairing/HasPrincipalDivisorsFiniteDimensional.lean.txt",
+      "sha256": "AD31556DDDD8E826E76E69F63FE89E31C7EB814F105C2F679983A20314B36E14",
+      "bytes": 8339
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\Nyll\\SchemeTheory\\Morphisms\\ReducedSmooth.lean.txt",
+      "path": "Nyll/SchemeTheory/Morphisms/ReducedSmooth.lean.txt",
+      "sha256": "FD3BCB2A557DDEEC9A3721F1F3EDDDF37937A2D0F580B4929AE19E6152E6896F",
+      "bytes": 2843
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\README.md.txt",
+      "path": "README.md.txt",
+      "sha256": "46F30C3C2323C81E1046633E05F634D1D831C1A8C6DB18DC7431983A5F861085",
+      "bytes": 4503
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\repository.json",
+      "path": "repository.json",
+      "sha256": "BF4B020FE3E73B1095C8E2E353F919096AEA5FB48060C6193BFE756E17AAF72A",
+      "bytes": 6160
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\tree.json",
+      "path": "tree.json",
+      "sha256": "A87635111517891F90176E108B43750D66486CF40F8BD54B8D3542DA5A8F7653",
+      "bytes": 4294455
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\nyll-nondegeneracy-20261024\\workflowRuns.json",
+      "path": "workflowRuns.json",
+      "sha256": "04D0C62A5D55D1EB0661640B48E0E76C130E66AFD7ED676BA986830652921B1F",
+      "bytes": 76642
+    }
+  ],
+  "report": {
+    "source": "E:\\Lean\\.tmp\\dubon83\\Dubon Reuse Search 2026-10-24 NYLL.md",
+    "path": "Dubon Reuse Search 2026-10-24 NYLL.md",
+    "sha256": "E788C45B03C2BF72EE89FC420B633D5DEB230599F9CEA0E94197E80EE10F4055"
+  },
+  "localBuild": false,
+  "localImport": false,
+  "rootPinsChanged": false,
+  "fullExternalTransitiveClosureReviewed": false,
+  "publicCI": "https://github.com/n-yamaguchi-0729/NYLL/actions/runs/39301598861",
+  "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+  "chain": "residual association -> Frobenius characteristic polynomial -> determinant -> nonzero Hecke-component pairing -> Weil nondegeneracy -> auxiliary-cover Picard divisibility",
+  "decision": "Candidate adaptation of actual Picard divisibility and its Kummer consumer; retain native original pairing and audited entry witnesses. Assess generic representability port against extending the original analytic comparison before expanding either dependency.",
+  "remaining": "Auxiliary-cover divisibility, evaluation transfer, finite-level nondegeneracy, Tate nondegeneracy, required Hecke-component restriction and determinant remain to be proved locally. No gate closes.",
+  "gates": "16/20; DUB-17--20 OPEN"
+}

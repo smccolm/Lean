@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "characteristic-two genus/Picard -> exact weighted exceptional census -> transitive order-twelve quotient marks -> necessary Sylow counts and centralizers",
+  "precedingScratchReceipts": {
+    "source-char-two-place-classifier-4-scratch-receipt.json": "673C0B898A42BFDF7AF0BFEFD3C956E2E86B22D0AA3624E7C4EEC535EDF8FCC1"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\GroupTheory\\SpecificGroups\\Alternating\\KleinFour.lean",
+      "sha256": "0FC6D99257BC2BF15EF3AE2870AEA503FAC45C5FA989DBB6063BB597AA06DE70"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\GroupTheory\\Sylow.lean",
+      "sha256": "ED8BD375920B7DDF842D8388CB4F444F9C8DF51C781D25D73782DFD5A7E6A2D7"
+    }
+  ],
+  "routeAdjustment": "Adapt only the source Sylow/count/centralizer chain needed by the exact transitive mark theorem. Do not construct an A4 isomorphism, classify general finite groups or enlarge unrelated group infrastructure.",
+  "discharged": "For a transitive action of a finite group of order twelve whose elements square or cube to one, orbit sizes are 1,3,4,6,12. The involution marks are 1,3,0,2,0 and the cubic marks are 1,0,1,0,0. Every adapted group-theoretic lemma occurs in this exact conditional consumer.",
+  "remaining": "The actual characteristic-two quotient must supply the cardinality, exponent and fixed-subgroup inputs before weighted census and genus/Picard assembly. Original arithmetic-action comparison and automorphy remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\order-twelve-marks-route-422.json",
+    "sha256": "568EB3B487F1C2677252929B1EED87C1EBD7D69D16C3B3B2E73B8C356ECD2A4B",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "characteristic-two genus/Picard -> exact weighted exceptional census -> transitive order-twelve quotient marks -> necessary Sylow counts and centralizers",
+      "reuseChecked": [
+        "The actual modular cyclic-to-place classifier is proved in scope 421; its remaining finite-group input is the exact five orbit sizes and two fixed-point mark rows.",
+        "Pinned Mathlib contains alternatingGroup.kleinFour and its order-twelve Sylow facts, but applying them would require an additional isomorphism from the actual sign quotient. The source theorem already accepts exactly the quotient cardinality and square-or-cube exponent alternatives.",
+        "Existing local dihedral census applies to an order-six action and cannot supply the order-twelve marks. Native Sylow, orbit-stabilizer and quotient fixed-fiber cardinality APIs are used by the exact frozen source proof."
+      ],
+      "selectedRoute": "Adapt only the source Sylow/count/centralizer chain needed by the exact transitive mark theorem. Do not construct an A4 isomorphism, classify general finite groups or enlarge unrelated group infrastructure.",
+      "assumptionsToDischarge": "Prove the five possible orbit sizes and the fixed-point marks under the explicit order-twelve/square-or-cube conditions. A later actual elliptic consumer will derive these conditions, choose the involution and cubic action, and use their proved fixed-subgroup counts.",
+      "boundary": "These are conditional finite-group marks until the actual characteristic-two quotient consumes them. Weighted census, genus/Picard and original arithmetic/automorphy remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_MulAction_natCard_fixedBy_of_isPretransitive_of_card_eq_twelve.lean.txt",
+    "sha256": "BFB374B530FA6D5888FED12EAAE5C5630DA9FA48E8925D55E37252628E513EEE",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The exact transitive mark theorem and only its necessary Sylow/count/centralizer dependencies are adapted. Native Sylow and quotient cardinality APIs are reused. Unused hypotheses and redundant tactics are removed; no source options or linter suppressions are copied. No external build or import is claimed."
+  }
+}

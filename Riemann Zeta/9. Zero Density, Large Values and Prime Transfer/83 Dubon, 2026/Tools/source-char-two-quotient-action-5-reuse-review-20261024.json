@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "non-CM modular-form application -> source modularity prerequisites -> characteristic-two genus/Picard -> weighted exceptional census -> actual sign-quotient action and order-twelve marks",
+  "precedingScratchReceipts": {
+    "source-char-two-fixed-counts-9-scratch-receipt.json": "63BAC1829D8A34960D6B725B0D7FFF4B1F869AE80262B0579C25CF1B4E62E507"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimeTorsionScalarAction.lean",
+      "sha256": "95FF614C45444CDBEE995284F637510D5CADC266E7BAB8B4AF16CB19523D5D07"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceDihedralCubicNonscalar.lean",
+      "sha256": "D3E37C2915F5087657757EA74CB9302D628BE16BE7D63990440D3EA5FEA2CE25"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticQuadraticFixedCounts.lean",
+      "sha256": "3CD410BE05BF5AFD78A899CE45781D1077A8D6136CB9C2A9D74FAC48825C2334"
+    }
+  ],
+  "routeAdjustment": "Prove only the actual quotient exponent, its two marked elements and its action on cyclic order-N subgroups; use existing maps to connect to the classifier and fixed counts.",
+  "discharged": "The actual order-twelve sign quotient has the required exponent and nontrivial involution/cubic marked elements. Its action on actual cyclic order-N subgroups has the exact modular-classifier orbits, the exact global nuTwo/nuThree fixed counts, and the full local orbit marks. Every abstract group/action/count premise of the marks is discharged.",
+  "remaining": "Sum the fixed points over the actual modular-place fibers to derive the weighted census. Characteristic-two differential contribution and genus/Picard, original arithmetic-action comparison and automorphy remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\char-two-quotient-action-route-425.json",
+    "sha256": "A39F855F43847A49EF85A20378002F9A691A8D489F63455BC37B93CE643D27CB",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "non-CM modular-form application -> source modularity prerequisites -> characteristic-two genus/Picard -> weighted exceptional census -> actual sign-quotient action and order-twelve marks",
+      "reuseChecked": [
+        "Scopes 410 and 424 already provide the actual order-twelve quotient, central negation, native point homomorphism and explicit quartic/cubic changes.",
+        "Scope 422 proves the exact transitive marks; scope 421 classifies actual modular places by cyclic-subgroup orbits.",
+        "Mathlib pointwise subgroup actions, quotient action lift and existing cyclicStabilizerRelated avoid repeating the upstream HEq coordinate/action development."
+      ],
+      "selectedRoute": "Prove only the actual quotient exponent, its two marked elements and its action on cyclic order-N subgroups; use existing maps to connect to the classifier and fixed counts.",
+      "assumptionsToDischarge": "Every quotient element squares or cubes to one; the marked elements are nontrivial with orders two and three; the actual action has the classifier orbits and the already proved fixed counts.",
+      "boundary": "The weighted census and characteristic-two genus/Picard assembly, original arithmetic-action comparison and automorphy remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_ord_jqModC_census_of_char_two.lean.txt",
+    "sha256": "5D9DB75E32CCC39AAB2483D9D9C7A16E98952759A0704647D74A46C2F033EA7F",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The source action and marked elements are adapted using the already proved native point homomorphism, sign quotient, actual fixed counts and source relation-to-map equality. Mathlib supplies pointwise subgroup actions and the quotient lift; the existing order-twelve marks instantiate on every actual orbit. No external build or import is claimed."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original Tate Frobenius quadratic relation -> actual Hecke norm reduction -> explicit degeneracy norm product -> complete embedding census -> Atkin-Lehner involution -> exact images of original divisor generators",
+  "precedingScratchReceipts": {
+    "source-atkin-embedding-2-scratch-receipt.json": "A65A05AD5E975DB8F05A894572BD48EA17DD6E211AFF6FE324D374710C6FED4A"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPredecessorGeneration.lean",
+      "sha256": "38C80C9B1CFF6B281AAF59891D0B271F5502DBD9397815D78AA7CFBDF902B031"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalConjugateRootBounds.lean",
+      "sha256": "E9E2674CA61FCA9647FEC311D1D703282225E128A06CBB11C29B50C742858F79"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAllLevelDegree.lean",
+      "sha256": "27FF79157F5F645B61960FF1E059DB9F8C1721A1653B9FB5069347F74C6028AA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimePowerRelationTransport.lean",
+      "sha256": "E6748B92E77B0390485891939FF17DF85E2570E294CB0D976E7361DE9594BBE7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAtkinEmbedding.lean",
+      "sha256": "100DA388FC31F269D60A9D87B2B315B50D6EE4BECD1D2F8611C2840813C7EF0F"
+    }
+  ],
+  "routeAdjustment": "Prove directly that the common rational Laurent root of Phi_M(j,X) and Phi_p(j_(Mp),X) is j_M, using the proved all-level conjugate product. Apply both transported relations to the embedding's image of j_(dp), then restrict the embedding and prove involution on the original generators.",
+  "discharged": "The common-root theorem derived from existing all-level conjugate products pins j_(Np) to j_N. The proved two-generator description gives preservation of the actual level Np field and an involution, with q-expansion on the entire lower field. This removes generator preservation and involution assumptions from the norm-product route without a new prime-factor induction or polynomial-symmetry premise.",
+  "remaining": "The actual degeneracy norm-product identity must still be proved, followed by Hecke/Picard compatibility, the quadratic relation, residual association, automorphy and all-weight continuation. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\atkin-generator-uniqueness-route-444.json",
+    "sha256": "2BD069DE1D9281A7666B3647121EE3E43A8BE374D1D683565148C61FF2BC8A48",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original Tate Frobenius quadratic relation -> actual Hecke norm reduction -> explicit degeneracy norm product -> complete embedding census -> Atkin-Lehner involution -> exact images of original divisor generators",
+      "reuseChecked": [
+        "SourceOriginalPredecessorGeneration already proves uniqueness of a common lower-level minimal-polynomial root and an adjacent prime root using all-level conjugate products.",
+        "SourceOriginalConjugateRootBounds excludes the large prime branch and forces the top twist to be one. SourceOriginalAllLevelDegree supplies the conjugate product at every nonzero level.",
+        "SourcePrimePowerRelationTransport transports exact bivariate relations through a subfield embedding; SourceAllDivisorMonicRelations substitutes the actual j-series. These replace the external prime-by-prime generator induction."
+      ],
+      "selectedRoute": "Prove directly that the common rational Laurent root of Phi_M(j,X) and Phi_p(j_(Mp),X) is j_M, using the proved all-level conjugate product. Apply both transported relations to the embedding's image of j_(dp), then restrict the embedding and prove involution on the original generators.",
+      "assumptionsToDischarge": "Generator-image preservation for the constructed Atkin embedding; subsequently field preservation and involution, with no assumed modular-polynomial symmetry or norm identity.",
+      "boundary": "Actual norm-product identification, Hecke/Picard compatibility, the quadratic relation, residual association, automorphy and all-weight continuation remain open. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

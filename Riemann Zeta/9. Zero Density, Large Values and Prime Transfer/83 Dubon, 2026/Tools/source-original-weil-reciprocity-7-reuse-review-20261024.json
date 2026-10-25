@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "modular-form concentration -> actual residual Galois association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Weil pairing -> original Weil reciprocity -> actual finite rational coordinate and norm transfer",
+  "precedingScratchReceipts": {
+    "source-rational-coordinate-reciprocity-11-scratch-receipt.json": "3F95A72F0A5ABD4CDCBBD5CEB14B93F08B23E091D819AEDE1DB93A41466B55F5"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalUniformizerFinite.lean",
+      "sha256": "AC6FB240D25BC98E61AF69BFD213175AD1CD82ACB081EA3FD941D43DBE318C66"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrincipalDivisors.lean",
+      "sha256": "231062B499795FAFA62040712A05023394D290B23EE2D0ECFA737A0BEA072832"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveNormFiber.lean",
+      "sha256": "E520CCC04C216018AE815938DD60D5ED27E8AB5960C33B0BACB95C442FF245DB"
+    }
+  ],
+  "routeAdjustment": "Reuse the already proved original finiteness over every transcendental coordinate, generic field-norm evaluation, divisor pullback product, residue restriction, finite pushforward product, norm order and ramification positivity. Construct the precise RatFunc-to-original consumers. Coordinate reciprocity alone suffices; no full arbitrary-pair rational reciprocity induction is imported.",
+  "discharged": "Weil reciprocity is proved on the actual original modular function field over algebraically closed rational-algebra constants: f evaluated on the actual principal divisor of g equals g evaluated on that of f for nonzero f and g with disjoint order support. The constant case uses proved principal degree zero; the nonconstant case constructs the actual finite rational coordinate and transfers coordinate reciprocity through actual norm, pullback and pushforward identities. Finiteness, residue identifications, fiber regularity, norm endpoint orders and reciprocity are not caller assumptions. Pairing representative independence and descent, nondegeneracy, Hecke adjointness, determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "remaining": "Use this actual reciprocity theorem to prove representative independence and roots-of-unity values for the original divisorial Weil pairing, then descend to Picard torsion. Prove nondegeneracy and Hecke adjointness and pass to the Tate pairing. The Frobenius determinant is still not proved; the original Frobenius quadratic is already verified separately. Scratch only; production promotion and assembled verification pending. No additional acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-weil-reciprocity-route-467.json",
+    "sha256": "7F315DB3CA26D8AB12A1F70BC3852FDB0A8502FB3FFCCBCD534EEBB088C86DD8",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "modular-form concentration -> actual residual Galois association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Weil pairing -> original Weil reciprocity -> actual finite rational coordinate and norm transfer",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFiniteCoordinateHom.lean",
+          "sha256": "610917D767E662F56B65EA8C49C4A697E186DCF9C177B13E419CC46EC147DA6F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalUniformizerFinite.lean",
+          "sha256": "AC6FB240D25BC98E61AF69BFD213175AD1CD82ACB081EA3FD941D43DBE318C66"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveCorrespondencePlaces.lean",
+          "sha256": "917F20E813C1974C7AB133968AF6EC073A5E9D4139589621E29F6F731C157FF1"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveCorrespondenceRamification.lean",
+          "sha256": "62AB21C26EEF5D4F9A246B5CB3E39A49AEE5497D5DB5D5885CF11B3B95A67234"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveNormFiber.lean",
+          "sha256": "E520CCC04C216018AE815938DD60D5ED27E8AB5960C33B0BACB95C442FF245DB"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrincipalDivisors.lean",
+          "sha256": "231062B499795FAFA62040712A05023394D290B23EE2D0ECFA737A0BEA072832"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalResidueFinite.lean",
+          "sha256": "364140071ED84A644BBC5C9710EA2AA815971C37665343EBAB875C4C84BD51DD"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\AlgebraicClosure.lean",
+          "sha256": "F5D37B376CFE39B3B7100BED198865AA0E16D5576EA21D6008D369E88089E1A7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_weilReciprocity.lean.txt",
+          "sha256": "176098D3873DAB7441142BB3D28364CDBB8F60B29A8F9200FB6049D4A8769B0D"
+        }
+      ],
+      "selectedRoute": "Reuse the already proved original finiteness over every transcendental coordinate, generic field-norm evaluation, divisor pullback product, residue restriction, finite pushforward product, norm order and ramification positivity. Construct the precise RatFunc-to-original consumers. Coordinate reciprocity alone suffices; no full arbitrary-pair rational reciprocity induction is imported.",
+      "scopeDecision": "Every new public theorem and construction is consumed by the one actual original reciprocity theorem. A small generic coordinate embedding avoids repeated large original-field typeclass synthesis; no proof limits or pins are changed. All original function-field and divisor objects are retained.",
+      "discharged": "Weil reciprocity is proved on the actual original modular function field over algebraically closed rational-algebra constants: f evaluated on the actual principal divisor of g equals g evaluated on that of f for nonzero f and g with disjoint order support. The constant case uses proved principal degree zero; the nonconstant case constructs the actual finite rational coordinate and transfers coordinate reciprocity through actual norm, pullback and pushforward identities. Finiteness, residue identifications, fiber regularity, norm endpoint orders and reciprocity are not caller assumptions. Pairing representative independence and descent, nondegeneracy, Hecke adjointness, determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "remaining": "Use this actual reciprocity theorem to prove representative independence and roots-of-unity values for the original divisorial Weil pairing, then descend to Picard torsion. Prove nondegeneracy and Hecke adjointness and pass to the Tate pairing. The Frobenius determinant is still not proved; the original Frobenius quadratic is already verified separately.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. No additional acceptance gate closes. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

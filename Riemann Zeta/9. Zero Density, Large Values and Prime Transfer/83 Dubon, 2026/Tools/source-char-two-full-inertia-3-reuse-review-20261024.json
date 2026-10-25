@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "characteristic-two genus/Picard -> weighted exceptional census -> actual full inertia image of order twenty-four",
+  "precedingScratchReceipts": {
+    "source-full-torsion-specialization-2-scratch-receipt.json": "398BDC10A067E82E8887E37673EDCFDA6F4441F67B25BA2B5B0E5EB620D1FCFC"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticCharThreeFullInertiaImage.lean",
+      "sha256": "C56226BB732F49E3FBA1472055AD0371D9E395E142A1E3415183AE3C2A9233BC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticOfJDiscriminantOrder.lean",
+      "sha256": "8707CB6958A294D58706CEE26647A4E33645C26521587CFEAA5CEF7F1C1A7E01"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRatFuncInertiaCardinality.lean",
+      "sha256": "682B448F8A67CE19833AAE14506960B9EE5BFDB61856F238577032D84DBC4603"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticStabilizerImageUpToSign.lean",
+      "sha256": "6FC145AD491B7853F000D25D64929F5F435BFCD5E5FB8D51A862549F9D63247D"
+    }
+  ],
+  "routeAdjustment": "Combine the two necessary order divisibilities with the proved upper cardinal bound. Reuse the actual characteristic-three consumer structure; do not construct general inertia classification.",
+  "discharged": "The actual characteristic-two exceptional inertia group has order twenty-four and maps onto the entire elliptic stabilizer. The constructed full three-torsion, eighth-power factorization and good-model discriminant derive divisibility by eight and twelve; the exact stabilizer cardinality yields equality and surjectivity. No full-image, three-torsion or ramification-order certificate remains.",
+  "remaining": "The characteristic-two weighted exceptional census and genus/Picard assembly, followed by original arithmetic-action comparison and automorphy, remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\char-two-full-inertia-route-420.json",
+    "sha256": "8ED5CA59D2F3B28DE826426314C4504AADBA17B237CBA484C66F8E6D0D5C865C",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "characteristic-two genus/Picard -> weighted exceptional census -> actual full inertia image of order twenty-four",
+      "reuseChecked": [
+        "The existing actual good-model discriminant relation immediately gives twelve divisibility in characteristic two, as in the verified characteristic-three proof.",
+        "Scope 418 gives the exact eighth-power unit factorization, and scope 419 supplies actual full three-torsion in the same field.",
+        "Existing inertia cardinality and stabilizer-image cardinality lemmas replace repeated ramification and surjectivity arguments. The actual stabilizer card twenty-four was already proved in scope 409."
+      ],
+      "selectedRoute": "Combine the two necessary order divisibilities with the proved upper cardinal bound. Reuse the actual characteristic-three consumer structure; do not construct general inertia classification.",
+      "assumptionsToDischarge": "Derive full actual inertia image and exact order twenty-four from the constructed good model, full three-torsion and faithful action; none remains a hypothesis.",
+      "boundary": "Actual cyclic specialization and weighted exceptional census still must consume this full image, then genus/Picard and original arithmetic/automorphy follow. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_exists_equivariant_torsion_reduction_ofJ.lean.txt",
+    "sha256": "D1B7BD7F829F929F92FD9D8C8D787BC18F2F86A7C13D5EE0C5D3C4BE0BCD5A1F",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The exact full-image argument combines eight and twelve divisibility with the actual stabilizer bound. Existing local cardinality and image theorems provide the shorter consumer. No external build or import is claimed."
+  }
+}

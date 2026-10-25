@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original primitive weight-two residual association -> continuous coefficient Galois representation unramified away from level and Tate prime -> existing spanning primitive-form specialization -> actual original rational Tate inertia identity",
+  "precedingScratchReceipts": {
+    "source-original-tate-inertia-1-scratch-receipt.json": "838EE46F2ADFF6AECCA153A5F526D4075E8550118241304824EE8AD744EDD89E"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveGaloisRealization.lean",
+      "sha256": "8E5BF95A975D3A0516720797582E45AE57075727BB9C31CCD872F5516BEB5670"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveTateSpecialization.lean",
+      "sha256": "EA57AE948FBDCBC737C4FA0673CEA2970D19E0E0866FFD9564CED1FCDA2685B9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateInertia.lean",
+      "sha256": "FD5F8624DBB923785B81085D99C6AAAA58ACA4D2D3651FAC54E5DDDF7409BA63"
+    }
+  ],
+  "routeAdjustment": "Use the proved spanning specialization to transfer inertia identity and then unpack the existing unconditional primitive-form realization, preserving all its coefficient, Hecke and continuity data.",
+  "discharged": "The same actually constructed continuous primitive weight-two Galois realization retains its finite coefficient field, spanning specialization, original prime Fourier eigenvalues and arithmetic action, and is unramified away from the level times the Tate prime. Native linear-map extensionality on the proved spanning image transfers the actual rational Tate inertia identity. No basis, arithmetic equivariance, spanning or inertia certificate is assumed in the final realization theorem.",
+  "remaining": "The Frobenius relation and trace/determinant consequences, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-specialization-inertia-route-435.json",
+    "sha256": "D411FAE43C3EACCDDB362BAC2D85DBA35D7FDE3B61E746E9EC57AC1D976D58DE",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original primitive weight-two residual association -> continuous coefficient Galois representation unramified away from level and Tate prime -> existing spanning primitive-form specialization -> actual original rational Tate inertia identity",
+      "reuseChecked": [
+        "SourceOriginalPrimitiveGaloisRealization already constructs the finite coefficient field, actual Fourier eigenvalues, a spanning specialization, and the original arithmetic intertwining equation. No new basis or specialization construction is needed.",
+        "Native LinearMap.ext_on_range and Matrix.toLin injectivity show that identity on the existing spanning image forces identity on the same GL2 representation.",
+        "Scope 434 derives the exact source away-level-and-Tate-prime inertia statement for the actual rational Tate action."
+      ],
+      "selectedRoute": "Use the proved spanning specialization to transfer inertia identity and then unpack the existing unconditional primitive-form realization, preserving all its coefficient, Hecke and continuity data.",
+      "assumptionsToDischarge": "Unramifiedness belongs to the same actual continuous primitive-form realization; spanning and equivariance hypotheses are supplied by its proved construction.",
+      "boundary": "The Frobenius relation and its trace/determinant consequences, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

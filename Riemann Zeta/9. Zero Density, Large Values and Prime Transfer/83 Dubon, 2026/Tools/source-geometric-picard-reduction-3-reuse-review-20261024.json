@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original primitive-form Frobenius quadratic relation -> reduction intertwines original arithmetic Frobenius with geometric Frobenius on residue Picard classes -> literal geometric place pushforward equals the proved coefficient permutation on finite divisors",
+  "precedingScratchReceipts": {
+    "source-geometric-frobenius-3-scratch-receipt.json": "B099FD3CE9765D387CBC7257D7B193814B5934F637282211C2615FD638459A28"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardGroup.lean",
+      "sha256": "FDD3E9F7FEAB972C7A3E284A89527B61C2442549D29EC437F60EF98570CEA58B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueCoefficientDivisors.lean",
+      "sha256": "9C7564E1145BA56702E13BAE124DF2B3760165E23CA22BA98E909F766FBED156"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueCoefficientPicard.lean",
+      "sha256": "C43B0402636B08509BDAF1D639C38A5CDC9840A06F94D360C542993552E01BF0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFrobeniusPicardReduction.lean",
+      "sha256": "DCA9A9B3DCD8508E1936CD933592E95738DED5028320D00D2A104DBA560E6D08"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidueGeometricFrobeniusPlaces.lean",
+      "sha256": "5231375FD0EA14138827D0813B91F466447E2AD1BEA4150EB7A5E568C4E62BC6"
+    }
+  ],
+  "routeAdjustment": "Construct the finite-support geometric place pushforward, prove it equals the existing coefficient divisor action, descend using proved degree and principal-divisor preservation, and substitute the equality in the already proved same-reduction original Frobenius Picard theorem.",
+  "discharged": "The same actual modular reduction intertwines original arithmetic Frobenius with literal geometric Frobenius pushforward on genuine Picard classes. The geometric place map is the actual valuation-ring comap, and its finite divisor pushforward equals the proved coefficient permutation. Degree and principal-divisor preservation give native quotient descent; genus equality and invertible-torsion injectivity remain on the same reduction.",
+  "remaining": "Hecke reduction compatibility and the geometric quadratic correspondence, the original Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\geometric-picard-route-441.json",
+    "sha256": "AAB0BBA362F7C1435E2AE03AF0430377CF522A63153F136DD3141241257976E6",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original primitive-form Frobenius quadratic relation -> reduction intertwines original arithmetic Frobenius with geometric Frobenius on residue Picard classes -> literal geometric place pushforward equals the proved coefficient permutation on finite divisors",
+      "reuseChecked": [
+        "Scope 440 constructs the literal geometric valuation-ring comap along q -> q^p, proves equality with coefficient Frobenius on places and derives ramification p. Scope 439 proves coefficient divisor degree/principality and the actual Picard quotient action.",
+        "The local Finsupp mapDomain pushforward and Pic0 quotient APIs already support the entire descent. Finite-support induction proves equality with the coefficient divisor permutation; no new quotient or divisor theory is needed.",
+        "The actual coefficient curve has residue degree one at every place over closed constants by coeff_place_residue_algebraMap_bijective. The geometric divisor pushforward is therefore the literal sum over the proved geometric place map. Finiteness and norm formulas for a broader correspondence API are deferred until required by the Hecke comparison."
+      ],
+      "selectedRoute": "Construct the finite-support geometric place pushforward, prove it equals the existing coefficient divisor action, descend using proved degree and principal-divisor preservation, and substitute the equality in the already proved same-reduction original Frobenius Picard theorem.",
+      "assumptionsToDischarge": "Geometric Frobenius Picard comparison for the same actual reduction; neither coefficient/geometric agreement nor divisor/Picard compatibility is assumed.",
+      "boundary": "Hecke reduction compatibility and the geometric quadratic correspondence, the original Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

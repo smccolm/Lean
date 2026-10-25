@@ -1,0 +1,1876 @@
+{
+  "date": "24 October 2026",
+  "modules": [
+    "Dubon2026.SourceEllipticCharTwoAuxiliaryRootUnits",
+    "Dubon2026.SourceEllipticCharTwoThreeDivisionRelation",
+    "Dubon2026.SourceEllipticCharTwoEighthPower",
+    "Dubon2026.SourceEllipticFullTorsionDivisor",
+    "Dubon2026.SourceEllipticDeuringThreeTorsionSpecialization",
+    "Dubon2026.SourceEllipticCharTwoOfJFamily",
+    "Dubon2026.SourceEllipticCharTwoGoodModelOrder",
+    "Dubon2026.SourceEllipticCharTwoFullInertiaImage",
+    "Dubon2026.SourceEllipticCharTwoCyclicSpecialization",
+    "Dubon2026.SourceEllipticCharTwoEmbeddingOrbits",
+    "Dubon2026.SourceEllipticCharTwoPlaceFibers",
+    "Dubon2026.SourceEllipticCharTwoPlaceClassification",
+    "Dubon2026.SourceOrderTwelveBasic",
+    "Dubon2026.SourceOrderTwelveSylowNonNormal",
+    "Dubon2026.SourceOrderTwelveElementCounts",
+    "Dubon2026.SourceOrderTwelveInvolutionConjugacy",
+    "Dubon2026.SourceOrderTwelveCubicCentralizer",
+    "Dubon2026.SourceOrderTwelveTransitiveMarks",
+    "Dubon2026.SourcePrimeTorsionCommonScalar",
+    "Dubon2026.SourceQuaternionQuarticNonscalar",
+    "Dubon2026.SourceQuaternionCubicNonscalar",
+    "Dubon2026.SourceEllipticStabilizerPointHom",
+    "Dubon2026.SourceEllipticCharTwoCubicParameters",
+    "Dubon2026.SourceEllipticCharTwoQuarticChanges",
+    "Dubon2026.SourceEllipticCharTwoQuaternionStabilizers",
+    "Dubon2026.SourceEllipticCharTwoQuarticFixedCount",
+    "Dubon2026.SourceEllipticCharTwoCubicPoint",
+    "Dubon2026.SourceEllipticCharTwoCubicCommutator",
+    "Dubon2026.SourceEllipticCharTwoCubicFixedCount",
+    "Dubon2026.SourceEllipticCharTwoFixedCounts",
+    "Dubon2026.SourceEllipticCharTwoSignExponent",
+    "Dubon2026.SourceEllipticCharTwoMarkedElements",
+    "Dubon2026.SourceEllipticCharTwoCyclicAction",
+    "Dubon2026.SourceEllipticCharTwoCyclicOrbits",
+    "Dubon2026.SourceEllipticCharTwoOrbitMarks",
+    "Dubon2026.SourceEllipticCharTwoCensusSum",
+    "Dubon2026.SourceEllipticCharTwoWeightedCensus",
+    "Dubon2026.SourceModularCharTwoCensus",
+    "Dubon2026.SourceModularCharTwoDifferentialSum",
+    "Dubon2026.SourceModularCharTwoGenusLower",
+    "Dubon2026.SourceModularCharTwoResidueGenus",
+    "Dubon2026.SourceModularCharTwoPicardInjectivity",
+    "Dubon2026.SourceModularPrimePicardInjectivity"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy and residual association -> original Frobenius/inertia -> actual modular good reduction and Picard torsion injectivity at every prime residue characteristic -> characteristic-two full inertia, weighted exceptional census and wild genus equality.",
+  "discharged": "A full three-torsion specialization field and the exact eighth-power factorization force the actual characteristic-two inertia image to have order twenty-four. Actual cyclic subgroups classify the modular j=0 places. The sign quotient, quaternion automorphisms and native elliptic torsion give the exact order-twelve orbit marks and fixed counts nuTwo(N) and nuThree(N). The actual positive-j orders are 1,3,4,6,12, with #1+3#3+2#6=nuTwo(N) and #1+#4=nuThree(N). These identities and the proved local differential bounds yield the wild genus inequality, actual characteristic-two genus preservation and injectivity on every residue-invertible Picard torsion subgroup. Combining both wild cases with the proved tame case gives the same actual reduction at every prime residue characteristic. Only the original level and torsion invertibility conditions remain; no good-model, inertia, census, differential or genus certificate is assumed.",
+  "boundary": "Original arithmetic-action comparison, Frobenius/inertia compatibility, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 7,528-module scope: all thirteen retained regressions, 49,317 exhaustive theorem checks, 22,419 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [
+    {
+      "module": "SourceModularCharTwoPicardInjectivity",
+      "old": "characteristic-three good-reduction and torsion premises",
+      "new": "characteristic-two good-reduction and torsion premises",
+      "reason": "Correct a copied prose label; the theorem and proof already concern characteristic two. Frozen scratch evidence is preserved."
+    }
+  ],
+  "sourceConsumers": [
+    "Dubon2026.SourceEllipticCharTwo.exists_unit_mul_eighth_power",
+    "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action_with_three_torsion",
+    "Dubon2026.SourceEllipticDivisionField.exists_char_two_exceptional_full_inertia_image",
+    "Dubon2026.SourceEllipticDivisionField.exists_char_two_cyclic_modular_place_classification",
+    "Dubon2026.SourceOrderTwelve.marks",
+    "Dubon2026.SourceEllipticExceptional.quartic_nonscalar_of_quaternion_relations",
+    "Dubon2026.SourceEllipticExceptional.cubic_nonscalar_of_quaternion_commutator",
+    "Dubon2026.SourceEllipticCharTwo.exists_char_two_exceptional_fixed_counts",
+    "Dubon2026.SourceEllipticCharTwo.cyclic_orbit_marks",
+    "Dubon2026.SourceEllipticCharTwo.cyclicStabilizerRelated_iff_sign_orbit",
+    "Dubon2026.SourceEllipticCharTwo.char_two_cyclic_action_fixed_counts",
+    "Dubon2026.SourceFunctionField.coeff_char_two_order_census",
+    "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_torsion_injective_of_char_two",
+    "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_torsion_injective_of_prime"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-24T14:26:01.488818+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceEllipticCharTwoAuxiliaryRootUnits",
+        "SourceEllipticCharTwoThreeDivisionRelation",
+        "SourceEllipticCharTwoEighthPower"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoAuxiliaryRootUnits.lean",
+          "sha256": "0055932F4F69F42EA5217447C8B684276CF6C718C332743ADA3B8D6F53780AB0",
+          "oleanSha256": "DD26AA86DC860AA567F45FEF8642546B73C51B865A0ACA79496DC05607E6FB17"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoThreeDivisionRelation.lean",
+          "sha256": "071D80C234EA22BA482DB36E150576FB31F46EA855DB620F65725C0BA5EAE994",
+          "oleanSha256": "98461397FEC2127F8BE3C98904F29E7A5DE806FAF269C1C8A3A319832A4435A7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoEighthPower.lean",
+          "sha256": "0054F517D66E3C8A2ADFF6712F9307FB59544931FEC805397AA2F675EE2D28B4",
+          "oleanSha256": "4B88DAC05BDAF28C7C545AFCBE872494D9CC885295FEFAE7402336DC8A73873E"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticCharTwo.val_lt_one_of_z",
+        "Dubon2026.SourceEllipticCharTwo.val_eq_one_of_eta",
+        "Dubon2026.SourceEllipticCharTwo.psi3_of_order_three",
+        "Dubon2026.SourceEllipticCharTwo.exists_unit_mul_eighth_power"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticCharTwo.val_lt_one_of_z",
+        "Dubon2026.SourceEllipticCharTwo.val_eq_one_of_eta",
+        "Dubon2026.SourceEllipticCharTwo.psi3_of_order_three",
+        "Dubon2026.SourceEllipticCharTwo.exists_unit_mul_eighth_power"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoEighthPowerAudit3.log",
+      "logSha256": "6B07A495E42CF73C311D7CE9F7ECF348C8AF8FAE8C3D57BD8E575E1D1FE0232F",
+      "auditSha256": "63D86084179785B402CB517270FC785217A30A6AFB8E7959978365B25B466E95",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 4,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 7,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoEighthPowerDependencyAudit3.log",
+      "dependencyAuditSha256": "4F18AFE98C4729522AA71F838BAB20268014F97C4BCD94BE54E6ECCFE0C3B4B1",
+      "dependencyAuditSourceSha256": "CD7F7245D8EDCF83EB5E6BA702FAF451ADE03C1FD1CAC18267FA2BC68120E90E",
+      "consumers": [
+        "Dubon2026.SourceEllipticCharTwo.exists_unit_mul_eighth_power"
+      ],
+      "dependency": "characteristic-two genus/Picard -> weighted exceptional census -> actual full inertia image of order twenty-four -> local order divisible by eight from a nonzero three-torsion point",
+      "discharged": "A nonzero affine three-torsion point on the actual characteristic-two family yields t=unit*mu^8 at a nonunit integral t. Existing flex and division-polynomial results derive the coordinate relations; monic integrality and reduction derive the root-unit conditions. No valuation-growth or coordinate-relation certificate remains.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The characteristic-two weighted exceptional census and genus/Picard assembly, followed by original arithmetic-action comparison and automorphy, remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-char-two-eighth-power-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "74E5719E86B67B48D38CEC8858F71AF1BA178C4BA3BFCDC12E92CE3D48F2F836",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T14:36:35.701677+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceEllipticFullTorsionDivisor",
+        "SourceEllipticDeuringThreeTorsionSpecialization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticFullTorsionDivisor.lean",
+          "sha256": "6563BE4CF890B8B136EBD590C460FDC60DED3282D1C8C50EB46773C3B7F8F6E0",
+          "oleanSha256": "9CAC0DF92552DC6DE68BE00E595281FBC7C510F229CC4AA860106ABAC495F3E7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticDeuringThreeTorsionSpecialization.lean",
+          "sha256": "D31AD8F98C552A345D813AF2A2B19A0E5B39D41562546A2318995B2B962A05FC",
+          "oleanSha256": "321CED9664AD3144801D72F9165E513AF06C851085722A7CCD5E2FEF4343F1B6"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticDivisionField.card_torsion_of_dvd_full_torsion",
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action_with_three_torsion"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticDivisionField.card_torsion_of_dvd_full_torsion",
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action_with_three_torsion"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceFullTorsionSpecializationAudit2.log",
+      "logSha256": "0C25206BA024896CFCDD9DD98072A1911FF5BFF227D42E1E8513C4338CB5D4DC",
+      "auditSha256": "57C5449E86B973490B2EE903F6A03FDE4048B5CA53F7BDF7CDC887A54A0C2A49",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 2,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 4,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFullTorsionSpecializationDependencyAudit2.log",
+      "dependencyAuditSha256": "3C39968B3D262B102633AC6106A52A18B95BAA36E984C15A247AC07BC1353CA2",
+      "dependencyAuditSourceSha256": "24DD1B57FFA5524789D4F65BB39A3894F012E69B48202537E6A66083BE9AC785",
+      "consumers": [
+        "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action_with_three_torsion"
+      ],
+      "dependency": "characteristic-two genus/Picard -> weighted exceptional census -> full inertia image of order twenty-four -> eighth-power factorization -> actual nonzero three-torsion in the specialization field",
+      "discharged": "The existing faithful finite Galois specialization at level 3N is restricted to N, while its actual field retains all nine three-torsion points. The full-torsion divisor count follows from the proved closure cardinality and actual injective point map. No separate three-torsion or faithful-field hypothesis remains.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The characteristic-two weighted exceptional census and genus/Picard assembly, followed by original arithmetic-action comparison and automorphy, remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-full-torsion-specialization-2-reuse-review-20261024.json",
+      "reuseReviewSha256": "97F3901998DEA1659AE3795EA9247ADC8199280F5198C129B02E10D0EB741A07",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T14:43:57.358728+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceEllipticCharTwoOfJFamily",
+        "SourceEllipticCharTwoGoodModelOrder",
+        "SourceEllipticCharTwoFullInertiaImage"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoOfJFamily.lean",
+          "sha256": "A673E299A6FA4DF6FE1A71A94CE5CC165FD638DF9451D30DC48F5918CCADC487",
+          "oleanSha256": "BFF6D351C9057515176D4A67AEEC7EB3054DFCDA7780AED7528F1DD3EE5E54F0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoGoodModelOrder.lean",
+          "sha256": "60D9934FE36F89B68D104E3E970E10A34F71CAE942BD29E25366C784053D275E",
+          "oleanSha256": "8106991147F1A96E740AE28C963890136B8E11626150DD2E0994D73FB7E1AF69"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoFullInertiaImage.lean",
+          "sha256": "83F2E152C66D8795DD139DF0553ABEB31260E2F701F8249B6C7B75162E8F8EDA",
+          "oleanSha256": "662595533278C4A4AB6A54E1F7D6997B3B32E9BCBB890A5D5002845036439765"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticCharTwo.ofJ_X_baseChange_of_char_two",
+        "Dubon2026.SourceEllipticReduction.ofJ_good_model_order_divisibility_of_char_two",
+        "Dubon2026.SourceEllipticReduction.ofJ_order_eight_dvd_of_full_three_torsion",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_two_exceptional_full_inertia_image"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticCharTwo.ofJ_X_baseChange_of_char_two",
+        "Dubon2026.SourceEllipticReduction.ofJ_good_model_order_divisibility_of_char_two",
+        "Dubon2026.SourceEllipticReduction.ofJ_order_eight_dvd_of_full_three_torsion",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_two_exceptional_full_inertia_image"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoFullInertiaAudit3.log",
+      "logSha256": "8B1B0910D982E935F992F8011AFEBDE44D149E1FC6E4922F49D2CD5F99D59D42",
+      "auditSha256": "34C63301E7F6EEC371911FA15A011DDC57BE77D74E4F04F2E1B2065864862C30",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 7,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 10,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoFullInertiaDependencyAudit3.log",
+      "dependencyAuditSha256": "6C5D74A09443553A42816F6F3BF4A15A1B02B78D93811799EA07DE2C14BC7304",
+      "dependencyAuditSourceSha256": "C34F173D5F54B4E881AA1BE8ABFE216DCC4868EA2F3745BB7BD52FD7FA21D695",
+      "consumers": [
+        "Dubon2026.SourceEllipticDivisionField.exists_char_two_exceptional_full_inertia_image"
+      ],
+      "dependency": "characteristic-two genus/Picard -> weighted exceptional census -> actual full inertia image of order twenty-four",
+      "discharged": "The actual characteristic-two exceptional inertia group has order twenty-four and maps onto the entire elliptic stabilizer. The constructed full three-torsion, eighth-power factorization and good-model discriminant derive divisibility by eight and twelve; the exact stabilizer cardinality yields equality and surjectivity. No full-image, three-torsion or ramification-order certificate remains.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The characteristic-two weighted exceptional census and genus/Picard assembly, followed by original arithmetic-action comparison and automorphy, remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-char-two-full-inertia-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "0901DB6B663FAD6936EE4130F8EE3AC19CB3FEFFFFFB0CA79E327747F3D95F38",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T14:48:08.624089+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceEllipticCharTwoCyclicSpecialization",
+        "SourceEllipticCharTwoEmbeddingOrbits",
+        "SourceEllipticCharTwoPlaceFibers",
+        "SourceEllipticCharTwoPlaceClassification"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoCyclicSpecialization.lean",
+          "sha256": "4CC6E1DC3EAC0491E44B01E3343428EF0670EEC27E3FE2AC89E8A323BE5C3C9B",
+          "oleanSha256": "B923E66D71B3D16DFAF319BA0FC9540B809909C66B6C6536A82ED5CB33687B26"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoEmbeddingOrbits.lean",
+          "sha256": "3AEE1DE3FDCCF7CAFFF133B96C0BE221705803956D346B862BA77BAD7A7F2F96",
+          "oleanSha256": "AFE3D21800BA2E3A39BEB6E70F15B27886A1D166FF669FC4172A6F0D1D046452"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoPlaceFibers.lean",
+          "sha256": "8D1C72031A9004351CB2AC78EBDEE6C5A11AA62A1414915F38C887A53797F2D7",
+          "oleanSha256": "BDD314FBEB60514F2AD7AA54BF1B1E29D478B921205473FF25B485902D6D1BCE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoPlaceClassification.lean",
+          "sha256": "474969BA39050E66323D8FDD3861A1D3541B0B469DC126F26D9BC2F0CEA88F3D",
+          "oleanSha256": "5636FA8733A0A4084DB36DEB280557232018B4D95605F223B74396986953B3D3"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticDivisionField.exists_char_two_exceptional_cyclic_specialization",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_two_modular_embedding_orbits",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_two_modular_place_fibers",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_two_cyclic_modular_place_classification"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticDivisionField.exists_char_two_exceptional_cyclic_specialization",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_two_modular_embedding_orbits",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_two_modular_place_fibers",
+        "Dubon2026.SourceEllipticDivisionField.exists_char_two_cyclic_modular_place_classification"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoPlaceClassifierAudit4.log",
+      "logSha256": "22B5FC88E3C4EB9CE411FB9E5931A68AA0F67792AF6C9AE871D9E3406CBBCC65",
+      "auditSha256": "777FB03D978AFC8F3CF6079E6367717ABED704887577F502916190978FF3DF78",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 5,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 10,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoPlaceClassifierDependencyAudit4.log",
+      "dependencyAuditSha256": "79A56E25178A720EC317550FFAE3AC75F88A267FE9D4F4FE8FA94E24215C7375",
+      "dependencyAuditSourceSha256": "D1B2A5D947D62904153F5AFAABF1849F08A089057528E8A8F3EFCA66BF3B3B4B",
+      "consumers": [
+        "Dubon2026.SourceEllipticDivisionField.exists_char_two_cyclic_modular_place_classification"
+      ],
+      "dependency": "characteristic-two genus/Picard -> weighted exceptional census -> actual cyclic-to-place classifier with exact j-order class cardinalities",
+      "discharged": "All actual characteristic-two modular j=0 places are classified by cyclic subgroups of the actual exceptional elliptic curve. Equality is exactly stabilizer-relatedness, and normalized j orders equal relation-class cardinalities. Existing torsion specialization, embedding-orbit reflection and rational-coordinate fiber theorems consume the constructed full inertia image. No field, image, specialization or place-fiber certificate remains.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The characteristic-two weighted exceptional census and genus/Picard assembly, followed by original arithmetic-action comparison and automorphy, remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-char-two-place-classifier-4-reuse-review-20261024.json",
+      "reuseReviewSha256": "35ABFB93016746C530EE0017E3D625717D5E5568922BFE13C281C92B3F56B467",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T15:01:42.932421+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOrderTwelveBasic",
+        "SourceOrderTwelveSylowNonNormal",
+        "SourceOrderTwelveElementCounts",
+        "SourceOrderTwelveInvolutionConjugacy",
+        "SourceOrderTwelveCubicCentralizer",
+        "SourceOrderTwelveTransitiveMarks"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveBasic.lean",
+          "sha256": "49FBC92E28F94400022E1BFA8924194C92A8F68FC56FA396F160F8726E671CCB",
+          "oleanSha256": "649171FB02F13BC7E7A784217F8E29F6FEAC480E22366AD531687C29007F4F19"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveSylowNonNormal.lean",
+          "sha256": "DDD12819547D3C15C34466C6E94551AD061CA88647D8963A9F8AD5AF2E3ACA4B",
+          "oleanSha256": "EB109718FB43F8F13E7A1ECD88D44D33EAD8F31ABBE482D51433AF013FC944B4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveElementCounts.lean",
+          "sha256": "7D7B8CA2A422711851F443F561F974198ABF8DD7FDA6DEECBF85D50F8224BACB",
+          "oleanSha256": "80E00E4E2F95A40C32D591C250C764883505793661CD693B5FBA0158CD5A9535"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveInvolutionConjugacy.lean",
+          "sha256": "C4AF4EDB2A5DC1553A2FFF899BABF871FE35209FCEB19685A16C52E1D00F859B",
+          "oleanSha256": "AA16CA2F1609F99A12610AAF715668CCD059C0067D2BA9CDBB06D29C73BC1ED7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveCubicCentralizer.lean",
+          "sha256": "A2B96A1F80F079C433846B9EDA8B04202A2BCC9F36D930B00C7CF5F10B94EC4F",
+          "oleanSha256": "CC528F8649C89234BC5DB271C9C4A4FA261FEBC960C47438EF403541C07A1A73"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveTransitiveMarks.lean",
+          "sha256": "73879FF0C5499D92363E72092E32C12ACAFDD7BD9250F8032070573EB34760E9",
+          "oleanSha256": "D785F6683B344DA1C56B3675D46E237F855E30F2FBA5E22165FB4DADE261027C"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceOrderTwelve.factorization_twelve_three",
+        "Dubon2026.SourceOrderTwelve.factorization_twelve_two",
+        "Dubon2026.SourceOrderTwelve.orderOf_cases",
+        "Dubon2026.SourceOrderTwelve.not_commute",
+        "Dubon2026.SourceOrderTwelve.orderOf_eq_two_of_sq",
+        "Dubon2026.SourceOrderTwelve.orderOf_eq_three_of_cube",
+        "Dubon2026.SourceOrderTwelve.sq_eq_one_of_orderOf_ne_three",
+        "Dubon2026.SourceOrderTwelve.card_sylow_three",
+        "Dubon2026.SourceOrderTwelve.card_sylow_two",
+        "Dubon2026.SourceOrderTwelve.orderOf_eq_three_of_mem",
+        "Dubon2026.SourceOrderTwelve.zpowers_eq_of_mem",
+        "Dubon2026.SourceOrderTwelve.mem_of_card_three",
+        "Dubon2026.SourceOrderTwelve.sylow_three_not_normal",
+        "Dubon2026.SourceOrderTwelve.card_sylow_three_eq_four",
+        "Dubon2026.SourceOrderTwelve.exists_sylow_mem_of_orderOf",
+        "Dubon2026.SourceOrderTwelve.sylow_eq_of_mem",
+        "Dubon2026.SourceOrderTwelve.heq_subtype_of_sylow_eq",
+        "Dubon2026.SourceOrderTwelve.ncard_orderOf_eq_three",
+        "Dubon2026.SourceOrderTwelve.ncard_sq_eq_one",
+        "Dubon2026.SourceOrderTwelve.mem_iff_sq_eq_one_of_card_eq_four",
+        "Dubon2026.SourceOrderTwelve.sq_mul_eq_one",
+        "Dubon2026.SourceOrderTwelve.mul_eq_mul_iff_sq_eq_one",
+        "Dubon2026.SourceOrderTwelve.exists_conj_eq",
+        "Dubon2026.SourceOrderTwelve.mem_zpowers_of_mul_eq_mul",
+        "Dubon2026.SourceOrderTwelve.conj_ne_sq",
+        "Dubon2026.SourceOrderTwelve.card_fixedBy_mul_card_stabilizer",
+        "Dubon2026.SourceOrderTwelve.mem_smul_sylow_iff",
+        "Dubon2026.SourceOrderTwelve.marks"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceOrderTwelve.factorization_twelve_three",
+        "Dubon2026.SourceOrderTwelve.factorization_twelve_two",
+        "Dubon2026.SourceOrderTwelve.orderOf_cases",
+        "Dubon2026.SourceOrderTwelve.not_commute",
+        "Dubon2026.SourceOrderTwelve.orderOf_eq_two_of_sq",
+        "Dubon2026.SourceOrderTwelve.orderOf_eq_three_of_cube",
+        "Dubon2026.SourceOrderTwelve.sq_eq_one_of_orderOf_ne_three",
+        "Dubon2026.SourceOrderTwelve.card_sylow_three",
+        "Dubon2026.SourceOrderTwelve.card_sylow_two",
+        "Dubon2026.SourceOrderTwelve.orderOf_eq_three_of_mem",
+        "Dubon2026.SourceOrderTwelve.zpowers_eq_of_mem",
+        "Dubon2026.SourceOrderTwelve.mem_of_card_three",
+        "Dubon2026.SourceOrderTwelve.sylow_three_not_normal",
+        "Dubon2026.SourceOrderTwelve.card_sylow_three_eq_four",
+        "Dubon2026.SourceOrderTwelve.exists_sylow_mem_of_orderOf",
+        "Dubon2026.SourceOrderTwelve.sylow_eq_of_mem",
+        "Dubon2026.SourceOrderTwelve.heq_subtype_of_sylow_eq",
+        "Dubon2026.SourceOrderTwelve.ncard_orderOf_eq_three",
+        "Dubon2026.SourceOrderTwelve.ncard_sq_eq_one",
+        "Dubon2026.SourceOrderTwelve.mem_iff_sq_eq_one_of_card_eq_four",
+        "Dubon2026.SourceOrderTwelve.sq_mul_eq_one",
+        "Dubon2026.SourceOrderTwelve.mul_eq_mul_iff_sq_eq_one",
+        "Dubon2026.SourceOrderTwelve.exists_conj_eq",
+        "Dubon2026.SourceOrderTwelve.mem_zpowers_of_mul_eq_mul",
+        "Dubon2026.SourceOrderTwelve.conj_ne_sq",
+        "Dubon2026.SourceOrderTwelve.card_fixedBy_mul_card_stabilizer",
+        "Dubon2026.SourceOrderTwelve.mem_smul_sylow_iff",
+        "Dubon2026.SourceOrderTwelve.marks"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveMarksAudit6.log",
+      "logSha256": "84CE0A297B573430E37427B9BAE0D2C079F4A1CCB2366555C0203F87D967FBCD",
+      "auditSha256": "5846B73C066E3CB8C0CACAC976BD8D2CE6F522DF63F7CBBC6D94DB640BA28846",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 146,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 28,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveMarksDependencyAudit6.log",
+      "dependencyAuditSha256": "E443F89031EAC39D205657AB6A0A2BB6267D3A0F92B8F41228CF1CE2F99BC9C8",
+      "dependencyAuditSourceSha256": "226547563D473A476C9C02D131FC83E00175BA98724FE97E5886374A1B552941",
+      "consumers": [
+        "Dubon2026.SourceOrderTwelve.marks"
+      ],
+      "dependency": "characteristic-two genus/Picard -> exact weighted exceptional census -> transitive order-twelve quotient marks -> necessary Sylow counts and centralizers",
+      "discharged": "For a transitive action of a finite group of order twelve whose elements square or cube to one, orbit sizes are 1,3,4,6,12. The involution marks are 1,3,0,2,0 and the cubic marks are 1,0,1,0,0. Every adapted group-theoretic lemma occurs in this exact conditional consumer.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The actual characteristic-two quotient must supply the cardinality, exponent and fixed-subgroup inputs before weighted census and genus/Picard assembly. Original arithmetic-action comparison and automorphy remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-order-twelve-marks-6-reuse-review-20261024.json",
+      "reuseReviewSha256": "2D23F97F3047EC7FBFD9384C258D6BB20A1AB6B56F2058A56A70D13C0B48772F",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T15:06:34.902960+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourcePrimeTorsionCommonScalar",
+        "SourceQuaternionQuarticNonscalar",
+        "SourceQuaternionCubicNonscalar"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimeTorsionCommonScalar.lean",
+          "sha256": "1C47152750CDA3E68DF70D54060BB86793F7FC57C42B981CE13AB2E75B0ED83B",
+          "oleanSha256": "7728BB235BACB944EC1DA1F06D64909526A321AD454DD3C5903BA45698718513"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceQuaternionQuarticNonscalar.lean",
+          "sha256": "75047F4DAF9F10D6E87EE6F798AC8DE92A98E8990C4BBC4C8537E3AFBB934A8F",
+          "oleanSha256": "7414F6B15547D5B8DA15C6BC3CF65BA472E89AF944B1CA302506AF44C4B6DB7B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceQuaternionCubicNonscalar.lean",
+          "sha256": "959340B2AB5274363D122824D277A96BB3D4D1BE77EDB915ACD648FAF92A9AB8",
+          "oleanSha256": "129AC98AB9CAE84A030A075E13AEE6847297A3A384BC0BB5C6085184B4BD5DC1"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticExceptional.prime_torsion_scalar_data",
+        "Dubon2026.SourceEllipticExceptional.quartic_nonscalar_of_quaternion_relations",
+        "Dubon2026.SourceEllipticExceptional.cubic_nonscalar_of_quaternion_commutator"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticExceptional.prime_torsion_scalar_data",
+        "Dubon2026.SourceEllipticExceptional.quartic_nonscalar_of_quaternion_relations",
+        "Dubon2026.SourceEllipticExceptional.cubic_nonscalar_of_quaternion_commutator"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceQuaternionNonscalarAudit3.log",
+      "logSha256": "1A335661E337DD2BFADF0CF9B4700E27EE249CC7AB56A3B0CEBF9022EADE01CD",
+      "auditSha256": "B23C003224394E904714B39145426750D2BB8B646202E676F658FCD635AC98D1",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 3,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 4,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceQuaternionNonscalarDependencyAudit3.log",
+      "dependencyAuditSha256": "01C42090B561DB8FCF3D4BE6B839158C62FF5159EE1ACA0D617F15E3DE756ECB",
+      "dependencyAuditSourceSha256": "4882B7C8D1E23C5945CB0DB524AC8AA5DFD7E300CDD7EFA47AB7A027ABB91414",
+      "consumers": [
+        "Dubon2026.SourceEllipticExceptional.quartic_nonscalar_of_quaternion_relations",
+        "Dubon2026.SourceEllipticExceptional.cubic_nonscalar_of_quaternion_commutator"
+      ],
+      "dependency": "characteristic-two genus/Picard -> weighted exceptional census -> actual fixed cyclic-subgroup counts nuTwo/nuThree -> nonscalar prime-torsion actions",
+      "discharged": "The exact quaternion conjugate-product and commutator relations force nonscalar action on odd prime torsion. The existing common-scalar theorem yields a uniform scalar from pointwise eigenvectors and the actual rank-two prime-torsion equivalence. The relations then force a nonzero odd-order point to equal its negative, a contradiction.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The actual characteristic-two elliptic automorphisms must supply the relations and torsion equivalence before fixed-subgroup counts, weighted census and genus/Picard assembly. Original arithmetic-action comparison and automorphy remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-quaternion-nonscalar-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "3BC902214E1C43D1BAF3E2B14DEE9A51B7730E1C63318E1EC0B0DF927BD1B10A",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T15:29:42.788236+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceEllipticStabilizerPointHom",
+        "SourceEllipticCharTwoCubicParameters",
+        "SourceEllipticCharTwoQuarticChanges",
+        "SourceEllipticCharTwoQuaternionStabilizers",
+        "SourceEllipticCharTwoQuarticFixedCount",
+        "SourceEllipticCharTwoCubicPoint",
+        "SourceEllipticCharTwoCubicCommutator",
+        "SourceEllipticCharTwoCubicFixedCount",
+        "SourceEllipticCharTwoFixedCounts"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticStabilizerPointHom.lean",
+          "sha256": "4363942DA0840DC358BE8E06B47DDE2818949826581C7FF0019D31E41761DDC5",
+          "oleanSha256": "63B3E6649F8233A10973F8EC529D16ECC7606100EE9F42126BFC7090772B2467"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoCubicParameters.lean",
+          "sha256": "ADA15A0F61431CC11AD52B2E1EF3E79EAEE5B4FEBF7D5972B5DF6B1D49983587",
+          "oleanSha256": "A47EEE1EC66CBEC9F840CDBD9F9D2EEBDFCED0D790625B7B3C2BDF7FF0753E75"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoQuarticChanges.lean",
+          "sha256": "B1A4359287BF5EFE1F2537DE7B93E67FA0552E62DF99E74964D92A600B3ECB37",
+          "oleanSha256": "B457AF11CC4BB2AD91C0589A501DDF6C8F470BD999F04636AC16C6ECC5DE132B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoQuaternionStabilizers.lean",
+          "sha256": "E3F787FA6083863FBCA23AB9ED2A656541B536A541080801F7569166BC8B95B3",
+          "oleanSha256": "C6886415720D37A12BD16A1ADD6B91EB558241327197599A145B117F6CC28F08"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoQuarticFixedCount.lean",
+          "sha256": "14B82DFFD849BAF5561A6A01B6D0E75509644C72D828FBD62E98133EA8D0BA37",
+          "oleanSha256": "558F531DD33E5D11E2BECCE7206FB7D441C9E84EE2F39E7C4C74EBEC3404E040"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoCubicPoint.lean",
+          "sha256": "ECC981F273F0B6175B512956FAC62802E1FB24D3118AE53ED24322D49358CCA2",
+          "oleanSha256": "944DAAADB85652BB38F39A253EEED526EFF441F0CA3C49CB995632F2C907D179"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoCubicCommutator.lean",
+          "sha256": "4D1D260502B5ABE5C097E33AF1473C89390936F422658B3466F9363C66BB7E1D",
+          "oleanSha256": "06D7829D97116FCBA4496900AF98C1DD88A7136EDD40F9EA689FB04FADB4C53D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoCubicFixedCount.lean",
+          "sha256": "A5349A6DA79C7F2F9755248B28E76D1A838512C68B6249BE9D289F0F55FB1384",
+          "oleanSha256": "478F3659B06E5F1EC711A9ECECDEC0A178BCFBC1543D4FA8754EA1E3B5AC585B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoFixedCounts.lean",
+          "sha256": "EF8E0E8DD15E2CF68545AD247AB923D59102E27128B9FE8A70531E1C6105730E",
+          "oleanSha256": "80A5A64173B5617E691C5612892CC84F55322E9D1D93743DE0D406533D75174C"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticStabilizer.stabilizerPointEquiv_one",
+        "Dubon2026.SourceEllipticStabilizer.stabilizerPointEquiv_mul",
+        "Dubon2026.SourceEllipticCharTwo.omega_pow_three",
+        "Dubon2026.SourceEllipticCharTwo.omega_ne_one",
+        "Dubon2026.SourceEllipticCharTwo.omega_ne_zero",
+        "Dubon2026.SourceEllipticCharTwo.omega_sq",
+        "Dubon2026.SourceEllipticCharTwo.exists_omega",
+        "Dubon2026.SourceEllipticCharTwo.stabilizer_cubic_coordinates_iff",
+        "Dubon2026.SourceEllipticCharTwo.coe_omegaUnit",
+        "Dubon2026.SourceEllipticCharTwo.quarticChange_smul",
+        "Dubon2026.SourceEllipticCharTwo.cubicChange_smul",
+        "Dubon2026.SourceEllipticCharTwo.quaternionChange_smul",
+        "Dubon2026.SourceEllipticCharTwo.quarticChange_mul_quarticChange",
+        "Dubon2026.SourceEllipticCharTwo.conj_quarticChange_eq",
+        "Dubon2026.SourceEllipticCharTwo.quaternionChange_eq",
+        "Dubon2026.SourceEllipticCharTwo.quaternionChange_mul_quaternionChange",
+        "Dubon2026.SourceEllipticCharTwo.epsilonChange_eq_negation",
+        "Dubon2026.SourceEllipticCharTwo.quarticStabilizer_square",
+        "Dubon2026.SourceEllipticCharTwo.quaternionStabilizer_square",
+        "Dubon2026.SourceEllipticCharTwo.quaternionStabilizer_eq",
+        "Dubon2026.SourceEllipticCharTwo.char_two_quartic_fixed_cyclic_count",
+        "Dubon2026.SourceEllipticCharTwo.cubicPoint_some",
+        "Dubon2026.SourceEllipticCharTwo.cubicPoint_quadratic",
+        "Dubon2026.SourceEllipticCharTwo.cubicCommutator_square",
+        "Dubon2026.SourceEllipticCharTwo.char_two_cubic_fixed_cyclic_count",
+        "Dubon2026.SourceEllipticCharTwo.exists_char_two_exceptional_fixed_counts",
+        "Dubon2026.SourceEllipticStabilizer.stabilizerPointHom",
+        "Dubon2026.SourceEllipticCharTwo.epsilonChange",
+        "Dubon2026.SourceEllipticCharTwo.quarticChange",
+        "Dubon2026.SourceEllipticCharTwo.quaternionChange",
+        "Dubon2026.SourceEllipticCharTwo.omegaUnit",
+        "Dubon2026.SourceEllipticCharTwo.cubicChange",
+        "Dubon2026.SourceEllipticCharTwo.quarticStabilizer",
+        "Dubon2026.SourceEllipticCharTwo.cubicStabilizer",
+        "Dubon2026.SourceEllipticCharTwo.quaternionStabilizer",
+        "Dubon2026.SourceEllipticCharTwo.cubicPoint",
+        "Dubon2026.SourceEllipticCharTwo.cubicCommutator"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticStabilizer.stabilizerPointEquiv_one",
+        "Dubon2026.SourceEllipticStabilizer.stabilizerPointEquiv_mul",
+        "Dubon2026.SourceEllipticCharTwo.omega_pow_three",
+        "Dubon2026.SourceEllipticCharTwo.omega_ne_one",
+        "Dubon2026.SourceEllipticCharTwo.omega_ne_zero",
+        "Dubon2026.SourceEllipticCharTwo.omega_sq",
+        "Dubon2026.SourceEllipticCharTwo.exists_omega",
+        "Dubon2026.SourceEllipticCharTwo.stabilizer_cubic_coordinates_iff",
+        "Dubon2026.SourceEllipticCharTwo.coe_omegaUnit",
+        "Dubon2026.SourceEllipticCharTwo.quarticChange_smul",
+        "Dubon2026.SourceEllipticCharTwo.cubicChange_smul",
+        "Dubon2026.SourceEllipticCharTwo.quaternionChange_smul",
+        "Dubon2026.SourceEllipticCharTwo.quarticChange_mul_quarticChange",
+        "Dubon2026.SourceEllipticCharTwo.conj_quarticChange_eq",
+        "Dubon2026.SourceEllipticCharTwo.quaternionChange_eq",
+        "Dubon2026.SourceEllipticCharTwo.quaternionChange_mul_quaternionChange",
+        "Dubon2026.SourceEllipticCharTwo.epsilonChange_eq_negation",
+        "Dubon2026.SourceEllipticCharTwo.quarticStabilizer_square",
+        "Dubon2026.SourceEllipticCharTwo.quaternionStabilizer_square",
+        "Dubon2026.SourceEllipticCharTwo.quaternionStabilizer_eq",
+        "Dubon2026.SourceEllipticCharTwo.char_two_quartic_fixed_cyclic_count",
+        "Dubon2026.SourceEllipticCharTwo.cubicPoint_some",
+        "Dubon2026.SourceEllipticCharTwo.cubicPoint_quadratic",
+        "Dubon2026.SourceEllipticCharTwo.cubicCommutator_square",
+        "Dubon2026.SourceEllipticCharTwo.char_two_cubic_fixed_cyclic_count",
+        "Dubon2026.SourceEllipticCharTwo.exists_char_two_exceptional_fixed_counts"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticStabilizer.stabilizerPointHom",
+        "Dubon2026.SourceEllipticCharTwo.epsilonChange",
+        "Dubon2026.SourceEllipticCharTwo.quarticChange",
+        "Dubon2026.SourceEllipticCharTwo.quaternionChange",
+        "Dubon2026.SourceEllipticCharTwo.omegaUnit",
+        "Dubon2026.SourceEllipticCharTwo.cubicChange",
+        "Dubon2026.SourceEllipticCharTwo.quarticStabilizer",
+        "Dubon2026.SourceEllipticCharTwo.cubicStabilizer",
+        "Dubon2026.SourceEllipticCharTwo.quaternionStabilizer",
+        "Dubon2026.SourceEllipticCharTwo.cubicPoint",
+        "Dubon2026.SourceEllipticCharTwo.cubicCommutator"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoFixedCountsAudit9.log",
+      "logSha256": "83AEDDB762A42A965CE4676D79BE834FF4AE1C40CD9234B9557F36C844C64BCC",
+      "auditSha256": "90E7828A472DD9597F28DF0A68F2F648B685A060E7DD796E34FF2E6AC9DDDF4D",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 47,
+      "linterScopes": 9,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 46,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoFixedCountsDependencyAudit9.log",
+      "dependencyAuditSha256": "CC4D512F3A1B4AA06BF975F1B293E72EE84FF7A9142A984BD3DB55EE3A61D1D0",
+      "dependencyAuditSourceSha256": "D47770337462C89A1DD50D6F413CFB56FB22E4322EA90E3DD9C431A87EFB298F",
+      "consumers": [
+        "Dubon2026.SourceEllipticCharTwo.exists_char_two_exceptional_fixed_counts"
+      ],
+      "dependency": "characteristic-two genus/Picard -> weighted exceptional census -> fixed cyclic-subgroup counts -> actual quaternion automorphism relations and nonscalar prime torsion",
+      "discharged": "A constructed cubic parameter gives actual quartic and cubic stabilizer automorphisms of native ofJ0. Their fixed cyclic-subgroup counts are exactly nuTwo(N) and nuThree(N). The native point homomorphism, addition law, quaternion relations, common-scalar nonscalarity and actual prime-torsion equivalences discharge every action, relation and torsion-count premise.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Combine the actual sign-quotient action with the order-twelve marks, paired fixed counts and modular-place classifier to derive the weighted exceptional census. Characteristic-two genus/Picard, original arithmetic-action comparison and automorphy remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-char-two-fixed-counts-9-reuse-review-20261024.json",
+      "reuseReviewSha256": "BD5FAB3326B3BC2624DE1196DEC57F118DF5DF1CD51DD6F1A73CB441DC6719C7",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T15:43:12.228335+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceEllipticCharTwoSignExponent",
+        "SourceEllipticCharTwoMarkedElements",
+        "SourceEllipticCharTwoCyclicAction",
+        "SourceEllipticCharTwoCyclicOrbits",
+        "SourceEllipticCharTwoOrbitMarks"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoSignExponent.lean",
+          "sha256": "4CCB5ACE75759F303969BC8D67EF33A8FFC24F7F3FCC4DDD08F6E5F0AABE913C",
+          "oleanSha256": "28CE31DA92C976179B8D7A0457CDB7A5117CF381ED5087CB796BC6780082F26E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoMarkedElements.lean",
+          "sha256": "6FC28159C9D6732627E81ABA6D00504C87E58C8469533C70E53D066AA26A8281",
+          "oleanSha256": "FACDB98C50EAB473066FE9BB579A3FB69A87AB133DF32A6A3268032E4E2F8757"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoCyclicAction.lean",
+          "sha256": "7395E50B58CDC41DFD8904EAA429EFC85CFFCA7235B9C461AB765DC8D11966F4",
+          "oleanSha256": "6835FC13784E9A44C4474387B4A1301B4E426DE4600AAB015B7F1E00C0F3E8D9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoCyclicOrbits.lean",
+          "sha256": "CFC3492EBC0B8EAA53D806DB25594FD3884E9E845586DDB3817FCC8C6F5E9297",
+          "oleanSha256": "306801F1B5D8344AB4D4CC0F6AFF94B09B8385308B7023DB7F5EE93EA13B4848"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoOrbitMarks.lean",
+          "sha256": "B3671C0376E7880A9233D2F8A0534D81A9E225ECA4CD49C8596A08F3EB5399B8",
+          "oleanSha256": "8FE5CCB83CC56F2F3740E8064C1D87581FA80708D4BB8708AD3C068F24BF1FBD"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticCharTwo.mem_sign_of_u_one_s_zero",
+        "Dubon2026.SourceEllipticCharTwo.stabilizer_square_or_cube_mem_sign",
+        "Dubon2026.SourceEllipticCharTwo.charTwoSignQuotient_square_or_cube",
+        "Dubon2026.SourceEllipticCharTwo.signProjection_quartic_ne_one",
+        "Dubon2026.SourceEllipticCharTwo.signProjection_quartic_square",
+        "Dubon2026.SourceEllipticCharTwo.signProjection_cubic_ne_one",
+        "Dubon2026.SourceEllipticCharTwo.cubicStabilizer_cube",
+        "Dubon2026.SourceEllipticCharTwo.signProjection_cubic_cube",
+        "Dubon2026.SourceEllipticCharTwo.smul_addSubgroup_eq_map",
+        "Dubon2026.SourceEllipticCharTwo.cyclic_smul_properties",
+        "Dubon2026.SourceEllipticCharTwo.cyclic_smul_val",
+        "Dubon2026.SourceEllipticCharTwo.negation_cyclic_smul",
+        "Dubon2026.SourceEllipticCharTwo.sign_le_cyclic_action_kernel",
+        "Dubon2026.SourceEllipticCharTwo.signProjection_cyclic_smul",
+        "Dubon2026.SourceEllipticCharTwo.cyclic_sign_orbit_eq",
+        "Dubon2026.SourceEllipticCharTwo.cyclicStabilizerRelated_iff_sign_orbit",
+        "Dubon2026.SourceEllipticCharTwo.fixed_cyclic_action_card",
+        "Dubon2026.SourceEllipticCharTwo.char_two_cyclic_action_fixed_counts",
+        "Dubon2026.SourceEllipticCharTwo.cyclic_orbit_marks",
+        "Dubon2026.SourceEllipticCharTwo.CyclicSubgroup",
+        "Dubon2026.SourceEllipticCharTwo.stabilizerPointAction",
+        "Dubon2026.SourceEllipticCharTwo.cyclicStabilizerAction",
+        "Dubon2026.SourceEllipticCharTwo.cyclicSignAction"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticCharTwo.mem_sign_of_u_one_s_zero",
+        "Dubon2026.SourceEllipticCharTwo.stabilizer_square_or_cube_mem_sign",
+        "Dubon2026.SourceEllipticCharTwo.charTwoSignQuotient_square_or_cube",
+        "Dubon2026.SourceEllipticCharTwo.signProjection_quartic_ne_one",
+        "Dubon2026.SourceEllipticCharTwo.signProjection_quartic_square",
+        "Dubon2026.SourceEllipticCharTwo.signProjection_cubic_ne_one",
+        "Dubon2026.SourceEllipticCharTwo.cubicStabilizer_cube",
+        "Dubon2026.SourceEllipticCharTwo.signProjection_cubic_cube",
+        "Dubon2026.SourceEllipticCharTwo.smul_addSubgroup_eq_map",
+        "Dubon2026.SourceEllipticCharTwo.cyclic_smul_properties",
+        "Dubon2026.SourceEllipticCharTwo.cyclic_smul_val",
+        "Dubon2026.SourceEllipticCharTwo.negation_cyclic_smul",
+        "Dubon2026.SourceEllipticCharTwo.sign_le_cyclic_action_kernel",
+        "Dubon2026.SourceEllipticCharTwo.signProjection_cyclic_smul",
+        "Dubon2026.SourceEllipticCharTwo.cyclic_sign_orbit_eq",
+        "Dubon2026.SourceEllipticCharTwo.cyclicStabilizerRelated_iff_sign_orbit",
+        "Dubon2026.SourceEllipticCharTwo.fixed_cyclic_action_card",
+        "Dubon2026.SourceEllipticCharTwo.char_two_cyclic_action_fixed_counts",
+        "Dubon2026.SourceEllipticCharTwo.cyclic_orbit_marks"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceEllipticCharTwo.CyclicSubgroup",
+        "Dubon2026.SourceEllipticCharTwo.stabilizerPointAction",
+        "Dubon2026.SourceEllipticCharTwo.cyclicStabilizerAction",
+        "Dubon2026.SourceEllipticCharTwo.cyclicSignAction"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoQuotientActionAudit5.log",
+      "logSha256": "FDCE5789FB243C63B358277DD40D203ABCE6FDCC10B38998B95740D7B66AEFEC",
+      "auditSha256": "50D037054121554DBF9E4B9521D5236E6513C43D7362DB1E47D5ADE98C3BFBFF",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 22,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 30,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoQuotientActionDependencyAudit5.log",
+      "dependencyAuditSha256": "187ECE5318B49C77D0941332511E34445D2E25AF47056396CD5868CF1BBB4EC8",
+      "dependencyAuditSourceSha256": "4275796AA91F17A829EC65878D23D04F96E1341AC5AE9AA2502ACFE505010134",
+      "consumers": [
+        "Dubon2026.SourceEllipticCharTwo.cyclic_orbit_marks",
+        "Dubon2026.SourceEllipticCharTwo.cyclicStabilizerRelated_iff_sign_orbit",
+        "Dubon2026.SourceEllipticCharTwo.char_two_cyclic_action_fixed_counts"
+      ],
+      "dependency": "non-CM modular-form application -> source modularity prerequisites -> characteristic-two genus/Picard -> weighted exceptional census -> actual sign-quotient action and order-twelve marks",
+      "discharged": "The actual order-twelve sign quotient has the required exponent and nontrivial involution/cubic marked elements. Its action on actual cyclic order-N subgroups has the exact modular-classifier orbits, the exact global nuTwo/nuThree fixed counts, and the full local orbit marks. Every abstract group/action/count premise of the marks is discharged.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Sum the fixed points over the actual modular-place fibers to derive the weighted census. Characteristic-two differential contribution and genus/Picard, original arithmetic-action comparison and automorphy remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-char-two-quotient-action-5-reuse-review-20261024.json",
+      "reuseReviewSha256": "91AA7B48B7252B9C5E13CE051C6607EE33FF04986E3FD49B0B4785CD2AB23353",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T15:51:23.432954+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceEllipticCharTwoCensusSum",
+        "SourceEllipticCharTwoWeightedCensus",
+        "SourceModularCharTwoCensus"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoCensusSum.lean",
+          "sha256": "560ABBC07286717FCFA9011CD9DFF52A114AE3925905B01B99F3B7B386963656",
+          "oleanSha256": "4878075C963FE656C5AD952F21638141EF45F7C65AB930F6538CFE4CED4546A9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticCharTwoWeightedCensus.lean",
+          "sha256": "BCF38E96D84637CD6204B1157FBBCCC72289535BB916E65ADE237001E5BB0366",
+          "oleanSha256": "3B47B0B48F0C4768A0ACCB5A91C9BBDDEA26E654C16DE2EC22EDD5EFC62F437F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularCharTwoCensus.lean",
+          "sha256": "961601F937B1265406DA54E5A239D17D360985CBD7651E4C3B8941D097BB7465",
+          "oleanSha256": "B2CA1C2FB019A3B6F938693EF13A54A96B963FB986D218CD0C5B05C45DBFF63A"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceEllipticCharTwo.fixed_cyclic_card_eq_sum",
+        "Dubon2026.SourceEllipticCharTwo.cyclic_order_census",
+        "Dubon2026.SourceFunctionField.coeff_char_two_order_census_with_closure",
+        "Dubon2026.SourceFunctionField.coeff_char_two_order_census"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceEllipticCharTwo.fixed_cyclic_card_eq_sum",
+        "Dubon2026.SourceEllipticCharTwo.cyclic_order_census",
+        "Dubon2026.SourceFunctionField.coeff_char_two_order_census_with_closure",
+        "Dubon2026.SourceFunctionField.coeff_char_two_order_census"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoWeightedCensusAudit3.log",
+      "logSha256": "AB5731910558F9F0E41243AF6F841C51EFC8BC901EB2D27E4BC2E3505ADF202C",
+      "auditSha256": "6A6E03FA0B6A955819636529D63428899CB3CF72AC93E08649A374BAB8027DBA",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 10,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoWeightedCensusDependencyAudit3.log",
+      "dependencyAuditSha256": "5B35AAB2DDE1F320D5FC963D12A7E5D5484D18BCCB1236CC2ECA4ED72584F952",
+      "dependencyAuditSourceSha256": "32D2B45942A2A071312769739A1F8A6DE1D63AE06FB653A06B9FF56404EF6696",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.coeff_char_two_order_census"
+      ],
+      "dependency": "non-CM modular-form application -> source modularity prerequisites -> characteristic-two genus/Picard -> weighted exceptional census on the actual coefficient modular field",
+      "discharged": "The actual modular coefficient field has positive-j orders 1,3,4,6,12, with #1+3#3+2#6=nuTwo(N) and #1+#4=nuThree(N). The actual full-inertia classifier, sign-quotient marks, elliptic fixed-subgroup counts and native finite-fiber sum discharge every geometric/action/count input. The closure parameter is eliminated in the public consumer.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The weighted local differential contribution and characteristic-two genus/Picard assembly remain, followed by original arithmetic-action comparison and automorphy. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-char-two-weighted-census-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "A954F513C8AD9770DC705AC32171FE4191B6441F0ED7C0F8526C6FAF0B3529B4",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T15:59:17.012427+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceModularCharTwoDifferentialSum",
+        "SourceModularCharTwoGenusLower",
+        "SourceModularCharTwoResidueGenus",
+        "SourceModularCharTwoPicardInjectivity",
+        "SourceModularPrimePicardInjectivity"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularCharTwoDifferentialSum.lean",
+          "sha256": "8A8B84B75C875F3D0B30F9FA27266C6B387B87594E919CDE8816058BC3BFD6FF",
+          "oleanSha256": "4690BAD12E8D61A3C780DF1220216A1F62C2897642376FD63B6703B5F25457D0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularCharTwoGenusLower.lean",
+          "sha256": "6A28314B44673E7ED9EF93A14F392B246FEECE7B9F3E92B8A58704EACE2AD473",
+          "oleanSha256": "641F524E36A61CF863686868B0D3D553E4746BBECE287D864ABF8FF1FBBD4413"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularCharTwoResidueGenus.lean",
+          "sha256": "DC7A6F961D61518A69418BE7872D96C3DF1C48419519EE324C5EEE672A09F3B2",
+          "oleanSha256": "3387BE5B208A05BA54FA0A549E873E16C279A70974C750EAC84EE97206449227"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularCharTwoPicardInjectivity.lean",
+          "sha256": "6E60C8E0F68B1A8D939E15BB91DE4E50424ABD0BCFBD384A39D0CDD1BBD71400",
+          "oleanSha256": "663FC37C1E712391468A1A44E1BAE9F084FA41A7B35DA6E9ED2D62E4454905C8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularPrimePicardInjectivity.lean",
+          "sha256": "44FFD3E09D72100883276A2514821543FE32C2B0A679E528C91158FFCF6F4960",
+          "oleanSha256": "6C09D9537C1AB0D713CE0965BC83D36D6507707F5F9A632712A41FDA504F3C99"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.coeff_char_two_weighted_local_bound",
+        "Dubon2026.SourceFunctionField.coeff_char_two_differential_contribution",
+        "Dubon2026.SourceFunctionField.coeff_genus_lower_of_char_two",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_residue_genusFF_eq_originalGenus_of_char_two",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_torsion_injective_of_char_two",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_residue_genusFF_eq_originalGenus_of_prime",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_torsion_injective_of_prime"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.coeff_char_two_weighted_local_bound",
+        "Dubon2026.SourceFunctionField.coeff_char_two_differential_contribution",
+        "Dubon2026.SourceFunctionField.coeff_genus_lower_of_char_two",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_residue_genusFF_eq_originalGenus_of_char_two",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_torsion_injective_of_char_two",
+        "Dubon2026.SourceFunctionField.GaussReduction.modular_residue_genusFF_eq_originalGenus_of_prime",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_torsion_injective_of_prime"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGenusPicardAudit5.log",
+      "logSha256": "7FDE60245ABF06E55E56C2318FC4745B6C68C3325ECBF6512E8AC78F40E6C65C",
+      "auditSha256": "F6429CCE7A551450AA2300238C276A1767C0FF6569C5725D6A53E81FEF28D8C0",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 14,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 20,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGenusPicardDependencyAudit5R2.log",
+      "dependencyAuditSha256": "05F52E5D920D20FE28DFCCD37DD657DE29239FC77151C926916E0919ABA89454",
+      "dependencyAuditSourceSha256": "884666C6E598A5960C133201B3C6E20809940A590B86011FAB2176EB5F4DAF51",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_torsion_injective_of_char_two",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_torsion_injective_of_prime"
+      ],
+      "dependency": "non-CM modular-form application -> source modularity prerequisites -> actual modular good reduction and Picard torsion injectivity in characteristic two",
+      "discharged": "The actual characteristic-two modular Gauss reduction preserves genus and has a Picard map injective on every residue-invertible torsion subgroup. The exact census and local derivative bounds discharge the full wild differential contribution. Combining the tame and both wild cases supplies actual genus equality and the same Picard injectivity at every prime residue characteristic, under only level invertibility.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Original arithmetic-action comparison, Frobenius/inertia compatibility, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-char-two-genus-picard-5-reuse-review-20261024.json",
+      "reuseReviewSha256": "E9614A73B72435C1056D99EB84F5464723BE598B52106B1E36269B44BC41CFF4",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-char-two-eighth-power-3-reuse-review-20261024.json",
+    "Tools/source-full-torsion-specialization-2-reuse-review-20261024.json",
+    "Tools/source-char-two-full-inertia-3-reuse-review-20261024.json",
+    "Tools/source-char-two-place-classifier-4-reuse-review-20261024.json",
+    "Tools/source-order-twelve-marks-6-reuse-review-20261024.json",
+    "Tools/source-quaternion-nonscalar-3-reuse-review-20261024.json",
+    "Tools/source-char-two-fixed-counts-9-reuse-review-20261024.json",
+    "Tools/source-char-two-quotient-action-5-reuse-review-20261024.json",
+    "Tools/source-char-two-weighted-census-3-reuse-review-20261024.json",
+    "Tools/source-char-two-genus-picard-5-reuse-review-20261024.json"
+  ],
+  "additionalCurrentSearch": {
+    "path": "Tools/prime-picard-promotion-route-428.json",
+    "sha256": "0D857C598642B188A76B0D18F1B84E7D29BD4FC46F8A006AFB7F04B812D7C255"
+  },
+  "productionFocusedReceipt7528": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoEighthPowerDependencyAudit3Production7528.log",
+        "sha256": "4F18AFE98C4729522AA71F838BAB20268014F97C4BCD94BE54E6ECCFE0C3B4B1",
+        "requiredProofValueEdges": 7,
+        "consumers": [
+          "Dubon2026.SourceEllipticCharTwo.exists_unit_mul_eighth_power"
+        ],
+        "sourceSha256": "5834382177DF8CFF16F72D58DEFE88A99001C2F460842324E4DD5E926EF9F1F4"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceFullTorsionSpecializationDependencyAudit2Production7528.log",
+        "sha256": "3C39968B3D262B102633AC6106A52A18B95BAA36E984C15A247AC07BC1353CA2",
+        "requiredProofValueEdges": 4,
+        "consumers": [
+          "Dubon2026.SourceEllipticDivisionField.exists_prescribed_ofJ_inertia_action_with_three_torsion"
+        ],
+        "sourceSha256": "00E92A0188687D898055740EE0342C91B6C0B522819F5CF55D33C9AE68DE7F2B"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoFullInertiaDependencyAudit3Production7528.log",
+        "sha256": "6C5D74A09443553A42816F6F3BF4A15A1B02B78D93811799EA07DE2C14BC7304",
+        "requiredProofValueEdges": 10,
+        "consumers": [
+          "Dubon2026.SourceEllipticDivisionField.exists_char_two_exceptional_full_inertia_image"
+        ],
+        "sourceSha256": "9047CB66CF41802DC2E451E4E28DBC63CEB97F0EA0CABC78C27A5FCB6D6BDFC3"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoPlaceClassifierDependencyAudit4Production7528.log",
+        "sha256": "79A56E25178A720EC317550FFAE3AC75F88A267FE9D4F4FE8FA94E24215C7375",
+        "requiredProofValueEdges": 10,
+        "consumers": [
+          "Dubon2026.SourceEllipticDivisionField.exists_char_two_cyclic_modular_place_classification"
+        ],
+        "sourceSha256": "368DE4AB3CCE8529755BAAD38D063109A7D28872FE0BC998D27AADDB544E725B"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveMarksDependencyAudit6Production7528.log",
+        "sha256": "E443F89031EAC39D205657AB6A0A2BB6267D3A0F92B8F41228CF1CE2F99BC9C8",
+        "requiredProofValueEdges": 28,
+        "consumers": [
+          "Dubon2026.SourceOrderTwelve.marks"
+        ],
+        "sourceSha256": "7A3C4471E4CA8FB1A3CD62D416BF1B3C872766B4EB17B1B8BB143ED2C8DDBEF2"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceQuaternionNonscalarDependencyAudit3Production7528.log",
+        "sha256": "01C42090B561DB8FCF3D4BE6B839158C62FF5159EE1ACA0D617F15E3DE756ECB",
+        "requiredProofValueEdges": 4,
+        "consumers": [
+          "Dubon2026.SourceEllipticExceptional.quartic_nonscalar_of_quaternion_relations",
+          "Dubon2026.SourceEllipticExceptional.cubic_nonscalar_of_quaternion_commutator"
+        ],
+        "sourceSha256": "6110BF4D02AA7E205D03EE6004A96877AC8812DCEB08DD8493C3C036B786CD33"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoFixedCountsDependencyAudit9Production7528.log",
+        "sha256": "CC4D512F3A1B4AA06BF975F1B293E72EE84FF7A9142A984BD3DB55EE3A61D1D0",
+        "requiredProofValueEdges": 46,
+        "consumers": [
+          "Dubon2026.SourceEllipticCharTwo.exists_char_two_exceptional_fixed_counts"
+        ],
+        "sourceSha256": "3A64F3619CD24095A4345954222301282DA1B67D58566989C099886F635837B6"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoQuotientActionDependencyAudit5Production7528.log",
+        "sha256": "187ECE5318B49C77D0941332511E34445D2E25AF47056396CD5868CF1BBB4EC8",
+        "requiredProofValueEdges": 30,
+        "consumers": [
+          "Dubon2026.SourceEllipticCharTwo.cyclic_orbit_marks",
+          "Dubon2026.SourceEllipticCharTwo.cyclicStabilizerRelated_iff_sign_orbit",
+          "Dubon2026.SourceEllipticCharTwo.char_two_cyclic_action_fixed_counts"
+        ],
+        "sourceSha256": "804FA5BA7BA58FA6B933C65E9A053220829DC08DC3BAD2E2C633C2D5E339C99E"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoWeightedCensusDependencyAudit3Production7528.log",
+        "sha256": "5B35AAB2DDE1F320D5FC963D12A7E5D5484D18BCCB1236CC2ECA4ED72584F952",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.coeff_char_two_order_census"
+        ],
+        "sourceSha256": "383F32015BD6444673EF9E608C6CBD0D7B7C65F3A6724703AE0B0D9D9DEFB96D"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceCharTwoGenusPicardDependencyAudit5R2Production7528.log",
+        "sha256": "05F52E5D920D20FE28DFCCD37DD657DE29239FC77151C926916E0919ABA89454",
+        "requiredProofValueEdges": 20,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_torsion_injective_of_char_two",
+          "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_picard_torsion_injective_of_prime"
+        ],
+        "sourceSha256": "6C710DD8932A170D14CD02AB3D80428508DE5EC24D1539F30AB762A3F37B2A18"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardProductionAudit7528.log",
+    "sha256": "1D6C22440963D009BA61C5F3D1229EC020F311B75BDF652C6E0BF4B003ADC087",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-prime-picard-production-build-7528.log",
+    "aggregateSha256": "A5891148796CA7C90E900E2DA6072D952EAE35E53A095D75B2486776277CF091",
+    "productionModules": 7528,
+    "incrementModules": 43,
+    "axiomChecks": 116,
+    "exhaustiveIncrementTheorems": 260,
+    "linterScopes": 43,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 260,
+    "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The actual modular places, coefficient fields, Gauss residue map, divisor orders, genera and Picard quotient retain their definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 260,
+      "scratchDistinct": 260,
+      "generatedNameRenamings": {
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveCubicCentralizer_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_9",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveElementCounts_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_5",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveBasic_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_1",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveCubicCentralizer": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_8",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveBasic": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveTransitiveMarks": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_10",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveSylowNonNormal_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_3",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveSylowNonNormal": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_2",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveInvolutionConjugacy": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_6",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveInvolutionConjugacy_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_7",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveTransitiveMarks_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_11",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveElementCounts": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_4"
+      },
+      "generatedNameReason": "Lean names anonymous local instances using the module root. Import qualification changes that root to Dubon2026. Each of the twelve pairs has the same owning source module, byte-identical mathematical source after import qualification, identical full declaration type and identical full kernel proof expression. No theorem is omitted or weakened.",
+      "generatedNameSourceEvidence": {
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveCubicCentralizer_1": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_9",
+          "owningModule": "SourceOrderTwelveCubicCentralizer",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+          "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+          "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveCubicCentralizer.lean",
+            "sha256": "A2B96A1F80F079C433846B9EDA8B04202A2BCC9F36D930B00C7CF5F10B94EC4F"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveCubicCentralizer.lean",
+            "sha256": "962E8B7F3DB21EED693B92B32190692475C7837AA9C32C5360E5EAFD557E5E81"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveElementCounts_1": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_5",
+          "owningModule": "SourceOrderTwelveElementCounts",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+          "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+          "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveElementCounts.lean",
+            "sha256": "7D7B8CA2A422711851F443F561F974198ABF8DD7FDA6DEECBF85D50F8224BACB"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveElementCounts.lean",
+            "sha256": "2F54B7C574FC2841F5C28C9A92DEB11CDC3B5FA23D085055E40D5516E1E3EE08"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveBasic_1": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_1",
+          "owningModule": "SourceOrderTwelveBasic",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+          "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+          "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveBasic.lean",
+            "sha256": "49FBC92E28F94400022E1BFA8924194C92A8F68FC56FA396F160F8726E671CCB"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveBasic.lean",
+            "sha256": "80F65E3CB1D177F9D503DAB1891EE1BD00F510B2337BA8523A3A6410DDF31D38"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveCubicCentralizer": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_8",
+          "owningModule": "SourceOrderTwelveCubicCentralizer",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+          "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+          "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveCubicCentralizer.lean",
+            "sha256": "A2B96A1F80F079C433846B9EDA8B04202A2BCC9F36D930B00C7CF5F10B94EC4F"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveCubicCentralizer.lean",
+            "sha256": "962E8B7F3DB21EED693B92B32190692475C7837AA9C32C5360E5EAFD557E5E81"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveBasic": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026",
+          "owningModule": "SourceOrderTwelveBasic",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+          "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+          "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveBasic.lean",
+            "sha256": "49FBC92E28F94400022E1BFA8924194C92A8F68FC56FA396F160F8726E671CCB"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveBasic.lean",
+            "sha256": "80F65E3CB1D177F9D503DAB1891EE1BD00F510B2337BA8523A3A6410DDF31D38"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveTransitiveMarks": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_10",
+          "owningModule": "SourceOrderTwelveTransitiveMarks",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+          "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+          "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveTransitiveMarks.lean",
+            "sha256": "73879FF0C5499D92363E72092E32C12ACAFDD7BD9250F8032070573EB34760E9"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveTransitiveMarks.lean",
+            "sha256": "8B6902D96EA53FC659A5291E079B41714EF67B801C28DEAC7C2D67D6A0D8EF88"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveSylowNonNormal_1": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_3",
+          "owningModule": "SourceOrderTwelveSylowNonNormal",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+          "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+          "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveSylowNonNormal.lean",
+            "sha256": "DDD12819547D3C15C34466C6E94551AD061CA88647D8963A9F8AD5AF2E3ACA4B"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveSylowNonNormal.lean",
+            "sha256": "D84AC4A981063B7313998007D699DB15475A22F04E6B56689BD9F5D2CCA5997D"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveSylowNonNormal": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_2",
+          "owningModule": "SourceOrderTwelveSylowNonNormal",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+          "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+          "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveSylowNonNormal.lean",
+            "sha256": "DDD12819547D3C15C34466C6E94551AD061CA88647D8963A9F8AD5AF2E3ACA4B"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveSylowNonNormal.lean",
+            "sha256": "D84AC4A981063B7313998007D699DB15475A22F04E6B56689BD9F5D2CCA5997D"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveInvolutionConjugacy": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_6",
+          "owningModule": "SourceOrderTwelveInvolutionConjugacy",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+          "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+          "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveInvolutionConjugacy.lean",
+            "sha256": "C4AF4EDB2A5DC1553A2FFF899BABF871FE35209FCEB19685A16C52E1D00F859B"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveInvolutionConjugacy.lean",
+            "sha256": "816D9C52DC486C2B282A98113275648DC65DE589D4F8F442BADF9710B8FC48E1"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveInvolutionConjugacy_1": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_7",
+          "owningModule": "SourceOrderTwelveInvolutionConjugacy",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+          "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+          "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveInvolutionConjugacy.lean",
+            "sha256": "C4AF4EDB2A5DC1553A2FFF899BABF871FE35209FCEB19685A16C52E1D00F859B"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveInvolutionConjugacy.lean",
+            "sha256": "816D9C52DC486C2B282A98113275648DC65DE589D4F8F442BADF9710B8FC48E1"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveTransitiveMarks_1": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_11",
+          "owningModule": "SourceOrderTwelveTransitiveMarks",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+          "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+          "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveTransitiveMarks.lean",
+            "sha256": "73879FF0C5499D92363E72092E32C12ACAFDD7BD9250F8032070573EB34760E9"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveTransitiveMarks.lean",
+            "sha256": "8B6902D96EA53FC659A5291E079B41714EF67B801C28DEAC7C2D67D6A0D8EF88"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveElementCounts": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_4",
+          "owningModule": "SourceOrderTwelveElementCounts",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+          "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+          "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveElementCounts.lean",
+            "sha256": "7D7B8CA2A422711851F443F561F974198ABF8DD7FDA6DEECBF85D50F8224BACB"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveElementCounts.lean",
+            "sha256": "2F54B7C574FC2841F5C28C9A92DEB11CDC3B5FA23D085055E40D5516E1E3EE08"
+          },
+          "onlyImportQualification": true
+        }
+      },
+      "productionFocused": 260,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceEllipticCharTwoAuxiliaryRootUnits",
+            "SourceEllipticCharTwoThreeDivisionRelation",
+            "SourceEllipticCharTwoEighthPower"
+          ],
+          "count": 4,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership418For7528.log",
+            "sha256": "A2242025A11406B294C25E1785B9CA14F2E4C5327F013FCCE9B32694D957EE66",
+            "sourceSha256": "CB95988FC8543BBF5530ECE765D5C902AADFE1FC54AF307F1E1CAC15C145A1DB"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticFullTorsionDivisor",
+            "SourceEllipticDeuringThreeTorsionSpecialization"
+          ],
+          "count": 2,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership419For7528.log",
+            "sha256": "4EFE8893B188F1DF6F7B1C5B03325874F0509FCE85F873DAB9579029F162DA9B",
+            "sourceSha256": "5448D5449D276288ECAFF3171B6561CFD8925A5A8536E87861703F01B7D7BE69"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticCharTwoOfJFamily",
+            "SourceEllipticCharTwoGoodModelOrder",
+            "SourceEllipticCharTwoFullInertiaImage"
+          ],
+          "count": 7,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership420For7528.log",
+            "sha256": "D4A06D8AA19B00302A81692F244C19474AEFA534D81D82BF686BB87CF8B87FFA",
+            "sourceSha256": "4EB6357C103760F5DF56FEA2C45E92438A2F60B61DB3B4E91B4C56B499C518E3"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticCharTwoCyclicSpecialization",
+            "SourceEllipticCharTwoEmbeddingOrbits",
+            "SourceEllipticCharTwoPlaceFibers",
+            "SourceEllipticCharTwoPlaceClassification"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership421For7528.log",
+            "sha256": "762DAF78AFC346F5AE4ED0CC63C81D986BC65DEB2602B7D6C5770CD000271E52",
+            "sourceSha256": "E27B4D98178203E64389B20FA4000BF008D0AA68A8C15E97232D489422354CD6"
+          }
+        },
+        {
+          "modules": [
+            "SourceOrderTwelveBasic",
+            "SourceOrderTwelveSylowNonNormal",
+            "SourceOrderTwelveElementCounts",
+            "SourceOrderTwelveInvolutionConjugacy",
+            "SourceOrderTwelveCubicCentralizer",
+            "SourceOrderTwelveTransitiveMarks"
+          ],
+          "count": 146,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership422For7528.log",
+            "sha256": "F686436B60BC12E584E21EF4EB51027D21FE387BB982819E05EAAF406E0F77F9",
+            "sourceSha256": "D0FC964E456A9FA1CF23B3B4C4F9071A5530AF0A1A2A595CB4DDF4864C241A26"
+          }
+        },
+        {
+          "modules": [
+            "SourcePrimeTorsionCommonScalar",
+            "SourceQuaternionQuarticNonscalar",
+            "SourceQuaternionCubicNonscalar"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership423For7528.log",
+            "sha256": "A12171A1206F8918FC52A00286636DE191551350E2713451253328692387965B",
+            "sourceSha256": "A96A5BA10DF3EFCBEE8BD5BCA13D1F3C77E43BBCB13FF0354D74C915C4A4CC8B"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticStabilizerPointHom",
+            "SourceEllipticCharTwoCubicParameters",
+            "SourceEllipticCharTwoQuarticChanges",
+            "SourceEllipticCharTwoQuaternionStabilizers",
+            "SourceEllipticCharTwoQuarticFixedCount",
+            "SourceEllipticCharTwoCubicPoint",
+            "SourceEllipticCharTwoCubicCommutator",
+            "SourceEllipticCharTwoCubicFixedCount",
+            "SourceEllipticCharTwoFixedCounts"
+          ],
+          "count": 47,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership424For7528.log",
+            "sha256": "8E63A1C6660AAC406EFF5EB13E0D711CB917D1FB5C20F8129407737207D54B74",
+            "sourceSha256": "E1486B5B26385642605098224D28DD273A0A11B8EA0305FF1317B3A7B4980F01"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticCharTwoSignExponent",
+            "SourceEllipticCharTwoMarkedElements",
+            "SourceEllipticCharTwoCyclicAction",
+            "SourceEllipticCharTwoCyclicOrbits",
+            "SourceEllipticCharTwoOrbitMarks"
+          ],
+          "count": 22,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership425For7528.log",
+            "sha256": "597400B24CE5A1CF51A9909A5B5DAD1AEEC36C4683A622A8318DB64D3306B432",
+            "sourceSha256": "F00C498C28C250E2E22EFB9DB01809E3BE501D867CD7DC3E9C84770D55C15699"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticCharTwoCensusSum",
+            "SourceEllipticCharTwoWeightedCensus",
+            "SourceModularCharTwoCensus"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership426For7528.log",
+            "sha256": "8BF886CC67E5B0A0F072CE848193584A9B0910FF51A994319C271EDD55078FF9",
+            "sourceSha256": "C446E16BD307B8C5561513BFA92B5106E624305212BF0F1DFABD509F67918F36"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularCharTwoDifferentialSum",
+            "SourceModularCharTwoGenusLower",
+            "SourceModularCharTwoResidueGenus",
+            "SourceModularCharTwoPicardInjectivity",
+            "SourceModularPrimePicardInjectivity"
+          ],
+          "count": 14,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership427For7528.log",
+            "sha256": "7F39F148778347ED876F13059EF3BFD81DCEB787C3A42DA590AACCACFB202D2B",
+            "sourceSha256": "B0F620AAEB4BE2A9DFA912A54EE62A3608CE83D179BCCF07688E3A52FD44A108"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardOwnership7528.log",
+        "sha256": "D569E39598AB1698F4302DBEC5BC2445335AE0A8D825B480B4AFB3BBB1B17981",
+        "sourceSha256": "38D799B1B6B4434E9E079642800D8C1B68D24BF7136F8403CC222D2610F456AD"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-082619-008.log",
+        "sha256": "1DC7C99AEA3767322924FB5B18AC9808FBEE9483EBE56CF633C0E9E31EE420F8"
+      },
+      "generatedNameInspectionEvidence": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\prime-picard-generated-name-evidence-7528-r2.json",
+        "sha256": "7FBACE89D383104E78D2D1AC56730C37F4812E13B308AB11BAB43431C16D626F"
+      },
+      "precedingFailedComparison": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\source-prime-picard-ownership-comparison-7528.json",
+        "sha256": "05CB1EE27E4F73CB1186F8C975DBEFCD60FC466611A8A1860B9927B2F6A53E99"
+      }
+    },
+    "scratchToProductionCountReason": "All 260 distinct names from 260 exhaustive scratch checks are retained: 260 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Original arithmetic-action comparison, Frobenius/inertia compatibility, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt7528": {
+    "recordedUTC": "2026-10-24T18:44:35.168107+00:00",
+    "log": "logs/dubon-build-20261024-102615-950.log",
+    "sha256": "58510FF3D9A2010A7A58D57FF8910578705AB66155926D180DCC94BA4CDDAAF7",
+    "bytes": 12526891,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 7528,
+    "projectTheorems": 49317,
+    "registeredConsumers": 22419,
+    "registeredConstructions": 1958,
+    "declarations": 30245,
+    "generated": 28647,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261024_102121.log",
+    "foundationSha256": "FA755339A52C102B6A820D521A6D8B5860750A5FBD59C86857358C79B4ABC38E",
+    "countReconciliation": {
+      "previousTheorems": 49059,
+      "focusedTheorems": 260,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourceCurve.Place.restrictAlongFinite.congr_simp",
+        "Dubon2026.SourceEllipticStabilizer.stabilizerPointEquiv.congr_simp"
+      ],
+      "addedTheorems": 258,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardOwnership7528.log",
+      "ownershipSha256": "D569E39598AB1698F4302DBEC5BC2445335AE0A8D825B480B4AFB3BBB1B17981"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 260,
+      "scratchDistinct": 260,
+      "generatedNameRenamings": {
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveCubicCentralizer_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_9",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveElementCounts_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_5",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveBasic_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_1",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveCubicCentralizer": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_8",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveBasic": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveTransitiveMarks": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_10",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveSylowNonNormal_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_3",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveSylowNonNormal": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_2",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveInvolutionConjugacy": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_6",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveInvolutionConjugacy_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_7",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveTransitiveMarks_1": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_11",
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveElementCounts": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_4"
+      },
+      "generatedNameReason": "Lean names anonymous local instances using the module root. Import qualification changes that root to Dubon2026. Each of the twelve pairs has the same owning source module, byte-identical mathematical source after import qualification, identical full declaration type and identical full kernel proof expression. No theorem is omitted or weakened.",
+      "generatedNameSourceEvidence": {
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveCubicCentralizer_1": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_9",
+          "owningModule": "SourceOrderTwelveCubicCentralizer",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+          "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+          "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveCubicCentralizer.lean",
+            "sha256": "A2B96A1F80F079C433846B9EDA8B04202A2BCC9F36D930B00C7CF5F10B94EC4F"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveCubicCentralizer.lean",
+            "sha256": "962E8B7F3DB21EED693B92B32190692475C7837AA9C32C5360E5EAFD557E5E81"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveElementCounts_1": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_5",
+          "owningModule": "SourceOrderTwelveElementCounts",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+          "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+          "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveElementCounts.lean",
+            "sha256": "7D7B8CA2A422711851F443F561F974198ABF8DD7FDA6DEECBF85D50F8224BACB"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveElementCounts.lean",
+            "sha256": "2F54B7C574FC2841F5C28C9A92DEB11CDC3B5FA23D085055E40D5516E1E3EE08"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveBasic_1": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_1",
+          "owningModule": "SourceOrderTwelveBasic",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+          "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+          "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveBasic.lean",
+            "sha256": "49FBC92E28F94400022E1BFA8924194C92A8F68FC56FA396F160F8726E671CCB"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveBasic.lean",
+            "sha256": "80F65E3CB1D177F9D503DAB1891EE1BD00F510B2337BA8523A3A6410DDF31D38"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveCubicCentralizer": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_8",
+          "owningModule": "SourceOrderTwelveCubicCentralizer",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+          "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+          "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveCubicCentralizer.lean",
+            "sha256": "A2B96A1F80F079C433846B9EDA8B04202A2BCC9F36D930B00C7CF5F10B94EC4F"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveCubicCentralizer.lean",
+            "sha256": "962E8B7F3DB21EED693B92B32190692475C7837AA9C32C5360E5EAFD557E5E81"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveBasic": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026",
+          "owningModule": "SourceOrderTwelveBasic",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+          "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+          "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveBasic.lean",
+            "sha256": "49FBC92E28F94400022E1BFA8924194C92A8F68FC56FA396F160F8726E671CCB"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveBasic.lean",
+            "sha256": "80F65E3CB1D177F9D503DAB1891EE1BD00F510B2337BA8523A3A6410DDF31D38"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveTransitiveMarks": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_10",
+          "owningModule": "SourceOrderTwelveTransitiveMarks",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+          "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+          "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveTransitiveMarks.lean",
+            "sha256": "73879FF0C5499D92363E72092E32C12ACAFDD7BD9250F8032070573EB34760E9"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveTransitiveMarks.lean",
+            "sha256": "8B6902D96EA53FC659A5291E079B41714EF67B801C28DEAC7C2D67D6A0D8EF88"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveSylowNonNormal_1": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_3",
+          "owningModule": "SourceOrderTwelveSylowNonNormal",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+          "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+          "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveSylowNonNormal.lean",
+            "sha256": "DDD12819547D3C15C34466C6E94551AD061CA88647D8963A9F8AD5AF2E3ACA4B"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveSylowNonNormal.lean",
+            "sha256": "D84AC4A981063B7313998007D699DB15475A22F04E6B56689BD9F5D2CCA5997D"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveSylowNonNormal": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_2",
+          "owningModule": "SourceOrderTwelveSylowNonNormal",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+          "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+          "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveSylowNonNormal.lean",
+            "sha256": "DDD12819547D3C15C34466C6E94551AD061CA88647D8963A9F8AD5AF2E3ACA4B"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveSylowNonNormal.lean",
+            "sha256": "D84AC4A981063B7313998007D699DB15475A22F04E6B56689BD9F5D2CCA5997D"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveInvolutionConjugacy": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_6",
+          "owningModule": "SourceOrderTwelveInvolutionConjugacy",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+          "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+          "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveInvolutionConjugacy.lean",
+            "sha256": "C4AF4EDB2A5DC1553A2FFF899BABF871FE35209FCEB19685A16C52E1D00F859B"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveInvolutionConjugacy.lean",
+            "sha256": "816D9C52DC486C2B282A98113275648DC65DE589D4F8F442BADF9710B8FC48E1"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveInvolutionConjugacy_1": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_7",
+          "owningModule": "SourceOrderTwelveInvolutionConjugacy",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+          "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+          "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveInvolutionConjugacy.lean",
+            "sha256": "C4AF4EDB2A5DC1553A2FFF899BABF871FE35209FCEB19685A16C52E1D00F859B"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveInvolutionConjugacy.lean",
+            "sha256": "816D9C52DC486C2B282A98113275648DC65DE589D4F8F442BADF9710B8FC48E1"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveTransitiveMarks_1": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_11",
+          "owningModule": "SourceOrderTwelveTransitiveMarks",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 3)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 3)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 3))))))\n  (Lean.Expr.const `Nat.prime_three [])",
+          "typeSha256": "4E18F34DA32ADFD44C8CF0B2DFDCC276D187F314545785B1DEE7CE6AC8AC4178",
+          "proofValueSha256": "FB263FD5B6A453941A1EB1CFA5BF7762BD78BB0EA59EB0EE0C9D7C6C39DA25BB",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveTransitiveMarks.lean",
+            "sha256": "73879FF0C5499D92363E72092E32C12ACAFDD7BD9250F8032070573EB34760E9"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveTransitiveMarks.lean",
+            "sha256": "8B6902D96EA53FC659A5291E079B41714EF67B801C28DEAC7C2D67D6A0D8EF88"
+          },
+          "onlyImportQualification": true
+        },
+        "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_sourceOrderTwelveElementCounts": {
+          "productionName": "Dubon2026.SourceOrderTwelve.instFactPrimeOfNatNat_dubon2026_4",
+          "owningModule": "SourceOrderTwelveElementCounts",
+          "exactDeclarationType": "Lean.Expr.app\n  (Lean.Expr.const `Fact [])\n  (Lean.Expr.app\n    (Lean.Expr.const `Nat.Prime [])\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lit (Lean.Literal.natVal 2)))\n      (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2)))))",
+          "exactProofValue": "Lean.Expr.app\n  (Lean.Expr.app\n    (Lean.Expr.const `Fact.mk [])\n    (Lean.Expr.app\n      (Lean.Expr.const `Nat.Prime [])\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `OfNat.ofNat [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lit (Lean.Literal.natVal 2)))\n        (Lean.Expr.app (Lean.Expr.const `instOfNatNat []) (Lean.Expr.lit (Lean.Literal.natVal 2))))))\n  (Lean.Expr.const `Nat.prime_two [])",
+          "typeSha256": "3E402ACADBC7BCCFDDFAE15EFB05A7C2326DEBCA7094C36048F303F67EB0C262",
+          "proofValueSha256": "42F6587831691E0733FBEFDCA4C444EE4221AE83C02A72ACEC1E8BF2F1864AA0",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOrderTwelveElementCounts.lean",
+            "sha256": "7D7B8CA2A422711851F443F561F974198ABF8DD7FDA6DEECBF85D50F8224BACB"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOrderTwelveElementCounts.lean",
+            "sha256": "2F54B7C574FC2841F5C28C9A92DEB11CDC3B5FA23D085055E40D5516E1E3EE08"
+          },
+          "onlyImportQualification": true
+        }
+      },
+      "productionFocused": 260,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceEllipticCharTwoAuxiliaryRootUnits",
+            "SourceEllipticCharTwoThreeDivisionRelation",
+            "SourceEllipticCharTwoEighthPower"
+          ],
+          "count": 4,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership418For7528.log",
+            "sha256": "A2242025A11406B294C25E1785B9CA14F2E4C5327F013FCCE9B32694D957EE66",
+            "sourceSha256": "CB95988FC8543BBF5530ECE765D5C902AADFE1FC54AF307F1E1CAC15C145A1DB"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticFullTorsionDivisor",
+            "SourceEllipticDeuringThreeTorsionSpecialization"
+          ],
+          "count": 2,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership419For7528.log",
+            "sha256": "4EFE8893B188F1DF6F7B1C5B03325874F0509FCE85F873DAB9579029F162DA9B",
+            "sourceSha256": "5448D5449D276288ECAFF3171B6561CFD8925A5A8536E87861703F01B7D7BE69"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticCharTwoOfJFamily",
+            "SourceEllipticCharTwoGoodModelOrder",
+            "SourceEllipticCharTwoFullInertiaImage"
+          ],
+          "count": 7,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership420For7528.log",
+            "sha256": "D4A06D8AA19B00302A81692F244C19474AEFA534D81D82BF686BB87CF8B87FFA",
+            "sourceSha256": "4EB6357C103760F5DF56FEA2C45E92438A2F60B61DB3B4E91B4C56B499C518E3"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticCharTwoCyclicSpecialization",
+            "SourceEllipticCharTwoEmbeddingOrbits",
+            "SourceEllipticCharTwoPlaceFibers",
+            "SourceEllipticCharTwoPlaceClassification"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership421For7528.log",
+            "sha256": "762DAF78AFC346F5AE4ED0CC63C81D986BC65DEB2602B7D6C5770CD000271E52",
+            "sourceSha256": "E27B4D98178203E64389B20FA4000BF008D0AA68A8C15E97232D489422354CD6"
+          }
+        },
+        {
+          "modules": [
+            "SourceOrderTwelveBasic",
+            "SourceOrderTwelveSylowNonNormal",
+            "SourceOrderTwelveElementCounts",
+            "SourceOrderTwelveInvolutionConjugacy",
+            "SourceOrderTwelveCubicCentralizer",
+            "SourceOrderTwelveTransitiveMarks"
+          ],
+          "count": 146,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership422For7528.log",
+            "sha256": "F686436B60BC12E584E21EF4EB51027D21FE387BB982819E05EAAF406E0F77F9",
+            "sourceSha256": "D0FC964E456A9FA1CF23B3B4C4F9071A5530AF0A1A2A595CB4DDF4864C241A26"
+          }
+        },
+        {
+          "modules": [
+            "SourcePrimeTorsionCommonScalar",
+            "SourceQuaternionQuarticNonscalar",
+            "SourceQuaternionCubicNonscalar"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership423For7528.log",
+            "sha256": "A12171A1206F8918FC52A00286636DE191551350E2713451253328692387965B",
+            "sourceSha256": "A96A5BA10DF3EFCBEE8BD5BCA13D1F3C77E43BBCB13FF0354D74C915C4A4CC8B"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticStabilizerPointHom",
+            "SourceEllipticCharTwoCubicParameters",
+            "SourceEllipticCharTwoQuarticChanges",
+            "SourceEllipticCharTwoQuaternionStabilizers",
+            "SourceEllipticCharTwoQuarticFixedCount",
+            "SourceEllipticCharTwoCubicPoint",
+            "SourceEllipticCharTwoCubicCommutator",
+            "SourceEllipticCharTwoCubicFixedCount",
+            "SourceEllipticCharTwoFixedCounts"
+          ],
+          "count": 47,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership424For7528.log",
+            "sha256": "8E63A1C6660AAC406EFF5EB13E0D711CB917D1FB5C20F8129407737207D54B74",
+            "sourceSha256": "E1486B5B26385642605098224D28DD273A0A11B8EA0305FF1317B3A7B4980F01"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticCharTwoSignExponent",
+            "SourceEllipticCharTwoMarkedElements",
+            "SourceEllipticCharTwoCyclicAction",
+            "SourceEllipticCharTwoCyclicOrbits",
+            "SourceEllipticCharTwoOrbitMarks"
+          ],
+          "count": 22,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership425For7528.log",
+            "sha256": "597400B24CE5A1CF51A9909A5B5DAD1AEEC36C4683A622A8318DB64D3306B432",
+            "sourceSha256": "F00C498C28C250E2E22EFB9DB01809E3BE501D867CD7DC3E9C84770D55C15699"
+          }
+        },
+        {
+          "modules": [
+            "SourceEllipticCharTwoCensusSum",
+            "SourceEllipticCharTwoWeightedCensus",
+            "SourceModularCharTwoCensus"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership426For7528.log",
+            "sha256": "8BF886CC67E5B0A0F072CE848193584A9B0910FF51A994319C271EDD55078FF9",
+            "sourceSha256": "C446E16BD307B8C5561513BFA92B5106E624305212BF0F1DFABD509F67918F36"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularCharTwoDifferentialSum",
+            "SourceModularCharTwoGenusLower",
+            "SourceModularCharTwoResidueGenus",
+            "SourceModularCharTwoPicardInjectivity",
+            "SourceModularPrimePicardInjectivity"
+          ],
+          "count": 14,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardScratchOwnership427For7528.log",
+            "sha256": "7F39F148778347ED876F13059EF3BFD81DCEB787C3A42DA590AACCACFB202D2B",
+            "sourceSha256": "B0F620AAEB4BE2A9DFA912A54EE62A3608CE83D179BCCF07688E3A52FD44A108"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimePicardOwnership7528.log",
+        "sha256": "D569E39598AB1698F4302DBEC5BC2445335AE0A8D825B480B4AFB3BBB1B17981",
+        "sourceSha256": "38D799B1B6B4434E9E079642800D8C1B68D24BF7136F8403CC222D2610F456AD"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-082619-008.log",
+        "sha256": "1DC7C99AEA3767322924FB5B18AC9808FBEE9483EBE56CF633C0E9E31EE420F8"
+      },
+      "generatedNameInspectionEvidence": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\prime-picard-generated-name-evidence-7528-r2.json",
+        "sha256": "7FBACE89D383104E78D2D1AC56730C37F4812E13B308AB11BAB43431C16D626F"
+      },
+      "precedingFailedComparison": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\source-prime-picard-ownership-comparison-7528.json",
+        "sha256": "05CB1EE27E4F73CB1186F8C975DBEFCD60FC466611A8A1860B9927B2F6A53E99"
+      }
+    },
+    "scratchToProductionCountReason": "All 260 distinct names from 260 exhaustive scratch checks are retained: 260 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Original arithmetic-action comparison, Frobenius/inertia compatibility, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

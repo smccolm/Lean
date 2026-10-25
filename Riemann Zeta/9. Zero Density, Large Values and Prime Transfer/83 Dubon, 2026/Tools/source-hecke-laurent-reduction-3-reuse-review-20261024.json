@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original Tate Frobenius quadratic relation -> Hecke reduction compatibility -> reduction of the actual degeneracy norm -> integral Laurent norm product and collapse of prime-order twists in residue characteristic p",
+  "precedingScratchReceipts": {
+    "source-geometric-picard-reduction-3-scratch-receipt.json": "47EFBD64F1102B29AB902B548A4F6E9541B06649AD0CE44BF1A44535742BB1D1"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentRootTwist.lean",
+      "sha256": "A240384D2B357252EEF306C8B60A1CA0765F5356578FCA0BCFD3D70EF6FBF043"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimeConjugateBaseChange.lean",
+      "sha256": "AD535499B09CE33E92FE751810FF0AFDA593413AE0B159C0E6DF2C8E33396A29"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentCoefficientReindex.lean",
+      "sha256": "605C38843DBB0C9BE3482E0E101F5E57E73DE4E8C8CCAF7FFEF57870CE8A3599"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentFrobenius.lean",
+      "sha256": "9D20070B1C986C4E32B0B9E25F2C7AC7CB12CCE0441CD9169A8E26A7CD5C9624"
+    }
+  ],
+  "routeAdjustment": "First prove the required valuation-unit and residue-twist identities and reduce the literal finite Laurent product. Then use support and injectivity of q-expansion to extract the integral Laurent norm once its explicit upstream product identity is proved.",
+  "discharged": "The actual prime-order valuation-ring unit reduces to one, so the literal integral Laurent Hecke product reduces to the q-expansion of coefficient Frobenius times geometric Frobenius. Given the narrower explicit q-expanded product identity, Laurent support and q-expansion injectivity construct an integral preimage with exactly that residue. This final consumer is conditional on the expanded product identity; no actual Hecke norm identification is claimed.",
+  "remaining": "The actual degeneracy norm-product identity must still be proved, followed by Hecke/Picard compatibility, the quadratic relation, residual association, automorphy and all-weight continuation. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\hecke-laurent-product-route-442.json",
+    "sha256": "6C2F4B34116312BB66D6DB4F1A8DBAFB83A2FCFD256EC35E44AC87322D623F74",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original Tate Frobenius quadratic relation -> Hecke reduction compatibility -> reduction of the actual degeneracy norm -> integral Laurent norm product and collapse of prime-order twists in residue characteristic p",
+      "reuseChecked": [
+        "The frozen FLT S_ModularCurve_kroneckerCongruence_norm_heckeBetaBar gives a direct Laurent norm-product proof, independent of a full bivariate modular-polynomial symmetry development. Most of its twist, coefficient-map and reindex infrastructure already exists locally.",
+        "Local coeffMap_qTwist_units assumes fields. Its elementary coefficient proof must be instantiated for valuation-ring coefficients, where the source is a commutative ring. Local qTwist_one_apply, coeffMap_qExpand and the newly proved Laurent Frobenius formula supply the remaining product reduction.",
+        "The exact norm-product identity still requires the actual Hecke degeneracy maps and their embedding census. An Atkin-Lehner involution is available in the frozen external source but has not been adapted locally. Assess existing original-field generation and Hecke constructions before expanding that dependency."
+      ],
+      "selectedRoute": "First prove the required valuation-unit and residue-twist identities and reduce the literal finite Laurent product. Then use support and injectivity of q-expansion to extract the integral Laurent norm once its explicit upstream product identity is proved.",
+      "assumptionsToDischarge": "Integrality and the Frobenius-times-geometric-Frobenius residue formula for the actual Hecke norm. The exact norm-product identity is a separate upstream obligation, never an assumed Hecke/Picard compatibility result.",
+      "boundary": "Actual Hecke norm-product identification, Hecke/Picard reduction compatibility, quadratic correspondence and original Tate quadratic relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

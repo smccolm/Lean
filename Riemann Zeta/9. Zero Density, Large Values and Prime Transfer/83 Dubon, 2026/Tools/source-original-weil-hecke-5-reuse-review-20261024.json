@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "modular concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Picard Weil pairing -> existing Hecke self-adjointness in finite Tate coordinates",
+  "precedingScratchReceipts": {
+    "source-original-weil-adjunction-10-scratch-receipt.json": "28BDD097B108D2CF560522B69A6D631DD3B7801FC235D33E72E6756F09B4405B"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAtkinCoefficientExtensionR2.lean",
+      "sha256": "EAD4F897C7E28D960ED31D5F20A76DC536087479043221A90026D4CF4F4D99D2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckePicard.lean",
+      "sha256": "192007D5D7C75ACD8F31B78B9C1A9CBA753211EB4FAC1FAAA5D9CAC273D27DCD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateHeckeArithmetic.lean",
+      "sha256": "2241B68065D6694B2CF158040D346999305B1596826ECC0827A05AE5E97DC86F"
+    }
+  ],
+  "routeAdjustment": "Reuse the existing actual Atkin-Lehner involution and its proved exchange of alpha and beta. Native place transport and normalized ramification identify the two divisor correspondences. Identify the resulting torsion map with the existing Picard Hecke operator and the existing Tate coordinate action. No new involution, replacement Hecke operator or symmetry premise is introduced.",
+  "discharged": "At every prime away from the level, the actual original Picard Hecke operator is self-adjoint for the actual root-valued Weil pairing over the algebraic closed arithmetic coefficient fields. Every finite coordinate of the existing Qbar Tate Hecke operator satisfies that identity. Atkin existence, transpose identification and coordinate comparison are proved dependencies.",
+  "remaining": "Nondegeneracy, compatibility between torsion levels, the assembled Tate pairing, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. Scratch only; production promotion and assembled verification pending. No acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-weil-hecke-route-474.json",
+    "sha256": "7412CA7F5F3D4BBCD0DA7F0743A9987761CE57455FFA6A8E842D4C46A0E77ABC",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "modular concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Picard Weil pairing -> existing Hecke self-adjointness in finite Tate coordinates",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAtkinCoefficientExtensionR2.lean",
+          "sha256": "EAD4F897C7E28D960ED31D5F20A76DC536087479043221A90026D4CF4F4D99D2"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAtkinInvolution.lean",
+          "sha256": "A16B19DCF466FED1B297835B6CE93C52D41EDA3466202396728D0EA8E37C9500"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePlaceTransport.lean",
+          "sha256": "8E5124CBDFDEB8F3C8343B5DC5650735F428B5F9BA9FAF8ACAE2F033DE0A3439"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckePicard.lean",
+          "sha256": "192007D5D7C75ACD8F31B78B9C1A9CBA753211EB4FAC1FAAA5D9CAC273D27DCD"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateHeckeArithmetic.lean",
+          "sha256": "2241B68065D6694B2CF158040D346999305B1596826ECC0827A05AE5E97DC86F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateGalois.lean",
+          "sha256": "D40030B05BD21BC27E08C463F266E7F103CB92F77E109C621081A7BE87711F5E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilCorrespondenceAdjunction.lean",
+          "sha256": "101BF0C95B1069EC2D70A4C869F26829B8F5407BFF25DD4C1CCD0F3CA2C7FFE9"
+        }
+      ],
+      "selectedRoute": "Reuse the existing actual Atkin-Lehner involution and its proved exchange of alpha and beta. Native place transport and normalized ramification identify the two divisor correspondences. Identify the resulting torsion map with the existing Picard Hecke operator and the existing Tate coordinate action. No new involution, replacement Hecke operator or symmetry premise is introduced.",
+      "discharged": "At every prime away from the level, the actual original Picard Hecke operator is self-adjoint for the actual root-valued Weil pairing over the algebraic closed arithmetic coefficient fields. Every finite coordinate of the existing Qbar Tate Hecke operator satisfies that identity. Atkin existence, transpose identification and coordinate comparison are proved dependencies.",
+      "remaining": "Nondegeneracy, compatibility between torsion levels, the assembled Tate pairing, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. No acceptance gate closes. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,888 @@
+{
+  "date": "24 October 2026",
+  "modules": [
+    "Dubon2026.SourceOriginalInertiaIntegralFunctions",
+    "Dubon2026.SourceOriginalInertiaGaussAction",
+    "Dubon2026.SourceOriginalArithmeticIntegralCharts",
+    "Dubon2026.SourceReductionPrincipalDivisorCharts",
+    "Dubon2026.SourceModularPrincipalDivisorCharts",
+    "Dubon2026.SourceModularConstantReductionCharts",
+    "Dubon2026.SourceOriginalCoefficientPlaceAction",
+    "Dubon2026.SourceOriginalInertiaChartTransport",
+    "Dubon2026.SourceOriginalInertiaPlaceReduction",
+    "Dubon2026.SourceOriginalCoefficientDivisors",
+    "Dubon2026.SourceOriginalCoefficientPicard",
+    "Dubon2026.SourceOriginalInertiaDivisorReduction",
+    "Dubon2026.SourceOriginalInertiaPicard",
+    "Dubon2026.SourceOriginalTateInertia",
+    "Dubon2026.SourceOriginalSpecializationInertia",
+    "Dubon2026.SourceOriginalPrimitiveUnramifiedRealization"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight continuation -> automorphy and residual association -> actual primitive weight-two unramified realization -> original rational/integral Tate inertia -> original Picard torsion inertia -> actual modular reduction on original places, with all-prime genus preservation and torsion injectivity.",
+  "discharged": "Native arithmetic inertia acts trivially on every residue-invertible torsion subgroup of the actual original modular Picard group when the level is invertible. The same constructed modular reduction has invariant original places, preserves genus and is injective on invertible Picard torsion. The identity on the Laurent-series fields induces the actual Picard equivalence. Exact chart descriptions, native integral transport and residue invariance discharge arithmetic compatibility. The actual integral and rational Tate representations therefore send inertia to the identity at every prime not dividing level times Tate prime. The same actually constructed continuous primitive weight-two Galois realization retains its finite coefficient field, spanning specialization, prime Fourier eigenvalues and original arithmetic action, and is unramified away from those primes. No genus, chart, Picard, equivariance, spanning or inertia certificate remains in the final realization theorem.",
+  "boundary": "The Frobenius relation and trace/determinant consequences, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 7,544-module scope: all thirteen retained regressions, 49,430 exhaustive theorem checks, 22,458 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.original_integral_reduction_inertia",
+    "Dubon2026.SourceFunctionField.GaussReduction.inertiaGaussHom_modularResidue",
+    "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmetic_integral_charts",
+    "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_constant_reduction_with_charts_of_prime",
+    "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_invariant_on_original_places",
+    "Dubon2026.SourceFunctionField.GaussReduction.originalArithmeticPicard_eq_self_of_inertia_of_torsion",
+    "Dubon2026.SourceFunctionField.GaussReduction.originalTateGaloisRep_eq_one_away_level_prime",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_galois_realization"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-24T16:17:32.900297+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalInertiaIntegralFunctions",
+        "SourceOriginalInertiaGaussAction"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaIntegralFunctions.lean",
+          "sha256": "6F66AE23646A286FF61DBA9034219243BD29D3F43FD775641CDC7585155A6459",
+          "oleanSha256": "5088CF50C0A0B2D527EA7E723CCAA994A5BD36D147A70B5D7F7D1EDA720358C2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaGaussAction.lean",
+          "sha256": "06C2925649E295356F1275B0A09B4B9862331B3DFAA9C589451533E8E3EBF967",
+          "oleanSha256": "F461E9CC84C91D65FC81856D07305372EE4D66E107187C5B7B1623E48643670E"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.coeffMap_subtype_decomposition",
+        "Dubon2026.SourceFunctionField.coeffMap_residue_inertia",
+        "Dubon2026.SourceFunctionField.original_integral_reduction_inertia",
+        "Dubon2026.SourceFunctionField.GaussReduction.coeffMap_mem_coefficient_field",
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmeticRingAut_coe",
+        "Dubon2026.SourceFunctionField.GaussReduction.isInt_coeffMap_inertia",
+        "Dubon2026.SourceFunctionField.GaussReduction.inertiaGaussHom_resHom",
+        "Dubon2026.SourceFunctionField.GaussReduction.inertiaGaussHom_modularResidue",
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmeticRingAut",
+        "Dubon2026.SourceFunctionField.GaussReduction.inertiaGaussHom"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.coeffMap_subtype_decomposition",
+        "Dubon2026.SourceFunctionField.coeffMap_residue_inertia",
+        "Dubon2026.SourceFunctionField.original_integral_reduction_inertia",
+        "Dubon2026.SourceFunctionField.GaussReduction.coeffMap_mem_coefficient_field",
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmeticRingAut_coe",
+        "Dubon2026.SourceFunctionField.GaussReduction.isInt_coeffMap_inertia",
+        "Dubon2026.SourceFunctionField.GaussReduction.inertiaGaussHom_resHom",
+        "Dubon2026.SourceFunctionField.GaussReduction.inertiaGaussHom_modularResidue"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmeticRingAut",
+        "Dubon2026.SourceFunctionField.GaussReduction.inertiaGaussHom"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaFunctionsAudit2.log",
+      "logSha256": "9A940B9374591A5D2173614BC0118A4581FF4A178655352E874CE6E2EE7BF051",
+      "auditSha256": "7AB654C0A787245753774CB784D35AD63E850B724A05444511DAF36FEBBD1375",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 35,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 15,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaFunctionsDependencyAudit2.log",
+      "dependencyAuditSha256": "6432C31F8CDB21A042F14F94E6A6AA021156BA1A829CFF630477A222EAEB506F",
+      "dependencyAuditSourceSha256": "7340D0F2B75FEE4AC91F26D7E28A4D300F171DF5BEE4F9A25A05094A2CDDD38B",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.original_integral_reduction_inertia",
+        "Dubon2026.SourceFunctionField.GaussReduction.inertiaGaussHom_modularResidue"
+      ],
+      "dependency": "non-CM modular-form application -> original residual association -> original Tate/Picard inertia action -> equivariance of actual modular reduction -> inertia invariance of integral Laurent functions",
+      "discharged": "Native inertia membership gives an integral Laurent representative for the original arithmetic image with exactly the same residue series. The literal original arithmetic automorphism on the identified coefficient field preserves the actual Gauss ring and fixes modularResidueHom. Existing integral fractions and their choice independence derive the residue compatibility.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Integral-chart, place and Picard action comparison, the Frobenius relation, residual association, automorphy and all-weight continuation remain required. No unramifiedness claim follows from this function-level result alone. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-inertia-functions-2-reuse-review-20261024.json",
+      "reuseReviewSha256": "6840070FAEF3E4B54122C97F394ECB9426A33AD435AC76C984A897FCCAD4DB42",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T16:27:40.345718+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalArithmeticIntegralCharts"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticIntegralCharts.lean",
+          "sha256": "51BEB42F07A1D14F0B28937936BABF4A4F87078A48B01795CAAD48C51D737878",
+          "oleanSha256": "EFEFAC09DB01049728ACEF5EF0EC93EE95B36E35C6CE396D40EF60B170F972B7"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmeticRingAut_constants",
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmeticRingAut_j",
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmeticRingAut_mem_adjoin",
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmeticRingAut_isIntegral",
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmetic_integral_charts",
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmeticChartHom"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmeticRingAut_constants",
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmeticRingAut_j",
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmeticRingAut_mem_adjoin",
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmeticRingAut_isIntegral",
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmetic_integral_charts"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmeticChartHom"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticIntegralChartsAudit1.log",
+      "logSha256": "CF3B04BCBBE3DCA0669FA0F7235E0B51D0AC075A3F50531C423BCC56B94543CB",
+      "auditSha256": "0E17B5F7220AD3932AEA85A167B940D80721EB30A3269564956C087CA5B331EF",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 17,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 11,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticIntegralChartsDependencyAudit1.log",
+      "dependencyAuditSha256": "21E924723EB31B151CFF3AA1C8959A124A196308220A904A3C44D5D0751085B5",
+      "dependencyAuditSourceSha256": "D91482F7FAC5103ED8573F64292B9F02EF3641A92B0FDB7E00F8A3F551EB871F",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmetic_integral_charts"
+      ],
+      "dependency": "non-CM modular-form application -> original residual association -> original Tate/Picard inertia -> actual Gauss place-map compatibility -> preservation of the j and inverse-j integral charts",
+      "discharged": "The actual arithmetic action preserves integrality over both the j and inverse-j chart algebras. Its constant action and fixed coordinate are proved, and the native commuting-square theorem transports the monic equation.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Place and Picard action comparison, the Frobenius relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-arithmetic-integral-charts-1-reuse-review-20261024.json",
+      "reuseReviewSha256": "6301EFDB90749390F95EC7B4698FD1C6C4EED40A21DD4F3ABA17C95D3280D8FB",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T16:40:09.788067+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceReductionPrincipalDivisorCharts",
+        "SourceModularPrincipalDivisorCharts",
+        "SourceModularConstantReductionCharts"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionPrincipalDivisorCharts.lean",
+          "sha256": "1F5B62D3DD3F056F69F538209A0D292D5E13DC79572C04F97EF01D8775CF2BD3",
+          "oleanSha256": "5A8A80AB322CFD9E52221DDB811C49031F91BE164705BC3AEB91D38FC433E51F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularPrincipalDivisorCharts.lean",
+          "sha256": "EA576924814068E27474432851754DE3C7A041AF13FF1621F2C3A4B251D79BC6",
+          "oleanSha256": "BA42BC935C0B75E16F4CF6830115F28C83DD5314F1DA0BBE7A563944F9376A81"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularConstantReductionCharts.lean",
+          "sha256": "2E9A3A15845DB4ECF1667DA04E43F883D69C720354AA5D7C65641D56E9768A40",
+          "oleanSha256": "314478666C1C6A475A293A75E344C0302E3D2C274884FDE1AD4084F02F8F39B8"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceCurve.RegularProlongation.exists_principal_divisor_reduction_map_with_charts",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_principal_divisor_reduction_map_with_charts_of_genus_eq",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_constant_reduction_with_charts_of_prime"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceCurve.RegularProlongation.exists_principal_divisor_reduction_map_with_charts",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_principal_divisor_reduction_map_with_charts_of_genus_eq",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_constant_reduction_with_charts_of_prime"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceModularReductionChartsAudit3.log",
+      "logSha256": "AB1413C561EFFD95C8A4EB1A2A942EA48362BF093A5CFC8834875DC090022165",
+      "auditSha256": "55370440C78D68C088EB3675B532F1A4A7D3BAF9DC12B17C541172C72321B106",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 6,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 10,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceModularReductionChartsDependencyAudit3.log",
+      "dependencyAuditSha256": "B4277CF67AD5C39A7E32133CBF6E443BCC44CCED962C5318E011403749BA2B0C",
+      "dependencyAuditSourceSha256": "077A3786A0DD30AFB57A4DD0C49CCC1D032CC6ABFDE1ED620B81DDE2E4D1835C",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_constant_reduction_with_charts_of_prime"
+      ],
+      "dependency": "original residual association -> original Tate/Picard inertia -> place reduction invariant under arithmetic inertia -> exact two-chart specification retained by the principal-divisor reduction map",
+      "discharged": "For every prime residue characteristic the same actual modular constant reduction retains both exact chart descriptions, principal-divisor compatibility, genus preservation and injectivity on all residue-invertible Picard torsion. Existing chart gluing and fiber identities are reused; both wild and tame genus results supply the geometric input.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Original arithmetic place and Picard invariance, the Frobenius relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-modular-reduction-charts-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "E5E620C0DBB3B59DDBAECF616AE663E15AC945526628CE90BA0E309469D6F6FA",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T16:46:21.899698+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalCoefficientPlaceAction",
+        "SourceOriginalInertiaChartTransport",
+        "SourceOriginalInertiaPlaceReduction"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientPlaceAction.lean",
+          "sha256": "7BD9412EEA1E5EE633160696E43E97DDC5FC6B871309F93C01CFABF9D85900B0",
+          "oleanSha256": "34C64068D1A9467A8E0566AC5D35CC769AAAE130A7CE14186BD5F31FB4D32F4C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaChartTransport.lean",
+          "sha256": "3471F01C3D250805DA4868241E7E26D859D41C367478A387DD7FD9114C1421DF",
+          "oleanSha256": "2FBCE9447E9311141EE9002ECCA230207B4458CB614C4CAA7C85EFB3AB65B0FF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaPlaceReduction.lean",
+          "sha256": "CC8AB26FAD5D20FFF60BBC8D531179D8A513F114AECE0E21F047B196094A3ECA",
+          "oleanSha256": "F90D111ED8E3BE72F6B15CAEBD863B27B1E2E1CB3199D428547E16154BFBF70A"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientEquiv_arithmetic",
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmeticPlace_original",
+        "Dubon2026.SourceFunctionField.GaussReduction.mem_coefficientArithmeticPlace_iff",
+        "Dubon2026.SourceFunctionField.GaussReduction.nonunit_coefficientArithmeticPlace_iff",
+        "Dubon2026.SourceFunctionField.GaussReduction.residue_inertia_smul",
+        "Dubon2026.SourceFunctionField.GaussReduction.chartDomain_coefficientArithmeticPlace",
+        "Dubon2026.SourceFunctionField.GaussReduction.chartReducesTo_coefficientArithmeticPlace",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_invariant_on_original_places",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientEquiv",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientPlaceEquiv",
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmeticPlace"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientEquiv_arithmetic",
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmeticPlace_original",
+        "Dubon2026.SourceFunctionField.GaussReduction.mem_coefficientArithmeticPlace_iff",
+        "Dubon2026.SourceFunctionField.GaussReduction.nonunit_coefficientArithmeticPlace_iff",
+        "Dubon2026.SourceFunctionField.GaussReduction.residue_inertia_smul",
+        "Dubon2026.SourceFunctionField.GaussReduction.chartDomain_coefficientArithmeticPlace",
+        "Dubon2026.SourceFunctionField.GaussReduction.chartReducesTo_coefficientArithmeticPlace",
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_invariant_on_original_places"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientEquiv",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientPlaceEquiv",
+        "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmeticPlace"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaPlaceReductionAudit3.log",
+      "logSha256": "B4686D3FD96EC5D7C0A6224E7756C4402ED8B7FD88485E688AE4EE8D89B222FF",
+      "auditSha256": "0D402EF7DE541484549A681508676C87A3E09626C58016425F2BB655785C88DF",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 24,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 20,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaPlaceReductionDependencyAudit3.log",
+      "dependencyAuditSha256": "4668EC09E84B6B6A78D17A0B618C39A3D8CF1FDA2F00089AD9FB3A0D570CE267",
+      "dependencyAuditSourceSha256": "E8FE4F250F2225513D3B426ABA84F7E30A23342D95BBA62E03458A30390B89C1",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_invariant_on_original_places"
+      ],
+      "dependency": "original residual association -> inertia on original Picard classes -> original arithmetic place action commutes with modular reduction -> transport the existing original places to the equal coefficient field and preserve chart conditions",
+      "discharged": "The same actual modular constant reduction is invariant under native arithmetic inertia acting on the original modular places, and retains genus preservation and injectivity on every residue-invertible Picard torsion subgroup. The literal field identification, original place action, constant residue identity and both integral-chart comparisons are derived. The inertia subgroup is the exact native image used by the frozen source.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Descent to the original Picard action and Tate torsion, the Frobenius relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-inertia-place-reduction-3-reuse-review-20261024.json",
+      "reuseReviewSha256": "5A9B635D8B312860989144E6CA373436B20639AFEAB5F6A2B0516219AD9442C2",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T16:56:03.115663+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalCoefficientDivisors",
+        "SourceOriginalCoefficientPicard",
+        "SourceOriginalInertiaDivisorReduction",
+        "SourceOriginalInertiaPicard"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientDivisors.lean",
+          "sha256": "F0AAC11E2A722F3447511486850100F9CC8092D1C1BAEE6972074899480E5256",
+          "oleanSha256": "2070D428ABA983D3D19A87714857FB1836FAA132585530E366BE3C73242B4F57"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientPicard.lean",
+          "sha256": "B71A160C331653079BBCA4DE343D6DB5941805EA6BAC39724F9CE13F7ED5C301",
+          "oleanSha256": "9B667DCA9CC908AA3878F0F3E71D4598D0D0BC1CC8F37B1FD7F630D8084B479B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaDivisorReduction.lean",
+          "sha256": "02190895BDA56380E6E3A3FCA080BC55705B442B915819F99A13BB0A455F7711",
+          "oleanSha256": "4EF899A9D974C343B712657BD7F245D34A04C678A69A29889B60DFC6A92336CB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaPicard.lean",
+          "sha256": "D005B4081D6616CA345C7D4AC3AD08CEA069C5B01DD4CCCC4FAD4BE273B204DE",
+          "oleanSha256": "7C6F5E261F5BFA350B4059B0FF51A8BE90A802008E83C3CAA065A6610FA72B58"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientDivisorEquiv_apply",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientDivisor_degree",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientDivisor_principal_iff",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientDegZero_principal",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientPicardEquiv_mk",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientPicardEquiv_torsion",
+        "Dubon2026.SourceFunctionField.GaussReduction.reduction_originalArithmeticDivisor",
+        "Dubon2026.SourceFunctionField.GaussReduction.reduction_originalArithmeticPicard",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalArithmeticPicard_eq_self_of_inertia_of_torsion",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientDivisorEquiv",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientDegZeroEquiv",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientPicardEquiv"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientDivisorEquiv_apply",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientDivisor_degree",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientDivisor_principal_iff",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientDegZero_principal",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientPicardEquiv_mk",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientPicardEquiv_torsion",
+        "Dubon2026.SourceFunctionField.GaussReduction.reduction_originalArithmeticDivisor",
+        "Dubon2026.SourceFunctionField.GaussReduction.reduction_originalArithmeticPicard",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalArithmeticPicard_eq_self_of_inertia_of_torsion"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientDivisorEquiv",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientDegZeroEquiv",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalCoefficientPicardEquiv"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardInertiaAudit4.log",
+      "logSha256": "CEAD027E90720BBDCA7D25220DCEFCCDE25852FC95A104AB0EECF11398E63526",
+      "auditSha256": "0A3AB418C48B744100C5494F7C51466F07DFD8FCF45BE8FA688849E8C9733035",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 25,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 19,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardInertiaDependencyAudit4.log",
+      "dependencyAuditSha256": "640DCE7954F68B16AEDD9FE87A691CE81E841B0E20E939AC7ACC28AAA7B7E737",
+      "dependencyAuditSourceSha256": "C59BEBB0A8F909C4D23291676748D89342048F24FCEB8EFC1F18742DB2FE4D91",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.originalArithmeticPicard_eq_self_of_inertia_of_torsion"
+      ],
+      "dependency": "original residual association -> original Tate inertia -> original Picard torsion inertia -> actual reduction injectivity and original-place inertia invariance -> identify original and coefficient Picard classes through the literal field equality",
+      "discharged": "Native arithmetic inertia acts trivially on every residue-invertible torsion subgroup of the actual original modular Picard group when the level is invertible, in every prime residue characteristic. The identity on the literal Laurent-series fields induces an actual Picard equivalence. Original-place invariance descends through finite divisors and the quotient; actual reduction injectivity proves the action is the identity. No genus, place/Picard equivariance or injectivity certificate is assumed.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Original Tate inertia, the Frobenius relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-picard-inertia-4-reuse-review-20261024.json",
+      "reuseReviewSha256": "445847C9CB8A9CA67B06C494896DF24CF5FB6116C45DD9E22DDB05BD64938D41",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T16:58:50.665649+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalTateInertia"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateInertia.lean",
+          "sha256": "FD5F8624DBB923785B81085D99C6AAAA58ACA4D2D3651FAC54E5DDDF7409BA63",
+          "oleanSha256": "83DC89B035BD5301E8DD40012B237FC62DA429039FE88636D7E7B5D938569D79"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GaussReduction.originalTateGaloisRep_eq_one_of_inertia",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalRationalTateGaloisRep_eq_one_of_inertia",
+        "Dubon2026.SourceFunctionField.GaussReduction.residue_charP_of_prime_mem_nonunits",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalTateGaloisRep_eq_one_away_level_prime"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GaussReduction.originalTateGaloisRep_eq_one_of_inertia",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalRationalTateGaloisRep_eq_one_of_inertia",
+        "Dubon2026.SourceFunctionField.GaussReduction.residue_charP_of_prime_mem_nonunits",
+        "Dubon2026.SourceFunctionField.GaussReduction.originalTateGaloisRep_eq_one_away_level_prime"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateInertiaAudit1.log",
+      "logSha256": "B24DCDCFA376AA25D4D5C70A4C7F48ACDFAF9431893B88177F3F2BDDB377FE80",
+      "auditSha256": "D6E3DA34C73F04E2C5A8128DE041583C314DBC63831EAFF444A866B765A27D03",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 4,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 9,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateInertiaDependencyAudit1.log",
+      "dependencyAuditSha256": "DE604741AFA4E82482826FCAB291FCB953635876A0E36997D3960FE0B5FBF581",
+      "dependencyAuditSourceSha256": "44DB7A47D02E0B7FE0D0454D474D2CAFB924C9F38EE3157264D01EB48BAFEFAA",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GaussReduction.originalTateGaloisRep_eq_one_away_level_prime"
+      ],
+      "dependency": "original residual association -> actual rational Tate representation unramified away from level and the Tate prime -> identity on original Tate sequences -> original Picard torsion inertia",
+      "discharged": "Both the actual integral and rational Tate representations send native arithmetic inertia to the identity at every prime not dividing the level times the Tate prime. Genuine Tate torsion coordinates use the proved original Picard inertia theorem, and native scalar extension preserves identity. The literal source LiesOverPrime nonunit condition supplies residue characteristic and nondivisibility gives the exact invertibility conditions.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. Pass inertia through the actual primitive-form specialization; the Frobenius relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-tate-inertia-1-reuse-review-20261024.json",
+      "reuseReviewSha256": "AC1AC459C5627057275CEDF08F1EAF5D8EBEE882057FCAAAA9AB2F6FF045DDF6",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-24T17:02:41.786099+00:00",
+      "date": "2026-10-24 America/Vancouver",
+      "modules": [
+        "SourceOriginalSpecializationInertia",
+        "SourceOriginalPrimitiveUnramifiedRealization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSpecializationInertia.lean",
+          "sha256": "197EE7F23963BDD6836E0A8014BBEC8EE67B2EE84C2B419B16FFD986C0891586",
+          "oleanSha256": "5975003B4D924999F9F5A6449C54F15AA8447FDA85B24928403E0AA96937B0B6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveUnramifiedRealization.lean",
+          "sha256": "5DEB7FB97710B7F7D564102DBEA4670CF6FFA31C698E7F1082DB76433B54D615",
+          "oleanSha256": "BAFE8F6DA35CFA18700531394150621E19583DAC93BD7454860739A0AD571C25"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_inertia_identity",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_galois_realization"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_inertia_identity",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_galois_realization"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveUnramifiedAudit2.log",
+      "logSha256": "74AF71E1761A94A19245A213A885A25EC0AE91663FC78D2D22ED20908059C934",
+      "auditSha256": "62AFFAC3437EFA15986CC483B4E90333553008D3E1DB7C970ED3BFB86680CE98",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 3,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 6,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveUnramifiedDependencyAudit2.log",
+      "dependencyAuditSha256": "993C8ABA58072DA3D119B304928FC15A4883AA43884B5A8BEAAD6A91056609BD",
+      "dependencyAuditSourceSha256": "6757761BAA19A48E9095FC35C4F30CC067FC5C2765F88FFAD3FFF0310C7D3DE8",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_galois_realization"
+      ],
+      "dependency": "original primitive weight-two residual association -> continuous coefficient Galois representation unramified away from level and Tate prime -> existing spanning primitive-form specialization -> actual original rational Tate inertia identity",
+      "discharged": "The same actually constructed continuous primitive weight-two Galois realization retains its finite coefficient field, spanning specialization, original prime Fourier eigenvalues and arithmetic action, and is unramified away from the level times the Tate prime. Native linear-map extensionality on the proved spanning image transfers the actual rational Tate inertia identity. No basis, arithmetic equivariance, spanning or inertia certificate is assumed in the final realization theorem.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. The Frobenius relation and trace/determinant consequences, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-unramified-2-reuse-review-20261024.json",
+      "reuseReviewSha256": "73DAB3C687E80809E27F8055F556EE3079440C08AABF868C3AB7E57CA5248F69",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-original-inertia-functions-2-reuse-review-20261024.json",
+    "Tools/source-original-arithmetic-integral-charts-1-reuse-review-20261024.json",
+    "Tools/source-modular-reduction-charts-3-reuse-review-20261024.json",
+    "Tools/source-original-inertia-place-reduction-3-reuse-review-20261024.json",
+    "Tools/source-original-picard-inertia-4-reuse-review-20261024.json",
+    "Tools/source-original-tate-inertia-1-reuse-review-20261024.json",
+    "Tools/source-original-primitive-unramified-2-reuse-review-20261024.json"
+  ],
+  "additionalCurrentSearch": {
+    "path": "Tools/original-inertia-promotion-route-437.json",
+    "sha256": "A3F2CC4E26FFC1DE15FF084F2164CA2BC6499081499A15BA43586A48CC022160"
+  },
+  "productionFocusedReceipt7544": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaFunctionsDependencyAudit2Production7544.log",
+        "sha256": "6432C31F8CDB21A042F14F94E6A6AA021156BA1A829CFF630477A222EAEB506F",
+        "requiredProofValueEdges": 15,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.original_integral_reduction_inertia",
+          "Dubon2026.SourceFunctionField.GaussReduction.inertiaGaussHom_modularResidue"
+        ],
+        "sourceSha256": "140385FEB82AFC053FCCAC6EA9590AD94C9B5BD0AAF116464D582D06F1CECF83"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticIntegralChartsDependencyAudit1Production7544.log",
+        "sha256": "21E924723EB31B151CFF3AA1C8959A124A196308220A904A3C44D5D0751085B5",
+        "requiredProofValueEdges": 11,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GaussReduction.coefficientArithmetic_integral_charts"
+        ],
+        "sourceSha256": "9DE333B0898E7AEA06A77F0518CCC94CC4333251E8736001C4B1E6B262994761"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceModularReductionChartsDependencyAudit3Production7544.log",
+        "sha256": "B4277CF67AD5C39A7E32133CBF6E443BCC44CCED962C5318E011403749BA2B0C",
+        "requiredProofValueEdges": 10,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_constant_reduction_with_charts_of_prime"
+        ],
+        "sourceSha256": "9FBE9EE2F0BEB4888DCCB6F29C8C77503338AB16BF77EC715108D495E433E8B4"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaPlaceReductionDependencyAudit3Production7544.log",
+        "sha256": "4668EC09E84B6B6A78D17A0B618C39A3D8CF1FDA2F00089AD9FB3A0D570CE267",
+        "requiredProofValueEdges": 20,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GaussReduction.exists_modular_reduction_invariant_on_original_places"
+        ],
+        "sourceSha256": "6939BB82211A2591AD5740E847711B0BC8D18A015228B31451E72CFFC1DED537"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPicardInertiaDependencyAudit4Production7544.log",
+        "sha256": "640DCE7954F68B16AEDD9FE87A691CE81E841B0E20E939AC7ACC28AAA7B7E737",
+        "requiredProofValueEdges": 19,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GaussReduction.originalArithmeticPicard_eq_self_of_inertia_of_torsion"
+        ],
+        "sourceSha256": "41EF43D2F2A2698B2721D9F063F60429893128F58332EC4DE84DD56DEF7FBA57"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalTateInertiaDependencyAudit1Production7544.log",
+        "sha256": "DE604741AFA4E82482826FCAB291FCB953635876A0E36997D3960FE0B5FBF581",
+        "requiredProofValueEdges": 9,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GaussReduction.originalTateGaloisRep_eq_one_away_level_prime"
+        ],
+        "sourceSha256": "47F88917091BB8CC85AF843982ED81DEAF74F0FC3368DBB200796D5655D59883"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveUnramifiedDependencyAudit2Production7544.log",
+        "sha256": "993C8ABA58072DA3D119B304928FC15A4883AA43884B5A8BEAAD6A91056609BD",
+        "requiredProofValueEdges": 6,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_galois_realization"
+        ],
+        "sourceSha256": "661E88553B0692CAF5B5E96A976059FB86BC95EE6D3766803CC474674B4D90FB"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaProductionAudit7544.log",
+    "sha256": "064D76E124A4119F999770F760BAD6DA35C01A694C636A6BA1B7F005B7611144",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-inertia-production-build-7544.log",
+    "aggregateSha256": "D2E31027B1B1849431032123A5687C7E11F718000C5E35A2063615EB9F6D2362",
+    "productionModules": 7544,
+    "incrementModules": 16,
+    "axiomChecks": 48,
+    "exhaustiveIncrementTheorems": 114,
+    "linterScopes": 16,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 114,
+    "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The actual modular places, coefficient fields, Gauss residue map, divisor orders, genera and Picard quotient retain their definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 114,
+      "scratchDistinct": 114,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceOriginalPrimitiveUnramifiedRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveUnramifiedRealization": "_private.Dubon2026.SourceOriginalPrimitiveUnramifiedRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026"
+      },
+      "generatedNameReason": "Lean names anonymous local instances using the module root. Import qualification changes that root to Dubon2026. Each of the one pair has the same owning source module, byte-identical mathematical source after import qualification, identical full declaration type and identical full kernel proof expression. No theorem is omitted or weakened.",
+      "generatedNameSourceEvidence": {
+        "_private.Dubon2026.SourceOriginalPrimitiveUnramifiedRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveUnramifiedRealization": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimitiveUnramifiedRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "owningModule": "SourceOriginalPrimitiveUnramifiedRealization",
+          "exactDeclarationType": "Lean.Expr.forallE\n  `q\n  (Lean.Expr.const `Nat.Primes [])\n  (Lean.Expr.app\n    (Lean.Expr.app\n      (Lean.Expr.app (Lean.Expr.const `NeZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `MulZeroClass.toZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.const `Nat.instMulZeroClass [])))\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lam\n          `p\n          (Lean.Expr.const `Nat [])\n          (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n          (Lean.BinderInfo.default)))\n      (Lean.Expr.bvar 0)))\n  (Lean.BinderInfo.default)",
+          "exactProofValue": "Lean.Expr.lam\n  `q\n  (Lean.Expr.const `Nat.Primes [])\n  (Lean.Expr.app\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `NeZero.mk [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `MulZeroClass.toZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.const `Nat.instMulZeroClass [])))\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lam\n            `p\n            (Lean.Expr.const `Nat [])\n            (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n            (Lean.BinderInfo.default)))\n        (Lean.Expr.bvar 0)))\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.const `Nat.Prime.ne_zero [])\n        (Lean.Expr.app\n          (Lean.Expr.app\n            (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n            (Lean.Expr.lam\n              `p\n              (Lean.Expr.const `Nat [])\n              (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n              (Lean.BinderInfo.default)))\n          (Lean.Expr.bvar 0)))\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app\n            (Lean.Expr.const `Subtype.property [Lean.Level.succ (Lean.Level.zero)])\n            (Lean.Expr.const `Nat []))\n          (Lean.Expr.lam\n            `p\n            (Lean.Expr.const `Nat [])\n            (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n            (Lean.BinderInfo.default)))\n        (Lean.Expr.bvar 0))))\n  (Lean.BinderInfo.default)",
+          "typeSha256": "874E72092F3708117CC135BEF7A0E751A630C7940DB8DA202EBB8FD435673A1F",
+          "proofValueSha256": "43813E1D6FA8CAB5F660471853956C4E309E02A962E79732C126D7D6E9106FF0",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveUnramifiedRealization.lean",
+            "sha256": "5DEB7FB97710B7F7D564102DBEA4670CF6FFA31C698E7F1082DB76433B54D615"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveUnramifiedRealization.lean",
+            "sha256": "E786280C0FA8F8CAAF4711D143D9E181DFF41BBFFEF578F76C24D76966F3631A"
+          },
+          "onlyImportQualification": true
+        }
+      },
+      "productionFocused": 114,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceOriginalInertiaIntegralFunctions",
+            "SourceOriginalInertiaGaussAction"
+          ],
+          "count": 35,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership429For7544.log",
+            "sha256": "7B94A21989FA94C1BBFF637F7CC8CD54DE54B56BAE925F57AA5ADD1DB4C0CE26",
+            "sourceSha256": "9295FC2F4D0E9500FAA275EAFD8FF8501524C56986694D84CFC76048BDF4175C"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalArithmeticIntegralCharts"
+          ],
+          "count": 17,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership430For7544.log",
+            "sha256": "B81C50F70F666AB7970663C2DC5678FE9FA00EA0D55C1C63BBC56BE4E80F6701",
+            "sourceSha256": "391C5EF3271803B9E6BECE8E46FB137EDD445D4982CEF44832CB2DF3E6A9CD80"
+          }
+        },
+        {
+          "modules": [
+            "SourceReductionPrincipalDivisorCharts",
+            "SourceModularPrincipalDivisorCharts",
+            "SourceModularConstantReductionCharts"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership431For7544.log",
+            "sha256": "8648ED3CF921F0266DB3E8F2F2B2BCFDA101C5BCCA12A32AC7F70D0859646468",
+            "sourceSha256": "B4A8F9571F43E0851B79E90063CEED3228990971A9CE5397DCDF9A1D81BF9C67"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalCoefficientPlaceAction",
+            "SourceOriginalInertiaChartTransport",
+            "SourceOriginalInertiaPlaceReduction"
+          ],
+          "count": 24,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership432For7544.log",
+            "sha256": "E78C5DAEA39509D8A22388385D82BD6294C0BF6416297913D84B638D432F76AE",
+            "sourceSha256": "67F3D29B83674AA6E0BBEA89B0AA1C21472D76BDF9DD0499DC8AC3936F51C85F"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalCoefficientDivisors",
+            "SourceOriginalCoefficientPicard",
+            "SourceOriginalInertiaDivisorReduction",
+            "SourceOriginalInertiaPicard"
+          ],
+          "count": 25,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership433For7544.log",
+            "sha256": "1C3F4E6170692E9720FE52305B28263628B5ECEBF0804C9719E83984C0009B9A",
+            "sourceSha256": "60D9687C7331B29940E0A69A2BE85F9881059A698DA837F70BF8EC00ADC75ACB"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalTateInertia"
+          ],
+          "count": 4,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership434For7544.log",
+            "sha256": "DA6B115851BAA6602035E3EC15888E9229A9A07CF7DC6E9DC7A40F8C9C78D0B0",
+            "sourceSha256": "7D6F19A71F9A18CB3DE25C54004087C2D9216A35C5C94777218808C2CB08E8C2"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalSpecializationInertia",
+            "SourceOriginalPrimitiveUnramifiedRealization"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership435For7544.log",
+            "sha256": "E32AD8151BC40AE31EC6616D9F4FE9C3ECC4F4872F1D55F7AC7BABDA43DC4CB8",
+            "sourceSha256": "894232CB1A6FF352F2ABA30CB63E31C3C18A55004E12D835C3BF7E2C0ED26154"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaOwnership7544.log",
+        "sha256": "B045A050D48B0393E0E776E97AB1AA779EA260FCC65E86BEF3CBFA269C8A8126",
+        "sourceSha256": "99BD29FC49EAD8341D1A5A7B7F143D5C335F8ECD84831D4378A4D392272D8F71"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-102615-950.log",
+        "sha256": "58510FF3D9A2010A7A58D57FF8910578705AB66155926D180DCC94BA4CDDAAF7"
+      },
+      "generatedNameInspectionEvidence": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\original-inertia-generated-name-evidence-7544-r3.json",
+        "sha256": "38117814912CB945DCC3495AA7FA3F7E8A2029BA945DF5505778C52178A7997D"
+      },
+      "precedingFailedComparison": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\source-original-inertia-ownership-comparison-7544.json",
+        "sha256": "AECAA42E6EFFD45F1094879CE81AB7AB7A747CD9AFA57A44C23564DC5AB1F332"
+      }
+    },
+    "scratchToProductionCountReason": "All 114 distinct names from 114 exhaustive scratch checks are retained: 114 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The Frobenius relation and trace/determinant consequences, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  },
+  "receipt7544": {
+    "recordedUTC": "2026-10-24T20:41:48.260314+00:00",
+    "log": "logs/dubon-build-20261024-122305-446.log",
+    "sha256": "E3C0C0FB4DACE3EA6E1CF2742B4261561DD8FF852B837D8EEEA56A20BC684869",
+    "bytes": 12563738,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 7544,
+    "projectTheorems": 49430,
+    "registeredConsumers": 22458,
+    "registeredConstructions": 1967,
+    "declarations": 30293,
+    "generated": 28850,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261024_121739.log",
+    "foundationSha256": "2150639291024D1A1A19D9B32155C39052F3F6BE5EE67AE64D34A59A55F805CB",
+    "countReconciliation": {
+      "previousTheorems": 49317,
+      "focusedTheorems": 114,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourceFunctionField.GaussReduction.modularRegularProlongation.congr_simp"
+      ],
+      "addedTheorems": 113,
+      "removedTheorems": [],
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaOwnership7544.log",
+      "ownershipSha256": "B045A050D48B0393E0E776E97AB1AA779EA260FCC65E86BEF3CBFA269C8A8126"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 114,
+      "scratchDistinct": 114,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceOriginalPrimitiveUnramifiedRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveUnramifiedRealization": "_private.Dubon2026.SourceOriginalPrimitiveUnramifiedRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026"
+      },
+      "generatedNameReason": "Lean names anonymous local instances using the module root. Import qualification changes that root to Dubon2026. Each of the one pair has the same owning source module, byte-identical mathematical source after import qualification, identical full declaration type and identical full kernel proof expression. No theorem is omitted or weakened.",
+      "generatedNameSourceEvidence": {
+        "_private.Dubon2026.SourceOriginalPrimitiveUnramifiedRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveUnramifiedRealization": {
+          "productionName": "_private.Dubon2026.SourceOriginalPrimitiveUnramifiedRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+          "owningModule": "SourceOriginalPrimitiveUnramifiedRealization",
+          "exactDeclarationType": "Lean.Expr.forallE\n  `q\n  (Lean.Expr.const `Nat.Primes [])\n  (Lean.Expr.app\n    (Lean.Expr.app\n      (Lean.Expr.app (Lean.Expr.const `NeZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `MulZeroClass.toZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.const `Nat.instMulZeroClass [])))\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.lam\n          `p\n          (Lean.Expr.const `Nat [])\n          (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n          (Lean.BinderInfo.default)))\n      (Lean.Expr.bvar 0)))\n  (Lean.BinderInfo.default)",
+          "exactProofValue": "Lean.Expr.lam\n  `q\n  (Lean.Expr.const `Nat.Primes [])\n  (Lean.Expr.app\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.app (Lean.Expr.const `NeZero.mk [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `MulZeroClass.toZero [Lean.Level.zero]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.const `Nat.instMulZeroClass [])))\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n          (Lean.Expr.lam\n            `p\n            (Lean.Expr.const `Nat [])\n            (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n            (Lean.BinderInfo.default)))\n        (Lean.Expr.bvar 0)))\n    (Lean.Expr.app\n      (Lean.Expr.app\n        (Lean.Expr.const `Nat.Prime.ne_zero [])\n        (Lean.Expr.app\n          (Lean.Expr.app\n            (Lean.Expr.app (Lean.Expr.const `Subtype.val [Lean.Level.succ (Lean.Level.zero)]) (Lean.Expr.const `Nat []))\n            (Lean.Expr.lam\n              `p\n              (Lean.Expr.const `Nat [])\n              (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n              (Lean.BinderInfo.default)))\n          (Lean.Expr.bvar 0)))\n      (Lean.Expr.app\n        (Lean.Expr.app\n          (Lean.Expr.app\n            (Lean.Expr.const `Subtype.property [Lean.Level.succ (Lean.Level.zero)])\n            (Lean.Expr.const `Nat []))\n          (Lean.Expr.lam\n            `p\n            (Lean.Expr.const `Nat [])\n            (Lean.Expr.app (Lean.Expr.const `Nat.Prime []) (Lean.Expr.bvar 0))\n            (Lean.BinderInfo.default)))\n        (Lean.Expr.bvar 0))))\n  (Lean.BinderInfo.default)",
+          "typeSha256": "874E72092F3708117CC135BEF7A0E751A630C7940DB8DA202EBB8FD435673A1F",
+          "proofValueSha256": "43813E1D6FA8CAB5F660471853956C4E309E02A962E79732C126D7D6E9106FF0",
+          "scratchSource": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveUnramifiedRealization.lean",
+            "sha256": "5DEB7FB97710B7F7D564102DBEA4670CF6FFA31C698E7F1082DB76433B54D615"
+          },
+          "productionSource": {
+            "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveUnramifiedRealization.lean",
+            "sha256": "E786280C0FA8F8CAAF4711D143D9E181DFF41BBFFEF578F76C24D76966F3631A"
+          },
+          "onlyImportQualification": true
+        }
+      },
+      "productionFocused": 114,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceOriginalInertiaIntegralFunctions",
+            "SourceOriginalInertiaGaussAction"
+          ],
+          "count": 35,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership429For7544.log",
+            "sha256": "7B94A21989FA94C1BBFF637F7CC8CD54DE54B56BAE925F57AA5ADD1DB4C0CE26",
+            "sourceSha256": "9295FC2F4D0E9500FAA275EAFD8FF8501524C56986694D84CFC76048BDF4175C"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalArithmeticIntegralCharts"
+          ],
+          "count": 17,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership430For7544.log",
+            "sha256": "B81C50F70F666AB7970663C2DC5678FE9FA00EA0D55C1C63BBC56BE4E80F6701",
+            "sourceSha256": "391C5EF3271803B9E6BECE8E46FB137EDD445D4982CEF44832CB2DF3E6A9CD80"
+          }
+        },
+        {
+          "modules": [
+            "SourceReductionPrincipalDivisorCharts",
+            "SourceModularPrincipalDivisorCharts",
+            "SourceModularConstantReductionCharts"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership431For7544.log",
+            "sha256": "8648ED3CF921F0266DB3E8F2F2B2BCFDA101C5BCCA12A32AC7F70D0859646468",
+            "sourceSha256": "B4A8F9571F43E0851B79E90063CEED3228990971A9CE5397DCDF9A1D81BF9C67"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalCoefficientPlaceAction",
+            "SourceOriginalInertiaChartTransport",
+            "SourceOriginalInertiaPlaceReduction"
+          ],
+          "count": 24,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership432For7544.log",
+            "sha256": "E78C5DAEA39509D8A22388385D82BD6294C0BF6416297913D84B638D432F76AE",
+            "sourceSha256": "67F3D29B83674AA6E0BBEA89B0AA1C21472D76BDF9DD0499DC8AC3936F51C85F"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalCoefficientDivisors",
+            "SourceOriginalCoefficientPicard",
+            "SourceOriginalInertiaDivisorReduction",
+            "SourceOriginalInertiaPicard"
+          ],
+          "count": 25,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership433For7544.log",
+            "sha256": "1C3F4E6170692E9720FE52305B28263628B5ECEBF0804C9719E83984C0009B9A",
+            "sourceSha256": "60D9687C7331B29940E0A69A2BE85F9881059A698DA837F70BF8EC00ADC75ACB"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalTateInertia"
+          ],
+          "count": 4,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership434For7544.log",
+            "sha256": "DA6B115851BAA6602035E3EC15888E9229A9A07CF7DC6E9DC7A40F8C9C78D0B0",
+            "sourceSha256": "7D6F19A71F9A18CB3DE25C54004087C2D9216A35C5C94777218808C2CB08E8C2"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalSpecializationInertia",
+            "SourceOriginalPrimitiveUnramifiedRealization"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaScratchOwnership435For7544.log",
+            "sha256": "E32AD8151BC40AE31EC6616D9F4FE9C3ECC4F4872F1D55F7AC7BABDA43DC4CB8",
+            "sourceSha256": "894232CB1A6FF352F2ABA30CB63E31C3C18A55004E12D835C3BF7E2C0ED26154"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaOwnership7544.log",
+        "sha256": "B045A050D48B0393E0E776E97AB1AA779EA260FCC65E86BEF3CBFA269C8A8126",
+        "sourceSha256": "99BD29FC49EAD8341D1A5A7B7F143D5C335F8ECD84831D4378A4D392272D8F71"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261024-102615-950.log",
+        "sha256": "58510FF3D9A2010A7A58D57FF8910578705AB66155926D180DCC94BA4CDDAAF7"
+      },
+      "generatedNameInspectionEvidence": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\original-inertia-generated-name-evidence-7544-r3.json",
+        "sha256": "38117814912CB945DCC3495AA7FA3F7E8A2029BA945DF5505778C52178A7997D"
+      },
+      "precedingFailedComparison": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\source-original-inertia-ownership-comparison-7544.json",
+        "sha256": "AECAA42E6EFFD45F1094879CE81AB7AB7A747CD9AFA57A44C23564DC5AB1F332"
+      }
+    },
+    "scratchToProductionCountReason": "All 114 distinct names from 114 exhaustive scratch checks are retained: 114 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The Frobenius relation and trace/determinant consequences, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20. No acceptance gate closes here."
+  }
+}

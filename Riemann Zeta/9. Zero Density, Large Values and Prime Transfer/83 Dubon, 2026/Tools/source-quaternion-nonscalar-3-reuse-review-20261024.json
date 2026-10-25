@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "characteristic-two genus/Picard -> weighted exceptional census -> actual fixed cyclic-subgroup counts nuTwo/nuThree -> nonscalar prime-torsion actions",
+  "precedingScratchReceipts": {
+    "source-order-twelve-marks-6-scratch-receipt.json": "D52DD6A94305DC135F4A5263095355ED4174F819B5C30C447A55D5EE48C0688A"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimeTorsionScalarAction.lean",
+      "sha256": "95FF614C45444CDBEE995284F637510D5CADC266E7BAB8B4AF16CB19523D5D07"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceDihedralCubicNonscalar.lean",
+      "sha256": "D3E37C2915F5087657757EA74CB9302D628BE16BE7D63990440D3EA5FEA2CE25"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticQuadraticFixedCounts.lean",
+      "sha256": "3CD410BE05BF5AFD78A899CE45781D1077A8D6136CB9C2A9D74FAC48825C2334"
+    }
+  ],
+  "routeAdjustment": "Extract the existing common-scalar argument once, then prove precisely the two quaternion nonscalar consequences. Use prime torsion directly. Defer composite-level coordinate expansions and unrelated representation theory.",
+  "discharged": "The exact quaternion conjugate-product and commutator relations force nonscalar action on odd prime torsion. The existing common-scalar theorem yields a uniform scalar from pointwise eigenvectors and the actual rank-two prime-torsion equivalence. The relations then force a nonzero odd-order point to equal its negative, a contradiction.",
+  "remaining": "The actual characteristic-two elliptic automorphisms must supply the relations and torsion equivalence before fixed-subgroup counts, weighted census and genus/Picard assembly. Original arithmetic-action comparison and automorphy remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\quaternion-nonscalar-route-423.json",
+    "sha256": "4FF85F0C676B0B355F531237189BC87495AAFBE7463A1913D1E26FB2FB69BC6C",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "characteristic-two genus/Picard -> weighted exceptional census -> actual fixed cyclic-subgroup counts nuTwo/nuThree -> nonscalar prime-torsion actions",
+      "reuseChecked": [
+        "Existing elliptic_stable_cyclic_card_eq_nuTwo/nuThree reduce the counts to the actual quadratic action identities and nonscalar action at each prime dividing N.",
+        "Existing exists_common_scalar and the verified characteristic-three nonscalar proof replace the frozen source repeated rank-two coordinates, span calculations and composite-level torsion transport.",
+        "The characteristic-two source provides exact quaternion relations: alpha and delta square to negation, and delta is a conjugate product or commutator. A common scalar on odd prime torsion contradicts these relations immediately."
+      ],
+      "selectedRoute": "Extract the existing common-scalar argument once, then prove precisely the two quaternion nonscalar consequences. Use prime torsion directly. Defer composite-level coordinate expansions and unrelated representation theory.",
+      "assumptionsToDischarge": "Prove nonscalar prime-torsion action from the explicit source quaternion relations and an actual rank-two prime-torsion equivalence. The forthcoming actual elliptic consumer supplies both relations and the existing torsion equivalence.",
+      "boundary": "These conditional nonscalar lemmas must still be applied to the actual characteristic-two automorphisms before fixed-subgroup counts, weighted census, genus/Picard and arithmetic/automorphy close. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_WeierstrassCurve_natCard_isAddCyclic_addSubgroup_card_eq_fixed_vcInvFun_eq_nuTwo_of_char_two.lean.txt",
+    "sha256": "ADCB4C59D60E0C6BE27274E9BD61CF282DBE7A87A3EA6711BA435A32145ECCBC",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The exact source quaternion nonscalar argument is shortened using the existing common-scalar theorem directly on prime torsion. Repeated composite-level coordinates and span calculations are unnecessary. No external build or import is claimed."
+  },
+  "additionalDirectSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_WeierstrassCurve_natCard_isAddCyclic_addSubgroup_card_eq_fixed_vcInvFun_eq_nuThree_of_char_two.lean.txt",
+    "sha256": "3012ED176E91DAB12FF3D5054D473A2F91562CF6FBFD262712CE16F40FCFFA94",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The exact source quaternion nonscalar argument is shortened using the existing common-scalar theorem directly on prime torsion. Repeated composite-level coordinates and span calculations are unnecessary. No external build or import is claimed."
+  }
+}

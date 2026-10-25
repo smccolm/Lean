@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "characteristic-two genus/Picard -> weighted exceptional census -> actual full inertia image of order twenty-four -> local order divisible by eight from a nonzero three-torsion point",
+  "precedingScratchReceipts": {
+    "source-deuring-good-model-4-scratch-receipt-r2.json": "41455E08D4E1D48F55148906C68D13BA9DA57762689B35EC64E88F2DA9F560EB"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceEllipticThreeTorsionFlex.lean",
+      "sha256": "6A8733AE59A72E63B880C1BE1E384045D27282CD28AAD4BC9A6A56776937C553"
+    }
+  ],
+  "routeAdjustment": "Prove only the exact eighth-power factorization and its needed coordinate/integrality inputs, using the existing division-polynomial criterion and local integrality. Defer generic valuation growth and group generalizations.",
+  "discharged": "A nonzero affine three-torsion point on the actual characteristic-two family yields t=unit*mu^8 at a nonunit integral t. Existing flex and division-polynomial results derive the coordinate relations; monic integrality and reduction derive the root-unit conditions. No valuation-growth or coordinate-relation certificate remains.",
+  "remaining": "The characteristic-two weighted exceptional census and genus/Picard assembly, followed by original arithmetic-action comparison and automorphy, remain required. DUB-17--20 OPEN; 16/20; no acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\char-two-eighth-power-route-418.json",
+    "sha256": "B445A77C641218E83F6F74850EEF33F86F2F122D7C72C32F99471EC240394A3A",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "characteristic-two genus/Picard -> weighted exceptional census -> actual full inertia image of order twenty-four -> local order divisible by eight from a nonzero three-torsion point",
+      "reuseChecked": [
+        "The source full-inertia argument combines existing discriminant divisibility by twelve with an eighth-power unit factorization obtained from actual three-torsion.",
+        "Existing flex_of_order_three proves the nonzero tangent denominator. Existing nsmul_eq_zero_iff_division_eval and native PsiSq_three give the quartic coordinate relation directly, avoiding the repeated tangent calculation.",
+        "Existing valuation-subring integrality and native monicity prove integrality of the two auxiliary roots. Reduction of the quartic gives the first root in the maximal ideal; the quadratic constant term gives the second root a unit. This avoids the source valuation-growth case analysis.",
+        "The finite field used by the full-image consumer must retain a nonzero three-torsion point. That obligation is explicit and will be discharged before claiming an unconditional inertia image or census."
+      ],
+      "selectedRoute": "Prove only the exact eighth-power factorization and its needed coordinate/integrality inputs, using the existing division-polynomial criterion and local integrality. Defer generic valuation growth and group generalizations.",
+      "assumptionsToDischarge": "Derive t=unit*mu^8 in the actual valuation ring from a nonunit integral t and a nonzero affine three-torsion point on the literal characteristic-two ofJ family.",
+      "boundary": "The actual specialization field must supply three-torsion; then combine eight and twelve divisibility to prove the full inertia image, followed by the weighted census and genus/Picard assembly. Arithmetic-action comparison and automorphy remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_WeierstrassCurve_exists_isUnit_mul_pow_eight_eq_of_charTwo.lean.txt",
+    "sha256": "BE0FCA86FB7216CFFF8EE72B2F47957DAF4214921EBF920A606400594B031EED",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0",
+    "role": "The exact eighth-power factorization is adapted, with existing flex, division-polynomial and monic-integrality proofs shortening its foundations. The actual specialization field must still supply three-torsion before the full inertia image is claimed. No external build or import is claimed."
+  }
+}

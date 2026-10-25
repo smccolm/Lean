@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "modular concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> compatible arithmetic divisorial Weil pairing",
+  "precedingScratchReceipts": {
+    "source-original-weil-hecke-5-scratch-receipt.json": "F0531111ED406BC6DF81916F41AA984038B5283274ECAA389DAD33EAA0E339C2"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTateModule.lean",
+      "sha256": "2FCD7364444043600598B11466867C0D2EE2DD385C371F6195012375CC9C02B3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTateFunctor.lean",
+      "sha256": "0C8132F7AE057CC43621870EF0EC5072CCF2D1F6980688921D4889D33AD2217C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateGalois.lean",
+      "sha256": "D40030B05BD21BC27E08C463F266E7F103CB92F77E109C621081A7BE87711F5E"
+    }
+  ],
+  "routeAdjustment": "Scale actual divisors to prove the finite level law, then reuse the existing Tate module, scalar coordinates, finite bilinear pairing and arithmetic/Hecke laws. No new inverse-limit framework or replacement Jacobian is needed. The target remains the actual Tate module of coefficient-field units; cyclotomic rank-one identification is separate.",
+  "discharged": "The actual root values form compatible Tate sequences. The assembled original arithmetic Tate pairing is p-adic bilinear, Galois covariant, alternating at odd primes and self-adjoint for existing Hecke operators at primes away from the level. No transition, scalar, Galois or Hecke pairing-law premise remains.",
+  "remaining": "Nondegeneracy, cyclotomic rank-one identification, required Hecke-component restriction, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required. Scratch only; production promotion and assembled verification pending. DUB-17--20 OPEN; 16/20. No acceptance gate closes.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-tate-weil-route-475.json",
+    "sha256": "CC269216128C05DAE357DA5932DE77F931BECF7D6CFEF49DD1A2A500BD0A135C",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "modular concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> compatible arithmetic divisorial Weil pairing",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTateModule.lean",
+          "sha256": "2FCD7364444043600598B11466867C0D2EE2DD385C371F6195012375CC9C02B3"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTateFunctor.lean",
+          "sha256": "0C8132F7AE057CC43621870EF0EC5072CCF2D1F6980688921D4889D33AD2217C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateGalois.lean",
+          "sha256": "D40030B05BD21BC27E08C463F266E7F103CB92F77E109C621081A7BE87711F5E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilAlternation.lean",
+          "sha256": "4C5B5162DEEF9DE8DDC67165ACE0CA3E313E036A42761DCBE8C7FD1B9C5C0950"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilArithmetic.lean",
+          "sha256": "D0CB8B56DA9DC36D0223607FBBB725FFD07CE3968BF2BB2BDCCF341E56A9C563"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalWeilTateHeckeSelfAdjoint.lean",
+          "sha256": "C16E6B2129548F5DF95E81AD73F9C39AE46219EC1D6125A09FDF870A98126D7C"
+        }
+      ],
+      "selectedRoute": "Scale actual divisors to prove the finite level law, then reuse the existing Tate module, scalar coordinates, finite bilinear pairing and arithmetic/Hecke laws. No new inverse-limit framework or replacement Jacobian is needed. The target remains the actual Tate module of coefficient-field units; cyclotomic rank-one identification is separate.",
+      "discharged": "The actual root values form compatible Tate sequences. The assembled original arithmetic Tate pairing is p-adic bilinear, Galois covariant, alternating at odd primes and self-adjoint for existing Hecke operators at primes away from the level. No transition, scalar, Galois or Hecke pairing-law premise remains.",
+      "remaining": "Nondegeneracy, cyclotomic rank-one identification, required Hecke-component restriction, Frobenius determinant and characteristic polynomial, residual association, automorphy and all-weight continuation remain required.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. DUB-17--20 OPEN; 16/20. No acceptance gate closes."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

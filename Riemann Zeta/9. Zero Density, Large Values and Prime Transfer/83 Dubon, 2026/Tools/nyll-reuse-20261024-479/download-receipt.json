@@ -1,0 +1,52 @@
+{
+  "retrievedUTC": "2026-10-25T00:08:09.886899+00:00",
+  "repository": "https://github.com/n-yamaguchi-0729/NYLL",
+  "commit": "8c1b16d10afaca09e0dc72753c6575e230d31a55",
+  "commitDate": "2026-10-19T18:19:32Z",
+  "files": [
+    {
+      "path": "LICENSE",
+      "gitBlob": "8dada3edaf50dbc082c9a125058f25def75e625a",
+      "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+      "bytes": 11357
+    },
+    {
+      "path": "NOTICE",
+      "gitBlob": "461d271bba9cde338518354730504b94b7993bf7",
+      "sha256": "05FA26E5335FA16519AF1B179BC1EBCE5DA0D6B208CFF68241B5540C1878B59C",
+      "bytes": 238662
+    },
+    {
+      "path": "Nyll/JacobianVarieties/WeilPairing/CharZeroNondegeneracy.lean",
+      "gitBlob": "e1e4825ab9c17e7d7c6eed66198363e48a23d08e",
+      "sha256": "BB2CE4C7CBA3A97BE810AB6F52ED70478D596AD02E2204AF39F55E834BAF4952",
+      "bytes": 2426
+    },
+    {
+      "path": "README.md",
+      "gitBlob": "bbb1dd63b893da62fa2acab9ee98937f328ca9be",
+      "sha256": "46F30C3C2323C81E1046633E05F634D1D831C1A8C6DB18DC7431983A5F861085",
+      "bytes": 4503
+    },
+    {
+      "path": "lake-manifest.json",
+      "gitBlob": "ccba651b0243520961663c1a3780d0808dbe0c16",
+      "sha256": "AD850380B47B59868A88C7B76F8775A3FA5A55E432E1D111A007FF2EBF056DED",
+      "bytes": 3558
+    },
+    {
+      "path": "lakefile.toml",
+      "gitBlob": "36ab84c64a7410be69ad402f37510c12499adcad",
+      "sha256": "2999FBF682C3754BA8B20DBA5F6839908A93994ED7DD8ADAEFACC2720FAE8FC6",
+      "bytes": 1099
+    },
+    {
+      "path": "lean-toolchain",
+      "gitBlob": "acc704ffe6eefbbe8ec09452a276202748aac923",
+      "sha256": "8DC8D6F560141069D9073E370611716EF77ADA0DA8FFA37E2149F44B2E63AC7A",
+      "bytes": 29
+    }
+  ],
+  "externalBuildClaim": false,
+  "pinsChanged": false
+}

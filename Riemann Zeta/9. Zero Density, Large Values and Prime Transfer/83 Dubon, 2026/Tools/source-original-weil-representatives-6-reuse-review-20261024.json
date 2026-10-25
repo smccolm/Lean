@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "modular-form concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Picard Weil pairing -> representative independence -> existence of disjoint arithmetic torsion representatives",
+  "precedingScratchReceipts": {
+    "source-original-weil-torsion-values-1-scratch-receipt.json": "5D183B9E52BAECC889FB25CB31DC5BCF723471B0518DB867EE0ACDFBABB0D7C2"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalUniformizerFinite.lean",
+      "sha256": "AC6FB240D25BC98E61AF69BFD213175AD1CD82ACB081EA3FD941D43DBE318C66"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrincipalDivisors.lean",
+      "sha256": "231062B499795FAFA62040712A05023394D290B23EE2D0ECFA737A0BEA072832"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveNormFiber.lean",
+      "sha256": "E520CCC04C216018AE815938DD60D5ED27E8AB5960C33B0BACB95C442FF245DB"
+    }
+  ],
+  "routeAdjustment": "The complex separation proof already uses only actual rational residues and incomparable rank-one valuation rings. Extend those same proofs to all closed original coefficient fields, then reuse the native generic finite-place indicator and prescribed-order theorem. Existing principal degree zero and the actual quotient torsion criterion supply the classes and function multiples. No new general valuation approximation theory is built.",
+  "discharged": "Every pair of actual original Picard n-torsion classes, for nonzero n over every algebraically closed rational-algebra coefficient field, has disjoint original divisor/function representatives. Moving uses actual principal divisors and preserves the class; their normalized orders give the principal multiples. No moving, approximation, degree-zero or representative-existence premise remains. Pairing choice independence, descent, nondegeneracy, Hecke adjointness, determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "remaining": "Prove pairing independence under changing principal function choices and principal shifts of the divisors, using original_lSpace_zero_eq_range and the already proved reciprocity. Then descend to actual Picard torsion and prove nondegeneracy and Hecke adjointness. Scratch only; production promotion and assembled verification pending. No additional acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-weil-representatives-route-469.json",
+    "sha256": "2FC0BF88C782B2F2023C05DD655FB5879E3C3B2CBC5AC4CAF1A9269C38E16197",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "modular-form concentration -> residual association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Picard Weil pairing -> representative independence -> existence of disjoint arithmetic torsion representatives",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPlaceSeparation.lean",
+          "sha256": "C123EC387F676F183B9DB6FE0A21A3597F7242B1B183FE29BCCBAD050E3425AA"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFinitePlaceSeparation.lean",
+          "sha256": "70269C1296BCFE7AC2B146A8B515559FB918C5313C9FF2170B99CCF6467D3195"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrescribedPlaceOrders.lean",
+          "sha256": "FF3B3CA6E1002B2A8EE36F32E73C82645D6C0770A66003004D00F0B964FF6288"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePrescribedOrders.lean",
+          "sha256": "1BB2FFADCEBA4A7C1D381629741B182AFE03E460F16CC8F482B3FF15ED7E54E0"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPicardGroup.lean",
+          "sha256": "AD2FC4358F4637A2CC79A6D4D9740D77848CBB041DFE5EFB185466EACF2F311A"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrincipalDivisors.lean",
+          "sha256": "231062B499795FAFA62040712A05023394D290B23EE2D0ECFA737A0BEA072832"
+        }
+      ],
+      "selectedRoute": "The complex separation proof already uses only actual rational residues and incomparable rank-one valuation rings. Extend those same proofs to all closed original coefficient fields, then reuse the native generic finite-place indicator and prescribed-order theorem. Existing principal degree zero and the actual quotient torsion criterion supply the classes and function multiples. No new general valuation approximation theory is built.",
+      "scopeDecision": "Exactly the arithmetic extension needed for original Picard torsion. All six modules feed the one representative-existence theorem. Root pins and proof limits unchanged.",
+      "discharged": "Every pair of actual original Picard n-torsion classes, for nonzero n over every algebraically closed rational-algebra coefficient field, has disjoint original divisor/function representatives. Moving uses actual principal divisors and preserves the class; their normalized orders give the principal multiples. No moving, approximation, degree-zero or representative-existence premise remains. Pairing choice independence, descent, nondegeneracy, Hecke adjointness, determinant, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+      "remaining": "Prove pairing independence under changing principal function choices and principal shifts of the divisors, using original_lSpace_zero_eq_range and the already proved reciprocity. Then descend to actual Picard torsion and prove nondegeneracy and Hecke adjointness.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. No additional acceptance gate closes. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

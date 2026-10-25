@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "modular-form concentration -> actual residual Galois association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Weil pairing -> reciprocity and correspondence adjointness -> norm evaluation on actual place fibers -> evaluation on pushed-forward original divisors",
+  "precedingScratchReceipts": {
+    "source-original-pullback-evaluation-2-scratch-receipt.json": "4DDFE906E49709D7024118CF3B4CE636BC8E2E5CD2EBA19D7FE5F038BCAFF204"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPlaceEvaluation.lean",
+      "sha256": "EC2B8CCA1D7B7A2067967D9C0F3A4A5C42C25F7238AA29C8756565CA74374819"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeFinite.lean",
+      "sha256": "536367F99D427FCF03E99A47C3CF11A5AAFABE6DEC6C53AE984074DD0FAAAF80"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiberDegrees.lean",
+      "sha256": "100B8917A1BA4E9A3975FEDD55E619B2B713EC6D40C916D889063F5A1B69FD28"
+    }
+  ],
+  "routeAdjustment": "Reuse the native restrictInclusion, restrictResidueMap and scalar tower instead of duplicating order comparisons. Use the existing geometric pushforward as Finsupp.mapDomain. Nonvanishing is required only on the divisor support, where disjointness proves it; no globally nonvanishing function is assumed.",
+  "discharged": "Actual original divisor evaluation on the existing geometric pushforward equals evaluation of the pulled-back function on the source divisor. Existing local residue restriction proves the value compatibility. Disjointness supplies precisely the nonvanishing needed when integer divisor coefficients cancel in a fiber. All field-map finiteness and residue identifications are discharged. Weil reciprocity, representative independence, Picard-torsion descent, nondegeneracy, Hecke adjointness and the Frobenius determinant remain required. DUB-17--20 OPEN; 16/20.",
+  "remaining": "Assemble the rational-coordinate case of Weil reciprocity and its finite norm transfer. The full external rational reciprocity proof is broader than needed if the second nonconstant function is used as the rational coordinate; validate that shorter route before porting its general polynomial/linear-factor induction. Scratch only; production promotion and assembled verification pending. No additional acceptance gate closes. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-pushforward-evaluation-route-465.json",
+    "sha256": "88E8D4E7BBE31F7F5C80AB1F3DA963E44A70287C6FB1BE7753AF25C8C7EE3200",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "modular-form concentration -> actual residual Galois association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint Tate pairing -> original Weil pairing -> reciprocity and correspondence adjointness -> norm evaluation on actual place fibers -> evaluation on pushed-forward original divisors",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\RamificationInertia\\Basic.lean",
+          "sha256": "8DBA1B8F2A556BBD64E8A25DAD5222CBE56210DE2909B39E5F290A7BC57CE960"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\IntegralClosure\\IntegralRestrict.lean",
+          "sha256": "1E60F91DBFEDF16CC1542014E1EFF810D2D9DD4B234E62E9D17E39227F29B423"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiberChart.lean",
+          "sha256": "EFCB4C154C87B6533816502665498A7A1FA0733597908FAFB221E3ED683D2A18"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiberPlaces.lean",
+          "sha256": "8353780F540AE20EE6220E05C7A9F540BE8275D0E5E16B2C8B3E6E8977C430BF"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiberPrimes.lean",
+          "sha256": "D3D03DD915E514A2A2DE740F995A88D0CE98A92ECFEB0B40EE6EC2B638EBD000"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiberDegrees.lean",
+          "sha256": "100B8917A1BA4E9A3975FEDD55E619B2B713EC6D40C916D889063F5A1B69FD28"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePrimeNormOrders.lean",
+          "sha256": "8F3D60C93ECA78D77736228BEB278AD05F7254B8D8641A5CFDCBE57F4C7B5C81"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePlaceCenters.lean",
+          "sha256": "F2746CA61E2DB176D765788BD8A0CEFCCFD507F79D98ED96A2FFCA4A3DFDAC2B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPlaceEvaluation.lean",
+          "sha256": "EC2B8CCA1D7B7A2067967D9C0F3A4A5C42C25F7238AA29C8756565CA74374819"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeFinite.lean",
+          "sha256": "536367F99D427FCF03E99A47C3CF11A5AAFABE6DEC6C53AE984074DD0FAAAF80"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalResidueFinite.lean",
+          "sha256": "364140071ED84A644BBC5C9710EA2AA815971C37665343EBAB875C4C84BD51DD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_Place_evalAt_norm_eq_prod_fiber.lean.txt",
+          "sha256": "B950C4BE4093AF44AFF0BE2A4F82794D8146FABE3F04F9FB8587D2348704FA40"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_AlgebraicCurve_Place_exists_integralClosureAt_of_ord_fiber_nonneg.lean.txt",
+          "sha256": "35DC29141F41C215099CF893022DBB053A7A2B2E409D744444C60C443061D938"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveResidueRestriction.lean",
+          "sha256": "56B31EA99D7BAE9457EFF6B05BD201A1F5D095B26C00C70165F8015F4D7DED6E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePicardPushforward.lean",
+          "sha256": "5AFD11FF786364DB2844F7E3F5168AEC2B50B66089B007B8BCA251C649F48EAA"
+        }
+      ],
+      "selectedRoute": "Reuse the native restrictInclusion, restrictResidueMap and scalar tower instead of duplicating order comparisons. Use the existing geometric pushforward as Finsupp.mapDomain. Nonvanishing is required only on the divisor support, where disjointness proves it; no globally nonvanishing function is assumed.",
+      "scopeDecision": "Keep only the finite-algebra calculations consumed by the actual norm theorem. The unused properness lemma for the fiber ideal was removed before auditing. No general arbitrary-curve Picard divisibility or additional valuation infrastructure is introduced.",
+      "discharged": "Actual original divisor evaluation on the existing geometric pushforward equals evaluation of the pulled-back function on the source divisor. Existing local residue restriction proves the value compatibility. Disjointness supplies precisely the nonvanishing needed when integer divisor coefficients cancel in a fiber. All field-map finiteness and residue identifications are discharged. Weil reciprocity, representative independence, Picard-torsion descent, nondegeneracy, Hecke adjointness and the Frobenius determinant remain required. DUB-17--20 OPEN; 16/20.",
+      "remaining": "Assemble the rational-coordinate case of Weil reciprocity and its finite norm transfer. The full external rational reciprocity proof is broader than needed if the second nonconstant function is used as the rational coordinate; validate that shorter route before porting its general polynomial/linear-factor induction.",
+      "boundary": "Scratch only; production promotion and assembled verification pending. No additional acceptance gate closes. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

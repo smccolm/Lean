@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "non-CM modular-form application -> original residual association -> original Tate/Picard inertia -> actual Gauss place-map compatibility -> preservation of the j and inverse-j integral charts",
+  "precedingScratchReceipts": {
+    "source-original-inertia-functions-2-scratch-receipt.json": "F5DE9AE74950E22F70166E04815A923868B77CCA163467E49F626415D0BAA092"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaGaussAction.lean",
+      "sha256": "06C2925649E295356F1275B0A09B4B9862331B3DFAA9C589451533E8E3EBF967"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalArithmeticFieldAction.lean",
+      "sha256": "C64515970E7B1AD3D0021BF2165AB65521CDCCDBA8AF851B915768ABB2CC72F5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\IntegralClosure\\IsIntegral\\Basic.lean",
+      "sha256": "2BAD38C574DD30677B09D8AFAA607AE8B38F889523045D59B5410CB6599B759A"
+    }
+  ],
+  "routeAdjustment": "Restrict the actual arithmetic automorphism to a fixed-coordinate chart algebra, apply the native integral transport theorem, then instantiate only j and its inverse.",
+  "discharged": "The actual arithmetic action preserves integrality over both the j and inverse-j chart algebras. Its constant action and fixed coordinate are proved, and the native commuting-square theorem transports the monic equation.",
+  "remaining": "Place and Picard action comparison, the Frobenius relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-inertia-chart-integral-route-430.json",
+    "sha256": "71BC6BA957B86BE72D03C4B4A13F5434EEA37FC52C841E1EC7A3ECFBBBC073E0",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "non-CM modular-form application -> original residual association -> original Tate/Picard inertia -> actual Gauss place-map compatibility -> preservation of the j and inverse-j integral charts",
+      "reuseChecked": [
+        "Scope 429 proves actual Gauss-ring and residue invariance under the original arithmetic action. Existing original_field_eq_coefficient_field keeps the original function field literal.",
+        "Mathlib IsIntegral.map_of_comp_eq transports monic equations along a commuting square. Algebra.adjoin_induction proves stability of the two chart algebras from the original constant action and fixed j coordinate. No new integral-closure foundation is needed.",
+        "The source global divisor-rigidity route requires Picard divisibility, for which no matching local proved result was found. Existing chart uniqueness avoids that dependency once these exact integral-chart compatibilities are proved."
+      ],
+      "selectedRoute": "Restrict the actual arithmetic automorphism to a fixed-coordinate chart algebra, apply the native integral transport theorem, then instantiate only j and its inverse.",
+      "assumptionsToDischarge": "The actual arithmetic action preserves integrality over the j-chart and inverse-j-chart algebras, with their constant and coordinate actions derived.",
+      "boundary": "Transport of original places and uniqueness of reduction must still yield place/Picard inertia invariance. Frobenius, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

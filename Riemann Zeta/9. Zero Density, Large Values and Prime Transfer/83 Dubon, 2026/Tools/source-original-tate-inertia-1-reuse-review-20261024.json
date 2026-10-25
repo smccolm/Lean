@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "original residual association -> actual rational Tate representation unramified away from level and the Tate prime -> identity on original Tate sequences -> original Picard torsion inertia",
+  "precedingScratchReceipts": {
+    "source-original-picard-inertia-4-scratch-receipt.json": "1B8161B0BFB25B0697511B4572D0F992A0698331A916821462F2BDF765E5018F"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateGalois.lean",
+      "sha256": "D40030B05BD21BC27E08C463F266E7F103CB92F77E109C621081A7BE87711F5E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRationalTateGalois.lean",
+      "sha256": "EEE871FD2722A8CFA4D07A5E77913200A1E7DB463A7B732B924974FA0DCCBBA0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalInertiaPicard.lean",
+      "sha256": "D005B4081D6616CA345C7D4AC3AD08CEA069C5B01DD4CCCC4FAD4BE273B204DE"
+    }
+  ],
+  "routeAdjustment": "Apply the derived original Picard inertia result to every existing Tate coordinate, then native scalar extension. Derive the residue hypotheses from the exact source prime and nondivisibility convention.",
+  "discharged": "Both the actual integral and rational Tate representations send native arithmetic inertia to the identity at every prime not dividing the level times the Tate prime. Genuine Tate torsion coordinates use the proved original Picard inertia theorem, and native scalar extension preserves identity. The literal source LiesOverPrime nonunit condition supplies residue characteristic and nondivisibility gives the exact invertibility conditions.",
+  "remaining": "Pass inertia through the actual primitive-form specialization; the Frobenius relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-tate-inertia-route-434.json",
+    "sha256": "E874B93D3A9138DB2B467A1FC3557FB14284B8D9A254A1467C51982AF9F9B25A",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "original residual association -> actual rational Tate representation unramified away from level and the Tate prime -> identity on original Tate sequences -> original Picard torsion inertia",
+      "reuseChecked": [
+        "SourceOriginalTateGaloisRep_apply gives the actual Picard action in each genuine compatible torsion coordinate. SourceOriginalTateTorsionCoordinate supplies its proved prime-power torsion property.",
+        "SourceOriginalRationalTateGaloisRep_apply is the existing native scalar extension; Module.End.baseChangeHom preserves the identity. No Tate foundation or tensor induction is required.",
+        "The frozen source defines LiesOverPrime A p literally as p in A.nonunits. Native residue-zero and prime characteristic theorems derive CharP from exactly this hypothesis; CharP.cast_eq_zero_iff converts the original nondivisibility condition."
+      ],
+      "selectedRoute": "Apply the derived original Picard inertia result to every existing Tate coordinate, then native scalar extension. Derive the residue hypotheses from the exact source prime and nondivisibility convention.",
+      "assumptionsToDischarge": "The actual integral and rational Tate representations send native inertia to the identity away from primes dividing level times Tate prime; no geometric or arithmetic compatibility certificate remains.",
+      "source": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_rep_tateModule_jZero_eq_self_of_mem_inertiaSubgroupIn.lean.txt",
+        "sha256": "EC78293A1B025FD8A72763AC473F86CB2F89FCD10278E508527B28C1A359B994",
+        "repository": "https://github.com/anthropics/fermats-last-theorem",
+        "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+        "license": "Apache-2.0"
+      },
+      "boundary": "Pass inertia through the existing primitive-form specialization; the Frobenius relation, residual association, automorphy and all-weight continuation remain required. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "directSourceReuse": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularCurve_rep_tateModule_jZero_eq_self_of_mem_inertiaSubgroupIn.lean.txt",
+    "sha256": "EC78293A1B025FD8A72763AC473F86CB2F89FCD10278E508527B28C1A359B994",
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "license": "Apache-2.0"
+  }
+}

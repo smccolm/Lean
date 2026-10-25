@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-24 America/Vancouver",
+  "sourceDependency": "genuine modular-form concentration -> actual residual Galois association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint alternating Tate pairing with cyclotomic arithmetic action -> actual original divisorial Weil pairing -> literal divisor evaluation and Galois compatibility",
+  "precedingScratchReceipts": {
+    "source-original-frobenius-quadratic-4-r2-scratch-receipt.json": "41ED0A694755FA39B6FFCB332C35D2DD6326F45633972308E27BE0077F4129F0"
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPlaceEvaluation.lean",
+      "sha256": "EC2B8CCA1D7B7A2067967D9C0F3A4A5C42C25F7238AA29C8756565CA74374819"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPlaceInverseValues.lean",
+      "sha256": "C512298D6A71DFE4BC5314C2772AF27B53F573B482D31E2C382FC544378474D2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalArithmeticDivisors.lean",
+      "sha256": "014C350B58D239FF3C8D55039C6C7C52F05BF69AA2EB0706DEEA05B99DB11D48"
+    }
+  ],
+  "routeAdjustment": "Reuse the original residue identification and place action to prove the exact evaluation algebra and semilinearity, then the literal ratio on disjoint representatives. This prerequisite is shared by algebraic and analytic routes to nondegeneracy. Do not import a pairing certificate or arbitrary-curve divisibility package.",
+  "discharged": "The literal original divisorial Weil ratio is nonzero, reverses by inversion, is multiplicative under compatible addition and transforms semilinearly under the actual coefficient Galois action. Rationality and residue evaluation are supplied by proved original place constructions. These are properties of actual representatives; reciprocity, independence of representatives, Picard-torsion descent, nondegeneracy, Hecke adjointness and the determinant remain required. DUB-17--20 OPEN; 16/20.",
+  "remaining": "Prove reciprocity and independence of representatives, move actual representatives, descend to Picard torsion and establish nondegeneracy and Hecke adjointness before claiming any Tate pairing or determinant. The existing original complex period and torsion comparisons are candidates for a shorter nondegeneracy route; their compatibility with the divisorial pairing is not yet proved. Scratch only. No Picard pairing, determinant, characteristic polynomial or additional acceptance gate is claimed. DUB-17--20 OPEN; 16/20.",
+  "production": "Scratch only; production promotion and assembled verification pending.",
+  "renewedSearch": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\curve-reuse-assessment-380.json",
+    "sha256": "5B8FDE7D3959F7FB92BE6CB0B73C6914BD64EF95FA256922AF0EC58E79497CF7"
+  },
+  "reuseRouteAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-weil-datum-route-462.json",
+    "sha256": "5ACE7D7BEE9ADBD68234C15915C426A58861FBDE665FBF38901C15BCB50280FB",
+    "review": {
+      "date": "2026-10-24 America/Vancouver",
+      "target": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2",
+      "chain": "genuine modular-form concentration -> actual residual Galois association -> Frobenius characteristic polynomial -> determinant -> nondegenerate Hecke-adjoint alternating Tate pairing with cyclotomic arithmetic action -> actual original divisorial Weil pairing -> literal divisor evaluation and Galois compatibility",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPlaceEvaluation.lean",
+          "sha256": "EC2B8CCA1D7B7A2067967D9C0F3A4A5C42C25F7238AA29C8756565CA74374819"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPlaceInverseValues.lean",
+          "sha256": "C512298D6A71DFE4BC5314C2772AF27B53F573B482D31E2C382FC544378474D2"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalArithmeticDivisors.lean",
+          "sha256": "014C350B58D239FF3C8D55039C6C7C52F05BF69AA2EB0706DEEA05B99DB11D48"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTorsionComparison.lean",
+          "sha256": "41612CCF2BFC21C11AE01B0FA878B6C3D1B40A15D7D3D4D38912D0CD6ABCF81B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPicardPeriodComparison.lean",
+          "sha256": "9F68A2917CC766027DF13820D816A79DE4847084FFB8D479E3C77C400B2F16C4"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalBasisPeriodReciprocity.lean",
+          "sha256": "A3CA52902C64E2199B52957FCC58E241E7E6FDCE2495176CE36479195E24767C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveNormFiber.lean",
+          "sha256": "E520CCC04C216018AE815938DD60D5ED27E8AB5960C33B0BACB95C442FF245DB"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiberChart.lean",
+          "sha256": "EFCB4C154C87B6533816502665498A7A1FA0733597908FAFB221E3ED683D2A18"
+        }
+      ],
+      "selectedRoute": "Reuse the original residue identification and place action to prove the exact evaluation algebra and semilinearity, then the literal ratio on disjoint representatives. This prerequisite is shared by algebraic and analytic routes to nondegeneracy. Do not import a pairing certificate or arbitrary-curve divisibility package.",
+      "discharged": "The literal original divisorial Weil ratio is nonzero, reverses by inversion, is multiplicative under compatible addition and transforms semilinearly under the actual coefficient Galois action. Rationality and residue evaluation are supplied by proved original place constructions. These are properties of actual representatives; reciprocity, independence of representatives, Picard-torsion descent, nondegeneracy, Hecke adjointness and the determinant remain required. DUB-17--20 OPEN; 16/20.",
+      "remaining": "Prove reciprocity and independence of representatives, move actual representatives, descend to Picard torsion and establish nondegeneracy and Hecke adjointness before claiming any Tate pairing or determinant. The existing original complex period and torsion comparisons are candidates for a shorter nondegeneracy route; their compatibility with the divisorial pairing is not yet proved.",
+      "routeAssessment": [
+        "The frozen external nondegeneracy proof uses Picard divisibility for auxiliary Kummer splitting fields; original torsion comparison alone does not meet that hypothesis.",
+        "Existing original complex Picard comparison and unimodular period reciprocity may avoid that generality, but require an exact analytic/divisorial pairing bridge.",
+        "For reciprocity and correspondence adjointness, the external finite-extension norm evaluation theorem offers a direct route through already proved native integral closures, ramification and norm orders. A repository-wide search found no existing residue-norm or Weil-evaluation theorem; native Mathlib determinant base change and CRT should supply those narrower algebraic steps."
+      ],
+      "boundary": "Scratch only. No Picard pairing, determinant, characteristic polynomial or additional acceptance gate is claimed. DUB-17--20 OPEN; 16/20."
+    }
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}
