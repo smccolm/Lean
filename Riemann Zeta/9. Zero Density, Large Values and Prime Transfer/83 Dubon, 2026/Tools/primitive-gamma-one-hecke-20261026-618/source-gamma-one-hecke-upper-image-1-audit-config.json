@@ -1,0 +1,40 @@
+{
+  "modules": [
+    "SourceGammaOneHeckeUpperImage"
+  ],
+  "theorems": [
+    "Dubon2026.sourceGammaOneDiagonalHom_heckeUpper_iff",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperHom_injective",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperHom_range",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_apply",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_conjugation"
+  ],
+  "constructions": [
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv"
+  ],
+  "queries": [
+    "Dubon2026.sourceGammaOneDiagonalHom_heckeUpper_iff",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperHom_injective",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperHom_range",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_apply",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_conjugation",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceGammaOneDiagonalHom_heckeUpper_iff",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperHom_injective",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperHom_range",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_apply",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_conjugation",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv",
+    "Dubon2026.sourceGammaOneCoverHecke_square",
+    "Dubon2026.sourceGammaOneCoverHeckeTraceSubgroup_eq",
+    "Dubon2026.sourceGammaOneDiagonalHom_injective"
+  ],
+  "roots": [
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_conjugation",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_apply",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv"
+  ],
+  "separatelyAxiomChecked": []
+}

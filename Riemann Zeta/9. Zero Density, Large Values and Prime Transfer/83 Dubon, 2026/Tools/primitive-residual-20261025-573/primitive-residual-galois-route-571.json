@@ -1,0 +1,141 @@
+{
+  "scope": 571,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual primitive Galois association -> assemble all-weight residual association at every prescribed prime, with original Fourier reduction, determinant exponent and arithmetic support",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceParabolicCuspEigenlift.lean",
+      "sha256": "2DB0D5E4605F1FC62036C71CBD80E7A4E3578BE8A97A527C5CDC7EE01A053C55"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoFullEigenlift.lean",
+      "sha256": "E0B3A90CB30A9E65866FE2CB0BC526E3503568C4CEE9EC139A996127EB46CBD7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCommutingCommonEigenvector.lean",
+      "sha256": "B91345E490FDA6A83422F38F7931DAF4E1FDBB3AA8E3A561E5DCC1069CE9621A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CuspPeterssonCore.lean",
+      "sha256": "BFFA8A596B8BDF48EF4D01B2FD474E093E3A25610120E41D3790DD0F349F385B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CuspOldNewProjection.lean",
+      "sha256": "7939E9ECC57F6AA38EE19371854BAAA1E8C4DCCB3491E11AA44E8245E186E66A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CuspCoprimeOldspace.lean",
+      "sha256": "F31CBC7656325CF5105555440829B74616CD881968A239690A3C08EDAF1530D6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\HeckeDegeneracyPrime.lean",
+      "sha256": "E671DE6BFE8D2637D7E21CE488778E94E0954954369F1FCE43711504953C60C3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\HeckeGoodAdjoint.lean",
+      "sha256": "563AAC44F0D12944E48CA647B9FC0B0830046E8B78A694EF13E2AEEF1AEBCB55"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\HeckeOldNewStability.lean",
+      "sha256": "B5BB9F71966F1ED3BAA8F2E258A53EC6FA29C715A146DC219A7FADBAB91B76BD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceResidualGaloisAlternative.lean",
+      "sha256": "186771D9C5449038D0ED9EF008FAE6BB075B135C627DED8AECEBF90F3417A1FB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveWeightTwo.lean",
+      "sha256": "F603F2AF3877429921C0B051CAB5516C9CEE71B2406A514217D476D7212CAE15"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveWeightRestoration.lean",
+      "sha256": "3E2ED6B46445BF4DE371C36A789F3893E86D4A3A3AFDB8071E02783ED7C304C8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveOriginalSupport.lean",
+      "sha256": "DC04EDFCDB34F77B118E8EC76F0AE12282CBDDF31F0F6B6360800B92B50CC4E9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveResidualCharacteristic.lean",
+      "sha256": "590B06EFA0C45075CA3E981D1AB53EF00C871552F44AEFA28E6686E76757BB15"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceArithmeticSupportLocalValues.lean",
+      "sha256": "DE72E4067C1189B033195ECBD78E41D1CFCCD6B582FF526983BDAAB786A315F1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticSupportLocalConjugacy.lean",
+      "sha256": "685F53D5270E196ED8DFFFF55D6FF7E8324614D10E083C607FD84B9A35B6EDC5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\InnerProductSpace\\Adjoint.lean",
+      "sha256": "057054B5DC446B6B7960A3432B30D57D9D2D6F0F8204E5D014B56A6EA4B7447D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Matrix\\Charpoly\\Basic.lean",
+      "sha256": "D9CE4527739224C1C9F82F4ADBF2C5C9540E87DAC047193B5A1B8FD1A158CE26"
+    }
+  ],
+  "shorterRoute": "Reuse native finite-dimensional adjoints for actual Petersson degeneracy maps, existing Hecke adjointness/intertwining and original finite cusp dimension. A strictly descending level argument gives a genuine newspace witness; the existing commuting-family eigenvector theorem and coprime Fourier uniqueness normalize it. This avoids new spectral or oldform decomposition infrastructure. Reuse the prescribed primitive arithmetic representation and the existing actual support/local conjugacy. Close the original H1 alternative, then consume the already proved weight-twist and support-equality arguments. Construct the local field and residue characteristic from the original coefficient-field theorem; no new completion or coefficient arithmetic is needed.",
+  "assumptionsToDischarge": "The parabolic primitive divisor, preserved eigenvalues, actual prescribed residual representation, original support, all-weight Fourier factor, weight determinant and residue characteristic are derived from the original primitive cusp form, weight at least two, and prescribed rational prime. The residual H1 alternative is completely assembled. The terminal theorem supplies a genuine continuous arithmetic Galois representation with exact original Frobenius trace, determinant exponent k-1, and required inertia triviality.",
+  "remaining": "All-weight adic realization and the required local/image properties, arithmetic automorphy and literal higher symmetric-power continuation remain required for DUB-17. The modular/level-one concentration consumers and final acceptance verification also remain open. 16/20; DUB-17--20 OPEN.",
+  "scratchImportClosure": [
+    "SourcePrimitiveResidualGaloisCharP",
+    "SourcePrimitiveOriginalResidualGalois",
+    "SourcePrimitiveRestoredGalois",
+    "SourcePrimitiveWeightTwoGalois",
+    "SourceResidualGaloisRealization",
+    "SourceParabolicArithmeticResidual",
+    "SourceOriginalDivisorArithmeticResidual",
+    "SourceArithmeticSupportInflationValues",
+    "SourceOriginalArithmeticResidual",
+    "SourceArithmeticLocalEmbeddingExtension",
+    "SourceAbsoluteArithmeticRestriction",
+    "SourceRationalLocalValuation",
+    "SourceNormValuationRestriction",
+    "SourceValuationResidualAction",
+    "SourceAbsoluteArithmeticDescent",
+    "SourceNumberFieldSupportRamification",
+    "SourceAbsoluteFiniteUnramified",
+    "SourceNumberFieldNormInertiaLift",
+    "SourceOriginalNormLocalResidual",
+    "SourceOriginalAlgebraicIntegerResidual",
+    "SourceOriginalExactReductionResidual",
+    "SourceOriginalPrescribedReductionResidual",
+    "SourceRankTwoCharpolyCoefficients",
+    "SourcePrescribedCompletionResidue",
+    "SourceAdicCoefficientResidueComparison",
+    "SourcePrescribedReductionPrime",
+    "SourceReductionCompletionLocalStructures",
+    "SourcePadicCompletionValuation",
+    "SourceReductionCompletionPadicMap",
+    "SourceReductionCompletionBasePrime",
+    "SourceReductionCompletionFinite",
+    "SourceOriginalPrescribedResidualFrobenius",
+    "SourceOriginalResidualInertia",
+    "SourceIntegralMatrixCharpoly",
+    "SourceMatrixIntertwinerCharpoly",
+    "SourceOriginalResidualFrobeniusCharpoly",
+    "SourceOriginalSpecializationFrobeniusCharpoly",
+    "SourceCyclotomicFrobeniusCharpoly",
+    "SourceRankTwoQuadraticTrace",
+    "SourceValuationCyclotomicFrobenius",
+    "SourceValuationFrobeniusRoots",
+    "SourceOriginalSpecializationCyclotomicDeterminant",
+    "SourceSpecializationBaseChangeIntertwiner",
+    "SourceImageSpecializationDeterminant",
+    "SourceAlternatingRankTwoDeterminant",
+    "SourceImageSpecializationPairing",
+    "SourcePrimitiveOriginalTateGalois",
+    "SourcePolynomialCommutant",
+    "SourceOriginalSpecializationPrimitiveImage",
+    "SourceSpanningProjectorImage",
+    "SourceOriginalSpecializationProjector",
+    "SourcePolynomialSpecialization",
+    "SourceOriginalPrescribedTateSpecialization",
+    "SourceParabolicPrimitiveDivisor",
+    "SourceWeightTwoNewEigenNormalization",
+    "SourceWeightTwoEigenLevelDescent",
+    "SourceWeightTwoDegeneracyAdjoint"
+  ],
+  "separatelyAxiomChecked": []
+}\n

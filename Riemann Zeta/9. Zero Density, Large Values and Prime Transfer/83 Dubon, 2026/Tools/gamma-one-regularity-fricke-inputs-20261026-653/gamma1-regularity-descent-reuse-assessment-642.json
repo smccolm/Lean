@@ -1,0 +1,64 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight Galois association -> original finite Gamma1 character arithmetic realization -> actual Picard/H1 and diamond comparison -> regular differential/cusp comparison -> descend the two integral equations to the original coefficient field and deduce local regularity.",
+  "sources": {
+    "fetchedUTC": "2026-10-26T12:56:38.338673+00:00",
+    "files": [
+      {
+        "repo": "anthropics/fermats-last-theorem",
+        "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+        "path": "P2M/Sol/S_AlgebraicCurve_Place_ordDiff_smul_D_nonneg_of_ord_pow_six_mul_pow_four_mul_sub_1728_pow_three_nonneg.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_AlgebraicCurve_Place_ordDiff_smul_D_nonneg_of_ord_pow_six_mul_pow_four_mul_sub_1728_pow_three_nonneg.lean",
+        "snapshot": "P2M\\Sol\\S_AlgebraicCurve_Place_ordDiff_smul_D_nonneg_of_ord_pow_six_mul_pow_four_mul_sub_1728_pow_three_nonneg.lean.txt",
+        "gitBlob": "1b01233a9781b51de574c1b1792270a5ef39ad2b",
+        "sha256": "396F6F58296DABDE6D0CD9F44C40D8844E09C8634D24BCDD523F599ADA0B7BB8",
+        "bytes": 10824
+      },
+      {
+        "repo": "anthropics/fermats-last-theorem",
+        "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+        "path": "P2M/Sol/S_ModularCurve_isIntegral_adjoin_of_isIntegral_adjoin_coeffMap.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_isIntegral_adjoin_of_isIntegral_adjoin_coeffMap.lean",
+        "snapshot": "P2M\\Sol\\S_ModularCurve_isIntegral_adjoin_of_isIntegral_adjoin_coeffMap.lean.txt",
+        "gitBlob": "1c426408b483feb60c051c0aee8129be61ae6159",
+        "sha256": "E7A66867B837F125D6307E731CE5EF4FBC74ECCED52FEFE2B61C34B44085EC70",
+        "bytes": 4644
+      }
+    ]
+  },
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentScalarIndependence.lean",
+      "sha256": "2CB7EFCA500FBE57B6F474D706B231DDDC227CA71A0345B799B2035C7A6AA6C5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentEuler.lean",
+      "sha256": "F81C26F454F057BCCE8173B6C6A90F6B460DC865537E30A66E8524D84460F657"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalQuotientIntegral.lean",
+      "sha256": "67D71EA5D47040FF80A4B96FDC3F42DEB0BAC201D58D0949BBA84026BBEE4046"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveCoordinateSupport.lean",
+      "sha256": "F42A53D6ED4372DEBB98F8D05733455E0752460E3A76ED1FE37FAF32AB9DB1C0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveDerivativeLowerOrder.lean",
+      "sha256": "A556087528E707E1DDD13F4DCA3354FC3B73043DD68AFED217F8DB725C275B00"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveExactDerivativeOrder.lean",
+      "sha256": "DDBEC9CA3FE003784331E009920F73D2D6644EDFB707029E1624773E84A90A36"
+    }
+  ],
+  "decisions": [
+    "The coefficient-descent proof uses a native linear retraction of the field embedding, applied coefficientwise to a monic relation. Adapt this exact proof; it avoids an unnecessary general faithful-flatness or function-field linear-disjointness layer. Existing Laurent scalar independence is proved but the explicit retraction is shorter here.",
+    "For the six/four/three expression, existing local differential generators, integral derivative coefficients and derivative-order lower bounds supply the actual valuation proof. Use the characteristic-zero local prerequisites already proved for the target fields; do not reconstruct the upstream perfect-field differential framework.",
+    "Subfield integrality transport and valuation-ring integral-closure membership already exist locally. Reuse them. Exact cusp-order arithmetic then consumes the established positive-M inverse-j integral equation."
+  ],
+  "externalBuild": false,
+  "transitiveExternalAudit": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "remaining": "Algebraic realization and converse cusp construction, actual Picard/H1/full-parabolic/diamond comparison, original finite-character arithmetic realization, original all-weight association and higher continuation remain. 16/20; DUB-17--20 OPEN."
+}

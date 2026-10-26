@@ -1,0 +1,34 @@
+import Dubon2026.SourceH1TraceBaseChangeCoefficient
+import Dubon2026.SourceGammaOneCoverBinaryHeckeTrace
+import Dubon2026.SourceGammaOneHeckeUpperImage
+import Dubon2026.SourceGammaOneSubgroupCohomologyMap
+import Dubon2026.SourceGammaOneHeckePullbackSquare
+import Dubon2026.SourceGammaOneHeckeUpperTraceReindex
+import Dubon2026.SourceH1TraceIntersection
+import Dubon2026.SourceGammaOneIntersectionTraceExchange
+import Dubon2026.SourceGammaOneUpperH1Composition
+import Dubon2026.SourceGammaOneSubgroupTraceHecke
+import Dubon2026.SourceGammaOneTransferHecke
+import Dubon2026.SourceGammaOneHeckeWords
+import Dubon2026.SourceGammaOneOperatorDescent
+import Dubon2026.SourceGammaOneHeckeFinite
+import Dubon2026.SourcePrimitiveGammaOneHeckeCharacter
+import Dubon2026.SourcePrimitiveGammaOneH1Realization
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceH1TraceBaseChangeCoefficient, `Dubon2026.SourceGammaOneCoverBinaryHeckeTrace, `Dubon2026.SourceGammaOneHeckeUpperImage, `Dubon2026.SourceGammaOneSubgroupCohomologyMap, `Dubon2026.SourceGammaOneHeckePullbackSquare, `Dubon2026.SourceGammaOneHeckeUpperTraceReindex, `Dubon2026.SourceH1TraceIntersection, `Dubon2026.SourceGammaOneIntersectionTraceExchange, `Dubon2026.SourceGammaOneUpperH1Composition, `Dubon2026.SourceGammaOneSubgroupTraceHecke, `Dubon2026.SourceGammaOneTransferHecke, `Dubon2026.SourceGammaOneHeckeWords, `Dubon2026.SourceGammaOneOperatorDescent, `Dubon2026.SourceGammaOneHeckeFinite, `Dubon2026.SourcePrimitiveGammaOneHeckeCharacter, `Dubon2026.SourcePrimitiveGammaOneH1Realization]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

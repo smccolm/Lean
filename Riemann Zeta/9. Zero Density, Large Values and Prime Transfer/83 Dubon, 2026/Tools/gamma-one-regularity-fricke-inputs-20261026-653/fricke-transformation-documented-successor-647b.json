@@ -1,0 +1,34 @@
+{
+  "reason": "First exhaustive axiom audit passed but the 16-linter stage rejected twelve missing documentation strings. Preserve every predecessor source and failed audit; fresh V2 modules add only documentation and qualify successor imports. No proof, hypothesis or limit is changed.",
+  "files": [
+    {
+      "predecessor": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePeriodHomothety.lean",
+      "predecessorSha256": "BCADE7B8B9E76E86B4E2A7D574A29D59153758ADDB3028DA6E7F5BE084ED9FEC",
+      "successor": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePeriodHomothetyV2.lean",
+      "successorSha256": "896E3B923D354A9CED8FD8C44FCE47073AEA669B4E5587B58A43BDA83866FF33",
+      "mathematicalBodiesIdentical": true
+    },
+    {
+      "predecessor": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeModularLattice.lean",
+      "predecessorSha256": "7997760A590125484C84186A5A5AFA7A16D6CC42B8B9E871FC26572AB254ED63",
+      "successor": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeModularLatticeV2.lean",
+      "successorSha256": "092D75B3216920F5E51C7960CFC84BFD57E6E1C73B9095621F7D192853B4204F",
+      "mathematicalBodiesIdentical": true
+    },
+    {
+      "predecessor": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTorsionTransformation.lean",
+      "predecessorSha256": "1F5F41CF647BD85D0788F5B0643D485564F5746D7DBCA2E57CF6CF76559EA79D",
+      "successor": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTorsionTransformationV2.lean",
+      "successorSha256": "3A5DB0130F60BF11013E34A6793E3679AD981834A5F6AC1FD4A17F59874AF8F8",
+      "mathematicalBodiesIdentical": true
+    },
+    {
+      "predecessor": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFunctionTransformation.lean",
+      "predecessorSha256": "0ADBC6265B9DE9ACF809CB713C84D222FFE41F8D326FF5F0E6BBF773FF70CC4E",
+      "successor": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFunctionTransformationV2.lean",
+      "successorSha256": "5BABB787F2D3D189DB22930D749DC5530ECF438593FCBF5E77D2CC3148C13B7D",
+      "mathematicalBodiesIdentical": true
+    }
+  ],
+  "failedAudit": "SourceFrickeTransformationAudit4.log"
+}

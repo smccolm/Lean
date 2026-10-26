@@ -1,0 +1,56 @@
+import SourceFaithfulCharacterDivisibility
+import SourceBinaryH1PrimePowerKernel
+import SourcePrimitiveH1HeckeCongruence
+import SourcePrimitiveH1AdicOperatorKernel
+import SourcePrimitiveCongruentH1AdicRealization
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.sourceFaithfulCharacter_div_isIntegral
+#print axioms Dubon2026.sourceBinaryH1Change_zmod_nonzero_eq_zero_iff
+#print axioms Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_integral
+#print axioms Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_valuation
+#print axioms Dubon2026.sourcePrimitiveH1Hecke_primePower_congruence_valuation
+#print axioms Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator
+#print axioms Dubon2026.sourcePrimitive_exists_congruentH1AdicRealization
+#print axioms Dubon2026.sourcePrimitiveH1AdicCongruenceData
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceFaithfulCharacterDivisibility, `SourceBinaryH1PrimePowerKernel, `SourcePrimitiveH1HeckeCongruence, `SourcePrimitiveH1AdicOperatorKernel, `SourcePrimitiveCongruentH1AdicRealization]
+  let theorems : Array Name := #[`Dubon2026.sourceFaithfulCharacter_div_isIntegral, `Dubon2026.sourceBinaryH1Change_zmod_nonzero_eq_zero_iff, `Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_integral, `Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_valuation, `Dubon2026.sourcePrimitiveH1Hecke_primePower_congruence_valuation, `Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator, `Dubon2026.sourcePrimitive_exists_congruentH1AdicRealization]
+  let constructions : Array Name := #[`Dubon2026.sourcePrimitiveH1AdicCongruenceData]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Primitive Tate Restriction postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Primitive Tate Restriction theorems discovered"
+  logInfo m!"SOURCE PRIMITIVE H1 CONGRUENCE AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceFaithfulCharacterDivisibility
+#lint in SourceBinaryH1PrimePowerKernel
+#lint in SourcePrimitiveH1HeckeCongruence
+#lint in SourcePrimitiveH1AdicOperatorKernel
+#lint in SourcePrimitiveCongruentH1AdicRealization

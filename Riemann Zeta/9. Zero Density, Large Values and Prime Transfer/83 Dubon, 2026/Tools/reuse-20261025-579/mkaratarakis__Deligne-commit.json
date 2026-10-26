@@ -1,0 +1,101 @@
+{
+  "sha": "0a843add06243f16537823f2c802ae2aa57ae395",
+  "node_id": "C_kwDOI6F1k9oAKDBhODQzYWRkMDYyNDNmMTY1Mzc4MjNmMmM4MDJhZTJhYTU3YWUzOTU",
+  "commit": {
+    "author": {
+      "name": "Michail Karatarakis",
+      "email": "40603357+mkaratarakis@users.noreply.github.com",
+      "date": "2023-02-22T15:30:23Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2023-02-22T15:30:23Z"
+    },
+    "message": "Update ramification.lean",
+    "tree": {
+      "sha": "7f856f0b431493bc995b5e96b900c7d5ca50e0de",
+      "url": "https://api.github.com/repos/mkaratarakis/Deligne/git/trees/7f856f0b431493bc995b5e96b900c7d5ca50e0de"
+    },
+    "url": "https://api.github.com/repos/mkaratarakis/Deligne/git/commits/0a843add06243f16537823f2c802ae2aa57ae395",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJj9jUPCRBK7hj4Ov3rIwAAgRUIABD+QvHTnbq9qLeamtcEfjyK\npPbHYJgXDWI+4GrsnwcFF/NYEj5MRmBjKbiKccKFC5OD2rPqBBXVbUuyqjR9degi\n2Rz6B0ypt7qraSK+aAmy7UNEAwJ3pHe6B47B+ZsHiKSTs1QWZBpxO4+35RGpln/1\nVziFNR4EQyxxPqoMJMc7ckOLnEl8/kGQSBSxCQb3Ti2ZZLxFixDtTe33G9QYKE0h\nDk7pqk1vxyqmpi4tZU2gQqtcMRcpDBj5ZM6BGqqr78VE5ZfMT9PnzzImGKEZruNo\ntfIdwAWgmUpRpNo6cC7YeABPx6wn8DMoCrOnFbsPixHqGArvmK04G1cO5D0B10c=\n=9fVa\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 7f856f0b431493bc995b5e96b900c7d5ca50e0de\nparent 07a9d60d719f5446b3c475728f9311c657d1ae22\nauthor Michail Karatarakis <40603357+mkaratarakis@users.noreply.github.com> 1677079823 +0100\ncommitter GitHub <noreply@github.com> 1677079823 +0100\n\nUpdate ramification.lean",
+      "verified_at": "2024-01-16T19:59:59Z"
+    }
+  },
+  "url": "https://api.github.com/repos/mkaratarakis/Deligne/commits/0a843add06243f16537823f2c802ae2aa57ae395",
+  "html_url": "https://github.com/mkaratarakis/Deligne/commit/0a843add06243f16537823f2c802ae2aa57ae395",
+  "comments_url": "https://api.github.com/repos/mkaratarakis/Deligne/commits/0a843add06243f16537823f2c802ae2aa57ae395/comments",
+  "author": {
+    "login": "mkaratarakis",
+    "id": 40603357,
+    "node_id": "MDQ6VXNlcjQwNjAzMzU3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/40603357?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mkaratarakis",
+    "html_url": "https://github.com/mkaratarakis",
+    "followers_url": "https://api.github.com/users/mkaratarakis/followers",
+    "following_url": "https://api.github.com/users/mkaratarakis/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mkaratarakis/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mkaratarakis/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mkaratarakis/subscriptions",
+    "organizations_url": "https://api.github.com/users/mkaratarakis/orgs",
+    "repos_url": "https://api.github.com/users/mkaratarakis/repos",
+    "events_url": "https://api.github.com/users/mkaratarakis/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mkaratarakis/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "07a9d60d719f5446b3c475728f9311c657d1ae22",
+      "url": "https://api.github.com/repos/mkaratarakis/Deligne/commits/07a9d60d719f5446b3c475728f9311c657d1ae22",
+      "html_url": "https://github.com/mkaratarakis/Deligne/commit/07a9d60d719f5446b3c475728f9311c657d1ae22"
+    }
+  ],
+  "stats": {
+    "total": 9,
+    "additions": 7,
+    "deletions": 2
+  },
+  "files": [
+    {
+      "sha": "ddbad5785db6aa7be6bb9014a01f485d485ee5ec",
+      "filename": "src/ramification.lean",
+      "status": "modified",
+      "additions": 7,
+      "deletions": 2,
+      "changes": 9,
+      "blob_url": "https://github.com/mkaratarakis/Deligne/blob/0a843add06243f16537823f2c802ae2aa57ae395/src%2Framification.lean",
+      "raw_url": "https://github.com/mkaratarakis/Deligne/raw/0a843add06243f16537823f2c802ae2aa57ae395/src%2Framification.lean",
+      "contents_url": "https://api.github.com/repos/mkaratarakis/Deligne/contents/src%2Framification.lean?ref=0a843add06243f16537823f2c802ae2aa57ae395",
+      "patch": "@@ -206,6 +206,10 @@ theorem decomposition_subgroup.surjective (q : height_one_spectrum (\ud835\udcde L)) :\n   function.surjective (decomposition_subgroup.to_residue_field_equiv K\n   q.valuation_subring) := sorry\n \n+lemma equal_kernels (q : height_one_spectrum (\ud835\udcde L)) :\n+  (decomposition_subgroup.to_residue_field_equiv K\n+q.valuation_subring).ker = inertia_subgroup K q.valuation_subring := sorry\n+\n /-- If inertia is trivial, the natural reduction homomorphism is bijective. -/\n theorem decomposition_subgroup.bijective (q : height_one_spectrum (\ud835\udcde L))\n   (h : inertia_subgroup K q.valuation_subring = \u22a5) :\n@@ -215,8 +219,9 @@ begin\n split,\n { have : (decomposition_subgroup.to_residue_field_equiv K\n  q.valuation_subring).ker = \u22a5,\n-{sorry},\n- exact (decomposition_subgroup.to_residue_field_equiv K\n+{ rw equal_kernels K q,\n+  exact h,},\n+exact (decomposition_subgroup.to_residue_field_equiv K\n  q.valuation_subring).ker_eq_bot_iff.mp this,},\n {exact decomposition_subgroup.surjective K q}\n end"
+    }
+  ]
+}

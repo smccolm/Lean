@@ -1,0 +1,11 @@
+{
+  "recordedUTC": "2026-10-26T00:29:30.625175+00:00",
+  "failedRunner": "verify_primitive_residual_association_8193b.ps1",
+  "failedRunnerSha256": "5CEC9232BF799D9A6D8BF2FBE633F9CA851AA33A040A9706D95395FD655701BC",
+  "failure": "Protected aggregate evidence already existed; verifier stopped before any new build, audit, comparison or receipt was executed.",
+  "successor": "verify_primitive_residual_association_8193c.ps1",
+  "successorSha256": "8CC381DAECD70D391A7215AAFB8864A2AEC61920ECA27CC9C8A54EED7F9229BA",
+  "change": "Omit already completed aggregate/public/value/production-ownership stages. Retain checks of all scratch ownership exits, then run the unused exact ownership comparison, focused receipt and sequential canonical stages.",
+  "proofSourcesChanged": false,
+  "auditsRerun": false
+}

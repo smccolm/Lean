@@ -1,0 +1,522 @@
+{
+  "status": "Canonical PASS; all failed helper evidence preserved with fresh successors. No audited source was rewritten or used audit rerun.",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_primitive_witt_deformation_8213.ps1",
+      "path": "Tools/primitive-witt-20261025-581/build_primitive_witt_deformation_8213.ps1",
+      "sha256": "CC7B59C231AC75999E26EAE2C71AC584C76D998684E02F6A55D5CA9B2672BF65"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_primitive_witt_deformation_ownership_8213.py",
+      "path": "Tools/primitive-witt-20261025-581/compare_primitive_witt_deformation_ownership_8213.py",
+      "sha256": "41F53550FFA487F87F87AEE79E05E4524DB2317D7DD7B791A2CA12D8D5B8076E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integrate_source_primitive_witt_deformation_8213.py",
+      "path": "Tools/primitive-witt-20261025-581/integrate_source_primitive_witt_deformation_8213.py",
+      "sha256": "955A3D495B17C66AACF956B0C36340ACB97F9B960986629CDF34B149E4923083"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_witt_deformation_global_ownership_8213.py",
+      "path": "Tools/primitive-witt-20261025-581/prepare_primitive_witt_deformation_global_ownership_8213.py",
+      "sha256": "6AC0D24F4219CC1C5E48A96F71C840C4B798756E8E2FD009915DF7F26D6262CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_witt_deformation_production_ownership_8213.py",
+      "path": "Tools/primitive-witt-20261025-581/prepare_primitive_witt_deformation_production_ownership_8213.py",
+      "sha256": "7F03C08E19BB72147D0F65D8EC453600F05E1A6F55B2CE5F1FCDE842717774F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_witt_deformation_scratch_ownership_8213.py",
+      "path": "Tools/primitive-witt-20261025-581/prepare_primitive_witt_deformation_scratch_ownership_8213.py",
+      "sha256": "0D5038043DA7DAB9CBEA6AD2C2231EBD45CF9910F2F6B3C7CBB9204819290BD8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_witt_promotion_8213.py",
+      "path": "Tools/primitive-witt-20261025-581/prepare_primitive_witt_promotion_8213.py",
+      "sha256": "A4FD89DD7CC95AF1164F2573CE3F2975E41822C383F091FB348EEF45D967FD5A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-witt-promotion-preexecution-review-8213.json",
+      "path": "Tools/primitive-witt-20261025-581/primitive-witt-promotion-preexecution-review-8213.json",
+      "sha256": "138EE63AC29567A50F17A1F78ECB4E5D775880765D44AA9AA9C92158BB4A453B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_primitive_witt_deformation_8213.py",
+      "path": "Tools/primitive-witt-20261025-581/record_source_primitive_witt_deformation_8213.py",
+      "sha256": "9BA531893C60B9EDD5F26757907BF2F0E18F120C176CE647E26C71E4E1035782"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-witt-deformation-ownership-comparison-8213.json",
+      "path": "Tools/primitive-witt-20261025-581/source-primitive-witt-deformation-ownership-comparison-8213.json",
+      "sha256": "21D67E9B2CF457654866BFB48A6DF599508D474868330E6D6CD3B5AD8E8C8AC0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-witt-deformation-production-build-8213.exit",
+      "path": "Tools/primitive-witt-20261025-581/source-primitive-witt-deformation-production-build-8213.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-witt-deformation-production-build-8213.log",
+      "path": "Tools/primitive-witt-20261025-581/source-primitive-witt-deformation-production-build-8213.log",
+      "sha256": "F26BEF83C00754596C16D3F1B5BB45D3829ECD71F0126D89CDD1FDEFE04F7A77"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-witt-deformation-scratch-ownership-8213.json",
+      "path": "Tools/primitive-witt-20261025-581/source-primitive-witt-deformation-scratch-ownership-8213.json",
+      "sha256": "EF10C838C7B3CA63BA926838AE6E5EC3FDA6EE4DF7E824583801648D3C91923F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteResidualDependencyAudit4Production8213.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveFiniteResidualDependencyAudit4Production8213.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteResidualDependencyAudit4Production8213.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveFiniteResidualDependencyAudit4Production8213.lean.txt",
+      "sha256": "069FECC4785C56322279EE76CC8D854051AC44D03867E3F33A2F7EEAEBDF0EC7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteResidualDependencyAudit4Production8213.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveFiniteResidualDependencyAudit4Production8213.log",
+      "sha256": "613A33C9156B4DDA8862C65FC20EE69388CA033AAAE8F4AD3887C4AFDAF8143E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantDependencyAudit3bProduction8213.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualDeterminantDependencyAudit3bProduction8213.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantDependencyAudit3bProduction8213.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualDeterminantDependencyAudit3bProduction8213.lean.txt",
+      "sha256": "13B8F173270F775E8F06F6A275F3AB5EE42189EF80323E9881A6795D807D7573"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantDependencyAudit3bProduction8213.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualDeterminantDependencyAudit3bProduction8213.log",
+      "sha256": "2D09EEFAF2C5DDBFFBCC5412FF9AEE4662E423C760DA95F9814564FCE875106A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessDependencyAudit2bProduction8213.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualOddnessDependencyAudit2bProduction8213.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessDependencyAudit2bProduction8213.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualOddnessDependencyAudit2bProduction8213.lean.txt",
+      "sha256": "4FD1956A267B837AB449C1918E96A42A7EC81DD77FBF7301957B7100C45C1C39"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessDependencyAudit2bProduction8213.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualOddnessDependencyAudit2bProduction8213.log",
+      "sha256": "2922BD6E6868F08929D97945EA03556F14BE4DC3F6901B3E7EFA144B8B84DBD4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationGlobalOwnership8213.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationGlobalOwnership8213.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationGlobalOwnership8213.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationGlobalOwnership8213.lean.txt",
+      "sha256": "80BEF3E85584CC4E0312F91319C84193B77D6526D7F7684991B73A3771D300FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationGlobalOwnership8213.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationGlobalOwnership8213.log",
+      "sha256": "ED5D3BF80F08C18E947346E62D8F11F3E35931E979FB0F38117F8AD4B7965C45"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationOwnership8213.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationOwnership8213.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationOwnership8213.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationOwnership8213.lean.txt",
+      "sha256": "3359737B34234EFF3544FFCC77B0D8F334B761A43A5D9FEBA553C54C4B10E656"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationOwnership8213.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationOwnership8213.log",
+      "sha256": "0040F561CBCEBDC36CCA86620166080C6498405D078E4829A9A2E8F1E0CF6B3C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationProductionAudit8213.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationProductionAudit8213.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationProductionAudit8213.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationProductionAudit8213.lean.txt",
+      "sha256": "135B18D8D637616799E35AE2179C10823FDFE2D0C037C57C260ABA5B766D66F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationProductionAudit8213.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationProductionAudit8213.log",
+      "sha256": "D0CE12D61D8720140AFF4D9A5437C32723A4CE9D8CCA3D723D6F67D6D9333EF6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership572For8213.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationScratchOwnership572For8213.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership572For8213.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationScratchOwnership572For8213.lean.txt",
+      "sha256": "FA6A9A805DD4A8C769BD4AB790EEDDC8769C32E1560FF6349F836A30E7C02ECF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership572For8213.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationScratchOwnership572For8213.log",
+      "sha256": "26EB25CD13B6CC5AF84DF702EA8363A46B71050CEEA26F5F2273C6A939FA38C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership574For8213.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationScratchOwnership574For8213.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership574For8213.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationScratchOwnership574For8213.lean.txt",
+      "sha256": "468FF233F079B9B07EDEC11368C78420B4AFB090F2584C5163FCAB0C4EC1C6C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership574For8213.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationScratchOwnership574For8213.log",
+      "sha256": "67934428AA9775E5359D8A3403C2661AC827200F020D62AF09495498BE9D1583"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership575For8213.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationScratchOwnership575For8213.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership575For8213.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationScratchOwnership575For8213.lean.txt",
+      "sha256": "5A05498EF58EC410EB3AA508921C054B58593445014C9D35B2ECC1D9E0DFB480"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership575For8213.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationScratchOwnership575For8213.log",
+      "sha256": "DF3A27598E6C2EA19653A6A1CEE50F3F7D84266B059CD8E3B29FA15864EA8661"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership577For8213.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationScratchOwnership577For8213.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership577For8213.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationScratchOwnership577For8213.lean.txt",
+      "sha256": "C6ACE82DED8AD3AFB60B2BDCEB5D810F11BF1C5C644AFBE5FCB258B4A0F2903C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership577For8213.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationScratchOwnership577For8213.log",
+      "sha256": "8D6437E6089C286FCF91E937A8DD09C4BE6CF15640B68CCCF7AE23C286B42C6F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership580For8213.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationScratchOwnership580For8213.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership580For8213.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationScratchOwnership580For8213.lean.txt",
+      "sha256": "B0A6C40517500ECCCF623812EFFB3C0AEBB314E0CFCD07C5A7C851DE9E9058A6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership580For8213.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittDeformationScratchOwnership580For8213.log",
+      "sha256": "DD52F8998870E80E3C8A5A96B8573D633EE4AAA540405E5FE570814939EA9FAA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFixedDependencyAudit7Production8213.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFixedDependencyAudit7Production8213.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFixedDependencyAudit7Production8213.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFixedDependencyAudit7Production8213.lean.txt",
+      "sha256": "9EC66E2EC82E1416D8F0234E9310059B499B1D24480231A44EEFB163D3F28314"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFixedDependencyAudit7Production8213.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFixedDependencyAudit7Production8213.log",
+      "sha256": "0DDFF056F6C03A5143B80EFE1640BB82901705F8979552B40523F10720E8B60D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedDependencyAudit4bProduction8213.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFramedDependencyAudit4bProduction8213.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedDependencyAudit4bProduction8213.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFramedDependencyAudit4bProduction8213.lean.txt",
+      "sha256": "E6A868DFA953152F82DFF774C75710B24876783C9AD6755AFB85EA44B1277F96"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedDependencyAudit4bProduction8213.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFramedDependencyAudit4bProduction8213.log",
+      "sha256": "661B4604AE47BFBD2F73760E95509677427CA790AB8A7794C6CF1F801C0183AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_primitive_witt_deformation_8213.ps1",
+      "path": "Tools/primitive-witt-20261025-581/verify_primitive_witt_deformation_8213.ps1",
+      "sha256": "D6089BA8D55E980B281DAC28DE177B6BB6027EEE066949A53A4583861C14332D"
+    }
+  ],
+  "canonical": {
+    "recordedUTC": "2026-10-26T04:42:35.124627+00:00",
+    "log": "logs/dubon-build-20261025-201544-907.log",
+    "sha256": "DA4E7D14C8AFCBD74C6668C14A55182A02A36657FB28067C803E2A96F0E7E06F",
+    "bytes": 13367725,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8213,
+    "projectTheorems": 51999,
+    "registeredConsumers": 23721,
+    "registeredConstructions": 2227,
+    "declarations": 31894,
+    "generated": 32940,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261025_201029.log",
+    "foundationSha256": "FF39671A3452120F6533EFA579177BEE29016072717610B0A56896DC7BC4D879",
+    "countReconciliation": {
+      "previousTheorems": 51937,
+      "focusedTheorems": 62,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 62,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationGlobalOwnership8213.log",
+      "globalOwnershipSha256": "ED5D3BF80F08C18E947346E62D8F11F3E35931E979FB0F38117F8AD4B7965C45",
+      "globalOwnershipSourceSha256": "80BEF3E85584CC4E0312F91319C84193B77D6526D7F7684991B73A3771D300FC",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationOwnership8213.log",
+      "ownershipSha256": "0040F561CBCEBDC36CCA86620166080C6498405D078E4829A9A2E8F1E0CF6B3C"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 62,
+      "scratchDistinct": 62,
+      "generatedNameRenamings": {},
+      "productionFocused": 62,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceArithmeticCharacterFrobeniusEquality",
+            "SourceResidualCyclotomicDeterminant",
+            "SourcePrimitiveResidualGlobalDeterminant"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership572For8213.log",
+            "sha256": "26EB25CD13B6CC5AF84DF702EA8363A46B71050CEEA26F5F2273C6A939FA38C3",
+            "sourceSha256": "FA6A9A805DD4A8C769BD4AB790EEDDC8769C32E1560FF6349F836A30E7C02ECF"
+          }
+        },
+        {
+          "modules": [
+            "SourceResidualRealDeterminant",
+            "SourcePrimitiveResidualOddness"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership574For8213.log",
+            "sha256": "67934428AA9775E5359D8A3403C2661AC827200F020D62AF09495498BE9D1583",
+            "sourceSha256": "468FF233F079B9B07EDEC11368C78420B4AFB090F2584C5163FCAB0C4EC1C6C3"
+          }
+        },
+        {
+          "modules": [
+            "SourceFiniteResidualCoefficientField",
+            "SourceResidualCoefficientDeterminant",
+            "SourceFiniteResidualArithmeticDescent",
+            "SourcePrimitiveFiniteResidualGalois"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership575For8213.log",
+            "sha256": "DF3A27598E6C2EA19653A6A1CEE50F3F7D84266B059CD8E3B29FA15864EA8661",
+            "sourceSha256": "5A05498EF58EC410EB3AA508921C054B58593445014C9D35B2ECC1D9E0DFB480"
+          }
+        },
+        {
+          "modules": [
+            "SourceResidualWittCoefficients",
+            "SourceResidualWittRepresentation",
+            "SourceResidualWittFramedRing",
+            "SourcePrimitiveWittFramedResidual"
+          ],
+          "count": 23,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership577For8213.log",
+            "sha256": "8D6437E6089C286FCF91E937A8DD09C4BE6CF15640B68CCCF7AE23C286B42C6F",
+            "sourceSha256": "C6ACE82DED8AD3AFB60B2BDCEB5D810F11BF1C5C644AFBE5FCB258B4A0F2903C"
+          }
+        },
+        {
+          "modules": [
+            "SourcePadicWittCoefficient",
+            "SourceArithmeticPadicCyclotomic",
+            "SourceArithmeticPadicCyclotomicReduction",
+            "SourceArithmeticWittCyclotomic",
+            "SourceResidualWittFixedDeterminant",
+            "SourceResidualWittFixedRing",
+            "SourcePrimitiveWittFixedResidual"
+          ],
+          "count": 26,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership580For8213.log",
+            "sha256": "DD52F8998870E80E3C8A5A96B8573D633EE4AAA540405E5FE570814939EA9FAA",
+            "sourceSha256": "B0A6C40517500ECCCF623812EFFB3C0AEBB314E0CFCD07C5A7C851DE9E9058A6"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationOwnership8213.log",
+        "sha256": "0040F561CBCEBDC36CCA86620166080C6498405D078E4829A9A2E8F1E0CF6B3C",
+        "sourceSha256": "3359737B34234EFF3544FFCC77B0D8F334B761A43A5D9FEBA553C54C4B10E656"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-173632-424.log",
+        "sha256": "F0EE64665BE40A7DB9ADF222028A9003B16A175B94FADB1E3E59EF40A9AB0883"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 20 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceArithmeticCharacterFrobeniusEquality",
+            "scratchSha256": "B878A44A34CF6F780CFEE638AD1353F83C055F55D0B9B84135AE7626CDD25596",
+            "productionSha256": "B878A44A34CF6F780CFEE638AD1353F83C055F55D0B9B84135AE7626CDD25596",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualCyclotomicDeterminant",
+            "scratchSha256": "2A790B57F59773F3283BCA8E8CD318B127EF2E9EC6CB551314B65DA6A3CBD33F",
+            "productionSha256": "55544ADA6241D1D6893F482B9C81FB6BF42227E6DB8DF474552F89E8DEE25CC6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveResidualGlobalDeterminant",
+            "scratchSha256": "99BAA790CCD3D159FA76750DA52D2DAB992CB44FE6CAB3006046988508116E57",
+            "productionSha256": "269B845F46DDF550F2526E9ECDFC086259B300780933241175AB821E1AC0100B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualRealDeterminant",
+            "scratchSha256": "529E309C1189C98FB50D3663BA2026BEC4FD12EBE254E2E4BC80CCB738525803",
+            "productionSha256": "529E309C1189C98FB50D3663BA2026BEC4FD12EBE254E2E4BC80CCB738525803",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveResidualOddness",
+            "scratchSha256": "CD8704B6FF0289B9375CB8A4D335071633242FA341E6C161638D977C355AB945",
+            "productionSha256": "3049558347486C774B2E6E9386D13F03C5B1F26E73FA424252F9F870B659B47C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFiniteResidualCoefficientField",
+            "scratchSha256": "BDFB8AF8A46FA7649D795082C89F1A2679DB241E219C819A3701E463062B8DA4",
+            "productionSha256": "BDFB8AF8A46FA7649D795082C89F1A2679DB241E219C819A3701E463062B8DA4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualCoefficientDeterminant",
+            "scratchSha256": "C28D8B7966C5E646612E6415FAF4067C0C08708FA8C6A5B65C9AC556AF2D9CB4",
+            "productionSha256": "C28D8B7966C5E646612E6415FAF4067C0C08708FA8C6A5B65C9AC556AF2D9CB4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFiniteResidualArithmeticDescent",
+            "scratchSha256": "96B20A02780C229FAA29F3E1249911BA5F0C0964E4C13B1C2F9DF318D6F3718C",
+            "productionSha256": "0C7CDC0C4A94B88715B2967A6F760B204572C578D229A5A84DF56A98705BA485",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveFiniteResidualGalois",
+            "scratchSha256": "1A6B2986FABC3D6921A63341F890E586DF73E1E99777185E70C061CFB39C38C3",
+            "productionSha256": "0049A43BF9DB81F3EF4D28460CF6BFBA8523E5CDE3E0D1439A584FC98E4CFFA9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualWittCoefficients",
+            "scratchSha256": "E1B9EAD9574E7382E729E82B268D3990E06786E045F57D5FCD0C569A05659E42",
+            "productionSha256": "E1B9EAD9574E7382E729E82B268D3990E06786E045F57D5FCD0C569A05659E42",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualWittRepresentation",
+            "scratchSha256": "5D1CD82FF0387F3D3F34306D1683226B9EA9298D0B22FE8C2CE9EB74CE5BB3F7",
+            "productionSha256": "5B8458A352C9FAD8B9A9AAC2E80757BF9E99FE572419CF80BC5EEDD0E2F40CED",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualWittFramedRing",
+            "scratchSha256": "999FC513DA8108240BD54AEDEEEEA30CCFE511269F0314AD2E5ACE9C069C84FC",
+            "productionSha256": "8012A6A80EB05F52D425F22D8E9E667E5ECC4D4F7E3A84FDD57166F9E4CC8B02",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveWittFramedResidual",
+            "scratchSha256": "BE4DEBA82616DA10FC53DD4650801F26121841C4663F161824A0B38A6C9DDBE1",
+            "productionSha256": "93EC169C4D9497A4CCD05BD7DCDA186534BD621897A6525B17F833333C1473E8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePadicWittCoefficient",
+            "scratchSha256": "23386EBD126F03ECAF28586849EF160570808F5E50562C836039A95320FA86FD",
+            "productionSha256": "F5E2B251300F2206BB621BBE2C49892DA11453C7D54284F25534BA0BA712A93C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceArithmeticPadicCyclotomic",
+            "scratchSha256": "CA65D0558014738FC5953EAB3315C79715B087051CF45599623255295F1E1B9C",
+            "productionSha256": "CA65D0558014738FC5953EAB3315C79715B087051CF45599623255295F1E1B9C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceArithmeticPadicCyclotomicReduction",
+            "scratchSha256": "0A86B8F9B9194162EA83D65D463983E910A92B96A354F31058C75973983EA324",
+            "productionSha256": "F4178ACE2AADEFFD95813C803D94F59B12BAC4613DE007E1946D95E039DADAA4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceArithmeticWittCyclotomic",
+            "scratchSha256": "40258E25A3B926BADE92BE29E349CD0CE2BCF3BEA203ADA7C0FB5D197EC31262",
+            "productionSha256": "589597406F35E9D8F16A95A2203369F6903BB462C2D1C24DE984946406506A36",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualWittFixedDeterminant",
+            "scratchSha256": "18B1B9AC912C636CEE0FDDE4789987D0A1C891800B36C26A2104418BECF80E80",
+            "productionSha256": "A113449AAAE8AD8BB45D595B96D35056708AB4A263398B3B20273D15F482375D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualWittFixedRing",
+            "scratchSha256": "16CBAF5D03D404325C59A3384B1371919E773C4B78D84EB52C2B914335ACD227",
+            "productionSha256": "83EBA648EB44A25FBCBD476DAC6FA8B701980843175027175DCCDB9DAD52AB8E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveWittFixedResidual",
+            "scratchSha256": "F2608D93AFC4EB3B44565981E7F765DFFA02AC4C65071DAEFD542241CA74AE53",
+            "productionSha256": "7FF8E1DC5B46716E98E853D586DB2BE70A10E8D79B62E997FFB74274307893DE",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 62 distinct names from 62 exhaustive scratch checks are retained: 62 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "A characteristic-zero coefficient ring does not provide a characteristic-zero point of the deformation ring. Original all-weight adic association, required local, image and regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN."
+  }
+}

@@ -1,0 +1,32 @@
+import SourceGammaOneCoverHeckeSquare
+import SourcePrincipalCoprimeReduction
+import SourceGammaOneRaisedCosets
+import SourceGammaOneCoverHeckeCosets
+import SourceGammaOneCoverHeckeRepresentatives
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.sourceGammaOneCoverHeckeTransition_conjugation, `Dubon2026.sourceGammaOneCoverHeckeCosetMap_mk]
+  let localModules : Array Name := #[`SourceGammaOneCoverHeckeRepresentatives, `SourceGammaOneCoverHeckeCosets, `SourceGammaOneRaisedCosets, `SourceGammaOneCoverHeckeSquare, `SourceGammaOneHeckeSubgroup, `SourceGammaOneDiagonalHom, `SourceBinaryPermutationCongruence, `SourceBinaryPrimePowerPermutation, `SourcePermutationCoefficientQuotient, `SourceGammaOneCongruenceCover, `SourcePrincipalCoprimeReduction]
+  let required : Array Name := #[`Dubon2026.sourceGammaOneDiagonalHom_mem_heckeUpper, `Dubon2026.sourceGammaOne_cover_hecke_diagonals_commute, `Dubon2026.sourceGammaOneCoverHecke_square, `Dubon2026.sourceSL2ChineseRemainder_reduction, `Dubon2026.sourcePrincipalReduction_surjective, `Dubon2026.sourceGammaOneRaisedCosetMap_injective, `Dubon2026.sourceGammaOneRaisedCosetMap_surjective, `Dubon2026.sourceGammaOneRaisedCosetMap_bijective, `Dubon2026.sourceGammaOneCoverHeckeCosetMap_mk, `Dubon2026.sourceGammaOneCoverHeckeCosetMap_smul, `Dubon2026.sourceGammaOneCoverHeckeCosetMap_bijective, `Dubon2026.sourceGammaOneCoverHeckeRepresentative_coset, `Dubon2026.sourceGammaOneCoverHeckeRepresentative_equiv, `Dubon2026.sourceGammaOneCoverHeckeRepresentative_smul, `Dubon2026.sourceGammaOneCoverHeckeTransition, `Dubon2026.sourceGammaOneCoverHeckeTransition_conjugation, `Dubon2026.sourceGammaOneCoverHeckeUpperHom, `Dubon2026.sourceGammaOneRaisedCosetMap, `Dubon2026.sourceGammaOneCoverHeckeCosetMap, `Dubon2026.sourceGammaOneCoverHeckeCosetEquiv, `Dubon2026.sourceGammaOneCoverHeckeRepresentative, `Dubon2026.SL2Reduction.SL2_reduction_surjective, `Dubon2026.sl2ChineseRemainder, `Dubon2026.sourceRaisedHeckeCosetMap_bijective, `Dubon2026.sourceGammaOne_le_raisedGammaZero, `Dubon2026.sourceGammaOneDiagonalHom_matrix, `Dubon2026.sourceGammaOneHeckeConjugation_matrix, `Dubon2026.sourceIntegralHeckeConjugate_matrix, `Dubon2026.sourceChosenCosetTransition, `Dubon2026.sourceIntegralHeckeConjugate_eq_prime]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE HECKE COSETS DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual original Hecke representative and conjugated-transition consumers. Only declaration values are traversed. Existing integral diagonal equations prove the genuine Gamma1 cover/Hecke square. Existing full SL2 reduction and the existing Chinese-remainder group equivalence produce principal-level representatives at coprime moduli. They give the actual Gamma1-to-raised-Gamma0 coset bijection, which composes with the existing raised-level coset bijection. The resulting equivalence uses the literal original diagonal cover and respects its group action. Every chosen original representative and conjugated transition is the actual image of its Gamma1 counterpart. Transfer/Hecke-and-diamond compatibility, arithmetic geometric comparison, Galois realization and higher continuation remain required. DUB-17--20 OPEN; 16/20."
+
+#eval runPlanarPairingDependencyAudit

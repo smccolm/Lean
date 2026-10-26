@@ -1,0 +1,52 @@
+{
+  "status": "Prepared; not integrated or executed. Integration requires canonical receipt 8213 PASS.",
+  "counts": {
+    "modules": 22,
+    "queries": 56,
+    "theorems": 39,
+    "constructions": 17,
+    "exhaustiveScratch": 126,
+    "proofEdges": 93,
+    "expectedRegisteredConsumers": 23760,
+    "expectedRegisteredConstructions": 2244
+  },
+  "checks": [
+    "Python AST parse",
+    "All five frozen receipt digests",
+    "Exact scratch scope IDs from route",
+    "Body-preserving import qualification",
+    "All public and generated ownership checks retained",
+    "Fresh aggregate/public/VALUE/ownership audits followed by sequential ROOT and PAPER",
+    "No already-used audit or log will be overwritten"
+  ],
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_primitive_finite_h1_realization_8235.py",
+      "sha256": "6CA8086E804D05DC9EE10C67815C0999B27E678D82A751CB2BCB26ECD505A4E7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_finite_h1_realization_production_ownership_8235.py",
+      "sha256": "D7DE9B7D0B6C99C1940708668C985818BE5FD7FF80D73FE342B94548971FFB0F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_finite_h1_realization_scratch_ownership_8235.py",
+      "sha256": "5F77708626D0C70E074A86AA5DF91D36A3854973DABBDC5C1DDB075BD28367BF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_primitive_finite_h1_realization_ownership_8235.py",
+      "sha256": "2983072699E788477D14F49BA31AC05B743011BB744FF9BBE2F9A9B4C7F3E866"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_primitive_finite_h1_realization_8235.py",
+      "sha256": "341DF86EA38E74FDFB9D7560191D4AAFCEA05F33DD2130859E8FB037B6241561"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_finite_h1_realization_global_ownership_8235.py",
+      "sha256": "F3E1078E36F8F85B4CF2EAF7FB5E8A440D70351ED201BE3D47A6EF498D6CCCC1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_primitive_finite_h1_canonical_8235.py",
+      "sha256": "1E449F44FCA2C6DBE4B5445D97C076905330BE0C4BC59DDEDE977B211E066D9B"
+    }
+  ]
+}

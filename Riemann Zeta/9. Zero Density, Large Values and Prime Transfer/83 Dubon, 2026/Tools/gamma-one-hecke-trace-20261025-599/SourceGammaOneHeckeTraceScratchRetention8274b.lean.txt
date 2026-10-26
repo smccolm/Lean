@@ -1,0 +1,17 @@
+import SourcePrincipalCoprimeReduction
+import Lean
+
+open Lean
+
+private def inspectRetention : CoreM Unit := do
+  let env ← getEnv
+  for name in #[`ZMod.chineseRemainder.congr_simp] do
+    let some info := env.find? name | throwError "Missing generated theorem"
+    let some idx := env.getModuleIdxFor? name | throwError "Missing owner"
+    let owner := env.allImportedModuleNames[idx.toNat]!
+    match info with
+    | .thmInfo th => logInfo m!"RETAINED {owner}: {name} {hash th.type} {hash th.value}"
+    | _ => throwError "Expected theorem"
+
+#eval inspectRetention
+#print axioms ZMod.chineseRemainder.congr_simp

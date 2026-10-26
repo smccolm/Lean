@@ -1,0 +1,78 @@
+import SourceWeightTwoDegeneracyAdjoint
+import SourceWeightTwoEigenLevelDescent
+import SourceWeightTwoNewEigenNormalization
+import SourceParabolicPrimitiveDivisor
+import SourceArithmeticSupportInflationValues
+import SourceOriginalDivisorArithmeticResidual
+import SourceParabolicArithmeticResidual
+import SourceResidualGaloisRealization
+import SourcePrimitiveWeightTwoGalois
+import SourcePrimitiveRestoredGalois
+import SourcePrimitiveOriginalResidualGalois
+import SourcePrimitiveResidualGaloisCharP
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.sourceWeightTwoPetersson_ext
+#print axioms Dubon2026.sourceWeightTwoDegeneracy_exists_adjoint
+#print axioms Dubon2026.sourceWeightTwoDegeneracy_adjoint_eigen
+#print axioms Dubon2026.sourceWeightTwoEigen_not_new_descends
+#print axioms Dubon2026.sourceWeightTwoEigen_exists_new_divisor
+#print axioms Dubon2026.sourceWeightTwoNewEigen_exists_primitive
+#print axioms Dubon2026.sourceTrivialParabolicEigen_exists_primitive_divisor
+#print axioms Dubon2026.sourceArithmeticSupport_local_charpoly
+#print axioms Dubon2026.sourceArithmeticSupport_local_inflate_eq_one
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_divisor_arithmetic_residual_realization
+#print axioms Dubon2026.sourceTrivialParabolicEigen_prescribed_galoisRep
+#print axioms Dubon2026.sourceTrivialH1Eigen_exists_galoisRep
+#print axioms Dubon2026.sourcePrimitive_exists_weightTwo_galoisRep
+#print axioms Dubon2026.sourcePrimitive_exists_restored_residualGalois
+#print axioms Dubon2026.sourcePrimitive_exists_originalSupport_residualGalois
+#print axioms Dubon2026.sourcePrimitive_exists_originalSupport_residualGalois_charP
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceWeightTwoDegeneracyAdjoint, `SourceWeightTwoEigenLevelDescent, `SourceWeightTwoNewEigenNormalization, `SourceParabolicPrimitiveDivisor, `SourceArithmeticSupportInflationValues, `SourceOriginalDivisorArithmeticResidual, `SourceParabolicArithmeticResidual, `SourceResidualGaloisRealization, `SourcePrimitiveWeightTwoGalois, `SourcePrimitiveRestoredGalois, `SourcePrimitiveOriginalResidualGalois, `SourcePrimitiveResidualGaloisCharP]
+  let theorems : Array Name := #[`Dubon2026.sourceWeightTwoPetersson_ext, `Dubon2026.sourceWeightTwoDegeneracy_exists_adjoint, `Dubon2026.sourceWeightTwoDegeneracy_adjoint_eigen, `Dubon2026.sourceWeightTwoEigen_not_new_descends, `Dubon2026.sourceWeightTwoEigen_exists_new_divisor, `Dubon2026.sourceWeightTwoNewEigen_exists_primitive, `Dubon2026.sourceTrivialParabolicEigen_exists_primitive_divisor, `Dubon2026.sourceArithmeticSupport_local_charpoly, `Dubon2026.sourceArithmeticSupport_local_inflate_eq_one, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_divisor_arithmetic_residual_realization, `Dubon2026.sourceTrivialParabolicEigen_prescribed_galoisRep, `Dubon2026.sourceTrivialH1Eigen_exists_galoisRep, `Dubon2026.sourcePrimitive_exists_weightTwo_galoisRep, `Dubon2026.sourcePrimitive_exists_restored_residualGalois, `Dubon2026.sourcePrimitive_exists_originalSupport_residualGalois, `Dubon2026.sourcePrimitive_exists_originalSupport_residualGalois_charP]
+  let constructions : Array Name := #[]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Primitive Residual Galois postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Primitive Residual Galois theorems discovered"
+  logInfo m!"SOURCE PRIMITIVE RESIDUAL GALOIS AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceWeightTwoDegeneracyAdjoint
+#lint in SourceWeightTwoEigenLevelDescent
+#lint in SourceWeightTwoNewEigenNormalization
+#lint in SourceParabolicPrimitiveDivisor
+#lint in SourceArithmeticSupportInflationValues
+#lint in SourceOriginalDivisorArithmeticResidual
+#lint in SourceParabolicArithmeticResidual
+#lint in SourceResidualGaloisRealization
+#lint in SourcePrimitiveWeightTwoGalois
+#lint in SourcePrimitiveRestoredGalois
+#lint in SourcePrimitiveOriginalResidualGalois
+#lint in SourcePrimitiveResidualGaloisCharP

@@ -1,0 +1,3853 @@
+{
+  "sha": "f737ca88e0887ecbaad3510b30e37042c243fd17",
+  "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/f737ca88e0887ecbaad3510b30e37042c243fd17",
+  "tree": [
+    {
+      "path": ".claude",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2a1163fbc2f419782de6ff5d1db384b55a776aef",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/2a1163fbc2f419782de6ff5d1db384b55a776aef"
+    },
+    {
+      "path": ".claude/docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "917626e0c84a62dff4d0e7e4ce67c432de73ecf4",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/917626e0c84a62dff4d0e7e4ce67c432de73ecf4"
+    },
+    {
+      "path": ".claude/docs/lean4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fdfc6bdde8ca3e6a132741c7730085bbe92b7e04",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/fdfc6bdde8ca3e6a132741c7730085bbe92b7e04"
+    },
+    {
+      "path": ".claude/docs/lean4/axiom-elimination.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d72fa73dc3322aaaee7731cdf84e2c17c0c1a3ff",
+      "size": 6011,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/d72fa73dc3322aaaee7731cdf84e2c17c0c1a3ff"
+    },
+    {
+      "path": ".claude/docs/lean4/compiler-guided-repair.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c46593ffb40ab142faa5721ffdee285139b104d9",
+      "size": 18713,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c46593ffb40ab142faa5721ffdee285139b104d9"
+    },
+    {
+      "path": ".claude/docs/lean4/lean-lsp-tools-api.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50567cb4569dd9febc7ff70de7cf7e70c478426d",
+      "size": 25937,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/50567cb4569dd9febc7ff70de7cf7e70c478426d"
+    },
+    {
+      "path": ".claude/docs/lean4/proof-golfing.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a9c9fb0315153513581c6cec468e2438b7f8c9e",
+      "size": 3646,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/0a9c9fb0315153513581c6cec468e2438b7f8c9e"
+    },
+    {
+      "path": ".claude/docs/lean4/sorry-filling.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d40e23a56148e9cff82630b420b33329f0212ef",
+      "size": 4875,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/7d40e23a56148e9cff82630b420b33329f0212ef"
+    },
+    {
+      "path": ".claude/hooks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f3e3c038d9c83d3bc6e559747f14aad0cf2ecbc0",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/f3e3c038d9c83d3bc6e559747f14aad0cf2ecbc0"
+    },
+    {
+      "path": ".claude/hooks/check-sorries.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "759dc6ec9517a5e84f36db223a2238d21dc38ff5",
+      "size": 4422,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/759dc6ec9517a5e84f36db223a2238d21dc38ff5"
+    },
+    {
+      "path": ".claude/hooks/sorry-scope.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "726d88339298073762b23f2324fb1d2000ad726b",
+      "size": 80,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/726d88339298073762b23f2324fb1d2000ad726b"
+    },
+    {
+      "path": ".claude/projects",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "de9e3adf017ec502bb902e0877951df9efd0826b",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/de9e3adf017ec502bb902e0877951df9efd0826b"
+    },
+    {
+      "path": ".claude/projects/-Users-mcu22seu-Documents-GitHub-LeanModularForms",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a91b9d4099e9e9250fde0b01d15b0d47e103fcf1",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/a91b9d4099e9e9250fde0b01d15b0d47e103fcf1"
+    },
+    {
+      "path": ".claude/projects/-Users-mcu22seu-Documents-GitHub-LeanModularForms/memory",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d6ae5458b2b6317a492a2b0e3a5323e7260973db",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/d6ae5458b2b6317a492a2b0e3a5323e7260973db"
+    },
+    {
+      "path": ".claude/projects/-Users-mcu22seu-Documents-GitHub-LeanModularForms/memory/project_congruence_hecke.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1aeb27ed8045e95d84828ec9019888a3226a6ce1",
+      "size": 2948,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/1aeb27ed8045e95d84828ec9019888a3226a6ce1"
+    },
+    {
+      "path": ".claude/projects/-Users-mcu22seu-Documents-GitHub-LeanModularForms/memory/project_strong_mult_one.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cc5a22a70132217f19078f803d81c5818c3fc84",
+      "size": 1316,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/7cc5a22a70132217f19078f803d81c5818c3fc84"
+    },
+    {
+      "path": ".claude/settings.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c19a76ec73f718e20bdb08061d358d19856fc237",
+      "size": 114,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c19a76ec73f718e20bdb08061d358d19856fc237"
+    },
+    {
+      "path": ".claude/tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "96769d04045904693c4e63dccd3c67a6525d236f",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/96769d04045904693c4e63dccd3c67a6525d236f"
+    },
+    {
+      "path": ".claude/tools/lean4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "69852adb6f0612f7ff51e0d532b5928ae7fa295c",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/69852adb6f0612f7ff51e0d532b5928ae7fa295c"
+    },
+    {
+      "path": ".claude/tools/lean4/analyze_let_usage.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "93650b718882a5d6a3cf2ff992cc00f1f16470a4",
+      "size": 12450,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/93650b718882a5d6a3cf2ff992cc00f1f16470a4"
+    },
+    {
+      "path": ".claude/tools/lean4/check_axioms.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "30c256ae908a2ac883e1d1a836ad080416d8f361",
+      "size": 4474,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/30c256ae908a2ac883e1d1a836ad080416d8f361"
+    },
+    {
+      "path": ".claude/tools/lean4/count_tokens.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "626c71368c8c935c72c56d48cfd558f405f2d48b",
+      "size": 7920,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/626c71368c8c935c72c56d48cfd558f405f2d48b"
+    },
+    {
+      "path": ".claude/tools/lean4/find_golfable.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "99e36b453a5f7282738681ef11325edd8ee0f163",
+      "size": 18107,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/99e36b453a5f7282738681ef11325edd8ee0f163"
+    },
+    {
+      "path": ".claude/tools/lean4/search_mathlib.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "fe34edd7ec68e0849e47122c5b0047215a8ee850",
+      "size": 3374,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/fe34edd7ec68e0849e47122c5b0047215a8ee850"
+    },
+    {
+      "path": ".claude/tools/lean4/smart_search.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "484c51a841fa5d346780d839c042e676e4bed17c",
+      "size": 5963,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/484c51a841fa5d346780d839c042e676e4bed17c"
+    },
+    {
+      "path": ".claude/tools/lean4/sorry_analyzer.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a8c9a70e5097e591fabee4317ced382e3ca1004d",
+      "size": 12269,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/a8c9a70e5097e591fabee4317ced382e3ca1004d"
+    },
+    {
+      "path": ".claude/tools/lean4/suggest_tactics.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "803fdc7150618f84a878106a2b3f2fb395e89a6d",
+      "size": 12343,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/803fdc7150618f84a878106a2b3f2fb395e89a6d"
+    },
+    {
+      "path": ".claude3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6240fa0b8a92919f588aff194e1688a27efa94f6",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/6240fa0b8a92919f588aff194e1688a27efa94f6"
+    },
+    {
+      "path": ".claude3/projects",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8d5ac5034d4d89ab3ca5a46d1af9037db588a320",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/8d5ac5034d4d89ab3ca5a46d1af9037db588a320"
+    },
+    {
+      "path": ".claude3/projects/-Users-mcu22seu-Documents-GitHub-LeanModularForms",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "23f0f7bdd1554489bba95edbffb654cbeee8a642",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/23f0f7bdd1554489bba95edbffb654cbeee8a642"
+    },
+    {
+      "path": ".claude3/projects/-Users-mcu22seu-Documents-GitHub-LeanModularForms/memory",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f04e5576413bdb9522e2e9f0dd925329921097c2",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/f04e5576413bdb9522e2e9f0dd925329921097c2"
+    },
+    {
+      "path": ".claude3/projects/-Users-mcu22seu-Documents-GitHub-LeanModularForms/memory/project_hecke_cleanup_todos.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0569082695c2f9dab5d0da4624de9ca620b7b54c",
+      "size": 1691,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/0569082695c2f9dab5d0da4624de9ca620b7b54c"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fa51378a108ebe265a5dca4c01244efa65c79295",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/fa51378a108ebe265a5dca4c01244efa65c79295"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "10eaed35136ba0970412b1c192ca9f8ae38999ab",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/10eaed35136ba0970412b1c192ca9f8ae38999ab"
+    },
+    {
+      "path": ".github/workflows/blueprint-pages.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48c80df2f1a3119c70d14cd470f3d137f8bb0980",
+      "size": 4213,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/48c80df2f1a3119c70d14cd470f3d137f8bb0980"
+    },
+    {
+      "path": ".github/workflows/pages.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "843bc64371009a2f6f10cfba11e9137dbed85ada",
+      "size": 299,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/843bc64371009a2f6f10cfba11e9137dbed85ada"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ea54cbdf26187b2ca39c0a951c5247aa2808beb",
+      "size": 249,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/0ea54cbdf26187b2ca39c0a951c5247aa2808beb"
+    },
+    {
+      "path": ".mathlib-quality",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e1b549740473a61a39016b879b3865a2fa91ac94",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/e1b549740473a61a39016b879b3865a2fa91ac94"
+    },
+    {
+      "path": ".mathlib-quality/.beastmode_stop_state",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8263ee9860594d2806b0dfd1bfd17528b0ba2a4",
+      "size": 1,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/d8263ee9860594d2806b0dfd1bfd17528b0ba2a4"
+    },
+    {
+      "path": ".mathlib-quality/STATUS-2026-04-15.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1dc9922e6854e8f72d77836209ddcecdfa923b3",
+      "size": 15244,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c1dc9922e6854e8f72d77836209ddcecdfa923b3"
+    },
+    {
+      "path": ".mathlib-quality/adjoint-overview-2026-05-31.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27fb7614c157e142f944c0bfb1d0a796813ebf63",
+      "size": 37741,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/27fb7614c157e142f944c0bfb1d0a796813ebf63"
+    },
+    {
+      "path": ".mathlib-quality/audit-multipass-2026-05-17.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77d6d26ad2de1ddb660eea73284cae0c14626d8d",
+      "size": 43878,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/77d6d26ad2de1ddb660eea73284cae0c14626d8d"
+    },
+    {
+      "path": ".mathlib-quality/blueprint",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "59a556c14495c6d5b5f2f84f58d9fea3b6afa2f3",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/59a556c14495c6d5b5f2f84f58d9fea3b6afa2f3"
+    },
+    {
+      "path": ".mathlib-quality/blueprint/prose_context.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5d77d87263e639617c189806660ff3256a54616",
+      "size": 14493,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/d5d77d87263e639617c189806660ff3256a54616"
+    },
+    {
+      "path": ".mathlib-quality/blueprint/prose_context_valence.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53c86dd157012d4c30194784684d056fb91258a5",
+      "size": 35959,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/53c86dd157012d4c30194784684d056fb91258a5"
+    },
+    {
+      "path": ".mathlib-quality/cleanup-progress.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49f12de8c6982b1391a387e2b23130d276fea4ad",
+      "size": 25978,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/49f12de8c6982b1391a387e2b23130d276fea4ad"
+    },
+    {
+      "path": ".mathlib-quality/contribution_draft_2026-03-16.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3509bfe11b3d590bb7764685cf4e994ebf9de16c",
+      "size": 2402,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/3509bfe11b3d590bb7764685cf4e994ebf9de16c"
+    },
+    {
+      "path": ".mathlib-quality/decomposition-4_6_14-2026-05-19.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf5fd3f21674e950afc8b947479d8fbe820d4307",
+      "size": 34402,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/bf5fd3f21674e950afc8b947479d8fbe820d4307"
+    },
+    {
+      "path": ".mathlib-quality/decomposition-L8-final-2026-05-18.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8cd1a874c3ff493f86d2f9b3e046c79fa21ee03",
+      "size": 12779,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c8cd1a874c3ff493f86d2f9b3e046c79fa21ee03"
+    },
+    {
+      "path": ".mathlib-quality/decomposition-M8-2026-05-18.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c13ac47f64e33f4f78200b5ef9696b0552f778bd",
+      "size": 9967,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c13ac47f64e33f4f78200b5ef9696b0552f778bd"
+    },
+    {
+      "path": ".mathlib-quality/decomposition-adjoint-v1-PRE-correction.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36ae381adc3d0c9bcea9094ea80eefafb7c0f69b",
+      "size": 15951,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/36ae381adc3d0c9bcea9094ea80eefafb7c0f69b"
+    },
+    {
+      "path": ".mathlib-quality/decomposition-adjoint-v2-PRE-leaf2.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "332137f6c75733a98f7e13b15200853c60d65b11",
+      "size": 13209,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/332137f6c75733a98f7e13b15200853c60d65b11"
+    },
+    {
+      "path": ".mathlib-quality/decomposition-adjoint-v3.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39e0d4e6a5c43b105f54b09295289a851c2c305a",
+      "size": 14594,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/39e0d4e6a5c43b105f54b09295289a851c2c305a"
+    },
+    {
+      "path": ".mathlib-quality/decomposition-adjoint.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f031589e200be39c1a15c04efbfcb5eb01a4d3d",
+      "size": 23929,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/4f031589e200be39c1a15c04efbfcb5eb01a4d3d"
+    },
+    {
+      "path": ".mathlib-quality/decomposition-option-B-2026-05-19.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7be31428fea085c970e37b75dc9c857db0301c1a",
+      "size": 13837,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/7be31428fea085c970e37b75dc9c857db0301c1a"
+    },
+    {
+      "path": ".mathlib-quality/decomposition-option-C-1-2026-05-19.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8240db8c86c29b36718a6a34aacfbd39aab4ff2",
+      "size": 15173,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/e8240db8c86c29b36718a6a34aacfbd39aab4ff2"
+    },
+    {
+      "path": ".mathlib-quality/decomposition-option-C-1a-2026-05-19.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5b4741b8771e54e556ffdd19157572dc33bc61d",
+      "size": 20282,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c5b4741b8771e54e556ffdd19157572dc33bc61d"
+    },
+    {
+      "path": ".mathlib-quality/decomposition-t012.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5dc433842e20bee5acdb35391a8700e938f8a56",
+      "size": 39813,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/b5dc433842e20bee5acdb35391a8700e938f8a56"
+    },
+    {
+      "path": ".mathlib-quality/decomposition-tracehecke.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07a607a44ec0f87898abcd0e62a1c45f25be0108",
+      "size": 29057,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/07a607a44ec0f87898abcd0e62a1c45f25be0108"
+    },
+    {
+      "path": ".mathlib-quality/decomposition-w5.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29b69db4c363b00ee02a0867f90a5afa21d4800a",
+      "size": 26594,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/29b69db4c363b00ee02a0867f90a5afa21d4800a"
+    },
+    {
+      "path": ".mathlib-quality/decomposition.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "057face8a30bacf1e603e95a39737ade20d14729",
+      "size": 38294,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/057face8a30bacf1e603e95a39737ade20d14729"
+    },
+    {
+      "path": ".mathlib-quality/eigenforms-smo-overview-2026-05-31.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b99d75c6a58fa80f70745f1e94f759b32bccb42e",
+      "size": 30965,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/b99d75c6a58fa80f70745f1e94f759b32bccb42e"
+    },
+    {
+      "path": ".mathlib-quality/expert-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7c436bddcde8ca7b1518e15cf75cd702bc26c660",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/7c436bddcde8ca7b1518e15cf75cd702bc26c660"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-11-T205d-residual",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "83319c3f36c63fc41dee7829639c82d8b2ef2b6b",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/83319c3f36c63fc41dee7829639c82d8b2ef2b6b"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-11-T205d-residual/brief.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "653a0fd99889d3afc92365a4c6c3a46a853bf310",
+      "size": 31939,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/653a0fd99889d3afc92365a4c6c3a46a853bf310"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-11-T205d-residual/integration.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2dacf5d613a0d3e2e6d789416e5e8cfb25cffe6",
+      "size": 8848,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/d2dacf5d613a0d3e2e6d789416e5e8cfb25cffe6"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-11-T205d-residual/reply.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef28049ef74d730494f93a6cbd572a1bf30eb000",
+      "size": 11463,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/ef28049ef74d730494f93a6cbd572a1bf30eb000"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-11-T205d-residual/state.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfefba31e27a07cd98297fc71604a6d81e4d4b6c",
+      "size": 3969,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/bfefba31e27a07cd98297fc71604a6d81e4d4b6c"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-11-T205d",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4e114e643adebdc04047fa456861da5f4ca1b599",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/4e114e643adebdc04047fa456861da5f4ca1b599"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-11-T205d/brief.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44861a499e796356b3fc25b3230b73e77a13703e",
+      "size": 35331,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/44861a499e796356b3fc25b3230b73e77a13703e"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-11-T205d/integration.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb402ab0cae09440b9a0fba7282cff1f1d3b29ae",
+      "size": 2823,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/fb402ab0cae09440b9a0fba7282cff1f1d3b29ae"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-11-T205d/reply.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8233dc7cecabc47218059ed2044881af5dab8785",
+      "size": 13141,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/8233dc7cecabc47218059ed2044881af5dab8785"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-11-T205d/state.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01b87ef79142380a7734b60b593ab71836dd6f04",
+      "size": 4894,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/01b87ef79142380a7734b60b593ab71836dd6f04"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-11",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dc3272b36cbeb7c2c68861d7455e3d36cd28e415",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/dc3272b36cbeb7c2c68861d7455e3d36cd28e415"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-11/brief.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3b184ce226f1f0de7eaf355ea2964225eea3e00",
+      "size": 65585,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/b3b184ce226f1f0de7eaf355ea2964225eea3e00"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-11/integration.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7888de44c2f4b034ca69b655a95022211ddcb781",
+      "size": 4989,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/7888de44c2f4b034ca69b655a95022211ddcb781"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-11/reply.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a3670e5e7c3e3d4ca129c65b9964f785dca0e58",
+      "size": 10642,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/2a3670e5e7c3e3d4ca129c65b9964f785dca0e58"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-11/state.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12e9303da4594bd5f64cec2c37bdfded16c3f773",
+      "size": 6250,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/12e9303da4594bd5f64cec2c37bdfded16c3f773"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-16-SMO-obligations-plan",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "09ddba89333eeca954133c33366b793e1ab7bdec",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/09ddba89333eeca954133c33366b793e1ab7bdec"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-16-SMO-obligations-plan/brief.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7ce7c012760c53ded673f5905515873019f4e34",
+      "size": 34827,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c7ce7c012760c53ded673f5905515873019f4e34"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-16-SMO-obligations-plan/integration.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e23b1e48dc5b7accfabc87a2ebe8aed2d42dce73",
+      "size": 6649,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/e23b1e48dc5b7accfabc87a2ebe8aed2d42dce73"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-16-SMO-obligations-plan/reply.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14ea08dbceb4010e6927c478ef92e98e560c137c",
+      "size": 10428,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/14ea08dbceb4010e6927c478ef92e98e560c137c"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-16-SMO-obligations-plan/state.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4e60f1b1236b2c41c72dd5573859b338895cb66",
+      "size": 5969,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/d4e60f1b1236b2c41c72dd5573859b338895cb66"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-17",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5c32bdc8a300cee15a01ad309e54b6cbbeef11e2",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/5c32bdc8a300cee15a01ad309e54b6cbbeef11e2"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-17/brief.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3504197697bbf7c68d634b3fdce78164016d4c1b",
+      "size": 32862,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/3504197697bbf7c68d634b3fdce78164016d4c1b"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-17/integration.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f26b37d4e3fe679a430b28182a10b2d23c120fb",
+      "size": 9389,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/1f26b37d4e3fe679a430b28182a10b2d23c120fb"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-17/pass-G-audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44ec3e6607787a98d7ae1e1d1a3a8442ed5f24f0",
+      "size": 18669,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/44ec3e6607787a98d7ae1e1d1a3a8442ed5f24f0"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-17/reply.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e199b7f10e85d763fb62f5cf403e7dd633733f4",
+      "size": 10104,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/8e199b7f10e85d763fb62f5cf403e7dd633733f4"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-17/state.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f60fb35bcdc841283d013098a538406dec1fb28d",
+      "size": 4093,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f60fb35bcdc841283d013098a538406dec1fb28d"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-21",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "637fcd83cb99aa42ab074f927a6ee952276675bc",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/637fcd83cb99aa42ab074f927a6ee952276675bc"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-21/brief.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b597a26d64529a7a1480fb3a431d372a4a3b2a3",
+      "size": 16727,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/9b597a26d64529a7a1480fb3a431d372a4a3b2a3"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-21/integration.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4b29a17b544de1b9ac880c70e6709315ecd5f15",
+      "size": 4648,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c4b29a17b544de1b9ac880c70e6709315ecd5f15"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-21/reply.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7582e11fd9e4a156e193c27d0d52abc2f41ada3",
+      "size": 10150,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/e7582e11fd9e4a156e193c27d0d52abc2f41ada3"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/2026-05-21/state.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d1104160b39f9c2f9ba1e912d302a481b1b80e9",
+      "size": 3926,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/5d1104160b39f9c2f9ba1e912d302a481b1b80e9"
+    },
+    {
+      "path": ".mathlib-quality/expert-review/T5a-3a-clean-matrix-eval-blocker.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18b07bbb685017919cb310189d0fe44d18ade910",
+      "size": 5888,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/18b07bbb685017919cb310189d0fe44d18ade910"
+    },
+    {
+      "path": ".mathlib-quality/gamma0-T1p-attempt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e43639610ac119722727e2f3e27922184f17c114",
+      "size": 8340,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/e43639610ac119722727e2f3e27922184f17c114"
+    },
+    {
+      "path": ".mathlib-quality/gln-overview-2026-05-31.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69f8df44ea58b500de017d02dd5ea53cb846b555",
+      "size": 23826,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/69f8df44ea58b500de017d02dd5ea53cb846b555"
+    },
+    {
+      "path": ".mathlib-quality/learnings.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd4e0e9bd610a3cf4198cb06da6b40ad3dbf6925",
+      "size": 86018,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/cd4e0e9bd610a3cf4198cb06da6b40ad3dbf6925"
+    },
+    {
+      "path": ".mathlib-quality/marathon-2026-05-11.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0ed67ed9d05aa58afe60faad3085b6f0ecffbed",
+      "size": 7938,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/b0ed67ed9d05aa58afe60faad3085b6f0ecffbed"
+    },
+    {
+      "path": ".mathlib-quality/newforms-overview-2026-05-31.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8f5a18132793f8952bd77bf12c3483dd7700812",
+      "size": 37134,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/a8f5a18132793f8952bd77bf12c3483dd7700812"
+    },
+    {
+      "path": ".mathlib-quality/overview-merged-2026-06-04.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c27af290a223e2988326fe4ede7bf84c50f4cc7",
+      "size": 36631,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/1c27af290a223e2988326fe4ede7bf84c50f4cc7"
+    },
+    {
+      "path": ".mathlib-quality/overview-post-v4.30.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "009de78e8189e872b951524752fb43bfa3326b96",
+      "size": 37569,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/009de78e8189e872b951524752fb43bfa3326b96"
+    },
+    {
+      "path": ".mathlib-quality/plan-PRE-4612-backup-2026-05-26.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ddedca1494db1d8aa6a633f26708f1a877584a7",
+      "size": 8944,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/4ddedca1494db1d8aa6a633f26708f1a877584a7"
+    },
+    {
+      "path": ".mathlib-quality/plan-adjoint-v1-PRE-correction.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ab14c86ec3ca017e7d7d35e7fb06a2eef378afd",
+      "size": 5768,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/8ab14c86ec3ca017e7d7d35e7fb06a2eef378afd"
+    },
+    {
+      "path": ".mathlib-quality/plan-adjoint-v2-PRE-leaf2.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74aa3c5d9a4aee1997a1fe484a5952681f4abeba",
+      "size": 5902,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/74aa3c5d9a4aee1997a1fe484a5952681f4abeba"
+    },
+    {
+      "path": ".mathlib-quality/plan-adjoint-v3.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6dbfb410bffbac46b0d25ffa5ed7260d7e10a25",
+      "size": 5526,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/b6dbfb410bffbac46b0d25ffa5ed7260d7e10a25"
+    },
+    {
+      "path": ".mathlib-quality/plan-adjoint.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24d0e04697cbdb92274599b15053f3c67535c068",
+      "size": 4702,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/24d0e04697cbdb92274599b15053f3c67535c068"
+    },
+    {
+      "path": ".mathlib-quality/plan-finish-congruence-hecke.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9649d8286a71c554973be53ef1d325f237f5e103",
+      "size": 4906,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/9649d8286a71c554973be53ef1d325f237f5e103"
+    },
+    {
+      "path": ".mathlib-quality/plan-finish-remaining-sorries.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ae663818e6270b73d691ef3aab05f5025ba7213",
+      "size": 12477,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/5ae663818e6270b73d691ef3aab05f5025ba7213"
+    },
+    {
+      "path": ".mathlib-quality/plan-option-B-inclusion-exclusion-2026-05-19.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4205047894475077fc6fb255773d0f41ea6f7f06",
+      "size": 7951,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/4205047894475077fc6fb255773d0f41ea6f7f06"
+    },
+    {
+      "path": ".mathlib-quality/plan-option-C-2026-05-19.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b4c1fec55661c7519e2712dcae8de9b36dfd8c1",
+      "size": 7523,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/2b4c1fec55661c7519e2712dcae8de9b36dfd8c1"
+    },
+    {
+      "path": ".mathlib-quality/plan-phase5.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "715b3fe6bc340d6f9b88e3178bc129e5c10e3a14",
+      "size": 7489,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/715b3fe6bc340d6f9b88e3178bc129e5c10e3a14"
+    },
+    {
+      "path": ".mathlib-quality/plan-prop-3-34.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4d6da9a5ca4574c9134a3d4b9a936938dbd83dc",
+      "size": 4783,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f4d6da9a5ca4574c9134a3d4b9a936938dbd83dc"
+    },
+    {
+      "path": ".mathlib-quality/plan-smo-closure-2026-05-16.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "560a485a502b9deeed1bbe241c7f30d717b81372",
+      "size": 21100,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/560a485a502b9deeed1bbe241c7f30d717b81372"
+    },
+    {
+      "path": ".mathlib-quality/plan-t012.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e647b483d99b5511ee9550c867282adf709636a",
+      "size": 7781,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/2e647b483d99b5511ee9550c867282adf709636a"
+    },
+    {
+      "path": ".mathlib-quality/plan-tracehecke.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9214883ec542f41515ce1756da8b9bd67f27772b",
+      "size": 4744,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/9214883ec542f41515ce1756da8b9bd67f27772b"
+    },
+    {
+      "path": ".mathlib-quality/plan-w5.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95aa1e994fe125f3e11982915a3db66f5239ab05",
+      "size": 5103,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/95aa1e994fe125f3e11982915a3db66f5239ab05"
+    },
+    {
+      "path": ".mathlib-quality/plan.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b9207a5e516ba5b11d2643a818ddb870ea5e155",
+      "size": 11585,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/0b9207a5e516ba5b11d2643a818ddb870ea5e155"
+    },
+    {
+      "path": ".mathlib-quality/renames.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": ".mathlib-quality/ring-first-refactor-plan.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bdaf0c71e828bb05d61498ee9cfa8a0c0eaddb0",
+      "size": 16288,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/8bdaf0c71e828bb05d61498ee9cfa8a0c0eaddb0"
+    },
+    {
+      "path": ".mathlib-quality/runlinter-global-2026-06-05.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1abab1cedefaa82be13dcc8e3f6c0acaadc575d4",
+      "size": 42872,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/1abab1cedefaa82be13dcc8e3f6c0acaadc575d4"
+    },
+    {
+      "path": ".mathlib-quality/smo-ticket-plan-2026-05-17.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e901aa94723d1842a2207d6382a56969f5305c7",
+      "size": 17313,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/0e901aa94723d1842a2207d6382a56969f5305c7"
+    },
+    {
+      "path": ".mathlib-quality/teach-multipass-audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bec706213c38da22eb34783db22df071b79576d4",
+      "size": 8984,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/bec706213c38da22eb34783db22df071b79576d4"
+    },
+    {
+      "path": ".mathlib-quality/tickets-PRE-4612-backup-2026-05-26.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c728d430d13a00ff235a30ff47127cf0d02d47bc",
+      "size": 82883,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c728d430d13a00ff235a30ff47127cf0d02d47bc"
+    },
+    {
+      "path": ".mathlib-quality/tickets-adjoint-v1-PRE-correction.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa4e486a43a7a72687f217aad35a97bcc5019ae6",
+      "size": 8633,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/aa4e486a43a7a72687f217aad35a97bcc5019ae6"
+    },
+    {
+      "path": ".mathlib-quality/tickets-adjoint-v2-PRE-leaf2.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a725fbe0728fc64efa44a59abec57a7d0d7d6678",
+      "size": 7720,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/a725fbe0728fc64efa44a59abec57a7d0d7d6678"
+    },
+    {
+      "path": ".mathlib-quality/tickets-adjoint-v3.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e8529669ca5e1e72ffeaa38f3567f8f620b9f1f",
+      "size": 5146,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/4e8529669ca5e1e72ffeaa38f3567f8f620b9f1f"
+    },
+    {
+      "path": ".mathlib-quality/tickets-adjoint.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "635630ad1e6816745fb55b907e5b90b395e29e67",
+      "size": 5287,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/635630ad1e6816745fb55b907e5b90b395e29e67"
+    },
+    {
+      "path": ".mathlib-quality/tickets-t012.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4ff7520c6f1aa631610ce544068a518ad29996f",
+      "size": 14040,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/a4ff7520c6f1aa631610ce544068a518ad29996f"
+    },
+    {
+      "path": ".mathlib-quality/tickets-tracehecke.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4651ab7fe28be289ddaf7791ff744dff6d978992",
+      "size": 5585,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/4651ab7fe28be289ddaf7791ff744dff6d978992"
+    },
+    {
+      "path": ".mathlib-quality/tickets-w5.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30f174af89b27c814a7192377925aad8c941d649",
+      "size": 6497,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/30f174af89b27c814a7192377925aad8c941d649"
+    },
+    {
+      "path": ".mathlib-quality/tickets.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ca2131ae52a1ffc3232be241493ebae4946d624",
+      "size": 40284,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/1ca2131ae52a1ffc3232be241493ebae4946d624"
+    },
+    {
+      "path": ".mcp.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce76666ce0a96de48e9b08bc57f22ef4635ff6c2",
+      "size": 210,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/ce76666ce0a96de48e9b08bc57f22ef4635ff6c2"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26be4c227d0d17a14231219d4331a21f51ca05ea",
+      "size": 12784,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/26be4c227d0d17a14231219d4331a21f51ca05ea"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8dada3edaf50dbc082c9a125058f25def75e625a",
+      "size": 11357,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/8dada3edaf50dbc082c9a125058f25def75e625a"
+    },
+    {
+      "path": "LeanModularForms.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ee20e67851b17753d5a1c1bdd205789753711d5",
+      "size": 3378,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/0ee20e67851b17753d5a1c1bdd205789753711d5"
+    },
+    {
+      "path": "LeanModularForms",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c5311f45f4d2b7a3cfee79a7ed6c339deb25a226",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/c5311f45f4d2b7a3cfee79a7ed6c339deb25a226"
+    },
+    {
+      "path": "LeanModularForms/Blueprint.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3266eee9247e22da64bba26e7e97f9997a2b764",
+      "size": 4903,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f3266eee9247e22da64bba26e7e97f9997a2b764"
+    },
+    {
+      "path": "LeanModularForms/Chapters",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c613af0ca26a0d0b8544920511b60a55b5e815cf",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/c613af0ca26a0d0b8544920511b60a55b5e815cf"
+    },
+    {
+      "path": "LeanModularForms/Chapters/AdjointSpectral.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "817ac12ef39755016ace4a187abf83e22c712a26",
+      "size": 15108,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/817ac12ef39755016ace4a187abf83e22c712a26"
+    },
+    {
+      "path": "LeanModularForms/Chapters/CPV.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccec89d57d4416de6dfe1e2a2be39c6d028befe3",
+      "size": 1783,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/ccec89d57d4416de6dfe1e2a2be39c6d028befe3"
+    },
+    {
+      "path": "LeanModularForms/Chapters/CharacterSpaces.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e18671ca3ced2f2f310d5144b6ae1668e7ea3322",
+      "size": 14592,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/e18671ca3ced2f2f310d5144b6ae1668e7ea3322"
+    },
+    {
+      "path": "LeanModularForms/Chapters/Commutativity.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fee3e0de681983418b7d46db1918e117b3dea059",
+      "size": 6017,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/fee3e0de681983418b7d46db1918e117b3dea059"
+    },
+    {
+      "path": "LeanModularForms/Chapters/Conditions.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f45f3d1a3d5fbe43501124dcfaca5e1acc0ef9a8",
+      "size": 3152,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f45f3d1a3d5fbe43501124dcfaca5e1acc0ef9a8"
+    },
+    {
+      "path": "LeanModularForms/Chapters/CongruenceHecke.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9849677236b6de7968b5b616153693bb2c9bead7",
+      "size": 14030,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/9849677236b6de7968b5b616153693bb2c9bead7"
+    },
+    {
+      "path": "LeanModularForms/Chapters/Curves.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a3f737279142136bc97eb021f213a5d4c61da4f",
+      "size": 2544,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/8a3f737279142136bc97eb021f213a5d4c61da4f"
+    },
+    {
+      "path": "LeanModularForms/Chapters/DegreeHom.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42302cad85ab3a22e11297427945c6de1458a970",
+      "size": 3223,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/42302cad85ab3a22e11297427945c6de1458a970"
+    },
+    {
+      "path": "LeanModularForms/Chapters/Dimensions.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ee9cdaf9ac25e72c8c6afb726cb770ecda93488",
+      "size": 6578,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/3ee9cdaf9ac25e72c8c6afb726cb770ecda93488"
+    },
+    {
+      "path": "LeanModularForms/Chapters/GL2Operators.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38414ace64756f41ea6a8f15de0e5ec56a8cf324",
+      "size": 5688,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/38414ace64756f41ea6a8f15de0e5ec56a8cf324"
+    },
+    {
+      "path": "LeanModularForms/Chapters/HW33.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de888dd7f2cb759419a3d506d93a82448cbe4f4c",
+      "size": 10822,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/de888dd7f2cb759419a3d506d93a82448cbe4f4c"
+    },
+    {
+      "path": "LeanModularForms/Chapters/HeckeOperators.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fbc0f4f190b510f9712c0a7ae50d353a3546c7d",
+      "size": 23755,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/6fbc0f4f190b510f9712c0a7ae50d353a3546c7d"
+    },
+    {
+      "path": "LeanModularForms/Chapters/HeckePairs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38a186cf08c7b720d6b270dbcfa00f5ef2735ac0",
+      "size": 4539,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/38a186cf08c7b720d6b270dbcfa00f5ef2735ac0"
+    },
+    {
+      "path": "LeanModularForms/Chapters/MultiplicationTable.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddc248072203f731c3c7eb6de8e4bbfe4033181f",
+      "size": 11295,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/ddc248072203f731c3c7eb6de8e4bbfe4033181f"
+    },
+    {
+      "path": "LeanModularForms/Chapters/NewformTheory.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b06a97f48ca7c5192084e3892677b89ee5e99858",
+      "size": 10288,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/b06a97f48ca7c5192084e3892677b89ee5e99858"
+    },
+    {
+      "path": "LeanModularForms/Chapters/Petersson.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e296f8cebfd1a4f3d4044916cdff82f9f3a32a4",
+      "size": 8457,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/5e296f8cebfd1a4f3d4044916cdff82f9f3a32a4"
+    },
+    {
+      "path": "LeanModularForms/Chapters/PolynomialStructure.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec50b6ed65ddcae55c9bc8f37a1381692a06dd06",
+      "size": 10106,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/ec50b6ed65ddcae55c9bc8f37a1381692a06dd06"
+    },
+    {
+      "path": "LeanModularForms/Chapters/RingStructure.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "baca8e442a79024b7347c4e841f859cf9562e15f",
+      "size": 7803,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/baca8e442a79024b7347c4e841f859cf9562e15f"
+    },
+    {
+      "path": "LeanModularForms/Chapters/StrongMultiplicityOne.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa86391163a2002eacab6565c407fc9513a63e38",
+      "size": 16161,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/aa86391163a2002eacab6565c407fc9513a63e38"
+    },
+    {
+      "path": "LeanModularForms/Chapters/ValenceFormula.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8abfd9c935cfdb27e4746b1d60cea9a361700b34",
+      "size": 6424,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/8abfd9c935cfdb27e4746b1d60cea9a361700b34"
+    },
+    {
+      "path": "LeanModularForms/Chapters/Winding.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5a0d21fe22f455af30317eba1b94513d588c208",
+      "size": 1613,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/e5a0d21fe22f455af30317eba1b94513d588c208"
+    },
+    {
+      "path": "LeanModularForms/Chapters/WindingElliptic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "257db7ebefc8bf6c4de836ea87b0a80692edf95c",
+      "size": 6469,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/257db7ebefc8bf6c4de836ea87b0a80692edf95c"
+    },
+    {
+      "path": "LeanModularForms/Eigenforms",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c5634ba33257573a814b2366586e4d058e83bc8d",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/c5634ba33257573a814b2366586e4d058e83bc8d"
+    },
+    {
+      "path": "LeanModularForms/Eigenforms/AtkinLehner.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4a9c9c6491f5f94bcfb61e8d9bb1512f3d0775e",
+      "size": 14431,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/b4a9c9c6491f5f94bcfb61e8d9bb1512f3d0775e"
+    },
+    {
+      "path": "LeanModularForms/Eigenforms/ConductorTheorem.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d03a1b52ec585e1471e4335a4aae0fda80b6050a",
+      "size": 47762,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/d03a1b52ec585e1471e4335a4aae0fda80b6050a"
+    },
+    {
+      "path": "LeanModularForms/Eigenforms/MainLemma.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30970e3f046ddf1e8985d66bce616083047f7f34",
+      "size": 5760,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/30970e3f046ddf1e8985d66bce616083047f7f34"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d9236f18832e236af2bcc7ba85cbb24ea1318e5e",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/d9236f18832e236af2bcc7ba85cbb24ea1318e5e"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ArcFTC.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "138aad70a2bd7d1d01c1d7f732f8c3b29bc35fa5",
+      "size": 1540,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/138aad70a2bd7d1d01c1d7f732f8c3b29bc35fa5"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ArcFTCAtI.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8eece0480d2c18c8a3eb086e21844b6620ad748",
+      "size": 18062,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f8eece0480d2c18c8a3eb086e21844b6620ad748"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ArcFTCLimit.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d956e10739a58a1b916270c506f19ed17f9283b5",
+      "size": 10169,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/d956e10739a58a1b916270c506f19ed17f9283b5"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ArcGenericFTCProvider.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b3c58c832c025e75bb861509748aafeaf21bb87",
+      "size": 40531,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/3b3c58c832c025e75bb861509748aafeaf21bb87"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/AsymmetricSingleCrossing.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3e114598503908f89bfecd6c61e0552654efe7c",
+      "size": 10375,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/d3e114598503908f89bfecd6c61e0552654efe7c"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/BoundaryWinding.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a697c651f566f19bd58884ea50bd41cb79c2cd7e",
+      "size": 7279,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/a697c651f566f19bd58884ea50bd41cb79c2cd7e"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/BoundaryWindingArcProof.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0690d5138b16f02a79a4c510f3836407844af63",
+      "size": 13697,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/a0690d5138b16f02a79a4c510f3836407844af63"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/BoundaryWindingSeg1Proof.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fe700214b737f3de7a79a847b8db877dabe8308",
+      "size": 12708,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/4fe700214b737f3de7a79a847b8db877dabe8308"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/BoundaryWindingSeg4Proof.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d3ab9ec99c1cce3667b2c427c97dcacdfa6fe89",
+      "size": 11494,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/9d3ab9ec99c1cce3667b2c427c97dcacdfa6fe89"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/CanonicalReps.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e4985184a4384726a1b578ea75343104d872531",
+      "size": 20172,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/9e4985184a4384726a1b578ea75343104d872531"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/CauchyPrincipalValue.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e07b798fd0efcb1ecf98a54a9f964e6c5e8c129",
+      "size": 7621,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/3e07b798fd0efcb1ecf98a54a9f964e6c5e8c129"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ClassicalCPV.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e995d1d1fbd370b9b1b661a8cee29dc51a357b9",
+      "size": 15545,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/4e995d1d1fbd370b9b1b661a8cee29dc51a357b9"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ContourIntegral",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cca2c9d0df4f556217d0a54037530c1b0c41f3ab",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/cca2c9d0df4f556217d0a54037530c1b0c41f3ab"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ContourIntegral/CrossingLimit.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96f5078ba32d3d59558f456fa9d5c4675dbffb88",
+      "size": 8207,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/96f5078ba32d3d59558f456fa9d5c4675dbffb88"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ContourIntegral/PVSplit.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5f28207b5476b5951e23f441fdd24cb1ad26364",
+      "size": 4536,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/b5f28207b5476b5951e23f441fdd24cb1ad26364"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ContourIntegral/SegmentFTC.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9484f3abef5f9a89637d679adda2b8c9292a001e",
+      "size": 2314,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/9484f3abef5f9a89637d679adda2b8c9292a001e"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/CoreIdentityProof.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d4b4415b73237697b6980d2bf38d1e3d91a0879",
+      "size": 25554,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/3d4b4415b73237697b6980d2bf38d1e3d91a0879"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/CornerFTCAtRho.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9847916e908777889188fe1466f3e95d0c15000f",
+      "size": 54745,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/9847916e908777889188fe1466f3e95d0c15000f"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/CrossingAnalysis.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86cab8bccae13e73e97fe9dddb16fc6e993ace4b",
+      "size": 12758,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/86cab8bccae13e73e97fe9dddb16fc6e993ace4b"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/CrossingAtI.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b25c4e7f77e45071a7b5d914a059b6432bbef044",
+      "size": 7145,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/b25c4e7f77e45071a7b5d914a059b6432bbef044"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/CrossingAtRho.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7784cc77207bce291c95fc9daea73ca6d19c94f7",
+      "size": 24233,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/7784cc77207bce291c95fc9daea73ca6d19c94f7"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/CurveMeasureZero.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4916467648207eea6375c4b8c7b3d0abbf4da1c9",
+      "size": 4228,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/4916467648207eea6375c4b8c7b3d0abbf4da1c9"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/CurveUtilities.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79321414b091807e5fb0278a9bd2ad77c47811eb",
+      "size": 768,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/79321414b091807e5fb0278a9bd2ad77c47811eb"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/DixonDef.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64d8447bdd2c2ea8cf1e5b47ad7bdb16a55667f9",
+      "size": 6607,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/64d8447bdd2c2ea8cf1e5b47ad7bdb16a55667f9"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/DixonDiff.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d646425c979b6879e6dbe3fa8abcc3c4ede65f9",
+      "size": 31984,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/0d646425c979b6879e6dbe3fa8abcc3c4ede65f9"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/DixonTheorem.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1b2a126c70f60bac49d0026cca891ef34d1276a",
+      "size": 25160,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/a1b2a126c70f60bac49d0026cca891ef34d1276a"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/DslopeIntegral.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a05d83be8dbd52f004b8b29db5deeb223406bd07",
+      "size": 13259,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/a05d83be8dbd52f004b8b29db5deeb223406bd07"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/EllipticPoints.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a0e78c96a8ffb3a1410709cb36e9aa52db1cd05",
+      "size": 4109,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/0a0e78c96a8ffb3a1410709cb36e9aa52db1cd05"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ExitTime.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0dc8d562b8a61a91a1f040d5e2b9d6c6397fe93f",
+      "size": 19341,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/0dc8d562b8a61a91a1f040d5e2b9d6c6397fe93f"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/FDBoundary.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08b31ce4fb30a68c19aad4652ceead4f91ae91a7",
+      "size": 13536,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/08b31ce4fb30a68c19aad4652ceead4f91ae91a7"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/FDBoundaryH.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae63773a4cd35ada17b51c3994b11c2585766752",
+      "size": 10348,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/ae63773a4cd35ada17b51c3994b11c2585766752"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/FDBoundaryPath.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d3a42af29d0b06575b397b78cea713ef56259eb",
+      "size": 9320,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/3d3a42af29d0b06575b397b78cea713ef56259eb"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/FDBoundaryReparametrization.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8a3ce6a36d936f8a46e18f7a7d252f43002a3d0",
+      "size": 8832,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c8a3ce6a36d936f8a46e18f7a7d252f43002a3d0"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/FDWindingDataFullAssembly.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8c655e17cd76ca1aa7e679567d949fcaaf3943c",
+      "size": 4976,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/e8c655e17cd76ca1aa7e679567d949fcaaf3943c"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/FDWindingDataFullSeg1Seg4.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f7e83e51db323f86de0f3c63af224f4324c2553",
+      "size": 6419,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/8f7e83e51db323f86de0f3c63af224f4324c2553"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/FlatChordBound.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc7c6a5e90f7ec2d2f70acd8794c9d6a16a7e400",
+      "size": 8686,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/cc7c6a5e90f7ec2d2f70acd8794c9d6a16a7e400"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/FlatnessConditions.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4c1ca5d3c966309da804e23dfa0b1d783d552ab",
+      "size": 11918,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c4c1ca5d3c966309da804e23dfa0b1d783d552ab"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ffa0015b7e7bdadac4c5dd421f758bd99e65389e",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/ffa0015b7e7bdadac4c5dd421f758bd99e65389e"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/ArcCalculus.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06f36d63133c2f0a70f963e454f23c54fcc87157",
+      "size": 2946,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/06f36d63133c2f0a70f963e454f23c54fcc87157"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/CauchyPrimitive.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a7a9e169052cfa1757849f07bbb76c61aceadb5",
+      "size": 15093,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/0a7a9e169052cfa1757849f07bbb76c61aceadb5"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/Homotopy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3a1fd65a0b02b531cb80b1c7966c25f10aca38db",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/3a1fd65a0b02b531cb80b1c7966c25f10aca38db"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/Homotopy/Integrality.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac0b8165647b5eb67f7d72d081d8aa72a9d906d0",
+      "size": 1215,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/ac0b8165647b5eb67f7d72d081d8aa72a9d906d0"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/Homotopy/Invariance.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f7c32c5076af76f084ccff7e4702323abe2c20a",
+      "size": 1931,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/9f7c32c5076af76f084ccff7e4702323abe2c20a"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/OnCurvePV",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e4981f81cd590d35effc83d245b0f4ac321e8a7b",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/e4981f81cd590d35effc83d245b0f4ac321e8a7b"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/OnCurvePV/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f273b97c8871c9c1cef244c04941b10d113f849f",
+      "size": 15031,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f273b97c8871c9c1cef244c04941b10d113f849f"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/PVInfrastructure",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4caec6e38b40d1c78a97613c99b84799cdb24e2c",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/4caec6e38b40d1c78a97613c99b84799cdb24e2c"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/PVInfrastructure/AnnulusBounds.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79ba28b7d0d90867cae5370ac5561ecee431498b",
+      "size": 20764,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/79ba28b7d0d90867cae5370ac5561ecee431498b"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/PVInfrastructure/GammaAnalysis.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5896a6e58cceea973c97699f955c4ab4ee541b45",
+      "size": 5394,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/5896a6e58cceea973c97699f955c4ab4ee541b45"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/PVInfrastructure/RemainderAnalysis.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9ffbc40040619ec23fab5d7d394ebe81bafc4c1",
+      "size": 10656,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/a9ffbc40040619ec23fab5d7d394ebe81bafc4c1"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/PVInfrastructure/SingularAnnulus.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13e6cb6b16af74398154fb8f188083f17c37e212",
+      "size": 28636,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/13e6cb6b16af74398154fb8f188083f17c37e212"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/PVInfrastructure/StepBounds.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25853a27c2a20b94130ff88e2acf6b05f900b3ce",
+      "size": 10243,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/25853a27c2a20b94130ff88e2acf6b05f900b3ce"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/PVInfrastructure/UniformStepBound.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc41a08764c325475cbb520c4ae03abb9cbbb0d3",
+      "size": 10179,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/cc41a08764c325475cbb520c4ae03abb9cbbb0d3"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/Residue.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9817214be7c019c50cfa2bd04f4ae224788f5cf",
+      "size": 28591,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f9817214be7c019c50cfa2bd04f4ae224788f5cf"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/Residue",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8e21192d6459c466ec857e04ecd944c7f66ec750",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/8e21192d6459c466ec857e04ecd944c7f66ec750"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/Residue/GeneralizedTheoremBase.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1607d179170e0ef308d02d4a098a232d65a70c16",
+      "size": 17981,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/1607d179170e0ef308d02d4a098a232d65a70c16"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/Residue/MeasureHelpers.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9d696213d67372b30a55a0bc4e6f0abbb5e7301",
+      "size": 4564,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/e9d696213d67372b30a55a0bc4e6f0abbb5e7301"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/Residue/MultipointPV.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f73b81ed0815354f1636f55971d791bfba229fa",
+      "size": 16098,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/4f73b81ed0815354f1636f55971d791bfba229fa"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/Residue/MultipointPV",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "941c509e612ffd647af55dea958032a23de6b1d6",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/941c509e612ffd647af55dea958032a23de6b1d6"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedResidueTheory/Residue/MultipointPV/DominatedConvergence.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9b9372dd6e25c036ab2fa7fafea34c761b817f7",
+      "size": 27241,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/a9b9372dd6e25c036ab2fa7fafea34c761b817f7"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/GeneralizedWindingNumber.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f93a3c1003c67229a6709f5c8c9e98b6fa890902",
+      "size": 8568,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f93a3c1003c67229a6709f5c8c9e98b6fa890902"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HW33Clean.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8d047765754a4e1ac7e109f0d274bdaf1d47de4",
+      "size": 3526,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/d8d047765754a4e1ac7e109f0d274bdaf1d47de4"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8119bf732943ce05f7c345c98a78d0a1e602608f",
+      "size": 23545,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/8119bf732943ce05f7c345c98a78d0a1e602608f"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e7fba2da18535871c81f7f7903be53dc52766207",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/e7fba2da18535871c81f7f7903be53dc52766207"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/CPVExistence.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "562e33090028bdc9cd6e1eabd19b0502cefab4ef",
+      "size": 22233,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/562e33090028bdc9cd6e1eabd19b0502cefab4ef"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/CPVExistenceMulti.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5de3fa260340136b7e323202cf8a2056a8115ed9",
+      "size": 11231,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/5de3fa260340136b7e323202cf8a2056a8115ed9"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/Crossing.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b959bcfa3955d65229827cad338a9a924e6e9b8f",
+      "size": 45092,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/b959bcfa3955d65229827cad338a9a924e6e9b8f"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/CrossingCPV.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "703ca4d90e641543b9e7148c4ebf0e06a270c6ef",
+      "size": 3299,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/703ca4d90e641543b9e7148c4ebf0e06a270c6ef"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/CrossingDataBuilder.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c38c3c48df27d37e9c7bffe9d2057741042502e9",
+      "size": 21592,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c38c3c48df27d37e9c7bffe9d2057741042502e9"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/CrossingHigherOrder.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "facfa46675b755c4e0d1ad285f831681bb61e1d2",
+      "size": 10676,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/facfa46675b755c4e0d1ad285f831681bb61e1d2"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/HigherOrderAsymptotics.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "348e4958cf0f4659919908d69e130d39f61f9a5b",
+      "size": 26262,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/348e4958cf0f4659919908d69e130d39f61f9a5b"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/LaurentExtraction.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75195cac2681d2779fd4bab4345820e48160be8c",
+      "size": 27767,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/75195cac2681d2779fd4bab4345820e48160be8c"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/LocalCutoffs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c33fc95d285c00cf441f49c4352f899bfbc47a98",
+      "size": 57666,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c33fc95d285c00cf441f49c4352f899bfbc47a98"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/MultiCrossingCPV.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1583e209d579af17bfb9bea9bd7b3b6c2ac8245",
+      "size": 86824,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/d1583e209d579af17bfb9bea9bd7b3b6c2ac8245"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/MultiPoleDCT.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01c69dfc77239ebdaa2163f318b8fcc47a032900",
+      "size": 18835,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/01c69dfc77239ebdaa2163f318b8fcc47a032900"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/HungerbuhlerWasem/SectorCancellation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bab8f606851d017100adb52b9139bfad4312872f",
+      "size": 8227,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/bab8f606851d017100adb52b9139bfad4312872f"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/InteriorContourIntegral.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "776210fd09799cda07de0ed74e108844d209eb51",
+      "size": 23300,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/776210fd09799cda07de0ed74e108844d209eb51"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/InteriorWinding.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f7bbf258c40ca85ea00f234cd205748e266eb34",
+      "size": 9860,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/9f7bbf258c40ca85ea00f234cd205748e266eb34"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ModularInvariance.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d1f17ea459f508721f188ead80b783e47669e85",
+      "size": 17861,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/7d1f17ea459f508721f188ead80b783e47669e85"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/MultipointPV.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6520d9903d6b2c7a414a018114bb4fca76c0c204",
+      "size": 7457,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/6520d9903d6b2c7a414a018114bb4fca76c0c204"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/NullHomologous.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "739f953849f9fcb877443eddf2cf5f83d7fb2284",
+      "size": 12277,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/739f953849f9fcb877443eddf2cf5f83d7fb2284"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/OrbitPairing.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1aeb242cd96137ba007d1d6a35c8695ee9b9cf9",
+      "size": 12651,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c1aeb242cd96137ba007d1d6a35c8695ee9b9cf9"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/Orbits.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcd21dacb9a0b574373ef8add1442506e50e7a28",
+      "size": 11173,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/dcd21dacb9a0b574373ef8add1442506e50e7a28"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/PVChainProof.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f13777f4c290c958ff38f8b988c56dcfdfe493a",
+      "size": 6779,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/8f13777f4c290c958ff38f8b988c56dcfdfe493a"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/PVSplitting.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2e1a0485c9dba8b69acb43f41856f2bed9dbb43",
+      "size": 11411,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f2e1a0485c9dba8b69acb43f41856f2bed9dbb43"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/PaperPwC1Immersion.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f87608b7eda27e2c9b9e861eb7a14032b3b45561",
+      "size": 26034,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f87608b7eda27e2c9b9e861eb7a14032b3b45561"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/PiecewiseC1Path.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "036f98a68059fdd1ba02ea18a8d137c9145edee8",
+      "size": 5510,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/036f98a68059fdd1ba02ea18a8d137c9145edee8"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/PiecewiseC1PathOn.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cad4b2e422a9181898604b076f1306b8fd76795c",
+      "size": 3031,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/cad4b2e422a9181898604b076f1306b8fd76795c"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/PiecewiseContourIntegral.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ee2992155f18a90c9e9cce3ff6005252470a108",
+      "size": 11130,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/2ee2992155f18a90c9e9cce3ff6005252470a108"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/Residue.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "291c9ccff8ccc00f0a78c1e886c30ff92844debc",
+      "size": 1461,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/291c9ccff8ccc00f0a78c1e886c30ff92844debc"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ResidueCircleIntegral.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53101c138fe16320842cfc7538ce089c32fcb1c3",
+      "size": 3563,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/53101c138fe16320842cfc7538ce089c32fcb1c3"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ResidueSide.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6e0b5071c384f01f1b189b3c0b6a821bcccb018",
+      "size": 4277,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f6e0b5071c384f01f1b189b3c0b6a821bcccb018"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/Seg1FTCProvider.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "841546bcb707af1cc7d475759572b6dbecd2e1c9",
+      "size": 18558,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/841546bcb707af1cc7d475759572b6dbecd2e1c9"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/Seg4FTCProvider.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b12fcc40c954cfc2e18fad0f6b7f0f48c2d3ccfb",
+      "size": 19176,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/b12fcc40c954cfc2e18fad0f6b7f0f48c2d3ccfb"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/SegmentAnalysis.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf72a15e4b18456476ffc3919eb02e3333bf5625",
+      "size": 17414,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/cf72a15e4b18456476ffc3919eb02e3333bf5625"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/SegmentFTC.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc094d3307621c485e3017434810d7d0879300cc",
+      "size": 8277,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/dc094d3307621c485e3017434810d7d0879300cc"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/SimplePoleIntegral.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a17734411f18d6878ea23413a95f374bb77f606",
+      "size": 1387,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/9a17734411f18d6878ea23413a95f374bb77f606"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/SingleCrossing.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4caf4efc4aa5a191901b03203f3a95ba92060a0a",
+      "size": 9688,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/4caf4efc4aa5a191901b03203f3a95ba92060a0a"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/SmoothBoundaryWindingProof.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5328b44002368cec8159fb1c51326ee8cf5f46b7",
+      "size": 5813,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/5328b44002368cec8159fb1c51326ee8cf5f46b7"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/TrigLemmas.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0aae2340c318838597e2f27f91adb434be0dba72",
+      "size": 697,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/0aae2340c318838597e2f27f91adb434be0dba72"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c65ddb8568ef2bd00c79feffb8a2e4b19be12bed",
+      "size": 15176,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c65ddb8568ef2bd00c79feffb8a2e4b19be12bed"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3b435e17374eb765228ef1596a853e9f7559cd59",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/3b435e17374eb765228ef1596a853e9f7559cd59"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/Boundary",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "73f136cb4aa0a35800112fbc2d2f5c640d25957e",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/73f136cb4aa0a35800112fbc2d2f5c640d25957e"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/Boundary/Bounds.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad2c3a68569369665d403db05a6e8ec26228a371",
+      "size": 9957,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/ad2c3a68569369665d403db05a6e8ec26228a371"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/Boundary/Smooth.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7edaebd68f063976d0d3f951a0851d5da319a5b3",
+      "size": 30851,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/7edaebd68f063976d0d3f951a0851d5da319a5b3"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/OnCurvePV",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6883c291e849cc17e0eb3058997ad5b40feec2c3",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/6883c291e849cc17e0eb3058997ad5b40feec2c3"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/OnCurvePV/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18251630d5959c58c543208d6ca3ecf04105c638",
+      "size": 9779,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/18251630d5959c58c543208d6ca3ecf04105c638"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/OnCurvePV/EndpointCorner.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5bfb642a9e0ac344d9d0d0645cff10e8bf683a36",
+      "size": 27776,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/5bfb642a9e0ac344d9d0d0645cff10e8bf683a36"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/OnCurvePV/Main.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bc3f982a47dc3b6055958f2a71df0881df373ab",
+      "size": 40766,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/4bc3f982a47dc3b6055958f2a71df0881df373ab"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/PVChain",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "505e0a7c30629ea676cba0cfb4dccb34010bc081",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/505e0a7c30629ea676cba0cfb4dccb34010bc081"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/PVChain/ArcContribution.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77c04998048caba91b201875aeb504d500f0de19",
+      "size": 29222,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/77c04998048caba91b201875aeb504d500f0de19"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/PVChain/Assembly.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9b54e5d16b32b8ac3d13fc309559465fc812182",
+      "size": 33949,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f9b54e5d16b32b8ac3d13fc309559465fc812182"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/PVChain/Assembly",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "85697cf8cc94ad191a1b8c73c36aaabb8fd5eca4",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/85697cf8cc94ad191a1b8c73c36aaabb8fd5eca4"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/PVChain/Assembly/ResidueSide.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c69265bb9ef513ef376d49dd5340c0504a4881f",
+      "size": 18456,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/8c69265bb9ef513ef376d49dd5340c0504a4881f"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/PVChain/Helpers.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "118a5af8e6a2238e04f5463e4611c1e5a3c5cce4",
+      "size": 16312,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/118a5af8e6a2238e04f5463e4611c1e5a3c5cce4"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/PVChain/OnCurveCapture.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2168b20c173dc4ec22d609e6be44c4d07847a006",
+      "size": 12633,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/2168b20c173dc4ec22d609e6be44c4d07847a006"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/PVChain/ResidueSideInfra.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d284dcc28a8845e83170c6f24357f9fec4c9b608",
+      "size": 31158,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/d284dcc28a8845e83170c6f24357f9fec4c9b608"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/PVChain/Seg5CuspIntegral.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5785078b35dc149022f1f8f611a80c56d7012d64",
+      "size": 21295,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/5785078b35dc149022f1f8f611a80c56d7012d64"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/WindingWeights",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bff4fd2ab3e27784839937b996b00bab6badb57e",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/bff4fd2ab3e27784839937b996b00bab6badb57e"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/WindingWeights/Common.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db9884e9f6909c0625358e7dd86e37bed12471a6",
+      "size": 17736,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/db9884e9f6909c0625358e7dd86e37bed12471a6"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/WindingWeights/I.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ef83b76359070897dfb9ec2531b0709d8e7fca5",
+      "size": 46964,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/9ef83b76359070897dfb9ec2531b0709d8e7fca5"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/WindingWeights/Rho.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "678df3a24f41149579e1ec10938712c5188376b9",
+      "size": 34596,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/678df3a24f41149579e1ec10938712c5188376b9"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormula/WindingWeights/RhoPlusOne.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6f15aac30f1b422933fd48e6c9899d58837c0df",
+      "size": 37535,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f6f15aac30f1b422933fd48e6c9899d58837c0df"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormulaBridged.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e702351b7f05e00d19f6bd12eeab163583ab802",
+      "size": 8101,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/7e702351b7f05e00d19f6bd12eeab163583ab802"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/ValenceFormulaFinal.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1fa70a66bdfe1182fcf09285b6424b62ba9d97a",
+      "size": 2700,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c1fa70a66bdfe1182fcf09285b6424b62ba9d97a"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/VertSegFTCProvider.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a9b267be07200b7cc38ad06f49946345bb5f1c4",
+      "size": 18128,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/5a9b267be07200b7cc38ad06f49946345bb5f1c4"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/WindingArgDiff.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2efe59db2f7306e4f7104edb5ebf7cdab317e7c6",
+      "size": 16059,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/2efe59db2f7306e4f7104edb5ebf7cdab317e7c6"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/WindingDecomposition.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efca1150171c3dbca99b812eca2fff3aff3357b8",
+      "size": 1942,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/efca1150171c3dbca99b812eca2fff3aff3357b8"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/WindingInteger.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9ba2dec58669d30db1d65139f5de1c761149aa0",
+      "size": 23487,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/e9ba2dec58669d30db1d65139f5de1c761149aa0"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/WindingWeightProofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98fbf8a25bc312e7c3d0e9cecad3c61e28453267",
+      "size": 14256,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/98fbf8a25bc312e7c3d0e9cecad3c61e28453267"
+    },
+    {
+      "path": "LeanModularForms/ForMathlib/WindingWeightsUnconditional.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "214d3e0b8b73a29d743c6b8fd38d9ee816cbe615",
+      "size": 998,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/214d3e0b8b73a29d743c6b8fd38d9ee816cbe615"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bd49a7b7e2091e4f21ede0c0a1d69cac3e9eb208",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/bd49a7b7e2091e4f21ede0c0a1d69cac3e9eb208"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/AbstractHeckeRing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "976e624ce25c7ba722e39e7cc9c080552565610f",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/976e624ce25c7ba722e39e7cc9c080552565610f"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/AbstractHeckeRing/Associativity.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b242c693267578f92cf4dc147091d70345e874be",
+      "size": 39265,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/b242c693267578f92cf4dc147091d70345e874be"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/AbstractHeckeRing/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0334467d57bb1502da570de9f234e663678db6d",
+      "size": 15060,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/d0334467d57bb1502da570de9f234e663678db6d"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/AbstractHeckeRing/Commutativity.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4ec786169b6da2ce191612cd8bc17abbd0f6365",
+      "size": 22956,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c4ec786169b6da2ce191612cd8bc17abbd0f6365"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/AbstractHeckeRing/Degree.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1f96d4403b94023094558a8db1e42746bb9403e",
+      "size": 13104,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/a1f96d4403b94023094558a8db1e42746bb9403e"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/AbstractHeckeRing/Module.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fad17398bf58dc4d9b93e096185d0230a9096b4c",
+      "size": 13652,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/fad17398bf58dc4d9b93e096185d0230a9096b4c"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/AbstractHeckeRing/Multiplication.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "655e08a6d2a09879976c2083bf4ed908261b9215",
+      "size": 33354,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/655e08a6d2a09879976c2083bf4ed908261b9215"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/AbstractHeckeRing/Ring.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5383a8102983ba67c9762519fca66b6fb2c9ac5b",
+      "size": 8380,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/5383a8102983ba67c9762519fca66b6fb2c9ac5b"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/AbstractHeckeRing/StabConjugation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49addcb2d769a759c12fc68e9a9d3bfa10a71c97",
+      "size": 6359,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/49addcb2d769a759c12fc68e9a9d3bfa10a71c97"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "daf88eee709a2f979b0909a14368688dc0cddcac",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/daf88eee709a2f979b0909a14368688dc0cddcac"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/AdjointTheory.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3e1281c9d1b6c3809ae14c2cb023571ebe89ae0",
+      "size": 20252,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/d3e1281c9d1b6c3809ae14c2cb023571ebe89ae0"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/AdjointTheory",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "602929e4ef49b0594812bdf42d3b98643d1a9975",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/602929e4ef49b0594812bdf42d3b98643d1a9975"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/AdjointTheory/ConcreteFamily.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c89d45b18c5a2afcd297c167d7b33dc5ea190561",
+      "size": 39037,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c89d45b18c5a2afcd297c167d7b33dc5ea190561"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/AdjointTheory/DeltaBSystem.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f04e8d9ca0c9a17780127e0a493aa5cbc6061c0",
+      "size": 87396,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/9f04e8d9ca0c9a17780127e0a493aa5cbc6061c0"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/AdjointTheory/FDTransport.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0330b4fcf20858955299c511f3ab62b5dbb68d1b",
+      "size": 99931,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/0330b4fcf20858955299c511f3ab62b5dbb68d1b"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/AdjointTheory/SummandAdjoint.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "617cef5a52478114d1cfc020e633d05ac29b2df6",
+      "size": 36950,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/617cef5a52478114d1cfc020e633d05ac29b2df6"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/AdjointTheoryPetersson.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8abda79b65f2d3eb17c0e9a7963515f5eed152b6",
+      "size": 45216,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/8abda79b65f2d3eb17c0e9a7963515f5eed152b6"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b98172c045d7bee4add3498577b98eb20affb0c9",
+      "size": 13784,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/b98172c045d7bee4add3498577b98eb20affb0c9"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/CharacterDecomp.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9e3bac13a916b73cf1884e82233b9b0bb74da3c",
+      "size": 23835,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/d9e3bac13a916b73cf1884e82233b9b0bb74da3c"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/CongruenceIndex.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ca16d17429433f3d793776eadbdd5b17cec7455",
+      "size": 8977,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/5ca16d17429433f3d793776eadbdd5b17cec7455"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Degree.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8166bfd3457b75038b4d8fbe5da7ae0354d7a604",
+      "size": 5405,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/8166bfd3457b75038b4d8fbe5da7ae0354d7a604"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/FourierHecke.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db2046dd5a324d7db57b119c7c5d87d2aadcbde4",
+      "size": 41806,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/db2046dd5a324d7db57b119c7c5d87d2aadcbde4"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Fricke.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f95695f18bed028d07409187985a7c99dfac5ab",
+      "size": 23914,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/4f95695f18bed028d07409187985a7c99dfac5ab"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Gamma1Pair.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d5c28a30594bfd78195dad493d0f47822277560",
+      "size": 23196,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/1d5c28a30594bfd78195dad493d0f47822277560"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeAction.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c020d990335c380563d4412ad3dac12ef32d796d",
+      "size": 11738,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c020d990335c380563d4412ad3dac12ef32d796d"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeActionGeneral.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f423d58a3f1e4faefb27204101c86d02201a227b",
+      "size": 31121,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f423d58a3f1e4faefb27204101c86d02201a227b"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeModularForm.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f294db0d36d15a77291921f03c556822f3743ad",
+      "size": 19921,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/7f294db0d36d15a77291921f03c556822f3743ad"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeModularForm_Gamma0.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53ec99a189701f4e8a586ec6a77f2b80dcd754eb",
+      "size": 13577,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/53ec99a189701f4e8a586ec6a77f2b80dcd754eb"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeRingHomCharSpace.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47a9ff9a705bf34f29bd16a81ab3893379449942",
+      "size": 4450,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/47a9ff9a705bf34f29bd16a81ab3893379449942"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeT_n.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "321e63e914320e8988cda43964af1599b6796a57",
+      "size": 58762,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/321e63e914320e8988cda43964af1599b6796a57"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeT_p.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "153d3e099e5fabeab937f65c44b1502fe845a0a5",
+      "size": 52014,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/153d3e099e5fabeab937f65c44b1502fe845a0a5"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeT_p_GLpair.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "416aea7f547ea824f43556401cc5f9f51b664425",
+      "size": 4234,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/416aea7f547ea824f43556401cc5f9f51b664425"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeT_p_Gamma0.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77ee6773cb8f6624e81a0356a066ec0cdeb0077c",
+      "size": 7750,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/77ee6773cb8f6624e81a0356a066ec0cdeb0077c"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeT_p_Gamma1.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4d3e02a1891fd95c2ff2b27779ca8ee3f0b00eb",
+      "size": 7321,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f4d3e02a1891fd95c2ff2b27779ca8ee3f0b00eb"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/LevelEmbed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b5ae82fffc8cd7bd49e14947eecfb1466111e7e",
+      "size": 1853,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/5b5ae82fffc8cd7bd49e14947eecfb1466111e7e"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/LevelRaise.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d9c04a1142208fce61ca81cf947376dbec5d0e6",
+      "size": 30471,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/1d9c04a1142208fce61ca81cf947376dbec5d0e6"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/MultiplicationTable.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b6b25e1ff0037cb9ca54823da46d9a8f2e48372",
+      "size": 64497,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/6b6b25e1ff0037cb9ca54823da46d9a8f2e48372"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Newforms.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b1f949b9649fb56039ac2b8996b24413c15d31a",
+      "size": 5811,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/5b1f949b9649fb56039ac2b8996b24413c15d31a"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Newforms",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "62feb29d3d13ceaba73e7225eda7c7d33330da19",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/62feb29d3d13ceaba73e7225eda7c7d33330da19"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Newforms/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c107eb8c23a7bb49e40fdbad714927eee1646d3",
+      "size": 22841,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/3c107eb8c23a7bb49e40fdbad714927eee1646d3"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Newforms/CoeffSeq.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3db1983d6c4049a3f9cc18bc633858eea67a8dfc",
+      "size": 3666,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/3db1983d6c4049a3f9cc18bc633858eea67a8dfc"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Newforms/LevelRaiseComm.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39bc52550d6298415fa646ce28e907b170649ba0",
+      "size": 36892,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/39bc52550d6298415fa646ce28e907b170649ba0"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Newforms/MainLemma.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3caf43a2281fd63df0b0ddb59562c6a47d976dfe",
+      "size": 7596,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/3caf43a2281fd63df0b0ddb59562c6a47d976dfe"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Unified",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cf962ace027ab292da0ea6fce4815b7c34ea75ea",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/cf962ace027ab292da0ea6fce4815b7c34ea75ea"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Unified/EigenformFromRing.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7c03740f434b174fc2ea89ab9084386aad56938",
+      "size": 5030,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/e7c03740f434b174fc2ea89ab9084386aad56938"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Unified/Gamma0RingDn.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa011d9d5f63289632dd62345f11b639c894644f",
+      "size": 31674,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/fa011d9d5f63289632dd62345f11b639c894644f"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Unified/NebentypusHeckeRingHom.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "378dfa274fb6e95699996ff56a90e18d8b55b501",
+      "size": 73211,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/378dfa274fb6e95699996ff56a90e18d8b55b501"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Unified/RingTransport.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66bc17b3b00daef8191b14beea2186f8d3140b24",
+      "size": 16439,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/66bc17b3b00daef8191b14beea2186f8d3140b24"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Unified/ShimuraHom.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a18fe9290d9745f43c964b1afc35278becb2df3",
+      "size": 24567,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/4a18fe9290d9745f43c964b1afc35278becb2df3"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GL2/Unified/TwistedHeckeRing.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "833228ea44ade4ac1579d5b90221967de8ae3dac",
+      "size": 53786,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/833228ea44ade4ac1579d5b90221967de8ae3dac"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "734c9879d33d977c248992a6b2c73a2094840d5b",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/734c9879d33d977c248992a6b2c73a2094840d5b"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7eeca9a6ad8719106f68325bf4eb51b862e7a2b",
+      "size": 20699,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f7eeca9a6ad8719106f68325bf4eb51b862e7a2b"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/CongruenceHecke.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "871ea4c1d069361a2e96131d3cee5b11c8e713f0",
+      "size": 2476,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/871ea4c1d069361a2e96131d3cee5b11c8e713f0"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/CongruenceHecke",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1dcff2ac2b9ea36cbe291840eb1795bc9089da07",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/1dcff2ac2b9ea36cbe291840eb1795bc9089da07"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/CongruenceHecke/AtkinLehner.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29e21537d4b7430df3e571e08f556f9ad5c4c72d",
+      "size": 50820,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/29e21537d4b7430df3e571e08f556f9ad5c4c72d"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/CongruenceHecke/DegreeCombinatorics.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8145a756f5940f292c8dfbb9c77cc60e740eb0e3",
+      "size": 35171,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/8145a756f5940f292c8dfbb9c77cc60e740eb0e3"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/CongruenceHecke/Foundation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91e0ed6031433767017242f96b7615077749dd73",
+      "size": 21855,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/91e0ed6031433767017242f96b7615077749dd73"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/CongruenceHecke/Presentation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3b544287cd219aa1ab1ed66c33c6699832be48c",
+      "size": 31577,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/a3b544287cd219aa1ab1ed66c33c6699832be48c"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/CongruenceHecke/Props.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "238cb402f57cc0e356285e75b58b6dd56d05b210",
+      "size": 43511,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/238cb402f57cc0e356285e75b58b6dd56d05b210"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/CongruenceHecke/Surjectivity.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23453be8e1a52e24c6d218f6c1cd1826d571f69b",
+      "size": 91353,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/23453be8e1a52e24c6d218f6c1cd1826d571f69b"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/CoprimeMul.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2103af9f311312be7c91b7b17ba49f0acdd405f",
+      "size": 45018,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c2103af9f311312be7c91b7b17ba49f0acdd405f"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/CosetDecomposition.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a7cf97778ba42aa8cb3d0c807c95d8fd415eecc",
+      "size": 3807,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/2a7cf97778ba42aa8cb3d0c807c95d8fd415eecc"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/Degree.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4aedcc71ee1f651714f730c3092b0a7f0ae82a09",
+      "size": 12288,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/4aedcc71ee1f651714f730c3092b0a7f0ae82a09"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/DiagonalCosets.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a80acc26da67557eecefa828d7cb08f1ba0d4918",
+      "size": 55848,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/a80acc26da67557eecefa828d7cb08f1ba0d4918"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/PolynomialRing.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c80a277d822da70015f3ae18da6139f547754918",
+      "size": 52842,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c80a277d822da70015f3ae18da6139f547754918"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/PrimeDecomposition.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2fb844a141240227b3f146464d9fdaa88081a67",
+      "size": 5678,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/b2fb844a141240227b3f146464d9fdaa88081a67"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/SL2Surjection.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91db52b1f5690f860c55d33c286dbde328c6d561",
+      "size": 9366,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/91db52b1f5690f860c55d33c286dbde328c6d561"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/SLnTransvection.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24aa10151cf26e7726fb29a790785a6bc2221d03",
+      "size": 27694,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/24aa10151cf26e7726fb29a790785a6bc2221d03"
+    },
+    {
+      "path": "LeanModularForms/HeckeRIngs/GLn/TransposeAntiInvolution.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1c970925fbb0073b06ff55cd2b14d4bc760bc91",
+      "size": 4040,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/a1c970925fbb0073b06ff55cd2b14d4bc760bc91"
+    },
+    {
+      "path": "LeanModularForms/Modularforms",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a559cae9bc6eacadcf6b7284b7658f9d90ee825a",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/a559cae9bc6eacadcf6b7284b7658f9d90ee825a"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/AtImInfty.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a5549e47ea2e47821741788bc56cc94f17e31aa",
+      "size": 1391,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/8a5549e47ea2e47821741788bc56cc94f17e31aa"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/DimGenCongLevels",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4238fd977dd034946119fe7eae76bbf2d353c869",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/4238fd977dd034946119fe7eae76bbf2d353c869"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/DimGenCongLevels/Auxiliary.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "952a89dac06c06deeec90fc0c631160b14d6889e",
+      "size": 8295,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/952a89dac06c06deeec90fc0c631160b14d6889e"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/DimGenCongLevels/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d0acc46386506d91d2e5695147f685d659b681b",
+      "size": 2493,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/4d0acc46386506d91d2e5695147f685d659b681b"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/DimGenCongLevels/FiniteDimensional.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "975b806df4d15fc9167c3424ba02f6e9e1e296fc",
+      "size": 4155,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/975b806df4d15fc9167c3424ba02f6e9e1e296fc"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/DimGenCongLevels/NormReduction.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cab06f8f179256487ce574ae0a334a16ddbc3bfe",
+      "size": 5032,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/cab06f8f179256487ce574ae0a334a16ddbc3bfe"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/DimGenCongLevels/NormTransfer.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e1fdf257c184ac6b4bc7ac18631fbbab7d5a189",
+      "size": 12927,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/2e1fdf257c184ac6b4bc7ac18631fbbab7d5a189"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/DimensionFormulas.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9530bc1fb2882798348c3d31aa46155c4529dd32",
+      "size": 10311,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/9530bc1fb2882798348c3d31aa46155c4529dd32"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/ForMathlib_Cusps.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3188eda0907def96616f2e8e93c6f0aeae1af6c6",
+      "size": 1153,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/3188eda0907def96616f2e8e93c6f0aeae1af6c6"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/IsCuspForm.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7a38c5365eb5464d40dfbb8166cd6e6e43b6591",
+      "size": 1930,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f7a38c5365eb5464d40dfbb8166cd6e6e43b6591"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/LFunction.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b58f1a81b724a6759a654cc0040c93ce971b962",
+      "size": 8534,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/7b58f1a81b724a6759a654cc0040c93ce971b962"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/PSL2Action.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e1f55156796a0c80419955348b7677959d59ffe",
+      "size": 35027,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/9e1f55156796a0c80419955348b7677959d59ffe"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/PeterssonInner.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a609d041adcb1d145850fccad40efc1078c756ad",
+      "size": 3025,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/a609d041adcb1d145850fccad40efc1078c756ad"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/PeterssonInnerProduct.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a21b8ab7696cbb26cbe1fa6192f8f1693466a1fc",
+      "size": 22163,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/a21b8ab7696cbb26cbe1fa6192f8f1693466a1fc"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/PeterssonLevelN.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d529021e05362ad2e9ff19cd48a2adce9995aa26",
+      "size": 48805,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/d529021e05362ad2e9ff19cd48a2adce9995aa26"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/QExpansionSlash.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fb3a6df14665e871cc80b0ec4227e78c4e76429",
+      "size": 19796,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/5fb3a6df14665e871cc80b0ec4227e78c4e76429"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/ResToImagAxis.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aff1a72ee75ffb7b303a6d2fc1381fe7a6e430f6",
+      "size": 13707,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/aff1a72ee75ffb7b303a6d2fc1381fe7a6e430f6"
+    },
+    {
+      "path": "LeanModularForms/Modularforms/SlashActionAuxil.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d47e02d5d4b4049419d740ac67aec6eb9a60b72",
+      "size": 12404,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/5d47e02d5d4b4049419d740ac67aec6eb9a60b72"
+    },
+    {
+      "path": "LeanModularForms/SMOObligations.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b2bced5d31e3068e25b19101fe3ef0bbdb91465",
+      "size": 12487,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/4b2bced5d31e3068e25b19101fe3ef0bbdb91465"
+    },
+    {
+      "path": "LeanModularForms/SMOObligations",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "edd95eb0161012ed038ddc823eea0e4c871fb054",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/edd95eb0161012ed038ddc823eea0e4c871fb054"
+    },
+    {
+      "path": "LeanModularForms/SMOObligations/DescentCosets.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0e83e1dc74792d49ba7e91f16a77979389410e8",
+      "size": 62682,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f0e83e1dc74792d49ba7e91f16a77979389410e8"
+    },
+    {
+      "path": "LeanModularForms/SMOObligations/Lemma4_6_14.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d17ec20f6c4ef66b1f95f0da2127c5d93061b68",
+      "size": 64044,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/2d17ec20f6c4ef66b1f95f0da2127c5d93061b68"
+    },
+    {
+      "path": "LeanModularForms/SMOObligations/Lemma4_6_8.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3799878d797113b227742910c33dcf7d958a915e",
+      "size": 21164,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/3799878d797113b227742910c33dcf7d958a915e"
+    },
+    {
+      "path": "LeanModularForms/SMOObligations/LevelCommute.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7858bf59defece0308f01de07cda2836002559a",
+      "size": 30727,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/b7858bf59defece0308f01de07cda2836002559a"
+    },
+    {
+      "path": "LeanModularForms/SMOObligations/Miyake465.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f08961efebe13c9c9d41ac264fd1dcb44a50a721",
+      "size": 31945,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f08961efebe13c9c9d41ac264fd1dcb44a50a721"
+    },
+    {
+      "path": "LeanModularForms/SMOObligations/MiyakeDescend.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed500f49ae221c4e4d605bd0968d764d4d53371b",
+      "size": 29349,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/ed500f49ae221c4e4d605bd0968d764d4d53371b"
+    },
+    {
+      "path": "LeanModularForms/SMOObligations/SquarefreeDecomp.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4887cc7dd8b4c8f5b7b722556907f37db4de359",
+      "size": 76835,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f4887cc7dd8b4c8f5b7b722556907f37db4de359"
+    },
+    {
+      "path": "LeanModularForms/SMOObligations/StrongMultiplicityOneFull.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b6a800f26b84e4015604af759192e02d494a5ee",
+      "size": 73121,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/9b6a800f26b84e4015604af759192e02d494a5ee"
+    },
+    {
+      "path": "LeanModularFormsHecke.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9263e020f6c5de52c43580c5204c2531fc58072",
+      "size": 3658,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/d9263e020f6c5de52c43580c5204c2531fc58072"
+    },
+    {
+      "path": "LeanModularFormsMain.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45c82083ba219443b6dddd294ca7299ca0e3fb65",
+      "size": 337,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/45c82083ba219443b6dddd294ca7299ca0e3fb65"
+    },
+    {
+      "path": "PROJECT_OVERVIEW.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66d16843b23730e2b0829d3067d8a829f0409c10",
+      "size": 62836,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/66d16843b23730e2b0829d3067d8a829f0409c10"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b88f40e9049dd4aead3e75dee696b16d40b4018",
+      "size": 216,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/0b88f40e9049dd4aead3e75dee696b16d40b4018"
+    },
+    {
+      "path": "REVIEW_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b597a26d64529a7a1480fb3a431d372a4a3b2a3",
+      "size": 16727,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/9b597a26d64529a7a1480fb3a431d372a4a3b2a3"
+    },
+    {
+      "path": "__pycache__",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4f376339af336ee9c308f6040e5237c8865311fc",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/4f376339af336ee9c308f6040e5237c8865311fc"
+    },
+    {
+      "path": "__pycache__/combine_rw.cpython-312.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9dd6d88a213c4e19c05d727279f715a19bc61e9d",
+      "size": 4386,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/9dd6d88a213c4e19c05d727279f715a19bc61e9d"
+    },
+    {
+      "path": "blueprint",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "08f4e9fdf5cb085851e387106bfb63517a7f4c14",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/08f4e9fdf5cb085851e387106bfb63517a7f4c14"
+    },
+    {
+      "path": "blueprint/lean_decls",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b944f798bd59b6310a32790102356f43817cffdd",
+      "size": 1793,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/b944f798bd59b6310a32790102356f43817cffdd"
+    },
+    {
+      "path": "blueprint/print",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6bce074855d73aed285db9d81cbec441cce242f7",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/6bce074855d73aed285db9d81cbec441cce242f7"
+    },
+    {
+      "path": "blueprint/print/print.aux",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a857588af81c5b7b472830058a4297e90e0b498",
+      "size": 7412,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/5a857588af81c5b7b472830058a4297e90e0b498"
+    },
+    {
+      "path": "blueprint/print/print.fdb_latexmk",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f98f0b061fd0e5e499114f57a6e19c2a4501d634",
+      "size": 12092,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f98f0b061fd0e5e499114f57a6e19c2a4501d634"
+    },
+    {
+      "path": "blueprint/print/print.fls",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29ebf3fdbe9352df717b5f1f2f8a4b906749942b",
+      "size": 57573,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/29ebf3fdbe9352df717b5f1f2f8a4b906749942b"
+    },
+    {
+      "path": "blueprint/print/print.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be7dbc568d9efc89628363192f2c78f3fbd14b40",
+      "size": 33951,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/be7dbc568d9efc89628363192f2c78f3fbd14b40"
+    },
+    {
+      "path": "blueprint/print/print.out",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed04b474e7feec2bf866a0f73b7f376037dfed0a",
+      "size": 2424,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/ed04b474e7feec2bf866a0f73b7f376037dfed0a"
+    },
+    {
+      "path": "blueprint/print/print.synctex.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01462da703e8fdaf5f863f1d7d77c609159beb73",
+      "size": 88878,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/01462da703e8fdaf5f863f1d7d77c609159beb73"
+    },
+    {
+      "path": "blueprint/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "05a5f9a7c48784b47e97d0741a90f9df3dd9d766",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/05a5f9a7c48784b47e97d0741a90f9df3dd9d766"
+    },
+    {
+      "path": "blueprint/src/01_hecke_pairs.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb3d9cba51b69d3e2234641cc4d72bcac7b8bbec",
+      "size": 4461,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/cb3d9cba51b69d3e2234641cc4d72bcac7b8bbec"
+    },
+    {
+      "path": "blueprint/src/02_ring_structure.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3025eeb1a50da9345d6d4b251cdf64558f45d272",
+      "size": 7663,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/3025eeb1a50da9345d6d4b251cdf64558f45d272"
+    },
+    {
+      "path": "blueprint/src/03_degree.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97f94f85d2a43e30279672bcdb771ec46a50ccbd",
+      "size": 3046,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/97f94f85d2a43e30279672bcdb771ec46a50ccbd"
+    },
+    {
+      "path": "blueprint/src/04_commutativity.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5e1f4917bef7184eee2df616b5100ada89f16c7",
+      "size": 5759,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f5e1f4917bef7184eee2df616b5100ada89f16c7"
+    },
+    {
+      "path": "blueprint/src/05_gl2_operators.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b18ea582b6ff6a0d36be363935e818904249ebba",
+      "size": 5456,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/b18ea582b6ff6a0d36be363935e818904249ebba"
+    },
+    {
+      "path": "blueprint/src/06_multiplication_table.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be7432d090d801ac0fcd647ae29e86fd67da9e84",
+      "size": 10827,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/be7432d090d801ac0fcd647ae29e86fd67da9e84"
+    },
+    {
+      "path": "blueprint/src/07_strong_multiplicity_one.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e2828f45b3e0264317b15e4a4ce51ddae89464b",
+      "size": 15771,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/4e2828f45b3e0264317b15e4a4ce51ddae89464b"
+    },
+    {
+      "path": "blueprint/src/blueprint.sty",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4155d78a435c6a2e71fb06eb403c7df5d852748",
+      "size": 65,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/e4155d78a435c6a2e71fb06eb403c7df5d852748"
+    },
+    {
+      "path": "blueprint/src/content.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "843c648916783e103f1002932e1f47ce533ad3a6",
+      "size": 1845,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/843c648916783e103f1002932e1f47ce533ad3a6"
+    },
+    {
+      "path": "blueprint/src/extra_styles.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db0a979294988135a423866863c5f71fc916246a",
+      "size": 483,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/db0a979294988135a423866863c5f71fc916246a"
+    },
+    {
+      "path": "blueprint/src/latexmkrc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "790dc186ff01beab23a403ff1a57f6bc4d962994",
+      "size": 182,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/790dc186ff01beab23a403ff1a57f6bc4d962994"
+    },
+    {
+      "path": "blueprint/src/macros",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "673c70a4b0e19af35aedfa4957e2eb2cfca01a53",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/673c70a4b0e19af35aedfa4957e2eb2cfca01a53"
+    },
+    {
+      "path": "blueprint/src/macros/common.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c71ffc6e127d403948f563b8f1a483b889c23ac",
+      "size": 821,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/5c71ffc6e127d403948f563b8f1a483b889c23ac"
+    },
+    {
+      "path": "blueprint/src/macros/print.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7870834394fb7c998a48fe6bbd643956bee7db17",
+      "size": 1102,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/7870834394fb7c998a48fe6bbd643956bee7db17"
+    },
+    {
+      "path": "blueprint/src/macros/web.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f37bc746c7e7ae85f27ee02b00b34d54203dee10",
+      "size": 261,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f37bc746c7e7ae85f27ee02b00b34d54203dee10"
+    },
+    {
+      "path": "blueprint/src/plastex.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca19a62afb09c380add9ffc94256282f7585287c",
+      "size": 263,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/ca19a62afb09c380add9ffc94256282f7585287c"
+    },
+    {
+      "path": "blueprint/src/print.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fafe05515db6e44c534c7bfc74fbd8802b22af3",
+      "size": 654,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/3fafe05515db6e44c534c7bfc74fbd8802b22af3"
+    },
+    {
+      "path": "blueprint/src/web.paux",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "399688d6ba1bf5748225722b36f32774b7bda0a6",
+      "size": 8041,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/399688d6ba1bf5748225722b36f32774b7bda0a6"
+    },
+    {
+      "path": "blueprint/src/web.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bd2d04e16e03ff74758ba607ce9ca27f94a762e",
+      "size": 634,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/7bd2d04e16e03ff74758ba607ce9ca27f94a762e"
+    },
+    {
+      "path": "blueprint/web",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bce7afd51a5c5317662959b00407e1e86cc7a907",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/bce7afd51a5c5317662959b00407e1e86cc7a907"
+    },
+    {
+      "path": "blueprint/web/chap-commutativity.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe3e3be295c59698d929561c43eef1112d1372b2",
+      "size": 24719,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/fe3e3be295c59698d929561c43eef1112d1372b2"
+    },
+    {
+      "path": "blueprint/web/chap-degree.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67707884511b82456c181ef89c2614ad0fec47fc",
+      "size": 15731,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/67707884511b82456c181ef89c2614ad0fec47fc"
+    },
+    {
+      "path": "blueprint/web/chap-gl2-operators.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75baf83cca9c2e15b3a7ed96e6f94a7da10e6f2d",
+      "size": 26653,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/75baf83cca9c2e15b3a7ed96e6f94a7da10e6f2d"
+    },
+    {
+      "path": "blueprint/web/chap-hecke-pairs.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e1efa51aa4d021f21b9790e1da8230574444451",
+      "size": 20717,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/8e1efa51aa4d021f21b9790e1da8230574444451"
+    },
+    {
+      "path": "blueprint/web/chap-multiplication-table.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08ca1e812cc99e72ab6972cc8362d33050456f71",
+      "size": 38897,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/08ca1e812cc99e72ab6972cc8362d33050456f71"
+    },
+    {
+      "path": "blueprint/web/chap-ring-structure.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "746797f6cf06f705761cb8599487773f1bca0764",
+      "size": 33242,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/746797f6cf06f705761cb8599487773f1bca0764"
+    },
+    {
+      "path": "blueprint/web/chap-smo.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd3ff1cf0477560f363ba6d0abcdd67a9568ba2d",
+      "size": 49617,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/cd3ff1cf0477560f363ba6d0abcdd67a9568ba2d"
+    },
+    {
+      "path": "blueprint/web/dep_graph_document.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39585f6713ce038469002a93c5e5b40208e909f4",
+      "size": 88241,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/39585f6713ce038469002a93c5e5b40208e909f4"
+    },
+    {
+      "path": "blueprint/web/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f29ff08fa2cd0315ef5417d9d9251982982ca7f0",
+      "size": 5974,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f29ff08fa2cd0315ef5417d9d9251982982ca7f0"
+    },
+    {
+      "path": "blueprint/web/js",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3f8ea573de378ba5fd73c005850b104e2cbd046a",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/3f8ea573de378ba5fd73c005850b104e2cbd046a"
+    },
+    {
+      "path": "blueprint/web/js/d3-graphviz.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e73751937ce61dbd5ed0e440eceaf0b06f08304c",
+      "size": 80111,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/e73751937ce61dbd5ed0e440eceaf0b06f08304c"
+    },
+    {
+      "path": "blueprint/web/js/d3.min.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "057c258906fe059a925ea8801419ccb2f817b926",
+      "size": 247829,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/057c258906fe059a925ea8801419ccb2f817b926"
+    },
+    {
+      "path": "blueprint/web/js/expatlib.wasm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2d01d07523545c1c0cab2bde2ab0596a48f835a",
+      "size": 100896,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f2d01d07523545c1c0cab2bde2ab0596a48f835a"
+    },
+    {
+      "path": "blueprint/web/js/graphvizlib.wasm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "370c87fd524a002a3dae8adda59e97072721d03a",
+      "size": 1099314,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/370c87fd524a002a3dae8adda59e97072721d03a"
+    },
+    {
+      "path": "blueprint/web/js/hpcc.min.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19b056936190d892ae922729b324988de5470e20",
+      "size": 117436,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/19b056936190d892ae922729b324988de5470e20"
+    },
+    {
+      "path": "blueprint/web/js/jquery.min.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebbcf41918eada33785c0e23fea90ffbd1240f1b",
+      "size": 95821,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/ebbcf41918eada33785c0e23fea90ffbd1240f1b"
+    },
+    {
+      "path": "blueprint/web/js/js.cookie.min.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90a76722326c796c08f38b694cd4ead7701fb852",
+      "size": 1681,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/90a76722326c796c08f38b694cd4ead7701fb852"
+    },
+    {
+      "path": "blueprint/web/js/plastex.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "433b922e81b7b9105581289307f450980b741d28",
+      "size": 2179,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/433b922e81b7b9105581289307f450980b741d28"
+    },
+    {
+      "path": "blueprint/web/js/showmore.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f60623c388cca7ba566d82e9d425f7202a2901f2",
+      "size": 2088,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f60623c388cca7ba566d82e9d425f7202a2901f2"
+    },
+    {
+      "path": "blueprint/web/js/svgxuse.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "296f7b94247690fd1e0f3a40ff3661bb4543732a",
+      "size": 9062,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/296f7b94247690fd1e0f3a40ff3661bb4543732a"
+    },
+    {
+      "path": "blueprint/web/sect0001.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3c8bccace2b1f57b7b0a5f662660b7aa879c0f6",
+      "size": 6389,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/a3c8bccace2b1f57b7b0a5f662660b7aa879c0f6"
+    },
+    {
+      "path": "blueprint/web/styles",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "024ec05ca6ff34421ed0362b6754791059811ed2",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/024ec05ca6ff34421ed0362b6754791059811ed2"
+    },
+    {
+      "path": "blueprint/web/styles/amsthm.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ef1973ffbed99fba754612c1f07425e61127140",
+      "size": 1318,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/0ef1973ffbed99fba754612c1f07425e61127140"
+    },
+    {
+      "path": "blueprint/web/styles/blueprint.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7be3668436b3588e7a05ab0e32cf40ac160e9ab",
+      "size": 103,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c7be3668436b3588e7a05ab0e32cf40ac160e9ab"
+    },
+    {
+      "path": "blueprint/web/styles/dep_graph.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cd34907262babf9038e8d916b327ad75eeb9bd9",
+      "size": 2950,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/6cd34907262babf9038e8d916b327ad75eeb9bd9"
+    },
+    {
+      "path": "blueprint/web/styles/extra_styles.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db0a979294988135a423866863c5f71fc916246a",
+      "size": 483,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/db0a979294988135a423866863c5f71fc916246a"
+    },
+    {
+      "path": "blueprint/web/styles/showmore.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1e7e8a6c8836fbfd8d87d7fe414f3d23379d29d",
+      "size": 175,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f1e7e8a6c8836fbfd8d87d7fe414f3d23379d29d"
+    },
+    {
+      "path": "blueprint/web/styles/theme-blue.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd8feacd22357acdba0bff5c5c37eff11c7c08a5",
+      "size": 11088,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/cd8feacd22357acdba0bff5c5c37eff11c7c08a5"
+    },
+    {
+      "path": "blueprint/web/styles/theme-green.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07627bce78174d6b7cd8c5579b2df0c9ee074274",
+      "size": 11052,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/07627bce78174d6b7cd8c5579b2df0c9ee074274"
+    },
+    {
+      "path": "blueprint/web/styles/theme-white.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a5044697f52e97d6841c479d94a2318e8c798e2",
+      "size": 10940,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/4a5044697f52e97d6841c479d94a2318e8c798e2"
+    },
+    {
+      "path": "blueprint/web/symbol-defs.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b71a724d403e408a4838fe8ffc2a1be083750d9d",
+      "size": 11977,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/b71a724d403e408a4838fe8ffc2a1be083750d9d"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a0331b4ff7c669fe9de6140023bc8058535453ab",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/a0331b4ff7c669fe9de6140023bc8058535453ab"
+    },
+    {
+      "path": "docs/plans",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3476118073bc92e2b2d1de0bcb2aa34815847dec",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/3476118073bc92e2b2d1de0bcb2aa34815847dec"
+    },
+    {
+      "path": "docs/plans/2026-03-06-hecke-ring-theorem-3-24.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec0b53236044960255d4a10e8cbcde9820d1061d",
+      "size": 16840,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/ec0b53236044960255d4a10e8cbcde9820d1061d"
+    },
+    {
+      "path": "docs/plans/2026-04-02-hecke-tp-general-api.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93eb408d72cc521126e40de939caf74cf06a66d5",
+      "size": 10635,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/93eb408d72cc521126e40de939caf74cf06a66d5"
+    },
+    {
+      "path": "docs/plans/2026-04-08-phase5-adjoint-completion.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01a21eb9b4f2fc8279c67df4e4fdb8a2038e57e6",
+      "size": 10862,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/01a21eb9b4f2fc8279c67df4e4fdb8a2038e57e6"
+    },
+    {
+      "path": "docs/plans/2026-04-08-shimura-3-35-finish.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e508f0955244fcc07e2d0f5651d40d38f18f795b",
+      "size": 15539,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/e508f0955244fcc07e2d0f5651d40d38f18f795b"
+    },
+    {
+      "path": "docs/plans/2026-04-09-shimura-3-35-infrastructure.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4978c5be004a3d295b84fe6ff1f0e676fb1d851",
+      "size": 26373,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/c4978c5be004a3d295b84fe6ff1f0e676fb1d851"
+    },
+    {
+      "path": "docs/plans/2026-04-09-shimura-3-35-v2.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a049d80a57eb62efd4e20a70e284d8bdfdd6d24",
+      "size": 15441,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/2a049d80a57eb62efd4e20a70e284d8bdfdd6d24"
+    },
+    {
+      "path": "docs/plans/hecke-action-generalization.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e9d707472d96708125af85750a02a73029ff18d",
+      "size": 9224,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/5e9d707472d96708125af85750a02a73029ff18d"
+    },
+    {
+      "path": "docs/plans/mathlib-quality-audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1604cc6ab534c09b0bcb4109f1673d980bd12f16",
+      "size": 4867,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/1604cc6ab534c09b0bcb4109f1673d980bd12f16"
+    },
+    {
+      "path": "docs/plans/quotient-redesign.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd6a3181476e7a41ecbca27dd898acecae4efde0",
+      "size": 7394,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/fd6a3181476e7a41ecbca27dd898acecae4efde0"
+    },
+    {
+      "path": "docs/plans/strong-multiplicity-one-mathlib-audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "458650576aa2aa37aafa04c9a9a1273feed4ea92",
+      "size": 8623,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/458650576aa2aa37aafa04c9a9a1273feed4ea92"
+    },
+    {
+      "path": "docs/plans/strong-multiplicity-one.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a943e18655f73beb175aecf0f14260df04bc500c",
+      "size": 41022,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/a943e18655f73beb175aecf0f14260df04bc500c"
+    },
+    {
+      "path": "docs/plans/theorem-3-20-plan.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bc01e1271a6fc01e506c1f54623a91d7b6232c7",
+      "size": 1736,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/1bc01e1271a6fc01e506c1f54623a91d7b6232c7"
+    },
+    {
+      "path": "docs/plans/ticket-6-degree-sorries.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f39cdbf6e9db3f699c6036cc5a05c0030018dc6",
+      "size": 7938,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/4f39cdbf6e9db3f699c6036cc5a05c0030018dc6"
+    },
+    {
+      "path": "docs/plans/tickets-congruence-hecke.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de3909b0ad61491a51ef638a8c60af0bf58917f5",
+      "size": 12827,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/de3909b0ad61491a51ef638a8c60af0bf58917f5"
+    },
+    {
+      "path": "docs/plans/tickets-remaining-sorries.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a8a04da5afb365ad16c8e661c60f60ffa9fb3a4",
+      "size": 4875,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/0a8a04da5afb365ad16c8e661c60f60ffa9fb3a4"
+    },
+    {
+      "path": "docs/plans/tickets-thm-3-35.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "326ae53beb10012dd1d7fc7f8637f116fc51d386",
+      "size": 3840,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/326ae53beb10012dd1d7fc7f8637f116fc51d386"
+    },
+    {
+      "path": "docs/superpowers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eb2ffab66748de133403bf009d4cddf152a1571b",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/eb2ffab66748de133403bf009d4cddf152a1571b"
+    },
+    {
+      "path": "docs/superpowers/plans",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fd989950992b1de4f828f423c825537238d5768d",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/fd989950992b1de4f828f423c825537238d5768d"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-03-13-ticket-9-theorem-3-24.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17f0f6126aa72324b336c10e5c34c63ed7c803cb",
+      "size": 19901,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/17f0f6126aa72324b336c10e5c34c63ed7c803cb"
+    },
+    {
+      "path": "lake-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39261693104ee6b097352cd673e0e8798f5df837",
+      "size": 3142,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/39261693104ee6b097352cd673e0e8798f5df837"
+    },
+    {
+      "path": "lakefile.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d79f6f934a76a2b99d550fdca98ecc720f377e41",
+      "size": 1291,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/d79f6f934a76a2b99d550fdca98ecc720f377e41"
+    },
+    {
+      "path": "lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0e00b3338bac0d6f050d9a64e277314a9f7830f",
+      "size": 29,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/f0e00b3338bac0d6f050d9a64e277314a9f7830f"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8cc0ec0642e6ef14653f75c28aaf7b6084e8b860",
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/trees/8cc0ec0642e6ef14653f75c28aaf7b6084e8b860"
+    },
+    {
+      "path": "scripts/ci-pages.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d29aa14dc0962fc9b00d3143f69273e0f6a8f9a6",
+      "size": 257,
+      "url": "https://api.github.com/repos/dozenalist/LeanModularForms/git/blobs/d29aa14dc0962fc9b00d3143f69273e0f6a8f9a6"
+    }
+  ],
+  "truncated": false
+}

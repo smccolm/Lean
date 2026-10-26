@@ -1,0 +1,68 @@
+{
+  "reviewedUTC": "2026-10-26T00:40:51.352207+00:00",
+  "scope": "DUB-17/18 actual all-weight characteristic-zero association, required local/regularity/image properties, arithmetic automorphy and literal higher symmetric-power continuation",
+  "queries": [
+    "Lean symmetric power automorphy proof github",
+    "Lean Sato Tate formalization github",
+    "Lean Deligne Galois formalization 2026",
+    "Karatarakis Deligne Lean github",
+    "CuspForm.exists_galoisRep_of_point",
+    "Lean satoTate theorem",
+    "Lean symmetric Newton Thorne formalization",
+    "Lean Kuga Scholl Galois",
+    "site:github.com/openai/math automorphy",
+    "site:github.com Lean Sato-Tate",
+    "site:github.com Lean symmetric-power continuation"
+  ],
+  "exactSourceComparisons": [
+    {
+      "file": "P2M/Sol/S_CuspForm_exists_galoisRep_of_point.lean.txt",
+      "sha256": "E922C5B4816F8DDC33B2DB36BC416474F3AC9AF7B5BBD3CE1F0BA19D2AED8A2E",
+      "identical": true
+    },
+    {
+      "file": "P2M/Sol/S_PDivisibleGroup_exists_basis_padicComplex_tateModule_eq_cyclotomicCharacter_pow_smul_of_hasDimension_of_ringOfIntegers.lean.txt",
+      "sha256": "330B48554E7E4B4B65E189837427074666621FB42B6F18E1A525E0F5980B6C2B",
+      "identical": true
+    }
+  ],
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticCoherentLocalH1Duality.lean",
+      "sha256": "D240A00BE338631F0A2665520DB07EC518E71EB23EE220CF53F84010D1FD5A61"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticSymmetricDeformationSelmer.lean",
+      "sha256": "ED873C8E2D776F5851945B939B79A5E173098EFE0B37560C3A9A37DEEC756836"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWittResidueLift.lean",
+      "sha256": "B33DDC4705C45DD910B6E72CCB89166EC68F6E337BFD65BC6CE5C18A861D9529"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticFramedUniversalRing.lean",
+      "sha256": "1FDDFB9862EED4BA2849B121175E43D2562AE57ACA5384B70726F7146112E361"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticFixedDeterminantUniversality.lean",
+      "sha256": "0F3CA5CB791CBA5BB653DA9A5E5F69E4432904722B456CB4F82047CF8280C801"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceArithmeticSupportPowers.lean",
+      "sha256": "F630A814E82B4CDD19C0F50A7E4BD2F6BC85F3571D1A1A6B9C07C53FFBEA4EB7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\WittVector\\Compare.lean",
+      "sha256": "BD3D6063916861CDDC17026F9B1DA3798356747F1F47FF06CD7343FA0C4CB211"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\Cyclotomic\\CyclotomicCharacter.lean",
+      "sha256": "DD947325BE3CC5A224E2DEF83E672E8BF39201A92CE314C1DA489694F2172BFD"
+    }
+  ],
+  "searchLimit": "Primary selected proof contracts reviewed, not exhaustive proof of nonexistence. Truncated GitHub trees are not absence evidence. No external build reproduced.",
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "acceptance": "16/20; DUB-17--20 OPEN."
+}

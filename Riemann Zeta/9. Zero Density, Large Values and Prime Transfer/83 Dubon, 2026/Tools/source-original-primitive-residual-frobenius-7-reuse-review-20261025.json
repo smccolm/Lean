@@ -1,0 +1,160 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> exact Frobenius and inertia compatibility for the existing actual primitive integral and residual representations -> original Tate specialization, integral coefficient and lattice basis comparison",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveResidualRealization.lean",
+      "sha256": "A314301484990D28252ABDFE9A6556784C71E9E4EC985C968CE58333BCA099F4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveIntegralLattice.lean",
+      "sha256": "E3148886DF31275D5B5F008C32ABB1FB6A5EC787507C05CABC33E258E9363FDC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStableLatticeResidualRealization.lean",
+      "sha256": "5957ADF1A06A54191FC923CDA72A9F918084DC0EAB5388CE73C8FA3751BA345A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePadicResidualLocalConsumer.lean",
+      "sha256": "10EE8F7F9FC3D84F67791D2B1159C9B7FE8C9BB4138B274E92B126DE5A6378FA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalSpecializationInertia.lean",
+      "sha256": "BEE6EBC796BCFB5121F4A631DBEA6625CE0E26CBD2D4FC7019B5876EF93B8A04"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalSpecializationQuadratic.lean",
+      "sha256": "2EBDE011B3E5F9FED0E8498E23808CD00C8F595106EFBA48E02EC6DBE2E49D9A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveLocalCoefficients.lean",
+      "sha256": "0EBA3EAE554D519E5244AF28BC33E6E151242C847E15F95BE842078AD42D0D74"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveResidualHeckeCharacter.lean",
+      "sha256": "69E86C11997CF917707EBC1465AF973DF6AE96645F20F8864E438197874CE932"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveGaloisAlternative.lean",
+      "sha256": "7B4FD282B218854C4B088B2739B32F882676FBB61A0E48D8FF020C5C6BC6815C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFinitePadicSpecialization.lean",
+      "sha256": "A50442A4F82B5A61D3026B4D41F19296053C7D39E1C8E003D314A9889181C2B0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPadicEigencharacter.lean",
+      "sha256": "34F844EEF8D074F5EC841504B7561A75DE1023B2E92ECA8206A5C92EEE06FDA6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Charpoly\\ToMatrix.lean",
+      "sha256": "8076D4AFED74547F562A596C3945CC7A213BF4D88D63B5B4F3E240B83B0BA61A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Matrix\\Charpoly\\Basic.lean",
+      "sha256": "D9CE4527739224C1C9F82F4ADBF2C5C9540E87DAC047193B5A1B8FD1A158CE26"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Matrix\\Charpoly\\Coeff.lean",
+      "sha256": "BDB59EB11FB976B465D3C1A9B92F1BAF65CE478E7D6D06D100F6E5733791FD3F"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-frobenius-route-566.json",
+    "sha256": "F215CD6C8A83D01B8FBC105FD882A469BAE32AA345F09781DC7A9E7E030A6E11",
+    "review": {
+      "scope": 566,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> exact Frobenius and inertia compatibility for the existing actual primitive integral and residual representations -> original Tate specialization, integral coefficient and lattice basis comparison",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveResidualRealization.lean",
+          "sha256": "A314301484990D28252ABDFE9A6556784C71E9E4EC985C968CE58333BCA099F4"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveIntegralLattice.lean",
+          "sha256": "E3148886DF31275D5B5F008C32ABB1FB6A5EC787507C05CABC33E258E9363FDC"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStableLatticeResidualRealization.lean",
+          "sha256": "5957ADF1A06A54191FC923CDA72A9F918084DC0EAB5388CE73C8FA3751BA345A"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePadicResidualLocalConsumer.lean",
+          "sha256": "10EE8F7F9FC3D84F67791D2B1159C9B7FE8C9BB4138B274E92B126DE5A6378FA"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalSpecializationInertia.lean",
+          "sha256": "BEE6EBC796BCFB5121F4A631DBEA6625CE0E26CBD2D4FC7019B5876EF93B8A04"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalSpecializationQuadratic.lean",
+          "sha256": "2EBDE011B3E5F9FED0E8498E23808CD00C8F595106EFBA48E02EC6DBE2E49D9A"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveLocalCoefficients.lean",
+          "sha256": "0EBA3EAE554D519E5244AF28BC33E6E151242C847E15F95BE842078AD42D0D74"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveResidualHeckeCharacter.lean",
+          "sha256": "69E86C11997CF917707EBC1465AF973DF6AE96645F20F8864E438197874CE932"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveGaloisAlternative.lean",
+          "sha256": "7B4FD282B218854C4B088B2739B32F882676FBB61A0E48D8FF020C5C6BC6815C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFinitePadicSpecialization.lean",
+          "sha256": "A50442A4F82B5A61D3026B4D41F19296053C7D39E1C8E003D314A9889181C2B0"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPadicEigencharacter.lean",
+          "sha256": "34F844EEF8D074F5EC841504B7561A75DE1023B2E92ECA8206A5C92EEE06FDA6"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Charpoly\\ToMatrix.lean",
+          "sha256": "8076D4AFED74547F562A596C3945CC7A213BF4D88D63B5B4F3E240B83B0BA61A"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Matrix\\Charpoly\\Basic.lean",
+          "sha256": "D9CE4527739224C1C9F82F4ADBF2C5C9540E87DAC047193B5A1B8FD1A158CE26"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Matrix\\Charpoly\\Coeff.lean",
+          "sha256": "BDB59EB11FB976B465D3C1A9B92F1BAF65CE478E7D6D06D100F6E5733791FD3F"
+        }
+      ],
+      "shorterRoute": "Reuse the existing original primitive residual realization rather than constructing another local coefficient field or stable lattice. Its original spanning specialization lets the proved determinant, Frobenius quadratic and inertia theorems apply to that same representation. Native linear-equivalence conjugacy, injectivity of polynomial coefficient extension and Matrix.charpoly_map transport the polynomial through the existing basis and residue map. The original Fourier coefficient integrality supplies its exact integral lift. For the next all-weight source branch, inspected SourcePrimitiveGaloisAlternative and SourceOriginalFinitePadicSpecialization: compatibility with a prescribed reduction remains required; the existing originalPadicHeckeEigencharacter already accepts a prescribed coefficient embedding, so that narrower route is available without rebuilding the Tate geometry.",
+      "assumptionsToDischarge": "The existing integral and residual representations are trivial on source inertia away from the level and Tate prime. The original field Frobenius polynomial descends to the actual integral basis and reduces to the exact original Fourier residue polynomial. The residual trace and determinant follow in the actual finite characteristic-ell residue field. The assembled consumer supplies every specialization, lattice-basis and residue-map premise from the existing genuine construction.",
+      "remaining": "Prescribed coefficient-reduction compatibility, comparison to the source arithmetic quotient and local norm interfaces, residual association, arithmetic automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN.",
+      "scratchImportClosure": [
+        "SourceOriginalPrimitiveResidualFrobeniusRealization",
+        "SourceOriginalResidualInertia",
+        "SourceIntegralMatrixCharpoly",
+        "SourceMatrixIntertwinerCharpoly",
+        "SourceOriginalResidualFrobeniusCharpoly",
+        "SourceRankTwoCharpolyCoefficients",
+        "SourceOriginalSpecializationFrobeniusCharpoly",
+        "SourceCyclotomicFrobeniusCharpoly",
+        "SourceRankTwoQuadraticTrace",
+        "SourceValuationCyclotomicFrobenius",
+        "SourceValuationFrobeniusRoots",
+        "SourceOriginalSpecializationCyclotomicDeterminant",
+        "SourceSpecializationBaseChangeIntertwiner",
+        "SourceImageSpecializationDeterminant",
+        "SourceAlternatingRankTwoDeterminant",
+        "SourceImageSpecializationPairing",
+        "SourcePrimitiveOriginalTateGalois",
+        "SourcePolynomialCommutant",
+        "SourceOriginalSpecializationPrimitiveImage",
+        "SourceSpanningProjectorImage",
+        "SourceOriginalSpecializationProjector",
+        "SourcePolynomialSpecialization"
+      ]
+    }
+  },
+  "discharged": "The existing constructed primitive integral and residual representations now have the exact source Frobenius polynomial and inertia identities. Original Tate specialization, the separately proved cyclotomic determinant and Frobenius quadratic, native change-of-basis invariance, coefficient injectivity and entrywise reduction supply all local compatibility. The integral Fourier coefficient is the literal original coefficient whose integrality was previously proved. The residual trace and determinant are extracted in the actual finite characteristic-ell residue field. The assembled consumer retains the original local field, continuity, Hecke eigenvalues, spanning specialization, Galois action, lattice basis comparison and residue map without extra local-compatibility assumptions.",
+  "remaining": "Prescribed coefficient-reduction compatibility, comparison to the source arithmetic quotient and local norm interfaces, residual association, arithmetic automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

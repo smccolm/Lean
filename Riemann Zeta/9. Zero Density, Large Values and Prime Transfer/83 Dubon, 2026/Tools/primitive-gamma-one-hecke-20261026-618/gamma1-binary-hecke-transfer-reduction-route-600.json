@@ -1,0 +1,55 @@
+{
+  "scope": 600,
+  "chain": "DUB-17/18 -> literal higher continuation -> arithmetic automorphy -> original all-weight adic association -> geometric Gamma1 realization -> actual surjective-transfer Hecke identity -> base change with the original binary Hecke coefficient morphism",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceBaseChange.lean",
+      "sha256": "568424F1A5749E7D74A114EC0CC099854433B969AD729A1AE287E25A3DD1FFF1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverHeckeTraceBaseChange.lean",
+      "sha256": "E2931186F9C4D2B3791D2B4825028994510313A83D88B08EB100F72C597583AA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceTower.lean",
+      "sha256": "AD278B75D2192A1709D4DC94F4A19D46F085E652278DE0F940E13027D55EF023"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\OriginalCohomologyTraceNaturality.lean",
+      "sha256": "28229F47B16A5B90FB289B53F8F5C32943BCEEB78D458C44D564B232434E7870"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryHeckeMorphism.lean",
+      "sha256": "B1B4C8905B4C1D9ED15E8B26B17AE684EF15353CC99C7A28F80C7D3A711CB46E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryHeckeCohomology.lean",
+      "sha256": "DE206C49A5AF00E5BDB066AC1FEF11C4CAF692BCD4CDAB3B563A016FB9A36ACD"
+    }
+  ],
+  "shorterRoute": "The existing trace coefficient-naturality theorem upgrades proved native H1 base change directly. Apply it to the original binary Hecke morphism and the already proved actual Gamma1 coset-surjectivity result, then retain the original upper-subgroup trace. No new coefficient action, finite-sum naturality development or desired Hecke identity is assumed.",
+  "assumptionsToDischarge": "Reduce the actual original binary Hecke operator after the literal Gamma1-image trace to the precise iterated native trace with the exact original coefficient morphism.",
+  "remaining": "Combine the iterated trace with proved trace composition and exact Gamma1 subgroup/correspondence reindexings to obtain the full surjective-transfer Hecke identity. Arithmetic geometric/diamond comparison, Galois realization, all-weight association, local/image/regularity, automorphy and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "elaborationRepair": "The earlier full-target change with inferred source representation timed out at the pinned defaults. Its source/log/exit are preserved in h1-trace-coefficient-600-before-explicit-composition. An explicit composition lemma with its source representation supplied compiles cleanly at unchanged proof limits.",
+  "scratchImportClosure": [
+    "SourceGammaOneCoverBinaryHeckeTrace",
+    "SourceGammaOneCoverHeckeTraceBaseChange",
+    "SourceH1TraceBaseChange",
+    "SourceShapiroH1CosetTrace",
+    "SourceShapiroH1CocycleComparison",
+    "SourceNativeCoinductionCosetTrace",
+    "SourceShapiroH1PullbackNaturality",
+    "SourceCohomologyTracePullbackCoefficients",
+    "SourceGammaOneCoverFiniteIndex",
+    "SourceGammaOneDiagonalHom",
+    "SourceBinaryPermutationCongruence",
+    "SourceBinaryPrimePowerPermutation",
+    "SourcePermutationCoefficientQuotient",
+    "SourceGammaOneCongruenceCover",
+    "SourceGammaOneCoverHeckeTraceCosets",
+    "SourcePrincipalCoprimeReduction",
+    "SourceGammaOneCoverImageHecke",
+    "SourceGammaOneCoverImage",
+    "SourceH1TraceBaseChangeCoefficient"
+  ]
+}

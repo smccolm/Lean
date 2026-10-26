@@ -1,0 +1,62 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T10:39:54.758353+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneHeckeGeometricSubgroup"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGeometricSubgroup.lean",
+      "sha256": "C4398729974D5055AE241BFC208D90F2176D9539265595D25E628ACD13A90BB0",
+      "oleanSha256": "F7BA2D989B45129997EB16F92E5B7E923235530C41305DB11C6CB28A0CA8E4B1"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.geometricToUpper_upperToGeometric",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_geometricToUpper",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_conjugation",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_matrix",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricToUpper",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeUpperGeometricEquiv"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.geometricToUpper_upperToGeometric",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_geometricToUpper",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_conjugation",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_matrix",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_smul"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricToUpper",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeUpperGeometricEquiv"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricSubgroupAudit1.log",
+  "logSha256": "7B118EC6848A8FD9CB95B1A3ED18F8062ABA20C69D92AD121097C71404E17530",
+  "auditSha256": "8413E2408A0EE9842ED79EF449224D8250D63B23B07A0353C2D8F7C9BE231DFC",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 14,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 15,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricSubgroupDependencyAudit1.log",
+  "dependencyAuditSha256": "7B46988F24AC9EEAE68006C4C1A69219D23FFDFB77BD44D7338CE59BC9D862F6",
+  "dependencyAuditSourceSha256": "47A0FDD700AD12D9E4F7484E5D5C70C76378F5A12B10D7C23CFFEC08A74B340E",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckeUpperGeometricEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_conjugation",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_matrix",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_smul"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of original finite Gamma1 Hecke characters -> geometric/H1 comparison preserving original homogeneous coefficients -> exact upper/geometric correspondence subgroup and analytic matrix equation.",
+  "discharged": "The actual upper correspondence subgroup inside Gamma1(M), defined by upper-right divisibility, is isomorphic to Gamma1(M) intersect Gamma0(d*M). The forward map is exactly the original diagonal conjugation, and the inverse is the existing integral level-raising matrix. Both inverse laws and the analytic matrix/action identity are proved at every positive index.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. This group isomorphism does not itself identify the Picard and H1 operators. Their transpose/diamond conventions and the original homogeneous matrix coefficient action still require exact comparison. The full/parabolic H1 distinction, Frobenius/inertia, finite-character Galois realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-geometric-subgroup-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "5A649E26508DF970D319C1C145710595C362B656FBEC4B68F5A5419BC735E156",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

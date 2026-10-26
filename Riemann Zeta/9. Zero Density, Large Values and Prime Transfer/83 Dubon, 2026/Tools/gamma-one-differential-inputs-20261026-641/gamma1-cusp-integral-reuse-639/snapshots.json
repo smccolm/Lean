@@ -1,0 +1,15 @@
+{
+  "fetchedUTC": "2026-10-26T12:20:16.412880+00:00",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_isIntegral_adjoin_coeffEmb_jq_inv_of_mul_thetaL_eq_qExpansion_of_gamma_le.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_isIntegral_adjoin_coeffEmb_jq_inv_of_mul_thetaL_eq_qExpansion_of_gamma_le.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_isIntegral_adjoin_coeffEmb_jq_inv_of_mul_thetaL_eq_qExpansion_of_gamma_le.lean.txt",
+      "gitBlob": "125d7de5cfe521e5e20733ffeac4f1fe80b57006",
+      "sha256": "2F6412152CDBD3993DAA58296C31ABD70463DF5DD1B776178FA213A888D8C801",
+      "bytes": 43906
+    }
+  ]
+}

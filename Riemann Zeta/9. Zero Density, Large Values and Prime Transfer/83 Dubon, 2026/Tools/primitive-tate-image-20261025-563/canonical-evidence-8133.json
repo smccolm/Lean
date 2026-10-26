@@ -1,0 +1,374 @@
+{
+  "status": "Canonical PASS; all failed helper evidence preserved with fresh successors. No audited source was rewritten or used audit rerun.",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_original_primitive_tate_image_ownership_8133.py",
+      "path": "Tools/primitive-tate-image-20261025-563/compare_original_primitive_tate_image_ownership_8133.py",
+      "sha256": "596CEBBFBA824C86F76843A1968A63850886F7244BEC601A492271BF2124380E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_original_primitive_tate_image_ownership_8133b.py",
+      "path": "Tools/primitive-tate-image-20261025-563/compare_original_primitive_tate_image_ownership_8133b.py",
+      "sha256": "E24B53EF69CC5D21198CCA14587C54B5A21CBD442A8AF8CAF1DBE3F151EFB805"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integrate_source_original_primitive_tate_image_8133.py",
+      "path": "Tools/primitive-tate-image-20261025-563/integrate_source_original_primitive_tate_image_8133.py",
+      "sha256": "EF905D53C0A3ADD5790677BA2E3C839011FCB1A9307313CC1D515A4FBBF0FE95"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_original_primitive_tate_image_global_ownership_8133.py",
+      "path": "Tools/primitive-tate-image-20261025-563/prepare_original_primitive_tate_image_global_ownership_8133.py",
+      "sha256": "D90D6B96E1A2B87907F62BBBFD5381D7CD53AEBF1C18C1316BA64B6384B285AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_original_primitive_tate_image_global_ownership_8133b.py",
+      "path": "Tools/primitive-tate-image-20261025-563/prepare_original_primitive_tate_image_global_ownership_8133b.py",
+      "sha256": "93450BF5886C14AF81D0326CDCEA65FCBA7CB9C793C1ED44709F7C90B85F3AC6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_original_primitive_tate_image_production_ownership_8133.py",
+      "path": "Tools/primitive-tate-image-20261025-563/prepare_original_primitive_tate_image_production_ownership_8133.py",
+      "sha256": "AD2CFC66BCFCE4FC92E9C4182F06E84723930BED3CC8CBD30E71321FD215F318"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_original_primitive_tate_image_promotion_8133.py",
+      "path": "Tools/primitive-tate-image-20261025-563/prepare_original_primitive_tate_image_promotion_8133.py",
+      "sha256": "D05C3BA93C6D9E5749EE43E1A9E6E03262E8983FDE318C481ED2A1C7C5AE198C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_original_primitive_tate_image_scratch_ownership_8133.py",
+      "path": "Tools/primitive-tate-image-20261025-563/prepare_original_primitive_tate_image_scratch_ownership_8133.py",
+      "sha256": "4130BD1F845F66352918471C89E2E2C0D029904FF3E4AF63AFCDDC57861DD002"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_original_primitive_tate_image_8133.py",
+      "path": "Tools/primitive-tate-image-20261025-563/record_source_original_primitive_tate_image_8133.py",
+      "sha256": "3EED4B486E9324EF2508224DBBF288912222ECF5B3329FBA1BA53DB18A0A8F7B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_original_primitive_tate_image_8133b.py",
+      "path": "Tools/primitive-tate-image-20261025-563/record_source_original_primitive_tate_image_8133b.py",
+      "sha256": "31A1CED7D1437A431A8A186E238B492800714A59DD8B1EA33C7398403CC347A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-tate-image-global-ownership-successor-8133b.json",
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-primitive-tate-image-global-ownership-successor-8133b.json",
+      "sha256": "E551A4D513896C4A8BB258E22A1EDE7CF2A99767267AA35755FDC74A4BCCDAB3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-tate-image-ownership-comparison-8133.json",
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-primitive-tate-image-ownership-comparison-8133.json",
+      "sha256": "05F1549FD9C9B279DF2E7FF4FFF5B675361A167E2992F6A1E1350360109E9D47"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-tate-image-ownership-diagnostic-8133.json",
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-primitive-tate-image-ownership-diagnostic-8133.json",
+      "sha256": "8F46E1C65CDF64077D3F9DA4B8DF761E18AF23D1379472C3325EF35B3C0B779F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-tate-image-production-build-8133.exit",
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-primitive-tate-image-production-build-8133.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-tate-image-production-build-8133.log",
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-primitive-tate-image-production-build-8133.log",
+      "sha256": "0C395B0B023E68730DC331BADF0E4A4B1C2CC5D2871A9F0074E3CDF8F53DB1AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-tate-image-scratch-ownership-8133.json",
+      "path": "Tools/primitive-tate-image-20261025-563/source-original-primitive-tate-image-scratch-ownership-8133.json",
+      "sha256": "1E39EA8DF2B30251FF2E3A48645D9A6B34144F39FE2051A8EAA1FBF14A03E875"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientWeilDependencyAudit6Production8133.exit",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalCoefficientWeilDependencyAudit6Production8133.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientWeilDependencyAudit6Production8133.lean",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalCoefficientWeilDependencyAudit6Production8133.lean.txt",
+      "sha256": "86E98469D4D0D3670F3482E6932DD86632F409D4CF9BC1A438BC0FD959A053DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalCoefficientWeilDependencyAudit6Production8133.log",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalCoefficientWeilDependencyAudit6Production8133.log",
+      "sha256": "F2D47D5E55AA89095907439F60C03A928FFE58B19C309A26900F5D4B75AD1BE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveRankTwoDependencyAudit17bProduction8133.exit",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoDependencyAudit17bProduction8133.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveRankTwoDependencyAudit17bProduction8133.lean",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoDependencyAudit17bProduction8133.lean.txt",
+      "sha256": "52C1E986D3A7547464A57C880F40E259CA4A055D5E142B2B7DD2FE572364841C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveRankTwoDependencyAudit17bProduction8133.log",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveRankTwoDependencyAudit17bProduction8133.log",
+      "sha256": "FD2E6294E0AE089255D07A30456CBD8544B7ED56661522B8D9F9694BB3F91FDE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageGlobalOwnership8133.exit",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageGlobalOwnership8133.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageGlobalOwnership8133.lean",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageGlobalOwnership8133.lean.txt",
+      "sha256": "B00006D238DE31441AF6FE66E952CCF6B66A1C031209F88356B2F0385838395B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageGlobalOwnership8133.log",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageGlobalOwnership8133.log",
+      "sha256": "33E21E05F13E9AA36845B400470C0922A749F1665D99A85FC014AD3A0220A88A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageGlobalOwnership8133b.exit",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageGlobalOwnership8133b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageGlobalOwnership8133b.lean",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageGlobalOwnership8133b.lean.txt",
+      "sha256": "7E7301A8B8840FC0E528132A93F3297D0113DD5E09C200BC3CF3BD82F0916821"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageGlobalOwnership8133b.log",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageGlobalOwnership8133b.log",
+      "sha256": "CB2C34117EEDB3B162F83B8918097CB9408D48632A097F1AFCEF0CA122D8168C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageOwnership8133.exit",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageOwnership8133.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageOwnership8133.lean",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageOwnership8133.lean.txt",
+      "sha256": "5A475387EA4E9A9E373549EE11A704D83513261AED7759B6D7028B3063187471"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageOwnership8133.log",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageOwnership8133.log",
+      "sha256": "B5FAEC5C58B736BC3E9B1D7780B80D4B83DC7FD42834CF2D93A638E6FFC4E14D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageProductionAudit8133.exit",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageProductionAudit8133.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageProductionAudit8133.lean",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageProductionAudit8133.lean.txt",
+      "sha256": "775600BA4297F512DE3A84B5199A2BAB91231A58EDD35AADC7E0180A63182220"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageProductionAudit8133.log",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageProductionAudit8133.log",
+      "sha256": "E1D4065B63AA1D55ADAA9F4C0CF81DB2520B829823643D5F59D064B24D4E0A99"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageScratchOwnership560For8133.exit",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageScratchOwnership560For8133.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageScratchOwnership560For8133.lean",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageScratchOwnership560For8133.lean.txt",
+      "sha256": "40377A36E4A2EEFFEC8F66DCB52D2D28E8DCF9942204F861FDEF9315D19D6423"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageScratchOwnership560For8133.log",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageScratchOwnership560For8133.log",
+      "sha256": "3127C9946FB2EF7740D77703C3B1CCA37057C0A3E483F975D4A4B2E57367E13C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageScratchOwnership561For8133.exit",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageScratchOwnership561For8133.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageScratchOwnership561For8133.lean",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageScratchOwnership561For8133.lean.txt",
+      "sha256": "5C21B0B9D1D7CC9BC690281289A7481741C9C654B83F3A43A2C8B9D72AC41955"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageScratchOwnership561For8133.log",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageScratchOwnership561For8133.log",
+      "sha256": "1067114B889646DCD8C6837FE33A2824883A69FE0D509B657406658D47E79469"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageScratchOwnership562For8133.exit",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageScratchOwnership562For8133.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageScratchOwnership562For8133.lean",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageScratchOwnership562For8133.lean.txt",
+      "sha256": "BFE4A46AFC63173AC732E5DCDD12334F488948EA3ACDCBB194BA90318AE75AF6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageScratchOwnership562For8133.log",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateImageScratchOwnership562For8133.log",
+      "sha256": "B779808A42862F7EEE9F8C1D9D87966D29D6B49E9D1C4E6234EBD3F981D03A21"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateRestrictionDependencyAudit8Production8133.exit",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateRestrictionDependencyAudit8Production8133.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateRestrictionDependencyAudit8Production8133.lean",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateRestrictionDependencyAudit8Production8133.lean.txt",
+      "sha256": "7145E04626788DA6CF562CA55196318088C459658B646DA4C28F1E26A5362051"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateRestrictionDependencyAudit8Production8133.log",
+      "path": "Tools/primitive-tate-image-20261025-563/SourceOriginalPrimitiveTateRestrictionDependencyAudit8Production8133.log",
+      "sha256": "B3958F30F70A830CD40B00EEE3BAE4013491AAF54D748313A4FA8F5047257E19"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_original_primitive_tate_image_8133.ps1",
+      "path": "Tools/primitive-tate-image-20261025-563/verify_original_primitive_tate_image_8133.ps1",
+      "sha256": "7935152A365C38DD561D8EF176B672606430EBDA095BC825BFE85B116E6EB88D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_original_primitive_tate_image_8133b.ps1",
+      "path": "Tools/primitive-tate-image-20261025-563/verify_original_primitive_tate_image_8133b.ps1",
+      "sha256": "982FAF868CA03F010CCD365419281F271589FA774FE08C764C20B8DA2EF5739F"
+    }
+  ],
+  "canonical": {
+    "recordedUTC": "2026-10-25T21:50:40.714575+00:00",
+    "log": "logs/dubon-build-20261025-132709-230.log",
+    "sha256": "882B4124F2C1BF3DD2349B42A423CFE04CA2EA25A8EBECA3C6C09EBDD374BF94",
+    "bytes": 13283460,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8133,
+    "projectTheorems": 51727,
+    "registeredConsumers": 23592,
+    "registeredConstructions": 2212,
+    "declarations": 31750,
+    "generated": 32641,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261025_132159.log",
+    "foundationSha256": "A1010A2923DBAE091D0CBD0F7497648466402760BB59FAE53A8D8557AE5BF6FE",
+    "countReconciliation": {
+      "previousTheorems": 51587,
+      "focusedTheorems": 140,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 140,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageGlobalOwnership8133b.log",
+      "globalOwnershipSha256": "CB2C34117EEDB3B162F83B8918097CB9408D48632A097F1AFCEF0CA122D8168C",
+      "globalOwnershipSourceSha256": "7E7301A8B8840FC0E528132A93F3297D0113DD5E09C200BC3CF3BD82F0916821",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageOwnership8133.log",
+      "ownershipSha256": "B5FAEC5C58B736BC3E9B1D7780B80D4B83DC7FD42834CF2D93A638E6FFC4E14D"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 140,
+      "scratchDistinct": 140,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceOriginalCuspPadicHeckeMap.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalCuspPadicHeckeMap": "_private.Dubon2026.SourceOriginalCuspPadicHeckeMap.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+        "_private.Dubon2026.SourceOriginalCuspRationalTateHecke.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalCuspRationalTateHecke": "_private.Dubon2026.SourceOriginalCuspRationalTateHecke.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalCuspTateRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalCuspTateRankTwo": "_private.Dubon2026.SourceOriginalCuspTateRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+        "_private.Dubon2026.SourcePrimitiveOriginalTateEvaluation.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourcePrimitiveOriginalTateEvaluation": "_private.Dubon2026.SourcePrimitiveOriginalTateEvaluation.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourcePrimitiveOriginalTateRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourcePrimitiveOriginalTateRankTwo": "_private.Dubon2026.SourcePrimitiveOriginalTateRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra"
+      },
+      "productionFocused": 140,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceFiniteBilinearBaseChange",
+            "SourceOriginalCoefficientWeilNondegeneracy",
+            "SourceBilinearBaseChangeAlternating",
+            "SourceOriginalCoefficientWeilLaws",
+            "SourceBilinearPolynomialAdjoint",
+            "SourceIdempotentBilinearRestriction"
+          ],
+          "count": 13,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageScratchOwnership560For8133.log",
+            "sha256": "3127C9946FB2EF7740D77703C3B1CCA37057C0A3E483F975D4A4B2E57367E13C",
+            "sourceSha256": "40377A36E4A2EEFFEC8F66DCB52D2D28E8DCF9942204F861FDEF9315D19D6423"
+          }
+        },
+        {
+          "modules": [
+            "SourceHeckeCoordinateRelations",
+            "SourceOriginalCuspRationalTateHecke",
+            "SourceIntegerCoefficientExtensionOne",
+            "SourceIntegerCoefficientEndExtension",
+            "SourcePrimitiveOriginalTateEvaluation",
+            "SourcePrimitiveOriginalTateAdjoint",
+            "SourceEndIdempotentPairingRestriction",
+            "SourcePrimitiveOriginalTateRestriction"
+          ],
+          "count": 47,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageScratchOwnership561For8133.log",
+            "sha256": "1067114B889646DCD8C6837FE33A2824883A69FE0D509B657406658D47E79469",
+            "sourceSha256": "5C21B0B9D1D7CC9BC690281289A7481741C9C654B83F3A43A2C8B9D72AC41955"
+          }
+        },
+        {
+          "modules": [
+            "SourceCharacterIdempotentLine",
+            "SourceCharacterIdempotentRankTwo",
+            "SourceGeneratedCharacterIdempotent",
+            "SourceTensorCharacterIdempotent",
+            "SourceOriginalCuspPadicHeckeMap",
+            "SourceIntegerCoefficientExtensionCharacter",
+            "SourcePrimitiveHeckeAlgebraEvaluation",
+            "SourcePrimitiveHeckeAlgebraProjector",
+            "SourceRankTwoSurjectiveDescent",
+            "SourceOriginalCuspTateRankTwo",
+            "SourceRankTwoBaseChange",
+            "SourceIntegerCoefficientRankTwo",
+            "SourceIntertwinedRangeEquiv",
+            "SourceRankTwoCharacterRange",
+            "SourcePrimitiveHeckeAlgebraRankTwo",
+            "SourcePrimitiveOriginalTateRankTwo",
+            "SourcePrimitiveOriginalTateNondegenerateRankTwo"
+          ],
+          "count": 80,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageScratchOwnership562For8133.log",
+            "sha256": "B779808A42862F7EEE9F8C1D9D87966D29D6B49E9D1C4E6234EBD3F981D03A21",
+            "sourceSha256": "BFE4A46AFC63173AC732E5DCDD12334F488948EA3ACDCBB194BA90318AE75AF6"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageOwnership8133.log",
+        "sha256": "B5FAEC5C58B736BC3E9B1D7780B80D4B83DC7FD42834CF2D93A638E6FFC4E14D",
+        "sourceSha256": "5A475387EA4E9A9E373549EE11A704D83513261AED7759B6D7028B3063187471"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-113151-745.log",
+        "sha256": "8C9DB181E9969C7BDFE40758A02E1CFBF4D79E85EB7F0BD131A8CF769A0A9C98"
+      },
+      "renameEvidence": {
+        "previousDiagnostic": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-tate-image-ownership-diagnostic-8133.json",
+        "previousDiagnosticSha256": "8F46E1C65CDF64077D3F9DA4B8DF761E18AF23D1379472C3325EF35B3C0B779F",
+        "reason": "Five automatically named private local instance theorems acquire different suffixes when the module name gains Dubon2026. Exact one-to-one owner-preserving name pairs are recorded. Every corresponding production source is identical to the frozen scratch source after removing import lines; every production theorem was independently checked in the focused exhaustive audit. No declaration or mathematical proof was omitted."
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 140 distinct names from 140 exhaustive scratch checks are retained: 140 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Comparison of this image with the existing spanning primitive specialization, the separate primitive Frobenius determinant, residual association, arithmetic automorphy and all-weight continuation remain required. The Frobenius quadratic identity alone does not prove the determinant. 16/20; DUB-17--20 OPEN."
+  }
+}

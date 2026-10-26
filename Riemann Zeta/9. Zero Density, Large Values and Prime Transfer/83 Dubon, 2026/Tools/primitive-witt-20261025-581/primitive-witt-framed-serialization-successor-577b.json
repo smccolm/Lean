@@ -1,0 +1,25 @@
+{
+  "timeUTC": "2026-10-26T00:54:28.175278+00:00",
+  "failure": "Generator serialized newline escapes literally at the dependency-audit footer and route JSON terminator.",
+  "oldAudit": {
+    "path": "SourcePrimitiveWittFramedDependencyAudit4.lean",
+    "sha256": "4C23328C05B68109F427CE80C1F3209FDFE26D73B2F56F8DF0ED20F45806FFE2"
+  },
+  "newAudit": {
+    "path": "SourcePrimitiveWittFramedDependencyAudit4b.lean",
+    "sha256": "D3970A03A0F3E84B28DDA296A9261AB47032346F99BCB9D2A53AEA543FF38299"
+  },
+  "oldRoute": {
+    "path": "primitive-witt-framed-route-577.json",
+    "sha256": "DEED4AAB51F35AF7AA3DBDFD3C9397F9FF592AA5D41C3ED71F3F3002E6D66C22"
+  },
+  "newRoute": {
+    "path": "primitive-witt-framed-route-577b.json",
+    "sha256": "196C75EE571B0D6F32B3A95FA67434EA36B85A36A92F908A0881360A8692A3D4"
+  },
+  "usedGenerator": {
+    "path": "prepare_primitive_witt_framed_audit_577.py",
+    "sha256": "04ADDEC3D1670C4B0B2548218C20E916C6521AA72E9216A0D0D2830FAC177DBA"
+  },
+  "change": "Only literal newline escapes become line endings. No proof source or passed public audit changes; no passed audit rerun."
+}

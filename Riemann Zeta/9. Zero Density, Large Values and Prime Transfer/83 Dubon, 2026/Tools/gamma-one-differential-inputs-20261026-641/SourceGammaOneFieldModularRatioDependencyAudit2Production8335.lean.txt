@@ -1,0 +1,29 @@
+import Dubon2026.SourceGammaOneModularRatios
+import Dubon2026.SourceGammaOneFieldModularRatio
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneFieldModularRatio, `Dubon2026.SourceGammaOneScalarExtension, `Dubon2026.SourceGammaOneFunctionFieldBaseChange, `Dubon2026.SourceGammaOneFunctionFieldFinite, `Dubon2026.SourceGammaOneRationalRelation, `Dubon2026.SourceGammaOneJCoordinate, `Dubon2026.SourceGammaOneFunctionField, `Dubon2026.SourceGammaOneComplexRatio, `Dubon2026.SourceGammaOneComplexRelation, `Dubon2026.SourceGammaOneNormRelation, `Dubon2026.SourceGammaOneRatioClosure, `Dubon2026.SourceGammaOneModularRatios]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_mul, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_add, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_one, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_const, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.one_ne_zero', `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.mul_ne_zero', `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.isRatio_algebraMap, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.mul, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.add, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.inv, `Dubon2026.SourceFunctionField.GammaOne.isRatio_of_mem_qExpFunctionFieldC, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_eq_qExpFunctionFieldC, `Dubon2026.SourceFunctionField.GammaOne.hper, `IntermediateField.adjoin_induction]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE FIELD MODULAR RATIO DEPENDENCY AUDIT PASS: all {required.size} required dependencies occur in the actual field-element ratio consumer and its explicit constructions. Only declaration values are traversed. Native q-expansion injectivity, field operations, actual ratio generators and scalar-extension equality supply the nonzero-denominator modular presentation. Regularity and cusp realization, Picard/H1 and diamond comparison, all-weight arithmetic association and higher continuation remain required. 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

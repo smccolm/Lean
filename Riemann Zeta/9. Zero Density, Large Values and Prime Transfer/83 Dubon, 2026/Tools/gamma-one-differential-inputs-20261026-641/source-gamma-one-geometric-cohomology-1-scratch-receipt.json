@@ -1,0 +1,68 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T10:58:32.837639+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneGeometricCohomology"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCohomology.lean",
+      "sha256": "C7ACE8C976DADC063DB7939DE3AB9893CEFD6B54A2393A5BBDC1D50ACA4C7ED5",
+      "oleanSha256": "7C84EA92579530686B601400E6C69F5AABA15E989F0FDD15876B581CA20CA398"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup_upper",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_matrix",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaMorphism",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaH1Trace",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup_upper",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_matrix",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_eq"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaMorphism",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaH1Trace",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCohomologyAudit1.log",
+  "logSha256": "B22F57CD517F19DFDA9081C20CCDF0834538DBB60289C4B1BCCDE75686167F39",
+  "auditSha256": "A25B3E221793DCCD0F49A8CDD11391F88941BC692FE7397069F09D1E11631999",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 11,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 18,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCohomologyDependencyAudit1.log",
+  "dependencyAuditSha256": "DC0E854579A17DEB828900B6EB398FD088602B848F028AF5353B023505EB4B29",
+  "dependencyAuditSourceSha256": "36D8A2B04DF5F26D7CE49B071703AF31AB3A1C84B39E4E75AF6EE47BF1091F06",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup_upper",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_matrix",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_smul"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of original finite Gamma1 Hecke characters -> geometric/H1 comparison retaining original homogeneous coefficients -> exact geometric group maps and their native H1 pullback/trace.",
+  "discharged": "No group-map preservation, group injectivity, analytic intertwining, pullback composition or H1 operator-comparison hypothesis remains between these two literal cohomological correspondences.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The cohomological equality does not identify the actual Picard operator with H1. The full/parabolic distinction, transpose/diamond conventions, arithmetic Galois realization of finite characters, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher continuation remain required. No characteristic-zero lift is inferred from finite characters. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-geometric-cohomology-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "8BCF2AB05574EBEB6A537D4008EE6CE314E703E75CBFC4E2E9D594DE41376DFD",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

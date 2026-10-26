@@ -1,0 +1,44 @@
+{
+  "modules": [
+    "SourceCoefficientPermutationCoordinates",
+    "SourceCoefficientStabilizerCohomology",
+    "SourceIntegralBinaryStabilizerRealization"
+  ],
+  "theorems": [
+    "Dubon2026.sourceCoefficientOrbitStabilizer_finiteIndex",
+    "Dubon2026.sourceIntegralBinary_exists_stabilizerH1Realization"
+  ],
+  "constructions": [
+    "Dubon2026.sourceCoefficientVectorAction",
+    "Dubon2026.sourceCoefficientPermutationCoordinateIso",
+    "Dubon2026.sourceCoefficientOrbitPoint",
+    "Dubon2026.sourceCoefficientStabilizerH1Equiv"
+  ],
+  "queries": [
+    "Dubon2026.sourceCoefficientOrbitStabilizer_finiteIndex",
+    "Dubon2026.sourceIntegralBinary_exists_stabilizerH1Realization",
+    "Dubon2026.sourceCoefficientVectorAction",
+    "Dubon2026.sourceCoefficientPermutationCoordinateIso",
+    "Dubon2026.sourceCoefficientOrbitPoint",
+    "Dubon2026.sourceCoefficientStabilizerH1Equiv"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceCoefficientOrbitStabilizer_finiteIndex",
+    "Dubon2026.sourceIntegralBinary_exists_stabilizerH1Realization",
+    "Dubon2026.sourceCoefficientVectorAction",
+    "Dubon2026.sourceCoefficientPermutationCoordinateIso",
+    "Dubon2026.sourceCoefficientOrbitPoint",
+    "Dubon2026.sourceCoefficientStabilizerH1Equiv",
+    "Dubon2026.sourceIntegralBinary_exists_primePowerPermutationRealization",
+    "Dubon2026.sourceBinaryCoefficientRep_congruence",
+    "Dubon2026.permutationBasisCoordinateIso",
+    "Dubon2026.permutationOrbitRepIso",
+    "Dubon2026.originalFinitePiCohomologyIso",
+    "Dubon2026.transitivePermutationCohomologyIso",
+    "groupCohomology.coindIso"
+  ],
+  "roots": [
+    "Dubon2026.sourceIntegralBinary_exists_stabilizerH1Realization"
+  ],
+  "separatelyAxiomChecked": []
+}

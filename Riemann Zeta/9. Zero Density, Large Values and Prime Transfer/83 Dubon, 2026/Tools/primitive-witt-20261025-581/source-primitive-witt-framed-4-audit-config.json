@@ -1,0 +1,53 @@
+{
+  "modules": [
+    "SourceResidualWittCoefficients",
+    "SourceResidualWittRepresentation",
+    "SourceResidualWittFramedRing",
+    "SourcePrimitiveWittFramedResidual"
+  ],
+  "theorems": [
+    "Dubon2026.sourceResidualWittResidueEquiv_residue",
+    "Dubon2026.sourceResidualWittCoefficient_localData",
+    "Dubon2026.sourceResidualWittRepresentation_original",
+    "Dubon2026.sourceResidualWittRepresentation_continuous",
+    "Dubon2026.sourceResidualWittFramed_localData",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_wittFramedResidualGalois_charP"
+  ],
+  "constructions": [
+    "Dubon2026.sourceResidualWittResidueEquiv",
+    "Dubon2026.sourceResidualWittRepresentation",
+    "Dubon2026.sourceResidualWittFramedData"
+  ],
+  "queries": [
+    "Dubon2026.sourceResidualWittResidueEquiv_residue",
+    "Dubon2026.sourceResidualWittCoefficient_localData",
+    "Dubon2026.sourceResidualWittRepresentation_original",
+    "Dubon2026.sourceResidualWittRepresentation_continuous",
+    "Dubon2026.sourceResidualWittFramed_localData",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_wittFramedResidualGalois_charP",
+    "Dubon2026.sourceResidualWittResidueEquiv",
+    "Dubon2026.sourceResidualWittRepresentation",
+    "Dubon2026.sourceResidualWittFramedData"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceResidualWittCoefficient_localData",
+    "Dubon2026.sourceResidualWittRepresentation_original",
+    "Dubon2026.sourceResidualWittRepresentation_continuous",
+    "Dubon2026.sourceResidualWittFramed_localData",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_wittFramedResidualGalois_charP",
+    "Dubon2026.sourceResidualWittResidueEquiv",
+    "Dubon2026.sourceResidualWittRepresentation",
+    "Dubon2026.sourceResidualWittFramedData",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_finiteResidualGalois_charP",
+    "Dubon2026.SourceWittLift.residueMap",
+    "Dubon2026.SourceWittLift.witt_charZero",
+    "Dubon2026.arithmeticFramedUniversalRing_localData",
+    "Dubon2026.arithmeticFramedUniversalRepresentation_residue"
+  ],
+  "roots": [
+    "Dubon2026.sourcePrimitive_exists_originalSupport_wittFramedResidualGalois_charP"
+  ],
+  "separatelyAxiomChecked": [
+    "Dubon2026.sourceResidualWittResidueEquiv_residue"
+  ]
+}

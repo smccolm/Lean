@@ -1,0 +1,51 @@
+
+section
+
+/-- The actual primitive roots supply the literal higher-prime-power remainder and its full holomorphy half-plane, conditional only on the displayed local bound. -/
+theorem primitive_spectral_tail_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k)
+    (hbound : ∀ p, Nat.Prime p → ¬p ∣ Q → ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    (r : ℕ) :
+    AnalyticOnNhd ℂ (fun s : ℂ => ∑' p : Nat.Primes,
+      (Real.log (p : ℕ) : ℂ) * ∑ i : Fin (r + 1),
+        (primitiveSymmetricSpectralRoots f r p i * (((p : ℕ) : ℂ) ^ (-s))) ^ 2 /
+          (1 - primitiveSymmetricSpectralRoots f r p i * (((p : ℕ) : ℂ) ^ (-s))))
+      {s : ℂ | 1 / 2 < s.re} :=
+  primitiveSymmetricSpectralTail_analyticOnNhd f hbound r
+
+/-- The original prime-character L-series is identified with the actual sum of local Euler logarithmic derivatives, with the complete higher-power correction retained. -/
+theorem primitive_spectral_log_series_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k)
+    (hbound : ∀ p, Nat.Prime p → ¬p ∣ Q → ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    (r : ℕ) {s : ℂ} (hs : 1 < s.re) :
+    (∑' p : Nat.Primes,
+      -logDeriv (fun t : ℂ => (∏ i : Fin (r + 1),
+        (1 - primitiveSymmetricSpectralRoots f r p i * (((p : ℕ) : ℂ) ^ (-t))))⁻¹) s) =
+      LSeries (fun n => ((if Nat.Prime n then (if n ∣ Q then 0 else
+        (normalizedCuspCoefficients f.toCuspForm (n ^ r)).re) * Real.log n else 0 : ℝ) : ℂ)) s +
+        primeSpectralTail (primitiveSymmetricSpectralRoots f r) s :=
+  primitiveSymmetricLogSeries_eq f hbound r hs
+
+/-- Actual primitive local Euler continuation data supplies weak Sato--Tate and the full isolated-prime H2 after the proved holomorphic higher-power correction, Tauberian theorem and PNT. -/
+theorem primitive_symmetric_boundary_blocks_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k)
+    (hbound : ∀ p, Nat.Prime p → ¬p ∣ Q → ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    (hboundary : ∀ r : ℕ, 0 < r → ∃ G : ℂ → ℂ,
+      ContinuousOn G {s | 1 ≤ s.re} ∧ Set.EqOn G
+        (fun s : ℂ => ∑' p : Nat.Primes,
+          -logDeriv (primeSpectralEulerFactor (primitiveSymmetricSpectralRoots f r) p) s)
+        {s | 1 < s.re}) :
+    Tendsto (primeEmpirical (fun p => (normalizedCuspCoefficients f.toCuspForm p).re))
+      atTop (𝓝 satoTateProbability) ∧
+    let B := selectedDyadicPrimes (fun p => ¬p ∣ Q ∧
+      1 ≤ ‖normalizedCuspCoefficients f.toCuspForm p‖ ∧ ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    IsolatedPrimeBlocks B ∧ Tendsto (fun N => (B N).card) atTop atTop ∧
+      PrimeCoefficientComparability (normalizedCuspCoefficients f.toCuspForm) B (1 / 2) ∧
+        IsolatedEnergyAsymptotic (normalizedCuspCoefficients f.toCuspForm) B (1 / 2) := by
+  have hST := primitive_satoTate_of_symmetric_log_boundary f hbound hboundary
+  exact ⟨hST, sato_tate_selected_primes_H2 (Nat.pos_of_neZero Q)
+    (fun p hp hpQ => primitiveCuspForm_normalizedCoefficient_im f p
+      (hp.coprime_iff_not_dvd.mpr hpQ)) hST⟩
+
+end
+

@@ -1,0 +1,197 @@
+{
+  "sha": "8d14a32337a069dbae9b92875aeb697de357b5ac",
+  "node_id": "C_kwDOFcwZ1doAKDhkMTRhMzIzMzdhMDY5ZGJhZTliOTI4NzVhZWI2OTdkZTM1N2I1YWM",
+  "commit": {
+    "author": {
+      "name": "Jovan Gerbscheid",
+      "email": "56355248+JovanGerb@users.noreply.github.com",
+      "date": "2026-10-26T09:43:30Z"
+    },
+    "committer": {
+      "name": "Jovan Gerbscheid",
+      "email": "56355248+JovanGerb@users.noreply.github.com",
+      "date": "2026-10-26T09:43:30Z"
+    },
+    "message": "feat(Linter): linter that detects concrete instances (#44625)\n\nThis PR implements a linter that flags concrete instances. This is useful for beginners who might write `[Field ℝ]` because they want to use that `ℝ` is a field. There is a built in exception for `Decidable`, since adding redundant `Decidable` hypotheses, such as `DecidableEq True` and `∀ P, Decidable P`, can be desired to avoid instance diamonds.",
+    "tree": {
+      "sha": "c05c33f94f3f19f1686ef312445282bf366ed169",
+      "url": "https://api.github.com/repos/leanprover-community/mathlib4/git/trees/c05c33f94f3f19f1686ef312445282bf366ed169"
+    },
+    "url": "https://api.github.com/repos/leanprover-community/mathlib4/git/commits/8d14a32337a069dbae9b92875aeb697de357b5ac",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/leanprover-community/mathlib4/commits/8d14a32337a069dbae9b92875aeb697de357b5ac",
+  "html_url": "https://github.com/leanprover-community/mathlib4/commit/8d14a32337a069dbae9b92875aeb697de357b5ac",
+  "comments_url": "https://api.github.com/repos/leanprover-community/mathlib4/commits/8d14a32337a069dbae9b92875aeb697de357b5ac/comments",
+  "author": {
+    "login": "JovanGerb",
+    "id": 56355248,
+    "node_id": "MDQ6VXNlcjU2MzU1MjQ4",
+    "avatar_url": "https://avatars.githubusercontent.com/u/56355248?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/JovanGerb",
+    "html_url": "https://github.com/JovanGerb",
+    "followers_url": "https://api.github.com/users/JovanGerb/followers",
+    "following_url": "https://api.github.com/users/JovanGerb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/JovanGerb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/JovanGerb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/JovanGerb/subscriptions",
+    "organizations_url": "https://api.github.com/users/JovanGerb/orgs",
+    "repos_url": "https://api.github.com/users/JovanGerb/repos",
+    "events_url": "https://api.github.com/users/JovanGerb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/JovanGerb/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "JovanGerb",
+    "id": 56355248,
+    "node_id": "MDQ6VXNlcjU2MzU1MjQ4",
+    "avatar_url": "https://avatars.githubusercontent.com/u/56355248?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/JovanGerb",
+    "html_url": "https://github.com/JovanGerb",
+    "followers_url": "https://api.github.com/users/JovanGerb/followers",
+    "following_url": "https://api.github.com/users/JovanGerb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/JovanGerb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/JovanGerb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/JovanGerb/subscriptions",
+    "organizations_url": "https://api.github.com/users/JovanGerb/orgs",
+    "repos_url": "https://api.github.com/users/JovanGerb/repos",
+    "events_url": "https://api.github.com/users/JovanGerb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/JovanGerb/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "956230dc175cd61bfcd42b515f7c5daa404cf923",
+      "url": "https://api.github.com/repos/leanprover-community/mathlib4/commits/956230dc175cd61bfcd42b515f7c5daa404cf923",
+      "html_url": "https://github.com/leanprover-community/mathlib4/commit/956230dc175cd61bfcd42b515f7c5daa404cf923"
+    }
+  ],
+  "stats": {
+    "total": 124,
+    "additions": 115,
+    "deletions": 9
+  },
+  "files": [
+    {
+      "sha": "87d6e9730f596df1aeb18e3501f39c1c8b24053b",
+      "filename": "Mathlib/Data/FP/Basic.lean",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "blob_url": "https://github.com/leanprover-community/mathlib4/blob/8d14a32337a069dbae9b92875aeb697de357b5ac/Mathlib%2FData%2FFP%2FBasic.lean",
+      "raw_url": "https://github.com/leanprover-community/mathlib4/raw/8d14a32337a069dbae9b92875aeb697de357b5ac/Mathlib%2FData%2FFP%2FBasic.lean",
+      "contents_url": "https://api.github.com/repos/leanprover-community/mathlib4/contents/Mathlib%2FData%2FFP%2FBasic.lean?ref=8d14a32337a069dbae9b92875aeb697de357b5ac",
+      "patch": "@@ -44,6 +44,8 @@ attribute [nolint docBlame] FloatCfg.prec FloatCfg.emax FloatCfg.precPos FloatCf\n set_option linter.deprecated false\n variable [C : FloatCfg]\n \n+set_option linter.concreteInstances false\n+\n @[nolint docBlame, deprecated \"no replacement\" (since := \"2026-10-02\")]\n def prec :=\n   C.prec"
+    },
+    {
+      "sha": "20220dc26b7138bf4c74f1a346117ae4f45679bf",
+      "filename": "Mathlib/Tactic/Linter/DeclType.lean",
+      "status": "modified",
+      "additions": 65,
+      "deletions": 8,
+      "changes": 73,
+      "blob_url": "https://github.com/leanprover-community/mathlib4/blob/8d14a32337a069dbae9b92875aeb697de357b5ac/Mathlib%2FTactic%2FLinter%2FDeclType.lean",
+      "raw_url": "https://github.com/leanprover-community/mathlib4/raw/8d14a32337a069dbae9b92875aeb697de357b5ac/Mathlib%2FTactic%2FLinter%2FDeclType.lean",
+      "contents_url": "https://api.github.com/repos/leanprover-community/mathlib4/contents/Mathlib%2FTactic%2FLinter%2FDeclType.lean?ref=8d14a32337a069dbae9b92875aeb697de357b5ac",
+      "patch": "@@ -13,6 +13,7 @@ public import Mathlib.Tactic.Linter.UnusedInstancesInType\n \n We bundle a number of linters that act on declaration types into a single linter:\n \n+- The concrete instances linter, which is defined in this file\n - The overlapping instances linter\n - The unused `Fintype` in type linter\n - The unused `Decidable` in type linter\n@@ -24,32 +25,88 @@ These linters run even if the declaration contains an error.\n This is important because it means that a user will get a warning as soon as possible.\n -/\n \n-public meta section\n+meta section\n \n namespace Mathlib.Linter\n \n-open Lean Elab Linter OverlappingInstances UnusedInstancesInType\n+open Lean Meta Elab Command Linter\n+\n+section concreteInstances\n+\n+/--\n+The `concreteInstances` linter flags any instance assumption without variables.\n+If there is an instance of the type class, then it should be declared globally,\n+instead of assumed as a local hypothesis. And if there is no instance,\n+then the assumption can never be satisfied.\n+-/\n+register_option linter.concreteInstances : Bool := {\n+  defValue := true\n+  descr := \"enable the concrete instances linter\"\n+}\n+\n+/-- Return all the instance hypotheses in the given type that have no (universe) variables. -/\n+def getConcreteInstanceAssumptions : Expr → List Expr\n+  | .forallE _ d b bi =>\n+    if bi.isInstImplicit && !d.hasLooseBVars && !d.hasLevelParam then\n+      d :: getConcreteInstanceAssumptions b\n+    else\n+      getConcreteInstanceAssumptions b\n+  | _ => []\n+\n+@[inherit_doc linter.concreteInstances]\n+def runConcreteLinter (constVal : ConstantVal) (bodyRef : Syntax) : CommandElabM Unit := do\n+  let classes := getConcreteInstanceAssumptions constVal.type\n+  if classes.isEmpty then return\n+  /- Log the warning from the declaration's selection range (usually the declaration name,\n+  or `instance`) to the body if possible. This underlines the hypotheses and type,\n+  and makes the warning visible in the infoview when the cursor is within the body. -/\n+  let ref := (← findDeclarationSyntaxRange? constVal.name).elim bodyRef\n+    (mkNullNode #[.ofRange ·, bodyRef])\n+  Command.liftCoreM do MetaM.run' do\n+  for cls in classes do\n+    let some clsName ← isClass? cls | continue\n+    -- A seemingly redundant `Decidable` hypothesis can be added to make a declaration compatible\n+    -- with all potential `Decidable` instance, so we allow this.\n+    if clsName == ``Decidable then continue\n+    if (← trySynthInstance cls) matches .some _ then\n+      logLint linter.concreteInstances ref\n+        m!\"There exists a global instance of type class `{cls}`.\\n\\\n+        Please rely on this instance and remove the `{.sbracket cls}` assumption.\"\n+    else\n+      logLint linter.concreteInstances ref\n+        m!\"The instance assumption `{.sbracket cls}` does not contain free variables.\\n\\\n+        Instead of assuming it locally, please add a global instance with\\n\\\n+        `instance : {cls} := ...`\"\n+\n+end concreteInstances\n+\n+open OverlappingInstances UnusedInstancesInType\n \n /-- Run all of the instance parameter linters.\n This linter collects the declaration bodies from the info trees,\n so that this work does not need to be duplicated. -/\n-def declTypeLinter : Linter where\n+public def declTypeLinter : Linter where\n   run := withSetOptionIn fun cmd => do\n     let opts ← getLinterOptions\n     let overlap := getLinterValue linter.overlappingInstances opts\n+    let concrete := getLinterValue linter.concreteInstances opts\n     let decidable := getLinterValue linter.unusedDecidableInType opts\n     let fintype := getLinterValue linter.unusedFintypeInType opts\n-    unless overlap || decidable || fintype do return\n+    unless overlap || concrete || decidable || fintype do return\n     profileitM Exception \"declTypeLinter\" (← getOptions) do\n     for t in ← getInfoTrees do\n       for (bodyRef, ctx, info) in t.getDeclBodyInfos do\n         if overlap then\n           overlappingInstances bodyRef ctx info\n         if let some declName := ctx.parentDecl? then\n-          if let some thm := (← getEnv).findTheoremConstVal? declName then\n-            Command.liftCoreM do\n-            if decidable then unusedDecidableInType thm bodyRef\n-            if fintype then unusedFintypeInType thm bodyRef\n+          -- TODO: these linters don't work in an `example`,\n+          -- because then `declName` is never added to the environment.\n+          if let some (constVal, kind) := (← getEnv).findConstValWithKind? declName then\n+            if concrete then runConcreteLinter constVal bodyRef\n+            if kind matches .thm then\n+              Command.liftCoreM do\n+              if decidable then unusedDecidableInType constVal bodyRef\n+              if fintype then unusedFintypeInType constVal bodyRef\n \n initialize addLinter declTypeLinter\n "
+    },
+    {
+      "sha": "1d1d14c3d6cc7dabc9ceeb28449cd86ae2c73cdf",
+      "filename": "Mathlib/Tactic/Linter/UnusedInstancesInType.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/leanprover-community/mathlib4/blob/8d14a32337a069dbae9b92875aeb697de357b5ac/Mathlib%2FTactic%2FLinter%2FUnusedInstancesInType.lean",
+      "raw_url": "https://github.com/leanprover-community/mathlib4/raw/8d14a32337a069dbae9b92875aeb697de357b5ac/Mathlib%2FTactic%2FLinter%2FUnusedInstancesInType.lean",
+      "contents_url": "https://api.github.com/repos/leanprover-community/mathlib4/contents/Mathlib%2FTactic%2FLinter%2FUnusedInstancesInType.lean?ref=8d14a32337a069dbae9b92875aeb697de357b5ac",
+      "patch": "@@ -322,7 +322,7 @@ public def unusedDecidableInType (thm : ConstantVal) (bodyRef : Syntax) : CoreM\n       /- Log the warning from the declaration's selection range (usually the declaration name,\n       or `instance`) to the body if possible. This underlines the hypotheses and type,\n       and makes the warning visible in the infoview when the cursor is within the body. -/\n-      let ref := (← findDeclarationSyntaxRange? thm.name).elim (← getRef)\n+      let ref := (← findDeclarationSyntaxRange? thm.name).elim bodyRef\n         (mkNullNode #[.ofRange ·, bodyRef])\n       logLint linter.unusedDecidableInType ref m!\"\\\n         {thm.name.unusedInstancesMsg unusedParams}\\n\\n\\"
+    },
+    {
+      "sha": "2ee29c32a3efbe49db5cd33c3eb598e28fc19442",
+      "filename": "MathlibTest/Attribute/ToAdditive/Basic.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "blob_url": "https://github.com/leanprover-community/mathlib4/blob/8d14a32337a069dbae9b92875aeb697de357b5ac/MathlibTest%2FAttribute%2FToAdditive%2FBasic.lean",
+      "raw_url": "https://github.com/leanprover-community/mathlib4/raw/8d14a32337a069dbae9b92875aeb697de357b5ac/MathlibTest%2FAttribute%2FToAdditive%2FBasic.lean",
+      "contents_url": "https://api.github.com/repos/leanprover-community/mathlib4/contents/MathlibTest%2FAttribute%2FToAdditive%2FBasic.lean?ref=8d14a32337a069dbae9b92875aeb697de357b5ac",
+      "patch": "@@ -154,6 +154,7 @@ def foo4 {α : Type u} : Type v → Type (max u v) := @my_has_pow α\n lemma foo4_test {α β : Type u} : @foo4 α β = @my_has_pow α β := (rfl)\n \n set_option linter.defProp false in\n+set_option linter.concreteInstances false in\n @[to_additive bar5]\n def foo5 {α} [my_has_pow α ℕ] [my_has_pow ℕ ℤ] : True := True.intro\n "
+    },
+    {
+      "sha": "321b92b3b8bbdfa98c027f63b2bf77e794a05529",
+      "filename": "MathlibTest/Linter/ConcreteInstances.lean",
+      "status": "added",
+      "additions": 41,
+      "deletions": 0,
+      "changes": 41,
+      "blob_url": "https://github.com/leanprover-community/mathlib4/blob/8d14a32337a069dbae9b92875aeb697de357b5ac/MathlibTest%2FLinter%2FConcreteInstances.lean",
+      "raw_url": "https://github.com/leanprover-community/mathlib4/raw/8d14a32337a069dbae9b92875aeb697de357b5ac/MathlibTest%2FLinter%2FConcreteInstances.lean",
+      "contents_url": "https://api.github.com/repos/leanprover-community/mathlib4/contents/MathlibTest%2FLinter%2FConcreteInstances.lean?ref=8d14a32337a069dbae9b92875aeb697de357b5ac",
+      "patch": "@@ -0,0 +1,41 @@\n+module\n+\n+import Mathlib.Init\n+\n+/--\n+@ +1:8...46\n+warning: There exists a global instance of type class `Add Nat`.\n+Please rely on this instance and remove the `[Add Nat]` assumption.\n+\n+Note: This linter can be disabled with `set_option linter.concreteInstances false`\n+-/\n+#guard_msgs (positions := true) in\n+theorem test₁ [Add Nat] : 1 + 2 = 1 + 2 := rfl\n+\n+/--\n+warning: The instance assumption `[Inv Nat]` does not contain free variables.\n+Instead of assuming it locally, please add a global instance with\n+`instance : Inv Nat := ...`\n+\n+Note: This linter can be disabled with `set_option linter.concreteInstances false`\n+-/\n+#guard_msgs in\n+theorem test₂ [Inv Nat] : 2⁻¹ = 2⁻¹ := rfl\n+\n+/--\n+warning: The instance assumption `[(α : Type) → Add α]` does not contain free variables.\n+Instead of assuming it locally, please add a global instance with\n+`instance : (α : Type) → Add α := ...`\n+\n+Note: This linter can be disabled with `set_option linter.concreteInstances false`\n+-/\n+#guard_msgs in\n+theorem test₃ [∀ α, Add α] : 1 + 2 = 1 + 2 := rfl\n+\n+-- Decidable hypotheses are exempt from the linter.\n+theorem test₄ [DecidableEq Prop] : True := trivial\n+theorem test₅ [∀ P, Decidable P] : True := trivial\n+theorem test₆ [∀ α, DecidableEq α] : True := trivial\n+\n+-- The linter currently doesn't work on `example`\n+example [Add Nat] : 0 = 0 := rfl"
+    },
+    {
+      "sha": "643c4bc3a02179db36f64991024f2bf3dcc3e5fd",
+      "filename": "MathlibTest/OverlappingInstances.lean",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "blob_url": "https://github.com/leanprover-community/mathlib4/blob/8d14a32337a069dbae9b92875aeb697de357b5ac/MathlibTest%2FOverlappingInstances.lean",
+      "raw_url": "https://github.com/leanprover-community/mathlib4/raw/8d14a32337a069dbae9b92875aeb697de357b5ac/MathlibTest%2FOverlappingInstances.lean",
+      "contents_url": "https://api.github.com/repos/leanprover-community/mathlib4/contents/MathlibTest%2FOverlappingInstances.lean?ref=8d14a32337a069dbae9b92875aeb697de357b5ac",
+      "patch": "@@ -5,6 +5,8 @@ import Mathlib.Init\n \n public section\n \n+set_option linter.concreteInstances false\n+\n class SubBar (α : Type) where\n   a' : α\n "
+    },
+    {
+      "sha": "5df9c6d2a61eed431bdd4826cbeaef31f4a5bdc6",
+      "filename": "MathlibTest/Tactic/ApplyWith.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "blob_url": "https://github.com/leanprover-community/mathlib4/blob/8d14a32337a069dbae9b92875aeb697de357b5ac/MathlibTest%2FTactic%2FApplyWith.lean",
+      "raw_url": "https://github.com/leanprover-community/mathlib4/raw/8d14a32337a069dbae9b92875aeb697de357b5ac/MathlibTest%2FTactic%2FApplyWith.lean",
+      "contents_url": "https://api.github.com/repos/leanprover-community/mathlib4/contents/MathlibTest%2FTactic%2FApplyWith.lean?ref=8d14a32337a069dbae9b92875aeb697de357b5ac",
+      "patch": "@@ -23,6 +23,7 @@ set_option warn.classDefReducibility false in\n def foo : Foo where\n   val := 37\n \n+set_option linter.concreteInstances false in\n def takeImplicit [f : Foo] : Nat :=\n   f.val\n "
+    },
+    {
+      "sha": "e4b2d16a72ea2d3fc983d7f1fb478297d2b37043",
+      "filename": "MathlibTest/UnusedInstancesInType/Fintype.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "blob_url": "https://github.com/leanprover-community/mathlib4/blob/8d14a32337a069dbae9b92875aeb697de357b5ac/MathlibTest%2FUnusedInstancesInType%2FFintype.lean",
+      "raw_url": "https://github.com/leanprover-community/mathlib4/raw/8d14a32337a069dbae9b92875aeb697de357b5ac/MathlibTest%2FUnusedInstancesInType%2FFintype.lean",
+      "contents_url": "https://api.github.com/repos/leanprover-community/mathlib4/contents/MathlibTest%2FUnusedInstancesInType%2FFintype.lean?ref=8d14a32337a069dbae9b92875aeb697de357b5ac",
+      "patch": "@@ -5,6 +5,7 @@ import MathlibTest.UnusedInstancesInType.Basic\n import Mathlib.Data.Fintype.EquivFin\n \n set_option linter.unusedFintypeInType true\n+set_option linter.concreteInstances false\n \n section unused\n "
+    },
+    {
+      "sha": "64706393351f7338a0a9161e96f965f272d7ecfe",
+      "filename": "MathlibTest/UnusedInstancesInType/SetOption.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "blob_url": "https://github.com/leanprover-community/mathlib4/blob/8d14a32337a069dbae9b92875aeb697de357b5ac/MathlibTest%2FUnusedInstancesInType%2FSetOption.lean",
+      "raw_url": "https://github.com/leanprover-community/mathlib4/raw/8d14a32337a069dbae9b92875aeb697de357b5ac/MathlibTest%2FUnusedInstancesInType%2FSetOption.lean",
+      "contents_url": "https://api.github.com/repos/leanprover-community/mathlib4/contents/MathlibTest%2FUnusedInstancesInType%2FSetOption.lean?ref=8d14a32337a069dbae9b92875aeb697de357b5ac",
+      "patch": "@@ -37,6 +37,7 @@ end decidableTest\n \n namespace fintypeTest\n \n+set_option linter.concreteInstances false\n set_option linter.unusedFintypeInType true\n \n -- Silenceable"
+    }
+  ]
+}

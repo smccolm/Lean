@@ -1,0 +1,251 @@
+{
+  "date": "2026-10-26 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero Galois association -> actual Gamma1 geometric realization -> original finite Fourier-valued characters on actual Gamma1 Hecke operators",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTransferHecke.lean",
+      "sha256": "4A8F0CDF6ED05A0B35B0318CA0C38FDDFFF8887C6475AAF720A0B4CDBB69DF3E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryH1ModulusKernel.lean",
+      "sha256": "A27F8C0453C13671E4669B08048F6589FBF6AC47CFDE055A2A2A486C8FACAF7F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPermutationOperatorDescent.lean",
+      "sha256": "7A7635F0FE17AF12C8C4CA7B4FE70AD368C45A0372FF5DACEE9A7A57C31AC27E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1HeckeCharacter.lean",
+      "sha256": "48017F46307B8EAC8F2129D87FA9C3417B44B2D3AF19B4BA23472CCA4A5EDE26"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstantH1Realization.lean",
+      "sha256": "5E3B3BE2610765E1D2E7E4DD2C727F1FE418231026EF3BB46409CDCDDB1C4B24"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralWordAdditiveNaturality.lean",
+      "sha256": "CE752BB6CDFF2B7171AFC9389B8408D83E8DC86D290A7BB30D57699196B2541B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralCohomologyFinite.lean",
+      "sha256": "5685ECC8D472414277A6B1F949F19211D6A02E516744631CF51965DC97FB5980"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPrimePowerPermutation.lean",
+      "sha256": "64D4B11F41FFC30E7D88DF851C3229A11DFE9CA4B6FDE2B4295CB39EF2C4F30B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1OperatorRealization.lean",
+      "sha256": "3F439F73DD995AB8615CE63E33D4FF35246009D6EF34EC390CEEED6E90620223"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-original-finite-character-route-617b.json",
+    "sha256": "9033D5FA0C90B0EF88F1BBAAAF0D3C70E5296AFECC892D48A4914239756D3BC9",
+    "review": {
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero Galois association -> actual Gamma1 geometric realization -> original finite Fourier-valued characters on actual Gamma1 Hecke operators",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTransferHecke.lean",
+          "sha256": "4A8F0CDF6ED05A0B35B0318CA0C38FDDFFF8887C6475AAF720A0B4CDBB69DF3E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryH1ModulusKernel.lean",
+          "sha256": "A27F8C0453C13671E4669B08048F6589FBF6AC47CFDE055A2A2A486C8FACAF7F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPermutationOperatorDescent.lean",
+          "sha256": "7A7635F0FE17AF12C8C4CA7B4FE70AD368C45A0372FF5DACEE9A7A57C31AC27E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1HeckeCharacter.lean",
+          "sha256": "48017F46307B8EAC8F2129D87FA9C3417B44B2D3AF19B4BA23472CCA4A5EDE26"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstantH1Realization.lean",
+          "sha256": "5E3B3BE2610765E1D2E7E4DD2C727F1FE418231026EF3BB46409CDCDDB1C4B24"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralWordAdditiveNaturality.lean",
+          "sha256": "CE752BB6CDFF2B7171AFC9389B8408D83E8DC86D290A7BB30D57699196B2541B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralCohomologyFinite.lean",
+          "sha256": "5685ECC8D472414277A6B1F949F19211D6A02E516744631CF51965DC97FB5980"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPrimePowerPermutation.lean",
+          "sha256": "64D4B11F41FFC30E7D88DF851C3229A11DFE9CA4B6FDE2B4295CB39EF2C4F30B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1OperatorRealization.lean",
+          "sha256": "3F439F73DD995AB8615CE63E33D4FF35246009D6EF34EC390CEEED6E90620223"
+        }
+      ],
+      "shorterRoute": "The proved actual transfer is surjective and Hecke compatible. Reuse the existing additive word intertwiner, exact original coefficient-reduction kernel and finite operator-character descent. Restrict the generator set to primes coprime to level times modulus; no arbitrary eigenvector or characteristic-zero character lift is needed.",
+      "assumptionsToDischarge": "Construct actual Gamma1 Hecke characters at each positive prime-power precision with the same original Fourier values away from level and modulus; derive word-relation descent from the actual surjective transfer.",
+      "remaining": "Arithmetic geometric and diamond comparison, finite Galois realization and the compatible original all-weight characteristic-zero association remain required; finite characters alone do not give a characteristic-zero point. DUB-17--20 OPEN;16/20.",
+      "developmentEvidence": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-finite-operator-character-route-612.json",
+          "sha256": "B149E620A5B01C8B83CB01EE9814709A5D4B8E290667ADA4FC1BF4FE854B6257"
+        }
+      ],
+      "preservedTimeoutDirectory": "E:\\Lean\\.tmp\\dubon83\\gamma1-operator-descent-613-before-explicit-types",
+      "routeAdjustment": "Name the exact three ring objects in native descent to avoid elaboration timeout. No proof-limit or hypothesis change. Finiteness follows directly from existing group finite generation, the original finite H1 theorem and the actual homogeneous monomial basis.",
+      "auditSuccessor": {
+        "reason": "The exhaustive unusedArguments linter found that the operator family did not use NeZero N. Remove that unnecessary binder from the family and its image algebra, keeping the hypotheses required for the surjective-transfer and finite-character proofs. Recompile all five modules, then execute fresh audits; the used audit and all earlier sources are preserved.",
+        "frozen": [
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourceGammaOneHeckeWords.lean.txt",
+            "sha256": "832D5467D889AEC0B87B97FB42AA273B004C0D0B67E0EA4BF16A736A05BC911A"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourceGammaOneHeckeWords.log",
+            "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourceGammaOneHeckeWords.exit",
+            "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourceGammaOneOperatorDescent.lean.txt",
+            "sha256": "C69D4452555B8FDC3951EFE283373D423F447592E323904BBBCD9C57A2753FD9"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourceGammaOneOperatorDescent.log",
+            "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourceGammaOneOperatorDescent.exit",
+            "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourceGammaOneHeckeFinite.lean.txt",
+            "sha256": "071F8B65D67946F0C39E602FFDAAF0A8D3C40E84C4ACD308EF7200742A523169"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourceGammaOneHeckeFinite.log",
+            "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourceGammaOneHeckeFinite.exit",
+            "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourcePrimitiveGammaOneHeckeCharacter.lean.txt",
+            "sha256": "40EAA0B5AB12C906412F02BB640A0C97D9D9AFC4063CF4D68BEEB19148C51AFE"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourcePrimitiveGammaOneHeckeCharacter.log",
+            "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourcePrimitiveGammaOneHeckeCharacter.exit",
+            "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourcePrimitiveGammaOneH1Realization.lean.txt",
+            "sha256": "E74C962B858F431810852B72738BE9C8DB9D55D02ED0E35155456D8BBF003748"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourcePrimitiveGammaOneH1Realization.log",
+            "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourcePrimitiveGammaOneH1Realization.exit",
+            "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneCharacterAudit5.lean",
+            "sha256": "9C8687167C0024BA332A34100A2B1EFD00F71981595EB3B3E4BD22E92AB431D1"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneCharacterAudit5.log",
+            "sha256": "EAB61C30A221205672AAE79C06C3F8AB7E0E41870F3CF6CED0BC99B712A1EC8D"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneCharacterAudit5.exit",
+            "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\source-primitive-gamma-one-character-5-audit-config.json",
+            "sha256": "D418B2D88FEDA339B3312E0E11A3B856298170DAF5685B7860DE6CD2313984BD"
+          }
+        ],
+        "unusedOriginalDependencyAudit": "SourcePrimitiveGammaOneCharacterDependencyAudit5.lean"
+      },
+      "scratchImportClosure": [
+        "SourcePrimitiveGammaOneH1Realization",
+        "SourcePrimitiveFiniteH1OperatorRealization",
+        "SourcePrimitiveCongruentH1AdicRealization",
+        "SourcePrimitiveH1AdicRealization",
+        "SourcePrimitiveCompatibleH1AdicData",
+        "SourcePrimitiveAdicH1Quotients",
+        "SourcePrimitiveLocalH1Character",
+        "SourcePrimitiveH1CoefficientField",
+        "SourcePrimitiveH1AdicOperatorKernel",
+        "SourcePrimitiveH1HeckeCongruence",
+        "SourceBinaryH1PrimePowerKernel",
+        "SourceFaithfulCharacterDivisibility",
+        "SourcePrimitiveFiniteH1HeckeCharacter",
+        "SourceFiniteOperatorCharacterDescent",
+        "SourceBinaryH1ModulusOperatorAlgebra",
+        "SourceGammaOneHeckeFinite",
+        "SourceGammaOneHeckeWords",
+        "SourceBinaryPermutationHeckeWords",
+        "SourceBinaryPermutationHecke",
+        "SourceBinaryPrimePowerPermutation",
+        "SourcePermutationCoefficientQuotient",
+        "SourceGammaOneTransferHecke",
+        "SourceGammaOneSubgroupTraceHecke",
+        "SourceGammaOneUpperH1Composition",
+        "SourceGammaOneHeckePullbackSquare",
+        "SourceGammaOneCoverBinaryHeckeTrace",
+        "SourceGammaOneCoverHeckeTraceBaseChange",
+        "SourceH1TraceBaseChange",
+        "SourceShapiroH1CosetTrace",
+        "SourceShapiroH1CocycleComparison",
+        "SourceNativeCoinductionCosetTrace",
+        "SourceShapiroH1PullbackNaturality",
+        "SourceCohomologyTracePullbackCoefficients",
+        "SourceGammaOneCoverFiniteIndex",
+        "SourceGammaOneDiagonalHom",
+        "SourceBinaryPermutationCongruence",
+        "SourceGammaOneCongruenceCover",
+        "SourceGammaOneCoverHeckeTraceCosets",
+        "SourcePrincipalCoprimeReduction",
+        "SourceGammaOneCoverImageHecke",
+        "SourceGammaOneCoverImage",
+        "SourceH1TraceBaseChangeCoefficient",
+        "SourceGammaOneBinaryRestriction",
+        "SourceGammaOneCoverHeckeRepresentatives",
+        "SourceGammaOneCoverHeckeCosets",
+        "SourceGammaOneRaisedCosets",
+        "SourceGammaOneCoverHeckeSquare",
+        "SourceGammaOneHeckeSubgroup",
+        "SourceGammaOneConstantHecke",
+        "SourceGammaOneSubgroupCohomologyMap",
+        "SourceGammaOneTransferCosetFormula",
+        "SourceGammaOneConstantH1Realization",
+        "SourceGammaOneCohomologyTransfer",
+        "SourceGammaOneHeckeUpperImage",
+        "SourceGammaOneIntersectionTraceExchange",
+        "SourceGammaOneHeckeUpperTraceReindex",
+        "SourceH1TraceIntersection",
+        "SourceH1TraceTower",
+        "SourceShapiroH1Tower",
+        "SourceCoinducedTowerFunctions",
+        "SourceCoinducedTowerTrace",
+        "SourcePrimitiveGammaOneHeckeCharacter",
+        "SourceGammaOneOperatorDescent",
+        "SourceBinaryH1ModulusKernel"
+      ]
+    }
+  },
+  "discharged": "Construct actual Gamma1 Hecke characters at each positive prime-power precision with the same original Fourier values away from level and modulus; derive word-relation descent from the actual surjective transfer.",
+  "remaining": "Arithmetic geometric and diamond comparison, finite Galois realization and the compatible original all-weight characteristic-zero association remain required; finite characters alone do not give a characteristic-zero point. DUB-17--20 OPEN;16/20.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

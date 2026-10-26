@@ -1,0 +1,35 @@
+{
+  "fetchedUTC": "2026-10-26T01:22:04.109425+00:00",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_CuspForm_IsEigenformWith_exists_galoisRepAdic_charpoly_frobenius_eq_and_isUnramifiedAt.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CuspForm_IsEigenformWith_exists_galoisRepAdic_charpoly_frobenius_eq_and_isUnramifiedAt.lean",
+      "snapshot": "anthropics__fermats-last-theorem\\P2M\\Sol\\S_CuspForm_IsEigenformWith_exists_galoisRepAdic_charpoly_frobenius_eq_and_isUnramifiedAt.lean.txt",
+      "gitBlob": "c291b33117c90308ec6e92c85e64d706fc087c5c",
+      "sha256": "F7681C9388F07C1CB3631D4EEB48EE0A94A07F30AA24293FF55A299267D7A2DE",
+      "bytes": 49517
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_CuspForm_IsNormalizedEigenform_exists_galoisRepAdic_frobenius_quadratic.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CuspForm_IsNormalizedEigenform_exists_galoisRepAdic_frobenius_quadratic.lean",
+      "snapshot": "anthropics__fermats-last-theorem\\P2M\\Sol\\S_CuspForm_IsNormalizedEigenform_exists_galoisRepAdic_frobenius_quadratic.lean.txt",
+      "gitBlob": "5cdd6b570b3563b19e77a50eeb1556772969d6d6",
+      "sha256": "8574FECF5CD946B041586B7DD5C62C63EE3C06D3938AF479A2E6B4D49C24A2AD",
+      "bytes": 53090
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_CuspForm_IsNormalizedEigenform_exists_galoisRepAdic_charpoly_frobenius_eq_of_ringHom_integralClosure.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CuspForm_IsNormalizedEigenform_exists_galoisRepAdic_charpoly_frobenius_eq_of_ringHom_integralClosure.lean",
+      "snapshot": "anthropics__fermats-last-theorem\\P2M\\Sol\\S_CuspForm_IsNormalizedEigenform_exists_galoisRepAdic_charpoly_frobenius_eq_of_ringHom_integralClosure.lean.txt",
+      "gitBlob": "6c3cd46e6f9fe4f46d87251378ccc01a584d80c9",
+      "sha256": "04D2F9A1A54574B14350DFA807340CA975C9EB92DCA2650B6D684810BDAAD374",
+      "bytes": 36564
+    }
+  ]
+}

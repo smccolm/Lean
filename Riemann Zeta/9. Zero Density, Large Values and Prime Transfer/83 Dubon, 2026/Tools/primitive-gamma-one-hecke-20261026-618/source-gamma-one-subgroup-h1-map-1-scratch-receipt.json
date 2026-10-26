@@ -1,0 +1,47 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T06:32:03.067630+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceGammaOneSubgroupCohomologyMap"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSubgroupCohomologyMap.lean",
+      "sha256": "937193952EE4964F6BE9F3D3F629C612CE003B45FA310AA44E3212EC0FDCF27B",
+      "oleanSha256": "DE87C6539ABCE8E88F9D4DA9FADD97EAB76531F8894923C189E9B2C8D62751A0"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceGammaOneSubgroupH1Iso_hom_eq_map",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_subgroupIso"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceGammaOneSubgroupH1Iso_hom_eq_map",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_subgroupIso"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSubgroupH1MapAudit1.log",
+  "logSha256": "9CDD59B1C90FF4CA157BDD1B5C15D02A1E5EFAA95B7B641CF54014B42454683A",
+  "auditSha256": "24F1B162CEB2E967DAE924AD19EBB0DC8C1509F747551B133B4694910BDD5254",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 3,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 5,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSubgroupH1MapDependencyAudit1.log",
+  "dependencyAuditSha256": "D2DC72561A9F7E8DDFB3A27EE993F9BA488BD633214365E4E2F4C0B0CB97E5C8",
+  "dependencyAuditSourceSha256": "F0056D2751D6F9E61B240824CD887EE82E45D08B9BBB13CBF06CF3367AA0FBED",
+  "consumers": [
+    "Dubon2026.sourceGammaOneSubgroupH1Iso_hom_eq_map",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_subgroupIso"
+  ],
+  "dependency": "DUB-17/18 -> original all-weight adic association -> geometric Gamma1 realization -> actual surjective-transfer Hecke identity -> identify the already constructed subgroup H1 isomorphism with its literal native pullback and cancel it from the original transfer",
+  "discharged": "Identify the exact existing Gamma1 H1 transport and transfer on original subgroup coordinates, for use with the literal Hecke subgroup square and trace composition.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. These identifications must be consumed with the actual upper-subgroup isomorphism, original binary coefficient map, and trace composition to finish the full surjective-transfer Hecke identity. Arithmetic geometric/diamond comparison, Galois realization, all-weight association, local/image/regularity, automorphy and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-subgroup-h1-map-1-reuse-review-20261025.json",
+  "reuseReviewSha256": "FE74F65FF9F8D5DDE461547DB58DEDC21E137DBDD80919C1B21E547C1A2F2BB2",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

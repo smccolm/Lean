@@ -1,0 +1,29 @@
+import SourceGammaOneResidues
+import SourceGammaOneHeckePicard
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_mem_degZero, `Dubon2026.SourceFunctionField.GammaOne.isPrincipal_heckeDivisor, `Dubon2026.SourceFunctionField.GammaOne.heckePicard_mk, `Dubon2026.SourceFunctionField.GammaOne.heckeDivisor, `Dubon2026.SourceFunctionField.GammaOne.heckePicard]
+  let localModules : Array Name := #[`SourceGammaOneHeckePicard, `SourceGammaOneResidues, `SourceGammaOneCurveFinite, `SourceGammaOneFunctionFieldBaseChange, `SourceGammaOneFunctionFieldFinite, `SourceGammaOneRationalRelation, `SourceGammaOneJCoordinate, `SourceGammaOneFunctionField, `SourceGammaOneComplexRatio, `SourceGammaOneComplexRelation, `SourceGammaOneNormRelation, `SourceGammaOneRatioClosure, `SourceGammaOneHeckeFieldFinite, `SourceGammaOneHeckeDegeneracy, `SourceGammaOneHeckeFieldInclusion, `SourceGammaOneModularStretchCoefficients, `SourceGammaOneModularStretch]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.gamma1_place_residue_bijective, `Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_place_residue_bijective, `Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_mem_degZero, `Dubon2026.SourceFunctionField.GammaOne.isPrincipal_heckeDivisor, `Dubon2026.SourceFunctionField.GammaOne.heckePicard_mk, `Dubon2026.SourceFunctionField.GammaOne.heckeDivisor, `Dubon2026.SourceFunctionField.GammaOne.heckePicard, `Dubon2026.SourceFunctionField.GammaOne.gamma1_finite_coordinate, `Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_finite_coordinate, `Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_finite, `Dubon2026.SourceFunctionField.GammaOne.heckeBeta_finite, `Dubon2026.SourceCurve.place_residue_bijective_of_finite_coordinate, `Dubon2026.SourceCurve.Divisor.geometricCorrespondence, `Dubon2026.SourceCurve.Divisor.geometricCorrespondence_mem_degZero, `Dubon2026.SourceCurve.Divisor.isPrincipal_geometricCorrespondence, `Dubon2026.SourceCurve.Pic0.geometricCorrespondence, `Dubon2026.SourceCurve.Pic0.geometricCorrespondence_mk]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE HECKE PICARD DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual Gamma1 divisor/Picard operator construction values, degree-zero and principal-divisor preservation, or representative evaluation. Construction roots are checked explicitly because definitional wrapper names in consumer types do not count as proof-value edges. Only declaration values are traversed. Actual finite coordinates and finite Hecke maps, closed residue fields and existing norm/degree identities discharge all advertised geometric-construction inputs. Geometric/H1 and diamond comparison, arithmetic action compatibility, finite-character Galois realization, original all-weight characteristic-zero association and higher continuation remain required. 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

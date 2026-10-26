@@ -1,0 +1,113 @@
+source_path: "../ramanujan-petersson.md"
+source_basename: "ramanujan-petersson.md"
+project_slug: "ramanujan-petersson"
+lean_package: "RamanujanPetersson"
+claims:
+  - id: claim-001
+    source_location: "§5, Lemma 5.1"
+    informal_statement: "If a = α + β and |α|, |β| ≤ R, then |a| ≤ 2R."
+    blueprint_section: "1. Core statements"
+    lean_target: "RamanujanPetersson.rankTwoTraceBound"
+    status: formalized
+    difference_kind: encoding-only
+    paper_action: none
+    notes: "Formalized over ℂ using Lean's norm notation."
+  - id: claim-002
+    source_location: "§3, Theorem 3.1"
+    informal_statement: "For p not dividing Nℓ, the rank-two witness has characteristic polynomial T^2 - a_p T + χ(p)p^(k-1), hence trace a_p and determinant χ(p)p^(k-1)."
+    blueprint_section: "1. Core statements"
+    lean_target: "RamanujanPetersson.theorem31_localCharpoly_witnessForm"
+    status: formalized
+    difference_kind: added-assumption
+    paper_action: review
+    notes: "Formalized only in witness form: assumes an explicit 2×2 complex matrix with the displayed characteristic polynomial instead of constructing Deligne's Galois representation."
+  - id: claim-003
+    source_location: "§5, proof of Theorem 2.1"
+    informal_statement: "The Ramanujan–Petersson bound follows from writing a_p = α_p + β_p and applying the rank-two trace bound with |α_p| = |β_p|."
+    blueprint_section: "1. Core statements"
+    lean_target: "RamanujanPetersson.witnessSqueeze"
+    status: formalized
+    difference_kind: lemma-split
+    paper_action: none
+    notes: "Captures the abstract witness–squeeze reduction, not the full modular-form setup."
+  - id: claim-004
+    source_location: "§4, Theorem 4.1"
+    informal_statement: "For every prime p not dividing N, the two Frobenius eigenvalues α_p, β_p both have complex absolute value p^((k-1)/2)."
+    blueprint_section: "1. Core statements"
+    lean_target: "RamanujanPetersson.theorem41_purity_witnessForm"
+    status: formalized
+    difference_kind: added-assumption
+    paper_action: review
+    notes: "Formalized only in witness form: fixes a chosen complex realization αₚ, βₚ of the Frobenius eigenvalues and assumes the purity norm equalities directly, rather than encoding algebraic numbers together with every embedding σ : Qbar → ℂ."
+  - id: claim-005
+    source_location: "§2, Theorem 2.1 and §5, final proof step"
+    informal_statement: "For every prime p not dividing N, |a_p| ≤ 2 p^((k-1)/2)."
+    blueprint_section: "1. Core statements"
+    lean_target: "RamanujanPetersson.theorem21_witnessForm"
+    status: formalized
+    difference_kind: added-assumption
+    paper_action: review
+    notes: "Formalized only in witness form: assumes explicit αₚ, βₚ with aₚ = αₚ + βₚ and the purity-size equalities."
+  - id: claim-006
+    source_location: "§5, Corollary 5.3 (prime-power clause)"
+    informal_statement: "If p ∤ N and m ≥ 0, then |a_(p^m)| ≤ (m + 1) p^(m(k-1)/2)."
+    blueprint_section: "1. Core statements"
+    lean_target: "RamanujanPetersson.corollary53_primePowers_witnessForm"
+    status: formalized
+    difference_kind: added-assumption
+    paper_action: review
+    notes: "Formalized in witness form via an explicit coefficient-sum hypothesis a = ∑_{j=0}^m α^j β^(m-j) and equal spectral norm hypotheses on α, β. The exponent is encoded as ((p : ℝ)^((k - 1 : ℝ)/2))^m."
+  - id: claim-007
+    source_location: "§5, Corollary 5.3 (coprime-index clause)"
+    informal_statement: "If (n, N) = 1, then |a_n| ≤ d(n) n^((k-1)/2)."
+    blueprint_section: "1. Core statements"
+    lean_target: "RamanujanPetersson.corollary53_coprimeIndices_witnessForm"
+    status: formalized
+    difference_kind: added-assumption
+    paper_action: review
+    notes: "Formalized only in witness form: assumes an explicit finite multiplicative decomposition of aₙ into prime-power factors, pointwise prime-power bounds, and witness identities matching the divisor-count and n^((k - 1)/2) factors."
+  - id: claim-008
+    source_location: "§3, Theorem 3.1"
+    informal_statement: "There exists a rank-two ℓ-adic Galois representation with the expected local characteristic polynomial, trace, and determinant data."
+    blueprint_section: "1. Core statements"
+    lean_target: "RamanujanPetersson.theorem31_paperFaithful"
+    status: formalized
+    difference_kind: added-assumption
+    paper_action: review
+    notes: "Adds a paper-facing existential packaging layer over abstract representation-level hypotheses. Deligne's construction itself remains outside the current formalization."
+  - id: claim-009
+    source_location: "§4, Theorem 4.1"
+    informal_statement: "There exist algebraic Frobenius roots α_p, β_p whose complex embeddings all have absolute value p^((k-1)/2)."
+    blueprint_section: "1. Core statements"
+    lean_target: "RamanujanPetersson.theorem41_paperFaithful"
+    status: formalized
+    difference_kind: encoding-only
+    paper_action: none
+    notes: "This is now represented in a paper-facing `Qbar`/embedding interface rather than the earlier chosen-complex witness pair."
+  - id: claim-010
+    source_location: "§2, Theorem 2.1"
+    informal_statement: "For every prime p not dividing N, |a_p| ≤ 2 p^((k-1)/2)."
+    blueprint_section: "1. Core statements"
+    lean_target: "RamanujanPetersson.theorem21_paperFaithful"
+    status: formalized
+    difference_kind: added-assumption
+    paper_action: review
+    notes: "The theorem now has a paper-facing `Qbar` root interface, but still treats the Deligne/purity input as an abstract hypothesis package rather than deriving it from modular-form machinery."
+  - id: claim-011
+    source_location: "§5, Corollary 5.3 (prime-power clause)"
+    informal_statement: "If p ∤ N and m ≥ 0, then |a_(p^m)| ≤ (m + 1) p^(m(k-1)/2)."
+    blueprint_section: "1. Core statements"
+    lean_target: "RamanujanPetersson.corollary53_primePowers_paperFaithful"
+    status: formalized
+    difference_kind: added-assumption
+    paper_action: review
+    notes: "The public theorem is now paper-facing, but the prime-power coefficient formula is still supplied as an interface hypothesis rather than derived from Euler-product infrastructure."
+  - id: claim-012
+    source_location: "§5, Corollary 5.3 (coprime-index clause)"
+    informal_statement: "If (n, N) = 1, then |a_n| ≤ d(n) n^((k-1)/2)."
+    blueprint_section: "1. Core statements"
+    lean_target: "RamanujanPetersson.corollary53_coprimeIndices_paperFaithful"
+    status: formalized
+    difference_kind: added-assumption
+    paper_action: review
+    notes: "The public theorem is now paper-facing, but multiplicativity, divisor-count identities, and the archimedean collapse to n^((k - 1)/2) are still abstractly packaged."

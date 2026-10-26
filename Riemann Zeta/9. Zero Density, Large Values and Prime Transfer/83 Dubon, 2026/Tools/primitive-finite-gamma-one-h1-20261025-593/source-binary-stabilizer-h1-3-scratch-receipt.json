@@ -1,0 +1,67 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T02:29:34.525533+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceCoefficientPermutationCoordinates",
+    "SourceCoefficientStabilizerCohomology",
+    "SourceIntegralBinaryStabilizerRealization"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientPermutationCoordinates.lean",
+      "sha256": "500AF11865310EEEC2602EE24664B878F98FB342ED96952B0189B46A3F0E40F6",
+      "oleanSha256": "3110092C43D3B01E0BF8AAF789CCB6B6F97CA8F25895A7D425BBBAE25CE25BB0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientStabilizerCohomology.lean",
+      "sha256": "9936ECAA33E420CD6BBF7465D249E5A40CCD0244365542307DE20401B1FF5CCA",
+      "oleanSha256": "243B9AC783DBD8013D74400A20F60E68B13024EA35E0977C431A0BE5E389807B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralBinaryStabilizerRealization.lean",
+      "sha256": "E30ABF7F9072A0C1AFDCC868A371CBF45DFEEE68029B7AFB5900158AC04F41E5",
+      "oleanSha256": "567133BEDD562695DDDAE55375857E2D90457DA90CE125286CE1187DC598B3B6"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceCoefficientOrbitStabilizer_finiteIndex",
+    "Dubon2026.sourceIntegralBinary_exists_stabilizerH1Realization",
+    "Dubon2026.sourceCoefficientVectorAction",
+    "Dubon2026.sourceCoefficientPermutationCoordinateIso",
+    "Dubon2026.sourceCoefficientOrbitPoint",
+    "Dubon2026.sourceCoefficientStabilizerH1Equiv"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceCoefficientOrbitStabilizer_finiteIndex",
+    "Dubon2026.sourceIntegralBinary_exists_stabilizerH1Realization"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceCoefficientVectorAction",
+    "Dubon2026.sourceCoefficientPermutationCoordinateIso",
+    "Dubon2026.sourceCoefficientOrbitPoint",
+    "Dubon2026.sourceCoefficientStabilizerH1Equiv"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryStabilizerH1Audit3.log",
+  "logSha256": "384F47870F0D3B1DBD8EEE00C557665ED5F381E4894557AE14A44F0483E54AD4",
+  "auditSha256": "6F51F236E29C4129A3A0A23E793F7D0A86C975B20900F99F65D9F354443317A8",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 11,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 13,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryStabilizerH1DependencyAudit3.log",
+  "dependencyAuditSha256": "F3E28D3D4476A1AAB93CDC4527D6280A58A6D8B527E0FE08B06C978F1215460F",
+  "dependencyAuditSourceSha256": "7B3E2968996E4F990A659DB23BA2731E350BA66BD2B76345738F85CAC20E14F6",
+  "consumers": [
+    "Dubon2026.sourceIntegralBinary_exists_stabilizerH1Realization"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight adic Galois association -> geometric finite-precision Hecke realization -> identify actual finite binary permutation H1 with trivial-coefficient H1 of its congruence orbit stabilizers",
+  "discharged": "Identify the finite permutation H1 of scope 582 with actual trivial-coefficient orbit-stabilizer H1, prove principal congruence containment of each actual stabilizer, and retain the original integral class and its Hecke transforms through this same comparison.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The transported Hecke operators are not yet identified with geometric correspondences on arithmetic curves. An actual Galois realization of the compatible original Hecke characters from scope 583 and characteristic-zero association remain required. No eigenvector lifting or Galois action follows from this comparison. Local/image/regularity, arithmetic automorphy and literal higher continuation remain required; 16/20, DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-binary-stabilizer-h1-3-reuse-review-20261025.json",
+  "reuseReviewSha256": "600C19B2979A15C0C43685308947459B322D264947395E5F782E007474C6DC0E",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

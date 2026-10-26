@@ -1,0 +1,17 @@
+{
+  "reason": "Kernel deterministic timeout in reflexivity for the concrete scalar-extended inclusion projection. Preserve evidence and use the native explicit inclusion projection theorem; no proof-limit change.",
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-fields-622-before-explicit-inclusion-projection\\SourceGammaOneHeckeDegeneracy.lean.txt",
+      "sha256": "A40D4CBE5AAC02200F3AE39D70D536BED8E248A37051EF5CAC191DED9552FC46"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-fields-622-before-explicit-inclusion-projection\\SourceGammaOneHeckeDegeneracy.log",
+      "sha256": "13F57BAD1EE248990779A623A99A65C0407F8DC172489B138D73E38E8EEDFDFD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-fields-622-before-explicit-inclusion-projection\\SourceGammaOneHeckeDegeneracy.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "fetchedUTC": "2026-10-26T11:55:24.180889+00:00",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_coe_qExpansion_normalizedDerivOfComplex.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_coe_qExpansion_normalizedDerivOfComplex.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_coe_qExpansion_normalizedDerivOfComplex.lean.txt",
+      "gitBlob": "822abc81cedf29bcafa97034fc72751a3bac1082",
+      "sha256": "AA9B7602463C9998A6AC592BE8686944AA5336C33AAA9B597A40590B0A300A51",
+      "bytes": 17924
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_thetaL_jq_mul_deltaSeries.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_thetaL_jq_mul_deltaSeries.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_thetaL_jq_mul_deltaSeries.lean.txt",
+      "gitBlob": "8ed646e1bb4575e430facb4cb3f25913531c9ec0",
+      "sha256": "6A0A5BC0A59B5DCFB39C0962F20F0329AFDC2B47BF52E2B264177E02369FB9EA",
+      "bytes": 7297
+    }
+  ]
+}

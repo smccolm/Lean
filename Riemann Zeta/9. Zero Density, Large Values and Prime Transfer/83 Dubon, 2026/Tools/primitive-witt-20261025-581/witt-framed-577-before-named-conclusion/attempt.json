@@ -1,0 +1,31 @@
+{
+  "timeUTC": "2026-10-26T00:35:09.461001+00:00",
+  "status": "Stopped unaudited elaboration after over thirteen minutes of CPU-active evaluation without diagnostics.",
+  "change": "Factor the same concrete framed-ring conclusion into a definition. This names only the conclusion; no new assumption or proof limit is introduced.",
+  "files": [
+    {
+      "path": "SourcePrimitiveWittFramedResidual.exit",
+      "sha256": "186A919B8C7CB84AEBF4E53C70CD1CC028A93A1D183EE29DD6E10CD18A714577"
+    },
+    {
+      "path": "SourcePrimitiveWittFramedResidual.lean.txt",
+      "sha256": "59E8FF3BDEE918B72EA776E6572DD9DF0428D26B72BF8AC1D28A98067C986654"
+    },
+    {
+      "path": "SourcePrimitiveWittFramedResidual.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "SourceResidualWittFramedRing.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "SourceResidualWittFramedRing.lean.txt",
+      "sha256": "611B55C0B1CBFD4D0C15EDB7448F4AFD208F303500301CF6FE5CAF0561E28E73"
+    },
+    {
+      "path": "SourceResidualWittFramedRing.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ]
+}

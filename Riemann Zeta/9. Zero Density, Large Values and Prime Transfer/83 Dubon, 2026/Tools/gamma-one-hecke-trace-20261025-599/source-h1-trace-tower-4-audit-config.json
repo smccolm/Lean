@@ -1,0 +1,50 @@
+{
+  "modules": [
+    "SourceCoinducedTowerFunctions",
+    "SourceCoinducedTowerTrace",
+    "SourceShapiroH1Tower",
+    "SourceH1TraceTower"
+  ],
+  "theorems": [
+    "Dubon2026.sourceCoinducedTowerTrace_values",
+    "Dubon2026.sourceCoinducedTowerTrace_comp",
+    "Dubon2026.sourceShapiroH1_tower",
+    "Dubon2026.sourceSubgroupH1Trace_tower",
+    "Dubon2026.sourceHeckeH1Trace_tower"
+  ],
+  "constructions": [
+    "Dubon2026.sourceCoinducedTowerFlatten",
+    "Dubon2026.sourceCoinducedTowerUnflatten",
+    "Dubon2026.sourceCoinducedTowerIso"
+  ],
+  "queries": [
+    "Dubon2026.sourceCoinducedTowerTrace_values",
+    "Dubon2026.sourceCoinducedTowerTrace_comp",
+    "Dubon2026.sourceShapiroH1_tower",
+    "Dubon2026.sourceSubgroupH1Trace_tower",
+    "Dubon2026.sourceHeckeH1Trace_tower",
+    "Dubon2026.sourceCoinducedTowerFlatten",
+    "Dubon2026.sourceCoinducedTowerUnflatten",
+    "Dubon2026.sourceCoinducedTowerIso"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceCoinducedTowerTrace_values",
+    "Dubon2026.sourceCoinducedTowerTrace_comp",
+    "Dubon2026.sourceShapiroH1_tower",
+    "Dubon2026.sourceSubgroupH1Trace_tower",
+    "Dubon2026.sourceHeckeH1Trace_tower",
+    "Dubon2026.sourceCoinducedTowerFlatten",
+    "Dubon2026.sourceCoinducedTowerUnflatten",
+    "Dubon2026.sourceCoinducedTowerIso",
+    "Subgroup.quotientEquivProdOfLE",
+    "Subgroup.subgroupOfEquivOfLe",
+    "Dubon2026.originalCohomologyTrace_coinduced_lift",
+    "Dubon2026.OriginalShapiroRestriction.originalShapiroIso_eq_restriction_eval",
+    "Dubon2026.sourceHeckeH1Trace_eq_subgroupTrace",
+    "groupCohomology.map_comp"
+  ],
+  "roots": [
+    "Dubon2026.sourceHeckeH1Trace_tower"
+  ],
+  "separatelyAxiomChecked": []
+}

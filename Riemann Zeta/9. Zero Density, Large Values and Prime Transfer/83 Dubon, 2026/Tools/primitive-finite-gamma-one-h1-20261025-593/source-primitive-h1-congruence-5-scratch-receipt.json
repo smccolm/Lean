@@ -1,0 +1,84 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T02:46:09.901812+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceFaithfulCharacterDivisibility",
+    "SourceBinaryH1PrimePowerKernel",
+    "SourcePrimitiveH1HeckeCongruence",
+    "SourcePrimitiveH1AdicOperatorKernel",
+    "SourcePrimitiveCongruentH1AdicRealization"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulCharacterDivisibility.lean",
+      "sha256": "9C6E94794105805D9E4408F496D3908C44CA676C6376C16C437552BB31AE7063",
+      "oleanSha256": "BEBEC32CA2DE4BA4893AB642E695099237EEBDBBA0FA2520B581DF5077C14AAD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryH1PrimePowerKernel.lean",
+      "sha256": "19DA3B7EE28E9C5F5FFB5BF18A22A8C78F033805E5A6ED864351EA498A539F3C",
+      "oleanSha256": "B17172627806D8A84EA73B48FD40B25F866EB2B7E6EBF5021B77EEA78D949BA2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1HeckeCongruence.lean",
+      "sha256": "700841266CA4946061078CD982E107933BA862BB90E152DCB7D632A813BE5984",
+      "oleanSha256": "09614C379DBAF0BAFDDFFDA5BA89527B0ABB056021A8E65256A9E53854F696DF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicOperatorKernel.lean",
+      "sha256": "CC0404B804624308925B1E86EC1F10EC971BD1E6902B4030BF5CEE4DFAB0FAD2",
+      "oleanSha256": "FC4EB343899695C1D9CE09FF40A77F0FC8B28ED6E7537004BD6DEBFB4B531B88"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveCongruentH1AdicRealization.lean",
+      "sha256": "E95609B3B1E0AA209848BB5FD372DA27DD6081D3A22A8CC2BCE77FA9C2448320",
+      "oleanSha256": "EF5C4A685218FA4C545A3CC0C94EB0F64B5E958DBFB6CB0C3FCE40471CD9EE93"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceFaithfulCharacter_div_isIntegral",
+    "Dubon2026.sourceBinaryH1Change_zmod_nonzero_eq_zero_iff",
+    "Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_integral",
+    "Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_valuation",
+    "Dubon2026.sourcePrimitiveH1Hecke_primePower_congruence_valuation",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator",
+    "Dubon2026.sourcePrimitive_exists_congruentH1AdicRealization",
+    "Dubon2026.sourcePrimitiveH1AdicCongruenceData"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceFaithfulCharacter_div_isIntegral",
+    "Dubon2026.sourceBinaryH1Change_zmod_nonzero_eq_zero_iff",
+    "Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_integral",
+    "Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_valuation",
+    "Dubon2026.sourcePrimitiveH1Hecke_primePower_congruence_valuation",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator",
+    "Dubon2026.sourcePrimitive_exists_congruentH1AdicRealization"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourcePrimitiveH1AdicCongruenceData"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1CongruenceAudit5.log",
+  "logSha256": "ADCA8A32CB01AB3C535B20B033C2139AEE5F0108490C2DFFDCB9E9C535EC78F6",
+  "auditSha256": "533B11A34CAA864E4F7A6CBC9B983EC820217EF1F220F9A37366D5044ED1EED1",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 13,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 18,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1CongruenceDependencyAudit5.log",
+  "dependencyAuditSha256": "14676F1C9A80E976A0A67140E14A75A761C49BDA5DEC7904826F8DAA20B71F93",
+  "dependencyAuditSourceSha256": "F6DEBFDEF0F4BACB6D73B950B24A4E07C63F7953C22C9B8BD10FF6B4B95E808A",
+  "consumers": [
+    "Dubon2026.sourcePrimitive_exists_congruentH1AdicRealization",
+    "Dubon2026.sourcePrimitiveH1Hecke_primePower_congruence_valuation"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> geometric finite-precision Hecke realization -> the original H1 character respects actual operator congruences",
+  "discharged": "From the original primitive form, weight at least two and prescribed prime, derive compatible finite adic characters with their original Fourier values and exact operator-congruence compatibility: an original integral H1 operator that vanishes after coefficient reduction modulo p^(n+1) maps to zero under the matching character modulo maximalIdeal^(n+1). The finite faithful character fiber and exact H1 reduction kernel supply integrality of the divided character value. No eigenvector lift, free integral basis, local-field, finite-residue or operator-kernel compatibility premise is supplied to the terminal original-form consumer.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. This controls finite-precision character relations; it does not yet identify the transported stabilizer Hecke action with arithmetic correspondences or construct a compatible Galois representation. Geometric realization, characteristic-zero association, local/image/regularity, automorphy and literal higher continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-h1-congruence-5-reuse-review-20261025.json",
+  "reuseReviewSha256": "046E2F42CBB7E64D311967FE737A32262C0F2FA9A777A77668C56783AA182DEE",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,25 @@
+{
+  "scope": 569,
+  "scopeIds": [
+    564,
+    565,
+    566,
+    567
+  ],
+  "receipts": {
+    "source-original-primitive-cyclotomic-12-scratch-receipt.json": "8C259D737D6F18B54B7A8AA76258ECB9ED780D0C8A047DD1FF0A1FAB79862F91",
+    "source-original-primitive-frobenius-charpoly-5-scratch-receipt.json": "B66051491071B42B756DAE81D7DBD227E5E9FD14DFB296429F97EB8ABCC589AD",
+    "source-original-primitive-residual-frobenius-7-scratch-receipt.json": "CCBBFF7F47B1F7FA620AF064D4E560663975A59013B1086256C9557863E47F2C",
+    "source-original-prescribed-residual-frobenius-2-scratch-receipt.json": "B5AEDE141A244064F3403B542D20A357353BEA95717BCDD43F9421FBF93E8314"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight residual association -> weight-two prescribed residual realization -> the actual primitive original Tate representation has arithmetic Frobenius characteristic polynomial X^2-a_q*X+q and trivial good-prime inertia -> compare the actual rank-two projector image and transport its literal Weil pairing through the existing spanning specialization",
+  "discharged": "The actual arithmetic projector image is identified with the existing spanning primitive specialization. Its literal root-valued alternating Weil pairing is nondegenerate and has the original cyclotomic multiplier, so the same representation has cyclotomic determinant. The exact source valuation arithmetic Frobenius acts on prime-to-q roots by q-th powers, giving cyclotomic value q. The original Tate quadratic relation therefore yields determinant q, trace a_q and characteristic polynomial X^2-a_q*X+q. The already constructed integral lattice and literal residue representation retain this polynomial and trivial good-prime inertia. A prescribed Fourier-field embedding is retained through the actual continuous Tate specialization, stable lattice and residual construction. No separate determinant, nondegenerate pairing, Frobenius action, stable lattice or residual compatibility hypothesis is supplied.",
+  "remaining": "Choosing the coefficient completion and residue embedding compatible with the source prescribed algebraic-integer reduction, the arithmetic quotient and norm-local comparisons, closure of the parabolic branch, final weight twist and support comparison, arithmetic automorphy and all-weight continuation remain required. The prescribed-embedding theorem explicitly assumes a genuine finite local coefficient field and valuation extension, to be discharged by the chosen completion. 16/20; DUB-17--20 OPEN.",
+  "route": "Reuse native range_liftBaseChange, finite-dimensional bijectivity and alternating two-coordinate determinant algebra to retain the original representation. Reuse source valuation root lifting, PadicInt.ext_of_toZModPow, the exact cyclotomic character and native Cayley-Hamilton. Reuse the existing stable lattice and literal entrywise reduction with native characteristic-polynomial transport. Preserve an arbitrary prescribed Fourier-field embedding, then choose the completion at the kernel of the source reduction using the proved quotient/residue equivalence. No external import, root pin change, proof-limit change or generic Jacobian infrastructure is needed.",
+  "precedingCanonicalScope": 8133,
+  "mathematicalSource": "Frozen Dubon arXiv2609.17875v1; complete original goal unchanged.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalLocalBuild": false,
+  "externalImport": false
+}

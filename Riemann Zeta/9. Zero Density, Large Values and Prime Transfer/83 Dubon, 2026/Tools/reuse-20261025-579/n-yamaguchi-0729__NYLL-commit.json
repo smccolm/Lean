@@ -1,0 +1,113 @@
+{
+  "sha": "8c1b16d10afaca09e0dc72753c6575e230d31a55",
+  "node_id": "C_kwDOVEjc-9oAKDhjMWIxNmQxMGFmYWNhMDllMGRjNzI3NTNjNjU3NWUyMzBkMzFhNTU",
+  "commit": {
+    "author": {
+      "name": "n-yamaguchi-0729",
+      "email": "64186203+n-yamaguchi-0729@users.noreply.github.com",
+      "date": "2026-10-19T18:19:32Z"
+    },
+    "committer": {
+      "name": "n-yamaguchi-0729",
+      "email": "64186203+n-yamaguchi-0729@users.noreply.github.com",
+      "date": "2026-10-19T18:19:32Z"
+    },
+    "message": "ci: bind the NYLL workflow in proof verification [skip ci]",
+    "tree": {
+      "sha": "767a5aea27e7544ca2ec43edaf18182e06d62fda",
+      "url": "https://api.github.com/repos/n-yamaguchi-0729/NYLL/git/trees/767a5aea27e7544ca2ec43edaf18182e06d62fda"
+    },
+    "url": "https://api.github.com/repos/n-yamaguchi-0729/NYLL/git/commits/8c1b16d10afaca09e0dc72753c6575e230d31a55",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/n-yamaguchi-0729/NYLL/commits/8c1b16d10afaca09e0dc72753c6575e230d31a55",
+  "html_url": "https://github.com/n-yamaguchi-0729/NYLL/commit/8c1b16d10afaca09e0dc72753c6575e230d31a55",
+  "comments_url": "https://api.github.com/repos/n-yamaguchi-0729/NYLL/commits/8c1b16d10afaca09e0dc72753c6575e230d31a55/comments",
+  "author": {
+    "login": "n-yamaguchi-0729",
+    "id": 64186203,
+    "node_id": "MDQ6VXNlcjY0MTg2MjAz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/64186203?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/n-yamaguchi-0729",
+    "html_url": "https://github.com/n-yamaguchi-0729",
+    "followers_url": "https://api.github.com/users/n-yamaguchi-0729/followers",
+    "following_url": "https://api.github.com/users/n-yamaguchi-0729/following{/other_user}",
+    "gists_url": "https://api.github.com/users/n-yamaguchi-0729/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/n-yamaguchi-0729/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/n-yamaguchi-0729/subscriptions",
+    "organizations_url": "https://api.github.com/users/n-yamaguchi-0729/orgs",
+    "repos_url": "https://api.github.com/users/n-yamaguchi-0729/repos",
+    "events_url": "https://api.github.com/users/n-yamaguchi-0729/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/n-yamaguchi-0729/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "n-yamaguchi-0729",
+    "id": 64186203,
+    "node_id": "MDQ6VXNlcjY0MTg2MjAz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/64186203?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/n-yamaguchi-0729",
+    "html_url": "https://github.com/n-yamaguchi-0729",
+    "followers_url": "https://api.github.com/users/n-yamaguchi-0729/followers",
+    "following_url": "https://api.github.com/users/n-yamaguchi-0729/following{/other_user}",
+    "gists_url": "https://api.github.com/users/n-yamaguchi-0729/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/n-yamaguchi-0729/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/n-yamaguchi-0729/subscriptions",
+    "organizations_url": "https://api.github.com/users/n-yamaguchi-0729/orgs",
+    "repos_url": "https://api.github.com/users/n-yamaguchi-0729/repos",
+    "events_url": "https://api.github.com/users/n-yamaguchi-0729/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/n-yamaguchi-0729/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "acf95d70b45dc590c97c4b09efaa30bacbe27f52",
+      "url": "https://api.github.com/repos/n-yamaguchi-0729/NYLL/commits/acf95d70b45dc590c97c4b09efaa30bacbe27f52",
+      "html_url": "https://github.com/n-yamaguchi-0729/NYLL/commit/acf95d70b45dc590c97c4b09efaa30bacbe27f52"
+    }
+  ],
+  "stats": {
+    "total": 70,
+    "additions": 67,
+    "deletions": 3
+  },
+  "files": [
+    {
+      "sha": "8c3e529d1bea5069c95e13f1383e6e3ab0cff23d",
+      "filename": ".github/scripts/publication/tests/test_proof_verification.py",
+      "status": "modified",
+      "additions": 53,
+      "deletions": 1,
+      "changes": 54,
+      "blob_url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/.github%2Fscripts%2Fpublication%2Ftests%2Ftest_proof_verification.py",
+      "raw_url": "https://github.com/n-yamaguchi-0729/NYLL/raw/8c1b16d10afaca09e0dc72753c6575e230d31a55/.github%2Fscripts%2Fpublication%2Ftests%2Ftest_proof_verification.py",
+      "contents_url": "https://api.github.com/repos/n-yamaguchi-0729/NYLL/contents/.github%2Fscripts%2Fpublication%2Ftests%2Ftest_proof_verification.py?ref=8c1b16d10afaca09e0dc72753c6575e230d31a55",
+      "patch": "@@ -4,7 +4,7 @@\n Authors: Naganori Yamaguchi (assisted by OpenAI Codex).\n \"\"\"\n from argparse import Namespace\n-from contextlib import redirect_stdout\n+from contextlib import redirect_stderr, redirect_stdout\n from io import StringIO\n import json\n import io\n@@ -104,6 +104,58 @@ def setUp(self):\n         self.pipeline = verify.Pipeline(args)\n         self.pipeline.out.mkdir()\n \n+    def workflow_fixture(self, entry):\n+        directory = self.root / \".github/workflows\"\n+        directory.mkdir(parents=True, exist_ok=True)\n+        for name in (entry, \"library-stage.yml\", \"proof-check.yml\"):\n+            (directory / name).write_text(\"name: CI\\n\")\n+        return directory\n+\n+    def test_public_and_nyll_workflow_layouts_are_supported(self):\n+        for entry in (\"lean.yml\", \"libraries.yml\"):\n+            with self.subTest(entry=entry):\n+                directory = self.workflow_fixture(entry)\n+                paths = verify.verification_workflows(self.root)\n+                self.assertEqual({p.name for p in paths},\n+                                 {entry, \"library-stage.yml\", \"proof-check.yml\"})\n+                (directory / entry).unlink()\n+\n+    def test_missing_entry_workflow_is_rejected(self):\n+        with self.assertRaisesRegex(verify.VerificationError, \"entry workflow\"):\n+            verify.verification_workflows(self.root)\n+\n+    def test_ambiguous_entry_workflows_are_rejected(self):\n+        directory = self.workflow_fixture(\"libraries.yml\")\n+        (directory / \"lean.yml\").write_text(\"name: another CI\\n\")\n+        with self.assertRaisesRegex(verify.VerificationError, \"Exactly one\"):\n+            verify.verification_workflows(self.root)\n+\n+    def test_missing_reusable_workflow_is_rejected(self):\n+        directory = self.workflow_fixture(\"libraries.yml\")\n+        (directory / \"proof-check.yml\").unlink()\n+        with self.assertRaisesRegex(verify.VerificationError, \"proof-check.yml\"):\n+            verify.verification_workflows(self.root)\n+\n+    def test_reusable_workflow_change_invalidates_input_guard(self):\n+        directory = self.workflow_fixture(\"libraries.yml\")\n+        self.pipeline.paths = verify.verification_workflows(self.root)\n+        self.pipeline.baseline = {str(p): verify.digest(p) for p in self.pipeline.paths}\n+        with patch.object(verify, \"git_identity\", return_value={}):\n+            self.pipeline.guard()\n+            (directory / \"proof-check.yml\").write_text(\"name: changed verification\\n\")\n+            with self.assertRaisesRegex(verify.VerificationError, \"input changed\"):\n+                self.pipeline.guard()\n+\n+    def test_input_failure_is_reported_before_any_stage_starts(self):\n+        self.pipeline.out.rmdir()\n+        with patch.object(self.pipeline, \"inputs\", side_effect=verify.VerificationError(\n+                \"Missing workflow\")), redirect_stderr(StringIO()) as log:\n+            self.assertEqual(self.pipeline.execute(), 1)\n+        self.assertIn(\"Missing workflow\", log.getvalue())\n+        receipt = json.loads((self.pipeline.out / \"final.json\").read_text())\n+        self.assertFalse(receipt[\"passed\"])\n+        self.assertEqual(receipt[\"stages\"], [])\n+\n     def test_failed_command_has_failed_receipt_and_surfaces_log(self):\n         with patch.object(self.pipeline, \"guard\", return_value=\"fixed\"), redirect_stdout(StringIO()) as log:\n             with self.assertRaises(verify.VerificationError):"
+    },
+    {
+      "sha": "c7b143f7abc94118207fa99ebbaf0e3af2a275b2",
+      "filename": ".github/scripts/publication/verification/verify.py",
+      "status": "modified",
+      "additions": 14,
+      "deletions": 2,
+      "changes": 16,
+      "blob_url": "https://github.com/n-yamaguchi-0729/NYLL/blob/8c1b16d10afaca09e0dc72753c6575e230d31a55/.github%2Fscripts%2Fpublication%2Fverification%2Fverify.py",
+      "raw_url": "https://github.com/n-yamaguchi-0729/NYLL/raw/8c1b16d10afaca09e0dc72753c6575e230d31a55/.github%2Fscripts%2Fpublication%2Fverification%2Fverify.py",
+      "contents_url": "https://api.github.com/repos/n-yamaguchi-0729/NYLL/contents/.github%2Fscripts%2Fpublication%2Fverification%2Fverify.py?ref=8c1b16d10afaca09e0dc72753c6575e230d31a55",
+      "patch": "@@ -81,6 +81,16 @@ def contained_file(base, relative):\n     return path\n \n \n+def verification_workflows(root):\n+    \"\"\"Bind the actual entry workflow and both local reusable workflows.\"\"\"\n+    directory = root / \".github/workflows\"\n+    entries = [directory / name for name in (\"lean.yml\", \"libraries.yml\")\n+               if (directory / name).is_file()]\n+    require(len(entries) == 1, \"Exactly one Lean entry workflow is required\")\n+    paths = entries + [directory / \"library-stage.yml\", directory / \"proof-check.yml\"]\n+    return [contained_file(root, str(path.relative_to(root))) for path in paths]\n+\n+\n def physical_manifest(root, manifest_path):\n     \"\"\"Bind every manifest path; discovery of omitted maintained files is external.\"\"\"\n     manifest = read_json(manifest_path)\n@@ -216,7 +226,7 @@ def inputs(self):\n         self.check_physical_snapshot()\n         self.paths += [p for p in HERE.rglob(\"*\")\n                        if p.is_file() and \"__pycache__\" not in p.parts]\n-        self.paths.append(self.root / \".github/workflows/lean.yml\")\n+        self.paths.extend(verification_workflows(self.root))\n         for name in WRAPPERS:\n             path = HERE / name\n             require(path.is_file(), \"Missing audit wrapper: \" + name)\n@@ -246,7 +256,8 @@ def inputs(self):\n         lake = shutil.which(\"lake\")\n         require(lake is not None, \"Missing Lake executable\")\n         self.paths.append(Path(lake).resolve())\n-        require(all(p.is_file() for p in self.paths), \"Missing pinned input artifact\")\n+        missing = [str(p) for p in self.paths if not p.is_file()]\n+        require(not missing, \"Missing pinned input artifacts: \" + \", \".join(missing))\n         self.paths = sorted(set(self.paths))\n         self.baseline = {str(p): digest(p) for p in self.paths}\n         self.provenance.update(leanVersion=version, leanExecutable=str(self.lean),\n@@ -465,6 +476,7 @@ def execute(self):\n             code = 0\n         except BaseException as error:\n             final.update(status=\"failed\", error=str(error))\n+            print(\"Verification failed: \" + str(error), file=sys.stderr, flush=True)\n         finally:\n             final.update(completedUtc=utc(), elapsedSeconds=round(time.monotonic() - start, 3),\n                          exitCode=code, stages=self.stages,"
+    }
+  ]
+}

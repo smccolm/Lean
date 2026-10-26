@@ -1,0 +1,1049 @@
+{
+  "date": "25 October 2026",
+  "modules": [
+    "Dubon2026.SourceArithmeticCharacterFrobeniusEquality",
+    "Dubon2026.SourceResidualCyclotomicDeterminant",
+    "Dubon2026.SourcePrimitiveResidualGlobalDeterminant",
+    "Dubon2026.SourceResidualRealDeterminant",
+    "Dubon2026.SourcePrimitiveResidualOddness",
+    "Dubon2026.SourceFiniteResidualCoefficientField",
+    "Dubon2026.SourceResidualCoefficientDeterminant",
+    "Dubon2026.SourceFiniteResidualArithmeticDescent",
+    "Dubon2026.SourcePrimitiveFiniteResidualGalois",
+    "Dubon2026.SourceResidualWittCoefficients",
+    "Dubon2026.SourceResidualWittRepresentation",
+    "Dubon2026.SourceResidualWittFramedRing",
+    "Dubon2026.SourcePrimitiveWittFramedResidual",
+    "Dubon2026.SourcePadicWittCoefficient",
+    "Dubon2026.SourceArithmeticPadicCyclotomic",
+    "Dubon2026.SourceArithmeticPadicCyclotomicReduction",
+    "Dubon2026.SourceArithmeticWittCyclotomic",
+    "Dubon2026.SourceResidualWittFixedDeterminant",
+    "Dubon2026.SourceResidualWittFixedRing",
+    "Dubon2026.SourcePrimitiveWittFixedResidual"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual original all-weight residual deformation problem -> global cyclotomic determinant, real oddness, finite coefficients and genuine p-adic fixed-determinant quotient",
+  "discharged": "The original primitive form in every weight at least two and every prescribed prime supplies the same original-support residual representation over a constructed finite field. Its global determinant is the cyclotomic power k-1; its determinant at actual complex conjugation is minus one. Original Fourier reductions, good-prime determinants and inertia remain unchanged. The native Witt coefficient ring has precisely this finite residue field. The existing actual framed and fixed-determinant rings are Noetherian and complete and their universal matrices reduce to that same representation. Every p-power root lies in the original arithmetic extension by support-power inclusion, so the native p-adic cyclotomic character has the actual root action. Its Witt scalar image reduces to the original finite character and supplies the genuine weight determinant of the fixed-determinant quotient. No global residual determinant, oddness, finite coefficient, Witt residue, prime-power root or determinant compatibility assumption remains.",
+  "boundary": "A characteristic-zero coefficient ring does not provide a characteristic-zero point of the deformation ring. Original all-weight adic association, required local, image and regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 8,213-module scope: all thirteen retained regressions, 51,999 exhaustive theorem checks, 23,721 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.sourcePrimitive_exists_originalSupport_cyclotomicResidualGalois_charP",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_oddResidualGalois_charP",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_finiteResidualGalois_charP",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_wittFramedResidualGalois_charP",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_wittFixedResidualGalois_charP"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-25T23:41:10.578414+00:00",
+      "date": "2026-10-25 America/Vancouver",
+      "modules": [
+        "SourceArithmeticCharacterFrobeniusEquality",
+        "SourceResidualCyclotomicDeterminant",
+        "SourcePrimitiveResidualGlobalDeterminant"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticCharacterFrobeniusEquality.lean",
+          "sha256": "B878A44A34CF6F780CFEE638AD1353F83C055F55D0B9B84135AE7626CDD25596",
+          "oleanSha256": "32545C910C9A673E5AF29A8FE4231A0610DF3902C36FA47F24626B4E88E95E24"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualCyclotomicDeterminant.lean",
+          "sha256": "2A790B57F59773F3283BCA8E8CD318B127EF2E9EC6CB551314B65DA6A3CBD33F",
+          "oleanSha256": "0F719BDA03BA53308D30896F68476B946652C1D569F65A5147F76F09E31AA4E1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualGlobalDeterminant.lean",
+          "sha256": "99BAA790CCD3D159FA76750DA52D2DAB992CB44FE6CAB3006046988508116E57",
+          "oleanSha256": "9FCF95338AEE320A92732F9006E711FFFDB80138362F590E8DAF85A4138659E5"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceArithmeticCharacters_eq_of_frobenius",
+        "Dubon2026.sourceArithmetic_determinant_eq_cyclotomic_of_frobenius",
+        "Dubon2026.sourcePrimitive_exists_originalSupport_cyclotomicResidualGalois_charP"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceArithmeticCharacters_eq_of_frobenius",
+        "Dubon2026.sourceArithmetic_determinant_eq_cyclotomic_of_frobenius",
+        "Dubon2026.sourcePrimitive_exists_originalSupport_cyclotomicResidualGalois_charP"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantAudit3.log",
+      "logSha256": "89C0657C0D60735F58DC7D20EB029F53BA059578F753A8B9CAB9A56F98E6E5DB",
+      "auditSha256": "F6BC81F7FF5662D9D2D79D0AA7781DDCB118E9D39BF5CE71C3C7A4605590FB38",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 3,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 8,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantDependencyAudit3b.log",
+      "dependencyAuditSha256": "2D09EEFAF2C5DDBFFBCC5412FF9AEE4662E423C760DA95F9814564FCE875106A",
+      "dependencyAuditSourceSha256": "9E4004DCCA0AB824449C7C05D6977CB12E0E02B88CE454EBE9096FFE603AB9F9",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_originalSupport_cyclotomicResidualGalois_charP"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual all-weight Galois association with fixed determinant -> global cyclotomic determinant of the same original residual representation",
+      "discharged": "Global determinant compatibility is proved from the exact original good-prime Frobenius determinant. The terminal consumer starts with the original primitive form, weight at least two and prescribed rational prime; it constructs the local field and residue characteristic, retains original Fourier traces and good-prime inertia, and proves determinant equals the original cyclotomic character to power k-1.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. All-weight adic realization and required local, image and regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-residual-determinant-3-reuse-review-20261025.json",
+      "reuseReviewSha256": "8ECD7BB0E3741E32A7C4416D67D7F8F86A66C0D10DDAB6778818FDDBC8855540",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "auditSerializationSuccessor": {
+        "reason": "The generated dependency audit and route ended with literal backslash-n bytes. Fresh successors replace only those serialization bytes with line endings; audited proof sources and the public exhaustive audit remain unchanged. The original used generator and dependency audit are retained.",
+        "previousAudit": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantDependencyAudit3.lean",
+          "sha256": "6F32C0FCB46395C04C1A89DF80182EFC304772B96A64DBE4EF4ABE01791E5527"
+        },
+        "successorAudit": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantDependencyAudit3b.lean",
+          "sha256": "9E4004DCCA0AB824449C7C05D6977CB12E0E02B88CE454EBE9096FFE603AB9F9"
+        },
+        "previousRoute": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-determinant-route-572.json",
+          "sha256": "3C69C0A83D0A428F3BC8968EFF622635D7D627C44A3A3853ABD876BD7A22073D"
+        },
+        "successorRoute": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-determinant-route-572b.json",
+          "sha256": "D06F97DC16E64E50BFF0C21ED5485B7BAC355800377807197BA3838AF34CA49D"
+        },
+        "usedGenerator": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_residual_determinant_audit_572.py",
+          "sha256": "547C0FD820D07E440867C2E415DF0EA1A6BC7344601C432334704C8BFA28669D"
+        }
+      }
+    },
+    {
+      "recordedUTC": "2026-10-25T23:46:47.810032+00:00",
+      "date": "2026-10-25 America/Vancouver",
+      "modules": [
+        "SourceResidualRealDeterminant",
+        "SourcePrimitiveResidualOddness"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualRealDeterminant.lean",
+          "sha256": "529E309C1189C98FB50D3663BA2026BEC4FD12EBE254E2E4BC80CCB738525803",
+          "oleanSha256": "24C023FB3714DABAEAD182B9D54F41E3D656A2CB05108A21D6B2A22E37B0B157"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddness.lean",
+          "sha256": "CD8704B6FF0289B9375CB8A4D335071633242FA341E6C161638D977C355AB945",
+          "oleanSha256": "4AA8C0D9DFD016BD8BC6CFEB16E9EDF724570DA6C03EDED4BE4BC55AD87D28F0"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceArithmeticCyclotomic_conjugation",
+        "Dubon2026.sourceArithmeticCyclotomicUnitCharacter_conjugation",
+        "Dubon2026.sourceArithmetic_real_det_of_cyclotomic",
+        "Dubon2026.sourcePrimitive_exists_originalSupport_oddResidualGalois_charP"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceArithmeticCyclotomic_conjugation",
+        "Dubon2026.sourceArithmeticCyclotomicUnitCharacter_conjugation",
+        "Dubon2026.sourceArithmetic_real_det_of_cyclotomic",
+        "Dubon2026.sourcePrimitive_exists_originalSupport_oddResidualGalois_charP"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessAudit2.log",
+      "logSha256": "9DBCDDD9BB9BC48CACCD8044DEE5CFCF536752A608BB3561E2D3636C723FC019",
+      "auditSha256": "1AC71864A243C5D794D7216E563C2CE38A6F67297DDDD541922F4F2954D9A774",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 5,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 8,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessDependencyAudit2b.log",
+      "dependencyAuditSha256": "2922BD6E6868F08929D97945EA03556F14BE4DC3F6901B3E7EFA144B8B84DBD4",
+      "dependencyAuditSourceSha256": "342E29858775F0AF4C8B9AA9759C174DC5618EABCE94C06DE09CA314B42275E2",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_originalSupport_oddResidualGalois_charP"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual all-weight Galois association -> oddness of the same original residual representation at the actual real restriction",
+      "discharged": "The original primitive form, weight at least two and prescribed prime give the same actual original-support residual representation with determinant minus one at genuine complex conjugation. Weight parity and oddness are derived. All coefficient-field, residue-characteristic, global-determinant, original Frobenius and inertia conclusions are retained.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. All-weight adic realization and required local, image and regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-residual-oddness-2-reuse-review-20261025.json",
+      "reuseReviewSha256": "3396E6D4FF5AD102412015CF7477EAF197BF8327B4315E886E8E00F7A2511A8D",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "auditSerializationSuccessor": {
+        "reason": "The generated dependency audit and route ended with literal backslash-n bytes. Fresh successors replace only those serialization bytes with line endings; audited proof sources and the public exhaustive audit remain unchanged. The original used generator and dependency audit are retained.",
+        "previousAudit": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessDependencyAudit2.lean",
+          "sha256": "E829E84200A5E391800B16B09BE501B9D9EB3735CFB7879C84C7EC933C23DBDB"
+        },
+        "successorAudit": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessDependencyAudit2b.lean",
+          "sha256": "342E29858775F0AF4C8B9AA9759C174DC5618EABCE94C06DE09CA314B42275E2"
+        },
+        "previousRoute": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-oddness-route-574.json",
+          "sha256": "A5CD0BB6413D5B9C1F1FAE142216EE07273E9D5A1EB8203B872599DC16C36F1E"
+        },
+        "successorRoute": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-oddness-route-574b.json",
+          "sha256": "7D0C47C2B1BC88348C09602AD0C3C996A6EBAC974F1AF6577B8DE96E635AA772"
+        },
+        "usedGenerator": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_residual_oddness_audit_574.py",
+          "sha256": "ED9604AEAE2B35C12B2AADDF25CCE55A06050157DFCD328CE2FE2B86C7A1F427"
+        }
+      },
+      "exhaustiveCountRecorderSuccessor": {
+        "previousRecorder": "E:\\Lean\\.tmp\\dubon83\\record_primitive_residual_oddness_574b.py",
+        "previousRecorderSha256": "183A131A3B2E9F59DEADEF32951C91CC4BD5616C804A094609D4D39A72134CB7",
+        "reason": "The exhaustive environment audit reports five theorems including generated/private declarations, while four public theorems are explicitly registered. The original recorder incorrectly expected the public count; its failed run wrote no receipt or review. This successor records the actual exhaustive count without rerunning or changing any audit or proof source.",
+        "publicTheorems": 4,
+        "exhaustiveTheorems": 5,
+        "auditSha256": "9DBCDDD9BB9BC48CACCD8044DEE5CFCF536752A608BB3561E2D3636C723FC019"
+      }
+    },
+    {
+      "recordedUTC": "2026-10-26T00:23:39.192787+00:00",
+      "date": "2026-10-25 America/Vancouver",
+      "modules": [
+        "SourceFiniteResidualCoefficientField",
+        "SourceResidualCoefficientDeterminant",
+        "SourceFiniteResidualArithmeticDescent",
+        "SourcePrimitiveFiniteResidualGalois"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteResidualCoefficientField.lean",
+          "sha256": "BDFB8AF8A46FA7649D795082C89F1A2679DB241E219C819A3701E463062B8DA4",
+          "oleanSha256": "67B41ED61EBA75227DB71347C673B549399EA2F7447C79E6AA3A8D56FE664972"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualCoefficientDeterminant.lean",
+          "sha256": "C28D8B7966C5E646612E6415FAF4067C0C08708FA8C6A5B65C9AC556AF2D9CB4",
+          "oleanSha256": "1A6837C9BF6A19A33A95DDAA558310D11E0FF979F73E692286A2E6F4CC5B97C3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteResidualArithmeticDescent.lean",
+          "sha256": "96B20A02780C229FAA29F3E1249911BA5F0C0964E4C13B1C2F9DF318D6F3718C",
+          "oleanSha256": "4C93912781A05E4460BFFCD7B376914115910BEC81232C68CFA3F8F1B4B55156"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteResidualGalois.lean",
+          "sha256": "1A6B2986FABC3D6921A63341F890E586DF73E1E99777185E70C061CFB39C38C3",
+          "oleanSha256": "690C02E544B14F62BB02DA334F216C40D5F15BD927CFE85251FF753F20CF1AE7"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceFiniteImage_exists_finiteCoefficientField",
+        "Dubon2026.sourceArithmeticCyclotomicUnitCharacter_coefficient_map",
+        "Dubon2026.sourceArithmetic_cyclotomic_determinant_coefficient_descent",
+        "Dubon2026.sourceArithmetic_exists_finiteCoefficient_realization",
+        "Dubon2026.sourcePrimitive_exists_originalSupport_finiteResidualGalois_charP"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceFiniteImage_exists_finiteCoefficientField",
+        "Dubon2026.sourceArithmeticCyclotomicUnitCharacter_coefficient_map",
+        "Dubon2026.sourceArithmetic_cyclotomic_determinant_coefficient_descent",
+        "Dubon2026.sourceArithmetic_exists_finiteCoefficient_realization",
+        "Dubon2026.sourcePrimitive_exists_originalSupport_finiteResidualGalois_charP"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteResidualAudit4.log",
+      "logSha256": "C7256D9DBF2B2B74F85A8CD06337177C7DE93CA807B6716239A290207D68BAD9",
+      "auditSha256": "EBA74FA91A696C132DA1A8FD0F7AFD8506A366AAEE3175B25B04DC2B126D4783",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 5,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 11,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteResidualDependencyAudit4.log",
+      "dependencyAuditSha256": "613A33C9156B4DDA8862C65FC20EE69388CA033AAAE8F4AD3887C4AFDAF8143E",
+      "dependencyAuditSourceSha256": "18A82C26D04751ADD4C0E7186672CC681E4D34C79E66ED51B30535EA1C1BA96E",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_originalSupport_finiteResidualGalois_charP"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual residual deformation input over a finite coefficient field -> descend the same original all-weight residual matrices and exact local/global identities",
+      "discharged": "The original primitive form, weight at least two and prescribed prime supply an actual finite coefficient field of that characteristic and continuous original-support representation. Its global determinant is the original cyclotomic power k-1, its determinant at genuine complex conjugation is minus one, its Frobenius traces are the original coefficient reductions, and its good-prime inertia is trivial. Finiteness, coefficient-field descent and compatibility are derived.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. All-weight adic realization and required local, image and regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. The finite-field result is an input to deformation theory, not an automorphy or analytic conclusion. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-finite-residual-4-reuse-review-20261025.json",
+      "reuseReviewSha256": "FAC2BCE8012B300A2E3B2D87413F36CC73A1184FDEC294E43A41FDE9193006C1",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [
+        "Dubon2026.sourceResidualWittResidueEquiv_residue"
+      ],
+      "recordedUTC": "2026-10-26T00:55:32.165153+00:00",
+      "date": "2026-10-25 America/Vancouver",
+      "modules": [
+        "SourceResidualWittCoefficients",
+        "SourceResidualWittRepresentation",
+        "SourceResidualWittFramedRing",
+        "SourcePrimitiveWittFramedResidual"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualWittCoefficients.lean",
+          "sha256": "E1B9EAD9574E7382E729E82B268D3990E06786E045F57D5FCD0C569A05659E42",
+          "oleanSha256": "094FC20EDF4F6C59E4C9BF43195942194A1B041E2374A412733DB5B8ADCA6E12"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualWittRepresentation.lean",
+          "sha256": "5D1CD82FF0387F3D3F34306D1683226B9EA9298D0B22FE8C2CE9EB74CE5BB3F7",
+          "oleanSha256": "01710528EADABD95EBF5A1F7941C1AB9EC9E89C6ABD1934FD84ECF60D5C35BAB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualWittFramedRing.lean",
+          "sha256": "999FC513DA8108240BD54AEDEEEEA30CCFE511269F0314AD2E5ACE9C069C84FC",
+          "oleanSha256": "66BBB515CB9CF9C77D308C87B5D084CC84CE11F05A3AE77322F42A998CEC6F35"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedResidual.lean",
+          "sha256": "BE4DEBA82616DA10FC53DD4650801F26121841C4663F161824A0B38A6C9DDBE1",
+          "oleanSha256": "9C0431DC54309F775BCF255ED7AD8FF5FE45B7789EAD912B7EFAD8DE4E0A8DB8"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceResidualWittResidueEquiv_residue",
+        "Dubon2026.sourceResidualWittCoefficient_localData",
+        "Dubon2026.sourceResidualWittRepresentation_original",
+        "Dubon2026.sourceResidualWittRepresentation_continuous",
+        "Dubon2026.sourceResidualWittFramed_localData",
+        "Dubon2026.sourcePrimitive_exists_originalSupport_wittFramedResidualGalois_charP",
+        "Dubon2026.sourceResidualWittResidueEquiv",
+        "Dubon2026.sourceResidualWittRepresentation",
+        "Dubon2026.sourceResidualWittFramedData"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceResidualWittResidueEquiv_residue",
+        "Dubon2026.sourceResidualWittCoefficient_localData",
+        "Dubon2026.sourceResidualWittRepresentation_original",
+        "Dubon2026.sourceResidualWittRepresentation_continuous",
+        "Dubon2026.sourceResidualWittFramed_localData",
+        "Dubon2026.sourcePrimitive_exists_originalSupport_wittFramedResidualGalois_charP"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceResidualWittResidueEquiv",
+        "Dubon2026.sourceResidualWittRepresentation",
+        "Dubon2026.sourceResidualWittFramedData"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedAudit4.log",
+      "logSha256": "F4D61D89260E8E53A8E9091780F3296E121C59D28450501F7CDE78070F3B128D",
+      "auditSha256": "2FA8DACA32D0B00776205DE76749F663DAEA82AFA505134D85315AE4C6BCC247",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 23,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedDependencyAudit4b.log",
+      "dependencyAuditSha256": "661B4604AE47BFBD2F73760E95509677427CA790AB8A7794C6CF1F801C0183AF",
+      "dependencyAuditSourceSha256": "D3970A03A0F3E84B28DDA296A9261AB47032346F99BCB9D2A53AEA543FF38299",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_originalSupport_wittFramedResidualGalois_charP"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual residual deformation problem -> native Witt coefficient ring and the original residual framed universal representation",
+      "discharged": "Construct the native characteristic-zero Witt coefficient ring with precisely the original finite residue field. Derive Noetherianity and maximal-ideal completeness of the existing actual framed ring and literal equality of its universal reduction with the representation of the original all-weight form. All original local/global residual clauses remain. The constant-coefficient formula is separately checked and retained for the ensuing fixed-determinant compatibility proof.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. A characteristic-zero Witt coefficient ring does not prove that the framed ring has characteristic zero or has a characteristic-zero point. All-weight adic association, required local/image/regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. The actual mixed-characteristic cyclotomic determinant lift is the next input to fixed-determinant deformation theory. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-witt-framed-4-reuse-review-20261025.json",
+      "reuseReviewSha256": "66D293D6D44388451D85B068B68AF5AF045C7C9D7BA8768F5B74D3CDDD5BF48B",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "serializationSuccessor": {
+        "timeUTC": "2026-10-26T00:54:28.175278+00:00",
+        "failure": "Generator serialized newline escapes literally at the dependency-audit footer and route JSON terminator.",
+        "oldAudit": {
+          "path": "SourcePrimitiveWittFramedDependencyAudit4.lean",
+          "sha256": "4C23328C05B68109F427CE80C1F3209FDFE26D73B2F56F8DF0ED20F45806FFE2"
+        },
+        "newAudit": {
+          "path": "SourcePrimitiveWittFramedDependencyAudit4b.lean",
+          "sha256": "D3970A03A0F3E84B28DDA296A9261AB47032346F99BCB9D2A53AEA543FF38299"
+        },
+        "oldRoute": {
+          "path": "primitive-witt-framed-route-577.json",
+          "sha256": "DEED4AAB51F35AF7AA3DBDFD3C9397F9FF592AA5D41C3ED71F3F3002E6D66C22"
+        },
+        "newRoute": {
+          "path": "primitive-witt-framed-route-577b.json",
+          "sha256": "196C75EE571B0D6F32B3A95FA67434EA36B85A36A92F908A0881360A8692A3D4"
+        },
+        "usedGenerator": {
+          "path": "prepare_primitive_witt_framed_audit_577.py",
+          "sha256": "04ADDEC3D1670C4B0B2548218C20E916C6521AA72E9216A0D0D2830FAC177DBA"
+        },
+        "change": "Only literal newline escapes become line endings. No proof source or passed public audit changes; no passed audit rerun."
+      }
+    },
+    {
+      "separatelyAxiomChecked": [
+        "Dubon2026.sourcePadicWittCoefficient_injective"
+      ],
+      "recordedUTC": "2026-10-26T01:23:31.159916+00:00",
+      "date": "2026-10-25 America/Vancouver",
+      "modules": [
+        "SourcePadicWittCoefficient",
+        "SourceArithmeticPadicCyclotomic",
+        "SourceArithmeticPadicCyclotomicReduction",
+        "SourceArithmeticWittCyclotomic",
+        "SourceResidualWittFixedDeterminant",
+        "SourceResidualWittFixedRing",
+        "SourcePrimitiveWittFixedResidual"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePadicWittCoefficient.lean",
+          "sha256": "23386EBD126F03ECAF28586849EF160570808F5E50562C836039A95320FA86FD",
+          "oleanSha256": "002CF04F6FF77C888B0FB229FFCBFE2A110358967FDE01A2850EFEB848BF1C0D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticPadicCyclotomic.lean",
+          "sha256": "CA65D0558014738FC5953EAB3315C79715B087051CF45599623255295F1E1B9C",
+          "oleanSha256": "5A37D2B45782D37E4E122013F1310565A7FCB176F43A96347E8910B873C9F02E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticPadicCyclotomicReduction.lean",
+          "sha256": "0A86B8F9B9194162EA83D65D463983E910A92B96A354F31058C75973983EA324",
+          "oleanSha256": "15C3CEFE1056C242AC6A4CAD2AFB7EE264FC2B6BF84F374296059ED750177943"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticWittCyclotomic.lean",
+          "sha256": "40258E25A3B926BADE92BE29E349CD0CE2BCF3BEA203ADA7C0FB5D197EC31262",
+          "oleanSha256": "9A1C838A0FE81D6FA83B1D779E6DB1D4AF9E165B33D6EBF7D3AF3A91851E0F77"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualWittFixedDeterminant.lean",
+          "sha256": "18B1B9AC912C636CEE0FDDE4789987D0A1C891800B36C26A2104418BECF80E80",
+          "oleanSha256": "DA620937B6F7AC8575B357615BF2B8C85587D7C67BD97847FFDC436583A8F595"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualWittFixedRing.lean",
+          "sha256": "16CBAF5D03D404325C59A3384B1371919E773C4B78D84EB52C2B914335ACD227",
+          "oleanSha256": "58CAFCF6F3F0742EB14815349049D034892C1E8BFF2036B9168214662DF9506F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFixedResidual.lean",
+          "sha256": "F2608D93AFC4EB3B44565981E7F765DFFA02AC4C65071DAEFD542241CA74AE53",
+          "oleanSha256": "28E50162EB4F0BFC15A2546F61696C562D7F647EF62A79CB674AFEF4A00975C7"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourcePadicInt_charP_map",
+        "Dubon2026.sourcePadicWittCoefficient_injective",
+        "Dubon2026.sourcePadicWittCoefficient_residue",
+        "Dubon2026.sourceArithmetic_exists_primePower_root",
+        "Dubon2026.sourceArithmeticPadicCyclotomicCharacter_root",
+        "Dubon2026.sourcePadicInt_toZMod_from_pow_one",
+        "Dubon2026.sourceArithmeticPadicCyclotomicCharacter_reduction",
+        "Dubon2026.sourceArithmeticWittCyclotomicCharacter_reduction",
+        "Dubon2026.sourceResidualWitt_fixedDeterminant_compatibility",
+        "Dubon2026.sourceResidualWittFixed_localData",
+        "Dubon2026.sourcePrimitive_exists_originalSupport_wittFixedResidualGalois_charP",
+        "Dubon2026.sourcePadicWittCoefficient",
+        "Dubon2026.sourceArithmeticPadicCyclotomicCharacter",
+        "Dubon2026.sourceArithmeticWittCyclotomicCharacter",
+        "Dubon2026.sourceResidualWittFixedData"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourcePadicInt_charP_map",
+        "Dubon2026.sourcePadicWittCoefficient_injective",
+        "Dubon2026.sourcePadicWittCoefficient_residue",
+        "Dubon2026.sourceArithmetic_exists_primePower_root",
+        "Dubon2026.sourceArithmeticPadicCyclotomicCharacter_root",
+        "Dubon2026.sourcePadicInt_toZMod_from_pow_one",
+        "Dubon2026.sourceArithmeticPadicCyclotomicCharacter_reduction",
+        "Dubon2026.sourceArithmeticWittCyclotomicCharacter_reduction",
+        "Dubon2026.sourceResidualWitt_fixedDeterminant_compatibility",
+        "Dubon2026.sourceResidualWittFixed_localData",
+        "Dubon2026.sourcePrimitive_exists_originalSupport_wittFixedResidualGalois_charP"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourcePadicWittCoefficient",
+        "Dubon2026.sourceArithmeticPadicCyclotomicCharacter",
+        "Dubon2026.sourceArithmeticWittCyclotomicCharacter",
+        "Dubon2026.sourceResidualWittFixedData"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFixedAudit7.log",
+      "logSha256": "4A6A451532FB3C7C3BC960D1DC3566DFAC432ADAC0B1BC31BCD5B9DF55FA3680",
+      "auditSha256": "3C5DA1DBD546C4E1DBF1507BE6FC082BF589C23F7BE80D8FD0A1AE96DA17DDBC",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 26,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 23,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFixedDependencyAudit7.log",
+      "dependencyAuditSha256": "0DDFF056F6C03A5143B80EFE1640BB82901705F8979552B40523F10720E8B60D",
+      "dependencyAuditSourceSha256": "3E3B78BC807CB119C8A3794CA0A10B8E766724A64EE080BE6E6B1DEDF026B48B",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_originalSupport_wittFixedResidualGalois_charP"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual residual fixed-determinant deformation problem -> construct the genuine p-adic cyclotomic weight character, prove its exact reduction and consume it in the existing actual quotient",
+      "discharged": "For the original all-weight primitive form, supply the actual p-adic cyclotomic weight determinant over Witt coefficients, prove its exact residual compatibility, and construct the resulting Noetherian complete fixed-determinant quotient with exact original residual matrices and universal determinant. Preserve every original Fourier, real and good-prime inertia clause.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. No characteristic-zero specialization of this quotient is supplied. Original all-weight adic association, required local/image/regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-witt-fixed-7-reuse-review-20261025.json",
+      "reuseReviewSha256": "C6520B2C641B33286A905F05ABA3E1D94318D945785F1CA5491484147F966297",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-primitive-residual-determinant-3-reuse-review-20261025.json",
+    "Tools/source-primitive-residual-oddness-2-reuse-review-20261025.json",
+    "Tools/source-primitive-finite-residual-4-reuse-review-20261025.json",
+    "Tools/source-primitive-witt-framed-4-reuse-review-20261025.json",
+    "Tools/source-primitive-witt-fixed-7-reuse-review-20261025.json"
+  ],
+  "additionalCurrentSearch": {
+    "path": "Tools/primitive-witt-20261025-581/primitive-witt-deformation-promotion-route-581.json",
+    "sha256": "3BAB93E1F375ACE5E0E62DDB576B042B52B1D5138598DE3DE0E148475B3F74B7"
+  },
+  "renewedSourceArchive": {
+    "manifest": "Tools/primitive-witt-20261025-581/archive-manifest.json",
+    "sha256": "C320C8C46742FB1D0AAA80952D5B38E5074EB00BA9B097A9EE0F1FF1E4F8C681",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt8213": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantDependencyAudit3bProduction8213.log",
+        "sha256": "2D09EEFAF2C5DDBFFBCC5412FF9AEE4662E423C760DA95F9814564FCE875106A",
+        "requiredProofValueEdges": 8,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_exists_originalSupport_cyclotomicResidualGalois_charP"
+        ],
+        "sourceSha256": "13B8F173270F775E8F06F6A275F3AB5EE42189EF80323E9881A6795D807D7573"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessDependencyAudit2bProduction8213.log",
+        "sha256": "2922BD6E6868F08929D97945EA03556F14BE4DC3F6901B3E7EFA144B8B84DBD4",
+        "requiredProofValueEdges": 8,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_exists_originalSupport_oddResidualGalois_charP"
+        ],
+        "sourceSha256": "4FD1956A267B837AB449C1918E96A42A7EC81DD77FBF7301957B7100C45C1C39"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteResidualDependencyAudit4Production8213.log",
+        "sha256": "613A33C9156B4DDA8862C65FC20EE69388CA033AAAE8F4AD3887C4AFDAF8143E",
+        "requiredProofValueEdges": 11,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_exists_originalSupport_finiteResidualGalois_charP"
+        ],
+        "sourceSha256": "069FECC4785C56322279EE76CC8D854051AC44D03867E3F33A2F7EEAEBDF0EC7"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedDependencyAudit4bProduction8213.log",
+        "sha256": "661B4604AE47BFBD2F73760E95509677427CA790AB8A7794C6CF1F801C0183AF",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_exists_originalSupport_wittFramedResidualGalois_charP"
+        ],
+        "sourceSha256": "E6A868DFA953152F82DFF774C75710B24876783C9AD6755AFB85EA44B1277F96"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFixedDependencyAudit7Production8213.log",
+        "sha256": "0DDFF056F6C03A5143B80EFE1640BB82901705F8979552B40523F10720E8B60D",
+        "requiredProofValueEdges": 23,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_exists_originalSupport_wittFixedResidualGalois_charP"
+        ],
+        "sourceSha256": "9EC66E2EC82E1416D8F0234E9310059B499B1D24480231A44EEFB163D3F28314"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationProductionAudit8213.log",
+    "sha256": "D0CE12D61D8720140AFF4D9A5437C32723A4CE9D8CCA3D723D6F67D6D9333EF6",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-primitive-witt-deformation-production-build-8213.log",
+    "aggregateSha256": "F26BEF83C00754596C16D3F1B5BB45D3829ECD71F0126D89CDD1FDEFE04F7A77",
+    "productionModules": 8213,
+    "incrementModules": 20,
+    "axiomChecks": 36,
+    "exhaustiveIncrementTheorems": 62,
+    "linterScopes": 20,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 62,
+    "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The original primitive cusp form, Fourier coefficients, actual local fields, arithmetic support, parabolic cohomology and weight twist retain their definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 62,
+      "scratchDistinct": 62,
+      "generatedNameRenamings": {},
+      "productionFocused": 62,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceArithmeticCharacterFrobeniusEquality",
+            "SourceResidualCyclotomicDeterminant",
+            "SourcePrimitiveResidualGlobalDeterminant"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership572For8213.log",
+            "sha256": "26EB25CD13B6CC5AF84DF702EA8363A46B71050CEEA26F5F2273C6A939FA38C3",
+            "sourceSha256": "FA6A9A805DD4A8C769BD4AB790EEDDC8769C32E1560FF6349F836A30E7C02ECF"
+          }
+        },
+        {
+          "modules": [
+            "SourceResidualRealDeterminant",
+            "SourcePrimitiveResidualOddness"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership574For8213.log",
+            "sha256": "67934428AA9775E5359D8A3403C2661AC827200F020D62AF09495498BE9D1583",
+            "sourceSha256": "468FF233F079B9B07EDEC11368C78420B4AFB090F2584C5163FCAB0C4EC1C6C3"
+          }
+        },
+        {
+          "modules": [
+            "SourceFiniteResidualCoefficientField",
+            "SourceResidualCoefficientDeterminant",
+            "SourceFiniteResidualArithmeticDescent",
+            "SourcePrimitiveFiniteResidualGalois"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership575For8213.log",
+            "sha256": "DF3A27598E6C2EA19653A6A1CEE50F3F7D84266B059CD8E3B29FA15864EA8661",
+            "sourceSha256": "5A05498EF58EC410EB3AA508921C054B58593445014C9D35B2ECC1D9E0DFB480"
+          }
+        },
+        {
+          "modules": [
+            "SourceResidualWittCoefficients",
+            "SourceResidualWittRepresentation",
+            "SourceResidualWittFramedRing",
+            "SourcePrimitiveWittFramedResidual"
+          ],
+          "count": 23,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership577For8213.log",
+            "sha256": "8D6437E6089C286FCF91E937A8DD09C4BE6CF15640B68CCCF7AE23C286B42C6F",
+            "sourceSha256": "C6ACE82DED8AD3AFB60B2BDCEB5D810F11BF1C5C644AFBE5FCB258B4A0F2903C"
+          }
+        },
+        {
+          "modules": [
+            "SourcePadicWittCoefficient",
+            "SourceArithmeticPadicCyclotomic",
+            "SourceArithmeticPadicCyclotomicReduction",
+            "SourceArithmeticWittCyclotomic",
+            "SourceResidualWittFixedDeterminant",
+            "SourceResidualWittFixedRing",
+            "SourcePrimitiveWittFixedResidual"
+          ],
+          "count": 26,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership580For8213.log",
+            "sha256": "DD52F8998870E80E3C8A5A96B8573D633EE4AAA540405E5FE570814939EA9FAA",
+            "sourceSha256": "B0A6C40517500ECCCF623812EFFB3C0AEBB314E0CFCD07C5A7C851DE9E9058A6"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationOwnership8213.log",
+        "sha256": "0040F561CBCEBDC36CCA86620166080C6498405D078E4829A9A2E8F1E0CF6B3C",
+        "sourceSha256": "3359737B34234EFF3544FFCC77B0D8F334B761A43A5D9FEBA553C54C4B10E656"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-173632-424.log",
+        "sha256": "F0EE64665BE40A7DB9ADF222028A9003B16A175B94FADB1E3E59EF40A9AB0883"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 20 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceArithmeticCharacterFrobeniusEquality",
+            "scratchSha256": "B878A44A34CF6F780CFEE638AD1353F83C055F55D0B9B84135AE7626CDD25596",
+            "productionSha256": "B878A44A34CF6F780CFEE638AD1353F83C055F55D0B9B84135AE7626CDD25596",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualCyclotomicDeterminant",
+            "scratchSha256": "2A790B57F59773F3283BCA8E8CD318B127EF2E9EC6CB551314B65DA6A3CBD33F",
+            "productionSha256": "55544ADA6241D1D6893F482B9C81FB6BF42227E6DB8DF474552F89E8DEE25CC6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveResidualGlobalDeterminant",
+            "scratchSha256": "99BAA790CCD3D159FA76750DA52D2DAB992CB44FE6CAB3006046988508116E57",
+            "productionSha256": "269B845F46DDF550F2526E9ECDFC086259B300780933241175AB821E1AC0100B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualRealDeterminant",
+            "scratchSha256": "529E309C1189C98FB50D3663BA2026BEC4FD12EBE254E2E4BC80CCB738525803",
+            "productionSha256": "529E309C1189C98FB50D3663BA2026BEC4FD12EBE254E2E4BC80CCB738525803",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveResidualOddness",
+            "scratchSha256": "CD8704B6FF0289B9375CB8A4D335071633242FA341E6C161638D977C355AB945",
+            "productionSha256": "3049558347486C774B2E6E9386D13F03C5B1F26E73FA424252F9F870B659B47C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFiniteResidualCoefficientField",
+            "scratchSha256": "BDFB8AF8A46FA7649D795082C89F1A2679DB241E219C819A3701E463062B8DA4",
+            "productionSha256": "BDFB8AF8A46FA7649D795082C89F1A2679DB241E219C819A3701E463062B8DA4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualCoefficientDeterminant",
+            "scratchSha256": "C28D8B7966C5E646612E6415FAF4067C0C08708FA8C6A5B65C9AC556AF2D9CB4",
+            "productionSha256": "C28D8B7966C5E646612E6415FAF4067C0C08708FA8C6A5B65C9AC556AF2D9CB4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFiniteResidualArithmeticDescent",
+            "scratchSha256": "96B20A02780C229FAA29F3E1249911BA5F0C0964E4C13B1C2F9DF318D6F3718C",
+            "productionSha256": "0C7CDC0C4A94B88715B2967A6F760B204572C578D229A5A84DF56A98705BA485",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveFiniteResidualGalois",
+            "scratchSha256": "1A6B2986FABC3D6921A63341F890E586DF73E1E99777185E70C061CFB39C38C3",
+            "productionSha256": "0049A43BF9DB81F3EF4D28460CF6BFBA8523E5CDE3E0D1439A584FC98E4CFFA9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualWittCoefficients",
+            "scratchSha256": "E1B9EAD9574E7382E729E82B268D3990E06786E045F57D5FCD0C569A05659E42",
+            "productionSha256": "E1B9EAD9574E7382E729E82B268D3990E06786E045F57D5FCD0C569A05659E42",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualWittRepresentation",
+            "scratchSha256": "5D1CD82FF0387F3D3F34306D1683226B9EA9298D0B22FE8C2CE9EB74CE5BB3F7",
+            "productionSha256": "5B8458A352C9FAD8B9A9AAC2E80757BF9E99FE572419CF80BC5EEDD0E2F40CED",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualWittFramedRing",
+            "scratchSha256": "999FC513DA8108240BD54AEDEEEEA30CCFE511269F0314AD2E5ACE9C069C84FC",
+            "productionSha256": "8012A6A80EB05F52D425F22D8E9E667E5ECC4D4F7E3A84FDD57166F9E4CC8B02",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveWittFramedResidual",
+            "scratchSha256": "BE4DEBA82616DA10FC53DD4650801F26121841C4663F161824A0B38A6C9DDBE1",
+            "productionSha256": "93EC169C4D9497A4CCD05BD7DCDA186534BD621897A6525B17F833333C1473E8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePadicWittCoefficient",
+            "scratchSha256": "23386EBD126F03ECAF28586849EF160570808F5E50562C836039A95320FA86FD",
+            "productionSha256": "F5E2B251300F2206BB621BBE2C49892DA11453C7D54284F25534BA0BA712A93C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceArithmeticPadicCyclotomic",
+            "scratchSha256": "CA65D0558014738FC5953EAB3315C79715B087051CF45599623255295F1E1B9C",
+            "productionSha256": "CA65D0558014738FC5953EAB3315C79715B087051CF45599623255295F1E1B9C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceArithmeticPadicCyclotomicReduction",
+            "scratchSha256": "0A86B8F9B9194162EA83D65D463983E910A92B96A354F31058C75973983EA324",
+            "productionSha256": "F4178ACE2AADEFFD95813C803D94F59B12BAC4613DE007E1946D95E039DADAA4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceArithmeticWittCyclotomic",
+            "scratchSha256": "40258E25A3B926BADE92BE29E349CD0CE2BCF3BEA203ADA7C0FB5D197EC31262",
+            "productionSha256": "589597406F35E9D8F16A95A2203369F6903BB462C2D1C24DE984946406506A36",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualWittFixedDeterminant",
+            "scratchSha256": "18B1B9AC912C636CEE0FDDE4789987D0A1C891800B36C26A2104418BECF80E80",
+            "productionSha256": "A113449AAAE8AD8BB45D595B96D35056708AB4A263398B3B20273D15F482375D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualWittFixedRing",
+            "scratchSha256": "16CBAF5D03D404325C59A3384B1371919E773C4B78D84EB52C2B914335ACD227",
+            "productionSha256": "83EBA648EB44A25FBCBD476DAC6FA8B701980843175027175DCCDB9DAD52AB8E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveWittFixedResidual",
+            "scratchSha256": "F2608D93AFC4EB3B44565981E7F765DFFA02AC4C65071DAEFD542241CA74AE53",
+            "productionSha256": "7FF8E1DC5B46716E98E853D586DB2BE70A10E8D79B62E997FFB74274307893DE",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 62 distinct names from 62 exhaustive scratch checks are retained: 62 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "A characteristic-zero coefficient ring does not provide a characteristic-zero point of the deformation ring. Original all-weight adic association, required local, image and regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN."
+  },
+  "receipt8213": {
+    "recordedUTC": "2026-10-26T04:42:35.124627+00:00",
+    "log": "logs/dubon-build-20261025-201544-907.log",
+    "sha256": "DA4E7D14C8AFCBD74C6668C14A55182A02A36657FB28067C803E2A96F0E7E06F",
+    "bytes": 13367725,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8213,
+    "projectTheorems": 51999,
+    "registeredConsumers": 23721,
+    "registeredConstructions": 2227,
+    "declarations": 31894,
+    "generated": 32940,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261025_201029.log",
+    "foundationSha256": "FF39671A3452120F6533EFA579177BEE29016072717610B0A56896DC7BC4D879",
+    "countReconciliation": {
+      "previousTheorems": 51937,
+      "focusedTheorems": 62,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 62,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationGlobalOwnership8213.log",
+      "globalOwnershipSha256": "ED5D3BF80F08C18E947346E62D8F11F3E35931E979FB0F38117F8AD4B7965C45",
+      "globalOwnershipSourceSha256": "80BEF3E85584CC4E0312F91319C84193B77D6526D7F7684991B73A3771D300FC",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationOwnership8213.log",
+      "ownershipSha256": "0040F561CBCEBDC36CCA86620166080C6498405D078E4829A9A2E8F1E0CF6B3C"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 62,
+      "scratchDistinct": 62,
+      "generatedNameRenamings": {},
+      "productionFocused": 62,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceArithmeticCharacterFrobeniusEquality",
+            "SourceResidualCyclotomicDeterminant",
+            "SourcePrimitiveResidualGlobalDeterminant"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership572For8213.log",
+            "sha256": "26EB25CD13B6CC5AF84DF702EA8363A46B71050CEEA26F5F2273C6A939FA38C3",
+            "sourceSha256": "FA6A9A805DD4A8C769BD4AB790EEDDC8769C32E1560FF6349F836A30E7C02ECF"
+          }
+        },
+        {
+          "modules": [
+            "SourceResidualRealDeterminant",
+            "SourcePrimitiveResidualOddness"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership574For8213.log",
+            "sha256": "67934428AA9775E5359D8A3403C2661AC827200F020D62AF09495498BE9D1583",
+            "sourceSha256": "468FF233F079B9B07EDEC11368C78420B4AFB090F2584C5163FCAB0C4EC1C6C3"
+          }
+        },
+        {
+          "modules": [
+            "SourceFiniteResidualCoefficientField",
+            "SourceResidualCoefficientDeterminant",
+            "SourceFiniteResidualArithmeticDescent",
+            "SourcePrimitiveFiniteResidualGalois"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership575For8213.log",
+            "sha256": "DF3A27598E6C2EA19653A6A1CEE50F3F7D84266B059CD8E3B29FA15864EA8661",
+            "sourceSha256": "5A05498EF58EC410EB3AA508921C054B58593445014C9D35B2ECC1D9E0DFB480"
+          }
+        },
+        {
+          "modules": [
+            "SourceResidualWittCoefficients",
+            "SourceResidualWittRepresentation",
+            "SourceResidualWittFramedRing",
+            "SourcePrimitiveWittFramedResidual"
+          ],
+          "count": 23,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership577For8213.log",
+            "sha256": "8D6437E6089C286FCF91E937A8DD09C4BE6CF15640B68CCCF7AE23C286B42C6F",
+            "sourceSha256": "C6ACE82DED8AD3AFB60B2BDCEB5D810F11BF1C5C644AFBE5FCB258B4A0F2903C"
+          }
+        },
+        {
+          "modules": [
+            "SourcePadicWittCoefficient",
+            "SourceArithmeticPadicCyclotomic",
+            "SourceArithmeticPadicCyclotomicReduction",
+            "SourceArithmeticWittCyclotomic",
+            "SourceResidualWittFixedDeterminant",
+            "SourceResidualWittFixedRing",
+            "SourcePrimitiveWittFixedResidual"
+          ],
+          "count": 26,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership580For8213.log",
+            "sha256": "DD52F8998870E80E3C8A5A96B8573D633EE4AAA540405E5FE570814939EA9FAA",
+            "sourceSha256": "B0A6C40517500ECCCF623812EFFB3C0AEBB314E0CFCD07C5A7C851DE9E9058A6"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationOwnership8213.log",
+        "sha256": "0040F561CBCEBDC36CCA86620166080C6498405D078E4829A9A2E8F1E0CF6B3C",
+        "sourceSha256": "3359737B34234EFF3544FFCC77B0D8F334B761A43A5D9FEBA553C54C4B10E656"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-173632-424.log",
+        "sha256": "F0EE64665BE40A7DB9ADF222028A9003B16A175B94FADB1E3E59EF40A9AB0883"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 20 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceArithmeticCharacterFrobeniusEquality",
+            "scratchSha256": "B878A44A34CF6F780CFEE638AD1353F83C055F55D0B9B84135AE7626CDD25596",
+            "productionSha256": "B878A44A34CF6F780CFEE638AD1353F83C055F55D0B9B84135AE7626CDD25596",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualCyclotomicDeterminant",
+            "scratchSha256": "2A790B57F59773F3283BCA8E8CD318B127EF2E9EC6CB551314B65DA6A3CBD33F",
+            "productionSha256": "55544ADA6241D1D6893F482B9C81FB6BF42227E6DB8DF474552F89E8DEE25CC6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveResidualGlobalDeterminant",
+            "scratchSha256": "99BAA790CCD3D159FA76750DA52D2DAB992CB44FE6CAB3006046988508116E57",
+            "productionSha256": "269B845F46DDF550F2526E9ECDFC086259B300780933241175AB821E1AC0100B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualRealDeterminant",
+            "scratchSha256": "529E309C1189C98FB50D3663BA2026BEC4FD12EBE254E2E4BC80CCB738525803",
+            "productionSha256": "529E309C1189C98FB50D3663BA2026BEC4FD12EBE254E2E4BC80CCB738525803",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveResidualOddness",
+            "scratchSha256": "CD8704B6FF0289B9375CB8A4D335071633242FA341E6C161638D977C355AB945",
+            "productionSha256": "3049558347486C774B2E6E9386D13F03C5B1F26E73FA424252F9F870B659B47C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFiniteResidualCoefficientField",
+            "scratchSha256": "BDFB8AF8A46FA7649D795082C89F1A2679DB241E219C819A3701E463062B8DA4",
+            "productionSha256": "BDFB8AF8A46FA7649D795082C89F1A2679DB241E219C819A3701E463062B8DA4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualCoefficientDeterminant",
+            "scratchSha256": "C28D8B7966C5E646612E6415FAF4067C0C08708FA8C6A5B65C9AC556AF2D9CB4",
+            "productionSha256": "C28D8B7966C5E646612E6415FAF4067C0C08708FA8C6A5B65C9AC556AF2D9CB4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFiniteResidualArithmeticDescent",
+            "scratchSha256": "96B20A02780C229FAA29F3E1249911BA5F0C0964E4C13B1C2F9DF318D6F3718C",
+            "productionSha256": "0C7CDC0C4A94B88715B2967A6F760B204572C578D229A5A84DF56A98705BA485",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveFiniteResidualGalois",
+            "scratchSha256": "1A6B2986FABC3D6921A63341F890E586DF73E1E99777185E70C061CFB39C38C3",
+            "productionSha256": "0049A43BF9DB81F3EF4D28460CF6BFBA8523E5CDE3E0D1439A584FC98E4CFFA9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualWittCoefficients",
+            "scratchSha256": "E1B9EAD9574E7382E729E82B268D3990E06786E045F57D5FCD0C569A05659E42",
+            "productionSha256": "E1B9EAD9574E7382E729E82B268D3990E06786E045F57D5FCD0C569A05659E42",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualWittRepresentation",
+            "scratchSha256": "5D1CD82FF0387F3D3F34306D1683226B9EA9298D0B22FE8C2CE9EB74CE5BB3F7",
+            "productionSha256": "5B8458A352C9FAD8B9A9AAC2E80757BF9E99FE572419CF80BC5EEDD0E2F40CED",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualWittFramedRing",
+            "scratchSha256": "999FC513DA8108240BD54AEDEEEEA30CCFE511269F0314AD2E5ACE9C069C84FC",
+            "productionSha256": "8012A6A80EB05F52D425F22D8E9E667E5ECC4D4F7E3A84FDD57166F9E4CC8B02",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveWittFramedResidual",
+            "scratchSha256": "BE4DEBA82616DA10FC53DD4650801F26121841C4663F161824A0B38A6C9DDBE1",
+            "productionSha256": "93EC169C4D9497A4CCD05BD7DCDA186534BD621897A6525B17F833333C1473E8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePadicWittCoefficient",
+            "scratchSha256": "23386EBD126F03ECAF28586849EF160570808F5E50562C836039A95320FA86FD",
+            "productionSha256": "F5E2B251300F2206BB621BBE2C49892DA11453C7D54284F25534BA0BA712A93C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceArithmeticPadicCyclotomic",
+            "scratchSha256": "CA65D0558014738FC5953EAB3315C79715B087051CF45599623255295F1E1B9C",
+            "productionSha256": "CA65D0558014738FC5953EAB3315C79715B087051CF45599623255295F1E1B9C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceArithmeticPadicCyclotomicReduction",
+            "scratchSha256": "0A86B8F9B9194162EA83D65D463983E910A92B96A354F31058C75973983EA324",
+            "productionSha256": "F4178ACE2AADEFFD95813C803D94F59B12BAC4613DE007E1946D95E039DADAA4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceArithmeticWittCyclotomic",
+            "scratchSha256": "40258E25A3B926BADE92BE29E349CD0CE2BCF3BEA203ADA7C0FB5D197EC31262",
+            "productionSha256": "589597406F35E9D8F16A95A2203369F6903BB462C2D1C24DE984946406506A36",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualWittFixedDeterminant",
+            "scratchSha256": "18B1B9AC912C636CEE0FDDE4789987D0A1C891800B36C26A2104418BECF80E80",
+            "productionSha256": "A113449AAAE8AD8BB45D595B96D35056708AB4A263398B3B20273D15F482375D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceResidualWittFixedRing",
+            "scratchSha256": "16CBAF5D03D404325C59A3384B1371919E773C4B78D84EB52C2B914335ACD227",
+            "productionSha256": "83EBA648EB44A25FBCBD476DAC6FA8B701980843175027175DCCDB9DAD52AB8E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveWittFixedResidual",
+            "scratchSha256": "F2608D93AFC4EB3B44565981E7F765DFFA02AC4C65071DAEFD542241CA74AE53",
+            "productionSha256": "7FF8E1DC5B46716E98E853D586DB2BE70A10E8D79B62E997FFB74274307893DE",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 62 distinct names from 62 exhaustive scratch checks are retained: 62 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "A characteristic-zero coefficient ring does not provide a characteristic-zero point of the deformation ring. Original all-weight adic association, required local, image and regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN."
+  }
+}

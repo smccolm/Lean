@@ -1,0 +1,73 @@
+{
+  "modules": [
+    "SourcePermutationCoefficientQuotient",
+    "SourceBinaryPrimePowerPermutation",
+    "SourceBinaryPermutationHecke",
+    "SourceBinaryPermutationCongruence",
+    "SourceIntegralBinaryPermutationRealization"
+  ],
+  "theorems": [
+    "Dubon2026.sourceCoefficientPermutationEvaluation_single",
+    "Dubon2026.sourceCoefficientPermutationEvaluation_surjective",
+    "Dubon2026.sourceCoefficientPermutationEvaluation_linearMap",
+    "Dubon2026.sourcePrimePower_six_isUnit",
+    "Dubon2026.sourceBinaryPrimePowerCoefficient_finite",
+    "Dubon2026.sourceBinaryPrimePowerPermutation_finite",
+    "Dubon2026.sourceBinaryPrimePowerPermutation_H1_surjective",
+    "Dubon2026.sourceBinaryPermutationDiagonal_intertwine",
+    "Dubon2026.sourceBinaryPermutationHeckeH1_evaluation",
+    "Dubon2026.sourceBinaryCoefficientRep_congruence",
+    "Dubon2026.sourceBinaryPermutationRep_congruence",
+    "Dubon2026.sourceIntegralBinary_exists_primePowerPermutationRealization"
+  ],
+  "constructions": [
+    "Dubon2026.sourceCoefficientPermutationRep",
+    "Dubon2026.sourceCoefficientPermutationEvaluation",
+    "Dubon2026.sourceBinaryPermutationHeckeH1"
+  ],
+  "queries": [
+    "Dubon2026.sourceCoefficientPermutationEvaluation_single",
+    "Dubon2026.sourceCoefficientPermutationEvaluation_surjective",
+    "Dubon2026.sourceCoefficientPermutationEvaluation_linearMap",
+    "Dubon2026.sourcePrimePower_six_isUnit",
+    "Dubon2026.sourceBinaryPrimePowerCoefficient_finite",
+    "Dubon2026.sourceBinaryPrimePowerPermutation_finite",
+    "Dubon2026.sourceBinaryPrimePowerPermutation_H1_surjective",
+    "Dubon2026.sourceBinaryPermutationDiagonal_intertwine",
+    "Dubon2026.sourceBinaryPermutationHeckeH1_evaluation",
+    "Dubon2026.sourceBinaryCoefficientRep_congruence",
+    "Dubon2026.sourceBinaryPermutationRep_congruence",
+    "Dubon2026.sourceIntegralBinary_exists_primePowerPermutationRealization",
+    "Dubon2026.sourceCoefficientPermutationRep",
+    "Dubon2026.sourceCoefficientPermutationEvaluation",
+    "Dubon2026.sourceBinaryPermutationHeckeH1"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceCoefficientPermutationEvaluation_single",
+    "Dubon2026.sourceCoefficientPermutationEvaluation_surjective",
+    "Dubon2026.sourceCoefficientPermutationEvaluation_linearMap",
+    "Dubon2026.sourcePrimePower_six_isUnit",
+    "Dubon2026.sourceBinaryPrimePowerCoefficient_finite",
+    "Dubon2026.sourceBinaryPrimePowerPermutation_finite",
+    "Dubon2026.sourceBinaryPrimePowerPermutation_H1_surjective",
+    "Dubon2026.sourceBinaryPermutationDiagonal_intertwine",
+    "Dubon2026.sourceBinaryPermutationHeckeH1_evaluation",
+    "Dubon2026.sourceBinaryCoefficientRep_congruence",
+    "Dubon2026.sourceBinaryPermutationRep_congruence",
+    "Dubon2026.sourceIntegralBinary_exists_primePowerPermutationRealization",
+    "Dubon2026.sourceCoefficientPermutationRep",
+    "Dubon2026.sourceCoefficientPermutationEvaluation",
+    "Dubon2026.sourceBinaryPermutationHeckeH1",
+    "Dubon2026.sourceGamma0H1_map_surjective",
+    "Dubon2026.sourcePrimeHeckeH1_naturality",
+    "Dubon2026.sourceBinaryHeckeDiagonal_intertwine",
+    "Dubon2026.sourceBinaryH1Change_hecke",
+    "Dubon2026.binaryHomogeneousMonomialBasis",
+    "Finsupp.linearCombination",
+    "Dubon2026.sourceBinaryH1Change"
+  ],
+  "roots": [
+    "Dubon2026.sourceIntegralBinary_exists_primePowerPermutationRealization"
+  ],
+  "separatelyAxiomChecked": []
+}

@@ -1,0 +1,25 @@
+{
+  "scope": 653,
+  "scopeIds": [
+    "643b",
+    "647c",
+    "650b",
+    "651b"
+  ],
+  "receipts": {
+    "source-gamma-one-differential-regularity-6b-scratch-receipt.json": "9EF4347C9A2DF281E237481B678ECB69B39AFE7E5695EED82DB70603DCB9BEA7",
+    "source-fricke-transformation-4c-scratch-receipt.json": "1B089A904F7ECB171E895466FDC455922A1C2D8EBD06E3BD79EB6FC0E75C126E",
+    "source-weierstrass-expansion-8b-scratch-receipt.json": "8D69957DFF05891851A445E70D258A1014E88FC8F9D78733A17ED2BEF4FEC3AD",
+    "source-fricke-fourier-coefficients-7b-scratch-receipt.json": "29B8C452DEC9110ED125AECC5DF5407322B657D179909021828AA33681AA38E5"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 Hecke characters -> actual Picard/H1, full/parabolic and diamond comparison retaining the original homogeneous coefficient endomorphism -> actual regular differential/cusp comparison -> regularity and rational Fourier structure.",
+  "discharged": "For the actual Gamma1 integral-ratio Laurent field, every differential whose mapped expansion equals an actual weight-two cusp expansion is regular at every place. Both integral equations, coefficient descent, local orders and curve prerequisites are derived. The original normalized Fricke functions transform by the actual torsion-index action, are invariant under the principal subgroup and unchanged by index negation. Native Lipschitz summation and absolute Weierstrass summability prove the exact torsion Fourier formula and holomorphy. The actual normalized torsion functions are periodic, bounded at infinity and have explicit Fourier coefficients in the level cyclotomic field. Multiplication of the original Fricke function by Delta gives a bounded function at infinity. No regularity, Fourier identity, holomorphy, coefficient-field or cusp-bound premise is assumed.",
+  "remaining": "Algebraic realization of arbitrary Gamma1 cusp forms and the converse regular-differential-to-cusp construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must identify the original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of these characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Neither complex semisimplicity, finite characters, Witt coefficients nor a universal deformation ring supplies a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN.",
+  "route": "The renewed search is recorded in Dubon Reuse Search 2026-10-26.md; the exact fixed-revision primary proofs and adaptation assessments are archived here. Reuse a native linear retraction for coefficient descent, the previously proved actual Gamma1 integral equations and curve prerequisites, the actual Weierstrass lattice and native modular transformations. Native weight-two Lipschitz summation, absolute lattice summability, locally uniform differentiation and finite-product summability avoid duplicate foundations. Keep the integer-complement boundary case required by torsion points with first coordinate zero. Finite exponent fibers and native Fourier uniqueness give the actual cyclotomic coefficients. The rational Hecke-matrix basis does not supply the missing Gamma1 rational Fourier basis. Failed timeout, documentation, preflight and dependency-audit evidence is preserved with fresh successors. No used audit or audited mathematical body is rewritten. No external project was built or imported; pins, proof limits and all twenty gates are unchanged.",
+  "precedingCanonicalScope": 8335,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 acceptance gates unchanged.",
+  "reason": "Require preceding canonical PASS and immutable archive before production mutation."
+}

@@ -1,0 +1,32 @@
+import SourcePrimitiveH1CoefficientField
+import SourcePrimitiveLocalH1Character
+import SourcePrimitiveAdicH1Quotients
+import SourcePrimitiveCompatibleH1AdicData
+import SourcePrimitiveH1AdicRealization
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.sourcePrimitive_exists_compatibleH1AdicRealization]
+  let localModules : Array Name := #[`SourcePrimitiveH1AdicRealization, `SourcePrimitiveCompatibleH1AdicData, `SourcePrimitiveAdicH1Quotients, `SourcePrimitiveLocalH1Character, `SourcePrimitiveH1CoefficientField]
+  let required : Array Name := #[`Dubon2026.sourcePrimitiveH1HeckeCharacter_mem_coefficientRing, `Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_hecke, `Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_isIntegral, `Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_coe, `Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_hecke, `Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_residue, `Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_hecke, `Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_compatible, `Dubon2026.sourceLocalH1AdicQuotient_finite, `Dubon2026.sourcePrimitiveCompatibleH1AdicData_of_local, `Dubon2026.sourcePrimitive_exists_compatibleH1AdicRealization, `Dubon2026.sourcePrimitiveFieldH1HeckeCharacter, `Dubon2026.sourcePrimitiveLocalH1HeckeCharacter, `Dubon2026.sourcePrimitiveH1AdicQuotientCharacter, `Dubon2026.sourcePrimitiveCompatibleH1AdicData, `Dubon2026.sourcePrimitiveH1HeckeCharacter, `Dubon2026.sourcePrimitiveH1HeckeCharacter_hecke, `Dubon2026.sourceBinaryH1HeckeAlgebra_finite, `Dubon2026.sourcePrimitiveCoefficient_valuation_le_one, `Dubon2026.sourcePrimitive_exists_residualHeckeCharacter_charP, `Ideal.finite_quotient_pow]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE PRIMITIVE H1 ADIC DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual original primitive H1 adic consumer. Only declaration values are traversed. Original Fourier values, finite coefficients and whole-character transition compatibility are derived from the same original form and prescribed prime. Geometric Galois realization and characteristic-zero association remain required. DUB-17--20 OPEN; 16/20."
+
+#eval runPlanarPairingDependencyAudit

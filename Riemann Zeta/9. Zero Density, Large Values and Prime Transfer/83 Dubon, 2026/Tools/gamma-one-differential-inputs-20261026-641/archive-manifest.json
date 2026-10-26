@@ -1,0 +1,749 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-differential-inputs-promotion-route-641.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma-one-differential-inputs-promotion-route-641.json",
+      "sha256": "A93C4035CF1F21E1A4ADFCA60A780A46979E8FDC1C59AABD3FE96AA888B1B459"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCurveGeometryAudit2.exit",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneCurveGeometryAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCurveGeometryAudit2.lean",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneCurveGeometryAudit2.lean.txt",
+      "sha256": "DEABC4FD50EE99F73D5BB882700E47D830FE661DFDFF16AB1DC336AB76597EE9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCurveGeometryAudit2.log",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneCurveGeometryAudit2.log",
+      "sha256": "0F86F35F484325BDB7D32BE8162EACE2559DD6DD2BD0C093AD42310B3126814B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCurveGeometryDependencyAudit2.exit",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneCurveGeometryDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCurveGeometryDependencyAudit2.lean",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneCurveGeometryDependencyAudit2.lean.txt",
+      "sha256": "1B5743514D49A9E708DCA6EF9038D169CD76957F2EB474270106E2AFDE642EDB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCurveGeometryDependencyAudit2.log",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneCurveGeometryDependencyAudit2.log",
+      "sha256": "D78A32D4E2A37D7CFC8F02181A02B53916BC2C51667B6F6170492C44DF04790D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialCuspIntegralAudit6.exit",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneDifferentialCuspIntegralAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialCuspIntegralAudit6.lean",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneDifferentialCuspIntegralAudit6.lean.txt",
+      "sha256": "D6556223257F290D6DDC660ED9DEAAD9D2A8FA48983B2E68350B8CAC5085021F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialCuspIntegralAudit6.log",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneDifferentialCuspIntegralAudit6.log",
+      "sha256": "9A03F6E3A64944A9FB86AE17B4FDE36FD8DCBB23DAC3744B2FBFB11F495F21CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialCuspIntegralDependencyAudit6.exit",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneDifferentialCuspIntegralDependencyAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialCuspIntegralDependencyAudit6.lean",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneDifferentialCuspIntegralDependencyAudit6.lean.txt",
+      "sha256": "7BF7182F50649A3FA4C34AA85629B1C5921B65C0F3E354B6E481D0BD97693B1A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialCuspIntegralDependencyAudit6.log",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneDifferentialCuspIntegralDependencyAudit6.log",
+      "sha256": "601461FEAC2E1BC793A4D6FDFA8229E2559B8685686F3E49E71ABA64C760961F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialFiniteIntegralAudit5.exit",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneDifferentialFiniteIntegralAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialFiniteIntegralAudit5.lean",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneDifferentialFiniteIntegralAudit5.lean.txt",
+      "sha256": "651C352C271F9099BDA36D5149EA1CFD9A4F5EED63278899C9D359A9A8971665"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialFiniteIntegralAudit5.log",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneDifferentialFiniteIntegralAudit5.log",
+      "sha256": "7C225FD674122F1E16AA854DAB088914C0152E83C30723D8241956D21F9F2C5B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialFiniteIntegralDependencyAudit5.exit",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneDifferentialFiniteIntegralDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialFiniteIntegralDependencyAudit5.lean",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneDifferentialFiniteIntegralDependencyAudit5.lean.txt",
+      "sha256": "60574BB2C51873F6FF3FBC499B45C7BC894A667B92273DC9C6DB7E9B8E5AF765"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialFiniteIntegralDependencyAudit5.log",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneDifferentialFiniteIntegralDependencyAudit5.log",
+      "sha256": "26417CCA781CE2901677B3F6EA310BC01439F3838CD90FA6D7DEB9ACF8F35C8B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFieldModularRatioAudit2.exit",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneFieldModularRatioAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFieldModularRatioAudit2.lean",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneFieldModularRatioAudit2.lean.txt",
+      "sha256": "F42E3B4A5DF20FEEB9F99EA81B70BD6B3D8D8AB5E76FA1B8B402BEDC3D706AD1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFieldModularRatioAudit2.log",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneFieldModularRatioAudit2.log",
+      "sha256": "5486A549CA7D6AD6FDFA2CD7F1A38A3CF91F95A4221BC50246E4A69DD8CF5206"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFieldModularRatioDependencyAudit2.exit",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneFieldModularRatioDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFieldModularRatioDependencyAudit2.lean",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneFieldModularRatioDependencyAudit2.lean.txt",
+      "sha256": "2BA7294001F01438E72648F08E7349C1F685D6E276AF788992508CFC27BA1F29"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFieldModularRatioDependencyAudit2.log",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneFieldModularRatioDependencyAudit2.log",
+      "sha256": "C052A67F13DE06649A53071BA0D4EEE0FAF82B734861A42A99416604B0A2E421"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCohomologyAudit1.exit",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneGeometricCohomologyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCohomologyAudit1.lean",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneGeometricCohomologyAudit1.lean.txt",
+      "sha256": "A25B3E221793DCCD0F49A8CDD11391F88941BC692FE7397069F09D1E11631999"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCohomologyAudit1.log",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneGeometricCohomologyAudit1.log",
+      "sha256": "B22F57CD517F19DFDA9081C20CCDF0834538DBB60289C4B1BCCDE75686167F39"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCohomologyDependencyAudit1.exit",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneGeometricCohomologyDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCohomologyDependencyAudit1.lean",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneGeometricCohomologyDependencyAudit1.lean.txt",
+      "sha256": "36D8A2B04DF5F26D7CE49B071703AF31AB3A1C84B39E4E75AF6EE47BF1091F06"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCohomologyDependencyAudit1.log",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneGeometricCohomologyDependencyAudit1.log",
+      "sha256": "DC0E854579A17DEB828900B6EB398FD088602B848F028AF5353B023505EB4B29"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricSubgroupAudit1.exit",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneGeometricSubgroupAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricSubgroupAudit1.lean",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneGeometricSubgroupAudit1.lean.txt",
+      "sha256": "8413E2408A0EE9842ED79EF449224D8250D63B23B07A0353C2D8F7C9BE231DFC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricSubgroupAudit1.log",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneGeometricSubgroupAudit1.log",
+      "sha256": "7B118EC6848A8FD9CB95B1A3ED18F8062ABA20C69D92AD121097C71404E17530"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricSubgroupDependencyAudit1.exit",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneGeometricSubgroupDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricSubgroupDependencyAudit1.lean",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneGeometricSubgroupDependencyAudit1.lean.txt",
+      "sha256": "47A0FDD700AD12D9E4F7484E5D5C70C76378F5A12B10D7C23CFFEC08A74B340E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricSubgroupDependencyAudit1.log",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneGeometricSubgroupDependencyAudit1.log",
+      "sha256": "7B46988F24AC9EEAE68006C4C1A69219D23FFDFB77BD44D7338CE59BC9D862F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCoefficientAudit1.exit",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneHeckeCoefficientAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCoefficientAudit1.lean",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneHeckeCoefficientAudit1.lean.txt",
+      "sha256": "C1953CF19A06A2B77C8820C29C21B8569242588001EB0B11CBEB17A5247FAC45"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCoefficientAudit1.log",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneHeckeCoefficientAudit1.log",
+      "sha256": "2F1548BDB663E873C8E129FA7BB02EC55AC03562C13FCF9C8F68D87B2F849AE3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCoefficientDependencyAudit1.exit",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneHeckeCoefficientDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCoefficientDependencyAudit1.lean",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneHeckeCoefficientDependencyAudit1.lean.txt",
+      "sha256": "EAABA785779C59B559DBA66E88CBB2FFB5BB950EBF4867C220317B0AC33459FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCoefficientDependencyAudit1.log",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneHeckeCoefficientDependencyAudit1.log",
+      "sha256": "909EBAE60CE9538417E8C2375FDA2710CB7056FE4014D1715F69AFBEDB70E983"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneScalarExtensionAudit1.exit",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneScalarExtensionAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneScalarExtensionAudit1.lean",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneScalarExtensionAudit1.lean.txt",
+      "sha256": "D91193DD85144375636E55E6185EEE54D151F59397F5C0EC5A395CD36E5816DA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneScalarExtensionAudit1.log",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneScalarExtensionAudit1.log",
+      "sha256": "6BA45062AD25A09F6BA2494358DC663F5CA8117DE4463F08A5400B45B09D8A59"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneScalarExtensionDependencyAudit1.exit",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneScalarExtensionDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneScalarExtensionDependencyAudit1.lean",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneScalarExtensionDependencyAudit1.lean.txt",
+      "sha256": "AA8F781BFD2D417723EBC92F69FFB6596E0775D90DD1941045D8E207984E8EF0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneScalarExtensionDependencyAudit1.log",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/SourceGammaOneScalarExtensionDependencyAudit1.log",
+      "sha256": "AAAB8FD69E7F60EC8DA805BB2EFEBF2E283E623DB8A06950DFE8BA42CC3E6F88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers627.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/consumers627.txt",
+      "sha256": "E36D7076F7B1F5CF983E320CC44F6E20ABAD146577A7CECEF61C1033152F369A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers634.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/consumers634.txt",
+      "sha256": "896A523ABF4C01F731BCE8CD13BAC29D134D095F11128E3E285CA8F9C119DC57"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers638.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/consumers638.txt",
+      "sha256": "9B69CF2A41B2B4ADC06DCBE7463C8B460CA789FFA0A7CC52B11F067EEE1FEFF1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_gamma1_cusp_integral_639.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/fetch_gamma1_cusp_integral_639.py",
+      "sha256": "C3F1F6BF811B8256C27CFB2910DC025FFC590CF974509E8466DD1E63F120C9EA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_gamma1_differential_inputs_633.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/fetch_gamma1_differential_inputs_633.py",
+      "sha256": "6B218D446906DF3C7B275F10FD7BC310999FF684E7AA68A785227AE6524F3D78"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_gamma1_differential_prerequisites_635.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/fetch_gamma1_differential_prerequisites_635.py",
+      "sha256": "15D86F7C7002D2432CC7E1BF8B01FA1E646E049B804F9C9CC8C1F9976378557E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_gamma1_qeuler_637.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/fetch_gamma1_qeuler_637.py",
+      "sha256": "C46925DAA25E3EC7DC0F951C25B32A0D1978259DCA4C546C1C07CA178D647A2D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-actual-curve-differential-route-632.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-actual-curve-differential-route-632.json",
+      "sha256": "BBEF298E8120BAAE2BD572FC5172A994F94449842B13B3C2D50C614D4123283B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-cusp-integral-reuse-assessment-639.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-cusp-integral-reuse-assessment-639.json",
+      "sha256": "DAB11FC09EC1EB27B5F81797A85C6CE5C4D90DBE2CF1E0512AE6A8A77285DFE1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-cusp-integral-route-640.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-differential-cusp-integral-route-640.json",
+      "sha256": "82AAFD3BEE7A354EA51DFBC8927CE1488D50327EF050BAF1D6DA77FE885223D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-finite-integral-route-638.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-differential-finite-integral-route-638.json",
+      "sha256": "81DCF9657BFFED18CFEA35AC90B7CEF33CE5BEBBA3BA6AFBC0FACA0EC97D71E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-input-reuse-assessment-633.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-differential-input-reuse-assessment-633.json",
+      "sha256": "27732B22FA355257FC9A5EE73CD4CB4C492931214D9D2454103920539EF96A86"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-prerequisite-reuse-assessment-635.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-differential-prerequisite-reuse-assessment-635.json",
+      "sha256": "DA521DEE73D92F963581463629F7ADE9945514BC9FC5B152A0541584E5139DB6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-field-modular-ratio-route-636.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-field-modular-ratio-route-636.json",
+      "sha256": "20577957C622CDC70724B1211C57B3AC39C8AE7C4F53735A6182F6195AA75A4F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-geometric-cohomology-route-629.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-geometric-cohomology-route-629.json",
+      "sha256": "4B9D1260AAE567FCD3C6F051C8B9B1D34B791FD5FD82EAC0E51CE0D98E5D3486"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-coefficient-factor-route-631.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-hecke-coefficient-factor-route-631.json",
+      "sha256": "527F7B76F2ED42F7727B4E3DFFFFDD20AE4CCFED20EA29BCBA601734237B338D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-qeuler-reuse-assessment-637.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-qeuler-reuse-assessment-637.json",
+      "sha256": "B7CC7F74B7C8A80623CED3FEE8432BDB63BF50BA4EBDD343ED86F64C9DEC03F4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-scalar-extension-route-634.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-scalar-extension-route-634.json",
+      "sha256": "D6EC9A5D6CCB4C3BDBDE3DF474E03476697EF3D1193C45DFB223C6B79B592516"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-upper-geometric-correspondence-route-627.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-upper-geometric-correspondence-route-627.json",
+      "sha256": "82AF1D1B66A460BA884C78B6F37B27008E7A5143AA174304CBAA76E9B4CAC3D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules627.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/modules627.json",
+      "sha256": "4D820864257F99D625A07CE033CC57BF73E939F9D4A131156FD2E82ADCBB0638"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules634.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/modules634.json",
+      "sha256": "23788929435CC293EBBA19F427343E1A76134B37CEDB694CB78499E53B033297"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules638.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/modules638.json",
+      "sha256": "E656A3EF727E391E74E03A831BD5D8AAEB61FD943CB9F35F4447B13B772C3CF4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_curve_geometry_audit_632.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/prepare_gamma_one_curve_geometry_audit_632.py",
+      "sha256": "8E7E3165B181F499222F8708933B7C92B84D16A1DB3437B2C9C9A87C2746AB0B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_curve_geometry_scope_632.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/prepare_gamma_one_curve_geometry_scope_632.py",
+      "sha256": "5D46751D3830820BD3B7F19AA60F7E0761123DB4470DA94A24C8311FD2962E3A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_differential_cusp_integral_audit_640.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/prepare_gamma_one_differential_cusp_integral_audit_640.py",
+      "sha256": "BEA0A250F02949DA28BF4E49B50422E0606C5E9C59FE2A5E8973984B3EB1748D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_differential_finite_integral_audit_638.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/prepare_gamma_one_differential_finite_integral_audit_638.py",
+      "sha256": "E8B3F1A681A72EFD97AC614F486508C0EADA707B60C4D6BB25722D86E972C4A3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_field_modular_ratio_audit_636.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/prepare_gamma_one_field_modular_ratio_audit_636.py",
+      "sha256": "79A2CBC1DB84DBE0D4E1A8ABCEB48833CC7E8BC7246700B7B3AA4454E8A71BEC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_geometric_cohomology_audit_629.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/prepare_gamma_one_geometric_cohomology_audit_629.py",
+      "sha256": "55315AC1BD7AFFF5D7A3026C3A90F9659FC15C497F4212D458224793B200948E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_geometric_cohomology_scope_629.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/prepare_gamma_one_geometric_cohomology_scope_629.py",
+      "sha256": "4F1D0FC1885B6567B85069A20EA387906464E37853A007CFC61775C0C9932CAF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_geometric_subgroup_audit_627.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/prepare_gamma_one_geometric_subgroup_audit_627.py",
+      "sha256": "2BCC66545B1D4EA0C6CFCF54AAA50F051EA8C2E4804077707AEE25141DDA582A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_geometric_subgroup_scope_627.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/prepare_gamma_one_geometric_subgroup_scope_627.py",
+      "sha256": "7117EB7689014481BD1C822DFFBCED7C8A6BE903FBBF56C6DCC202EDEB8E3DEB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_coefficient_audit_631.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/prepare_gamma_one_hecke_coefficient_audit_631.py",
+      "sha256": "20C32084DC0FB3A91562112B8D105B44BA1B480790288C593734D89482986C06"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_coefficient_scope_631.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/prepare_gamma_one_hecke_coefficient_scope_631.py",
+      "sha256": "C5F711D67D66ADD1B958992B37D5440781A42628FF8BCBB883098467A8C6C730"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_scalar_extension_audit_634.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/prepare_gamma_one_scalar_extension_audit_634.py",
+      "sha256": "4D973C037CBE87358A9B6C58EE92B006EA77C2CA38C5DE1BB8A5F6CDBF7BD7A2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record627.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/record627.py",
+      "sha256": "FAD677EF3A23809278601A079D9C89822522ABAD0F6B5FDDD28515587503FAA8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record634.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/record634.py",
+      "sha256": "F9BEFC8FBA1EEF01B4D276E94F96FCE6A464BED0D1D119F312587D1830D4A8FE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record638.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/record638.py",
+      "sha256": "596D38B44B20A4CF3315A56D6E7D5E88139876BF810BDDDD36FBFD28FE42BCBE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_curve_geometry_632.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/record_gamma_one_curve_geometry_632.py",
+      "sha256": "25AEAB80A4208E2DE2B8C4E0AE473921390E93DC37CACB599D9EA70557FD1ED0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_differential_cusp_integral_640.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/record_gamma_one_differential_cusp_integral_640.py",
+      "sha256": "191A9B6C680C9BD06ED20795319899EC5E9152B7AB3C4A87BDA38377E548C203"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_differential_finite_integral_638.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/record_gamma_one_differential_finite_integral_638.py",
+      "sha256": "D7D1B9FBF0D7C66D6C4CE2587706F59EF43D5D515FB58D3CA6FEE2B1202CFDAA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_field_modular_ratio_636.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/record_gamma_one_field_modular_ratio_636.py",
+      "sha256": "25AC00BF61BF9D2F58242249E67CF14E5C8239559A9000B50D141D6BCEA3A311"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_geometric_cohomology_629.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/record_gamma_one_geometric_cohomology_629.py",
+      "sha256": "D58BEAA83EACF7AFCCB0F980DD33B96517D93974D8D8A121998372786D33C795"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_geometric_subgroup_627.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/record_gamma_one_geometric_subgroup_627.py",
+      "sha256": "E8864D37C0149E0B44805C836BD65132F85F25DE87E0A0322D73747A79B02C84"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_hecke_coefficient_631.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/record_gamma_one_hecke_coefficient_631.py",
+      "sha256": "CF09FA669D4FC47502E37D6215305D2D3CE5EC72F327374DE088C926066A3EB5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_scalar_extension_634.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/record_gamma_one_scalar_extension_634.py",
+      "sha256": "C22B90EC01C92E7B00253D4C08DEAB42C23831EB5D615990725B55959092B267"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register627.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/register627.py",
+      "sha256": "E58415E7302A4AB70237F8DCB16ADFA7503C5F192B18395FED9BC7221FC07ACA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register634.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/register634.py",
+      "sha256": "E62565B9BA25766626026E1DAB6D242EFAE28018079C1E1A6E47D070688E9A9A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register638.py",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/register638.py",
+      "sha256": "90F0701F3BB366CDDB2BB4F2E3B5922FEA126B5B480443348E4F941BBDB78248"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations627.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/registrations627.json",
+      "sha256": "3816A179C6D8023DA959B650542A07722120D2A637ACF9D0BA758B146A9EF209"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations634.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/registrations634.json",
+      "sha256": "76F1A5F622C7B588BFEC8A9DCE4CFE0D16531C06B62B2CA769D2DEBF41001E33"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations638.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/registrations638.json",
+      "sha256": "11B31927419D6652EE736C189A3E912C6A5522A4DF6C17D79FF9201C453FF034"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section627.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/section627.txt",
+      "sha256": "82EA38118F909E97E70AA01BF029FBFFB8BAF1F95250CA067F0FA3D596B3FAAA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section634.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/section634.txt",
+      "sha256": "440EA58E6B078E0BFC0B94923B3AA1748A154DCD3BA3E89D8D2C6F2D3E833F1E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section638.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/section638.txt",
+      "sha256": "747419A42C0312C149BC800082B09CAE83E9FBDFDF6E17FCAB2BC35BEC1F473D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-curve-geometry-2-audit-config.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-curve-geometry-2-audit-config.json",
+      "sha256": "8DEF19163B6162A3BBC7D4E73C407005B18CE790BC04B118835EE577A46713DF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-curve-geometry-2-scratch-receipt.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-curve-geometry-2-scratch-receipt.json",
+      "sha256": "378499A246B5EA00C058B7E6E7008486CB53FF706B6920E3A4DF71AFC8F27979"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-differential-cusp-integral-6-audit-config.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-differential-cusp-integral-6-audit-config.json",
+      "sha256": "7C02F0868FA72D4BA91FB23B3FEDDAE03D40EA333DA3BC4E4A741C6D6C545A06"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-differential-cusp-integral-6-scratch-receipt.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-differential-cusp-integral-6-scratch-receipt.json",
+      "sha256": "0404466E30FD58C7EEE6272B9F223E799034FAC35EC07ED888BE14518F759652"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-differential-finite-integral-5-audit-config.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-differential-finite-integral-5-audit-config.json",
+      "sha256": "143542C4B09E6941B9DCD7ED2942A06204C259055F5AFFE41D29D5F98567684F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-differential-finite-integral-5-scratch-receipt.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-differential-finite-integral-5-scratch-receipt.json",
+      "sha256": "447878A306BA2A05157FF70C19B8B05455C9B679CC428947714118E7EF484F18"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-field-modular-ratio-2-audit-config.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-field-modular-ratio-2-audit-config.json",
+      "sha256": "FE83E77A3311F5ACD6F2370D156E2891E8144E8140B1B721B4C5F9B944C29AB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-field-modular-ratio-2-scratch-receipt.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-field-modular-ratio-2-scratch-receipt.json",
+      "sha256": "9149584D53B8B74568CAED0F9D0E2BEE3F819570A05CF30DF0789CDAB9DE04F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-geometric-cohomology-1-audit-config.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-geometric-cohomology-1-audit-config.json",
+      "sha256": "2EAA3AEFADEA7C6D607095CD82DA4DB106D7631D0257F899DB641D50625BEA7E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-geometric-cohomology-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-geometric-cohomology-1-scratch-receipt.json",
+      "sha256": "E2EDC0A0CF457E4C9F0F70FF482D77550117A037C82ABC7AF16EA8C7033DC47A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-geometric-subgroup-1-audit-config.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-geometric-subgroup-1-audit-config.json",
+      "sha256": "2E052E39E7FCAA75CA291BF5E1EC07841B78324FBE591C1F06388623FA406F05"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-geometric-subgroup-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-geometric-subgroup-1-scratch-receipt.json",
+      "sha256": "B20BC28E86B9674390D7360751DFE680BDC7BFCE6FA787B36B5461A3F76AE0C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-coefficient-1-audit-config.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-hecke-coefficient-1-audit-config.json",
+      "sha256": "F45CBBB019705A07BC49044AED95A57E31FCCB5C0A2495C63B277B9C5765D678"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-coefficient-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-hecke-coefficient-1-scratch-receipt.json",
+      "sha256": "B35B8DCB281A6050421DBA5BB8EB81AFA7710E592D034899DC30FDDC371887F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-scalar-extension-1-audit-config.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-scalar-extension-1-audit-config.json",
+      "sha256": "C11D2F237BB526FDCCA6A779F25BF6E0D64FA1CC0B584A19245FA0C093FDE521"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-scalar-extension-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-scalar-extension-1-scratch-receipt.json",
+      "sha256": "39F1F0BAE1C276431397DE4757293D6AB7FA2634C8CCD2D72E80F9EB94E04021"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status627.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/status627.txt",
+      "sha256": "DBFA0C66ECD9BCF6F6C90557604258B958A6B9336EE26668D96A2429F4F48D37"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status634.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/status634.txt",
+      "sha256": "8CB3CEF6E298486B79A02D69B82B412AFF7097D3ABB70661EFCB81617C3AC0A5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status638.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/status638.txt",
+      "sha256": "9057FEBDE26D2317D9CF3AE80B7C126975DE487FE0F2C95DA0AB990383CD23BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-input-reuse-633\\P2M\\Sol\\S_CuspForm_exists_basis_gamma1_qCoeff_mem_range_ratCast.lean.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-differential-input-reuse-633/P2M/Sol/S_CuspForm_exists_basis_gamma1_qCoeff_mem_range_ratCast.lean.txt",
+      "sha256": "89341A19A217B7F2CDD97A936749773123313315728046A121A8B0A57A157FB0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-input-reuse-633\\P2M\\Sol\\S_ModularCurve_exists_coeffMap_diffQExp_x1FunctionFieldBar_eq_qExpansion.lean.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-differential-input-reuse-633/P2M/Sol/S_ModularCurve_exists_coeffMap_diffQExp_x1FunctionFieldBar_eq_qExpansion.lean.txt",
+      "sha256": "8D370D3ED7D39DAAE76A8612ED3E8E6166C4BD0B1FE8251C72CEC13C4EAFB7E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-input-reuse-633\\P2M\\Sol\\S_ModularCurve_exists_cuspForm_coeffMap_diffQExp_x1FunctionFieldBar_eq_qExpansion_of_mem_regularDifferentials.lean.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-differential-input-reuse-633/P2M/Sol/S_ModularCurve_exists_cuspForm_coeffMap_diffQExp_x1FunctionFieldBar_eq_qExpansion_of_mem_regularDifferentials.lean.txt",
+      "sha256": "5D3A04733A3D39E2E2F87EFC9BEBC13D8C6A06A52ABB843D8204EA0F98543F79"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-input-reuse-633\\P2M\\Sol\\S_ModularCurve_mem_regularDifferentials_x1FunctionFieldBar_of_coeffMap_diffQExp_eq_qExpansion.lean.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-differential-input-reuse-633/P2M/Sol/S_ModularCurve_mem_regularDifferentials_x1FunctionFieldBar_of_coeffMap_diffQExp_eq_qExpansion.lean.txt",
+      "sha256": "464B3036C5CB9DB2199ABEFC0EC7C67EE62EA24B13DC3EDE11A5E46AA2E6169F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-input-reuse-633\\snapshots.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-differential-input-reuse-633/snapshots.json",
+      "sha256": "DDAB8F2B38670068ECA84B9FBCE10D2452AB8D507BEB148175C1018C50F3AC63"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-prerequisite-reuse-635\\P2M\\Sol\\S_ModularCurve_exists_coeffMap_qExpansionDiffAlong_laurentBaseChange_qExpFunctionFieldC_eq_qExpansion.lean.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-differential-prerequisite-reuse-635/P2M/Sol/S_ModularCurve_exists_coeffMap_qExpansionDiffAlong_laurentBaseChange_qExpFunctionFieldC_eq_qExpansion.lean.txt",
+      "sha256": "1118F715F01616AC0CB97F3D1247D0DD4892FC51485F6CBA738CF1166FD5DA77"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-prerequisite-reuse-635\\P2M\\Sol\\S_ModularCurve_exists_cuspForm_qExpansion_eq_mul_thetaL_pow_of_isIntegral_qExpFunctionFieldC.lean.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-differential-prerequisite-reuse-635/P2M/Sol/S_ModularCurve_exists_cuspForm_qExpansion_eq_mul_thetaL_pow_of_isIntegral_qExpFunctionFieldC.lean.txt",
+      "sha256": "64F74B4492C3BAEF179D997F56BE120021789E0107349039B1737184D65DFBB4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-prerequisite-reuse-635\\P2M\\Sol\\S_ModularCurve_isIntegral_adjoin_coeffEmb_jq_of_mul_thetaL_eq_qExpansion_of_finiteIndex.lean.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-differential-prerequisite-reuse-635/P2M/Sol/S_ModularCurve_isIntegral_adjoin_coeffEmb_jq_of_mul_thetaL_eq_qExpansion_of_finiteIndex.lean.txt",
+      "sha256": "90789C8B6219A0253A855EE35CD89A6BFC6785902CD98AC7D10AFAEED7E27A0B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-prerequisite-reuse-635\\P2M\\Sol\\S_ModularCurve_isIntegral_and_isIntegral_of_smul_D_mem_regularDifferentials_qExpFunctionFieldC.lean.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-differential-prerequisite-reuse-635/P2M/Sol/S_ModularCurve_isIntegral_and_isIntegral_of_smul_D_mem_regularDifferentials_qExpFunctionFieldC.lean.txt",
+      "sha256": "9B7E90A09D7EF5EE2B1134FB090B8BE225813FC9FEBF3EF2C6AA7A98F6E88188"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-prerequisite-reuse-635\\P2M\\Sol\\S_ModularCurve_one_sub_ord_le_ord_of_coeffMap_mul_thetaL_eq_qExpansion_of_gamma_le.lean.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-differential-prerequisite-reuse-635/P2M/Sol/S_ModularCurve_one_sub_ord_le_ord_of_coeffMap_mul_thetaL_eq_qExpansion_of_gamma_le.lean.txt",
+      "sha256": "D43981289BA7F50331CA75C7263A295069D60575C4BC2870B87F1F0DBD043444"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-prerequisite-reuse-635\\snapshots.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-differential-prerequisite-reuse-635/snapshots.json",
+      "sha256": "CBCC0795A16FCB5B570029375C72EAD61FE0F92ADA38490D120CAC31A217D6BD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-qeuler-reuse-637\\P2M\\Sol\\S_ModularCurve_coe_qExpansion_normalizedDerivOfComplex.lean.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-qeuler-reuse-637/P2M/Sol/S_ModularCurve_coe_qExpansion_normalizedDerivOfComplex.lean.txt",
+      "sha256": "AA9B7602463C9998A6AC592BE8686944AA5336C33AAA9B597A40590B0A300A51"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-qeuler-reuse-637\\P2M\\Sol\\S_ModularCurve_thetaL_jq_mul_deltaSeries.lean.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-qeuler-reuse-637/P2M/Sol/S_ModularCurve_thetaL_jq_mul_deltaSeries.lean.txt",
+      "sha256": "6A0A5BC0A59B5DCFB39C0962F20F0329AFDC2B47BF52E2B264177E02369FB9EA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-qeuler-reuse-637\\snapshots.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-qeuler-reuse-637/snapshots.json",
+      "sha256": "DA03B73E5658AF731EFD5E6DFC98340B8F1F8E39AD3ED2B9DB625C8422717DEA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-cusp-integral-reuse-639\\P2M\\Sol\\S_ModularCurve_isIntegral_adjoin_coeffEmb_jq_inv_of_mul_thetaL_eq_qExpansion_of_gamma_le.lean.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-cusp-integral-reuse-639/P2M/Sol/S_ModularCurve_isIntegral_adjoin_coeffEmb_jq_inv_of_mul_thetaL_eq_qExpansion_of_gamma_le.lean.txt",
+      "sha256": "2F6412152CDBD3993DAA58296C31ABD70463DF5DD1B776178FA213A888D8C801"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-cusp-integral-reuse-639\\snapshots.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-cusp-integral-reuse-639/snapshots.json",
+      "sha256": "123797EC77DCFF95B2047EFEB437B51C32A757042EF753EC647004F902C06060"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-inverse-j-640-before-explicit-coefficient-rewrite\\SourceModularInverseJIntegral.exit",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-inverse-j-640-before-explicit-coefficient-rewrite/SourceModularInverseJIntegral.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-inverse-j-640-before-explicit-coefficient-rewrite\\SourceModularInverseJIntegral.lean.txt",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-inverse-j-640-before-explicit-coefficient-rewrite/SourceModularInverseJIntegral.lean.txt",
+      "sha256": "5BE4219F5DA2967D8185F2DA3EE5A83385869F220D9E4F1C6E8397A55EFE3903"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-inverse-j-640-before-explicit-coefficient-rewrite\\SourceModularInverseJIntegral.log",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma1-inverse-j-640-before-explicit-coefficient-rewrite/SourceModularInverseJIntegral.log",
+      "sha256": "5E8B59F9070E09C61BDC54AED124038C3F149A8757453E6423D9CDE1D152E78D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-geometric-subgroup-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-geometric-subgroup-1-reuse-review-20261026.json",
+      "sha256": "5A649E26508DF970D319C1C145710595C362B656FBEC4B68F5A5419BC735E156"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-geometric-cohomology-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-geometric-cohomology-1-reuse-review-20261026.json",
+      "sha256": "8BCF2AB05574EBEB6A537D4008EE6CE314E703E75CBFC4E2E9D594DE41376DFD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-coefficient-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-hecke-coefficient-1-reuse-review-20261026.json",
+      "sha256": "EAA8EEF7C2627E2122A70654CDE27C58343F56563EB5734AA8227C3C9E70B248"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-curve-geometry-2-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-curve-geometry-2-reuse-review-20261026.json",
+      "sha256": "B313470761608ECB49495158480B04B9098132572A5A2BC356027EBE699C52CA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-scalar-extension-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-scalar-extension-1-reuse-review-20261026.json",
+      "sha256": "FFDAEE289D3FAD13AB324CAF00ADF44C30BCF5DCF5752CBD18D37CA5195809F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-field-modular-ratio-2-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-field-modular-ratio-2-reuse-review-20261026.json",
+      "sha256": "44199B78D8ACECA302492742A16231D2441A85F40BA1412E7CB0299ED155C027"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-differential-finite-integral-5-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-differential-finite-integral-5-reuse-review-20261026.json",
+      "sha256": "0551586A0E6F030C27B95DF1E5AAD63DD558ACDA0AEF6B76C7653085E5CF3773"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-differential-cusp-integral-6-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-differential-inputs-20261026-641/source-gamma-one-differential-cusp-integral-6-reuse-review-20261026.json",
+      "sha256": "15492090D30E92966839BD65927295C204653CF6A39D36976F83461E124E78A4"
+    }
+  ]
+}

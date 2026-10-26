@@ -1,0 +1,52 @@
+{
+  "modules": [
+    "SourceCohomologyTracePullbackCoefficients",
+    "SourceShapiroH1PullbackNaturality",
+    "SourceH1TraceBaseChange"
+  ],
+  "theorems": [
+    "Dubon2026.sourceCoinducedTracePullback_values",
+    "Dubon2026.sourceCoinducedTracePullback_eval_one",
+    "Dubon2026.sourceCoinducedTracePullback_trace",
+    "Dubon2026.sourceShapiroH1_pullback_naturality",
+    "Dubon2026.sourceCoinducedH1Trace_pullback",
+    "Dubon2026.sourceSubgroupH1Trace_pullback",
+    "Dubon2026.sourceHeckeH1Trace_pullback"
+  ],
+  "constructions": [
+    "Dubon2026.sourceTracePullbackSubgroupHom",
+    "Dubon2026.sourceCoinducedTracePullback"
+  ],
+  "queries": [
+    "Dubon2026.sourceCoinducedTracePullback_values",
+    "Dubon2026.sourceCoinducedTracePullback_eval_one",
+    "Dubon2026.sourceCoinducedTracePullback_trace",
+    "Dubon2026.sourceShapiroH1_pullback_naturality",
+    "Dubon2026.sourceCoinducedH1Trace_pullback",
+    "Dubon2026.sourceSubgroupH1Trace_pullback",
+    "Dubon2026.sourceHeckeH1Trace_pullback",
+    "Dubon2026.sourceTracePullbackSubgroupHom",
+    "Dubon2026.sourceCoinducedTracePullback"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceCoinducedTracePullback_values",
+    "Dubon2026.sourceCoinducedTracePullback_eval_one",
+    "Dubon2026.sourceCoinducedTracePullback_trace",
+    "Dubon2026.sourceShapiroH1_pullback_naturality",
+    "Dubon2026.sourceCoinducedH1Trace_pullback",
+    "Dubon2026.sourceSubgroupH1Trace_pullback",
+    "Dubon2026.sourceHeckeH1Trace_pullback",
+    "Dubon2026.sourceTracePullbackSubgroupHom",
+    "Dubon2026.sourceCoinducedTracePullback",
+    "Dubon2026.subgroupComapCosetMap_injective",
+    "Dubon2026.OriginalShapiroRestriction.originalShapiroIso_eq_restriction_eval",
+    "Dubon2026.sourceHeckeH1Trace_eq_subgroupTrace",
+    "Dubon2026.coinducedCosetTrace",
+    "groupCohomology.coindIso",
+    "groupCohomology.map_comp"
+  ],
+  "roots": [
+    "Dubon2026.sourceHeckeH1Trace_pullback"
+  ],
+  "separatelyAxiomChecked": []
+}

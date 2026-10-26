@@ -1,0 +1,75 @@
+import Mathlib
+
+/-! DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight arithmetic
+association -> original finite Gamma1 character realization -> actual
+Picard/H1 and diamond comparison -> regular differential/cusp comparison
+-> rational Fourier structure -> Fricke generators.
+The actual Weierstrass function and its modular transformation are used.
+Adapted from the fixed Apache-2.0 FLT source archived in reuse scope646;
+no external theorem or toolchain is imported. -/
+namespace Dubon2026.SourceFricke
+noncomputable section
+open Complex Real PeriodPair Matrix UpperHalfPlane
+open scoped MatrixGroups Manifold ModularForm
+
+def smulPeriodPair (a : ℂ) (ha : a ≠ 0) (L : PeriodPair) : PeriodPair where
+  ω₁ := a * L.ω₁
+  ω₂ := a * L.ω₂
+  indep := LinearIndependent.pair_iff.mpr fun s t hst => by
+    refine LinearIndependent.pair_iff.mp L.indep s t ?_
+    have h0 : a * (s • L.ω₁ + t • L.ω₂) = 0 := by
+      rw [mul_add, mul_smul_comm, mul_smul_comm]; exact hst
+    exact (mul_eq_zero.mp h0).resolve_left ha
+
+@[simp] lemma smulPeriodPair_ω₁ (a : ℂ) (ha : a ≠ 0) (L : PeriodPair) :
+    (smulPeriodPair a ha L).ω₁ = a * L.ω₁ := rfl
+
+@[simp] lemma smulPeriodPair_ω₂ (a : ℂ) (ha : a ≠ 0) (L : PeriodPair) :
+    (smulPeriodPair a ha L).ω₂ = a * L.ω₂ := rfl
+
+lemma mem_smulPeriodPair_lattice {a : ℂ} (ha : a ≠ 0) (L : PeriodPair) {x : ℂ} :
+    x ∈ (smulPeriodPair a ha L).lattice ↔ ∃ y ∈ L.lattice, x = a * y := by
+  simp only [mem_lattice, smulPeriodPair_ω₁, smulPeriodPair_ω₂]
+  constructor
+  · rintro ⟨m, n, h⟩
+    exact ⟨(m : ℂ) * L.ω₁ + (n : ℂ) * L.ω₂, ⟨m, n, rfl⟩, by rw [← h]; ring⟩
+  · rintro ⟨y, ⟨m, n, h⟩, rfl⟩
+    exact ⟨m, n, by rw [← h]; ring⟩
+
+def smulLatticeEquiv (a : ℂ) (ha : a ≠ 0) (L : PeriodPair) :
+    L.lattice ≃ (smulPeriodPair a ha L).lattice where
+  toFun l := ⟨a * l, (mem_smulPeriodPair_lattice ha L).mpr ⟨l, l.2, rfl⟩⟩
+  invFun l := ⟨a⁻¹ * l, by
+    obtain ⟨y, hy, hxy⟩ := (mem_smulPeriodPair_lattice ha L).mp l.2
+    rw [hxy, inv_mul_cancel_left₀ ha]; exact hy⟩
+  left_inv l := Subtype.ext (inv_mul_cancel_left₀ ha _)
+  right_inv l := Subtype.ext (mul_inv_cancel_left₀ ha _)
+
+@[simp] lemma smulLatticeEquiv_coe (a : ℂ) (ha : a ≠ 0) (L : PeriodPair) (l : L.lattice) :
+    ((smulLatticeEquiv a ha L) l : ℂ) = a * l := rfl
+
+theorem weierstrassP_smulPeriodPair (a : ℂ) (ha : a ≠ 0) (L : PeriodPair) (z : ℂ) :
+    weierstrassP (smulPeriodPair a ha L) (a * z) = a⁻¹ ^ 2 * weierstrassP L z := by
+  have key : ∀ u : ℂ, 1 / (a * u) ^ 2 = a⁻¹ ^ 2 * (1 / u ^ 2) := fun u => by
+    simp [one_div, mul_pow, inv_pow, mul_comm]
+  simp only [weierstrassP]
+  rw [← (smulLatticeEquiv a ha L).tsum_eq, ← tsum_mul_left]
+  congr with l
+  simp only [smulLatticeEquiv_coe]
+  rw [show a * z - a * (l : ℂ) = a * (z - l) by ring, key, key, mul_sub]
+
+theorem weierstrassP_of_lattice_eq {L L' : PeriodPair}
+    (h : L.lattice = L'.lattice) (z : ℂ) :
+    weierstrassP L z = weierstrassP L' z := by
+  let e : L.lattice ≃ L'.lattice :=
+    { toFun := fun l => ⟨l, by rw [← h]; exact l.2⟩
+      invFun := fun l => ⟨l, by rw [h]; exact l.2⟩
+      left_inv := fun _ => rfl
+      right_inv := fun _ => rfl }
+  simp only [weierstrassP]
+  rw [← e.tsum_eq]
+  rfl
+
+
+end
+end Dubon2026.SourceFricke

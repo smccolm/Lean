@@ -1,0 +1,238 @@
+import Dubon2026.SourcePermutationCoefficientQuotient
+import Dubon2026.SourceBinaryPrimePowerPermutation
+import Dubon2026.SourceBinaryPermutationHecke
+import Dubon2026.SourceBinaryPermutationCongruence
+import Dubon2026.SourceIntegralBinaryPermutationRealization
+import Dubon2026.SourcePrimitiveH1CoefficientField
+import Dubon2026.SourcePrimitiveLocalH1Character
+import Dubon2026.SourcePrimitiveAdicH1Quotients
+import Dubon2026.SourcePrimitiveCompatibleH1AdicData
+import Dubon2026.SourcePrimitiveH1AdicRealization
+import Dubon2026.SourceCoefficientPermutationCoordinates
+import Dubon2026.SourceCoefficientStabilizerCohomology
+import Dubon2026.SourceIntegralBinaryStabilizerRealization
+import Dubon2026.SourceFaithfulCharacterDivisibility
+import Dubon2026.SourceBinaryH1PrimePowerKernel
+import Dubon2026.SourcePrimitiveH1HeckeCongruence
+import Dubon2026.SourcePrimitiveH1AdicOperatorKernel
+import Dubon2026.SourcePrimitiveCongruentH1AdicRealization
+import Dubon2026.SourceBinaryH1ModulusOperatorAlgebra
+import Dubon2026.SourceFiniteOperatorCharacterDescent
+import Dubon2026.SourcePrimitiveFiniteH1HeckeCharacter
+import Dubon2026.SourcePrimitiveFiniteH1OperatorRealization
+import Dubon2026.SourceBinaryH1ModulusKernel
+import Dubon2026.SourceBinaryPermutationHeckeWords
+import Dubon2026.SourceBinaryPermutationOperatorKernel
+import Dubon2026.SourceBinaryPermutationHeckeFinite
+import Dubon2026.SourceBinaryPermutationOperatorDescent
+import Dubon2026.SourcePrimitivePermutationH1HeckeCharacter
+import Dubon2026.SourcePrimitivePermutationH1Realization
+import Dubon2026.SourceGammaOneCongruenceCover
+import Dubon2026.SourceBinaryStabilizerGammaOneCover
+import Dubon2026.SourceGammaOneDiagonalHom
+import Dubon2026.SourceGammaOneCoverFiniteIndex
+import Dubon2026.SourceGammaOneCohomologyTransfer
+import Dubon2026.SourceGammaOneConstantH1Realization
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.sourceCoefficientPermutationEvaluation_single
+#print axioms Dubon2026.sourceCoefficientPermutationEvaluation_surjective
+#print axioms Dubon2026.sourceCoefficientPermutationEvaluation_linearMap
+#print axioms Dubon2026.sourcePrimePower_six_isUnit
+#print axioms Dubon2026.sourceBinaryPrimePowerCoefficient_finite
+#print axioms Dubon2026.sourceBinaryPrimePowerPermutation_finite
+#print axioms Dubon2026.sourceBinaryPrimePowerPermutation_H1_surjective
+#print axioms Dubon2026.sourceBinaryPermutationDiagonal_intertwine
+#print axioms Dubon2026.sourceBinaryPermutationHeckeH1_evaluation
+#print axioms Dubon2026.sourceBinaryCoefficientRep_congruence
+#print axioms Dubon2026.sourceBinaryPermutationRep_congruence
+#print axioms Dubon2026.sourceIntegralBinary_exists_primePowerPermutationRealization
+#print axioms Dubon2026.sourceCoefficientPermutationRep
+#print axioms Dubon2026.sourceCoefficientPermutationEvaluation
+#print axioms Dubon2026.sourceBinaryPermutationHeckeH1
+#print axioms Dubon2026.sourcePrimitiveH1HeckeCharacter_mem_coefficientRing
+#print axioms Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_hecke
+#print axioms Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_isIntegral
+#print axioms Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_coe
+#print axioms Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_hecke
+#print axioms Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_residue
+#print axioms Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_hecke
+#print axioms Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_compatible
+#print axioms Dubon2026.sourceLocalH1AdicQuotient_finite
+#print axioms Dubon2026.sourcePrimitiveCompatibleH1AdicData_of_local
+#print axioms Dubon2026.sourcePrimitive_exists_compatibleH1AdicRealization
+#print axioms Dubon2026.sourcePrimitiveFieldH1HeckeCharacter
+#print axioms Dubon2026.sourcePrimitiveLocalH1HeckeCharacter
+#print axioms Dubon2026.sourcePrimitiveH1AdicQuotientCharacter
+#print axioms Dubon2026.sourcePrimitiveCompatibleH1AdicData
+#print axioms Dubon2026.sourceCoefficientOrbitStabilizer_finiteIndex
+#print axioms Dubon2026.sourceIntegralBinary_exists_stabilizerH1Realization
+#print axioms Dubon2026.sourceCoefficientVectorAction
+#print axioms Dubon2026.sourceCoefficientPermutationCoordinateIso
+#print axioms Dubon2026.sourceCoefficientOrbitPoint
+#print axioms Dubon2026.sourceCoefficientStabilizerH1Equiv
+#print axioms Dubon2026.sourceFaithfulCharacter_div_isIntegral
+#print axioms Dubon2026.sourceBinaryH1Change_zmod_nonzero_eq_zero_iff
+#print axioms Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_integral
+#print axioms Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_valuation
+#print axioms Dubon2026.sourcePrimitiveH1Hecke_primePower_congruence_valuation
+#print axioms Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator
+#print axioms Dubon2026.sourcePrimitive_exists_congruentH1AdicRealization
+#print axioms Dubon2026.sourcePrimitiveH1AdicCongruenceData
+#print axioms Dubon2026.sourceBinaryH1ModulusOperatorAlgebra_finite
+#print axioms Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_coefficients
+#print axioms Dubon2026.sourceFiniteOperatorCharacterDescend_comp
+#print axioms Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_modulus_kernel
+#print axioms Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter_comp
+#print axioms Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter_hecke
+#print axioms Dubon2026.sourcePrimitive_exists_finiteH1OperatorCharacters
+#print axioms Dubon2026.sourceBinaryH1ModulusOperatorMap
+#print axioms Dubon2026.sourceBinaryH1ModulusOperatorAlgebra
+#print axioms Dubon2026.sourceFiniteOperatorCharacterDescend
+#print axioms Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter
+#print axioms Dubon2026.sourcePrimitiveFiniteH1CharacterData
+#print axioms Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_of_coefficients
+#print axioms Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_iff_coefficients
+#print axioms Dubon2026.sourceBinaryH1HeckeWord_surjective
+#print axioms Dubon2026.sourceBinaryPermutationHeckeWord_evaluation
+#print axioms Dubon2026.sourceBinaryH1HeckeWord_change
+#print axioms Dubon2026.sourceBinaryPermutationHeckeWord_modulus_zero
+#print axioms Dubon2026.sourceBinaryPrimePowerPermutationH1_finite
+#print axioms Dubon2026.sourceBinaryPrimePowerPermutationHeckeAlgebra_finite
+#print axioms Dubon2026.sourceBinaryPermutationHeckeWord_modulus_kernel
+#print axioms Dubon2026.sourceBinaryPermutationToModulus_comp
+#print axioms Dubon2026.sourceBinaryPermutationToModulus_surjective
+#print axioms Dubon2026.sourcePrimitivePermutationH1HeckeCharacter_comp
+#print axioms Dubon2026.sourcePrimitivePermutationH1HeckeCharacter_hecke
+#print axioms Dubon2026.sourcePrimitive_exists_permutationH1HeckeCharacters
+#print axioms Dubon2026.sourceBinaryH1HeckeWord
+#print axioms Dubon2026.sourceBinaryPermutationPrimeOperators
+#print axioms Dubon2026.sourceBinaryPermutationHeckeAlgebra
+#print axioms Dubon2026.sourceBinaryPermutationToModulus
+#print axioms Dubon2026.sourcePrimitivePermutationH1HeckeCharacter
+#print axioms Dubon2026.sourcePrimitivePermutationH1CharacterData
+#print axioms Dubon2026.sourceGammaOne_principal_diagonal_transition
+#print axioms Dubon2026.sourceGammaOne_le_conj_principalLevel
+#print axioms Dubon2026.sourceBinaryCoefficientStabilizer_gammaOneCover
+#print axioms Dubon2026.sourceBinaryCoefficientStabilizer_conj_finiteIndex
+#print axioms Dubon2026.sourceGammaOne_le_raisedGammaZero
+#print axioms Dubon2026.sourceGammaOneDiagonalHom_matrix
+#print axioms Dubon2026.sourceGammaOneDiagonalHom_injective
+#print axioms Dubon2026.sourceGammaOneDiagonalHom_mem_principal
+#print axioms Dubon2026.sourceGammaOneDiagonalHom_binary_trivial
+#print axioms Dubon2026.sourceRaisedLevelConjugation_range
+#print axioms Dubon2026.sourceRaisedLevelConjugation_range_finiteIndex
+#print axioms Dubon2026.sourceGammaOneDiagonalHom_range_finiteIndex
+#print axioms Dubon2026.sourceGammaOne_coindH1_surjective
+#print axioms Dubon2026.sourceGammaOneConstantH1Transfer_surjective
+#print axioms Dubon2026.sourceIntegralBinary_exists_gammaOneH1Realization
+#print axioms Dubon2026.sourceGammaOneDiagonalHom
+#print axioms Dubon2026.sourceGammaOneCoefficientTrivialIso
+#print axioms Dubon2026.sourceGammaOneRangeEquiv
+#print axioms Dubon2026.sourceGammaOneConstantH1Iso
+#print axioms Dubon2026.sourceGammaOneConstantH1Transfer
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourcePermutationCoefficientQuotient, `Dubon2026.SourceBinaryPrimePowerPermutation, `Dubon2026.SourceBinaryPermutationHecke, `Dubon2026.SourceBinaryPermutationCongruence, `Dubon2026.SourceIntegralBinaryPermutationRealization, `Dubon2026.SourcePrimitiveH1CoefficientField, `Dubon2026.SourcePrimitiveLocalH1Character, `Dubon2026.SourcePrimitiveAdicH1Quotients, `Dubon2026.SourcePrimitiveCompatibleH1AdicData, `Dubon2026.SourcePrimitiveH1AdicRealization, `Dubon2026.SourceCoefficientPermutationCoordinates, `Dubon2026.SourceCoefficientStabilizerCohomology, `Dubon2026.SourceIntegralBinaryStabilizerRealization, `Dubon2026.SourceFaithfulCharacterDivisibility, `Dubon2026.SourceBinaryH1PrimePowerKernel, `Dubon2026.SourcePrimitiveH1HeckeCongruence, `Dubon2026.SourcePrimitiveH1AdicOperatorKernel, `Dubon2026.SourcePrimitiveCongruentH1AdicRealization, `Dubon2026.SourceBinaryH1ModulusOperatorAlgebra, `Dubon2026.SourceFiniteOperatorCharacterDescent, `Dubon2026.SourcePrimitiveFiniteH1HeckeCharacter, `Dubon2026.SourcePrimitiveFiniteH1OperatorRealization, `Dubon2026.SourceBinaryH1ModulusKernel, `Dubon2026.SourceBinaryPermutationHeckeWords, `Dubon2026.SourceBinaryPermutationOperatorKernel, `Dubon2026.SourceBinaryPermutationHeckeFinite, `Dubon2026.SourceBinaryPermutationOperatorDescent, `Dubon2026.SourcePrimitivePermutationH1HeckeCharacter, `Dubon2026.SourcePrimitivePermutationH1Realization, `Dubon2026.SourceGammaOneCongruenceCover, `Dubon2026.SourceBinaryStabilizerGammaOneCover, `Dubon2026.SourceGammaOneDiagonalHom, `Dubon2026.SourceGammaOneCoverFiniteIndex, `Dubon2026.SourceGammaOneCohomologyTransfer, `Dubon2026.SourceGammaOneConstantH1Realization]
+  let theorems : Array Name := #[`Dubon2026.sourceCoefficientPermutationEvaluation_single, `Dubon2026.sourceCoefficientPermutationEvaluation_surjective, `Dubon2026.sourceCoefficientPermutationEvaluation_linearMap, `Dubon2026.sourcePrimePower_six_isUnit, `Dubon2026.sourceBinaryPrimePowerCoefficient_finite, `Dubon2026.sourceBinaryPrimePowerPermutation_finite, `Dubon2026.sourceBinaryPrimePowerPermutation_H1_surjective, `Dubon2026.sourceBinaryPermutationDiagonal_intertwine, `Dubon2026.sourceBinaryPermutationHeckeH1_evaluation, `Dubon2026.sourceBinaryCoefficientRep_congruence, `Dubon2026.sourceBinaryPermutationRep_congruence, `Dubon2026.sourceIntegralBinary_exists_primePowerPermutationRealization, `Dubon2026.sourcePrimitiveH1HeckeCharacter_mem_coefficientRing, `Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_hecke, `Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_isIntegral, `Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_coe, `Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_hecke, `Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_residue, `Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_hecke, `Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_compatible, `Dubon2026.sourceLocalH1AdicQuotient_finite, `Dubon2026.sourcePrimitiveCompatibleH1AdicData_of_local, `Dubon2026.sourcePrimitive_exists_compatibleH1AdicRealization, `Dubon2026.sourceCoefficientOrbitStabilizer_finiteIndex, `Dubon2026.sourceIntegralBinary_exists_stabilizerH1Realization, `Dubon2026.sourceFaithfulCharacter_div_isIntegral, `Dubon2026.sourceBinaryH1Change_zmod_nonzero_eq_zero_iff, `Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_integral, `Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_valuation, `Dubon2026.sourcePrimitiveH1Hecke_primePower_congruence_valuation, `Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator, `Dubon2026.sourcePrimitive_exists_congruentH1AdicRealization, `Dubon2026.sourceBinaryH1ModulusOperatorAlgebra_finite, `Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_coefficients, `Dubon2026.sourceFiniteOperatorCharacterDescend_comp, `Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_modulus_kernel, `Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter_comp, `Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter_hecke, `Dubon2026.sourcePrimitive_exists_finiteH1OperatorCharacters, `Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_of_coefficients, `Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_iff_coefficients, `Dubon2026.sourceBinaryH1HeckeWord_surjective, `Dubon2026.sourceBinaryPermutationHeckeWord_evaluation, `Dubon2026.sourceBinaryH1HeckeWord_change, `Dubon2026.sourceBinaryPermutationHeckeWord_modulus_zero, `Dubon2026.sourceBinaryPrimePowerPermutationH1_finite, `Dubon2026.sourceBinaryPrimePowerPermutationHeckeAlgebra_finite, `Dubon2026.sourceBinaryPermutationHeckeWord_modulus_kernel, `Dubon2026.sourceBinaryPermutationToModulus_comp, `Dubon2026.sourceBinaryPermutationToModulus_surjective, `Dubon2026.sourcePrimitivePermutationH1HeckeCharacter_comp, `Dubon2026.sourcePrimitivePermutationH1HeckeCharacter_hecke, `Dubon2026.sourcePrimitive_exists_permutationH1HeckeCharacters, `Dubon2026.sourceGammaOne_principal_diagonal_transition, `Dubon2026.sourceGammaOne_le_conj_principalLevel, `Dubon2026.sourceBinaryCoefficientStabilizer_gammaOneCover, `Dubon2026.sourceBinaryCoefficientStabilizer_conj_finiteIndex, `Dubon2026.sourceGammaOne_le_raisedGammaZero, `Dubon2026.sourceGammaOneDiagonalHom_matrix, `Dubon2026.sourceGammaOneDiagonalHom_injective, `Dubon2026.sourceGammaOneDiagonalHom_mem_principal, `Dubon2026.sourceGammaOneDiagonalHom_binary_trivial, `Dubon2026.sourceRaisedLevelConjugation_range, `Dubon2026.sourceRaisedLevelConjugation_range_finiteIndex, `Dubon2026.sourceGammaOneDiagonalHom_range_finiteIndex, `Dubon2026.sourceGammaOne_coindH1_surjective, `Dubon2026.sourceGammaOneConstantH1Transfer_surjective, `Dubon2026.sourceIntegralBinary_exists_gammaOneH1Realization]
+  let constructions : Array Name := #[`Dubon2026.sourceCoefficientPermutationRep, `Dubon2026.sourceCoefficientPermutationEvaluation, `Dubon2026.sourceBinaryPermutationHeckeH1, `Dubon2026.sourcePrimitiveFieldH1HeckeCharacter, `Dubon2026.sourcePrimitiveLocalH1HeckeCharacter, `Dubon2026.sourcePrimitiveH1AdicQuotientCharacter, `Dubon2026.sourcePrimitiveCompatibleH1AdicData, `Dubon2026.sourceCoefficientVectorAction, `Dubon2026.sourceCoefficientPermutationCoordinateIso, `Dubon2026.sourceCoefficientOrbitPoint, `Dubon2026.sourceCoefficientStabilizerH1Equiv, `Dubon2026.sourcePrimitiveH1AdicCongruenceData, `Dubon2026.sourceBinaryH1ModulusOperatorMap, `Dubon2026.sourceBinaryH1ModulusOperatorAlgebra, `Dubon2026.sourceFiniteOperatorCharacterDescend, `Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter, `Dubon2026.sourcePrimitiveFiniteH1CharacterData, `Dubon2026.sourceBinaryH1HeckeWord, `Dubon2026.sourceBinaryPermutationPrimeOperators, `Dubon2026.sourceBinaryPermutationHeckeAlgebra, `Dubon2026.sourceBinaryPermutationToModulus, `Dubon2026.sourcePrimitivePermutationH1HeckeCharacter, `Dubon2026.sourcePrimitivePermutationH1CharacterData, `Dubon2026.sourceGammaOneDiagonalHom, `Dubon2026.sourceGammaOneCoefficientTrivialIso, `Dubon2026.sourceGammaOneRangeEquiv, `Dubon2026.sourceGammaOneConstantH1Iso, `Dubon2026.sourceGammaOneConstantH1Transfer]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE PRIMITIVE FINITE H1 REALIZATION AUDIT PASS: {count} theorems including private/generated declarations. The original all-weight form supplies compatible finite adic H1 characters on the actual finite operator image, with original Fourier values and operator-congruence compatibility. Original finite permutation H1 is identified with actual congruence-stabilizer H1 while retaining Hecke transforms. Geometric Galois realization, adic association, local/image/regularity, automorphy and higher continuation remain open; 16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourcePermutationCoefficientQuotient
+
+#lint in Dubon2026.SourceBinaryPrimePowerPermutation
+
+#lint in Dubon2026.SourceBinaryPermutationHecke
+
+#lint in Dubon2026.SourceBinaryPermutationCongruence
+
+#lint in Dubon2026.SourceIntegralBinaryPermutationRealization
+
+#lint in Dubon2026.SourcePrimitiveH1CoefficientField
+
+#lint in Dubon2026.SourcePrimitiveLocalH1Character
+
+#lint in Dubon2026.SourcePrimitiveAdicH1Quotients
+
+#lint in Dubon2026.SourcePrimitiveCompatibleH1AdicData
+
+#lint in Dubon2026.SourcePrimitiveH1AdicRealization
+
+#lint in Dubon2026.SourceCoefficientPermutationCoordinates
+
+#lint in Dubon2026.SourceCoefficientStabilizerCohomology
+
+#lint in Dubon2026.SourceIntegralBinaryStabilizerRealization
+
+#lint in Dubon2026.SourceFaithfulCharacterDivisibility
+
+#lint in Dubon2026.SourceBinaryH1PrimePowerKernel
+
+#lint in Dubon2026.SourcePrimitiveH1HeckeCongruence
+
+#lint in Dubon2026.SourcePrimitiveH1AdicOperatorKernel
+
+#lint in Dubon2026.SourcePrimitiveCongruentH1AdicRealization
+
+#lint in Dubon2026.SourceBinaryH1ModulusOperatorAlgebra
+
+#lint in Dubon2026.SourceFiniteOperatorCharacterDescent
+
+#lint in Dubon2026.SourcePrimitiveFiniteH1HeckeCharacter
+
+#lint in Dubon2026.SourcePrimitiveFiniteH1OperatorRealization
+
+#lint in Dubon2026.SourceBinaryH1ModulusKernel
+
+#lint in Dubon2026.SourceBinaryPermutationHeckeWords
+
+#lint in Dubon2026.SourceBinaryPermutationOperatorKernel
+
+#lint in Dubon2026.SourceBinaryPermutationHeckeFinite
+
+#lint in Dubon2026.SourceBinaryPermutationOperatorDescent
+
+#lint in Dubon2026.SourcePrimitivePermutationH1HeckeCharacter
+
+#lint in Dubon2026.SourcePrimitivePermutationH1Realization
+
+#lint in Dubon2026.SourceGammaOneCongruenceCover
+
+#lint in Dubon2026.SourceBinaryStabilizerGammaOneCover
+
+#lint in Dubon2026.SourceGammaOneDiagonalHom
+
+#lint in Dubon2026.SourceGammaOneCoverFiniteIndex
+
+#lint in Dubon2026.SourceGammaOneCohomologyTransfer
+
+#lint in Dubon2026.SourceGammaOneConstantH1Realization

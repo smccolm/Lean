@@ -1,0 +1,31 @@
+from pathlib import Path
+import json,re,hashlib,ast
+p=Path(r'E:\Lean\.tmp\dubon83')
+prod=Path(r'E:\Lean\Riemann Zeta\9. Zero Density, Large Values and Prime Transfer\83 Dubon, 2026\Extension\Dubon2026')
+sha=lambda f:hashlib.sha256(f.read_bytes()).hexdigest().upper()
+mods=['SourceLaurentIntegralDescent','SourceCurveIntegralExpressionOrders','SourceCurveIntegralDifferentialOrders','SourceGammaOneDifferentialIntegralDescent','SourceCurveRegularIntegralCriterion','SourceGammaOneDifferentialRegularity']
+extra=['Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_finite_expression','Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_cusp_expression','Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_isCurveOver','Dubon2026.SourceFunctionField.GammaOne.finiteDimensional_jCoordinateOver','Dubon2026.SourceCurve.finite_coordinate_place_differentials','Dubon2026.SourceCurve.Place.ordDifferential_D_eq_ord_sub_one','Dubon2026.SourceCurve.Place.ord_sub_one_le_ordDifferential_D','Dubon2026.SourceCurve.integralClosure_mem_of_base_mem','LinearMap.exists_leftInverse_of_injective','Dubon2026.SourceFunctionField.isIntegral_adjoin_subfield']
+sources=[prod/n for n in ['SourceLaurentScalarIndependence.lean','SourceLaurentEuler.lean','SourceOriginalQuotientIntegral.lean','SourceCurveCoordinateSupport.lean','SourceCurveDerivativeLowerOrder.lean','SourceCurveExactDerivativeOrder.lean','SourceGammaOneCurveGeometry.lean','SourceGammaOneDifferentialFiniteIntegral.lean','SourceGammaOneDifferentialCuspIntegral.lean']]
+sources.append(p/'gamma1-regularity-descent-reuse-assessment-642.json')
+rd=dict(chain='DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 Hecke-character arithmetic realization -> actual Picard/H1, full/parabolic and diamond comparison -> regular differential/cusp comparison -> regularity of an actual Gamma1 differential whose expansion matches an actual cusp form.',
+reuseChecked=[dict(path=str(f),sha256=sha(f)) for f in sources],
+selectedRoute='Use a native linear retraction to descend monic Laurent equations; no general faithful-flatness layer is needed. Existing subfield integrality transport and valuation-ring integral closure turn both derived expressions into local orders. Existing integral derivative coefficients and derivative-order lower bounds prove finite-point regularity without an upper j-ramification profile. The inverse-j expression gives the exact cusp coefficient order. Separate the generic field valuation calculation from the literal Gamma1 field instantiation to avoid repeated unfolding and meet fixed elaboration limits. All substantive timeout source/log/exit evidence is preserved; no limit changed. Native Gamma(M) inclusion and translation facts discharge the hypotheses for the exact Gamma1 consumer.',
+assumptionsToDischarge='For the actual Gamma1 integral-ratio Laurent field over any algebraically closed rational coefficient field embedded in C, every actual differential whose mapped q-expansion equals that of an actual weight-two cusp form is regular at every place. Both integral equations, their coefficient/subfield descent, the local order bounds, differential generators and finiteness are derived. No regularity or integral equation is assumed.',
+remaining='Algebraic differential realization for arbitrary cusp forms and the converse regular-differential-to-cusp construction remain. Actual Picard/H1, full/parabolic, transpose and diamond comparison, arithmetic realization of original finite characters, original all-weight association, local/image/regularity for automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.',
+productionStatus='Scratch development; audit and production promotion pending.',rootPinsChanged=False,proofLimitsChanged=False)
+def output(n,s):
+ f=p/n;assert not f.exists(),f;f.write_text(s,encoding='utf-8')
+output('gamma1-differential-regularity-route-643.json',json.dumps(rd,indent=2)+'\n')
+s=(p/'prepare_gamma_one_differential_finite_integral_audit_638.py').read_text(encoding='utf-8')
+for a,b in [('differential_finite_integral','differential_regularity'),('differential-finite-integral','differential-regularity'),('DifferentialFiniteIntegral','DifferentialRegularity'),('DIFFERENTIAL FINITE INTEGRAL','DIFFERENTIAL REGULARITY'),('Audit5','Audit6'),('-5-','-6-'),('638','643')]:s=s.replace(a,b)
+s=re.sub(r'^mods=.+$',lambda _:'mods='+repr(mods),s,flags=re.M)
+s=re.sub(r'^roots=.+$',lambda _:"roots=['Dubon2026.SourceFunctionField.GammaOne.gamma1_regular_of_diffQExp_matches_cusp']",s,flags=re.M)
+s=re.sub(r'^extra=.+$',lambda _:'extra='+repr(extra),s,flags=re.M)
+start=s.index("dep=dep[:dep.index(");end=s.index("\noutput('SourceGammaOne",start)
+s=s[:start]+'''dep=dep[:dep.index('  logInfo m!')]+ '  logInfo m!"SOURCE GAMMA ONE DIFFERENTIAL REGULARITY DEPENDENCY AUDIT PASS: all {required.size} required dependencies occur in the actual Gamma1 regularity consumer. Only declaration values are traversed. Both integral equations, coefficient and subfield descent and local order bounds prove regularity of a differential matching an actual cusp form. Algebraic realization, the converse, Picard/H1 and diamond comparison, original all-weight association and higher continuation remain required. 16/20; DUB-17--20 OPEN."\\\\n\\\\n#eval runPlanarPairingDependencyAudit\\\\n'
+'''+s[end:]
+ast.parse(s);output('prepare_gamma_one_differential_regularity_audit_643.py',s)
+s=(p/'record_gamma_one_differential_finite_integral_638.py').read_text(encoding='utf-8')
+for a,b in [('differential_finite_integral','differential_regularity'),('differential-finite-integral','differential-regularity'),('DifferentialFiniteIntegral','DifferentialRegularity'),('DIFFERENTIAL FINITE INTEGRAL','DIFFERENTIAL REGULARITY'),('Audit5','Audit6'),('-5-','-6-'),('638','643'),('(5,14,22)','(6,11,21)'),('==5','==6'),('linterScopes=5','linterScopes=6'),('modules=5','modules=6'),('queries=14','queries=11'),('22','21')]:s=s.replace(a,b)
+ast.parse(s);output('record_gamma_one_differential_regularity_643.py',s)
+print(json.dumps(dict(modules=mods,productionMutation=False)))

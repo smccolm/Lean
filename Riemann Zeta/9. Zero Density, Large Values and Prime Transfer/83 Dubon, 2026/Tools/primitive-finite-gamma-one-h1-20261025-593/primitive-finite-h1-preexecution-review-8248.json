@@ -1,0 +1,79 @@
+{
+  "status": "Prepared; require 8213 canonical PASS and archive before integration.",
+  "route": "primitive-finite-gamma-one-h1-promotion-route-593.json",
+  "routeSha256": "43FFEBFCE17DC003FB8AF14FB91B8E299560539775E265AA94F456CE7DF9BD19",
+  "modules": 35,
+  "queries": 96,
+  "theorems": 68,
+  "constructions": 28,
+  "exhaustiveScratchChecks": 205,
+  "proofValueEdges": 157,
+  "scopes": 7,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 acceptance gates unchanged.",
+  "supersededUnused": [
+    8235,
+    8242
+  ],
+  "receipts": {
+    "source-binary-prime-power-permutation-5-scratch-receipt.json": "131D80CB8B20E3D334985ED27E816A49B87EB125EBBF4CCA662AEDD7E6582C04",
+    "source-primitive-h1-adic-5-scratch-receipt.json": "35507B2755D1A2A461D5D487913AA2CC6A66FB0F8003002F7A09AB1D66310A36",
+    "source-binary-stabilizer-h1-3-scratch-receipt.json": "0F2EF92CDA71B594734C0C2964B97A7888203148B19F72584FC0627391719161",
+    "source-primitive-h1-congruence-5-scratch-receipt.json": "410DDC92612FC3D1680315BA92F65C0DC97D6F813A76891371BB54F162452ADF",
+    "source-primitive-finite-operator-character-4-scratch-receipt.json": "D8986017528A0357284AE33F6112282F474A767948B3D6FAFE2C81A52A29913E",
+    "source-primitive-permutation-operator-character-7-scratch-receipt.json": "1521C47DC2376E468B567A6A71369D059C12D1EF97A27B69BE43FFC87A53D0B3",
+    "source-gamma-one-cover-6-scratch-receipt.json": "DB00E420E0F25EB0C097E6DF828A10CD9B99EA72830A22F4F714F8F9AE075DB4"
+  },
+  "pythonAST": "PASS for seven execution helpers",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_primitive_finite_h1_canonical_8248.py",
+      "sha256": "A249035F2EDC88CFD094046A4D4032E73A59515012A35BF4967BF5AA15864D76"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_primitive_finite_h1_realization_8248.ps1",
+      "sha256": "6AFF59BA519B17442C7BCAA19A35DDBF34EE602BF75B1579A7C29930FF64CBBA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_primitive_finite_h1_realization_ownership_8248.py",
+      "sha256": "BF1CD5D183035499E4E0186463BAEBF245DC24E0A0617940B616ED4603F212DA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_primitive_finite_h1_realization_8248.py",
+      "sha256": "FC872D985069316CBDD3F361FB821B56D50BFAEC6620125408014F7729BE3A7E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_finite_h1_realization_global_ownership_8248.py",
+      "sha256": "4F5E64266BF1EAFBD60D964EB2492639E3C6A13A957640612410CA7313BB5E2C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_finite_h1_realization_production_ownership_8248.py",
+      "sha256": "7E6A4515C5FE32A44B76674657CD8D247827EE2ADB4909FED49DA62E318DE348"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_finite_h1_realization_scratch_ownership_8248.py",
+      "sha256": "D9F0AD54BC56B828323FD382E0643380826220CB7485EC1EF424B64A46AD2F0D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_primitive_finite_h1_realization_8248.py",
+      "sha256": "FB859E298B3C95231B969D0EEB978DEF0D2724F4FC13147DDCF08AA23E01390C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_primitive_finite_h1_realization_8248.ps1",
+      "sha256": "51EEDA1C9A230B8C5A8AAB38EF1CE1CF6A187778EA9276F893D895EA7E0FF1DA"
+    }
+  ],
+  "sourceBodies": "Audited bodies unchanged; only project imports qualified.",
+  "expectedConsumers": 23789,
+  "expectedConstructions": 2255,
+  "sourceScopes": [
+    582,
+    583,
+    584,
+    585,
+    586,
+    588,
+    591
+  ],
+  "primaryGamma1Archive": "Preserve the complete gamma1-geometric-reuse-589 relative paths so source manifest references remain valid.",
+  "productionMutation": false
+}

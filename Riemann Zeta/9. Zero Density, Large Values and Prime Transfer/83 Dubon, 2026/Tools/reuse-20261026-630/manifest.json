@@ -1,0 +1,288 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-search-assessment-630.json",
+      "path": "Tools/reuse-20261026-630/reuse-search-assessment-630.json",
+      "sha256": "C656FDBD6683CE64C6B2B91C1A7BDD3A1C9129B49D4E4B5964134EE43E120853"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-h1-geometric-reuse-assessment-628.json",
+      "path": "Tools/reuse-20261026-630/gamma1-h1-geometric-reuse-assessment-628.json",
+      "sha256": "D33794F9D6D683460178F0F6983835A72E797DDF7BF5D209F108F9E33C799191"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_gamma1_h1_geometric_reuse_628.py",
+      "path": "Tools/reuse-20261026-630/fetch_gamma1_h1_geometric_reuse_628.py",
+      "sha256": "5CBC9D36C12DAA4A868E857CFD8918BDB2B8C771E8D87BD9021FA53DCAD9F28C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\publish_reuse_search_630.py",
+      "path": "Tools/reuse-20261026-630/publish_reuse_search_630.py",
+      "sha256": "DCD67F99FF5B0809F89390D7ABC61B94445FEE3054771E364880709A81967D76"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_gamma1_hecke_primary_630f.py",
+      "path": "Tools/reuse-20261026-630/fetch_gamma1_hecke_primary_630f.py",
+      "sha256": "CBD132311BF229CDA3DF93ED590E1279CDD1D854855D6AF9480EA8480004A491"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_gamma1_hecke_primary_630g.py",
+      "path": "Tools/reuse-20261026-630/fetch_gamma1_hecke_primary_630g.py",
+      "sha256": "E66A0771191DDC35A4E964B542FB7EEEA7E168977BBFBBFDEE19AFD164154AB0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_reuse_heads_630.py",
+      "path": "Tools/reuse-20261026-630/fetch_reuse_heads_630.py",
+      "sha256": "143FC28437E0758AD654E09A188CC1F3CA7C48D3CD9E6A9447A5F9B9FFE92979"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_reuse_heads_630b.py",
+      "path": "Tools/reuse-20261026-630/fetch_reuse_heads_630b.py",
+      "sha256": "F2B1BF45F2622E47D679606FA5A02AA867C660E7F1BDF4AD2EBFD7EE2BCB5B74"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_reuse_heads_630e.py",
+      "path": "Tools/reuse-20261026-630/fetch_reuse_heads_630e.py",
+      "sha256": "BBC07D7BC5B69EA43179FF5C70878332D9A5E413CD1E8E9C239434186EB2E587"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_reuse_primary_630c.py",
+      "path": "Tools/reuse-20261026-630/fetch_reuse_primary_630c.py",
+      "sha256": "09D6C1E3F125AE2866B3186D6853C30FB6456DF656A54BC71361CBCA6BB34322"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_reuse_primary_630d.py",
+      "path": "Tools/reuse-20261026-630/fetch_reuse_primary_630d.py",
+      "sha256": "DC2C6C1E03E000F742BC85A82A592C5334A9939E0AD595A596DE7487E1957B01"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630\\manifest.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630/manifest.json",
+      "sha256": "C92A4D025D5635964B855A609C4E3F7C27CF61F93FCE554837F4860DB7B6C355"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630b\\anthropics__fermats-last-theorem-commit.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630b/anthropics__fermats-last-theorem-commit.json",
+      "sha256": "5A71DE90A283A1BDE597E9C47300F28841F92A0014BB9E071D27AA0484461C03"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630b\\anthropics__fermats-last-theorem-repo.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630b/anthropics__fermats-last-theorem-repo.json",
+      "sha256": "8DDBD8BE2BF5043A9742612AF4BCA729B6DFD871A4B6408FA1439D30221B013C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630b\\anthropics__fermats-last-theorem-tree.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630b/anthropics__fermats-last-theorem-tree.json",
+      "sha256": "AD676CDEA10F3C76EB74F2379DFF0715E3E3EE2F52896EA19EDFB98A5040AF39"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630b\\dozenalist__ModularFormsMod-commit.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630b/dozenalist__ModularFormsMod-commit.json",
+      "sha256": "ADF5D78EDC1EFE51767CC66437CF230CC1934F3D6DD94D11A2BBC6F243C3CC2C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630b\\dozenalist__ModularFormsMod-repo.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630b/dozenalist__ModularFormsMod-repo.json",
+      "sha256": "43097156C2C98CA96689A0BFE6BAC061B2895B123FA95766D53DFF548F53C037"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630b\\dozenalist__ModularFormsMod-tree.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630b/dozenalist__ModularFormsMod-tree.json",
+      "sha256": "330C64C1CE7FC72E4ADCFA789B1B0D20DB17981BD98ADA803FDD71A82CD6E356"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630b\\ImperialCollegeLondon__FLT-commit.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630b/ImperialCollegeLondon__FLT-commit.json",
+      "sha256": "6B7C308AC6B03719912C7822781FFB948097D3BBC66F655E84C35E665816B23B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630b\\ImperialCollegeLondon__FLT-repo.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630b/ImperialCollegeLondon__FLT-repo.json",
+      "sha256": "0554AF1C14CC02B9B10E7223E9646A1889747D5ED151CC627A6199ED4C8A6811"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630b\\ImperialCollegeLondon__FLT-tree.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630b/ImperialCollegeLondon__FLT-tree.json",
+      "sha256": "6D32833430D40BCDC67FFB62CDA5EEC4AD5950E3090AA2EE1BDEFFC482E0ABCB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630b\\leanprover-community__mathlib4-commit.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630b/leanprover-community__mathlib4-commit.json",
+      "sha256": "B13F252EDB690ADA1C0D3DAD15ADFF5742C7ED4AC805F4438E940740EA53282A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630b\\leanprover-community__mathlib4-repo.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630b/leanprover-community__mathlib4-repo.json",
+      "sha256": "0E10CF84E5F7CD8F71E161EB7C8C557DEB027F2E1D21353D0877F264CD5C29B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630b\\leanprover-community__mathlib4-tree.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630b/leanprover-community__mathlib4-tree.json",
+      "sha256": "477DE124A7BD7EF42E28D48E391D02BC0A686E1F4E5F5904B85E9F16EFB4C6BD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630b\\manifest.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630b/manifest.json",
+      "sha256": "1001F85408729154B8BE5F2DAB52FDE50EB2CCB9014F0F093B6FA435CBD79B93"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630b\\openai__math-commit.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630b/openai__math-commit.json",
+      "sha256": "7EDCC735FCF95CA01EF9B088AB3FF1453E613396275AE761A5BCD921153366F4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630b\\openai__math-repo.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630b/openai__math-repo.json",
+      "sha256": "94A5669C1B61F6889AEF577D884BD549E1835241154AC105C6D0121F7C445CED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630b\\openai__math-tree.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630b/openai__math-tree.json",
+      "sha256": "03079098DD32F4B48D5F955BE2FB8BCB17359D0B4F458A8401722326DB343592"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630b\\teal-sea__zeta-lab-commit.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630b/teal-sea__zeta-lab-commit.json",
+      "sha256": "3135C8B0358FB9BC165416385F6B0F2F9C8C517E49196C1AD3E2446005129026"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630b\\teal-sea__zeta-lab-repo.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630b/teal-sea__zeta-lab-repo.json",
+      "sha256": "69C476F5858F9A7BB1B1A8918FF1E593F98D64ECCBD0A7DAB43BC9B50894A269"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630b\\teal-sea__zeta-lab-tree.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630b/teal-sea__zeta-lab-tree.json",
+      "sha256": "F98C063738DCA7A37036602951C1BEACFF9F536EAA3C23C313DBB255BF4A4F5D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-primary-followup-630c\\dozenalist__ModularFormsMod\\lake-manifest.json.txt",
+      "path": "Tools/reuse-20261026-630/reuse-primary-followup-630c/dozenalist__ModularFormsMod/lake-manifest.json.txt",
+      "sha256": "B22809EAE774CFECD59A917AE706414664561123CB3535DD71F02E3D753BB43B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-primary-followup-630c\\dozenalist__ModularFormsMod\\lean-toolchain.txt",
+      "path": "Tools/reuse-20261026-630/reuse-primary-followup-630c/dozenalist__ModularFormsMod/lean-toolchain.txt",
+      "sha256": "BC84812C94489D1E3E191BAA1DC10D5EB684382D7FE9D2A5AB085E72C1C67E47"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-primary-followup-630c\\dozenalist__ModularFormsMod\\ModularFormsMod\\ModularFormMod\\Hecke.lean.txt",
+      "path": "Tools/reuse-20261026-630/reuse-primary-followup-630c/dozenalist__ModularFormsMod/ModularFormsMod/ModularFormMod/Hecke.lean.txt",
+      "sha256": "7CCFD5373A1D30AB48BA6CFC415961CB5F699170BE58919A73DED5D832C8F637"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-primary-followup-630c\\dozenalist__ModularFormsMod\\ModularFormsMod\\ModularFormOver\\Hecke.lean.txt",
+      "path": "Tools/reuse-20261026-630/reuse-primary-followup-630c/dozenalist__ModularFormsMod/ModularFormsMod/ModularFormOver/Hecke.lean.txt",
+      "sha256": "8AA548C0EA1F26A2FC756C4A29957FCB3C044B8E225AE9C110AF44DB5CD63C20"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-primary-followup-630c\\leanprover-community__mathlib4\\Mathlib\\NumberTheory\\HeckeRing\\Defs.lean.txt",
+      "path": "Tools/reuse-20261026-630/reuse-primary-followup-630c/leanprover-community__mathlib4/Mathlib/NumberTheory/HeckeRing/Defs.lean.txt",
+      "sha256": "B574022A5B74CA8438B8B762B943101FD68AF3F040FEE222EF783A509189E7A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-primary-followup-630c\\openai-number-theory-tree.json",
+      "path": "Tools/reuse-20261026-630/reuse-primary-followup-630c/openai-number-theory-tree.json",
+      "sha256": "CF863B7CF5D7942A0528DBAC8374FA46A452B2C6D34F0E70B8916CEACA29678F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-primary-followup-630c\\openai__math\\lean\\formalization.yaml.txt",
+      "path": "Tools/reuse-20261026-630/reuse-primary-followup-630c/openai__math/lean/formalization.yaml.txt",
+      "sha256": "5A8A164259591208886CD018416E61552665265EC9E20CFF636F9D51117C2278"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-primary-followup-630c\\snapshots.json",
+      "path": "Tools/reuse-20261026-630/reuse-primary-followup-630c/snapshots.json",
+      "sha256": "BA228B565D85D7E6235AA5C9C0C2A5E6877F8CA254380E7FE581C805B25EBA21"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-primary-followup-630c\\teal-sea__zeta-lab\\lean\\ZetaLean\\FiniteFieldTrace.lean.txt",
+      "path": "Tools/reuse-20261026-630/reuse-primary-followup-630c/teal-sea__zeta-lab/lean/ZetaLean/FiniteFieldTrace.lean.txt",
+      "sha256": "C6DE367C91C01AB4CAD3CF7E0FC88A46E960258309211E62DDE462ABD290CBE6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-primary-followup-630d\\lean\\OAI\\NumberTheory\\CubicMoment\\Theta\\CubicThetaPrimeCubeRootRamanujan.lean.txt",
+      "path": "Tools/reuse-20261026-630/reuse-primary-followup-630d/lean/OAI/NumberTheory/CubicMoment/Theta/CubicThetaPrimeCubeRootRamanujan.lean.txt",
+      "sha256": "187EB46EED9C9C0729C3E5967B95D3D580C8315108C7472A76C15DF8C105795C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-primary-followup-630d\\lean\\OAI\\NumberTheory\\CubicMoment\\Theta\\CubicThetaRamanujan.lean.txt",
+      "path": "Tools/reuse-20261026-630/reuse-primary-followup-630d/lean/OAI/NumberTheory/CubicMoment/Theta/CubicThetaRamanujan.lean.txt",
+      "sha256": "1FAB2D240DE1709371C9A6983F2E79B263425F2FB18B6BE81D94C7E0FF150337"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-primary-followup-630d\\lean\\OAI\\NumberTheory\\DirichletL\\Hecke\\Nonvanishing.lean.txt",
+      "path": "Tools/reuse-20261026-630/reuse-primary-followup-630d/lean/OAI/NumberTheory/DirichletL/Hecke/Nonvanishing.lean.txt",
+      "sha256": "9E120752D0067E9B645F173846833396DE6282DFA83DFF7DC83B7FD500AF47D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-primary-followup-630d\\snapshots.json",
+      "path": "Tools/reuse-20261026-630/reuse-primary-followup-630d/snapshots.json",
+      "sha256": "E1FD6ACCC5CF7990DB136DDF25EAC153D979C790C955355F2CC21C55C5DD8BE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630e\\dozenalist__LeanModularForms-commit.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630e/dozenalist__LeanModularForms-commit.json",
+      "sha256": "C31AA226DC3B68E9D68569D97329008B8E3DCB2617528D7FF84D3140D7B4BE38"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630e\\dozenalist__LeanModularForms-repo.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630e/dozenalist__LeanModularForms-repo.json",
+      "sha256": "7867861A5B8EC707CB93130312CCA5D39F70072898AC2AFDA3B33C43C5DD97FE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630e\\dozenalist__LeanModularForms-tree.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630e/dozenalist__LeanModularForms-tree.json",
+      "sha256": "84EE6D07BDE31FF7B7F141EDFDE2DAF9138D57171DD946498B85F39515BBCD5C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-630e\\manifest.json",
+      "path": "Tools/reuse-20261026-630/reuse-head-refresh-630e/manifest.json",
+      "sha256": "48280DD0F9E52A1A5764C77E66D7CE078CE86A1A37D0290575A3FA7B38AD1B8D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-primary-630g\\LeanModularForms\\HeckeRIngs\\GL2\\CharacterDecomp.lean.txt",
+      "path": "Tools/reuse-20261026-630/gamma1-hecke-primary-630g/LeanModularForms/HeckeRIngs/GL2/CharacterDecomp.lean.txt",
+      "sha256": "10468D61551BEEEB8A92CCCE3A7708FECA298F3AE77457A9276D28129DAA3D8A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-primary-630g\\LeanModularForms\\HeckeRIngs\\GL2\\Gamma1Pair.lean.txt",
+      "path": "Tools/reuse-20261026-630/gamma1-hecke-primary-630g/LeanModularForms/HeckeRIngs/GL2/Gamma1Pair.lean.txt",
+      "sha256": "52D4056939F3F1CAE9A137B870EA0CA11D8AEDDAF3C26D1A02559A889EE65387"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-primary-630g\\LeanModularForms\\HeckeRIngs\\GL2\\HeckeRingHomCharSpace.lean.txt",
+      "path": "Tools/reuse-20261026-630/gamma1-hecke-primary-630g/LeanModularForms/HeckeRIngs/GL2/HeckeRingHomCharSpace.lean.txt",
+      "sha256": "D27B50BE107B20503396404B122BD555E252058CE89EE9682A9B2D32350BDEB2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-primary-630g\\LeanModularForms\\HeckeRIngs\\GL2\\HeckeT_p_Gamma1.lean.txt",
+      "path": "Tools/reuse-20261026-630/gamma1-hecke-primary-630g/LeanModularForms/HeckeRIngs/GL2/HeckeT_p_Gamma1.lean.txt",
+      "sha256": "EE219D77495A1DE6E8BB1E16BA485FD25FB9C2E09AF266FC8FE355CDD56DBD15"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-primary-630g\\snapshots.json",
+      "path": "Tools/reuse-20261026-630/gamma1-hecke-primary-630g/snapshots.json",
+      "sha256": "9E74147E533C1170CB9C2EE5A98894E0099383C6D445DCD6CE87F57B7D266FEE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-h1-geometric-reuse-628\\P2M\\Sol\\S_ModularCurve_exists_linearEquiv_tensor_regularDifferentials_x1FunctionFieldBar_cuspForm.lean.txt",
+      "path": "Tools/reuse-20261026-630/gamma1-h1-geometric-reuse-628/P2M/Sol/S_ModularCurve_exists_linearEquiv_tensor_regularDifferentials_x1FunctionFieldBar_cuspForm.lean.txt",
+      "sha256": "6ED7E27D95A2D9BB8B2D9897872EF54960A918D3BED96EE68A9D937BE85AE314"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-h1-geometric-reuse-628\\P2M\\Sol\\S_ModularCurve_exists_map_eq_charpoly_heckeTLinOne_and_charpoly_tateHeckeRepOne_jOne_eq_map_sq.lean.txt",
+      "path": "Tools/reuse-20261026-630/gamma1-h1-geometric-reuse-628/P2M/Sol/S_ModularCurve_exists_map_eq_charpoly_heckeTLinOne_and_charpoly_tateHeckeRepOne_jOne_eq_map_sq.lean.txt",
+      "sha256": "1E600866ECC655AFA860BE863B8E1FD71F3FD01EC455828B8D3A6A2106BAA077"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-h1-geometric-reuse-628\\snapshots.json",
+      "path": "Tools/reuse-20261026-630/gamma1-h1-geometric-reuse-628/snapshots.json",
+      "sha256": "A3EDB7853892AA4A4A50956341FC15914EC7E863FE3DE5491D047D40E1ACA6E5"
+    }
+  ],
+  "externalBuild": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "gateStatus": "16/20; DUB-17--20 OPEN."
+}

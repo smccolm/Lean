@@ -1,0 +1,35 @@
+{
+  "fetchedUTC": "2026-10-26T08:10:09.486372+00:00",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_JOneES_exists_transcendental_finiteDimensional_qExpFunctionFieldC.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_JOneES_exists_transcendental_finiteDimensional_qExpFunctionFieldC.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_JOneES_exists_transcendental_finiteDimensional_qExpFunctionFieldC.lean.txt",
+      "gitBlob": "5c261067504439f96dc3e9f3792669890ea7b733",
+      "sha256": "090DA952715D0C04E644189B2A39B55E4D3FCBEEA1AE4BC0B27C0BB7E5C29EBF",
+      "bytes": 48992
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_JOneES_exists_transcendental_finiteDimensional_laurentBaseChange.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_JOneES_exists_transcendental_finiteDimensional_laurentBaseChange.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_JOneES_exists_transcendental_finiteDimensional_laurentBaseChange.lean.txt",
+      "gitBlob": "517a59354822d727b11cd4272e0c5972f0945653",
+      "sha256": "D9975D2121D03907334ACBCD034BEF06F74AA8DED088B177DE6F2FA0493EB10C",
+      "bytes": 15289
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_one_of_ringHom.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_one_of_ringHom.lean",
+      "snapshot": "P2M\\Sol\\S_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_one_of_ringHom.lean.txt",
+      "gitBlob": "5e087ffbd5f25af30c7abf1606b31e9c12e5c148",
+      "sha256": "24D0C54234CA1D0A33B2A98FAC560895E2FFAB033CBE8FC0BD4705C50E81567A",
+      "bytes": 46697
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+import Dubon2026.SourceValuationResidualAction
+import Dubon2026.SourceNormValuationRestriction
+import Dubon2026.SourceRationalLocalValuation
+import Dubon2026.SourceOriginalNormLocalResidual
+import Dubon2026.SourceNumberFieldNormInertiaLift
+import Dubon2026.SourceAbsoluteFiniteUnramified
+import Dubon2026.SourceNumberFieldSupportRamification
+import Dubon2026.SourceAbsoluteArithmeticRestriction
+import Dubon2026.SourceAbsoluteArithmeticDescent
+import Dubon2026.SourceArithmeticLocalEmbeddingExtension
+import Dubon2026.SourceOriginalArithmeticResidual
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_arithmetic_residual_realization]
+  let localModules : Array Name := #[`Dubon2026.SourceOriginalArithmeticResidual, `Dubon2026.SourceArithmeticLocalEmbeddingExtension, `Dubon2026.SourceAbsoluteArithmeticRestriction, `Dubon2026.SourceRationalLocalValuation, `Dubon2026.SourceNormValuationRestriction, `Dubon2026.SourceValuationResidualAction, `Dubon2026.SourceAbsoluteArithmeticDescent, `Dubon2026.SourceNumberFieldSupportRamification, `Dubon2026.SourceAbsoluteFiniteUnramified, `Dubon2026.SourceNumberFieldNormInertiaLift, `Dubon2026.SourceOriginalNormLocalResidual, `Dubon2026.SourceOriginalAlgebraicIntegerResidual, `Dubon2026.SourceOriginalExactReductionResidual, `Dubon2026.SourceOriginalPrescribedReductionResidual, `Dubon2026.SourceRankTwoCharpolyCoefficients, `Dubon2026.SourcePrescribedCompletionResidue, `Dubon2026.SourceAdicCoefficientResidueComparison, `Dubon2026.SourcePrescribedReductionPrime, `Dubon2026.SourceReductionCompletionLocalStructures, `Dubon2026.SourcePadicCompletionValuation, `Dubon2026.SourceReductionCompletionPadicMap, `Dubon2026.SourceReductionCompletionBasePrime, `Dubon2026.SourceReductionCompletionFinite, `Dubon2026.SourceOriginalPrescribedResidualFrobenius, `Dubon2026.SourceOriginalResidualInertia, `Dubon2026.SourceIntegralMatrixCharpoly, `Dubon2026.SourceMatrixIntertwinerCharpoly, `Dubon2026.SourceOriginalResidualFrobeniusCharpoly, `Dubon2026.SourceOriginalSpecializationFrobeniusCharpoly, `Dubon2026.SourceCyclotomicFrobeniusCharpoly, `Dubon2026.SourceRankTwoQuadraticTrace, `Dubon2026.SourceValuationCyclotomicFrobenius, `Dubon2026.SourceValuationFrobeniusRoots, `Dubon2026.SourceOriginalSpecializationCyclotomicDeterminant, `Dubon2026.SourceSpecializationBaseChangeIntertwiner, `Dubon2026.SourceImageSpecializationDeterminant, `Dubon2026.SourceAlternatingRankTwoDeterminant, `Dubon2026.SourceImageSpecializationPairing, `Dubon2026.SourcePrimitiveOriginalTateGalois, `Dubon2026.SourcePolynomialCommutant, `Dubon2026.SourceOriginalSpecializationPrimitiveImage, `Dubon2026.SourceSpanningProjectorImage, `Dubon2026.SourceOriginalSpecializationProjector, `Dubon2026.SourcePolynomialSpecialization, `Dubon2026.SourceOriginalPrescribedTateSpecialization]
+  let required : Array Name := #[`Dubon2026.valuation_decomposition_of_mem_iff, `Dubon2026.valuation_residue_power_iff, `Dubon2026.valuation_comap_nonunits_iff, `Dubon2026.norm_restriction_mem_decomposition, `Dubon2026.norm_restriction_frobenius, `Dubon2026.norm_restriction_inertia, `Dubon2026.sourceRationalAlgebraicClosure_isGalois, `Dubon2026.sourceRationalLocalValuation_prime, `Dubon2026.sourceRationalLocalValuation_frobenius, `Dubon2026.sourceRationalLocalValuation_inertia, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_normLocal_residual_realization, `Dubon2026.numberField_embedded_inertia_exists_norm_lift, `Dubon2026.absolute_faithful_factor_unramified, `Dubon2026.numberField_support_ramification_of_rational_unramified, `Dubon2026.sourceAbsoluteArithmeticRestriction_commutes, `Dubon2026.absolute_continuous_normInertia_arithmetic_descent, `Dubon2026.sourceArithmeticLocalEmbedding_exists_extension, `Dubon2026.sourceAbsoluteArithmeticRestriction_local, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_arithmetic_residual_realization, `Dubon2026.sourceRationalLocalValuation, `Dubon2026.sourceAbsoluteArithmeticRestriction, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_algebraicInteger_reduction_residual_realization, `Dubon2026.continuous_galois_faithful_finite_factor, `Dubon2026.originalGeneratedLocalField_exists_closure_inertia_lift, `Dubon2026.embeddedFiniteGaloisCompositum, `Dubon2026.embeddedFiniteGaloisCompositum_ranges, `Dubon2026.numberField_unramifiedIn_of_inertia_eq_bot, `Dubon2026.originalIntegerPrimeBelow_exists_prime, `Dubon2026.originalSupport_exists_embedding, `Dubon2026.embeddedNormalGaloisRestriction_continuous, `Dubon2026.rationalPrimeArithmeticRestriction_commutes, `Dubon2026.completeNonarchimedeanGalois_norm_map, `IsAlgClosed.lift]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL ARITHMETIC RESIDUAL DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual original primitive prescribed arithmetic residual consumer. Only declaration values are traversed. The original prescribed reduction gives one finite-image absolute representation. Literal norm-valuation restriction supplies its original inertia and Frobenius actions through every embedding. The existing generated-compositum inertia lift makes its faithful finite factor unramified outside the support. The proved original-support embedding and continuous restriction construct its arithmetic descent. The already chosen arithmetic local embedding extends to the absolute closure, and the actual restrictions commute. The same arithmetic representation retains finite image, the exact characteristic polynomial, trace, determinant and inertia identities. No local comparison, field ramification, support containment, arithmetic descent or chosen-embedding agreement is assumed. Closing the parabolic branch, final weight twist and support comparison, automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

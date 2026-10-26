@@ -1,0 +1,27 @@
+{
+  "scope": 581,
+  "scopeIds": [
+    572,
+    574,
+    575,
+    577,
+    580
+  ],
+  "receipts": {
+    "source-primitive-residual-determinant-3-scratch-receipt.json": "3A144622C8E86F3CEC3CDDB30007F3ED84B4A09BE5568F8C0460980E6EE947C2",
+    "source-primitive-residual-oddness-2-scratch-receipt.json": "BCA9D4B759D99519AEF314F0A3CD952713308E48D43F8AC19C9DBE3910657391",
+    "source-primitive-finite-residual-4-scratch-receipt.json": "522BEB44D05905C7E81529F223EEFCD9F2A84B01BD3B5CED15790B94C9CD434A",
+    "source-primitive-witt-framed-4-scratch-receipt.json": "DF5519482C8779B0EC2C0B4F456148F3A826099D58E4319E185E853817FCBAD0",
+    "source-primitive-witt-fixed-7-scratch-receipt.json": "3FFE0D41628C7D61F16D1D893E5C84AAD076E1316941592485E3C59C3D02B1BE"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual original all-weight residual deformation problem -> global cyclotomic determinant, real oddness, finite coefficients and genuine p-adic fixed-determinant quotient",
+  "discharged": "The original primitive form in every weight at least two and every prescribed prime supplies the same original-support residual representation over a constructed finite field. Its global determinant is the cyclotomic power k-1; its determinant at actual complex conjugation is minus one. Original Fourier reductions, good-prime determinants and inertia remain unchanged. The native Witt coefficient ring has precisely this finite residue field. The existing actual framed and fixed-determinant rings are Noetherian and complete and their universal matrices reduce to that same representation. Every p-power root lies in the original arithmetic extension by support-power inclusion, so the native p-adic cyclotomic character has the actual root action. Its Witt scalar image reduces to the original finite character and supplies the genuine weight determinant of the fixed-determinant quotient. No global residual determinant, oddness, finite coefficient, Witt residue, prime-power root or determinant compatibility assumption remains.",
+  "remaining": "A characteristic-zero coefficient ring does not provide a characteristic-zero point of the deformation ring. Original all-weight adic association, required local, image and regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "route": "Reuse the proved original residual association and character density, native finite algebraic adjunction and coefficient mapping, SourceWittLift and native Witt DVR/completeness, and the existing actual framed and fixed-determinant constructions. Native WittVector.fromPadicInt and cyclotomicCharacter avoid new scalar-lift and character infrastructure; existing support-power inclusion supplies all required roots. The renewed primary-source review finds overlapping weight-two code and a later Hodge-Tate candidate, without a ready all-weight association proof. No external import, root pin, proof-limit change or incidental generalization.",
+  "precedingCanonicalScope": 8193,
+  "mathematicalSource": "Frozen Dubon arXiv2609.17875v1; complete original goal unchanged.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalLocalBuild": false,
+  "externalImport": false
+}

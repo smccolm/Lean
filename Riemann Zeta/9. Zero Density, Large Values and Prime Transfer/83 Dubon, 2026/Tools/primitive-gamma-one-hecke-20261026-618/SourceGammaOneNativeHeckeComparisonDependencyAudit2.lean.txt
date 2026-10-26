@@ -1,0 +1,29 @@
+import SourceGammaOneHeckePullbackSquare
+import SourceGammaOneHeckeUpperTraceReindex
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.sourceGammaOneHeckeH1Pullback_square, `Dubon2026.sourceGammaOneHeckeUpperTrace_reindex]
+  let localModules : Array Name := #[`SourceGammaOneHeckeUpperTraceReindex, `SourceGammaOneSubgroupCohomologyMap, `SourceGammaOneTransferCosetFormula, `SourceShapiroH1CosetTrace, `SourceShapiroH1CocycleComparison, `SourceNativeCoinductionCosetTrace, `SourceGammaOneConstantH1Realization, `SourceGammaOneCohomologyTransfer, `SourceGammaOneCoverFiniteIndex, `SourceGammaOneDiagonalHom, `SourceBinaryPermutationCongruence, `SourceBinaryPrimePowerPermutation, `SourcePermutationCoefficientQuotient, `SourceGammaOneCongruenceCover, `SourceGammaOneHeckeUpperImage, `SourceCohomologyTracePullbackCoefficients, `SourceGammaOneCoverHeckeTraceCosets, `SourcePrincipalCoprimeReduction, `SourceGammaOneCoverImageHecke, `SourceGammaOneCoverImage, `SourceGammaOneCoverHeckeSquare, `SourceGammaOneHeckeSubgroup, `SourceH1TraceBaseChangeCoefficient, `SourceH1TraceBaseChange, `SourceShapiroH1PullbackNaturality, `SourceGammaOneHeckePullbackSquare, `SourceGammaOneCoverBinaryHeckeTrace, `SourceGammaOneCoverHeckeTraceBaseChange, `SourceGammaOneBinaryRestriction, `SourceGammaOneCoverHeckeRepresentatives, `SourceGammaOneCoverHeckeCosets, `SourceGammaOneRaisedCosets, `SourceGammaOneConstantHecke]
+  let required : Array Name := #[`Dubon2026.sourceGammaOneHeckeH1Pullback_square, `Dubon2026.sourceGammaOneRangeEquiv_heckeUpper_comap, `Dubon2026.sourceGammaOneHeckeUpperTrace_reindex, `Dubon2026.sourceGammaOneUpperRangeHom, `Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_conjugation, `Dubon2026.sourceGammaOneSubgroupH1Iso_hom_eq_map, `Dubon2026.sourceSubgroupH1Trace_pullback_coefficient, `Dubon2026.sourceGammaOneDiagonalHom_heckeUpper_iff, `groupCohomology.map_comp]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE NATIVE HECKE COMPARISON DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the native original-binary/Gamma1 Hecke pullback square and actual upper-trace reindexing consumers. Only declaration values are traversed. The original conjugation square and actual coefficient projections prove the native H1 square. The existing coefficient trace base change and exact upper-subgroup preimage prove trace reindexing. Full surjective-transfer Hecke compatibility still requires the intersection-trace composition; arithmetic geometry, Galois realization and higher continuation remain required. DUB-17--20 OPEN; 16/20."
+
+#eval runPlanarPairingDependencyAudit

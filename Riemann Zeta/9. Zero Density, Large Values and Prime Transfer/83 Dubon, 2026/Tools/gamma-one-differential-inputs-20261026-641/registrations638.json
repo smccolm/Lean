@@ -1,0 +1,19 @@
+[
+  "Dubon2026.continuousOn_cuspVerticalProfile",
+  "Dubon2026.tendsto_cuspVerticalPoint",
+  "Dubon2026.cuspVerticalProfile_isBigO_rpow",
+  "Dubon2026.cuspVerticalProfile_reciprocal",
+  "Dubon2026.cuspCompletedLFunction_hasMellin",
+  "Dubon2026.cuspCompletedLFunction_differentiable",
+  "Dubon2026.cuspCompletedLFunction_functional_equation",
+  "Dubon2026.cuspVerticalProfile_hasSum",
+  "Dubon2026.cusp_coefficient_lseries_term_shift",
+  "Dubon2026.cusp_raw_lseries_summable",
+  "Dubon2026.cuspCompletedLFunction_eq_normalized_series",
+  "Dubon2026.normalizedCuspLFunction_differentiable",
+  "Dubon2026.normalizedCuspLFunction_eq_series",
+  "Dubon2026.primitive_first_symmetric_entire_continuation",
+  "Dubon2026.SemanticRegression.cusp_original_mellin_completion_source",
+  "Dubon2026.SemanticRegression.normalized_cusp_entire_lseries_source",
+  "Dubon2026.SemanticRegression.primitive_first_entire_euler_continuation_source"
+]

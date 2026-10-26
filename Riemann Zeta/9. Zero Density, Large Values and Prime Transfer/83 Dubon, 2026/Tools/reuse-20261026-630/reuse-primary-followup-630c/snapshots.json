@@ -1,0 +1,80 @@
+{
+  "retrievedUTC": "2026-10-26T10:55:21.445840+00:00",
+  "files": [
+    {
+      "repo": "dozenalist/ModularFormsMod",
+      "path": "lean-toolchain",
+      "commit": "bc16671d6781a26216b378773502ba5583845cbf",
+      "url": "https://raw.githubusercontent.com/dozenalist/ModularFormsMod/bc16671d6781a26216b378773502ba5583845cbf/lean-toolchain",
+      "snapshot": "dozenalist__ModularFormsMod\\lean-toolchain.txt",
+      "gitBlob": "f0e00b3338bac0d6f050d9a64e277314a9f7830f",
+      "sha256": "BC84812C94489D1E3E191BAA1DC10D5EB684382D7FE9D2A5AB085E72C1C67E47",
+      "bytes": 29
+    },
+    {
+      "repo": "dozenalist/ModularFormsMod",
+      "path": "lake-manifest.json",
+      "commit": "bc16671d6781a26216b378773502ba5583845cbf",
+      "url": "https://raw.githubusercontent.com/dozenalist/ModularFormsMod/bc16671d6781a26216b378773502ba5583845cbf/lake-manifest.json",
+      "snapshot": "dozenalist__ModularFormsMod\\lake-manifest.json.txt",
+      "gitBlob": "93600a760e4ffdcdeceedb91f3a790c81360b69e",
+      "sha256": "B22809EAE774CFECD59A917AE706414664561123CB3535DD71F02E3D753BB43B",
+      "bytes": 3483
+    },
+    {
+      "repo": "dozenalist/ModularFormsMod",
+      "path": "ModularFormsMod/ModularFormMod/Hecke.lean",
+      "commit": "bc16671d6781a26216b378773502ba5583845cbf",
+      "url": "https://raw.githubusercontent.com/dozenalist/ModularFormsMod/bc16671d6781a26216b378773502ba5583845cbf/ModularFormsMod/ModularFormMod/Hecke.lean",
+      "snapshot": "dozenalist__ModularFormsMod\\ModularFormsMod\\ModularFormMod\\Hecke.lean.txt",
+      "gitBlob": "ea3e6e49c1f78a6e2412d0597506976698cc180b",
+      "sha256": "7CCFD5373A1D30AB48BA6CFC415961CB5F699170BE58919A73DED5D832C8F637",
+      "bytes": 24382
+    },
+    {
+      "repo": "dozenalist/ModularFormsMod",
+      "path": "ModularFormsMod/ModularFormOver/Hecke.lean",
+      "commit": "bc16671d6781a26216b378773502ba5583845cbf",
+      "url": "https://raw.githubusercontent.com/dozenalist/ModularFormsMod/bc16671d6781a26216b378773502ba5583845cbf/ModularFormsMod/ModularFormOver/Hecke.lean",
+      "snapshot": "dozenalist__ModularFormsMod\\ModularFormsMod\\ModularFormOver\\Hecke.lean.txt",
+      "gitBlob": "83311c9fb06332551eea4606e73fe55b9b493c40",
+      "sha256": "8AA548C0EA1F26A2FC756C4A29957FCB3C044B8E225AE9C110AF44DB5CD63C20",
+      "bytes": 22280
+    },
+    {
+      "repo": "openai/math",
+      "path": "lean/docs/014.md",
+      "error": "404 Client Error: Not Found for url: https://api.github.com/repos/openai/math/contents/lean/docs/014.md?ref=1581d4cbdd69a0faf34b2089614fe2a814316a6a"
+    },
+    {
+      "repo": "leanprover-community/mathlib4",
+      "path": "Mathlib/NumberTheory/HeckeRing/Defs.lean",
+      "commit": "8d14a32337a069dbae9b92875aeb697de357b5ac",
+      "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/8d14a32337a069dbae9b92875aeb697de357b5ac/Mathlib/NumberTheory/HeckeRing/Defs.lean",
+      "snapshot": "leanprover-community__mathlib4\\Mathlib\\NumberTheory\\HeckeRing\\Defs.lean.txt",
+      "gitBlob": "738c107f82e5c55ce06ce6b76c3b17d26e9f81ea",
+      "sha256": "B574022A5B74CA8438B8B762B943101FD68AF3F040FEE222EF783A509189E7A4",
+      "bytes": 11387
+    },
+    {
+      "repo": "teal-sea/zeta-lab",
+      "path": "lean/ZetaLean/FiniteFieldTrace.lean",
+      "commit": "558eee037f954989986abad4b25851d9a41604ca",
+      "url": "https://raw.githubusercontent.com/teal-sea/zeta-lab/558eee037f954989986abad4b25851d9a41604ca/lean/ZetaLean/FiniteFieldTrace.lean",
+      "snapshot": "teal-sea__zeta-lab\\lean\\ZetaLean\\FiniteFieldTrace.lean.txt",
+      "gitBlob": "a847bfdc5d001d7916cf4bb20ed926a8ef924313",
+      "sha256": "C6DE367C91C01AB4CAD3CF7E0FC88A46E960258309211E62DDE462ABD290CBE6",
+      "bytes": 13907
+    },
+    {
+      "repo": "openai/math",
+      "path": "lean/formalization.yaml",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/formalization.yaml",
+      "snapshot": "openai__math\\lean\\formalization.yaml.txt",
+      "gitBlob": "275eee8cfab7ce49d3a5e88f02cbb8f28fe6fee6",
+      "sha256": "5A8A164259591208886CD018416E61552665265EC9E20CFF636F9D51117C2278",
+      "bytes": 79482
+    }
+  ]
+}

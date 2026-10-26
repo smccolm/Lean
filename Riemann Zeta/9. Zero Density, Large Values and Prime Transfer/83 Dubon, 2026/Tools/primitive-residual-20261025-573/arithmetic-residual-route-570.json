@@ -1,0 +1,101 @@
+{
+  "scope": 570,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight residual association -> close the weight-two parabolic branch -> original primitive prescribed reduction -> actual norm-local action and arithmetic quotient",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\OriginalGeneratedLocalInertiaLift.lean",
+      "sha256": "94267FB1CB120D7BC8EC27FBAB02D2C3B4C8BA83E815B4D3E97BEF731271A60A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\EmbeddedFiniteGaloisCompositumMaps.lean",
+      "sha256": "4E8310021325DC7F6C0BBCCBB4B4EDA3DF3695AD7E02C7CB708F9498FCDF8FF1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ContinuousGaloisFaithfulFiniteFactor.lean",
+      "sha256": "41BA0BAD23E36C5039515A418868504E5B243233CB72D1E8571760B10BC7EABE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\NumberFieldUnramifiedOfTrivialInertia.lean",
+      "sha256": "F66133501C041F73A615D626EF31C3132F2D9B64BFF1CF2BF2EC6AE941A76DBD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\OriginalIntegerPrimeTower.lean",
+      "sha256": "7E6B49F0ED9664B7FC7A84228DEA0AAAB51C6C87E727BCF3B3EA4E0438F47AEE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\OriginalSupportRamificationTransport.lean",
+      "sha256": "0C7EAF640AF36A7E5AF8410FAD59C5F8EFE6E95459511A636C1D36E3AF2A2F89"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\EmbeddedNormalGaloisRestrictionContinuity.lean",
+      "sha256": "4F34A6214A4E8D0B7B070FBCDD6807E0B99D48A46DFF95EF114426EECABEE7F4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\RationalPrimeArithmeticRestriction.lean",
+      "sha256": "650D508E2831A5ED9499405BA1614AD4C15DE628DC3E4257705B5A8CCA6863E4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveGaloisAlternative.lean",
+      "sha256": "7B4FD282B218854C4B088B2739B32F882676FBB61A0E48D8FF020C5C6BC6815C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceParabolicCuspEigenlift.lean",
+      "sha256": "2DB0D5E4605F1FC62036C71CBD80E7A4E3578BE8A97A527C5CDC7EE01A053C55"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoFullEigenlift.lean",
+      "sha256": "E0B3A90CB30A9E65866FE2CB0BC526E3503568C4CEE9EC139A996127EB46CBD7"
+    }
+  ],
+  "shorterRoute": "Reuse the existing generated finite local compositum and inertia lift, faithful finite factor, original prime classification, support embedding, and continuous embedded restriction. Derive finite-field unramifiedness from actual inertia and faithfulness. Extend the already chosen arithmetic local embedding using the native algebraically closed-field lift, then prove equality of the actual restriction maps. Equality of the unique rational algebra structures handles presentation differences without changing the embedding. No new valuation-extension, Galois-union, or local-field theory is constructed.",
+  "assumptionsToDischarge": "Norm-local compatibility, finite-field ramification, original-support containment, continuous arithmetic descent, and agreement with the fixed arithmetic local maps are all derived for the original prescribed-reduction representation. The terminal theorem keeps the same finite-image representation and exact good-prime characteristic polynomial, trace, determinant and inertia identities.",
+  "remaining": "The parabolic cusp eigensystem still needs a primitive lower-level realization and the resulting arithmetic consumer. Final weight twist and support comparison, arithmetic automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "scratchImportClosure": [
+    "SourceOriginalArithmeticResidual",
+    "SourceArithmeticLocalEmbeddingExtension",
+    "SourceAbsoluteArithmeticRestriction",
+    "SourceRationalLocalValuation",
+    "SourceNormValuationRestriction",
+    "SourceValuationResidualAction",
+    "SourceAbsoluteArithmeticDescent",
+    "SourceNumberFieldSupportRamification",
+    "SourceAbsoluteFiniteUnramified",
+    "SourceNumberFieldNormInertiaLift",
+    "SourceOriginalNormLocalResidual",
+    "SourceOriginalAlgebraicIntegerResidual",
+    "SourceOriginalExactReductionResidual",
+    "SourceOriginalPrescribedReductionResidual",
+    "SourceRankTwoCharpolyCoefficients",
+    "SourcePrescribedCompletionResidue",
+    "SourceAdicCoefficientResidueComparison",
+    "SourcePrescribedReductionPrime",
+    "SourceReductionCompletionLocalStructures",
+    "SourcePadicCompletionValuation",
+    "SourceReductionCompletionPadicMap",
+    "SourceReductionCompletionBasePrime",
+    "SourceReductionCompletionFinite",
+    "SourceOriginalPrescribedResidualFrobenius",
+    "SourceOriginalResidualInertia",
+    "SourceIntegralMatrixCharpoly",
+    "SourceMatrixIntertwinerCharpoly",
+    "SourceOriginalResidualFrobeniusCharpoly",
+    "SourceOriginalSpecializationFrobeniusCharpoly",
+    "SourceCyclotomicFrobeniusCharpoly",
+    "SourceRankTwoQuadraticTrace",
+    "SourceValuationCyclotomicFrobenius",
+    "SourceValuationFrobeniusRoots",
+    "SourceOriginalSpecializationCyclotomicDeterminant",
+    "SourceSpecializationBaseChangeIntertwiner",
+    "SourceImageSpecializationDeterminant",
+    "SourceAlternatingRankTwoDeterminant",
+    "SourceImageSpecializationPairing",
+    "SourcePrimitiveOriginalTateGalois",
+    "SourcePolynomialCommutant",
+    "SourceOriginalSpecializationPrimitiveImage",
+    "SourceSpanningProjectorImage",
+    "SourceOriginalSpecializationProjector",
+    "SourcePolynomialSpecialization",
+    "SourceOriginalPrescribedTateSpecialization"
+  ],
+  "separatelyAxiomChecked": []
+}

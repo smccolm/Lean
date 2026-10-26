@@ -1,0 +1,135 @@
+{
+  "fetchedUTC": "2026-10-26T00:28:38.412594+00:00",
+  "files": [
+    {
+      "repo": "ImperialCollegeLondon/FLT",
+      "commit": "a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/a3210204ad8876e851e32f73dd97d882bf1ccd0a/README.md",
+      "snapshot": "ImperialCollegeLondon__FLT\\README.md.txt",
+      "sha256": "8AC92E43DBC3054CB9CB1897ABF5C0AE17EAC07D560B152DDC1D1CF143271347",
+      "gitBlob": "6472bdbcd733c6cd4aa826fdb0220e215d19f08a",
+      "bytes": 1764
+    },
+    {
+      "repo": "ImperialCollegeLondon/FLT",
+      "commit": "a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "path": "lean-toolchain",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/a3210204ad8876e851e32f73dd97d882bf1ccd0a/lean-toolchain",
+      "snapshot": "ImperialCollegeLondon__FLT\\lean-toolchain.txt",
+      "sha256": "CA5F1F601D34C49079E38D7E7041EB0F2A9C227FBC1DF0F404820069A052330C",
+      "gitBlob": "a6aff065db2882c535684f8c5bcd4f16e9a23915",
+      "bytes": 25
+    },
+    {
+      "repo": "ImperialCollegeLondon/FLT",
+      "commit": "a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "path": "lake-manifest.json",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/a3210204ad8876e851e32f73dd97d882bf1ccd0a/lake-manifest.json",
+      "snapshot": "ImperialCollegeLondon__FLT\\lake-manifest.json.txt",
+      "sha256": "24AAC77AEF584483C8DEF1E0AA39C00758CA5C8369BD50E6FB583875C45EC909",
+      "gitBlob": "d622c5ca561f6b4c4d2c7537a7a13cfb0d69107c",
+      "bytes": 3467
+    },
+    {
+      "repo": "ImperialCollegeLondon/FLT",
+      "commit": "a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "path": "FLT/Assumptions/README.md",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/a3210204ad8876e851e32f73dd97d882bf1ccd0a/FLT/Assumptions/README.md",
+      "snapshot": "ImperialCollegeLondon__FLT\\FLT\\Assumptions\\README.md.txt",
+      "sha256": "BEB73DE70DB6EF774D68F0B8C9267AA204291B6C33B1240DAB2D7FBB3E41163C",
+      "gitBlob": "5d346ccd1a58bca80d95154a1d1e12ee043e5634",
+      "bytes": 2956
+    },
+    {
+      "repo": "ImperialCollegeLondon/FLT",
+      "commit": "a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "path": "FLT/GaloisRepresentation/Automorphic.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/a3210204ad8876e851e32f73dd97d882bf1ccd0a/FLT/GaloisRepresentation/Automorphic.lean",
+      "snapshot": "ImperialCollegeLondon__FLT\\FLT\\GaloisRepresentation\\Automorphic.lean.txt",
+      "sha256": "9C3F7BF25E60253BFBA5C93F5352B5DE56FCFE2CB682B3293036D6E45CBB702F",
+      "gitBlob": "819aa79eebcaaca995ca50ca6d5e7fa7da11db73",
+      "bytes": 9237
+    },
+    {
+      "repo": "ImperialCollegeLondon/FLT",
+      "commit": "a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "path": "FLT/GaloisRepresentation/HardlyRamified/Lift.lean",
+      "url": "https://raw.githubusercontent.com/ImperialCollegeLondon/FLT/a3210204ad8876e851e32f73dd97d882bf1ccd0a/FLT/GaloisRepresentation/HardlyRamified/Lift.lean",
+      "snapshot": "ImperialCollegeLondon__FLT\\FLT\\GaloisRepresentation\\HardlyRamified\\Lift.lean.txt",
+      "sha256": "09A5D45E5E88C5AEF7CA792A65E5EFFC3508DE679A37275A99FB0096FD4AEDE2",
+      "gitBlob": "4265b53a4e4cf1ce8163cbdc6061b9596dc404b8",
+      "bytes": 1785
+    },
+    {
+      "repo": "roed314/gq2",
+      "commit": "a2b1481f5e87acbb732b1e0fcf308a7ac2a9013a",
+      "path": "formalizations/axioms/index.html",
+      "url": "https://raw.githubusercontent.com/roed314/gq2/a2b1481f5e87acbb732b1e0fcf308a7ac2a9013a/formalizations/axioms/index.html",
+      "snapshot": "roed314__gq2\\formalizations\\axioms\\index.html.txt",
+      "sha256": "1B3705208794F97D33D31D859B09671705B11C48F2838352499E0CC1F67060F2",
+      "gitBlob": "252e8917ddbb18c118d1da21ff84dcad9f547cc7",
+      "bytes": 491303
+    },
+    {
+      "repo": "n-yamaguchi-0729/NYLL",
+      "commit": "8c1b16d10afaca09e0dc72753c6575e230d31a55",
+      "path": "Nyll/SawinTotallyRealTowers/UnramifiedProPRelationRank/Radical/FinitePlaceCyclotomicLocalDuality.lean",
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/SawinTotallyRealTowers/UnramifiedProPRelationRank/Radical/FinitePlaceCyclotomicLocalDuality.lean",
+      "snapshot": "n-yamaguchi-0729__NYLL\\Nyll\\SawinTotallyRealTowers\\UnramifiedProPRelationRank\\Radical\\FinitePlaceCyclotomicLocalDuality.lean.txt",
+      "sha256": "782FE994926EBB6072FC9B3317BE569BD91B4D4747180AD44C7D2B6FF44C2A15",
+      "gitBlob": "1b8bcbb16f0e0fb1f069a0286c3a6b3e1dc29fad",
+      "bytes": 6766
+    },
+    {
+      "repo": "n-yamaguchi-0729/NYLL",
+      "commit": "8c1b16d10afaca09e0dc72753c6575e230d31a55",
+      "path": "Nyll/ValuedFieldTheory/Valuation/Subring/Residue/WittVectorValuationSubringResidueFieldEquiv.lean",
+      "url": "https://raw.githubusercontent.com/n-yamaguchi-0729/NYLL/8c1b16d10afaca09e0dc72753c6575e230d31a55/Nyll/ValuedFieldTheory/Valuation/Subring/Residue/WittVectorValuationSubringResidueFieldEquiv.lean",
+      "snapshot": "n-yamaguchi-0729__NYLL\\Nyll\\ValuedFieldTheory\\Valuation\\Subring\\Residue\\WittVectorValuationSubringResidueFieldEquiv.lean.txt",
+      "sha256": "62387B96B5D7518556C8ACD5AEF60AEE0DEC85E3022D343044A25DBEBBC4CD7C",
+      "gitBlob": "018644aad310416045bea03c201ccd443f5e4996",
+      "bytes": 10554
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_CuspForm_exists_galoisRep_of_point.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CuspForm_exists_galoisRep_of_point.lean",
+      "snapshot": "anthropics__fermats-last-theorem\\P2M\\Sol\\S_CuspForm_exists_galoisRep_of_point.lean.txt",
+      "sha256": "E922C5B4816F8DDC33B2DB36BC416474F3AC9AF7B5BBD3CE1F0BA19D2AED8A2E",
+      "gitBlob": "875c3e5b98af6211ef1b3f89854ae619be60bb60",
+      "bytes": 34910
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_PDivisibleGroup_exists_basis_padicComplex_tateModule_eq_cyclotomicCharacter_pow_smul_of_hasDimension_of_ringOfIntegers.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_PDivisibleGroup_exists_basis_padicComplex_tateModule_eq_cyclotomicCharacter_pow_smul_of_hasDimension_of_ringOfIntegers.lean",
+      "snapshot": "anthropics__fermats-last-theorem\\P2M\\Sol\\S_PDivisibleGroup_exists_basis_padicComplex_tateModule_eq_cyclotomicCharacter_pow_smul_of_hasDimension_of_ringOfIntegers.lean.txt",
+      "sha256": "330B48554E7E4B4B65E189837427074666621FB42B6F18E1A525E0F5980B6C2B",
+      "gitBlob": "bbdcdc68439cc608b13d9639594b61a232c839f8",
+      "bytes": 54613
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_groupCohomology_exists_localDualityPackage_res_dualTwist_extArithLoc.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_groupCohomology_exists_localDualityPackage_res_dualTwist_extArithLoc.lean",
+      "snapshot": "anthropics__fermats-last-theorem\\P2M\\Sol\\S_groupCohomology_exists_localDualityPackage_res_dualTwist_extArithLoc.lean.txt",
+      "sha256": "9A09118F4F05774FA693BBAB46733D2BC9B7EEFCF2A11F574CB1A9308BFD9DDB",
+      "gitBlob": "501478198b75f65649bbcd0abbc08018313526d0",
+      "bytes": 8814
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/LICENSE",
+      "snapshot": "anthropics__fermats-last-theorem\\LICENSE.txt",
+      "sha256": "746BC52848EABF8765635FE532E0680756A10B18E7B3FB26E7433AB4EDF34034",
+      "gitBlob": "6f101c9faa913e222f966b68c5ce9890fe50344f",
+      "bytes": 11345
+    }
+  ]
+}

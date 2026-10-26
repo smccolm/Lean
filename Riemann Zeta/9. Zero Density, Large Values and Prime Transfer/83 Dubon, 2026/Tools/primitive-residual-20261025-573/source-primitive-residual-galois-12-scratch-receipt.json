@@ -1,0 +1,148 @@
+{
+  "recordedUTC": "2026-10-25T23:19:53.125290+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceWeightTwoDegeneracyAdjoint",
+    "SourceWeightTwoEigenLevelDescent",
+    "SourceWeightTwoNewEigenNormalization",
+    "SourceParabolicPrimitiveDivisor",
+    "SourceArithmeticSupportInflationValues",
+    "SourceOriginalDivisorArithmeticResidual",
+    "SourceParabolicArithmeticResidual",
+    "SourceResidualGaloisRealization",
+    "SourcePrimitiveWeightTwoGalois",
+    "SourcePrimitiveRestoredGalois",
+    "SourcePrimitiveOriginalResidualGalois",
+    "SourcePrimitiveResidualGaloisCharP"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoDegeneracyAdjoint.lean",
+      "sha256": "C9EBB9A51ED5B02F2DF6328B6D8F5F1498D64533671D660BAE953D53C4406B1B",
+      "oleanSha256": "EFB0005690CA27BA25BED10AE2813A8CB23B39FD3440E45853049D3D08534010"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoEigenLevelDescent.lean",
+      "sha256": "E7E2E9E7E9BCBE57B8ACF78F7B31F5A7D354FE4F8630F0627B1F4BAE51D9D608",
+      "oleanSha256": "F5BAFB154C7DFD0AD4DA27CE4A246E87AB0DEFCC48BA7B0FC039518D5E027909"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeightTwoNewEigenNormalization.lean",
+      "sha256": "DCA9680D30CBC4242644B93F29C9656A3194C33BA0F424B25ED0FD918A1711CC",
+      "oleanSha256": "A9B517241BB9F6265B96C3F49FA70AA6FF1BA90C7347D5ADEEF50A5FA79FDB13"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicPrimitiveDivisor.lean",
+      "sha256": "DB387DE7195521AD240A04FD14676086EF2C394512852B2685C06CCA6FEA7BD9",
+      "oleanSha256": "00693B1BC8580E402972CD0770756485CD3896A8FAB0ACC5257C42FE29D6DEA4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticSupportInflationValues.lean",
+      "sha256": "24429E9B0A79A539D3BD7727E098E445FB195B9F208C26086E89DAB8D8567E62",
+      "oleanSha256": "FCB33E2B9CB8AE2B7D4EF8EB8214D1FBAC31DC177203A47DAA955AECA6FA341E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalDivisorArithmeticResidual.lean",
+      "sha256": "D077A8AA0D9C024818C4AE00E4F31D66D0BF993F243E958C792C1916503F4998",
+      "oleanSha256": "4D108DE7FE3EA079FE8768739AD3130F18717E06E85143EBCAFFF6A8EA28891C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceParabolicArithmeticResidual.lean",
+      "sha256": "4AD10AE43E84DE7CF88AA6C6D20B357E3850799A8746EEF22A54A784F4E6B455",
+      "oleanSha256": "556DD601670E33B0008DABE5FB21674F68E0EB86CB1177D126050CF80535DEAA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualGaloisRealization.lean",
+      "sha256": "71491C7FAC3CA431CEE900A960457F3C0AC93278E41C283B31D2B6EAF7FE6706",
+      "oleanSha256": "566EDD5DEBE57914E62ADEF7F6ACD7B948AAD9D0DC66C8D13EC9420923C57D4A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWeightTwoGalois.lean",
+      "sha256": "8627C760A6DD5F9E5D0747B6D009D39B74C7B8A5A2BE77F538C97FDBACF27188",
+      "oleanSha256": "D2A2ADCAF1ADE1C87B9E867D1386F1278B2A51207802D76616D479E5E9D4A2EC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveRestoredGalois.lean",
+      "sha256": "401A070AAE29A7BD3FEFF724378C3F5BADEBC0C172F953975C8CAA9422792D47",
+      "oleanSha256": "0F3D708C1B404C1EA72716067CB128A4C0C9E3734DF78A33FA00EEE6D08E8026"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveOriginalResidualGalois.lean",
+      "sha256": "F9725CC304F494F977E7C463827FA00F118D0352339054EA4E8BCD50B6E52A44",
+      "oleanSha256": "DF2BEBDF8B1E0FC0BF89509F2C0956659144C4EA59AD28DA488B6F5D3D385243"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualGaloisCharP.lean",
+      "sha256": "9FF5AD8AC5D0CE83E801E98883256DBBF47773F4E93B32F87410B81B9FF09BFC",
+      "oleanSha256": "BF3FF49AB6885ACE3A129A3BAF1DB2680441E5171CC1D56E9A9F874F830D7141"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceWeightTwoPetersson_ext",
+    "Dubon2026.sourceWeightTwoDegeneracy_exists_adjoint",
+    "Dubon2026.sourceWeightTwoDegeneracy_adjoint_eigen",
+    "Dubon2026.sourceWeightTwoEigen_not_new_descends",
+    "Dubon2026.sourceWeightTwoEigen_exists_new_divisor",
+    "Dubon2026.sourceWeightTwoNewEigen_exists_primitive",
+    "Dubon2026.sourceTrivialParabolicEigen_exists_primitive_divisor",
+    "Dubon2026.sourceArithmeticSupport_local_charpoly",
+    "Dubon2026.sourceArithmeticSupport_local_inflate_eq_one",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_divisor_arithmetic_residual_realization",
+    "Dubon2026.sourceTrivialParabolicEigen_prescribed_galoisRep",
+    "Dubon2026.sourceTrivialH1Eigen_exists_galoisRep",
+    "Dubon2026.sourcePrimitive_exists_weightTwo_galoisRep",
+    "Dubon2026.sourcePrimitive_exists_restored_residualGalois",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_residualGalois",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_residualGalois_charP"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceWeightTwoPetersson_ext",
+    "Dubon2026.sourceWeightTwoDegeneracy_exists_adjoint",
+    "Dubon2026.sourceWeightTwoDegeneracy_adjoint_eigen",
+    "Dubon2026.sourceWeightTwoEigen_not_new_descends",
+    "Dubon2026.sourceWeightTwoEigen_exists_new_divisor",
+    "Dubon2026.sourceWeightTwoNewEigen_exists_primitive",
+    "Dubon2026.sourceTrivialParabolicEigen_exists_primitive_divisor",
+    "Dubon2026.sourceArithmeticSupport_local_charpoly",
+    "Dubon2026.sourceArithmeticSupport_local_inflate_eq_one",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_divisor_arithmetic_residual_realization",
+    "Dubon2026.sourceTrivialParabolicEigen_prescribed_galoisRep",
+    "Dubon2026.sourceTrivialH1Eigen_exists_galoisRep",
+    "Dubon2026.sourcePrimitive_exists_weightTwo_galoisRep",
+    "Dubon2026.sourcePrimitive_exists_restored_residualGalois",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_residualGalois",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_residualGalois_charP"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualGaloisAudit12.log",
+  "logSha256": "8991159C5778EED018FF0CED133CB7CA32BEDAFBAB4EA3B16BE69381CFFDC4BB",
+  "auditSha256": "5C452A9ED16F6855A7171640D1D0A534D6617B54543E18D90FC98B4D8C7F0AD5",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 22,
+  "linterScopes": 12,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 39,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualGaloisDependencyAudit12.log",
+  "dependencyAuditSha256": "54840C0EE08A66751129081E7F9195152D48049142E3C61028DAEFCBB128CF38",
+  "dependencyAuditSourceSha256": "F13946D8E792F12D0310752500E87463D11691A5934F71D613A97C6845453D0D",
+  "consumers": [
+    "Dubon2026.sourcePrimitive_exists_originalSupport_residualGalois_charP"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual primitive Galois association -> assemble all-weight residual association at every prescribed prime, with original Fourier reduction, determinant exponent and arithmetic support",
+  "discharged": "The parabolic primitive divisor, preserved eigenvalues, actual prescribed residual representation, original support, all-weight Fourier factor, weight determinant and residue characteristic are derived from the original primitive cusp form, weight at least two, and prescribed rational prime. The residual H1 alternative is completely assembled. The terminal theorem supplies a genuine continuous arithmetic Galois representation with exact original Frobenius trace, determinant exponent k-1, and required inertia triviality.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. All-weight adic realization and the required local/image properties, arithmetic automorphy and literal higher symmetric-power continuation remain required for DUB-17. The modular/level-one concentration consumers and final acceptance verification also remain open. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-residual-galois-12-reuse-review-20261025.json",
+  "reuseReviewSha256": "899A2837C84D2312DD94E53A7644B74AA26064EA214C5D39FE45BB5E3B923951",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "routeSerializationSuccessor": {
+    "reason": "Receipt recording rejected the route JSON because its generator appended a literal backslash-n. The original route and used recorder are preserved. The successor changes only those final two bytes into a newline; all route fields, proof sources, oleans and audit evidence remain unchanged.",
+    "originalRoute": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-galois-route-571.json",
+    "originalRouteSha256": "1F34F5B1BFB08D90F6FD9C45C14B4C9E60C982A023373DADD0DFC29DB4B5A578",
+    "successorRoute": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-galois-route-571b.json",
+    "successorRouteSha256": "733D4654EB555F4185DFEDB50B40BA05E621C612B6EE48C7DFFC087B1437B38B",
+    "failedRecorder": "E:\\Lean\\.tmp\\dubon83\\record_primitive_residual_galois_571.py",
+    "failedRecorderSha256": "554D56EA6F7032384BCF7912CC996048BC844171A4C537F385E995DD655E2664"
+  }
+}

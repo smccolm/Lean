@@ -1,0 +1,68 @@
+{
+  "scope": 565,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> actual primitive Frobenius characteristic polynomial -> cyclotomic value at the exact source valuation-subring arithmetic Frobenius and native Cayley-Hamilton",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLocalCyclotomicAction.lean",
+      "sha256": "6FA18DC07E9C2571108BBB70A2F38A1DD334918B5DA7ADEE72248CF7856AAD76"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateInertia.lean",
+      "sha256": "4AA94AF9662DB38874444330F2609EAFCB522C2F78B08E4A887531B39588BBAD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHeckePrimeRootReduction.lean",
+      "sha256": "86112EA6C6EA5A112C7001D2B03D9E31AAC158CA10E83F0B36A30574B3D68E58"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCyclotomicLocal.lean",
+      "sha256": "5F68052D522B48BC1697339344445F975162808DE59C1430DB74FF67D77E56F5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveFrobeniusQuadraticRealization.lean",
+      "sha256": "346D2FFF226B66520284C59193080FB1377099C27DFEB0588967844C4F1C6849"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveResidualRealization.lean",
+      "sha256": "A314301484990D28252ABDFE9A6556784C71E9E4EC985C968CE58333BCA099F4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStableLatticeResidualRealization.lean",
+      "sha256": "5957ADF1A06A54191FC923CDA72A9F918084DC0EAB5388CE73C8FA3751BA345A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\Cyclotomic\\CyclotomicCharacter.lean",
+      "sha256": "DD947325BE3CC5A224E2DEF83E672E8BF39201A92CE314C1DA489694F2172BFD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Matrix\\Charpoly\\Basic.lean",
+      "sha256": "D9CE4527739224C1C9F82F4ADBF2C5C9540E87DAC047193B5A1B8FD1A158CE26"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Matrix\\Charpoly\\Coeff.lean",
+      "sha256": "BDB59EB11FB976B465D3C1A9B92F1BAF65CE478E7D6D06D100F6E5733791FD3F"
+    }
+  ],
+  "shorterRoute": "Reuse existing local-domain root separation, the proved residue characteristic from the source nonunit hypothesis, native padic cyclotomic specification at every prime-power root and native Cayley-Hamilton. Add only valuation-ring membership for the required roots and the exact decomposition-subgroup action. The existing norm-model Frobenius theorem was reviewed but its different local interface is not silently substituted. The actual consumer retains its original representation and all prior clauses. For the next residual step, reuse the already constructed original integral lattice, change of basis and entrywise residual realization rather than constructing new lattices or local models.",
+  "assumptionsToDischarge": "The cyclotomic character at each source arithmetic Frobenius lift is the rational prime. The same representation therefore has determinant p, trace equal to its actual embedded prime Fourier coefficient, and characteristic polynomial X^2-a_p X+p, without determinant, trace or root-action assumptions.",
+  "remaining": "Integral and residual transport of these identities and inertia, residual association, arithmetic automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "scratchImportClosure": [
+    "SourceOriginalPrimitiveFrobeniusCharpolyRealization",
+    "SourceCyclotomicFrobeniusCharpoly",
+    "SourceRankTwoQuadraticTrace",
+    "SourceValuationCyclotomicFrobenius",
+    "SourceValuationFrobeniusRoots",
+    "SourceOriginalPrimitiveCyclotomicRealization",
+    "SourceOriginalSpecializationCyclotomicDeterminant",
+    "SourceSpecializationBaseChangeIntertwiner",
+    "SourceImageSpecializationDeterminant",
+    "SourceAlternatingRankTwoDeterminant",
+    "SourceImageSpecializationPairing",
+    "SourcePrimitiveOriginalTateGalois",
+    "SourcePolynomialCommutant",
+    "SourceOriginalSpecializationPrimitiveImage",
+    "SourceSpanningProjectorImage",
+    "SourceOriginalSpecializationProjector",
+    "SourcePolynomialSpecialization"
+  ]
+}

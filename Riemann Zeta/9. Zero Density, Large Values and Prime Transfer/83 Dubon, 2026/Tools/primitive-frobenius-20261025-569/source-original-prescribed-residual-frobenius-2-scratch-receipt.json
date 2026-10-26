@@ -1,0 +1,73 @@
+{
+  "recordedUTC": "2026-10-25T21:29:30.241484+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceOriginalPrescribedTateSpecialization",
+    "SourceOriginalPrescribedResidualFrobenius"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedTateSpecialization.lean",
+      "sha256": "257067B9EA1887DB976837A8F97EB86E1B1FE7BD784300FDF201278720140AE1",
+      "oleanSha256": "499D2CBEB2B48B7E9E468ED1E5B96DC99C4950393B559C1166ECE75107BF295D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobenius.lean",
+      "sha256": "907B67CD1372992C154FE0DF0E26D3F2E75B0970B694CF66BAB3F75A376D6F19",
+      "oleanSha256": "C1D4B4C29B2CDAB672B2D0C5A4260F677C7DA8495BA698CC0EF4E66AC6BA2299"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitiveTate_prescribed_specialization_of_basis",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_continuous_galois_realization",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_residual_frobenius_realization"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitiveTate_prescribed_specialization_of_basis",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_continuous_galois_realization",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_residual_frobenius_realization"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusAudit2.log",
+  "logSha256": "E986DD7F47390AD518F6FDB85BB10E721FE00B502348D913131694F3FF75E647",
+  "auditSha256": "E70DBE2627201F42FF16D9DFDBB9F87D9FC5C07813CFE7344406240543247A81",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 10,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 18,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusDependencyAudit2b.log",
+  "dependencyAuditSha256": "1FC51790073EC03700C9BDBBFD209A66758990266F7D8DCD17F7FDFFB1B399D9",
+  "dependencyAuditSourceSha256": "C9B2681F22E710AE27642DBFD0F84BB3C2185109FC67E531E507C9CF4824C620",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_residual_frobenius_realization"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight residual association -> prescribed algebraic-integer reduction compatibility -> retain a prescribed Fourier-field embedding through actual Tate specialization, integral lattice and residual Frobenius realization",
+  "discharged": "Given the actual local coefficient structure and a prescribed embedding of the original Fourier field, the original Hecke eigencharacter specializes the actual continuous rank-two Tate action with that same embedding in every prime eigenvalue. The actual finite Tate module constructs a stable integral lattice, and the existing basis and entrywise reduction produce continuous integral and residual representations. The same representations satisfy the proved original Frobenius polynomial, residual trace and determinant, and inertia identities. No representation, lattice, residue action or local-compatibility theorem is assumed. Choosing the local embedding to match a prescribed source algebraic-integer reduction remains a separate necessary obligation.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Choosing the local coefficient embedding to match a prescribed source algebraic-integer reduction remains required. Source arithmetic quotient and norm-interface comparison, residual association, arithmetic automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-prescribed-residual-frobenius-2-reuse-review-20261025.json",
+  "reuseReviewSha256": "A9A459073E816E66CD3DFDB7268A1A563339A458E38936839797CEBD0D09A29E",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "dependencyAuditLineage": {
+    "reason": "The original dependency audit used a misqualified identifier for the existing actual original Tate rank theorem. Its sole missing required name is corrected to the declaration in SourceFunctionField.OriginalChart. All 18 required dependency checks remain. No proof, public/exhaustive audit, linter scope or compiled artifact is changed.",
+    "oldIdentifier": "Dubon2026.SourceFunctionField.original_tate_free_finite_rank",
+    "correctIdentifier": "Dubon2026.SourceFunctionField.OriginalChart.original_tate_free_finite_rank",
+    "proofSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateRank.lean",
+    "proofSourceSha256": "417A2181F47D5E5BA1B0C72397B550C9C928DC98B805EA2A4FE67CF1E5EC0C3E",
+    "originalAudit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusDependencyAudit2.lean",
+    "originalAuditSha256": "B6CA6E80F415DF5028A8CB5B96F0106005ADE378BF5C6625B9BA8036036C452B",
+    "originalFailureLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusDependencyAudit2.log",
+    "originalFailureLogSha256": "ADAFBA4BC9F4B303921EA041E0BFC246F8DBF182F9CEC827E4646D2BCACFC399",
+    "originalExit": 1,
+    "successorAudit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusDependencyAudit2b.lean",
+    "successorAuditSha256": "C9B2681F22E710AE27642DBFD0F84BB3C2185109FC67E531E507C9CF4824C620",
+    "originalConfig": "E:\\Lean\\.tmp\\dubon83\\source-original-prescribed-residual-frobenius-2-audit-config.json",
+    "originalConfigSha256": "040EDFC810E542DC665CFA223C6B714AF96F9079048532C3BFAD815847ECF18C",
+    "successorConfig": "E:\\Lean\\.tmp\\dubon83\\source-original-prescribed-residual-frobenius-2-audit-config-567b.json",
+    "successorConfigSha256": "BC6017ABE1DA9529224745B30023A76E896546A92EFB2FAE9B1778CA55B75AA0",
+    "originalRoute": "E:\\Lean\\.tmp\\dubon83\\prescribed-residual-frobenius-route-567.json",
+    "originalRouteSha256": "FF53C9CB13E7901B0998BA1134EA9D5CDE08DADF8DF1CE8838229BD294172506"
+  }
+}

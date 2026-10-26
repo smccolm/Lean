@@ -1,5 +1,41 @@
 # Dubon 2026 — reproduction manifest
 
+Actual Gamma1 regularity and Fricke Fourier inputs (26 October 2026): For the actual Gamma1 integral-ratio Laurent field, every differential whose mapped expansion equals an actual weight-two cusp expansion is regular at every place. Both integral equations, coefficient descent, local orders and curve prerequisites are derived. The original normalized Fricke functions transform by the actual torsion-index action, are invariant under the principal subgroup and unchanged by index negation. Native Lipschitz summation and absolute Weierstrass summability prove the exact torsion Fourier formula and holomorphy. The actual normalized torsion functions are periodic, bounded at infinity and have explicit Fourier coefficients in the level cyclotomic field. Multiplication of the original Fricke function by Delta gives a bounded function at infinity. No regularity, Fourier identity, holomorphy, coefficient-field or cusp-bound premise is assumed. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 Hecke characters -> actual Picard/H1, full/parabolic and diamond comparison retaining the original homogeneous coefficient endomorphism -> actual regular differential/cusp comparison -> regularity and rational Fourier structure. Algebraic realization of arbitrary Gamma1 cusp forms and the converse regular-differential-to-cusp construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must identify the original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of these characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Neither complex semisimplicity, finite characters, Witt coefficients nor a universal deformation ring supplies a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN. The 8,360-module production aggregate and focused actual Gamma1 regularity and Fricke Fourier inputs audit pass with zero diagnostics. Four declaration-value audits verify 162 required dependencies. Algebraic realization of arbitrary Gamma1 cusp forms and the converse regular-differential-to-cusp construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must identify the original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of these characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Neither complex semisimplicity, finite characters, Witt coefficients nor a universal deformation ring supplies a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN. Sequential foundation/paper verification of this scope is pending. The preceding 8,335-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. The renewed search is recorded in Dubon Reuse Search 2026-10-26.md; the exact fixed-revision primary proofs and adaptation assessments are archived here. Reuse a native linear retraction for coefficient descent, the previously proved actual Gamma1 integral equations and curve prerequisites, the actual Weierstrass lattice and native modular transformations. Native weight-two Lipschitz summation, absolute lattice summability, locally uniform differentiation and finite-product summability avoid duplicate foundations. Keep the integer-complement boundary case required by torsion points with first coordinate zero. Finite exponent fibers and native Fourier uniqueness give the actual cyclotomic coefficients. The rational Hecke-matrix basis does not supply the missing Gamma1 rational Fourier basis. Failed timeout, documentation, preflight and dependency-audit evidence is preserved with fresh successors. No used audit or audited mathematical body is rewritten. No external project was built or imported; pins, proof limits and all twenty gates are unchanged.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Actual Gamma1 cohomology and differential inputs (26 October 2026): The actual upper and geometric Hecke subgroups are explicitly isomorphic with the original conjugation and analytic matrix action. Native H1 pullback/trace gives exactly the original finite Hecke operator, including its homogeneous coefficient endomorphism, and this action factors on either side of the geometric operator. Existing finite-coordinate curve results establish local differential generators, canonical divisors and injective expansions for the actual Gamma1 and Hecke fields. Literal scalar extension equals the complex integral-ratio field; every element has a same-weight complex modular quotient with nonzero denominator. This does not assert the reverse membership of arbitrary complex modular quotients. Native analytic differentiation and the existing level-one dimension theorem construct a nonzero q-Euler normalization scalar. For an actual weight-two cusp form f and Y*qEuler(j)=qExpansion(f), the finite expression Y^6*j^4*(j-1728)^3 is integral over C[j]; for positive M with Gamma(M) contained in the group, the cusp expression Y^(2M)*j^(M+1)*(j-1728)^M is integral over C[1/j]. Existing modular norms and level-one polynomial reduction, plus native cusp exponential decay, prove both integral equations without assuming them. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of original finite Gamma1 Hecke characters -> actual Picard/H1, full/parabolic and diamond comparison retaining the original homogeneous coefficient endomorphism -> exact geometric H1 correspondence, actual curve and regular differential/cusp comparison. The valuation deduction of regularity, algebraic differential realization and converse cusp construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must still identify the original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of these characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Neither complex semisimplicity, finite characters, Witt coefficients nor a universal deformation ring supplies a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN. Sequential foundation/paper verification passes with zero diagnostics for the 8,335-module scope: all thirteen retained regressions, 52,743 exhaustive theorem checks, 24,024 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 8,316-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. The renewed search is recorded in Dubon Reuse Search 2026-10-26.md; deeper fixed-revision differential inputs are archived here. Reuse native H1 composition and original coset sums, existing finite-coordinate curve/canonical theorems, literal Laurent scalar extension and native modular quotient operations. Use the existing bounded derivative and level-one weight-14 dimension theorem rather than a new Ramanujan system. Cubing permits reuse of the existing weight-12 modular orbit polynomial for the inverse-j bound; no second interpolation construction is needed. Native cusp decay constructs f^(2M)*E4^3/Delta. Preserve the constructed nonzero scalar instead of proving an unnecessary exact normalization. A restriction-unfolding recursion-depth diagnostic is preserved; explicit coefficient identities resolve it with unchanged limits. No external project was built or imported; root pins and all twenty gates are unchanged.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Actual Gamma1 arithmetic geometry and Hecke equivariance (26 October 2026): The actual Gamma1 and Hecke function fields are finite over the original transcendental j coordinate, including after Laurent scalar extension. Native modular norms, original level-one j polynomials, Laurent independence and primitive elements derive rational polynomial relations and finite degree. Native modular translation and existing sparse sums prove the integral expansion of the actual form f(dz); literal q-substitution therefore defines the second Hecke field map. Both field maps are finite by existing coordinate exchange. Their proved closed constant residues and existing divisor norm/degree identities construct the actual Picard Hecke operator. Coefficient transport preserves the same fields, fixes original j under arithmetic automorphisms, and commutes with both maps. The genuine arithmetic place action preserves normalized order, degree and principal divisors; native quotient functoriality gives the actual Gamma1 Picard Galois action and its torsion stability. Place restriction and ramification identities prove that this action commutes with the actual Picard Hecke operator. No finite-coordinate, field-preservation, finite-map, residue-degree, degree/principal-preservation or arithmetic-equivariance premise remains. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of original finite Gamma1 Hecke characters -> geometric/H1 comparison retaining the original homogeneous coefficient action, and diamond comparison -> actual Gamma1 finite fields, Picard correspondence and arithmetic Hecke equivariance. The geometric/H1 comparison must retain the original homogeneous matrix coefficient action and prove the upper/lower correspondence and transpose/diamond conventions. Arithmetic equivariance of the ordinary Picard operator alone does not identify the original binary-coefficient finite Hecke characters with geometric characters. Diamond comparison, Frobenius/inertia, arithmetic Galois realization of these finite characters, original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. No characteristic-zero character lift or deformation point is inferred. 16/20; DUB-17--20 OPEN. Sequential foundation/paper verification passes with zero diagnostics for the 8,316-module scope: all thirteen retained regressions, 52,606 exhaustive theorem checks, 23,951 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 8,290-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. Renewed primary inspection selects actual Gamma1 integral-ratio and finite-coordinate arguments from the frozen Anthropic snapshot. Its inspected adic theorem still requires a characteristic-zero Hecke-and-diamond character; the separate Gamma0 result is residual over a field. Reuse original j, native modular norms, existing level-one polynomials, Laurent independence, scalar-extension finiteness, native modular translation, original dilation and sparse sums. Existing coordinate exchange, closed residues, divisor norm/degree formulas, inverse-coefficient place transport and quotient action laws supply the full Picard/arithmetic construction. External alternate coordinates, duplicate cusp/scalar-extension development, conditional fallback maps and an abstract semilinear framework are deferred. Explicit inclusion projection and composition avoid kernel/rewrite unfolding without changing limits. Missing docstrings and construction-root dependency accounting have fresh audits; all failed evidence is preserved. Root pins and full source contracts are unchanged.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Actual Gamma1 transfer and original-form finite characters (26 October 2026): The already constructed surjective constant-coefficient Gamma1 H1 transfer now intertwines the actual full original binary Hecke operators at every prime coprime to level times coefficient modulus, retaining the homogeneous matrix coefficient action. Native trace base change with the original coefficient morphism, the exact upper-subgroup isomorphism, the native H1 pullback square and upper-trace reindexing are proved. Applying the existing trace tower through the same actual intersection proves trace exchange; composing these identities and the original literal-transfer formula discharges the full surjective-transfer compatibility. The same actual transfer and existing additive word intertwiner then force every Gamma1 operator relation to hold in the original finite tensor-operator image. Native ring-map descent constructs its canonical comparison. For every original primitive form of weight at least two and every prescribed prime greater than three, the original local embedding and compatible adic character supply characters on the actual finite Gamma1 H1 operator rings at all positive prime-power precisions. Whole-word pullback and the exact original Fourier values at primes away from level and modulus are derived. Native congruence-group finite generation and the existing finite H1 theorem prove these actual operator rings finite. No trace, subgroup, coefficient-action, operator-relation or character-existence premise remains in these consumers. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic Gamma1 geometric realization -> actual surjective-transfer Hecke compatibility and original finite Fourier-valued Gamma1 characters Arithmetic geometric and diamond compatibility, geometric Galois realization of the finite characters, original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. The new operator generators explicitly omit primes dividing level or modulus; surjectivity onto the entire original Hecke algebra is not asserted. No characteristic-zero character lift or deformation point is inferred from finite characters. 16/20; DUB-17--20 OPEN. Sequential foundation/paper verification passes with zero diagnostics for the 8,290-module scope: all thirteen retained regressions, 52,423 exhaustive theorem checks, 23,874 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 8,274-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. Reuse the existing native trace tower, cohomology reindexing, coefficient trace naturality, exact congruence subgroup identities and literal original transfer. Apply the proved additive word intertwiner, exact integral reduction kernel, finite operator-character descent, original Fourier character and prescribed-prime completion. Existing finite group-cohomology and the homogeneous monomial basis prove finiteness. Small native map projections and explicit ring objects avoid elaboration timeouts at unchanged limits. The exhaustive linter removed an unnecessary nonzero-modulus binder from the operator definitions; all failed evidence is preserved. No general Mackey development, new word induction, arbitrary eigenvector lift or substitute Hecke operator is used. The renewed external search and its characteristic-zero Gamma1 character boundary remain unchanged; no new external import or pin change.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Actual Gamma1 Hecke and native trace comparisons (25 October 2026): The actual finite-index Gamma1 H1 transfer is identified with the literal native finite-coset trace, using the native counit formula and the original Shapiro cocycle comparison. Its surjectivity therefore holds for that literal trace. The actual Gamma1 constant-coefficient Hecke correspondence is defined by the original integral diagonal conjugation and full finite coset sum. Coprime principal-level reduction supplies the exact Gamma1/raised-level coset bijection, the literal cover commutes with Hecke conjugation, and the corresponding representatives have the exact conjugated transitions. Restriction of the original binary H1 to the genuine constant-coefficient Gamma1 H1 commutes with the original Hecke operator, retaining the homogeneous matrix coefficient action. Native H1 trace base change is derived by pulling back actual coinduced functions, reindexing the complete coefficient trace and applying the original Shapiro restriction/evaluation theorem. The concrete Gamma1 image has proved congruences and principal-level containment; these prove good-prime conjugation preservation, identify the exact intersection subgroup, and discharge coset surjectivity in the actual Hecke base-change application. Finally, actual nested coinduced functions form a proved isomorphism. Native quotient-product reindexing proves coefficient-trace composition, and the existing Shapiro comparison and coefficient naturality descend it to the full literal H1 trace. No trace formula, coset-surjectivity, Shapiro-composition, trace-transitivity or restriction/Hecke compatibility premise remains in these consumers. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> geometric Gamma1 realization -> original surjective-transfer Hecke compatibility -> exact native trace, correspondence square, group base change and trace composition The surjective-transfer Hecke identity still requires combining the proved base-change and trace-composition identities with the original coefficient action and exact subgroup reindexings. Restriction compatibility alone does not establish this transfer identity. Arithmetic geometric and diamond compatibility, geometric Galois realization of the finite characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. No characteristic-zero character lift or deformation point is inferred from finite characters. 16/20; DUB-17--20 OPEN. Sequential foundation/paper verification passes with zero diagnostics for the 8,274-module scope: all thirteen retained regressions, 52,313 exhaustive theorem checks, 23,844 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 8,248-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. Reuse the original coinduced coset trace, native counit, Shapiro restriction/evaluation and cocycle homotopy, existing level raising and Hecke conjugation, full SL2 reduction and its Chinese-remainder equivalence, chosen-representative coboundary comparison, native subgroup quotient maps and subgroupOf equivalence. Direct coefficient-function pullback and native quotient-product reindexing avoid new resolutions, a general Mackey development and new strong approximation. The duplicate abstract transfer-formula module remains deferred. The renewed external search and its characteristic-zero Gamma1 character boundary remain unchanged; no new external import or pin change.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Actual original finite H1 characters and congruence realizations (25 October 2026): For every original primitive form of weight at least two and every prescribed prime, the same original integral H1 Hecke character is valued in its literal Fourier coefficient field and actual local valuation ring. Its finite adic reductions are compatible as whole characters and have the exact original Fourier values. The nonzero faithful character fiber and native finite-lattice integrality prove that original operator congruences force matching character congruences. Every character therefore factors through the actual finite tensor-reduced H1 operator ring, with exact original pullback and prime values. Independently, at every positive power of every prime greater than three, the actual finite binary permutation coefficients map onto original H1 and retain all original prime Hecke transforms. Existing orbit, finite-product and Shapiro maps identify these permutation H1 groups with trivial-coefficient H1 of their actual finite-index congruence stabilizers. All coefficient-field, integrality, finite-residue, adic compatibility, character-kernel and cohomological comparison inputs in these consumers are derived. The full permutation H1 Hecke image is finite and canonically surjects onto the original finite tensor-operator image. Every relation is transferred using proved evaluation surjectivity, additive Hecke-word naturality and the exact original integral reduction kernel. Composing this surjection with the same original finite character gives permutation Hecke characters at every positive power of each prime greater than three, with whole-word pullback and exact original Fourier values. No relation or character-lifting premise is retained. The exact Gamma1(Q*N^2) diagonal map is injective, has finite-index image in the original Gamma0(Q), fixes the actual binary vectors modulo N and dominates their actual orbit stabilizers. Native coinduction with faithful restriction, the existing Gamma0 H2 vanishing, Shapiro and group reindexing give a surjective constant-coefficient Gamma1 H1 transfer. Every original integral binary H1 class modulo every positive power of every prime greater than three has an actual preimage. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> compatible geometric finite-precision Hecke realizations -> actual finite operator characters, original coefficient congruences and finite congruence-stabilizer H1 comparison -> canonical surjection from actual finite permutation Hecke operators to the original finite operator image -> exact finite-index Gamma1 cover and surjective constant-coefficient H1 realization The Gamma1 transfer and transported stabilizer operators have not yet been identified with arithmetic geometric correspondences or the required Gamma1 Hecke-and-diamond actions. Geometric Galois realization of these finite characters, compatible original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. No eigenvector lift, arithmetic Galois action or characteristic-zero deformation point is claimed from the finite constructions alone. 16/20; DUB-17--20 OPEN. Sequential foundation/paper verification passes with zero diagnostics for the 8,248-module scope: all thirteen retained regressions, 52,204 exhaustive theorem checks, 23,789 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 8,213-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. Reuse the existing integral H1 character, finite Hecke algebra, Fourier field and prescribed-prime completion; native quotient powers, finite-lattice integrality and tensor base change; the existing exact semilinear reduction kernel, faithful character fiber, finite permutation evaluation, Gamma0 H1 surjection, full Hecke naturality, orbit decomposition and Shapiro comparison. Explicit descent arguments avoid elaboration timeouts without changing hypotheses or proof limits. Native finite-index counit and new H2 torsion infrastructure are deferred because they are unnecessary for this route. The renewed primary-source search remains recorded; no external import or root pin change. The existing general additive Hecke-word intertwiner also gives the canonical permutation operator quotient; a new word-induction development and integral lifting of arbitrary residual H1 are unnecessary. The follow-up inspection of five fixed-revision Gamma1 sources identifies a useful arithmetic curve family but retains its characteristic-zero character hypothesis. Existing local level raising, subgroup indices, coinduction, Shapiro and group reindexing prove the exact group and cohomology bridge without a new curve construction or new exact-sequence development.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Actual original-form cyclotomic determinant and deformation rings (25 October 2026): The original primitive form in every weight at least two and every prescribed prime supplies the same original-support residual representation over a constructed finite field. Its global determinant is the cyclotomic power k-1; its determinant at actual complex conjugation is minus one. Original Fourier reductions, good-prime determinants and inertia remain unchanged. The native Witt coefficient ring has precisely this finite residue field. The existing actual framed and fixed-determinant rings are Noetherian and complete and their universal matrices reduce to that same representation. Every p-power root lies in the original arithmetic extension by support-power inclusion, so the native p-adic cyclotomic character has the actual root action. Its Witt scalar image reduces to the original finite character and supplies the genuine weight determinant of the fixed-determinant quotient. No global residual determinant, oddness, finite coefficient, Witt residue, prime-power root or determinant compatibility assumption remains. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual original all-weight residual deformation problem -> global cyclotomic determinant, real oddness, finite coefficients and genuine p-adic fixed-determinant quotient A characteristic-zero coefficient ring does not provide a characteristic-zero point of the deformation ring. Original all-weight adic association, required local, image and regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN. Sequential foundation/paper verification passes with zero diagnostics for the 8,213-module scope: all thirteen retained regressions, 51,999 exhaustive theorem checks, 23,721 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 8,193-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. Reuse the proved original residual association and character density, native finite algebraic adjunction and coefficient mapping, SourceWittLift and native Witt DVR/completeness, and the existing actual framed and fixed-determinant constructions. Native WittVector.fromPadicInt and cyclotomicCharacter avoid new scalar-lift and character infrastructure; existing support-power inclusion supplies all required roots. The renewed primary-source review finds overlapping weight-two code and a later Hodge-Tate candidate, without a ready all-weight association proof. No external import, root pin, proof-limit change or incidental generalization.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Actual all-weight original-support residual association (25 October 2026): For every original primitive form of weight at least two and every prescribed rational prime, construct the actual finite local coefficient field, residue closure of that characteristic and continuous residual representation on the original arithmetic group of support Qp. Its good-prime Frobenius trace is the reduction of the original Fourier coefficient, its determinant is q^(k-1), and its good-prime inertia is trivial. The prescribed algebraic-integer reduction selects the coefficient completion and residue map. Actual norm-local Frobenius and inertia are compared with the source valuation, and the representation descends through the arithmetic quotient. The parabolic alternative is eliminated by actual Petersson-adjoint level descent and normalization to a primitive divisor; the existing weight twist and support equality restore the original weight and level. None of these steps remains an additional representation, coefficient-field, local-compatibility or parabolic-realization hypothesis. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual all-weight primitive Galois association -> close the residual association branch at the original arithmetic support Qp, with the original Fourier coefficients, weight determinant and good-prime inertia The global residual determinant identity, all-weight adic realization and required local, regularity and image properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. This closes residual association, not the full Galois or analytic endpoint. 16/20; DUB-17--20 OPEN. Sequential foundation/paper verification passes with zero diagnostics for the 8,193-module scope: all thirteen retained regressions, 51,937 exhaustive theorem checks, 23,692 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 8,159-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. Reuse the native completion and residue equivalences, finite Galois factors and original arithmetic support embeddings; reuse the proved Petersson inner product, commuting Hecke eigenvectors, newform normalization, residual weight-two reduction, cyclotomic twist and support comparison. The same original coefficients and exact source local actions are retained. No external import, root pin change, proof-limit change or incidental generalization is used.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
+Actual primitive Frobenius and prescribed residual realization (25 October 2026): The actual arithmetic projector image is identified with the existing spanning primitive specialization. Its literal root-valued alternating Weil pairing is nondegenerate and has the original cyclotomic multiplier, so the same representation has cyclotomic determinant. The exact source valuation arithmetic Frobenius acts on prime-to-q roots by q-th powers, giving cyclotomic value q. The original Tate quadratic relation therefore yields determinant q, trace a_q and characteristic polynomial X^2-a_q*X+q. The already constructed integral lattice and literal residue representation retain this polynomial and trivial good-prime inertia. A prescribed Fourier-field embedding is retained through the actual continuous Tate specialization, stable lattice and residual construction. No separate determinant, nondegenerate pairing, Frobenius action, stable lattice or residual compatibility hypothesis is supplied. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight residual association -> weight-two prescribed residual realization -> the actual primitive original Tate representation has arithmetic Frobenius characteristic polynomial X^2-a_q*X+q and trivial good-prime inertia -> compare the actual rank-two projector image and transport its literal Weil pairing through the existing spanning specialization Choosing the coefficient completion and residue embedding compatible with the source prescribed algebraic-integer reduction, the arithmetic quotient and norm-local comparisons, closure of the parabolic branch, final weight twist and support comparison, arithmetic automorphy and all-weight continuation remain required. The prescribed-embedding theorem explicitly assumes a genuine finite local coefficient field and valuation extension, to be discharged by the chosen completion. 16/20; DUB-17--20 OPEN. Sequential foundation/paper verification passes with zero diagnostics for the 8,159-module scope: all thirteen retained regressions, 51,801 exhaustive theorem checks, 23,640 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 8,133-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. Reuse native range_liftBaseChange, finite-dimensional bijectivity and alternating two-coordinate determinant algebra to retain the original representation. Reuse source valuation root lifting, PadicInt.ext_of_toZModPow, the exact cyclotomic character and native Cayley-Hamilton. Reuse the existing stable lattice and literal entrywise reduction with native characteristic-polynomial transport. Preserve an arbitrary prescribed Fourier-field embedding, then choose the completion at the kernel of the source reduction using the proved quotient/residue equivalence. No external import, root pin change, proof-limit change or generic Jacobian infrastructure is needed.
+
+Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
+
 Actual nondegenerate rank-two primitive Tate image (25 October 2026): The original rational Weil pairing remains injective after extension to the actual coefficient field, with its alternating, good-prime Hecke adjointness and cyclotomic multiplier identities. The proved integral cusp/lattice relations factor the actual original Tate action through the same integral Hecke algebra used by the arithmetic projector. Literal coefficient extension preserves its prime operators and polynomial, so the actual projected operator is idempotent and self-adjoint. Existing all-word original rank-two Tate coordinates and native finite-product scalar extension identify its image: the prescribed p-adic Hecke character has value one on the projector and gives its scalar action, making the actual image rank two. The same projector therefore has a nonzero rank-two image with an injective restriction of the literal root-valued Weil pairing. Action comparison, generator, character-compatibility, image-dimension and restricted-nondegeneracy assumptions are all discharged by actual upstream objects. Source dependency chain: DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive Frobenius determinant -> nonzero required primitive component pairing -> nondegenerate rank-two image of the actual arithmetic projector on the original coefficient-extended Tate module Comparison of this image with the existing spanning primitive specialization, the separate primitive Frobenius determinant, residual association, arithmetic automorphy and all-weight continuation remain required. The Frobenius quadratic identity alone does not prove the determinant. 16/20; DUB-17--20 OPEN. Sequential foundation/paper verification passes with zero diagnostics for the 8,133-module scope: all thirteen retained regressions, 51,727 exhaustive theorem checks, 23,592 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open. The preceding 8,102-module scope passed sequential canonical verification with zero diagnostics and all thirteen regressions. Reuse native finite-source Hom base change and flat tensor injection, with no finiteness assumption on the root-valued target. Reuse the original cusp/lattice Hecke relations, all-word rank-two Tate coordinates, prescribed p-adic eigencharacter, algebraIdempotentLeftIdeal and native range/finite-product equivalences. Only good-prime adjointness enters the projector. The same arithmetic projector supplies both rank two and restricted Weil nondegeneracy. Next reuse native range_liftBaseChange to compare with the existing spanning specialization; retain the original representation. No second determinant descent, new eigencharacter, generic Jacobian representability, external import, root pin change or proof-limit change is introduced.
 
 Earlier dated implementation paragraphs are historical checkpoints; the current mathematical scope is stated above.
@@ -48816,5 +48852,5763 @@ Comparison of this image with the existing spanning primitive specialization, th
   },
   "scratchToProductionCountReason": "All 140 distinct names from 140 exhaustive scratch checks are retained: 140 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
   "boundary": "Comparison of this image with the existing spanning primitive specialization, the separate primitive Frobenius determinant, residual association, arithmetic automorphy and all-weight continuation remain required. The Frobenius quadratic identity alone does not prove the determinant. 16/20; DUB-17--20 OPEN."
+}
+```
+
+## Production actual primitive Frobenius and prescribed residual realization pending full run - 25 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 8,159-module scope: all thirteen retained regressions, 51,801 exhaustive theorem checks, 23,640 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Choosing the coefficient completion and residue embedding compatible with the source prescribed algebraic-integer reduction, the arithmetic quotient and norm-local comparisons, closure of the parabolic branch, final weight twist and support comparison, arithmetic automorphy and all-weight continuation remain required. The prescribed-embedding theorem explicitly assumes a genuine finite local coefficient field and valuation extension, to be discharged by the chosen completion. 16/20; DUB-17--20 OPEN.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCyclotomicDependencyAudit12Production8159.log",
+      "sha256": "866D9263CAB748EFCD0102AA8E6E9623087C5708D2D8A7AED72E8E3E92893FD8",
+      "requiredProofValueEdges": 42,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_cyclotomic_realization"
+      ],
+      "sourceSha256": "03126E5C553EE67D85E2F4402520ABE207ABF20F885A51B27AF7DFFEEF402E9D"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusCharpolyDependencyAudit5Production8159.log",
+      "sha256": "C6FA70E5187C07529D24EC867A2D2C3074E5136403B95FBCB9A3BF6B605ECEB1",
+      "requiredProofValueEdges": 16,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_charpoly_realization"
+      ],
+      "sourceSha256": "9BC35FBC7B0E0ACF0A77F561B66FCEDF8D4088ECD76E5D5E35F2AA1689BE94E0"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualFrobeniusDependencyAudit7Production8159.log",
+      "sha256": "E17C9BE1C7C35F62B772BA283F2008CC47E8E9C5D808580400B580DDEF0DCA76",
+      "requiredProofValueEdges": 22,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_frobenius_realization"
+      ],
+      "sourceSha256": "0ABEB19478D20F6D71CDD54F620BFD046D94C6E0058EB029C5A84546F75DD55B"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusDependencyAudit2bProduction8159.log",
+      "sha256": "1FC51790073EC03700C9BDBBFD209A66758990266F7D8DCD17F7FDFFB1B399D9",
+      "requiredProofValueEdges": 18,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_residual_frobenius_realization"
+      ],
+      "sourceSha256": "1F7DED13D6F8A6B418FD06D1179AB12E362A265A2A05CF160B35167EB2240D21"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusProductionAudit8159.log",
+  "sha256": "B58C9AB8336A879CDA9948D0804250A2E3AA45787F8342FDA26555EBCC719436",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-frobenius-production-build-8159.log",
+  "aggregateSha256": "0DCEAA338360C025015B210A1E0ED64410D989E11F4A6C9F8639F3D330C52146",
+  "productionModules": 8159,
+  "incrementModules": 26,
+  "axiomChecks": 50,
+  "exhaustiveIncrementTheorems": 74,
+  "linterScopes": 26,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 74,
+  "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The original rational Tate module and root-valued Weil pairing, actual cusp forms, integral Hecke algebra and prescribed primitive coefficient field retain their definitions. No source contract is weakened.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 74,
+    "scratchDistinct": 74,
+    "generatedNameRenamings": {
+      "_private.Dubon2026.SourceOriginalSpecializationFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationFrobeniusCharpoly": "_private.Dubon2026.SourceOriginalSpecializationFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+      "_private.Dubon2026.SourceOriginalPrimitiveResidualFrobeniusRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveResidualFrobeniusRealization": "_private.Dubon2026.SourceOriginalPrimitiveResidualFrobeniusRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+      "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalPrescribedTateSpecialization": "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+      "_private.Dubon2026.SourceOriginalSpecializationCyclotomicDeterminant.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationCyclotomicDeterminant": "_private.Dubon2026.SourceOriginalSpecializationCyclotomicDeterminant.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+      "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_1": "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_1",
+      "_private.Dubon2026.SourcePrimitiveOriginalTateGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourcePrimitiveOriginalTateGalois": "_private.Dubon2026.SourcePrimitiveOriginalTateGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+      "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_3": "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_3",
+      "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_4": "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_4",
+      "_private.Dubon2026.SourceOriginalSpecializationPrimitiveImage.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationPrimitiveImage": "_private.Dubon2026.SourceOriginalSpecializationPrimitiveImage.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+      "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_5": "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_5",
+      "_private.Dubon2026.SourceOriginalSpecializationProjector.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationProjector": "_private.Dubon2026.SourceOriginalSpecializationProjector.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+      "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrescribedResidualFrobenius": "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+      "_private.Dubon2026.SourceOriginalPrimitiveCyclotomicRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveCyclotomicRealization": "_private.Dubon2026.SourceOriginalPrimitiveCyclotomicRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+      "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusCharpolyRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveFrobeniusCharpolyRealization": "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusCharpolyRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+      "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrescribedTateSpecialization": "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+      "_private.Dubon2026.SourceOriginalResidualFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalResidualFrobeniusCharpoly": "_private.Dubon2026.SourceOriginalResidualFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026"
+    },
+    "productionFocused": 74,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceSpanningProjectorImage",
+          "SourceSpecializationBaseChangeIntertwiner",
+          "SourcePolynomialSpecialization",
+          "SourceOriginalSpecializationProjector",
+          "SourceOriginalSpecializationPrimitiveImage",
+          "SourcePolynomialCommutant",
+          "SourcePrimitiveOriginalTateGalois",
+          "SourceImageSpecializationPairing",
+          "SourceAlternatingRankTwoDeterminant",
+          "SourceImageSpecializationDeterminant",
+          "SourceOriginalSpecializationCyclotomicDeterminant",
+          "SourceOriginalPrimitiveCyclotomicRealization"
+        ],
+        "count": 38,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusScratchOwnership564For8159.log",
+          "sha256": "7F7D0FEC393F1DE1D7784B33428BA151B7B6B82525CAFE95A38F2985E35EDBDC",
+          "sourceSha256": "77BE46844AB738BCEEC7E7FEEF7B68793466020B6973371F114C932F31EC0EBE"
+        }
+      },
+      {
+        "modules": [
+          "SourceValuationFrobeniusRoots",
+          "SourceValuationCyclotomicFrobenius",
+          "SourceRankTwoQuadraticTrace",
+          "SourceCyclotomicFrobeniusCharpoly",
+          "SourceOriginalPrimitiveFrobeniusCharpolyRealization"
+        ],
+        "count": 10,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusScratchOwnership565For8159.log",
+          "sha256": "FED3411C217ECFD278377F8D5CF69DFA8EA365637BFCA15683D40F06F86B238F",
+          "sourceSha256": "45F9C2EC144C233DF669420EC478DD815DB179F4EFE97127A180C33772FCEA1B"
+        }
+      },
+      {
+        "modules": [
+          "SourceMatrixIntertwinerCharpoly",
+          "SourceIntegralMatrixCharpoly",
+          "SourceRankTwoCharpolyCoefficients",
+          "SourceOriginalSpecializationFrobeniusCharpoly",
+          "SourceOriginalResidualFrobeniusCharpoly",
+          "SourceOriginalResidualInertia",
+          "SourceOriginalPrimitiveResidualFrobeniusRealization"
+        ],
+        "count": 16,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusScratchOwnership566For8159.log",
+          "sha256": "DC02B09CF8B312595774421F5FD07F29CD47A6F2327D72CDE67A1735F587BE8A",
+          "sourceSha256": "22EC3AB1F21113A0CD10BBE4D48AD6E6071ED58F98E7620571689EC1215C1564"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalPrescribedTateSpecialization",
+          "SourceOriginalPrescribedResidualFrobenius"
+        ],
+        "count": 10,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusScratchOwnership567For8159.log",
+          "sha256": "34B53B6AC06E6F815379F29AFA00711FFE0035F7639175D4DF6FFCE02E8F9010",
+          "sourceSha256": "A3EA9C8AC91493BDF125BCCB1723BDBAF5F440C3F0FCB13398DC7365350C70AB"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusOwnership8159.log",
+      "sha256": "CB79C93CC9996C2E7E7175002DB8C30CF26620D7B2DE859C194ABE2EEB325D3F",
+      "sourceSha256": "EC2CBA4E1FA01169FFD5E5209EE0186117175CD3550723D57B2B1058BAF35BE9"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-132709-230.log",
+      "sha256": "882B4124F2C1BF3DD2349B42A423CFE04CA2EA25A8EBECA3C6C09EBDD374BF94"
+    },
+    "renameEvidence": {
+      "previousDiagnostic": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-frobenius-ownership-diagnostic-8159.json",
+      "previousDiagnosticSha256": "D5770B616EC95D34A9458BB7EB9C4A62515AAE729C2E123C5BB17DF86C2907BF",
+      "reason": "Sixteen automatically named private instance declarations acquire module-derived suffixes after import qualification. Every exact one-to-one pair retains its owner. All 26 production sources are identical to their frozen scratch sources after removing imports, and every production theorem passed the focused exhaustive axiom audit. No theorem is omitted.",
+      "sourceChecks": [
+        {
+          "module": "SourceSpanningProjectorImage",
+          "scratchSha256": "2C3C503E331650506AE256D7E7F7337C2521EF0C01E5A48573EB88D1598FDDB5",
+          "productionSha256": "FEF5B22ED6472C433D13E45886C16EE681A35909C8BDE71679AABC7C78AB6846",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceSpecializationBaseChangeIntertwiner",
+          "scratchSha256": "C0E34D0BEB02DB0CECD9F33323914D71B38482A9B921C623B1E13AD5A42F148A",
+          "productionSha256": "667388A3582C4C95941CCD719EF4141D4B71B5E9A1055FCEC5F81201E623E203",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePolynomialSpecialization",
+          "scratchSha256": "B8C54629ABE3AF0FFF153247ED67BC612F479BAB1227C435DA62F6A3209B9F31",
+          "productionSha256": "11BFDD7D0BD7BEB88C3F6558EC15BF29890444390F08CDB5B3B4831CA95CD35C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalSpecializationProjector",
+          "scratchSha256": "5D99D63AC20C4AA6B66A087F6F595250478454BF0A94B88104BF74F7052E7E40",
+          "productionSha256": "17AF9DC3D11A27766334DBF024974DBE9EB0B31C49879AD687693C2098222B97",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalSpecializationPrimitiveImage",
+          "scratchSha256": "CD13E38F39C6339E52508C5A319083094347383F905CDA3C3B8A5D28FB768961",
+          "productionSha256": "5325A01B91956370ECE5B6C1651E6BD12083BBAECDB9D1C7519A6057F3BDFE5A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePolynomialCommutant",
+          "scratchSha256": "ABCADCD7E4809ED36588CF9C61403E99AE6950B6402B9A452BD30E4A9A5F438D",
+          "productionSha256": "EFE8CBF085B71534A84DDB1F83FA3A66BA7B1B19927CE415298A355D31137E75",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveOriginalTateGalois",
+          "scratchSha256": "7051528E351BE9E5E50A7B40B1CA9ED1C9F2DB60ECEE4B2A61EDF4A60C2167CF",
+          "productionSha256": "5AF9BFB581873A44B94C0CE8506877331ED27CDD7D4AC75BB38883D6EA921A31",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceImageSpecializationPairing",
+          "scratchSha256": "D3D871713D1ACED45E136FE64DD73B0A4201386C157BBD4DF032655E663EFE65",
+          "productionSha256": "ECB80A78694946A2A4BCFC8FE5827B5F5F37E715FB0E6E4740FB4D31C33680BE",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceAlternatingRankTwoDeterminant",
+          "scratchSha256": "1CB186BDEB04A7457E1B7220EA81BDB271F71A71ED6E25AF579DB16DC4DAF380",
+          "productionSha256": "2E90F6EC13B3EE6CD23C71ABA01DF9A3488419C4268619EE6EBD1FF958EA2F6F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceImageSpecializationDeterminant",
+          "scratchSha256": "093A35CFC1B54A93C0C1F082BE812771BBAD76BDE7DCF5DE5EFED23B8FBB9698",
+          "productionSha256": "D4FD26345AE854D8965CD9FDECCFC3C1444142CFA5DF2BEBA8FCE46238AF1CA3",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalSpecializationCyclotomicDeterminant",
+          "scratchSha256": "1805458115BEAC659F0FF11F5A44D6BDAC38BA5F84F739A40B3E99926D062876",
+          "productionSha256": "8144A1C74206BD32A46CA4FE68E8D5269B92179328C9E19A317FC714C18335C8",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalPrimitiveCyclotomicRealization",
+          "scratchSha256": "59974C32D7E2CAD7C651BEE1C2DBF606079489882FA3381F2EAE9FE6369AA697",
+          "productionSha256": "2DB68EC2B0D56EB33611ACF6D089347E87B62FD603EF924BB7A3842E97F65AB0",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceValuationFrobeniusRoots",
+          "scratchSha256": "EFDFC7CE019847CA89442ABAD71CE06F305D545C47721432AD6AAD0FB0175DF4",
+          "productionSha256": "602565FE3CDA21BD97053B7135FF2D7C7D145E519622D99FAD75E2C46D03D115",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceValuationCyclotomicFrobenius",
+          "scratchSha256": "9BBDA3A47EE24123A4946AE7BDEED28F617F52407693DD71EB2B1067BE100E14",
+          "productionSha256": "FBCF2CFD5F3E0CF5B5FB4E54C51138BE287DADDDE666FDB2A698DB352D7EBD01",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceRankTwoQuadraticTrace",
+          "scratchSha256": "7556A0CB93C3C941DBFA864A31C729A6822070684A815894465D4FF8FF9AAF0E",
+          "productionSha256": "1A2B8FF1B740B3ADAB3FE0BCFC631DE3A21A41338227DDBE7CB05B4E706CC8AE",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceCyclotomicFrobeniusCharpoly",
+          "scratchSha256": "B766FF6B75648BF63D1B5483139E1F1DE73660A5DFAF420EEC229379BFA5AC4F",
+          "productionSha256": "F60E904EDECAC0019C35B1F695EAF6AB88205901B5B3A40B16C04040CBB4062A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalPrimitiveFrobeniusCharpolyRealization",
+          "scratchSha256": "C04B66F95D44EF7D4C969125FEDFD752DE8CE5575DD6E7CBC21FD53D1A70C13C",
+          "productionSha256": "4C756466C46FE38123189D16F39BC566886B6A6263FF98F2BD5AF633B51FD6FD",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMatrixIntertwinerCharpoly",
+          "scratchSha256": "62DC857DA3784EEBBA81D6DCFFB3F267B8800CFDAE77B35C95A39E31C77270B5",
+          "productionSha256": "F9BCBE79D163868A964BF143ECDEAE68F52D5CF8F16871718C45596BCD5C3975",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceIntegralMatrixCharpoly",
+          "scratchSha256": "B57C558CBD44B04AD9AD5B654A4CF98556AD75221496FDEC7F32AF2A280C194F",
+          "productionSha256": "603C5B5BE071575086864F7ADC7DD25937DB1D43F638B7B8C81D79BD1B145610",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceRankTwoCharpolyCoefficients",
+          "scratchSha256": "9DEDB95C41ACDA86F31E4ECB8FEB067FB3F02F13A00134D94D2DCC5B86D0B39E",
+          "productionSha256": "A7348F85899BF4979FA43B2B7ED7E858E731E6564FF58134ACB6802239A9E71F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalSpecializationFrobeniusCharpoly",
+          "scratchSha256": "B83D681047FD5FD104B781B7C19F2AB0AB6FB4C4C5464F621DB47C28AB0A21A7",
+          "productionSha256": "C87992655FF94A3F55F3388BC21D49E7D272393566C409F0464118FA0219EDB6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalResidualFrobeniusCharpoly",
+          "scratchSha256": "FC4EB525468041C1EBB8372D9D8B83FA868605A4E0F61DF01CF28B1A191CCF1D",
+          "productionSha256": "9126A0E5D7DD2F4F43432E71F22A3615A008F1FD2D17DE5E3B92799587E0CD4A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalResidualInertia",
+          "scratchSha256": "5D684229AF8E7A14EEF67A4E79F571F0B51617A09D734D1D646513FCD648D9A1",
+          "productionSha256": "78FBF5AA52F6F935730BE97FE6AF115DCEB79D90B10A1141B2D55DE54E9824AE",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalPrimitiveResidualFrobeniusRealization",
+          "scratchSha256": "250FA286282DDB044D4F4A928853D3C9264313D1EEA7A765E9CF66907843C5BA",
+          "productionSha256": "0D22FA32952E3C3CA4FF24BD67461E1F4AECD5740E286A6C20352759A9223C3D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalPrescribedTateSpecialization",
+          "scratchSha256": "257067B9EA1887DB976837A8F97EB86E1B1FE7BD784300FDF201278720140AE1",
+          "productionSha256": "257067B9EA1887DB976837A8F97EB86E1B1FE7BD784300FDF201278720140AE1",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalPrescribedResidualFrobenius",
+          "scratchSha256": "907B67CD1372992C154FE0DF0E26D3F2E75B0970B694CF66BAB3F75A376D6F19",
+          "productionSha256": "786F436BE85795D7BD9B2F0E96874B0EEB488E697C4273118575D5AF3020A676",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 74 distinct names from 74 exhaustive scratch checks are retained: 74 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Choosing the coefficient completion and residue embedding compatible with the source prescribed algebraic-integer reduction, the arithmetic quotient and norm-local comparisons, closure of the parabolic branch, final weight twist and support comparison, arithmetic automorphy and all-weight continuation remain required. The prescribed-embedding theorem explicitly assumes a genuine finite local coefficient field and valuation extension, to be discharged by the chosen completion. 16/20; DUB-17--20 OPEN."
+}
+```
+
+## Verified actual primitive Frobenius and prescribed residual realization - 25 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 8,159-module scope: all thirteen retained regressions, 51,801 exhaustive theorem checks, 23,640 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Choosing the coefficient completion and residue embedding compatible with the source prescribed algebraic-integer reduction, the arithmetic quotient and norm-local comparisons, closure of the parabolic branch, final weight twist and support comparison, arithmetic automorphy and all-weight continuation remain required. The prescribed-embedding theorem explicitly assumes a genuine finite local coefficient field and valuation extension, to be discharged by the chosen completion. 16/20; DUB-17--20 OPEN.
+
+```json
+{
+  "recordedUTC": "2026-10-25T23:59:29.834991+00:00",
+  "log": "logs/dubon-build-20261025-152732-013.log",
+  "sha256": "5FAB3F34E9E2184BF145AAD0B30CB5DAFFF74229E6E490E33E50F37AE975AAE6",
+  "bytes": 13305396,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 8159,
+  "projectTheorems": 51801,
+  "registeredConsumers": 23640,
+  "registeredConstructions": 2214,
+  "declarations": 31800,
+  "generated": 32730,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261025_152224.log",
+  "foundationSha256": "6F63CF297175FA4C5EE91D9374F3954212EAC8DC8EEA963372D16581F0D37F65",
+  "countReconciliation": {
+    "previousTheorems": 51727,
+    "focusedTheorems": 74,
+    "sharedGeneratedNames": [],
+    "addedTheorems": 74,
+    "removedTheorems": [],
+    "upstreamOwnedGeneratedNames": [],
+    "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusGlobalOwnership8159.log",
+    "globalOwnershipSha256": "59C893317396F6FBCDB56CE6F717133A76C3ABCAFA9E9FC5612962016D54007B",
+    "globalOwnershipSourceSha256": "81C84A808BF719AFF296E210E822B52D9C0D2C2F60789E5F10F208F98CB97D7F",
+    "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusOwnership8159.log",
+    "ownershipSha256": "CB79C93CC9996C2E7E7175002DB8C30CF26620D7B2DE859C194ABE2EEB325D3F"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 74,
+    "scratchDistinct": 74,
+    "generatedNameRenamings": {
+      "_private.Dubon2026.SourceOriginalSpecializationFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationFrobeniusCharpoly": "_private.Dubon2026.SourceOriginalSpecializationFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+      "_private.Dubon2026.SourceOriginalPrimitiveResidualFrobeniusRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveResidualFrobeniusRealization": "_private.Dubon2026.SourceOriginalPrimitiveResidualFrobeniusRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+      "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalPrescribedTateSpecialization": "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+      "_private.Dubon2026.SourceOriginalSpecializationCyclotomicDeterminant.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationCyclotomicDeterminant": "_private.Dubon2026.SourceOriginalSpecializationCyclotomicDeterminant.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+      "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_1": "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_1",
+      "_private.Dubon2026.SourcePrimitiveOriginalTateGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourcePrimitiveOriginalTateGalois": "_private.Dubon2026.SourcePrimitiveOriginalTateGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+      "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_3": "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_3",
+      "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_4": "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_4",
+      "_private.Dubon2026.SourceOriginalSpecializationPrimitiveImage.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationPrimitiveImage": "_private.Dubon2026.SourceOriginalSpecializationPrimitiveImage.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+      "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_5": "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_5",
+      "_private.Dubon2026.SourceOriginalSpecializationProjector.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationProjector": "_private.Dubon2026.SourceOriginalSpecializationProjector.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+      "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrescribedResidualFrobenius": "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+      "_private.Dubon2026.SourceOriginalPrimitiveCyclotomicRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveCyclotomicRealization": "_private.Dubon2026.SourceOriginalPrimitiveCyclotomicRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+      "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusCharpolyRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveFrobeniusCharpolyRealization": "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusCharpolyRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+      "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrescribedTateSpecialization": "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+      "_private.Dubon2026.SourceOriginalResidualFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalResidualFrobeniusCharpoly": "_private.Dubon2026.SourceOriginalResidualFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026"
+    },
+    "productionFocused": 74,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceSpanningProjectorImage",
+          "SourceSpecializationBaseChangeIntertwiner",
+          "SourcePolynomialSpecialization",
+          "SourceOriginalSpecializationProjector",
+          "SourceOriginalSpecializationPrimitiveImage",
+          "SourcePolynomialCommutant",
+          "SourcePrimitiveOriginalTateGalois",
+          "SourceImageSpecializationPairing",
+          "SourceAlternatingRankTwoDeterminant",
+          "SourceImageSpecializationDeterminant",
+          "SourceOriginalSpecializationCyclotomicDeterminant",
+          "SourceOriginalPrimitiveCyclotomicRealization"
+        ],
+        "count": 38,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusScratchOwnership564For8159.log",
+          "sha256": "7F7D0FEC393F1DE1D7784B33428BA151B7B6B82525CAFE95A38F2985E35EDBDC",
+          "sourceSha256": "77BE46844AB738BCEEC7E7FEEF7B68793466020B6973371F114C932F31EC0EBE"
+        }
+      },
+      {
+        "modules": [
+          "SourceValuationFrobeniusRoots",
+          "SourceValuationCyclotomicFrobenius",
+          "SourceRankTwoQuadraticTrace",
+          "SourceCyclotomicFrobeniusCharpoly",
+          "SourceOriginalPrimitiveFrobeniusCharpolyRealization"
+        ],
+        "count": 10,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusScratchOwnership565For8159.log",
+          "sha256": "FED3411C217ECFD278377F8D5CF69DFA8EA365637BFCA15683D40F06F86B238F",
+          "sourceSha256": "45F9C2EC144C233DF669420EC478DD815DB179F4EFE97127A180C33772FCEA1B"
+        }
+      },
+      {
+        "modules": [
+          "SourceMatrixIntertwinerCharpoly",
+          "SourceIntegralMatrixCharpoly",
+          "SourceRankTwoCharpolyCoefficients",
+          "SourceOriginalSpecializationFrobeniusCharpoly",
+          "SourceOriginalResidualFrobeniusCharpoly",
+          "SourceOriginalResidualInertia",
+          "SourceOriginalPrimitiveResidualFrobeniusRealization"
+        ],
+        "count": 16,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusScratchOwnership566For8159.log",
+          "sha256": "DC02B09CF8B312595774421F5FD07F29CD47A6F2327D72CDE67A1735F587BE8A",
+          "sourceSha256": "22EC3AB1F21113A0CD10BBE4D48AD6E6071ED58F98E7620571689EC1215C1564"
+        }
+      },
+      {
+        "modules": [
+          "SourceOriginalPrescribedTateSpecialization",
+          "SourceOriginalPrescribedResidualFrobenius"
+        ],
+        "count": 10,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusScratchOwnership567For8159.log",
+          "sha256": "34B53B6AC06E6F815379F29AFA00711FFE0035F7639175D4DF6FFCE02E8F9010",
+          "sourceSha256": "A3EA9C8AC91493BDF125BCCB1723BDBAF5F440C3F0FCB13398DC7365350C70AB"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusOwnership8159.log",
+      "sha256": "CB79C93CC9996C2E7E7175002DB8C30CF26620D7B2DE859C194ABE2EEB325D3F",
+      "sourceSha256": "EC2CBA4E1FA01169FFD5E5209EE0186117175CD3550723D57B2B1058BAF35BE9"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-132709-230.log",
+      "sha256": "882B4124F2C1BF3DD2349B42A423CFE04CA2EA25A8EBECA3C6C09EBDD374BF94"
+    },
+    "renameEvidence": {
+      "previousDiagnostic": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-frobenius-ownership-diagnostic-8159.json",
+      "previousDiagnosticSha256": "D5770B616EC95D34A9458BB7EB9C4A62515AAE729C2E123C5BB17DF86C2907BF",
+      "reason": "Sixteen automatically named private instance declarations acquire module-derived suffixes after import qualification. Every exact one-to-one pair retains its owner. All 26 production sources are identical to their frozen scratch sources after removing imports, and every production theorem passed the focused exhaustive axiom audit. No theorem is omitted.",
+      "sourceChecks": [
+        {
+          "module": "SourceSpanningProjectorImage",
+          "scratchSha256": "2C3C503E331650506AE256D7E7F7337C2521EF0C01E5A48573EB88D1598FDDB5",
+          "productionSha256": "FEF5B22ED6472C433D13E45886C16EE681A35909C8BDE71679AABC7C78AB6846",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceSpecializationBaseChangeIntertwiner",
+          "scratchSha256": "C0E34D0BEB02DB0CECD9F33323914D71B38482A9B921C623B1E13AD5A42F148A",
+          "productionSha256": "667388A3582C4C95941CCD719EF4141D4B71B5E9A1055FCEC5F81201E623E203",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePolynomialSpecialization",
+          "scratchSha256": "B8C54629ABE3AF0FFF153247ED67BC612F479BAB1227C435DA62F6A3209B9F31",
+          "productionSha256": "11BFDD7D0BD7BEB88C3F6558EC15BF29890444390F08CDB5B3B4831CA95CD35C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalSpecializationProjector",
+          "scratchSha256": "5D99D63AC20C4AA6B66A087F6F595250478454BF0A94B88104BF74F7052E7E40",
+          "productionSha256": "17AF9DC3D11A27766334DBF024974DBE9EB0B31C49879AD687693C2098222B97",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalSpecializationPrimitiveImage",
+          "scratchSha256": "CD13E38F39C6339E52508C5A319083094347383F905CDA3C3B8A5D28FB768961",
+          "productionSha256": "5325A01B91956370ECE5B6C1651E6BD12083BBAECDB9D1C7519A6057F3BDFE5A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePolynomialCommutant",
+          "scratchSha256": "ABCADCD7E4809ED36588CF9C61403E99AE6950B6402B9A452BD30E4A9A5F438D",
+          "productionSha256": "EFE8CBF085B71534A84DDB1F83FA3A66BA7B1B19927CE415298A355D31137E75",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveOriginalTateGalois",
+          "scratchSha256": "7051528E351BE9E5E50A7B40B1CA9ED1C9F2DB60ECEE4B2A61EDF4A60C2167CF",
+          "productionSha256": "5AF9BFB581873A44B94C0CE8506877331ED27CDD7D4AC75BB38883D6EA921A31",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceImageSpecializationPairing",
+          "scratchSha256": "D3D871713D1ACED45E136FE64DD73B0A4201386C157BBD4DF032655E663EFE65",
+          "productionSha256": "ECB80A78694946A2A4BCFC8FE5827B5F5F37E715FB0E6E4740FB4D31C33680BE",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceAlternatingRankTwoDeterminant",
+          "scratchSha256": "1CB186BDEB04A7457E1B7220EA81BDB271F71A71ED6E25AF579DB16DC4DAF380",
+          "productionSha256": "2E90F6EC13B3EE6CD23C71ABA01DF9A3488419C4268619EE6EBD1FF958EA2F6F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceImageSpecializationDeterminant",
+          "scratchSha256": "093A35CFC1B54A93C0C1F082BE812771BBAD76BDE7DCF5DE5EFED23B8FBB9698",
+          "productionSha256": "D4FD26345AE854D8965CD9FDECCFC3C1444142CFA5DF2BEBA8FCE46238AF1CA3",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalSpecializationCyclotomicDeterminant",
+          "scratchSha256": "1805458115BEAC659F0FF11F5A44D6BDAC38BA5F84F739A40B3E99926D062876",
+          "productionSha256": "8144A1C74206BD32A46CA4FE68E8D5269B92179328C9E19A317FC714C18335C8",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalPrimitiveCyclotomicRealization",
+          "scratchSha256": "59974C32D7E2CAD7C651BEE1C2DBF606079489882FA3381F2EAE9FE6369AA697",
+          "productionSha256": "2DB68EC2B0D56EB33611ACF6D089347E87B62FD603EF924BB7A3842E97F65AB0",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceValuationFrobeniusRoots",
+          "scratchSha256": "EFDFC7CE019847CA89442ABAD71CE06F305D545C47721432AD6AAD0FB0175DF4",
+          "productionSha256": "602565FE3CDA21BD97053B7135FF2D7C7D145E519622D99FAD75E2C46D03D115",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceValuationCyclotomicFrobenius",
+          "scratchSha256": "9BBDA3A47EE24123A4946AE7BDEED28F617F52407693DD71EB2B1067BE100E14",
+          "productionSha256": "FBCF2CFD5F3E0CF5B5FB4E54C51138BE287DADDDE666FDB2A698DB352D7EBD01",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceRankTwoQuadraticTrace",
+          "scratchSha256": "7556A0CB93C3C941DBFA864A31C729A6822070684A815894465D4FF8FF9AAF0E",
+          "productionSha256": "1A2B8FF1B740B3ADAB3FE0BCFC631DE3A21A41338227DDBE7CB05B4E706CC8AE",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceCyclotomicFrobeniusCharpoly",
+          "scratchSha256": "B766FF6B75648BF63D1B5483139E1F1DE73660A5DFAF420EEC229379BFA5AC4F",
+          "productionSha256": "F60E904EDECAC0019C35B1F695EAF6AB88205901B5B3A40B16C04040CBB4062A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalPrimitiveFrobeniusCharpolyRealization",
+          "scratchSha256": "C04B66F95D44EF7D4C969125FEDFD752DE8CE5575DD6E7CBC21FD53D1A70C13C",
+          "productionSha256": "4C756466C46FE38123189D16F39BC566886B6A6263FF98F2BD5AF633B51FD6FD",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceMatrixIntertwinerCharpoly",
+          "scratchSha256": "62DC857DA3784EEBBA81D6DCFFB3F267B8800CFDAE77B35C95A39E31C77270B5",
+          "productionSha256": "F9BCBE79D163868A964BF143ECDEAE68F52D5CF8F16871718C45596BCD5C3975",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceIntegralMatrixCharpoly",
+          "scratchSha256": "B57C558CBD44B04AD9AD5B654A4CF98556AD75221496FDEC7F32AF2A280C194F",
+          "productionSha256": "603C5B5BE071575086864F7ADC7DD25937DB1D43F638B7B8C81D79BD1B145610",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceRankTwoCharpolyCoefficients",
+          "scratchSha256": "9DEDB95C41ACDA86F31E4ECB8FEB067FB3F02F13A00134D94D2DCC5B86D0B39E",
+          "productionSha256": "A7348F85899BF4979FA43B2B7ED7E858E731E6564FF58134ACB6802239A9E71F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalSpecializationFrobeniusCharpoly",
+          "scratchSha256": "B83D681047FD5FD104B781B7C19F2AB0AB6FB4C4C5464F621DB47C28AB0A21A7",
+          "productionSha256": "C87992655FF94A3F55F3388BC21D49E7D272393566C409F0464118FA0219EDB6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalResidualFrobeniusCharpoly",
+          "scratchSha256": "FC4EB525468041C1EBB8372D9D8B83FA868605A4E0F61DF01CF28B1A191CCF1D",
+          "productionSha256": "9126A0E5D7DD2F4F43432E71F22A3615A008F1FD2D17DE5E3B92799587E0CD4A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalResidualInertia",
+          "scratchSha256": "5D684229AF8E7A14EEF67A4E79F571F0B51617A09D734D1D646513FCD648D9A1",
+          "productionSha256": "78FBF5AA52F6F935730BE97FE6AF115DCEB79D90B10A1141B2D55DE54E9824AE",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalPrimitiveResidualFrobeniusRealization",
+          "scratchSha256": "250FA286282DDB044D4F4A928853D3C9264313D1EEA7A765E9CF66907843C5BA",
+          "productionSha256": "0D22FA32952E3C3CA4FF24BD67461E1F4AECD5740E286A6C20352759A9223C3D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalPrescribedTateSpecialization",
+          "scratchSha256": "257067B9EA1887DB976837A8F97EB86E1B1FE7BD784300FDF201278720140AE1",
+          "productionSha256": "257067B9EA1887DB976837A8F97EB86E1B1FE7BD784300FDF201278720140AE1",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalPrescribedResidualFrobenius",
+          "scratchSha256": "907B67CD1372992C154FE0DF0E26D3F2E75B0970B694CF66BAB3F75A376D6F19",
+          "productionSha256": "786F436BE85795D7BD9B2F0E96874B0EEB488E697C4273118575D5AF3020A676",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 74 distinct names from 74 exhaustive scratch checks are retained: 74 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Choosing the coefficient completion and residue embedding compatible with the source prescribed algebraic-integer reduction, the arithmetic quotient and norm-local comparisons, closure of the parabolic branch, final weight twist and support comparison, arithmetic automorphy and all-weight continuation remain required. The prescribed-embedding theorem explicitly assumes a genuine finite local coefficient field and valuation extension, to be discharged by the chosen completion. 16/20; DUB-17--20 OPEN."
+}
+```
+
+## Production actual all-weight original-support residual association pending full run - 25 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 8,193-module scope: all thirteen retained regressions, 51,937 exhaustive theorem checks, 23,692 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The global residual determinant identity, all-weight adic realization and required local, regularity and image properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. This closes residual association, not the full Galois or analytic endpoint. 16/20; DUB-17--20 OPEN.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedCompletionDependencyAudit11bProduction8193.log",
+      "sha256": "693B701CEB42068955F2C731EF2FBDB2416EEFA4CC3642C46263B98A51930454",
+      "requiredProofValueEdges": 31,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_algebraicInteger_reduction_residual_realization"
+      ],
+      "sourceSha256": "4264836023A36E73E355D7C4C94011BF8D9A29C3B9BB077897024CA8509E8BBD"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticResidualDependencyAudit11Production8193.log",
+      "sha256": "668BA4DE5476E472DBF562A8CCD235C9345EB0F0FE25A242C542B184C7845369",
+      "requiredProofValueEdges": 33,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_arithmetic_residual_realization"
+      ],
+      "sourceSha256": "D9EE4E5B80F8979684E3CFF75D506B00C605C1DC3D283B68CC88563E1C6CF846"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualGaloisDependencyAudit12Production8193.log",
+      "sha256": "54840C0EE08A66751129081E7F9195152D48049142E3C61028DAEFCBB128CF38",
+      "requiredProofValueEdges": 39,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_originalSupport_residualGalois_charP"
+      ],
+      "sourceSha256": "DD282677109B0BD86B6D3A6630A41CF931A2383F3AC09510CFED61990F442D25"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualAssociationProductionAudit8193.log",
+  "sha256": "5FBA9DC40FD7653E543B6626BB6B201420016FE4DA24298FC0FD534D4DCC1C2C",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-primitive-residual-association-production-build-8193.log",
+  "aggregateSha256": "E870CFCC8185574179B7703F73A2B161FEE743E6D9EF1493A983310022AE8E10",
+  "productionModules": 8193,
+  "incrementModules": 34,
+  "axiomChecks": 58,
+  "exhaustiveIncrementTheorems": 137,
+  "linterScopes": 34,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 137,
+  "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The original primitive cusp form, Fourier coefficients, actual local fields, arithmetic support, parabolic cohomology and weight twist retain their definitions. No source contract is weakened.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 137,
+    "scratchDistinct": 137,
+    "generatedNameRenamings": {
+      "_private.Dubon2026.SourceAbsoluteArithmeticDescent.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceAbsoluteArithmeticDescent": "_private.Dubon2026.SourceAbsoluteArithmeticDescent.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+      "_private.Dubon2026.SourceAbsoluteArithmeticDescent.0.Dubon2026.instIsGaloisRatSubtypeAlgebraicClosureMemIntermediateField_sourceAbsoluteArithmeticDescent": "_private.Dubon2026.SourceAbsoluteArithmeticDescent.0.Dubon2026.instIsGaloisRatSubtypeAlgebraicClosureMemIntermediateField_dubon2026",
+      "_private.Dubon2026.SourceAbsoluteArithmeticRestriction.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceAbsoluteArithmeticRestriction": "_private.Dubon2026.SourceAbsoluteArithmeticRestriction.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+      "_private.Dubon2026.SourceAbsoluteFiniteUnramified.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceAbsoluteFiniteUnramified": "_private.Dubon2026.SourceAbsoluteFiniteUnramified.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+      "_private.Dubon2026.SourceAbsoluteFiniteUnramified.0.Dubon2026.instIsGaloisRatSubtypeAlgebraicClosureMemIntermediateField_sourceAbsoluteFiniteUnramified": "_private.Dubon2026.SourceAbsoluteFiniteUnramified.0.Dubon2026.instIsGaloisRatSubtypeAlgebraicClosureMemIntermediateField_dubon2026",
+      "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_sourceAdicCoefficientResidueComparison._proof_1": "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_dubon2026._proof_1",
+      "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_sourceAdicCoefficientResidueComparison._proof_2": "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_dubon2026._proof_2",
+      "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_sourceAdicCoefficientResidueComparison._proof_3": "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_dubon2026._proof_3",
+      "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_sourceAdicCoefficientResidueComparison._proof_4": "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_dubon2026._proof_4",
+      "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_sourceAdicCoefficientResidueComparison._proof_5": "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_dubon2026._proof_5",
+      "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_sourceAdicCoefficientResidueComparison._proof_6": "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_dubon2026._proof_6",
+      "_private.Dubon2026.SourceArithmeticLocalEmbeddingExtension.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceArithmeticLocalEmbeddingExtension": "_private.Dubon2026.SourceArithmeticLocalEmbeddingExtension.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+      "_private.Dubon2026.SourceOriginalArithmeticResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsGaloisRatAlgebraicClosure_sourceOriginalArithmeticResidual": "_private.Dubon2026.SourceOriginalArithmeticResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsGaloisRatAlgebraicClosure_dubon2026",
+      "_private.Dubon2026.SourceOriginalDivisorArithmeticResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsGaloisRatAlgebraicClosure_sourceOriginalDivisorArithmeticResidual": "_private.Dubon2026.SourceOriginalDivisorArithmeticResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsGaloisRatAlgebraicClosure_dubon2026",
+      "_private.Dubon2026.SourceOriginalNormLocalResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsGaloisRatAlgebraicClosure_sourceOriginalNormLocalResidual": "_private.Dubon2026.SourceOriginalNormLocalResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsGaloisRatAlgebraicClosure_dubon2026",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual._proof_1": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime._proof_1",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual._proof_2": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime._proof_2",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual._proof_3": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime._proof_3",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instCharZeroAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instCharZeroAdicCompletionRingOfIntegersSourceReductionPrime",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instHasExtensionPadicAdicCompletionRingOfIntegersSourceReductionPrimeValueGroupWithZeroValuation_sourceOriginalPrescribedReductionResidual": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instHasExtensionPadicAdicCompletionRingOfIntegersSourceReductionPrimeValueGroupWithZeroValuation",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsModuleTopologyPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsModuleTopologyPadicAdicCompletionRingOfIntegersSourceReductionPrime",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsNonarchimedeanLocalFieldAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsNonarchimedeanLocalFieldAdicCompletionRingOfIntegersSourceReductionPrime",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedReductionResidual._proof_1": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation._proof_1",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedReductionResidual._proof_3": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation._proof_3",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedReductionResidual._proof_4": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation._proof_4",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedReductionResidual._proof_5": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation._proof_5",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual._proof_1": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_1",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual._proof_2": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_2",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual._proof_3": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_3",
+      "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourcePrescribedCompletionResidue._proof_1": "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_1",
+      "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourcePrescribedCompletionResidue._proof_2": "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_2",
+      "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourcePrescribedCompletionResidue._proof_3": "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_3",
+      "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourcePrescribedCompletionResidue._proof_4": "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_4",
+      "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourcePrescribedCompletionResidue._proof_5": "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_5",
+      "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourcePrescribedCompletionResidue._proof_6": "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_6",
+      "_private.Dubon2026.SourceRationalLocalValuation.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceRationalLocalValuation": "_private.Dubon2026.SourceRationalLocalValuation.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+      "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite._proof_1": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime._proof_1",
+      "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite._proof_2": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime._proof_2",
+      "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite._proof_3": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime._proof_3",
+      "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite._proof_4": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime._proof_4",
+      "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite._proof_5": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime._proof_5",
+      "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite._proof_6": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime._proof_6",
+      "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instContinuousSMulAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instContinuousSMulAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime",
+      "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instIsScalarTowerRatAdicCompletionRingOfIntegersCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instIsScalarTowerRatAdicCompletionRingOfIntegersCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime",
+      "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instLiesOverRingOfIntegersRatAsIdealSourceReductionPrimeCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrime_sourceReductionCompletionFinite": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instLiesOverRingOfIntegersRatAsIdealSourceReductionPrimeCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrime",
+      "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceReductionCompletionLocalStructures._proof_1": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime._proof_1",
+      "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceReductionCompletionLocalStructures._proof_2": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime._proof_2",
+      "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceReductionCompletionLocalStructures._proof_3": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime._proof_3",
+      "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instLiesOverRingOfIntegersRatAsIdealSourceReductionPrimeCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrime_sourceReductionCompletionLocalStructures": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instLiesOverRingOfIntegersRatAsIdealSourceReductionPrimeCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrime",
+      "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourceReductionCompletionLocalStructures._proof_1": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_1",
+      "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourceReductionCompletionLocalStructures._proof_2": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_2",
+      "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourceReductionCompletionLocalStructures._proof_3": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_3",
+      "_private.Dubon2026.SourceReductionCompletionPadicMap.0.Dubon2026.instLiesOverRingOfIntegersRatAsIdealSourceReductionPrimeCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrime_sourceReductionCompletionPadicMap": "_private.Dubon2026.SourceReductionCompletionPadicMap.0.Dubon2026.instLiesOverRingOfIntegersRatAsIdealSourceReductionPrimeCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrime"
+    },
+    "productionFocused": 137,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourcePrescribedReductionPrime",
+          "SourceAdicCoefficientResidueComparison",
+          "SourcePrescribedCompletionResidue",
+          "SourceReductionCompletionBasePrime",
+          "SourceReductionCompletionPadicMap",
+          "SourceReductionCompletionFinite",
+          "SourcePadicCompletionValuation",
+          "SourceReductionCompletionLocalStructures",
+          "SourceOriginalPrescribedReductionResidual",
+          "SourceOriginalExactReductionResidual",
+          "SourceOriginalAlgebraicIntegerResidual"
+        ],
+        "count": 77,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualAssociationScratchOwnership568For8193.log",
+          "sha256": "D80B404AA917F76C05B133A04CE03A43D1A774331DD86AADD162FFD768801164",
+          "sourceSha256": "3A94C375A6D39C79C476F102967281ADAF406D0774A7EB84CC5EB47D9603F125"
+        }
+      },
+      {
+        "modules": [
+          "SourceValuationResidualAction",
+          "SourceNormValuationRestriction",
+          "SourceRationalLocalValuation",
+          "SourceOriginalNormLocalResidual",
+          "SourceNumberFieldNormInertiaLift",
+          "SourceAbsoluteFiniteUnramified",
+          "SourceNumberFieldSupportRamification",
+          "SourceAbsoluteArithmeticRestriction",
+          "SourceAbsoluteArithmeticDescent",
+          "SourceArithmeticLocalEmbeddingExtension",
+          "SourceOriginalArithmeticResidual"
+        ],
+        "count": 38,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualAssociationScratchOwnership570For8193.log",
+          "sha256": "E6F05521432B5993D98F9849C44B6D2CFED44E97D582871EB151A6C5645C8C56",
+          "sourceSha256": "013AE6335C7383808301AED38FFB79A1923F1810E5825DBC82937FEEF52A8ED3"
+        }
+      },
+      {
+        "modules": [
+          "SourceWeightTwoDegeneracyAdjoint",
+          "SourceWeightTwoEigenLevelDescent",
+          "SourceWeightTwoNewEigenNormalization",
+          "SourceParabolicPrimitiveDivisor",
+          "SourceArithmeticSupportInflationValues",
+          "SourceOriginalDivisorArithmeticResidual",
+          "SourceParabolicArithmeticResidual",
+          "SourceResidualGaloisRealization",
+          "SourcePrimitiveWeightTwoGalois",
+          "SourcePrimitiveRestoredGalois",
+          "SourcePrimitiveOriginalResidualGalois",
+          "SourcePrimitiveResidualGaloisCharP"
+        ],
+        "count": 22,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualAssociationScratchOwnership571For8193.log",
+          "sha256": "36EBD5CAB7FB54149163F3FBB94BC5DBC4BDB8DFAA36D4F7C3DD5FD34AC1EC92",
+          "sourceSha256": "7E0308316CA53CB088B8B5F786097A608F55F7B6728C6EC0EB7A6263529CB8F2"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualAssociationOwnership8193.log",
+      "sha256": "BA2A6B2528054BA8274FFEA8893AC492997498D77B76F00437772AE39C687E5A",
+      "sourceSha256": "AF0D4A2FCA4470F7F557CCAB379291AC4B91F8E555A38E7C80820D84BD311B45"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-152732-013.log",
+      "sha256": "5FAB3F34E9E2184BF145AAD0B30CB5DAFFF74229E6E490E33E50F37AE975AAE6"
+    },
+    "renameEvidence": {
+      "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 34 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+      "sourceChecks": [
+        {
+          "module": "SourcePrescribedReductionPrime",
+          "scratchSha256": "15665F94824911A5CE79890E906835AB43A89EEBAFFD457119EC2780048409A3",
+          "productionSha256": "15665F94824911A5CE79890E906835AB43A89EEBAFFD457119EC2780048409A3",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceAdicCoefficientResidueComparison",
+          "scratchSha256": "D815629C322A21A2A79278CD8B4D1DF86A2ADF82646693F9F34658B6DE26F7E6",
+          "productionSha256": "D815629C322A21A2A79278CD8B4D1DF86A2ADF82646693F9F34658B6DE26F7E6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrescribedCompletionResidue",
+          "scratchSha256": "8464B555CE0ED7DE6CED2F4D76ECD9B3ABE0FF83E82FABFDA652E16D297052AD",
+          "productionSha256": "E91926A3AD4BF2CEC7ED7AFBFB05A356D12A8C1BC78CDBF65A5EF1A922050AEC",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceReductionCompletionBasePrime",
+          "scratchSha256": "150F99A5B9DC276596D798AD99B73248BAA48950143948BE7539CF7BC6CAFBE4",
+          "productionSha256": "BBC558FBC3CA275E7159EFB356A31689997559DC17037D58C1ED8AD424E1A272",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceReductionCompletionPadicMap",
+          "scratchSha256": "2F11A1502300B6403BF5D224432B27F429E888FE7108B48C554C57B730B6A9E9",
+          "productionSha256": "0F25E31738AB9081D71369824E7483BF9562AFFDD2A7F513804AA1E782D07715",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceReductionCompletionFinite",
+          "scratchSha256": "5C166ABF639EEBE07C95ABE09686D28AA1C15F26FF4537368C6E575C2AE686C2",
+          "productionSha256": "4C121AB57ADD41312659936FC14547414F906D7A13C24B25AF59206E76B979B1",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePadicCompletionValuation",
+          "scratchSha256": "146F370D05F4B3AF9AD4E7A1F34C08523B2ED950998531E20451F5301480FB4F",
+          "productionSha256": "EFA48675FE5E93E8CF7F6250E238BAC2AC06D36EAACC6CA3B04EBC559C019FC6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceReductionCompletionLocalStructures",
+          "scratchSha256": "45E6ED484C161E8946A9A87A4973DF6722BBB7C4462D6D65292C998F87A057EB",
+          "productionSha256": "65D8D0C326CA3A43B5FDDA4D3C63AEE5807D95339E676279728EF07DBC9CECE5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalPrescribedReductionResidual",
+          "scratchSha256": "9C91569C6F1DEF22CB77522855ADA5371637D4B0076930413CF7C89736069E35",
+          "productionSha256": "B21B04309D48A0EE436F4E7E8755DEF509C47212ECEE49B6FC3313D4A2D29C6C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalExactReductionResidual",
+          "scratchSha256": "4487D0E4F527DDCCC8CE020FDFB2A5931D25CB1F9F7E6AA5901E8B101A12F58F",
+          "productionSha256": "C5A08A54B859259FA6C8C954980B98D29333BCDCCB2D132077E6CBDA64B673FC",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalAlgebraicIntegerResidual",
+          "scratchSha256": "586C53C9FD3C5686D5537D8262B98D4717E8BF1A7A2EB752F7987BB79329F864",
+          "productionSha256": "58209DC3968D9EC85D10F5489A3518D686CA4C95D120FE568D7AC966801EFEDA",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceValuationResidualAction",
+          "scratchSha256": "94A29E896DC4905654A0135D8E1E22D5E77040EE1ABE426A20B01BF6BD70C3A1",
+          "productionSha256": "94A29E896DC4905654A0135D8E1E22D5E77040EE1ABE426A20B01BF6BD70C3A1",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceNormValuationRestriction",
+          "scratchSha256": "100D63D93A59237C17D73E3480E744779486F48C5CFA6F173FE429B498912ED7",
+          "productionSha256": "2B8C73CFFE01A679B67868CB16915EA25BC2BE7F0315C5C9FBC21D6BEC406227",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceRationalLocalValuation",
+          "scratchSha256": "783BE58DBEFD8C841B680CFCBA21E0564C379C14685785DDE1C17B389883A64A",
+          "productionSha256": "C82F71D69ADBF6859BBA075CCCE6E1B617034E64DDBB6C45BDB726986C588D7D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalNormLocalResidual",
+          "scratchSha256": "7DF1AC5CE7AE8C9CBC54CEB38FE8AB45AA9B8ED603CDAA1E2EFF75D783CD4DAC",
+          "productionSha256": "863FD12BB17E18424B6ABE781241F23FB9BE6805B38D6AEDC28B5996F1770F6D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceNumberFieldNormInertiaLift",
+          "scratchSha256": "46A9BDD26F86B51FF0536C8364BE8DFA8D06A5A2D36ED9E69309678FD7A45A3A",
+          "productionSha256": "46A9BDD26F86B51FF0536C8364BE8DFA8D06A5A2D36ED9E69309678FD7A45A3A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceAbsoluteFiniteUnramified",
+          "scratchSha256": "77ACDD60BC30C73AF41F9DB6CAFAC3A6A258667B2C37BD2D7A7D1BC457D6A9DF",
+          "productionSha256": "E5462CF21B2DF3F72B12BE1A776467F40EEA0DF24EE1CEF78CDB14FCB01E2BFD",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceNumberFieldSupportRamification",
+          "scratchSha256": "E8A6889C31325464CBE761C545F4A6A684BAD568BE49A2E9CDB65E5F78768B9D",
+          "productionSha256": "7963B927D80C257DE9CC91989C816249193F96A5C68A0D7D7082DA2413DA1E07",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceAbsoluteArithmeticRestriction",
+          "scratchSha256": "598AECD9E8B6C72B1B22B005AF7DB235973C482CEE64E2BB8366E5BC942F2B3F",
+          "productionSha256": "07CDDC97E8807EC33C2F162310413AEA8A17B1138586AAD14472FA1875EE2CC3",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceAbsoluteArithmeticDescent",
+          "scratchSha256": "E78024EB072497355D08ECE5537515E075D26A348D0AFA3BB1FD8930CF4D84A1",
+          "productionSha256": "CB921DE5B3A6A37ED712467C2753F5ED179623A7A6F377CB85B4D97303E3D054",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceArithmeticLocalEmbeddingExtension",
+          "scratchSha256": "6AD7CAFC9D4A896F8E75E1C92963BDA691D9BE768665C54EA8BED761191D42AB",
+          "productionSha256": "B89D60BB84745523D7B11ECB2FAD13DFB0D8BE16668998B88D1732262797F6CD",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalArithmeticResidual",
+          "scratchSha256": "2A85E4C9DC83289E4F5C82038F83BC958036C687A3BE133A4EF4F5546D7D39B4",
+          "productionSha256": "561661B901F84504DCADD2838A0FDADAB0A4158828369FAD758814FEF746696D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeightTwoDegeneracyAdjoint",
+          "scratchSha256": "C9EBB9A51ED5B02F2DF6328B6D8F5F1498D64533671D660BAE953D53C4406B1B",
+          "productionSha256": "C9EBB9A51ED5B02F2DF6328B6D8F5F1498D64533671D660BAE953D53C4406B1B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeightTwoEigenLevelDescent",
+          "scratchSha256": "E7E2E9E7E9BCBE57B8ACF78F7B31F5A7D354FE4F8630F0627B1F4BAE51D9D608",
+          "productionSha256": "03DF950F3953387CF73DD0EB8B02D601DFF9C85FEC0C0ACC5B497FA469CD7F7B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeightTwoNewEigenNormalization",
+          "scratchSha256": "DCA9680D30CBC4242644B93F29C9656A3194C33BA0F424B25ED0FD918A1711CC",
+          "productionSha256": "DCA9680D30CBC4242644B93F29C9656A3194C33BA0F424B25ED0FD918A1711CC",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceParabolicPrimitiveDivisor",
+          "scratchSha256": "DB387DE7195521AD240A04FD14676086EF2C394512852B2685C06CCA6FEA7BD9",
+          "productionSha256": "B972B563174568B2FBEFEC5B6453308BF0CF9647249608B044CB0E36FAEA7DEE",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceArithmeticSupportInflationValues",
+          "scratchSha256": "24429E9B0A79A539D3BD7727E098E445FB195B9F208C26086E89DAB8D8567E62",
+          "productionSha256": "24429E9B0A79A539D3BD7727E098E445FB195B9F208C26086E89DAB8D8567E62",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalDivisorArithmeticResidual",
+          "scratchSha256": "D077A8AA0D9C024818C4AE00E4F31D66D0BF993F243E958C792C1916503F4998",
+          "productionSha256": "106C5F7A39E60CA651D73B2DCF0B9F70021240919DE631196A3A5BBD4E7091B6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceParabolicArithmeticResidual",
+          "scratchSha256": "4AD10AE43E84DE7CF88AA6C6D20B357E3850799A8746EEF22A54A784F4E6B455",
+          "productionSha256": "B57F612F67EEBD406C66CEBD9EF1C4DBBC424BEBE4B494F09E75B34326B2BB2E",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceResidualGaloisRealization",
+          "scratchSha256": "71491C7FAC3CA431CEE900A960457F3C0AC93278E41C283B31D2B6EAF7FE6706",
+          "productionSha256": "9F08C53D457D554DF7A99ACB32D44AA092E5BE83C5C315FB179D61D049864D89",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveWeightTwoGalois",
+          "scratchSha256": "8627C760A6DD5F9E5D0747B6D009D39B74C7B8A5A2BE77F538C97FDBACF27188",
+          "productionSha256": "A12BA0C927A56D8DB9B18F46368FEBE308E28ED85E30D04DAC72F97653DB7670",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveRestoredGalois",
+          "scratchSha256": "401A070AAE29A7BD3FEFF724378C3F5BADEBC0C172F953975C8CAA9422792D47",
+          "productionSha256": "4C32273A5B73F9F8F9061CDE3EFE19C155E2E657A7E2F8C5D2988E55559FE536",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveOriginalResidualGalois",
+          "scratchSha256": "F9725CC304F494F977E7C463827FA00F118D0352339054EA4E8BCD50B6E52A44",
+          "productionSha256": "F164C8F8A3A90645ECB58390E8FB3FC12A3C3EB93B48C9BC15D79DB309CA6FC3",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveResidualGaloisCharP",
+          "scratchSha256": "9FF5AD8AC5D0CE83E801E98883256DBBF47773F4E93B32F87410B81B9FF09BFC",
+          "productionSha256": "DA16BAB8D7A9E70369DCE4D2862F07E79A85819D5C1EE79CAFEA6B88D7C02FA8",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 137 distinct names from 137 exhaustive scratch checks are retained: 137 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "The global residual determinant identity, all-weight adic realization and required local, regularity and image properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. This closes residual association, not the full Galois or analytic endpoint. 16/20; DUB-17--20 OPEN."
+}
+```
+
+## Verified actual all-weight original-support residual association - 25 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 8,193-module scope: all thirteen retained regressions, 51,937 exhaustive theorem checks, 23,692 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The global residual determinant identity, all-weight adic realization and required local, regularity and image properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. This closes residual association, not the full Galois or analytic endpoint. 16/20; DUB-17--20 OPEN.
+
+```json
+{
+  "recordedUTC": "2026-10-26T02:06:18.154677+00:00",
+  "log": "logs/dubon-build-20261025-173632-424.log",
+  "sha256": "F0EE64665BE40A7DB9ADF222028A9003B16A175B94FADB1E3E59EF40A9AB0883",
+  "bytes": 13351411,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 8193,
+  "projectTheorems": 51937,
+  "registeredConsumers": 23692,
+  "registeredConstructions": 2220,
+  "declarations": 31858,
+  "generated": 32907,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261025_172932.log",
+  "foundationSha256": "508904F8CB905B21791BCE0894EC4E0D31FB78EEC90D3745E2DA79161919DEA0",
+  "countReconciliation": {
+    "previousTheorems": 51801,
+    "focusedTheorems": 137,
+    "sharedGeneratedNames": [
+      "Dubon2026.cuspNewspace.congr_simp"
+    ],
+    "addedTheorems": 136,
+    "removedTheorems": [],
+    "upstreamOwnedGeneratedNames": [],
+    "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualAssociationGlobalOwnership8193.log",
+    "globalOwnershipSha256": "60075B7F7B937188A5728C832383E83A8E4E6EB6335FBC2AC42800E34153C654",
+    "globalOwnershipSourceSha256": "C302D76BC16D93F3E8E093DFFA9A6643D99860EC40A3C50CA79B9A8974DF32EE",
+    "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualAssociationOwnership8193.log",
+    "ownershipSha256": "BA2A6B2528054BA8274FFEA8893AC492997498D77B76F00437772AE39C687E5A"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 137,
+    "scratchDistinct": 137,
+    "generatedNameRenamings": {
+      "_private.Dubon2026.SourceAbsoluteArithmeticDescent.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceAbsoluteArithmeticDescent": "_private.Dubon2026.SourceAbsoluteArithmeticDescent.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+      "_private.Dubon2026.SourceAbsoluteArithmeticDescent.0.Dubon2026.instIsGaloisRatSubtypeAlgebraicClosureMemIntermediateField_sourceAbsoluteArithmeticDescent": "_private.Dubon2026.SourceAbsoluteArithmeticDescent.0.Dubon2026.instIsGaloisRatSubtypeAlgebraicClosureMemIntermediateField_dubon2026",
+      "_private.Dubon2026.SourceAbsoluteArithmeticRestriction.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceAbsoluteArithmeticRestriction": "_private.Dubon2026.SourceAbsoluteArithmeticRestriction.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+      "_private.Dubon2026.SourceAbsoluteFiniteUnramified.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceAbsoluteFiniteUnramified": "_private.Dubon2026.SourceAbsoluteFiniteUnramified.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+      "_private.Dubon2026.SourceAbsoluteFiniteUnramified.0.Dubon2026.instIsGaloisRatSubtypeAlgebraicClosureMemIntermediateField_sourceAbsoluteFiniteUnramified": "_private.Dubon2026.SourceAbsoluteFiniteUnramified.0.Dubon2026.instIsGaloisRatSubtypeAlgebraicClosureMemIntermediateField_dubon2026",
+      "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_sourceAdicCoefficientResidueComparison._proof_1": "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_dubon2026._proof_1",
+      "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_sourceAdicCoefficientResidueComparison._proof_2": "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_dubon2026._proof_2",
+      "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_sourceAdicCoefficientResidueComparison._proof_3": "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_dubon2026._proof_3",
+      "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_sourceAdicCoefficientResidueComparison._proof_4": "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_dubon2026._proof_4",
+      "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_sourceAdicCoefficientResidueComparison._proof_5": "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_dubon2026._proof_5",
+      "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_sourceAdicCoefficientResidueComparison._proof_6": "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_dubon2026._proof_6",
+      "_private.Dubon2026.SourceArithmeticLocalEmbeddingExtension.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceArithmeticLocalEmbeddingExtension": "_private.Dubon2026.SourceArithmeticLocalEmbeddingExtension.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+      "_private.Dubon2026.SourceOriginalArithmeticResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsGaloisRatAlgebraicClosure_sourceOriginalArithmeticResidual": "_private.Dubon2026.SourceOriginalArithmeticResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsGaloisRatAlgebraicClosure_dubon2026",
+      "_private.Dubon2026.SourceOriginalDivisorArithmeticResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsGaloisRatAlgebraicClosure_sourceOriginalDivisorArithmeticResidual": "_private.Dubon2026.SourceOriginalDivisorArithmeticResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsGaloisRatAlgebraicClosure_dubon2026",
+      "_private.Dubon2026.SourceOriginalNormLocalResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsGaloisRatAlgebraicClosure_sourceOriginalNormLocalResidual": "_private.Dubon2026.SourceOriginalNormLocalResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsGaloisRatAlgebraicClosure_dubon2026",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual._proof_1": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime._proof_1",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual._proof_2": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime._proof_2",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual._proof_3": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime._proof_3",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instCharZeroAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instCharZeroAdicCompletionRingOfIntegersSourceReductionPrime",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instHasExtensionPadicAdicCompletionRingOfIntegersSourceReductionPrimeValueGroupWithZeroValuation_sourceOriginalPrescribedReductionResidual": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instHasExtensionPadicAdicCompletionRingOfIntegersSourceReductionPrimeValueGroupWithZeroValuation",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsModuleTopologyPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsModuleTopologyPadicAdicCompletionRingOfIntegersSourceReductionPrime",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsNonarchimedeanLocalFieldAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsNonarchimedeanLocalFieldAdicCompletionRingOfIntegersSourceReductionPrime",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedReductionResidual._proof_1": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation._proof_1",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedReductionResidual._proof_3": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation._proof_3",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedReductionResidual._proof_4": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation._proof_4",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedReductionResidual._proof_5": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation._proof_5",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual._proof_1": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_1",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual._proof_2": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_2",
+      "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual._proof_3": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_3",
+      "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourcePrescribedCompletionResidue._proof_1": "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_1",
+      "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourcePrescribedCompletionResidue._proof_2": "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_2",
+      "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourcePrescribedCompletionResidue._proof_3": "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_3",
+      "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourcePrescribedCompletionResidue._proof_4": "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_4",
+      "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourcePrescribedCompletionResidue._proof_5": "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_5",
+      "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourcePrescribedCompletionResidue._proof_6": "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_6",
+      "_private.Dubon2026.SourceRationalLocalValuation.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceRationalLocalValuation": "_private.Dubon2026.SourceRationalLocalValuation.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+      "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite._proof_1": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime._proof_1",
+      "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite._proof_2": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime._proof_2",
+      "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite._proof_3": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime._proof_3",
+      "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite._proof_4": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime._proof_4",
+      "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite._proof_5": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime._proof_5",
+      "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite._proof_6": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime._proof_6",
+      "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instContinuousSMulAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instContinuousSMulAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime",
+      "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instIsScalarTowerRatAdicCompletionRingOfIntegersCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instIsScalarTowerRatAdicCompletionRingOfIntegersCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime",
+      "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instLiesOverRingOfIntegersRatAsIdealSourceReductionPrimeCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrime_sourceReductionCompletionFinite": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instLiesOverRingOfIntegersRatAsIdealSourceReductionPrimeCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrime",
+      "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceReductionCompletionLocalStructures._proof_1": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime._proof_1",
+      "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceReductionCompletionLocalStructures._proof_2": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime._proof_2",
+      "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceReductionCompletionLocalStructures._proof_3": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime._proof_3",
+      "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instLiesOverRingOfIntegersRatAsIdealSourceReductionPrimeCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrime_sourceReductionCompletionLocalStructures": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instLiesOverRingOfIntegersRatAsIdealSourceReductionPrimeCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrime",
+      "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourceReductionCompletionLocalStructures._proof_1": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_1",
+      "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourceReductionCompletionLocalStructures._proof_2": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_2",
+      "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourceReductionCompletionLocalStructures._proof_3": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_3",
+      "_private.Dubon2026.SourceReductionCompletionPadicMap.0.Dubon2026.instLiesOverRingOfIntegersRatAsIdealSourceReductionPrimeCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrime_sourceReductionCompletionPadicMap": "_private.Dubon2026.SourceReductionCompletionPadicMap.0.Dubon2026.instLiesOverRingOfIntegersRatAsIdealSourceReductionPrimeCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrime"
+    },
+    "productionFocused": 137,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourcePrescribedReductionPrime",
+          "SourceAdicCoefficientResidueComparison",
+          "SourcePrescribedCompletionResidue",
+          "SourceReductionCompletionBasePrime",
+          "SourceReductionCompletionPadicMap",
+          "SourceReductionCompletionFinite",
+          "SourcePadicCompletionValuation",
+          "SourceReductionCompletionLocalStructures",
+          "SourceOriginalPrescribedReductionResidual",
+          "SourceOriginalExactReductionResidual",
+          "SourceOriginalAlgebraicIntegerResidual"
+        ],
+        "count": 77,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualAssociationScratchOwnership568For8193.log",
+          "sha256": "D80B404AA917F76C05B133A04CE03A43D1A774331DD86AADD162FFD768801164",
+          "sourceSha256": "3A94C375A6D39C79C476F102967281ADAF406D0774A7EB84CC5EB47D9603F125"
+        }
+      },
+      {
+        "modules": [
+          "SourceValuationResidualAction",
+          "SourceNormValuationRestriction",
+          "SourceRationalLocalValuation",
+          "SourceOriginalNormLocalResidual",
+          "SourceNumberFieldNormInertiaLift",
+          "SourceAbsoluteFiniteUnramified",
+          "SourceNumberFieldSupportRamification",
+          "SourceAbsoluteArithmeticRestriction",
+          "SourceAbsoluteArithmeticDescent",
+          "SourceArithmeticLocalEmbeddingExtension",
+          "SourceOriginalArithmeticResidual"
+        ],
+        "count": 38,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualAssociationScratchOwnership570For8193.log",
+          "sha256": "E6F05521432B5993D98F9849C44B6D2CFED44E97D582871EB151A6C5645C8C56",
+          "sourceSha256": "013AE6335C7383808301AED38FFB79A1923F1810E5825DBC82937FEEF52A8ED3"
+        }
+      },
+      {
+        "modules": [
+          "SourceWeightTwoDegeneracyAdjoint",
+          "SourceWeightTwoEigenLevelDescent",
+          "SourceWeightTwoNewEigenNormalization",
+          "SourceParabolicPrimitiveDivisor",
+          "SourceArithmeticSupportInflationValues",
+          "SourceOriginalDivisorArithmeticResidual",
+          "SourceParabolicArithmeticResidual",
+          "SourceResidualGaloisRealization",
+          "SourcePrimitiveWeightTwoGalois",
+          "SourcePrimitiveRestoredGalois",
+          "SourcePrimitiveOriginalResidualGalois",
+          "SourcePrimitiveResidualGaloisCharP"
+        ],
+        "count": 22,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualAssociationScratchOwnership571For8193.log",
+          "sha256": "36EBD5CAB7FB54149163F3FBB94BC5DBC4BDB8DFAA36D4F7C3DD5FD34AC1EC92",
+          "sourceSha256": "7E0308316CA53CB088B8B5F786097A608F55F7B6728C6EC0EB7A6263529CB8F2"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualAssociationOwnership8193.log",
+      "sha256": "BA2A6B2528054BA8274FFEA8893AC492997498D77B76F00437772AE39C687E5A",
+      "sourceSha256": "AF0D4A2FCA4470F7F557CCAB379291AC4B91F8E555A38E7C80820D84BD311B45"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-152732-013.log",
+      "sha256": "5FAB3F34E9E2184BF145AAD0B30CB5DAFFF74229E6E490E33E50F37AE975AAE6"
+    },
+    "renameEvidence": {
+      "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 34 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+      "sourceChecks": [
+        {
+          "module": "SourcePrescribedReductionPrime",
+          "scratchSha256": "15665F94824911A5CE79890E906835AB43A89EEBAFFD457119EC2780048409A3",
+          "productionSha256": "15665F94824911A5CE79890E906835AB43A89EEBAFFD457119EC2780048409A3",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceAdicCoefficientResidueComparison",
+          "scratchSha256": "D815629C322A21A2A79278CD8B4D1DF86A2ADF82646693F9F34658B6DE26F7E6",
+          "productionSha256": "D815629C322A21A2A79278CD8B4D1DF86A2ADF82646693F9F34658B6DE26F7E6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrescribedCompletionResidue",
+          "scratchSha256": "8464B555CE0ED7DE6CED2F4D76ECD9B3ABE0FF83E82FABFDA652E16D297052AD",
+          "productionSha256": "E91926A3AD4BF2CEC7ED7AFBFB05A356D12A8C1BC78CDBF65A5EF1A922050AEC",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceReductionCompletionBasePrime",
+          "scratchSha256": "150F99A5B9DC276596D798AD99B73248BAA48950143948BE7539CF7BC6CAFBE4",
+          "productionSha256": "BBC558FBC3CA275E7159EFB356A31689997559DC17037D58C1ED8AD424E1A272",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceReductionCompletionPadicMap",
+          "scratchSha256": "2F11A1502300B6403BF5D224432B27F429E888FE7108B48C554C57B730B6A9E9",
+          "productionSha256": "0F25E31738AB9081D71369824E7483BF9562AFFDD2A7F513804AA1E782D07715",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceReductionCompletionFinite",
+          "scratchSha256": "5C166ABF639EEBE07C95ABE09686D28AA1C15F26FF4537368C6E575C2AE686C2",
+          "productionSha256": "4C121AB57ADD41312659936FC14547414F906D7A13C24B25AF59206E76B979B1",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePadicCompletionValuation",
+          "scratchSha256": "146F370D05F4B3AF9AD4E7A1F34C08523B2ED950998531E20451F5301480FB4F",
+          "productionSha256": "EFA48675FE5E93E8CF7F6250E238BAC2AC06D36EAACC6CA3B04EBC559C019FC6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceReductionCompletionLocalStructures",
+          "scratchSha256": "45E6ED484C161E8946A9A87A4973DF6722BBB7C4462D6D65292C998F87A057EB",
+          "productionSha256": "65D8D0C326CA3A43B5FDDA4D3C63AEE5807D95339E676279728EF07DBC9CECE5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalPrescribedReductionResidual",
+          "scratchSha256": "9C91569C6F1DEF22CB77522855ADA5371637D4B0076930413CF7C89736069E35",
+          "productionSha256": "B21B04309D48A0EE436F4E7E8755DEF509C47212ECEE49B6FC3313D4A2D29C6C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalExactReductionResidual",
+          "scratchSha256": "4487D0E4F527DDCCC8CE020FDFB2A5931D25CB1F9F7E6AA5901E8B101A12F58F",
+          "productionSha256": "C5A08A54B859259FA6C8C954980B98D29333BCDCCB2D132077E6CBDA64B673FC",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalAlgebraicIntegerResidual",
+          "scratchSha256": "586C53C9FD3C5686D5537D8262B98D4717E8BF1A7A2EB752F7987BB79329F864",
+          "productionSha256": "58209DC3968D9EC85D10F5489A3518D686CA4C95D120FE568D7AC966801EFEDA",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceValuationResidualAction",
+          "scratchSha256": "94A29E896DC4905654A0135D8E1E22D5E77040EE1ABE426A20B01BF6BD70C3A1",
+          "productionSha256": "94A29E896DC4905654A0135D8E1E22D5E77040EE1ABE426A20B01BF6BD70C3A1",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceNormValuationRestriction",
+          "scratchSha256": "100D63D93A59237C17D73E3480E744779486F48C5CFA6F173FE429B498912ED7",
+          "productionSha256": "2B8C73CFFE01A679B67868CB16915EA25BC2BE7F0315C5C9FBC21D6BEC406227",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceRationalLocalValuation",
+          "scratchSha256": "783BE58DBEFD8C841B680CFCBA21E0564C379C14685785DDE1C17B389883A64A",
+          "productionSha256": "C82F71D69ADBF6859BBA075CCCE6E1B617034E64DDBB6C45BDB726986C588D7D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalNormLocalResidual",
+          "scratchSha256": "7DF1AC5CE7AE8C9CBC54CEB38FE8AB45AA9B8ED603CDAA1E2EFF75D783CD4DAC",
+          "productionSha256": "863FD12BB17E18424B6ABE781241F23FB9BE6805B38D6AEDC28B5996F1770F6D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceNumberFieldNormInertiaLift",
+          "scratchSha256": "46A9BDD26F86B51FF0536C8364BE8DFA8D06A5A2D36ED9E69309678FD7A45A3A",
+          "productionSha256": "46A9BDD26F86B51FF0536C8364BE8DFA8D06A5A2D36ED9E69309678FD7A45A3A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceAbsoluteFiniteUnramified",
+          "scratchSha256": "77ACDD60BC30C73AF41F9DB6CAFAC3A6A258667B2C37BD2D7A7D1BC457D6A9DF",
+          "productionSha256": "E5462CF21B2DF3F72B12BE1A776467F40EEA0DF24EE1CEF78CDB14FCB01E2BFD",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceNumberFieldSupportRamification",
+          "scratchSha256": "E8A6889C31325464CBE761C545F4A6A684BAD568BE49A2E9CDB65E5F78768B9D",
+          "productionSha256": "7963B927D80C257DE9CC91989C816249193F96A5C68A0D7D7082DA2413DA1E07",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceAbsoluteArithmeticRestriction",
+          "scratchSha256": "598AECD9E8B6C72B1B22B005AF7DB235973C482CEE64E2BB8366E5BC942F2B3F",
+          "productionSha256": "07CDDC97E8807EC33C2F162310413AEA8A17B1138586AAD14472FA1875EE2CC3",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceAbsoluteArithmeticDescent",
+          "scratchSha256": "E78024EB072497355D08ECE5537515E075D26A348D0AFA3BB1FD8930CF4D84A1",
+          "productionSha256": "CB921DE5B3A6A37ED712467C2753F5ED179623A7A6F377CB85B4D97303E3D054",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceArithmeticLocalEmbeddingExtension",
+          "scratchSha256": "6AD7CAFC9D4A896F8E75E1C92963BDA691D9BE768665C54EA8BED761191D42AB",
+          "productionSha256": "B89D60BB84745523D7B11ECB2FAD13DFB0D8BE16668998B88D1732262797F6CD",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalArithmeticResidual",
+          "scratchSha256": "2A85E4C9DC83289E4F5C82038F83BC958036C687A3BE133A4EF4F5546D7D39B4",
+          "productionSha256": "561661B901F84504DCADD2838A0FDADAB0A4158828369FAD758814FEF746696D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeightTwoDegeneracyAdjoint",
+          "scratchSha256": "C9EBB9A51ED5B02F2DF6328B6D8F5F1498D64533671D660BAE953D53C4406B1B",
+          "productionSha256": "C9EBB9A51ED5B02F2DF6328B6D8F5F1498D64533671D660BAE953D53C4406B1B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeightTwoEigenLevelDescent",
+          "scratchSha256": "E7E2E9E7E9BCBE57B8ACF78F7B31F5A7D354FE4F8630F0627B1F4BAE51D9D608",
+          "productionSha256": "03DF950F3953387CF73DD0EB8B02D601DFF9C85FEC0C0ACC5B497FA469CD7F7B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeightTwoNewEigenNormalization",
+          "scratchSha256": "DCA9680D30CBC4242644B93F29C9656A3194C33BA0F424B25ED0FD918A1711CC",
+          "productionSha256": "DCA9680D30CBC4242644B93F29C9656A3194C33BA0F424B25ED0FD918A1711CC",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceParabolicPrimitiveDivisor",
+          "scratchSha256": "DB387DE7195521AD240A04FD14676086EF2C394512852B2685C06CCA6FEA7BD9",
+          "productionSha256": "B972B563174568B2FBEFEC5B6453308BF0CF9647249608B044CB0E36FAEA7DEE",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceArithmeticSupportInflationValues",
+          "scratchSha256": "24429E9B0A79A539D3BD7727E098E445FB195B9F208C26086E89DAB8D8567E62",
+          "productionSha256": "24429E9B0A79A539D3BD7727E098E445FB195B9F208C26086E89DAB8D8567E62",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceOriginalDivisorArithmeticResidual",
+          "scratchSha256": "D077A8AA0D9C024818C4AE00E4F31D66D0BF993F243E958C792C1916503F4998",
+          "productionSha256": "106C5F7A39E60CA651D73B2DCF0B9F70021240919DE631196A3A5BBD4E7091B6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceParabolicArithmeticResidual",
+          "scratchSha256": "4AD10AE43E84DE7CF88AA6C6D20B357E3850799A8746EEF22A54A784F4E6B455",
+          "productionSha256": "B57F612F67EEBD406C66CEBD9EF1C4DBBC424BEBE4B494F09E75B34326B2BB2E",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceResidualGaloisRealization",
+          "scratchSha256": "71491C7FAC3CA431CEE900A960457F3C0AC93278E41C283B31D2B6EAF7FE6706",
+          "productionSha256": "9F08C53D457D554DF7A99ACB32D44AA092E5BE83C5C315FB179D61D049864D89",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveWeightTwoGalois",
+          "scratchSha256": "8627C760A6DD5F9E5D0747B6D009D39B74C7B8A5A2BE77F538C97FDBACF27188",
+          "productionSha256": "A12BA0C927A56D8DB9B18F46368FEBE308E28ED85E30D04DAC72F97653DB7670",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveRestoredGalois",
+          "scratchSha256": "401A070AAE29A7BD3FEFF724378C3F5BADEBC0C172F953975C8CAA9422792D47",
+          "productionSha256": "4C32273A5B73F9F8F9061CDE3EFE19C155E2E657A7E2F8C5D2988E55559FE536",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveOriginalResidualGalois",
+          "scratchSha256": "F9725CC304F494F977E7C463827FA00F118D0352339054EA4E8BCD50B6E52A44",
+          "productionSha256": "F164C8F8A3A90645ECB58390E8FB3FC12A3C3EB93B48C9BC15D79DB309CA6FC3",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveResidualGaloisCharP",
+          "scratchSha256": "9FF5AD8AC5D0CE83E801E98883256DBBF47773F4E93B32F87410B81B9FF09BFC",
+          "productionSha256": "DA16BAB8D7A9E70369DCE4D2862F07E79A85819D5C1EE79CAFEA6B88D7C02FA8",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 137 distinct names from 137 exhaustive scratch checks are retained: 137 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "The global residual determinant identity, all-weight adic realization and required local, regularity and image properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. This closes residual association, not the full Galois or analytic endpoint. 16/20; DUB-17--20 OPEN."
+}
+```
+
+## Production actual original-form cyclotomic determinant and deformation rings pending full run - 25 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 8,213-module scope: all thirteen retained regressions, 51,999 exhaustive theorem checks, 23,721 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+A characteristic-zero coefficient ring does not provide a characteristic-zero point of the deformation ring. Original all-weight adic association, required local, image and regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantDependencyAudit3bProduction8213.log",
+      "sha256": "2D09EEFAF2C5DDBFFBCC5412FF9AEE4662E423C760DA95F9814564FCE875106A",
+      "requiredProofValueEdges": 8,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_originalSupport_cyclotomicResidualGalois_charP"
+      ],
+      "sourceSha256": "13B8F173270F775E8F06F6A275F3AB5EE42189EF80323E9881A6795D807D7573"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessDependencyAudit2bProduction8213.log",
+      "sha256": "2922BD6E6868F08929D97945EA03556F14BE4DC3F6901B3E7EFA144B8B84DBD4",
+      "requiredProofValueEdges": 8,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_originalSupport_oddResidualGalois_charP"
+      ],
+      "sourceSha256": "4FD1956A267B837AB449C1918E96A42A7EC81DD77FBF7301957B7100C45C1C39"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteResidualDependencyAudit4Production8213.log",
+      "sha256": "613A33C9156B4DDA8862C65FC20EE69388CA033AAAE8F4AD3887C4AFDAF8143E",
+      "requiredProofValueEdges": 11,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_originalSupport_finiteResidualGalois_charP"
+      ],
+      "sourceSha256": "069FECC4785C56322279EE76CC8D854051AC44D03867E3F33A2F7EEAEBDF0EC7"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedDependencyAudit4bProduction8213.log",
+      "sha256": "661B4604AE47BFBD2F73760E95509677427CA790AB8A7794C6CF1F801C0183AF",
+      "requiredProofValueEdges": 13,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_originalSupport_wittFramedResidualGalois_charP"
+      ],
+      "sourceSha256": "E6A868DFA953152F82DFF774C75710B24876783C9AD6755AFB85EA44B1277F96"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFixedDependencyAudit7Production8213.log",
+      "sha256": "0DDFF056F6C03A5143B80EFE1640BB82901705F8979552B40523F10720E8B60D",
+      "requiredProofValueEdges": 23,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_originalSupport_wittFixedResidualGalois_charP"
+      ],
+      "sourceSha256": "9EC66E2EC82E1416D8F0234E9310059B499B1D24480231A44EEFB163D3F28314"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationProductionAudit8213.log",
+  "sha256": "D0CE12D61D8720140AFF4D9A5437C32723A4CE9D8CCA3D723D6F67D6D9333EF6",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-primitive-witt-deformation-production-build-8213.log",
+  "aggregateSha256": "F26BEF83C00754596C16D3F1B5BB45D3829ECD71F0126D89CDD1FDEFE04F7A77",
+  "productionModules": 8213,
+  "incrementModules": 20,
+  "axiomChecks": 36,
+  "exhaustiveIncrementTheorems": 62,
+  "linterScopes": 20,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 62,
+  "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The original primitive cusp form, Fourier coefficients, actual local fields, arithmetic support, parabolic cohomology and weight twist retain their definitions. No source contract is weakened.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 62,
+    "scratchDistinct": 62,
+    "generatedNameRenamings": {},
+    "productionFocused": 62,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceArithmeticCharacterFrobeniusEquality",
+          "SourceResidualCyclotomicDeterminant",
+          "SourcePrimitiveResidualGlobalDeterminant"
+        ],
+        "count": 3,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership572For8213.log",
+          "sha256": "26EB25CD13B6CC5AF84DF702EA8363A46B71050CEEA26F5F2273C6A939FA38C3",
+          "sourceSha256": "FA6A9A805DD4A8C769BD4AB790EEDDC8769C32E1560FF6349F836A30E7C02ECF"
+        }
+      },
+      {
+        "modules": [
+          "SourceResidualRealDeterminant",
+          "SourcePrimitiveResidualOddness"
+        ],
+        "count": 5,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership574For8213.log",
+          "sha256": "67934428AA9775E5359D8A3403C2661AC827200F020D62AF09495498BE9D1583",
+          "sourceSha256": "468FF233F079B9B07EDEC11368C78420B4AFB090F2584C5163FCAB0C4EC1C6C3"
+        }
+      },
+      {
+        "modules": [
+          "SourceFiniteResidualCoefficientField",
+          "SourceResidualCoefficientDeterminant",
+          "SourceFiniteResidualArithmeticDescent",
+          "SourcePrimitiveFiniteResidualGalois"
+        ],
+        "count": 5,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership575For8213.log",
+          "sha256": "DF3A27598E6C2EA19653A6A1CEE50F3F7D84266B059CD8E3B29FA15864EA8661",
+          "sourceSha256": "5A05498EF58EC410EB3AA508921C054B58593445014C9D35B2ECC1D9E0DFB480"
+        }
+      },
+      {
+        "modules": [
+          "SourceResidualWittCoefficients",
+          "SourceResidualWittRepresentation",
+          "SourceResidualWittFramedRing",
+          "SourcePrimitiveWittFramedResidual"
+        ],
+        "count": 23,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership577For8213.log",
+          "sha256": "8D6437E6089C286FCF91E937A8DD09C4BE6CF15640B68CCCF7AE23C286B42C6F",
+          "sourceSha256": "C6ACE82DED8AD3AFB60B2BDCEB5D810F11BF1C5C644AFBE5FCB258B4A0F2903C"
+        }
+      },
+      {
+        "modules": [
+          "SourcePadicWittCoefficient",
+          "SourceArithmeticPadicCyclotomic",
+          "SourceArithmeticPadicCyclotomicReduction",
+          "SourceArithmeticWittCyclotomic",
+          "SourceResidualWittFixedDeterminant",
+          "SourceResidualWittFixedRing",
+          "SourcePrimitiveWittFixedResidual"
+        ],
+        "count": 26,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership580For8213.log",
+          "sha256": "DD52F8998870E80E3C8A5A96B8573D633EE4AAA540405E5FE570814939EA9FAA",
+          "sourceSha256": "B0A6C40517500ECCCF623812EFFB3C0AEBB314E0CFCD07C5A7C851DE9E9058A6"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationOwnership8213.log",
+      "sha256": "0040F561CBCEBDC36CCA86620166080C6498405D078E4829A9A2E8F1E0CF6B3C",
+      "sourceSha256": "3359737B34234EFF3544FFCC77B0D8F334B761A43A5D9FEBA553C54C4B10E656"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-173632-424.log",
+      "sha256": "F0EE64665BE40A7DB9ADF222028A9003B16A175B94FADB1E3E59EF40A9AB0883"
+    },
+    "renameEvidence": {
+      "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 20 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+      "sourceChecks": [
+        {
+          "module": "SourceArithmeticCharacterFrobeniusEquality",
+          "scratchSha256": "B878A44A34CF6F780CFEE638AD1353F83C055F55D0B9B84135AE7626CDD25596",
+          "productionSha256": "B878A44A34CF6F780CFEE638AD1353F83C055F55D0B9B84135AE7626CDD25596",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceResidualCyclotomicDeterminant",
+          "scratchSha256": "2A790B57F59773F3283BCA8E8CD318B127EF2E9EC6CB551314B65DA6A3CBD33F",
+          "productionSha256": "55544ADA6241D1D6893F482B9C81FB6BF42227E6DB8DF474552F89E8DEE25CC6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveResidualGlobalDeterminant",
+          "scratchSha256": "99BAA790CCD3D159FA76750DA52D2DAB992CB44FE6CAB3006046988508116E57",
+          "productionSha256": "269B845F46DDF550F2526E9ECDFC086259B300780933241175AB821E1AC0100B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceResidualRealDeterminant",
+          "scratchSha256": "529E309C1189C98FB50D3663BA2026BEC4FD12EBE254E2E4BC80CCB738525803",
+          "productionSha256": "529E309C1189C98FB50D3663BA2026BEC4FD12EBE254E2E4BC80CCB738525803",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveResidualOddness",
+          "scratchSha256": "CD8704B6FF0289B9375CB8A4D335071633242FA341E6C161638D977C355AB945",
+          "productionSha256": "3049558347486C774B2E6E9386D13F03C5B1F26E73FA424252F9F870B659B47C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceFiniteResidualCoefficientField",
+          "scratchSha256": "BDFB8AF8A46FA7649D795082C89F1A2679DB241E219C819A3701E463062B8DA4",
+          "productionSha256": "BDFB8AF8A46FA7649D795082C89F1A2679DB241E219C819A3701E463062B8DA4",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceResidualCoefficientDeterminant",
+          "scratchSha256": "C28D8B7966C5E646612E6415FAF4067C0C08708FA8C6A5B65C9AC556AF2D9CB4",
+          "productionSha256": "C28D8B7966C5E646612E6415FAF4067C0C08708FA8C6A5B65C9AC556AF2D9CB4",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceFiniteResidualArithmeticDescent",
+          "scratchSha256": "96B20A02780C229FAA29F3E1249911BA5F0C0964E4C13B1C2F9DF318D6F3718C",
+          "productionSha256": "0C7CDC0C4A94B88715B2967A6F760B204572C578D229A5A84DF56A98705BA485",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveFiniteResidualGalois",
+          "scratchSha256": "1A6B2986FABC3D6921A63341F890E586DF73E1E99777185E70C061CFB39C38C3",
+          "productionSha256": "0049A43BF9DB81F3EF4D28460CF6BFBA8523E5CDE3E0D1439A584FC98E4CFFA9",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceResidualWittCoefficients",
+          "scratchSha256": "E1B9EAD9574E7382E729E82B268D3990E06786E045F57D5FCD0C569A05659E42",
+          "productionSha256": "E1B9EAD9574E7382E729E82B268D3990E06786E045F57D5FCD0C569A05659E42",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceResidualWittRepresentation",
+          "scratchSha256": "5D1CD82FF0387F3D3F34306D1683226B9EA9298D0B22FE8C2CE9EB74CE5BB3F7",
+          "productionSha256": "5B8458A352C9FAD8B9A9AAC2E80757BF9E99FE572419CF80BC5EEDD0E2F40CED",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceResidualWittFramedRing",
+          "scratchSha256": "999FC513DA8108240BD54AEDEEEEA30CCFE511269F0314AD2E5ACE9C069C84FC",
+          "productionSha256": "8012A6A80EB05F52D425F22D8E9E667E5ECC4D4F7E3A84FDD57166F9E4CC8B02",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveWittFramedResidual",
+          "scratchSha256": "BE4DEBA82616DA10FC53DD4650801F26121841C4663F161824A0B38A6C9DDBE1",
+          "productionSha256": "93EC169C4D9497A4CCD05BD7DCDA186534BD621897A6525B17F833333C1473E8",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePadicWittCoefficient",
+          "scratchSha256": "23386EBD126F03ECAF28586849EF160570808F5E50562C836039A95320FA86FD",
+          "productionSha256": "F5E2B251300F2206BB621BBE2C49892DA11453C7D54284F25534BA0BA712A93C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceArithmeticPadicCyclotomic",
+          "scratchSha256": "CA65D0558014738FC5953EAB3315C79715B087051CF45599623255295F1E1B9C",
+          "productionSha256": "CA65D0558014738FC5953EAB3315C79715B087051CF45599623255295F1E1B9C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceArithmeticPadicCyclotomicReduction",
+          "scratchSha256": "0A86B8F9B9194162EA83D65D463983E910A92B96A354F31058C75973983EA324",
+          "productionSha256": "F4178ACE2AADEFFD95813C803D94F59B12BAC4613DE007E1946D95E039DADAA4",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceArithmeticWittCyclotomic",
+          "scratchSha256": "40258E25A3B926BADE92BE29E349CD0CE2BCF3BEA203ADA7C0FB5D197EC31262",
+          "productionSha256": "589597406F35E9D8F16A95A2203369F6903BB462C2D1C24DE984946406506A36",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceResidualWittFixedDeterminant",
+          "scratchSha256": "18B1B9AC912C636CEE0FDDE4789987D0A1C891800B36C26A2104418BECF80E80",
+          "productionSha256": "A113449AAAE8AD8BB45D595B96D35056708AB4A263398B3B20273D15F482375D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceResidualWittFixedRing",
+          "scratchSha256": "16CBAF5D03D404325C59A3384B1371919E773C4B78D84EB52C2B914335ACD227",
+          "productionSha256": "83EBA648EB44A25FBCBD476DAC6FA8B701980843175027175DCCDB9DAD52AB8E",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveWittFixedResidual",
+          "scratchSha256": "F2608D93AFC4EB3B44565981E7F765DFFA02AC4C65071DAEFD542241CA74AE53",
+          "productionSha256": "7FF8E1DC5B46716E98E853D586DB2BE70A10E8D79B62E997FFB74274307893DE",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 62 distinct names from 62 exhaustive scratch checks are retained: 62 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "A characteristic-zero coefficient ring does not provide a characteristic-zero point of the deformation ring. Original all-weight adic association, required local, image and regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN."
+}
+```
+
+## Verified actual original-form cyclotomic determinant and deformation rings - 25 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 8,213-module scope: all thirteen retained regressions, 51,999 exhaustive theorem checks, 23,721 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+A characteristic-zero coefficient ring does not provide a characteristic-zero point of the deformation ring. Original all-weight adic association, required local, image and regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN.
+
+```json
+{
+  "recordedUTC": "2026-10-26T04:42:35.124627+00:00",
+  "log": "logs/dubon-build-20261025-201544-907.log",
+  "sha256": "DA4E7D14C8AFCBD74C6668C14A55182A02A36657FB28067C803E2A96F0E7E06F",
+  "bytes": 13367725,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 8213,
+  "projectTheorems": 51999,
+  "registeredConsumers": 23721,
+  "registeredConstructions": 2227,
+  "declarations": 31894,
+  "generated": 32940,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261025_201029.log",
+  "foundationSha256": "FF39671A3452120F6533EFA579177BEE29016072717610B0A56896DC7BC4D879",
+  "countReconciliation": {
+    "previousTheorems": 51937,
+    "focusedTheorems": 62,
+    "sharedGeneratedNames": [],
+    "addedTheorems": 62,
+    "removedTheorems": [],
+    "upstreamOwnedGeneratedNames": [],
+    "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationGlobalOwnership8213.log",
+    "globalOwnershipSha256": "ED5D3BF80F08C18E947346E62D8F11F3E35931E979FB0F38117F8AD4B7965C45",
+    "globalOwnershipSourceSha256": "80BEF3E85584CC4E0312F91319C84193B77D6526D7F7684991B73A3771D300FC",
+    "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationOwnership8213.log",
+    "ownershipSha256": "0040F561CBCEBDC36CCA86620166080C6498405D078E4829A9A2E8F1E0CF6B3C"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 62,
+    "scratchDistinct": 62,
+    "generatedNameRenamings": {},
+    "productionFocused": 62,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceArithmeticCharacterFrobeniusEquality",
+          "SourceResidualCyclotomicDeterminant",
+          "SourcePrimitiveResidualGlobalDeterminant"
+        ],
+        "count": 3,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership572For8213.log",
+          "sha256": "26EB25CD13B6CC5AF84DF702EA8363A46B71050CEEA26F5F2273C6A939FA38C3",
+          "sourceSha256": "FA6A9A805DD4A8C769BD4AB790EEDDC8769C32E1560FF6349F836A30E7C02ECF"
+        }
+      },
+      {
+        "modules": [
+          "SourceResidualRealDeterminant",
+          "SourcePrimitiveResidualOddness"
+        ],
+        "count": 5,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership574For8213.log",
+          "sha256": "67934428AA9775E5359D8A3403C2661AC827200F020D62AF09495498BE9D1583",
+          "sourceSha256": "468FF233F079B9B07EDEC11368C78420B4AFB090F2584C5163FCAB0C4EC1C6C3"
+        }
+      },
+      {
+        "modules": [
+          "SourceFiniteResidualCoefficientField",
+          "SourceResidualCoefficientDeterminant",
+          "SourceFiniteResidualArithmeticDescent",
+          "SourcePrimitiveFiniteResidualGalois"
+        ],
+        "count": 5,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership575For8213.log",
+          "sha256": "DF3A27598E6C2EA19653A6A1CEE50F3F7D84266B059CD8E3B29FA15864EA8661",
+          "sourceSha256": "5A05498EF58EC410EB3AA508921C054B58593445014C9D35B2ECC1D9E0DFB480"
+        }
+      },
+      {
+        "modules": [
+          "SourceResidualWittCoefficients",
+          "SourceResidualWittRepresentation",
+          "SourceResidualWittFramedRing",
+          "SourcePrimitiveWittFramedResidual"
+        ],
+        "count": 23,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership577For8213.log",
+          "sha256": "8D6437E6089C286FCF91E937A8DD09C4BE6CF15640B68CCCF7AE23C286B42C6F",
+          "sourceSha256": "C6ACE82DED8AD3AFB60B2BDCEB5D810F11BF1C5C644AFBE5FCB258B4A0F2903C"
+        }
+      },
+      {
+        "modules": [
+          "SourcePadicWittCoefficient",
+          "SourceArithmeticPadicCyclotomic",
+          "SourceArithmeticPadicCyclotomicReduction",
+          "SourceArithmeticWittCyclotomic",
+          "SourceResidualWittFixedDeterminant",
+          "SourceResidualWittFixedRing",
+          "SourcePrimitiveWittFixedResidual"
+        ],
+        "count": 26,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationScratchOwnership580For8213.log",
+          "sha256": "DD52F8998870E80E3C8A5A96B8573D633EE4AAA540405E5FE570814939EA9FAA",
+          "sourceSha256": "B0A6C40517500ECCCF623812EFFB3C0AEBB314E0CFCD07C5A7C851DE9E9058A6"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittDeformationOwnership8213.log",
+      "sha256": "0040F561CBCEBDC36CCA86620166080C6498405D078E4829A9A2E8F1E0CF6B3C",
+      "sourceSha256": "3359737B34234EFF3544FFCC77B0D8F334B761A43A5D9FEBA553C54C4B10E656"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-173632-424.log",
+      "sha256": "F0EE64665BE40A7DB9ADF222028A9003B16A175B94FADB1E3E59EF40A9AB0883"
+    },
+    "renameEvidence": {
+      "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 20 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+      "sourceChecks": [
+        {
+          "module": "SourceArithmeticCharacterFrobeniusEquality",
+          "scratchSha256": "B878A44A34CF6F780CFEE638AD1353F83C055F55D0B9B84135AE7626CDD25596",
+          "productionSha256": "B878A44A34CF6F780CFEE638AD1353F83C055F55D0B9B84135AE7626CDD25596",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceResidualCyclotomicDeterminant",
+          "scratchSha256": "2A790B57F59773F3283BCA8E8CD318B127EF2E9EC6CB551314B65DA6A3CBD33F",
+          "productionSha256": "55544ADA6241D1D6893F482B9C81FB6BF42227E6DB8DF474552F89E8DEE25CC6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveResidualGlobalDeterminant",
+          "scratchSha256": "99BAA790CCD3D159FA76750DA52D2DAB992CB44FE6CAB3006046988508116E57",
+          "productionSha256": "269B845F46DDF550F2526E9ECDFC086259B300780933241175AB821E1AC0100B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceResidualRealDeterminant",
+          "scratchSha256": "529E309C1189C98FB50D3663BA2026BEC4FD12EBE254E2E4BC80CCB738525803",
+          "productionSha256": "529E309C1189C98FB50D3663BA2026BEC4FD12EBE254E2E4BC80CCB738525803",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveResidualOddness",
+          "scratchSha256": "CD8704B6FF0289B9375CB8A4D335071633242FA341E6C161638D977C355AB945",
+          "productionSha256": "3049558347486C774B2E6E9386D13F03C5B1F26E73FA424252F9F870B659B47C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceFiniteResidualCoefficientField",
+          "scratchSha256": "BDFB8AF8A46FA7649D795082C89F1A2679DB241E219C819A3701E463062B8DA4",
+          "productionSha256": "BDFB8AF8A46FA7649D795082C89F1A2679DB241E219C819A3701E463062B8DA4",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceResidualCoefficientDeterminant",
+          "scratchSha256": "C28D8B7966C5E646612E6415FAF4067C0C08708FA8C6A5B65C9AC556AF2D9CB4",
+          "productionSha256": "C28D8B7966C5E646612E6415FAF4067C0C08708FA8C6A5B65C9AC556AF2D9CB4",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceFiniteResidualArithmeticDescent",
+          "scratchSha256": "96B20A02780C229FAA29F3E1249911BA5F0C0964E4C13B1C2F9DF318D6F3718C",
+          "productionSha256": "0C7CDC0C4A94B88715B2967A6F760B204572C578D229A5A84DF56A98705BA485",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveFiniteResidualGalois",
+          "scratchSha256": "1A6B2986FABC3D6921A63341F890E586DF73E1E99777185E70C061CFB39C38C3",
+          "productionSha256": "0049A43BF9DB81F3EF4D28460CF6BFBA8523E5CDE3E0D1439A584FC98E4CFFA9",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceResidualWittCoefficients",
+          "scratchSha256": "E1B9EAD9574E7382E729E82B268D3990E06786E045F57D5FCD0C569A05659E42",
+          "productionSha256": "E1B9EAD9574E7382E729E82B268D3990E06786E045F57D5FCD0C569A05659E42",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceResidualWittRepresentation",
+          "scratchSha256": "5D1CD82FF0387F3D3F34306D1683226B9EA9298D0B22FE8C2CE9EB74CE5BB3F7",
+          "productionSha256": "5B8458A352C9FAD8B9A9AAC2E80757BF9E99FE572419CF80BC5EEDD0E2F40CED",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceResidualWittFramedRing",
+          "scratchSha256": "999FC513DA8108240BD54AEDEEEEA30CCFE511269F0314AD2E5ACE9C069C84FC",
+          "productionSha256": "8012A6A80EB05F52D425F22D8E9E667E5ECC4D4F7E3A84FDD57166F9E4CC8B02",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveWittFramedResidual",
+          "scratchSha256": "BE4DEBA82616DA10FC53DD4650801F26121841C4663F161824A0B38A6C9DDBE1",
+          "productionSha256": "93EC169C4D9497A4CCD05BD7DCDA186534BD621897A6525B17F833333C1473E8",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePadicWittCoefficient",
+          "scratchSha256": "23386EBD126F03ECAF28586849EF160570808F5E50562C836039A95320FA86FD",
+          "productionSha256": "F5E2B251300F2206BB621BBE2C49892DA11453C7D54284F25534BA0BA712A93C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceArithmeticPadicCyclotomic",
+          "scratchSha256": "CA65D0558014738FC5953EAB3315C79715B087051CF45599623255295F1E1B9C",
+          "productionSha256": "CA65D0558014738FC5953EAB3315C79715B087051CF45599623255295F1E1B9C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceArithmeticPadicCyclotomicReduction",
+          "scratchSha256": "0A86B8F9B9194162EA83D65D463983E910A92B96A354F31058C75973983EA324",
+          "productionSha256": "F4178ACE2AADEFFD95813C803D94F59B12BAC4613DE007E1946D95E039DADAA4",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceArithmeticWittCyclotomic",
+          "scratchSha256": "40258E25A3B926BADE92BE29E349CD0CE2BCF3BEA203ADA7C0FB5D197EC31262",
+          "productionSha256": "589597406F35E9D8F16A95A2203369F6903BB462C2D1C24DE984946406506A36",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceResidualWittFixedDeterminant",
+          "scratchSha256": "18B1B9AC912C636CEE0FDDE4789987D0A1C891800B36C26A2104418BECF80E80",
+          "productionSha256": "A113449AAAE8AD8BB45D595B96D35056708AB4A263398B3B20273D15F482375D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceResidualWittFixedRing",
+          "scratchSha256": "16CBAF5D03D404325C59A3384B1371919E773C4B78D84EB52C2B914335ACD227",
+          "productionSha256": "83EBA648EB44A25FBCBD476DAC6FA8B701980843175027175DCCDB9DAD52AB8E",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveWittFixedResidual",
+          "scratchSha256": "F2608D93AFC4EB3B44565981E7F765DFFA02AC4C65071DAEFD542241CA74AE53",
+          "productionSha256": "7FF8E1DC5B46716E98E853D586DB2BE70A10E8D79B62E997FFB74274307893DE",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 62 distinct names from 62 exhaustive scratch checks are retained: 62 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "A characteristic-zero coefficient ring does not provide a characteristic-zero point of the deformation ring. Original all-weight adic association, required local, image and regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN."
+}
+```
+
+## Production actual original finite H1 characters and congruence realizations pending full run - 25 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 8,248-module scope: all thirteen retained regressions, 52,204 exhaustive theorem checks, 23,789 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The Gamma1 transfer and transported stabilizer operators have not yet been identified with arithmetic geometric correspondences or the required Gamma1 Hecke-and-diamond actions. Geometric Galois realization of these finite characters, compatible original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. No eigenvector lift, arithmetic Galois action or characteristic-zero deformation point is claimed from the finite constructions alone. 16/20; DUB-17--20 OPEN.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPrimePowerPermutationDependencyAudit5Production8248.log",
+      "sha256": "F4CA9ED9078259625057150C71BCA473D777C86F07460977B3DC8BD94BCEE639",
+      "requiredProofValueEdges": 22,
+      "consumers": [
+        "Dubon2026.sourceIntegralBinary_exists_primePowerPermutationRealization"
+      ],
+      "sourceSha256": "B563F37F971F18CF592A31292E8875F09F90FCACC3CF6C90B46E82D82B2D5C0A"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicDependencyAudit5bProduction8248.log",
+      "sha256": "2648DFAD11FF247F89380AC8DE198630D387D6EF67C822C794837B6EB2751EE4",
+      "requiredProofValueEdges": 21,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_compatibleH1AdicRealization"
+      ],
+      "sourceSha256": "A70ED86305556DD4DFE3634F0F43D425688670AE5D485E3F957D41107E26B1DD"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryStabilizerH1DependencyAudit3Production8248.log",
+      "sha256": "F3E28D3D4476A1AAB93CDC4527D6280A58A6D8B527E0FE08B06C978F1215460F",
+      "requiredProofValueEdges": 13,
+      "consumers": [
+        "Dubon2026.sourceIntegralBinary_exists_stabilizerH1Realization"
+      ],
+      "sourceSha256": "E707760B8359A967A5818AB845BDBED956952DA1DBE586EC7689B6A47632F02E"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1CongruenceDependencyAudit5Production8248.log",
+      "sha256": "14676F1C9A80E976A0A67140E14A75A761C49BDA5DEC7904826F8DAA20B71F93",
+      "requiredProofValueEdges": 18,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_congruentH1AdicRealization",
+        "Dubon2026.sourcePrimitiveH1Hecke_primePower_congruence_valuation"
+      ],
+      "sourceSha256": "9B539322C4E04F3DD986857502AE2D460B610DEF9F2796043BDF4FFEA1644753"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteOperatorCharacterDependencyAudit4Production8248.log",
+      "sha256": "13D5AA576E4E736E0CEA2F1A24196BC91D3E9345800F5D7B357D4082F81C8058",
+      "requiredProofValueEdges": 19,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_finiteH1OperatorCharacters"
+      ],
+      "sourceSha256": "7CA8155AA7848294570E67D5FA217DD3E77DF445DD6B3A1643C403AC2DC3984D"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitivePermutationOperatorCharacterDependencyAudit7Production8248.log",
+      "sha256": "88B92DEAF2CE8C1976A09B5B4AA3D243E15C866FFE0F7506C51A3580AEC4B91D",
+      "requiredProofValueEdges": 31,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_permutationH1HeckeCharacters",
+        "Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_iff_coefficients"
+      ],
+      "sourceSha256": "B195863FDF70865EF15553FA90A4FF3766F48AB2A5858AE91500439B34BFD212"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverDependencyAudit6Production8248.log",
+      "sha256": "A731E211969D2ABEF747DF4904B994B4C61D1D7333AB58F0C907D9C7FE14B2F1",
+      "requiredProofValueEdges": 33,
+      "consumers": [
+        "Dubon2026.sourceIntegralBinary_exists_gammaOneH1Realization",
+        "Dubon2026.sourceBinaryCoefficientStabilizer_conj_finiteIndex",
+        "Dubon2026.sourceGammaOne_le_conj_principalLevel"
+      ],
+      "sourceSha256": "B2D2E08BB28CBF2FD35060AB61D7EFA7F2C00B684E521B0B171D1A0442D2550D"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationProductionAudit8248.log",
+  "sha256": "9F59C97A9B26AEFB2A625C476DF1E635A5CAB9CCEC3BA0794ED5B63792F33FDF",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-primitive-finite-h1-realization-production-build-8248.log",
+  "aggregateSha256": "998D0273E46AC78F822C8B1CEEA0A844F742F216B07AA302B4B80BF02623E7FC",
+  "productionModules": 8248,
+  "incrementModules": 35,
+  "axiomChecks": 96,
+  "exhaustiveIncrementTheorems": 205,
+  "linterScopes": 35,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 205,
+  "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The original primitive cusp form, Fourier coefficients, actual local fields, integral H1, Hecke operators, coefficient reductions and original finite permutation and stabilizer cohomology retain their definitions. No source contract is weakened.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 205,
+    "scratchDistinct": 205,
+    "generatedNameRenamings": {},
+    "productionFocused": 205,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourcePermutationCoefficientQuotient",
+          "SourceBinaryPrimePowerPermutation",
+          "SourceBinaryPermutationHecke",
+          "SourceBinaryPermutationCongruence",
+          "SourceIntegralBinaryPermutationRealization"
+        ],
+        "count": 18,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership582For8248.log",
+          "sha256": "B481A4F7C0162E11D5AF4A0BDD540BF0F593FF5C93F1E83EB2647EC2B96C7DBF",
+          "sourceSha256": "AD1B068584660C9B73C7618E9E479C55711F43A17EEB5E0668ACE5C2D270948C"
+        }
+      },
+      {
+        "modules": [
+          "SourcePrimitiveH1CoefficientField",
+          "SourcePrimitiveLocalH1Character",
+          "SourcePrimitiveAdicH1Quotients",
+          "SourcePrimitiveCompatibleH1AdicData",
+          "SourcePrimitiveH1AdicRealization"
+        ],
+        "count": 43,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership583For8248.log",
+          "sha256": "A328D7C9880A01D19A5D0427E85DD2AEAF83715204E83A151BC94C0F31A0190B",
+          "sourceSha256": "87062B7A78137F4CCFDED135C954533042C579D7EBA219B291DC371D6C5F1E82"
+        }
+      },
+      {
+        "modules": [
+          "SourceCoefficientPermutationCoordinates",
+          "SourceCoefficientStabilizerCohomology",
+          "SourceIntegralBinaryStabilizerRealization"
+        ],
+        "count": 11,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership584For8248.log",
+          "sha256": "5FBB59F95CC5CC9DD7E5EECD6A396E4B047A209AA95DCCC93669F589F661C3FF",
+          "sourceSha256": "AFE2F5673A2C9CEDDD2BFDDFE9BBB89723FA27DD8B95518FD64CACF45797F873"
+        }
+      },
+      {
+        "modules": [
+          "SourceFaithfulCharacterDivisibility",
+          "SourceBinaryH1PrimePowerKernel",
+          "SourcePrimitiveH1HeckeCongruence",
+          "SourcePrimitiveH1AdicOperatorKernel",
+          "SourcePrimitiveCongruentH1AdicRealization"
+        ],
+        "count": 13,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership585For8248.log",
+          "sha256": "3D219D8FFE6D1680C639E96C0FA94A4F12D7FF4421D9DF9CBA9E6E0FF72F2F2C",
+          "sourceSha256": "7B392236D3BBA26A499C51E560C693FC981A8EA45A16B2F42E33222D4350B6AE"
+        }
+      },
+      {
+        "modules": [
+          "SourceBinaryH1ModulusOperatorAlgebra",
+          "SourceFiniteOperatorCharacterDescent",
+          "SourcePrimitiveFiniteH1HeckeCharacter",
+          "SourcePrimitiveFiniteH1OperatorRealization"
+        ],
+        "count": 41,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership586For8248.log",
+          "sha256": "027A405085858A5B6CB3BEF5B9B3ACD72B4A0861CAE47B1C87D692F2287F5F94",
+          "sourceSha256": "1354A57EE7850887E9B21E546C0583AF5D7478ED3D9D4E1E72EC9859BD08589A"
+        }
+      },
+      {
+        "modules": [
+          "SourceBinaryH1ModulusKernel",
+          "SourceBinaryPermutationHeckeWords",
+          "SourceBinaryPermutationOperatorKernel",
+          "SourceBinaryPermutationHeckeFinite",
+          "SourceBinaryPermutationOperatorDescent",
+          "SourcePrimitivePermutationH1HeckeCharacter",
+          "SourcePrimitivePermutationH1Realization"
+        ],
+        "count": 53,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership588For8248.log",
+          "sha256": "747933B9F0E4995848C513D0A1C59CBD1050BEB467B8AC9094E89B69E93253CB",
+          "sourceSha256": "4E21264205103EAB9EFAE97AA7BDB6555A1C489000739E0B69A58F871CCE7828"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneCongruenceCover",
+          "SourceBinaryStabilizerGammaOneCover",
+          "SourceGammaOneDiagonalHom",
+          "SourceGammaOneCoverFiniteIndex",
+          "SourceGammaOneCohomologyTransfer",
+          "SourceGammaOneConstantH1Realization"
+        ],
+        "count": 26,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership591For8248.log",
+          "sha256": "12D5D4BDA30FEB1C028CA274A11446117EC3431A9D405A7A58FB2656FAD940C7",
+          "sourceSha256": "0B24E19E293ADEA1A46871F478C9B579E9114EAFD51819EB5094C6553EA19A4D"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationOwnership8248.log",
+      "sha256": "436AB77ED3981E3A1B9FB203042888E3CCC86D48E3F7211B0A2637E2D40EB0F5",
+      "sourceSha256": "67FC1B2B9410DF6C9F8D252822E323CF2C3A3CEEE84CAAE4E2B91993601E792F"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-201544-907.log",
+      "sha256": "DA4E7D14C8AFCBD74C6668C14A55182A02A36657FB28067C803E2A96F0E7E06F"
+    },
+    "renameEvidence": {
+      "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 35 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+      "sourceChecks": [
+        {
+          "module": "SourcePermutationCoefficientQuotient",
+          "scratchSha256": "8ADA6D97B221B37C7C097523DB6EABE4E4061F4D30D326A3B6E49CEC95A24A95",
+          "productionSha256": "8ADA6D97B221B37C7C097523DB6EABE4E4061F4D30D326A3B6E49CEC95A24A95",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryPrimePowerPermutation",
+          "scratchSha256": "64D4B11F41FFC30E7D88DF851C3229A11DFE9CA4B6FDE2B4295CB39EF2C4F30B",
+          "productionSha256": "736B62F3D526E0316050B0D7EFA5FD3D1D5EC377F0ECDCCB4D037AE2E4413FF5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryPermutationHecke",
+          "scratchSha256": "200353FC6BE79050115BE8F768AB96D740DE9D92C6AF4CA4C4BF624D082EE0C8",
+          "productionSha256": "AF702186908EFBA841F10F9C72AFAA68549260BB34814681E1663579BAF19F88",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryPermutationCongruence",
+          "scratchSha256": "C9CB7D8C47037CEF003A731809E8C925FCF1A6A698F092CA85056EC67697F8FD",
+          "productionSha256": "DD923133E079A87E5909EA3A29309043F1C94D16257736AE09728D2479430CA0",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceIntegralBinaryPermutationRealization",
+          "scratchSha256": "84048A1E76A885490470F4591925B40E88B1F55DEBC3BF668E0254DEDBA5BB17",
+          "productionSha256": "3E23646887D9B8FA69392E299A967E594FB148C22832FE39803C16D97DF86417",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveH1CoefficientField",
+          "scratchSha256": "FAB1DD47B28AC19C1A862F66C2BC55F684E105F2B436ED713AD23508DAB8D3B9",
+          "productionSha256": "83E60BD7FB4E347C2174D386B1714A8E213D5F20CC054209D7E34E21D8340721",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveLocalH1Character",
+          "scratchSha256": "B4579019CCC0485129A7A903A711239B6EB2B32C2F1E75C80D6668A3D502AD25",
+          "productionSha256": "52A755628EB31B451C1B41AAF41B6848A728024DE7C0B91EE185F2CC43F43D16",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveAdicH1Quotients",
+          "scratchSha256": "BBDB559FC020FA5A6FD4BFB34973C03EFE4DFC71EA64A149AEE08F3403DA7AB2",
+          "productionSha256": "0E06085AC1DAC09F05E77AA549632875AB5BE6DCE4C4A40B9501885EEE9613E9",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveCompatibleH1AdicData",
+          "scratchSha256": "D72BBD2D4CA607217125D77FAFC6E3377D063B456F71964C1EE0DE3DAE55E053",
+          "productionSha256": "F6E93D20D8DFB32E1044B671350A75805DAA1FEB986169208F8AD62F976CD027",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveH1AdicRealization",
+          "scratchSha256": "E062FDF00FB3AE467339D04E18B99CC0503F3F51CA7274AC1F8197AB642D498F",
+          "productionSha256": "FCCAA9B357EC79B0139C6EBE573591A07805255A2356E03C5622C6F755C2C850",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceCoefficientPermutationCoordinates",
+          "scratchSha256": "500AF11865310EEEC2602EE24664B878F98FB342ED96952B0189B46A3F0E40F6",
+          "productionSha256": "3F41A210666DCE49AD319C5A67C2CA9303FA14AF5C6C1255245F4F22494C7BF4",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceCoefficientStabilizerCohomology",
+          "scratchSha256": "9936ECAA33E420CD6BBF7465D249E5A40CCD0244365542307DE20401B1FF5CCA",
+          "productionSha256": "4FED37F6E55F92ABCE7FC7FCD5DB7F7CFEEAB589A6D5D0DD75933630DB7044DB",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceIntegralBinaryStabilizerRealization",
+          "scratchSha256": "E30ABF7F9072A0C1AFDCC868A371CBF45DFEEE68029B7AFB5900158AC04F41E5",
+          "productionSha256": "F37088156F1ED4911FADECA1871652A4473A24DDD96AD05388935591C5DBBF06",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceFaithfulCharacterDivisibility",
+          "scratchSha256": "9C6E94794105805D9E4408F496D3908C44CA676C6376C16C437552BB31AE7063",
+          "productionSha256": "9C6E94794105805D9E4408F496D3908C44CA676C6376C16C437552BB31AE7063",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryH1PrimePowerKernel",
+          "scratchSha256": "19DA3B7EE28E9C5F5FFB5BF18A22A8C78F033805E5A6ED864351EA498A539F3C",
+          "productionSha256": "19DA3B7EE28E9C5F5FFB5BF18A22A8C78F033805E5A6ED864351EA498A539F3C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveH1HeckeCongruence",
+          "scratchSha256": "700841266CA4946061078CD982E107933BA862BB90E152DCB7D632A813BE5984",
+          "productionSha256": "E7D8F73B30E310660D82F9314894BE414757D230FDFDD3E2F0D646ADC74D4F29",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveH1AdicOperatorKernel",
+          "scratchSha256": "CC0404B804624308925B1E86EC1F10EC971BD1E6902B4030BF5CEE4DFAB0FAD2",
+          "productionSha256": "B9390C39F0D33ACBDB1E5C9F413320CCEF4C3B3824203CDA2A4C3FEC113F79B2",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveCongruentH1AdicRealization",
+          "scratchSha256": "E95609B3B1E0AA209848BB5FD372DA27DD6081D3A22A8CC2BCE77FA9C2448320",
+          "productionSha256": "9C9ADA8F5100965586ACB6583B0465B62BD9970921D7CA0DA6115752D822AE96",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryH1ModulusOperatorAlgebra",
+          "scratchSha256": "3088DB3E4135312604626BD75E4F18FC786BCD4F02277870EFD6A380D256F30E",
+          "productionSha256": "3088DB3E4135312604626BD75E4F18FC786BCD4F02277870EFD6A380D256F30E",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceFiniteOperatorCharacterDescent",
+          "scratchSha256": "3AE57C01A36D9DF2D2B5E62DAC21816E54CAA7ABE0007AF37A04B5725A040C6A",
+          "productionSha256": "3AE57C01A36D9DF2D2B5E62DAC21816E54CAA7ABE0007AF37A04B5725A040C6A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveFiniteH1HeckeCharacter",
+          "scratchSha256": "48017F46307B8EAC8F2129D87FA9C3417B44B2D3AF19B4BA23472CCA4A5EDE26",
+          "productionSha256": "DE6FB139077EACE6DE85BDBC5C50A2DE8EB77B43F0F94AD0EBB2E9BECE884AE2",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveFiniteH1OperatorRealization",
+          "scratchSha256": "3F439F73DD995AB8615CE63E33D4FF35246009D6EF34EC390CEEED6E90620223",
+          "productionSha256": "95315EC003FBDF057068FE6F4CE6FEE623F1A683D49CFCEEE753F05984280A59",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryH1ModulusKernel",
+          "scratchSha256": "A27F8C0453C13671E4669B08048F6589FBF6AC47CFDE055A2A2A486C8FACAF7F",
+          "productionSha256": "C6D2FAB2DB503BF030400AA6F7AFC827B245132F5BADD5B5069128D2D07A160F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryPermutationHeckeWords",
+          "scratchSha256": "63852A443A7D679C5216E4E769976CE57F13805F28A14CA8D33C2E5CF180071B",
+          "productionSha256": "DA80FBD3B10B99F4997FE45F2E5F078091F7BB91C47964DDFE43E5240C5320A4",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryPermutationOperatorKernel",
+          "scratchSha256": "1F9939744334A621CCC12010C765AEDCC14F581B83DD7533E12405D8E89DCD36",
+          "productionSha256": "C7F427DBB3469E86FA132289B0E0982B10B8EF127A6222704F22DCF33E8FC941",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryPermutationHeckeFinite",
+          "scratchSha256": "B80BC2737F5FDB86945ED8534CD2663AA430A92DCF67638A8AA0A9495E21BE4F",
+          "productionSha256": "7DAC7E61FB44A30F2FB65AF7D1949B86CEB30E7E917C3E57FBDAAF767AB4CDA3",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryPermutationOperatorDescent",
+          "scratchSha256": "7A7635F0FE17AF12C8C4CA7B4FE70AD368C45A0372FF5DACEE9A7A57C31AC27E",
+          "productionSha256": "DC3CD4E5B0E28248DA990B1AFD16798C80BA70F1E7282ECBDC7C6CB26818E535",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitivePermutationH1HeckeCharacter",
+          "scratchSha256": "7F3831C432148B1EB2B67E06A1DD55FFFDB85E3B68C87C35359F1A7FD00E7EEA",
+          "productionSha256": "9A1BE0FC0429D53A9BAED8B434BEBFFA09A68FC688E1C82A7185CCD190CC0E0B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitivePermutationH1Realization",
+          "scratchSha256": "F4582898A76AE5B4C935471C567494BD924C02BA7E7FA087D63522B2E64ADCAE",
+          "productionSha256": "62E1F69AA590A23CDDD1C76B1DA7BDEC70B4777801B63BD2044AEAA32F9DE8EC",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCongruenceCover",
+          "scratchSha256": "585659F407D2F51EDA84FCA732EB7D333F4256CE73B930F2E02CF9EE631548B4",
+          "productionSha256": "585659F407D2F51EDA84FCA732EB7D333F4256CE73B930F2E02CF9EE631548B4",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryStabilizerGammaOneCover",
+          "scratchSha256": "657BD9FE8E260AB66BE097AA959CEACEFEE58F1AEE70DD9490E52E4404E7749E",
+          "productionSha256": "A2B599FD1DEC46B048231CE917D26240EADFD3181CA60A7ABCB9D378F4E61CA8",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneDiagonalHom",
+          "scratchSha256": "AF70842F3D291B9E918FA2A4BC2E6F085951BC40EC99A69D219ADD4D836DD914",
+          "productionSha256": "6B69EE3D1CB9E5A92FD6FFEA754FA403E79CAFF7C1F3336395B41623B78FA7DC",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCoverFiniteIndex",
+          "scratchSha256": "A3DF7002CC95628A02ED734D1A10B63E8CCA9D3E540C261C88B67AD9F37FC3C6",
+          "productionSha256": "465E76340EC503F5F5346202CB3AAB148A75A54A84C6CA5602F017BE29EB4320",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCohomologyTransfer",
+          "scratchSha256": "15C53922CF077084C9F4421782C3346D7C27048B8E233F29F36D60CC5C1A7D62",
+          "productionSha256": "7E0042F01FF497AA6E36ACE0D6BB4C524BE7AA65AD52A28E2A41B14397FCF97D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneConstantH1Realization",
+          "scratchSha256": "5E3B3BE2610765E1D2E7E4DD2C727F1FE418231026EF3BB46409CDCDDB1C4B24",
+          "productionSha256": "B495A6F8E833DADAEE5684816D751CCA7CFC98853DE3C7485BC6133F9807D193",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 205 distinct names from 205 exhaustive scratch checks are retained: 205 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "The Gamma1 transfer and transported stabilizer operators have not yet been identified with arithmetic geometric correspondences or the required Gamma1 Hecke-and-diamond actions. Geometric Galois realization of these finite characters, compatible original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. No eigenvector lift, arithmetic Galois action or characteristic-zero deformation point is claimed from the finite constructions alone. 16/20; DUB-17--20 OPEN."
+}
+```
+
+## Verified actual original finite H1 characters and congruence realizations - 25 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 8,248-module scope: all thirteen retained regressions, 52,204 exhaustive theorem checks, 23,789 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The Gamma1 transfer and transported stabilizer operators have not yet been identified with arithmetic geometric correspondences or the required Gamma1 Hecke-and-diamond actions. Geometric Galois realization of these finite characters, compatible original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. No eigenvector lift, arithmetic Galois action or characteristic-zero deformation point is claimed from the finite constructions alone. 16/20; DUB-17--20 OPEN.
+
+```json
+{
+  "recordedUTC": "2026-10-26T06:29:24.493284+00:00",
+  "log": "logs/dubon-build-20261025-220533-685.log",
+  "sha256": "67A337579A83611FB247AE2A9C773A3C0152B998E2B6A233718CE9B9CAE117C1",
+  "bytes": 13422423,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 8248,
+  "projectTheorems": 52204,
+  "registeredConsumers": 23789,
+  "registeredConstructions": 2255,
+  "declarations": 31990,
+  "generated": 33077,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261025_215954.log",
+  "foundationSha256": "257EA7AEE8881BB2B2779333E6F986F786481198262002D7E1B906E0BD3D84F7",
+  "countReconciliation": {
+    "previousTheorems": 51999,
+    "focusedTheorems": 205,
+    "sharedGeneratedNames": [],
+    "addedTheorems": 205,
+    "removedTheorems": [],
+    "upstreamOwnedGeneratedNames": [],
+    "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationGlobalOwnership8248.log",
+    "globalOwnershipSha256": "C0F2E579E38E7979057965ABA49B74B1FF409D0527028BE66AF0D98E4C033C63",
+    "globalOwnershipSourceSha256": "341236BAF5F2DE2EBF4D56601F6F4EE65914A28A732F3A6789EBAAF4FB9CA6DF",
+    "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationOwnership8248.log",
+    "ownershipSha256": "436AB77ED3981E3A1B9FB203042888E3CCC86D48E3F7211B0A2637E2D40EB0F5"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 205,
+    "scratchDistinct": 205,
+    "generatedNameRenamings": {},
+    "productionFocused": 205,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourcePermutationCoefficientQuotient",
+          "SourceBinaryPrimePowerPermutation",
+          "SourceBinaryPermutationHecke",
+          "SourceBinaryPermutationCongruence",
+          "SourceIntegralBinaryPermutationRealization"
+        ],
+        "count": 18,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership582For8248.log",
+          "sha256": "B481A4F7C0162E11D5AF4A0BDD540BF0F593FF5C93F1E83EB2647EC2B96C7DBF",
+          "sourceSha256": "AD1B068584660C9B73C7618E9E479C55711F43A17EEB5E0668ACE5C2D270948C"
+        }
+      },
+      {
+        "modules": [
+          "SourcePrimitiveH1CoefficientField",
+          "SourcePrimitiveLocalH1Character",
+          "SourcePrimitiveAdicH1Quotients",
+          "SourcePrimitiveCompatibleH1AdicData",
+          "SourcePrimitiveH1AdicRealization"
+        ],
+        "count": 43,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership583For8248.log",
+          "sha256": "A328D7C9880A01D19A5D0427E85DD2AEAF83715204E83A151BC94C0F31A0190B",
+          "sourceSha256": "87062B7A78137F4CCFDED135C954533042C579D7EBA219B291DC371D6C5F1E82"
+        }
+      },
+      {
+        "modules": [
+          "SourceCoefficientPermutationCoordinates",
+          "SourceCoefficientStabilizerCohomology",
+          "SourceIntegralBinaryStabilizerRealization"
+        ],
+        "count": 11,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership584For8248.log",
+          "sha256": "5FBB59F95CC5CC9DD7E5EECD6A396E4B047A209AA95DCCC93669F589F661C3FF",
+          "sourceSha256": "AFE2F5673A2C9CEDDD2BFDDFE9BBB89723FA27DD8B95518FD64CACF45797F873"
+        }
+      },
+      {
+        "modules": [
+          "SourceFaithfulCharacterDivisibility",
+          "SourceBinaryH1PrimePowerKernel",
+          "SourcePrimitiveH1HeckeCongruence",
+          "SourcePrimitiveH1AdicOperatorKernel",
+          "SourcePrimitiveCongruentH1AdicRealization"
+        ],
+        "count": 13,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership585For8248.log",
+          "sha256": "3D219D8FFE6D1680C639E96C0FA94A4F12D7FF4421D9DF9CBA9E6E0FF72F2F2C",
+          "sourceSha256": "7B392236D3BBA26A499C51E560C693FC981A8EA45A16B2F42E33222D4350B6AE"
+        }
+      },
+      {
+        "modules": [
+          "SourceBinaryH1ModulusOperatorAlgebra",
+          "SourceFiniteOperatorCharacterDescent",
+          "SourcePrimitiveFiniteH1HeckeCharacter",
+          "SourcePrimitiveFiniteH1OperatorRealization"
+        ],
+        "count": 41,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership586For8248.log",
+          "sha256": "027A405085858A5B6CB3BEF5B9B3ACD72B4A0861CAE47B1C87D692F2287F5F94",
+          "sourceSha256": "1354A57EE7850887E9B21E546C0583AF5D7478ED3D9D4E1E72EC9859BD08589A"
+        }
+      },
+      {
+        "modules": [
+          "SourceBinaryH1ModulusKernel",
+          "SourceBinaryPermutationHeckeWords",
+          "SourceBinaryPermutationOperatorKernel",
+          "SourceBinaryPermutationHeckeFinite",
+          "SourceBinaryPermutationOperatorDescent",
+          "SourcePrimitivePermutationH1HeckeCharacter",
+          "SourcePrimitivePermutationH1Realization"
+        ],
+        "count": 53,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership588For8248.log",
+          "sha256": "747933B9F0E4995848C513D0A1C59CBD1050BEB467B8AC9094E89B69E93253CB",
+          "sourceSha256": "4E21264205103EAB9EFAE97AA7BDB6555A1C489000739E0B69A58F871CCE7828"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneCongruenceCover",
+          "SourceBinaryStabilizerGammaOneCover",
+          "SourceGammaOneDiagonalHom",
+          "SourceGammaOneCoverFiniteIndex",
+          "SourceGammaOneCohomologyTransfer",
+          "SourceGammaOneConstantH1Realization"
+        ],
+        "count": 26,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership591For8248.log",
+          "sha256": "12D5D4BDA30FEB1C028CA274A11446117EC3431A9D405A7A58FB2656FAD940C7",
+          "sourceSha256": "0B24E19E293ADEA1A46871F478C9B579E9114EAFD51819EB5094C6553EA19A4D"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationOwnership8248.log",
+      "sha256": "436AB77ED3981E3A1B9FB203042888E3CCC86D48E3F7211B0A2637E2D40EB0F5",
+      "sourceSha256": "67FC1B2B9410DF6C9F8D252822E323CF2C3A3CEEE84CAAE4E2B91993601E792F"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-201544-907.log",
+      "sha256": "DA4E7D14C8AFCBD74C6668C14A55182A02A36657FB28067C803E2A96F0E7E06F"
+    },
+    "renameEvidence": {
+      "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 35 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+      "sourceChecks": [
+        {
+          "module": "SourcePermutationCoefficientQuotient",
+          "scratchSha256": "8ADA6D97B221B37C7C097523DB6EABE4E4061F4D30D326A3B6E49CEC95A24A95",
+          "productionSha256": "8ADA6D97B221B37C7C097523DB6EABE4E4061F4D30D326A3B6E49CEC95A24A95",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryPrimePowerPermutation",
+          "scratchSha256": "64D4B11F41FFC30E7D88DF851C3229A11DFE9CA4B6FDE2B4295CB39EF2C4F30B",
+          "productionSha256": "736B62F3D526E0316050B0D7EFA5FD3D1D5EC377F0ECDCCB4D037AE2E4413FF5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryPermutationHecke",
+          "scratchSha256": "200353FC6BE79050115BE8F768AB96D740DE9D92C6AF4CA4C4BF624D082EE0C8",
+          "productionSha256": "AF702186908EFBA841F10F9C72AFAA68549260BB34814681E1663579BAF19F88",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryPermutationCongruence",
+          "scratchSha256": "C9CB7D8C47037CEF003A731809E8C925FCF1A6A698F092CA85056EC67697F8FD",
+          "productionSha256": "DD923133E079A87E5909EA3A29309043F1C94D16257736AE09728D2479430CA0",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceIntegralBinaryPermutationRealization",
+          "scratchSha256": "84048A1E76A885490470F4591925B40E88B1F55DEBC3BF668E0254DEDBA5BB17",
+          "productionSha256": "3E23646887D9B8FA69392E299A967E594FB148C22832FE39803C16D97DF86417",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveH1CoefficientField",
+          "scratchSha256": "FAB1DD47B28AC19C1A862F66C2BC55F684E105F2B436ED713AD23508DAB8D3B9",
+          "productionSha256": "83E60BD7FB4E347C2174D386B1714A8E213D5F20CC054209D7E34E21D8340721",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveLocalH1Character",
+          "scratchSha256": "B4579019CCC0485129A7A903A711239B6EB2B32C2F1E75C80D6668A3D502AD25",
+          "productionSha256": "52A755628EB31B451C1B41AAF41B6848A728024DE7C0B91EE185F2CC43F43D16",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveAdicH1Quotients",
+          "scratchSha256": "BBDB559FC020FA5A6FD4BFB34973C03EFE4DFC71EA64A149AEE08F3403DA7AB2",
+          "productionSha256": "0E06085AC1DAC09F05E77AA549632875AB5BE6DCE4C4A40B9501885EEE9613E9",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveCompatibleH1AdicData",
+          "scratchSha256": "D72BBD2D4CA607217125D77FAFC6E3377D063B456F71964C1EE0DE3DAE55E053",
+          "productionSha256": "F6E93D20D8DFB32E1044B671350A75805DAA1FEB986169208F8AD62F976CD027",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveH1AdicRealization",
+          "scratchSha256": "E062FDF00FB3AE467339D04E18B99CC0503F3F51CA7274AC1F8197AB642D498F",
+          "productionSha256": "FCCAA9B357EC79B0139C6EBE573591A07805255A2356E03C5622C6F755C2C850",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceCoefficientPermutationCoordinates",
+          "scratchSha256": "500AF11865310EEEC2602EE24664B878F98FB342ED96952B0189B46A3F0E40F6",
+          "productionSha256": "3F41A210666DCE49AD319C5A67C2CA9303FA14AF5C6C1255245F4F22494C7BF4",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceCoefficientStabilizerCohomology",
+          "scratchSha256": "9936ECAA33E420CD6BBF7465D249E5A40CCD0244365542307DE20401B1FF5CCA",
+          "productionSha256": "4FED37F6E55F92ABCE7FC7FCD5DB7F7CFEEAB589A6D5D0DD75933630DB7044DB",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceIntegralBinaryStabilizerRealization",
+          "scratchSha256": "E30ABF7F9072A0C1AFDCC868A371CBF45DFEEE68029B7AFB5900158AC04F41E5",
+          "productionSha256": "F37088156F1ED4911FADECA1871652A4473A24DDD96AD05388935591C5DBBF06",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceFaithfulCharacterDivisibility",
+          "scratchSha256": "9C6E94794105805D9E4408F496D3908C44CA676C6376C16C437552BB31AE7063",
+          "productionSha256": "9C6E94794105805D9E4408F496D3908C44CA676C6376C16C437552BB31AE7063",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryH1PrimePowerKernel",
+          "scratchSha256": "19DA3B7EE28E9C5F5FFB5BF18A22A8C78F033805E5A6ED864351EA498A539F3C",
+          "productionSha256": "19DA3B7EE28E9C5F5FFB5BF18A22A8C78F033805E5A6ED864351EA498A539F3C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveH1HeckeCongruence",
+          "scratchSha256": "700841266CA4946061078CD982E107933BA862BB90E152DCB7D632A813BE5984",
+          "productionSha256": "E7D8F73B30E310660D82F9314894BE414757D230FDFDD3E2F0D646ADC74D4F29",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveH1AdicOperatorKernel",
+          "scratchSha256": "CC0404B804624308925B1E86EC1F10EC971BD1E6902B4030BF5CEE4DFAB0FAD2",
+          "productionSha256": "B9390C39F0D33ACBDB1E5C9F413320CCEF4C3B3824203CDA2A4C3FEC113F79B2",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveCongruentH1AdicRealization",
+          "scratchSha256": "E95609B3B1E0AA209848BB5FD372DA27DD6081D3A22A8CC2BCE77FA9C2448320",
+          "productionSha256": "9C9ADA8F5100965586ACB6583B0465B62BD9970921D7CA0DA6115752D822AE96",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryH1ModulusOperatorAlgebra",
+          "scratchSha256": "3088DB3E4135312604626BD75E4F18FC786BCD4F02277870EFD6A380D256F30E",
+          "productionSha256": "3088DB3E4135312604626BD75E4F18FC786BCD4F02277870EFD6A380D256F30E",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceFiniteOperatorCharacterDescent",
+          "scratchSha256": "3AE57C01A36D9DF2D2B5E62DAC21816E54CAA7ABE0007AF37A04B5725A040C6A",
+          "productionSha256": "3AE57C01A36D9DF2D2B5E62DAC21816E54CAA7ABE0007AF37A04B5725A040C6A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveFiniteH1HeckeCharacter",
+          "scratchSha256": "48017F46307B8EAC8F2129D87FA9C3417B44B2D3AF19B4BA23472CCA4A5EDE26",
+          "productionSha256": "DE6FB139077EACE6DE85BDBC5C50A2DE8EB77B43F0F94AD0EBB2E9BECE884AE2",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveFiniteH1OperatorRealization",
+          "scratchSha256": "3F439F73DD995AB8615CE63E33D4FF35246009D6EF34EC390CEEED6E90620223",
+          "productionSha256": "95315EC003FBDF057068FE6F4CE6FEE623F1A683D49CFCEEE753F05984280A59",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryH1ModulusKernel",
+          "scratchSha256": "A27F8C0453C13671E4669B08048F6589FBF6AC47CFDE055A2A2A486C8FACAF7F",
+          "productionSha256": "C6D2FAB2DB503BF030400AA6F7AFC827B245132F5BADD5B5069128D2D07A160F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryPermutationHeckeWords",
+          "scratchSha256": "63852A443A7D679C5216E4E769976CE57F13805F28A14CA8D33C2E5CF180071B",
+          "productionSha256": "DA80FBD3B10B99F4997FE45F2E5F078091F7BB91C47964DDFE43E5240C5320A4",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryPermutationOperatorKernel",
+          "scratchSha256": "1F9939744334A621CCC12010C765AEDCC14F581B83DD7533E12405D8E89DCD36",
+          "productionSha256": "C7F427DBB3469E86FA132289B0E0982B10B8EF127A6222704F22DCF33E8FC941",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryPermutationHeckeFinite",
+          "scratchSha256": "B80BC2737F5FDB86945ED8534CD2663AA430A92DCF67638A8AA0A9495E21BE4F",
+          "productionSha256": "7DAC7E61FB44A30F2FB65AF7D1949B86CEB30E7E917C3E57FBDAAF767AB4CDA3",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryPermutationOperatorDescent",
+          "scratchSha256": "7A7635F0FE17AF12C8C4CA7B4FE70AD368C45A0372FF5DACEE9A7A57C31AC27E",
+          "productionSha256": "DC3CD4E5B0E28248DA990B1AFD16798C80BA70F1E7282ECBDC7C6CB26818E535",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitivePermutationH1HeckeCharacter",
+          "scratchSha256": "7F3831C432148B1EB2B67E06A1DD55FFFDB85E3B68C87C35359F1A7FD00E7EEA",
+          "productionSha256": "9A1BE0FC0429D53A9BAED8B434BEBFFA09A68FC688E1C82A7185CCD190CC0E0B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitivePermutationH1Realization",
+          "scratchSha256": "F4582898A76AE5B4C935471C567494BD924C02BA7E7FA087D63522B2E64ADCAE",
+          "productionSha256": "62E1F69AA590A23CDDD1C76B1DA7BDEC70B4777801B63BD2044AEAA32F9DE8EC",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCongruenceCover",
+          "scratchSha256": "585659F407D2F51EDA84FCA732EB7D333F4256CE73B930F2E02CF9EE631548B4",
+          "productionSha256": "585659F407D2F51EDA84FCA732EB7D333F4256CE73B930F2E02CF9EE631548B4",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceBinaryStabilizerGammaOneCover",
+          "scratchSha256": "657BD9FE8E260AB66BE097AA959CEACEFEE58F1AEE70DD9490E52E4404E7749E",
+          "productionSha256": "A2B599FD1DEC46B048231CE917D26240EADFD3181CA60A7ABCB9D378F4E61CA8",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneDiagonalHom",
+          "scratchSha256": "AF70842F3D291B9E918FA2A4BC2E6F085951BC40EC99A69D219ADD4D836DD914",
+          "productionSha256": "6B69EE3D1CB9E5A92FD6FFEA754FA403E79CAFF7C1F3336395B41623B78FA7DC",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCoverFiniteIndex",
+          "scratchSha256": "A3DF7002CC95628A02ED734D1A10B63E8CCA9D3E540C261C88B67AD9F37FC3C6",
+          "productionSha256": "465E76340EC503F5F5346202CB3AAB148A75A54A84C6CA5602F017BE29EB4320",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCohomologyTransfer",
+          "scratchSha256": "15C53922CF077084C9F4421782C3346D7C27048B8E233F29F36D60CC5C1A7D62",
+          "productionSha256": "7E0042F01FF497AA6E36ACE0D6BB4C524BE7AA65AD52A28E2A41B14397FCF97D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneConstantH1Realization",
+          "scratchSha256": "5E3B3BE2610765E1D2E7E4DD2C727F1FE418231026EF3BB46409CDCDDB1C4B24",
+          "productionSha256": "B495A6F8E833DADAEE5684816D751CCA7CFC98853DE3C7485BC6133F9807D193",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 205 distinct names from 205 exhaustive scratch checks are retained: 205 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "The Gamma1 transfer and transported stabilizer operators have not yet been identified with arithmetic geometric correspondences or the required Gamma1 Hecke-and-diamond actions. Geometric Galois realization of these finite characters, compatible original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. No eigenvector lift, arithmetic Galois action or characteristic-zero deformation point is claimed from the finite constructions alone. 16/20; DUB-17--20 OPEN."
+}
+```
+
+## Production actual Gamma1 Hecke and native trace comparisons pending full run - 25 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 8,274-module scope: all thirteen retained regressions, 52,313 exhaustive theorem checks, 23,844 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The surjective-transfer Hecke identity still requires combining the proved base-change and trace-composition identities with the original coefficient action and exact subgroup reindexings. Restriction compatibility alone does not establish this transfer identity. Arithmetic geometric and diamond compatibility, geometric Galois realization of the finite characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. No characteristic-zero character lift or deformation point is inferred from finite characters. 16/20; DUB-17--20 OPEN.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceDependencyAudit7Production8274.log",
+      "sha256": "35EA2C5EDA9B78C88959B1AB7BD05C6173809B8185C5D5CAA49E12F803805808",
+      "requiredProofValueEdges": 36,
+      "consumers": [
+        "Dubon2026.sourceGammaOne_literalTrace_surjective",
+        "Dubon2026.sourceGammaOneHeckeConjugation_matrix",
+        "Dubon2026.sourceGammaOneConstantHeckeH1_cocycle",
+        "Dubon2026.sourceGammaOneConstantHeckeCocycles_apply"
+      ],
+      "sourceSha256": "8A69F4FBEA424E6928D3A37D2BA4750BF661C08393A0517CD7706AE5D553AE8E"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCosetsDependencyAudit5Production8274.log",
+      "sha256": "450AC19C328EFB6DF48DD2BA222F607B2D296EF08F0ECAF3A50E7D4905868D2A",
+      "requiredProofValueEdges": 30,
+      "consumers": [
+        "Dubon2026.sourceGammaOneCoverHeckeTransition_conjugation",
+        "Dubon2026.sourceGammaOneCoverHeckeCosetMap_mk"
+      ],
+      "sourceSha256": "44C60D6655411513EB5979A36F3410A515FA59966AA449984BD2DB28529EAB8D"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePullbackDependencyAudit3Production8274.log",
+      "sha256": "015A64D33B9FE667C100CF0C863E0176C101F5EBB64AE831286F86BA2543CA88",
+      "requiredProofValueEdges": 17,
+      "consumers": [
+        "Dubon2026.sourceGammaOneBinaryRestrictionH1_hecke",
+        "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_apply"
+      ],
+      "sourceSha256": "68B6918B0E2619B8AABF68630D7BA853D8EBBA006156CFB19E88D252D014C05E"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceBaseChangeDependencyAudit3Production8274.log",
+      "sha256": "0370500C067CCC4FC8C53458B1B7230303E4EB0DA1A8CE0CB0815416671005CD",
+      "requiredProofValueEdges": 15,
+      "consumers": [
+        "Dubon2026.sourceHeckeH1Trace_pullback"
+      ],
+      "sourceSha256": "D353A8513C462B276EBDB71E69E2BFFF12295BE65FADAA1D133213F5806C6CFF"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverTraceBaseChangeDependencyAudit4Production8274.log",
+      "sha256": "0DA99080F601AEC116DE1C3A748C3AFEE6E3BF1C0566AB3FC91457750400B5C5",
+      "requiredProofValueEdges": 11,
+      "consumers": [
+        "Dubon2026.sourceGammaOneCoverHeckeH1Trace_pullback",
+        "Dubon2026.sourceGammaOneCoverHeckeTraceSubgroup_eq"
+      ],
+      "sourceSha256": "C969CA4480714DAC76063C180A2C9BB854E5C33F8B76EBCE935FBA9085B21AEC"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceTowerDependencyAudit4Production8274.log",
+      "sha256": "82AB14A8F27BD8347F901DB40AD141BF87A3B61C71F7FD52540834A0C9C9E7CF",
+      "requiredProofValueEdges": 14,
+      "consumers": [
+        "Dubon2026.sourceHeckeH1Trace_tower"
+      ],
+      "sourceSha256": "2B751ABF2F6F601F366DAC932E936A75DED24A416602FB7DE21A7904C6C28A02"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceProductionAudit8274.log",
+  "sha256": "C6C8654E286E6796CB018CFB6C10B71580666B70025F03FDD24AC555C9BC3257",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-trace-production-build-8274.log",
+  "aggregateSha256": "D4B4646A0CFC6017137B43E492843F75FE63AF0B4C022918DF6C82E4D48F51E0",
+  "productionModules": 8274,
+  "incrementModules": 26,
+  "axiomChecks": 77,
+  "exhaustiveIncrementTheorems": 109,
+  "linterScopes": 26,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 111,
+  "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The original Gamma1 cover, Hecke correspondences, binary coefficients, native cohomology, literal finite traces and subgroup reindexings retain their definitions. No source contract is weakened.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 111,
+    "scratchDistinct": 111,
+    "generatedNameRenamings": {},
+    "productionFocused": 109,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {
+      "ZMod.chineseRemainder.congr_simp": [
+        {
+          "scope": "SourceGammaOneHeckeTraceScratchOwnership594For8274",
+          "module": "Dubon2026.SourcePrincipalCoprimeReduction"
+        }
+      ],
+      "Dubon2026.sourceGammaOneDiagonalHom.eq_1": [
+        {
+          "scope": "SourceGammaOneHeckeTraceScratchOwnership597For8274",
+          "module": "Dubon2026.SourceGammaOneCoverImage"
+        }
+      ]
+    },
+    "missingFromFocusedAlreadyInPrevious": [
+      "Dubon2026.sourceGammaOneDiagonalHom.eq_1"
+    ],
+    "productionNamesNotInScratch": [],
+    "upstreamRetainedGenerated": {
+      "ZMod.chineseRemainder.congr_simp": {
+        "owner": "Mathlib.NumberTheory.SumTwoSquares",
+        "typeHash": "2743338712",
+        "valueHash": "1845945809"
+      }
+    },
+    "retainedGeneratedFingerprints": {
+      "ZMod.chineseRemainder.congr_simp": [
+        "Mathlib.NumberTheory.SumTwoSquares",
+        "2743338712",
+        "1845945809"
+      ],
+      "Dubon2026.sourceGammaOneDiagonalHom.eq_1": [
+        "Dubon2026.SourceGammaOneCoverFiniteIndex",
+        "2101644397",
+        "1476824539"
+      ]
+    },
+    "retentionLogs": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceGeneratedRetention8274b.log",
+        "sha256": "0FACD89C5CE05FAB67AA1C455C3CDEB3DE849B77374646271A091F044FB527C3",
+        "sourceSha256": "9EEB2879DCE6E5D2E8C28C8588FCFDAA5B5D294AC848B26EDE24C6BA348E50BE"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchRetention8274b.log",
+        "sha256": "1A40EC0FA330A1426439BF7D7A9B0D558425145D35FF6283BFC6664DDFD77D22",
+        "sourceSha256": "A649D8A7692983446BDC7609132E8BD806C84D3D09A2D7862160A34C9E0D8CA5"
+      }
+    ],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceGammaOneHeckeSubgroup",
+          "SourceGammaOneConstantHecke",
+          "SourceNativeCoinductionCosetTrace",
+          "SourceShapiroH1CocycleComparison",
+          "SourceShapiroH1CosetTrace",
+          "SourceGammaOneTransferCosetFormula",
+          "SourceGammaOneLiteralTransferSurjectivity"
+        ],
+        "count": 25,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership592For8274.log",
+          "sha256": "7732909B31F124AA47A89A90EDD5F9C197AFCD79261488FA93F2A61F973DDA69",
+          "sourceSha256": "D91E93F13EE10FAF714093C36DF237D9332ED49CCD110AA6D15592C50246E5E3"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneCoverHeckeSquare",
+          "SourcePrincipalCoprimeReduction",
+          "SourceGammaOneRaisedCosets",
+          "SourceGammaOneCoverHeckeCosets",
+          "SourceGammaOneCoverHeckeRepresentatives"
+        ],
+        "count": 22,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership594For8274.log",
+          "sha256": "A44237195B7FF54118532D9290B72675A15DF5A4E6E45A5C1D439AAACD0000BD",
+          "sourceSha256": "6C0A042DA0FFC24AFB59FE951AC1638A8BBA849E8079F18D0D27B9EDEDF7AD85"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneBinaryRestriction",
+          "SourceGammaOneBinaryHeckeSum",
+          "SourceGammaOneBinaryRestrictionHecke"
+        ],
+        "count": 9,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership595For8274.log",
+          "sha256": "5D3239A2A18FF18DDFC4E0CD7AE7E312782012320A571FEEDDFD29A7F3DA0823",
+          "sourceSha256": "FA0BF4BC25E8490FCC99973EE4421D7EBB5E9216FBF42C2D3D23477D299D8188"
+        }
+      },
+      {
+        "modules": [
+          "SourceCohomologyTracePullbackCoefficients",
+          "SourceShapiroH1PullbackNaturality",
+          "SourceH1TraceBaseChange"
+        ],
+        "count": 17,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership596For8274.log",
+          "sha256": "C4A0151EBEBD58510749761EB5B848B385F727EB5431F6C19B93F4448AC5851D",
+          "sourceSha256": "00C110F0E7581921DAFEBAE9585F05C93FFC10452EA4C3D3EEC2C76DE5351CD7"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneCoverImage",
+          "SourceGammaOneCoverImageHecke",
+          "SourceGammaOneCoverHeckeTraceCosets",
+          "SourceGammaOneCoverHeckeTraceBaseChange"
+        ],
+        "count": 10,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership597For8274.log",
+          "sha256": "9342DBD9516312483F1963AC8038E1AA08FB9F4582BBCF4CE50B508045160003",
+          "sourceSha256": "24AD229B39946F6DAF0C6306AC3294E22E93BEAC323EE9E74EF265A1B44103AD"
+        }
+      },
+      {
+        "modules": [
+          "SourceCoinducedTowerFunctions",
+          "SourceCoinducedTowerTrace",
+          "SourceShapiroH1Tower",
+          "SourceH1TraceTower"
+        ],
+        "count": 28,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership598For8274.log",
+          "sha256": "E36F1A8770535CD118FE98ED78D513449756BE244B5F6B933DA272C6C70F1520",
+          "sourceSha256": "AFA0FC7960639EB28B05B25EAF30BB858755475D5EFAC496BFD006175545F9C0"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceOwnership8274.log",
+      "sha256": "634E51B4C1B1318223E2F545E33E994E5607A438A4A6CB20EC3936DBA9BEB167",
+      "sourceSha256": "41D34FB70B8275E9217EF36A2B5F477E508488ECF208FC7AB8F521734AE1AB63"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-220533-685.log",
+      "sha256": "67A337579A83611FB247AE2A9C773A3C0152B998E2B6A233718CE9B9CAE117C1"
+    },
+    "renameEvidence": {
+      "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 26 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for. Independent generated-name probes retain the exact Chinese-remainder theorem type/value hashes under its Mathlib owner and identify the already-audited cover equation owner.",
+      "sourceChecks": [
+        {
+          "module": "SourceGammaOneHeckeSubgroup",
+          "scratchSha256": "3518F8C38303371FA5BDC0730BB37915A8F2E7ABFD7C7174CFC6A7AA428139E5",
+          "productionSha256": "3518F8C38303371FA5BDC0730BB37915A8F2E7ABFD7C7174CFC6A7AA428139E5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneConstantHecke",
+          "scratchSha256": "9627C449A3179AA390C251FCEAE6A02F83EFB9EB26240A766C00FA4E311367D0",
+          "productionSha256": "B1CDE3537D1064DBDFF2CDA2DDF4BB470D3AE61612009D14BA8B5C441B6645C5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceNativeCoinductionCosetTrace",
+          "scratchSha256": "DD82554A6E52157C4467324C546994D96D767B35A6567F4C17D0E6D86D3FC0F4",
+          "productionSha256": "DD82554A6E52157C4467324C546994D96D767B35A6567F4C17D0E6D86D3FC0F4",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceShapiroH1CocycleComparison",
+          "scratchSha256": "4306684904679EE85F31F64FE81925677877DB1F54B5A2DCB11AD41ACC3BF0B5",
+          "productionSha256": "4306684904679EE85F31F64FE81925677877DB1F54B5A2DCB11AD41ACC3BF0B5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceShapiroH1CosetTrace",
+          "scratchSha256": "1D8455B6F1D924F536E62D67822378B5E5CC6C46F77AB6E19AE9859836BB259B",
+          "productionSha256": "28CAE34E906641EDC4A384F982A9397F7A80643AFF1BBD5EDE57B2752BEACA12",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneTransferCosetFormula",
+          "scratchSha256": "8BE95415BF1954E1C0E740DDF8CE9FC7A926D4A3A34CB6495C35957C201B3F1A",
+          "productionSha256": "1BE54F55F62F67125A13DA1A46DFC5B16E34E62CFCA6244D5EE4B390BFA3A38C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneLiteralTransferSurjectivity",
+          "scratchSha256": "2C275BE2CB4396E554FE1C8472BEF5B4E91C0FFF9BF390CAFE32DEE82BF35068",
+          "productionSha256": "34B1088616F5ADE4DF4414CDFF12BF1E88E3114601AAC53D0E44E0814DEDD66C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCoverHeckeSquare",
+          "scratchSha256": "3EEC68488F94744062D5AE7AB19B7930C3F73E8AF1A9320B44B7F0127811FDD3",
+          "productionSha256": "0560D5284965582BC778399C3197F0332811BDB60DB472D669D7A1F9C5F883B4",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrincipalCoprimeReduction",
+          "scratchSha256": "CF1F006422A7B2B1BE1A663F75E56A27DAE99582F4AFA5A4C8C2A067E131357B",
+          "productionSha256": "CF1F006422A7B2B1BE1A663F75E56A27DAE99582F4AFA5A4C8C2A067E131357B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneRaisedCosets",
+          "scratchSha256": "FA140110B816A60F7CFFC251AFC6E1F3FDDCC90CC549996ECF7236DF1D6244AD",
+          "productionSha256": "E64489F89C9B207F356AFF5E1923534A4C1ACF093C8534969E6C0D3741611378",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCoverHeckeCosets",
+          "scratchSha256": "CC282682F6D875EF97FB376FB19A25E1B2B491E1FF8163280C6C7F6DB2DDE315",
+          "productionSha256": "9FA73B8E8C0E9A12C43F9ECA3FEC325B39D31745CCC8339CCF4220958B538220",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCoverHeckeRepresentatives",
+          "scratchSha256": "F95372EDCEA2A9EFF2C030D2B477899F49692D7239D8EF68B16EED75204EA239",
+          "productionSha256": "C9EC9FA716DF5FF8014C34628FA6BFBD6D8295D159789380B5DF0832E117E9F5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneBinaryRestriction",
+          "scratchSha256": "8300211B19A51CE12AB2A57F09DD6AF20F5683B0237B603F831CF79022884E2D",
+          "productionSha256": "2B84B8B6835E0A6FDEF9DF3F10FE0267758662FBBECC610092BD5F469AB70D6A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneBinaryHeckeSum",
+          "scratchSha256": "20A995FCE32C3B99A4F5EEF4ABD3315092A54C5DFDF8938F01C6B60AA5972240",
+          "productionSha256": "11731E08705D749DB6C5E1F56507689FE401ECDD08AA75222B9DE6A42D4FBCDA",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneBinaryRestrictionHecke",
+          "scratchSha256": "3E97722633E4F7D6D6C61E7CACAF22E6867F1E082A1C506347879201BED60ABB",
+          "productionSha256": "D8911790C76FE7677F7DBE07FEEEDF8AFD4ACE0B45BD9D144F8E79D997260117",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceCohomologyTracePullbackCoefficients",
+          "scratchSha256": "7BFAF461F85274FBA8BBDD89FB9D5D0EF5718D80F7BCA7C2B8A175271BA16D43",
+          "productionSha256": "7BFAF461F85274FBA8BBDD89FB9D5D0EF5718D80F7BCA7C2B8A175271BA16D43",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceShapiroH1PullbackNaturality",
+          "scratchSha256": "1B100924ACE38077B9CAA6696C33D1C9A1ED5CC113A86B0A9140D55ADCE97215",
+          "productionSha256": "2C36C3A2101F918BCAD47E752BA7442144F51F9C5CB340B224B010BC55707430",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceH1TraceBaseChange",
+          "scratchSha256": "568424F1A5749E7D74A114EC0CC099854433B969AD729A1AE287E25A3DD1FFF1",
+          "productionSha256": "20117E4A7D27D94B1C789BEB8B59947F708CC527C94EB92C8610D6C07CB145DA",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCoverImage",
+          "scratchSha256": "6ADF7F716AD52E90D6932E981084C08694986DCD24108FE1C88075FDC1BF036B",
+          "productionSha256": "4D304F19EB9C124E638E7B46983D0EAB59B3E393A6DFD28E089FB61546320860",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCoverImageHecke",
+          "scratchSha256": "A96B2CE24C764810A9F1A5BF643E0078B0ABAACE90028E55E8A0D88E1AADE661",
+          "productionSha256": "C3D85D5BC40E7C9F261029C2A52868B244AF1B529F31D7E36419A773118F6F27",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCoverHeckeTraceCosets",
+          "scratchSha256": "8AEC2B54127737C315327F12E90AE5358584B9FFFBCB779FCC4FF79385563489",
+          "productionSha256": "51A064910975BC5DCE44B402106204CD4AD0F4E7E9B2ED50E77449A59EC2F1F5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCoverHeckeTraceBaseChange",
+          "scratchSha256": "E2931186F9C4D2B3791D2B4825028994510313A83D88B08EB100F72C597583AA",
+          "productionSha256": "C191666BD09D5FD897B0EFD2172FD70D81C3FE9973D9BD9D1588F9A54A6A1EAA",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceCoinducedTowerFunctions",
+          "scratchSha256": "63BB5961062974A9E96814A533D3A6DACA0A182A5AF3BD76EFC390E8D2878A56",
+          "productionSha256": "63BB5961062974A9E96814A533D3A6DACA0A182A5AF3BD76EFC390E8D2878A56",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceCoinducedTowerTrace",
+          "scratchSha256": "48A6CADB33821C99465974BE773A84CA3CD5489683F41BA523DEA6870651F7E3",
+          "productionSha256": "2BEA711DB1E2EE510971235C9E18FAFA4E22E0EA8C3091EB07D97569CE360E48",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceShapiroH1Tower",
+          "scratchSha256": "9C0A0CCC1BD8E3AE4A084AF760BE5D596D7B8F1BFD590FE3B33489D65F7F9F25",
+          "productionSha256": "FA82ABFB3D1A934C7FD62CE11CFDCE7A34E90E1E59C32C84D3A7FEF3DBD5C6F6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceH1TraceTower",
+          "scratchSha256": "AD278B75D2192A1709D4DC94F4A19D46F085E652278DE0F940E13027D55EF023",
+          "productionSha256": "D9A86E4FF301694F61BF12B378837862E19BF31CB26ACEEFB1FD270F215D6A9C",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 111 distinct names from 111 exhaustive scratch checks are retained: 109 in the production focused scope and 1 previously audited project generated name and 1 generated name retained with exactly matching type/value hashes under its upstream owner. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "The surjective-transfer Hecke identity still requires combining the proved base-change and trace-composition identities with the original coefficient action and exact subgroup reindexings. Restriction compatibility alone does not establish this transfer identity. Arithmetic geometric and diamond compatibility, geometric Galois realization of the finite characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. No characteristic-zero character lift or deformation point is inferred from finite characters. 16/20; DUB-17--20 OPEN."
+}
+```
+
+## Verified actual Gamma1 Hecke and native trace comparisons - 25 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 8,274-module scope: all thirteen retained regressions, 52,313 exhaustive theorem checks, 23,844 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The surjective-transfer Hecke identity still requires combining the proved base-change and trace-composition identities with the original coefficient action and exact subgroup reindexings. Restriction compatibility alone does not establish this transfer identity. Arithmetic geometric and diamond compatibility, geometric Galois realization of the finite characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. No characteristic-zero character lift or deformation point is inferred from finite characters. 16/20; DUB-17--20 OPEN.
+
+```json
+{
+  "recordedUTC": "2026-10-26T08:40:59.613741+00:00",
+  "log": "logs/dubon-build-20261026-001415-274.log",
+  "sha256": "D8BC973383205D9303138EECA202C6B55949EB013CB5FB97FCE52B808058DA59",
+  "bytes": 13451248,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 8274,
+  "projectTheorems": 52313,
+  "registeredConsumers": 23844,
+  "registeredConstructions": 2277,
+  "declarations": 32067,
+  "generated": 33137,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261026_000820.log",
+  "foundationSha256": "2EEC1E5CDD960AD1C9841B2ECD82EEB3C89F110B50AD79A535959B7177A91AE9",
+  "countReconciliation": {
+    "previousTheorems": 52204,
+    "focusedTheorems": 109,
+    "sharedGeneratedNames": [],
+    "addedTheorems": 109,
+    "removedTheorems": [],
+    "upstreamOwnedGeneratedNames": [
+      "ZMod.chineseRemainder.congr_simp"
+    ],
+    "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceGlobalOwnership8274b.log",
+    "globalOwnershipSha256": "2C5D3634D9A582F93A35A1DF3CF4E7B74CEE01D99578E5501B2922479585FC2A",
+    "globalOwnershipSourceSha256": "C95713C7C0A7E9810F9DC201F5983A3C8C6230771B54DC439CA219FC7B970823",
+    "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceOwnership8274.log",
+    "ownershipSha256": "634E51B4C1B1318223E2F545E33E994E5607A438A4A6CB20EC3936DBA9BEB167"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 111,
+    "scratchDistinct": 111,
+    "generatedNameRenamings": {},
+    "productionFocused": 109,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {
+      "ZMod.chineseRemainder.congr_simp": [
+        {
+          "scope": "SourceGammaOneHeckeTraceScratchOwnership594For8274",
+          "module": "Dubon2026.SourcePrincipalCoprimeReduction"
+        }
+      ],
+      "Dubon2026.sourceGammaOneDiagonalHom.eq_1": [
+        {
+          "scope": "SourceGammaOneHeckeTraceScratchOwnership597For8274",
+          "module": "Dubon2026.SourceGammaOneCoverImage"
+        }
+      ]
+    },
+    "missingFromFocusedAlreadyInPrevious": [
+      "Dubon2026.sourceGammaOneDiagonalHom.eq_1"
+    ],
+    "productionNamesNotInScratch": [],
+    "upstreamRetainedGenerated": {
+      "ZMod.chineseRemainder.congr_simp": {
+        "owner": "Mathlib.NumberTheory.SumTwoSquares",
+        "typeHash": "2743338712",
+        "valueHash": "1845945809"
+      }
+    },
+    "retainedGeneratedFingerprints": {
+      "ZMod.chineseRemainder.congr_simp": [
+        "Mathlib.NumberTheory.SumTwoSquares",
+        "2743338712",
+        "1845945809"
+      ],
+      "Dubon2026.sourceGammaOneDiagonalHom.eq_1": [
+        "Dubon2026.SourceGammaOneCoverFiniteIndex",
+        "2101644397",
+        "1476824539"
+      ]
+    },
+    "retentionLogs": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceGeneratedRetention8274b.log",
+        "sha256": "0FACD89C5CE05FAB67AA1C455C3CDEB3DE849B77374646271A091F044FB527C3",
+        "sourceSha256": "9EEB2879DCE6E5D2E8C28C8588FCFDAA5B5D294AC848B26EDE24C6BA348E50BE"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchRetention8274b.log",
+        "sha256": "1A40EC0FA330A1426439BF7D7A9B0D558425145D35FF6283BFC6664DDFD77D22",
+        "sourceSha256": "A649D8A7692983446BDC7609132E8BD806C84D3D09A2D7862160A34C9E0D8CA5"
+      }
+    ],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceGammaOneHeckeSubgroup",
+          "SourceGammaOneConstantHecke",
+          "SourceNativeCoinductionCosetTrace",
+          "SourceShapiroH1CocycleComparison",
+          "SourceShapiroH1CosetTrace",
+          "SourceGammaOneTransferCosetFormula",
+          "SourceGammaOneLiteralTransferSurjectivity"
+        ],
+        "count": 25,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership592For8274.log",
+          "sha256": "7732909B31F124AA47A89A90EDD5F9C197AFCD79261488FA93F2A61F973DDA69",
+          "sourceSha256": "D91E93F13EE10FAF714093C36DF237D9332ED49CCD110AA6D15592C50246E5E3"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneCoverHeckeSquare",
+          "SourcePrincipalCoprimeReduction",
+          "SourceGammaOneRaisedCosets",
+          "SourceGammaOneCoverHeckeCosets",
+          "SourceGammaOneCoverHeckeRepresentatives"
+        ],
+        "count": 22,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership594For8274.log",
+          "sha256": "A44237195B7FF54118532D9290B72675A15DF5A4E6E45A5C1D439AAACD0000BD",
+          "sourceSha256": "6C0A042DA0FFC24AFB59FE951AC1638A8BBA849E8079F18D0D27B9EDEDF7AD85"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneBinaryRestriction",
+          "SourceGammaOneBinaryHeckeSum",
+          "SourceGammaOneBinaryRestrictionHecke"
+        ],
+        "count": 9,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership595For8274.log",
+          "sha256": "5D3239A2A18FF18DDFC4E0CD7AE7E312782012320A571FEEDDFD29A7F3DA0823",
+          "sourceSha256": "FA0BF4BC25E8490FCC99973EE4421D7EBB5E9216FBF42C2D3D23477D299D8188"
+        }
+      },
+      {
+        "modules": [
+          "SourceCohomologyTracePullbackCoefficients",
+          "SourceShapiroH1PullbackNaturality",
+          "SourceH1TraceBaseChange"
+        ],
+        "count": 17,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership596For8274.log",
+          "sha256": "C4A0151EBEBD58510749761EB5B848B385F727EB5431F6C19B93F4448AC5851D",
+          "sourceSha256": "00C110F0E7581921DAFEBAE9585F05C93FFC10452EA4C3D3EEC2C76DE5351CD7"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneCoverImage",
+          "SourceGammaOneCoverImageHecke",
+          "SourceGammaOneCoverHeckeTraceCosets",
+          "SourceGammaOneCoverHeckeTraceBaseChange"
+        ],
+        "count": 10,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership597For8274.log",
+          "sha256": "9342DBD9516312483F1963AC8038E1AA08FB9F4582BBCF4CE50B508045160003",
+          "sourceSha256": "24AD229B39946F6DAF0C6306AC3294E22E93BEAC323EE9E74EF265A1B44103AD"
+        }
+      },
+      {
+        "modules": [
+          "SourceCoinducedTowerFunctions",
+          "SourceCoinducedTowerTrace",
+          "SourceShapiroH1Tower",
+          "SourceH1TraceTower"
+        ],
+        "count": 28,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership598For8274.log",
+          "sha256": "E36F1A8770535CD118FE98ED78D513449756BE244B5F6B933DA272C6C70F1520",
+          "sourceSha256": "AFA0FC7960639EB28B05B25EAF30BB858755475D5EFAC496BFD006175545F9C0"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceOwnership8274.log",
+      "sha256": "634E51B4C1B1318223E2F545E33E994E5607A438A4A6CB20EC3936DBA9BEB167",
+      "sourceSha256": "41D34FB70B8275E9217EF36A2B5F477E508488ECF208FC7AB8F521734AE1AB63"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-220533-685.log",
+      "sha256": "67A337579A83611FB247AE2A9C773A3C0152B998E2B6A233718CE9B9CAE117C1"
+    },
+    "renameEvidence": {
+      "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 26 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for. Independent generated-name probes retain the exact Chinese-remainder theorem type/value hashes under its Mathlib owner and identify the already-audited cover equation owner.",
+      "sourceChecks": [
+        {
+          "module": "SourceGammaOneHeckeSubgroup",
+          "scratchSha256": "3518F8C38303371FA5BDC0730BB37915A8F2E7ABFD7C7174CFC6A7AA428139E5",
+          "productionSha256": "3518F8C38303371FA5BDC0730BB37915A8F2E7ABFD7C7174CFC6A7AA428139E5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneConstantHecke",
+          "scratchSha256": "9627C449A3179AA390C251FCEAE6A02F83EFB9EB26240A766C00FA4E311367D0",
+          "productionSha256": "B1CDE3537D1064DBDFF2CDA2DDF4BB470D3AE61612009D14BA8B5C441B6645C5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceNativeCoinductionCosetTrace",
+          "scratchSha256": "DD82554A6E52157C4467324C546994D96D767B35A6567F4C17D0E6D86D3FC0F4",
+          "productionSha256": "DD82554A6E52157C4467324C546994D96D767B35A6567F4C17D0E6D86D3FC0F4",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceShapiroH1CocycleComparison",
+          "scratchSha256": "4306684904679EE85F31F64FE81925677877DB1F54B5A2DCB11AD41ACC3BF0B5",
+          "productionSha256": "4306684904679EE85F31F64FE81925677877DB1F54B5A2DCB11AD41ACC3BF0B5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceShapiroH1CosetTrace",
+          "scratchSha256": "1D8455B6F1D924F536E62D67822378B5E5CC6C46F77AB6E19AE9859836BB259B",
+          "productionSha256": "28CAE34E906641EDC4A384F982A9397F7A80643AFF1BBD5EDE57B2752BEACA12",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneTransferCosetFormula",
+          "scratchSha256": "8BE95415BF1954E1C0E740DDF8CE9FC7A926D4A3A34CB6495C35957C201B3F1A",
+          "productionSha256": "1BE54F55F62F67125A13DA1A46DFC5B16E34E62CFCA6244D5EE4B390BFA3A38C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneLiteralTransferSurjectivity",
+          "scratchSha256": "2C275BE2CB4396E554FE1C8472BEF5B4E91C0FFF9BF390CAFE32DEE82BF35068",
+          "productionSha256": "34B1088616F5ADE4DF4414CDFF12BF1E88E3114601AAC53D0E44E0814DEDD66C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCoverHeckeSquare",
+          "scratchSha256": "3EEC68488F94744062D5AE7AB19B7930C3F73E8AF1A9320B44B7F0127811FDD3",
+          "productionSha256": "0560D5284965582BC778399C3197F0332811BDB60DB472D669D7A1F9C5F883B4",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrincipalCoprimeReduction",
+          "scratchSha256": "CF1F006422A7B2B1BE1A663F75E56A27DAE99582F4AFA5A4C8C2A067E131357B",
+          "productionSha256": "CF1F006422A7B2B1BE1A663F75E56A27DAE99582F4AFA5A4C8C2A067E131357B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneRaisedCosets",
+          "scratchSha256": "FA140110B816A60F7CFFC251AFC6E1F3FDDCC90CC549996ECF7236DF1D6244AD",
+          "productionSha256": "E64489F89C9B207F356AFF5E1923534A4C1ACF093C8534969E6C0D3741611378",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCoverHeckeCosets",
+          "scratchSha256": "CC282682F6D875EF97FB376FB19A25E1B2B491E1FF8163280C6C7F6DB2DDE315",
+          "productionSha256": "9FA73B8E8C0E9A12C43F9ECA3FEC325B39D31745CCC8339CCF4220958B538220",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCoverHeckeRepresentatives",
+          "scratchSha256": "F95372EDCEA2A9EFF2C030D2B477899F49692D7239D8EF68B16EED75204EA239",
+          "productionSha256": "C9EC9FA716DF5FF8014C34628FA6BFBD6D8295D159789380B5DF0832E117E9F5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneBinaryRestriction",
+          "scratchSha256": "8300211B19A51CE12AB2A57F09DD6AF20F5683B0237B603F831CF79022884E2D",
+          "productionSha256": "2B84B8B6835E0A6FDEF9DF3F10FE0267758662FBBECC610092BD5F469AB70D6A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneBinaryHeckeSum",
+          "scratchSha256": "20A995FCE32C3B99A4F5EEF4ABD3315092A54C5DFDF8938F01C6B60AA5972240",
+          "productionSha256": "11731E08705D749DB6C5E1F56507689FE401ECDD08AA75222B9DE6A42D4FBCDA",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneBinaryRestrictionHecke",
+          "scratchSha256": "3E97722633E4F7D6D6C61E7CACAF22E6867F1E082A1C506347879201BED60ABB",
+          "productionSha256": "D8911790C76FE7677F7DBE07FEEEDF8AFD4ACE0B45BD9D144F8E79D997260117",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceCohomologyTracePullbackCoefficients",
+          "scratchSha256": "7BFAF461F85274FBA8BBDD89FB9D5D0EF5718D80F7BCA7C2B8A175271BA16D43",
+          "productionSha256": "7BFAF461F85274FBA8BBDD89FB9D5D0EF5718D80F7BCA7C2B8A175271BA16D43",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceShapiroH1PullbackNaturality",
+          "scratchSha256": "1B100924ACE38077B9CAA6696C33D1C9A1ED5CC113A86B0A9140D55ADCE97215",
+          "productionSha256": "2C36C3A2101F918BCAD47E752BA7442144F51F9C5CB340B224B010BC55707430",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceH1TraceBaseChange",
+          "scratchSha256": "568424F1A5749E7D74A114EC0CC099854433B969AD729A1AE287E25A3DD1FFF1",
+          "productionSha256": "20117E4A7D27D94B1C789BEB8B59947F708CC527C94EB92C8610D6C07CB145DA",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCoverImage",
+          "scratchSha256": "6ADF7F716AD52E90D6932E981084C08694986DCD24108FE1C88075FDC1BF036B",
+          "productionSha256": "4D304F19EB9C124E638E7B46983D0EAB59B3E393A6DFD28E089FB61546320860",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCoverImageHecke",
+          "scratchSha256": "A96B2CE24C764810A9F1A5BF643E0078B0ABAACE90028E55E8A0D88E1AADE661",
+          "productionSha256": "C3D85D5BC40E7C9F261029C2A52868B244AF1B529F31D7E36419A773118F6F27",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCoverHeckeTraceCosets",
+          "scratchSha256": "8AEC2B54127737C315327F12E90AE5358584B9FFFBCB779FCC4FF79385563489",
+          "productionSha256": "51A064910975BC5DCE44B402106204CD4AD0F4E7E9B2ED50E77449A59EC2F1F5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCoverHeckeTraceBaseChange",
+          "scratchSha256": "E2931186F9C4D2B3791D2B4825028994510313A83D88B08EB100F72C597583AA",
+          "productionSha256": "C191666BD09D5FD897B0EFD2172FD70D81C3FE9973D9BD9D1588F9A54A6A1EAA",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceCoinducedTowerFunctions",
+          "scratchSha256": "63BB5961062974A9E96814A533D3A6DACA0A182A5AF3BD76EFC390E8D2878A56",
+          "productionSha256": "63BB5961062974A9E96814A533D3A6DACA0A182A5AF3BD76EFC390E8D2878A56",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceCoinducedTowerTrace",
+          "scratchSha256": "48A6CADB33821C99465974BE773A84CA3CD5489683F41BA523DEA6870651F7E3",
+          "productionSha256": "2BEA711DB1E2EE510971235C9E18FAFA4E22E0EA8C3091EB07D97569CE360E48",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceShapiroH1Tower",
+          "scratchSha256": "9C0A0CCC1BD8E3AE4A084AF760BE5D596D7B8F1BFD590FE3B33489D65F7F9F25",
+          "productionSha256": "FA82ABFB3D1A934C7FD62CE11CFDCE7A34E90E1E59C32C84D3A7FEF3DBD5C6F6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceH1TraceTower",
+          "scratchSha256": "AD278B75D2192A1709D4DC94F4A19D46F085E652278DE0F940E13027D55EF023",
+          "productionSha256": "D9A86E4FF301694F61BF12B378837862E19BF31CB26ACEEFB1FD270F215D6A9C",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 111 distinct names from 111 exhaustive scratch checks are retained: 109 in the production focused scope and 1 previously audited project generated name and 1 generated name retained with exactly matching type/value hashes under its upstream owner. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "The surjective-transfer Hecke identity still requires combining the proved base-change and trace-composition identities with the original coefficient action and exact subgroup reindexings. Restriction compatibility alone does not establish this transfer identity. Arithmetic geometric and diamond compatibility, geometric Galois realization of the finite characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. No characteristic-zero character lift or deformation point is inferred from finite characters. 16/20; DUB-17--20 OPEN."
+}
+```
+
+## Production actual Gamma1 transfer and original-form finite characters pending full run - 26 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 8,290-module scope: all thirteen retained regressions, 52,423 exhaustive theorem checks, 23,874 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Arithmetic geometric and diamond compatibility, geometric Galois realization of the finite characters, original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. The new operator generators explicitly omit primes dividing level or modulus; surjectivity onto the entire original Hecke algebra is not asserted. No characteristic-zero character lift or deformation point is inferred from finite characters. 16/20; DUB-17--20 OPEN.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTraceDependencyAudit2Production8290.log",
+      "sha256": "CC17E817C753161E88F3606E11F5A6DCE1BC81B21BBC46526D6A276B61B5E78E",
+      "requiredProofValueEdges": 9,
+      "consumers": [
+        "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_iterated"
+      ],
+      "sourceSha256": "89288E9D12E6AD7FC6E85D65FD42FE8B7AC2CF8F22732BE8F7D7A2740E5BCA25"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperImageDependencyAudit1Production8290.log",
+      "sha256": "FAF61459532090135859EAE14E0D44009694D1E2A5FF7C15081A8E25C2798F6E",
+      "requiredProofValueEdges": 9,
+      "consumers": [
+        "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_conjugation",
+        "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_apply",
+        "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv"
+      ],
+      "sourceSha256": "821386A7DC4D7DC2FDF709DA007F594161A0FB7B16B4EC9A4F04255FDE39B357"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSubgroupH1MapDependencyAudit1Production8290.log",
+      "sha256": "D2DC72561A9F7E8DDFB3A27EE993F9BA488BD633214365E4E2F4C0B0CB97E5C8",
+      "requiredProofValueEdges": 5,
+      "consumers": [
+        "Dubon2026.sourceGammaOneSubgroupH1Iso_hom_eq_map",
+        "Dubon2026.sourceGammaOneConstantH1Transfer_subgroupIso"
+      ],
+      "sourceSha256": "6903894543120B87A0AE0F8E0558F211A10F9D53DF0D8A450C3B93B0949CA2B2"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNativeHeckeComparisonDependencyAudit2Production8290.log",
+      "sha256": "862B4374AF4DF96553C2F36443927D356596386E82A852569D8589C6CB7C3054",
+      "requiredProofValueEdges": 9,
+      "consumers": [
+        "Dubon2026.sourceGammaOneHeckeH1Pullback_square",
+        "Dubon2026.sourceGammaOneHeckeUpperTrace_reindex"
+      ],
+      "sourceSha256": "8002BAA4154CDD931B4A045B32F9897E412BF93B62A85E2D8209B79DCC4EF927"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTransferHeckeDependencyAudit5Production8290.log",
+      "sha256": "8B74B40EE98FEEF96AFC1F5CFCCA8FB68D13DFB2C6BBF4F294C4D0B7141661CA",
+      "requiredProofValueEdges": 17,
+      "consumers": [
+        "Dubon2026.sourceGammaOneConstantH1Transfer_hecke"
+      ],
+      "sourceSha256": "4681A7830FF027FE7AE1CAF9835C934DE90A4135271E342F2B05822D7A24C841"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneCharacterDependencyAudit5bProduction8290.log",
+      "sha256": "1989A4A045D5FCAE3A5B479010BB090F31125925885F936A7FEA252B8F730E40",
+      "requiredProofValueEdges": 29,
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_gammaOneH1HeckeCharacters"
+      ],
+      "sourceSha256": "C77DFDB1D2204B971C21D771ECB47D1C91BDE69283B52D468C54BCEC0319736F"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationProductionAudit8290.log",
+  "sha256": "A240C03F66E9C7D076C409C45EABC209DF3F02B64600418946B2296CC01D6CE4",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-primitive-gamma-one-hecke-realization-production-build-8290.log",
+  "aggregateSha256": "616B82191F47A1E543B3431FADD78A1A622FDF155EB078A287B7391D06BC437A",
+  "productionModules": 8290,
+  "incrementModules": 16,
+  "axiomChecks": 41,
+  "exhaustiveIncrementTheorems": 110,
+  "linterScopes": 16,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 110,
+  "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The original Gamma1 cover, Hecke correspondences, binary coefficients, native cohomology, literal finite traces and subgroup reindexings retain their definitions. No source contract is weakened.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 110,
+    "scratchDistinct": 110,
+    "generatedNameRenamings": {},
+    "productionFocused": 110,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceH1TraceBaseChangeCoefficient",
+          "SourceGammaOneCoverBinaryHeckeTrace"
+        ],
+        "count": 3,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership600For8290.log",
+          "sha256": "7BE9607BF1B7CFC3BF17958444C0DB9B617590D832BE35A7820002C173A8BFE0",
+          "sourceSha256": "9E4440B6956E9E984028A0ED64398AC4A80C9389BDB2D392F2333CBD822E5129"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneHeckeUpperImage"
+        ],
+        "count": 8,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership601For8290.log",
+          "sha256": "8FDCAB85C318DD2F8B6F076134E0FE95741E54994A04B6FC69401BCBE2920921",
+          "sourceSha256": "56F0E0CD520F37833F865B129F6855C179BE1ED6A07F7B367CAB33615A848A8D"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneSubgroupCohomologyMap"
+        ],
+        "count": 3,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership602For8290.log",
+          "sha256": "1D9526445671122A8078EE54A1B1DE0B524D2CBC6C567A5B27A4C3C85376464C",
+          "sourceSha256": "0A60E26F2321096738507584578D61517F6C7432AFD5E0D191064F1B0FC6BF17"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneHeckePullbackSquare",
+          "SourceGammaOneHeckeUpperTraceReindex"
+        ],
+        "count": 14,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership605For8290.log",
+          "sha256": "6745BA8D9164A5AC0C0434401B48946FD78F07088398CECE4C3B6C8D9E7D72EF",
+          "sourceSha256": "F07B78540622CC1DFF41ACA7E767156017F0014D8F685448B591272EA4036252"
+        }
+      },
+      {
+        "modules": [
+          "SourceH1TraceIntersection",
+          "SourceGammaOneIntersectionTraceExchange",
+          "SourceGammaOneUpperH1Composition",
+          "SourceGammaOneSubgroupTraceHecke",
+          "SourceGammaOneTransferHecke"
+        ],
+        "count": 30,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership611For8290.log",
+          "sha256": "8CA67560C49943955B1EE7492A02E1D116B321D73FC5B2F0138FDB7E01D3748F",
+          "sourceSha256": "34F6136DAEC11646345AD546C919D613EE76D950AD889D41F05F9397E58E27C1"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneHeckeWords",
+          "SourceGammaOneOperatorDescent",
+          "SourceGammaOneHeckeFinite",
+          "SourcePrimitiveGammaOneHeckeCharacter",
+          "SourcePrimitiveGammaOneH1Realization"
+        ],
+        "count": 52,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership617For8290.log",
+          "sha256": "CCDBF9E549EA36EEA3083FFF0BEE79054D14CDCB0AAC3848DCF1A8BCB8A3AE7A",
+          "sourceSha256": "9A91258E44193687AE9C856E40022B605E97D13BBE06F6C6266348BCDFEE4A24"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationOwnership8290.log",
+      "sha256": "59E41A9879DF63E38C356A6DAE29C20086E0BA471591C83F470D115BDEC6B0C8",
+      "sourceSha256": "C58CEED3ADBF1C7F5F3F3A5E50F3076C96560565641D9B58BDB78C17026FA29C"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-001415-274.log",
+      "sha256": "D8BC973383205D9303138EECA202C6B55949EB013CB5FB97FCE52B808058DA59"
+    },
+    "renameEvidence": {
+      "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 16 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+      "sourceChecks": [
+        {
+          "module": "SourceH1TraceBaseChangeCoefficient",
+          "scratchSha256": "A8856D1AEF6A28930210ACE72B7059336CB202CEA00CAB9081A880BF584AC6AA",
+          "productionSha256": "2454547BC0887EC92FDC167425E1B59DC6228AC52235FFBBA3C211FF92FB2E0A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCoverBinaryHeckeTrace",
+          "scratchSha256": "D87B62D582FB7E968115A3F7071F2F66C041726CF7613137D2E4013662F3ED70",
+          "productionSha256": "768B904AA06B2A6193125E78E312234B25C5970E1D6FEAEBA7E8EFD7623F45CD",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeUpperImage",
+          "scratchSha256": "6F2CE50508F9EA4B6E2D2207C6984F97CD9EC6E4B653B7E1F8E60683F8A1DCEC",
+          "productionSha256": "9679C7E41E263A5E338463E23D90AB89F1443B58188CE6B687B1DDADE49D5BBA",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneSubgroupCohomologyMap",
+          "scratchSha256": "937193952EE4964F6BE9F3D3F629C612CE003B45FA310AA44E3212EC0FDCF27B",
+          "productionSha256": "D84F071818EF949641FB1FEE7228CE061EF5669229BD32AA280512E6CA527575",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckePullbackSquare",
+          "scratchSha256": "D19130E7A15CA79E454DE5D2203709572B3B2A88D1200CF07416A63A8F66AB31",
+          "productionSha256": "BC3EAA11238393ED49B35FFBC951CFCBCA639A18A5DA501B14FFB57290FD5399",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeUpperTraceReindex",
+          "scratchSha256": "6C3C9EB92C40D20F163F85D8B3D6C64F1535650052EE8CA4F07A484CA0211E0F",
+          "productionSha256": "7F86B41F6EDEB7439668FD1DAC38419B2480EF9C172D56798D125761BD29D731",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceH1TraceIntersection",
+          "scratchSha256": "F89423FD464A06287DFF2248CCB87A8E9643CD5AFDFC219EF32185CB24836506",
+          "productionSha256": "5608907DF0322455779E99E18B454F51315F80824BD64F46FE2061EEF1B5F098",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneIntersectionTraceExchange",
+          "scratchSha256": "A553E33FC9FC94A8534B50371B12C3DBD40C5FC0AE17C6B2B7700536614FB858",
+          "productionSha256": "2F1B8728D50FB4F4095661A4E7B4B8FD7C01B1902B0BFFCB311F96A83B8AFD5E",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneUpperH1Composition",
+          "scratchSha256": "8C86A95E60F2548C00F61D102BEC52BD338AC9CCD1847C11BEF1039FC90A322D",
+          "productionSha256": "B0DAF6DAECE1D3E04A939668ACE2AB644FAF03DC5B3A882B553D3564F6845A1B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneSubgroupTraceHecke",
+          "scratchSha256": "2668090B64ADFE7FAAF586451F13A22CE9F09F495FCE2B94E66C139C64D7D6A3",
+          "productionSha256": "1C6CF6799E0F0B607D2002A5170CD623B5F369C4DC640BD7720D240A04B02F8B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneTransferHecke",
+          "scratchSha256": "4A8F0CDF6ED05A0B35B0318CA0C38FDDFFF8887C6475AAF720A0B4CDBB69DF3E",
+          "productionSha256": "667BEC3DA20909DF2CD197DD45D2DD004945724F78F6E2CD81E03D650EED10E5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeWords",
+          "scratchSha256": "7F43A8C9716A2C3CFB6D9D4DF5BD8E54349AACEE1CBDB95A79F465A84BE1520C",
+          "productionSha256": "79678C3103E04E96882FF0D936D52533018132E55D52DF040AE0BA9D87EB3C64",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneOperatorDescent",
+          "scratchSha256": "C69D4452555B8FDC3951EFE283373D423F447592E323904BBBCD9C57A2753FD9",
+          "productionSha256": "27A396911B67BDE4A00BA002DEC8CA9AFC3886E23334EAACF4EC3DE7D840BDFF",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeFinite",
+          "scratchSha256": "071F8B65D67946F0C39E602FFDAAF0A8D3C40E84C4ACD308EF7200742A523169",
+          "productionSha256": "6F79612B4E507F6655EE22F07AE94F61C7EF18E3EA2F4783D9F9B8D9B08209BB",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveGammaOneHeckeCharacter",
+          "scratchSha256": "40EAA0B5AB12C906412F02BB640A0C97D9D9AFC4063CF4D68BEEB19148C51AFE",
+          "productionSha256": "B59337159AC01BEB6C1C8F261FFB70F5AE11A753DA5591076FEA23594C4CD876",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveGammaOneH1Realization",
+          "scratchSha256": "E74C962B858F431810852B72738BE9C8DB9D55D02ED0E35155456D8BBF003748",
+          "productionSha256": "5038486E7F42C75D4161C3C444525B004110B12EA213633283D46B491E366CFC",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 110 distinct names from 110 exhaustive scratch checks are retained: 110 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Arithmetic geometric and diamond compatibility, geometric Galois realization of the finite characters, original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. The new operator generators explicitly omit primes dividing level or modulus; surjectivity onto the entire original Hecke algebra is not asserted. No characteristic-zero character lift or deformation point is inferred from finite characters. 16/20; DUB-17--20 OPEN."
+}
+```
+
+## Verified actual Gamma1 transfer and original-form finite characters - 26 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 8,290-module scope: all thirteen retained regressions, 52,423 exhaustive theorem checks, 23,874 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+Arithmetic geometric and diamond compatibility, geometric Galois realization of the finite characters, original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. The new operator generators explicitly omit primes dividing level or modulus; surjectivity onto the entire original Hecke algebra is not asserted. No characteristic-zero character lift or deformation point is inferred from finite characters. 16/20; DUB-17--20 OPEN.
+
+```json
+{
+  "recordedUTC": "2026-10-26T10:51:56.652542+00:00",
+  "log": "logs/dubon-build-20261026-021715-306.log",
+  "sha256": "F9FAA129BA70805D3A74DED0206B1A9614D70B6A771A942853EC0FCC758D1D00",
+  "bytes": 13479782,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 8290,
+  "projectTheorems": 52423,
+  "registeredConsumers": 23874,
+  "registeredConstructions": 2288,
+  "declarations": 32108,
+  "generated": 33225,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261026_020943.log",
+  "foundationSha256": "DB0218352C83246ECD8A6909680E4E27EE2F23631CA07E43F3B7D12E4FD4AB5B",
+  "countReconciliation": {
+    "previousTheorems": 52313,
+    "focusedTheorems": 110,
+    "sharedGeneratedNames": [],
+    "addedTheorems": 110,
+    "removedTheorems": [],
+    "upstreamOwnedGeneratedNames": [],
+    "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationGlobalOwnership8290.log",
+    "globalOwnershipSha256": "FC3AD13EE8162C31F0109C2F6B24B9FE7BE7D11E9868A003815DA07A5667E1BA",
+    "globalOwnershipSourceSha256": "AA8E6AB488CEB879E826FA47B39F09883E2F584A138491640ED71D953EC6A16D",
+    "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationOwnership8290.log",
+    "ownershipSha256": "59E41A9879DF63E38C356A6DAE29C20086E0BA471591C83F470D115BDEC6B0C8"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 110,
+    "scratchDistinct": 110,
+    "generatedNameRenamings": {},
+    "productionFocused": 110,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceH1TraceBaseChangeCoefficient",
+          "SourceGammaOneCoverBinaryHeckeTrace"
+        ],
+        "count": 3,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership600For8290.log",
+          "sha256": "7BE9607BF1B7CFC3BF17958444C0DB9B617590D832BE35A7820002C173A8BFE0",
+          "sourceSha256": "9E4440B6956E9E984028A0ED64398AC4A80C9389BDB2D392F2333CBD822E5129"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneHeckeUpperImage"
+        ],
+        "count": 8,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership601For8290.log",
+          "sha256": "8FDCAB85C318DD2F8B6F076134E0FE95741E54994A04B6FC69401BCBE2920921",
+          "sourceSha256": "56F0E0CD520F37833F865B129F6855C179BE1ED6A07F7B367CAB33615A848A8D"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneSubgroupCohomologyMap"
+        ],
+        "count": 3,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership602For8290.log",
+          "sha256": "1D9526445671122A8078EE54A1B1DE0B524D2CBC6C567A5B27A4C3C85376464C",
+          "sourceSha256": "0A60E26F2321096738507584578D61517F6C7432AFD5E0D191064F1B0FC6BF17"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneHeckePullbackSquare",
+          "SourceGammaOneHeckeUpperTraceReindex"
+        ],
+        "count": 14,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership605For8290.log",
+          "sha256": "6745BA8D9164A5AC0C0434401B48946FD78F07088398CECE4C3B6C8D9E7D72EF",
+          "sourceSha256": "F07B78540622CC1DFF41ACA7E767156017F0014D8F685448B591272EA4036252"
+        }
+      },
+      {
+        "modules": [
+          "SourceH1TraceIntersection",
+          "SourceGammaOneIntersectionTraceExchange",
+          "SourceGammaOneUpperH1Composition",
+          "SourceGammaOneSubgroupTraceHecke",
+          "SourceGammaOneTransferHecke"
+        ],
+        "count": 30,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership611For8290.log",
+          "sha256": "8CA67560C49943955B1EE7492A02E1D116B321D73FC5B2F0138FDB7E01D3748F",
+          "sourceSha256": "34F6136DAEC11646345AD546C919D613EE76D950AD889D41F05F9397E58E27C1"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneHeckeWords",
+          "SourceGammaOneOperatorDescent",
+          "SourceGammaOneHeckeFinite",
+          "SourcePrimitiveGammaOneHeckeCharacter",
+          "SourcePrimitiveGammaOneH1Realization"
+        ],
+        "count": 52,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership617For8290.log",
+          "sha256": "CCDBF9E549EA36EEA3083FFF0BEE79054D14CDCB0AAC3848DCF1A8BCB8A3AE7A",
+          "sourceSha256": "9A91258E44193687AE9C856E40022B605E97D13BBE06F6C6266348BCDFEE4A24"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationOwnership8290.log",
+      "sha256": "59E41A9879DF63E38C356A6DAE29C20086E0BA471591C83F470D115BDEC6B0C8",
+      "sourceSha256": "C58CEED3ADBF1C7F5F3F3A5E50F3076C96560565641D9B58BDB78C17026FA29C"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-001415-274.log",
+      "sha256": "D8BC973383205D9303138EECA202C6B55949EB013CB5FB97FCE52B808058DA59"
+    },
+    "renameEvidence": {
+      "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 16 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+      "sourceChecks": [
+        {
+          "module": "SourceH1TraceBaseChangeCoefficient",
+          "scratchSha256": "A8856D1AEF6A28930210ACE72B7059336CB202CEA00CAB9081A880BF584AC6AA",
+          "productionSha256": "2454547BC0887EC92FDC167425E1B59DC6228AC52235FFBBA3C211FF92FB2E0A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCoverBinaryHeckeTrace",
+          "scratchSha256": "D87B62D582FB7E968115A3F7071F2F66C041726CF7613137D2E4013662F3ED70",
+          "productionSha256": "768B904AA06B2A6193125E78E312234B25C5970E1D6FEAEBA7E8EFD7623F45CD",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeUpperImage",
+          "scratchSha256": "6F2CE50508F9EA4B6E2D2207C6984F97CD9EC6E4B653B7E1F8E60683F8A1DCEC",
+          "productionSha256": "9679C7E41E263A5E338463E23D90AB89F1443B58188CE6B687B1DDADE49D5BBA",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneSubgroupCohomologyMap",
+          "scratchSha256": "937193952EE4964F6BE9F3D3F629C612CE003B45FA310AA44E3212EC0FDCF27B",
+          "productionSha256": "D84F071818EF949641FB1FEE7228CE061EF5669229BD32AA280512E6CA527575",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckePullbackSquare",
+          "scratchSha256": "D19130E7A15CA79E454DE5D2203709572B3B2A88D1200CF07416A63A8F66AB31",
+          "productionSha256": "BC3EAA11238393ED49B35FFBC951CFCBCA639A18A5DA501B14FFB57290FD5399",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeUpperTraceReindex",
+          "scratchSha256": "6C3C9EB92C40D20F163F85D8B3D6C64F1535650052EE8CA4F07A484CA0211E0F",
+          "productionSha256": "7F86B41F6EDEB7439668FD1DAC38419B2480EF9C172D56798D125761BD29D731",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceH1TraceIntersection",
+          "scratchSha256": "F89423FD464A06287DFF2248CCB87A8E9643CD5AFDFC219EF32185CB24836506",
+          "productionSha256": "5608907DF0322455779E99E18B454F51315F80824BD64F46FE2061EEF1B5F098",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneIntersectionTraceExchange",
+          "scratchSha256": "A553E33FC9FC94A8534B50371B12C3DBD40C5FC0AE17C6B2B7700536614FB858",
+          "productionSha256": "2F1B8728D50FB4F4095661A4E7B4B8FD7C01B1902B0BFFCB311F96A83B8AFD5E",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneUpperH1Composition",
+          "scratchSha256": "8C86A95E60F2548C00F61D102BEC52BD338AC9CCD1847C11BEF1039FC90A322D",
+          "productionSha256": "B0DAF6DAECE1D3E04A939668ACE2AB644FAF03DC5B3A882B553D3564F6845A1B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneSubgroupTraceHecke",
+          "scratchSha256": "2668090B64ADFE7FAAF586451F13A22CE9F09F495FCE2B94E66C139C64D7D6A3",
+          "productionSha256": "1C6CF6799E0F0B607D2002A5170CD623B5F369C4DC640BD7720D240A04B02F8B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneTransferHecke",
+          "scratchSha256": "4A8F0CDF6ED05A0B35B0318CA0C38FDDFFF8887C6475AAF720A0B4CDBB69DF3E",
+          "productionSha256": "667BEC3DA20909DF2CD197DD45D2DD004945724F78F6E2CD81E03D650EED10E5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeWords",
+          "scratchSha256": "7F43A8C9716A2C3CFB6D9D4DF5BD8E54349AACEE1CBDB95A79F465A84BE1520C",
+          "productionSha256": "79678C3103E04E96882FF0D936D52533018132E55D52DF040AE0BA9D87EB3C64",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneOperatorDescent",
+          "scratchSha256": "C69D4452555B8FDC3951EFE283373D423F447592E323904BBBCD9C57A2753FD9",
+          "productionSha256": "27A396911B67BDE4A00BA002DEC8CA9AFC3886E23334EAACF4EC3DE7D840BDFF",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeFinite",
+          "scratchSha256": "071F8B65D67946F0C39E602FFDAAF0A8D3C40E84C4ACD308EF7200742A523169",
+          "productionSha256": "6F79612B4E507F6655EE22F07AE94F61C7EF18E3EA2F4783D9F9B8D9B08209BB",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveGammaOneHeckeCharacter",
+          "scratchSha256": "40EAA0B5AB12C906412F02BB640A0C97D9D9AFC4063CF4D68BEEB19148C51AFE",
+          "productionSha256": "B59337159AC01BEB6C1C8F261FFB70F5AE11A753DA5591076FEA23594C4CD876",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourcePrimitiveGammaOneH1Realization",
+          "scratchSha256": "E74C962B858F431810852B72738BE9C8DB9D55D02ED0E35155456D8BBF003748",
+          "productionSha256": "5038486E7F42C75D4161C3C444525B004110B12EA213633283D46B491E366CFC",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 110 distinct names from 110 exhaustive scratch checks are retained: 110 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Arithmetic geometric and diamond compatibility, geometric Galois realization of the finite characters, original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. The new operator generators explicitly omit primes dividing level or modulus; surjectivity onto the entire original Hecke algebra is not asserted. No characteristic-zero character lift or deformation point is inferred from finite characters. 16/20; DUB-17--20 OPEN."
+}
+```
+
+## Production actual Gamma1 arithmetic geometry and Hecke equivariance pending full run - 26 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 8,316-module scope: all thirteen retained regressions, 52,606 exhaustive theorem checks, 23,951 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The geometric/H1 comparison must retain the original homogeneous matrix coefficient action and prove the upper/lower correspondence and transpose/diamond conventions. Arithmetic equivariance of the ordinary Picard operator alone does not identify the original binary-coefficient finite Hecke characters with geometric characters. Diamond comparison, Frobenius/inertia, arithmetic Galois realization of these finite characters, original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. No characteristic-zero character lift or deformation point is inferred. 16/20; DUB-17--20 OPEN.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldDependencyAudit10bProduction8316.log",
+      "sha256": "896B598909E12CBBBA3A34EF765CD11FD55B05404EFBBCE4DFF098CC2F980A46",
+      "requiredProofValueEdges": 46,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_finite_coordinate",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_finite_coordinate",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_baseChange_le",
+        "Dubon2026.SourceFunctionField.GammaOne.transcendental_jCoordinate"
+      ],
+      "sourceSha256": "395B66EC7F9E66CA6582FE9BBB34CD3B1DC5CAE0EC6957018E8D1A3BE5843BB0"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFieldDependencyAudit5Production8316.log",
+      "sha256": "D1626CAF1034357F3362EFDB9A6039DEE5BD59DF3A479B8B63D7BDDED0622097",
+      "requiredProofValueEdges": 27,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_finite",
+        "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_finite",
+        "Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_coe",
+        "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_coe"
+      ],
+      "sourceSha256": "6A9A91477ABACB9DA81B421942488B3A690B18FDE1C033C8AB37ED770887FA83"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDependencyAudit2bProduction8316.log",
+      "sha256": "1F31C8DFF719FEE5A4ED2EE768C6CE8EA9C21A915DC4A7B314C54387C4C245B7",
+      "requiredProofValueEdges": 17,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_mem_degZero",
+        "Dubon2026.SourceFunctionField.GammaOne.isPrincipal_heckeDivisor",
+        "Dubon2026.SourceFunctionField.GammaOne.heckePicard_mk",
+        "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor",
+        "Dubon2026.SourceFunctionField.GammaOne.heckePicard"
+      ],
+      "sourceSha256": "678280430A75C50F7125872150F98A38EF3C664257302F812E1CA5DF946BCDE7"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDependencyAudit9Production8316.log",
+      "sha256": "AB956F9D79E28442F7D71F4A2908AE97167A54FE4CA29BCE2A40CA4B04D2E708",
+      "requiredProofValueEdges": 54,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.heckePicard_arithmetic",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1ArithmeticPicardRep_torsion",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1ArithmeticPicardRep",
+        "Dubon2026.SourceFunctionField.GammaOne.arithmeticRingAut_j",
+        "Dubon2026.SourceFunctionField.GammaOne.fieldCoefficientMap_coe"
+      ],
+      "sourceSha256": "E9FCB861EF139414B243D06C9E95C24C889CA8A4B3796CD63CB31B7EA4E1B1F6"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGeometryProductionAudit8316.log",
+  "sha256": "FA2692980618E70CDEFFF1EBC85194CA0C60E285AC37846E1D87FEB9B2643D45",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-geometry-production-build-8316.log",
+  "aggregateSha256": "8BA6182ABB4F3E6E7248A2E55517ACB0F2EF1BA8D3274DB4B359434F7B100519",
+  "productionModules": 8316,
+  "incrementModules": 26,
+  "axiomChecks": 102,
+  "exhaustiveIncrementTheorems": 184,
+  "linterScopes": 26,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 185,
+  "productionReuse": "Only scratch imports are qualified. Every audited statement, proof body and comment is preserved. Actual modular forms, original j, integral expansions, literal Laurent fields and both finite field maps retain their definitions. No source contract is weakened.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 185,
+    "scratchDistinct": 185,
+    "generatedNameRenamings": {},
+    "productionFocused": 184,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {
+      "Dubon2026.SourceFunctionField.coeffEmb.eq_1": [
+        {
+          "scope": "SourceGammaOneArithmeticGeometryScratchOwnership625For8316",
+          "module": "Dubon2026.SourceGammaOneFieldCoefficients"
+        }
+      ]
+    },
+    "missingFromFocusedAlreadyInPrevious": [
+      "Dubon2026.SourceFunctionField.coeffEmb.eq_1"
+    ],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceGammaOneFunctionField",
+          "SourceGammaOneJCoordinate",
+          "SourceGammaOneRatioClosure",
+          "SourceGammaOneNormRelation",
+          "SourceGammaOneComplexRelation",
+          "SourceGammaOneComplexRatio",
+          "SourceGammaOneRationalRelation",
+          "SourceGammaOneFunctionFieldFinite",
+          "SourceGammaOneFunctionFieldBaseChange",
+          "SourceGammaOneCurveFinite"
+        ],
+        "count": 52,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGeometryScratchOwnership620bFor8316.log",
+          "sha256": "601D074E5D2C44AF0BC0AA05DF9F75F3B20B2EC220B90950004966B00677A828",
+          "sourceSha256": "CACDBB9ECCE70B60D0BC823F954113BCE683F135F2C2B873C8EAEA76E56A77FA"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneModularStretch",
+          "SourceGammaOneModularStretchCoefficients",
+          "SourceGammaOneHeckeFieldInclusion",
+          "SourceGammaOneHeckeDegeneracy",
+          "SourceGammaOneHeckeFieldFinite"
+        ],
+        "count": 35,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGeometryScratchOwnership622For8316.log",
+          "sha256": "8EF3036477C48D01C8F04353FC70A6CC827C2B41B016590C00812222CF821B00",
+          "sourceSha256": "FBE826191B21EBF578FDF1F8B22EF7BD2C4D94320DEEC2B1F3520C0D8F677A47"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneResidues",
+          "SourceGammaOneHeckePicard"
+        ],
+        "count": 12,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGeometryScratchOwnership624bFor8316.log",
+          "sha256": "2959223116D9401FFE6358274E373724AF42062C7B95FFB8132D0BE82FDAF520",
+          "sourceSha256": "18D3C24B876980CE8F27FB85334AF1219AE556F32D70B4445BAF04D97A99AF2F"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneFieldCoefficients",
+          "SourceGammaOneHeckeFieldNaturality",
+          "SourceGammaOneArithmeticField",
+          "SourceGammaOneArithmeticPlaces",
+          "SourceGammaOneArithmeticDivisors",
+          "SourceGammaOneArithmeticPicard",
+          "SourceGammaOneHeckeArithmeticPlaces",
+          "SourceGammaOneHeckeArithmeticDivisors",
+          "SourceGammaOneHeckeArithmetic"
+        ],
+        "count": 86,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGeometryScratchOwnership625For8316.log",
+          "sha256": "1853EB87457F5C899D300BAD26453D2F7EC1CBF308E1C0937EF65F5D8FE36D5F",
+          "sourceSha256": "08C8B990AB6501AA4251405F71D0F58A7190FB5D7519B29FA1813D41063D7E40"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGeometryOwnership8316.log",
+      "sha256": "25E55AFA998553CC79C6469907F4D420465019871B8849E671B84CF69126AD04",
+      "sourceSha256": "ADB78B6537222BD84F99BD9554A7290D7ED01CAF679E52A052FCDCBC114D9A61"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-021715-306.log",
+      "sha256": "F9FAA129BA70805D3A74DED0206B1A9614D70B6A771A942853EC0FCC758D1D00"
+    },
+    "renameEvidence": {
+      "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 26 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+      "sourceChecks": [
+        {
+          "module": "SourceGammaOneFunctionField",
+          "scratchSha256": "24A29ADCD2672D85C2D2050865E7639E9DEC600A58FC74C63B777DB3293B5D82",
+          "productionSha256": "24A29ADCD2672D85C2D2050865E7639E9DEC600A58FC74C63B777DB3293B5D82",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneJCoordinate",
+          "scratchSha256": "4AC407FCC7FA9BE3C8661051C6DEFF25AC76966939EA768D6B3BD3603C64E82B",
+          "productionSha256": "242F8F0963AACD9590A94E33256D5D5725349173FF06C5758EEDB6D00A9FF810",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneRatioClosure",
+          "scratchSha256": "118619B0C492FFB91A8073CF652DFDE62951329CF7483A03EE0C301ED0EC84F4",
+          "productionSha256": "DC2DF8D6368EE28EC85E7FF35B0A223155F5F1015397E2F37F8934C16909EF1C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneNormRelation",
+          "scratchSha256": "6C2897C4C63E5ED3697CE2292FE5468B2F5973D68B1347D0D7F9CEF29E98EE03",
+          "productionSha256": "464AEBF07BFDB6232DC767AED11E03A7DC3AAA6A48F04038917B3B6476AFD9F2",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneComplexRelation",
+          "scratchSha256": "283511D74947B88FC28069EE5A7878A89450DE4960CED2AB7E44611448227267",
+          "productionSha256": "A80F9F6BE0C73DE52175DD5737629F8F00ED538C99CDEC059A0DC941E481F829",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneComplexRatio",
+          "scratchSha256": "7A0BA5FFCCDB34748E26715F9EE1F010C40B08283B6DB47FEF8ED8459D394346",
+          "productionSha256": "4A560908041A56A607DD35B4A6CABF60C8E28F39F91E694FDE3CDDE41495A6C4",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneRationalRelation",
+          "scratchSha256": "3F1E6796ABA7A222691574495AEDE1E69ADAD5F90484C10402B012AE74BD8E4E",
+          "productionSha256": "3E5B09094FF7E05D47A526ECC7F3888ABC5067DC8DAED5E153762D8F9ACBB0FA",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneFunctionFieldFinite",
+          "scratchSha256": "3E57C1BA88AFC8DFE550CB88F341F627ABD9F355C8AAED4D2D62FDFA196355F8",
+          "productionSha256": "8EBCA373565B53DDDE9018C7A18B957FC1B7822B74D325310B9E8581E7B5905C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneFunctionFieldBaseChange",
+          "scratchSha256": "9F4B86543AAB668A318ED0E134DFB26ACB31D06416C8D8E6E3B0FC3AA18B6D76",
+          "productionSha256": "FF3926FC60F98AACEBA430B405ACC1674F9A4BC7845A16D19DDF95A00288E7EE",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCurveFinite",
+          "scratchSha256": "98510816FF2E5C928A87EB978469F7796117C7843B0257BD532A7C4A4404C5CC",
+          "productionSha256": "B00B2A9D501AE35B6450054125B5AD0D8A63331B42F85DDA2B437A23BA7D2759",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneModularStretch",
+          "scratchSha256": "CC0C457AF29AADB97F81712CDF5CAC003A6AF6F0490826BA0AA0DB30BDB02CD6",
+          "productionSha256": "CC0C457AF29AADB97F81712CDF5CAC003A6AF6F0490826BA0AA0DB30BDB02CD6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneModularStretchCoefficients",
+          "scratchSha256": "31561385BEB222D702C6AE7B40425E0EB7C3F00B6C79C1C6B837C27564F27E64",
+          "productionSha256": "DB0326717AF5E4A6154A6BA748AF46D79DE08DCA2135E869D48749D1E4141C7D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeFieldInclusion",
+          "scratchSha256": "3244BFBA540B1D0DE177D286AC382E0B41CE19D0AD1A2F79D898DBEE0FBB8E98",
+          "productionSha256": "0AFB6D4E026D4BE6190EAA198D91180D43CC1EC001DC18246BF177F0258ADEBA",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeDegeneracy",
+          "scratchSha256": "6C79218EB787DB18EA9FD260C36914F88B300543060029F055391FA670A76303",
+          "productionSha256": "49AD28A56A065A9C2E7D9B98CA042F749A4E3C463D6B631B92DEC0A9AAB46AC7",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeFieldFinite",
+          "scratchSha256": "7F7B25F2EE3DE6685903DC0C07D187527B9D34A7BA0758B8D35D981352D1C54D",
+          "productionSha256": "765E46C3933771F28522D2DA46FAA19BEC2A3ADB1E264BF6FE978A05609893D8",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneResidues",
+          "scratchSha256": "62B68DD9B439BED7C7E498FFC9AD95F9848FDB887319DFD09152A7BD0D3C3995",
+          "productionSha256": "FF711706A6F1A463FC398C6A7DBEEFE743D1781C561214A8C01C14CE962BFCB3",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckePicard",
+          "scratchSha256": "39D5745B1530BC16846C8A91B8B3892FC3B21DA27A1460BB1ABEACF690237118",
+          "productionSha256": "FB168279BA3A3581322F84F23657EC7AEF81C34330380FDF5C2CDFC1EAD0F173",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneFieldCoefficients",
+          "scratchSha256": "EDEC2FBFB927D6D6539793DCEBE0FD3811DE969E7AE166A410BA851E32F024FE",
+          "productionSha256": "F550DEDBA2E3964FA408DA1E5A0C2FF27C2B4CB17AB3BEAF6604D3C363C47389",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeFieldNaturality",
+          "scratchSha256": "CAF28AF4C479E305B1054FF3E962064554005D5CDC2243AE91AB4C3ADDF986F8",
+          "productionSha256": "E1B2D65C12B37881696B6AA7E73FDCEA648808C199904B17ABEEB45C667B55F3",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneArithmeticField",
+          "scratchSha256": "86162F88C4F670F084782218CCD7EA8F1D1252725C23DCDA3DA49B556295E919",
+          "productionSha256": "05F57D64D000909CD27FCD040E84A01521AA086DE084589FA59CCE29023A124B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneArithmeticPlaces",
+          "scratchSha256": "D87DA09DBA6574303A7789D6496DC674F65C3F9588FEEC4DF982BCE856E58EAD",
+          "productionSha256": "EEC07B3FBB7D3845475DA79F10F642C2829432E31A6259233C5B23F88EA9118B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneArithmeticDivisors",
+          "scratchSha256": "6E33D5DEC07E4390815EB71ED243B44FFACAEC6A51E391C1C0513D62BDD57CC4",
+          "productionSha256": "09103CD9A1936745261423CE975FCF607472103C0C8C1D356C7271614AF716CF",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneArithmeticPicard",
+          "scratchSha256": "A5AAC4EC6A989D8CD4FD0AE23DFA907D720840EDC97113D90D117FF55A11E300",
+          "productionSha256": "877F57BEF346D83A69B75274148EC41063996B5119C055E81144EC8579B6EB46",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeArithmeticPlaces",
+          "scratchSha256": "D6F88BA18ECDAA22B9FB5B710FA4641E9BAFFCCA33382E596A88B84302632C5A",
+          "productionSha256": "16B60E3F3E101E9F608536616CCDCBB1BB683EC33F7C2778AE5379FAADFA19D1",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeArithmeticDivisors",
+          "scratchSha256": "54A09285881CCF02751D40E564E3054AD9295A1294A49B7D6DD413F67E8CC6AB",
+          "productionSha256": "3AB1FA689886A65C49E832F261AEBF5B5B3C3205ABB903440765403B2C5A0B85",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeArithmetic",
+          "scratchSha256": "BF10FDEC4EF6A0D45033F324615231431B72257C1CBC0DDD787E7E2055300541",
+          "productionSha256": "01F5889544B1A50D6D347DD0B74F72526B4EABF9AB28EDC8DB5363195AB9415F",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 185 distinct names from 185 exhaustive scratch checks are retained: 184 in the production focused scope and 1 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "The geometric/H1 comparison must retain the original homogeneous matrix coefficient action and prove the upper/lower correspondence and transpose/diamond conventions. Arithmetic equivariance of the ordinary Picard operator alone does not identify the original binary-coefficient finite Hecke characters with geometric characters. Diamond comparison, Frobenius/inertia, arithmetic Galois realization of these finite characters, original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. No characteristic-zero character lift or deformation point is inferred. 16/20; DUB-17--20 OPEN."
+}
+```
+
+## Verified actual Gamma1 arithmetic geometry and Hecke equivariance - 26 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 8,316-module scope: all thirteen retained regressions, 52,606 exhaustive theorem checks, 23,951 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The geometric/H1 comparison must retain the original homogeneous matrix coefficient action and prove the upper/lower correspondence and transpose/diamond conventions. Arithmetic equivariance of the ordinary Picard operator alone does not identify the original binary-coefficient finite Hecke characters with geometric characters. Diamond comparison, Frobenius/inertia, arithmetic Galois realization of these finite characters, original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. No characteristic-zero character lift or deformation point is inferred. 16/20; DUB-17--20 OPEN.
+
+```json
+{
+  "recordedUTC": "2026-10-26T12:53:11.845927+00:00",
+  "log": "logs/dubon-build-20261026-041225-849.log",
+  "sha256": "3C6809162A672A088AA1CDE79965207E68ABE3F047B0E291DF5A600F2CCD142A",
+  "bytes": 13535747,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 8316,
+  "projectTheorems": 52606,
+  "registeredConsumers": 23951,
+  "registeredConstructions": 2313,
+  "declarations": 32210,
+  "generated": 33340,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261026_040508.log",
+  "foundationSha256": "F7E3078F4D03A21E82F50C4592D96FF15704E19F00D25137A5F5BB3123C9FF45",
+  "countReconciliation": {
+    "previousTheorems": 52423,
+    "focusedTheorems": 184,
+    "sharedGeneratedNames": [
+      "Dubon2026.SourceCurve.Divisor.geometricPushforwardAlong.congr_simp"
+    ],
+    "addedTheorems": 183,
+    "removedTheorems": [],
+    "upstreamOwnedGeneratedNames": [],
+    "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGeometryGlobalOwnership8316.log",
+    "globalOwnershipSha256": "B73F19F912D624BCD02C9516EE6E20D309FD50AAD5B6548902F92C0FD63D151C",
+    "globalOwnershipSourceSha256": "C37F00B1A1D08B38A605C65CF2D29B5B05D02BD00DFB97D9DCFAFD80784EE5D6",
+    "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGeometryOwnership8316.log",
+    "ownershipSha256": "25E55AFA998553CC79C6469907F4D420465019871B8849E671B84CF69126AD04"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 185,
+    "scratchDistinct": 185,
+    "generatedNameRenamings": {},
+    "productionFocused": 184,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {
+      "Dubon2026.SourceFunctionField.coeffEmb.eq_1": [
+        {
+          "scope": "SourceGammaOneArithmeticGeometryScratchOwnership625For8316",
+          "module": "Dubon2026.SourceGammaOneFieldCoefficients"
+        }
+      ]
+    },
+    "missingFromFocusedAlreadyInPrevious": [
+      "Dubon2026.SourceFunctionField.coeffEmb.eq_1"
+    ],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceGammaOneFunctionField",
+          "SourceGammaOneJCoordinate",
+          "SourceGammaOneRatioClosure",
+          "SourceGammaOneNormRelation",
+          "SourceGammaOneComplexRelation",
+          "SourceGammaOneComplexRatio",
+          "SourceGammaOneRationalRelation",
+          "SourceGammaOneFunctionFieldFinite",
+          "SourceGammaOneFunctionFieldBaseChange",
+          "SourceGammaOneCurveFinite"
+        ],
+        "count": 52,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGeometryScratchOwnership620bFor8316.log",
+          "sha256": "601D074E5D2C44AF0BC0AA05DF9F75F3B20B2EC220B90950004966B00677A828",
+          "sourceSha256": "CACDBB9ECCE70B60D0BC823F954113BCE683F135F2C2B873C8EAEA76E56A77FA"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneModularStretch",
+          "SourceGammaOneModularStretchCoefficients",
+          "SourceGammaOneHeckeFieldInclusion",
+          "SourceGammaOneHeckeDegeneracy",
+          "SourceGammaOneHeckeFieldFinite"
+        ],
+        "count": 35,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGeometryScratchOwnership622For8316.log",
+          "sha256": "8EF3036477C48D01C8F04353FC70A6CC827C2B41B016590C00812222CF821B00",
+          "sourceSha256": "FBE826191B21EBF578FDF1F8B22EF7BD2C4D94320DEEC2B1F3520C0D8F677A47"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneResidues",
+          "SourceGammaOneHeckePicard"
+        ],
+        "count": 12,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGeometryScratchOwnership624bFor8316.log",
+          "sha256": "2959223116D9401FFE6358274E373724AF42062C7B95FFB8132D0BE82FDAF520",
+          "sourceSha256": "18D3C24B876980CE8F27FB85334AF1219AE556F32D70B4445BAF04D97A99AF2F"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneFieldCoefficients",
+          "SourceGammaOneHeckeFieldNaturality",
+          "SourceGammaOneArithmeticField",
+          "SourceGammaOneArithmeticPlaces",
+          "SourceGammaOneArithmeticDivisors",
+          "SourceGammaOneArithmeticPicard",
+          "SourceGammaOneHeckeArithmeticPlaces",
+          "SourceGammaOneHeckeArithmeticDivisors",
+          "SourceGammaOneHeckeArithmetic"
+        ],
+        "count": 86,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGeometryScratchOwnership625For8316.log",
+          "sha256": "1853EB87457F5C899D300BAD26453D2F7EC1CBF308E1C0937EF65F5D8FE36D5F",
+          "sourceSha256": "08C8B990AB6501AA4251405F71D0F58A7190FB5D7519B29FA1813D41063D7E40"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticGeometryOwnership8316.log",
+      "sha256": "25E55AFA998553CC79C6469907F4D420465019871B8849E671B84CF69126AD04",
+      "sourceSha256": "ADB78B6537222BD84F99BD9554A7290D7ED01CAF679E52A052FCDCBC114D9A61"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-021715-306.log",
+      "sha256": "F9FAA129BA70805D3A74DED0206B1A9614D70B6A771A942853EC0FCC758D1D00"
+    },
+    "renameEvidence": {
+      "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 26 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+      "sourceChecks": [
+        {
+          "module": "SourceGammaOneFunctionField",
+          "scratchSha256": "24A29ADCD2672D85C2D2050865E7639E9DEC600A58FC74C63B777DB3293B5D82",
+          "productionSha256": "24A29ADCD2672D85C2D2050865E7639E9DEC600A58FC74C63B777DB3293B5D82",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneJCoordinate",
+          "scratchSha256": "4AC407FCC7FA9BE3C8661051C6DEFF25AC76966939EA768D6B3BD3603C64E82B",
+          "productionSha256": "242F8F0963AACD9590A94E33256D5D5725349173FF06C5758EEDB6D00A9FF810",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneRatioClosure",
+          "scratchSha256": "118619B0C492FFB91A8073CF652DFDE62951329CF7483A03EE0C301ED0EC84F4",
+          "productionSha256": "DC2DF8D6368EE28EC85E7FF35B0A223155F5F1015397E2F37F8934C16909EF1C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneNormRelation",
+          "scratchSha256": "6C2897C4C63E5ED3697CE2292FE5468B2F5973D68B1347D0D7F9CEF29E98EE03",
+          "productionSha256": "464AEBF07BFDB6232DC767AED11E03A7DC3AAA6A48F04038917B3B6476AFD9F2",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneComplexRelation",
+          "scratchSha256": "283511D74947B88FC28069EE5A7878A89450DE4960CED2AB7E44611448227267",
+          "productionSha256": "A80F9F6BE0C73DE52175DD5737629F8F00ED538C99CDEC059A0DC941E481F829",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneComplexRatio",
+          "scratchSha256": "7A0BA5FFCCDB34748E26715F9EE1F010C40B08283B6DB47FEF8ED8459D394346",
+          "productionSha256": "4A560908041A56A607DD35B4A6CABF60C8E28F39F91E694FDE3CDDE41495A6C4",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneRationalRelation",
+          "scratchSha256": "3F1E6796ABA7A222691574495AEDE1E69ADAD5F90484C10402B012AE74BD8E4E",
+          "productionSha256": "3E5B09094FF7E05D47A526ECC7F3888ABC5067DC8DAED5E153762D8F9ACBB0FA",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneFunctionFieldFinite",
+          "scratchSha256": "3E57C1BA88AFC8DFE550CB88F341F627ABD9F355C8AAED4D2D62FDFA196355F8",
+          "productionSha256": "8EBCA373565B53DDDE9018C7A18B957FC1B7822B74D325310B9E8581E7B5905C",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneFunctionFieldBaseChange",
+          "scratchSha256": "9F4B86543AAB668A318ED0E134DFB26ACB31D06416C8D8E6E3B0FC3AA18B6D76",
+          "productionSha256": "FF3926FC60F98AACEBA430B405ACC1674F9A4BC7845A16D19DDF95A00288E7EE",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCurveFinite",
+          "scratchSha256": "98510816FF2E5C928A87EB978469F7796117C7843B0257BD532A7C4A4404C5CC",
+          "productionSha256": "B00B2A9D501AE35B6450054125B5AD0D8A63331B42F85DDA2B437A23BA7D2759",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneModularStretch",
+          "scratchSha256": "CC0C457AF29AADB97F81712CDF5CAC003A6AF6F0490826BA0AA0DB30BDB02CD6",
+          "productionSha256": "CC0C457AF29AADB97F81712CDF5CAC003A6AF6F0490826BA0AA0DB30BDB02CD6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneModularStretchCoefficients",
+          "scratchSha256": "31561385BEB222D702C6AE7B40425E0EB7C3F00B6C79C1C6B837C27564F27E64",
+          "productionSha256": "DB0326717AF5E4A6154A6BA748AF46D79DE08DCA2135E869D48749D1E4141C7D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeFieldInclusion",
+          "scratchSha256": "3244BFBA540B1D0DE177D286AC382E0B41CE19D0AD1A2F79D898DBEE0FBB8E98",
+          "productionSha256": "0AFB6D4E026D4BE6190EAA198D91180D43CC1EC001DC18246BF177F0258ADEBA",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeDegeneracy",
+          "scratchSha256": "6C79218EB787DB18EA9FD260C36914F88B300543060029F055391FA670A76303",
+          "productionSha256": "49AD28A56A065A9C2E7D9B98CA042F749A4E3C463D6B631B92DEC0A9AAB46AC7",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeFieldFinite",
+          "scratchSha256": "7F7B25F2EE3DE6685903DC0C07D187527B9D34A7BA0758B8D35D981352D1C54D",
+          "productionSha256": "765E46C3933771F28522D2DA46FAA19BEC2A3ADB1E264BF6FE978A05609893D8",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneResidues",
+          "scratchSha256": "62B68DD9B439BED7C7E498FFC9AD95F9848FDB887319DFD09152A7BD0D3C3995",
+          "productionSha256": "FF711706A6F1A463FC398C6A7DBEEFE743D1781C561214A8C01C14CE962BFCB3",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckePicard",
+          "scratchSha256": "39D5745B1530BC16846C8A91B8B3892FC3B21DA27A1460BB1ABEACF690237118",
+          "productionSha256": "FB168279BA3A3581322F84F23657EC7AEF81C34330380FDF5C2CDFC1EAD0F173",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneFieldCoefficients",
+          "scratchSha256": "EDEC2FBFB927D6D6539793DCEBE0FD3811DE969E7AE166A410BA851E32F024FE",
+          "productionSha256": "F550DEDBA2E3964FA408DA1E5A0C2FF27C2B4CB17AB3BEAF6604D3C363C47389",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeFieldNaturality",
+          "scratchSha256": "CAF28AF4C479E305B1054FF3E962064554005D5CDC2243AE91AB4C3ADDF986F8",
+          "productionSha256": "E1B2D65C12B37881696B6AA7E73FDCEA648808C199904B17ABEEB45C667B55F3",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneArithmeticField",
+          "scratchSha256": "86162F88C4F670F084782218CCD7EA8F1D1252725C23DCDA3DA49B556295E919",
+          "productionSha256": "05F57D64D000909CD27FCD040E84A01521AA086DE084589FA59CCE29023A124B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneArithmeticPlaces",
+          "scratchSha256": "D87DA09DBA6574303A7789D6496DC674F65C3F9588FEEC4DF982BCE856E58EAD",
+          "productionSha256": "EEC07B3FBB7D3845475DA79F10F642C2829432E31A6259233C5B23F88EA9118B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneArithmeticDivisors",
+          "scratchSha256": "6E33D5DEC07E4390815EB71ED243B44FFACAEC6A51E391C1C0513D62BDD57CC4",
+          "productionSha256": "09103CD9A1936745261423CE975FCF607472103C0C8C1D356C7271614AF716CF",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneArithmeticPicard",
+          "scratchSha256": "A5AAC4EC6A989D8CD4FD0AE23DFA907D720840EDC97113D90D117FF55A11E300",
+          "productionSha256": "877F57BEF346D83A69B75274148EC41063996B5119C055E81144EC8579B6EB46",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeArithmeticPlaces",
+          "scratchSha256": "D6F88BA18ECDAA22B9FB5B710FA4641E9BAFFCCA33382E596A88B84302632C5A",
+          "productionSha256": "16B60E3F3E101E9F608536616CCDCBB1BB683EC33F7C2778AE5379FAADFA19D1",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeArithmeticDivisors",
+          "scratchSha256": "54A09285881CCF02751D40E564E3054AD9295A1294A49B7D6DD413F67E8CC6AB",
+          "productionSha256": "3AB1FA689886A65C49E832F261AEBF5B5B3C3205ABB903440765403B2C5A0B85",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeArithmetic",
+          "scratchSha256": "BF10FDEC4EF6A0D45033F324615231431B72257C1CBC0DDD787E7E2055300541",
+          "productionSha256": "01F5889544B1A50D6D347DD0B74F72526B4EABF9AB28EDC8DB5363195AB9415F",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 185 distinct names from 185 exhaustive scratch checks are retained: 184 in the production focused scope and 1 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "The geometric/H1 comparison must retain the original homogeneous matrix coefficient action and prove the upper/lower correspondence and transpose/diamond conventions. Arithmetic equivariance of the ordinary Picard operator alone does not identify the original binary-coefficient finite Hecke characters with geometric characters. Diamond comparison, Frobenius/inertia, arithmetic Galois realization of these finite characters, original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. No characteristic-zero character lift or deformation point is inferred. 16/20; DUB-17--20 OPEN."
+}
+```
+
+## Production actual Gamma1 cohomology and differential inputs pending full run - 26 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 8,335-module scope: all thirteen retained regressions, 52,743 exhaustive theorem checks, 24,024 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The valuation deduction of regularity, algebraic differential realization and converse cusp construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must still identify the original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of these characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Neither complex semisimplicity, finite characters, Witt coefficients nor a universal deformation ring supplies a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricSubgroupDependencyAudit1Production8335.log",
+      "sha256": "7B46988F24AC9EEAE68006C4C1A69219D23FFDFB77BD44D7338CE59BC9D862F6",
+      "requiredProofValueEdges": 15,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.heckeUpperGeometricEquiv",
+        "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_conjugation",
+        "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_matrix",
+        "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_smul"
+      ],
+      "sourceSha256": "62DB81240DED1486830F635ED1E421C9EAC57F10BE193A8C2AB9548A94A49F32"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCohomologyDependencyAudit1Production8335.log",
+      "sha256": "DC0E854579A17DEB828900B6EB398FD088602B848F028AF5353B023505EB4B29",
+      "requiredProofValueEdges": 18,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_injective",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup_upper",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_matrix",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_smul"
+      ],
+      "sourceSha256": "D0DD1EC4004D71C1C5596131953CB1804BD0DC7AFE5B4332C403B58B62474952"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCoefficientDependencyAudit1Production8335.log",
+      "sha256": "909EBAE60CE9538417E8C2375FDA2710CB7056FE4014D1715F69AFBEDB70E983",
+      "requiredProofValueEdges": 11,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_coefficient",
+        "Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1"
+      ],
+      "sourceSha256": "BE6E5D72DA14BBF109AEE241CEFD0B933C0F9D7AD53D41CD115A36BD970A6E41"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCurveGeometryDependencyAudit2Production8335.log",
+      "sha256": "D78A32D4E2A37D7CFC8F02181A02B53916BC2C51667B6F6170492C44DF04790D",
+      "requiredProofValueEdges": 22,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_diffQExp_injective",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_localDifferentials",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_isCurveOver",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hasCanonicalDivisor",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_diffQExp_injective",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_localDifferentials",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_isCurveOver",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_hasCanonicalDivisor"
+      ],
+      "sourceSha256": "646F17294B59588B45AA62B93AB2684051E4984D6256B72B1D331804BD491475"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneScalarExtensionDependencyAudit1Production8335.log",
+      "sha256": "AAAB8FD69E7F60EC8DA805BB2EFEBF2E283E623DB8A06950DFE8BA42CC3E6F88",
+      "requiredProofValueEdges": 7,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_eq_qExpFunctionFieldC"
+      ],
+      "sourceSha256": "96095A76C8AD079766C20A78924072AD57DDA8EB249E309216D417EFC915BAC0"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFieldModularRatioDependencyAudit2Production8335.log",
+      "sha256": "C052A67F13DE06649A53071BA0D4EEE0FAF82B734861A42A99416604B0A2E421",
+      "requiredProofValueEdges": 18,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio"
+      ],
+      "sourceSha256": "D358854214D6A983B54EE200083C41CB3343CF846E7FB5D33497A6FC3FF5C210"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialFiniteIntegralDependencyAudit5Production8335.log",
+      "sha256": "26417CCA781CE2901677B3F6EA310BC01439F3838CD90FA6D7DEB9ACF8F35C8B",
+      "requiredProofValueEdges": 22,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_finite_expression"
+      ],
+      "sourceSha256": "42F8E358BC52CAADB2D33F03DB00FB210F1CF47A8A94337DA7088C90D658C9BE"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialCuspIntegralDependencyAudit6Production8335.log",
+      "sha256": "601461FEAC2E1BC793A4D6FDFA8229E2559B8685686F3E49E71ABA64C760961F",
+      "requiredProofValueEdges": 23,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_cusp_expression"
+      ],
+      "sourceSha256": "4E7275EBB45658656F754C139B4894FBA97860D94D7FBC0880D8D43E065604BF"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsProductionAudit8335.log",
+  "sha256": "0D6B812B17BE8BB653C0D43DA13BE94D4B99AEEC9196B75764BC7770B75E382D",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-differential-inputs-production-build-8335.log",
+  "aggregateSha256": "B279FF62600122721E81A47242EEC35CEA3183E97D5DA96B6C5E0D1C436E2FA9",
+  "productionModules": 8335,
+  "incrementModules": 19,
+  "axiomChecks": 85,
+  "exhaustiveIncrementTheorems": 137,
+  "linterScopes": 19,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 138,
+  "productionReuse": "Only scratch imports are qualified. Every audited statement, proof body and comment is preserved. Original coefficient endomorphisms, literal q-expansion fields, genuine modular forms and both integral equations retain their definitions. No source contract is weakened.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 138,
+    "scratchDistinct": 138,
+    "generatedNameRenamings": {},
+    "productionFocused": 137,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {
+      "CuspForm.translate.congr_simp": [
+        {
+          "scope": "SourceGammaOneDifferentialInputsScratchOwnership640For8335",
+          "module": "Dubon2026.SourceGammaOneCuspAuxiliaryForm"
+        }
+      ]
+    },
+    "missingFromFocusedAlreadyInPrevious": [
+      "CuspForm.translate.congr_simp"
+    ],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceGammaOneHeckeGeometricSubgroup"
+        ],
+        "count": 14,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership627For8335.log",
+          "sha256": "3FB7408A6DA48B2C52523760CBD6C12AC0BB956B653B65629BC476E8927CED1E",
+          "sourceSha256": "46365EC0D189830B9228CED2DE6894971693AAEDD1B6F6428DD7F2BCEF1514EE"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneGeometricCohomology"
+        ],
+        "count": 11,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership629For8335.log",
+          "sha256": "3184EB49CA0EAFD1D279ED8995FDA344F7F7734F0049346132326FDCA6EB54F6",
+          "sourceSha256": "D4FEC56F56D973BE4B44DAF626D780554955F9278E1C15C812FB80E32258AD78"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneHeckeCoefficientAction"
+        ],
+        "count": 9,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership631For8335.log",
+          "sha256": "A6801CC690AD45F062D5E83F5696BE82A3C33DFC02989C671C6AA840EF6A8594",
+          "sourceSha256": "28AE76E658AA17EA4F2BC8AD86C4317A18CEDE5412534196E5AE4B4BEA847D5D"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneCurveGeometry",
+          "SourceGammaOneCurveInputs"
+        ],
+        "count": 20,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership632For8335.log",
+          "sha256": "6700558C1FD0D6EC8794D8E4BAAD04E75FDC8C5BE8AD40C92AF9CA7231CE830D",
+          "sourceSha256": "6A3E159DA0E01D1F1DE648BCBF3144784C645E02D768CB34FDC1053B767A45AD"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneScalarExtension"
+        ],
+        "count": 5,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership634For8335.log",
+          "sha256": "E59F98826EE8E9A8D567703844F7CBB652C019841803D717D07101A6748AF442",
+          "sourceSha256": "25F64B984908B14F3E7A8047580F090A98A25D5BCC643F8312FECA611D48E595"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneModularRatios",
+          "SourceGammaOneFieldModularRatio"
+        ],
+        "count": 15,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership636For8335.log",
+          "sha256": "03A682A89A8AB1CE057C6DB0E0F7E1208F45BCE8DEB346EEDC11842C70EE5837",
+          "sourceSha256": "005B2A397207DBB8016CE2FA0BA75C10622D61DBBC29A45680618A99B7489C0B"
+        }
+      },
+      {
+        "modules": [
+          "SourceModularQDerivative",
+          "SourceModularQDerivativeExpansion",
+          "SourceJEulerModularIdentity",
+          "SourceJEulerPolynomial",
+          "SourceGammaOneDifferentialFiniteIntegral"
+        ],
+        "count": 38,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership638For8335.log",
+          "sha256": "CF6A8059E06CA358DFE234E1FAF1EC75723FDF12341685E790FCCB2E094BBFAB",
+          "sourceSha256": "65A739AC63881BDD4C970E1188F07162B7FFF8D1B9F297EAE99D262DFCD0F723"
+        }
+      },
+      {
+        "modules": [
+          "SourceInverseJLevelOneIntegral",
+          "SourceIntegralHomogeneousRelation",
+          "SourceModularInverseJIntegral",
+          "SourceGammaOneCuspAuxiliaryForm",
+          "SourceGammaOneCuspAuxiliaryExpansion",
+          "SourceGammaOneDifferentialCuspIntegral"
+        ],
+        "count": 26,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership640For8335.log",
+          "sha256": "77864C5B286EB4EA8A44AF676663BF314BCFC516C4C9937D5546EE44A0FDE1E6",
+          "sourceSha256": "E372DD9B3800CC7B0535A7FB2EE62BF6D1430167DABF8C4580193672D6FD3E22"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsOwnership8335.log",
+      "sha256": "7AA8B0F260EC086B4B8FED2259D09FA420917D1D6240AB41E9422B525A0A2CAF",
+      "sourceSha256": "74FFE82F6184C34150A55C0792B8AE9FDEB48AD8BBB3FD31662AD171185E6DC2"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-041225-849.log",
+      "sha256": "3C6809162A672A088AA1CDE79965207E68ABE3F047B0E291DF5A600F2CCD142A"
+    },
+    "renameEvidence": {
+      "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 19 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+      "sourceChecks": [
+        {
+          "module": "SourceGammaOneHeckeGeometricSubgroup",
+          "scratchSha256": "C4398729974D5055AE241BFC208D90F2176D9539265595D25E628ACD13A90BB0",
+          "productionSha256": "44E8F27046FB5DA0CD4CDDB0E6640C1DBA5A781DB26A728F5E95E846C9D02204",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneGeometricCohomology",
+          "scratchSha256": "C7ACE8C976DADC063DB7939DE3AB9893CEFD6B54A2393A5BBDC1D50ACA4C7ED5",
+          "productionSha256": "2735394D9AD69360D6FAFE4748246B4EF473816DAB29C0D611FD34BDC8BEABE1",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeCoefficientAction",
+          "scratchSha256": "3C49EACF9D61CB7DA14863C383224ACF823125F3F6B1BCF97AB0FD6F4B329005",
+          "productionSha256": "FED566D75F46B4F95D591930E02938172590D63FE5117EEB1B7929FED10D2EB7",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCurveGeometry",
+          "scratchSha256": "368C21200022558CE0C24350053DE6BDB70EABAD0DE89EC44ABFB6E5E1F7D0E4",
+          "productionSha256": "D63E405202426AB42499AA8AC4D90DC3751E07ACA04C3EF8361098A8B1336C2A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCurveInputs",
+          "scratchSha256": "B7E660DE474A944C5CA4BC589C419DBBC0B446D2274E137F12CC689B2A65D068",
+          "productionSha256": "7E3CC21384B58B8B4313495BDCE8B4400F57F9FB6A0F624144D570AD31CD5720",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneScalarExtension",
+          "scratchSha256": "FFA004719BEF4ED6C17BD6B6410F811AA0B8D0B002C9117565BDFCE582A610C2",
+          "productionSha256": "BE4B9BA08B1CBEA2B1C4525616C1AA8B7F19456FF0B27A2E146071830B5CA886",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneModularRatios",
+          "scratchSha256": "D3A7C8B6206A43044CDF837A1C8119C26C3E29C1442333A2260DE2F0AFCA9678",
+          "productionSha256": "B34AF80ADA42AA962AA7E6BE5026F79A71A67DC6EF2C1ECF289FFF7F760C89EF",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneFieldModularRatio",
+          "scratchSha256": "7ED0F78DE1CE4168585744F2C1144A8C56BFAAA2984B842D73ADC99BF170D093",
+          "productionSha256": "E5BB6FDB3C0786077E35745193EE1EFED126C629209FC2BC1E96815EBA546133",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceModularQDerivative",
+          "scratchSha256": "FC2F6B74ED10B060C93A78DEB0CED5A28EABE81773DB950E5E7E1E078EFECDA1",
+          "productionSha256": "FC2F6B74ED10B060C93A78DEB0CED5A28EABE81773DB950E5E7E1E078EFECDA1",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceModularQDerivativeExpansion",
+          "scratchSha256": "1E7CD358AC3EB98C79B2A408E2EA163BC7A34A8DF7DB714EB2D3B6114A5A1994",
+          "productionSha256": "2F244317EC2A19E1120E2327DBC1371BE42FB81364EB442239D48E4F9982188D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceJEulerModularIdentity",
+          "scratchSha256": "FD9BE4798191F600D21C59DF4DCACDBAE2235C0C2BB339EC37A6A1052ED57B1E",
+          "productionSha256": "2C15FCF36845E80CE6858EC031CD3D080DE7C8D517803464B888CF9CA86A9CCC",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceJEulerPolynomial",
+          "scratchSha256": "C5DDA9ED262E9CB5D9EB05A429C7906A928E14E776BD454B3E3680EE143AE3DE",
+          "productionSha256": "1EA4198786B4DF5046F7D4C75A6C00BD21A443294CBD79C94BBB96A394D180D6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneDifferentialFiniteIntegral",
+          "scratchSha256": "5F57CA4815D4116FEEC8F6C49B5EF65086023DB81D4FBE64B1F700CD99B37009",
+          "productionSha256": "633A41F865728C6BB140FAFA2554838A8B109354149B0280854758D68ADCF4D2",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceInverseJLevelOneIntegral",
+          "scratchSha256": "5523A9C114C78F99FDA4E1BA27284550F6E44D85EE7AEBDB3C509BD7D3925B88",
+          "productionSha256": "5523A9C114C78F99FDA4E1BA27284550F6E44D85EE7AEBDB3C509BD7D3925B88",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceIntegralHomogeneousRelation",
+          "scratchSha256": "E9235246026BCA1F98948C4CE2E03F02C0DAC41D5AE4330EB40975E08E04FF04",
+          "productionSha256": "68B2D3A36F0B7346E122DEAD82BC5B14EF457012BE9A2552D5F8A4FBECC42879",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceModularInverseJIntegral",
+          "scratchSha256": "E76E8A22F85259A0335C0881558E632D12AB1A15315C5763750B073F321F90E7",
+          "productionSha256": "83453AE31F81D790A5672307BBCFC71417384A0999E1A78FDA9FD6653C3D9618",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCuspAuxiliaryForm",
+          "scratchSha256": "41EDB3674B214E70AEFF9874A11572D6E119E4C7FE728BADA425C6371F483FC6",
+          "productionSha256": "41EDB3674B214E70AEFF9874A11572D6E119E4C7FE728BADA425C6371F483FC6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCuspAuxiliaryExpansion",
+          "scratchSha256": "C6BD0B09791313C8CE3C6B67D97F89B9C373E6CD81E6319D1427185DC2408EF5",
+          "productionSha256": "CA07233264D9D28704E7E2CDCDA491FFD968421757578E8B01D59FBB8C890F5F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneDifferentialCuspIntegral",
+          "scratchSha256": "B44527CF13516684D9CA9BF4EF5B07CAAA9154C4970392C754650AEB0F0B79F5",
+          "productionSha256": "02CCA66E3E0587E4C5A08D6E2F4BE9281C5C1600ED39B6084F5EC1966E29881D",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 138 distinct names from 138 exhaustive scratch checks are retained: 137 in the production focused scope and 1 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "The valuation deduction of regularity, algebraic differential realization and converse cusp construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must still identify the original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of these characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Neither complex semisimplicity, finite characters, Witt coefficients nor a universal deformation ring supplies a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN."
+}
+```
+
+## Verified actual Gamma1 cohomology and differential inputs - 26 October 2026
+
+Sequential foundation/paper verification passes with zero diagnostics for the 8,335-module scope: all thirteen retained regressions, 52,743 exhaustive theorem checks, 24,024 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.
+
+The valuation deduction of regularity, algebraic differential realization and converse cusp construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must still identify the original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of these characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Neither complex semisimplicity, finite characters, Witt coefficients nor a universal deformation ring supplies a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN.
+
+```json
+{
+  "recordedUTC": "2026-10-26T14:49:58.618873+00:00",
+  "log": "logs/dubon-build-20261026-061545-571.log",
+  "sha256": "B696E0680B634D773587DF626A7713EE7A472D4C95D5A0CC7C1789C56B700920",
+  "bytes": 13576981,
+  "exit": 0,
+  "diagnostics": 0,
+  "productionModules": 8335,
+  "projectTheorems": 52743,
+  "registeredConsumers": 24024,
+  "registeredConstructions": 2325,
+  "declarations": 32295,
+  "generated": 33431,
+  "linters": 16,
+  "regressions": 13,
+  "foundationLog": "logs/foundation_freeze_20261026_060817.log",
+  "foundationSha256": "02CCC9CCBBEF3378879E940F99EC5F7F8BA19782AC7D80EF1BDF1E051741F801",
+  "countReconciliation": {
+    "previousTheorems": 52606,
+    "focusedTheorems": 137,
+    "sharedGeneratedNames": [],
+    "addedTheorems": 137,
+    "removedTheorems": [],
+    "upstreamOwnedGeneratedNames": [],
+    "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsGlobalOwnership8335.log",
+    "globalOwnershipSha256": "B5748224C057027F8B1968CA80379D45676A987065D0A3F33357B11F2BCA374B",
+    "globalOwnershipSourceSha256": "68E1DA510ECA8821B37E03C481285E3386996B6235B721AE234875F17824AE4A",
+    "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+    "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsOwnership8335.log",
+    "ownershipSha256": "7AA8B0F260EC086B4B8FED2259D09FA420917D1D6240AB41E9422B525A0A2CAF"
+  },
+  "scratchToProductionOwnership": {
+    "scratchSum": 138,
+    "scratchDistinct": 138,
+    "generatedNameRenamings": {},
+    "productionFocused": 137,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {
+      "CuspForm.translate.congr_simp": [
+        {
+          "scope": "SourceGammaOneDifferentialInputsScratchOwnership640For8335",
+          "module": "Dubon2026.SourceGammaOneCuspAuxiliaryForm"
+        }
+      ]
+    },
+    "missingFromFocusedAlreadyInPrevious": [
+      "CuspForm.translate.congr_simp"
+    ],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceGammaOneHeckeGeometricSubgroup"
+        ],
+        "count": 14,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership627For8335.log",
+          "sha256": "3FB7408A6DA48B2C52523760CBD6C12AC0BB956B653B65629BC476E8927CED1E",
+          "sourceSha256": "46365EC0D189830B9228CED2DE6894971693AAEDD1B6F6428DD7F2BCEF1514EE"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneGeometricCohomology"
+        ],
+        "count": 11,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership629For8335.log",
+          "sha256": "3184EB49CA0EAFD1D279ED8995FDA344F7F7734F0049346132326FDCA6EB54F6",
+          "sourceSha256": "D4FEC56F56D973BE4B44DAF626D780554955F9278E1C15C812FB80E32258AD78"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneHeckeCoefficientAction"
+        ],
+        "count": 9,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership631For8335.log",
+          "sha256": "A6801CC690AD45F062D5E83F5696BE82A3C33DFC02989C671C6AA840EF6A8594",
+          "sourceSha256": "28AE76E658AA17EA4F2BC8AD86C4317A18CEDE5412534196E5AE4B4BEA847D5D"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneCurveGeometry",
+          "SourceGammaOneCurveInputs"
+        ],
+        "count": 20,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership632For8335.log",
+          "sha256": "6700558C1FD0D6EC8794D8E4BAAD04E75FDC8C5BE8AD40C92AF9CA7231CE830D",
+          "sourceSha256": "6A3E159DA0E01D1F1DE648BCBF3144784C645E02D768CB34FDC1053B767A45AD"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneScalarExtension"
+        ],
+        "count": 5,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership634For8335.log",
+          "sha256": "E59F98826EE8E9A8D567703844F7CBB652C019841803D717D07101A6748AF442",
+          "sourceSha256": "25F64B984908B14F3E7A8047580F090A98A25D5BCC643F8312FECA611D48E595"
+        }
+      },
+      {
+        "modules": [
+          "SourceGammaOneModularRatios",
+          "SourceGammaOneFieldModularRatio"
+        ],
+        "count": 15,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership636For8335.log",
+          "sha256": "03A682A89A8AB1CE057C6DB0E0F7E1208F45BCE8DEB346EEDC11842C70EE5837",
+          "sourceSha256": "005B2A397207DBB8016CE2FA0BA75C10622D61DBBC29A45680618A99B7489C0B"
+        }
+      },
+      {
+        "modules": [
+          "SourceModularQDerivative",
+          "SourceModularQDerivativeExpansion",
+          "SourceJEulerModularIdentity",
+          "SourceJEulerPolynomial",
+          "SourceGammaOneDifferentialFiniteIntegral"
+        ],
+        "count": 38,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership638For8335.log",
+          "sha256": "CF6A8059E06CA358DFE234E1FAF1EC75723FDF12341685E790FCCB2E094BBFAB",
+          "sourceSha256": "65A739AC63881BDD4C970E1188F07162B7FFF8D1B9F297EAE99D262DFCD0F723"
+        }
+      },
+      {
+        "modules": [
+          "SourceInverseJLevelOneIntegral",
+          "SourceIntegralHomogeneousRelation",
+          "SourceModularInverseJIntegral",
+          "SourceGammaOneCuspAuxiliaryForm",
+          "SourceGammaOneCuspAuxiliaryExpansion",
+          "SourceGammaOneDifferentialCuspIntegral"
+        ],
+        "count": 26,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership640For8335.log",
+          "sha256": "77864C5B286EB4EA8A44AF676663BF314BCFC516C4C9937D5546EE44A0FDE1E6",
+          "sourceSha256": "E372DD9B3800CC7B0535A7FB2EE62BF6D1430167DABF8C4580193672D6FD3E22"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsOwnership8335.log",
+      "sha256": "7AA8B0F260EC086B4B8FED2259D09FA420917D1D6240AB41E9422B525A0A2CAF",
+      "sourceSha256": "74FFE82F6184C34150A55C0792B8AE9FDEB48AD8BBB3FD31662AD171185E6DC2"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-041225-849.log",
+      "sha256": "3C6809162A672A088AA1CDE79965207E68ABE3F047B0E291DF5A600F2CCD142A"
+    },
+    "renameEvidence": {
+      "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 19 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+      "sourceChecks": [
+        {
+          "module": "SourceGammaOneHeckeGeometricSubgroup",
+          "scratchSha256": "C4398729974D5055AE241BFC208D90F2176D9539265595D25E628ACD13A90BB0",
+          "productionSha256": "44E8F27046FB5DA0CD4CDDB0E6640C1DBA5A781DB26A728F5E95E846C9D02204",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneGeometricCohomology",
+          "scratchSha256": "C7ACE8C976DADC063DB7939DE3AB9893CEFD6B54A2393A5BBDC1D50ACA4C7ED5",
+          "productionSha256": "2735394D9AD69360D6FAFE4748246B4EF473816DAB29C0D611FD34BDC8BEABE1",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneHeckeCoefficientAction",
+          "scratchSha256": "3C49EACF9D61CB7DA14863C383224ACF823125F3F6B1BCF97AB0FD6F4B329005",
+          "productionSha256": "FED566D75F46B4F95D591930E02938172590D63FE5117EEB1B7929FED10D2EB7",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCurveGeometry",
+          "scratchSha256": "368C21200022558CE0C24350053DE6BDB70EABAD0DE89EC44ABFB6E5E1F7D0E4",
+          "productionSha256": "D63E405202426AB42499AA8AC4D90DC3751E07ACA04C3EF8361098A8B1336C2A",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCurveInputs",
+          "scratchSha256": "B7E660DE474A944C5CA4BC589C419DBBC0B446D2274E137F12CC689B2A65D068",
+          "productionSha256": "7E3CC21384B58B8B4313495BDCE8B4400F57F9FB6A0F624144D570AD31CD5720",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneScalarExtension",
+          "scratchSha256": "FFA004719BEF4ED6C17BD6B6410F811AA0B8D0B002C9117565BDFCE582A610C2",
+          "productionSha256": "BE4B9BA08B1CBEA2B1C4525616C1AA8B7F19456FF0B27A2E146071830B5CA886",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneModularRatios",
+          "scratchSha256": "D3A7C8B6206A43044CDF837A1C8119C26C3E29C1442333A2260DE2F0AFCA9678",
+          "productionSha256": "B34AF80ADA42AA962AA7E6BE5026F79A71A67DC6EF2C1ECF289FFF7F760C89EF",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneFieldModularRatio",
+          "scratchSha256": "7ED0F78DE1CE4168585744F2C1144A8C56BFAAA2984B842D73ADC99BF170D093",
+          "productionSha256": "E5BB6FDB3C0786077E35745193EE1EFED126C629209FC2BC1E96815EBA546133",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceModularQDerivative",
+          "scratchSha256": "FC2F6B74ED10B060C93A78DEB0CED5A28EABE81773DB950E5E7E1E078EFECDA1",
+          "productionSha256": "FC2F6B74ED10B060C93A78DEB0CED5A28EABE81773DB950E5E7E1E078EFECDA1",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceModularQDerivativeExpansion",
+          "scratchSha256": "1E7CD358AC3EB98C79B2A408E2EA163BC7A34A8DF7DB714EB2D3B6114A5A1994",
+          "productionSha256": "2F244317EC2A19E1120E2327DBC1371BE42FB81364EB442239D48E4F9982188D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceJEulerModularIdentity",
+          "scratchSha256": "FD9BE4798191F600D21C59DF4DCACDBAE2235C0C2BB339EC37A6A1052ED57B1E",
+          "productionSha256": "2C15FCF36845E80CE6858EC031CD3D080DE7C8D517803464B888CF9CA86A9CCC",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceJEulerPolynomial",
+          "scratchSha256": "C5DDA9ED262E9CB5D9EB05A429C7906A928E14E776BD454B3E3680EE143AE3DE",
+          "productionSha256": "1EA4198786B4DF5046F7D4C75A6C00BD21A443294CBD79C94BBB96A394D180D6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneDifferentialFiniteIntegral",
+          "scratchSha256": "5F57CA4815D4116FEEC8F6C49B5EF65086023DB81D4FBE64B1F700CD99B37009",
+          "productionSha256": "633A41F865728C6BB140FAFA2554838A8B109354149B0280854758D68ADCF4D2",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceInverseJLevelOneIntegral",
+          "scratchSha256": "5523A9C114C78F99FDA4E1BA27284550F6E44D85EE7AEBDB3C509BD7D3925B88",
+          "productionSha256": "5523A9C114C78F99FDA4E1BA27284550F6E44D85EE7AEBDB3C509BD7D3925B88",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceIntegralHomogeneousRelation",
+          "scratchSha256": "E9235246026BCA1F98948C4CE2E03F02C0DAC41D5AE4330EB40975E08E04FF04",
+          "productionSha256": "68B2D3A36F0B7346E122DEAD82BC5B14EF457012BE9A2552D5F8A4FBECC42879",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceModularInverseJIntegral",
+          "scratchSha256": "E76E8A22F85259A0335C0881558E632D12AB1A15315C5763750B073F321F90E7",
+          "productionSha256": "83453AE31F81D790A5672307BBCFC71417384A0999E1A78FDA9FD6653C3D9618",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCuspAuxiliaryForm",
+          "scratchSha256": "41EDB3674B214E70AEFF9874A11572D6E119E4C7FE728BADA425C6371F483FC6",
+          "productionSha256": "41EDB3674B214E70AEFF9874A11572D6E119E4C7FE728BADA425C6371F483FC6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneCuspAuxiliaryExpansion",
+          "scratchSha256": "C6BD0B09791313C8CE3C6B67D97F89B9C373E6CD81E6319D1427185DC2408EF5",
+          "productionSha256": "CA07233264D9D28704E7E2CDCDA491FFD968421757578E8B01D59FBB8C890F5F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneDifferentialCuspIntegral",
+          "scratchSha256": "B44527CF13516684D9CA9BF4EF5B07CAAA9154C4970392C754650AEB0F0B79F5",
+          "productionSha256": "02CCA66E3E0587E4C5A08D6E2F4BE9281C5C1600ED39B6084F5EC1966E29881D",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 138 distinct names from 138 exhaustive scratch checks are retained: 137 in the production focused scope and 1 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "The valuation deduction of regularity, algebraic differential realization and converse cusp construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must still identify the original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of these characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Neither complex semisimplicity, finite characters, Witt coefficients nor a universal deformation ring supplies a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN."
+}
+```
+
+## Production actual Gamma1 regularity and Fricke Fourier inputs pending full run - 26 October 2026
+
+The 8,360-module production aggregate and focused actual Gamma1 regularity and Fricke Fourier inputs audit pass with zero diagnostics. Four declaration-value audits verify 162 required dependencies. Algebraic realization of arbitrary Gamma1 cusp forms and the converse regular-differential-to-cusp construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must identify the original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of these characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Neither complex semisimplicity, finite characters, Witt coefficients nor a universal deformation ring supplies a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN. Sequential foundation/paper verification of this scope is pending.
+
+Algebraic realization of arbitrary Gamma1 cusp forms and the converse regular-differential-to-cusp construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must identify the original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of these characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Neither complex semisimplicity, finite characters, Witt coefficients nor a universal deformation ring supplies a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN.
+
+```json
+{
+  "proofDependencyAudits": [
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityDependencyAudit6bProduction8360.log",
+      "sha256": "23DE143D119620F9832CDEFDE00313461008F9DAA00C34BE31DEA32A8AE19831",
+      "requiredProofValueEdges": 21,
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_regular_of_diffQExp_matches_cusp"
+      ],
+      "sourceSha256": "0F11602875A984FAC7C51A6F29DF5B63F9A568DBF83C796DBC49E6AC7F3CC54F"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTransformationDependencyAudit4cProduction8360.log",
+      "sha256": "884CD5E52357D5C654E7515B2A07F4755CB447F74A167E8C6C48CDE18F38A487",
+      "requiredProofValueEdges": 39,
+      "consumers": [
+        "Dubon2026.SourceFricke.frickeF_hperm",
+        "Dubon2026.SourceFricke.frickeF_invariant_Gamma",
+        "Dubon2026.SourceFricke.frickeF_neg"
+      ],
+      "sourceSha256": "3A07F8632BF64A4F4C73B15FE010F7EDD795D299AE619C2B549F3ED45168EA65"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassExpansionDependencyAudit8bProduction8360.log",
+      "sha256": "BCD201E685A0032AD93895E9E2D0ABFD99503559372A2CB6B11F13970716D64F",
+      "requiredProofValueEdges": 58,
+      "consumers": [
+        "Dubon2026.SourceFricke.mdifferentiable_frickeF",
+        "Dubon2026.SourceFricke.weierstrassP_torsionPt_eq_tsum_prod"
+      ],
+      "sourceSha256": "BD684DB7F4B1FC1AFF966F99B51625DE3C1798EA9F1D3F742EE6BF8F4AD75602"
+    },
+    {
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFourierCoefficientsDependencyAudit7bProduction8360.log",
+      "sha256": "AEAAE9D72C4EA84F34DBB4D2D8AC5B172D7145A41A1971B8EFC04A6C124A60C3",
+      "requiredProofValueEdges": 44,
+      "consumers": [
+        "Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff_mem_kN",
+        "Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff",
+        "Dubon2026.SourceFricke.isBoundedAtImInfty_frickeF_mul_discriminant",
+        "Dubon2026.SourceFricke.periodic_wpNormZ",
+        "Dubon2026.SourceFricke.hasSum_qExpansion_wpNorm"
+      ],
+      "sourceSha256": "037B878E6F0295CD13C0D1B9173E62624819E558B9B6DD3E4E3E0117D916AA1E"
+    }
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsProductionAudit8360.log",
+  "sha256": "012805ED87297227978ACECCC61213533A46E76A96FA5A4ACC41B6CCAD3F09D3",
+  "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-regularity-fricke-inputs-production-build-8360.log",
+  "aggregateSha256": "02B05CED9C011458FBA755BE80ABE3F6D208481605BF243CAD13870848661FDB",
+  "productionModules": 8360,
+  "incrementModules": 25,
+  "axiomChecks": 152,
+  "exhaustiveIncrementTheorems": 264,
+  "linterScopes": 25,
+  "lintersPerScope": 16,
+  "exit": 0,
+  "diagnostics": 0,
+  "scratchExhaustiveTheorems": 264,
+  "productionReuse": "Only scratch imports are qualified. Every audited statement, proof body and comment is preserved. Actual Gamma1 fields and native cusp forms retain their definitions; no regularity or integral equation is assumed. No source contract is weakened.",
+  "omittedScratchTheorems": [],
+  "existingReuseTheorems": [],
+  "scratchToProductionOwnership": {
+    "scratchSum": 264,
+    "scratchDistinct": 264,
+    "generatedNameRenamings": {},
+    "productionFocused": 264,
+    "duplicateScratchNames": {},
+    "missingFromFocused": {},
+    "missingFromFocusedAlreadyInPrevious": [],
+    "productionNamesNotInScratch": [],
+    "unexplainedMissing": [],
+    "scopes": [
+      {
+        "modules": [
+          "SourceLaurentIntegralDescent",
+          "SourceCurveIntegralExpressionOrders",
+          "SourceCurveIntegralDifferentialOrders",
+          "SourceGammaOneDifferentialIntegralDescent",
+          "SourceCurveRegularIntegralCriterion",
+          "SourceGammaOneDifferentialRegularity"
+        ],
+        "count": 21,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership643bFor8360.log",
+          "sha256": "C06544FC4845486F6AE7CDC62F5ABCEFC90E082D2439E35D28AA46C93DEB07BF",
+          "sourceSha256": "90BECFFED0BA2182E6CDFE432580D7639ED6A3C433767C4A4D996DE1299E764E"
+        }
+      },
+      {
+        "modules": [
+          "SourceFrickePeriodHomothetyV2",
+          "SourceFrickeModularLatticeV2",
+          "SourceFrickeTorsionTransformationV2",
+          "SourceFrickeFunctionTransformationV2"
+        ],
+        "count": 78,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership647cFor8360.log",
+          "sha256": "BB60BF7794E1B887DEB5141A4A3E835C753C6CE20C602226C19BE06FAAC95E84",
+          "sourceSha256": "9516EF3159E4A22602DC1648181947CEA82EDF8394DFA19C309C4650D7AB649E"
+        }
+      },
+      {
+        "modules": [
+          "SourceLipschitzTwo",
+          "SourceLipschitzTwoRealBoundary",
+          "SourceWeierstrassRowSeries",
+          "SourceWeierstrassLatticeRows",
+          "SourceWeierstrassTorsionExpansion",
+          "SourceWeierstrassTorsionTail",
+          "SourceWeierstrassTorsionHolomorphy",
+          "SourceFrickeHolomorphy"
+        ],
+        "count": 95,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership650bFor8360.log",
+          "sha256": "AA7416C8EEC214BFBE75AA4A4FB7F8F0E0390700DA20495D5C99F610623917EB",
+          "sourceSha256": "051E356C4B82512EE284E1A07A9DFCD918E7CF8659237A9E16A637A373DBEFEC"
+        }
+      },
+      {
+        "modules": [
+          "SourceFrickeCyclotomicField",
+          "SourceWeierstrassNormalizedTorsion",
+          "SourceWeierstrassTorsionCuspBound",
+          "SourceWeierstrassTorsionFourierCoefficients",
+          "SourceWeierstrassTorsionFourierSum",
+          "SourceWeierstrassTorsionFourierExpansion",
+          "SourceFrickeCuspInputs"
+        ],
+        "count": 70,
+        "log": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership651bFor8360.log",
+          "sha256": "E306D012BA2F5DE154E3B37147DDA27576264D399492F37AC54DEB1C8A58AFCA",
+          "sourceSha256": "59311F15F70FF6C39770610D7CDB084DB3F6D95BFC4A6DCF4462EE9E5BB32D80"
+        }
+      }
+    ],
+    "productionOwnership": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsOwnership8360.log",
+      "sha256": "43967D786048F053766CF9B1F0D255C1AB6B896BA6A03F03AD257A93C3B3CFF8",
+      "sourceSha256": "8638D2C79915DD3087715687B6B5199B7FF488E79902313189FE00C9BB19436A"
+    },
+    "previousGlobal": {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-061545-571.log",
+      "sha256": "B696E0680B634D773587DF626A7713EE7A472D4C95D5A0CC7C1789C56B700920"
+    },
+    "renameEvidence": {
+      "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 25 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+      "sourceChecks": [
+        {
+          "module": "SourceLaurentIntegralDescent",
+          "scratchSha256": "B69E4811A4C90E8BE66BB986C98033C88638B749E90B21C0D5AC1693745412C6",
+          "productionSha256": "B69E4811A4C90E8BE66BB986C98033C88638B749E90B21C0D5AC1693745412C6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceCurveIntegralExpressionOrders",
+          "scratchSha256": "657F98FE0B5E6BD2EE0908090047F938FD2D9886A1FEF70F67864C91FF36FBFA",
+          "productionSha256": "657F98FE0B5E6BD2EE0908090047F938FD2D9886A1FEF70F67864C91FF36FBFA",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceCurveIntegralDifferentialOrders",
+          "scratchSha256": "DDB4BCD796DDFBC681165C50B06BD0AB223C24FA5C22699F41345EDA9CE38D3E",
+          "productionSha256": "3961B2FB031678909FCE61664466CDA09A26AF66E12C2B9E0197F96CD006E7F1",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneDifferentialIntegralDescent",
+          "scratchSha256": "32E979532DD52AB20162F966BC7733034801F60A7F8BBF84039D66159A170C43",
+          "productionSha256": "88EC62CF767D35A6050D1E598A46A4FB037657775EA7A996F142D088F6252453",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceCurveRegularIntegralCriterion",
+          "scratchSha256": "37BE299421EB6AD44ECDE761F43F25564920598C3C10846909F6BFA538C84B26",
+          "productionSha256": "2AD71E9EE8DDE16D04FFB4BECCF0F4D7E3F5E23DEE354357E8E1FB6FE552BA61",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceGammaOneDifferentialRegularity",
+          "scratchSha256": "B43C71E332504F9B3FA0A978B25C24A334F0BE86E70972DB0334000D8D77F998",
+          "productionSha256": "584C3C0057021559BFD4DDAA63B00CEB45A3D6BE8F2B816AC86F166798328ED2",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceFrickePeriodHomothetyV2",
+          "scratchSha256": "896E3B923D354A9CED8FD8C44FCE47073AEA669B4E5587B58A43BDA83866FF33",
+          "productionSha256": "896E3B923D354A9CED8FD8C44FCE47073AEA669B4E5587B58A43BDA83866FF33",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceFrickeModularLatticeV2",
+          "scratchSha256": "092D75B3216920F5E51C7960CFC84BFD57E6E1C73B9095621F7D192853B4204F",
+          "productionSha256": "BD33EDFD5A2B9CF786D23448F2F5FD4B7CCA7B68BE3EADA51F6419F3F0BBB7F0",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceFrickeTorsionTransformationV2",
+          "scratchSha256": "3A5DB0130F60BF11013E34A6793E3679AD981834A5F6AC1FD4A17F59874AF8F8",
+          "productionSha256": "5EB63E4BD0B9C2572F2ACF484AD0810E789D537EAE58CCFDDCCE261C58DEDFD0",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceFrickeFunctionTransformationV2",
+          "scratchSha256": "5BABB787F2D3D189DB22930D749DC5530ECF438593FCBF5E77D2CC3148C13B7D",
+          "productionSha256": "89F3BFBF1137F5B6F75FC355B05F3A5306B1272691D0F1A8F5E2123166B492F3",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceLipschitzTwo",
+          "scratchSha256": "490C3EE77DFF924429526BAD36DF613932BE9C5BA109599FD2F07E87200237EB",
+          "productionSha256": "490C3EE77DFF924429526BAD36DF613932BE9C5BA109599FD2F07E87200237EB",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceLipschitzTwoRealBoundary",
+          "scratchSha256": "B3E74F77839BD9172F411A4089B0780E1C82BFC5E1A48CA02BD19D38C5183CF9",
+          "productionSha256": "95CBF316AD7FEF3E4090694244ABB108ADA5EAB5A27D5106C978C33D1ECBAEF5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeierstrassRowSeries",
+          "scratchSha256": "DE4FE36E54C7FCFD7C2967D7738556CF6A82CD7299EE8FC20F17B1A2AF610181",
+          "productionSha256": "05826FB23173B14762A1A83D4F729FF3124EE44E45BE754F6CC1327D44CAF46B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeierstrassLatticeRows",
+          "scratchSha256": "40E695A8965F49DB4886F45950AD033FC3585BD127A517C38AAC92B8DA0BAB68",
+          "productionSha256": "D7A22E4E030552BB9E7733087E2C5DB8D9620FBC2AF73F5BAC1FBAF7A7C1FE8D",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeierstrassTorsionExpansion",
+          "scratchSha256": "766A2069D6302436819DC787318D341045A4FA9A8CB010852968369F8CE614EE",
+          "productionSha256": "8AA529140FBD35F54CAF1DD110138D056F69D24423659BBFA48D4E04B834F59B",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeierstrassTorsionTail",
+          "scratchSha256": "3D95B55677C539619F72F244DF88D64559CB2EFBC87DD715415ABFB5CE9BC161",
+          "productionSha256": "08E33F8188C9B6DA914FD0C4CD09566C462CC6253859DBE9CEA081D371B0CCE0",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeierstrassTorsionHolomorphy",
+          "scratchSha256": "7F1D04F8E49AD01A36D1BB0AD1B7D55E3D428F941CD18D70AB83315E42C7BD3B",
+          "productionSha256": "A7E51FE449ED3E5292129C51D070F7D2DCBFDD679F1F18A2F8801725A999DE1F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceFrickeHolomorphy",
+          "scratchSha256": "DF1494B78BCEE18F4806A9A5558BD0E18961C1EFAD71C8D30BAE9B4FE4A35C9D",
+          "productionSha256": "0F95E4A11784515A023DC6EE8D9ED9B4CD06E7588978A60314A96B2AFB9497D5",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceFrickeCyclotomicField",
+          "scratchSha256": "CB552577BCC834E7EE784FABE1AD38DF2FFD7E67D8A583C34A19C4EFBA3CF519",
+          "productionSha256": "E7FE7979A9C0E3B18E92BA334EF918B73AB144EB5B6A4E9663982EFC599C75A6",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeierstrassNormalizedTorsion",
+          "scratchSha256": "7FF05DCB99658FAE0286FA1391143AE0A5788CB0C1E22B026A4211CB40A9B438",
+          "productionSha256": "E00F0A22EC9E0E9A61E9F83E9376A0D68C2F83ACC9B1AA8D79082C8D012CBF29",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeierstrassTorsionCuspBound",
+          "scratchSha256": "26EC7D5B54EF49AC6DA9A9DB7C4EC2B11840F83C071541E00EE54662E448FE07",
+          "productionSha256": "69EF30FAD34352733AA82F0274CF26BD30212B9FAF21D3F792CF8DC427B8B12F",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeierstrassTorsionFourierCoefficients",
+          "scratchSha256": "F65C674B7B493EE02ED099A2EBF988F605D39E5A3E0BBCBB7AD2ADE5AB0D0037",
+          "productionSha256": "206B74E47A8240861AFB07019222410BF357B5553D236F6D49B486821EB09FE0",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeierstrassTorsionFourierSum",
+          "scratchSha256": "2B4687E881537A35E6CAACDB3480B4ABEC64A186BA7D708C90BA2A4517FB1456",
+          "productionSha256": "189D8519D92BAFBD5B7AC8469C79ECD43BD0C62935AB29F7E30387174EEFD185",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceWeierstrassTorsionFourierExpansion",
+          "scratchSha256": "ACA66060E70084319577839D2BC5A99337BC06C4C973509378527B71524BC4E3",
+          "productionSha256": "0F6B47AA646AE1BF54EC2F2B33FDF589AD4E203140C614101701F37E30B2C277",
+          "bodyIdentical": true
+        },
+        {
+          "module": "SourceFrickeCuspInputs",
+          "scratchSha256": "C2E43F31238A86930A69B3F956400117F17340847800A7E1F5E71087F4D375B3",
+          "productionSha256": "E9F3101E3DFD98914AE371D59334511F11519CC92593A67F801F216D6E4B4F69",
+          "bodyIdentical": true
+        }
+      ]
+    },
+    "passed": true
+  },
+  "scratchToProductionCountReason": "All 264 distinct names from 264 exhaustive scratch checks are retained: 264 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+  "boundary": "Algebraic realization of arbitrary Gamma1 cusp forms and the converse regular-differential-to-cusp construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must identify the original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of these characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Neither complex semisimplicity, finite characters, Witt coefficients nor a universal deformation ring supplies a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN."
 }
 ```

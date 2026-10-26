@@ -1,0 +1,78 @@
+import Dubon2026.SourcePrimitiveGammaOneHeckeCharacter
+import Dubon2026.SourceGammaOneHeckeFinite
+import Dubon2026.SourcePrimitiveFiniteH1OperatorRealization
+
+/-! DUB-17/18 -> original all-weight adic association -> actual finite Gamma1
+Hecke characters. Consume the original primitive form and its existing
+compatible local character to obtain characters on the genuine finite
+Gamma1 operator rings at every positive prime-power precision.
+Arithmetic geometric and diamond comparison and Galois realization remain. -/
+namespace Dubon2026
+noncomputable section
+open scoped ValuativeRel
+variable {Q : ℕ} [NeZero Q] {k : ℤ}
+variable {E : Type} [Field E] [CharZero E] [ValuativeRel E]
+
+/-- Actual finite Gamma1 operator characters with whole-word pullback to
+the original compatible adic character and exact original Fourier values. -/
+def sourcePrimitiveGammaOneH1CharacterData
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E)
+    (p : ℕ) [NeZero p] (hp : p.Prime) (hlarge : 3 < p) [CharP 𝓀[E] p] : Prop :=
+  sourcePrimitiveFiniteH1CharacterData f hk τ p hp ∧
+  ∀ n : ℕ,
+    Finite (sourceGammaOneHeckeAlgebra Q (p ^ (n + 1)) (k - 2).toNat) ∧
+    (sourcePrimitiveGammaOneHeckeCharacter f hk τ p n hp hlarge).comp
+      (FreeAlgebra.lift ℤ
+        (sourceGammaOnePrimeOperators Q (p ^ (n + 1)) (k - 2).toNat)).rangeRestrict.toRingHom =
+      (sourcePrimitiveH1AdicQuotientCharacter f hk τ n).comp
+        (sourceGammaOneOriginalHeckeWord Q (p ^ (n + 1)) (k - 2).toNat).toRingHom ∧
+    ∀ ell : sourceBinaryHeckePrime (Q * p ^ (n + 1)),
+      sourcePrimitiveGammaOneHeckeCharacter f hk τ p n hp hlarge
+        ((FreeAlgebra.lift ℤ
+          (sourceGammaOnePrimeOperators Q (p ^ (n + 1)) (k - 2).toNat)).rangeRestrict
+            (FreeAlgebra.ι ℤ ell)) =
+        Ideal.Quotient.mk ((IsLocalRing.maximalIdeal 𝒪[E]) ^ (n + 1))
+          ⟨τ (sourcePrimitiveFieldCoefficient f ell.val),
+            sourcePrimitiveCoefficient_valuation_le_one f hk τ ell.val⟩
+
+/-- Every original primitive form of weight at least two supplies
+characters on the actual finite Gamma1 H1 Hecke operator rings at every
+positive power of each prime greater than three. Their entire word values
+come from the same original adic character, and their good-prime values
+are exactly the original Fourier coefficients. All construction and
+relation hypotheses are discharged from the original form. -/
+theorem sourcePrimitive_exists_gammaOneH1HeckeCharacters
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (p : ℕ) (hp : p.Prime)
+    (hlarge : 3 < p) :
+    letI : NeZero p := ⟨hp.ne_zero⟩
+    letI := sourcePrimitiveCoefficientField_numberField f hk
+    letI := rationalPrimeLocalField_charZero p hp
+    let F := rationalPrimeLocalField p hp
+    let L := commonCoefficientField (sourcePrimitiveCoefficientField f) F
+    ∃ (_ : UniformSpace L) (_ : ValuativeRel L),
+      IsUniformAddGroup L ∧ IsNonarchimedeanLocalField L ∧
+      (ValuativeRel.valuation F).HasExtension (ValuativeRel.valuation L) ∧
+      FiniteDimensional F L ∧
+      ∃ hchar : CharP 𝓀[L] p, letI := hchar
+        Finite 𝓀[L] ∧ ∃ τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] L,
+          sourcePrimitiveGammaOneH1CharacterData f hk τ p hp hlarge := by
+  letI : NeZero p := ⟨hp.ne_zero⟩
+  letI := sourcePrimitiveCoefficientField_numberField f hk
+  letI := rationalPrimeLocalField_charZero p hp
+  let F := rationalPrimeLocalField p hp
+  let L := commonCoefficientField (sourcePrimitiveCoefficientField f) F
+  have hc := sourcePrimitive_exists_finiteH1OperatorCharacters f hk p hp
+  dsimp only at hc
+  obtain ⟨u, v, hu, hv, hext, hdim, hchar, hfinite, τ, hdata⟩ := hc
+  letI : UniformSpace L := u
+  letI : ValuativeRel L := v
+  letI : CharP 𝓀[L] p := hchar
+  refine ⟨u, v, hu, hv, hext, hdim, hchar, hfinite, τ, hdata, ?_⟩
+  intro n
+  exact ⟨sourceGammaOneHeckeAlgebra_finite Q (p ^ (n + 1)) (k - 2).toNat,
+    sourcePrimitiveGammaOneHeckeCharacter_comp f hk τ p n hp hlarge,
+    sourcePrimitiveGammaOneHeckeCharacter_hecke f hk τ p n hp hlarge⟩
+
+end
+end Dubon2026

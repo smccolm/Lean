@@ -1,0 +1,712 @@
+{
+  "status": "Canonical PASS; all failed helper evidence preserved with fresh successors. No audited source was rewritten or used audit rerun.",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_hecke_trace_8274.ps1",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/build_gamma_one_hecke_trace_8274.ps1",
+      "sha256": "C95B2E7079AE5C2B88A2BDE8D2767E058F9A26E1B917377EE8700EE3D559D1FB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_hecke_trace_ownership_8274.py",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/compare_gamma_one_hecke_trace_ownership_8274.py",
+      "sha256": "AB7E62B7967C2091C9DA94F39B348321DF6D4B8E5E14F1BD66DAEFE48BF54521"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_hecke_trace_ownership_8274b.py",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/compare_gamma_one_hecke_trace_ownership_8274b.py",
+      "sha256": "E5927B585F4CCE0ECBAB4BA97B8B01A073B9D51EBF7A8DF0BDEDDDA04AB22E2D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-hecke-trace-ownership-successor-8274b.json",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/gamma-one-hecke-trace-ownership-successor-8274b.json",
+      "sha256": "186840AF2FE54FA3F41DC6C2D58121E3A8AD9E96181BBF9D76A4B7A3BE3CECDE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-hecke-trace-preexecution-review-8274.json",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/gamma-one-hecke-trace-preexecution-review-8274.json",
+      "sha256": "0B2B133EC9515010486CA0380BA226156354CABC4053B19F698CCA883943E72E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_hecke_trace_8274.py",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/integrate_source_gamma_one_hecke_trace_8274.py",
+      "sha256": "47DAB6E2821D93EBDEFE4C2703C6CE056D41A7C19AAC49B2B6EDC89E04BCBEF2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_trace_global_ownership_8274.py",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/prepare_gamma_one_hecke_trace_global_ownership_8274.py",
+      "sha256": "2DA83D26F1BB9CE96CD9E986C4C1DDB691088C081AE2FB7A901436E1372A3656"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_trace_global_ownership_8274b.py",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/prepare_gamma_one_hecke_trace_global_ownership_8274b.py",
+      "sha256": "F945A453CF32E9C0B7C20ACF542B95FFA766E151EE6C19740CE913107F71DEB2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_trace_production_ownership_8274.py",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/prepare_gamma_one_hecke_trace_production_ownership_8274.py",
+      "sha256": "AAE80D3FF37023312BAC7199F49E05D2DD13C620563ABA53BCE44C8EB4146994"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_trace_promotion_8274.py",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/prepare_gamma_one_hecke_trace_promotion_8274.py",
+      "sha256": "68E776FAB3BAFEF95A9638C6605C9FF79F43B617E6FCF4313B459E1CB40101A6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_trace_scratch_ownership_8274.py",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/prepare_gamma_one_hecke_trace_scratch_ownership_8274.py",
+      "sha256": "62FE393DC50FAF63AA46522D8E308D07D5D4B1B3E902895BF9C5C4E90C2FBE0A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_hecke_trace_8274.py",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/record_source_gamma_one_hecke_trace_8274.py",
+      "sha256": "CA91FBAB57C083CF8862372E79706D40F2E60DBF55AF214025CD1B325BFD912B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_hecke_trace_8274b.py",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/record_source_gamma_one_hecke_trace_8274b.py",
+      "sha256": "B3620837C08E695EDF0FFE461DBE522D48413D92BE9CFDAF3C138D7628D8EA2C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-trace-ownership-comparison-8274b.json",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/source-gamma-one-hecke-trace-ownership-comparison-8274b.json",
+      "sha256": "0F0D021E563ACD08F586F297AF7D9A28B67A2D2C8EC3C1CE719946B9F1B37A78"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-trace-ownership-diagnostic-8274b.json",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/source-gamma-one-hecke-trace-ownership-diagnostic-8274b.json",
+      "sha256": "91AD59D1E199FEC4EC3EA650EE41060724647F5D00F1D892F7863549F8593D45"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-trace-production-build-8274.exit",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/source-gamma-one-hecke-trace-production-build-8274.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-trace-production-build-8274.log",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/source-gamma-one-hecke-trace-production-build-8274.log",
+      "sha256": "D4B4646A0CFC6017137B43E492843F75FE63AF0B4C022918DF6C82E4D48F51E0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-trace-scratch-ownership-8274.json",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/source-gamma-one-hecke-trace-scratch-ownership-8274.json",
+      "sha256": "8A705BF8B20FF7C6CA24366B3581433849A9E0B6B084033FFC86BE22587DC6A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverTraceBaseChangeDependencyAudit4Production8274.exit",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneCoverTraceBaseChangeDependencyAudit4Production8274.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverTraceBaseChangeDependencyAudit4Production8274.lean",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneCoverTraceBaseChangeDependencyAudit4Production8274.lean.txt",
+      "sha256": "C969CA4480714DAC76063C180A2C9BB854E5C33F8B76EBCE935FBA9085B21AEC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverTraceBaseChangeDependencyAudit4Production8274.log",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneCoverTraceBaseChangeDependencyAudit4Production8274.log",
+      "sha256": "0DA99080F601AEC116DE1C3A748C3AFEE6E3BF1C0566AB3FC91457750400B5C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCosetsDependencyAudit5Production8274.exit",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeCosetsDependencyAudit5Production8274.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCosetsDependencyAudit5Production8274.lean",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeCosetsDependencyAudit5Production8274.lean.txt",
+      "sha256": "44C60D6655411513EB5979A36F3410A515FA59966AA449984BD2DB28529EAB8D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCosetsDependencyAudit5Production8274.log",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeCosetsDependencyAudit5Production8274.log",
+      "sha256": "450AC19C328EFB6DF48DD2BA222F607B2D296EF08F0ECAF3A50E7D4905868D2A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePullbackDependencyAudit3Production8274.exit",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckePullbackDependencyAudit3Production8274.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePullbackDependencyAudit3Production8274.lean",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckePullbackDependencyAudit3Production8274.lean.txt",
+      "sha256": "68B6918B0E2619B8AABF68630D7BA853D8EBBA006156CFB19E88D252D014C05E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePullbackDependencyAudit3Production8274.log",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckePullbackDependencyAudit3Production8274.log",
+      "sha256": "015A64D33B9FE667C100CF0C863E0176C101F5EBB64AE831286F86BA2543CA88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceDependencyAudit7Production8274.exit",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceDependencyAudit7Production8274.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceDependencyAudit7Production8274.lean",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceDependencyAudit7Production8274.lean.txt",
+      "sha256": "8A69F4FBEA424E6928D3A37D2BA4750BF661C08393A0517CD7706AE5D553AE8E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceDependencyAudit7Production8274.log",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceDependencyAudit7Production8274.log",
+      "sha256": "35EA2C5EDA9B78C88959B1AB7BD05C6173809B8185C5D5CAA49E12F803805808"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceGeneratedRetention8274b.exit",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceGeneratedRetention8274b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceGeneratedRetention8274b.lean",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceGeneratedRetention8274b.lean.txt",
+      "sha256": "9EEB2879DCE6E5D2E8C28C8588FCFDAA5B5D294AC848B26EDE24C6BA348E50BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceGeneratedRetention8274b.log",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceGeneratedRetention8274b.log",
+      "sha256": "0FACD89C5CE05FAB67AA1C455C3CDEB3DE849B77374646271A091F044FB527C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceGlobalOwnership8274b.exit",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceGlobalOwnership8274b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceGlobalOwnership8274b.lean",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceGlobalOwnership8274b.lean.txt",
+      "sha256": "C95713C7C0A7E9810F9DC201F5983A3C8C6230771B54DC439CA219FC7B970823"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceGlobalOwnership8274b.log",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceGlobalOwnership8274b.log",
+      "sha256": "2C5D3634D9A582F93A35A1DF3CF4E7B74CEE01D99578E5501B2922479585FC2A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceOwnership8274.exit",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceOwnership8274.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceOwnership8274.lean",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceOwnership8274.lean.txt",
+      "sha256": "41D34FB70B8275E9217EF36A2B5F477E508488ECF208FC7AB8F521734AE1AB63"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceOwnership8274.log",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceOwnership8274.log",
+      "sha256": "634E51B4C1B1318223E2F545E33E994E5607A438A4A6CB20EC3936DBA9BEB167"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceProductionAudit8274.exit",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceProductionAudit8274.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceProductionAudit8274.lean",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceProductionAudit8274.lean.txt",
+      "sha256": "C719495C44A2CAC91E95615B85EF3012486FDEB5CB6C20E35800E630A3E71BAE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceProductionAudit8274.log",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceProductionAudit8274.log",
+      "sha256": "C6C8654E286E6796CB018CFB6C10B71580666B70025F03FDD24AC555C9BC3257"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership592For8274.exit",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchOwnership592For8274.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership592For8274.lean",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchOwnership592For8274.lean.txt",
+      "sha256": "D91E93F13EE10FAF714093C36DF237D9332ED49CCD110AA6D15592C50246E5E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership592For8274.log",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchOwnership592For8274.log",
+      "sha256": "7732909B31F124AA47A89A90EDD5F9C197AFCD79261488FA93F2A61F973DDA69"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership594For8274.exit",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchOwnership594For8274.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership594For8274.lean",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchOwnership594For8274.lean.txt",
+      "sha256": "6C0A042DA0FFC24AFB59FE951AC1638A8BBA849E8079F18D0D27B9EDEDF7AD85"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership594For8274.log",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchOwnership594For8274.log",
+      "sha256": "A44237195B7FF54118532D9290B72675A15DF5A4E6E45A5C1D439AAACD0000BD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership595For8274.exit",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchOwnership595For8274.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership595For8274.lean",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchOwnership595For8274.lean.txt",
+      "sha256": "FA0BF4BC25E8490FCC99973EE4421D7EBB5E9216FBF42C2D3D23477D299D8188"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership595For8274.log",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchOwnership595For8274.log",
+      "sha256": "5D3239A2A18FF18DDFC4E0CD7AE7E312782012320A571FEEDDFD29A7F3DA0823"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership596For8274.exit",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchOwnership596For8274.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership596For8274.lean",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchOwnership596For8274.lean.txt",
+      "sha256": "00C110F0E7581921DAFEBAE9585F05C93FFC10452EA4C3D3EEC2C76DE5351CD7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership596For8274.log",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchOwnership596For8274.log",
+      "sha256": "C4A0151EBEBD58510749761EB5B848B385F727EB5431F6C19B93F4448AC5851D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership597For8274.exit",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchOwnership597For8274.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership597For8274.lean",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchOwnership597For8274.lean.txt",
+      "sha256": "24AD229B39946F6DAF0C6306AC3294E22E93BEAC323EE9E74EF265A1B44103AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership597For8274.log",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchOwnership597For8274.log",
+      "sha256": "9342DBD9516312483F1963AC8038E1AA08FB9F4582BBCF4CE50B508045160003"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership598For8274.exit",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchOwnership598For8274.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership598For8274.lean",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchOwnership598For8274.lean.txt",
+      "sha256": "AFA0FC7960639EB28B05B25EAF30BB858755475D5EFAC496BFD006175545F9C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership598For8274.log",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchOwnership598For8274.log",
+      "sha256": "E36F1A8770535CD118FE98ED78D513449756BE244B5F6B933DA272C6C70F1520"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchRetention8274b.exit",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchRetention8274b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchRetention8274b.lean",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchRetention8274b.lean.txt",
+      "sha256": "A649D8A7692983446BDC7609132E8BD806C84D3D09A2D7862160A34C9E0D8CA5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchRetention8274b.log",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceGammaOneHeckeTraceScratchRetention8274b.log",
+      "sha256": "1A40EC0FA330A1426439BF7D7A9B0D558425145D35FF6283BFC6664DDFD77D22"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceBaseChangeDependencyAudit3Production8274.exit",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceH1TraceBaseChangeDependencyAudit3Production8274.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceBaseChangeDependencyAudit3Production8274.lean",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceH1TraceBaseChangeDependencyAudit3Production8274.lean.txt",
+      "sha256": "D353A8513C462B276EBDB71E69E2BFFF12295BE65FADAA1D133213F5806C6CFF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceBaseChangeDependencyAudit3Production8274.log",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceH1TraceBaseChangeDependencyAudit3Production8274.log",
+      "sha256": "0370500C067CCC4FC8C53458B1B7230303E4EB0DA1A8CE0CB0815416671005CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceTowerDependencyAudit4Production8274.exit",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceH1TraceTowerDependencyAudit4Production8274.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceTowerDependencyAudit4Production8274.lean",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceH1TraceTowerDependencyAudit4Production8274.lean.txt",
+      "sha256": "2B751ABF2F6F601F366DAC932E936A75DED24A416602FB7DE21A7904C6C28A02"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceTowerDependencyAudit4Production8274.log",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/SourceH1TraceTowerDependencyAudit4Production8274.log",
+      "sha256": "82AB14A8F27BD8347F901DB40AD141BF87A3B61C71F7FD52540834A0C9C9E7CF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_hecke_trace_8274.ps1",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/verify_gamma_one_hecke_trace_8274.ps1",
+      "sha256": "E6CF3B375E936346AB3FD03D4E49ED6EA4362D2A15329025B42220C0C4B2F41B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_hecke_trace_8274b.ps1",
+      "path": "Tools/gamma-one-hecke-trace-20261025-599/verify_gamma_one_hecke_trace_8274b.ps1",
+      "sha256": "C342DCF7B95136CB75D735B0372B055C31CDEA41DC715883FEF0F12AE8B9CA87"
+    }
+  ],
+  "canonical": {
+    "recordedUTC": "2026-10-26T08:40:59.613741+00:00",
+    "log": "logs/dubon-build-20261026-001415-274.log",
+    "sha256": "D8BC973383205D9303138EECA202C6B55949EB013CB5FB97FCE52B808058DA59",
+    "bytes": 13451248,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8274,
+    "projectTheorems": 52313,
+    "registeredConsumers": 23844,
+    "registeredConstructions": 2277,
+    "declarations": 32067,
+    "generated": 33137,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261026_000820.log",
+    "foundationSha256": "2EEC1E5CDD960AD1C9841B2ECD82EEB3C89F110B50AD79A535959B7177A91AE9",
+    "countReconciliation": {
+      "previousTheorems": 52204,
+      "focusedTheorems": 109,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 109,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [
+        "ZMod.chineseRemainder.congr_simp"
+      ],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceGlobalOwnership8274b.log",
+      "globalOwnershipSha256": "2C5D3634D9A582F93A35A1DF3CF4E7B74CEE01D99578E5501B2922479585FC2A",
+      "globalOwnershipSourceSha256": "C95713C7C0A7E9810F9DC201F5983A3C8C6230771B54DC439CA219FC7B970823",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceOwnership8274.log",
+      "ownershipSha256": "634E51B4C1B1318223E2F545E33E994E5607A438A4A6CB20EC3936DBA9BEB167"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 111,
+      "scratchDistinct": 111,
+      "generatedNameRenamings": {},
+      "productionFocused": 109,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {
+        "ZMod.chineseRemainder.congr_simp": [
+          {
+            "scope": "SourceGammaOneHeckeTraceScratchOwnership594For8274",
+            "module": "Dubon2026.SourcePrincipalCoprimeReduction"
+          }
+        ],
+        "Dubon2026.sourceGammaOneDiagonalHom.eq_1": [
+          {
+            "scope": "SourceGammaOneHeckeTraceScratchOwnership597For8274",
+            "module": "Dubon2026.SourceGammaOneCoverImage"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [
+        "Dubon2026.sourceGammaOneDiagonalHom.eq_1"
+      ],
+      "productionNamesNotInScratch": [],
+      "upstreamRetainedGenerated": {
+        "ZMod.chineseRemainder.congr_simp": {
+          "owner": "Mathlib.NumberTheory.SumTwoSquares",
+          "typeHash": "2743338712",
+          "valueHash": "1845945809"
+        }
+      },
+      "retainedGeneratedFingerprints": {
+        "ZMod.chineseRemainder.congr_simp": [
+          "Mathlib.NumberTheory.SumTwoSquares",
+          "2743338712",
+          "1845945809"
+        ],
+        "Dubon2026.sourceGammaOneDiagonalHom.eq_1": [
+          "Dubon2026.SourceGammaOneCoverFiniteIndex",
+          "2101644397",
+          "1476824539"
+        ]
+      },
+      "retentionLogs": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceGeneratedRetention8274b.log",
+          "sha256": "0FACD89C5CE05FAB67AA1C455C3CDEB3DE849B77374646271A091F044FB527C3",
+          "sourceSha256": "9EEB2879DCE6E5D2E8C28C8588FCFDAA5B5D294AC848B26EDE24C6BA348E50BE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchRetention8274b.log",
+          "sha256": "1A40EC0FA330A1426439BF7D7A9B0D558425145D35FF6283BFC6664DDFD77D22",
+          "sourceSha256": "A649D8A7692983446BDC7609132E8BD806C84D3D09A2D7862160A34C9E0D8CA5"
+        }
+      ],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceGammaOneHeckeSubgroup",
+            "SourceGammaOneConstantHecke",
+            "SourceNativeCoinductionCosetTrace",
+            "SourceShapiroH1CocycleComparison",
+            "SourceShapiroH1CosetTrace",
+            "SourceGammaOneTransferCosetFormula",
+            "SourceGammaOneLiteralTransferSurjectivity"
+          ],
+          "count": 25,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership592For8274.log",
+            "sha256": "7732909B31F124AA47A89A90EDD5F9C197AFCD79261488FA93F2A61F973DDA69",
+            "sourceSha256": "D91E93F13EE10FAF714093C36DF237D9332ED49CCD110AA6D15592C50246E5E3"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneCoverHeckeSquare",
+            "SourcePrincipalCoprimeReduction",
+            "SourceGammaOneRaisedCosets",
+            "SourceGammaOneCoverHeckeCosets",
+            "SourceGammaOneCoverHeckeRepresentatives"
+          ],
+          "count": 22,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership594For8274.log",
+            "sha256": "A44237195B7FF54118532D9290B72675A15DF5A4E6E45A5C1D439AAACD0000BD",
+            "sourceSha256": "6C0A042DA0FFC24AFB59FE951AC1638A8BBA849E8079F18D0D27B9EDEDF7AD85"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneBinaryRestriction",
+            "SourceGammaOneBinaryHeckeSum",
+            "SourceGammaOneBinaryRestrictionHecke"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership595For8274.log",
+            "sha256": "5D3239A2A18FF18DDFC4E0CD7AE7E312782012320A571FEEDDFD29A7F3DA0823",
+            "sourceSha256": "FA0BF4BC25E8490FCC99973EE4421D7EBB5E9216FBF42C2D3D23477D299D8188"
+          }
+        },
+        {
+          "modules": [
+            "SourceCohomologyTracePullbackCoefficients",
+            "SourceShapiroH1PullbackNaturality",
+            "SourceH1TraceBaseChange"
+          ],
+          "count": 17,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership596For8274.log",
+            "sha256": "C4A0151EBEBD58510749761EB5B848B385F727EB5431F6C19B93F4448AC5851D",
+            "sourceSha256": "00C110F0E7581921DAFEBAE9585F05C93FFC10452EA4C3D3EEC2C76DE5351CD7"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneCoverImage",
+            "SourceGammaOneCoverImageHecke",
+            "SourceGammaOneCoverHeckeTraceCosets",
+            "SourceGammaOneCoverHeckeTraceBaseChange"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership597For8274.log",
+            "sha256": "9342DBD9516312483F1963AC8038E1AA08FB9F4582BBCF4CE50B508045160003",
+            "sourceSha256": "24AD229B39946F6DAF0C6306AC3294E22E93BEAC323EE9E74EF265A1B44103AD"
+          }
+        },
+        {
+          "modules": [
+            "SourceCoinducedTowerFunctions",
+            "SourceCoinducedTowerTrace",
+            "SourceShapiroH1Tower",
+            "SourceH1TraceTower"
+          ],
+          "count": 28,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership598For8274.log",
+            "sha256": "E36F1A8770535CD118FE98ED78D513449756BE244B5F6B933DA272C6C70F1520",
+            "sourceSha256": "AFA0FC7960639EB28B05B25EAF30BB858755475D5EFAC496BFD006175545F9C0"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceOwnership8274.log",
+        "sha256": "634E51B4C1B1318223E2F545E33E994E5607A438A4A6CB20EC3936DBA9BEB167",
+        "sourceSha256": "41D34FB70B8275E9217EF36A2B5F477E508488ECF208FC7AB8F521734AE1AB63"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-220533-685.log",
+        "sha256": "67A337579A83611FB247AE2A9C773A3C0152B998E2B6A233718CE9B9CAE117C1"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 26 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for. Independent generated-name probes retain the exact Chinese-remainder theorem type/value hashes under its Mathlib owner and identify the already-audited cover equation owner.",
+        "sourceChecks": [
+          {
+            "module": "SourceGammaOneHeckeSubgroup",
+            "scratchSha256": "3518F8C38303371FA5BDC0730BB37915A8F2E7ABFD7C7174CFC6A7AA428139E5",
+            "productionSha256": "3518F8C38303371FA5BDC0730BB37915A8F2E7ABFD7C7174CFC6A7AA428139E5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneConstantHecke",
+            "scratchSha256": "9627C449A3179AA390C251FCEAE6A02F83EFB9EB26240A766C00FA4E311367D0",
+            "productionSha256": "B1CDE3537D1064DBDFF2CDA2DDF4BB470D3AE61612009D14BA8B5C441B6645C5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceNativeCoinductionCosetTrace",
+            "scratchSha256": "DD82554A6E52157C4467324C546994D96D767B35A6567F4C17D0E6D86D3FC0F4",
+            "productionSha256": "DD82554A6E52157C4467324C546994D96D767B35A6567F4C17D0E6D86D3FC0F4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceShapiroH1CocycleComparison",
+            "scratchSha256": "4306684904679EE85F31F64FE81925677877DB1F54B5A2DCB11AD41ACC3BF0B5",
+            "productionSha256": "4306684904679EE85F31F64FE81925677877DB1F54B5A2DCB11AD41ACC3BF0B5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceShapiroH1CosetTrace",
+            "scratchSha256": "1D8455B6F1D924F536E62D67822378B5E5CC6C46F77AB6E19AE9859836BB259B",
+            "productionSha256": "28CAE34E906641EDC4A384F982A9397F7A80643AFF1BBD5EDE57B2752BEACA12",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneTransferCosetFormula",
+            "scratchSha256": "8BE95415BF1954E1C0E740DDF8CE9FC7A926D4A3A34CB6495C35957C201B3F1A",
+            "productionSha256": "1BE54F55F62F67125A13DA1A46DFC5B16E34E62CFCA6244D5EE4B390BFA3A38C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneLiteralTransferSurjectivity",
+            "scratchSha256": "2C275BE2CB4396E554FE1C8472BEF5B4E91C0FFF9BF390CAFE32DEE82BF35068",
+            "productionSha256": "34B1088616F5ADE4DF4414CDFF12BF1E88E3114601AAC53D0E44E0814DEDD66C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCoverHeckeSquare",
+            "scratchSha256": "3EEC68488F94744062D5AE7AB19B7930C3F73E8AF1A9320B44B7F0127811FDD3",
+            "productionSha256": "0560D5284965582BC778399C3197F0332811BDB60DB472D669D7A1F9C5F883B4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrincipalCoprimeReduction",
+            "scratchSha256": "CF1F006422A7B2B1BE1A663F75E56A27DAE99582F4AFA5A4C8C2A067E131357B",
+            "productionSha256": "CF1F006422A7B2B1BE1A663F75E56A27DAE99582F4AFA5A4C8C2A067E131357B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRaisedCosets",
+            "scratchSha256": "FA140110B816A60F7CFFC251AFC6E1F3FDDCC90CC549996ECF7236DF1D6244AD",
+            "productionSha256": "E64489F89C9B207F356AFF5E1923534A4C1ACF093C8534969E6C0D3741611378",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCoverHeckeCosets",
+            "scratchSha256": "CC282682F6D875EF97FB376FB19A25E1B2B491E1FF8163280C6C7F6DB2DDE315",
+            "productionSha256": "9FA73B8E8C0E9A12C43F9ECA3FEC325B39D31745CCC8339CCF4220958B538220",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCoverHeckeRepresentatives",
+            "scratchSha256": "F95372EDCEA2A9EFF2C030D2B477899F49692D7239D8EF68B16EED75204EA239",
+            "productionSha256": "C9EC9FA716DF5FF8014C34628FA6BFBD6D8295D159789380B5DF0832E117E9F5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneBinaryRestriction",
+            "scratchSha256": "8300211B19A51CE12AB2A57F09DD6AF20F5683B0237B603F831CF79022884E2D",
+            "productionSha256": "2B84B8B6835E0A6FDEF9DF3F10FE0267758662FBBECC610092BD5F469AB70D6A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneBinaryHeckeSum",
+            "scratchSha256": "20A995FCE32C3B99A4F5EEF4ABD3315092A54C5DFDF8938F01C6B60AA5972240",
+            "productionSha256": "11731E08705D749DB6C5E1F56507689FE401ECDD08AA75222B9DE6A42D4FBCDA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneBinaryRestrictionHecke",
+            "scratchSha256": "3E97722633E4F7D6D6C61E7CACAF22E6867F1E082A1C506347879201BED60ABB",
+            "productionSha256": "D8911790C76FE7677F7DBE07FEEEDF8AFD4ACE0B45BD9D144F8E79D997260117",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCohomologyTracePullbackCoefficients",
+            "scratchSha256": "7BFAF461F85274FBA8BBDD89FB9D5D0EF5718D80F7BCA7C2B8A175271BA16D43",
+            "productionSha256": "7BFAF461F85274FBA8BBDD89FB9D5D0EF5718D80F7BCA7C2B8A175271BA16D43",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceShapiroH1PullbackNaturality",
+            "scratchSha256": "1B100924ACE38077B9CAA6696C33D1C9A1ED5CC113A86B0A9140D55ADCE97215",
+            "productionSha256": "2C36C3A2101F918BCAD47E752BA7442144F51F9C5CB340B224B010BC55707430",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceH1TraceBaseChange",
+            "scratchSha256": "568424F1A5749E7D74A114EC0CC099854433B969AD729A1AE287E25A3DD1FFF1",
+            "productionSha256": "20117E4A7D27D94B1C789BEB8B59947F708CC527C94EB92C8610D6C07CB145DA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCoverImage",
+            "scratchSha256": "6ADF7F716AD52E90D6932E981084C08694986DCD24108FE1C88075FDC1BF036B",
+            "productionSha256": "4D304F19EB9C124E638E7B46983D0EAB59B3E393A6DFD28E089FB61546320860",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCoverImageHecke",
+            "scratchSha256": "A96B2CE24C764810A9F1A5BF643E0078B0ABAACE90028E55E8A0D88E1AADE661",
+            "productionSha256": "C3D85D5BC40E7C9F261029C2A52868B244AF1B529F31D7E36419A773118F6F27",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCoverHeckeTraceCosets",
+            "scratchSha256": "8AEC2B54127737C315327F12E90AE5358584B9FFFBCB779FCC4FF79385563489",
+            "productionSha256": "51A064910975BC5DCE44B402106204CD4AD0F4E7E9B2ED50E77449A59EC2F1F5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCoverHeckeTraceBaseChange",
+            "scratchSha256": "E2931186F9C4D2B3791D2B4825028994510313A83D88B08EB100F72C597583AA",
+            "productionSha256": "C191666BD09D5FD897B0EFD2172FD70D81C3FE9973D9BD9D1588F9A54A6A1EAA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCoinducedTowerFunctions",
+            "scratchSha256": "63BB5961062974A9E96814A533D3A6DACA0A182A5AF3BD76EFC390E8D2878A56",
+            "productionSha256": "63BB5961062974A9E96814A533D3A6DACA0A182A5AF3BD76EFC390E8D2878A56",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCoinducedTowerTrace",
+            "scratchSha256": "48A6CADB33821C99465974BE773A84CA3CD5489683F41BA523DEA6870651F7E3",
+            "productionSha256": "2BEA711DB1E2EE510971235C9E18FAFA4E22E0EA8C3091EB07D97569CE360E48",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceShapiroH1Tower",
+            "scratchSha256": "9C0A0CCC1BD8E3AE4A084AF760BE5D596D7B8F1BFD590FE3B33489D65F7F9F25",
+            "productionSha256": "FA82ABFB3D1A934C7FD62CE11CFDCE7A34E90E1E59C32C84D3A7FEF3DBD5C6F6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceH1TraceTower",
+            "scratchSha256": "AD278B75D2192A1709D4DC94F4A19D46F085E652278DE0F940E13027D55EF023",
+            "productionSha256": "D9A86E4FF301694F61BF12B378837862E19BF31CB26ACEEFB1FD270F215D6A9C",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 111 distinct names from 111 exhaustive scratch checks are retained: 109 in the production focused scope and 1 previously audited project generated name and 1 generated name retained with exactly matching type/value hashes under its upstream owner. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The surjective-transfer Hecke identity still requires combining the proved base-change and trace-composition identities with the original coefficient action and exact subgroup reindexings. Restriction compatibility alone does not establish this transfer identity. Arithmetic geometric and diamond compatibility, geometric Galois realization of the finite characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. No characteristic-zero character lift or deformation point is inferred from finite characters. 16/20; DUB-17--20 OPEN."
+  }
+}

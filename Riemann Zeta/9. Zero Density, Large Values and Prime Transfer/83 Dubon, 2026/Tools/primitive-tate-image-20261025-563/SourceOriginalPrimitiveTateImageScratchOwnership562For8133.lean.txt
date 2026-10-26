@@ -1,0 +1,31 @@
+import SourceCharacterIdempotentLine
+import SourceCharacterIdempotentRankTwo
+import SourceGeneratedCharacterIdempotent
+import SourceTensorCharacterIdempotent
+import SourceOriginalCuspPadicHeckeMap
+import SourceIntegerCoefficientExtensionCharacter
+import SourcePrimitiveHeckeAlgebraEvaluation
+import SourcePrimitiveHeckeAlgebraProjector
+import SourceRankTwoSurjectiveDescent
+import SourceOriginalCuspTateRankTwo
+import SourceRankTwoBaseChange
+import SourceIntegerCoefficientRankTwo
+import SourceIntertwinedRangeEquiv
+import SourceRankTwoCharacterRange
+import SourcePrimitiveHeckeAlgebraRankTwo
+import SourcePrimitiveOriginalTateRankTwo
+import SourcePrimitiveOriginalTateNondegenerateRankTwo
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceCharacterIdempotentLine, `SourceCharacterIdempotentRankTwo, `SourceGeneratedCharacterIdempotent, `SourceTensorCharacterIdempotent, `SourceOriginalCuspPadicHeckeMap, `SourceIntegerCoefficientExtensionCharacter, `SourcePrimitiveHeckeAlgebraEvaluation, `SourcePrimitiveHeckeAlgebraProjector, `SourceRankTwoSurjectiveDescent, `SourceOriginalCuspTateRankTwo, `SourceRankTwoBaseChange, `SourceIntegerCoefficientRankTwo, `SourceIntertwinedRangeEquiv, `SourceRankTwoCharacterRange, `SourcePrimitiveHeckeAlgebraRankTwo, `SourcePrimitiveOriginalTateRankTwo, `SourcePrimitiveOriginalTateNondegenerateRankTwo]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

@@ -1,0 +1,63 @@
+import SourcePermutationCoefficientQuotient
+import SourceBinaryPrimePowerPermutation
+import SourceBinaryPermutationHecke
+import SourceBinaryPermutationCongruence
+import SourceIntegralBinaryPermutationRealization
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.sourceCoefficientPermutationEvaluation_single
+#print axioms Dubon2026.sourceCoefficientPermutationEvaluation_surjective
+#print axioms Dubon2026.sourceCoefficientPermutationEvaluation_linearMap
+#print axioms Dubon2026.sourcePrimePower_six_isUnit
+#print axioms Dubon2026.sourceBinaryPrimePowerCoefficient_finite
+#print axioms Dubon2026.sourceBinaryPrimePowerPermutation_finite
+#print axioms Dubon2026.sourceBinaryPrimePowerPermutation_H1_surjective
+#print axioms Dubon2026.sourceBinaryPermutationDiagonal_intertwine
+#print axioms Dubon2026.sourceBinaryPermutationHeckeH1_evaluation
+#print axioms Dubon2026.sourceBinaryCoefficientRep_congruence
+#print axioms Dubon2026.sourceBinaryPermutationRep_congruence
+#print axioms Dubon2026.sourceIntegralBinary_exists_primePowerPermutationRealization
+#print axioms Dubon2026.sourceCoefficientPermutationRep
+#print axioms Dubon2026.sourceCoefficientPermutationEvaluation
+#print axioms Dubon2026.sourceBinaryPermutationHeckeH1
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourcePermutationCoefficientQuotient, `SourceBinaryPrimePowerPermutation, `SourceBinaryPermutationHecke, `SourceBinaryPermutationCongruence, `SourceIntegralBinaryPermutationRealization]
+  let theorems : Array Name := #[`Dubon2026.sourceCoefficientPermutationEvaluation_single, `Dubon2026.sourceCoefficientPermutationEvaluation_surjective, `Dubon2026.sourceCoefficientPermutationEvaluation_linearMap, `Dubon2026.sourcePrimePower_six_isUnit, `Dubon2026.sourceBinaryPrimePowerCoefficient_finite, `Dubon2026.sourceBinaryPrimePowerPermutation_finite, `Dubon2026.sourceBinaryPrimePowerPermutation_H1_surjective, `Dubon2026.sourceBinaryPermutationDiagonal_intertwine, `Dubon2026.sourceBinaryPermutationHeckeH1_evaluation, `Dubon2026.sourceBinaryCoefficientRep_congruence, `Dubon2026.sourceBinaryPermutationRep_congruence, `Dubon2026.sourceIntegralBinary_exists_primePowerPermutationRealization]
+  let constructions : Array Name := #[`Dubon2026.sourceCoefficientPermutationRep, `Dubon2026.sourceCoefficientPermutationEvaluation, `Dubon2026.sourceBinaryPermutationHeckeH1]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Primitive Tate Restriction postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Primitive Tate Restriction theorems discovered"
+  logInfo m!"SOURCE BINARY PRIME POWER PERMUTATION AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourcePermutationCoefficientQuotient
+#lint in SourceBinaryPrimePowerPermutation
+#lint in SourceBinaryPermutationHecke
+#lint in SourceBinaryPermutationCongruence
+#lint in SourceIntegralBinaryPermutationRealization

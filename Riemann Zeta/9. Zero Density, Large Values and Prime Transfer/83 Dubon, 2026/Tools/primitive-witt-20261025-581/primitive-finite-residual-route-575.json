@@ -1,0 +1,114 @@
+{
+  "scope": 575,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual residual deformation input over a finite coefficient field -> descend the same original all-weight residual matrices and exact local/global identities",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CoefficientSubalgebraRepresentationContinuity.lean",
+      "sha256": "97F397280FDA7C330BA0F1B7DE0804A1C81C60D828992DC8D4DCF62D39D391E4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticFramedUniversalRing.lean",
+      "sha256": "1FDDFB9862EED4BA2849B121175E43D2562AE57ACA5384B70726F7146112E361"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticFixedDeterminantUniversality.lean",
+      "sha256": "0F3CA5CB791CBA5BB653DA9A5E5F69E4432904722B456CB4F82047CF8280C801"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddness.lean",
+      "sha256": "CD8704B6FF0289B9375CB8A4D335071633242FA341E6C161638D977C355AB945"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\IntermediateField\\Adjoin\\Basic.lean",
+      "sha256": "D6D316B6CE84C8764227C7BAB52DE839D08422316C14946424C737C1FB73F40C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Finiteness\\Cardinality.lean",
+      "sha256": "CD3B745C6D5A84027B387724B2E9C8BD9018DEE43624118D6A255D6A60492E28"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Matrix\\GeneralLinearGroup\\Defs.lean",
+      "sha256": "3B10B406E5D193A6A3D16F746A51A0F17CD0A7F94C788B5637B217EA475D9BA9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Matrix\\Trace.lean",
+      "sha256": "500CAD50934C4A4CBFF1625B9620C32D23D387AAAC99809EEB9AF6BCD76E29AA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Data\\ZMod\\Basic.lean",
+      "sha256": "337C0BD9F636B7765A956AFEBF856689AF95845B3909BDB508C00849CEA24864"
+    }
+  ],
+  "shorterRoute": "Reuse compact image in a discrete target, native finite-dimensionality of an algebraic finite adjoin, Module.finite_of_finite, exact general-linear coefficient mapping and the existing subalgebra-continuity reflection. Ring-hom uniqueness from ZMod gives cyclotomic coefficient naturality. Native determinant and trace mapping preserve every original source formula. This supplies the finite residual coefficient field required by ArithmeticFramedUniversalRing and ArithmeticFixedDeterminantUniversality without new coefficient or topology infrastructure.",
+  "assumptionsToDischarge": "The original primitive form, weight at least two and prescribed prime supply an actual finite coefficient field of that characteristic and continuous original-support representation. Its global determinant is the original cyclotomic power k-1, its determinant at genuine complex conjugation is minus one, its Frobenius traces are the original coefficient reductions, and its good-prime inertia is trivial. Finiteness, coefficient-field descent and compatibility are derived.",
+  "remaining": "All-weight adic realization and required local, image and regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. The finite-field result is an input to deformation theory, not an automorphy or analytic conclusion. 16/20; DUB-17--20 OPEN.",
+  "scratchImportClosure": [
+    "SourcePrimitiveFiniteResidualGalois",
+    "SourceFiniteResidualArithmeticDescent",
+    "SourceResidualRealDeterminant",
+    "SourceResidualCoefficientDeterminant",
+    "SourceFiniteResidualCoefficientField",
+    "SourcePrimitiveResidualOddness",
+    "SourcePrimitiveResidualGlobalDeterminant",
+    "SourceResidualCyclotomicDeterminant",
+    "SourceArithmeticCharacterFrobeniusEquality",
+    "SourcePrimitiveResidualGaloisCharP",
+    "SourcePrimitiveOriginalResidualGalois",
+    "SourcePrimitiveRestoredGalois",
+    "SourcePrimitiveWeightTwoGalois",
+    "SourceResidualGaloisRealization",
+    "SourceParabolicArithmeticResidual",
+    "SourceOriginalDivisorArithmeticResidual",
+    "SourceArithmeticSupportInflationValues",
+    "SourceOriginalArithmeticResidual",
+    "SourceArithmeticLocalEmbeddingExtension",
+    "SourceAbsoluteArithmeticRestriction",
+    "SourceRationalLocalValuation",
+    "SourceNormValuationRestriction",
+    "SourceValuationResidualAction",
+    "SourceAbsoluteArithmeticDescent",
+    "SourceNumberFieldSupportRamification",
+    "SourceAbsoluteFiniteUnramified",
+    "SourceNumberFieldNormInertiaLift",
+    "SourceOriginalNormLocalResidual",
+    "SourceOriginalAlgebraicIntegerResidual",
+    "SourceOriginalExactReductionResidual",
+    "SourceOriginalPrescribedReductionResidual",
+    "SourceRankTwoCharpolyCoefficients",
+    "SourcePrescribedCompletionResidue",
+    "SourceAdicCoefficientResidueComparison",
+    "SourcePrescribedReductionPrime",
+    "SourceReductionCompletionLocalStructures",
+    "SourcePadicCompletionValuation",
+    "SourceReductionCompletionPadicMap",
+    "SourceReductionCompletionBasePrime",
+    "SourceReductionCompletionFinite",
+    "SourceOriginalPrescribedResidualFrobenius",
+    "SourceOriginalResidualInertia",
+    "SourceIntegralMatrixCharpoly",
+    "SourceMatrixIntertwinerCharpoly",
+    "SourceOriginalResidualFrobeniusCharpoly",
+    "SourceOriginalSpecializationFrobeniusCharpoly",
+    "SourceCyclotomicFrobeniusCharpoly",
+    "SourceRankTwoQuadraticTrace",
+    "SourceValuationCyclotomicFrobenius",
+    "SourceValuationFrobeniusRoots",
+    "SourceOriginalSpecializationCyclotomicDeterminant",
+    "SourceSpecializationBaseChangeIntertwiner",
+    "SourceImageSpecializationDeterminant",
+    "SourceAlternatingRankTwoDeterminant",
+    "SourceImageSpecializationPairing",
+    "SourcePrimitiveOriginalTateGalois",
+    "SourcePolynomialCommutant",
+    "SourceOriginalSpecializationPrimitiveImage",
+    "SourceSpanningProjectorImage",
+    "SourceOriginalSpecializationProjector",
+    "SourcePolynomialSpecialization",
+    "SourceOriginalPrescribedTateSpecialization",
+    "SourceParabolicPrimitiveDivisor",
+    "SourceWeightTwoNewEigenNormalization",
+    "SourceWeightTwoEigenLevelDescent",
+    "SourceWeightTwoDegeneracyAdjoint"
+  ],
+  "separatelyAxiomChecked": []
+}

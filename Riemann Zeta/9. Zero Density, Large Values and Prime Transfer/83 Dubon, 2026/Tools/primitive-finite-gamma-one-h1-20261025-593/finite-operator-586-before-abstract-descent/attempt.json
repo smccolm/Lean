@@ -1,0 +1,17 @@
+{
+  "reason": "The inline native liftOfSurjective abbreviation times out while checking the exact original H1 character kernel proof. Introduce a named opaque wrapper around that same native construction and its whole-map composition identity. The source statement and kernel hypotheses are unchanged; no proof limit is raised.",
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\finite-operator-586-before-abstract-descent\\SourcePrimitiveFiniteH1HeckeCharacter.lean.txt",
+      "sha256": "58FD2BEEC20E13D74EF9BA81E7C3F5BAB351B26A320FA62BF874736E1599E814"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\finite-operator-586-before-abstract-descent\\SourcePrimitiveFiniteH1HeckeCharacter.log",
+      "sha256": "73D97D3FD3C7A276CA014604FD1351D97E3E9C3B48E2B4E40188A13E739C7B99"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\finite-operator-586-before-abstract-descent\\SourcePrimitiveFiniteH1HeckeCharacter.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    }
+  ]
+}

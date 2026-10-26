@@ -1,0 +1,63 @@
+{
+  "modules": [
+    "SourceMatrixIntertwinerCharpoly",
+    "SourceIntegralMatrixCharpoly",
+    "SourceRankTwoCharpolyCoefficients",
+    "SourceOriginalSpecializationFrobeniusCharpoly",
+    "SourceOriginalResidualFrobeniusCharpoly",
+    "SourceOriginalResidualInertia",
+    "SourceOriginalPrimitiveResidualFrobeniusRealization"
+  ],
+  "theorems": [
+    "Dubon2026.matrix_intertwiner_charpoly",
+    "Dubon2026.matrix_intertwiner_one",
+    "Dubon2026.integral_matrix_charpoly_of_intertwiner",
+    "Dubon2026.residue_matrix_charpoly_of_intertwiner",
+    "Dubon2026.residue_matrix_one_of_intertwiner",
+    "Dubon2026.rank_two_trace_det_of_charpoly",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_frobenius_charpoly",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_residual_frobenius_charpoly",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_residual_inertia_identity",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_frobenius_realization"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.matrix_intertwiner_charpoly",
+    "Dubon2026.matrix_intertwiner_one",
+    "Dubon2026.integral_matrix_charpoly_of_intertwiner",
+    "Dubon2026.residue_matrix_charpoly_of_intertwiner",
+    "Dubon2026.residue_matrix_one_of_intertwiner",
+    "Dubon2026.rank_two_trace_det_of_charpoly",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_frobenius_charpoly",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_residual_frobenius_charpoly",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_residual_inertia_identity",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_frobenius_realization"
+  ],
+  "proofEdges": [
+    "Dubon2026.matrix_intertwiner_charpoly",
+    "Dubon2026.matrix_intertwiner_one",
+    "Dubon2026.integral_matrix_charpoly_of_intertwiner",
+    "Dubon2026.residue_matrix_charpoly_of_intertwiner",
+    "Dubon2026.residue_matrix_one_of_intertwiner",
+    "Dubon2026.rank_two_trace_det_of_charpoly",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_frobenius_charpoly",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_residual_frobenius_charpoly",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_residual_inertia_identity",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_frobenius_realization",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_realization",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_cyclotomic_determinant",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_inertia_identity",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_quadratic",
+    "Dubon2026.SourceFunctionField.GaussReduction.originalRationalTateGaloisRep_frobenius_quadratic_away",
+    "Dubon2026.cyclotomic_frobenius_charpoly",
+    "Dubon2026.sourcePrimitiveCoefficient_valuation_le_one",
+    "Dubon2026.stableLattice_integral_residual_realization",
+    "LinearEquiv.charpoly_conj",
+    "Matrix.charpoly_map",
+    "Polynomial.map_injective",
+    "Matrix.map_injective"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_frobenius_realization"
+  ]
+}

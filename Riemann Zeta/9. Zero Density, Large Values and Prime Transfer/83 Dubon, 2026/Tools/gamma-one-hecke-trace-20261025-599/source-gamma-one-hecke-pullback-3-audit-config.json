@@ -1,0 +1,53 @@
+{
+  "modules": [
+    "SourceGammaOneBinaryRestriction",
+    "SourceGammaOneBinaryHeckeSum",
+    "SourceGammaOneBinaryRestrictionHecke"
+  ],
+  "theorems": [
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_apply",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1_cocycle",
+    "Dubon2026.sourceGammaOneBinaryHecke_chosen_sum",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_hecke",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1_hecke"
+  ],
+  "constructions": [
+    "Dubon2026.sourceGammaOneBinaryRestrictionCoefficient",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1"
+  ],
+  "queries": [
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_apply",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1_cocycle",
+    "Dubon2026.sourceGammaOneBinaryHecke_chosen_sum",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_hecke",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1_hecke",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCoefficient",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_apply",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1_cocycle",
+    "Dubon2026.sourceGammaOneBinaryHecke_chosen_sum",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_hecke",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1_hecke",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCoefficient",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1",
+    "Dubon2026.sourceCorrespondenceOne_chosen_sub",
+    "Dubon2026.sourceChosenCosetTraceOne_sub",
+    "Dubon2026.sourceGammaOneCoverHeckeTransition_conjugation",
+    "Dubon2026.sourceGammaOneCoverHeckeCosetMap_bijective",
+    "Dubon2026.sourcePrincipalReduction_surjective",
+    "Dubon2026.sourceGammaOneDiagonalHom_binary_trivial",
+    "Dubon2026.sourceBinaryHeckeH1_cocycle",
+    "Dubon2026.sourceGammaOneConstantHeckeH1_cocycle",
+    "Dubon2026.sourceBinaryHeckeDiagonal_intertwine"
+  ],
+  "roots": [
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1_hecke",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_apply"
+  ],
+  "separatelyAxiomChecked": []
+}

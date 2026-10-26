@@ -1,0 +1,59 @@
+{
+  "status": "Prepared; require 8290 canonical PASS and immutable archive before integration.",
+  "route": "gamma-one-finite-fields-promotion-route-623.json",
+  "routeSha256": "588EE1772B8DCDFDAAC92984A089E91181A7F148FE2C9DE2D7516DC0ABEA38EF",
+  "modules": 15,
+  "queries": 54,
+  "theorems": 41,
+  "constructions": 13,
+  "exhaustiveScratchChecks": 87,
+  "proofValueEdges": 73,
+  "scopes": 2,
+  "receipts": {
+    "source-gamma-one-function-field-10b-scratch-receipt.json": "5AF3D767A3394701B100CC68733AE6269D9AEE63AF52D88D08C9A3D0B5DE1C87",
+    "source-gamma-one-hecke-field-5-scratch-receipt.json": "33716CDDC0E17FC2B1864D84CE01001A2AB8F7CCA0E056FBDAF5CD113AB48DC9"
+  },
+  "expectedConsumers": 23915,
+  "expectedConstructions": 2301,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 gates unchanged.",
+  "sourceBodies": "Audited statements, bodies and comments unchanged; only scratch project imports qualified.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_finite_fields_canonical_8305.py",
+      "sha256": "62809580A20615BEAAC7F3072024BB018004C0665148FACBD2D88FE35C11F1E9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_finite_fields_8305.ps1",
+      "sha256": "19F4E3A0D120D7DAC34AFB535B07B9166B0A6D05DB21D875B6E9B4D173C1A448"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_finite_fields_ownership_8305.py",
+      "sha256": "EB6E7184713956FADD71998CE1A8147380C11531B5AFD6D392D176835FE33634"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_finite_fields_8305.py",
+      "sha256": "42B851A7906653DC080A8A6B4EB3938FE8565B2ABF95074DAE6725B38BBECFC7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_finite_fields_global_ownership_8305.py",
+      "sha256": "218C7D8D8C414399799F05BB2D13C3E70440DDEB4955F11A33D7F65537C3B178"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_finite_fields_production_ownership_8305.py",
+      "sha256": "CA97D68AE7BC997FDADAFBE8E859A2AAF1EAB58325831EBF4AFC9F3F46E31052"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_finite_fields_scratch_ownership_8305.py",
+      "sha256": "2E09A677CA56043AEC681147A1FA161D72FEB96C3CB3049A923C50DEB408FB20"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_finite_fields_8305.py",
+      "sha256": "28F1B1282FB225CABF92757AB91BED66CBA7A033378E96B1E13B46442BCC03D6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_finite_fields_8305.ps1",
+      "sha256": "3D3C83274F1DC1764ACF381C07575143F31B24AF020385A9D628F22103C265B3"
+    }
+  ],
+  "productionMutation": false
+}

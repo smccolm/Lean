@@ -1,0 +1,69 @@
+{
+  "reviewedUTC": "2026-10-26T10:50:23.218507+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of original finite Gamma1 Hecke characters -> exact geometric/H1 and diamond comparison preserving the original homogeneous matrix coefficient action.",
+  "primaryManifest": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-h1-geometric-reuse-628\\snapshots.json",
+    "sha256": "A3EDB7853892AA4A4A50956341FC15914EC7E863FE3DE5491D047D40E1ACA6E5"
+  },
+  "sourceContracts": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_linearEquiv_tensor_regularDifferentials_x1FunctionFieldBar_cuspForm.lean",
+      "conclusion": "Complex scalar extension of regular differentials on the actual Gamma1 algebraic curve is linearly equivalent to weight-two Gamma1 cusp forms, with literal differential q expansion matching.",
+      "inputs": "Positive level; specified Qbar-to-C embedding. Proof imports separate actual Gamma1 curve, finite/canonical divisor, q-expansion injectivity, rational q-coefficient cusp basis and regular differential/cusp comparison theorems.",
+      "assessment": "Useful weight-two geometric comparison, not a theorem about the original higher-weight coefficient representation. Individual downloaded solution files and their explicit source contracts inspected; no external import closure or external build verified."
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_map_eq_charpoly_heckeTLinOne_and_charpoly_tateHeckeRepOne_jOne_eq_map_sq.lean",
+      "conclusion": "One monic integral polynomial maps to the weight-two Gamma1 cusp Hecke characteristic polynomial, and its square maps to the actual Jacobian Tate Hecke characteristic polynomial.",
+      "inputs": "Positive level; prime p; prime Hecke index ell not dividing level; finite-dimensional complex cusp space and finite/free p-adic Tate module. Proof consumes an actual Hecke-equivariant Tate/period lattice comparison and Hecke/diamond inputs.",
+      "assessment": "Characteristic-polynomial compatibility does not identify the original finite binary-coefficient H1 characters with arithmetic geometric characters. Need exact transpose/diamond conventions, full/parabolic distinction and all retained homogeneous coefficient actions. Finiteness/freeness and imported comparison prerequisites must be proved for the actual local objects before use."
+    }
+  ],
+  "localReuse": [
+    {
+      "module": "OriginalGroupCohomologyReindex",
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\OriginalGroupCohomologyReindex.lean",
+      "sha256": "FF5D4B6DF85061DA954C0ABDAC083453C63FC0D00679732411C14F2EF59010B6"
+    },
+    {
+      "module": "SourceGammaOneConstantHecke",
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneConstantHecke.lean",
+      "sha256": "B1CDE3537D1064DBDFF2CDA2DDF4BB470D3AE61612009D14BA8B5C441B6645C5"
+    },
+    {
+      "module": "SourceGammaOneHeckeSubgroup",
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeSubgroup.lean",
+      "sha256": "3518F8C38303371FA5BDC0730BB37915A8F2E7ABFD7C7174CFC6A7AA428139E5"
+    },
+    {
+      "module": "SourceOriginalTatePeriod",
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTatePeriod.lean",
+      "sha256": "B51C9841BA4C165775E8842C575EC4DFC0341EEBBE60B4785F60C135CB7AEFB2"
+    },
+    {
+      "module": "SourceOriginalDiscretePeriodLattice",
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDiscretePeriodLattice.lean",
+      "sha256": "6AA783B8135B66E07F3696207D55FA924EEF703A80C26236F83047D23A96FCE2"
+    },
+    {
+      "module": "SourceOriginalCuspPeriodLattice",
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCuspPeriodLattice.lean",
+      "sha256": "CAFF30C8B98A5507ED01D639B3FD027BAE81FB3BBD40A03A6168F2E4A870A218"
+    },
+    {
+      "module": "SourceCurveRegularComparison",
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRegularComparison.lean",
+      "sha256": "90EB97779E0C49CEA1EDC0AA088D2DC5EDDDA75EF57D0799D6AE3DBABA80C1C2"
+    },
+    {
+      "module": "SourceModularCoefficientDifferentials",
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularCoefficientDifferentials.lean",
+      "sha256": "96AB99C2E5CDDA8DCC3B381245CC8774A3C771ADE6050A084E83F354F92FC91D"
+    }
+  ],
+  "selectedRoute": "First identify the actual upper correspondence subgroup with Gamma1(M) intersect Gamma0(d*M) using the existing integral inverse formulas; this has now passed scratch audits in scope 627. Next use native group-cohomology map composition and the existing original reindexing isomorphism to compare the literal geometric pullback/trace with the original Gamma1 H1 operator, retaining the explicit coefficient endomorphism. Reuse generic curve and differential machinery only after its exact Gamma1 hypotheses are derived.",
+  "deferred": "Do not duplicate the existing abstract Tate/period tensor equivalence or regular-differential/canonical-divisor equivalence. Existing original period-lattice and analytic curve theorems are specialized to Gamma0 and cannot be silently instantiated at Gamma1. Do not port the external full GammaH family or complex-conjugation/charpoly development before it advances the required comparison.",
+  "integrity": "Research snapshots are non-Lean .txt files, verified against frozen Git blobs and SHA-256. External linter-suppression and P2M activation commands are not adopted. No external project compiled, imported, or declared axiom-clean. Root pins, proof limits and source contracts unchanged.",
+  "remaining": "Actual Picard/H1 comparison, full/parabolic and diamond conventions, finite-character Galois realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher continuation remain required. No characteristic-zero lift follows from finite characters or a Witt/deformation ring.",
+  "fullGoal": "16/20; DUB-17--20 OPEN; all twenty acceptance criteria unchanged."
+}

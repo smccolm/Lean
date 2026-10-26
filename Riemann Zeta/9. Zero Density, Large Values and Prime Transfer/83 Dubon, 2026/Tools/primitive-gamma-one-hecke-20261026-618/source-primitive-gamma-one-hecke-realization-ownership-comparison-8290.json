@@ -1,0 +1,200 @@
+{
+  "scratchSum": 110,
+  "scratchDistinct": 110,
+  "generatedNameRenamings": {},
+  "productionFocused": 110,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {},
+  "missingFromFocusedAlreadyInPrevious": [],
+  "productionNamesNotInScratch": [],
+  "unexplainedMissing": [],
+  "scopes": [
+    {
+      "modules": [
+        "SourceH1TraceBaseChangeCoefficient",
+        "SourceGammaOneCoverBinaryHeckeTrace"
+      ],
+      "count": 3,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership600For8290.log",
+        "sha256": "7BE9607BF1B7CFC3BF17958444C0DB9B617590D832BE35A7820002C173A8BFE0",
+        "sourceSha256": "9E4440B6956E9E984028A0ED64398AC4A80C9389BDB2D392F2333CBD822E5129"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneHeckeUpperImage"
+      ],
+      "count": 8,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership601For8290.log",
+        "sha256": "8FDCAB85C318DD2F8B6F076134E0FE95741E54994A04B6FC69401BCBE2920921",
+        "sourceSha256": "56F0E0CD520F37833F865B129F6855C179BE1ED6A07F7B367CAB33615A848A8D"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneSubgroupCohomologyMap"
+      ],
+      "count": 3,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership602For8290.log",
+        "sha256": "1D9526445671122A8078EE54A1B1DE0B524D2CBC6C567A5B27A4C3C85376464C",
+        "sourceSha256": "0A60E26F2321096738507584578D61517F6C7432AFD5E0D191064F1B0FC6BF17"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneHeckePullbackSquare",
+        "SourceGammaOneHeckeUpperTraceReindex"
+      ],
+      "count": 14,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership605For8290.log",
+        "sha256": "6745BA8D9164A5AC0C0434401B48946FD78F07088398CECE4C3B6C8D9E7D72EF",
+        "sourceSha256": "F07B78540622CC1DFF41ACA7E767156017F0014D8F685448B591272EA4036252"
+      }
+    },
+    {
+      "modules": [
+        "SourceH1TraceIntersection",
+        "SourceGammaOneIntersectionTraceExchange",
+        "SourceGammaOneUpperH1Composition",
+        "SourceGammaOneSubgroupTraceHecke",
+        "SourceGammaOneTransferHecke"
+      ],
+      "count": 30,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership611For8290.log",
+        "sha256": "8CA67560C49943955B1EE7492A02E1D116B321D73FC5B2F0138FDB7E01D3748F",
+        "sourceSha256": "34F6136DAEC11646345AD546C919D613EE76D950AD889D41F05F9397E58E27C1"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneHeckeWords",
+        "SourceGammaOneOperatorDescent",
+        "SourceGammaOneHeckeFinite",
+        "SourcePrimitiveGammaOneHeckeCharacter",
+        "SourcePrimitiveGammaOneH1Realization"
+      ],
+      "count": 52,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership617For8290.log",
+        "sha256": "CCDBF9E549EA36EEA3083FFF0BEE79054D14CDCB0AAC3848DCF1A8BCB8A3AE7A",
+        "sourceSha256": "9A91258E44193687AE9C856E40022B605E97D13BBE06F6C6266348BCDFEE4A24"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationOwnership8290.log",
+    "sha256": "59E41A9879DF63E38C356A6DAE29C20086E0BA471591C83F470D115BDEC6B0C8",
+    "sourceSha256": "C58CEED3ADBF1C7F5F3F3A5E50F3076C96560565641D9B58BDB78C17026FA29C"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-001415-274.log",
+    "sha256": "D8BC973383205D9303138EECA202C6B55949EB013CB5FB97FCE52B808058DA59"
+  },
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 16 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourceH1TraceBaseChangeCoefficient",
+        "scratchSha256": "A8856D1AEF6A28930210ACE72B7059336CB202CEA00CAB9081A880BF584AC6AA",
+        "productionSha256": "2454547BC0887EC92FDC167425E1B59DC6228AC52235FFBBA3C211FF92FB2E0A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCoverBinaryHeckeTrace",
+        "scratchSha256": "D87B62D582FB7E968115A3F7071F2F66C041726CF7613137D2E4013662F3ED70",
+        "productionSha256": "768B904AA06B2A6193125E78E312234B25C5970E1D6FEAEBA7E8EFD7623F45CD",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeUpperImage",
+        "scratchSha256": "6F2CE50508F9EA4B6E2D2207C6984F97CD9EC6E4B653B7E1F8E60683F8A1DCEC",
+        "productionSha256": "9679C7E41E263A5E338463E23D90AB89F1443B58188CE6B687B1DDADE49D5BBA",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneSubgroupCohomologyMap",
+        "scratchSha256": "937193952EE4964F6BE9F3D3F629C612CE003B45FA310AA44E3212EC0FDCF27B",
+        "productionSha256": "D84F071818EF949641FB1FEE7228CE061EF5669229BD32AA280512E6CA527575",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckePullbackSquare",
+        "scratchSha256": "D19130E7A15CA79E454DE5D2203709572B3B2A88D1200CF07416A63A8F66AB31",
+        "productionSha256": "BC3EAA11238393ED49B35FFBC951CFCBCA639A18A5DA501B14FFB57290FD5399",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeUpperTraceReindex",
+        "scratchSha256": "6C3C9EB92C40D20F163F85D8B3D6C64F1535650052EE8CA4F07A484CA0211E0F",
+        "productionSha256": "7F86B41F6EDEB7439668FD1DAC38419B2480EF9C172D56798D125761BD29D731",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceH1TraceIntersection",
+        "scratchSha256": "F89423FD464A06287DFF2248CCB87A8E9643CD5AFDFC219EF32185CB24836506",
+        "productionSha256": "5608907DF0322455779E99E18B454F51315F80824BD64F46FE2061EEF1B5F098",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneIntersectionTraceExchange",
+        "scratchSha256": "A553E33FC9FC94A8534B50371B12C3DBD40C5FC0AE17C6B2B7700536614FB858",
+        "productionSha256": "2F1B8728D50FB4F4095661A4E7B4B8FD7C01B1902B0BFFCB311F96A83B8AFD5E",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneUpperH1Composition",
+        "scratchSha256": "8C86A95E60F2548C00F61D102BEC52BD338AC9CCD1847C11BEF1039FC90A322D",
+        "productionSha256": "B0DAF6DAECE1D3E04A939668ACE2AB644FAF03DC5B3A882B553D3564F6845A1B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneSubgroupTraceHecke",
+        "scratchSha256": "2668090B64ADFE7FAAF586451F13A22CE9F09F495FCE2B94E66C139C64D7D6A3",
+        "productionSha256": "1C6CF6799E0F0B607D2002A5170CD623B5F369C4DC640BD7720D240A04B02F8B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneTransferHecke",
+        "scratchSha256": "4A8F0CDF6ED05A0B35B0318CA0C38FDDFFF8887C6475AAF720A0B4CDBB69DF3E",
+        "productionSha256": "667BEC3DA20909DF2CD197DD45D2DD004945724F78F6E2CD81E03D650EED10E5",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeWords",
+        "scratchSha256": "7F43A8C9716A2C3CFB6D9D4DF5BD8E54349AACEE1CBDB95A79F465A84BE1520C",
+        "productionSha256": "79678C3103E04E96882FF0D936D52533018132E55D52DF040AE0BA9D87EB3C64",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneOperatorDescent",
+        "scratchSha256": "C69D4452555B8FDC3951EFE283373D423F447592E323904BBBCD9C57A2753FD9",
+        "productionSha256": "27A396911B67BDE4A00BA002DEC8CA9AFC3886E23334EAACF4EC3DE7D840BDFF",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHeckeFinite",
+        "scratchSha256": "071F8B65D67946F0C39E602FFDAAF0A8D3C40E84C4ACD308EF7200742A523169",
+        "productionSha256": "6F79612B4E507F6655EE22F07AE94F61C7EF18E3EA2F4783D9F9B8D9B08209BB",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrimitiveGammaOneHeckeCharacter",
+        "scratchSha256": "40EAA0B5AB12C906412F02BB640A0C97D9D9AFC4063CF4D68BEEB19148C51AFE",
+        "productionSha256": "B59337159AC01BEB6C1C8F261FFB70F5AE11A753DA5591076FEA23594C4CD876",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrimitiveGammaOneH1Realization",
+        "scratchSha256": "E74C962B858F431810852B72738BE9C8DB9D55D02ED0E35155456D8BBF003748",
+        "productionSha256": "5038486E7F42C75D4161C3C444525B004110B12EA213633283D46B491E366CFC",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": true
+}

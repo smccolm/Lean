@@ -1,0 +1,44 @@
+{
+  "scope": 584,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight adic Galois association -> geometric finite-precision Hecke realization -> identify actual finite binary permutation H1 with trivial-coefficient H1 of its congruence orbit stabilizers",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\PermutationCoordinateRepresentation.lean",
+      "sha256": "3F6498BFE2CD953FAF16592C16C76825CA08B9CB650B3A726C1ED0EE92D6494B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\PermutationOrbitDecomposition.lean",
+      "sha256": "AE22DE84181B250D9E184346B0A72BC7277921CFD92852B4F414993654F7395B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\FiniteProductCohomology.lean",
+      "sha256": "63BB9B662CF5C160BBC340C81B973460C9FF128AE8900E914F85171B2B15B813"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\TransitivePermutationCoinduction.lean",
+      "sha256": "F1CBAB67F782B77BFA31AEE4A33F1BD412D00FD0D5C58F7F7F0A43167B60EE8B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGamma0H1Surjection.lean",
+      "sha256": "BB056CE7F3B6160CF0AD45AE7960389D002E350C3D526E680878372D99D6FCBC"
+    }
+  ],
+  "shorterRoute": "The repository already proves finite permutation orbit decomposition, finite product cohomology and native Shapiro. Reuse their exact maps on actual binary coefficient vectors. This avoids new coinduction, induction/counit, transfer, orbit decomposition or pure-power spanning foundations. The existing cyclic-group H1 corollary is too specialized, so compose its general proved ingredients directly.",
+  "assumptionsToDischarge": "Identify the finite permutation H1 of scope 582 with actual trivial-coefficient orbit-stabilizer H1, prove principal congruence containment of each actual stabilizer, and retain the original integral class and its Hecke transforms through this same comparison.",
+  "remaining": "The transported Hecke operators are not yet identified with geometric correspondences on arithmetic curves. An actual Galois realization of the compatible original Hecke characters from scope 583 and characteristic-zero association remain required. No eigenvector lifting or Galois action follows from this comparison. Local/image/regularity, arithmetic automorphy and literal higher continuation remain required; 16/20, DUB-17--20 OPEN.",
+  "deferred": "Native finite-index coindResAdjunction and faithful-counit surjectivity were inspected but are unnecessary for this shorter route; do not develop them.",
+  "relatedRoutes": [
+    "binary-prime-power-permutation-route-582.json",
+    "primitive-h1-adic-route-583b.json"
+  ],
+  "scratchImportClosure": [
+    "SourceIntegralBinaryStabilizerRealization",
+    "SourceIntegralBinaryPermutationRealization",
+    "SourceBinaryPermutationCongruence",
+    "SourceBinaryPrimePowerPermutation",
+    "SourcePermutationCoefficientQuotient",
+    "SourceBinaryPermutationHecke",
+    "SourceCoefficientStabilizerCohomology",
+    "SourceCoefficientPermutationCoordinates"
+  ]
+}

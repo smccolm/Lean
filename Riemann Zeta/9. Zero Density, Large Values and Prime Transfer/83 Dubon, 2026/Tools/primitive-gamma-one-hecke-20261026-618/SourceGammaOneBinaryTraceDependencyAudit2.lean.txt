@@ -1,0 +1,29 @@
+import SourceH1TraceBaseChangeCoefficient
+import SourceGammaOneCoverBinaryHeckeTrace
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_iterated]
+  let localModules : Array Name := #[`SourceGammaOneCoverBinaryHeckeTrace, `SourceGammaOneCoverHeckeTraceBaseChange, `SourceH1TraceBaseChange, `SourceShapiroH1CosetTrace, `SourceShapiroH1CocycleComparison, `SourceNativeCoinductionCosetTrace, `SourceShapiroH1PullbackNaturality, `SourceCohomologyTracePullbackCoefficients, `SourceGammaOneCoverFiniteIndex, `SourceGammaOneDiagonalHom, `SourceBinaryPermutationCongruence, `SourceBinaryPrimePowerPermutation, `SourcePermutationCoefficientQuotient, `SourceGammaOneCongruenceCover, `SourceGammaOneCoverHeckeTraceCosets, `SourcePrincipalCoprimeReduction, `SourceGammaOneCoverImageHecke, `SourceGammaOneCoverImage, `SourceH1TraceBaseChangeCoefficient]
+  let required : Array Name := #[`Dubon2026.sourceSubgroupH1Trace_pullback_coefficient, `Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_pullback, `Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_iterated, `Dubon2026.sourceSubgroupH1Trace_pullback, `Dubon2026.originalCohomologyTrace_coefficient_naturality, `Dubon2026.sourceGammaOneCoverHeckeTraceCoset_surjective, `Dubon2026.sourceBinaryHeckeMorphism, `Dubon2026.sourceHeckeH1Trace_eq_subgroupTrace, `groupCohomology.map_comp]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE BINARY TRACE DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual original binary Hecke-after-cover-trace consumer. Only declaration values are traversed. Existing coefficient naturality upgrades the proved native H1 trace base change, and the original binary Hecke morphism is used unchanged. The actual Gamma1 coset-surjectivity result discharges the group hypothesis. The full original binary Hecke operator after the cover trace is reduced to the exact iterated native trace with its actual coefficient morphism. No trace naturality, coset-surjectivity or desired Hecke-transfer identity is assumed. Trace composition and exact Gamma1 correspondence reindexing still have to identify the other side of the full surjective-transfer Hecke identity; arithmetic geometry, Galois realization and higher continuation remain required. DUB-17--20 OPEN; 16/20."
+
+#eval runPlanarPairingDependencyAudit

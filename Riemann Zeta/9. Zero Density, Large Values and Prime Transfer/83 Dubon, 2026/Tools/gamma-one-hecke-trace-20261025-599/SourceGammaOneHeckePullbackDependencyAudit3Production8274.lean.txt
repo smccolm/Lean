@@ -1,0 +1,30 @@
+import Dubon2026.SourceGammaOneBinaryRestriction
+import Dubon2026.SourceGammaOneBinaryHeckeSum
+import Dubon2026.SourceGammaOneBinaryRestrictionHecke
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.sourceGammaOneBinaryRestrictionH1_hecke, `Dubon2026.sourceGammaOneBinaryRestrictionCocycles_apply]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneBinaryRestrictionHecke, `Dubon2026.SourceGammaOneBinaryHeckeSum, `Dubon2026.SourceGammaOneBinaryRestriction, `Dubon2026.SourceGammaOneCoverHeckeRepresentatives, `Dubon2026.SourceGammaOneCoverHeckeCosets, `Dubon2026.SourceGammaOneRaisedCosets, `Dubon2026.SourceGammaOneCoverHeckeSquare, `Dubon2026.SourceGammaOneHeckeSubgroup, `Dubon2026.SourceGammaOneDiagonalHom, `Dubon2026.SourceBinaryPermutationCongruence, `Dubon2026.SourceBinaryPrimePowerPermutation, `Dubon2026.SourcePermutationCoefficientQuotient, `Dubon2026.SourceGammaOneCongruenceCover, `Dubon2026.SourcePrincipalCoprimeReduction, `Dubon2026.SourceGammaOneConstantHecke]
+  let required : Array Name := #[`Dubon2026.sourceGammaOneBinaryRestrictionCocycles_apply, `Dubon2026.sourceGammaOneBinaryRestrictionH1_cocycle, `Dubon2026.sourceGammaOneBinaryHecke_chosen_sum, `Dubon2026.sourceGammaOneBinaryRestrictionCocycles_hecke, `Dubon2026.sourceGammaOneBinaryRestrictionH1_hecke, `Dubon2026.sourceGammaOneBinaryRestrictionCoefficient, `Dubon2026.sourceGammaOneBinaryRestrictionCocycles, `Dubon2026.sourceGammaOneBinaryRestrictionH1, `Dubon2026.sourceCorrespondenceOne_chosen_sub, `Dubon2026.sourceChosenCosetTraceOne_sub, `Dubon2026.sourceGammaOneCoverHeckeTransition_conjugation, `Dubon2026.sourceGammaOneCoverHeckeCosetMap_bijective, `Dubon2026.sourcePrincipalReduction_surjective, `Dubon2026.sourceGammaOneDiagonalHom_binary_trivial, `Dubon2026.sourceBinaryHeckeH1_cocycle, `Dubon2026.sourceGammaOneConstantHeckeH1_cocycle, `Dubon2026.sourceBinaryHeckeDiagonal_intertwine]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE HECKE PULLBACK DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual native H1 Hecke-pullback and literal cocycle-evaluation consumers. Only declaration values are traversed. The original finite binary vectors and exact Gamma1 cover define the actual coefficient morphism and native H1 pullback. The proved cover coset equivalence and literal conjugated transitions reindex every original Hecke summand. The existing representative-change coboundary vanishes because the actual cover action is proved trivial. Consequently the actual cocycle and native H1 pullbacks intertwine the full original binary Hecke operator with its genuine Gamma1 diagonal correspondence, retaining its coefficient map. Surjective-transfer compatibility, arithmetic geometry/diamond comparison, Galois realization, all-weight association and higher continuation remain required. DUB-17--20 OPEN; 16/20."
+
+#eval runPlanarPairingDependencyAudit

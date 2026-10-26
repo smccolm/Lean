@@ -1,0 +1,39 @@
+import SourceSpanningProjectorImage
+import SourceSpecializationBaseChangeIntertwiner
+import SourcePolynomialSpecialization
+import SourceOriginalSpecializationProjector
+import SourceOriginalSpecializationPrimitiveImage
+import SourcePolynomialCommutant
+import SourcePrimitiveOriginalTateGalois
+import SourceImageSpecializationPairing
+import SourceAlternatingRankTwoDeterminant
+import SourceImageSpecializationDeterminant
+import SourceOriginalSpecializationCyclotomicDeterminant
+import SourceOriginalPrimitiveCyclotomicRealization
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_cyclotomic_realization]
+  let localModules : Array Name := #[`SourceOriginalPrimitiveCyclotomicRealization, `SourceOriginalSpecializationCyclotomicDeterminant, `SourceSpecializationBaseChangeIntertwiner, `SourceImageSpecializationDeterminant, `SourceAlternatingRankTwoDeterminant, `SourceImageSpecializationPairing, `SourcePrimitiveOriginalTateGalois, `SourcePolynomialCommutant, `SourceOriginalSpecializationPrimitiveImage, `SourceSpanningProjectorImage, `SourceOriginalSpecializationProjector, `SourcePolynomialSpecialization]
+  let required : Array Name := #[`Dubon2026.spanning_liftBaseChange_surjective, `Dubon2026.projector_range_specialization_surjective, `Dubon2026.projector_range_specialization_bijective, `Dubon2026.liftBaseChange_intertwine, `Dubon2026.liftBaseChange_scalar_intertwine, `Dubon2026.specialization_aeval_zero, `Dubon2026.specialization_shifted_squares_zero, `Dubon2026.SourceFunctionField.OriginalChart.original_specialization_coefficient_hecke, `Dubon2026.SourceFunctionField.OriginalChart.original_specialization_primitive_annihilator, `Dubon2026.SourceFunctionField.OriginalChart.original_specialization_primitive_projector, `Dubon2026.SourceFunctionField.OriginalChart.exists_original_primitive_specialization_image_equiv, `Dubon2026.commute_shifted_squares, `Dubon2026.commute_aeval_of_commute, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke_galois_commute, `Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_galois_commute, `Dubon2026.image_specialization_section_intertwine, `Dubon2026.imageSpecializationPairing_injective, `Dubon2026.imageSpecializationPairing_self, `Dubon2026.imageSpecializationPairing_multiplier, `Dubon2026.alternating_fin_two_formula, `Dubon2026.alternating_fin_two_basis_ne_zero, `Dubon2026.alternating_fin_two_matrix_basis, `Dubon2026.determinant_eq_alternating_multiplier, `Dubon2026.image_specialization_determinant, `Dubon2026.SourceFunctionField.OriginalChart.original_specialization_cyclotomic_determinant_of_basis, `Dubon2026.SourceFunctionField.OriginalChart.original_specialization_cyclotomic_determinant, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_cyclotomic_realization, `Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_nondegenerate_rankTwo, `Dubon2026.SourceFunctionField.OriginalChart.originalRationalTateGaloisRep_prime_commute, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_quadratic_realization, `Dubon2026.SourceFunctionField.OriginalChart.originalPeriodLatticeBasis, `Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_self, `Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_cyclotomic, `Dubon2026.SourceFunctionField.finite_original_regularDifferentials, `Dubon2026.SourceFunctionField.nonempty_original_places, `LinearMap.range_liftBaseChange, `LinearMap.injective_iff_surjective_of_finrank_eq_finrank, `Module.Finite.of_injective, `LinearEquiv.ofBijective, `Polynomial.smeval_commute_left, `Commute.sum_right, `Module.End.baseChangeHom]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL PRIMITIVE CYCLOTOMIC DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the same actual primitive representation consumer. Only declaration values are traversed. Native scalar-extension range gives surjectivity of the existing spanning specialization. Its original Hecke eigenvalues prove that it fixes the actual arithmetic projector, so its restriction to the nondegenerate rank-two image is an isomorphism. Original Hecke-Galois commutation preserves that image. The literal Weil pairing transports through this same specialization, and its nonzero alternating rank-two value detects the determinant as the original cyclotomic multiplier. The final consumer retains the same actual continuous unramified representation, all prime eigenvalues and the Frobenius quadratic identity without pairing, projector, image, determinant or comparison hypotheses. The cyclotomic value at the source Frobenius lifts, the resulting trace and characteristic polynomial, residual association and remaining DUB-17--20 conclusions remain open; 16/20."
+
+#eval runPlanarPairingDependencyAudit

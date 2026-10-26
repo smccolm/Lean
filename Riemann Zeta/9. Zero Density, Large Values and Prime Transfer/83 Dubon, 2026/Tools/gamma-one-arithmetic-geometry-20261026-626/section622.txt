@@ -1,0 +1,12 @@
+
+### Actual prime-character boundary continuation transfer — 7 October 2026
+
+The signed Wiener–Ikehara deduction reuses the existing audited node-63 theorem. For actual real coefficients a_n dominated by C Lambda(n), the shifted coefficients a_n+C Lambda(n) are nonnegative and have their own proved absolute convergence and Chebyshev bound. The genuine zeta boundary regular part supplies the pole of residue C. Applying the proved nonnegative Tauberian theorem and subtracting the actual PNT gives sum_(n<N) a_n=o(N). A continuous extension of the original L-series to Re(s)>=1 is explicitly required; it is not asserted for modular prime characters.
+
+For bounded real prime values u_p, the difference between their ordinary sum and their log-weighted sum divided by log(N) is bounded by C(pi(N)-theta(N)/log(N)). The existing prime-counting and Chebyshev asymptotics make this error o(pi(N)). This yields ordinary prime cancellation from logarithmically weighted cancellation without any sign assumption on u_p. The prefix N+1 is explicitly reconciled with the inclusive source cutoff p<=N.
+
+The actual prime logarithmic coefficient sequence is u_n log(n) at primes and zero otherwise; its von Mangoldt domination and precise finite sums are proved. For a genuine primitive cusp form, u_p is the real part of lambda_f(p^r) at unramified primes, with the finite ramified set removed. The explicit local norm bound supplies |u_p|<=r+1 through the actual Hecke roots and symmetric-power trace. A continuous boundary extension of this specific L-series for each r>0 then gives the literal character averages, full weak Sato–Tate probability convergence and every isolated-prime H2 requirement.
+
+This is a conditional analytic reduction with two separately displayed, genuinely narrower inputs. It does not construct an automorphic or Galois representation, prove purity, or prove the required boundary extensions. The next analytic normalization is to relate these prime-supported series to actual symmetric-power Euler logarithmic derivatives and control the higher-prime-power remainder. The arithmetic automorphy/nonvanishing input remains separate. No source gate closes: DUB-17–20 remain OPEN and 16/20 remain accepted.
+
+Production files: [SignedWienerTransfer](Extension/Dubon2026/SignedWienerTransfer.lean), [WeightedPrimeAverages](Extension/Dubon2026/WeightedPrimeAverages.lean), [PrimeDirichletCancellation](Extension/Dubon2026/PrimeDirichletCancellation.lean), [PrimitiveCharacterBoundary](Extension/Dubon2026/PrimitiveCharacterBoundary.lean).

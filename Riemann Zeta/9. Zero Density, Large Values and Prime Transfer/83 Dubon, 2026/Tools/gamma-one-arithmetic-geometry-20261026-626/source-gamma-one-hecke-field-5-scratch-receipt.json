@@ -1,0 +1,104 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T09:50:17.543871+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneModularStretch",
+    "SourceGammaOneModularStretchCoefficients",
+    "SourceGammaOneHeckeFieldInclusion",
+    "SourceGammaOneHeckeDegeneracy",
+    "SourceGammaOneHeckeFieldFinite"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularStretch.lean",
+      "sha256": "CC0C457AF29AADB97F81712CDF5CAC003A6AF6F0490826BA0AA0DB30BDB02CD6",
+      "oleanSha256": "49B46A0D91B2D396A25ED0956BFEEF343F4D009AC115CC1AB69D12A9704FA025"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularStretchCoefficients.lean",
+      "sha256": "31561385BEB222D702C6AE7B40425E0EB7C3F00B6C79C1C6B837C27564F27E64",
+      "oleanSha256": "F60924E3705D723C02A932FC38F2B6DAF852CF3CFA00F0B77008FAA849FA7F75"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFieldInclusion.lean",
+      "sha256": "3244BFBA540B1D0DE177D286AC382E0B41CE19D0AD1A2F79D898DBEE0FBB8E98",
+      "oleanSha256": "CB378DD554BA8F03E189523C34B90DB99C14819B95A4959E97ED18B876C0BF0E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeDegeneracy.lean",
+      "sha256": "6C79218EB787DB18EA9FD260C36914F88B300543060029F055391FA670A76303",
+      "oleanSha256": "8F010AD8FB1332A20222F14E90414862705659ABBC2723871B86FE3F2CDE96DE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFieldFinite.lean",
+      "sha256": "7F7B25F2EE3DE6685903DC0C07D187527B9D34A7BA0758B8D35D981352D1C54D",
+      "oleanSha256": "A8C81743E5B83E2286B02656BEB9618B1F284A3FC7087704FCD823CFBB588A0C"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.levelRaiseConj_mem_Gamma1",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_le_conj",
+    "Dubon2026.SourceFunctionField.GammaOne.modularStretch_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.modularStretch_coeff",
+    "Dubon2026.SourceFunctionField.GammaOne.modularStretch_integral",
+    "Dubon2026.SourceFunctionField.GammaOne.intSeriesC_expand",
+    "Dubon2026.SourceFunctionField.GammaOne.qExpand_intFormRatiosC",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_degeneracy_map_le",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_over_degeneracy_map_le",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_hom_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.modularStretch",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeAlpha",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.levelRaiseConj_mem_Gamma1",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_le_conj",
+    "Dubon2026.SourceFunctionField.GammaOne.modularStretch_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.modularStretch_coeff",
+    "Dubon2026.SourceFunctionField.GammaOne.modularStretch_integral",
+    "Dubon2026.SourceFunctionField.GammaOne.intSeriesC_expand",
+    "Dubon2026.SourceFunctionField.GammaOne.qExpand_intFormRatiosC",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_degeneracy_map_le",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_over_degeneracy_map_le",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_hom_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_finite"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.modularStretch",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeAlpha",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFieldAudit5.log",
+  "logSha256": "B831E82E90D54A952B56D3E975F9215C19911960C01F25BDC6C1354DBF5ACF34",
+  "auditSha256": "17EF9675441BA9E4304B796E72D421FF6E4A6842942D3FB51F6929041282B689",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 35,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 27,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFieldDependencyAudit5.log",
+  "dependencyAuditSha256": "D1626CAF1034357F3362EFDB9A6039DEE5BD59DF3A479B8B63D7BDDED0622097",
+  "dependencyAuditSourceSha256": "FA5C8632661226B240F612CC0AB266A56A3F788E0E99B24930F68636AA3004F5",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_coe",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_coe"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of actual original finite Gamma1 Hecke characters -> genuine finite geometric Gamma1 Hecke correspondences -> actual integral modular dilation and literal rational/scalar-extended field maps.",
+  "discharged": "The actual translated modular form has q-expansion a(n/d) on multiples of d and zero otherwise. Integral expansions remain integral under native power-series expansion. The original qExpand preserves the actual Gamma1 integral-ratio field into Gamma1(M) intersect Gamma0(d*M). This gives the literal scalar-extended second field map, alongside the existing inclusion as the first map. Both maps are finite using actual proved finite coordinates; no field-preservation, modular-polynomial symmetry or finite-map hypothesis remains.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Arithmetic geometric and diamond comparison, finite-character Galois realization, original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-field-5-reuse-review-20261026.json",
+  "reuseReviewSha256": "D50EA484268BB43CE699DF390BBE08250E2AF518460181F3A5F8615A098B685A",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

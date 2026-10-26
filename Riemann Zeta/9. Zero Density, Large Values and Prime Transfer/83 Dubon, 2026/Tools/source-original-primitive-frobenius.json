@@ -1,0 +1,1109 @@
+{
+  "date": "25 October 2026",
+  "modules": [
+    "Dubon2026.SourceSpanningProjectorImage",
+    "Dubon2026.SourceSpecializationBaseChangeIntertwiner",
+    "Dubon2026.SourcePolynomialSpecialization",
+    "Dubon2026.SourceOriginalSpecializationProjector",
+    "Dubon2026.SourceOriginalSpecializationPrimitiveImage",
+    "Dubon2026.SourcePolynomialCommutant",
+    "Dubon2026.SourcePrimitiveOriginalTateGalois",
+    "Dubon2026.SourceImageSpecializationPairing",
+    "Dubon2026.SourceAlternatingRankTwoDeterminant",
+    "Dubon2026.SourceImageSpecializationDeterminant",
+    "Dubon2026.SourceOriginalSpecializationCyclotomicDeterminant",
+    "Dubon2026.SourceOriginalPrimitiveCyclotomicRealization",
+    "Dubon2026.SourceValuationFrobeniusRoots",
+    "Dubon2026.SourceValuationCyclotomicFrobenius",
+    "Dubon2026.SourceRankTwoQuadraticTrace",
+    "Dubon2026.SourceCyclotomicFrobeniusCharpoly",
+    "Dubon2026.SourceOriginalPrimitiveFrobeniusCharpolyRealization",
+    "Dubon2026.SourceMatrixIntertwinerCharpoly",
+    "Dubon2026.SourceIntegralMatrixCharpoly",
+    "Dubon2026.SourceRankTwoCharpolyCoefficients",
+    "Dubon2026.SourceOriginalSpecializationFrobeniusCharpoly",
+    "Dubon2026.SourceOriginalResidualFrobeniusCharpoly",
+    "Dubon2026.SourceOriginalResidualInertia",
+    "Dubon2026.SourceOriginalPrimitiveResidualFrobeniusRealization",
+    "Dubon2026.SourceOriginalPrescribedTateSpecialization",
+    "Dubon2026.SourceOriginalPrescribedResidualFrobenius"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight residual association -> weight-two prescribed residual realization -> the actual primitive original Tate representation has arithmetic Frobenius characteristic polynomial X^2-a_q*X+q and trivial good-prime inertia -> compare the actual rank-two projector image and transport its literal Weil pairing through the existing spanning specialization",
+  "discharged": "The actual arithmetic projector image is identified with the existing spanning primitive specialization. Its literal root-valued alternating Weil pairing is nondegenerate and has the original cyclotomic multiplier, so the same representation has cyclotomic determinant. The exact source valuation arithmetic Frobenius acts on prime-to-q roots by q-th powers, giving cyclotomic value q. The original Tate quadratic relation therefore yields determinant q, trace a_q and characteristic polynomial X^2-a_q*X+q. The already constructed integral lattice and literal residue representation retain this polynomial and trivial good-prime inertia. A prescribed Fourier-field embedding is retained through the actual continuous Tate specialization, stable lattice and residual construction. No separate determinant, nondegenerate pairing, Frobenius action, stable lattice or residual compatibility hypothesis is supplied.",
+  "boundary": "Choosing the coefficient completion and residue embedding compatible with the source prescribed algebraic-integer reduction, the arithmetic quotient and norm-local comparisons, closure of the parabolic branch, final weight twist and support comparison, arithmetic automorphy and all-weight continuation remain required. The prescribed-embedding theorem explicitly assumes a genuine finite local coefficient field and valuation extension, to be discharged by the chosen completion. 16/20; DUB-17--20 OPEN.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 8,159-module scope: all thirteen retained regressions, 51,801 exhaustive theorem checks, 23,640 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_cyclotomic_realization",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_charpoly_realization",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_frobenius_realization",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_residual_frobenius_realization"
+  ],
+  "scratchCertificates": [
+    {
+      "recordedUTC": "2026-10-25T20:45:50.629697+00:00",
+      "date": "2026-10-25 America/Vancouver",
+      "modules": [
+        "SourceSpanningProjectorImage",
+        "SourceSpecializationBaseChangeIntertwiner",
+        "SourcePolynomialSpecialization",
+        "SourceOriginalSpecializationProjector",
+        "SourceOriginalSpecializationPrimitiveImage",
+        "SourcePolynomialCommutant",
+        "SourcePrimitiveOriginalTateGalois",
+        "SourceImageSpecializationPairing",
+        "SourceAlternatingRankTwoDeterminant",
+        "SourceImageSpecializationDeterminant",
+        "SourceOriginalSpecializationCyclotomicDeterminant",
+        "SourceOriginalPrimitiveCyclotomicRealization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningProjectorImage.lean",
+          "sha256": "2C3C503E331650506AE256D7E7F7337C2521EF0C01E5A48573EB88D1598FDDB5",
+          "oleanSha256": "0AE8E1EE20016B8B534B00167D4E990D48A27AFACD1401476DE0A8F0AD19492D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceSpecializationBaseChangeIntertwiner.lean",
+          "sha256": "C0E34D0BEB02DB0CECD9F33323914D71B38482A9B921C623B1E13AD5A42F148A",
+          "oleanSha256": "0B29C06EBA731BC3DAED38B1A760819BD9D1E4E4A0AED29EB2D7AAC1FE845971"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePolynomialSpecialization.lean",
+          "sha256": "B8C54629ABE3AF0FFF153247ED67BC612F479BAB1227C435DA62F6A3209B9F31",
+          "oleanSha256": "91BB1186A63D13FCAB7272AA5D5588804F531583C993DB21816C001079180F35"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSpecializationProjector.lean",
+          "sha256": "5D99D63AC20C4AA6B66A087F6F595250478454BF0A94B88104BF74F7052E7E40",
+          "oleanSha256": "4CAE860FB46CA65200F183EA7CC5BA92D0F236EE06B209B8D065242BABAA37B8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSpecializationPrimitiveImage.lean",
+          "sha256": "CD13E38F39C6339E52508C5A319083094347383F905CDA3C3B8A5D28FB768961",
+          "oleanSha256": "DA455CB0A78B6EDB9F5E368895D5179626C4F82D8362C3288FEC401D3AD35C24"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePolynomialCommutant.lean",
+          "sha256": "ABCADCD7E4809ED36588CF9C61403E99AE6950B6402B9A452BD30E4A9A5F438D",
+          "oleanSha256": "5F57913BC34A09EBC44E61054AB320EB677E1D616F6352500967FA49DDF5F90B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveOriginalTateGalois.lean",
+          "sha256": "7051528E351BE9E5E50A7B40B1CA9ED1C9F2DB60ECEE4B2A61EDF4A60C2167CF",
+          "oleanSha256": "1933569DC2A79E440E788E22E9F840649307F5523334DD6D7FE1DEC3C14EACBF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceImageSpecializationPairing.lean",
+          "sha256": "D3D871713D1ACED45E136FE64DD73B0A4201386C157BBD4DF032655E663EFE65",
+          "oleanSha256": "D3DD0F196899465E1A07BDF8E371FFF39C56452069ACF6C1B68238FC2B8A697C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAlternatingRankTwoDeterminant.lean",
+          "sha256": "1CB186BDEB04A7457E1B7220EA81BDB271F71A71ED6E25AF579DB16DC4DAF380",
+          "oleanSha256": "D2BF8D400E149CCB6DD14A5B84342F39AF4F2BEE7C7E09DF373C4E4136AAC881"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceImageSpecializationDeterminant.lean",
+          "sha256": "093A35CFC1B54A93C0C1F082BE812771BBAD76BDE7DCF5DE5EFED23B8FBB9698",
+          "oleanSha256": "19B0210FE7589DC8F338C88EF0AFC8E8B4994CA6E19FEFFC855876C0A48CAC9B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSpecializationCyclotomicDeterminant.lean",
+          "sha256": "1805458115BEAC659F0FF11F5A44D6BDAC38BA5F84F739A40B3E99926D062876",
+          "oleanSha256": "3F8E94945216BC1307F6C62DFCAF2D2C5A0014C94B7C19439E3B1CFE66D90061"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCyclotomicRealization.lean",
+          "sha256": "59974C32D7E2CAD7C651BEE1C2DBF606079489882FA3381F2EAE9FE6369AA697",
+          "oleanSha256": "B70F0ACFA9C5F27AFC268E35C3D590C99F22E1AD360E93D58173927C2F1FC38A"
+        }
+      ],
+      "queries": [
+        "Dubon2026.spanning_liftBaseChange_surjective",
+        "Dubon2026.projector_range_specialization_surjective",
+        "Dubon2026.projector_range_specialization_bijective",
+        "Dubon2026.liftBaseChange_intertwine",
+        "Dubon2026.liftBaseChange_scalar_intertwine",
+        "Dubon2026.specialization_aeval_zero",
+        "Dubon2026.specialization_shifted_squares_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_coefficient_hecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_primitive_annihilator",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_primitive_projector",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_primitive_specialization_image_equiv",
+        "Dubon2026.commute_shifted_squares",
+        "Dubon2026.commute_aeval_of_commute",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke_galois_commute",
+        "Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_galois_commute",
+        "Dubon2026.image_specialization_section_intertwine",
+        "Dubon2026.imageSpecializationPairing_injective",
+        "Dubon2026.imageSpecializationPairing_self",
+        "Dubon2026.imageSpecializationPairing_multiplier",
+        "Dubon2026.alternating_fin_two_formula",
+        "Dubon2026.alternating_fin_two_basis_ne_zero",
+        "Dubon2026.alternating_fin_two_matrix_basis",
+        "Dubon2026.determinant_eq_alternating_multiplier",
+        "Dubon2026.image_specialization_determinant",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_cyclotomic_determinant_of_basis",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_cyclotomic_determinant",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_cyclotomic_realization",
+        "Dubon2026.projectorRangeSpecializationEquiv",
+        "Dubon2026.imageSpecializationPairing"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.spanning_liftBaseChange_surjective",
+        "Dubon2026.projector_range_specialization_surjective",
+        "Dubon2026.projector_range_specialization_bijective",
+        "Dubon2026.liftBaseChange_intertwine",
+        "Dubon2026.liftBaseChange_scalar_intertwine",
+        "Dubon2026.specialization_aeval_zero",
+        "Dubon2026.specialization_shifted_squares_zero",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_coefficient_hecke",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_primitive_annihilator",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_primitive_projector",
+        "Dubon2026.SourceFunctionField.OriginalChart.exists_original_primitive_specialization_image_equiv",
+        "Dubon2026.commute_shifted_squares",
+        "Dubon2026.commute_aeval_of_commute",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke_galois_commute",
+        "Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_galois_commute",
+        "Dubon2026.image_specialization_section_intertwine",
+        "Dubon2026.imageSpecializationPairing_injective",
+        "Dubon2026.imageSpecializationPairing_self",
+        "Dubon2026.imageSpecializationPairing_multiplier",
+        "Dubon2026.alternating_fin_two_formula",
+        "Dubon2026.alternating_fin_two_basis_ne_zero",
+        "Dubon2026.alternating_fin_two_matrix_basis",
+        "Dubon2026.determinant_eq_alternating_multiplier",
+        "Dubon2026.image_specialization_determinant",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_cyclotomic_determinant_of_basis",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_cyclotomic_determinant",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_cyclotomic_realization"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.projectorRangeSpecializationEquiv",
+        "Dubon2026.imageSpecializationPairing"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCyclotomicAudit12.log",
+      "logSha256": "6D04FC1DABEC188CF553B80C40DB8C5CC62AB45727CC41BE0BFF704A8F234DF2",
+      "auditSha256": "6F89F0F1A9A23C8DB634D311EB399BA37C73407BD210214E482E7D848E29F270",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 38,
+      "linterScopes": 12,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 42,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCyclotomicDependencyAudit12.log",
+      "dependencyAuditSha256": "866D9263CAB748EFCD0102AA8E6E9623087C5708D2D8A7AED72E8E3E92893FD8",
+      "dependencyAuditSourceSha256": "3EAE01AB2CB418F3D4CD976960B0FB4060364E44EC72C905982ECFF54435679B",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_cyclotomic_realization"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive Frobenius determinant -> determinant of the existing actual primitive representation equals the original cyclotomic character -> specialization identifies the nondegenerate invariant rank-two Tate image",
+      "discharged": "The same already constructed continuous unramified primitive representation has determinant equal to the original cyclotomic character. Its existing spanning specialization identifies the actual invariant nondegenerate rank-two arithmetic-projector image; the literal original Weil pairing transports through that same specialization. No pairing, projector, image, dimension, invariance, determinant or comparison hypothesis remains in this consumer. All prime eigenvalues and the original Frobenius quadratic identity are retained.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The cyclotomic multiplier must be evaluated at the exact source arithmetic Frobenius lifts to give the rational prime, and combined with the retained quadratic identity to obtain trace and characteristic polynomial. Residual association, arithmetic automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-cyclotomic-12-reuse-review-20261025.json",
+      "reuseReviewSha256": "3489E57B6EA769D8296B3861C63D0413DC8FC061A8180EA30F92E76A22E2DF99",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-25T20:57:34.458970+00:00",
+      "date": "2026-10-25 America/Vancouver",
+      "modules": [
+        "SourceValuationFrobeniusRoots",
+        "SourceValuationCyclotomicFrobenius",
+        "SourceRankTwoQuadraticTrace",
+        "SourceCyclotomicFrobeniusCharpoly",
+        "SourceOriginalPrimitiveFrobeniusCharpolyRealization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceValuationFrobeniusRoots.lean",
+          "sha256": "EFDFC7CE019847CA89442ABAD71CE06F305D545C47721432AD6AAD0FB0175DF4",
+          "oleanSha256": "E17CB1CEA405389223119FFC42A31E59D386E6B75C96DF44F0629CB7DA39EE90"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceValuationCyclotomicFrobenius.lean",
+          "sha256": "9BBDA3A47EE24123A4946AE7BDEED28F617F52407693DD71EB2B1067BE100E14",
+          "oleanSha256": "4DF7363D46BAAF30AEF8F4B7B02D9E5A5E47C1BD58FA4EDF81A868EA23F81C8D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRankTwoQuadraticTrace.lean",
+          "sha256": "7556A0CB93C3C941DBFA864A31C729A6822070684A815894465D4FF8FF9AAF0E",
+          "oleanSha256": "61F4EEA975B77F15889D4BC8237F012072F3DDCECC44F37053BC66851A96241F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicFrobeniusCharpoly.lean",
+          "sha256": "B766FF6B75648BF63D1B5483139E1F1DE73660A5DFAF420EEC229379BFA5AC4F",
+          "oleanSha256": "8C673B5ED481E3D4B0A620A980BC9C0B12A93D9455327520AFA29822ECB2DCAE"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusCharpolyRealization.lean",
+          "sha256": "C04B66F95D44EF7D4C969125FEDFD752DE8CE5575DD6E7CBC21FD53D1A70C13C",
+          "oleanSha256": "7C374310D6A2F160B74FD31DD9AC140324AD2DB99AA183CA8E3FCDD744CD749F"
+        }
+      ],
+      "queries": [
+        "Dubon2026.valuation_root_mem",
+        "Dubon2026.valuation_frobenius_root",
+        "Dubon2026.valuation_cyclotomic_frobenius",
+        "Dubon2026.rank_two_cayley_hamilton",
+        "Dubon2026.rank_two_trace_of_determinant_quadratic",
+        "Dubon2026.rank_two_charpoly_of_determinant_quadratic",
+        "Dubon2026.cyclotomic_frobenius_charpoly",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_charpoly_realization"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.valuation_root_mem",
+        "Dubon2026.valuation_frobenius_root",
+        "Dubon2026.valuation_cyclotomic_frobenius",
+        "Dubon2026.rank_two_cayley_hamilton",
+        "Dubon2026.rank_two_trace_of_determinant_quadratic",
+        "Dubon2026.rank_two_charpoly_of_determinant_quadratic",
+        "Dubon2026.cyclotomic_frobenius_charpoly",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_charpoly_realization"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusCharpolyAudit5.log",
+      "logSha256": "963F2153DC2EFC588D2F457D291E948F6A5F6FA0A4FABF8B66AC48CACCA9CAB5",
+      "auditSha256": "9983CDF121061926002538CA58F9B88AE96D1345C12FCC2035E56C687442314F",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 10,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 16,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusCharpolyDependencyAudit5.log",
+      "dependencyAuditSha256": "C6FA70E5187C07529D24EC867A2D2C3074E5136403B95FBCB9A3BF6B605ECEB1",
+      "dependencyAuditSourceSha256": "35356756AA1B038F4D59A357A9BFD7FB50A10AF133DE060219F29FD7BA6E1BC5",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_charpoly_realization"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> actual primitive Frobenius characteristic polynomial -> cyclotomic value at the exact source valuation-subring arithmetic Frobenius and native Cayley-Hamilton",
+      "discharged": "The same actual continuous unramified primitive representation now has Frobenius determinant equal to the rational prime, trace equal to its original embedded prime Fourier coefficient, and characteristic polynomial X^2-a_p X+p at the exact source valuation-subring arithmetic Frobenius lifts. Original prime Hecke eigenvalues, spanning specialization, Galois action, global cyclotomic determinant and quadratic identity are retained. Source residue characteristic and native root separation evaluate the cyclotomic character; native Cayley-Hamilton supplies trace. No determinant, root-action, trace or characteristic-polynomial premise is supplied.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Integral and residual transport of these identities and inertia, residual association, arithmetic automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-frobenius-charpoly-5-reuse-review-20261025.json",
+      "reuseReviewSha256": "287A3976151D57572FA48B82B433A3FA8673FAEF090D682E4F7A469A0AB71987",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-25T21:18:55.609049+00:00",
+      "date": "2026-10-25 America/Vancouver",
+      "modules": [
+        "SourceMatrixIntertwinerCharpoly",
+        "SourceIntegralMatrixCharpoly",
+        "SourceRankTwoCharpolyCoefficients",
+        "SourceOriginalSpecializationFrobeniusCharpoly",
+        "SourceOriginalResidualFrobeniusCharpoly",
+        "SourceOriginalResidualInertia",
+        "SourceOriginalPrimitiveResidualFrobeniusRealization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceMatrixIntertwinerCharpoly.lean",
+          "sha256": "62DC857DA3784EEBBA81D6DCFFB3F267B8800CFDAE77B35C95A39E31C77270B5",
+          "oleanSha256": "D172CCD667328701FE914711D5B88413037016EFF130A5DA8DC7135973198BC4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralMatrixCharpoly.lean",
+          "sha256": "B57C558CBD44B04AD9AD5B654A4CF98556AD75221496FDEC7F32AF2A280C194F",
+          "oleanSha256": "584140BE08DB134CD715C2F6508EAB6F79D0D7F70F2CFE046C479202A86E17F1"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceRankTwoCharpolyCoefficients.lean",
+          "sha256": "9DEDB95C41ACDA86F31E4ECB8FEB067FB3F02F13A00134D94D2DCC5B86D0B39E",
+          "oleanSha256": "DB1FACCD61284D8AB7AB5CDFC16D8B704A3508081B9519E5F18ECA992C9EAC46"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSpecializationFrobeniusCharpoly.lean",
+          "sha256": "B83D681047FD5FD104B781B7C19F2AB0AB6FB4C4C5464F621DB47C28AB0A21A7",
+          "oleanSha256": "CD25D3622919045226139416A600F94D0870406057C6976F7E636FD3956C39C6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualFrobeniusCharpoly.lean",
+          "sha256": "FC4EB525468041C1EBB8372D9D8B83FA868605A4E0F61DF01CF28B1A191CCF1D",
+          "oleanSha256": "1D651852121565FF4736BAF6DDD32146BC4666459A8CFF076428658C46A09F1F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualInertia.lean",
+          "sha256": "5D684229AF8E7A14EEF67A4E79F571F0B51617A09D734D1D646513FCD648D9A1",
+          "oleanSha256": "AAF645774D8B810E7281CC15E7C0D5E3F30D67032A467FAB33026B85E51CD6D4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualFrobeniusRealization.lean",
+          "sha256": "250FA286282DDB044D4F4A928853D3C9264313D1EEA7A765E9CF66907843C5BA",
+          "oleanSha256": "D5585D364C13CA5F13415C9DE8A97CB60E80A5DE10ADF614B64633A2E200A5EE"
+        }
+      ],
+      "queries": [
+        "Dubon2026.matrix_intertwiner_charpoly",
+        "Dubon2026.matrix_intertwiner_one",
+        "Dubon2026.integral_matrix_charpoly_of_intertwiner",
+        "Dubon2026.residue_matrix_charpoly_of_intertwiner",
+        "Dubon2026.residue_matrix_one_of_intertwiner",
+        "Dubon2026.rank_two_trace_det_of_charpoly",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_frobenius_charpoly",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_residual_frobenius_charpoly",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_residual_inertia_identity",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_frobenius_realization"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.matrix_intertwiner_charpoly",
+        "Dubon2026.matrix_intertwiner_one",
+        "Dubon2026.integral_matrix_charpoly_of_intertwiner",
+        "Dubon2026.residue_matrix_charpoly_of_intertwiner",
+        "Dubon2026.residue_matrix_one_of_intertwiner",
+        "Dubon2026.rank_two_trace_det_of_charpoly",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_frobenius_charpoly",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_residual_frobenius_charpoly",
+        "Dubon2026.SourceFunctionField.OriginalChart.original_residual_inertia_identity",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_frobenius_realization"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualFrobeniusAudit7.log",
+      "logSha256": "2B6CD79CAE5FA687EB55B1E98930AAAA404FA0FC53A432798B31A79AF7EEF04E",
+      "auditSha256": "FB565378AF2A843D0E9D68009FBBC85EAE3E48ABB11DD10AC8B3BB1B971E8381",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 16,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 22,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualFrobeniusDependencyAudit7.log",
+      "dependencyAuditSha256": "E17C9BE1C7C35F62B772BA283F2008CC47E8E9C5D808580400B580DDEF0DCA76",
+      "dependencyAuditSourceSha256": "52DBB96B0B06EF69B31D7A91A78467D4EA39C1B9F79F341188DF7B20BC6E44C8",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_frobenius_realization"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> exact Frobenius and inertia compatibility for the existing actual primitive integral and residual representations -> original Tate specialization, integral coefficient and lattice basis comparison",
+      "discharged": "The existing constructed primitive integral and residual representations now have the exact source Frobenius polynomial and inertia identities. Original Tate specialization, the separately proved cyclotomic determinant and Frobenius quadratic, native change-of-basis invariance, coefficient injectivity and entrywise reduction supply all local compatibility. The integral Fourier coefficient is the literal original coefficient whose integrality was previously proved. The residual trace and determinant are extracted in the actual finite characteristic-ell residue field. The assembled consumer retains the original local field, continuity, Hecke eigenvalues, spanning specialization, Galois action, lattice basis comparison and residue map without extra local-compatibility assumptions.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Prescribed coefficient-reduction compatibility, comparison to the source arithmetic quotient and local norm interfaces, residual association, arithmetic automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-residual-frobenius-7-reuse-review-20261025.json",
+      "reuseReviewSha256": "89C09428D294F1ACB3739A8E26E8A1F5C96CD669040A002D351CF32A732DA4A2",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "recordedUTC": "2026-10-25T21:29:30.241484+00:00",
+      "date": "2026-10-25 America/Vancouver",
+      "modules": [
+        "SourceOriginalPrescribedTateSpecialization",
+        "SourceOriginalPrescribedResidualFrobenius"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedTateSpecialization.lean",
+          "sha256": "257067B9EA1887DB976837A8F97EB86E1B1FE7BD784300FDF201278720140AE1",
+          "oleanSha256": "499D2CBEB2B48B7E9E468ED1E5B96DC99C4950393B559C1166ECE75107BF295D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobenius.lean",
+          "sha256": "907B67CD1372992C154FE0DF0E26D3F2E75B0970B694CF66BAB3F75A376D6F19",
+          "oleanSha256": "C1D4B4C29B2CDAB672B2D0C5A4260F677C7DA8495BA698CC0EF4E66AC6BA2299"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitiveTate_prescribed_specialization_of_basis",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_continuous_galois_realization",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_residual_frobenius_realization"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitiveTate_prescribed_specialization_of_basis",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_continuous_galois_realization",
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_residual_frobenius_realization"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusAudit2.log",
+      "logSha256": "E986DD7F47390AD518F6FDB85BB10E721FE00B502348D913131694F3FF75E647",
+      "auditSha256": "E70DBE2627201F42FF16D9DFDBB9F87D9FC5C07813CFE7344406240543247A81",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 10,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusDependencyAudit2b.log",
+      "dependencyAuditSha256": "1FC51790073EC03700C9BDBBFD209A66758990266F7D8DCD17F7FDFFB1B399D9",
+      "dependencyAuditSourceSha256": "C9B2681F22E710AE27642DBFD0F84BB3C2185109FC67E531E507C9CF4824C620",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_residual_frobenius_realization"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight residual association -> prescribed algebraic-integer reduction compatibility -> retain a prescribed Fourier-field embedding through actual Tate specialization, integral lattice and residual Frobenius realization",
+      "discharged": "Given the actual local coefficient structure and a prescribed embedding of the original Fourier field, the original Hecke eigencharacter specializes the actual continuous rank-two Tate action with that same embedding in every prime eigenvalue. The actual finite Tate module constructs a stable integral lattice, and the existing basis and entrywise reduction produce continuous integral and residual representations. The same representations satisfy the proved original Frobenius polynomial, residual trace and determinant, and inertia identities. No representation, lattice, residue action or local-compatibility theorem is assumed. Choosing the local embedding to match a prescribed source algebraic-integer reduction remains a separate necessary obligation.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Choosing the local coefficient embedding to match a prescribed source algebraic-integer reduction remains required. Source arithmetic quotient and norm-interface comparison, residual association, arithmetic automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-prescribed-residual-frobenius-2-reuse-review-20261025.json",
+      "reuseReviewSha256": "A9A459073E816E66CD3DFDB7268A1A563339A458E38936839797CEBD0D09A29E",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "dependencyAuditLineage": {
+        "reason": "The original dependency audit used a misqualified identifier for the existing actual original Tate rank theorem. Its sole missing required name is corrected to the declaration in SourceFunctionField.OriginalChart. All 18 required dependency checks remain. No proof, public/exhaustive audit, linter scope or compiled artifact is changed.",
+        "oldIdentifier": "Dubon2026.SourceFunctionField.original_tate_free_finite_rank",
+        "correctIdentifier": "Dubon2026.SourceFunctionField.OriginalChart.original_tate_free_finite_rank",
+        "proofSource": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalTateRank.lean",
+        "proofSourceSha256": "417A2181F47D5E5BA1B0C72397B550C9C928DC98B805EA2A4FE67CF1E5EC0C3E",
+        "originalAudit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusDependencyAudit2.lean",
+        "originalAuditSha256": "B6CA6E80F415DF5028A8CB5B96F0106005ADE378BF5C6625B9BA8036036C452B",
+        "originalFailureLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusDependencyAudit2.log",
+        "originalFailureLogSha256": "ADAFBA4BC9F4B303921EA041E0BFC246F8DBF182F9CEC827E4646D2BCACFC399",
+        "originalExit": 1,
+        "successorAudit": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusDependencyAudit2b.lean",
+        "successorAuditSha256": "C9B2681F22E710AE27642DBFD0F84BB3C2185109FC67E531E507C9CF4824C620",
+        "originalConfig": "E:\\Lean\\.tmp\\dubon83\\source-original-prescribed-residual-frobenius-2-audit-config.json",
+        "originalConfigSha256": "040EDFC810E542DC665CFA223C6B714AF96F9079048532C3BFAD815847ECF18C",
+        "successorConfig": "E:\\Lean\\.tmp\\dubon83\\source-original-prescribed-residual-frobenius-2-audit-config-567b.json",
+        "successorConfigSha256": "BC6017ABE1DA9529224745B30023A76E896546A92EFB2FAE9B1778CA55B75AA0",
+        "originalRoute": "E:\\Lean\\.tmp\\dubon83\\prescribed-residual-frobenius-route-567.json",
+        "originalRouteSha256": "FF53C9CB13E7901B0998BA1134EA9D5CDE08DADF8DF1CE8838229BD294172506"
+      }
+    }
+  ],
+  "reviews": [
+    "Tools/source-original-primitive-cyclotomic-12-reuse-review-20261025.json",
+    "Tools/source-original-primitive-frobenius-charpoly-5-reuse-review-20261025.json",
+    "Tools/source-original-primitive-residual-frobenius-7-reuse-review-20261025.json",
+    "Tools/source-original-prescribed-residual-frobenius-2-reuse-review-20261025.json"
+  ],
+  "additionalCurrentSearch": {
+    "path": "Tools/primitive-frobenius-20261025-569/original-primitive-frobenius-promotion-route-569.json",
+    "sha256": "C2A4FB7D453323A11F6049B6A1E8FA01FAC07FA4B7A1335FBDA5120ED86B73C9"
+  },
+  "renewedSourceArchive": {
+    "manifest": "Tools/primitive-frobenius-20261025-569/archive-manifest.json",
+    "sha256": "7A6E00444651C962B1BB365CAE7FB2A285C16BB02D3819CD0DAED16B73965E4D",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt8159": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCyclotomicDependencyAudit12Production8159.log",
+        "sha256": "866D9263CAB748EFCD0102AA8E6E9623087C5708D2D8A7AED72E8E3E92893FD8",
+        "requiredProofValueEdges": 42,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_cyclotomic_realization"
+        ],
+        "sourceSha256": "03126E5C553EE67D85E2F4402520ABE207ABF20F885A51B27AF7DFFEEF402E9D"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusCharpolyDependencyAudit5Production8159.log",
+        "sha256": "C6FA70E5187C07529D24EC867A2D2C3074E5136403B95FBCB9A3BF6B605ECEB1",
+        "requiredProofValueEdges": 16,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_charpoly_realization"
+        ],
+        "sourceSha256": "9BC35FBC7B0E0ACF0A77F561B66FCEDF8D4088ECD76E5D5E35F2AA1689BE94E0"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualFrobeniusDependencyAudit7Production8159.log",
+        "sha256": "E17C9BE1C7C35F62B772BA283F2008CC47E8E9C5D808580400B580DDEF0DCA76",
+        "requiredProofValueEdges": 22,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_frobenius_realization"
+        ],
+        "sourceSha256": "0ABEB19478D20F6D71CDD54F620BFD046D94C6E0058EB029C5A84546F75DD55B"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusDependencyAudit2bProduction8159.log",
+        "sha256": "1FC51790073EC03700C9BDBBFD209A66758990266F7D8DCD17F7FDFFB1B399D9",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_residual_frobenius_realization"
+        ],
+        "sourceSha256": "1F7DED13D6F8A6B418FD06D1179AB12E362A265A2A05CF160B35167EB2240D21"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusProductionAudit8159.log",
+    "sha256": "B58C9AB8336A879CDA9948D0804250A2E3AA45787F8342FDA26555EBCC719436",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-frobenius-production-build-8159.log",
+    "aggregateSha256": "0DCEAA338360C025015B210A1E0ED64410D989E11F4A6C9F8639F3D330C52146",
+    "productionModules": 8159,
+    "incrementModules": 26,
+    "axiomChecks": 50,
+    "exhaustiveIncrementTheorems": 74,
+    "linterScopes": 26,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 74,
+    "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The original rational Tate module and root-valued Weil pairing, actual cusp forms, integral Hecke algebra and prescribed primitive coefficient field retain their definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 74,
+      "scratchDistinct": 74,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceOriginalSpecializationFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationFrobeniusCharpoly": "_private.Dubon2026.SourceOriginalSpecializationFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimitiveResidualFrobeniusRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveResidualFrobeniusRealization": "_private.Dubon2026.SourceOriginalPrimitiveResidualFrobeniusRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalPrescribedTateSpecialization": "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+        "_private.Dubon2026.SourceOriginalSpecializationCyclotomicDeterminant.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationCyclotomicDeterminant": "_private.Dubon2026.SourceOriginalSpecializationCyclotomicDeterminant.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_1": "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_1",
+        "_private.Dubon2026.SourcePrimitiveOriginalTateGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourcePrimitiveOriginalTateGalois": "_private.Dubon2026.SourcePrimitiveOriginalTateGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_3": "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_3",
+        "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_4": "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_4",
+        "_private.Dubon2026.SourceOriginalSpecializationPrimitiveImage.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationPrimitiveImage": "_private.Dubon2026.SourceOriginalSpecializationPrimitiveImage.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_5": "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_5",
+        "_private.Dubon2026.SourceOriginalSpecializationProjector.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationProjector": "_private.Dubon2026.SourceOriginalSpecializationProjector.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrescribedResidualFrobenius": "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimitiveCyclotomicRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveCyclotomicRealization": "_private.Dubon2026.SourceOriginalPrimitiveCyclotomicRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusCharpolyRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveFrobeniusCharpolyRealization": "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusCharpolyRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrescribedTateSpecialization": "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalResidualFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalResidualFrobeniusCharpoly": "_private.Dubon2026.SourceOriginalResidualFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026"
+      },
+      "productionFocused": 74,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceSpanningProjectorImage",
+            "SourceSpecializationBaseChangeIntertwiner",
+            "SourcePolynomialSpecialization",
+            "SourceOriginalSpecializationProjector",
+            "SourceOriginalSpecializationPrimitiveImage",
+            "SourcePolynomialCommutant",
+            "SourcePrimitiveOriginalTateGalois",
+            "SourceImageSpecializationPairing",
+            "SourceAlternatingRankTwoDeterminant",
+            "SourceImageSpecializationDeterminant",
+            "SourceOriginalSpecializationCyclotomicDeterminant",
+            "SourceOriginalPrimitiveCyclotomicRealization"
+          ],
+          "count": 38,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusScratchOwnership564For8159.log",
+            "sha256": "7F7D0FEC393F1DE1D7784B33428BA151B7B6B82525CAFE95A38F2985E35EDBDC",
+            "sourceSha256": "77BE46844AB738BCEEC7E7FEEF7B68793466020B6973371F114C932F31EC0EBE"
+          }
+        },
+        {
+          "modules": [
+            "SourceValuationFrobeniusRoots",
+            "SourceValuationCyclotomicFrobenius",
+            "SourceRankTwoQuadraticTrace",
+            "SourceCyclotomicFrobeniusCharpoly",
+            "SourceOriginalPrimitiveFrobeniusCharpolyRealization"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusScratchOwnership565For8159.log",
+            "sha256": "FED3411C217ECFD278377F8D5CF69DFA8EA365637BFCA15683D40F06F86B238F",
+            "sourceSha256": "45F9C2EC144C233DF669420EC478DD815DB179F4EFE97127A180C33772FCEA1B"
+          }
+        },
+        {
+          "modules": [
+            "SourceMatrixIntertwinerCharpoly",
+            "SourceIntegralMatrixCharpoly",
+            "SourceRankTwoCharpolyCoefficients",
+            "SourceOriginalSpecializationFrobeniusCharpoly",
+            "SourceOriginalResidualFrobeniusCharpoly",
+            "SourceOriginalResidualInertia",
+            "SourceOriginalPrimitiveResidualFrobeniusRealization"
+          ],
+          "count": 16,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusScratchOwnership566For8159.log",
+            "sha256": "DC02B09CF8B312595774421F5FD07F29CD47A6F2327D72CDE67A1735F587BE8A",
+            "sourceSha256": "22EC3AB1F21113A0CD10BBE4D48AD6E6071ED58F98E7620571689EC1215C1564"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalPrescribedTateSpecialization",
+            "SourceOriginalPrescribedResidualFrobenius"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusScratchOwnership567For8159.log",
+            "sha256": "34B53B6AC06E6F815379F29AFA00711FFE0035F7639175D4DF6FFCE02E8F9010",
+            "sourceSha256": "A3EA9C8AC91493BDF125BCCB1723BDBAF5F440C3F0FCB13398DC7365350C70AB"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusOwnership8159.log",
+        "sha256": "CB79C93CC9996C2E7E7175002DB8C30CF26620D7B2DE859C194ABE2EEB325D3F",
+        "sourceSha256": "EC2CBA4E1FA01169FFD5E5209EE0186117175CD3550723D57B2B1058BAF35BE9"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-132709-230.log",
+        "sha256": "882B4124F2C1BF3DD2349B42A423CFE04CA2EA25A8EBECA3C6C09EBDD374BF94"
+      },
+      "renameEvidence": {
+        "previousDiagnostic": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-frobenius-ownership-diagnostic-8159.json",
+        "previousDiagnosticSha256": "D5770B616EC95D34A9458BB7EB9C4A62515AAE729C2E123C5BB17DF86C2907BF",
+        "reason": "Sixteen automatically named private instance declarations acquire module-derived suffixes after import qualification. Every exact one-to-one pair retains its owner. All 26 production sources are identical to their frozen scratch sources after removing imports, and every production theorem passed the focused exhaustive axiom audit. No theorem is omitted.",
+        "sourceChecks": [
+          {
+            "module": "SourceSpanningProjectorImage",
+            "scratchSha256": "2C3C503E331650506AE256D7E7F7337C2521EF0C01E5A48573EB88D1598FDDB5",
+            "productionSha256": "FEF5B22ED6472C433D13E45886C16EE681A35909C8BDE71679AABC7C78AB6846",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSpecializationBaseChangeIntertwiner",
+            "scratchSha256": "C0E34D0BEB02DB0CECD9F33323914D71B38482A9B921C623B1E13AD5A42F148A",
+            "productionSha256": "667388A3582C4C95941CCD719EF4141D4B71B5E9A1055FCEC5F81201E623E203",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePolynomialSpecialization",
+            "scratchSha256": "B8C54629ABE3AF0FFF153247ED67BC612F479BAB1227C435DA62F6A3209B9F31",
+            "productionSha256": "11BFDD7D0BD7BEB88C3F6558EC15BF29890444390F08CDB5B3B4831CA95CD35C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalSpecializationProjector",
+            "scratchSha256": "5D99D63AC20C4AA6B66A087F6F595250478454BF0A94B88104BF74F7052E7E40",
+            "productionSha256": "17AF9DC3D11A27766334DBF024974DBE9EB0B31C49879AD687693C2098222B97",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalSpecializationPrimitiveImage",
+            "scratchSha256": "CD13E38F39C6339E52508C5A319083094347383F905CDA3C3B8A5D28FB768961",
+            "productionSha256": "5325A01B91956370ECE5B6C1651E6BD12083BBAECDB9D1C7519A6057F3BDFE5A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePolynomialCommutant",
+            "scratchSha256": "ABCADCD7E4809ED36588CF9C61403E99AE6950B6402B9A452BD30E4A9A5F438D",
+            "productionSha256": "EFE8CBF085B71534A84DDB1F83FA3A66BA7B1B19927CE415298A355D31137E75",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveOriginalTateGalois",
+            "scratchSha256": "7051528E351BE9E5E50A7B40B1CA9ED1C9F2DB60ECEE4B2A61EDF4A60C2167CF",
+            "productionSha256": "5AF9BFB581873A44B94C0CE8506877331ED27CDD7D4AC75BB38883D6EA921A31",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceImageSpecializationPairing",
+            "scratchSha256": "D3D871713D1ACED45E136FE64DD73B0A4201386C157BBD4DF032655E663EFE65",
+            "productionSha256": "ECB80A78694946A2A4BCFC8FE5827B5F5F37E715FB0E6E4740FB4D31C33680BE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceAlternatingRankTwoDeterminant",
+            "scratchSha256": "1CB186BDEB04A7457E1B7220EA81BDB271F71A71ED6E25AF579DB16DC4DAF380",
+            "productionSha256": "2E90F6EC13B3EE6CD23C71ABA01DF9A3488419C4268619EE6EBD1FF958EA2F6F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceImageSpecializationDeterminant",
+            "scratchSha256": "093A35CFC1B54A93C0C1F082BE812771BBAD76BDE7DCF5DE5EFED23B8FBB9698",
+            "productionSha256": "D4FD26345AE854D8965CD9FDECCFC3C1444142CFA5DF2BEBA8FCE46238AF1CA3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalSpecializationCyclotomicDeterminant",
+            "scratchSha256": "1805458115BEAC659F0FF11F5A44D6BDAC38BA5F84F739A40B3E99926D062876",
+            "productionSha256": "8144A1C74206BD32A46CA4FE68E8D5269B92179328C9E19A317FC714C18335C8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalPrimitiveCyclotomicRealization",
+            "scratchSha256": "59974C32D7E2CAD7C651BEE1C2DBF606079489882FA3381F2EAE9FE6369AA697",
+            "productionSha256": "2DB68EC2B0D56EB33611ACF6D089347E87B62FD603EF924BB7A3842E97F65AB0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceValuationFrobeniusRoots",
+            "scratchSha256": "EFDFC7CE019847CA89442ABAD71CE06F305D545C47721432AD6AAD0FB0175DF4",
+            "productionSha256": "602565FE3CDA21BD97053B7135FF2D7C7D145E519622D99FAD75E2C46D03D115",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceValuationCyclotomicFrobenius",
+            "scratchSha256": "9BBDA3A47EE24123A4946AE7BDEED28F617F52407693DD71EB2B1067BE100E14",
+            "productionSha256": "FBCF2CFD5F3E0CF5B5FB4E54C51138BE287DADDDE666FDB2A698DB352D7EBD01",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRankTwoQuadraticTrace",
+            "scratchSha256": "7556A0CB93C3C941DBFA864A31C729A6822070684A815894465D4FF8FF9AAF0E",
+            "productionSha256": "1A2B8FF1B740B3ADAB3FE0BCFC631DE3A21A41338227DDBE7CB05B4E706CC8AE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCyclotomicFrobeniusCharpoly",
+            "scratchSha256": "B766FF6B75648BF63D1B5483139E1F1DE73660A5DFAF420EEC229379BFA5AC4F",
+            "productionSha256": "F60E904EDECAC0019C35B1F695EAF6AB88205901B5B3A40B16C04040CBB4062A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalPrimitiveFrobeniusCharpolyRealization",
+            "scratchSha256": "C04B66F95D44EF7D4C969125FEDFD752DE8CE5575DD6E7CBC21FD53D1A70C13C",
+            "productionSha256": "4C756466C46FE38123189D16F39BC566886B6A6263FF98F2BD5AF633B51FD6FD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMatrixIntertwinerCharpoly",
+            "scratchSha256": "62DC857DA3784EEBBA81D6DCFFB3F267B8800CFDAE77B35C95A39E31C77270B5",
+            "productionSha256": "F9BCBE79D163868A964BF143ECDEAE68F52D5CF8F16871718C45596BCD5C3975",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralMatrixCharpoly",
+            "scratchSha256": "B57C558CBD44B04AD9AD5B654A4CF98556AD75221496FDEC7F32AF2A280C194F",
+            "productionSha256": "603C5B5BE071575086864F7ADC7DD25937DB1D43F638B7B8C81D79BD1B145610",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRankTwoCharpolyCoefficients",
+            "scratchSha256": "9DEDB95C41ACDA86F31E4ECB8FEB067FB3F02F13A00134D94D2DCC5B86D0B39E",
+            "productionSha256": "A7348F85899BF4979FA43B2B7ED7E858E731E6564FF58134ACB6802239A9E71F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalSpecializationFrobeniusCharpoly",
+            "scratchSha256": "B83D681047FD5FD104B781B7C19F2AB0AB6FB4C4C5464F621DB47C28AB0A21A7",
+            "productionSha256": "C87992655FF94A3F55F3388BC21D49E7D272393566C409F0464118FA0219EDB6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidualFrobeniusCharpoly",
+            "scratchSha256": "FC4EB525468041C1EBB8372D9D8B83FA868605A4E0F61DF01CF28B1A191CCF1D",
+            "productionSha256": "9126A0E5D7DD2F4F43432E71F22A3615A008F1FD2D17DE5E3B92799587E0CD4A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidualInertia",
+            "scratchSha256": "5D684229AF8E7A14EEF67A4E79F571F0B51617A09D734D1D646513FCD648D9A1",
+            "productionSha256": "78FBF5AA52F6F935730BE97FE6AF115DCEB79D90B10A1141B2D55DE54E9824AE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalPrimitiveResidualFrobeniusRealization",
+            "scratchSha256": "250FA286282DDB044D4F4A928853D3C9264313D1EEA7A765E9CF66907843C5BA",
+            "productionSha256": "0D22FA32952E3C3CA4FF24BD67461E1F4AECD5740E286A6C20352759A9223C3D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalPrescribedTateSpecialization",
+            "scratchSha256": "257067B9EA1887DB976837A8F97EB86E1B1FE7BD784300FDF201278720140AE1",
+            "productionSha256": "257067B9EA1887DB976837A8F97EB86E1B1FE7BD784300FDF201278720140AE1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalPrescribedResidualFrobenius",
+            "scratchSha256": "907B67CD1372992C154FE0DF0E26D3F2E75B0970B694CF66BAB3F75A376D6F19",
+            "productionSha256": "786F436BE85795D7BD9B2F0E96874B0EEB488E697C4273118575D5AF3020A676",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 74 distinct names from 74 exhaustive scratch checks are retained: 74 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Choosing the coefficient completion and residue embedding compatible with the source prescribed algebraic-integer reduction, the arithmetic quotient and norm-local comparisons, closure of the parabolic branch, final weight twist and support comparison, arithmetic automorphy and all-weight continuation remain required. The prescribed-embedding theorem explicitly assumes a genuine finite local coefficient field and valuation extension, to be discharged by the chosen completion. 16/20; DUB-17--20 OPEN."
+  },
+  "receipt8159": {
+    "recordedUTC": "2026-10-25T23:59:29.834991+00:00",
+    "log": "logs/dubon-build-20261025-152732-013.log",
+    "sha256": "5FAB3F34E9E2184BF145AAD0B30CB5DAFFF74229E6E490E33E50F37AE975AAE6",
+    "bytes": 13305396,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8159,
+    "projectTheorems": 51801,
+    "registeredConsumers": 23640,
+    "registeredConstructions": 2214,
+    "declarations": 31800,
+    "generated": 32730,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261025_152224.log",
+    "foundationSha256": "6F63CF297175FA4C5EE91D9374F3954212EAC8DC8EEA963372D16581F0D37F65",
+    "countReconciliation": {
+      "previousTheorems": 51727,
+      "focusedTheorems": 74,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 74,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusGlobalOwnership8159.log",
+      "globalOwnershipSha256": "59C893317396F6FBCDB56CE6F717133A76C3ABCAFA9E9FC5612962016D54007B",
+      "globalOwnershipSourceSha256": "81C84A808BF719AFF296E210E822B52D9C0D2C2F60789E5F10F208F98CB97D7F",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusOwnership8159.log",
+      "ownershipSha256": "CB79C93CC9996C2E7E7175002DB8C30CF26620D7B2DE859C194ABE2EEB325D3F"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 74,
+      "scratchDistinct": 74,
+      "generatedNameRenamings": {
+        "_private.Dubon2026.SourceOriginalSpecializationFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationFrobeniusCharpoly": "_private.Dubon2026.SourceOriginalSpecializationFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimitiveResidualFrobeniusRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveResidualFrobeniusRealization": "_private.Dubon2026.SourceOriginalPrimitiveResidualFrobeniusRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalPrescribedTateSpecialization": "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+        "_private.Dubon2026.SourceOriginalSpecializationCyclotomicDeterminant.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationCyclotomicDeterminant": "_private.Dubon2026.SourceOriginalSpecializationCyclotomicDeterminant.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_1": "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_1",
+        "_private.Dubon2026.SourcePrimitiveOriginalTateGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourcePrimitiveOriginalTateGalois": "_private.Dubon2026.SourcePrimitiveOriginalTateGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_3": "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_3",
+        "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_4": "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_4",
+        "_private.Dubon2026.SourceOriginalSpecializationPrimitiveImage.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationPrimitiveImage": "_private.Dubon2026.SourceOriginalSpecializationPrimitiveImage.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_5": "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_5",
+        "_private.Dubon2026.SourceOriginalSpecializationProjector.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationProjector": "_private.Dubon2026.SourceOriginalSpecializationProjector.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrescribedResidualFrobenius": "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimitiveCyclotomicRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveCyclotomicRealization": "_private.Dubon2026.SourceOriginalPrimitiveCyclotomicRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusCharpolyRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveFrobeniusCharpolyRealization": "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusCharpolyRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrescribedTateSpecialization": "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+        "_private.Dubon2026.SourceOriginalResidualFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalResidualFrobeniusCharpoly": "_private.Dubon2026.SourceOriginalResidualFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026"
+      },
+      "productionFocused": 74,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceSpanningProjectorImage",
+            "SourceSpecializationBaseChangeIntertwiner",
+            "SourcePolynomialSpecialization",
+            "SourceOriginalSpecializationProjector",
+            "SourceOriginalSpecializationPrimitiveImage",
+            "SourcePolynomialCommutant",
+            "SourcePrimitiveOriginalTateGalois",
+            "SourceImageSpecializationPairing",
+            "SourceAlternatingRankTwoDeterminant",
+            "SourceImageSpecializationDeterminant",
+            "SourceOriginalSpecializationCyclotomicDeterminant",
+            "SourceOriginalPrimitiveCyclotomicRealization"
+          ],
+          "count": 38,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusScratchOwnership564For8159.log",
+            "sha256": "7F7D0FEC393F1DE1D7784B33428BA151B7B6B82525CAFE95A38F2985E35EDBDC",
+            "sourceSha256": "77BE46844AB738BCEEC7E7FEEF7B68793466020B6973371F114C932F31EC0EBE"
+          }
+        },
+        {
+          "modules": [
+            "SourceValuationFrobeniusRoots",
+            "SourceValuationCyclotomicFrobenius",
+            "SourceRankTwoQuadraticTrace",
+            "SourceCyclotomicFrobeniusCharpoly",
+            "SourceOriginalPrimitiveFrobeniusCharpolyRealization"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusScratchOwnership565For8159.log",
+            "sha256": "FED3411C217ECFD278377F8D5CF69DFA8EA365637BFCA15683D40F06F86B238F",
+            "sourceSha256": "45F9C2EC144C233DF669420EC478DD815DB179F4EFE97127A180C33772FCEA1B"
+          }
+        },
+        {
+          "modules": [
+            "SourceMatrixIntertwinerCharpoly",
+            "SourceIntegralMatrixCharpoly",
+            "SourceRankTwoCharpolyCoefficients",
+            "SourceOriginalSpecializationFrobeniusCharpoly",
+            "SourceOriginalResidualFrobeniusCharpoly",
+            "SourceOriginalResidualInertia",
+            "SourceOriginalPrimitiveResidualFrobeniusRealization"
+          ],
+          "count": 16,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusScratchOwnership566For8159.log",
+            "sha256": "DC02B09CF8B312595774421F5FD07F29CD47A6F2327D72CDE67A1735F587BE8A",
+            "sourceSha256": "22EC3AB1F21113A0CD10BBE4D48AD6E6071ED58F98E7620571689EC1215C1564"
+          }
+        },
+        {
+          "modules": [
+            "SourceOriginalPrescribedTateSpecialization",
+            "SourceOriginalPrescribedResidualFrobenius"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusScratchOwnership567For8159.log",
+            "sha256": "34B53B6AC06E6F815379F29AFA00711FFE0035F7639175D4DF6FFCE02E8F9010",
+            "sourceSha256": "A3EA9C8AC91493BDF125BCCB1723BDBAF5F440C3F0FCB13398DC7365350C70AB"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusOwnership8159.log",
+        "sha256": "CB79C93CC9996C2E7E7175002DB8C30CF26620D7B2DE859C194ABE2EEB325D3F",
+        "sourceSha256": "EC2CBA4E1FA01169FFD5E5209EE0186117175CD3550723D57B2B1058BAF35BE9"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-132709-230.log",
+        "sha256": "882B4124F2C1BF3DD2349B42A423CFE04CA2EA25A8EBECA3C6C09EBDD374BF94"
+      },
+      "renameEvidence": {
+        "previousDiagnostic": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-frobenius-ownership-diagnostic-8159.json",
+        "previousDiagnosticSha256": "D5770B616EC95D34A9458BB7EB9C4A62515AAE729C2E123C5BB17DF86C2907BF",
+        "reason": "Sixteen automatically named private instance declarations acquire module-derived suffixes after import qualification. Every exact one-to-one pair retains its owner. All 26 production sources are identical to their frozen scratch sources after removing imports, and every production theorem passed the focused exhaustive axiom audit. No theorem is omitted.",
+        "sourceChecks": [
+          {
+            "module": "SourceSpanningProjectorImage",
+            "scratchSha256": "2C3C503E331650506AE256D7E7F7337C2521EF0C01E5A48573EB88D1598FDDB5",
+            "productionSha256": "FEF5B22ED6472C433D13E45886C16EE681A35909C8BDE71679AABC7C78AB6846",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceSpecializationBaseChangeIntertwiner",
+            "scratchSha256": "C0E34D0BEB02DB0CECD9F33323914D71B38482A9B921C623B1E13AD5A42F148A",
+            "productionSha256": "667388A3582C4C95941CCD719EF4141D4B71B5E9A1055FCEC5F81201E623E203",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePolynomialSpecialization",
+            "scratchSha256": "B8C54629ABE3AF0FFF153247ED67BC612F479BAB1227C435DA62F6A3209B9F31",
+            "productionSha256": "11BFDD7D0BD7BEB88C3F6558EC15BF29890444390F08CDB5B3B4831CA95CD35C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalSpecializationProjector",
+            "scratchSha256": "5D99D63AC20C4AA6B66A087F6F595250478454BF0A94B88104BF74F7052E7E40",
+            "productionSha256": "17AF9DC3D11A27766334DBF024974DBE9EB0B31C49879AD687693C2098222B97",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalSpecializationPrimitiveImage",
+            "scratchSha256": "CD13E38F39C6339E52508C5A319083094347383F905CDA3C3B8A5D28FB768961",
+            "productionSha256": "5325A01B91956370ECE5B6C1651E6BD12083BBAECDB9D1C7519A6057F3BDFE5A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePolynomialCommutant",
+            "scratchSha256": "ABCADCD7E4809ED36588CF9C61403E99AE6950B6402B9A452BD30E4A9A5F438D",
+            "productionSha256": "EFE8CBF085B71534A84DDB1F83FA3A66BA7B1B19927CE415298A355D31137E75",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveOriginalTateGalois",
+            "scratchSha256": "7051528E351BE9E5E50A7B40B1CA9ED1C9F2DB60ECEE4B2A61EDF4A60C2167CF",
+            "productionSha256": "5AF9BFB581873A44B94C0CE8506877331ED27CDD7D4AC75BB38883D6EA921A31",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceImageSpecializationPairing",
+            "scratchSha256": "D3D871713D1ACED45E136FE64DD73B0A4201386C157BBD4DF032655E663EFE65",
+            "productionSha256": "ECB80A78694946A2A4BCFC8FE5827B5F5F37E715FB0E6E4740FB4D31C33680BE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceAlternatingRankTwoDeterminant",
+            "scratchSha256": "1CB186BDEB04A7457E1B7220EA81BDB271F71A71ED6E25AF579DB16DC4DAF380",
+            "productionSha256": "2E90F6EC13B3EE6CD23C71ABA01DF9A3488419C4268619EE6EBD1FF958EA2F6F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceImageSpecializationDeterminant",
+            "scratchSha256": "093A35CFC1B54A93C0C1F082BE812771BBAD76BDE7DCF5DE5EFED23B8FBB9698",
+            "productionSha256": "D4FD26345AE854D8965CD9FDECCFC3C1444142CFA5DF2BEBA8FCE46238AF1CA3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalSpecializationCyclotomicDeterminant",
+            "scratchSha256": "1805458115BEAC659F0FF11F5A44D6BDAC38BA5F84F739A40B3E99926D062876",
+            "productionSha256": "8144A1C74206BD32A46CA4FE68E8D5269B92179328C9E19A317FC714C18335C8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalPrimitiveCyclotomicRealization",
+            "scratchSha256": "59974C32D7E2CAD7C651BEE1C2DBF606079489882FA3381F2EAE9FE6369AA697",
+            "productionSha256": "2DB68EC2B0D56EB33611ACF6D089347E87B62FD603EF924BB7A3842E97F65AB0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceValuationFrobeniusRoots",
+            "scratchSha256": "EFDFC7CE019847CA89442ABAD71CE06F305D545C47721432AD6AAD0FB0175DF4",
+            "productionSha256": "602565FE3CDA21BD97053B7135FF2D7C7D145E519622D99FAD75E2C46D03D115",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceValuationCyclotomicFrobenius",
+            "scratchSha256": "9BBDA3A47EE24123A4946AE7BDEED28F617F52407693DD71EB2B1067BE100E14",
+            "productionSha256": "FBCF2CFD5F3E0CF5B5FB4E54C51138BE287DADDDE666FDB2A698DB352D7EBD01",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRankTwoQuadraticTrace",
+            "scratchSha256": "7556A0CB93C3C941DBFA864A31C729A6822070684A815894465D4FF8FF9AAF0E",
+            "productionSha256": "1A2B8FF1B740B3ADAB3FE0BCFC631DE3A21A41338227DDBE7CB05B4E706CC8AE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCyclotomicFrobeniusCharpoly",
+            "scratchSha256": "B766FF6B75648BF63D1B5483139E1F1DE73660A5DFAF420EEC229379BFA5AC4F",
+            "productionSha256": "F60E904EDECAC0019C35B1F695EAF6AB88205901B5B3A40B16C04040CBB4062A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalPrimitiveFrobeniusCharpolyRealization",
+            "scratchSha256": "C04B66F95D44EF7D4C969125FEDFD752DE8CE5575DD6E7CBC21FD53D1A70C13C",
+            "productionSha256": "4C756466C46FE38123189D16F39BC566886B6A6263FF98F2BD5AF633B51FD6FD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceMatrixIntertwinerCharpoly",
+            "scratchSha256": "62DC857DA3784EEBBA81D6DCFFB3F267B8800CFDAE77B35C95A39E31C77270B5",
+            "productionSha256": "F9BCBE79D163868A964BF143ECDEAE68F52D5CF8F16871718C45596BCD5C3975",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralMatrixCharpoly",
+            "scratchSha256": "B57C558CBD44B04AD9AD5B654A4CF98556AD75221496FDEC7F32AF2A280C194F",
+            "productionSha256": "603C5B5BE071575086864F7ADC7DD25937DB1D43F638B7B8C81D79BD1B145610",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceRankTwoCharpolyCoefficients",
+            "scratchSha256": "9DEDB95C41ACDA86F31E4ECB8FEB067FB3F02F13A00134D94D2DCC5B86D0B39E",
+            "productionSha256": "A7348F85899BF4979FA43B2B7ED7E858E731E6564FF58134ACB6802239A9E71F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalSpecializationFrobeniusCharpoly",
+            "scratchSha256": "B83D681047FD5FD104B781B7C19F2AB0AB6FB4C4C5464F621DB47C28AB0A21A7",
+            "productionSha256": "C87992655FF94A3F55F3388BC21D49E7D272393566C409F0464118FA0219EDB6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidualFrobeniusCharpoly",
+            "scratchSha256": "FC4EB525468041C1EBB8372D9D8B83FA868605A4E0F61DF01CF28B1A191CCF1D",
+            "productionSha256": "9126A0E5D7DD2F4F43432E71F22A3615A008F1FD2D17DE5E3B92799587E0CD4A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalResidualInertia",
+            "scratchSha256": "5D684229AF8E7A14EEF67A4E79F571F0B51617A09D734D1D646513FCD648D9A1",
+            "productionSha256": "78FBF5AA52F6F935730BE97FE6AF115DCEB79D90B10A1141B2D55DE54E9824AE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalPrimitiveResidualFrobeniusRealization",
+            "scratchSha256": "250FA286282DDB044D4F4A928853D3C9264313D1EEA7A765E9CF66907843C5BA",
+            "productionSha256": "0D22FA32952E3C3CA4FF24BD67461E1F4AECD5740E286A6C20352759A9223C3D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalPrescribedTateSpecialization",
+            "scratchSha256": "257067B9EA1887DB976837A8F97EB86E1B1FE7BD784300FDF201278720140AE1",
+            "productionSha256": "257067B9EA1887DB976837A8F97EB86E1B1FE7BD784300FDF201278720140AE1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalPrescribedResidualFrobenius",
+            "scratchSha256": "907B67CD1372992C154FE0DF0E26D3F2E75B0970B694CF66BAB3F75A376D6F19",
+            "productionSha256": "786F436BE85795D7BD9B2F0E96874B0EEB488E697C4273118575D5AF3020A676",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 74 distinct names from 74 exhaustive scratch checks are retained: 74 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Choosing the coefficient completion and residue embedding compatible with the source prescribed algebraic-integer reduction, the arithmetic quotient and norm-local comparisons, closure of the parabolic branch, final weight twist and support comparison, arithmetic automorphy and all-weight continuation remain required. The prescribed-embedding theorem explicitly assumes a genuine finite local coefficient field and valuation extension, to be discharged by the chosen completion. 16/20; DUB-17--20 OPEN."
+  }
+}

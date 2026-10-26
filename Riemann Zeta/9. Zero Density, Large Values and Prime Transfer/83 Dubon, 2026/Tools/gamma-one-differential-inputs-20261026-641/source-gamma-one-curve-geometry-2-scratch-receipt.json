@@ -1,0 +1,83 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T11:22:57.019694+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneCurveGeometry",
+    "SourceGammaOneCurveInputs"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCurveGeometry.lean",
+      "sha256": "368C21200022558CE0C24350053DE6BDB70EABAD0DE89EC44ABFB6E5E1F7D0E4",
+      "oleanSha256": "E91050E6321FF2D5AB53FD74AEA578A9CA5960E2D7631B5790B739068C1379DF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCurveInputs.lean",
+      "sha256": "B7E660DE474A944C5CA4BC589C419DBBC0B446D2274E137F12CC689B2A65D068",
+      "oleanSha256": "2A06B31DCDD8EA64D144A1971FEE40BB41574D34ED56E08671F5E26EF892CA87"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.D_jCoordinateOver_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_diffQExp_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_dCoordGenerates",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_localDifferentials",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_isCurveOver",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_hasCanonicalDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_diffQExp_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_localDifferentials",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_isCurveOver",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hasCanonicalDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_diffQExp_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_localDifferentials",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_isCurveOver",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_hasCanonicalDivisor"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.D_jCoordinateOver_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_diffQExp_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_dCoordGenerates",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_localDifferentials",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_isCurveOver",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_hasCanonicalDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_diffQExp_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_localDifferentials",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_isCurveOver",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hasCanonicalDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_diffQExp_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_localDifferentials",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_isCurveOver",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_hasCanonicalDivisor"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCurveGeometryAudit2.log",
+  "logSha256": "0F86F35F484325BDB7D32BE8162EACE2559DD6DD2BD0C093AD42310B3126814B",
+  "auditSha256": "DEABC4FD50EE99F73D5BB882700E47D830FE661DFDFF16AB1DC336AB76597EE9",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 20,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 22,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCurveGeometryDependencyAudit2.log",
+  "dependencyAuditSha256": "D78A32D4E2A37D7CFC8F02181A02B53916BC2C51667B6F6170492C44DF04790D",
+  "dependencyAuditSourceSha256": "1B5743514D49A9E708DCA6EF9038D169CD76957F2EB474270106E2AFDE642EDB",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_diffQExp_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_localDifferentials",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_isCurveOver",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hasCanonicalDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_diffQExp_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_localDifferentials",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_isCurveOver",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_hasCanonicalDivisor"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of finite Gamma1 Hecke characters -> Picard/H1 comparison -> actual Gamma1 curve and differential realization.",
+  "discharged": "For the actual Gamma1(M) curve and Gamma1(M) intersect Gamma0(d*M) Hecke curve at positive levels, differential q-expansion is injective, every local coordinate differential generates and local differentials are finite, and over algebraically closed characteristic-zero coefficients the actual fields satisfy IsCurveOver and HasCanonicalDivisor. None of these is left as a hypothesis in the actual-level consumers.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Regular differentials still require actual cusp-form comparison and rational/base-change realization; Picard/H1 and diamond compatibility, full/parabolic comparison, arithmetic finite-character realization, original all-weight association, local/image/regularity, automorphy and higher continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-curve-geometry-2-reuse-review-20261026.json",
+  "reuseReviewSha256": "B313470761608ECB49495158480B04B9098132572A5A2BC356027EBE699C52CA",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

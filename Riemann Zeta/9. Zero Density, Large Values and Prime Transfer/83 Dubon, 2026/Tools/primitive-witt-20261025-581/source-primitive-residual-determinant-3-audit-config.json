@@ -1,0 +1,32 @@
+{
+  "modules": [
+    "SourceArithmeticCharacterFrobeniusEquality",
+    "SourceResidualCyclotomicDeterminant",
+    "SourcePrimitiveResidualGlobalDeterminant"
+  ],
+  "theorems": [
+    "Dubon2026.sourceArithmeticCharacters_eq_of_frobenius",
+    "Dubon2026.sourceArithmetic_determinant_eq_cyclotomic_of_frobenius",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_cyclotomicResidualGalois_charP"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.sourceArithmeticCharacters_eq_of_frobenius",
+    "Dubon2026.sourceArithmetic_determinant_eq_cyclotomic_of_frobenius",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_cyclotomicResidualGalois_charP"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceArithmeticCharacters_eq_of_frobenius",
+    "Dubon2026.sourceArithmetic_determinant_eq_cyclotomic_of_frobenius",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_cyclotomicResidualGalois_charP",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_residualGalois_charP",
+    "Dubon2026.continuous_rational_galois_exists_frobenius_prime",
+    "Dubon2026.rationalPrimeOriginalNorm_exists_frobenius",
+    "Dubon2026.rationalArithmetic_original_residue_frobenius_class",
+    "Dubon2026.sourceArithmeticCyclotomicUnitCharacter_frobenius"
+  ],
+  "roots": [
+    "Dubon2026.sourcePrimitive_exists_originalSupport_cyclotomicResidualGalois_charP"
+  ],
+  "separatelyAxiomChecked": []
+}

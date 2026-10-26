@@ -1,0 +1,21 @@
+import SourceBinaryH1ModulusKernel
+import SourceBinaryPermutationHeckeWords
+import SourceBinaryPermutationOperatorKernel
+import SourceBinaryPermutationHeckeFinite
+import SourceBinaryPermutationOperatorDescent
+import SourcePrimitivePermutationH1HeckeCharacter
+import SourcePrimitivePermutationH1Realization
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceBinaryH1ModulusKernel, `SourceBinaryPermutationHeckeWords, `SourceBinaryPermutationOperatorKernel, `SourceBinaryPermutationHeckeFinite, `SourceBinaryPermutationOperatorDescent, `SourcePrimitivePermutationH1HeckeCharacter, `SourcePrimitivePermutationH1Realization]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

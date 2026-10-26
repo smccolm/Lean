@@ -1,0 +1,62 @@
+
+section
+
+/-- The actual prime-power coefficient squares have exactly the symmetric-square denominator and numerator 1+p^(-s). -/
+theorem primitive_square_local_euler_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 0 ≤ k) {p : ℕ} (hp : Nat.Prime p) (hpQ : ¬p ∣ Q)
+    {s : ℂ} (hs : 1 < s.re) :
+    (primitiveSymmetricEulerPolynomial f p 2).eval ((p : ℂ) ^ (-s)) *
+      (∑' r : ℕ, ((‖normalizedCuspCoefficients f.toCuspForm (p ^ r)‖ ^ 2 : ℝ) : ℂ) *
+        ((p : ℂ) ^ (-s)) ^ r) = 1 + (p : ℂ) ^ (-s) :=
+  primitive_good_square_euler_identity f hk hp hpQ hs
+
+/-- The literal symmetric-square prime product and original square Dirichlet series satisfy the exact global identity with all actual bad-prime factors. -/
+theorem primitive_second_rankin_global_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 0 ≤ k) {s : ℂ} (hs : 1 < s.re) :
+    (∏' v : Nat.Primes × Fin 3,
+      (1 - primitiveSymmetricSpectralRoots f 2 v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹ *
+        DirichletCharacter.LFunctionTrivChar Q s =
+    cuspRankinSeries f.toCuspForm s *
+      (∏ p ∈ ramifiedPrimeSet Q,
+        (1 - ((‖normalizedCuspCoefficients f.toCuspForm p‖ ^ 2 : ℝ) : ℂ) * (((p : ℕ) : ℂ) ^ (-s)))) *
+          DirichletCharacter.LFunctionTrivChar Q (2 * s) :=
+  primitive_second_rankin_global_identity f hk hs
+
+/-- The actual second symmetric Euler product has proved continuation across Re(s)=1 and is nonzero in its convergence region and at the real boundary point one. -/
+theorem primitive_second_holomorphic_euler_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    ∃ F : ℂ → ℂ, AnalyticOnNhd ℂ F {s | 1 ≤ s.re} ∧
+      Set.EqOn F (fun s => (∏' v : Nat.Primes × Fin 3,
+        (1 - primitiveSymmetricSpectralRoots f 2 v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+        {s | 1 < s.re} ∧ F 1 ≠ 0 ∧
+      ∀ s : ℂ, 1 < s.re → F s ≠ 0 := by
+  refine ⟨primitiveSecondContinuation f, primitiveSecondContinuation_analyticOnNhd f (by omega),
+    fun _ hs => primitiveSecondContinuation_eq_symmetric f (by omega) hs,
+    primitiveSecondContinuation_one_ne_zero f hk, fun s hs => ?_⟩
+  rw [primitiveSecondContinuation_eq_symmetric f (by omega) hs]
+  exact primitive_second_symmetric_ne_zero f (by omega) hs
+
+/-- The actual Rankin remainder gives the genuine pointwise coefficient bound and a constant-free bound at every ramified prime. -/
+theorem primitive_rankin_pointwise_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    (∃ B : ℝ, 0 < B ∧ ∀ n : ℕ, 1 ≤ n →
+      ‖normalizedCuspCoefficients f.toCuspForm n‖ ^ 2 ≤ B * (n : ℝ) ^ (3 / 5 : ℝ)) ∧
+    ∀ p : ℕ, Nat.Prime p → p ∣ Q →
+      ‖normalizedCuspCoefficients f.toCuspForm p‖ ^ 2 ≤ (p : ℝ) ^ (3 / 5 : ℝ) :=
+  ⟨exists_normalized_cusp_coefficient_three_fifths f.toCuspForm hk,
+    fun _ hp hpQ => primitive_bad_coefficient_norm_sq_le_three_fifths f hk hp hpQ⟩
+
+/-- The actual symmetric-square value at one has the true Petersson residue and literal finite Euler corrections, and is proved nonzero. -/
+theorem primitive_second_residue_value_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    primitiveSecondContinuation f 1 =
+      (cuspRankinResidue f.toCuspForm : ℂ) *
+        (∏ p ∈ ramifiedPrimeSet Q,
+          (1 - ((‖normalizedCuspCoefficients f.toCuspForm p‖ ^ 2 : ℝ) : ℂ) * (((p : ℕ) : ℂ) ^ (-(1 : ℂ))))) *
+            DirichletCharacter.LFunctionTrivChar Q 2 /
+              (∏ p ∈ Q.primeFactors, (1 - (p : ℂ)⁻¹)) ∧
+    primitiveSecondContinuation f 1 ≠ 0 :=
+  ⟨primitiveSecondContinuation_one f (by omega), primitiveSecondContinuation_one_ne_zero f hk⟩
+
+end
+

@@ -1,0 +1,18 @@
+
+### Genuine symmetric-square Rankin identity, continuation and value at one — 7 October 2026
+
+The actual good-prime Hecke recurrence implies a cubic recurrence for the squares of its real normalized prime-power coefficients. Summing the genuinely convergent local series gives exactly (1+z)/((1-alpha^2*z)(1-z)(1-beta^2*z)), z=p^(-s), with the actual Satake roots alpha*beta=1. The previously proved normalized square-series convergence controls the order-two spectral perturbations and proves the literal second symmetric Euler product converges and is nonzero on Re(s)>1. This uses the real cusp coefficients, without assuming unit Satake roots or Deligne.
+
+The genuine coprime Hecke multiplicativity gives the original Rankin square-series Euler product. Its ramified factors are precisely (1-|lambda_f(p)|^2*p^(-s))^(-1). Removing these finitely many factors and comparing actual prime products proves
+
+`Sym2_f(s) * L(1_Q,s) = D_f(s) * C_f(s) * L(1_Q,2s)`,
+
+where D_f is the original normalized square series and C_f is the literal finite ramified correction. This identity retains the exact principal-character modulus and both arguments; no zeta factor is silently substituted at nontrivial level.
+
+The existing actual Rankin numerator R_f(s)=(s-1)D_f(s) is holomorphic on Re(s)>1/2. Pinned Mathlib proves the principal pole numerator H_Q(s)=(s-1)L(1_Q,s), with its correct value at one, is entire. Its Dirichlet nonvanishing theorem and exact value at one show H_Q is nonzero on Re(s)>=1. Consequently the constructed function R_f(s)*C_f(s)*L(1_Q,2s)/H_Q(s) is holomorphic on a neighborhood of that closed half-plane and agrees with the literal Sym2 Euler product on Re(s)>1.
+
+Consecutive actual square partial sums in the already proved general-level Rankin three-fifths remainder give |lambda_f(n)|^2 <= B_f*n^(3/5). The exact ramified prime-power law removes B_f by taking arbitrarily large powers, giving |lambda_f(p)|^2 <= p^(3/5) for p dividing Q. Thus C_f is nonzero on Re(s)>3/5. The constructed Sym2 value at one is exactly the positive Petersson residue times C_f(1)*L(1_Q,2), divided by the finite principal Euler residue product. Every factor is proved nonzero; hence Sym2_f(1) is proved nonzero without Deligne.
+
+Production files: [ThirdOrderRecurrenceSeries](Extension/Dubon2026/ThirdOrderRecurrenceSeries.lean), [PrimitiveSecondSpectralConvergence](Extension/Dubon2026/PrimitiveSecondSpectralConvergence.lean), [PrimitiveSquareEulerFactors](Extension/Dubon2026/PrimitiveSquareEulerFactors.lean), [PrimitiveSecondSymmetricL](Extension/Dubon2026/PrimitiveSecondSymmetricL.lean), [PrimitiveSquareEulerProduct](Extension/Dubon2026/PrimitiveSquareEulerProduct.lean), [PrimitiveSquareIncompleteProduct](Extension/Dubon2026/PrimitiveSquareIncompleteProduct.lean), [PrimitiveSecondRankinIdentity](Extension/Dubon2026/PrimitiveSecondRankinIdentity.lean), [PrimitiveSecondContinuation](Extension/Dubon2026/PrimitiveSecondContinuation.lean), [CuspPointwiseRankinBound](Extension/Dubon2026/CuspPointwiseRankinBound.lean), [PrimitiveSecondValueOne](Extension/Dubon2026/PrimitiveSecondValueOne.lean). Five exact consumers display original prime-power squares, infinite Euler products, finite corrections, coefficient bounds and the exact residue value.
+
+Holomorphic continuation and nonvanishing at s=1 do not establish nonvanishing at every other point on Re(s)=1. That obligation for orders one and two, higher-order continuation/nonvanishing, actual good-prime Deligne purity and unconditional non-CM Sato–Tate remain required. DUB-17–20 remain OPEN; 16/20 gates remain accepted. Earlier milestones retain their historical scope.

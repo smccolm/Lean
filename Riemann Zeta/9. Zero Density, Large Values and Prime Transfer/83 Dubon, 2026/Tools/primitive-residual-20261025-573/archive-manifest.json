@@ -1,0 +1,469 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-association-promotion-route-573.json",
+      "path": "Tools/primitive-residual-20261025-573/primitive-residual-association-promotion-route-573.json",
+      "sha256": "EA7BCFEC55C2F6428B8182263F82EF65A2955587B9C719F94746F546AC0683FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-prescribed-completion-11-scratch-receipt.json",
+      "path": "Tools/primitive-residual-20261025-573/source-original-prescribed-completion-11-scratch-receipt.json",
+      "sha256": "85897B04E83F43398B1719464DA526036996B8E2CB1F9070D6A1D7869D766C91"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-arithmetic-residual-11-scratch-receipt.json",
+      "path": "Tools/primitive-residual-20261025-573/source-original-arithmetic-residual-11-scratch-receipt.json",
+      "sha256": "23E3F0ECE0916F6867C5C78572F5B4E21543AA8DF1A75F59911C7ABCFAD35803"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-residual-galois-12-scratch-receipt.json",
+      "path": "Tools/primitive-residual-20261025-573/source-primitive-residual-galois-12-scratch-receipt.json",
+      "sha256": "EC9B028F14F9E7893497B95CAAAF2F263D228554811405FC0A6A3434E97B4DA8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-route-568b.json",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-route-568b.json",
+      "sha256": "62F67398BF1458B12D9878D55D1A7FE86156875C855D9AF6345C14F3DA85323E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\arithmetic-residual-route-570.json",
+      "path": "Tools/primitive-residual-20261025-573/arithmetic-residual-route-570.json",
+      "sha256": "C64DA3E77D1631EBDCEC8D67AB20BAE61EA0680FBFDAC5347F88CFCBB38816E0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-galois-route-571b.json",
+      "path": "Tools/primitive-residual-20261025-573/primitive-residual-galois-route-571b.json",
+      "sha256": "733D4654EB555F4185DFEDB50B40BA05E621C612B6EE48C7DFFC087B1437B38B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_prescribed_completion_audit_568.py",
+      "path": "Tools/primitive-residual-20261025-573/prepare_prescribed_completion_audit_568.py",
+      "sha256": "372D17BB2C8248C09DB0B94AB43975A81CD52AF2C9D5FD1F9A0C902BE37BA039"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_prescribed_completion_audit_568b.py",
+      "path": "Tools/primitive-residual-20261025-573/prepare_prescribed_completion_audit_568b.py",
+      "sha256": "483AFF5CDC96E1CF403FC16D321C985804492942EE6F3E9A8110391C854FA30A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\repair_prescribed_completion_documentation_568b.py",
+      "path": "Tools/primitive-residual-20261025-573/repair_prescribed_completion_documentation_568b.py",
+      "sha256": "EBAEC31B341CA68F1ECBD764AF2531BD4513F25AD7E30A7C339234814DDFAA18"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_prescribed_completion_568.py",
+      "path": "Tools/primitive-residual-20261025-573/record_prescribed_completion_568.py",
+      "sha256": "3294195DCDB87DE197B1E5DEF2DAFD08241A39BC3D4423D0C7B444D0E0AB10AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-route-568.json",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-route-568.json",
+      "sha256": "76D51156952910F408E6E36D9336C82074AC2FDF3539EA6D5F9EAC699B3B4865"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-documentation-successor-568b.json",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-documentation-successor-568b.json",
+      "sha256": "763BA41D7B2D7287AFEC70C98E1FD65810B90D54DC14243ADFE225DF9A9419FB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedCompletionAudit11.lean",
+      "path": "Tools/primitive-residual-20261025-573/SourceOriginalPrescribedCompletionAudit11.lean.txt",
+      "sha256": "7BC435B92F2E7E585B2528D905296967C446B21C011E83E585D9BE6B9E625ECE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedCompletionAudit11.log",
+      "path": "Tools/primitive-residual-20261025-573/SourceOriginalPrescribedCompletionAudit11.log",
+      "sha256": "8162DCF1F633087076EC0C6B556EE3C9E822358FD03789EC60E8F92522359448"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedCompletionAudit11.exit",
+      "path": "Tools/primitive-residual-20261025-573/SourceOriginalPrescribedCompletionAudit11.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedCompletionDependencyAudit11.lean",
+      "path": "Tools/primitive-residual-20261025-573/SourceOriginalPrescribedCompletionDependencyAudit11.lean.txt",
+      "sha256": "B125489D14F5CF0A27424C28AB8810357F97E5406843C84EC954172295669540"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_arithmetic_residual_audit_570.py",
+      "path": "Tools/primitive-residual-20261025-573/prepare_arithmetic_residual_audit_570.py",
+      "sha256": "D1E90245684E94716A8B89FC8058F47E2D1201E9D21C9574B0CDDEA70A61151C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_arithmetic_residual_570.py",
+      "path": "Tools/primitive-residual-20261025-573/record_arithmetic_residual_570.py",
+      "sha256": "3BEEB8DBCE49B2E5F73CBD4D88B88A4777F959BEB8D9044C6F7529A97E638948"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_residual_galois_audit_571.py",
+      "path": "Tools/primitive-residual-20261025-573/prepare_primitive_residual_galois_audit_571.py",
+      "sha256": "3002C5EDDF25397E894135A30DCA94332A40E102FD368B80ED24D5B1BB16BF15"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_residual_galois_571.py",
+      "path": "Tools/primitive-residual-20261025-573/record_primitive_residual_galois_571.py",
+      "sha256": "554D56EA6F7032384BCF7912CC996048BC844171A4C537F385E995DD655E2664"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_residual_galois_571b.py",
+      "path": "Tools/primitive-residual-20261025-573/record_primitive_residual_galois_571b.py",
+      "sha256": "0CD6C506B897918C061BF9A2B02B8ED73E4E63B401561ED7D2F14A5BE0EEA775"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-galois-route-571.json",
+      "path": "Tools/primitive-residual-20261025-573/primitive-residual-galois-route-571.json",
+      "sha256": "1F34F5B1BFB08D90F6FD9C45C14B4C9E60C982A023373DADD0DFC29DB4B5A578"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-galois-route-successor-571b.json",
+      "path": "Tools/primitive-residual-20261025-573/primitive-residual-galois-route-successor-571b.json",
+      "sha256": "572246ADE813EA1EB961BA3799C858E0005C3586BC3FFCC52D9ED053CFD6EA83"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-prescribed-completion-11-audit-config.json",
+      "path": "Tools/primitive-residual-20261025-573/source-original-prescribed-completion-11-audit-config.json",
+      "sha256": "5025129D47D894194CFE8F5912F5C831CEFC509533C10807E4B1593F65968125"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-prescribed-completion-11-audit-config-568b.json",
+      "path": "Tools/primitive-residual-20261025-573/source-original-prescribed-completion-11-audit-config-568b.json",
+      "sha256": "0216BA4491BB47C2F134E5F103A2EF163A8FB27B688076790B36E4F362CBC90E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-arithmetic-residual-11-audit-config.json",
+      "path": "Tools/primitive-residual-20261025-573/source-original-arithmetic-residual-11-audit-config.json",
+      "sha256": "70B822453EF222848AF74D5E8B3C280E45F97A4099CA59D596C051C4C349BF6B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-residual-galois-12-audit-config.json",
+      "path": "Tools/primitive-residual-20261025-573/source-primitive-residual-galois-12-audit-config.json",
+      "sha256": "C52BEC1C368D48DB86D643D0F4AA818BFE157A871C0B9C09AFC0DC11EBB29CEF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceAdicCoefficientResidueComparison.exit",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceAdicCoefficientResidueComparison.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceAdicCoefficientResidueComparison.lean.txt",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceAdicCoefficientResidueComparison.lean.txt",
+      "sha256": "0BDED178D5BE8124E974B40D631C1EB68EE775C01952BC8881BC8676B3D5B398"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceAdicCoefficientResidueComparison.log",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceAdicCoefficientResidueComparison.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceAdicCoefficientResidueComparison.olean",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceAdicCoefficientResidueComparison.olean",
+      "sha256": "933A73FF780098186027161A922F516E9A6D0BEAD9077BD95EE3F2F17B23D625"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceOriginalAlgebraicIntegerResidual.exit",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceOriginalAlgebraicIntegerResidual.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceOriginalAlgebraicIntegerResidual.lean.txt",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceOriginalAlgebraicIntegerResidual.lean.txt",
+      "sha256": "586C53C9FD3C5686D5537D8262B98D4717E8BF1A7A2EB752F7987BB79329F864"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceOriginalAlgebraicIntegerResidual.log",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceOriginalAlgebraicIntegerResidual.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceOriginalAlgebraicIntegerResidual.olean",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceOriginalAlgebraicIntegerResidual.olean",
+      "sha256": "D4943945DDA862A5806D6F470C824A71858C11CB26F92DFBF2B5D36EF64CBB5C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceOriginalExactReductionResidual.exit",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceOriginalExactReductionResidual.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceOriginalExactReductionResidual.lean.txt",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceOriginalExactReductionResidual.lean.txt",
+      "sha256": "4487D0E4F527DDCCC8CE020FDFB2A5931D25CB1F9F7E6AA5901E8B101A12F58F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceOriginalExactReductionResidual.log",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceOriginalExactReductionResidual.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceOriginalExactReductionResidual.olean",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceOriginalExactReductionResidual.olean",
+      "sha256": "0FFF482C449BE7C2729229046E9B1FEE3629E25C5A7F0CE064D393318F541C83"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceOriginalPrescribedReductionResidual.exit",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceOriginalPrescribedReductionResidual.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceOriginalPrescribedReductionResidual.lean.txt",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceOriginalPrescribedReductionResidual.lean.txt",
+      "sha256": "9C91569C6F1DEF22CB77522855ADA5371637D4B0076930413CF7C89736069E35"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceOriginalPrescribedReductionResidual.log",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceOriginalPrescribedReductionResidual.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceOriginalPrescribedReductionResidual.olean",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceOriginalPrescribedReductionResidual.olean",
+      "sha256": "656E85831D00B874ABB01C89E0586725E18A529BCAF5F5B8C19C882AD020CC09"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourcePadicCompletionValuation.exit",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourcePadicCompletionValuation.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourcePadicCompletionValuation.lean.txt",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourcePadicCompletionValuation.lean.txt",
+      "sha256": "146F370D05F4B3AF9AD4E7A1F34C08523B2ED950998531E20451F5301480FB4F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourcePadicCompletionValuation.log",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourcePadicCompletionValuation.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourcePadicCompletionValuation.olean",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourcePadicCompletionValuation.olean",
+      "sha256": "41E661E21F3F9A3FB37CA52DAD72EBB7776BC28A0F0F90C13CD2D9E1A085FBD1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourcePrescribedCompletionResidue.exit",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourcePrescribedCompletionResidue.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourcePrescribedCompletionResidue.lean.txt",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourcePrescribedCompletionResidue.lean.txt",
+      "sha256": "CF0C981336EB116D240C9B955D5D10946749B5043042D7292DF60FA0A07DB7E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourcePrescribedCompletionResidue.log",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourcePrescribedCompletionResidue.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourcePrescribedCompletionResidue.olean",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourcePrescribedCompletionResidue.olean",
+      "sha256": "414BD28D918FE62D61FA33F46FBF14DBF41532508207F2BA7D767FEA382FA656"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourcePrescribedReductionPrime.exit",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourcePrescribedReductionPrime.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourcePrescribedReductionPrime.lean.txt",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourcePrescribedReductionPrime.lean.txt",
+      "sha256": "9B65D28D597AB21C8932A5D15AA76B56C03E4C4D311A41B82418682715A7A871"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourcePrescribedReductionPrime.log",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourcePrescribedReductionPrime.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourcePrescribedReductionPrime.olean",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourcePrescribedReductionPrime.olean",
+      "sha256": "269E53FCD442721431C38F6EE51666748B99878C703AC635DEFAE08324FC46A6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceReductionCompletionBasePrime.exit",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceReductionCompletionBasePrime.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceReductionCompletionBasePrime.lean.txt",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceReductionCompletionBasePrime.lean.txt",
+      "sha256": "150F99A5B9DC276596D798AD99B73248BAA48950143948BE7539CF7BC6CAFBE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceReductionCompletionBasePrime.log",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceReductionCompletionBasePrime.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceReductionCompletionBasePrime.olean",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceReductionCompletionBasePrime.olean",
+      "sha256": "578EA92163B9D797D4FCDF11C7F6A6895C939618F9DD113433C896D5F2B0980C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceReductionCompletionFinite.exit",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceReductionCompletionFinite.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceReductionCompletionFinite.lean.txt",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceReductionCompletionFinite.lean.txt",
+      "sha256": "5C166ABF639EEBE07C95ABE09686D28AA1C15F26FF4537368C6E575C2AE686C2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceReductionCompletionFinite.log",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceReductionCompletionFinite.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceReductionCompletionFinite.olean",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceReductionCompletionFinite.olean",
+      "sha256": "246C014FCB1384C57A32824E1D6D85A1773CCFECB343493C1D5AF275412D2EB0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceReductionCompletionLocalStructures.exit",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceReductionCompletionLocalStructures.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceReductionCompletionLocalStructures.lean.txt",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceReductionCompletionLocalStructures.lean.txt",
+      "sha256": "45E6ED484C161E8946A9A87A4973DF6722BBB7C4462D6D65292C998F87A057EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceReductionCompletionLocalStructures.log",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceReductionCompletionLocalStructures.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceReductionCompletionLocalStructures.olean",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceReductionCompletionLocalStructures.olean",
+      "sha256": "5A0473804776547D35DC88CDB9DBB9ADCD661C1ACEC246C063A9C744C4791C3B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceReductionCompletionPadicMap.exit",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceReductionCompletionPadicMap.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceReductionCompletionPadicMap.lean.txt",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceReductionCompletionPadicMap.lean.txt",
+      "sha256": "0832AE543A197FF8136018D8D42FAA074161639E2B14DEBCC4C97D6296C85BE5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceReductionCompletionPadicMap.log",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceReductionCompletionPadicMap.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-568-pre-doc-audit\\SourceReductionCompletionPadicMap.olean",
+      "path": "Tools/primitive-residual-20261025-573/prescribed-completion-568-pre-doc-audit/SourceReductionCompletionPadicMap.olean",
+      "sha256": "5FA414CA45F81BFCCA3BB7200D20E61D337AB74A250CFDB4C80209202F9609B3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-prescribed-completion-11-reuse-review-20261025.json",
+      "path": "Tools/primitive-residual-20261025-573/source-original-prescribed-completion-11-reuse-review-20261025.json",
+      "sha256": "A86F2FAB06C2E42303CEE6D0C62C62BF9F37698A8F87F45FD58BF62BF4E39300"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-arithmetic-residual-11-reuse-review-20261025.json",
+      "path": "Tools/primitive-residual-20261025-573/source-original-arithmetic-residual-11-reuse-review-20261025.json",
+      "sha256": "B7FDF683DA1E5B792190684E9B4C58D2835555C35FFF000D2688E7626D18F44B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-residual-galois-12-reuse-review-20261025.json",
+      "path": "Tools/primitive-residual-20261025-573/source-primitive-residual-galois-12-reuse-review-20261025.json",
+      "sha256": "899A2837C84D2312DD94E53A7644B74AA26064EA214C5D39FE45BB5E3B923951"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedCompletionAudit11b.log",
+      "path": "Tools/primitive-residual-20261025-573/SourceOriginalPrescribedCompletionAudit11b.log",
+      "sha256": "A7CB73D8099F58A40D8355E4C3395B1C22862CD0CAA94D4943A50417E2F09F7D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedCompletionAudit11b.lean",
+      "path": "Tools/primitive-residual-20261025-573/SourceOriginalPrescribedCompletionAudit11b.lean.txt",
+      "sha256": "7BC435B92F2E7E585B2528D905296967C446B21C011E83E585D9BE6B9E625ECE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedCompletionAudit11b.exit",
+      "path": "Tools/primitive-residual-20261025-573/SourceOriginalPrescribedCompletionAudit11b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedCompletionDependencyAudit11b.log",
+      "path": "Tools/primitive-residual-20261025-573/SourceOriginalPrescribedCompletionDependencyAudit11b.log",
+      "sha256": "693B701CEB42068955F2C731EF2FBDB2416EEFA4CC3642C46263B98A51930454"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedCompletionDependencyAudit11b.lean",
+      "path": "Tools/primitive-residual-20261025-573/SourceOriginalPrescribedCompletionDependencyAudit11b.lean.txt",
+      "sha256": "B125489D14F5CF0A27424C28AB8810357F97E5406843C84EC954172295669540"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedCompletionDependencyAudit11b.exit",
+      "path": "Tools/primitive-residual-20261025-573/SourceOriginalPrescribedCompletionDependencyAudit11b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticResidualAudit11.log",
+      "path": "Tools/primitive-residual-20261025-573/SourceOriginalArithmeticResidualAudit11.log",
+      "sha256": "75BE0CF2BD98DC82F94BF0681C784409B2BF4D1998ECEC8E9DB70A9571FF76AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticResidualAudit11.lean",
+      "path": "Tools/primitive-residual-20261025-573/SourceOriginalArithmeticResidualAudit11.lean.txt",
+      "sha256": "CB2F6E4DCF3F466642910AD7FE9778499E63483DA73ABBF03F45DE596900DCBC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticResidualAudit11.exit",
+      "path": "Tools/primitive-residual-20261025-573/SourceOriginalArithmeticResidualAudit11.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticResidualDependencyAudit11.log",
+      "path": "Tools/primitive-residual-20261025-573/SourceOriginalArithmeticResidualDependencyAudit11.log",
+      "sha256": "668BA4DE5476E472DBF562A8CCD235C9345EB0F0FE25A242C542B184C7845369"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticResidualDependencyAudit11.lean",
+      "path": "Tools/primitive-residual-20261025-573/SourceOriginalArithmeticResidualDependencyAudit11.lean.txt",
+      "sha256": "215465C2A792E0F97AF238B01106AB74B78089EC71AA7CE8081531F95CDFC098"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticResidualDependencyAudit11.exit",
+      "path": "Tools/primitive-residual-20261025-573/SourceOriginalArithmeticResidualDependencyAudit11.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualGaloisAudit12.log",
+      "path": "Tools/primitive-residual-20261025-573/SourcePrimitiveResidualGaloisAudit12.log",
+      "sha256": "8991159C5778EED018FF0CED133CB7CA32BEDAFBAB4EA3B16BE69381CFFDC4BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualGaloisAudit12.lean",
+      "path": "Tools/primitive-residual-20261025-573/SourcePrimitiveResidualGaloisAudit12.lean.txt",
+      "sha256": "5C452A9ED16F6855A7171640D1D0A534D6617B54543E18D90FC98B4D8C7F0AD5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualGaloisAudit12.exit",
+      "path": "Tools/primitive-residual-20261025-573/SourcePrimitiveResidualGaloisAudit12.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualGaloisDependencyAudit12.log",
+      "path": "Tools/primitive-residual-20261025-573/SourcePrimitiveResidualGaloisDependencyAudit12.log",
+      "sha256": "54840C0EE08A66751129081E7F9195152D48049142E3C61028DAEFCBB128CF38"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualGaloisDependencyAudit12.lean",
+      "path": "Tools/primitive-residual-20261025-573/SourcePrimitiveResidualGaloisDependencyAudit12.lean.txt",
+      "sha256": "F13946D8E792F12D0310752500E87463D11691A5934F71D613A97C6845453D0D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualGaloisDependencyAudit12.exit",
+      "path": "Tools/primitive-residual-20261025-573/SourcePrimitiveResidualGaloisDependencyAudit12.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ]
+}

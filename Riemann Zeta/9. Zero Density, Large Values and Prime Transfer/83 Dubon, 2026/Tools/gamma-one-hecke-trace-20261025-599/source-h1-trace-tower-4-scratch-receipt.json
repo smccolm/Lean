@@ -1,0 +1,77 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T05:58:34.694537+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceCoinducedTowerFunctions",
+    "SourceCoinducedTowerTrace",
+    "SourceShapiroH1Tower",
+    "SourceH1TraceTower"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoinducedTowerFunctions.lean",
+      "sha256": "63BB5961062974A9E96814A533D3A6DACA0A182A5AF3BD76EFC390E8D2878A56",
+      "oleanSha256": "AC3AB6B91E6B90027619D8D53A178AD7A5434EC810B308955C8B4A9D45A7B92B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoinducedTowerTrace.lean",
+      "sha256": "48A6CADB33821C99465974BE773A84CA3CD5489683F41BA523DEA6870651F7E3",
+      "oleanSha256": "6169234F2024C82E468CD73E75CFB6B9ABFCA87DEFDC69BF329943A13C6303C6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceShapiroH1Tower.lean",
+      "sha256": "9C0A0CCC1BD8E3AE4A084AF760BE5D596D7B8F1BFD590FE3B33489D65F7F9F25",
+      "oleanSha256": "A20575D253DA0A138B7A525888D3D90E9B3572F9448A9827C0589DA560517A59"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceTower.lean",
+      "sha256": "AD278B75D2192A1709D4DC94F4A19D46F085E652278DE0F940E13027D55EF023",
+      "oleanSha256": "BA7EB3E9A6DDAD249113D1D13DFC85B1CEDEE7CD7E754B91B317E2DCDF31BA51"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceCoinducedTowerTrace_values",
+    "Dubon2026.sourceCoinducedTowerTrace_comp",
+    "Dubon2026.sourceShapiroH1_tower",
+    "Dubon2026.sourceSubgroupH1Trace_tower",
+    "Dubon2026.sourceHeckeH1Trace_tower",
+    "Dubon2026.sourceCoinducedTowerFlatten",
+    "Dubon2026.sourceCoinducedTowerUnflatten",
+    "Dubon2026.sourceCoinducedTowerIso"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceCoinducedTowerTrace_values",
+    "Dubon2026.sourceCoinducedTowerTrace_comp",
+    "Dubon2026.sourceShapiroH1_tower",
+    "Dubon2026.sourceSubgroupH1Trace_tower",
+    "Dubon2026.sourceHeckeH1Trace_tower"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceCoinducedTowerFlatten",
+    "Dubon2026.sourceCoinducedTowerUnflatten",
+    "Dubon2026.sourceCoinducedTowerIso"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceTowerAudit4.log",
+  "logSha256": "D5AB99FBEE53C8FDAE4EABD8B8C4D4C967C289683A16001C0542105CE251A4E0",
+  "auditSha256": "1F4F30722110285F70D6542046B0199A6D3C71A4F02807772AA8E9E891908A8B",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 28,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 14,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceTowerDependencyAudit4.log",
+  "dependencyAuditSha256": "82AB14A8F27BD8347F901DB40AD141BF87A3B61C71F7FD52540834A0C9C9E7CF",
+  "dependencyAuditSourceSha256": "A7465C7C2212F59BD2F4828DEF26A83FD7019F30F28A77178660CBC02C4104A6",
+  "consumers": [
+    "Dubon2026.sourceHeckeH1Trace_tower"
+  ],
+  "dependency": "DUB-17/18 -> literal higher continuation -> arithmetic automorphy -> original all-weight adic association -> geometric Gamma1 realization -> actual surjective-transfer Hecke compatibility -> native H1 trace composition",
+  "discharged": "Prove trace composition for the exact nested subgroups used by the actual Gamma1 Hecke square, deriving it from actual coefficient functions and finite sums; no trace-transitivity premise.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Consume trace composition with the proved actual base-change square and original coefficient action to prove surjective-transfer Hecke compatibility. Arithmetic geometric/diamond comparison, Galois realization, all-weight association, local/image/regularity, automorphy and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-h1-trace-tower-4-reuse-review-20261025.json",
+  "reuseReviewSha256": "57F44A58CD7FD328428637832D9ACEE3866C07238CAC08CDA35020C6B1A54D2E",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

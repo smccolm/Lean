@@ -1,0 +1,115 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T04:05:54.088691+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceGammaOneCongruenceCover",
+    "SourceBinaryStabilizerGammaOneCover",
+    "SourceGammaOneDiagonalHom",
+    "SourceGammaOneCoverFiniteIndex",
+    "SourceGammaOneCohomologyTransfer",
+    "SourceGammaOneConstantH1Realization"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCongruenceCover.lean",
+      "sha256": "585659F407D2F51EDA84FCA732EB7D333F4256CE73B930F2E02CF9EE631548B4",
+      "oleanSha256": "AC408D357D5BFF7CA463FB6C2D1D1BD91C3CF928D94974D4E2D28F978AE15024"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryStabilizerGammaOneCover.lean",
+      "sha256": "657BD9FE8E260AB66BE097AA959CEACEFEE58F1AEE70DD9490E52E4404E7749E",
+      "oleanSha256": "11E8325DAD607888E690EEBDAE4ACDFDA75A1949F6F5CCC30473F5D05A5D6FE7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiagonalHom.lean",
+      "sha256": "AF70842F3D291B9E918FA2A4BC2E6F085951BC40EC99A69D219ADD4D836DD914",
+      "oleanSha256": "7CEE3C7EA6BFB6A9FB94C1B351E9C7B6B7A9E7D17E86B4FB0694F1E1C8430554"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverFiniteIndex.lean",
+      "sha256": "A3DF7002CC95628A02ED734D1A10B63E8CCA9D3E540C261C88B67AD9F37FC3C6",
+      "oleanSha256": "9B1387EE754A2EB730970A1D04B2CEF2BE40D249D0893B0AF4B52665C48B8FFA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCohomologyTransfer.lean",
+      "sha256": "15C53922CF077084C9F4421782C3346D7C27048B8E233F29F36D60CC5C1A7D62",
+      "oleanSha256": "78EB39A811C2A9EBAEF7381C375A6C7AB62238B871DA79FC18983A429F495B86"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstantH1Realization.lean",
+      "sha256": "5E3B3BE2610765E1D2E7E4DD2C727F1FE418231026EF3BB46409CDCDDB1C4B24",
+      "oleanSha256": "59CFDEBF8A795D420D06E568CBC6F0880DBD31BC0C709329C7979C7D6893C1B8"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceGammaOne_principal_diagonal_transition",
+    "Dubon2026.sourceGammaOne_le_conj_principalLevel",
+    "Dubon2026.sourceBinaryCoefficientStabilizer_gammaOneCover",
+    "Dubon2026.sourceBinaryCoefficientStabilizer_conj_finiteIndex",
+    "Dubon2026.sourceGammaOne_le_raisedGammaZero",
+    "Dubon2026.sourceGammaOneDiagonalHom_matrix",
+    "Dubon2026.sourceGammaOneDiagonalHom_injective",
+    "Dubon2026.sourceGammaOneDiagonalHom_mem_principal",
+    "Dubon2026.sourceGammaOneDiagonalHom_binary_trivial",
+    "Dubon2026.sourceRaisedLevelConjugation_range",
+    "Dubon2026.sourceRaisedLevelConjugation_range_finiteIndex",
+    "Dubon2026.sourceGammaOneDiagonalHom_range_finiteIndex",
+    "Dubon2026.sourceGammaOne_coindH1_surjective",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_surjective",
+    "Dubon2026.sourceIntegralBinary_exists_gammaOneH1Realization",
+    "Dubon2026.sourceGammaOneDiagonalHom",
+    "Dubon2026.sourceGammaOneCoefficientTrivialIso",
+    "Dubon2026.sourceGammaOneRangeEquiv",
+    "Dubon2026.sourceGammaOneConstantH1Iso",
+    "Dubon2026.sourceGammaOneConstantH1Transfer"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceGammaOne_principal_diagonal_transition",
+    "Dubon2026.sourceGammaOne_le_conj_principalLevel",
+    "Dubon2026.sourceBinaryCoefficientStabilizer_gammaOneCover",
+    "Dubon2026.sourceBinaryCoefficientStabilizer_conj_finiteIndex",
+    "Dubon2026.sourceGammaOne_le_raisedGammaZero",
+    "Dubon2026.sourceGammaOneDiagonalHom_matrix",
+    "Dubon2026.sourceGammaOneDiagonalHom_injective",
+    "Dubon2026.sourceGammaOneDiagonalHom_mem_principal",
+    "Dubon2026.sourceGammaOneDiagonalHom_binary_trivial",
+    "Dubon2026.sourceRaisedLevelConjugation_range",
+    "Dubon2026.sourceRaisedLevelConjugation_range_finiteIndex",
+    "Dubon2026.sourceGammaOneDiagonalHom_range_finiteIndex",
+    "Dubon2026.sourceGammaOne_coindH1_surjective",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_surjective",
+    "Dubon2026.sourceIntegralBinary_exists_gammaOneH1Realization"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceGammaOneDiagonalHom",
+    "Dubon2026.sourceGammaOneCoefficientTrivialIso",
+    "Dubon2026.sourceGammaOneRangeEquiv",
+    "Dubon2026.sourceGammaOneConstantH1Iso",
+    "Dubon2026.sourceGammaOneConstantH1Transfer"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverAudit6.log",
+  "logSha256": "067C4B231945A8B197BF7643C13F0BB80C2D1089CD3E3B3E1ECF9A0C3DD60097",
+  "auditSha256": "41F3B0423182C83C33EEB5690558BC0576CD12CF83535DD962C1D61104BEB964",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 26,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 33,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverDependencyAudit6.log",
+  "dependencyAuditSha256": "A731E211969D2ABEF747DF4904B994B4C61D1D7333AB58F0C907D9C7FE14B2F1",
+  "dependencyAuditSourceSha256": "34D942AB0ABE8E760AE70560E8C00C325E5367C7522D6B883C0CEDC2140B6B22",
+  "consumers": [
+    "Dubon2026.sourceIntegralBinary_exists_gammaOneH1Realization",
+    "Dubon2026.sourceBinaryCoefficientStabilizer_conj_finiteIndex",
+    "Dubon2026.sourceGammaOne_le_conj_principalLevel"
+  ],
+  "dependency": "DUB-17/18 -> literal higher continuation -> arithmetic automorphy -> original all-weight adic association -> geometric finite permutation Hecke realization -> actual congruence stabilizers are dominated by explicit diagonally conjugated Gamma1 levels",
+  "discharged": "The exact Gamma1(Q*N^2) group maps injectively into the original Gamma0(Q), has finite-index image, and fixes the actual binary vectors modulo N. The native finite-index coinduction counit is surjective on original H1 when six is invertible. Shapiro, the actual trivial coefficient isomorphism and existing group reindexing identify its source with constant-coefficient H1 of that exact Gamma1 group. Hence every original integral binary H1 class modulo every positive power of every prime greater than three has a derived constant-coefficient Gamma1 realization. The actual coefficient-orbit stabilizers are also dominated by the same explicit Gamma1 cover.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The constant-coefficient Gamma1 transfer has not yet been identified with arithmetic geometric correspondences or shown to intertwine the required Gamma1 Hecke-and-diamond operators. Those geometric/Hecke comparisons, original all-weight adic association, local/image/regularity, automorphy and higher continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cover-6-reuse-review-20261025.json",
+  "reuseReviewSha256": "B0D0A9E2227A09C551781497047F41B00C6EE510CC898CA61E4038FA201FCDCD",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

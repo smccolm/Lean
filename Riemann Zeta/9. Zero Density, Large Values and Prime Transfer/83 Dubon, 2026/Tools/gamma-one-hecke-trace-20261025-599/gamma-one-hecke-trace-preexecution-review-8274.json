@@ -1,0 +1,71 @@
+{
+  "status": "Prepared; require 8248 canonical PASS and immutable archive before integration.",
+  "route": "gamma-one-hecke-trace-promotion-route-599.json",
+  "routeSha256": "BAED799DD7717B6206A5F3DBEAAF36B38D542B7BBAEF43C27EAC64E468A4816B",
+  "modules": 26,
+  "queries": 77,
+  "theorems": 55,
+  "constructions": 22,
+  "exhaustiveScratchChecks": 111,
+  "proofValueEdges": 123,
+  "scopes": 6,
+  "receipts": {
+    "source-gamma-one-hecke-trace-7-scratch-receipt.json": "636683BBCF0384B183C9A6D34E27B01D2C4626196315F09BB916C4145C88C8DD",
+    "source-gamma-one-hecke-cosets-5-scratch-receipt.json": "1613529C9CBAB0E5553D535E8E5047878665F6CDEFE1CF5D92BB17D9FAE11A45",
+    "source-gamma-one-hecke-pullback-3-scratch-receipt.json": "12F9D7C6E6CB506406C5D7E342B0F1C81875490FC9BA557E6DBA26BF29AA641B",
+    "source-h1-trace-base-change-3-scratch-receipt.json": "974069BB8FB44C3BE2A0E2977AD160007EEA94199C783D4122D7890B8E125A4D",
+    "source-gamma-one-cover-trace-base-change-4-scratch-receipt.json": "C87C90F4B8429300BCAAB5233A3919E08A321969E004AA2AF67172A8035FA29F",
+    "source-h1-trace-tower-4-scratch-receipt.json": "155CB8353C187305C00C9AE6A7321C1506786249C10B3A0874737FF137C25718"
+  },
+  "sourceScopes": [
+    592,
+    594,
+    595,
+    596,
+    597,
+    598
+  ],
+  "expectedConsumers": 23844,
+  "expectedConstructions": 2277,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 gates unchanged.",
+  "sourceBodies": "Audited statements, bodies and comments unchanged; only scratch project imports qualified.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_hecke_trace_canonical_8274.py",
+      "sha256": "30C1323294EE3D63930DEA48A6FB6E61E36F6A300C72A08532AA8B9DCE352E13"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_hecke_trace_8274.ps1",
+      "sha256": "C95B2E7079AE5C2B88A2BDE8D2767E058F9A26E1B917377EE8700EE3D559D1FB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_hecke_trace_ownership_8274.py",
+      "sha256": "AB7E62B7967C2091C9DA94F39B348321DF6D4B8E5E14F1BD66DAEFE48BF54521"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_hecke_trace_8274.py",
+      "sha256": "47DAB6E2821D93EBDEFE4C2703C6CE056D41A7C19AAC49B2B6EDC89E04BCBEF2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_trace_global_ownership_8274.py",
+      "sha256": "2DA83D26F1BB9CE96CD9E986C4C1DDB691088C081AE2FB7A901436E1372A3656"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_trace_production_ownership_8274.py",
+      "sha256": "AAE80D3FF37023312BAC7199F49E05D2DD13C620563ABA53BCE44C8EB4146994"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_trace_scratch_ownership_8274.py",
+      "sha256": "62FE393DC50FAF63AA46522D8E308D07D5D4B1B3E902895BF9C5C4E90C2FBE0A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_hecke_trace_8274.py",
+      "sha256": "CA91FBAB57C083CF8862372E79706D40F2E60DBF55AF214025CD1B325BFD912B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_hecke_trace_8274.ps1",
+      "sha256": "E6CF3B375E936346AB3FD03D4E49ED6EA4362D2A15329025B42220C0C4B2F41B"
+    }
+  ],
+  "productionMutation": false
+}

@@ -1,0 +1,31 @@
+import SourceFrickePeriodHomothetyV2
+import SourceFrickeModularLatticeV2
+import SourceFrickeTorsionTransformationV2
+import SourceFrickeFunctionTransformationV2
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFricke.frickeF_hperm, `Dubon2026.SourceFricke.frickeF_invariant_Gamma, `Dubon2026.SourceFricke.frickeF_neg]
+  let localModules : Array Name := #[`SourceFrickePeriodHomothetyV2, `SourceFrickeModularLatticeV2, `SourceFrickeTorsionTransformationV2, `SourceFrickeFunctionTransformationV2]
+  let required : Array Name := #[`Dubon2026.SourceFricke.smulPeriodPair_ω₁, `Dubon2026.SourceFricke.smulPeriodPair_ω₂, `Dubon2026.SourceFricke.mem_smulPeriodPair_lattice, `Dubon2026.SourceFricke.smulLatticeEquiv_coe, `Dubon2026.SourceFricke.weierstrassP_smulPeriodPair, `Dubon2026.SourceFricke.weierstrassP_of_lattice_eq, `Dubon2026.SourceFricke.periodPairOfTau_ω₁, `Dubon2026.SourceFricke.periodPairOfTau_ω₂, `Dubon2026.SourceFricke.span_SL2_basis_change, `Dubon2026.SourceFricke.denomZ_ne_zero, `Dubon2026.SourceFricke.coe_SL2Z_smul, `Dubon2026.SourceFricke.mem_lattice_smul_SL2, `Dubon2026.SourceFricke.periodPairOfTau_smul_lattice_eq, `Dubon2026.SourceFricke.weierstrassP_torsionPt_lift_irrel, `Dubon2026.SourceFricke.vecMulSL_apply, `Dubon2026.SourceFricke.weierstrassP_frickeTorsionPt_slash, `Dubon2026.SourceFricke.vecMulSL_of_mem_Gamma, `Dubon2026.SourceFricke.weierstrassP_frickeTorsionPt_neg, `Dubon2026.SourceFricke.denom_mapGL_eq_denomZ, `Dubon2026.SourceFricke.wpNormZ_eq, `Dubon2026.SourceFricke.wpNormZ_slash, `Dubon2026.SourceFricke.frickeF_slash, `Dubon2026.SourceFricke.frickeF_invariant_Gamma, `Dubon2026.SourceFricke.vecMulSL_mul, `Dubon2026.SourceFricke.vecMulSL_one, `Dubon2026.SourceFricke.vecMulSL_zero, `Dubon2026.SourceFricke.vecMulSL_ne_zero, `Dubon2026.SourceFricke.frickeF_hperm, `Dubon2026.SourceFricke.frickeF_neg, `Dubon2026.SourceFricke.smulPeriodPair, `Dubon2026.SourceFricke.smulLatticeEquiv, `Dubon2026.SourceFricke.periodPairOfTau, `Dubon2026.SourceFricke.denomZ, `Dubon2026.SourceFricke.numZ, `Dubon2026.SourceFricke.frickeTorsionPt, `Dubon2026.SourceFricke.vecMulSL, `Dubon2026.SourceFricke.wpNormZ, `Dubon2026.SourceFricke.frickeF, `Dubon2026.SourceFricke.vecMulSLEquiv, `Dubon2026.SourceFricke.FrickeIdx, `Dubon2026.SourceFricke.frickeIdxPerm, `PeriodPair.weierstrassP_add_coe, `PeriodPair.weierstrassP_neg, `SlashInvariantForm.slash_action_eqn'']
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE FRICKE TRANSFORMATION DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in actual Fricke transformation, principal-level invariance and sign consumers. Only declaration values are traversed. Holomorphy, Fourier structure, differential realization and the arithmetic comparison remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

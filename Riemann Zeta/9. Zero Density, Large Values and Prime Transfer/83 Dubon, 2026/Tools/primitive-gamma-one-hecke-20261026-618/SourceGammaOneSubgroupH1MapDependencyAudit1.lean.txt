@@ -1,0 +1,28 @@
+import SourceGammaOneSubgroupCohomologyMap
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.sourceGammaOneSubgroupH1Iso_hom_eq_map, `Dubon2026.sourceGammaOneConstantH1Transfer_subgroupIso]
+  let localModules : Array Name := #[`SourceGammaOneSubgroupCohomologyMap, `SourceGammaOneTransferCosetFormula, `SourceShapiroH1CosetTrace, `SourceShapiroH1CocycleComparison, `SourceNativeCoinductionCosetTrace, `SourceGammaOneConstantH1Realization, `SourceGammaOneCohomologyTransfer, `SourceGammaOneCoverFiniteIndex, `SourceGammaOneDiagonalHom, `SourceBinaryPermutationCongruence, `SourceBinaryPrimePowerPermutation, `SourcePermutationCoefficientQuotient, `SourceGammaOneCongruenceCover]
+  let required : Array Name := #[`Dubon2026.sourceGammaOneSubgroupH1Iso_hom_eq_map, `Dubon2026.sourceGammaOneConstantH1Transfer_subgroupIso, `Dubon2026.sourceGammaOneConstantH1Transfer_eq_trace, `Dubon2026.sourceGammaOneCoefficientTrivialIso, `groupCohomology.map_comp]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE SUBGROUP H1 MAP DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual existing Gamma1 subgroup H1 pullback and original-transfer cancellation consumers. Only declaration values are traversed. A private proved coefficient-isomorphism/reindexing identity is instantiated on the original coefficient trivialization and actual range isomorphism; no comparison is assumed. The existing literal transfer formula and native inverse cancellation identify the original transfer in its actual subgroup coordinates. Concrete full-object unfolding timeouts are preserved, and all final proofs compile at unchanged limits. These maps must still be consumed in the complete actual Hecke correspondence and trace-composition comparison; arithmetic geometry, Galois realization and higher continuation remain required. DUB-17--20 OPEN; 16/20."
+
+#eval runPlanarPairingDependencyAudit

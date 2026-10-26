@@ -1,0 +1,36 @@
+{
+  "modules": [
+    "SourceGammaOneHeckePullbackSquare",
+    "SourceGammaOneHeckeUpperTraceReindex"
+  ],
+  "theorems": [
+    "Dubon2026.sourceGammaOneHeckeH1Pullback_square",
+    "Dubon2026.sourceGammaOneRangeEquiv_heckeUpper_comap",
+    "Dubon2026.sourceGammaOneHeckeUpperTrace_reindex"
+  ],
+  "constructions": [
+    "Dubon2026.sourceGammaOneUpperRangeHom"
+  ],
+  "queries": [
+    "Dubon2026.sourceGammaOneHeckeH1Pullback_square",
+    "Dubon2026.sourceGammaOneRangeEquiv_heckeUpper_comap",
+    "Dubon2026.sourceGammaOneHeckeUpperTrace_reindex",
+    "Dubon2026.sourceGammaOneUpperRangeHom"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceGammaOneHeckeH1Pullback_square",
+    "Dubon2026.sourceGammaOneRangeEquiv_heckeUpper_comap",
+    "Dubon2026.sourceGammaOneHeckeUpperTrace_reindex",
+    "Dubon2026.sourceGammaOneUpperRangeHom",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_conjugation",
+    "Dubon2026.sourceGammaOneSubgroupH1Iso_hom_eq_map",
+    "Dubon2026.sourceSubgroupH1Trace_pullback_coefficient",
+    "Dubon2026.sourceGammaOneDiagonalHom_heckeUpper_iff",
+    "groupCohomology.map_comp"
+  ],
+  "roots": [
+    "Dubon2026.sourceGammaOneHeckeH1Pullback_square",
+    "Dubon2026.sourceGammaOneHeckeUpperTrace_reindex"
+  ],
+  "separatelyAxiomChecked": []
+}

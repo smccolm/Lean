@@ -1,0 +1,1001 @@
+{
+  "date": "26 October 2026",
+  "modules": [
+    "Dubon2026.SourceLaurentIntegralDescent",
+    "Dubon2026.SourceCurveIntegralExpressionOrders",
+    "Dubon2026.SourceCurveIntegralDifferentialOrders",
+    "Dubon2026.SourceGammaOneDifferentialIntegralDescent",
+    "Dubon2026.SourceCurveRegularIntegralCriterion",
+    "Dubon2026.SourceGammaOneDifferentialRegularity",
+    "Dubon2026.SourceFrickePeriodHomothetyV2",
+    "Dubon2026.SourceFrickeModularLatticeV2",
+    "Dubon2026.SourceFrickeTorsionTransformationV2",
+    "Dubon2026.SourceFrickeFunctionTransformationV2",
+    "Dubon2026.SourceLipschitzTwo",
+    "Dubon2026.SourceLipschitzTwoRealBoundary",
+    "Dubon2026.SourceWeierstrassRowSeries",
+    "Dubon2026.SourceWeierstrassLatticeRows",
+    "Dubon2026.SourceWeierstrassTorsionExpansion",
+    "Dubon2026.SourceWeierstrassTorsionTail",
+    "Dubon2026.SourceWeierstrassTorsionHolomorphy",
+    "Dubon2026.SourceFrickeHolomorphy",
+    "Dubon2026.SourceFrickeCyclotomicField",
+    "Dubon2026.SourceWeierstrassNormalizedTorsion",
+    "Dubon2026.SourceWeierstrassTorsionCuspBound",
+    "Dubon2026.SourceWeierstrassTorsionFourierCoefficients",
+    "Dubon2026.SourceWeierstrassTorsionFourierSum",
+    "Dubon2026.SourceWeierstrassTorsionFourierExpansion",
+    "Dubon2026.SourceFrickeCuspInputs"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 Hecke characters -> actual Picard/H1, full/parabolic and diamond comparison retaining the original homogeneous coefficient endomorphism -> actual regular differential/cusp comparison -> regularity and rational Fourier structure.",
+  "discharged": "For the actual Gamma1 integral-ratio Laurent field, every differential whose mapped expansion equals an actual weight-two cusp expansion is regular at every place. Both integral equations, coefficient descent, local orders and curve prerequisites are derived. The original normalized Fricke functions transform by the actual torsion-index action, are invariant under the principal subgroup and unchanged by index negation. Native Lipschitz summation and absolute Weierstrass summability prove the exact torsion Fourier formula and holomorphy. The actual normalized torsion functions are periodic, bounded at infinity and have explicit Fourier coefficients in the level cyclotomic field. Multiplication of the original Fricke function by Delta gives a bounded function at infinity. No regularity, Fourier identity, holomorphy, coefficient-field or cusp-bound premise is assumed.",
+  "boundary": "Algebraic realization of arbitrary Gamma1 cusp forms and the converse regular-differential-to-cusp construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must identify the original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of these characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Neither complex semisimplicity, finite characters, Witt coefficients nor a universal deformation ring supplies a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN.",
+  "status": "The 8,360-module production aggregate and focused actual Gamma1 regularity and Fricke Fourier inputs audit pass with zero diagnostics. Four declaration-value audits verify 162 required dependencies. Algebraic realization of arbitrary Gamma1 cusp forms and the converse regular-differential-to-cusp construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must identify the original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of these characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Neither complex semisimplicity, finite characters, Witt coefficients nor a universal deformation ring supplies a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN. Sequential foundation/paper verification of this scope is pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_regular_of_diffQExp_matches_cusp",
+    "Dubon2026.SourceFricke.frickeF_hperm",
+    "Dubon2026.SourceFricke.frickeF_invariant_Gamma",
+    "Dubon2026.SourceFricke.frickeF_neg",
+    "Dubon2026.SourceFricke.mdifferentiable_frickeF",
+    "Dubon2026.SourceFricke.weierstrassP_torsionPt_eq_tsum_prod",
+    "Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff_mem_kN",
+    "Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff",
+    "Dubon2026.SourceFricke.isBoundedAtImInfty_frickeF_mul_discriminant",
+    "Dubon2026.SourceFricke.periodic_wpNormZ",
+    "Dubon2026.SourceFricke.hasSum_qExpansion_wpNorm"
+  ],
+  "scratchCertificates": [
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T13:21:42.600593+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceLaurentIntegralDescent",
+        "SourceCurveIntegralExpressionOrders",
+        "SourceCurveIntegralDifferentialOrders",
+        "SourceGammaOneDifferentialIntegralDescent",
+        "SourceCurveRegularIntegralCriterion",
+        "SourceGammaOneDifferentialRegularity"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentIntegralDescent.lean",
+          "sha256": "B69E4811A4C90E8BE66BB986C98033C88638B749E90B21C0D5AC1693745412C6",
+          "oleanSha256": "DCBA41C532DCC79A59B81D79D4BBFF0035EB0BC043FD106D8B1E780DCF230038"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveIntegralExpressionOrders.lean",
+          "sha256": "657F98FE0B5E6BD2EE0908090047F938FD2D9886A1FEF70F67864C91FF36FBFA",
+          "oleanSha256": "E1EDE5DBCD318AC9500B3E1E984A139F9BDABDA324D70A3C1181AF3F0B9D6840"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveIntegralDifferentialOrders.lean",
+          "sha256": "DDB4BCD796DDFBC681165C50B06BD0AB223C24FA5C22699F41345EDA9CE38D3E",
+          "oleanSha256": "FCE07249AD0D34889BF5470691907F06903935A88890D1EE7701B402337A9A5B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialIntegralDescent.lean",
+          "sha256": "32E979532DD52AB20162F966BC7733034801F60A7F8BBF84039D66159A170C43",
+          "oleanSha256": "86749E5728416EC438C59ECE0B1C2ABFEDFF38930EE97836360DA3B0F4C58A64"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveRegularIntegralCriterion.lean",
+          "sha256": "37BE299421EB6AD44ECDE761F43F25564920598C3C10846909F6BFA538C84B26",
+          "oleanSha256": "8DCADC32E506B1BF647137696039E691F07252C022D8885E89F86D69F3BE24E9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularity.lean",
+          "sha256": "B43C71E332504F9B3FA0A978B25C24A334F0BE86E70972DB0334000D8D77F998",
+          "oleanSha256": "A84A00921A551B932B62C09E9918C527A1D899029EDBE983C860E22FFC16D16B"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.isIntegral_adjoin_of_isIntegral_coeffMap",
+        "Dubon2026.SourceCurve.Place.ord_natPow",
+        "Dubon2026.SourceCurve.Place.ord_nonneg_of_integral_coordinate",
+        "Dubon2026.SourceCurve.Place.cusp_coefficient_order_of_integral_expression",
+        "Dubon2026.SourceCurve.Place.ordDifferential_nonneg_of_finite_expression",
+        "Dubon2026.SourceFunctionField.GammaOne.coeffMap_qEuler_natural",
+        "Dubon2026.SourceFunctionField.GammaOne.integral_subfield_of_integral_coeffMap",
+        "Dubon2026.SourceFunctionField.GammaOne.differential_integral_expressions_of_matching_expansion",
+        "Dubon2026.SourceCurve.regular_smul_D_of_two_integral_expressions",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_of_diffQExp_matches_cusp",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_regular_of_diffQExp_matches_cusp"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.isIntegral_adjoin_of_isIntegral_coeffMap",
+        "Dubon2026.SourceCurve.Place.ord_natPow",
+        "Dubon2026.SourceCurve.Place.ord_nonneg_of_integral_coordinate",
+        "Dubon2026.SourceCurve.Place.cusp_coefficient_order_of_integral_expression",
+        "Dubon2026.SourceCurve.Place.ordDifferential_nonneg_of_finite_expression",
+        "Dubon2026.SourceFunctionField.GammaOne.coeffMap_qEuler_natural",
+        "Dubon2026.SourceFunctionField.GammaOne.integral_subfield_of_integral_coeffMap",
+        "Dubon2026.SourceFunctionField.GammaOne.differential_integral_expressions_of_matching_expansion",
+        "Dubon2026.SourceCurve.regular_smul_D_of_two_integral_expressions",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_of_diffQExp_matches_cusp",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_regular_of_diffQExp_matches_cusp"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityAudit6.log",
+      "logSha256": "9B8AF7DDE94FE14F35C4AC6529AFCFE01ED8F553E928F004318C4F70B96A0C66",
+      "auditSha256": "4CD3D5E1468A2DE72031BB45C104EF147A95FDE2D104004787E59A6F63C92886",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 21,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 21,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityDependencyAudit6b.log",
+      "dependencyAuditSha256": "23DE143D119620F9832CDEFDE00313461008F9DAA00C34BE31DEA32A8AE19831",
+      "dependencyAuditSourceSha256": "C9E7ABBD6EBFC0A6D95742A6EA3CA55C39C4AB226FD3537BFA8279E573937E17",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_regular_of_diffQExp_matches_cusp"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 Hecke-character arithmetic realization -> actual Picard/H1, full/parabolic and diamond comparison -> regular differential/cusp comparison -> regularity of an actual Gamma1 differential whose expansion matches an actual cusp form.",
+      "discharged": "For the actual Gamma1 integral-ratio Laurent field over any algebraically closed rational coefficient field embedded in C, every actual differential whose mapped q-expansion equals that of an actual weight-two cusp form is regular at every place. Both integral equations, their coefficient/subfield descent, the local order bounds, differential generators and finiteness are derived. No regularity or integral equation is assumed.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Algebraic differential realization for arbitrary cusp forms and the converse regular-differential-to-cusp construction remain. Actual Picard/H1, full/parabolic, transpose and diamond comparison, arithmetic realization of original finite characters, original all-weight association, local/image/regularity for automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-differential-regularity-6b-reuse-review-20261026.json",
+      "reuseReviewSha256": "2258315CCCC49A75D337A05CA99B541A59DC7A22E144EC2216D6A690C085B229",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [
+        "Dubon2026.SourceFricke.instFintypeFrickeIdxOfNeZeroNat",
+        "Dubon2026.SourceFricke.smulPeriodPair_ω₁",
+        "Dubon2026.SourceFricke.smulPeriodPair_ω₂",
+        "Dubon2026.SourceFricke.smulLatticeEquiv_coe",
+        "Dubon2026.SourceFricke.periodPairOfTau_ω₁",
+        "Dubon2026.SourceFricke.periodPairOfTau_ω₂"
+      ],
+      "recordedUTC": "2026-10-26T13:59:00.609895+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceFrickePeriodHomothetyV2",
+        "SourceFrickeModularLatticeV2",
+        "SourceFrickeTorsionTransformationV2",
+        "SourceFrickeFunctionTransformationV2"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePeriodHomothetyV2.lean",
+          "sha256": "896E3B923D354A9CED8FD8C44FCE47073AEA669B4E5587B58A43BDA83866FF33",
+          "oleanSha256": "C91FCBD137C5C1F9E3B184EEA9419248B1E87E462AE144846558C8FDB0B60973"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeModularLatticeV2.lean",
+          "sha256": "092D75B3216920F5E51C7960CFC84BFD57E6E1C73B9095621F7D192853B4204F",
+          "oleanSha256": "5E7BE09F98D49AF106EF79E8E61B11ABE641EFE8D7164E9DB24C65FF4E9891B0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTorsionTransformationV2.lean",
+          "sha256": "3A5DB0130F60BF11013E34A6793E3679AD981834A5F6AC1FD4A17F59874AF8F8",
+          "oleanSha256": "5096D95035416FAD0E1A129D54CD5CE122708160BA1DED55501B57B0C201F971"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFunctionTransformationV2.lean",
+          "sha256": "5BABB787F2D3D189DB22930D749DC5530ECF438593FCBF5E77D2CC3148C13B7D",
+          "oleanSha256": "A163BED51995185AFEA91208B9E00F6B27FA5F4E48DD0174455EEE28672D6378"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFricke.smulPeriodPair_ω₁",
+        "Dubon2026.SourceFricke.smulPeriodPair_ω₂",
+        "Dubon2026.SourceFricke.mem_smulPeriodPair_lattice",
+        "Dubon2026.SourceFricke.smulLatticeEquiv_coe",
+        "Dubon2026.SourceFricke.weierstrassP_smulPeriodPair",
+        "Dubon2026.SourceFricke.weierstrassP_of_lattice_eq",
+        "Dubon2026.SourceFricke.periodPairOfTau_ω₁",
+        "Dubon2026.SourceFricke.periodPairOfTau_ω₂",
+        "Dubon2026.SourceFricke.span_SL2_basis_change",
+        "Dubon2026.SourceFricke.denomZ_ne_zero",
+        "Dubon2026.SourceFricke.coe_SL2Z_smul",
+        "Dubon2026.SourceFricke.mem_lattice_smul_SL2",
+        "Dubon2026.SourceFricke.periodPairOfTau_smul_lattice_eq",
+        "Dubon2026.SourceFricke.weierstrassP_torsionPt_lift_irrel",
+        "Dubon2026.SourceFricke.vecMulSL_apply",
+        "Dubon2026.SourceFricke.weierstrassP_frickeTorsionPt_slash",
+        "Dubon2026.SourceFricke.vecMulSL_of_mem_Gamma",
+        "Dubon2026.SourceFricke.weierstrassP_frickeTorsionPt_neg",
+        "Dubon2026.SourceFricke.denom_mapGL_eq_denomZ",
+        "Dubon2026.SourceFricke.wpNormZ_eq",
+        "Dubon2026.SourceFricke.wpNormZ_slash",
+        "Dubon2026.SourceFricke.frickeF_slash",
+        "Dubon2026.SourceFricke.frickeF_invariant_Gamma",
+        "Dubon2026.SourceFricke.vecMulSL_mul",
+        "Dubon2026.SourceFricke.vecMulSL_one",
+        "Dubon2026.SourceFricke.vecMulSL_zero",
+        "Dubon2026.SourceFricke.vecMulSL_ne_zero",
+        "Dubon2026.SourceFricke.frickeF_hperm",
+        "Dubon2026.SourceFricke.frickeF_neg",
+        "Dubon2026.SourceFricke.smulPeriodPair",
+        "Dubon2026.SourceFricke.smulLatticeEquiv",
+        "Dubon2026.SourceFricke.periodPairOfTau",
+        "Dubon2026.SourceFricke.denomZ",
+        "Dubon2026.SourceFricke.numZ",
+        "Dubon2026.SourceFricke.frickeTorsionPt",
+        "Dubon2026.SourceFricke.vecMulSL",
+        "Dubon2026.SourceFricke.wpNormZ",
+        "Dubon2026.SourceFricke.frickeF",
+        "Dubon2026.SourceFricke.vecMulSLEquiv",
+        "Dubon2026.SourceFricke.FrickeIdx",
+        "Dubon2026.SourceFricke.frickeIdxPerm",
+        "Dubon2026.SourceFricke.instFintypeFrickeIdxOfNeZeroNat"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFricke.smulPeriodPair_ω₁",
+        "Dubon2026.SourceFricke.smulPeriodPair_ω₂",
+        "Dubon2026.SourceFricke.mem_smulPeriodPair_lattice",
+        "Dubon2026.SourceFricke.smulLatticeEquiv_coe",
+        "Dubon2026.SourceFricke.weierstrassP_smulPeriodPair",
+        "Dubon2026.SourceFricke.weierstrassP_of_lattice_eq",
+        "Dubon2026.SourceFricke.periodPairOfTau_ω₁",
+        "Dubon2026.SourceFricke.periodPairOfTau_ω₂",
+        "Dubon2026.SourceFricke.span_SL2_basis_change",
+        "Dubon2026.SourceFricke.denomZ_ne_zero",
+        "Dubon2026.SourceFricke.coe_SL2Z_smul",
+        "Dubon2026.SourceFricke.mem_lattice_smul_SL2",
+        "Dubon2026.SourceFricke.periodPairOfTau_smul_lattice_eq",
+        "Dubon2026.SourceFricke.weierstrassP_torsionPt_lift_irrel",
+        "Dubon2026.SourceFricke.vecMulSL_apply",
+        "Dubon2026.SourceFricke.weierstrassP_frickeTorsionPt_slash",
+        "Dubon2026.SourceFricke.vecMulSL_of_mem_Gamma",
+        "Dubon2026.SourceFricke.weierstrassP_frickeTorsionPt_neg",
+        "Dubon2026.SourceFricke.denom_mapGL_eq_denomZ",
+        "Dubon2026.SourceFricke.wpNormZ_eq",
+        "Dubon2026.SourceFricke.wpNormZ_slash",
+        "Dubon2026.SourceFricke.frickeF_slash",
+        "Dubon2026.SourceFricke.frickeF_invariant_Gamma",
+        "Dubon2026.SourceFricke.vecMulSL_mul",
+        "Dubon2026.SourceFricke.vecMulSL_one",
+        "Dubon2026.SourceFricke.vecMulSL_zero",
+        "Dubon2026.SourceFricke.vecMulSL_ne_zero",
+        "Dubon2026.SourceFricke.frickeF_hperm",
+        "Dubon2026.SourceFricke.frickeF_neg"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFricke.smulPeriodPair",
+        "Dubon2026.SourceFricke.smulLatticeEquiv",
+        "Dubon2026.SourceFricke.periodPairOfTau",
+        "Dubon2026.SourceFricke.denomZ",
+        "Dubon2026.SourceFricke.numZ",
+        "Dubon2026.SourceFricke.frickeTorsionPt",
+        "Dubon2026.SourceFricke.vecMulSL",
+        "Dubon2026.SourceFricke.wpNormZ",
+        "Dubon2026.SourceFricke.frickeF",
+        "Dubon2026.SourceFricke.vecMulSLEquiv",
+        "Dubon2026.SourceFricke.FrickeIdx",
+        "Dubon2026.SourceFricke.frickeIdxPerm",
+        "Dubon2026.SourceFricke.instFintypeFrickeIdxOfNeZeroNat"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTransformationAudit4b.log",
+      "logSha256": "CDBE77F487CA87166C1E53252DF740C729EEFD9B65B48AB93FFF49454CF49FF4",
+      "auditSha256": "3E0BA92E5D88094688559A0DD7F55CFC0EDF0006C01F674FA97048A261AC65AB",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 78,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 39,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTransformationDependencyAudit4c.log",
+      "dependencyAuditSha256": "884CD5E52357D5C654E7515B2A07F4755CB447F74A167E8C6C48CDE18F38A487",
+      "dependencyAuditSourceSha256": "19960CA841E2BA0C2553B3BD517763250628D5642125FD3E86FA1AC82EC527AB",
+      "consumers": [
+        "Dubon2026.SourceFricke.frickeF_hperm",
+        "Dubon2026.SourceFricke.frickeF_invariant_Gamma",
+        "Dubon2026.SourceFricke.frickeF_neg"
+      ],
+      "dependency": "DUB-17/18 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 Hecke characters -> actual Picard/H1 and diamond comparison -> regular differential/cusp comparison -> rational Fourier structure -> cyclotomic Fricke generators -> their exact modular transformation.",
+      "discharged": "The actual normalized Fricke functions transform by the original row-vector action on torsion indices, are invariant under the principal congruence subgroup and are unchanged by negating the index. Every original SL2 matrix permutes the actual nonzero-index family. All lattice scaling, basis change, lift-independence and native modular-form transformations are proved inputs.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Holomorphy, cusp Fourier expansions, coefficient field and Fricke rational spanning remain before Gamma1 rational structure and differential realization. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-fricke-transformation-4c-reuse-review-20261026.json",
+      "reuseReviewSha256": "B5B0D512C5CC9B261D37968FF86CC154844223D96225CEDB28ED44379CD86901",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [
+        "Dubon2026.SourceFricke.qN_ne_zero",
+        "Dubon2026.SourceFricke.summable_nat_mul_cexp_pow",
+        "Dubon2026.SourceFricke.summable_one_div_sub_int_sq",
+        "Dubon2026.SourceFricke.tsum_row_split",
+        "Dubon2026.SourceFricke.tsum_row_zero",
+        "Dubon2026.SourceFricke.zetaN_ne_zero"
+      ],
+      "recordedUTC": "2026-10-26T14:09:26.963783+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceLipschitzTwo",
+        "SourceLipschitzTwoRealBoundary",
+        "SourceWeierstrassRowSeries",
+        "SourceWeierstrassLatticeRows",
+        "SourceWeierstrassTorsionExpansion",
+        "SourceWeierstrassTorsionTail",
+        "SourceWeierstrassTorsionHolomorphy",
+        "SourceFrickeHolomorphy"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLipschitzTwo.lean",
+          "sha256": "490C3EE77DFF924429526BAD36DF613932BE9C5BA109599FD2F07E87200237EB",
+          "oleanSha256": "FE15D95F83B9EC7B53920BBE89B365FACBA8DD503ACBF33D0CB41ACBF26C4B35"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceLipschitzTwoRealBoundary.lean",
+          "sha256": "B3E74F77839BD9172F411A4089B0780E1C82BFC5E1A48CA02BD19D38C5183CF9",
+          "oleanSha256": "6BD65D132B1F417B63777DED64ADC7C7A61C30D8F3C62B2213B5CB818C4B16A9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassRowSeries.lean",
+          "sha256": "DE4FE36E54C7FCFD7C2967D7738556CF6A82CD7299EE8FC20F17B1A2AF610181",
+          "oleanSha256": "D765C72D4E51A2E64133D5B7F7E4DAD0337B3BD6EBAA50F7662601C64E1D8890"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassLatticeRows.lean",
+          "sha256": "40E695A8965F49DB4886F45950AD033FC3585BD127A517C38AAC92B8DA0BAB68",
+          "oleanSha256": "C2C394071CD4213C72352086F53B63895FA23C8834646C826A54DC5CBC61846B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassTorsionExpansion.lean",
+          "sha256": "766A2069D6302436819DC787318D341045A4FA9A8CB010852968369F8CE614EE",
+          "oleanSha256": "3723E571E4B2043EE5F9A1928FF32C191A88954FC891DCE8FBBEDBE1FAAE37EC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassTorsionTail.lean",
+          "sha256": "3D95B55677C539619F72F244DF88D64559CB2EFBC87DD715415ABFB5CE9BC161",
+          "oleanSha256": "5624963F4EA652A16F47C88469CF7A300E5E788CA92E7BB9273F4207FBE6482F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassTorsionHolomorphy.lean",
+          "sha256": "7F1D04F8E49AD01A36D1BB0AD1B7D55E3D428F941CD18D70AB83315E42C7BD3B",
+          "oleanSha256": "A48B9FB41E686E4651F9A30FCF648A3F2A0ED7D6873345306F3345D47137514F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphy.lean",
+          "sha256": "DF1494B78BCEE18F4806A9A5558BD0E18961C1EFAD71C8D30BAE9B4FE4A35C9D",
+          "oleanSha256": "127C936542F5498E1AAE0366FEAC6DBCEE493FF2CD29F9962B30A07E41AFBD52"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFricke.summable_one_div_add_int_sq",
+        "Dubon2026.SourceFricke.tsum_one_div_add_int_sq_neg",
+        "Dubon2026.SourceFricke.tsum_one_div_sub_int_sq",
+        "Dubon2026.SourceFricke.lipschitz_two_of_im_pos",
+        "Dubon2026.SourceFricke.lipschitz_two_of_im_neg",
+        "Dubon2026.SourceFricke.summable_nat_mul_cexp_pow",
+        "Dubon2026.SourceFricke.cexp_two_pi_I_mul_ne_one",
+        "Dubon2026.SourceFricke.lipschitz_two_closed_of_im_pos",
+        "Dubon2026.SourceFricke.lipschitz_two_closed_of_im_neg",
+        "Dubon2026.SourceFricke.lipschitz_two_closed",
+        "Dubon2026.SourceFricke.summable_one_div_sub_int_sq",
+        "Dubon2026.SourceFricke.tsum_int_one_div_sq",
+        "Dubon2026.SourceFricke.two_pi_I_sq",
+        "Dubon2026.SourceFricke.neg_pi_sq_div_three_div",
+        "Dubon2026.SourceFricke.tsum_row_split",
+        "Dubon2026.SourceFricke.tsum_row_zero",
+        "Dubon2026.SourceFricke.lipschitz_two_of_im_neg'",
+        "Dubon2026.SourceFricke.cexp_two_pi_I_mul_add",
+        "Dubon2026.SourceFricke.cexp_two_pi_I_mul_nat_mul",
+        "Dubon2026.SourceFricke.cexp_two_pi_I_mul_neg",
+        "Dubon2026.SourceFricke.lipschitz_row_pair",
+        "Dubon2026.SourceFricke.lipschitz_row_zero",
+        "Dubon2026.SourceFricke.lipschitz_rows_qExpansion",
+        "Dubon2026.SourceFricke.hasSum_weierstrassP_prod",
+        "Dubon2026.SourceFricke.summable_weierstrassP_prod",
+        "Dubon2026.SourceFricke.weierstrassP_eq_tsum_tsum",
+        "Dubon2026.SourceFricke.summable_weierstrassP_row",
+        "Dubon2026.SourceFricke.wpRow_periodPairOfTau_split",
+        "Dubon2026.SourceFricke.weierstrassP_periodPairOfTau_eq_row_sum",
+        "Dubon2026.SourceFricke.weierstrassP_periodPairOfTau_qExpansion",
+        "Dubon2026.SourceFricke.zetaN_ne_zero",
+        "Dubon2026.SourceFricke.qN_ne_zero",
+        "Dubon2026.SourceFricke.qN_pow_self",
+        "Dubon2026.SourceFricke.cexp_two_pi_I_mul_torsionPt",
+        "Dubon2026.SourceFricke.norm_qN",
+        "Dubon2026.SourceFricke.torsionPt_hyps",
+        "Dubon2026.SourceFricke.weierstrassP_torsionPt_qExpansion",
+        "Dubon2026.SourceFricke.norm_zetaN",
+        "Dubon2026.SourceFricke.norm_qN_le_one",
+        "Dubon2026.SourceFricke.norm_qN_lt_one",
+        "Dubon2026.SourceFricke.norm_qN_le_of_le_im",
+        "Dubon2026.SourceFricke.norm_wpTail_le",
+        "Dubon2026.SourceFricke.summable_wpTail_majorant",
+        "Dubon2026.SourceFricke.summable_wpTail",
+        "Dubon2026.SourceFricke.weierstrassP_torsionPt_eq_tsum_prod",
+        "Dubon2026.SourceFricke.wpTorsion_eq_wpTorsionSeries",
+        "Dubon2026.SourceFricke.one_sub_zetaN_pow_mul_qN_pow_ne_zero",
+        "Dubon2026.SourceFricke.differentiable_qN",
+        "Dubon2026.SourceFricke.differentiable_wpTail",
+        "Dubon2026.SourceFricke.differentiableOn_wpTorsionSeries",
+        "Dubon2026.SourceFricke.mdifferentiable_wpTorsion",
+        "Dubon2026.SourceFricke.frickeIdx_hyps",
+        "Dubon2026.SourceFricke.mdifferentiable_wpNormZ",
+        "Dubon2026.SourceFricke.mdifferentiable_frickeF",
+        "Dubon2026.SourceFricke.wpSummand",
+        "Dubon2026.SourceFricke.zetaN",
+        "Dubon2026.SourceFricke.qN",
+        "Dubon2026.SourceFricke.wpTail",
+        "Dubon2026.SourceFricke.wpTorsion",
+        "Dubon2026.SourceFricke.wpTorsionSeries"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFricke.summable_one_div_add_int_sq",
+        "Dubon2026.SourceFricke.tsum_one_div_add_int_sq_neg",
+        "Dubon2026.SourceFricke.tsum_one_div_sub_int_sq",
+        "Dubon2026.SourceFricke.lipschitz_two_of_im_pos",
+        "Dubon2026.SourceFricke.lipschitz_two_of_im_neg",
+        "Dubon2026.SourceFricke.summable_nat_mul_cexp_pow",
+        "Dubon2026.SourceFricke.cexp_two_pi_I_mul_ne_one",
+        "Dubon2026.SourceFricke.lipschitz_two_closed_of_im_pos",
+        "Dubon2026.SourceFricke.lipschitz_two_closed_of_im_neg",
+        "Dubon2026.SourceFricke.lipschitz_two_closed",
+        "Dubon2026.SourceFricke.summable_one_div_sub_int_sq",
+        "Dubon2026.SourceFricke.tsum_int_one_div_sq",
+        "Dubon2026.SourceFricke.two_pi_I_sq",
+        "Dubon2026.SourceFricke.neg_pi_sq_div_three_div",
+        "Dubon2026.SourceFricke.tsum_row_split",
+        "Dubon2026.SourceFricke.tsum_row_zero",
+        "Dubon2026.SourceFricke.lipschitz_two_of_im_neg'",
+        "Dubon2026.SourceFricke.cexp_two_pi_I_mul_add",
+        "Dubon2026.SourceFricke.cexp_two_pi_I_mul_nat_mul",
+        "Dubon2026.SourceFricke.cexp_two_pi_I_mul_neg",
+        "Dubon2026.SourceFricke.lipschitz_row_pair",
+        "Dubon2026.SourceFricke.lipschitz_row_zero",
+        "Dubon2026.SourceFricke.lipschitz_rows_qExpansion",
+        "Dubon2026.SourceFricke.hasSum_weierstrassP_prod",
+        "Dubon2026.SourceFricke.summable_weierstrassP_prod",
+        "Dubon2026.SourceFricke.weierstrassP_eq_tsum_tsum",
+        "Dubon2026.SourceFricke.summable_weierstrassP_row",
+        "Dubon2026.SourceFricke.wpRow_periodPairOfTau_split",
+        "Dubon2026.SourceFricke.weierstrassP_periodPairOfTau_eq_row_sum",
+        "Dubon2026.SourceFricke.weierstrassP_periodPairOfTau_qExpansion",
+        "Dubon2026.SourceFricke.zetaN_ne_zero",
+        "Dubon2026.SourceFricke.qN_ne_zero",
+        "Dubon2026.SourceFricke.qN_pow_self",
+        "Dubon2026.SourceFricke.cexp_two_pi_I_mul_torsionPt",
+        "Dubon2026.SourceFricke.norm_qN",
+        "Dubon2026.SourceFricke.torsionPt_hyps",
+        "Dubon2026.SourceFricke.weierstrassP_torsionPt_qExpansion",
+        "Dubon2026.SourceFricke.norm_zetaN",
+        "Dubon2026.SourceFricke.norm_qN_le_one",
+        "Dubon2026.SourceFricke.norm_qN_lt_one",
+        "Dubon2026.SourceFricke.norm_qN_le_of_le_im",
+        "Dubon2026.SourceFricke.norm_wpTail_le",
+        "Dubon2026.SourceFricke.summable_wpTail_majorant",
+        "Dubon2026.SourceFricke.summable_wpTail",
+        "Dubon2026.SourceFricke.weierstrassP_torsionPt_eq_tsum_prod",
+        "Dubon2026.SourceFricke.wpTorsion_eq_wpTorsionSeries",
+        "Dubon2026.SourceFricke.one_sub_zetaN_pow_mul_qN_pow_ne_zero",
+        "Dubon2026.SourceFricke.differentiable_qN",
+        "Dubon2026.SourceFricke.differentiable_wpTail",
+        "Dubon2026.SourceFricke.differentiableOn_wpTorsionSeries",
+        "Dubon2026.SourceFricke.mdifferentiable_wpTorsion",
+        "Dubon2026.SourceFricke.frickeIdx_hyps",
+        "Dubon2026.SourceFricke.mdifferentiable_wpNormZ",
+        "Dubon2026.SourceFricke.mdifferentiable_frickeF"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFricke.wpSummand",
+        "Dubon2026.SourceFricke.zetaN",
+        "Dubon2026.SourceFricke.qN",
+        "Dubon2026.SourceFricke.wpTail",
+        "Dubon2026.SourceFricke.wpTorsion",
+        "Dubon2026.SourceFricke.wpTorsionSeries"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassExpansionAudit8.log",
+      "logSha256": "322C5E263647B680DCA23D61D459401325210A21DC0E85DE897C6FC3A4CDD383",
+      "auditSha256": "5C3F98D2F889D438A175D2901ABBED85B093C0A4D071741D7B6E25C442102578",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 95,
+      "linterScopes": 8,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 58,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassExpansionDependencyAudit8b.log",
+      "dependencyAuditSha256": "BCD201E685A0032AD93895E9E2D0ABFD99503559372A2CB6B11F13970716D64F",
+      "dependencyAuditSourceSha256": "F82E7CBAE550F9D9875DA322D885805D2E899C5EC9D747C61AAF87AB7019CAC9",
+      "consumers": [
+        "Dubon2026.SourceFricke.mdifferentiable_frickeF",
+        "Dubon2026.SourceFricke.weierstrassP_torsionPt_eq_tsum_prod"
+      ],
+      "dependency": "DUB-17/18 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 Hecke-character realization -> actual Picard/H1 and diamond comparison -> differential realization -> rational Fourier structure -> Fricke generator holomorphy and cyclotomic expansion.",
+      "discharged": "The actual Weierstrass value at every nonzero level torsion point has the exact paired Fourier expansion, with absolute rearrangement proved. A locally uniform summable majorant proves holomorphy of the same actual function. The original normalized torsion-index and Fricke functions are holomorphic on the upper half-plane, with no holomorphy or Fourier-identity premise.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Cusp boundedness, explicit coefficient model and conjugation, rational Fricke spanning, actual differential realization and converse, Picard/H1/diamond and arithmetic association remain; 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-weierstrass-expansion-8b-reuse-review-20261026.json",
+      "reuseReviewSha256": "739A1672AF5E9C80D3153FB156BA1E57AA537AA1FC528793AEA43129C1DAB3C0",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [
+        "Dubon2026.SourceFricke.wpNormZ_eq_wpNorm",
+        "Dubon2026.SourceFricke.wpTorsionSeries_eq"
+      ],
+      "recordedUTC": "2026-10-26T14:15:58.859800+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceFrickeCyclotomicField",
+        "SourceWeierstrassNormalizedTorsion",
+        "SourceWeierstrassTorsionCuspBound",
+        "SourceWeierstrassTorsionFourierCoefficients",
+        "SourceWeierstrassTorsionFourierSum",
+        "SourceWeierstrassTorsionFourierExpansion",
+        "SourceFrickeCuspInputs"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicField.lean",
+          "sha256": "CB552577BCC834E7EE784FABE1AD38DF2FFD7E67D8A583C34A19C4EFBA3CF519",
+          "oleanSha256": "A665B3B630DCD42051E7DF24584CCC346A907B759DE4E48AB1004C6ADBD44AB5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassNormalizedTorsion.lean",
+          "sha256": "7FF05DCB99658FAE0286FA1391143AE0A5788CB0C1E22B026A4211CB40A9B438",
+          "oleanSha256": "38935E503AE717086500094089110108C6DB593780BD0AD7CE5987A1362BA426"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassTorsionCuspBound.lean",
+          "sha256": "26EC7D5B54EF49AC6DA9A9DB7C4EC2B11840F83C071541E00EE54662E448FE07",
+          "oleanSha256": "FEB6CFB39CCD3B07AEE14AC486CFC34C02E082265292C43632C5561CC05CF612"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassTorsionFourierCoefficients.lean",
+          "sha256": "F65C674B7B493EE02ED099A2EBF988F605D39E5A3E0BBCBB7AD2ADE5AB0D0037",
+          "oleanSha256": "82B83B5094781F74E9C977AD40CCA1F8E61FE60DC4441CB2DD129E541D45298A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassTorsionFourierSum.lean",
+          "sha256": "2B4687E881537A35E6CAACDB3480B4ABEC64A186BA7D708C90BA2A4517FB1456",
+          "oleanSha256": "6AB64D37B522565E2B749F2FE993DEAA45FFACB82C86055DFEFDCDC2DE8BD384"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassTorsionFourierExpansion.lean",
+          "sha256": "ACA66060E70084319577839D2BC5A99337BC06C4C973509378527B71524BC4E3",
+          "oleanSha256": "2C42B4DC5EB637C6C4024FC66F820BF871DECA2CE13AE9BE4FF03E6581CA76B4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCuspInputs.lean",
+          "sha256": "C2E43F31238A86930A69B3F956400117F17340847800A7E1F5E71087F4D375B3",
+          "oleanSha256": "2C34C5E8AE24AF57B5649C8D5C9BDC9CC96BA2267E7FCE13F728CAC1371F0770"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFricke.zetaN_mem_kN",
+        "Dubon2026.SourceFricke.zetaN_pow_mem_kN",
+        "Dubon2026.SourceFricke.zetaN_inv_pow_mem_kN",
+        "Dubon2026.SourceFricke.natCast_mem_kN",
+        "Dubon2026.SourceFricke.one_div_twelve_mem_kN",
+        "Dubon2026.SourceFricke.wpTorsionSeries_eq",
+        "Dubon2026.SourceFricke.wpNorm_eq",
+        "Dubon2026.SourceFricke.qN_add_natCast",
+        "Dubon2026.SourceFricke.wpTail_add_natCast",
+        "Dubon2026.SourceFricke.wpNormSeries_add_natCast",
+        "Dubon2026.SourceFricke.periodic_wpNorm",
+        "Dubon2026.SourceFricke.mdifferentiable_wpNorm",
+        "Dubon2026.SourceFricke.norm_wpNormSeries_le",
+        "Dubon2026.SourceFricke.isBoundedAtImInfty_wpNorm",
+        "Dubon2026.SourceFricke.wpMonCoeff_mem_kN",
+        "Dubon2026.SourceFricke.le_mul_sub_of_lt",
+        "Dubon2026.SourceFricke.le_wpMonExp_tail",
+        "Dubon2026.SourceFricke.finite_wpMonExp_fiber",
+        "Dubon2026.SourceFricke.wpQCoeff_mem_kN",
+        "Dubon2026.SourceFricke.summable_comp_fst_fin",
+        "Dubon2026.SourceFricke.hasSum_wpMon",
+        "Dubon2026.SourceFricke.hasSum_wpQCoeff",
+        "Dubon2026.SourceFricke.qExpansion_wpNorm_coeff",
+        "Dubon2026.SourceFricke.qExpansion_wpNorm_coeff_mem_kN",
+        "Dubon2026.SourceFricke.hasSum_qExpansion_wpNorm",
+        "Dubon2026.SourceFricke.wpNormZ_eq_wpNorm",
+        "Dubon2026.SourceFricke.periodic_wpNormZ",
+        "Dubon2026.SourceFricke.isBoundedAtImInfty_wpNormZ",
+        "Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff",
+        "Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff_mem_kN",
+        "Dubon2026.SourceFricke.frickeF_mul_discriminant",
+        "Dubon2026.SourceFricke.isBoundedAtImInfty_frickeF_mul_discriminant",
+        "Dubon2026.SourceFricke.kN",
+        "Dubon2026.SourceFricke.wpNormSeries",
+        "Dubon2026.SourceFricke.wpNorm",
+        "Dubon2026.SourceFricke.WpIdx",
+        "Dubon2026.SourceFricke.wpMonCoeff",
+        "Dubon2026.SourceFricke.wpMonExp",
+        "Dubon2026.SourceFricke.wpQCoeff"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFricke.zetaN_mem_kN",
+        "Dubon2026.SourceFricke.zetaN_pow_mem_kN",
+        "Dubon2026.SourceFricke.zetaN_inv_pow_mem_kN",
+        "Dubon2026.SourceFricke.natCast_mem_kN",
+        "Dubon2026.SourceFricke.one_div_twelve_mem_kN",
+        "Dubon2026.SourceFricke.wpTorsionSeries_eq",
+        "Dubon2026.SourceFricke.wpNorm_eq",
+        "Dubon2026.SourceFricke.qN_add_natCast",
+        "Dubon2026.SourceFricke.wpTail_add_natCast",
+        "Dubon2026.SourceFricke.wpNormSeries_add_natCast",
+        "Dubon2026.SourceFricke.periodic_wpNorm",
+        "Dubon2026.SourceFricke.mdifferentiable_wpNorm",
+        "Dubon2026.SourceFricke.norm_wpNormSeries_le",
+        "Dubon2026.SourceFricke.isBoundedAtImInfty_wpNorm",
+        "Dubon2026.SourceFricke.wpMonCoeff_mem_kN",
+        "Dubon2026.SourceFricke.le_mul_sub_of_lt",
+        "Dubon2026.SourceFricke.le_wpMonExp_tail",
+        "Dubon2026.SourceFricke.finite_wpMonExp_fiber",
+        "Dubon2026.SourceFricke.wpQCoeff_mem_kN",
+        "Dubon2026.SourceFricke.summable_comp_fst_fin",
+        "Dubon2026.SourceFricke.hasSum_wpMon",
+        "Dubon2026.SourceFricke.hasSum_wpQCoeff",
+        "Dubon2026.SourceFricke.qExpansion_wpNorm_coeff",
+        "Dubon2026.SourceFricke.qExpansion_wpNorm_coeff_mem_kN",
+        "Dubon2026.SourceFricke.hasSum_qExpansion_wpNorm",
+        "Dubon2026.SourceFricke.wpNormZ_eq_wpNorm",
+        "Dubon2026.SourceFricke.periodic_wpNormZ",
+        "Dubon2026.SourceFricke.isBoundedAtImInfty_wpNormZ",
+        "Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff",
+        "Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff_mem_kN",
+        "Dubon2026.SourceFricke.frickeF_mul_discriminant",
+        "Dubon2026.SourceFricke.isBoundedAtImInfty_frickeF_mul_discriminant"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFricke.kN",
+        "Dubon2026.SourceFricke.wpNormSeries",
+        "Dubon2026.SourceFricke.wpNorm",
+        "Dubon2026.SourceFricke.WpIdx",
+        "Dubon2026.SourceFricke.wpMonCoeff",
+        "Dubon2026.SourceFricke.wpMonExp",
+        "Dubon2026.SourceFricke.wpQCoeff"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFourierCoefficientsAudit7b.log",
+      "logSha256": "4A0111965AF7C679C68296D04589D6B42642576D75C7358CF152857875CF2E10",
+      "auditSha256": "E06733D9E21375D542E86B37BFCF8C03E588E4554F92D85AA2BC05A30D7DE218",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 70,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 44,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFourierCoefficientsDependencyAudit7b.log",
+      "dependencyAuditSha256": "AEAAE9D72C4EA84F34DBB4D2D8AC5B172D7145A41A1971B8EFC04A6C124A60C3",
+      "dependencyAuditSourceSha256": "A5383F711174AF8A830FC0CE799E83B061BD653F6DB3A753F946F5DDB0D0ADAC",
+      "consumers": [
+        "Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff_mem_kN",
+        "Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff",
+        "Dubon2026.SourceFricke.isBoundedAtImInfty_frickeF_mul_discriminant",
+        "Dubon2026.SourceFricke.periodic_wpNormZ",
+        "Dubon2026.SourceFricke.hasSum_qExpansion_wpNorm"
+      ],
+      "dependency": "DUB-17/18 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 characters -> actual Picard/H1 and diamond comparison -> differential realization -> rational Fourier structure -> cyclotomic Fricke Fourier coefficients.",
+      "discharged": "The actual normalized torsion-index Weierstrass function is periodic and bounded at infinity. Its native q-expansion equals the explicit finite exponent-fiber formula, and every coefficient belongs to the actual cyclotomic field generated by the level root of unity. Multiplication of the actual Fricke function by Delta cancels its denominator and gives a bounded function at infinity. No Fourier identity, coefficient-membership or cusp-bound premise is assumed.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Cyclotomic coefficient conjugation and Fricke separation/rational spanning, rational Gamma1 basis and actual differential realization remain, then the Picard/H1/diamond and arithmetic association chain; 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-fricke-fourier-coefficients-7b-reuse-review-20261026.json",
+      "reuseReviewSha256": "21EC20BCE44EF94F8570142288A55264184887381F26B737C8612DC7B030518F",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-gamma-one-differential-regularity-6b-reuse-review-20261026.json",
+    "Tools/source-fricke-transformation-4c-reuse-review-20261026.json",
+    "Tools/source-weierstrass-expansion-8b-reuse-review-20261026.json",
+    "Tools/source-fricke-fourier-coefficients-7b-reuse-review-20261026.json"
+  ],
+  "dependencyRouteAssessment": {
+    "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma-one-regularity-fricke-inputs-promotion-route-653.json",
+    "sha256": "20B8220C5642B7C5F027D9164DFEFDC763752865285F1F2A25C5E6F457ECF9FC"
+  },
+  "proofEvidenceArchive": {
+    "manifest": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/archive-manifest.json",
+    "sha256": "D9C8940E918BD90EAB4AB5948011AB239FC8EE4FC8F16571BB244013DB9DC38C",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt8360": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityDependencyAudit6bProduction8360.log",
+        "sha256": "23DE143D119620F9832CDEFDE00313461008F9DAA00C34BE31DEA32A8AE19831",
+        "requiredProofValueEdges": 21,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.gamma1_regular_of_diffQExp_matches_cusp"
+        ],
+        "sourceSha256": "0F11602875A984FAC7C51A6F29DF5B63F9A568DBF83C796DBC49E6AC7F3CC54F"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTransformationDependencyAudit4cProduction8360.log",
+        "sha256": "884CD5E52357D5C654E7515B2A07F4755CB447F74A167E8C6C48CDE18F38A487",
+        "requiredProofValueEdges": 39,
+        "consumers": [
+          "Dubon2026.SourceFricke.frickeF_hperm",
+          "Dubon2026.SourceFricke.frickeF_invariant_Gamma",
+          "Dubon2026.SourceFricke.frickeF_neg"
+        ],
+        "sourceSha256": "3A07F8632BF64A4F4C73B15FE010F7EDD795D299AE619C2B549F3ED45168EA65"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassExpansionDependencyAudit8bProduction8360.log",
+        "sha256": "BCD201E685A0032AD93895E9E2D0ABFD99503559372A2CB6B11F13970716D64F",
+        "requiredProofValueEdges": 58,
+        "consumers": [
+          "Dubon2026.SourceFricke.mdifferentiable_frickeF",
+          "Dubon2026.SourceFricke.weierstrassP_torsionPt_eq_tsum_prod"
+        ],
+        "sourceSha256": "BD684DB7F4B1FC1AFF966F99B51625DE3C1798EA9F1D3F742EE6BF8F4AD75602"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFourierCoefficientsDependencyAudit7bProduction8360.log",
+        "sha256": "AEAAE9D72C4EA84F34DBB4D2D8AC5B172D7145A41A1971B8EFC04A6C124A60C3",
+        "requiredProofValueEdges": 44,
+        "consumers": [
+          "Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff_mem_kN",
+          "Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff",
+          "Dubon2026.SourceFricke.isBoundedAtImInfty_frickeF_mul_discriminant",
+          "Dubon2026.SourceFricke.periodic_wpNormZ",
+          "Dubon2026.SourceFricke.hasSum_qExpansion_wpNorm"
+        ],
+        "sourceSha256": "037B878E6F0295CD13C0D1B9173E62624819E558B9B6DD3E4E3E0117D916AA1E"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsProductionAudit8360.log",
+    "sha256": "012805ED87297227978ACECCC61213533A46E76A96FA5A4ACC41B6CCAD3F09D3",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-regularity-fricke-inputs-production-build-8360.log",
+    "aggregateSha256": "02B05CED9C011458FBA755BE80ABE3F6D208481605BF243CAD13870848661FDB",
+    "productionModules": 8360,
+    "incrementModules": 25,
+    "axiomChecks": 152,
+    "exhaustiveIncrementTheorems": 264,
+    "linterScopes": 25,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 264,
+    "productionReuse": "Only scratch imports are qualified. Every audited statement, proof body and comment is preserved. Actual Gamma1 fields and native cusp forms retain their definitions; no regularity or integral equation is assumed. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 264,
+      "scratchDistinct": 264,
+      "generatedNameRenamings": {},
+      "productionFocused": 264,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceLaurentIntegralDescent",
+            "SourceCurveIntegralExpressionOrders",
+            "SourceCurveIntegralDifferentialOrders",
+            "SourceGammaOneDifferentialIntegralDescent",
+            "SourceCurveRegularIntegralCriterion",
+            "SourceGammaOneDifferentialRegularity"
+          ],
+          "count": 21,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership643bFor8360.log",
+            "sha256": "C06544FC4845486F6AE7CDC62F5ABCEFC90E082D2439E35D28AA46C93DEB07BF",
+            "sourceSha256": "90BECFFED0BA2182E6CDFE432580D7639ED6A3C433767C4A4D996DE1299E764E"
+          }
+        },
+        {
+          "modules": [
+            "SourceFrickePeriodHomothetyV2",
+            "SourceFrickeModularLatticeV2",
+            "SourceFrickeTorsionTransformationV2",
+            "SourceFrickeFunctionTransformationV2"
+          ],
+          "count": 78,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership647cFor8360.log",
+            "sha256": "BB60BF7794E1B887DEB5141A4A3E835C753C6CE20C602226C19BE06FAAC95E84",
+            "sourceSha256": "9516EF3159E4A22602DC1648181947CEA82EDF8394DFA19C309C4650D7AB649E"
+          }
+        },
+        {
+          "modules": [
+            "SourceLipschitzTwo",
+            "SourceLipschitzTwoRealBoundary",
+            "SourceWeierstrassRowSeries",
+            "SourceWeierstrassLatticeRows",
+            "SourceWeierstrassTorsionExpansion",
+            "SourceWeierstrassTorsionTail",
+            "SourceWeierstrassTorsionHolomorphy",
+            "SourceFrickeHolomorphy"
+          ],
+          "count": 95,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership650bFor8360.log",
+            "sha256": "AA7416C8EEC214BFBE75AA4A4FB7F8F0E0390700DA20495D5C99F610623917EB",
+            "sourceSha256": "051E356C4B82512EE284E1A07A9DFCD918E7CF8659237A9E16A637A373DBEFEC"
+          }
+        },
+        {
+          "modules": [
+            "SourceFrickeCyclotomicField",
+            "SourceWeierstrassNormalizedTorsion",
+            "SourceWeierstrassTorsionCuspBound",
+            "SourceWeierstrassTorsionFourierCoefficients",
+            "SourceWeierstrassTorsionFourierSum",
+            "SourceWeierstrassTorsionFourierExpansion",
+            "SourceFrickeCuspInputs"
+          ],
+          "count": 70,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership651bFor8360.log",
+            "sha256": "E306D012BA2F5DE154E3B37147DDA27576264D399492F37AC54DEB1C8A58AFCA",
+            "sourceSha256": "59311F15F70FF6C39770610D7CDB084DB3F6D95BFC4A6DCF4462EE9E5BB32D80"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsOwnership8360.log",
+        "sha256": "43967D786048F053766CF9B1F0D255C1AB6B896BA6A03F03AD257A93C3B3CFF8",
+        "sourceSha256": "8638D2C79915DD3087715687B6B5199B7FF488E79902313189FE00C9BB19436A"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-061545-571.log",
+        "sha256": "B696E0680B634D773587DF626A7713EE7A472D4C95D5A0CC7C1789C56B700920"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 25 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceLaurentIntegralDescent",
+            "scratchSha256": "B69E4811A4C90E8BE66BB986C98033C88638B749E90B21C0D5AC1693745412C6",
+            "productionSha256": "B69E4811A4C90E8BE66BB986C98033C88638B749E90B21C0D5AC1693745412C6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCurveIntegralExpressionOrders",
+            "scratchSha256": "657F98FE0B5E6BD2EE0908090047F938FD2D9886A1FEF70F67864C91FF36FBFA",
+            "productionSha256": "657F98FE0B5E6BD2EE0908090047F938FD2D9886A1FEF70F67864C91FF36FBFA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCurveIntegralDifferentialOrders",
+            "scratchSha256": "DDB4BCD796DDFBC681165C50B06BD0AB223C24FA5C22699F41345EDA9CE38D3E",
+            "productionSha256": "3961B2FB031678909FCE61664466CDA09A26AF66E12C2B9E0197F96CD006E7F1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDifferentialIntegralDescent",
+            "scratchSha256": "32E979532DD52AB20162F966BC7733034801F60A7F8BBF84039D66159A170C43",
+            "productionSha256": "88EC62CF767D35A6050D1E598A46A4FB037657775EA7A996F142D088F6252453",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCurveRegularIntegralCriterion",
+            "scratchSha256": "37BE299421EB6AD44ECDE761F43F25564920598C3C10846909F6BFA538C84B26",
+            "productionSha256": "2AD71E9EE8DDE16D04FFB4BECCF0F4D7E3F5E23DEE354357E8E1FB6FE552BA61",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDifferentialRegularity",
+            "scratchSha256": "B43C71E332504F9B3FA0A978B25C24A334F0BE86E70972DB0334000D8D77F998",
+            "productionSha256": "584C3C0057021559BFD4DDAA63B00CEB45A3D6BE8F2B816AC86F166798328ED2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickePeriodHomothetyV2",
+            "scratchSha256": "896E3B923D354A9CED8FD8C44FCE47073AEA669B4E5587B58A43BDA83866FF33",
+            "productionSha256": "896E3B923D354A9CED8FD8C44FCE47073AEA669B4E5587B58A43BDA83866FF33",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeModularLatticeV2",
+            "scratchSha256": "092D75B3216920F5E51C7960CFC84BFD57E6E1C73B9095621F7D192853B4204F",
+            "productionSha256": "BD33EDFD5A2B9CF786D23448F2F5FD4B7CCA7B68BE3EADA51F6419F3F0BBB7F0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeTorsionTransformationV2",
+            "scratchSha256": "3A5DB0130F60BF11013E34A6793E3679AD981834A5F6AC1FD4A17F59874AF8F8",
+            "productionSha256": "5EB63E4BD0B9C2572F2ACF484AD0810E789D537EAE58CCFDDCCE261C58DEDFD0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeFunctionTransformationV2",
+            "scratchSha256": "5BABB787F2D3D189DB22930D749DC5530ECF438593FCBF5E77D2CC3148C13B7D",
+            "productionSha256": "89F3BFBF1137F5B6F75FC355B05F3A5306B1272691D0F1A8F5E2123166B492F3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceLipschitzTwo",
+            "scratchSha256": "490C3EE77DFF924429526BAD36DF613932BE9C5BA109599FD2F07E87200237EB",
+            "productionSha256": "490C3EE77DFF924429526BAD36DF613932BE9C5BA109599FD2F07E87200237EB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceLipschitzTwoRealBoundary",
+            "scratchSha256": "B3E74F77839BD9172F411A4089B0780E1C82BFC5E1A48CA02BD19D38C5183CF9",
+            "productionSha256": "95CBF316AD7FEF3E4090694244ABB108ADA5EAB5A27D5106C978C33D1ECBAEF5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeierstrassRowSeries",
+            "scratchSha256": "DE4FE36E54C7FCFD7C2967D7738556CF6A82CD7299EE8FC20F17B1A2AF610181",
+            "productionSha256": "05826FB23173B14762A1A83D4F729FF3124EE44E45BE754F6CC1327D44CAF46B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeierstrassLatticeRows",
+            "scratchSha256": "40E695A8965F49DB4886F45950AD033FC3585BD127A517C38AAC92B8DA0BAB68",
+            "productionSha256": "D7A22E4E030552BB9E7733087E2C5DB8D9620FBC2AF73F5BAC1FBAF7A7C1FE8D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeierstrassTorsionExpansion",
+            "scratchSha256": "766A2069D6302436819DC787318D341045A4FA9A8CB010852968369F8CE614EE",
+            "productionSha256": "8AA529140FBD35F54CAF1DD110138D056F69D24423659BBFA48D4E04B834F59B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeierstrassTorsionTail",
+            "scratchSha256": "3D95B55677C539619F72F244DF88D64559CB2EFBC87DD715415ABFB5CE9BC161",
+            "productionSha256": "08E33F8188C9B6DA914FD0C4CD09566C462CC6253859DBE9CEA081D371B0CCE0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeierstrassTorsionHolomorphy",
+            "scratchSha256": "7F1D04F8E49AD01A36D1BB0AD1B7D55E3D428F941CD18D70AB83315E42C7BD3B",
+            "productionSha256": "A7E51FE449ED3E5292129C51D070F7D2DCBFDD679F1F18A2F8801725A999DE1F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeHolomorphy",
+            "scratchSha256": "DF1494B78BCEE18F4806A9A5558BD0E18961C1EFAD71C8D30BAE9B4FE4A35C9D",
+            "productionSha256": "0F95E4A11784515A023DC6EE8D9ED9B4CD06E7588978A60314A96B2AFB9497D5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeCyclotomicField",
+            "scratchSha256": "CB552577BCC834E7EE784FABE1AD38DF2FFD7E67D8A583C34A19C4EFBA3CF519",
+            "productionSha256": "E7FE7979A9C0E3B18E92BA334EF918B73AB144EB5B6A4E9663982EFC599C75A6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeierstrassNormalizedTorsion",
+            "scratchSha256": "7FF05DCB99658FAE0286FA1391143AE0A5788CB0C1E22B026A4211CB40A9B438",
+            "productionSha256": "E00F0A22EC9E0E9A61E9F83E9376A0D68C2F83ACC9B1AA8D79082C8D012CBF29",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeierstrassTorsionCuspBound",
+            "scratchSha256": "26EC7D5B54EF49AC6DA9A9DB7C4EC2B11840F83C071541E00EE54662E448FE07",
+            "productionSha256": "69EF30FAD34352733AA82F0274CF26BD30212B9FAF21D3F792CF8DC427B8B12F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeierstrassTorsionFourierCoefficients",
+            "scratchSha256": "F65C674B7B493EE02ED099A2EBF988F605D39E5A3E0BBCBB7AD2ADE5AB0D0037",
+            "productionSha256": "206B74E47A8240861AFB07019222410BF357B5553D236F6D49B486821EB09FE0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeierstrassTorsionFourierSum",
+            "scratchSha256": "2B4687E881537A35E6CAACDB3480B4ABEC64A186BA7D708C90BA2A4517FB1456",
+            "productionSha256": "189D8519D92BAFBD5B7AC8469C79ECD43BD0C62935AB29F7E30387174EEFD185",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeierstrassTorsionFourierExpansion",
+            "scratchSha256": "ACA66060E70084319577839D2BC5A99337BC06C4C973509378527B71524BC4E3",
+            "productionSha256": "0F6B47AA646AE1BF54EC2F2B33FDF589AD4E203140C614101701F37E30B2C277",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeCuspInputs",
+            "scratchSha256": "C2E43F31238A86930A69B3F956400117F17340847800A7E1F5E71087F4D375B3",
+            "productionSha256": "E9F3101E3DFD98914AE371D59334511F11519CC92593A67F801F216D6E4B4F69",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 264 distinct names from 264 exhaustive scratch checks are retained: 264 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Algebraic realization of arbitrary Gamma1 cusp forms and the converse regular-differential-to-cusp construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must identify the original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of these characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Neither complex semisimplicity, finite characters, Witt coefficients nor a universal deformation ring supplies a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN."
+  }
+}

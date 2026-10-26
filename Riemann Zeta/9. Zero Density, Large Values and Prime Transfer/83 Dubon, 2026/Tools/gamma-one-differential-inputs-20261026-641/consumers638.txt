@@ -1,0 +1,44 @@
+
+section
+
+/-- The actual cusp values give a convergent entire Mellin integral with the precise modular S-transform functional equation. -/
+theorem cusp_original_mellin_completion_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 < k) :
+    Differentiable ℂ (cuspCompletedLFunction f) ∧
+    (∀ s : ℂ, HasMellin (fun y => f (UpperHalfPlane.ofComplex ((y : ℂ) * Complex.I))) s
+      (cuspCompletedLFunction f s)) ∧
+    (∀ s : ℂ, cuspCompletedLFunction f ((k : ℂ) - s) =
+      Complex.I ^ k * cuspCompletedLFunction (CuspForm.translate f ModularGroup.S) s) :=
+  ⟨cuspCompletedLFunction_differentiable f hk,
+    cuspCompletedLFunction_hasMellin f hk, cuspCompletedLFunction_functional_equation f hk⟩
+
+/-- The exact original Mellin integral and half-weight shift construct an entire continuation of the true normalized cusp coefficient L-series. -/
+theorem normalized_cusp_entire_lseries_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((CongruenceSubgroup.Gamma0 Q).map (Matrix.SpecialLinearGroup.mapGL ℝ)) k)
+    (hk : 0 < k) :
+    Differentiable ℂ (normalizedCuspLFunction f) ∧
+    ∀ s : ℂ, 1 < s.re →
+      normalizedCuspLFunction f s = LSeries (normalizedCuspCoefficients f) s ∧
+      cuspCompletedLFunction f (s + ((k : ℂ) - 1) / 2) =
+        ((2 * Real.pi : ℝ) : ℂ) ^ (-(s + ((k : ℂ) - 1) / 2)) *
+          Complex.Gamma (s + ((k : ℂ) - 1) / 2) * LSeries (normalizedCuspCoefficients f) s :=
+  ⟨normalizedCuspLFunction_differentiable f hk, fun _ hs =>
+    ⟨normalizedCuspLFunction_eq_series f hk.le hs,
+      cuspCompletedLFunction_eq_normalized_series f hk.le hs⟩⟩
+
+/-- The genuine first symmetric-power infinite Euler product has a proved entire continuation, nonzero on Re(s)>1; nonvanishing on the boundary is deliberately not asserted. -/
+theorem primitive_first_entire_euler_continuation_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 0 < k) :
+    ∃ F : ℂ → ℂ, Differentiable ℂ F ∧
+      Set.EqOn F (fun s => (∏' v : Nat.Primes × Fin 2,
+        (1 - primitiveSymmetricSpectralRoots f 1 v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+        {s | 1 < s.re} ∧
+      ∀ s : ℂ, 1 < s.re → F s ≠ 0 := by
+  obtain ⟨F,hFa,hFe⟩ := primitive_first_symmetric_entire_continuation f hk
+  refine ⟨F,hFa,hFe,fun s hs => ?_⟩
+  rw [hFe hs]
+  exact primitive_first_symmetric_ne_zero f hk.le hs
+
+end
+

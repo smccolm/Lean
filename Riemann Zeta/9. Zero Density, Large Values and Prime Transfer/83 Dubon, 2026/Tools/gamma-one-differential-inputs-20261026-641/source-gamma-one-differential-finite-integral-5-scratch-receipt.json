@@ -1,0 +1,94 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T12:20:10.571213+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceModularQDerivative",
+    "SourceModularQDerivativeExpansion",
+    "SourceJEulerModularIdentity",
+    "SourceJEulerPolynomial",
+    "SourceGammaOneDifferentialFiniteIntegral"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularQDerivative.lean",
+      "sha256": "FC2F6B74ED10B060C93A78DEB0CED5A28EABE81773DB950E5E7E1E078EFECDA1",
+      "oleanSha256": "81638A7C8564033613FF5BC7CA6FE7054E1938D322CDDF1B38FDB357D1ECC039"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularQDerivativeExpansion.lean",
+      "sha256": "1E7CD358AC3EB98C79B2A408E2EA163BC7A34A8DF7DB714EB2D3B6114A5A1994",
+      "oleanSha256": "F6949ACE2809A8283A520D22DFEBB6CE4F833623113E106F026072638F1F428D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceJEulerModularIdentity.lean",
+      "sha256": "FD9BE4798191F600D21C59DF4DCACDBAE2235C0C2BB339EC37A6A1052ED57B1E",
+      "oleanSha256": "B3415CAF9F74228DA57D74B7D341E0EDE2678AD747CBC07F17386E79E854E71C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceJEulerPolynomial.lean",
+      "sha256": "C5DDA9ED262E9CB5D9EB05A429C7906A928E14E776BD454B3E3680EE143AE3DE",
+      "oleanSha256": "4C30EC7B245B27ECB3C36F7E337FB434224EF8F5D38ACA7AFDB23CCE3C5EF8C6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialFiniteIntegral.lean",
+      "sha256": "5F57CA4815D4116FEEC8F6C49B5EF65086023DB81D4FBE64B1F700CD99B37009",
+      "oleanSha256": "8638F4C92B9E3AE563C59C70A03711D95E64EDED1427DC23E1C2D148CCCB2526"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.ModularQDerivative.norm_qParam_one_lt_one",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.hasDerivAt_qParam_one",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.normalizedDerivOfComplex_eq_qParam_mul_deriv",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.periodic_normalizedDerivOfComplex",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_coeff_unique'",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.hasSum_qExpansion_normalizedDerivOfComplex",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_coeff_normalizedDerivOfComplex",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.coe_qExpansion_normalizedDerivOfComplex",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_derivative_bracket",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qEuler_jqModC_mul_discriminant",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.laurent_discriminant_relation",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.exists_qEuler_jqModC_formula",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.exists_qEuler_jqModC_power_six",
+    "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_finite_expression"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.ModularQDerivative.norm_qParam_one_lt_one",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.hasDerivAt_qParam_one",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.normalizedDerivOfComplex_eq_qParam_mul_deriv",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.periodic_normalizedDerivOfComplex",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_coeff_unique'",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.hasSum_qExpansion_normalizedDerivOfComplex",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_coeff_normalizedDerivOfComplex",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.coe_qExpansion_normalizedDerivOfComplex",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_derivative_bracket",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qEuler_jqModC_mul_discriminant",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.laurent_discriminant_relation",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.exists_qEuler_jqModC_formula",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.exists_qEuler_jqModC_power_six",
+    "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_finite_expression"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialFiniteIntegralAudit5.log",
+  "logSha256": "7C225FD674122F1E16AA854DAB088914C0152E83C30723D8241956D21F9F2C5B",
+  "auditSha256": "651C352C271F9099BDA36D5149EA1CFD9A4F5EED63278899C9D359A9A8971665",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 38,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 22,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialFiniteIntegralDependencyAudit5.log",
+  "dependencyAuditSha256": "26417CCA781CE2901677B3F6EA310BC01439F3838CD90FA6D7DEB9ACF8F35C8B",
+  "dependencyAuditSourceSha256": "60574BB2C51873F6FF3FBC499B45C7BC894A667B92273DC9C6DB7E9B8E5AF765",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_finite_expression"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> finite Gamma1 Hecke-character arithmetic realization -> actual Picard/H1 and diamond comparison -> regular-differential/cusp comparison -> finite-coordinate integral bound for a differential matching an actual weight-two cusp form.",
+  "discharged": "For any finite-index integral subgroup containing T, an actual weight-two cusp form f and a Laurent coefficient Y with Y*qEuler(j)=qExpansion(f), the exact expression Y^6*j^4*(j-1728)^3 is integral over C[j]. The integral equation and analytic/formal derivative normalization are derived, not hypotheses. The same theorem applies to Gamma1 and its Hecke correspondence subgroup.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The cusp-place inverse-j integral bound, algebraic differential realization and converse cusp construction remain, followed by actual Picard/H1, full/parabolic and diamond comparison, arithmetic finite-character realization, original all-weight association, local/image/regularity, automorphy and literal higher continuation. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-differential-finite-integral-5-reuse-review-20261026.json",
+  "reuseReviewSha256": "0551586A0E6F030C27B95DF1E5AAD63DD558ACDA0AEF6B76C7653085E5CF3773",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

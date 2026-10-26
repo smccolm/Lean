@@ -1,0 +1,40 @@
+{
+  "modules": [
+    "SourceFiniteResidualCoefficientField",
+    "SourceResidualCoefficientDeterminant",
+    "SourceFiniteResidualArithmeticDescent",
+    "SourcePrimitiveFiniteResidualGalois"
+  ],
+  "theorems": [
+    "Dubon2026.sourceFiniteImage_exists_finiteCoefficientField",
+    "Dubon2026.sourceArithmeticCyclotomicUnitCharacter_coefficient_map",
+    "Dubon2026.sourceArithmetic_cyclotomic_determinant_coefficient_descent",
+    "Dubon2026.sourceArithmetic_exists_finiteCoefficient_realization",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_finiteResidualGalois_charP"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.sourceFiniteImage_exists_finiteCoefficientField",
+    "Dubon2026.sourceArithmeticCyclotomicUnitCharacter_coefficient_map",
+    "Dubon2026.sourceArithmetic_cyclotomic_determinant_coefficient_descent",
+    "Dubon2026.sourceArithmetic_exists_finiteCoefficient_realization",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_finiteResidualGalois_charP"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceFiniteImage_exists_finiteCoefficientField",
+    "Dubon2026.sourceArithmeticCyclotomicUnitCharacter_coefficient_map",
+    "Dubon2026.sourceArithmetic_cyclotomic_determinant_coefficient_descent",
+    "Dubon2026.sourceArithmetic_exists_finiteCoefficient_realization",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_finiteResidualGalois_charP",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_oddResidualGalois_charP",
+    "Dubon2026.generalLinearSubalgebra_continuous",
+    "IntermediateField.finiteDimensional_adjoin",
+    "Module.finite_of_finite",
+    "RingHom.map_det",
+    "AddMonoidHom.map_trace"
+  ],
+  "roots": [
+    "Dubon2026.sourcePrimitive_exists_originalSupport_finiteResidualGalois_charP"
+  ],
+  "separatelyAxiomChecked": []
+}

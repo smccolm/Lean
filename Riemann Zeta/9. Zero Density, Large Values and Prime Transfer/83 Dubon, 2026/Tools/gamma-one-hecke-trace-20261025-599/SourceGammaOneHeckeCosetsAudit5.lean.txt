@@ -1,0 +1,69 @@
+import SourceGammaOneCoverHeckeSquare
+import SourcePrincipalCoprimeReduction
+import SourceGammaOneRaisedCosets
+import SourceGammaOneCoverHeckeCosets
+import SourceGammaOneCoverHeckeRepresentatives
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.sourceGammaOneDiagonalHom_mem_heckeUpper
+#print axioms Dubon2026.sourceGammaOne_cover_hecke_diagonals_commute
+#print axioms Dubon2026.sourceGammaOneCoverHecke_square
+#print axioms Dubon2026.sourceSL2ChineseRemainder_reduction
+#print axioms Dubon2026.sourcePrincipalReduction_surjective
+#print axioms Dubon2026.sourceGammaOneRaisedCosetMap_injective
+#print axioms Dubon2026.sourceGammaOneRaisedCosetMap_surjective
+#print axioms Dubon2026.sourceGammaOneRaisedCosetMap_bijective
+#print axioms Dubon2026.sourceGammaOneCoverHeckeCosetMap_mk
+#print axioms Dubon2026.sourceGammaOneCoverHeckeCosetMap_smul
+#print axioms Dubon2026.sourceGammaOneCoverHeckeCosetMap_bijective
+#print axioms Dubon2026.sourceGammaOneCoverHeckeRepresentative_coset
+#print axioms Dubon2026.sourceGammaOneCoverHeckeRepresentative_equiv
+#print axioms Dubon2026.sourceGammaOneCoverHeckeRepresentative_smul
+#print axioms Dubon2026.sourceGammaOneCoverHeckeTransition
+#print axioms Dubon2026.sourceGammaOneCoverHeckeTransition_conjugation
+#print axioms Dubon2026.sourceGammaOneCoverHeckeUpperHom
+#print axioms Dubon2026.sourceGammaOneRaisedCosetMap
+#print axioms Dubon2026.sourceGammaOneCoverHeckeCosetMap
+#print axioms Dubon2026.sourceGammaOneCoverHeckeCosetEquiv
+#print axioms Dubon2026.sourceGammaOneCoverHeckeRepresentative
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceGammaOneCoverHeckeSquare, `SourcePrincipalCoprimeReduction, `SourceGammaOneRaisedCosets, `SourceGammaOneCoverHeckeCosets, `SourceGammaOneCoverHeckeRepresentatives]
+  let theorems : Array Name := #[`Dubon2026.sourceGammaOneDiagonalHom_mem_heckeUpper, `Dubon2026.sourceGammaOne_cover_hecke_diagonals_commute, `Dubon2026.sourceGammaOneCoverHecke_square, `Dubon2026.sourceSL2ChineseRemainder_reduction, `Dubon2026.sourcePrincipalReduction_surjective, `Dubon2026.sourceGammaOneRaisedCosetMap_injective, `Dubon2026.sourceGammaOneRaisedCosetMap_surjective, `Dubon2026.sourceGammaOneRaisedCosetMap_bijective, `Dubon2026.sourceGammaOneCoverHeckeCosetMap_mk, `Dubon2026.sourceGammaOneCoverHeckeCosetMap_smul, `Dubon2026.sourceGammaOneCoverHeckeCosetMap_bijective, `Dubon2026.sourceGammaOneCoverHeckeRepresentative_coset, `Dubon2026.sourceGammaOneCoverHeckeRepresentative_equiv, `Dubon2026.sourceGammaOneCoverHeckeRepresentative_smul, `Dubon2026.sourceGammaOneCoverHeckeTransition, `Dubon2026.sourceGammaOneCoverHeckeTransition_conjugation]
+  let constructions : Array Name := #[`Dubon2026.sourceGammaOneCoverHeckeUpperHom, `Dubon2026.sourceGammaOneRaisedCosetMap, `Dubon2026.sourceGammaOneCoverHeckeCosetMap, `Dubon2026.sourceGammaOneCoverHeckeCosetEquiv, `Dubon2026.sourceGammaOneCoverHeckeRepresentative]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Primitive Tate Restriction postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Primitive Tate Restriction theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE HECKE COSETS AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceGammaOneCoverHeckeSquare
+#lint in SourcePrincipalCoprimeReduction
+#lint in SourceGammaOneRaisedCosets
+#lint in SourceGammaOneCoverHeckeCosets
+#lint in SourceGammaOneCoverHeckeRepresentatives

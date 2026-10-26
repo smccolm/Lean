@@ -1,0 +1,112 @@
+{
+  "scope": 568,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight residual association -> close the weight-two parabolic branch -> actual original primitive residual representation with the prescribed complex algebraic-integer reduction -> choose the Fourier-field completion at the reduction kernel and prove its actual residue embedding and Tate-prime compatibility",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\OriginalAdicBaseChangeMap.lean",
+      "sha256": "1102E70D2217913EB5514E4A29DF351CFB86C34C3A030448EF0FA36CDB2439F5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\OriginalAdicCompletionResidue.lean",
+      "sha256": "E6F1A03D2C1482D2B82634C0DC1B26E8ADDECDE034C5FCDA4265256C5A5F47EE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\OriginalAdicIntegerNormComparison.lean",
+      "sha256": "54FDB0AE4CF710C726346666AFDCDC2D32DE3B24D53C038D0DDBFBB084067129"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\OriginalAdicLocalFieldStructures.lean",
+      "sha256": "9EC973DE24D92F1320CB9B9982F0DD08778CD8E644D68F0928304E64361AD907"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\OriginalIntegerLocalValuationMap.lean",
+      "sha256": "F9E6C19AEA35C0DBBCD586BC83889439FDD5B0DCC5AA11FEBDFD860E90BEE16D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\OriginalFinitePrimeOrbits.lean",
+      "sha256": "29494A1E37523BA5D3235CC96C042E11C09FF7C92AD4A9030150BD10407CF336"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveLocalCoefficients.lean",
+      "sha256": "0EBA3EAE554D519E5244AF28BC33E6E151242C847E15F95BE842078AD42D0D74"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveAlgebraicIntegerReduction.lean",
+      "sha256": "15A2274D8E4A94ED88F54B923F8A2CB0CE3B204D7E1F2A9A449359336236E4A3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveGaloisAlternative.lean",
+      "sha256": "7B4FD282B218854C4B088B2739B32F882676FBB61A0E48D8FF020C5C6BC6815C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\RationalArithmeticGaloisGroup.lean",
+      "sha256": "70E64464EFBE1EA1935BF2D4C948DFE9A5D5F81CC08A32B9DD92CEADC57EF5F6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\NumberField\\Completion\\FinitePlace.lean",
+      "sha256": "B6881F1D27C028C8CFCD517B24D7522C3636C9DA42F3BCA74429423D7BE30F18"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\Padics\\HeightOneSpectrum.lean",
+      "sha256": "F3767CA355BB8DDAA64470ACBE0A7AE879908921D3347A0677F18470D908D0CA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Algebra\\Module\\FiniteDimension.lean",
+      "sha256": "2D4CC4269EA563EAD0D50EB6D83DCB6D9CA97885FA4F1736EAC92605C7EEC2D8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Valuation\\Extension.lean",
+      "sha256": "B33E5D3BD4D1D7C9DCCFF57C46C4977DDB07733EBF155D773E8119AFCC9D0C4A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Algebra\\Hom\\Rat.lean",
+      "sha256": "49F2A52F40F7BA725DCE68F3EC3623AC19578CEE9CA0D5BA64347639963A32E9"
+    }
+  ],
+  "shorterRoute": "Use the kernel of the prescribed reduction as the actual Fourier-integer prime. Reuse the existing completion quotient/residue equivalence, rather than a new algebraic-closure embedding or valuation extension construction. Compose the native rational p-adic completion equivalence with the existing completed number-field embedding. Native finiteness of completed number fields, continuous scalar multiplication and finite-dimensional module topology supply the exact local structure. The native integer-ring equivalence proves valuation compatibility without an isometry between differently normalized adic norms. A number-field-parametric assembly keeps elaboration bounded; instantiate it with the actual proved Fourier number field and identity embedding, then restrict the exact complex algebraic-integer reduction. Finite image is retained for the necessary next arithmetic-quotient descent. No proof limits change.",
+  "assumptionsToDischarge": "The completion, its Tate-prime scalar map, finite-dimensional module topology, nonarchimedean local-field structure and valuation extension are constructed. Its actual residue embedding agrees with the prescribed reduction on every original integer. The actual original Tate/lattice construction therefore gives a finite-image continuous residual representation with the prescribed reduced original coefficient, Frobenius polynomial, trace, determinant and good-prime inertia, without supplying any coefficient completion, embedding, local structure, lattice or compatibility assumption.",
+  "remaining": "Arithmetic quotient and norm-local interface comparisons, closure of the weight-two parabolic branch, final weight twist and support comparison, arithmetic automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "scratchImportClosure": [
+    "SourceOriginalAlgebraicIntegerResidual",
+    "SourceOriginalExactReductionResidual",
+    "SourceOriginalPrescribedReductionResidual",
+    "SourceRankTwoCharpolyCoefficients",
+    "SourcePrescribedCompletionResidue",
+    "SourceAdicCoefficientResidueComparison",
+    "SourcePrescribedReductionPrime",
+    "SourceReductionCompletionLocalStructures",
+    "SourcePadicCompletionValuation",
+    "SourceReductionCompletionPadicMap",
+    "SourceReductionCompletionBasePrime",
+    "SourceReductionCompletionFinite",
+    "SourceOriginalPrescribedResidualFrobenius",
+    "SourceOriginalResidualInertia",
+    "SourceIntegralMatrixCharpoly",
+    "SourceMatrixIntertwinerCharpoly",
+    "SourceOriginalResidualFrobeniusCharpoly",
+    "SourceOriginalSpecializationFrobeniusCharpoly",
+    "SourceCyclotomicFrobeniusCharpoly",
+    "SourceRankTwoQuadraticTrace",
+    "SourceValuationCyclotomicFrobenius",
+    "SourceValuationFrobeniusRoots",
+    "SourceOriginalSpecializationCyclotomicDeterminant",
+    "SourceSpecializationBaseChangeIntertwiner",
+    "SourceImageSpecializationDeterminant",
+    "SourceAlternatingRankTwoDeterminant",
+    "SourceImageSpecializationPairing",
+    "SourcePrimitiveOriginalTateGalois",
+    "SourcePolynomialCommutant",
+    "SourceOriginalSpecializationPrimitiveImage",
+    "SourceSpanningProjectorImage",
+    "SourceOriginalSpecializationProjector",
+    "SourcePolynomialSpecialization",
+    "SourceOriginalPrescribedTateSpecialization"
+  ],
+  "separatelyAxiomChecked": [
+    "Dubon2026.sourceReductionPrime_below",
+    "Dubon2026.sourcePrescribedCompletionResidueMap_injective",
+    "Dubon2026.sourceReductionCompletionPadicMap_rational",
+    "Dubon2026.sourceAdicCoefficientResidueEquiv_mk"
+  ],
+  "documentationRepair": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-documentation-successor-568b.json"
+}

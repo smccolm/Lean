@@ -1,0 +1,72 @@
+{
+  "modules": [
+    "SourcePrimitiveH1CoefficientField",
+    "SourcePrimitiveLocalH1Character",
+    "SourcePrimitiveAdicH1Quotients",
+    "SourcePrimitiveCompatibleH1AdicData",
+    "SourcePrimitiveH1AdicRealization"
+  ],
+  "theorems": [
+    "Dubon2026.sourcePrimitiveH1HeckeCharacter_mem_coefficientRing",
+    "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_hecke",
+    "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_isIntegral",
+    "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_coe",
+    "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_hecke",
+    "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_residue",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_hecke",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_compatible",
+    "Dubon2026.sourceLocalH1AdicQuotient_finite",
+    "Dubon2026.sourcePrimitiveCompatibleH1AdicData_of_local",
+    "Dubon2026.sourcePrimitive_exists_compatibleH1AdicRealization"
+  ],
+  "constructions": [
+    "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter",
+    "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter",
+    "Dubon2026.sourcePrimitiveCompatibleH1AdicData"
+  ],
+  "queries": [
+    "Dubon2026.sourcePrimitiveH1HeckeCharacter_mem_coefficientRing",
+    "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_hecke",
+    "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_isIntegral",
+    "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_coe",
+    "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_hecke",
+    "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_residue",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_hecke",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_compatible",
+    "Dubon2026.sourceLocalH1AdicQuotient_finite",
+    "Dubon2026.sourcePrimitiveCompatibleH1AdicData_of_local",
+    "Dubon2026.sourcePrimitive_exists_compatibleH1AdicRealization",
+    "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter",
+    "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter",
+    "Dubon2026.sourcePrimitiveCompatibleH1AdicData"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourcePrimitiveH1HeckeCharacter_mem_coefficientRing",
+    "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_hecke",
+    "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_isIntegral",
+    "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_coe",
+    "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_hecke",
+    "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_residue",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_hecke",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_compatible",
+    "Dubon2026.sourceLocalH1AdicQuotient_finite",
+    "Dubon2026.sourcePrimitiveCompatibleH1AdicData_of_local",
+    "Dubon2026.sourcePrimitive_exists_compatibleH1AdicRealization",
+    "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter",
+    "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter",
+    "Dubon2026.sourcePrimitiveCompatibleH1AdicData",
+    "Dubon2026.sourcePrimitiveH1HeckeCharacter",
+    "Dubon2026.sourcePrimitiveH1HeckeCharacter_hecke",
+    "Dubon2026.sourceBinaryH1HeckeAlgebra_finite",
+    "Dubon2026.sourcePrimitiveCoefficient_valuation_le_one",
+    "Dubon2026.sourcePrimitive_exists_residualHeckeCharacter_charP",
+    "Ideal.finite_quotient_pow"
+  ],
+  "roots": [
+    "Dubon2026.sourcePrimitive_exists_compatibleH1AdicRealization"
+  ],
+  "separatelyAxiomChecked": []
+}

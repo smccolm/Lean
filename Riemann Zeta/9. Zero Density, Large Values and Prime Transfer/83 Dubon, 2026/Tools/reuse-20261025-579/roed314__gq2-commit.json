@@ -1,0 +1,101 @@
+{
+  "sha": "a2b1481f5e87acbb732b1e0fcf308a7ac2a9013a",
+  "node_id": "C_kwDOTU1eptoAKGEyYjE0ODFmNWU4N2FjYmI3MzJiMWUwZmNmMzA4YTdhYzJhOTAxM2E",
+  "commit": {
+    "author": {
+      "name": "David Roe",
+      "email": "roed.math@gmail.com",
+      "date": "2026-09-02T02:22:30Z"
+    },
+    "committer": {
+      "name": "David Roe",
+      "email": "roed.math@gmail.com",
+      "date": "2026-09-02T02:22:30Z"
+    },
+    "message": "Deploy site\n\nSource: gq2-paper@7041f8e, gq2-claude@d0714a7, gq2-gpt@e868b9e",
+    "tree": {
+      "sha": "48f0a8739d5064d245bcba0b5aceb09f8653ba32",
+      "url": "https://api.github.com/repos/roed314/gq2/git/trees/48f0a8739d5064d245bcba0b5aceb09f8653ba32"
+    },
+    "url": "https://api.github.com/repos/roed314/gq2/git/commits/a2b1481f5e87acbb732b1e0fcf308a7ac2a9013a",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/roed314/gq2/commits/a2b1481f5e87acbb732b1e0fcf308a7ac2a9013a",
+  "html_url": "https://github.com/roed314/gq2/commit/a2b1481f5e87acbb732b1e0fcf308a7ac2a9013a",
+  "comments_url": "https://api.github.com/repos/roed314/gq2/commits/a2b1481f5e87acbb732b1e0fcf308a7ac2a9013a/comments",
+  "author": {
+    "login": "roed314",
+    "id": 22795,
+    "node_id": "MDQ6VXNlcjIyNzk1",
+    "avatar_url": "https://avatars.githubusercontent.com/u/22795?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/roed314",
+    "html_url": "https://github.com/roed314",
+    "followers_url": "https://api.github.com/users/roed314/followers",
+    "following_url": "https://api.github.com/users/roed314/following{/other_user}",
+    "gists_url": "https://api.github.com/users/roed314/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/roed314/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/roed314/subscriptions",
+    "organizations_url": "https://api.github.com/users/roed314/orgs",
+    "repos_url": "https://api.github.com/users/roed314/repos",
+    "events_url": "https://api.github.com/users/roed314/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/roed314/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "roed314",
+    "id": 22795,
+    "node_id": "MDQ6VXNlcjIyNzk1",
+    "avatar_url": "https://avatars.githubusercontent.com/u/22795?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/roed314",
+    "html_url": "https://github.com/roed314",
+    "followers_url": "https://api.github.com/users/roed314/followers",
+    "following_url": "https://api.github.com/users/roed314/following{/other_user}",
+    "gists_url": "https://api.github.com/users/roed314/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/roed314/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/roed314/subscriptions",
+    "organizations_url": "https://api.github.com/users/roed314/orgs",
+    "repos_url": "https://api.github.com/users/roed314/repos",
+    "events_url": "https://api.github.com/users/roed314/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/roed314/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "179641a89a3f6cf768f56ecb0b3efcf377dd933c",
+      "url": "https://api.github.com/repos/roed314/gq2/commits/179641a89a3f6cf768f56ecb0b3efcf377dd933c",
+      "html_url": "https://github.com/roed314/gq2/commit/179641a89a3f6cf768f56ecb0b3efcf377dd933c"
+    }
+  ],
+  "stats": {
+    "total": 4,
+    "additions": 3,
+    "deletions": 1
+  },
+  "files": [
+    {
+      "sha": "fc8c53304acfeb5dcf7b9ac5b3b830e2d8bbeda7",
+      "filename": "paper/detail-ui.css",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 1,
+      "changes": 4,
+      "blob_url": "https://github.com/roed314/gq2/blob/a2b1481f5e87acbb732b1e0fcf308a7ac2a9013a/paper%2Fdetail-ui.css",
+      "raw_url": "https://github.com/roed314/gq2/raw/a2b1481f5e87acbb732b1e0fcf308a7ac2a9013a/paper%2Fdetail-ui.css",
+      "contents_url": "https://api.github.com/repos/roed314/gq2/contents/paper%2Fdetail-ui.css?ref=a2b1481f5e87acbb732b1e0fcf308a7ac2a9013a",
+      "patch": "@@ -44,7 +44,9 @@ body.notation-links-off [class*=\"ptxnotn-\"]:hover {\n }\n \n .notation-popup {\n-  position: absolute; z-index: 1200; max-width: 24rem;\n+  /* above the running-example drawer (#gqx-drawer, z-index 2000): a term\n+     near the right edge of the text column pops up under it otherwise */\n+  position: absolute; z-index: 2100; max-width: 24rem;\n   background: #fff; color: #111;\n   border: 1px solid rgba(0,0,0,.2); border-radius: 6px;\n   box-shadow: 0 6px 18px rgba(0,0,0,.18);"
+    }
+  ]
+}

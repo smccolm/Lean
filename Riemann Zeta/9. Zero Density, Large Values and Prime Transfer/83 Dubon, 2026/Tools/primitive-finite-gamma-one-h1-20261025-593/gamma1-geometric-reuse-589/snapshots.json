@@ -1,0 +1,55 @@
+{
+  "fetchedUTC": "2026-10-26T03:37:48.455287+00:00",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "Definitions/Def_ModularCurve_X1HeckeModule.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/Definitions/Def_ModularCurve_X1HeckeModule.lean",
+      "snapshot": "Definitions\\Def_ModularCurve_X1HeckeModule.lean.txt",
+      "gitBlob": "216dc8b716c5e52f2f18a89977d4a5d1d0dcc377",
+      "sha256": "B0610F3164F3D26FADECBCC060B71BB57E0133EB9C43A1AE66EB79B4734FD252",
+      "bytes": 10932
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "Definitions/Def_ModularCurve_X1.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/Definitions/Def_ModularCurve_X1.lean",
+      "snapshot": "Definitions\\Def_ModularCurve_X1.lean.txt",
+      "gitBlob": "627cb746564e7ec55e4c6e6e1193af0a12c1a890",
+      "sha256": "4D14D3182F233C0F7B51A9347CE74FB105AA501D2139111367AFC72CD8447E1C",
+      "bytes": 7714
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_exists_galoisRepAdic_charpoly_frobenius_of_heckeDiamondChar.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_galoisRepAdic_charpoly_frobenius_of_heckeDiamondChar.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_exists_galoisRepAdic_charpoly_frobenius_of_heckeDiamondChar.lean.txt",
+      "gitBlob": "db69f92d6c4fba48df5528de1fed277833df718d",
+      "sha256": "A6B8469220CD5657710A44963FBB1E2FD3C36BAC5E1C28309CF50B939D088DB7",
+      "bytes": 66072
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_heckeDiamondInputsAll.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_heckeDiamondInputsAll.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_heckeDiamondInputsAll.lean.txt",
+      "gitBlob": "8543fee8a23715bf5e474c851cfa78ffa4e10bd5",
+      "sha256": "E6F24E8A519F612CE4080B9B1045B84AB0B747A7E452729B831A981E3DFF287D",
+      "bytes": 14773
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_moduleFinite_padicInt_tateModule_jOne.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_moduleFinite_padicInt_tateModule_jOne.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_moduleFinite_padicInt_tateModule_jOne.lean.txt",
+      "gitBlob": "00e929dcc4675339bd30149a82e7b211e3e57084",
+      "sha256": "9941E27EB8812FEB6A1639543AA6E8CF1FA40FBB4BAEB52256C68DDB2AE2AF19",
+      "bytes": 22313
+    }
+  ]
+}

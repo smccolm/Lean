@@ -1,0 +1,52 @@
+import Dubon2026.SourcePrescribedReductionPrime
+import Dubon2026.SourceAdicCoefficientResidueComparison
+import Dubon2026.SourcePrescribedCompletionResidue
+import Dubon2026.SourceReductionCompletionBasePrime
+import Dubon2026.SourceReductionCompletionPadicMap
+import Dubon2026.SourceReductionCompletionFinite
+import Dubon2026.SourcePadicCompletionValuation
+import Dubon2026.SourceReductionCompletionLocalStructures
+import Dubon2026.SourceOriginalPrescribedReductionResidual
+import Dubon2026.SourceOriginalExactReductionResidual
+import Dubon2026.SourceOriginalAlgebraicIntegerResidual
+import Dubon2026.SourceValuationResidualAction
+import Dubon2026.SourceNormValuationRestriction
+import Dubon2026.SourceRationalLocalValuation
+import Dubon2026.SourceOriginalNormLocalResidual
+import Dubon2026.SourceNumberFieldNormInertiaLift
+import Dubon2026.SourceAbsoluteFiniteUnramified
+import Dubon2026.SourceNumberFieldSupportRamification
+import Dubon2026.SourceAbsoluteArithmeticRestriction
+import Dubon2026.SourceAbsoluteArithmeticDescent
+import Dubon2026.SourceArithmeticLocalEmbeddingExtension
+import Dubon2026.SourceOriginalArithmeticResidual
+import Dubon2026.SourceWeightTwoDegeneracyAdjoint
+import Dubon2026.SourceWeightTwoEigenLevelDescent
+import Dubon2026.SourceWeightTwoNewEigenNormalization
+import Dubon2026.SourceParabolicPrimitiveDivisor
+import Dubon2026.SourceArithmeticSupportInflationValues
+import Dubon2026.SourceOriginalDivisorArithmeticResidual
+import Dubon2026.SourceParabolicArithmeticResidual
+import Dubon2026.SourceResidualGaloisRealization
+import Dubon2026.SourcePrimitiveWeightTwoGalois
+import Dubon2026.SourcePrimitiveRestoredGalois
+import Dubon2026.SourcePrimitiveOriginalResidualGalois
+import Dubon2026.SourcePrimitiveResidualGaloisCharP
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourcePrescribedReductionPrime, `Dubon2026.SourceAdicCoefficientResidueComparison, `Dubon2026.SourcePrescribedCompletionResidue, `Dubon2026.SourceReductionCompletionBasePrime, `Dubon2026.SourceReductionCompletionPadicMap, `Dubon2026.SourceReductionCompletionFinite, `Dubon2026.SourcePadicCompletionValuation, `Dubon2026.SourceReductionCompletionLocalStructures, `Dubon2026.SourceOriginalPrescribedReductionResidual, `Dubon2026.SourceOriginalExactReductionResidual, `Dubon2026.SourceOriginalAlgebraicIntegerResidual, `Dubon2026.SourceValuationResidualAction, `Dubon2026.SourceNormValuationRestriction, `Dubon2026.SourceRationalLocalValuation, `Dubon2026.SourceOriginalNormLocalResidual, `Dubon2026.SourceNumberFieldNormInertiaLift, `Dubon2026.SourceAbsoluteFiniteUnramified, `Dubon2026.SourceNumberFieldSupportRamification, `Dubon2026.SourceAbsoluteArithmeticRestriction, `Dubon2026.SourceAbsoluteArithmeticDescent, `Dubon2026.SourceArithmeticLocalEmbeddingExtension, `Dubon2026.SourceOriginalArithmeticResidual, `Dubon2026.SourceWeightTwoDegeneracyAdjoint, `Dubon2026.SourceWeightTwoEigenLevelDescent, `Dubon2026.SourceWeightTwoNewEigenNormalization, `Dubon2026.SourceParabolicPrimitiveDivisor, `Dubon2026.SourceArithmeticSupportInflationValues, `Dubon2026.SourceOriginalDivisorArithmeticResidual, `Dubon2026.SourceParabolicArithmeticResidual, `Dubon2026.SourceResidualGaloisRealization, `Dubon2026.SourcePrimitiveWeightTwoGalois, `Dubon2026.SourcePrimitiveRestoredGalois, `Dubon2026.SourcePrimitiveOriginalResidualGalois, `Dubon2026.SourcePrimitiveResidualGaloisCharP]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

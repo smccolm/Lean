@@ -1,0 +1,70 @@
+
+section
+open CongruenceSubgroup Matrix.SpecialLinearGroup
+
+/-- The general-level reflection uses actual divisor coefficient series, with exact positive conductors and signed amplitudes. -/
+theorem general_rankin_riesz_reflection_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((Gamma0 Q).map (mapGL ℝ)) k) (hk : 0 < k) {s : ℂ}
+    (hl : -1 < s.re) (hr : s.re < 0) :
+    rankinConvolutionGlobalContinuation f s / (s * (s + 1) * (s + 2)) =
+      ∑ d : Q.divisors,
+        ((ArithmeticFunction.moebius d.val : ℂ) * ((Q / d.val : ℕ) : ℂ) ^ (k - 2) * (Q : ℂ) ^ k /
+          (4 * Real.pi ^ 2 : ℂ)) *
+        (((4 * Real.pi ^ 2) ^ 2 / ((Q : ℝ) ^ 2 * (d.val : ℝ)) : ℝ) : ℂ) ^ s *
+          gammaRieszSymbol (k : ℝ) 2 s * LSeries (divisorRectangularDualCoefficients f d) (1 - s) :=
+  general_rankinConvolution_riesz_reflection f hk hl hr
+
+/-- The literal original finite Riesz sum equals both genuine pole terms and the actual finite family of coefficient-weighted Gamma transforms. -/
+theorem general_rankin_riesz_dual_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((Gamma0 Q).map (mapGL ℝ)) k) (hk : 2 ≤ k) {x : ℝ} (hx : 0 < x) :
+    ((∑ n ∈ Finset.Icc 1 ⌊x⌋₊, (rankinConvolutionCoefficients f n).re * (x - n) ^ 2 / 2 : ℝ) : ℂ) =
+      (rankinConvolutionResidue f : ℂ) * (x : ℂ) ^ 3 / 6 -
+        rankinConvolutionEntireNumerator f 0 * (x : ℂ) ^ 2 / 2 +
+        ∑ d : Q.divisors, divisorRankinAmplitude Q d.val k * ∑' n : ℕ,
+          (divisorRectangularDualCoefficients f d n / (n : ℂ)) *
+            ((x : ℂ) ^ 2 * gammaRieszKernel (k : ℝ) 2 (divisorRankinConductor Q d.val * n * x)) := by
+  rw [← rankinConvolutionRiesz_eq]
+  simpa only [generalRankinGammaDualSeries, divisorGammaDualSeries_eq] using
+    general_rankinConvolutionRiesz_eq_dual f hk hx
+
+/-- Every genuine nonzero cusp form of weight at least two and positive level satisfies the exact source three-fifths square-sum asymptotic, with its actual positive Petersson residue. -/
+theorem general_rankin_selberg_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((Gamma0 Q).map (mapGL ℝ)) k) (hk : 2 ≤ k) (hf : f ≠ 0) :
+    0 < cuspRankinResidue f ∧
+      (∃ C : ℝ, 0 < C ∧ ∀ x : ℝ, 1 ≤ x →
+        |(∑ n ∈ Finset.Icc 1 ⌊x⌋₊, ‖normalizedCuspCoefficients f n‖ ^ 2) - cuspRankinResidue f * x| ≤
+          C * x ^ (3 / 5 : ℝ)) ∧
+      (fun x : ℝ => (∑ n ∈ Finset.Icc 1 ⌊x⌋₊, ‖normalizedCuspCoefficients f n‖ ^ 2) - cuspRankinResidue f * x)
+        =O[Filter.atTop] (fun x : ℝ => x ^ (3 / 5 : ℝ)) :=
+  ⟨(general_rankin_selberg f hk hf).1, exists_general_cusp_square_three_fifths f hk,
+    general_cusp_square_three_fifths_remainder f hk⟩
+
+/-- The actual positive-level normalized cusp squares satisfy all literal source weighted-energy regimes without an assumed Rankin--Selberg input. -/
+theorem general_cusp_weighted_energy_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((Gamma0 Q).map (mapGL ℝ)) k) (hk : 2 ≤ k) (hf : f ≠ 0) :
+    0 < cuspRankinResidue f ∧
+      (∀ σ : ℝ, σ < 1 / 2 → Tendsto (fun N : ℕ =>
+        ((∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 * (n : ℝ) ^ (-2 * σ)) -
+          cuspRankinResidue f * (N : ℝ) ^ (1 - 2 * σ) / (1 - 2 * σ)) /
+            (N : ℝ) ^ (1 - 2 * σ)) atTop (𝓝 0)) ∧
+      (∃ B : ℝ, 0 ≤ B ∧ ∀ N : ℕ, 1 ≤ N →
+        |(∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 * (n : ℝ) ^ (-2 * (1 / 2 : ℝ))) -
+          cuspRankinResidue f * Real.log N| ≤ B) ∧
+      (∀ σ : ℝ, 1 / 2 < σ → ∃ B : ℝ, 0 ≤ B ∧ ∀ N : ℕ,
+        0 ≤ (∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 * (n : ℝ) ^ (-2 * σ)) ∧
+          (∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 * (n : ℝ) ^ (-2 * σ)) ≤ B) :=
+  general_cusp_weighted_rankin_selberg f hk hf
+
+/-- The actual source energy error includes both the unweighted endpoint and the three-tenths logarithmic transition with genuine constants. -/
+theorem general_cusp_weighted_energy_endpoints_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm ((Gamma0 Q).map (mapGL ℝ)) k) (hk : 2 ≤ k) :
+    (∃ C : ℝ, 0 < C ∧ ∀ N : ℕ, 1 ≤ N →
+      |(∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 * (n : ℝ) ^ (-2 * (0 : ℝ))) -
+        cuspRankinResidue f * N| ≤ C * (N : ℝ) ^ (3 / 5 : ℝ)) ∧
+    (∃ C : ℝ, 0 < C ∧ ∀ N : ℕ, 1 ≤ N →
+      |(∑ n ∈ Finset.Icc 1 N, ‖normalizedCuspCoefficients f n‖ ^ 2 * (n : ℝ) ^ (-2 * (3 / 10 : ℝ))) -
+        weightedEnergyMain (cuspRankinResidue f) N (3 / 10)| ≤ C * (1 + (3 / 5) * Real.log N)) :=
+  ⟨exists_general_cusp_weighted_energy_zero f hk, exists_general_cusp_weighted_energy_three_tenths f hk⟩
+
+end
+

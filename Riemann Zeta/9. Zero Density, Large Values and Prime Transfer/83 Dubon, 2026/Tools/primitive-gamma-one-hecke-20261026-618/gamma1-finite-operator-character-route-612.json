@@ -1,0 +1,32 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero Galois association -> actual Gamma1 geometric realization -> original finite Fourier-valued characters on actual Gamma1 Hecke operators",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTransferHecke.lean",
+      "sha256": "4A8F0CDF6ED05A0B35B0318CA0C38FDDFFF8887C6475AAF720A0B4CDBB69DF3E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryH1ModulusKernel.lean",
+      "sha256": "A27F8C0453C13671E4669B08048F6589FBF6AC47CFDE055A2A2A486C8FACAF7F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPermutationOperatorDescent.lean",
+      "sha256": "7A7635F0FE17AF12C8C4CA7B4FE70AD368C45A0372FF5DACEE9A7A57C31AC27E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1HeckeCharacter.lean",
+      "sha256": "48017F46307B8EAC8F2129D87FA9C3417B44B2D3AF19B4BA23472CCA4A5EDE26"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstantH1Realization.lean",
+      "sha256": "5E3B3BE2610765E1D2E7E4DD2C727F1FE418231026EF3BB46409CDCDDB1C4B24"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralWordAdditiveNaturality.lean",
+      "sha256": "CE752BB6CDFF2B7171AFC9389B8408D83E8DC86D290A7BB30D57699196B2541B"
+    }
+  ],
+  "shorterRoute": "The proved actual transfer is surjective and Hecke compatible. Reuse the existing additive word intertwiner, exact original coefficient-reduction kernel and finite operator-character descent. Restrict the generator set to primes coprime to level times modulus; no arbitrary eigenvector or characteristic-zero character lift is needed.",
+  "assumptionsToDischarge": "Construct actual Gamma1 Hecke characters at each positive prime-power precision with the same original Fourier values away from level and modulus; derive word-relation descent from the actual surjective transfer.",
+  "remaining": "Arithmetic geometric and diamond comparison, finite Galois realization and the compatible original all-weight characteristic-zero association remain required; finite characters alone do not give a characteristic-zero point. DUB-17--20 OPEN;16/20."
+}

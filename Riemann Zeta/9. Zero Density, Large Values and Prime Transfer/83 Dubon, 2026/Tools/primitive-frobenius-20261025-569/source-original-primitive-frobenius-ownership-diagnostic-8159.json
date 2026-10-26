@@ -1,0 +1,220 @@
+{
+  "scratchSum": 74,
+  "scratchDistinct": 74,
+  "generatedNameRenamings": {},
+  "productionFocused": 74,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {
+    "_private.Dubon2026.SourceOriginalSpecializationFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationFrobeniusCharpoly": [
+      {
+        "scope": "SourceOriginalPrimitiveFrobeniusScratchOwnership566For8159",
+        "module": "Dubon2026.SourceOriginalSpecializationFrobeniusCharpoly"
+      }
+    ],
+    "_private.Dubon2026.SourceOriginalPrimitiveResidualFrobeniusRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveResidualFrobeniusRealization": [
+      {
+        "scope": "SourceOriginalPrimitiveFrobeniusScratchOwnership566For8159",
+        "module": "Dubon2026.SourceOriginalPrimitiveResidualFrobeniusRealization"
+      }
+    ],
+    "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalPrescribedTateSpecialization": [
+      {
+        "scope": "SourceOriginalPrimitiveFrobeniusScratchOwnership567For8159",
+        "module": "Dubon2026.SourceOriginalPrescribedTateSpecialization"
+      }
+    ],
+    "_private.Dubon2026.SourceOriginalSpecializationCyclotomicDeterminant.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationCyclotomicDeterminant": [
+      {
+        "scope": "SourceOriginalPrimitiveFrobeniusScratchOwnership564For8159",
+        "module": "Dubon2026.SourceOriginalSpecializationCyclotomicDeterminant"
+      }
+    ],
+    "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_1": [
+      {
+        "scope": "SourceOriginalPrimitiveFrobeniusScratchOwnership567For8159",
+        "module": "Dubon2026.SourceOriginalPrescribedResidualFrobenius"
+      }
+    ],
+    "_private.Dubon2026.SourcePrimitiveOriginalTateGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourcePrimitiveOriginalTateGalois": [
+      {
+        "scope": "SourceOriginalPrimitiveFrobeniusScratchOwnership564For8159",
+        "module": "Dubon2026.SourcePrimitiveOriginalTateGalois"
+      }
+    ],
+    "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_3": [
+      {
+        "scope": "SourceOriginalPrimitiveFrobeniusScratchOwnership567For8159",
+        "module": "Dubon2026.SourceOriginalPrescribedResidualFrobenius"
+      }
+    ],
+    "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_4": [
+      {
+        "scope": "SourceOriginalPrimitiveFrobeniusScratchOwnership567For8159",
+        "module": "Dubon2026.SourceOriginalPrescribedResidualFrobenius"
+      }
+    ],
+    "_private.Dubon2026.SourceOriginalSpecializationPrimitiveImage.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationPrimitiveImage": [
+      {
+        "scope": "SourceOriginalPrimitiveFrobeniusScratchOwnership564For8159",
+        "module": "Dubon2026.SourceOriginalSpecializationPrimitiveImage"
+      }
+    ],
+    "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_5": [
+      {
+        "scope": "SourceOriginalPrimitiveFrobeniusScratchOwnership567For8159",
+        "module": "Dubon2026.SourceOriginalPrescribedResidualFrobenius"
+      }
+    ],
+    "_private.Dubon2026.SourceOriginalSpecializationProjector.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationProjector": [
+      {
+        "scope": "SourceOriginalPrimitiveFrobeniusScratchOwnership564For8159",
+        "module": "Dubon2026.SourceOriginalSpecializationProjector"
+      }
+    ],
+    "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrescribedResidualFrobenius": [
+      {
+        "scope": "SourceOriginalPrimitiveFrobeniusScratchOwnership567For8159",
+        "module": "Dubon2026.SourceOriginalPrescribedResidualFrobenius"
+      }
+    ],
+    "_private.Dubon2026.SourceOriginalPrimitiveCyclotomicRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveCyclotomicRealization": [
+      {
+        "scope": "SourceOriginalPrimitiveFrobeniusScratchOwnership564For8159",
+        "module": "Dubon2026.SourceOriginalPrimitiveCyclotomicRealization"
+      }
+    ],
+    "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusCharpolyRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveFrobeniusCharpolyRealization": [
+      {
+        "scope": "SourceOriginalPrimitiveFrobeniusScratchOwnership565For8159",
+        "module": "Dubon2026.SourceOriginalPrimitiveFrobeniusCharpolyRealization"
+      }
+    ],
+    "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrescribedTateSpecialization": [
+      {
+        "scope": "SourceOriginalPrimitiveFrobeniusScratchOwnership567For8159",
+        "module": "Dubon2026.SourceOriginalPrescribedTateSpecialization"
+      }
+    ],
+    "_private.Dubon2026.SourceOriginalResidualFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalResidualFrobeniusCharpoly": [
+      {
+        "scope": "SourceOriginalPrimitiveFrobeniusScratchOwnership566For8159",
+        "module": "Dubon2026.SourceOriginalResidualFrobeniusCharpoly"
+      }
+    ]
+  },
+  "missingFromFocusedAlreadyInPrevious": [],
+  "productionNamesNotInScratch": [
+    "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+    "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_1",
+    "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_3",
+    "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_4",
+    "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_dubon2026._proof_5",
+    "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+    "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+    "_private.Dubon2026.SourceOriginalPrimitiveCyclotomicRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+    "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusCharpolyRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+    "_private.Dubon2026.SourceOriginalPrimitiveResidualFrobeniusRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+    "_private.Dubon2026.SourceOriginalResidualFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+    "_private.Dubon2026.SourceOriginalSpecializationCyclotomicDeterminant.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+    "_private.Dubon2026.SourceOriginalSpecializationFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+    "_private.Dubon2026.SourceOriginalSpecializationPrimitiveImage.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+    "_private.Dubon2026.SourceOriginalSpecializationProjector.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+    "_private.Dubon2026.SourcePrimitiveOriginalTateGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026"
+  ],
+  "unexplainedMissing": [
+    "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrescribedResidualFrobenius",
+    "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_1",
+    "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_3",
+    "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_4",
+    "_private.Dubon2026.SourceOriginalPrescribedResidualFrobenius.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedResidualFrobenius._proof_5",
+    "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalPrescribedTateSpecialization",
+    "_private.Dubon2026.SourceOriginalPrescribedTateSpecialization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrescribedTateSpecialization",
+    "_private.Dubon2026.SourceOriginalPrimitiveCyclotomicRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveCyclotomicRealization",
+    "_private.Dubon2026.SourceOriginalPrimitiveFrobeniusCharpolyRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveFrobeniusCharpolyRealization",
+    "_private.Dubon2026.SourceOriginalPrimitiveResidualFrobeniusRealization.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalPrimitiveResidualFrobeniusRealization",
+    "_private.Dubon2026.SourceOriginalResidualFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalResidualFrobeniusCharpoly",
+    "_private.Dubon2026.SourceOriginalSpecializationCyclotomicDeterminant.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationCyclotomicDeterminant",
+    "_private.Dubon2026.SourceOriginalSpecializationFrobeniusCharpoly.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationFrobeniusCharpoly",
+    "_private.Dubon2026.SourceOriginalSpecializationPrimitiveImage.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationPrimitiveImage",
+    "_private.Dubon2026.SourceOriginalSpecializationProjector.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalSpecializationProjector",
+    "_private.Dubon2026.SourcePrimitiveOriginalTateGalois.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourcePrimitiveOriginalTateGalois"
+  ],
+  "scopes": [
+    {
+      "modules": [
+        "SourceSpanningProjectorImage",
+        "SourceSpecializationBaseChangeIntertwiner",
+        "SourcePolynomialSpecialization",
+        "SourceOriginalSpecializationProjector",
+        "SourceOriginalSpecializationPrimitiveImage",
+        "SourcePolynomialCommutant",
+        "SourcePrimitiveOriginalTateGalois",
+        "SourceImageSpecializationPairing",
+        "SourceAlternatingRankTwoDeterminant",
+        "SourceImageSpecializationDeterminant",
+        "SourceOriginalSpecializationCyclotomicDeterminant",
+        "SourceOriginalPrimitiveCyclotomicRealization"
+      ],
+      "count": 38,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusScratchOwnership564For8159.log",
+        "sha256": "7F7D0FEC393F1DE1D7784B33428BA151B7B6B82525CAFE95A38F2985E35EDBDC",
+        "sourceSha256": "77BE46844AB738BCEEC7E7FEEF7B68793466020B6973371F114C932F31EC0EBE"
+      }
+    },
+    {
+      "modules": [
+        "SourceValuationFrobeniusRoots",
+        "SourceValuationCyclotomicFrobenius",
+        "SourceRankTwoQuadraticTrace",
+        "SourceCyclotomicFrobeniusCharpoly",
+        "SourceOriginalPrimitiveFrobeniusCharpolyRealization"
+      ],
+      "count": 10,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusScratchOwnership565For8159.log",
+        "sha256": "FED3411C217ECFD278377F8D5CF69DFA8EA365637BFCA15683D40F06F86B238F",
+        "sourceSha256": "45F9C2EC144C233DF669420EC478DD815DB179F4EFE97127A180C33772FCEA1B"
+      }
+    },
+    {
+      "modules": [
+        "SourceMatrixIntertwinerCharpoly",
+        "SourceIntegralMatrixCharpoly",
+        "SourceRankTwoCharpolyCoefficients",
+        "SourceOriginalSpecializationFrobeniusCharpoly",
+        "SourceOriginalResidualFrobeniusCharpoly",
+        "SourceOriginalResidualInertia",
+        "SourceOriginalPrimitiveResidualFrobeniusRealization"
+      ],
+      "count": 16,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusScratchOwnership566For8159.log",
+        "sha256": "DC02B09CF8B312595774421F5FD07F29CD47A6F2327D72CDE67A1735F587BE8A",
+        "sourceSha256": "22EC3AB1F21113A0CD10BBE4D48AD6E6071ED58F98E7620571689EC1215C1564"
+      }
+    },
+    {
+      "modules": [
+        "SourceOriginalPrescribedTateSpecialization",
+        "SourceOriginalPrescribedResidualFrobenius"
+      ],
+      "count": 10,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusScratchOwnership567For8159.log",
+        "sha256": "34B53B6AC06E6F815379F29AFA00711FFE0035F7639175D4DF6FFCE02E8F9010",
+        "sourceSha256": "A3EA9C8AC91493BDF125BCCB1723BDBAF5F440C3F0FCB13398DC7365350C70AB"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusOwnership8159.log",
+    "sha256": "CB79C93CC9996C2E7E7175002DB8C30CF26620D7B2DE859C194ABE2EEB325D3F",
+    "sourceSha256": "EC2CBA4E1FA01169FFD5E5209EE0186117175CD3550723D57B2B1058BAF35BE9"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-132709-230.log",
+    "sha256": "882B4124F2C1BF3DD2349B42A423CFE04CA2EA25A8EBECA3C6C09EBDD374BF94"
+  },
+  "passed": false
+}

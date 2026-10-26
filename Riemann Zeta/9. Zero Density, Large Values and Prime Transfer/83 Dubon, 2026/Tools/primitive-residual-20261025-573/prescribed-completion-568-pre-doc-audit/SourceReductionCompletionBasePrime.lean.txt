@@ -1,0 +1,41 @@
+import SourcePrescribedReductionPrime
+import Dubon2026.OriginalFinitePrimeOrbits
+
+/-! DUB-17/18 -> prescribed coefficient reduction -> the completion at
+the actual reduction kernel lies over the rational prime used by the Tate
+module. Native rational-prime classification identifies the base prime
+needed for the existing completed field embedding. -/
+namespace Dubon2026
+noncomputable section
+open IsDedekindDomain
+open scoped NumberField
+variable (F : Type) [Field F] [NumberField F]
+variable {k : Type*} [Field k] (ell : ℕ) (hell : ell.Prime) [CharP k ell]
+variable (φ : 𝓞 F →+* k)
+
+theorem sourceReductionPrime_rationalBelow :
+    originalFinitePrimeBelow ℚ F (sourceReductionPrime F ell hell φ) =
+      (Rat.HeightOneSpectrum.primesEquiv (R := 𝓞 ℚ)).symm ⟨ell, hell⟩ := by
+  let v := originalFinitePrimeBelow ℚ F (sourceReductionPrime F ell hell φ)
+  have hm : (ell : 𝓞 ℚ) ∈ v.asIdeal := by
+    change algebraMap (𝓞 ℚ) (𝓞 F) (ell : 𝓞 ℚ) ∈ (sourceReductionPrime F ell hell φ).asIdeal
+    simpa only [map_natCast] using sourceReductionPrime_prime_mem F ell hell φ
+  have hd : Rat.HeightOneSpectrum.natGenerator v ∣ ell := by
+    rw [Rat.HeightOneSpectrum.natGenerator_dvd_iff,
+      ← map_natCast (Rat.IsIntegralClosure.intEquiv (𝓞 ℚ)) ell,
+      Ideal.apply_mem_of_equiv_iff]
+    exact hm
+  have he : Rat.HeightOneSpectrum.natGenerator v = ell :=
+    (Nat.dvd_prime hell).mp hd |>.resolve_left (Rat.HeightOneSpectrum.prime_natGenerator v).ne_one
+  apply (Rat.HeightOneSpectrum.primesEquiv (R := 𝓞 ℚ)).injective
+  rw [Equiv.apply_symm_apply]
+  exact Subtype.ext he
+
+theorem sourceReductionPrime_liesOver_rational :
+    (sourceReductionPrime F ell hell φ).asIdeal.LiesOver
+      ((Rat.HeightOneSpectrum.primesEquiv (R := 𝓞 ℚ)).symm ⟨ell, hell⟩).asIdeal := by
+  rw [← sourceReductionPrime_rationalBelow F ell hell φ]
+  exact originalFinitePrimeBelow_liesOver ℚ F (sourceReductionPrime F ell hell φ)
+
+end
+end Dubon2026

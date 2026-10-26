@@ -1,0 +1,75 @@
+{
+  "status": "Prepared only; require 8213 canonical PASS and archive before integration.",
+  "route": "primitive-finite-permutation-h1-promotion-route-590.json",
+  "routeSha256": "29199DA0EAE3F313AE398BAAA72DEBF4C51ED66CF79A309489C903D48DCEED14",
+  "modules": 29,
+  "queries": 76,
+  "theorems": 53,
+  "constructions": 23,
+  "exhaustiveScratchChecks": 179,
+  "proofValueEdges": 124,
+  "scopes": 6,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 acceptance gates unchanged.",
+  "supersededUnused8235": true,
+  "correction": "Unused 8235 recorder had stale gate strings due to a broad count replacement; fresh 8242 corrects those strings before any execution. No 8235 audit or integration was executed.",
+  "preparationGuard": "The 8242 preparation wrote all nine target scripts, then its final scan accidentally included its own corrective string literals. That self-inclusion assertion failed; no target script or production mutation failed. This fresh preexecution review excludes the preparation itself, verifies all target scripts and preserves the used preparation.",
+  "receipts": {
+    "source-binary-prime-power-permutation-5-scratch-receipt.json": "131D80CB8B20E3D334985ED27E816A49B87EB125EBBF4CCA662AEDD7E6582C04",
+    "source-primitive-h1-adic-5-scratch-receipt.json": "35507B2755D1A2A461D5D487913AA2CC6A66FB0F8003002F7A09AB1D66310A36",
+    "source-binary-stabilizer-h1-3-scratch-receipt.json": "0F2EF92CDA71B594734C0C2964B97A7888203148B19F72584FC0627391719161",
+    "source-primitive-h1-congruence-5-scratch-receipt.json": "410DDC92612FC3D1680315BA92F65C0DC97D6F813A76891371BB54F162452ADF",
+    "source-primitive-finite-operator-character-4-scratch-receipt.json": "D8986017528A0357284AE33F6112282F474A767948B3D6FAFE2C81A52A29913E",
+    "source-primitive-permutation-operator-character-7-scratch-receipt.json": "1521C47DC2376E468B567A6A71369D059C12D1EF97A27B69BE43FFC87A53D0B3"
+  },
+  "pythonAST": "PASS for all seven execution helpers",
+  "powershellParser": "PASS for both execution scripts",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_primitive_finite_h1_canonical_8242.py",
+      "sha256": "1E1668545DF2FF8B5EB6F6E84DC3DB83019473622DC37D94A94DD1677FD8A702"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_primitive_finite_h1_realization_8242.ps1",
+      "sha256": "49CC82A119157BB276C92FCB69A18838EC7115E71487312914D59BC0054AD1D6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_primitive_finite_h1_realization_ownership_8242.py",
+      "sha256": "52A96E016AD735704E97184B67758657726A1EB05785E8E02107748B343B5E05"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_primitive_finite_h1_realization_8242.py",
+      "sha256": "105DD16A9B22A7FA15379871C096B48EB5A4A41660F5613600F1423A930BC09A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_finite_h1_realization_global_ownership_8242.py",
+      "sha256": "CEF40991195F9236FAB513AD161377018EF6B71C794B6A70D0B31299B7D43EBE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_finite_h1_realization_production_ownership_8242.py",
+      "sha256": "734E4F575D8D9816196F2CCB33E1F3766AE7E3233FF711B0FD263F3EF301E8B4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_finite_h1_realization_scratch_ownership_8242.py",
+      "sha256": "EB3C4ADEBB8F4BB0DBF26C189B7236AC7C370EB5CFA5F3B1842E67DC3C0B1C24"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_primitive_finite_h1_realization_8242.py",
+      "sha256": "842747EECAD1CD58BC8E5AA7898508DBD558FA4A9839FDF79CBACA5D8E9A08B8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_primitive_finite_h1_realization_8242.ps1",
+      "sha256": "936505777B53EA16F74E2F7DE930E27ADC2A7EBE9FDB475743B0DCC96BD6E912"
+    }
+  ],
+  "sourceBodies": "Audited bodies preserved; only project imports qualified.",
+  "expectedConsumers": 23774,
+  "expectedConstructions": 2250,
+  "sourceScopes": [
+    582,
+    583,
+    584,
+    585,
+    586,
+    588
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "status": "No files downloaded; sandbox blocked socket creation before any HTTP response.",
+  "error": "WinError 10013",
+  "retry": "fresh explicit read-only fixed-revision download with network escalation",
+  "existingFiles": []
+}

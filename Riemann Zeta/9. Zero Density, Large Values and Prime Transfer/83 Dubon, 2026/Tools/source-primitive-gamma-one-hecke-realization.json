@@ -1,0 +1,976 @@
+{
+  "date": "26 October 2026",
+  "modules": [
+    "Dubon2026.SourceH1TraceBaseChangeCoefficient",
+    "Dubon2026.SourceGammaOneCoverBinaryHeckeTrace",
+    "Dubon2026.SourceGammaOneHeckeUpperImage",
+    "Dubon2026.SourceGammaOneSubgroupCohomologyMap",
+    "Dubon2026.SourceGammaOneHeckePullbackSquare",
+    "Dubon2026.SourceGammaOneHeckeUpperTraceReindex",
+    "Dubon2026.SourceH1TraceIntersection",
+    "Dubon2026.SourceGammaOneIntersectionTraceExchange",
+    "Dubon2026.SourceGammaOneUpperH1Composition",
+    "Dubon2026.SourceGammaOneSubgroupTraceHecke",
+    "Dubon2026.SourceGammaOneTransferHecke",
+    "Dubon2026.SourceGammaOneHeckeWords",
+    "Dubon2026.SourceGammaOneOperatorDescent",
+    "Dubon2026.SourceGammaOneHeckeFinite",
+    "Dubon2026.SourcePrimitiveGammaOneHeckeCharacter",
+    "Dubon2026.SourcePrimitiveGammaOneH1Realization"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic Gamma1 geometric realization -> actual surjective-transfer Hecke compatibility and original finite Fourier-valued Gamma1 characters",
+  "discharged": "The already constructed surjective constant-coefficient Gamma1 H1 transfer now intertwines the actual full original binary Hecke operators at every prime coprime to level times coefficient modulus, retaining the homogeneous matrix coefficient action. Native trace base change with the original coefficient morphism, the exact upper-subgroup isomorphism, the native H1 pullback square and upper-trace reindexing are proved. Applying the existing trace tower through the same actual intersection proves trace exchange; composing these identities and the original literal-transfer formula discharges the full surjective-transfer compatibility. The same actual transfer and existing additive word intertwiner then force every Gamma1 operator relation to hold in the original finite tensor-operator image. Native ring-map descent constructs its canonical comparison. For every original primitive form of weight at least two and every prescribed prime greater than three, the original local embedding and compatible adic character supply characters on the actual finite Gamma1 H1 operator rings at all positive prime-power precisions. Whole-word pullback and the exact original Fourier values at primes away from level and modulus are derived. Native congruence-group finite generation and the existing finite H1 theorem prove these actual operator rings finite. No trace, subgroup, coefficient-action, operator-relation or character-existence premise remains in these consumers.",
+  "boundary": "Arithmetic geometric and diamond compatibility, geometric Galois realization of the finite characters, original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. The new operator generators explicitly omit primes dividing level or modulus; surjectivity onto the entire original Hecke algebra is not asserted. No characteristic-zero character lift or deformation point is inferred from finite characters. 16/20; DUB-17--20 OPEN.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 8,290-module scope: all thirteen retained regressions, 52,423 exhaustive theorem checks, 23,874 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_iterated",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_conjugation",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_apply",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv",
+    "Dubon2026.sourceGammaOneSubgroupH1Iso_hom_eq_map",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_subgroupIso",
+    "Dubon2026.sourceGammaOneHeckeH1Pullback_square",
+    "Dubon2026.sourceGammaOneHeckeUpperTrace_reindex",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_hecke",
+    "Dubon2026.sourcePrimitive_exists_gammaOneH1HeckeCharacters"
+  ],
+  "scratchCertificates": [
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T06:12:31.626871+00:00",
+      "date": "2026-10-25 America/Vancouver",
+      "modules": [
+        "SourceH1TraceBaseChangeCoefficient",
+        "SourceGammaOneCoverBinaryHeckeTrace"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceBaseChangeCoefficient.lean",
+          "sha256": "A8856D1AEF6A28930210ACE72B7059336CB202CEA00CAB9081A880BF584AC6AA",
+          "oleanSha256": "54F3F31A38A0F2B835790AB29EBDA937C51A5620775594ED20835F2580D4997D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverBinaryHeckeTrace.lean",
+          "sha256": "D87B62D582FB7E968115A3F7071F2F66C041726CF7613137D2E4013662F3ED70",
+          "oleanSha256": "9E502148A53BAF39D5B0DB852E58F42CAE571633FFDA4C8D972C23AFB22A39A0"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceSubgroupH1Trace_pullback_coefficient",
+        "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_pullback",
+        "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_iterated"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceSubgroupH1Trace_pullback_coefficient",
+        "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_pullback",
+        "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_iterated"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTraceAudit2.log",
+      "logSha256": "92698089FD3A411030C5E0F49CF8AA1727F9E699C63282DE08D2B2385A099CDC",
+      "auditSha256": "37466CCF1E71E20663999847D313F81E0B4EEBD0537E8C8920989ED2C7EEDEDE",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 3,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 9,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTraceDependencyAudit2.log",
+      "dependencyAuditSha256": "CC17E817C753161E88F3606E11F5A6DCE1BC81B21BBC46526D6A276B61B5E78E",
+      "dependencyAuditSourceSha256": "3F81C81A6CE107A39816E1B566FDE97C846FBB0F5AD123B594ECFF958FB75AC8",
+      "consumers": [
+        "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_iterated"
+      ],
+      "dependency": "DUB-17/18 -> literal higher continuation -> arithmetic automorphy -> original all-weight adic association -> geometric Gamma1 realization -> actual surjective-transfer Hecke identity -> base change with the original binary Hecke coefficient morphism",
+      "discharged": "Reduce the actual original binary Hecke operator after the literal Gamma1-image trace to the precise iterated native trace with the exact original coefficient morphism.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Combine the iterated trace with proved trace composition and exact Gamma1 subgroup/correspondence reindexings to obtain the full surjective-transfer Hecke identity. Arithmetic geometric/diamond comparison, Galois realization, all-weight association, local/image/regularity, automorphy and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-binary-trace-2-reuse-review-20261025.json",
+      "reuseReviewSha256": "E0446FC349C8E69C086C6AD40677772B89B3ED5796DA9212FA7B6E6B758207E8",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T06:19:36.990292+00:00",
+      "date": "2026-10-25 America/Vancouver",
+      "modules": [
+        "SourceGammaOneHeckeUpperImage"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperImage.lean",
+          "sha256": "6F2CE50508F9EA4B6E2D2207C6984F97CD9EC6E4B653B7E1F8E60683F8A1DCEC",
+          "oleanSha256": "2C445B98D0E873CF417070E71D57BF367B6839754B4312FFBEB6F6E63F189E45"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceGammaOneDiagonalHom_heckeUpper_iff",
+        "Dubon2026.sourceGammaOneCoverHeckeUpperHom_injective",
+        "Dubon2026.sourceGammaOneCoverHeckeUpperHom_range",
+        "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_apply",
+        "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_conjugation",
+        "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceGammaOneDiagonalHom_heckeUpper_iff",
+        "Dubon2026.sourceGammaOneCoverHeckeUpperHom_injective",
+        "Dubon2026.sourceGammaOneCoverHeckeUpperHom_range",
+        "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_apply",
+        "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_conjugation"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperImageAudit1.log",
+      "logSha256": "99D1CC02BA73BCC79798B783771B9C406DE86C8F5BB0809505DF09133BFF3A13",
+      "auditSha256": "2AAFF93DF1A0C67023C7362844967E1A67547A0B615CBCC7357F26E4DCCE8567",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 8,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 9,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperImageDependencyAudit1.log",
+      "dependencyAuditSha256": "FAF61459532090135859EAE14E0D44009694D1E2A5FF7C15081A8E25C2798F6E",
+      "dependencyAuditSourceSha256": "6B0178494178D014F6FB34147C98788E93D03F3E5035CEA4B4315DBDB6C0429D",
+      "consumers": [
+        "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_conjugation",
+        "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_apply",
+        "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv"
+      ],
+      "dependency": "DUB-17/18 -> original all-weight adic association -> geometric Gamma1 realization -> actual surjective-transfer Hecke identity -> exact original Gamma1 correspondence and trace subgroup reindexing",
+      "discharged": "Identify the actual Gamma1 upper subgroup with the precise subgroup in the Hecke trace base-change formula, preserving both the inclusion and conjugation maps.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Use these exact group identifications with original coefficient maps and proved trace composition to finish the full surjective-transfer Hecke identity. Arithmetic geometric/diamond comparison, Galois realization, all-weight association, local/image/regularity, automorphy and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-upper-image-1-reuse-review-20261025.json",
+      "reuseReviewSha256": "F49293951B58FFE5413B0FE2E70B6379044B700B3165EA710C8FE4E55AF80BA5",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T06:32:03.067630+00:00",
+      "date": "2026-10-25 America/Vancouver",
+      "modules": [
+        "SourceGammaOneSubgroupCohomologyMap"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSubgroupCohomologyMap.lean",
+          "sha256": "937193952EE4964F6BE9F3D3F629C612CE003B45FA310AA44E3212EC0FDCF27B",
+          "oleanSha256": "DE87C6539ABCE8E88F9D4DA9FADD97EAB76531F8894923C189E9B2C8D62751A0"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceGammaOneSubgroupH1Iso_hom_eq_map",
+        "Dubon2026.sourceGammaOneConstantH1Transfer_subgroupIso"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceGammaOneSubgroupH1Iso_hom_eq_map",
+        "Dubon2026.sourceGammaOneConstantH1Transfer_subgroupIso"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSubgroupH1MapAudit1.log",
+      "logSha256": "9CDD59B1C90FF4CA157BDD1B5C15D02A1E5EFAA95B7B641CF54014B42454683A",
+      "auditSha256": "24F1B162CEB2E967DAE924AD19EBB0DC8C1509F747551B133B4694910BDD5254",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 3,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 5,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSubgroupH1MapDependencyAudit1.log",
+      "dependencyAuditSha256": "D2DC72561A9F7E8DDFB3A27EE993F9BA488BD633214365E4E2F4C0B0CB97E5C8",
+      "dependencyAuditSourceSha256": "F0056D2751D6F9E61B240824CD887EE82E45D08B9BBB13CBF06CF3367AA0FBED",
+      "consumers": [
+        "Dubon2026.sourceGammaOneSubgroupH1Iso_hom_eq_map",
+        "Dubon2026.sourceGammaOneConstantH1Transfer_subgroupIso"
+      ],
+      "dependency": "DUB-17/18 -> original all-weight adic association -> geometric Gamma1 realization -> actual surjective-transfer Hecke identity -> identify the already constructed subgroup H1 isomorphism with its literal native pullback and cancel it from the original transfer",
+      "discharged": "Identify the exact existing Gamma1 H1 transport and transfer on original subgroup coordinates, for use with the literal Hecke subgroup square and trace composition.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. These identifications must be consumed with the actual upper-subgroup isomorphism, original binary coefficient map, and trace composition to finish the full surjective-transfer Hecke identity. Arithmetic geometric/diamond comparison, Galois realization, all-weight association, local/image/regularity, automorphy and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-subgroup-h1-map-1-reuse-review-20261025.json",
+      "reuseReviewSha256": "FE74F65FF9F8D5DDE461547DB58DEDC21E137DBDD80919C1B21E547C1A2F2BB2",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T07:10:28.823047+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceGammaOneHeckePullbackSquare",
+        "SourceGammaOneHeckeUpperTraceReindex"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePullbackSquare.lean",
+          "sha256": "D19130E7A15CA79E454DE5D2203709572B3B2A88D1200CF07416A63A8F66AB31",
+          "oleanSha256": "FA620553E5724BEE7211D1D917E5F80EEE924A92AF58018C4E11939B895DB21B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperTraceReindex.lean",
+          "sha256": "6C3C9EB92C40D20F163F85D8B3D6C64F1535650052EE8CA4F07A484CA0211E0F",
+          "oleanSha256": "092495772147DDE321AC68C3EFD8D7216F9DFC39815859E61B4A2123E7BB8669"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceGammaOneHeckeH1Pullback_square",
+        "Dubon2026.sourceGammaOneRangeEquiv_heckeUpper_comap",
+        "Dubon2026.sourceGammaOneHeckeUpperTrace_reindex",
+        "Dubon2026.sourceGammaOneUpperRangeHom"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceGammaOneHeckeH1Pullback_square",
+        "Dubon2026.sourceGammaOneRangeEquiv_heckeUpper_comap",
+        "Dubon2026.sourceGammaOneHeckeUpperTrace_reindex"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceGammaOneUpperRangeHom"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNativeHeckeComparisonAudit2.log",
+      "logSha256": "3865DA4131CA6E72CB8D8BA5E3EE34116F0BDE3F441D8BFA726FA581CD22A534",
+      "auditSha256": "D5C5D801F0BA8CCC9C45453E457F9259D43B61998C72914AE61FD9C82D1D1E1E",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 14,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 9,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNativeHeckeComparisonDependencyAudit2.log",
+      "dependencyAuditSha256": "862B4374AF4DF96553C2F36443927D356596386E82A852569D8589C6CB7C3054",
+      "dependencyAuditSourceSha256": "551D5EFBA38390D4AE40AD79FB68A94D13CE5A23480F15B27A4B89391868DBF6",
+      "consumers": [
+        "Dubon2026.sourceGammaOneHeckeH1Pullback_square",
+        "Dubon2026.sourceGammaOneHeckeUpperTrace_reindex"
+      ],
+      "dependency": "DUB-17/18 -> original all-weight adic association -> geometric Gamma1 realization -> actual surjective-transfer Hecke identity -> native H1 pullback square with the original upper-subgroup isomorphism and binary coefficients",
+      "discharged": "The actual conjugation group square, identical homogeneous coefficient actions, exact upper-subgroup inverse image, and trace reindexing on native H1 are proved. No compatibility premise is assumed.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Compose traces through the actual subgroup intersection to prove surjective-transfer Hecke compatibility; arithmetic geometric and diamond comparison, finite Galois realization, all-weight characteristic-zero association, automorphy and literal higher symmetric-power continuation remain. DUB-17--20 OPEN;16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-native-hecke-comparison-2-reuse-review-20261026.json",
+      "reuseReviewSha256": "FB00388CF695BAB312ECFC994E9246D280430AB11972FEBAE4AC7C77E028C89D",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T07:40:58.161534+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceH1TraceIntersection",
+        "SourceGammaOneIntersectionTraceExchange",
+        "SourceGammaOneUpperH1Composition",
+        "SourceGammaOneSubgroupTraceHecke",
+        "SourceGammaOneTransferHecke"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceIntersection.lean",
+          "sha256": "F89423FD464A06287DFF2248CCB87A8E9643CD5AFDFC219EF32185CB24836506",
+          "oleanSha256": "5729A1A3944E5430376B5DB8E184A0832886B447CDBA7280CA362C810532E5F6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntersectionTraceExchange.lean",
+          "sha256": "A553E33FC9FC94A8534B50371B12C3DBD40C5FC0AE17C6B2B7700536614FB858",
+          "oleanSha256": "CD2BEA895E4A860760DE4A53378395424446BB65ECF9BD91CD72539D2681B6B5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUpperH1Composition.lean",
+          "sha256": "8C86A95E60F2548C00F61D102BEC52BD338AC9CCD1847C11BEF1039FC90A322D",
+          "oleanSha256": "CFF70DAA522B5245B1FC20F350BB56FB5E88BFA6FF95425D4E767D803BDBE3CB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSubgroupTraceHecke.lean",
+          "sha256": "2668090B64ADFE7FAAF586451F13A22CE9F09F495FCE2B94E66C139C64D7D6A3",
+          "oleanSha256": "2192AEB2C45E177F8E1E9BB104180ED763FF73AAEA73B729C2123DAE8B94617D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTransferHecke.lean",
+          "sha256": "4A8F0CDF6ED05A0B35B0318CA0C38FDDFFF8887C6475AAF720A0B4CDBB69DF3E",
+          "oleanSha256": "FE6D7103D84A007E9CA80C8C854C85B82CFEDC9B32DCCC1B85F24154C10F21A2"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceSubgroupH1Trace_intersection_swap",
+        "Dubon2026.sourceGammaOneHeckeIntersectionSwap_cover",
+        "Dubon2026.sourceGammaOneCoverTrace_exchange",
+        "Dubon2026.sourceGammaOneUpperH1Composition",
+        "Dubon2026.sourceGammaOneSubgroupTrace_hecke_square",
+        "Dubon2026.sourceGammaOneConstantH1Transfer_hecke",
+        "Dubon2026.sourceSubgroupIntersectionSwap",
+        "Dubon2026.sourceGammaOneHeckeIntersectionSwap"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceSubgroupH1Trace_intersection_swap",
+        "Dubon2026.sourceGammaOneHeckeIntersectionSwap_cover",
+        "Dubon2026.sourceGammaOneCoverTrace_exchange",
+        "Dubon2026.sourceGammaOneUpperH1Composition",
+        "Dubon2026.sourceGammaOneSubgroupTrace_hecke_square",
+        "Dubon2026.sourceGammaOneConstantH1Transfer_hecke"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceSubgroupIntersectionSwap",
+        "Dubon2026.sourceGammaOneHeckeIntersectionSwap"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTransferHeckeAudit5.log",
+      "logSha256": "39764DD0FD834582609698247CADCA4956EE1FF1D39E51B644F17F9E9EEDA9E5",
+      "auditSha256": "D69B09F94B0069D5BAB09F1563B0C2FABF4B37D479C2590F76C940EB446E9DE0",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 30,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 17,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTransferHeckeDependencyAudit5.log",
+      "dependencyAuditSha256": "8B74B40EE98FEEF96AFC1F5CFCCA8FB68D13DFB2C6BBF4F294C4D0B7141661CA",
+      "dependencyAuditSourceSha256": "A82C430EECAFC60B1B4526FCB99F9C499901F89303DFFF74FC844AEE34B98CBC",
+      "consumers": [
+        "Dubon2026.sourceGammaOneConstantH1Transfer_hecke"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> actual Gamma1 geometric realization -> original surjective-transfer Hecke compatibility",
+      "discharged": "The already constructed Gamma1 constant-coefficient H1 transfer intertwines the actual original binary Hecke operator with the full actual Gamma1 correspondence, including its original homogeneous coefficient action, at every prime coprime to level times coefficient modulus. All intermediate subgroup, coefficient, finite-trace and compatibility obligations are proved.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Convert the actual compatible surjective Gamma1 transfer into the required arithmetic geometric Hecke-and-diamond realization and finite Galois characters; prove original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation. Finite characters do not supply a characteristic-zero point. No acceptance gate closes: DUB-17--20 OPEN;16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-transfer-hecke-5-reuse-review-20261026.json",
+      "reuseReviewSha256": "EFE8F75D5B3B534D78AC5083099A94431371DDF19FA5742D3522A55A01280C95",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T08:04:10.532007+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceGammaOneHeckeWords",
+        "SourceGammaOneOperatorDescent",
+        "SourceGammaOneHeckeFinite",
+        "SourcePrimitiveGammaOneHeckeCharacter",
+        "SourcePrimitiveGammaOneH1Realization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeWords.lean",
+          "sha256": "7F43A8C9716A2C3CFB6D9D4DF5BD8E54349AACEE1CBDB95A79F465A84BE1520C",
+          "oleanSha256": "508DE8F0E4B8D9E27ED9AF6737E0FA4182291D462EEADE09BFB2C82555B3F7DC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOperatorDescent.lean",
+          "sha256": "C69D4452555B8FDC3951EFE283373D423F447592E323904BBBCD9C57A2753FD9",
+          "oleanSha256": "D761156B9A4E1B900BC14B2C78969E286F9DCC2505E8925D0F0C571A3BC8B2DA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFinite.lean",
+          "sha256": "071F8B65D67946F0C39E602FFDAAF0A8D3C40E84C4ACD308EF7200742A523169",
+          "oleanSha256": "6528FB6EEB38E758C843FFE62A3B39C399D647589455CA2707ACAA2A158AD620"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeCharacter.lean",
+          "sha256": "40EAA0B5AB12C906412F02BB640A0C97D9D9AFC4063CF4D68BEEB19148C51AFE",
+          "oleanSha256": "B839BD36050FD9F0CA8F9B2150E80E5A9EF066F88071B100A79DE4E3FEEC1FC9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneH1Realization.lean",
+          "sha256": "E74C962B858F431810852B72738BE9C8DB9D55D02ED0E35155456D8BBF003748",
+          "oleanSha256": "E5AE1A5FC6D6812684084F09DC6F12C7D0DEDA58CF96B7D9291216D2BB79EFE1"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceGammaOneOriginalHeckeWord_val",
+        "Dubon2026.sourceGammaOneHeckeWord_transfer",
+        "Dubon2026.sourceGammaOneOriginalHeckeWord_change",
+        "Dubon2026.sourceGammaOneHeckeWord_modulus_zero",
+        "Dubon2026.sourceGammaOneHeckeWord_modulus_kernel",
+        "Dubon2026.sourceGammaOneToModulus_comp",
+        "Dubon2026.sourceGammaOneConstantH1_finite",
+        "Dubon2026.sourceGammaOneHeckeAlgebra_finite",
+        "Dubon2026.sourcePrimitiveGammaOneHeckeCharacter_comp",
+        "Dubon2026.sourcePrimitiveGammaOneHeckeCharacter_hecke",
+        "Dubon2026.sourcePrimitive_exists_gammaOneH1HeckeCharacters",
+        "Dubon2026.sourceGammaOneHeckePrimeForget",
+        "Dubon2026.sourceGammaOnePrimeOperators",
+        "Dubon2026.sourceGammaOneHeckeAlgebra",
+        "Dubon2026.sourceGammaOneOriginalHeckeWord",
+        "Dubon2026.sourceGammaOneToModulus",
+        "Dubon2026.sourcePrimitiveGammaOneHeckeCharacter",
+        "Dubon2026.sourcePrimitiveGammaOneH1CharacterData"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceGammaOneOriginalHeckeWord_val",
+        "Dubon2026.sourceGammaOneHeckeWord_transfer",
+        "Dubon2026.sourceGammaOneOriginalHeckeWord_change",
+        "Dubon2026.sourceGammaOneHeckeWord_modulus_zero",
+        "Dubon2026.sourceGammaOneHeckeWord_modulus_kernel",
+        "Dubon2026.sourceGammaOneToModulus_comp",
+        "Dubon2026.sourceGammaOneConstantH1_finite",
+        "Dubon2026.sourceGammaOneHeckeAlgebra_finite",
+        "Dubon2026.sourcePrimitiveGammaOneHeckeCharacter_comp",
+        "Dubon2026.sourcePrimitiveGammaOneHeckeCharacter_hecke",
+        "Dubon2026.sourcePrimitive_exists_gammaOneH1HeckeCharacters"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceGammaOneHeckePrimeForget",
+        "Dubon2026.sourceGammaOnePrimeOperators",
+        "Dubon2026.sourceGammaOneHeckeAlgebra",
+        "Dubon2026.sourceGammaOneOriginalHeckeWord",
+        "Dubon2026.sourceGammaOneToModulus",
+        "Dubon2026.sourcePrimitiveGammaOneHeckeCharacter",
+        "Dubon2026.sourcePrimitiveGammaOneH1CharacterData"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneCharacterAudit5b.log",
+      "logSha256": "6933C7CE6E11A3422CA67BFC54A1E57BD157C716E6C46E317FE312770028109E",
+      "auditSha256": "9C8687167C0024BA332A34100A2B1EFD00F71981595EB3B3E4BD22E92AB431D1",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 52,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 29,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneCharacterDependencyAudit5b.log",
+      "dependencyAuditSha256": "1989A4A045D5FCAE3A5B479010BB090F31125925885F936A7FEA252B8F730E40",
+      "dependencyAuditSourceSha256": "9E1416848ED9E3F701B797C6F6ECDC08336329636E1995E69744E66AC65307E3",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_gammaOneH1HeckeCharacters"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero Galois association -> actual Gamma1 geometric realization -> original finite Fourier-valued characters on actual Gamma1 Hecke operators",
+      "discharged": "Construct actual Gamma1 Hecke characters at each positive prime-power precision with the same original Fourier values away from level and modulus; derive word-relation descent from the actual surjective transfer.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Arithmetic geometric and diamond comparison, finite Galois realization and the compatible original all-weight characteristic-zero association remain required; finite characters alone do not give a characteristic-zero point. DUB-17--20 OPEN;16/20.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-gamma-one-character-5b-reuse-review-20261026.json",
+      "reuseReviewSha256": "4584C7939AFC8C3048F934B62B5E5207173630AB125A39EDE799C15FD453DC4C",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-gamma-one-binary-trace-2-reuse-review-20261025.json",
+    "Tools/source-gamma-one-hecke-upper-image-1-reuse-review-20261025.json",
+    "Tools/source-gamma-one-subgroup-h1-map-1-reuse-review-20261025.json",
+    "Tools/source-gamma-one-native-hecke-comparison-2-reuse-review-20261026.json",
+    "Tools/source-gamma-one-transfer-hecke-5-reuse-review-20261026.json",
+    "Tools/source-primitive-gamma-one-character-5b-reuse-review-20261026.json"
+  ],
+  "dependencyRouteAssessment": {
+    "path": "Tools/primitive-gamma-one-hecke-20261026-618/primitive-gamma-one-hecke-promotion-route-618.json",
+    "sha256": "5D66E100F51C25D7192E806BE8B255E16A35D2F38A48F00A28F4C3C41D201EB4"
+  },
+  "proofEvidenceArchive": {
+    "manifest": "Tools/primitive-gamma-one-hecke-20261026-618/archive-manifest.json",
+    "sha256": "55C1D8C92907CAC0A1F54743D9D46430BE56E65FADD168A961BDED732E6564E0",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt8290": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTraceDependencyAudit2Production8290.log",
+        "sha256": "CC17E817C753161E88F3606E11F5A6DCE1BC81B21BBC46526D6A276B61B5E78E",
+        "requiredProofValueEdges": 9,
+        "consumers": [
+          "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_iterated"
+        ],
+        "sourceSha256": "89288E9D12E6AD7FC6E85D65FD42FE8B7AC2CF8F22732BE8F7D7A2740E5BCA25"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperImageDependencyAudit1Production8290.log",
+        "sha256": "FAF61459532090135859EAE14E0D44009694D1E2A5FF7C15081A8E25C2798F6E",
+        "requiredProofValueEdges": 9,
+        "consumers": [
+          "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_conjugation",
+          "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_apply",
+          "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv"
+        ],
+        "sourceSha256": "821386A7DC4D7DC2FDF709DA007F594161A0FB7B16B4EC9A4F04255FDE39B357"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSubgroupH1MapDependencyAudit1Production8290.log",
+        "sha256": "D2DC72561A9F7E8DDFB3A27EE993F9BA488BD633214365E4E2F4C0B0CB97E5C8",
+        "requiredProofValueEdges": 5,
+        "consumers": [
+          "Dubon2026.sourceGammaOneSubgroupH1Iso_hom_eq_map",
+          "Dubon2026.sourceGammaOneConstantH1Transfer_subgroupIso"
+        ],
+        "sourceSha256": "6903894543120B87A0AE0F8E0558F211A10F9D53DF0D8A450C3B93B0949CA2B2"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNativeHeckeComparisonDependencyAudit2Production8290.log",
+        "sha256": "862B4374AF4DF96553C2F36443927D356596386E82A852569D8589C6CB7C3054",
+        "requiredProofValueEdges": 9,
+        "consumers": [
+          "Dubon2026.sourceGammaOneHeckeH1Pullback_square",
+          "Dubon2026.sourceGammaOneHeckeUpperTrace_reindex"
+        ],
+        "sourceSha256": "8002BAA4154CDD931B4A045B32F9897E412BF93B62A85E2D8209B79DCC4EF927"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTransferHeckeDependencyAudit5Production8290.log",
+        "sha256": "8B74B40EE98FEEF96AFC1F5CFCCA8FB68D13DFB2C6BBF4F294C4D0B7141661CA",
+        "requiredProofValueEdges": 17,
+        "consumers": [
+          "Dubon2026.sourceGammaOneConstantH1Transfer_hecke"
+        ],
+        "sourceSha256": "4681A7830FF027FE7AE1CAF9835C934DE90A4135271E342F2B05822D7A24C841"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneCharacterDependencyAudit5bProduction8290.log",
+        "sha256": "1989A4A045D5FCAE3A5B479010BB090F31125925885F936A7FEA252B8F730E40",
+        "requiredProofValueEdges": 29,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_exists_gammaOneH1HeckeCharacters"
+        ],
+        "sourceSha256": "C77DFDB1D2204B971C21D771ECB47D1C91BDE69283B52D468C54BCEC0319736F"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationProductionAudit8290.log",
+    "sha256": "A240C03F66E9C7D076C409C45EABC209DF3F02B64600418946B2296CC01D6CE4",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-primitive-gamma-one-hecke-realization-production-build-8290.log",
+    "aggregateSha256": "616B82191F47A1E543B3431FADD78A1A622FDF155EB078A287B7391D06BC437A",
+    "productionModules": 8290,
+    "incrementModules": 16,
+    "axiomChecks": 41,
+    "exhaustiveIncrementTheorems": 110,
+    "linterScopes": 16,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 110,
+    "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The original Gamma1 cover, Hecke correspondences, binary coefficients, native cohomology, literal finite traces and subgroup reindexings retain their definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 110,
+      "scratchDistinct": 110,
+      "generatedNameRenamings": {},
+      "productionFocused": 110,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceH1TraceBaseChangeCoefficient",
+            "SourceGammaOneCoverBinaryHeckeTrace"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership600For8290.log",
+            "sha256": "7BE9607BF1B7CFC3BF17958444C0DB9B617590D832BE35A7820002C173A8BFE0",
+            "sourceSha256": "9E4440B6956E9E984028A0ED64398AC4A80C9389BDB2D392F2333CBD822E5129"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneHeckeUpperImage"
+          ],
+          "count": 8,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership601For8290.log",
+            "sha256": "8FDCAB85C318DD2F8B6F076134E0FE95741E54994A04B6FC69401BCBE2920921",
+            "sourceSha256": "56F0E0CD520F37833F865B129F6855C179BE1ED6A07F7B367CAB33615A848A8D"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneSubgroupCohomologyMap"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership602For8290.log",
+            "sha256": "1D9526445671122A8078EE54A1B1DE0B524D2CBC6C567A5B27A4C3C85376464C",
+            "sourceSha256": "0A60E26F2321096738507584578D61517F6C7432AFD5E0D191064F1B0FC6BF17"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneHeckePullbackSquare",
+            "SourceGammaOneHeckeUpperTraceReindex"
+          ],
+          "count": 14,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership605For8290.log",
+            "sha256": "6745BA8D9164A5AC0C0434401B48946FD78F07088398CECE4C3B6C8D9E7D72EF",
+            "sourceSha256": "F07B78540622CC1DFF41ACA7E767156017F0014D8F685448B591272EA4036252"
+          }
+        },
+        {
+          "modules": [
+            "SourceH1TraceIntersection",
+            "SourceGammaOneIntersectionTraceExchange",
+            "SourceGammaOneUpperH1Composition",
+            "SourceGammaOneSubgroupTraceHecke",
+            "SourceGammaOneTransferHecke"
+          ],
+          "count": 30,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership611For8290.log",
+            "sha256": "8CA67560C49943955B1EE7492A02E1D116B321D73FC5B2F0138FDB7E01D3748F",
+            "sourceSha256": "34F6136DAEC11646345AD546C919D613EE76D950AD889D41F05F9397E58E27C1"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneHeckeWords",
+            "SourceGammaOneOperatorDescent",
+            "SourceGammaOneHeckeFinite",
+            "SourcePrimitiveGammaOneHeckeCharacter",
+            "SourcePrimitiveGammaOneH1Realization"
+          ],
+          "count": 52,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership617For8290.log",
+            "sha256": "CCDBF9E549EA36EEA3083FFF0BEE79054D14CDCB0AAC3848DCF1A8BCB8A3AE7A",
+            "sourceSha256": "9A91258E44193687AE9C856E40022B605E97D13BBE06F6C6266348BCDFEE4A24"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationOwnership8290.log",
+        "sha256": "59E41A9879DF63E38C356A6DAE29C20086E0BA471591C83F470D115BDEC6B0C8",
+        "sourceSha256": "C58CEED3ADBF1C7F5F3F3A5E50F3076C96560565641D9B58BDB78C17026FA29C"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-001415-274.log",
+        "sha256": "D8BC973383205D9303138EECA202C6B55949EB013CB5FB97FCE52B808058DA59"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 16 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceH1TraceBaseChangeCoefficient",
+            "scratchSha256": "A8856D1AEF6A28930210ACE72B7059336CB202CEA00CAB9081A880BF584AC6AA",
+            "productionSha256": "2454547BC0887EC92FDC167425E1B59DC6228AC52235FFBBA3C211FF92FB2E0A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCoverBinaryHeckeTrace",
+            "scratchSha256": "D87B62D582FB7E968115A3F7071F2F66C041726CF7613137D2E4013662F3ED70",
+            "productionSha256": "768B904AA06B2A6193125E78E312234B25C5970E1D6FEAEBA7E8EFD7623F45CD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckeUpperImage",
+            "scratchSha256": "6F2CE50508F9EA4B6E2D2207C6984F97CD9EC6E4B653B7E1F8E60683F8A1DCEC",
+            "productionSha256": "9679C7E41E263A5E338463E23D90AB89F1443B58188CE6B687B1DDADE49D5BBA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneSubgroupCohomologyMap",
+            "scratchSha256": "937193952EE4964F6BE9F3D3F629C612CE003B45FA310AA44E3212EC0FDCF27B",
+            "productionSha256": "D84F071818EF949641FB1FEE7228CE061EF5669229BD32AA280512E6CA527575",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckePullbackSquare",
+            "scratchSha256": "D19130E7A15CA79E454DE5D2203709572B3B2A88D1200CF07416A63A8F66AB31",
+            "productionSha256": "BC3EAA11238393ED49B35FFBC951CFCBCA639A18A5DA501B14FFB57290FD5399",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckeUpperTraceReindex",
+            "scratchSha256": "6C3C9EB92C40D20F163F85D8B3D6C64F1535650052EE8CA4F07A484CA0211E0F",
+            "productionSha256": "7F86B41F6EDEB7439668FD1DAC38419B2480EF9C172D56798D125761BD29D731",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceH1TraceIntersection",
+            "scratchSha256": "F89423FD464A06287DFF2248CCB87A8E9643CD5AFDFC219EF32185CB24836506",
+            "productionSha256": "5608907DF0322455779E99E18B454F51315F80824BD64F46FE2061EEF1B5F098",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneIntersectionTraceExchange",
+            "scratchSha256": "A553E33FC9FC94A8534B50371B12C3DBD40C5FC0AE17C6B2B7700536614FB858",
+            "productionSha256": "2F1B8728D50FB4F4095661A4E7B4B8FD7C01B1902B0BFFCB311F96A83B8AFD5E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneUpperH1Composition",
+            "scratchSha256": "8C86A95E60F2548C00F61D102BEC52BD338AC9CCD1847C11BEF1039FC90A322D",
+            "productionSha256": "B0DAF6DAECE1D3E04A939668ACE2AB644FAF03DC5B3A882B553D3564F6845A1B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneSubgroupTraceHecke",
+            "scratchSha256": "2668090B64ADFE7FAAF586451F13A22CE9F09F495FCE2B94E66C139C64D7D6A3",
+            "productionSha256": "1C6CF6799E0F0B607D2002A5170CD623B5F369C4DC640BD7720D240A04B02F8B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneTransferHecke",
+            "scratchSha256": "4A8F0CDF6ED05A0B35B0318CA0C38FDDFFF8887C6475AAF720A0B4CDBB69DF3E",
+            "productionSha256": "667BEC3DA20909DF2CD197DD45D2DD004945724F78F6E2CD81E03D650EED10E5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckeWords",
+            "scratchSha256": "7F43A8C9716A2C3CFB6D9D4DF5BD8E54349AACEE1CBDB95A79F465A84BE1520C",
+            "productionSha256": "79678C3103E04E96882FF0D936D52533018132E55D52DF040AE0BA9D87EB3C64",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneOperatorDescent",
+            "scratchSha256": "C69D4452555B8FDC3951EFE283373D423F447592E323904BBBCD9C57A2753FD9",
+            "productionSha256": "27A396911B67BDE4A00BA002DEC8CA9AFC3886E23334EAACF4EC3DE7D840BDFF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckeFinite",
+            "scratchSha256": "071F8B65D67946F0C39E602FFDAAF0A8D3C40E84C4ACD308EF7200742A523169",
+            "productionSha256": "6F79612B4E507F6655EE22F07AE94F61C7EF18E3EA2F4783D9F9B8D9B08209BB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveGammaOneHeckeCharacter",
+            "scratchSha256": "40EAA0B5AB12C906412F02BB640A0C97D9D9AFC4063CF4D68BEEB19148C51AFE",
+            "productionSha256": "B59337159AC01BEB6C1C8F261FFB70F5AE11A753DA5591076FEA23594C4CD876",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveGammaOneH1Realization",
+            "scratchSha256": "E74C962B858F431810852B72738BE9C8DB9D55D02ED0E35155456D8BBF003748",
+            "productionSha256": "5038486E7F42C75D4161C3C444525B004110B12EA213633283D46B491E366CFC",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 110 distinct names from 110 exhaustive scratch checks are retained: 110 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Arithmetic geometric and diamond compatibility, geometric Galois realization of the finite characters, original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. The new operator generators explicitly omit primes dividing level or modulus; surjectivity onto the entire original Hecke algebra is not asserted. No characteristic-zero character lift or deformation point is inferred from finite characters. 16/20; DUB-17--20 OPEN."
+  },
+  "receipt8290": {
+    "recordedUTC": "2026-10-26T10:51:56.652542+00:00",
+    "log": "logs/dubon-build-20261026-021715-306.log",
+    "sha256": "F9FAA129BA70805D3A74DED0206B1A9614D70B6A771A942853EC0FCC758D1D00",
+    "bytes": 13479782,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8290,
+    "projectTheorems": 52423,
+    "registeredConsumers": 23874,
+    "registeredConstructions": 2288,
+    "declarations": 32108,
+    "generated": 33225,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261026_020943.log",
+    "foundationSha256": "DB0218352C83246ECD8A6909680E4E27EE2F23631CA07E43F3B7D12E4FD4AB5B",
+    "countReconciliation": {
+      "previousTheorems": 52313,
+      "focusedTheorems": 110,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 110,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationGlobalOwnership8290.log",
+      "globalOwnershipSha256": "FC3AD13EE8162C31F0109C2F6B24B9FE7BE7D11E9868A003815DA07A5667E1BA",
+      "globalOwnershipSourceSha256": "AA8E6AB488CEB879E826FA47B39F09883E2F584A138491640ED71D953EC6A16D",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationOwnership8290.log",
+      "ownershipSha256": "59E41A9879DF63E38C356A6DAE29C20086E0BA471591C83F470D115BDEC6B0C8"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 110,
+      "scratchDistinct": 110,
+      "generatedNameRenamings": {},
+      "productionFocused": 110,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceH1TraceBaseChangeCoefficient",
+            "SourceGammaOneCoverBinaryHeckeTrace"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership600For8290.log",
+            "sha256": "7BE9607BF1B7CFC3BF17958444C0DB9B617590D832BE35A7820002C173A8BFE0",
+            "sourceSha256": "9E4440B6956E9E984028A0ED64398AC4A80C9389BDB2D392F2333CBD822E5129"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneHeckeUpperImage"
+          ],
+          "count": 8,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership601For8290.log",
+            "sha256": "8FDCAB85C318DD2F8B6F076134E0FE95741E54994A04B6FC69401BCBE2920921",
+            "sourceSha256": "56F0E0CD520F37833F865B129F6855C179BE1ED6A07F7B367CAB33615A848A8D"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneSubgroupCohomologyMap"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership602For8290.log",
+            "sha256": "1D9526445671122A8078EE54A1B1DE0B524D2CBC6C567A5B27A4C3C85376464C",
+            "sourceSha256": "0A60E26F2321096738507584578D61517F6C7432AFD5E0D191064F1B0FC6BF17"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneHeckePullbackSquare",
+            "SourceGammaOneHeckeUpperTraceReindex"
+          ],
+          "count": 14,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership605For8290.log",
+            "sha256": "6745BA8D9164A5AC0C0434401B48946FD78F07088398CECE4C3B6C8D9E7D72EF",
+            "sourceSha256": "F07B78540622CC1DFF41ACA7E767156017F0014D8F685448B591272EA4036252"
+          }
+        },
+        {
+          "modules": [
+            "SourceH1TraceIntersection",
+            "SourceGammaOneIntersectionTraceExchange",
+            "SourceGammaOneUpperH1Composition",
+            "SourceGammaOneSubgroupTraceHecke",
+            "SourceGammaOneTransferHecke"
+          ],
+          "count": 30,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership611For8290.log",
+            "sha256": "8CA67560C49943955B1EE7492A02E1D116B321D73FC5B2F0138FDB7E01D3748F",
+            "sourceSha256": "34F6136DAEC11646345AD546C919D613EE76D950AD889D41F05F9397E58E27C1"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneHeckeWords",
+            "SourceGammaOneOperatorDescent",
+            "SourceGammaOneHeckeFinite",
+            "SourcePrimitiveGammaOneHeckeCharacter",
+            "SourcePrimitiveGammaOneH1Realization"
+          ],
+          "count": 52,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationScratchOwnership617For8290.log",
+            "sha256": "CCDBF9E549EA36EEA3083FFF0BEE79054D14CDCB0AAC3848DCF1A8BCB8A3AE7A",
+            "sourceSha256": "9A91258E44193687AE9C856E40022B605E97D13BBE06F6C6266348BCDFEE4A24"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeRealizationOwnership8290.log",
+        "sha256": "59E41A9879DF63E38C356A6DAE29C20086E0BA471591C83F470D115BDEC6B0C8",
+        "sourceSha256": "C58CEED3ADBF1C7F5F3F3A5E50F3076C96560565641D9B58BDB78C17026FA29C"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-001415-274.log",
+        "sha256": "D8BC973383205D9303138EECA202C6B55949EB013CB5FB97FCE52B808058DA59"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 16 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceH1TraceBaseChangeCoefficient",
+            "scratchSha256": "A8856D1AEF6A28930210ACE72B7059336CB202CEA00CAB9081A880BF584AC6AA",
+            "productionSha256": "2454547BC0887EC92FDC167425E1B59DC6228AC52235FFBBA3C211FF92FB2E0A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCoverBinaryHeckeTrace",
+            "scratchSha256": "D87B62D582FB7E968115A3F7071F2F66C041726CF7613137D2E4013662F3ED70",
+            "productionSha256": "768B904AA06B2A6193125E78E312234B25C5970E1D6FEAEBA7E8EFD7623F45CD",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckeUpperImage",
+            "scratchSha256": "6F2CE50508F9EA4B6E2D2207C6984F97CD9EC6E4B653B7E1F8E60683F8A1DCEC",
+            "productionSha256": "9679C7E41E263A5E338463E23D90AB89F1443B58188CE6B687B1DDADE49D5BBA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneSubgroupCohomologyMap",
+            "scratchSha256": "937193952EE4964F6BE9F3D3F629C612CE003B45FA310AA44E3212EC0FDCF27B",
+            "productionSha256": "D84F071818EF949641FB1FEE7228CE061EF5669229BD32AA280512E6CA527575",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckePullbackSquare",
+            "scratchSha256": "D19130E7A15CA79E454DE5D2203709572B3B2A88D1200CF07416A63A8F66AB31",
+            "productionSha256": "BC3EAA11238393ED49B35FFBC951CFCBCA639A18A5DA501B14FFB57290FD5399",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckeUpperTraceReindex",
+            "scratchSha256": "6C3C9EB92C40D20F163F85D8B3D6C64F1535650052EE8CA4F07A484CA0211E0F",
+            "productionSha256": "7F86B41F6EDEB7439668FD1DAC38419B2480EF9C172D56798D125761BD29D731",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceH1TraceIntersection",
+            "scratchSha256": "F89423FD464A06287DFF2248CCB87A8E9643CD5AFDFC219EF32185CB24836506",
+            "productionSha256": "5608907DF0322455779E99E18B454F51315F80824BD64F46FE2061EEF1B5F098",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneIntersectionTraceExchange",
+            "scratchSha256": "A553E33FC9FC94A8534B50371B12C3DBD40C5FC0AE17C6B2B7700536614FB858",
+            "productionSha256": "2F1B8728D50FB4F4095661A4E7B4B8FD7C01B1902B0BFFCB311F96A83B8AFD5E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneUpperH1Composition",
+            "scratchSha256": "8C86A95E60F2548C00F61D102BEC52BD338AC9CCD1847C11BEF1039FC90A322D",
+            "productionSha256": "B0DAF6DAECE1D3E04A939668ACE2AB644FAF03DC5B3A882B553D3564F6845A1B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneSubgroupTraceHecke",
+            "scratchSha256": "2668090B64ADFE7FAAF586451F13A22CE9F09F495FCE2B94E66C139C64D7D6A3",
+            "productionSha256": "1C6CF6799E0F0B607D2002A5170CD623B5F369C4DC640BD7720D240A04B02F8B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneTransferHecke",
+            "scratchSha256": "4A8F0CDF6ED05A0B35B0318CA0C38FDDFFF8887C6475AAF720A0B4CDBB69DF3E",
+            "productionSha256": "667BEC3DA20909DF2CD197DD45D2DD004945724F78F6E2CD81E03D650EED10E5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckeWords",
+            "scratchSha256": "7F43A8C9716A2C3CFB6D9D4DF5BD8E54349AACEE1CBDB95A79F465A84BE1520C",
+            "productionSha256": "79678C3103E04E96882FF0D936D52533018132E55D52DF040AE0BA9D87EB3C64",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneOperatorDescent",
+            "scratchSha256": "C69D4452555B8FDC3951EFE283373D423F447592E323904BBBCD9C57A2753FD9",
+            "productionSha256": "27A396911B67BDE4A00BA002DEC8CA9AFC3886E23334EAACF4EC3DE7D840BDFF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckeFinite",
+            "scratchSha256": "071F8B65D67946F0C39E602FFDAAF0A8D3C40E84C4ACD308EF7200742A523169",
+            "productionSha256": "6F79612B4E507F6655EE22F07AE94F61C7EF18E3EA2F4783D9F9B8D9B08209BB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveGammaOneHeckeCharacter",
+            "scratchSha256": "40EAA0B5AB12C906412F02BB640A0C97D9D9AFC4063CF4D68BEEB19148C51AFE",
+            "productionSha256": "B59337159AC01BEB6C1C8F261FFB70F5AE11A753DA5591076FEA23594C4CD876",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveGammaOneH1Realization",
+            "scratchSha256": "E74C962B858F431810852B72738BE9C8DB9D55D02ED0E35155456D8BBF003748",
+            "productionSha256": "5038486E7F42C75D4161C3C444525B004110B12EA213633283D46B491E366CFC",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 110 distinct names from 110 exhaustive scratch checks are retained: 110 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Arithmetic geometric and diamond compatibility, geometric Galois realization of the finite characters, original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. The new operator generators explicitly omit primes dividing level or modulus; surjectivity onto the entire original Hecke algebra is not asserted. No characteristic-zero character lift or deformation point is inferred from finite characters. 16/20; DUB-17--20 OPEN."
+  }
+}

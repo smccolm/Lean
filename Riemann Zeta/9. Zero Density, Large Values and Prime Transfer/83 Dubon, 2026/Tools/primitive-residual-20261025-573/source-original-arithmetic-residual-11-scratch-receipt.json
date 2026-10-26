@@ -1,0 +1,144 @@
+{
+  "recordedUTC": "2026-10-25T22:48:26.636721+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceValuationResidualAction",
+    "SourceNormValuationRestriction",
+    "SourceRationalLocalValuation",
+    "SourceOriginalNormLocalResidual",
+    "SourceNumberFieldNormInertiaLift",
+    "SourceAbsoluteFiniteUnramified",
+    "SourceNumberFieldSupportRamification",
+    "SourceAbsoluteArithmeticRestriction",
+    "SourceAbsoluteArithmeticDescent",
+    "SourceArithmeticLocalEmbeddingExtension",
+    "SourceOriginalArithmeticResidual"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceValuationResidualAction.lean",
+      "sha256": "94A29E896DC4905654A0135D8E1E22D5E77040EE1ABE426A20B01BF6BD70C3A1",
+      "oleanSha256": "396AEAA1689B450DEA96C2B0772784FF65E2E72F71A4C09DF02D1C8AC4E2EDD0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceNormValuationRestriction.lean",
+      "sha256": "100D63D93A59237C17D73E3480E744779486F48C5CFA6F173FE429B498912ED7",
+      "oleanSha256": "D4F34D3BA11F5A439AE7A9F4E20FD2B4ECFE3450210B1B2A8E99A6008891E291"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRationalLocalValuation.lean",
+      "sha256": "783BE58DBEFD8C841B680CFCBA21E0564C379C14685785DDE1C17B389883A64A",
+      "oleanSha256": "9F5DC3041D559509D6ED4CAA243E4964F8B4D0EBEF4BF188EEA0BAA48B044635"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalNormLocalResidual.lean",
+      "sha256": "7DF1AC5CE7AE8C9CBC54CEB38FE8AB45AA9B8ED603CDAA1E2EFF75D783CD4DAC",
+      "oleanSha256": "2CC8B6B93904ABFBB5EFEC42D3462A51E3C2E2C35D99BE74079BF7266B8BC7B0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceNumberFieldNormInertiaLift.lean",
+      "sha256": "46A9BDD26F86B51FF0536C8364BE8DFA8D06A5A2D36ED9E69309678FD7A45A3A",
+      "oleanSha256": "B8EA13BF2890389357EEB19159EC0CFEC46D21BE1461C1B7145CCB2B1E68FDFE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteFiniteUnramified.lean",
+      "sha256": "77ACDD60BC30C73AF41F9DB6CAFAC3A6A258667B2C37BD2D7A7D1BC457D6A9DF",
+      "oleanSha256": "8CEDC4ED5E91FA5A2942731652044B98D1CBBDFE7B81410B4BBF7955152DFC22"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceNumberFieldSupportRamification.lean",
+      "sha256": "E8A6889C31325464CBE761C545F4A6A684BAD568BE49A2E9CDB65E5F78768B9D",
+      "oleanSha256": "7C1FB3410AF125F3A7449B0E4702F54CC5BE7181BCB8A7276D3FA6EEB2B8E94C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteArithmeticRestriction.lean",
+      "sha256": "598AECD9E8B6C72B1B22B005AF7DB235973C482CEE64E2BB8366E5BC942F2B3F",
+      "oleanSha256": "20CB9A4AFA223043BD2C3DCFE9DBEF907C9EB111F6AFB0CC308F6BDE6CD87532"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAbsoluteArithmeticDescent.lean",
+      "sha256": "E78024EB072497355D08ECE5537515E075D26A348D0AFA3BB1FD8930CF4D84A1",
+      "oleanSha256": "24904498ECA1763989FB7A8F5E532E1E5601FFD7F38F72507407670E97BFC748"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticLocalEmbeddingExtension.lean",
+      "sha256": "6AD7CAFC9D4A896F8E75E1C92963BDA691D9BE768665C54EA8BED761191D42AB",
+      "oleanSha256": "5800C32BBBA6D6A8395F55F7A4981C927F08EB61936ACA96B3F8C8E413BC7568"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticResidual.lean",
+      "sha256": "2A85E4C9DC83289E4F5C82038F83BC958036C687A3BE133A4EF4F5546D7D39B4",
+      "oleanSha256": "E5CAEE21D36C16E8ED0F8D8FB12F9EA950EDCE9FE2613AAA0604D6DB5BB8CF58"
+    }
+  ],
+  "queries": [
+    "Dubon2026.valuation_decomposition_of_mem_iff",
+    "Dubon2026.valuation_residue_power_iff",
+    "Dubon2026.valuation_comap_nonunits_iff",
+    "Dubon2026.norm_restriction_mem_decomposition",
+    "Dubon2026.norm_restriction_frobenius",
+    "Dubon2026.norm_restriction_inertia",
+    "Dubon2026.sourceRationalAlgebraicClosure_isGalois",
+    "Dubon2026.sourceRationalLocalValuation_prime",
+    "Dubon2026.sourceRationalLocalValuation_frobenius",
+    "Dubon2026.sourceRationalLocalValuation_inertia",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_normLocal_residual_realization",
+    "Dubon2026.numberField_embedded_inertia_exists_norm_lift",
+    "Dubon2026.absolute_faithful_factor_unramified",
+    "Dubon2026.numberField_support_ramification_of_rational_unramified",
+    "Dubon2026.sourceAbsoluteArithmeticRestriction_commutes",
+    "Dubon2026.absolute_continuous_normInertia_arithmetic_descent",
+    "Dubon2026.sourceArithmeticLocalEmbedding_exists_extension",
+    "Dubon2026.sourceAbsoluteArithmeticRestriction_local",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_arithmetic_residual_realization",
+    "Dubon2026.sourceRationalLocalValuation",
+    "Dubon2026.sourceAbsoluteArithmeticRestriction"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.valuation_decomposition_of_mem_iff",
+    "Dubon2026.valuation_residue_power_iff",
+    "Dubon2026.valuation_comap_nonunits_iff",
+    "Dubon2026.norm_restriction_mem_decomposition",
+    "Dubon2026.norm_restriction_frobenius",
+    "Dubon2026.norm_restriction_inertia",
+    "Dubon2026.sourceRationalAlgebraicClosure_isGalois",
+    "Dubon2026.sourceRationalLocalValuation_prime",
+    "Dubon2026.sourceRationalLocalValuation_frobenius",
+    "Dubon2026.sourceRationalLocalValuation_inertia",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_normLocal_residual_realization",
+    "Dubon2026.numberField_embedded_inertia_exists_norm_lift",
+    "Dubon2026.absolute_faithful_factor_unramified",
+    "Dubon2026.numberField_support_ramification_of_rational_unramified",
+    "Dubon2026.sourceAbsoluteArithmeticRestriction_commutes",
+    "Dubon2026.absolute_continuous_normInertia_arithmetic_descent",
+    "Dubon2026.sourceArithmeticLocalEmbedding_exists_extension",
+    "Dubon2026.sourceAbsoluteArithmeticRestriction_local",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_arithmetic_residual_realization"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceRationalLocalValuation",
+    "Dubon2026.sourceAbsoluteArithmeticRestriction"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticResidualAudit11.log",
+  "logSha256": "75BE0CF2BD98DC82F94BF0681C784409B2BF4D1998ECEC8E9DB70A9571FF76AD",
+  "auditSha256": "CB2F6E4DCF3F466642910AD7FE9778499E63483DA73ABBF03F45DE596900DCBC",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 38,
+  "linterScopes": 11,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 33,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalArithmeticResidualDependencyAudit11.log",
+  "dependencyAuditSha256": "668BA4DE5476E472DBF562A8CCD235C9345EB0F0FE25A242C542B184C7845369",
+  "dependencyAuditSourceSha256": "215465C2A792E0F97AF238B01106AB74B78089EC71AA7CE8081531F95CDFC098",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_arithmetic_residual_realization"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight residual association -> close the weight-two parabolic branch -> original primitive prescribed reduction -> actual norm-local action and arithmetic quotient",
+  "discharged": "Norm-local compatibility, finite-field ramification, original-support containment, continuous arithmetic descent, and agreement with the fixed arithmetic local maps are all derived for the original prescribed-reduction representation. The terminal theorem keeps the same finite-image representation and exact good-prime characteristic polynomial, trace, determinant and inertia identities.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The parabolic cusp eigensystem still needs a primitive lower-level realization and the resulting arithmetic consumer. Final weight twist and support comparison, arithmetic automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-arithmetic-residual-11-reuse-review-20261025.json",
+  "reuseReviewSha256": "B7FDF683DA1E5B792190684E9B4C58D2835555C35FFF000D2688E7626D18F44B",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

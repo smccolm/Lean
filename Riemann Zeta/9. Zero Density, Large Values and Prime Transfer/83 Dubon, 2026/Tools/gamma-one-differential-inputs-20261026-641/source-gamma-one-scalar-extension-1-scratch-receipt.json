@@ -1,0 +1,48 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T11:38:54.485032+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneScalarExtension"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneScalarExtension.lean",
+      "sha256": "FFA004719BEF4ED6C17BD6B6410F811AA0B8D0B002C9117565BDFCE582A610C2",
+      "oleanSha256": "9922547CA6E58CBD8EA446D696EDA55B26F273BB44702987AAE2AA03024CA64F"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.coeffEmb_intSeriesC",
+    "Dubon2026.SourceFunctionField.GammaOne.coeffEmb_image_intFormRatiosC",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_eq_qExpFunctionFieldC"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.coeffEmb_intSeriesC",
+    "Dubon2026.SourceFunctionField.GammaOne.coeffEmb_image_intFormRatiosC",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_eq_qExpFunctionFieldC"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneScalarExtensionAudit1.log",
+  "logSha256": "6BA45062AD25A09F6BA2494358DC663F5CA8117DE4463F08A5400B45B09D8A59",
+  "auditSha256": "D91193DD85144375636E55E6185EEE54D151F59397F5C0EC5A395CD36E5816DA",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 5,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 7,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneScalarExtensionDependencyAudit1.log",
+  "dependencyAuditSha256": "AAAB8FD69E7F60EC8DA805BB2EFEBF2E283E623DB8A06950DFE8BA42CC3E6F88",
+  "dependencyAuditSourceSha256": "AA8F781BFD2D417723EBC92F69FFB6596E0775D90DD1941045D8E207984E8EF0",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_eq_qExpFunctionFieldC"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of finite Gamma1 Hecke characters -> Picard/H1 comparison -> actual Gamma1 regular-differential/cusp comparison -> scalar-extension and literal integral-ratio field identification.",
+  "discharged": "The literal Laurent scalar extension functionFieldOver Gamma L equals qExpFunctionFieldC L Gamma for every integral modular subgroup Gamma and every field L with rational algebra structure. Denominator nonvanishing is transported by the injective coefficient field embedding; the same genuine modular forms and integral expansions witness both ratio sets.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The required regular-differential/cusp realization, Picard/H1, diamond and full/parabolic comparisons, finite-character arithmetic realization, all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-scalar-extension-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "FFDAEE289D3FAD13AB324CAF00ADF44C30BCF5DCF5752CBD18D37CA5195809F1",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

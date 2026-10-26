@@ -1,0 +1,343 @@
+{
+  "scratchSum": 205,
+  "scratchDistinct": 205,
+  "generatedNameRenamings": {},
+  "productionFocused": 205,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {},
+  "missingFromFocusedAlreadyInPrevious": [],
+  "productionNamesNotInScratch": [],
+  "unexplainedMissing": [],
+  "scopes": [
+    {
+      "modules": [
+        "SourcePermutationCoefficientQuotient",
+        "SourceBinaryPrimePowerPermutation",
+        "SourceBinaryPermutationHecke",
+        "SourceBinaryPermutationCongruence",
+        "SourceIntegralBinaryPermutationRealization"
+      ],
+      "count": 18,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership582For8248.log",
+        "sha256": "B481A4F7C0162E11D5AF4A0BDD540BF0F593FF5C93F1E83EB2647EC2B96C7DBF",
+        "sourceSha256": "AD1B068584660C9B73C7618E9E479C55711F43A17EEB5E0668ACE5C2D270948C"
+      }
+    },
+    {
+      "modules": [
+        "SourcePrimitiveH1CoefficientField",
+        "SourcePrimitiveLocalH1Character",
+        "SourcePrimitiveAdicH1Quotients",
+        "SourcePrimitiveCompatibleH1AdicData",
+        "SourcePrimitiveH1AdicRealization"
+      ],
+      "count": 43,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership583For8248.log",
+        "sha256": "A328D7C9880A01D19A5D0427E85DD2AEAF83715204E83A151BC94C0F31A0190B",
+        "sourceSha256": "87062B7A78137F4CCFDED135C954533042C579D7EBA219B291DC371D6C5F1E82"
+      }
+    },
+    {
+      "modules": [
+        "SourceCoefficientPermutationCoordinates",
+        "SourceCoefficientStabilizerCohomology",
+        "SourceIntegralBinaryStabilizerRealization"
+      ],
+      "count": 11,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership584For8248.log",
+        "sha256": "5FBB59F95CC5CC9DD7E5EECD6A396E4B047A209AA95DCCC93669F589F661C3FF",
+        "sourceSha256": "AFE2F5673A2C9CEDDD2BFDDFE9BBB89723FA27DD8B95518FD64CACF45797F873"
+      }
+    },
+    {
+      "modules": [
+        "SourceFaithfulCharacterDivisibility",
+        "SourceBinaryH1PrimePowerKernel",
+        "SourcePrimitiveH1HeckeCongruence",
+        "SourcePrimitiveH1AdicOperatorKernel",
+        "SourcePrimitiveCongruentH1AdicRealization"
+      ],
+      "count": 13,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership585For8248.log",
+        "sha256": "3D219D8FFE6D1680C639E96C0FA94A4F12D7FF4421D9DF9CBA9E6E0FF72F2F2C",
+        "sourceSha256": "7B392236D3BBA26A499C51E560C693FC981A8EA45A16B2F42E33222D4350B6AE"
+      }
+    },
+    {
+      "modules": [
+        "SourceBinaryH1ModulusOperatorAlgebra",
+        "SourceFiniteOperatorCharacterDescent",
+        "SourcePrimitiveFiniteH1HeckeCharacter",
+        "SourcePrimitiveFiniteH1OperatorRealization"
+      ],
+      "count": 41,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership586For8248.log",
+        "sha256": "027A405085858A5B6CB3BEF5B9B3ACD72B4A0861CAE47B1C87D692F2287F5F94",
+        "sourceSha256": "1354A57EE7850887E9B21E546C0583AF5D7478ED3D9D4E1E72EC9859BD08589A"
+      }
+    },
+    {
+      "modules": [
+        "SourceBinaryH1ModulusKernel",
+        "SourceBinaryPermutationHeckeWords",
+        "SourceBinaryPermutationOperatorKernel",
+        "SourceBinaryPermutationHeckeFinite",
+        "SourceBinaryPermutationOperatorDescent",
+        "SourcePrimitivePermutationH1HeckeCharacter",
+        "SourcePrimitivePermutationH1Realization"
+      ],
+      "count": 53,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership588For8248.log",
+        "sha256": "747933B9F0E4995848C513D0A1C59CBD1050BEB467B8AC9094E89B69E93253CB",
+        "sourceSha256": "4E21264205103EAB9EFAE97AA7BDB6555A1C489000739E0B69A58F871CCE7828"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneCongruenceCover",
+        "SourceBinaryStabilizerGammaOneCover",
+        "SourceGammaOneDiagonalHom",
+        "SourceGammaOneCoverFiniteIndex",
+        "SourceGammaOneCohomologyTransfer",
+        "SourceGammaOneConstantH1Realization"
+      ],
+      "count": 26,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership591For8248.log",
+        "sha256": "12D5D4BDA30FEB1C028CA274A11446117EC3431A9D405A7A58FB2656FAD940C7",
+        "sourceSha256": "0B24E19E293ADEA1A46871F478C9B579E9114EAFD51819EB5094C6553EA19A4D"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationOwnership8248.log",
+    "sha256": "436AB77ED3981E3A1B9FB203042888E3CCC86D48E3F7211B0A2637E2D40EB0F5",
+    "sourceSha256": "67FC1B2B9410DF6C9F8D252822E323CF2C3A3CEEE84CAAE4E2B91993601E792F"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-201544-907.log",
+    "sha256": "DA4E7D14C8AFCBD74C6668C14A55182A02A36657FB28067C803E2A96F0E7E06F"
+  },
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 35 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourcePermutationCoefficientQuotient",
+        "scratchSha256": "8ADA6D97B221B37C7C097523DB6EABE4E4061F4D30D326A3B6E49CEC95A24A95",
+        "productionSha256": "8ADA6D97B221B37C7C097523DB6EABE4E4061F4D30D326A3B6E49CEC95A24A95",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceBinaryPrimePowerPermutation",
+        "scratchSha256": "64D4B11F41FFC30E7D88DF851C3229A11DFE9CA4B6FDE2B4295CB39EF2C4F30B",
+        "productionSha256": "736B62F3D526E0316050B0D7EFA5FD3D1D5EC377F0ECDCCB4D037AE2E4413FF5",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceBinaryPermutationHecke",
+        "scratchSha256": "200353FC6BE79050115BE8F768AB96D740DE9D92C6AF4CA4C4BF624D082EE0C8",
+        "productionSha256": "AF702186908EFBA841F10F9C72AFAA68549260BB34814681E1663579BAF19F88",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceBinaryPermutationCongruence",
+        "scratchSha256": "C9CB7D8C47037CEF003A731809E8C925FCF1A6A698F092CA85056EC67697F8FD",
+        "productionSha256": "DD923133E079A87E5909EA3A29309043F1C94D16257736AE09728D2479430CA0",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralBinaryPermutationRealization",
+        "scratchSha256": "84048A1E76A885490470F4591925B40E88B1F55DEBC3BF668E0254DEDBA5BB17",
+        "productionSha256": "3E23646887D9B8FA69392E299A967E594FB148C22832FE39803C16D97DF86417",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrimitiveH1CoefficientField",
+        "scratchSha256": "FAB1DD47B28AC19C1A862F66C2BC55F684E105F2B436ED713AD23508DAB8D3B9",
+        "productionSha256": "83E60BD7FB4E347C2174D386B1714A8E213D5F20CC054209D7E34E21D8340721",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrimitiveLocalH1Character",
+        "scratchSha256": "B4579019CCC0485129A7A903A711239B6EB2B32C2F1E75C80D6668A3D502AD25",
+        "productionSha256": "52A755628EB31B451C1B41AAF41B6848A728024DE7C0B91EE185F2CC43F43D16",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrimitiveAdicH1Quotients",
+        "scratchSha256": "BBDB559FC020FA5A6FD4BFB34973C03EFE4DFC71EA64A149AEE08F3403DA7AB2",
+        "productionSha256": "0E06085AC1DAC09F05E77AA549632875AB5BE6DCE4C4A40B9501885EEE9613E9",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrimitiveCompatibleH1AdicData",
+        "scratchSha256": "D72BBD2D4CA607217125D77FAFC6E3377D063B456F71964C1EE0DE3DAE55E053",
+        "productionSha256": "F6E93D20D8DFB32E1044B671350A75805DAA1FEB986169208F8AD62F976CD027",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrimitiveH1AdicRealization",
+        "scratchSha256": "E062FDF00FB3AE467339D04E18B99CC0503F3F51CA7274AC1F8197AB642D498F",
+        "productionSha256": "FCCAA9B357EC79B0139C6EBE573591A07805255A2356E03C5622C6F755C2C850",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCoefficientPermutationCoordinates",
+        "scratchSha256": "500AF11865310EEEC2602EE24664B878F98FB342ED96952B0189B46A3F0E40F6",
+        "productionSha256": "3F41A210666DCE49AD319C5A67C2CA9303FA14AF5C6C1255245F4F22494C7BF4",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCoefficientStabilizerCohomology",
+        "scratchSha256": "9936ECAA33E420CD6BBF7465D249E5A40CCD0244365542307DE20401B1FF5CCA",
+        "productionSha256": "4FED37F6E55F92ABCE7FC7FCD5DB7F7CFEEAB589A6D5D0DD75933630DB7044DB",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralBinaryStabilizerRealization",
+        "scratchSha256": "E30ABF7F9072A0C1AFDCC868A371CBF45DFEEE68029B7AFB5900158AC04F41E5",
+        "productionSha256": "F37088156F1ED4911FADECA1871652A4473A24DDD96AD05388935591C5DBBF06",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFaithfulCharacterDivisibility",
+        "scratchSha256": "9C6E94794105805D9E4408F496D3908C44CA676C6376C16C437552BB31AE7063",
+        "productionSha256": "9C6E94794105805D9E4408F496D3908C44CA676C6376C16C437552BB31AE7063",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceBinaryH1PrimePowerKernel",
+        "scratchSha256": "19DA3B7EE28E9C5F5FFB5BF18A22A8C78F033805E5A6ED864351EA498A539F3C",
+        "productionSha256": "19DA3B7EE28E9C5F5FFB5BF18A22A8C78F033805E5A6ED864351EA498A539F3C",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrimitiveH1HeckeCongruence",
+        "scratchSha256": "700841266CA4946061078CD982E107933BA862BB90E152DCB7D632A813BE5984",
+        "productionSha256": "E7D8F73B30E310660D82F9314894BE414757D230FDFDD3E2F0D646ADC74D4F29",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrimitiveH1AdicOperatorKernel",
+        "scratchSha256": "CC0404B804624308925B1E86EC1F10EC971BD1E6902B4030BF5CEE4DFAB0FAD2",
+        "productionSha256": "B9390C39F0D33ACBDB1E5C9F413320CCEF4C3B3824203CDA2A4C3FEC113F79B2",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrimitiveCongruentH1AdicRealization",
+        "scratchSha256": "E95609B3B1E0AA209848BB5FD372DA27DD6081D3A22A8CC2BCE77FA9C2448320",
+        "productionSha256": "9C9ADA8F5100965586ACB6583B0465B62BD9970921D7CA0DA6115752D822AE96",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceBinaryH1ModulusOperatorAlgebra",
+        "scratchSha256": "3088DB3E4135312604626BD75E4F18FC786BCD4F02277870EFD6A380D256F30E",
+        "productionSha256": "3088DB3E4135312604626BD75E4F18FC786BCD4F02277870EFD6A380D256F30E",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFiniteOperatorCharacterDescent",
+        "scratchSha256": "3AE57C01A36D9DF2D2B5E62DAC21816E54CAA7ABE0007AF37A04B5725A040C6A",
+        "productionSha256": "3AE57C01A36D9DF2D2B5E62DAC21816E54CAA7ABE0007AF37A04B5725A040C6A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrimitiveFiniteH1HeckeCharacter",
+        "scratchSha256": "48017F46307B8EAC8F2129D87FA9C3417B44B2D3AF19B4BA23472CCA4A5EDE26",
+        "productionSha256": "DE6FB139077EACE6DE85BDBC5C50A2DE8EB77B43F0F94AD0EBB2E9BECE884AE2",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrimitiveFiniteH1OperatorRealization",
+        "scratchSha256": "3F439F73DD995AB8615CE63E33D4FF35246009D6EF34EC390CEEED6E90620223",
+        "productionSha256": "95315EC003FBDF057068FE6F4CE6FEE623F1A683D49CFCEEE753F05984280A59",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceBinaryH1ModulusKernel",
+        "scratchSha256": "A27F8C0453C13671E4669B08048F6589FBF6AC47CFDE055A2A2A486C8FACAF7F",
+        "productionSha256": "C6D2FAB2DB503BF030400AA6F7AFC827B245132F5BADD5B5069128D2D07A160F",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceBinaryPermutationHeckeWords",
+        "scratchSha256": "63852A443A7D679C5216E4E769976CE57F13805F28A14CA8D33C2E5CF180071B",
+        "productionSha256": "DA80FBD3B10B99F4997FE45F2E5F078091F7BB91C47964DDFE43E5240C5320A4",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceBinaryPermutationOperatorKernel",
+        "scratchSha256": "1F9939744334A621CCC12010C765AEDCC14F581B83DD7533E12405D8E89DCD36",
+        "productionSha256": "C7F427DBB3469E86FA132289B0E0982B10B8EF127A6222704F22DCF33E8FC941",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceBinaryPermutationHeckeFinite",
+        "scratchSha256": "B80BC2737F5FDB86945ED8534CD2663AA430A92DCF67638A8AA0A9495E21BE4F",
+        "productionSha256": "7DAC7E61FB44A30F2FB65AF7D1949B86CEB30E7E917C3E57FBDAAF767AB4CDA3",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceBinaryPermutationOperatorDescent",
+        "scratchSha256": "7A7635F0FE17AF12C8C4CA7B4FE70AD368C45A0372FF5DACEE9A7A57C31AC27E",
+        "productionSha256": "DC3CD4E5B0E28248DA990B1AFD16798C80BA70F1E7282ECBDC7C6CB26818E535",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrimitivePermutationH1HeckeCharacter",
+        "scratchSha256": "7F3831C432148B1EB2B67E06A1DD55FFFDB85E3B68C87C35359F1A7FD00E7EEA",
+        "productionSha256": "9A1BE0FC0429D53A9BAED8B434BEBFFA09A68FC688E1C82A7185CCD190CC0E0B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrimitivePermutationH1Realization",
+        "scratchSha256": "F4582898A76AE5B4C935471C567494BD924C02BA7E7FA087D63522B2E64ADCAE",
+        "productionSha256": "62E1F69AA590A23CDDD1C76B1DA7BDEC70B4777801B63BD2044AEAA32F9DE8EC",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCongruenceCover",
+        "scratchSha256": "585659F407D2F51EDA84FCA732EB7D333F4256CE73B930F2E02CF9EE631548B4",
+        "productionSha256": "585659F407D2F51EDA84FCA732EB7D333F4256CE73B930F2E02CF9EE631548B4",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceBinaryStabilizerGammaOneCover",
+        "scratchSha256": "657BD9FE8E260AB66BE097AA959CEACEFEE58F1AEE70DD9490E52E4404E7749E",
+        "productionSha256": "A2B599FD1DEC46B048231CE917D26240EADFD3181CA60A7ABCB9D378F4E61CA8",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneDiagonalHom",
+        "scratchSha256": "AF70842F3D291B9E918FA2A4BC2E6F085951BC40EC99A69D219ADD4D836DD914",
+        "productionSha256": "6B69EE3D1CB9E5A92FD6FFEA754FA403E79CAFF7C1F3336395B41623B78FA7DC",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCoverFiniteIndex",
+        "scratchSha256": "A3DF7002CC95628A02ED734D1A10B63E8CCA9D3E540C261C88B67AD9F37FC3C6",
+        "productionSha256": "465E76340EC503F5F5346202CB3AAB148A75A54A84C6CA5602F017BE29EB4320",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCohomologyTransfer",
+        "scratchSha256": "15C53922CF077084C9F4421782C3346D7C27048B8E233F29F36D60CC5C1A7D62",
+        "productionSha256": "7E0042F01FF497AA6E36ACE0D6BB4C524BE7AA65AD52A28E2A41B14397FCF97D",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneConstantH1Realization",
+        "scratchSha256": "5E3B3BE2610765E1D2E7E4DD2C727F1FE418231026EF3BB46409CDCDDB1C4B24",
+        "productionSha256": "B495A6F8E833DADAEE5684816D751CCA7CFC98853DE3C7485BC6133F9807D193",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": true
+}

@@ -1,0 +1,550 @@
+{
+  "sha": "bc16671d6781a26216b378773502ba5583845cbf",
+  "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/trees/bc16671d6781a26216b378773502ba5583845cbf",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "af001476386cdb88d829549bec12f9dc53e1136d",
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/trees/af001476386cdb88d829549bec12f9dc53e1136d"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "770f384b29aa9ae213e2e5cf6bd9b30ba72cace3",
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/trees/770f384b29aa9ae213e2e5cf6bd9b30ba72cace3"
+    },
+    {
+      "path": ".github/workflows/create-release.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6dacf77ca24a1a2a99dc974d16c53408e8b32058",
+      "size": 427,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/6dacf77ca24a1a2a99dc974d16c53408e8b32058"
+    },
+    {
+      "path": ".github/workflows/lean_action_ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed60ee495401d34b1f83ada1dae3f00bf14c01c1",
+      "size": 487,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/ed60ee495401d34b1f83ada1dae3f00bf14c01c1"
+    },
+    {
+      "path": ".github/workflows/update.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96b7622a72a1c6d92e3927a2f494656c0797fc00",
+      "size": 1950,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/96b7622a72a1c6d92e3927a2f494656c0797fc00"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfb30ec8c762cc74d4ee1593ab48fc091d04ca4c",
+      "size": 7,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/bfb30ec8c762cc74d4ee1593ab48fc091d04ca4c"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8dada3edaf50dbc082c9a125058f25def75e625a",
+      "size": 11357,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/8dada3edaf50dbc082c9a125058f25def75e625a"
+    },
+    {
+      "path": "ModularFormsMod.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dacb21652cd2451ec54803b2b3efc8a6e881e539",
+      "size": 1252,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/dacb21652cd2451ec54803b2b3efc8a6e881e539"
+    },
+    {
+      "path": "ModularFormsMod",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "68a8a40faa73693b29e6779b1c12f76738a43c9f",
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/trees/68a8a40faa73693b29e6779b1c12f76738a43c9f"
+    },
+    {
+      "path": "ModularFormsMod/EventuallyEq.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b50a77019c5dc3a9b57d39d37263415ab332f6f",
+      "size": 3949,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/2b50a77019c5dc3a9b57d39d37263415ab332f6f"
+    },
+    {
+      "path": "ModularFormsMod/KummerCongruence.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14dfba98e5d2cc5e8b91e66d3184ac5e9ac2a44a",
+      "size": 39313,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/14dfba98e5d2cc5e8b91e66d3184ac5e9ac2a44a"
+    },
+    {
+      "path": "ModularFormsMod/LdvdBernoulliNum.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d58281c1546b8ab2f8e835924ed345fdea6851b6",
+      "size": 2498,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/d58281c1546b8ab2f8e835924ed345fdea6851b6"
+    },
+    {
+      "path": "ModularFormsMod/ModularForm.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6584ad93f6eae93b0a75a0c284d37389bfc714b4",
+      "size": 1906,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/6584ad93f6eae93b0a75a0c284d37389bfc714b4"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a670ad3cbeab6a756543c86ff248ba08334b58f4",
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/trees/a670ad3cbeab6a756543c86ff248ba08334b58f4"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/BaseChange.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f992eff9743ba31db001c61e6df44eef1a4f90f2",
+      "size": 4589,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/f992eff9743ba31db001c61e6df44eef1a4f90f2"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4f450eb8463b114ee015a90490e49a5913e9220",
+      "size": 5008,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/b4f450eb8463b114ee015a90490e49a5913e9220"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/Basis.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ff500350029238d8235b230fac69624f1bceb7b",
+      "size": 7783,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/0ff500350029238d8235b230fac69624f1bceb7b"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/Defs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1ccae30ddeccd7cd702180c84d53d80e23af25f",
+      "size": 15504,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/b1ccae30ddeccd7cd702180c84d53d80e23af25f"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/Del.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ebee09f651ed4d2c025241e1ce540509c04518e",
+      "size": 7569,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/4ebee09f651ed4d2c025241e1ce540509c04518e"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/Derivative.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75d30626c2ae0fe0dc6720395ce0f03f0821df3c",
+      "size": 4724,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/75d30626c2ae0fe0dc6720395ce0f03f0821df3c"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/Filtration.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d1563799cda9b4982a3dc4071faca0a8fedc7f0",
+      "size": 9489,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/8d1563799cda9b4982a3dc4071faca0a8fedc7f0"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/GradedRing.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c87a3a95122c3872be76c9d745e5e7dc8cada0b",
+      "size": 8813,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/6c87a3a95122c3872be76c9d745e5e7dc8cada0b"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/HasseIdeal.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75827468f85fa983121f69a1b5e2fd0de6ffc00a",
+      "size": 3007,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/75827468f85fa983121f69a1b5e2fd0de6ffc00a"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/Hecke.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea3e6e49c1f78a6e2412d0597506976698cc180b",
+      "size": 24382,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/ea3e6e49c1f78a6e2412d0597506976698cc180b"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/Kernel.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2c04fe4c9db19cfc6cfb806e004e4f614fa13fc",
+      "size": 4185,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/c2c04fe4c9db19cfc6cfb806e004e4f614fa13fc"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/Map.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5aa5a179c4a234b50bf55e479845a14c7cfb966",
+      "size": 3691,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/a5aa5a179c4a234b50bf55e479845a14c7cfb966"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/Operators.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46658fb11bba7ee5bbf643247b41f24956deba4d",
+      "size": 2531,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/46658fb11bba7ee5bbf643247b41f24956deba4d"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/Quotient.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bf125e1a7f1b76a645b11d230fd58c705e0a0cd",
+      "size": 2146,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/6bf125e1a7f1b76a645b11d230fd58c705e0a0cd"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/RAlgebra.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ec61b7e89311f31e26072deb9f7321abb193ff9",
+      "size": 14421,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/0ec61b7e89311f31e26072deb9f7321abb193ff9"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/ZMod",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d86123858b79c975b1b380f67d6f7b3c5af3ceec",
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/trees/d86123858b79c975b1b380f67d6f7b3c5af3ceec"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/ZMod/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32f2bfa553c3b63f9236568c7d319b57a5d490c9",
+      "size": 6989,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/32f2bfa553c3b63f9236568c7d319b57a5d490c9"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/ZMod/CoprimeAbarBbar.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70e7375dd5afa682de27ad57cec9ba6f44e78f1e",
+      "size": 1408,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/70e7375dd5afa682de27ad57cec9ba6f44e78f1e"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/ZMod/Filtration.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bb75745959f1fcf603c4b49d1a555ee0be4838b",
+      "size": 21803,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/3bb75745959f1fcf603c4b49d1a555ee0be4838b"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/ZMod/HasseIdeal.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73f9b383b2fed4232dd903b8f91753a414e81249",
+      "size": 40887,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/73f9b383b2fed4232dd903b8f91753a414e81249"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/ZMod/Polynomial.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ba40e275e702843cc851c1daf10b09c72a0eadd",
+      "size": 8328,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/9ba40e275e702843cc851c1daf10b09c72a0eadd"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/ZMod/SquarefreeAbar.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "448dcbb6f3861ba3b524af520e71582c618bf10f",
+      "size": 16819,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/448dcbb6f3861ba3b524af520e71582c618bf10f"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/ZMod/Theta.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91c1ae576cdb18ff9600ee2a6bb2423a97196c83",
+      "size": 6455,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/91c1ae576cdb18ff9600ee2a6bb2423a97196c83"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormMod/ZMod/UOperator.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6b0184139548d71fe301d06a1522d59f84fed07",
+      "size": 9191,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/d6b0184139548d71fe301d06a1522d59f84fed07"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormOver",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a629efdc1500c58521d1e52f40c793bc9ec0bbbb",
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/trees/a629efdc1500c58521d1e52f40c793bc9ec0bbbb"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormOver/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9d8a9fb0b84177fcce87c140e24e5757243921e",
+      "size": 13643,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/f9d8a9fb0b84177fcce87c140e24e5757243921e"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormOver/Basis.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29a43b3adc8d7d36559254af54c865e7051bff57",
+      "size": 38098,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/29a43b3adc8d7d36559254af54c865e7051bff57"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormOver/Defs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2c65b850e6a46f0ab1db756d2b44f8d0f2c3e3e",
+      "size": 25030,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/f2c65b850e6a46f0ab1db756d2b44f8d0f2c3e3e"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormOver/Derivative.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa56f261911d2f9ae1289098c22cb5830dd1780b",
+      "size": 20622,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/fa56f261911d2f9ae1289098c22cb5830dd1780b"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormOver/GradedRing.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7f93551fcfe3bbd35e642ad777f1a9ceb1867df",
+      "size": 17787,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/c7f93551fcfe3bbd35e642ad777f1a9ceb1867df"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormOver/Hecke.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83311c9fb06332551eea4606e73fe55b9b493c40",
+      "size": 22280,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/83311c9fb06332551eea4606e73fe55b9b493c40"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormOver/Int.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1262d7ed35e8b3b860116ac31ec3dfc047539a08",
+      "size": 7910,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/1262d7ed35e8b3b860116ac31ec3dfc047539a08"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormOver/PInteger.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ceb5cc53c3e76a68fb930f9892ee3359cf0eed06",
+      "size": 6733,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/ceb5cc53c3e76a68fb930f9892ee3359cf0eed06"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormOver/QAlgebra.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "239ad8a9ca401f24206e31f6d80c3532263305e4",
+      "size": 3664,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/239ad8a9ca401f24206e31f6d80c3532263305e4"
+    },
+    {
+      "path": "ModularFormsMod/ModularFormOver/Rat.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e94731c302893b1d1e037b9a308374a924db0241",
+      "size": 2422,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/e94731c302893b1d1e037b9a308374a924db0241"
+    },
+    {
+      "path": "ModularFormsMod/PInteger.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efc1e2dbb293fc21d7ca47be18d7a482d4668593",
+      "size": 15360,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/efc1e2dbb293fc21d7ca47be18d7a482d4668593"
+    },
+    {
+      "path": "ModularFormsMod/RamanujanCongruence",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2b79370c1d1f35e1afc9f3b55512e987a0f8e2dc",
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/trees/2b79370c1d1f35e1afc9f3b55512e987a0f8e2dc"
+    },
+    {
+      "path": "ModularFormsMod/RamanujanCongruence/AhBo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8288599c243334be44080b3a2ec67f8ffac36d84",
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/trees/8288599c243334be44080b3a2ec67f8ffac36d84"
+    },
+    {
+      "path": "ModularFormsMod/RamanujanCongruence/AhBo/DescentArgument.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97943290c6b61f71d5da5b6316c2beef79eb6838",
+      "size": 10781,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/97943290c6b61f71d5da5b6316c2beef79eb6838"
+    },
+    {
+      "path": "ModularFormsMod/RamanujanCongruence/AhBo/FluEqZero.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09c9bd3b59d9162720db70676c4c8c825258bad8",
+      "size": 4569,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/09c9bd3b59d9162720db70676c4c8c825258bad8"
+    },
+    {
+      "path": "ModularFormsMod/RamanujanCongruence/AhBo/PrimaryLemmas.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdc953ea38f0b213f01c02922127f1471f58be5d",
+      "size": 3925,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/fdc953ea38f0b213f01c02922127f1471f58be5d"
+    },
+    {
+      "path": "ModularFormsMod/RamanujanCongruence/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ad2f32ac54c5b184b37205a70c8f52ddf9de280",
+      "size": 14268,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/8ad2f32ac54c5b184b37205a70c8f52ddf9de280"
+    },
+    {
+      "path": "ModularFormsMod/RamanujanCongruence/KOl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "34b41ef04aad553ef93583c719a9dc3d8cdff706",
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/trees/34b41ef04aad553ef93583c719a9dc3d8cdff706"
+    },
+    {
+      "path": "ModularFormsMod/RamanujanCongruence/KOl/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "204e2c02437dad6b73af95ff0d0126d884d6a6e9",
+      "size": 2122,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/204e2c02437dad6b73af95ff0d0126d884d6a6e9"
+    },
+    {
+      "path": "ModularFormsMod/RamanujanCongruence/KOl/Reduction.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f1fede87962c8e771f83996c0939ca3bb97cdbd",
+      "size": 3192,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/6f1fede87962c8e771f83996c0939ca3bb97cdbd"
+    },
+    {
+      "path": "ModularFormsMod/RamanujanCongruence/KOl/ThetaRelation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26e1af303b8617b7bf2d0ff781f015841230267e",
+      "size": 4951,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/26e1af303b8617b7bf2d0ff781f015841230267e"
+    },
+    {
+      "path": "ModularFormsMod/RamanujanCongruence/KOl/WeightDecomposition.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4c8603d24abd195b879bce9ec24cac0a736a642",
+      "size": 3343,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/a4c8603d24abd195b879bce9ec24cac0a736a642"
+    },
+    {
+      "path": "ModularFormsMod/RamanujanCongruence/MainResults.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09a9738aca5f32555db73ec2375c68d83c24eeff",
+      "size": 3362,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/09a9738aca5f32555db73ec2375c68d83c24eeff"
+    },
+    {
+      "path": "ModularFormsMod/RamanujanCongruence/Partition.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28a11dd14a7cc836c4c06ae047dfe3a6ce034d14",
+      "size": 3103,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/28a11dd14a7cc836c4c06ae047dfe3a6ce034d14"
+    },
+    {
+      "path": "ModularFormsMod/discProduct.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a637e1c529eafd635daa8ac7a1119b2058170775",
+      "size": 4399,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/a637e1c529eafd635daa8ac7a1119b2058170775"
+    },
+    {
+      "path": "ModularFormsMod/qExp_discriminant.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2766f3270c5b9b48537fd8dc5ac8658b1cd0b647",
+      "size": 11059,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/2766f3270c5b9b48537fd8dc5ac8658b1cd0b647"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94daa4ba8e9981b3983aa221815c85b0bb50df74",
+      "size": 7351,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/94daa4ba8e9981b3983aa221815c85b0bb50df74"
+    },
+    {
+      "path": "lake-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93600a760e4ffdcdeceedb91f3a790c81360b69e",
+      "size": 3483,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/93600a760e4ffdcdeceedb91f3a790c81360b69e"
+    },
+    {
+      "path": "lakefile.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98f87bf864e2458192c9307767767871c985e4dc",
+      "size": 491,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/98f87bf864e2458192c9307767767871c985e4dc"
+    },
+    {
+      "path": "lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0e00b3338bac0d6f050d9a64e277314a9f7830f",
+      "size": 29,
+      "url": "https://api.github.com/repos/dozenalist/ModularFormsMod/git/blobs/f0e00b3338bac0d6f050d9a64e277314a9f7830f"
+    }
+  ],
+  "truncated": false
+}

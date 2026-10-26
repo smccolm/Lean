@@ -1,0 +1,704 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-gamma-one-hecke-promotion-route-618.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/primitive-gamma-one-hecke-promotion-route-618.json",
+      "sha256": "5D66E100F51C25D7192E806BE8B255E16A35D2F38A48F00A28F4C3C41D201EB4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTraceAudit2.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneBinaryTraceAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTraceAudit2.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneBinaryTraceAudit2.lean.txt",
+      "sha256": "37466CCF1E71E20663999847D313F81E0B4EEBD0537E8C8920989ED2C7EEDEDE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTraceAudit2.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneBinaryTraceAudit2.log",
+      "sha256": "92698089FD3A411030C5E0F49CF8AA1727F9E699C63282DE08D2B2385A099CDC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTraceDependencyAudit2.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneBinaryTraceDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTraceDependencyAudit2.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneBinaryTraceDependencyAudit2.lean.txt",
+      "sha256": "3F81C81A6CE107A39816E1B566FDE97C846FBB0F5AD123B594ECFF958FB75AC8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTraceDependencyAudit2.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneBinaryTraceDependencyAudit2.log",
+      "sha256": "CC17E817C753161E88F3606E11F5A6DCE1BC81B21BBC46526D6A276B61B5E78E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperImageAudit1.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneHeckeUpperImageAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperImageAudit1.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneHeckeUpperImageAudit1.lean.txt",
+      "sha256": "2AAFF93DF1A0C67023C7362844967E1A67547A0B615CBCC7357F26E4DCCE8567"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperImageAudit1.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneHeckeUpperImageAudit1.log",
+      "sha256": "99D1CC02BA73BCC79798B783771B9C406DE86C8F5BB0809505DF09133BFF3A13"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperImageDependencyAudit1.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneHeckeUpperImageDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperImageDependencyAudit1.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneHeckeUpperImageDependencyAudit1.lean.txt",
+      "sha256": "6B0178494178D014F6FB34147C98788E93D03F3E5035CEA4B4315DBDB6C0429D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperImageDependencyAudit1.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneHeckeUpperImageDependencyAudit1.log",
+      "sha256": "FAF61459532090135859EAE14E0D44009694D1E2A5FF7C15081A8E25C2798F6E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNativeHeckeComparisonAudit2.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneNativeHeckeComparisonAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNativeHeckeComparisonAudit2.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneNativeHeckeComparisonAudit2.lean.txt",
+      "sha256": "D5C5D801F0BA8CCC9C45453E457F9259D43B61998C72914AE61FD9C82D1D1E1E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNativeHeckeComparisonAudit2.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneNativeHeckeComparisonAudit2.log",
+      "sha256": "3865DA4131CA6E72CB8D8BA5E3EE34116F0BDE3F441D8BFA726FA581CD22A534"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNativeHeckeComparisonDependencyAudit2.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneNativeHeckeComparisonDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNativeHeckeComparisonDependencyAudit2.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneNativeHeckeComparisonDependencyAudit2.lean.txt",
+      "sha256": "551D5EFBA38390D4AE40AD79FB68A94D13CE5A23480F15B27A4B89391868DBF6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNativeHeckeComparisonDependencyAudit2.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneNativeHeckeComparisonDependencyAudit2.log",
+      "sha256": "862B4374AF4DF96553C2F36443927D356596386E82A852569D8589C6CB7C3054"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSubgroupH1MapAudit1.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneSubgroupH1MapAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSubgroupH1MapAudit1.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneSubgroupH1MapAudit1.lean.txt",
+      "sha256": "24F1B162CEB2E967DAE924AD19EBB0DC8C1509F747551B133B4694910BDD5254"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSubgroupH1MapAudit1.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneSubgroupH1MapAudit1.log",
+      "sha256": "9CDD59B1C90FF4CA157BDD1B5C15D02A1E5EFAA95B7B641CF54014B42454683A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSubgroupH1MapDependencyAudit1.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneSubgroupH1MapDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSubgroupH1MapDependencyAudit1.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneSubgroupH1MapDependencyAudit1.lean.txt",
+      "sha256": "F0056D2751D6F9E61B240824CD887EE82E45D08B9BBB13CBF06CF3367AA0FBED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSubgroupH1MapDependencyAudit1.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneSubgroupH1MapDependencyAudit1.log",
+      "sha256": "D2DC72561A9F7E8DDFB3A27EE993F9BA488BD633214365E4E2F4C0B0CB97E5C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTransferHeckeAudit5.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneTransferHeckeAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTransferHeckeAudit5.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneTransferHeckeAudit5.lean.txt",
+      "sha256": "D69B09F94B0069D5BAB09F1563B0C2FABF4B37D479C2590F76C940EB446E9DE0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTransferHeckeAudit5.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneTransferHeckeAudit5.log",
+      "sha256": "39764DD0FD834582609698247CADCA4956EE1FF1D39E51B644F17F9E9EEDA9E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTransferHeckeDependencyAudit5.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneTransferHeckeDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTransferHeckeDependencyAudit5.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneTransferHeckeDependencyAudit5.lean.txt",
+      "sha256": "A82C430EECAFC60B1B4526FCB99F9C499901F89303DFFF74FC844AEE34B98CBC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTransferHeckeDependencyAudit5.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourceGammaOneTransferHeckeDependencyAudit5.log",
+      "sha256": "8B74B40EE98FEEF96AFC1F5CFCCA8FB68D13DFB2C6BBF4F294C4D0B7141661CA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneCharacterAudit5.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourcePrimitiveGammaOneCharacterAudit5.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneCharacterAudit5.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourcePrimitiveGammaOneCharacterAudit5.lean.txt",
+      "sha256": "9C8687167C0024BA332A34100A2B1EFD00F71981595EB3B3E4BD22E92AB431D1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneCharacterAudit5.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourcePrimitiveGammaOneCharacterAudit5.log",
+      "sha256": "EAB61C30A221205672AAE79C06C3F8AB7E0E41870F3CF6CED0BC99B712A1EC8D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneCharacterAudit5b.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourcePrimitiveGammaOneCharacterAudit5b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneCharacterAudit5b.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourcePrimitiveGammaOneCharacterAudit5b.lean.txt",
+      "sha256": "9C8687167C0024BA332A34100A2B1EFD00F71981595EB3B3E4BD22E92AB431D1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneCharacterAudit5b.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourcePrimitiveGammaOneCharacterAudit5b.log",
+      "sha256": "6933C7CE6E11A3422CA67BFC54A1E57BD157C716E6C46E317FE312770028109E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneCharacterDependencyAudit5.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourcePrimitiveGammaOneCharacterDependencyAudit5.lean.txt",
+      "sha256": "9E1416848ED9E3F701B797C6F6ECDC08336329636E1995E69744E66AC65307E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneCharacterDependencyAudit5b.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourcePrimitiveGammaOneCharacterDependencyAudit5b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneCharacterDependencyAudit5b.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourcePrimitiveGammaOneCharacterDependencyAudit5b.lean.txt",
+      "sha256": "9E1416848ED9E3F701B797C6F6ECDC08336329636E1995E69744E66AC65307E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneCharacterDependencyAudit5b.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/SourcePrimitiveGammaOneCharacterDependencyAudit5b.log",
+      "sha256": "1989A4A045D5FCAE3A5B479010BB090F31125925885F936A7FEA252B8F730E40"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers604.txt",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/consumers604.txt",
+      "sha256": "18E42D47C031E4DE8BD873B57702484481A16354211F36FF9EB8A57CE05E6BB5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers611.txt",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/consumers611.txt",
+      "sha256": "4A6FBE7A3B751095F1AC1A35FBB3E8AC5620012439F52D534E955AAF39E399CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-actual-transfer-hecke-route-611.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-actual-transfer-hecke-route-611.json",
+      "sha256": "1C17E893FE3A849859748EB1A8EF8E173CD1B67C75A3D0027D165F502A858031"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-binary-hecke-transfer-reduction-route-600.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-binary-hecke-transfer-reduction-route-600.json",
+      "sha256": "3A621F52B5728561B4812B8AD50489C5B42226E27A59E15BADDD27B0CE2AA4A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-finite-operator-character-route-612.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-finite-operator-character-route-612.json",
+      "sha256": "B149E620A5B01C8B83CB01EE9814709A5D4B8E290667ADA4FC1BF4FE854B6257"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-trace-subgroup-reindex-route-601.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-hecke-trace-subgroup-reindex-route-601.json",
+      "sha256": "D5F5C45CC6FC9849CD6C0C11F32AEC724BBD3A0E454263B1C9BA5458BAF9A0C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-intersection-606-before-nested-subgroup-identification.txt",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-intersection-606-before-nested-subgroup-identification.txt",
+      "sha256": "B7F905C8746C161917F8C74A9D2BE469C7273D79588C7A74F1F806346B4262BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-intersection-trace-exchange-route-606.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-intersection-trace-exchange-route-606.json",
+      "sha256": "45F5BF5561CE42D3F267CEC6B9EE9C146F98F0061E97CF25E29B1498F7BB602F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-native-hecke-comparison-route-605.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-native-hecke-comparison-route-605.json",
+      "sha256": "792A8E43189E47EAB18F47C4FB129B9061D1932D1CB5D67955ADAA346037A7C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-native-hecke-pullback-square-route-603.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-native-hecke-pullback-square-route-603.json",
+      "sha256": "24B0411BAE9D1111A1FD6D6AFAFB8B9EA3C6BF2F6F7BE6A47F65CEA42835AB8F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-original-finite-character-route-617.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-original-finite-character-route-617.json",
+      "sha256": "D20300628EE1757B718C30ACF4D49631373D11F9C7762360B00114451014FDE9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-original-finite-character-route-617b.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-original-finite-character-route-617b.json",
+      "sha256": "9033D5FA0C90B0EF88F1BBAAAF0D3C70E5296AFECC892D48A4914239756D3BC9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-subgroup-h1-transfer-identification-route-602.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-subgroup-h1-transfer-identification-route-602.json",
+      "sha256": "5CFDF5C99D25DFA8480C6E0F7B0F19770BA7D56192C46E9EED874C9249557FE5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-upper-trace-reindex-route-604.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-upper-trace-reindex-route-604.json",
+      "sha256": "F9081F2369A53BA8FC2DD5452CAF0D12DAB75AC91B728D88E2182454AA51661F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules604.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/modules604.json",
+      "sha256": "0DA292F4687FDA6606608C4F03BFCC79DA4AF4B345EEACF02741AD5D812947D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules611.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/modules611.json",
+      "sha256": "E2592B31A7A976884AA40D84BB1BC84D9006E6360819124FACD544587345B763"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_binary_trace_audit_600.py",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/prepare_gamma_one_binary_trace_audit_600.py",
+      "sha256": "9BBFE5B23089289788D8F0C96746999D927FA668F6CA015119B6AE6C228C91F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_upper_image_audit_601.py",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/prepare_gamma_one_hecke_upper_image_audit_601.py",
+      "sha256": "4F2E0AB2DA211626FD3DD3A4E1D3BE02C6C98ECB7E5670269C3384B48CA56181"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_native_hecke_comparison_audit_605.py",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/prepare_gamma_one_native_hecke_comparison_audit_605.py",
+      "sha256": "8BD0171AF75BD980DF588034E82F618F3B75C2FC61F43588867F8E9D3D79C00B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_subgroup_h1_map_audit_602.py",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/prepare_gamma_one_subgroup_h1_map_audit_602.py",
+      "sha256": "E218FD726B7DA39E09736ECBA31CCC90AF70885BA9123128A04740D8F8F89092"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_transfer_hecke_audit_611.py",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/prepare_gamma_one_transfer_hecke_audit_611.py",
+      "sha256": "67FC9DA97C8DD110BA65BEA2E298CC88CF1F9AC43D61F1F1E9F5E32D06336BCA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_gamma_one_character_audit_617.py",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/prepare_primitive_gamma_one_character_audit_617.py",
+      "sha256": "A603E437E8B94BF3CF2E59B9DF5C655B738D474DDC53410610E865DACC172B08"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_gamma_one_character_audit_617b.py",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/prepare_primitive_gamma_one_character_audit_617b.py",
+      "sha256": "36BAB8D9AE8F1AF6DA349C8CBB8C4CF94423830CEA97598F81F893E9398C4FB1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record604.py",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/record604.py",
+      "sha256": "2AA4FBDBFF9DC867EA842790E58EDEACD6B8D23A5104586D436061956015CDB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record611.py",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/record611.py",
+      "sha256": "15995DD0729030761902BF3D7FDBC02B8C86844F1ECF1467BEC5CA81AF99EDDC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_binary_trace_600.py",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/record_gamma_one_binary_trace_600.py",
+      "sha256": "3EEB9B72B16B7A92EA6AE704F45CA629FD45A1B6961905ECCA209EE59328A1C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_hecke_upper_image_601.py",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/record_gamma_one_hecke_upper_image_601.py",
+      "sha256": "5A9AD96F36F5203E26F45315923A99C9BD837E7B6FD0CC510A31C10DA45A9014"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_native_hecke_comparison_605.py",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/record_gamma_one_native_hecke_comparison_605.py",
+      "sha256": "49545613F785523F6D1F1762C10567F2A90387FF24EC0BCF26C988B6BD4C4A33"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_subgroup_h1_map_602.py",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/record_gamma_one_subgroup_h1_map_602.py",
+      "sha256": "792F46CEC896526F6D77E38B4B7F536AEE0024A020211B710FBFF3F2CA43FBCE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_transfer_hecke_611.py",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/record_gamma_one_transfer_hecke_611.py",
+      "sha256": "B8069312A6FB2417DB92E8C513B4592FA11C81194937FB7AA8A5B933288A1AF9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_gamma_one_character_617.py",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/record_primitive_gamma_one_character_617.py",
+      "sha256": "05ECEFD62DF3E4E11EDC62C19BB85BCB8AE1DB3D6B38D8D5BB5C4C687A49A714"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_gamma_one_character_617b.py",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/record_primitive_gamma_one_character_617b.py",
+      "sha256": "95F35071ED82058D8138A943C78F549BBB0C24F98092F0C22947BF768E1B421B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations604.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/registrations604.json",
+      "sha256": "2FD6E677087808A52073CFC4FB64438E8F7815D895D5B115B3962DF0C4B8E4A1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations611.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/registrations611.json",
+      "sha256": "D08DF365158E3AB69F72AF5BAFE13696AA54E7FE82D47265E4BED85D85E542F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section604.txt",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/section604.txt",
+      "sha256": "B5C4C2FADD9B3F4B5F7EDB4CDB2E357E7717F10D6950BBEBECA2941437041250"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section611.txt",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/section611.txt",
+      "sha256": "364969EEFD51995FD7882A4FA1AE67F3EB8391F826CEF821F7772B3F6080AEBA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-binary-trace-2-audit-config.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/source-gamma-one-binary-trace-2-audit-config.json",
+      "sha256": "D1A7B67198AEB624B98328D0EA3F4FE89F5C19BFE754E02507282CCAABF48A13"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-binary-trace-2-scratch-receipt.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/source-gamma-one-binary-trace-2-scratch-receipt.json",
+      "sha256": "B331C5AAAE819979A78B66FC378A14D6E5C210511A55767DD6E9FC1C0821C8D1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-upper-image-1-audit-config.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/source-gamma-one-hecke-upper-image-1-audit-config.json",
+      "sha256": "3EC22E2708337DA50FF72FC92676E8F760DA8E4617D6D81FB810779C9B452DCA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-upper-image-1-scratch-receipt.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/source-gamma-one-hecke-upper-image-1-scratch-receipt.json",
+      "sha256": "79962903C2D157BCE54001FC5F26EB61AD1260A3AB3D463B815CFAF8ACDE5485"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-native-hecke-comparison-2-audit-config.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/source-gamma-one-native-hecke-comparison-2-audit-config.json",
+      "sha256": "44B7B62532C527A5E58744730B5379E1446010D54AC90FA7A4C3202AABC31058"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-native-hecke-comparison-2-scratch-receipt.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/source-gamma-one-native-hecke-comparison-2-scratch-receipt.json",
+      "sha256": "F56DC4C091DBF9D2EAB5062E447579F49FF7D7E84602C5C7760CE3F97D318F64"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-subgroup-h1-map-1-audit-config.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/source-gamma-one-subgroup-h1-map-1-audit-config.json",
+      "sha256": "C1F68954807A5AD59595CFB246ADE0DC19745780D65C1DE4CC9DEB21B7488DB1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-subgroup-h1-map-1-scratch-receipt.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/source-gamma-one-subgroup-h1-map-1-scratch-receipt.json",
+      "sha256": "2A5CCD33B000E4042205791E97CB5FA7A314F226FD1FEB2485794E1978C0EC84"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-transfer-hecke-5-audit-config.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/source-gamma-one-transfer-hecke-5-audit-config.json",
+      "sha256": "ED91C3BDBF84B0BBCE895C7046390A1EEE74780E2E6E5C6B9BF317C97A327C59"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-transfer-hecke-5-scratch-receipt.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/source-gamma-one-transfer-hecke-5-scratch-receipt.json",
+      "sha256": "FF1D68B10A5EC405DCA39498E1EAEF34E2340383062DB2CB9830F867853DCF5A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-gamma-one-character-5-audit-config.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/source-primitive-gamma-one-character-5-audit-config.json",
+      "sha256": "D418B2D88FEDA339B3312E0E11A3B856298170DAF5685B7860DE6CD2313984BD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-gamma-one-character-5b-audit-config.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/source-primitive-gamma-one-character-5b-audit-config.json",
+      "sha256": "D418B2D88FEDA339B3312E0E11A3B856298170DAF5685B7860DE6CD2313984BD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-gamma-one-character-5b-scratch-receipt.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/source-primitive-gamma-one-character-5b-scratch-receipt.json",
+      "sha256": "554371BFDBEFC55035DE31363B405A0C89588A2BA096CF5030F69D7B07EDEA3F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status604.txt",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/status604.txt",
+      "sha256": "08875F189659CA7512842B72D5A3FC0BCB893EFF2C0B74C7D373062E6C84570D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status611.txt",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/status611.txt",
+      "sha256": "4AAEBF31AF7EE559E41B8E31D7ACBC863E250BC9FEF346C7AF610A3DCF195633"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourceGammaOneHeckeFinite.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-character-617-before-unused-operator-instance/SourceGammaOneHeckeFinite.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourceGammaOneHeckeFinite.lean.txt",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-character-617-before-unused-operator-instance/SourceGammaOneHeckeFinite.lean.txt",
+      "sha256": "071F8B65D67946F0C39E602FFDAAF0A8D3C40E84C4ACD308EF7200742A523169"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourceGammaOneHeckeFinite.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-character-617-before-unused-operator-instance/SourceGammaOneHeckeFinite.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourceGammaOneHeckeWords.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-character-617-before-unused-operator-instance/SourceGammaOneHeckeWords.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourceGammaOneHeckeWords.lean.txt",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-character-617-before-unused-operator-instance/SourceGammaOneHeckeWords.lean.txt",
+      "sha256": "832D5467D889AEC0B87B97FB42AA273B004C0D0B67E0EA4BF16A736A05BC911A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourceGammaOneHeckeWords.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-character-617-before-unused-operator-instance/SourceGammaOneHeckeWords.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourceGammaOneOperatorDescent.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-character-617-before-unused-operator-instance/SourceGammaOneOperatorDescent.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourceGammaOneOperatorDescent.lean.txt",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-character-617-before-unused-operator-instance/SourceGammaOneOperatorDescent.lean.txt",
+      "sha256": "C69D4452555B8FDC3951EFE283373D423F447592E323904BBBCD9C57A2753FD9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourceGammaOneOperatorDescent.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-character-617-before-unused-operator-instance/SourceGammaOneOperatorDescent.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourcePrimitiveGammaOneH1Realization.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-character-617-before-unused-operator-instance/SourcePrimitiveGammaOneH1Realization.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourcePrimitiveGammaOneH1Realization.lean.txt",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-character-617-before-unused-operator-instance/SourcePrimitiveGammaOneH1Realization.lean.txt",
+      "sha256": "E74C962B858F431810852B72738BE9C8DB9D55D02ED0E35155456D8BBF003748"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourcePrimitiveGammaOneH1Realization.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-character-617-before-unused-operator-instance/SourcePrimitiveGammaOneH1Realization.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourcePrimitiveGammaOneHeckeCharacter.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-character-617-before-unused-operator-instance/SourcePrimitiveGammaOneHeckeCharacter.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourcePrimitiveGammaOneHeckeCharacter.lean.txt",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-character-617-before-unused-operator-instance/SourcePrimitiveGammaOneHeckeCharacter.lean.txt",
+      "sha256": "40EAA0B5AB12C906412F02BB640A0C97D9D9AFC4063CF4D68BEEB19148C51AFE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-character-617-before-unused-operator-instance\\SourcePrimitiveGammaOneHeckeCharacter.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-character-617-before-unused-operator-instance/SourcePrimitiveGammaOneHeckeCharacter.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-pullback-603-before-abstract-composition-square\\SourceGammaOneHeckePullbackSquare.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-hecke-pullback-603-before-abstract-composition-square/SourceGammaOneHeckePullbackSquare.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-pullback-603-before-abstract-composition-square\\SourceGammaOneHeckePullbackSquare.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-hecke-pullback-603-before-abstract-composition-square/SourceGammaOneHeckePullbackSquare.lean.txt",
+      "sha256": "83D9D2ABF41CA71EA7130DB05A7C96EB0A85B6700C3EE8A37D4B7E8569CF01D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-pullback-603-before-abstract-composition-square\\SourceGammaOneHeckePullbackSquare.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-hecke-pullback-603-before-abstract-composition-square/SourceGammaOneHeckePullbackSquare.log",
+      "sha256": "A333B53CE8C52002C64E578DA667F663B55E00D23A606A23ED9A5C868C40F19C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-pullback-603-before-group-ext\\SourceGammaOneHeckePullbackSquare.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-hecke-pullback-603-before-group-ext/SourceGammaOneHeckePullbackSquare.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-pullback-603-before-group-ext\\SourceGammaOneHeckePullbackSquare.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-hecke-pullback-603-before-group-ext/SourceGammaOneHeckePullbackSquare.lean.txt",
+      "sha256": "94A7E87EEC7B282834E1B4A90B9DFCA3DC594BA5B8E3AF4F2948BB8FD9C5D75F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-pullback-603-before-group-ext\\SourceGammaOneHeckePullbackSquare.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-hecke-pullback-603-before-group-ext/SourceGammaOneHeckePullbackSquare.log",
+      "sha256": "913741C348769C12FE93CA12701179C8B14CE2356B29310920DB5416DA0CEA8E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-pullback-603-before-linear-projections\\SourceGammaOneHeckePullbackSquare.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-hecke-pullback-603-before-linear-projections/SourceGammaOneHeckePullbackSquare.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-pullback-603-before-linear-projections\\SourceGammaOneHeckePullbackSquare.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-hecke-pullback-603-before-linear-projections/SourceGammaOneHeckePullbackSquare.lean.txt",
+      "sha256": "EEB7796AF3C190FC448596A9B80C906B178DF418DF2E058AEFB586C88912E76F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-pullback-603-before-linear-projections\\SourceGammaOneHeckePullbackSquare.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-hecke-pullback-603-before-linear-projections/SourceGammaOneHeckePullbackSquare.log",
+      "sha256": "73EBE23C610DF0E7E57DB42D6C6BE61F93A9C8DF5D10DFE9CF372B4D4F1E1D74"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-operator-descent-613-before-explicit-types\\SourceGammaOneOperatorDescent.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-operator-descent-613-before-explicit-types/SourceGammaOneOperatorDescent.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-operator-descent-613-before-explicit-types\\SourceGammaOneOperatorDescent.lean.txt",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-operator-descent-613-before-explicit-types/SourceGammaOneOperatorDescent.lean.txt",
+      "sha256": "F12FAB356E9D1CDA944B3CD41FC12C892888EED38887F561F855CBD4984C68B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-operator-descent-613-before-explicit-types\\SourceGammaOneOperatorDescent.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-operator-descent-613-before-explicit-types/SourceGammaOneOperatorDescent.log",
+      "sha256": "3030E5111BA9B809B74D62AEAB56704BAAD6889B0210EE9003DA9130DFF4992E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-subgroup-h1-602-before-abstract-iso-comparison\\SourceGammaOneSubgroupCohomologyMap.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-subgroup-h1-602-before-abstract-iso-comparison/SourceGammaOneSubgroupCohomologyMap.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-subgroup-h1-602-before-abstract-iso-comparison\\SourceGammaOneSubgroupCohomologyMap.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-subgroup-h1-602-before-abstract-iso-comparison/SourceGammaOneSubgroupCohomologyMap.lean.txt",
+      "sha256": "81E61A3A59FBCBA89C8A8DF5F0007E368E6A9D40376136C76BA92A36424B05F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-subgroup-h1-602-before-abstract-iso-comparison\\SourceGammaOneSubgroupCohomologyMap.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-subgroup-h1-602-before-abstract-iso-comparison/SourceGammaOneSubgroupCohomologyMap.log",
+      "sha256": "B1458347AB9812940AEDE9830DA95326ABDC98E79B4F804DBBE61C1A0181A244"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-subgroup-h1-602-before-explicit-map-composition\\SourceGammaOneSubgroupCohomologyMap.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-subgroup-h1-602-before-explicit-map-composition/SourceGammaOneSubgroupCohomologyMap.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-subgroup-h1-602-before-explicit-map-composition\\SourceGammaOneSubgroupCohomologyMap.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-subgroup-h1-602-before-explicit-map-composition/SourceGammaOneSubgroupCohomologyMap.lean.txt",
+      "sha256": "C878C5718DCDE6BD46BC0DED69DFA9F2F7FE0B0C1E0F0FD0869418D9FD836AC3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-subgroup-h1-602-before-explicit-map-composition\\SourceGammaOneSubgroupCohomologyMap.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-subgroup-h1-602-before-explicit-map-composition/SourceGammaOneSubgroupCohomologyMap.log",
+      "sha256": "CACCFD6DBAB068C81BE6A57068185D2AB3C34398EBF3E93B52FBC43C737AA0DA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-subgroup-h1-602-before-iso-hom-rewrites\\SourceGammaOneSubgroupCohomologyMap.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-subgroup-h1-602-before-iso-hom-rewrites/SourceGammaOneSubgroupCohomologyMap.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-subgroup-h1-602-before-iso-hom-rewrites\\SourceGammaOneSubgroupCohomologyMap.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-subgroup-h1-602-before-iso-hom-rewrites/SourceGammaOneSubgroupCohomologyMap.lean.txt",
+      "sha256": "6B5AD111644B3024B4E335DBB16FA59277B8190BC4CDFCC4EFA93E0896D7297E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-subgroup-h1-602-before-iso-hom-rewrites\\SourceGammaOneSubgroupCohomologyMap.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-subgroup-h1-602-before-iso-hom-rewrites/SourceGammaOneSubgroupCohomologyMap.log",
+      "sha256": "4FD2079E7799F28F87D72A4CCBEE6390CE367DFFE5CEB66064AF1C68DBDCD3CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-subgroup-h1-602-before-native-coefficient-form\\SourceGammaOneSubgroupCohomologyMap.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-subgroup-h1-602-before-native-coefficient-form/SourceGammaOneSubgroupCohomologyMap.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-subgroup-h1-602-before-native-coefficient-form\\SourceGammaOneSubgroupCohomologyMap.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-subgroup-h1-602-before-native-coefficient-form/SourceGammaOneSubgroupCohomologyMap.lean.txt",
+      "sha256": "A8B74BA9493B459E4D2F38DA7C97F52D4F5D468ED0894478E6655A5CADE989B5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-subgroup-h1-602-before-native-coefficient-form\\SourceGammaOneSubgroupCohomologyMap.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/gamma1-subgroup-h1-602-before-native-coefficient-form/SourceGammaOneSubgroupCohomologyMap.log",
+      "sha256": "DB2C227FF5D3E3AE9025F3482C573182FDE9ABDFCDF1DE4639102C2E55A990F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\h1-trace-coefficient-600-before-explicit-composition\\SourceH1TraceBaseChangeCoefficient.exit",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/h1-trace-coefficient-600-before-explicit-composition/SourceH1TraceBaseChangeCoefficient.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\h1-trace-coefficient-600-before-explicit-composition\\SourceH1TraceBaseChangeCoefficient.lean",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/h1-trace-coefficient-600-before-explicit-composition/SourceH1TraceBaseChangeCoefficient.lean.txt",
+      "sha256": "C22D0CCA36D94B23EF56A9E843FE7C9ED8327D6A0ABCB9177FA37362F792B891"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\h1-trace-coefficient-600-before-explicit-composition\\SourceH1TraceBaseChangeCoefficient.log",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/h1-trace-coefficient-600-before-explicit-composition/SourceH1TraceBaseChangeCoefficient.log",
+      "sha256": "F91CBEC0D94824140B80F6458E425B3941EE477504DF968B395CA77CE7623EEF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-binary-trace-2-reuse-review-20261025.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/source-gamma-one-binary-trace-2-reuse-review-20261025.json",
+      "sha256": "E0446FC349C8E69C086C6AD40677772B89B3ED5796DA9212FA7B6E6B758207E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-upper-image-1-reuse-review-20261025.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/source-gamma-one-hecke-upper-image-1-reuse-review-20261025.json",
+      "sha256": "F49293951B58FFE5413B0FE2E70B6379044B700B3165EA710C8FE4E55AF80BA5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-subgroup-h1-map-1-reuse-review-20261025.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/source-gamma-one-subgroup-h1-map-1-reuse-review-20261025.json",
+      "sha256": "FE74F65FF9F8D5DDE461547DB58DEDC21E137DBDD80919C1B21E547C1A2F2BB2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-native-hecke-comparison-2-reuse-review-20261026.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/source-gamma-one-native-hecke-comparison-2-reuse-review-20261026.json",
+      "sha256": "FB00388CF695BAB312ECFC994E9246D280430AB11972FEBAE4AC7C77E028C89D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-transfer-hecke-5-reuse-review-20261026.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/source-gamma-one-transfer-hecke-5-reuse-review-20261026.json",
+      "sha256": "EFE8F75D5B3B534D78AC5083099A94431371DDF19FA5742D3522A55A01280C95"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-gamma-one-character-5b-reuse-review-20261026.json",
+      "path": "Tools/primitive-gamma-one-hecke-20261026-618/source-primitive-gamma-one-character-5b-reuse-review-20261026.json",
+      "sha256": "4584C7939AFC8C3048F934B62B5E5207173630AB125A39EDE799C15FD453DC4C"
+    }
+  ]
+}

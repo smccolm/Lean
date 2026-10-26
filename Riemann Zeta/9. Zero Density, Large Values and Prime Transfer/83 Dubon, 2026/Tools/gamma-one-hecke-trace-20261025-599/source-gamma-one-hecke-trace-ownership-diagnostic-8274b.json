@@ -1,0 +1,287 @@
+{
+  "scratchSum": 111,
+  "scratchDistinct": 111,
+  "generatedNameRenamings": {},
+  "productionFocused": 109,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {
+    "ZMod.chineseRemainder.congr_simp": [
+      {
+        "scope": "SourceGammaOneHeckeTraceScratchOwnership594For8274",
+        "module": "Dubon2026.SourcePrincipalCoprimeReduction"
+      }
+    ],
+    "Dubon2026.sourceGammaOneDiagonalHom.eq_1": [
+      {
+        "scope": "SourceGammaOneHeckeTraceScratchOwnership597For8274",
+        "module": "Dubon2026.SourceGammaOneCoverImage"
+      }
+    ]
+  },
+  "missingFromFocusedAlreadyInPrevious": [
+    "Dubon2026.sourceGammaOneDiagonalHom.eq_1"
+  ],
+  "productionNamesNotInScratch": [],
+  "unexplainedMissing": [
+    "ZMod.chineseRemainder.congr_simp"
+  ],
+  "scopes": [
+    {
+      "modules": [
+        "SourceGammaOneHeckeSubgroup",
+        "SourceGammaOneConstantHecke",
+        "SourceNativeCoinductionCosetTrace",
+        "SourceShapiroH1CocycleComparison",
+        "SourceShapiroH1CosetTrace",
+        "SourceGammaOneTransferCosetFormula",
+        "SourceGammaOneLiteralTransferSurjectivity"
+      ],
+      "count": 25,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership592For8274.log",
+        "sha256": "7732909B31F124AA47A89A90EDD5F9C197AFCD79261488FA93F2A61F973DDA69",
+        "sourceSha256": "D91E93F13EE10FAF714093C36DF237D9332ED49CCD110AA6D15592C50246E5E3"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneCoverHeckeSquare",
+        "SourcePrincipalCoprimeReduction",
+        "SourceGammaOneRaisedCosets",
+        "SourceGammaOneCoverHeckeCosets",
+        "SourceGammaOneCoverHeckeRepresentatives"
+      ],
+      "count": 22,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership594For8274.log",
+        "sha256": "A44237195B7FF54118532D9290B72675A15DF5A4E6E45A5C1D439AAACD0000BD",
+        "sourceSha256": "6C0A042DA0FFC24AFB59FE951AC1638A8BBA849E8079F18D0D27B9EDEDF7AD85"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneBinaryRestriction",
+        "SourceGammaOneBinaryHeckeSum",
+        "SourceGammaOneBinaryRestrictionHecke"
+      ],
+      "count": 9,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership595For8274.log",
+        "sha256": "5D3239A2A18FF18DDFC4E0CD7AE7E312782012320A571FEEDDFD29A7F3DA0823",
+        "sourceSha256": "FA0BF4BC25E8490FCC99973EE4421D7EBB5E9216FBF42C2D3D23477D299D8188"
+      }
+    },
+    {
+      "modules": [
+        "SourceCohomologyTracePullbackCoefficients",
+        "SourceShapiroH1PullbackNaturality",
+        "SourceH1TraceBaseChange"
+      ],
+      "count": 17,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership596For8274.log",
+        "sha256": "C4A0151EBEBD58510749761EB5B848B385F727EB5431F6C19B93F4448AC5851D",
+        "sourceSha256": "00C110F0E7581921DAFEBAE9585F05C93FFC10452EA4C3D3EEC2C76DE5351CD7"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneCoverImage",
+        "SourceGammaOneCoverImageHecke",
+        "SourceGammaOneCoverHeckeTraceCosets",
+        "SourceGammaOneCoverHeckeTraceBaseChange"
+      ],
+      "count": 10,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership597For8274.log",
+        "sha256": "9342DBD9516312483F1963AC8038E1AA08FB9F4582BBCF4CE50B508045160003",
+        "sourceSha256": "24AD229B39946F6DAF0C6306AC3294E22E93BEAC323EE9E74EF265A1B44103AD"
+      }
+    },
+    {
+      "modules": [
+        "SourceCoinducedTowerFunctions",
+        "SourceCoinducedTowerTrace",
+        "SourceShapiroH1Tower",
+        "SourceH1TraceTower"
+      ],
+      "count": 28,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchOwnership598For8274.log",
+        "sha256": "E36F1A8770535CD118FE98ED78D513449756BE244B5F6B933DA272C6C70F1520",
+        "sourceSha256": "AFA0FC7960639EB28B05B25EAF30BB858755475D5EFAC496BFD006175545F9C0"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceOwnership8274.log",
+    "sha256": "634E51B4C1B1318223E2F545E33E994E5607A438A4A6CB20EC3936DBA9BEB167",
+    "sourceSha256": "41D34FB70B8275E9217EF36A2B5F477E508488ECF208FC7AB8F521734AE1AB63"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-220533-685.log",
+    "sha256": "67A337579A83611FB247AE2A9C773A3C0152B998E2B6A233718CE9B9CAE117C1"
+  },
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 26 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourceGammaOneHeckeSubgroup",
+        "scratchSha256": "3518F8C38303371FA5BDC0730BB37915A8F2E7ABFD7C7174CFC6A7AA428139E5",
+        "productionSha256": "3518F8C38303371FA5BDC0730BB37915A8F2E7ABFD7C7174CFC6A7AA428139E5",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneConstantHecke",
+        "scratchSha256": "9627C449A3179AA390C251FCEAE6A02F83EFB9EB26240A766C00FA4E311367D0",
+        "productionSha256": "B1CDE3537D1064DBDFF2CDA2DDF4BB470D3AE61612009D14BA8B5C441B6645C5",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceNativeCoinductionCosetTrace",
+        "scratchSha256": "DD82554A6E52157C4467324C546994D96D767B35A6567F4C17D0E6D86D3FC0F4",
+        "productionSha256": "DD82554A6E52157C4467324C546994D96D767B35A6567F4C17D0E6D86D3FC0F4",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceShapiroH1CocycleComparison",
+        "scratchSha256": "4306684904679EE85F31F64FE81925677877DB1F54B5A2DCB11AD41ACC3BF0B5",
+        "productionSha256": "4306684904679EE85F31F64FE81925677877DB1F54B5A2DCB11AD41ACC3BF0B5",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceShapiroH1CosetTrace",
+        "scratchSha256": "1D8455B6F1D924F536E62D67822378B5E5CC6C46F77AB6E19AE9859836BB259B",
+        "productionSha256": "28CAE34E906641EDC4A384F982A9397F7A80643AFF1BBD5EDE57B2752BEACA12",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneTransferCosetFormula",
+        "scratchSha256": "8BE95415BF1954E1C0E740DDF8CE9FC7A926D4A3A34CB6495C35957C201B3F1A",
+        "productionSha256": "1BE54F55F62F67125A13DA1A46DFC5B16E34E62CFCA6244D5EE4B390BFA3A38C",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneLiteralTransferSurjectivity",
+        "scratchSha256": "2C275BE2CB4396E554FE1C8472BEF5B4E91C0FFF9BF390CAFE32DEE82BF35068",
+        "productionSha256": "34B1088616F5ADE4DF4414CDFF12BF1E88E3114601AAC53D0E44E0814DEDD66C",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCoverHeckeSquare",
+        "scratchSha256": "3EEC68488F94744062D5AE7AB19B7930C3F73E8AF1A9320B44B7F0127811FDD3",
+        "productionSha256": "0560D5284965582BC778399C3197F0332811BDB60DB472D669D7A1F9C5F883B4",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrincipalCoprimeReduction",
+        "scratchSha256": "CF1F006422A7B2B1BE1A663F75E56A27DAE99582F4AFA5A4C8C2A067E131357B",
+        "productionSha256": "CF1F006422A7B2B1BE1A663F75E56A27DAE99582F4AFA5A4C8C2A067E131357B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRaisedCosets",
+        "scratchSha256": "FA140110B816A60F7CFFC251AFC6E1F3FDDCC90CC549996ECF7236DF1D6244AD",
+        "productionSha256": "E64489F89C9B207F356AFF5E1923534A4C1ACF093C8534969E6C0D3741611378",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCoverHeckeCosets",
+        "scratchSha256": "CC282682F6D875EF97FB376FB19A25E1B2B491E1FF8163280C6C7F6DB2DDE315",
+        "productionSha256": "9FA73B8E8C0E9A12C43F9ECA3FEC325B39D31745CCC8339CCF4220958B538220",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCoverHeckeRepresentatives",
+        "scratchSha256": "F95372EDCEA2A9EFF2C030D2B477899F49692D7239D8EF68B16EED75204EA239",
+        "productionSha256": "C9EC9FA716DF5FF8014C34628FA6BFBD6D8295D159789380B5DF0832E117E9F5",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneBinaryRestriction",
+        "scratchSha256": "8300211B19A51CE12AB2A57F09DD6AF20F5683B0237B603F831CF79022884E2D",
+        "productionSha256": "2B84B8B6835E0A6FDEF9DF3F10FE0267758662FBBECC610092BD5F469AB70D6A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneBinaryHeckeSum",
+        "scratchSha256": "20A995FCE32C3B99A4F5EEF4ABD3315092A54C5DFDF8938F01C6B60AA5972240",
+        "productionSha256": "11731E08705D749DB6C5E1F56507689FE401ECDD08AA75222B9DE6A42D4FBCDA",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneBinaryRestrictionHecke",
+        "scratchSha256": "3E97722633E4F7D6D6C61E7CACAF22E6867F1E082A1C506347879201BED60ABB",
+        "productionSha256": "D8911790C76FE7677F7DBE07FEEEDF8AFD4ACE0B45BD9D144F8E79D997260117",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCohomologyTracePullbackCoefficients",
+        "scratchSha256": "7BFAF461F85274FBA8BBDD89FB9D5D0EF5718D80F7BCA7C2B8A175271BA16D43",
+        "productionSha256": "7BFAF461F85274FBA8BBDD89FB9D5D0EF5718D80F7BCA7C2B8A175271BA16D43",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceShapiroH1PullbackNaturality",
+        "scratchSha256": "1B100924ACE38077B9CAA6696C33D1C9A1ED5CC113A86B0A9140D55ADCE97215",
+        "productionSha256": "2C36C3A2101F918BCAD47E752BA7442144F51F9C5CB340B224B010BC55707430",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceH1TraceBaseChange",
+        "scratchSha256": "568424F1A5749E7D74A114EC0CC099854433B969AD729A1AE287E25A3DD1FFF1",
+        "productionSha256": "20117E4A7D27D94B1C789BEB8B59947F708CC527C94EB92C8610D6C07CB145DA",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCoverImage",
+        "scratchSha256": "6ADF7F716AD52E90D6932E981084C08694986DCD24108FE1C88075FDC1BF036B",
+        "productionSha256": "4D304F19EB9C124E638E7B46983D0EAB59B3E393A6DFD28E089FB61546320860",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCoverImageHecke",
+        "scratchSha256": "A96B2CE24C764810A9F1A5BF643E0078B0ABAACE90028E55E8A0D88E1AADE661",
+        "productionSha256": "C3D85D5BC40E7C9F261029C2A52868B244AF1B529F31D7E36419A773118F6F27",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCoverHeckeTraceCosets",
+        "scratchSha256": "8AEC2B54127737C315327F12E90AE5358584B9FFFBCB779FCC4FF79385563489",
+        "productionSha256": "51A064910975BC5DCE44B402106204CD4AD0F4E7E9B2ED50E77449A59EC2F1F5",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCoverHeckeTraceBaseChange",
+        "scratchSha256": "E2931186F9C4D2B3791D2B4825028994510313A83D88B08EB100F72C597583AA",
+        "productionSha256": "C191666BD09D5FD897B0EFD2172FD70D81C3FE9973D9BD9D1588F9A54A6A1EAA",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCoinducedTowerFunctions",
+        "scratchSha256": "63BB5961062974A9E96814A533D3A6DACA0A182A5AF3BD76EFC390E8D2878A56",
+        "productionSha256": "63BB5961062974A9E96814A533D3A6DACA0A182A5AF3BD76EFC390E8D2878A56",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCoinducedTowerTrace",
+        "scratchSha256": "48A6CADB33821C99465974BE773A84CA3CD5489683F41BA523DEA6870651F7E3",
+        "productionSha256": "2BEA711DB1E2EE510971235C9E18FAFA4E22E0EA8C3091EB07D97569CE360E48",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceShapiroH1Tower",
+        "scratchSha256": "9C0A0CCC1BD8E3AE4A084AF760BE5D596D7B8F1BFD590FE3B33489D65F7F9F25",
+        "productionSha256": "FA82ABFB3D1A934C7FD62CE11CFDCE7A34E90E1E59C32C84D3A7FEF3DBD5C6F6",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceH1TraceTower",
+        "scratchSha256": "AD278B75D2192A1709D4DC94F4A19D46F085E652278DE0F940E13027D55EF023",
+        "productionSha256": "D9A86E4FF301694F61BF12B378837862E19BF31CB26ACEEFB1FD270F215D6A9C",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": false
+}

@@ -1,0 +1,68 @@
+{
+  "modules": [
+    "SourceGammaOneModularRatios",
+    "SourceGammaOneFieldModularRatio"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_mul",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_add",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_one",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_const",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.one_ne_zero'",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.mul_ne_zero'",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.isRatio_algebraMap",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.mul",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.add",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.inv",
+    "Dubon2026.SourceFunctionField.GammaOne.isRatio_of_mem_qExpFunctionFieldC",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_mul",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_add",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_one",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_const",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.one_ne_zero'",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.mul_ne_zero'",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.isRatio_algebraMap",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.mul",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.add",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.inv",
+    "Dubon2026.SourceFunctionField.GammaOne.isRatio_of_mem_qExpFunctionFieldC",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_mul",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_add",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_one",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_const",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.one_ne_zero'",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.mul_ne_zero'",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.isRatio_algebraMap",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.mul",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.add",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.inv",
+    "Dubon2026.SourceFunctionField.GammaOne.isRatio_of_mem_qExpFunctionFieldC",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_eq_qExpFunctionFieldC",
+    "Dubon2026.SourceFunctionField.GammaOne.hper",
+    "IntermediateField.adjoin_induction"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio"
+  ],
+  "separatelyAxiomChecked": []
+}

@@ -1,0 +1,35 @@
+{
+  "fetchedUTC": "2026-10-26T13:23:43.739799+00:00",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_qExpansion_div_mem_laurentBaseChange_xHFunctionField.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_qExpansion_div_mem_laurentBaseChange_xHFunctionField.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_qExpansion_div_mem_laurentBaseChange_xHFunctionField.lean.txt",
+      "gitBlob": "b06e5652c0b3d69640906725f2eba2417379a4a6",
+      "sha256": "BA2FFF50EB54BD46E802DE264D55F2FC648CB0713657EF9B49DB1F9C09475A61",
+      "bytes": 19058
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_CuspForm_exists_basis_gamma1_qCoeff_mem_adjoin_exp_of_even.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CuspForm_exists_basis_gamma1_qCoeff_mem_adjoin_exp_of_even.lean",
+      "snapshot": "P2M\\Sol\\S_CuspForm_exists_basis_gamma1_qCoeff_mem_adjoin_exp_of_even.lean.txt",
+      "gitBlob": "72db9d616c9d3e9daff3ba715730fe14a241b6aa",
+      "sha256": "3A8E4A1AD97364F84F918E4FA2C279636D59F7EFEBFBAD161A644CBC50429655",
+      "bytes": 5782
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_CuspForm_exists_gamma1_qCoeff_eq_algEquiv_apply_of_even.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CuspForm_exists_gamma1_qCoeff_eq_algEquiv_apply_of_even.lean",
+      "snapshot": "P2M\\Sol\\S_CuspForm_exists_gamma1_qCoeff_eq_algEquiv_apply_of_even.lean.txt",
+      "gitBlob": "0fab324f76ed6da093c49fbb67ef6a49a412718f",
+      "sha256": "7F47382FFE7793D0FD63FB6D68B2B33E26FFFC323F1A091EB99096B88536A261",
+      "bytes": 44553
+    }
+  ]
+}

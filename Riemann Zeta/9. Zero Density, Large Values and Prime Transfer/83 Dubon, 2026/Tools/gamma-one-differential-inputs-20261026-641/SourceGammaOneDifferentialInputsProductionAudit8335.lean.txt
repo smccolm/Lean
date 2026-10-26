@@ -1,0 +1,179 @@
+import Dubon2026.SourceGammaOneHeckeGeometricSubgroup
+import Dubon2026.SourceGammaOneGeometricCohomology
+import Dubon2026.SourceGammaOneHeckeCoefficientAction
+import Dubon2026.SourceGammaOneCurveGeometry
+import Dubon2026.SourceGammaOneCurveInputs
+import Dubon2026.SourceGammaOneScalarExtension
+import Dubon2026.SourceGammaOneModularRatios
+import Dubon2026.SourceGammaOneFieldModularRatio
+import Dubon2026.SourceModularQDerivative
+import Dubon2026.SourceModularQDerivativeExpansion
+import Dubon2026.SourceJEulerModularIdentity
+import Dubon2026.SourceJEulerPolynomial
+import Dubon2026.SourceGammaOneDifferentialFiniteIntegral
+import Dubon2026.SourceInverseJLevelOneIntegral
+import Dubon2026.SourceIntegralHomogeneousRelation
+import Dubon2026.SourceModularInverseJIntegral
+import Dubon2026.SourceGammaOneCuspAuxiliaryForm
+import Dubon2026.SourceGammaOneCuspAuxiliaryExpansion
+import Dubon2026.SourceGammaOneDifferentialCuspIntegral
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.geometricToUpper_upperToGeometric
+#print axioms Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_geometricToUpper
+#print axioms Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_conjugation
+#print axioms Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_matrix
+#print axioms Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_smul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.upperToGeometric
+#print axioms Dubon2026.SourceFunctionField.GammaOne.geometricToUpper
+#print axioms Dubon2026.SourceFunctionField.GammaOne.heckeUpperGeometricEquiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_injective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup_upper
+#print axioms Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_matrix
+#print axioms Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_smul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup
+#print axioms Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup
+#print axioms Dubon2026.SourceFunctionField.GammaOne.geometricAlphaMorphism
+#print axioms Dubon2026.SourceFunctionField.GammaOne.geometricBetaH1Trace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1
+#print axioms Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1_cocycle
+#print axioms Dubon2026.SourceFunctionField.GammaOne.constantHeckeCocycles_coefficient_left
+#print axioms Dubon2026.SourceFunctionField.GammaOne.constantHeckeCocycles_coefficient_right
+#print axioms Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_coefficient_left
+#print axioms Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_coefficient_right
+#print axioms Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_coefficient
+#print axioms Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1
+#print axioms Dubon2026.SourceFunctionField.GammaOne.D_jCoordinateOver_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_diffQExp_injective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_dCoordGenerates
+#print axioms Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_localDifferentials
+#print axioms Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_isCurveOver
+#print axioms Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_hasCanonicalDivisor
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gamma1_diffQExp_injective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gamma1_localDifferentials
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gamma1_isCurveOver
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gamma1_hasCanonicalDivisor
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_diffQExp_injective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_localDifferentials
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_isCurveOver
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_hasCanonicalDivisor
+#print axioms Dubon2026.SourceFunctionField.GammaOne.coeffEmb_intSeriesC
+#print axioms Dubon2026.SourceFunctionField.GammaOne.coeffEmb_image_intFormRatiosC
+#print axioms Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_eq_qExpFunctionFieldC
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_ne_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_mul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_add
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_const
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ModularRatios.one_ne_zero'
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ModularRatios.mul_ne_zero'
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ModularRatios.isRatio_algebraMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.mul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.add
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.inv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.isRatio_of_mem_qExpFunctionFieldC
+#print axioms Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio
+#print axioms Dubon2026.SourceFunctionField.ModularQDerivative.norm_qParam_one_lt_one
+#print axioms Dubon2026.SourceFunctionField.ModularQDerivative.hasDerivAt_qParam_one
+#print axioms Dubon2026.SourceFunctionField.ModularQDerivative.normalizedDerivOfComplex_eq_qParam_mul_deriv
+#print axioms Dubon2026.SourceFunctionField.ModularQDerivative.periodic_normalizedDerivOfComplex
+#print axioms Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_coeff_unique'
+#print axioms Dubon2026.SourceFunctionField.ModularQDerivative.hasSum_qExpansion_normalizedDerivOfComplex
+#print axioms Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_coeff_normalizedDerivOfComplex
+#print axioms Dubon2026.SourceFunctionField.ModularQDerivative.coe_qExpansion_normalizedDerivOfComplex
+#print axioms Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_derivative_bracket
+#print axioms Dubon2026.SourceFunctionField.ModularQDerivative.qEuler_jqModC_mul_discriminant
+#print axioms Dubon2026.SourceFunctionField.ModularQDerivative.laurent_discriminant_relation
+#print axioms Dubon2026.SourceFunctionField.ModularQDerivative.exists_qEuler_jqModC_formula
+#print axioms Dubon2026.SourceFunctionField.ModularQDerivative.exists_qEuler_jqModC_power_six
+#print axioms Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_finite_expression
+#print axioms Dubon2026.SourceFunctionField.InverseJIntegral.eisenstein_four_expansion_ne_zero
+#print axioms Dubon2026.SourceFunctionField.InverseJIntegral.levelOne_isIntegral
+#print axioms Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_div_of_relation
+#print axioms Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_modular_quotient_E4_cube
+#print axioms Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_modular_quotient_E4
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.conj_T_pow_mem
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.mapGL_T_zpow
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.natCast_mem_strictPeriods_conj
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.pow_slash
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.num_slash
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.qExpansion_Gform_mul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.cusp_expression_identity
+#print axioms Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_cusp_expression
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.Gform
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceGammaOneHeckeGeometricSubgroup, `Dubon2026.SourceGammaOneGeometricCohomology, `Dubon2026.SourceGammaOneHeckeCoefficientAction, `Dubon2026.SourceGammaOneCurveGeometry, `Dubon2026.SourceGammaOneCurveInputs, `Dubon2026.SourceGammaOneScalarExtension, `Dubon2026.SourceGammaOneModularRatios, `Dubon2026.SourceGammaOneFieldModularRatio, `Dubon2026.SourceModularQDerivative, `Dubon2026.SourceModularQDerivativeExpansion, `Dubon2026.SourceJEulerModularIdentity, `Dubon2026.SourceJEulerPolynomial, `Dubon2026.SourceGammaOneDifferentialFiniteIntegral, `Dubon2026.SourceInverseJLevelOneIntegral, `Dubon2026.SourceIntegralHomogeneousRelation, `Dubon2026.SourceModularInverseJIntegral, `Dubon2026.SourceGammaOneCuspAuxiliaryForm, `Dubon2026.SourceGammaOneCuspAuxiliaryExpansion, `Dubon2026.SourceGammaOneDifferentialCuspIntegral]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.geometricToUpper_upperToGeometric, `Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_geometricToUpper, `Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_conjugation, `Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_matrix, `Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_smul, `Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_injective, `Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup_upper, `Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_matrix, `Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_smul, `Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_eq, `Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1_cocycle, `Dubon2026.SourceFunctionField.GammaOne.constantHeckeCocycles_coefficient_left, `Dubon2026.SourceFunctionField.GammaOne.constantHeckeCocycles_coefficient_right, `Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_coefficient_left, `Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_coefficient_right, `Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_coefficient, `Dubon2026.SourceFunctionField.GammaOne.D_jCoordinateOver_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_diffQExp_injective, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_dCoordGenerates, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_localDifferentials, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_isCurveOver, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_hasCanonicalDivisor, `Dubon2026.SourceFunctionField.GammaOne.gamma1_diffQExp_injective, `Dubon2026.SourceFunctionField.GammaOne.gamma1_localDifferentials, `Dubon2026.SourceFunctionField.GammaOne.gamma1_isCurveOver, `Dubon2026.SourceFunctionField.GammaOne.gamma1_hasCanonicalDivisor, `Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_diffQExp_injective, `Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_localDifferentials, `Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_isCurveOver, `Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_hasCanonicalDivisor, `Dubon2026.SourceFunctionField.GammaOne.coeffEmb_intSeriesC, `Dubon2026.SourceFunctionField.GammaOne.coeffEmb_image_intFormRatiosC, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_eq_qExpFunctionFieldC, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_mul, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_add, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_one, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_const, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.one_ne_zero', `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.mul_ne_zero', `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.isRatio_algebraMap, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.mul, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.add, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.inv, `Dubon2026.SourceFunctionField.GammaOne.isRatio_of_mem_qExpFunctionFieldC, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio, `Dubon2026.SourceFunctionField.ModularQDerivative.norm_qParam_one_lt_one, `Dubon2026.SourceFunctionField.ModularQDerivative.hasDerivAt_qParam_one, `Dubon2026.SourceFunctionField.ModularQDerivative.normalizedDerivOfComplex_eq_qParam_mul_deriv, `Dubon2026.SourceFunctionField.ModularQDerivative.periodic_normalizedDerivOfComplex, `Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_coeff_unique', `Dubon2026.SourceFunctionField.ModularQDerivative.hasSum_qExpansion_normalizedDerivOfComplex, `Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_coeff_normalizedDerivOfComplex, `Dubon2026.SourceFunctionField.ModularQDerivative.coe_qExpansion_normalizedDerivOfComplex, `Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_derivative_bracket, `Dubon2026.SourceFunctionField.ModularQDerivative.qEuler_jqModC_mul_discriminant, `Dubon2026.SourceFunctionField.ModularQDerivative.laurent_discriminant_relation, `Dubon2026.SourceFunctionField.ModularQDerivative.exists_qEuler_jqModC_formula, `Dubon2026.SourceFunctionField.ModularQDerivative.exists_qEuler_jqModC_power_six, `Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_finite_expression, `Dubon2026.SourceFunctionField.InverseJIntegral.eisenstein_four_expansion_ne_zero, `Dubon2026.SourceFunctionField.InverseJIntegral.levelOne_isIntegral, `Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_div_of_relation, `Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_modular_quotient_E4_cube, `Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_modular_quotient_E4, `Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.conj_T_pow_mem, `Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.mapGL_T_zpow, `Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.natCast_mem_strictPeriods_conj, `Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.pow_slash, `Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.num_slash, `Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.qExpansion_Gform_mul, `Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.cusp_expression_identity, `Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_cusp_expression]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.upperToGeometric, `Dubon2026.SourceFunctionField.GammaOne.geometricToUpper, `Dubon2026.SourceFunctionField.GammaOne.heckeUpperGeometricEquiv, `Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup, `Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup, `Dubon2026.SourceFunctionField.GammaOne.geometricAlphaMorphism, `Dubon2026.SourceFunctionField.GammaOne.geometricBetaH1Trace, `Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1, `Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio, `Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.Gform]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE DIFFERENTIAL INPUTS AUDIT PASS: {count} theorems including private/generated declarations. Exact geometric H1 retains the original coefficient action; actual curve/scalar fields and both differential integral equations are proved. Regularity, full differential/Picard/H1/diamond comparison, arithmetic realization and higher continuation remain required; 16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceGammaOneHeckeGeometricSubgroup
+
+#lint in Dubon2026.SourceGammaOneGeometricCohomology
+
+#lint in Dubon2026.SourceGammaOneHeckeCoefficientAction
+
+#lint in Dubon2026.SourceGammaOneCurveGeometry
+
+#lint in Dubon2026.SourceGammaOneCurveInputs
+
+#lint in Dubon2026.SourceGammaOneScalarExtension
+
+#lint in Dubon2026.SourceGammaOneModularRatios
+
+#lint in Dubon2026.SourceGammaOneFieldModularRatio
+
+#lint in Dubon2026.SourceModularQDerivative
+
+#lint in Dubon2026.SourceModularQDerivativeExpansion
+
+#lint in Dubon2026.SourceJEulerModularIdentity
+
+#lint in Dubon2026.SourceJEulerPolynomial
+
+#lint in Dubon2026.SourceGammaOneDifferentialFiniteIntegral
+
+#lint in Dubon2026.SourceInverseJLevelOneIntegral
+
+#lint in Dubon2026.SourceIntegralHomogeneousRelation
+
+#lint in Dubon2026.SourceModularInverseJIntegral
+
+#lint in Dubon2026.SourceGammaOneCuspAuxiliaryForm
+
+#lint in Dubon2026.SourceGammaOneCuspAuxiliaryExpansion
+
+#lint in Dubon2026.SourceGammaOneDifferentialCuspIntegral

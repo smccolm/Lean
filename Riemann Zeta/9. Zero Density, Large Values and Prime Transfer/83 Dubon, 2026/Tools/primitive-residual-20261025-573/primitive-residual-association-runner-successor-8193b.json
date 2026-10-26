@@ -1,0 +1,12 @@
+{
+  "previousRunner": "E:\\Lean\\.tmp\\dubon83\\build_primitive_residual_association_8193.ps1",
+  "previousRunnerSha256": "EF574489944B4229F4383769E675389EE7E0CB070E88F532E76C57DCFD563F3C",
+  "successorRunner": "E:\\Lean\\.tmp\\dubon83\\resume_primitive_residual_association_8193b.ps1",
+  "successorRunnerSha256": "14124888F5E8A30F38CD8163B0182D10106E06CF98162680FAD8CC687733B538",
+  "failure": "The aggregate and public audit passed. PowerShell wrapped the JSON audit array in an outer array, so Join-Path rejected the nested array before the first dependency audit started.",
+  "preservedStages": [
+    "source-primitive-residual-association-production-build-8193",
+    "SourcePrimitiveResidualAssociationProductionAudit8193"
+  ],
+  "change": "Read the JSON array directly, then resume only unused dependency and ownership audits before exact comparison and sequential foundation/paper verification. No proof source, used audit or completed log is modified."
+}

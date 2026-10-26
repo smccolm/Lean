@@ -1,0 +1,31 @@
+import Dubon2026.SourceCoinducedTowerFunctions
+import Dubon2026.SourceCoinducedTowerTrace
+import Dubon2026.SourceShapiroH1Tower
+import Dubon2026.SourceH1TraceTower
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.sourceHeckeH1Trace_tower]
+  let localModules : Array Name := #[`Dubon2026.SourceH1TraceTower, `Dubon2026.SourceShapiroH1CosetTrace, `Dubon2026.SourceShapiroH1CocycleComparison, `Dubon2026.SourceNativeCoinductionCosetTrace, `Dubon2026.SourceShapiroH1Tower, `Dubon2026.SourceCoinducedTowerFunctions, `Dubon2026.SourceCoinducedTowerTrace]
+  let required : Array Name := #[`Dubon2026.sourceCoinducedTowerTrace_values, `Dubon2026.sourceCoinducedTowerTrace_comp, `Dubon2026.sourceShapiroH1_tower, `Dubon2026.sourceSubgroupH1Trace_tower, `Dubon2026.sourceHeckeH1Trace_tower, `Dubon2026.sourceCoinducedTowerFlatten, `Dubon2026.sourceCoinducedTowerUnflatten, `Dubon2026.sourceCoinducedTowerIso, `Subgroup.quotientEquivProdOfLE, `Subgroup.subgroupOfEquivOfLe, `Dubon2026.originalCohomologyTrace_coinduced_lift, `Dubon2026.OriginalShapiroRestriction.originalShapiroIso_eq_restriction_eval, `Dubon2026.sourceHeckeH1Trace_eq_subgroupTrace, `groupCohomology.map_comp]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE H1 TRACE TOWER DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the literal native H1 trace composition consumer. Only declaration values are traversed. The actual nested equivariant functions form a proved coefficient isomorphism; the native quotient-product equivalence reindexes the complete original finite coefficient trace. The existing Shapiro restriction/evaluation theorem proves the two-step native Shapiro comparison, and existing coefficient naturality then gives full native H1 trace composition. No trace-transitivity or Shapiro-composition premise is assumed. These results must still be combined with the actual Gamma1 Hecke base-change square and original coefficient action to prove surjective-transfer Hecke compatibility. Arithmetic geometry, Galois realization and higher continuation remain required. DUB-17--20 OPEN; 16/20."
+
+#eval runPlanarPairingDependencyAudit

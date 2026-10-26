@@ -1,0 +1,674 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-regularity-fricke-inputs-promotion-route-653.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma-one-regularity-fricke-inputs-promotion-route-653.json",
+      "sha256": "20B8220C5642B7C5F027D9164DFEFDC763752865285F1F2A25C5E6F457ECF9FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFourierCoefficientsAudit7.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeFourierCoefficientsAudit7.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFourierCoefficientsAudit7.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeFourierCoefficientsAudit7.log",
+      "sha256": "D7E666319B10008B325008D8CB1A149374EB4475D3193D3B7D0AA122563AF31C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFourierCoefficientsAudit7b.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeFourierCoefficientsAudit7b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFourierCoefficientsAudit7b.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeFourierCoefficientsAudit7b.lean.txt",
+      "sha256": "E06733D9E21375D542E86B37BFCF8C03E588E4554F92D85AA2BC05A30D7DE218"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFourierCoefficientsAudit7b.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeFourierCoefficientsAudit7b.log",
+      "sha256": "4A0111965AF7C679C68296D04589D6B42642576D75C7358CF152857875CF2E10"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFourierCoefficientsDependencyAudit7b.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeFourierCoefficientsDependencyAudit7b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFourierCoefficientsDependencyAudit7b.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeFourierCoefficientsDependencyAudit7b.lean.txt",
+      "sha256": "A5383F711174AF8A830FC0CE799E83B061BD653F6DB3A753F946F5DDB0D0ADAC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFourierCoefficientsDependencyAudit7b.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeFourierCoefficientsDependencyAudit7b.log",
+      "sha256": "AEAAE9D72C4EA84F34DBB4D2D8AC5B172D7145A41A1971B8EFC04A6C124A60C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFunctionTransformation.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeFunctionTransformation.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFunctionTransformation.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeFunctionTransformation.lean.txt",
+      "sha256": "0ADBC6265B9DE9ACF809CB713C84D222FFE41F8D326FF5F0E6BBF773FF70CC4E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFunctionTransformation.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeFunctionTransformation.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeModularLattice.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeModularLattice.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeModularLattice.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeModularLattice.lean.txt",
+      "sha256": "7997760A590125484C84186A5A5AFA7A16D6CC42B8B9E871FC26572AB254ED63"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeModularLattice.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeModularLattice.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePeriodHomothety.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickePeriodHomothety.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePeriodHomothety.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickePeriodHomothety.lean.txt",
+      "sha256": "BCADE7B8B9E76E86B4E2A7D574A29D59153758ADDB3028DA6E7F5BE084ED9FEC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePeriodHomothety.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickePeriodHomothety.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTorsionTransformation.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTorsionTransformation.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTorsionTransformation.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTorsionTransformation.lean.txt",
+      "sha256": "1F5F41CF647BD85D0788F5B0643D485564F5746D7DBCA2E57CF6CF76559EA79D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTorsionTransformation.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTorsionTransformation.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTransformationAudit4.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTransformationAudit4.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTransformationAudit4.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTransformationAudit4.lean.txt",
+      "sha256": "476F7CF4F81853FB737F28544716371D3296D59798D1AFCAF94410DA0624E645"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTransformationAudit4.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTransformationAudit4.log",
+      "sha256": "8A61317FFBEA93A20477473F04ED98F2E62AE0AA33656D788374B8ED8F6A62BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTransformationAudit4b.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTransformationAudit4b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTransformationAudit4b.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTransformationAudit4b.lean.txt",
+      "sha256": "3E0BA92E5D88094688559A0DD7F55CFC0EDF0006C01F674FA97048A261AC65AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTransformationAudit4b.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTransformationAudit4b.log",
+      "sha256": "CDBE77F487CA87166C1E53252DF740C729EEFD9B65B48AB93FFF49454CF49FF4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTransformationDependencyAudit4b.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTransformationDependencyAudit4b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTransformationDependencyAudit4b.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTransformationDependencyAudit4b.lean.txt",
+      "sha256": "9FF39FACE42E055EC171F7BBAB1574E64C29EC74FA9588FB669C20177855535A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTransformationDependencyAudit4b.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTransformationDependencyAudit4b.log",
+      "sha256": "A436A38C9D28281BFD1BDE8B77064BEE67A4E2BDF702FB81D086E677EA337BBC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTransformationDependencyAudit4c.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTransformationDependencyAudit4c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTransformationDependencyAudit4c.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTransformationDependencyAudit4c.lean.txt",
+      "sha256": "19960CA841E2BA0C2553B3BD517763250628D5642125FD3E86FA1AC82EC527AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTransformationDependencyAudit4c.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTransformationDependencyAudit4c.log",
+      "sha256": "884CD5E52357D5C654E7515B2A07F4755CB447F74A167E8C6C48CDE18F38A487"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityAudit6.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneDifferentialRegularityAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityAudit6.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneDifferentialRegularityAudit6.lean.txt",
+      "sha256": "4CD3D5E1468A2DE72031BB45C104EF147A95FDE2D104004787E59A6F63C92886"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityAudit6.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneDifferentialRegularityAudit6.log",
+      "sha256": "9B8AF7DDE94FE14F35C4AC6529AFCFE01ED8F553E928F004318C4F70B96A0C66"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityDependencyAudit6.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneDifferentialRegularityDependencyAudit6.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityDependencyAudit6.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneDifferentialRegularityDependencyAudit6.lean.txt",
+      "sha256": "305274C522EA882B78DFA712FEFC03F0E129175898EB4F061B80E09D772C5395"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityDependencyAudit6.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneDifferentialRegularityDependencyAudit6.log",
+      "sha256": "2935FB7AD67EEA246C269FA063E33E18048DDA746B2B6EB3270956FF3B921654"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityDependencyAudit6b.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneDifferentialRegularityDependencyAudit6b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityDependencyAudit6b.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneDifferentialRegularityDependencyAudit6b.lean.txt",
+      "sha256": "C9E7ABBD6EBFC0A6D95742A6EA3CA55C39C4AB226FD3537BFA8279E573937E17"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityDependencyAudit6b.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneDifferentialRegularityDependencyAudit6b.log",
+      "sha256": "23DE143D119620F9832CDEFDE00313461008F9DAA00C34BE31DEA32A8AE19831"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassExpansionAudit8.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceWeierstrassExpansionAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassExpansionAudit8.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceWeierstrassExpansionAudit8.lean.txt",
+      "sha256": "5C3F98D2F889D438A175D2901ABBED85B093C0A4D071741D7B6E25C442102578"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassExpansionAudit8.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceWeierstrassExpansionAudit8.log",
+      "sha256": "322C5E263647B680DCA23D61D459401325210A21DC0E85DE897C6FC3A4CDD383"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassExpansionDependencyAudit8.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceWeierstrassExpansionDependencyAudit8.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassExpansionDependencyAudit8.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceWeierstrassExpansionDependencyAudit8.lean.txt",
+      "sha256": "F84811A5487A7394913E15695BA43030AACAD508E68B9DC4AF4944E53686E55B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassExpansionDependencyAudit8.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceWeierstrassExpansionDependencyAudit8.log",
+      "sha256": "4E005F3265A142C637261B6AB65951ED154CDB627CDA693185BE79E0F2B5A0DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassExpansionDependencyAudit8b.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceWeierstrassExpansionDependencyAudit8b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassExpansionDependencyAudit8b.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceWeierstrassExpansionDependencyAudit8b.lean.txt",
+      "sha256": "F82E7CBAE550F9D9875DA322D885805D2E899C5EC9D747C61AAF87AB7019CAC9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassExpansionDependencyAudit8b.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceWeierstrassExpansionDependencyAudit8b.log",
+      "sha256": "BCD201E685A0032AD93895E9E2D0ABFD99503559372A2CB6B11F13970716D64F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers648.txt",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/consumers648.txt",
+      "sha256": "8ECE77BE0736F5AEF9C2B6209096FE5EDEB8532B23A629D7CDAE7A28FC2A4267"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_fricke_torsion_expansion_648.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/fetch_fricke_torsion_expansion_648.py",
+      "sha256": "728BFC6AC4DB2F01014EC5BB928B9B74451A3B8749B515427E0D5E83E4EF7A83"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_gamma1_cusp_realization_644.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/fetch_gamma1_cusp_realization_644.py",
+      "sha256": "6DC74301B5CC8EFC57354607B578025D88DBE1D408FC62D5749346D148CE4ECC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_gamma1_rational_structure_inputs_646.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/fetch_gamma1_rational_structure_inputs_646.py",
+      "sha256": "1D19503C4DD20CDFD63D91DD68789299830FF6D148404FBE4AE617C405636019"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_gamma1_regularity_descent_642.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/fetch_gamma1_regularity_descent_642.py",
+      "sha256": "47F7DFD2F51897ABA9339E2F84ECD5BED2A228023204E7856CD31B723F52D20F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_weierstrass_expansion_649.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/fetch_weierstrass_expansion_649.py",
+      "sha256": "2EC7C70C3C73F1FE5AF7E327B78E47C663A24EB43189EA45646DC4FCCD8A56B1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-fourier-coefficients-route-651.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/fricke-fourier-coefficients-route-651.json",
+      "sha256": "62A133DCC1983E2E845C9E24336AF69D76B7B340A393670A1C64208969FB52B3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-fourier-coefficients-route-651b.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/fricke-fourier-coefficients-route-651b.json",
+      "sha256": "3F7C38749BE9E1982AF928DC703AACF78384738BAF8FDEDB6881D9115D601169"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-torsion-expansion-reuse-assessment-648.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/fricke-torsion-expansion-reuse-assessment-648.json",
+      "sha256": "C5C8626B608C4D9DD67B3986B14ACF796363670B973478EAD0DCDEF9922BB4C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-transformation-documented-successor-647b.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/fricke-transformation-documented-successor-647b.json",
+      "sha256": "F2146DF5CBDC9A61C410343AEAC09E8234B865B5F0D83CD5EE7C70863ED7FA74"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-transformation-route-647.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/fricke-transformation-route-647.json",
+      "sha256": "147E670B2ACFCB23FC4565445F7EE61F09518133BB67DD1BD46050FEE9546CD9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-transformation-route-647c.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/fricke-transformation-route-647c.json",
+      "sha256": "F4DA964E66F412D5683B4A8828389DE74CC5208327196AB03469F70F2FF0FBAF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-cusp-realization-reuse-assessment-644.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-cusp-realization-reuse-assessment-644.json",
+      "sha256": "A616787DF9D4E006DE230B9186532AE9AFB048636CFAD72706D61CBCC2E5B517"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-regularity-route-643.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-differential-regularity-route-643.json",
+      "sha256": "0EC3B132B6F2688BDD0470733A6282EA9324589481FA48E0F26EB7ABDCB7A215"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-regularity-route-643b.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-differential-regularity-route-643b.json",
+      "sha256": "A6F6E9925E2ED7DA0765F51FF956AFAB4C3B9EA1DFB840BE614DF5E90E5F6AA9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-rational-structure-input-reuse-assessment-646.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-rational-structure-input-reuse-assessment-646.json",
+      "sha256": "D75CB7DBE180AA9F387249B15E155E5E7391965B56CA54AE2BA329D46B5552CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-regularity-descent-reuse-assessment-642.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-regularity-descent-reuse-assessment-642.json",
+      "sha256": "C00477A27B81EF7E2BBA53EB7900B4E7DAC67D4A6E8BF00F66AA3D601023287E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules648.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/modules648.json",
+      "sha256": "5FE8303E79699ABF0DE69BCCA8558F01512E134BB54BB1B97F049F587C0F4905"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_dependency_successor_647c.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_fricke_dependency_successor_647c.py",
+      "sha256": "74846DC5E3A914CD03F2A4613382AD05D692CDBF87F05B49E738470CE9118BA7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_documented_successor_647b.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_fricke_documented_successor_647b.py",
+      "sha256": "11B2B5E9FCCD5ED48FA02109B21C23FF460C564D77239181581030D9EEBA1355"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_fourier_coefficients_651.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_fricke_fourier_coefficients_651.py",
+      "sha256": "7038B941B53A90F69EC79FB8E38E7B68D96B732067D1BE4D2F82DF96647F1820"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_fourier_coefficients_audit_651.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_fricke_fourier_coefficients_audit_651.py",
+      "sha256": "8A2E83743BC93B04DEAFF0361BB20D6ABB99D821524E72DE998FEC3D72D2BEFA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_fourier_coefficients_audit_651b.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_fricke_fourier_coefficients_audit_651b.py",
+      "sha256": "8DF4B1B243DF8E2488FEAD8D5C758C253D520CCF0C358C02ECDA9253ED93AFFB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_fourier_coefficients_record_651b.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_fricke_fourier_coefficients_record_651b.py",
+      "sha256": "08A69413F12BECB34E91BD6BF174CC9F67FA4B7C6C41DD9860B43A89C6076349"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_transformation_audit_647.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_fricke_transformation_audit_647.py",
+      "sha256": "466D3EF2547E7258F75DF6541D17A95B680AB53FACF4AB566C68DD2682632111"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_transformation_audit_647b.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_fricke_transformation_audit_647b.py",
+      "sha256": "E88479D9CE3199C8F1DA49DCE03B0454BDE65CA12EB5127FA67C1F5D145E9279"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_transformation_record_647c.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_fricke_transformation_record_647c.py",
+      "sha256": "B28B9D75685031C7BEBC21225C76E7E2EF260251ECA1079E3AC4FFC3342848C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_differential_regularity_audit_643.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_gamma_one_differential_regularity_audit_643.py",
+      "sha256": "597081CB0718C727186593CA5859E55BF8BE960EA425F4D4668F38E23B975AB0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_differential_regularity_scope_643.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_gamma_one_differential_regularity_scope_643.py",
+      "sha256": "8F6EDDA386E5AF6EAEAD9441D960E855A3C0DE01A105FC92FCD6006C4D0D3CB6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_differential_regularity_successor_643b.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_gamma_one_differential_regularity_successor_643b.py",
+      "sha256": "63AF8E70BD0EDCD4EA988988CFDCF50E8B890BF33A8831F37B0D6E3CD560D289"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_weierstrass_expansion_650.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_weierstrass_expansion_650.py",
+      "sha256": "858E559A0EF52173049AF6B0A39ED575C4065B9822B769E2B76464A8F2311849"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_weierstrass_expansion_audit_650.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_weierstrass_expansion_audit_650.py",
+      "sha256": "B4993A1D09F1D09B47E2C65F6632D782CBA1B7573697B0669D7267F15B012CD8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_weierstrass_expansion_record_650b.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_weierstrass_expansion_record_650b.py",
+      "sha256": "398C41BBC63BE2E971040E75C6CB0F812351174A8BC47C86FC825B73AA83A776"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record648.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/record648.py",
+      "sha256": "848837C927EF38BB3015CFE95D92A7BD5DCA0D56B0CEC76DAA486AB867BA2965"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_fricke_fourier_coefficients_651b.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/record_fricke_fourier_coefficients_651b.py",
+      "sha256": "BFCE79EC6722121C94BC50C60C857E2F2BD8F6E73C39DFDE1B396DA4F58F3538"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_fricke_transformation_647c.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/record_fricke_transformation_647c.py",
+      "sha256": "440D2A09183C3F986F98CCAF3BCC159EFED254FBA228D6A73CC6E9C07293048F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_differential_regularity_643.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/record_gamma_one_differential_regularity_643.py",
+      "sha256": "08374FC610536A06B68B541BC68904068309F8B17950592DE03C1D6EBEE446DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_differential_regularity_643b.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/record_gamma_one_differential_regularity_643b.py",
+      "sha256": "E994EA835594BC0CB6FFA2A481C689E06DF4B47EA198AA6849626D474C254A3F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_weierstrass_expansion_650b.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/record_weierstrass_expansion_650b.py",
+      "sha256": "E3707DD381B80E6D1955FDD020EB3B6EA134E58252703AC1BA4AE2D2D6098099"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register648.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/register648.py",
+      "sha256": "B89E07CE9D777FE02BC606CBAABB589BCF0381A143F1A27D1FF57F7FFB86BCC4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations648.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/registrations648.json",
+      "sha256": "2EE1190E258CAB75D8F743699854909F67AA2FA632414CB611A5E69DAC72AB79"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section648.txt",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/section648.txt",
+      "sha256": "788B4C302E1DB77A6743329432BCE1DEA206C9DA88CD4F285F9B7E100317B073"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-fourier-coefficients-7b-audit-config.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/source-fricke-fourier-coefficients-7b-audit-config.json",
+      "sha256": "0D8F59B51DAE0D08F668AAB187EE84DBDFC41937DA3946B9844C4A312E0E5115"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-fourier-coefficients-7b-scratch-receipt.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/source-fricke-fourier-coefficients-7b-scratch-receipt.json",
+      "sha256": "29B8C452DEC9110ED125AECC5DF5407322B657D179909021828AA33681AA38E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-transformation-4c-audit-config.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/source-fricke-transformation-4c-audit-config.json",
+      "sha256": "E44CA2571186016B52E5D39E2E43B4B2DCA36CC59A2E5D275D52BA5121AB81AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-transformation-4c-scratch-receipt.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/source-fricke-transformation-4c-scratch-receipt.json",
+      "sha256": "1B089A904F7ECB171E895466FDC455922A1C2D8EBD06E3BD79EB6FC0E75C126E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-differential-regularity-6b-audit-config.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/source-gamma-one-differential-regularity-6b-audit-config.json",
+      "sha256": "F550274D9F010A49DBE665D6C06C1808E8E8DCD2C8B09D3714B4048CD5C5E5C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-differential-regularity-6b-scratch-receipt.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/source-gamma-one-differential-regularity-6b-scratch-receipt.json",
+      "sha256": "9EF4347C9A2DF281E237481B678ECB69B39AFE7E5695EED82DB70603DCB9BEA7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-weierstrass-expansion-8b-audit-config.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/source-weierstrass-expansion-8b-audit-config.json",
+      "sha256": "5041076E1AC6B00D15BB8BB93965B465C041D3CF21853FE259EB0238A328C894"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-weierstrass-expansion-8b-scratch-receipt.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/source-weierstrass-expansion-8b-scratch-receipt.json",
+      "sha256": "8D69957DFF05891851A445E70D258A1014E88FC8F9D78733A17ED2BEF4FEC3AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status648.txt",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/status648.txt",
+      "sha256": "64915C27742241FA4035F8A664BC1A28FB6283FB1D743CE9672E89DBA3C32A3A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weierstrass-expansion-reuse-assessment-649.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/weierstrass-expansion-reuse-assessment-649.json",
+      "sha256": "BDB80D1965937DFC38CC18ADB29AF5C8AB879C0EDE5E58944F0723B29FA28E16"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weierstrass-expansion-route-650.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/weierstrass-expansion-route-650.json",
+      "sha256": "6941A1F55463F4A8E3CC89195871FD198DBDEAF0AEC54B56C720F11314EF7E4F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weierstrass-expansion-route-650b.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/weierstrass-expansion-route-650b.json",
+      "sha256": "65CD6253AA1F8EF20A2AE7B1195F2E61E49F5DDC1AA7F0B8003A06CF4E7F4AA3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-regularity-descent-reuse-642\\P2M\\Sol\\S_AlgebraicCurve_Place_ordDiff_smul_D_nonneg_of_ord_pow_six_mul_pow_four_mul_sub_1728_pow_three_nonneg.lean.txt",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-regularity-descent-reuse-642/P2M/Sol/S_AlgebraicCurve_Place_ordDiff_smul_D_nonneg_of_ord_pow_six_mul_pow_four_mul_sub_1728_pow_three_nonneg.lean.txt",
+      "sha256": "396F6F58296DABDE6D0CD9F44C40D8844E09C8634D24BCDD523F599ADA0B7BB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-regularity-descent-reuse-642\\P2M\\Sol\\S_ModularCurve_isIntegral_adjoin_of_isIntegral_adjoin_coeffMap.lean.txt",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-regularity-descent-reuse-642/P2M/Sol/S_ModularCurve_isIntegral_adjoin_of_isIntegral_adjoin_coeffMap.lean.txt",
+      "sha256": "E7A66867B837F125D6307E731CE5EF4FBC74ECCED52FEFE2B61C34B44085EC70"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-regularity-descent-reuse-642\\snapshots.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-regularity-descent-reuse-642/snapshots.json",
+      "sha256": "AC63EF8742E4895E5F5DED8B9F91C2276DFB6D86ECD0DA26B83425469E5E6A1F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-cusp-realization-reuse-644\\P2M\\Sol\\S_CuspForm_exists_basis_gamma1_qCoeff_mem_adjoin_exp_of_even.lean.txt",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-cusp-realization-reuse-644/P2M/Sol/S_CuspForm_exists_basis_gamma1_qCoeff_mem_adjoin_exp_of_even.lean.txt",
+      "sha256": "3A8E4A1AD97364F84F918E4FA2C279636D59F7EFEBFBAD161A644CBC50429655"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-cusp-realization-reuse-644\\P2M\\Sol\\S_CuspForm_exists_gamma1_qCoeff_eq_algEquiv_apply_of_even.lean.txt",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-cusp-realization-reuse-644/P2M/Sol/S_CuspForm_exists_gamma1_qCoeff_eq_algEquiv_apply_of_even.lean.txt",
+      "sha256": "7F47382FFE7793D0FD63FB6D68B2B33E26FFFC323F1A091EB99096B88536A261"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-cusp-realization-reuse-644\\P2M\\Sol\\S_ModularCurve_qExpansion_div_mem_laurentBaseChange_xHFunctionField.lean.txt",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-cusp-realization-reuse-644/P2M/Sol/S_ModularCurve_qExpansion_div_mem_laurentBaseChange_xHFunctionField.lean.txt",
+      "sha256": "BA2FFF50EB54BD46E802DE264D55F2FC648CB0713657EF9B49DB1F9C09475A61"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-cusp-realization-reuse-644\\snapshots.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-cusp-realization-reuse-644/snapshots.json",
+      "sha256": "A7DA247DE4B11481036DC28B175B41C9AED6FF03AE92108F96E7F9BFD3633501"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-rational-structure-input-reuse-646\\P2M\\Sol\\S_CuspForm_span_frickeRational_E4_pow_E6_pow_eq_top.lean.txt",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-rational-structure-input-reuse-646/P2M/Sol/S_CuspForm_span_frickeRational_E4_pow_E6_pow_eq_top.lean.txt",
+      "sha256": "AB40C08C057927A0E2EA6DBA8B677CB8AA4981B3C9A8104B60FBCA51CFADE4CA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-rational-structure-input-reuse-646\\P2M\\Sol\\S_ModularCurve_exists_isIntegralQExp_smul_of_ratCast_qExpansion.lean.txt",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-rational-structure-input-reuse-646/P2M/Sol/S_ModularCurve_exists_isIntegralQExp_smul_of_ratCast_qExpansion.lean.txt",
+      "sha256": "92FD8786FED216F62E9B82758901EFA7324E4A4D71CA01DD4BA8A5B541C2542F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-rational-structure-input-reuse-646\\P2M\\Sol\\S_ModularForm_gamma1_qExpansion_coeff_mem_of_frickeRational.lean.txt",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-rational-structure-input-reuse-646/P2M/Sol/S_ModularForm_gamma1_qExpansion_coeff_mem_of_frickeRational.lean.txt",
+      "sha256": "F647A643D74CB76A516CFC79B4E76ECCE1EF30F558FF9D178228244F97E6788E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-rational-structure-input-reuse-646\\P2M\\Sol\\S_WLight_frickeFunction_modularity_package.lean.txt",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-rational-structure-input-reuse-646/P2M/Sol/S_WLight_frickeFunction_modularity_package.lean.txt",
+      "sha256": "06592739503E4B29A63CFDADF3412BDF3C0D8A6097810A435EB8315C686F1DA1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-rational-structure-input-reuse-646\\snapshots.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-rational-structure-input-reuse-646/snapshots.json",
+      "sha256": "4887A3657CC63EE9B9226D6488F9EC07B92412D80509D453792AB54F98A6EA5B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-torsion-expansion-reuse-648\\P2M\\Sol\\S_ModularForm_weierstrassP_torsion_qExpansion_package.lean.txt",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/fricke-torsion-expansion-reuse-648/P2M/Sol/S_ModularForm_weierstrassP_torsion_qExpansion_package.lean.txt",
+      "sha256": "5E73781E59FFE8A29A68B448DF45FB0356C206ECA5D6FA55F35F992037B6E6AC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-torsion-expansion-reuse-648\\snapshots.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/fricke-torsion-expansion-reuse-648/snapshots.json",
+      "sha256": "53DBF30C92F214B189A8E4DB6653A1D061B25BC9FE0686F5F98F3115BEB0E0C7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weierstrass-expansion-reuse-649\\P2M\\Sol\\S_WLight_weierstrassP_qExpansion_package.lean.txt",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/weierstrass-expansion-reuse-649/P2M/Sol/S_WLight_weierstrassP_qExpansion_package.lean.txt",
+      "sha256": "2E7C57F237A76C69BFC9B1C93D12FE58C06974EC040E51BB3260CB467FAEB1D8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\weierstrass-expansion-reuse-649\\snapshots.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/weierstrass-expansion-reuse-649/snapshots.json",
+      "sha256": "3684BA56C6A0B7423FB8467E5C80DA78467967A92547157402C64F8FDFAA9CB5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-integral-descent-643-before-explicit-coefficient-transport\\SourceGammaOneDifferentialIntegralDescent.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-integral-descent-643-before-explicit-coefficient-transport/SourceGammaOneDifferentialIntegralDescent.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-integral-descent-643-before-explicit-coefficient-transport\\SourceGammaOneDifferentialIntegralDescent.lean.txt",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-integral-descent-643-before-explicit-coefficient-transport/SourceGammaOneDifferentialIntegralDescent.lean.txt",
+      "sha256": "66033A1149E53870A6DF2AA7276C7BDD38337AEA66AF46B4BE0229AC468D96D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-integral-descent-643-before-explicit-coefficient-transport\\SourceGammaOneDifferentialIntegralDescent.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-integral-descent-643-before-explicit-coefficient-transport/SourceGammaOneDifferentialIntegralDescent.log",
+      "sha256": "0DAA37BBC8E88552AFC3963DAD82CABB3860863E36BF63408A3125A25DECCF8B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-regularity-643-before-order-name-repair\\SourceGammaOneDifferentialRegularity.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-regularity-643-before-order-name-repair/SourceGammaOneDifferentialRegularity.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-regularity-643-before-order-name-repair\\SourceGammaOneDifferentialRegularity.lean.txt",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-regularity-643-before-order-name-repair/SourceGammaOneDifferentialRegularity.lean.txt",
+      "sha256": "CB614B5004EA44C029D264CF595BAB730835A46AC851CFF56319D527C2E233CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-regularity-643-before-order-name-repair\\SourceGammaOneDifferentialRegularity.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-regularity-643-before-order-name-repair/SourceGammaOneDifferentialRegularity.log",
+      "sha256": "7DDF2F42973A17F756349101CB9D66D22D61F760DC48644CE0A9ECC44EC4BCA5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-regularity-643-before-field-independent-order-consumer\\SourceGammaOneDifferentialRegularity.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-regularity-643-before-field-independent-order-consumer/SourceGammaOneDifferentialRegularity.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-regularity-643-before-field-independent-order-consumer\\SourceGammaOneDifferentialRegularity.lean.txt",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-regularity-643-before-field-independent-order-consumer/SourceGammaOneDifferentialRegularity.lean.txt",
+      "sha256": "CB614B5004EA44C029D264CF595BAB730835A46AC851CFF56319D527C2E233CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-regularity-643-before-field-independent-order-consumer\\SourceGammaOneDifferentialRegularity.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma1-regularity-643-before-field-independent-order-consumer/SourceGammaOneDifferentialRegularity.log",
+      "sha256": "FD07AF76FBF8C264400B6AD7089D548D4267F1F10EA40EAEB393DB3474406B33"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-differential-regularity-6b-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/source-gamma-one-differential-regularity-6b-reuse-review-20261026.json",
+      "sha256": "2258315CCCC49A75D337A05CA99B541A59DC7A22E144EC2216D6A690C085B229"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-transformation-4c-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/source-fricke-transformation-4c-reuse-review-20261026.json",
+      "sha256": "B5B0D512C5CC9B261D37968FF86CC154844223D96225CEDB28ED44379CD86901"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-weierstrass-expansion-8b-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/source-weierstrass-expansion-8b-reuse-review-20261026.json",
+      "sha256": "739A1672AF5E9C80D3153FB156BA1E57AA537AA1FC528793AEA43129C1DAB3C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-fourier-coefficients-7b-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/source-fricke-fourier-coefficients-7b-reuse-review-20261026.json",
+      "sha256": "21EC20BCE44EF94F8570142288A55264184887381F26B737C8612DC7B030518F"
+    }
+  ]
+}

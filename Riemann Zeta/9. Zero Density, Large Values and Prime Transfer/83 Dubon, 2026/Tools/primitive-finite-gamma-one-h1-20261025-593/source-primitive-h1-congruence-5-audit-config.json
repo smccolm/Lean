@@ -1,0 +1,56 @@
+{
+  "modules": [
+    "SourceFaithfulCharacterDivisibility",
+    "SourceBinaryH1PrimePowerKernel",
+    "SourcePrimitiveH1HeckeCongruence",
+    "SourcePrimitiveH1AdicOperatorKernel",
+    "SourcePrimitiveCongruentH1AdicRealization"
+  ],
+  "theorems": [
+    "Dubon2026.sourceFaithfulCharacter_div_isIntegral",
+    "Dubon2026.sourceBinaryH1Change_zmod_nonzero_eq_zero_iff",
+    "Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_integral",
+    "Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_valuation",
+    "Dubon2026.sourcePrimitiveH1Hecke_primePower_congruence_valuation",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator",
+    "Dubon2026.sourcePrimitive_exists_congruentH1AdicRealization"
+  ],
+  "constructions": [
+    "Dubon2026.sourcePrimitiveH1AdicCongruenceData"
+  ],
+  "queries": [
+    "Dubon2026.sourceFaithfulCharacter_div_isIntegral",
+    "Dubon2026.sourceBinaryH1Change_zmod_nonzero_eq_zero_iff",
+    "Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_integral",
+    "Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_valuation",
+    "Dubon2026.sourcePrimitiveH1Hecke_primePower_congruence_valuation",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator",
+    "Dubon2026.sourcePrimitive_exists_congruentH1AdicRealization",
+    "Dubon2026.sourcePrimitiveH1AdicCongruenceData"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceFaithfulCharacter_div_isIntegral",
+    "Dubon2026.sourceBinaryH1Change_zmod_nonzero_eq_zero_iff",
+    "Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_integral",
+    "Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_valuation",
+    "Dubon2026.sourcePrimitiveH1Hecke_primePower_congruence_valuation",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator",
+    "Dubon2026.sourcePrimitive_exists_congruentH1AdicRealization",
+    "Dubon2026.sourcePrimitiveH1AdicCongruenceData",
+    "Dubon2026.sourceFaithfulModule_nontrivial_characterFiber",
+    "isIntegral_of_smul_mem_submodule",
+    "Dubon2026.sourceSemilinearH1_exists_smul_of_zero",
+    "Dubon2026.sourceBinaryCoefficientMap_surjective",
+    "Dubon2026.sourceBinaryCoefficientMap_zmod_kernel",
+    "Dubon2026.sourceBinaryCoefficient_int_smul_injective",
+    "Dubon2026.sourceIntegralBinaryH1Finite",
+    "Dubon2026.sourceBinaryH1PrimeOperators_commute",
+    "Dubon2026.sourcePrimitive_exists_compatibleH1AdicRealization",
+    "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter"
+  ],
+  "roots": [
+    "Dubon2026.sourcePrimitive_exists_congruentH1AdicRealization",
+    "Dubon2026.sourcePrimitiveH1Hecke_primePower_congruence_valuation"
+  ],
+  "separatelyAxiomChecked": []
+}

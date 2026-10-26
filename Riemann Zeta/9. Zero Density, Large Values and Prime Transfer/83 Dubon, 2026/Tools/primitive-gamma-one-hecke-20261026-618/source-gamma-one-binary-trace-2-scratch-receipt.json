@@ -1,0 +1,54 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T06:12:31.626871+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceH1TraceBaseChangeCoefficient",
+    "SourceGammaOneCoverBinaryHeckeTrace"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceBaseChangeCoefficient.lean",
+      "sha256": "A8856D1AEF6A28930210ACE72B7059336CB202CEA00CAB9081A880BF584AC6AA",
+      "oleanSha256": "54F3F31A38A0F2B835790AB29EBDA937C51A5620775594ED20835F2580D4997D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverBinaryHeckeTrace.lean",
+      "sha256": "D87B62D582FB7E968115A3F7071F2F66C041726CF7613137D2E4013662F3ED70",
+      "oleanSha256": "9E502148A53BAF39D5B0DB852E58F42CAE571633FFDA4C8D972C23AFB22A39A0"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceSubgroupH1Trace_pullback_coefficient",
+    "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_pullback",
+    "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_iterated"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceSubgroupH1Trace_pullback_coefficient",
+    "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_pullback",
+    "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_iterated"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTraceAudit2.log",
+  "logSha256": "92698089FD3A411030C5E0F49CF8AA1727F9E699C63282DE08D2B2385A099CDC",
+  "auditSha256": "37466CCF1E71E20663999847D313F81E0B4EEBD0537E8C8920989ED2C7EEDEDE",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 3,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 9,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryTraceDependencyAudit2.log",
+  "dependencyAuditSha256": "CC17E817C753161E88F3606E11F5A6DCE1BC81B21BBC46526D6A276B61B5E78E",
+  "dependencyAuditSourceSha256": "3F81C81A6CE107A39816E1B566FDE97C846FBB0F5AD123B594ECFF958FB75AC8",
+  "consumers": [
+    "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_iterated"
+  ],
+  "dependency": "DUB-17/18 -> literal higher continuation -> arithmetic automorphy -> original all-weight adic association -> geometric Gamma1 realization -> actual surjective-transfer Hecke identity -> base change with the original binary Hecke coefficient morphism",
+  "discharged": "Reduce the actual original binary Hecke operator after the literal Gamma1-image trace to the precise iterated native trace with the exact original coefficient morphism.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Combine the iterated trace with proved trace composition and exact Gamma1 subgroup/correspondence reindexings to obtain the full surjective-transfer Hecke identity. Arithmetic geometric/diamond comparison, Galois realization, all-weight association, local/image/regularity, automorphy and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-binary-trace-2-reuse-review-20261025.json",
+  "reuseReviewSha256": "E0446FC349C8E69C086C6AD40677772B89B3ED5796DA9212FA7B6E6B758207E8",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

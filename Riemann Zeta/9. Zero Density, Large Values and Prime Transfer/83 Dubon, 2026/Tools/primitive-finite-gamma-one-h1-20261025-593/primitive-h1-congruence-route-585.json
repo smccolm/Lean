@@ -1,0 +1,45 @@
+{
+  "scope": 585,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> geometric finite-precision Hecke realization -> the original H1 character respects actual operator congruences",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFaithfulCharacterFiber.lean",
+      "sha256": "2DBDF93A1A8781C046AE8805CB6ED77C07D8C9EF358F4D0BC1EB55AA72E37B70"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryH1ReductionKernel.lean",
+      "sha256": "277B2330CD9FA3399A03873F20EA0F0BDD5FDC1AB3475358B56A385A73DB4E13"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceSemilinearH1ReductionKernel.lean",
+      "sha256": "C68B9C46BAC053D239B7FDDE6A71F6A5883E5E620CF65339CD057C672A78A21C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryCoefficientReduction.lean",
+      "sha256": "BB4C0C04BE8E4F9B003CDA86AF0036B7C4785D5367EF944E37D66D5B541BCC64"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryH1HeckeCommute.lean",
+      "sha256": "B9F4619802B9E9EB92C4A1753F675CF4BA96DF44B095BF53045262AFCDF6CC64"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\IntegralClosure\\Algebra\\Basic.lean",
+      "sha256": "DB312EA3B953F17BC7C76C29CEAEDE0F92FECC21B345AB7B0654FED5558F2552"
+    }
+  ],
+  "shorterRoute": "Reuse the existing nonzero faithful character fiber and native isIntegral_of_smul_mem_submodule. The image of the original finite integral module in that fiber is a nonzero finite lattice. If an operator maps every original vector into n times that module, its character divided by n preserves the lattice and is integral. The existing semilinear H1 kernel theorem and actual binary coefficient division apply to any nonzero modulus, so no new long exact sequence, free basis, determinant trick or eigenvector lifting is required.",
+  "assumptionsToDischarge": "From the original primitive form, weight at least two and prescribed prime, derive compatible finite adic characters with their original Fourier values and exact operator-congruence compatibility: an original integral H1 operator that vanishes after coefficient reduction modulo p^(n+1) maps to zero under the matching character modulo maximalIdeal^(n+1). The finite faithful character fiber and exact H1 reduction kernel supply integrality of the divided character value. No eigenvector lift, free integral basis, local-field, finite-residue or operator-kernel compatibility premise is supplied to the terminal original-form consumer.",
+  "remaining": "This controls finite-precision character relations; it does not yet identify the transported stabilizer Hecke action with arithmetic correspondences or construct a compatible Galois representation. Geometric realization, characteristic-zero association, local/image/regularity, automorphy and literal higher continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "scratchImportClosure": [
+    "SourcePrimitiveCongruentH1AdicRealization",
+    "SourcePrimitiveH1AdicRealization",
+    "SourcePrimitiveCompatibleH1AdicData",
+    "SourcePrimitiveAdicH1Quotients",
+    "SourcePrimitiveLocalH1Character",
+    "SourcePrimitiveH1CoefficientField",
+    "SourcePrimitiveH1AdicOperatorKernel",
+    "SourcePrimitiveH1HeckeCongruence",
+    "SourceBinaryH1PrimePowerKernel",
+    "SourceFaithfulCharacterDivisibility"
+  ]
+}

@@ -1,0 +1,19 @@
+import SourcePermutationCoefficientQuotient
+import SourceBinaryPrimePowerPermutation
+import SourceBinaryPermutationHecke
+import SourceBinaryPermutationCongruence
+import SourceIntegralBinaryPermutationRealization
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourcePermutationCoefficientQuotient, `SourceBinaryPrimePowerPermutation, `SourceBinaryPermutationHecke, `SourceBinaryPermutationCongruence, `SourceIntegralBinaryPermutationRealization]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

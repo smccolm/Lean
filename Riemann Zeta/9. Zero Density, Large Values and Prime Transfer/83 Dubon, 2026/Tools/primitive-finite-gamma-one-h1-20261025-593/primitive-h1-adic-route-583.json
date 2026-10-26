@@ -1,0 +1,47 @@
+{
+  "scope": 583,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> compatible prime-power Hecke realizations -> original integral H1 Hecke character over its literal Fourier field and actual local completion",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveIntegralH1Character.lean",
+      "sha256": "4B9CE96A0248BA5FA8C5BD659FF195BBAD7AFA8D4BC07B5B65197BEBBC403AD8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveFieldHeckeCharacter.lean",
+      "sha256": "A6D7297B2CFBD82BC5BD82A7448B93F23D21F4D2A90B1978A6E92504DF6A9B75"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveResidualHeckeCharacter.lean",
+      "sha256": "69E86C11997CF917707EBC1465AF973DF6AE96645F20F8864E438197874CE932"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveResidualCharacteristic.lean",
+      "sha256": "590B06EFA0C45075CA3E981D1AB53EF00C871552F44AEFA28E6686E76757BB15"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Ideal\\Quotient\\PowTransition.lean",
+      "sha256": "A5DC86A93F6BF8E167EE549B8F2012A0EBD26077997E02D40064BB9E4C87943E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Ideal\\Quotient\\Index.lean",
+      "sha256": "C7712E50ACFF2F68416E5259CD53221AA37D6F96B38793E5C6968254FC9BE696"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\LocalField\\Basic.lean",
+      "sha256": "1E9E01339E9EDB272FA6468A1A1DF29C53095E1845794FE3ED622185804A7ECE"
+    }
+  ],
+  "shorterRoute": "Reuse the proved original integral H1 character, finite H1 Hecke algebra, actual Fourier coefficient field and existing original prescribed-prime completion. Native adjoin induction restricts its values to the same field; integrality puts them in its valuation ring. Native quotient transition maps and finite_quotient_pow supply all precisions without new inverse-limit or eigencharacter machinery. These are compatible characters on one fixed original Hecke algebra, not independently chosen eigensystems.",
+  "assumptionsToDischarge": "From only the original primitive form, weight at least two and prescribed rational prime, derive the actual finite local coefficient field, finite residue of the original prime characteristic, and exact compatible finite adic reductions of the original H1 Hecke character. Retain every original good-prime Fourier value and agreement with the existing analytic residual character. No completion, local finiteness, chosen eigencharacter or compatibility premise remains.",
+  "remaining": "Geometric Galois realization of these finite-precision Hecke characters and their compatible characteristic-zero limit remain required. The permutation quotient of scope 582 retains original H1 classes and Hecke transforms but does not by itself lift eigenvectors or supply a Galois action. A characteristic-zero point of the actual fixed-determinant deformation ring is not asserted. Required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "renewedExternalReview": "reuse-20261025-579/reuse-assessment.json",
+  "relatedFiniteLevelRoute": "binary-prime-power-permutation-route-582.json",
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourcePrimitiveH1AdicRealization",
+    "SourcePrimitiveCompatibleH1AdicData",
+    "SourcePrimitiveAdicH1Quotients",
+    "SourcePrimitiveLocalH1Character",
+    "SourcePrimitiveH1CoefficientField"
+  ]
+}

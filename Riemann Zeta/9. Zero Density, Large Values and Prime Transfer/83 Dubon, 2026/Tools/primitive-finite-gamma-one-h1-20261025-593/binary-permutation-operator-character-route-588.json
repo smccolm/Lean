@@ -1,0 +1,85 @@
+{
+  "scope": 588,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> geometric finite-precision Hecke realization -> actual original finite operator characters are realized on finite permutation and congruence-stabilizer H1 Hecke rings",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralWordAdditiveNaturality.lean",
+      "sha256": "CE752BB6CDFF2B7171AFC9389B8408D83E8DC86D290A7BB30D57699196B2541B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralCuspHeckeWords.lean",
+      "sha256": "0F454CB9E2D82DAEFE96838B5BEB32BDB62FE783E0829DC25B618799D61D8C8C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralCohomologyFinite.lean",
+      "sha256": "5685ECC8D472414277A6B1F949F19211D6A02E516744631CF51965DC97FB5980"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryHeckeChange.lean",
+      "sha256": "14FBDF7A7649342C7713B51CC34D81457D59B514C66226C1A366E58B95A39C84"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryH1HeckeAlgebra.lean",
+      "sha256": "026BEEB3D529C7BD78DEB07C7FAF1C149F56156E71161DF3086C2EFFEE075CC9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPermutationHecke.lean",
+      "sha256": "200353FC6BE79050115BE8F768AB96D740DE9D92C6AF4CA4C4BF624D082EE0C8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPrimePowerPermutation.lean",
+      "sha256": "64D4B11F41FFC30E7D88DF851C3229A11DFE9CA4B6FDE2B4295CB39EF2C4F30B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralBinaryPermutationRealization.lean",
+      "sha256": "84048A1E76A885490470F4591925B40E88B1F55DEBC3BF668E0254DEDBA5BB17"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryH1PrimePowerKernel.lean",
+      "sha256": "19DA3B7EE28E9C5F5FFB5BF18A22A8C78F033805E5A6ED864351EA498A539F3C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1HeckeCharacter.lean",
+      "sha256": "48017F46307B8EAC8F2129D87FA9C3417B44B2D3AF19B4BA23472CCA4A5EDE26"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteOperatorCharacterDescent.lean",
+      "sha256": "3AE57C01A36D9DF2D2B5E62DAC21816E54CAA7ABE0007AF37A04B5725A040C6A"
+    }
+  ],
+  "shorterRoute": "Reuse sourceHeckeWord_intertwine_addHom, which already treats arbitrary commutative scalar rings and additive comparison maps. The earlier complex and residual-field versions alone are too narrow for prime powers, but no new word induction is needed. Reuse the actual permutation H1 evaluation and its full prime Hecke compatibility, exact original reduction kernel, tensor-operator image, and native surjective character descent. The exact kernel comparison avoids developing H2 torsion or integral-to-residual H1 surjectivity.",
+  "assumptionsToDischarge": "Show that relations on actual finite permutation H1 imply the corresponding relations in the original finite tensor-operator image. Descend through that actual Hecke quotient and consume the original finite operator character, retaining every original good-prime value at each positive power of a prime greater than three.",
+  "remaining": "These Hecke operators still require identification with arithmetic geometric correspondences on the congruence covers. Arithmetic Galois realization, compatible characteristic-zero association, required local/image/regularity, automorphy and literal higher continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "relatedRoutes": [
+    "binary-prime-power-permutation-route-582.json",
+    "binary-stabilizer-h1-route-584.json",
+    "primitive-h1-congruence-route-585.json",
+    "primitive-finite-operator-character-route-586.json"
+  ],
+  "scratchImportClosure": [
+    "SourcePrimitivePermutationH1Realization",
+    "SourcePrimitiveFiniteH1OperatorRealization",
+    "SourcePrimitiveCongruentH1AdicRealization",
+    "SourcePrimitiveH1AdicRealization",
+    "SourcePrimitiveCompatibleH1AdicData",
+    "SourcePrimitiveAdicH1Quotients",
+    "SourcePrimitiveLocalH1Character",
+    "SourcePrimitiveH1CoefficientField",
+    "SourcePrimitiveH1AdicOperatorKernel",
+    "SourcePrimitiveH1HeckeCongruence",
+    "SourceBinaryH1PrimePowerKernel",
+    "SourceFaithfulCharacterDivisibility",
+    "SourcePrimitiveFiniteH1HeckeCharacter",
+    "SourceFiniteOperatorCharacterDescent",
+    "SourceBinaryH1ModulusOperatorAlgebra",
+    "SourceBinaryPermutationHeckeFinite",
+    "SourceBinaryPermutationHeckeWords",
+    "SourceBinaryPermutationHecke",
+    "SourceBinaryPrimePowerPermutation",
+    "SourcePermutationCoefficientQuotient",
+    "SourcePrimitivePermutationH1HeckeCharacter",
+    "SourceBinaryPermutationOperatorDescent",
+    "SourceBinaryPermutationOperatorKernel",
+    "SourceBinaryH1ModulusKernel"
+  ]
+}

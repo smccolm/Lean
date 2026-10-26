@@ -1,0 +1,51 @@
+{
+  "modules": [
+    "SourceValuationFrobeniusRoots",
+    "SourceValuationCyclotomicFrobenius",
+    "SourceRankTwoQuadraticTrace",
+    "SourceCyclotomicFrobeniusCharpoly",
+    "SourceOriginalPrimitiveFrobeniusCharpolyRealization"
+  ],
+  "theorems": [
+    "Dubon2026.valuation_root_mem",
+    "Dubon2026.valuation_frobenius_root",
+    "Dubon2026.valuation_cyclotomic_frobenius",
+    "Dubon2026.rank_two_cayley_hamilton",
+    "Dubon2026.rank_two_trace_of_determinant_quadratic",
+    "Dubon2026.rank_two_charpoly_of_determinant_quadratic",
+    "Dubon2026.cyclotomic_frobenius_charpoly",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_charpoly_realization"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.valuation_root_mem",
+    "Dubon2026.valuation_frobenius_root",
+    "Dubon2026.valuation_cyclotomic_frobenius",
+    "Dubon2026.rank_two_cayley_hamilton",
+    "Dubon2026.rank_two_trace_of_determinant_quadratic",
+    "Dubon2026.rank_two_charpoly_of_determinant_quadratic",
+    "Dubon2026.cyclotomic_frobenius_charpoly",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_charpoly_realization"
+  ],
+  "proofEdges": [
+    "Dubon2026.valuation_root_mem",
+    "Dubon2026.valuation_frobenius_root",
+    "Dubon2026.valuation_cyclotomic_frobenius",
+    "Dubon2026.rank_two_cayley_hamilton",
+    "Dubon2026.rank_two_trace_of_determinant_quadratic",
+    "Dubon2026.rank_two_charpoly_of_determinant_quadratic",
+    "Dubon2026.cyclotomic_frobenius_charpoly",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_charpoly_realization",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_cyclotomic_realization",
+    "Dubon2026.SourceFunctionField.GaussReduction.residue_charP_of_prime_mem_nonunits",
+    "Dubon2026.sourceLocal_roots_eq_of_residue_eq",
+    "cyclotomicCharacter.spec",
+    "PadicInt.ext_of_toZModPow",
+    "Matrix.aeval_self_charpoly",
+    "Matrix.charpoly_fin_two",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_quadratic_realization"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_charpoly_realization"
+  ]
+}

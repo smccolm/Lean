@@ -1,0 +1,120 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T03:31:37.866829+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceBinaryH1ModulusKernel",
+    "SourceBinaryPermutationHeckeWords",
+    "SourceBinaryPermutationOperatorKernel",
+    "SourceBinaryPermutationHeckeFinite",
+    "SourceBinaryPermutationOperatorDescent",
+    "SourcePrimitivePermutationH1HeckeCharacter",
+    "SourcePrimitivePermutationH1Realization"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryH1ModulusKernel.lean",
+      "sha256": "A27F8C0453C13671E4669B08048F6589FBF6AC47CFDE055A2A2A486C8FACAF7F",
+      "oleanSha256": "4151C49204B131FD589BC455F6EA4FD2D9905E3F0829DD209F308DACCED61D96"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPermutationHeckeWords.lean",
+      "sha256": "63852A443A7D679C5216E4E769976CE57F13805F28A14CA8D33C2E5CF180071B",
+      "oleanSha256": "3B9FF47DFD92C4D8EEA7BBF2AC0FA299DF1D069DFB18219146DD4335115C3757"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPermutationOperatorKernel.lean",
+      "sha256": "1F9939744334A621CCC12010C765AEDCC14F581B83DD7533E12405D8E89DCD36",
+      "oleanSha256": "91C173EEF409DB91E9C5115311E3F33D508C6F4A27D7FD85C287522D4012B1B9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPermutationHeckeFinite.lean",
+      "sha256": "B80BC2737F5FDB86945ED8534CD2663AA430A92DCF67638A8AA0A9495E21BE4F",
+      "oleanSha256": "7AAD476319B6E99423A56B2C5D4ECA26740FFBC91B984BC59BA890040B807436"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPermutationOperatorDescent.lean",
+      "sha256": "7A7635F0FE17AF12C8C4CA7B4FE70AD368C45A0372FF5DACEE9A7A57C31AC27E",
+      "oleanSha256": "44F6919EA7626DFBA8C2C18A26D70855C59526450630C1DAE65FACD94BDC966F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitivePermutationH1HeckeCharacter.lean",
+      "sha256": "7F3831C432148B1EB2B67E06A1DD55FFFDB85E3B68C87C35359F1A7FD00E7EEA",
+      "oleanSha256": "4746329DD5173C9DCE8E0759B19B040005BDE0B358A0A239E67093859E049448"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitivePermutationH1Realization.lean",
+      "sha256": "F4582898A76AE5B4C935471C567494BD924C02BA7E7FA087D63522B2E64ADCAE",
+      "oleanSha256": "A47F72BD4A910C8ACF7A8761866A8548EDA1EAC571201DA761EF696927A6F34D"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_of_coefficients",
+    "Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_iff_coefficients",
+    "Dubon2026.sourceBinaryH1HeckeWord_surjective",
+    "Dubon2026.sourceBinaryPermutationHeckeWord_evaluation",
+    "Dubon2026.sourceBinaryH1HeckeWord_change",
+    "Dubon2026.sourceBinaryPermutationHeckeWord_modulus_zero",
+    "Dubon2026.sourceBinaryPrimePowerPermutationH1_finite",
+    "Dubon2026.sourceBinaryPrimePowerPermutationHeckeAlgebra_finite",
+    "Dubon2026.sourceBinaryPermutationHeckeWord_modulus_kernel",
+    "Dubon2026.sourceBinaryPermutationToModulus_comp",
+    "Dubon2026.sourceBinaryPermutationToModulus_surjective",
+    "Dubon2026.sourcePrimitivePermutationH1HeckeCharacter_comp",
+    "Dubon2026.sourcePrimitivePermutationH1HeckeCharacter_hecke",
+    "Dubon2026.sourcePrimitive_exists_permutationH1HeckeCharacters",
+    "Dubon2026.sourceBinaryH1HeckeWord",
+    "Dubon2026.sourceBinaryPermutationPrimeOperators",
+    "Dubon2026.sourceBinaryPermutationHeckeAlgebra",
+    "Dubon2026.sourceBinaryPermutationToModulus",
+    "Dubon2026.sourcePrimitivePermutationH1HeckeCharacter",
+    "Dubon2026.sourcePrimitivePermutationH1CharacterData"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_of_coefficients",
+    "Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_iff_coefficients",
+    "Dubon2026.sourceBinaryH1HeckeWord_surjective",
+    "Dubon2026.sourceBinaryPermutationHeckeWord_evaluation",
+    "Dubon2026.sourceBinaryH1HeckeWord_change",
+    "Dubon2026.sourceBinaryPermutationHeckeWord_modulus_zero",
+    "Dubon2026.sourceBinaryPrimePowerPermutationH1_finite",
+    "Dubon2026.sourceBinaryPrimePowerPermutationHeckeAlgebra_finite",
+    "Dubon2026.sourceBinaryPermutationHeckeWord_modulus_kernel",
+    "Dubon2026.sourceBinaryPermutationToModulus_comp",
+    "Dubon2026.sourceBinaryPermutationToModulus_surjective",
+    "Dubon2026.sourcePrimitivePermutationH1HeckeCharacter_comp",
+    "Dubon2026.sourcePrimitivePermutationH1HeckeCharacter_hecke",
+    "Dubon2026.sourcePrimitive_exists_permutationH1HeckeCharacters"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceBinaryH1HeckeWord",
+    "Dubon2026.sourceBinaryPermutationPrimeOperators",
+    "Dubon2026.sourceBinaryPermutationHeckeAlgebra",
+    "Dubon2026.sourceBinaryPermutationToModulus",
+    "Dubon2026.sourcePrimitivePermutationH1HeckeCharacter",
+    "Dubon2026.sourcePrimitivePermutationH1CharacterData"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitivePermutationOperatorCharacterAudit7.log",
+  "logSha256": "4FD2C3462147D14EBCF6A9C8FF1040DACBAA8AD3E07EBF07AFEB8159B88CD620",
+  "auditSha256": "B994D9F7D385A8139BDB9BAAB6C157623B56FBEF9AFE77BD390F4A9775DD330F",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 53,
+  "linterScopes": 7,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 31,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitivePermutationOperatorCharacterDependencyAudit7.log",
+  "dependencyAuditSha256": "88B92DEAF2CE8C1976A09B5B4AA3D243E15C866FFE0F7506C51A3580AEC4B91D",
+  "dependencyAuditSourceSha256": "5427A670CBD92842C53C66F290C0B9BF72CEE8C9841D40A5047488DD124EBBD1",
+  "consumers": [
+    "Dubon2026.sourcePrimitive_exists_permutationH1HeckeCharacters",
+    "Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_iff_coefficients"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> geometric finite-precision Hecke realization -> actual original finite operator characters are realized on finite permutation and congruence-stabilizer H1 Hecke rings",
+  "discharged": "Show that relations on actual finite permutation H1 imply the corresponding relations in the original finite tensor-operator image. Descend through that actual Hecke quotient and consume the original finite operator character, retaining every original good-prime value at each positive power of a prime greater than three.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. These Hecke operators still require identification with arithmetic geometric correspondences on the congruence covers. Arithmetic Galois realization, compatible characteristic-zero association, required local/image/regularity, automorphy and literal higher continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-permutation-operator-character-7-reuse-review-20261025.json",
+  "reuseReviewSha256": "53749D2A01F614DB735E9677F63A3221A2F43744434D878747FE7CE92E2FC955",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

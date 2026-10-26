@@ -1,0 +1,61 @@
+{
+  "status": "Prepared; require 8290 canonical PASS and immutable archive before integration.",
+  "route": "gamma-one-arithmetic-geometry-promotion-route-626.json",
+  "routeSha256": "01779DD687BD0535A5398B705E6C0AEDB04DEEAE1F943517252D50164EBE277C",
+  "modules": 26,
+  "queries": 102,
+  "theorems": 77,
+  "constructions": 25,
+  "exhaustiveScratchChecks": 185,
+  "proofValueEdges": 144,
+  "scopes": 4,
+  "receipts": {
+    "source-gamma-one-function-field-10b-scratch-receipt.json": "5AF3D767A3394701B100CC68733AE6269D9AEE63AF52D88D08C9A3D0B5DE1C87",
+    "source-gamma-one-hecke-field-5-scratch-receipt.json": "33716CDDC0E17FC2B1864D84CE01001A2AB8F7CCA0E056FBDAF5CD113AB48DC9",
+    "source-gamma-one-hecke-picard-2b-scratch-receipt.json": "0A82D7E6B206DC3CA34AF22C2CA6C16E8356AD3AE16A058E41C935F2D5ECA709",
+    "source-gamma-one-arithmetic-9-scratch-receipt.json": "168F5541A452ABB2C66949AE9D421F9DF0555C3927BCFA1C49CED9AC46E32553"
+  },
+  "expectedConsumers": 23951,
+  "expectedConstructions": 2313,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 gates unchanged.",
+  "sourceBodies": "Audited statements, bodies and comments unchanged; only scratch project imports qualified.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_arithmetic_geometry_canonical_8316.py",
+      "sha256": "76E3463EE60343A6F3C4264C7EF8E5756A9B5DDC5ADF0755954348AC20672EA0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_arithmetic_geometry_8316.ps1",
+      "sha256": "9DEACFA24F16E785DDB4E770F923AAD3161512DEB148E3A6F4B3C78971D53172"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_arithmetic_geometry_ownership_8316.py",
+      "sha256": "8836763C5208145DF3A47BE99FA8F953BD2E0BC3BB1A7E23733E35DC769B12F0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_arithmetic_geometry_8316.py",
+      "sha256": "ABB796DC20425218B8BBCF455F18835B35FDE3C81652B45F5576C68EFFEC0AA7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_arithmetic_geometry_global_ownership_8316.py",
+      "sha256": "3E0B4C639030DF316E0CEDA254528DF6EAC46D2054A5C2E7EB233C6FCA59D8E0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_arithmetic_geometry_production_ownership_8316.py",
+      "sha256": "51A11DFA825216F65C08B5203984C991338D516D7AF01C41002799EF554C8DBD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_arithmetic_geometry_scratch_ownership_8316.py",
+      "sha256": "9C634D88370FE3CA3316B46519E86BC41C6CFF9B53241FCCD2B6982319994C81"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_arithmetic_geometry_8316.py",
+      "sha256": "E4C54A6BE4B1188506F95250B88A3364042D2DF1A6AA07AEB44ADC87B1BEFBCA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_arithmetic_geometry_8316.ps1",
+      "sha256": "7AE8B05D9579DDD0689BBC8C54A6D633D52DC20CE11E3BB83BDCE9C63093685F"
+    }
+  ],
+  "productionMutation": false
+}

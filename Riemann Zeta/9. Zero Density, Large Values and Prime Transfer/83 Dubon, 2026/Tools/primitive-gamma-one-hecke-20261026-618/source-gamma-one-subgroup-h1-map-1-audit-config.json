@@ -1,0 +1,26 @@
+{
+  "modules": [
+    "SourceGammaOneSubgroupCohomologyMap"
+  ],
+  "theorems": [
+    "Dubon2026.sourceGammaOneSubgroupH1Iso_hom_eq_map",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_subgroupIso"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.sourceGammaOneSubgroupH1Iso_hom_eq_map",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_subgroupIso"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceGammaOneSubgroupH1Iso_hom_eq_map",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_subgroupIso",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_eq_trace",
+    "Dubon2026.sourceGammaOneCoefficientTrivialIso",
+    "groupCohomology.map_comp"
+  ],
+  "roots": [
+    "Dubon2026.sourceGammaOneSubgroupH1Iso_hom_eq_map",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_subgroupIso"
+  ],
+  "separatelyAxiomChecked": []
+}

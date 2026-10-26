@@ -1,0 +1,97 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T01:50:47.331233+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourcePermutationCoefficientQuotient",
+    "SourceBinaryPrimePowerPermutation",
+    "SourceBinaryPermutationHecke",
+    "SourceBinaryPermutationCongruence",
+    "SourceIntegralBinaryPermutationRealization"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePermutationCoefficientQuotient.lean",
+      "sha256": "8ADA6D97B221B37C7C097523DB6EABE4E4061F4D30D326A3B6E49CEC95A24A95",
+      "oleanSha256": "45CFB96E1FCD76A5765CF032022B30F87D8970A45633CDD69688B8A73743EA0D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPrimePowerPermutation.lean",
+      "sha256": "64D4B11F41FFC30E7D88DF851C3229A11DFE9CA4B6FDE2B4295CB39EF2C4F30B",
+      "oleanSha256": "349AE4092026683189277A1121BDFBDC1943F7FED518F33CEF729536B40A9907"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPermutationHecke.lean",
+      "sha256": "200353FC6BE79050115BE8F768AB96D740DE9D92C6AF4CA4C4BF624D082EE0C8",
+      "oleanSha256": "79E1A86BDAC0DA011B6046AE82C87CA0043FDC2BB970819A0984B29CDBD4BF0F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPermutationCongruence.lean",
+      "sha256": "C9CB7D8C47037CEF003A731809E8C925FCF1A6A698F092CA85056EC67697F8FD",
+      "oleanSha256": "67C8A8CEA1D1E395A40E4A18862E99C3FE08934C95C4E59601823F90E50AC40B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralBinaryPermutationRealization.lean",
+      "sha256": "84048A1E76A885490470F4591925B40E88B1F55DEBC3BF668E0254DEDBA5BB17",
+      "oleanSha256": "B88265A781758371E2A88446FAF195D78CA600C1BC4225FE59E3BCDD4ECDF35D"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceCoefficientPermutationEvaluation_single",
+    "Dubon2026.sourceCoefficientPermutationEvaluation_surjective",
+    "Dubon2026.sourceCoefficientPermutationEvaluation_linearMap",
+    "Dubon2026.sourcePrimePower_six_isUnit",
+    "Dubon2026.sourceBinaryPrimePowerCoefficient_finite",
+    "Dubon2026.sourceBinaryPrimePowerPermutation_finite",
+    "Dubon2026.sourceBinaryPrimePowerPermutation_H1_surjective",
+    "Dubon2026.sourceBinaryPermutationDiagonal_intertwine",
+    "Dubon2026.sourceBinaryPermutationHeckeH1_evaluation",
+    "Dubon2026.sourceBinaryCoefficientRep_congruence",
+    "Dubon2026.sourceBinaryPermutationRep_congruence",
+    "Dubon2026.sourceIntegralBinary_exists_primePowerPermutationRealization",
+    "Dubon2026.sourceCoefficientPermutationRep",
+    "Dubon2026.sourceCoefficientPermutationEvaluation",
+    "Dubon2026.sourceBinaryPermutationHeckeH1"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceCoefficientPermutationEvaluation_single",
+    "Dubon2026.sourceCoefficientPermutationEvaluation_surjective",
+    "Dubon2026.sourceCoefficientPermutationEvaluation_linearMap",
+    "Dubon2026.sourcePrimePower_six_isUnit",
+    "Dubon2026.sourceBinaryPrimePowerCoefficient_finite",
+    "Dubon2026.sourceBinaryPrimePowerPermutation_finite",
+    "Dubon2026.sourceBinaryPrimePowerPermutation_H1_surjective",
+    "Dubon2026.sourceBinaryPermutationDiagonal_intertwine",
+    "Dubon2026.sourceBinaryPermutationHeckeH1_evaluation",
+    "Dubon2026.sourceBinaryCoefficientRep_congruence",
+    "Dubon2026.sourceBinaryPermutationRep_congruence",
+    "Dubon2026.sourceIntegralBinary_exists_primePowerPermutationRealization"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceCoefficientPermutationRep",
+    "Dubon2026.sourceCoefficientPermutationEvaluation",
+    "Dubon2026.sourceBinaryPermutationHeckeH1"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPrimePowerPermutationAudit5.log",
+  "logSha256": "EAF530F028A7E5605CCD4A5249B74DF3FFA29F16C5A844AED34841306A0958B7",
+  "auditSha256": "AC414DD8C953CFDF53F07237FBF37DFC5FECFEC87FD50B387BD7CCA08D660D20",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 18,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 22,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPrimePowerPermutationDependencyAudit5.log",
+  "dependencyAuditSha256": "F4CA9ED9078259625057150C71BCA473D777C86F07460977B3DC8BD94BCEE639",
+  "dependencyAuditSourceSha256": "5490A2A244C4A66D262543C38AFBE2F794CDF7460849D9DBC98E6DB8BC99AB79",
+  "consumers": [
+    "Dubon2026.sourceIntegralBinary_exists_primePowerPermutationRealization"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> compatible prime-power Hecke realizations -> original integral binary H1 as a Hecke-equivariant quotient of finite congruence permutation coefficients",
+  "discharged": "Construct the actual finite permutation coefficient module modulo every positive power of every prime greater than three, prove evaluation surjectivity on the original native binary H1 and exact compatibility with original prime Hecke transforms, and prove that the principal congruence subgroup acts trivially. Every degree and original integral class is retained.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The preimage class is not asserted to be an eigenvector. A compatible family of finite-level Hecke specializations with an actual geometric Galois realization is still needed; neither the characteristic-zero point nor all-weight association follows from this quotient alone. Required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain open. The route assessment is a mathematical inference using local proved results, not an external claim of a completed alternative construction. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-binary-prime-power-permutation-5-reuse-review-20261025.json",
+  "reuseReviewSha256": "842253E7A97C1AAE39CFAE7EB8165F8F33145A9B47B0225A1BFE3DBCF1EDBDE5",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

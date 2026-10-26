@@ -1,0 +1,478 @@
+{
+  "recordedUTC": "2026-10-26T02:08:18.228946+00:00",
+  "sourceReview": "Exact primary-source contracts reviewed; source snapshots are non-executable text. No external build reproduced.",
+  "files": [
+    {
+      "path": "Tools/reuse-20261025-579/additional-weight-contract-snapshots.json",
+      "sha256": "B2939CAEFB0B5801F6FC1BB166F391958FD7E91C9BEA77AC2CCD7EB3AC3AEE1D",
+      "bytes": 2487
+    },
+    {
+      "path": "Tools/reuse-20261025-579/anr-false__anr-false.github.io-commit.json",
+      "sha256": "EFDE5335A6393C7D25846DE4F2A860C5C3627D84B07B87933F8C6C322BE958F6",
+      "bytes": 9055
+    },
+    {
+      "path": "Tools/reuse-20261025-579/anr-false__anr-false.github.io-repo.json",
+      "sha256": "95637D54BB5DA29A94DDB76F3901B835BB0456EFF388226B38CF2109DA485211",
+      "bytes": 18749
+    },
+    {
+      "path": "Tools/reuse-20261025-579/anr-false__anr-false.github.io-tree.json",
+      "sha256": "CC502FED4882579BDFE847FDC49468A00E9E0EACC85F992E9E32FB978F5DB511",
+      "bytes": 45869
+    },
+    {
+      "path": "Tools/reuse-20261025-579/anthropics__fermats-last-theorem/LICENSE.txt",
+      "sha256": "746BC52848EABF8765635FE532E0680756A10B18E7B3FB26E7433AB4EDF34034",
+      "bytes": 11345
+    },
+    {
+      "path": "Tools/reuse-20261025-579/anthropics__fermats-last-theorem/P2M/Sol/S_CuspForm_exists_galoisRep_of_point.lean.txt",
+      "sha256": "E922C5B4816F8DDC33B2DB36BC416474F3AC9AF7B5BBD3CE1F0BA19D2AED8A2E",
+      "bytes": 34910
+    },
+    {
+      "path": "Tools/reuse-20261025-579/anthropics__fermats-last-theorem/P2M/Sol/S_CuspForm_IsEigenformWith_exists_galoisRepAdic_charpoly_frobenius_eq_and_isUnramifiedAt.lean.txt",
+      "sha256": "F7681C9388F07C1CB3631D4EEB48EE0A94A07F30AA24293FF55A299267D7A2DE",
+      "bytes": 49517
+    },
+    {
+      "path": "Tools/reuse-20261025-579/anthropics__fermats-last-theorem/P2M/Sol/S_CuspForm_IsNormalizedEigenform_exists_galoisRepAdic_charpoly_frobenius_eq_of_ringHom_integralClosure.lean.txt",
+      "sha256": "04D2F9A1A54574B14350DFA807340CA975C9EB92DCA2650B6D684810BDAAD374",
+      "bytes": 36564
+    },
+    {
+      "path": "Tools/reuse-20261025-579/anthropics__fermats-last-theorem/P2M/Sol/S_CuspForm_IsNormalizedEigenform_exists_galoisRepAdic_frobenius_quadratic.lean.txt",
+      "sha256": "8574FECF5CD946B041586B7DD5C62C63EE3C06D3938AF479A2E6B4D49C24A2AD",
+      "bytes": 53090
+    },
+    {
+      "path": "Tools/reuse-20261025-579/anthropics__fermats-last-theorem/P2M/Sol/S_groupCohomology_exists_localDualityPackage_res_dualTwist_extArithLoc.lean.txt",
+      "sha256": "9A09118F4F05774FA693BBAB46733D2BC9B7EEFCF2A11F574CB1A9308BFD9DDB",
+      "bytes": 8814
+    },
+    {
+      "path": "Tools/reuse-20261025-579/anthropics__fermats-last-theorem/P2M/Sol/S_PDivisibleGroup_exists_basis_padicComplex_tateModule_eq_cyclotomicCharacter_pow_smul_of_hasDimension_of_ringOfIntegers.lean.txt",
+      "sha256": "330B48554E7E4B4B65E189837427074666621FB42B6F18E1A525E0F5980B6C2B",
+      "bytes": 54613
+    },
+    {
+      "path": "Tools/reuse-20261025-579/anthropics__fermats-last-theorem-commit.json",
+      "sha256": "B2A6D52465051299FECE8F9184D352C785393B462C54753C908603C13767C2C2",
+      "bytes": 6861
+    },
+    {
+      "path": "Tools/reuse-20261025-579/anthropics__fermats-last-theorem-repo.json",
+      "sha256": "32948A32F5A17B8A494F8471F01B2E8353C65D84D454122D65D0FF8DD54320CB",
+      "bytes": 7934
+    },
+    {
+      "path": "Tools/reuse-20261025-579/anthropics__fermats-last-theorem-tree.json",
+      "sha256": "A862CB2CA25B3C8B409BF9287600ACEE254B1AC534534302F9C8B1191D4628F7",
+      "bytes": 17793339
+    },
+    {
+      "path": "Tools/reuse-20261025-579/Dubon Reuse Search 2026-10-25 All-Weight.md",
+      "sha256": "287D280F3B3D04287A98234F80BB21EB9BD64116541A2DA6D3A5B7E3DC970F0D",
+      "bytes": 8820
+    },
+    {
+      "path": "Tools/reuse-20261025-579/fetch_reuse_candidates_579.py",
+      "sha256": "4233968113446D57917901E6EAE18BF849B4F3CEEF54DD75844174FCCC3C2235",
+      "bytes": 1372
+    },
+    {
+      "path": "Tools/reuse-20261025-579/fetch_reuse_comparison_579.py",
+      "sha256": "1EB157C5FB7CC076FFC2AC0D38226EBA22C172D8ED6F3EFC9CB1A3F704E89D32",
+      "bytes": 3056
+    },
+    {
+      "path": "Tools/reuse-20261025-579/fetch_reuse_refresh_579.py",
+      "sha256": "6D1FA0048C1A173FB84B0FA80339B230B72E465F21A36EC8B4BA01D03FD1BBD1",
+      "bytes": 1032
+    },
+    {
+      "path": "Tools/reuse-20261025-579/fetch_reuse_sources_579.py",
+      "sha256": "5EC44E1423937C76B577D33B091660951FCF26F665CDF3CB35D3D7624066D4DE",
+      "bytes": 1796
+    },
+    {
+      "path": "Tools/reuse-20261025-579/fetch_reuse_weight_contracts_579b.py",
+      "sha256": "D22EB255CC5E1AD1B28CB080887C930338BBFB7C05BCA57E3E09A9FBF6634C58",
+      "bytes": 1632
+    },
+    {
+      "path": "Tools/reuse-20261025-579/ImperialCollegeLondon__FLT/FLT/Assumptions/README.md.txt",
+      "sha256": "BEB73DE70DB6EF774D68F0B8C9267AA204291B6C33B1240DAB2D7FBB3E41163C",
+      "bytes": 2956
+    },
+    {
+      "path": "Tools/reuse-20261025-579/ImperialCollegeLondon__FLT/FLT/GaloisRepresentation/Automorphic.lean.txt",
+      "sha256": "9C3F7BF25E60253BFBA5C93F5352B5DE56FCFE2CB682B3293036D6E45CBB702F",
+      "bytes": 9237
+    },
+    {
+      "path": "Tools/reuse-20261025-579/ImperialCollegeLondon__FLT/FLT/GaloisRepresentation/HardlyRamified/Lift.lean.txt",
+      "sha256": "09A5D45E5E88C5AEF7CA792A65E5EFFC3508DE679A37275A99FB0096FD4AEDE2",
+      "bytes": 1785
+    },
+    {
+      "path": "Tools/reuse-20261025-579/ImperialCollegeLondon__FLT/lake-manifest.json.txt",
+      "sha256": "24AAC77AEF584483C8DEF1E0AA39C00758CA5C8369BD50E6FB583875C45EC909",
+      "bytes": 3467
+    },
+    {
+      "path": "Tools/reuse-20261025-579/ImperialCollegeLondon__FLT/lean-toolchain.txt",
+      "sha256": "CA5F1F601D34C49079E38D7E7041EB0F2A9C227FBC1DF0F404820069A052330C",
+      "bytes": 25
+    },
+    {
+      "path": "Tools/reuse-20261025-579/ImperialCollegeLondon__FLT/README.md.txt",
+      "sha256": "8AC92E43DBC3054CB9CB1897ABF5C0AE17EAC07D560B152DDC1D1CF143271347",
+      "bytes": 1764
+    },
+    {
+      "path": "Tools/reuse-20261025-579/ImperialCollegeLondon__FLT-commit.json",
+      "sha256": "21F2EE3359B22F1869478B99835EF8CFF8F783140501B8E1EDF6A3EDA84366CE",
+      "bytes": 20664
+    },
+    {
+      "path": "Tools/reuse-20261025-579/ImperialCollegeLondon__FLT-repo.json",
+      "sha256": "D917BB3F85514FD0602A5FDDDEE422CDDF965EA368A7F23772A9D83361F71BEE",
+      "bytes": 7709
+    },
+    {
+      "path": "Tools/reuse-20261025-579/ImperialCollegeLondon__FLT-tree.json",
+      "sha256": "E6E3A0F76041EE94E6964F9498702F7647AE7C2B2F85B43CA9B7A49EBCFC9392",
+      "bytes": 170328
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson/lean/blueprint.md.txt",
+      "sha256": "FDAF789BE9E9C22867F0B811CCB6DADF820F0B2238912AA75B9CC91B6C3E9438",
+      "bytes": 8756
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson/lean/claims.yaml.txt",
+      "sha256": "9CABC96AA7E72FECDD014CE9FD0444DE2EA695AB2335F9A325EFCE7D0DDD73D4",
+      "bytes": 6779
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson/lean/lake-manifest.json.txt",
+      "sha256": "3332C6E982CBB71780D39FECE50B1F19EA1C76D5E210F4A91B612350542882CB",
+      "bytes": 3232
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson/lean/lakefile.lean.txt",
+      "sha256": "860EB7839B3BA8C00C47DC8FA44BF8D2CAF895146298E89CCBD365E9146624E9",
+      "bytes": 237
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson/lean/lean-toolchain.txt",
+      "sha256": "D38B3C8975389EEEA5115EA3C4E3875929E8F3CAB9A1B6486C0E7ABD6A2C976B",
+      "bytes": 26
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson/lean/Main.lean.txt",
+      "sha256": "3691637FCD68632A984BCA63A7EED9ADA0E3C205539DCBF98361D7CC6D5CE63F",
+      "bytes": 96
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson/lean/RamanujanPetersson/Autoformalized.lean.txt",
+      "sha256": "43002778095C1014CA56A9D0138EEF75FE0C7E7AF77E7F24D83C2ACD7FEDD382",
+      "bytes": 946
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson/lean/RamanujanPetersson/Basic.lean.txt",
+      "sha256": "B0B517FFA9CF700F24295BC1A3D33053A1D43F5C65AC9EDD5A15823B494D96C0",
+      "bytes": 144
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson/lean/RamanujanPetersson/Corollary53.lean.txt",
+      "sha256": "963E604541E50C2D4639F4531ACD896C3237AC4FCA2D29D6F6401CDBA87FB250",
+      "bytes": 2114
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson/lean/RamanujanPetersson/Corollary53Coprime.lean.txt",
+      "sha256": "E8A4F550046093AEF40AEE0B0F9397998AB028454DC4BDC9DD99A3EDA9E85B7C",
+      "bytes": 1960
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson/lean/RamanujanPetersson/PaperFaithfulCore.lean.txt",
+      "sha256": "331FED02A275A72C1739BDF29B4A12AC1988E823F80C7961125C883994BEFF90",
+      "bytes": 6573
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson/lean/RamanujanPetersson/PaperInterfaces.lean.txt",
+      "sha256": "D2BA954D99D28153BA02038C5CB18C9F3D1D17414C86BB9191306BBFC2A8D302",
+      "bytes": 7203
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson/lean/RamanujanPetersson/Theorem21.lean.txt",
+      "sha256": "70D5DA85BC65CCDC8B770DB86DF1D61FF46CC9354BFF09285E2613D15E612285",
+      "bytes": 1057
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson/lean/RamanujanPetersson/Theorem31.lean.txt",
+      "sha256": "02483C5E1ACB15FA6C91C4C55FF19A6F9E4025F2AFEAC6EE69CCCA829D3B3391",
+      "bytes": 1360
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson/lean/RamanujanPetersson/Theorem41.lean.txt",
+      "sha256": "97CF956F7499C68AE5CB24C92B33658D3296073FC9F4765E00A537AAEFD0787A",
+      "bytes": 870
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson/lean/RamanujanPetersson.lean.txt",
+      "sha256": "A98F8108AEC2C7AF222B68DEBFD2AE5B09C07C912656142E26D5325843990583",
+      "bytes": 365
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson/lean/README.md.txt",
+      "sha256": "4A6436422182D9BF12B2F6E86DDE003313D251D22F2B68EB07B42BB0542CEFFA",
+      "bytes": 1220
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson/ramanujan-petersson.md.txt",
+      "sha256": "5029301AED32152B44D81B695BF9864381D6C3B2950246A364B135974958BBF7",
+      "bytes": 15860
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson/README.md.txt",
+      "sha256": "C49F95555939039C658AF6EBC82F895DD1094FA3CB42C787DB3F133AE671F784",
+      "bytes": 2496
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson-commit.json",
+      "sha256": "8B64ED5769A89FE33862998FDF41B4028652D839B6545C3D9611E137848828D1",
+      "bytes": 6967
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson-repo.json",
+      "sha256": "40EF96763328BAE388CFC4F2EBA5C4D4D77A523624F3F4F7CCDBB37832E4B53C",
+      "bytes": 6171
+    },
+    {
+      "path": "Tools/reuse-20261025-579/lioristhmus__ramanujan-petersson-tree.json",
+      "sha256": "BFD7E0D8ECD3E4662EBE564FB43C7F94074A8785FC60935E151C6B22EB307CAC",
+      "bytes": 7130
+    },
+    {
+      "path": "Tools/reuse-20261025-579/mkaratarakis__CICM24_Deligne/Frobenius.lean.txt",
+      "sha256": "71BAF583DAA4582E863C5D54A000A4904166E8E8E7D7DB7A4B8B3D5457A01EF6",
+      "bytes": 14408
+    },
+    {
+      "path": "Tools/reuse-20261025-579/mkaratarakis__CICM24_Deligne/GaloisReps.lean.txt",
+      "sha256": "58354F0F592EE31A7B8067BC55E23AB0EEFDA76607EF133D4AA203529553DD24",
+      "bytes": 1061
+    },
+    {
+      "path": "Tools/reuse-20261025-579/mkaratarakis__CICM24_Deligne/README.md.txt",
+      "sha256": "993C8BF5FC6483EEFD6E52EAEA5324686368F77110873AF6947E7AF9F09A71A9",
+      "bytes": 1479
+    },
+    {
+      "path": "Tools/reuse-20261025-579/mkaratarakis__CICM24_Deligne/Statement.lean.txt",
+      "sha256": "B8FE25AFFFFA94ED2F832A6479AAE45BD60291A06D84E1E9CC609311A78B10E9",
+      "bytes": 7748
+    },
+    {
+      "path": "Tools/reuse-20261025-579/mkaratarakis__CICM24_Deligne-commit.json",
+      "sha256": "35399B3A1374D74571FAF3DB1A2DB6564DADA896C2C918FCB44AFFD69B5E823E",
+      "bytes": 6368
+    },
+    {
+      "path": "Tools/reuse-20261025-579/mkaratarakis__CICM24_Deligne-repo.json",
+      "sha256": "D37D39572AC8AAE7DB41CD018B121C509E8C3965875B0879637A2F0C12D49116",
+      "bytes": 6011
+    },
+    {
+      "path": "Tools/reuse-20261025-579/mkaratarakis__CICM24_Deligne-tree.json",
+      "sha256": "194ABC017DB369E17159B3C5D7346010427E78716C8C706E87678BE4C89BDAC9",
+      "bytes": 1412
+    },
+    {
+      "path": "Tools/reuse-20261025-579/mkaratarakis__Deligne/leanpkg.path.txt",
+      "sha256": "E214FCBB95BFEF7E2F28D911CE424A68DB52ECC1E9F5BA82ACB80A8FEE444A8A",
+      "bytes": 54
+    },
+    {
+      "path": "Tools/reuse-20261025-579/mkaratarakis__Deligne/leanpkg.toml.txt",
+      "sha256": "CCB25F1FEBA0E0D8E29DD506982AE87D6DD651760A8AE92745C7844DA972BFAA",
+      "bytes": 239
+    },
+    {
+      "path": "Tools/reuse-20261025-579/mkaratarakis__Deligne/README.md.txt",
+      "sha256": "3C4AEC766590B497E6214E239263F553129D769E7BE9BCAEE2552A0BEB2A48BC",
+      "bytes": 1777
+    },
+    {
+      "path": "Tools/reuse-20261025-579/mkaratarakis__Deligne/src/galois_representations.lean.txt",
+      "sha256": "0FF0818DB1BA068A52BDB5022DB9CDC286547D0759D79D093D19BBC90FF604EE",
+      "bytes": 636
+    },
+    {
+      "path": "Tools/reuse-20261025-579/mkaratarakis__Deligne/src/ramification.lean.txt",
+      "sha256": "6CD256A9A104E2AA70D6E73DBE33E6C2D8CC5B620780EC2441A38726294C6EE9",
+      "bytes": 8944
+    },
+    {
+      "path": "Tools/reuse-20261025-579/mkaratarakis__Deligne-commit.json",
+      "sha256": "3C16A681B0D5D96C2AD66AE4E2837EB7FE4DE72AB054BAEA56C2A8C3519EFE22",
+      "bytes": 6437
+    },
+    {
+      "path": "Tools/reuse-20261025-579/mkaratarakis__Deligne-repo.json",
+      "sha256": "D19A1CAEDCC563126DEB2D6F72D0450027814ED82322A35D32B5FAD7623E98B7",
+      "bytes": 5701
+    },
+    {
+      "path": "Tools/reuse-20261025-579/mkaratarakis__Deligne-tree.json",
+      "sha256": "2BD4074C7D08263AAA5B1CF00F9391802B957C70EFD06ED019F698337CAD39F9",
+      "bytes": 1943
+    },
+    {
+      "path": "Tools/reuse-20261025-579/n-yamaguchi-0729__NYLL/Nyll/SawinTotallyRealTowers/UnramifiedProPRelationRank/Radical/FinitePlaceCyclotomicLocalDuality.lean.txt",
+      "sha256": "782FE994926EBB6072FC9B3317BE569BD91B4D4747180AD44C7D2B6FF44C2A15",
+      "bytes": 6766
+    },
+    {
+      "path": "Tools/reuse-20261025-579/n-yamaguchi-0729__NYLL/Nyll/ValuedFieldTheory/Valuation/Subring/Residue/WittVectorValuationSubringResidueFieldEquiv.lean.txt",
+      "sha256": "62387B96B5D7518556C8ACD5AEF60AEE0DEC85E3022D343044A25DBEBBC4CD7C",
+      "bytes": 10554
+    },
+    {
+      "path": "Tools/reuse-20261025-579/n-yamaguchi-0729__NYLL-commit.json",
+      "sha256": "396431609C8273465517C0AEBEF3727C7BF8543821D03F32176814201D4557E6",
+      "bytes": 11753
+    },
+    {
+      "path": "Tools/reuse-20261025-579/n-yamaguchi-0729__NYLL-repo.json",
+      "sha256": "BF4B020FE3E73B1095C8E2E353F919096AEA5FB48060C6193BFE756E17AAF72A",
+      "bytes": 6160
+    },
+    {
+      "path": "Tools/reuse-20261025-579/n-yamaguchi-0729__NYLL-tree.json",
+      "sha256": "A87635111517891F90176E108B43750D66486CF40F8BD54B8D3542DA5A8F7653",
+      "bytes": 4294455
+    },
+    {
+      "path": "Tools/reuse-20261025-579/primary-git-blob-verification.json",
+      "sha256": "67AA992653712CF15B3D6F15C5F098CE5E879D9AC7DAA5FE4D41657399A52753",
+      "bytes": 7202
+    },
+    {
+      "path": "Tools/reuse-20261025-579/primary-source-snapshots.json",
+      "sha256": "DD98C2DFE9BF8C22791F6C4215C8AC31307889A3099BA18F039DF6CA1C9CD272",
+      "bytes": 21079
+    },
+    {
+      "path": "Tools/reuse-20261025-579/refresh-source-snapshots.json",
+      "sha256": "7FF71601D2C00D24BE7A08394AE127B2503BE09C0359B75C99B3D38E0F2CE826",
+      "bytes": 8336
+    },
+    {
+      "path": "Tools/reuse-20261025-579/reuse-assessment.json",
+      "sha256": "45998D56121780CD7DE57F081EE08E5A9B216A0CD77D36FBD80EC351E12595ED",
+      "bytes": 3639
+    },
+    {
+      "path": "Tools/reuse-20261025-579/roed314__gq2/formalizations/axioms/index.html.txt",
+      "sha256": "1B3705208794F97D33D31D859B09671705B11C48F2838352499E0CC1F67060F2",
+      "bytes": 491303
+    },
+    {
+      "path": "Tools/reuse-20261025-579/roed314__gq2-commit.json",
+      "sha256": "79B5793EE256580D2F1CD86DDDB05E5C6C3B4C7F55ADF415664561B05C71B604",
+      "bytes": 4972
+    },
+    {
+      "path": "Tools/reuse-20261025-579/roed314__gq2-repo.json",
+      "sha256": "BD8620F8667E1570B13113E5F99422203B90029A2FD731751340AF3D4E479DFA",
+      "bytes": 5549
+    },
+    {
+      "path": "Tools/reuse-20261025-579/roed314__gq2-tree.json",
+      "sha256": "4CB7DDAC33DFDD557AD5E157C34304D8487439A5B4A94687F4955805C437E3E0",
+      "bytes": 1430297
+    },
+    {
+      "path": "Tools/reuse-20261025-579/tianyipeng__fermats-last-theorem/Definitions/Def_CuspForm_HeckeGaloisRepDatum.lean.txt",
+      "sha256": "EC45C4013D6EB69BF9E76A13EBEEAB9D7E976E59640DA8AF7F40A3EE04913D91",
+      "bytes": 1635
+    },
+    {
+      "path": "Tools/reuse-20261025-579/tianyipeng__fermats-last-theorem/Definitions/Def_GaloisRep_DeligneOrdinaryShape.lean.txt",
+      "sha256": "DB6F387DEFD528D1ABED13CD80C8B3253623504DFF186F5A57E51655B594D33D",
+      "bytes": 738
+    },
+    {
+      "path": "Tools/reuse-20261025-579/tianyipeng__fermats-last-theorem/LICENSE.txt",
+      "sha256": "746BC52848EABF8765635FE532E0680756A10B18E7B3FB26E7433AB4EDF34034",
+      "bytes": 11345
+    },
+    {
+      "path": "Tools/reuse-20261025-579/tianyipeng__fermats-last-theorem/P2M/Sol/S_CuspForm_exists_galoisRep_of_point.lean.txt",
+      "sha256": "E922C5B4816F8DDC33B2DB36BC416474F3AC9AF7B5BBD3CE1F0BA19D2AED8A2E",
+      "bytes": 34910
+    },
+    {
+      "path": "Tools/reuse-20261025-579/tianyipeng__fermats-last-theorem/P2M/Sol/S_CuspForm_exists_galoisRep_of_point_stableLine_frobenius_sub_smul_mem_of_not_dvd.lean.txt",
+      "sha256": "BFB0D5353ABA30FC051348CD0962711C6B0ABC479321B22084ACE75CC72555DF",
+      "bytes": 30631
+    },
+    {
+      "path": "Tools/reuse-20261025-579/tianyipeng__fermats-last-theorem/P2M/Sol/S_CuspForm_exists_galoisRep_of_point_tateModule_jZero_quotient.lean.txt",
+      "sha256": "5B154C1026951AAF934B640BBC8E494F8D1D0B828666D6F87F2A384058EA375A",
+      "bytes": 37245
+    },
+    {
+      "path": "Tools/reuse-20261025-579/tianyipeng__fermats-last-theorem/P2M/Sol/S_PDivisibleGroup_exists_basis_padicComplex_tateModule_eq_cyclotomicCharacter_pow_smul_of_hasDimension_of_ringOfIntegers.lean.txt",
+      "sha256": "330B48554E7E4B4B65E189837427074666621FB42B6F18E1A525E0F5980B6C2B",
+      "bytes": 54613
+    },
+    {
+      "path": "Tools/reuse-20261025-579/tianyipeng__fermats-last-theorem/README.md.txt",
+      "sha256": "0FCDF6AFA3426EA60BEF8C5E21CBABAF59ECF90F20CE3982471CB46CA6DC78FF",
+      "bytes": 8416
+    },
+    {
+      "path": "Tools/reuse-20261025-579/tianyipeng__fermats-last-theorem/Theorems/Thm_CuspForm_exists_galoisRep_of_point.lean.txt",
+      "sha256": "8119FE2ED0B7EF1A03CDC778E16ECB458ABC4F4EB151214D5D3EA8CA8CFAE127",
+      "bytes": 28302
+    },
+    {
+      "path": "Tools/reuse-20261025-579/tianyipeng__fermats-last-theorem/Theorems/Thm_CuspForm_exists_galoisRep_of_point_stableLine_frobenius_sub_smul_mem_of_not_dvd.lean.txt",
+      "sha256": "3BED2984E3BD5CC4A2E94ABB8C5C7F30BA65C60242712145C89019FA58FB5339",
+      "bytes": 29390
+    },
+    {
+      "path": "Tools/reuse-20261025-579/tianyipeng__fermats-last-theorem/Theorems/Thm_CuspForm_exists_galoisRep_of_point_tateModule_jZero_quotient.lean.txt",
+      "sha256": "1F6BED08377524AAD2F1DBDDE66A88BF783BEAE991128D06E74ABC4CE6272DAF",
+      "bytes": 25395
+    },
+    {
+      "path": "Tools/reuse-20261025-579/tianyipeng__fermats-last-theorem-commit.json",
+      "sha256": "02528FEC0813385A6BF213ACC3EA01C89604F713536C2DBE4C6063E31CCCFD7C",
+      "bytes": 9689
+    },
+    {
+      "path": "Tools/reuse-20261025-579/tianyipeng__fermats-last-theorem-repo.json",
+      "sha256": "8A2EB149A09F8F6B2C5AEF35A49E786F6897BDE7745AF226F32F07DEAF6101F0",
+      "bytes": 19437
+    },
+    {
+      "path": "Tools/reuse-20261025-579/tianyipeng__fermats-last-theorem-tree.json",
+      "sha256": "CA179D0991D9BAAA52CAF4801113C1BF93B58CF44C658341DC59224B2F48CED5",
+      "bytes": 17793794
+    }
+  ],
+  "report": {
+    "path": "Dubon Reuse Search 2026-10-25 All-Weight.md",
+    "sha256": "287D280F3B3D04287A98234F80BB21EB9BD64116541A2DA6D3A5B7E3DC970F0D"
+  },
+  "unchangedAcceptance": "16/20; DUB-17--20 OPEN.",
+  "pinsChanged": false,
+  "proofLimitsChanged": false
+}

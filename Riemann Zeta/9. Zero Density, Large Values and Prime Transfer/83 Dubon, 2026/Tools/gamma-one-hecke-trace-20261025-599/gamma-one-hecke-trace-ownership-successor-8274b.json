@@ -1,0 +1,35 @@
+{
+  "reason": "Original comparator stopped because a generated Chinese-remainder theorem is owned by Mathlib in the production import environment. A fresh scratch/production probe proves its type and value hashes identical and axioms standard. The second generated name was already audited in the previous scope. No mathematical source changed, no theorem excluded, and no used audit rerun.",
+  "frozen": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_hecke_trace_ownership_8274.py",
+      "sha256": "AB7E62B7967C2091C9DA94F39B348321DF6D4B8E5E14F1BD66DAEFE48BF54521"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-trace-ownership-diagnostic-8274b.json",
+      "sha256": "91AD59D1E199FEC4EC3EA650EE41060724647F5D00F1D892F7863549F8593D45"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceGeneratedRetention8274b.lean",
+      "sha256": "9EEB2879DCE6E5D2E8C28C8588FCFDAA5B5D294AC848B26EDE24C6BA348E50BE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceGeneratedRetention8274b.log",
+      "sha256": "0FACD89C5CE05FAB67AA1C455C3CDEB3DE849B77374646271A091F044FB527C3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchRetention8274b.lean",
+      "sha256": "A649D8A7692983446BDC7609132E8BD806C84D3D09A2D7862160A34C9E0D8CA5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceScratchRetention8274b.log",
+      "sha256": "1A40EC0FA330A1426439BF7D7A9B0D558425145D35FF6283BFC6664DDFD77D22"
+    }
+  ],
+  "successors": [
+    "compare_gamma_one_hecke_trace_ownership_8274b.py",
+    "record_source_gamma_one_hecke_trace_8274b.py",
+    "prepare_gamma_one_hecke_trace_global_ownership_8274b.py",
+    "verify_gamma_one_hecke_trace_8274b.ps1"
+  ]
+}

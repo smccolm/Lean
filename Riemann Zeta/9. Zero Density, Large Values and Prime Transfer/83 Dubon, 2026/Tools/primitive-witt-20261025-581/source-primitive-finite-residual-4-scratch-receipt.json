@@ -1,0 +1,69 @@
+{
+  "recordedUTC": "2026-10-26T00:23:39.192787+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceFiniteResidualCoefficientField",
+    "SourceResidualCoefficientDeterminant",
+    "SourceFiniteResidualArithmeticDescent",
+    "SourcePrimitiveFiniteResidualGalois"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteResidualCoefficientField.lean",
+      "sha256": "BDFB8AF8A46FA7649D795082C89F1A2679DB241E219C819A3701E463062B8DA4",
+      "oleanSha256": "67B41ED61EBA75227DB71347C673B549399EA2F7447C79E6AA3A8D56FE664972"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualCoefficientDeterminant.lean",
+      "sha256": "C28D8B7966C5E646612E6415FAF4067C0C08708FA8C6A5B65C9AC556AF2D9CB4",
+      "oleanSha256": "1A6837C9BF6A19A33A95DDAA558310D11E0FF979F73E692286A2E6F4CC5B97C3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteResidualArithmeticDescent.lean",
+      "sha256": "96B20A02780C229FAA29F3E1249911BA5F0C0964E4C13B1C2F9DF318D6F3718C",
+      "oleanSha256": "4C93912781A05E4460BFFCD7B376914115910BEC81232C68CFA3F8F1B4B55156"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteResidualGalois.lean",
+      "sha256": "1A6B2986FABC3D6921A63341F890E586DF73E1E99777185E70C061CFB39C38C3",
+      "oleanSha256": "690C02E544B14F62BB02DA334F216C40D5F15BD927CFE85251FF753F20CF1AE7"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceFiniteImage_exists_finiteCoefficientField",
+    "Dubon2026.sourceArithmeticCyclotomicUnitCharacter_coefficient_map",
+    "Dubon2026.sourceArithmetic_cyclotomic_determinant_coefficient_descent",
+    "Dubon2026.sourceArithmetic_exists_finiteCoefficient_realization",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_finiteResidualGalois_charP"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceFiniteImage_exists_finiteCoefficientField",
+    "Dubon2026.sourceArithmeticCyclotomicUnitCharacter_coefficient_map",
+    "Dubon2026.sourceArithmetic_cyclotomic_determinant_coefficient_descent",
+    "Dubon2026.sourceArithmetic_exists_finiteCoefficient_realization",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_finiteResidualGalois_charP"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteResidualAudit4.log",
+  "logSha256": "C7256D9DBF2B2B74F85A8CD06337177C7DE93CA807B6716239A290207D68BAD9",
+  "auditSha256": "EBA74FA91A696C132DA1A8FD0F7AFD8506A366AAEE3175B25B04DC2B126D4783",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 5,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 11,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteResidualDependencyAudit4.log",
+  "dependencyAuditSha256": "613A33C9156B4DDA8862C65FC20EE69388CA033AAAE8F4AD3887C4AFDAF8143E",
+  "dependencyAuditSourceSha256": "18A82C26D04751ADD4C0E7186672CC681E4D34C79E66ED51B30535EA1C1BA96E",
+  "consumers": [
+    "Dubon2026.sourcePrimitive_exists_originalSupport_finiteResidualGalois_charP"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual residual deformation input over a finite coefficient field -> descend the same original all-weight residual matrices and exact local/global identities",
+  "discharged": "The original primitive form, weight at least two and prescribed prime supply an actual finite coefficient field of that characteristic and continuous original-support representation. Its global determinant is the original cyclotomic power k-1, its determinant at genuine complex conjugation is minus one, its Frobenius traces are the original coefficient reductions, and its good-prime inertia is trivial. Finiteness, coefficient-field descent and compatibility are derived.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. All-weight adic realization and required local, image and regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. The finite-field result is an input to deformation theory, not an automorphy or analytic conclusion. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-finite-residual-4-reuse-review-20261025.json",
+  "reuseReviewSha256": "FAC2BCE8012B300A2E3B2D87413F36CC73A1184FDEC294E43A41FDE9193006C1",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

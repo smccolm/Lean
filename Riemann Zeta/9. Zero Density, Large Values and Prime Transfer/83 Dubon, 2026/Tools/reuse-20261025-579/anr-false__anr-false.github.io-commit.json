@@ -1,0 +1,125 @@
+{
+  "sha": "c9614f87db96569a2e754030ad0142a406eeb87b",
+  "node_id": "C_kwDORwSnZ9oAKGM5NjE0Zjg3ZGI5NjU2OWEyZTc1NDAzMGFkMDE0MmE0MDZlZWI4N2I",
+  "commit": {
+    "author": {
+      "name": "Riccardo Brasca",
+      "email": "riccardo.brasca@gmail.com",
+      "date": "2026-10-09T08:20:50Z"
+    },
+    "committer": {
+      "name": "Riccardo Brasca",
+      "email": "riccardo.brasca@gmail.com",
+      "date": "2026-10-09T08:20:50Z"
+    },
+    "message": "Add Yacine Benmeuraiem as PhD student and list advisors\n\nAdd Yacine Benmeuraiem (ENS de Lyon) to the PhD students, record the\nadvisors and university of both PhD students, lay out the PhD students\nin two columns like the team members, and mention Yacine in the news.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01KbtGWCQjUQoTtyVbVfecMA",
+    "tree": {
+      "sha": "906df94f6642caf4522077e1ad30181ea61949b6",
+      "url": "https://api.github.com/repos/ANR-FALSE/ANR-FALSE.github.io/git/trees/906df94f6642caf4522077e1ad30181ea61949b6"
+    },
+    "url": "https://api.github.com/repos/ANR-FALSE/ANR-FALSE.github.io/git/commits/c9614f87db96569a2e754030ad0142a406eeb87b",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgzIkUkbfsKKpEEOseMxBDdzR4Io\nQEqGRm4veCk9q2IGgAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQM8iTPv7ONuzvYbNBigfAGgltgGuoPtO3D2WrnN70/1NN9+ueKwzHEVKnxW8CnGb5R\n7mhGUlIlEpwevgpaTvtQs=\n-----END SSH SIGNATURE-----",
+      "payload": "tree 906df94f6642caf4522077e1ad30181ea61949b6\nparent 1a3c8989bae619861e3e78383d6a064baac98923\nauthor Riccardo Brasca <riccardo.brasca@gmail.com> 1791534050 +0200\ncommitter Riccardo Brasca <riccardo.brasca@gmail.com> 1791534050 +0200\n\nAdd Yacine Benmeuraiem as PhD student and list advisors\n\nAdd Yacine Benmeuraiem (ENS de Lyon) to the PhD students, record the\nadvisors and university of both PhD students, lay out the PhD students\nin two columns like the team members, and mention Yacine in the news.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01KbtGWCQjUQoTtyVbVfecMA\n",
+      "verified_at": "2026-10-09T08:20:53Z"
+    }
+  },
+  "url": "https://api.github.com/repos/ANR-FALSE/ANR-FALSE.github.io/commits/c9614f87db96569a2e754030ad0142a406eeb87b",
+  "html_url": "https://github.com/ANR-FALSE/ANR-FALSE.github.io/commit/c9614f87db96569a2e754030ad0142a406eeb87b",
+  "comments_url": "https://api.github.com/repos/ANR-FALSE/ANR-FALSE.github.io/commits/c9614f87db96569a2e754030ad0142a406eeb87b/comments",
+  "author": {
+    "login": "riccardobrasca",
+    "id": 32490532,
+    "node_id": "MDQ6VXNlcjMyNDkwNTMy",
+    "avatar_url": "https://avatars.githubusercontent.com/u/32490532?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/riccardobrasca",
+    "html_url": "https://github.com/riccardobrasca",
+    "followers_url": "https://api.github.com/users/riccardobrasca/followers",
+    "following_url": "https://api.github.com/users/riccardobrasca/following{/other_user}",
+    "gists_url": "https://api.github.com/users/riccardobrasca/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/riccardobrasca/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/riccardobrasca/subscriptions",
+    "organizations_url": "https://api.github.com/users/riccardobrasca/orgs",
+    "repos_url": "https://api.github.com/users/riccardobrasca/repos",
+    "events_url": "https://api.github.com/users/riccardobrasca/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/riccardobrasca/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "riccardobrasca",
+    "id": 32490532,
+    "node_id": "MDQ6VXNlcjMyNDkwNTMy",
+    "avatar_url": "https://avatars.githubusercontent.com/u/32490532?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/riccardobrasca",
+    "html_url": "https://github.com/riccardobrasca",
+    "followers_url": "https://api.github.com/users/riccardobrasca/followers",
+    "following_url": "https://api.github.com/users/riccardobrasca/following{/other_user}",
+    "gists_url": "https://api.github.com/users/riccardobrasca/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/riccardobrasca/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/riccardobrasca/subscriptions",
+    "organizations_url": "https://api.github.com/users/riccardobrasca/orgs",
+    "repos_url": "https://api.github.com/users/riccardobrasca/repos",
+    "events_url": "https://api.github.com/users/riccardobrasca/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/riccardobrasca/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "1a3c8989bae619861e3e78383d6a064baac98923",
+      "url": "https://api.github.com/repos/ANR-FALSE/ANR-FALSE.github.io/commits/1a3c8989bae619861e3e78383d6a064baac98923",
+      "html_url": "https://github.com/ANR-FALSE/ANR-FALSE.github.io/commit/1a3c8989bae619861e3e78383d6a064baac98923"
+    }
+  ],
+  "stats": {
+    "total": 29,
+    "additions": 27,
+    "deletions": 2
+  },
+  "files": [
+    {
+      "sha": "b34ea2fe0afd963ee74b20ab512a4e7ff4e60d13",
+      "filename": "_data/news.yml",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/ANR-FALSE/ANR-FALSE.github.io/blob/c9614f87db96569a2e754030ad0142a406eeb87b/_data%2Fnews.yml",
+      "raw_url": "https://github.com/ANR-FALSE/ANR-FALSE.github.io/raw/c9614f87db96569a2e754030ad0142a406eeb87b/_data%2Fnews.yml",
+      "contents_url": "https://api.github.com/repos/ANR-FALSE/ANR-FALSE.github.io/contents/_data%2Fnews.yml?ref=c9614f87db96569a2e754030ad0142a406eeb87b",
+      "patch": "@@ -1,5 +1,5 @@\n - date: 26. September 2026\n-  headline: \"Wenrong Zou has started his PhD with the FALSE team. Welcome, Wenrong!\"\n+  headline: \"Wenrong Zou and Yacine Benmeuraiem have started their PhDs with the FALSE team. Welcome, Wenrong and Yacine!\"\n \n - date: 25. March 2026\n   headline: 'Register for <a href=\"https://amosturchet.github.io/lftcm26/index.html\">Lean for the Curious Mathematician 2026</a>!'"
+    },
+    {
+      "sha": "02d338768f47e9783fa8f110ab24a5546273897b",
+      "filename": "_data/phd_students.yml",
+      "status": "modified",
+      "additions": 7,
+      "deletions": 1,
+      "changes": 8,
+      "blob_url": "https://github.com/ANR-FALSE/ANR-FALSE.github.io/blob/c9614f87db96569a2e754030ad0142a406eeb87b/_data%2Fphd_students.yml",
+      "raw_url": "https://github.com/ANR-FALSE/ANR-FALSE.github.io/raw/c9614f87db96569a2e754030ad0142a406eeb87b/_data%2Fphd_students.yml",
+      "contents_url": "https://api.github.com/repos/ANR-FALSE/ANR-FALSE.github.io/contents/_data%2Fphd_students.yml?ref=c9614f87db96569a2e754030ad0142a406eeb87b",
+      "patch": "@@ -1,4 +1,10 @@\n+- name: Yacine Benmeuraiem\n+  info: PhD Student, ENS de Lyon\n+  advisors: Filippo A. E. Nuccio and Sophie Morel\n+  number_educ: 0\n+\n - name: Wenrong Zou\n-  info: PhD Student\n+  info: PhD Student, Universit\u00e9 Jean Monnet Saint-\u00c9tienne\n+  advisors: Filippo A. E. Nuccio and Riccardo Brasca\n   orcid: 0009-0005-3860-3602\n   number_educ: 0"
+    },
+    {
+      "sha": "348111ffd77eac11e9e4326ffd2201d929115f7e",
+      "filename": "_pages/team.md",
+      "status": "modified",
+      "additions": 19,
+      "deletions": 0,
+      "changes": 19,
+      "blob_url": "https://github.com/ANR-FALSE/ANR-FALSE.github.io/blob/c9614f87db96569a2e754030ad0142a406eeb87b/_pages%2Fteam.md",
+      "raw_url": "https://github.com/ANR-FALSE/ANR-FALSE.github.io/raw/c9614f87db96569a2e754030ad0142a406eeb87b/_pages%2Fteam.md",
+      "contents_url": "https://api.github.com/repos/ANR-FALSE/ANR-FALSE.github.io/contents/_pages%2Fteam.md?ref=c9614f87db96569a2e754030ad0142a406eeb87b",
+      "patch": "@@ -72,12 +72,31 @@ permalink: /team/\n {% endif %}\n \n ## PhD Students\n+{% assign number_printed = 0 %}\n {% for member in site.data.phd_students %}\n+\n+{% assign even_odd = number_printed | modulo: 2 %}\n+\n+{% if even_odd == 0 %}\n <div class=\"row\">\n+{% endif %}\n+\n <div class=\"col-sm-6 clearfix\">\n   <h4>{{ member.name }}</h4>\n   <i>{{ member.info }}</i>\n+  {% if member.advisors %}<br />Advisors: {{ member.advisors }}{% endif %}\n   {% if member.orcid %}<br /><a href=\"https://orcid.org/{{ member.orcid }}\">ORCID: {{ member.orcid }}</a>{% endif %}\n </div>\n+\n+{% assign number_printed = number_printed | plus: 1 %}\n+\n+{% if even_odd == 1 %}\n </div>\n+{% endif %}\n+\n {% endfor %}\n+\n+{% assign even_odd = number_printed | modulo: 2 %}\n+{% if even_odd == 1 %}\n+</div>\n+{% endif %}"
+    }
+  ]
+}

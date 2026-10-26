@@ -1,0 +1,48 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> finite Gamma1 Hecke-character arithmetic realization -> actual Picard/H1 and diamond comparison -> regular-differential/cusp comparison -> finite-coordinate integral bound for a differential matching an actual weight-two cusp form.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentEuler.lean",
+      "sha256": "F81C26F454F057BCCE8173B6C6A90F6B460DC865537E30A66E8524D84460F657"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularDerivativeCuspBounds.lean",
+      "sha256": "A54FF5FD8D13F112DC6E2A1E15DC73678F97A77BF493D676922CFD80E4986E3F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAnalyticJDerivativeForms.lean",
+      "sha256": "9D034A56B042669DE61107774AD7754BB8513EB2794D3FB7A8A8F5BA849DE7EF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAnalyticJDerivativeIdentity.lean",
+      "sha256": "A9653BECA8425BD58EF8CE9B0A78F697B5D5A1D4A175615350097D457FC8DC90"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceJModularQuotient.lean",
+      "sha256": "38A138FC948271BFE593633D471D872EF54DEB829D403543681291B3850412E7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularQuotientIntegral.lean",
+      "sha256": "2E29B2B3839CB9F8D08ADA2A478062D227DF0B1F85370A4AB7AA9968297023E7"
+    }
+  ],
+  "selectedRoute": "Adapt the verified normalized analytic derivative/q-Euler proof using native analytic power-series differentiation. Reuse the local bounded-derivative theorem, original j times discriminant identity and native level-one weight-14 dimension argument. The constructed nonzero scalar yields the exact sixth-power identity, sufficient to scale the already proved arithmetic-subgroup norm integral equation. No new norm polynomial, Ramanujan system, Fourier integration-by-parts, higher-weight cusp power generalization or prescribed scalar assumption.",
+  "assumptionsToDischarge": "For any finite-index integral subgroup containing T, an actual weight-two cusp form f and a Laurent coefficient Y with Y*qEuler(j)=qExpansion(f), the exact expression Y^6*j^4*(j-1728)^3 is integral over C[j]. The integral equation and analytic/formal derivative normalization are derived, not hypotheses. The same theorem applies to Gamma1 and its Hecke correspondence subgroup.",
+  "remaining": "The cusp-place inverse-j integral bound, algebraic differential realization and converse cusp construction remain, followed by actual Picard/H1, full/parabolic and diamond comparison, arithmetic finite-character realization, original all-weight association, local/image/regularity, automorphy and literal higher continuation. 16/20; DUB-17--20 OPEN.",
+  "productionStatus": "Scratch development; audits and production promotion pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-qeuler-reuse-assessment-637.json",
+    "sha256": "B7CC7F74B7C8A80623CED3FEE8432BDB63BF50BA4EBDD343ED86F64C9DEC03F4"
+  },
+  "scratchImportClosure": [
+    "SourceGammaOneDifferentialFiniteIntegral",
+    "SourceGammaOneRatioClosure",
+    "SourceGammaOneFunctionField",
+    "SourceJEulerPolynomial",
+    "SourceJEulerModularIdentity",
+    "SourceModularQDerivativeExpansion",
+    "SourceModularQDerivative"
+  ]
+}

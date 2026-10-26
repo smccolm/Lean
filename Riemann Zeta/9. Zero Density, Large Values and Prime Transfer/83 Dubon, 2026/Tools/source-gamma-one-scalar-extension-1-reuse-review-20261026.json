@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-26 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of finite Gamma1 Hecke characters -> Picard/H1 comparison -> actual Gamma1 regular-differential/cusp comparison -> scalar-extension and literal integral-ratio field identification.",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFieldGeneration.lean",
+      "sha256": "E55E964576FBB17D235B4AFD2668177D1EA4CE5A0CBC7E5532DA2FFED4133812"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFunctionField.lean",
+      "sha256": "24A29ADCD2672D85C2D2050865E7639E9DEC600A58FC74C63B777DB3293B5D82"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneJCoordinate.lean",
+      "sha256": "242F8F0963AACD9590A94E33256D5D5725349173FF06C5758EEDB6D00A9FF810"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFunctionFieldBaseChange.lean",
+      "sha256": "FF3926FC60F98AACEBA430B405ACC1674F9A4BC7845A16D19DDF95A00288E7EE"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-scalar-extension-route-634.json",
+    "sha256": "D6EC9A5D6CCB4C3BDBDE3DF474E03476697EF3D1193C45DFB223C6B79B592516",
+    "review": {
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of finite Gamma1 Hecke characters -> Picard/H1 comparison -> actual Gamma1 regular-differential/cusp comparison -> scalar-extension and literal integral-ratio field identification.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFieldGeneration.lean",
+          "sha256": "E55E964576FBB17D235B4AFD2668177D1EA4CE5A0CBC7E5532DA2FFED4133812"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFunctionField.lean",
+          "sha256": "24A29ADCD2672D85C2D2050865E7639E9DEC600A58FC74C63B777DB3293B5D82"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneJCoordinate.lean",
+          "sha256": "242F8F0963AACD9590A94E33256D5D5725349173FF06C5758EEDB6D00A9FF810"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFunctionFieldBaseChange.lean",
+          "sha256": "FF3926FC60F98AACEBA430B405ACC1674F9A4BC7845A16D19DDF95A00288E7EE"
+        }
+      ],
+      "selectedRoute": "Extend the existing coefficient formula to any rational algebra field, prove exact image equality of the actual integral modular-form ratios, then reuse the existing field-closure argument. No finite-index, chosen basis, algebraic closure or alternate function-field assumption is needed.",
+      "assumptionsToDischarge": "The literal Laurent scalar extension functionFieldOver Gamma L equals qExpFunctionFieldC L Gamma for every integral modular subgroup Gamma and every field L with rational algebra structure. Denominator nonvanishing is transported by the injective coefficient field embedding; the same genuine modular forms and integral expansions witness both ratio sets.",
+      "remaining": "The required regular-differential/cusp realization, Picard/H1, diamond and full/parabolic comparisons, finite-character arithmetic realization, all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+      "productionStatus": "Scratch development; audits and production promotion pending.",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "externalAssessment": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-input-reuse-assessment-633.json",
+        "sha256": "27732B22FA355257FC9A5EE73CD4CB4C492931214D9D2454103920539EF96A86"
+      },
+      "scratchImportClosure": [
+        "SourceGammaOneScalarExtension",
+        "SourceGammaOneFunctionFieldBaseChange",
+        "SourceGammaOneFunctionFieldFinite",
+        "SourceGammaOneRationalRelation",
+        "SourceGammaOneJCoordinate",
+        "SourceGammaOneFunctionField",
+        "SourceGammaOneComplexRatio",
+        "SourceGammaOneComplexRelation",
+        "SourceGammaOneNormRelation",
+        "SourceGammaOneRatioClosure"
+      ]
+    }
+  },
+  "discharged": "The literal Laurent scalar extension functionFieldOver Gamma L equals qExpFunctionFieldC L Gamma for every integral modular subgroup Gamma and every field L with rational algebra structure. Denominator nonvanishing is transported by the injective coefficient field embedding; the same genuine modular forms and integral expansions witness both ratio sets.",
+  "remaining": "The required regular-differential/cusp realization, Picard/H1, diamond and full/parabolic comparisons, finite-character arithmetic realization, all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

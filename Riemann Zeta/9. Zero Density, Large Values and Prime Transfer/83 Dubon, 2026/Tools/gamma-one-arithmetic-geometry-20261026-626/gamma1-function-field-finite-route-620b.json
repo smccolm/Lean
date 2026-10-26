@@ -1,0 +1,201 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of actual original finite Gamma1 Hecke characters -> geometric Hecke/diamond correspondences -> genuine Gamma1 and Gamma1-intersection-Gamma0 function fields finite over the original j coordinate.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularNormPolynomial.lean",
+      "sha256": "CD66E1DBF537A518EA1F268B575987233B3553AE6AC9370AA322EAB472DF92A4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLevelOneJPolynomial.lean",
+      "sha256": "05BC6772313606ADD0B7F2DC2377F84FC3E7FFC2D3C9663B6DCF4DA15F035429"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceJModularQuotient.lean",
+      "sha256": "38A138FC948271BFE593633D471D872EF54DEB829D403543681291B3850412E7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentScalarIndependence.lean",
+      "sha256": "2CB7EFCA500FBE57B6F474D706B231DDDC227CA71A0345B799B2035C7A6AA6C5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentDegreeTransportSpan.lean",
+      "sha256": "2502A728CA2385465BD8F3B4B2C3685F7100F5C0D1B997B0FFF69C28244CF224"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentDegreeTransport.lean",
+      "sha256": "0E0030AC82E69E99C02BCEF2115A73D3D4222C657CB2AC97CDBD0727B27E0D55"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDegreeBaseChange.lean",
+      "sha256": "030D3BCAFF84D72915D36D6970E29A3A370CE683E80361E1B2E108628F49D339"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEisensteinFourExpansion.lean",
+      "sha256": "D7A4DE17C5A3D8719089FB22062F0C6470E05D53C7A90432A2E3C0018D5B171F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceDiscriminantIntegralExpansion.lean",
+      "sha256": "BAD1520E5AE5BCD28FE138526FBFB19047EAC5D10DDD2BC55116652ECAC16693"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularJTranscendence.lean",
+      "sha256": "21EE26259A47F3D614245DB36A03B3A729BF1BA19D37BFA6085B535780D49F48"
+    }
+  ],
+  "primaryAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-geometric-reuse-assessment-619.json",
+    "sha256": "E3B8F7DE9DC6F41F5B58C2A2401674BBDCBBA87EFBCA8ABFF62C0C18EC1E0895"
+  },
+  "selectedRoute": "Use actual integral q-expansion ratios and native restriction. Normalize numerator and denominator by the same eleventh denominator power. Reuse local norm interpolation and level-one j-polynomial reduction, then literal Laurent coefficient independence for rational descent. A bounded-minimal-degree argument with native primitive elements proves rational finite dimension. Reuse existing Laurent scalar-extension finiteness. Derive the actual Gamma1 and Hecke-subgroup hypotheses, and prove the actual first-correspondence field inclusion.",
+  "deferred": [
+    "External E6^2/E4^3 coordinate and general algebraic-Laurent-constant theorem",
+    "Duplicate external Laurent independence and scalar-extension development",
+    "Unused integral-expansion coefficient/uniqueness, constant-ratio and level-one normalization lemmas",
+    "New global arithmetic Galois assumptions or characteristic-zero lifts of finite characters"
+  ],
+  "assumptionsToDischarge": "Actual rational integral-ratio field generation, transcendence of its original j coordinate, a uniform rational polynomial relation for every field element, finite dimension over that coordinate, scalar-extended finite dimension and transcendence, finite-index/translation hypotheses for Gamma1(M) and Gamma1(M) intersect Gamma0(t), and the literal first-Hecke-map field inclusion are all proved. No finite-coordinate or scalar-extension preservation premise remains.",
+  "remaining": "Arithmetic geometric and diamond comparison, finite-character Galois realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "productionStatus": "Scratch development; audits and production promotion pending.",
+  "sourceBodies": "All source statements retain actual modular forms, literal Laurent series and genuine congruence subgroups; rational scalar actions are explicitly the canonical subalgebra action.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "auditSuccessor": {
+    "reason": "The initial exhaustive audit verified all 52 mathematical theorems, but docBlame reported seven missing definition docstrings in the field interface. Add precise documentation only; theorem statements and proof bodies unchanged. Fresh audits preserve the failed evidence without exclusions.",
+    "failedAudit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldAudit10.log",
+    "failedAuditSha256": "21543B0E76A0004E38D7FEBCBB2318B5835ADEDEE7DDB3C7941D2DC0A58B17D6",
+    "sourceArchive": [
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneFunctionField.lean.txt",
+        "sha256": "B0B7B0D57DC66C71442D0B3A546F693C3F9B9186BF804CDA9F07CB127717A173"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneFunctionField.log",
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneFunctionField.exit",
+        "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneJCoordinate.lean.txt",
+        "sha256": "4AC407FCC7FA9BE3C8661051C6DEFF25AC76966939EA768D6B3BD3603C64E82B"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneJCoordinate.log",
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneJCoordinate.exit",
+        "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneRatioClosure.lean.txt",
+        "sha256": "118619B0C492FFB91A8073CF652DFDE62951329CF7483A03EE0C301ED0EC84F4"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneRatioClosure.log",
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneRatioClosure.exit",
+        "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneNormRelation.lean.txt",
+        "sha256": "6C2897C4C63E5ED3697CE2292FE5468B2F5973D68B1347D0D7F9CEF29E98EE03"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneNormRelation.log",
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneNormRelation.exit",
+        "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneComplexRelation.lean.txt",
+        "sha256": "283511D74947B88FC28069EE5A7878A89450DE4960CED2AB7E44611448227267"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneComplexRelation.log",
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneComplexRelation.exit",
+        "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneComplexRatio.lean.txt",
+        "sha256": "7A0BA5FFCCDB34748E26715F9EE1F010C40B08283B6DB47FEF8ED8459D394346"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneComplexRatio.log",
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneComplexRatio.exit",
+        "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneRationalRelation.lean.txt",
+        "sha256": "3F1E6796ABA7A222691574495AEDE1E69ADAD5F90484C10402B012AE74BD8E4E"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneRationalRelation.log",
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneRationalRelation.exit",
+        "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneFunctionFieldFinite.lean.txt",
+        "sha256": "3E57C1BA88AFC8DFE550CB88F341F627ABD9F355C8AAED4D2D62FDFA196355F8"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneFunctionFieldFinite.log",
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneFunctionFieldFinite.exit",
+        "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneFunctionFieldBaseChange.lean.txt",
+        "sha256": "9F4B86543AAB668A318ED0E134DFB26ACB31D06416C8D8E6E3B0FC3AA18B6D76"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneFunctionFieldBaseChange.log",
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneFunctionFieldBaseChange.exit",
+        "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneCurveFinite.lean.txt",
+        "sha256": "98510816FF2E5C928A87EB978469F7796117C7843B0257BD532A7C4A4404C5CC"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneCurveFinite.log",
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      {
+        "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneCurveFinite.exit",
+        "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+      }
+    ]
+  },
+  "scratchImportClosure": [
+    "SourceGammaOneCurveFinite",
+    "SourceGammaOneFunctionFieldBaseChange",
+    "SourceGammaOneFunctionFieldFinite",
+    "SourceGammaOneRationalRelation",
+    "SourceGammaOneJCoordinate",
+    "SourceGammaOneFunctionField",
+    "SourceGammaOneComplexRatio",
+    "SourceGammaOneComplexRelation",
+    "SourceGammaOneNormRelation",
+    "SourceGammaOneRatioClosure"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "recordedUTC": "2026-10-25T23:46:47.810032+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceResidualRealDeterminant",
+    "SourcePrimitiveResidualOddness"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualRealDeterminant.lean",
+      "sha256": "529E309C1189C98FB50D3663BA2026BEC4FD12EBE254E2E4BC80CCB738525803",
+      "oleanSha256": "24C023FB3714DABAEAD182B9D54F41E3D656A2CB05108A21D6B2A22E37B0B157"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddness.lean",
+      "sha256": "CD8704B6FF0289B9375CB8A4D335071633242FA341E6C161638D977C355AB945",
+      "oleanSha256": "4AA8C0D9DFD016BD8BC6CFEB16E9EDF724570DA6C03EDED4BE4BC55AD87D28F0"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceArithmeticCyclotomic_conjugation",
+    "Dubon2026.sourceArithmeticCyclotomicUnitCharacter_conjugation",
+    "Dubon2026.sourceArithmetic_real_det_of_cyclotomic",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_oddResidualGalois_charP"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceArithmeticCyclotomic_conjugation",
+    "Dubon2026.sourceArithmeticCyclotomicUnitCharacter_conjugation",
+    "Dubon2026.sourceArithmetic_real_det_of_cyclotomic",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_oddResidualGalois_charP"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessAudit2.log",
+  "logSha256": "9DBCDDD9BB9BC48CACCD8044DEE5CFCF536752A608BB3561E2D3636C723FC019",
+  "auditSha256": "1AC71864A243C5D794D7216E563C2CE38A6F67297DDDD541922F4F2954D9A774",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 5,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 8,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessDependencyAudit2b.log",
+  "dependencyAuditSha256": "2922BD6E6868F08929D97945EA03556F14BE4DC3F6901B3E7EFA144B8B84DBD4",
+  "dependencyAuditSourceSha256": "342E29858775F0AF4C8B9AA9759C174DC5618EABCE94C06DE09CA314B42275E2",
+  "consumers": [
+    "Dubon2026.sourcePrimitive_exists_originalSupport_oddResidualGalois_charP"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual all-weight Galois association -> oddness of the same original residual representation at the actual real restriction",
+  "discharged": "The original primitive form, weight at least two and prescribed prime give the same actual original-support residual representation with determinant minus one at genuine complex conjugation. Weight parity and oddness are derived. All coefficient-field, residue-characteristic, global-determinant, original Frobenius and inertia conclusions are retained.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. All-weight adic realization and required local, image and regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-residual-oddness-2-reuse-review-20261025.json",
+  "reuseReviewSha256": "3396E6D4FF5AD102412015CF7477EAF197BF8327B4315E886E8E00F7A2511A8D",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "auditSerializationSuccessor": {
+    "reason": "The generated dependency audit and route ended with literal backslash-n bytes. Fresh successors replace only those serialization bytes with line endings; audited proof sources and the public exhaustive audit remain unchanged. The original used generator and dependency audit are retained.",
+    "previousAudit": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessDependencyAudit2.lean",
+      "sha256": "E829E84200A5E391800B16B09BE501B9D9EB3735CFB7879C84C7EC933C23DBDB"
+    },
+    "successorAudit": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessDependencyAudit2b.lean",
+      "sha256": "342E29858775F0AF4C8B9AA9759C174DC5618EABCE94C06DE09CA314B42275E2"
+    },
+    "previousRoute": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-oddness-route-574.json",
+      "sha256": "A5CD0BB6413D5B9C1F1FAE142216EE07273E9D5A1EB8203B872599DC16C36F1E"
+    },
+    "successorRoute": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-oddness-route-574b.json",
+      "sha256": "7D0C47C2B1BC88348C09602AD0C3C996A6EBAC974F1AF6577B8DE96E635AA772"
+    },
+    "usedGenerator": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_residual_oddness_audit_574.py",
+      "sha256": "ED9604AEAE2B35C12B2AADDF25CCE55A06050157DFCD328CE2FE2B86C7A1F427"
+    }
+  },
+  "exhaustiveCountRecorderSuccessor": {
+    "previousRecorder": "E:\\Lean\\.tmp\\dubon83\\record_primitive_residual_oddness_574b.py",
+    "previousRecorderSha256": "183A131A3B2E9F59DEADEF32951C91CC4BD5616C804A094609D4D39A72134CB7",
+    "reason": "The exhaustive environment audit reports five theorems including generated/private declarations, while four public theorems are explicitly registered. The original recorder incorrectly expected the public count; its failed run wrote no receipt or review. This successor records the actual exhaustive count without rerunning or changing any audit or proof source.",
+    "publicTheorems": 4,
+    "exhaustiveTheorems": 5,
+    "auditSha256": "9DBCDDD9BB9BC48CACCD8044DEE5CFCF536752A608BB3561E2D3636C723FC019"
+  }
+}

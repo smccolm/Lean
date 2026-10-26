@@ -1,0 +1,23 @@
+{
+  "reason": "The generated dependency audit and route ended with literal backslash-n bytes. Fresh successors replace only those serialization bytes with line endings; audited proof sources and the public exhaustive audit remain unchanged. The original used generator and dependency audit are retained.",
+  "previousAudit": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantDependencyAudit3.lean",
+    "sha256": "6F32C0FCB46395C04C1A89DF80182EFC304772B96A64DBE4EF4ABE01791E5527"
+  },
+  "successorAudit": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantDependencyAudit3b.lean",
+    "sha256": "9E4004DCCA0AB824449C7C05D6977CB12E0E02B88CE454EBE9096FFE603AB9F9"
+  },
+  "previousRoute": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-determinant-route-572.json",
+    "sha256": "3C69C0A83D0A428F3BC8968EFF622635D7D627C44A3A3853ABD876BD7A22073D"
+  },
+  "successorRoute": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-determinant-route-572b.json",
+    "sha256": "D06F97DC16E64E50BFF0C21ED5485B7BAC355800377807197BA3838AF34CA49D"
+  },
+  "usedGenerator": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_residual_determinant_audit_572.py",
+    "sha256": "547C0FD820D07E440867C2E415DF0EA1A6BC7344601C432334704C8BFA28669D"
+  }
+}

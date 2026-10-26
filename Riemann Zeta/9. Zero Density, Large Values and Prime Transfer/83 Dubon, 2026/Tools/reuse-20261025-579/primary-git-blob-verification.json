@@ -1,0 +1,197 @@
+[
+  {
+    "snapshot": "lioristhmus__ramanujan-petersson\\README.md.txt",
+    "gitBlob": "114dbd3751cf02210bf529d20f048245edb4d13f",
+    "passed": true
+  },
+  {
+    "snapshot": "lioristhmus__ramanujan-petersson\\lean\\Main.lean.txt",
+    "gitBlob": "b79ac377ebae5ac9ebe11593c0ff5c7af82b6d46",
+    "passed": true
+  },
+  {
+    "snapshot": "lioristhmus__ramanujan-petersson\\lean\\README.md.txt",
+    "gitBlob": "df7a71cf1864c79a96bdd9a6e6f8e2c3d17d056f",
+    "passed": true
+  },
+  {
+    "snapshot": "lioristhmus__ramanujan-petersson\\lean\\RamanujanPetersson.lean.txt",
+    "gitBlob": "99731aa51be1065105d7e9743afcccee24abe419",
+    "passed": true
+  },
+  {
+    "snapshot": "lioristhmus__ramanujan-petersson\\lean\\RamanujanPetersson\\Autoformalized.lean.txt",
+    "gitBlob": "07291ac69b7b6c558be36185eec79d70ea0958b5",
+    "passed": true
+  },
+  {
+    "snapshot": "lioristhmus__ramanujan-petersson\\lean\\RamanujanPetersson\\Basic.lean.txt",
+    "gitBlob": "60c23478b25fff1ae5350b3f3b8104bcb4fa11e1",
+    "passed": true
+  },
+  {
+    "snapshot": "lioristhmus__ramanujan-petersson\\lean\\RamanujanPetersson\\Corollary53.lean.txt",
+    "gitBlob": "06ceddd44250092baccc667158d27088518d26a1",
+    "passed": true
+  },
+  {
+    "snapshot": "lioristhmus__ramanujan-petersson\\lean\\RamanujanPetersson\\Corollary53Coprime.lean.txt",
+    "gitBlob": "b324ba9d617bc7e7a5e33fec95536d6a723c8c98",
+    "passed": true
+  },
+  {
+    "snapshot": "lioristhmus__ramanujan-petersson\\lean\\RamanujanPetersson\\PaperFaithfulCore.lean.txt",
+    "gitBlob": "7233bf238a1686ef2507d71e80dde959c37f208b",
+    "passed": true
+  },
+  {
+    "snapshot": "lioristhmus__ramanujan-petersson\\lean\\RamanujanPetersson\\PaperInterfaces.lean.txt",
+    "gitBlob": "555ad306fc9f2035758a9821a4be32395bcf04cd",
+    "passed": true
+  },
+  {
+    "snapshot": "lioristhmus__ramanujan-petersson\\lean\\RamanujanPetersson\\Theorem21.lean.txt",
+    "gitBlob": "2027ef363e32a79442847f6dc4b505c657d5a10b",
+    "passed": true
+  },
+  {
+    "snapshot": "lioristhmus__ramanujan-petersson\\lean\\RamanujanPetersson\\Theorem31.lean.txt",
+    "gitBlob": "6019e36822b825a7b9da2988a719880c04180f27",
+    "passed": true
+  },
+  {
+    "snapshot": "lioristhmus__ramanujan-petersson\\lean\\RamanujanPetersson\\Theorem41.lean.txt",
+    "gitBlob": "450500953419367d50bdd75563ae66e26c42c31c",
+    "passed": true
+  },
+  {
+    "snapshot": "lioristhmus__ramanujan-petersson\\lean\\blueprint.md.txt",
+    "gitBlob": "70c951c1307c217a7a6a1f6a9912976d28e26a9a",
+    "passed": true
+  },
+  {
+    "snapshot": "lioristhmus__ramanujan-petersson\\lean\\claims.yaml.txt",
+    "gitBlob": "2b7944166dfc27b1c17526648be8b9b7812fa53e",
+    "passed": true
+  },
+  {
+    "snapshot": "lioristhmus__ramanujan-petersson\\lean\\lake-manifest.json.txt",
+    "gitBlob": "98f654e1a18747e9fdae7de2b50cba79ed5e2dee",
+    "passed": true
+  },
+  {
+    "snapshot": "lioristhmus__ramanujan-petersson\\lean\\lakefile.lean.txt",
+    "gitBlob": "a01877096ba294f5c9a970c347d295ec71f60d60",
+    "passed": true
+  },
+  {
+    "snapshot": "lioristhmus__ramanujan-petersson\\lean\\lean-toolchain.txt",
+    "gitBlob": "c6e288474ca64cd3826c579d2bd45b14a2ad22c8",
+    "passed": true
+  },
+  {
+    "snapshot": "lioristhmus__ramanujan-petersson\\ramanujan-petersson.md.txt",
+    "gitBlob": "64968636659cd9099ebe89fd00959c025b64c0b2",
+    "passed": true
+  },
+  {
+    "snapshot": "mkaratarakis__CICM24_Deligne\\Frobenius.lean.txt",
+    "gitBlob": "8e6fa9442976caa76c7b991c423af6d0bf472178",
+    "passed": true
+  },
+  {
+    "snapshot": "mkaratarakis__CICM24_Deligne\\GaloisReps.lean.txt",
+    "gitBlob": "3920172283ca9038e3a645839d8cfd73997cf417",
+    "passed": true
+  },
+  {
+    "snapshot": "mkaratarakis__CICM24_Deligne\\README.md.txt",
+    "gitBlob": "e65789e01be9552cca8f089d05f74555754ee106",
+    "passed": true
+  },
+  {
+    "snapshot": "mkaratarakis__CICM24_Deligne\\Statement.lean.txt",
+    "gitBlob": "e32b99f1bb1af727eda1caff1aad001c62188149",
+    "passed": true
+  },
+  {
+    "snapshot": "mkaratarakis__Deligne\\README.md.txt",
+    "gitBlob": "324124b814b8c257b1f46aadebb55d61f51c86e1",
+    "passed": true
+  },
+  {
+    "snapshot": "mkaratarakis__Deligne\\leanpkg.path.txt",
+    "gitBlob": "c39fcfb1f810946760c339ab4718dfc749bfda90",
+    "passed": true
+  },
+  {
+    "snapshot": "mkaratarakis__Deligne\\leanpkg.toml.txt",
+    "gitBlob": "af891e35ba3e44461c2995282c5ef7afe0385bdb",
+    "passed": true
+  },
+  {
+    "snapshot": "mkaratarakis__Deligne\\src\\galois_representations.lean.txt",
+    "gitBlob": "acbbc4eeac5aa15022ff14ce7e467309aeee284b",
+    "passed": true
+  },
+  {
+    "snapshot": "mkaratarakis__Deligne\\src\\ramification.lean.txt",
+    "gitBlob": "ddbad5785db6aa7be6bb9014a01f485d485ee5ec",
+    "passed": true
+  },
+  {
+    "snapshot": "tianyipeng__fermats-last-theorem\\Definitions\\Def_CuspForm_HeckeGaloisRepDatum.lean.txt",
+    "gitBlob": "4c2fe87db4cf09766c1f480ca1421af15a28a4a3",
+    "passed": true
+  },
+  {
+    "snapshot": "tianyipeng__fermats-last-theorem\\Definitions\\Def_GaloisRep_DeligneOrdinaryShape.lean.txt",
+    "gitBlob": "56232c9716d4097249a14e4f3cebaceb558e4757",
+    "passed": true
+  },
+  {
+    "snapshot": "tianyipeng__fermats-last-theorem\\LICENSE.txt",
+    "gitBlob": "6f101c9faa913e222f966b68c5ce9890fe50344f",
+    "passed": true
+  },
+  {
+    "snapshot": "tianyipeng__fermats-last-theorem\\P2M\\Sol\\S_CuspForm_exists_galoisRep_of_point.lean.txt",
+    "gitBlob": "875c3e5b98af6211ef1b3f89854ae619be60bb60",
+    "passed": true
+  },
+  {
+    "snapshot": "tianyipeng__fermats-last-theorem\\P2M\\Sol\\S_CuspForm_exists_galoisRep_of_point_stableLine_frobenius_sub_smul_mem_of_not_dvd.lean.txt",
+    "gitBlob": "aa78d4719c4d13ee3960de3e610cd0b2ed12250f",
+    "passed": true
+  },
+  {
+    "snapshot": "tianyipeng__fermats-last-theorem\\P2M\\Sol\\S_CuspForm_exists_galoisRep_of_point_tateModule_jZero_quotient.lean.txt",
+    "gitBlob": "fc9a84ee138da9ff1ae3afc4fc5a14c458255fbc",
+    "passed": true
+  },
+  {
+    "snapshot": "tianyipeng__fermats-last-theorem\\P2M\\Sol\\S_PDivisibleGroup_exists_basis_padicComplex_tateModule_eq_cyclotomicCharacter_pow_smul_of_hasDimension_of_ringOfIntegers.lean.txt",
+    "gitBlob": "bbdcdc68439cc608b13d9639594b61a232c839f8",
+    "passed": true
+  },
+  {
+    "snapshot": "tianyipeng__fermats-last-theorem\\README.md.txt",
+    "gitBlob": "3e3d8c91c008db6834ca59fcca56099362153538",
+    "passed": true
+  },
+  {
+    "snapshot": "tianyipeng__fermats-last-theorem\\Theorems\\Thm_CuspForm_exists_galoisRep_of_point.lean.txt",
+    "gitBlob": "ed0943eaf4c1f491fbd5f7f6e92c89c14c01d076",
+    "passed": true
+  },
+  {
+    "snapshot": "tianyipeng__fermats-last-theorem\\Theorems\\Thm_CuspForm_exists_galoisRep_of_point_stableLine_frobenius_sub_smul_mem_of_not_dvd.lean.txt",
+    "gitBlob": "d4ff24e061f4534934cc4caf1129222e5a8502fd",
+    "passed": true
+  },
+  {
+    "snapshot": "tianyipeng__fermats-last-theorem\\Theorems\\Thm_CuspForm_exists_galoisRep_of_point_tateModule_jZero_quotient.lean.txt",
+    "gitBlob": "f318f5a20580ff5b5310842632574adca9c0d942",
+    "passed": true
+  }
+]

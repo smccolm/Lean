@@ -1,0 +1,71 @@
+{
+  "status": "Prepared; require 8274 canonical PASS and immutable archive before integration.",
+  "route": "primitive-gamma-one-hecke-promotion-route-618.json",
+  "routeSha256": "5D66E100F51C25D7192E806BE8B255E16A35D2F38A48F00A28F4C3C41D201EB4",
+  "modules": 16,
+  "queries": 41,
+  "theorems": 30,
+  "constructions": 11,
+  "exhaustiveScratchChecks": 110,
+  "proofValueEdges": 78,
+  "scopes": 6,
+  "receipts": {
+    "source-gamma-one-binary-trace-2-scratch-receipt.json": "B331C5AAAE819979A78B66FC378A14D6E5C210511A55767DD6E9FC1C0821C8D1",
+    "source-gamma-one-hecke-upper-image-1-scratch-receipt.json": "79962903C2D157BCE54001FC5F26EB61AD1260A3AB3D463B815CFAF8ACDE5485",
+    "source-gamma-one-subgroup-h1-map-1-scratch-receipt.json": "2A5CCD33B000E4042205791E97CB5FA7A314F226FD1FEB2485794E1978C0EC84",
+    "source-gamma-one-native-hecke-comparison-2-scratch-receipt.json": "F56DC4C091DBF9D2EAB5062E447579F49FF7D7E84602C5C7760CE3F97D318F64",
+    "source-gamma-one-transfer-hecke-5-scratch-receipt.json": "FF1D68B10A5EC405DCA39498E1EAEF34E2340383062DB2CB9830F867853DCF5A",
+    "source-primitive-gamma-one-character-5b-scratch-receipt.json": "554371BFDBEFC55035DE31363B405A0C89588A2BA096CF5030F69D7B07EDEA3F"
+  },
+  "sourceScopes": [
+    600,
+    601,
+    602,
+    605,
+    611,
+    617
+  ],
+  "expectedConsumers": 23874,
+  "expectedConstructions": 2288,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 gates unchanged.",
+  "sourceBodies": "Audited statements, bodies and comments unchanged; only scratch project imports qualified.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_primitive_gamma_one_hecke_realization_canonical_8290.py",
+      "sha256": "37C1D99687699A27E1130711959D80B1E183352D44048B5FB8B84E7428C720F8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_primitive_gamma_one_hecke_realization_8290.ps1",
+      "sha256": "0D80707EE996AB1B6B34437B9E4E68BDD5F44EF09CE764C11EE584FAD2B9AD57"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_primitive_gamma_one_hecke_realization_ownership_8290.py",
+      "sha256": "6C515D92EF849F7C2B788DECE7070B98CEF815792548F8FED13A265EC0A1C717"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_primitive_gamma_one_hecke_realization_8290.py",
+      "sha256": "60975DDD7A9921099CB7CE8C96CDE23C955271619787F4F92D20FB0FC4B1CBC8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_gamma_one_hecke_realization_global_ownership_8290.py",
+      "sha256": "ADAD2167E37870DF64499A27A8A4FA522ADC3DB72F9AA821E910E19AA2DE9DB9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_gamma_one_hecke_realization_production_ownership_8290.py",
+      "sha256": "B4AE970886D15286F665E871C29DA070CD4D0FE27CA742D26D25230629A4E656"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_gamma_one_hecke_realization_scratch_ownership_8290.py",
+      "sha256": "FB3C75BDEFB6BC3A475E2370DA64E3A2570AEBA2037294C3D1C141D8B2BB724F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_primitive_gamma_one_hecke_realization_8290.py",
+      "sha256": "FA7A184EF92FD5142A9F8738E5C97BF08CE0234E77E7F10A9074E3C14A664ADA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_primitive_gamma_one_hecke_realization_8290.ps1",
+      "sha256": "A9902F1A879DFCC0C1F64619507D89AD6161E490D32ED2B653D21186362B7571"
+    }
+  ],
+  "productionMutation": false
+}

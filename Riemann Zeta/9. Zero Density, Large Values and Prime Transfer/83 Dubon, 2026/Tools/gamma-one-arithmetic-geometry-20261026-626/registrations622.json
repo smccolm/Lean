@@ -1,0 +1,18 @@
+[
+  "Dubon2026.lseriesSummable_of_abs_le_vonMangoldt",
+  "Dubon2026.cheby_of_abs_le_vonMangoldt",
+  "Dubon2026.vonMangoldt_regularPart_eq",
+  "Dubon2026.signed_wiener_vonMangoldt_cancellation",
+  "Dubon2026.prime_log_weight_error",
+  "Dubon2026.tendsto_primeCounting_log_ratio",
+  "Dubon2026.tendsto_prime_log_sum_ratio",
+  "Dubon2026.prime_average_zero_of_log_weighted",
+  "Dubon2026.abs_primeLogCoefficients_le",
+  "Dubon2026.sum_primeLogCoefficients",
+  "Dubon2026.prime_average_zero_of_boundary_continuation",
+  "Dubon2026.abs_primitivePrimeCharacter_le",
+  "Dubon2026.primitive_satoTate_of_character_boundary",
+  "Dubon2026.SemanticRegression.signed_prime_tauberian_source",
+  "Dubon2026.SemanticRegression.prime_boundary_cancellation_source",
+  "Dubon2026.SemanticRegression.primitive_character_boundary_blocks_source"
+]

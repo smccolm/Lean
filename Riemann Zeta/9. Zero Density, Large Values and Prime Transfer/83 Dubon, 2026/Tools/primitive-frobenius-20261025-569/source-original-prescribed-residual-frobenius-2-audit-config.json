@@ -1,0 +1,40 @@
+{
+  "modules": [
+    "SourceOriginalPrescribedTateSpecialization",
+    "SourceOriginalPrescribedResidualFrobenius"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitiveTate_prescribed_specialization_of_basis",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_continuous_galois_realization",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_residual_frobenius_realization"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitiveTate_prescribed_specialization_of_basis",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_continuous_galois_realization",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_residual_frobenius_realization"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitiveTate_prescribed_specialization_of_basis",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_continuous_galois_realization",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_residual_frobenius_realization",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPadicHeckeEigencharacter",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPadicHeckeEigencharacter_prime",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalRationalTate_explicit_continuous_galois",
+    "Dubon2026.rankTwoCoefficientGaloisRep_continuous",
+    "Dubon2026.rankTwoCoefficientMap_span",
+    "Dubon2026.rankTwoCoefficientMap_smul",
+    "Dubon2026.rankTwoCoefficientGaloisRep_action",
+    "Dubon2026.SourceFunctionField.original_tate_free_finite_rank",
+    "Dubon2026.padicSpecialization_stable_lattice",
+    "Dubon2026.stableLattice_integral_residual_realization",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_residual_inertia_identity",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_residual_frobenius_charpoly",
+    "Dubon2026.padicCoefficientResidue_charP",
+    "Dubon2026.localCoefficientResidue_finite_discrete",
+    "IsModuleTopology.continuous_of_linearMap"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_residual_frobenius_realization"
+  ]
+}

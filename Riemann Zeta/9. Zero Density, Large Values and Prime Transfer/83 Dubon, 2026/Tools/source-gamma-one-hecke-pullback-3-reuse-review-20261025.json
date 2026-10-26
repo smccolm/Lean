@@ -1,0 +1,121 @@
+{
+  "date": "2026-10-25 America/Vancouver",
+  "sourceDependency": "DUB-17/18 -> literal higher continuation -> arithmetic automorphy -> all-weight original adic association -> geometric Gamma1 realization -> actual Hecke comparison of restriction and surjective transfer",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRaisedLevelEvaluationHecke.lean",
+      "sha256": "FF9A006953C27EB912044F2D13B7A0AB85FB272C4B0D73CAD8A42FE480E7BC0F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryHeckeCohomology.lean",
+      "sha256": "DE206C49A5AF00E5BDB066AC1FEF11C4CAF692BCD4CDAB3B563A016FB9A36ACD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryHeckeMorphism.lean",
+      "sha256": "B1B4C8905B4C1D9ED15E8B26B17AE684EF15353CC99C7A28F80C7D3A711CB46E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCorrespondenceOne.lean",
+      "sha256": "F99FEF68FDB52AC3C74EDF0C5507C25207C6270DCCACF41D6C051DE995BBA646"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceChosenCosetTraceOne.lean",
+      "sha256": "B0A95E67248FEC81403589DD127F27C78F399FE0AB14A48296D75F77E866CD2E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ContinuousCorestrictionMackey.lean",
+      "sha256": "A695555216C77BDFED8014E36F29F3091745A0858735FCE66AB24A32F6250F73"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CosetOrbitTraceComparison.lean",
+      "sha256": "D80F5D40E2C6D882EE639055563431A9CDDC4BB1CE8092D65CBDDE98E2C4405F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstantHecke.lean",
+      "sha256": "9627C449A3179AA390C251FCEAE6A02F83EFB9EB26240A766C00FA4E311367D0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverHeckeRepresentatives.lean",
+      "sha256": "F95372EDCEA2A9EFF2C030D2B477899F49692D7239D8EF68B16EED75204EA239"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLiteralTransferSurjectivity.lean",
+      "sha256": "2C275BE2CB4396E554FE1C8472BEF5B4E91C0FFF9BF390CAFE32DEE82BF35068"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-cohomology-hecke-compatibility-route-595.json",
+    "sha256": "8AA6F4327487945C218879DA3E0077852AE2E448FC32FA4E766A649213BD15B0",
+    "review": {
+      "scope": 595,
+      "chain": "DUB-17/18 -> literal higher continuation -> arithmetic automorphy -> all-weight original adic association -> geometric Gamma1 realization -> actual Hecke comparison of restriction and surjective transfer",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRaisedLevelEvaluationHecke.lean",
+          "sha256": "FF9A006953C27EB912044F2D13B7A0AB85FB272C4B0D73CAD8A42FE480E7BC0F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryHeckeCohomology.lean",
+          "sha256": "DE206C49A5AF00E5BDB066AC1FEF11C4CAF692BCD4CDAB3B563A016FB9A36ACD"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryHeckeMorphism.lean",
+          "sha256": "B1B4C8905B4C1D9ED15E8B26B17AE684EF15353CC99C7A28F80C7D3A711CB46E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCorrespondenceOne.lean",
+          "sha256": "F99FEF68FDB52AC3C74EDF0C5507C25207C6270DCCACF41D6C051DE995BBA646"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceChosenCosetTraceOne.lean",
+          "sha256": "B0A95E67248FEC81403589DD127F27C78F399FE0AB14A48296D75F77E866CD2E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ContinuousCorestrictionMackey.lean",
+          "sha256": "A695555216C77BDFED8014E36F29F3091745A0858735FCE66AB24A32F6250F73"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CosetOrbitTraceComparison.lean",
+          "sha256": "D80F5D40E2C6D882EE639055563431A9CDDC4BB1CE8092D65CBDDE98E2C4405F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstantHecke.lean",
+          "sha256": "9627C449A3179AA390C251FCEAE6A02F83EFB9EB26240A766C00FA4E311367D0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverHeckeRepresentatives.lean",
+          "sha256": "F95372EDCEA2A9EFF2C030D2B477899F49692D7239D8EF68B16EED75204EA239"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLiteralTransferSurjectivity.lean",
+          "sha256": "2C275BE2CB4396E554FE1C8472BEF5B4E91C0FFF9BF390CAFE32DEE82BF35068"
+        }
+      ],
+      "shorterRoute": "Reuse the proved Gamma1 coset equivalence, chosen transitions and original representative-change coboundary. The existing raised-level evaluation proof gives a direct cocycle comparison: the actual cover action is trivial, so its restriction of the correction vanishes. Existing Mackey machinery is for degree two; do not assume it supplies the native H1 transfer identity.",
+      "assumptionsToDischarge": "The actual binary-to-constant Gamma1 cocycle pullback and native H1 pullback commute with every full good-prime original binary Hecke correspondence, retaining the actual binary diagonal coefficient action. The representative-change correction is proved zero on the original cover, not assumed.",
+      "remaining": "Pullback compatibility alone cannot replace the surjective-transfer compatibility. Arithmetic geometry/diamond comparison, actual Galois realization, all-weight adic association, local/image/regularity, automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+      "scratchImportClosure": [
+        "SourceGammaOneBinaryRestrictionHecke",
+        "SourceGammaOneBinaryHeckeSum",
+        "SourceGammaOneBinaryRestriction",
+        "SourceGammaOneCoverHeckeRepresentatives",
+        "SourceGammaOneCoverHeckeCosets",
+        "SourceGammaOneRaisedCosets",
+        "SourceGammaOneCoverHeckeSquare",
+        "SourceGammaOneHeckeSubgroup",
+        "SourceGammaOneDiagonalHom",
+        "SourceBinaryPermutationCongruence",
+        "SourceBinaryPrimePowerPermutation",
+        "SourcePermutationCoefficientQuotient",
+        "SourceGammaOneCongruenceCover",
+        "SourcePrincipalCoprimeReduction",
+        "SourceGammaOneConstantHecke"
+      ]
+    }
+  },
+  "discharged": "The actual binary-to-constant Gamma1 cocycle pullback and native H1 pullback commute with every full good-prime original binary Hecke correspondence, retaining the actual binary diagonal coefficient action. The representative-change correction is proved zero on the original cover, not assumed.",
+  "remaining": "Pullback compatibility alone cannot replace the surjective-transfer compatibility. Arithmetic geometry/diamond comparison, actual Galois realization, all-weight adic association, local/image/regularity, automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

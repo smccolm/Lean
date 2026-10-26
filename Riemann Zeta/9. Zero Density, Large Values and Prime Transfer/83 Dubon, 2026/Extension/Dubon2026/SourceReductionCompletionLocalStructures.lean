@@ -1,0 +1,46 @@
+import Dubon2026.SourceReductionCompletionFinite
+import Dubon2026.SourcePadicCompletionValuation
+
+/-! DUB-17/18 -> prescribed residual association -> the exact completion
+selected by the reduction carries the required local-field and valuation
+extension structures. These discharge the local coefficient assumptions
+of the prescribed original Tate/lattice/residual construction. -/
+namespace Dubon2026
+noncomputable section
+open IsDedekindDomain
+open scoped NumberField
+variable (F : Type) [Field F] [NumberField F]
+variable {k : Type*} [Field k] (ell : ℕ) (hell : ell.Prime) [Fact ell.Prime] [CharP k ell]
+variable (φ : 𝓞 F →+* k)
+local notation "w" => sourceReductionPrime F ell hell φ
+local notation "v" => Equiv.symm (Rat.HeightOneSpectrum.primesEquiv (R := 𝓞 ℚ)) (Subtype.mk ell hell)
+local notation "E" => HeightOneSpectrum.adicCompletion F w
+private local instance : (w).asIdeal.LiesOver (v).asIdeal :=
+  sourceReductionPrime_liesOver_rational F ell hell φ
+private local instance : Algebra ℚ_[ell] E :=
+  (sourceReductionCompletionPadicMap F ell hell φ).toAlgebra
+private local instance : ValuativeRel ℚ_[ell] :=
+  ValuativeRel.ofValuation (NormedField.valuation (K := ℚ_[ell]))
+private local instance : ValuativeRel E :=
+  ValuativeRel.ofValuation (NormedField.valuation (K := E))
+
+theorem sourceReductionCompletion_hasExtension :
+    (ValuativeRel.valuation ℚ_[ell]).HasExtension (ValuativeRel.valuation E) := by
+  apply Valuation.HasExtension.ofComapInteger
+  ext x
+  change sourceReductionCompletionPadicMap F ell hell φ x ∈
+      (ValuativeRel.valuation E).integer ↔
+    x ∈ (ValuativeRel.valuation ℚ_[ell]).integer
+  rw [normValuativeInteger_mem_iff, normValuativeInteger_mem_iff,
+    Valued.toNormedField.norm_le_one_iff]
+  exact (originalAdicBaseChangeMap_mem_integers ℚ F v w
+    (Padic.adicCompletionEquiv (𝓞 ℚ) ⟨ell, hell⟩ x)).trans
+    (sourcePadicCompletionEquiv_mem_integer ell hell x)
+
+omit [Fact ell.Prime] in
+theorem sourceReductionCompletion_isNonarchimedeanLocalField :
+    IsNonarchimedeanLocalField E :=
+  originalAdic_isNonarchimedeanLocalField F w
+
+end
+end Dubon2026

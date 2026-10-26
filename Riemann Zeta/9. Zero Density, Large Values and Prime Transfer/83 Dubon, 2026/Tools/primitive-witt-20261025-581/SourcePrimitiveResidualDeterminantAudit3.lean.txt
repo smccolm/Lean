@@ -1,0 +1,47 @@
+import SourceArithmeticCharacterFrobeniusEquality
+import SourceResidualCyclotomicDeterminant
+import SourcePrimitiveResidualGlobalDeterminant
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.sourceArithmeticCharacters_eq_of_frobenius
+#print axioms Dubon2026.sourceArithmetic_determinant_eq_cyclotomic_of_frobenius
+#print axioms Dubon2026.sourcePrimitive_exists_originalSupport_cyclotomicResidualGalois_charP
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceArithmeticCharacterFrobeniusEquality, `SourceResidualCyclotomicDeterminant, `SourcePrimitiveResidualGlobalDeterminant]
+  let theorems : Array Name := #[`Dubon2026.sourceArithmeticCharacters_eq_of_frobenius, `Dubon2026.sourceArithmetic_determinant_eq_cyclotomic_of_frobenius, `Dubon2026.sourcePrimitive_exists_originalSupport_cyclotomicResidualGalois_charP]
+  let constructions : Array Name := #[]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Primitive Residual Determinant postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Primitive Residual Determinant theorems discovered"
+  logInfo m!"SOURCE PRIMITIVE RESIDUAL DETERMINANT AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceArithmeticCharacterFrobeniusEquality
+#lint in SourceResidualCyclotomicDeterminant
+#lint in SourcePrimitiveResidualGlobalDeterminant

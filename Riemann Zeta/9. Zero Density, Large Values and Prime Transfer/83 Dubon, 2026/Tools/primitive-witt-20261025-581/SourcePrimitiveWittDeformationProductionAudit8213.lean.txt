@@ -1,0 +1,133 @@
+import Dubon2026.SourceArithmeticCharacterFrobeniusEquality
+import Dubon2026.SourceResidualCyclotomicDeterminant
+import Dubon2026.SourcePrimitiveResidualGlobalDeterminant
+import Dubon2026.SourceResidualRealDeterminant
+import Dubon2026.SourcePrimitiveResidualOddness
+import Dubon2026.SourceFiniteResidualCoefficientField
+import Dubon2026.SourceResidualCoefficientDeterminant
+import Dubon2026.SourceFiniteResidualArithmeticDescent
+import Dubon2026.SourcePrimitiveFiniteResidualGalois
+import Dubon2026.SourceResidualWittCoefficients
+import Dubon2026.SourceResidualWittRepresentation
+import Dubon2026.SourceResidualWittFramedRing
+import Dubon2026.SourcePrimitiveWittFramedResidual
+import Dubon2026.SourcePadicWittCoefficient
+import Dubon2026.SourceArithmeticPadicCyclotomic
+import Dubon2026.SourceArithmeticPadicCyclotomicReduction
+import Dubon2026.SourceArithmeticWittCyclotomic
+import Dubon2026.SourceResidualWittFixedDeterminant
+import Dubon2026.SourceResidualWittFixedRing
+import Dubon2026.SourcePrimitiveWittFixedResidual
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.sourceArithmeticCharacters_eq_of_frobenius
+#print axioms Dubon2026.sourceArithmetic_determinant_eq_cyclotomic_of_frobenius
+#print axioms Dubon2026.sourcePrimitive_exists_originalSupport_cyclotomicResidualGalois_charP
+#print axioms Dubon2026.sourceArithmeticCyclotomic_conjugation
+#print axioms Dubon2026.sourceArithmeticCyclotomicUnitCharacter_conjugation
+#print axioms Dubon2026.sourceArithmetic_real_det_of_cyclotomic
+#print axioms Dubon2026.sourcePrimitive_exists_originalSupport_oddResidualGalois_charP
+#print axioms Dubon2026.sourceFiniteImage_exists_finiteCoefficientField
+#print axioms Dubon2026.sourceArithmeticCyclotomicUnitCharacter_coefficient_map
+#print axioms Dubon2026.sourceArithmetic_cyclotomic_determinant_coefficient_descent
+#print axioms Dubon2026.sourceArithmetic_exists_finiteCoefficient_realization
+#print axioms Dubon2026.sourcePrimitive_exists_originalSupport_finiteResidualGalois_charP
+#print axioms Dubon2026.sourceResidualWittResidueEquiv_residue
+#print axioms Dubon2026.sourceResidualWittCoefficient_localData
+#print axioms Dubon2026.sourceResidualWittRepresentation_original
+#print axioms Dubon2026.sourceResidualWittRepresentation_continuous
+#print axioms Dubon2026.sourceResidualWittFramed_localData
+#print axioms Dubon2026.sourcePrimitive_exists_originalSupport_wittFramedResidualGalois_charP
+#print axioms Dubon2026.sourceResidualWittResidueEquiv
+#print axioms Dubon2026.sourceResidualWittRepresentation
+#print axioms Dubon2026.sourceResidualWittFramedData
+#print axioms Dubon2026.sourcePadicInt_charP_map
+#print axioms Dubon2026.sourcePadicWittCoefficient_injective
+#print axioms Dubon2026.sourcePadicWittCoefficient_residue
+#print axioms Dubon2026.sourceArithmetic_exists_primePower_root
+#print axioms Dubon2026.sourceArithmeticPadicCyclotomicCharacter_root
+#print axioms Dubon2026.sourcePadicInt_toZMod_from_pow_one
+#print axioms Dubon2026.sourceArithmeticPadicCyclotomicCharacter_reduction
+#print axioms Dubon2026.sourceArithmeticWittCyclotomicCharacter_reduction
+#print axioms Dubon2026.sourceResidualWitt_fixedDeterminant_compatibility
+#print axioms Dubon2026.sourceResidualWittFixed_localData
+#print axioms Dubon2026.sourcePrimitive_exists_originalSupport_wittFixedResidualGalois_charP
+#print axioms Dubon2026.sourcePadicWittCoefficient
+#print axioms Dubon2026.sourceArithmeticPadicCyclotomicCharacter
+#print axioms Dubon2026.sourceArithmeticWittCyclotomicCharacter
+#print axioms Dubon2026.sourceResidualWittFixedData
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceArithmeticCharacterFrobeniusEquality, `Dubon2026.SourceResidualCyclotomicDeterminant, `Dubon2026.SourcePrimitiveResidualGlobalDeterminant, `Dubon2026.SourceResidualRealDeterminant, `Dubon2026.SourcePrimitiveResidualOddness, `Dubon2026.SourceFiniteResidualCoefficientField, `Dubon2026.SourceResidualCoefficientDeterminant, `Dubon2026.SourceFiniteResidualArithmeticDescent, `Dubon2026.SourcePrimitiveFiniteResidualGalois, `Dubon2026.SourceResidualWittCoefficients, `Dubon2026.SourceResidualWittRepresentation, `Dubon2026.SourceResidualWittFramedRing, `Dubon2026.SourcePrimitiveWittFramedResidual, `Dubon2026.SourcePadicWittCoefficient, `Dubon2026.SourceArithmeticPadicCyclotomic, `Dubon2026.SourceArithmeticPadicCyclotomicReduction, `Dubon2026.SourceArithmeticWittCyclotomic, `Dubon2026.SourceResidualWittFixedDeterminant, `Dubon2026.SourceResidualWittFixedRing, `Dubon2026.SourcePrimitiveWittFixedResidual]
+  let theorems : Array Name := #[`Dubon2026.sourceArithmeticCharacters_eq_of_frobenius, `Dubon2026.sourceArithmetic_determinant_eq_cyclotomic_of_frobenius, `Dubon2026.sourcePrimitive_exists_originalSupport_cyclotomicResidualGalois_charP, `Dubon2026.sourceArithmeticCyclotomic_conjugation, `Dubon2026.sourceArithmeticCyclotomicUnitCharacter_conjugation, `Dubon2026.sourceArithmetic_real_det_of_cyclotomic, `Dubon2026.sourcePrimitive_exists_originalSupport_oddResidualGalois_charP, `Dubon2026.sourceFiniteImage_exists_finiteCoefficientField, `Dubon2026.sourceArithmeticCyclotomicUnitCharacter_coefficient_map, `Dubon2026.sourceArithmetic_cyclotomic_determinant_coefficient_descent, `Dubon2026.sourceArithmetic_exists_finiteCoefficient_realization, `Dubon2026.sourcePrimitive_exists_originalSupport_finiteResidualGalois_charP, `Dubon2026.sourceResidualWittResidueEquiv_residue, `Dubon2026.sourceResidualWittCoefficient_localData, `Dubon2026.sourceResidualWittRepresentation_original, `Dubon2026.sourceResidualWittRepresentation_continuous, `Dubon2026.sourceResidualWittFramed_localData, `Dubon2026.sourcePrimitive_exists_originalSupport_wittFramedResidualGalois_charP, `Dubon2026.sourcePadicInt_charP_map, `Dubon2026.sourcePadicWittCoefficient_injective, `Dubon2026.sourcePadicWittCoefficient_residue, `Dubon2026.sourceArithmetic_exists_primePower_root, `Dubon2026.sourceArithmeticPadicCyclotomicCharacter_root, `Dubon2026.sourcePadicInt_toZMod_from_pow_one, `Dubon2026.sourceArithmeticPadicCyclotomicCharacter_reduction, `Dubon2026.sourceArithmeticWittCyclotomicCharacter_reduction, `Dubon2026.sourceResidualWitt_fixedDeterminant_compatibility, `Dubon2026.sourceResidualWittFixed_localData, `Dubon2026.sourcePrimitive_exists_originalSupport_wittFixedResidualGalois_charP]
+  let constructions : Array Name := #[`Dubon2026.sourceResidualWittResidueEquiv, `Dubon2026.sourceResidualWittRepresentation, `Dubon2026.sourceResidualWittFramedData, `Dubon2026.sourcePadicWittCoefficient, `Dubon2026.sourceArithmeticPadicCyclotomicCharacter, `Dubon2026.sourceArithmeticWittCyclotomicCharacter, `Dubon2026.sourceResidualWittFixedData]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE PRIMITIVE WITT DEFORMATION AUDIT PASS: {count} theorems including private/generated declarations. The original all-weight form supplies its finite-field residual representation with global cyclotomic determinant and real oddness, together with actual complete framed and genuine cyclotomic fixed-determinant rings over Witt coefficients. Original adic specialization, local/image/regularity properties, automorphy and literal higher continuation remain open; 16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceArithmeticCharacterFrobeniusEquality
+
+#lint in Dubon2026.SourceResidualCyclotomicDeterminant
+
+#lint in Dubon2026.SourcePrimitiveResidualGlobalDeterminant
+
+#lint in Dubon2026.SourceResidualRealDeterminant
+
+#lint in Dubon2026.SourcePrimitiveResidualOddness
+
+#lint in Dubon2026.SourceFiniteResidualCoefficientField
+
+#lint in Dubon2026.SourceResidualCoefficientDeterminant
+
+#lint in Dubon2026.SourceFiniteResidualArithmeticDescent
+
+#lint in Dubon2026.SourcePrimitiveFiniteResidualGalois
+
+#lint in Dubon2026.SourceResidualWittCoefficients
+
+#lint in Dubon2026.SourceResidualWittRepresentation
+
+#lint in Dubon2026.SourceResidualWittFramedRing
+
+#lint in Dubon2026.SourcePrimitiveWittFramedResidual
+
+#lint in Dubon2026.SourcePadicWittCoefficient
+
+#lint in Dubon2026.SourceArithmeticPadicCyclotomic
+
+#lint in Dubon2026.SourceArithmeticPadicCyclotomicReduction
+
+#lint in Dubon2026.SourceArithmeticWittCyclotomic
+
+#lint in Dubon2026.SourceResidualWittFixedDeterminant
+
+#lint in Dubon2026.SourceResidualWittFixedRing
+
+#lint in Dubon2026.SourcePrimitiveWittFixedResidual

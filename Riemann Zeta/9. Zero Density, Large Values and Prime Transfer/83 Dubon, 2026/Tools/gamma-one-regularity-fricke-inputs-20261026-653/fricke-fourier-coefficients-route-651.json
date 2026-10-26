@@ -1,0 +1,19 @@
+{
+  "chain": "DUB-17/18 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 characters -> actual Picard/H1 and diamond comparison -> differential realization -> rational Fourier structure -> cyclotomic Fricke Fourier coefficients.",
+  "selectedRoute": "Reuse the exact actual torsion expansion and its uniform summable majorant from scope650. Native summable_prod_of_nonneg replaces the upstream finite-sum-bound proof. Finite exponent fibers keep the coefficient field membership algebraic; native qExpansion_coeff_unique identifies the actual analytic Fourier coefficients. Keep the natural-coordinate function definitionally linked to the existing torsion-index function.",
+  "assumptionsToDischarge": "The normalized torsion Weierstrass function is periodic, bounded at infinity and has an explicit Fourier coefficient model in the actual level cyclotomic field. The discriminant-multiplied actual Fricke function is bounded at infinity.",
+  "remaining": "Cyclotomic coefficient conjugation and Fricke separation/rational spanning, rational Gamma1 basis and actual differential realization remain, then the Picard/H1/diamond and arithmetic association chain; 16/20; DUB-17--20 OPEN.",
+  "source": "E:\\Lean\\.tmp\\dubon83\\fricke-torsion-expansion-reuse-648\\snapshots.json",
+  "sourceSha256": "53DBF30C92F214B189A8E4DB6653A1D061B25BC9FE0686F5F98F3115BEB0E0C7",
+  "modules": [
+    "SourceFrickeCyclotomicField",
+    "SourceWeierstrassNormalizedTorsion",
+    "SourceWeierstrassTorsionCuspBound",
+    "SourceWeierstrassTorsionFourierCoefficients",
+    "SourceWeierstrassTorsionFourierSum",
+    "SourceWeierstrassTorsionFourierExpansion"
+  ],
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false
+}

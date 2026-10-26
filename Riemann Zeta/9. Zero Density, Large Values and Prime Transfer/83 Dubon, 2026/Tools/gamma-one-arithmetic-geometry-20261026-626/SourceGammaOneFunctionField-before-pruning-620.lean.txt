@@ -1,0 +1,142 @@
+import Dubon2026.SourceModularNormPolynomial
+import Dubon2026.SourceLaurentDegreeTransport
+import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
+
+/-! DUB-17/18 -> all-weight original adic association -> compatible finite Gamma1
+Hecke-character arithmetic realization -> actual Gamma1 geometric comparison ->
+its rational q-expansion function field. These are the literal ratios of
+same-weight integral modular-form expansions, not an abstract curve certificate.
+Finite coordinate and geometric Hecke/diamond comparison remain to be proved.
+Selected from anthropics/fermats-last-theorem, Apache-2.0, commit
+6e837e75355538c7f80bab5b956861e86c4eacc2, Definitions/Def_ModularCurve_X1.lean.
+The existing local form restriction and Laurent base change are reused. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane IntermediateField HahnSeries CongruenceSubgroup
+open scoped MatrixGroups
+
+section Integral
+
+def IsIntegralQExp (f : ℍ → ℂ) (p : PowerSeries ℤ) : Prop :=
+  p.map (Int.castRingHom ℂ) = qExpansion 1 f
+
+theorem IsIntegralQExp.coeff {f : ℍ → ℂ} {p : PowerSeries ℤ} (h : IsIntegralQExp f p) (n : ℕ) :
+    ((PowerSeries.coeff n p : ℤ) : ℂ) = PowerSeries.coeff n (qExpansion 1 f) := by
+  rw [← h, PowerSeries.coeff_map, eq_intCast]
+
+theorem isIntegralQExp_iff {f : ℍ → ℂ} {p : PowerSeries ℤ} :
+    IsIntegralQExp f p ↔ ∀ n : ℕ, ((PowerSeries.coeff n p : ℤ) : ℂ) = PowerSeries.coeff n (qExpansion 1 f) := by
+  refine ⟨fun h n => h.coeff n, fun h => ?_⟩
+  ext n
+  rw [PowerSeries.coeff_map, eq_intCast]
+  exact h n
+
+theorem IsIntegralQExp.unique {f : ℍ → ℂ} {p p' : PowerSeries ℤ} (h : IsIntegralQExp f p)
+    (h' : IsIntegralQExp f p') : p = p' := by
+  ext n
+  have := (h.coeff n).trans (h'.coeff n).symm
+  exact_mod_cast this
+
+theorem isIntegralQExp_one : IsIntegralQExp (1 : ℍ → ℂ) 1 := by
+  rw [IsIntegralQExp, map_one, qExpansion_one]
+
+theorem isIntegralQExp_zero : IsIntegralQExp (0 : ℍ → ℂ) 0 := by
+  rw [IsIntegralQExp, map_zero, qExpansion_zero]
+
+end Integral
+
+section FunctionField
+
+variable (K : Type*) [Field K] (Γ : Subgroup SL(2, ℤ))
+
+def intSeriesC (p : PowerSeries ℤ) : LaurentSeries K :=
+  HahnSeries.ofPowerSeries ℤ K (p.map (Int.castRingHom K))
+
+@[simp]
+theorem intSeriesC_one : intSeriesC K 1 = 1 := by
+  simp [intSeriesC]
+
+@[simp]
+theorem intSeriesC_zero : intSeriesC K 0 = 0 := by
+  simp [intSeriesC]
+
+theorem intSeriesC_mul (p p' : PowerSeries ℤ) : intSeriesC K (p * p') = intSeriesC K p * intSeriesC K p' := by
+  simp [intSeriesC]
+
+def intFormRatiosC : Set (LaurentSeries K) :=
+  {x | ∃ (k : ℤ) (f g : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) k) (pf pg : PowerSeries ℤ),
+      IsIntegralQExp f pf ∧ IsIntegralQExp g pg ∧ intSeriesC K pg ≠ 0 ∧
+        x = intSeriesC K pf / intSeriesC K pg}
+
+variable {K Γ} in
+theorem mem_intFormRatiosC {k : ℤ} (f g : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) k)
+    {pf pg : PowerSeries ℤ} (hf : IsIntegralQExp f pf) (hg : IsIntegralQExp g pg)
+    (hg0 : intSeriesC K pg ≠ 0) :
+    intSeriesC K pf / intSeriesC K pg ∈ intFormRatiosC K Γ :=
+  ⟨k, f, g, pf, pg, hf, hg, hg0, rfl⟩
+
+theorem one_mem_intFormRatiosC : (1 : LaurentSeries K) ∈ intFormRatiosC K Γ := by
+  refine ⟨0, 1, 1, 1, 1, ?_, ?_, by simp, by simp⟩ <;>
+  · show IsIntegralQExp (⇑(1 : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) 0)) 1
+    rw [ModularForm.one_coe_eq_one]
+    exact isIntegralQExp_one
+
+def qExpFunctionFieldC : IntermediateField K (LaurentSeries K) :=
+  IntermediateField.adjoin K (intFormRatiosC K Γ)
+
+theorem intFormRatiosC_subset : intFormRatiosC K Γ ⊆ (qExpFunctionFieldC K Γ : Set (LaurentSeries K)) :=
+  IntermediateField.subset_adjoin K _
+
+variable {K Γ} in
+theorem div_mem_qExpFunctionFieldC {k : ℤ} (f g : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) k)
+    {pf pg : PowerSeries ℤ} (hf : IsIntegralQExp f pf) (hg : IsIntegralQExp g pg)
+    (hg0 : intSeriesC K pg ≠ 0) :
+    intSeriesC K pf / intSeriesC K pg ∈ qExpFunctionFieldC K Γ :=
+  intFormRatiosC_subset K Γ (mem_intFormRatiosC f g hf hg hg0)
+
+variable {Γ} in
+
+theorem intFormRatiosC_mono {Γ' : Subgroup SL(2, ℤ)} (h : Γ' ≤ Γ) :
+    intFormRatiosC K Γ ⊆ intFormRatiosC K Γ' := by
+  rintro x ⟨k, f, g, pf, pg, hf, hg, hg0, rfl⟩
+  have h' : (Γ' : Subgroup (GL (Fin 2) ℝ)) ≤ (Γ : Subgroup (GL (Fin 2) ℝ)) := Subgroup.map_mono h
+  exact ⟨k, ModularNormPolynomial.restrict h' f, ModularNormPolynomial.restrict h' g, pf, pg, hf, hg, hg0, rfl⟩
+
+variable {Γ} in
+
+theorem qExpFunctionFieldC_mono {Γ' : Subgroup SL(2, ℤ)} (h : Γ' ≤ Γ) :
+    qExpFunctionFieldC K Γ ≤ qExpFunctionFieldC K Γ' :=
+  IntermediateField.adjoin.mono K _ _ (intFormRatiosC_mono K h)
+
+end FunctionField
+
+section LevelOne
+
+variable (K : Type*) [Field K] (M : ℕ)
+
+def x1FunctionFieldC : IntermediateField K (LaurentSeries K) :=
+  qExpFunctionFieldC K (Gamma1 M)
+
+abbrev x1FunctionField : IntermediateField ℚ (LaurentSeries ℚ) :=
+  x1FunctionFieldC ℚ M
+
+theorem x1FunctionFieldC_rat : x1FunctionFieldC ℚ M = x1FunctionField M := rfl
+
+def x1x0FunctionFieldC (t : ℕ) : IntermediateField K (LaurentSeries K) :=
+  qExpFunctionFieldC K (Gamma1 M ⊓ Gamma0 t)
+
+theorem x1FunctionFieldC_le_x1x0 (t : ℕ) : x1FunctionFieldC K M ≤ x1x0FunctionFieldC K M t :=
+  qExpFunctionFieldC_mono K inf_le_left
+
+theorem x1x0FunctionFieldC_one : x1x0FunctionFieldC K M 1 = x1FunctionFieldC K M := by
+  have : Gamma1 M ⊓ Gamma0 1 = Gamma1 M := by
+    refine le_antisymm inf_le_left (le_inf le_rfl ?_)
+    intro A _
+    rw [Gamma0_mem]
+    exact Subsingleton.elim _ _
+  rw [x1x0FunctionFieldC, this, x1FunctionFieldC]
+
+end LevelOne
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,27 @@
+{
+  "recordedUTC": "2026-10-26T14:09:26.806519+00:00",
+  "source": {
+    "fetchedUTC": "2026-10-26T13:46:08.379158+00:00",
+    "files": [
+      {
+        "repo": "anthropics/fermats-last-theorem",
+        "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+        "path": "P2M/Sol/S_ModularForm_weierstrassP_torsion_qExpansion_package.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularForm_weierstrassP_torsion_qExpansion_package.lean",
+        "snapshot": "P2M\\Sol\\S_ModularForm_weierstrassP_torsion_qExpansion_package.lean.txt",
+        "gitBlob": "59c7b0ca6b231ed76876e314b75d8c912b0fb2e2",
+        "sha256": "5E73781E59FFE8A29A68B448DF45FB0356C206ECA5D6FA55F35F992037B6E6AC",
+        "bytes": 63719
+      }
+    ]
+  },
+  "conclusion": "The exact actual torsion Weierstrass q-expansion has cyclotomic coefficients; its nonzero-index functions are holomorphic, bounded and periodic, separate indices up to sign and respect cyclotomic coefficient embeddings.",
+  "prerequisite": "The exact Weierstrass Fourier series and holomorphy from the underlying source649. Native uniqueness identifies the explicit finite exponent-fiber model with the actual q-expansion.",
+  "selectedRoute": "Reuse scope650 for actual series and holomorphy; scope651 adapts normalized cusp bounds, finite fibers, coefficient membership and native uniqueness. Native summable_prod_of_nonneg replaces the longer upstream finite-product comparison. Existing local integral E4/E6/Delta results will supply the level-one coefficients. Separation and coefficient-conjugation proofs are inspected later on this same chain.",
+  "sourceReviewOnly": true,
+  "externalProjectBuilt": false,
+  "externalDependencyClosureCertified": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

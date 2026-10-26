@@ -1,0 +1,139 @@
+{
+  "date": "2026-10-26 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 Hecke-character arithmetic realization -> actual Picard/H1, full/parabolic and diamond comparison -> regular differential/cusp comparison -> regularity of an actual Gamma1 differential whose expansion matches an actual cusp form.",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentScalarIndependence.lean",
+      "sha256": "2CB7EFCA500FBE57B6F474D706B231DDDC227CA71A0345B799B2035C7A6AA6C5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentEuler.lean",
+      "sha256": "F81C26F454F057BCCE8173B6C6A90F6B460DC865537E30A66E8524D84460F657"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalQuotientIntegral.lean",
+      "sha256": "67D71EA5D47040FF80A4B96FDC3F42DEB0BAC201D58D0949BBA84026BBEE4046"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveCoordinateSupport.lean",
+      "sha256": "F42A53D6ED4372DEBB98F8D05733455E0752460E3A76ED1FE37FAF32AB9DB1C0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveDerivativeLowerOrder.lean",
+      "sha256": "A556087528E707E1DDD13F4DCA3354FC3B73043DD68AFED217F8DB725C275B00"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveExactDerivativeOrder.lean",
+      "sha256": "DDBEC9CA3FE003784331E009920F73D2D6644EDFB707029E1624773E84A90A36"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCurveGeometry.lean",
+      "sha256": "D63E405202426AB42499AA8AC4D90DC3751E07ACA04C3EF8361098A8B1336C2A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDifferentialFiniteIntegral.lean",
+      "sha256": "633A41F865728C6BB140FAFA2554838A8B109354149B0280854758D68ADCF4D2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDifferentialCuspIntegral.lean",
+      "sha256": "02CCA66E3E0587E4C5A08D6E2F4BE9281C5C1600ED39B6084F5EC1966E29881D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-regularity-descent-reuse-assessment-642.json",
+      "sha256": "C00477A27B81EF7E2BBA53EB7900B4E7DAC67D4A6E8BF00F66AA3D601023287E"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-regularity-route-643b.json",
+    "sha256": "A6F6E9925E2ED7DA0765F51FF956AFAB4C3B9EA1DFB840BE614DF5E90E5F6AA9",
+    "review": {
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 Hecke-character arithmetic realization -> actual Picard/H1, full/parabolic and diamond comparison -> regular differential/cusp comparison -> regularity of an actual Gamma1 differential whose expansion matches an actual cusp form.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentScalarIndependence.lean",
+          "sha256": "2CB7EFCA500FBE57B6F474D706B231DDDC227CA71A0345B799B2035C7A6AA6C5"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentEuler.lean",
+          "sha256": "F81C26F454F057BCCE8173B6C6A90F6B460DC865537E30A66E8524D84460F657"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalQuotientIntegral.lean",
+          "sha256": "67D71EA5D47040FF80A4B96FDC3F42DEB0BAC201D58D0949BBA84026BBEE4046"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveCoordinateSupport.lean",
+          "sha256": "F42A53D6ED4372DEBB98F8D05733455E0752460E3A76ED1FE37FAF32AB9DB1C0"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveDerivativeLowerOrder.lean",
+          "sha256": "A556087528E707E1DDD13F4DCA3354FC3B73043DD68AFED217F8DB725C275B00"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveExactDerivativeOrder.lean",
+          "sha256": "DDBEC9CA3FE003784331E009920F73D2D6644EDFB707029E1624773E84A90A36"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCurveGeometry.lean",
+          "sha256": "D63E405202426AB42499AA8AC4D90DC3751E07ACA04C3EF8361098A8B1336C2A"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDifferentialFiniteIntegral.lean",
+          "sha256": "633A41F865728C6BB140FAFA2554838A8B109354149B0280854758D68ADCF4D2"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDifferentialCuspIntegral.lean",
+          "sha256": "02CCA66E3E0587E4C5A08D6E2F4BE9281C5C1600ED39B6084F5EC1966E29881D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-regularity-descent-reuse-assessment-642.json",
+          "sha256": "C00477A27B81EF7E2BBA53EB7900B4E7DAC67D4A6E8BF00F66AA3D601023287E"
+        }
+      ],
+      "selectedRoute": "Use a native linear retraction to descend monic Laurent equations; no general faithful-flatness layer is needed. Existing subfield integrality transport and valuation-ring integral closure turn both derived expressions into local orders. Existing integral derivative coefficients and derivative-order lower bounds prove finite-point regularity without an upper j-ramification profile. The inverse-j expression gives the exact cusp coefficient order. Separate the generic field valuation calculation from the literal Gamma1 field instantiation to avoid repeated unfolding and meet fixed elaboration limits. All substantive timeout source/log/exit evidence is preserved; no limit changed. Native Gamma(M) inclusion and translation facts discharge the hypotheses for the exact Gamma1 consumer.",
+      "assumptionsToDischarge": "For the actual Gamma1 integral-ratio Laurent field over any algebraically closed rational coefficient field embedded in C, every actual differential whose mapped q-expansion equals that of an actual weight-two cusp form is regular at every place. Both integral equations, their coefficient/subfield descent, the local order bounds, differential generators and finiteness are derived. No regularity or integral equation is assumed.",
+      "remaining": "Algebraic differential realization for arbitrary cusp forms and the converse regular-differential-to-cusp construction remain. Actual Picard/H1, full/parabolic, transpose and diamond comparison, arithmetic realization of original finite characters, original all-weight association, local/image/regularity for automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+      "productionStatus": "Scratch development; audit and production promotion pending.",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "scratchImportClosure": [
+        "SourceGammaOneDifferentialRegularity",
+        "SourceCurveRegularIntegralCriterion",
+        "SourceCurveIntegralDifferentialOrders",
+        "SourceCurveIntegralExpressionOrders",
+        "SourceGammaOneDifferentialIntegralDescent",
+        "SourceLaurentIntegralDescent"
+      ],
+      "auditSuccessor": {
+        "reason": "The first generated declaration-value audit contained literal backslash-n sequences after its final log message. Its source/log/exit are preserved. Fresh audit 6b repairs only the generator output separators; mathematical modules and the successful exhaustive audit are unchanged and not rerun.",
+        "failed": [
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityDependencyAudit6.lean",
+            "sha256": "305274C522EA882B78DFA712FEFC03F0E129175898EB4F061B80E09D772C5395"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityDependencyAudit6.log",
+            "sha256": "2935FB7AD67EEA246C269FA063E33E18048DDA746B2B6EB3270956FF3B921654"
+          },
+          {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityDependencyAudit6.exit",
+            "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+          }
+        ],
+        "successfulExhaustive": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityAudit6.log",
+          "sha256": "9B8AF7DDE94FE14F35C4AC6529AFCFE01ED8F553E928F004318C4F70B96A0C66"
+        },
+        "successor": {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityDependencyAudit6b.lean",
+          "sha256": "C9E7ABBD6EBFC0A6D95742A6EA3CA55C39C4AB226FD3537BFA8279E573937E17"
+        }
+      }
+    }
+  },
+  "discharged": "For the actual Gamma1 integral-ratio Laurent field over any algebraically closed rational coefficient field embedded in C, every actual differential whose mapped q-expansion equals that of an actual weight-two cusp form is regular at every place. Both integral equations, their coefficient/subfield descent, the local order bounds, differential generators and finiteness are derived. No regularity or integral equation is assumed.",
+  "remaining": "Algebraic differential realization for arbitrary cusp forms and the converse regular-differential-to-cusp construction remain. Actual Picard/H1, full/parabolic, transpose and diamond comparison, arithmetic realization of original finite characters, original all-weight association, local/image/regularity for automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

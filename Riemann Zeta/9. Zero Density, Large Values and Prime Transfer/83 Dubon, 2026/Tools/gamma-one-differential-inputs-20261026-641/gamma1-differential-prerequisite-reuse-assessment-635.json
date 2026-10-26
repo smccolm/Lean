@@ -1,0 +1,88 @@
+{
+  "reviewedUTC": "2026-10-26T11:50:02.024793+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> finite Gamma1 character arithmetic realization -> Picard/H1 and diamond comparison -> actual Gamma1 regular-differential/cusp comparison.",
+  "primaryManifest": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-prerequisite-reuse-635\\snapshots.json",
+    "sha256": "CBCC0795A16FCB5B570029375C72EAD61FE0F92ADA38490D120CAC31A217D6BD"
+  },
+  "sourceContracts": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_coeffMap_qExpansionDiffAlong_laurentBaseChange_qExpFunctionFieldC_eq_qExpansion.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_coeffMap_qExpansionDiffAlong_laurentBaseChange_qExpFunctionFieldC_eq_qExpansion.lean",
+      "sha256": "1118F715F01616AC0CB97F3D1247D0DD4892FC51485F6CBA738CF1166FD5DA77",
+      "conclusion": "Algebraic differential realizing a weight-two cusp form with algebraic coefficients.",
+      "inputsAndProof": "Uses a Rankin--Cohen numerator/denominator for f/theta(j), a theorem putting actual complex GammaH modular ratios in the rational integral-ratio scalar extension, and coefficient-descent by finite linear relations. No regularity follows from this realization alone.",
+      "localReuseAndBoundary": "Reuse existing Laurent coefficient maps and differential expansion. Membership of arbitrary complex modular ratios is a separate rational-structure input; field membership implies a ratio (636), but its converse is not inferred."
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_cuspForm_qExpansion_eq_mul_thetaL_pow_of_isIntegral_qExpFunctionFieldC.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_cuspForm_qExpansion_eq_mul_thetaL_pow_of_isIntegral_qExpFunctionFieldC.lean",
+      "sha256": "64F74B4492C3BAEF179D997F56BE120021789E0107349039B1737184D65DFBB4",
+      "conclusion": "Actual weight-2m cusp form with q expansion X*theta(j)^m from two explicit integral bounds.",
+      "inputsAndProof": "Positive m; finite-index integral subgroup containing T; X lies in the actual scalar-extended q-expansion field. The bounds are over C[j] and C[j inverse], with explicit powers 6,4m,3m and 2M,mM+1,mM. Uses equal-weight quotient presentation, analytic order comparison at finite points and decay of every slash translate.",
+      "localReuseAndBoundary": "The needed quotient presentation is supplied by adapting existing local ModularRatios operations and the field identity (634,636). Existing monic root bounds, level-one norm integrality and analytic j-derivative formulas can be reused. The finite-point and cusp estimates remain. Only m=1 is currently needed; defer arbitrary-weight expansion."
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_isIntegral_adjoin_coeffEmb_jq_of_mul_thetaL_eq_qExpansion_of_finiteIndex.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_isIntegral_adjoin_coeffEmb_jq_of_mul_thetaL_eq_qExpansion_of_finiteIndex.lean",
+      "sha256": "90789C8B6219A0253A855EE35CD89A6BFC6785902CD98AC7D10AFAEED7E27A0B",
+      "conclusion": "Finite-coordinate integral equation for Y with Y*theta(j)=qExpansion(f), f an actual weight-two cusp form.",
+      "inputsAndProof": "Finite-index subgroup and unit period. E4,E6,Delta identities reduce Y^6*j^4*(j-1728)^3 to f^6/Delta; a monic modular norm relation proves integrality over C[j].",
+      "localReuseAndBoundary": "SourceModularQuotientIntegral already proves the required general arithmetic-subgroup norm integrality. Existing analytic derivative formula determines a nonzero scalar; inspect the literal q-Euler normalization before adapting the algebraic identity. Do not rebuild the norm polynomial."
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_isIntegral_and_isIntegral_of_smul_D_mem_regularDifferentials_qExpFunctionFieldC.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_isIntegral_and_isIntegral_of_smul_D_mem_regularDifferentials_qExpFunctionFieldC.lean",
+      "sha256": "9B7E90A09D7EF5EE2B1134FB090B8BE225813FC9FEBF3EF2C6AA7A98F6E88188",
+      "conclusion": "Regularity of x*Dj yields the two exact integral expressions over Qbar[j] and Qbar[j inverse].",
+      "inputsAndProof": "Actual Gamma1-contained subgroup, scalar field equality, finite transcendental j coordinate, regular-differential valuation characterization, actual elliptic ramification bounds (3 at 0, 2 at 1728, 1 elsewhere) and pole-order bound by the coordinate degree.",
+      "localReuseAndBoundary": "Scope 632 supplies actual curve/canonical/local differential prerequisites and 634 supplies field equality. SourceCurveChartIntegralCriterion supplies the general valuation criterion. Existing SourceOriginalRegularCuspOrders has Gamma0-specific finite-place realization; its ramification bound is not already a Gamma1 result."
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_one_sub_ord_le_ord_of_coeffMap_mul_thetaL_eq_qExpansion_of_gamma_le.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_one_sub_ord_le_ord_of_coeffMap_mul_thetaL_eq_qExpansion_of_gamma_le.lean",
+      "sha256": "D43981289BA7F50331CA75C7263A295069D60575C4BC2870B87F1F0DBD043444",
+      "conclusion": "At an actual cusp place with ord(j)<0, the coefficient of a differential matching a weight-two cusp form has order at least 1-ord(j).",
+      "inputsAndProof": "Specified Qbar-to-complex embedding, nonzero coefficient, unit period and principal Gamma(M) containment. Derives the bound from an inverse-j integral equation and exact valuation arithmetic.",
+      "localReuseAndBoundary": "Reuse existing coefficient maps and local valuation facts. The inverse-j integral relation for actual Gamma1 slash translates remains required; existing Gamma0 cusp-decay theorems cannot be instantiated without proving the subgroup bridge."
+    }
+  ],
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularRatioOperations.lean",
+      "sha256": "CADCE4CFC34F35EA8ABD46D17A65DE35DC2EED445C1E7BE0338D926106DF2CDD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalModularRatios.lean",
+      "sha256": "2ADEABDB68DD725949EF7823DADF69DDA8F559FBE024B101710B642A15F70441"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularQuotientIntegral.lean",
+      "sha256": "2E29B2B3839CB9F8D08ADA2A478062D227DF0B1F85370A4AB7AA9968297023E7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceMonicRelationRootBound.lean",
+      "sha256": "FC613F63A13058B64CD46F7049DF846F718C90B4FACB1DF5BCD3DFBD6054441F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAnalyticJDerivativeIdentity.lean",
+      "sha256": "A9653BECA8425BD58EF8CE9B0A78F697B5D5A1D4A175615350097D457FC8DC90"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceInverseJDerivativePower.lean",
+      "sha256": "8ADD1C5E8E742F46AF3D18CD2E26237F5B62040353FAE637568785AD469B5469"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularCuspOrders.lean",
+      "sha256": "97223EA1C85E57356D94093BBA20875297ADBA9B7FF220B2A396369EEBA88008"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveChartIntegralCriterion.lean",
+      "sha256": "91A044217E5BEDD485BF6C8309A1DB42018E41E4666CCFCBA8B3E0BA1E263BD8"
+    }
+  ],
+  "selectedRoute": "First supply exact actual complex-field modular ratios (636) using existing local field operations and scalar-extension equality (634). Reuse the already proved arithmetic modular norm integrality. Before further expansion, compare local derivative, valuation and cusp-bound arguments with the selected source prerequisites. Preserve actual subgroup, differential, coefficient and full/parabolic conventions.",
+  "deferred": "Arbitrary m cusp powers and full GammaH development are not needed for the current weight-two geometric step. No duplicate norm-polynomial, general Ramanujan system, abstract Riemann--Roch or genus-invariance infrastructure.",
+  "integrity": "Five selected fixed-revision proof files inspected as research text with exact Git-blob and SHA-256 checks; no external build or transitive axiom closure certified. Upstream resource increases, P2M activation commands and linter/simp suppression are not adopted. Apache-2.0 provenance retained; root pins and proof limits unchanged.",
+  "acceptance": "16/20; DUB-17--20 OPEN. Actual Picard/H1 and diamond comparison, arithmetic finite-character realization, original all-weight association, local/image/regularity, automorphy and higher continuation remain required."
+}

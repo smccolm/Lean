@@ -1,0 +1,82 @@
+{
+  "recordedUTC": "2026-10-25T23:41:10.578414+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceArithmeticCharacterFrobeniusEquality",
+    "SourceResidualCyclotomicDeterminant",
+    "SourcePrimitiveResidualGlobalDeterminant"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticCharacterFrobeniusEquality.lean",
+      "sha256": "B878A44A34CF6F780CFEE638AD1353F83C055F55D0B9B84135AE7626CDD25596",
+      "oleanSha256": "32545C910C9A673E5AF29A8FE4231A0610DF3902C36FA47F24626B4E88E95E24"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualCyclotomicDeterminant.lean",
+      "sha256": "2A790B57F59773F3283BCA8E8CD318B127EF2E9EC6CB551314B65DA6A3CBD33F",
+      "oleanSha256": "0F719BDA03BA53308D30896F68476B946652C1D569F65A5147F76F09E31AA4E1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualGlobalDeterminant.lean",
+      "sha256": "99BAA790CCD3D159FA76750DA52D2DAB992CB44FE6CAB3006046988508116E57",
+      "oleanSha256": "9FCF95338AEE320A92732F9006E711FFFDB80138362F590E8DAF85A4138659E5"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceArithmeticCharacters_eq_of_frobenius",
+    "Dubon2026.sourceArithmetic_determinant_eq_cyclotomic_of_frobenius",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_cyclotomicResidualGalois_charP"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceArithmeticCharacters_eq_of_frobenius",
+    "Dubon2026.sourceArithmetic_determinant_eq_cyclotomic_of_frobenius",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_cyclotomicResidualGalois_charP"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantAudit3.log",
+  "logSha256": "89C0657C0D60735F58DC7D20EB029F53BA059578F753A8B9CAB9A56F98E6E5DB",
+  "auditSha256": "F6BC81F7FF5662D9D2D79D0AA7781DDCB118E9D39BF5CE71C3C7A4605590FB38",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 3,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 8,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantDependencyAudit3b.log",
+  "dependencyAuditSha256": "2D09EEFAF2C5DDBFFBCC5412FF9AEE4662E423C760DA95F9814564FCE875106A",
+  "dependencyAuditSourceSha256": "9E4004DCCA0AB824449C7C05D6977CB12E0E02B88CE454EBE9096FFE603AB9F9",
+  "consumers": [
+    "Dubon2026.sourcePrimitive_exists_originalSupport_cyclotomicResidualGalois_charP"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual all-weight Galois association with fixed determinant -> global cyclotomic determinant of the same original residual representation",
+  "discharged": "Global determinant compatibility is proved from the exact original good-prime Frobenius determinant. The terminal consumer starts with the original primitive form, weight at least two and prescribed rational prime; it constructs the local field and residue characteristic, retains original Fourier traces and good-prime inertia, and proves determinant equals the original cyclotomic character to power k-1.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. All-weight adic realization and required local, image and regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-residual-determinant-3-reuse-review-20261025.json",
+  "reuseReviewSha256": "8ECD7BB0E3741E32A7C4416D67D7F8F86A66C0D10DDAB6778818FDDBC8855540",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "auditSerializationSuccessor": {
+    "reason": "The generated dependency audit and route ended with literal backslash-n bytes. Fresh successors replace only those serialization bytes with line endings; audited proof sources and the public exhaustive audit remain unchanged. The original used generator and dependency audit are retained.",
+    "previousAudit": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantDependencyAudit3.lean",
+      "sha256": "6F32C0FCB46395C04C1A89DF80182EFC304772B96A64DBE4EF4ABE01791E5527"
+    },
+    "successorAudit": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantDependencyAudit3b.lean",
+      "sha256": "9E4004DCCA0AB824449C7C05D6977CB12E0E02B88CE454EBE9096FFE603AB9F9"
+    },
+    "previousRoute": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-determinant-route-572.json",
+      "sha256": "3C69C0A83D0A428F3BC8968EFF622635D7D627C44A3A3853ABD876BD7A22073D"
+    },
+    "successorRoute": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-determinant-route-572b.json",
+      "sha256": "D06F97DC16E64E50BFF0C21ED5485B7BAC355800377807197BA3838AF34CA49D"
+    },
+    "usedGenerator": {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_residual_determinant_audit_572.py",
+      "sha256": "547C0FD820D07E440867C2E415DF0EA1A6BC7344601C432334704C8BFA28669D"
+    }
+  }
+}

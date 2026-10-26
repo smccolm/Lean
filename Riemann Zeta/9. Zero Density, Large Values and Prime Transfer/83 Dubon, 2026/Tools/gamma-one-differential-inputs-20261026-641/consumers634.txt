@@ -1,0 +1,43 @@
+
+section
+
+/-- Without Deligne, the actual first symmetric-power Euler function is holomorphic, nonzero and exactly the original cusp L-series with precisely the finite ramified factors removed. -/
+theorem primitive_first_cusp_euler_identity_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 0 ≤ k) :
+    AnalyticOnNhd ℂ (primitiveSymmetricLFunction f 1) {s : ℂ | 1 < s.re} ∧
+    ∀ s : ℂ, 1 < s.re →
+      primitiveSymmetricLFunction f 1 s = LSeries (normalizedCuspCoefficients f.toCuspForm) s *
+        ∏ p ∈ ramifiedPrimeSet Q,
+          (1 - normalizedCuspCoefficients f.toCuspForm p * (((p : ℕ) : ℂ) ^ (-s)) +
+            if (p : ℕ) ∣ Q then 0 else ((((p : ℕ) : ℂ) ^ (-s))) ^ 2) ∧
+      primitiveSymmetricLFunction f 1 s ≠ 0 ∧ LSeries (normalizedCuspCoefficients f.toCuspForm) s ≠ 0 :=
+  ⟨primitive_first_symmetric_analyticOnNhd f hk, fun _ hs =>
+    ⟨primitive_first_symmetric_eq_cusp_lseries f hk hs,
+      primitive_first_symmetric_ne_zero f hk hs, primitive_cusp_lseries_ne_zero f hk hs⟩⟩
+
+/-- The actual ramified prime-power law and proved cusp energy bound give the square-root estimate and nonvanishing of every genuine finite correction across Re(s)=1. -/
+theorem primitive_ramified_boundary_factors_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 0 < k) :
+    (∀ p : ℕ, Nat.Prime p → p ∣ Q → ‖normalizedCuspCoefficients f.toCuspForm p‖ ^ 2 ≤ (p : ℝ)) ∧
+    ∀ s : ℂ, 1 / 2 < s.re →
+      (∏ p ∈ ramifiedPrimeSet Q,
+        (1 - normalizedCuspCoefficients f.toCuspForm p * (((p : ℕ) : ℂ) ^ (-s)) +
+          if (p : ℕ) ∣ Q then 0 else ((((p : ℕ) : ℂ) ^ (-s))) ^ 2)) ≠ 0 :=
+  ⟨fun _ hp hpQ => primitive_bad_coefficient_norm_sq_le f hk hp hpQ,
+    fun _ hs => primitive_ramified_correction_ne_zero f hk hs⟩
+
+/-- The real order-one incomplete spectral Euler product and the original coefficient L-series have equivalent nonvanishing continuation requirements, with no purity or continuation assumption in their definitions. -/
+theorem primitive_first_continuation_normalization_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 0 < k) :
+    (∃ F : ℂ → ℂ, AnalyticOnNhd ℂ F {s | 1 ≤ s.re} ∧
+      (∀ s : ℂ, 1 ≤ s.re → F s ≠ 0) ∧
+      Set.EqOn F (fun s => (∏' v : Nat.Primes × Fin 2,
+        (1 - primitiveSymmetricSpectralRoots f 1 v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+        {s | 1 < s.re}) ↔
+    (∃ F : ℂ → ℂ, AnalyticOnNhd ℂ F {s | 1 ≤ s.re} ∧
+      (∀ s : ℂ, 1 ≤ s.re → F s ≠ 0) ∧
+      Set.EqOn F (LSeries (normalizedCuspCoefficients f.toCuspForm)) {s | 1 < s.re}) :=
+  primitive_first_nonvanishing_continuation_iff f hk
+
+end
+

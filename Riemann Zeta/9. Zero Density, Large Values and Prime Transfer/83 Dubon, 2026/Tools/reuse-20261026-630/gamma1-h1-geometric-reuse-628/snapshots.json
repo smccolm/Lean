@@ -1,0 +1,25 @@
+{
+  "fetchedUTC": "2026-10-26T10:34:51.240073+00:00",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_exists_linearEquiv_tensor_regularDifferentials_x1FunctionFieldBar_cuspForm.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_linearEquiv_tensor_regularDifferentials_x1FunctionFieldBar_cuspForm.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_exists_linearEquiv_tensor_regularDifferentials_x1FunctionFieldBar_cuspForm.lean.txt",
+      "gitBlob": "26d731c3145c68f9cec29d65a01bc9f1779d231c",
+      "sha256": "6ED7E27D95A2D9BB8B2D9897872EF54960A918D3BED96EE68A9D937BE85AE314",
+      "bytes": 26067
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_exists_map_eq_charpoly_heckeTLinOne_and_charpoly_tateHeckeRepOne_jOne_eq_map_sq.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_map_eq_charpoly_heckeTLinOne_and_charpoly_tateHeckeRepOne_jOne_eq_map_sq.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_exists_map_eq_charpoly_heckeTLinOne_and_charpoly_tateHeckeRepOne_jOne_eq_map_sq.lean.txt",
+      "gitBlob": "a5bad73fa718a83288bddac16f8cce99f0105575",
+      "sha256": "1E600866ECC655AFA860BE863B8E1FD71F3FD01EC455828B8D3A6A2106BAA077",
+      "bytes": 43264
+    }
+  ]
+}

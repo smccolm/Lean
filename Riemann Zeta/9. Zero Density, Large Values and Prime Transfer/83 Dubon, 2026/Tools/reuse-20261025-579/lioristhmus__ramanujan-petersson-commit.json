@@ -1,0 +1,113 @@
+{
+  "sha": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+  "node_id": "C_kwDORUlXB9oAKDhhMzY1M2M5MzU5MjVkN2FkYzg4YzgzMTJhYzE4MjBjMTNhN2JjY2E",
+  "commit": {
+    "author": {
+      "name": "lioristhmus",
+      "email": "lioristhmus@proton.me",
+      "date": "2026-03-20T15:35:54Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-03-20T15:35:54Z"
+    },
+    "message": "Add files via upload",
+    "tree": {
+      "sha": "a596b494807ddb14fbb378e4451251254e097ae5",
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/trees/a596b494807ddb14fbb378e4451251254e097ae5"
+    },
+    "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/commits/8a3653c935925d7adc88c8312ac1820c13a7bcca",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJpvWlbCRC1aQ7uu5UhlAAA718QADTECLk+UQtF0fPBMEwbeY9d\naNmNcu/AuoKR4eBcvT01JVG2JrbBkuJikXV5rl7L7OIJ7mExhp7NVldtOroL6PZ8\nGx0Ekp3sylXSL4BVIXuxF/QOgxzwVSb0gYTvNIOpEx5gtkAPLVpq8AD9/8I0T1bz\nAOzZWevw7mLtTisFxEUGsbFiUcM9HT9KqIODc+/QJ37IlZOc07Mq2EEAqWHX/hMo\n1EZMqFkC4zP7BfFj2M+9364vpX1m81IT8siXPJuNaFsLVH5hzCZSLQQb3v+ZImdY\nnv1TwGsg7WDq2b5WR3G/0bl52YNjPydX0rsF9BVJCvVMvqsz8TwuGm3WbeWsdSrm\nbzDLvjoYzdfjwOX70YGFk4thBqHNIHUmBIePSEyuV7k6gBreukzIeKg5AQzplRTa\nHibBpyK2zc5wbP7MXB4GeSP1GOHdWGqZELWTBZzGjAkZvl5B5HFMmpBE9YK53Mzk\nPC8+g95w/Umn+GaGgF/3C38YHtBcuXknaAx9N+vHsrynXsGeIMFjGa15grWSJfFp\nHV8oJ+Cz7sXTKCqXazimasueUEozqQDMSuuWFcw9+OSiyvMjfau0QzGdEa/r1AuR\n6iH2c+Y+tloHNS+k2xnQhtTYMnNq4wTqz2ZS/ZEyltF+RZfmLXcv5+jqVCX3efch\n2d3xtKvEgC8HK2uzwCDD\n=r4uN\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree a596b494807ddb14fbb378e4451251254e097ae5\nparent 267f9d2bbe84041c30d5f2ece154e25251c28098\nauthor lioristhmus <lioristhmus@proton.me> 1774020954 +0900\ncommitter GitHub <noreply@github.com> 1774020954 +0900\n\nAdd files via upload",
+      "verified_at": "2026-03-20T15:35:56Z"
+    }
+  },
+  "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/commits/8a3653c935925d7adc88c8312ac1820c13a7bcca",
+  "html_url": "https://github.com/lioristhmus/ramanujan-petersson/commit/8a3653c935925d7adc88c8312ac1820c13a7bcca",
+  "comments_url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/commits/8a3653c935925d7adc88c8312ac1820c13a7bcca/comments",
+  "author": {
+    "login": "lioristhmus",
+    "id": 261458093,
+    "node_id": "U_kgDOD5WIrQ",
+    "avatar_url": "https://avatars.githubusercontent.com/u/261458093?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/lioristhmus",
+    "html_url": "https://github.com/lioristhmus",
+    "followers_url": "https://api.github.com/users/lioristhmus/followers",
+    "following_url": "https://api.github.com/users/lioristhmus/following{/other_user}",
+    "gists_url": "https://api.github.com/users/lioristhmus/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/lioristhmus/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/lioristhmus/subscriptions",
+    "organizations_url": "https://api.github.com/users/lioristhmus/orgs",
+    "repos_url": "https://api.github.com/users/lioristhmus/repos",
+    "events_url": "https://api.github.com/users/lioristhmus/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/lioristhmus/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "267f9d2bbe84041c30d5f2ece154e25251c28098",
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/commits/267f9d2bbe84041c30d5f2ece154e25251c28098",
+      "html_url": "https://github.com/lioristhmus/ramanujan-petersson/commit/267f9d2bbe84041c30d5f2ece154e25251c28098"
+    }
+  ],
+  "stats": {
+    "total": 4,
+    "additions": 2,
+    "deletions": 2
+  },
+  "files": [
+    {
+      "sha": "70c951c1307c217a7a6a1f6a9912976d28e26a9a",
+      "filename": "lean/blueprint.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/lioristhmus/ramanujan-petersson/blob/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean%2Fblueprint.md",
+      "raw_url": "https://github.com/lioristhmus/ramanujan-petersson/raw/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean%2Fblueprint.md",
+      "contents_url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/contents/lean%2Fblueprint.md?ref=8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "patch": "@@ -1,6 +1,6 @@\n # ramanujan-petersson Blueprint\n \n-Source file: `/Users/studio/research/papers/math/module/ramanujan-petersson/ramanujan-petersson.md`\n+Source file: `../ramanujan-petersson.md`\n Project slug: `ramanujan-petersson`\n Lean package: `RamanujanPetersson`\n "
+    },
+    {
+      "sha": "2b7944166dfc27b1c17526648be8b9b7812fa53e",
+      "filename": "lean/claims.yaml",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/lioristhmus/ramanujan-petersson/blob/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean%2Fclaims.yaml",
+      "raw_url": "https://github.com/lioristhmus/ramanujan-petersson/raw/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean%2Fclaims.yaml",
+      "contents_url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/contents/lean%2Fclaims.yaml?ref=8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "patch": "@@ -1,4 +1,4 @@\n-source_path: \"/Users/studio/research/papers/math/module/ramanujan-petersson/ramanujan-petersson.md\"\n+source_path: \"../ramanujan-petersson.md\"\n source_basename: \"ramanujan-petersson.md\"\n project_slug: \"ramanujan-petersson\"\n lean_package: \"RamanujanPetersson\""
+    }
+  ]
+}

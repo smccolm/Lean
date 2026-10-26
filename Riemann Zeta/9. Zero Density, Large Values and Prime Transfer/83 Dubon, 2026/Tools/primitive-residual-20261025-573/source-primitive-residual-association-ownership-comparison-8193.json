@@ -1,0 +1,350 @@
+{
+  "scratchSum": 137,
+  "scratchDistinct": 137,
+  "generatedNameRenamings": {
+    "_private.Dubon2026.SourceAbsoluteArithmeticDescent.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceAbsoluteArithmeticDescent": "_private.Dubon2026.SourceAbsoluteArithmeticDescent.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+    "_private.Dubon2026.SourceAbsoluteArithmeticDescent.0.Dubon2026.instIsGaloisRatSubtypeAlgebraicClosureMemIntermediateField_sourceAbsoluteArithmeticDescent": "_private.Dubon2026.SourceAbsoluteArithmeticDescent.0.Dubon2026.instIsGaloisRatSubtypeAlgebraicClosureMemIntermediateField_dubon2026",
+    "_private.Dubon2026.SourceAbsoluteArithmeticRestriction.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceAbsoluteArithmeticRestriction": "_private.Dubon2026.SourceAbsoluteArithmeticRestriction.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+    "_private.Dubon2026.SourceAbsoluteFiniteUnramified.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceAbsoluteFiniteUnramified": "_private.Dubon2026.SourceAbsoluteFiniteUnramified.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+    "_private.Dubon2026.SourceAbsoluteFiniteUnramified.0.Dubon2026.instIsGaloisRatSubtypeAlgebraicClosureMemIntermediateField_sourceAbsoluteFiniteUnramified": "_private.Dubon2026.SourceAbsoluteFiniteUnramified.0.Dubon2026.instIsGaloisRatSubtypeAlgebraicClosureMemIntermediateField_dubon2026",
+    "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_sourceAdicCoefficientResidueComparison._proof_1": "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_dubon2026._proof_1",
+    "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_sourceAdicCoefficientResidueComparison._proof_2": "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_dubon2026._proof_2",
+    "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_sourceAdicCoefficientResidueComparison._proof_3": "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_dubon2026._proof_3",
+    "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_sourceAdicCoefficientResidueComparison._proof_4": "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_dubon2026._proof_4",
+    "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_sourceAdicCoefficientResidueComparison._proof_5": "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_dubon2026._proof_5",
+    "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_sourceAdicCoefficientResidueComparison._proof_6": "_private.Dubon2026.SourceAdicCoefficientResidueComparison.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegers_dubon2026._proof_6",
+    "_private.Dubon2026.SourceArithmeticLocalEmbeddingExtension.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceArithmeticLocalEmbeddingExtension": "_private.Dubon2026.SourceArithmeticLocalEmbeddingExtension.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+    "_private.Dubon2026.SourceOriginalArithmeticResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsGaloisRatAlgebraicClosure_sourceOriginalArithmeticResidual": "_private.Dubon2026.SourceOriginalArithmeticResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsGaloisRatAlgebraicClosure_dubon2026",
+    "_private.Dubon2026.SourceOriginalDivisorArithmeticResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsGaloisRatAlgebraicClosure_sourceOriginalDivisorArithmeticResidual": "_private.Dubon2026.SourceOriginalDivisorArithmeticResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsGaloisRatAlgebraicClosure_dubon2026",
+    "_private.Dubon2026.SourceOriginalNormLocalResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsGaloisRatAlgebraicClosure_sourceOriginalNormLocalResidual": "_private.Dubon2026.SourceOriginalNormLocalResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsGaloisRatAlgebraicClosure_dubon2026",
+    "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual._proof_1": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime._proof_1",
+    "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual._proof_2": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime._proof_2",
+    "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual._proof_3": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime._proof_3",
+    "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instCharZeroAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instCharZeroAdicCompletionRingOfIntegersSourceReductionPrime",
+    "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instHasExtensionPadicAdicCompletionRingOfIntegersSourceReductionPrimeValueGroupWithZeroValuation_sourceOriginalPrescribedReductionResidual": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instHasExtensionPadicAdicCompletionRingOfIntegersSourceReductionPrimeValueGroupWithZeroValuation",
+    "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsModuleTopologyPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsModuleTopologyPadicAdicCompletionRingOfIntegersSourceReductionPrime",
+    "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsNonarchimedeanLocalFieldAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instIsNonarchimedeanLocalFieldAdicCompletionRingOfIntegersSourceReductionPrime",
+    "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedReductionResidual._proof_1": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation._proof_1",
+    "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedReductionResidual._proof_3": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation._proof_3",
+    "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedReductionResidual._proof_4": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation._proof_4",
+    "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation_sourceOriginalPrescribedReductionResidual._proof_5": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instTopologicalSpaceResidueFieldSubtypeAdicCompletionRingOfIntegersSourceReductionPrimeMemSubringIntegerValueGroupWithZeroValuation._proof_5",
+    "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual._proof_1": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_1",
+    "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual._proof_2": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_2",
+    "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourceOriginalPrescribedReductionResidual._proof_3": "_private.Dubon2026.SourceOriginalPrescribedReductionResidual.0.Dubon2026.SourceFunctionField.OriginalChart.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_3",
+    "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourcePrescribedCompletionResidue._proof_1": "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_1",
+    "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourcePrescribedCompletionResidue._proof_2": "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_2",
+    "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourcePrescribedCompletionResidue._proof_3": "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_3",
+    "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourcePrescribedCompletionResidue._proof_4": "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_4",
+    "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourcePrescribedCompletionResidue._proof_5": "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_5",
+    "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourcePrescribedCompletionResidue._proof_6": "_private.Dubon2026.SourcePrescribedCompletionResidue.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_6",
+    "_private.Dubon2026.SourceRationalLocalValuation.0.Dubon2026.instIsGaloisRatAlgebraicClosure_sourceRationalLocalValuation": "_private.Dubon2026.SourceRationalLocalValuation.0.Dubon2026.instIsGaloisRatAlgebraicClosure_dubon2026",
+    "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite._proof_1": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime._proof_1",
+    "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite._proof_2": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime._proof_2",
+    "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite._proof_3": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime._proof_3",
+    "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite._proof_4": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime._proof_4",
+    "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite._proof_5": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime._proof_5",
+    "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite._proof_6": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instAlgebraAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime._proof_6",
+    "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instContinuousSMulAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instContinuousSMulAdicCompletionRingOfIntegersRatCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime",
+    "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instIsScalarTowerRatAdicCompletionRingOfIntegersCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime_sourceReductionCompletionFinite": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instIsScalarTowerRatAdicCompletionRingOfIntegersCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrimeSourceReductionPrime",
+    "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instLiesOverRingOfIntegersRatAsIdealSourceReductionPrimeCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrime_sourceReductionCompletionFinite": "_private.Dubon2026.SourceReductionCompletionFinite.0.Dubon2026.instLiesOverRingOfIntegersRatAsIdealSourceReductionPrimeCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrime",
+    "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceReductionCompletionLocalStructures._proof_1": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime._proof_1",
+    "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceReductionCompletionLocalStructures._proof_2": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime._proof_2",
+    "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime_sourceReductionCompletionLocalStructures._proof_3": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instAlgebraPadicAdicCompletionRingOfIntegersSourceReductionPrime._proof_3",
+    "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instLiesOverRingOfIntegersRatAsIdealSourceReductionPrimeCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrime_sourceReductionCompletionLocalStructures": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instLiesOverRingOfIntegersRatAsIdealSourceReductionPrimeCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrime",
+    "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourceReductionCompletionLocalStructures._proof_1": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_1",
+    "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourceReductionCompletionLocalStructures._proof_2": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_2",
+    "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime_sourceReductionCompletionLocalStructures._proof_3": "_private.Dubon2026.SourceReductionCompletionLocalStructures.0.Dubon2026.instValuativeRelAdicCompletionRingOfIntegersSourceReductionPrime._proof_3",
+    "_private.Dubon2026.SourceReductionCompletionPadicMap.0.Dubon2026.instLiesOverRingOfIntegersRatAsIdealSourceReductionPrimeCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrime_sourceReductionCompletionPadicMap": "_private.Dubon2026.SourceReductionCompletionPadicMap.0.Dubon2026.instLiesOverRingOfIntegersRatAsIdealSourceReductionPrimeCoeEquivPrimesHeightOneSpectrumSymmPrimesEquivMkNatPrime"
+  },
+  "productionFocused": 137,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {},
+  "missingFromFocusedAlreadyInPrevious": [],
+  "productionNamesNotInScratch": [],
+  "unexplainedMissing": [],
+  "scopes": [
+    {
+      "modules": [
+        "SourcePrescribedReductionPrime",
+        "SourceAdicCoefficientResidueComparison",
+        "SourcePrescribedCompletionResidue",
+        "SourceReductionCompletionBasePrime",
+        "SourceReductionCompletionPadicMap",
+        "SourceReductionCompletionFinite",
+        "SourcePadicCompletionValuation",
+        "SourceReductionCompletionLocalStructures",
+        "SourceOriginalPrescribedReductionResidual",
+        "SourceOriginalExactReductionResidual",
+        "SourceOriginalAlgebraicIntegerResidual"
+      ],
+      "count": 77,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualAssociationScratchOwnership568For8193.log",
+        "sha256": "D80B404AA917F76C05B133A04CE03A43D1A774331DD86AADD162FFD768801164",
+        "sourceSha256": "3A94C375A6D39C79C476F102967281ADAF406D0774A7EB84CC5EB47D9603F125"
+      }
+    },
+    {
+      "modules": [
+        "SourceValuationResidualAction",
+        "SourceNormValuationRestriction",
+        "SourceRationalLocalValuation",
+        "SourceOriginalNormLocalResidual",
+        "SourceNumberFieldNormInertiaLift",
+        "SourceAbsoluteFiniteUnramified",
+        "SourceNumberFieldSupportRamification",
+        "SourceAbsoluteArithmeticRestriction",
+        "SourceAbsoluteArithmeticDescent",
+        "SourceArithmeticLocalEmbeddingExtension",
+        "SourceOriginalArithmeticResidual"
+      ],
+      "count": 38,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualAssociationScratchOwnership570For8193.log",
+        "sha256": "E6F05521432B5993D98F9849C44B6D2CFED44E97D582871EB151A6C5645C8C56",
+        "sourceSha256": "013AE6335C7383808301AED38FFB79A1923F1810E5825DBC82937FEEF52A8ED3"
+      }
+    },
+    {
+      "modules": [
+        "SourceWeightTwoDegeneracyAdjoint",
+        "SourceWeightTwoEigenLevelDescent",
+        "SourceWeightTwoNewEigenNormalization",
+        "SourceParabolicPrimitiveDivisor",
+        "SourceArithmeticSupportInflationValues",
+        "SourceOriginalDivisorArithmeticResidual",
+        "SourceParabolicArithmeticResidual",
+        "SourceResidualGaloisRealization",
+        "SourcePrimitiveWeightTwoGalois",
+        "SourcePrimitiveRestoredGalois",
+        "SourcePrimitiveOriginalResidualGalois",
+        "SourcePrimitiveResidualGaloisCharP"
+      ],
+      "count": 22,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualAssociationScratchOwnership571For8193.log",
+        "sha256": "36EBD5CAB7FB54149163F3FBB94BC5DBC4BDB8DFAA36D4F7C3DD5FD34AC1EC92",
+        "sourceSha256": "7E0308316CA53CB088B8B5F786097A608F55F7B6728C6EC0EB7A6263529CB8F2"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualAssociationOwnership8193.log",
+    "sha256": "BA2A6B2528054BA8274FFEA8893AC492997498D77B76F00437772AE39C687E5A",
+    "sourceSha256": "AF0D4A2FCA4470F7F557CCAB379291AC4B91F8E555A38E7C80820D84BD311B45"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-152732-013.log",
+    "sha256": "5FAB3F34E9E2184BF145AAD0B30CB5DAFFF74229E6E490E33E50F37AE975AAE6"
+  },
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 34 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourcePrescribedReductionPrime",
+        "scratchSha256": "15665F94824911A5CE79890E906835AB43A89EEBAFFD457119EC2780048409A3",
+        "productionSha256": "15665F94824911A5CE79890E906835AB43A89EEBAFFD457119EC2780048409A3",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceAdicCoefficientResidueComparison",
+        "scratchSha256": "D815629C322A21A2A79278CD8B4D1DF86A2ADF82646693F9F34658B6DE26F7E6",
+        "productionSha256": "D815629C322A21A2A79278CD8B4D1DF86A2ADF82646693F9F34658B6DE26F7E6",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrescribedCompletionResidue",
+        "scratchSha256": "8464B555CE0ED7DE6CED2F4D76ECD9B3ABE0FF83E82FABFDA652E16D297052AD",
+        "productionSha256": "E91926A3AD4BF2CEC7ED7AFBFB05A356D12A8C1BC78CDBF65A5EF1A922050AEC",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceReductionCompletionBasePrime",
+        "scratchSha256": "150F99A5B9DC276596D798AD99B73248BAA48950143948BE7539CF7BC6CAFBE4",
+        "productionSha256": "BBC558FBC3CA275E7159EFB356A31689997559DC17037D58C1ED8AD424E1A272",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceReductionCompletionPadicMap",
+        "scratchSha256": "2F11A1502300B6403BF5D224432B27F429E888FE7108B48C554C57B730B6A9E9",
+        "productionSha256": "0F25E31738AB9081D71369824E7483BF9562AFFDD2A7F513804AA1E782D07715",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceReductionCompletionFinite",
+        "scratchSha256": "5C166ABF639EEBE07C95ABE09686D28AA1C15F26FF4537368C6E575C2AE686C2",
+        "productionSha256": "4C121AB57ADD41312659936FC14547414F906D7A13C24B25AF59206E76B979B1",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePadicCompletionValuation",
+        "scratchSha256": "146F370D05F4B3AF9AD4E7A1F34C08523B2ED950998531E20451F5301480FB4F",
+        "productionSha256": "EFA48675FE5E93E8CF7F6250E238BAC2AC06D36EAACC6CA3B04EBC559C019FC6",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceReductionCompletionLocalStructures",
+        "scratchSha256": "45E6ED484C161E8946A9A87A4973DF6722BBB7C4462D6D65292C998F87A057EB",
+        "productionSha256": "65D8D0C326CA3A43B5FDDA4D3C63AEE5807D95339E676279728EF07DBC9CECE5",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceOriginalPrescribedReductionResidual",
+        "scratchSha256": "9C91569C6F1DEF22CB77522855ADA5371637D4B0076930413CF7C89736069E35",
+        "productionSha256": "B21B04309D48A0EE436F4E7E8755DEF509C47212ECEE49B6FC3313D4A2D29C6C",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceOriginalExactReductionResidual",
+        "scratchSha256": "4487D0E4F527DDCCC8CE020FDFB2A5931D25CB1F9F7E6AA5901E8B101A12F58F",
+        "productionSha256": "C5A08A54B859259FA6C8C954980B98D29333BCDCCB2D132077E6CBDA64B673FC",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceOriginalAlgebraicIntegerResidual",
+        "scratchSha256": "586C53C9FD3C5686D5537D8262B98D4717E8BF1A7A2EB752F7987BB79329F864",
+        "productionSha256": "58209DC3968D9EC85D10F5489A3518D686CA4C95D120FE568D7AC966801EFEDA",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceValuationResidualAction",
+        "scratchSha256": "94A29E896DC4905654A0135D8E1E22D5E77040EE1ABE426A20B01BF6BD70C3A1",
+        "productionSha256": "94A29E896DC4905654A0135D8E1E22D5E77040EE1ABE426A20B01BF6BD70C3A1",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceNormValuationRestriction",
+        "scratchSha256": "100D63D93A59237C17D73E3480E744779486F48C5CFA6F173FE429B498912ED7",
+        "productionSha256": "2B8C73CFFE01A679B67868CB16915EA25BC2BE7F0315C5C9FBC21D6BEC406227",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceRationalLocalValuation",
+        "scratchSha256": "783BE58DBEFD8C841B680CFCBA21E0564C379C14685785DDE1C17B389883A64A",
+        "productionSha256": "C82F71D69ADBF6859BBA075CCCE6E1B617034E64DDBB6C45BDB726986C588D7D",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceOriginalNormLocalResidual",
+        "scratchSha256": "7DF1AC5CE7AE8C9CBC54CEB38FE8AB45AA9B8ED603CDAA1E2EFF75D783CD4DAC",
+        "productionSha256": "863FD12BB17E18424B6ABE781241F23FB9BE6805B38D6AEDC28B5996F1770F6D",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceNumberFieldNormInertiaLift",
+        "scratchSha256": "46A9BDD26F86B51FF0536C8364BE8DFA8D06A5A2D36ED9E69309678FD7A45A3A",
+        "productionSha256": "46A9BDD26F86B51FF0536C8364BE8DFA8D06A5A2D36ED9E69309678FD7A45A3A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceAbsoluteFiniteUnramified",
+        "scratchSha256": "77ACDD60BC30C73AF41F9DB6CAFAC3A6A258667B2C37BD2D7A7D1BC457D6A9DF",
+        "productionSha256": "E5462CF21B2DF3F72B12BE1A776467F40EEA0DF24EE1CEF78CDB14FCB01E2BFD",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceNumberFieldSupportRamification",
+        "scratchSha256": "E8A6889C31325464CBE761C545F4A6A684BAD568BE49A2E9CDB65E5F78768B9D",
+        "productionSha256": "7963B927D80C257DE9CC91989C816249193F96A5C68A0D7D7082DA2413DA1E07",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceAbsoluteArithmeticRestriction",
+        "scratchSha256": "598AECD9E8B6C72B1B22B005AF7DB235973C482CEE64E2BB8366E5BC942F2B3F",
+        "productionSha256": "07CDDC97E8807EC33C2F162310413AEA8A17B1138586AAD14472FA1875EE2CC3",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceAbsoluteArithmeticDescent",
+        "scratchSha256": "E78024EB072497355D08ECE5537515E075D26A348D0AFA3BB1FD8930CF4D84A1",
+        "productionSha256": "CB921DE5B3A6A37ED712467C2753F5ED179623A7A6F377CB85B4D97303E3D054",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceArithmeticLocalEmbeddingExtension",
+        "scratchSha256": "6AD7CAFC9D4A896F8E75E1C92963BDA691D9BE768665C54EA8BED761191D42AB",
+        "productionSha256": "B89D60BB84745523D7B11ECB2FAD13DFB0D8BE16668998B88D1732262797F6CD",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceOriginalArithmeticResidual",
+        "scratchSha256": "2A85E4C9DC83289E4F5C82038F83BC958036C687A3BE133A4EF4F5546D7D39B4",
+        "productionSha256": "561661B901F84504DCADD2838A0FDADAB0A4158828369FAD758814FEF746696D",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceWeightTwoDegeneracyAdjoint",
+        "scratchSha256": "C9EBB9A51ED5B02F2DF6328B6D8F5F1498D64533671D660BAE953D53C4406B1B",
+        "productionSha256": "C9EBB9A51ED5B02F2DF6328B6D8F5F1498D64533671D660BAE953D53C4406B1B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceWeightTwoEigenLevelDescent",
+        "scratchSha256": "E7E2E9E7E9BCBE57B8ACF78F7B31F5A7D354FE4F8630F0627B1F4BAE51D9D608",
+        "productionSha256": "03DF950F3953387CF73DD0EB8B02D601DFF9C85FEC0C0ACC5B497FA469CD7F7B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceWeightTwoNewEigenNormalization",
+        "scratchSha256": "DCA9680D30CBC4242644B93F29C9656A3194C33BA0F424B25ED0FD918A1711CC",
+        "productionSha256": "DCA9680D30CBC4242644B93F29C9656A3194C33BA0F424B25ED0FD918A1711CC",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceParabolicPrimitiveDivisor",
+        "scratchSha256": "DB387DE7195521AD240A04FD14676086EF2C394512852B2685C06CCA6FEA7BD9",
+        "productionSha256": "B972B563174568B2FBEFEC5B6453308BF0CF9647249608B044CB0E36FAEA7DEE",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceArithmeticSupportInflationValues",
+        "scratchSha256": "24429E9B0A79A539D3BD7727E098E445FB195B9F208C26086E89DAB8D8567E62",
+        "productionSha256": "24429E9B0A79A539D3BD7727E098E445FB195B9F208C26086E89DAB8D8567E62",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceOriginalDivisorArithmeticResidual",
+        "scratchSha256": "D077A8AA0D9C024818C4AE00E4F31D66D0BF993F243E958C792C1916503F4998",
+        "productionSha256": "106C5F7A39E60CA651D73B2DCF0B9F70021240919DE631196A3A5BBD4E7091B6",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceParabolicArithmeticResidual",
+        "scratchSha256": "4AD10AE43E84DE7CF88AA6C6D20B357E3850799A8746EEF22A54A784F4E6B455",
+        "productionSha256": "B57F612F67EEBD406C66CEBD9EF1C4DBBC424BEBE4B494F09E75B34326B2BB2E",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceResidualGaloisRealization",
+        "scratchSha256": "71491C7FAC3CA431CEE900A960457F3C0AC93278E41C283B31D2B6EAF7FE6706",
+        "productionSha256": "9F08C53D457D554DF7A99ACB32D44AA092E5BE83C5C315FB179D61D049864D89",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrimitiveWeightTwoGalois",
+        "scratchSha256": "8627C760A6DD5F9E5D0747B6D009D39B74C7B8A5A2BE77F538C97FDBACF27188",
+        "productionSha256": "A12BA0C927A56D8DB9B18F46368FEBE308E28ED85E30D04DAC72F97653DB7670",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrimitiveRestoredGalois",
+        "scratchSha256": "401A070AAE29A7BD3FEFF724378C3F5BADEBC0C172F953975C8CAA9422792D47",
+        "productionSha256": "4C32273A5B73F9F8F9061CDE3EFE19C155E2E657A7E2F8C5D2988E55559FE536",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrimitiveOriginalResidualGalois",
+        "scratchSha256": "F9725CC304F494F977E7C463827FA00F118D0352339054EA4E8BCD50B6E52A44",
+        "productionSha256": "F164C8F8A3A90645ECB58390E8FB3FC12A3C3EB93B48C9BC15D79DB309CA6FC3",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePrimitiveResidualGaloisCharP",
+        "scratchSha256": "9FF5AD8AC5D0CE83E801E98883256DBBF47773F4E93B32F87410B81B9FF09BFC",
+        "productionSha256": "DA16BAB8D7A9E70369DCE4D2862F07E79A85819D5C1EE79CAFEA6B88D7C02FA8",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": true
+}

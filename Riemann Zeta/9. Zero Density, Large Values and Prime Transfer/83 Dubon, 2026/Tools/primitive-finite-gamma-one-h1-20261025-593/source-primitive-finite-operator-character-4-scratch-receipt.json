@@ -1,0 +1,85 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T03:05:22.523570+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceBinaryH1ModulusOperatorAlgebra",
+    "SourceFiniteOperatorCharacterDescent",
+    "SourcePrimitiveFiniteH1HeckeCharacter",
+    "SourcePrimitiveFiniteH1OperatorRealization"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryH1ModulusOperatorAlgebra.lean",
+      "sha256": "3088DB3E4135312604626BD75E4F18FC786BCD4F02277870EFD6A380D256F30E",
+      "oleanSha256": "63AB7EA8E2FF3239F64CAB6E500CDC222D497F596CC5ABC243370CD4C8057129"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteOperatorCharacterDescent.lean",
+      "sha256": "3AE57C01A36D9DF2D2B5E62DAC21816E54CAA7ABE0007AF37A04B5725A040C6A",
+      "oleanSha256": "75E4C8FA86F8ACBB480522A65B4F770A5C6EEC8D17708EA07EF5413CBCA55D45"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1HeckeCharacter.lean",
+      "sha256": "48017F46307B8EAC8F2129D87FA9C3417B44B2D3AF19B4BA23472CCA4A5EDE26",
+      "oleanSha256": "D8859273CF458CBD868270C3D498811CF753679D3B91D3A4A2C3F9AFFD8077BF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1OperatorRealization.lean",
+      "sha256": "3F439F73DD995AB8615CE63E33D4FF35246009D6EF34EC390CEEED6E90620223",
+      "oleanSha256": "E399BF564D78A99A7672A54994B175F0D475816C8B56561F4ECCD3566EF9F2FD"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceBinaryH1ModulusOperatorAlgebra_finite",
+    "Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_coefficients",
+    "Dubon2026.sourceFiniteOperatorCharacterDescend_comp",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_modulus_kernel",
+    "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter_comp",
+    "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter_hecke",
+    "Dubon2026.sourcePrimitive_exists_finiteH1OperatorCharacters",
+    "Dubon2026.sourceBinaryH1ModulusOperatorMap",
+    "Dubon2026.sourceBinaryH1ModulusOperatorAlgebra",
+    "Dubon2026.sourceFiniteOperatorCharacterDescend",
+    "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter",
+    "Dubon2026.sourcePrimitiveFiniteH1CharacterData"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceBinaryH1ModulusOperatorAlgebra_finite",
+    "Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_coefficients",
+    "Dubon2026.sourceFiniteOperatorCharacterDescend_comp",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_modulus_kernel",
+    "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter_comp",
+    "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter_hecke",
+    "Dubon2026.sourcePrimitive_exists_finiteH1OperatorCharacters"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceBinaryH1ModulusOperatorMap",
+    "Dubon2026.sourceBinaryH1ModulusOperatorAlgebra",
+    "Dubon2026.sourceFiniteOperatorCharacterDescend",
+    "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter",
+    "Dubon2026.sourcePrimitiveFiniteH1CharacterData"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteOperatorCharacterAudit4.log",
+  "logSha256": "6CAE8BFCE6DA8658D06EA80FBC3B3C661022870F73C2C808E32F3B57580278A4",
+  "auditSha256": "30887727A8D3C3EB9E283282D6B830C58E639F935299799B2DA04DA406AFB7E1",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 41,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 19,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteOperatorCharacterDependencyAudit4.log",
+  "dependencyAuditSha256": "13D5AA576E4E736E0CEA2F1A24196BC91D3E9345800F5D7B357D4082F81C8058",
+  "dependencyAuditSourceSha256": "67A2914B9B190B19EF1DAD3156B6E3E4FEBCB653320145A6FE34B7CE4055EF1B",
+  "consumers": [
+    "Dubon2026.sourcePrimitive_exists_finiteH1OperatorCharacters"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> geometric finite-precision Hecke realization -> factor the original compatible adic characters through actual finite rings of original coefficient-reduced H1 operators",
+  "discharged": "Construct the actual finite operator ring at every positive prime-power precision and factor the same original compatible adic H1 character through it, preserving its exact Fourier values and original integral pullback.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Arithmetic geometric realization and correspondence compatibility, compatible Galois representations and characteristic-zero association remain required. No arithmetic Galois action is supplied by the finite ring factorization. Local/image/regularity, automorphy and literal higher continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-finite-operator-character-4-reuse-review-20261025.json",
+  "reuseReviewSha256": "1DA9C559AD2FDAC9E97F257DBFE75C4917038E60E189D34B48EB26E832962C07",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

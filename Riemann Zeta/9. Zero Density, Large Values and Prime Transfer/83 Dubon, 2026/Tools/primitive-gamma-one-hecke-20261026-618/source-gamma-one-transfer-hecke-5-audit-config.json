@@ -1,0 +1,54 @@
+{
+  "modules": [
+    "SourceH1TraceIntersection",
+    "SourceGammaOneIntersectionTraceExchange",
+    "SourceGammaOneUpperH1Composition",
+    "SourceGammaOneSubgroupTraceHecke",
+    "SourceGammaOneTransferHecke"
+  ],
+  "theorems": [
+    "Dubon2026.sourceSubgroupH1Trace_intersection_swap",
+    "Dubon2026.sourceGammaOneHeckeIntersectionSwap_cover",
+    "Dubon2026.sourceGammaOneCoverTrace_exchange",
+    "Dubon2026.sourceGammaOneUpperH1Composition",
+    "Dubon2026.sourceGammaOneSubgroupTrace_hecke_square",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_hecke"
+  ],
+  "constructions": [
+    "Dubon2026.sourceSubgroupIntersectionSwap",
+    "Dubon2026.sourceGammaOneHeckeIntersectionSwap"
+  ],
+  "queries": [
+    "Dubon2026.sourceSubgroupH1Trace_intersection_swap",
+    "Dubon2026.sourceGammaOneHeckeIntersectionSwap_cover",
+    "Dubon2026.sourceGammaOneCoverTrace_exchange",
+    "Dubon2026.sourceGammaOneUpperH1Composition",
+    "Dubon2026.sourceGammaOneSubgroupTrace_hecke_square",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_hecke",
+    "Dubon2026.sourceSubgroupIntersectionSwap",
+    "Dubon2026.sourceGammaOneHeckeIntersectionSwap"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceSubgroupH1Trace_intersection_swap",
+    "Dubon2026.sourceGammaOneHeckeIntersectionSwap_cover",
+    "Dubon2026.sourceGammaOneCoverTrace_exchange",
+    "Dubon2026.sourceGammaOneUpperH1Composition",
+    "Dubon2026.sourceGammaOneSubgroupTrace_hecke_square",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_hecke",
+    "Dubon2026.sourceSubgroupIntersectionSwap",
+    "Dubon2026.sourceGammaOneHeckeIntersectionSwap",
+    "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_pullback",
+    "Dubon2026.sourceGammaOneHeckeUpperTrace_reindex",
+    "Dubon2026.sourceGammaOneHeckeH1Pullback_square",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_eq_trace",
+    "Dubon2026.sourceSubgroupH1Trace_tower",
+    "Dubon2026.originalCohomologyReindex_isIso",
+    "groupCohomology.map_comp",
+    "Dubon2026.sourceGammaOneCoverHeckeTraceSubgroup_eq",
+    "Dubon2026.sourceGammaOneSubgroupH1Iso"
+  ],
+  "roots": [
+    "Dubon2026.sourceGammaOneConstantH1Transfer_hecke"
+  ],
+  "separatelyAxiomChecked": []
+}

@@ -1,0 +1,106 @@
+{
+  "sha": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "node_id": "C_kwDOUOWrn9oAKDZlODM3ZTc1MzU1NTM4YzdmODBiYWI1Yjk1Njg2MWU4NmM0ZWFjYzI",
+  "commit": {
+    "author": {
+      "name": "tianyi-ant",
+      "email": "tianyi@anthropic.com",
+      "date": "2026-09-24T14:06:36Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-09-24T14:06:36Z"
+    },
+    "message": "Merge pull request #9 from anthropics/tianyi-ant-patch-1\n\nUpdate README.md",
+    "tree": {
+      "sha": "443edf11d3610bc14f267534862c19124f2cb7a4",
+      "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/git/trees/443edf11d3610bc14f267534862c19124f2cb7a4"
+    },
+    "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/git/commits/6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqtS5sCRC1aQ7uu5UhlAAALe4QAJK3/n2vHMdoNAFs0RLxp53L\nAT9w/2BRtdf1Q6RcYxyQJe/I3h+D0FqO3YKi/rBHW92D1ibcGdp8U/tcb4lrdtzt\nEXyi0xy1iLt0kHhDcI54D0Iskgu25NghmzZTDFJLDvTpH7sPsqerTfIMwRCoSXFf\nLU8kMLZdskHZfCgQysbk2WWp0WFWyYiK4AHCMa9L0phRnctzDtGRpFJvbtc6Rprz\nQkEuEMc4uHBeyGIQI77wSqoyTVyR9I4E1n5yTpp4VtWdXLf3/p5kXRgpmpD9rsEI\nw3fl4iKC05UElpR7PyLTVvy9Pax4oz2Afhyn2XD3qHbQ3ILwgcczon3qgJmVHsaT\nDS/OEBKtaiB5gPryqszkaLh52jhOAulJ8exKhNtaCgEwTGaJaolzUJeYIKdrxcFG\nEQpaAf6d1UcNiHmg0cu+uQGA3OQ3c56Q7IbGsGoNAwYc1KhHNxlFVY1wSKCSd06A\n40jSbntO+6j/BqjB6z3NsSnom4EO9k1JeS/pOyE01orqSwaHDTQ410cv2ZS/XWdU\nf5ShO5CdhQuUpKu3Ann9DTviyXYOyT0b/azcQB+endU6EJ/YnChacnNN4dwIuBZv\naAcwAzAqB0wT+aioENyV9fVa5T9H0dI5Qg/dIkBWnkvWQc38TU4YBTb9fkAnc2+1\n+ZwpiT57dKr9wt3fi75m\n=sQhm\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 443edf11d3610bc14f267534862c19124f2cb7a4\nparent aa2d8b34692b16c70f699536de0d8e75b9a3e9ef\nparent fe99c326124b73189bb5369492822f2190eb2a22\nauthor tianyi-ant <tianyi@anthropic.com> 1790258796 -0400\ncommitter GitHub <noreply@github.com> 1790258796 -0400\n\nMerge pull request #9 from anthropics/tianyi-ant-patch-1\n\nUpdate README.md",
+      "verified_at": "2026-09-24T14:06:36Z"
+    }
+  },
+  "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/commits/6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "html_url": "https://github.com/anthropics/fermats-last-theorem/commit/6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "comments_url": "https://api.github.com/repos/anthropics/fermats-last-theorem/commits/6e837e75355538c7f80bab5b956861e86c4eacc2/comments",
+  "author": {
+    "login": "tianyi-ant",
+    "id": 273028434,
+    "node_id": "U_kgDOEEYVUg",
+    "avatar_url": "https://avatars.githubusercontent.com/u/273028434?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/tianyi-ant",
+    "html_url": "https://github.com/tianyi-ant",
+    "followers_url": "https://api.github.com/users/tianyi-ant/followers",
+    "following_url": "https://api.github.com/users/tianyi-ant/following{/other_user}",
+    "gists_url": "https://api.github.com/users/tianyi-ant/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/tianyi-ant/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/tianyi-ant/subscriptions",
+    "organizations_url": "https://api.github.com/users/tianyi-ant/orgs",
+    "repos_url": "https://api.github.com/users/tianyi-ant/repos",
+    "events_url": "https://api.github.com/users/tianyi-ant/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/tianyi-ant/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef",
+      "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/commits/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef",
+      "html_url": "https://github.com/anthropics/fermats-last-theorem/commit/aa2d8b34692b16c70f699536de0d8e75b9a3e9ef"
+    },
+    {
+      "sha": "fe99c326124b73189bb5369492822f2190eb2a22",
+      "url": "https://api.github.com/repos/anthropics/fermats-last-theorem/commits/fe99c326124b73189bb5369492822f2190eb2a22",
+      "html_url": "https://github.com/anthropics/fermats-last-theorem/commit/fe99c326124b73189bb5369492822f2190eb2a22"
+    }
+  ],
+  "stats": {
+    "total": 2,
+    "additions": 2,
+    "deletions": 0
+  },
+  "files": [
+    {
+      "sha": "b2a839c8674977b3a8fa18fa1004da12af5277ec",
+      "filename": "README.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "blob_url": "https://github.com/anthropics/fermats-last-theorem/blob/6e837e75355538c7f80bab5b956861e86c4eacc2/README.md",
+      "raw_url": "https://github.com/anthropics/fermats-last-theorem/raw/6e837e75355538c7f80bab5b956861e86c4eacc2/README.md",
+      "contents_url": "https://api.github.com/repos/anthropics/fermats-last-theorem/contents/README.md?ref=6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "patch": "@@ -54,6 +54,8 @@ each intermediate theorem means what its name suggests; that is for the reader t\n the Lean theorem behind each step and states exactly how strong each named classical result is as proved here.\n \n ## Reading the proof in a browser\n+The documentation is hosted at [Documentation Website](https://tianyipeng.github.io/fermats-last-theorem/).\n+You can also browse them locally from the `html/` folder of this repository, as follows.\n \n The `html/` folder (about 390 MB) presents this repository as static web pages: the route of the proof step by step;\n a page for each of the 29,511 theorems (the exact Lean statement, what it cites and what cites it, and an expandable"
+    }
+  ]
+}

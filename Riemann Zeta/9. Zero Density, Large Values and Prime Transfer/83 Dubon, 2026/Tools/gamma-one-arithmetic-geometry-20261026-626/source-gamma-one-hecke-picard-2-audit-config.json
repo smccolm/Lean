@@ -1,0 +1,51 @@
+{
+  "modules": [
+    "SourceGammaOneResidues",
+    "SourceGammaOneHeckePicard"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_place_residue_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_place_residue_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_mem_degZero",
+    "Dubon2026.SourceFunctionField.GammaOne.isPrincipal_heckeDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePicard_mk"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePicard"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_place_residue_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_place_residue_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_mem_degZero",
+    "Dubon2026.SourceFunctionField.GammaOne.isPrincipal_heckeDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePicard_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePicard"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_place_residue_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_place_residue_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_mem_degZero",
+    "Dubon2026.SourceFunctionField.GammaOne.isPrincipal_heckeDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePicard_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePicard",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_finite_coordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_finite_coordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeAlpha_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeBeta_finite",
+    "Dubon2026.SourceCurve.place_residue_bijective_of_finite_coordinate",
+    "Dubon2026.SourceCurve.Divisor.geometricCorrespondence",
+    "Dubon2026.SourceCurve.Divisor.geometricCorrespondence_mem_degZero",
+    "Dubon2026.SourceCurve.Divisor.isPrincipal_geometricCorrespondence",
+    "Dubon2026.SourceCurve.Pic0.geometricCorrespondence",
+    "Dubon2026.SourceCurve.Pic0.geometricCorrespondence_mk"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_mem_degZero",
+    "Dubon2026.SourceFunctionField.GammaOne.isPrincipal_heckeDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePicard_mk"
+  ],
+  "separatelyAxiomChecked": []
+}

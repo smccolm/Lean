@@ -1,0 +1,63 @@
+{
+  "chain": "DUB-17/18 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 Hecke-character realization -> actual Picard/H1 and diamond comparison -> differential realization -> rational Fourier structure -> Fricke generator holomorphy and cyclotomic expansion.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\fricke-torsion-expansion-reuse-assessment-648.json",
+      "sha256": "C5C8626B608C4D9DD67B3986B14ACF796363670B973478EAD0DCDEF9922BB4C8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\weierstrass-expansion-reuse-assessment-649.json",
+      "sha256": "BDB80D1965937DFC38CC18ADB29AF5C8AB879C0EDE5E58944F0723B29FA28E16"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-fricke-transformation-4c-scratch-receipt.json",
+      "sha256": "1B089A904F7ECB171E895466FDC455922A1C2D8EBD06E3BD79EB6FC0E75C126E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\weierstrass-expansion-reuse-649\\snapshots.json",
+      "sha256": "3684BA56C6A0B7423FB8467E5C80DA78467967A92547157402C64F8FDFAA9CB5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\EisensteinSeries\\QExpansion.lean",
+      "sha256": "791D375E824E44040D07B23F3F47071B2812ACB851B427D9F857374CEFA3678B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Elliptic\\Weierstrass.lean",
+      "sha256": "DDF25BA36ED026C33BC432AACECF76C054E7A94AEF7C50191F520DEF44E070B4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Complex\\LocallyUniformLimit.lean",
+      "sha256": "0F15F53C70A8DCDD9AB2F25353AAACB5242FF1F57212744349F56AAE8DF20792"
+    }
+  ],
+  "selectedRoute": "Reuse native EisensteinSeries.qExpansion_identity at weight two and PeriodPair.hasSum_weierstrassP. Keep the integer-complement boundary argument, because torsion points with first coordinate zero are required. Reuse the newly proved actual period-pair construction and omit duplicate scaling and invariant-normalization machinery. Derive the explicit paired Fourier tail, prove its uniform summable majorant, and obtain holomorphy of the same actual torsion Weierstrass functions.",
+  "assumptionsToDischarge": "The actual Weierstrass value at every nonzero level torsion point has the exact paired Fourier expansion, with absolute rearrangement proved. A locally uniform summable majorant proves holomorphy of the same actual function. The original normalized torsion-index and Fricke functions are holomorphic on the upper half-plane, with no holomorphy or Fourier-identity premise.",
+  "remaining": "Cusp boundedness, explicit coefficient model and conjugation, rational Fricke spanning, actual differential realization and converse, Picard/H1/diamond and arithmetic association remain; 16/20; DUB-17--20 OPEN.",
+  "scratchImportClosure": [
+    "SourceLipschitzTwo",
+    "SourceLipschitzTwoRealBoundary",
+    "SourceWeierstrassRowSeries",
+    "SourceWeierstrassLatticeRows",
+    "SourceWeierstrassTorsionExpansion",
+    "SourceWeierstrassTorsionTail",
+    "SourceWeierstrassTorsionHolomorphy",
+    "SourceFrickeHolomorphy",
+    "SourceFrickePeriodHomothetyV2",
+    "SourceFrickeModularLatticeV2",
+    "SourceFrickeTorsionTransformationV2",
+    "SourceFrickeFunctionTransformationV2"
+  ],
+  "separateAxiomChecks": [
+    "Dubon2026.SourceFricke.qN_ne_zero",
+    "Dubon2026.SourceFricke.summable_nat_mul_cexp_pow",
+    "Dubon2026.SourceFricke.summable_one_div_sub_int_sq",
+    "Dubon2026.SourceFricke.tsum_row_split",
+    "Dubon2026.SourceFricke.tsum_row_zero",
+    "Dubon2026.SourceFricke.zetaN_ne_zero"
+  ],
+  "separateReason": "The actual row consumer directly reindexes the native absolutely summable Weierstrass lattice series. Three alternative row-splitting convenience identities are not in that proof value; the root-of-unity nonzero fact is for later coefficient arithmetic. They retain explicit axiom checks and exhaustive/linter coverage and are not reported as consumed here. The native locally uniform differentiation theorem is corrected to its full Complex namespace.",
+  "successor": "The original full audit passes. A fresh dependency audit corrects the native theorem namespace and accurately separates unused convenience identities; failed audit evidence is preserved and mathematical sources are unchanged.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false
+}

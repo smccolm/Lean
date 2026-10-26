@@ -1,0 +1,70 @@
+{
+  "modules": [
+    "SourceModularQDerivative",
+    "SourceModularQDerivativeExpansion",
+    "SourceJEulerModularIdentity",
+    "SourceJEulerPolynomial",
+    "SourceGammaOneDifferentialFiniteIntegral"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.ModularQDerivative.norm_qParam_one_lt_one",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.hasDerivAt_qParam_one",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.normalizedDerivOfComplex_eq_qParam_mul_deriv",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.periodic_normalizedDerivOfComplex",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_coeff_unique'",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.hasSum_qExpansion_normalizedDerivOfComplex",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_coeff_normalizedDerivOfComplex",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.coe_qExpansion_normalizedDerivOfComplex",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_derivative_bracket",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qEuler_jqModC_mul_discriminant",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.laurent_discriminant_relation",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.exists_qEuler_jqModC_formula",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.exists_qEuler_jqModC_power_six",
+    "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_finite_expression"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.ModularQDerivative.norm_qParam_one_lt_one",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.hasDerivAt_qParam_one",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.normalizedDerivOfComplex_eq_qParam_mul_deriv",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.periodic_normalizedDerivOfComplex",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_coeff_unique'",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.hasSum_qExpansion_normalizedDerivOfComplex",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_coeff_normalizedDerivOfComplex",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.coe_qExpansion_normalizedDerivOfComplex",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_derivative_bracket",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qEuler_jqModC_mul_discriminant",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.laurent_discriminant_relation",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.exists_qEuler_jqModC_formula",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.exists_qEuler_jqModC_power_six",
+    "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_finite_expression"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.ModularQDerivative.norm_qParam_one_lt_one",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.hasDerivAt_qParam_one",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.normalizedDerivOfComplex_eq_qParam_mul_deriv",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.periodic_normalizedDerivOfComplex",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_coeff_unique'",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.hasSum_qExpansion_normalizedDerivOfComplex",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_coeff_normalizedDerivOfComplex",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.coe_qExpansion_normalizedDerivOfComplex",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_derivative_bracket",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qEuler_jqModC_mul_discriminant",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.laurent_discriminant_relation",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.exists_qEuler_jqModC_formula",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.exists_qEuler_jqModC_power_six",
+    "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_finite_expression",
+    "Dubon2026.SourceFunctionField.isIntegral_modular_quotient",
+    "Dubon2026.SourceFunctionField.JMultiplicity.exists_D_jf_mul_\u0394_eq",
+    "Dubon2026.SourceFunctionField.JMultiplicity.isBoundedAtImInfty_D",
+    "Dubon2026.SourceDifferential.qEuler_coeff",
+    "Dubon2026.SourceFunctionField.jqModC_mul_discriminant_expansion",
+    "UpperHalfPlane.hasFPowerSeriesOnBall_cuspFunction",
+    "HasFPowerSeriesOnBall.fderiv",
+    "Dubon2026.SourceFunctionField.GammaOne.hper"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_finite_expression"
+  ],
+  "separatelyAxiomChecked": []
+}

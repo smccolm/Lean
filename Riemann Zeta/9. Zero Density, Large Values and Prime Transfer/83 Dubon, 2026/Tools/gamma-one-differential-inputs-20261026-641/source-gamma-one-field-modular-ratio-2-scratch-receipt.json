@@ -1,0 +1,81 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T11:52:38.358883+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneModularRatios",
+    "SourceGammaOneFieldModularRatio"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularRatios.lean",
+      "sha256": "D3A7C8B6206A43044CDF837A1C8119C26C3E29C1442333A2260DE2F0AFCA9678",
+      "oleanSha256": "0543E79434A0A5BA159D77AF24D32FA339B3C94233C9B5462B9294FBEA454ACB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFieldModularRatio.lean",
+      "sha256": "7ED0F78DE1CE4168585744F2C1144A8C56BFAAA2984B842D73ADC99BF170D093",
+      "oleanSha256": "538FB4A4DB20A633BD78401C5E167A73B3BCF92E7F64EE739A87F378322C4B27"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_mul",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_add",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_one",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_const",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.one_ne_zero'",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.mul_ne_zero'",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.isRatio_algebraMap",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.mul",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.add",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.inv",
+    "Dubon2026.SourceFunctionField.GammaOne.isRatio_of_mem_qExpFunctionFieldC",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_mul",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_add",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_one",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_const",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.one_ne_zero'",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.mul_ne_zero'",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.isRatio_algebraMap",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.mul",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.add",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.inv",
+    "Dubon2026.SourceFunctionField.GammaOne.isRatio_of_mem_qExpFunctionFieldC",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFieldModularRatioAudit2.log",
+  "logSha256": "5486A549CA7D6AD6FDFA2CD7F1A38A3CF91F95A4221BC50246E4A69DD8CF5206",
+  "auditSha256": "F42E3B4A5DF20FEEB9F99EA81B70BD6B3D8D8AB5E76FA1B8B402BEDC3D706AD1",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 15,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 18,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFieldModularRatioDependencyAudit2.log",
+  "dependencyAuditSha256": "C052A67F13DE06649A53071BA0D4EEE0FAF82B734861A42A99416604B0A2E421",
+  "dependencyAuditSourceSha256": "2BA7294001F01438E72648F08E7349C1F685D6E276AF788992508CFC27BA1F29",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of finite Gamma1 Hecke characters -> Picard/H1 comparison -> actual Gamma1 regular-differential/cusp comparison -> actual equal-weight modular presentation of each field element.",
+  "discharged": "Every element of functionFieldOver Gamma C is a ratio of genuine same-weight Gamma modular forms with a nonzero denominator whenever T lies in Gamma. The theorem derives the presentation from actual field membership, preserving the exact Laurent q-expansion equality. It applies to Gamma1 and its Hecke intersection; no rational-coefficient converse or bounded-denominator principle is inferred.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Finite-point and cusp regularity estimates and actual cusp realization remain, followed by Picard/H1, full/parabolic and diamond comparisons, arithmetic finite-character realization, original all-weight association, local/image/regularity, automorphy and higher continuation. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-field-modular-ratio-2-reuse-review-20261026.json",
+  "reuseReviewSha256": "44199B78D8ACECA302492742A16231D2441A85F40BA1412E7CB0299ED155C027",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

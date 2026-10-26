@@ -1,0 +1,38 @@
+import Dubon2026.SourceArithmeticCharacterFrobeniusEquality
+import Dubon2026.SourceResidualCyclotomicDeterminant
+import Dubon2026.SourcePrimitiveResidualGlobalDeterminant
+import Dubon2026.SourceResidualRealDeterminant
+import Dubon2026.SourcePrimitiveResidualOddness
+import Dubon2026.SourceFiniteResidualCoefficientField
+import Dubon2026.SourceResidualCoefficientDeterminant
+import Dubon2026.SourceFiniteResidualArithmeticDescent
+import Dubon2026.SourcePrimitiveFiniteResidualGalois
+import Dubon2026.SourceResidualWittCoefficients
+import Dubon2026.SourceResidualWittRepresentation
+import Dubon2026.SourceResidualWittFramedRing
+import Dubon2026.SourcePrimitiveWittFramedResidual
+import Dubon2026.SourcePadicWittCoefficient
+import Dubon2026.SourceArithmeticPadicCyclotomic
+import Dubon2026.SourceArithmeticPadicCyclotomicReduction
+import Dubon2026.SourceArithmeticWittCyclotomic
+import Dubon2026.SourceResidualWittFixedDeterminant
+import Dubon2026.SourceResidualWittFixedRing
+import Dubon2026.SourcePrimitiveWittFixedResidual
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceArithmeticCharacterFrobeniusEquality, `Dubon2026.SourceResidualCyclotomicDeterminant, `Dubon2026.SourcePrimitiveResidualGlobalDeterminant, `Dubon2026.SourceResidualRealDeterminant, `Dubon2026.SourcePrimitiveResidualOddness, `Dubon2026.SourceFiniteResidualCoefficientField, `Dubon2026.SourceResidualCoefficientDeterminant, `Dubon2026.SourceFiniteResidualArithmeticDescent, `Dubon2026.SourcePrimitiveFiniteResidualGalois, `Dubon2026.SourceResidualWittCoefficients, `Dubon2026.SourceResidualWittRepresentation, `Dubon2026.SourceResidualWittFramedRing, `Dubon2026.SourcePrimitiveWittFramedResidual, `Dubon2026.SourcePadicWittCoefficient, `Dubon2026.SourceArithmeticPadicCyclotomic, `Dubon2026.SourceArithmeticPadicCyclotomicReduction, `Dubon2026.SourceArithmeticWittCyclotomic, `Dubon2026.SourceResidualWittFixedDeterminant, `Dubon2026.SourceResidualWittFixedRing, `Dubon2026.SourcePrimitiveWittFixedResidual]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

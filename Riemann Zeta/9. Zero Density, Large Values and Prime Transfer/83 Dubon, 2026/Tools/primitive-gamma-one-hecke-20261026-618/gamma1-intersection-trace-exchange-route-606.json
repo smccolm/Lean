@@ -1,0 +1,24 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> Gamma1 geometric realization -> surjective-transfer Hecke compatibility -> exchange the actual intersection traces",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceTower.lean",
+      "sha256": "AD278B75D2192A1709D4DC94F4A19D46F085E652278DE0F940E13027D55EF023"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\OriginalGroupCohomologyReindex.lean",
+      "sha256": "FF5D4B6DF85061DA954C0ABDAC083453C63FC0D00679732411C14F2EF59010B6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverBinaryHeckeTrace.lean",
+      "sha256": "D87B62D582FB7E968115A3F7071F2F66C041726CF7613137D2E4013662F3ED70"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperTraceReindex.lean",
+      "sha256": "6C3C9EB92C40D20F163F85D8B3D6C64F1535650052EE8CA4F07A484CA0211E0F"
+    }
+  ],
+  "shorterRoute": "Apply the proved native trace tower twice to the same actual intersection and cancel the existing cohomology reindexing isomorphism. No new resolutions or general Mackey development.",
+  "assumptionsToDischarge": "Equality of the two iterated native traces after the exact nested-subgroup reindexing.",
+  "remaining": "Instantiate on the actual Gamma1-image/Hecke-upper intersection, compose with the native pullback and upper-trace squares, then identify the actual transfer; arithmetic geometric and diamond comparison, Galois realization and higher continuation remain. DUB-17--20 OPEN;16/20."
+}

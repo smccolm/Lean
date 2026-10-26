@@ -1,0 +1,25 @@
+{
+  "scope": 604,
+  "chain": "DUB-17/18 -> original all-weight adic association -> geometric Gamma1 realization -> actual surjective-transfer Hecke identity -> original upper-subgroup trace under the actual cover range isomorphism",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceBaseChangeCoefficient.lean",
+      "sha256": "A8856D1AEF6A28930210ACE72B7059336CB202CEA00CAB9081A880BF584AC6AA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperImage.lean",
+      "sha256": "6F2CE50508F9EA4B6E2D2207C6984F97CD9EC6E4B653B7E1F8E60683F8A1DCEC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSubgroupCohomologyMap.lean",
+      "sha256": "937193952EE4964F6BE9F3D3F629C612CE003B45FA310AA44E3212EC0FDCF27B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceTower.lean",
+      "sha256": "AD278B75D2192A1709D4DC94F4A19D46F085E652278DE0F940E13027D55EF023"
+    }
+  ],
+  "shorterRoute": "Specialize the already proved native coefficient trace base change to the actual group isomorphism. Surjectivity of its coset map follows from the isomorphism; the precise subgroup preimage follows from the proved literal cover upper-entry criterion. The existing subgroup H1 pullback formula identifies the original transport. This avoids a new transfer-along-injections theory or new coinduction comparison.",
+  "assumptionsToDischarge": "Identify the exact original upper trace inside the cover image with the original Gamma1 constant-coefficient upper trace, discharging the group preimage and coset-surjectivity conditions.",
+  "remaining": "Combine this trace square with the actual native Hecke pullback square, the intersection-subgroup identification and proved trace composition to close the full surjective-transfer Hecke identity. Arithmetic geometric/diamond comparison, Galois realization, all-weight association, local/image/regularity, automorphy and higher continuation remain. 16/20; DUB-17--20 OPEN."
+}

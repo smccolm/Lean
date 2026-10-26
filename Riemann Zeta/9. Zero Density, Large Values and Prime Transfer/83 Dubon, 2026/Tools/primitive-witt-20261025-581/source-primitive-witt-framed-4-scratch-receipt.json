@@ -1,0 +1,106 @@
+{
+  "separatelyAxiomChecked": [
+    "Dubon2026.sourceResidualWittResidueEquiv_residue"
+  ],
+  "recordedUTC": "2026-10-26T00:55:32.165153+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceResidualWittCoefficients",
+    "SourceResidualWittRepresentation",
+    "SourceResidualWittFramedRing",
+    "SourcePrimitiveWittFramedResidual"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualWittCoefficients.lean",
+      "sha256": "E1B9EAD9574E7382E729E82B268D3990E06786E045F57D5FCD0C569A05659E42",
+      "oleanSha256": "094FC20EDF4F6C59E4C9BF43195942194A1B041E2374A412733DB5B8ADCA6E12"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualWittRepresentation.lean",
+      "sha256": "5D1CD82FF0387F3D3F34306D1683226B9EA9298D0B22FE8C2CE9EB74CE5BB3F7",
+      "oleanSha256": "01710528EADABD95EBF5A1F7941C1AB9EC9E89C6ABD1934FD84ECF60D5C35BAB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualWittFramedRing.lean",
+      "sha256": "999FC513DA8108240BD54AEDEEEEA30CCFE511269F0314AD2E5ACE9C069C84FC",
+      "oleanSha256": "66BBB515CB9CF9C77D308C87B5D084CC84CE11F05A3AE77322F42A998CEC6F35"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedResidual.lean",
+      "sha256": "BE4DEBA82616DA10FC53DD4650801F26121841C4663F161824A0B38A6C9DDBE1",
+      "oleanSha256": "9C0431DC54309F775BCF255ED7AD8FF5FE45B7789EAD912B7EFAD8DE4E0A8DB8"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceResidualWittResidueEquiv_residue",
+    "Dubon2026.sourceResidualWittCoefficient_localData",
+    "Dubon2026.sourceResidualWittRepresentation_original",
+    "Dubon2026.sourceResidualWittRepresentation_continuous",
+    "Dubon2026.sourceResidualWittFramed_localData",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_wittFramedResidualGalois_charP",
+    "Dubon2026.sourceResidualWittResidueEquiv",
+    "Dubon2026.sourceResidualWittRepresentation",
+    "Dubon2026.sourceResidualWittFramedData"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceResidualWittResidueEquiv_residue",
+    "Dubon2026.sourceResidualWittCoefficient_localData",
+    "Dubon2026.sourceResidualWittRepresentation_original",
+    "Dubon2026.sourceResidualWittRepresentation_continuous",
+    "Dubon2026.sourceResidualWittFramed_localData",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_wittFramedResidualGalois_charP"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceResidualWittResidueEquiv",
+    "Dubon2026.sourceResidualWittRepresentation",
+    "Dubon2026.sourceResidualWittFramedData"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedAudit4.log",
+  "logSha256": "F4D61D89260E8E53A8E9091780F3296E121C59D28450501F7CDE78070F3B128D",
+  "auditSha256": "2FA8DACA32D0B00776205DE76749F663DAEA82AFA505134D85315AE4C6BCC247",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 23,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 13,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedDependencyAudit4b.log",
+  "dependencyAuditSha256": "661B4604AE47BFBD2F73760E95509677427CA790AB8A7794C6CF1F801C0183AF",
+  "dependencyAuditSourceSha256": "D3970A03A0F3E84B28DDA296A9261AB47032346F99BCB9D2A53AEA543FF38299",
+  "consumers": [
+    "Dubon2026.sourcePrimitive_exists_originalSupport_wittFramedResidualGalois_charP"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual residual deformation problem -> native Witt coefficient ring and the original residual framed universal representation",
+  "discharged": "Construct the native characteristic-zero Witt coefficient ring with precisely the original finite residue field. Derive Noetherianity and maximal-ideal completeness of the existing actual framed ring and literal equality of its universal reduction with the representation of the original all-weight form. All original local/global residual clauses remain. The constant-coefficient formula is separately checked and retained for the ensuing fixed-determinant compatibility proof.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. A characteristic-zero Witt coefficient ring does not prove that the framed ring has characteristic zero or has a characteristic-zero point. All-weight adic association, required local/image/regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. The actual mixed-characteristic cyclotomic determinant lift is the next input to fixed-determinant deformation theory. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-witt-framed-4-reuse-review-20261025.json",
+  "reuseReviewSha256": "66D293D6D44388451D85B068B68AF5AF045C7C9D7BA8768F5B74D3CDDD5BF48B",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "serializationSuccessor": {
+    "timeUTC": "2026-10-26T00:54:28.175278+00:00",
+    "failure": "Generator serialized newline escapes literally at the dependency-audit footer and route JSON terminator.",
+    "oldAudit": {
+      "path": "SourcePrimitiveWittFramedDependencyAudit4.lean",
+      "sha256": "4C23328C05B68109F427CE80C1F3209FDFE26D73B2F56F8DF0ED20F45806FFE2"
+    },
+    "newAudit": {
+      "path": "SourcePrimitiveWittFramedDependencyAudit4b.lean",
+      "sha256": "D3970A03A0F3E84B28DDA296A9261AB47032346F99BCB9D2A53AEA543FF38299"
+    },
+    "oldRoute": {
+      "path": "primitive-witt-framed-route-577.json",
+      "sha256": "DEED4AAB51F35AF7AA3DBDFD3C9397F9FF592AA5D41C3ED71F3F3002E6D66C22"
+    },
+    "newRoute": {
+      "path": "primitive-witt-framed-route-577b.json",
+      "sha256": "196C75EE571B0D6F32B3A95FA67434EA36B85A36A92F908A0881360A8692A3D4"
+    },
+    "usedGenerator": {
+      "path": "prepare_primitive_witt_framed_audit_577.py",
+      "sha256": "04ADDEC3D1670C4B0B2548218C20E916C6521AA72E9216A0D0D2830FAC177DBA"
+    },
+    "change": "Only literal newline escapes become line endings. No proof source or passed public audit changes; no passed audit rerun."
+  }
+}

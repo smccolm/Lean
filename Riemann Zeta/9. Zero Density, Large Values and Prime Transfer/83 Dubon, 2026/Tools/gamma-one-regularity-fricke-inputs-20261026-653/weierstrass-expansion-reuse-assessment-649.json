@@ -1,0 +1,27 @@
+{
+  "recordedUTC": "2026-10-26T14:09:26.806979+00:00",
+  "source": {
+    "fetchedUTC": "2026-10-26T13:47:35.161381+00:00",
+    "files": [
+      {
+        "repo": "anthropics/fermats-last-theorem",
+        "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+        "path": "P2M/Sol/S_WLight_weierstrassP_qExpansion_package.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_WLight_weierstrassP_qExpansion_package.lean",
+        "snapshot": "P2M\\Sol\\S_WLight_weierstrassP_qExpansion_package.lean.txt",
+        "gitBlob": "226d252fccf416d86c9ce7c857f37917b6e95386",
+        "sha256": "2E7C57F237A76C69BFC9B1C93D12FE58C06974EC040E51BB3260CB467FAEB1D8",
+        "bytes": 41056
+      }
+    ]
+  },
+  "conclusion": "The original Weierstrass value at a nonzero torsion point equals the explicit paired Fourier series, and is holomorphic in the upper-half-plane parameter.",
+  "nativeReuse": "EisensteinSeries.qExpansion_identity gives weight-two Lipschitz summation; PeriodPair.hasSum_weierstrassP gives genuine absolute lattice summability. Native locally uniform differentiation controls the Fourier tail.",
+  "selectedRoute": "Scope650 adapts the exact rearrangement and tail proof, reuses the existing actual period pair and omits duplicate homothety machinery. The real boundary case in the integer complement is retained because first-coordinate-zero torsion points are required. No new assumptions or limits are introduced.",
+  "sourceReviewOnly": true,
+  "externalProjectBuilt": false,
+  "externalDependencyClosureCertified": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

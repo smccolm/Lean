@@ -1,0 +1,192 @@
+import Dubon2026.SourceGammaOneHeckeSubgroup
+import Dubon2026.SourceGammaOneConstantHecke
+import Dubon2026.SourceNativeCoinductionCosetTrace
+import Dubon2026.SourceShapiroH1CocycleComparison
+import Dubon2026.SourceShapiroH1CosetTrace
+import Dubon2026.SourceGammaOneTransferCosetFormula
+import Dubon2026.SourceGammaOneLiteralTransferSurjectivity
+import Dubon2026.SourceGammaOneCoverHeckeSquare
+import Dubon2026.SourcePrincipalCoprimeReduction
+import Dubon2026.SourceGammaOneRaisedCosets
+import Dubon2026.SourceGammaOneCoverHeckeCosets
+import Dubon2026.SourceGammaOneCoverHeckeRepresentatives
+import Dubon2026.SourceGammaOneBinaryRestriction
+import Dubon2026.SourceGammaOneBinaryHeckeSum
+import Dubon2026.SourceGammaOneBinaryRestrictionHecke
+import Dubon2026.SourceCohomologyTracePullbackCoefficients
+import Dubon2026.SourceShapiroH1PullbackNaturality
+import Dubon2026.SourceH1TraceBaseChange
+import Dubon2026.SourceGammaOneCoverImage
+import Dubon2026.SourceGammaOneCoverImageHecke
+import Dubon2026.SourceGammaOneCoverHeckeTraceCosets
+import Dubon2026.SourceGammaOneCoverHeckeTraceBaseChange
+import Dubon2026.SourceCoinducedTowerFunctions
+import Dubon2026.SourceCoinducedTowerTrace
+import Dubon2026.SourceShapiroH1Tower
+import Dubon2026.SourceH1TraceTower
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.sourceGammaOneHeckeUpper_finiteIndex
+#print axioms Dubon2026.sourceGammaOneHeckeConjugation_matrix
+#print axioms Dubon2026.sourceGammaOneConstantHeckeH1_cocycle
+#print axioms Dubon2026.sourceGammaOneConstantHeckeCocycles_apply
+#print axioms Dubon2026.sourceNativeInductionCounit_mk
+#print axioms Dubon2026.sourceNativeCoinductionCounit_eq_cosetTrace
+#print axioms Dubon2026.sourceShapiroH1_hom_cocycle
+#print axioms Dubon2026.sourceShapiroH1_evaluation_lift
+#print axioms Dubon2026.sourceCoinducedCosetTrace_shapiroOne
+#print axioms Dubon2026.sourceShapiroLiftCocycles_trace
+#print axioms Dubon2026.sourceHeckeH1Trace_shapiro
+#print axioms Dubon2026.sourceHeckeH1Trace_eq_subgroupTrace
+#print axioms Dubon2026.sourceGammaOneConstantH1Iso_factor
+#print axioms Dubon2026.sourceGammaOneConstantH1Transfer_eq_trace
+#print axioms Dubon2026.sourceGammaOne_literalTrace_surjective
+#print axioms Dubon2026.sourceGammaOneHeckeUpper
+#print axioms Dubon2026.sourceGammaOneUpperToGammaZero
+#print axioms Dubon2026.sourceGammaOneHeckeConjugation
+#print axioms Dubon2026.sourceGammaOneConstantHeckeMorphism
+#print axioms Dubon2026.sourceGammaOneConstantHeckeCocycles
+#print axioms Dubon2026.sourceGammaOneConstantHeckeH1
+#print axioms Dubon2026.sourceShapiroLiftCocycles
+#print axioms Dubon2026.sourceShapiroEvaluationCocycles
+#print axioms Dubon2026.sourceGammaOneSubgroupH1Iso
+#print axioms Dubon2026.sourceGammaOneDiagonalHom_mem_heckeUpper
+#print axioms Dubon2026.sourceGammaOne_cover_hecke_diagonals_commute
+#print axioms Dubon2026.sourceGammaOneCoverHecke_square
+#print axioms Dubon2026.sourceSL2ChineseRemainder_reduction
+#print axioms Dubon2026.sourcePrincipalReduction_surjective
+#print axioms Dubon2026.sourceGammaOneRaisedCosetMap_injective
+#print axioms Dubon2026.sourceGammaOneRaisedCosetMap_surjective
+#print axioms Dubon2026.sourceGammaOneRaisedCosetMap_bijective
+#print axioms Dubon2026.sourceGammaOneCoverHeckeCosetMap_mk
+#print axioms Dubon2026.sourceGammaOneCoverHeckeCosetMap_smul
+#print axioms Dubon2026.sourceGammaOneCoverHeckeCosetMap_bijective
+#print axioms Dubon2026.sourceGammaOneCoverHeckeRepresentative_coset
+#print axioms Dubon2026.sourceGammaOneCoverHeckeRepresentative_equiv
+#print axioms Dubon2026.sourceGammaOneCoverHeckeRepresentative_smul
+#print axioms Dubon2026.sourceGammaOneCoverHeckeTransition
+#print axioms Dubon2026.sourceGammaOneCoverHeckeTransition_conjugation
+#print axioms Dubon2026.sourceGammaOneCoverHeckeUpperHom
+#print axioms Dubon2026.sourceGammaOneRaisedCosetMap
+#print axioms Dubon2026.sourceGammaOneCoverHeckeCosetMap
+#print axioms Dubon2026.sourceGammaOneCoverHeckeCosetEquiv
+#print axioms Dubon2026.sourceGammaOneCoverHeckeRepresentative
+#print axioms Dubon2026.sourceGammaOneBinaryRestrictionCocycles_apply
+#print axioms Dubon2026.sourceGammaOneBinaryRestrictionH1_cocycle
+#print axioms Dubon2026.sourceGammaOneBinaryHecke_chosen_sum
+#print axioms Dubon2026.sourceGammaOneBinaryRestrictionCocycles_hecke
+#print axioms Dubon2026.sourceGammaOneBinaryRestrictionH1_hecke
+#print axioms Dubon2026.sourceGammaOneBinaryRestrictionCoefficient
+#print axioms Dubon2026.sourceGammaOneBinaryRestrictionCocycles
+#print axioms Dubon2026.sourceGammaOneBinaryRestrictionH1
+#print axioms Dubon2026.sourceCoinducedTracePullback_values
+#print axioms Dubon2026.sourceCoinducedTracePullback_eval_one
+#print axioms Dubon2026.sourceCoinducedTracePullback_trace
+#print axioms Dubon2026.sourceShapiroH1_pullback_naturality
+#print axioms Dubon2026.sourceCoinducedH1Trace_pullback
+#print axioms Dubon2026.sourceSubgroupH1Trace_pullback
+#print axioms Dubon2026.sourceHeckeH1Trace_pullback
+#print axioms Dubon2026.sourceTracePullbackSubgroupHom
+#print axioms Dubon2026.sourceCoinducedTracePullback
+#print axioms Dubon2026.sourceGammaOneCoverImage_mem_iff
+#print axioms Dubon2026.sourceGammaOneCoverImage_of_principal
+#print axioms Dubon2026.sourceIntegralHeckeConjugate_mem_gammaOneCover_iff
+#print axioms Dubon2026.sourceHeckeConjugation_mem_gammaOneCover_iff
+#print axioms Dubon2026.sourceGammaOneCoverHeckeTraceCoset_surjective
+#print axioms Dubon2026.sourceGammaOneCoverHeckeTraceSubgroup_eq
+#print axioms Dubon2026.sourceGammaOneCoverHeckeH1Trace_pullback
+#print axioms Dubon2026.sourceCoinducedTowerTrace_values
+#print axioms Dubon2026.sourceCoinducedTowerTrace_comp
+#print axioms Dubon2026.sourceShapiroH1_tower
+#print axioms Dubon2026.sourceSubgroupH1Trace_tower
+#print axioms Dubon2026.sourceHeckeH1Trace_tower
+#print axioms Dubon2026.sourceCoinducedTowerFlatten
+#print axioms Dubon2026.sourceCoinducedTowerUnflatten
+#print axioms Dubon2026.sourceCoinducedTowerIso
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceGammaOneHeckeSubgroup, `Dubon2026.SourceGammaOneConstantHecke, `Dubon2026.SourceNativeCoinductionCosetTrace, `Dubon2026.SourceShapiroH1CocycleComparison, `Dubon2026.SourceShapiroH1CosetTrace, `Dubon2026.SourceGammaOneTransferCosetFormula, `Dubon2026.SourceGammaOneLiteralTransferSurjectivity, `Dubon2026.SourceGammaOneCoverHeckeSquare, `Dubon2026.SourcePrincipalCoprimeReduction, `Dubon2026.SourceGammaOneRaisedCosets, `Dubon2026.SourceGammaOneCoverHeckeCosets, `Dubon2026.SourceGammaOneCoverHeckeRepresentatives, `Dubon2026.SourceGammaOneBinaryRestriction, `Dubon2026.SourceGammaOneBinaryHeckeSum, `Dubon2026.SourceGammaOneBinaryRestrictionHecke, `Dubon2026.SourceCohomologyTracePullbackCoefficients, `Dubon2026.SourceShapiroH1PullbackNaturality, `Dubon2026.SourceH1TraceBaseChange, `Dubon2026.SourceGammaOneCoverImage, `Dubon2026.SourceGammaOneCoverImageHecke, `Dubon2026.SourceGammaOneCoverHeckeTraceCosets, `Dubon2026.SourceGammaOneCoverHeckeTraceBaseChange, `Dubon2026.SourceCoinducedTowerFunctions, `Dubon2026.SourceCoinducedTowerTrace, `Dubon2026.SourceShapiroH1Tower, `Dubon2026.SourceH1TraceTower]
+  let theorems : Array Name := #[`Dubon2026.sourceGammaOneHeckeUpper_finiteIndex, `Dubon2026.sourceGammaOneHeckeConjugation_matrix, `Dubon2026.sourceGammaOneConstantHeckeH1_cocycle, `Dubon2026.sourceGammaOneConstantHeckeCocycles_apply, `Dubon2026.sourceNativeInductionCounit_mk, `Dubon2026.sourceNativeCoinductionCounit_eq_cosetTrace, `Dubon2026.sourceShapiroH1_hom_cocycle, `Dubon2026.sourceShapiroH1_evaluation_lift, `Dubon2026.sourceCoinducedCosetTrace_shapiroOne, `Dubon2026.sourceShapiroLiftCocycles_trace, `Dubon2026.sourceHeckeH1Trace_shapiro, `Dubon2026.sourceHeckeH1Trace_eq_subgroupTrace, `Dubon2026.sourceGammaOneConstantH1Iso_factor, `Dubon2026.sourceGammaOneConstantH1Transfer_eq_trace, `Dubon2026.sourceGammaOne_literalTrace_surjective, `Dubon2026.sourceGammaOneDiagonalHom_mem_heckeUpper, `Dubon2026.sourceGammaOne_cover_hecke_diagonals_commute, `Dubon2026.sourceGammaOneCoverHecke_square, `Dubon2026.sourceSL2ChineseRemainder_reduction, `Dubon2026.sourcePrincipalReduction_surjective, `Dubon2026.sourceGammaOneRaisedCosetMap_injective, `Dubon2026.sourceGammaOneRaisedCosetMap_surjective, `Dubon2026.sourceGammaOneRaisedCosetMap_bijective, `Dubon2026.sourceGammaOneCoverHeckeCosetMap_mk, `Dubon2026.sourceGammaOneCoverHeckeCosetMap_smul, `Dubon2026.sourceGammaOneCoverHeckeCosetMap_bijective, `Dubon2026.sourceGammaOneCoverHeckeRepresentative_coset, `Dubon2026.sourceGammaOneCoverHeckeRepresentative_equiv, `Dubon2026.sourceGammaOneCoverHeckeRepresentative_smul, `Dubon2026.sourceGammaOneCoverHeckeTransition, `Dubon2026.sourceGammaOneCoverHeckeTransition_conjugation, `Dubon2026.sourceGammaOneBinaryRestrictionCocycles_apply, `Dubon2026.sourceGammaOneBinaryRestrictionH1_cocycle, `Dubon2026.sourceGammaOneBinaryHecke_chosen_sum, `Dubon2026.sourceGammaOneBinaryRestrictionCocycles_hecke, `Dubon2026.sourceGammaOneBinaryRestrictionH1_hecke, `Dubon2026.sourceCoinducedTracePullback_values, `Dubon2026.sourceCoinducedTracePullback_eval_one, `Dubon2026.sourceCoinducedTracePullback_trace, `Dubon2026.sourceShapiroH1_pullback_naturality, `Dubon2026.sourceCoinducedH1Trace_pullback, `Dubon2026.sourceSubgroupH1Trace_pullback, `Dubon2026.sourceHeckeH1Trace_pullback, `Dubon2026.sourceGammaOneCoverImage_mem_iff, `Dubon2026.sourceGammaOneCoverImage_of_principal, `Dubon2026.sourceIntegralHeckeConjugate_mem_gammaOneCover_iff, `Dubon2026.sourceHeckeConjugation_mem_gammaOneCover_iff, `Dubon2026.sourceGammaOneCoverHeckeTraceCoset_surjective, `Dubon2026.sourceGammaOneCoverHeckeTraceSubgroup_eq, `Dubon2026.sourceGammaOneCoverHeckeH1Trace_pullback, `Dubon2026.sourceCoinducedTowerTrace_values, `Dubon2026.sourceCoinducedTowerTrace_comp, `Dubon2026.sourceShapiroH1_tower, `Dubon2026.sourceSubgroupH1Trace_tower, `Dubon2026.sourceHeckeH1Trace_tower]
+  let constructions : Array Name := #[`Dubon2026.sourceGammaOneHeckeUpper, `Dubon2026.sourceGammaOneUpperToGammaZero, `Dubon2026.sourceGammaOneHeckeConjugation, `Dubon2026.sourceGammaOneConstantHeckeMorphism, `Dubon2026.sourceGammaOneConstantHeckeCocycles, `Dubon2026.sourceGammaOneConstantHeckeH1, `Dubon2026.sourceShapiroLiftCocycles, `Dubon2026.sourceShapiroEvaluationCocycles, `Dubon2026.sourceGammaOneSubgroupH1Iso, `Dubon2026.sourceGammaOneCoverHeckeUpperHom, `Dubon2026.sourceGammaOneRaisedCosetMap, `Dubon2026.sourceGammaOneCoverHeckeCosetMap, `Dubon2026.sourceGammaOneCoverHeckeCosetEquiv, `Dubon2026.sourceGammaOneCoverHeckeRepresentative, `Dubon2026.sourceGammaOneBinaryRestrictionCoefficient, `Dubon2026.sourceGammaOneBinaryRestrictionCocycles, `Dubon2026.sourceGammaOneBinaryRestrictionH1, `Dubon2026.sourceTracePullbackSubgroupHom, `Dubon2026.sourceCoinducedTracePullback, `Dubon2026.sourceCoinducedTowerFlatten, `Dubon2026.sourceCoinducedTowerUnflatten, `Dubon2026.sourceCoinducedTowerIso]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE HECKE TRACE AUDIT PASS: {count} theorems including private/generated declarations. The literal native Gamma1 trace, original Hecke restriction compatibility, actual Hecke base change and trace composition are proved. Surjective-transfer assembly, arithmetic Galois realization, all-weight association and higher continuation remain open; 16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceGammaOneHeckeSubgroup
+
+#lint in Dubon2026.SourceGammaOneConstantHecke
+
+#lint in Dubon2026.SourceNativeCoinductionCosetTrace
+
+#lint in Dubon2026.SourceShapiroH1CocycleComparison
+
+#lint in Dubon2026.SourceShapiroH1CosetTrace
+
+#lint in Dubon2026.SourceGammaOneTransferCosetFormula
+
+#lint in Dubon2026.SourceGammaOneLiteralTransferSurjectivity
+
+#lint in Dubon2026.SourceGammaOneCoverHeckeSquare
+
+#lint in Dubon2026.SourcePrincipalCoprimeReduction
+
+#lint in Dubon2026.SourceGammaOneRaisedCosets
+
+#lint in Dubon2026.SourceGammaOneCoverHeckeCosets
+
+#lint in Dubon2026.SourceGammaOneCoverHeckeRepresentatives
+
+#lint in Dubon2026.SourceGammaOneBinaryRestriction
+
+#lint in Dubon2026.SourceGammaOneBinaryHeckeSum
+
+#lint in Dubon2026.SourceGammaOneBinaryRestrictionHecke
+
+#lint in Dubon2026.SourceCohomologyTracePullbackCoefficients
+
+#lint in Dubon2026.SourceShapiroH1PullbackNaturality
+
+#lint in Dubon2026.SourceH1TraceBaseChange
+
+#lint in Dubon2026.SourceGammaOneCoverImage
+
+#lint in Dubon2026.SourceGammaOneCoverImageHecke
+
+#lint in Dubon2026.SourceGammaOneCoverHeckeTraceCosets
+
+#lint in Dubon2026.SourceGammaOneCoverHeckeTraceBaseChange
+
+#lint in Dubon2026.SourceCoinducedTowerFunctions
+
+#lint in Dubon2026.SourceCoinducedTowerTrace
+
+#lint in Dubon2026.SourceShapiroH1Tower
+
+#lint in Dubon2026.SourceH1TraceTower

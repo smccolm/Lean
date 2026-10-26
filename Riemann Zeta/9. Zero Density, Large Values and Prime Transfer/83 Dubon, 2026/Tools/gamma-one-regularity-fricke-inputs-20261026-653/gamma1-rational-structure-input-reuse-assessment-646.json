@@ -1,0 +1,82 @@
+{
+  "recordedUTC": "2026-10-26T13:46:02.965671+00:00",
+  "source": {
+    "fetchedUTC": "2026-10-26T13:36:18.122179+00:00",
+    "files": [
+      {
+        "repo": "anthropics/fermats-last-theorem",
+        "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+        "path": "P2M/Sol/S_CuspForm_span_frickeRational_E4_pow_E6_pow_eq_top.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CuspForm_span_frickeRational_E4_pow_E6_pow_eq_top.lean",
+        "snapshot": "P2M\\Sol\\S_CuspForm_span_frickeRational_E4_pow_E6_pow_eq_top.lean.txt",
+        "gitBlob": "f98cb3a013e9126cbabcb193c97e09354b9d986e",
+        "sha256": "AB40C08C057927A0E2EA6DBA8B677CB8AA4981B3C9A8104B60FBCA51CFADE4CA",
+        "bytes": 70494
+      },
+      {
+        "repo": "anthropics/fermats-last-theorem",
+        "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+        "path": "P2M/Sol/S_ModularForm_gamma1_qExpansion_coeff_mem_of_frickeRational.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularForm_gamma1_qExpansion_coeff_mem_of_frickeRational.lean",
+        "snapshot": "P2M\\Sol\\S_ModularForm_gamma1_qExpansion_coeff_mem_of_frickeRational.lean.txt",
+        "gitBlob": "194bb5526bcc15444a8e98b5529e0728450597f2",
+        "sha256": "F647A643D74CB76A516CFC79B4E76ECCE1EF30F558FF9D178228244F97E6788E",
+        "bytes": 21841
+      },
+      {
+        "repo": "anthropics/fermats-last-theorem",
+        "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+        "path": "P2M/Sol/S_ModularCurve_exists_isIntegralQExp_smul_of_ratCast_qExpansion.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_isIntegralQExp_smul_of_ratCast_qExpansion.lean",
+        "snapshot": "P2M\\Sol\\S_ModularCurve_exists_isIntegralQExp_smul_of_ratCast_qExpansion.lean.txt",
+        "gitBlob": "e08c517b8200f33508164d1ac6e36197aab0064d",
+        "sha256": "92FD8786FED216F62E9B82758901EFA7324E4A4D71CA01DD4BA8A5B541C2542F",
+        "bytes": 22618
+      },
+      {
+        "repo": "anthropics/fermats-last-theorem",
+        "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+        "path": "P2M/Sol/S_WLight_frickeFunction_modularity_package.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_WLight_frickeFunction_modularity_package.lean",
+        "snapshot": "P2M\\Sol\\S_WLight_frickeFunction_modularity_package.lean.txt",
+        "gitBlob": "80b191a311f7b3ffac155ef846a2bbeb3d6fae43",
+        "sha256": "06592739503E4B29A63CFDADF3412BDF3C0D8A6097810A435EB8315C686F1DA1",
+        "bytes": 59256
+      }
+    ]
+  },
+  "dependency": "DUB-17/18 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight Galois association -> original finite Gamma1 character realization -> actual Picard/H1 and diamond comparison -> regular differential/cusp comparison -> Gamma1 rational Fourier structure -> Fricke rational span and coefficient conjugation.",
+  "findings": [
+    {
+      "file": "P2M/Sol/S_CuspForm_span_frickeRational_E4_pow_E6_pow_eq_top.lean",
+      "conclusion": "Cusp forms of the required weight relation are spanned over C by cyclotomic rational Fricke expressions.",
+      "ingredients": "The actual finite Fricke family, rational level fractions, monic j-relations, flatness, automorphism transport preserving cusp conditions, and descent of a stable subspace.",
+      "localReuse": "Native finite-dimensional basis extraction, actual level-one modular ratios, monic modular norms and integral-coordinate algebra can replace corresponding generic prerequisites where their signatures match. No local Fricke span theorem is claimed."
+    },
+    {
+      "file": "P2M/Sol/S_ModularForm_gamma1_qExpansion_coeff_mem_of_frickeRational.lean",
+      "conclusion": "An actual Gamma1 modular form represented by a cyclotomic Fricke quotient has cyclotomic Fourier coefficients.",
+      "ingredients": "Coefficient membership for actual level fractions and inversion of the integral E4/E6/Delta unit factors.",
+      "localReuse": "Use existing local integral E4/E6 and Delta expansions, rather than rederive Bernoulli values or power-series coefficient closure."
+    },
+    {
+      "file": "P2M/Sol/S_ModularCurve_exists_isIntegralQExp_smul_of_ratCast_qExpansion.lean",
+      "conclusion": "A rational Fourier Gamma1 modular form has bounded denominators.",
+      "ingredients": "Principal-level invariant modular-function bounded denominators, followed by multiplication by E4/E6. Odd weight additionally invokes a weight-one Eisenstein form.",
+      "localReuse": "The immediate differential-realization quotient needs only even weights; omit the weight-one construction and odd-weight reduction. The polynomial E4/E6 series already exist locally."
+    },
+    {
+      "file": "P2M/Sol/S_WLight_frickeFunction_modularity_package.lean",
+      "conclusion": "Actual Fricke functions have torsion-index modular transformations, evenness, holomorphy, cusp bounds, cyclotomic coefficients, separation and coefficient conjugation.",
+      "ingredients": "Actual Weierstrass scaling and lattice change, native E4/E6/Delta transformations, and a separate exact torsion q-expansion package.",
+      "selectedAdaptation": "Scope647 proves the transformation, principal-level invariance, negation and index permutation using the literal Weierstrass series. It omits the unused g2/g3 prefactor normalization and uses direct lattice reindexing. Holomorphy and coefficient assertions are not inferred from this algebraic part."
+    }
+  ],
+  "sourceReviewOnly": true,
+  "externalProjectBuilt": false,
+  "externalDependencyClosureCertified": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "remaining": "Actual Gamma1 rational structure and arbitrary cusp differential realization remain. 16/20; DUB-17--20 OPEN."
+}

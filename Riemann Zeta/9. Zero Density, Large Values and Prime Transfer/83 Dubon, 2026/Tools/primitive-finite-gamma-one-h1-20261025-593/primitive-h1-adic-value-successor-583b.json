@@ -1,0 +1,36 @@
+{
+  "reason": "The first value audit passes all original-form, local completion, integral H1 character and finite-quotient dependencies. Its additional expected dependency Ideal.Quotient.factor_mk is absent because the transition identity reduces definitionally after simplification. Keep the native lemma as inspected reuse, but do not claim a retained dependency on its proof term. The fresh successor retains all 15 project declarations and the other six actual upstream value dependencies. Source statements and proof terms are unchanged.",
+  "unchangedSources": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1CoefficientField.lean",
+      "sha256": "FAB1DD47B28AC19C1A862F66C2BC55F684E105F2B436ED713AD23508DAB8D3B9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveLocalH1Character.lean",
+      "sha256": "B4579019CCC0485129A7A903A711239B6EB2B32C2F1E75C80D6668A3D502AD25"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveAdicH1Quotients.lean",
+      "sha256": "BBDB559FC020FA5A6FD4BFB34973C03EFE4DFC71EA64A149AEE08F3403DA7AB2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveCompatibleH1AdicData.lean",
+      "sha256": "D72BBD2D4CA607217125D77FAFC6E3377D063B456F71964C1EE0DE3DAE55E053"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicRealization.lean",
+      "sha256": "E062FDF00FB3AE467339D04E18B99CC0503F3F51CA7274AC1F8197AB642D498F"
+    }
+  ],
+  "retainedPublicAudit": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicAudit5.log",
+    "sha256": "82E9C7EF20B9952F9F63A56F4615916237C1B407F46E7D5A580AE15813B1F30D"
+  },
+  "failedAudit": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicDependencyAudit5.lean",
+    "sha256": "D0932B46C652E851EE9062747FA20C16E3C22357FB81E58D078835D804FB6EBA",
+    "logSha256": "269A509EBA6A7ECEBFF0EAA473AEA0AA9689E9B1B7E0E877BE1E7CAFFB0C595A"
+  },
+  "freshAudit": "SourcePrimitiveH1AdicDependencyAudit5b.lean",
+  "newRequiredValueDependencies": 21
+}

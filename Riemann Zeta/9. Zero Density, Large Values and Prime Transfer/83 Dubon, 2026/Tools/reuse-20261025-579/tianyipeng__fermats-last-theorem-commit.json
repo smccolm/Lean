@@ -1,0 +1,117 @@
+{
+  "sha": "9e5f05a13048588eeef806e16f4cb2161801bc8a",
+  "node_id": "C_kwDOUPSnvtoAKDllNWYwNWExMzA0ODU4OGVlZWY4MDZlMTZmNGNiMjE2MTgwMWJjOGE",
+  "commit": {
+    "author": {
+      "name": "Tianyi Peng",
+      "email": "tianyipeng95@gmail.com",
+      "date": "2026-09-05T18:11:46Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-09-05T18:11:46Z"
+    },
+    "message": "Merge pull request #1 from TianyiPeng/claude/bold-edison-deh44l\n\nAdd GitHub Pages deployment workflow",
+    "tree": {
+      "sha": "4c88bb2ab0953e215885e5554c7485985348d98d",
+      "url": "https://api.github.com/repos/TianyiPeng/fermats-last-theorem/git/trees/4c88bb2ab0953e215885e5554c7485985348d98d"
+    },
+    "url": "https://api.github.com/repos/TianyiPeng/fermats-last-theorem/git/commits/9e5f05a13048588eeef806e16f4cb2161801bc8a",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqnFtiCRC1aQ7uu5UhlAAAXk0QAJuukE5Qu4yNo+2UZzFEAXa4\nVgWkVmaIl46/f5KqXAtY3w3gIP1HmGAqgcou4AuI8H02K0H1C68kldZ6tvdpwdvR\nrKeERSuOoUHpdVwQOpr83HkLw1RzSumPRJN7MK6RYzVRi7r5MIBm93Hm+s016Jnn\njgKyh4G2sIs1xDYIT7fKvTv13BNtmYV0z/J1DKSFRTsxgomFlCRtcRmnZ2OS1nWz\nmxf7LI3/cnk1kOd7XjHgVn76T6z/wdoqFxOjrPT1uRva1Y8hD2RLDmB0vEmUObBo\n+2PC3XU27Q8oYPskRKh/XV0k27hvZbZQvNlwMJ0+MSaTRNBGh6vG47oRy+wivdhC\nssU3Y/K/rsiJcVG31k6VM/O2fJAIV30SMVasLnqlGfJMEoVcwXykTErCSXgl09a+\nkki6FYmd2bXRw5v/JgZIVFZnYIFjQQsm1iXzUzUrg2f6xCmS61MWUEMY6cPY17HP\nk/0aXNYem95hjtkS9EDuKrnvgy5ozCN3xCqPNxEMiR1q/oXD2tCxuQ+55vKFhudq\nQD+8pmvtndtpJoeFrOvLoSGFJ4Z3GzTp0wCWJQOiDkOS8QwIz2U5l9pgwn0IpBgV\n/cAiaknahabfbfdGQB8SPM5HNKlbGqEo9ezYqMqAdYq9Dfid0GIXLFCLFvhpB3El\nGTLVLXcwnU2IKfK+7agA\n=Mb1D\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 4c88bb2ab0953e215885e5554c7485985348d98d\nparent cf16230a9d5fdaf168a14e0e885647eea70c3607\nparent 83564dbfe350447e1241dca3dcdbaf4a84c7632e\nauthor Tianyi Peng <tianyipeng95@gmail.com> 1788631906 -0400\ncommitter GitHub <noreply@github.com> 1788631906 -0400\n\nMerge pull request #1 from TianyiPeng/claude/bold-edison-deh44l\n\nAdd GitHub Pages deployment workflow",
+      "verified_at": "2026-09-05T18:11:47Z"
+    }
+  },
+  "url": "https://api.github.com/repos/TianyiPeng/fermats-last-theorem/commits/9e5f05a13048588eeef806e16f4cb2161801bc8a",
+  "html_url": "https://github.com/TianyiPeng/fermats-last-theorem/commit/9e5f05a13048588eeef806e16f4cb2161801bc8a",
+  "comments_url": "https://api.github.com/repos/TianyiPeng/fermats-last-theorem/commits/9e5f05a13048588eeef806e16f4cb2161801bc8a/comments",
+  "author": {
+    "login": "TianyiPeng",
+    "id": 3522518,
+    "node_id": "MDQ6VXNlcjM1MjI1MTg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/3522518?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/TianyiPeng",
+    "html_url": "https://github.com/TianyiPeng",
+    "followers_url": "https://api.github.com/users/TianyiPeng/followers",
+    "following_url": "https://api.github.com/users/TianyiPeng/following{/other_user}",
+    "gists_url": "https://api.github.com/users/TianyiPeng/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/TianyiPeng/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/TianyiPeng/subscriptions",
+    "organizations_url": "https://api.github.com/users/TianyiPeng/orgs",
+    "repos_url": "https://api.github.com/users/TianyiPeng/repos",
+    "events_url": "https://api.github.com/users/TianyiPeng/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/TianyiPeng/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "cf16230a9d5fdaf168a14e0e885647eea70c3607",
+      "url": "https://api.github.com/repos/TianyiPeng/fermats-last-theorem/commits/cf16230a9d5fdaf168a14e0e885647eea70c3607",
+      "html_url": "https://github.com/TianyiPeng/fermats-last-theorem/commit/cf16230a9d5fdaf168a14e0e885647eea70c3607"
+    },
+    {
+      "sha": "83564dbfe350447e1241dca3dcdbaf4a84c7632e",
+      "url": "https://api.github.com/repos/TianyiPeng/fermats-last-theorem/commits/83564dbfe350447e1241dca3dcdbaf4a84c7632e",
+      "html_url": "https://github.com/TianyiPeng/fermats-last-theorem/commit/83564dbfe350447e1241dca3dcdbaf4a84c7632e"
+    }
+  ],
+  "stats": {
+    "total": 70,
+    "additions": 70,
+    "deletions": 0
+  },
+  "files": [
+    {
+      "sha": "4143020b1b2e8eb98affe022ca7263e42240f307",
+      "filename": ".github/workflows/pages.yml",
+      "status": "added",
+      "additions": 70,
+      "deletions": 0,
+      "changes": 70,
+      "blob_url": "https://github.com/TianyiPeng/fermats-last-theorem/blob/9e5f05a13048588eeef806e16f4cb2161801bc8a/.github%2Fworkflows%2Fpages.yml",
+      "raw_url": "https://github.com/TianyiPeng/fermats-last-theorem/raw/9e5f05a13048588eeef806e16f4cb2161801bc8a/.github%2Fworkflows%2Fpages.yml",
+      "contents_url": "https://api.github.com/repos/TianyiPeng/fermats-last-theorem/contents/.github%2Fworkflows%2Fpages.yml?ref=9e5f05a13048588eeef806e16f4cb2161801bc8a",
+      "patch": "@@ -0,0 +1,70 @@\n+name: Deploy html/ to GitHub Pages\n+\n+on:\n+  push:\n+    branches: [main]\n+    paths:\n+      - 'html/**'\n+      - '.github/workflows/pages.yml'\n+  workflow_dispatch:\n+\n+permissions:\n+  contents: read\n+  pages: write\n+  id-token: write\n+\n+# One deployment at a time; never cancel a deploy that is already publishing.\n+concurrency:\n+  group: pages\n+  cancel-in-progress: false\n+\n+jobs:\n+  deploy:\n+    runs-on: ubuntu-latest\n+    timeout-minutes: 60\n+    environment:\n+      name: github-pages\n+      url: ${{ steps.deployment.outputs.page_url }}\n+    steps:\n+      # Only html/ is published. The Lean sources (P2M/, Theorems/, ...) are\n+      # over a gigabyte, so a sparse checkout keeps this job to ~380 MB.\n+      - name: Check out the site folder\n+        uses: actions/checkout@v4\n+        with:\n+          sparse-checkout: html\n+\n+      # 1451 pages link out to files that live beside html/ in the repository\n+      # (../../Definitions/*.lean, ../../LICENSE, ../FinalCheck.lean, ...). Once\n+      # html/ is the root of the site those targets sit above it and 404, so\n+      # point them at the sources on GitHub. Every .html file is either directly\n+      # in html/ or one directory below it, so ../ from the former and ../../\n+      # from the latter both mean the repository root.\n+      # The repository's own files are untouched; only the published copy changes.\n+      - name: Retarget the links that point outside html/\n+        env:\n+          ROOT: https://github.com/${{ github.repository }}/blob/${{ github.sha }}/\n+        run: |\n+          find html -mindepth 2 -name '*.html' -print0 \\\n+            | xargs -0 -r sed -i \"s|href=\\\"\\\\.\\\\./\\\\.\\\\./|href=\\\"$ROOT|g\"\n+          find html -maxdepth 1 -name '*.html' -print0 \\\n+            | xargs -0 -r sed -i \"s|href=\\\"\\\\.\\\\./|href=\\\"$ROOT|g\"\n+          left=$( { find html -mindepth 2 -name '*.html' -print0 | xargs -0 -r grep -l 'href=\"\\.\\./\\.\\./'\n+                    find html -maxdepth 1 -name '*.html' -print0 | xargs -0 -r grep -l 'href=\"\\.\\./'\n+                  } | wc -l )\n+          echo \"pages still linking above the site root: $left\"\n+\n+      # enablement: true turns Pages on and switches its source to GitHub Actions\n+      # if that has not been done in Settings \u2192 Pages yet.\n+      - name: Configure Pages\n+        uses: actions/configure-pages@v5\n+        with:\n+          enablement: true\n+\n+      - name: Upload html/ as the Pages artifact\n+        uses: actions/upload-pages-artifact@v3\n+        with:\n+          path: html\n+\n+      - name: Deploy to GitHub Pages\n+        id: deployment\n+        uses: actions/deploy-pages@v4"
+    },
+    {
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "filename": "html/.nojekyll",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0,
+      "changes": 0,
+      "blob_url": "https://github.com/TianyiPeng/fermats-last-theorem/blob/9e5f05a13048588eeef806e16f4cb2161801bc8a/html%2F.nojekyll",
+      "raw_url": "https://github.com/TianyiPeng/fermats-last-theorem/raw/9e5f05a13048588eeef806e16f4cb2161801bc8a/html%2F.nojekyll",
+      "contents_url": "https://api.github.com/repos/TianyiPeng/fermats-last-theorem/contents/html%2F.nojekyll?ref=9e5f05a13048588eeef806e16f4cb2161801bc8a"
+    }
+  ]
+}

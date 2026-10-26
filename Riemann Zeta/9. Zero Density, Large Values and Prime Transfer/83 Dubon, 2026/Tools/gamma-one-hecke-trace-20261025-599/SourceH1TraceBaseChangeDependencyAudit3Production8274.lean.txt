@@ -1,0 +1,30 @@
+import Dubon2026.SourceCohomologyTracePullbackCoefficients
+import Dubon2026.SourceShapiroH1PullbackNaturality
+import Dubon2026.SourceH1TraceBaseChange
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.sourceHeckeH1Trace_pullback]
+  let localModules : Array Name := #[`Dubon2026.SourceH1TraceBaseChange, `Dubon2026.SourceShapiroH1CosetTrace, `Dubon2026.SourceShapiroH1CocycleComparison, `Dubon2026.SourceNativeCoinductionCosetTrace, `Dubon2026.SourceShapiroH1PullbackNaturality, `Dubon2026.SourceCohomologyTracePullbackCoefficients]
+  let required : Array Name := #[`Dubon2026.sourceCoinducedTracePullback_values, `Dubon2026.sourceCoinducedTracePullback_eval_one, `Dubon2026.sourceCoinducedTracePullback_trace, `Dubon2026.sourceShapiroH1_pullback_naturality, `Dubon2026.sourceCoinducedH1Trace_pullback, `Dubon2026.sourceSubgroupH1Trace_pullback, `Dubon2026.sourceHeckeH1Trace_pullback, `Dubon2026.sourceTracePullbackSubgroupHom, `Dubon2026.sourceCoinducedTracePullback, `Dubon2026.subgroupComapCosetMap_injective, `Dubon2026.OriginalShapiroRestriction.originalShapiroIso_eq_restriction_eval, `Dubon2026.sourceHeckeH1Trace_eq_subgroupTrace, `Dubon2026.coinducedCosetTrace, `groupCohomology.coindIso, `groupCohomology.map_comp]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE H1 TRACE BASE CHANGE DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the literal native H1 trace base-change consumer. Only declaration values are traversed. The actual original coinduced functions pull back by the actual group homomorphism. Existing subgroup-preimage coset injectivity plus explicit group-level coset surjectivity reindex the entire coefficient trace. The original Shapiro restriction/evaluation theorem proves native H1 naturality, so the coinduced trace identity descends to the actual subgroup trace and the proved literal Hecke trace. No cohomological base-change or Mackey identity is assumed. This generic theorem remains conditional on the explicit group-level coset-surjectivity hypothesis; its original Gamma1/Hecke application and trace composition, then arithmetic geometry, Galois realization and higher continuation, remain required. DUB-17--20 OPEN; 16/20."
+
+#eval runPlanarPairingDependencyAudit

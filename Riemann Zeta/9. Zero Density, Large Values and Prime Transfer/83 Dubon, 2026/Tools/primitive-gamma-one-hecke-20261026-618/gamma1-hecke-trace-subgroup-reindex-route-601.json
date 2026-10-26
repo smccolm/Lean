@@ -1,0 +1,51 @@
+{
+  "scope": 601,
+  "chain": "DUB-17/18 -> original all-weight adic association -> geometric Gamma1 realization -> actual surjective-transfer Hecke identity -> exact original Gamma1 correspondence and trace subgroup reindexing",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiagonalHom.lean",
+      "sha256": "AF70842F3D291B9E918FA2A4BC2E6F085951BC40EC99A69D219ADD4D836DD914"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverHeckeSquare.lean",
+      "sha256": "3EEC68488F94744062D5AE7AB19B7930C3F73E8AF1A9320B44B7F0127811FDD3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverHeckeTraceCosets.lean",
+      "sha256": "8AEC2B54127737C315327F12E90AE5358584B9FFFBCB779FCC4FF79385563489"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstantH1Realization.lean",
+      "sha256": "5E3B3BE2610765E1D2E7E4DD2C727F1FE418231026EF3BB46409CDCDDB1C4B24"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceTower.lean",
+      "sha256": "AD278B75D2192A1709D4DC94F4A19D46F085E652278DE0F940E13027D55EF023"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Group\\Subgroup\\Map.lean",
+      "sha256": "4F3FAB5D279711EA70BBDC31D05A11BA2989CDEC8C8D09C97E555DAB525E493F"
+    }
+  ],
+  "shorterRoute": "Reuse the explicit diagonal cover matrix, its injectivity, the literal Hecke square, and the proved equality of the pulled-back and intersection subgroups. Unit cancellation in the actual residue ring identifies the upper subgroup, and native range restriction/subgroupCongr provide its exact group isomorphism. No independent coset enumeration or new correspondence is constructed.",
+  "assumptionsToDischarge": "Identify the actual Gamma1 upper subgroup with the precise subgroup in the Hecke trace base-change formula, preserving both the inclusion and conjugation maps.",
+  "remaining": "Use these exact group identifications with original coefficient maps and proved trace composition to finish the full surjective-transfer Hecke identity. Arithmetic geometric/diamond comparison, Galois realization, all-weight association, local/image/regularity, automorphy and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "scratchImportClosure": [
+    "SourceGammaOneHeckeUpperImage",
+    "SourceCohomologyTracePullbackCoefficients",
+    "SourceGammaOneConstantH1Realization",
+    "SourceGammaOneCohomologyTransfer",
+    "SourceGammaOneCoverFiniteIndex",
+    "SourceGammaOneDiagonalHom",
+    "SourceBinaryPermutationCongruence",
+    "SourceBinaryPrimePowerPermutation",
+    "SourcePermutationCoefficientQuotient",
+    "SourceGammaOneCongruenceCover",
+    "SourceGammaOneCoverHeckeTraceCosets",
+    "SourcePrincipalCoprimeReduction",
+    "SourceGammaOneCoverImageHecke",
+    "SourceGammaOneCoverImage",
+    "SourceGammaOneCoverHeckeSquare",
+    "SourceGammaOneHeckeSubgroup"
+  ]
+}

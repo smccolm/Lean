@@ -1,0 +1,97 @@
+{
+  "recordedUTC": "2026-10-25T21:18:55.609049+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceMatrixIntertwinerCharpoly",
+    "SourceIntegralMatrixCharpoly",
+    "SourceRankTwoCharpolyCoefficients",
+    "SourceOriginalSpecializationFrobeniusCharpoly",
+    "SourceOriginalResidualFrobeniusCharpoly",
+    "SourceOriginalResidualInertia",
+    "SourceOriginalPrimitiveResidualFrobeniusRealization"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMatrixIntertwinerCharpoly.lean",
+      "sha256": "62DC857DA3784EEBBA81D6DCFFB3F267B8800CFDAE77B35C95A39E31C77270B5",
+      "oleanSha256": "D172CCD667328701FE914711D5B88413037016EFF130A5DA8DC7135973198BC4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralMatrixCharpoly.lean",
+      "sha256": "B57C558CBD44B04AD9AD5B654A4CF98556AD75221496FDEC7F32AF2A280C194F",
+      "oleanSha256": "584140BE08DB134CD715C2F6508EAB6F79D0D7F70F2CFE046C479202A86E17F1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRankTwoCharpolyCoefficients.lean",
+      "sha256": "9DEDB95C41ACDA86F31E4ECB8FEB067FB3F02F13A00134D94D2DCC5B86D0B39E",
+      "oleanSha256": "DB1FACCD61284D8AB7AB5CDFC16D8B704A3508081B9519E5F18ECA992C9EAC46"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSpecializationFrobeniusCharpoly.lean",
+      "sha256": "B83D681047FD5FD104B781B7C19F2AB0AB6FB4C4C5464F621DB47C28AB0A21A7",
+      "oleanSha256": "CD25D3622919045226139416A600F94D0870406057C6976F7E636FD3956C39C6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualFrobeniusCharpoly.lean",
+      "sha256": "FC4EB525468041C1EBB8372D9D8B83FA868605A4E0F61DF01CF28B1A191CCF1D",
+      "oleanSha256": "1D651852121565FF4736BAF6DDD32146BC4666459A8CFF076428658C46A09F1F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalResidualInertia.lean",
+      "sha256": "5D684229AF8E7A14EEF67A4E79F571F0B51617A09D734D1D646513FCD648D9A1",
+      "oleanSha256": "AAF645774D8B810E7281CC15E7C0D5E3F30D67032A467FAB33026B85E51CD6D4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualFrobeniusRealization.lean",
+      "sha256": "250FA286282DDB044D4F4A928853D3C9264313D1EEA7A765E9CF66907843C5BA",
+      "oleanSha256": "D5585D364C13CA5F13415C9DE8A97CB60E80A5DE10ADF614B64633A2E200A5EE"
+    }
+  ],
+  "queries": [
+    "Dubon2026.matrix_intertwiner_charpoly",
+    "Dubon2026.matrix_intertwiner_one",
+    "Dubon2026.integral_matrix_charpoly_of_intertwiner",
+    "Dubon2026.residue_matrix_charpoly_of_intertwiner",
+    "Dubon2026.residue_matrix_one_of_intertwiner",
+    "Dubon2026.rank_two_trace_det_of_charpoly",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_frobenius_charpoly",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_residual_frobenius_charpoly",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_residual_inertia_identity",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_frobenius_realization"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.matrix_intertwiner_charpoly",
+    "Dubon2026.matrix_intertwiner_one",
+    "Dubon2026.integral_matrix_charpoly_of_intertwiner",
+    "Dubon2026.residue_matrix_charpoly_of_intertwiner",
+    "Dubon2026.residue_matrix_one_of_intertwiner",
+    "Dubon2026.rank_two_trace_det_of_charpoly",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_frobenius_charpoly",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_residual_frobenius_charpoly",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_residual_inertia_identity",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_frobenius_realization"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualFrobeniusAudit7.log",
+  "logSha256": "2B6CD79CAE5FA687EB55B1E98930AAAA404FA0FC53A432798B31A79AF7EEF04E",
+  "auditSha256": "FB565378AF2A843D0E9D68009FBBC85EAE3E48ABB11DD10AC8B3BB1B971E8381",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 16,
+  "linterScopes": 7,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 22,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualFrobeniusDependencyAudit7.log",
+  "dependencyAuditSha256": "E17C9BE1C7C35F62B772BA283F2008CC47E8E9C5D808580400B580DDEF0DCA76",
+  "dependencyAuditSourceSha256": "52DBB96B0B06EF69B31D7A91A78467D4EA39C1B9F79F341188DF7B20BC6E44C8",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_frobenius_realization"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> exact Frobenius and inertia compatibility for the existing actual primitive integral and residual representations -> original Tate specialization, integral coefficient and lattice basis comparison",
+  "discharged": "The existing constructed primitive integral and residual representations now have the exact source Frobenius polynomial and inertia identities. Original Tate specialization, the separately proved cyclotomic determinant and Frobenius quadratic, native change-of-basis invariance, coefficient injectivity and entrywise reduction supply all local compatibility. The integral Fourier coefficient is the literal original coefficient whose integrality was previously proved. The residual trace and determinant are extracted in the actual finite characteristic-ell residue field. The assembled consumer retains the original local field, continuity, Hecke eigenvalues, spanning specialization, Galois action, lattice basis comparison and residue map without extra local-compatibility assumptions.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Prescribed coefficient-reduction compatibility, comparison to the source arithmetic quotient and local norm interfaces, residual association, arithmetic automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-residual-frobenius-7-reuse-review-20261025.json",
+  "reuseReviewSha256": "89C09428D294F1ACB3739A8E26E8A1F5C96CD669040A002D351CF32A732DA4A2",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

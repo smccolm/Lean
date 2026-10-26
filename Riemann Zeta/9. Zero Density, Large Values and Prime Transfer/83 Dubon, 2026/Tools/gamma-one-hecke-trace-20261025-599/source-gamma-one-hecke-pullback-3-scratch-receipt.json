@@ -1,0 +1,72 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T05:13:19.514708+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceGammaOneBinaryRestriction",
+    "SourceGammaOneBinaryHeckeSum",
+    "SourceGammaOneBinaryRestrictionHecke"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryRestriction.lean",
+      "sha256": "8300211B19A51CE12AB2A57F09DD6AF20F5683B0237B603F831CF79022884E2D",
+      "oleanSha256": "439CAFE506EE41D837D4D061079C8D5C978D7498B47375A2AFB2CDFE81FFA011"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryHeckeSum.lean",
+      "sha256": "20A995FCE32C3B99A4F5EEF4ABD3315092A54C5DFDF8938F01C6B60AA5972240",
+      "oleanSha256": "50B6217AED6B01F938677F856835A887AC0D3DC83DFB1977BEC4CA03725FD6AD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryRestrictionHecke.lean",
+      "sha256": "3E97722633E4F7D6D6C61E7CACAF22E6867F1E082A1C506347879201BED60ABB",
+      "oleanSha256": "438C4C6DBA7CF819DE1F89ED66AF49789184FBF0CB3131D27E561B7824208450"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_apply",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1_cocycle",
+    "Dubon2026.sourceGammaOneBinaryHecke_chosen_sum",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_hecke",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1_hecke",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCoefficient",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_apply",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1_cocycle",
+    "Dubon2026.sourceGammaOneBinaryHecke_chosen_sum",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_hecke",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1_hecke"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceGammaOneBinaryRestrictionCoefficient",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles",
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePullbackAudit3.log",
+  "logSha256": "F344053AC2ABEBF11CB49F5B0CB049CB1C495AB3E9DCED8293B7DD304C50394F",
+  "auditSha256": "EA4EF92A2E08F376B55CBBF2E430B778DF1F3B62266CA584FAB37031E3B92C4E",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 9,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 17,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePullbackDependencyAudit3.log",
+  "dependencyAuditSha256": "015A64D33B9FE667C100CF0C863E0176C101F5EBB64AE831286F86BA2543CA88",
+  "dependencyAuditSourceSha256": "5CC0EBE14F6EE3AC2E60A9A58D90B0AB4BE13180D38EFAE2F2759F6FAAC54B7A",
+  "consumers": [
+    "Dubon2026.sourceGammaOneBinaryRestrictionH1_hecke",
+    "Dubon2026.sourceGammaOneBinaryRestrictionCocycles_apply"
+  ],
+  "dependency": "DUB-17/18 -> literal higher continuation -> arithmetic automorphy -> all-weight original adic association -> geometric Gamma1 realization -> actual Hecke comparison of restriction and surjective transfer",
+  "discharged": "The actual binary-to-constant Gamma1 cocycle pullback and native H1 pullback commute with every full good-prime original binary Hecke correspondence, retaining the actual binary diagonal coefficient action. The representative-change correction is proved zero on the original cover, not assumed.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Pullback compatibility alone cannot replace the surjective-transfer compatibility. Arithmetic geometry/diamond comparison, actual Galois realization, all-weight adic association, local/image/regularity, automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-pullback-3-reuse-review-20261025.json",
+  "reuseReviewSha256": "2D688EA1422D4D901D2C7A294F45E512BC79473678ECD783942F9F45648CF5A1",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

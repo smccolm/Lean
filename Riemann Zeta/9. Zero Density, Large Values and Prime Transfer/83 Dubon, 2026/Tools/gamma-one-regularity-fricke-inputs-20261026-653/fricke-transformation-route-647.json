@@ -1,0 +1,17 @@
+{
+  "dependency": "DUB-17/18 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 Hecke characters -> actual Picard/H1 and diamond comparison -> regular differential/cusp comparison -> rational Fourier structure -> cyclotomic Fricke generators -> their exact modular transformation.",
+  "selectedRoute": "Reuse native Weierstrass definition, lattice periodicity, full-level E4/E6/Delta transformations and elementary SL2 basis change. Defer unused g2/g3 Fricke normalization, odd-weight forms and general scalar-invariant packages. Native lattice equality rewrites the Weierstrass sum directly.",
+  "assumptionsToDischarge": "Actual normalized Fricke functions transform by the original row-vector action on torsion indices, are unchanged by negation and are invariant under the principal congruence subgroup. The nonzero index family is permuted by every SL2 matrix.",
+  "remaining": "Holomorphy, cusp Fourier expansions, coefficient field and Fricke rational spanning remain before Gamma1 rational structure and differential realization. 16/20; DUB-17--20 OPEN.",
+  "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-rational-structure-input-reuse-646\\snapshots.json",
+  "sourceSha256": "4887A3657CC63EE9B9226D6488F9EC07B92412D80509D453792AB54F98A6EA5B",
+  "modules": [
+    "SourceFrickePeriodHomothety",
+    "SourceFrickeModularLattice",
+    "SourceFrickeTorsionTransformation",
+    "SourceFrickeFunctionTransformation"
+  ],
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

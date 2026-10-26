@@ -1,0 +1,58 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T07:10:28.823047+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneHeckePullbackSquare",
+    "SourceGammaOneHeckeUpperTraceReindex"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePullbackSquare.lean",
+      "sha256": "D19130E7A15CA79E454DE5D2203709572B3B2A88D1200CF07416A63A8F66AB31",
+      "oleanSha256": "FA620553E5724BEE7211D1D917E5F80EEE924A92AF58018C4E11939B895DB21B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperTraceReindex.lean",
+      "sha256": "6C3C9EB92C40D20F163F85D8B3D6C64F1535650052EE8CA4F07A484CA0211E0F",
+      "oleanSha256": "092495772147DDE321AC68C3EFD8D7216F9DFC39815859E61B4A2123E7BB8669"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceGammaOneHeckeH1Pullback_square",
+    "Dubon2026.sourceGammaOneRangeEquiv_heckeUpper_comap",
+    "Dubon2026.sourceGammaOneHeckeUpperTrace_reindex",
+    "Dubon2026.sourceGammaOneUpperRangeHom"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceGammaOneHeckeH1Pullback_square",
+    "Dubon2026.sourceGammaOneRangeEquiv_heckeUpper_comap",
+    "Dubon2026.sourceGammaOneHeckeUpperTrace_reindex"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceGammaOneUpperRangeHom"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNativeHeckeComparisonAudit2.log",
+  "logSha256": "3865DA4131CA6E72CB8D8BA5E3EE34116F0BDE3F441D8BFA726FA581CD22A534",
+  "auditSha256": "D5C5D801F0BA8CCC9C45453E457F9259D43B61998C72914AE61FD9C82D1D1E1E",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 14,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 9,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNativeHeckeComparisonDependencyAudit2.log",
+  "dependencyAuditSha256": "862B4374AF4DF96553C2F36443927D356596386E82A852569D8589C6CB7C3054",
+  "dependencyAuditSourceSha256": "551D5EFBA38390D4AE40AD79FB68A94D13CE5A23480F15B27A4B89391868DBF6",
+  "consumers": [
+    "Dubon2026.sourceGammaOneHeckeH1Pullback_square",
+    "Dubon2026.sourceGammaOneHeckeUpperTrace_reindex"
+  ],
+  "dependency": "DUB-17/18 -> original all-weight adic association -> geometric Gamma1 realization -> actual surjective-transfer Hecke identity -> native H1 pullback square with the original upper-subgroup isomorphism and binary coefficients",
+  "discharged": "The actual conjugation group square, identical homogeneous coefficient actions, exact upper-subgroup inverse image, and trace reindexing on native H1 are proved. No compatibility premise is assumed.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Compose traces through the actual subgroup intersection to prove surjective-transfer Hecke compatibility; arithmetic geometric and diamond comparison, finite Galois realization, all-weight characteristic-zero association, automorphy and literal higher symmetric-power continuation remain. DUB-17--20 OPEN;16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-native-hecke-comparison-2-reuse-review-20261026.json",
+  "reuseReviewSha256": "FB00388CF695BAB312ECFC994E9246D280430AB11972FEBAE4AC7C77E028C89D",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

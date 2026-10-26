@@ -1,0 +1,101 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T12:47:58.717807+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceInverseJLevelOneIntegral",
+    "SourceIntegralHomogeneousRelation",
+    "SourceModularInverseJIntegral",
+    "SourceGammaOneCuspAuxiliaryForm",
+    "SourceGammaOneCuspAuxiliaryExpansion",
+    "SourceGammaOneDifferentialCuspIntegral"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceInverseJLevelOneIntegral.lean",
+      "sha256": "5523A9C114C78F99FDA4E1BA27284550F6E44D85EE7AEBDB3C509BD7D3925B88",
+      "oleanSha256": "E4B812BD405152F6C363CE8E8805CA3A5323B91FE65F639C2DBA08B03743BC02"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralHomogeneousRelation.lean",
+      "sha256": "E9235246026BCA1F98948C4CE2E03F02C0DAC41D5AE4330EB40975E08E04FF04",
+      "oleanSha256": "05D697E4B4078E970088AB7C43ADA80F97B21D691CD32591B5A172CFAB12133D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularInverseJIntegral.lean",
+      "sha256": "E76E8A22F85259A0335C0881558E632D12AB1A15315C5763750B073F321F90E7",
+      "oleanSha256": "BA72C34294947D538A58D9D3FD130C8A2D55F8C6DE30A6683E6B9BAD64BB8D64"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspAuxiliaryForm.lean",
+      "sha256": "41EDB3674B214E70AEFF9874A11572D6E119E4C7FE728BADA425C6371F483FC6",
+      "oleanSha256": "531640A260498F1571964AC2AA231DB47E512AEC62BF3C99A2E28A4A3B0CBB8B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspAuxiliaryExpansion.lean",
+      "sha256": "C6BD0B09791313C8CE3C6B67D97F89B9C373E6CD81E6319D1427185DC2408EF5",
+      "oleanSha256": "DEDAC87C62651B31DA27CE8D6311CDD28D0ABA45EE2822D18B59507A7D6B7B51"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialCuspIntegral.lean",
+      "sha256": "B44527CF13516684D9CA9BF4EF5B07CAAA9154C4970392C754650AEB0F0B79F5",
+      "oleanSha256": "5556B78AB41D0355725C687DDCFBFA6FED24471A99F6C0307C369CCDCDCA9BE3"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.InverseJIntegral.eisenstein_four_expansion_ne_zero",
+    "Dubon2026.SourceFunctionField.InverseJIntegral.levelOne_isIntegral",
+    "Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_div_of_relation",
+    "Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_modular_quotient_E4_cube",
+    "Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_modular_quotient_E4",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.conj_T_pow_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.mapGL_T_zpow",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.natCast_mem_strictPeriods_conj",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.pow_slash",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.num_slash",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.qExpansion_Gform_mul",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.cusp_expression_identity",
+    "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_cusp_expression",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.Gform"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.InverseJIntegral.eisenstein_four_expansion_ne_zero",
+    "Dubon2026.SourceFunctionField.InverseJIntegral.levelOne_isIntegral",
+    "Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_div_of_relation",
+    "Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_modular_quotient_E4_cube",
+    "Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_modular_quotient_E4",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.conj_T_pow_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.mapGL_T_zpow",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.natCast_mem_strictPeriods_conj",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.pow_slash",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.num_slash",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.qExpansion_Gform_mul",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.cusp_expression_identity",
+    "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_cusp_expression"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.Gform"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialCuspIntegralAudit6.log",
+  "logSha256": "9A03F6E3A64944A9FB86AE17B4FDE36FD8DCBB23DAC3744B2FBFB11F495F21CC",
+  "auditSha256": "D6556223257F290D6DDC660ED9DEAAD9D2A8FA48983B2E68350B8CAC5085021F",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 26,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 23,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialCuspIntegralDependencyAudit6.log",
+  "dependencyAuditSha256": "601461FEAC2E1BC793A4D6FDFA8229E2559B8685686F3E49E71ABA64C760961F",
+  "dependencyAuditSourceSha256": "7BF7182F50649A3FA4C34AA85629B1C5921B65C0F3E354B6E481D0BD97693B1A",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_cusp_expression"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of original finite Gamma1 characters -> actual Picard/H1 and diamond comparison -> regular differential/cusp comparison -> cusp inverse-j integral bound.",
+  "discharged": "For positive M, a finite-index integral subgroup containing the principal subgroup Gamma(M) and T, any actual weight-two cusp form f and Laurent coefficient Y with Y*qEuler(j)=qExpansion(f), prove IsIntegral C[1/j] (Y^(2M)*j^(M+1)*(j-1728)^M). Neither the required cusp growth nor the integral equation is assumed.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The valuation deduction of regularity, algebraic differential realization and converse cusp construction remain, followed by actual Picard/H1, full/parabolic and diamond comparison, arithmetic realization of the original finite characters, original all-weight association, local/image/regularity, arithmetic automorphy and literal higher continuation. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-differential-cusp-integral-6-reuse-review-20261026.json",
+  "reuseReviewSha256": "15492090D30E92966839BD65927295C204653CF6A39D36976F83461E124E78A4",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

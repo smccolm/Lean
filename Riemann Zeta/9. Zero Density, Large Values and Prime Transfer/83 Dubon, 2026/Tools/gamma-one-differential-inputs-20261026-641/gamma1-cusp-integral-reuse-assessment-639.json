@@ -1,0 +1,47 @@
+{
+  "reviewedUTC": "2026-10-26T12:23:46.694444+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> finite Gamma1 Hecke-character arithmetic realization -> Picard/H1 and diamond comparison -> regular differential/cusp comparison -> actual cusp-place order bound from inverse-j integrality.",
+  "source": {
+    "repo": "anthropics/fermats-last-theorem",
+    "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+    "path": "P2M/Sol/S_ModularCurve_isIntegral_adjoin_coeffEmb_jq_inv_of_mul_thetaL_eq_qExpansion_of_gamma_le.lean",
+    "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_isIntegral_adjoin_coeffEmb_jq_inv_of_mul_thetaL_eq_qExpansion_of_gamma_le.lean",
+    "snapshot": "P2M\\Sol\\S_ModularCurve_isIntegral_adjoin_coeffEmb_jq_inv_of_mul_thetaL_eq_qExpansion_of_gamma_le.lean.txt",
+    "gitBlob": "125d7de5cfe521e5e20733ffeac4f1fe80b57006",
+    "sha256": "2F6412152CDBD3993DAA58296C31ABD70463DF5DD1B776178FA213A888D8C801",
+    "bytes": 43906
+  },
+  "manifest": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-cusp-integral-reuse-639\\snapshots.json",
+    "sha256": "123797EC77DCFF95B2047EFEB437B51C32A757042EF753EC647004F902C06060"
+  },
+  "conclusion": "For positive M, a finite-index integral subgroup Gamma containing principal Gamma(M), unit period, and an actual weight-two cusp form with Y*qEuler(j)=qExpansion(f), the expression Y^(2M)*j^(M+1)*(j-1728)^M is integral over C[j inverse].",
+  "proof": "Construct the actual modular form G=f^(2M)*E4^3/Delta. Principal congruence normality gives period M for every slash translate; native cusp exponential decay dominates the inverse discriminant, proving G is bounded at all cusps. Apply the modular norm polynomial with E4^M denominator. Cube a level-one coefficient quotient and reverse the existing degree-bounded j polynomial to prove integrality over C[j inverse]. The exact derivative identity converts the desired expression to G/E4^M.",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularNormPolynomial.lean",
+      "sha256": "CD66E1DBF537A518EA1F268B575987233B3553AE6AC9370AA322EAB472DF92A4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularQuotientIntegral.lean",
+      "sha256": "2E29B2B3839CB9F8D08ADA2A478062D227DF0B1F85370A4AB7AA9968297023E7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLevelOneJPolynomial.lean",
+      "sha256": "05BC6772313606ADD0B7F2DC2377F84FC3E7FFC2D3C9663B6DCF4DA15F035429"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceQuotientCuspPoleBound.lean",
+      "sha256": "5F1BBF2427F37D2EBD434349684F650F66F972190A7AF688894768237BB0C4CC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularCuspOrders.lean",
+      "sha256": "97223EA1C85E57356D94093BBA20875297ADBA9B7FF220B2A396369EEBA88008"
+    }
+  ],
+  "shorterRoute": "Reuse the existing local modular norm and interpolation coefficients instead of porting the upstream parallel norm development. Reuse the existing degree-bounded level-one j polynomial, native principal-congruence normality, cusp decay and discriminant asymptotics. Scope 638 already proves the qEuler/j identities with a constructed nonzero scalar; carry its explicit inverse power through the integral expression rather than adding an exact Ramanujan normalization proof.",
+  "neededInputs": "The actual G form and its all-cusp boundedness, integrality of the E4-denominator norm coefficients, and the exact scalar-adjusted inverse-j identity still require local proofs. Existing Gamma0-specific regular-cusp order results do not automatically apply to Gamma1.",
+  "deferred": "No full GammaH family, new norm-polynomial framework or formal Ramanujan system. An arbitrary complex modular ratio is not assumed to belong to the rational integral-ratio field.",
+  "integrity": "One fixed-revision Apache-2.0 source blob inspected and verified. External activation/suppression commands and resource options are not adopted. No external build or transitive axiom closure certified. Root pins and proof limits unchanged.",
+  "acceptance": "16/20; DUB-17--20 OPEN. Actual arithmetic finite-character realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and higher continuation remain required."
+}

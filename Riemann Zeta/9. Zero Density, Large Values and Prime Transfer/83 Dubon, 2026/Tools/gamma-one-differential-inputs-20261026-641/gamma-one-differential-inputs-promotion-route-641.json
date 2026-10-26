@@ -1,0 +1,33 @@
+{
+  "scope": 641,
+  "scopeIds": [
+    627,
+    629,
+    631,
+    632,
+    634,
+    636,
+    638,
+    640
+  ],
+  "receipts": {
+    "source-gamma-one-geometric-subgroup-1-scratch-receipt.json": "B20BC28E86B9674390D7360751DFE680BDC7BFCE6FA787B36B5461A3F76AE0C3",
+    "source-gamma-one-geometric-cohomology-1-scratch-receipt.json": "E2EDC0A0CF457E4C9F0F70FF482D77550117A037C82ABC7AF16EA8C7033DC47A",
+    "source-gamma-one-hecke-coefficient-1-scratch-receipt.json": "B35B8DCB281A6050421DBA5BB8EB81AFA7710E592D034899DC30FDDC371887F8",
+    "source-gamma-one-curve-geometry-2-scratch-receipt.json": "378499A246B5EA00C058B7E6E7008486CB53FF706B6920E3A4DF71AFC8F27979",
+    "source-gamma-one-scalar-extension-1-scratch-receipt.json": "39F1F0BAE1C276431397DE4757293D6AB7FA2634C8CCD2D72E80F9EB94E04021",
+    "source-gamma-one-field-modular-ratio-2-scratch-receipt.json": "9149584D53B8B74568CAED0F9D0E2BEE3F819570A05CF30DF0789CDAB9DE04F5",
+    "source-gamma-one-differential-finite-integral-5-scratch-receipt.json": "447878A306BA2A05157FF70C19B8B05455C9B679CC428947714118E7EF484F18",
+    "source-gamma-one-differential-cusp-integral-6-scratch-receipt.json": "0404466E30FD58C7EEE6272B9F223E799034FAC35EC07ED888BE14518F759652"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of original finite Gamma1 Hecke characters -> actual Picard/H1, full/parabolic and diamond comparison retaining the original homogeneous coefficient endomorphism -> exact geometric H1 correspondence, actual curve and regular differential/cusp comparison.",
+  "discharged": "The actual upper and geometric Hecke subgroups are explicitly isomorphic with the original conjugation and analytic matrix action. Native H1 pullback/trace gives exactly the original finite Hecke operator, including its homogeneous coefficient endomorphism, and this action factors on either side of the geometric operator. Existing finite-coordinate curve results establish local differential generators, canonical divisors and injective expansions for the actual Gamma1 and Hecke fields. Literal scalar extension equals the complex integral-ratio field; every element has a same-weight complex modular quotient with nonzero denominator. This does not assert the reverse membership of arbitrary complex modular quotients. Native analytic differentiation and the existing level-one dimension theorem construct a nonzero q-Euler normalization scalar. For an actual weight-two cusp form f and Y*qEuler(j)=qExpansion(f), the finite expression Y^6*j^4*(j-1728)^3 is integral over C[j]; for positive M with Gamma(M) contained in the group, the cusp expression Y^(2M)*j^(M+1)*(j-1728)^M is integral over C[1/j]. Existing modular norms and level-one polynomial reduction, plus native cusp exponential decay, prove both integral equations without assuming them.",
+  "remaining": "The valuation deduction of regularity, algebraic differential realization and converse cusp construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must still identify the original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of these characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Neither complex semisimplicity, finite characters, Witt coefficients nor a universal deformation ring supplies a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN.",
+  "route": "The renewed search is recorded in Dubon Reuse Search 2026-10-26.md; deeper fixed-revision differential inputs are archived here. Reuse native H1 composition and original coset sums, existing finite-coordinate curve/canonical theorems, literal Laurent scalar extension and native modular quotient operations. Use the existing bounded derivative and level-one weight-14 dimension theorem rather than a new Ramanujan system. Cubing permits reuse of the existing weight-12 modular orbit polynomial for the inverse-j bound; no second interpolation construction is needed. Native cusp decay constructs f^(2M)*E4^3/Delta. Preserve the constructed nonzero scalar instead of proving an unnecessary exact normalization. A restriction-unfolding recursion-depth diagnostic is preserved; explicit coefficient identities resolve it with unchanged limits. No external project was built or imported; root pins and all twenty gates are unchanged.",
+  "precedingCanonicalScope": 8316,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 acceptance gates unchanged.",
+  "reason": "Require preceding canonical PASS and immutable archive before production mutation."
+}

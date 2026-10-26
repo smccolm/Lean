@@ -1,0 +1,181 @@
+{
+  "sha": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+  "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/trees/8a3653c935925d7adc88c8312ac1820c13a7bcca",
+  "tree": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "114dbd3751cf02210bf529d20f048245edb4d13f",
+      "size": 2496,
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/blobs/114dbd3751cf02210bf529d20f048245edb4d13f"
+    },
+    {
+      "path": "lean",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "01a4898baa1ce503f1482faf1125e4f2c80acddf",
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/trees/01a4898baa1ce503f1482faf1125e4f2c80acddf"
+    },
+    {
+      "path": "lean/Main.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b79ac377ebae5ac9ebe11593c0ff5c7af82b6d46",
+      "size": 96,
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/blobs/b79ac377ebae5ac9ebe11593c0ff5c7af82b6d46"
+    },
+    {
+      "path": "lean/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df7a71cf1864c79a96bdd9a6e6f8e2c3d17d056f",
+      "size": 1220,
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/blobs/df7a71cf1864c79a96bdd9a6e6f8e2c3d17d056f"
+    },
+    {
+      "path": "lean/RamanujanPetersson.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99731aa51be1065105d7e9743afcccee24abe419",
+      "size": 365,
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/blobs/99731aa51be1065105d7e9743afcccee24abe419"
+    },
+    {
+      "path": "lean/RamanujanPetersson",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1aa72b8b4a5cbfa57f1473f0099d1160a4ba6f12",
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/trees/1aa72b8b4a5cbfa57f1473f0099d1160a4ba6f12"
+    },
+    {
+      "path": "lean/RamanujanPetersson/Autoformalized.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07291ac69b7b6c558be36185eec79d70ea0958b5",
+      "size": 946,
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/blobs/07291ac69b7b6c558be36185eec79d70ea0958b5"
+    },
+    {
+      "path": "lean/RamanujanPetersson/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60c23478b25fff1ae5350b3f3b8104bcb4fa11e1",
+      "size": 144,
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/blobs/60c23478b25fff1ae5350b3f3b8104bcb4fa11e1"
+    },
+    {
+      "path": "lean/RamanujanPetersson/Corollary53.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06ceddd44250092baccc667158d27088518d26a1",
+      "size": 2114,
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/blobs/06ceddd44250092baccc667158d27088518d26a1"
+    },
+    {
+      "path": "lean/RamanujanPetersson/Corollary53Coprime.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b324ba9d617bc7e7a5e33fec95536d6a723c8c98",
+      "size": 1960,
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/blobs/b324ba9d617bc7e7a5e33fec95536d6a723c8c98"
+    },
+    {
+      "path": "lean/RamanujanPetersson/PaperFaithfulCore.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7233bf238a1686ef2507d71e80dde959c37f208b",
+      "size": 6573,
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/blobs/7233bf238a1686ef2507d71e80dde959c37f208b"
+    },
+    {
+      "path": "lean/RamanujanPetersson/PaperInterfaces.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "555ad306fc9f2035758a9821a4be32395bcf04cd",
+      "size": 7203,
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/blobs/555ad306fc9f2035758a9821a4be32395bcf04cd"
+    },
+    {
+      "path": "lean/RamanujanPetersson/Theorem21.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2027ef363e32a79442847f6dc4b505c657d5a10b",
+      "size": 1057,
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/blobs/2027ef363e32a79442847f6dc4b505c657d5a10b"
+    },
+    {
+      "path": "lean/RamanujanPetersson/Theorem31.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6019e36822b825a7b9da2988a719880c04180f27",
+      "size": 1360,
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/blobs/6019e36822b825a7b9da2988a719880c04180f27"
+    },
+    {
+      "path": "lean/RamanujanPetersson/Theorem41.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "450500953419367d50bdd75563ae66e26c42c31c",
+      "size": 870,
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/blobs/450500953419367d50bdd75563ae66e26c42c31c"
+    },
+    {
+      "path": "lean/blueprint.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70c951c1307c217a7a6a1f6a9912976d28e26a9a",
+      "size": 8756,
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/blobs/70c951c1307c217a7a6a1f6a9912976d28e26a9a"
+    },
+    {
+      "path": "lean/claims.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b7944166dfc27b1c17526648be8b9b7812fa53e",
+      "size": 6779,
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/blobs/2b7944166dfc27b1c17526648be8b9b7812fa53e"
+    },
+    {
+      "path": "lean/lake-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98f654e1a18747e9fdae7de2b50cba79ed5e2dee",
+      "size": 3232,
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/blobs/98f654e1a18747e9fdae7de2b50cba79ed5e2dee"
+    },
+    {
+      "path": "lean/lakefile.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a01877096ba294f5c9a970c347d295ec71f60d60",
+      "size": 237,
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/blobs/a01877096ba294f5c9a970c347d295ec71f60d60"
+    },
+    {
+      "path": "lean/lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6e288474ca64cd3826c579d2bd45b14a2ad22c8",
+      "size": 26,
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/blobs/c6e288474ca64cd3826c579d2bd45b14a2ad22c8"
+    },
+    {
+      "path": "ramanujan-petersson.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64968636659cd9099ebe89fd00959c025b64c0b2",
+      "size": 15860,
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/blobs/64968636659cd9099ebe89fd00959c025b64c0b2"
+    },
+    {
+      "path": "ramanujan-petersson.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f65ac6e03ba38c96136976e3bc606bdafaa5304d",
+      "size": 68303,
+      "url": "https://api.github.com/repos/lioristhmus/ramanujan-petersson/git/blobs/f65ac6e03ba38c96136976e3bc606bdafaa5304d"
+    }
+  ],
+  "truncated": false
+}

@@ -1,0 +1,73 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T05:27:02.923583+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceCohomologyTracePullbackCoefficients",
+    "SourceShapiroH1PullbackNaturality",
+    "SourceH1TraceBaseChange"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCohomologyTracePullbackCoefficients.lean",
+      "sha256": "7BFAF461F85274FBA8BBDD89FB9D5D0EF5718D80F7BCA7C2B8A175271BA16D43",
+      "oleanSha256": "83485A7A5567F8E93A0A92A162D883C9510794A9E215767CFE8A711176ECE4D3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceShapiroH1PullbackNaturality.lean",
+      "sha256": "1B100924ACE38077B9CAA6696C33D1C9A1ED5CC113A86B0A9140D55ADCE97215",
+      "oleanSha256": "4C3E73AF292CF0AF44FA2F70E4543FDB0EFF6182DB6C1E5A8829DCFC5C6A2EE2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceBaseChange.lean",
+      "sha256": "568424F1A5749E7D74A114EC0CC099854433B969AD729A1AE287E25A3DD1FFF1",
+      "oleanSha256": "461D25CC653D7704BE0AA847152D9085A33ED1886DA0DCEFDB23F6336F92B2F1"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceCoinducedTracePullback_values",
+    "Dubon2026.sourceCoinducedTracePullback_eval_one",
+    "Dubon2026.sourceCoinducedTracePullback_trace",
+    "Dubon2026.sourceShapiroH1_pullback_naturality",
+    "Dubon2026.sourceCoinducedH1Trace_pullback",
+    "Dubon2026.sourceSubgroupH1Trace_pullback",
+    "Dubon2026.sourceHeckeH1Trace_pullback",
+    "Dubon2026.sourceTracePullbackSubgroupHom",
+    "Dubon2026.sourceCoinducedTracePullback"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceCoinducedTracePullback_values",
+    "Dubon2026.sourceCoinducedTracePullback_eval_one",
+    "Dubon2026.sourceCoinducedTracePullback_trace",
+    "Dubon2026.sourceShapiroH1_pullback_naturality",
+    "Dubon2026.sourceCoinducedH1Trace_pullback",
+    "Dubon2026.sourceSubgroupH1Trace_pullback",
+    "Dubon2026.sourceHeckeH1Trace_pullback"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceTracePullbackSubgroupHom",
+    "Dubon2026.sourceCoinducedTracePullback"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceBaseChangeAudit3.log",
+  "logSha256": "456317EA915CE4C2788D6A9B12235844AFD775BEB6EBF350A05FD7CF1552047C",
+  "auditSha256": "7C9886026210CC3E13D2CD7801C1E59C861A087CBA5C77F63BEC39A9554C07E8",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 17,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 15,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceBaseChangeDependencyAudit3.log",
+  "dependencyAuditSha256": "0370500C067CCC4FC8C53458B1B7230303E4EB0DA1A8CE0CB0815416671005CD",
+  "dependencyAuditSourceSha256": "62C9297B82A595D6F208E52FE4CA20CC59A93FC984677278D4920CD739806E2C",
+  "consumers": [
+    "Dubon2026.sourceHeckeH1Trace_pullback"
+  ],
+  "dependency": "DUB-17/18 -> literal higher continuation -> arithmetic automorphy -> original all-weight adic association -> geometric Gamma1 realization -> actual surjective-transfer Hecke compatibility -> native H1 trace under the actual correspondence group square",
+  "discharged": "Derive the native H1 trace base-change identity from an explicit group-level coset-surjectivity condition. The intended actual application must separately derive that condition for its original Gamma1/Hecke square; no cohomological identity may be assumed.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Base change alone is a supporting obligation. Apply it to the literal square and prove the required trace composition and coefficient comparisons to obtain actual surjective-transfer Hecke compatibility. Arithmetic geometry/diamonds, Galois realization, all-weight association, local/image/regularity, automorphy and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-h1-trace-base-change-3-reuse-review-20261025.json",
+  "reuseReviewSha256": "ECD9AB5CBF153B2DCC6F29B77DD192B28E93BBF2AF7E340DD0649EAF80F16A97",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

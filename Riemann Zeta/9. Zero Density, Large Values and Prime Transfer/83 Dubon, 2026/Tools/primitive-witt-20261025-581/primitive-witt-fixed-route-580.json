@@ -1,0 +1,136 @@
+{
+  "scope": 580,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual residual fixed-determinant deformation problem -> construct the genuine p-adic cyclotomic weight character, prove its exact reduction and consume it in the existing actual quotient",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceArithmeticSupportPowers.lean",
+      "sha256": "F630A814E82B4CDD19C0F50A7E4BD2F6BC85F3571D1A1A6B9C07C53FFBEA4EB7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\UnramifiedUnionCyclotomicRoots.lean",
+      "sha256": "D83D63BE330CC46779E7FBBF8277EB452BACC671766FC54A2179C44A4FAE8E65"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\RationalArithmeticCyclotomicCharacter.lean",
+      "sha256": "6BB9B14B3AF4054A62888344F4D30C038DC21A1C5BEC366E2A140020676E834D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticFixedDeterminantRepresentation.lean",
+      "sha256": "0C5C1FF5D4961EF605DA82A03C65993D211CD927FA5DCBACCBC29037A09EC255"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticFixedDeterminantRing.lean",
+      "sha256": "13063F84BACCCAD3FF2FE8002A81D3882E8AE4006627565A901D71A6B9FD0B37"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticFixedDeterminantUniversality.lean",
+      "sha256": "0F3CA5CB791CBA5BB653DA9A5E5F69E4432904722B456CB4F82047CF8280C801"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedResidual.lean",
+      "sha256": "BE4DEBA82616DA10FC53DD4650801F26121841C4663F161824A0B38A6C9DDBE1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualWittCoefficients.lean",
+      "sha256": "E1B9EAD9574E7382E729E82B268D3990E06786E045F57D5FCD0C569A05659E42"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\WittVector\\Compare.lean",
+      "sha256": "BD3D6063916861CDDC17026F9B1DA3798356747F1F47FF06CD7343FA0C4CB211"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\Cyclotomic\\CyclotomicCharacter.lean",
+      "sha256": "DD947325BE3CC5A224E2DEF83E672E8BF39201A92CE314C1DA489694F2172BFD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\Padics\\RingHoms.lean",
+      "sha256": "77D9B496ECABE9D471EFA26EEB1B4B114D549DE1ECFC78732145EE77E040E327"
+    }
+  ],
+  "shorterRoute": "Native WittVector.fromPadicInt and cyclotomicCharacter supply the original mixed-characteristic scalar and character. Existing support-power monotonicity supplies every prime-power root in the same arithmetic extension; original primitive-root action identifies reduction. Reuse the existing fixed-determinant quotient, local-ring proof and universal representation; do not rebuild deformation representability or general p-adic coefficient-lift infrastructure.",
+  "assumptionsToDischarge": "For the original all-weight primitive form, supply the actual p-adic cyclotomic weight determinant over Witt coefficients, prove its exact residual compatibility, and construct the resulting Noetherian complete fixed-determinant quotient with exact original residual matrices and universal determinant. Preserve every original Fourier, real and good-prime inertia clause.",
+  "remaining": "No characteristic-zero specialization of this quotient is supplied. Original all-weight adic association, required local/image/regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "scratchImportClosure": [
+    "SourcePrimitiveWittFixedResidual",
+    "SourceResidualWittFixedRing",
+    "SourceResidualWittFixedDeterminant",
+    "SourceResidualWittRepresentation",
+    "SourceResidualWittCoefficients",
+    "SourceArithmeticWittCyclotomic",
+    "SourceArithmeticPadicCyclotomicReduction",
+    "SourcePadicWittCoefficient",
+    "SourceArithmeticPadicCyclotomic",
+    "SourcePrimitiveWittFramedResidual",
+    "SourceResidualWittFramedRing",
+    "SourcePrimitiveFiniteResidualGalois",
+    "SourceFiniteResidualArithmeticDescent",
+    "SourceResidualRealDeterminant",
+    "SourceResidualCoefficientDeterminant",
+    "SourceFiniteResidualCoefficientField",
+    "SourcePrimitiveResidualOddness",
+    "SourcePrimitiveResidualGlobalDeterminant",
+    "SourceResidualCyclotomicDeterminant",
+    "SourceArithmeticCharacterFrobeniusEquality",
+    "SourcePrimitiveResidualGaloisCharP",
+    "SourcePrimitiveOriginalResidualGalois",
+    "SourcePrimitiveRestoredGalois",
+    "SourcePrimitiveWeightTwoGalois",
+    "SourceResidualGaloisRealization",
+    "SourceParabolicArithmeticResidual",
+    "SourceOriginalDivisorArithmeticResidual",
+    "SourceArithmeticSupportInflationValues",
+    "SourceOriginalArithmeticResidual",
+    "SourceArithmeticLocalEmbeddingExtension",
+    "SourceAbsoluteArithmeticRestriction",
+    "SourceRationalLocalValuation",
+    "SourceNormValuationRestriction",
+    "SourceValuationResidualAction",
+    "SourceAbsoluteArithmeticDescent",
+    "SourceNumberFieldSupportRamification",
+    "SourceAbsoluteFiniteUnramified",
+    "SourceNumberFieldNormInertiaLift",
+    "SourceOriginalNormLocalResidual",
+    "SourceOriginalAlgebraicIntegerResidual",
+    "SourceOriginalExactReductionResidual",
+    "SourceOriginalPrescribedReductionResidual",
+    "SourceRankTwoCharpolyCoefficients",
+    "SourcePrescribedCompletionResidue",
+    "SourceAdicCoefficientResidueComparison",
+    "SourcePrescribedReductionPrime",
+    "SourceReductionCompletionLocalStructures",
+    "SourcePadicCompletionValuation",
+    "SourceReductionCompletionPadicMap",
+    "SourceReductionCompletionBasePrime",
+    "SourceReductionCompletionFinite",
+    "SourceOriginalPrescribedResidualFrobenius",
+    "SourceOriginalResidualInertia",
+    "SourceIntegralMatrixCharpoly",
+    "SourceMatrixIntertwinerCharpoly",
+    "SourceOriginalResidualFrobeniusCharpoly",
+    "SourceOriginalSpecializationFrobeniusCharpoly",
+    "SourceCyclotomicFrobeniusCharpoly",
+    "SourceRankTwoQuadraticTrace",
+    "SourceValuationCyclotomicFrobenius",
+    "SourceValuationFrobeniusRoots",
+    "SourceOriginalSpecializationCyclotomicDeterminant",
+    "SourceSpecializationBaseChangeIntertwiner",
+    "SourceImageSpecializationDeterminant",
+    "SourceAlternatingRankTwoDeterminant",
+    "SourceImageSpecializationPairing",
+    "SourcePrimitiveOriginalTateGalois",
+    "SourcePolynomialCommutant",
+    "SourceOriginalSpecializationPrimitiveImage",
+    "SourceSpanningProjectorImage",
+    "SourceOriginalSpecializationProjector",
+    "SourcePolynomialSpecialization",
+    "SourceOriginalPrescribedTateSpecialization",
+    "SourceParabolicPrimitiveDivisor",
+    "SourceWeightTwoNewEigenNormalization",
+    "SourceWeightTwoEigenLevelDescent",
+    "SourceWeightTwoDegeneracyAdjoint"
+  ],
+  "separatelyAxiomChecked": [
+    "Dubon2026.sourcePadicWittCoefficient_injective"
+  ],
+  "renewedExternalReview": "reuse-20261025-579/reuse-assessment.json"
+}

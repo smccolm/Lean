@@ -1,0 +1,54 @@
+{
+  "sha": "0a843add06243f16537823f2c802ae2aa57ae395",
+  "url": "https://api.github.com/repos/mkaratarakis/Deligne/git/trees/0a843add06243f16537823f2c802ae2aa57ae395",
+  "tree": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "324124b814b8c257b1f46aadebb55d61f51c86e1",
+      "size": 1777,
+      "url": "https://api.github.com/repos/mkaratarakis/Deligne/git/blobs/324124b814b8c257b1f46aadebb55d61f51c86e1"
+    },
+    {
+      "path": "leanpkg.path",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c39fcfb1f810946760c339ab4718dfc749bfda90",
+      "size": 54,
+      "url": "https://api.github.com/repos/mkaratarakis/Deligne/git/blobs/c39fcfb1f810946760c339ab4718dfc749bfda90"
+    },
+    {
+      "path": "leanpkg.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af891e35ba3e44461c2995282c5ef7afe0385bdb",
+      "size": 239,
+      "url": "https://api.github.com/repos/mkaratarakis/Deligne/git/blobs/af891e35ba3e44461c2995282c5ef7afe0385bdb"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "30c0c26ef7b1a100a906e922c1f49dffb4c85742",
+      "url": "https://api.github.com/repos/mkaratarakis/Deligne/git/trees/30c0c26ef7b1a100a906e922c1f49dffb4c85742"
+    },
+    {
+      "path": "src/galois_representations.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acbbc4eeac5aa15022ff14ce7e467309aeee284b",
+      "size": 636,
+      "url": "https://api.github.com/repos/mkaratarakis/Deligne/git/blobs/acbbc4eeac5aa15022ff14ce7e467309aeee284b"
+    },
+    {
+      "path": "src/ramification.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddbad5785db6aa7be6bb9014a01f485d485ee5ec",
+      "size": 8944,
+      "url": "https://api.github.com/repos/mkaratarakis/Deligne/git/blobs/ddbad5785db6aa7be6bb9014a01f485d485ee5ec"
+    }
+  ],
+  "truncated": false
+}

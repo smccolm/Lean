@@ -1,0 +1,82 @@
+{
+  "scope": "Native H1 Hecke pullback square and actual upper-subgroup trace reindexing",
+  "chain": "DUB-17/18 -> original all-weight adic association -> geometric Gamma1 realization -> actual surjective-transfer Hecke identity -> native H1 pullback square with the original upper-subgroup isomorphism and binary coefficients",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperImage.lean",
+      "sha256": "6F2CE50508F9EA4B6E2D2207C6984F97CD9EC6E4B653B7E1F8E60683F8A1DCEC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSubgroupCohomologyMap.lean",
+      "sha256": "937193952EE4964F6BE9F3D3F629C612CE003B45FA310AA44E3212EC0FDCF27B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstantHecke.lean",
+      "sha256": "9627C449A3179AA390C251FCEAE6A02F83EFB9EB26240A766C00FA4E311367D0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneBinaryRestriction.lean",
+      "sha256": "8300211B19A51CE12AB2A57F09DD6AF20F5683B0237B603F831CF79022884E2D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverBinaryHeckeTrace.lean",
+      "sha256": "D87B62D582FB7E968115A3F7071F2F66C041726CF7613137D2E4013662F3ED70"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceBaseChangeCoefficient.lean",
+      "sha256": "A8856D1AEF6A28930210ACE72B7059336CB202CEA00CAB9081A880BF584AC6AA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceH1TraceTower.lean",
+      "sha256": "AD278B75D2192A1709D4DC94F4A19D46F085E652278DE0F940E13027D55EF023"
+    }
+  ],
+  "shorterRoute": "Use the proved literal upper-subgroup isomorphism and its conjugation identity, the existing subgroup H1 native-pullback formula, and native group-cohomology map composition. Equality of the actual underlying coefficient linear maps is checked directly. No new cochain comparison, transported substitute Hecke operator or assumed intertwining identity is introduced.",
+  "assumptionsToDischarge": "The actual conjugation group square, identical homogeneous coefficient actions, exact upper-subgroup inverse image, and trace reindexing on native H1 are proved. No compatibility premise is assumed.",
+  "remaining": "Compose traces through the actual subgroup intersection to prove surjective-transfer Hecke compatibility; arithmetic geometric and diamond comparison, finite Galois realization, all-weight characteristic-zero association, automorphy and literal higher symmetric-power continuation remain. DUB-17--20 OPEN;16/20.",
+  "developmentRoutes": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-native-hecke-pullback-square-route-603.json",
+      "sha256": "24B0411BAE9D1111A1FD6D6AFAFB8B9EA3C6BF2F6F7BE6A47F65CEA42835AB8F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-upper-trace-reindex-route-604.json",
+      "sha256": "F9081F2369A53BA8FC2DD5452CAF0D12DAB75AC91B728D88E2182454AA51661F"
+    }
+  ],
+  "scratchImportClosure": [
+    "SourceGammaOneHeckeUpperTraceReindex",
+    "SourceGammaOneSubgroupCohomologyMap",
+    "SourceGammaOneTransferCosetFormula",
+    "SourceShapiroH1CosetTrace",
+    "SourceShapiroH1CocycleComparison",
+    "SourceNativeCoinductionCosetTrace",
+    "SourceGammaOneConstantH1Realization",
+    "SourceGammaOneCohomologyTransfer",
+    "SourceGammaOneCoverFiniteIndex",
+    "SourceGammaOneDiagonalHom",
+    "SourceBinaryPermutationCongruence",
+    "SourceBinaryPrimePowerPermutation",
+    "SourcePermutationCoefficientQuotient",
+    "SourceGammaOneCongruenceCover",
+    "SourceGammaOneHeckeUpperImage",
+    "SourceCohomologyTracePullbackCoefficients",
+    "SourceGammaOneCoverHeckeTraceCosets",
+    "SourcePrincipalCoprimeReduction",
+    "SourceGammaOneCoverImageHecke",
+    "SourceGammaOneCoverImage",
+    "SourceGammaOneCoverHeckeSquare",
+    "SourceGammaOneHeckeSubgroup",
+    "SourceH1TraceBaseChangeCoefficient",
+    "SourceH1TraceBaseChange",
+    "SourceShapiroH1PullbackNaturality",
+    "SourceGammaOneHeckePullbackSquare",
+    "SourceGammaOneCoverBinaryHeckeTrace",
+    "SourceGammaOneCoverHeckeTraceBaseChange",
+    "SourceGammaOneBinaryRestriction",
+    "SourceGammaOneCoverHeckeRepresentatives",
+    "SourceGammaOneCoverHeckeCosets",
+    "SourceGammaOneRaisedCosets",
+    "SourceGammaOneConstantHecke"
+  ]
+}

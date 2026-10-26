@@ -1,0 +1,78 @@
+{
+  "modules": [
+    "SourcePadicWittCoefficient",
+    "SourceArithmeticPadicCyclotomic",
+    "SourceArithmeticPadicCyclotomicReduction",
+    "SourceArithmeticWittCyclotomic",
+    "SourceResidualWittFixedDeterminant",
+    "SourceResidualWittFixedRing",
+    "SourcePrimitiveWittFixedResidual"
+  ],
+  "theorems": [
+    "Dubon2026.sourcePadicInt_charP_map",
+    "Dubon2026.sourcePadicWittCoefficient_injective",
+    "Dubon2026.sourcePadicWittCoefficient_residue",
+    "Dubon2026.sourceArithmetic_exists_primePower_root",
+    "Dubon2026.sourceArithmeticPadicCyclotomicCharacter_root",
+    "Dubon2026.sourcePadicInt_toZMod_from_pow_one",
+    "Dubon2026.sourceArithmeticPadicCyclotomicCharacter_reduction",
+    "Dubon2026.sourceArithmeticWittCyclotomicCharacter_reduction",
+    "Dubon2026.sourceResidualWitt_fixedDeterminant_compatibility",
+    "Dubon2026.sourceResidualWittFixed_localData",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_wittFixedResidualGalois_charP"
+  ],
+  "constructions": [
+    "Dubon2026.sourcePadicWittCoefficient",
+    "Dubon2026.sourceArithmeticPadicCyclotomicCharacter",
+    "Dubon2026.sourceArithmeticWittCyclotomicCharacter",
+    "Dubon2026.sourceResidualWittFixedData"
+  ],
+  "queries": [
+    "Dubon2026.sourcePadicInt_charP_map",
+    "Dubon2026.sourcePadicWittCoefficient_injective",
+    "Dubon2026.sourcePadicWittCoefficient_residue",
+    "Dubon2026.sourceArithmetic_exists_primePower_root",
+    "Dubon2026.sourceArithmeticPadicCyclotomicCharacter_root",
+    "Dubon2026.sourcePadicInt_toZMod_from_pow_one",
+    "Dubon2026.sourceArithmeticPadicCyclotomicCharacter_reduction",
+    "Dubon2026.sourceArithmeticWittCyclotomicCharacter_reduction",
+    "Dubon2026.sourceResidualWitt_fixedDeterminant_compatibility",
+    "Dubon2026.sourceResidualWittFixed_localData",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_wittFixedResidualGalois_charP",
+    "Dubon2026.sourcePadicWittCoefficient",
+    "Dubon2026.sourceArithmeticPadicCyclotomicCharacter",
+    "Dubon2026.sourceArithmeticWittCyclotomicCharacter",
+    "Dubon2026.sourceResidualWittFixedData"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourcePadicInt_charP_map",
+    "Dubon2026.sourcePadicWittCoefficient_residue",
+    "Dubon2026.sourceArithmetic_exists_primePower_root",
+    "Dubon2026.sourceArithmeticPadicCyclotomicCharacter_root",
+    "Dubon2026.sourcePadicInt_toZMod_from_pow_one",
+    "Dubon2026.sourceArithmeticPadicCyclotomicCharacter_reduction",
+    "Dubon2026.sourceArithmeticWittCyclotomicCharacter_reduction",
+    "Dubon2026.sourceResidualWitt_fixedDeterminant_compatibility",
+    "Dubon2026.sourceResidualWittFixed_localData",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_wittFixedResidualGalois_charP",
+    "Dubon2026.sourcePadicWittCoefficient",
+    "Dubon2026.sourceArithmeticPadicCyclotomicCharacter",
+    "Dubon2026.sourceArithmeticWittCyclotomicCharacter",
+    "Dubon2026.sourceResidualWittFixedData",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_wittFramedResidualGalois_charP",
+    "Dubon2026.arithmeticFixedDeterminantRing_localData",
+    "Dubon2026.arithmeticFixedDeterminantRepresentation_residue",
+    "Dubon2026.arithmeticFixedDeterminantRepresentation_det",
+    "Dubon2026.sourceUnramifiedUnion_mono_dvd_pow",
+    "Dubon2026.originalQUnramifiedUnion_exists_primitiveRoot",
+    "WittVector.fromPadicInt",
+    "cyclotomicCharacter.spec",
+    "cyclotomicCharacter.continuous"
+  ],
+  "roots": [
+    "Dubon2026.sourcePrimitive_exists_originalSupport_wittFixedResidualGalois_charP"
+  ],
+  "separatelyAxiomChecked": [
+    "Dubon2026.sourcePadicWittCoefficient_injective"
+  ]
+}

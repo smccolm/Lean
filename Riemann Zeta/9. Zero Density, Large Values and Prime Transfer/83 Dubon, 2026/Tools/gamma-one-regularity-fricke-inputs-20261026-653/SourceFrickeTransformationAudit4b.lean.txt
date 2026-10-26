@@ -1,0 +1,88 @@
+import SourceFrickePeriodHomothetyV2
+import SourceFrickeModularLatticeV2
+import SourceFrickeTorsionTransformationV2
+import SourceFrickeFunctionTransformationV2
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFricke.smulPeriodPair_ω₁
+#print axioms Dubon2026.SourceFricke.smulPeriodPair_ω₂
+#print axioms Dubon2026.SourceFricke.mem_smulPeriodPair_lattice
+#print axioms Dubon2026.SourceFricke.smulLatticeEquiv_coe
+#print axioms Dubon2026.SourceFricke.weierstrassP_smulPeriodPair
+#print axioms Dubon2026.SourceFricke.weierstrassP_of_lattice_eq
+#print axioms Dubon2026.SourceFricke.periodPairOfTau_ω₁
+#print axioms Dubon2026.SourceFricke.periodPairOfTau_ω₂
+#print axioms Dubon2026.SourceFricke.span_SL2_basis_change
+#print axioms Dubon2026.SourceFricke.denomZ_ne_zero
+#print axioms Dubon2026.SourceFricke.coe_SL2Z_smul
+#print axioms Dubon2026.SourceFricke.mem_lattice_smul_SL2
+#print axioms Dubon2026.SourceFricke.periodPairOfTau_smul_lattice_eq
+#print axioms Dubon2026.SourceFricke.weierstrassP_torsionPt_lift_irrel
+#print axioms Dubon2026.SourceFricke.vecMulSL_apply
+#print axioms Dubon2026.SourceFricke.weierstrassP_frickeTorsionPt_slash
+#print axioms Dubon2026.SourceFricke.vecMulSL_of_mem_Gamma
+#print axioms Dubon2026.SourceFricke.weierstrassP_frickeTorsionPt_neg
+#print axioms Dubon2026.SourceFricke.denom_mapGL_eq_denomZ
+#print axioms Dubon2026.SourceFricke.wpNormZ_eq
+#print axioms Dubon2026.SourceFricke.wpNormZ_slash
+#print axioms Dubon2026.SourceFricke.frickeF_slash
+#print axioms Dubon2026.SourceFricke.frickeF_invariant_Gamma
+#print axioms Dubon2026.SourceFricke.vecMulSL_mul
+#print axioms Dubon2026.SourceFricke.vecMulSL_one
+#print axioms Dubon2026.SourceFricke.vecMulSL_zero
+#print axioms Dubon2026.SourceFricke.vecMulSL_ne_zero
+#print axioms Dubon2026.SourceFricke.frickeF_hperm
+#print axioms Dubon2026.SourceFricke.frickeF_neg
+#print axioms Dubon2026.SourceFricke.smulPeriodPair
+#print axioms Dubon2026.SourceFricke.smulLatticeEquiv
+#print axioms Dubon2026.SourceFricke.periodPairOfTau
+#print axioms Dubon2026.SourceFricke.denomZ
+#print axioms Dubon2026.SourceFricke.numZ
+#print axioms Dubon2026.SourceFricke.frickeTorsionPt
+#print axioms Dubon2026.SourceFricke.vecMulSL
+#print axioms Dubon2026.SourceFricke.wpNormZ
+#print axioms Dubon2026.SourceFricke.frickeF
+#print axioms Dubon2026.SourceFricke.vecMulSLEquiv
+#print axioms Dubon2026.SourceFricke.FrickeIdx
+#print axioms Dubon2026.SourceFricke.frickeIdxPerm
+#print axioms Dubon2026.SourceFricke.instFintypeFrickeIdxOfNeZeroNat
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceFrickePeriodHomothetyV2, `SourceFrickeModularLatticeV2, `SourceFrickeTorsionTransformationV2, `SourceFrickeFunctionTransformationV2]
+  let theorems : Array Name := #[`Dubon2026.SourceFricke.smulPeriodPair_ω₁, `Dubon2026.SourceFricke.smulPeriodPair_ω₂, `Dubon2026.SourceFricke.mem_smulPeriodPair_lattice, `Dubon2026.SourceFricke.smulLatticeEquiv_coe, `Dubon2026.SourceFricke.weierstrassP_smulPeriodPair, `Dubon2026.SourceFricke.weierstrassP_of_lattice_eq, `Dubon2026.SourceFricke.periodPairOfTau_ω₁, `Dubon2026.SourceFricke.periodPairOfTau_ω₂, `Dubon2026.SourceFricke.span_SL2_basis_change, `Dubon2026.SourceFricke.denomZ_ne_zero, `Dubon2026.SourceFricke.coe_SL2Z_smul, `Dubon2026.SourceFricke.mem_lattice_smul_SL2, `Dubon2026.SourceFricke.periodPairOfTau_smul_lattice_eq, `Dubon2026.SourceFricke.weierstrassP_torsionPt_lift_irrel, `Dubon2026.SourceFricke.vecMulSL_apply, `Dubon2026.SourceFricke.weierstrassP_frickeTorsionPt_slash, `Dubon2026.SourceFricke.vecMulSL_of_mem_Gamma, `Dubon2026.SourceFricke.weierstrassP_frickeTorsionPt_neg, `Dubon2026.SourceFricke.denom_mapGL_eq_denomZ, `Dubon2026.SourceFricke.wpNormZ_eq, `Dubon2026.SourceFricke.wpNormZ_slash, `Dubon2026.SourceFricke.frickeF_slash, `Dubon2026.SourceFricke.frickeF_invariant_Gamma, `Dubon2026.SourceFricke.vecMulSL_mul, `Dubon2026.SourceFricke.vecMulSL_one, `Dubon2026.SourceFricke.vecMulSL_zero, `Dubon2026.SourceFricke.vecMulSL_ne_zero, `Dubon2026.SourceFricke.frickeF_hperm, `Dubon2026.SourceFricke.frickeF_neg]
+  let constructions : Array Name := #[`Dubon2026.SourceFricke.smulPeriodPair, `Dubon2026.SourceFricke.smulLatticeEquiv, `Dubon2026.SourceFricke.periodPairOfTau, `Dubon2026.SourceFricke.denomZ, `Dubon2026.SourceFricke.numZ, `Dubon2026.SourceFricke.frickeTorsionPt, `Dubon2026.SourceFricke.vecMulSL, `Dubon2026.SourceFricke.wpNormZ, `Dubon2026.SourceFricke.frickeF, `Dubon2026.SourceFricke.vecMulSLEquiv, `Dubon2026.SourceFricke.FrickeIdx, `Dubon2026.SourceFricke.frickeIdxPerm, `Dubon2026.SourceFricke.instFintypeFrickeIdxOfNeZeroNat]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Primitive Tate Restriction postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Primitive Tate Restriction theorems discovered"
+  logInfo m!"SOURCE FRICKE TRANSFORMATION AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceFrickePeriodHomothetyV2
+#lint in SourceFrickeModularLatticeV2
+#lint in SourceFrickeTorsionTransformationV2
+#lint in SourceFrickeFunctionTransformationV2

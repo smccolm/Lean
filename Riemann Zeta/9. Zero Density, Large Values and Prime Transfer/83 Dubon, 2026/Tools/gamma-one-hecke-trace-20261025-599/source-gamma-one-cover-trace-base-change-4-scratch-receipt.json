@@ -1,0 +1,75 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T05:38:35.777763+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceGammaOneCoverImage",
+    "SourceGammaOneCoverImageHecke",
+    "SourceGammaOneCoverHeckeTraceCosets",
+    "SourceGammaOneCoverHeckeTraceBaseChange"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverImage.lean",
+      "sha256": "6ADF7F716AD52E90D6932E981084C08694986DCD24108FE1C88075FDC1BF036B",
+      "oleanSha256": "1FB1353D28117ABA72F40BDC62CB45E912AB584CA6624408B1E0451C0D792969"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverImageHecke.lean",
+      "sha256": "A96B2CE24C764810A9F1A5BF643E0078B0ABAACE90028E55E8A0D88E1AADE661",
+      "oleanSha256": "A81AFE06F873360DDE848392FD019C7EAE1790BD6069F21B0BFB8C4966610109"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverHeckeTraceCosets.lean",
+      "sha256": "8AEC2B54127737C315327F12E90AE5358584B9FFFBCB779FCC4FF79385563489",
+      "oleanSha256": "3205826BDAA4715B369D833C91835B8486A755AA5BA610BFEB6AD4E9338073F5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverHeckeTraceBaseChange.lean",
+      "sha256": "E2931186F9C4D2B3791D2B4825028994510313A83D88B08EB100F72C597583AA",
+      "oleanSha256": "7DA12F0D2730D0F4903490F4A2ADABD955DA7F7D82487917C61F271190CEADB9"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceGammaOneCoverImage_mem_iff",
+    "Dubon2026.sourceGammaOneCoverImage_of_principal",
+    "Dubon2026.sourceIntegralHeckeConjugate_mem_gammaOneCover_iff",
+    "Dubon2026.sourceHeckeConjugation_mem_gammaOneCover_iff",
+    "Dubon2026.sourceGammaOneCoverHeckeTraceCoset_surjective",
+    "Dubon2026.sourceGammaOneCoverHeckeTraceSubgroup_eq",
+    "Dubon2026.sourceGammaOneCoverHeckeH1Trace_pullback"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceGammaOneCoverImage_mem_iff",
+    "Dubon2026.sourceGammaOneCoverImage_of_principal",
+    "Dubon2026.sourceIntegralHeckeConjugate_mem_gammaOneCover_iff",
+    "Dubon2026.sourceHeckeConjugation_mem_gammaOneCover_iff",
+    "Dubon2026.sourceGammaOneCoverHeckeTraceCoset_surjective",
+    "Dubon2026.sourceGammaOneCoverHeckeTraceSubgroup_eq",
+    "Dubon2026.sourceGammaOneCoverHeckeH1Trace_pullback"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverTraceBaseChangeAudit4.log",
+  "logSha256": "2EA4B89EA1E35C90EF5F31BD893B96A871130B2C1A37762EED84672187215E9E",
+  "auditSha256": "955DF3A49CF57491BF44590AEF832CD38C48BDF737C90C25218BC41AC0D290B5",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 10,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 11,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverTraceBaseChangeDependencyAudit4.log",
+  "dependencyAuditSha256": "0DA99080F601AEC116DE1C3A748C3AFEE6E3BF1C0566AB3FC91457750400B5C5",
+  "dependencyAuditSourceSha256": "297E7780E33DBAFD7BD2DEC9D7E2C08DF3F197E021EE62A6026A2F0305FF1C34",
+  "consumers": [
+    "Dubon2026.sourceGammaOneCoverHeckeH1Trace_pullback",
+    "Dubon2026.sourceGammaOneCoverHeckeTraceSubgroup_eq"
+  ],
+  "dependency": "DUB-17/18 -> higher continuation -> arithmetic automorphy -> original all-weight adic association -> geometric Gamma1 realization -> actual surjective-transfer Hecke compatibility -> discharge group-level native trace base-change hypotheses",
+  "discharged": "The actual Gamma1 image congruences, its principal-level containment, preservation under good-prime Hecke conjugation, and the exact coset-surjectivity condition needed by native H1 trace base change.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. These group hypotheses must be consumed with native trace composition and coefficient compatibility to prove the actual surjective-transfer Hecke identity. Arithmetic geometry/diamonds, Galois realization, all-weight association, local/image/regularity, automorphy and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cover-trace-base-change-4-reuse-review-20261025.json",
+  "reuseReviewSha256": "FDB48B39F069082D3DD5A0DF7C155225D8E5B1B4E0A5A9426AEB9F1D9C73DBDB",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

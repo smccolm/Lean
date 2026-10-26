@@ -1,0 +1,67 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T10:04:00.658868+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneResidues",
+    "SourceGammaOneHeckePicard"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneResidues.lean",
+      "sha256": "62B68DD9B439BED7C7E498FFC9AD95F9848FDB887319DFD09152A7BD0D3C3995",
+      "oleanSha256": "2ABB8747EF18CC1DF805556CB54A6E416B390790DA6F8B71F9D681AA15AB517B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicard.lean",
+      "sha256": "39D5745B1530BC16846C8A91B8B3892FC3B21DA27A1460BB1ABEACF690237118",
+      "oleanSha256": "10F3B27BF497CAED0E1E58F2F91D6617D5AAFECA64F4AF0729ED73BFE83E6C1B"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_place_residue_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_place_residue_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_mem_degZero",
+    "Dubon2026.SourceFunctionField.GammaOne.isPrincipal_heckeDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePicard_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePicard"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_place_residue_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_place_residue_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_mem_degZero",
+    "Dubon2026.SourceFunctionField.GammaOne.isPrincipal_heckeDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePicard_mk"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePicard"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardAudit2b.log",
+  "logSha256": "4CBCAE92125C8E30FF186277F575C130893831933929CE08D5A40BFCEB405318",
+  "auditSha256": "DF9E9BC49AA1E59FDAC0A9BA299F3E6A497DF127C3741A5F7C5B0A0A53F875AA",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 12,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 17,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDependencyAudit2b.log",
+  "dependencyAuditSha256": "1F31C8DFF719FEE5A4ED2EE768C6CE8EA9C21A915DC4A7B314C54387C4C245B7",
+  "dependencyAuditSourceSha256": "3EAF07EC047F547BF0025E4867F985FA433D910F34BD8CA1CF96BB4775B14A63",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor_mem_degZero",
+    "Dubon2026.SourceFunctionField.GammaOne.isPrincipal_heckeDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePicard_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.heckePicard"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of original finite Gamma1 Hecke characters -> geometric/H1 comparison -> actual Gamma1 Picard Hecke correspondence.",
+  "discharged": "Every place of the actual Gamma1 and Hecke fields over algebraically closed constants has the same residue field as the constants. The literal beta pullback followed by alpha pushforward preserves degree zero and principal divisors. It therefore defines the actual Gamma1 Hecke endomorphism of degree-zero divisor classes, with exact representative evaluation. Finite-map, residue-degree, degree-preservation and principal-divisor-preservation inputs are derived.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Geometric/H1 and diamond comparison, arithmetic action compatibility, geometric Galois realization of the finite characters, original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-picard-2b-reuse-review-20261026.json",
+  "reuseReviewSha256": "0E435242BC73EE95813D527B492F837EBB5883D43C883CD82C324E7C4790EE56",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

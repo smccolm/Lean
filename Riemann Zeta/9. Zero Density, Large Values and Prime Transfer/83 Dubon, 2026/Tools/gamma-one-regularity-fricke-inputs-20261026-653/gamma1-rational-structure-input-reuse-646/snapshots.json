@@ -1,0 +1,45 @@
+{
+  "fetchedUTC": "2026-10-26T13:36:18.122179+00:00",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_CuspForm_span_frickeRational_E4_pow_E6_pow_eq_top.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CuspForm_span_frickeRational_E4_pow_E6_pow_eq_top.lean",
+      "snapshot": "P2M\\Sol\\S_CuspForm_span_frickeRational_E4_pow_E6_pow_eq_top.lean.txt",
+      "gitBlob": "f98cb3a013e9126cbabcb193c97e09354b9d986e",
+      "sha256": "AB40C08C057927A0E2EA6DBA8B677CB8AA4981B3C9A8104B60FBCA51CFADE4CA",
+      "bytes": 70494
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularForm_gamma1_qExpansion_coeff_mem_of_frickeRational.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularForm_gamma1_qExpansion_coeff_mem_of_frickeRational.lean",
+      "snapshot": "P2M\\Sol\\S_ModularForm_gamma1_qExpansion_coeff_mem_of_frickeRational.lean.txt",
+      "gitBlob": "194bb5526bcc15444a8e98b5529e0728450597f2",
+      "sha256": "F647A643D74CB76A516CFC79B4E76ECCE1EF30F558FF9D178228244F97E6788E",
+      "bytes": 21841
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_exists_isIntegralQExp_smul_of_ratCast_qExpansion.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_isIntegralQExp_smul_of_ratCast_qExpansion.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_exists_isIntegralQExp_smul_of_ratCast_qExpansion.lean.txt",
+      "gitBlob": "e08c517b8200f33508164d1ac6e36197aab0064d",
+      "sha256": "92FD8786FED216F62E9B82758901EFA7324E4A4D71CA01DD4BA8A5B541C2542F",
+      "bytes": 22618
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_WLight_frickeFunction_modularity_package.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_WLight_frickeFunction_modularity_package.lean",
+      "snapshot": "P2M\\Sol\\S_WLight_frickeFunction_modularity_package.lean.txt",
+      "gitBlob": "80b191a311f7b3ffac155ef846a2bbeb3d6fae43",
+      "sha256": "06592739503E4B29A63CFDADF3412BDF3C0D8A6097810A435EB8315C686F1DA1",
+      "bytes": 59256
+    }
+  ]
+}

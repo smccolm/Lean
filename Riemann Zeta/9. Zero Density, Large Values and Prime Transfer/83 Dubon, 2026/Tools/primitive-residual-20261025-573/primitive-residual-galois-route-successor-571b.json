@@ -1,0 +1,9 @@
+{
+  "reason": "Receipt recording rejected the route JSON because its generator appended a literal backslash-n. The original route and used recorder are preserved. The successor changes only those final two bytes into a newline; all route fields, proof sources, oleans and audit evidence remain unchanged.",
+  "originalRoute": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-galois-route-571.json",
+  "originalRouteSha256": "1F34F5B1BFB08D90F6FD9C45C14B4C9E60C982A023373DADD0DFC29DB4B5A578",
+  "successorRoute": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-galois-route-571b.json",
+  "successorRouteSha256": "733D4654EB555F4185DFEDB50B40BA05E621C612B6EE48C7DFFC087B1437B38B",
+  "failedRecorder": "E:\\Lean\\.tmp\\dubon83\\record_primitive_residual_galois_571.py",
+  "failedRecorderSha256": "554D56EA6F7032384BCF7912CC996048BC844171A4C537F385E995DD655E2664"
+}

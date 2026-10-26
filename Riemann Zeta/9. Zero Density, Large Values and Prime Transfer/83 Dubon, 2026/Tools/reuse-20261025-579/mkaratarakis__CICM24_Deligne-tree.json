@@ -1,0 +1,39 @@
+{
+  "sha": "8e5b163b30e434e6f68549e9399650923b75fb60",
+  "url": "https://api.github.com/repos/mkaratarakis/CICM24_Deligne/git/trees/8e5b163b30e434e6f68549e9399650923b75fb60",
+  "tree": [
+    {
+      "path": "Frobenius.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e6fa9442976caa76c7b991c423af6d0bf472178",
+      "size": 14408,
+      "url": "https://api.github.com/repos/mkaratarakis/CICM24_Deligne/git/blobs/8e6fa9442976caa76c7b991c423af6d0bf472178"
+    },
+    {
+      "path": "GaloisReps.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3920172283ca9038e3a645839d8cfd73997cf417",
+      "size": 1061,
+      "url": "https://api.github.com/repos/mkaratarakis/CICM24_Deligne/git/blobs/3920172283ca9038e3a645839d8cfd73997cf417"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e65789e01be9552cca8f089d05f74555754ee106",
+      "size": 1479,
+      "url": "https://api.github.com/repos/mkaratarakis/CICM24_Deligne/git/blobs/e65789e01be9552cca8f089d05f74555754ee106"
+    },
+    {
+      "path": "Statement.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e32b99f1bb1af727eda1caff1aad001c62188149",
+      "size": 7748,
+      "url": "https://api.github.com/repos/mkaratarakis/CICM24_Deligne/git/blobs/e32b99f1bb1af727eda1caff1aad001c62188149"
+    }
+  ],
+  "truncated": false
+}

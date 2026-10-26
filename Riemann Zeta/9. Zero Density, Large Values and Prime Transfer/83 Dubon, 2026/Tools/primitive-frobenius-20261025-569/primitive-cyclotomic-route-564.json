@@ -1,0 +1,83 @@
+{
+  "scope": 564,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive Frobenius determinant -> determinant of the existing actual primitive representation equals the original cyclotomic character -> specialization identifies the nondegenerate invariant rank-two Tate image",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimitiveOriginalTateNondegenerateRankTwo.lean",
+      "sha256": "D23CA52B84F9F24AF1304C09A56CF96A79D96A85D4E6BE9BB542005759E0F653"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCoefficientWeilLaws.lean",
+      "sha256": "0C5AE49011A3E61EC75FBB74017D770C2D3FFEE7B364CC0CE4BB714B228B701B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRationalTateGalois.lean",
+      "sha256": "EEE871FD2722A8CFA4D07A5E77913200A1E7DB463A7B732B924974FA0DCCBBA0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveFrobeniusQuadraticRealization.lean",
+      "sha256": "346D2FFF226B66520284C59193080FB1377099C27DFEB0588967844C4F1C6849"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalPrimitiveGaloisRealization.lean",
+      "sha256": "8E5BF95A975D3A0516720797582E45AE57075727BB9C31CCD872F5516BEB5670"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\PolynomialEndIntertwiner.lean",
+      "sha256": "274350F3979FB2B569C01FE86B7E927454E7F21CDEED4F501874DDA7877F7616"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePolynomialKernelProjectionLaws.lean",
+      "sha256": "0A0B54A9F23E0A23E2520486A78086FA8C630CAF2C0086BD85CFB9C66228AF5F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCyclotomicLocal.lean",
+      "sha256": "5F68052D522B48BC1697339344445F975162808DE59C1430DB74FF67D77E56F5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLocalCyclotomicAction.lean",
+      "sha256": "6FA18DC07E9C2571108BBB70A2F38A1DD334918B5DA7ADEE72248CF7856AAD76"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHeckePrimeRootReduction.lean",
+      "sha256": "86112EA6C6EA5A112C7001D2B03D9E31AAC158CA10E83F0B36A30574B3D68E58"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\TensorProduct\\Basic.lean",
+      "sha256": "CE9029B727E3CBDBA08D690B1245E2A25034817739EE3BBD36E6036AA5645AB6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\FiniteDimensional\\Lemmas.lean",
+      "sha256": "0CD64CA6E464CFA7233433EA1CB126185F3E1940D2CDB6A992039A98D4F57972"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Polynomial\\Smeval.lean",
+      "sha256": "A9F6C39BF240390E9D2BAC4B23E0D3DDAC7B366DCB4D4B5AA7768B77CCF3D01A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\SesquilinearForm\\Basic.lean",
+      "sha256": "5D3F683B3AF2234287142A3D2D10E911E1DB040930BBBB9BA178B4B51D73B1F8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Determinant.lean",
+      "sha256": "B8FDAB493BFDBF76CFD66B38CE6F642F73CE77AFE0A8D9194E419CED43232A25"
+    }
+  ],
+  "shorterRoute": "Reuse native range_liftBaseChange and equal-finite-dimension bijectivity to keep the existing spanning specialization itself. Its prime eigenvalues annihilate the finite good-prime squared shifts; adapt the existing complex polynomial-intertwiner proof only to the necessary zero-action case over the coefficient field. Original prime Hecke-Galois commutation and native finite-sum/polynomial commutation make the same image invariant. Transfer the literal vector-valued Weil pairing through that exact specialization. The native scalar-valued alternating-map determinant theorem does not cover its original target; the direct two-coordinate bilinear expansion proves precisely the needed vector-valued determinant identity without a target basis or a new polarization. The final consumer unpacks the already constructed continuous unramified representation and retains its original Frobenius quadratic identity. Existing local root separation and cyclotomic Frobenius results were inspected for the next exact valuation-subring Frobenius bridge; they are not yet claimed as consumed or proved for that source interface.",
+  "assumptionsToDischarge": "The actual existing spanning primitive specialization restricts to an isomorphism on the same nondegenerate rank-two projector image. The original Galois action preserves that image. Its transported literal Weil pairing is nondegenerate and alternating with the original cyclotomic multiplier. Therefore the same already constructed primitive representation has exactly that determinant, with no pairing, projector, image, invariance or determinant assumption supplied.",
+  "remaining": "The cyclotomic multiplier must be evaluated at the exact source arithmetic Frobenius lifts to give the rational prime, and combined with the retained quadratic identity to obtain trace and characteristic polynomial. Residual association, arithmetic automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "scratchImportClosure": [
+    "SourceOriginalPrimitiveCyclotomicRealization",
+    "SourceOriginalSpecializationCyclotomicDeterminant",
+    "SourceSpecializationBaseChangeIntertwiner",
+    "SourceImageSpecializationDeterminant",
+    "SourceAlternatingRankTwoDeterminant",
+    "SourceImageSpecializationPairing",
+    "SourcePrimitiveOriginalTateGalois",
+    "SourcePolynomialCommutant",
+    "SourceOriginalSpecializationPrimitiveImage",
+    "SourceSpanningProjectorImage",
+    "SourceOriginalSpecializationProjector",
+    "SourcePolynomialSpecialization"
+  ]
+}

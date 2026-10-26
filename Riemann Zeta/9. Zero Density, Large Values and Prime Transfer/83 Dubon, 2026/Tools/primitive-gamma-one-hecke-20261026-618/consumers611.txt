@@ -1,0 +1,37 @@
+
+/-- The genuine coefficient law has the exact orthonormal symmetric-power characters, with no arithmetic input. -/
+theorem sato_tate_character_orthogonality_source (m n : ℕ) :
+    (∫ x, (Polynomial.Chebyshev.S ℝ (m : ℤ)).eval x *
+      (Polynomial.Chebyshev.S ℝ (n : ℤ)).eval x ∂(satoTateProbability : Measure ℝ)) =
+        if m = n then 1 else 0 :=
+  integral_satoTate_character_pair m n
+
+/-- Genuine primitive coefficients, rather than a separately supplied recurrence sequence, realize every symmetric-power character. -/
+theorem primitive_normalized_prime_power_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) {p : ℕ} (hp : Nat.Prime p) (hpQ : ¬p ∣ Q) (r : ℕ) :
+    normalizedCuspCoefficients f.toCuspForm (p ^ r) =
+      (Polynomial.Chebyshev.S ℂ (r : ℤ)).eval (normalizedCuspCoefficients f.toCuspForm p) ∧
+    (normalizedCuspCoefficients f.toCuspForm (p ^ r)).re =
+      (Polynomial.Chebyshev.S ℝ (r : ℤ)).eval (normalizedCuspCoefficients f.toCuspForm p).re :=
+  ⟨primitiveCuspForm_normalized_primePower_chebyshev f hp hpQ r,
+    primitiveCuspForm_normalized_primePower_re f hp hpQ r⟩
+
+/-- The actual arithmetic-input reduction derives both the weak Sato--Tate law and all isolated-prime H2 requirements, with the two remaining arithmetic premises displayed. -/
+theorem primitive_prime_character_blocks_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k)
+    (hbound : ∀ p, Nat.Prime p → ¬p ∣ Q → ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    (hav : ∀ r : ℕ, 0 < r → Tendsto (fun N : ℕ =>
+      (∑ p ∈ Nat.primesLE N, (normalizedCuspCoefficients f.toCuspForm (p ^ r)).re) /
+        Nat.primeCounting N) atTop (𝓝 0)) :
+    Tendsto (primeEmpirical (fun p => (normalizedCuspCoefficients f.toCuspForm p).re))
+      atTop (𝓝 satoTateProbability) ∧
+    let B := selectedDyadicPrimes (fun p => ¬p ∣ Q ∧
+      1 ≤ ‖normalizedCuspCoefficients f.toCuspForm p‖ ∧ ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    IsolatedPrimeBlocks B ∧ Tendsto (fun N => (B N).card) atTop atTop ∧
+      PrimeCoefficientComparability (normalizedCuspCoefficients f.toCuspForm) B (1 / 2) ∧
+        IsolatedEnergyAsymptotic (normalizedCuspCoefficients f.toCuspForm) B (1 / 2) := by
+  have hST := primitive_satoTate_of_primePower_averages f hbound hav
+  exact ⟨hST, sato_tate_selected_primes_H2 (Nat.pos_of_neZero Q)
+    (fun p hp hpQ => primitiveCuspForm_normalizedCoefficient_im f p
+      (hp.coprime_iff_not_dvd.mpr hpQ)) hST⟩
+

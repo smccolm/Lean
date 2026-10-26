@@ -1,0 +1,28 @@
+import SourceGammaOneGeometricCohomology
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1, `Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_eq, `Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_injective, `Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup_upper, `Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_matrix, `Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_smul]
+  let localModules : Array Name := #[`SourceGammaOneGeometricCohomology, `SourceGammaOneHeckeGeometricSubgroup, `SourceGammaOneModularStretch]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_injective, `Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup_upper, `Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_matrix, `Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_smul, `Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_eq, `Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup, `Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup, `Dubon2026.SourceFunctionField.GammaOne.geometricAlphaMorphism, `Dubon2026.SourceFunctionField.GammaOne.geometricBetaH1Trace, `Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1, `Dubon2026.originalCohomologyReindex, `Dubon2026.originalCohomologyReindex_isIso, `Dubon2026.sourceHeckeH1Trace, `Dubon2026.sourceGammaOneConstantHeckeH1, `groupCohomology.map_comp, `Dubon2026.SourceFunctionField.GammaOne.heckeUpperGeometricEquiv, `Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_smul, `Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_matrix]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE GEOMETRIC COHOMOLOGY DEPENDENCY AUDIT PASS: all {required.size} required dependencies occur in the actual geometric Hecke H1 construction, its exact equality with the original operator and the actual group-map injection and analytic identities. Only declaration values are traversed. Native group-cohomology composition and the existing reindexing isomorphism are reused; the coefficient endomorphism is retained. Picard/H1, parabolic and diamond comparison, all-weight Galois realization and higher continuation remain required. 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

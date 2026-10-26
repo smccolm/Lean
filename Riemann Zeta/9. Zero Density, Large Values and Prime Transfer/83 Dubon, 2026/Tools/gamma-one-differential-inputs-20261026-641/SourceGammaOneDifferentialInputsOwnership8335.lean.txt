@@ -1,0 +1,37 @@
+import Dubon2026.SourceGammaOneHeckeGeometricSubgroup
+import Dubon2026.SourceGammaOneGeometricCohomology
+import Dubon2026.SourceGammaOneHeckeCoefficientAction
+import Dubon2026.SourceGammaOneCurveGeometry
+import Dubon2026.SourceGammaOneCurveInputs
+import Dubon2026.SourceGammaOneScalarExtension
+import Dubon2026.SourceGammaOneModularRatios
+import Dubon2026.SourceGammaOneFieldModularRatio
+import Dubon2026.SourceModularQDerivative
+import Dubon2026.SourceModularQDerivativeExpansion
+import Dubon2026.SourceJEulerModularIdentity
+import Dubon2026.SourceJEulerPolynomial
+import Dubon2026.SourceGammaOneDifferentialFiniteIntegral
+import Dubon2026.SourceInverseJLevelOneIntegral
+import Dubon2026.SourceIntegralHomogeneousRelation
+import Dubon2026.SourceModularInverseJIntegral
+import Dubon2026.SourceGammaOneCuspAuxiliaryForm
+import Dubon2026.SourceGammaOneCuspAuxiliaryExpansion
+import Dubon2026.SourceGammaOneDifferentialCuspIntegral
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceGammaOneHeckeGeometricSubgroup, `Dubon2026.SourceGammaOneGeometricCohomology, `Dubon2026.SourceGammaOneHeckeCoefficientAction, `Dubon2026.SourceGammaOneCurveGeometry, `Dubon2026.SourceGammaOneCurveInputs, `Dubon2026.SourceGammaOneScalarExtension, `Dubon2026.SourceGammaOneModularRatios, `Dubon2026.SourceGammaOneFieldModularRatio, `Dubon2026.SourceModularQDerivative, `Dubon2026.SourceModularQDerivativeExpansion, `Dubon2026.SourceJEulerModularIdentity, `Dubon2026.SourceJEulerPolynomial, `Dubon2026.SourceGammaOneDifferentialFiniteIntegral, `Dubon2026.SourceInverseJLevelOneIntegral, `Dubon2026.SourceIntegralHomogeneousRelation, `Dubon2026.SourceModularInverseJIntegral, `Dubon2026.SourceGammaOneCuspAuxiliaryForm, `Dubon2026.SourceGammaOneCuspAuxiliaryExpansion, `Dubon2026.SourceGammaOneDifferentialCuspIntegral]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

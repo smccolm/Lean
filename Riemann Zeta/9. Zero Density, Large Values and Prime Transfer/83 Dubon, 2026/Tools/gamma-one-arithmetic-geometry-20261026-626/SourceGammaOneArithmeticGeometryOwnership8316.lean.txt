@@ -1,0 +1,44 @@
+import Dubon2026.SourceGammaOneFunctionField
+import Dubon2026.SourceGammaOneJCoordinate
+import Dubon2026.SourceGammaOneRatioClosure
+import Dubon2026.SourceGammaOneNormRelation
+import Dubon2026.SourceGammaOneComplexRelation
+import Dubon2026.SourceGammaOneComplexRatio
+import Dubon2026.SourceGammaOneRationalRelation
+import Dubon2026.SourceGammaOneFunctionFieldFinite
+import Dubon2026.SourceGammaOneFunctionFieldBaseChange
+import Dubon2026.SourceGammaOneCurveFinite
+import Dubon2026.SourceGammaOneModularStretch
+import Dubon2026.SourceGammaOneModularStretchCoefficients
+import Dubon2026.SourceGammaOneHeckeFieldInclusion
+import Dubon2026.SourceGammaOneHeckeDegeneracy
+import Dubon2026.SourceGammaOneHeckeFieldFinite
+import Dubon2026.SourceGammaOneResidues
+import Dubon2026.SourceGammaOneHeckePicard
+import Dubon2026.SourceGammaOneFieldCoefficients
+import Dubon2026.SourceGammaOneHeckeFieldNaturality
+import Dubon2026.SourceGammaOneArithmeticField
+import Dubon2026.SourceGammaOneArithmeticPlaces
+import Dubon2026.SourceGammaOneArithmeticDivisors
+import Dubon2026.SourceGammaOneArithmeticPicard
+import Dubon2026.SourceGammaOneHeckeArithmeticPlaces
+import Dubon2026.SourceGammaOneHeckeArithmeticDivisors
+import Dubon2026.SourceGammaOneHeckeArithmetic
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceGammaOneFunctionField, `Dubon2026.SourceGammaOneJCoordinate, `Dubon2026.SourceGammaOneRatioClosure, `Dubon2026.SourceGammaOneNormRelation, `Dubon2026.SourceGammaOneComplexRelation, `Dubon2026.SourceGammaOneComplexRatio, `Dubon2026.SourceGammaOneRationalRelation, `Dubon2026.SourceGammaOneFunctionFieldFinite, `Dubon2026.SourceGammaOneFunctionFieldBaseChange, `Dubon2026.SourceGammaOneCurveFinite, `Dubon2026.SourceGammaOneModularStretch, `Dubon2026.SourceGammaOneModularStretchCoefficients, `Dubon2026.SourceGammaOneHeckeFieldInclusion, `Dubon2026.SourceGammaOneHeckeDegeneracy, `Dubon2026.SourceGammaOneHeckeFieldFinite, `Dubon2026.SourceGammaOneResidues, `Dubon2026.SourceGammaOneHeckePicard, `Dubon2026.SourceGammaOneFieldCoefficients, `Dubon2026.SourceGammaOneHeckeFieldNaturality, `Dubon2026.SourceGammaOneArithmeticField, `Dubon2026.SourceGammaOneArithmeticPlaces, `Dubon2026.SourceGammaOneArithmeticDivisors, `Dubon2026.SourceGammaOneArithmeticPicard, `Dubon2026.SourceGammaOneHeckeArithmeticPlaces, `Dubon2026.SourceGammaOneHeckeArithmeticDivisors, `Dubon2026.SourceGammaOneHeckeArithmetic]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

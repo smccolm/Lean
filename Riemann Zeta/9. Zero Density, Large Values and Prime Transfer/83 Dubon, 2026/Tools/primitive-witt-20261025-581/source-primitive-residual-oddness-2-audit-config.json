@@ -1,0 +1,33 @@
+{
+  "modules": [
+    "SourceResidualRealDeterminant",
+    "SourcePrimitiveResidualOddness"
+  ],
+  "theorems": [
+    "Dubon2026.sourceArithmeticCyclotomic_conjugation",
+    "Dubon2026.sourceArithmeticCyclotomicUnitCharacter_conjugation",
+    "Dubon2026.sourceArithmetic_real_det_of_cyclotomic",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_oddResidualGalois_charP"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.sourceArithmeticCyclotomic_conjugation",
+    "Dubon2026.sourceArithmeticCyclotomicUnitCharacter_conjugation",
+    "Dubon2026.sourceArithmetic_real_det_of_cyclotomic",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_oddResidualGalois_charP"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceArithmeticCyclotomic_conjugation",
+    "Dubon2026.sourceArithmeticCyclotomicUnitCharacter_conjugation",
+    "Dubon2026.sourceArithmetic_real_det_of_cyclotomic",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_oddResidualGalois_charP",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_cyclotomicResidualGalois_charP",
+    "Dubon2026.sourcePrimitive_binaryDegree_even",
+    "Dubon2026.originalCyclotomicConjugation_power",
+    "Dubon2026.rationalArithmeticLocalRestrictionContinuous_commutes"
+  ],
+  "roots": [
+    "Dubon2026.sourcePrimitive_exists_originalSupport_oddResidualGalois_charP"
+  ],
+  "separatelyAxiomChecked": []
+}

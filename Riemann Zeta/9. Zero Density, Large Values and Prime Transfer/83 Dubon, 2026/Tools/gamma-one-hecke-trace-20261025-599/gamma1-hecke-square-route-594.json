@@ -1,0 +1,66 @@
+{
+  "scope": 594,
+  "chain": "DUB-17/18 -> literal higher continuation -> arithmetic automorphy -> original all-weight adic association -> Gamma1 geometric realization -> exact cover-transfer Hecke compatibility",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiagonalHom.lean",
+      "sha256": "AF70842F3D291B9E918FA2A4BC2E6F085951BC40EC99A69D219ADD4D836DD914"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeSubgroup.lean",
+      "sha256": "3518F8C38303371FA5BDC0730BB37915A8F2E7ABFD7C7174CFC6A7AA428139E5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRaisedLevelConjugation.lean",
+      "sha256": "9AF796C71BBF056CF03810F3E8294E8B4F47325A4C458D6A69170B50DC6D0A43"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralHeckeConjugation.lean",
+      "sha256": "0690E28B8016BEA1C153DA082862BFD42A15E63C35B98185E10EE55991C0FDD2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHeckeProductConjugation.lean",
+      "sha256": "C6530280BD7CF79B380F57F5EEAD3817EE167138EDF48F8964F0716CCAB47792"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceChosenCosetTraceOne.lean",
+      "sha256": "B0A95E67248FEC81403589DD127F27C78F399FE0AB14A48296D75F77E866CD2E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRaisedHeckeCosets.lean",
+      "sha256": "CC7D4444BBD75FDE7A8892E7C63B45A359E30891359C7FD58B66F234E0A34600"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHeckeProductSection.lean",
+      "sha256": "AB0B17D169EBEA92FBC2D596C4F71A5EE4850BEDDBFD5CDCBF9C80080F029748"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\PrincipalCongruenceQuotient.lean",
+      "sha256": "04A08777E43228494CCFAAC6ADB066B1E6206324E39E3C51628FA178AB2E7D82"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SL2Reduction.lean",
+      "sha256": "9DD40DDE2439AAB39FDD9F96BACE4F866D547D14C31A1E86B2567C67598EF226"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRaisedHeckeRepresentatives.lean",
+      "sha256": "60B8A8E7CDA9E59458364850F179DF44BE90BD408AD5E94D7106A922EFA8618B"
+    }
+  ],
+  "shorterRoute": "Use the existing literal diagonal equations and mapGL injectivity, avoiding a second matrix-division calculation. Existing chosen-coset trace comparison is available for the subsequent H1 step. For exact coset surjectivity, reuse full integral SL2 reduction and the existing SL2 Chinese-remainder equivalence; the older raised-level coset proof handles Gamma0 only, so it cannot by itself supply Gamma1 representatives.",
+  "assumptionsToDischarge": "The original Gamma1 diagonal cover preserves the actual upper subgroup and commutes with its literal integral Hecke conjugation. Then derive the good-prime cover coset bijection from actual coprime principal-level lifting; no new general strong approximation theorem is needed. Identify every chosen original Hecke representative and conjugated transition with its actual Gamma1 cover counterpart.",
+  "remaining": "A commuting group square alone does not prove coset bijections or H1 transfer/Hecke compatibility; these and arithmetic Galois realization remain. 16/20; DUB-17--20 OPEN.",
+  "scratchImportClosure": [
+    "SourceGammaOneCoverHeckeRepresentatives",
+    "SourceGammaOneCoverHeckeCosets",
+    "SourceGammaOneRaisedCosets",
+    "SourceGammaOneCoverHeckeSquare",
+    "SourceGammaOneHeckeSubgroup",
+    "SourceGammaOneDiagonalHom",
+    "SourceBinaryPermutationCongruence",
+    "SourceBinaryPrimePowerPermutation",
+    "SourcePermutationCoefficientQuotient",
+    "SourceGammaOneCongruenceCover",
+    "SourcePrincipalCoprimeReduction"
+  ]
+}

@@ -1,0 +1,49 @@
+import Dubon2026.SourceFiniteBilinearBaseChange
+import Dubon2026.SourceOriginalCoefficientWeilNondegeneracy
+import Dubon2026.SourceBilinearBaseChangeAlternating
+import Dubon2026.SourceOriginalCoefficientWeilLaws
+import Dubon2026.SourceBilinearPolynomialAdjoint
+import Dubon2026.SourceIdempotentBilinearRestriction
+import Dubon2026.SourceHeckeCoordinateRelations
+import Dubon2026.SourceOriginalCuspRationalTateHecke
+import Dubon2026.SourceIntegerCoefficientExtensionOne
+import Dubon2026.SourceIntegerCoefficientEndExtension
+import Dubon2026.SourcePrimitiveOriginalTateEvaluation
+import Dubon2026.SourcePrimitiveOriginalTateAdjoint
+import Dubon2026.SourceEndIdempotentPairingRestriction
+import Dubon2026.SourcePrimitiveOriginalTateRestriction
+import Dubon2026.SourceCharacterIdempotentLine
+import Dubon2026.SourceCharacterIdempotentRankTwo
+import Dubon2026.SourceGeneratedCharacterIdempotent
+import Dubon2026.SourceTensorCharacterIdempotent
+import Dubon2026.SourceOriginalCuspPadicHeckeMap
+import Dubon2026.SourceIntegerCoefficientExtensionCharacter
+import Dubon2026.SourcePrimitiveHeckeAlgebraEvaluation
+import Dubon2026.SourcePrimitiveHeckeAlgebraProjector
+import Dubon2026.SourceRankTwoSurjectiveDescent
+import Dubon2026.SourceOriginalCuspTateRankTwo
+import Dubon2026.SourceRankTwoBaseChange
+import Dubon2026.SourceIntegerCoefficientRankTwo
+import Dubon2026.SourceIntertwinedRangeEquiv
+import Dubon2026.SourceRankTwoCharacterRange
+import Dubon2026.SourcePrimitiveHeckeAlgebraRankTwo
+import Dubon2026.SourcePrimitiveOriginalTateRankTwo
+import Dubon2026.SourcePrimitiveOriginalTateNondegenerateRankTwo
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceFiniteBilinearBaseChange, `Dubon2026.SourceOriginalCoefficientWeilNondegeneracy, `Dubon2026.SourceBilinearBaseChangeAlternating, `Dubon2026.SourceOriginalCoefficientWeilLaws, `Dubon2026.SourceBilinearPolynomialAdjoint, `Dubon2026.SourceIdempotentBilinearRestriction, `Dubon2026.SourceHeckeCoordinateRelations, `Dubon2026.SourceOriginalCuspRationalTateHecke, `Dubon2026.SourceIntegerCoefficientExtensionOne, `Dubon2026.SourceIntegerCoefficientEndExtension, `Dubon2026.SourcePrimitiveOriginalTateEvaluation, `Dubon2026.SourcePrimitiveOriginalTateAdjoint, `Dubon2026.SourceEndIdempotentPairingRestriction, `Dubon2026.SourcePrimitiveOriginalTateRestriction, `Dubon2026.SourceCharacterIdempotentLine, `Dubon2026.SourceCharacterIdempotentRankTwo, `Dubon2026.SourceGeneratedCharacterIdempotent, `Dubon2026.SourceTensorCharacterIdempotent, `Dubon2026.SourceOriginalCuspPadicHeckeMap, `Dubon2026.SourceIntegerCoefficientExtensionCharacter, `Dubon2026.SourcePrimitiveHeckeAlgebraEvaluation, `Dubon2026.SourcePrimitiveHeckeAlgebraProjector, `Dubon2026.SourceRankTwoSurjectiveDescent, `Dubon2026.SourceOriginalCuspTateRankTwo, `Dubon2026.SourceRankTwoBaseChange, `Dubon2026.SourceIntegerCoefficientRankTwo, `Dubon2026.SourceIntertwinedRangeEquiv, `Dubon2026.SourceRankTwoCharacterRange, `Dubon2026.SourcePrimitiveHeckeAlgebraRankTwo, `Dubon2026.SourcePrimitiveOriginalTateRankTwo, `Dubon2026.SourcePrimitiveOriginalTateNondegenerateRankTwo]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

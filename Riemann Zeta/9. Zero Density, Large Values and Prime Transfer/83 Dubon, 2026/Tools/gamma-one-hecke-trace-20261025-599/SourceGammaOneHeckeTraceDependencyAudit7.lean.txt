@@ -1,0 +1,34 @@
+import SourceGammaOneHeckeSubgroup
+import SourceGammaOneConstantHecke
+import SourceNativeCoinductionCosetTrace
+import SourceShapiroH1CocycleComparison
+import SourceShapiroH1CosetTrace
+import SourceGammaOneTransferCosetFormula
+import SourceGammaOneLiteralTransferSurjectivity
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.sourceGammaOne_literalTrace_surjective, `Dubon2026.sourceGammaOneHeckeConjugation_matrix, `Dubon2026.sourceGammaOneConstantHeckeH1_cocycle, `Dubon2026.sourceGammaOneConstantHeckeCocycles_apply]
+  let localModules : Array Name := #[`SourceGammaOneLiteralTransferSurjectivity, `SourceGammaOneTransferCosetFormula, `SourceShapiroH1CosetTrace, `SourceShapiroH1CocycleComparison, `SourceNativeCoinductionCosetTrace, `SourceGammaOneConstantH1Realization, `SourceGammaOneCohomologyTransfer, `SourceGammaOneCoverFiniteIndex, `SourceGammaOneDiagonalHom, `SourceBinaryPermutationCongruence, `SourceBinaryPrimePowerPermutation, `SourcePermutationCoefficientQuotient, `SourceGammaOneCongruenceCover, `SourceGammaOneConstantHecke, `SourceGammaOneHeckeSubgroup]
+  let required : Array Name := #[`Dubon2026.sourceGammaOneHeckeUpper_finiteIndex, `Dubon2026.sourceGammaOneHeckeConjugation_matrix, `Dubon2026.sourceGammaOneConstantHeckeH1_cocycle, `Dubon2026.sourceGammaOneConstantHeckeCocycles_apply, `Dubon2026.sourceNativeInductionCounit_mk, `Dubon2026.sourceNativeCoinductionCounit_eq_cosetTrace, `Dubon2026.sourceShapiroH1_hom_cocycle, `Dubon2026.sourceShapiroH1_evaluation_lift, `Dubon2026.sourceCoinducedCosetTrace_shapiroOne, `Dubon2026.sourceShapiroLiftCocycles_trace, `Dubon2026.sourceHeckeH1Trace_shapiro, `Dubon2026.sourceHeckeH1Trace_eq_subgroupTrace, `Dubon2026.sourceGammaOneConstantH1Iso_factor, `Dubon2026.sourceGammaOneConstantH1Transfer_eq_trace, `Dubon2026.sourceGammaOne_literalTrace_surjective, `Dubon2026.sourceGammaOneHeckeUpper, `Dubon2026.sourceGammaOneUpperToGammaZero, `Dubon2026.sourceGammaOneHeckeConjugation, `Dubon2026.sourceGammaOneConstantHeckeMorphism, `Dubon2026.sourceGammaOneConstantHeckeCocycles, `Dubon2026.sourceGammaOneConstantHeckeH1, `Dubon2026.sourceShapiroLiftCocycles, `Dubon2026.sourceShapiroEvaluationCocycles, `Dubon2026.sourceGammaOneSubgroupH1Iso, `Dubon2026.sourceIntegralHeckeConjugate_matrix, `Dubon2026.sourceHeckeUpper_finiteIndex, `Dubon2026.sourceHeckeH1Trace_cocycle, `Dubon2026.coinducedShapiroOne_evaluation_sub, `Dubon2026.coinducedShapiroOne_mem_cocycles, `Dubon2026.OriginalShapiroRestriction.originalShapiroIso_eq_restriction_eval, `Dubon2026.sourceGammaOneConstantH1Transfer_surjective, `Dubon2026.sourceGamma0H2_subsingleton, `groupCohomology.coindIso, `Rep.coindResAdjunction, `Rep.coindToInd_apply, `Dubon2026.originalCohomologyReindex]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE HECKE TRACE DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual Gamma1 literal-transfer surjectivity and original diagonal-correspondence consumers. Only declaration values are traversed. The genuine Gamma1 subgroup and integral conjugation define the full native H1 correspondence. Existing explicit Shapiro cocycles and the proved homotopy identify the literal H1 trace with native Shapiro. The native finite-index coinduction counit equals the same coset trace by induction tensor evaluation and right/left coset inversion. The exact original Gamma1 transfer is that literal trace after the proved subgroup identification, and its surjectivity is derived from the existing original binary-module theorem. Transfer/Hecke-and-diamond compatibility, arithmetic geometric comparison and Galois realization remain required. DUB-17--20 OPEN; 16/20."
+
+#eval runPlanarPairingDependencyAudit

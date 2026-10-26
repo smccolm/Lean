@@ -1,0 +1,449 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-witt-deformation-promotion-route-581.json",
+      "path": "Tools/primitive-witt-20261025-581/primitive-witt-deformation-promotion-route-581.json",
+      "sha256": "3BAB93E1F375ACE5E0E62DDB576B042B52B1D5138598DE3DE0E148475B3F74B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-residual-determinant-3-scratch-receipt.json",
+      "path": "Tools/primitive-witt-20261025-581/source-primitive-residual-determinant-3-scratch-receipt.json",
+      "sha256": "3A144622C8E86F3CEC3CDDB30007F3ED84B4A09BE5568F8C0460980E6EE947C2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-residual-oddness-2-scratch-receipt.json",
+      "path": "Tools/primitive-witt-20261025-581/source-primitive-residual-oddness-2-scratch-receipt.json",
+      "sha256": "BCA9D4B759D99519AEF314F0A3CD952713308E48D43F8AC19C9DBE3910657391"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-finite-residual-4-scratch-receipt.json",
+      "path": "Tools/primitive-witt-20261025-581/source-primitive-finite-residual-4-scratch-receipt.json",
+      "sha256": "522BEB44D05905C7E81529F223EEFCD9F2A84B01BD3B5CED15790B94C9CD434A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-witt-framed-4-scratch-receipt.json",
+      "path": "Tools/primitive-witt-20261025-581/source-primitive-witt-framed-4-scratch-receipt.json",
+      "sha256": "DF5519482C8779B0EC2C0B4F456148F3A826099D58E4319E185E853817FCBAD0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-witt-fixed-7-scratch-receipt.json",
+      "path": "Tools/primitive-witt-20261025-581/source-primitive-witt-fixed-7-scratch-receipt.json",
+      "sha256": "3FFE0D41628C7D61F16D1D893E5C84AAD076E1316941592485E3C59C3D02B1BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteResidualAudit4.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveFiniteResidualAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteResidualAudit4.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveFiniteResidualAudit4.lean.txt",
+      "sha256": "EBA74FA91A696C132DA1A8FD0F7AFD8506A366AAEE3175B25B04DC2B126D4783"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteResidualAudit4.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveFiniteResidualAudit4.log",
+      "sha256": "C7256D9DBF2B2B74F85A8CD06337177C7DE93CA807B6716239A290207D68BAD9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteResidualDependencyAudit4.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveFiniteResidualDependencyAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteResidualDependencyAudit4.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveFiniteResidualDependencyAudit4.lean.txt",
+      "sha256": "18A82C26D04751ADD4C0E7186672CC681E4D34C79E66ED51B30535EA1C1BA96E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteResidualDependencyAudit4.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveFiniteResidualDependencyAudit4.log",
+      "sha256": "613A33C9156B4DDA8862C65FC20EE69388CA033AAAE8F4AD3887C4AFDAF8143E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantAudit3.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualDeterminantAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantAudit3.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualDeterminantAudit3.lean.txt",
+      "sha256": "F6BC81F7FF5662D9D2D79D0AA7781DDCB118E9D39BF5CE71C3C7A4605590FB38"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantAudit3.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualDeterminantAudit3.log",
+      "sha256": "89C0657C0D60735F58DC7D20EB029F53BA059578F753A8B9CAB9A56F98E6E5DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantDependencyAudit3.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualDeterminantDependencyAudit3.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantDependencyAudit3.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualDeterminantDependencyAudit3.lean.txt",
+      "sha256": "6F32C0FCB46395C04C1A89DF80182EFC304772B96A64DBE4EF4ABE01791E5527"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantDependencyAudit3.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualDeterminantDependencyAudit3.log",
+      "sha256": "A140BA3EB7CEDCE8330F5EFB69A1DDE6F352FE1F9E63CF17C56935086D56EBF3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantDependencyAudit3b.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualDeterminantDependencyAudit3b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantDependencyAudit3b.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualDeterminantDependencyAudit3b.lean.txt",
+      "sha256": "9E4004DCCA0AB824449C7C05D6977CB12E0E02B88CE454EBE9096FFE603AB9F9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualDeterminantDependencyAudit3b.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualDeterminantDependencyAudit3b.log",
+      "sha256": "2D09EEFAF2C5DDBFFBCC5412FF9AEE4662E423C760DA95F9814564FCE875106A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessAudit2.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualOddnessAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessAudit2.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualOddnessAudit2.lean.txt",
+      "sha256": "1AC71864A243C5D794D7216E563C2CE38A6F67297DDDD541922F4F2954D9A774"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessAudit2.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualOddnessAudit2.log",
+      "sha256": "9DBCDDD9BB9BC48CACCD8044DEE5CFCF536752A608BB3561E2D3636C723FC019"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessDependencyAudit2.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualOddnessDependencyAudit2.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessDependencyAudit2.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualOddnessDependencyAudit2.lean.txt",
+      "sha256": "E829E84200A5E391800B16B09BE501B9D9EB3735CFB7879C84C7EC933C23DBDB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessDependencyAudit2.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualOddnessDependencyAudit2.log",
+      "sha256": "78CA7EC3DE945EA1B08B28B2B6E7855BA0E465C2FABAC3042034DBD4D2F3DA82"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessDependencyAudit2b.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualOddnessDependencyAudit2b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessDependencyAudit2b.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualOddnessDependencyAudit2b.lean.txt",
+      "sha256": "342E29858775F0AF4C8B9AA9759C174DC5618EABCE94C06DE09CA314B42275E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessDependencyAudit2b.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveResidualOddnessDependencyAudit2b.log",
+      "sha256": "2922BD6E6868F08929D97945EA03556F14BE4DC3F6901B3E7EFA144B8B84DBD4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFixedAudit7.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFixedAudit7.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFixedAudit7.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFixedAudit7.lean.txt",
+      "sha256": "3C5DA1DBD546C4E1DBF1507BE6FC082BF589C23F7BE80D8FD0A1AE96DA17DDBC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFixedAudit7.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFixedAudit7.log",
+      "sha256": "4A6A451532FB3C7C3BC960D1DC3566DFAC432ADAC0B1BC31BCD5B9DF55FA3680"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFixedDependencyAudit7.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFixedDependencyAudit7.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFixedDependencyAudit7.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFixedDependencyAudit7.lean.txt",
+      "sha256": "3E3B78BC807CB119C8A3794CA0A10B8E766724A64EE080BE6E6B1DEDF026B48B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFixedDependencyAudit7.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFixedDependencyAudit7.log",
+      "sha256": "0DDFF056F6C03A5143B80EFE1640BB82901705F8979552B40523F10720E8B60D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedAudit4.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFramedAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedAudit4.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFramedAudit4.lean.txt",
+      "sha256": "2FA8DACA32D0B00776205DE76749F663DAEA82AFA505134D85315AE4C6BCC247"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedAudit4.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFramedAudit4.log",
+      "sha256": "F4D61D89260E8E53A8E9091780F3296E121C59D28450501F7CDE78070F3B128D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedDependencyAudit4.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFramedDependencyAudit4.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedDependencyAudit4.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFramedDependencyAudit4.lean.txt",
+      "sha256": "4C23328C05B68109F427CE80C1F3209FDFE26D73B2F56F8DF0ED20F45806FFE2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedDependencyAudit4.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFramedDependencyAudit4.log",
+      "sha256": "7212C4BBBEC6685029CCAF70F0BF7378E2843CA7348638BF9B38523403944FC0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedDependencyAudit4b.exit",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFramedDependencyAudit4b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedDependencyAudit4b.lean",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFramedDependencyAudit4b.lean.txt",
+      "sha256": "D3970A03A0F3E84B28DDA296A9261AB47032346F99BCB9D2A53AEA543FF38299"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFramedDependencyAudit4b.log",
+      "path": "Tools/primitive-witt-20261025-581/SourcePrimitiveWittFramedDependencyAudit4b.log",
+      "sha256": "661B4604AE47BFBD2F73760E95509677427CA790AB8A7794C6CF1F801C0183AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_finite_residual_audit_575.py",
+      "path": "Tools/primitive-witt-20261025-581/prepare_primitive_finite_residual_audit_575.py",
+      "sha256": "2EA0F0D39EFDDAE0766F7F5D9666A0723972BA6DA0A6319D28C2EADB401F6DB6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_residual_determinant_audit_572.py",
+      "path": "Tools/primitive-witt-20261025-581/prepare_primitive_residual_determinant_audit_572.py",
+      "sha256": "547C0FD820D07E440867C2E415DF0EA1A6BC7344601C432334704C8BFA28669D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_residual_oddness_audit_574.py",
+      "path": "Tools/primitive-witt-20261025-581/prepare_primitive_residual_oddness_audit_574.py",
+      "sha256": "ED9604AEAE2B35C12B2AADDF25CCE55A06050157DFCD328CE2FE2B86C7A1F427"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_witt_fixed_audit_580.py",
+      "path": "Tools/primitive-witt-20261025-581/prepare_primitive_witt_fixed_audit_580.py",
+      "sha256": "C936F31D100A2508F4A0F4040C1F82754925A8421ABF9383CA2F19FBBC89F805"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_witt_framed_audit_577.py",
+      "path": "Tools/primitive-witt-20261025-581/prepare_primitive_witt_framed_audit_577.py",
+      "sha256": "04ADDEC3D1670C4B0B2548218C20E916C6521AA72E9216A0D0D2830FAC177DBA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-finite-residual-route-575.json",
+      "path": "Tools/primitive-witt-20261025-581/primitive-finite-residual-route-575.json",
+      "sha256": "D805D1FA3A72E3665E6FF3C363E84D0FBEC887C44FAE16018C539C1290C53057"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-determinant-route-572.json",
+      "path": "Tools/primitive-witt-20261025-581/primitive-residual-determinant-route-572.json",
+      "sha256": "3C69C0A83D0A428F3BC8968EFF622635D7D627C44A3A3853ABD876BD7A22073D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-determinant-route-572b.json",
+      "path": "Tools/primitive-witt-20261025-581/primitive-residual-determinant-route-572b.json",
+      "sha256": "D06F97DC16E64E50BFF0C21ED5485B7BAC355800377807197BA3838AF34CA49D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-determinant-serialization-successor-572b.json",
+      "path": "Tools/primitive-witt-20261025-581/primitive-residual-determinant-serialization-successor-572b.json",
+      "sha256": "D1D6CB26B834CE4EF0413A9E9287E9C7CF36BE3D84F0CDF174CDCA6104228666"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-oddness-route-574.json",
+      "path": "Tools/primitive-witt-20261025-581/primitive-residual-oddness-route-574.json",
+      "sha256": "A5CD0BB6413D5B9C1F1FAE142216EE07273E9D5A1EB8203B872599DC16C36F1E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-oddness-route-574b.json",
+      "path": "Tools/primitive-witt-20261025-581/primitive-residual-oddness-route-574b.json",
+      "sha256": "7D0C47C2B1BC88348C09602AD0C3C996A6EBAC974F1AF6577B8DE96E635AA772"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-oddness-serialization-successor-574b.json",
+      "path": "Tools/primitive-witt-20261025-581/primitive-residual-oddness-serialization-successor-574b.json",
+      "sha256": "DAEE7D9D6B8FDE990B986F56D92A69EEC55E88CC01315ED44C85D4AE72AEA5B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-witt-fixed-route-580.json",
+      "path": "Tools/primitive-witt-20261025-581/primitive-witt-fixed-route-580.json",
+      "sha256": "1AE5B37DA47A278AD889ACF3B911E2397508EDCC9826DE4F7DA486703BC5E8AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-witt-framed-route-577.json",
+      "path": "Tools/primitive-witt-20261025-581/primitive-witt-framed-route-577.json",
+      "sha256": "DEED4AAB51F35AF7AA3DBDFD3C9397F9FF592AA5D41C3ED71F3F3002E6D66C22"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-witt-framed-route-577b.json",
+      "path": "Tools/primitive-witt-20261025-581/primitive-witt-framed-route-577b.json",
+      "sha256": "196C75EE571B0D6F32B3A95FA67434EA36B85A36A92F908A0881360A8692A3D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-witt-framed-serialization-successor-577b.json",
+      "path": "Tools/primitive-witt-20261025-581/primitive-witt-framed-serialization-successor-577b.json",
+      "sha256": "A8B15EAB6E3999B76636969E23E3F5AF7C2527BE93BC1426F476413D6B5CA9EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_finite_residual_575.py",
+      "path": "Tools/primitive-witt-20261025-581/record_primitive_finite_residual_575.py",
+      "sha256": "9DE169F0C4DDB7A98AE9D76E08BA81B9F85749ABCD9DBBD5CAC6169600CB1560"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_residual_determinant_572b.py",
+      "path": "Tools/primitive-witt-20261025-581/record_primitive_residual_determinant_572b.py",
+      "sha256": "D4C8951059E2211DC8330A34BE2F41D61EC792D6905D7974126EEFAB33AB2D1D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_residual_oddness_574b.py",
+      "path": "Tools/primitive-witt-20261025-581/record_primitive_residual_oddness_574b.py",
+      "sha256": "183A131A3B2E9F59DEADEF32951C91CC4BD5616C804A094609D4D39A72134CB7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_residual_oddness_574c.py",
+      "path": "Tools/primitive-witt-20261025-581/record_primitive_residual_oddness_574c.py",
+      "sha256": "0AF50F4278242A38210D8DB0E4CB5A076D2F698346B38EAF595BCF47213432EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_witt_fixed_580.py",
+      "path": "Tools/primitive-witt-20261025-581/record_primitive_witt_fixed_580.py",
+      "sha256": "D730E2C72ABECF6B0495B398BC29A13F16AE989F6AF1CB7D70B16030778A3EB5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_witt_framed_577.py",
+      "path": "Tools/primitive-witt-20261025-581/record_primitive_witt_framed_577.py",
+      "sha256": "8E6663963B668D46FDD33A4F1E50DFD1321FC2E113DEFF291EB5BF64810ABAE6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_witt_framed_577b.py",
+      "path": "Tools/primitive-witt-20261025-581/record_primitive_witt_framed_577b.py",
+      "sha256": "0E7979C73AEF2ADBBC292DB4F416E6EE2DAE8D2F9E157EB37CD44A6341E65245"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-finite-residual-4-audit-config.json",
+      "path": "Tools/primitive-witt-20261025-581/source-primitive-finite-residual-4-audit-config.json",
+      "sha256": "E5D8121A7A99CF352E5A324FB9BF4DC54E2C85D86313456F675D97731353A254"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-residual-determinant-3-audit-config.json",
+      "path": "Tools/primitive-witt-20261025-581/source-primitive-residual-determinant-3-audit-config.json",
+      "sha256": "493E202FF17FD938C3727C4C1593B5B8FE568D5AB042B49E82F87B1CE2C687F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-residual-oddness-2-audit-config.json",
+      "path": "Tools/primitive-witt-20261025-581/source-primitive-residual-oddness-2-audit-config.json",
+      "sha256": "5F1889126676F62C5834EE19963274E3C79DF3F359913956E508F84F29A36403"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-witt-fixed-7-audit-config.json",
+      "path": "Tools/primitive-witt-20261025-581/source-primitive-witt-fixed-7-audit-config.json",
+      "sha256": "0B4B5A2D37713503F731215128BF9BC599FA45DE1E0937F840AC849563FB36ED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-witt-framed-4-audit-config.json",
+      "path": "Tools/primitive-witt-20261025-581/source-primitive-witt-framed-4-audit-config.json",
+      "sha256": "02FB1ACB2BF8E32E9A14DE6D68B93DB90418D40D05209C8A51EE6AC7CA653041"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\finite-residual-575-before-abstract-descent\\attempt.json",
+      "path": "Tools/primitive-witt-20261025-581/finite-residual-575-before-abstract-descent/attempt.json",
+      "sha256": "C06971B8DB87F752DD0147762FDF8BE27BB8EDEF8E8518BA2E45A2174CE2C9AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\finite-residual-575-before-abstract-descent\\SourcePrimitiveFiniteResidualGalois.exit",
+      "path": "Tools/primitive-witt-20261025-581/finite-residual-575-before-abstract-descent/SourcePrimitiveFiniteResidualGalois.exit",
+      "sha256": "186A919B8C7CB84AEBF4E53C70CD1CC028A93A1D183EE29DD6E10CD18A714577"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\finite-residual-575-before-abstract-descent\\SourcePrimitiveFiniteResidualGalois.lean.txt",
+      "path": "Tools/primitive-witt-20261025-581/finite-residual-575-before-abstract-descent/SourcePrimitiveFiniteResidualGalois.lean.txt",
+      "sha256": "E8349EB00821344ADAE60570B33653DF98AA0F0A89A27BCCA59CFB32C8549554"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\finite-residual-575-before-abstract-descent\\SourcePrimitiveFiniteResidualGalois.log",
+      "path": "Tools/primitive-witt-20261025-581/finite-residual-575-before-abstract-descent/SourcePrimitiveFiniteResidualGalois.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\witt-framed-577-before-named-conclusion\\attempt.json",
+      "path": "Tools/primitive-witt-20261025-581/witt-framed-577-before-named-conclusion/attempt.json",
+      "sha256": "3B34CA68627A792CE16300448E6533BDE111C548EB3E5FA227569A6B38D897A2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\witt-framed-577-before-named-conclusion\\SourcePrimitiveWittFramedResidual.exit",
+      "path": "Tools/primitive-witt-20261025-581/witt-framed-577-before-named-conclusion/SourcePrimitiveWittFramedResidual.exit",
+      "sha256": "186A919B8C7CB84AEBF4E53C70CD1CC028A93A1D183EE29DD6E10CD18A714577"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\witt-framed-577-before-named-conclusion\\SourcePrimitiveWittFramedResidual.lean.txt",
+      "path": "Tools/primitive-witt-20261025-581/witt-framed-577-before-named-conclusion/SourcePrimitiveWittFramedResidual.lean.txt",
+      "sha256": "59E8FF3BDEE918B72EA776E6572DD9DF0428D26B72BF8AC1D28A98067C986654"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\witt-framed-577-before-named-conclusion\\SourcePrimitiveWittFramedResidual.log",
+      "path": "Tools/primitive-witt-20261025-581/witt-framed-577-before-named-conclusion/SourcePrimitiveWittFramedResidual.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\witt-framed-577-before-named-conclusion\\SourceResidualWittFramedRing.exit",
+      "path": "Tools/primitive-witt-20261025-581/witt-framed-577-before-named-conclusion/SourceResidualWittFramedRing.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\witt-framed-577-before-named-conclusion\\SourceResidualWittFramedRing.lean.txt",
+      "path": "Tools/primitive-witt-20261025-581/witt-framed-577-before-named-conclusion/SourceResidualWittFramedRing.lean.txt",
+      "sha256": "611B55C0B1CBFD4D0C15EDB7448F4AFD208F303500301CF6FE5CAF0561E28E73"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\witt-framed-577-before-named-conclusion\\SourceResidualWittFramedRing.log",
+      "path": "Tools/primitive-witt-20261025-581/witt-framed-577-before-named-conclusion/SourceResidualWittFramedRing.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-residual-determinant-3-reuse-review-20261025.json",
+      "path": "Tools/primitive-witt-20261025-581/source-primitive-residual-determinant-3-reuse-review-20261025.json",
+      "sha256": "8ECD7BB0E3741E32A7C4416D67D7F8F86A66C0D10DDAB6778818FDDBC8855540"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-residual-oddness-2-reuse-review-20261025.json",
+      "path": "Tools/primitive-witt-20261025-581/source-primitive-residual-oddness-2-reuse-review-20261025.json",
+      "sha256": "3396E6D4FF5AD102412015CF7477EAF197BF8327B4315E886E8E00F7A2511A8D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-finite-residual-4-reuse-review-20261025.json",
+      "path": "Tools/primitive-witt-20261025-581/source-primitive-finite-residual-4-reuse-review-20261025.json",
+      "sha256": "FAC2BCE8012B300A2E3B2D87413F36CC73A1184FDEC294E43A41FDE9193006C1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-witt-framed-4-reuse-review-20261025.json",
+      "path": "Tools/primitive-witt-20261025-581/source-primitive-witt-framed-4-reuse-review-20261025.json",
+      "sha256": "66D293D6D44388451D85B068B68AF5AF045C7C9D7BA8768F5B74D3CDDD5BF48B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-witt-fixed-7-reuse-review-20261025.json",
+      "path": "Tools/primitive-witt-20261025-581/source-primitive-witt-fixed-7-reuse-review-20261025.json",
+      "sha256": "C6520B2C641B33286A905F05ABA3E1D94318D945785F1CA5491484147F966297"
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "recordedUTC": "2026-10-25T20:45:50.629697+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceSpanningProjectorImage",
+    "SourceSpecializationBaseChangeIntertwiner",
+    "SourcePolynomialSpecialization",
+    "SourceOriginalSpecializationProjector",
+    "SourceOriginalSpecializationPrimitiveImage",
+    "SourcePolynomialCommutant",
+    "SourcePrimitiveOriginalTateGalois",
+    "SourceImageSpecializationPairing",
+    "SourceAlternatingRankTwoDeterminant",
+    "SourceImageSpecializationDeterminant",
+    "SourceOriginalSpecializationCyclotomicDeterminant",
+    "SourceOriginalPrimitiveCyclotomicRealization"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSpanningProjectorImage.lean",
+      "sha256": "2C3C503E331650506AE256D7E7F7337C2521EF0C01E5A48573EB88D1598FDDB5",
+      "oleanSha256": "0AE8E1EE20016B8B534B00167D4E990D48A27AFACD1401476DE0A8F0AD19492D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceSpecializationBaseChangeIntertwiner.lean",
+      "sha256": "C0E34D0BEB02DB0CECD9F33323914D71B38482A9B921C623B1E13AD5A42F148A",
+      "oleanSha256": "0B29C06EBA731BC3DAED38B1A760819BD9D1E4E4A0AED29EB2D7AAC1FE845971"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePolynomialSpecialization.lean",
+      "sha256": "B8C54629ABE3AF0FFF153247ED67BC612F479BAB1227C435DA62F6A3209B9F31",
+      "oleanSha256": "91BB1186A63D13FCAB7272AA5D5588804F531583C993DB21816C001079180F35"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSpecializationProjector.lean",
+      "sha256": "5D99D63AC20C4AA6B66A087F6F595250478454BF0A94B88104BF74F7052E7E40",
+      "oleanSha256": "4CAE860FB46CA65200F183EA7CC5BA92D0F236EE06B209B8D065242BABAA37B8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSpecializationPrimitiveImage.lean",
+      "sha256": "CD13E38F39C6339E52508C5A319083094347383F905CDA3C3B8A5D28FB768961",
+      "oleanSha256": "DA455CB0A78B6EDB9F5E368895D5179626C4F82D8362C3288FEC401D3AD35C24"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePolynomialCommutant.lean",
+      "sha256": "ABCADCD7E4809ED36588CF9C61403E99AE6950B6402B9A452BD30E4A9A5F438D",
+      "oleanSha256": "5F57913BC34A09EBC44E61054AB320EB677E1D616F6352500967FA49DDF5F90B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveOriginalTateGalois.lean",
+      "sha256": "7051528E351BE9E5E50A7B40B1CA9ED1C9F2DB60ECEE4B2A61EDF4A60C2167CF",
+      "oleanSha256": "1933569DC2A79E440E788E22E9F840649307F5523334DD6D7FE1DEC3C14EACBF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceImageSpecializationPairing.lean",
+      "sha256": "D3D871713D1ACED45E136FE64DD73B0A4201386C157BBD4DF032655E663EFE65",
+      "oleanSha256": "D3DD0F196899465E1A07BDF8E371FFF39C56452069ACF6C1B68238FC2B8A697C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAlternatingRankTwoDeterminant.lean",
+      "sha256": "1CB186BDEB04A7457E1B7220EA81BDB271F71A71ED6E25AF579DB16DC4DAF380",
+      "oleanSha256": "D2BF8D400E149CCB6DD14A5B84342F39AF4F2BEE7C7E09DF373C4E4136AAC881"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceImageSpecializationDeterminant.lean",
+      "sha256": "093A35CFC1B54A93C0C1F082BE812771BBAD76BDE7DCF5DE5EFED23B8FBB9698",
+      "oleanSha256": "19B0210FE7589DC8F338C88EF0AFC8E8B4994CA6E19FEFFC855876C0A48CAC9B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalSpecializationCyclotomicDeterminant.lean",
+      "sha256": "1805458115BEAC659F0FF11F5A44D6BDAC38BA5F84F739A40B3E99926D062876",
+      "oleanSha256": "3F8E94945216BC1307F6C62DFCAF2D2C5A0014C94B7C19439E3B1CFE66D90061"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCyclotomicRealization.lean",
+      "sha256": "59974C32D7E2CAD7C651BEE1C2DBF606079489882FA3381F2EAE9FE6369AA697",
+      "oleanSha256": "B70F0ACFA9C5F27AFC268E35C3D590C99F22E1AD360E93D58173927C2F1FC38A"
+    }
+  ],
+  "queries": [
+    "Dubon2026.spanning_liftBaseChange_surjective",
+    "Dubon2026.projector_range_specialization_surjective",
+    "Dubon2026.projector_range_specialization_bijective",
+    "Dubon2026.liftBaseChange_intertwine",
+    "Dubon2026.liftBaseChange_scalar_intertwine",
+    "Dubon2026.specialization_aeval_zero",
+    "Dubon2026.specialization_shifted_squares_zero",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_coefficient_hecke",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_primitive_annihilator",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_primitive_projector",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_original_primitive_specialization_image_equiv",
+    "Dubon2026.commute_shifted_squares",
+    "Dubon2026.commute_aeval_of_commute",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke_galois_commute",
+    "Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_galois_commute",
+    "Dubon2026.image_specialization_section_intertwine",
+    "Dubon2026.imageSpecializationPairing_injective",
+    "Dubon2026.imageSpecializationPairing_self",
+    "Dubon2026.imageSpecializationPairing_multiplier",
+    "Dubon2026.alternating_fin_two_formula",
+    "Dubon2026.alternating_fin_two_basis_ne_zero",
+    "Dubon2026.alternating_fin_two_matrix_basis",
+    "Dubon2026.determinant_eq_alternating_multiplier",
+    "Dubon2026.image_specialization_determinant",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_cyclotomic_determinant_of_basis",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_cyclotomic_determinant",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_cyclotomic_realization",
+    "Dubon2026.projectorRangeSpecializationEquiv",
+    "Dubon2026.imageSpecializationPairing"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.spanning_liftBaseChange_surjective",
+    "Dubon2026.projector_range_specialization_surjective",
+    "Dubon2026.projector_range_specialization_bijective",
+    "Dubon2026.liftBaseChange_intertwine",
+    "Dubon2026.liftBaseChange_scalar_intertwine",
+    "Dubon2026.specialization_aeval_zero",
+    "Dubon2026.specialization_shifted_squares_zero",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_coefficient_hecke",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_primitive_annihilator",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_primitive_projector",
+    "Dubon2026.SourceFunctionField.OriginalChart.exists_original_primitive_specialization_image_equiv",
+    "Dubon2026.commute_shifted_squares",
+    "Dubon2026.commute_aeval_of_commute",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke_galois_commute",
+    "Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_galois_commute",
+    "Dubon2026.image_specialization_section_intertwine",
+    "Dubon2026.imageSpecializationPairing_injective",
+    "Dubon2026.imageSpecializationPairing_self",
+    "Dubon2026.imageSpecializationPairing_multiplier",
+    "Dubon2026.alternating_fin_two_formula",
+    "Dubon2026.alternating_fin_two_basis_ne_zero",
+    "Dubon2026.alternating_fin_two_matrix_basis",
+    "Dubon2026.determinant_eq_alternating_multiplier",
+    "Dubon2026.image_specialization_determinant",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_cyclotomic_determinant_of_basis",
+    "Dubon2026.SourceFunctionField.OriginalChart.original_specialization_cyclotomic_determinant",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_cyclotomic_realization"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.projectorRangeSpecializationEquiv",
+    "Dubon2026.imageSpecializationPairing"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCyclotomicAudit12.log",
+  "logSha256": "6D04FC1DABEC188CF553B80C40DB8C5CC62AB45727CC41BE0BFF704A8F234DF2",
+  "auditSha256": "6F89F0F1A9A23C8DB634D311EB399BA37C73407BD210214E482E7D848E29F270",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 38,
+  "linterScopes": 12,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 42,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCyclotomicDependencyAudit12.log",
+  "dependencyAuditSha256": "866D9263CAB748EFCD0102AA8E6E9623087C5708D2D8A7AED72E8E3E92893FD8",
+  "dependencyAuditSourceSha256": "3EAE01AB2CB418F3D4CD976960B0FB4060364E44EC72C905982ECFF54435679B",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_cyclotomic_realization"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> primitive Frobenius determinant -> determinant of the existing actual primitive representation equals the original cyclotomic character -> specialization identifies the nondegenerate invariant rank-two Tate image",
+  "discharged": "The same already constructed continuous unramified primitive representation has determinant equal to the original cyclotomic character. Its existing spanning specialization identifies the actual invariant nondegenerate rank-two arithmetic-projector image; the literal original Weil pairing transports through that same specialization. No pairing, projector, image, dimension, invariance, determinant or comparison hypothesis remains in this consumer. All prime eigenvalues and the original Frobenius quadratic identity are retained.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The cyclotomic multiplier must be evaluated at the exact source arithmetic Frobenius lifts to give the rational prime, and combined with the retained quadratic identity to obtain trace and characteristic polynomial. Residual association, arithmetic automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-cyclotomic-12-reuse-review-20261025.json",
+  "reuseReviewSha256": "3489E57B6EA769D8296B3861C63D0413DC8FC061A8180EA30F92E76A22E2DF99",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

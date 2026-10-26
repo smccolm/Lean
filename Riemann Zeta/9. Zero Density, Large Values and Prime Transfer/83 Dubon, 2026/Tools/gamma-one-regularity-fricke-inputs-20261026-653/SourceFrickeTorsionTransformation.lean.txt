@@ -1,0 +1,99 @@
+import SourceFrickeModularLattice
+
+/-! DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight arithmetic
+association -> original finite Gamma1 character realization -> actual
+Picard/H1 and diamond comparison -> regular differential/cusp comparison
+-> rational Fourier structure -> Fricke generators.
+The actual Weierstrass function and its modular transformation are used.
+Adapted from the fixed Apache-2.0 FLT source archived in reuse scope646;
+no external theorem or toolchain is imported. -/
+namespace Dubon2026.SourceFricke
+noncomputable section
+open Complex Real PeriodPair Matrix UpperHalfPlane
+open scoped MatrixGroups Manifold ModularForm
+
+def frickeTorsionPt (N : ℕ) (a : Fin 2 → ZMod N) (τ : ℍ) : ℂ :=
+  (((a 0).val : ℂ) * (τ : ℂ) + ((a 1).val : ℂ)) / (N : ℂ)
+
+lemma weierstrassP_torsionPt_lift_irrel {N : ℕ} [NeZero N] (a : Fin 2 → ZMod N) (τ : ℍ)
+    (b₁ b₂ : ℤ) (h₁ : (b₁ : ZMod N) = a 0) (h₂ : (b₂ : ZMod N) = a 1) :
+    weierstrassP (periodPairOfTau τ) (((b₁ : ℂ) * τ + (b₂ : ℂ)) / (N : ℂ))
+      = weierstrassP (periodPairOfTau τ) (frickeTorsionPt N a τ) := by
+  have hN : (N : ℂ) ≠ 0 := Nat.cast_ne_zero.mpr (NeZero.ne N)
+  have cast_val : ∀ i : Fin 2, ((a i).val : ZMod N) = a i := fun i ↦ by
+    rw [ZMod.natCast_val, ZMod.cast_id]
+  have hdvd₁ : (N : ℤ) ∣ b₁ - ((a 0).val : ℤ) :=
+    (ZMod.intCast_zmod_eq_zero_iff_dvd _ _).mp (by push_cast; rw [h₁, cast_val, sub_self])
+  have hdvd₂ : (N : ℤ) ∣ b₂ - ((a 1).val : ℤ) :=
+    (ZMod.intCast_zmod_eq_zero_iff_dvd _ _).mp (by push_cast; rw [h₂, cast_val, sub_self])
+  obtain ⟨k₁, hk₁⟩ := hdvd₁
+  obtain ⟨k₂, hk₂⟩ := hdvd₂
+  have hmem : ((k₁ : ℂ) * (τ : ℂ) + (k₂ : ℂ)) ∈ (periodPairOfTau τ).lattice :=
+    PeriodPair.mem_lattice.mpr ⟨k₁, k₂, by
+      simp only [periodPairOfTau_ω₁, periodPairOfTau_ω₂, mul_one]⟩
+  have e₁ : (b₁ : ℂ) = ((a 0).val : ℂ) + (N : ℂ) * (k₁ : ℂ) := by
+    have hc : (b₁ : ℂ) - ((a 0).val : ℂ) = (N : ℂ) * (k₁ : ℂ) := by exact_mod_cast hk₁
+    linear_combination hc
+  have e₂ : (b₂ : ℂ) = ((a 1).val : ℂ) + (N : ℂ) * (k₂ : ℂ) := by
+    have hc : (b₂ : ℂ) - ((a 1).val : ℂ) = (N : ℂ) * (k₂ : ℂ) := by exact_mod_cast hk₂
+    linear_combination hc
+  have step : ((b₁ : ℂ) * τ + (b₂ : ℂ)) / (N : ℂ)
+      = frickeTorsionPt N a τ + ((k₁ : ℂ) * τ + (k₂ : ℂ)) := by
+    unfold frickeTorsionPt; rw [e₁, e₂]; field_simp; ring
+  rw [step, (periodPairOfTau τ).weierstrassP_add_coe _ ⟨_, hmem⟩]
+
+def vecMulSL (N : ℕ) (a : Fin 2 → ZMod N) (γ : SL(2, ℤ)) : Fin 2 → ZMod N :=
+  Matrix.vecMul a ((γ : Matrix (Fin 2) (Fin 2) ℤ).map ((↑) : ℤ → ZMod N))
+
+lemma vecMulSL_apply (N : ℕ) (a : Fin 2 → ZMod N) (γ : SL(2, ℤ)) (j : Fin 2) :
+    vecMulSL N a γ j = a 0 * (γ 0 j : ℤ) + a 1 * (γ 1 j : ℤ) := by
+  simp [vecMulSL, Matrix.vecMul, dotProduct, Fin.sum_univ_two, Matrix.map_apply]
+
+theorem weierstrassP_frickeTorsionPt_slash {N : ℕ} [NeZero N] (a : Fin 2 → ZMod N)
+    (γ : SL(2, ℤ)) (τ : ℍ) :
+    weierstrassP (periodPairOfTau (γ • τ)) (frickeTorsionPt N a (γ • τ))
+      = (denomZ γ τ) ^ 2 *
+          weierstrassP (periodPairOfTau τ) (frickeTorsionPt N (vecMulSL N a γ) τ) := by
+  have hd := denomZ_ne_zero γ τ
+  have hN : (N : ℂ) ≠ 0 := Nat.cast_ne_zero.mpr (NeZero.ne N)
+  have hlat := periodPairOfTau_smul_lattice_eq γ τ
+  rw [weierstrassP_of_lattice_eq hlat,
+      show frickeTorsionPt N a (γ • τ)
+        = (denomZ γ τ)⁻¹ * (denomZ γ τ * frickeTorsionPt N a (γ • τ)) by
+          rw [inv_mul_cancel_left₀ hd],
+      weierstrassP_smulPeriodPair, inv_inv]
+  congr 1
+  have hpt : denomZ γ τ * frickeTorsionPt N a (γ • τ)
+      = ((((a 0).val : ℤ) * γ 0 0 + ((a 1).val : ℤ) * γ 1 0 : ℤ) * (τ : ℂ)
+          + (((a 0).val : ℤ) * γ 0 1 + ((a 1).val : ℤ) * γ 1 1 : ℤ)) / (N : ℂ) := by
+    have e : denomZ γ τ * frickeTorsionPt N a (γ • τ)
+        = (((a 0).val : ℂ) * numZ γ τ + ((a 1).val : ℂ) * denomZ γ τ) / (N : ℂ) := by
+      unfold frickeTorsionPt; rw [coe_SL2Z_smul]; field_simp
+    rw [e, numZ, denomZ]; push_cast; ring
+  rw [hpt]
+  refine weierstrassP_torsionPt_lift_irrel (vecMulSL N a γ) τ _ _ ?_ ?_
+  · rw [vecMulSL_apply]; push_cast; simp only [ZMod.natCast_val, ZMod.cast_id]
+  · rw [vecMulSL_apply]; push_cast; simp only [ZMod.natCast_val, ZMod.cast_id]
+
+lemma vecMulSL_of_mem_Gamma {N : ℕ} (a : Fin 2 → ZMod N) {γ : SL(2, ℤ)}
+    (hγ : γ ∈ CongruenceSubgroup.Gamma N) : vecMulSL N a γ = a := by
+  obtain ⟨h₀₀, h₀₁, h₁₀, h₁₁⟩ := CongruenceSubgroup.Gamma_mem.mp hγ
+  funext j
+  fin_cases j <;> simp [vecMulSL_apply, h₀₀, h₀₁, h₁₀, h₁₁]
+
+lemma weierstrassP_frickeTorsionPt_neg {N : ℕ} [NeZero N] (a : Fin 2 → ZMod N) (τ : ℍ) :
+    weierstrassP (periodPairOfTau τ) (frickeTorsionPt N (-a) τ)
+      = weierstrassP (periodPairOfTau τ) (frickeTorsionPt N a τ) := by
+  have h := weierstrassP_torsionPt_lift_irrel (N := N) (-a) τ
+      (-((a 0).val : ℤ)) (-((a 1).val : ℤ))
+      (by push_cast; simp [ZMod.natCast_val, ZMod.cast_id])
+      (by push_cast; simp [ZMod.natCast_val, ZMod.cast_id])
+  rw [← h, ← (periodPairOfTau τ).weierstrassP_neg]
+  congr 1
+  unfold frickeTorsionPt
+  push_cast
+  ring
+
+
+end
+end Dubon2026.SourceFricke

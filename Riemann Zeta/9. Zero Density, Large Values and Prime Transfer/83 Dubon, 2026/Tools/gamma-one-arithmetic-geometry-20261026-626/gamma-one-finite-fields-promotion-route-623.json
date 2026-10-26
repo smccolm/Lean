@@ -1,0 +1,21 @@
+{
+  "scope": 623,
+  "scopeIds": [
+    "620b",
+    "622"
+  ],
+  "receipts": {
+    "source-gamma-one-function-field-10b-scratch-receipt.json": "5AF3D767A3394701B100CC68733AE6269D9AEE63AF52D88D08C9A3D0B5DE1C87",
+    "source-gamma-one-hecke-field-5-scratch-receipt.json": "33716CDDC0E17FC2B1864D84CE01001A2AB8F7CCA0E056FBDAF5CD113AB48DC9"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of original finite Gamma1 Hecke characters -> genuine finite geometric Gamma1 Hecke correspondences -> actual integral-ratio function fields and both literal finite field maps.",
+  "discharged": "The actual rational Gamma1 integral-ratio field and the Gamma1-intersection-Gamma0 Hecke field are finite over the original transcendental j coordinate, also after Laurent scalar extension. Native modular norms, the proved level-one j polynomial theorem and Laurent coefficient independence give bounded rational polynomial relations; native primitive-element theory proves finite dimension. Existing scalar-extension finiteness transports this result without a new coordinate. The actual translated form f(dz) has the sparse Fourier expansion and retains integral coefficients. The literal substitution q to q^d therefore maps the Gamma1 field into the Hecke field. Both scalar-extended Hecke maps, inclusion and substitution, are constructed and proved finite. No finite-coordinate, field-preservation, modular-polynomial symmetry or finite-map premise remains.",
+  "remaining": "Arithmetic geometric/H1 and diamond comparison, geometric Galois realization of the original finite characters, original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Finiteness of actual function fields and correspondences does not supply a characteristic-zero Hecke character or deformation point. 16/20; DUB-17--20 OPEN.",
+  "route": "Renewed primary-source inspection selects the Gamma1 integral-ratio and finite-coordinate arguments from the frozen Anthropic snapshot. The exact inspected Galois theorem still accepts characteristic-zero Hecke-and-diamond characters; the separate Gamma0 theorem is residual over a field, not a higher-precision Gamma1 realization. Reuse the existing original j, modular norms, level-one polynomial theorem, Laurent independence and scalar-extension degree transport. Native ModularForm.translate, the original dilation matrix, existing sparse sums and coefficient-reindex compatibility shorten the second field map. Existing finite-coordinate exchange proves its finiteness. The external alternate coordinate, duplicate scalar-extension/cusp developments and conditional fallback map are deferred. One kernel reflexivity timeout is repaired by the native inclusion projection theorem; seven missing definition docstrings are repaired with fresh audits. All failed evidence is preserved; limits and pins are unchanged.",
+  "precedingCanonicalScope": 8290,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 acceptance gates unchanged.",
+  "reason": "Require preceding canonical PASS and immutable archive before production mutation."
+}

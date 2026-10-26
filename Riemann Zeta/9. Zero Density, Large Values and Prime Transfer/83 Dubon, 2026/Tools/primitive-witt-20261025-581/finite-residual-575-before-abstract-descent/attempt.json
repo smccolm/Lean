@@ -1,0 +1,17 @@
+{
+  "reason": "Stopped a diagnostic-free but excessively slow unaudited consumer elaboration. Move the same coefficient transport argument to abstract residue fields before instantiating the original form; no proof limit is raised and the source conclusion is retained.",
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\finite-residual-575-before-abstract-descent\\SourcePrimitiveFiniteResidualGalois.lean.txt",
+      "sha256": "E8349EB00821344ADAE60570B33653DF98AA0F0A89A27BCCA59CFB32C8549554"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\finite-residual-575-before-abstract-descent\\SourcePrimitiveFiniteResidualGalois.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\finite-residual-575-before-abstract-descent\\SourcePrimitiveFiniteResidualGalois.exit",
+      "sha256": "186A919B8C7CB84AEBF4E53C70CD1CC028A93A1D183EE29DD6E10CD18A714577"
+    }
+  ]
+}

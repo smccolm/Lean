@@ -1,0 +1,165 @@
+import Dubon2026.SourceSpanningProjectorImage
+import Dubon2026.SourceSpecializationBaseChangeIntertwiner
+import Dubon2026.SourcePolynomialSpecialization
+import Dubon2026.SourceOriginalSpecializationProjector
+import Dubon2026.SourceOriginalSpecializationPrimitiveImage
+import Dubon2026.SourcePolynomialCommutant
+import Dubon2026.SourcePrimitiveOriginalTateGalois
+import Dubon2026.SourceImageSpecializationPairing
+import Dubon2026.SourceAlternatingRankTwoDeterminant
+import Dubon2026.SourceImageSpecializationDeterminant
+import Dubon2026.SourceOriginalSpecializationCyclotomicDeterminant
+import Dubon2026.SourceOriginalPrimitiveCyclotomicRealization
+import Dubon2026.SourceValuationFrobeniusRoots
+import Dubon2026.SourceValuationCyclotomicFrobenius
+import Dubon2026.SourceRankTwoQuadraticTrace
+import Dubon2026.SourceCyclotomicFrobeniusCharpoly
+import Dubon2026.SourceOriginalPrimitiveFrobeniusCharpolyRealization
+import Dubon2026.SourceMatrixIntertwinerCharpoly
+import Dubon2026.SourceIntegralMatrixCharpoly
+import Dubon2026.SourceRankTwoCharpolyCoefficients
+import Dubon2026.SourceOriginalSpecializationFrobeniusCharpoly
+import Dubon2026.SourceOriginalResidualFrobeniusCharpoly
+import Dubon2026.SourceOriginalResidualInertia
+import Dubon2026.SourceOriginalPrimitiveResidualFrobeniusRealization
+import Dubon2026.SourceOriginalPrescribedTateSpecialization
+import Dubon2026.SourceOriginalPrescribedResidualFrobenius
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.spanning_liftBaseChange_surjective
+#print axioms Dubon2026.projector_range_specialization_surjective
+#print axioms Dubon2026.projector_range_specialization_bijective
+#print axioms Dubon2026.liftBaseChange_intertwine
+#print axioms Dubon2026.liftBaseChange_scalar_intertwine
+#print axioms Dubon2026.specialization_aeval_zero
+#print axioms Dubon2026.specialization_shifted_squares_zero
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.original_specialization_coefficient_hecke
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.original_specialization_primitive_annihilator
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.original_specialization_primitive_projector
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.exists_original_primitive_specialization_image_equiv
+#print axioms Dubon2026.commute_shifted_squares
+#print axioms Dubon2026.commute_aeval_of_commute
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke_galois_commute
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_galois_commute
+#print axioms Dubon2026.image_specialization_section_intertwine
+#print axioms Dubon2026.imageSpecializationPairing_injective
+#print axioms Dubon2026.imageSpecializationPairing_self
+#print axioms Dubon2026.imageSpecializationPairing_multiplier
+#print axioms Dubon2026.alternating_fin_two_formula
+#print axioms Dubon2026.alternating_fin_two_basis_ne_zero
+#print axioms Dubon2026.alternating_fin_two_matrix_basis
+#print axioms Dubon2026.determinant_eq_alternating_multiplier
+#print axioms Dubon2026.image_specialization_determinant
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.original_specialization_cyclotomic_determinant_of_basis
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.original_specialization_cyclotomic_determinant
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_cyclotomic_realization
+#print axioms Dubon2026.projectorRangeSpecializationEquiv
+#print axioms Dubon2026.imageSpecializationPairing
+#print axioms Dubon2026.valuation_root_mem
+#print axioms Dubon2026.valuation_frobenius_root
+#print axioms Dubon2026.valuation_cyclotomic_frobenius
+#print axioms Dubon2026.rank_two_cayley_hamilton
+#print axioms Dubon2026.rank_two_trace_of_determinant_quadratic
+#print axioms Dubon2026.rank_two_charpoly_of_determinant_quadratic
+#print axioms Dubon2026.cyclotomic_frobenius_charpoly
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_charpoly_realization
+#print axioms Dubon2026.matrix_intertwiner_charpoly
+#print axioms Dubon2026.matrix_intertwiner_one
+#print axioms Dubon2026.integral_matrix_charpoly_of_intertwiner
+#print axioms Dubon2026.residue_matrix_charpoly_of_intertwiner
+#print axioms Dubon2026.residue_matrix_one_of_intertwiner
+#print axioms Dubon2026.rank_two_trace_det_of_charpoly
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.original_specialization_frobenius_charpoly
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.original_residual_frobenius_charpoly
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.original_residual_inertia_identity
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_frobenius_realization
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalPrimitiveTate_prescribed_specialization_of_basis
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_continuous_galois_realization
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_residual_frobenius_realization
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceSpanningProjectorImage, `Dubon2026.SourceSpecializationBaseChangeIntertwiner, `Dubon2026.SourcePolynomialSpecialization, `Dubon2026.SourceOriginalSpecializationProjector, `Dubon2026.SourceOriginalSpecializationPrimitiveImage, `Dubon2026.SourcePolynomialCommutant, `Dubon2026.SourcePrimitiveOriginalTateGalois, `Dubon2026.SourceImageSpecializationPairing, `Dubon2026.SourceAlternatingRankTwoDeterminant, `Dubon2026.SourceImageSpecializationDeterminant, `Dubon2026.SourceOriginalSpecializationCyclotomicDeterminant, `Dubon2026.SourceOriginalPrimitiveCyclotomicRealization, `Dubon2026.SourceValuationFrobeniusRoots, `Dubon2026.SourceValuationCyclotomicFrobenius, `Dubon2026.SourceRankTwoQuadraticTrace, `Dubon2026.SourceCyclotomicFrobeniusCharpoly, `Dubon2026.SourceOriginalPrimitiveFrobeniusCharpolyRealization, `Dubon2026.SourceMatrixIntertwinerCharpoly, `Dubon2026.SourceIntegralMatrixCharpoly, `Dubon2026.SourceRankTwoCharpolyCoefficients, `Dubon2026.SourceOriginalSpecializationFrobeniusCharpoly, `Dubon2026.SourceOriginalResidualFrobeniusCharpoly, `Dubon2026.SourceOriginalResidualInertia, `Dubon2026.SourceOriginalPrimitiveResidualFrobeniusRealization, `Dubon2026.SourceOriginalPrescribedTateSpecialization, `Dubon2026.SourceOriginalPrescribedResidualFrobenius]
+  let theorems : Array Name := #[`Dubon2026.spanning_liftBaseChange_surjective, `Dubon2026.projector_range_specialization_surjective, `Dubon2026.projector_range_specialization_bijective, `Dubon2026.liftBaseChange_intertwine, `Dubon2026.liftBaseChange_scalar_intertwine, `Dubon2026.specialization_aeval_zero, `Dubon2026.specialization_shifted_squares_zero, `Dubon2026.SourceFunctionField.OriginalChart.original_specialization_coefficient_hecke, `Dubon2026.SourceFunctionField.OriginalChart.original_specialization_primitive_annihilator, `Dubon2026.SourceFunctionField.OriginalChart.original_specialization_primitive_projector, `Dubon2026.SourceFunctionField.OriginalChart.exists_original_primitive_specialization_image_equiv, `Dubon2026.commute_shifted_squares, `Dubon2026.commute_aeval_of_commute, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke_galois_commute, `Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_galois_commute, `Dubon2026.image_specialization_section_intertwine, `Dubon2026.imageSpecializationPairing_injective, `Dubon2026.imageSpecializationPairing_self, `Dubon2026.imageSpecializationPairing_multiplier, `Dubon2026.alternating_fin_two_formula, `Dubon2026.alternating_fin_two_basis_ne_zero, `Dubon2026.alternating_fin_two_matrix_basis, `Dubon2026.determinant_eq_alternating_multiplier, `Dubon2026.image_specialization_determinant, `Dubon2026.SourceFunctionField.OriginalChart.original_specialization_cyclotomic_determinant_of_basis, `Dubon2026.SourceFunctionField.OriginalChart.original_specialization_cyclotomic_determinant, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_cyclotomic_realization, `Dubon2026.valuation_root_mem, `Dubon2026.valuation_frobenius_root, `Dubon2026.valuation_cyclotomic_frobenius, `Dubon2026.rank_two_cayley_hamilton, `Dubon2026.rank_two_trace_of_determinant_quadratic, `Dubon2026.rank_two_charpoly_of_determinant_quadratic, `Dubon2026.cyclotomic_frobenius_charpoly, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_charpoly_realization, `Dubon2026.matrix_intertwiner_charpoly, `Dubon2026.matrix_intertwiner_one, `Dubon2026.integral_matrix_charpoly_of_intertwiner, `Dubon2026.residue_matrix_charpoly_of_intertwiner, `Dubon2026.residue_matrix_one_of_intertwiner, `Dubon2026.rank_two_trace_det_of_charpoly, `Dubon2026.SourceFunctionField.OriginalChart.original_specialization_frobenius_charpoly, `Dubon2026.SourceFunctionField.OriginalChart.original_residual_frobenius_charpoly, `Dubon2026.SourceFunctionField.OriginalChart.original_residual_inertia_identity, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_frobenius_realization, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitiveTate_prescribed_specialization_of_basis, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_continuous_galois_realization, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_residual_frobenius_realization]
+  let constructions : Array Name := #[`Dubon2026.projectorRangeSpecializationEquiv, `Dubon2026.imageSpecializationPairing]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE ORIGINAL PRIMITIVE FROBENIUS AUDIT PASS: {count} theorems including private/generated declarations. The same original primitive representation has cyclotomic determinant, exact Frobenius trace/determinant/characteristic polynomial, and a prescribed-embedding residual realization. Source reduction compatibility, arithmetic quotient and norm-local comparisons, automorphy and all-weight continuation remain open; 16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceSpanningProjectorImage
+
+#lint in Dubon2026.SourceSpecializationBaseChangeIntertwiner
+
+#lint in Dubon2026.SourcePolynomialSpecialization
+
+#lint in Dubon2026.SourceOriginalSpecializationProjector
+
+#lint in Dubon2026.SourceOriginalSpecializationPrimitiveImage
+
+#lint in Dubon2026.SourcePolynomialCommutant
+
+#lint in Dubon2026.SourcePrimitiveOriginalTateGalois
+
+#lint in Dubon2026.SourceImageSpecializationPairing
+
+#lint in Dubon2026.SourceAlternatingRankTwoDeterminant
+
+#lint in Dubon2026.SourceImageSpecializationDeterminant
+
+#lint in Dubon2026.SourceOriginalSpecializationCyclotomicDeterminant
+
+#lint in Dubon2026.SourceOriginalPrimitiveCyclotomicRealization
+
+#lint in Dubon2026.SourceValuationFrobeniusRoots
+
+#lint in Dubon2026.SourceValuationCyclotomicFrobenius
+
+#lint in Dubon2026.SourceRankTwoQuadraticTrace
+
+#lint in Dubon2026.SourceCyclotomicFrobeniusCharpoly
+
+#lint in Dubon2026.SourceOriginalPrimitiveFrobeniusCharpolyRealization
+
+#lint in Dubon2026.SourceMatrixIntertwinerCharpoly
+
+#lint in Dubon2026.SourceIntegralMatrixCharpoly
+
+#lint in Dubon2026.SourceRankTwoCharpolyCoefficients
+
+#lint in Dubon2026.SourceOriginalSpecializationFrobeniusCharpoly
+
+#lint in Dubon2026.SourceOriginalResidualFrobeniusCharpoly
+
+#lint in Dubon2026.SourceOriginalResidualInertia
+
+#lint in Dubon2026.SourceOriginalPrimitiveResidualFrobeniusRealization
+
+#lint in Dubon2026.SourceOriginalPrescribedTateSpecialization
+
+#lint in Dubon2026.SourceOriginalPrescribedResidualFrobenius

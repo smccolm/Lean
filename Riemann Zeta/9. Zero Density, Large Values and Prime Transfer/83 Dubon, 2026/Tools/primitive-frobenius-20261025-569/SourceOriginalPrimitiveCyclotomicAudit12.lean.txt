@@ -1,0 +1,91 @@
+import SourceSpanningProjectorImage
+import SourceSpecializationBaseChangeIntertwiner
+import SourcePolynomialSpecialization
+import SourceOriginalSpecializationProjector
+import SourceOriginalSpecializationPrimitiveImage
+import SourcePolynomialCommutant
+import SourcePrimitiveOriginalTateGalois
+import SourceImageSpecializationPairing
+import SourceAlternatingRankTwoDeterminant
+import SourceImageSpecializationDeterminant
+import SourceOriginalSpecializationCyclotomicDeterminant
+import SourceOriginalPrimitiveCyclotomicRealization
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.spanning_liftBaseChange_surjective
+#print axioms Dubon2026.projector_range_specialization_surjective
+#print axioms Dubon2026.projector_range_specialization_bijective
+#print axioms Dubon2026.liftBaseChange_intertwine
+#print axioms Dubon2026.liftBaseChange_scalar_intertwine
+#print axioms Dubon2026.specialization_aeval_zero
+#print axioms Dubon2026.specialization_shifted_squares_zero
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.original_specialization_coefficient_hecke
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.original_specialization_primitive_annihilator
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.original_specialization_primitive_projector
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.exists_original_primitive_specialization_image_equiv
+#print axioms Dubon2026.commute_shifted_squares
+#print axioms Dubon2026.commute_aeval_of_commute
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke_galois_commute
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_galois_commute
+#print axioms Dubon2026.image_specialization_section_intertwine
+#print axioms Dubon2026.imageSpecializationPairing_injective
+#print axioms Dubon2026.imageSpecializationPairing_self
+#print axioms Dubon2026.imageSpecializationPairing_multiplier
+#print axioms Dubon2026.alternating_fin_two_formula
+#print axioms Dubon2026.alternating_fin_two_basis_ne_zero
+#print axioms Dubon2026.alternating_fin_two_matrix_basis
+#print axioms Dubon2026.determinant_eq_alternating_multiplier
+#print axioms Dubon2026.image_specialization_determinant
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.original_specialization_cyclotomic_determinant_of_basis
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.original_specialization_cyclotomic_determinant
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_cyclotomic_realization
+#print axioms Dubon2026.projectorRangeSpecializationEquiv
+#print axioms Dubon2026.imageSpecializationPairing
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceSpanningProjectorImage, `SourceSpecializationBaseChangeIntertwiner, `SourcePolynomialSpecialization, `SourceOriginalSpecializationProjector, `SourceOriginalSpecializationPrimitiveImage, `SourcePolynomialCommutant, `SourcePrimitiveOriginalTateGalois, `SourceImageSpecializationPairing, `SourceAlternatingRankTwoDeterminant, `SourceImageSpecializationDeterminant, `SourceOriginalSpecializationCyclotomicDeterminant, `SourceOriginalPrimitiveCyclotomicRealization]
+  let theorems : Array Name := #[`Dubon2026.spanning_liftBaseChange_surjective, `Dubon2026.projector_range_specialization_surjective, `Dubon2026.projector_range_specialization_bijective, `Dubon2026.liftBaseChange_intertwine, `Dubon2026.liftBaseChange_scalar_intertwine, `Dubon2026.specialization_aeval_zero, `Dubon2026.specialization_shifted_squares_zero, `Dubon2026.SourceFunctionField.OriginalChart.original_specialization_coefficient_hecke, `Dubon2026.SourceFunctionField.OriginalChart.original_specialization_primitive_annihilator, `Dubon2026.SourceFunctionField.OriginalChart.original_specialization_primitive_projector, `Dubon2026.SourceFunctionField.OriginalChart.exists_original_primitive_specialization_image_equiv, `Dubon2026.commute_shifted_squares, `Dubon2026.commute_aeval_of_commute, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke_galois_commute, `Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_galois_commute, `Dubon2026.image_specialization_section_intertwine, `Dubon2026.imageSpecializationPairing_injective, `Dubon2026.imageSpecializationPairing_self, `Dubon2026.imageSpecializationPairing_multiplier, `Dubon2026.alternating_fin_two_formula, `Dubon2026.alternating_fin_two_basis_ne_zero, `Dubon2026.alternating_fin_two_matrix_basis, `Dubon2026.determinant_eq_alternating_multiplier, `Dubon2026.image_specialization_determinant, `Dubon2026.SourceFunctionField.OriginalChart.original_specialization_cyclotomic_determinant_of_basis, `Dubon2026.SourceFunctionField.OriginalChart.original_specialization_cyclotomic_determinant, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_cyclotomic_realization]
+  let constructions : Array Name := #[`Dubon2026.projectorRangeSpecializationEquiv, `Dubon2026.imageSpecializationPairing]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Primitive Cyclotomic postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Primitive Cyclotomic theorems discovered"
+  logInfo m!"SOURCE ORIGINAL PRIMITIVE CYCLOTOMIC AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceSpanningProjectorImage
+#lint in SourceSpecializationBaseChangeIntertwiner
+#lint in SourcePolynomialSpecialization
+#lint in SourceOriginalSpecializationProjector
+#lint in SourceOriginalSpecializationPrimitiveImage
+#lint in SourcePolynomialCommutant
+#lint in SourcePrimitiveOriginalTateGalois
+#lint in SourceImageSpecializationPairing
+#lint in SourceAlternatingRankTwoDeterminant
+#lint in SourceImageSpecializationDeterminant
+#lint in SourceOriginalSpecializationCyclotomicDeterminant
+#lint in SourceOriginalPrimitiveCyclotomicRealization

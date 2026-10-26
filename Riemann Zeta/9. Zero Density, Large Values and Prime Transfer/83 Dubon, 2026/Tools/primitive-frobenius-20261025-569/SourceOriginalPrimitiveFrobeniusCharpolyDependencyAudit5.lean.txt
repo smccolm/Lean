@@ -1,0 +1,32 @@
+import SourceValuationFrobeniusRoots
+import SourceValuationCyclotomicFrobenius
+import SourceRankTwoQuadraticTrace
+import SourceCyclotomicFrobeniusCharpoly
+import SourceOriginalPrimitiveFrobeniusCharpolyRealization
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_charpoly_realization]
+  let localModules : Array Name := #[`SourceOriginalPrimitiveFrobeniusCharpolyRealization, `SourceCyclotomicFrobeniusCharpoly, `SourceRankTwoQuadraticTrace, `SourceValuationCyclotomicFrobenius, `SourceValuationFrobeniusRoots, `SourceOriginalPrimitiveCyclotomicRealization, `SourceOriginalSpecializationCyclotomicDeterminant, `SourceSpecializationBaseChangeIntertwiner, `SourceImageSpecializationDeterminant, `SourceAlternatingRankTwoDeterminant, `SourceImageSpecializationPairing, `SourcePrimitiveOriginalTateGalois, `SourcePolynomialCommutant, `SourceOriginalSpecializationPrimitiveImage, `SourceSpanningProjectorImage, `SourceOriginalSpecializationProjector, `SourcePolynomialSpecialization]
+  let required : Array Name := #[`Dubon2026.valuation_root_mem, `Dubon2026.valuation_frobenius_root, `Dubon2026.valuation_cyclotomic_frobenius, `Dubon2026.rank_two_cayley_hamilton, `Dubon2026.rank_two_trace_of_determinant_quadratic, `Dubon2026.rank_two_charpoly_of_determinant_quadratic, `Dubon2026.cyclotomic_frobenius_charpoly, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_charpoly_realization, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_cyclotomic_realization, `Dubon2026.SourceFunctionField.GaussReduction.residue_charP_of_prime_mem_nonunits, `Dubon2026.sourceLocal_roots_eq_of_residue_eq, `cyclotomicCharacter.spec, `PadicInt.ext_of_toZModPow, `Matrix.aeval_self_charpoly, `Matrix.charpoly_fin_two, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_quadratic_realization]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL PRIMITIVE FROBENIUS CHARPOLY DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the same actual primitive representation consumer. Only declaration values are traversed. The actual source valuation hypothesis gives the residue characteristic, and existing local root separation evaluates the original cyclotomic character on the exact arithmetic Frobenius lift. Native Cayley-Hamilton and the two-dimensional characteristic polynomial determine trace from the independently proved determinant and quadratic identity. The same actual continuous unramified primitive representation retains all original Hecke eigenvalues and specialization equations and now has exact Frobenius determinant, trace and characteristic polynomial. No determinant, root-action, trace or characteristic-polynomial premise is supplied. Integral residual transport, residual association, arithmetic automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

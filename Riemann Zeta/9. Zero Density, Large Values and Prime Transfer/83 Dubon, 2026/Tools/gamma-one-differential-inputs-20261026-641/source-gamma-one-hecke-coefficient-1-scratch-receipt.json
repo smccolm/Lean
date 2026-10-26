@@ -1,0 +1,58 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T11:08:59.552585+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneHeckeCoefficientAction"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCoefficientAction.lean",
+      "sha256": "3C49EACF9D61CB7DA14863C383224ACF823125F3F6B1BCF97AB0FD6F4B329005",
+      "oleanSha256": "817AEBF9DBD53E7CE381B4EB3D7232F8F98F845FA4886C64BD473B9A7AB29001"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1_cocycle",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeCocycles_coefficient_left",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeCocycles_coefficient_right",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_coefficient_left",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_coefficient_right",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1_cocycle",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeCocycles_coefficient_left",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeCocycles_coefficient_right",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_coefficient_left",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_coefficient_right",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_coefficient"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCoefficientAudit1.log",
+  "logSha256": "2F1548BDB663E873C8E129FA7BB02EC55AC03562C13FCF9C8F68D87B2F849AE3",
+  "auditSha256": "C1953CF19A06A2B77C8820C29C21B8569242588001EB0B11CBEB17A5247FAC45",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 9,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 11,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCoefficientDependencyAudit1.log",
+  "dependencyAuditSha256": "909EBAE60CE9538417E8C2375FDA2710CB7056FE4014D1715F69AFBEDB70E983",
+  "dependencyAuditSourceSha256": "EAABA785779C59B559DBA66E88CBB2FFB5BB950EBF4867C220317B0AC33459FC",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> finite Gamma1 character arithmetic realization -> geometric/H1 comparison -> retention and exact factorization of the original homogeneous coefficient endomorphism.",
+  "discharged": "The H1 operator with any prescribed coefficient endomorphism equals the ordinary constant-coefficient correspondence followed by that endomorphism on H1, and also equals the reverse composition. This includes exactly the original homogeneous diagonal matrix action and does not remove it.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. An arithmetic Picard/H1 comparison must realize the ordinary correspondence and retain this explicit coefficient factor. Full/parabolic and diamond conventions, arithmetic finite-character realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and higher continuation remain open. No character lift follows merely from this factorization. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-coefficient-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "EAA8EEF7C2627E2122A70654CDE27C58343F56563EB5734AA8227C3C9E70B248",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

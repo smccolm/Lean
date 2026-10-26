@@ -1,0 +1,33 @@
+import Dubon2026.SourceInverseJLevelOneIntegral
+import Dubon2026.SourceIntegralHomogeneousRelation
+import Dubon2026.SourceModularInverseJIntegral
+import Dubon2026.SourceGammaOneCuspAuxiliaryForm
+import Dubon2026.SourceGammaOneCuspAuxiliaryExpansion
+import Dubon2026.SourceGammaOneDifferentialCuspIntegral
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_cusp_expression]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneDifferentialCuspIntegral, `Dubon2026.SourceGammaOneCuspAuxiliaryExpansion, `Dubon2026.SourceJEulerPolynomial, `Dubon2026.SourceJEulerModularIdentity, `Dubon2026.SourceModularQDerivativeExpansion, `Dubon2026.SourceModularQDerivative, `Dubon2026.SourceModularInverseJIntegral, `Dubon2026.SourceIntegralHomogeneousRelation, `Dubon2026.SourceInverseJLevelOneIntegral, `Dubon2026.SourceGammaOneCuspAuxiliaryForm]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.InverseJIntegral.eisenstein_four_expansion_ne_zero, `Dubon2026.SourceFunctionField.InverseJIntegral.levelOne_isIntegral, `Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_div_of_relation, `Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_modular_quotient_E4_cube, `Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_modular_quotient_E4, `Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.conj_T_pow_mem, `Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.mapGL_T_zpow, `Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.natCast_mem_strictPeriods_conj, `Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.pow_slash, `Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.num_slash, `Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.qExpansion_Gform_mul, `Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.cusp_expression_identity, `Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_cusp_expression, `Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.Gform, `Dubon2026.SourceFunctionField.exists_levelOne_j_polynomial, `Dubon2026.SourceFunctionField.ModularNormPolynomial.Aform, `Dubon2026.SourceFunctionField.ModularNormPolynomial.Sform_eq_zero, `Dubon2026.SourceFunctionField.ModularNormPolynomial.qExpansion_Sform, `CuspFormClass.exp_decay_atImInfty, `ModularForm.exp_isBigO_discriminant, `Dubon2026.SourceFunctionField.ModularQDerivative.exists_qEuler_jqModC_formula, `Dubon2026.SourceFunctionField.ModularQDerivative.laurent_discriminant_relation, `Dubon2026.SourceFunctionField.GammaOne.hper]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE DIFFERENTIAL CUSP INTEGRAL DEPENDENCY AUDIT PASS: all {required.size} required dependencies occur in the actual cusp integral consumer. Only declaration values are traversed. Existing level-one polynomials and modular norms, native cusp decay and discriminant growth construct the exact inverse-j integral bound. Regularity, differential realization, actual Picard/H1 and diamond comparison, original all-weight association and higher continuation remain required. 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

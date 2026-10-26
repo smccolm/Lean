@@ -1,0 +1,57 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T06:19:36.990292+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceGammaOneHeckeUpperImage"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperImage.lean",
+      "sha256": "6F2CE50508F9EA4B6E2D2207C6984F97CD9EC6E4B653B7E1F8E60683F8A1DCEC",
+      "oleanSha256": "2C445B98D0E873CF417070E71D57BF367B6839754B4312FFBEB6F6E63F189E45"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceGammaOneDiagonalHom_heckeUpper_iff",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperHom_injective",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperHom_range",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_apply",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_conjugation",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceGammaOneDiagonalHom_heckeUpper_iff",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperHom_injective",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperHom_range",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_apply",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_conjugation"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperImageAudit1.log",
+  "logSha256": "99D1CC02BA73BCC79798B783771B9C406DE86C8F5BB0809505DF09133BFF3A13",
+  "auditSha256": "2AAFF93DF1A0C67023C7362844967E1A67547A0B615CBCC7357F26E4DCCE8567",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 8,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 9,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeUpperImageDependencyAudit1.log",
+  "dependencyAuditSha256": "FAF61459532090135859EAE14E0D44009694D1E2A5FF7C15081A8E25C2798F6E",
+  "dependencyAuditSourceSha256": "6B0178494178D014F6FB34147C98788E93D03F3E5035CEA4B4315DBDB6C0429D",
+  "consumers": [
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_conjugation",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv_apply",
+    "Dubon2026.sourceGammaOneCoverHeckeUpperEquiv"
+  ],
+  "dependency": "DUB-17/18 -> original all-weight adic association -> geometric Gamma1 realization -> actual surjective-transfer Hecke identity -> exact original Gamma1 correspondence and trace subgroup reindexing",
+  "discharged": "Identify the actual Gamma1 upper subgroup with the precise subgroup in the Hecke trace base-change formula, preserving both the inclusion and conjugation maps.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Use these exact group identifications with original coefficient maps and proved trace composition to finish the full surjective-transfer Hecke identity. Arithmetic geometric/diamond comparison, Galois realization, all-weight association, local/image/regularity, automorphy and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-upper-image-1-reuse-review-20261025.json",
+  "reuseReviewSha256": "F49293951B58FFE5413B0FE2E70B6379044B700B3165EA710C8FE4E55AF80BA5",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

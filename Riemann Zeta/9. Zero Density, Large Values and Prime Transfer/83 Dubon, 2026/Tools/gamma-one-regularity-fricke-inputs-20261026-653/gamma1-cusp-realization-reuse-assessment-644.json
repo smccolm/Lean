@@ -1,0 +1,69 @@
+{
+  "recordedUTC": "2026-10-26T13:36:12.872176+00:00",
+  "source": {
+    "fetchedUTC": "2026-10-26T13:23:43.739799+00:00",
+    "files": [
+      {
+        "repo": "anthropics/fermats-last-theorem",
+        "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+        "path": "P2M/Sol/S_ModularCurve_qExpansion_div_mem_laurentBaseChange_xHFunctionField.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_qExpansion_div_mem_laurentBaseChange_xHFunctionField.lean",
+        "snapshot": "P2M\\Sol\\S_ModularCurve_qExpansion_div_mem_laurentBaseChange_xHFunctionField.lean.txt",
+        "gitBlob": "b06e5652c0b3d69640906725f2eba2417379a4a6",
+        "sha256": "BA2FFF50EB54BD46E802DE264D55F2FC648CB0713657EF9B49DB1F9C09475A61",
+        "bytes": 19058
+      },
+      {
+        "repo": "anthropics/fermats-last-theorem",
+        "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+        "path": "P2M/Sol/S_CuspForm_exists_basis_gamma1_qCoeff_mem_adjoin_exp_of_even.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CuspForm_exists_basis_gamma1_qCoeff_mem_adjoin_exp_of_even.lean",
+        "snapshot": "P2M\\Sol\\S_CuspForm_exists_basis_gamma1_qCoeff_mem_adjoin_exp_of_even.lean.txt",
+        "gitBlob": "72db9d616c9d3e9daff3ba715730fe14a241b6aa",
+        "sha256": "3A8E4A1AD97364F84F918E4FA2C279636D59F7EFEBFBAD161A644CBC50429655",
+        "bytes": 5782
+      },
+      {
+        "repo": "anthropics/fermats-last-theorem",
+        "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+        "path": "P2M/Sol/S_CuspForm_exists_gamma1_qCoeff_eq_algEquiv_apply_of_even.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CuspForm_exists_gamma1_qCoeff_eq_algEquiv_apply_of_even.lean",
+        "snapshot": "P2M\\Sol\\S_CuspForm_exists_gamma1_qCoeff_eq_algEquiv_apply_of_even.lean.txt",
+        "gitBlob": "0fab324f76ed6da093c49fbb67ef6a49a412718f",
+        "sha256": "7F47382FFE7793D0FD63FB6D68B2B33E26FFFC323F1A091EB99096B88536A261",
+        "bytes": 44553
+      }
+    ]
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 Hecke-character realization -> actual Picard/H1 and diamond comparison -> actual regular differential/cusp comparison -> algebraic differential realization and rational Fourier structure.",
+  "findings": [
+    {
+      "file": "P2M/Sol/S_ModularCurve_qExpansion_div_mem_laurentBaseChange_xHFunctionField.lean",
+      "conclusion": "Every same-weight GammaH complex modular quotient belongs to the literal scalar extension of the rational integral-ratio field.",
+      "requirements": "A rational Fourier-coefficient basis for actual Gamma1 cusp forms, rationality of Gamma0 slash translates, and bounded denominators for rational Fourier modular forms. Multiplication by Delta reduces modular forms to cusp forms; trace provides GammaH invariance.",
+      "localReuse": "Existing actual integral-ratio field, scalar-extension equality and native q-expansion operations. The local field-to-complex-modular-ratio theorem is the reverse implication and cannot close this obligation.",
+      "route": "For the required Gamma1 case use H=bottom or avoid the trace altogether. Only even weights are needed for the weight-two differential construction; odd-weight generalizations are deferred."
+    },
+    {
+      "file": "P2M/Sol/S_CuspForm_exists_basis_gamma1_qCoeff_mem_adjoin_exp_of_even.lean",
+      "conclusion": "For every even weight, actual Gamma1 cusp forms admit a basis whose Fourier coefficients lie in the cyclotomic field.",
+      "requirements": "The span by rational Fricke expressions and coefficient membership of those expressions, followed by native finite-dimensional basis extraction.",
+      "localReuse": "Native finite dimensionality and basis extraction are available; no local Fricke rational-span theorem was found in the searched project sources.",
+      "route": "Inspect the exact Fricke input proofs before expanding their dependency chain."
+    },
+    {
+      "file": "P2M/Sol/S_CuspForm_exists_gamma1_qCoeff_eq_algEquiv_apply_of_even.lean",
+      "conclusion": "Cyclotomic automorphisms transport the Fourier coefficients of an even-weight Gamma1 cusp form to another actual cusp form.",
+      "requirements": "Fricke rational representation and sigma transport preserving holomorphy, cusp bounds and level. Stable-family descent and rational coefficient linear independence occur in the proof.",
+      "localReuse": "Existing rational Hecke-matrix basis is for Gamma0 weight two; it does not establish the Gamma1 rational Fourier basis or this conjugation theorem.",
+      "route": "The rational-basis descent consumes this closure and the cyclotomic basis. Do not treat arbitrary coefficient conjugation as automatically preserving analytic modularity."
+    }
+  ],
+  "sourceReviewOnly": true,
+  "externalProjectBuilt": false,
+  "externalDependencyClosureCertified": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "remaining": "Actual realization and converse remain; regularity of an already-realized matching differential is proved in scratch scope643b. 16/20; DUB-17--20 OPEN."
+}

@@ -1,0 +1,23 @@
+{
+  "reason": "The generated dependency audit and route ended with literal backslash-n bytes. Fresh successors replace only those serialization bytes with line endings; audited proof sources and the public exhaustive audit remain unchanged. The original used generator and dependency audit are retained.",
+  "previousAudit": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessDependencyAudit2.lean",
+    "sha256": "E829E84200A5E391800B16B09BE501B9D9EB3735CFB7879C84C7EC933C23DBDB"
+  },
+  "successorAudit": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualOddnessDependencyAudit2b.lean",
+    "sha256": "342E29858775F0AF4C8B9AA9759C174DC5618EABCE94C06DE09CA314B42275E2"
+  },
+  "previousRoute": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-oddness-route-574.json",
+    "sha256": "A5CD0BB6413D5B9C1F1FAE142216EE07273E9D5A1EB8203B872599DC16C36F1E"
+  },
+  "successorRoute": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-oddness-route-574b.json",
+    "sha256": "7D0C47C2B1BC88348C09602AD0C3C996A6EBAC974F1AF6577B8DE96E635AA772"
+  },
+  "usedGenerator": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_residual_oddness_audit_574.py",
+    "sha256": "ED9604AEAE2B35C12B2AADDF25CCE55A06050157DFCD328CE2FE2B86C7A1F427"
+  }
+}

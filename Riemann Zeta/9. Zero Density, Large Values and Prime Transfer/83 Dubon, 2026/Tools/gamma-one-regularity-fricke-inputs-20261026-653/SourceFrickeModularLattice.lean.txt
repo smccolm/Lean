@@ -1,0 +1,120 @@
+import SourceFrickePeriodHomothety
+
+/-! DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight arithmetic
+association -> original finite Gamma1 character realization -> actual
+Picard/H1 and diamond comparison -> regular differential/cusp comparison
+-> rational Fourier structure -> Fricke generators.
+The actual Weierstrass function and its modular transformation are used.
+Adapted from the fixed Apache-2.0 FLT source archived in reuse scope646;
+no external theorem or toolchain is imported. -/
+namespace Dubon2026.SourceFricke
+noncomputable section
+open Complex Real PeriodPair Matrix UpperHalfPlane
+open scoped MatrixGroups Manifold ModularForm
+
+def periodPairOfTau (τ : ℍ) : PeriodPair where
+  ω₁ := (τ : ℂ)
+  ω₂ := 1
+  indep := LinearIndependent.pair_iff.mpr fun s t hst ↦ by
+    have him : s * (τ : ℂ).im = 0 := by
+      have := congrArg Complex.im hst
+      simpa [Complex.add_im, Complex.smul_im, smul_eq_mul] using this
+    have hs : s = 0 :=
+      (mul_eq_zero.mp him).resolve_right (UpperHalfPlane.coe_im τ ▸ τ.im_ne_zero)
+    subst hs
+    simpa using hst
+
+@[simp] lemma periodPairOfTau_ω₁ (τ : ℍ) : (periodPairOfTau τ).ω₁ = (τ : ℂ) := rfl
+@[simp] lemma periodPairOfTau_ω₂ (τ : ℍ) : (periodPairOfTau τ).ω₂ = 1 := rfl
+
+theorem span_SL2_basis_change {a b c d : ℤ} (hdet : a * d - b * c = 1) (ω₁ ω₂ : ℂ) :
+    (Submodule.span ℤ {(a : ℂ) * ω₁ + (b : ℂ) * ω₂, (c : ℂ) * ω₁ + (d : ℂ) * ω₂} : Submodule ℤ ℂ)
+      = Submodule.span ℤ {ω₁, ω₂} := by
+  have hdetC : (a : ℂ) * d - b * c = 1 := by exact_mod_cast hdet
+  refine le_antisymm (Submodule.span_le.mpr ?_) (Submodule.span_le.mpr ?_)
+  · rw [Set.insert_subset_iff, Set.singleton_subset_iff]
+    exact ⟨Submodule.mem_span_pair.mpr ⟨a, b, by simp [zsmul_eq_mul]⟩,
+           Submodule.mem_span_pair.mpr ⟨c, d, by simp [zsmul_eq_mul]⟩⟩
+  · rw [Set.insert_subset_iff, Set.singleton_subset_iff]
+    refine ⟨Submodule.mem_span_pair.mpr ⟨d, -b, ?_⟩,
+            Submodule.mem_span_pair.mpr ⟨-c, a, ?_⟩⟩
+    · simp only [zsmul_eq_mul, Int.cast_neg]; linear_combination ω₁ * hdetC
+    · simp only [zsmul_eq_mul, Int.cast_neg]; linear_combination ω₂ * hdetC
+
+def denomZ (γ : SL(2, ℤ)) (τ : ℂ) : ℂ := (γ 1 0 : ℤ) * τ + (γ 1 1 : ℤ)
+
+def numZ (γ : SL(2, ℤ)) (τ : ℂ) : ℂ := (γ 0 0 : ℤ) * τ + (γ 0 1 : ℤ)
+
+lemma denomZ_ne_zero (γ : SL(2, ℤ)) (τ : ℍ) : denomZ γ (τ : ℂ) ≠ 0 := by
+  intro h
+  have him : ((γ 1 0 : ℤ) : ℝ) * (τ : ℂ).im = 0 := by
+    have := congrArg Complex.im h
+    simp only [denomZ, Complex.add_im, Complex.mul_im, Complex.intCast_im, zero_mul,
+      Complex.intCast_re, add_zero, Complex.zero_im] at this
+    linarith
+  have hc0 : (γ 1 0 : ℤ) = 0 := by
+    rcases mul_eq_zero.mp him with h | h
+    · exact_mod_cast h
+    · exact absurd h (UpperHalfPlane.coe_im τ ▸ τ.im_ne_zero)
+  have hd0 : (γ 1 1 : ℤ) = 0 := by
+    have := h
+    rw [denomZ, hc0] at this
+    simpa using this
+  have hdet : γ 0 0 * γ 1 1 - γ 0 1 * γ 1 0 = 1 := by
+    have := γ.2; rwa [Matrix.det_fin_two] at this
+  rw [hc0, hd0] at hdet
+  simp at hdet
+
+lemma coe_SL2Z_smul (γ : SL(2, ℤ)) (τ : ℍ) :
+    ((γ • τ : ℍ) : ℂ) = numZ γ (τ : ℂ) / denomZ γ (τ : ℂ) := by
+  rw [UpperHalfPlane.coe_specialLinearGroup_apply, numZ, denomZ]
+  have hcast : ∀ i j : Fin 2, ((algebraMap ℤ ℝ (γ i j) : ℝ) : ℂ) = ((γ i j : ℤ) : ℂ) := by
+    intro i j; simp [eq_intCast]
+  rw [hcast, hcast, hcast, hcast]
+
+theorem mem_lattice_smul_SL2 (γ : SL(2, ℤ)) (τ : ℍ) (x : ℂ) :
+    x ∈ (periodPairOfTau (γ • τ)).lattice
+      ↔ denomZ γ τ * x ∈ (periodPairOfTau τ).lattice := by
+  have hd : denomZ γ (τ : ℂ) ≠ 0 := denomZ_ne_zero γ τ
+  have hdet : γ 0 0 * γ 1 1 - γ 0 1 * γ 1 0 = 1 := by
+    have := γ.2; rwa [Matrix.det_fin_two] at this
+  have hspan := span_SL2_basis_change hdet (τ : ℂ) (1 : ℂ)
+  simp only [mul_one] at hspan
+  have hlatτ : (periodPairOfTau τ).lattice = Submodule.span ℤ {(τ : ℂ), 1} := rfl
+  constructor
+  · intro hx
+    obtain ⟨m, n, hmn⟩ := PeriodPair.mem_lattice.mp hx
+    simp only [periodPairOfTau_ω₁, periodPairOfTau_ω₂, mul_one, coe_SL2Z_smul] at hmn
+    rw [hlatτ, ← hspan]
+    refine Submodule.mem_span_pair.mpr ⟨m, n, ?_⟩
+    have hdx : denomZ γ τ * x = (m : ℂ) * numZ γ τ + (n : ℂ) * denomZ γ τ := by
+      rw [← hmn]; field_simp
+    simp only [zsmul_eq_mul]
+    rw [hdx, numZ, denomZ]
+  · intro hx
+    rw [hlatτ, ← hspan] at hx
+    obtain ⟨p, q, hpq⟩ := Submodule.mem_span_pair.mp hx
+    simp only [zsmul_eq_mul] at hpq
+    refine PeriodPair.mem_lattice.mpr ⟨p, q, ?_⟩
+    simp only [periodPairOfTau_ω₁, periodPairOfTau_ω₂, mul_one, coe_SL2Z_smul]
+    have key : (p : ℂ) * numZ γ τ + (q : ℂ) * denomZ γ τ = denomZ γ τ * x := by
+      rw [← hpq, numZ, denomZ]
+    field_simp
+    linear_combination key
+
+theorem periodPairOfTau_smul_lattice_eq (γ : SL(2, ℤ)) (τ : ℍ) :
+    (periodPairOfTau (γ • τ)).lattice
+      = (smulPeriodPair (denomZ γ τ)⁻¹ (inv_ne_zero (denomZ_ne_zero γ τ))
+          (periodPairOfTau τ)).lattice := by
+  have hd : denomZ γ (τ : ℂ) ≠ 0 := denomZ_ne_zero γ τ
+  ext x
+  rw [mem_lattice_smul_SL2, mem_smulPeriodPair_lattice]
+  constructor
+  · intro hx
+    exact ⟨denomZ γ τ * x, hx, by field_simp⟩
+  · rintro ⟨y, hy, rfl⟩
+    rwa [mul_inv_cancel_left₀ hd]
+
+
+end
+end Dubon2026.SourceFricke

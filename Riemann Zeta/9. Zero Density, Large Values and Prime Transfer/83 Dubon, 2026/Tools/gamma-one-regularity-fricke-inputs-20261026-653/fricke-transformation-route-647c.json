@@ -1,0 +1,55 @@
+{
+  "chain": "DUB-17/18 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 Hecke characters -> actual Picard/H1 and diamond comparison -> regular differential/cusp comparison -> rational Fourier structure -> cyclotomic Fricke generators -> their exact modular transformation.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-cusp-realization-reuse-assessment-644.json",
+      "sha256": "A616787DF9D4E006DE230B9186532AE9AFB048636CFAD72706D61CBCC2E5B517"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-rational-structure-input-reuse-assessment-646.json",
+      "sha256": "D75CB7DBE180AA9F387249B15E155E5E7391965B56CA54AE2BA329D46B5552CD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-rational-structure-input-reuse-646\\snapshots.json",
+      "sha256": "4887A3657CC63EE9B9226D6488F9EC07B92412D80509D453792AB54F98A6EA5B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\fricke-transformation-documented-successor-647b.json",
+      "sha256": "F2146DF5CBDC9A61C410343AEAC09E8234B865B5F0D83CD5EE7C70863ED7FA74"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\reuse-20261025-579\\anthropics__fermats-last-theorem\\LICENSE.txt",
+      "sha256": "746BC52848EABF8765635FE532E0680756A10B18E7B3FB26E7433AB4EDF34034"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Elliptic\\Weierstrass.lean",
+      "sha256": "DDF25BA36ED026C33BC432AACECF76C054E7A94AEF7C50191F520DEF44E070B4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\SlashInvariantForms.lean",
+      "sha256": "AE87C49E87ACF17B2A8DBCA0F4F434FA268CECC82EBEE584C2217F199EA9C940"
+    }
+  ],
+  "selectedRoute": "Reuse native Weierstrass definition, lattice periodicity, full-level E4/E6/Delta transformations and elementary SL2 basis change. Defer unused g2/g3 Fricke normalization, odd-weight forms and general scalar-invariant packages. Native lattice equality rewrites the Weierstrass sum directly.",
+  "assumptionsToDischarge": "The actual normalized Fricke functions transform by the original row-vector action on torsion indices, are invariant under the principal congruence subgroup and are unchanged by negating the index. Every original SL2 matrix permutes the actual nonzero-index family. All lattice scaling, basis change, lift-independence and native modular-form transformations are proved inputs.",
+  "remaining": "Holomorphy, cusp Fourier expansions, coefficient field and Fricke rational spanning remain before Gamma1 rational structure and differential realization. 16/20; DUB-17--20 OPEN.",
+  "scratchImportClosure": [
+    "SourceFrickePeriodHomothetyV2",
+    "SourceFrickeModularLatticeV2",
+    "SourceFrickeTorsionTransformationV2",
+    "SourceFrickeFunctionTransformationV2"
+  ],
+  "separateAxiomChecks": [
+    "Dubon2026.SourceFricke.instFintypeFrickeIdxOfNeZeroNat",
+    "Dubon2026.SourceFricke.smulPeriodPair_\u03c9\u2081",
+    "Dubon2026.SourceFricke.smulPeriodPair_\u03c9\u2082",
+    "Dubon2026.SourceFricke.smulLatticeEquiv_coe",
+    "Dubon2026.SourceFricke.periodPairOfTau_\u03c9\u2081",
+    "Dubon2026.SourceFricke.periodPairOfTau_\u03c9\u2082"
+  ],
+  "separateReason": "Five projection/coercion equations are literally proved by rfl; simplification unfolds them, so their named theorem constants do not survive in the consumer proof value. Their actual definitions remain required value dependencies. These equations and the finite-instance declaration retain explicit axiom checks and exhaustive theorem/linter coverage. No mathematical dependency is replaced with an assumption.",
+  "successor": "V2 modules add definition documentation only; failed full audit and failed dependency audit remain immutable. Native proof reduction removes five rfl theorem constants while their actual definitions remain required value dependencies.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false
+}

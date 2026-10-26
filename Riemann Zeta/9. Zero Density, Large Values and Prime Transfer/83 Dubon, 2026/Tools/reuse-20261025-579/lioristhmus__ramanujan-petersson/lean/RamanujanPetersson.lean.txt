@@ -1,0 +1,10 @@
+import Mathlib
+import RamanujanPetersson.PaperInterfaces
+import RamanujanPetersson.PaperFaithfulCore
+import RamanujanPetersson.Basic
+import RamanujanPetersson.Autoformalized
+import RamanujanPetersson.Theorem41
+import RamanujanPetersson.Theorem21
+import RamanujanPetersson.Theorem31
+import RamanujanPetersson.Corollary53
+import RamanujanPetersson.Corollary53Coprime

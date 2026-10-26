@@ -1,0 +1,116 @@
+{
+  "scope": 577,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual residual deformation problem -> native Witt coefficient ring and the original residual framed universal representation",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWittResidueLift.lean",
+      "sha256": "B33DDC4705C45DD910B6E72CCB89166EC68F6E337BFD65BC6CE5C18A861D9529"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticFramedUniversalRing.lean",
+      "sha256": "1FDDFB9862EED4BA2849B121175E43D2562AE57ACA5384B70726F7146112E361"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ArithmeticFixedDeterminantUniversality.lean",
+      "sha256": "0F3CA5CB791CBA5BB653DA9A5E5F69E4432904722B456CB4F82047CF8280C801"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteResidualGalois.lean",
+      "sha256": "1A6B2986FABC3D6921A63341F890E586DF73E1E99777185E70C061CFB39C38C3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\WittVector\\DiscreteValuationRing.lean",
+      "sha256": "FED3B75EB889092780D4E9A9896143D96F3C66DF121605554101FF36A1A4048D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\WittVector\\Complete.lean",
+      "sha256": "5EA08FD3F077946FDA432D3414E9DE835A77FB37D5EEBB5EDFCCE46D16312D7A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\LocalRing\\ResidueField\\Basic.lean",
+      "sha256": "2179EBA548E1C11A1E84977806ED757806181F389C6E430C783AC854A0F41220"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\Finite\\Basic.lean",
+      "sha256": "569C7502A312ED278ED051D9C0634AAC70D4A1809C12B418190A21B02C524B21"
+    }
+  ],
+  "shorterRoute": "Reuse native Witt DVR and completeness, SourceWittLift.residueMap, actual finite-field residual association and ArithmeticFramedUniversalRing. No second deformation representability proof, general coefficient-lift theory or unrelated p-divisible-group construction is introduced.",
+  "assumptionsToDischarge": "Construct the native characteristic-zero Witt coefficient ring with precisely the original finite residue field. Derive Noetherianity and maximal-ideal completeness of the existing actual framed ring and literal equality of its universal reduction with the representation of the original all-weight form. All original local/global residual clauses remain. The constant-coefficient formula is separately checked and retained for the ensuing fixed-determinant compatibility proof.",
+  "remaining": "A characteristic-zero Witt coefficient ring does not prove that the framed ring has characteristic zero or has a characteristic-zero point. All-weight adic association, required local/image/regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. The actual mixed-characteristic cyclotomic determinant lift is the next input to fixed-determinant deformation theory. 16/20; DUB-17--20 OPEN.",
+  "scratchImportClosure": [
+    "SourcePrimitiveWittFramedResidual",
+    "SourceResidualWittFramedRing",
+    "SourceResidualWittRepresentation",
+    "SourceResidualWittCoefficients",
+    "SourcePrimitiveFiniteResidualGalois",
+    "SourceFiniteResidualArithmeticDescent",
+    "SourceResidualRealDeterminant",
+    "SourceResidualCoefficientDeterminant",
+    "SourceFiniteResidualCoefficientField",
+    "SourcePrimitiveResidualOddness",
+    "SourcePrimitiveResidualGlobalDeterminant",
+    "SourceResidualCyclotomicDeterminant",
+    "SourceArithmeticCharacterFrobeniusEquality",
+    "SourcePrimitiveResidualGaloisCharP",
+    "SourcePrimitiveOriginalResidualGalois",
+    "SourcePrimitiveRestoredGalois",
+    "SourcePrimitiveWeightTwoGalois",
+    "SourceResidualGaloisRealization",
+    "SourceParabolicArithmeticResidual",
+    "SourceOriginalDivisorArithmeticResidual",
+    "SourceArithmeticSupportInflationValues",
+    "SourceOriginalArithmeticResidual",
+    "SourceArithmeticLocalEmbeddingExtension",
+    "SourceAbsoluteArithmeticRestriction",
+    "SourceRationalLocalValuation",
+    "SourceNormValuationRestriction",
+    "SourceValuationResidualAction",
+    "SourceAbsoluteArithmeticDescent",
+    "SourceNumberFieldSupportRamification",
+    "SourceAbsoluteFiniteUnramified",
+    "SourceNumberFieldNormInertiaLift",
+    "SourceOriginalNormLocalResidual",
+    "SourceOriginalAlgebraicIntegerResidual",
+    "SourceOriginalExactReductionResidual",
+    "SourceOriginalPrescribedReductionResidual",
+    "SourceRankTwoCharpolyCoefficients",
+    "SourcePrescribedCompletionResidue",
+    "SourceAdicCoefficientResidueComparison",
+    "SourcePrescribedReductionPrime",
+    "SourceReductionCompletionLocalStructures",
+    "SourcePadicCompletionValuation",
+    "SourceReductionCompletionPadicMap",
+    "SourceReductionCompletionBasePrime",
+    "SourceReductionCompletionFinite",
+    "SourceOriginalPrescribedResidualFrobenius",
+    "SourceOriginalResidualInertia",
+    "SourceIntegralMatrixCharpoly",
+    "SourceMatrixIntertwinerCharpoly",
+    "SourceOriginalResidualFrobeniusCharpoly",
+    "SourceOriginalSpecializationFrobeniusCharpoly",
+    "SourceCyclotomicFrobeniusCharpoly",
+    "SourceRankTwoQuadraticTrace",
+    "SourceValuationCyclotomicFrobenius",
+    "SourceValuationFrobeniusRoots",
+    "SourceOriginalSpecializationCyclotomicDeterminant",
+    "SourceSpecializationBaseChangeIntertwiner",
+    "SourceImageSpecializationDeterminant",
+    "SourceAlternatingRankTwoDeterminant",
+    "SourceImageSpecializationPairing",
+    "SourcePrimitiveOriginalTateGalois",
+    "SourcePolynomialCommutant",
+    "SourceOriginalSpecializationPrimitiveImage",
+    "SourceSpanningProjectorImage",
+    "SourceOriginalSpecializationProjector",
+    "SourcePolynomialSpecialization",
+    "SourceOriginalPrescribedTateSpecialization",
+    "SourceParabolicPrimitiveDivisor",
+    "SourceWeightTwoNewEigenNormalization",
+    "SourceWeightTwoEigenLevelDescent",
+    "SourceWeightTwoDegeneracyAdjoint"
+  ],
+  "separatelyAxiomChecked": [
+    "Dubon2026.sourceResidualWittResidueEquiv_residue"
+  ]
+}\n

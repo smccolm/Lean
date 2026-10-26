@@ -1,0 +1,23 @@
+{
+  "scope": 573,
+  "scopeIds": [
+    568,
+    570,
+    571
+  ],
+  "receipts": {
+    "source-original-prescribed-completion-11-scratch-receipt.json": "85897B04E83F43398B1719464DA526036996B8E2CB1F9070D6A1D7869D766C91",
+    "source-original-arithmetic-residual-11-scratch-receipt.json": "23E3F0ECE0916F6867C5C78572F5B4E21543AA8DF1A75F59911C7ABCFAD35803",
+    "source-primitive-residual-galois-12-scratch-receipt.json": "EC9B028F14F9E7893497B95CAAAF2F263D228554811405FC0A6A3434E97B4DA8"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual all-weight primitive Galois association -> close the residual association branch at the original arithmetic support Qp, with the original Fourier coefficients, weight determinant and good-prime inertia",
+  "discharged": "For every original primitive form of weight at least two and every prescribed rational prime, construct the actual finite local coefficient field, residue closure of that characteristic and continuous residual representation on the original arithmetic group of support Qp. Its good-prime Frobenius trace is the reduction of the original Fourier coefficient, its determinant is q^(k-1), and its good-prime inertia is trivial. The prescribed algebraic-integer reduction selects the coefficient completion and residue map. Actual norm-local Frobenius and inertia are compared with the source valuation, and the representation descends through the arithmetic quotient. The parabolic alternative is eliminated by actual Petersson-adjoint level descent and normalization to a primitive divisor; the existing weight twist and support equality restore the original weight and level. None of these steps remains an additional representation, coefficient-field, local-compatibility or parabolic-realization hypothesis.",
+  "remaining": "The global residual determinant identity, all-weight adic realization and required local, regularity and image properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. This closes residual association, not the full Galois or analytic endpoint. 16/20; DUB-17--20 OPEN.",
+  "route": "Reuse the native completion and residue equivalences, finite Galois factors and original arithmetic support embeddings; reuse the proved Petersson inner product, commuting Hecke eigenvectors, newform normalization, residual weight-two reduction, cyclotomic twist and support comparison. The same original coefficients and exact source local actions are retained. No external import, root pin change, proof-limit change or incidental generalization is used.",
+  "precedingCanonicalScope": 8159,
+  "mathematicalSource": "Frozen Dubon arXiv2609.17875v1; complete original goal unchanged.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalLocalBuild": false,
+  "externalImport": false
+}

@@ -1,0 +1,6 @@
+{
+  "reason": "Fresh audit renders numeric private-name components with Name.num instead of invalid identifier quotation. No project proof or used audit is changed. Every one of the same 140 focused theorem names is checked in the full import environment.",
+  "previousSourceSha256": "B00006D238DE31441AF6FE66E952CCF6B66A1C031209F88356B2F0385838395B",
+  "previousLogSha256": "33E21E05F13E9AA36845B400470C0922A749F1665D99A85FC014AD3A0220A88A",
+  "successorSourceSha256": "7E7301A8B8840FC0E528132A93F3297D0113DD5E09C200BC3CF3BD82F0916821"
+}

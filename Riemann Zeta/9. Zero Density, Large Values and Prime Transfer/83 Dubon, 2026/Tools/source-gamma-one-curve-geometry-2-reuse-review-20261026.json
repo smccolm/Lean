@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-26 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of finite Gamma1 Hecke characters -> Picard/H1 comparison -> actual Gamma1 curve and differential realization.",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFunctionFieldBaseChange.lean",
+      "sha256": "FF3926FC60F98AACEBA430B405ACC1674F9A4BC7845A16D19DDF95A00288E7EE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCurveFinite.lean",
+      "sha256": "B00B2A9D501AE35B6450054125B5AD0D8A63331B42F85DDA2B437A23BA7D2759"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceDifferentialExpansionInjectivity.lean",
+      "sha256": "D5C5FC946728D74D258D40D461E76799754B2AD0C8B544ED132E883F72447F49"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateGeometry.lean",
+      "sha256": "6E79C5185E685A85D5E9269CB54A13ECE57417FC7F0B4CDE43F50DD75F4C1B05"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateCanonical.lean",
+      "sha256": "20BF79050CA13A8A5DBEC7E86760BD028878A6DF4D2BD7E3A96A3B4E939AC33F"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-actual-curve-differential-route-632.json",
+    "sha256": "BBEF298E8120BAAE2BD572FC5172A994F94449842B13B3C2D50C614D4123283B",
+    "review": {
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of finite Gamma1 Hecke characters -> Picard/H1 comparison -> actual Gamma1 curve and differential realization.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFunctionFieldBaseChange.lean",
+          "sha256": "FF3926FC60F98AACEBA430B405ACC1674F9A4BC7845A16D19DDF95A00288E7EE"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCurveFinite.lean",
+          "sha256": "B00B2A9D501AE35B6450054125B5AD0D8A63331B42F85DDA2B437A23BA7D2759"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceDifferentialExpansionInjectivity.lean",
+          "sha256": "D5C5FC946728D74D258D40D461E76799754B2AD0C8B544ED132E883F72447F49"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateGeometry.lean",
+          "sha256": "6E79C5185E685A85D5E9269CB54A13ECE57417FC7F0B4CDE43F50DD75F4C1B05"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateCanonical.lean",
+          "sha256": "20BF79050CA13A8A5DBEC7E86760BD028878A6DF4D2BD7E3A96A3B4E939AC33F"
+        }
+      ],
+      "selectedRoute": "The original transcendental j in the actual Laurent scalar-extension field has nonzero differential. Existing finite-coordinate theorems supply actual curve, local differentials and canonical divisors; existing separable-coordinate expansion proves differential q-expansion injectivity. Native Gamma1 and Hecke subgroup congruences discharge every finite-index and translation input. No duplicate curve, local residue, Riemann--Roch or genus development.",
+      "assumptionsToDischarge": "For the actual Gamma1(M) curve and Gamma1(M) intersect Gamma0(d*M) Hecke curve at positive levels, differential q-expansion is injective, every local coordinate differential generates and local differentials are finite, and over algebraically closed characteristic-zero coefficients the actual fields satisfy IsCurveOver and HasCanonicalDivisor. None of these is left as a hypothesis in the actual-level consumers.",
+      "remaining": "Regular differentials still require actual cusp-form comparison and rational/base-change realization; Picard/H1 and diamond compatibility, full/parabolic comparison, arithmetic finite-character realization, original all-weight association, local/image/regularity, automorphy and higher continuation remain required. 16/20; DUB-17--20 OPEN.",
+      "productionStatus": "Scratch development; audits and production promotion pending.",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "scratchImportClosure": [
+        "SourceGammaOneCurveInputs",
+        "SourceGammaOneCurveFinite",
+        "SourceGammaOneFunctionFieldBaseChange",
+        "SourceGammaOneFunctionFieldFinite",
+        "SourceGammaOneRationalRelation",
+        "SourceGammaOneJCoordinate",
+        "SourceGammaOneFunctionField",
+        "SourceGammaOneComplexRatio",
+        "SourceGammaOneComplexRelation",
+        "SourceGammaOneNormRelation",
+        "SourceGammaOneRatioClosure",
+        "SourceGammaOneCurveGeometry"
+      ]
+    }
+  },
+  "discharged": "For the actual Gamma1(M) curve and Gamma1(M) intersect Gamma0(d*M) Hecke curve at positive levels, differential q-expansion is injective, every local coordinate differential generates and local differentials are finite, and over algebraically closed characteristic-zero coefficients the actual fields satisfy IsCurveOver and HasCanonicalDivisor. None of these is left as a hypothesis in the actual-level consumers.",
+  "remaining": "Regular differentials still require actual cusp-form comparison and rational/base-change realization; Picard/H1 and diamond compatibility, full/parabolic comparison, arithmetic finite-character realization, original all-weight association, local/image/regularity, automorphy and higher continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

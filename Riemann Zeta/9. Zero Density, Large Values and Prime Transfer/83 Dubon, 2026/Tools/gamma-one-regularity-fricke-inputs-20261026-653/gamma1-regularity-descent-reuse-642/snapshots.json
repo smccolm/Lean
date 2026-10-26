@@ -1,0 +1,25 @@
+{
+  "fetchedUTC": "2026-10-26T12:56:38.338673+00:00",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_AlgebraicCurve_Place_ordDiff_smul_D_nonneg_of_ord_pow_six_mul_pow_four_mul_sub_1728_pow_three_nonneg.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_AlgebraicCurve_Place_ordDiff_smul_D_nonneg_of_ord_pow_six_mul_pow_four_mul_sub_1728_pow_three_nonneg.lean",
+      "snapshot": "P2M\\Sol\\S_AlgebraicCurve_Place_ordDiff_smul_D_nonneg_of_ord_pow_six_mul_pow_four_mul_sub_1728_pow_three_nonneg.lean.txt",
+      "gitBlob": "1b01233a9781b51de574c1b1792270a5ef39ad2b",
+      "sha256": "396F6F58296DABDE6D0CD9F44C40D8844E09C8634D24BCDD523F599ADA0B7BB8",
+      "bytes": 10824
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_isIntegral_adjoin_of_isIntegral_adjoin_coeffMap.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_isIntegral_adjoin_of_isIntegral_adjoin_coeffMap.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_isIntegral_adjoin_of_isIntegral_adjoin_coeffMap.lean.txt",
+      "gitBlob": "1c426408b483feb60c051c0aee8129be61ae6159",
+      "sha256": "E7A66867B837F125D6307E731CE5EF4FBC74ECCED52FEFE2B61C34B44085EC70",
+      "bytes": 4644
+    }
+  ]
+}

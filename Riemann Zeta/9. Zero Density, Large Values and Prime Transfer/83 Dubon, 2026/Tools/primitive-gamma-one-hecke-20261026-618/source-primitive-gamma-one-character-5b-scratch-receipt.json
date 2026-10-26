@@ -1,0 +1,103 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T08:04:10.532007+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneHeckeWords",
+    "SourceGammaOneOperatorDescent",
+    "SourceGammaOneHeckeFinite",
+    "SourcePrimitiveGammaOneHeckeCharacter",
+    "SourcePrimitiveGammaOneH1Realization"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeWords.lean",
+      "sha256": "7F43A8C9716A2C3CFB6D9D4DF5BD8E54349AACEE1CBDB95A79F465A84BE1520C",
+      "oleanSha256": "508DE8F0E4B8D9E27ED9AF6737E0FA4182291D462EEADE09BFB2C82555B3F7DC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOperatorDescent.lean",
+      "sha256": "C69D4452555B8FDC3951EFE283373D423F447592E323904BBBCD9C57A2753FD9",
+      "oleanSha256": "D761156B9A4E1B900BC14B2C78969E286F9DCC2505E8925D0F0C571A3BC8B2DA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFinite.lean",
+      "sha256": "071F8B65D67946F0C39E602FFDAAF0A8D3C40E84C4ACD308EF7200742A523169",
+      "oleanSha256": "6528FB6EEB38E758C843FFE62A3B39C399D647589455CA2707ACAA2A158AD620"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneHeckeCharacter.lean",
+      "sha256": "40EAA0B5AB12C906412F02BB640A0C97D9D9AFC4063CF4D68BEEB19148C51AFE",
+      "oleanSha256": "B839BD36050FD9F0CA8F9B2150E80E5A9EF066F88071B100A79DE4E3FEEC1FC9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneH1Realization.lean",
+      "sha256": "E74C962B858F431810852B72738BE9C8DB9D55D02ED0E35155456D8BBF003748",
+      "oleanSha256": "E5AE1A5FC6D6812684084F09DC6F12C7D0DEDA58CF96B7D9291216D2BB79EFE1"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceGammaOneOriginalHeckeWord_val",
+    "Dubon2026.sourceGammaOneHeckeWord_transfer",
+    "Dubon2026.sourceGammaOneOriginalHeckeWord_change",
+    "Dubon2026.sourceGammaOneHeckeWord_modulus_zero",
+    "Dubon2026.sourceGammaOneHeckeWord_modulus_kernel",
+    "Dubon2026.sourceGammaOneToModulus_comp",
+    "Dubon2026.sourceGammaOneConstantH1_finite",
+    "Dubon2026.sourceGammaOneHeckeAlgebra_finite",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeCharacter_comp",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeCharacter_hecke",
+    "Dubon2026.sourcePrimitive_exists_gammaOneH1HeckeCharacters",
+    "Dubon2026.sourceGammaOneHeckePrimeForget",
+    "Dubon2026.sourceGammaOnePrimeOperators",
+    "Dubon2026.sourceGammaOneHeckeAlgebra",
+    "Dubon2026.sourceGammaOneOriginalHeckeWord",
+    "Dubon2026.sourceGammaOneToModulus",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeCharacter",
+    "Dubon2026.sourcePrimitiveGammaOneH1CharacterData"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceGammaOneOriginalHeckeWord_val",
+    "Dubon2026.sourceGammaOneHeckeWord_transfer",
+    "Dubon2026.sourceGammaOneOriginalHeckeWord_change",
+    "Dubon2026.sourceGammaOneHeckeWord_modulus_zero",
+    "Dubon2026.sourceGammaOneHeckeWord_modulus_kernel",
+    "Dubon2026.sourceGammaOneToModulus_comp",
+    "Dubon2026.sourceGammaOneConstantH1_finite",
+    "Dubon2026.sourceGammaOneHeckeAlgebra_finite",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeCharacter_comp",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeCharacter_hecke",
+    "Dubon2026.sourcePrimitive_exists_gammaOneH1HeckeCharacters"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceGammaOneHeckePrimeForget",
+    "Dubon2026.sourceGammaOnePrimeOperators",
+    "Dubon2026.sourceGammaOneHeckeAlgebra",
+    "Dubon2026.sourceGammaOneOriginalHeckeWord",
+    "Dubon2026.sourceGammaOneToModulus",
+    "Dubon2026.sourcePrimitiveGammaOneHeckeCharacter",
+    "Dubon2026.sourcePrimitiveGammaOneH1CharacterData"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneCharacterAudit5b.log",
+  "logSha256": "6933C7CE6E11A3422CA67BFC54A1E57BD157C716E6C46E317FE312770028109E",
+  "auditSha256": "9C8687167C0024BA332A34100A2B1EFD00F71981595EB3B3E4BD22E92AB431D1",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 52,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 29,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveGammaOneCharacterDependencyAudit5b.log",
+  "dependencyAuditSha256": "1989A4A045D5FCAE3A5B479010BB090F31125925885F936A7FEA252B8F730E40",
+  "dependencyAuditSourceSha256": "9E1416848ED9E3F701B797C6F6ECDC08336329636E1995E69744E66AC65307E3",
+  "consumers": [
+    "Dubon2026.sourcePrimitive_exists_gammaOneH1HeckeCharacters"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> automorphy -> original all-weight characteristic-zero Galois association -> actual Gamma1 geometric realization -> original finite Fourier-valued characters on actual Gamma1 Hecke operators",
+  "discharged": "Construct actual Gamma1 Hecke characters at each positive prime-power precision with the same original Fourier values away from level and modulus; derive word-relation descent from the actual surjective transfer.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Arithmetic geometric and diamond comparison, finite Galois realization and the compatible original all-weight characteristic-zero association remain required; finite characters alone do not give a characteristic-zero point. DUB-17--20 OPEN;16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-gamma-one-character-5b-reuse-review-20261026.json",
+  "reuseReviewSha256": "4584C7939AFC8C3048F934B62B5E5207173630AB125A39EDE799C15FD453DC4C",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

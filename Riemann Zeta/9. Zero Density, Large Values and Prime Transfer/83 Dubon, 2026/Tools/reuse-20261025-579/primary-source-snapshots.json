@@ -1,0 +1,356 @@
+{
+  "fetchedUTC": "2026-10-26T00:25:06.632284+00:00",
+  "files": [
+    {
+      "repo": "lioristhmus/ramanujan-petersson",
+      "commit": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/lioristhmus/ramanujan-petersson/8a3653c935925d7adc88c8312ac1820c13a7bcca/README.md",
+      "snapshot": "lioristhmus__ramanujan-petersson\\README.md.txt",
+      "sha256": "C49F95555939039C658AF6EBC82F895DD1094FA3CB42C787DB3F133AE671F784",
+      "bytes": 2496
+    },
+    {
+      "repo": "lioristhmus/ramanujan-petersson",
+      "commit": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "path": "lean/Main.lean",
+      "url": "https://raw.githubusercontent.com/lioristhmus/ramanujan-petersson/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/Main.lean",
+      "snapshot": "lioristhmus__ramanujan-petersson\\lean\\Main.lean.txt",
+      "sha256": "3691637FCD68632A984BCA63A7EED9ADA0E3C205539DCBF98361D7CC6D5CE63F",
+      "bytes": 96
+    },
+    {
+      "repo": "lioristhmus/ramanujan-petersson",
+      "commit": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "path": "lean/README.md",
+      "url": "https://raw.githubusercontent.com/lioristhmus/ramanujan-petersson/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/README.md",
+      "snapshot": "lioristhmus__ramanujan-petersson\\lean\\README.md.txt",
+      "sha256": "4A6436422182D9BF12B2F6E86DDE003313D251D22F2B68EB07B42BB0542CEFFA",
+      "bytes": 1220
+    },
+    {
+      "repo": "lioristhmus/ramanujan-petersson",
+      "commit": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "path": "lean/RamanujanPetersson.lean",
+      "url": "https://raw.githubusercontent.com/lioristhmus/ramanujan-petersson/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/RamanujanPetersson.lean",
+      "snapshot": "lioristhmus__ramanujan-petersson\\lean\\RamanujanPetersson.lean.txt",
+      "sha256": "A98F8108AEC2C7AF222B68DEBFD2AE5B09C07C912656142E26D5325843990583",
+      "bytes": 365
+    },
+    {
+      "repo": "lioristhmus/ramanujan-petersson",
+      "commit": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "path": "lean/RamanujanPetersson/Autoformalized.lean",
+      "url": "https://raw.githubusercontent.com/lioristhmus/ramanujan-petersson/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/RamanujanPetersson/Autoformalized.lean",
+      "snapshot": "lioristhmus__ramanujan-petersson\\lean\\RamanujanPetersson\\Autoformalized.lean.txt",
+      "sha256": "43002778095C1014CA56A9D0138EEF75FE0C7E7AF77E7F24D83C2ACD7FEDD382",
+      "bytes": 946
+    },
+    {
+      "repo": "lioristhmus/ramanujan-petersson",
+      "commit": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "path": "lean/RamanujanPetersson/Basic.lean",
+      "url": "https://raw.githubusercontent.com/lioristhmus/ramanujan-petersson/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/RamanujanPetersson/Basic.lean",
+      "snapshot": "lioristhmus__ramanujan-petersson\\lean\\RamanujanPetersson\\Basic.lean.txt",
+      "sha256": "B0B517FFA9CF700F24295BC1A3D33053A1D43F5C65AC9EDD5A15823B494D96C0",
+      "bytes": 144
+    },
+    {
+      "repo": "lioristhmus/ramanujan-petersson",
+      "commit": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "path": "lean/RamanujanPetersson/Corollary53.lean",
+      "url": "https://raw.githubusercontent.com/lioristhmus/ramanujan-petersson/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/RamanujanPetersson/Corollary53.lean",
+      "snapshot": "lioristhmus__ramanujan-petersson\\lean\\RamanujanPetersson\\Corollary53.lean.txt",
+      "sha256": "963E604541E50C2D4639F4531ACD896C3237AC4FCA2D29D6F6401CDBA87FB250",
+      "bytes": 2114
+    },
+    {
+      "repo": "lioristhmus/ramanujan-petersson",
+      "commit": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "path": "lean/RamanujanPetersson/Corollary53Coprime.lean",
+      "url": "https://raw.githubusercontent.com/lioristhmus/ramanujan-petersson/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/RamanujanPetersson/Corollary53Coprime.lean",
+      "snapshot": "lioristhmus__ramanujan-petersson\\lean\\RamanujanPetersson\\Corollary53Coprime.lean.txt",
+      "sha256": "E8A4F550046093AEF40AEE0B0F9397998AB028454DC4BDC9DD99A3EDA9E85B7C",
+      "bytes": 1960
+    },
+    {
+      "repo": "lioristhmus/ramanujan-petersson",
+      "commit": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "path": "lean/RamanujanPetersson/PaperFaithfulCore.lean",
+      "url": "https://raw.githubusercontent.com/lioristhmus/ramanujan-petersson/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/RamanujanPetersson/PaperFaithfulCore.lean",
+      "snapshot": "lioristhmus__ramanujan-petersson\\lean\\RamanujanPetersson\\PaperFaithfulCore.lean.txt",
+      "sha256": "331FED02A275A72C1739BDF29B4A12AC1988E823F80C7961125C883994BEFF90",
+      "bytes": 6573
+    },
+    {
+      "repo": "lioristhmus/ramanujan-petersson",
+      "commit": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "path": "lean/RamanujanPetersson/PaperInterfaces.lean",
+      "url": "https://raw.githubusercontent.com/lioristhmus/ramanujan-petersson/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/RamanujanPetersson/PaperInterfaces.lean",
+      "snapshot": "lioristhmus__ramanujan-petersson\\lean\\RamanujanPetersson\\PaperInterfaces.lean.txt",
+      "sha256": "D2BA954D99D28153BA02038C5CB18C9F3D1D17414C86BB9191306BBFC2A8D302",
+      "bytes": 7203
+    },
+    {
+      "repo": "lioristhmus/ramanujan-petersson",
+      "commit": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "path": "lean/RamanujanPetersson/Theorem21.lean",
+      "url": "https://raw.githubusercontent.com/lioristhmus/ramanujan-petersson/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/RamanujanPetersson/Theorem21.lean",
+      "snapshot": "lioristhmus__ramanujan-petersson\\lean\\RamanujanPetersson\\Theorem21.lean.txt",
+      "sha256": "70D5DA85BC65CCDC8B770DB86DF1D61FF46CC9354BFF09285E2613D15E612285",
+      "bytes": 1057
+    },
+    {
+      "repo": "lioristhmus/ramanujan-petersson",
+      "commit": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "path": "lean/RamanujanPetersson/Theorem31.lean",
+      "url": "https://raw.githubusercontent.com/lioristhmus/ramanujan-petersson/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/RamanujanPetersson/Theorem31.lean",
+      "snapshot": "lioristhmus__ramanujan-petersson\\lean\\RamanujanPetersson\\Theorem31.lean.txt",
+      "sha256": "02483C5E1ACB15FA6C91C4C55FF19A6F9E4025F2AFEAC6EE69CCCA829D3B3391",
+      "bytes": 1360
+    },
+    {
+      "repo": "lioristhmus/ramanujan-petersson",
+      "commit": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "path": "lean/RamanujanPetersson/Theorem41.lean",
+      "url": "https://raw.githubusercontent.com/lioristhmus/ramanujan-petersson/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/RamanujanPetersson/Theorem41.lean",
+      "snapshot": "lioristhmus__ramanujan-petersson\\lean\\RamanujanPetersson\\Theorem41.lean.txt",
+      "sha256": "97CF956F7499C68AE5CB24C92B33658D3296073FC9F4765E00A537AAEFD0787A",
+      "bytes": 870
+    },
+    {
+      "repo": "lioristhmus/ramanujan-petersson",
+      "commit": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "path": "lean/blueprint.md",
+      "url": "https://raw.githubusercontent.com/lioristhmus/ramanujan-petersson/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/blueprint.md",
+      "snapshot": "lioristhmus__ramanujan-petersson\\lean\\blueprint.md.txt",
+      "sha256": "FDAF789BE9E9C22867F0B811CCB6DADF820F0B2238912AA75B9CC91B6C3E9438",
+      "bytes": 8756
+    },
+    {
+      "repo": "lioristhmus/ramanujan-petersson",
+      "commit": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "path": "lean/claims.yaml",
+      "url": "https://raw.githubusercontent.com/lioristhmus/ramanujan-petersson/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/claims.yaml",
+      "snapshot": "lioristhmus__ramanujan-petersson\\lean\\claims.yaml.txt",
+      "sha256": "9CABC96AA7E72FECDD014CE9FD0444DE2EA695AB2335F9A325EFCE7D0DDD73D4",
+      "bytes": 6779
+    },
+    {
+      "repo": "lioristhmus/ramanujan-petersson",
+      "commit": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "path": "lean/lake-manifest.json",
+      "url": "https://raw.githubusercontent.com/lioristhmus/ramanujan-petersson/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/lake-manifest.json",
+      "snapshot": "lioristhmus__ramanujan-petersson\\lean\\lake-manifest.json.txt",
+      "sha256": "3332C6E982CBB71780D39FECE50B1F19EA1C76D5E210F4A91B612350542882CB",
+      "bytes": 3232
+    },
+    {
+      "repo": "lioristhmus/ramanujan-petersson",
+      "commit": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "path": "lean/lakefile.lean",
+      "url": "https://raw.githubusercontent.com/lioristhmus/ramanujan-petersson/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/lakefile.lean",
+      "snapshot": "lioristhmus__ramanujan-petersson\\lean\\lakefile.lean.txt",
+      "sha256": "860EB7839B3BA8C00C47DC8FA44BF8D2CAF895146298E89CCBD365E9146624E9",
+      "bytes": 237
+    },
+    {
+      "repo": "lioristhmus/ramanujan-petersson",
+      "commit": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "path": "lean/lean-toolchain",
+      "url": "https://raw.githubusercontent.com/lioristhmus/ramanujan-petersson/8a3653c935925d7adc88c8312ac1820c13a7bcca/lean/lean-toolchain",
+      "snapshot": "lioristhmus__ramanujan-petersson\\lean\\lean-toolchain.txt",
+      "sha256": "D38B3C8975389EEEA5115EA3C4E3875929E8F3CAB9A1B6486C0E7ABD6A2C976B",
+      "bytes": 26
+    },
+    {
+      "repo": "lioristhmus/ramanujan-petersson",
+      "commit": "8a3653c935925d7adc88c8312ac1820c13a7bcca",
+      "path": "ramanujan-petersson.md",
+      "url": "https://raw.githubusercontent.com/lioristhmus/ramanujan-petersson/8a3653c935925d7adc88c8312ac1820c13a7bcca/ramanujan-petersson.md",
+      "snapshot": "lioristhmus__ramanujan-petersson\\ramanujan-petersson.md.txt",
+      "sha256": "5029301AED32152B44D81B695BF9864381D6C3B2950246A364B135974958BBF7",
+      "bytes": 15860
+    },
+    {
+      "repo": "mkaratarakis/CICM24_Deligne",
+      "commit": "8e5b163b30e434e6f68549e9399650923b75fb60",
+      "path": "Frobenius.lean",
+      "url": "https://raw.githubusercontent.com/mkaratarakis/CICM24_Deligne/8e5b163b30e434e6f68549e9399650923b75fb60/Frobenius.lean",
+      "snapshot": "mkaratarakis__CICM24_Deligne\\Frobenius.lean.txt",
+      "sha256": "71BAF583DAA4582E863C5D54A000A4904166E8E8E7D7DB7A4B8B3D5457A01EF6",
+      "bytes": 14408
+    },
+    {
+      "repo": "mkaratarakis/CICM24_Deligne",
+      "commit": "8e5b163b30e434e6f68549e9399650923b75fb60",
+      "path": "GaloisReps.lean",
+      "url": "https://raw.githubusercontent.com/mkaratarakis/CICM24_Deligne/8e5b163b30e434e6f68549e9399650923b75fb60/GaloisReps.lean",
+      "snapshot": "mkaratarakis__CICM24_Deligne\\GaloisReps.lean.txt",
+      "sha256": "58354F0F592EE31A7B8067BC55E23AB0EEFDA76607EF133D4AA203529553DD24",
+      "bytes": 1061
+    },
+    {
+      "repo": "mkaratarakis/CICM24_Deligne",
+      "commit": "8e5b163b30e434e6f68549e9399650923b75fb60",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/mkaratarakis/CICM24_Deligne/8e5b163b30e434e6f68549e9399650923b75fb60/README.md",
+      "snapshot": "mkaratarakis__CICM24_Deligne\\README.md.txt",
+      "sha256": "993C8BF5FC6483EEFD6E52EAEA5324686368F77110873AF6947E7AF9F09A71A9",
+      "bytes": 1479
+    },
+    {
+      "repo": "mkaratarakis/CICM24_Deligne",
+      "commit": "8e5b163b30e434e6f68549e9399650923b75fb60",
+      "path": "Statement.lean",
+      "url": "https://raw.githubusercontent.com/mkaratarakis/CICM24_Deligne/8e5b163b30e434e6f68549e9399650923b75fb60/Statement.lean",
+      "snapshot": "mkaratarakis__CICM24_Deligne\\Statement.lean.txt",
+      "sha256": "B8FE25AFFFFA94ED2F832A6479AAE45BD60291A06D84E1E9CC609311A78B10E9",
+      "bytes": 7748
+    },
+    {
+      "repo": "mkaratarakis/Deligne",
+      "commit": "0a843add06243f16537823f2c802ae2aa57ae395",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/mkaratarakis/Deligne/0a843add06243f16537823f2c802ae2aa57ae395/README.md",
+      "snapshot": "mkaratarakis__Deligne\\README.md.txt",
+      "sha256": "3C4AEC766590B497E6214E239263F553129D769E7BE9BCAEE2552A0BEB2A48BC",
+      "bytes": 1777
+    },
+    {
+      "repo": "mkaratarakis/Deligne",
+      "commit": "0a843add06243f16537823f2c802ae2aa57ae395",
+      "path": "leanpkg.path",
+      "url": "https://raw.githubusercontent.com/mkaratarakis/Deligne/0a843add06243f16537823f2c802ae2aa57ae395/leanpkg.path",
+      "snapshot": "mkaratarakis__Deligne\\leanpkg.path.txt",
+      "sha256": "E214FCBB95BFEF7E2F28D911CE424A68DB52ECC1E9F5BA82ACB80A8FEE444A8A",
+      "bytes": 54
+    },
+    {
+      "repo": "mkaratarakis/Deligne",
+      "commit": "0a843add06243f16537823f2c802ae2aa57ae395",
+      "path": "leanpkg.toml",
+      "url": "https://raw.githubusercontent.com/mkaratarakis/Deligne/0a843add06243f16537823f2c802ae2aa57ae395/leanpkg.toml",
+      "snapshot": "mkaratarakis__Deligne\\leanpkg.toml.txt",
+      "sha256": "CCB25F1FEBA0E0D8E29DD506982AE87D6DD651760A8AE92745C7844DA972BFAA",
+      "bytes": 239
+    },
+    {
+      "repo": "mkaratarakis/Deligne",
+      "commit": "0a843add06243f16537823f2c802ae2aa57ae395",
+      "path": "src/galois_representations.lean",
+      "url": "https://raw.githubusercontent.com/mkaratarakis/Deligne/0a843add06243f16537823f2c802ae2aa57ae395/src/galois_representations.lean",
+      "snapshot": "mkaratarakis__Deligne\\src\\galois_representations.lean.txt",
+      "sha256": "0FF0818DB1BA068A52BDB5022DB9CDC286547D0759D79D093D19BBC90FF604EE",
+      "bytes": 636
+    },
+    {
+      "repo": "mkaratarakis/Deligne",
+      "commit": "0a843add06243f16537823f2c802ae2aa57ae395",
+      "path": "src/ramification.lean",
+      "url": "https://raw.githubusercontent.com/mkaratarakis/Deligne/0a843add06243f16537823f2c802ae2aa57ae395/src/ramification.lean",
+      "snapshot": "mkaratarakis__Deligne\\src\\ramification.lean.txt",
+      "sha256": "6CD256A9A104E2AA70D6E73DBE33E6C2D8CC5B620780EC2441A38726294C6EE9",
+      "bytes": 8944
+    },
+    {
+      "repo": "tianyipeng/fermats-last-theorem",
+      "commit": "9e5f05a13048588eeef806e16f4cb2161801bc8a",
+      "path": "Definitions/Def_CuspForm_HeckeGaloisRepDatum.lean",
+      "url": "https://raw.githubusercontent.com/tianyipeng/fermats-last-theorem/9e5f05a13048588eeef806e16f4cb2161801bc8a/Definitions/Def_CuspForm_HeckeGaloisRepDatum.lean",
+      "snapshot": "tianyipeng__fermats-last-theorem\\Definitions\\Def_CuspForm_HeckeGaloisRepDatum.lean.txt",
+      "sha256": "EC45C4013D6EB69BF9E76A13EBEEAB9D7E976E59640DA8AF7F40A3EE04913D91",
+      "bytes": 1635
+    },
+    {
+      "repo": "tianyipeng/fermats-last-theorem",
+      "commit": "9e5f05a13048588eeef806e16f4cb2161801bc8a",
+      "path": "Definitions/Def_GaloisRep_DeligneOrdinaryShape.lean",
+      "url": "https://raw.githubusercontent.com/tianyipeng/fermats-last-theorem/9e5f05a13048588eeef806e16f4cb2161801bc8a/Definitions/Def_GaloisRep_DeligneOrdinaryShape.lean",
+      "snapshot": "tianyipeng__fermats-last-theorem\\Definitions\\Def_GaloisRep_DeligneOrdinaryShape.lean.txt",
+      "sha256": "DB6F387DEFD528D1ABED13CD80C8B3253623504DFF186F5A57E51655B594D33D",
+      "bytes": 738
+    },
+    {
+      "repo": "tianyipeng/fermats-last-theorem",
+      "commit": "9e5f05a13048588eeef806e16f4cb2161801bc8a",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/tianyipeng/fermats-last-theorem/9e5f05a13048588eeef806e16f4cb2161801bc8a/LICENSE",
+      "snapshot": "tianyipeng__fermats-last-theorem\\LICENSE.txt",
+      "sha256": "746BC52848EABF8765635FE532E0680756A10B18E7B3FB26E7433AB4EDF34034",
+      "bytes": 11345
+    },
+    {
+      "repo": "tianyipeng/fermats-last-theorem",
+      "commit": "9e5f05a13048588eeef806e16f4cb2161801bc8a",
+      "path": "P2M/Sol/S_CuspForm_exists_galoisRep_of_point.lean",
+      "url": "https://raw.githubusercontent.com/tianyipeng/fermats-last-theorem/9e5f05a13048588eeef806e16f4cb2161801bc8a/P2M/Sol/S_CuspForm_exists_galoisRep_of_point.lean",
+      "snapshot": "tianyipeng__fermats-last-theorem\\P2M\\Sol\\S_CuspForm_exists_galoisRep_of_point.lean.txt",
+      "sha256": "E922C5B4816F8DDC33B2DB36BC416474F3AC9AF7B5BBD3CE1F0BA19D2AED8A2E",
+      "bytes": 34910
+    },
+    {
+      "repo": "tianyipeng/fermats-last-theorem",
+      "commit": "9e5f05a13048588eeef806e16f4cb2161801bc8a",
+      "path": "P2M/Sol/S_CuspForm_exists_galoisRep_of_point_stableLine_frobenius_sub_smul_mem_of_not_dvd.lean",
+      "url": "https://raw.githubusercontent.com/tianyipeng/fermats-last-theorem/9e5f05a13048588eeef806e16f4cb2161801bc8a/P2M/Sol/S_CuspForm_exists_galoisRep_of_point_stableLine_frobenius_sub_smul_mem_of_not_dvd.lean",
+      "snapshot": "tianyipeng__fermats-last-theorem\\P2M\\Sol\\S_CuspForm_exists_galoisRep_of_point_stableLine_frobenius_sub_smul_mem_of_not_dvd.lean.txt",
+      "sha256": "BFB0D5353ABA30FC051348CD0962711C6B0ABC479321B22084ACE75CC72555DF",
+      "bytes": 30631
+    },
+    {
+      "repo": "tianyipeng/fermats-last-theorem",
+      "commit": "9e5f05a13048588eeef806e16f4cb2161801bc8a",
+      "path": "P2M/Sol/S_CuspForm_exists_galoisRep_of_point_tateModule_jZero_quotient.lean",
+      "url": "https://raw.githubusercontent.com/tianyipeng/fermats-last-theorem/9e5f05a13048588eeef806e16f4cb2161801bc8a/P2M/Sol/S_CuspForm_exists_galoisRep_of_point_tateModule_jZero_quotient.lean",
+      "snapshot": "tianyipeng__fermats-last-theorem\\P2M\\Sol\\S_CuspForm_exists_galoisRep_of_point_tateModule_jZero_quotient.lean.txt",
+      "sha256": "5B154C1026951AAF934B640BBC8E494F8D1D0B828666D6F87F2A384058EA375A",
+      "bytes": 37245
+    },
+    {
+      "repo": "tianyipeng/fermats-last-theorem",
+      "commit": "9e5f05a13048588eeef806e16f4cb2161801bc8a",
+      "path": "P2M/Sol/S_PDivisibleGroup_exists_basis_padicComplex_tateModule_eq_cyclotomicCharacter_pow_smul_of_hasDimension_of_ringOfIntegers.lean",
+      "url": "https://raw.githubusercontent.com/tianyipeng/fermats-last-theorem/9e5f05a13048588eeef806e16f4cb2161801bc8a/P2M/Sol/S_PDivisibleGroup_exists_basis_padicComplex_tateModule_eq_cyclotomicCharacter_pow_smul_of_hasDimension_of_ringOfIntegers.lean",
+      "snapshot": "tianyipeng__fermats-last-theorem\\P2M\\Sol\\S_PDivisibleGroup_exists_basis_padicComplex_tateModule_eq_cyclotomicCharacter_pow_smul_of_hasDimension_of_ringOfIntegers.lean.txt",
+      "sha256": "330B48554E7E4B4B65E189837427074666621FB42B6F18E1A525E0F5980B6C2B",
+      "bytes": 54613
+    },
+    {
+      "repo": "tianyipeng/fermats-last-theorem",
+      "commit": "9e5f05a13048588eeef806e16f4cb2161801bc8a",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/tianyipeng/fermats-last-theorem/9e5f05a13048588eeef806e16f4cb2161801bc8a/README.md",
+      "snapshot": "tianyipeng__fermats-last-theorem\\README.md.txt",
+      "sha256": "0FCDF6AFA3426EA60BEF8C5E21CBABAF59ECF90F20CE3982471CB46CA6DC78FF",
+      "bytes": 8416
+    },
+    {
+      "repo": "tianyipeng/fermats-last-theorem",
+      "commit": "9e5f05a13048588eeef806e16f4cb2161801bc8a",
+      "path": "Theorems/Thm_CuspForm_exists_galoisRep_of_point.lean",
+      "url": "https://raw.githubusercontent.com/tianyipeng/fermats-last-theorem/9e5f05a13048588eeef806e16f4cb2161801bc8a/Theorems/Thm_CuspForm_exists_galoisRep_of_point.lean",
+      "snapshot": "tianyipeng__fermats-last-theorem\\Theorems\\Thm_CuspForm_exists_galoisRep_of_point.lean.txt",
+      "sha256": "8119FE2ED0B7EF1A03CDC778E16ECB458ABC4F4EB151214D5D3EA8CA8CFAE127",
+      "bytes": 28302
+    },
+    {
+      "repo": "tianyipeng/fermats-last-theorem",
+      "commit": "9e5f05a13048588eeef806e16f4cb2161801bc8a",
+      "path": "Theorems/Thm_CuspForm_exists_galoisRep_of_point_stableLine_frobenius_sub_smul_mem_of_not_dvd.lean",
+      "url": "https://raw.githubusercontent.com/tianyipeng/fermats-last-theorem/9e5f05a13048588eeef806e16f4cb2161801bc8a/Theorems/Thm_CuspForm_exists_galoisRep_of_point_stableLine_frobenius_sub_smul_mem_of_not_dvd.lean",
+      "snapshot": "tianyipeng__fermats-last-theorem\\Theorems\\Thm_CuspForm_exists_galoisRep_of_point_stableLine_frobenius_sub_smul_mem_of_not_dvd.lean.txt",
+      "sha256": "3BED2984E3BD5CC4A2E94ABB8C5C7F30BA65C60242712145C89019FA58FB5339",
+      "bytes": 29390
+    },
+    {
+      "repo": "tianyipeng/fermats-last-theorem",
+      "commit": "9e5f05a13048588eeef806e16f4cb2161801bc8a",
+      "path": "Theorems/Thm_CuspForm_exists_galoisRep_of_point_tateModule_jZero_quotient.lean",
+      "url": "https://raw.githubusercontent.com/tianyipeng/fermats-last-theorem/9e5f05a13048588eeef806e16f4cb2161801bc8a/Theorems/Thm_CuspForm_exists_galoisRep_of_point_tateModule_jZero_quotient.lean",
+      "snapshot": "tianyipeng__fermats-last-theorem\\Theorems\\Thm_CuspForm_exists_galoisRep_of_point_tateModule_jZero_quotient.lean.txt",
+      "sha256": "1F6BED08377524AAD2F1DBDDE66A88BF783BEAE991128D06E74ABC4CE6272DAF",
+      "bytes": 25395
+    }
+  ]
+}

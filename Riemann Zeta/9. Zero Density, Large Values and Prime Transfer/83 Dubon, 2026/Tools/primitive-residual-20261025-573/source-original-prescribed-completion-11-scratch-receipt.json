@@ -1,0 +1,153 @@
+{
+  "recordedUTC": "2026-10-25T22:17:50.854926+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourcePrescribedReductionPrime",
+    "SourceAdicCoefficientResidueComparison",
+    "SourcePrescribedCompletionResidue",
+    "SourceReductionCompletionBasePrime",
+    "SourceReductionCompletionPadicMap",
+    "SourceReductionCompletionFinite",
+    "SourcePadicCompletionValuation",
+    "SourceReductionCompletionLocalStructures",
+    "SourceOriginalPrescribedReductionResidual",
+    "SourceOriginalExactReductionResidual",
+    "SourceOriginalAlgebraicIntegerResidual"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrescribedReductionPrime.lean",
+      "sha256": "15665F94824911A5CE79890E906835AB43A89EEBAFFD457119EC2780048409A3",
+      "oleanSha256": "50075CCA4711627DDC0EA50A76CFD6CDF8642E1B4568596B034E7948229BF231"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAdicCoefficientResidueComparison.lean",
+      "sha256": "D815629C322A21A2A79278CD8B4D1DF86A2ADF82646693F9F34658B6DE26F7E6",
+      "oleanSha256": "E313807DA50DE99C3C9AEBDE171CA7FF91D4DD2C77BF257D6F22E270CC900F43"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrescribedCompletionResidue.lean",
+      "sha256": "8464B555CE0ED7DE6CED2F4D76ECD9B3ABE0FF83E82FABFDA652E16D297052AD",
+      "oleanSha256": "8BB900916DF8008C96F331CE078E21813C2F6DE780CB071375CEB0BF11A27046"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionCompletionBasePrime.lean",
+      "sha256": "150F99A5B9DC276596D798AD99B73248BAA48950143948BE7539CF7BC6CAFBE4",
+      "oleanSha256": "578EA92163B9D797D4FCDF11C7F6A6895C939618F9DD113433C896D5F2B0980C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionCompletionPadicMap.lean",
+      "sha256": "2F11A1502300B6403BF5D224432B27F429E888FE7108B48C554C57B730B6A9E9",
+      "oleanSha256": "98D317A29287AA0C6845B66BEED37E2A6460224A78773AF8A939EE7EBEECEF5E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionCompletionFinite.lean",
+      "sha256": "5C166ABF639EEBE07C95ABE09686D28AA1C15F26FF4537368C6E575C2AE686C2",
+      "oleanSha256": "246C014FCB1384C57A32824E1D6D85A1773CCFECB343493C1D5AF275412D2EB0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePadicCompletionValuation.lean",
+      "sha256": "146F370D05F4B3AF9AD4E7A1F34C08523B2ED950998531E20451F5301480FB4F",
+      "oleanSha256": "41E661E21F3F9A3FB37CA52DAD72EBB7776BC28A0F0F90C13CD2D9E1A085FBD1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceReductionCompletionLocalStructures.lean",
+      "sha256": "45E6ED484C161E8946A9A87A4973DF6722BBB7C4462D6D65292C998F87A057EB",
+      "oleanSha256": "5A0473804776547D35DC88CDB9DBB9ADCD661C1ACEC246C063A9C744C4791C3B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedReductionResidual.lean",
+      "sha256": "9C91569C6F1DEF22CB77522855ADA5371637D4B0076930413CF7C89736069E35",
+      "oleanSha256": "656E85831D00B874ABB01C89E0586725E18A529BCAF5F5B8C19C882AD020CC09"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalExactReductionResidual.lean",
+      "sha256": "4487D0E4F527DDCCC8CE020FDFB2A5931D25CB1F9F7E6AA5901E8B101A12F58F",
+      "oleanSha256": "0FFF482C449BE7C2729229046E9B1FEE3629E25C5A7F0CE064D393318F541C83"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalAlgebraicIntegerResidual.lean",
+      "sha256": "586C53C9FD3C5686D5537D8262B98D4717E8BF1A7A2EB752F7987BB79329F864",
+      "oleanSha256": "D4943945DDA862A5806D6F470C824A71858C11CB26F92DFBF2B5D36EF64CBB5C"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceReductionPrime_prime_mem",
+    "Dubon2026.sourceReductionPrime_below",
+    "Dubon2026.sourceAdicCoefficientResidueEquiv_mk",
+    "Dubon2026.sourcePrescribedCompletionResidueMap_integer",
+    "Dubon2026.sourcePrescribedCompletionResidueMap_injective",
+    "Dubon2026.sourceReductionPrime_rationalBelow",
+    "Dubon2026.sourceReductionPrime_liesOver_rational",
+    "Dubon2026.sourceReductionCompletionPadicMap_continuous",
+    "Dubon2026.sourceReductionCompletionPadicMap_rational",
+    "Dubon2026.sourceReductionCompletion_finite",
+    "Dubon2026.sourceReductionCompletion_isModuleTopology",
+    "Dubon2026.sourcePadicCompletionEquiv_mem_integer",
+    "Dubon2026.sourceReductionCompletion_hasExtension",
+    "Dubon2026.sourceReductionCompletion_isNonarchimedeanLocalField",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_numberField_reduction_residual_realization",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_reduction_residual_realization",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_algebraicInteger_reduction_residual_realization",
+    "Dubon2026.sourceReductionPrime",
+    "Dubon2026.sourceAdicCoefficientResidueEquiv",
+    "Dubon2026.sourcePrescribedCompletionResidueMap",
+    "Dubon2026.sourceReductionCompletionPadicMap"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceReductionPrime_prime_mem",
+    "Dubon2026.sourceReductionPrime_below",
+    "Dubon2026.sourceAdicCoefficientResidueEquiv_mk",
+    "Dubon2026.sourcePrescribedCompletionResidueMap_integer",
+    "Dubon2026.sourcePrescribedCompletionResidueMap_injective",
+    "Dubon2026.sourceReductionPrime_rationalBelow",
+    "Dubon2026.sourceReductionPrime_liesOver_rational",
+    "Dubon2026.sourceReductionCompletionPadicMap_continuous",
+    "Dubon2026.sourceReductionCompletionPadicMap_rational",
+    "Dubon2026.sourceReductionCompletion_finite",
+    "Dubon2026.sourceReductionCompletion_isModuleTopology",
+    "Dubon2026.sourcePadicCompletionEquiv_mem_integer",
+    "Dubon2026.sourceReductionCompletion_hasExtension",
+    "Dubon2026.sourceReductionCompletion_isNonarchimedeanLocalField",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_numberField_reduction_residual_realization",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_reduction_residual_realization",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_algebraicInteger_reduction_residual_realization"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceReductionPrime",
+    "Dubon2026.sourceAdicCoefficientResidueEquiv",
+    "Dubon2026.sourcePrescribedCompletionResidueMap",
+    "Dubon2026.sourceReductionCompletionPadicMap"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedCompletionAudit11b.log",
+  "logSha256": "A7CB73D8099F58A40D8355E4C3395B1C22862CD0CAA94D4943A50417E2F09F7D",
+  "auditSha256": "7BC435B92F2E7E585B2528D905296967C446B21C011E83E585D9BE6B9E625ECE",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 77,
+  "linterScopes": 11,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 31,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedCompletionDependencyAudit11b.log",
+  "dependencyAuditSha256": "693B701CEB42068955F2C731EF2FBDB2416EEFA4CC3642C46263B98A51930454",
+  "dependencyAuditSourceSha256": "B125489D14F5CF0A27424C28AB8810357F97E5406843C84EC954172295669540",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_algebraicInteger_reduction_residual_realization"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight residual association -> close the weight-two parabolic branch -> actual original primitive residual representation with the prescribed complex algebraic-integer reduction -> choose the Fourier-field completion at the reduction kernel and prove its actual residue embedding and Tate-prime compatibility",
+  "discharged": "The completion, its Tate-prime scalar map, finite-dimensional module topology, nonarchimedean local-field structure and valuation extension are constructed. Its actual residue embedding agrees with the prescribed reduction on every original integer. The actual original Tate/lattice construction therefore gives a finite-image continuous residual representation with the prescribed reduced original coefficient, Frobenius polynomial, trace, determinant and good-prime inertia, without supplying any coefficient completion, embedding, local structure, lattice or compatibility assumption.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Arithmetic quotient and norm-local interface comparisons, closure of the weight-two parabolic branch, final weight twist and support comparison, arithmetic automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-prescribed-completion-11-reuse-review-20261025.json",
+  "reuseReviewSha256": "A86F2FAB06C2E42303CEE6D0C62C62BF9F37698A8F87F45FD58BF62BF4E39300",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "failedAuditLineage": {
+    "documentationRepair": "E:\\Lean\\.tmp\\dubon83\\prescribed-completion-documentation-successor-568b.json",
+    "documentationRepairSha256": "763BA41D7B2D7287AFEC70C98E1FD65810B90D54DC14243ADFE225DF9A9419FB",
+    "failedAuditSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedCompletionAudit11.lean",
+    "failedAuditSourceSha256": "7BC435B92F2E7E585B2528D905296967C446B21C011E83E585D9BE6B9E625ECE",
+    "failedAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedCompletionAudit11.log",
+    "failedAuditLogSha256": "8162DCF1F633087076EC0C6B556EE3C9E822358FD03789EC60E8F92522359448",
+    "reason": "Four missing public definition docstrings repaired after preserving all 44 source/olean/compile snapshots and the original failed audit. The revised proofs and statements are textually unchanged after removing comments. Fresh audits pass; the used failed audit was not rerun."
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "modules": [
+    "SourceGammaOneCoverImage",
+    "SourceGammaOneCoverImageHecke",
+    "SourceGammaOneCoverHeckeTraceCosets",
+    "SourceGammaOneCoverHeckeTraceBaseChange"
+  ],
+  "theorems": [
+    "Dubon2026.sourceGammaOneCoverImage_mem_iff",
+    "Dubon2026.sourceGammaOneCoverImage_of_principal",
+    "Dubon2026.sourceIntegralHeckeConjugate_mem_gammaOneCover_iff",
+    "Dubon2026.sourceHeckeConjugation_mem_gammaOneCover_iff",
+    "Dubon2026.sourceGammaOneCoverHeckeTraceCoset_surjective",
+    "Dubon2026.sourceGammaOneCoverHeckeTraceSubgroup_eq",
+    "Dubon2026.sourceGammaOneCoverHeckeH1Trace_pullback"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.sourceGammaOneCoverImage_mem_iff",
+    "Dubon2026.sourceGammaOneCoverImage_of_principal",
+    "Dubon2026.sourceIntegralHeckeConjugate_mem_gammaOneCover_iff",
+    "Dubon2026.sourceHeckeConjugation_mem_gammaOneCover_iff",
+    "Dubon2026.sourceGammaOneCoverHeckeTraceCoset_surjective",
+    "Dubon2026.sourceGammaOneCoverHeckeTraceSubgroup_eq",
+    "Dubon2026.sourceGammaOneCoverHeckeH1Trace_pullback"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceGammaOneCoverImage_mem_iff",
+    "Dubon2026.sourceGammaOneCoverImage_of_principal",
+    "Dubon2026.sourceIntegralHeckeConjugate_mem_gammaOneCover_iff",
+    "Dubon2026.sourceHeckeConjugation_mem_gammaOneCover_iff",
+    "Dubon2026.sourceGammaOneCoverHeckeTraceCoset_surjective",
+    "Dubon2026.sourceGammaOneCoverHeckeTraceSubgroup_eq",
+    "Dubon2026.sourceGammaOneCoverHeckeH1Trace_pullback",
+    "Dubon2026.sourcePrincipalReduction_surjective",
+    "Dubon2026.sourceHeckeConjugation_exists_lower",
+    "Dubon2026.sourceHeckeH1Trace_pullback",
+    "Dubon2026.sourceGammaOneDiagonalHom_range_finiteIndex"
+  ],
+  "roots": [
+    "Dubon2026.sourceGammaOneCoverHeckeH1Trace_pullback",
+    "Dubon2026.sourceGammaOneCoverHeckeTraceSubgroup_eq"
+  ],
+  "separatelyAxiomChecked": []
+}

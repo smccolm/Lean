@@ -1,0 +1,45 @@
+{
+  "retrievedUTC": "2026-10-26T11:09:23.198059+00:00",
+  "files": [
+    {
+      "repo": "dozenalist/LeanModularForms",
+      "commit": "f737ca88e0887ecbaad3510b30e37042c243fd17",
+      "path": "LeanModularForms/HeckeRIngs/GL2/Gamma1Pair.lean",
+      "url": "https://raw.githubusercontent.com/dozenalist/LeanModularForms/f737ca88e0887ecbaad3510b30e37042c243fd17/LeanModularForms/HeckeRIngs/GL2/Gamma1Pair.lean",
+      "snapshot": "LeanModularForms\\HeckeRIngs\\GL2\\Gamma1Pair.lean.txt",
+      "gitBlob": "1d5c28a30594bfd78195dad493d0f47822277560",
+      "sha256": "52D4056939F3F1CAE9A137B870EA0CA11D8AEDDAF3C26D1A02559A889EE65387",
+      "bytes": 23196
+    },
+    {
+      "repo": "dozenalist/LeanModularForms",
+      "commit": "f737ca88e0887ecbaad3510b30e37042c243fd17",
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeT_p_Gamma1.lean",
+      "url": "https://raw.githubusercontent.com/dozenalist/LeanModularForms/f737ca88e0887ecbaad3510b30e37042c243fd17/LeanModularForms/HeckeRIngs/GL2/HeckeT_p_Gamma1.lean",
+      "snapshot": "LeanModularForms\\HeckeRIngs\\GL2\\HeckeT_p_Gamma1.lean.txt",
+      "gitBlob": "f4d3e02a1891fd95c2ff2b27779ca8ee3f0b00eb",
+      "sha256": "EE219D77495A1DE6E8BB1E16BA485FD25FB9C2E09AF266FC8FE355CDD56DBD15",
+      "bytes": 7321
+    },
+    {
+      "repo": "dozenalist/LeanModularForms",
+      "commit": "f737ca88e0887ecbaad3510b30e37042c243fd17",
+      "path": "LeanModularForms/HeckeRIngs/GL2/CharacterDecomp.lean",
+      "url": "https://raw.githubusercontent.com/dozenalist/LeanModularForms/f737ca88e0887ecbaad3510b30e37042c243fd17/LeanModularForms/HeckeRIngs/GL2/CharacterDecomp.lean",
+      "snapshot": "LeanModularForms\\HeckeRIngs\\GL2\\CharacterDecomp.lean.txt",
+      "gitBlob": "d9e3bac13a916b73cf1884e82233b9b0bb74da3c",
+      "sha256": "10468D61551BEEEB8A92CCCE3A7708FECA298F3AE77457A9276D28129DAA3D8A",
+      "bytes": 23835
+    },
+    {
+      "repo": "dozenalist/LeanModularForms",
+      "commit": "f737ca88e0887ecbaad3510b30e37042c243fd17",
+      "path": "LeanModularForms/HeckeRIngs/GL2/HeckeRingHomCharSpace.lean",
+      "url": "https://raw.githubusercontent.com/dozenalist/LeanModularForms/f737ca88e0887ecbaad3510b30e37042c243fd17/LeanModularForms/HeckeRIngs/GL2/HeckeRingHomCharSpace.lean",
+      "snapshot": "LeanModularForms\\HeckeRIngs\\GL2\\HeckeRingHomCharSpace.lean.txt",
+      "gitBlob": "47a9ff9a705bf34f29bd16a81ab3893379449942",
+      "sha256": "D27B50BE107B20503396404B122BD555E252058CE89EE9682A9B2D32350BDEB2",
+      "bytes": 4450
+    }
+  ]
+}

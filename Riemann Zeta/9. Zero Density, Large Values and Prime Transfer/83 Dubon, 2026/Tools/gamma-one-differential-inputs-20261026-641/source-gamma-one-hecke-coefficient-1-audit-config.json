@@ -1,0 +1,43 @@
+{
+  "modules": [
+    "SourceGammaOneHeckeCoefficientAction"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1_cocycle",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeCocycles_coefficient_left",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeCocycles_coefficient_right",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_coefficient_left",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_coefficient_right",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_coefficient"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1_cocycle",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeCocycles_coefficient_left",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeCocycles_coefficient_right",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_coefficient_left",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_coefficient_right",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1_cocycle",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeCocycles_coefficient_left",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeCocycles_coefficient_right",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_coefficient_left",
+    "Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_coefficient_right",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1",
+    "Dubon2026.sourceGammaOneConstantHeckeH1_cocycle",
+    "groupCohomology.H1\u03c0_comp_map_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_eq",
+    "Rep.trivialFunctor"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1"
+  ],
+  "separatelyAxiomChecked": []
+}

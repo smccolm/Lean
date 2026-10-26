@@ -1,0 +1,26 @@
+{
+  "scope": 587,
+  "scopeIds": [
+    582,
+    583,
+    584,
+    585,
+    586
+  ],
+  "receipts": {
+    "source-binary-prime-power-permutation-5-scratch-receipt.json": "131D80CB8B20E3D334985ED27E816A49B87EB125EBBF4CCA662AEDD7E6582C04",
+    "source-primitive-h1-adic-5-scratch-receipt.json": "35507B2755D1A2A461D5D487913AA2CC6A66FB0F8003002F7A09AB1D66310A36",
+    "source-binary-stabilizer-h1-3-scratch-receipt.json": "0F2EF92CDA71B594734C0C2964B97A7888203148B19F72584FC0627391719161",
+    "source-primitive-h1-congruence-5-scratch-receipt.json": "410DDC92612FC3D1680315BA92F65C0DC97D6F813A76891371BB54F162452ADF",
+    "source-primitive-finite-operator-character-4-scratch-receipt.json": "D8986017528A0357284AE33F6112282F474A767948B3D6FAFE2C81A52A29913E"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> compatible geometric finite-precision Hecke realizations -> actual finite operator characters, original coefficient congruences and finite congruence-stabilizer H1 comparison",
+  "discharged": "For every original primitive form of weight at least two and every prescribed prime, the same original integral H1 Hecke character is valued in its literal Fourier coefficient field and actual local valuation ring. Its finite adic reductions are compatible as whole characters and have the exact original Fourier values. The nonzero faithful character fiber and native finite-lattice integrality prove that original operator congruences force matching character congruences. Every character therefore factors through the actual finite tensor-reduced H1 operator ring, with exact original pullback and prime values. Independently, at every positive power of every prime greater than three, the actual finite binary permutation coefficients map onto original H1 and retain all original prime Hecke transforms. Existing orbit, finite-product and Shapiro maps identify these permutation H1 groups with trivial-coefficient H1 of their actual finite-index congruence stabilizers. All coefficient-field, integrality, finite-residue, adic compatibility, character-kernel and cohomological comparison inputs in these consumers are derived.",
+  "remaining": "The transported stabilizer operators have not yet been identified with arithmetic geometric correspondences. Geometric Galois realization of these finite characters, compatible characteristic-zero association, required local/image/regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. No eigenvector lift, arithmetic Galois action or characteristic-zero deformation point is claimed from the finite constructions alone. 16/20; DUB-17--20 OPEN.",
+  "route": "Reuse the existing integral H1 character, finite Hecke algebra, Fourier field and prescribed-prime completion; native quotient powers, finite-lattice integrality and tensor base change; the existing exact semilinear reduction kernel, faithful character fiber, finite permutation evaluation, Gamma0 H1 surjection, full Hecke naturality, orbit decomposition and Shapiro comparison. Explicit descent arguments avoid elaboration timeouts without changing hypotheses or proof limits. Native finite-index counit and new H2 torsion infrastructure are deferred because they are unnecessary for this route. The renewed primary-source search remains recorded; no external import or root pin change.",
+  "precedingCanonicalScope": 8213,
+  "mathematicalSource": "Frozen Dubon arXiv2609.17875v1; complete original goal unchanged.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false
+}

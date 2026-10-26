@@ -1,0 +1,31 @@
+import Dubon2026.SourceGammaOneCoverImage
+import Dubon2026.SourceGammaOneCoverImageHecke
+import Dubon2026.SourceGammaOneCoverHeckeTraceCosets
+import Dubon2026.SourceGammaOneCoverHeckeTraceBaseChange
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.sourceGammaOneCoverHeckeH1Trace_pullback, `Dubon2026.sourceGammaOneCoverHeckeTraceSubgroup_eq]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneCoverHeckeTraceBaseChange, `Dubon2026.SourceH1TraceBaseChange, `Dubon2026.SourceShapiroH1CosetTrace, `Dubon2026.SourceShapiroH1CocycleComparison, `Dubon2026.SourceNativeCoinductionCosetTrace, `Dubon2026.SourceShapiroH1PullbackNaturality, `Dubon2026.SourceCohomologyTracePullbackCoefficients, `Dubon2026.SourceGammaOneCoverFiniteIndex, `Dubon2026.SourceGammaOneDiagonalHom, `Dubon2026.SourceBinaryPermutationCongruence, `Dubon2026.SourceBinaryPrimePowerPermutation, `Dubon2026.SourcePermutationCoefficientQuotient, `Dubon2026.SourceGammaOneCongruenceCover, `Dubon2026.SourceGammaOneCoverHeckeTraceCosets, `Dubon2026.SourcePrincipalCoprimeReduction, `Dubon2026.SourceGammaOneCoverImageHecke, `Dubon2026.SourceGammaOneCoverImage]
+  let required : Array Name := #[`Dubon2026.sourceGammaOneCoverImage_mem_iff, `Dubon2026.sourceGammaOneCoverImage_of_principal, `Dubon2026.sourceIntegralHeckeConjugate_mem_gammaOneCover_iff, `Dubon2026.sourceHeckeConjugation_mem_gammaOneCover_iff, `Dubon2026.sourceGammaOneCoverHeckeTraceCoset_surjective, `Dubon2026.sourceGammaOneCoverHeckeTraceSubgroup_eq, `Dubon2026.sourceGammaOneCoverHeckeH1Trace_pullback, `Dubon2026.sourcePrincipalReduction_surjective, `Dubon2026.sourceHeckeConjugation_exists_lower, `Dubon2026.sourceHeckeH1Trace_pullback, `Dubon2026.sourceGammaOneDiagonalHom_range_finiteIndex]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE COVER TRACE BASE CHANGE DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual Gamma1 Hecke trace base-change and subgroup-intersection consumers. Only declaration values are traversed. The literal diagonal image has proved congruences and contains the principal subgroup. Coprime principal reduction and the original Hecke conjugation onto the lower subgroup give actual coset surjectivity. Good-prime invertibility identifies the pulled-back subgroup with the actual intersection. The native H1 base-change theorem is applied with these group hypotheses proved, and finite quotient instances are derived. No coset-surjectivity or cohomological comparison is assumed. Trace composition and coefficient compatibility still remain before surjective-transfer Hecke compatibility; arithmetic geometry, Galois realization and higher continuation remain required. DUB-17--20 OPEN; 16/20."
+
+#eval runPlanarPairingDependencyAudit

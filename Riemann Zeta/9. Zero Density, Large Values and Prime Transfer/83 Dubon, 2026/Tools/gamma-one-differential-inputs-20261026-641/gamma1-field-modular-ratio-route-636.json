@@ -1,0 +1,45 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of finite Gamma1 Hecke characters -> Picard/H1 comparison -> actual Gamma1 regular-differential/cusp comparison -> actual equal-weight modular presentation of each field element.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularRatioOperations.lean",
+      "sha256": "CADCE4CFC34F35EA8ABD46D17A65DE35DC2EED445C1E7BE0338D926106DF2CDD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalModularRatios.lean",
+      "sha256": "2ADEABDB68DD725949EF7823DADF69DDA8F559FBE024B101710B642A15F70441"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRatioClosure.lean",
+      "sha256": "DC2DF8D6368EE28EC85E7FF35B0A223155F5F1015397E2F37F8934C16909EF1C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFunctionField.lean",
+      "sha256": "24A29ADCD2672D85C2D2050865E7639E9DEC600A58FC74C63B777DB3293B5D82"
+    }
+  ],
+  "selectedRoute": "Adapt the existing Gamma0 ratio operations only by replacing the subgroup with the actual integral subgroup and deriving the unit period from T membership. Native q-expansion injectivity proves denominator nonvanishing. IntermediateField.adjoin_induction and the proved scalar-extension identity give the final actual field-element presentation. This avoids a new meromorphic realization framework at this stage.",
+  "assumptionsToDischarge": "Every element of functionFieldOver Gamma C is a ratio of genuine same-weight Gamma modular forms with a nonzero denominator whenever T lies in Gamma. The theorem derives the presentation from actual field membership, preserving the exact Laurent q-expansion equality. It applies to Gamma1 and its Hecke intersection; no rational-coefficient converse or bounded-denominator principle is inferred.",
+  "remaining": "Finite-point and cusp regularity estimates and actual cusp realization remain, followed by Picard/H1, full/parabolic and diamond comparisons, arithmetic finite-character realization, original all-weight association, local/image/regularity, automorphy and higher continuation. 16/20; DUB-17--20 OPEN.",
+  "productionStatus": "Scratch development; audits and production promotion pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-prerequisite-reuse-assessment-635.json",
+    "sha256": "DA521DEE73D92F963581463629F7ADE9945514BC9FC5B152A0541584E5139DB6"
+  },
+  "scratchImportClosure": [
+    "SourceGammaOneFieldModularRatio",
+    "SourceGammaOneScalarExtension",
+    "SourceGammaOneFunctionFieldBaseChange",
+    "SourceGammaOneFunctionFieldFinite",
+    "SourceGammaOneRationalRelation",
+    "SourceGammaOneJCoordinate",
+    "SourceGammaOneFunctionField",
+    "SourceGammaOneComplexRatio",
+    "SourceGammaOneComplexRelation",
+    "SourceGammaOneNormRelation",
+    "SourceGammaOneRatioClosure",
+    "SourceGammaOneModularRatios"
+  ]
+}

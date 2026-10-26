@@ -1,0 +1,115 @@
+import Dubon2026.SourceFrickeTorsionTransformationV2
+
+/-! DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight arithmetic
+association -> original finite Gamma1 character realization -> actual
+Picard/H1 and diamond comparison -> regular differential/cusp comparison
+-> rational Fourier structure -> Fricke generators.
+The actual Weierstrass function and its modular transformation are used.
+Adapted from anthropics/fermats-last-theorem, commit
+6e837e75355538c7f80bab5b956861e86c4eacc2, under Apache License 2.0.
+The exact source and license are retained in the project research archives;
+no external theorem or toolchain is imported. -/
+namespace Dubon2026.SourceFricke
+noncomputable section
+open Complex Real PeriodPair Matrix UpperHalfPlane
+open scoped MatrixGroups Manifold ModularForm
+
+open Matrix.SpecialLinearGroup
+
+lemma denom_mapGL_eq_denomZ (γ : SL(2, ℤ)) (τ : ℍ) :
+    denom (mapGL ℝ γ) τ = denomZ γ τ := by
+  simp [denom, denomZ]
+
+/-- Normalized actual Weierstrass function at the specified torsion point. -/
+def wpNormZ (N : ℕ) (a : Fin 2 → ZMod N) (τ : ℍ) : ℂ :=
+  ((2 * (Real.pi : ℂ) * Complex.I) ^ 2)⁻¹ *
+    PeriodPair.weierstrassP (periodPairOfTau τ) (frickeTorsionPt N a τ)
+
+theorem wpNormZ_eq (N : ℕ) (a : Fin 2 → ZMod N) (τ : ℍ) :
+    wpNormZ N a τ = ((2 * (Real.pi : ℂ) * Complex.I) ^ 2)⁻¹ *
+      PeriodPair.weierstrassP (periodPairOfTau τ) (frickeTorsionPt N a τ) := rfl
+
+theorem wpNormZ_slash {N : ℕ} [NeZero N] (a : Fin 2 → ZMod N) (γ : SL(2, ℤ)) (τ : ℍ) :
+    wpNormZ N a (γ • τ) = denomZ γ τ ^ 2 * wpNormZ N (vecMulSL N a γ) τ := by
+  rw [wpNormZ_eq, wpNormZ_eq, weierstrassP_frickeTorsionPt_slash]
+  ring
+
+/-- The normalized Fricke function built from the actual Weierstrass value and modular forms. -/
+def frickeF (N : ℕ) (a : Fin 2 → ZMod N) (τ : ℍ) : ℂ :=
+  -(ModularForm.E₄ τ * ModularForm.E₆ τ / ModularForm.discriminant τ) / 2592 * wpNormZ N a τ
+
+theorem frickeF_slash {N : ℕ} [NeZero N] (a : Fin 2 → ZMod N) (γ : SL(2, ℤ)) (τ : ℍ) :
+    frickeF N a (γ • τ) = frickeF N (vecMulSL N a γ) τ := by
+  have hγ : (mapGL ℝ γ : GL (Fin 2) ℝ) ∈ 𝒮ℒ := ⟨γ, rfl⟩
+  have h4 := SlashInvariantForm.slash_action_eqn'' ModularForm.E₄ hγ τ
+  have h6 := SlashInvariantForm.slash_action_eqn'' ModularForm.E₆ hγ τ
+  have hΔ := SlashInvariantForm.slash_action_eqn'' CuspForm.discriminant hγ τ
+  rw [CuspForm.coe_discriminant] at hΔ
+  rw [show (mapGL ℝ γ) • τ = γ • τ from rfl, denom_mapGL_eq_denomZ] at h4 h6 hΔ
+  have hd : denomZ γ τ ≠ 0 := denomZ_ne_zero γ τ
+  have hΔ0 : ModularForm.discriminant τ ≠ 0 := ModularForm.discriminant_ne_zero τ
+  unfold frickeF
+  rw [h4, h6, hΔ, wpNormZ_slash, zpow_ofNat, zpow_ofNat, zpow_ofNat]
+  field_simp
+
+theorem frickeF_invariant_Gamma {N : ℕ} [NeZero N] (a : Fin 2 → ZMod N) {γ : SL(2, ℤ)}
+    (hγ : γ ∈ CongruenceSubgroup.Gamma N) (τ : ℍ) : frickeF N a (γ • τ) = frickeF N a τ := by
+  rw [frickeF_slash, vecMulSL_of_mem_Gamma a hγ]
+
+lemma vecMulSL_mul (N : ℕ) (a : Fin 2 → ZMod N) (γ δ : SL(2, ℤ)) :
+    vecMulSL N a (γ * δ) = vecMulSL N (vecMulSL N a γ) δ := by
+  have hmap : ((γ * δ : SL(2, ℤ)) : Matrix (Fin 2) (Fin 2) ℤ).map ((↑) : ℤ → ZMod N) =
+      (γ : Matrix (Fin 2) (Fin 2) ℤ).map ((↑) : ℤ → ZMod N) *
+        (δ : Matrix (Fin 2) (Fin 2) ℤ).map ((↑) : ℤ → ZMod N) := by
+    rw [Matrix.SpecialLinearGroup.coe_mul]
+    exact Matrix.map_mul (f := Int.castRingHom (ZMod N))
+  simp only [vecMulSL, hmap, Matrix.vecMul_vecMul]
+
+lemma vecMulSL_one (N : ℕ) (a : Fin 2 → ZMod N) : vecMulSL N a 1 = a := by
+  simp [vecMulSL]
+
+/-- The invertible original modular action on all torsion indices. -/
+def vecMulSLEquiv (N : ℕ) (γ : SL(2, ℤ)) : Equiv.Perm (Fin 2 → ZMod N) where
+  toFun a := vecMulSL N a γ
+  invFun a := vecMulSL N a γ⁻¹
+  left_inv a := by
+    show vecMulSL N (vecMulSL N a γ) γ⁻¹ = a
+    rw [← vecMulSL_mul, mul_inv_cancel, vecMulSL_one]
+  right_inv a := by
+    show vecMulSL N (vecMulSL N a γ⁻¹) γ = a
+    rw [← vecMulSL_mul, inv_mul_cancel, vecMulSL_one]
+
+lemma vecMulSL_zero (N : ℕ) (γ : SL(2, ℤ)) : vecMulSL N 0 γ = 0 := by
+  funext j; simp [vecMulSL_apply]
+
+lemma vecMulSL_ne_zero {N : ℕ} {a : Fin 2 → ZMod N} (ha : a ≠ 0) (γ : SL(2, ℤ)) :
+    vecMulSL N a γ ≠ 0 := by
+  intro h
+  apply ha
+  have := congrArg (fun b ↦ vecMulSL N b γ⁻¹) h
+  simpa [← vecMulSL_mul, vecMulSL_one, vecMulSL_zero] using this
+
+/-- The nonzero torsion indices used by the Fricke family. -/
+abbrev FrickeIdx (N : ℕ) : Type := {a : Fin 2 → ZMod N // a ≠ 0}
+
+/-- The finite nonzero torsion-index family at a positive level. -/
+scoped instance (N : ℕ) [NeZero N] : Fintype (FrickeIdx N) := by unfold FrickeIdx; infer_instance
+
+/-- The original modular action restricted to nonzero torsion indices. -/
+def frickeIdxPerm (N : ℕ) (γ : SL(2, ℤ)) : Equiv.Perm (FrickeIdx N) :=
+  (vecMulSLEquiv N γ).subtypeEquiv fun a ↦
+    ⟨fun ha ↦ vecMulSL_ne_zero ha γ, fun h ha ↦ h (by rw [ha]; exact vecMulSL_zero N γ)⟩
+
+theorem frickeF_hperm {N : ℕ} [NeZero N] (γ : SL(2, ℤ)) :
+    ∃ σ : Equiv.Perm (FrickeIdx N), ∀ (i : FrickeIdx N) (τ : ℍ),
+      frickeF N i.1 (γ • τ) = frickeF N (σ i).1 τ :=
+  ⟨frickeIdxPerm N γ, fun i τ ↦ frickeF_slash i.1 γ τ⟩
+
+theorem frickeF_neg {N : ℕ} [NeZero N] (a : Fin 2 → ZMod N) :
+    frickeF N (-a) = frickeF N a := by
+  funext τ
+  simp only [frickeF, wpNormZ, weierstrassP_frickeTorsionPt_neg]
+
+
+end
+end Dubon2026.SourceFricke

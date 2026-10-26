@@ -1,0 +1,36 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of original finite Gamma1 Hecke characters -> geometric/H1 comparison retaining original homogeneous coefficients -> exact geometric group maps and their native H1 pullback/trace.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\OriginalGroupCohomologyReindex.lean",
+      "sha256": "FF5D4B6DF85061DA954C0ABDAC083453C63FC0D00679732411C14F2EF59010B6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneConstantHecke.lean",
+      "sha256": "B1CDE3537D1064DBDFF2CDA2DDF4BB470D3AE61612009D14BA8B5C441B6645C5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeSubgroup.lean",
+      "sha256": "3518F8C38303371FA5BDC0730BB37915A8F2E7ABFD7C7174CFC6A7AA428139E5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneSubgroupCohomologyMap.lean",
+      "sha256": "D84F071818EF949641FB1FEE7228CE061EF5669229BD32AA280512E6CA527575"
+    }
+  ],
+  "primaryReview": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-h1-geometric-reuse-assessment-628.json",
+    "sha256": "D33794F9D6D683460178F0F6983835A72E797DDF7BF5D209F108F9E33C799191"
+  },
+  "selectedRoute": "Use the audited actual upper/geometric subgroup isomorphism. The geometric inclusion and integral level-raising group maps are explicit and the latter is injective. Its analytic matrix/action identity follows from the existing original identity. Define its trace by the actual subgroup factorization and native cohomology reindexing. Native cohomology map composition proves exact equality with the original Gamma1 H1 Hecke operator for every explicit coefficient endomorphism, so the original homogeneous matrix action is retained.",
+  "assumptionsToDischarge": "No group-map preservation, group injectivity, analytic intertwining, pullback composition or H1 operator-comparison hypothesis remains between these two literal cohomological correspondences.",
+  "remaining": "The cohomological equality does not identify the actual Picard operator with H1. The full/parabolic distinction, transpose/diamond conventions, arithmetic Galois realization of finite characters, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher continuation remain required. No characteristic-zero lift is inferred from finite characters. 16/20; DUB-17--20 OPEN.",
+  "productionStatus": "Scratch development; audits and production promotion pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "scratchImportClosure": [
+    "SourceGammaOneGeometricCohomology",
+    "SourceGammaOneHeckeGeometricSubgroup",
+    "SourceGammaOneModularStretch"
+  ]
+}

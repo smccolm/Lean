@@ -1,0 +1,92 @@
+{
+  "scope": 572,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual all-weight Galois association with fixed determinant -> global cyclotomic determinant of the same original residual representation",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ChebotarevRationalPrime.lean",
+      "sha256": "F2B632D9E224385F9B1BCC994CD5145AE05AEBC21C77322D7A03ED9DE9DF3C2E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\RationalArithmeticNormFrobenius.lean",
+      "sha256": "E11237C13E45C1A718C18F66A1F0A17C447CDA456C182983F73E1FD64E736363"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\RationalPrimeFiniteTameGenerator.lean",
+      "sha256": "681CE5BA021C69EEAE7B42DBD7AB9D9E21584DBDE8C2E817AFED76ADF7331A34"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceArithmeticWeightTwist.lean",
+      "sha256": "8E577740EB8837DDD1D2D17CD0752ECF21445E9023060F3A0026DC1D262C3CCE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveResidualGaloisCharP.lean",
+      "sha256": "9FF5AD8AC5D0CE83E801E98883256DBBF47773F4E93B32F87410B81B9FF09BFC"
+    }
+  ],
+  "shorterRoute": "Reuse the existing finite-factor Chebotarev theorem and actual norm-residue Frobenius lift to compare the determinant and cyclotomic characters. No new density theorem or Galois topology is needed. Apply this to the same representation returned by the completed original-support prescribed-prime residual consumer.",
+  "assumptionsToDischarge": "Global determinant compatibility is proved from the exact original good-prime Frobenius determinant. The terminal consumer starts with the original primitive form, weight at least two and prescribed rational prime; it constructs the local field and residue characteristic, retains original Fourier traces and good-prime inertia, and proves determinant equals the original cyclotomic character to power k-1.",
+  "remaining": "All-weight adic realization and required local, image and regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "scratchImportClosure": [
+    "SourcePrimitiveResidualGlobalDeterminant",
+    "SourceResidualCyclotomicDeterminant",
+    "SourceArithmeticCharacterFrobeniusEquality",
+    "SourcePrimitiveResidualGaloisCharP",
+    "SourcePrimitiveOriginalResidualGalois",
+    "SourcePrimitiveRestoredGalois",
+    "SourcePrimitiveWeightTwoGalois",
+    "SourceResidualGaloisRealization",
+    "SourceParabolicArithmeticResidual",
+    "SourceOriginalDivisorArithmeticResidual",
+    "SourceArithmeticSupportInflationValues",
+    "SourceOriginalArithmeticResidual",
+    "SourceArithmeticLocalEmbeddingExtension",
+    "SourceAbsoluteArithmeticRestriction",
+    "SourceRationalLocalValuation",
+    "SourceNormValuationRestriction",
+    "SourceValuationResidualAction",
+    "SourceAbsoluteArithmeticDescent",
+    "SourceNumberFieldSupportRamification",
+    "SourceAbsoluteFiniteUnramified",
+    "SourceNumberFieldNormInertiaLift",
+    "SourceOriginalNormLocalResidual",
+    "SourceOriginalAlgebraicIntegerResidual",
+    "SourceOriginalExactReductionResidual",
+    "SourceOriginalPrescribedReductionResidual",
+    "SourceRankTwoCharpolyCoefficients",
+    "SourcePrescribedCompletionResidue",
+    "SourceAdicCoefficientResidueComparison",
+    "SourcePrescribedReductionPrime",
+    "SourceReductionCompletionLocalStructures",
+    "SourcePadicCompletionValuation",
+    "SourceReductionCompletionPadicMap",
+    "SourceReductionCompletionBasePrime",
+    "SourceReductionCompletionFinite",
+    "SourceOriginalPrescribedResidualFrobenius",
+    "SourceOriginalResidualInertia",
+    "SourceIntegralMatrixCharpoly",
+    "SourceMatrixIntertwinerCharpoly",
+    "SourceOriginalResidualFrobeniusCharpoly",
+    "SourceOriginalSpecializationFrobeniusCharpoly",
+    "SourceCyclotomicFrobeniusCharpoly",
+    "SourceRankTwoQuadraticTrace",
+    "SourceValuationCyclotomicFrobenius",
+    "SourceValuationFrobeniusRoots",
+    "SourceOriginalSpecializationCyclotomicDeterminant",
+    "SourceSpecializationBaseChangeIntertwiner",
+    "SourceImageSpecializationDeterminant",
+    "SourceAlternatingRankTwoDeterminant",
+    "SourceImageSpecializationPairing",
+    "SourcePrimitiveOriginalTateGalois",
+    "SourcePolynomialCommutant",
+    "SourceOriginalSpecializationPrimitiveImage",
+    "SourceSpanningProjectorImage",
+    "SourceOriginalSpecializationProjector",
+    "SourcePolynomialSpecialization",
+    "SourceOriginalPrescribedTateSpecialization",
+    "SourceParabolicPrimitiveDivisor",
+    "SourceWeightTwoNewEigenNormalization",
+    "SourceWeightTwoEigenLevelDescent",
+    "SourceWeightTwoDegeneracyAdjoint"
+  ],
+  "separatelyAxiomChecked": []
+}

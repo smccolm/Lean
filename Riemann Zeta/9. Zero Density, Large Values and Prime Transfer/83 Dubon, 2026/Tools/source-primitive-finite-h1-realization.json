@@ -1,0 +1,1555 @@
+{
+  "date": "25 October 2026",
+  "modules": [
+    "Dubon2026.SourcePermutationCoefficientQuotient",
+    "Dubon2026.SourceBinaryPrimePowerPermutation",
+    "Dubon2026.SourceBinaryPermutationHecke",
+    "Dubon2026.SourceBinaryPermutationCongruence",
+    "Dubon2026.SourceIntegralBinaryPermutationRealization",
+    "Dubon2026.SourcePrimitiveH1CoefficientField",
+    "Dubon2026.SourcePrimitiveLocalH1Character",
+    "Dubon2026.SourcePrimitiveAdicH1Quotients",
+    "Dubon2026.SourcePrimitiveCompatibleH1AdicData",
+    "Dubon2026.SourcePrimitiveH1AdicRealization",
+    "Dubon2026.SourceCoefficientPermutationCoordinates",
+    "Dubon2026.SourceCoefficientStabilizerCohomology",
+    "Dubon2026.SourceIntegralBinaryStabilizerRealization",
+    "Dubon2026.SourceFaithfulCharacterDivisibility",
+    "Dubon2026.SourceBinaryH1PrimePowerKernel",
+    "Dubon2026.SourcePrimitiveH1HeckeCongruence",
+    "Dubon2026.SourcePrimitiveH1AdicOperatorKernel",
+    "Dubon2026.SourcePrimitiveCongruentH1AdicRealization",
+    "Dubon2026.SourceBinaryH1ModulusOperatorAlgebra",
+    "Dubon2026.SourceFiniteOperatorCharacterDescent",
+    "Dubon2026.SourcePrimitiveFiniteH1HeckeCharacter",
+    "Dubon2026.SourcePrimitiveFiniteH1OperatorRealization",
+    "Dubon2026.SourceBinaryH1ModulusKernel",
+    "Dubon2026.SourceBinaryPermutationHeckeWords",
+    "Dubon2026.SourceBinaryPermutationOperatorKernel",
+    "Dubon2026.SourceBinaryPermutationHeckeFinite",
+    "Dubon2026.SourceBinaryPermutationOperatorDescent",
+    "Dubon2026.SourcePrimitivePermutationH1HeckeCharacter",
+    "Dubon2026.SourcePrimitivePermutationH1Realization",
+    "Dubon2026.SourceGammaOneCongruenceCover",
+    "Dubon2026.SourceBinaryStabilizerGammaOneCover",
+    "Dubon2026.SourceGammaOneDiagonalHom",
+    "Dubon2026.SourceGammaOneCoverFiniteIndex",
+    "Dubon2026.SourceGammaOneCohomologyTransfer",
+    "Dubon2026.SourceGammaOneConstantH1Realization"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> compatible geometric finite-precision Hecke realizations -> actual finite operator characters, original coefficient congruences and finite congruence-stabilizer H1 comparison -> canonical surjection from actual finite permutation Hecke operators to the original finite operator image -> exact finite-index Gamma1 cover and surjective constant-coefficient H1 realization",
+  "discharged": "For every original primitive form of weight at least two and every prescribed prime, the same original integral H1 Hecke character is valued in its literal Fourier coefficient field and actual local valuation ring. Its finite adic reductions are compatible as whole characters and have the exact original Fourier values. The nonzero faithful character fiber and native finite-lattice integrality prove that original operator congruences force matching character congruences. Every character therefore factors through the actual finite tensor-reduced H1 operator ring, with exact original pullback and prime values. Independently, at every positive power of every prime greater than three, the actual finite binary permutation coefficients map onto original H1 and retain all original prime Hecke transforms. Existing orbit, finite-product and Shapiro maps identify these permutation H1 groups with trivial-coefficient H1 of their actual finite-index congruence stabilizers. All coefficient-field, integrality, finite-residue, adic compatibility, character-kernel and cohomological comparison inputs in these consumers are derived. The full permutation H1 Hecke image is finite and canonically surjects onto the original finite tensor-operator image. Every relation is transferred using proved evaluation surjectivity, additive Hecke-word naturality and the exact original integral reduction kernel. Composing this surjection with the same original finite character gives permutation Hecke characters at every positive power of each prime greater than three, with whole-word pullback and exact original Fourier values. No relation or character-lifting premise is retained. The exact Gamma1(Q*N^2) diagonal map is injective, has finite-index image in the original Gamma0(Q), fixes the actual binary vectors modulo N and dominates their actual orbit stabilizers. Native coinduction with faithful restriction, the existing Gamma0 H2 vanishing, Shapiro and group reindexing give a surjective constant-coefficient Gamma1 H1 transfer. Every original integral binary H1 class modulo every positive power of every prime greater than three has an actual preimage.",
+  "boundary": "The Gamma1 transfer and transported stabilizer operators have not yet been identified with arithmetic geometric correspondences or the required Gamma1 Hecke-and-diamond actions. Geometric Galois realization of these finite characters, compatible original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. No eigenvector lift, arithmetic Galois action or characteristic-zero deformation point is claimed from the finite constructions alone. 16/20; DUB-17--20 OPEN.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 8,248-module scope: all thirteen retained regressions, 52,204 exhaustive theorem checks, 23,789 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.sourceIntegralBinary_exists_primePowerPermutationRealization",
+    "Dubon2026.sourcePrimitive_exists_compatibleH1AdicRealization",
+    "Dubon2026.sourceIntegralBinary_exists_stabilizerH1Realization",
+    "Dubon2026.sourcePrimitive_exists_congruentH1AdicRealization",
+    "Dubon2026.sourcePrimitiveH1Hecke_primePower_congruence_valuation",
+    "Dubon2026.sourcePrimitive_exists_finiteH1OperatorCharacters",
+    "Dubon2026.sourcePrimitive_exists_permutationH1HeckeCharacters",
+    "Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_iff_coefficients",
+    "Dubon2026.sourceIntegralBinary_exists_gammaOneH1Realization",
+    "Dubon2026.sourceBinaryCoefficientStabilizer_conj_finiteIndex",
+    "Dubon2026.sourceGammaOne_le_conj_principalLevel"
+  ],
+  "scratchCertificates": [
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T01:50:47.331233+00:00",
+      "date": "2026-10-25 America/Vancouver",
+      "modules": [
+        "SourcePermutationCoefficientQuotient",
+        "SourceBinaryPrimePowerPermutation",
+        "SourceBinaryPermutationHecke",
+        "SourceBinaryPermutationCongruence",
+        "SourceIntegralBinaryPermutationRealization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePermutationCoefficientQuotient.lean",
+          "sha256": "8ADA6D97B221B37C7C097523DB6EABE4E4061F4D30D326A3B6E49CEC95A24A95",
+          "oleanSha256": "45CFB96E1FCD76A5765CF032022B30F87D8970A45633CDD69688B8A73743EA0D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPrimePowerPermutation.lean",
+          "sha256": "64D4B11F41FFC30E7D88DF851C3229A11DFE9CA4B6FDE2B4295CB39EF2C4F30B",
+          "oleanSha256": "349AE4092026683189277A1121BDFBDC1943F7FED518F33CEF729536B40A9907"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPermutationHecke.lean",
+          "sha256": "200353FC6BE79050115BE8F768AB96D740DE9D92C6AF4CA4C4BF624D082EE0C8",
+          "oleanSha256": "79E1A86BDAC0DA011B6046AE82C87CA0043FDC2BB970819A0984B29CDBD4BF0F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPermutationCongruence.lean",
+          "sha256": "C9CB7D8C47037CEF003A731809E8C925FCF1A6A698F092CA85056EC67697F8FD",
+          "oleanSha256": "67C8A8CEA1D1E395A40E4A18862E99C3FE08934C95C4E59601823F90E50AC40B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralBinaryPermutationRealization.lean",
+          "sha256": "84048A1E76A885490470F4591925B40E88B1F55DEBC3BF668E0254DEDBA5BB17",
+          "oleanSha256": "B88265A781758371E2A88446FAF195D78CA600C1BC4225FE59E3BCDD4ECDF35D"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceCoefficientPermutationEvaluation_single",
+        "Dubon2026.sourceCoefficientPermutationEvaluation_surjective",
+        "Dubon2026.sourceCoefficientPermutationEvaluation_linearMap",
+        "Dubon2026.sourcePrimePower_six_isUnit",
+        "Dubon2026.sourceBinaryPrimePowerCoefficient_finite",
+        "Dubon2026.sourceBinaryPrimePowerPermutation_finite",
+        "Dubon2026.sourceBinaryPrimePowerPermutation_H1_surjective",
+        "Dubon2026.sourceBinaryPermutationDiagonal_intertwine",
+        "Dubon2026.sourceBinaryPermutationHeckeH1_evaluation",
+        "Dubon2026.sourceBinaryCoefficientRep_congruence",
+        "Dubon2026.sourceBinaryPermutationRep_congruence",
+        "Dubon2026.sourceIntegralBinary_exists_primePowerPermutationRealization",
+        "Dubon2026.sourceCoefficientPermutationRep",
+        "Dubon2026.sourceCoefficientPermutationEvaluation",
+        "Dubon2026.sourceBinaryPermutationHeckeH1"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceCoefficientPermutationEvaluation_single",
+        "Dubon2026.sourceCoefficientPermutationEvaluation_surjective",
+        "Dubon2026.sourceCoefficientPermutationEvaluation_linearMap",
+        "Dubon2026.sourcePrimePower_six_isUnit",
+        "Dubon2026.sourceBinaryPrimePowerCoefficient_finite",
+        "Dubon2026.sourceBinaryPrimePowerPermutation_finite",
+        "Dubon2026.sourceBinaryPrimePowerPermutation_H1_surjective",
+        "Dubon2026.sourceBinaryPermutationDiagonal_intertwine",
+        "Dubon2026.sourceBinaryPermutationHeckeH1_evaluation",
+        "Dubon2026.sourceBinaryCoefficientRep_congruence",
+        "Dubon2026.sourceBinaryPermutationRep_congruence",
+        "Dubon2026.sourceIntegralBinary_exists_primePowerPermutationRealization"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceCoefficientPermutationRep",
+        "Dubon2026.sourceCoefficientPermutationEvaluation",
+        "Dubon2026.sourceBinaryPermutationHeckeH1"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPrimePowerPermutationAudit5.log",
+      "logSha256": "EAF530F028A7E5605CCD4A5249B74DF3FFA29F16C5A844AED34841306A0958B7",
+      "auditSha256": "AC414DD8C953CFDF53F07237FBF37DFC5FECFEC87FD50B387BD7CCA08D660D20",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 18,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 22,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPrimePowerPermutationDependencyAudit5.log",
+      "dependencyAuditSha256": "F4CA9ED9078259625057150C71BCA473D777C86F07460977B3DC8BD94BCEE639",
+      "dependencyAuditSourceSha256": "5490A2A244C4A66D262543C38AFBE2F794CDF7460849D9DBC98E6DB8BC99AB79",
+      "consumers": [
+        "Dubon2026.sourceIntegralBinary_exists_primePowerPermutationRealization"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> compatible prime-power Hecke realizations -> original integral binary H1 as a Hecke-equivariant quotient of finite congruence permutation coefficients",
+      "discharged": "Construct the actual finite permutation coefficient module modulo every positive power of every prime greater than three, prove evaluation surjectivity on the original native binary H1 and exact compatibility with original prime Hecke transforms, and prove that the principal congruence subgroup acts trivially. Every degree and original integral class is retained.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The preimage class is not asserted to be an eigenvector. A compatible family of finite-level Hecke specializations with an actual geometric Galois realization is still needed; neither the characteristic-zero point nor all-weight association follows from this quotient alone. Required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain open. The route assessment is a mathematical inference using local proved results, not an external claim of a completed alternative construction. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-binary-prime-power-permutation-5-reuse-review-20261025.json",
+      "reuseReviewSha256": "842253E7A97C1AAE39CFAE7EB8165F8F33145A9B47B0225A1BFE3DBCF1EDBDE5",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T02:16:25.265637+00:00",
+      "date": "2026-10-25 America/Vancouver",
+      "modules": [
+        "SourcePrimitiveH1CoefficientField",
+        "SourcePrimitiveLocalH1Character",
+        "SourcePrimitiveAdicH1Quotients",
+        "SourcePrimitiveCompatibleH1AdicData",
+        "SourcePrimitiveH1AdicRealization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1CoefficientField.lean",
+          "sha256": "FAB1DD47B28AC19C1A862F66C2BC55F684E105F2B436ED713AD23508DAB8D3B9",
+          "oleanSha256": "4EF9B176BDD551699D95D8E277E62FA90F8BED11CD949EFC68FF88F5ED1DA88D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveLocalH1Character.lean",
+          "sha256": "B4579019CCC0485129A7A903A711239B6EB2B32C2F1E75C80D6668A3D502AD25",
+          "oleanSha256": "2D3FD99D7B1B4352F2707E99EF9EF20220D392D436D09E376D6278C160CF555E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveAdicH1Quotients.lean",
+          "sha256": "BBDB559FC020FA5A6FD4BFB34973C03EFE4DFC71EA64A149AEE08F3403DA7AB2",
+          "oleanSha256": "833BC90838DB6FF78FB22EC72C97236304E845CAF3241C56D032A7D8CCE7406C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveCompatibleH1AdicData.lean",
+          "sha256": "D72BBD2D4CA607217125D77FAFC6E3377D063B456F71964C1EE0DE3DAE55E053",
+          "oleanSha256": "8E449E1C5AA88EBD2E60D543B3D675A6D0AA30DEA6C6F5AE8F6C3640A5A39EE4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicRealization.lean",
+          "sha256": "E062FDF00FB3AE467339D04E18B99CC0503F3F51CA7274AC1F8197AB642D498F",
+          "oleanSha256": "C630C3D89ECC2A4955D694E817559A77C5B2D25BD72F55683440584330EFD0C6"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourcePrimitiveH1HeckeCharacter_mem_coefficientRing",
+        "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_hecke",
+        "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_isIntegral",
+        "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_coe",
+        "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_hecke",
+        "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_residue",
+        "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_hecke",
+        "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_compatible",
+        "Dubon2026.sourceLocalH1AdicQuotient_finite",
+        "Dubon2026.sourcePrimitiveCompatibleH1AdicData_of_local",
+        "Dubon2026.sourcePrimitive_exists_compatibleH1AdicRealization",
+        "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter",
+        "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter",
+        "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter",
+        "Dubon2026.sourcePrimitiveCompatibleH1AdicData"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourcePrimitiveH1HeckeCharacter_mem_coefficientRing",
+        "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_hecke",
+        "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_isIntegral",
+        "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_coe",
+        "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_hecke",
+        "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_residue",
+        "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_hecke",
+        "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_compatible",
+        "Dubon2026.sourceLocalH1AdicQuotient_finite",
+        "Dubon2026.sourcePrimitiveCompatibleH1AdicData_of_local",
+        "Dubon2026.sourcePrimitive_exists_compatibleH1AdicRealization"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter",
+        "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter",
+        "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter",
+        "Dubon2026.sourcePrimitiveCompatibleH1AdicData"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicAudit5.log",
+      "logSha256": "82E9C7EF20B9952F9F63A56F4615916237C1B407F46E7D5A580AE15813B1F30D",
+      "auditSha256": "F084E6EDF34E6A1D9057760F80F323188BF8E234FB1619452C7E0458E46D6EA6",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 43,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 21,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicDependencyAudit5b.log",
+      "dependencyAuditSha256": "2648DFAD11FF247F89380AC8DE198630D387D6EF67C822C794837B6EB2751EE4",
+      "dependencyAuditSourceSha256": "009D1372AF72AD11548E7145D8FFF4486BD7D73C21ADE3EB5B3000E0449428D2",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_compatibleH1AdicRealization"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> compatible prime-power Hecke realizations -> original integral H1 Hecke character over its literal Fourier field and actual local completion",
+      "discharged": "From only the original primitive form, weight at least two and prescribed rational prime, derive the actual finite local coefficient field, finite residue of the original prime characteristic, and exact compatible finite adic reductions of the original H1 Hecke character. Retain every original good-prime Fourier value and agreement with the existing analytic residual character. No completion, local finiteness, chosen eigencharacter or compatibility premise remains.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Geometric Galois realization of these finite-precision Hecke characters and their compatible characteristic-zero limit remain required. The permutation quotient of scope 582 retains original H1 classes and Hecke transforms but does not by itself lift eigenvectors or supply a Galois action. A characteristic-zero point of the actual fixed-determinant deformation ring is not asserted. Required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain open. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-h1-adic-5-reuse-review-20261025.json",
+      "reuseReviewSha256": "84C232E906B93F243780A0445A315E27E8F66741593911DC9ECF941DF48F6C91",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T02:29:34.525533+00:00",
+      "date": "2026-10-25 America/Vancouver",
+      "modules": [
+        "SourceCoefficientPermutationCoordinates",
+        "SourceCoefficientStabilizerCohomology",
+        "SourceIntegralBinaryStabilizerRealization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientPermutationCoordinates.lean",
+          "sha256": "500AF11865310EEEC2602EE24664B878F98FB342ED96952B0189B46A3F0E40F6",
+          "oleanSha256": "3110092C43D3B01E0BF8AAF789CCB6B6F97CA8F25895A7D425BBBAE25CE25BB0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCoefficientStabilizerCohomology.lean",
+          "sha256": "9936ECAA33E420CD6BBF7465D249E5A40CCD0244365542307DE20401B1FF5CCA",
+          "oleanSha256": "243B9AC783DBD8013D74400A20F60E68B13024EA35E0977C431A0BE5E389807B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralBinaryStabilizerRealization.lean",
+          "sha256": "E30ABF7F9072A0C1AFDCC868A371CBF45DFEEE68029B7AFB5900158AC04F41E5",
+          "oleanSha256": "567133BEDD562695DDDAE55375857E2D90457DA90CE125286CE1187DC598B3B6"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceCoefficientOrbitStabilizer_finiteIndex",
+        "Dubon2026.sourceIntegralBinary_exists_stabilizerH1Realization",
+        "Dubon2026.sourceCoefficientVectorAction",
+        "Dubon2026.sourceCoefficientPermutationCoordinateIso",
+        "Dubon2026.sourceCoefficientOrbitPoint",
+        "Dubon2026.sourceCoefficientStabilizerH1Equiv"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceCoefficientOrbitStabilizer_finiteIndex",
+        "Dubon2026.sourceIntegralBinary_exists_stabilizerH1Realization"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceCoefficientVectorAction",
+        "Dubon2026.sourceCoefficientPermutationCoordinateIso",
+        "Dubon2026.sourceCoefficientOrbitPoint",
+        "Dubon2026.sourceCoefficientStabilizerH1Equiv"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryStabilizerH1Audit3.log",
+      "logSha256": "384F47870F0D3B1DBD8EEE00C557665ED5F381E4894557AE14A44F0483E54AD4",
+      "auditSha256": "6F51F236E29C4129A3A0A23E793F7D0A86C975B20900F99F65D9F354443317A8",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 11,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryStabilizerH1DependencyAudit3.log",
+      "dependencyAuditSha256": "F3E28D3D4476A1AAB93CDC4527D6280A58A6D8B527E0FE08B06C978F1215460F",
+      "dependencyAuditSourceSha256": "7B3E2968996E4F990A659DB23BA2731E350BA66BD2B76345738F85CAC20E14F6",
+      "consumers": [
+        "Dubon2026.sourceIntegralBinary_exists_stabilizerH1Realization"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight adic Galois association -> geometric finite-precision Hecke realization -> identify actual finite binary permutation H1 with trivial-coefficient H1 of its congruence orbit stabilizers",
+      "discharged": "Identify the finite permutation H1 of scope 582 with actual trivial-coefficient orbit-stabilizer H1, prove principal congruence containment of each actual stabilizer, and retain the original integral class and its Hecke transforms through this same comparison.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The transported Hecke operators are not yet identified with geometric correspondences on arithmetic curves. An actual Galois realization of the compatible original Hecke characters from scope 583 and characteristic-zero association remain required. No eigenvector lifting or Galois action follows from this comparison. Local/image/regularity, arithmetic automorphy and literal higher continuation remain required; 16/20, DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-binary-stabilizer-h1-3-reuse-review-20261025.json",
+      "reuseReviewSha256": "600C19B2979A15C0C43685308947459B322D264947395E5F782E007474C6DC0E",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T02:46:09.901812+00:00",
+      "date": "2026-10-25 America/Vancouver",
+      "modules": [
+        "SourceFaithfulCharacterDivisibility",
+        "SourceBinaryH1PrimePowerKernel",
+        "SourcePrimitiveH1HeckeCongruence",
+        "SourcePrimitiveH1AdicOperatorKernel",
+        "SourcePrimitiveCongruentH1AdicRealization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFaithfulCharacterDivisibility.lean",
+          "sha256": "9C6E94794105805D9E4408F496D3908C44CA676C6376C16C437552BB31AE7063",
+          "oleanSha256": "BEBEC32CA2DE4BA4893AB642E695099237EEBDBBA0FA2520B581DF5077C14AAD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryH1PrimePowerKernel.lean",
+          "sha256": "19DA3B7EE28E9C5F5FFB5BF18A22A8C78F033805E5A6ED864351EA498A539F3C",
+          "oleanSha256": "B17172627806D8A84EA73B48FD40B25F866EB2B7E6EBF5021B77EEA78D949BA2"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1HeckeCongruence.lean",
+          "sha256": "700841266CA4946061078CD982E107933BA862BB90E152DCB7D632A813BE5984",
+          "oleanSha256": "09614C379DBAF0BAFDDFFDA5BA89527B0ABB056021A8E65256A9E53854F696DF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicOperatorKernel.lean",
+          "sha256": "CC0404B804624308925B1E86EC1F10EC971BD1E6902B4030BF5CEE4DFAB0FAD2",
+          "oleanSha256": "FC4EB343899695C1D9CE09FF40A77F0FC8B28ED6E7537004BD6DEBFB4B531B88"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveCongruentH1AdicRealization.lean",
+          "sha256": "E95609B3B1E0AA209848BB5FD372DA27DD6081D3A22A8CC2BCE77FA9C2448320",
+          "oleanSha256": "EF5C4A685218FA4C545A3CC0C94EB0F64B5E958DBFB6CB0C3FCE40471CD9EE93"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceFaithfulCharacter_div_isIntegral",
+        "Dubon2026.sourceBinaryH1Change_zmod_nonzero_eq_zero_iff",
+        "Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_integral",
+        "Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_valuation",
+        "Dubon2026.sourcePrimitiveH1Hecke_primePower_congruence_valuation",
+        "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator",
+        "Dubon2026.sourcePrimitive_exists_congruentH1AdicRealization",
+        "Dubon2026.sourcePrimitiveH1AdicCongruenceData"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceFaithfulCharacter_div_isIntegral",
+        "Dubon2026.sourceBinaryH1Change_zmod_nonzero_eq_zero_iff",
+        "Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_integral",
+        "Dubon2026.sourcePrimitiveH1Hecke_operator_congruence_valuation",
+        "Dubon2026.sourcePrimitiveH1Hecke_primePower_congruence_valuation",
+        "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator",
+        "Dubon2026.sourcePrimitive_exists_congruentH1AdicRealization"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourcePrimitiveH1AdicCongruenceData"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1CongruenceAudit5.log",
+      "logSha256": "ADCA8A32CB01AB3C535B20B033C2139AEE5F0108490C2DFFDCB9E9C535EC78F6",
+      "auditSha256": "533B11A34CAA864E4F7A6CBC9B983EC820217EF1F220F9A37366D5044ED1EED1",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 13,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1CongruenceDependencyAudit5.log",
+      "dependencyAuditSha256": "14676F1C9A80E976A0A67140E14A75A761C49BDA5DEC7904826F8DAA20B71F93",
+      "dependencyAuditSourceSha256": "F6DEBFDEF0F4BACB6D73B950B24A4E07C63F7953C22C9B8BD10FF6B4B95E808A",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_congruentH1AdicRealization",
+        "Dubon2026.sourcePrimitiveH1Hecke_primePower_congruence_valuation"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> geometric finite-precision Hecke realization -> the original H1 character respects actual operator congruences",
+      "discharged": "From the original primitive form, weight at least two and prescribed prime, derive compatible finite adic characters with their original Fourier values and exact operator-congruence compatibility: an original integral H1 operator that vanishes after coefficient reduction modulo p^(n+1) maps to zero under the matching character modulo maximalIdeal^(n+1). The finite faithful character fiber and exact H1 reduction kernel supply integrality of the divided character value. No eigenvector lift, free integral basis, local-field, finite-residue or operator-kernel compatibility premise is supplied to the terminal original-form consumer.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. This controls finite-precision character relations; it does not yet identify the transported stabilizer Hecke action with arithmetic correspondences or construct a compatible Galois representation. Geometric realization, characteristic-zero association, local/image/regularity, automorphy and literal higher continuation remain required. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-h1-congruence-5-reuse-review-20261025.json",
+      "reuseReviewSha256": "046E2F42CBB7E64D311967FE737A32262C0F2FA9A777A77668C56783AA182DEE",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T03:05:22.523570+00:00",
+      "date": "2026-10-25 America/Vancouver",
+      "modules": [
+        "SourceBinaryH1ModulusOperatorAlgebra",
+        "SourceFiniteOperatorCharacterDescent",
+        "SourcePrimitiveFiniteH1HeckeCharacter",
+        "SourcePrimitiveFiniteH1OperatorRealization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryH1ModulusOperatorAlgebra.lean",
+          "sha256": "3088DB3E4135312604626BD75E4F18FC786BCD4F02277870EFD6A380D256F30E",
+          "oleanSha256": "63AB7EA8E2FF3239F64CAB6E500CDC222D497F596CC5ABC243370CD4C8057129"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteOperatorCharacterDescent.lean",
+          "sha256": "3AE57C01A36D9DF2D2B5E62DAC21816E54CAA7ABE0007AF37A04B5725A040C6A",
+          "oleanSha256": "75E4C8FA86F8ACBB480522A65B4F770A5C6EEC8D17708EA07EF5413CBCA55D45"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1HeckeCharacter.lean",
+          "sha256": "48017F46307B8EAC8F2129D87FA9C3417B44B2D3AF19B4BA23472CCA4A5EDE26",
+          "oleanSha256": "D8859273CF458CBD868270C3D498811CF753679D3B91D3A4A2C3F9AFFD8077BF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1OperatorRealization.lean",
+          "sha256": "3F439F73DD995AB8615CE63E33D4FF35246009D6EF34EC390CEEED6E90620223",
+          "oleanSha256": "E399BF564D78A99A7672A54994B175F0D475816C8B56561F4ECCD3566EF9F2FD"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceBinaryH1ModulusOperatorAlgebra_finite",
+        "Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_coefficients",
+        "Dubon2026.sourceFiniteOperatorCharacterDescend_comp",
+        "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_modulus_kernel",
+        "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter_comp",
+        "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter_hecke",
+        "Dubon2026.sourcePrimitive_exists_finiteH1OperatorCharacters",
+        "Dubon2026.sourceBinaryH1ModulusOperatorMap",
+        "Dubon2026.sourceBinaryH1ModulusOperatorAlgebra",
+        "Dubon2026.sourceFiniteOperatorCharacterDescend",
+        "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter",
+        "Dubon2026.sourcePrimitiveFiniteH1CharacterData"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceBinaryH1ModulusOperatorAlgebra_finite",
+        "Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_coefficients",
+        "Dubon2026.sourceFiniteOperatorCharacterDescend_comp",
+        "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_modulus_kernel",
+        "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter_comp",
+        "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter_hecke",
+        "Dubon2026.sourcePrimitive_exists_finiteH1OperatorCharacters"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceBinaryH1ModulusOperatorMap",
+        "Dubon2026.sourceBinaryH1ModulusOperatorAlgebra",
+        "Dubon2026.sourceFiniteOperatorCharacterDescend",
+        "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter",
+        "Dubon2026.sourcePrimitiveFiniteH1CharacterData"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteOperatorCharacterAudit4.log",
+      "logSha256": "6CAE8BFCE6DA8658D06EA80FBC3B3C661022870F73C2C808E32F3B57580278A4",
+      "auditSha256": "30887727A8D3C3EB9E283282D6B830C58E639F935299799B2DA04DA406AFB7E1",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 41,
+      "linterScopes": 4,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 19,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteOperatorCharacterDependencyAudit4.log",
+      "dependencyAuditSha256": "13D5AA576E4E736E0CEA2F1A24196BC91D3E9345800F5D7B357D4082F81C8058",
+      "dependencyAuditSourceSha256": "67A2914B9B190B19EF1DAD3156B6E3E4FEBCB653320145A6FE34B7CE4055EF1B",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_finiteH1OperatorCharacters"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> geometric finite-precision Hecke realization -> factor the original compatible adic characters through actual finite rings of original coefficient-reduced H1 operators",
+      "discharged": "Construct the actual finite operator ring at every positive prime-power precision and factor the same original compatible adic H1 character through it, preserving its exact Fourier values and original integral pullback.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Arithmetic geometric realization and correspondence compatibility, compatible Galois representations and characteristic-zero association remain required. No arithmetic Galois action is supplied by the finite ring factorization. Local/image/regularity, automorphy and literal higher continuation remain open. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-finite-operator-character-4-reuse-review-20261025.json",
+      "reuseReviewSha256": "1DA9C559AD2FDAC9E97F257DBFE75C4917038E60E189D34B48EB26E832962C07",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T03:31:37.866829+00:00",
+      "date": "2026-10-25 America/Vancouver",
+      "modules": [
+        "SourceBinaryH1ModulusKernel",
+        "SourceBinaryPermutationHeckeWords",
+        "SourceBinaryPermutationOperatorKernel",
+        "SourceBinaryPermutationHeckeFinite",
+        "SourceBinaryPermutationOperatorDescent",
+        "SourcePrimitivePermutationH1HeckeCharacter",
+        "SourcePrimitivePermutationH1Realization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryH1ModulusKernel.lean",
+          "sha256": "A27F8C0453C13671E4669B08048F6589FBF6AC47CFDE055A2A2A486C8FACAF7F",
+          "oleanSha256": "4151C49204B131FD589BC455F6EA4FD2D9905E3F0829DD209F308DACCED61D96"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPermutationHeckeWords.lean",
+          "sha256": "63852A443A7D679C5216E4E769976CE57F13805F28A14CA8D33C2E5CF180071B",
+          "oleanSha256": "3B9FF47DFD92C4D8EEA7BBF2AC0FA299DF1D069DFB18219146DD4335115C3757"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPermutationOperatorKernel.lean",
+          "sha256": "1F9939744334A621CCC12010C765AEDCC14F581B83DD7533E12405D8E89DCD36",
+          "oleanSha256": "91C173EEF409DB91E9C5115311E3F33D508C6F4A27D7FD85C287522D4012B1B9"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPermutationHeckeFinite.lean",
+          "sha256": "B80BC2737F5FDB86945ED8534CD2663AA430A92DCF67638A8AA0A9495E21BE4F",
+          "oleanSha256": "7AAD476319B6E99423A56B2C5D4ECA26740FFBC91B984BC59BA890040B807436"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPermutationOperatorDescent.lean",
+          "sha256": "7A7635F0FE17AF12C8C4CA7B4FE70AD368C45A0372FF5DACEE9A7A57C31AC27E",
+          "oleanSha256": "44F6919EA7626DFBA8C2C18A26D70855C59526450630C1DAE65FACD94BDC966F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitivePermutationH1HeckeCharacter.lean",
+          "sha256": "7F3831C432148B1EB2B67E06A1DD55FFFDB85E3B68C87C35359F1A7FD00E7EEA",
+          "oleanSha256": "4746329DD5173C9DCE8E0759B19B040005BDE0B358A0A239E67093859E049448"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitivePermutationH1Realization.lean",
+          "sha256": "F4582898A76AE5B4C935471C567494BD924C02BA7E7FA087D63522B2E64ADCAE",
+          "oleanSha256": "A47F72BD4A910C8ACF7A8761866A8548EDA1EAC571201DA761EF696927A6F34D"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_of_coefficients",
+        "Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_iff_coefficients",
+        "Dubon2026.sourceBinaryH1HeckeWord_surjective",
+        "Dubon2026.sourceBinaryPermutationHeckeWord_evaluation",
+        "Dubon2026.sourceBinaryH1HeckeWord_change",
+        "Dubon2026.sourceBinaryPermutationHeckeWord_modulus_zero",
+        "Dubon2026.sourceBinaryPrimePowerPermutationH1_finite",
+        "Dubon2026.sourceBinaryPrimePowerPermutationHeckeAlgebra_finite",
+        "Dubon2026.sourceBinaryPermutationHeckeWord_modulus_kernel",
+        "Dubon2026.sourceBinaryPermutationToModulus_comp",
+        "Dubon2026.sourceBinaryPermutationToModulus_surjective",
+        "Dubon2026.sourcePrimitivePermutationH1HeckeCharacter_comp",
+        "Dubon2026.sourcePrimitivePermutationH1HeckeCharacter_hecke",
+        "Dubon2026.sourcePrimitive_exists_permutationH1HeckeCharacters",
+        "Dubon2026.sourceBinaryH1HeckeWord",
+        "Dubon2026.sourceBinaryPermutationPrimeOperators",
+        "Dubon2026.sourceBinaryPermutationHeckeAlgebra",
+        "Dubon2026.sourceBinaryPermutationToModulus",
+        "Dubon2026.sourcePrimitivePermutationH1HeckeCharacter",
+        "Dubon2026.sourcePrimitivePermutationH1CharacterData"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_of_coefficients",
+        "Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_iff_coefficients",
+        "Dubon2026.sourceBinaryH1HeckeWord_surjective",
+        "Dubon2026.sourceBinaryPermutationHeckeWord_evaluation",
+        "Dubon2026.sourceBinaryH1HeckeWord_change",
+        "Dubon2026.sourceBinaryPermutationHeckeWord_modulus_zero",
+        "Dubon2026.sourceBinaryPrimePowerPermutationH1_finite",
+        "Dubon2026.sourceBinaryPrimePowerPermutationHeckeAlgebra_finite",
+        "Dubon2026.sourceBinaryPermutationHeckeWord_modulus_kernel",
+        "Dubon2026.sourceBinaryPermutationToModulus_comp",
+        "Dubon2026.sourceBinaryPermutationToModulus_surjective",
+        "Dubon2026.sourcePrimitivePermutationH1HeckeCharacter_comp",
+        "Dubon2026.sourcePrimitivePermutationH1HeckeCharacter_hecke",
+        "Dubon2026.sourcePrimitive_exists_permutationH1HeckeCharacters"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceBinaryH1HeckeWord",
+        "Dubon2026.sourceBinaryPermutationPrimeOperators",
+        "Dubon2026.sourceBinaryPermutationHeckeAlgebra",
+        "Dubon2026.sourceBinaryPermutationToModulus",
+        "Dubon2026.sourcePrimitivePermutationH1HeckeCharacter",
+        "Dubon2026.sourcePrimitivePermutationH1CharacterData"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitivePermutationOperatorCharacterAudit7.log",
+      "logSha256": "4FD2C3462147D14EBCF6A9C8FF1040DACBAA8AD3E07EBF07AFEB8159B88CD620",
+      "auditSha256": "B994D9F7D385A8139BDB9BAAB6C157623B56FBEF9AFE77BD390F4A9775DD330F",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 53,
+      "linterScopes": 7,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 31,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitivePermutationOperatorCharacterDependencyAudit7.log",
+      "dependencyAuditSha256": "88B92DEAF2CE8C1976A09B5B4AA3D243E15C866FFE0F7506C51A3580AEC4B91D",
+      "dependencyAuditSourceSha256": "5427A670CBD92842C53C66F290C0B9BF72CEE8C9841D40A5047488DD124EBBD1",
+      "consumers": [
+        "Dubon2026.sourcePrimitive_exists_permutationH1HeckeCharacters",
+        "Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_iff_coefficients"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> geometric finite-precision Hecke realization -> actual original finite operator characters are realized on finite permutation and congruence-stabilizer H1 Hecke rings",
+      "discharged": "Show that relations on actual finite permutation H1 imply the corresponding relations in the original finite tensor-operator image. Descend through that actual Hecke quotient and consume the original finite operator character, retaining every original good-prime value at each positive power of a prime greater than three.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. These Hecke operators still require identification with arithmetic geometric correspondences on the congruence covers. Arithmetic Galois realization, compatible characteristic-zero association, required local/image/regularity, automorphy and literal higher continuation remain open. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-permutation-operator-character-7-reuse-review-20261025.json",
+      "reuseReviewSha256": "53749D2A01F614DB735E9677F63A3221A2F43744434D878747FE7CE92E2FC955",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T04:05:54.088691+00:00",
+      "date": "2026-10-25 America/Vancouver",
+      "modules": [
+        "SourceGammaOneCongruenceCover",
+        "SourceBinaryStabilizerGammaOneCover",
+        "SourceGammaOneDiagonalHom",
+        "SourceGammaOneCoverFiniteIndex",
+        "SourceGammaOneCohomologyTransfer",
+        "SourceGammaOneConstantH1Realization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCongruenceCover.lean",
+          "sha256": "585659F407D2F51EDA84FCA732EB7D333F4256CE73B930F2E02CF9EE631548B4",
+          "oleanSha256": "AC408D357D5BFF7CA463FB6C2D1D1BD91C3CF928D94974D4E2D28F978AE15024"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryStabilizerGammaOneCover.lean",
+          "sha256": "657BD9FE8E260AB66BE097AA959CEACEFEE58F1AEE70DD9490E52E4404E7749E",
+          "oleanSha256": "11E8325DAD607888E690EEBDAE4ACDFDA75A1949F6F5CCC30473F5D05A5D6FE7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiagonalHom.lean",
+          "sha256": "AF70842F3D291B9E918FA2A4BC2E6F085951BC40EC99A69D219ADD4D836DD914",
+          "oleanSha256": "7CEE3C7EA6BFB6A9FB94C1B351E9C7B6B7A9E7D17E86B4FB0694F1E1C8430554"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverFiniteIndex.lean",
+          "sha256": "A3DF7002CC95628A02ED734D1A10B63E8CCA9D3E540C261C88B67AD9F37FC3C6",
+          "oleanSha256": "9B1387EE754A2EB730970A1D04B2CEF2BE40D249D0893B0AF4B52665C48B8FFA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCohomologyTransfer.lean",
+          "sha256": "15C53922CF077084C9F4421782C3346D7C27048B8E233F29F36D60CC5C1A7D62",
+          "oleanSha256": "78EB39A811C2A9EBAEF7381C375A6C7AB62238B871DA79FC18983A429F495B86"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstantH1Realization.lean",
+          "sha256": "5E3B3BE2610765E1D2E7E4DD2C727F1FE418231026EF3BB46409CDCDDB1C4B24",
+          "oleanSha256": "59CFDEBF8A795D420D06E568CBC6F0880DBD31BC0C709329C7979C7D6893C1B8"
+        }
+      ],
+      "queries": [
+        "Dubon2026.sourceGammaOne_principal_diagonal_transition",
+        "Dubon2026.sourceGammaOne_le_conj_principalLevel",
+        "Dubon2026.sourceBinaryCoefficientStabilizer_gammaOneCover",
+        "Dubon2026.sourceBinaryCoefficientStabilizer_conj_finiteIndex",
+        "Dubon2026.sourceGammaOne_le_raisedGammaZero",
+        "Dubon2026.sourceGammaOneDiagonalHom_matrix",
+        "Dubon2026.sourceGammaOneDiagonalHom_injective",
+        "Dubon2026.sourceGammaOneDiagonalHom_mem_principal",
+        "Dubon2026.sourceGammaOneDiagonalHom_binary_trivial",
+        "Dubon2026.sourceRaisedLevelConjugation_range",
+        "Dubon2026.sourceRaisedLevelConjugation_range_finiteIndex",
+        "Dubon2026.sourceGammaOneDiagonalHom_range_finiteIndex",
+        "Dubon2026.sourceGammaOne_coindH1_surjective",
+        "Dubon2026.sourceGammaOneConstantH1Transfer_surjective",
+        "Dubon2026.sourceIntegralBinary_exists_gammaOneH1Realization",
+        "Dubon2026.sourceGammaOneDiagonalHom",
+        "Dubon2026.sourceGammaOneCoefficientTrivialIso",
+        "Dubon2026.sourceGammaOneRangeEquiv",
+        "Dubon2026.sourceGammaOneConstantH1Iso",
+        "Dubon2026.sourceGammaOneConstantH1Transfer"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.sourceGammaOne_principal_diagonal_transition",
+        "Dubon2026.sourceGammaOne_le_conj_principalLevel",
+        "Dubon2026.sourceBinaryCoefficientStabilizer_gammaOneCover",
+        "Dubon2026.sourceBinaryCoefficientStabilizer_conj_finiteIndex",
+        "Dubon2026.sourceGammaOne_le_raisedGammaZero",
+        "Dubon2026.sourceGammaOneDiagonalHom_matrix",
+        "Dubon2026.sourceGammaOneDiagonalHom_injective",
+        "Dubon2026.sourceGammaOneDiagonalHom_mem_principal",
+        "Dubon2026.sourceGammaOneDiagonalHom_binary_trivial",
+        "Dubon2026.sourceRaisedLevelConjugation_range",
+        "Dubon2026.sourceRaisedLevelConjugation_range_finiteIndex",
+        "Dubon2026.sourceGammaOneDiagonalHom_range_finiteIndex",
+        "Dubon2026.sourceGammaOne_coindH1_surjective",
+        "Dubon2026.sourceGammaOneConstantH1Transfer_surjective",
+        "Dubon2026.sourceIntegralBinary_exists_gammaOneH1Realization"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.sourceGammaOneDiagonalHom",
+        "Dubon2026.sourceGammaOneCoefficientTrivialIso",
+        "Dubon2026.sourceGammaOneRangeEquiv",
+        "Dubon2026.sourceGammaOneConstantH1Iso",
+        "Dubon2026.sourceGammaOneConstantH1Transfer"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverAudit6.log",
+      "logSha256": "067C4B231945A8B197BF7643C13F0BB80C2D1089CD3E3B3E1ECF9A0C3DD60097",
+      "auditSha256": "41F3B0423182C83C33EEB5690558BC0576CD12CF83535DD962C1D61104BEB964",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 26,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 33,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverDependencyAudit6.log",
+      "dependencyAuditSha256": "A731E211969D2ABEF747DF4904B994B4C61D1D7333AB58F0C907D9C7FE14B2F1",
+      "dependencyAuditSourceSha256": "34D942AB0ABE8E760AE70560E8C00C325E5367C7522D6B883C0CEDC2140B6B22",
+      "consumers": [
+        "Dubon2026.sourceIntegralBinary_exists_gammaOneH1Realization",
+        "Dubon2026.sourceBinaryCoefficientStabilizer_conj_finiteIndex",
+        "Dubon2026.sourceGammaOne_le_conj_principalLevel"
+      ],
+      "dependency": "DUB-17/18 -> literal higher continuation -> arithmetic automorphy -> original all-weight adic association -> geometric finite permutation Hecke realization -> actual congruence stabilizers are dominated by explicit diagonally conjugated Gamma1 levels",
+      "discharged": "The exact Gamma1(Q*N^2) group maps injectively into the original Gamma0(Q), has finite-index image, and fixes the actual binary vectors modulo N. The native finite-index coinduction counit is surjective on original H1 when six is invertible. Shapiro, the actual trivial coefficient isomorphism and existing group reindexing identify its source with constant-coefficient H1 of that exact Gamma1 group. Hence every original integral binary H1 class modulo every positive power of every prime greater than three has a derived constant-coefficient Gamma1 realization. The actual coefficient-orbit stabilizers are also dominated by the same explicit Gamma1 cover.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The constant-coefficient Gamma1 transfer has not yet been identified with arithmetic geometric correspondences or shown to intertwine the required Gamma1 Hecke-and-diamond operators. Those geometric/Hecke comparisons, original all-weight adic association, local/image/regularity, automorphy and higher continuation remain open. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cover-6-reuse-review-20261025.json",
+      "reuseReviewSha256": "B0D0A9E2227A09C551781497047F41B00C6EE510CC898CA61E4038FA201FCDCD",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-binary-prime-power-permutation-5-reuse-review-20261025.json",
+    "Tools/source-primitive-h1-adic-5-reuse-review-20261025.json",
+    "Tools/source-binary-stabilizer-h1-3-reuse-review-20261025.json",
+    "Tools/source-primitive-h1-congruence-5-reuse-review-20261025.json",
+    "Tools/source-primitive-finite-operator-character-4-reuse-review-20261025.json",
+    "Tools/source-primitive-permutation-operator-character-7-reuse-review-20261025.json",
+    "Tools/source-gamma-one-cover-6-reuse-review-20261025.json"
+  ],
+  "additionalCurrentSearch": {
+    "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/primitive-finite-gamma-one-h1-promotion-route-593.json",
+    "sha256": "43FFEBFCE17DC003FB8AF14FB91B8E299560539775E265AA94F456CE7DF9BD19"
+  },
+  "renewedSourceArchive": {
+    "manifest": "Tools/primitive-finite-gamma-one-h1-20261025-593/archive-manifest.json",
+    "sha256": "44F5EBBFAC4BA016E18DC738D2323891290298D1328E86F6FC3DC3D00A643D13",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt8248": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPrimePowerPermutationDependencyAudit5Production8248.log",
+        "sha256": "F4CA9ED9078259625057150C71BCA473D777C86F07460977B3DC8BD94BCEE639",
+        "requiredProofValueEdges": 22,
+        "consumers": [
+          "Dubon2026.sourceIntegralBinary_exists_primePowerPermutationRealization"
+        ],
+        "sourceSha256": "B563F37F971F18CF592A31292E8875F09F90FCACC3CF6C90B46E82D82B2D5C0A"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicDependencyAudit5bProduction8248.log",
+        "sha256": "2648DFAD11FF247F89380AC8DE198630D387D6EF67C822C794837B6EB2751EE4",
+        "requiredProofValueEdges": 21,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_exists_compatibleH1AdicRealization"
+        ],
+        "sourceSha256": "A70ED86305556DD4DFE3634F0F43D425688670AE5D485E3F957D41107E26B1DD"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryStabilizerH1DependencyAudit3Production8248.log",
+        "sha256": "F3E28D3D4476A1AAB93CDC4527D6280A58A6D8B527E0FE08B06C978F1215460F",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.sourceIntegralBinary_exists_stabilizerH1Realization"
+        ],
+        "sourceSha256": "E707760B8359A967A5818AB845BDBED956952DA1DBE586EC7689B6A47632F02E"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1CongruenceDependencyAudit5Production8248.log",
+        "sha256": "14676F1C9A80E976A0A67140E14A75A761C49BDA5DEC7904826F8DAA20B71F93",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_exists_congruentH1AdicRealization",
+          "Dubon2026.sourcePrimitiveH1Hecke_primePower_congruence_valuation"
+        ],
+        "sourceSha256": "9B539322C4E04F3DD986857502AE2D460B610DEF9F2796043BDF4FFEA1644753"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteOperatorCharacterDependencyAudit4Production8248.log",
+        "sha256": "13D5AA576E4E736E0CEA2F1A24196BC91D3E9345800F5D7B357D4082F81C8058",
+        "requiredProofValueEdges": 19,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_exists_finiteH1OperatorCharacters"
+        ],
+        "sourceSha256": "7CA8155AA7848294570E67D5FA217DD3E77DF445DD6B3A1643C403AC2DC3984D"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitivePermutationOperatorCharacterDependencyAudit7Production8248.log",
+        "sha256": "88B92DEAF2CE8C1976A09B5B4AA3D243E15C866FFE0F7506C51A3580AEC4B91D",
+        "requiredProofValueEdges": 31,
+        "consumers": [
+          "Dubon2026.sourcePrimitive_exists_permutationH1HeckeCharacters",
+          "Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_iff_coefficients"
+        ],
+        "sourceSha256": "B195863FDF70865EF15553FA90A4FF3766F48AB2A5858AE91500439B34BFD212"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverDependencyAudit6Production8248.log",
+        "sha256": "A731E211969D2ABEF747DF4904B994B4C61D1D7333AB58F0C907D9C7FE14B2F1",
+        "requiredProofValueEdges": 33,
+        "consumers": [
+          "Dubon2026.sourceIntegralBinary_exists_gammaOneH1Realization",
+          "Dubon2026.sourceBinaryCoefficientStabilizer_conj_finiteIndex",
+          "Dubon2026.sourceGammaOne_le_conj_principalLevel"
+        ],
+        "sourceSha256": "B2D2E08BB28CBF2FD35060AB61D7EFA7F2C00B684E521B0B171D1A0442D2550D"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationProductionAudit8248.log",
+    "sha256": "9F59C97A9B26AEFB2A625C476DF1E635A5CAB9CCEC3BA0794ED5B63792F33FDF",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-primitive-finite-h1-realization-production-build-8248.log",
+    "aggregateSha256": "998D0273E46AC78F822C8B1CEEA0A844F742F216B07AA302B4B80BF02623E7FC",
+    "productionModules": 8248,
+    "incrementModules": 35,
+    "axiomChecks": 96,
+    "exhaustiveIncrementTheorems": 205,
+    "linterScopes": 35,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 205,
+    "productionReuse": "Only scratch imports are qualified. Every mathematical statement, proof body and module comment is preserved. The original primitive cusp form, Fourier coefficients, actual local fields, integral H1, Hecke operators, coefficient reductions and original finite permutation and stabilizer cohomology retain their definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 205,
+      "scratchDistinct": 205,
+      "generatedNameRenamings": {},
+      "productionFocused": 205,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourcePermutationCoefficientQuotient",
+            "SourceBinaryPrimePowerPermutation",
+            "SourceBinaryPermutationHecke",
+            "SourceBinaryPermutationCongruence",
+            "SourceIntegralBinaryPermutationRealization"
+          ],
+          "count": 18,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership582For8248.log",
+            "sha256": "B481A4F7C0162E11D5AF4A0BDD540BF0F593FF5C93F1E83EB2647EC2B96C7DBF",
+            "sourceSha256": "AD1B068584660C9B73C7618E9E479C55711F43A17EEB5E0668ACE5C2D270948C"
+          }
+        },
+        {
+          "modules": [
+            "SourcePrimitiveH1CoefficientField",
+            "SourcePrimitiveLocalH1Character",
+            "SourcePrimitiveAdicH1Quotients",
+            "SourcePrimitiveCompatibleH1AdicData",
+            "SourcePrimitiveH1AdicRealization"
+          ],
+          "count": 43,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership583For8248.log",
+            "sha256": "A328D7C9880A01D19A5D0427E85DD2AEAF83715204E83A151BC94C0F31A0190B",
+            "sourceSha256": "87062B7A78137F4CCFDED135C954533042C579D7EBA219B291DC371D6C5F1E82"
+          }
+        },
+        {
+          "modules": [
+            "SourceCoefficientPermutationCoordinates",
+            "SourceCoefficientStabilizerCohomology",
+            "SourceIntegralBinaryStabilizerRealization"
+          ],
+          "count": 11,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership584For8248.log",
+            "sha256": "5FBB59F95CC5CC9DD7E5EECD6A396E4B047A209AA95DCCC93669F589F661C3FF",
+            "sourceSha256": "AFE2F5673A2C9CEDDD2BFDDFE9BBB89723FA27DD8B95518FD64CACF45797F873"
+          }
+        },
+        {
+          "modules": [
+            "SourceFaithfulCharacterDivisibility",
+            "SourceBinaryH1PrimePowerKernel",
+            "SourcePrimitiveH1HeckeCongruence",
+            "SourcePrimitiveH1AdicOperatorKernel",
+            "SourcePrimitiveCongruentH1AdicRealization"
+          ],
+          "count": 13,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership585For8248.log",
+            "sha256": "3D219D8FFE6D1680C639E96C0FA94A4F12D7FF4421D9DF9CBA9E6E0FF72F2F2C",
+            "sourceSha256": "7B392236D3BBA26A499C51E560C693FC981A8EA45A16B2F42E33222D4350B6AE"
+          }
+        },
+        {
+          "modules": [
+            "SourceBinaryH1ModulusOperatorAlgebra",
+            "SourceFiniteOperatorCharacterDescent",
+            "SourcePrimitiveFiniteH1HeckeCharacter",
+            "SourcePrimitiveFiniteH1OperatorRealization"
+          ],
+          "count": 41,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership586For8248.log",
+            "sha256": "027A405085858A5B6CB3BEF5B9B3ACD72B4A0861CAE47B1C87D692F2287F5F94",
+            "sourceSha256": "1354A57EE7850887E9B21E546C0583AF5D7478ED3D9D4E1E72EC9859BD08589A"
+          }
+        },
+        {
+          "modules": [
+            "SourceBinaryH1ModulusKernel",
+            "SourceBinaryPermutationHeckeWords",
+            "SourceBinaryPermutationOperatorKernel",
+            "SourceBinaryPermutationHeckeFinite",
+            "SourceBinaryPermutationOperatorDescent",
+            "SourcePrimitivePermutationH1HeckeCharacter",
+            "SourcePrimitivePermutationH1Realization"
+          ],
+          "count": 53,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership588For8248.log",
+            "sha256": "747933B9F0E4995848C513D0A1C59CBD1050BEB467B8AC9094E89B69E93253CB",
+            "sourceSha256": "4E21264205103EAB9EFAE97AA7BDB6555A1C489000739E0B69A58F871CCE7828"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneCongruenceCover",
+            "SourceBinaryStabilizerGammaOneCover",
+            "SourceGammaOneDiagonalHom",
+            "SourceGammaOneCoverFiniteIndex",
+            "SourceGammaOneCohomologyTransfer",
+            "SourceGammaOneConstantH1Realization"
+          ],
+          "count": 26,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership591For8248.log",
+            "sha256": "12D5D4BDA30FEB1C028CA274A11446117EC3431A9D405A7A58FB2656FAD940C7",
+            "sourceSha256": "0B24E19E293ADEA1A46871F478C9B579E9114EAFD51819EB5094C6553EA19A4D"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationOwnership8248.log",
+        "sha256": "436AB77ED3981E3A1B9FB203042888E3CCC86D48E3F7211B0A2637E2D40EB0F5",
+        "sourceSha256": "67FC1B2B9410DF6C9F8D252822E323CF2C3A3CEEE84CAAE4E2B91993601E792F"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-201544-907.log",
+        "sha256": "DA4E7D14C8AFCBD74C6668C14A55182A02A36657FB28067C803E2A96F0E7E06F"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 35 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourcePermutationCoefficientQuotient",
+            "scratchSha256": "8ADA6D97B221B37C7C097523DB6EABE4E4061F4D30D326A3B6E49CEC95A24A95",
+            "productionSha256": "8ADA6D97B221B37C7C097523DB6EABE4E4061F4D30D326A3B6E49CEC95A24A95",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryPrimePowerPermutation",
+            "scratchSha256": "64D4B11F41FFC30E7D88DF851C3229A11DFE9CA4B6FDE2B4295CB39EF2C4F30B",
+            "productionSha256": "736B62F3D526E0316050B0D7EFA5FD3D1D5EC377F0ECDCCB4D037AE2E4413FF5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryPermutationHecke",
+            "scratchSha256": "200353FC6BE79050115BE8F768AB96D740DE9D92C6AF4CA4C4BF624D082EE0C8",
+            "productionSha256": "AF702186908EFBA841F10F9C72AFAA68549260BB34814681E1663579BAF19F88",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryPermutationCongruence",
+            "scratchSha256": "C9CB7D8C47037CEF003A731809E8C925FCF1A6A698F092CA85056EC67697F8FD",
+            "productionSha256": "DD923133E079A87E5909EA3A29309043F1C94D16257736AE09728D2479430CA0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralBinaryPermutationRealization",
+            "scratchSha256": "84048A1E76A885490470F4591925B40E88B1F55DEBC3BF668E0254DEDBA5BB17",
+            "productionSha256": "3E23646887D9B8FA69392E299A967E594FB148C22832FE39803C16D97DF86417",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveH1CoefficientField",
+            "scratchSha256": "FAB1DD47B28AC19C1A862F66C2BC55F684E105F2B436ED713AD23508DAB8D3B9",
+            "productionSha256": "83E60BD7FB4E347C2174D386B1714A8E213D5F20CC054209D7E34E21D8340721",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveLocalH1Character",
+            "scratchSha256": "B4579019CCC0485129A7A903A711239B6EB2B32C2F1E75C80D6668A3D502AD25",
+            "productionSha256": "52A755628EB31B451C1B41AAF41B6848A728024DE7C0B91EE185F2CC43F43D16",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveAdicH1Quotients",
+            "scratchSha256": "BBDB559FC020FA5A6FD4BFB34973C03EFE4DFC71EA64A149AEE08F3403DA7AB2",
+            "productionSha256": "0E06085AC1DAC09F05E77AA549632875AB5BE6DCE4C4A40B9501885EEE9613E9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveCompatibleH1AdicData",
+            "scratchSha256": "D72BBD2D4CA607217125D77FAFC6E3377D063B456F71964C1EE0DE3DAE55E053",
+            "productionSha256": "F6E93D20D8DFB32E1044B671350A75805DAA1FEB986169208F8AD62F976CD027",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveH1AdicRealization",
+            "scratchSha256": "E062FDF00FB3AE467339D04E18B99CC0503F3F51CA7274AC1F8197AB642D498F",
+            "productionSha256": "FCCAA9B357EC79B0139C6EBE573591A07805255A2356E03C5622C6F755C2C850",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCoefficientPermutationCoordinates",
+            "scratchSha256": "500AF11865310EEEC2602EE24664B878F98FB342ED96952B0189B46A3F0E40F6",
+            "productionSha256": "3F41A210666DCE49AD319C5A67C2CA9303FA14AF5C6C1255245F4F22494C7BF4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCoefficientStabilizerCohomology",
+            "scratchSha256": "9936ECAA33E420CD6BBF7465D249E5A40CCD0244365542307DE20401B1FF5CCA",
+            "productionSha256": "4FED37F6E55F92ABCE7FC7FCD5DB7F7CFEEAB589A6D5D0DD75933630DB7044DB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralBinaryStabilizerRealization",
+            "scratchSha256": "E30ABF7F9072A0C1AFDCC868A371CBF45DFEEE68029B7AFB5900158AC04F41E5",
+            "productionSha256": "F37088156F1ED4911FADECA1871652A4473A24DDD96AD05388935591C5DBBF06",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFaithfulCharacterDivisibility",
+            "scratchSha256": "9C6E94794105805D9E4408F496D3908C44CA676C6376C16C437552BB31AE7063",
+            "productionSha256": "9C6E94794105805D9E4408F496D3908C44CA676C6376C16C437552BB31AE7063",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryH1PrimePowerKernel",
+            "scratchSha256": "19DA3B7EE28E9C5F5FFB5BF18A22A8C78F033805E5A6ED864351EA498A539F3C",
+            "productionSha256": "19DA3B7EE28E9C5F5FFB5BF18A22A8C78F033805E5A6ED864351EA498A539F3C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveH1HeckeCongruence",
+            "scratchSha256": "700841266CA4946061078CD982E107933BA862BB90E152DCB7D632A813BE5984",
+            "productionSha256": "E7D8F73B30E310660D82F9314894BE414757D230FDFDD3E2F0D646ADC74D4F29",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveH1AdicOperatorKernel",
+            "scratchSha256": "CC0404B804624308925B1E86EC1F10EC971BD1E6902B4030BF5CEE4DFAB0FAD2",
+            "productionSha256": "B9390C39F0D33ACBDB1E5C9F413320CCEF4C3B3824203CDA2A4C3FEC113F79B2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveCongruentH1AdicRealization",
+            "scratchSha256": "E95609B3B1E0AA209848BB5FD372DA27DD6081D3A22A8CC2BCE77FA9C2448320",
+            "productionSha256": "9C9ADA8F5100965586ACB6583B0465B62BD9970921D7CA0DA6115752D822AE96",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryH1ModulusOperatorAlgebra",
+            "scratchSha256": "3088DB3E4135312604626BD75E4F18FC786BCD4F02277870EFD6A380D256F30E",
+            "productionSha256": "3088DB3E4135312604626BD75E4F18FC786BCD4F02277870EFD6A380D256F30E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFiniteOperatorCharacterDescent",
+            "scratchSha256": "3AE57C01A36D9DF2D2B5E62DAC21816E54CAA7ABE0007AF37A04B5725A040C6A",
+            "productionSha256": "3AE57C01A36D9DF2D2B5E62DAC21816E54CAA7ABE0007AF37A04B5725A040C6A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveFiniteH1HeckeCharacter",
+            "scratchSha256": "48017F46307B8EAC8F2129D87FA9C3417B44B2D3AF19B4BA23472CCA4A5EDE26",
+            "productionSha256": "DE6FB139077EACE6DE85BDBC5C50A2DE8EB77B43F0F94AD0EBB2E9BECE884AE2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveFiniteH1OperatorRealization",
+            "scratchSha256": "3F439F73DD995AB8615CE63E33D4FF35246009D6EF34EC390CEEED6E90620223",
+            "productionSha256": "95315EC003FBDF057068FE6F4CE6FEE623F1A683D49CFCEEE753F05984280A59",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryH1ModulusKernel",
+            "scratchSha256": "A27F8C0453C13671E4669B08048F6589FBF6AC47CFDE055A2A2A486C8FACAF7F",
+            "productionSha256": "C6D2FAB2DB503BF030400AA6F7AFC827B245132F5BADD5B5069128D2D07A160F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryPermutationHeckeWords",
+            "scratchSha256": "63852A443A7D679C5216E4E769976CE57F13805F28A14CA8D33C2E5CF180071B",
+            "productionSha256": "DA80FBD3B10B99F4997FE45F2E5F078091F7BB91C47964DDFE43E5240C5320A4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryPermutationOperatorKernel",
+            "scratchSha256": "1F9939744334A621CCC12010C765AEDCC14F581B83DD7533E12405D8E89DCD36",
+            "productionSha256": "C7F427DBB3469E86FA132289B0E0982B10B8EF127A6222704F22DCF33E8FC941",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryPermutationHeckeFinite",
+            "scratchSha256": "B80BC2737F5FDB86945ED8534CD2663AA430A92DCF67638A8AA0A9495E21BE4F",
+            "productionSha256": "7DAC7E61FB44A30F2FB65AF7D1949B86CEB30E7E917C3E57FBDAAF767AB4CDA3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryPermutationOperatorDescent",
+            "scratchSha256": "7A7635F0FE17AF12C8C4CA7B4FE70AD368C45A0372FF5DACEE9A7A57C31AC27E",
+            "productionSha256": "DC3CD4E5B0E28248DA990B1AFD16798C80BA70F1E7282ECBDC7C6CB26818E535",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitivePermutationH1HeckeCharacter",
+            "scratchSha256": "7F3831C432148B1EB2B67E06A1DD55FFFDB85E3B68C87C35359F1A7FD00E7EEA",
+            "productionSha256": "9A1BE0FC0429D53A9BAED8B434BEBFFA09A68FC688E1C82A7185CCD190CC0E0B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitivePermutationH1Realization",
+            "scratchSha256": "F4582898A76AE5B4C935471C567494BD924C02BA7E7FA087D63522B2E64ADCAE",
+            "productionSha256": "62E1F69AA590A23CDDD1C76B1DA7BDEC70B4777801B63BD2044AEAA32F9DE8EC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCongruenceCover",
+            "scratchSha256": "585659F407D2F51EDA84FCA732EB7D333F4256CE73B930F2E02CF9EE631548B4",
+            "productionSha256": "585659F407D2F51EDA84FCA732EB7D333F4256CE73B930F2E02CF9EE631548B4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryStabilizerGammaOneCover",
+            "scratchSha256": "657BD9FE8E260AB66BE097AA959CEACEFEE58F1AEE70DD9490E52E4404E7749E",
+            "productionSha256": "A2B599FD1DEC46B048231CE917D26240EADFD3181CA60A7ABCB9D378F4E61CA8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiagonalHom",
+            "scratchSha256": "AF70842F3D291B9E918FA2A4BC2E6F085951BC40EC99A69D219ADD4D836DD914",
+            "productionSha256": "6B69EE3D1CB9E5A92FD6FFEA754FA403E79CAFF7C1F3336395B41623B78FA7DC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCoverFiniteIndex",
+            "scratchSha256": "A3DF7002CC95628A02ED734D1A10B63E8CCA9D3E540C261C88B67AD9F37FC3C6",
+            "productionSha256": "465E76340EC503F5F5346202CB3AAB148A75A54A84C6CA5602F017BE29EB4320",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCohomologyTransfer",
+            "scratchSha256": "15C53922CF077084C9F4421782C3346D7C27048B8E233F29F36D60CC5C1A7D62",
+            "productionSha256": "7E0042F01FF497AA6E36ACE0D6BB4C524BE7AA65AD52A28E2A41B14397FCF97D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneConstantH1Realization",
+            "scratchSha256": "5E3B3BE2610765E1D2E7E4DD2C727F1FE418231026EF3BB46409CDCDDB1C4B24",
+            "productionSha256": "B495A6F8E833DADAEE5684816D751CCA7CFC98853DE3C7485BC6133F9807D193",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 205 distinct names from 205 exhaustive scratch checks are retained: 205 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The Gamma1 transfer and transported stabilizer operators have not yet been identified with arithmetic geometric correspondences or the required Gamma1 Hecke-and-diamond actions. Geometric Galois realization of these finite characters, compatible original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. No eigenvector lift, arithmetic Galois action or characteristic-zero deformation point is claimed from the finite constructions alone. 16/20; DUB-17--20 OPEN."
+  },
+  "receipt8248": {
+    "recordedUTC": "2026-10-26T06:29:24.493284+00:00",
+    "log": "logs/dubon-build-20261025-220533-685.log",
+    "sha256": "67A337579A83611FB247AE2A9C773A3C0152B998E2B6A233718CE9B9CAE117C1",
+    "bytes": 13422423,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8248,
+    "projectTheorems": 52204,
+    "registeredConsumers": 23789,
+    "registeredConstructions": 2255,
+    "declarations": 31990,
+    "generated": 33077,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261025_215954.log",
+    "foundationSha256": "257EA7AEE8881BB2B2779333E6F986F786481198262002D7E1B906E0BD3D84F7",
+    "countReconciliation": {
+      "previousTheorems": 51999,
+      "focusedTheorems": 205,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 205,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationGlobalOwnership8248.log",
+      "globalOwnershipSha256": "C0F2E579E38E7979057965ABA49B74B1FF409D0527028BE66AF0D98E4C033C63",
+      "globalOwnershipSourceSha256": "341236BAF5F2DE2EBF4D56601F6F4EE65914A28A732F3A6789EBAAF4FB9CA6DF",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationOwnership8248.log",
+      "ownershipSha256": "436AB77ED3981E3A1B9FB203042888E3CCC86D48E3F7211B0A2637E2D40EB0F5"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 205,
+      "scratchDistinct": 205,
+      "generatedNameRenamings": {},
+      "productionFocused": 205,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourcePermutationCoefficientQuotient",
+            "SourceBinaryPrimePowerPermutation",
+            "SourceBinaryPermutationHecke",
+            "SourceBinaryPermutationCongruence",
+            "SourceIntegralBinaryPermutationRealization"
+          ],
+          "count": 18,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership582For8248.log",
+            "sha256": "B481A4F7C0162E11D5AF4A0BDD540BF0F593FF5C93F1E83EB2647EC2B96C7DBF",
+            "sourceSha256": "AD1B068584660C9B73C7618E9E479C55711F43A17EEB5E0668ACE5C2D270948C"
+          }
+        },
+        {
+          "modules": [
+            "SourcePrimitiveH1CoefficientField",
+            "SourcePrimitiveLocalH1Character",
+            "SourcePrimitiveAdicH1Quotients",
+            "SourcePrimitiveCompatibleH1AdicData",
+            "SourcePrimitiveH1AdicRealization"
+          ],
+          "count": 43,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership583For8248.log",
+            "sha256": "A328D7C9880A01D19A5D0427E85DD2AEAF83715204E83A151BC94C0F31A0190B",
+            "sourceSha256": "87062B7A78137F4CCFDED135C954533042C579D7EBA219B291DC371D6C5F1E82"
+          }
+        },
+        {
+          "modules": [
+            "SourceCoefficientPermutationCoordinates",
+            "SourceCoefficientStabilizerCohomology",
+            "SourceIntegralBinaryStabilizerRealization"
+          ],
+          "count": 11,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership584For8248.log",
+            "sha256": "5FBB59F95CC5CC9DD7E5EECD6A396E4B047A209AA95DCCC93669F589F661C3FF",
+            "sourceSha256": "AFE2F5673A2C9CEDDD2BFDDFE9BBB89723FA27DD8B95518FD64CACF45797F873"
+          }
+        },
+        {
+          "modules": [
+            "SourceFaithfulCharacterDivisibility",
+            "SourceBinaryH1PrimePowerKernel",
+            "SourcePrimitiveH1HeckeCongruence",
+            "SourcePrimitiveH1AdicOperatorKernel",
+            "SourcePrimitiveCongruentH1AdicRealization"
+          ],
+          "count": 13,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership585For8248.log",
+            "sha256": "3D219D8FFE6D1680C639E96C0FA94A4F12D7FF4421D9DF9CBA9E6E0FF72F2F2C",
+            "sourceSha256": "7B392236D3BBA26A499C51E560C693FC981A8EA45A16B2F42E33222D4350B6AE"
+          }
+        },
+        {
+          "modules": [
+            "SourceBinaryH1ModulusOperatorAlgebra",
+            "SourceFiniteOperatorCharacterDescent",
+            "SourcePrimitiveFiniteH1HeckeCharacter",
+            "SourcePrimitiveFiniteH1OperatorRealization"
+          ],
+          "count": 41,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership586For8248.log",
+            "sha256": "027A405085858A5B6CB3BEF5B9B3ACD72B4A0861CAE47B1C87D692F2287F5F94",
+            "sourceSha256": "1354A57EE7850887E9B21E546C0583AF5D7478ED3D9D4E1E72EC9859BD08589A"
+          }
+        },
+        {
+          "modules": [
+            "SourceBinaryH1ModulusKernel",
+            "SourceBinaryPermutationHeckeWords",
+            "SourceBinaryPermutationOperatorKernel",
+            "SourceBinaryPermutationHeckeFinite",
+            "SourceBinaryPermutationOperatorDescent",
+            "SourcePrimitivePermutationH1HeckeCharacter",
+            "SourcePrimitivePermutationH1Realization"
+          ],
+          "count": 53,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership588For8248.log",
+            "sha256": "747933B9F0E4995848C513D0A1C59CBD1050BEB467B8AC9094E89B69E93253CB",
+            "sourceSha256": "4E21264205103EAB9EFAE97AA7BDB6555A1C489000739E0B69A58F871CCE7828"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneCongruenceCover",
+            "SourceBinaryStabilizerGammaOneCover",
+            "SourceGammaOneDiagonalHom",
+            "SourceGammaOneCoverFiniteIndex",
+            "SourceGammaOneCohomologyTransfer",
+            "SourceGammaOneConstantH1Realization"
+          ],
+          "count": 26,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationScratchOwnership591For8248.log",
+            "sha256": "12D5D4BDA30FEB1C028CA274A11446117EC3431A9D405A7A58FB2656FAD940C7",
+            "sourceSha256": "0B24E19E293ADEA1A46871F478C9B579E9114EAFD51819EB5094C6553EA19A4D"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteH1RealizationOwnership8248.log",
+        "sha256": "436AB77ED3981E3A1B9FB203042888E3CCC86D48E3F7211B0A2637E2D40EB0F5",
+        "sourceSha256": "67FC1B2B9410DF6C9F8D252822E323CF2C3A3CEEE84CAAE4E2B91993601E792F"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-201544-907.log",
+        "sha256": "DA4E7D14C8AFCBD74C6668C14A55182A02A36657FB28067C803E2A96F0E7E06F"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 35 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourcePermutationCoefficientQuotient",
+            "scratchSha256": "8ADA6D97B221B37C7C097523DB6EABE4E4061F4D30D326A3B6E49CEC95A24A95",
+            "productionSha256": "8ADA6D97B221B37C7C097523DB6EABE4E4061F4D30D326A3B6E49CEC95A24A95",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryPrimePowerPermutation",
+            "scratchSha256": "64D4B11F41FFC30E7D88DF851C3229A11DFE9CA4B6FDE2B4295CB39EF2C4F30B",
+            "productionSha256": "736B62F3D526E0316050B0D7EFA5FD3D1D5EC377F0ECDCCB4D037AE2E4413FF5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryPermutationHecke",
+            "scratchSha256": "200353FC6BE79050115BE8F768AB96D740DE9D92C6AF4CA4C4BF624D082EE0C8",
+            "productionSha256": "AF702186908EFBA841F10F9C72AFAA68549260BB34814681E1663579BAF19F88",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryPermutationCongruence",
+            "scratchSha256": "C9CB7D8C47037CEF003A731809E8C925FCF1A6A698F092CA85056EC67697F8FD",
+            "productionSha256": "DD923133E079A87E5909EA3A29309043F1C94D16257736AE09728D2479430CA0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralBinaryPermutationRealization",
+            "scratchSha256": "84048A1E76A885490470F4591925B40E88B1F55DEBC3BF668E0254DEDBA5BB17",
+            "productionSha256": "3E23646887D9B8FA69392E299A967E594FB148C22832FE39803C16D97DF86417",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveH1CoefficientField",
+            "scratchSha256": "FAB1DD47B28AC19C1A862F66C2BC55F684E105F2B436ED713AD23508DAB8D3B9",
+            "productionSha256": "83E60BD7FB4E347C2174D386B1714A8E213D5F20CC054209D7E34E21D8340721",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveLocalH1Character",
+            "scratchSha256": "B4579019CCC0485129A7A903A711239B6EB2B32C2F1E75C80D6668A3D502AD25",
+            "productionSha256": "52A755628EB31B451C1B41AAF41B6848A728024DE7C0B91EE185F2CC43F43D16",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveAdicH1Quotients",
+            "scratchSha256": "BBDB559FC020FA5A6FD4BFB34973C03EFE4DFC71EA64A149AEE08F3403DA7AB2",
+            "productionSha256": "0E06085AC1DAC09F05E77AA549632875AB5BE6DCE4C4A40B9501885EEE9613E9",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveCompatibleH1AdicData",
+            "scratchSha256": "D72BBD2D4CA607217125D77FAFC6E3377D063B456F71964C1EE0DE3DAE55E053",
+            "productionSha256": "F6E93D20D8DFB32E1044B671350A75805DAA1FEB986169208F8AD62F976CD027",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveH1AdicRealization",
+            "scratchSha256": "E062FDF00FB3AE467339D04E18B99CC0503F3F51CA7274AC1F8197AB642D498F",
+            "productionSha256": "FCCAA9B357EC79B0139C6EBE573591A07805255A2356E03C5622C6F755C2C850",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCoefficientPermutationCoordinates",
+            "scratchSha256": "500AF11865310EEEC2602EE24664B878F98FB342ED96952B0189B46A3F0E40F6",
+            "productionSha256": "3F41A210666DCE49AD319C5A67C2CA9303FA14AF5C6C1255245F4F22494C7BF4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCoefficientStabilizerCohomology",
+            "scratchSha256": "9936ECAA33E420CD6BBF7465D249E5A40CCD0244365542307DE20401B1FF5CCA",
+            "productionSha256": "4FED37F6E55F92ABCE7FC7FCD5DB7F7CFEEAB589A6D5D0DD75933630DB7044DB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralBinaryStabilizerRealization",
+            "scratchSha256": "E30ABF7F9072A0C1AFDCC868A371CBF45DFEEE68029B7AFB5900158AC04F41E5",
+            "productionSha256": "F37088156F1ED4911FADECA1871652A4473A24DDD96AD05388935591C5DBBF06",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFaithfulCharacterDivisibility",
+            "scratchSha256": "9C6E94794105805D9E4408F496D3908C44CA676C6376C16C437552BB31AE7063",
+            "productionSha256": "9C6E94794105805D9E4408F496D3908C44CA676C6376C16C437552BB31AE7063",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryH1PrimePowerKernel",
+            "scratchSha256": "19DA3B7EE28E9C5F5FFB5BF18A22A8C78F033805E5A6ED864351EA498A539F3C",
+            "productionSha256": "19DA3B7EE28E9C5F5FFB5BF18A22A8C78F033805E5A6ED864351EA498A539F3C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveH1HeckeCongruence",
+            "scratchSha256": "700841266CA4946061078CD982E107933BA862BB90E152DCB7D632A813BE5984",
+            "productionSha256": "E7D8F73B30E310660D82F9314894BE414757D230FDFDD3E2F0D646ADC74D4F29",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveH1AdicOperatorKernel",
+            "scratchSha256": "CC0404B804624308925B1E86EC1F10EC971BD1E6902B4030BF5CEE4DFAB0FAD2",
+            "productionSha256": "B9390C39F0D33ACBDB1E5C9F413320CCEF4C3B3824203CDA2A4C3FEC113F79B2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveCongruentH1AdicRealization",
+            "scratchSha256": "E95609B3B1E0AA209848BB5FD372DA27DD6081D3A22A8CC2BCE77FA9C2448320",
+            "productionSha256": "9C9ADA8F5100965586ACB6583B0465B62BD9970921D7CA0DA6115752D822AE96",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryH1ModulusOperatorAlgebra",
+            "scratchSha256": "3088DB3E4135312604626BD75E4F18FC786BCD4F02277870EFD6A380D256F30E",
+            "productionSha256": "3088DB3E4135312604626BD75E4F18FC786BCD4F02277870EFD6A380D256F30E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFiniteOperatorCharacterDescent",
+            "scratchSha256": "3AE57C01A36D9DF2D2B5E62DAC21816E54CAA7ABE0007AF37A04B5725A040C6A",
+            "productionSha256": "3AE57C01A36D9DF2D2B5E62DAC21816E54CAA7ABE0007AF37A04B5725A040C6A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveFiniteH1HeckeCharacter",
+            "scratchSha256": "48017F46307B8EAC8F2129D87FA9C3417B44B2D3AF19B4BA23472CCA4A5EDE26",
+            "productionSha256": "DE6FB139077EACE6DE85BDBC5C50A2DE8EB77B43F0F94AD0EBB2E9BECE884AE2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitiveFiniteH1OperatorRealization",
+            "scratchSha256": "3F439F73DD995AB8615CE63E33D4FF35246009D6EF34EC390CEEED6E90620223",
+            "productionSha256": "95315EC003FBDF057068FE6F4CE6FEE623F1A683D49CFCEEE753F05984280A59",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryH1ModulusKernel",
+            "scratchSha256": "A27F8C0453C13671E4669B08048F6589FBF6AC47CFDE055A2A2A486C8FACAF7F",
+            "productionSha256": "C6D2FAB2DB503BF030400AA6F7AFC827B245132F5BADD5B5069128D2D07A160F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryPermutationHeckeWords",
+            "scratchSha256": "63852A443A7D679C5216E4E769976CE57F13805F28A14CA8D33C2E5CF180071B",
+            "productionSha256": "DA80FBD3B10B99F4997FE45F2E5F078091F7BB91C47964DDFE43E5240C5320A4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryPermutationOperatorKernel",
+            "scratchSha256": "1F9939744334A621CCC12010C765AEDCC14F581B83DD7533E12405D8E89DCD36",
+            "productionSha256": "C7F427DBB3469E86FA132289B0E0982B10B8EF127A6222704F22DCF33E8FC941",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryPermutationHeckeFinite",
+            "scratchSha256": "B80BC2737F5FDB86945ED8534CD2663AA430A92DCF67638A8AA0A9495E21BE4F",
+            "productionSha256": "7DAC7E61FB44A30F2FB65AF7D1949B86CEB30E7E917C3E57FBDAAF767AB4CDA3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryPermutationOperatorDescent",
+            "scratchSha256": "7A7635F0FE17AF12C8C4CA7B4FE70AD368C45A0372FF5DACEE9A7A57C31AC27E",
+            "productionSha256": "DC3CD4E5B0E28248DA990B1AFD16798C80BA70F1E7282ECBDC7C6CB26818E535",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitivePermutationH1HeckeCharacter",
+            "scratchSha256": "7F3831C432148B1EB2B67E06A1DD55FFFDB85E3B68C87C35359F1A7FD00E7EEA",
+            "productionSha256": "9A1BE0FC0429D53A9BAED8B434BEBFFA09A68FC688E1C82A7185CCD190CC0E0B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourcePrimitivePermutationH1Realization",
+            "scratchSha256": "F4582898A76AE5B4C935471C567494BD924C02BA7E7FA087D63522B2E64ADCAE",
+            "productionSha256": "62E1F69AA590A23CDDD1C76B1DA7BDEC70B4777801B63BD2044AEAA32F9DE8EC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCongruenceCover",
+            "scratchSha256": "585659F407D2F51EDA84FCA732EB7D333F4256CE73B930F2E02CF9EE631548B4",
+            "productionSha256": "585659F407D2F51EDA84FCA732EB7D333F4256CE73B930F2E02CF9EE631548B4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceBinaryStabilizerGammaOneCover",
+            "scratchSha256": "657BD9FE8E260AB66BE097AA959CEACEFEE58F1AEE70DD9490E52E4404E7749E",
+            "productionSha256": "A2B599FD1DEC46B048231CE917D26240EADFD3181CA60A7ABCB9D378F4E61CA8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDiagonalHom",
+            "scratchSha256": "AF70842F3D291B9E918FA2A4BC2E6F085951BC40EC99A69D219ADD4D836DD914",
+            "productionSha256": "6B69EE3D1CB9E5A92FD6FFEA754FA403E79CAFF7C1F3336395B41623B78FA7DC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCoverFiniteIndex",
+            "scratchSha256": "A3DF7002CC95628A02ED734D1A10B63E8CCA9D3E540C261C88B67AD9F37FC3C6",
+            "productionSha256": "465E76340EC503F5F5346202CB3AAB148A75A54A84C6CA5602F017BE29EB4320",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCohomologyTransfer",
+            "scratchSha256": "15C53922CF077084C9F4421782C3346D7C27048B8E233F29F36D60CC5C1A7D62",
+            "productionSha256": "7E0042F01FF497AA6E36ACE0D6BB4C524BE7AA65AD52A28E2A41B14397FCF97D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneConstantH1Realization",
+            "scratchSha256": "5E3B3BE2610765E1D2E7E4DD2C727F1FE418231026EF3BB46409CDCDDB1C4B24",
+            "productionSha256": "B495A6F8E833DADAEE5684816D751CCA7CFC98853DE3C7485BC6133F9807D193",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 205 distinct names from 205 exhaustive scratch checks are retained: 205 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The Gamma1 transfer and transported stabilizer operators have not yet been identified with arithmetic geometric correspondences or the required Gamma1 Hecke-and-diamond actions. Geometric Galois realization of these finite characters, compatible original all-weight characteristic-zero association, required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. No eigenvector lift, arithmetic Galois action or characteristic-zero deformation point is claimed from the finite constructions alone. 16/20; DUB-17--20 OPEN."
+  }
+}

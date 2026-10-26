@@ -1,0 +1,196 @@
+import Dubon2026.SourceFiniteBilinearBaseChange
+import Dubon2026.SourceOriginalCoefficientWeilNondegeneracy
+import Dubon2026.SourceBilinearBaseChangeAlternating
+import Dubon2026.SourceOriginalCoefficientWeilLaws
+import Dubon2026.SourceBilinearPolynomialAdjoint
+import Dubon2026.SourceIdempotentBilinearRestriction
+import Dubon2026.SourceHeckeCoordinateRelations
+import Dubon2026.SourceOriginalCuspRationalTateHecke
+import Dubon2026.SourceIntegerCoefficientExtensionOne
+import Dubon2026.SourceIntegerCoefficientEndExtension
+import Dubon2026.SourcePrimitiveOriginalTateEvaluation
+import Dubon2026.SourcePrimitiveOriginalTateAdjoint
+import Dubon2026.SourceEndIdempotentPairingRestriction
+import Dubon2026.SourcePrimitiveOriginalTateRestriction
+import Dubon2026.SourceCharacterIdempotentLine
+import Dubon2026.SourceCharacterIdempotentRankTwo
+import Dubon2026.SourceGeneratedCharacterIdempotent
+import Dubon2026.SourceTensorCharacterIdempotent
+import Dubon2026.SourceOriginalCuspPadicHeckeMap
+import Dubon2026.SourceIntegerCoefficientExtensionCharacter
+import Dubon2026.SourcePrimitiveHeckeAlgebraEvaluation
+import Dubon2026.SourcePrimitiveHeckeAlgebraProjector
+import Dubon2026.SourceRankTwoSurjectiveDescent
+import Dubon2026.SourceOriginalCuspTateRankTwo
+import Dubon2026.SourceRankTwoBaseChange
+import Dubon2026.SourceIntegerCoefficientRankTwo
+import Dubon2026.SourceIntertwinedRangeEquiv
+import Dubon2026.SourceRankTwoCharacterRange
+import Dubon2026.SourcePrimitiveHeckeAlgebraRankTwo
+import Dubon2026.SourcePrimitiveOriginalTateRankTwo
+import Dubon2026.SourcePrimitiveOriginalTateNondegenerateRankTwo
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.finite_bilinear_baseChange_injective
+#print axioms Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_injective
+#print axioms Dubon2026.sourceBilinear_baseChange_alternating
+#print axioms Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_self
+#print axioms Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_hecke
+#print axioms Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_cyclotomic
+#print axioms Dubon2026.bilinear_selfAdjoint_pow
+#print axioms Dubon2026.bilinear_selfAdjoint_aeval
+#print axioms Dubon2026.bilinear_selfAdjoint_sum_shifted_squares
+#print axioms Dubon2026.idempotent_bilinear_restriction_injective
+#print axioms Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear
+#print axioms Dubon2026.hecke_relation_of_injective_coordinates
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalRationalTateHeckeWord_of_cusp_relation
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspRationalTateHecke_word
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspRationalTateHecke_prime
+#print axioms Dubon2026.integerCoefficientExtension_one_tmul
+#print axioms Dubon2026.integerCoefficientEndExtension_one_tmul
+#print axioms Dubon2026.integerCoefficientEndExtension_shifted_squares
+#print axioms Dubon2026.integerCoefficientEndExtension_aeval
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke_prime
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_hecke
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_annihilator
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_projector
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_annihilator_selfAdjoint
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_projector_selfAdjoint
+#print axioms Dubon2026.mapped_idempotent_pairing_restriction
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_pairing_restriction
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspRationalTateHecke
+#print axioms Dubon2026.integerCoefficientEndExtension
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation
+#print axioms Dubon2026.characterIdempotentRankTwoEquiv_symm_val
+#print axioms Dubon2026.characterIdempotentRankTwoEquiv_apply
+#print axioms Dubon2026.character_scalar_action_of_generators
+#print axioms Dubon2026.coefficientTensorCharacter_tmul
+#print axioms Dubon2026.tensor_character_idempotent_scalar
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_word
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_prime
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_character
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_generates
+#print axioms Dubon2026.integerCoefficientExtension_character
+#print axioms Dubon2026.integerCoefficientExtension_eigen_identity
+#print axioms Dubon2026.primitiveHeckeAlgebraEvaluation_integral
+#print axioms Dubon2026.primitiveHeckeAlgebraEvaluation_character
+#print axioms Dubon2026.primitiveHeckeAlgebraProjector_character
+#print axioms Dubon2026.primitiveHeckeAlgebraProjector_eigen
+#print axioms Dubon2026.primitiveHeckeAlgebraProjector_scalar
+#print axioms Dubon2026.rankTwo_surjective_descent
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspTate_rankTwo
+#print axioms Dubon2026.rankTwoBaseChangeEquiv_tmul
+#print axioms Dubon2026.rankTwoBaseChangeEquiv_operator
+#print axioms Dubon2026.integerCoefficient_rankTwo_coordinates
+#print axioms Dubon2026.exists_integerCoefficient_rankTwo_coordinates
+#print axioms Dubon2026.intertwinedRangeEquiv_apply
+#print axioms Dubon2026.rankTwoCharacterRangeEquiv_apply
+#print axioms Dubon2026.exists_primitive_heckeAction_rankTwo
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_rankTwo
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_nondegenerate_rankTwo
+#print axioms Dubon2026.characterIdempotentLeftIdealEquiv
+#print axioms Dubon2026.characterIdempotentRankTwoEquiv
+#print axioms Dubon2026.coefficientTensorCharacter
+#print axioms Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap
+#print axioms Dubon2026.primitiveHeckeAlgebraEvaluation
+#print axioms Dubon2026.rankTwoBaseChangeEquiv
+#print axioms Dubon2026.intertwinedRangeEquiv
+#print axioms Dubon2026.rankTwoCharacterRangeEquiv
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceFiniteBilinearBaseChange, `Dubon2026.SourceOriginalCoefficientWeilNondegeneracy, `Dubon2026.SourceBilinearBaseChangeAlternating, `Dubon2026.SourceOriginalCoefficientWeilLaws, `Dubon2026.SourceBilinearPolynomialAdjoint, `Dubon2026.SourceIdempotentBilinearRestriction, `Dubon2026.SourceHeckeCoordinateRelations, `Dubon2026.SourceOriginalCuspRationalTateHecke, `Dubon2026.SourceIntegerCoefficientExtensionOne, `Dubon2026.SourceIntegerCoefficientEndExtension, `Dubon2026.SourcePrimitiveOriginalTateEvaluation, `Dubon2026.SourcePrimitiveOriginalTateAdjoint, `Dubon2026.SourceEndIdempotentPairingRestriction, `Dubon2026.SourcePrimitiveOriginalTateRestriction, `Dubon2026.SourceCharacterIdempotentLine, `Dubon2026.SourceCharacterIdempotentRankTwo, `Dubon2026.SourceGeneratedCharacterIdempotent, `Dubon2026.SourceTensorCharacterIdempotent, `Dubon2026.SourceOriginalCuspPadicHeckeMap, `Dubon2026.SourceIntegerCoefficientExtensionCharacter, `Dubon2026.SourcePrimitiveHeckeAlgebraEvaluation, `Dubon2026.SourcePrimitiveHeckeAlgebraProjector, `Dubon2026.SourceRankTwoSurjectiveDescent, `Dubon2026.SourceOriginalCuspTateRankTwo, `Dubon2026.SourceRankTwoBaseChange, `Dubon2026.SourceIntegerCoefficientRankTwo, `Dubon2026.SourceIntertwinedRangeEquiv, `Dubon2026.SourceRankTwoCharacterRange, `Dubon2026.SourcePrimitiveHeckeAlgebraRankTwo, `Dubon2026.SourcePrimitiveOriginalTateRankTwo, `Dubon2026.SourcePrimitiveOriginalTateNondegenerateRankTwo]
+  let theorems : Array Name := #[`Dubon2026.finite_bilinear_baseChange_injective, `Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_injective, `Dubon2026.sourceBilinear_baseChange_alternating, `Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_self, `Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_hecke, `Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear_cyclotomic, `Dubon2026.bilinear_selfAdjoint_pow, `Dubon2026.bilinear_selfAdjoint_aeval, `Dubon2026.bilinear_selfAdjoint_sum_shifted_squares, `Dubon2026.idempotent_bilinear_restriction_injective, `Dubon2026.hecke_relation_of_injective_coordinates, `Dubon2026.SourceFunctionField.OriginalChart.originalRationalTateHeckeWord_of_cusp_relation, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspRationalTateHecke_word, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspRationalTateHecke_prime, `Dubon2026.integerCoefficientExtension_one_tmul, `Dubon2026.integerCoefficientEndExtension_one_tmul, `Dubon2026.integerCoefficientEndExtension_shifted_squares, `Dubon2026.integerCoefficientEndExtension_aeval, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke_prime, `Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_hecke, `Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_annihilator, `Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_projector, `Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_annihilator_selfAdjoint, `Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation_projector_selfAdjoint, `Dubon2026.mapped_idempotent_pairing_restriction, `Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_pairing_restriction, `Dubon2026.characterIdempotentRankTwoEquiv_symm_val, `Dubon2026.characterIdempotentRankTwoEquiv_apply, `Dubon2026.character_scalar_action_of_generators, `Dubon2026.coefficientTensorCharacter_tmul, `Dubon2026.tensor_character_idempotent_scalar, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_word, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_prime, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_character, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap_generates, `Dubon2026.integerCoefficientExtension_character, `Dubon2026.integerCoefficientExtension_eigen_identity, `Dubon2026.primitiveHeckeAlgebraEvaluation_integral, `Dubon2026.primitiveHeckeAlgebraEvaluation_character, `Dubon2026.primitiveHeckeAlgebraProjector_character, `Dubon2026.primitiveHeckeAlgebraProjector_eigen, `Dubon2026.primitiveHeckeAlgebraProjector_scalar, `Dubon2026.rankTwo_surjective_descent, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspTate_rankTwo, `Dubon2026.rankTwoBaseChangeEquiv_tmul, `Dubon2026.rankTwoBaseChangeEquiv_operator, `Dubon2026.integerCoefficient_rankTwo_coordinates, `Dubon2026.exists_integerCoefficient_rankTwo_coordinates, `Dubon2026.intertwinedRangeEquiv_apply, `Dubon2026.rankTwoCharacterRangeEquiv_apply, `Dubon2026.exists_primitive_heckeAction_rankTwo, `Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_rankTwo, `Dubon2026.SourceFunctionField.OriginalChart.exists_primitive_originalTate_nondegenerate_rankTwo]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.originalCoefficientWeilBilinear, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspRationalTateHecke, `Dubon2026.integerCoefficientEndExtension, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspCoefficientTateHecke, `Dubon2026.SourceFunctionField.OriginalChart.primitiveOriginalTateEvaluation, `Dubon2026.characterIdempotentLeftIdealEquiv, `Dubon2026.characterIdempotentRankTwoEquiv, `Dubon2026.coefficientTensorCharacter, `Dubon2026.SourceFunctionField.OriginalChart.originalCuspPadicHeckeMap, `Dubon2026.primitiveHeckeAlgebraEvaluation, `Dubon2026.rankTwoBaseChangeEquiv, `Dubon2026.intertwinedRangeEquiv, `Dubon2026.rankTwoCharacterRangeEquiv]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE ORIGINAL PRIMITIVE TATE IMAGE AUDIT PASS: {count} theorems including private/generated declarations. The actual arithmetic projector has a nonzero rank-two original Tate image with an injective restricted Weil pairing. Comparison to the existing spanning specialization, determinant, residual association, automorphy and all-weight continuation remain open; 16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceFiniteBilinearBaseChange
+
+#lint in Dubon2026.SourceOriginalCoefficientWeilNondegeneracy
+
+#lint in Dubon2026.SourceBilinearBaseChangeAlternating
+
+#lint in Dubon2026.SourceOriginalCoefficientWeilLaws
+
+#lint in Dubon2026.SourceBilinearPolynomialAdjoint
+
+#lint in Dubon2026.SourceIdempotentBilinearRestriction
+
+#lint in Dubon2026.SourceHeckeCoordinateRelations
+
+#lint in Dubon2026.SourceOriginalCuspRationalTateHecke
+
+#lint in Dubon2026.SourceIntegerCoefficientExtensionOne
+
+#lint in Dubon2026.SourceIntegerCoefficientEndExtension
+
+#lint in Dubon2026.SourcePrimitiveOriginalTateEvaluation
+
+#lint in Dubon2026.SourcePrimitiveOriginalTateAdjoint
+
+#lint in Dubon2026.SourceEndIdempotentPairingRestriction
+
+#lint in Dubon2026.SourcePrimitiveOriginalTateRestriction
+
+#lint in Dubon2026.SourceCharacterIdempotentLine
+
+#lint in Dubon2026.SourceCharacterIdempotentRankTwo
+
+#lint in Dubon2026.SourceGeneratedCharacterIdempotent
+
+#lint in Dubon2026.SourceTensorCharacterIdempotent
+
+#lint in Dubon2026.SourceOriginalCuspPadicHeckeMap
+
+#lint in Dubon2026.SourceIntegerCoefficientExtensionCharacter
+
+#lint in Dubon2026.SourcePrimitiveHeckeAlgebraEvaluation
+
+#lint in Dubon2026.SourcePrimitiveHeckeAlgebraProjector
+
+#lint in Dubon2026.SourceRankTwoSurjectiveDescent
+
+#lint in Dubon2026.SourceOriginalCuspTateRankTwo
+
+#lint in Dubon2026.SourceRankTwoBaseChange
+
+#lint in Dubon2026.SourceIntegerCoefficientRankTwo
+
+#lint in Dubon2026.SourceIntertwinedRangeEquiv
+
+#lint in Dubon2026.SourceRankTwoCharacterRange
+
+#lint in Dubon2026.SourcePrimitiveHeckeAlgebraRankTwo
+
+#lint in Dubon2026.SourcePrimitiveOriginalTateRankTwo
+
+#lint in Dubon2026.SourcePrimitiveOriginalTateNondegenerateRankTwo

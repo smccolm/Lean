@@ -1,0 +1,51 @@
+{
+  "modules": [
+    "SourceGammaOneHeckeGeometricSubgroup"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.geometricToUpper_upperToGeometric",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_geometricToUpper",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_conjugation",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_matrix",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_smul"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricToUpper",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeUpperGeometricEquiv"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.geometricToUpper_upperToGeometric",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_geometricToUpper",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_conjugation",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_matrix",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricToUpper",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeUpperGeometricEquiv"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.geometricToUpper_upperToGeometric",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_geometricToUpper",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_conjugation",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_matrix",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricToUpper",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeUpperGeometricEquiv",
+    "Dubon2026.originalHeckeRaisedToUpper_toRaised",
+    "Dubon2026.originalHeckeUpperToRaised_toUpper",
+    "Dubon2026.originalHeckeUpperToRaised_matrix",
+    "Dubon2026.originalHeckeUpperToRaised_smul",
+    "Dubon2026.sourceGammaOneHeckeConjugation",
+    "Dubon2026.sourceGammaOneUpperToGammaZero",
+    "Dubon2026.SourceFunctionField.GammaOne.levelRaiseConj_mem_Gamma1"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckeUpperGeometricEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_conjugation",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_matrix",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_smul"
+  ],
+  "separatelyAxiomChecked": []
+}

@@ -1,0 +1,70 @@
+{
+  "status": "Prepared; preceding 8316 canonical PASS, immutable archive and renewed-search publication required before integration.",
+  "route": "gamma-one-differential-inputs-promotion-route-641.json",
+  "routeSha256": "A93C4035CF1F21E1A4ADFCA60A780A46979E8FDC1C59AABD3FE96AA888B1B459",
+  "modules": 19,
+  "queries": 85,
+  "theorems": 73,
+  "constructions": 12,
+  "exhaustiveScratchChecks": 138,
+  "proofValueEdges": 136,
+  "scopes": 8,
+  "receipts": {
+    "source-gamma-one-geometric-subgroup-1-scratch-receipt.json": "B20BC28E86B9674390D7360751DFE680BDC7BFCE6FA787B36B5461A3F76AE0C3",
+    "source-gamma-one-geometric-cohomology-1-scratch-receipt.json": "E2EDC0A0CF457E4C9F0F70FF482D77550117A037C82ABC7AF16EA8C7033DC47A",
+    "source-gamma-one-hecke-coefficient-1-scratch-receipt.json": "B35B8DCB281A6050421DBA5BB8EB81AFA7710E592D034899DC30FDDC371887F8",
+    "source-gamma-one-curve-geometry-2-scratch-receipt.json": "378499A246B5EA00C058B7E6E7008486CB53FF706B6920E3A4DF71AFC8F27979",
+    "source-gamma-one-scalar-extension-1-scratch-receipt.json": "39F1F0BAE1C276431397DE4757293D6AB7FA2634C8CCD2D72E80F9EB94E04021",
+    "source-gamma-one-field-modular-ratio-2-scratch-receipt.json": "9149584D53B8B74568CAED0F9D0E2BEE3F819570A05CF30DF0789CDAB9DE04F5",
+    "source-gamma-one-differential-finite-integral-5-scratch-receipt.json": "447878A306BA2A05157FF70C19B8B05455C9B679CC428947714118E7EF484F18",
+    "source-gamma-one-differential-cusp-integral-6-scratch-receipt.json": "0404466E30FD58C7EEE6272B9F223E799034FAC35EC07ED888BE14518F759652"
+  },
+  "expectedConsumers": 24024,
+  "expectedConstructions": 2325,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 gates unchanged.",
+  "sourceBodies": "Audited statements, proof bodies and comments unchanged; only scratch project imports qualified.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_differential_inputs_canonical_8335.py",
+      "sha256": "BE3DACA7AE1FC6DC4FED410C0F9416469781F825C2F8FBD4242175A08EA71D11"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_differential_inputs_8335.ps1",
+      "sha256": "8CA0FA84077E5BC78064D83A4868406114B20996570C146453F59760702DF440"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_differential_inputs_ownership_8335.py",
+      "sha256": "B37CA7DDECA00BE7A4517577F7B5BE8126D27DA9AA6C343E19D0A5DBED7E2A94"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_differential_inputs_8335.py",
+      "sha256": "04F6DBCA8490986E054593AB7BE74E94092D1DA0BA91E8380591612B406030F2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_differential_inputs_global_ownership_8335.py",
+      "sha256": "FE54FDFE1ADD4A05840EFF230327D45A0AF241B91EB2098670AE01BE6C09593E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_differential_inputs_production_ownership_8335.py",
+      "sha256": "8BFF162E9AC43D303DF873993922017406B47EFF5A5B489BC856E7E8CEA75A19"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_differential_inputs_scratch_ownership_8335.py",
+      "sha256": "564C4593653563E0008AC30684E44C8B5ACECA8B722EA2185B746F8456E23FB9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_differential_inputs_8335.py",
+      "sha256": "1BEBE945FFFF8A0DF3D56A0D50A5F4E4CEAB83BB9337DED69737843E1183159B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_differential_inputs_8335.ps1",
+      "sha256": "443F5ACC3AB67170B57F4B869872499E7DB81EE9824AF09A2C23F10DBC6D3C27"
+    }
+  ],
+  "productionMutation": false,
+  "precedingHelperFailure": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_differential_inputs_promotion_8335.py",
+    "sha256": "574C596766E2D530CE943A92F21F71879A8F993CA52B788C989D23D08293869B",
+    "reason": "The generated-script filename scan included its own generator and rejected the literal forbidden-status test strings in that generator. All nine intended helpers were produced, but no production action or review receipt ran. This fresh review restricts the scan to the intended helpers and parses all Python helpers."
+  }
+}

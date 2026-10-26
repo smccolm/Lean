@@ -1,0 +1,81 @@
+{
+  "recordedUTC": "2026-10-25T20:57:34.458970+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceValuationFrobeniusRoots",
+    "SourceValuationCyclotomicFrobenius",
+    "SourceRankTwoQuadraticTrace",
+    "SourceCyclotomicFrobeniusCharpoly",
+    "SourceOriginalPrimitiveFrobeniusCharpolyRealization"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceValuationFrobeniusRoots.lean",
+      "sha256": "EFDFC7CE019847CA89442ABAD71CE06F305D545C47721432AD6AAD0FB0175DF4",
+      "oleanSha256": "E17CB1CEA405389223119FFC42A31E59D386E6B75C96DF44F0629CB7DA39EE90"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceValuationCyclotomicFrobenius.lean",
+      "sha256": "9BBDA3A47EE24123A4946AE7BDEED28F617F52407693DD71EB2B1067BE100E14",
+      "oleanSha256": "4DF7363D46BAAF30AEF8F4B7B02D9E5A5E47C1BD58FA4EDF81A868EA23F81C8D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceRankTwoQuadraticTrace.lean",
+      "sha256": "7556A0CB93C3C941DBFA864A31C729A6822070684A815894465D4FF8FF9AAF0E",
+      "oleanSha256": "61F4EEA975B77F15889D4BC8237F012072F3DDCECC44F37053BC66851A96241F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicFrobeniusCharpoly.lean",
+      "sha256": "B766FF6B75648BF63D1B5483139E1F1DE73660A5DFAF420EEC229379BFA5AC4F",
+      "oleanSha256": "8C673B5ED481E3D4B0A620A980BC9C0B12A93D9455327520AFA29822ECB2DCAE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusCharpolyRealization.lean",
+      "sha256": "C04B66F95D44EF7D4C969125FEDFD752DE8CE5575DD6E7CBC21FD53D1A70C13C",
+      "oleanSha256": "7C374310D6A2F160B74FD31DD9AC140324AD2DB99AA183CA8E3FCDD744CD749F"
+    }
+  ],
+  "queries": [
+    "Dubon2026.valuation_root_mem",
+    "Dubon2026.valuation_frobenius_root",
+    "Dubon2026.valuation_cyclotomic_frobenius",
+    "Dubon2026.rank_two_cayley_hamilton",
+    "Dubon2026.rank_two_trace_of_determinant_quadratic",
+    "Dubon2026.rank_two_charpoly_of_determinant_quadratic",
+    "Dubon2026.cyclotomic_frobenius_charpoly",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_charpoly_realization"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.valuation_root_mem",
+    "Dubon2026.valuation_frobenius_root",
+    "Dubon2026.valuation_cyclotomic_frobenius",
+    "Dubon2026.rank_two_cayley_hamilton",
+    "Dubon2026.rank_two_trace_of_determinant_quadratic",
+    "Dubon2026.rank_two_charpoly_of_determinant_quadratic",
+    "Dubon2026.cyclotomic_frobenius_charpoly",
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_charpoly_realization"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusCharpolyAudit5.log",
+  "logSha256": "963F2153DC2EFC588D2F457D291E948F6A5F6FA0A4FABF8B66AC48CACCA9CAB5",
+  "auditSha256": "9983CDF121061926002538CA58F9B88AE96D1345C12FCC2035E56C687442314F",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 10,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 16,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusCharpolyDependencyAudit5.log",
+  "dependencyAuditSha256": "C6FA70E5187C07529D24EC867A2D2C3074E5136403B95FBCB9A3BF6B605ECEB1",
+  "dependencyAuditSourceSha256": "35356756AA1B038F4D59A357A9BFD7FB50A10AF133DE060219F29FD7BA6E1BC5",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_unramified_frobenius_charpoly_realization"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> residual association -> actual primitive Frobenius characteristic polynomial -> cyclotomic value at the exact source valuation-subring arithmetic Frobenius and native Cayley-Hamilton",
+  "discharged": "The same actual continuous unramified primitive representation now has Frobenius determinant equal to the rational prime, trace equal to its original embedded prime Fourier coefficient, and characteristic polynomial X^2-a_p X+p at the exact source valuation-subring arithmetic Frobenius lifts. Original prime Hecke eigenvalues, spanning specialization, Galois action, global cyclotomic determinant and quadratic identity are retained. Source residue characteristic and native root separation evaluate the cyclotomic character; native Cayley-Hamilton supplies trace. No determinant, root-action, trace or characteristic-polynomial premise is supplied.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Integral and residual transport of these identities and inertia, residual association, arithmetic automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-frobenius-charpoly-5-reuse-review-20261025.json",
+  "reuseReviewSha256": "287A3976151D57572FA48B82B433A3FA8673FAEF090D682E4F7A469A0AB71987",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

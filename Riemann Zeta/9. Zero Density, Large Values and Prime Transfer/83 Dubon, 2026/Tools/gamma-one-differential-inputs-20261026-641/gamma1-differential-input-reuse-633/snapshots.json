@@ -1,0 +1,45 @@
+{
+  "fetchedUTC": "2026-10-26T11:20:07.210874+00:00",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_CuspForm_exists_basis_gamma1_qCoeff_mem_range_ratCast.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CuspForm_exists_basis_gamma1_qCoeff_mem_range_ratCast.lean",
+      "snapshot": "P2M\\Sol\\S_CuspForm_exists_basis_gamma1_qCoeff_mem_range_ratCast.lean.txt",
+      "gitBlob": "ca5a62da82b7abe4446a268bc56dfdfa0cf8e74c",
+      "sha256": "89341A19A217B7F2CDD97A936749773123313315728046A121A8B0A57A157FB0",
+      "bytes": 15632
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_exists_coeffMap_diffQExp_x1FunctionFieldBar_eq_qExpansion.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_coeffMap_diffQExp_x1FunctionFieldBar_eq_qExpansion.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_exists_coeffMap_diffQExp_x1FunctionFieldBar_eq_qExpansion.lean.txt",
+      "gitBlob": "08c32320e29eef3c9bae928713d31d83fc46e617",
+      "sha256": "8D370D3ED7D39DAAE76A8612ED3E8E6166C4BD0B1FE8251C72CEC13C4EAFB7E9",
+      "bytes": 3751
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_mem_regularDifferentials_x1FunctionFieldBar_of_coeffMap_diffQExp_eq_qExpansion.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_mem_regularDifferentials_x1FunctionFieldBar_of_coeffMap_diffQExp_eq_qExpansion.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_mem_regularDifferentials_x1FunctionFieldBar_of_coeffMap_diffQExp_eq_qExpansion.lean.txt",
+      "gitBlob": "7e6f87ad9af5fc820cd43bdd73e600920ba5effb",
+      "sha256": "464B3036C5CB9DB2199ABEFC0EC7C67EE62EA24B13DC3EDE11A5E46AA2E6169F",
+      "bytes": 13513
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_exists_cuspForm_coeffMap_diffQExp_x1FunctionFieldBar_eq_qExpansion_of_mem_regularDifferentials.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_cuspForm_coeffMap_diffQExp_x1FunctionFieldBar_eq_qExpansion_of_mem_regularDifferentials.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_exists_cuspForm_coeffMap_diffQExp_x1FunctionFieldBar_eq_qExpansion_of_mem_regularDifferentials.lean.txt",
+      "gitBlob": "9a70f171df6924e33d7de6505630ed2ed2b6c1d5",
+      "sha256": "5D3A04733A3D39E2E2F87EFC9BEBC13D8C6A06A52ABB843D8204EA0F98543F79",
+      "bytes": 16748
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+import Dubon2026.SourcePermutationCoefficientQuotient
+import Dubon2026.SourceBinaryPrimePowerPermutation
+import Dubon2026.SourceBinaryPermutationHecke
+import Dubon2026.SourceBinaryPermutationCongruence
+import Dubon2026.SourceIntegralBinaryPermutationRealization
+import Dubon2026.SourcePrimitiveH1CoefficientField
+import Dubon2026.SourcePrimitiveLocalH1Character
+import Dubon2026.SourcePrimitiveAdicH1Quotients
+import Dubon2026.SourcePrimitiveCompatibleH1AdicData
+import Dubon2026.SourcePrimitiveH1AdicRealization
+import Dubon2026.SourceCoefficientPermutationCoordinates
+import Dubon2026.SourceCoefficientStabilizerCohomology
+import Dubon2026.SourceIntegralBinaryStabilizerRealization
+import Dubon2026.SourceFaithfulCharacterDivisibility
+import Dubon2026.SourceBinaryH1PrimePowerKernel
+import Dubon2026.SourcePrimitiveH1HeckeCongruence
+import Dubon2026.SourcePrimitiveH1AdicOperatorKernel
+import Dubon2026.SourcePrimitiveCongruentH1AdicRealization
+import Dubon2026.SourceBinaryH1ModulusOperatorAlgebra
+import Dubon2026.SourceFiniteOperatorCharacterDescent
+import Dubon2026.SourcePrimitiveFiniteH1HeckeCharacter
+import Dubon2026.SourcePrimitiveFiniteH1OperatorRealization
+import Dubon2026.SourceBinaryH1ModulusKernel
+import Dubon2026.SourceBinaryPermutationHeckeWords
+import Dubon2026.SourceBinaryPermutationOperatorKernel
+import Dubon2026.SourceBinaryPermutationHeckeFinite
+import Dubon2026.SourceBinaryPermutationOperatorDescent
+import Dubon2026.SourcePrimitivePermutationH1HeckeCharacter
+import Dubon2026.SourcePrimitivePermutationH1Realization
+import Dubon2026.SourceGammaOneCongruenceCover
+import Dubon2026.SourceBinaryStabilizerGammaOneCover
+import Dubon2026.SourceGammaOneDiagonalHom
+import Dubon2026.SourceGammaOneCoverFiniteIndex
+import Dubon2026.SourceGammaOneCohomologyTransfer
+import Dubon2026.SourceGammaOneConstantH1Realization
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourcePermutationCoefficientQuotient, `Dubon2026.SourceBinaryPrimePowerPermutation, `Dubon2026.SourceBinaryPermutationHecke, `Dubon2026.SourceBinaryPermutationCongruence, `Dubon2026.SourceIntegralBinaryPermutationRealization, `Dubon2026.SourcePrimitiveH1CoefficientField, `Dubon2026.SourcePrimitiveLocalH1Character, `Dubon2026.SourcePrimitiveAdicH1Quotients, `Dubon2026.SourcePrimitiveCompatibleH1AdicData, `Dubon2026.SourcePrimitiveH1AdicRealization, `Dubon2026.SourceCoefficientPermutationCoordinates, `Dubon2026.SourceCoefficientStabilizerCohomology, `Dubon2026.SourceIntegralBinaryStabilizerRealization, `Dubon2026.SourceFaithfulCharacterDivisibility, `Dubon2026.SourceBinaryH1PrimePowerKernel, `Dubon2026.SourcePrimitiveH1HeckeCongruence, `Dubon2026.SourcePrimitiveH1AdicOperatorKernel, `Dubon2026.SourcePrimitiveCongruentH1AdicRealization, `Dubon2026.SourceBinaryH1ModulusOperatorAlgebra, `Dubon2026.SourceFiniteOperatorCharacterDescent, `Dubon2026.SourcePrimitiveFiniteH1HeckeCharacter, `Dubon2026.SourcePrimitiveFiniteH1OperatorRealization, `Dubon2026.SourceBinaryH1ModulusKernel, `Dubon2026.SourceBinaryPermutationHeckeWords, `Dubon2026.SourceBinaryPermutationOperatorKernel, `Dubon2026.SourceBinaryPermutationHeckeFinite, `Dubon2026.SourceBinaryPermutationOperatorDescent, `Dubon2026.SourcePrimitivePermutationH1HeckeCharacter, `Dubon2026.SourcePrimitivePermutationH1Realization, `Dubon2026.SourceGammaOneCongruenceCover, `Dubon2026.SourceBinaryStabilizerGammaOneCover, `Dubon2026.SourceGammaOneDiagonalHom, `Dubon2026.SourceGammaOneCoverFiniteIndex, `Dubon2026.SourceGammaOneCohomologyTransfer, `Dubon2026.SourceGammaOneConstantH1Realization]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

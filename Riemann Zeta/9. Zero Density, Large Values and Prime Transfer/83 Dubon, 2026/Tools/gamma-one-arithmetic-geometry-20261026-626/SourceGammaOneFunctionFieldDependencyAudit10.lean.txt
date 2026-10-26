@@ -1,0 +1,37 @@
+import SourceGammaOneFunctionField
+import SourceGammaOneJCoordinate
+import SourceGammaOneRatioClosure
+import SourceGammaOneNormRelation
+import SourceGammaOneComplexRelation
+import SourceGammaOneComplexRatio
+import SourceGammaOneRationalRelation
+import SourceGammaOneFunctionFieldFinite
+import SourceGammaOneFunctionFieldBaseChange
+import SourceGammaOneCurveFinite
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.gamma1_finite_coordinate, `Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_finite_coordinate, `Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_baseChange_le, `Dubon2026.SourceFunctionField.GammaOne.transcendental_jCoordinate]
+  let localModules : Array Name := #[`SourceGammaOneCurveFinite, `SourceGammaOneFunctionFieldBaseChange, `SourceGammaOneFunctionFieldFinite, `SourceGammaOneRationalRelation, `SourceGammaOneJCoordinate, `SourceGammaOneFunctionField, `SourceGammaOneComplexRatio, `SourceGammaOneComplexRelation, `SourceGammaOneNormRelation, `SourceGammaOneRatioClosure]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.intSeriesC_zero, `Dubon2026.SourceFunctionField.GammaOne.intSeriesC_mul, `Dubon2026.SourceFunctionField.GammaOne.mem_intFormRatiosC, `Dubon2026.SourceFunctionField.GammaOne.intFormRatiosC_subset, `Dubon2026.SourceFunctionField.GammaOne.div_mem_qExpFunctionFieldC, `Dubon2026.SourceFunctionField.GammaOne.intFormRatiosC_mono, `Dubon2026.SourceFunctionField.GammaOne.qExpFunctionFieldC_mono, `Dubon2026.SourceFunctionField.GammaOne.x1FunctionFieldC_le_x1x0, `Dubon2026.SourceFunctionField.GammaOne.coeffEmb_intSeries, `Dubon2026.SourceFunctionField.GammaOne.jq_eq_integral_modular_ratio, `Dubon2026.SourceFunctionField.GammaOne.jq_mem_qExpFunctionField, `Dubon2026.SourceFunctionField.GammaOne.transcendental_jCoordinate, `Dubon2026.SourceFunctionField.GammaOne.hper, `Dubon2026.SourceFunctionField.GammaOne.mem_qExpFunctionFieldC_iff, `Dubon2026.SourceFunctionField.GammaOne.qExpansion_Aform_top_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.norm_qExpansion_relation, `Dubon2026.SourceFunctionField.GammaOne.norm_coefficient_j_polynomial, `Dubon2026.SourceFunctionField.GammaOne.exists_complex_j_relation, `Dubon2026.SourceFunctionField.GammaOne.exists_complex_j_relation_of_ratio, `Dubon2026.SourceFunctionField.GammaOne.exists_rational_j_relation, `Dubon2026.SourceFunctionField.GammaOne.finiteDimensional_jCoordinate, `Dubon2026.SourceFunctionField.GammaOne.finite_rational_coordinate, `Dubon2026.SourceFunctionField.GammaOne.transcendental_jCoordinateOver, `Dubon2026.SourceFunctionField.GammaOne.finiteDimensional_jCoordinateOver, `Dubon2026.SourceFunctionField.GammaOne.gamma1_finite_coordinate, `Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_finite_coordinate, `Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_baseChange_le, `Dubon2026.SourceFunctionField.GammaOne.IsIntegralQExp, `Dubon2026.SourceFunctionField.GammaOne.intSeriesC, `Dubon2026.SourceFunctionField.GammaOne.intFormRatiosC, `Dubon2026.SourceFunctionField.GammaOne.qExpFunctionFieldC, `Dubon2026.SourceFunctionField.GammaOne.x1FunctionFieldC, `Dubon2026.SourceFunctionField.GammaOne.x1FunctionField, `Dubon2026.SourceFunctionField.GammaOne.x1x0FunctionFieldC, `Dubon2026.SourceFunctionField.GammaOne.jCoordinate, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver, `Dubon2026.SourceFunctionField.GammaOne.jCoordinateOver, `Dubon2026.SourceFunctionField.ModularNormPolynomial.Sform_eq_zero, `Dubon2026.SourceFunctionField.ModularNormPolynomial.qExpansion_Sform, `Dubon2026.SourceFunctionField.exists_levelOne_j_polynomial, `Dubon2026.SourceFunctionField.linearIndependent_coeffMap_algebraMap, `Dubon2026.SourceFunctionField.DegreeTransport.finite_and_finrank_le, `Dubon2026.SourceFunctionField.transcendental_jqModC, `IntermediateField.exists_lt_finrank_of_infinite_dimensional, `Field.exists_primitive_element, `Subgroup.strictPeriods_eq_zmultiples_one_of_T_mem]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE FUNCTION FIELD DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in actual Gamma1/Hecke function-field finite coordinates, the literal scalar-extended inclusion, or the original rational-coordinate transcendence theorem. Only declaration values are traversed. Original j, native modular norms, level-one polynomials, existing Laurent independence, native primitive-element theory and existing scalar-extension finiteness discharge every advertised field-generation, transcendence and finite-degree input. Arithmetic geometric and diamond comparison, finite-character Galois realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

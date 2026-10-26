@@ -1,0 +1,55 @@
+{
+  "fetchedUTC": "2026-10-26T11:38:27.631106+00:00",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_exists_coeffMap_qExpansionDiffAlong_laurentBaseChange_qExpFunctionFieldC_eq_qExpansion.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_coeffMap_qExpansionDiffAlong_laurentBaseChange_qExpFunctionFieldC_eq_qExpansion.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_exists_coeffMap_qExpansionDiffAlong_laurentBaseChange_qExpFunctionFieldC_eq_qExpansion.lean.txt",
+      "gitBlob": "0b3e1a2a31c69d20322d526f3951978cdfb2e1f5",
+      "sha256": "1118F715F01616AC0CB97F3D1247D0DD4892FC51485F6CBA738CF1166FD5DA77",
+      "bytes": 28373
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_exists_cuspForm_qExpansion_eq_mul_thetaL_pow_of_isIntegral_qExpFunctionFieldC.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_cuspForm_qExpansion_eq_mul_thetaL_pow_of_isIntegral_qExpFunctionFieldC.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_exists_cuspForm_qExpansion_eq_mul_thetaL_pow_of_isIntegral_qExpFunctionFieldC.lean.txt",
+      "gitBlob": "85756a10788c7ee28ee193dde9bd81694108f3d7",
+      "sha256": "64F74B4492C3BAEF179D997F56BE120021789E0107349039B1737184D65DFBB4",
+      "bytes": 13026
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_isIntegral_adjoin_coeffEmb_jq_of_mul_thetaL_eq_qExpansion_of_finiteIndex.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_isIntegral_adjoin_coeffEmb_jq_of_mul_thetaL_eq_qExpansion_of_finiteIndex.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_isIntegral_adjoin_coeffEmb_jq_of_mul_thetaL_eq_qExpansion_of_finiteIndex.lean.txt",
+      "gitBlob": "f1b48813a7228ed9e3f723e3b65110eeb7bba4ff",
+      "sha256": "90789C8B6219A0253A855EE35CD89A6BFC6785902CD98AC7D10AFAEED7E27A0B",
+      "bytes": 15825
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_isIntegral_and_isIntegral_of_smul_D_mem_regularDifferentials_qExpFunctionFieldC.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_isIntegral_and_isIntegral_of_smul_D_mem_regularDifferentials_qExpFunctionFieldC.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_isIntegral_and_isIntegral_of_smul_D_mem_regularDifferentials_qExpFunctionFieldC.lean.txt",
+      "gitBlob": "2049fce394bf3bde808c624a757bffeaf14059da",
+      "sha256": "9B7E90A09D7EF5EE2B1134FB090B8BE225813FC9FEBF3EF2C6AA7A98F6E88188",
+      "bytes": 26244
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_one_sub_ord_le_ord_of_coeffMap_mul_thetaL_eq_qExpansion_of_gamma_le.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_one_sub_ord_le_ord_of_coeffMap_mul_thetaL_eq_qExpansion_of_gamma_le.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_one_sub_ord_le_ord_of_coeffMap_mul_thetaL_eq_qExpansion_of_gamma_le.lean.txt",
+      "gitBlob": "0e7da17b629b94982a014d63c9a9e4f318a7d0c9",
+      "sha256": "D43981289BA7F50331CA75C7263A295069D60575C4BC2870B87F1F0DBD043444",
+      "bytes": 11367
+    }
+  ]
+}

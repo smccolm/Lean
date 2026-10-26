@@ -1,0 +1,102 @@
+{
+  "scope": 592,
+  "chain": "DUB-17/18 -> literal higher continuation -> arithmetic automorphy -> original all-weight adic association -> finite Gamma1 geometric realization -> exact actual Gamma1 Hecke-and-diamond comparison",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralHeckeHom.lean",
+      "sha256": "12E022A28AA8B6779F246A87895FAA2B637051ACB8FBA8E02AE127B1B86C55F5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralHeckeConjugation.lean",
+      "sha256": "0690E28B8016BEA1C153DA082862BFD42A15E63C35B98185E10EE55991C0FDD2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHeckeSubgroupConjugation.lean",
+      "sha256": "F54943D9E4A7AE6C2E3739964AED69D27F6D15E10B46988DAA58BCB6E5243BC4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHeckeCohomologyTrace.lean",
+      "sha256": "65C04AB89CF7DF3C2296B24F3545E47A3FA0974552F763C94D1385D06992F422"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCorrespondenceOne.lean",
+      "sha256": "F99FEF68FDB52AC3C74EDF0C5507C25207C6270DCCACF41D6C051DE995BBA646"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceRaisedLevelEvaluationHecke.lean",
+      "sha256": "FF9A006953C27EB912044F2D13B7A0AB85FB272C4B0D73CAD8A42FE480E7BC0F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimeCoefficientHeckeH1.lean",
+      "sha256": "C31A36999B8AE371BDA48AD1FB40D2EF67B8015EC16042DA506F5DFE1915447B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SL2Reduction.lean",
+      "sha256": "9DD40DDE2439AAB39FDD9F96BACE4F866D547D14C31A1E86B2567C67598EF226"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CoinducedCosetTrace.lean",
+      "sha256": "F54722850360A89EB7F934F2F015F9BDD987741EF4D46E447AB6E18C758851BA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CoinducedCohomologyTrace.lean",
+      "sha256": "7931C2238F3094BF74A5131D489A3767565B080AC012A711D522C3763CDDD59F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CoinducedShapiroCochains.lean",
+      "sha256": "8424991FBE5257727CBB004236F473B3455213ED34BA2FF995CA71D4D5EB41CC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CoinducedShapiroDifferentials.lean",
+      "sha256": "64B029AC7807B78B0581FD0B07B2E7FAAE272A8AAC5399EB547FA821BC750953"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CoinducedShapiroOneHomotopy.lean",
+      "sha256": "1FD9FC79068E7737458E0600E2E6E2F3C3629687194697889C258042C1080F21"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\OriginalShapiroRestriction.lean",
+      "sha256": "14571BF2DBB735803F52A9030D4F8F76DD7955EC08DAA716B816C653BA0F1B6C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\OriginalGroupCohomologyReindex.lean",
+      "sha256": "FF5D4B6DF85061DA954C0ABDAC083453C63FC0D00679732411C14F2EF59010B6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceChosenCosetTraceOne.lean",
+      "sha256": "B0A95E67248FEC81403589DD127F27C78F399FE0AB14A48296D75F77E866CD2E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHeckeTraceOneRepresentativeChange.lean",
+      "sha256": "162A889DAACD637D2378A2B3966E5CC128FA8617F56BBC4B55F529C8D7343BE1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHeckeProductCosets.lean",
+      "sha256": "FFC9B0321B9ACFCFD3A6F482283E49A066D92354359730CBB1424CA089943446"
+    }
+  ],
+  "shorterRoute": "Restrict the existing integral diagonal conjugation to Gamma1 and reuse the literal H1 trace. The existing explicit Shapiro cocycle lift and its proved coboundary homotopy identify this trace with the native Shapiro/coinduction transfer already proved surjective in scope 591. Native induction tensor evaluation and inversion of right/left cosets identify the coinduction counit. No new resolution, assumed transfer convention or arbitrary chosen Hecke action is introduced.",
+  "assumptionsToDischarge": "Construct the genuine Gamma1 diagonal correspondence and identify the exact existing Gamma1 cover transfer with the literal H1 coset trace; derive surjectivity of that literal transfer from the already proved original binary-module consumer.",
+  "remaining": "These exact correspondence and transfer identifications do not yet prove their intertwining. Required next are actual cover-transfer Hecke/diamond compatibility and arithmetic geometric comparison, then Galois realization/all-weight adic association, local/image/regularity, automorphy and literal higher continuation. 16/20; DUB-17--20 OPEN.",
+  "primaryReview": "gamma1-geometric-reuse-589/snapshots.json",
+  "deferredUnusedDevelopment": {
+    "SourceNativeH1TransferFormula": "Clean abstract corollary developed during specialization. The final concrete proof directly uses the native counit and literal/native H1 trace identities, so this extra corollary is not promoted or counted."
+  },
+  "scratchImportClosure": [
+    "SourceGammaOneLiteralTransferSurjectivity",
+    "SourceGammaOneTransferCosetFormula",
+    "SourceShapiroH1CosetTrace",
+    "SourceShapiroH1CocycleComparison",
+    "SourceNativeCoinductionCosetTrace",
+    "SourceGammaOneConstantH1Realization",
+    "SourceGammaOneCohomologyTransfer",
+    "SourceGammaOneCoverFiniteIndex",
+    "SourceGammaOneDiagonalHom",
+    "SourceBinaryPermutationCongruence",
+    "SourceBinaryPrimePowerPermutation",
+    "SourcePermutationCoefficientQuotient",
+    "SourceGammaOneCongruenceCover",
+    "SourceGammaOneConstantHecke",
+    "SourceGammaOneHeckeSubgroup"
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "sha": "a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+  "node_id": "C_kwDOKvbQydoAKGEzMjEwMjA0YWQ4ODc2ZTg1MWUzMmY3M2RkOTdkODgyYmYxY2NkMGE",
+  "commit": {
+    "author": {
+      "name": "Kevin Buzzard",
+      "email": "k.buzzard@imperial.ac.uk",
+      "date": "2026-10-22T16:15:55Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-10-22T16:15:55Z"
+    },
+    "message": "chore: bump mathlib to 56a0058 (v4.35.0), fix breaking changes (#1205)\n\nBumps mathlib from 1f41440 to 56a0058 -- the v4.35.0 tag, 168 commits\non, and the toolchain from v4.35.0-rc4 to v4.35.0 to match.\n\n* mathlib#44568 (`chore: use extends for EquivClasses`) made\n`MulEquivClass`, `AddEquivClass`\nand `RingEquivClass` extend the corresponding hom classes, so the class\nfield\n`MulEquivClass.map_mul` no longer exists. We update FLT accordingly; the\nsimp lemma `map_mul`\n  now applies directly, so the explicit simp argument is simply dropped.\n* mathlib#44279 (`feat: ValuativeRel and IsValuativeTopology\n(v.adicCompletion K)`) renamed\n`adicCompletion.valued_toCompletion` and\n`adicCompletion.valued_ofCompletion` to\n`valued_toCompletion_apply` and `valued_ofCompletion_apply` (they are no\nlonger `rfl`),\n  deprecating the old names. We update FLT accordingly.\n* mathlib#40901 (`feat: zero-dimensional spaces`) restated the\nclopen-basis results for\n`ZeroDimensionalSpace`, deprecating `compact_exists_isClopen_in_isOpen`\nin favour of\n  `exists_isClopen_mem_of_isOpen`, and deprecating the modules\n`Mathlib.Topology.Separation.Profinite` and\n`Mathlib.Topology.Separation.Lemmas`. We update\nFLT's lemma name and imports accordingly, using the replacement imports\nthe deprecations name.\n\nCo-authored-by: Claude Opus 5.5 (1M context) <noreply@anthropic.com>",
+    "tree": {
+      "sha": "2c8aef14f600d0a1c92c224cbaf925f57c12f13d",
+      "url": "https://api.github.com/repos/ImperialCollegeLondon/FLT/git/trees/2c8aef14f600d0a1c92c224cbaf925f57c12f13d"
+    },
+    "url": "https://api.github.com/repos/ImperialCollegeLondon/FLT/git/commits/a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJq2ja7CRC1aQ7uu5UhlAAA9NEQADiwaudOWFh6m/KOcWrojC15\nZNSe9QDSIyWzngbeCY3MCsoc9kNa8JA/stzzrmLH7BfdO9cUXByur+BpQdnG3ATV\n4jeU6y81rR9QtfpREMZP5XRkPlFI3jl096NG6woZgKsVS1dXOYquPMSgOzJaRqVD\nKBPRdXgoLINEIdMs8KjHNcXxlp9+IrdAaX6xMDaprvIHHsqoO727Nd0JDHJozKD/\nNowePUzlXTXlrrx4AsnclNk3mBeVbQrcp7CTdJdGKNWn77PQhuruzD+paBWuA9Zy\nKLV4F6qA2cWn86D/xFwfBPCLA7bDB89x2Bp9VR8C/JMlhrZIWgBptk3Hw77J/voZ\n3cwKB/fmCFArSBXDmgycaYZ/B2PjDCUCCTjPNOsI+J4n7R3GabCC6kqdurGH5dH7\nn/SdZq5FBLNYESzid1jXQTyL9ielWd/sehO7yzFZJka4awnvtQ3oN8KSIsQVsY1+\nYeCbIPF4C/ZiLYcmvIxUSki10HoYS2CYyP0IBrLmDRaKQZgcBvnI39/SyNHgMaio\n69x485XJlbWIF0h9F7KF+4wJUYxbfm4++0azjQ3N9rEiSK/w2X17B6vzZRHiWGS2\npIzrpd/ukKMQfBuZuZOBWO102iysSxZhIYDIC62nf5OOiaKmH8htXNR3MIlQc7lG\nBNLu+XCy+nMQ4Wekyojp\n=H3dh\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 2c8aef14f600d0a1c92c224cbaf925f57c12f13d\nparent 923d45174c500aa1d994ba973bac38ea39eacbf7\nauthor Kevin Buzzard <k.buzzard@imperial.ac.uk> 1792685755 +0100\ncommitter GitHub <noreply@github.com> 1792685755 +0100\n\nchore: bump mathlib to 56a0058 (v4.35.0), fix breaking changes (#1205)\n\nBumps mathlib from 1f41440 to 56a0058 -- the v4.35.0 tag, 168 commits\non, and the toolchain from v4.35.0-rc4 to v4.35.0 to match.\n\n* mathlib#44568 (`chore: use extends for EquivClasses`) made\n`MulEquivClass`, `AddEquivClass`\nand `RingEquivClass` extend the corresponding hom classes, so the class\nfield\n`MulEquivClass.map_mul` no longer exists. We update FLT accordingly; the\nsimp lemma `map_mul`\n  now applies directly, so the explicit simp argument is simply dropped.\n* mathlib#44279 (`feat: ValuativeRel and IsValuativeTopology\n(v.adicCompletion K)`) renamed\n`adicCompletion.valued_toCompletion` and\n`adicCompletion.valued_ofCompletion` to\n`valued_toCompletion_apply` and `valued_ofCompletion_apply` (they are no\nlonger `rfl`),\n  deprecating the old names. We update FLT accordingly.\n* mathlib#40901 (`feat: zero-dimensional spaces`) restated the\nclopen-basis results for\n`ZeroDimensionalSpace`, deprecating `compact_exists_isClopen_in_isOpen`\nin favour of\n  `exists_isClopen_mem_of_isOpen`, and deprecating the modules\n`Mathlib.Topology.Separation.Profinite` and\n`Mathlib.Topology.Separation.Lemmas`. We update\nFLT's lemma name and imports accordingly, using the replacement imports\nthe deprecations name.\n\nCo-authored-by: Claude Opus 5.5 (1M context) <noreply@anthropic.com>",
+      "verified_at": "2026-10-22T16:15:56Z"
+    }
+  },
+  "url": "https://api.github.com/repos/ImperialCollegeLondon/FLT/commits/a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+  "html_url": "https://github.com/ImperialCollegeLondon/FLT/commit/a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+  "comments_url": "https://api.github.com/repos/ImperialCollegeLondon/FLT/commits/a3210204ad8876e851e32f73dd97d882bf1ccd0a/comments",
+  "author": {
+    "login": "kbuzzard",
+    "id": 31867827,
+    "node_id": "MDQ6VXNlcjMxODY3ODI3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/31867827?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kbuzzard",
+    "html_url": "https://github.com/kbuzzard",
+    "followers_url": "https://api.github.com/users/kbuzzard/followers",
+    "following_url": "https://api.github.com/users/kbuzzard/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kbuzzard/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kbuzzard/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kbuzzard/subscriptions",
+    "organizations_url": "https://api.github.com/users/kbuzzard/orgs",
+    "repos_url": "https://api.github.com/users/kbuzzard/repos",
+    "events_url": "https://api.github.com/users/kbuzzard/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kbuzzard/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "923d45174c500aa1d994ba973bac38ea39eacbf7",
+      "url": "https://api.github.com/repos/ImperialCollegeLondon/FLT/commits/923d45174c500aa1d994ba973bac38ea39eacbf7",
+      "html_url": "https://github.com/ImperialCollegeLondon/FLT/commit/923d45174c500aa1d994ba973bac38ea39eacbf7"
+    }
+  ],
+  "stats": {
+    "total": 40,
+    "additions": 20,
+    "deletions": 20
+  },
+  "files": [
+    {
+      "sha": "5d1d484c460624dd681313e745a5a378bee8bbea",
+      "filename": "FLT/DedekindDomain/AdicValuation.lean",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/ImperialCollegeLondon/FLT/blob/a3210204ad8876e851e32f73dd97d882bf1ccd0a/FLT%2FDedekindDomain%2FAdicValuation.lean",
+      "raw_url": "https://github.com/ImperialCollegeLondon/FLT/raw/a3210204ad8876e851e32f73dd97d882bf1ccd0a/FLT%2FDedekindDomain%2FAdicValuation.lean",
+      "contents_url": "https://api.github.com/repos/ImperialCollegeLondon/FLT/contents/FLT%2FDedekindDomain%2FAdicValuation.lean?ref=a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "patch": "@@ -158,7 +158,7 @@ lemma exists_adicValued_sub_lt_of_adicValued_le_one {x : (WithVal (v.valuation K\n   obtain \u27e8a, hval\u27e9 := exists_adicValued_mul_sub_le v h\u03b3 h\u03b3v.le hge\n   use a\n   rw [\u2190 eq_div_iff_mul_eq hdz] at hnd\n-  rw [\u2190 adicCompletion.valued_toCompletion]\n+  rw [\u2190 adicCompletion.valued_toCompletion_apply]\n   change Valued.v ((\u2191((WithVal.equiv (valuation K v)).symm ((algebraMap A K) a)) :\n     (v.valuation K).Completion) - \u2191x) < \u2191\u03b3\n   rw [\u2190 UniformSpace.Completion.coe_sub, Valued.valuedCompletion_apply, hnd, sub_div' hdz, map_div\u2080]\n@@ -205,7 +205,7 @@ theorem closureAlgebraMapIntegers_eq_integers :\n     rintro k \u27e8x, hx, rfl\u27e9\n     unfold f at hx\n     rw [Set.mem_preimage, SetLike.mem_coe, mem_adicCompletionIntegers,\n-        adicCompletion.valued_ofCompletion, Valued.valuedCompletion_apply] at hx\n+        adicCompletion.valued_ofCompletion_apply, Valued.valuedCompletion_apply] at hx\n     rw [mem_closure_iff_nhds_zero]\n     intro U hU\n     rw [Valued.mem_nhds] at hU"
+    },
+    {
+      "sha": "1ddfeaeed586a8106301d76767eadf5d88094555",
+      "filename": "FLT/DedekindDomain/Completion/BaseChange.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/ImperialCollegeLondon/FLT/blob/a3210204ad8876e851e32f73dd97d882bf1ccd0a/FLT%2FDedekindDomain%2FCompletion%2FBaseChange.lean",
+      "raw_url": "https://github.com/ImperialCollegeLondon/FLT/raw/a3210204ad8876e851e32f73dd97d882bf1ccd0a/FLT%2FDedekindDomain%2FCompletion%2FBaseChange.lean",
+      "contents_url": "https://api.github.com/repos/ImperialCollegeLondon/FLT/contents/FLT%2FDedekindDomain%2FCompletion%2FBaseChange.lean?ref=a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "patch": "@@ -218,7 +218,7 @@ lemma valued_adicCompletionSemialgHom (x) :\n       (adicCompletionSemialgHom_continuous K L w)).comp\n       (adicCompletion.continuous_ofCompletion K v)\n   intro a\n-  simp only [Function.comp_apply, adicCompletion.valued_ofCompletion,\n+  simp only [Function.comp_apply, adicCompletion.valued_ofCompletion_apply,\n     Valued.valuedCompletion_apply, w.2, adicCompletionSemialgHom_coe,\n     WithVal.valued_toVal, \u2190 valuation_comap A K L B w.1 _]\n   rw [WithVal.valued_toVal]"
+    },
+    {
+      "sha": "269b5a18ea8a97f20c24016713f5cf32da19c05d",
+      "filename": "FLT/DivisionAlgebra/Finiteness.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/ImperialCollegeLondon/FLT/blob/a3210204ad8876e851e32f73dd97d882bf1ccd0a/FLT%2FDivisionAlgebra%2FFiniteness.lean",
+      "raw_url": "https://github.com/ImperialCollegeLondon/FLT/raw/a3210204ad8876e851e32f73dd97d882bf1ccd0a/FLT%2FDivisionAlgebra%2FFiniteness.lean",
+      "contents_url": "https://api.github.com/repos/ImperialCollegeLondon/FLT/contents/FLT%2FDivisionAlgebra%2FFiniteness.lean?ref=a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "patch": "@@ -386,7 +386,7 @@ lemma ringHaarChar_D\ud835\udd38 (a : Dinfx K D) (b : Dfx K D) :\n     ringHaarChar (MulEquiv.prodUnits.symm (a, b)) := by\n   apply MeasureTheory.addEquivAddHaarChar_eq_addEquivAddHaarChar_of_continuousAddEquiv\n     (D\ud835\udd38ProdRight'' K D)\n-  simp [MulEquivClass.map_mul]\n+  simp\n \n /-- For any positive real `r`, there's some `\u03c1 \u2208 \u211d\u02e3` such that the haar character of\n `(\u03c1, 1) \u2208 D_f \u00d7 D_\u221e` is `r`. -/"
+    },
+    {
+      "sha": "b5041d57d16ab8951d14f8113d7ae31dbe5aacd1",
+      "filename": "FLT/HaarMeasure/FiniteAdeleRing.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/ImperialCollegeLondon/FLT/blob/a3210204ad8876e851e32f73dd97d882bf1ccd0a/FLT%2FHaarMeasure%2FFiniteAdeleRing.lean",
+      "raw_url": "https://github.com/ImperialCollegeLondon/FLT/raw/a3210204ad8876e851e32f73dd97d882bf1ccd0a/FLT%2FHaarMeasure%2FFiniteAdeleRing.lean",
+      "contents_url": "https://api.github.com/repos/ImperialCollegeLondon/FLT/contents/FLT%2FHaarMeasure%2FFiniteAdeleRing.lean?ref=a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "patch": "@@ -12,7 +12,7 @@ public import Mathlib.Algebra.AffineMonoid.Basic\n public import Mathlib.RingTheory.TotallySplit\n public import Mathlib.Topology.Connected.Separation\n public import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated\n-public import Mathlib.Topology.Separation.Lemmas\n+public import Mathlib.Topology.Separation.CompletelyRegular\n public import FLT.NumberField.Completion.Finite\n public import FLT.NumberField.HeightOneSpectrum\n public import Mathlib.NumberTheory.NumberField.Completion.FinitePlace"
+    },
+    {
+      "sha": "f6c941a625e4911cb69d9063689717441c8321d3",
+      "filename": "FLT/Patching/Utils/Lemmas.lean",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/ImperialCollegeLondon/FLT/blob/a3210204ad8876e851e32f73dd97d882bf1ccd0a/FLT%2FPatching%2FUtils%2FLemmas.lean",
+      "raw_url": "https://github.com/ImperialCollegeLondon/FLT/raw/a3210204ad8876e851e32f73dd97d882bf1ccd0a/FLT%2FPatching%2FUtils%2FLemmas.lean",
+      "contents_url": "https://api.github.com/repos/ImperialCollegeLondon/FLT/contents/FLT%2FPatching%2FUtils%2FLemmas.lean?ref=a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "patch": "@@ -17,7 +17,7 @@ import Mathlib.RingTheory.Filtration\n import Mathlib.RingTheory.Localization.AtPrime.Basic\n import Mathlib.Topology.Algebra.Module.Compact\n import Mathlib.Topology.Algebra.OpenSubgroup\n-import Mathlib.Topology.Separation.Profinite\n+import Mathlib.Topology.Separation.Regular\n \n /-!\n # Miscellaneous lemmas for the patching folder\n@@ -104,7 +104,7 @@ theorem exists_subgroup_isOpen_and_subset {\u03b1 : Type*} [TopologicalSpace \u03b1]\n     [CommGroup \u03b1] [IsTopologicalGroup \u03b1] {U : Set \u03b1} (hU : U \u2208 \ud835\udcdd 1) :\n     \u2203 G : Subgroup \u03b1, IsOpen (X := \u03b1) G \u2227 (G : Set \u03b1) \u2286 U := by\n   obtain \u27e8V, hVU, hV, h1V\u27e9 := mem_nhds_iff.mp hU\n-  obtain \u27e8K, hK, hxK, hKU\u27e9 := compact_exists_isClopen_in_isOpen hV h1V\n+  obtain \u27e8K, hK, hxK, hKU\u27e9 := exists_isClopen_mem_of_isOpen hV h1V\n   obtain \u27e8\u27e8G, hG\u27e9, hG'\u27e9 := IsTopologicalGroup.exist_openSubgroup_sub_clopen_nhds_of_one hK hxK\n   exact \u27e8G, hG, (hG'.trans hKU).trans hVU\u27e9\n "
+    },
+    {
+      "sha": "d622c5ca561f6b4c4d2c7537a7a13cfb0d69107c",
+      "filename": "lake-manifest.json",
+      "status": "modified",
+      "additions": 11,
+      "deletions": 11,
+      "changes": 22,
+      "blob_url": "https://github.com/ImperialCollegeLondon/FLT/blob/a3210204ad8876e851e32f73dd97d882bf1ccd0a/lake-manifest.json",
+      "raw_url": "https://github.com/ImperialCollegeLondon/FLT/raw/a3210204ad8876e851e32f73dd97d882bf1ccd0a/lake-manifest.json",
+      "contents_url": "https://api.github.com/repos/ImperialCollegeLondon/FLT/contents/lake-manifest.json?ref=a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "patch": "@@ -5,10 +5,10 @@\n    \"type\": \"git\",\n    \"subDir\": null,\n    \"scope\": \"\",\n-   \"rev\": \"1f414401f69059aa7eead47b53ee40bd38455eeb\",\n+   \"rev\": \"56a005855ea17e0b0958f73ec801ae140b0a1679\",\n    \"name\": \"mathlib\",\n    \"manifestFile\": \"lake-manifest.json\",\n-   \"inputRev\": \"1f414401f69059aa7eead47b53ee40bd38455eeb\",\n+   \"inputRev\": \"56a005855ea17e0b0958f73ec801ae140b0a1679\",\n    \"inherited\": false,\n    \"configFile\": \"lakefile.lean\"},\n   {\"url\": \"https://github.com/PatrickMassot/checkdecls.git\",\n@@ -25,7 +25,7 @@\n    \"type\": \"git\",\n    \"subDir\": null,\n    \"scope\": \"leanprover-community\",\n-   \"rev\": \"aef59637faa9e85fa2486acaaf906ce3f572af7c\",\n+   \"rev\": \"dfa4f38190d07c37e315953e08b90fe2d95b3c24\",\n    \"name\": \"plausible\",\n    \"manifestFile\": \"lake-manifest.json\",\n    \"inputRev\": \"main\",\n@@ -35,7 +35,7 @@\n    \"type\": \"git\",\n    \"subDir\": null,\n    \"scope\": \"leanprover-community\",\n-   \"rev\": \"234d9e074fbd6e911b920baf32db5291c3125be0\",\n+   \"rev\": \"d6b4c7be5be75ec4917c873ac50c756dc1436372\",\n    \"name\": \"LeanSearchClient\",\n    \"manifestFile\": \"lake-manifest.json\",\n    \"inputRev\": \"main\",\n@@ -45,7 +45,7 @@\n    \"type\": \"git\",\n    \"subDir\": null,\n    \"scope\": \"leanprover-community\",\n-   \"rev\": \"579f558774c4ac6840e715ba60dabf3030619349\",\n+   \"rev\": \"a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93\",\n    \"name\": \"importGraph\",\n    \"manifestFile\": \"lake-manifest.json\",\n    \"inputRev\": \"main\",\n@@ -55,7 +55,7 @@\n    \"type\": \"git\",\n    \"subDir\": null,\n    \"scope\": \"leanprover-community\",\n-   \"rev\": \"d5ad4a0b79fa7f9818fe1380d05a3f6143823c09\",\n+   \"rev\": \"df72b022e558978a1c50264cfc4d7fec86fa8e04\",\n    \"name\": \"proofwidgets\",\n    \"manifestFile\": \"lake-manifest.json\",\n    \"inputRev\": \"main\",\n@@ -65,7 +65,7 @@\n    \"type\": \"git\",\n    \"subDir\": null,\n    \"scope\": \"leanprover-community\",\n-   \"rev\": \"04879b1e1de744d5c9777c8cf63fa55a8f652e5e\",\n+   \"rev\": \"4a174c490d8707121c4a9290800489f105d85e07\",\n    \"name\": \"aesop\",\n    \"manifestFile\": \"lake-manifest.json\",\n    \"inputRev\": \"master\",\n@@ -75,7 +75,7 @@\n    \"type\": \"git\",\n    \"subDir\": null,\n    \"scope\": \"leanprover-community\",\n-   \"rev\": \"e7c4cdd2f1bf9df361ef7f621b4d6867012ab65e\",\n+   \"rev\": \"dce0ad79c486cb1fb504af04f953c3466b0c6db8\",\n    \"name\": \"Qq\",\n    \"manifestFile\": \"lake-manifest.json\",\n    \"inputRev\": \"master\",\n@@ -85,7 +85,7 @@\n    \"type\": \"git\",\n    \"subDir\": null,\n    \"scope\": \"leanprover-community\",\n-   \"rev\": \"b71aaf60877e673fdb921f06f20987d12ee8a290\",\n+   \"rev\": \"66e469188fe07963e5cf666c7d4433f45b8131c5\",\n    \"name\": \"batteries\",\n    \"manifestFile\": \"lake-manifest.json\",\n    \"inputRev\": \"main\",\n@@ -95,10 +95,10 @@\n    \"type\": \"git\",\n    \"subDir\": null,\n    \"scope\": \"leanprover\",\n-   \"rev\": \"82c11b9717083154aefc5fe8d4cba4bbf046298f\",\n+   \"rev\": \"c24fe6078c630e89b489bffe59b3e20ac30d12c8\",\n    \"name\": \"Cli\",\n    \"manifestFile\": \"lake-manifest.json\",\n-   \"inputRev\": \"v4.35.0-rc4\",\n+   \"inputRev\": \"v4.35.0\",\n    \"inherited\": true,\n    \"configFile\": \"lakefile.toml\"}],\n  \"name\": \"FLT\","
+    },
+    {
+      "sha": "7d28f617beab6ff74a0faa5f9f07ef61b929f171",
+      "filename": "lakefile.toml",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/ImperialCollegeLondon/FLT/blob/a3210204ad8876e851e32f73dd97d882bf1ccd0a/lakefile.toml",
+      "raw_url": "https://github.com/ImperialCollegeLondon/FLT/raw/a3210204ad8876e851e32f73dd97d882bf1ccd0a/lakefile.toml",
+      "contents_url": "https://api.github.com/repos/ImperialCollegeLondon/FLT/contents/lakefile.toml?ref=a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "patch": "@@ -21,7 +21,7 @@ git = \"https://github.com/PatrickMassot/checkdecls.git\"\n [[require]]\n name = \"mathlib\"\n git = \"https://github.com/leanprover-community/mathlib4.git\"\n-rev = \"1f414401f69059aa7eead47b53ee40bd38455eeb\"\n+rev = \"56a005855ea17e0b0958f73ec801ae140b0a1679\"\n \n [[lean_lib]]\n name = \"FLT\""
+    },
+    {
+      "sha": "a6aff065db2882c535684f8c5bcd4f16e9a23915",
+      "filename": "lean-toolchain",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/ImperialCollegeLondon/FLT/blob/a3210204ad8876e851e32f73dd97d882bf1ccd0a/lean-toolchain",
+      "raw_url": "https://github.com/ImperialCollegeLondon/FLT/raw/a3210204ad8876e851e32f73dd97d882bf1ccd0a/lean-toolchain",
+      "contents_url": "https://api.github.com/repos/ImperialCollegeLondon/FLT/contents/lean-toolchain?ref=a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "patch": "@@ -1 +1 @@\n-leanprover/lean4:v4.35.0-rc4\n+leanprover/lean4:v4.35.0"
+    }
+  ]
+}

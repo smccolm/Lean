@@ -1,0 +1,27 @@
+{
+  "status": "Fresh recorder and unused verification-stage successor; no audited source or used evidence changed.",
+  "observedFailure": {
+    "script": "record_source_primitive_finite_h1_realization_8248.py",
+    "line": 55,
+    "assertion": "Expected five scratch audit scopes; actual seven scopes all passed."
+  },
+  "additionalPreexecutionCorrection": "The never-reached canonical construction-count guard was stale at 3544. Derive the exact expected 2227+28=2255 from the prior receipt and new registrations.",
+  "preservedOldSha256": "FB859E298B3C95231B969D0EEB978DEF0D2724F4FC13147DDCF08AA23E01390C",
+  "successor": {
+    "path": "record_source_primitive_finite_h1_realization_8248b.py",
+    "sha256": "B9FB98044C3D9DD22A9A148BF9473264745D1A20B70D1C087085F2E862F05ABA"
+  },
+  "verification": {
+    "path": "verify_primitive_finite_h1_realization_8248b.ps1",
+    "sha256": "0BCC09EA0450FFF13AF9C9A957DF159BDC33BE00995AA358C55DE2F9E94CF0BE"
+  },
+  "ownershipComparison": {
+    "path": "source-primitive-finite-h1-realization-ownership-comparison-8248.json",
+    "sha256": "A415D5CB802B0E3426EAA3D68AC9F542E4F33F7D9738DF7E45290687617A2B89",
+    "passed": true,
+    "retained": 205
+  },
+  "auditReruns": false,
+  "sourceChanges": false,
+  "fullGoal": "16/20; DUB-17--20 OPEN"
+}

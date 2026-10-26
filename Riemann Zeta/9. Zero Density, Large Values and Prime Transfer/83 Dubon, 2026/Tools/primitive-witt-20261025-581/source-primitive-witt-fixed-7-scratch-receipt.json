@@ -1,0 +1,111 @@
+{
+  "separatelyAxiomChecked": [
+    "Dubon2026.sourcePadicWittCoefficient_injective"
+  ],
+  "recordedUTC": "2026-10-26T01:23:31.159916+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourcePadicWittCoefficient",
+    "SourceArithmeticPadicCyclotomic",
+    "SourceArithmeticPadicCyclotomicReduction",
+    "SourceArithmeticWittCyclotomic",
+    "SourceResidualWittFixedDeterminant",
+    "SourceResidualWittFixedRing",
+    "SourcePrimitiveWittFixedResidual"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePadicWittCoefficient.lean",
+      "sha256": "23386EBD126F03ECAF28586849EF160570808F5E50562C836039A95320FA86FD",
+      "oleanSha256": "002CF04F6FF77C888B0FB229FFCBFE2A110358967FDE01A2850EFEB848BF1C0D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticPadicCyclotomic.lean",
+      "sha256": "CA65D0558014738FC5953EAB3315C79715B087051CF45599623255295F1E1B9C",
+      "oleanSha256": "5A37D2B45782D37E4E122013F1310565A7FCB176F43A96347E8910B873C9F02E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticPadicCyclotomicReduction.lean",
+      "sha256": "0A86B8F9B9194162EA83D65D463983E910A92B96A354F31058C75973983EA324",
+      "oleanSha256": "15C3CEFE1056C242AC6A4CAD2AFB7EE264FC2B6BF84F374296059ED750177943"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceArithmeticWittCyclotomic.lean",
+      "sha256": "40258E25A3B926BADE92BE29E349CD0CE2BCF3BEA203ADA7C0FB5D197EC31262",
+      "oleanSha256": "9A1C838A0FE81D6FA83B1D779E6DB1D4AF9E165B33D6EBF7D3AF3A91851E0F77"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualWittFixedDeterminant.lean",
+      "sha256": "18B1B9AC912C636CEE0FDDE4789987D0A1C891800B36C26A2104418BECF80E80",
+      "oleanSha256": "DA620937B6F7AC8575B357615BF2B8C85587D7C67BD97847FFDC436583A8F595"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceResidualWittFixedRing.lean",
+      "sha256": "16CBAF5D03D404325C59A3384B1371919E773C4B78D84EB52C2B914335ACD227",
+      "oleanSha256": "58CAFCF6F3F0742EB14815349049D034892C1E8BFF2036B9168214662DF9506F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFixedResidual.lean",
+      "sha256": "F2608D93AFC4EB3B44565981E7F765DFFA02AC4C65071DAEFD542241CA74AE53",
+      "oleanSha256": "28E50162EB4F0BFC15A2546F61696C562D7F647EF62A79CB674AFEF4A00975C7"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourcePadicInt_charP_map",
+    "Dubon2026.sourcePadicWittCoefficient_injective",
+    "Dubon2026.sourcePadicWittCoefficient_residue",
+    "Dubon2026.sourceArithmetic_exists_primePower_root",
+    "Dubon2026.sourceArithmeticPadicCyclotomicCharacter_root",
+    "Dubon2026.sourcePadicInt_toZMod_from_pow_one",
+    "Dubon2026.sourceArithmeticPadicCyclotomicCharacter_reduction",
+    "Dubon2026.sourceArithmeticWittCyclotomicCharacter_reduction",
+    "Dubon2026.sourceResidualWitt_fixedDeterminant_compatibility",
+    "Dubon2026.sourceResidualWittFixed_localData",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_wittFixedResidualGalois_charP",
+    "Dubon2026.sourcePadicWittCoefficient",
+    "Dubon2026.sourceArithmeticPadicCyclotomicCharacter",
+    "Dubon2026.sourceArithmeticWittCyclotomicCharacter",
+    "Dubon2026.sourceResidualWittFixedData"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourcePadicInt_charP_map",
+    "Dubon2026.sourcePadicWittCoefficient_injective",
+    "Dubon2026.sourcePadicWittCoefficient_residue",
+    "Dubon2026.sourceArithmetic_exists_primePower_root",
+    "Dubon2026.sourceArithmeticPadicCyclotomicCharacter_root",
+    "Dubon2026.sourcePadicInt_toZMod_from_pow_one",
+    "Dubon2026.sourceArithmeticPadicCyclotomicCharacter_reduction",
+    "Dubon2026.sourceArithmeticWittCyclotomicCharacter_reduction",
+    "Dubon2026.sourceResidualWitt_fixedDeterminant_compatibility",
+    "Dubon2026.sourceResidualWittFixed_localData",
+    "Dubon2026.sourcePrimitive_exists_originalSupport_wittFixedResidualGalois_charP"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourcePadicWittCoefficient",
+    "Dubon2026.sourceArithmeticPadicCyclotomicCharacter",
+    "Dubon2026.sourceArithmeticWittCyclotomicCharacter",
+    "Dubon2026.sourceResidualWittFixedData"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFixedAudit7.log",
+  "logSha256": "4A6A451532FB3C7C3BC960D1DC3566DFAC432ADAC0B1BC31BCD5B9DF55FA3680",
+  "auditSha256": "3C5DA1DBD546C4E1DBF1507BE6FC082BF589C23F7BE80D8FD0A1AE96DA17DDBC",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 26,
+  "linterScopes": 7,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 23,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveWittFixedDependencyAudit7.log",
+  "dependencyAuditSha256": "0DDFF056F6C03A5143B80EFE1640BB82901705F8979552B40523F10720E8B60D",
+  "dependencyAuditSourceSha256": "3E3B78BC807CB119C8A3794CA0A10B8E766724A64EE080BE6E6B1DEDF026B48B",
+  "consumers": [
+    "Dubon2026.sourcePrimitive_exists_originalSupport_wittFixedResidualGalois_charP"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> actual residual fixed-determinant deformation problem -> construct the genuine p-adic cyclotomic weight character, prove its exact reduction and consume it in the existing actual quotient",
+  "discharged": "For the original all-weight primitive form, supply the actual p-adic cyclotomic weight determinant over Witt coefficients, prove its exact residual compatibility, and construct the resulting Noetherian complete fixed-determinant quotient with exact original residual matrices and universal determinant. Preserve every original Fourier, real and good-prime inertia clause.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. No characteristic-zero specialization of this quotient is supplied. Original all-weight adic association, required local/image/regularity properties, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-witt-fixed-7-reuse-review-20261025.json",
+  "reuseReviewSha256": "C6520B2C641B33286A905F05ABA3E1D94318D945785F1CA5491484147F966297",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

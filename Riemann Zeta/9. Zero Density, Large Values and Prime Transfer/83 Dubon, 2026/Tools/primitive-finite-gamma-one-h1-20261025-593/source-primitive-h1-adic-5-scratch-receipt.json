@@ -1,0 +1,97 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T02:16:25.265637+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourcePrimitiveH1CoefficientField",
+    "SourcePrimitiveLocalH1Character",
+    "SourcePrimitiveAdicH1Quotients",
+    "SourcePrimitiveCompatibleH1AdicData",
+    "SourcePrimitiveH1AdicRealization"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1CoefficientField.lean",
+      "sha256": "FAB1DD47B28AC19C1A862F66C2BC55F684E105F2B436ED713AD23508DAB8D3B9",
+      "oleanSha256": "4EF9B176BDD551699D95D8E277E62FA90F8BED11CD949EFC68FF88F5ED1DA88D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveLocalH1Character.lean",
+      "sha256": "B4579019CCC0485129A7A903A711239B6EB2B32C2F1E75C80D6668A3D502AD25",
+      "oleanSha256": "2D3FD99D7B1B4352F2707E99EF9EF20220D392D436D09E376D6278C160CF555E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveAdicH1Quotients.lean",
+      "sha256": "BBDB559FC020FA5A6FD4BFB34973C03EFE4DFC71EA64A149AEE08F3403DA7AB2",
+      "oleanSha256": "833BC90838DB6FF78FB22EC72C97236304E845CAF3241C56D032A7D8CCE7406C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveCompatibleH1AdicData.lean",
+      "sha256": "D72BBD2D4CA607217125D77FAFC6E3377D063B456F71964C1EE0DE3DAE55E053",
+      "oleanSha256": "8E449E1C5AA88EBD2E60D543B3D675A6D0AA30DEA6C6F5AE8F6C3640A5A39EE4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicRealization.lean",
+      "sha256": "E062FDF00FB3AE467339D04E18B99CC0503F3F51CA7274AC1F8197AB642D498F",
+      "oleanSha256": "C630C3D89ECC2A4955D694E817559A77C5B2D25BD72F55683440584330EFD0C6"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourcePrimitiveH1HeckeCharacter_mem_coefficientRing",
+    "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_hecke",
+    "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_isIntegral",
+    "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_coe",
+    "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_hecke",
+    "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_residue",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_hecke",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_compatible",
+    "Dubon2026.sourceLocalH1AdicQuotient_finite",
+    "Dubon2026.sourcePrimitiveCompatibleH1AdicData_of_local",
+    "Dubon2026.sourcePrimitive_exists_compatibleH1AdicRealization",
+    "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter",
+    "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter",
+    "Dubon2026.sourcePrimitiveCompatibleH1AdicData"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourcePrimitiveH1HeckeCharacter_mem_coefficientRing",
+    "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_hecke",
+    "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter_isIntegral",
+    "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_coe",
+    "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_hecke",
+    "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter_residue",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_hecke",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_compatible",
+    "Dubon2026.sourceLocalH1AdicQuotient_finite",
+    "Dubon2026.sourcePrimitiveCompatibleH1AdicData_of_local",
+    "Dubon2026.sourcePrimitive_exists_compatibleH1AdicRealization"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourcePrimitiveFieldH1HeckeCharacter",
+    "Dubon2026.sourcePrimitiveLocalH1HeckeCharacter",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter",
+    "Dubon2026.sourcePrimitiveCompatibleH1AdicData"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicAudit5.log",
+  "logSha256": "82E9C7EF20B9952F9F63A56F4615916237C1B407F46E7D5A580AE15813B1F30D",
+  "auditSha256": "F084E6EDF34E6A1D9057760F80F323188BF8E234FB1619452C7E0458E46D6EA6",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 43,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 21,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicDependencyAudit5b.log",
+  "dependencyAuditSha256": "2648DFAD11FF247F89380AC8DE198630D387D6EF67C822C794837B6EB2751EE4",
+  "dependencyAuditSourceSha256": "009D1372AF72AD11548E7145D8FFF4486BD7D73C21ADE3EB5B3000E0449428D2",
+  "consumers": [
+    "Dubon2026.sourcePrimitive_exists_compatibleH1AdicRealization"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> compatible prime-power Hecke realizations -> original integral H1 Hecke character over its literal Fourier field and actual local completion",
+  "discharged": "From only the original primitive form, weight at least two and prescribed rational prime, derive the actual finite local coefficient field, finite residue of the original prime characteristic, and exact compatible finite adic reductions of the original H1 Hecke character. Retain every original good-prime Fourier value and agreement with the existing analytic residual character. No completion, local finiteness, chosen eigencharacter or compatibility premise remains.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Geometric Galois realization of these finite-precision Hecke characters and their compatible characteristic-zero limit remain required. The permutation quotient of scope 582 retains original H1 classes and Hecke transforms but does not by itself lift eigenvectors or supply a Galois action. A characteristic-zero point of the actual fixed-determinant deformation ring is not asserted. Required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain open. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-primitive-h1-adic-5-reuse-review-20261025.json",
+  "reuseReviewSha256": "84C232E906B93F243780A0445A315E27E8F66741593911DC9ECF941DF48F6C91",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

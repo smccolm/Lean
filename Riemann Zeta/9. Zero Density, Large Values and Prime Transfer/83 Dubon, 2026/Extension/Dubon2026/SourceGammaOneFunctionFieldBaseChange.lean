@@ -1,0 +1,88 @@
+import Dubon2026.SourceGammaOneFunctionFieldFinite
+import Dubon2026.SourceLaurentDegreeTransport
+
+/-! DUB-17/18 -> arithmetic Gamma1 realization -> genuine Gamma1 function
+fields over rational, algebraically closed and complex coefficients.
+Reuse the existing finite Laurent scalar-extension and exact degree transport.
+No new scalar-extension proof, alternate coordinate or finiteness premise is
+introduced. Geometric Hecke/diamond comparison and Galois realization remain. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open IntermediateField
+open scoped MatrixGroups
+
+theorem finite_rational_coordinate
+    {Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)} [Γ.FiniteIndex]
+    (hT : ModularGroup.T ∈ Γ) :
+    FiniteDimensional (DegreeTransport.K₀ jq)
+      (DegreeTransport.E₀ (qExpFunctionFieldC ℚ Γ) jq (jq_mem_qExpFunctionField Γ)) := by
+  letI : Algebra ℚ (qExpFunctionFieldC ℚ Γ) := (qExpFunctionFieldC ℚ Γ).toSubalgebra.algebra
+  haveI := finiteDimensional_jCoordinate hT
+  have hp : 0 < Module.finrank
+      (IntermediateField.adjoin ℚ ({jCoordinate Γ} : Set (qExpFunctionFieldC ℚ Γ)))
+      (qExpFunctionFieldC ℚ Γ) := Module.finrank_pos
+  have heq : Module.finrank
+      (IntermediateField.adjoin ℚ ({jCoordinate Γ} : Set (qExpFunctionFieldC ℚ Γ)))
+      (qExpFunctionFieldC ℚ Γ) =
+      relfinrank (DegreeTransport.K₀ jq) (qExpFunctionFieldC ℚ Γ) := by
+    let F := qExpFunctionFieldC ℚ Γ
+    let B : IntermediateField ℚ F := IntermediateField.adjoin ℚ {jCoordinate Γ}
+    have hB : lift B = DegreeTransport.K₀ jq := by
+      simpa only [jCoordinate] using (lift_adjoin_simple ℚ F (jCoordinate Γ))
+    have ht : lift (⊤ : IntermediateField ℚ F) = F := lift_top ℚ F
+    have h := relfinrank_map_map B (⊤ : IntermediateField ℚ F) F.val
+    change relfinrank (lift B) (lift (⊤ : IntermediateField ℚ F)) = _ at h
+    rw [hB, ht, relfinrank_top_right] at h
+    exact h.symm
+  rw [heq] at hp
+  rw [relfinrank_eq_finrank_of_le
+    (DegreeTransport.K₀_le (jq_mem_qExpFunctionField Γ))] at hp
+  exact Module.finite_of_finrank_pos hp
+
+/-- The literal Laurent scalar extension of the rational integral-ratio field. -/
+def functionFieldOver (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ))
+    (L : Type*) [Field L] [Algebra ℚ L] : IntermediateField L (LaurentSeries L) :=
+  laurentBaseChange L (qExpFunctionFieldC ℚ Γ)
+
+/-- The same original j coordinate in this scalar extension. -/
+def jCoordinateOver (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ))
+    (L : Type*) [Field L] [Algebra ℚ L] : functionFieldOver Γ L :=
+  ⟨coeffEmb L jq, coeffEmb_mem_laurentBaseChange L (jq_mem_qExpFunctionField Γ)⟩
+
+theorem transcendental_jCoordinateOver
+    (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ))
+    (L : Type*) [Field L] [Algebra ℚ L] :
+    Transcendental L (jCoordinateOver Γ L) := by
+  intro h
+  apply transcendental_jqModC L
+  rw [← coeffEmb_jq L]
+  exact h.algebraMap (A := LaurentSeries L)
+
+theorem finiteDimensional_jCoordinateOver
+    {Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)} [Γ.FiniteIndex]
+    (hT : ModularGroup.T ∈ Γ) (L : Type*) [Field L] [Algebra ℚ L] :
+    FiniteDimensional
+      (IntermediateField.adjoin L ({jCoordinateOver Γ L} : Set (functionFieldOver Γ L)))
+      (functionFieldOver Γ L) := by
+  haveI := finite_rational_coordinate hT
+  haveI := (DegreeTransport.finite_and_finrank_le L (jq_mem_qExpFunctionField Γ)).1
+  apply Module.finite_of_finrank_pos
+  have heq : Module.finrank
+      (IntermediateField.adjoin L ({jCoordinateOver Γ L} : Set (functionFieldOver Γ L)))
+      (functionFieldOver Γ L) =
+      relfinrank (DegreeTransport.K L jq) (functionFieldOver Γ L) := by
+    let F := functionFieldOver Γ L
+    let B : IntermediateField L F := IntermediateField.adjoin L {jCoordinateOver Γ L}
+    have hB : lift B = DegreeTransport.K L jq := lift_adjoin_simple L F (jCoordinateOver Γ L)
+    have ht : lift (⊤ : IntermediateField L F) = F := lift_top L F
+    have h := relfinrank_map_map B (⊤ : IntermediateField L F) F.val
+    change relfinrank (lift B) (lift (⊤ : IntermediateField L F)) = _ at h
+    rw [hB, ht, relfinrank_top_right] at h
+    exact h.symm
+  rw [heq]
+  change 0 < relfinrank (DegreeTransport.K L jq) (laurentBaseChange L (qExpFunctionFieldC ℚ Γ))
+  rw [relfinrank_eq_finrank_of_le (DegreeTransport.K_le L (jq_mem_qExpFunctionField Γ))]
+  exact Module.finrank_pos
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

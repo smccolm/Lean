@@ -1,0 +1,35 @@
+{
+  "retrievedUTC": "2026-10-26T11:00:51.107450+00:00",
+  "files": [
+    {
+      "repo": "openai/math",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "lean/OAI/NumberTheory/CubicMoment/Theta/CubicThetaRamanujan.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/NumberTheory/CubicMoment/Theta/CubicThetaRamanujan.lean",
+      "snapshot": "lean\\OAI\\NumberTheory\\CubicMoment\\Theta\\CubicThetaRamanujan.lean.txt",
+      "gitBlob": "9cc6d9b9e63e080afd55541322c35cfb5e3273bc",
+      "sha256": "1FAB2D240DE1709371C9A6983F2E79B263425F2FB18B6BE81D94C7E0FF150337",
+      "bytes": 5786
+    },
+    {
+      "repo": "openai/math",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "lean/OAI/NumberTheory/CubicMoment/Theta/CubicThetaPrimeCubeRootRamanujan.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/NumberTheory/CubicMoment/Theta/CubicThetaPrimeCubeRootRamanujan.lean",
+      "snapshot": "lean\\OAI\\NumberTheory\\CubicMoment\\Theta\\CubicThetaPrimeCubeRootRamanujan.lean.txt",
+      "gitBlob": "4d6e96475586f04e525be5408e09b259051f464f",
+      "sha256": "187EB46EED9C9C0729C3E5967B95D3D580C8315108C7472A76C15DF8C105795C",
+      "bytes": 1251
+    },
+    {
+      "repo": "openai/math",
+      "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "path": "lean/OAI/NumberTheory/DirichletL/Hecke/Nonvanishing.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/NumberTheory/DirichletL/Hecke/Nonvanishing.lean",
+      "snapshot": "lean\\OAI\\NumberTheory\\DirichletL\\Hecke\\Nonvanishing.lean.txt",
+      "gitBlob": "4fb158e2dc0d50f71a313ca1c6bdc56923c9d201",
+      "sha256": "9E120752D0067E9B645F173846833396DE6282DFA83DFF7DC83B7FD500AF47D5",
+      "bytes": 1708
+    }
+  ]
+}

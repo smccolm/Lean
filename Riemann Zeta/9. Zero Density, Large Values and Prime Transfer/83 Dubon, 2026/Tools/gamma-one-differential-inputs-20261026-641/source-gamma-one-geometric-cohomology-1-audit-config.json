@@ -1,0 +1,60 @@
+{
+  "modules": [
+    "SourceGammaOneGeometricCohomology"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup_upper",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_matrix",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_eq"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaMorphism",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaH1Trace",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup_upper",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_matrix",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaMorphism",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaH1Trace",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup_upper",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_matrix",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaMorphism",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaH1Trace",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1",
+    "Dubon2026.originalCohomologyReindex",
+    "Dubon2026.originalCohomologyReindex_isIso",
+    "Dubon2026.sourceHeckeH1Trace",
+    "Dubon2026.sourceGammaOneConstantHeckeH1",
+    "groupCohomology.map_comp",
+    "Dubon2026.SourceFunctionField.GammaOne.heckeUpperGeometricEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_matrix"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup_upper",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_matrix",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_smul"
+  ],
+  "separatelyAxiomChecked": []
+}

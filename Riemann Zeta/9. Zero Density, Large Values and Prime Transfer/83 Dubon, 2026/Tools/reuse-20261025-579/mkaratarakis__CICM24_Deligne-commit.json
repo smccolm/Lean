@@ -1,0 +1,101 @@
+{
+  "sha": "8e5b163b30e434e6f68549e9399650923b75fb60",
+  "node_id": "C_kwDOLmy3iNoAKDhlNWIxNjNiMzBlNDM0ZTZmNjg1NDllOTM5OTY1MDkyM2I3NWZiNjA",
+  "commit": {
+    "author": {
+      "name": "MKaratarakis",
+      "email": "40603357+mkaratarakis@users.noreply.github.com",
+      "date": "2024-04-03T09:05:46Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2024-04-03T09:05:46Z"
+    },
+    "message": "Update Statement.lean",
+    "tree": {
+      "sha": "d9f7f70f99b9e40efe501fc6d8a4803809faa386",
+      "url": "https://api.github.com/repos/mkaratarakis/CICM24_Deligne/git/trees/d9f7f70f99b9e40efe501fc6d8a4803809faa386"
+    },
+    "url": "https://api.github.com/repos/mkaratarakis/CICM24_Deligne/git/commits/8e5b163b30e434e6f68549e9399650923b75fb60",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJmDRvqCRC1aQ7uu5UhlAAA0m8QAIC4NigmDbGIdsdH/3SLLiiv\nh/K06hENRT918Restmk7gSrF3XZyFu+KeNYUjYMkrkkynCdgzdrBLyhkUiDwQ86u\n38MAzEEvEpl1u8LM0DJfJ1GsogOP78q8MT0r2nHiqnwaWITYHre5vGyrUtb7fNuQ\ndAA+qA0rmWxmEALba95mJHIDhFMAlHPo/0QXLYS/HwAbJXLDjnxbSGEaPK5wks4R\nYpHzxiS3im5FzwUSUT8BcSDLPfOBYIZ8dGaKm+FRKawWFGtkEUhLn2DKbNVsrvKh\nxd8GC/Su8+CZYQD6qtDa1TTwvdvQIPg1VCiOdAroxorOT4+Sroh5NaKGe5PCrfXP\nBe52wTASUE02STjtUyKT5GY2jakEdqte1v6SUYS9VArqsViz//BDmZNTn9Vv+iJ9\nrxIZNm8zaY9sOc3RCA3ihuC+hm5LU3VdZEU80nO530ZVNh+KxWTUzx2qnjff6u23\noX3h+pHrehOh1ZBnNLj2vyCMYIJFo4R0+kamynR4LTNxCGokfNcjpRiOtKCj4Lpc\n4r/13+7PcBFCGiDcJxRUX+3NPLh0Jr7FbmsFhQwtDHdx1dSd/plLNiVzVxaA6V2u\nZZT5OFNzwiB9n/OoTCndRfb0l9BEHFUtyap58v3/gg3Dt0fNO7j39oLkk5XorBkz\nqNWh2yVokNQRCjVtx4to\n=mRyG\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree d9f7f70f99b9e40efe501fc6d8a4803809faa386\nparent 200ea09b3f8bb802541c13fe23203e4d6b1e1636\nauthor MKaratarakis <40603357+mkaratarakis@users.noreply.github.com> 1712135146 +0200\ncommitter GitHub <noreply@github.com> 1712135146 +0200\n\nUpdate Statement.lean",
+      "verified_at": "2025-01-07T10:30:38Z"
+    }
+  },
+  "url": "https://api.github.com/repos/mkaratarakis/CICM24_Deligne/commits/8e5b163b30e434e6f68549e9399650923b75fb60",
+  "html_url": "https://github.com/mkaratarakis/CICM24_Deligne/commit/8e5b163b30e434e6f68549e9399650923b75fb60",
+  "comments_url": "https://api.github.com/repos/mkaratarakis/CICM24_Deligne/commits/8e5b163b30e434e6f68549e9399650923b75fb60/comments",
+  "author": {
+    "login": "mkaratarakis",
+    "id": 40603357,
+    "node_id": "MDQ6VXNlcjQwNjAzMzU3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/40603357?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mkaratarakis",
+    "html_url": "https://github.com/mkaratarakis",
+    "followers_url": "https://api.github.com/users/mkaratarakis/followers",
+    "following_url": "https://api.github.com/users/mkaratarakis/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mkaratarakis/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mkaratarakis/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mkaratarakis/subscriptions",
+    "organizations_url": "https://api.github.com/users/mkaratarakis/orgs",
+    "repos_url": "https://api.github.com/users/mkaratarakis/repos",
+    "events_url": "https://api.github.com/users/mkaratarakis/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mkaratarakis/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "200ea09b3f8bb802541c13fe23203e4d6b1e1636",
+      "url": "https://api.github.com/repos/mkaratarakis/CICM24_Deligne/commits/200ea09b3f8bb802541c13fe23203e4d6b1e1636",
+      "html_url": "https://github.com/mkaratarakis/CICM24_Deligne/commit/200ea09b3f8bb802541c13fe23203e4d6b1e1636"
+    }
+  ],
+  "stats": {
+    "total": 7,
+    "additions": 1,
+    "deletions": 6
+  },
+  "files": [
+    {
+      "sha": "e32b99f1bb1af727eda1caff1aad001c62188149",
+      "filename": "Statement.lean",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 6,
+      "changes": 7,
+      "blob_url": "https://github.com/mkaratarakis/CICM24_Deligne/blob/8e5b163b30e434e6f68549e9399650923b75fb60/Statement.lean",
+      "raw_url": "https://github.com/mkaratarakis/CICM24_Deligne/raw/8e5b163b30e434e6f68549e9399650923b75fb60/Statement.lean",
+      "contents_url": "https://api.github.com/repos/mkaratarakis/CICM24_Deligne/contents/Statement.lean?ref=8e5b163b30e434e6f68549e9399650923b75fb60",
+      "patch": "@@ -108,12 +108,7 @@ noncomputable def q (v : ValuationSubring (AlgebraicClosure \u211a)) (h : v \u2260 \u22a4\n   Exists.choose (NonnunitPrimesInComap v h)\n \n theorem q.isPrime {v : ValuationSubring (AlgebraicClosure \u211a)} (h : v \u2260 \u22a4) :\n-    Nat.Prime (q v h) := by\n-  rw [Nat.prime_iff]\n-  rw [\u2190 Ideal.span_singleton_prime]\n-  have : (Ideal.span {q v h}).IsMaximal := by sorry\n-  \u00b7 exact Ideal.IsMaximal.isPrime this\n-  sorry\n+    Nat.Prime (q v h) := sorry\n \n def ZMod.Unit {N : \u2115} {q : \u2115} (h : Nat.Prime q) (hqN : \u00acq \u2223 p * N) : (ZMod N)\u02e3\n     where"
+    }
+  ]
+}

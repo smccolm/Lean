@@ -1,0 +1,58 @@
+{
+  "scope": 582,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> compatible prime-power Hecke realizations -> original integral binary H1 as a Hecke-equivariant quotient of finite congruence permutation coefficients",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGamma0H1Surjection.lean",
+      "sha256": "BB056CE7F3B6160CF0AD45AE7960389D002E350C3D526E680878372D99D6FCBC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePrimeHeckeNaturality.lean",
+      "sha256": "729FD6E6A7A45E4052E78D159285F2697A658D9465483D1F7E4B972E24B2389F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryHeckeCohomology.lean",
+      "sha256": "DE206C49A5AF00E5BDB066AC1FEF11C4CAF692BCD4CDAB3B563A016FB9A36ACD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceBinaryHeckeChange.lean",
+      "sha256": "14FBDF7A7649342C7713B51CC34D81457D59B514C66226C1A366E58B95A39C84"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralCohomologyFinite.lean",
+      "sha256": "5685ECC8D472414277A6B1F949F19211D6A02E516744631CF51965DC97FB5980"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\HomogeneousMonomialBasis.lean",
+      "sha256": "4216D1C71F288E2587D79D11A47D845E45CE82F419FC30D6748F7B2323097734"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RepresentationTheory\\Rep\\Basic.lean",
+      "sha256": "096269DBACD072A2DEE7ED9C170C40B272772613642C06C9AEB312B89ABEE88D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Finsupp\\LinearCombination.lean",
+      "sha256": "EF27FCF26D24E0722F644AEB62AACA44BB103AD22656BAE8C2E26AE6B171A6C8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Data\\ZMod\\Basic.lean",
+      "sha256": "337C0BD9F636B7765A956AFEBF856689AF95845B3909BDB508C00849CEA24864"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\CongruenceSubgroups.lean",
+      "sha256": "DF53B80B64A6DCD7B8AB7F87BD8092D77C557FCAA53857C23C507F9D894A23C0"
+    }
+  ],
+  "shorterRoute": "Native finite-support linearization and evaluation avoid a Vandermonde or pure-power spanning development. Existing Gamma0 H2 vanishing gives H1 surjectivity directly when six is invertible. Existing full prime Hecke naturality supplies compatibility without rebuilding coset traces. Native congruence reduction identifies the principal congruence action. No new general local-duality, Selmer, deformation-ring or geometric theory is introduced.",
+  "assumptionsToDischarge": "Construct the actual finite permutation coefficient module modulo every positive power of every prime greater than three, prove evaluation surjectivity on the original native binary H1 and exact compatibility with original prime Hecke transforms, and prove that the principal congruence subgroup acts trivially. Every degree and original integral class is retained.",
+  "remaining": "The preimage class is not asserted to be an eigenvector. A compatible family of finite-level Hecke specializations with an actual geometric Galois realization is still needed; neither the characteristic-zero point nor all-weight association follows from this quotient alone. Required local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain open. The route assessment is a mathematical inference using local proved results, not an external claim of a completed alternative construction. 16/20; DUB-17--20 OPEN.",
+  "scratchImportClosure": [
+    "SourceIntegralBinaryPermutationRealization",
+    "SourceBinaryPermutationCongruence",
+    "SourceBinaryPrimePowerPermutation",
+    "SourcePermutationCoefficientQuotient",
+    "SourceBinaryPermutationHecke"
+  ],
+  "separatelyAxiomChecked": [],
+  "renewedExternalReview": "reuse-20261025-579/reuse-assessment.json"
+}

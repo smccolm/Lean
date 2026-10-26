@@ -1,0 +1,91 @@
+import SourceFrickeCyclotomicField
+import SourceWeierstrassNormalizedTorsion
+import SourceWeierstrassTorsionCuspBound
+import SourceWeierstrassTorsionFourierCoefficients
+import SourceWeierstrassTorsionFourierSum
+import SourceWeierstrassTorsionFourierExpansion
+import SourceFrickeCuspInputs
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFricke.zetaN_mem_kN
+#print axioms Dubon2026.SourceFricke.zetaN_pow_mem_kN
+#print axioms Dubon2026.SourceFricke.zetaN_inv_pow_mem_kN
+#print axioms Dubon2026.SourceFricke.natCast_mem_kN
+#print axioms Dubon2026.SourceFricke.one_div_twelve_mem_kN
+#print axioms Dubon2026.SourceFricke.wpTorsionSeries_eq
+#print axioms Dubon2026.SourceFricke.wpNorm_eq
+#print axioms Dubon2026.SourceFricke.qN_add_natCast
+#print axioms Dubon2026.SourceFricke.wpTail_add_natCast
+#print axioms Dubon2026.SourceFricke.wpNormSeries_add_natCast
+#print axioms Dubon2026.SourceFricke.periodic_wpNorm
+#print axioms Dubon2026.SourceFricke.mdifferentiable_wpNorm
+#print axioms Dubon2026.SourceFricke.norm_wpNormSeries_le
+#print axioms Dubon2026.SourceFricke.isBoundedAtImInfty_wpNorm
+#print axioms Dubon2026.SourceFricke.wpMonCoeff_mem_kN
+#print axioms Dubon2026.SourceFricke.le_mul_sub_of_lt
+#print axioms Dubon2026.SourceFricke.le_wpMonExp_tail
+#print axioms Dubon2026.SourceFricke.finite_wpMonExp_fiber
+#print axioms Dubon2026.SourceFricke.wpQCoeff_mem_kN
+#print axioms Dubon2026.SourceFricke.summable_comp_fst_fin
+#print axioms Dubon2026.SourceFricke.hasSum_wpMon
+#print axioms Dubon2026.SourceFricke.hasSum_wpQCoeff
+#print axioms Dubon2026.SourceFricke.qExpansion_wpNorm_coeff
+#print axioms Dubon2026.SourceFricke.qExpansion_wpNorm_coeff_mem_kN
+#print axioms Dubon2026.SourceFricke.hasSum_qExpansion_wpNorm
+#print axioms Dubon2026.SourceFricke.wpNormZ_eq_wpNorm
+#print axioms Dubon2026.SourceFricke.periodic_wpNormZ
+#print axioms Dubon2026.SourceFricke.isBoundedAtImInfty_wpNormZ
+#print axioms Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff
+#print axioms Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff_mem_kN
+#print axioms Dubon2026.SourceFricke.frickeF_mul_discriminant
+#print axioms Dubon2026.SourceFricke.isBoundedAtImInfty_frickeF_mul_discriminant
+#print axioms Dubon2026.SourceFricke.kN
+#print axioms Dubon2026.SourceFricke.wpNormSeries
+#print axioms Dubon2026.SourceFricke.wpNorm
+#print axioms Dubon2026.SourceFricke.WpIdx
+#print axioms Dubon2026.SourceFricke.wpMonCoeff
+#print axioms Dubon2026.SourceFricke.wpMonExp
+#print axioms Dubon2026.SourceFricke.wpQCoeff
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceFrickeCyclotomicField, `SourceWeierstrassNormalizedTorsion, `SourceWeierstrassTorsionCuspBound, `SourceWeierstrassTorsionFourierCoefficients, `SourceWeierstrassTorsionFourierSum, `SourceWeierstrassTorsionFourierExpansion, `SourceFrickeCuspInputs]
+  let theorems : Array Name := #[`Dubon2026.SourceFricke.zetaN_mem_kN, `Dubon2026.SourceFricke.zetaN_pow_mem_kN, `Dubon2026.SourceFricke.zetaN_inv_pow_mem_kN, `Dubon2026.SourceFricke.natCast_mem_kN, `Dubon2026.SourceFricke.one_div_twelve_mem_kN, `Dubon2026.SourceFricke.wpTorsionSeries_eq, `Dubon2026.SourceFricke.wpNorm_eq, `Dubon2026.SourceFricke.qN_add_natCast, `Dubon2026.SourceFricke.wpTail_add_natCast, `Dubon2026.SourceFricke.wpNormSeries_add_natCast, `Dubon2026.SourceFricke.periodic_wpNorm, `Dubon2026.SourceFricke.mdifferentiable_wpNorm, `Dubon2026.SourceFricke.norm_wpNormSeries_le, `Dubon2026.SourceFricke.isBoundedAtImInfty_wpNorm, `Dubon2026.SourceFricke.wpMonCoeff_mem_kN, `Dubon2026.SourceFricke.le_mul_sub_of_lt, `Dubon2026.SourceFricke.le_wpMonExp_tail, `Dubon2026.SourceFricke.finite_wpMonExp_fiber, `Dubon2026.SourceFricke.wpQCoeff_mem_kN, `Dubon2026.SourceFricke.summable_comp_fst_fin, `Dubon2026.SourceFricke.hasSum_wpMon, `Dubon2026.SourceFricke.hasSum_wpQCoeff, `Dubon2026.SourceFricke.qExpansion_wpNorm_coeff, `Dubon2026.SourceFricke.qExpansion_wpNorm_coeff_mem_kN, `Dubon2026.SourceFricke.hasSum_qExpansion_wpNorm, `Dubon2026.SourceFricke.wpNormZ_eq_wpNorm, `Dubon2026.SourceFricke.periodic_wpNormZ, `Dubon2026.SourceFricke.isBoundedAtImInfty_wpNormZ, `Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff, `Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff_mem_kN, `Dubon2026.SourceFricke.frickeF_mul_discriminant, `Dubon2026.SourceFricke.isBoundedAtImInfty_frickeF_mul_discriminant]
+  let constructions : Array Name := #[`Dubon2026.SourceFricke.kN, `Dubon2026.SourceFricke.wpNormSeries, `Dubon2026.SourceFricke.wpNorm, `Dubon2026.SourceFricke.WpIdx, `Dubon2026.SourceFricke.wpMonCoeff, `Dubon2026.SourceFricke.wpMonExp, `Dubon2026.SourceFricke.wpQCoeff]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Primitive Tate Restriction postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Primitive Tate Restriction theorems discovered"
+  logInfo m!"SOURCE FRICKE FOURIER COEFFICIENTS AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceFrickeCyclotomicField
+#lint in SourceWeierstrassNormalizedTorsion
+#lint in SourceWeierstrassTorsionCuspBound
+#lint in SourceWeierstrassTorsionFourierCoefficients
+#lint in SourceWeierstrassTorsionFourierSum
+#lint in SourceWeierstrassTorsionFourierExpansion
+#lint in SourceFrickeCuspInputs

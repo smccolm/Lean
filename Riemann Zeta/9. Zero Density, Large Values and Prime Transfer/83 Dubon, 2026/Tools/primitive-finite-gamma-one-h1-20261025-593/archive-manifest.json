@@ -1,0 +1,664 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-finite-gamma-one-h1-promotion-route-593.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/primitive-finite-gamma-one-h1-promotion-route-593.json",
+      "sha256": "43FFEBFCE17DC003FB8AF14FB91B8E299560539775E265AA94F456CE7DF9BD19"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-binary-prime-power-permutation-5-scratch-receipt.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-binary-prime-power-permutation-5-scratch-receipt.json",
+      "sha256": "131D80CB8B20E3D334985ED27E816A49B87EB125EBBF4CCA662AEDD7E6582C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-h1-adic-5-scratch-receipt.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-primitive-h1-adic-5-scratch-receipt.json",
+      "sha256": "35507B2755D1A2A461D5D487913AA2CC6A66FB0F8003002F7A09AB1D66310A36"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-binary-stabilizer-h1-3-scratch-receipt.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-binary-stabilizer-h1-3-scratch-receipt.json",
+      "sha256": "0F2EF92CDA71B594734C0C2964B97A7888203148B19F72584FC0627391719161"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-h1-congruence-5-scratch-receipt.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-primitive-h1-congruence-5-scratch-receipt.json",
+      "sha256": "410DDC92612FC3D1680315BA92F65C0DC97D6F813A76891371BB54F162452ADF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-finite-operator-character-4-scratch-receipt.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-primitive-finite-operator-character-4-scratch-receipt.json",
+      "sha256": "D8986017528A0357284AE33F6112282F474A767948B3D6FAFE2C81A52A29913E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-permutation-operator-character-7-scratch-receipt.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-primitive-permutation-operator-character-7-scratch-receipt.json",
+      "sha256": "1521C47DC2376E468B567A6A71369D059C12D1EF97A27B69BE43FFC87A53D0B3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cover-6-scratch-receipt.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-gamma-one-cover-6-scratch-receipt.json",
+      "sha256": "DB00E420E0F25EB0C097E6DF828A10CD9B99EA72830A22F4F714F8F9AE075DB4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPrimePowerPermutationAudit5.exit",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourceBinaryPrimePowerPermutationAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPrimePowerPermutationAudit5.lean",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourceBinaryPrimePowerPermutationAudit5.lean.txt",
+      "sha256": "AC414DD8C953CFDF53F07237FBF37DFC5FECFEC87FD50B387BD7CCA08D660D20"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPrimePowerPermutationAudit5.log",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourceBinaryPrimePowerPermutationAudit5.log",
+      "sha256": "EAF530F028A7E5605CCD4A5249B74DF3FFA29F16C5A844AED34841306A0958B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPrimePowerPermutationDependencyAudit5.exit",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourceBinaryPrimePowerPermutationDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPrimePowerPermutationDependencyAudit5.lean",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourceBinaryPrimePowerPermutationDependencyAudit5.lean.txt",
+      "sha256": "5490A2A244C4A66D262543C38AFBE2F794CDF7460849D9DBC98E6DB8BC99AB79"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryPrimePowerPermutationDependencyAudit5.log",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourceBinaryPrimePowerPermutationDependencyAudit5.log",
+      "sha256": "F4CA9ED9078259625057150C71BCA473D777C86F07460977B3DC8BD94BCEE639"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryStabilizerH1Audit3.exit",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourceBinaryStabilizerH1Audit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryStabilizerH1Audit3.lean",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourceBinaryStabilizerH1Audit3.lean.txt",
+      "sha256": "6F51F236E29C4129A3A0A23E793F7D0A86C975B20900F99F65D9F354443317A8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryStabilizerH1Audit3.log",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourceBinaryStabilizerH1Audit3.log",
+      "sha256": "384F47870F0D3B1DBD8EEE00C557665ED5F381E4894557AE14A44F0483E54AD4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryStabilizerH1DependencyAudit3.exit",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourceBinaryStabilizerH1DependencyAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryStabilizerH1DependencyAudit3.lean",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourceBinaryStabilizerH1DependencyAudit3.lean.txt",
+      "sha256": "7B3E2968996E4F990A659DB23BA2731E350BA66BD2B76345738F85CAC20E14F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceBinaryStabilizerH1DependencyAudit3.log",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourceBinaryStabilizerH1DependencyAudit3.log",
+      "sha256": "F3E28D3D4476A1AAB93CDC4527D6280A58A6D8B527E0FE08B06C978F1215460F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteOperatorCharacterAudit4.exit",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveFiniteOperatorCharacterAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteOperatorCharacterAudit4.lean",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveFiniteOperatorCharacterAudit4.lean.txt",
+      "sha256": "30887727A8D3C3EB9E283282D6B830C58E639F935299799B2DA04DA406AFB7E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteOperatorCharacterAudit4.log",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveFiniteOperatorCharacterAudit4.log",
+      "sha256": "6CAE8BFCE6DA8658D06EA80FBC3B3C661022870F73C2C808E32F3B57580278A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteOperatorCharacterDependencyAudit4.exit",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveFiniteOperatorCharacterDependencyAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteOperatorCharacterDependencyAudit4.lean",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveFiniteOperatorCharacterDependencyAudit4.lean.txt",
+      "sha256": "67A2914B9B190B19EF1DAD3156B6E3E4FEBCB653320145A6FE34B7CE4055EF1B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveFiniteOperatorCharacterDependencyAudit4.log",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveFiniteOperatorCharacterDependencyAudit4.log",
+      "sha256": "13D5AA576E4E736E0CEA2F1A24196BC91D3E9345800F5D7B357D4082F81C8058"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicAudit5.exit",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveH1AdicAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicAudit5.lean",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveH1AdicAudit5.lean.txt",
+      "sha256": "F084E6EDF34E6A1D9057760F80F323188BF8E234FB1619452C7E0458E46D6EA6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicAudit5.log",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveH1AdicAudit5.log",
+      "sha256": "82E9C7EF20B9952F9F63A56F4615916237C1B407F46E7D5A580AE15813B1F30D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicDependencyAudit5.exit",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveH1AdicDependencyAudit5.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicDependencyAudit5.lean",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveH1AdicDependencyAudit5.lean.txt",
+      "sha256": "D0932B46C652E851EE9062747FA20C16E3C22357FB81E58D078835D804FB6EBA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicDependencyAudit5.log",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveH1AdicDependencyAudit5.log",
+      "sha256": "269A509EBA6A7ECEBFF0EAA473AEA0AA9689E9B1B7E0E877BE1E7CAFFB0C595A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicDependencyAudit5b.exit",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveH1AdicDependencyAudit5b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicDependencyAudit5b.lean",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveH1AdicDependencyAudit5b.lean.txt",
+      "sha256": "009D1372AF72AD11548E7145D8FFF4486BD7D73C21ADE3EB5B3000E0449428D2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1AdicDependencyAudit5b.log",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveH1AdicDependencyAudit5b.log",
+      "sha256": "2648DFAD11FF247F89380AC8DE198630D387D6EF67C822C794837B6EB2751EE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1CongruenceAudit5.exit",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveH1CongruenceAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1CongruenceAudit5.lean",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveH1CongruenceAudit5.lean.txt",
+      "sha256": "533B11A34CAA864E4F7A6CBC9B983EC820217EF1F220F9A37366D5044ED1EED1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1CongruenceAudit5.log",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveH1CongruenceAudit5.log",
+      "sha256": "ADCA8A32CB01AB3C535B20B033C2139AEE5F0108490C2DFFDCB9E9C535EC78F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1CongruenceDependencyAudit5.exit",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveH1CongruenceDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1CongruenceDependencyAudit5.lean",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveH1CongruenceDependencyAudit5.lean.txt",
+      "sha256": "F6DEBFDEF0F4BACB6D73B950B24A4E07C63F7953C22C9B8BD10FF6B4B95E808A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitiveH1CongruenceDependencyAudit5.log",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitiveH1CongruenceDependencyAudit5.log",
+      "sha256": "14676F1C9A80E976A0A67140E14A75A761C49BDA5DEC7904826F8DAA20B71F93"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\binary-prime-power-permutation-route-582.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/binary-prime-power-permutation-route-582.json",
+      "sha256": "E6D088A3010FAF8316361B3472613B7176CA507A58B55C5A678AB6CA17C12840"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\binary-stabilizer-h1-route-584.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/binary-stabilizer-h1-route-584.json",
+      "sha256": "A3587FD158F84D4CFF7DECAFD18D92F861EACC4787EB39CDDD6C1EC41E8EDA56"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_binary_prime_power_permutation_audit_582.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/prepare_binary_prime_power_permutation_audit_582.py",
+      "sha256": "1EB83E82C9BD39F2C18CB7A7AF64F74DA8E4A0DEBBB6664A1AD3CE2810F5DEEF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_binary_stabilizer_h1_audit_584.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/prepare_binary_stabilizer_h1_audit_584.py",
+      "sha256": "A7CB39A368323AB7CADADC9C14148C075037F33FDFB40198C9639840D7961DF2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_finite_operator_character_audit_586.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/prepare_primitive_finite_operator_character_audit_586.py",
+      "sha256": "4AAF0FC815A34BEBAAAF6F021E6465DDDE78031DA23ACCA8CAED4ABB042350B5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_h1_adic_audit_583.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/prepare_primitive_h1_adic_audit_583.py",
+      "sha256": "48D92E37C20284084389ED7880C60A8C1F40F6776B43D87C4E3481FB6B35D37C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_h1_congruence_audit_585.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/prepare_primitive_h1_congruence_audit_585.py",
+      "sha256": "2A12E805A0369BA2D084EBE72D59A7883A3E802BD5688D7A2B7A98E29551E3CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-finite-operator-character-route-586.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/primitive-finite-operator-character-route-586.json",
+      "sha256": "6F3BBD55F7537AED48974BF32D2D1A159E51AB28C4C8456756ABBF9DD4E3EDBA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-h1-adic-route-583.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/primitive-h1-adic-route-583.json",
+      "sha256": "CEF6D8DF091612E31084647D267ACD3E168B0C08B07A2FAAD35FB94C0CCC0F2B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-h1-adic-route-583b.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/primitive-h1-adic-route-583b.json",
+      "sha256": "EA826DF623C2914B91B268D1404F11B1567178FC3AB783C0D64197F1B56DADA6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-h1-adic-value-successor-583b.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/primitive-h1-adic-value-successor-583b.json",
+      "sha256": "E40B15A5C2A67C359CB0389C55B340D293BA4EA7CA347201C4334FEEBC5B56BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-h1-congruence-route-585.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/primitive-h1-congruence-route-585.json",
+      "sha256": "3FF4BE9BAA10F196E896BEAB92AEF2068A937D742D587CFE3A8D5D9458C37C86"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_binary_prime_power_permutation_582.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/record_binary_prime_power_permutation_582.py",
+      "sha256": "F8C6D84B04EFC0842B2E6DCF51CAC85EA76E11615984EAF59C7A99F924629FC9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_binary_stabilizer_h1_584.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/record_binary_stabilizer_h1_584.py",
+      "sha256": "585FB399C48F38EFA15AE0779E0004CD3BB5F59EDCE0F9145DD4AFC7219F2A05"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_finite_operator_character_586.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/record_primitive_finite_operator_character_586.py",
+      "sha256": "3096A5B5407B4A744F565CB6A572AB908DB6E745861601C9610176030D94A40F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_h1_adic_583.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/record_primitive_h1_adic_583.py",
+      "sha256": "3F94ACB19FAFCB6513A670644D6465A8DB66DC462F84767DF0917148B44093D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_h1_adic_583b.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/record_primitive_h1_adic_583b.py",
+      "sha256": "0F12FDB29C44876A90629EAE099F3890FE40CC59D626940C74CD179181F4F8FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_h1_congruence_585.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/record_primitive_h1_congruence_585.py",
+      "sha256": "AAB6D6ADF2159F32F0059B88EAF64824E510519F767D7D75AF266F1CF92DE012"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-binary-prime-power-permutation-5-audit-config.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-binary-prime-power-permutation-5-audit-config.json",
+      "sha256": "6636BF68049A2D7569FE42BFF1E461E89A32FF908673A8CCFD899B0D66F02BB0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-binary-stabilizer-h1-3-audit-config.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-binary-stabilizer-h1-3-audit-config.json",
+      "sha256": "FF5C8A43AE4BBAFF80F89F3AA91FDA767589DC5889E5CAF309341BAB6C1A175A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-finite-operator-character-4-audit-config.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-primitive-finite-operator-character-4-audit-config.json",
+      "sha256": "2ED1CAEA2DC57E009DFF7032DD7996E60315DCFEC95A35E785BA68504C0ED4A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-h1-adic-5-audit-config-583b.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-primitive-h1-adic-5-audit-config-583b.json",
+      "sha256": "D08F8BADC0A402A1FC480A4E101D5D12F50A23D9E9DB44BAC6A37F573DC3B4AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-h1-adic-5-audit-config.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-primitive-h1-adic-5-audit-config.json",
+      "sha256": "BD1998638B7B3054D8F7708EBC6823F939B20D4ADE487723243105C4AB7870BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-h1-congruence-5-audit-config.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-primitive-h1-congruence-5-audit-config.json",
+      "sha256": "F023DECD5C18AC51A9375B8107F344C50DDD7518E4A5C836F8B5BFA2AD83C0E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitivePermutationOperatorCharacterAudit7.exit",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitivePermutationOperatorCharacterAudit7.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitivePermutationOperatorCharacterAudit7.lean",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitivePermutationOperatorCharacterAudit7.lean.txt",
+      "sha256": "B994D9F7D385A8139BDB9BAAB6C157623B56FBEF9AFE77BD390F4A9775DD330F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitivePermutationOperatorCharacterAudit7.log",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitivePermutationOperatorCharacterAudit7.log",
+      "sha256": "4FD2C3462147D14EBCF6A9C8FF1040DACBAA8AD3E07EBF07AFEB8159B88CD620"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitivePermutationOperatorCharacterDependencyAudit7.exit",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitivePermutationOperatorCharacterDependencyAudit7.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitivePermutationOperatorCharacterDependencyAudit7.lean",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitivePermutationOperatorCharacterDependencyAudit7.lean.txt",
+      "sha256": "5427A670CBD92842C53C66F290C0B9BF72CEE8C9841D40A5047488DD124EBBD1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePrimitivePermutationOperatorCharacterDependencyAudit7.log",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourcePrimitivePermutationOperatorCharacterDependencyAudit7.log",
+      "sha256": "88B92DEAF2CE8C1976A09B5B4AA3D243E15C866FFE0F7506C51A3580AEC4B91D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\archive_primitive_finite_h1_canonical_8235.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/archive_primitive_finite_h1_canonical_8235.py",
+      "sha256": "1E449F44FCA2C6DBE4B5445D97C076905330BE0C4BC59DDEDE977B211E066D9B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\binary-permutation-operator-character-route-588.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/binary-permutation-operator-character-route-588.json",
+      "sha256": "5164523B2662AF4E7FBFCFD1BA4E218942EE1226D7D9AC5CF6B75E29DFB04D0B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_primitive_finite_h1_realization_8235.ps1",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/build_primitive_finite_h1_realization_8235.ps1",
+      "sha256": "ABDD1856B68F86CBF2095F33ADAAC0565891EF479BDF0CEE9ACADD8067995C28"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_primitive_finite_h1_realization_ownership_8235.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/compare_primitive_finite_h1_realization_ownership_8235.py",
+      "sha256": "2983072699E788477D14F49BA31AC05B743011BB744FF9BBE2F9A9B4C7F3E866"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integrate_source_primitive_finite_h1_realization_8235.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/integrate_source_primitive_finite_h1_realization_8235.py",
+      "sha256": "6CA8086E804D05DC9EE10C67815C0999B27E678D82A751CB2BCB26ECD505A4E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_finite_h1_promotion_8235.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/prepare_primitive_finite_h1_promotion_8235.py",
+      "sha256": "30FBF2E1563264E910BD1B82CE11F3E28B6F63C65A57936549E3C3D61DD00117"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_finite_h1_realization_global_ownership_8235.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/prepare_primitive_finite_h1_realization_global_ownership_8235.py",
+      "sha256": "F3E1078E36F8F85B4CF2EAF7FB5E8A440D70351ED201BE3D47A6EF498D6CCCC1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_finite_h1_realization_production_ownership_8235.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/prepare_primitive_finite_h1_realization_production_ownership_8235.py",
+      "sha256": "D7DE9B7D0B6C99C1940708668C985818BE5FD7FF80D73FE342B94548971FFB0F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_finite_h1_realization_scratch_ownership_8235.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/prepare_primitive_finite_h1_realization_scratch_ownership_8235.py",
+      "sha256": "5F77708626D0C70E074A86AA5DF91D36A3854973DABBDC5C1DDB075BD28367BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_permutation_operator_character_audit_588.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/prepare_primitive_permutation_operator_character_audit_588.py",
+      "sha256": "198EF870BD54318493EB9BA96A56D2B064234075D835DBABE839F64550E754E6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-finite-h1-preexecution-review-8235.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/primitive-finite-h1-preexecution-review-8235.json",
+      "sha256": "6059D23ECDEAFC309A496E339C201677F43C9A26277CA5B16F0A5333421DD1BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-finite-h1-promotion-route-587.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/primitive-finite-h1-promotion-route-587.json",
+      "sha256": "42C885871DC120D64834427A3E8A295C3D7BFD24CFDE90351117ABE803C352D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_permutation_operator_character_588.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/record_primitive_permutation_operator_character_588.py",
+      "sha256": "6D3E61C9A8A7244FF81A8FC5F4B7773350884640718DA1ED4C0EBC5BE6A98C6B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_primitive_finite_h1_realization_8235.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/record_source_primitive_finite_h1_realization_8235.py",
+      "sha256": "341DF86EA38E74FDFB9D7560191D4AAFCEA05F33DD2130859E8FB037B6241561"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-permutation-operator-character-7-audit-config.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-primitive-permutation-operator-character-7-audit-config.json",
+      "sha256": "EB43FE086C0678B4306AFA4F7E5D95EE1F512B95B68E768BDBF43D241ABBD45E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_primitive_finite_h1_realization_8235.ps1",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/verify_primitive_finite_h1_realization_8235.ps1",
+      "sha256": "1B55E22F05F575307815B61E520188110D09A9490230E94AA493A243AE1700AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverAudit6.exit",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourceGammaOneCoverAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverAudit6.lean",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourceGammaOneCoverAudit6.lean.txt",
+      "sha256": "41F3B0423182C83C33EEB5690558BC0576CD12CF83535DD962C1D61104BEB964"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverAudit6.log",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourceGammaOneCoverAudit6.log",
+      "sha256": "067C4B231945A8B197BF7643C13F0BB80C2D1089CD3E3B3E1ECF9A0C3DD60097"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverDependencyAudit6.exit",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourceGammaOneCoverDependencyAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverDependencyAudit6.lean",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourceGammaOneCoverDependencyAudit6.lean.txt",
+      "sha256": "34D942AB0ABE8E760AE70560E8C00C325E5367C7522D6B883C0CEDC2140B6B22"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCoverDependencyAudit6.log",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/SourceGammaOneCoverDependencyAudit6.log",
+      "sha256": "A731E211969D2ABEF747DF4904B994B4C61D1D7333AB58F0C907D9C7FE14B2F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\archive_primitive_finite_h1_canonical_8242.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/archive_primitive_finite_h1_canonical_8242.py",
+      "sha256": "1E1668545DF2FF8B5EB6F6E84DC3DB83019473622DC37D94A94DD1677FD8A702"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_primitive_finite_h1_realization_8242.ps1",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/build_primitive_finite_h1_realization_8242.ps1",
+      "sha256": "49CC82A119157BB276C92FCB69A18838EC7115E71487312914D59BC0054AD1D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_primitive_finite_h1_realization_ownership_8242.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/compare_primitive_finite_h1_realization_ownership_8242.py",
+      "sha256": "52A96E016AD735704E97184B67758657726A1EB05785E8E02107748B343B5E05"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_gamma1_geometric_reuse_589b.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/fetch_gamma1_geometric_reuse_589b.py",
+      "sha256": "3F02A6046EAF5FA7C19E74191513965BAFAD0C222BD206D71616B340DEF8551A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-congruence-cover-route-591.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/gamma1-congruence-cover-route-591.json",
+      "sha256": "FF5599F5A872BA33B905802A4E639ADF04D8C351FC398D926B5D3414469579BD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integrate_source_primitive_finite_h1_realization_8242.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/integrate_source_primitive_finite_h1_realization_8242.py",
+      "sha256": "105DD16A9B22A7FA15379871C096B48EB5A4A41660F5613600F1423A930BC09A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_cover_audit_591.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/prepare_gamma_one_cover_audit_591.py",
+      "sha256": "F5867835C47365D0FBB3AC700529AF0F42FA47D705895298A3E6E897989A0BC1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_finite_h1_promotion_8242.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/prepare_primitive_finite_h1_promotion_8242.py",
+      "sha256": "C5198DCE69E090DAEE7A7D0D0D478B273F72029E2C46AF03771514AE4229C755"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_finite_h1_realization_global_ownership_8242.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/prepare_primitive_finite_h1_realization_global_ownership_8242.py",
+      "sha256": "CEF40991195F9236FAB513AD161377018EF6B71C794B6A70D0B31299B7D43EBE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_finite_h1_realization_production_ownership_8242.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/prepare_primitive_finite_h1_realization_production_ownership_8242.py",
+      "sha256": "734E4F575D8D9816196F2CCB33E1F3766AE7E3233FF711B0FD263F3EF301E8B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_finite_h1_realization_scratch_ownership_8242.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/prepare_primitive_finite_h1_realization_scratch_ownership_8242.py",
+      "sha256": "EB3C4ADEBB8F4BB0DBF26C189B7236AC7C370EB5CFA5F3B1842E67DC3C0B1C24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-finite-h1-preexecution-review-8242b.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/primitive-finite-h1-preexecution-review-8242b.json",
+      "sha256": "5910FD4371DBD852423373BE74CEF6D70589D9090E61191FE785C6EC5FAAFEA0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-finite-permutation-h1-promotion-route-590.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/primitive-finite-permutation-h1-promotion-route-590.json",
+      "sha256": "29199DA0EAE3F313AE398BAAA72DEBF4C51ED66CF79A309489C903D48DCEED14"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_cover_591.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/record_gamma_one_cover_591.py",
+      "sha256": "0C817E442BA87AC8BB906838F2AFA9C8C765077D3A3ABA728AEEB022DBAB2A3B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_primitive_finite_h1_realization_8242.py",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/record_source_primitive_finite_h1_realization_8242.py",
+      "sha256": "842747EECAD1CD58BC8E5AA7898508DBD558FA4A9839FDF79CBACA5D8E9A08B8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cover-6-audit-config.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-gamma-one-cover-6-audit-config.json",
+      "sha256": "F37752DBE3EE1C6CB5660829039C3ADE03F926E3789F1CCBB84B68856FA8A14F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_primitive_finite_h1_realization_8242.ps1",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/verify_primitive_finite_h1_realization_8242.ps1",
+      "sha256": "936505777B53EA16F74E2F7DE930E27ADC2A7EBE9FDB475743B0DCC96BD6E912"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-geometric-reuse-589\\sandbox-fetch-failure.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/gamma1-geometric-reuse-589/sandbox-fetch-failure.json",
+      "sha256": "301D329D26491035856D48CDEEF58FFFA9D4FA96F51674ACF09CE79DE26F2C51"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-geometric-reuse-589\\snapshots.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/gamma1-geometric-reuse-589/snapshots.json",
+      "sha256": "5855BDBE4C7E0B7625CB1AB8239D99DAA747E81236725FC26D641D00526670AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-geometric-reuse-589\\Definitions\\Def_ModularCurve_X1.lean.txt",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/gamma1-geometric-reuse-589/Definitions/Def_ModularCurve_X1.lean.txt",
+      "sha256": "4D14D3182F233C0F7B51A9347CE74FB105AA501D2139111367AFC72CD8447E1C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-geometric-reuse-589\\Definitions\\Def_ModularCurve_X1HeckeModule.lean.txt",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/gamma1-geometric-reuse-589/Definitions/Def_ModularCurve_X1HeckeModule.lean.txt",
+      "sha256": "B0610F3164F3D26FADECBCC060B71BB57E0133EB9C43A1AE66EB79B4734FD252"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-geometric-reuse-589\\P2M\\Sol\\S_ModularCurve_exists_galoisRepAdic_charpoly_frobenius_of_heckeDiamondChar.lean.txt",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/gamma1-geometric-reuse-589/P2M/Sol/S_ModularCurve_exists_galoisRepAdic_charpoly_frobenius_of_heckeDiamondChar.lean.txt",
+      "sha256": "A6B8469220CD5657710A44963FBB1E2FD3C36BAC5E1C28309CF50B939D088DB7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-geometric-reuse-589\\P2M\\Sol\\S_ModularCurve_heckeDiamondInputsAll.lean.txt",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/gamma1-geometric-reuse-589/P2M/Sol/S_ModularCurve_heckeDiamondInputsAll.lean.txt",
+      "sha256": "E6F24E8A519F612CE4080B9B1045B84AB0B747A7E452729B831A981E3DFF287D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-geometric-reuse-589\\P2M\\Sol\\S_ModularCurve_moduleFinite_padicInt_tateModule_jOne.lean.txt",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/gamma1-geometric-reuse-589/P2M/Sol/S_ModularCurve_moduleFinite_padicInt_tateModule_jOne.lean.txt",
+      "sha256": "9941E27EB8812FEB6A1639543AA6E8CF1FA40FBB4BAEB52256C68DDB2AE2AF19"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\finite-operator-586-before-abstract-descent\\attempt.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/finite-operator-586-before-abstract-descent/attempt.json",
+      "sha256": "15EADFA5A359A0BE921A5EC1BB6D06B3AE1D03B0BF7605692AA450C073B3972E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\finite-operator-586-before-abstract-descent\\SourcePrimitiveFiniteH1HeckeCharacter.exit",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/finite-operator-586-before-abstract-descent/SourcePrimitiveFiniteH1HeckeCharacter.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\finite-operator-586-before-abstract-descent\\SourcePrimitiveFiniteH1HeckeCharacter.lean.txt",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/finite-operator-586-before-abstract-descent/SourcePrimitiveFiniteH1HeckeCharacter.lean.txt",
+      "sha256": "58FD2BEEC20E13D74EF9BA81E7C3F5BAB351B26A320FA62BF874736E1599E814"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\finite-operator-586-before-abstract-descent\\SourcePrimitiveFiniteH1HeckeCharacter.log",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/finite-operator-586-before-abstract-descent/SourcePrimitiveFiniteH1HeckeCharacter.log",
+      "sha256": "73D97D3FD3C7A276CA014604FD1351D97E3E9C3B48E2B4E40188A13E739C7B99"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\finite-operator-586-before-explicit-descent-arguments\\attempt.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/finite-operator-586-before-explicit-descent-arguments/attempt.json",
+      "sha256": "805531BBC0540690CE1B4E8CA92013668388705B5F52206AF51156434E99BCBF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\finite-operator-586-before-explicit-descent-arguments\\SourcePrimitiveFiniteH1HeckeCharacter.exit",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/finite-operator-586-before-explicit-descent-arguments/SourcePrimitiveFiniteH1HeckeCharacter.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\finite-operator-586-before-explicit-descent-arguments\\SourcePrimitiveFiniteH1HeckeCharacter.lean.txt",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/finite-operator-586-before-explicit-descent-arguments/SourcePrimitiveFiniteH1HeckeCharacter.lean.txt",
+      "sha256": "2DB370949DCDE4F694251020DACC171EAD767DBB8AFA0A0492E8C112C6153D70"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\finite-operator-586-before-explicit-descent-arguments\\SourcePrimitiveFiniteH1HeckeCharacter.log",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/finite-operator-586-before-explicit-descent-arguments/SourcePrimitiveFiniteH1HeckeCharacter.log",
+      "sha256": "FC66BC6F3E88254BDCC0E9446F79794CADCA7F68F176994111E3078C65EA5450"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-binary-prime-power-permutation-5-reuse-review-20261025.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-binary-prime-power-permutation-5-reuse-review-20261025.json",
+      "sha256": "842253E7A97C1AAE39CFAE7EB8165F8F33145A9B47B0225A1BFE3DBCF1EDBDE5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-h1-adic-5-reuse-review-20261025.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-primitive-h1-adic-5-reuse-review-20261025.json",
+      "sha256": "84C232E906B93F243780A0445A315E27E8F66741593911DC9ECF941DF48F6C91"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-binary-stabilizer-h1-3-reuse-review-20261025.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-binary-stabilizer-h1-3-reuse-review-20261025.json",
+      "sha256": "600C19B2979A15C0C43685308947459B322D264947395E5F782E007474C6DC0E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-h1-congruence-5-reuse-review-20261025.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-primitive-h1-congruence-5-reuse-review-20261025.json",
+      "sha256": "046E2F42CBB7E64D311967FE737A32262C0F2FA9A777A77668C56783AA182DEE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-finite-operator-character-4-reuse-review-20261025.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-primitive-finite-operator-character-4-reuse-review-20261025.json",
+      "sha256": "1DA9C559AD2FDAC9E97F257DBFE75C4917038E60E189D34B48EB26E832962C07"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-primitive-permutation-operator-character-7-reuse-review-20261025.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-primitive-permutation-operator-character-7-reuse-review-20261025.json",
+      "sha256": "53749D2A01F614DB735E9677F63A3221A2F43744434D878747FE7CE92E2FC955"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cover-6-reuse-review-20261025.json",
+      "path": "Tools/primitive-finite-gamma-one-h1-20261025-593/source-gamma-one-cover-6-reuse-review-20261025.json",
+      "sha256": "B0D0A9E2227A09C551781497047F41B00C6EE510CC898CA61E4038FA201FCDCD"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "scope": 599,
+  "scopeIds": [
+    592,
+    594,
+    595,
+    596,
+    597,
+    598
+  ],
+  "receipts": {
+    "source-gamma-one-hecke-trace-7-scratch-receipt.json": "636683BBCF0384B183C9A6D34E27B01D2C4626196315F09BB916C4145C88C8DD",
+    "source-gamma-one-hecke-cosets-5-scratch-receipt.json": "1613529C9CBAB0E5553D535E8E5047878665F6CDEFE1CF5D92BB17D9FAE11A45",
+    "source-gamma-one-hecke-pullback-3-scratch-receipt.json": "12F9D7C6E6CB506406C5D7E342B0F1C81875490FC9BA557E6DBA26BF29AA641B",
+    "source-h1-trace-base-change-3-scratch-receipt.json": "974069BB8FB44C3BE2A0E2977AD160007EEA94199C783D4122D7890B8E125A4D",
+    "source-gamma-one-cover-trace-base-change-4-scratch-receipt.json": "C87C90F4B8429300BCAAB5233A3919E08A321969E004AA2AF67172A8035FA29F",
+    "source-h1-trace-tower-4-scratch-receipt.json": "155CB8353C187305C00C9AE6A7321C1506786249C10B3A0874737FF137C25718"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> geometric Gamma1 realization -> original surjective-transfer Hecke compatibility -> exact native trace, correspondence square, group base change and trace composition",
+  "discharged": "The actual finite-index Gamma1 H1 transfer is identified with the literal native finite-coset trace, using the native counit formula and the original Shapiro cocycle comparison. Its surjectivity therefore holds for that literal trace. The actual Gamma1 constant-coefficient Hecke correspondence is defined by the original integral diagonal conjugation and full finite coset sum. Coprime principal-level reduction supplies the exact Gamma1/raised-level coset bijection, the literal cover commutes with Hecke conjugation, and the corresponding representatives have the exact conjugated transitions. Restriction of the original binary H1 to the genuine constant-coefficient Gamma1 H1 commutes with the original Hecke operator, retaining the homogeneous matrix coefficient action. Native H1 trace base change is derived by pulling back actual coinduced functions, reindexing the complete coefficient trace and applying the original Shapiro restriction/evaluation theorem. The concrete Gamma1 image has proved congruences and principal-level containment; these prove good-prime conjugation preservation, identify the exact intersection subgroup, and discharge coset surjectivity in the actual Hecke base-change application. Finally, actual nested coinduced functions form a proved isomorphism. Native quotient-product reindexing proves coefficient-trace composition, and the existing Shapiro comparison and coefficient naturality descend it to the full literal H1 trace. No trace formula, coset-surjectivity, Shapiro-composition, trace-transitivity or restriction/Hecke compatibility premise remains in these consumers.",
+  "remaining": "The surjective-transfer Hecke identity still requires combining the proved base-change and trace-composition identities with the original coefficient action and exact subgroup reindexings. Restriction compatibility alone does not establish this transfer identity. Arithmetic geometric and diamond compatibility, geometric Galois realization of the finite characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. No characteristic-zero character lift or deformation point is inferred from finite characters. 16/20; DUB-17--20 OPEN.",
+  "route": "Reuse the original coinduced coset trace, native counit, Shapiro restriction/evaluation and cocycle homotopy, existing level raising and Hecke conjugation, full SL2 reduction and its Chinese-remainder equivalence, chosen-representative coboundary comparison, native subgroup quotient maps and subgroupOf equivalence. Direct coefficient-function pullback and native quotient-product reindexing avoid new resolutions, a general Mackey development and new strong approximation. The duplicate abstract transfer-formula module remains deferred. The renewed external search and its characteristic-zero Gamma1 character boundary remain unchanged; no new external import or pin change.",
+  "precedingCanonicalScope": 8248,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 acceptance gates unchanged.",
+  "reason": "Combine the audited dependency chain while the preceding assembled verification finishes; do not mutate production before its canonical PASS and archive."
+}

@@ -1,0 +1,81 @@
+{
+  "reviewedUTC": "2026-10-26T11:35:50.482934+00:00",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of finite Gamma1 Hecke characters -> actual Picard/H1 and diamond comparison -> actual Gamma1 regular-differential/cusp comparison.",
+  "primaryManifest": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-input-reuse-633\\snapshots.json",
+    "sha256": "DDAB8F2B38670068ECA84B9FBCE10D2452AB8D507BEB148175C1018C50F3AC63"
+  },
+  "sourceContracts": [
+    {
+      "conclusion": "A basis of actual weight-k Gamma1 cusp forms with rational q coefficients.",
+      "inputs": "Positive level; cyclotomic-coefficient basis and existence of coefficient-Galois-conjugate cusp forms are imported, not proved inside the selected file.",
+      "proof": "Trace combinations over the cyclotomic field have rational coefficients. Linear independence of field embeddings yields an invertible matrix, so they span the original cusp space; a basis is extracted.",
+      "localBoundary": "The existing SourceIntegralHeckeCuspBasis gives rational Hecke matrices on Gamma0 weight two, not this Gamma1 rational q-expansion basis. Do not substitute it. Cyclotomic basis and Galois conjugate realization remain prerequisites.",
+      "source": "P2M/Sol/S_CuspForm_exists_basis_gamma1_qCoeff_mem_range_ratCast.lean",
+      "sha256": "89341A19A217B7F2CDD97A936749773123313315728046A121A8B0A57A157FB0",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CuspForm_exists_basis_gamma1_qCoeff_mem_range_ratCast.lean"
+    },
+    {
+      "conclusion": "A weight-two Gamma1 cusp form with q coefficients in a specified Qbar-to-complex image has an actual algebraic differential with matching expansion.",
+      "inputs": "Generic congruence-subgroup differential realization and compatibility between two differential q-expansion definitions.",
+      "proof": "Specializes the generic theorem to Gamma1 with the native inclusion Gamma1 <= Gamma0, then rewrites differential expansion.",
+      "localBoundary": "The wrapper is short but does not prove its generic realization input. Local finite coordinates and differential injectivity are available; algebraic coefficient realization still needs a proof.",
+      "source": "P2M/Sol/S_ModularCurve_exists_coeffMap_diffQExp_x1FunctionFieldBar_eq_qExpansion.lean",
+      "sha256": "8D370D3ED7D39DAAE76A8612ED3E8E6166C4BD0B1FE8251C72CEC13C4EAFB7E9",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_coeffMap_diffQExp_x1FunctionFieldBar_eq_qExpansion.lean"
+    },
+    {
+      "conclusion": "An actual Gamma1 differential whose literal q expansion matches a weight-two cusp form is regular.",
+      "inputs": "Actual Gamma1 curve and canonical/local differential geometry; cusp-place order estimate and finite-place integral equation for the modular ratio.",
+      "proof": "Write omega = y Dj. At cusp places use the one-minus-order bound. At finite places use integrality of y^6*j^4*(j-1728)^3 and local differential orders.",
+      "localBoundary": "Scratch scope 632 derives curve, local differential and canonical inputs from the actual finite coordinate. The modular-ratio integrality and cusp-place estimates must still be transported/proved for Gamma1.",
+      "source": "P2M/Sol/S_ModularCurve_mem_regularDifferentials_x1FunctionFieldBar_of_coeffMap_diffQExp_eq_qExpansion.lean",
+      "sha256": "464B3036C5CB9DB2199ABEFC0EC7C67EE62EA24B13DC3EDE11A5E46AA2E6169F",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_mem_regularDifferentials_x1FunctionFieldBar_of_coeffMap_diffQExp_eq_qExpansion.lean"
+    },
+    {
+      "conclusion": "Every regular differential on the actual Gamma1 curve realizes a weight-two Gamma1 cusp form after coefficient embedding.",
+      "inputs": "Scalar-extension equality with the literal integral-ratio q-expansion field; finite-coordinate/local/canonical geometry; modular-function realization from two integral bounds.",
+      "proof": "For omega=x Dj derive integrality of x^6*j^4*(j-1728)^3 over K[j] and x^(2n)*j^(n+1)*(j-1728)^n over K[j^-1], with n the actual coordinate degree. Transfer coefficients to complex and invoke the cusp realization theorem.",
+      "localBoundary": "The scalar-extension equality has a short direct local field-closure proof (scope 634). Actual curve geometry is supplied by scope 632. The two integral bounds and analytic cusp realization remain; the Gamma0 period comparison cannot be silently used at Gamma1.",
+      "source": "P2M/Sol/S_ModularCurve_exists_cuspForm_coeffMap_diffQExp_x1FunctionFieldBar_eq_qExpansion_of_mem_regularDifferentials.lean",
+      "sha256": "5D3A04733A3D39E2E2F87EFC9BEBC13D8C6A06A52ABB843D8204EA0F98543F79",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_cuspForm_coeffMap_diffQExp_x1FunctionFieldBar_eq_qExpansion_of_mem_regularDifferentials.lean"
+    }
+  ],
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFieldGeneration.lean",
+      "sha256": "E55E964576FBB17D235B4AFD2668177D1EA4CE5A0CBC7E5532DA2FFED4133812"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFunctionField.lean",
+      "sha256": "24A29ADCD2672D85C2D2050865E7639E9DEC600A58FC74C63B777DB3293B5D82"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFunctionFieldBaseChange.lean",
+      "sha256": "FF3926FC60F98AACEBA430B405ACC1674F9A4BC7845A16D19DDF95A00288E7EE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneJCoordinate.lean",
+      "sha256": "242F8F0963AACD9590A94E33256D5D5725349173FF06C5758EEDB6D00A9FF810"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralHeckeCuspBasis.lean",
+      "sha256": "AE545E7C698F818484B2D42211CCFF2355057402A034247B60E881CF09AE75F6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularCuspEquiv.lean",
+      "sha256": "A4BA46BE6E8ACE81A6592D5ECA3FA36327C01B96087A35080E6488E2B19866E7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRegularComparison.lean",
+      "sha256": "90EB97779E0C49CEA1EDC0AA088D2DC5EDDDA75EF57D0799D6AE3DBABA80C1C2"
+    }
+  ],
+  "selectedRoute": "Reuse the original j finite-coordinate curve machinery (632), identify the scalar extension with the literal integral-ratio field by the existing field-closure argument (634), then inspect the specific integral-bound and analytic-realization inputs before expanding them. Preserve the coefficient endomorphism already retained by the geometric H1 and coefficient-factor proofs (629,631).",
+  "deferred": "No new abstract Riemann--Roch, genus invariance, scalar extension, Tate tensor equivalence or full GammaH family. No claim that complex semisimplicity, finite characters, Witt coefficients or a universal deformation ring supplies a characteristic-zero point.",
+  "remaining": "Actual regular-differential/cusp, Picard/H1, full/parabolic and diamond comparisons, finite-character arithmetic realization, all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and higher continuation.",
+  "integrity": "Four selected source files read as research text and verified against frozen Git blobs and SHA-256. Apache-2.0 attribution retained. No external build/import closure or transitive axiom cleanliness certified; source activation and suppression commands are not adopted. Root pins and proof limits unchanged.",
+  "acceptance": "16/20; DUB-17--20 OPEN; full scope unchanged."
+}

@@ -1,0 +1,79 @@
+import SourceGammaOneFunctionField
+import Dubon2026.SourceJModularQuotient
+import Dubon2026.SourceOriginalModularFunctionField
+
+/-! DUB-17/18 -> all-weight adic association -> arithmetic Gamma1 realization
+-> finite Gamma1 function field. The already-proved original j series is an
+actual integral modular-form ratio in this field. No second transcendence
+development or alternate coordinate is introduced. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane
+open scoped MatrixGroups
+
+theorem coeffEmb_intSeries (p : PowerSeries ℤ) :
+    coeffEmb ℂ (intSeriesC ℚ p) = intSeriesC ℂ p := by
+  ext n
+  rw [coeffEmb_coeff]
+  simp only [intSeriesC, PowerSeries.coeff_coe]
+  split_ifs <;> simp [PowerSeries.coeff_map]
+
+theorem jq_eq_integral_modular_ratio :
+    jq = intSeriesC ℚ (eisenstein4 ^ 3) /
+      intSeriesC ℚ (PowerSeries.X * dedekindEtaUnit) := by
+  apply (coeffEmb ℂ).injective
+  rw [coeffEmb_jq, map_div₀, coeffEmb_intSeries, coeffEmb_intSeries]
+  rw [jqModC_eq_modular_quotient, qExpansion_E4_eq_map_eisenstein4,
+    qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit]
+  simp [intSeriesC]
+
+private theorem integral_discriminant_ne_zero :
+    intSeriesC ℚ (PowerSeries.X * dedekindEtaUnit) ≠ 0 := by
+  intro h
+  have hc := congrArg (coeffEmb ℂ) h
+  rw [coeffEmb_intSeries, map_zero] at hc
+  apply discriminant_expansion_ne_zero
+  rw [qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit]
+  exact hc
+
+theorem jq_mem_qExpFunctionField (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)) :
+    jq ∈ qExpFunctionFieldC ℚ Γ := by
+  let f : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) 12 :=
+    ModularNormPolynomial.restrict (Subgroup.map_le_range _ Γ)
+      ((ModularForm.E₄.pow 3).mcast (by norm_num))
+  let g : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) 12 :=
+    ModularNormPolynomial.restrict (Subgroup.map_le_range _ Γ)
+      (CuspForm.discriminant : ModularForm 𝒮ℒ 12)
+  have hf : IsIntegralQExp f (eisenstein4 ^ 3) := by
+    change (eisenstein4 ^ 3).map (Int.castRingHom ℂ) =
+      qExpansion 1 ((((ModularForm.E₄.pow 3).mcast (by norm_num)) : ModularForm 𝒮ℒ 12) : ℍ → ℂ)
+    rw [ModularForm.qExpansion_mcast,
+      ModularForm.qExpansion_pow one_pos one_mem_strictPeriods_SL,
+      qExpansion_E4_eq_map_eisenstein4, map_pow]
+  have hg : IsIntegralQExp g (PowerSeries.X * dedekindEtaUnit) :=
+    qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit.symm
+  rw [jq_eq_integral_modular_ratio]
+  exact div_mem_qExpFunctionFieldC f g hf hg integral_discriminant_ne_zero
+
+/-- The literal original j coordinate inside the actual integral-ratio field. -/
+def jCoordinate (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)) :
+    qExpFunctionFieldC ℚ Γ := ⟨jq, jq_mem_qExpFunctionField Γ⟩
+
+theorem transcendental_jCoordinate
+    (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)) :
+    Transcendental ℚ (jCoordinate Γ) := by
+  rintro ⟨p, hp, hzero⟩
+  apply transcendental_jqModC ℚ
+  let F := qExpFunctionFieldC ℚ Γ
+  let φ : F →+* LaurentSeries ℚ := F.subtype
+  have hφ : φ.comp (algebraMap ℚ F) = algebraMap ℚ (LaurentSeries ℚ) :=
+    Subsingleton.elim _ _
+  refine ⟨p, hp, ?_⟩
+  have heval := Polynomial.hom_eval₂ p (algebraMap ℚ F) φ (jCoordinate Γ)
+  rw [hφ] at heval
+  rw [Polynomial.aeval_def,
+    show jqModC ℚ = φ (jCoordinate Γ) from rfl, ← heval,
+    ← Polynomial.aeval_def, hzero, map_zero]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

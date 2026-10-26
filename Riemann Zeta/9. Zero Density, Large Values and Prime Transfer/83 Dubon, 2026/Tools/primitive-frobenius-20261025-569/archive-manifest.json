@@ -1,0 +1,279 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-primitive-frobenius-promotion-route-569.json",
+      "path": "Tools/primitive-frobenius-20261025-569/original-primitive-frobenius-promotion-route-569.json",
+      "sha256": "C2A4FB7D453323A11F6049B6A1E8FA01FAC07FA4B7A1335FBDA5120ED86B73C9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-cyclotomic-12-scratch-receipt.json",
+      "path": "Tools/primitive-frobenius-20261025-569/source-original-primitive-cyclotomic-12-scratch-receipt.json",
+      "sha256": "8C259D737D6F18B54B7A8AA76258ECB9ED780D0C8A047DD1FF0A1FAB79862F91"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-frobenius-charpoly-5-scratch-receipt.json",
+      "path": "Tools/primitive-frobenius-20261025-569/source-original-primitive-frobenius-charpoly-5-scratch-receipt.json",
+      "sha256": "B66051491071B42B756DAE81D7DBD227E5E9FD14DFB296429F97EB8ABCC589AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-residual-frobenius-7-scratch-receipt.json",
+      "path": "Tools/primitive-frobenius-20261025-569/source-original-primitive-residual-frobenius-7-scratch-receipt.json",
+      "sha256": "CCBBFF7F47B1F7FA620AF064D4E560663975A59013B1086256C9557863E47F2C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-prescribed-residual-frobenius-2-scratch-receipt.json",
+      "path": "Tools/primitive-frobenius-20261025-569/source-original-prescribed-residual-frobenius-2-scratch-receipt.json",
+      "sha256": "B5AEDE141A244064F3403B542D20A357353BEA95717BCDD43F9421FBF93E8314"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-cyclotomic-route-564.json",
+      "path": "Tools/primitive-frobenius-20261025-569/primitive-cyclotomic-route-564.json",
+      "sha256": "119A94A9EF41CB1CC9A722616412CFCD6D38B8CBE814456543DEF472498596FD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-frobenius-charpoly-route-565.json",
+      "path": "Tools/primitive-frobenius-20261025-569/primitive-frobenius-charpoly-route-565.json",
+      "sha256": "EFB043248B32E4119CD9DC5240A9444CC53444099662BA722F04FB91A64674CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\primitive-residual-frobenius-route-566.json",
+      "path": "Tools/primitive-frobenius-20261025-569/primitive-residual-frobenius-route-566.json",
+      "sha256": "F215CD6C8A83D01B8FBC105FD882A469BAE32AA345F09781DC7A9E7E030A6E11"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-residual-frobenius-route-567b.json",
+      "path": "Tools/primitive-frobenius-20261025-569/prescribed-residual-frobenius-route-567b.json",
+      "sha256": "B3214C502203A0A995BF9F5E117502A2586BE4ADF33120F5D4B7619818F5E1A6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_cyclotomic_audit_564.py",
+      "path": "Tools/primitive-frobenius-20261025-569/prepare_primitive_cyclotomic_audit_564.py",
+      "sha256": "ACA06B7C9E94C9452B4BD97C32265361FD60EC157EC0C5153DB1F5CA3DC3C9AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_cyclotomic_564.py",
+      "path": "Tools/primitive-frobenius-20261025-569/record_primitive_cyclotomic_564.py",
+      "sha256": "7176887FFFB763EDE705AA5FF2DF008821D3E1B4078EB31104A1514C5EA819B1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_frobenius_charpoly_audit_565.py",
+      "path": "Tools/primitive-frobenius-20261025-569/prepare_primitive_frobenius_charpoly_audit_565.py",
+      "sha256": "15FCD268A373B44EE5F68E895143FDB52BE085C2FB295AB494ABDE4F535F183F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_frobenius_charpoly_565.py",
+      "path": "Tools/primitive-frobenius-20261025-569/record_primitive_frobenius_charpoly_565.py",
+      "sha256": "3C6846F5F3B7D9385C865045E941A5BFB3E64CA9C1EA3B5AF590AD2C3FAC1586"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_primitive_residual_frobenius_audit_566.py",
+      "path": "Tools/primitive-frobenius-20261025-569/prepare_primitive_residual_frobenius_audit_566.py",
+      "sha256": "F4A993004A999EA213285786AC3E36E934DD342492DEED2123B2F1D035422963"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_primitive_residual_frobenius_566.py",
+      "path": "Tools/primitive-frobenius-20261025-569/record_primitive_residual_frobenius_566.py",
+      "sha256": "E7C7AAE751289F744BD0BF3DAE0605B47077BE322A845FFCDE6B397F2B400378"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_prescribed_residual_frobenius_audit_567.py",
+      "path": "Tools/primitive-frobenius-20261025-569/prepare_prescribed_residual_frobenius_audit_567.py",
+      "sha256": "5B331C6A0944D681AECD9EA072AA99AF3501CE5A67DD2DD0741B61C6623430BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_prescribed_residual_dependency_successor_567b.py",
+      "path": "Tools/primitive-frobenius-20261025-569/prepare_prescribed_residual_dependency_successor_567b.py",
+      "sha256": "C2C01F5634D4F2992B77B6A155904DEF486AC78712AD4BED2D0F59CE4A4C2CE9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_prescribed_residual_frobenius_567.py",
+      "path": "Tools/primitive-frobenius-20261025-569/record_prescribed_residual_frobenius_567.py",
+      "sha256": "D28A2F0AD66775E48A30E027FB9CFB70B779E0F2E7A98AF5874E946F2F1BA17F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prescribed-residual-frobenius-route-567.json",
+      "path": "Tools/primitive-frobenius-20261025-569/prescribed-residual-frobenius-route-567.json",
+      "sha256": "FF53C9CB13E7901B0998BA1134EA9D5CDE08DADF8DF1CE8838229BD294172506"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-prescribed-residual-frobenius-2-audit-config.json",
+      "path": "Tools/primitive-frobenius-20261025-569/source-original-prescribed-residual-frobenius-2-audit-config.json",
+      "sha256": "040EDFC810E542DC665CFA223C6B714AF96F9079048532C3BFAD815847ECF18C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusDependencyAudit2.lean",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrescribedResidualFrobeniusDependencyAudit2.lean.txt",
+      "sha256": "B6CA6E80F415DF5028A8CB5B96F0106005ADE378BF5C6625B9BA8036036C452B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusDependencyAudit2.log",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrescribedResidualFrobeniusDependencyAudit2.log",
+      "sha256": "ADAFBA4BC9F4B303921EA041E0BFC246F8DBF182F9CEC827E4646D2BCACFC399"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusDependencyAudit2.exit",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrescribedResidualFrobeniusDependencyAudit2.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-cyclotomic-12-audit-config.json",
+      "path": "Tools/primitive-frobenius-20261025-569/source-original-primitive-cyclotomic-12-audit-config.json",
+      "sha256": "96D6B7311D17DE3B6EFCCBDF0C7C6C3C5287F69AB0F2BBEEE3202005E8AE7ED6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-frobenius-charpoly-5-audit-config.json",
+      "path": "Tools/primitive-frobenius-20261025-569/source-original-primitive-frobenius-charpoly-5-audit-config.json",
+      "sha256": "FF77D2DCBDD710CE6AE3CB1B7EAB632919A52726A20B5D37188C7B41DAB378FD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-residual-frobenius-7-audit-config.json",
+      "path": "Tools/primitive-frobenius-20261025-569/source-original-primitive-residual-frobenius-7-audit-config.json",
+      "sha256": "F39CB13896107CDD5B6E4BD1E05ED8570F1A7F9B00D620D0C3CF34BE34DDB6BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-prescribed-residual-frobenius-2-audit-config-567b.json",
+      "path": "Tools/primitive-frobenius-20261025-569/source-original-prescribed-residual-frobenius-2-audit-config-567b.json",
+      "sha256": "BC6017ABE1DA9529224745B30023A76E896546A92EFB2FAE9B1778CA55B75AA0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-cyclotomic-12-reuse-review-20261025.json",
+      "path": "Tools/primitive-frobenius-20261025-569/source-original-primitive-cyclotomic-12-reuse-review-20261025.json",
+      "sha256": "3489E57B6EA769D8296B3861C63D0413DC8FC061A8180EA30F92E76A22E2DF99"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-frobenius-charpoly-5-reuse-review-20261025.json",
+      "path": "Tools/primitive-frobenius-20261025-569/source-original-primitive-frobenius-charpoly-5-reuse-review-20261025.json",
+      "sha256": "287A3976151D57572FA48B82B433A3FA8673FAEF090D682E4F7A469A0AB71987"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-primitive-residual-frobenius-7-reuse-review-20261025.json",
+      "path": "Tools/primitive-frobenius-20261025-569/source-original-primitive-residual-frobenius-7-reuse-review-20261025.json",
+      "sha256": "89C09428D294F1ACB3739A8E26E8A1F5C96CD669040A002D351CF32A732DA4A2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-prescribed-residual-frobenius-2-reuse-review-20261025.json",
+      "path": "Tools/primitive-frobenius-20261025-569/source-original-prescribed-residual-frobenius-2-reuse-review-20261025.json",
+      "sha256": "A9A459073E816E66CD3DFDB7268A1A563339A458E38936839797CEBD0D09A29E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCyclotomicAudit12.log",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrimitiveCyclotomicAudit12.log",
+      "sha256": "6D04FC1DABEC188CF553B80C40DB8C5CC62AB45727CC41BE0BFF704A8F234DF2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCyclotomicAudit12.lean",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrimitiveCyclotomicAudit12.lean.txt",
+      "sha256": "6F89F0F1A9A23C8DB634D311EB399BA37C73407BD210214E482E7D848E29F270"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCyclotomicAudit12.exit",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrimitiveCyclotomicAudit12.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCyclotomicDependencyAudit12.log",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrimitiveCyclotomicDependencyAudit12.log",
+      "sha256": "866D9263CAB748EFCD0102AA8E6E9623087C5708D2D8A7AED72E8E3E92893FD8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCyclotomicDependencyAudit12.lean",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrimitiveCyclotomicDependencyAudit12.lean.txt",
+      "sha256": "3EAE01AB2CB418F3D4CD976960B0FB4060364E44EC72C905982ECFF54435679B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveCyclotomicDependencyAudit12.exit",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrimitiveCyclotomicDependencyAudit12.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusCharpolyAudit5.log",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrimitiveFrobeniusCharpolyAudit5.log",
+      "sha256": "963F2153DC2EFC588D2F457D291E948F6A5F6FA0A4FABF8B66AC48CACCA9CAB5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusCharpolyAudit5.lean",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrimitiveFrobeniusCharpolyAudit5.lean.txt",
+      "sha256": "9983CDF121061926002538CA58F9B88AE96D1345C12FCC2035E56C687442314F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusCharpolyAudit5.exit",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrimitiveFrobeniusCharpolyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusCharpolyDependencyAudit5.log",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrimitiveFrobeniusCharpolyDependencyAudit5.log",
+      "sha256": "C6FA70E5187C07529D24EC867A2D2C3074E5136403B95FBCB9A3BF6B605ECEB1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusCharpolyDependencyAudit5.lean",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrimitiveFrobeniusCharpolyDependencyAudit5.lean.txt",
+      "sha256": "35356756AA1B038F4D59A357A9BFD7FB50A10AF133DE060219F29FD7BA6E1BC5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveFrobeniusCharpolyDependencyAudit5.exit",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrimitiveFrobeniusCharpolyDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualFrobeniusAudit7.log",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrimitiveResidualFrobeniusAudit7.log",
+      "sha256": "2B6CD79CAE5FA687EB55B1E98930AAAA404FA0FC53A432798B31A79AF7EEF04E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualFrobeniusAudit7.lean",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrimitiveResidualFrobeniusAudit7.lean.txt",
+      "sha256": "FB565378AF2A843D0E9D68009FBBC85EAE3E48ABB11DD10AC8B3BB1B971E8381"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualFrobeniusAudit7.exit",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrimitiveResidualFrobeniusAudit7.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualFrobeniusDependencyAudit7.log",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrimitiveResidualFrobeniusDependencyAudit7.log",
+      "sha256": "E17C9BE1C7C35F62B772BA283F2008CC47E8E9C5D808580400B580DDEF0DCA76"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualFrobeniusDependencyAudit7.lean",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrimitiveResidualFrobeniusDependencyAudit7.lean.txt",
+      "sha256": "52DBB96B0B06EF69B31D7A91A78467D4EA39C1B9F79F341188DF7B20BC6E44C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveResidualFrobeniusDependencyAudit7.exit",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrimitiveResidualFrobeniusDependencyAudit7.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusAudit2.log",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrescribedResidualFrobeniusAudit2.log",
+      "sha256": "E986DD7F47390AD518F6FDB85BB10E721FE00B502348D913131694F3FF75E647"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusAudit2.lean",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrescribedResidualFrobeniusAudit2.lean.txt",
+      "sha256": "E70DBE2627201F42FF16D9DFDBB9F87D9FC5C07813CFE7344406240543247A81"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusAudit2.exit",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrescribedResidualFrobeniusAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusDependencyAudit2b.log",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrescribedResidualFrobeniusDependencyAudit2b.log",
+      "sha256": "1FC51790073EC03700C9BDBBFD209A66758990266F7D8DCD17F7FDFFB1B399D9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusDependencyAudit2b.lean",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrescribedResidualFrobeniusDependencyAudit2b.lean.txt",
+      "sha256": "C9B2681F22E710AE27642DBFD0F84BB3C2185109FC67E531E507C9CF4824C620"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrescribedResidualFrobeniusDependencyAudit2b.exit",
+      "path": "Tools/primitive-frobenius-20261025-569/SourceOriginalPrescribedResidualFrobeniusDependencyAudit2b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ]
+}

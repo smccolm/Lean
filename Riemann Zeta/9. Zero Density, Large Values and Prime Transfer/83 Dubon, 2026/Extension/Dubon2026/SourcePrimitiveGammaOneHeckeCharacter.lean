@@ -1,0 +1,79 @@
+import Dubon2026.SourceGammaOneOperatorDescent
+import Dubon2026.SourcePrimitiveFiniteH1HeckeCharacter
+
+/-! DUB-17/18 -> original all-weight adic association -> actual finite Gamma1
+Hecke characters. Compose the original finite Fourier-valued character with
+the proved operator descent. Whole-word pullback and exact Fourier values
+hold on all primes away from the original level and coefficient modulus. -/
+namespace Dubon2026
+noncomputable section
+open scoped ValuativeRel
+variable {Q : ℕ} [NeZero Q] {k : ℤ}
+variable {E : Type} [Field E] [CharZero E] [ValuativeRel E]
+
+/-- The original primitive form's character on the actual finite Gamma1
+good-prime Hecke operator ring at the prescribed prime-power precision. -/
+def sourcePrimitiveGammaOneHeckeCharacter
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E)
+    (p n : ℕ) [NeZero p] (hp : p.Prime) (hlarge : 3 < p) [CharP 𝓀[E] p] :
+    sourceGammaOneHeckeAlgebra Q (p ^ (n + 1)) (k - 2).toNat →+*
+      𝒪[E] ⧸ (IsLocalRing.maximalIdeal 𝒪[E]) ^ (n + 1) :=
+  (sourcePrimitiveFiniteH1HeckeCharacter f hk τ p n hp).comp
+    (sourceGammaOneToModulus Q (p ^ (n + 1)) (k - 2).toNat
+      (sourcePrimePower_six_isUnit p n hp hlarge))
+
+/-- The entire Gamma1 word character pulls back to the same original
+adic H1 character on the matching restricted prime words. -/
+theorem sourcePrimitiveGammaOneHeckeCharacter_comp
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E)
+    (p n : ℕ) [NeZero p] (hp : p.Prime) (hlarge : 3 < p) [CharP 𝓀[E] p] :
+    (sourcePrimitiveGammaOneHeckeCharacter f hk τ p n hp hlarge).comp
+      (FreeAlgebra.lift ℤ
+        (sourceGammaOnePrimeOperators Q (p ^ (n + 1)) (k - 2).toNat)).rangeRestrict.toRingHom =
+      (sourcePrimitiveH1AdicQuotientCharacter f hk τ n).comp
+        (sourceGammaOneOriginalHeckeWord Q (p ^ (n + 1)) (k - 2).toNat).toRingHom := by
+  apply RingHom.ext
+  intro a
+  have h := congrArg (sourcePrimitiveFiniteH1HeckeCharacter f hk τ p n hp)
+    (RingHom.congr_fun
+      (sourceGammaOneToModulus_comp Q (p ^ (n + 1)) (k - 2).toNat
+        (sourcePrimePower_six_isUnit p n hp hlarge)) a)
+  exact h.trans (RingHom.congr_fun
+    (sourcePrimitiveFiniteH1HeckeCharacter_comp f hk τ p n hp)
+      (sourceGammaOneOriginalHeckeWord Q (p ^ (n + 1)) (k - 2).toNat a))
+
+/-- Each genuine Gamma1 prime correspondence retains the original Fourier
+coefficient in the same prescribed local embedding and adic quotient. -/
+theorem sourcePrimitiveGammaOneHeckeCharacter_hecke
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    (τ : sourcePrimitiveCoefficientField f →ₐ[ℚ] E)
+    (p n : ℕ) [NeZero p] (hp : p.Prime) (hlarge : 3 < p) [CharP 𝓀[E] p]
+    (ell : sourceBinaryHeckePrime (Q * p ^ (n + 1))) :
+    sourcePrimitiveGammaOneHeckeCharacter f hk τ p n hp hlarge
+      ((FreeAlgebra.lift ℤ
+        (sourceGammaOnePrimeOperators Q (p ^ (n + 1)) (k - 2).toNat)).rangeRestrict
+          (FreeAlgebra.ι ℤ ell)) =
+      Ideal.Quotient.mk ((IsLocalRing.maximalIdeal 𝒪[E]) ^ (n + 1))
+        ⟨τ (sourcePrimitiveFieldCoefficient f ell.val),
+          sourcePrimitiveCoefficient_valuation_le_one f hk τ ell.val⟩ := by
+  have h := RingHom.congr_fun
+    (sourcePrimitiveGammaOneHeckeCharacter_comp f hk τ p n hp hlarge)
+      (FreeAlgebra.ι ℤ ell)
+  have hw : sourceGammaOneOriginalHeckeWord Q (p ^ (n + 1)) (k - 2).toNat
+      (FreeAlgebra.ι ℤ ell) =
+      ⟨sourceBinaryH1PrimeOperators ℤ Q (k - 2).toNat
+        (sourceGammaOneHeckePrimeForget Q (p ^ (n + 1)) ell),
+        Algebra.subset_adjoin ⟨sourceGammaOneHeckePrimeForget Q (p ^ (n + 1)) ell, rfl⟩⟩ :=
+    FreeAlgebra.lift_ι_apply _ ell
+  change sourcePrimitiveGammaOneHeckeCharacter f hk τ p n hp hlarge _ =
+    sourcePrimitiveH1AdicQuotientCharacter f hk τ n
+      (sourceGammaOneOriginalHeckeWord Q (p ^ (n + 1)) (k - 2).toNat
+        (FreeAlgebra.ι ℤ ell)) at h
+  rw [hw] at h
+  exact h.trans (sourcePrimitiveH1AdicQuotientCharacter_hecke f hk τ n
+    (sourceGammaOneHeckePrimeForget Q (p ^ (n + 1)) ell))
+
+end
+end Dubon2026

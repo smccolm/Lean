@@ -1,0 +1,127 @@
+{
+  "scratchSum": 140,
+  "scratchDistinct": 140,
+  "generatedNameRenamings": {},
+  "productionFocused": 140,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {
+    "_private.Dubon2026.SourcePrimitiveOriginalTateRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourcePrimitiveOriginalTateRankTwo": [
+      {
+        "scope": "SourceOriginalPrimitiveTateImageScratchOwnership562For8133",
+        "module": "Dubon2026.SourcePrimitiveOriginalTateRankTwo"
+      }
+    ],
+    "_private.Dubon2026.SourceOriginalCuspPadicHeckeMap.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalCuspPadicHeckeMap": [
+      {
+        "scope": "SourceOriginalPrimitiveTateImageScratchOwnership562For8133",
+        "module": "Dubon2026.SourceOriginalCuspPadicHeckeMap"
+      }
+    ],
+    "_private.Dubon2026.SourcePrimitiveOriginalTateEvaluation.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourcePrimitiveOriginalTateEvaluation": [
+      {
+        "scope": "SourceOriginalPrimitiveTateImageScratchOwnership561For8133",
+        "module": "Dubon2026.SourcePrimitiveOriginalTateEvaluation"
+      }
+    ],
+    "_private.Dubon2026.SourceOriginalCuspTateRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalCuspTateRankTwo": [
+      {
+        "scope": "SourceOriginalPrimitiveTateImageScratchOwnership562For8133",
+        "module": "Dubon2026.SourceOriginalCuspTateRankTwo"
+      }
+    ],
+    "_private.Dubon2026.SourceOriginalCuspRationalTateHecke.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalCuspRationalTateHecke": [
+      {
+        "scope": "SourceOriginalPrimitiveTateImageScratchOwnership561For8133",
+        "module": "Dubon2026.SourceOriginalCuspRationalTateHecke"
+      }
+    ]
+  },
+  "missingFromFocusedAlreadyInPrevious": [],
+  "productionNamesNotInScratch": [
+    "_private.Dubon2026.SourceOriginalCuspPadicHeckeMap.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+    "_private.Dubon2026.SourceOriginalCuspRationalTateHecke.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+    "_private.Dubon2026.SourceOriginalCuspTateRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra",
+    "_private.Dubon2026.SourcePrimitiveOriginalTateEvaluation.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_dubon2026",
+    "_private.Dubon2026.SourcePrimitiveOriginalTateRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra"
+  ],
+  "unexplainedMissing": [
+    "_private.Dubon2026.SourceOriginalCuspPadicHeckeMap.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalCuspPadicHeckeMap",
+    "_private.Dubon2026.SourceOriginalCuspRationalTateHecke.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourceOriginalCuspRationalTateHecke",
+    "_private.Dubon2026.SourceOriginalCuspTateRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourceOriginalCuspTateRankTwo",
+    "_private.Dubon2026.SourcePrimitiveOriginalTateEvaluation.0.Dubon2026.SourceFunctionField.OriginalChart.instNeZeroNatValPrime_sourcePrimitiveOriginalTateEvaluation",
+    "_private.Dubon2026.SourcePrimitiveOriginalTateRankTwo.0.Dubon2026.SourceFunctionField.OriginalChart.instIsMulCommutativeSubtypeEndIntForallFinComplexMemSubmodulePathPeriodLatticeValKaehlerDifferentialLaurentSeriesIntermediateFieldModularFunctionFieldOverRegularDifferentialsCoeBasisSubalgebraOriginalFullLatticeHeckeAlgebra_sourcePrimitiveOriginalTateRankTwo"
+  ],
+  "scopes": [
+    {
+      "modules": [
+        "SourceFiniteBilinearBaseChange",
+        "SourceOriginalCoefficientWeilNondegeneracy",
+        "SourceBilinearBaseChangeAlternating",
+        "SourceOriginalCoefficientWeilLaws",
+        "SourceBilinearPolynomialAdjoint",
+        "SourceIdempotentBilinearRestriction"
+      ],
+      "count": 13,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageScratchOwnership560For8133.log",
+        "sha256": "3127C9946FB2EF7740D77703C3B1CCA37057C0A3E483F975D4A4B2E57367E13C",
+        "sourceSha256": "40377A36E4A2EEFFEC8F66DCB52D2D28E8DCF9942204F861FDEF9315D19D6423"
+      }
+    },
+    {
+      "modules": [
+        "SourceHeckeCoordinateRelations",
+        "SourceOriginalCuspRationalTateHecke",
+        "SourceIntegerCoefficientExtensionOne",
+        "SourceIntegerCoefficientEndExtension",
+        "SourcePrimitiveOriginalTateEvaluation",
+        "SourcePrimitiveOriginalTateAdjoint",
+        "SourceEndIdempotentPairingRestriction",
+        "SourcePrimitiveOriginalTateRestriction"
+      ],
+      "count": 47,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageScratchOwnership561For8133.log",
+        "sha256": "1067114B889646DCD8C6837FE33A2824883A69FE0D509B657406658D47E79469",
+        "sourceSha256": "5C21B0B9D1D7CC9BC690281289A7481741C9C654B83F3A43A2C8B9D72AC41955"
+      }
+    },
+    {
+      "modules": [
+        "SourceCharacterIdempotentLine",
+        "SourceCharacterIdempotentRankTwo",
+        "SourceGeneratedCharacterIdempotent",
+        "SourceTensorCharacterIdempotent",
+        "SourceOriginalCuspPadicHeckeMap",
+        "SourceIntegerCoefficientExtensionCharacter",
+        "SourcePrimitiveHeckeAlgebraEvaluation",
+        "SourcePrimitiveHeckeAlgebraProjector",
+        "SourceRankTwoSurjectiveDescent",
+        "SourceOriginalCuspTateRankTwo",
+        "SourceRankTwoBaseChange",
+        "SourceIntegerCoefficientRankTwo",
+        "SourceIntertwinedRangeEquiv",
+        "SourceRankTwoCharacterRange",
+        "SourcePrimitiveHeckeAlgebraRankTwo",
+        "SourcePrimitiveOriginalTateRankTwo",
+        "SourcePrimitiveOriginalTateNondegenerateRankTwo"
+      ],
+      "count": 80,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageScratchOwnership562For8133.log",
+        "sha256": "B779808A42862F7EEE9F8C1D9D87966D29D6B49E9D1C4E6234EBD3F981D03A21",
+        "sourceSha256": "BFE4A46AFC63173AC732E5DCDD12334F488948EA3ACDCBB194BA90318AE75AF6"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalPrimitiveTateImageOwnership8133.log",
+    "sha256": "B5FAEC5C58B736BC3E9B1D7780B80D4B83DC7FD42834CF2D93A638E6FFC4E14D",
+    "sourceSha256": "5A475387EA4E9A9E373549EE11A704D83513261AED7759B6D7028B3063187471"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261025-113151-745.log",
+    "sha256": "8C9DB181E9969C7BDFE40758A02E1CFBF4D79E85EB7F0BD131A8CF769A0A9C98"
+  },
+  "passed": false
+}

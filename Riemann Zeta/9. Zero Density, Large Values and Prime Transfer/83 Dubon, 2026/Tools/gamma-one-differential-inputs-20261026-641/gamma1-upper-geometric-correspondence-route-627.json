@@ -1,0 +1,35 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of original finite Gamma1 Hecke characters -> geometric/H1 comparison preserving original homogeneous coefficients -> exact upper/geometric correspondence subgroup and analytic matrix equation.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHeckeUpperEquiv.lean",
+      "sha256": "DB7A6B9EA7508B956B2222DEC285E7926D3BAEDA7EB4B94E0AAD0249AA4F95DD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeSubgroup.lean",
+      "sha256": "3518F8C38303371FA5BDC0730BB37915A8F2E7ABFD7C7174CFC6A7AA428139E5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ModularDegeneracy.lean",
+      "sha256": "5D04F34CFDFF8993DA27B553691DEA2212F68E154537120AAF46E5FA3B20F0C4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneConstantHecke.lean",
+      "sha256": "B1CDE3537D1064DBDFF2CDA2DDF4BB470D3AE61612009D14BA8B5C441B6645C5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHeckeWords.lean",
+      "sha256": "79678C3103E04E96882FF0D936D52533018132E55D52DF040AE0BA9D87EB3C64"
+    }
+  ],
+  "selectedRoute": "Restrict the existing original upper-to-raised equivalence to Gamma1 using the already proved Gamma1 preservation of level raising. Reuse both existing inverse identities and the original analytic matrix/action equation. The existing Gamma1 conjugation homomorphism supplies multiplication. No new matrix arithmetic or coprimality premise is needed.",
+  "assumptionsToDischarge": "The actual upper correspondence subgroup inside Gamma1(M), defined by upper-right divisibility, is isomorphic to Gamma1(M) intersect Gamma0(d*M). The forward map is exactly the original diagonal conjugation, and the inverse is the existing integral level-raising matrix. Both inverse laws and the analytic matrix/action identity are proved at every positive index.",
+  "remaining": "This group isomorphism does not itself identify the Picard and H1 operators. Their transpose/diamond conventions and the original homogeneous matrix coefficient action still require exact comparison. The full/parabolic H1 distinction, Frobenius/inertia, finite-character Galois realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN.",
+  "productionStatus": "Scratch development; audits and production promotion pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "scratchImportClosure": [
+    "SourceGammaOneHeckeGeometricSubgroup",
+    "SourceGammaOneModularStretch"
+  ]
+}

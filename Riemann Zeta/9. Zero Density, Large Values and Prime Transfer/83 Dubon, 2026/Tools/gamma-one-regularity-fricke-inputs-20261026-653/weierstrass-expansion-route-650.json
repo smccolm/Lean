@@ -1,0 +1,20 @@
+{
+  "chain": "DUB-17/18 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 Hecke-character realization -> actual Picard/H1 and diamond comparison -> differential realization -> rational Fourier structure -> Fricke generator holomorphy and cyclotomic expansion.",
+  "selectedRoute": "Reuse native EisensteinSeries.qExpansion_identity at weight two and PeriodPair.hasSum_weierstrassP. Keep the integer-complement boundary argument, because torsion points with first coordinate zero are required. Reuse the newly proved actual period-pair construction and omit duplicate scaling and invariant-normalization machinery. Derive the explicit paired Fourier tail, prove its uniform summable majorant, and obtain holomorphy of the same actual torsion Weierstrass functions.",
+  "assumptionsToDischarge": "The exact torsion Fourier formula and holomorphy of the actual functions, with justified summation rearrangements. These feed the cyclotomic coefficient and Fricke rational-structure arguments.",
+  "remaining": "Cusp boundedness, explicit coefficient model and conjugation, rational Fricke spanning, actual differential realization and converse, Picard/H1/diamond and arithmetic association remain; 16/20; DUB-17--20 OPEN.",
+  "source": "E:\\Lean\\.tmp\\dubon83\\weierstrass-expansion-reuse-649\\snapshots.json",
+  "sourceSha256": "3684BA56C6A0B7423FB8467E5C80DA78467967A92547157402C64F8FDFAA9CB5",
+  "modules": [
+    "SourceLipschitzTwo",
+    "SourceLipschitzTwoRealBoundary",
+    "SourceWeierstrassRowSeries",
+    "SourceWeierstrassLatticeRows",
+    "SourceWeierstrassTorsionExpansion",
+    "SourceWeierstrassTorsionTail",
+    "SourceWeierstrassTorsionHolomorphy"
+  ],
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false
+}

@@ -1,0 +1,34 @@
+import Dubon2026.SourceMatrixIntertwinerCharpoly
+import Dubon2026.SourceIntegralMatrixCharpoly
+import Dubon2026.SourceRankTwoCharpolyCoefficients
+import Dubon2026.SourceOriginalSpecializationFrobeniusCharpoly
+import Dubon2026.SourceOriginalResidualFrobeniusCharpoly
+import Dubon2026.SourceOriginalResidualInertia
+import Dubon2026.SourceOriginalPrimitiveResidualFrobeniusRealization
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_frobenius_realization]
+  let localModules : Array Name := #[`Dubon2026.SourceOriginalPrimitiveResidualFrobeniusRealization, `Dubon2026.SourceOriginalResidualInertia, `Dubon2026.SourceIntegralMatrixCharpoly, `Dubon2026.SourceMatrixIntertwinerCharpoly, `Dubon2026.SourceOriginalResidualFrobeniusCharpoly, `Dubon2026.SourceRankTwoCharpolyCoefficients, `Dubon2026.SourceOriginalSpecializationFrobeniusCharpoly, `Dubon2026.SourceCyclotomicFrobeniusCharpoly, `Dubon2026.SourceRankTwoQuadraticTrace, `Dubon2026.SourceValuationCyclotomicFrobenius, `Dubon2026.SourceValuationFrobeniusRoots, `Dubon2026.SourceOriginalSpecializationCyclotomicDeterminant, `Dubon2026.SourceSpecializationBaseChangeIntertwiner, `Dubon2026.SourceImageSpecializationDeterminant, `Dubon2026.SourceAlternatingRankTwoDeterminant, `Dubon2026.SourceImageSpecializationPairing, `Dubon2026.SourcePrimitiveOriginalTateGalois, `Dubon2026.SourcePolynomialCommutant, `Dubon2026.SourceOriginalSpecializationPrimitiveImage, `Dubon2026.SourceSpanningProjectorImage, `Dubon2026.SourceOriginalSpecializationProjector, `Dubon2026.SourcePolynomialSpecialization]
+  let required : Array Name := #[`Dubon2026.matrix_intertwiner_charpoly, `Dubon2026.matrix_intertwiner_one, `Dubon2026.integral_matrix_charpoly_of_intertwiner, `Dubon2026.residue_matrix_charpoly_of_intertwiner, `Dubon2026.residue_matrix_one_of_intertwiner, `Dubon2026.rank_two_trace_det_of_charpoly, `Dubon2026.SourceFunctionField.OriginalChart.original_specialization_frobenius_charpoly, `Dubon2026.SourceFunctionField.OriginalChart.original_residual_frobenius_charpoly, `Dubon2026.SourceFunctionField.OriginalChart.original_residual_inertia_identity, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_frobenius_realization, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_continuous_residual_realization, `Dubon2026.SourceFunctionField.OriginalChart.original_specialization_cyclotomic_determinant, `Dubon2026.SourceFunctionField.OriginalChart.original_specialization_inertia_identity, `Dubon2026.SourceFunctionField.OriginalChart.original_specialization_quadratic, `Dubon2026.SourceFunctionField.GaussReduction.originalRationalTateGaloisRep_frobenius_quadratic_away, `Dubon2026.cyclotomic_frobenius_charpoly, `Dubon2026.sourcePrimitiveCoefficient_valuation_le_one, `Dubon2026.stableLattice_integral_residual_realization, `LinearEquiv.charpoly_conj, `Matrix.charpoly_map, `Polynomial.map_injective, `Matrix.map_injective]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL PRIMITIVE RESIDUAL FROBENIUS DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the same actual primitive representation consumer. Only declaration values are traversed. The existing constructed integral and residual primitive representations retain their actual finite local coefficient field, continuity, spanning Hecke specialization, original arithmetic action, lattice change of basis and literal entrywise residue map. Original Tate inertia transfers to these same integral and residual actions. The separately proved cyclotomic determinant and original quadratic give the field Frobenius polynomial; native conjugacy and injective polynomial coefficient extension descend it to the actual integral matrix. Entrywise reduction gives the residual polynomial, trace and determinant with the original integral Fourier coefficient. No new lattice, residue map, inertia, determinant, trace or characteristic-polynomial hypothesis is supplied by the assembled consumer. Prescribed coefficient-reduction compatibility, comparison to the source arithmetic quotient and local norm interfaces, residual association, arithmetic automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

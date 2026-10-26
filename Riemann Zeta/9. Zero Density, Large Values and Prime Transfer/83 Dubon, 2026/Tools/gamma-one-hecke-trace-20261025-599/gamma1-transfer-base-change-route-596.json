@@ -1,0 +1,53 @@
+{
+  "scope": 596,
+  "chain": "DUB-17/18 -> literal higher continuation -> arithmetic automorphy -> original all-weight adic association -> geometric Gamma1 realization -> actual surjective-transfer Hecke compatibility -> native H1 trace under the actual correspondence group square",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SurjectiveCosetEquiv.lean",
+      "sha256": "AF030E042D9ED082D160077D7C00423591EF39673DAAD2411AD09CF9C4C2276A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CoinducedCosetTrace.lean",
+      "sha256": "F54722850360A89EB7F934F2F015F9BDD987741EF4D46E447AB6E18C758851BA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CoinducedCohomologyTrace.lean",
+      "sha256": "7931C2238F3094BF74A5131D489A3767565B080AC012A711D522C3763CDDD59F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\OriginalCohomologyTraceNaturality.lean",
+      "sha256": "28229F47B16A5B90FB289B53F8F5C32943BCEEB78D458C44D564B232434E7870"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\OriginalShapiroRestriction.lean",
+      "sha256": "14571BF2DBB735803F52A9030D4F8F76DD7955EC08DAA716B816C653BA0F1B6C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ContinuousCorestrictionMackey.lean",
+      "sha256": "A695555216C77BDFED8014E36F29F3091745A0858735FCE66AB24A32F6250F73"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CosetOrbitTraceComparison.lean",
+      "sha256": "D80F5D40E2C6D882EE639055563431A9CDDC4BB1CE8092D65CBDDE98E2C4405F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceShapiroH1CosetTrace.lean",
+      "sha256": "1D8455B6F1D924F536E62D67822378B5E5CC6C46F77AB6E19AE9859836BB259B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLiteralTransferSurjectivity.lean",
+      "sha256": "2C275BE2CB4396E554FE1C8472BEF5B4E91C0FFF9BF390CAFE32DEE82BF35068"
+    }
+  ],
+  "shorterRoute": "Reuse the existing subgroup-preimage coset map and its automatic injectivity, literal coinduced coefficient trace, and original Shapiro restriction/evaluation identity. Pullback of coinduced functions proves trace compatibility at coefficient level by finite sum reindexing; native functoriality then supplies H1 base change. This avoids reconstructing a degree-one Mackey resolution or orbit homotopy from the existing degree-two result.",
+  "assumptionsToDischarge": "Derive the native H1 trace base-change identity from an explicit group-level coset-surjectivity condition. The intended actual application must separately derive that condition for its original Gamma1/Hecke square; no cohomological identity may be assumed.",
+  "remaining": "Base change alone is a supporting obligation. Apply it to the literal square and prove the required trace composition and coefficient comparisons to obtain actual surjective-transfer Hecke compatibility. Arithmetic geometry/diamonds, Galois realization, all-weight association, local/image/regularity, automorphy and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "scratchImportClosure": [
+    "SourceH1TraceBaseChange",
+    "SourceShapiroH1CosetTrace",
+    "SourceShapiroH1CocycleComparison",
+    "SourceNativeCoinductionCosetTrace",
+    "SourceShapiroH1PullbackNaturality",
+    "SourceCohomologyTracePullbackCoefficients"
+  ]
+}

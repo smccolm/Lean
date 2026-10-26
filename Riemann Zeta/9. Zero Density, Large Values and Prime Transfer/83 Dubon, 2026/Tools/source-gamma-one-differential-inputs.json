@@ -1,0 +1,1322 @@
+{
+  "date": "26 October 2026",
+  "modules": [
+    "Dubon2026.SourceGammaOneHeckeGeometricSubgroup",
+    "Dubon2026.SourceGammaOneGeometricCohomology",
+    "Dubon2026.SourceGammaOneHeckeCoefficientAction",
+    "Dubon2026.SourceGammaOneCurveGeometry",
+    "Dubon2026.SourceGammaOneCurveInputs",
+    "Dubon2026.SourceGammaOneScalarExtension",
+    "Dubon2026.SourceGammaOneModularRatios",
+    "Dubon2026.SourceGammaOneFieldModularRatio",
+    "Dubon2026.SourceModularQDerivative",
+    "Dubon2026.SourceModularQDerivativeExpansion",
+    "Dubon2026.SourceJEulerModularIdentity",
+    "Dubon2026.SourceJEulerPolynomial",
+    "Dubon2026.SourceGammaOneDifferentialFiniteIntegral",
+    "Dubon2026.SourceInverseJLevelOneIntegral",
+    "Dubon2026.SourceIntegralHomogeneousRelation",
+    "Dubon2026.SourceModularInverseJIntegral",
+    "Dubon2026.SourceGammaOneCuspAuxiliaryForm",
+    "Dubon2026.SourceGammaOneCuspAuxiliaryExpansion",
+    "Dubon2026.SourceGammaOneDifferentialCuspIntegral"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of original finite Gamma1 Hecke characters -> actual Picard/H1, full/parabolic and diamond comparison retaining the original homogeneous coefficient endomorphism -> exact geometric H1 correspondence, actual curve and regular differential/cusp comparison.",
+  "discharged": "The actual upper and geometric Hecke subgroups are explicitly isomorphic with the original conjugation and analytic matrix action. Native H1 pullback/trace gives exactly the original finite Hecke operator, including its homogeneous coefficient endomorphism, and this action factors on either side of the geometric operator. Existing finite-coordinate curve results establish local differential generators, canonical divisors and injective expansions for the actual Gamma1 and Hecke fields. Literal scalar extension equals the complex integral-ratio field; every element has a same-weight complex modular quotient with nonzero denominator. This does not assert the reverse membership of arbitrary complex modular quotients. Native analytic differentiation and the existing level-one dimension theorem construct a nonzero q-Euler normalization scalar. For an actual weight-two cusp form f and Y*qEuler(j)=qExpansion(f), the finite expression Y^6*j^4*(j-1728)^3 is integral over C[j]; for positive M with Gamma(M) contained in the group, the cusp expression Y^(2M)*j^(M+1)*(j-1728)^M is integral over C[1/j]. Existing modular norms and level-one polynomial reduction, plus native cusp exponential decay, prove both integral equations without assuming them.",
+  "boundary": "The valuation deduction of regularity, algebraic differential realization and converse cusp construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must still identify the original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of these characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Neither complex semisimplicity, finite characters, Witt coefficients nor a universal deformation ring supplies a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 8,335-module scope: all thirteen retained regressions, 52,743 exhaustive theorem checks, 24,024 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.heckeUpperGeometricEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_conjugation",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_matrix",
+    "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup_upper",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_matrix",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_diffQExp_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_localDifferentials",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_isCurveOver",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hasCanonicalDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_diffQExp_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_localDifferentials",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_isCurveOver",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_hasCanonicalDivisor",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_eq_qExpFunctionFieldC",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio",
+    "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_finite_expression",
+    "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_cusp_expression"
+  ],
+  "scratchCertificates": [
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T10:39:54.758353+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceGammaOneHeckeGeometricSubgroup"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeGeometricSubgroup.lean",
+          "sha256": "C4398729974D5055AE241BFC208D90F2176D9539265595D25E628ACD13A90BB0",
+          "oleanSha256": "F7BA2D989B45129997EB16F92E5B7E923235530C41305DB11C6CB28A0CA8E4B1"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.geometricToUpper_upperToGeometric",
+        "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_geometricToUpper",
+        "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_conjugation",
+        "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_matrix",
+        "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_smul",
+        "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricToUpper",
+        "Dubon2026.SourceFunctionField.GammaOne.heckeUpperGeometricEquiv"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.geometricToUpper_upperToGeometric",
+        "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_geometricToUpper",
+        "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_conjugation",
+        "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_matrix",
+        "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_smul"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricToUpper",
+        "Dubon2026.SourceFunctionField.GammaOne.heckeUpperGeometricEquiv"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricSubgroupAudit1.log",
+      "logSha256": "7B118EC6848A8FD9CB95B1A3ED18F8062ABA20C69D92AD121097C71404E17530",
+      "auditSha256": "8413E2408A0EE9842ED79EF449224D8250D63B23B07A0353C2D8F7C9BE231DFC",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 14,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 15,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricSubgroupDependencyAudit1.log",
+      "dependencyAuditSha256": "7B46988F24AC9EEAE68006C4C1A69219D23FFDFB77BD44D7338CE59BC9D862F6",
+      "dependencyAuditSourceSha256": "47A0FDD700AD12D9E4F7484E5D5C70C76378F5A12B10D7C23CFFEC08A74B340E",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.heckeUpperGeometricEquiv",
+        "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_conjugation",
+        "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_matrix",
+        "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_smul"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of original finite Gamma1 Hecke characters -> geometric/H1 comparison preserving original homogeneous coefficients -> exact upper/geometric correspondence subgroup and analytic matrix equation.",
+      "discharged": "The actual upper correspondence subgroup inside Gamma1(M), defined by upper-right divisibility, is isomorphic to Gamma1(M) intersect Gamma0(d*M). The forward map is exactly the original diagonal conjugation, and the inverse is the existing integral level-raising matrix. Both inverse laws and the analytic matrix/action identity are proved at every positive index.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. This group isomorphism does not itself identify the Picard and H1 operators. Their transpose/diamond conventions and the original homogeneous matrix coefficient action still require exact comparison. The full/parabolic H1 distinction, Frobenius/inertia, finite-character Galois realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-geometric-subgroup-1-reuse-review-20261026.json",
+      "reuseReviewSha256": "5A649E26508DF970D319C1C145710595C362B656FBEC4B68F5A5419BC735E156",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T10:58:32.837639+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceGammaOneGeometricCohomology"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCohomology.lean",
+          "sha256": "C7ACE8C976DADC063DB7939DE3AB9893CEFD6B54A2393A5BBDC1D50ACA4C7ED5",
+          "oleanSha256": "7C84EA92579530686B601400E6C69F5AABA15E989F0FDD15876B581CA20CA398"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_injective",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup_upper",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_matrix",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_smul",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaMorphism",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricBetaH1Trace",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_injective",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup_upper",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_matrix",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_smul",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_eq"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaMorphism",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricBetaH1Trace",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCohomologyAudit1.log",
+      "logSha256": "B22F57CD517F19DFDA9081C20CCDF0834538DBB60289C4B1BCCDE75686167F39",
+      "auditSha256": "A25B3E221793DCCD0F49A8CDD11391F88941BC692FE7397069F09D1E11631999",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 11,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCohomologyDependencyAudit1.log",
+      "dependencyAuditSha256": "DC0E854579A17DEB828900B6EB398FD088602B848F028AF5353B023505EB4B29",
+      "dependencyAuditSourceSha256": "36D8A2B04DF5F26D7CE49B071703AF31AB3A1C84B39E4E75AF6EE47BF1091F06",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_injective",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup_upper",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_matrix",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_smul"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of original finite Gamma1 Hecke characters -> geometric/H1 comparison retaining original homogeneous coefficients -> exact geometric group maps and their native H1 pullback/trace.",
+      "discharged": "No group-map preservation, group injectivity, analytic intertwining, pullback composition or H1 operator-comparison hypothesis remains between these two literal cohomological correspondences.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The cohomological equality does not identify the actual Picard operator with H1. The full/parabolic distinction, transpose/diamond conventions, arithmetic Galois realization of finite characters, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher continuation remain required. No characteristic-zero lift is inferred from finite characters. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-geometric-cohomology-1-reuse-review-20261026.json",
+      "reuseReviewSha256": "8BCF2AB05574EBEB6A537D4008EE6CE314E703E75CBFC4E2E9D594DE41376DFD",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T11:08:59.552585+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceGammaOneHeckeCoefficientAction"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCoefficientAction.lean",
+          "sha256": "3C49EACF9D61CB7DA14863C383224ACF823125F3F6B1BCF97AB0FD6F4B329005",
+          "oleanSha256": "817AEBF9DBD53E7CE381B4EB3D7232F8F98F845FA4886C64BD473B9A7AB29001"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1_cocycle",
+        "Dubon2026.SourceFunctionField.GammaOne.constantHeckeCocycles_coefficient_left",
+        "Dubon2026.SourceFunctionField.GammaOne.constantHeckeCocycles_coefficient_right",
+        "Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_coefficient_left",
+        "Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_coefficient_right",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_coefficient",
+        "Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1_cocycle",
+        "Dubon2026.SourceFunctionField.GammaOne.constantHeckeCocycles_coefficient_left",
+        "Dubon2026.SourceFunctionField.GammaOne.constantHeckeCocycles_coefficient_right",
+        "Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_coefficient_left",
+        "Dubon2026.SourceFunctionField.GammaOne.constantHeckeH1_coefficient_right",
+        "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_coefficient"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCoefficientAudit1.log",
+      "logSha256": "2F1548BDB663E873C8E129FA7BB02EC55AC03562C13FCF9C8F68D87B2F849AE3",
+      "auditSha256": "C1953CF19A06A2B77C8820C29C21B8569242588001EB0B11CBEB17A5247FAC45",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 9,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 11,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCoefficientDependencyAudit1.log",
+      "dependencyAuditSha256": "909EBAE60CE9538417E8C2375FDA2710CB7056FE4014D1715F69AFBEDB70E983",
+      "dependencyAuditSourceSha256": "EAABA785779C59B559DBA66E88CBB2FFB5BB950EBF4867C220317B0AC33459FC",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_coefficient",
+        "Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> finite Gamma1 character arithmetic realization -> geometric/H1 comparison -> retention and exact factorization of the original homogeneous coefficient endomorphism.",
+      "discharged": "The H1 operator with any prescribed coefficient endomorphism equals the ordinary constant-coefficient correspondence followed by that endomorphism on H1, and also equals the reverse composition. This includes exactly the original homogeneous diagonal matrix action and does not remove it.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. An arithmetic Picard/H1 comparison must realize the ordinary correspondence and retain this explicit coefficient factor. Full/parabolic and diamond conventions, arithmetic finite-character realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and higher continuation remain open. No character lift follows merely from this factorization. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-coefficient-1-reuse-review-20261026.json",
+      "reuseReviewSha256": "EAA8EEF7C2627E2122A70654CDE27C58343F56563EB5734AA8227C3C9E70B248",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T11:22:57.019694+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceGammaOneCurveGeometry",
+        "SourceGammaOneCurveInputs"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCurveGeometry.lean",
+          "sha256": "368C21200022558CE0C24350053DE6BDB70EABAD0DE89EC44ABFB6E5E1F7D0E4",
+          "oleanSha256": "E91050E6321FF2D5AB53FD74AEA578A9CA5960E2D7631B5790B739068C1379DF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCurveInputs.lean",
+          "sha256": "B7E660DE474A944C5CA4BC589C419DBBC0B446D2274E137F12CC689B2A65D068",
+          "oleanSha256": "2A06B31DCDD8EA64D144A1971FEE40BB41574D34ED56E08671F5E26EF892CA87"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.D_jCoordinateOver_ne_zero",
+        "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_diffQExp_injective",
+        "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_dCoordGenerates",
+        "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_localDifferentials",
+        "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_isCurveOver",
+        "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_hasCanonicalDivisor",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_diffQExp_injective",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_localDifferentials",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_isCurveOver",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hasCanonicalDivisor",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_diffQExp_injective",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_localDifferentials",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_isCurveOver",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_hasCanonicalDivisor"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.D_jCoordinateOver_ne_zero",
+        "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_diffQExp_injective",
+        "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_dCoordGenerates",
+        "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_localDifferentials",
+        "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_isCurveOver",
+        "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_hasCanonicalDivisor",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_diffQExp_injective",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_localDifferentials",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_isCurveOver",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hasCanonicalDivisor",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_diffQExp_injective",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_localDifferentials",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_isCurveOver",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_hasCanonicalDivisor"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCurveGeometryAudit2.log",
+      "logSha256": "0F86F35F484325BDB7D32BE8162EACE2559DD6DD2BD0C093AD42310B3126814B",
+      "auditSha256": "DEABC4FD50EE99F73D5BB882700E47D830FE661DFDFF16AB1DC336AB76597EE9",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 20,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 22,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCurveGeometryDependencyAudit2.log",
+      "dependencyAuditSha256": "D78A32D4E2A37D7CFC8F02181A02B53916BC2C51667B6F6170492C44DF04790D",
+      "dependencyAuditSourceSha256": "1B5743514D49A9E708DCA6EF9038D169CD76957F2EB474270106E2AFDE642EDB",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_diffQExp_injective",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_localDifferentials",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_isCurveOver",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hasCanonicalDivisor",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_diffQExp_injective",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_localDifferentials",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_isCurveOver",
+        "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_hasCanonicalDivisor"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of finite Gamma1 Hecke characters -> Picard/H1 comparison -> actual Gamma1 curve and differential realization.",
+      "discharged": "For the actual Gamma1(M) curve and Gamma1(M) intersect Gamma0(d*M) Hecke curve at positive levels, differential q-expansion is injective, every local coordinate differential generates and local differentials are finite, and over algebraically closed characteristic-zero coefficients the actual fields satisfy IsCurveOver and HasCanonicalDivisor. None of these is left as a hypothesis in the actual-level consumers.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Regular differentials still require actual cusp-form comparison and rational/base-change realization; Picard/H1 and diamond compatibility, full/parabolic comparison, arithmetic finite-character realization, original all-weight association, local/image/regularity, automorphy and higher continuation remain required. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-curve-geometry-2-reuse-review-20261026.json",
+      "reuseReviewSha256": "B313470761608ECB49495158480B04B9098132572A5A2BC356027EBE699C52CA",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T11:38:54.485032+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceGammaOneScalarExtension"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneScalarExtension.lean",
+          "sha256": "FFA004719BEF4ED6C17BD6B6410F811AA0B8D0B002C9117565BDFCE582A610C2",
+          "oleanSha256": "9922547CA6E58CBD8EA446D696EDA55B26F273BB44702987AAE2AA03024CA64F"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.coeffEmb_intSeriesC",
+        "Dubon2026.SourceFunctionField.GammaOne.coeffEmb_image_intFormRatiosC",
+        "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_eq_qExpFunctionFieldC"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.coeffEmb_intSeriesC",
+        "Dubon2026.SourceFunctionField.GammaOne.coeffEmb_image_intFormRatiosC",
+        "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_eq_qExpFunctionFieldC"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneScalarExtensionAudit1.log",
+      "logSha256": "6BA45062AD25A09F6BA2494358DC663F5CA8117DE4463F08A5400B45B09D8A59",
+      "auditSha256": "D91193DD85144375636E55E6185EEE54D151F59397F5C0EC5A395CD36E5816DA",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 5,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 7,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneScalarExtensionDependencyAudit1.log",
+      "dependencyAuditSha256": "AAAB8FD69E7F60EC8DA805BB2EFEBF2E283E623DB8A06950DFE8BA42CC3E6F88",
+      "dependencyAuditSourceSha256": "AA8F781BFD2D417723EBC92F69FFB6596E0775D90DD1941045D8E207984E8EF0",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_eq_qExpFunctionFieldC"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of finite Gamma1 Hecke characters -> Picard/H1 comparison -> actual Gamma1 regular-differential/cusp comparison -> scalar-extension and literal integral-ratio field identification.",
+      "discharged": "The literal Laurent scalar extension functionFieldOver Gamma L equals qExpFunctionFieldC L Gamma for every integral modular subgroup Gamma and every field L with rational algebra structure. Denominator nonvanishing is transported by the injective coefficient field embedding; the same genuine modular forms and integral expansions witness both ratio sets.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The required regular-differential/cusp realization, Picard/H1, diamond and full/parabolic comparisons, finite-character arithmetic realization, all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-scalar-extension-1-reuse-review-20261026.json",
+      "reuseReviewSha256": "FFDAEE289D3FAD13AB324CAF00ADF44C30BCF5DCF5752CBD18D37CA5195809F1",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T11:52:38.358883+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceGammaOneModularRatios",
+        "SourceGammaOneFieldModularRatio"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularRatios.lean",
+          "sha256": "D3A7C8B6206A43044CDF837A1C8119C26C3E29C1442333A2260DE2F0AFCA9678",
+          "oleanSha256": "0543E79434A0A5BA159D77AF24D32FA339B3C94233C9B5462B9294FBEA454ACB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFieldModularRatio.lean",
+          "sha256": "7ED0F78DE1CE4168585744F2C1144A8C56BFAAA2984B842D73ADC99BF170D093",
+          "oleanSha256": "538FB4A4DB20A633BD78401C5E167A73B3BCF92E7F64EE739A87F378322C4B27"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_ne_zero",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_mul",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_add",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_one",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_const",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.one_ne_zero'",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.mul_ne_zero'",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.isRatio_algebraMap",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.mul",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.add",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.inv",
+        "Dubon2026.SourceFunctionField.GammaOne.isRatio_of_mem_qExpFunctionFieldC",
+        "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_ne_zero",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_mul",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_add",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_one",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL_const",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.one_ne_zero'",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.mul_ne_zero'",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.isRatio_algebraMap",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.mul",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.add",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio.inv",
+        "Dubon2026.SourceFunctionField.GammaOne.isRatio_of_mem_qExpFunctionFieldC",
+        "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFieldModularRatioAudit2.log",
+      "logSha256": "5486A549CA7D6AD6FDFA2CD7F1A38A3CF91F95A4221BC50246E4A69DD8CF5206",
+      "auditSha256": "F42E3B4A5DF20FEEB9F99EA81B70BD6B3D8D8AB5E76FA1B8B402BEDC3D706AD1",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 15,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 18,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFieldModularRatioDependencyAudit2.log",
+      "dependencyAuditSha256": "C052A67F13DE06649A53071BA0D4EEE0FAF82B734861A42A99416604B0A2E421",
+      "dependencyAuditSourceSha256": "2BA7294001F01438E72648F08E7349C1F685D6E276AF788992508CFC27BA1F29",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of finite Gamma1 Hecke characters -> Picard/H1 comparison -> actual Gamma1 regular-differential/cusp comparison -> actual equal-weight modular presentation of each field element.",
+      "discharged": "Every element of functionFieldOver Gamma C is a ratio of genuine same-weight Gamma modular forms with a nonzero denominator whenever T lies in Gamma. The theorem derives the presentation from actual field membership, preserving the exact Laurent q-expansion equality. It applies to Gamma1 and its Hecke intersection; no rational-coefficient converse or bounded-denominator principle is inferred.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Finite-point and cusp regularity estimates and actual cusp realization remain, followed by Picard/H1, full/parabolic and diamond comparisons, arithmetic finite-character realization, original all-weight association, local/image/regularity, automorphy and higher continuation. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-field-modular-ratio-2-reuse-review-20261026.json",
+      "reuseReviewSha256": "44199B78D8ACECA302492742A16231D2441A85F40BA1412E7CB0299ED155C027",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T12:20:10.571213+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceModularQDerivative",
+        "SourceModularQDerivativeExpansion",
+        "SourceJEulerModularIdentity",
+        "SourceJEulerPolynomial",
+        "SourceGammaOneDifferentialFiniteIntegral"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularQDerivative.lean",
+          "sha256": "FC2F6B74ED10B060C93A78DEB0CED5A28EABE81773DB950E5E7E1E078EFECDA1",
+          "oleanSha256": "81638A7C8564033613FF5BC7CA6FE7054E1938D322CDDF1B38FDB357D1ECC039"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularQDerivativeExpansion.lean",
+          "sha256": "1E7CD358AC3EB98C79B2A408E2EA163BC7A34A8DF7DB714EB2D3B6114A5A1994",
+          "oleanSha256": "F6949ACE2809A8283A520D22DFEBB6CE4F833623113E106F026072638F1F428D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJEulerModularIdentity.lean",
+          "sha256": "FD9BE4798191F600D21C59DF4DCACDBAE2235C0C2BB339EC37A6A1052ED57B1E",
+          "oleanSha256": "B3415CAF9F74228DA57D74B7D341E0EDE2678AD747CBC07F17386E79E854E71C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceJEulerPolynomial.lean",
+          "sha256": "C5DDA9ED262E9CB5D9EB05A429C7906A928E14E776BD454B3E3680EE143AE3DE",
+          "oleanSha256": "4C30EC7B245B27ECB3C36F7E337FB434224EF8F5D38ACA7AFDB23CCE3C5EF8C6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialFiniteIntegral.lean",
+          "sha256": "5F57CA4815D4116FEEC8F6C49B5EF65086023DB81D4FBE64B1F700CD99B37009",
+          "oleanSha256": "8638F4C92B9E3AE563C59C70A03711D95E64EDED1427DC23E1C2D148CCCB2526"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.ModularQDerivative.norm_qParam_one_lt_one",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.hasDerivAt_qParam_one",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.normalizedDerivOfComplex_eq_qParam_mul_deriv",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.periodic_normalizedDerivOfComplex",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_coeff_unique'",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.hasSum_qExpansion_normalizedDerivOfComplex",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_coeff_normalizedDerivOfComplex",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.coe_qExpansion_normalizedDerivOfComplex",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_derivative_bracket",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.qEuler_jqModC_mul_discriminant",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.laurent_discriminant_relation",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.exists_qEuler_jqModC_formula",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.exists_qEuler_jqModC_power_six",
+        "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_finite_expression"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.ModularQDerivative.norm_qParam_one_lt_one",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.hasDerivAt_qParam_one",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.normalizedDerivOfComplex_eq_qParam_mul_deriv",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.periodic_normalizedDerivOfComplex",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_coeff_unique'",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.hasSum_qExpansion_normalizedDerivOfComplex",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_coeff_normalizedDerivOfComplex",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.coe_qExpansion_normalizedDerivOfComplex",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.qExpansion_derivative_bracket",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.qEuler_jqModC_mul_discriminant",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.laurent_discriminant_relation",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.exists_qEuler_jqModC_formula",
+        "Dubon2026.SourceFunctionField.ModularQDerivative.exists_qEuler_jqModC_power_six",
+        "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_finite_expression"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialFiniteIntegralAudit5.log",
+      "logSha256": "7C225FD674122F1E16AA854DAB088914C0152E83C30723D8241956D21F9F2C5B",
+      "auditSha256": "651C352C271F9099BDA36D5149EA1CFD9A4F5EED63278899C9D359A9A8971665",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 38,
+      "linterScopes": 5,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 22,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialFiniteIntegralDependencyAudit5.log",
+      "dependencyAuditSha256": "26417CCA781CE2901677B3F6EA310BC01439F3838CD90FA6D7DEB9ACF8F35C8B",
+      "dependencyAuditSourceSha256": "60574BB2C51873F6FF3FBC499B45C7BC894A667B92273DC9C6DB7E9B8E5AF765",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_finite_expression"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> finite Gamma1 Hecke-character arithmetic realization -> actual Picard/H1 and diamond comparison -> regular-differential/cusp comparison -> finite-coordinate integral bound for a differential matching an actual weight-two cusp form.",
+      "discharged": "For any finite-index integral subgroup containing T, an actual weight-two cusp form f and a Laurent coefficient Y with Y*qEuler(j)=qExpansion(f), the exact expression Y^6*j^4*(j-1728)^3 is integral over C[j]. The integral equation and analytic/formal derivative normalization are derived, not hypotheses. The same theorem applies to Gamma1 and its Hecke correspondence subgroup.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The cusp-place inverse-j integral bound, algebraic differential realization and converse cusp construction remain, followed by actual Picard/H1, full/parabolic and diamond comparison, arithmetic finite-character realization, original all-weight association, local/image/regularity, automorphy and literal higher continuation. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-differential-finite-integral-5-reuse-review-20261026.json",
+      "reuseReviewSha256": "0551586A0E6F030C27B95DF1E5AAD63DD558ACDA0AEF6B76C7653085E5CF3773",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-26T12:47:58.717807+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceInverseJLevelOneIntegral",
+        "SourceIntegralHomogeneousRelation",
+        "SourceModularInverseJIntegral",
+        "SourceGammaOneCuspAuxiliaryForm",
+        "SourceGammaOneCuspAuxiliaryExpansion",
+        "SourceGammaOneDifferentialCuspIntegral"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceInverseJLevelOneIntegral.lean",
+          "sha256": "5523A9C114C78F99FDA4E1BA27284550F6E44D85EE7AEBDB3C509BD7D3925B88",
+          "oleanSha256": "E4B812BD405152F6C363CE8E8805CA3A5323B91FE65F639C2DBA08B03743BC02"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralHomogeneousRelation.lean",
+          "sha256": "E9235246026BCA1F98948C4CE2E03F02C0DAC41D5AE4330EB40975E08E04FF04",
+          "oleanSha256": "05D697E4B4078E970088AB7C43ADA80F97B21D691CD32591B5A172CFAB12133D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceModularInverseJIntegral.lean",
+          "sha256": "E76E8A22F85259A0335C0881558E632D12AB1A15315C5763750B073F321F90E7",
+          "oleanSha256": "BA72C34294947D538A58D9D3FD130C8A2D55F8C6DE30A6683E6B9BAD64BB8D64"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspAuxiliaryForm.lean",
+          "sha256": "41EDB3674B214E70AEFF9874A11572D6E119E4C7FE728BADA425C6371F483FC6",
+          "oleanSha256": "531640A260498F1571964AC2AA231DB47E512AEC62BF3C99A2E28A4A3B0CBB8B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspAuxiliaryExpansion.lean",
+          "sha256": "C6BD0B09791313C8CE3C6B67D97F89B9C373E6CD81E6319D1427185DC2408EF5",
+          "oleanSha256": "DEDAC87C62651B31DA27CE8D6311CDD28D0ABA45EE2822D18B59507A7D6B7B51"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialCuspIntegral.lean",
+          "sha256": "B44527CF13516684D9CA9BF4EF5B07CAAA9154C4970392C754650AEB0F0B79F5",
+          "oleanSha256": "5556B78AB41D0355725C687DDCFBFA6FED24471A99F6C0307C369CCDCDCA9BE3"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.InverseJIntegral.eisenstein_four_expansion_ne_zero",
+        "Dubon2026.SourceFunctionField.InverseJIntegral.levelOne_isIntegral",
+        "Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_div_of_relation",
+        "Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_modular_quotient_E4_cube",
+        "Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_modular_quotient_E4",
+        "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.conj_T_pow_mem",
+        "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.mapGL_T_zpow",
+        "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.natCast_mem_strictPeriods_conj",
+        "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.pow_slash",
+        "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.num_slash",
+        "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.qExpansion_Gform_mul",
+        "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.cusp_expression_identity",
+        "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_cusp_expression",
+        "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.Gform"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.InverseJIntegral.eisenstein_four_expansion_ne_zero",
+        "Dubon2026.SourceFunctionField.InverseJIntegral.levelOne_isIntegral",
+        "Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_div_of_relation",
+        "Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_modular_quotient_E4_cube",
+        "Dubon2026.SourceFunctionField.InverseJIntegral.isIntegral_modular_quotient_E4",
+        "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.conj_T_pow_mem",
+        "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.mapGL_T_zpow",
+        "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.natCast_mem_strictPeriods_conj",
+        "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.pow_slash",
+        "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.num_slash",
+        "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.qExpansion_Gform_mul",
+        "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.cusp_expression_identity",
+        "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_cusp_expression"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.Gform"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialCuspIntegralAudit6.log",
+      "logSha256": "9A03F6E3A64944A9FB86AE17B4FDE36FD8DCBB23DAC3744B2FBFB11F495F21CC",
+      "auditSha256": "D6556223257F290D6DDC660ED9DEAAD9D2A8FA48983B2E68350B8CAC5085021F",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 26,
+      "linterScopes": 6,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 23,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialCuspIntegralDependencyAudit6.log",
+      "dependencyAuditSha256": "601461FEAC2E1BC793A4D6FDFA8229E2559B8685686F3E49E71ABA64C760961F",
+      "dependencyAuditSourceSha256": "7BF7182F50649A3FA4C34AA85629B1C5921B65C0F3E354B6E481D0BD97693B1A",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_cusp_expression"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero Galois association -> arithmetic realization of original finite Gamma1 characters -> actual Picard/H1 and diamond comparison -> regular differential/cusp comparison -> cusp inverse-j integral bound.",
+      "discharged": "For positive M, a finite-index integral subgroup containing the principal subgroup Gamma(M) and T, any actual weight-two cusp form f and Laurent coefficient Y with Y*qEuler(j)=qExpansion(f), prove IsIntegral C[1/j] (Y^(2M)*j^(M+1)*(j-1728)^M). Neither the required cusp growth nor the integral equation is assumed.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The valuation deduction of regularity, algebraic differential realization and converse cusp construction remain, followed by actual Picard/H1, full/parabolic and diamond comparison, arithmetic realization of the original finite characters, original all-weight association, local/image/regularity, arithmetic automorphy and literal higher continuation. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-differential-cusp-integral-6-reuse-review-20261026.json",
+      "reuseReviewSha256": "15492090D30E92966839BD65927295C204653CF6A39D36976F83461E124E78A4",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-gamma-one-geometric-subgroup-1-reuse-review-20261026.json",
+    "Tools/source-gamma-one-geometric-cohomology-1-reuse-review-20261026.json",
+    "Tools/source-gamma-one-hecke-coefficient-1-reuse-review-20261026.json",
+    "Tools/source-gamma-one-curve-geometry-2-reuse-review-20261026.json",
+    "Tools/source-gamma-one-scalar-extension-1-reuse-review-20261026.json",
+    "Tools/source-gamma-one-field-modular-ratio-2-reuse-review-20261026.json",
+    "Tools/source-gamma-one-differential-finite-integral-5-reuse-review-20261026.json",
+    "Tools/source-gamma-one-differential-cusp-integral-6-reuse-review-20261026.json"
+  ],
+  "dependencyRouteAssessment": {
+    "path": "Tools/gamma-one-differential-inputs-20261026-641/gamma-one-differential-inputs-promotion-route-641.json",
+    "sha256": "A93C4035CF1F21E1A4ADFCA60A780A46979E8FDC1C59AABD3FE96AA888B1B459"
+  },
+  "proofEvidenceArchive": {
+    "manifest": "Tools/gamma-one-differential-inputs-20261026-641/archive-manifest.json",
+    "sha256": "3E6A24A65A94598996CC6998931E38B064EE2C64FDD3E49E76D907A651D8BE4E",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt8335": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricSubgroupDependencyAudit1Production8335.log",
+        "sha256": "7B46988F24AC9EEAE68006C4C1A69219D23FFDFB77BD44D7338CE59BC9D862F6",
+        "requiredProofValueEdges": 15,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.heckeUpperGeometricEquiv",
+          "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_conjugation",
+          "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_matrix",
+          "Dubon2026.SourceFunctionField.GammaOne.upperToGeometric_smul"
+        ],
+        "sourceSha256": "62DB81240DED1486830F635ED1E421C9EAC57F10BE193A8C2AB9548A94A49F32"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGeometricCohomologyDependencyAudit1Production8335.log",
+        "sha256": "DC0E854579A17DEB828900B6EB398FD088602B848F028AF5353B023505EB4B29",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1",
+          "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_eq",
+          "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_injective",
+          "Dubon2026.SourceFunctionField.GammaOne.geometricAlphaGroup_upper",
+          "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_matrix",
+          "Dubon2026.SourceFunctionField.GammaOne.geometricBetaGroup_smul"
+        ],
+        "sourceSha256": "D0DD1EC4004D71C1C5596131953CB1804BD0DC7AFE5B4332C403B58B62474952"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeCoefficientDependencyAudit1Production8335.log",
+        "sha256": "909EBAE60CE9538417E8C2375FDA2710CB7056FE4014D1715F69AFBEDB70E983",
+        "requiredProofValueEdges": 11,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.geometricHeckeH1_coefficient",
+          "Dubon2026.SourceFunctionField.GammaOne.constantCoefficientH1"
+        ],
+        "sourceSha256": "BE6E5D72DA14BBF109AEE241CEFD0B933C0F9D7AD53D41CD115A36BD970A6E41"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCurveGeometryDependencyAudit2Production8335.log",
+        "sha256": "D78A32D4E2A37D7CFC8F02181A02B53916BC2C51667B6F6170492C44DF04790D",
+        "requiredProofValueEdges": 22,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.gamma1_diffQExp_injective",
+          "Dubon2026.SourceFunctionField.GammaOne.gamma1_localDifferentials",
+          "Dubon2026.SourceFunctionField.GammaOne.gamma1_isCurveOver",
+          "Dubon2026.SourceFunctionField.GammaOne.gamma1_hasCanonicalDivisor",
+          "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_diffQExp_injective",
+          "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_localDifferentials",
+          "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_isCurveOver",
+          "Dubon2026.SourceFunctionField.GammaOne.gamma1_hecke_hasCanonicalDivisor"
+        ],
+        "sourceSha256": "646F17294B59588B45AA62B93AB2684051E4984D6256B72B1D331804BD491475"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneScalarExtensionDependencyAudit1Production8335.log",
+        "sha256": "AAAB8FD69E7F60EC8DA805BB2EFEBF2E283E623DB8A06950DFE8BA42CC3E6F88",
+        "requiredProofValueEdges": 7,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_eq_qExpFunctionFieldC"
+        ],
+        "sourceSha256": "96095A76C8AD079766C20A78924072AD57DDA8EB249E309216D417EFC915BAC0"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFieldModularRatioDependencyAudit2Production8335.log",
+        "sha256": "C052A67F13DE06649A53071BA0D4EEE0FAF82B734861A42A99416604B0A2E421",
+        "requiredProofValueEdges": 18,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio",
+          "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.qL",
+          "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.IsRatio"
+        ],
+        "sourceSha256": "D358854214D6A983B54EE200083C41CB3343CF846E7FB5D33497A6FC3FF5C210"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialFiniteIntegralDependencyAudit5Production8335.log",
+        "sha256": "26417CCA781CE2901677B3F6EA310BC01439F3838CD90FA6D7DEB9ACF8F35C8B",
+        "requiredProofValueEdges": 22,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_finite_expression"
+        ],
+        "sourceSha256": "42F8E358BC52CAADB2D33F03DB00FB210F1CF47A8A94337DA7088C90D658C9BE"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialCuspIntegralDependencyAudit6Production8335.log",
+        "sha256": "601461FEAC2E1BC793A4D6FDFA8229E2559B8685686F3E49E71ABA64C760961F",
+        "requiredProofValueEdges": 23,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.isIntegral_cusp_differential_cusp_expression"
+        ],
+        "sourceSha256": "4E7275EBB45658656F754C139B4894FBA97860D94D7FBC0880D8D43E065604BF"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsProductionAudit8335.log",
+    "sha256": "0D6B812B17BE8BB653C0D43DA13BE94D4B99AEEC9196B75764BC7770B75E382D",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-differential-inputs-production-build-8335.log",
+    "aggregateSha256": "B279FF62600122721E81A47242EEC35CEA3183E97D5DA96B6C5E0D1C436E2FA9",
+    "productionModules": 8335,
+    "incrementModules": 19,
+    "axiomChecks": 85,
+    "exhaustiveIncrementTheorems": 137,
+    "linterScopes": 19,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 138,
+    "productionReuse": "Only scratch imports are qualified. Every audited statement, proof body and comment is preserved. Original coefficient endomorphisms, literal q-expansion fields, genuine modular forms and both integral equations retain their definitions. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 138,
+      "scratchDistinct": 138,
+      "generatedNameRenamings": {},
+      "productionFocused": 137,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {
+        "CuspForm.translate.congr_simp": [
+          {
+            "scope": "SourceGammaOneDifferentialInputsScratchOwnership640For8335",
+            "module": "Dubon2026.SourceGammaOneCuspAuxiliaryForm"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [
+        "CuspForm.translate.congr_simp"
+      ],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceGammaOneHeckeGeometricSubgroup"
+          ],
+          "count": 14,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership627For8335.log",
+            "sha256": "3FB7408A6DA48B2C52523760CBD6C12AC0BB956B653B65629BC476E8927CED1E",
+            "sourceSha256": "46365EC0D189830B9228CED2DE6894971693AAEDD1B6F6428DD7F2BCEF1514EE"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneGeometricCohomology"
+          ],
+          "count": 11,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership629For8335.log",
+            "sha256": "3184EB49CA0EAFD1D279ED8995FDA344F7F7734F0049346132326FDCA6EB54F6",
+            "sourceSha256": "D4FEC56F56D973BE4B44DAF626D780554955F9278E1C15C812FB80E32258AD78"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneHeckeCoefficientAction"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership631For8335.log",
+            "sha256": "A6801CC690AD45F062D5E83F5696BE82A3C33DFC02989C671C6AA840EF6A8594",
+            "sourceSha256": "28AE76E658AA17EA4F2BC8AD86C4317A18CEDE5412534196E5AE4B4BEA847D5D"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneCurveGeometry",
+            "SourceGammaOneCurveInputs"
+          ],
+          "count": 20,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership632For8335.log",
+            "sha256": "6700558C1FD0D6EC8794D8E4BAAD04E75FDC8C5BE8AD40C92AF9CA7231CE830D",
+            "sourceSha256": "6A3E159DA0E01D1F1DE648BCBF3144784C645E02D768CB34FDC1053B767A45AD"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneScalarExtension"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership634For8335.log",
+            "sha256": "E59F98826EE8E9A8D567703844F7CBB652C019841803D717D07101A6748AF442",
+            "sourceSha256": "25F64B984908B14F3E7A8047580F090A98A25D5BCC643F8312FECA611D48E595"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneModularRatios",
+            "SourceGammaOneFieldModularRatio"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership636For8335.log",
+            "sha256": "03A682A89A8AB1CE057C6DB0E0F7E1208F45BCE8DEB346EEDC11842C70EE5837",
+            "sourceSha256": "005B2A397207DBB8016CE2FA0BA75C10622D61DBBC29A45680618A99B7489C0B"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularQDerivative",
+            "SourceModularQDerivativeExpansion",
+            "SourceJEulerModularIdentity",
+            "SourceJEulerPolynomial",
+            "SourceGammaOneDifferentialFiniteIntegral"
+          ],
+          "count": 38,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership638For8335.log",
+            "sha256": "CF6A8059E06CA358DFE234E1FAF1EC75723FDF12341685E790FCCB2E094BBFAB",
+            "sourceSha256": "65A739AC63881BDD4C970E1188F07162B7FFF8D1B9F297EAE99D262DFCD0F723"
+          }
+        },
+        {
+          "modules": [
+            "SourceInverseJLevelOneIntegral",
+            "SourceIntegralHomogeneousRelation",
+            "SourceModularInverseJIntegral",
+            "SourceGammaOneCuspAuxiliaryForm",
+            "SourceGammaOneCuspAuxiliaryExpansion",
+            "SourceGammaOneDifferentialCuspIntegral"
+          ],
+          "count": 26,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership640For8335.log",
+            "sha256": "77864C5B286EB4EA8A44AF676663BF314BCFC516C4C9937D5546EE44A0FDE1E6",
+            "sourceSha256": "E372DD9B3800CC7B0535A7FB2EE62BF6D1430167DABF8C4580193672D6FD3E22"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsOwnership8335.log",
+        "sha256": "7AA8B0F260EC086B4B8FED2259D09FA420917D1D6240AB41E9422B525A0A2CAF",
+        "sourceSha256": "74FFE82F6184C34150A55C0792B8AE9FDEB48AD8BBB3FD31662AD171185E6DC2"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-041225-849.log",
+        "sha256": "3C6809162A672A088AA1CDE79965207E68ABE3F047B0E291DF5A600F2CCD142A"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 19 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceGammaOneHeckeGeometricSubgroup",
+            "scratchSha256": "C4398729974D5055AE241BFC208D90F2176D9539265595D25E628ACD13A90BB0",
+            "productionSha256": "44E8F27046FB5DA0CD4CDDB0E6640C1DBA5A781DB26A728F5E95E846C9D02204",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneGeometricCohomology",
+            "scratchSha256": "C7ACE8C976DADC063DB7939DE3AB9893CEFD6B54A2393A5BBDC1D50ACA4C7ED5",
+            "productionSha256": "2735394D9AD69360D6FAFE4748246B4EF473816DAB29C0D611FD34BDC8BEABE1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckeCoefficientAction",
+            "scratchSha256": "3C49EACF9D61CB7DA14863C383224ACF823125F3F6B1BCF97AB0FD6F4B329005",
+            "productionSha256": "FED566D75F46B4F95D591930E02938172590D63FE5117EEB1B7929FED10D2EB7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCurveGeometry",
+            "scratchSha256": "368C21200022558CE0C24350053DE6BDB70EABAD0DE89EC44ABFB6E5E1F7D0E4",
+            "productionSha256": "D63E405202426AB42499AA8AC4D90DC3751E07ACA04C3EF8361098A8B1336C2A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCurveInputs",
+            "scratchSha256": "B7E660DE474A944C5CA4BC589C419DBBC0B446D2274E137F12CC689B2A65D068",
+            "productionSha256": "7E3CC21384B58B8B4313495BDCE8B4400F57F9FB6A0F624144D570AD31CD5720",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneScalarExtension",
+            "scratchSha256": "FFA004719BEF4ED6C17BD6B6410F811AA0B8D0B002C9117565BDFCE582A610C2",
+            "productionSha256": "BE4B9BA08B1CBEA2B1C4525616C1AA8B7F19456FF0B27A2E146071830B5CA886",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneModularRatios",
+            "scratchSha256": "D3A7C8B6206A43044CDF837A1C8119C26C3E29C1442333A2260DE2F0AFCA9678",
+            "productionSha256": "B34AF80ADA42AA962AA7E6BE5026F79A71A67DC6EF2C1ECF289FFF7F760C89EF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneFieldModularRatio",
+            "scratchSha256": "7ED0F78DE1CE4168585744F2C1144A8C56BFAAA2984B842D73ADC99BF170D093",
+            "productionSha256": "E5BB6FDB3C0786077E35745193EE1EFED126C629209FC2BC1E96815EBA546133",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularQDerivative",
+            "scratchSha256": "FC2F6B74ED10B060C93A78DEB0CED5A28EABE81773DB950E5E7E1E078EFECDA1",
+            "productionSha256": "FC2F6B74ED10B060C93A78DEB0CED5A28EABE81773DB950E5E7E1E078EFECDA1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularQDerivativeExpansion",
+            "scratchSha256": "1E7CD358AC3EB98C79B2A408E2EA163BC7A34A8DF7DB714EB2D3B6114A5A1994",
+            "productionSha256": "2F244317EC2A19E1120E2327DBC1371BE42FB81364EB442239D48E4F9982188D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceJEulerModularIdentity",
+            "scratchSha256": "FD9BE4798191F600D21C59DF4DCACDBAE2235C0C2BB339EC37A6A1052ED57B1E",
+            "productionSha256": "2C15FCF36845E80CE6858EC031CD3D080DE7C8D517803464B888CF9CA86A9CCC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceJEulerPolynomial",
+            "scratchSha256": "C5DDA9ED262E9CB5D9EB05A429C7906A928E14E776BD454B3E3680EE143AE3DE",
+            "productionSha256": "1EA4198786B4DF5046F7D4C75A6C00BD21A443294CBD79C94BBB96A394D180D6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDifferentialFiniteIntegral",
+            "scratchSha256": "5F57CA4815D4116FEEC8F6C49B5EF65086023DB81D4FBE64B1F700CD99B37009",
+            "productionSha256": "633A41F865728C6BB140FAFA2554838A8B109354149B0280854758D68ADCF4D2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceInverseJLevelOneIntegral",
+            "scratchSha256": "5523A9C114C78F99FDA4E1BA27284550F6E44D85EE7AEBDB3C509BD7D3925B88",
+            "productionSha256": "5523A9C114C78F99FDA4E1BA27284550F6E44D85EE7AEBDB3C509BD7D3925B88",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralHomogeneousRelation",
+            "scratchSha256": "E9235246026BCA1F98948C4CE2E03F02C0DAC41D5AE4330EB40975E08E04FF04",
+            "productionSha256": "68B2D3A36F0B7346E122DEAD82BC5B14EF457012BE9A2552D5F8A4FBECC42879",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularInverseJIntegral",
+            "scratchSha256": "E76E8A22F85259A0335C0881558E632D12AB1A15315C5763750B073F321F90E7",
+            "productionSha256": "83453AE31F81D790A5672307BBCFC71417384A0999E1A78FDA9FD6653C3D9618",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspAuxiliaryForm",
+            "scratchSha256": "41EDB3674B214E70AEFF9874A11572D6E119E4C7FE728BADA425C6371F483FC6",
+            "productionSha256": "41EDB3674B214E70AEFF9874A11572D6E119E4C7FE728BADA425C6371F483FC6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspAuxiliaryExpansion",
+            "scratchSha256": "C6BD0B09791313C8CE3C6B67D97F89B9C373E6CD81E6319D1427185DC2408EF5",
+            "productionSha256": "CA07233264D9D28704E7E2CDCDA491FFD968421757578E8B01D59FBB8C890F5F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDifferentialCuspIntegral",
+            "scratchSha256": "B44527CF13516684D9CA9BF4EF5B07CAAA9154C4970392C754650AEB0F0B79F5",
+            "productionSha256": "02CCA66E3E0587E4C5A08D6E2F4BE9281C5C1600ED39B6084F5EC1966E29881D",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 138 distinct names from 138 exhaustive scratch checks are retained: 137 in the production focused scope and 1 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The valuation deduction of regularity, algebraic differential realization and converse cusp construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must still identify the original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of these characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Neither complex semisimplicity, finite characters, Witt coefficients nor a universal deformation ring supplies a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN."
+  },
+  "receipt8335": {
+    "recordedUTC": "2026-10-26T14:49:58.618873+00:00",
+    "log": "logs/dubon-build-20261026-061545-571.log",
+    "sha256": "B696E0680B634D773587DF626A7713EE7A472D4C95D5A0CC7C1789C56B700920",
+    "bytes": 13576981,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8335,
+    "projectTheorems": 52743,
+    "registeredConsumers": 24024,
+    "registeredConstructions": 2325,
+    "declarations": 32295,
+    "generated": 33431,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261026_060817.log",
+    "foundationSha256": "02CCC9CCBBEF3378879E940F99EC5F7F8BA19782AC7D80EF1BDF1E051741F801",
+    "countReconciliation": {
+      "previousTheorems": 52606,
+      "focusedTheorems": 137,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 137,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsGlobalOwnership8335.log",
+      "globalOwnershipSha256": "B5748224C057027F8B1968CA80379D45676A987065D0A3F33357B11F2BCA374B",
+      "globalOwnershipSourceSha256": "68E1DA510ECA8821B37E03C481285E3386996B6235B721AE234875F17824AE4A",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsOwnership8335.log",
+      "ownershipSha256": "7AA8B0F260EC086B4B8FED2259D09FA420917D1D6240AB41E9422B525A0A2CAF"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 138,
+      "scratchDistinct": 138,
+      "generatedNameRenamings": {},
+      "productionFocused": 137,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {
+        "CuspForm.translate.congr_simp": [
+          {
+            "scope": "SourceGammaOneDifferentialInputsScratchOwnership640For8335",
+            "module": "Dubon2026.SourceGammaOneCuspAuxiliaryForm"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [
+        "CuspForm.translate.congr_simp"
+      ],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceGammaOneHeckeGeometricSubgroup"
+          ],
+          "count": 14,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership627For8335.log",
+            "sha256": "3FB7408A6DA48B2C52523760CBD6C12AC0BB956B653B65629BC476E8927CED1E",
+            "sourceSha256": "46365EC0D189830B9228CED2DE6894971693AAEDD1B6F6428DD7F2BCEF1514EE"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneGeometricCohomology"
+          ],
+          "count": 11,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership629For8335.log",
+            "sha256": "3184EB49CA0EAFD1D279ED8995FDA344F7F7734F0049346132326FDCA6EB54F6",
+            "sourceSha256": "D4FEC56F56D973BE4B44DAF626D780554955F9278E1C15C812FB80E32258AD78"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneHeckeCoefficientAction"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership631For8335.log",
+            "sha256": "A6801CC690AD45F062D5E83F5696BE82A3C33DFC02989C671C6AA840EF6A8594",
+            "sourceSha256": "28AE76E658AA17EA4F2BC8AD86C4317A18CEDE5412534196E5AE4B4BEA847D5D"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneCurveGeometry",
+            "SourceGammaOneCurveInputs"
+          ],
+          "count": 20,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership632For8335.log",
+            "sha256": "6700558C1FD0D6EC8794D8E4BAAD04E75FDC8C5BE8AD40C92AF9CA7231CE830D",
+            "sourceSha256": "6A3E159DA0E01D1F1DE648BCBF3144784C645E02D768CB34FDC1053B767A45AD"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneScalarExtension"
+          ],
+          "count": 5,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership634For8335.log",
+            "sha256": "E59F98826EE8E9A8D567703844F7CBB652C019841803D717D07101A6748AF442",
+            "sourceSha256": "25F64B984908B14F3E7A8047580F090A98A25D5BCC643F8312FECA611D48E595"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneModularRatios",
+            "SourceGammaOneFieldModularRatio"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership636For8335.log",
+            "sha256": "03A682A89A8AB1CE057C6DB0E0F7E1208F45BCE8DEB346EEDC11842C70EE5837",
+            "sourceSha256": "005B2A397207DBB8016CE2FA0BA75C10622D61DBBC29A45680618A99B7489C0B"
+          }
+        },
+        {
+          "modules": [
+            "SourceModularQDerivative",
+            "SourceModularQDerivativeExpansion",
+            "SourceJEulerModularIdentity",
+            "SourceJEulerPolynomial",
+            "SourceGammaOneDifferentialFiniteIntegral"
+          ],
+          "count": 38,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership638For8335.log",
+            "sha256": "CF6A8059E06CA358DFE234E1FAF1EC75723FDF12341685E790FCCB2E094BBFAB",
+            "sourceSha256": "65A739AC63881BDD4C970E1188F07162B7FFF8D1B9F297EAE99D262DFCD0F723"
+          }
+        },
+        {
+          "modules": [
+            "SourceInverseJLevelOneIntegral",
+            "SourceIntegralHomogeneousRelation",
+            "SourceModularInverseJIntegral",
+            "SourceGammaOneCuspAuxiliaryForm",
+            "SourceGammaOneCuspAuxiliaryExpansion",
+            "SourceGammaOneDifferentialCuspIntegral"
+          ],
+          "count": 26,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsScratchOwnership640For8335.log",
+            "sha256": "77864C5B286EB4EA8A44AF676663BF314BCFC516C4C9937D5546EE44A0FDE1E6",
+            "sourceSha256": "E372DD9B3800CC7B0535A7FB2EE62BF6D1430167DABF8C4580193672D6FD3E22"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialInputsOwnership8335.log",
+        "sha256": "7AA8B0F260EC086B4B8FED2259D09FA420917D1D6240AB41E9422B525A0A2CAF",
+        "sourceSha256": "74FFE82F6184C34150A55C0792B8AE9FDEB48AD8BBB3FD31662AD171185E6DC2"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-041225-849.log",
+        "sha256": "3C6809162A672A088AA1CDE79965207E68ABE3F047B0E291DF5A600F2CCD142A"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 19 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceGammaOneHeckeGeometricSubgroup",
+            "scratchSha256": "C4398729974D5055AE241BFC208D90F2176D9539265595D25E628ACD13A90BB0",
+            "productionSha256": "44E8F27046FB5DA0CD4CDDB0E6640C1DBA5A781DB26A728F5E95E846C9D02204",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneGeometricCohomology",
+            "scratchSha256": "C7ACE8C976DADC063DB7939DE3AB9893CEFD6B54A2393A5BBDC1D50ACA4C7ED5",
+            "productionSha256": "2735394D9AD69360D6FAFE4748246B4EF473816DAB29C0D611FD34BDC8BEABE1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHeckeCoefficientAction",
+            "scratchSha256": "3C49EACF9D61CB7DA14863C383224ACF823125F3F6B1BCF97AB0FD6F4B329005",
+            "productionSha256": "FED566D75F46B4F95D591930E02938172590D63FE5117EEB1B7929FED10D2EB7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCurveGeometry",
+            "scratchSha256": "368C21200022558CE0C24350053DE6BDB70EABAD0DE89EC44ABFB6E5E1F7D0E4",
+            "productionSha256": "D63E405202426AB42499AA8AC4D90DC3751E07ACA04C3EF8361098A8B1336C2A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCurveInputs",
+            "scratchSha256": "B7E660DE474A944C5CA4BC589C419DBBC0B446D2274E137F12CC689B2A65D068",
+            "productionSha256": "7E3CC21384B58B8B4313495BDCE8B4400F57F9FB6A0F624144D570AD31CD5720",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneScalarExtension",
+            "scratchSha256": "FFA004719BEF4ED6C17BD6B6410F811AA0B8D0B002C9117565BDFCE582A610C2",
+            "productionSha256": "BE4B9BA08B1CBEA2B1C4525616C1AA8B7F19456FF0B27A2E146071830B5CA886",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneModularRatios",
+            "scratchSha256": "D3A7C8B6206A43044CDF837A1C8119C26C3E29C1442333A2260DE2F0AFCA9678",
+            "productionSha256": "B34AF80ADA42AA962AA7E6BE5026F79A71A67DC6EF2C1ECF289FFF7F760C89EF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneFieldModularRatio",
+            "scratchSha256": "7ED0F78DE1CE4168585744F2C1144A8C56BFAAA2984B842D73ADC99BF170D093",
+            "productionSha256": "E5BB6FDB3C0786077E35745193EE1EFED126C629209FC2BC1E96815EBA546133",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularQDerivative",
+            "scratchSha256": "FC2F6B74ED10B060C93A78DEB0CED5A28EABE81773DB950E5E7E1E078EFECDA1",
+            "productionSha256": "FC2F6B74ED10B060C93A78DEB0CED5A28EABE81773DB950E5E7E1E078EFECDA1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularQDerivativeExpansion",
+            "scratchSha256": "1E7CD358AC3EB98C79B2A408E2EA163BC7A34A8DF7DB714EB2D3B6114A5A1994",
+            "productionSha256": "2F244317EC2A19E1120E2327DBC1371BE42FB81364EB442239D48E4F9982188D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceJEulerModularIdentity",
+            "scratchSha256": "FD9BE4798191F600D21C59DF4DCACDBAE2235C0C2BB339EC37A6A1052ED57B1E",
+            "productionSha256": "2C15FCF36845E80CE6858EC031CD3D080DE7C8D517803464B888CF9CA86A9CCC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceJEulerPolynomial",
+            "scratchSha256": "C5DDA9ED262E9CB5D9EB05A429C7906A928E14E776BD454B3E3680EE143AE3DE",
+            "productionSha256": "1EA4198786B4DF5046F7D4C75A6C00BD21A443294CBD79C94BBB96A394D180D6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDifferentialFiniteIntegral",
+            "scratchSha256": "5F57CA4815D4116FEEC8F6C49B5EF65086023DB81D4FBE64B1F700CD99B37009",
+            "productionSha256": "633A41F865728C6BB140FAFA2554838A8B109354149B0280854758D68ADCF4D2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceInverseJLevelOneIntegral",
+            "scratchSha256": "5523A9C114C78F99FDA4E1BA27284550F6E44D85EE7AEBDB3C509BD7D3925B88",
+            "productionSha256": "5523A9C114C78F99FDA4E1BA27284550F6E44D85EE7AEBDB3C509BD7D3925B88",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceIntegralHomogeneousRelation",
+            "scratchSha256": "E9235246026BCA1F98948C4CE2E03F02C0DAC41D5AE4330EB40975E08E04FF04",
+            "productionSha256": "68B2D3A36F0B7346E122DEAD82BC5B14EF457012BE9A2552D5F8A4FBECC42879",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceModularInverseJIntegral",
+            "scratchSha256": "E76E8A22F85259A0335C0881558E632D12AB1A15315C5763750B073F321F90E7",
+            "productionSha256": "83453AE31F81D790A5672307BBCFC71417384A0999E1A78FDA9FD6653C3D9618",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspAuxiliaryForm",
+            "scratchSha256": "41EDB3674B214E70AEFF9874A11572D6E119E4C7FE728BADA425C6371F483FC6",
+            "productionSha256": "41EDB3674B214E70AEFF9874A11572D6E119E4C7FE728BADA425C6371F483FC6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspAuxiliaryExpansion",
+            "scratchSha256": "C6BD0B09791313C8CE3C6B67D97F89B9C373E6CD81E6319D1427185DC2408EF5",
+            "productionSha256": "CA07233264D9D28704E7E2CDCDA491FFD968421757578E8B01D59FBB8C890F5F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDifferentialCuspIntegral",
+            "scratchSha256": "B44527CF13516684D9CA9BF4EF5B07CAAA9154C4970392C754650AEB0F0B79F5",
+            "productionSha256": "02CCA66E3E0587E4C5A08D6E2F4BE9281C5C1600ED39B6084F5EC1966E29881D",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 138 distinct names from 138 exhaustive scratch checks are retained: 137 in the production focused scope and 1 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The valuation deduction of regularity, algebraic differential realization and converse cusp construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must still identify the original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of these characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Neither complex semisimplicity, finite characters, Witt coefficients nor a universal deformation ring supplies a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN."
+  }
+}

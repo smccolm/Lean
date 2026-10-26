@@ -1,0 +1,17 @@
+{
+  "reason": "The named generic descent still times out while checking the expanded original kernel argument. Bind the proved kernel inclusion separately and supply all source/target types explicitly. Same mathematical construction, no limit increase.",
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\finite-operator-586-before-explicit-descent-arguments\\SourcePrimitiveFiniteH1HeckeCharacter.lean.txt",
+      "sha256": "2DB370949DCDE4F694251020DACC171EAD767DBB8AFA0A0492E8C112C6153D70"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\finite-operator-586-before-explicit-descent-arguments\\SourcePrimitiveFiniteH1HeckeCharacter.log",
+      "sha256": "FC66BC6F3E88254BDCC0E9446F79794CADCA7F68F176994111E3078C65EA5450"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\finite-operator-586-before-explicit-descent-arguments\\SourcePrimitiveFiniteH1HeckeCharacter.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    }
+  ]
+}

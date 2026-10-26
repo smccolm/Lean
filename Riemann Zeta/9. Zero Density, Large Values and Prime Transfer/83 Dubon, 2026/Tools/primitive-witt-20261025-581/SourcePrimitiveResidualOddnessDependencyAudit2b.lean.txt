@@ -1,0 +1,29 @@
+import SourceResidualRealDeterminant
+import SourcePrimitiveResidualOddness
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.sourcePrimitive_exists_originalSupport_oddResidualGalois_charP]
+  let localModules : Array Name := #[`SourcePrimitiveResidualOddness, `SourceResidualRealDeterminant, `SourcePrimitiveResidualGlobalDeterminant, `SourceResidualCyclotomicDeterminant, `SourceArithmeticCharacterFrobeniusEquality, `SourcePrimitiveResidualGaloisCharP, `SourcePrimitiveOriginalResidualGalois, `SourcePrimitiveRestoredGalois, `SourcePrimitiveWeightTwoGalois, `SourceResidualGaloisRealization, `SourceParabolicArithmeticResidual, `SourceOriginalDivisorArithmeticResidual, `SourceArithmeticSupportInflationValues, `SourceOriginalArithmeticResidual, `SourceArithmeticLocalEmbeddingExtension, `SourceAbsoluteArithmeticRestriction, `SourceRationalLocalValuation, `SourceNormValuationRestriction, `SourceValuationResidualAction, `SourceAbsoluteArithmeticDescent, `SourceNumberFieldSupportRamification, `SourceAbsoluteFiniteUnramified, `SourceNumberFieldNormInertiaLift, `SourceOriginalNormLocalResidual, `SourceOriginalAlgebraicIntegerResidual, `SourceOriginalExactReductionResidual, `SourceOriginalPrescribedReductionResidual, `SourceRankTwoCharpolyCoefficients, `SourcePrescribedCompletionResidue, `SourceAdicCoefficientResidueComparison, `SourcePrescribedReductionPrime, `SourceReductionCompletionLocalStructures, `SourcePadicCompletionValuation, `SourceReductionCompletionPadicMap, `SourceReductionCompletionBasePrime, `SourceReductionCompletionFinite, `SourceOriginalPrescribedResidualFrobenius, `SourceOriginalResidualInertia, `SourceIntegralMatrixCharpoly, `SourceMatrixIntertwinerCharpoly, `SourceOriginalResidualFrobeniusCharpoly, `SourceOriginalSpecializationFrobeniusCharpoly, `SourceCyclotomicFrobeniusCharpoly, `SourceRankTwoQuadraticTrace, `SourceValuationCyclotomicFrobenius, `SourceValuationFrobeniusRoots, `SourceOriginalSpecializationCyclotomicDeterminant, `SourceSpecializationBaseChangeIntertwiner, `SourceImageSpecializationDeterminant, `SourceAlternatingRankTwoDeterminant, `SourceImageSpecializationPairing, `SourcePrimitiveOriginalTateGalois, `SourcePolynomialCommutant, `SourceOriginalSpecializationPrimitiveImage, `SourceSpanningProjectorImage, `SourceOriginalSpecializationProjector, `SourcePolynomialSpecialization, `SourceOriginalPrescribedTateSpecialization, `SourceParabolicPrimitiveDivisor, `SourceWeightTwoNewEigenNormalization, `SourceWeightTwoEigenLevelDescent, `SourceWeightTwoDegeneracyAdjoint]
+  let required : Array Name := #[`Dubon2026.sourceArithmeticCyclotomic_conjugation, `Dubon2026.sourceArithmeticCyclotomicUnitCharacter_conjugation, `Dubon2026.sourceArithmetic_real_det_of_cyclotomic, `Dubon2026.sourcePrimitive_exists_originalSupport_oddResidualGalois_charP, `Dubon2026.sourcePrimitive_exists_originalSupport_cyclotomicResidualGalois_charP, `Dubon2026.sourcePrimitive_binaryDegree_even, `Dubon2026.originalCyclotomicConjugation_power, `Dubon2026.rationalArithmeticLocalRestrictionContinuous_commutes]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE PRIMITIVE RESIDUAL ODDNESS DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual original all-weight prescribed-prime residual consumer. Only declaration values are traversed. The original real arithmetic restriction acts by genuine complex conjugation under the original complex embedding; its cyclotomic exponent is minus one. The original primitive form has even weight, so the same residual representation has determinant minus one at this real restriction. The constructed coefficient field, characteristic, global determinant, original Fourier reductions and good-prime inertia are retained. No oddness or weight-parity assumption is supplied. Adic realization, local/image properties, automorphy and literal higher symmetric-power continuation remain required. 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

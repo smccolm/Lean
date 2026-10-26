@@ -1,0 +1,7 @@
+{
+  "reason": "Before first use, restrict archive selection to exact bounded scope identifiers 572/574/575/577/580; exclude unrelated 1572/6572 evidence accidentally matched by unbounded suffix pattern. No mathematical source, audit or receipt changes.",
+  "file": "E:\\Lean\\.tmp\\dubon83\\integrate_source_primitive_witt_deformation_8213.py",
+  "generatedSha256": "3DD556245AAEC470B6C8BB358FAB4BAEC48D5F28102DFC3BC2D20311356887DA",
+  "reviewedSha256": "955A3D495B17C66AACF956B0C36340ACB97F9B960986629CDF34B149E4923083",
+  "evidenceFiles": 67
+}

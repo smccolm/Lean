@@ -1,0 +1,29 @@
+{
+  "modules": [
+    "SourceGammaOneScalarExtension"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.coeffEmb_intSeriesC",
+    "Dubon2026.SourceFunctionField.GammaOne.coeffEmb_image_intFormRatiosC",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_eq_qExpFunctionFieldC"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.coeffEmb_intSeriesC",
+    "Dubon2026.SourceFunctionField.GammaOne.coeffEmb_image_intFormRatiosC",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_eq_qExpFunctionFieldC"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.coeffEmb_intSeriesC",
+    "Dubon2026.SourceFunctionField.GammaOne.coeffEmb_image_intFormRatiosC",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_eq_qExpFunctionFieldC",
+    "Dubon2026.SourceFunctionField.coeffEmb_algebraMap",
+    "Dubon2026.SourceFunctionField.coeffEmb_mem_laurentBaseChange",
+    "RingHom.map_field_closure",
+    "Dubon2026.SourceFunctionField.GammaOne.mem_intFormRatiosC"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_eq_qExpFunctionFieldC"
+  ],
+  "separatelyAxiomChecked": []
+}

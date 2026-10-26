@@ -1,0 +1,32 @@
+{
+  "modules": [
+    "SourceH1TraceBaseChangeCoefficient",
+    "SourceGammaOneCoverBinaryHeckeTrace"
+  ],
+  "theorems": [
+    "Dubon2026.sourceSubgroupH1Trace_pullback_coefficient",
+    "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_pullback",
+    "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_iterated"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.sourceSubgroupH1Trace_pullback_coefficient",
+    "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_pullback",
+    "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_iterated"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceSubgroupH1Trace_pullback_coefficient",
+    "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_pullback",
+    "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_iterated",
+    "Dubon2026.sourceSubgroupH1Trace_pullback",
+    "Dubon2026.originalCohomologyTrace_coefficient_naturality",
+    "Dubon2026.sourceGammaOneCoverHeckeTraceCoset_surjective",
+    "Dubon2026.sourceBinaryHeckeMorphism",
+    "Dubon2026.sourceHeckeH1Trace_eq_subgroupTrace",
+    "groupCohomology.map_comp"
+  ],
+  "roots": [
+    "Dubon2026.sourceGammaOneCoverBinaryHeckeTrace_iterated"
+  ],
+  "separatelyAxiomChecked": []
+}

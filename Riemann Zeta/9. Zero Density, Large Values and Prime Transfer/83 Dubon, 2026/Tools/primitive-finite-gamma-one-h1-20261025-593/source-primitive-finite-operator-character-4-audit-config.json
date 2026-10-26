@@ -1,0 +1,63 @@
+{
+  "modules": [
+    "SourceBinaryH1ModulusOperatorAlgebra",
+    "SourceFiniteOperatorCharacterDescent",
+    "SourcePrimitiveFiniteH1HeckeCharacter",
+    "SourcePrimitiveFiniteH1OperatorRealization"
+  ],
+  "theorems": [
+    "Dubon2026.sourceBinaryH1ModulusOperatorAlgebra_finite",
+    "Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_coefficients",
+    "Dubon2026.sourceFiniteOperatorCharacterDescend_comp",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_modulus_kernel",
+    "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter_comp",
+    "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter_hecke",
+    "Dubon2026.sourcePrimitive_exists_finiteH1OperatorCharacters"
+  ],
+  "constructions": [
+    "Dubon2026.sourceBinaryH1ModulusOperatorMap",
+    "Dubon2026.sourceBinaryH1ModulusOperatorAlgebra",
+    "Dubon2026.sourceFiniteOperatorCharacterDescend",
+    "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter",
+    "Dubon2026.sourcePrimitiveFiniteH1CharacterData"
+  ],
+  "queries": [
+    "Dubon2026.sourceBinaryH1ModulusOperatorAlgebra_finite",
+    "Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_coefficients",
+    "Dubon2026.sourceFiniteOperatorCharacterDescend_comp",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_modulus_kernel",
+    "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter_comp",
+    "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter_hecke",
+    "Dubon2026.sourcePrimitive_exists_finiteH1OperatorCharacters",
+    "Dubon2026.sourceBinaryH1ModulusOperatorMap",
+    "Dubon2026.sourceBinaryH1ModulusOperatorAlgebra",
+    "Dubon2026.sourceFiniteOperatorCharacterDescend",
+    "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter",
+    "Dubon2026.sourcePrimitiveFiniteH1CharacterData"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceBinaryH1ModulusOperatorAlgebra_finite",
+    "Dubon2026.sourceBinaryH1ModulusOperatorMap_zero_coefficients",
+    "Dubon2026.sourceFiniteOperatorCharacterDescend_comp",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_modulus_kernel",
+    "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter_comp",
+    "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter_hecke",
+    "Dubon2026.sourcePrimitive_exists_finiteH1OperatorCharacters",
+    "Dubon2026.sourceBinaryH1ModulusOperatorMap",
+    "Dubon2026.sourceBinaryH1ModulusOperatorAlgebra",
+    "Dubon2026.sourceFiniteOperatorCharacterDescend",
+    "Dubon2026.sourcePrimitiveFiniteH1HeckeCharacter",
+    "Dubon2026.sourcePrimitiveFiniteH1CharacterData",
+    "Dubon2026.sourcePrimitive_exists_congruentH1AdicRealization",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_zero_of_operator",
+    "Dubon2026.sourceBinaryH1TensorChange",
+    "Dubon2026.sourceIntegralBinaryH1Finite",
+    "LinearMap.baseChange_mul",
+    "RingHom.liftOfSurjective_comp",
+    "Dubon2026.sourcePrimitiveH1AdicQuotientCharacter_hecke"
+  ],
+  "roots": [
+    "Dubon2026.sourcePrimitive_exists_finiteH1OperatorCharacters"
+  ],
+  "separatelyAxiomChecked": []
+}

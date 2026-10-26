@@ -1,0 +1,45 @@
+
+section
+
+/-- The signed Tauberian deduction uses the actual von Mangoldt majorant and a displayed genuine L-series boundary extension. -/
+theorem signed_prime_tauberian_source {a : ℕ → ℝ} {C : ℝ} (hC : 0 ≤ C)
+    (ha : ∀ n, |a n| ≤ C * ArithmeticFunction.vonMangoldt n) (G : ℂ → ℂ)
+    (hG : ContinuousOn G {s | 1 ≤ s.re})
+    (hseries : Set.EqOn G (LSeries (fun n => (a n : ℂ))) {s | 1 < s.re}) :
+    Tendsto (fun N : ℕ => (∑ n ∈ Finset.range N, a n) / (N : ℝ)) atTop (𝓝 0) :=
+  signed_wiener_vonMangoldt_cancellation hC ha G hG hseries
+
+/-- The literal bounded prime-supported logarithmic Dirichlet series supplies ordinary prime cancellation after all Tauberian and PNT normalization steps. -/
+theorem prime_boundary_cancellation_source {u : ℕ → ℝ} {C : ℝ} (hC : 0 ≤ C)
+    (hu : ∀ p, Nat.Prime p → |u p| ≤ C) (G : ℂ → ℂ)
+    (hG : ContinuousOn G {s | 1 ≤ s.re})
+    (hseries : Set.EqOn G
+      (LSeries (fun n => ((if Nat.Prime n then u n * Real.log n else 0 : ℝ) : ℂ)))
+      {s | 1 < s.re}) :
+    Tendsto (fun N : ℕ => (∑ p ∈ Nat.primesLE N, u p) / Nat.primeCounting N) atTop (𝓝 0) :=
+  prime_average_zero_of_boundary_continuation hC hu G hG hseries
+
+/-- The actual primitive object consumes the two narrower arithmetic inputs, local boundedness and genuine prime-character boundary continuation, to derive both weak Sato--Tate and the full isolated-prime H2. -/
+theorem primitive_character_boundary_blocks_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k)
+    (hbound : ∀ p, Nat.Prime p → ¬p ∣ Q → ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    (hboundary : ∀ r : ℕ, 0 < r → ∃ G : ℂ → ℂ,
+      ContinuousOn G {s | 1 ≤ s.re} ∧
+      Set.EqOn G (LSeries (fun n =>
+        ((if Nat.Prime n then (if n ∣ Q then 0 else
+          (normalizedCuspCoefficients f.toCuspForm (n ^ r)).re) * Real.log n else 0 : ℝ) : ℂ)))
+        {s | 1 < s.re}) :
+    Tendsto (primeEmpirical (fun p => (normalizedCuspCoefficients f.toCuspForm p).re))
+      atTop (𝓝 satoTateProbability) ∧
+    let B := selectedDyadicPrimes (fun p => ¬p ∣ Q ∧
+      1 ≤ ‖normalizedCuspCoefficients f.toCuspForm p‖ ∧ ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    IsolatedPrimeBlocks B ∧ Tendsto (fun N => (B N).card) atTop atTop ∧
+      PrimeCoefficientComparability (normalizedCuspCoefficients f.toCuspForm) B (1 / 2) ∧
+        IsolatedEnergyAsymptotic (normalizedCuspCoefficients f.toCuspForm) B (1 / 2) := by
+  have hST := primitive_satoTate_of_character_boundary f hbound hboundary
+  exact ⟨hST, sato_tate_selected_primes_H2 (Nat.pos_of_neZero Q)
+    (fun p hp hpQ => primitiveCuspForm_normalizedCoefficient_im f p
+      (hp.coprime_iff_not_dvd.mpr hpQ)) hST⟩
+
+end
+

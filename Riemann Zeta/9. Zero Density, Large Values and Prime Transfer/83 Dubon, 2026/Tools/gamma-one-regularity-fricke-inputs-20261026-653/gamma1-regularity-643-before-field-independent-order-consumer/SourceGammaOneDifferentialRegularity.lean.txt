@@ -1,0 +1,66 @@
+import SourceGammaOneDifferentialIntegralDescent
+import SourceCurveIntegralDifferentialOrders
+import Dubon2026.SourceGammaOneCurveGeometry
+
+/-! DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight arithmetic
+association -> original finite Gamma1 character realization -> actual
+Picard/H1 and diamond comparison -> regular differential/cusp comparison.
+For the actual integral-ratio field, a differential whose expansion is
+that of an actual cusp form is regular at every place. Both integral
+equations and all local differential prerequisites are proved inputs.
+Algebraic realization of an arbitrary cusp form and the converse remain
+separate obligations. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceDifferential SourceCurve KaehlerDifferential
+open scoped MatrixGroups
+
+theorem regular_of_diffQExp_matches_cusp
+    {K : Type*} [Field K] [Algebra ℚ K] [IsAlgClosed K]
+    (σ : K →+* ℂ) (M : ℕ) [NeZero M]
+    {Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)} [Γ.FiniteIndex]
+    (hΓ : CongruenceSubgroup.Gamma M ≤ Γ) (hT : ModularGroup.T ∈ Γ)
+    (f : CuspForm (Γ : Subgroup (GL (Fin 2) ℝ)) 2)
+    (ω : Ω[functionFieldOver Γ K⁄K])
+    (hω : coeffMap σ (diffQExp (functionFieldOver Γ K) ω) =
+      (qExpansion 1 (f : ℍ → ℂ) : LaurentSeries ℂ)) :
+    ω ∈ regularDifferentials K (functionFieldOver Γ K) := by
+  let E := functionFieldOver Γ K
+  let j : E := jCoordinateOver Γ K
+  letI : CharZero K := charZero_of_injective_algebraMap (algebraMap ℚ K).injective
+  letI := finiteDimensional_jCoordinateOver hT K
+  letI := functionFieldOver_isCurveOver Γ K hT
+  have hD : D K E j ≠ 0 := D_jCoordinateOver_ne_zero Γ K
+  letI : Nontrivial Ω[E⁄K] := nontrivial_of_ne _ _ hD
+  have hj : (j : LaurentSeries K) = jqModC K := coeffEmb_jq K
+  obtain ⟨y, hyω⟩ := RegularDifferentialsComparison.exists_smul_eq hD ω
+  by_cases hy : y = 0
+  · rw [← hyω, hy, zero_smul]
+    exact Submodule.zero_mem _
+  have hθ : coeffMap σ ((y : LaurentSeries K) * qEuler K (jqModC K)) =
+      (qExpansion 1 (f : ℍ → ℂ) : LaurentSeries ℂ) := by
+    rw [← hyω, diffQExp_smul_D] at hω
+    rwa [hj] at hω
+  obtain ⟨hfinite, hcusp⟩ :=
+    differential_integral_expressions_of_matching_expansion σ E j hj M hΓ hT f y hθ
+  rw [← hyω]
+  apply mem_regularDifferentials_iff.mpr
+  intro v
+  letI := functionFieldOver_dCoordGenerates Γ K hT v
+  letI := functionFieldOver_localDifferentials Γ K hT v
+  letI := finite_coordinate_place_residue j v
+  letI : Algebra.IsSeparable K v.ResidueField := inferInstance
+  have ho : 0 ≤ v.ordDifferential (y • D K E j) := by
+    by_cases hv : v.ord j < 0
+    · have hc := v.cusp_coefficient_order_of_integral_expression M j y hy hv hcusp
+      rw [v.ordDifferential_smul hy
+        (RegularDifferentialsComparison.differentialCoeff_ne_zero hD v),
+        v.ordDifferential_D_eq_ord_sub_one (ne_of_lt hv)]
+      omega
+    · apply v.ordDifferential_nonneg_of_finite_expression y j (by norm_num : (1728 : K) ≠ 0)
+      exact v.ord_nonneg_of_integral_coordinate (le_of_not_gt hv) hfinite
+  exact ⟨v.differentialCoeff (y • D K E j), v.mem_of_ord_nonneg ho,
+    (v.differentialCoeff_smul_dCoord _).symm⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

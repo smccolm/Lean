@@ -1,0 +1,130 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T04:49:31.534500+00:00",
+  "date": "2026-10-25 America/Vancouver",
+  "modules": [
+    "SourceGammaOneHeckeSubgroup",
+    "SourceGammaOneConstantHecke",
+    "SourceNativeCoinductionCosetTrace",
+    "SourceShapiroH1CocycleComparison",
+    "SourceShapiroH1CosetTrace",
+    "SourceGammaOneTransferCosetFormula",
+    "SourceGammaOneLiteralTransferSurjectivity"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeSubgroup.lean",
+      "sha256": "3518F8C38303371FA5BDC0730BB37915A8F2E7ABFD7C7174CFC6A7AA428139E5",
+      "oleanSha256": "9C43C643CCE3C9767981F3210C351A65F62334BE11130C07F6D781E35626DA58"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneConstantHecke.lean",
+      "sha256": "9627C449A3179AA390C251FCEAE6A02F83EFB9EB26240A766C00FA4E311367D0",
+      "oleanSha256": "E81089B02A577F5E812F162D1629D08763EDB57FDDBE2593B2D0461BB59478D7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceNativeCoinductionCosetTrace.lean",
+      "sha256": "DD82554A6E52157C4467324C546994D96D767B35A6567F4C17D0E6D86D3FC0F4",
+      "oleanSha256": "F16A173A7888C0666E234A60EB79CC45D964E989A0C8ECF2D32766C8F5337B65"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceShapiroH1CocycleComparison.lean",
+      "sha256": "4306684904679EE85F31F64FE81925677877DB1F54B5A2DCB11AD41ACC3BF0B5",
+      "oleanSha256": "91FB3A5AD53F332BB4E02F51904B9070B1AE4C897C379B897CE0F6261165DEF8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceShapiroH1CosetTrace.lean",
+      "sha256": "1D8455B6F1D924F536E62D67822378B5E5CC6C46F77AB6E19AE9859836BB259B",
+      "oleanSha256": "98ACCC436FCEA712D1E6FF1AC0B22A1A4CDBF69324DA21DDE6188FBE989D58C7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTransferCosetFormula.lean",
+      "sha256": "8BE95415BF1954E1C0E740DDF8CE9FC7A926D4A3A34CB6495C35957C201B3F1A",
+      "oleanSha256": "3A82B5F9F0A98E546AD67613D763BD84FB9C6D0D34C0E2F023C6F8C358610617"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLiteralTransferSurjectivity.lean",
+      "sha256": "2C275BE2CB4396E554FE1C8472BEF5B4E91C0FFF9BF390CAFE32DEE82BF35068",
+      "oleanSha256": "EDC2D95D5C3FC7DC58A3881E4BBE829DB4B64C4DFA3B46F36F0FA484BB3D4DDA"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceGammaOneHeckeUpper_finiteIndex",
+    "Dubon2026.sourceGammaOneHeckeConjugation_matrix",
+    "Dubon2026.sourceGammaOneConstantHeckeH1_cocycle",
+    "Dubon2026.sourceGammaOneConstantHeckeCocycles_apply",
+    "Dubon2026.sourceNativeInductionCounit_mk",
+    "Dubon2026.sourceNativeCoinductionCounit_eq_cosetTrace",
+    "Dubon2026.sourceShapiroH1_hom_cocycle",
+    "Dubon2026.sourceShapiroH1_evaluation_lift",
+    "Dubon2026.sourceCoinducedCosetTrace_shapiroOne",
+    "Dubon2026.sourceShapiroLiftCocycles_trace",
+    "Dubon2026.sourceHeckeH1Trace_shapiro",
+    "Dubon2026.sourceHeckeH1Trace_eq_subgroupTrace",
+    "Dubon2026.sourceGammaOneConstantH1Iso_factor",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_eq_trace",
+    "Dubon2026.sourceGammaOne_literalTrace_surjective",
+    "Dubon2026.sourceGammaOneHeckeUpper",
+    "Dubon2026.sourceGammaOneUpperToGammaZero",
+    "Dubon2026.sourceGammaOneHeckeConjugation",
+    "Dubon2026.sourceGammaOneConstantHeckeMorphism",
+    "Dubon2026.sourceGammaOneConstantHeckeCocycles",
+    "Dubon2026.sourceGammaOneConstantHeckeH1",
+    "Dubon2026.sourceShapiroLiftCocycles",
+    "Dubon2026.sourceShapiroEvaluationCocycles",
+    "Dubon2026.sourceGammaOneSubgroupH1Iso"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceGammaOneHeckeUpper_finiteIndex",
+    "Dubon2026.sourceGammaOneHeckeConjugation_matrix",
+    "Dubon2026.sourceGammaOneConstantHeckeH1_cocycle",
+    "Dubon2026.sourceGammaOneConstantHeckeCocycles_apply",
+    "Dubon2026.sourceNativeInductionCounit_mk",
+    "Dubon2026.sourceNativeCoinductionCounit_eq_cosetTrace",
+    "Dubon2026.sourceShapiroH1_hom_cocycle",
+    "Dubon2026.sourceShapiroH1_evaluation_lift",
+    "Dubon2026.sourceCoinducedCosetTrace_shapiroOne",
+    "Dubon2026.sourceShapiroLiftCocycles_trace",
+    "Dubon2026.sourceHeckeH1Trace_shapiro",
+    "Dubon2026.sourceHeckeH1Trace_eq_subgroupTrace",
+    "Dubon2026.sourceGammaOneConstantH1Iso_factor",
+    "Dubon2026.sourceGammaOneConstantH1Transfer_eq_trace",
+    "Dubon2026.sourceGammaOne_literalTrace_surjective"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceGammaOneHeckeUpper",
+    "Dubon2026.sourceGammaOneUpperToGammaZero",
+    "Dubon2026.sourceGammaOneHeckeConjugation",
+    "Dubon2026.sourceGammaOneConstantHeckeMorphism",
+    "Dubon2026.sourceGammaOneConstantHeckeCocycles",
+    "Dubon2026.sourceGammaOneConstantHeckeH1",
+    "Dubon2026.sourceShapiroLiftCocycles",
+    "Dubon2026.sourceShapiroEvaluationCocycles",
+    "Dubon2026.sourceGammaOneSubgroupH1Iso"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceAudit7.log",
+  "logSha256": "454AA1AD826C5911912D70652D4098B436F75DA7B4EF23BF2C33E5369F7C468B",
+  "auditSha256": "5896460FB35629081246D66D60AB5644FE8630FFFA003EAC22CDA591AA16F467",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 25,
+  "linterScopes": 7,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 36,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeTraceDependencyAudit7.log",
+  "dependencyAuditSha256": "35EA2C5EDA9B78C88959B1AB7BD05C6173809B8185C5D5CAA49E12F803805808",
+  "dependencyAuditSourceSha256": "A5D7EDCDB9DF4EC94097CD2F94C8A92251E601DFE59A381BCA9C069716EC2EC9",
+  "consumers": [
+    "Dubon2026.sourceGammaOne_literalTrace_surjective",
+    "Dubon2026.sourceGammaOneHeckeConjugation_matrix",
+    "Dubon2026.sourceGammaOneConstantHeckeH1_cocycle",
+    "Dubon2026.sourceGammaOneConstantHeckeCocycles_apply"
+  ],
+  "dependency": "DUB-17/18 -> literal higher continuation -> arithmetic automorphy -> original all-weight adic association -> finite Gamma1 geometric realization -> exact actual Gamma1 Hecke-and-diamond comparison",
+  "discharged": "Construct the genuine Gamma1 diagonal correspondence and identify the exact existing Gamma1 cover transfer with the literal H1 coset trace; derive surjectivity of that literal transfer from the already proved original binary-module consumer.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. These exact correspondence and transfer identifications do not yet prove their intertwining. Required next are actual cover-transfer Hecke/diamond compatibility and arithmetic geometric comparison, then Galois realization/all-weight adic association, local/image/regularity, automorphy and literal higher continuation. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-trace-7-reuse-review-20261025.json",
+  "reuseReviewSha256": "8D2A4DFDCB11B69D814C75D97FF49B393725E4A20D3D2E2BFD484DFDE99962BE",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

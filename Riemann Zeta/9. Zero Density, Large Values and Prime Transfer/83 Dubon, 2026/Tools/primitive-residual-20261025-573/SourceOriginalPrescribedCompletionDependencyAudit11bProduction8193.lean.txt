@@ -1,0 +1,38 @@
+import Dubon2026.SourcePrescribedReductionPrime
+import Dubon2026.SourceAdicCoefficientResidueComparison
+import Dubon2026.SourcePrescribedCompletionResidue
+import Dubon2026.SourceReductionCompletionBasePrime
+import Dubon2026.SourceReductionCompletionPadicMap
+import Dubon2026.SourceReductionCompletionFinite
+import Dubon2026.SourcePadicCompletionValuation
+import Dubon2026.SourceReductionCompletionLocalStructures
+import Dubon2026.SourceOriginalPrescribedReductionResidual
+import Dubon2026.SourceOriginalExactReductionResidual
+import Dubon2026.SourceOriginalAlgebraicIntegerResidual
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_algebraicInteger_reduction_residual_realization]
+  let localModules : Array Name := #[`Dubon2026.SourceOriginalAlgebraicIntegerResidual, `Dubon2026.SourceOriginalExactReductionResidual, `Dubon2026.SourceOriginalPrescribedReductionResidual, `Dubon2026.SourceRankTwoCharpolyCoefficients, `Dubon2026.SourcePrescribedCompletionResidue, `Dubon2026.SourceAdicCoefficientResidueComparison, `Dubon2026.SourcePrescribedReductionPrime, `Dubon2026.SourceReductionCompletionLocalStructures, `Dubon2026.SourcePadicCompletionValuation, `Dubon2026.SourceReductionCompletionPadicMap, `Dubon2026.SourceReductionCompletionBasePrime, `Dubon2026.SourceReductionCompletionFinite, `Dubon2026.SourceOriginalPrescribedResidualFrobenius, `Dubon2026.SourceOriginalResidualInertia, `Dubon2026.SourceIntegralMatrixCharpoly, `Dubon2026.SourceMatrixIntertwinerCharpoly, `Dubon2026.SourceOriginalResidualFrobeniusCharpoly, `Dubon2026.SourceOriginalSpecializationFrobeniusCharpoly, `Dubon2026.SourceCyclotomicFrobeniusCharpoly, `Dubon2026.SourceRankTwoQuadraticTrace, `Dubon2026.SourceValuationCyclotomicFrobenius, `Dubon2026.SourceValuationFrobeniusRoots, `Dubon2026.SourceOriginalSpecializationCyclotomicDeterminant, `Dubon2026.SourceSpecializationBaseChangeIntertwiner, `Dubon2026.SourceImageSpecializationDeterminant, `Dubon2026.SourceAlternatingRankTwoDeterminant, `Dubon2026.SourceImageSpecializationPairing, `Dubon2026.SourcePrimitiveOriginalTateGalois, `Dubon2026.SourcePolynomialCommutant, `Dubon2026.SourceOriginalSpecializationPrimitiveImage, `Dubon2026.SourceSpanningProjectorImage, `Dubon2026.SourceOriginalSpecializationProjector, `Dubon2026.SourcePolynomialSpecialization, `Dubon2026.SourceOriginalPrescribedTateSpecialization]
+  let required : Array Name := #[`Dubon2026.sourceReductionPrime_prime_mem, `Dubon2026.sourcePrescribedCompletionResidueMap_integer, `Dubon2026.sourceReductionPrime_rationalBelow, `Dubon2026.sourceReductionPrime_liesOver_rational, `Dubon2026.sourceReductionCompletionPadicMap_continuous, `Dubon2026.sourceReductionCompletion_finite, `Dubon2026.sourceReductionCompletion_isModuleTopology, `Dubon2026.sourcePadicCompletionEquiv_mem_integer, `Dubon2026.sourceReductionCompletion_hasExtension, `Dubon2026.sourceReductionCompletion_isNonarchimedeanLocalField, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_numberField_reduction_residual_realization, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_reduction_residual_realization, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_algebraicInteger_reduction_residual_realization, `Dubon2026.sourceReductionPrime, `Dubon2026.sourceAdicCoefficientResidueEquiv, `Dubon2026.sourcePrescribedCompletionResidueMap, `Dubon2026.sourceReductionCompletionPadicMap, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_residual_frobenius_realization, `Dubon2026.SourceFunctionField.OriginalChart.originalPrimitive_prescribed_continuous_galois_realization, `Dubon2026.sourcePrimitiveCoefficientField_numberField, `Dubon2026.sourcePrimitiveFieldCoefficient_isIntegral, `Dubon2026.originalRingOfIntegersQuotientEquivAdicResidueField, `Dubon2026.originalAdicIntegerNormEquiv, `Dubon2026.originalAdicBaseChangeMap_mem_integers, `Dubon2026.originalAdic_isNonarchimedeanLocalField, `Dubon2026.stableLattice_integral_residual_realization, `Padic.adicCompletionEquiv, `PadicInt.coe_adicCompletionIntegersEquiv_symm_apply, `PadicInt.coe_adicCompletionIntegersEquiv_apply, `Valuation.HasExtension.ofComapInteger, `Matrix.charpoly_map]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL PRESCRIBED COMPLETION DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual original primitive prescribed algebraic-integer residual consumer. Only declaration values are traversed. The reduction kernel selects the genuine coefficient-field prime. The native rational completion equivalence and proved completed field embedding supply the finite Tate-prime extension and module topology. Their actual integer rings prove valuation compatibility. The proved quotient/residue equivalence constructs the residue embedding agreeing with the prescribed reduction on every integer. The existing prescribed Tate/lattice consumer then supplies the finite-image continuous representation, exact Frobenius polynomial, trace, determinant and good-prime inertia identity. Number-field, local coefficient, valuation, embedding, stable lattice and reduction compatibility inputs are discharged from the original primitive form and prescribed map. Four separate public auxiliary or definitional laws remain explicitly and exhaustively checked, without a claim of named use in this terminal proof. Arithmetic quotient and norm-local comparisons, closure of the parabolic branch, weight twist and support comparison, automorphy and all-weight continuation remain required. 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

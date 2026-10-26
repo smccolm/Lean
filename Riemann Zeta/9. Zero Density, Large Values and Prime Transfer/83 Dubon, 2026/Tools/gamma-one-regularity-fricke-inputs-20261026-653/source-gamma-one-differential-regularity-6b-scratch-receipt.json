@@ -1,0 +1,94 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T13:21:42.600593+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceLaurentIntegralDescent",
+    "SourceCurveIntegralExpressionOrders",
+    "SourceCurveIntegralDifferentialOrders",
+    "SourceGammaOneDifferentialIntegralDescent",
+    "SourceCurveRegularIntegralCriterion",
+    "SourceGammaOneDifferentialRegularity"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentIntegralDescent.lean",
+      "sha256": "B69E4811A4C90E8BE66BB986C98033C88638B749E90B21C0D5AC1693745412C6",
+      "oleanSha256": "DCBA41C532DCC79A59B81D79D4BBFF0035EB0BC043FD106D8B1E780DCF230038"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveIntegralExpressionOrders.lean",
+      "sha256": "657F98FE0B5E6BD2EE0908090047F938FD2D9886A1FEF70F67864C91FF36FBFA",
+      "oleanSha256": "E1EDE5DBCD318AC9500B3E1E984A139F9BDABDA324D70A3C1181AF3F0B9D6840"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveIntegralDifferentialOrders.lean",
+      "sha256": "DDB4BCD796DDFBC681165C50B06BD0AB223C24FA5C22699F41345EDA9CE38D3E",
+      "oleanSha256": "FCE07249AD0D34889BF5470691907F06903935A88890D1EE7701B402337A9A5B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialIntegralDescent.lean",
+      "sha256": "32E979532DD52AB20162F966BC7733034801F60A7F8BBF84039D66159A170C43",
+      "oleanSha256": "86749E5728416EC438C59ECE0B1C2ABFEDFF38930EE97836360DA3B0F4C58A64"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCurveRegularIntegralCriterion.lean",
+      "sha256": "37BE299421EB6AD44ECDE761F43F25564920598C3C10846909F6BFA538C84B26",
+      "oleanSha256": "8DCADC32E506B1BF647137696039E691F07252C022D8885E89F86D69F3BE24E9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularity.lean",
+      "sha256": "B43C71E332504F9B3FA0A978B25C24A334F0BE86E70972DB0334000D8D77F998",
+      "oleanSha256": "A84A00921A551B932B62C09E9918C527A1D899029EDBE983C860E22FFC16D16B"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.isIntegral_adjoin_of_isIntegral_coeffMap",
+    "Dubon2026.SourceCurve.Place.ord_natPow",
+    "Dubon2026.SourceCurve.Place.ord_nonneg_of_integral_coordinate",
+    "Dubon2026.SourceCurve.Place.cusp_coefficient_order_of_integral_expression",
+    "Dubon2026.SourceCurve.Place.ordDifferential_nonneg_of_finite_expression",
+    "Dubon2026.SourceFunctionField.GammaOne.coeffMap_qEuler_natural",
+    "Dubon2026.SourceFunctionField.GammaOne.integral_subfield_of_integral_coeffMap",
+    "Dubon2026.SourceFunctionField.GammaOne.differential_integral_expressions_of_matching_expansion",
+    "Dubon2026.SourceCurve.regular_smul_D_of_two_integral_expressions",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_of_diffQExp_matches_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_regular_of_diffQExp_matches_cusp"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.isIntegral_adjoin_of_isIntegral_coeffMap",
+    "Dubon2026.SourceCurve.Place.ord_natPow",
+    "Dubon2026.SourceCurve.Place.ord_nonneg_of_integral_coordinate",
+    "Dubon2026.SourceCurve.Place.cusp_coefficient_order_of_integral_expression",
+    "Dubon2026.SourceCurve.Place.ordDifferential_nonneg_of_finite_expression",
+    "Dubon2026.SourceFunctionField.GammaOne.coeffMap_qEuler_natural",
+    "Dubon2026.SourceFunctionField.GammaOne.integral_subfield_of_integral_coeffMap",
+    "Dubon2026.SourceFunctionField.GammaOne.differential_integral_expressions_of_matching_expansion",
+    "Dubon2026.SourceCurve.regular_smul_D_of_two_integral_expressions",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_of_diffQExp_matches_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_regular_of_diffQExp_matches_cusp"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityAudit6.log",
+  "logSha256": "9B8AF7DDE94FE14F35C4AC6529AFCFE01ED8F553E928F004318C4F70B96A0C66",
+  "auditSha256": "4CD3D5E1468A2DE72031BB45C104EF147A95FDE2D104004787E59A6F63C92886",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 21,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 21,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityDependencyAudit6b.log",
+  "dependencyAuditSha256": "23DE143D119620F9832CDEFDE00313461008F9DAA00C34BE31DEA32A8AE19831",
+  "dependencyAuditSourceSha256": "C9E7ABBD6EBFC0A6D95742A6EA3CA55C39C4AB226FD3537BFA8279E573937E17",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_regular_of_diffQExp_matches_cusp"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite Gamma1 Hecke-character arithmetic realization -> actual Picard/H1, full/parabolic and diamond comparison -> regular differential/cusp comparison -> regularity of an actual Gamma1 differential whose expansion matches an actual cusp form.",
+  "discharged": "For the actual Gamma1 integral-ratio Laurent field over any algebraically closed rational coefficient field embedded in C, every actual differential whose mapped q-expansion equals that of an actual weight-two cusp form is regular at every place. Both integral equations, their coefficient/subfield descent, the local order bounds, differential generators and finiteness are derived. No regularity or integral equation is assumed.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Algebraic differential realization for arbitrary cusp forms and the converse regular-differential-to-cusp construction remain. Actual Picard/H1, full/parabolic, transpose and diamond comparison, arithmetic realization of original finite characters, original all-weight association, local/image/regularity for automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-differential-regularity-6b-reuse-review-20261026.json",
+  "reuseReviewSha256": "2258315CCCC49A75D337A05CA99B541A59DC7A22E144EC2216D6A690C085B229",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

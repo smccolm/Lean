@@ -1,0 +1,654 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-arithmetic-geometry-promotion-route-626.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma-one-arithmetic-geometry-promotion-route-626.json",
+      "sha256": "01779DD687BD0535A5398B705E6C0AEDB04DEEAE1F943517252D50164EBE277C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticAudit9.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneArithmeticAudit9.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticAudit9.lean",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneArithmeticAudit9.lean.txt",
+      "sha256": "E34DB66A74DDA627757E676F29666AA2B994FDC7CCCD1DFDCDB11FF83D941DFD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticAudit9.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneArithmeticAudit9.log",
+      "sha256": "0813CB76623B32EB51984A67B4D5BA62BDF34C48670D4EE82F37CAD3EE1B4C19"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDependencyAudit9.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneArithmeticDependencyAudit9.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDependencyAudit9.lean",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneArithmeticDependencyAudit9.lean.txt",
+      "sha256": "A9BFB95AC7426820EB0DC305676D4BAECF3614DCBE9C427FFC72B45299FBDAF3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneArithmeticDependencyAudit9.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneArithmeticDependencyAudit9.log",
+      "sha256": "AB956F9D79E28442F7D71F4A2908AE97167A54FE4CA29BCE2A40CA4B04D2E708"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionField-before-pruning-620.lean.txt",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneFunctionField-before-pruning-620.lean.txt",
+      "sha256": "DAC54034FD97D16922FEADC8E14CC6D16C7282C8F20C2E578232F6AADF6833B8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldAudit10.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneFunctionFieldAudit10.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldAudit10.lean",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneFunctionFieldAudit10.lean.txt",
+      "sha256": "5ED879ED4BCD9A86F057153C0C79361CB0B748F7380E413260DE12B0B204BD50"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldAudit10.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneFunctionFieldAudit10.log",
+      "sha256": "21543B0E76A0004E38D7FEBCBB2318B5835ADEDEE7DDB3C7941D2DC0A58B17D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldAudit10b.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneFunctionFieldAudit10b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldAudit10b.lean",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneFunctionFieldAudit10b.lean.txt",
+      "sha256": "5ED879ED4BCD9A86F057153C0C79361CB0B748F7380E413260DE12B0B204BD50"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldAudit10b.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneFunctionFieldAudit10b.log",
+      "sha256": "EDAD794352B04F69845E9D160D47C685C770DCCE039661EA1955D1EEC17BE41F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldDependencyAudit10.lean",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneFunctionFieldDependencyAudit10.lean.txt",
+      "sha256": "0FA5C4493615543861B1CF99C4E87174933FDA0534E6B56831A470D245D0D5FB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldDependencyAudit10b.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneFunctionFieldDependencyAudit10b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldDependencyAudit10b.lean",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneFunctionFieldDependencyAudit10b.lean.txt",
+      "sha256": "0FA5C4493615543861B1CF99C4E87174933FDA0534E6B56831A470D245D0D5FB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFunctionFieldDependencyAudit10b.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneFunctionFieldDependencyAudit10b.log",
+      "sha256": "896B598909E12CBBBA3A34EF765CD11FD55B05404EFBBCE4DFF098CC2F980A46"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFieldAudit5.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneHeckeFieldAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFieldAudit5.lean",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneHeckeFieldAudit5.lean.txt",
+      "sha256": "17EF9675441BA9E4304B796E72D421FF6E4A6842942D3FB51F6929041282B689"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFieldAudit5.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneHeckeFieldAudit5.log",
+      "sha256": "B831E82E90D54A952B56D3E975F9215C19911960C01F25BDC6C1354DBF5ACF34"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFieldDependencyAudit5.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneHeckeFieldDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFieldDependencyAudit5.lean",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneHeckeFieldDependencyAudit5.lean.txt",
+      "sha256": "FA5C8632661226B240F612CC0AB266A56A3F788E0E99B24930F68636AA3004F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckeFieldDependencyAudit5.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneHeckeFieldDependencyAudit5.log",
+      "sha256": "D1626CAF1034357F3362EFDB9A6039DEE5BD59DF3A479B8B63D7BDDED0622097"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardAudit2.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneHeckePicardAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardAudit2.lean",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneHeckePicardAudit2.lean.txt",
+      "sha256": "DF9E9BC49AA1E59FDAC0A9BA299F3E6A497DF127C3741A5F7C5B0A0A53F875AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardAudit2.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneHeckePicardAudit2.log",
+      "sha256": "4CBCAE92125C8E30FF186277F575C130893831933929CE08D5A40BFCEB405318"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardAudit2b.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneHeckePicardAudit2b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardAudit2b.lean",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneHeckePicardAudit2b.lean.txt",
+      "sha256": "DF9E9BC49AA1E59FDAC0A9BA299F3E6A497DF127C3741A5F7C5B0A0A53F875AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardAudit2b.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneHeckePicardAudit2b.log",
+      "sha256": "4CBCAE92125C8E30FF186277F575C130893831933929CE08D5A40BFCEB405318"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDependencyAudit2.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneHeckePicardDependencyAudit2.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDependencyAudit2.lean",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneHeckePicardDependencyAudit2.lean.txt",
+      "sha256": "7F91F72BE996EF54C01ACF2861978BF17A4F427E80F60438CFA6A287406858FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDependencyAudit2.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneHeckePicardDependencyAudit2.log",
+      "sha256": "440ACE2A411D1CC8F5FD51FB11FFC4FBDBD365A817ADEBF8306863699D4E007F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDependencyAudit2b.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneHeckePicardDependencyAudit2b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDependencyAudit2b.lean",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneHeckePicardDependencyAudit2b.lean.txt",
+      "sha256": "3EAF07EC047F547BF0025E4867F985FA433D910F34BD8CA1CF96BB4775B14A63"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHeckePicardDependencyAudit2b.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/SourceGammaOneHeckePicardDependencyAudit2b.log",
+      "sha256": "1F31C8DFF719FEE5A4ED2EE768C6CE8EA9C21A915DC4A7B314C54387C4C245B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers622.txt",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/consumers622.txt",
+      "sha256": "CF34ECAF81BCBD94789317B4DA350539C71A0EBC783D673EA53071410D582945"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_gamma1_geometric_reuse_619b.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/fetch_gamma1_geometric_reuse_619b.py",
+      "sha256": "5470E45986F039A0A1BFA6152A52FF8CBA4FFA8C70FF08F662805DE97CA8B0A8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_gamma1_hecke_correspondence_reuse_621.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/fetch_gamma1_hecke_correspondence_reuse_621.py",
+      "sha256": "4CE5156F2074DA43BEFE9F15CC6BABD81D40000223B45A527AAF844F2794A69D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-fields-preexecution-review-8305.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma-one-finite-fields-preexecution-review-8305.json",
+      "sha256": "0F8E23726447A3A368D1E5F185747C12797189B89A69B53A8D06F64243679CB0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-fields-promotion-route-623.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma-one-finite-fields-promotion-route-623.json",
+      "sha256": "588EE1772B8DCDFDAAC92984A089E91181A7F148FE2C9DE2D7516DC0ABEA38EF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-actual-picard-hecke-route-624.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-actual-picard-hecke-route-624.json",
+      "sha256": "8F497F9B3D84AF36CD940A242CCA6B773D27A66C1FF42602E95A000EDE8C223E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-actual-picard-hecke-route-624b.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-actual-picard-hecke-route-624b.json",
+      "sha256": "293580800D759DE468D695C9F3DE0199BF872D097180AF674503DC28459D4D70"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-arithmetic-hecke-picard-route-625.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-arithmetic-hecke-picard-route-625.json",
+      "sha256": "7C5A4F1500D20014A843E34E5A4597DF12C259D77C5179024308F55B0155A828"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-finite-hecke-field-route-622.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-finite-hecke-field-route-622.json",
+      "sha256": "72DD2902603793F81C4CB4EE18744E910158C7757A86D02CBF87A8EEE7B681CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-finite-route-620.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-finite-route-620.json",
+      "sha256": "69C536C461A984EB9155BC4F48610F4D8B397AB1162D28A36A0974B2EBEC1F3D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-finite-route-620b.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-finite-route-620b.json",
+      "sha256": "51A20D9078ADD7B70C021AE040E48FF9D1A5481AD2B6513A8D51DF44EE53BA23"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-geometric-reuse-assessment-619.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-geometric-reuse-assessment-619.json",
+      "sha256": "E3B8F7DE9DC6F41F5B58C2A2401674BBDCBBA87EFBCA8ABFF62C0C18EC1E0895"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-correspondence-reuse-assessment-621.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-hecke-correspondence-reuse-assessment-621.json",
+      "sha256": "EEBB87529C110D24B25127394F01A35C975F6072921D170283185E30C65B5E86"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules622.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/modules622.json",
+      "sha256": "7810DF5F7724BDD351F5A6D66FE68B4CBE0668C3D9E46CF1399F717B6B4FB6DF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\normalize_gamma_one_rational_algebra_620.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/normalize_gamma_one_rational_algebra_620.py",
+      "sha256": "43C23BD9E261E5386E2AB7698D679A119AC3AED3777262C1FA82B7101724D95F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_arithmetic_audit_625.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/prepare_gamma_one_arithmetic_audit_625.py",
+      "sha256": "9B08233C3690AEBBBAF9721133ED9C4409D067437EC99FA27FF949EA4D8154AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_arithmetic_picard_625.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/prepare_gamma_one_arithmetic_picard_625.py",
+      "sha256": "892E29177F73F29338686A228AB062A7A1EAB4858A306E2760E65F43F57739E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_arithmetic_scope_625.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/prepare_gamma_one_arithmetic_scope_625.py",
+      "sha256": "152175AE71770383F08E1272E0D1C030A54368FF08DCF10867CEF596C0A2F927"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_finite_fields_promotion_8305.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/prepare_gamma_one_finite_fields_promotion_8305.py",
+      "sha256": "1D456A6005DFAB5440F82695314C15AA77F273343486D11C5D60529DB22EA5DA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_function_field_audit_620.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/prepare_gamma_one_function_field_audit_620.py",
+      "sha256": "084DF88B7416ED532F72D91928318912CADE66FB11D94D706C81B99058945E38"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_function_field_audit_620b.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/prepare_gamma_one_function_field_audit_620b.py",
+      "sha256": "09F58DD4FBD99EC3FE063346552BBC72CE6C6706C9F64A919B246396DF6A3250"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_arithmetic_625.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/prepare_gamma_one_hecke_arithmetic_625.py",
+      "sha256": "26971F91090819D4BF827969A9B16EE802B1CF13FB21B4F4495831319DE81879"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_field_audit_622.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/prepare_gamma_one_hecke_field_audit_622.py",
+      "sha256": "2E0589DBAB276F251E173CBD9FD8B2016B13754B9463294878BA139330D938D0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_field_scope_622.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/prepare_gamma_one_hecke_field_scope_622.py",
+      "sha256": "42682CF40B8A43145DA0C50ABBF1013063504BACD3440C845C975ABFF3B664ED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_picard_audit_624.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/prepare_gamma_one_hecke_picard_audit_624.py",
+      "sha256": "0AC9172AF2E38CC7C2AAF151F0E7183026B35C5B58C23175D193FBC759B23194"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_picard_audit_624b.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/prepare_gamma_one_hecke_picard_audit_624b.py",
+      "sha256": "E30DCCDE4EFCC3CB4390A378B0C6A893762EF3FFCE43C35C5CC66B3A0379A49C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_picard_scope_624.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/prepare_gamma_one_hecke_picard_scope_624.py",
+      "sha256": "89AEE3996B68DA0FE783E88F6B4162A6927442420D6FC56AF8F55B6017482546"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_hecke_picard_successor_624b.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/prepare_gamma_one_hecke_picard_successor_624b.py",
+      "sha256": "273BCBB712882D4617906A933A892036796A6CA3C7E4D12C3475B6A9BDD4DDC8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record622.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/record622.py",
+      "sha256": "8EA78CD24476C3C051F07A2232EED59F037B357266EA3B7140F780E6E7D1FA3D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_arithmetic_625.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/record_gamma_one_arithmetic_625.py",
+      "sha256": "D278EC3BDDCD618ACE56A0D9CBFE45EBA31C7313B64CE1792FDD5094FA3D1999"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_function_field_620.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/record_gamma_one_function_field_620.py",
+      "sha256": "41D8FF090B0891E31BD758E26CCF5BD6D9D88899B886D77948040E3362E71C4D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_function_field_620b.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/record_gamma_one_function_field_620b.py",
+      "sha256": "CBFFE26294284F9E5CBA7BF15A195B85C3CCA09B9789CCD13A3B0C7641A3C86C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_hecke_field_622.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/record_gamma_one_hecke_field_622.py",
+      "sha256": "E31266E6B0ACCB27C341F7EFB5861D9ECDFE1E01B2D7B5B20D2A09568ADAD61B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_hecke_picard_624.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/record_gamma_one_hecke_picard_624.py",
+      "sha256": "5AFCDA5F741339A7398497E23BD0D1EEDE9C6AC93A14A37E621E6DBAAB0B5BC6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_hecke_picard_624b.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/record_gamma_one_hecke_picard_624b.py",
+      "sha256": "1537633B483F661E66AF7C1C6AF5AD31726C632355BB5BA2AFBCF65B11AA42FB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register622.py",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/register622.py",
+      "sha256": "5B43C33A456031A5D10DE88F97AF384208870261A80339249C98E938894DEA93"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations622.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/registrations622.json",
+      "sha256": "1E2646785CFD9D12880192C2EE5BB6ACB2B391B3C5187C26516B292F0ACD7BAC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section622.txt",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/section622.txt",
+      "sha256": "82026BE88C46FC6F212A2D2CFB4C238F9E9C6EBAC95740C04B1C41CFF7BC2825"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-9-audit-config.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/source-gamma-one-arithmetic-9-audit-config.json",
+      "sha256": "7CAB4A28D951AF7E6686332FB222A435A26CA973AC6B5B8E94ED288EAA5582C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-9-scratch-receipt.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/source-gamma-one-arithmetic-9-scratch-receipt.json",
+      "sha256": "168F5541A452ABB2C66949AE9D421F9DF0555C3927BCFA1C49CED9AC46E32553"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-function-field-10-audit-config.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/source-gamma-one-function-field-10-audit-config.json",
+      "sha256": "4CFCA0BE404B629096AD75A2624116E7B9AE5B339E6919EF47C302C2B9334080"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-function-field-10b-audit-config.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/source-gamma-one-function-field-10b-audit-config.json",
+      "sha256": "4CFCA0BE404B629096AD75A2624116E7B9AE5B339E6919EF47C302C2B9334080"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-function-field-10b-scratch-receipt.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/source-gamma-one-function-field-10b-scratch-receipt.json",
+      "sha256": "5AF3D767A3394701B100CC68733AE6269D9AEE63AF52D88D08C9A3D0B5DE1C87"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-field-5-audit-config.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/source-gamma-one-hecke-field-5-audit-config.json",
+      "sha256": "F0E182CF958E25B6F38E3E133A4AA02D34EB213519DE1B4987514839B4950BF2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-field-5-scratch-receipt.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/source-gamma-one-hecke-field-5-scratch-receipt.json",
+      "sha256": "33716CDDC0E17FC2B1864D84CE01001A2AB8F7CCA0E056FBDAF5CD113AB48DC9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-picard-2-audit-config.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/source-gamma-one-hecke-picard-2-audit-config.json",
+      "sha256": "1552DC97B3034BD0DEA3444A8B23BA32EEF1E19C840EB00BB7CEDE41BD793BCE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-picard-2b-audit-config.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/source-gamma-one-hecke-picard-2b-audit-config.json",
+      "sha256": "DDDFC22E4366BC071E0C45AD6929798EFFBD89C58909793F38FDCA3657D3167A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-picard-2b-scratch-receipt.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/source-gamma-one-hecke-picard-2b-scratch-receipt.json",
+      "sha256": "0A82D7E6B206DC3CA34AF22C2CA6C16E8356AD3AE16A058E41C935F2D5ECA709"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status622.txt",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/status622.txt",
+      "sha256": "DC035636FE4FCF5E5536BE5967BEDCFB9C85153E51771845F47E4580C7A87F48"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneComplexRatio.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneComplexRatio.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneComplexRatio.lean.txt",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneComplexRatio.lean.txt",
+      "sha256": "7A0BA5FFCCDB34748E26715F9EE1F010C40B08283B6DB47FEF8ED8459D394346"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneComplexRatio.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneComplexRatio.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneComplexRelation.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneComplexRelation.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneComplexRelation.lean.txt",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneComplexRelation.lean.txt",
+      "sha256": "283511D74947B88FC28069EE5A7878A89450DE4960CED2AB7E44611448227267"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneComplexRelation.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneComplexRelation.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneCurveFinite.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneCurveFinite.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneCurveFinite.lean.txt",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneCurveFinite.lean.txt",
+      "sha256": "98510816FF2E5C928A87EB978469F7796117C7843B0257BD532A7C4A4404C5CC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneCurveFinite.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneCurveFinite.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneFunctionField.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneFunctionField.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneFunctionField.lean.txt",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneFunctionField.lean.txt",
+      "sha256": "B0B7B0D57DC66C71442D0B3A546F693C3F9B9186BF804CDA9F07CB127717A173"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneFunctionField.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneFunctionField.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneFunctionFieldBaseChange.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneFunctionFieldBaseChange.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneFunctionFieldBaseChange.lean.txt",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneFunctionFieldBaseChange.lean.txt",
+      "sha256": "9F4B86543AAB668A318ED0E134DFB26ACB31D06416C8D8E6E3B0FC3AA18B6D76"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneFunctionFieldBaseChange.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneFunctionFieldBaseChange.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneFunctionFieldFinite.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneFunctionFieldFinite.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneFunctionFieldFinite.lean.txt",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneFunctionFieldFinite.lean.txt",
+      "sha256": "3E57C1BA88AFC8DFE550CB88F341F627ABD9F355C8AAED4D2D62FDFA196355F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneFunctionFieldFinite.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneFunctionFieldFinite.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneJCoordinate.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneJCoordinate.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneJCoordinate.lean.txt",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneJCoordinate.lean.txt",
+      "sha256": "4AC407FCC7FA9BE3C8661051C6DEFF25AC76966939EA768D6B3BD3603C64E82B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneJCoordinate.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneJCoordinate.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneNormRelation.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneNormRelation.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneNormRelation.lean.txt",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneNormRelation.lean.txt",
+      "sha256": "6C2897C4C63E5ED3697CE2292FE5468B2F5973D68B1347D0D7F9CEF29E98EE03"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneNormRelation.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneNormRelation.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneRatioClosure.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneRatioClosure.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneRatioClosure.lean.txt",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneRatioClosure.lean.txt",
+      "sha256": "118619B0C492FFB91A8073CF652DFDE62951329CF7483A03EE0C301ED0EC84F4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneRatioClosure.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneRatioClosure.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneRationalRelation.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneRationalRelation.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneRationalRelation.lean.txt",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneRationalRelation.lean.txt",
+      "sha256": "3F1E6796ABA7A222691574495AEDE1E69ADAD5F90484C10402B012AE74BD8E4E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-function-field-620-before-definition-docstrings\\SourceGammaOneRationalRelation.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-function-field-620-before-definition-docstrings/SourceGammaOneRationalRelation.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-fields-622-before-explicit-inclusion-projection\\evidence.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-hecke-fields-622-before-explicit-inclusion-projection/evidence.json",
+      "sha256": "055982CDDB07EBEC35B372D3CD2840C3538CBF27EAC2D8BD74CF332B2B604101"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-fields-622-before-explicit-inclusion-projection\\SourceGammaOneHeckeDegeneracy.exit",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-hecke-fields-622-before-explicit-inclusion-projection/SourceGammaOneHeckeDegeneracy.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-fields-622-before-explicit-inclusion-projection\\SourceGammaOneHeckeDegeneracy.lean.txt",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-hecke-fields-622-before-explicit-inclusion-projection/SourceGammaOneHeckeDegeneracy.lean.txt",
+      "sha256": "A40D4CBE5AAC02200F3AE39D70D536BED8E248A37051EF5CAC191DED9552FC46"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-fields-622-before-explicit-inclusion-projection\\SourceGammaOneHeckeDegeneracy.log",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-hecke-fields-622-before-explicit-inclusion-projection/SourceGammaOneHeckeDegeneracy.log",
+      "sha256": "13F57BAD1EE248990779A623A99A65C0407F8DC172489B138D73E38E8EEDFDFD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-geometric-reuse-619\\P2M\\Sol\\S_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_one_of_ringHom.lean.txt",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-geometric-reuse-619/P2M/Sol/S_GaloisRep_exists_galoisRep_trace_eq_of_isEigensystemH1_one_of_ringHom.lean.txt",
+      "sha256": "24D0C54234CA1D0A33B2A98FAC560895E2FFAB033CBE8FC0BD4705C50E81567A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-geometric-reuse-619\\P2M\\Sol\\S_ModularCurve_JOneES_exists_transcendental_finiteDimensional_laurentBaseChange.lean.txt",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-geometric-reuse-619/P2M/Sol/S_ModularCurve_JOneES_exists_transcendental_finiteDimensional_laurentBaseChange.lean.txt",
+      "sha256": "D9975D2121D03907334ACBCD034BEF06F74AA8DED088B177DE6F2FA0493EB10C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-geometric-reuse-619\\P2M\\Sol\\S_ModularCurve_JOneES_exists_transcendental_finiteDimensional_qExpFunctionFieldC.lean.txt",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-geometric-reuse-619/P2M/Sol/S_ModularCurve_JOneES_exists_transcendental_finiteDimensional_qExpFunctionFieldC.lean.txt",
+      "sha256": "090DA952715D0C04E644189B2A39B55E4D3FCBEEA1AE4BC0B27C0BB7E5C29EBF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-geometric-reuse-619\\snapshots.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-geometric-reuse-619/snapshots.json",
+      "sha256": "DACE2D1C4ACD0BE3F78360E34AEAC7C85BA78521BA2D918840CE1A741DD164AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-correspondence-reuse-621\\Definitions\\Def_ModularCurve_X1HeckeOperator.lean.txt",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-hecke-correspondence-reuse-621/Definitions/Def_ModularCurve_X1HeckeOperator.lean.txt",
+      "sha256": "1F3E93DB33B1A2117A372C5FAF3C5DC992C82B8D69F9113656CFE437FD338E59"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-correspondence-reuse-621\\P2M\\Sol\\S_ModularCurve_qExpand_image_intFormRatiosC_subset.lean.txt",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-hecke-correspondence-reuse-621/P2M/Sol/S_ModularCurve_qExpand_image_intFormRatiosC_subset.lean.txt",
+      "sha256": "3B95A7CDA1ABB9BEBB4461F42A94581DFA828CA3E3F785C2A576A6B849292D0F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma1-hecke-correspondence-reuse-621\\snapshots.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/gamma1-hecke-correspondence-reuse-621/snapshots.json",
+      "sha256": "3A3321FEE0AC75E50C3331F26A024C0AA0D68498C1B3B60793E2CDC2FD43606B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-function-field-10b-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/source-gamma-one-function-field-10b-reuse-review-20261026.json",
+      "sha256": "EFA4247F722DC8AB106CABE25010706A515BE8BAE98DEE5409B47739FAC1EA0D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-field-5-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/source-gamma-one-hecke-field-5-reuse-review-20261026.json",
+      "sha256": "D50EA484268BB43CE699DF390BBE08250E2AF518460181F3A5F8615A098B685A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-hecke-picard-2b-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/source-gamma-one-hecke-picard-2b-reuse-review-20261026.json",
+      "sha256": "0E435242BC73EE95813D527B492F837EBB5883D43C883CD82C324E7C4790EE56"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-arithmetic-9-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-arithmetic-geometry-20261026-626/source-gamma-one-arithmetic-9-reuse-review-20261026.json",
+      "sha256": "E083C7F2E2877C935ACFAE5720B3E3E9DE8C089704DE36868DC2B42A1F647C04"
+    }
+  ]
+}

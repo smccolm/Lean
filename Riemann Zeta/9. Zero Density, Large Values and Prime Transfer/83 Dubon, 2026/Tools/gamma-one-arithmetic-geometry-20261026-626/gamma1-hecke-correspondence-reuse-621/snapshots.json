@@ -1,0 +1,25 @@
+{
+  "fetchedUTC": "2026-10-26T09:22:06.086337+00:00",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "Definitions/Def_ModularCurve_X1HeckeOperator.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/Definitions/Def_ModularCurve_X1HeckeOperator.lean",
+      "snapshot": "Definitions\\Def_ModularCurve_X1HeckeOperator.lean.txt",
+      "gitBlob": "51bbd5999e15931a3ee6889aeebe9768602ecd80",
+      "sha256": "1F3E93DB33B1A2117A372C5FAF3C5DC992C82B8D69F9113656CFE437FD338E59",
+      "bytes": 9799
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_qExpand_image_intFormRatiosC_subset.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_qExpand_image_intFormRatiosC_subset.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_qExpand_image_intFormRatiosC_subset.lean.txt",
+      "gitBlob": "5e982db0760f2078353618112110b997c996ad15",
+      "sha256": "3B95A7CDA1ABB9BEBB4461F42A94581DFA828CA3E3F785C2A576A6B849292D0F",
+      "bytes": 9143
+    }
+  ]
+}
