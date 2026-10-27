@@ -1,0 +1,67 @@
+{
+  "scope": 670,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> Picard/H1 and full/parabolic/diamond comparison retaining the original homogeneous coefficient endomorphism -> actual differential/cusp comparison -> rational Fourier spanning -> integral base change of original Fricke functions.",
+  "assumptionsToDischarge": "For the original holomorphic principal-level function with finite cusp poles at every modular translate, derive a literal Laurent representation in the ordinary complex span of elements of the original cyclotomic j/Fricke field integral over its j-algebra. Actual modular-orbit fraction and monic relation are consumed. Generator integrality, finiteness, cyclotomic coefficients, j transcendence, complex fraction membership and all constant-descent premises are derived.",
+  "remaining": "The formal Laurent integral-span stage is proved for the actual function. Recover holomorphic functions for the integral Laurent summands, establish pole-cleared cyclotomic Fourier coefficients and rational Fourier spanning, then arbitrary Gamma1 differential realization and the remaining arithmetic association, automorphy and higher continuation chain. 16/20; DUB-17--20 OPEN.",
+  "shorterRouteReview": "Reuse the native finite-action monic polynomial instead of constructing a separate exact-degree Fricke orbit polynomial. Existing analytic Laurent representation and coefficient retraction give generator integrality. Native integral-equation transport maps it back to the original constant algebra. Reuse the already proved expanded-j transcendence; the alternate analytic fraction-field j-transcendence result is not needed on this Laurent route. The existing meromorphic germ identity handles denominator zeros. For the next holomorphic-recovery step, local SourceHolomorphicQuotientExtension and SourceMonicRelationRootBound already provide removable singularities and the monic-root bound, so importing the external general analytic quotient/valuation engine is unnecessary.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeModularOrbitV2.lean",
+      "sha256": "1C87B8694ED9D5016743DE0F3866847FD315A9C8FA6C08D6C83DC4283221D345"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableMonicV2.lean",
+      "sha256": "3A26BF0EDA852DEABC400B64A310153F57CFF0F48CF3EBE2FDC8A0ED372489A2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicLaurent.lean",
+      "sha256": "CAFB735C7C1A45E8A27C7CD9A387E05E7699303D829A72C5EA3F5008CC0C6D84"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspLaurentPolynomial.lean",
+      "sha256": "EAEA869D96EA2B36438E56F701AA9C7F8565AEB56D8D5D2F52F9753FF31158E9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicFractionGerm.lean",
+      "sha256": "E761C04EFA4A51687EEF11E3F4A75EC38631DDCAF911522D43A56C06F34FB7C5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspLaurentFractionIdentity.lean",
+      "sha256": "BDFDABE6460490760974FB3C4169668C36545BFF95FE0266DCF9CD5FA06869B7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentIntegralConstantSpan.lean",
+      "sha256": "B8B884CB62C063DD718D5BED0A88F8C7AF8C61F95B766F9E85385B63529069BA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentIntegralDescent.lean",
+      "sha256": "B69E4811A4C90E8BE66BB986C98033C88638B749E90B21C0D5AC1693745412C6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralTranscendentalSeparability.lean",
+      "sha256": "A548E96FB2131C71B59931DD0BD444CCDF26A6685D9197A1574AD74B635F1770"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHolomorphicQuotientExtension.lean",
+      "sha256": "C0FB025E337C57A31FFA67B1813BDD0853DC355C05E7EAC69328789488839D1C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceMonicRelationRootBound.lean",
+      "sha256": "FC613F63A13058B64CD46F7049DF846F718C90B4FACB1DF5BCD3DFBD6054441F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\IntegralClosure\\IsIntegral\\Basic.lean",
+      "sha256": "2BAD38C574DD30677B09D8AFAA607AE8B38F889523045D59B5410CB6599B759A"
+    }
+  ],
+  "externalImport": false,
+  "externalFullClosureVerified": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "modules": [
+    "SourceLaurentIntegralCoefficientImage",
+    "SourceFrickeLaurentGeneratorIntegrality",
+    "SourceFrickeComplexFractionLaurent",
+    "SourceFrickeLaurentIntegralSpan"
+  ]
+}

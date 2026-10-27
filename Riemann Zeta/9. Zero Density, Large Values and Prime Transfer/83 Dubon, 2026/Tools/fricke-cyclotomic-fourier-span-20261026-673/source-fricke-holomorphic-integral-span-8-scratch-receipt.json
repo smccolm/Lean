@@ -1,0 +1,123 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T19:06:09.164348+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceMonicQuotientRelation",
+    "SourceHolomorphicMonicQuotient",
+    "SourceIntegralCoordinateMonic",
+    "SourceFrickeCyclotomicLaurentLifts",
+    "SourceFrickeClearedLaurentMonic",
+    "SourceFrickeIntegralHolomorphicRepresentative",
+    "SourceCuspLaurentSpan",
+    "SourceFrickeHolomorphicIntegralSpan"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMonicQuotientRelation.lean",
+      "sha256": "C9BD974A011A6CB9B17AE2BC59E07217CBEABBCC1B133623AFE21F5757D674B6",
+      "oleanSha256": "5314B8A94CAA7DBFF02C55485530C96B4D9409AC1331EEA0A259EA827DC04911"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceHolomorphicMonicQuotient.lean",
+      "sha256": "94FBF4C909E298A91548D0877B0AF450875FD7EBE89BE5FED173C6513E258632",
+      "oleanSha256": "A0D3C2933BD4A1B8C0990152ACC4CE5A2CB3D13051049A6F205E7BEF57CB7CC3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegralCoordinateMonic.lean",
+      "sha256": "AC77D5D44BCA6A4A5C13D6901389D216081743D9D22658AFBF6AB6CABDA769F6",
+      "oleanSha256": "365F8232B3057CF44958FC3FEDC755C373E20ED6771EBF436619639FA881E9F1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicLaurentLifts.lean",
+      "sha256": "EEEB2A9604784B1D4E4AEAD240C4C38BB12BF0AC9986A8602524EA936929299C",
+      "oleanSha256": "1FBE7D42C238F56100BFDF9F4F83D198ED8EEEB6279E5A0D339332BFAD774615"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeClearedLaurentMonic.lean",
+      "sha256": "6933D84A04267617CC43BFCF6256721813C9466EEF0623325784B879CFB2B42A",
+      "oleanSha256": "BB11959D1F507112BB0380D3662BFB70592F5013BAD97582F407ED2877544930"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeIntegralHolomorphicRepresentative.lean",
+      "sha256": "F55C22030E5B4A195EA0C47E055B2F50495EED9E7AA3BD4641B01EB58620CB12",
+      "oleanSha256": "6A8F659A2D9A43E0BD6F80DBA02A9077458C98487D0B3F725100F2D5C6557730"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspLaurentSpan.lean",
+      "sha256": "02C9583A7F3171E9FFEB0C654DB261C760213224E4185DCA5869520219D5D48B",
+      "oleanSha256": "92856F7019DAA5BCBE79A597C15682F9C21BCF76B3B79CC8DC7771C6EBB64341"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicIntegralSpan.lean",
+      "sha256": "B2B189892B4221400AF30F3F9D95C0C284B565CC9084FD04EE553AD9EC50873A",
+      "oleanSha256": "4F20D17F17ECDC870034F90EF0924BE6B58AC472A2C31519144296488CE7540E"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.cleared_monic_relation_eq_scaled",
+    "Dubon2026.SourceFunctionField.monic_div_relation_of_cleared",
+    "Dubon2026.SourceFunctionField.cleared_monic_relation_of_div",
+    "Dubon2026.SourceFunctionField.mdiff_eventually_ne_zero_ofComplex",
+    "Dubon2026.SourceFunctionField.quotient_locally_bounded_of_monic",
+    "Dubon2026.SourceFunctionField.exists_mdifferentiable_quotient_of_monic",
+    "Dubon2026.SourceFunctionField.exists_coordinate_monic_relation",
+    "Dubon2026.SourceFricke.exists_cyclotomic_function_of_laurent_algebra",
+    "Dubon2026.SourceFricke.exists_cyclotomic_function_fraction_of_laurent_field",
+    "Dubon2026.SourceFricke.cyclotomic_polynomial_jf_mem",
+    "Dubon2026.SourceFricke.represents_cyclotomic_polynomial_jf",
+    "Dubon2026.SourceFricke.cleared_cyclotomic_relation_of_laurent",
+    "Dubon2026.SourceFricke.exists_holomorphic_cyclotomic_fraction_of_integral_laurent",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_smul",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.mem_span_of_laurent_span",
+    "Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_periodic",
+    "Dubon2026.SourceFricke.periodic_of_principal_invariant",
+    "Dubon2026.SourceFricke.mem_span_holomorphic_cyclotomic_fractions_of_principal_invariant",
+    "Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.cleared_monic_relation_eq_scaled",
+    "Dubon2026.SourceFunctionField.monic_div_relation_of_cleared",
+    "Dubon2026.SourceFunctionField.cleared_monic_relation_of_div",
+    "Dubon2026.SourceFunctionField.mdiff_eventually_ne_zero_ofComplex",
+    "Dubon2026.SourceFunctionField.quotient_locally_bounded_of_monic",
+    "Dubon2026.SourceFunctionField.exists_mdifferentiable_quotient_of_monic",
+    "Dubon2026.SourceFunctionField.exists_coordinate_monic_relation",
+    "Dubon2026.SourceFricke.exists_cyclotomic_function_of_laurent_algebra",
+    "Dubon2026.SourceFricke.exists_cyclotomic_function_fraction_of_laurent_field",
+    "Dubon2026.SourceFricke.cyclotomic_polynomial_jf_mem",
+    "Dubon2026.SourceFricke.represents_cyclotomic_polynomial_jf",
+    "Dubon2026.SourceFricke.cleared_cyclotomic_relation_of_laurent",
+    "Dubon2026.SourceFricke.exists_holomorphic_cyclotomic_fraction_of_integral_laurent",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_smul",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.mem_span_of_laurent_span",
+    "Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_periodic",
+    "Dubon2026.SourceFricke.periodic_of_principal_invariant",
+    "Dubon2026.SourceFricke.mem_span_holomorphic_cyclotomic_fractions_of_principal_invariant"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicIntegralSpanAudit8.log",
+  "logSha256": "6F4FBE57A2A695B39647DBC9A857256AD9DBDAC4E33EE82BA68169B0A376E4C4",
+  "auditSha256": "2F5220B3E4DB337BBFAD030DE54B78198F624362C418C2B10DC2386EC23FBE64",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 28,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 26,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicIntegralSpanDependencyAudit8.log",
+  "dependencyAuditSha256": "C11DCC0B29D6A8023794006E32EB27AB31C148EC21B0338195D636578F79E5D5",
+  "dependencyAuditSourceSha256": "A1011ECB58FD9E44088C30F1C071E26BCDF6EF6AFE179AA6A99FF354E45ABD2F",
+  "consumers": [
+    "Dubon2026.SourceFricke.mem_span_holomorphic_cyclotomic_fractions_of_principal_invariant"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> Picard/H1 and full/parabolic/diamond comparison retaining the original homogeneous coefficient endomorphism -> actual differential/cusp comparison -> rational Fourier spanning -> holomorphic realization of the integral Fricke Laurent summands.",
+  "discharged": "Derive actual holomorphic periodic cyclotomic Fricke fractions representing each integral Laurent summand, then lift the ordinary complex Laurent span to the actual principal-level holomorphic function. Neither holomorphic summand realization nor an actual cyclotomic spanning family is assumed.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The actual holomorphic function span is proved. Pole-cleared cyclotomic Fourier coefficients and rational cusp-form spanning remain, followed by arbitrary Gamma1 differential realization and the arithmetic association, automorphy and higher continuation chain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-fricke-holomorphic-integral-span-8-reuse-review-20261026.json",
+  "reuseReviewSha256": "E27412AF1F170F35D9CBB31A67DA58C6D69FB0B5D4D92FD1118FAD10BD6E7D32",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

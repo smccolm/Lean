@@ -1,0 +1,101 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T17:28:33.761284+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceConstantExtensionIntegralAlgebra",
+    "SourceAlgebraicConstantRoots",
+    "SourceAlgebraicConstantLift",
+    "SourceAlgebraicConstantInterpolation",
+    "SourceAlgebraicConstantIntegralSpan"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantExtensionIntegralAlgebra.lean",
+      "sha256": "38A4F8263FE6F8F47791DEE2DAC21355BE8D26FF47197B3DE0E5771B8058BACA",
+      "oleanSha256": "1B1E77F02FA95527A73112BF8BDCB72F53FE3FB1ACCCC0A697BA04EA817C7528"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicConstantRoots.lean",
+      "sha256": "1D4FA1AA74A47682639D5221C694693AC2996EB7518ED656495E46D5A37D5FEC",
+      "oleanSha256": "BBA2E492306F73ABE88B083378AA63BE189F58392B67B21FE09E05BB3760118E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicConstantLift.lean",
+      "sha256": "B66E19031A162B171B6593C9532EC2B764E65164C114AF8DE6A9EA8E8F0DB843",
+      "oleanSha256": "6E9D117672C7DA5C0B4A68FFA1667E79218D58BDB6258294E2F1006D6365DA0F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicConstantInterpolation.lean",
+      "sha256": "473763E10000DB8A1646B62042AD80281D0EB1AEB3BF422D155D3E1AABE4D7C2",
+      "oleanSha256": "9BDCAE7425C1E7AB72016ECF6B288C0FC757139DC9740F64D01BF79AB79ED307"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicConstantIntegralSpan.lean",
+      "sha256": "BD41A7702012892D82CFD631170212F7C77E36DD8D445852B9FB47E3220EB82E",
+      "oleanSha256": "331B943F30A3A90E37CF1F6C25A114D31E148405C626A65805E3590E6D01B096"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFricke.ConstantDescent.isIntegral_subalgebra_iff",
+    "Dubon2026.SourceFricke.ConstantDescent.isIntegral_of_isIntegral_adjoin_singleton",
+    "Dubon2026.SourceFricke.ConstantDescent.algebraMap_subfield_apply'",
+    "Dubon2026.SourceFricke.ConstantDescent.charZero_KFld",
+    "Dubon2026.SourceFricke.ConstantDescent.isIntegral_TRng_algebraMap",
+    "Dubon2026.SourceFricke.ConstantDescent.isIntegral_KFld_algebraMap",
+    "Dubon2026.SourceFricke.ConstantDescent.minpoly_KFld_dvd",
+    "Dubon2026.SourceFricke.ConstantDescent.root_minpoly_KFld_eq_algebraMap",
+    "Dubon2026.SourceFricke.ConstantDescent.card_rootFinset_minpoly_KFld",
+    "Dubon2026.SourceFricke.ConstantDescent.algebraMap_adjoinF_mem",
+    "Dubon2026.SourceFricke.ConstantDescent.closure_adjoin_le",
+    "Dubon2026.SourceFricke.ConstantDescent.exists_lift_of_mem_adjoin",
+    "Dubon2026.SourceFricke.ConstantDescent.isIntegral_coeff_lagrangeBasis",
+    "Dubon2026.SourceFricke.ConstantDescent.mem_span_RSet_of_adjoin_simple",
+    "Dubon2026.SourceFricke.ConstantDescent.KFld",
+    "Dubon2026.SourceFricke.ConstantDescent.TRng",
+    "Dubon2026.SourceFricke.ConstantDescent.RSet"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFricke.ConstantDescent.isIntegral_subalgebra_iff",
+    "Dubon2026.SourceFricke.ConstantDescent.isIntegral_of_isIntegral_adjoin_singleton",
+    "Dubon2026.SourceFricke.ConstantDescent.algebraMap_subfield_apply'",
+    "Dubon2026.SourceFricke.ConstantDescent.charZero_KFld",
+    "Dubon2026.SourceFricke.ConstantDescent.isIntegral_TRng_algebraMap",
+    "Dubon2026.SourceFricke.ConstantDescent.isIntegral_KFld_algebraMap",
+    "Dubon2026.SourceFricke.ConstantDescent.minpoly_KFld_dvd",
+    "Dubon2026.SourceFricke.ConstantDescent.root_minpoly_KFld_eq_algebraMap",
+    "Dubon2026.SourceFricke.ConstantDescent.card_rootFinset_minpoly_KFld",
+    "Dubon2026.SourceFricke.ConstantDescent.algebraMap_adjoinF_mem",
+    "Dubon2026.SourceFricke.ConstantDescent.closure_adjoin_le",
+    "Dubon2026.SourceFricke.ConstantDescent.exists_lift_of_mem_adjoin",
+    "Dubon2026.SourceFricke.ConstantDescent.isIntegral_coeff_lagrangeBasis",
+    "Dubon2026.SourceFricke.ConstantDescent.mem_span_RSet_of_adjoin_simple"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFricke.ConstantDescent.KFld",
+    "Dubon2026.SourceFricke.ConstantDescent.TRng",
+    "Dubon2026.SourceFricke.ConstantDescent.RSet"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicConstantIntegralSpanAudit5.log",
+  "logSha256": "D991DBD67B3CAF5EBA2DE3940653D635B48C434D62EE0A715D033F63AD3E8382",
+  "auditSha256": "605145CA0218CACD02FAA6C34D1AA1255A6AE33F6677061159F7B6E92DC90712",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 17,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 26,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicConstantIntegralSpanDependencyAudit5.log",
+  "dependencyAuditSha256": "A456144B11D0439A65F321C55B54AF2A6C3800036DD5030F7A504BAD9DFC9EFF",
+  "dependencyAuditSourceSha256": "F095FBCB452909660DF7B5F82AF8322CD505BD31CA4D22D96AE530811528D624",
+  "consumers": [
+    "Dubon2026.SourceFricke.ConstantDescent.mem_span_RSet_of_adjoin_simple"
+  ],
+  "dependency": "DUB-17/18 -> original all-weight arithmetic association -> actual Gamma1 Hecke characters -> differential/cusp and Picard/H1 comparisons -> cyclotomic rational Fourier spanning -> integral base change of actual Fricke fractions -> finite constant-list induction -> algebraic constant-adjoining descent.",
+  "discharged": "At one algebraic constant-adjoining step, every integral element of the enlarged generated field lies in the complex span of elements integral over the original base algebra. The source proof derives integral coordinates through finite separable embeddings and Lagrange interpolation.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. This is a necessary foundation, not an acceptance-gate closure. The transcendental constant step, finite constant-list induction, actual Fricke-field instantiation, holomorphic representative recovery, rational Fourier spanning, arbitrary Gamma1 differential realization and the remaining arithmetic association/automorphy/higher continuation chain remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-algebraic-constant-integral-span-5-reuse-review-20261026.json",
+  "reuseReviewSha256": "BC5082EBB3CEB2F9FDBA8EBA9A72ED0092195A9B3F50B658DEDE51E85A7F0D7B",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

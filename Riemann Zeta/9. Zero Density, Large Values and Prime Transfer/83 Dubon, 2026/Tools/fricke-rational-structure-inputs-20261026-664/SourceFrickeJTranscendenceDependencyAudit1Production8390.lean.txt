@@ -1,0 +1,28 @@
+import Dubon2026.SourceFrickeJTranscendence
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFricke.transcendental_jK]
+  let localModules : Array Name := #[`Dubon2026.SourceEisensteinRationalSeries, `Dubon2026.SourceFrickeCuspInputs, `Dubon2026.SourceFrickeCyclotomicField, `Dubon2026.SourceFrickeFaithfulness, `Dubon2026.SourceFrickeFixedFieldJV3, `Dubon2026.SourceFrickeFixedFractionV3, `Dubon2026.SourceFrickeFunctionTransformationV2, `Dubon2026.SourceFrickeHolomorphicAlgebraV3, `Dubon2026.SourceFrickeHolomorphy, `Dubon2026.SourceFrickeJTranscendence, `Dubon2026.SourceFrickeLevelAlgebraV3, `Dubon2026.SourceFrickeLevelFieldV3, `Dubon2026.SourceFrickeLevelGroupV3, `Dubon2026.SourceFrickeModularLatticeV2, `Dubon2026.SourceFrickePeriodHomothetyV2, `Dubon2026.SourceFrickePoleBoundedV3, `Dubon2026.SourceFrickePrefactor, `Dubon2026.SourceFrickeSeparation, `Dubon2026.SourceFrickeTorsionLattice, `Dubon2026.SourceFrickeTorsionTransformationV2, `Dubon2026.SourceInvariantAnalyticJPolynomial, `Dubon2026.SourceLaurentAnalyticPolynomial, `Dubon2026.SourceLevelOneAnalyticJPolynomial, `Dubon2026.SourceLipschitzTwo, `Dubon2026.SourceLipschitzTwoRealBoundary, `Dubon2026.SourcePeriodWeierstrassSeparation, `Dubon2026.SourceQExpansionPeriodWidth, `Dubon2026.SourceWeierstrassLatticeRows, `Dubon2026.SourceWeierstrassNormalizedTorsion, `Dubon2026.SourceWeierstrassRowSeries, `Dubon2026.SourceWeierstrassTorsionCuspBound, `Dubon2026.SourceWeierstrassTorsionExpansion, `Dubon2026.SourceWeierstrassTorsionFourierCoefficients, `Dubon2026.SourceWeierstrassTorsionFourierExpansion, `Dubon2026.SourceWeierstrassTorsionFourierSum, `Dubon2026.SourceWeierstrassTorsionHolomorphy, `Dubon2026.SourceWeierstrassTorsionTail]
+  let required : Array Name := #[`Dubon2026.SourceFricke.analytic_j_aeval_injective, `Dubon2026.SourceFricke.transcendental_analytic_j, `Dubon2026.SourceFricke.transcendental_jA, `Dubon2026.SourceFricke.transcendental_jK, `Dubon2026.SourceFricke.aeval_j_apply, `Dubon2026.SourceFunctionField.JMultiplicity.jf_surjective, `Polynomial.funext, `transcendental_algebraMap_iff]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE FRICKE J TRANSCENDENCE DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual Fricke-field j-transcendence consumer. Only declaration values are traversed. The existing surjectivity of actual analytic j gives injective polynomial evaluation. The actual algebra inclusion and its injective fraction-field map preserve transcendence. No cusp asymptotic reproof or transcendence premise is needed. Rational Fourier spanning, differential realization and arithmetic comparison remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

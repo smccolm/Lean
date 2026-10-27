@@ -1,0 +1,22 @@
+import SourceFrickeCyclotomicHolomorphicAlgebra
+import SourceFrickeScalarExtensionBasis
+import SourceComplexBasisCoefficientTwist
+import SourceFrickeCoefficientTwist
+import SourceFrickeSpanLaurentRealization
+import SourceLaurentTwistOrder
+import SourceCuspVanishingOrder
+import SourceFrickeTwistCuspVanishing
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceFrickeCyclotomicHolomorphicAlgebra, `SourceFrickeScalarExtensionBasis, `SourceComplexBasisCoefficientTwist, `SourceFrickeCoefficientTwist, `SourceFrickeSpanLaurentRealization, `SourceLaurentTwistOrder, `SourceCuspVanishingOrder, `SourceFrickeTwistCuspVanishing]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

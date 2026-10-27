@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-26 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual finite Gamma1 character realization -> Picard/H1, full/parabolic and diamond comparison retaining the original homogeneous coefficient endomorphism -> actual differential/cusp comparison -> rational Fourier spanning -> Fricke integral base change -> finite constant-list integral-span assembly.",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\fricke-rational-descent-reuse-661\\P2M\\Sol\\S_WLight_frickeFunction_intBaseChange.lean.txt",
+      "sha256": "D36D134E23EA58F5405454E3CC718B9CE70CE48457F831D8F20A100CC60C7B21"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicConstantIntegralSpan.lean",
+      "sha256": "BD41A7702012892D82CFD631170212F7C77E36DD8D445852B9FB47E3220EB82E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpanV2.lean",
+      "sha256": "513A7752D13189C0367B302BC880324F39BFE3AFCF15F8BCF3C5805B4B4A8073"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentScalarIndependence.lean",
+      "sha256": "2CB7EFCA500FBE57B6F474D706B231DDDC227CA71A0345B799B2035C7A6AA6C5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentCoefficientMap.lean",
+      "sha256": "BB7D4274475CB03336B90871A85D0D799A97A29F414DD50B2634C2315EF5332F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralTranscendentalSeparability.lean",
+      "sha256": "A548E96FB2131C71B59931DD0BD444CCDF26A6685D9197A1574AD74B635F1770"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\IntermediateField\\Adjoin\\Defs.lean",
+      "sha256": "F32A9D077DC2B603BBAA04F6CDD11758A57708454E2B70792A3E2B8FA3279A73"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Span\\Defs.lean",
+      "sha256": "1908431FF9FAC0FB3E6D082EE369D89511A18C498B84D44BAFE02AE2B7766728"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\HahnSeries\\PowerSeries.lean",
+      "sha256": "B02D3942A3528DCB4F49603A3C657F826859629850CB561F12DA4080062B06AA"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\HahnSeries\\Multiplication.lean",
+      "sha256": "C60D7ABE32D091A9510D9FE17665B691650926DEFA308E1490C31A3F8AA144B4"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\laurent-integral-constant-span-route-669.json",
+    "sha256": "7AE744A37F16FBA9F556503281F88170492A2BFF172F4CED0D6D6D58C8AE102B",
+    "review": {
+      "scope": 669,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual finite Gamma1 character realization -> Picard/H1, full/parabolic and diamond comparison retaining the original homogeneous coefficient endomorphism -> actual differential/cusp comparison -> rational Fourier spanning -> Fricke integral base change -> finite constant-list integral-span assembly.",
+      "assumptionsToDischarge": "For a finite family of literal Laurent series over an original constant field, integral over its transcendental coordinate algebra, every element integral over the complex coordinate algebra in the complex generated field lies in the ordinary complex span of integral elements of the original generated field. Finite constant capture, both simple-extension descents, and their relative-transcendence conditions are proved and assembled. The two native scalar actions are compared explicitly.",
+      "remaining": "Actual j/Fricke generator membership, finite integral generator instantiation and its actual complex fraction Laurent realization are next. Holomorphic representative recovery and rational Fourier spanning, arbitrary Gamma1 differential realization and the arithmetic association/automorphy/higher continuation chain remain. 16/20; DUB-17--20 OPEN.",
+      "shorterRouteReview": "The existing literal Laurent coefficient map avoids a new analytic Fricke-field embedding and the external KPoleAt/holomorphic-domain machinery for relative transcendence. Taking a Laurent coefficient of a polynomial relation directly yields a polynomial over the original constants. The already proved scalar independence theorem was reviewed; its full basis-coordinate argument is unnecessary for this finite polynomial relation. Native adjoin induction captures the finite coefficient field, and the audited algebraic and transcendental steps replace all source shape assumptions. No incidental generic normalization theorem or proof-limit change is introduced. The existing expanded j-transcendence theorem will be reused for the actual instantiation.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\fricke-rational-descent-reuse-661\\P2M\\Sol\\S_WLight_frickeFunction_intBaseChange.lean.txt",
+          "sha256": "D36D134E23EA58F5405454E3CC718B9CE70CE48457F831D8F20A100CC60C7B21"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicConstantIntegralSpan.lean",
+          "sha256": "BD41A7702012892D82CFD631170212F7C77E36DD8D445852B9FB47E3220EB82E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpanV2.lean",
+          "sha256": "513A7752D13189C0367B302BC880324F39BFE3AFCF15F8BCF3C5805B4B4A8073"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentScalarIndependence.lean",
+          "sha256": "2CB7EFCA500FBE57B6F474D706B231DDDC227CA71A0345B799B2035C7A6AA6C5"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentCoefficientMap.lean",
+          "sha256": "BB7D4274475CB03336B90871A85D0D799A97A29F414DD50B2634C2315EF5332F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralTranscendentalSeparability.lean",
+          "sha256": "A548E96FB2131C71B59931DD0BD444CCDF26A6685D9197A1574AD74B635F1770"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\IntermediateField\\Adjoin\\Defs.lean",
+          "sha256": "F32A9D077DC2B603BBAA04F6CDD11758A57708454E2B70792A3E2B8FA3279A73"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Span\\Defs.lean",
+          "sha256": "1908431FF9FAC0FB3E6D082EE369D89511A18C498B84D44BAFE02AE2B7766728"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\HahnSeries\\PowerSeries.lean",
+          "sha256": "B02D3942A3528DCB4F49603A3C657F826859629850CB561F12DA4080062B06AA"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\HahnSeries\\Multiplication.lean",
+          "sha256": "C60D7ABE32D091A9510D9FE17665B691650926DEFA308E1490C31A3F8AA144B4"
+        }
+      ],
+      "sourceCommit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "sourceLicense": "Apache-2.0",
+      "externalImport": false,
+      "externalFullClosureVerified": false,
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "modules": [
+        "SourceLaurentConstantTranscendence",
+        "SourceLaurentGeneratedConstants",
+        "SourceConstantExtensionChain",
+        "SourceConstantExtensionMonotonicity",
+        "SourceFiniteConstantIntegralCapture",
+        "SourceLaurentIntegralConstantSpan"
+      ]
+    }
+  },
+  "discharged": "For a finite family of literal Laurent series over an original constant field, integral over its transcendental coordinate algebra, every element integral over the complex coordinate algebra in the complex generated field lies in the ordinary complex span of integral elements of the original generated field. Finite constant capture, both simple-extension descents, and their relative-transcendence conditions are proved and assembled. The two native scalar actions are compared explicitly.",
+  "remaining": "Actual j/Fricke generator membership, finite integral generator instantiation and its actual complex fraction Laurent realization are next. Holomorphic representative recovery and rational Fourier spanning, arbitrary Gamma1 differential realization and the arithmetic association/automorphy/higher continuation chain remain. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

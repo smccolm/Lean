@@ -1,0 +1,31 @@
+{
+  "scope": 673,
+  "scopeIds": [
+    "665",
+    "666",
+    "667e",
+    "669",
+    "670",
+    "671",
+    "672"
+  ],
+  "receipts": {
+    "source-fricke-cyclotomic-descent-10-scratch-receipt.json": "2F13189E8EC3B130D64120AA5233F0C1B5BB5ED0F18F502FB34C707C3F0CB8C7",
+    "source-algebraic-constant-integral-span-5-scratch-receipt.json": "10B43BC49F115B9943B30B16E003BF9E49E899238C8D6B7056B67E4703843916",
+    "source-transcendental-constant-integral-span-7e-scratch-receipt.json": "BEB97FB3DFD9C350FEEA1FB6CBDA75C922820B58AFAFB6BB1F1C6A94AD8484F0",
+    "source-laurent-integral-constant-span-6-scratch-receipt.json": "A3985CA46443B6F18C4722CB81B0EA8B90DEA175ABE27A9684CCDFD4DC7E04EF",
+    "source-actual-fricke-laurent-integral-span-4-scratch-receipt.json": "1AA9BE753A398EA8006802834BD5FE08A0C5C4E71C01167E2833A04FAB9EF896",
+    "source-fricke-holomorphic-integral-span-8-scratch-receipt.json": "42312FD5920DB80060B5499758377769BD2FBCC10ECC479183FA00A789329C89",
+    "source-fricke-pole-cleared-fourier-span-2-scratch-receipt.json": "91444231DC17D0CEFFECD0187EFC8DC22B1A4C5780686625AD0C27A41F3CA29F"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 Hecke characters -> actual Picard/H1, full/parabolic, transpose and diamond comparison retaining the original homogeneous coefficient endomorphism -> actual differential/cusp comparison -> rational cusp-form spanning -> pole-cleared cyclotomic Fourier span of actual Fricke functions.",
+  "discharged": "The original cyclotomic j/Fricke functions and their fractions have literal Laurent cusp representations. Coefficient retraction descends monic equations to the original field. Algebraic and transcendental simple-constant extensions, finite constant capture and coefficient-derived relative transcendence prove the integral Laurent span over the original constants. The actual finite Fricke generator family satisfies every finiteness, integrality, coefficient-field and transcendence premise. Integral Laurent summands lift to actual cyclotomic fractions; their cleared monic equations and the existing removable-singularity theorem derive holomorphic representatives. Native coefficientwise complex scalar multiplication and analytic uniqueness lift the Laurent span to actual functions. Positive discriminant cusp order clears each summand pole, and uniqueness against the cyclotomic Laurent expansion proves every resulting Fourier coefficient lies in the original cyclotomic field. Hence a holomorphic principal-level invariant function with the required bounds at every modular translate lies in the complex span of actual holomorphic functions with pole-cleared cyclotomic Fourier coefficients.",
+  "remaining": "Rational cusp-form spanning still requires the modular-weight, cusp-condition and coefficient-descent steps. The pole-cleared weight-zero function span does not yet realize an arbitrary Gamma1 cusp form as an original algebraic differential; the converse regular-differential-to-cusp construction also remains. The actual Picard/H1, full/parabolic, transpose and diamond comparison must identify original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of those characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN.",
+  "route": "The renewed selected-file search is recorded in Dubon Reuse Search 2026-10-26.md. Adapt the fixed-revision primary simple-constant integral-span proofs to the actual Laurent field, deriving the relative transcendence premise from coefficients. Reuse native fraction-ring surjectivity, the existing expanded-j transcendence, finite-action monic relation, analytic cusp-germ injectivity, coefficient retraction, monic-root bound and removable-singularity extension. For Fourier coefficients, native meromorphic orders clear the cusp pole and existing Laurent representations identify coefficients directly; the external general valuation engine, analytic quotient file, recursive Fourier division and monic-growth development are unnecessary on this route. All used and failed audits, original failed source variants and fresh successors are retained. Only final audited sources are promoted and only imports are qualified. No external full import closure was built or certified; pins, proof limits, source contract and all twenty acceptance gates are unchanged.",
+  "precedingCanonicalScope": 8390,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 acceptance gates unchanged.",
+  "reason": "Require preceding canonical PASS and immutable archive before production mutation."
+}

@@ -1,0 +1,58 @@
+{
+  "scope": 684,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> original Picard/H1, full/parabolic, transpose and diamond comparison -> actual differential/cusp comparison -> rational cusp-form spanning.",
+  "assumptionsToDischarge": "An original cyclotomic Fricke weight image gives a Laurent representation of the actual cusp form: multiply its Laurent numerator by the actual discriminant power and divide by the nonzero original Eisenstein factor. Uniqueness against the actual q-expansion proves every coefficient lies in the original cyclotomic field. For Gamma1, derive period one, width-N periodicity and cusp boundedness, identify the width-one coefficients, and consume the proved actual Fricke-image span. The actual weight-two Gamma1 cusp space is therefore spanned over the complex numbers by cusp forms with cyclotomic Fourier coefficients.",
+  "remaining": "Continue original Gamma1 differential realization and comparison, then finite-character arithmetic realization, original all-weight characteristic-zero association, automorphy and higher continuation. General weight-lowering remains subject to the original balance k+4a+6b=12m; the weight-two specialization uses a=b=m=1 and is unconditional in nonzero level N. No unrestricted odd-weight claim or closure of the arithmetic goal. 16/20; DUB-17--20 OPEN.",
+  "shorterRouteReview": "Read the fixed primary Fourier extraction source and checked local rational Eisenstein series, actual Fricke Laurent germs, original weight image, coefficient uniqueness and native width change. The existing Laurent field gives the desired original coefficient-field conclusion directly, avoiding the external recursive power-series unit-division argument and its polynomial-clearing development. Only the Eisenstein-factor Laurent representative and its nonzero germ were missing; both follow from existing native q-expansions and analytic nonvanishing. No external proof is imported.",
+  "externalImport": false,
+  "externalFullClosureVerified": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceEisensteinRationalSeries.lean",
+      "sha256": "E19E571826189DF9B1AC81189CEF81B9CF3658FFD93BB29B576DC71CD1662C0C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceQExpansionLaurentWidth.lean",
+      "sha256": "BF753D96B806085AAC9B3227461F647DA80C4A859A02EFF0616939CB96A2404B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicFractionGerm.lean",
+      "sha256": "E761C04EFA4A51687EEF11E3F4A75EC38631DDCAF911522D43A56C06F34FB7C5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspLaurentFractionIdentity.lean",
+      "sha256": "BDFDABE6460490760974FB3C4169668C36545BFF95FE0266DCF9CD5FA06869B7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightFactors.lean",
+      "sha256": "CB5BAB2BBAC3FEFD7C7CA36F022DEAFC5BA1EB763CAD5F80803F084557601B71"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightImage.lean",
+      "sha256": "E76C95612608840D7B510F6BD3CD68ACC4AFBC06C6FCB956DE823E5BEAC3CE42"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspFrickeRationalSpan.lean",
+      "sha256": "9E741DD160C9413902CC185185DC46C072627609F57D349B6A9C98717B1F5BFD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\CongruenceSubgroups.lean",
+      "sha256": "DF53B80B64A6DCD7B8AB7F87BD8092D77C557FCAA53857C23C507F9D894A23C0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRatioClosure.lean",
+      "sha256": "DC2DF8D6368EE28EC85E7FF35B0A223155F5F1015397E2F37F8934C16909EF1C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-rational-structure-input-reuse-646\\P2M\\Sol\\S_ModularForm_gamma1_qExpansion_coeff_mem_of_frickeRational.lean.txt",
+      "sha256": "F647A643D74CB76A516CFC79B4E76ECCE1EF30F558FF9D178228244F97E6788E"
+    }
+  ],
+  "modules": [
+    "SourceEisensteinFactorCyclotomicLaurent",
+    "SourceCuspWeightImageFourier",
+    "SourceGammaOneCyclotomicCuspSpan"
+  ]
+}

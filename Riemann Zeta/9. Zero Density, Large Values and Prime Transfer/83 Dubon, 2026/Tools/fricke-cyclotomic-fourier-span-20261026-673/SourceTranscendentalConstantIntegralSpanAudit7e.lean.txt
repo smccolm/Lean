@@ -1,0 +1,82 @@
+import SourceTranscendentalConstantAlgebraV2
+import SourceTranscendentalConstantEvaluationV2
+import SourceTranscendentalConstantDenominatorsV2
+import SourceTranscendentalConstantFieldRangeV2
+import SourceTranscendentalConstantScaledRelationV2
+import SourceTranscendentalConstantNormalityV2
+import SourceTranscendentalConstantIntegralSpanV2
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFricke.ConstantDescent.scalarTowerBaseRationalGenerated
+#print axioms Dubon2026.SourceFricke.ConstantDescent.scalarTowerBaseGeneratedAmbient
+#print axioms Dubon2026.SourceFricke.ConstantDescent.KFldT_restrictScalars
+#print axioms Dubon2026.SourceFricke.ConstantDescent.mem_KFldT_iff
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isDomainCoordinateRing
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isPrincipalIdealRing_TRng
+#print axioms Dubon2026.SourceFricke.ConstantDescent.finiteDimensional_KFldT
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isDedekindDomain_RFa
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isFractionRing_RFa
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isIntegrallyClosed_RFa_polynomial
+#print axioms Dubon2026.SourceFricke.ConstantDescent.t_mem_RSet
+#print axioms Dubon2026.SourceFricke.ConstantDescent.algebraMap_mem_RSet
+#print axioms Dubon2026.SourceFricke.ConstantDescent.rfPolyEval_injective
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isIntegral_KFldT_of
+#print axioms Dubon2026.SourceFricke.ConstantDescent.mem_range_rfPolyEval_of_mem_RSet
+#print axioms Dubon2026.SourceFricke.ConstantDescent.evalF_mem_range_rfPolyEval
+#print axioms Dubon2026.SourceFricke.ConstantDescent.range_rfPolyEval_subset_span
+#print axioms Dubon2026.SourceFricke.ConstantDescent.exists_clear_denominator
+#print axioms Dubon2026.SourceFricke.ConstantDescent.adjoin_le_fractionPolyRange
+#print axioms Dubon2026.SourceFricke.ConstantDescent.mem_fractionEval_fieldRange
+#print axioms Dubon2026.SourceFricke.ConstantDescent.exists_scaled_monic_relation
+#print axioms Dubon2026.SourceFricke.ConstantDescent.mem_range_of_fraction_monic_relation
+#print axioms Dubon2026.SourceFricke.ConstantDescent.mem_span_RSet_of_adjoin_simple_transcendental
+#print axioms Dubon2026.SourceFricke.ConstantDescent.RFld
+#print axioms Dubon2026.SourceFricke.ConstantDescent.KFldT
+#print axioms Dubon2026.SourceFricke.ConstantDescent.algebraTRngKFldT
+#print axioms Dubon2026.SourceFricke.ConstantDescent.RFa
+#print axioms Dubon2026.SourceFricke.ConstantDescent.commRingRFa
+#print axioms Dubon2026.SourceFricke.ConstantDescent.TRngEquiv
+#print axioms Dubon2026.SourceFricke.ConstantDescent.rfPolyEval
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceTranscendentalConstantAlgebraV2, `SourceTranscendentalConstantEvaluationV2, `SourceTranscendentalConstantDenominatorsV2, `SourceTranscendentalConstantFieldRangeV2, `SourceTranscendentalConstantScaledRelationV2, `SourceTranscendentalConstantNormalityV2, `SourceTranscendentalConstantIntegralSpanV2]
+  let theorems : Array Name := #[`Dubon2026.SourceFricke.ConstantDescent.scalarTowerBaseRationalGenerated, `Dubon2026.SourceFricke.ConstantDescent.scalarTowerBaseGeneratedAmbient, `Dubon2026.SourceFricke.ConstantDescent.KFldT_restrictScalars, `Dubon2026.SourceFricke.ConstantDescent.mem_KFldT_iff, `Dubon2026.SourceFricke.ConstantDescent.isDomainCoordinateRing, `Dubon2026.SourceFricke.ConstantDescent.isPrincipalIdealRing_TRng, `Dubon2026.SourceFricke.ConstantDescent.finiteDimensional_KFldT, `Dubon2026.SourceFricke.ConstantDescent.isDedekindDomain_RFa, `Dubon2026.SourceFricke.ConstantDescent.isFractionRing_RFa, `Dubon2026.SourceFricke.ConstantDescent.isIntegrallyClosed_RFa_polynomial, `Dubon2026.SourceFricke.ConstantDescent.t_mem_RSet, `Dubon2026.SourceFricke.ConstantDescent.algebraMap_mem_RSet, `Dubon2026.SourceFricke.ConstantDescent.rfPolyEval_injective, `Dubon2026.SourceFricke.ConstantDescent.isIntegral_KFldT_of, `Dubon2026.SourceFricke.ConstantDescent.mem_range_rfPolyEval_of_mem_RSet, `Dubon2026.SourceFricke.ConstantDescent.evalF_mem_range_rfPolyEval, `Dubon2026.SourceFricke.ConstantDescent.range_rfPolyEval_subset_span, `Dubon2026.SourceFricke.ConstantDescent.exists_clear_denominator, `Dubon2026.SourceFricke.ConstantDescent.adjoin_le_fractionPolyRange, `Dubon2026.SourceFricke.ConstantDescent.mem_fractionEval_fieldRange, `Dubon2026.SourceFricke.ConstantDescent.exists_scaled_monic_relation, `Dubon2026.SourceFricke.ConstantDescent.mem_range_of_fraction_monic_relation, `Dubon2026.SourceFricke.ConstantDescent.mem_span_RSet_of_adjoin_simple_transcendental]
+  let constructions : Array Name := #[`Dubon2026.SourceFricke.ConstantDescent.RFld, `Dubon2026.SourceFricke.ConstantDescent.KFldT, `Dubon2026.SourceFricke.ConstantDescent.algebraTRngKFldT, `Dubon2026.SourceFricke.ConstantDescent.RFa, `Dubon2026.SourceFricke.ConstantDescent.commRingRFa, `Dubon2026.SourceFricke.ConstantDescent.TRngEquiv, `Dubon2026.SourceFricke.ConstantDescent.rfPolyEval]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Transcendental Constant Integral Span postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Transcendental Constant Integral Span theorems discovered"
+  logInfo m!"SOURCE TRANSCENDENTAL CONSTANT INTEGRAL SPAN AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceTranscendentalConstantAlgebraV2
+#lint in SourceTranscendentalConstantEvaluationV2
+#lint in SourceTranscendentalConstantDenominatorsV2
+#lint in SourceTranscendentalConstantFieldRangeV2
+#lint in SourceTranscendentalConstantScaledRelationV2
+#lint in SourceTranscendentalConstantNormalityV2
+#lint in SourceTranscendentalConstantIntegralSpanV2

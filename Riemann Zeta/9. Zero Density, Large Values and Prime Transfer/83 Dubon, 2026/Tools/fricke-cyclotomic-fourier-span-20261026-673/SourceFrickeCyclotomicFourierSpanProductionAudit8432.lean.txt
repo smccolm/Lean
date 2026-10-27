@@ -1,0 +1,317 @@
+import Dubon2026.SourceCuspLaurentFunctionIdentity
+import Dubon2026.SourceQExpansionLaurentWidth
+import Dubon2026.SourcePoleBoundedCuspLaurent
+import Dubon2026.SourceFrickeCyclotomicLaurent
+import Dubon2026.SourceCuspLaurentPolynomial
+import Dubon2026.SourceCuspLaurentFractionIdentity
+import Dubon2026.SourceFrickeCyclotomicFractionGerm
+import Dubon2026.SourceFrickeLaurentIntegralDescent
+import Dubon2026.SourceFrickeFractionPeriodicity
+import Dubon2026.SourceFrickeCyclotomicMonic
+import Dubon2026.SourceConstantExtensionIntegralAlgebra
+import Dubon2026.SourceAlgebraicConstantRoots
+import Dubon2026.SourceAlgebraicConstantLift
+import Dubon2026.SourceAlgebraicConstantInterpolation
+import Dubon2026.SourceAlgebraicConstantIntegralSpan
+import Dubon2026.SourceTranscendentalConstantAlgebraV2
+import Dubon2026.SourceTranscendentalConstantEvaluationV2
+import Dubon2026.SourceTranscendentalConstantDenominatorsV2
+import Dubon2026.SourceTranscendentalConstantFieldRangeV2
+import Dubon2026.SourceTranscendentalConstantScaledRelationV2
+import Dubon2026.SourceTranscendentalConstantNormalityV2
+import Dubon2026.SourceTranscendentalConstantIntegralSpanV2
+import Dubon2026.SourceLaurentConstantTranscendence
+import Dubon2026.SourceLaurentGeneratedConstants
+import Dubon2026.SourceConstantExtensionChain
+import Dubon2026.SourceConstantExtensionMonotonicity
+import Dubon2026.SourceFiniteConstantIntegralCapture
+import Dubon2026.SourceLaurentIntegralConstantSpan
+import Dubon2026.SourceLaurentIntegralCoefficientImage
+import Dubon2026.SourceFrickeLaurentGeneratorIntegrality
+import Dubon2026.SourceFrickeComplexFractionLaurent
+import Dubon2026.SourceFrickeLaurentIntegralSpan
+import Dubon2026.SourceMonicQuotientRelation
+import Dubon2026.SourceHolomorphicMonicQuotient
+import Dubon2026.SourceIntegralCoordinateMonic
+import Dubon2026.SourceFrickeCyclotomicLaurentLifts
+import Dubon2026.SourceFrickeClearedLaurentMonic
+import Dubon2026.SourceFrickeIntegralHolomorphicRepresentative
+import Dubon2026.SourceCuspLaurentSpan
+import Dubon2026.SourceFrickeHolomorphicIntegralSpan
+import Dubon2026.SourceMeromorphicCuspPoleClearing
+import Dubon2026.SourceFrickePoleClearedFourierSpan
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.mdifferentiable_eq_of_eventuallyEq_atImInfty
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.represents_qExpansion
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.eq_upperHalfPlane
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.represents_cusp_const
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_add
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_mul
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_inv
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_div
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_pow
+#print axioms Dubon2026.SourceFunctionField.qExpansion_eq_expand
+#print axioms Dubon2026.SourceFunctionField.qExpansion_laurent_width
+#print axioms Dubon2026.SourceFunctionField.represents_jqNModC
+#print axioms Dubon2026.SourceFricke.periodic_discriminant_width
+#print axioms Dubon2026.SourceFricke.represents_discriminant_width
+#print axioms Dubon2026.SourceFricke.exists_cusp_represents_of_poleBounded
+#print axioms Dubon2026.SourceFricke.coeffMap_discriminantLaurentK
+#print axioms Dubon2026.SourceFricke.coeffMap_jqNModC_kN
+#print axioms Dubon2026.SourceFricke.frickeF_eq_frickeH_div
+#print axioms Dubon2026.SourceFricke.represents_frickeLaurentK
+#print axioms Dubon2026.SourceFricke.periodic_frickeF
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_sum
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_aeval
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.isIntegral_of_monic_relation
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.eventually_ne_zero
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.ne_zero_of_function_ne_zero
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_of_mul_eq
+#print axioms Dubon2026.SourceFricke.periodic_jf_width
+#print axioms Dubon2026.SourceFricke.cyclotomicLevelRing_holomorphic
+#print axioms Dubon2026.SourceFricke.cyclotomicLevelRing_periodic
+#print axioms Dubon2026.SourceFricke.exists_cyclotomic_cusp_represents
+#print axioms Dubon2026.SourceFricke.exists_cyclotomic_fraction_represents
+#print axioms Dubon2026.SourceFricke.exists_integral_cyclotomic_laurent_of_monic
+#print axioms Dubon2026.SourceFricke.exists_polynomial_monic_relation_of_isIntegral
+#print axioms Dubon2026.SourceFricke.coeffMap_aeval_jqNModC_kN
+#print axioms Dubon2026.SourceFricke.apply_T_of_periodic
+#print axioms Dubon2026.SourceFricke.periodic_comp_ofComplex_of_T
+#print axioms Dubon2026.SourceFricke.periodic_cyclotomic_fraction
+#print axioms Dubon2026.SourceFricke.mdifferentiable_polynomial_jf
+#print axioms Dubon2026.SourceFricke.exists_cyclotomic_monic_relation
+#print axioms Dubon2026.SourceFricke.discriminantLaurentK
+#print axioms Dubon2026.SourceFricke.frickeLaurentK
+#print axioms Dubon2026.SourceFricke.cyclotomicLevelRing
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isIntegral_subalgebra_iff
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isIntegral_of_isIntegral_adjoin_singleton
+#print axioms Dubon2026.SourceFricke.ConstantDescent.algebraMap_subfield_apply'
+#print axioms Dubon2026.SourceFricke.ConstantDescent.charZero_KFld
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isIntegral_TRng_algebraMap
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isIntegral_KFld_algebraMap
+#print axioms Dubon2026.SourceFricke.ConstantDescent.minpoly_KFld_dvd
+#print axioms Dubon2026.SourceFricke.ConstantDescent.root_minpoly_KFld_eq_algebraMap
+#print axioms Dubon2026.SourceFricke.ConstantDescent.card_rootFinset_minpoly_KFld
+#print axioms Dubon2026.SourceFricke.ConstantDescent.algebraMap_adjoinF_mem
+#print axioms Dubon2026.SourceFricke.ConstantDescent.closure_adjoin_le
+#print axioms Dubon2026.SourceFricke.ConstantDescent.exists_lift_of_mem_adjoin
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isIntegral_coeff_lagrangeBasis
+#print axioms Dubon2026.SourceFricke.ConstantDescent.mem_span_RSet_of_adjoin_simple
+#print axioms Dubon2026.SourceFricke.ConstantDescent.KFld
+#print axioms Dubon2026.SourceFricke.ConstantDescent.TRng
+#print axioms Dubon2026.SourceFricke.ConstantDescent.RSet
+#print axioms Dubon2026.SourceFricke.ConstantDescent.scalarTowerBaseRationalGenerated
+#print axioms Dubon2026.SourceFricke.ConstantDescent.scalarTowerBaseGeneratedAmbient
+#print axioms Dubon2026.SourceFricke.ConstantDescent.KFldT_restrictScalars
+#print axioms Dubon2026.SourceFricke.ConstantDescent.mem_KFldT_iff
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isDomainCoordinateRing
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isPrincipalIdealRing_TRng
+#print axioms Dubon2026.SourceFricke.ConstantDescent.finiteDimensional_KFldT
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isDedekindDomain_RFa
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isFractionRing_RFa
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isIntegrallyClosed_RFa_polynomial
+#print axioms Dubon2026.SourceFricke.ConstantDescent.t_mem_RSet
+#print axioms Dubon2026.SourceFricke.ConstantDescent.algebraMap_mem_RSet
+#print axioms Dubon2026.SourceFricke.ConstantDescent.rfPolyEval_injective
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isIntegral_KFldT_of
+#print axioms Dubon2026.SourceFricke.ConstantDescent.mem_range_rfPolyEval_of_mem_RSet
+#print axioms Dubon2026.SourceFricke.ConstantDescent.evalF_mem_range_rfPolyEval
+#print axioms Dubon2026.SourceFricke.ConstantDescent.range_rfPolyEval_subset_span
+#print axioms Dubon2026.SourceFricke.ConstantDescent.exists_clear_denominator
+#print axioms Dubon2026.SourceFricke.ConstantDescent.adjoin_le_fractionPolyRange
+#print axioms Dubon2026.SourceFricke.ConstantDescent.mem_fractionEval_fieldRange
+#print axioms Dubon2026.SourceFricke.ConstantDescent.exists_scaled_monic_relation
+#print axioms Dubon2026.SourceFricke.ConstantDescent.mem_range_of_fraction_monic_relation
+#print axioms Dubon2026.SourceFricke.ConstantDescent.mem_span_RSet_of_adjoin_simple_transcendental
+#print axioms Dubon2026.SourceFricke.ConstantDescent.RFld
+#print axioms Dubon2026.SourceFricke.ConstantDescent.KFldT
+#print axioms Dubon2026.SourceFricke.ConstantDescent.algebraTRngKFldT
+#print axioms Dubon2026.SourceFricke.ConstantDescent.RFa
+#print axioms Dubon2026.SourceFricke.ConstantDescent.commRingRFa
+#print axioms Dubon2026.SourceFricke.ConstantDescent.TRngEquiv
+#print axioms Dubon2026.SourceFricke.ConstantDescent.rfPolyEval
+#print axioms Dubon2026.SourceFricke.ConstantDescent.constant_transcendental_of_coeff_mem
+#print axioms Dubon2026.SourceFricke.ConstantDescent.constant_mem_coeffMap_fieldRange
+#print axioms Dubon2026.SourceFricke.ConstantDescent.generated_mem_coeffMap_fieldRange
+#print axioms Dubon2026.SourceFricke.ConstantDescent.generated_coeff_mem
+#print axioms Dubon2026.SourceFricke.ConstantDescent.constant_transcendental_generated
+#print axioms Dubon2026.SourceFricke.ConstantDescent.coeffMap_fieldRange_mono
+#print axioms Dubon2026.SourceFricke.ConstantDescent.constantChain_le_cons
+#print axioms Dubon2026.SourceFricke.ConstantDescent.le_constantChain
+#print axioms Dubon2026.SourceFricke.ConstantDescent.mem_constantChain_of_mem
+#print axioms Dubon2026.SourceFricke.ConstantDescent.constantChain_le
+#print axioms Dubon2026.SourceFricke.ConstantDescent.constantChain_le_append_left
+#print axioms Dubon2026.SourceFricke.ConstantDescent.constantChain_le_append_right
+#print axioms Dubon2026.SourceFricke.ConstantDescent.adjoin_constants_mono
+#print axioms Dubon2026.SourceFricke.ConstantDescent.generated_constants_mono
+#print axioms Dubon2026.SourceFricke.ConstantDescent.integral_constants_mono
+#print axioms Dubon2026.SourceFricke.ConstantDescent.generated_mem_iff_closure
+#print axioms Dubon2026.SourceFricke.ConstantDescent.exists_list_mem_algebra
+#print axioms Dubon2026.SourceFricke.ConstantDescent.exists_list_mem_field
+#print axioms Dubon2026.SourceFricke.ConstantDescent.exists_list_integral_coordinates
+#print axioms Dubon2026.SourceFricke.ConstantDescent.exists_list_mem_integral_generated
+#print axioms Dubon2026.SourceFricke.ConstantDescent.mem_span_laurent_of_algebra_span
+#print axioms Dubon2026.SourceFricke.ConstantDescent.integral_constantChain_step
+#print axioms Dubon2026.SourceFricke.ConstantDescent.integral_constantChain_subset_span
+#print axioms Dubon2026.SourceFricke.ConstantDescent.mem_span_integral_generated_of_complex
+#print axioms Dubon2026.SourceFricke.ConstantDescent.constantChain
+#print axioms Dubon2026.SourceFunctionField.isIntegral_adjoin_coeffMap_of_isIntegral
+#print axioms Dubon2026.SourceFricke.frickeLaurent_complex_integral
+#print axioms Dubon2026.SourceFricke.frickeLaurentK_integral
+#print axioms Dubon2026.SourceFricke.frickeLaurent_integral_original_constants
+#print axioms Dubon2026.SourceFricke.frickeLaurentGenerators_finite
+#print axioms Dubon2026.SourceFricke.frickeLaurentGenerators_coeffRange
+#print axioms Dubon2026.SourceFricke.frickeLaurentGenerators_integral
+#print axioms Dubon2026.SourceFricke.transcendental_frickeLaurent_j
+#print axioms Dubon2026.SourceFricke.levelRing_periodic
+#print axioms Dubon2026.SourceFricke.exists_complex_fricke_cusp_represents
+#print axioms Dubon2026.SourceFricke.exists_complex_fricke_fraction_represents
+#print axioms Dubon2026.SourceFricke.frickeLaurent_integral_mem_span
+#print axioms Dubon2026.SourceFricke.exists_fricke_laurent_integral_span_of_principal_invariant
+#print axioms Dubon2026.SourceFricke.frickeLaurentGenerators
+#print axioms Dubon2026.SourceFunctionField.cleared_monic_relation_eq_scaled
+#print axioms Dubon2026.SourceFunctionField.monic_div_relation_of_cleared
+#print axioms Dubon2026.SourceFunctionField.cleared_monic_relation_of_div
+#print axioms Dubon2026.SourceFunctionField.mdiff_eventually_ne_zero_ofComplex
+#print axioms Dubon2026.SourceFunctionField.quotient_locally_bounded_of_monic
+#print axioms Dubon2026.SourceFunctionField.exists_mdifferentiable_quotient_of_monic
+#print axioms Dubon2026.SourceFunctionField.exists_coordinate_monic_relation
+#print axioms Dubon2026.SourceFricke.exists_cyclotomic_function_of_laurent_algebra
+#print axioms Dubon2026.SourceFricke.exists_cyclotomic_function_fraction_of_laurent_field
+#print axioms Dubon2026.SourceFricke.cyclotomic_polynomial_jf_mem
+#print axioms Dubon2026.SourceFricke.represents_cyclotomic_polynomial_jf
+#print axioms Dubon2026.SourceFricke.cleared_cyclotomic_relation_of_laurent
+#print axioms Dubon2026.SourceFricke.exists_holomorphic_cyclotomic_fraction_of_integral_laurent
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_smul
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.mem_span_of_laurent_span
+#print axioms Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_periodic
+#print axioms Dubon2026.SourceFricke.periodic_of_principal_invariant
+#print axioms Dubon2026.SourceFricke.mem_span_holomorphic_cyclotomic_fractions_of_principal_invariant
+#print axioms Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions
+#print axioms Dubon2026.SourceFricke.exists_nonnegative_add_nat_mul
+#print axioms Dubon2026.SourceFricke.meromorphicOrderAt_discriminant_cusp_pos
+#print axioms Dubon2026.SourceFricke.periodic_mul_discriminant
+#print axioms Dubon2026.SourceFricke.exists_bounded_mul_discriminant_of_meromorphic
+#print axioms Dubon2026.SourceFricke.exists_pole_cleared_cyclotomic_qExpansion
+#print axioms Dubon2026.SourceFricke.mem_span_pole_cleared_cyclotomic_of_principal_invariant
+#print axioms Dubon2026.SourceFricke.cyclotomicPoleBoundedFunctions
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceCuspLaurentFunctionIdentity, `Dubon2026.SourceQExpansionLaurentWidth, `Dubon2026.SourcePoleBoundedCuspLaurent, `Dubon2026.SourceFrickeCyclotomicLaurent, `Dubon2026.SourceCuspLaurentPolynomial, `Dubon2026.SourceCuspLaurentFractionIdentity, `Dubon2026.SourceFrickeCyclotomicFractionGerm, `Dubon2026.SourceFrickeLaurentIntegralDescent, `Dubon2026.SourceFrickeFractionPeriodicity, `Dubon2026.SourceFrickeCyclotomicMonic, `Dubon2026.SourceConstantExtensionIntegralAlgebra, `Dubon2026.SourceAlgebraicConstantRoots, `Dubon2026.SourceAlgebraicConstantLift, `Dubon2026.SourceAlgebraicConstantInterpolation, `Dubon2026.SourceAlgebraicConstantIntegralSpan, `Dubon2026.SourceTranscendentalConstantAlgebraV2, `Dubon2026.SourceTranscendentalConstantEvaluationV2, `Dubon2026.SourceTranscendentalConstantDenominatorsV2, `Dubon2026.SourceTranscendentalConstantFieldRangeV2, `Dubon2026.SourceTranscendentalConstantScaledRelationV2, `Dubon2026.SourceTranscendentalConstantNormalityV2, `Dubon2026.SourceTranscendentalConstantIntegralSpanV2, `Dubon2026.SourceLaurentConstantTranscendence, `Dubon2026.SourceLaurentGeneratedConstants, `Dubon2026.SourceConstantExtensionChain, `Dubon2026.SourceConstantExtensionMonotonicity, `Dubon2026.SourceFiniteConstantIntegralCapture, `Dubon2026.SourceLaurentIntegralConstantSpan, `Dubon2026.SourceLaurentIntegralCoefficientImage, `Dubon2026.SourceFrickeLaurentGeneratorIntegrality, `Dubon2026.SourceFrickeComplexFractionLaurent, `Dubon2026.SourceFrickeLaurentIntegralSpan, `Dubon2026.SourceMonicQuotientRelation, `Dubon2026.SourceHolomorphicMonicQuotient, `Dubon2026.SourceIntegralCoordinateMonic, `Dubon2026.SourceFrickeCyclotomicLaurentLifts, `Dubon2026.SourceFrickeClearedLaurentMonic, `Dubon2026.SourceFrickeIntegralHolomorphicRepresentative, `Dubon2026.SourceCuspLaurentSpan, `Dubon2026.SourceFrickeHolomorphicIntegralSpan, `Dubon2026.SourceMeromorphicCuspPoleClearing, `Dubon2026.SourceFrickePoleClearedFourierSpan]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.mdifferentiable_eq_of_eventuallyEq_atImInfty, `Dubon2026.SourceFunctionField.CuspTaylor.represents_qExpansion, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.eq_upperHalfPlane, `Dubon2026.SourceFunctionField.CuspTaylor.represents_cusp_const, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_add, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_mul, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_inv, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_div, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_pow, `Dubon2026.SourceFunctionField.qExpansion_eq_expand, `Dubon2026.SourceFunctionField.qExpansion_laurent_width, `Dubon2026.SourceFunctionField.represents_jqNModC, `Dubon2026.SourceFricke.periodic_discriminant_width, `Dubon2026.SourceFricke.represents_discriminant_width, `Dubon2026.SourceFricke.exists_cusp_represents_of_poleBounded, `Dubon2026.SourceFricke.coeffMap_discriminantLaurentK, `Dubon2026.SourceFricke.coeffMap_jqNModC_kN, `Dubon2026.SourceFricke.frickeF_eq_frickeH_div, `Dubon2026.SourceFricke.represents_frickeLaurentK, `Dubon2026.SourceFricke.periodic_frickeF, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_sum, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_aeval, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.isIntegral_of_monic_relation, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.eventually_ne_zero, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.ne_zero_of_function_ne_zero, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_of_mul_eq, `Dubon2026.SourceFricke.periodic_jf_width, `Dubon2026.SourceFricke.cyclotomicLevelRing_holomorphic, `Dubon2026.SourceFricke.cyclotomicLevelRing_periodic, `Dubon2026.SourceFricke.exists_cyclotomic_cusp_represents, `Dubon2026.SourceFricke.exists_cyclotomic_fraction_represents, `Dubon2026.SourceFricke.exists_integral_cyclotomic_laurent_of_monic, `Dubon2026.SourceFricke.exists_polynomial_monic_relation_of_isIntegral, `Dubon2026.SourceFricke.coeffMap_aeval_jqNModC_kN, `Dubon2026.SourceFricke.apply_T_of_periodic, `Dubon2026.SourceFricke.periodic_comp_ofComplex_of_T, `Dubon2026.SourceFricke.periodic_cyclotomic_fraction, `Dubon2026.SourceFricke.mdifferentiable_polynomial_jf, `Dubon2026.SourceFricke.exists_cyclotomic_monic_relation, `Dubon2026.SourceFricke.ConstantDescent.isIntegral_subalgebra_iff, `Dubon2026.SourceFricke.ConstantDescent.isIntegral_of_isIntegral_adjoin_singleton, `Dubon2026.SourceFricke.ConstantDescent.algebraMap_subfield_apply', `Dubon2026.SourceFricke.ConstantDescent.charZero_KFld, `Dubon2026.SourceFricke.ConstantDescent.isIntegral_TRng_algebraMap, `Dubon2026.SourceFricke.ConstantDescent.isIntegral_KFld_algebraMap, `Dubon2026.SourceFricke.ConstantDescent.minpoly_KFld_dvd, `Dubon2026.SourceFricke.ConstantDescent.root_minpoly_KFld_eq_algebraMap, `Dubon2026.SourceFricke.ConstantDescent.card_rootFinset_minpoly_KFld, `Dubon2026.SourceFricke.ConstantDescent.algebraMap_adjoinF_mem, `Dubon2026.SourceFricke.ConstantDescent.closure_adjoin_le, `Dubon2026.SourceFricke.ConstantDescent.exists_lift_of_mem_adjoin, `Dubon2026.SourceFricke.ConstantDescent.isIntegral_coeff_lagrangeBasis, `Dubon2026.SourceFricke.ConstantDescent.mem_span_RSet_of_adjoin_simple, `Dubon2026.SourceFricke.ConstantDescent.scalarTowerBaseRationalGenerated, `Dubon2026.SourceFricke.ConstantDescent.scalarTowerBaseGeneratedAmbient, `Dubon2026.SourceFricke.ConstantDescent.KFldT_restrictScalars, `Dubon2026.SourceFricke.ConstantDescent.mem_KFldT_iff, `Dubon2026.SourceFricke.ConstantDescent.isDomainCoordinateRing, `Dubon2026.SourceFricke.ConstantDescent.isPrincipalIdealRing_TRng, `Dubon2026.SourceFricke.ConstantDescent.finiteDimensional_KFldT, `Dubon2026.SourceFricke.ConstantDescent.isDedekindDomain_RFa, `Dubon2026.SourceFricke.ConstantDescent.isFractionRing_RFa, `Dubon2026.SourceFricke.ConstantDescent.isIntegrallyClosed_RFa_polynomial, `Dubon2026.SourceFricke.ConstantDescent.t_mem_RSet, `Dubon2026.SourceFricke.ConstantDescent.algebraMap_mem_RSet, `Dubon2026.SourceFricke.ConstantDescent.rfPolyEval_injective, `Dubon2026.SourceFricke.ConstantDescent.isIntegral_KFldT_of, `Dubon2026.SourceFricke.ConstantDescent.mem_range_rfPolyEval_of_mem_RSet, `Dubon2026.SourceFricke.ConstantDescent.evalF_mem_range_rfPolyEval, `Dubon2026.SourceFricke.ConstantDescent.range_rfPolyEval_subset_span, `Dubon2026.SourceFricke.ConstantDescent.exists_clear_denominator, `Dubon2026.SourceFricke.ConstantDescent.adjoin_le_fractionPolyRange, `Dubon2026.SourceFricke.ConstantDescent.mem_fractionEval_fieldRange, `Dubon2026.SourceFricke.ConstantDescent.exists_scaled_monic_relation, `Dubon2026.SourceFricke.ConstantDescent.mem_range_of_fraction_monic_relation, `Dubon2026.SourceFricke.ConstantDescent.mem_span_RSet_of_adjoin_simple_transcendental, `Dubon2026.SourceFricke.ConstantDescent.constant_transcendental_of_coeff_mem, `Dubon2026.SourceFricke.ConstantDescent.constant_mem_coeffMap_fieldRange, `Dubon2026.SourceFricke.ConstantDescent.generated_mem_coeffMap_fieldRange, `Dubon2026.SourceFricke.ConstantDescent.generated_coeff_mem, `Dubon2026.SourceFricke.ConstantDescent.constant_transcendental_generated, `Dubon2026.SourceFricke.ConstantDescent.coeffMap_fieldRange_mono, `Dubon2026.SourceFricke.ConstantDescent.constantChain_le_cons, `Dubon2026.SourceFricke.ConstantDescent.le_constantChain, `Dubon2026.SourceFricke.ConstantDescent.mem_constantChain_of_mem, `Dubon2026.SourceFricke.ConstantDescent.constantChain_le, `Dubon2026.SourceFricke.ConstantDescent.constantChain_le_append_left, `Dubon2026.SourceFricke.ConstantDescent.constantChain_le_append_right, `Dubon2026.SourceFricke.ConstantDescent.adjoin_constants_mono, `Dubon2026.SourceFricke.ConstantDescent.generated_constants_mono, `Dubon2026.SourceFricke.ConstantDescent.integral_constants_mono, `Dubon2026.SourceFricke.ConstantDescent.generated_mem_iff_closure, `Dubon2026.SourceFricke.ConstantDescent.exists_list_mem_algebra, `Dubon2026.SourceFricke.ConstantDescent.exists_list_mem_field, `Dubon2026.SourceFricke.ConstantDescent.exists_list_integral_coordinates, `Dubon2026.SourceFricke.ConstantDescent.exists_list_mem_integral_generated, `Dubon2026.SourceFricke.ConstantDescent.mem_span_laurent_of_algebra_span, `Dubon2026.SourceFricke.ConstantDescent.integral_constantChain_step, `Dubon2026.SourceFricke.ConstantDescent.integral_constantChain_subset_span, `Dubon2026.SourceFricke.ConstantDescent.mem_span_integral_generated_of_complex, `Dubon2026.SourceFunctionField.isIntegral_adjoin_coeffMap_of_isIntegral, `Dubon2026.SourceFricke.frickeLaurent_complex_integral, `Dubon2026.SourceFricke.frickeLaurentK_integral, `Dubon2026.SourceFricke.frickeLaurent_integral_original_constants, `Dubon2026.SourceFricke.frickeLaurentGenerators_finite, `Dubon2026.SourceFricke.frickeLaurentGenerators_coeffRange, `Dubon2026.SourceFricke.frickeLaurentGenerators_integral, `Dubon2026.SourceFricke.transcendental_frickeLaurent_j, `Dubon2026.SourceFricke.levelRing_periodic, `Dubon2026.SourceFricke.exists_complex_fricke_cusp_represents, `Dubon2026.SourceFricke.exists_complex_fricke_fraction_represents, `Dubon2026.SourceFricke.frickeLaurent_integral_mem_span, `Dubon2026.SourceFricke.exists_fricke_laurent_integral_span_of_principal_invariant, `Dubon2026.SourceFunctionField.cleared_monic_relation_eq_scaled, `Dubon2026.SourceFunctionField.monic_div_relation_of_cleared, `Dubon2026.SourceFunctionField.cleared_monic_relation_of_div, `Dubon2026.SourceFunctionField.mdiff_eventually_ne_zero_ofComplex, `Dubon2026.SourceFunctionField.quotient_locally_bounded_of_monic, `Dubon2026.SourceFunctionField.exists_mdifferentiable_quotient_of_monic, `Dubon2026.SourceFunctionField.exists_coordinate_monic_relation, `Dubon2026.SourceFricke.exists_cyclotomic_function_of_laurent_algebra, `Dubon2026.SourceFricke.exists_cyclotomic_function_fraction_of_laurent_field, `Dubon2026.SourceFricke.cyclotomic_polynomial_jf_mem, `Dubon2026.SourceFricke.represents_cyclotomic_polynomial_jf, `Dubon2026.SourceFricke.cleared_cyclotomic_relation_of_laurent, `Dubon2026.SourceFricke.exists_holomorphic_cyclotomic_fraction_of_integral_laurent, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_smul, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.mem_span_of_laurent_span, `Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_periodic, `Dubon2026.SourceFricke.periodic_of_principal_invariant, `Dubon2026.SourceFricke.mem_span_holomorphic_cyclotomic_fractions_of_principal_invariant, `Dubon2026.SourceFricke.exists_nonnegative_add_nat_mul, `Dubon2026.SourceFricke.meromorphicOrderAt_discriminant_cusp_pos, `Dubon2026.SourceFricke.periodic_mul_discriminant, `Dubon2026.SourceFricke.exists_bounded_mul_discriminant_of_meromorphic, `Dubon2026.SourceFricke.exists_pole_cleared_cyclotomic_qExpansion, `Dubon2026.SourceFricke.mem_span_pole_cleared_cyclotomic_of_principal_invariant]
+  let constructions : Array Name := #[`Dubon2026.SourceFricke.discriminantLaurentK, `Dubon2026.SourceFricke.frickeLaurentK, `Dubon2026.SourceFricke.cyclotomicLevelRing, `Dubon2026.SourceFricke.ConstantDescent.KFld, `Dubon2026.SourceFricke.ConstantDescent.TRng, `Dubon2026.SourceFricke.ConstantDescent.RSet, `Dubon2026.SourceFricke.ConstantDescent.RFld, `Dubon2026.SourceFricke.ConstantDescent.KFldT, `Dubon2026.SourceFricke.ConstantDescent.algebraTRngKFldT, `Dubon2026.SourceFricke.ConstantDescent.RFa, `Dubon2026.SourceFricke.ConstantDescent.commRingRFa, `Dubon2026.SourceFricke.ConstantDescent.TRngEquiv, `Dubon2026.SourceFricke.ConstantDescent.rfPolyEval, `Dubon2026.SourceFricke.ConstantDescent.constantChain, `Dubon2026.SourceFricke.frickeLaurentGenerators, `Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions, `Dubon2026.SourceFricke.cyclotomicPoleBoundedFunctions]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE FRICKE CYCLOTOMIC FOURIER SPAN AUDIT PASS: {count} theorems including private/generated declarations. Original-constant integral Laurent descent, holomorphic summand realization and pole-cleared cyclotomic Fourier span are proved. Rational cusp spanning, differential realization and arithmetic comparison remain; 16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceCuspLaurentFunctionIdentity
+
+#lint in Dubon2026.SourceQExpansionLaurentWidth
+
+#lint in Dubon2026.SourcePoleBoundedCuspLaurent
+
+#lint in Dubon2026.SourceFrickeCyclotomicLaurent
+
+#lint in Dubon2026.SourceCuspLaurentPolynomial
+
+#lint in Dubon2026.SourceCuspLaurentFractionIdentity
+
+#lint in Dubon2026.SourceFrickeCyclotomicFractionGerm
+
+#lint in Dubon2026.SourceFrickeLaurentIntegralDescent
+
+#lint in Dubon2026.SourceFrickeFractionPeriodicity
+
+#lint in Dubon2026.SourceFrickeCyclotomicMonic
+
+#lint in Dubon2026.SourceConstantExtensionIntegralAlgebra
+
+#lint in Dubon2026.SourceAlgebraicConstantRoots
+
+#lint in Dubon2026.SourceAlgebraicConstantLift
+
+#lint in Dubon2026.SourceAlgebraicConstantInterpolation
+
+#lint in Dubon2026.SourceAlgebraicConstantIntegralSpan
+
+#lint in Dubon2026.SourceTranscendentalConstantAlgebraV2
+
+#lint in Dubon2026.SourceTranscendentalConstantEvaluationV2
+
+#lint in Dubon2026.SourceTranscendentalConstantDenominatorsV2
+
+#lint in Dubon2026.SourceTranscendentalConstantFieldRangeV2
+
+#lint in Dubon2026.SourceTranscendentalConstantScaledRelationV2
+
+#lint in Dubon2026.SourceTranscendentalConstantNormalityV2
+
+#lint in Dubon2026.SourceTranscendentalConstantIntegralSpanV2
+
+#lint in Dubon2026.SourceLaurentConstantTranscendence
+
+#lint in Dubon2026.SourceLaurentGeneratedConstants
+
+#lint in Dubon2026.SourceConstantExtensionChain
+
+#lint in Dubon2026.SourceConstantExtensionMonotonicity
+
+#lint in Dubon2026.SourceFiniteConstantIntegralCapture
+
+#lint in Dubon2026.SourceLaurentIntegralConstantSpan
+
+#lint in Dubon2026.SourceLaurentIntegralCoefficientImage
+
+#lint in Dubon2026.SourceFrickeLaurentGeneratorIntegrality
+
+#lint in Dubon2026.SourceFrickeComplexFractionLaurent
+
+#lint in Dubon2026.SourceFrickeLaurentIntegralSpan
+
+#lint in Dubon2026.SourceMonicQuotientRelation
+
+#lint in Dubon2026.SourceHolomorphicMonicQuotient
+
+#lint in Dubon2026.SourceIntegralCoordinateMonic
+
+#lint in Dubon2026.SourceFrickeCyclotomicLaurentLifts
+
+#lint in Dubon2026.SourceFrickeClearedLaurentMonic
+
+#lint in Dubon2026.SourceFrickeIntegralHolomorphicRepresentative
+
+#lint in Dubon2026.SourceCuspLaurentSpan
+
+#lint in Dubon2026.SourceFrickeHolomorphicIntegralSpan
+
+#lint in Dubon2026.SourceMeromorphicCuspPoleClearing
+
+#lint in Dubon2026.SourceFrickePoleClearedFourierSpan

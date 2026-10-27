@@ -1,0 +1,67 @@
+import SourceCyclotomicFrickeIndex
+import SourceFrickeLaurentCyclotomicConjugation
+import SourceFrickeLaurentFieldConjugation
+import SourceOriginalFrickeLaurentField
+import SourceFrickeCyclotomicAnalyticTransport
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFricke.isPrimitiveRoot_zetaK
+#print axioms Dubon2026.SourceFricke.exists_cyclotomic_aut_exponent
+#print axioms Dubon2026.SourceFricke.cyclotomicFrickeIndex_val_zero
+#print axioms Dubon2026.SourceFricke.cyclotomicFrickeIndex_val_one
+#print axioms Dubon2026.SourceFricke.coeffMap_discriminantLaurentK_ringHom
+#print axioms Dubon2026.SourceFricke.coeffMap_frickeLaurentK_cyclotomic
+#print axioms Dubon2026.SourceFricke.coeffMap_frickeLaurentK_aut
+#print axioms Dubon2026.SourceFricke.coeffMap_jqNModC_aut
+#print axioms Dubon2026.SourceFricke.coeffMap_frickeLaurentGeneratorsK_aut
+#print axioms Dubon2026.SourceFricke.coeffMap_frickeLaurentFieldK_aut
+#print axioms Dubon2026.SourceFricke.coeffMap_frickeLaurentFieldK_inclusion
+#print axioms Dubon2026.SourceFricke.coeffMap_jAlgebraK_aut
+#print axioms Dubon2026.SourceFricke.isIntegral_jAlgebraK_coeffMap_aut
+#print axioms Dubon2026.SourceFricke.exists_field_laurent_cyclotomic_levelRing
+#print axioms Dubon2026.SourceFricke.exists_field_laurent_holomorphic_fraction
+#print axioms Dubon2026.SourceFricke.isIntegral_laurent_holomorphic_fraction
+#print axioms Dubon2026.SourceFricke.exists_holomorphic_cyclotomic_conjugate
+#print axioms Dubon2026.SourceFricke.cyclotomicFrickeIndex
+#print axioms Dubon2026.SourceFricke.frickeLaurentGeneratorsK
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceCyclotomicFrickeIndex, `SourceFrickeLaurentCyclotomicConjugation, `SourceFrickeLaurentFieldConjugation, `SourceOriginalFrickeLaurentField, `SourceFrickeCyclotomicAnalyticTransport]
+  let theorems : Array Name := #[`Dubon2026.SourceFricke.isPrimitiveRoot_zetaK, `Dubon2026.SourceFricke.exists_cyclotomic_aut_exponent, `Dubon2026.SourceFricke.cyclotomicFrickeIndex_val_zero, `Dubon2026.SourceFricke.cyclotomicFrickeIndex_val_one, `Dubon2026.SourceFricke.coeffMap_discriminantLaurentK_ringHom, `Dubon2026.SourceFricke.coeffMap_frickeLaurentK_cyclotomic, `Dubon2026.SourceFricke.coeffMap_frickeLaurentK_aut, `Dubon2026.SourceFricke.coeffMap_jqNModC_aut, `Dubon2026.SourceFricke.coeffMap_frickeLaurentGeneratorsK_aut, `Dubon2026.SourceFricke.coeffMap_frickeLaurentFieldK_aut, `Dubon2026.SourceFricke.coeffMap_frickeLaurentFieldK_inclusion, `Dubon2026.SourceFricke.coeffMap_jAlgebraK_aut, `Dubon2026.SourceFricke.isIntegral_jAlgebraK_coeffMap_aut, `Dubon2026.SourceFricke.exists_field_laurent_cyclotomic_levelRing, `Dubon2026.SourceFricke.exists_field_laurent_holomorphic_fraction, `Dubon2026.SourceFricke.isIntegral_laurent_holomorphic_fraction, `Dubon2026.SourceFricke.exists_holomorphic_cyclotomic_conjugate]
+  let constructions : Array Name := #[`Dubon2026.SourceFricke.cyclotomicFrickeIndex, `Dubon2026.SourceFricke.frickeLaurentGeneratorsK]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Fricke Cyclotomic Analytic Transport postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Fricke Cyclotomic Analytic Transport theorems discovered"
+  logInfo m!"SOURCE FRICKE CYCLOTOMIC ANALYTIC TRANSPORT AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceCyclotomicFrickeIndex
+#lint in SourceFrickeLaurentCyclotomicConjugation
+#lint in SourceFrickeLaurentFieldConjugation
+#lint in SourceOriginalFrickeLaurentField
+#lint in SourceFrickeCyclotomicAnalyticTransport

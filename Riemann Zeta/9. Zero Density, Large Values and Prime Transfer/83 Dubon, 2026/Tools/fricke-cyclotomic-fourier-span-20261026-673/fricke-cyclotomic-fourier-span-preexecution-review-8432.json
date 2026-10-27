@@ -1,0 +1,63 @@
+{
+  "status": "Prepared; require 8390 canonical PASS and archive before integration.",
+  "route": "fricke-cyclotomic-fourier-span-promotion-route-673.json",
+  "routeSha256": "071DFA39DD7A89777A58048017B0897EAF8E3FB29902973C5F8E2C15D9F54AA9",
+  "modules": 42,
+  "queries": 154,
+  "theorems": 137,
+  "constructions": 17,
+  "exhaustiveScratchChecks": 189,
+  "proofValueEdges": 225,
+  "scopes": 7,
+  "receipts": {
+    "source-fricke-cyclotomic-descent-10-scratch-receipt.json": "2F13189E8EC3B130D64120AA5233F0C1B5BB5ED0F18F502FB34C707C3F0CB8C7",
+    "source-algebraic-constant-integral-span-5-scratch-receipt.json": "10B43BC49F115B9943B30B16E003BF9E49E899238C8D6B7056B67E4703843916",
+    "source-transcendental-constant-integral-span-7e-scratch-receipt.json": "BEB97FB3DFD9C350FEEA1FB6CBDA75C922820B58AFAFB6BB1F1C6A94AD8484F0",
+    "source-laurent-integral-constant-span-6-scratch-receipt.json": "A3985CA46443B6F18C4722CB81B0EA8B90DEA175ABE27A9684CCDFD4DC7E04EF",
+    "source-actual-fricke-laurent-integral-span-4-scratch-receipt.json": "1AA9BE753A398EA8006802834BD5FE08A0C5C4E71C01167E2833A04FAB9EF896",
+    "source-fricke-holomorphic-integral-span-8-scratch-receipt.json": "42312FD5920DB80060B5499758377769BD2FBCC10ECC479183FA00A789329C89",
+    "source-fricke-pole-cleared-fourier-span-2-scratch-receipt.json": "91444231DC17D0CEFFECD0187EFC8DC22B1A4C5780686625AD0C27A41F3CA29F"
+  },
+  "expectedConsumers": 24427,
+  "expectedConstructions": 2420,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_fricke_cyclotomic_fourier_span_8432.py",
+      "sha256": "50D32D0FB397D7A2F7DA575230F8AA389606771C72A3B8866E4560F38D509D94"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_cyclotomic_fourier_span_production_ownership_8432.py",
+      "sha256": "67C40C28E348B49535B15E2A4E94F95128120076228260A7FDADB9C5C7DC5271"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_cyclotomic_fourier_span_scratch_ownership_8432.py",
+      "sha256": "994BD4253CAB5A1BA0736EC062F881FB16B47458752A31CAA85A6E5AE8FBBCB8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_fricke_cyclotomic_fourier_span_ownership_8432.py",
+      "sha256": "D99906AFDA7CC480BA0E17E8ECA1AFFA71659CE4475B4189E05E52813C9850E2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_cyclotomic_fourier_span_global_ownership_8432.py",
+      "sha256": "C844B3FFE5ADA81D0F978EDA507866C1AA6CB25737EFDF4F470D64BA10C15082"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_fricke_cyclotomic_fourier_span_8432.py",
+      "sha256": "9DE307A19F12BF85D0836ADF526C4A1F45E8D708C1F8FC115CB99D7CC7AB006A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_fricke_cyclotomic_fourier_span_8432.ps1",
+      "sha256": "DC10F3921A76E3156A4179789583FCF520BE88C2C3B292C04AD8B8E90F2D3039"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_fricke_cyclotomic_fourier_span_8432.ps1",
+      "sha256": "7B9BA11490C899A1D9DB0042C8EA4A2211EDF6D25F08A60EFD3836A7E1ACAD06"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_fricke_cyclotomic_fourier_span_canonical_8432.py",
+      "sha256": "7C09E8EBA77546CDB5502EAE526C3457E9562540286E52ED3C6AFD813ED39E5E"
+    }
+  ],
+  "productionMutation": false
+}

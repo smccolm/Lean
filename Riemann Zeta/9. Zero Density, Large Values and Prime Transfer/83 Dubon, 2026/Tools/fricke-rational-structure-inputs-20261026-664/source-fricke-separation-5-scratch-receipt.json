@@ -1,0 +1,90 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T14:57:38.912795+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourcePeriodWeierstrassSeparation",
+    "SourceFrickeTorsionLattice",
+    "SourceFrickePrefactor",
+    "SourceFrickeSeparation",
+    "SourceFrickeFaithfulness"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodWeierstrassSeparation.lean",
+      "sha256": "76DA0CFB2C6EB9B014445AB42B0110A30A52B50625A58622AF219DF835B12238",
+      "oleanSha256": "FEE82648B53B21033AA6FA8B9A01067E6A6361F6DD6697B581CC8EBF364F9BA8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTorsionLattice.lean",
+      "sha256": "7E167AD17D7EDD5A679FDE73C29C207AB8BA87D9E646DFBBE0859576489185CA",
+      "oleanSha256": "831633A6B90AFA68E45A1500AB8A7893A87F77E71A1101DCD87A65D4DF770E03"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePrefactor.lean",
+      "sha256": "5DEAF4F888B4B2F992CEE31E2B06AC43EE30CB0D47840267B95412DBA5BDA7DF",
+      "oleanSha256": "E6CAEBA6294FFCBAF2CA2727B3443FE2FC4574C4CF323D51CC3092B7BEEF28BC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeSeparation.lean",
+      "sha256": "02F262C52C0379A682A7BBF72185DD96231871B978DE8F4EC371BCD8C1566CDD",
+      "oleanSha256": "E6817DE8F2725753927EA43046F660D163ADA7029CAE565D33D587433DF8FB02"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFaithfulness.lean",
+      "sha256": "E2BB979AB04619514FC6ECE21E34D4DC8F6F3A71416CD3CB3F315E760BC50003",
+      "oleanSha256": "0BF4A7E37B16BF04C07842E37C6163DD748E575A0150B1E12B351549694AF73E"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFricke.weierstrassP_eq_imp_lattice",
+    "Dubon2026.SourceFricke.torsion_lift_mem_lattice_iff",
+    "Dubon2026.SourceFricke.frickeTorsionPt_notMem",
+    "Dubon2026.SourceFricke.frickeTorsionPt_sub_mem_iff",
+    "Dubon2026.SourceFricke.frickeTorsionPt_add_mem_iff",
+    "Dubon2026.SourceFricke.qExpansion_E4E6_coeff_zero",
+    "Dubon2026.SourceFricke.exists_E4E6_ne_zero",
+    "Dubon2026.SourceFricke.frickePrefactor_ne_zero",
+    "Dubon2026.SourceFricke.weierstrassP_frickeTorsionPt_eq_imp",
+    "Dubon2026.SourceFricke.frickeF_eq_imp",
+    "Dubon2026.SourceFricke.mem_Gamma_or_neg_mem_of_vecMulSL",
+    "Dubon2026.SourceFricke.frickeF_faithful"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFricke.weierstrassP_eq_imp_lattice",
+    "Dubon2026.SourceFricke.torsion_lift_mem_lattice_iff",
+    "Dubon2026.SourceFricke.frickeTorsionPt_notMem",
+    "Dubon2026.SourceFricke.frickeTorsionPt_sub_mem_iff",
+    "Dubon2026.SourceFricke.frickeTorsionPt_add_mem_iff",
+    "Dubon2026.SourceFricke.qExpansion_E4E6_coeff_zero",
+    "Dubon2026.SourceFricke.exists_E4E6_ne_zero",
+    "Dubon2026.SourceFricke.frickePrefactor_ne_zero",
+    "Dubon2026.SourceFricke.weierstrassP_frickeTorsionPt_eq_imp",
+    "Dubon2026.SourceFricke.frickeF_eq_imp",
+    "Dubon2026.SourceFricke.mem_Gamma_or_neg_mem_of_vecMulSL",
+    "Dubon2026.SourceFricke.frickeF_faithful"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeSeparationAudit5.log",
+  "logSha256": "18642F6D6A5FF641E9E61419F7107E89A89CB238446DD3E7FF9599D37946D1E2",
+  "auditSha256": "CACC36F6DFADCE9764D5C193F6C3849D3C9F81CF35004E005C4FA04A1F859B29",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 25,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 20,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeSeparationDependencyAudit5.log",
+  "dependencyAuditSha256": "0B2F09FEB0F932C1CF7A1360997D65D843D259F0E59B8C99C31FA56A555A4154",
+  "dependencyAuditSourceSha256": "C85E394F31DFBDBEBD246EF570F8227C035BFF90C8333C98E9653EE55AA0C284",
+  "consumers": [
+    "Dubon2026.SourceFricke.frickeF_faithful"
+  ],
+  "dependency": "DUB-17/18 -> original all-weight arithmetic association -> finite Gamma1 characters -> Picard/H1 and diamond comparison -> cusp differential realization -> rational Fourier structure -> faithful Fricke generators.",
+  "discharged": "Equality of the actual Fricke functions implies equality of their nonzero torsion indices up to sign, hence the stabilizer is the principal congruence subgroup up to sign.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Rational spanning and descent to a rational Gamma1 basis, differential realization and the original arithmetic comparison remain; 16/20, DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-fricke-separation-5-reuse-review-20261026.json",
+  "reuseReviewSha256": "40832C11B4A85DEE5473555EAC55D2B510B7128B313EB5AEAD0CDE73D0A27911",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

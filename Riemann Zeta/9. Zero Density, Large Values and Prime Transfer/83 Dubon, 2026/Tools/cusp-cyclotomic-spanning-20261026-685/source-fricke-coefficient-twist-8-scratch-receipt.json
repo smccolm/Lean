@@ -1,0 +1,141 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T19:57:24.261754+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceFrickeCyclotomicHolomorphicAlgebra",
+    "SourceFrickeScalarExtensionBasis",
+    "SourceComplexBasisCoefficientTwist",
+    "SourceFrickeCoefficientTwist",
+    "SourceFrickeSpanLaurentRealization",
+    "SourceLaurentTwistOrder",
+    "SourceCuspVanishingOrder",
+    "SourceFrickeTwistCuspVanishing"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicHolomorphicAlgebra.lean",
+      "sha256": "0042EB34AB89EF6038DE681FECDBCD1DA95B63F661C878CED9F21515A6412B36",
+      "oleanSha256": "F0D8D037FAE79DB317E9445E6F5C71F80EA75A75504454A87CE5248530C0513F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeScalarExtensionBasis.lean",
+      "sha256": "84901516A47EE070A70228679319B8503D7C7A9C89D2FD8F11F88590767DC241",
+      "oleanSha256": "50643FC4AD263381C1B3F3E73EEEC6B945A1070447F84CFED4E7E4AD99749384"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceComplexBasisCoefficientTwist.lean",
+      "sha256": "4B3092F013112ADC534199D058748CD8F6FADF524F25E27E06DC5FC8A785143C",
+      "oleanSha256": "62ADB84CFD0B6F38F3454D6D4D106A8F7435C605A9F02E88E6027DA6F494FB7A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCoefficientTwist.lean",
+      "sha256": "4D53E819A53D57BA0D160A1AE474A39EB3858A406FCB274DE7297764E6161ED5",
+      "oleanSha256": "E760060A307C55D3A454888CFC75C5D67ABD6B51308A12A154B51364E33B5C06"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeSpanLaurentRealization.lean",
+      "sha256": "586E654FB5610EEFB8CDF062A8C1AEF346498E1320BCC72020397ECA167C286E",
+      "oleanSha256": "2C3E8CEEC2E23947BA60F163E844CF0023B528B2B1E94E7136A22F078D3F2A80"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentTwistOrder.lean",
+      "sha256": "C8FC69D70EAA22B7969BA962F7D47627DB374ED0D59E7DB7929761824AB6EC4F",
+      "oleanSha256": "916277A3A289E94F364B38EEEB4F9273FAFC28E88938164A5E3DB1A02683E7BC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspVanishingOrder.lean",
+      "sha256": "9BB414E7059F9B1CA0D488F1D2D87A9151C517DB3FB52C48D3A577D3166E0CE2",
+      "oleanSha256": "61121E452D0A05F66C5E4CD1DB7BE7CE75559105D47B03FF6AFEB12495116F9B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTwistCuspVanishing.lean",
+      "sha256": "5DBFB422C12ABF17FC0007C1DE0F3476B5D19A3746E9E3DE93A406BF50285520",
+      "oleanSha256": "CEF429A3FE4BD1A94BCF2ED62F4000344D25F0FD9F0A5506E31A6A1DCEADE68F"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_add",
+    "Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_mul",
+    "Dubon2026.SourceFricke.exists_complex_basis_of_cyclotomic_fricke_basis",
+    "Dubon2026.SourceFricke.cyclotomicFrickeComplexBasis_apply",
+    "Dubon2026.SourceFricke.basisCoefficientTwist_repr",
+    "Dubon2026.SourceFricke.basisCoefficientTwist_basis",
+    "Dubon2026.SourceFricke.basisCoefficientTwist_smul",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_fixes_original",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_smul",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_sum_original",
+    "Dubon2026.SourceFricke.frickeSpan_holomorphic",
+    "Dubon2026.SourceFricke.frickeSpan_periodic",
+    "Dubon2026.SourceFricke.coeffMap_cyclotomic_scalar_sum",
+    "Dubon2026.SourceFricke.exists_fricke_twist_laurent",
+    "Dubon2026.SourceFunctionField.coeffMap_order",
+    "Dubon2026.SourceFunctionField.coeffMap_orderTop",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.orderTop",
+    "Dubon2026.SourceFricke.isZeroAtImInfty_iff_cusp_order_pos",
+    "Dubon2026.SourceFricke.coeffMap_cyclotomic_fixed",
+    "Dubon2026.SourceFricke.coeffMap_discriminant_fixed",
+    "Dubon2026.SourceFricke.exists_fricke_twist_laurent_mul_discriminant",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_cusp_order_mul_discriminant",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_isZeroAtImInfty_mul_discriminant_iff",
+    "Dubon2026.SourceFricke.cyclotomicHolomorphicFrickeAlgebra",
+    "Dubon2026.SourceFricke.cyclotomicFrickeComplexBasis",
+    "Dubon2026.SourceFricke.basisCoefficientTwist",
+    "Dubon2026.SourceFricke.cyclotomicFrickeSpanInclusion",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_add",
+    "Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_mul",
+    "Dubon2026.SourceFricke.exists_complex_basis_of_cyclotomic_fricke_basis",
+    "Dubon2026.SourceFricke.cyclotomicFrickeComplexBasis_apply",
+    "Dubon2026.SourceFricke.basisCoefficientTwist_repr",
+    "Dubon2026.SourceFricke.basisCoefficientTwist_basis",
+    "Dubon2026.SourceFricke.basisCoefficientTwist_smul",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_fixes_original",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_smul",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_sum_original",
+    "Dubon2026.SourceFricke.frickeSpan_holomorphic",
+    "Dubon2026.SourceFricke.frickeSpan_periodic",
+    "Dubon2026.SourceFricke.coeffMap_cyclotomic_scalar_sum",
+    "Dubon2026.SourceFricke.exists_fricke_twist_laurent",
+    "Dubon2026.SourceFunctionField.coeffMap_order",
+    "Dubon2026.SourceFunctionField.coeffMap_orderTop",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.orderTop",
+    "Dubon2026.SourceFricke.isZeroAtImInfty_iff_cusp_order_pos",
+    "Dubon2026.SourceFricke.coeffMap_cyclotomic_fixed",
+    "Dubon2026.SourceFricke.coeffMap_discriminant_fixed",
+    "Dubon2026.SourceFricke.exists_fricke_twist_laurent_mul_discriminant",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_cusp_order_mul_discriminant",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_isZeroAtImInfty_mul_discriminant_iff"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFricke.cyclotomicHolomorphicFrickeAlgebra",
+    "Dubon2026.SourceFricke.cyclotomicFrickeComplexBasis",
+    "Dubon2026.SourceFricke.basisCoefficientTwist",
+    "Dubon2026.SourceFricke.cyclotomicFrickeSpanInclusion",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCoefficientTwistAudit8.log",
+  "logSha256": "47DE8910EEC14B0569FCE2EBE41B17CFE14441455AA3CED2CF3CFDF54820CC64",
+  "auditSha256": "2795A55790560F5E9170ED0F1A82EA4F994B51C02E918069EC86FE17D5C1CB8E",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 52,
+  "linterScopes": 8,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 34,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCoefficientTwistDependencyAudit8.log",
+  "dependencyAuditSha256": "02D15AA8EFB6E067C8883D14B771F8A864A7CA2D27D20B2F4EE1BD63EE526359",
+  "dependencyAuditSourceSha256": "210500B9B5FDFA9CF04B37C673EDF836D7ADF2313F8404E65E15B840C9C99E83",
+  "consumers": [
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_isZeroAtImInfty_mul_discriminant_iff"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> original Picard/H1, full/parabolic, transpose and diamond comparison -> actual differential/cusp comparison -> rational cusp-form spanning -> coefficient descent of the actual Fricke function span.",
+  "discharged": "Construct the coefficient twist on the actual complex span of original holomorphic cyclotomic Fricke fractions using proved scalar-extension independence, prove its action on every original fraction and every finite complex representation, and prove that twisting preserves the cusp order and cusp vanishing after multiplication by every fixed discriminant power. No continuity of arbitrary complex field automorphisms, twist existence, Fourier threshold criterion or cusp-vanishing preservation is assumed.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Modular equivariance and holomorphic divisibility at elliptic points must still be proved; then descend the actual cusp-form image. Arbitrary Gamma1 differential realization and the original finite-character arithmetic association, automorphy and higher continuation chain remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-fricke-coefficient-twist-8-reuse-review-20261026.json",
+  "reuseReviewSha256": "49C0E7CF555197E26864FEF62251FD3224DD8227C99A14374AD00591952E7D28",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,65 @@
+import SourceConstantExtensionIntegralAlgebra
+import SourceAlgebraicConstantRoots
+import SourceAlgebraicConstantLift
+import SourceAlgebraicConstantInterpolation
+import SourceAlgebraicConstantIntegralSpan
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isIntegral_subalgebra_iff
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isIntegral_of_isIntegral_adjoin_singleton
+#print axioms Dubon2026.SourceFricke.ConstantDescent.algebraMap_subfield_apply'
+#print axioms Dubon2026.SourceFricke.ConstantDescent.charZero_KFld
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isIntegral_TRng_algebraMap
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isIntegral_KFld_algebraMap
+#print axioms Dubon2026.SourceFricke.ConstantDescent.minpoly_KFld_dvd
+#print axioms Dubon2026.SourceFricke.ConstantDescent.root_minpoly_KFld_eq_algebraMap
+#print axioms Dubon2026.SourceFricke.ConstantDescent.card_rootFinset_minpoly_KFld
+#print axioms Dubon2026.SourceFricke.ConstantDescent.algebraMap_adjoinF_mem
+#print axioms Dubon2026.SourceFricke.ConstantDescent.closure_adjoin_le
+#print axioms Dubon2026.SourceFricke.ConstantDescent.exists_lift_of_mem_adjoin
+#print axioms Dubon2026.SourceFricke.ConstantDescent.isIntegral_coeff_lagrangeBasis
+#print axioms Dubon2026.SourceFricke.ConstantDescent.mem_span_RSet_of_adjoin_simple
+#print axioms Dubon2026.SourceFricke.ConstantDescent.KFld
+#print axioms Dubon2026.SourceFricke.ConstantDescent.TRng
+#print axioms Dubon2026.SourceFricke.ConstantDescent.RSet
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceConstantExtensionIntegralAlgebra, `SourceAlgebraicConstantRoots, `SourceAlgebraicConstantLift, `SourceAlgebraicConstantInterpolation, `SourceAlgebraicConstantIntegralSpan]
+  let theorems : Array Name := #[`Dubon2026.SourceFricke.ConstantDescent.isIntegral_subalgebra_iff, `Dubon2026.SourceFricke.ConstantDescent.isIntegral_of_isIntegral_adjoin_singleton, `Dubon2026.SourceFricke.ConstantDescent.algebraMap_subfield_apply', `Dubon2026.SourceFricke.ConstantDescent.charZero_KFld, `Dubon2026.SourceFricke.ConstantDescent.isIntegral_TRng_algebraMap, `Dubon2026.SourceFricke.ConstantDescent.isIntegral_KFld_algebraMap, `Dubon2026.SourceFricke.ConstantDescent.minpoly_KFld_dvd, `Dubon2026.SourceFricke.ConstantDescent.root_minpoly_KFld_eq_algebraMap, `Dubon2026.SourceFricke.ConstantDescent.card_rootFinset_minpoly_KFld, `Dubon2026.SourceFricke.ConstantDescent.algebraMap_adjoinF_mem, `Dubon2026.SourceFricke.ConstantDescent.closure_adjoin_le, `Dubon2026.SourceFricke.ConstantDescent.exists_lift_of_mem_adjoin, `Dubon2026.SourceFricke.ConstantDescent.isIntegral_coeff_lagrangeBasis, `Dubon2026.SourceFricke.ConstantDescent.mem_span_RSet_of_adjoin_simple]
+  let constructions : Array Name := #[`Dubon2026.SourceFricke.ConstantDescent.KFld, `Dubon2026.SourceFricke.ConstantDescent.TRng, `Dubon2026.SourceFricke.ConstantDescent.RSet]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Algebraic Constant Integral Span postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Algebraic Constant Integral Span theorems discovered"
+  logInfo m!"SOURCE ALGEBRAIC CONSTANT INTEGRAL SPAN AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceConstantExtensionIntegralAlgebra
+#lint in SourceAlgebraicConstantRoots
+#lint in SourceAlgebraicConstantLift
+#lint in SourceAlgebraicConstantInterpolation
+#lint in SourceAlgebraicConstantIntegralSpan

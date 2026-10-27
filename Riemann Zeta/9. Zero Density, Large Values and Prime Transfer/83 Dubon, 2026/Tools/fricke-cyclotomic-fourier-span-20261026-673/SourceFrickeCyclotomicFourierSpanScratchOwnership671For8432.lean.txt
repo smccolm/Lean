@@ -1,0 +1,22 @@
+import SourceMonicQuotientRelation
+import SourceHolomorphicMonicQuotient
+import SourceIntegralCoordinateMonic
+import SourceFrickeCyclotomicLaurentLifts
+import SourceFrickeClearedLaurentMonic
+import SourceFrickeIntegralHolomorphicRepresentative
+import SourceCuspLaurentSpan
+import SourceFrickeHolomorphicIntegralSpan
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceMonicQuotientRelation, `SourceHolomorphicMonicQuotient, `SourceIntegralCoordinateMonic, `SourceFrickeCyclotomicLaurentLifts, `SourceFrickeClearedLaurentMonic, `SourceFrickeIntegralHolomorphicRepresentative, `SourceCuspLaurentSpan, `SourceFrickeHolomorphicIntegralSpan]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

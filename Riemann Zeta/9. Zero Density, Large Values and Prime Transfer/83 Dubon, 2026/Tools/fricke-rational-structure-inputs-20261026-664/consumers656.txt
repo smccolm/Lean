@@ -1,0 +1,50 @@
+
+section
+
+/-- The true good-prime roots obey the proved three-fifths square bound; every genuine Rankin tensor power trace is real and nonnegative. -/
+theorem primitive_rankin_spectral_positivity_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    (∀ p : ℕ, Nat.Prime p → ¬p ∣ Q →
+      ‖primitiveSatakePlus f p‖ ^ 2 ≤ (p : ℝ) ^ (3 / 5 : ℝ) ∧
+        ‖primitiveSatakeMinus f p‖ ^ 2 ≤ (p : ℝ) ^ (3 / 5 : ℝ)) ∧
+    (∀ (p : Nat.Primes) (r : ℕ),
+      (∑ i : Fin 4, primitiveRankinSpectralRoots f p i ^ r).im = 0 ∧
+        0 ≤ (∑ i : Fin 4, primitiveRankinSpectralRoots f p i ^ r).re) :=
+  ⟨fun _ hp hpQ => primitiveSatake_norm_sq_le_three_fifths f hk hp hpQ,
+    primitiveRankinSpectral_trace_nonneg f⟩
+
+/-- The original Rankin convolution is the true tensor Euler product and satisfies the actual three-four-one norm inequality. -/
+theorem primitive_rankin_euler_inequality_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    (∀ s : ℂ, 1 < s.re →
+      HasProd (fun p : Nat.Primes =>
+        (∏ i : Fin 4, (1 - primitiveRankinSpectralRoots f p i * (((p : ℕ) : ℂ) ^ (-s))))⁻¹)
+          (rankinConvolutionGlobalContinuation f.toCuspForm s)) ∧
+    ∀ (x y : ℝ), 0 < x →
+      1 ≤ ‖rankinConvolutionGlobalContinuation f.toCuspForm (1 + x) ^ 3 *
+        rankinConvolutionGlobalContinuation f.toCuspForm (1 + x + Complex.I * y) ^ 4 *
+          rankinConvolutionGlobalContinuation f.toCuspForm (1 + x + 2 * Complex.I * y)‖ :=
+  ⟨fun _ hs => primitive_rankin_spectral_hasProd f (by omega) hs,
+    fun _ y hx => primitive_rankin_global_three_four_one f hk hx y⟩
+
+/-- The genuine Rankin convolution has no zero at any nonreal boundary point, and its entire numerator agrees with the original principal-factor Rankin numerator on the closed half-plane. -/
+theorem primitive_rankin_boundary_nonvanishing_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    (∀ s : ℂ, s.re = 1 → s ≠ 1 → rankinConvolutionGlobalContinuation f.toCuspForm s ≠ 0) ∧
+    ∀ s : ℂ, 1 ≤ s.re → rankinConvolutionEntireNumerator f.toCuspForm s =
+      DirichletCharacter.LFunctionTrivChar Q (2 * s) * cuspRankinPoleNumerator f.toCuspForm s :=
+  ⟨fun _ hs hs1 => primitive_rankin_ne_zero_on_boundary f hk hs hs1,
+    fun _ hs => rankinConvolutionEntireNumerator_eq_pole_on_closed f (by omega) hs⟩
+
+/-- The original order-two infinite symmetric Euler product has a proved holomorphic nonvanishing continuation on Re(s)≥1, with no prime-bound or continuation hypothesis. -/
+theorem primitive_second_nonvanishing_euler_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    ∃ F : ℂ → ℂ, AnalyticOnNhd ℂ F {s | 1 ≤ s.re} ∧
+      (∀ s : ℂ, 1 ≤ s.re → F s ≠ 0) ∧
+      Set.EqOn F (fun s => (∏' v : Nat.Primes × Fin 3,
+        (1 - primitiveSymmetricSpectralRoots f 2 v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+        {s | 1 < s.re} :=
+  primitive_second_symmetric_nonvanishing_continuation f hk
+
+end
+

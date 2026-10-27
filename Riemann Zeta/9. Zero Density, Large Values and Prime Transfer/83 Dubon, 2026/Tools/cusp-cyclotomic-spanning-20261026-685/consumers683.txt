@@ -1,0 +1,69 @@
+
+section
+open scoped ComplexOrder
+
+/-- Literal nonnegative Dirichlet coefficients converge in every half-plane of genuine holomorphy. -/
+theorem nonnegative_dirichlet_half_plane_source {a : ℕ → ℂ} (ha : ∀ n, 0 ≤ a n)
+    {F : ℂ → ℂ} {σ₀ A : ℝ} (hF : DifferentiableOn ℂ F {s : ℂ | σ₀ < s.re})
+    (hA : LSeries.abscissaOfAbsConv a ≤ A)
+    (hmatch : Set.EqOn F (fun s => ∑' n : ℕ, if n = 0 then 0 else a n / (n : ℂ) ^ s)
+      {s : ℂ | A < s.re}) :
+    LSeries.abscissaOfAbsConv a ≤ σ₀ :=
+  positive_dirichlet_abscissa_le_of_holomorphic ha hF hA hmatch
+
+/-- The actual determinant-one roots satisfy the complete finite tensor Euler identity at every order. -/
+theorem primitive_tensor_clebsch_gordan_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (p r : ℕ) (z : ℂ) :
+    (∏ i ∈ Finset.range (r + 1), ∏ j ∈ Finset.range (r + 1),
+      (1 - (primitiveSatakePlus f p ^ i * primitiveSatakeMinus f p ^ (r - i)) *
+        (primitiveSatakePlus f p ^ j * primitiveSatakeMinus f p ^ (r - j)) * z)) =
+    ∏ t ∈ Finset.range (r + 1), ∏ i ∈ Finset.range (2 * t + 1),
+      (1 - primitiveSatakePlus f p ^ i * primitiveSatakeMinus f p ^ (2 * t - i) * z) :=
+  satake_tensor_product_decomposition (primitiveSatake_trace_det f p).2 (fun w => 1 - w * z) r
+
+/-- Nonnegative coefficients of the actual higher tensor Euler series identify the genuine product of even powers. -/
+theorem primitive_higher_tensor_dirichlet_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (r : ℕ) :
+    let a : ℕ → ℂ := fun n => if n = 0 then 0 else
+      n.factorization.prod (spectralNatLocalCoeff (primitiveHigherTensorRoots f r))
+    (∀ n, 0 ≤ a n) ∧ (∀ s : ℂ, ((2 * r + (r + 1) ^ 2 + 1 : ℕ) : ℝ) + 1 < s.re →
+      LSeries a s = ∏ t ∈ Finset.range (r + 1),
+        (∏' v : Nat.Primes × Fin (2 * t + 1),
+          (1 - primitiveSymmetricSpectralRoots f (2 * t) v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹) :=
+  ⟨primitiveHigherTensorCoefficient_nonneg f r,
+    fun _ hs => primitiveHigherTensorCoefficient_LSeries f hk r hs⟩
+
+/-- Convergence of literal geometric-product coefficients bounds every original spectral root. -/
+theorem finite_euler_convergence_root_source {ι : Type*} (s : Finset ι) (w : ι → ℂ) (z : ℂ)
+    (hs : Summable (fun n : ℕ => PowerSeries.coeff n
+      (∏ i ∈ s, PowerSeries.mk (fun m : ℕ => w i ^ m)) * z ^ n))
+    {i : ι} (hi : i ∈ s) : ‖w i * z‖ < 1 :=
+  spectral_root_norm_lt_one_of_summable s w z hs hi
+
+/-- The genuine good-prime Deligne bound follows from higher holomorphy, without assuming a local bound or near-boundary Euler matching. -/
+theorem primitive_purity_from_higher_holomorphy_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    (hcontinuation : ∀ r : ℕ, 3 ≤ r → ∃ F : ℂ → ℂ,
+      DifferentiableOn ℂ F {s | 1 < s.re} ∧
+      Set.EqOn F (fun s => (∏' v : Nat.Primes × Fin (r + 1),
+        (1 - primitiveSymmetricSpectralRoots f r v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+        {s | (r : ℝ) + 1 < s.re})
+    {p : ℕ} (hp : Nat.Prime p) (hpQ : ¬p ∣ Q) :
+    ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2 :=
+  primitive_prime_bound_of_higher_symmetric_holomorphy f hk hcontinuation hp hpQ
+
+/-- Actual weak Sato–Tate follows from literal higher Euler continuations alone; the theorem proves local purity internally. -/
+theorem primitive_sato_tate_higher_continuation_alone_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    (hcontinuation : ∀ r : ℕ, 3 ≤ r → ∃ F : ℂ → ℂ,
+      AnalyticOnNhd ℂ F {s | 1 ≤ s.re} ∧
+      (∀ s : ℂ, 1 ≤ s.re → F s ≠ 0) ∧
+      Set.EqOn F (fun s => (∏' v : Nat.Primes × Fin (r + 1),
+        (1 - primitiveSymmetricSpectralRoots f r v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+        {s | (r : ℝ) + 1 < s.re}) :
+    Filter.Tendsto (primeEmpirical (fun p => (normalizedCuspCoefficients f.toCuspForm p).re))
+      Filter.atTop (𝓝 satoTateProbability) :=
+  primitive_satoTate_of_higher_continuation_alone f hk hcontinuation
+
+end
+

@@ -1,0 +1,34 @@
+import SourceTranscendentalConstantAlgebraV2
+import SourceTranscendentalConstantEvaluationV2
+import SourceTranscendentalConstantDenominatorsV2
+import SourceTranscendentalConstantFieldRangeV2
+import SourceTranscendentalConstantScaledRelationV2
+import SourceTranscendentalConstantNormalityV2
+import SourceTranscendentalConstantIntegralSpanV2
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFricke.ConstantDescent.mem_span_RSet_of_adjoin_simple_transcendental]
+  let localModules : Array Name := #[`SourceAlgebraicConstantLift, `SourceAlgebraicConstantRoots, `SourceConstantExtensionIntegralAlgebra, `SourceTranscendentalConstantAlgebraV2, `SourceTranscendentalConstantDenominatorsV2, `SourceTranscendentalConstantEvaluationV2, `SourceTranscendentalConstantFieldRangeV2, `SourceTranscendentalConstantIntegralSpanV2, `SourceTranscendentalConstantNormalityV2, `SourceTranscendentalConstantScaledRelationV2]
+  let required : Array Name := #[`Dubon2026.SourceFricke.ConstantDescent.scalarTowerBaseRationalGenerated, `Dubon2026.SourceFricke.ConstantDescent.scalarTowerBaseGeneratedAmbient, `Dubon2026.SourceFricke.ConstantDescent.KFldT_restrictScalars, `Dubon2026.SourceFricke.ConstantDescent.mem_KFldT_iff, `Dubon2026.SourceFricke.ConstantDescent.isDomainCoordinateRing, `Dubon2026.SourceFricke.ConstantDescent.isPrincipalIdealRing_TRng, `Dubon2026.SourceFricke.ConstantDescent.finiteDimensional_KFldT, `Dubon2026.SourceFricke.ConstantDescent.isDedekindDomain_RFa, `Dubon2026.SourceFricke.ConstantDescent.isFractionRing_RFa, `Dubon2026.SourceFricke.ConstantDescent.isIntegrallyClosed_RFa_polynomial, `Dubon2026.SourceFricke.ConstantDescent.t_mem_RSet, `Dubon2026.SourceFricke.ConstantDescent.algebraMap_mem_RSet, `Dubon2026.SourceFricke.ConstantDescent.rfPolyEval_injective, `Dubon2026.SourceFricke.ConstantDescent.isIntegral_KFldT_of, `Dubon2026.SourceFricke.ConstantDescent.mem_range_rfPolyEval_of_mem_RSet, `Dubon2026.SourceFricke.ConstantDescent.evalF_mem_range_rfPolyEval, `Dubon2026.SourceFricke.ConstantDescent.range_rfPolyEval_subset_span, `Dubon2026.SourceFricke.ConstantDescent.exists_clear_denominator, `Dubon2026.SourceFricke.ConstantDescent.adjoin_le_fractionPolyRange, `Dubon2026.SourceFricke.ConstantDescent.mem_fractionEval_fieldRange, `Dubon2026.SourceFricke.ConstantDescent.exists_scaled_monic_relation, `Dubon2026.SourceFricke.ConstantDescent.mem_range_of_fraction_monic_relation, `Dubon2026.SourceFricke.ConstantDescent.mem_span_RSet_of_adjoin_simple_transcendental, `Dubon2026.SourceFricke.ConstantDescent.RFld, `Dubon2026.SourceFricke.ConstantDescent.KFldT, `Dubon2026.SourceFricke.ConstantDescent.algebraTRngKFldT, `Dubon2026.SourceFricke.ConstantDescent.RFa, `Dubon2026.SourceFricke.ConstantDescent.commRingRFa, `Dubon2026.SourceFricke.ConstantDescent.TRngEquiv, `Dubon2026.SourceFricke.ConstantDescent.rfPolyEval, `Dubon2026.SourceFricke.ConstantDescent.isIntegral_subalgebra_iff, `Dubon2026.SourceFricke.ConstantDescent.closure_adjoin_le, `integralClosure.isDedekindDomain, `integralClosure.isFractionRing_of_finite_extension, `IntermediateField.finiteDimensional_adjoin, `Polynomial.algEquivOfTranscendental, `IsFractionRing.div_surjective, `IsFractionRing.lift, `IsIntegrallyClosed.isIntegral_iff, `Polynomial.monic_X_pow_add, `IsPrincipalIdealRing.of_surjective]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE TRANSCENDENTAL CONSTANT INTEGRAL SPAN DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the transcendental constant-adjoining consumer. Only declaration values are traversed. Actual finite integral generators and coordinate transcendence give the normal polynomial coefficient ring; scalar denominators and fraction-field normality give integral coordinates. Relative transcendence, finite constant-list induction, actual Fricke instantiation and rational Fourier spanning remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

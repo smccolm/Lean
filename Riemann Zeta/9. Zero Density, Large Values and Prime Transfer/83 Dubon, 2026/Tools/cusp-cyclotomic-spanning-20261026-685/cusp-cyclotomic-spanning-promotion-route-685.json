@@ -1,0 +1,31 @@
+{
+  "scope": 685,
+  "scopeIds": [
+    "674",
+    "675",
+    "676",
+    "677",
+    "680",
+    "683",
+    "684"
+  ],
+  "receipts": {
+    "source-fricke-laurent-independence-2-scratch-receipt.json": "975088C6FE20D9B83CA6988DD3A27862965DE879F6EF6CC0AFD7E78744040612",
+    "source-fricke-coefficient-twist-8-scratch-receipt.json": "7708C801404E71F1B6D3122C282F047E9F2F2C29358279784714CD2A0179C17D",
+    "source-fricke-twist-modular-algebra-5-scratch-receipt.json": "488E206F0AFD6EBF47AD5F00B232717C77BCD37259E12B4F47BDDDFEC0852B80",
+    "source-fricke-elliptic-divisibility-5-scratch-receipt.json": "30EAE535CE426E260D6256DC5E15D0DAFB857C8F173565901F831E9CD623BF75",
+    "source-fricke-cusp-image-stability-9-scratch-receipt.json": "351ADFCA4A79047C4170CF74B8274DCACA9A491F5C662D86BBD11EA2FD2B7DB9",
+    "source-cusp-fricke-rational-span-7-scratch-receipt.json": "C33D8F5A8EC778BE9C5B8C632471A409C1131CD8F862DFA82821E82F29B6C38D",
+    "source-gamma-one-cyclotomic-cusp-span-3-scratch-receipt.json": "329D1D60D5FC63A8737A0C944BFDEF1F4C0B50D1C7775F4C26C9BDD994AAF80E"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 Hecke characters -> actual Picard/H1, full/parabolic, transpose and diamond comparison retaining the original homogeneous coefficient endomorphism -> actual differential/cusp comparison -> rational cusp-form spanning -> cyclotomic Fourier spanning and original weight-image descent.",
+  "discharged": "Laurent coefficient independence gives a complex basis of the original cyclotomic Fricke span. Its coefficient twist fixes original fractions, commutes with actual modular pullbacks, preserves products and powers, and transports discriminant cusp orders. Holomorphic quotient closure derives the needed elliptic divisibility transport. The exact original E4/E6/Delta weight-image criterion is proved by local monic division and analytic gluing, and every elliptic, cusp and subgroup premise is derived for the twisted image, producing an actual cusp form of the same weight and subgroup. The full algebraically closed fixed-coefficient theorem and finite-support subspace descent are proved and applied to the actual stable image. Injective pullback gives spanning by original cyclotomic Fricke weight images. Laurent division by the proved nonzero Eisenstein factor identifies the original cusp-form Fourier coefficients. Thus the actual Gamma1 weight-two cusp-form space is spanned over the complex numbers by forms whose width-one Fourier coefficients lie in the original cyclotomic field. The general result retains the explicit source balance k+4a+6b=12m; weight two uses a=b=m=1.",
+  "remaining": "Cyclotomic Fourier spanning is not yet rational Fourier spanning over Q: nontrivial cyclotomic coefficient conjugation and rational descent remain, as do bounded denominators for the original integral-ratio field. Arbitrary Gamma1 cusp differential realization and the converse regular-differential construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must identify original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of those characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. No unrestricted odd-weight weight-lowering claim is made, and the all-weight arithmetic goal is unchanged. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN.",
+  "route": "The renewed selected-file search is recorded in Dubon Reuse Search 2026-10-26.md. Reuse actual Laurent germs and analytic injectivity to construct the coefficient twist directly on the original Fricke span, avoiding the external general flatness construction. Holomorphic quotient closure replaces the external monic-growth route for elliptic divisibility. Adapt only the necessary fixed-field, finite-support descent and local cusp-image arguments from the frozen primary sources; native linear algebra pulls the span back. Existing rational Eisenstein and discriminant expansions identify Fourier coefficients by Laurent uniqueness, avoiding recursive unit-division infrastructure. No external full import closure was built or certified. All used and failed audit/helper evidence and retained failed source variants are preserved; only audited mathematical sources are promoted and only imports are qualified. Pins, proof limits, source contract and all twenty acceptance gates are unchanged.",
+  "precedingCanonicalScope": 8432,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 acceptance gates unchanged.",
+  "reason": "Require preceding canonical PASS and immutable archive before production mutation."
+}

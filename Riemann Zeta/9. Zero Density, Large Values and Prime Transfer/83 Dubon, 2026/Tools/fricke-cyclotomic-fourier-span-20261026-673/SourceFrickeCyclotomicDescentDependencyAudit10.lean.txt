@@ -1,0 +1,37 @@
+import SourceCuspLaurentFunctionIdentity
+import SourceQExpansionLaurentWidth
+import SourcePoleBoundedCuspLaurent
+import SourceFrickeCyclotomicLaurent
+import SourceCuspLaurentPolynomial
+import SourceCuspLaurentFractionIdentity
+import SourceFrickeCyclotomicFractionGerm
+import SourceFrickeLaurentIntegralDescent
+import SourceFrickeFractionPeriodicity
+import SourceFrickeCyclotomicMonic
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFricke.exists_cyclotomic_monic_relation, `Dubon2026.SourceFricke.exists_cusp_represents_of_poleBounded]
+  let localModules : Array Name := #[`SourceCuspLaurentFractionIdentity, `SourceCuspLaurentFunctionIdentity, `SourceCuspLaurentPolynomial, `SourceEisensteinRationalSeries, `SourceFrickeCuspInputs, `SourceFrickeCyclotomicCoefficients, `SourceFrickeCyclotomicField, `SourceFrickeCyclotomicFractionGerm, `SourceFrickeCyclotomicLaurent, `SourceFrickeCyclotomicMonic, `SourceFrickeCyclotomicTransport, `SourceFrickeFaithfulness, `SourceFrickeFractionPeriodicity, `SourceFrickeFunctionTransformationV2, `SourceFrickeHolomorphicAlgebraV3, `SourceFrickeHolomorphy, `SourceFrickeLaurentIntegralDescent, `SourceFrickeLevelAlgebraV3, `SourceFrickeModularLatticeV2, `SourceFrickePeriodHomothetyV2, `SourceFrickePoleBoundedV3, `SourceFrickePrefactor, `SourceFrickeProductCyclotomic, `SourceFrickeProductExpansion, `SourceFrickeSeparation, `SourceFrickeTorsionConjugation, `SourceFrickeTorsionLattice, `SourceFrickeTorsionTransformationV2, `SourceInvariantAnalyticJPolynomial, `SourceLaurentAnalyticPolynomial, `SourceLevelOneAnalyticJPolynomial, `SourceLipschitzTwo, `SourceLipschitzTwoRealBoundary, `SourcePeriodWeierstrassSeparation, `SourcePoleBoundedCuspLaurent, `SourceQExpansionLaurentWidth, `SourceQExpansionPeriodWidth, `SourceWeierstrassLatticeRows, `SourceWeierstrassNormalizedTorsion, `SourceWeierstrassRowSeries, `SourceWeierstrassTorsionCuspBound, `SourceWeierstrassTorsionExpansion, `SourceWeierstrassTorsionFourierCoefficients, `SourceWeierstrassTorsionFourierExpansion, `SourceWeierstrassTorsionFourierSum, `SourceWeierstrassTorsionHolomorphy, `SourceWeierstrassTorsionTail]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.mdifferentiable_eq_of_eventuallyEq_atImInfty, `Dubon2026.SourceFunctionField.CuspTaylor.represents_qExpansion, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.eq_upperHalfPlane, `Dubon2026.SourceFunctionField.CuspTaylor.represents_cusp_const, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_add, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_mul, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_inv, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_div, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_pow, `Dubon2026.SourceFunctionField.qExpansion_eq_expand, `Dubon2026.SourceFunctionField.qExpansion_laurent_width, `Dubon2026.SourceFunctionField.represents_jqNModC, `Dubon2026.SourceFricke.periodic_discriminant_width, `Dubon2026.SourceFricke.represents_discriminant_width, `Dubon2026.SourceFricke.exists_cusp_represents_of_poleBounded, `Dubon2026.SourceFricke.coeffMap_discriminantLaurentK, `Dubon2026.SourceFricke.coeffMap_jqNModC_kN, `Dubon2026.SourceFricke.frickeF_eq_frickeH_div, `Dubon2026.SourceFricke.represents_frickeLaurentK, `Dubon2026.SourceFricke.periodic_frickeF, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_sum, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_aeval, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.isIntegral_of_monic_relation, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.eventually_ne_zero, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.ne_zero_of_function_ne_zero, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_of_mul_eq, `Dubon2026.SourceFricke.periodic_jf_width, `Dubon2026.SourceFricke.cyclotomicLevelRing_holomorphic, `Dubon2026.SourceFricke.cyclotomicLevelRing_periodic, `Dubon2026.SourceFricke.exists_cyclotomic_cusp_represents, `Dubon2026.SourceFricke.exists_cyclotomic_fraction_represents, `Dubon2026.SourceFricke.exists_integral_cyclotomic_laurent_of_monic, `Dubon2026.SourceFricke.exists_polynomial_monic_relation_of_isIntegral, `Dubon2026.SourceFricke.coeffMap_aeval_jqNModC_kN, `Dubon2026.SourceFricke.apply_T_of_periodic, `Dubon2026.SourceFricke.periodic_comp_ofComplex_of_T, `Dubon2026.SourceFricke.periodic_cyclotomic_fraction, `Dubon2026.SourceFricke.mdifferentiable_polynomial_jf, `Dubon2026.SourceFricke.exists_cyclotomic_monic_relation, `Dubon2026.SourceFricke.discriminantLaurentK, `Dubon2026.SourceFricke.frickeLaurentK, `Dubon2026.SourceFricke.cyclotomicLevelRing, `Dubon2026.SourceFunctionField.isIntegral_adjoin_of_isIntegral_coeffMap, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.eq_series, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.unique, `Dubon2026.SourceFunctionField.CuspTaylor.represents_analytic, `Dubon2026.SourceFunctionField.CuspTaylor.series_cuspFunction, `Dubon2026.SourceFunctionField.CuspTaylor.eventually_ne_zero_of_series_ne_zero, `Dubon2026.SourceFunctionField.qExpand_ofPowerSeries_eq_expand, `Dubon2026.SourceFunctionField.qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit, `Dubon2026.SourceFunctionField.jqModC_eq_modular_quotient, `Dubon2026.SourceFunctionField.coeffMap_ofPowerSeries, `Dubon2026.SourceFunctionField.coeffMap_qExpand, `Dubon2026.SourceFricke.qExpansion_coeff_width, `Dubon2026.SourceFricke.frickeHQSeriesK_map_inclusion, `Dubon2026.SourceFricke.frickeF_mul_discriminant, `UpperHalfPlane.mul_eq_zero_iff, `AnalyticOnNhd.eqOn_of_preconnected_of_eventuallyEq, `Polynomial.monic_X_pow_add]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE FRICKE CYCLOTOMIC DESCENT DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual cyclotomic monic-descent or finite-cusp-pole realization consumers. Only declaration values are traversed. The original Fricke fraction has a proved cyclotomic Laurent representation and derived periodicity. The existing coefficient retraction descends its complex monic j-relation, and analytic identity gives the cyclotomic relation for the original function. Integral spanning, rational Fourier structure, differential realization and arithmetic comparison remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

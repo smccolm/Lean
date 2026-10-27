@@ -1,0 +1,87 @@
+{
+  "scope": 665,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual finite Gamma1 character realization -> Picard/H1, full/parabolic and diamond comparison preserving the original homogeneous coefficient endomorphism -> actual differential/cusp comparison -> cyclotomic rational Fourier spanning -> integral base change of Fricke fractions -> cyclotomic monic relations.",
+  "assumptionsToDischarge": "For an actual holomorphic fraction F*b=a with a,b in the original cyclotomic j/Fricke algebra and b nonzero, a supplied actual complex monic j-relation descends to an actual monic relation with coefficients in the cyclotomic field. The cyclotomic Laurent representation and periodicity are derived, not assumed. The literal substituted j-series is identified with the original analytic j at width N. Actual periodic holomorphic functions with finite cusp poles have Laurent representations.",
+  "remaining": "The input complex monic relation is explicit; the prior modular-orbit theorem supplies it under actual principal-level invariance and finite cusp-pole hypotheses. Integral base-change spanning, rational Fourier spanning, arbitrary Gamma1 cusp differential realization and the converse remain. Picard/H1, full/parabolic/transpose/diamond, Frobenius/inertia and original all-weight arithmetic association, automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "route": "Reuse the existing meromorphic cusp-germ field operations and uniqueness, native analytic identity/domain theorems, integral discriminant coefficients, the existing width formula and Laurent reindexing, and the already proved coefficient-linear-retraction descent. A duplicate reindex proof was removed before audit in favor of SourceIntegralPowerSeriesFrobenius. This replaces the selected external monic-coefficient proof route without importing its large linear-system and Fourier flatness machinery or increasing limits. Integral constant-extension spanning is a separate unresolved step; no characteristic-zero Hecke lift is inferred. All final sources receive a fresh sequential rebuild before auditing.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceMeromorphicLaurentRealization.lean",
+      "sha256": "6828B2C8D7FCD2469FFCC87F478F9DEE046A8737C1EACB065D1933A4844972F3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspMeromorphicGerms.lean",
+      "sha256": "A75421FC5D89D6B695F1D12A44CAF0D2562EF7A3CAD0E413AF5FACDA02C41C6A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceTaylorQuotientGerms.lean",
+      "sha256": "5EE28407E70FAFA16649298E53C4BDE552B1EB50326AD012C8AF98398F71FD93"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalJCuspGerm.lean",
+      "sha256": "00B49756ECB7A2C288F6C160A58D2CFA3CF188A402E9D2AB67E5CDC8B27EA43F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentIntegralDescent.lean",
+      "sha256": "B69E4811A4C90E8BE66BB986C98033C88638B749E90B21C0D5AC1693745412C6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentScalarIndependence.lean",
+      "sha256": "2CB7EFCA500FBE57B6F474D706B231DDDC227CA71A0345B799B2035C7A6AA6C5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralPowerSeriesFrobenius.lean",
+      "sha256": "0ECA2C520B921E7E4A60F79E4B235850EF0EEBD3DE8C5F20F246B6151F345E22"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceJModularQuotient.lean",
+      "sha256": "38A138FC948271BFE593633D471D872EF54DEB829D403543681291B3850412E7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceDiscriminantIntegralExpansion.lean",
+      "sha256": "BAD1520E5AE5BCD28FE138526FBFB19047EAC5D10DDD2BC55116652ECAC16693"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHasseCoefficientTransport.lean",
+      "sha256": "0117D8ABE912AFC182FA5EF7E81467325FE7F509F7113CF4FB8DE1C80A5AA466"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentCoefficientReindex.lean",
+      "sha256": "605C38843DBB0C9BE3482E0E101F5E57E73DE4E8C8CCAF7FFEF57870CE8A3599"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeProductCyclotomic.lean",
+      "sha256": "1C011979D2B6ACC97911C5A7219309BEE605C4D4B2ECC3F1022212D33A52C064"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCuspInputs.lean",
+      "sha256": "C2E43F31238A86930A69B3F956400117F17340847800A7E1F5E71087F4D375B3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeModularOrbitV2.lean",
+      "sha256": "1C87B8694ED9D5016743DE0F3866847FD315A9C8FA6C08D6C83DC4283221D345"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceQExpansionPeriodWidth.lean",
+      "sha256": "D3248C33170D3B78853CFE460E204D730EAAA4BFBFDB4562117DED33587D0287"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\fricke-rational-descent-reuse-661\\P2M\\Sol\\S_WLight_exists_monicRel_j_K_of_mdifferentiable_frickeQuotient.lean.txt",
+      "sha256": "8E7B9BBA549A8265AA3BC80080C19D9C388F37E5D89898C666C9A23F12E09FB8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Complex\\UpperHalfPlane\\Manifold.lean",
+      "sha256": "04B98D016FD2BE9BC54B7A6B6A0B5B51BCFFF6C3489593A9B89A9B3A8C4913F7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Analytic\\Uniqueness.lean",
+      "sha256": "89CC16F01ECF2F7861CD6A0804ADAD77CFA804FB9A17FD0432DF17582B349630"
+    }
+  ],
+  "externalSourceCommit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "externalSourceLicense": "Apache-2.0",
+  "externalImport": false,
+  "externalFullClosureVerified": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

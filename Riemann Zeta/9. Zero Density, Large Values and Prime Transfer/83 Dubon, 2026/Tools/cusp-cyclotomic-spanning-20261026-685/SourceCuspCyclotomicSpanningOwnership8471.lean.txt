@@ -1,0 +1,57 @@
+import Dubon2026.SourceCuspLaurentLinearRelations
+import Dubon2026.SourceFrickeLaurentIndependence
+import Dubon2026.SourceFrickeCyclotomicHolomorphicAlgebra
+import Dubon2026.SourceFrickeScalarExtensionBasis
+import Dubon2026.SourceComplexBasisCoefficientTwist
+import Dubon2026.SourceFrickeCoefficientTwist
+import Dubon2026.SourceFrickeSpanLaurentRealization
+import Dubon2026.SourceLaurentTwistOrder
+import Dubon2026.SourceCuspVanishingOrder
+import Dubon2026.SourceFrickeTwistCuspVanishing
+import Dubon2026.SourceFrickeCyclotomicModularAction
+import Dubon2026.SourceFrickeTwistModularEquivariance
+import Dubon2026.SourceFrickeSpanMultiplication
+import Dubon2026.SourceFrickePrincipalInvariance
+import Dubon2026.SourceFrickeTwistPowers
+import Dubon2026.SourceFrickeHolomorphicDivisionInvariance
+import Dubon2026.SourceFrickeHolomorphicDivisionSpan
+import Dubon2026.SourceFrickeHolomorphicDivisionTwist
+import Dubon2026.SourceFrickeEllipticDivisibilityTwist
+import Dubon2026.SourceFrickeEllipticCoordinateTwist
+import Dubon2026.SourceHolomorphicCoprimeDivision
+import Dubon2026.SourceCuspWeightFactors
+import Dubon2026.SourceCuspWeightHolomorphicDivision
+import Dubon2026.SourceCuspWeightTransformation
+import Dubon2026.SourceCuspWeightCriterion
+import Dubon2026.SourceCuspWeightImage
+import Dubon2026.SourceFrickeTwistCuspConditions
+import Dubon2026.SourceCuspWeightImageSpan
+import Dubon2026.SourceCuspWeightImageTwist
+import Dubon2026.SourcePureTranscendentalConstantIntersection
+import Dubon2026.SourceAlgebraicallyClosedFixedField
+import Dubon2026.SourceTwistDescentFiniteSupport
+import Dubon2026.SourceTwistStableSubspaceDescent
+import Dubon2026.SourceOriginalFrickeSpanDescent
+import Dubon2026.SourceCuspWeightImageDescent
+import Dubon2026.SourceCuspFrickeRationalSpan
+import Dubon2026.SourceEisensteinFactorCyclotomicLaurent
+import Dubon2026.SourceCuspWeightImageFourier
+import Dubon2026.SourceGammaOneCyclotomicCuspSpan
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceCuspLaurentLinearRelations, `Dubon2026.SourceFrickeLaurentIndependence, `Dubon2026.SourceFrickeCyclotomicHolomorphicAlgebra, `Dubon2026.SourceFrickeScalarExtensionBasis, `Dubon2026.SourceComplexBasisCoefficientTwist, `Dubon2026.SourceFrickeCoefficientTwist, `Dubon2026.SourceFrickeSpanLaurentRealization, `Dubon2026.SourceLaurentTwistOrder, `Dubon2026.SourceCuspVanishingOrder, `Dubon2026.SourceFrickeTwistCuspVanishing, `Dubon2026.SourceFrickeCyclotomicModularAction, `Dubon2026.SourceFrickeTwistModularEquivariance, `Dubon2026.SourceFrickeSpanMultiplication, `Dubon2026.SourceFrickePrincipalInvariance, `Dubon2026.SourceFrickeTwistPowers, `Dubon2026.SourceFrickeHolomorphicDivisionInvariance, `Dubon2026.SourceFrickeHolomorphicDivisionSpan, `Dubon2026.SourceFrickeHolomorphicDivisionTwist, `Dubon2026.SourceFrickeEllipticDivisibilityTwist, `Dubon2026.SourceFrickeEllipticCoordinateTwist, `Dubon2026.SourceHolomorphicCoprimeDivision, `Dubon2026.SourceCuspWeightFactors, `Dubon2026.SourceCuspWeightHolomorphicDivision, `Dubon2026.SourceCuspWeightTransformation, `Dubon2026.SourceCuspWeightCriterion, `Dubon2026.SourceCuspWeightImage, `Dubon2026.SourceFrickeTwistCuspConditions, `Dubon2026.SourceCuspWeightImageSpan, `Dubon2026.SourceCuspWeightImageTwist, `Dubon2026.SourcePureTranscendentalConstantIntersection, `Dubon2026.SourceAlgebraicallyClosedFixedField, `Dubon2026.SourceTwistDescentFiniteSupport, `Dubon2026.SourceTwistStableSubspaceDescent, `Dubon2026.SourceOriginalFrickeSpanDescent, `Dubon2026.SourceCuspWeightImageDescent, `Dubon2026.SourceCuspFrickeRationalSpan, `Dubon2026.SourceEisensteinFactorCyclotomicLaurent, `Dubon2026.SourceCuspWeightImageFourier, `Dubon2026.SourceGammaOneCyclotomicCuspSpan]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

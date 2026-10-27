@@ -1,0 +1,79 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T22:18:05.246320+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceCyclotomicTraceStructure",
+    "SourceGammaOneFourierLinear",
+    "SourceGammaOneRationalTraceSpan",
+    "SourceGammaOneRationalCuspSpan"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicTraceStructure.lean",
+      "sha256": "A701D8A8AF3CC8663D5F2DBD943E93ECAF422DBDCBF7AE40922E5757432A5A04",
+      "oleanSha256": "7F2C0B8CEB52E5EFD5399B9AF116E105936609B42F4BF2ED6D740EB190E6556C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFourierLinear.lean",
+      "sha256": "CBE3498B47174EF590A64356B81B068004DB54E5A6B7D7D4A5D16F57891A23BA",
+      "oleanSha256": "C75039451782307DB87A4615321EEAE4ED63D1ED3ABA9340511AF961B36E7713"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalTraceSpan.lean",
+      "sha256": "B4F6F410B3CAC65CD283724B5F11766349386E512BC8B927E448DA671BEE56B1",
+      "oleanSha256": "E71D32956D5C71B7A0F7553A49696BDE6BB7D745E935CB840C4B03C10AC78F55"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspSpan.lean",
+      "sha256": "BBD748670D9D7D65948A7B06E558C95900F77AC4D70333718F9BC913013D64D4",
+      "oleanSha256": "D2B87FC9509B300101EF259A680516B81AC13B601BB1BCB0E99D1FE0D3C66065"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFricke.isCyclotomicExtension_kN",
+    "Dubon2026.SourceFricke.finiteDimensional_kN",
+    "Dubon2026.SourceFricke.isGalois_kN",
+    "Dubon2026.SourceFricke.gammaOne_one_mem_strictPeriods",
+    "Dubon2026.SourceFricke.gammaOne_eq_of_qExpansion_coeff_eq",
+    "Dubon2026.SourceFricke.gammaOne_mem_span_rational_of_conjugates",
+    "Dubon2026.SourceFricke.span_gammaOne_rational_cuspForms_eq_top",
+    "Dubon2026.SourceFricke.span_gammaOne_weightTwo_rational_cuspForms_eq_top",
+    "Dubon2026.SourceFricke.gammaOneQCoeffLinear"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFricke.isCyclotomicExtension_kN",
+    "Dubon2026.SourceFricke.finiteDimensional_kN",
+    "Dubon2026.SourceFricke.isGalois_kN",
+    "Dubon2026.SourceFricke.gammaOne_one_mem_strictPeriods",
+    "Dubon2026.SourceFricke.gammaOne_eq_of_qExpansion_coeff_eq",
+    "Dubon2026.SourceFricke.gammaOne_mem_span_rational_of_conjugates",
+    "Dubon2026.SourceFricke.span_gammaOne_rational_cuspForms_eq_top",
+    "Dubon2026.SourceFricke.span_gammaOne_weightTwo_rational_cuspForms_eq_top"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFricke.gammaOneQCoeffLinear"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspSpanAudit4.log",
+  "logSha256": "4C73168BD15091B9E8C57F400C87FB4A630174100E035BEA65585F0F40D2878A",
+  "auditSha256": "2FF705E36DFA7C0AF469AD245C486ADD2EB617D960B8F92FBF127EF449CDED0E",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 15,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 17,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspSpanDependencyAudit4.log",
+  "dependencyAuditSha256": "E4BC7F24F708F53C1B89A31FB0B165435BAA35B11B089873B8FC8706979B6536",
+  "dependencyAuditSourceSha256": "3D9320453EE355618B52BC3C2E3077C8B22F7A210F203321358BE94DF1BADAAE",
+  "consumers": [
+    "Dubon2026.SourceFricke.span_gammaOne_weightTwo_rational_cuspForms_eq_top"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> original Picard/H1, full/parabolic, transpose and diamond comparison -> actual differential/cusp comparison -> rational Fourier spanning.",
+  "discharged": "The actual cyclotomic coefficient field is finite Galois over Q by native cyclotomic-extension theorems. The constructed actual cusp conjugates give trace sums with rational width-one Fourier coefficients. Native trace-dual basis reconstruction expresses each original-image generator as a complex linear combination of those rational forms; Fourier injectivity identifies the original cusp form. The original-image spanning theorem discharges the Fricke-image and conjugation hypotheses in the final full-space spanning consumer. Weight-two rational Fourier spanning holds at every nonzero level. General weight spanning retains the explicit source balance k+4a+6b=12m.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Prove bounded denominators for these rational forms in the original integral-ratio field, arbitrary cusp differential realization and its converse, actual Hecke comparisons, original finite-character arithmetic realization, all-weight characteristic-zero association, arithmetic automorphy and higher continuation. No unrestricted odd-weight weight-balance claim is made. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-rational-cusp-span-4-reuse-review-20261026.json",
+  "reuseReviewSha256": "02DC657AB84D4517DBE46A29D77F46FD33944986A389860C882BD92FE604FB5A",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

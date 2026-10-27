@@ -1,0 +1,75 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T21:09:06.264653+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceEisensteinFactorCyclotomicLaurent",
+    "SourceCuspWeightImageFourier",
+    "SourceGammaOneCyclotomicCuspSpan"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceEisensteinFactorCyclotomicLaurent.lean",
+      "sha256": "1348D681063873F9DA09AC859E0B4BA1C5771B8FD8EB6C1E8910AFBEAF86F242",
+      "oleanSha256": "085FF7FE71B438D66E3E076C8C1D6950FC45345C117230388787EBEDEE208308"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightImageFourier.lean",
+      "sha256": "1D3A236C96D5622E433BD23C1F04711485B1E7C420C2EAE74AF2FA990F5543FA",
+      "oleanSha256": "926BDE629D10FC06F704835B96F616054713C115988EC3A7080652F68585A2EB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicCuspSpan.lean",
+      "sha256": "58868C112C6DA750262A75551FDF71754FE3CF983C69C14B0609230178235D70",
+      "oleanSha256": "C51B6F50AFC9B876A1293AF1FC074631225B934FA58B7572136F2F42FAFB6BD1"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFricke.coeffMap_eisensteinLaurentK",
+    "Dubon2026.SourceFricke.periodic_eisensteinFactor",
+    "Dubon2026.SourceFricke.represents_eisensteinFactorLaurentK",
+    "Dubon2026.SourceFricke.eisensteinFactorLaurentK_ne_zero",
+    "Dubon2026.SourceFricke.exists_cuspWeightImage_laurent",
+    "Dubon2026.SourceFricke.cuspWeightImage_qExpansion_coeff_mem",
+    "Dubon2026.SourceFricke.gammaOne_cuspWeightImage_qExpansion_coeff_mem",
+    "Dubon2026.SourceFricke.span_gammaOne_cyclotomic_cuspForms_eq_top",
+    "Dubon2026.SourceFricke.span_gammaOne_weightTwo_cyclotomic_cuspForms_eq_top",
+    "Dubon2026.SourceFricke.eisensteinLaurentK"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFricke.coeffMap_eisensteinLaurentK",
+    "Dubon2026.SourceFricke.periodic_eisensteinFactor",
+    "Dubon2026.SourceFricke.represents_eisensteinFactorLaurentK",
+    "Dubon2026.SourceFricke.eisensteinFactorLaurentK_ne_zero",
+    "Dubon2026.SourceFricke.exists_cuspWeightImage_laurent",
+    "Dubon2026.SourceFricke.cuspWeightImage_qExpansion_coeff_mem",
+    "Dubon2026.SourceFricke.gammaOne_cuspWeightImage_qExpansion_coeff_mem",
+    "Dubon2026.SourceFricke.span_gammaOne_cyclotomic_cuspForms_eq_top",
+    "Dubon2026.SourceFricke.span_gammaOne_weightTwo_cyclotomic_cuspForms_eq_top"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFricke.eisensteinLaurentK"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicCuspSpanAudit3.log",
+  "logSha256": "F5693A5739A53CEE01476C17C363A547A6B819821DCD43F09E251235962C5925",
+  "auditSha256": "89FC6231D3F7D9807BEDD543A10A039C20958A3783A848F01E901B6D90759525",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 17,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 16,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicCuspSpanDependencyAudit3.log",
+  "dependencyAuditSha256": "CD6A9F0D97CEE87066AA9EA88CE32D26AAC86E5593F4661DD68E84AF818835B9",
+  "dependencyAuditSourceSha256": "400C6BA1BAA7F099079BA68E57DC1CB4AB4ACDDF42EC84F0E419242301644307",
+  "consumers": [
+    "Dubon2026.SourceFricke.span_gammaOne_weightTwo_cyclotomic_cuspForms_eq_top"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> original Picard/H1, full/parabolic, transpose and diamond comparison -> actual differential/cusp comparison -> rational cusp-form spanning.",
+  "discharged": "An original cyclotomic Fricke weight image gives a Laurent representation of the actual cusp form: multiply its Laurent numerator by the actual discriminant power and divide by the nonzero original Eisenstein factor. Uniqueness against the actual q-expansion proves every coefficient lies in the original cyclotomic field. For Gamma1, derive period one, width-N periodicity and cusp boundedness, identify the width-one coefficients, and consume the proved actual Fricke-image span. The actual weight-two Gamma1 cusp space is therefore spanned over the complex numbers by cusp forms with cyclotomic Fourier coefficients.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Continue original Gamma1 differential realization and comparison, then finite-character arithmetic realization, original all-weight characteristic-zero association, automorphy and higher continuation. General weight-lowering remains subject to the original balance k+4a+6b=12m; the weight-two specialization uses a=b=m=1 and is unconditional in nonzero level N. No unrestricted odd-weight claim or closure of the arithmetic goal. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-cusp-span-3-reuse-review-20261026.json",
+  "reuseReviewSha256": "A84C98EF2F3309399A437CAC194DED644EA0F209362176CF53A9BCEF0BE1B879",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

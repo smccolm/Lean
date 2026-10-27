@@ -1,0 +1,83 @@
+import SourceHolomorphicCoprimeDivision
+import SourceCuspWeightFactors
+import SourceCuspWeightHolomorphicDivision
+import SourceCuspWeightTransformation
+import SourceCuspWeightCriterion
+import SourceCuspWeightImage
+import SourceFrickeTwistCuspConditions
+import SourceCuspWeightImageSpan
+import SourceCuspWeightImageTwist
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_mul_eq_of_coprime
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.mdifferentiable_eisensteinFactor
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.E4_ne_zero_or_E6_ne_zero
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.tendsto_E6_atImInfty
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_E4_ne_zero
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_E6_ne_zero
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.tendsto_eisensteinFactor
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_eisensteinFactor_ne_zero
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.isBoundedAtImInfty_eisensteinFactor
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_div_E4
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_div_E6
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.eisensteinFactor_smul
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.discriminant_pow_smul
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.slash_mul_eisensteinFactor
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.forward
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.backward
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.main
+#print axioms Dubon2026.SourceFricke.cuspWeightImage_mul_discriminant
+#print axioms Dubon2026.SourceFricke.mdifferentiable_cuspWeightImage
+#print axioms Dubon2026.SourceFricke.cuspWeightImage_injective
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_preserves_all_cusps
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_preserves_subgroup_invariance
+#print axioms Dubon2026.SourceFricke.cuspWeightImage_mem_frickeSpan
+#print axioms Dubon2026.SourceFricke.exists_cuspWeightImage_eq_twist
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.eisensteinFactor
+#print axioms Dubon2026.SourceFricke.cuspWeightImage
+#print axioms Dubon2026.SourceFricke.cuspWeightImageElement
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceHolomorphicCoprimeDivision, `SourceCuspWeightFactors, `SourceCuspWeightHolomorphicDivision, `SourceCuspWeightTransformation, `SourceCuspWeightCriterion, `SourceCuspWeightImage, `SourceFrickeTwistCuspConditions, `SourceCuspWeightImageSpan, `SourceCuspWeightImageTwist]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_mul_eq_of_coprime, `Dubon2026.SourceFunctionField.CuspWeightCriterion.mdifferentiable_eisensteinFactor, `Dubon2026.SourceFunctionField.CuspWeightCriterion.E4_ne_zero_or_E6_ne_zero, `Dubon2026.SourceFunctionField.CuspWeightCriterion.tendsto_E6_atImInfty, `Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_E4_ne_zero, `Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_E6_ne_zero, `Dubon2026.SourceFunctionField.CuspWeightCriterion.tendsto_eisensteinFactor, `Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_eisensteinFactor_ne_zero, `Dubon2026.SourceFunctionField.CuspWeightCriterion.isBoundedAtImInfty_eisensteinFactor, `Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_div_E4, `Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_div_E6, `Dubon2026.SourceFunctionField.CuspWeightCriterion.eisensteinFactor_smul, `Dubon2026.SourceFunctionField.CuspWeightCriterion.discriminant_pow_smul, `Dubon2026.SourceFunctionField.CuspWeightCriterion.slash_mul_eisensteinFactor, `Dubon2026.SourceFunctionField.CuspWeightCriterion.forward, `Dubon2026.SourceFunctionField.CuspWeightCriterion.backward, `Dubon2026.SourceFunctionField.CuspWeightCriterion.main, `Dubon2026.SourceFricke.cuspWeightImage_mul_discriminant, `Dubon2026.SourceFricke.mdifferentiable_cuspWeightImage, `Dubon2026.SourceFricke.cuspWeightImage_injective, `Dubon2026.SourceFricke.frickeCoefficientTwist_preserves_all_cusps, `Dubon2026.SourceFricke.frickeCoefficientTwist_preserves_subgroup_invariance, `Dubon2026.SourceFricke.cuspWeightImage_mem_frickeSpan, `Dubon2026.SourceFricke.exists_cuspWeightImage_eq_twist]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.CuspWeightCriterion.eisensteinFactor, `Dubon2026.SourceFricke.cuspWeightImage, `Dubon2026.SourceFricke.cuspWeightImageElement]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Fricke Cusp Image Stability postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Fricke Cusp Image Stability theorems discovered"
+  logInfo m!"SOURCE FRICKE CUSP IMAGE STABILITY AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceHolomorphicCoprimeDivision
+#lint in SourceCuspWeightFactors
+#lint in SourceCuspWeightHolomorphicDivision
+#lint in SourceCuspWeightTransformation
+#lint in SourceCuspWeightCriterion
+#lint in SourceCuspWeightImage
+#lint in SourceFrickeTwistCuspConditions
+#lint in SourceCuspWeightImageSpan
+#lint in SourceCuspWeightImageTwist

@@ -1,0 +1,103 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T14:49:50.510971+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceQExpansionPeriodWidth",
+    "SourceEisensteinRationalSeries",
+    "SourceFrickeProductExpansion",
+    "SourceFrickeProductCyclotomic"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceQExpansionPeriodWidth.lean",
+      "sha256": "D3248C33170D3B78853CFE460E204D730EAAA4BFBFDB4562117DED33587D0287",
+      "oleanSha256": "B592789E55E4C64DA32A3457D284DD40BA0F40BAA005476C2CF1117D2EE31BD8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceEisensteinRationalSeries.lean",
+      "sha256": "E19E571826189DF9B1AC81189CEF81B9CF3658FFD93BB29B576DC71CD1662C0C",
+      "oleanSha256": "39B30C3E1A303D784E543F4384E5F337425D7315FA819A0CEB55C3376D49BC37"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeProductExpansion.lean",
+      "sha256": "A2019231064396851232EF026F3DE0F7AA9A179FDF9905CF670373E61AD22226",
+      "oleanSha256": "64EE3D574FF9CB717A23AFD64EF514ADDA41AAA25C4689B3C4200F4EA5A87B94"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeProductCyclotomic.lean",
+      "sha256": "1C011979D2B6ACC97911C5A7219309BEE605C4D4B2ECC3F1022212D33A52C064",
+      "oleanSha256": "4C262D5A257426DAE42AA8E93C15FF894641BD4881D292FF9586F7BFCD4AA2D3"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFricke.qParam_one_eq_pow",
+    "Dubon2026.SourceFricke.qExpansion_coeff_width",
+    "Dubon2026.SourceFricke.eisensteinQSeries_map",
+    "Dubon2026.SourceFricke.periodic_E4E6",
+    "Dubon2026.SourceFricke.e4e6QSeries_map",
+    "Dubon2026.SourceFricke.analyticAt_cuspFunction_E4E6",
+    "Dubon2026.SourceFricke.periodic_frickeH",
+    "Dubon2026.SourceFricke.mdifferentiable_frickeH",
+    "Dubon2026.SourceFricke.isBoundedAtImInfty_frickeH",
+    "Dubon2026.SourceFricke.qExpansion_frickeH",
+    "Dubon2026.SourceFricke.hasSum_qExpansion_frickeH",
+    "Dubon2026.SourceFricke.e4e6QSeries_map_ringHom",
+    "Dubon2026.SourceFricke.frickeHQSeriesK_map_inclusion",
+    "Dubon2026.SourceFricke.frickeHQSeriesK_map_cyclotomic",
+    "Dubon2026.SourceFricke.qExpansion_frickeH_coeff_mem_kN",
+    "Dubon2026.SourceFricke.qExpansion_frickeH_conj",
+    "Dubon2026.SourceFricke.eisensteinQSeries",
+    "Dubon2026.SourceFricke.e4e6QSeries",
+    "Dubon2026.SourceFricke.frickeH",
+    "Dubon2026.SourceFricke.frickeHQSeriesK"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFricke.qParam_one_eq_pow",
+    "Dubon2026.SourceFricke.qExpansion_coeff_width",
+    "Dubon2026.SourceFricke.eisensteinQSeries_map",
+    "Dubon2026.SourceFricke.periodic_E4E6",
+    "Dubon2026.SourceFricke.e4e6QSeries_map",
+    "Dubon2026.SourceFricke.analyticAt_cuspFunction_E4E6",
+    "Dubon2026.SourceFricke.periodic_frickeH",
+    "Dubon2026.SourceFricke.mdifferentiable_frickeH",
+    "Dubon2026.SourceFricke.isBoundedAtImInfty_frickeH",
+    "Dubon2026.SourceFricke.qExpansion_frickeH",
+    "Dubon2026.SourceFricke.hasSum_qExpansion_frickeH",
+    "Dubon2026.SourceFricke.e4e6QSeries_map_ringHom",
+    "Dubon2026.SourceFricke.frickeHQSeriesK_map_inclusion",
+    "Dubon2026.SourceFricke.frickeHQSeriesK_map_cyclotomic",
+    "Dubon2026.SourceFricke.qExpansion_frickeH_coeff_mem_kN",
+    "Dubon2026.SourceFricke.qExpansion_frickeH_conj"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFricke.eisensteinQSeries",
+    "Dubon2026.SourceFricke.e4e6QSeries",
+    "Dubon2026.SourceFricke.frickeH",
+    "Dubon2026.SourceFricke.frickeHQSeriesK"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeProductTransportAudit4.log",
+  "logSha256": "0342C8E6F239C67658CEFE5422AC48619C737816008F2584541D3CD7DCEFB049",
+  "auditSha256": "4EDC653A41A530733ADF10B845D2C5010D0439C585422DD14359B34288CE8A3D",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 35,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 25,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeProductTransportDependencyAudit4.log",
+  "dependencyAuditSha256": "A95A8CC329404A9FDA45089D6E31DC3554B175F93EE3AF238669EA89F5FF6CFC",
+  "dependencyAuditSourceSha256": "1F0823CB15002045C0A541A50F070A02D4EC5E9DC8360432B272502721A63EED",
+  "consumers": [
+    "Dubon2026.SourceFricke.qExpansion_frickeH_conj",
+    "Dubon2026.SourceFricke.qExpansion_frickeH_coeff_mem_kN",
+    "Dubon2026.SourceFricke.hasSum_qExpansion_frickeH"
+  ],
+  "dependency": "DUB-17/18 -> higher continuation -> arithmetic automorphy -> original all-weight association -> finite Gamma1 character realization -> Picard/H1 and diamond comparison -> cusp differential realization -> rational Fourier structure -> Fricke product coefficient transport.",
+  "discharged": "The actual Fricke product has coefficients in the actual cyclotomic field, and its constructed coefficient series maps to the actual function at the transformed torsion coordinate.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Fricke separation and rational spanning, rational Gamma1 basis and actual cusp differential realization, then Picard/H1/diamond and arithmetic association; DUB-17--20 OPEN, 16/20.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-fricke-product-transport-4-reuse-review-20261026.json",
+  "reuseReviewSha256": "1C110D87B2E14D0B536F2CA7D8DEDFC49E9F7F89830E78D27B8B5D997664E9AB",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

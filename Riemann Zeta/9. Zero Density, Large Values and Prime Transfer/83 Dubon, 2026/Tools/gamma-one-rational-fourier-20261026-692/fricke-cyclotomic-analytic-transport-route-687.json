@@ -1,0 +1,64 @@
+{
+  "scope": 687,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> original Picard/H1, full/parabolic, transpose and diamond comparison -> actual differential/cusp comparison -> rational Fourier structure -> cyclotomic coefficient conjugation.",
+  "assumptionsToDischarge": "The actual primitive cyclotomic root determines the unit torsion-index permutation. The proved torsion Fourier formula identifies coefficient conjugation on each literal Laurent generator. Native adjoin induction and integral-equation transport preserve the original generated field and j-integrality. An actual holomorphic original Fricke fraction has a Laurent germ in that field; principal invariance, all modular cusp bounds and its monic relation are derived, yielding integrality without an assumed equation. The existing holomorphic Fricke representative theorem then constructs the actual function realizing the conjugated Laurent germ.",
+  "remaining": "Prove modular covariance, elliptic divisibility and cusp compatibility for this nontrivial cyclotomic conjugation, then construct the conjugated original Gamma1 cusp form. Descend the cyclotomic span to Q, prove the needed bounded denominators for the original integral-ratio field, realize arbitrary cusp differentials and their converse, and continue original finite-character arithmetic realization, all-weight characteristic-zero association, automorphy and higher continuation. No cusp-conjugation or rational-spanning gate is claimed closed here. 16/20; DUB-17--20 OPEN.",
+  "shorterRouteReview": "Read the primary actual quotient-transport construction and Gamma1/modular conjugation subsections at the frozen commit. The external proof transports cleared polynomial relations and reconstructs holomorphic quotients. The local integral-Laurent representative theorem already performs that analytic reconstruction. Preserve the original Laurent generated field and monic integrality directly under the proved coefficient permutation and reuse that theorem. This avoids importing the external rational-at-infinity package, recursive Fourier division and repeated monic removable-singularity development. Native roots-of-unity automorphism exponents and integral-map transport discharge the two algebraic inputs.",
+  "externalImport": false,
+  "externalFullClosureVerified": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeProductCyclotomic.lean",
+      "sha256": "1C011979D2B6ACC97911C5A7219309BEE605C4D4B2ECC3F1022212D33A52C064"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicLaurent.lean",
+      "sha256": "CAFB735C7C1A45E8A27C7CD9A387E05E7699303D829A72C5EA3F5008CC0C6D84"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePrincipalInvariance.lean",
+      "sha256": "B50C51CB7FC773F19BAE5C7C75C9151F39F57F3EC76CE0AED0740D6C7D8638E2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeModularOrbitV2.lean",
+      "sha256": "1C87B8694ED9D5016743DE0F3866847FD315A9C8FA6C08D6C83DC4283221D345"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeIntegralHolomorphicRepresentative.lean",
+      "sha256": "F55C22030E5B4A195EA0C47E055B2F50495EED9E7AA3BD4641B01EB58620CB12"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentIntegralCoefficientImage.lean",
+      "sha256": "927EB8550A8CA2B8C059E26AE4A576610BE12B20CEC9D0FD8F4BAEDFCB960CA0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\RootsOfUnity\\PrimitiveRoots.lean",
+      "sha256": "DD948892E35AB9662DD309644853853D2207904E7A6A3F1CFD5702C040B6D9F4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\IntegralClosure\\IsIntegral\\Basic.lean",
+      "sha256": "2BAD38C574DD30677B09D8AFAA607AE8B38F889523045D59B5410CB6599B759A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-cusp-realization-reuse-644\\P2M\\Sol\\S_CuspForm_exists_gamma1_qCoeff_eq_algEquiv_apply_of_even.lean.txt",
+      "sha256": "7F47382FFE7793D0FD63FB6D68B2B33E26FFFC323F1A091EB99096B88536A261"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cyclotomic-transport-inputs-reuse-686\\P2M\\Sol\\S_ModularFunction_exists_mdifferentiable_sigmaTransport_of_frickeQuotient.lean.txt",
+      "sha256": "31F0D88DC16CD6FAFE2257FBF59CF1B1124F61BCC4865F779E09261C7393B711"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cyclotomic-transport-inputs-reuse-686\\P2M\\Sol\\S_CuspForm_exists_gamma1_frickeRational_sigmaTransport.lean.txt",
+      "sha256": "91908DF3C06FBE1A59F308B96F9FF7082AD2965A4D650FB83A628940F4F64A82"
+    }
+  ],
+  "modules": [
+    "SourceCyclotomicFrickeIndex",
+    "SourceFrickeLaurentCyclotomicConjugation",
+    "SourceFrickeLaurentFieldConjugation",
+    "SourceOriginalFrickeLaurentField",
+    "SourceFrickeCyclotomicAnalyticTransport"
+  ]
+}

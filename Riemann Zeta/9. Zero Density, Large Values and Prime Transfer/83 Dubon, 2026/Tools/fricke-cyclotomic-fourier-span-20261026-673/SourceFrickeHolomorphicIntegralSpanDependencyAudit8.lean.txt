@@ -1,0 +1,35 @@
+import SourceMonicQuotientRelation
+import SourceHolomorphicMonicQuotient
+import SourceIntegralCoordinateMonic
+import SourceFrickeCyclotomicLaurentLifts
+import SourceFrickeClearedLaurentMonic
+import SourceFrickeIntegralHolomorphicRepresentative
+import SourceCuspLaurentSpan
+import SourceFrickeHolomorphicIntegralSpan
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFricke.mem_span_holomorphic_cyclotomic_fractions_of_principal_invariant]
+  let localModules : Array Name := #[`SourceAlgebraicConstantIntegralSpan, `SourceAlgebraicConstantInterpolation, `SourceAlgebraicConstantLift, `SourceAlgebraicConstantRoots, `SourceConstantExtensionChain, `SourceConstantExtensionIntegralAlgebra, `SourceConstantExtensionMonotonicity, `SourceCuspLaurentFractionIdentity, `SourceCuspLaurentFunctionIdentity, `SourceCuspLaurentPolynomial, `SourceCuspLaurentSpan, `SourceEisensteinRationalSeries, `SourceFiniteConstantIntegralCapture, `SourceFrickeClearedLaurentMonic, `SourceFrickeComplexFractionLaurent, `SourceFrickeCuspInputs, `SourceFrickeCyclotomicCoefficients, `SourceFrickeCyclotomicField, `SourceFrickeCyclotomicFractionGerm, `SourceFrickeCyclotomicLaurent, `SourceFrickeCyclotomicLaurentLifts, `SourceFrickeCyclotomicTransport, `SourceFrickeFaithfulness, `SourceFrickeFixedFieldJV3, `SourceFrickeFixedFractionV3, `SourceFrickeFractionPeriodicity, `SourceFrickeFunctionTransformationV2, `SourceFrickeHolomorphicAlgebraV3, `SourceFrickeHolomorphicIntegralSpan, `SourceFrickeHolomorphy, `SourceFrickeIntegralHolomorphicRepresentative, `SourceFrickeLaurentGeneratorIntegrality, `SourceFrickeLaurentIntegralSpan, `SourceFrickeLevelAlgebraV3, `SourceFrickeLevelFieldV3, `SourceFrickeLevelGroupV3, `SourceFrickeModularLatticeV2, `SourceFrickeModularOrbitV2, `SourceFrickePeriodHomothetyV2, `SourceFrickePoleBoundedV3, `SourceFrickePrefactor, `SourceFrickeProductCyclotomic, `SourceFrickeProductExpansion, `SourceFrickeSeparation, `SourceFrickeStableAlgebraV2, `SourceFrickeStableEmbeddingV2, `SourceFrickeStableFieldV2, `SourceFrickeStableFractionV2, `SourceFrickeStableGroupV2, `SourceFrickeStableMonicV2, `SourceFrickeTorsionConjugation, `SourceFrickeTorsionLattice, `SourceFrickeTorsionTransformationV2, `SourceHolomorphicMonicQuotient, `SourceIntegralCoordinateMonic, `SourceInvariantAnalyticJPolynomial, `SourceLaurentAnalyticPolynomial, `SourceLaurentConstantTranscendence, `SourceLaurentGeneratedConstants, `SourceLaurentIntegralCoefficientImage, `SourceLaurentIntegralConstantSpan, `SourceLevelOneAnalyticJPolynomial, `SourceLipschitzTwo, `SourceLipschitzTwoRealBoundary, `SourceMonicQuotientRelation, `SourcePeriodWeierstrassSeparation, `SourcePoleBoundedCuspLaurent, `SourceQExpansionLaurentWidth, `SourceQExpansionPeriodWidth, `SourceTranscendentalConstantAlgebraV2, `SourceTranscendentalConstantDenominatorsV2, `SourceTranscendentalConstantEvaluationV2, `SourceTranscendentalConstantFieldRangeV2, `SourceTranscendentalConstantIntegralSpanV2, `SourceTranscendentalConstantNormalityV2, `SourceTranscendentalConstantScaledRelationV2, `SourceWeierstrassLatticeRows, `SourceWeierstrassNormalizedTorsion, `SourceWeierstrassRowSeries, `SourceWeierstrassTorsionCuspBound, `SourceWeierstrassTorsionExpansion, `SourceWeierstrassTorsionFourierCoefficients, `SourceWeierstrassTorsionFourierExpansion, `SourceWeierstrassTorsionFourierSum, `SourceWeierstrassTorsionHolomorphy, `SourceWeierstrassTorsionTail]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.cleared_monic_relation_eq_scaled, `Dubon2026.SourceFunctionField.monic_div_relation_of_cleared, `Dubon2026.SourceFunctionField.cleared_monic_relation_of_div, `Dubon2026.SourceFunctionField.mdiff_eventually_ne_zero_ofComplex, `Dubon2026.SourceFunctionField.quotient_locally_bounded_of_monic, `Dubon2026.SourceFunctionField.exists_mdifferentiable_quotient_of_monic, `Dubon2026.SourceFunctionField.exists_coordinate_monic_relation, `Dubon2026.SourceFricke.exists_cyclotomic_function_of_laurent_algebra, `Dubon2026.SourceFricke.exists_cyclotomic_function_fraction_of_laurent_field, `Dubon2026.SourceFricke.cyclotomic_polynomial_jf_mem, `Dubon2026.SourceFricke.represents_cyclotomic_polynomial_jf, `Dubon2026.SourceFricke.cleared_cyclotomic_relation_of_laurent, `Dubon2026.SourceFricke.exists_holomorphic_cyclotomic_fraction_of_integral_laurent, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_smul, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.mem_span_of_laurent_span, `Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_periodic, `Dubon2026.SourceFricke.periodic_of_principal_invariant, `Dubon2026.SourceFricke.mem_span_holomorphic_cyclotomic_fractions_of_principal_invariant, `Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions, `Dubon2026.SourceFricke.exists_fricke_laurent_integral_span_of_principal_invariant, `Dubon2026.SourceFunctionField.HolomorphicQuotient.exists_mdifferentiable_mul_eq, `Dubon2026.SourceFunctionField.norm_le_of_monic_relation, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.eq_upperHalfPlane, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_of_mul_eq, `IsFractionRing.div_surjective, `CongruenceSubgroup.ModularGroup_T_pow_mem_Gamma]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE FRICKE HOLOMORPHIC INTEGRAL SPAN DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the original modular-function consumer. Only declaration values are traversed. The existing Laurent integral span supplies the summands; original cyclotomic function numerators and denominators, cleared monic relations, the native root bound and the existing removable extension derive their holomorphic representatives. The native complex scalar action and analytic identity principle give the actual function span. Pole-cleared cyclotomic Fourier coefficients, rational cusp spanning and arithmetic comparison remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

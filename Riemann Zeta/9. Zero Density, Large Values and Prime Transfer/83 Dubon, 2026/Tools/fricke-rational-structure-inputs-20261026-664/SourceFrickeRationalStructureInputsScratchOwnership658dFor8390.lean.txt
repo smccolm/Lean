@@ -1,0 +1,21 @@
+import SourceFrickePoleBoundedV3
+import SourceFrickeHolomorphicAlgebraV3
+import SourceFrickeLevelAlgebraV3
+import SourceFrickeLevelGroupV3
+import SourceFrickeLevelFieldV3
+import SourceFrickeFixedFractionV3
+import SourceFrickeFixedFieldJV3
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceFrickePoleBoundedV3, `SourceFrickeHolomorphicAlgebraV3, `SourceFrickeLevelAlgebraV3, `SourceFrickeLevelGroupV3, `SourceFrickeLevelFieldV3, `SourceFrickeFixedFractionV3, `SourceFrickeFixedFieldJV3]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

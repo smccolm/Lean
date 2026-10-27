@@ -1,0 +1,125 @@
+import SourceFrickePoleBoundedV2
+import SourceFrickeHolomorphicAlgebraV2
+import SourceFrickeLevelAlgebraV2
+import SourceFrickeLevelGroupV2
+import SourceFrickeLevelFieldV2
+import SourceFrickeFixedFractionV2
+import SourceFrickeFixedFieldJV2
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFricke.isBoundedAtImInfty_discriminant
+#print axioms Dubon2026.SourceFricke.isBoundedAtImInfty_discPow
+#print axioms Dubon2026.SourceFricke.IsBoundedAtImInfty.mul_discPow_mono
+#print axioms Dubon2026.SourceFricke.poleBounded_algebraMap
+#print axioms Dubon2026.SourceFricke.PoleBounded.add
+#print axioms Dubon2026.SourceFricke.PoleBounded.mul
+#print axioms Dubon2026.SourceFricke.poleBounded_of_mem_adjoin
+#print axioms Dubon2026.SourceFricke.poleBounded_j
+#print axioms Dubon2026.SourceFricke.poleBounded_frickeF
+#print axioms Dubon2026.SourceFricke.eq_polynomial_j_of_invariant_of_mem_adjoin
+#print axioms Dubon2026.SourceFricke.sl_smul_apply
+#print axioms Dubon2026.SourceFricke.sl_smul_def
+#print axioms Dubon2026.SourceFricke.sl_smul_eq_self_iff
+#print axioms Dubon2026.SourceFricke.mem_HolFn
+#print axioms Dubon2026.SourceFricke.HolFn.eq_zero_or_eq_zero_of_mul_eq_zero
+#print axioms Dubon2026.SourceFricke.smul_j
+#print axioms Dubon2026.SourceFricke.smul_frickeF
+#print axioms Dubon2026.SourceFricke.j_mem_levelRing
+#print axioms Dubon2026.SourceFricke.frickeF_mem_levelRing
+#print axioms Dubon2026.SourceFricke.levelGen_subset_HolFn
+#print axioms Dubon2026.SourceFricke.levelRing_le_HolFn
+#print axioms Dubon2026.SourceFricke.smul_mem_levelGen
+#print axioms Dubon2026.SourceFricke.smul_mem_levelRing
+#print axioms Dubon2026.SourceFricke.levelRing_coe_smul
+#print axioms Dubon2026.SourceFricke.mem_levelFixer_iff
+#print axioms Dubon2026.SourceFricke.mem_levelFixer_iff_frickeF
+#print axioms Dubon2026.SourceFricke.Gamma_le_levelFixer
+#print axioms Dubon2026.SourceFricke.mem_levelFixer_iff_pm
+#print axioms Dubon2026.SourceFricke.card_LevelGrp
+#print axioms Dubon2026.SourceFricke.levelGrp_mk_smul
+#print axioms Dubon2026.SourceFricke.levelGrp_smul_algebraMap
+#print axioms Dubon2026.SourceFricke.finrank_levelField_fixed
+#print axioms Dubon2026.SourceFricke.smul_prod_smul_eq
+#print axioms Dubon2026.SourceFricke.exists_fixed_div_of_fixed
+#print axioms Dubon2026.SourceFricke.aeval_j_apply
+#print axioms Dubon2026.SourceFricke.coe_aeval_jA
+#print axioms Dubon2026.SourceFricke.levelGen_poleBounded
+#print axioms Dubon2026.SourceFricke.levelRing_fixed_eq_aeval_j
+#print axioms Dubon2026.SourceFricke.levelRing_fixed_eq_aeval_j'
+#print axioms Dubon2026.SourceFricke.smul_jK
+#print axioms Dubon2026.SourceFricke.fixedPoints_levelField_eq_adjoin_j
+#print axioms Dubon2026.SourceFricke.fixedIF_eq_adjoin
+#print axioms Dubon2026.SourceFricke.finrank_fixedIF
+#print axioms Dubon2026.SourceFricke.finrank_adjoin_j_levelField
+#print axioms Dubon2026.SourceFricke.slFn_smulCommClass
+#print axioms Dubon2026.SourceFricke.levelRing_isDomain
+#print axioms Dubon2026.SourceFricke.levelRing_smulCommClass
+#print axioms Dubon2026.SourceFricke.levelFixer_normal
+#print axioms Dubon2026.SourceFricke.levelFixer_finiteIndex
+#print axioms Dubon2026.SourceFricke.levelGrp_smulCommClass
+#print axioms Dubon2026.SourceFricke.levelGrp_faithful
+#print axioms Dubon2026.SourceFricke.levelGrp_smulDistribClass
+#print axioms Dubon2026.SourceFricke.levelGrpField_faithful
+#print axioms Dubon2026.SourceFricke.levelGrpField_smulCommClass
+#print axioms Dubon2026.SourceFricke.PoleBounded
+#print axioms Dubon2026.SourceFricke.slFnAction
+#print axioms Dubon2026.SourceFricke.HolFn
+#print axioms Dubon2026.SourceFricke.levelGen
+#print axioms Dubon2026.SourceFricke.levelRing
+#print axioms Dubon2026.SourceFricke.levelRingAction
+#print axioms Dubon2026.SourceFricke.levelFixer
+#print axioms Dubon2026.SourceFricke.LevelGrp
+#print axioms Dubon2026.SourceFricke.levelGrpFintype
+#print axioms Dubon2026.SourceFricke.levelGrpRingAction
+#print axioms Dubon2026.SourceFricke.levelField
+#print axioms Dubon2026.SourceFricke.levelFieldRingSMul
+#print axioms Dubon2026.SourceFricke.levelGrpFieldAction
+#print axioms Dubon2026.SourceFricke.fieldActionSMul
+#print axioms Dubon2026.SourceFricke.fieldMulAction
+#print axioms Dubon2026.SourceFricke.ringSelfDistribMulAction
+#print axioms Dubon2026.SourceFricke.jA
+#print axioms Dubon2026.SourceFricke.jK
+#print axioms Dubon2026.SourceFricke.fixedIF
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceFrickePoleBoundedV2, `SourceFrickeHolomorphicAlgebraV2, `SourceFrickeLevelAlgebraV2, `SourceFrickeLevelGroupV2, `SourceFrickeLevelFieldV2, `SourceFrickeFixedFractionV2, `SourceFrickeFixedFieldJV2]
+  let theorems : Array Name := #[`Dubon2026.SourceFricke.isBoundedAtImInfty_discriminant, `Dubon2026.SourceFricke.isBoundedAtImInfty_discPow, `Dubon2026.SourceFricke.IsBoundedAtImInfty.mul_discPow_mono, `Dubon2026.SourceFricke.poleBounded_algebraMap, `Dubon2026.SourceFricke.PoleBounded.add, `Dubon2026.SourceFricke.PoleBounded.mul, `Dubon2026.SourceFricke.poleBounded_of_mem_adjoin, `Dubon2026.SourceFricke.poleBounded_j, `Dubon2026.SourceFricke.poleBounded_frickeF, `Dubon2026.SourceFricke.eq_polynomial_j_of_invariant_of_mem_adjoin, `Dubon2026.SourceFricke.sl_smul_apply, `Dubon2026.SourceFricke.sl_smul_def, `Dubon2026.SourceFricke.sl_smul_eq_self_iff, `Dubon2026.SourceFricke.mem_HolFn, `Dubon2026.SourceFricke.HolFn.eq_zero_or_eq_zero_of_mul_eq_zero, `Dubon2026.SourceFricke.smul_j, `Dubon2026.SourceFricke.smul_frickeF, `Dubon2026.SourceFricke.j_mem_levelRing, `Dubon2026.SourceFricke.frickeF_mem_levelRing, `Dubon2026.SourceFricke.levelGen_subset_HolFn, `Dubon2026.SourceFricke.levelRing_le_HolFn, `Dubon2026.SourceFricke.smul_mem_levelGen, `Dubon2026.SourceFricke.smul_mem_levelRing, `Dubon2026.SourceFricke.levelRing_coe_smul, `Dubon2026.SourceFricke.mem_levelFixer_iff, `Dubon2026.SourceFricke.mem_levelFixer_iff_frickeF, `Dubon2026.SourceFricke.Gamma_le_levelFixer, `Dubon2026.SourceFricke.mem_levelFixer_iff_pm, `Dubon2026.SourceFricke.card_LevelGrp, `Dubon2026.SourceFricke.levelGrp_mk_smul, `Dubon2026.SourceFricke.levelGrp_smul_algebraMap, `Dubon2026.SourceFricke.finrank_levelField_fixed, `Dubon2026.SourceFricke.smul_prod_smul_eq, `Dubon2026.SourceFricke.exists_fixed_div_of_fixed, `Dubon2026.SourceFricke.aeval_j_apply, `Dubon2026.SourceFricke.coe_aeval_jA, `Dubon2026.SourceFricke.levelGen_poleBounded, `Dubon2026.SourceFricke.levelRing_fixed_eq_aeval_j, `Dubon2026.SourceFricke.levelRing_fixed_eq_aeval_j', `Dubon2026.SourceFricke.smul_jK, `Dubon2026.SourceFricke.fixedPoints_levelField_eq_adjoin_j, `Dubon2026.SourceFricke.fixedIF_eq_adjoin, `Dubon2026.SourceFricke.finrank_fixedIF, `Dubon2026.SourceFricke.finrank_adjoin_j_levelField, `Dubon2026.SourceFricke.slFn_smulCommClass, `Dubon2026.SourceFricke.levelRing_isDomain, `Dubon2026.SourceFricke.levelRing_smulCommClass, `Dubon2026.SourceFricke.levelFixer_normal, `Dubon2026.SourceFricke.levelFixer_finiteIndex, `Dubon2026.SourceFricke.levelGrp_smulCommClass, `Dubon2026.SourceFricke.levelGrp_faithful, `Dubon2026.SourceFricke.levelGrp_smulDistribClass, `Dubon2026.SourceFricke.levelGrpField_faithful, `Dubon2026.SourceFricke.levelGrpField_smulCommClass]
+  let constructions : Array Name := #[`Dubon2026.SourceFricke.PoleBounded, `Dubon2026.SourceFricke.slFnAction, `Dubon2026.SourceFricke.HolFn, `Dubon2026.SourceFricke.levelGen, `Dubon2026.SourceFricke.levelRing, `Dubon2026.SourceFricke.levelRingAction, `Dubon2026.SourceFricke.levelFixer, `Dubon2026.SourceFricke.LevelGrp, `Dubon2026.SourceFricke.levelGrpFintype, `Dubon2026.SourceFricke.levelGrpRingAction, `Dubon2026.SourceFricke.levelField, `Dubon2026.SourceFricke.levelFieldRingSMul, `Dubon2026.SourceFricke.levelGrpFieldAction, `Dubon2026.SourceFricke.fieldActionSMul, `Dubon2026.SourceFricke.fieldMulAction, `Dubon2026.SourceFricke.ringSelfDistribMulAction, `Dubon2026.SourceFricke.jA, `Dubon2026.SourceFricke.jK, `Dubon2026.SourceFricke.fixedIF]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Primitive Tate Restriction postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Primitive Tate Restriction theorems discovered"
+  logInfo m!"SOURCE FRICKE LEVEL FIELD AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceFrickePoleBoundedV2
+#lint in SourceFrickeHolomorphicAlgebraV2
+#lint in SourceFrickeLevelAlgebraV2
+#lint in SourceFrickeLevelGroupV2
+#lint in SourceFrickeLevelFieldV2
+#lint in SourceFrickeFixedFractionV2
+#lint in SourceFrickeFixedFieldJV2

@@ -1,0 +1,25 @@
+{
+  "fetchedUTC": "2026-10-26T21:10:45.531731+00:00",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_CuspForm_exists_gamma1_frickeRational_sigmaTransport.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CuspForm_exists_gamma1_frickeRational_sigmaTransport.lean",
+      "snapshot": "P2M\\Sol\\S_CuspForm_exists_gamma1_frickeRational_sigmaTransport.lean.txt",
+      "gitBlob": "77cab00b213459966047ec1ea0c912cb4a96a40f",
+      "sha256": "91908DF3C06FBE1A59F308B96F9FF7082AD2965A4D650FB83A628940F4F64A82",
+      "bytes": 41517
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularFunction_exists_mdifferentiable_sigmaTransport_of_frickeQuotient.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularFunction_exists_mdifferentiable_sigmaTransport_of_frickeQuotient.lean",
+      "snapshot": "P2M\\Sol\\S_ModularFunction_exists_mdifferentiable_sigmaTransport_of_frickeQuotient.lean.txt",
+      "gitBlob": "e97833fa87ef5688ac9d6691cab17ba1b5b7b782",
+      "sha256": "31F0D88DC16CD6FAFE2257FBF59CF1B1124F61BCC4865F779E09261C7393B711",
+      "bytes": 37750
+    }
+  ]
+}

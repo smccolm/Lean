@@ -1,0 +1,29 @@
+import SourceCuspLaurentLinearRelations
+import SourceFrickeLaurentIndependence
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFricke.linearIndependent_holomorphic_cyclotomic_fricke_fractions]
+  let localModules : Array Name := #[`SourceAlgebraicConstantIntegralSpan, `SourceAlgebraicConstantInterpolation, `SourceAlgebraicConstantLift, `SourceAlgebraicConstantRoots, `SourceConstantExtensionChain, `SourceConstantExtensionIntegralAlgebra, `SourceConstantExtensionMonotonicity, `SourceCuspLaurentFractionIdentity, `SourceCuspLaurentFunctionIdentity, `SourceCuspLaurentLinearRelations, `SourceCuspLaurentPolynomial, `SourceCuspLaurentSpan, `SourceEisensteinRationalSeries, `SourceFiniteConstantIntegralCapture, `SourceFrickeClearedLaurentMonic, `SourceFrickeComplexFractionLaurent, `SourceFrickeCuspInputs, `SourceFrickeCyclotomicCoefficients, `SourceFrickeCyclotomicField, `SourceFrickeCyclotomicFractionGerm, `SourceFrickeCyclotomicLaurent, `SourceFrickeCyclotomicLaurentLifts, `SourceFrickeCyclotomicTransport, `SourceFrickeFaithfulness, `SourceFrickeFixedFieldJV3, `SourceFrickeFixedFractionV3, `SourceFrickeFractionPeriodicity, `SourceFrickeFunctionTransformationV2, `SourceFrickeHolomorphicAlgebraV3, `SourceFrickeHolomorphicIntegralSpan, `SourceFrickeHolomorphy, `SourceFrickeIntegralHolomorphicRepresentative, `SourceFrickeLaurentGeneratorIntegrality, `SourceFrickeLaurentIndependence, `SourceFrickeLaurentIntegralSpan, `SourceFrickeLevelAlgebraV3, `SourceFrickeLevelFieldV3, `SourceFrickeLevelGroupV3, `SourceFrickeModularLatticeV2, `SourceFrickeModularOrbitV2, `SourceFrickePeriodHomothetyV2, `SourceFrickePoleBoundedV3, `SourceFrickePrefactor, `SourceFrickeProductCyclotomic, `SourceFrickeProductExpansion, `SourceFrickeSeparation, `SourceFrickeStableAlgebraV2, `SourceFrickeStableEmbeddingV2, `SourceFrickeStableFieldV2, `SourceFrickeStableFractionV2, `SourceFrickeStableGroupV2, `SourceFrickeStableMonicV2, `SourceFrickeTorsionConjugation, `SourceFrickeTorsionLattice, `SourceFrickeTorsionTransformationV2, `SourceHolomorphicMonicQuotient, `SourceIntegralCoordinateMonic, `SourceInvariantAnalyticJPolynomial, `SourceLaurentAnalyticPolynomial, `SourceLaurentConstantTranscendence, `SourceLaurentGeneratedConstants, `SourceLaurentIntegralCoefficientImage, `SourceLaurentIntegralConstantSpan, `SourceLevelOneAnalyticJPolynomial, `SourceLipschitzTwo, `SourceLipschitzTwoRealBoundary, `SourceMonicQuotientRelation, `SourcePeriodWeierstrassSeparation, `SourcePoleBoundedCuspLaurent, `SourceQExpansionLaurentWidth, `SourceQExpansionPeriodWidth, `SourceTranscendentalConstantAlgebraV2, `SourceTranscendentalConstantDenominatorsV2, `SourceTranscendentalConstantEvaluationV2, `SourceTranscendentalConstantFieldRangeV2, `SourceTranscendentalConstantIntegralSpanV2, `SourceTranscendentalConstantNormalityV2, `SourceTranscendentalConstantScaledRelationV2, `SourceWeierstrassLatticeRows, `SourceWeierstrassNormalizedTorsion, `SourceWeierstrassRowSeries, `SourceWeierstrassTorsionCuspBound, `SourceWeierstrassTorsionExpansion, `SourceWeierstrassTorsionFourierCoefficients, `SourceWeierstrassTorsionFourierExpansion, `SourceWeierstrassTorsionFourierSum, `SourceWeierstrassTorsionHolomorphy, `SourceWeierstrassTorsionTail]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.coeffMap_sum_smul, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_smul_sum, `Dubon2026.SourceFunctionField.cusp_laurent_sum_smul_eq_zero_iff, `Dubon2026.SourceFunctionField.linearIndependent_functions_of_laurent_coefficients, `Dubon2026.SourceFricke.linearIndependent_holomorphic_cyclotomic_fricke_fractions, `Dubon2026.SourceFunctionField.linearIndependent_coeffMap_algebraMap, `Dubon2026.SourceFricke.exists_cyclotomic_fraction_represents, `Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_periodic, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.eq_upperHalfPlane, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.eq_series]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE FRICKE LAURENT INDEPENDENCE DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual Fricke independence consumer. Only declaration values are traversed. Literal cusp-germ representations transport finite linear relations, and the existing coefficient-map independence theorem proves independence over the complex numbers. Coefficient twists, cusp-subspace descent and arithmetic comparison remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

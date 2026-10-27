@@ -1,0 +1,38 @@
+import SourceFrickePrincipalInvariance
+import SourceFrickeTwistPowers
+
+/-! DUB-17/18 -> actual Gamma1 cusp realization -> rational cusp-form spanning
+-> elliptic divisibility transport. If an actual span function satisfies a
+holomorphic power-division identity by an invariant original coordinate,
+the quotient inherits principal-level invariance by analytic cancellation.
+This is one of the inputs needed to derive its Fricke-span membership. -/
+namespace Dubon2026.SourceFricke
+noncomputable section
+open UpperHalfPlane SourceFunctionField
+open scoped MatrixGroups Manifold
+
+theorem principalInvariant_holomorphic_power_quotient {N : ℕ} [NeZero N]
+    {F J W : ℍ → ℂ} (hF : F ∈ Submodule.span ℂ (holomorphicCyclotomicFrickeFractions N))
+    (hJ : MDiff J) (hJ0 : J ≠ 0) (hW : MDiff W) (p q : ℕ)
+    (hJinv : ∀ γ : SL(2, ℤ), γ • J = J) (hrel : F ^ p = J ^ q * W) :
+    ∀ γ ∈ CongruenceSubgroup.Gamma N, ∀ τ : ℍ, W (γ • τ) = W τ := by
+  have hJq : J ^ q ≠ (0 : ℍ → ℂ) := by
+    intro hz
+    apply hJ0
+    funext τ
+    exact eq_zero_of_pow_eq_zero (congrFun hz τ)
+  intro γ hγ τ
+  have hFγ := smul_eq_self_frickeSpan hF ((CongruenceSubgroup.Gamma N).inv_mem hγ)
+  have ht := congrArg (fun g : ℍ → ℂ => γ⁻¹ • g) hrel
+  dsimp only at ht
+  rw [smul_pow, smul_mul', smul_pow, hFγ, hJinv] at ht
+  have hm : (γ⁻¹ • W - W) * J ^ q = 0 := by
+    calc (γ⁻¹ • W - W) * J ^ q = J ^ q * (γ⁻¹ • W) - J ^ q * W := by ring
+         _ = 0 := by rw [← ht, ← hrel, sub_self]
+  have hz := ((UpperHalfPlane.mul_eq_zero_iff ((mdifferentiable_slFn hW γ⁻¹).sub hW)
+    (hJ.pow q)).mp hm).resolve_right hJq
+  have he := congrFun (sub_eq_zero.mp hz) τ
+  simpa only [sl_smul_apply, inv_inv] using he
+
+end
+end Dubon2026.SourceFricke

@@ -1,0 +1,34 @@
+import SourceFrickePoleBounded
+import SourceFrickeHolomorphicAlgebra
+import SourceFrickeLevelAlgebra
+import SourceFrickeLevelGroup
+import SourceFrickeLevelField
+import SourceFrickeFixedFraction
+import SourceFrickeFixedFieldJ
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFricke.finrank_adjoin_j_levelField, `Dubon2026.SourceFricke.mem_levelFixer_iff_pm]
+  let localModules : Array Name := #[`SourceEisensteinRationalSeries, `SourceFrickeCuspInputs, `SourceFrickeCyclotomicField, `SourceFrickeFaithfulness, `SourceFrickeFixedFieldJ, `SourceFrickeFixedFraction, `SourceFrickeFunctionTransformationV2, `SourceFrickeHolomorphicAlgebra, `SourceFrickeHolomorphy, `SourceFrickeLevelAlgebra, `SourceFrickeLevelField, `SourceFrickeLevelGroup, `SourceFrickeModularLatticeV2, `SourceFrickePeriodHomothetyV2, `SourceFrickePoleBounded, `SourceFrickePrefactor, `SourceFrickeSeparation, `SourceFrickeTorsionLattice, `SourceFrickeTorsionTransformationV2, `SourceInvariantAnalyticJPolynomial, `SourceLaurentAnalyticPolynomial, `SourceLevelOneAnalyticJPolynomial, `SourceLipschitzTwo, `SourceLipschitzTwoRealBoundary, `SourcePeriodWeierstrassSeparation, `SourceQExpansionPeriodWidth, `SourceWeierstrassLatticeRows, `SourceWeierstrassNormalizedTorsion, `SourceWeierstrassRowSeries, `SourceWeierstrassTorsionCuspBound, `SourceWeierstrassTorsionExpansion, `SourceWeierstrassTorsionFourierCoefficients, `SourceWeierstrassTorsionFourierExpansion, `SourceWeierstrassTorsionFourierSum, `SourceWeierstrassTorsionHolomorphy, `SourceWeierstrassTorsionTail]
+  let required : Array Name := #[`Dubon2026.SourceFricke.isBoundedAtImInfty_discriminant, `Dubon2026.SourceFricke.isBoundedAtImInfty_discPow, `Dubon2026.SourceFricke.IsBoundedAtImInfty.mul_discPow_mono, `Dubon2026.SourceFricke.poleBounded_algebraMap, `Dubon2026.SourceFricke.PoleBounded.add, `Dubon2026.SourceFricke.PoleBounded.mul, `Dubon2026.SourceFricke.poleBounded_of_mem_adjoin, `Dubon2026.SourceFricke.poleBounded_j, `Dubon2026.SourceFricke.poleBounded_frickeF, `Dubon2026.SourceFricke.eq_polynomial_j_of_invariant_of_mem_adjoin, `Dubon2026.SourceFricke.sl_smul_apply, `Dubon2026.SourceFricke.sl_smul_eq_self_iff, `Dubon2026.SourceFricke.mem_HolFn, `Dubon2026.SourceFricke.HolFn.eq_zero_or_eq_zero_of_mul_eq_zero, `Dubon2026.SourceFricke.smul_j, `Dubon2026.SourceFricke.smul_frickeF, `Dubon2026.SourceFricke.j_mem_levelRing, `Dubon2026.SourceFricke.frickeF_mem_levelRing, `Dubon2026.SourceFricke.levelGen_subset_HolFn, `Dubon2026.SourceFricke.levelRing_le_HolFn, `Dubon2026.SourceFricke.smul_mem_levelGen, `Dubon2026.SourceFricke.smul_mem_levelRing, `Dubon2026.SourceFricke.mem_levelFixer_iff, `Dubon2026.SourceFricke.mem_levelFixer_iff_frickeF, `Dubon2026.SourceFricke.Gamma_le_levelFixer, `Dubon2026.SourceFricke.mem_levelFixer_iff_pm, `Dubon2026.SourceFricke.card_LevelGrp, `Dubon2026.SourceFricke.levelGrp_smul_algebraMap, `Dubon2026.SourceFricke.finrank_levelField_fixed, `Dubon2026.SourceFricke.smul_prod_smul_eq, `Dubon2026.SourceFricke.exists_fixed_div_of_fixed, `Dubon2026.SourceFricke.aeval_j_apply, `Dubon2026.SourceFricke.coe_aeval_jA, `Dubon2026.SourceFricke.levelGen_poleBounded, `Dubon2026.SourceFricke.levelRing_fixed_eq_aeval_j, `Dubon2026.SourceFricke.levelRing_fixed_eq_aeval_j', `Dubon2026.SourceFricke.smul_jK, `Dubon2026.SourceFricke.fixedPoints_levelField_eq_adjoin_j, `Dubon2026.SourceFricke.fixedIF_eq_adjoin, `Dubon2026.SourceFricke.finrank_fixedIF, `Dubon2026.SourceFricke.finrank_adjoin_j_levelField, `Dubon2026.SourceFricke.PoleBounded, `Dubon2026.SourceFricke.slFnAction, `Dubon2026.SourceFricke.slFn_smulCommClass, `Dubon2026.SourceFricke.HolFn, `Dubon2026.SourceFricke.levelGen, `Dubon2026.SourceFricke.levelRing, `Dubon2026.SourceFricke.levelRing_isDomain, `Dubon2026.SourceFricke.levelRingAction, `Dubon2026.SourceFricke.levelRing_smulCommClass, `Dubon2026.SourceFricke.levelFixer, `Dubon2026.SourceFricke.levelFixer_normal, `Dubon2026.SourceFricke.levelFixer_finiteIndex, `Dubon2026.SourceFricke.LevelGrp, `Dubon2026.SourceFricke.levelGrp_fintype, `Dubon2026.SourceFricke.levelGrpRingAction, `Dubon2026.SourceFricke.levelGrp_smulCommClass, `Dubon2026.SourceFricke.levelGrp_faithful, `Dubon2026.SourceFricke.levelField, `Dubon2026.SourceFricke.levelFieldRingSMul, `Dubon2026.SourceFricke.levelGrpFieldAction, `Dubon2026.SourceFricke.levelGrp_smulDistribClass, `Dubon2026.SourceFricke.levelGrpField_faithful, `Dubon2026.SourceFricke.levelGrpField_smulCommClass, `Dubon2026.SourceFricke.jA, `Dubon2026.SourceFricke.jK, `Dubon2026.SourceFricke.fixedIF, `Dubon2026.SourceFricke.exists_polynomial_j_of_poleBounded_invariant, `Dubon2026.SourceFricke.frickeF_faithful, `Dubon2026.SourceFricke.mdifferentiable_frickeF, `Dubon2026.SourceFricke.isBoundedAtImInfty_frickeF_mul_discriminant, `FixedPoints.finrank_eq_card, `IsFractionRing.faithfulSMul, `AnalyticOnNhd.eq_zero_or_eq_zero_of_mul_eq_zero]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE FRICKE LEVEL FIELD DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual Fricke fixed-field degree and stabilizer consumers. Only declaration values are traversed. The fixed subfield of the actual fraction field is exactly C(j), using actual cusp bounds, invariant polynomial reduction and a finite orbit denominator. The action kernel is exactly the principal congruence subgroup up to sign. Stable-family fraction realization, rational Fourier spanning, differential realization and arithmetic comparison remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

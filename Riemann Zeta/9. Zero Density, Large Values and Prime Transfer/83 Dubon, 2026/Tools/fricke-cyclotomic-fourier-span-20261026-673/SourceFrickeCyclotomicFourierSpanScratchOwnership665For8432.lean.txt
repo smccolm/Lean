@@ -1,0 +1,24 @@
+import SourceCuspLaurentFunctionIdentity
+import SourceQExpansionLaurentWidth
+import SourcePoleBoundedCuspLaurent
+import SourceFrickeCyclotomicLaurent
+import SourceCuspLaurentPolynomial
+import SourceCuspLaurentFractionIdentity
+import SourceFrickeCyclotomicFractionGerm
+import SourceFrickeLaurentIntegralDescent
+import SourceFrickeFractionPeriodicity
+import SourceFrickeCyclotomicMonic
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceCuspLaurentFunctionIdentity, `SourceQExpansionLaurentWidth, `SourcePoleBoundedCuspLaurent, `SourceFrickeCyclotomicLaurent, `SourceCuspLaurentPolynomial, `SourceCuspLaurentFractionIdentity, `SourceFrickeCyclotomicFractionGerm, `SourceFrickeLaurentIntegralDescent, `SourceFrickeFractionPeriodicity, `SourceFrickeCyclotomicMonic]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

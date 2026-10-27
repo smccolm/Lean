@@ -1,0 +1,23 @@
+{
+  "scope": 692,
+  "scopeIds": [
+    "687",
+    "688",
+    "689"
+  ],
+  "receipts": {
+    "source-fricke-cyclotomic-analytic-transport-5-scratch-receipt.json": "EA8A4E86BF2EBC0C77970E18CB0F48BC533023901809C3D38FD0B77D0C4474EA",
+    "source-gamma-one-cyclotomic-conjugation-13-scratch-receipt.json": "5F58C8E699F7DF819D1238C44212F1760649FA0E5642AB2BDAF1C58B032B8C6F",
+    "source-gamma-one-rational-cusp-span-4-scratch-receipt.json": "0CAC2FADB6D241264A529DA1B438678735411E074B567CFDD60DAE9D7EE4BBFF"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 Hecke characters -> actual Picard/H1, full/parabolic, transpose and diamond comparison retaining the original homogeneous coefficient endomorphism -> actual differential/cusp comparison -> rational Fourier spanning of actual Gamma1 cusp forms.",
+  "discharged": "The actual cyclotomic torsion-index permutation preserves the original Laurent generated field and j-integrality; the existing holomorphic representative theorem constructs actual conjugate Fricke fractions. Integral modular lifts and original Gamma1 translations prove modular covariance and preserve level invariance. Laurent order transports all-cusp vanishing. Holomorphic division in the original fraction algebra preserves both elliptic divisibility conditions through actual j and j-1728 coordinates. The exact cusp characterization constructs another actual cusp form of the same weight and level, and rational Eisenstein/discriminant cancellation identifies its literal width-one coefficients with their cyclotomic conjugates. The original coefficient field is finite Galois over Q. Actual trace sums have rational Fourier coefficients, and the pinned Mathlib trace-dual basis reconstructs each original-image generator. The already proved original-image spanning theorem therefore yields rational Fourier spanning of the full Gamma1 weight-two cusp-form space at every nonzero level. General weights retain the explicit source balance k+4a+6b=12m; weight two uses a=b=m=1.",
+  "remaining": "Rational Fourier spanning is proved, but bounded denominators for the original integral-ratio function field remain. Arbitrary Gamma1 cusp differential realization and the converse regular-differential construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must identify original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of those characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. No unrestricted odd-weight weight-lowering claim is made, and the all-weight arithmetic goal is unchanged. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN.",
+  "route": "The renewed selected-file search is recorded in Dubon Reuse Search 2026-10-26.md. Reuse the original Laurent integral representative instead of the external rational-at-infinity and recursive Fourier-division packages. Use the proved SL2 reduction lift and local Gamma1 translation lift for covariance, the original cusp characterization for analytic reconstruction, and exact Laurent germs for coefficients. Construct conjugates only for the original-image generating set, which already spans; defer the unnecessary stronger conjugation theorem for every cyclotomic-coefficient form. Native trace-dual basis reconstruction replaces the external Dedekind-independence and matrix-invertibility proof. No external full import closure was built or certified. Failed audit/helper evidence and retained failed source variants are preserved. Only audited mathematical sources are promoted and only imports are qualified. Pins, proof limits, source contract and all twenty acceptance gates are unchanged.",
+  "precedingCanonicalScope": 8471,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 acceptance gates unchanged.",
+  "reason": "Require preceding canonical PASS and immutable archive before production mutation."
+}

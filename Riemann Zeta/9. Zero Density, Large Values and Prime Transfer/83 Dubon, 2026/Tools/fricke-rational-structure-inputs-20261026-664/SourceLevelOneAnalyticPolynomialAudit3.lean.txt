@@ -1,0 +1,52 @@
+import SourceLaurentAnalyticPolynomial
+import SourceLevelOneAnalyticJPolynomial
+import SourceInvariantAnalyticJPolynomial
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.RealL.pow
+#print axioms Dubon2026.SourceFunctionField.RealL.aeval
+#print axioms Dubon2026.SourceFunctionField.realL_qExpansion
+#print axioms Dubon2026.SourceFunctionField.realL_jqModC
+#print axioms Dubon2026.SourceFunctionField.exists_levelOne_analytic_j_polynomial
+#print axioms Dubon2026.SourceFricke.poleClearedLevelOne_apply
+#print axioms Dubon2026.SourceFricke.exists_polynomial_j_of_poleBounded_invariant
+#print axioms Dubon2026.SourceFricke.poleClearedLevelOne
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceLaurentAnalyticPolynomial, `SourceLevelOneAnalyticJPolynomial, `SourceInvariantAnalyticJPolynomial]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.RealL.pow, `Dubon2026.SourceFunctionField.RealL.aeval, `Dubon2026.SourceFunctionField.realL_qExpansion, `Dubon2026.SourceFunctionField.realL_jqModC, `Dubon2026.SourceFunctionField.exists_levelOne_analytic_j_polynomial, `Dubon2026.SourceFricke.poleClearedLevelOne_apply, `Dubon2026.SourceFricke.exists_polynomial_j_of_poleBounded_invariant]
+  let constructions : Array Name := #[`Dubon2026.SourceFricke.poleClearedLevelOne]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Primitive Tate Restriction postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Primitive Tate Restriction theorems discovered"
+  logInfo m!"SOURCE LEVEL ONE ANALYTIC POLYNOMIAL AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceLaurentAnalyticPolynomial
+#lint in SourceLevelOneAnalyticJPolynomial
+#lint in SourceInvariantAnalyticJPolynomial

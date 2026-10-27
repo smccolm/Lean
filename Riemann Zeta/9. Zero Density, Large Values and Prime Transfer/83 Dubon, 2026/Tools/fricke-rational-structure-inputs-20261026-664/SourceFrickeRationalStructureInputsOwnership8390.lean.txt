@@ -1,0 +1,48 @@
+import Dubon2026.SourceFrickeCyclotomicCoefficients
+import Dubon2026.SourceFrickeCyclotomicTransport
+import Dubon2026.SourceFrickeTorsionConjugation
+import Dubon2026.SourceQExpansionPeriodWidth
+import Dubon2026.SourceEisensteinRationalSeries
+import Dubon2026.SourceFrickeProductExpansion
+import Dubon2026.SourceFrickeProductCyclotomic
+import Dubon2026.SourcePeriodWeierstrassSeparation
+import Dubon2026.SourceFrickeTorsionLattice
+import Dubon2026.SourceFrickePrefactor
+import Dubon2026.SourceFrickeSeparation
+import Dubon2026.SourceFrickeFaithfulness
+import Dubon2026.SourceLaurentAnalyticPolynomial
+import Dubon2026.SourceLevelOneAnalyticJPolynomial
+import Dubon2026.SourceInvariantAnalyticJPolynomial
+import Dubon2026.SourceFrickePoleBoundedV3
+import Dubon2026.SourceFrickeHolomorphicAlgebraV3
+import Dubon2026.SourceFrickeLevelAlgebraV3
+import Dubon2026.SourceFrickeLevelGroupV3
+import Dubon2026.SourceFrickeLevelFieldV3
+import Dubon2026.SourceFrickeFixedFractionV3
+import Dubon2026.SourceFrickeFixedFieldJV3
+import Dubon2026.SourceFrickeStableAlgebraV2
+import Dubon2026.SourceFrickeStableGroupV2
+import Dubon2026.SourceFrickeStableFieldV2
+import Dubon2026.SourceFrickeStableEmbeddingV2
+import Dubon2026.SourceFrickeStableFractionV2
+import Dubon2026.SourceFrickeStableMonicV2
+import Dubon2026.SourceFrickeModularOrbitV2
+import Dubon2026.SourceFrickeJTranscendence
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceFrickeCyclotomicCoefficients, `Dubon2026.SourceFrickeCyclotomicTransport, `Dubon2026.SourceFrickeTorsionConjugation, `Dubon2026.SourceQExpansionPeriodWidth, `Dubon2026.SourceEisensteinRationalSeries, `Dubon2026.SourceFrickeProductExpansion, `Dubon2026.SourceFrickeProductCyclotomic, `Dubon2026.SourcePeriodWeierstrassSeparation, `Dubon2026.SourceFrickeTorsionLattice, `Dubon2026.SourceFrickePrefactor, `Dubon2026.SourceFrickeSeparation, `Dubon2026.SourceFrickeFaithfulness, `Dubon2026.SourceLaurentAnalyticPolynomial, `Dubon2026.SourceLevelOneAnalyticJPolynomial, `Dubon2026.SourceInvariantAnalyticJPolynomial, `Dubon2026.SourceFrickePoleBoundedV3, `Dubon2026.SourceFrickeHolomorphicAlgebraV3, `Dubon2026.SourceFrickeLevelAlgebraV3, `Dubon2026.SourceFrickeLevelGroupV3, `Dubon2026.SourceFrickeLevelFieldV3, `Dubon2026.SourceFrickeFixedFractionV3, `Dubon2026.SourceFrickeFixedFieldJV3, `Dubon2026.SourceFrickeStableAlgebraV2, `Dubon2026.SourceFrickeStableGroupV2, `Dubon2026.SourceFrickeStableFieldV2, `Dubon2026.SourceFrickeStableEmbeddingV2, `Dubon2026.SourceFrickeStableFractionV2, `Dubon2026.SourceFrickeStableMonicV2, `Dubon2026.SourceFrickeModularOrbitV2, `Dubon2026.SourceFrickeJTranscendence]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

@@ -1,0 +1,64 @@
+{
+  "status": "Prepared; require 8360 canonical PASS and archive before integration.",
+  "route": "fricke-rational-structure-inputs-promotion-route-664.json",
+  "routeSha256": "DF7BD5D2A7A4C81F460823C901D4265CA4BEE9FD80E0BFFB654CE02E3B498B1C",
+  "modules": 30,
+  "queries": 192,
+  "theorems": 140,
+  "constructions": 52,
+  "exhaustiveScratchChecks": 262,
+  "proofValueEdges": 224,
+  "scopes": 8,
+  "receipts": {
+    "source-fricke-cyclotomic-transport-3-scratch-receipt.json": "E44D705E88DA0B3DF3AFB519601CB8AF560A459EB90284E5A3FBA5EA51C56CC1",
+    "source-fricke-product-transport-4-scratch-receipt.json": "4AE13D58D0745E22B3D00FCB8FABFD41E76C0B72FF85C650159C2929D4F6EA94",
+    "source-fricke-separation-5-scratch-receipt.json": "176B0C3D74073586D550A442319F7527B30E77DFD3D50D302E1C918B9D01597D",
+    "source-level-one-analytic-polynomial-3-scratch-receipt.json": "49256FC40BD57DE11D337B120A8EB6DD987B4661D3509436CE3ACA27EFC52A1D",
+    "source-fricke-level-field-7d-scratch-receipt.json": "DADA7AC2A4D909BEC106D53437F5F90A2054993FF1A234793972906F3649BDD2",
+    "source-fricke-stable-family-5c-scratch-receipt.json": "B1DF4E3D301A85E7BA75EA3204A4239A254484895B7191DF1CF9E7530268A842",
+    "source-fricke-orbit-monic-2b-scratch-receipt.json": "46DF161D5C44AB8D5D94B89CDE615B6F63617F266587BF94D072B54CB80795A2",
+    "source-fricke-j-transcendence-1-scratch-receipt.json": "7D49A44AF9BFE468AEAECEB5D8A9EC7F51E8BD4AFB1415B59FF847C3D1C48821"
+  },
+  "expectedConsumers": 24290,
+  "expectedConstructions": 2403,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_fricke_rational_structure_inputs_8390.py",
+      "sha256": "95C7C61F8B2555F9B1FA531BA888DFEF934EAF0BE50EEE39195FEB470D9512D6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_rational_structure_inputs_production_ownership_8390.py",
+      "sha256": "3284066ED524E97D02E382E46647208568BD7750AEE9EFF91F93D383B5FB88AC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_rational_structure_inputs_scratch_ownership_8390.py",
+      "sha256": "4C44296E0969C5998DAAE377E02D3065ECF7AC6B7E59950AAF905F913DAFD1DF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_fricke_rational_structure_inputs_ownership_8390.py",
+      "sha256": "6093ADCA5D6648082CD39F945A838BABF0D114BA627AD1B5FCCB448118EC10C5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_rational_structure_inputs_global_ownership_8390.py",
+      "sha256": "B6488BA8CEDC61125E5B59A7B777FDB90787760171E2D4EBD9BE1D6573720DE9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_fricke_rational_structure_inputs_8390.py",
+      "sha256": "237A550C3B17DD766A7A65BD2C5BC6C7E6F9F2EB777CEFDBAA074D9D012B75E3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_fricke_rational_structure_inputs_8390.ps1",
+      "sha256": "C5C48F7727D2ACD87E390465AC7387FA1779B9B49341BFCF85591A840DCC7E1C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_fricke_rational_structure_inputs_8390.ps1",
+      "sha256": "BDA94A608D59578A9E89C6268DA55503972991E17A6F478374F279066EAA5448"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_fricke_rational_structure_inputs_canonical_8390.py",
+      "sha256": "A85A9A541E6835A9113B1FE99020412841FF0B933790950F3214956CAF1DC1F1"
+    }
+  ],
+  "productionMutation": false
+}

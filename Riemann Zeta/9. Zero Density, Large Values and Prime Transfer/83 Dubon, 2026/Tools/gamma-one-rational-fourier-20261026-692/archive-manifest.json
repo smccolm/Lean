@@ -1,0 +1,354 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-rational-fourier-promotion-route-692.json",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-rational-fourier-promotion-route-692.json",
+      "sha256": "1B98FB98F26BBA1C9F36F82B3152AF55A6E0BED1AF28CB402297A7DDC3C7CB05"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicAnalyticTransportAudit5.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceFrickeCyclotomicAnalyticTransportAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicAnalyticTransportAudit5.lean",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceFrickeCyclotomicAnalyticTransportAudit5.lean.txt",
+      "sha256": "A621CEFB3C604CE24D9E3F24DF06960E2C1897C768FEDF0AF1C5E3DCD6420608"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicAnalyticTransportAudit5.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceFrickeCyclotomicAnalyticTransportAudit5.log",
+      "sha256": "6D1AF634C27A0C23EF29C8B7AA03F4C2D39EA1DE642F19E499993B79C45BB1CF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicAnalyticTransportDependencyAudit5.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceFrickeCyclotomicAnalyticTransportDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicAnalyticTransportDependencyAudit5.lean",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceFrickeCyclotomicAnalyticTransportDependencyAudit5.lean.txt",
+      "sha256": "F57ACE9D785869FDEDD2DD98D86FCC55D166CDFFFB7F6E6A179357D83C90AD3A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicAnalyticTransportDependencyAudit5.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceFrickeCyclotomicAnalyticTransportDependencyAudit5.log",
+      "sha256": "6922168385DF5F85FFEAB97D51B646EEB8A5D9CF60A6C81B9C238C2DD235EB35"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicConjugationAudit13.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationAudit13.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicConjugationAudit13.lean",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationAudit13.lean.txt",
+      "sha256": "A131164F8FDAF6703094372FE4043AD395FA26586B451FB64149EAD8AE92E8C7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicConjugationAudit13.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationAudit13.log",
+      "sha256": "5BF3549F62AABDAE7FD1DFE346C852105E21E9A3F7830159EF772CBC54FE9B9D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicConjugationDependencyAudit13.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationDependencyAudit13.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicConjugationDependencyAudit13.lean",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationDependencyAudit13.lean.txt",
+      "sha256": "4C6D4136F89669785E2AF5F3C36271ED2750F51C7AA5C997F431CD7614F475FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicConjugationDependencyAudit13.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationDependencyAudit13.log",
+      "sha256": "6AE02C23CDCBBA84293DCB3371F8CA9A47CB374BC45E7509A2C2EDD9FA8996F0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicConjugationDependencyAudit13V2.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationDependencyAudit13V2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicConjugationDependencyAudit13V2.lean",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationDependencyAudit13V2.lean.txt",
+      "sha256": "E2D5C7D86FD334C0BFA8A6497AE0EDEFCC373DAC8A7B3054954BD1BAFD428E7A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicConjugationDependencyAudit13V2.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationDependencyAudit13V2.log",
+      "sha256": "32D20E5F22CF92B352B11DF803226E69F925323AFC1444BCE1FBEFA0832B5EBB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspSpanAudit4.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalCuspSpanAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspSpanAudit4.lean",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalCuspSpanAudit4.lean.txt",
+      "sha256": "2FF705E36DFA7C0AF469AD245C486ADD2EB617D960B8F92FBF127EF449CDED0E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspSpanAudit4.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalCuspSpanAudit4.log",
+      "sha256": "4C73168BD15091B9E8C57F400C87FB4A630174100E035BEA65585F0F40D2878A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspSpanDependencyAudit4.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalCuspSpanDependencyAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspSpanDependencyAudit4.lean",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalCuspSpanDependencyAudit4.lean.txt",
+      "sha256": "3D9320453EE355618B52BC3C2E3077C8B22F7A210F203321358BE94DF1BADAAE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspSpanDependencyAudit4.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalCuspSpanDependencyAudit4.log",
+      "sha256": "E4BC7F24F708F53C1B89A31FB0B165435BAA35B11B089873B8FC8706979B6536"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_gamma_one_cyclotomic_transport_inputs_686.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/fetch_gamma_one_cyclotomic_transport_inputs_686.py",
+      "sha256": "FA2A448D8F49E4FD90A69147CE8A52DDBB9CF9D7C92BC041B12DBEEF5802DE11"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-cyclotomic-analytic-transport-route-687.json",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/fricke-cyclotomic-analytic-transport-route-687.json",
+      "sha256": "D9635CA71DDA8C8F236072F06B3D3BD80DA017C7DFA398B8CDEF599BD78EC68D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cyclotomic-conjugation-route-688.json",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-cyclotomic-conjugation-route-688.json",
+      "sha256": "C209A2CB9BC6648E474681B89D45E3BAA1DF5DF1A98B057C3096F1F3ED51DFFE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cyclotomic-transport-reuse-assessment-686.json",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-cyclotomic-transport-reuse-assessment-686.json",
+      "sha256": "CD941FBA6C666DCB51AAE5859411ABFAAF24999BBB68DC342DA40508F97BA9F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-rational-cusp-span-route-689.json",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-rational-cusp-span-route-689.json",
+      "sha256": "54D23146F5B59C2C35DAB08875165F952B91FFF0BE4419FBD0B3DE9DD55339EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\make_fricke_cyclotomic_analytic_transport_audit_687.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/make_fricke_cyclotomic_analytic_transport_audit_687.py",
+      "sha256": "4E3F82112F002EC9E11DCD3706D82B8B78314F5937E882FE1C43B54F59D85F4C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\make_gamma_one_cyclotomic_conjugation_audit_688.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/make_gamma_one_cyclotomic_conjugation_audit_688.py",
+      "sha256": "0433FAED3DD25529D6CA956A1382E486CD743EA271DE5E20555E9159488E67D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\make_gamma_one_cyclotomic_conjugation_receipt_688.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/make_gamma_one_cyclotomic_conjugation_receipt_688.py",
+      "sha256": "CA781DFCC52C38A3A41F2B9A18A35443BB3CAAD6899AE036B2EF2BBE77972A58"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\make_gamma_one_rational_cusp_span_audit_689.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/make_gamma_one_rational_cusp_span_audit_689.py",
+      "sha256": "1FBB876CA7756B4B2F145A33D8E03E387AF3C2430AF401A43F15E668C0EF2DC4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_cyclotomic_elliptic_divisibility_688.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/prepare_cyclotomic_elliptic_divisibility_688.py",
+      "sha256": "81D86D1C4DAC05F67D3943C87D6DD465A605BA25454E8611B8404D47D97692C6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_cyclotomic_analytic_transport_audit_687.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/prepare_fricke_cyclotomic_analytic_transport_audit_687.py",
+      "sha256": "0861434ADBBB74BC17507D2C66C449187CFE0731082E5706EE2E14693D95A30F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_cyclotomic_conjugation_audit_688.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/prepare_gamma_one_cyclotomic_conjugation_audit_688.py",
+      "sha256": "4A491FA3FC74F1F37AF5D04877263B789857764D47F697E7A933E12F3BDDE57D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_cyclotomic_conjugation_dependency_688b.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/prepare_gamma_one_cyclotomic_conjugation_dependency_688b.py",
+      "sha256": "CD2CBA2B6504501CCAFAA5512F4AF1B8BB8EBEC16C69459E4192585FC5C6D7AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_rational_cusp_span_audit_689.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/prepare_gamma_one_rational_cusp_span_audit_689.py",
+      "sha256": "FACEC35BBA7E2DBF431672C58819EB8F285FAC36F29EFA7531BEB6C11A436DA3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_fricke_cyclotomic_analytic_transport_687.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/record_fricke_cyclotomic_analytic_transport_687.py",
+      "sha256": "0E3636D808E505E81B780306CBA1D71DC9F673BE3BC74FDD4C4AB8077B10DB6E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_cyclotomic_conjugation_688.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/record_gamma_one_cyclotomic_conjugation_688.py",
+      "sha256": "1C4A9E9C9E8001256BD8D1566F0DE6143CCCB4513EACF1E69D684A5EFF712FAD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_cyclotomic_transport_review_686.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/record_gamma_one_cyclotomic_transport_review_686.py",
+      "sha256": "A0269ED58C42995AA78C65ECB9B748F1ED8125098C1E816BE727D081E871445D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_rational_cusp_span_689.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/record_gamma_one_rational_cusp_span_689.py",
+      "sha256": "975100E504535C31B0F0685826891FD972D3E783085082C59B4CE8BF4510B3A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-cyclotomic-analytic-transport-5-audit-config.json",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-fricke-cyclotomic-analytic-transport-5-audit-config.json",
+      "sha256": "B178121C6200772847E91714EDFAA29F8271A1C204A183E7D5C07836D8319AF5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-cyclotomic-analytic-transport-5-scratch-receipt.json",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-fricke-cyclotomic-analytic-transport-5-scratch-receipt.json",
+      "sha256": "EA8A4E86BF2EBC0C77970E18CB0F48BC533023901809C3D38FD0B77D0C4474EA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-conjugation-13-audit-config-v2.json",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-cyclotomic-conjugation-13-audit-config-v2.json",
+      "sha256": "3183E50229607773EE753D73D18F21B3F7F7D4339883E9FB4BCBD734F1E750DA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-conjugation-13-audit-config.json",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-cyclotomic-conjugation-13-audit-config.json",
+      "sha256": "A2EE7B40F612287C0C1924D0F77223951F4B83148ACF234EA9E92048BD5461D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-conjugation-13-scratch-receipt.json",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-cyclotomic-conjugation-13-scratch-receipt.json",
+      "sha256": "5F58C8E699F7DF819D1238C44212F1760649FA0E5642AB2BDAF1C58B032B8C6F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-rational-cusp-span-4-audit-config.json",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-rational-cusp-span-4-audit-config.json",
+      "sha256": "CB8B82AE62F36EFB318F66B32259277FD2BA21897555F30811AA7FA2535A6BB4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-rational-cusp-span-4-scratch-receipt.json",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-rational-cusp-span-4-scratch-receipt.json",
+      "sha256": "0CAC2FADB6D241264A529DA1B438678735411E074B567CFDD60DAE9D7EE4BBFF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-laurent-field-conjugation-api-687a\\SourceFrickeLaurentFieldConjugation.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/fricke-laurent-field-conjugation-api-687a/SourceFrickeLaurentFieldConjugation.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-laurent-field-conjugation-api-687a\\SourceFrickeLaurentFieldConjugation.lean.txt",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/fricke-laurent-field-conjugation-api-687a/SourceFrickeLaurentFieldConjugation.lean.txt",
+      "sha256": "D298FD42D525C613B5C44AE643A3B3E02AFB2FDD9C301C51B768A3D34FC1D888"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-laurent-field-conjugation-api-687a\\SourceFrickeLaurentFieldConjugation.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/fricke-laurent-field-conjugation-api-687a/SourceFrickeLaurentFieldConjugation.log",
+      "sha256": "3FB12727EC026F200010F1C2364CC3836D9CE9708981CB89EB9675C0F312A26C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cyclotomic-cancellation-api-failed-688a\\SourceCyclotomicConjugateCancellation.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-cancellation-api-failed-688a/SourceCyclotomicConjugateCancellation.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cyclotomic-cancellation-api-failed-688a\\SourceCyclotomicConjugateCancellation.lean.txt",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-cancellation-api-failed-688a/SourceCyclotomicConjugateCancellation.lean.txt",
+      "sha256": "93923F3121C4A09D80DB8D23A284D970DE78D595A4F8703D9115E00D8574EEAC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cyclotomic-cancellation-api-failed-688a\\SourceCyclotomicConjugateCancellation.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-cancellation-api-failed-688a/SourceCyclotomicConjugateCancellation.log",
+      "sha256": "A6D014F85EC08C496FE31EC71DB2FD9E869B7EC10C8F4F3FE9A9840AC2847E3C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cyclotomic-cancellation-api-failed-688a\\SourceCyclotomicFractionCovariance.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-cancellation-api-failed-688a/SourceCyclotomicFractionCovariance.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cyclotomic-cancellation-api-failed-688a\\SourceCyclotomicFractionCovariance.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-cancellation-api-failed-688a/SourceCyclotomicFractionCovariance.log",
+      "sha256": "9DAECD946C72888349162E3B0A2F15E808E54FF212BC8C226C969BFD7AEFED75"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cyclotomic-transport-pretrim-688b\\SourceCyclotomicConjugateCancellation.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-transport-pretrim-688b/SourceCyclotomicConjugateCancellation.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cyclotomic-transport-pretrim-688b\\SourceCyclotomicConjugateCancellation.lean.txt",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-transport-pretrim-688b/SourceCyclotomicConjugateCancellation.lean.txt",
+      "sha256": "DF3EBF7D9752A6355990602EA10CE1D6FEB79872A368CC64555BBCEA37FA91C9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cyclotomic-transport-pretrim-688b\\SourceCyclotomicConjugateCancellation.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-transport-pretrim-688b/SourceCyclotomicConjugateCancellation.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cyclotomic-transport-pretrim-688b\\SourceCyclotomicModularLift.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-transport-pretrim-688b/SourceCyclotomicModularLift.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cyclotomic-transport-pretrim-688b\\SourceCyclotomicModularLift.lean.txt",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-transport-pretrim-688b/SourceCyclotomicModularLift.lean.txt",
+      "sha256": "15A3807A757E1E6D9FAF65266F168BC14DBB14FF207A374893E0C866FF8EA805"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cyclotomic-transport-pretrim-688b\\SourceCyclotomicModularLift.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-transport-pretrim-688b/SourceCyclotomicModularLift.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-trace-api-failed-689a\\SourceGammaOneRationalTraceSpan.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-trace-api-failed-689a/SourceGammaOneRationalTraceSpan.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-trace-api-failed-689a\\SourceGammaOneRationalTraceSpan.lean.txt",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-trace-api-failed-689a/SourceGammaOneRationalTraceSpan.lean.txt",
+      "sha256": "6978B0BCAA1CE08E15D4AAC0A2B4B6C03403E7F0D55AA93A4D599C1F195EA67A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-trace-api-failed-689a\\SourceGammaOneRationalTraceSpan.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-trace-api-failed-689a/SourceGammaOneRationalTraceSpan.log",
+      "sha256": "F119C98694B0FE4A20BD4F56114F9D157659471868684E48E8729374515C3ADB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cyclotomic-transport-inputs-reuse-686\\P2M\\Sol\\S_CuspForm_exists_gamma1_frickeRational_sigmaTransport.lean.txt",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-cyclotomic-transport-inputs-reuse-686/P2M/Sol/S_CuspForm_exists_gamma1_frickeRational_sigmaTransport.lean.txt",
+      "sha256": "91908DF3C06FBE1A59F308B96F9FF7082AD2965A4D650FB83A628940F4F64A82"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cyclotomic-transport-inputs-reuse-686\\P2M\\Sol\\S_ModularFunction_exists_mdifferentiable_sigmaTransport_of_frickeQuotient.lean.txt",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-cyclotomic-transport-inputs-reuse-686/P2M/Sol/S_ModularFunction_exists_mdifferentiable_sigmaTransport_of_frickeQuotient.lean.txt",
+      "sha256": "31F0D88DC16CD6FAFE2257FBF59CF1B1124F61BCC4865F779E09261C7393B711"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cyclotomic-transport-inputs-reuse-686\\snapshots.json",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-cyclotomic-transport-inputs-reuse-686/snapshots.json",
+      "sha256": "8A59AF03CDCB425B21D669406B424B093025C1A632CEE46747BBA26C69CC9FE6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-cyclotomic-analytic-transport-5-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-fricke-cyclotomic-analytic-transport-5-reuse-review-20261026.json",
+      "sha256": "8885E3C3447C6CCB8420CCCF1677E04FA9D5480B31FE1D71637E641C4AA5899C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-conjugation-13-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-cyclotomic-conjugation-13-reuse-review-20261026.json",
+      "sha256": "78E6D69EB179A21AF5EF5D32FC13EF92F6ADF7B4A898E1844C6ED2F9B1C99F77"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-rational-cusp-span-4-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-rational-cusp-span-4-reuse-review-20261026.json",
+      "sha256": "02DC657AB84D4517DBE46A29D77F46FD33944986A389860C882BD92FE604FB5A"
+    }
+  ]
+}

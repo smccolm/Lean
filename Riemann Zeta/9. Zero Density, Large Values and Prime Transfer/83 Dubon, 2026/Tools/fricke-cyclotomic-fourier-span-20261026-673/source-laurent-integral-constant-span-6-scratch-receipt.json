@@ -1,0 +1,123 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T18:22:28.249818+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceLaurentConstantTranscendence",
+    "SourceLaurentGeneratedConstants",
+    "SourceConstantExtensionChain",
+    "SourceConstantExtensionMonotonicity",
+    "SourceFiniteConstantIntegralCapture",
+    "SourceLaurentIntegralConstantSpan"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentConstantTranscendence.lean",
+      "sha256": "72F0124F8C453DF841ECA47868A14752B7DF849C2146284F2AA4C0D3ADABC2C7",
+      "oleanSha256": "0C2C71BB1B38EEE2CF14D8FED35C62683379E708C345160D5D8EDCCA6DA12CFD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentGeneratedConstants.lean",
+      "sha256": "75C598D140C59614DB836599D24F9A5E3F98619BD7E71E1F839D31B873E365B8",
+      "oleanSha256": "BC29C2078E9896CB7B9676C68DA4983EF01CD11A43795807021B98AF1E0E7611"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantExtensionChain.lean",
+      "sha256": "55471E734FB2A76EC9124662091525F5F98518AA8AB26A74566E16EA944C8FA3",
+      "oleanSha256": "9C6F53AD94C9BDC60CCF35ECC3A394C22270F0449CBED1A7B1B395064D14344B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantExtensionMonotonicity.lean",
+      "sha256": "D4085166D925561FD25C153E519608C9869220F464FAEBD05528E898706A13AD",
+      "oleanSha256": "272E4211E60F5AB513DB0BF98026A943D962E2D600B137C0567E8B4FECB7E5EF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFiniteConstantIntegralCapture.lean",
+      "sha256": "328129263EEEE6A8985AFD8C223F569C82B94AA7B26A9064E70A77FACF3DA045",
+      "oleanSha256": "5C973D2A283BAA8BBD676A0AAACE57111B3C54C47B77F5F5F590F6283F82BC08"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentIntegralConstantSpan.lean",
+      "sha256": "B8B884CB62C063DD718D5BED0A88F8C7AF8C61F95B766F9E85385B63529069BA",
+      "oleanSha256": "1608D6A1745FD4CF6FEA285FCD52F6CF21FC1F4F234852E179C391B775D002CF"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFricke.ConstantDescent.constant_transcendental_of_coeff_mem",
+    "Dubon2026.SourceFricke.ConstantDescent.constant_mem_coeffMap_fieldRange",
+    "Dubon2026.SourceFricke.ConstantDescent.generated_mem_coeffMap_fieldRange",
+    "Dubon2026.SourceFricke.ConstantDescent.generated_coeff_mem",
+    "Dubon2026.SourceFricke.ConstantDescent.constant_transcendental_generated",
+    "Dubon2026.SourceFricke.ConstantDescent.coeffMap_fieldRange_mono",
+    "Dubon2026.SourceFricke.ConstantDescent.constantChain_le_cons",
+    "Dubon2026.SourceFricke.ConstantDescent.le_constantChain",
+    "Dubon2026.SourceFricke.ConstantDescent.mem_constantChain_of_mem",
+    "Dubon2026.SourceFricke.ConstantDescent.constantChain_le",
+    "Dubon2026.SourceFricke.ConstantDescent.constantChain_le_append_left",
+    "Dubon2026.SourceFricke.ConstantDescent.constantChain_le_append_right",
+    "Dubon2026.SourceFricke.ConstantDescent.adjoin_constants_mono",
+    "Dubon2026.SourceFricke.ConstantDescent.generated_constants_mono",
+    "Dubon2026.SourceFricke.ConstantDescent.integral_constants_mono",
+    "Dubon2026.SourceFricke.ConstantDescent.generated_mem_iff_closure",
+    "Dubon2026.SourceFricke.ConstantDescent.exists_list_mem_algebra",
+    "Dubon2026.SourceFricke.ConstantDescent.exists_list_mem_field",
+    "Dubon2026.SourceFricke.ConstantDescent.exists_list_integral_coordinates",
+    "Dubon2026.SourceFricke.ConstantDescent.exists_list_mem_integral_generated",
+    "Dubon2026.SourceFricke.ConstantDescent.mem_span_laurent_of_algebra_span",
+    "Dubon2026.SourceFricke.ConstantDescent.integral_constantChain_step",
+    "Dubon2026.SourceFricke.ConstantDescent.integral_constantChain_subset_span",
+    "Dubon2026.SourceFricke.ConstantDescent.mem_span_integral_generated_of_complex",
+    "Dubon2026.SourceFricke.ConstantDescent.constantChain"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFricke.ConstantDescent.constant_transcendental_of_coeff_mem",
+    "Dubon2026.SourceFricke.ConstantDescent.constant_mem_coeffMap_fieldRange",
+    "Dubon2026.SourceFricke.ConstantDescent.generated_mem_coeffMap_fieldRange",
+    "Dubon2026.SourceFricke.ConstantDescent.generated_coeff_mem",
+    "Dubon2026.SourceFricke.ConstantDescent.constant_transcendental_generated",
+    "Dubon2026.SourceFricke.ConstantDescent.coeffMap_fieldRange_mono",
+    "Dubon2026.SourceFricke.ConstantDescent.constantChain_le_cons",
+    "Dubon2026.SourceFricke.ConstantDescent.le_constantChain",
+    "Dubon2026.SourceFricke.ConstantDescent.mem_constantChain_of_mem",
+    "Dubon2026.SourceFricke.ConstantDescent.constantChain_le",
+    "Dubon2026.SourceFricke.ConstantDescent.constantChain_le_append_left",
+    "Dubon2026.SourceFricke.ConstantDescent.constantChain_le_append_right",
+    "Dubon2026.SourceFricke.ConstantDescent.adjoin_constants_mono",
+    "Dubon2026.SourceFricke.ConstantDescent.generated_constants_mono",
+    "Dubon2026.SourceFricke.ConstantDescent.integral_constants_mono",
+    "Dubon2026.SourceFricke.ConstantDescent.generated_mem_iff_closure",
+    "Dubon2026.SourceFricke.ConstantDescent.exists_list_mem_algebra",
+    "Dubon2026.SourceFricke.ConstantDescent.exists_list_mem_field",
+    "Dubon2026.SourceFricke.ConstantDescent.exists_list_integral_coordinates",
+    "Dubon2026.SourceFricke.ConstantDescent.exists_list_mem_integral_generated",
+    "Dubon2026.SourceFricke.ConstantDescent.mem_span_laurent_of_algebra_span",
+    "Dubon2026.SourceFricke.ConstantDescent.integral_constantChain_step",
+    "Dubon2026.SourceFricke.ConstantDescent.integral_constantChain_subset_span",
+    "Dubon2026.SourceFricke.ConstantDescent.mem_span_integral_generated_of_complex"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFricke.ConstantDescent.constantChain"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentIntegralConstantSpanAudit6.log",
+  "logSha256": "634DE01756CFEC96A456A4A66B91F9D774050216B16F57C1173512119758529A",
+  "auditSha256": "83853559C3D1E088A5482C82916473BC9D4218ED95818E57A1CBA8F66CA48DC8",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 32,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 34,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentIntegralConstantSpanDependencyAudit6.log",
+  "dependencyAuditSha256": "1CDBA340D1107C29B90F1351CBD5E1421C625EED0AFE4A1F64AB470CB307F166",
+  "dependencyAuditSourceSha256": "7815F762D52D1AC692CBF9C203C8D45ECCA471E81E6D2181AB2647E965C69E4B",
+  "consumers": [
+    "Dubon2026.SourceFricke.ConstantDescent.mem_span_integral_generated_of_complex"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual finite Gamma1 character realization -> Picard/H1, full/parabolic and diamond comparison retaining the original homogeneous coefficient endomorphism -> actual differential/cusp comparison -> rational Fourier spanning -> Fricke integral base change -> finite constant-list integral-span assembly.",
+  "discharged": "For a finite family of literal Laurent series over an original constant field, integral over its transcendental coordinate algebra, every element integral over the complex coordinate algebra in the complex generated field lies in the ordinary complex span of integral elements of the original generated field. Finite constant capture, both simple-extension descents, and their relative-transcendence conditions are proved and assembled. The two native scalar actions are compared explicitly.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Actual j/Fricke generator membership, finite integral generator instantiation and its actual complex fraction Laurent realization are next. Holomorphic representative recovery and rational Fourier spanning, arbitrary Gamma1 differential realization and the arithmetic association/automorphy/higher continuation chain remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-laurent-integral-constant-span-6-reuse-review-20261026.json",
+  "reuseReviewSha256": "2F718495B1B44AED78992D39AA855720D3172B283A0A12FD1372B8F6C6711E33",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

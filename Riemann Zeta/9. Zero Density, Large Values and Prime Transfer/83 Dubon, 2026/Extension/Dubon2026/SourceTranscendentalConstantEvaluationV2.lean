@@ -1,0 +1,109 @@
+import Dubon2026.SourceTranscendentalConstantAlgebraV2
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual
+Gamma1 character realization -> differential/cusp comparison -> rational
+Fourier spanning -> integral base change of Fricke fractions. This is the
+transcendental constant-adjoining step of the finite constant-list induction.
+Native integral closure and polynomial normality recover integral coefficients
+after clearing scalar denominators. The original finite generator integrality
+and j transcendence are explicit inputs, supplied later by the actual Fricke field.
+Adapted from anthropics/fermats-last-theorem,
+6e837e75355538c7f80bab5b956861e86c4eacc2, Apache-2.0,
+S_IsIntegral_mem_span_of_adjoin_simple_constants_transcendental.
+All source proof-limit settings are omitted; native limits are unchanged. -/
+namespace Dubon2026.SourceFricke.ConstantDescent
+noncomputable section
+open Polynomial
+open scoped IntermediateField IntermediateField.algebraAdjoinAdjoin
+variable {K : Type*} [Field K] [Algebra ℂ K]
+variable (F : IntermediateField ℚ ℂ) (t : K) (S : Set K)
+
+
+theorem t_mem_RSet (htS : t ∈ S) : t ∈ RSet F {t} S :=
+  ⟨IntermediateField.subset_adjoin ↥F S htS, isIntegral_algebraMap
+    (x := (⟨t, Algebra.self_mem_adjoin_singleton ↥F t⟩ : ↥(TRng F {t})))⟩
+
+theorem algebraMap_mem_RSet (z : ↥F) : algebraMap ↥F K z ∈ RSet F {t} S :=
+  ⟨(KFld F S).algebraMap_mem z, isIntegral_algebraMap (x := algebraMap ↥F ↥(TRng F {t}) z)⟩
+
+variable (c : ℂ)
+
+
+/-- Evaluation of integral-closure polynomials at the new constant. -/
+def rfPolyEval : (↥(RFa F t S))[X] →+* K :=
+  Polynomial.eval₂RingHom ((algebraMap ↥(KFldT F t S) K).comp (RFa F t S).val.toRingHom)
+    (algebraMap ℂ K c)
+
+variable {c}
+
+theorem rfPolyEval_injective
+    (htc : Transcendental ↥(KFldT F t S) (algebraMap ℂ K c)) :
+    Function.Injective (rfPolyEval F t S c) := by
+  have h1 : Function.Injective
+      (Polynomial.aeval (R := ↥(KFldT F t S)) (algebraMap ℂ K c)) :=
+    transcendental_iff_injective.mp htc
+  have h2 : Function.Injective (Polynomial.map (RFa F t S).val.toRingHom) :=
+    Polynomial.map_injective _ Subtype.val_injective
+  have hcomp : ⇑(rfPolyEval F t S c) =
+      ⇑(Polynomial.aeval (R := ↥(KFldT F t S)) (algebraMap ℂ K c)) ∘
+        Polynomial.map (RFa F t S).val.toRingHom := by
+    funext q
+    simp only [rfPolyEval, Polynomial.coe_eval₂RingHom, Function.comp_apply,
+      Polynomial.aeval_def, Polynomial.eval₂_map]
+  rw [hcomp]; exact h1.comp h2
+
+
+theorem isIntegral_KFldT_of (htS : t ∈ S) {y : K} (hyK : y ∈ KFld F S)
+    (hyI : IsIntegral ↥(TRng F {t}) y) :
+    IsIntegral ↥(TRng F {t}) (⟨y, (mem_KFldT_iff F t S htS y).mpr hyK⟩ : ↥(KFldT F t S)) := by
+  obtain ⟨P, hPm, hPe⟩ := hyI
+  refine ⟨P, hPm, ?_⟩
+  apply Subtype.ext
+  rw [ZeroMemClass.coe_zero, ← hPe, Polynomial.eval₂_def, Polynomial.eval₂_def,
+    Polynomial.sum_def, Polynomial.sum_def, AddSubmonoidClass.coe_finsetSum]
+  refine Finset.sum_congr rfl fun n _ => ?_
+  simp only [SubmonoidClass.coe_pow, MulMemClass.coe_mul]
+  rfl
+
+theorem mem_range_rfPolyEval_of_mem_RSet (htS : t ∈ S) {y : K} (hy : y ∈ RSet F {t} S) :
+    y ∈ Set.range ⇑(rfPolyEval F t S c) := by
+  obtain ⟨hyK, hyI⟩ := hy
+  exact ⟨Polynomial.C ⟨_, isIntegral_KFldT_of F t S htS hyK hyI⟩, by simp [rfPolyEval]⟩
+
+theorem evalF_mem_range_rfPolyEval (htS : t ∈ S) (q : (↥F)[X]) :
+    Polynomial.aeval (algebraMap ℂ K c) q ∈ Set.range ⇑(rfPolyEval F t S c) := by
+  induction q using Polynomial.induction_on' with
+  | add p q hp hq =>
+    obtain ⟨p₁, h₁⟩ := hp; obtain ⟨p₂, h₂⟩ := hq
+    exact ⟨p₁ + p₂, by rw [map_add, map_add, h₁, h₂]⟩
+  | monomial n z =>
+    have hz := algebraMap_mem_RSet F t S z
+    obtain ⟨w, hw⟩ := mem_range_rfPolyEval_of_mem_RSet F t S htS (c := c) hz
+    refine ⟨w * Polynomial.X ^ n, ?_⟩
+    rw [Polynomial.aeval_monomial, map_mul, map_pow, hw]
+    simp only [rfPolyEval, Polynomial.coe_eval₂RingHom, Polynomial.eval₂_X]
+
+theorem range_rfPolyEval_subset_span (htS : t ∈ S) :
+    Set.range ⇑(rfPolyEval F t S c) ⊆
+      (Submodule.span ℂ (RSet F {t} S) : Set K) := by
+  rintro _ ⟨p, rfl⟩
+  induction p using Polynomial.induction_on' with
+  | add p q hp hq => rw [map_add]; exact add_mem hp hq
+  | monomial n z =>
+    have hshape : rfPolyEval F t S c (Polynomial.monomial n z) =
+        (c ^ n) • ((z : ↥(KFldT F t S)) : K) := by
+      rw [Algebra.smul_def, map_pow, rfPolyEval]
+      simp only [Polynomial.coe_eval₂RingHom, Polynomial.eval₂_monomial]
+      exact mul_comm _ _
+    rw [hshape]
+    refine Submodule.smul_mem _ _ (Submodule.subset_span ⟨?_, ?_⟩)
+    · exact (mem_KFldT_iff F t S htS _).mp (z : ↥(KFldT F t S)).2
+    · have hzK : ((z : ↥(KFldT F t S)) : K) =
+          algebraMap ↥(KFldT F t S) K (z : ↥(KFldT F t S)) := rfl
+      rw [hzK]
+      exact (z.2 : IsIntegral ↥(TRng F {t}) (z : ↥(KFldT F t S))).algebraMap
+
+
+
+end
+end Dubon2026.SourceFricke.ConstantDescent

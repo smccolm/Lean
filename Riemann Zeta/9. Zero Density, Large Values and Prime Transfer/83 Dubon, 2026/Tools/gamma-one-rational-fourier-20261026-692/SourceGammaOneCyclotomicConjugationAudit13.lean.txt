@@ -1,0 +1,99 @@
+import SourceFrickeCyclotomicConjugateRelation
+import SourceCyclotomicModularLift
+import SourceCyclotomicGammaOneLift
+import SourceCyclotomicLevelRingCovariance
+import SourceCyclotomicConjugateCancellation
+import SourceCyclotomicFractionCovariance
+import SourceCyclotomicConjugateCuspOrder
+import SourceCyclotomicHolomorphicDivision
+import SourceCyclotomicEllipticDivisibility
+import SourceCyclotomicEllipticCoordinates
+import SourceGammaOneCuspCyclotomicConjugation
+import SourceCyclotomicCuspFourierTransport
+import SourceGammaOneCyclotomicFourierConjugation
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFricke.exists_cyclotomicConjugates
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.unique
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.add
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.mul
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.pow
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.const
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.j
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.fricke
+#print axioms Dubon2026.SourceFricke.exists_modular_cyclotomic_conjugate
+#print axioms Dubon2026.SourceFricke.exists_gammaOne_cyclotomic_conjugate
+#print axioms Dubon2026.SourceFricke.exists_cyclotomic_levelRing_modular_conjugate
+#print axioms Dubon2026.SourceFricke.cyclotomicLevelRing_holomorphicFraction
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.of_mul_eq
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.modular
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.exists_modular
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.gammaOne_invariant
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.discriminant
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.cusp_order
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.isZeroAtImInfty_mul_discriminant_iff
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.all_cusps
+#print axioms Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_of_holomorphic_quotient
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.holomorphic_division
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.elliptic_divisibility
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.jShift
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.E4_divisibility
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.E6_divisibility
+#print axioms Dubon2026.SourceFricke.exists_gammaOne_cuspWeightImage_cyclotomic_conjugate
+#print axioms Dubon2026.SourceFricke.coeffMap_eisensteinLaurentK_ringHom
+#print axioms Dubon2026.SourceFricke.coeffMap_eisensteinFactorLaurentK_ringHom
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.cusp_forms
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.qExpansion_coeff
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.gammaOne_qExpansion_coeff
+#print axioms Dubon2026.SourceFricke.exists_gammaOne_cuspForm_cyclotomic_conjugate
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates
+#print axioms Dubon2026.SourceFricke.cyclotomicTorsionVector
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceFrickeCyclotomicConjugateRelation, `SourceCyclotomicModularLift, `SourceCyclotomicGammaOneLift, `SourceCyclotomicLevelRingCovariance, `SourceCyclotomicConjugateCancellation, `SourceCyclotomicFractionCovariance, `SourceCyclotomicConjugateCuspOrder, `SourceCyclotomicHolomorphicDivision, `SourceCyclotomicEllipticDivisibility, `SourceCyclotomicEllipticCoordinates, `SourceGammaOneCuspCyclotomicConjugation, `SourceCyclotomicCuspFourierTransport, `SourceGammaOneCyclotomicFourierConjugation]
+  let theorems : Array Name := #[`Dubon2026.SourceFricke.exists_cyclotomicConjugates, `Dubon2026.SourceFricke.CyclotomicConjugates.unique, `Dubon2026.SourceFricke.CyclotomicConjugates.add, `Dubon2026.SourceFricke.CyclotomicConjugates.mul, `Dubon2026.SourceFricke.CyclotomicConjugates.pow, `Dubon2026.SourceFricke.CyclotomicConjugates.const, `Dubon2026.SourceFricke.CyclotomicConjugates.j, `Dubon2026.SourceFricke.CyclotomicConjugates.fricke, `Dubon2026.SourceFricke.exists_modular_cyclotomic_conjugate, `Dubon2026.SourceFricke.exists_gammaOne_cyclotomic_conjugate, `Dubon2026.SourceFricke.exists_cyclotomic_levelRing_modular_conjugate, `Dubon2026.SourceFricke.cyclotomicLevelRing_holomorphicFraction, `Dubon2026.SourceFricke.CyclotomicConjugates.of_mul_eq, `Dubon2026.SourceFricke.CyclotomicConjugates.modular, `Dubon2026.SourceFricke.CyclotomicConjugates.exists_modular, `Dubon2026.SourceFricke.CyclotomicConjugates.gammaOne_invariant, `Dubon2026.SourceFricke.CyclotomicConjugates.discriminant, `Dubon2026.SourceFricke.CyclotomicConjugates.cusp_order, `Dubon2026.SourceFricke.CyclotomicConjugates.isZeroAtImInfty_mul_discriminant_iff, `Dubon2026.SourceFricke.CyclotomicConjugates.all_cusps, `Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_of_holomorphic_quotient, `Dubon2026.SourceFricke.CyclotomicConjugates.holomorphic_division, `Dubon2026.SourceFricke.CyclotomicConjugates.elliptic_divisibility, `Dubon2026.SourceFricke.CyclotomicConjugates.jShift, `Dubon2026.SourceFricke.CyclotomicConjugates.E4_divisibility, `Dubon2026.SourceFricke.CyclotomicConjugates.E6_divisibility, `Dubon2026.SourceFricke.exists_gammaOne_cuspWeightImage_cyclotomic_conjugate, `Dubon2026.SourceFricke.coeffMap_eisensteinLaurentK_ringHom, `Dubon2026.SourceFricke.coeffMap_eisensteinFactorLaurentK_ringHom, `Dubon2026.SourceFricke.CyclotomicConjugates.cusp_forms, `Dubon2026.SourceFricke.CyclotomicConjugates.qExpansion_coeff, `Dubon2026.SourceFricke.CyclotomicConjugates.gammaOne_qExpansion_coeff, `Dubon2026.SourceFricke.exists_gammaOne_cuspForm_cyclotomic_conjugate]
+  let constructions : Array Name := #[`Dubon2026.SourceFricke.CyclotomicConjugates, `Dubon2026.SourceFricke.cyclotomicTorsionVector]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Gamma One Cyclotomic Conjugation postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Gamma One Cyclotomic Conjugation theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE CYCLOTOMIC CONJUGATION AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceFrickeCyclotomicConjugateRelation
+#lint in SourceCyclotomicModularLift
+#lint in SourceCyclotomicGammaOneLift
+#lint in SourceCyclotomicLevelRingCovariance
+#lint in SourceCyclotomicConjugateCancellation
+#lint in SourceCyclotomicFractionCovariance
+#lint in SourceCyclotomicConjugateCuspOrder
+#lint in SourceCyclotomicHolomorphicDivision
+#lint in SourceCyclotomicEllipticDivisibility
+#lint in SourceCyclotomicEllipticCoordinates
+#lint in SourceGammaOneCuspCyclotomicConjugation
+#lint in SourceCyclotomicCuspFourierTransport
+#lint in SourceGammaOneCyclotomicFourierConjugation

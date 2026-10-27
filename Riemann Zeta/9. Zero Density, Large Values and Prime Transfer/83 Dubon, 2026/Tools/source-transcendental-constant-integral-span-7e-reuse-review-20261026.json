@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-26 America/Vancouver",
+  "sourceDependency": "DUB-17/18 -> original all-weight arithmetic association -> actual Gamma1 characters -> Picard/H1 and differential/cusp comparison -> rational Fourier spanning -> integral base change of actual Fricke fractions -> finite constant-list induction -> transcendental constant-adjoining descent.",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\fricke-base-change-dependencies-reuse-662\\P2M\\Sol\\S_IsIntegral_mem_span_of_adjoin_simple_constants_transcendental.lean.txt",
+      "sha256": "B3AB91EC54374CF1DB366726AB29F1FD36A9CE17A5F7E61AB1FCE78905596D48"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantExtensionIntegralAlgebra.lean",
+      "sha256": "38A4F8263FE6F8F47791DEE2DAC21355BE8D26FF47197B3DE0E5771B8058BACA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicConstantLift.lean",
+      "sha256": "B66E19031A162B171B6593C9532EC2B764E65164C114AF8DE6A9EA8E8F0DB843"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeJTranscendence.lean",
+      "sha256": "D7CC559B1B89F4262F35318B00E991FC4771984D103DBB1DE62869E5DAC2D9F0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicMonic.lean",
+      "sha256": "09F8BEB3BCBF892860C0F3A88409F00621045D50771A60EC29FF25AA12CAA94A"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\transcendental-constant-integral-span-route-667e.json",
+    "sha256": "5A391E12911E30DACC91C21089ED4B30E71284A197E88D78CC0ABE1659B54CEF",
+    "review": {
+      "scope": 667,
+      "chain": "DUB-17/18 -> original all-weight arithmetic association -> actual Gamma1 characters -> Picard/H1 and differential/cusp comparison -> rational Fourier spanning -> integral base change of actual Fricke fractions -> finite constant-list induction -> transcendental constant-adjoining descent.",
+      "assumptionsToDischarge": "At a transcendental constant-adjoining step, every integral element of the enlarged generated field lies in the complex span of elements integral over the original coordinate algebra. Derive the finite generator extension, Dedekind integral closure and polynomial integrally-closed instance from actual finite integral generators and j transcendence; clear scalar denominators and recover polynomial coefficients.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\fricke-base-change-dependencies-reuse-662\\P2M\\Sol\\S_IsIntegral_mem_span_of_adjoin_simple_constants_transcendental.lean.txt",
+          "sha256": "B3AB91EC54374CF1DB366726AB29F1FD36A9CE17A5F7E61AB1FCE78905596D48"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceConstantExtensionIntegralAlgebra.lean",
+          "sha256": "38A4F8263FE6F8F47791DEE2DAC21355BE8D26FF47197B3DE0E5771B8058BACA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicConstantLift.lean",
+          "sha256": "B66E19031A162B171B6593C9532EC2B764E65164C114AF8DE6A9EA8E8F0DB843"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeJTranscendence.lean",
+          "sha256": "D7CC559B1B89F4262F35318B00E991FC4771984D103DBB1DE62869E5DAC2D9F0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicMonic.lean",
+          "sha256": "09F8BEB3BCBF892860C0F3A88409F00621045D50771A60EC29FF25AA12CAA94A"
+        }
+      ],
+      "shorterRouteReview": "Reuse the algebraic-step coefficient algebra and embedding helpers from scope 666. Native integral-closure and polynomial normality theorems provide the remaining commutative algebra. No pinned Mathlib base-change normalization/span theorem was found. The existing coordinate regularity result addresses only a rational coordinate subfield. The actual j-transcendence input is already proved, and scope 665 supplies cyclotomic monic descent. Omit duplicate source wrappers, repeated coefficient structures, source limit increases and final closure reformulations. The monolithic source argument exceeded the default elaboration limit. The final proof isolates the evaluation field, scalar denominator relation and normality recovery, all under unchanged limits. A read-only value-dependency discovery identified five unused aliases, removed before the final sequential rebuild. The used discovery and pretrim sources, and both failed limit attempts, are retained. All surviving declarations are required by the value audit.",
+      "sourceCommit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "sourceLicense": "Apache-2.0",
+      "externalImport": false,
+      "externalFullClosureVerified": false,
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "modules": [
+        "SourceTranscendentalConstantAlgebraV2",
+        "SourceTranscendentalConstantEvaluationV2",
+        "SourceTranscendentalConstantDenominatorsV2",
+        "SourceTranscendentalConstantFieldRangeV2",
+        "SourceTranscendentalConstantScaledRelationV2",
+        "SourceTranscendentalConstantNormalityV2",
+        "SourceTranscendentalConstantIntegralSpanV2"
+      ],
+      "remaining": "This is a necessary foundation, not a gate closure. Finite constant-list induction, actual Fricke-field instantiation, relative transcendence from Fourier coefficient independence, holomorphic representative recovery, rational Fourier spanning, arbitrary Gamma1 differential realization and the remaining arithmetic association/automorphy/higher continuation chain remain. 16/20; DUB-17--20 OPEN.",
+      "firstAuditFailure": "The original full audit proved the axiom checks but reported two definition-naming linter errors. Original mathematical sources and audit evidence are immutable; fresh V2 modules rename only the two construction identifiers, with identical mathematical statements. No linter is suppressed.",
+      "predecessorRouteSha256": "8A19C10D375B562F2F9A2B6AA67A052A062FB7C6974B4EB09F894636AD615606"
+    }
+  },
+  "discharged": "At a transcendental constant-adjoining step, every integral element of the enlarged generated field lies in the complex span of elements integral over the original coordinate algebra. Derive the finite generator extension, Dedekind integral closure and polynomial integrally-closed instance from actual finite integral generators and j transcendence; clear scalar denominators and recover polynomial coefficients.",
+  "remaining": "This is a necessary foundation, not a gate closure. Finite constant-list induction, actual Fricke-field instantiation, relative transcendence from Fourier coefficient independence, holomorphic representative recovery, rational Fourier spanning, arbitrary Gamma1 differential realization and the remaining arithmetic association/automorphy/higher continuation chain remain. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

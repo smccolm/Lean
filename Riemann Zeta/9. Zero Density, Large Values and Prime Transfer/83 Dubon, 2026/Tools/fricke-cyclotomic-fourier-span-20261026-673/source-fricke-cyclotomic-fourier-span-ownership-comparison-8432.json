@@ -1,0 +1,392 @@
+{
+  "scratchSum": 189,
+  "scratchDistinct": 189,
+  "generatedNameRenamings": {},
+  "productionFocused": 189,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {},
+  "missingFromFocusedAlreadyInPrevious": [],
+  "productionNamesNotInScratch": [],
+  "unexplainedMissing": [],
+  "scopes": [
+    {
+      "modules": [
+        "SourceCuspLaurentFunctionIdentity",
+        "SourceQExpansionLaurentWidth",
+        "SourcePoleBoundedCuspLaurent",
+        "SourceFrickeCyclotomicLaurent",
+        "SourceCuspLaurentPolynomial",
+        "SourceCuspLaurentFractionIdentity",
+        "SourceFrickeCyclotomicFractionGerm",
+        "SourceFrickeLaurentIntegralDescent",
+        "SourceFrickeFractionPeriodicity",
+        "SourceFrickeCyclotomicMonic"
+      ],
+      "count": 52,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicFourierSpanScratchOwnership665For8432.log",
+        "sha256": "27C3CBE9F6E7FFFAB218F8A63DC0733D3FC013E636BC41BE003499AC622F12D4",
+        "sourceSha256": "7669B46109C8F495295F7B37AF5AFA54CF15A453302C46D19502BD4960C2F866"
+      }
+    },
+    {
+      "modules": [
+        "SourceConstantExtensionIntegralAlgebra",
+        "SourceAlgebraicConstantRoots",
+        "SourceAlgebraicConstantLift",
+        "SourceAlgebraicConstantInterpolation",
+        "SourceAlgebraicConstantIntegralSpan"
+      ],
+      "count": 17,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicFourierSpanScratchOwnership666For8432.log",
+        "sha256": "1211C45BED0EF00601DD9729CD332FACAD166BD419A076C3E42C1B79713F892F",
+        "sourceSha256": "386B9418D0DF44C8B60C6BDB535C006A325D23A24FDBCF42BB6873482C3DB3D7"
+      }
+    },
+    {
+      "modules": [
+        "SourceTranscendentalConstantAlgebraV2",
+        "SourceTranscendentalConstantEvaluationV2",
+        "SourceTranscendentalConstantDenominatorsV2",
+        "SourceTranscendentalConstantFieldRangeV2",
+        "SourceTranscendentalConstantScaledRelationV2",
+        "SourceTranscendentalConstantNormalityV2",
+        "SourceTranscendentalConstantIntegralSpanV2"
+      ],
+      "count": 38,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicFourierSpanScratchOwnership667eFor8432.log",
+        "sha256": "43FBABAAA14F56071FC692639347D1C4F9A4116826D360FD6A18572B136846DC",
+        "sourceSha256": "78FDC5035A89ED5900D897FAF932B5846CE5917AF78B0FA53966F4EAAF66B17F"
+      }
+    },
+    {
+      "modules": [
+        "SourceLaurentConstantTranscendence",
+        "SourceLaurentGeneratedConstants",
+        "SourceConstantExtensionChain",
+        "SourceConstantExtensionMonotonicity",
+        "SourceFiniteConstantIntegralCapture",
+        "SourceLaurentIntegralConstantSpan"
+      ],
+      "count": 32,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicFourierSpanScratchOwnership669For8432.log",
+        "sha256": "D16682476D0C9685FE7E1CE5C66960EAEE0532979C691CE13EED3FFB9DA0C9FC",
+        "sourceSha256": "E197BC92BF7CD5C3232A7D3389A0B7E32BF50AF35732FE63B0BCAB000C9271DE"
+      }
+    },
+    {
+      "modules": [
+        "SourceLaurentIntegralCoefficientImage",
+        "SourceFrickeLaurentGeneratorIntegrality",
+        "SourceFrickeComplexFractionLaurent",
+        "SourceFrickeLaurentIntegralSpan"
+      ],
+      "count": 15,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicFourierSpanScratchOwnership670For8432.log",
+        "sha256": "EAD669984852ED1AF6375FA250B6A002BDC3FE38C29FE45C49C2099162306B66",
+        "sourceSha256": "D20A4AACF51CBCF03DCBEF71A04FA22F0C7407729BC18BE6D6D2AE727FFC08D8"
+      }
+    },
+    {
+      "modules": [
+        "SourceMonicQuotientRelation",
+        "SourceHolomorphicMonicQuotient",
+        "SourceIntegralCoordinateMonic",
+        "SourceFrickeCyclotomicLaurentLifts",
+        "SourceFrickeClearedLaurentMonic",
+        "SourceFrickeIntegralHolomorphicRepresentative",
+        "SourceCuspLaurentSpan",
+        "SourceFrickeHolomorphicIntegralSpan"
+      ],
+      "count": 28,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicFourierSpanScratchOwnership671For8432.log",
+        "sha256": "9EB693B9EA4F316F016210358D815F2035A01973B8608BCE192963B6240E2BD3",
+        "sourceSha256": "0A7BB80A426D5BA3CC6EB9939542E18427D12513E7860CC0E665BA5D41E413D1"
+      }
+    },
+    {
+      "modules": [
+        "SourceMeromorphicCuspPoleClearing",
+        "SourceFrickePoleClearedFourierSpan"
+      ],
+      "count": 7,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicFourierSpanScratchOwnership672For8432.log",
+        "sha256": "29D568D6B47A1F7FD84CC28768C7F40BCD236212C4AD8BFE45F582D5D24D6B0C",
+        "sourceSha256": "CB3F402447714A741E81320F87F7AF37D8D2D0D90AB1A95BDC2D4EFA8A996DAB"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicFourierSpanOwnership8432.log",
+    "sha256": "1AAF625DCC3389505C17730B52FEDC5A5797CBB791F16BF5D3D96DFA82B14C83",
+    "sourceSha256": "A74DA3004A4798E5EF908030A600128E2EB4E21FA4187AD96069520C27C7CF6A"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-102037-367.log",
+    "sha256": "C656090D543D2276FE0EFC11328ED212D67706B761407B45DE2DF429D9E0A780"
+  },
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 42 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourceCuspLaurentFunctionIdentity",
+        "scratchSha256": "DC4D20A9159A9B19D2569D9FE996E9473A33A911DDA5BA61C110E7D479D63BD8",
+        "productionSha256": "FFCF94431B3026BC65A21B2C9A84A5550B068E7912F1C1EC6B7176EF0AAC46F0",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceQExpansionLaurentWidth",
+        "scratchSha256": "BF753D96B806085AAC9B3227461F647DA80C4A859A02EFF0616939CB96A2404B",
+        "productionSha256": "0AB9DF23828F13C0E54B61E1DF0401E2E8B97AF93C4280EC9916E8B6481B59CD",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePoleBoundedCuspLaurent",
+        "scratchSha256": "76BAD0B55FCD15A0402C935AC137B001DC3EBCF0E7CFB2DC21379B1A8971409F",
+        "productionSha256": "79E3ED018A98FB6F915F681AD373070BDDDCA4153084733F38473712BD8D1E61",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeCyclotomicLaurent",
+        "scratchSha256": "CAFB735C7C1A45E8A27C7CD9A387E05E7699303D829A72C5EA3F5008CC0C6D84",
+        "productionSha256": "43136F32B56778B64A2E33217AAE43C017984EF72D34E19887B76D8E90733997",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCuspLaurentPolynomial",
+        "scratchSha256": "EAEA869D96EA2B36438E56F701AA9C7F8565AEB56D8D5D2F52F9753FF31158E9",
+        "productionSha256": "2E197B55970B01ABB5AD00E10A752AA2D1581D3D0D11642962F90E26A10BB31F",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCuspLaurentFractionIdentity",
+        "scratchSha256": "BDFDABE6460490760974FB3C4169668C36545BFF95FE0266DCF9CD5FA06869B7",
+        "productionSha256": "57E14F5AB00F7B1223DBD83A5EB5E953DCD87BA4CF64B95E8505C5814E9261AC",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeCyclotomicFractionGerm",
+        "scratchSha256": "E761C04EFA4A51687EEF11E3F4A75EC38631DDCAF911522D43A56C06F34FB7C5",
+        "productionSha256": "42210CB1EA435853E450CE14F3426AA4279BC5E8E88E99D3628C2E0761EA5C63",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeLaurentIntegralDescent",
+        "scratchSha256": "0EFCB66499AE813BC26EE8092E3D97BCD46D6C2FAEE6676B8536C53FF62518E3",
+        "productionSha256": "F2F346B7257D8BA84AAF23E40C4AE5B1E78C0CA43B10482749137CAA478898F1",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeFractionPeriodicity",
+        "scratchSha256": "F6B29316F4B06C5F9B20E62F0E40B55072FCF59DF508B7F2FF97BFA57F7741EF",
+        "productionSha256": "8633197E1BAC9FD1CDC16E7BE158D700837BE1069506989E9AF4263FE92ADF40",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeCyclotomicMonic",
+        "scratchSha256": "09F8BEB3BCBF892860C0F3A88409F00621045D50771A60EC29FF25AA12CAA94A",
+        "productionSha256": "8B440EC5C93DE5D5AA42374068F8442527C5C6392956BB8ED82FA9F3A5F4AAEB",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceConstantExtensionIntegralAlgebra",
+        "scratchSha256": "38A4F8263FE6F8F47791DEE2DAC21355BE8D26FF47197B3DE0E5771B8058BACA",
+        "productionSha256": "38A4F8263FE6F8F47791DEE2DAC21355BE8D26FF47197B3DE0E5771B8058BACA",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceAlgebraicConstantRoots",
+        "scratchSha256": "1D4FA1AA74A47682639D5221C694693AC2996EB7518ED656495E46D5A37D5FEC",
+        "productionSha256": "C38A1381A48FA8A7D2DE5AF4DAAE976E401D1E3BDA16AA48088F012C563875D8",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceAlgebraicConstantLift",
+        "scratchSha256": "B66E19031A162B171B6593C9532EC2B764E65164C114AF8DE6A9EA8E8F0DB843",
+        "productionSha256": "FBB7A69108EB83747D0002E4188008B7148CAC08AE0E1EEAA9B4505F87524E83",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceAlgebraicConstantInterpolation",
+        "scratchSha256": "473763E10000DB8A1646B62042AD80281D0EB1AEB3BF422D155D3E1AABE4D7C2",
+        "productionSha256": "1CD1F719601521DE3E490B10365279DB7E42899D017AF1A590021DCD46BE2C3B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceAlgebraicConstantIntegralSpan",
+        "scratchSha256": "BD41A7702012892D82CFD631170212F7C77E36DD8D445852B9FB47E3220EB82E",
+        "productionSha256": "71E1CB430E7129164355E86613E67D723992788B7FD71F292468DD380AAAA7A4",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceTranscendentalConstantAlgebraV2",
+        "scratchSha256": "F6DDC95FB62FFC526DE6A59F19C2268437298FC5CC374F3375671D684FF13575",
+        "productionSha256": "E3F9D4F43E6B9BA87AE6832C7ECBD4D2FBAE1426D77D8EE0A30FE19127EB521B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceTranscendentalConstantEvaluationV2",
+        "scratchSha256": "4AA41A40AF47D513140991D48F1FC4EEDB4AC861DD35E9448EC5E49C8F34A63A",
+        "productionSha256": "408BEEF6D64B020A3E1060F613A2697F3C1CD7E74FD854F1B4C08D4B456479AA",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceTranscendentalConstantDenominatorsV2",
+        "scratchSha256": "9267A1426C732EE34B0D23D3A900FD0748122CDCCA4AFE5F2B829971D8620364",
+        "productionSha256": "73439D9FEC52235BA38F768DD22474073C8E4E0C1D3801338B50A4263EBAAE86",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceTranscendentalConstantFieldRangeV2",
+        "scratchSha256": "8B430315F1AE02FDD1F421F4D5E29FC89F983EA29B13B8312A6F58C96855A8FE",
+        "productionSha256": "3D09540AF9D9736693EFD80A1962BC1202EE0618F380B0F7AC41A4625E0FA0CA",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceTranscendentalConstantScaledRelationV2",
+        "scratchSha256": "53A5BE660D7F244409A878571F2AC7A29B3CC95B2DBECE35D24548EA39258860",
+        "productionSha256": "B1F5B3D01D701D133C90F9637CBD549417A53C913B0DDE08D51CEA58E212F3AF",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceTranscendentalConstantNormalityV2",
+        "scratchSha256": "EF8DF308F76BC8403A23D24CAEE7525EF06B952D7674BF5B644E30C8E3E14747",
+        "productionSha256": "2DCCEE38D900A7C8E1E7A68A517F45355DC1F6C487B3B457ACDEE4CC2676844B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceTranscendentalConstantIntegralSpanV2",
+        "scratchSha256": "513A7752D13189C0367B302BC880324F39BFE3AFCF15F8BCF3C5805B4B4A8073",
+        "productionSha256": "BAEB9E604AEBC4A29CEC2915976C8FE9E5A52D1E90E03843DD7851B5D3A26EB4",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceLaurentConstantTranscendence",
+        "scratchSha256": "72F0124F8C453DF841ECA47868A14752B7DF849C2146284F2AA4C0D3ADABC2C7",
+        "productionSha256": "337FAD48313BF54FFAADE7C21EC61063AE224E0ABE1095512DD497390ED5D340",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceLaurentGeneratedConstants",
+        "scratchSha256": "75C598D140C59614DB836599D24F9A5E3F98619BD7E71E1F839D31B873E365B8",
+        "productionSha256": "78C66A089DDE1575B0411A5057D243122F61483FF0D33D27A1D322D55E6E7BA7",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceConstantExtensionChain",
+        "scratchSha256": "55471E734FB2A76EC9124662091525F5F98518AA8AB26A74566E16EA944C8FA3",
+        "productionSha256": "A0F6B98E7E80E1EB0D53E549C0AC7C61D7A7039A4FD96B9E6E2352016DFFE6B5",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceConstantExtensionMonotonicity",
+        "scratchSha256": "D4085166D925561FD25C153E519608C9869220F464FAEBD05528E898706A13AD",
+        "productionSha256": "9E9FCEE93085F2360C71106E6365D2BF3AE3E008A91EAAF3DA98873AFD5EEAF1",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFiniteConstantIntegralCapture",
+        "scratchSha256": "328129263EEEE6A8985AFD8C223F569C82B94AA7B26A9064E70A77FACF3DA045",
+        "productionSha256": "7CDB872EFF4E0FDCACD656CDC574F41F93F55CBA982644CE400453232AA5B184",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceLaurentIntegralConstantSpan",
+        "scratchSha256": "B8B884CB62C063DD718D5BED0A88F8C7AF8C61F95B766F9E85385B63529069BA",
+        "productionSha256": "9407BC1DFF90B88CA7CADD0376B98C5F61F3A8514DB3C119B6C9B40C08B72D7F",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceLaurentIntegralCoefficientImage",
+        "scratchSha256": "927EB8550A8CA2B8C059E26AE4A576610BE12B20CEC9D0FD8F4BAEDFCB960CA0",
+        "productionSha256": "43DD66E6D70563D86456B7BBACB91AE1BC45219400E9F9C944B40DD317087C2C",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeLaurentGeneratorIntegrality",
+        "scratchSha256": "3052B656C6AB52A62AFFA7E0E24DC0B81FF909DED8903C50CC190C5D08C3070C",
+        "productionSha256": "81471899F74E71F34EF3F333CD1E603262117D87AE276D449204C884AA03B99A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeComplexFractionLaurent",
+        "scratchSha256": "18098E25ED5518B97110C0D388299D5D560F405AB1A324EE6FB46FC72EE92497",
+        "productionSha256": "F39252B6A375F2FE0C0EBF90A73D6921B689723EE6160DF440DE4BD487131654",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeLaurentIntegralSpan",
+        "scratchSha256": "60367D17BA3C3B2CA14757677E66173707130350D756DAF341E4F5FB979E932A",
+        "productionSha256": "FC277DAB1F2C6753962E68D9501E301E686523A8EC72F7F03C458956D894FC30",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceMonicQuotientRelation",
+        "scratchSha256": "C9BD974A011A6CB9B17AE2BC59E07217CBEABBCC1B133623AFE21F5757D674B6",
+        "productionSha256": "C9BD974A011A6CB9B17AE2BC59E07217CBEABBCC1B133623AFE21F5757D674B6",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceHolomorphicMonicQuotient",
+        "scratchSha256": "94FBF4C909E298A91548D0877B0AF450875FD7EBE89BE5FED173C6513E258632",
+        "productionSha256": "9B11D7A206995BC502052641D15131AD3B905BA88C0181020D309F3ECAF645CE",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceIntegralCoordinateMonic",
+        "scratchSha256": "AC77D5D44BCA6A4A5C13D6901389D216081743D9D22658AFBF6AB6CABDA769F6",
+        "productionSha256": "AC77D5D44BCA6A4A5C13D6901389D216081743D9D22658AFBF6AB6CABDA769F6",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeCyclotomicLaurentLifts",
+        "scratchSha256": "EEEB2A9604784B1D4E4AEAD240C4C38BB12BF0AC9986A8602524EA936929299C",
+        "productionSha256": "EA7EC2AA1E7315EB96701F427AB65DB875DC7570357DCF20D08775CBBDA4F286",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeClearedLaurentMonic",
+        "scratchSha256": "6933D84A04267617CC43BFCF6256721813C9466EEF0623325784B879CFB2B42A",
+        "productionSha256": "A6DB3AAA970063326869CF411F61AA7E310E7E177E512E085FDF5A5949BA6EF4",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeIntegralHolomorphicRepresentative",
+        "scratchSha256": "F55C22030E5B4A195EA0C47E055B2F50495EED9E7AA3BD4641B01EB58620CB12",
+        "productionSha256": "AAC5DCE100E57224621F2D4863E0355413C068CEAB64E1D4E50AC5C69B9F8C45",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCuspLaurentSpan",
+        "scratchSha256": "02C9583A7F3171E9FFEB0C654DB261C760213224E4185DCA5869520219D5D48B",
+        "productionSha256": "CF514F436ACD9F366279F72546CFEDD34E6A80224ED971A9C117D65488D6999E",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeHolomorphicIntegralSpan",
+        "scratchSha256": "B2B189892B4221400AF30F3F9D95C0C284B565CC9084FD04EE553AD9EC50873A",
+        "productionSha256": "AA9372D7AF1DF494BA0C7430FA3A28B0FE88208899B4E2D7E9C8E272A4CD498C",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceMeromorphicCuspPoleClearing",
+        "scratchSha256": "2C51FDA119141C1A5CAB3AA6E346C90D236BD974273862C4FE181CEFA6BECCBA",
+        "productionSha256": "A07D5836CE2DF5859630B3DF0B0F42C6897BC3238511EA283C88827807C53B4E",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickePoleClearedFourierSpan",
+        "scratchSha256": "881ACD6FC414E5D1B71FA9CAEE495735E1303C2EEDBF73A8745508218DC5F70F",
+        "productionSha256": "50C6EE93BE4ABA3114C17947B9589A25CB7E4A42A695197FD868AD34DD5BCF8D",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": true
+}

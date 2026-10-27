@@ -1,0 +1,19 @@
+{
+  "scope": 678,
+  "date": "2026-10-26 America/Vancouver",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual Gamma1 character realization -> Picard/H1, full/parabolic, transpose and diamond comparison -> differential/cusp comparison -> rational cusp-form spanning -> actual cusp-image characterization and fixed-field descent",
+  "primaryManifest": "fricke-cusp-descent-inputs-reuse-678/snapshots.json",
+  "fixedCommit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "verification": "Three selected public primary-source files were retrieved and checked against the previously frozen Git tree blob SHA1 values; SHA256 and byte lengths are recorded in the manifest. No external import closure or external build is claimed.",
+  "reuseReview": [
+    "Cusp-image criterion: the only non-native mathematical import is the monic holomorphic quotient theorem. The local SourceHolomorphicMonicQuotient already proves its exact analytic conclusion. Native MDifferentiableAt.congr_of_eventuallyEq shortens the coprime-factor gluing argument; existing SourceAnalyticJTransformation and SourceInverseJLimits provide E4/E6/discriminant transformations and the E4 cusp limit.",
+    "Twist-stable subspace descent: only descent_core and descent_generic are relevant. The external 160-line twist construction and specialized function wrapper are unnecessary because the actual local coefficient twist and scalar-extension basis are already proved. The finite-support descent argument and original-field fixed-point conclusion still require proof and consumers.",
+    "Algebraically closed fixed field: the external argument reduces to native InfiniteGalois.mem_bot_iff_fixed after constructing an algebraic intermediate field excluding the coefficient. Search local and pinned native APIs again before adapting the transcendence-basis and rational-function separation steps. No finite-field or finite-character lifting claim follows from this descent."
+  ],
+  "sourceLicense": "Apache-2.0; reviewed license retained under Tools/reuse-20261025-579/anthropics__fermats-last-theorem/LICENSE.txt",
+  "externalImport": false,
+  "externalFullClosureVerified": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "goalStatus": "16/20; DUB-17--20 OPEN; all source domains, weights and acceptance conditions unchanged"
+}

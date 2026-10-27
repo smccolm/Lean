@@ -1,0 +1,60 @@
+import SourcePeriodWeierstrassSeparation
+import SourceFrickeTorsionLattice
+import SourceFrickePrefactor
+import SourceFrickeSeparation
+import SourceFrickeFaithfulness
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFricke.weierstrassP_eq_imp_lattice
+#print axioms Dubon2026.SourceFricke.torsion_lift_mem_lattice_iff
+#print axioms Dubon2026.SourceFricke.frickeTorsionPt_notMem
+#print axioms Dubon2026.SourceFricke.frickeTorsionPt_sub_mem_iff
+#print axioms Dubon2026.SourceFricke.frickeTorsionPt_add_mem_iff
+#print axioms Dubon2026.SourceFricke.qExpansion_E4E6_coeff_zero
+#print axioms Dubon2026.SourceFricke.exists_E4E6_ne_zero
+#print axioms Dubon2026.SourceFricke.frickePrefactor_ne_zero
+#print axioms Dubon2026.SourceFricke.weierstrassP_frickeTorsionPt_eq_imp
+#print axioms Dubon2026.SourceFricke.frickeF_eq_imp
+#print axioms Dubon2026.SourceFricke.mem_Gamma_or_neg_mem_of_vecMulSL
+#print axioms Dubon2026.SourceFricke.frickeF_faithful
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourcePeriodWeierstrassSeparation, `SourceFrickeTorsionLattice, `SourceFrickePrefactor, `SourceFrickeSeparation, `SourceFrickeFaithfulness]
+  let theorems : Array Name := #[`Dubon2026.SourceFricke.weierstrassP_eq_imp_lattice, `Dubon2026.SourceFricke.torsion_lift_mem_lattice_iff, `Dubon2026.SourceFricke.frickeTorsionPt_notMem, `Dubon2026.SourceFricke.frickeTorsionPt_sub_mem_iff, `Dubon2026.SourceFricke.frickeTorsionPt_add_mem_iff, `Dubon2026.SourceFricke.qExpansion_E4E6_coeff_zero, `Dubon2026.SourceFricke.exists_E4E6_ne_zero, `Dubon2026.SourceFricke.frickePrefactor_ne_zero, `Dubon2026.SourceFricke.weierstrassP_frickeTorsionPt_eq_imp, `Dubon2026.SourceFricke.frickeF_eq_imp, `Dubon2026.SourceFricke.mem_Gamma_or_neg_mem_of_vecMulSL, `Dubon2026.SourceFricke.frickeF_faithful]
+  let constructions : Array Name := #[]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Primitive Tate Restriction postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Primitive Tate Restriction theorems discovered"
+  logInfo m!"SOURCE FRICKE SEPARATION AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourcePeriodWeierstrassSeparation
+#lint in SourceFrickeTorsionLattice
+#lint in SourceFrickePrefactor
+#lint in SourceFrickeSeparation
+#lint in SourceFrickeFaithfulness

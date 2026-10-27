@@ -1,0 +1,669 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cusp-cyclotomic-spanning-promotion-route-685.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/cusp-cyclotomic-spanning-promotion-route-685.json",
+      "sha256": "4C12E06CAF0AFF084E32FC4107CA4DECFE387336D7333B54F6B191D8B9C499D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspFrickeRationalSpanAudit7.exit",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspFrickeRationalSpanAudit7.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspFrickeRationalSpanAudit7.lean",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspFrickeRationalSpanAudit7.lean.txt",
+      "sha256": "A4D03BF901818FE132D18021CAD9F93AC35F6C335693432F97654D64AE6AAB96"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspFrickeRationalSpanAudit7.log",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspFrickeRationalSpanAudit7.log",
+      "sha256": "F855388C03C61170428A9070BD99A72CA767B1CF947708542EA620017222392D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspFrickeRationalSpanDependencyAudit7.exit",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspFrickeRationalSpanDependencyAudit7.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspFrickeRationalSpanDependencyAudit7.lean",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspFrickeRationalSpanDependencyAudit7.lean.txt",
+      "sha256": "AB79F194602F36CFEE124602E3E7439E40BD67EFFB5DE902361F39E9558791C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspFrickeRationalSpanDependencyAudit7.log",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspFrickeRationalSpanDependencyAudit7.log",
+      "sha256": "A9F1D00F29BEEACDA3041B0462C7E8C2E0FCFE2CB409306419F7794D1043A736"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCoefficientTwistAudit8.exit",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCoefficientTwistAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCoefficientTwistAudit8.lean",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCoefficientTwistAudit8.lean.txt",
+      "sha256": "2795A55790560F5E9170ED0F1A82EA4F994B51C02E918069EC86FE17D5C1CB8E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCoefficientTwistAudit8.log",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCoefficientTwistAudit8.log",
+      "sha256": "47DE8910EEC14B0569FCE2EBE41B17CFE14441455AA3CED2CF3CFDF54820CC64"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCoefficientTwistDependencyAudit8.exit",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCoefficientTwistDependencyAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCoefficientTwistDependencyAudit8.lean",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCoefficientTwistDependencyAudit8.lean.txt",
+      "sha256": "210500B9B5FDFA9CF04B37C673EDF836D7ADF2313F8404E65E15B840C9C99E83"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCoefficientTwistDependencyAudit8.log",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCoefficientTwistDependencyAudit8.log",
+      "sha256": "02D15AA8EFB6E067C8883D14B771F8A864A7CA2D27D20B2F4EE1BD63EE526359"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCuspImageStabilityAudit9.exit",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCuspImageStabilityAudit9.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCuspImageStabilityAudit9.lean",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCuspImageStabilityAudit9.lean.txt",
+      "sha256": "3A3D49EADA07AD203075D0D09BDBD6BBD47A9EA525E2F15310264CA7D465DEC1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCuspImageStabilityAudit9.log",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCuspImageStabilityAudit9.log",
+      "sha256": "89A85793AAADA0E428CE146DF4437EF25AC866735C87B0C5778CC9ED57EC2184"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCuspImageStabilityDependencyAudit9.exit",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCuspImageStabilityDependencyAudit9.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCuspImageStabilityDependencyAudit9.lean",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCuspImageStabilityDependencyAudit9.lean.txt",
+      "sha256": "71F252CCAFBF2E18A37AAE9EC1D17F2974DEDC41BC3E95114B737C2918D9FD90"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCuspImageStabilityDependencyAudit9.log",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCuspImageStabilityDependencyAudit9.log",
+      "sha256": "128B5E1EEC47AD40D73127CFB36BF622689C4B5E30C7D0E959EA47285C6DDFF2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeEllipticDivisibilityAudit5.exit",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeEllipticDivisibilityAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeEllipticDivisibilityAudit5.lean",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeEllipticDivisibilityAudit5.lean.txt",
+      "sha256": "C0405A9E63AE7B26539858F9387C16E178B4B138A8181EA5BD2C317F49888EA2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeEllipticDivisibilityAudit5.log",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeEllipticDivisibilityAudit5.log",
+      "sha256": "451F3F68C2F36EA956DA9C7F2BB608863C883E0A7E6BA8FF6FD4BAAC404C45D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeEllipticDivisibilityDependencyAudit5.exit",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeEllipticDivisibilityDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeEllipticDivisibilityDependencyAudit5.lean",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeEllipticDivisibilityDependencyAudit5.lean.txt",
+      "sha256": "1CC26BBF91B11D95A5345A2968866B4FEF7893B7A168DE6E531E767B67CAEB64"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeEllipticDivisibilityDependencyAudit5.log",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeEllipticDivisibilityDependencyAudit5.log",
+      "sha256": "C736EF736FA5D4A7F4A550B513550EDE4B4E97246AA7FC3CB3C2235508B37EA3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLaurentIndependenceAudit2.exit",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeLaurentIndependenceAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLaurentIndependenceAudit2.lean",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeLaurentIndependenceAudit2.lean.txt",
+      "sha256": "BBFE446D44019ACBD6F61745ABB276EF9216973DD33D70C64058DC5F7D4BD689"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLaurentIndependenceAudit2.log",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeLaurentIndependenceAudit2.log",
+      "sha256": "BF3ADA40B6B89F0AA19F934DE99F14DA11A27C7A5938F883F830C289974F8CE0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLaurentIndependenceDependencyAudit2.exit",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeLaurentIndependenceDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLaurentIndependenceDependencyAudit2.lean",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeLaurentIndependenceDependencyAudit2.lean.txt",
+      "sha256": "DE3757535AFB86F093576F5314360D9A28B74F1AF69A1F9EE14BF81872908030"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLaurentIndependenceDependencyAudit2.log",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeLaurentIndependenceDependencyAudit2.log",
+      "sha256": "7A1BEEC5DE09BD12EE195893382DB2FE78763AB664FB371A64AEF3C32D065DEB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTwistModularAlgebraAudit5.exit",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeTwistModularAlgebraAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTwistModularAlgebraAudit5.lean",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeTwistModularAlgebraAudit5.lean.txt",
+      "sha256": "F6667C18F74C1910ABD05FDBF0C2679EFD6F9A4AF8CA7D838EE42A1A08BBA9EA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTwistModularAlgebraAudit5.log",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeTwistModularAlgebraAudit5.log",
+      "sha256": "45ADA1200A3D43AB8376F112C1A2A50E1AEBAE4F98899731E8E9B041F71A03D8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTwistModularAlgebraDependencyAudit5.exit",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeTwistModularAlgebraDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTwistModularAlgebraDependencyAudit5.lean",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeTwistModularAlgebraDependencyAudit5.lean.txt",
+      "sha256": "46B11B945BB38E3D4666D428FFC69DD5CEE3BD188C005A809042339A470EE965"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTwistModularAlgebraDependencyAudit5.log",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeTwistModularAlgebraDependencyAudit5.log",
+      "sha256": "FD06451633209BD0A2FF97E064CE4F43F841E6DE6F0676AF9A79CE89765891F0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicCuspSpanAudit3.exit",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceGammaOneCyclotomicCuspSpanAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicCuspSpanAudit3.lean",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceGammaOneCyclotomicCuspSpanAudit3.lean.txt",
+      "sha256": "89FC6231D3F7D9807BEDD543A10A039C20958A3783A848F01E901B6D90759525"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicCuspSpanAudit3.log",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceGammaOneCyclotomicCuspSpanAudit3.log",
+      "sha256": "F5693A5739A53CEE01476C17C363A547A6B819821DCD43F09E251235962C5925"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicCuspSpanDependencyAudit3.exit",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceGammaOneCyclotomicCuspSpanDependencyAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicCuspSpanDependencyAudit3.lean",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceGammaOneCyclotomicCuspSpanDependencyAudit3.lean.txt",
+      "sha256": "400C6BA1BAA7F099079BA68E57DC1CB4AB4ACDDF42EC84F0E419242301644307"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicCuspSpanDependencyAudit3.log",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceGammaOneCyclotomicCuspSpanDependencyAudit3.log",
+      "sha256": "CD6A9F0D97CEE87066AA9EA88CE32D26AAC86E5593F4661DD68E84AF818835B9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers683.txt",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/consumers683.txt",
+      "sha256": "CCB4F414D93D09B967725AA2723A140B626B8DE6316B3DC5632D214FE8686803"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cusp-fricke-rational-span-route-683.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/cusp-fricke-rational-span-route-683.json",
+      "sha256": "CFF809EAD6942697DA8FEC125C1ABE5DBFA85B7CD88FBF5ADE7C862390FB34B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_fricke_cusp_descent_inputs_678.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fetch_fricke_cusp_descent_inputs_678.py",
+      "sha256": "D3BD1289F094EF552F73D1FC70CB8B71D18B6D1323C6054C7F582577351AB201"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-coefficient-twist-route-675.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-coefficient-twist-route-675.json",
+      "sha256": "77A7E764A9D3469C0C53512B3B4D42AD3498879453695E659BD270A99478EA9F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-cusp-descent-input-reuse-assessment-678.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-cusp-descent-input-reuse-assessment-678.json",
+      "sha256": "EFEA96FFFBDCBF79543197DACD9F21F893F1259DCF1C6CF3B7DE12D58B48B3E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-cusp-image-stability-route-680.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-cusp-image-stability-route-680.json",
+      "sha256": "2ACD5EC2C462157644AAB0F2F0FFEBD5AFCCCD78F58D2F98B8B8314AA6877AAD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-elliptic-divisibility-route-677.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-elliptic-divisibility-route-677.json",
+      "sha256": "B02B4D1B13EDF5804D8243E1589A054233A94DD781A2384B0192F422A0567838"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-laurent-independence-preparer-failure-674.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-laurent-independence-preparer-failure-674.json",
+      "sha256": "979B8F468CC4037334792C46996532B6F05E0A35437E695E5437E9683C9AED2D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-laurent-independence-route-674.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-laurent-independence-route-674.json",
+      "sha256": "393A858B56C11CA87DB2D07A0D187C3DF14538F47025466B14412810CC1E9E0E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-twist-modular-algebra-route-676.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-twist-modular-algebra-route-676.json",
+      "sha256": "9AFA22D8BBA9AA27908FB63C131FD6300DE949553D19F8F17080A7495BF2CF4C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cyclotomic-cusp-span-route-684.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/gamma-one-cyclotomic-cusp-span-route-684.json",
+      "sha256": "ADE994A26B8AB78A78A4CFEE3C894F9B52D25DAE96FEA75C275F30C1ACB21D5F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\make_cusp_fricke_rational_span_audit_683.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/make_cusp_fricke_rational_span_audit_683.py",
+      "sha256": "8F9DEBD8A710BB3FC5532245B5E09BC560DC022A82AE8E132254A58E95B01545"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\make_fricke_cusp_image_stability_audit_680.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/make_fricke_cusp_image_stability_audit_680.py",
+      "sha256": "F5B34066A6F28DF398FB3B08E6815BCD7357A2AD3F19AC18E50F7427A65E4294"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\make_fricke_elliptic_divisibility_audit_677.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/make_fricke_elliptic_divisibility_audit_677.py",
+      "sha256": "A7237235E30AC485A6184A621A1C6CE98282F9C3836CC7CDA13C3A157A2CAA5D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\make_fricke_twist_modular_audit_676.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/make_fricke_twist_modular_audit_676.py",
+      "sha256": "14271677B4DA7996D1C8AD20CFFB7F6198C7525B2ACDA010CEA50841E73BDDA9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\make_gamma_one_cyclotomic_cusp_span_audit_684.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/make_gamma_one_cyclotomic_cusp_span_audit_684.py",
+      "sha256": "79ACF99B1EF15C2AFE93BCEC16BD57D694BEF07264B4C5D19717E1E72F183ACF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\make_gamma_one_cyclotomic_cusp_span_audit_684b.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/make_gamma_one_cyclotomic_cusp_span_audit_684b.py",
+      "sha256": "8BFE78A85ECD579610B5EA70063733CD97660B8A1CE7FD2A68ED75BEB627528F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\make_gamma_one_cyclotomic_cusp_span_audit_684c.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/make_gamma_one_cyclotomic_cusp_span_audit_684c.py",
+      "sha256": "E8A78916D3BB2AE93BBDAA70B4139E0FB7E9A2D63BAE54F180D69DDEC65FDAAD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules683.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/modules683.json",
+      "sha256": "2B6C30A1FCEB368564A22C56CEC287C616F2E311B37CEAEEE06A70AD43C932B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_algebraically_closed_fixed_coefficients_681.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_algebraically_closed_fixed_coefficients_681.py",
+      "sha256": "EABB45D62482FE3A3984FA32BEA5BAC75DF9821F230DE4D59BB85D99E5FBC57E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_algebraically_closed_fixed_field_681b.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_algebraically_closed_fixed_field_681b.py",
+      "sha256": "CE44FDE4C555BE567A8E909D565173103F8D0471C589A140EA0FE1471FF31F20"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_cusp_fricke_rational_span_audit_683.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_cusp_fricke_rational_span_audit_683.py",
+      "sha256": "15F6C15859E7829356AB18AE4FC51FA3BCFBCCBE8571713D1EF86009ACD79DBA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_cusp_fricke_rational_span_audit_683b.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_cusp_fricke_rational_span_audit_683b.py",
+      "sha256": "ADBAD883C70EE5B630C583A7C9EF941FCA294CDFCFA1BA4146848BA9D7546B44"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_cusp_weight_criterion_679.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_cusp_weight_criterion_679.py",
+      "sha256": "3AEE67CD032DFE8DB7110953445CEDA5C05B05BEC1BDED38642C35D8FE129600"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_cusp_weight_division_679.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_cusp_weight_division_679.py",
+      "sha256": "71D7CA739B9869970D0986166AE0CD908446359729337C75F811D69DD248EF4D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_cusp_weight_transformation_679.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_cusp_weight_transformation_679.py",
+      "sha256": "D22489E89F4DD6EC8352BE75C95D73E92825AD710279690C17E9FD3CC4A8CF6E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_cusp_weight_transformation_679b.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_cusp_weight_transformation_679b.py",
+      "sha256": "D2D38D6639D61D442AA9042660609B60AB85B91EA85F67D0566390B3321FC86E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_coefficient_twist_audit_675.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_fricke_coefficient_twist_audit_675.py",
+      "sha256": "C9DDEA139BA47A9713FA152FE49BD69187F484802DD181240B6615E130150EDA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_cusp_image_stability_audit_680.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_fricke_cusp_image_stability_audit_680.py",
+      "sha256": "FD2AFE0495BA8E0167673CE01C5F68827021CD8B46DFA8972A2DE657321863E0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_elliptic_divisibility_audit_677.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_fricke_elliptic_divisibility_audit_677.py",
+      "sha256": "EF9582E8F1D9058036DE5D289465319CB220CA292A456C2BFC782AE9DF515807"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_laurent_independence_audit_674b.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_fricke_laurent_independence_audit_674b.py",
+      "sha256": "64519FA5E19144AA6A236BD995D626B1A38868AFEFE75851D369CCF9BB2DD322"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_twist_modular_algebra_audit_676.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_fricke_twist_modular_algebra_audit_676.py",
+      "sha256": "F63F258490CA0F143EF643587D82D4C9700CDB63F3A14005BD5234DFF237BB4E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_cyclotomic_cusp_span_audit_684.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_gamma_one_cyclotomic_cusp_span_audit_684.py",
+      "sha256": "9AFE29A2A3CFF74B3DC43CC177ADD8C28E5F8AD64C01D52E91561D77D6D99D96"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_twist_stable_subspace_descent_682.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_twist_stable_subspace_descent_682.py",
+      "sha256": "D3B45FAC38B413D433308B3463D2AD4C5E261C3EFEA8EC6C1C0CF086437139F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record683.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/record683.py",
+      "sha256": "FC1D9AE9CCD4DFDC1A118F4ED39388F12D6A040512E2B6DC1382E63578D2B813"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_cusp_fricke_rational_span_683.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/record_cusp_fricke_rational_span_683.py",
+      "sha256": "25E34E336D1C0728315DDA96C4C1FE691AB30D82B4765B2B8D18E8EA40CF9CD8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_fricke_coefficient_twist_675.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/record_fricke_coefficient_twist_675.py",
+      "sha256": "88E7F1B25BDB281E2404DCFF30D133488201EB24E5A1AB0B223AD7F6DC0C0D7A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_fricke_cusp_image_stability_680.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/record_fricke_cusp_image_stability_680.py",
+      "sha256": "50E8C1EFC67E086A2F5B15939EBD2B4AA0E86701A659E47DED32641EDAD44889"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_fricke_elliptic_divisibility_677.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/record_fricke_elliptic_divisibility_677.py",
+      "sha256": "0F49C343278FAA7D0B237FBE496574D83682803890498F4157A18C6FBF73A344"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_fricke_laurent_independence_674.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/record_fricke_laurent_independence_674.py",
+      "sha256": "5C10C8B7EB4D8778F09E5481C462EF50EA02464EB23BD714388ED4134530C9F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_fricke_twist_modular_algebra_676.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/record_fricke_twist_modular_algebra_676.py",
+      "sha256": "4DA1CD0DA488B2AECB65F2D72706CE62416F25FE154934588BAE37CE2EDB1EB0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_cyclotomic_cusp_span_684.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/record_gamma_one_cyclotomic_cusp_span_684.py",
+      "sha256": "FB34A6978B15D78A0E403FB6D466868B5535F8E5B98C91E4E3AEDEC5BCB211AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register683.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/register683.py",
+      "sha256": "746A4D3049DAE8CFB62294B4B0EF0A31A4560E6B66F8AA2D01CB7CA3A6C424F9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations683.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/registrations683.json",
+      "sha256": "627B06472A31308B0490DCB35603B859868ACAE4967A88BDFF08AB62EF8EBEE0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section683.txt",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/section683.txt",
+      "sha256": "663726C7613D740E226E915D86C3141121479CC03BB177A5C27C07859E64FE96"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-cusp-fricke-rational-span-7-audit-config.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-cusp-fricke-rational-span-7-audit-config.json",
+      "sha256": "BC951FE650B73D8BD08141CB8A6E4D843820882026D889C3F23566B232876761"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-cusp-fricke-rational-span-7-scratch-receipt.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-cusp-fricke-rational-span-7-scratch-receipt.json",
+      "sha256": "C33D8F5A8EC778BE9C5B8C632471A409C1131CD8F862DFA82821E82F29B6C38D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-coefficient-twist-8-audit-config.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-coefficient-twist-8-audit-config.json",
+      "sha256": "452BB2E1D6056EF5DA6278FEB443871B91170147B8438425967F603192F5B1F9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-coefficient-twist-8-scratch-receipt.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-coefficient-twist-8-scratch-receipt.json",
+      "sha256": "7708C801404E71F1B6D3122C282F047E9F2F2C29358279784714CD2A0179C17D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-cusp-image-stability-9-audit-config.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-cusp-image-stability-9-audit-config.json",
+      "sha256": "1DEA10A5F1FE003D13F409E8BCB3BF8A7108C2634B54438D6087B7BBFB2DA068"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-cusp-image-stability-9-scratch-receipt.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-cusp-image-stability-9-scratch-receipt.json",
+      "sha256": "351ADFCA4A79047C4170CF74B8274DCACA9A491F5C662D86BBD11EA2FD2B7DB9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-elliptic-divisibility-5-audit-config.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-elliptic-divisibility-5-audit-config.json",
+      "sha256": "6C32B63A43A1A7182BE1E63BCE095A281D38F76CEA8965D98EB1D7FB58E22E92"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-elliptic-divisibility-5-scratch-receipt.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-elliptic-divisibility-5-scratch-receipt.json",
+      "sha256": "30EAE535CE426E260D6256DC5E15D0DAFB857C8F173565901F831E9CD623BF75"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-laurent-independence-2-audit-config.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-laurent-independence-2-audit-config.json",
+      "sha256": "9E8F2CC3B2F7C49FE3882B4CEB1FABFCEE393CCFAC4D96DA46875189492A5FC6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-laurent-independence-2-scratch-receipt.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-laurent-independence-2-scratch-receipt.json",
+      "sha256": "975088C6FE20D9B83CA6988DD3A27862965DE879F6EF6CC0AFD7E78744040612"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-twist-modular-algebra-5-audit-config.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-twist-modular-algebra-5-audit-config.json",
+      "sha256": "A30DC7CD180A2616F1AAE720AEC24ABF0DCD0A7097C21A85A271016AA35E7BF9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-twist-modular-algebra-5-scratch-receipt.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-twist-modular-algebra-5-scratch-receipt.json",
+      "sha256": "488E206F0AFD6EBF47AD5F00B232717C77BCD37259E12B4F47BDDDFEC0852B80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-cusp-span-3-audit-config.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-gamma-one-cyclotomic-cusp-span-3-audit-config.json",
+      "sha256": "75100F74B7BAEDB3F37ABEC2A87442BE5CF75CC536C96CB723B7BC43B8A7F191"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-cusp-span-3-scratch-receipt.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-gamma-one-cyclotomic-cusp-span-3-scratch-receipt.json",
+      "sha256": "329D1D60D5FC63A8737A0C944BFDEF1F4C0B50D1C7775F4C26C9BDD994AAF80E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status683.txt",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/status683.txt",
+      "sha256": "5DC37B0B964954D1D3F0FB168858FA0DDE106EE83319D1CFB1FFCE8F73C03600"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-scalar-basis-api-failed-675a\\SourceFrickeScalarExtensionBasis.exit",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-scalar-basis-api-failed-675a/SourceFrickeScalarExtensionBasis.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-scalar-basis-api-failed-675a\\SourceFrickeScalarExtensionBasis.lean",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-scalar-basis-api-failed-675a/SourceFrickeScalarExtensionBasis.lean.txt",
+      "sha256": "FA9DFCD4C0FE0A5196E9BD6762AE66EE4B190485F1C0C473CE6F597FFE1CD6EF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-scalar-basis-api-failed-675a\\SourceFrickeScalarExtensionBasis.log",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-scalar-basis-api-failed-675a/SourceFrickeScalarExtensionBasis.log",
+      "sha256": "2973D6C1BE591F12239E02226444C713E3C83F13E14ADECEC3382A0E6B5B3D5A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-scalar-basis-instance-failed-675b\\SourceFrickeScalarExtensionBasis.exit",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-scalar-basis-instance-failed-675b/SourceFrickeScalarExtensionBasis.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-scalar-basis-instance-failed-675b\\SourceFrickeScalarExtensionBasis.lean",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-scalar-basis-instance-failed-675b/SourceFrickeScalarExtensionBasis.lean.txt",
+      "sha256": "1CBA4BDD44BC83CC3CB8EE98D9844F683BD5EC334821C43A596CE63ECED1788D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-scalar-basis-instance-failed-675b\\SourceFrickeScalarExtensionBasis.log",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-scalar-basis-instance-failed-675b/SourceFrickeScalarExtensionBasis.log",
+      "sha256": "6100660B461F1BE16DE77F4A4EDA7CF8E14D99607F42800FDE3AE30A4A8BB0B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-elliptic-power-route-superseded-677a\\SourceFrickeHolomorphicDivisionInvariance.exit",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-elliptic-power-route-superseded-677a/SourceFrickeHolomorphicDivisionInvariance.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-elliptic-power-route-superseded-677a\\SourceFrickeHolomorphicDivisionInvariance.lean.txt",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-elliptic-power-route-superseded-677a/SourceFrickeHolomorphicDivisionInvariance.lean.txt",
+      "sha256": "0276DF6EC4A1B5047C2686051F80D5CDC88B9BD26214B7FAC15D2E6304C0898C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-elliptic-power-route-superseded-677a\\SourceFrickeHolomorphicDivisionInvariance.log",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-elliptic-power-route-superseded-677a/SourceFrickeHolomorphicDivisionInvariance.log",
+      "sha256": "D0A23E808602BB6E95024E71A900D8CCA729AA112782CECF96F0AD95F96A7303"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cusp-weight-transformation-preparer-failed-679a\\prepare_cusp_weight_transformation_679.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/cusp-weight-transformation-preparer-failed-679a/prepare_cusp_weight_transformation_679.py",
+      "sha256": "D22489E89F4DD6EC8352BE75C95D73E92825AD710279690C17E9FD3CC4A8CF6E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cusp-weight-transformation-preparer-failed-679a\\SourceCuspWeightTransformation.exit",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/cusp-weight-transformation-preparer-failed-679a/SourceCuspWeightTransformation.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cusp-weight-transformation-preparer-failed-679a\\SourceCuspWeightTransformation.log",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/cusp-weight-transformation-preparer-failed-679a/SourceCuspWeightTransformation.log",
+      "sha256": "A4CDAE117D3A2DA3E254A7E5E92CC8F9D23CFD8B75A99DBF3BEAE07BF071E2AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cusp-fricke-span-api-failed-683a\\prepare_cusp_fricke_rational_span_audit_683.py",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/cusp-fricke-span-api-failed-683a/prepare_cusp_fricke_rational_span_audit_683.py",
+      "sha256": "15F6C15859E7829356AB18AE4FC51FA3BCFBCCBE8571713D1EF86009ACD79DBA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cusp-fricke-span-api-failed-683a\\SourceCuspFrickeRationalSpan.exit",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/cusp-fricke-span-api-failed-683a/SourceCuspFrickeRationalSpan.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cusp-fricke-span-api-failed-683a\\SourceCuspFrickeRationalSpan.lean.txt",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/cusp-fricke-span-api-failed-683a/SourceCuspFrickeRationalSpan.lean.txt",
+      "sha256": "1E832F2486D8F7E2F74445589C832158DB8711D1F824597FE46BEEDD222E36CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\cusp-fricke-span-api-failed-683a\\SourceCuspFrickeRationalSpan.log",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/cusp-fricke-span-api-failed-683a/SourceCuspFrickeRationalSpan.log",
+      "sha256": "48D273D33E5299C7E3313271ED71907908BAA94FB1F64B5EAFB295F3E475271D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\eisenstein-factor-laurent-diagnostic-684a\\SourceEisensteinFactorCyclotomicLaurent.exit",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/eisenstein-factor-laurent-diagnostic-684a/SourceEisensteinFactorCyclotomicLaurent.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\eisenstein-factor-laurent-diagnostic-684a\\SourceEisensteinFactorCyclotomicLaurent.lean.txt",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/eisenstein-factor-laurent-diagnostic-684a/SourceEisensteinFactorCyclotomicLaurent.lean.txt",
+      "sha256": "11C92EEB55365698599D4220F9A509AC66802BC8DE3A37EBCC82D4D7D9CECCB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\eisenstein-factor-laurent-diagnostic-684a\\SourceEisensteinFactorCyclotomicLaurent.log",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/eisenstein-factor-laurent-diagnostic-684a/SourceEisensteinFactorCyclotomicLaurent.log",
+      "sha256": "59829270A3F7FA895541D6CAD8E677D1266B0A9CD5986DAA1156CAB1A0D89CA2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-cusp-descent-inputs-reuse-678\\P2M\\Sol\\S_CuspForm_exists_mul_E4_pow_mul_E6_pow_eq_iff.lean.txt",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-cusp-descent-inputs-reuse-678/P2M/Sol/S_CuspForm_exists_mul_E4_pow_mul_E6_pow_eq_iff.lean.txt",
+      "sha256": "D75D30CFCB518F77378206B0A64AE5ECA515647AE0F3E2C3A33E011DD8403B66"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-cusp-descent-inputs-reuse-678\\P2M\\Sol\\S_IsAlgClosed_exists_algEquiv_apply_ne_of_notMem_range.lean.txt",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-cusp-descent-inputs-reuse-678/P2M/Sol/S_IsAlgClosed_exists_algEquiv_apply_ne_of_notMem_range.lean.txt",
+      "sha256": "FB7ADC6D233683C1F2C115A31609F6E12E878269A015CEC8889BFDB3DCAED8D1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-cusp-descent-inputs-reuse-678\\P2M\\Sol\\S_WLight_span_inter_rational_of_twist_stable.lean.txt",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-cusp-descent-inputs-reuse-678/P2M/Sol/S_WLight_span_inter_rational_of_twist_stable.lean.txt",
+      "sha256": "FF7F35271C3F925E0FB977264C5B4CCB13E0725B49BFC8B1CB29FE6C8082621E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-cusp-descent-inputs-reuse-678\\snapshots.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-cusp-descent-inputs-reuse-678/snapshots.json",
+      "sha256": "7608FA5F88CF579A4052892654C8B12BCABB910B3B241331DB88E32DD8CB1117"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-laurent-independence-2-reuse-review-20261026.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-laurent-independence-2-reuse-review-20261026.json",
+      "sha256": "DDF3FEE50F699BA0528AF6C0A4D40BC97FD53721C6A2D8EB561E0BE81975A326"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-coefficient-twist-8-reuse-review-20261026.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-coefficient-twist-8-reuse-review-20261026.json",
+      "sha256": "49C0E7CF555197E26864FEF62251FD3224DD8227C99A14374AD00591952E7D28"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-twist-modular-algebra-5-reuse-review-20261026.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-twist-modular-algebra-5-reuse-review-20261026.json",
+      "sha256": "30419FBEAB2AE105E14E3701BB0B53D711AD1CE76CE3B8D38FA45E8E0C341912"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-elliptic-divisibility-5-reuse-review-20261026.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-elliptic-divisibility-5-reuse-review-20261026.json",
+      "sha256": "D76266BCA71E291155642BFF0A6A9FDCDC902B159975858EA4972464913A95C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-cusp-image-stability-9-reuse-review-20261026.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-cusp-image-stability-9-reuse-review-20261026.json",
+      "sha256": "F45CC8AAFC190F3D6EAC9F61B16CDF07956D9CC66E11C0EB7CD025C21BB50F95"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-cusp-fricke-rational-span-7-reuse-review-20261026.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-cusp-fricke-rational-span-7-reuse-review-20261026.json",
+      "sha256": "D3BD9A358ACF2126C55AEF35CD033435326CCE2351D0B76D7DFD95FA7C293FE8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-cusp-span-3-reuse-review-20261026.json",
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-gamma-one-cyclotomic-cusp-span-3-reuse-review-20261026.json",
+      "sha256": "A84C98EF2F3309399A437CAC194DED644EA0F209362176CF53A9BCEF0BE1B879"
+    }
+  ]
+}

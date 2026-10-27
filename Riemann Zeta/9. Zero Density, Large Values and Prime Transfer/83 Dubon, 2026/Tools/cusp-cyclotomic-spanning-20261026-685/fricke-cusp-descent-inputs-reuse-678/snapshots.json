@@ -1,0 +1,35 @@
+{
+  "fetchedUTC": "2026-10-26T20:20:10.837842+00:00",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_CuspForm_exists_mul_E4_pow_mul_E6_pow_eq_iff.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CuspForm_exists_mul_E4_pow_mul_E6_pow_eq_iff.lean",
+      "snapshot": "P2M\\Sol\\S_CuspForm_exists_mul_E4_pow_mul_E6_pow_eq_iff.lean.txt",
+      "gitBlob": "8011ecca3ee41c61de2c67095e0279cb2ac1dde8",
+      "sha256": "D75D30CFCB518F77378206B0A64AE5ECA515647AE0F3E2C3A33E011DD8403B66",
+      "bytes": 20774
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_WLight_span_inter_rational_of_twist_stable.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_WLight_span_inter_rational_of_twist_stable.lean",
+      "snapshot": "P2M\\Sol\\S_WLight_span_inter_rational_of_twist_stable.lean.txt",
+      "gitBlob": "a4db9d22c2aecd28e41df37104ffc174f127ad47",
+      "sha256": "FF7F35271C3F925E0FB977264C5B4CCB13E0725B49BFC8B1CB29FE6C8082621E",
+      "bytes": 21981
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_IsAlgClosed_exists_algEquiv_apply_ne_of_notMem_range.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_IsAlgClosed_exists_algEquiv_apply_ne_of_notMem_range.lean",
+      "snapshot": "P2M\\Sol\\S_IsAlgClosed_exists_algEquiv_apply_ne_of_notMem_range.lean.txt",
+      "gitBlob": "392d6c417491478bac4a965fa35065bf77ce40e1",
+      "sha256": "FB7ADC6D233683C1F2C115A31609F6E12E878269A015CEC8889BFDB3DCAED8D1",
+      "bytes": 7590
+    }
+  ]
+}

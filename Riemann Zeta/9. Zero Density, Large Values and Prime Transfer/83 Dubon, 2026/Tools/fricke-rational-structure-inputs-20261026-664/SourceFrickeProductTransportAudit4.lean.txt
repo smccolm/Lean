@@ -1,0 +1,66 @@
+import SourceQExpansionPeriodWidth
+import SourceEisensteinRationalSeries
+import SourceFrickeProductExpansion
+import SourceFrickeProductCyclotomic
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFricke.qParam_one_eq_pow
+#print axioms Dubon2026.SourceFricke.qExpansion_coeff_width
+#print axioms Dubon2026.SourceFricke.eisensteinQSeries_map
+#print axioms Dubon2026.SourceFricke.periodic_E4E6
+#print axioms Dubon2026.SourceFricke.e4e6QSeries_map
+#print axioms Dubon2026.SourceFricke.analyticAt_cuspFunction_E4E6
+#print axioms Dubon2026.SourceFricke.periodic_frickeH
+#print axioms Dubon2026.SourceFricke.mdifferentiable_frickeH
+#print axioms Dubon2026.SourceFricke.isBoundedAtImInfty_frickeH
+#print axioms Dubon2026.SourceFricke.qExpansion_frickeH
+#print axioms Dubon2026.SourceFricke.hasSum_qExpansion_frickeH
+#print axioms Dubon2026.SourceFricke.e4e6QSeries_map_ringHom
+#print axioms Dubon2026.SourceFricke.frickeHQSeriesK_map_inclusion
+#print axioms Dubon2026.SourceFricke.frickeHQSeriesK_map_cyclotomic
+#print axioms Dubon2026.SourceFricke.qExpansion_frickeH_coeff_mem_kN
+#print axioms Dubon2026.SourceFricke.qExpansion_frickeH_conj
+#print axioms Dubon2026.SourceFricke.eisensteinQSeries
+#print axioms Dubon2026.SourceFricke.e4e6QSeries
+#print axioms Dubon2026.SourceFricke.frickeH
+#print axioms Dubon2026.SourceFricke.frickeHQSeriesK
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceQExpansionPeriodWidth, `SourceEisensteinRationalSeries, `SourceFrickeProductExpansion, `SourceFrickeProductCyclotomic]
+  let theorems : Array Name := #[`Dubon2026.SourceFricke.qParam_one_eq_pow, `Dubon2026.SourceFricke.qExpansion_coeff_width, `Dubon2026.SourceFricke.eisensteinQSeries_map, `Dubon2026.SourceFricke.periodic_E4E6, `Dubon2026.SourceFricke.e4e6QSeries_map, `Dubon2026.SourceFricke.analyticAt_cuspFunction_E4E6, `Dubon2026.SourceFricke.periodic_frickeH, `Dubon2026.SourceFricke.mdifferentiable_frickeH, `Dubon2026.SourceFricke.isBoundedAtImInfty_frickeH, `Dubon2026.SourceFricke.qExpansion_frickeH, `Dubon2026.SourceFricke.hasSum_qExpansion_frickeH, `Dubon2026.SourceFricke.e4e6QSeries_map_ringHom, `Dubon2026.SourceFricke.frickeHQSeriesK_map_inclusion, `Dubon2026.SourceFricke.frickeHQSeriesK_map_cyclotomic, `Dubon2026.SourceFricke.qExpansion_frickeH_coeff_mem_kN, `Dubon2026.SourceFricke.qExpansion_frickeH_conj]
+  let constructions : Array Name := #[`Dubon2026.SourceFricke.eisensteinQSeries, `Dubon2026.SourceFricke.e4e6QSeries, `Dubon2026.SourceFricke.frickeH, `Dubon2026.SourceFricke.frickeHQSeriesK]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original Primitive Tate Restriction postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original Primitive Tate Restriction theorems discovered"
+  logInfo m!"SOURCE FRICKE PRODUCT TRANSPORT AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceQExpansionPeriodWidth
+#lint in SourceEisensteinRationalSeries
+#lint in SourceFrickeProductExpansion
+#lint in SourceFrickeProductCyclotomic

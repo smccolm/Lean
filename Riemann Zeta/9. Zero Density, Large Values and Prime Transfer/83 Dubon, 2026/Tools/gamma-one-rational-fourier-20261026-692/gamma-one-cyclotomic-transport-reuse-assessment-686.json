@@ -1,0 +1,72 @@
+{
+  "recordedUTC": "2026-10-26T21:30:23.384630+00:00",
+  "source": {
+    "fetchedUTC": "2026-10-26T21:10:45.531731+00:00",
+    "files": [
+      {
+        "repo": "anthropics/fermats-last-theorem",
+        "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+        "path": "P2M/Sol/S_CuspForm_exists_gamma1_frickeRational_sigmaTransport.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CuspForm_exists_gamma1_frickeRational_sigmaTransport.lean",
+        "snapshot": "P2M\\Sol\\S_CuspForm_exists_gamma1_frickeRational_sigmaTransport.lean.txt",
+        "gitBlob": "77cab00b213459966047ec1ea0c912cb4a96a40f",
+        "sha256": "91908DF3C06FBE1A59F308B96F9FF7082AD2965A4D650FB83A628940F4F64A82",
+        "bytes": 41517
+      },
+      {
+        "repo": "anthropics/fermats-last-theorem",
+        "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+        "path": "P2M/Sol/S_ModularFunction_exists_mdifferentiable_sigmaTransport_of_frickeQuotient.lean",
+        "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularFunction_exists_mdifferentiable_sigmaTransport_of_frickeQuotient.lean",
+        "snapshot": "P2M\\Sol\\S_ModularFunction_exists_mdifferentiable_sigmaTransport_of_frickeQuotient.lean.txt",
+        "gitBlob": "e97833fa87ef5688ac9d6691cab17ba1b5b7b782",
+        "sha256": "31F0D88DC16CD6FAFE2257FBF59CF1B1124F61BCC4865F779E09261C7393B711",
+        "bytes": 37750
+      }
+    ]
+  },
+  "dependency": "DUB-17/18 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 character realization -> Picard/H1 and diamond comparison -> original cusp differential realization -> rational Fourier structure -> nontrivial cyclotomic coefficient conjugation.",
+  "reviewedSubsections": [
+    "Actual holomorphic quotient sigma-transport exists_transport and its monic relation reconstruction",
+    "Gamma1 and full modular diagonal conjugation lifting",
+    "The upstream actual coefficient-conjugation consumer and its dependence on cusp-image transport"
+  ],
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeProductCyclotomic.lean",
+      "sha256": "1C011979D2B6ACC97911C5A7219309BEE605C4D4B2ECC3F1022212D33A52C064"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLaurentGeneratorIntegrality.lean",
+      "sha256": "3052B656C6AB52A62AFFA7E0E24DC0B81FF909DED8903C50CC190C5D08C3070C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeIntegralHolomorphicRepresentative.lean",
+      "sha256": "F55C22030E5B4A195EA0C47E055B2F50495EED9E7AA3BD4641B01EB58620CB12"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePrincipalInvariance.lean",
+      "sha256": "B50C51CB7FC773F19BAE5C7C75C9151F39F57F3EC76CE0AED0740D6C7D8638E2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightCriterion.lean",
+      "sha256": "FBB850247B20A4B19CB355A3F3CB20AFC1288C5DE13698519245F2D799C3550F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeEllipticDivisibilityTwist.lean",
+      "sha256": "8DE916F1C6B226265970C1B8BCE99B111EB36701C7EDE01FF9815B39155692E8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SL2Reduction.lean",
+      "sha256": "9DD40DDE2439AAB39FDD9F96BACE4F866D547D14C31A1E86B2567C67598EF226"
+    }
+  ],
+  "assessment": "The existing Laurent integral representative theorem subsumes the external cleared-polynomial holomorphic reconstruction. Prove the literal cyclotomic generator permutation, field stability and monic-integrality preservation, then consume that existing representative theorem. The actual modular matrix lift already exists locally as SL2Reduction.SL2_reduction_surjective; reuse it for all cusp covariance. Native/local analytic germ uniqueness and discriminant order transport replace external rational-at-infinity and recursive coefficient machinery. The coefficient conjugation must still preserve the actual source cusp-image conditions before rational descent can be claimed.",
+  "sourceReviewOnly": true,
+  "externalProjectBuilt": false,
+  "externalDependencyClosureCertified": false,
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "remaining": "Cyclotomic Fourier spanning is proved in scratch and is being assembled; rational Fourier spanning over Q, bounded denominators and actual differential realization remain. All 20 gates unchanged; 16/20; DUB-17--20 OPEN."
+}

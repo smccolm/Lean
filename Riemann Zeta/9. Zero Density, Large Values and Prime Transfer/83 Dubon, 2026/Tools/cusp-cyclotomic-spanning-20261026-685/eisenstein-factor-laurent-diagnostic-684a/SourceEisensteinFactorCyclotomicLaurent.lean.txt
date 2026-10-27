@@ -1,0 +1,71 @@
+import SourceFrickeCyclotomicLaurent
+import SourceEisensteinRationalSeries
+import SourceCuspWeightFactors
+
+/-! DUB-17/18 -> actual Gamma1 differential realization -> rational cusp-form
+spanning -> Fourier extraction. The original E4/E6 weight factor has a
+nonzero Laurent series over the original cyclotomic field. Reuse the proved
+rational Eisenstein expansions and width substitution, without introducing
+a separate recursive division theory for Fourier coefficients. -/
+namespace Dubon2026.SourceFricke
+noncomputable section
+open UpperHalfPlane ModularForm SlashInvariantFormClass ModularFormClass
+open SourceFunctionField SourceFunctionField.CuspWeightCriterion
+open scoped Manifold ModularForm MatrixGroups
+
+/-- The rational Eisenstein expansion, viewed at width N over the cyclotomic field. -/
+def eisensteinLaurentK (N k : ℕ) [NeZero N] : LaurentSeries (kN N) :=
+  qExpand (kN N) N ((eisensteinQSeries k).map (algebraMap ℚ (kN N)))
+
+theorem coeffMap_eisensteinLaurentK (N : ℕ) [NeZero N] {k : ℕ}
+    (hk : 3 ≤ k) (heven : Even k) :
+    coeffMap (algebraMap (kN N) ℂ) (eisensteinLaurentK N k) =
+      (qExpansion N (E hk : ℍ → ℂ) : LaurentSeries ℂ) := by
+  rw [eisensteinLaurentK, coeffMap_qExpand, coeffMap_ofPowerSeries]
+  have he : ((eisensteinQSeries k).map (algebraMap ℚ (kN N))).map
+      (algebraMap (kN N) ℂ) = (eisensteinQSeries k).map (algebraMap ℚ ℂ) := by
+    ext n
+    simp only [PowerSeries.coeff_map]
+    rfl
+  rw [he, eisensteinQSeries_map hk heven]
+  exact (qExpansion_laurent_width _ N
+    (periodic_comp_ofComplex (E hk) one_mem_strictPeriods_SL)
+    (E hk).holo' (ModularFormClass.bdd_at_infty (E hk))).symm
+
+theorem periodic_eisensteinFactor (a b : ℕ) (N : ℕ) :
+    Function.Periodic (eisensteinFactor a b ∘ ofComplex) N := by
+  have h4 := (periodic_comp_ofComplex E₄ one_mem_strictPeriods_SL).nat_mul N
+  have h6 := (periodic_comp_ofComplex E₆ one_mem_strictPeriods_SL).nat_mul N
+  intro z
+  have he4 := h4 z
+  have he6 := h6 z
+  simp only [Function.comp_apply, Complex.ofReal_one, mul_one] at he4 he6
+  simp only [Function.comp_apply, eisensteinFactor, Complex.ofReal_natCast, he4, he6]
+
+theorem represents_eisensteinFactorLaurentK (N : ℕ) [NeZero N] (a b : ℕ) :
+    CuspTaylor.Represents
+      (coeffMap (algebraMap (kN N) ℂ)
+        (eisensteinLaurentK N 4 ^ a * eisensteinLaurentK N 6 ^ b))
+      (cuspFunction N (eisensteinFactor a b)) := by
+  have hN : (0 : ℝ) < N := by exact_mod_cast NeZero.pos N
+  have h4 := CuspTaylor.represents_qExpansion hN
+    (by simpa using (periodic_comp_ofComplex E₄ one_mem_strictPeriods_SL).nat_mul N)
+    E₄.holo' (ModularFormClass.bdd_at_infty E₄)
+  have h6 := CuspTaylor.represents_qExpansion hN
+    (by simpa using (periodic_comp_ofComplex E₆ one_mem_strictPeriods_SL).nat_mul N)
+    E₆.holo' (ModularFormClass.bdd_at_infty E₆)
+  rw [map_mul, map_pow, map_pow,
+    coeffMap_eisensteinLaurentK N (by norm_num) (by decide),
+    coeffMap_eisensteinLaurentK N (by norm_num) (by decide)]
+  exact (h4.cusp_pow a).cusp_mul (h6.cusp_pow b)
+
+theorem eisensteinFactorLaurentK_ne_zero (N : ℕ) [NeZero N] (a b : ℕ) :
+    coeffMap (algebraMap (kN N) ℂ)
+      (eisensteinLaurentK N 4 ^ a * eisensteinLaurentK N 6 ^ b) ≠ 0 := by
+  obtain ⟨τ, hτ⟩ := exists_eisensteinFactor_ne_zero a b
+  exact (represents_eisensteinFactorLaurentK N a b).ne_zero_of_function_ne_zero
+    (by exact_mod_cast NeZero.pos N) (mdifferentiable_eisensteinFactor a b)
+    (periodic_eisensteinFactor a b N) (fun hz => hτ (congrFun hz τ))
+
+end
+end Dubon2026.SourceFricke

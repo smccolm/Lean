@@ -1,0 +1,72 @@
+{
+  "modules": [
+    "SourceFrickeJTranscendence"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFricke.analytic_j_aeval_injective",
+    "Dubon2026.SourceFricke.transcendental_analytic_j",
+    "Dubon2026.SourceFricke.transcendental_jA",
+    "Dubon2026.SourceFricke.transcendental_jK"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFricke.analytic_j_aeval_injective",
+    "Dubon2026.SourceFricke.transcendental_analytic_j",
+    "Dubon2026.SourceFricke.transcendental_jA",
+    "Dubon2026.SourceFricke.transcendental_jK"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFricke.analytic_j_aeval_injective",
+    "Dubon2026.SourceFricke.transcendental_analytic_j",
+    "Dubon2026.SourceFricke.transcendental_jA",
+    "Dubon2026.SourceFricke.transcendental_jK",
+    "Dubon2026.SourceFricke.aeval_j_apply",
+    "Dubon2026.SourceFunctionField.JMultiplicity.jf_surjective",
+    "Polynomial.funext",
+    "transcendental_algebraMap_iff"
+  ],
+  "roots": [
+    "Dubon2026.SourceFricke.transcendental_jK"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceEisensteinRationalSeries",
+    "SourceFrickeCuspInputs",
+    "SourceFrickeCyclotomicField",
+    "SourceFrickeFaithfulness",
+    "SourceFrickeFixedFieldJV3",
+    "SourceFrickeFixedFractionV3",
+    "SourceFrickeFunctionTransformationV2",
+    "SourceFrickeHolomorphicAlgebraV3",
+    "SourceFrickeHolomorphy",
+    "SourceFrickeJTranscendence",
+    "SourceFrickeLevelAlgebraV3",
+    "SourceFrickeLevelFieldV3",
+    "SourceFrickeLevelGroupV3",
+    "SourceFrickeModularLatticeV2",
+    "SourceFrickePeriodHomothetyV2",
+    "SourceFrickePoleBoundedV3",
+    "SourceFrickePrefactor",
+    "SourceFrickeSeparation",
+    "SourceFrickeTorsionLattice",
+    "SourceFrickeTorsionTransformationV2",
+    "SourceInvariantAnalyticJPolynomial",
+    "SourceLaurentAnalyticPolynomial",
+    "SourceLevelOneAnalyticJPolynomial",
+    "SourceLipschitzTwo",
+    "SourceLipschitzTwoRealBoundary",
+    "SourcePeriodWeierstrassSeparation",
+    "SourceQExpansionPeriodWidth",
+    "SourceWeierstrassLatticeRows",
+    "SourceWeierstrassNormalizedTorsion",
+    "SourceWeierstrassRowSeries",
+    "SourceWeierstrassTorsionCuspBound",
+    "SourceWeierstrassTorsionExpansion",
+    "SourceWeierstrassTorsionFourierCoefficients",
+    "SourceWeierstrassTorsionFourierExpansion",
+    "SourceWeierstrassTorsionFourierSum",
+    "SourceWeierstrassTorsionHolomorphy",
+    "SourceWeierstrassTorsionTail"
+  ],
+  "separateReason": "All public mathematical declarations are required in actual proof values."
+}

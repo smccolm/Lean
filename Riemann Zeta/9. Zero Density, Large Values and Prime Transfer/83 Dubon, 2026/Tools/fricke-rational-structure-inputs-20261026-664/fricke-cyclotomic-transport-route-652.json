@@ -1,0 +1,10 @@
+{
+  "chain": "DUB-17/18 -> higher continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 characters -> Picard/H1 and diamond comparison -> differential realization -> rational Fourier basis -> cyclotomic conjugation of Fricke generators.",
+  "selectedRoute": "Use the already proved finite Fourier coefficient model. Native ring-hom preservation of powers, inverses and finite sums transports coefficients directly; avoid an assumed analytic coefficient-conjugation operation. The actual analytic q-expansion is then identified using scope651.",
+  "assumptionsToDischarge": "A coefficient embedding taking the level root to its s-th power sends the actual normalized torsion Weierstrass q-expansion to that at the transformed second torsion coordinate, for s coprime to the level.",
+  "remaining": "The corresponding Fricke product coefficients, separation and rational spanning remain before actual cusp differential realization and the arithmetic comparison; 16/20; DUB-17--20 OPEN.",
+  "source": "fricke-torsion-expansion-reuse-648/snapshots.json",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false
+}

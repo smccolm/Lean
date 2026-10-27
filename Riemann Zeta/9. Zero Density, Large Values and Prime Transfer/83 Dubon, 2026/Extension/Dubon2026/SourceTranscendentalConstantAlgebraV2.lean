@@ -1,0 +1,104 @@
+import Dubon2026.SourceAlgebraicConstantLift
+import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
+import Mathlib.RingTheory.DedekindDomain.IntegralClosure
+import Mathlib.FieldTheory.RatFunc.AsPolynomial
+import Mathlib.RingTheory.Polynomial.IsIntegral
+import Mathlib.RingTheory.Polynomial.GaussLemma
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual
+Gamma1 character realization -> differential/cusp comparison -> rational
+Fourier spanning -> integral base change of Fricke fractions. This is the
+transcendental constant-adjoining step of the finite constant-list induction.
+Native integral closure and polynomial normality recover integral coefficients
+after clearing scalar denominators. The original finite generator integrality
+and j transcendence are explicit inputs, supplied later by the actual Fricke field.
+Adapted from anthropics/fermats-last-theorem,
+6e837e75355538c7f80bab5b956861e86c4eacc2, Apache-2.0,
+S_IsIntegral_mem_span_of_adjoin_simple_constants_transcendental.
+All source proof-limit settings are omitted; native limits are unchanged. -/
+namespace Dubon2026.SourceFricke.ConstantDescent
+noncomputable section
+open Polynomial
+open scoped IntermediateField IntermediateField.algebraAdjoinAdjoin
+variable {K : Type*} [Field K] [Algebra ℂ K]
+variable (F : IntermediateField ℚ ℂ) (t : K) (S : Set K)
+/-- The rational coordinate field over the original constants. -/
+abbrev RFld : IntermediateField ↥F K := (↥F)⟮t⟯
+
+/-- The finite generator field viewed over the rational coordinate field. -/
+abbrev KFldT : IntermediateField ↥(RFld F t) K := IntermediateField.adjoin ↥(RFld F t) S
+
+/-- The native scalar structure on the actual coordinate and generator fields. -/
+noncomputable scoped instance algebraTRngKFldT : Algebra ↥(TRng F {t}) ↥(KFldT F t S) :=
+  ((algebraMap ↥(RFld F t) ↥(KFldT F t S)).comp (algebraMap ↥(TRng F {t}) ↥(RFld F t))).toAlgebra
+
+/-- The native scalar structure on the actual coordinate and generator fields. -/
+scoped instance scalarTowerBaseRationalGenerated : IsScalarTower ↥(TRng F {t}) ↥(RFld F t) ↥(KFldT F t S) :=
+  IsScalarTower.of_algebraMap_eq fun _ ↦ rfl
+
+/-- The native scalar structure on the actual coordinate and generator fields. -/
+scoped instance scalarTowerBaseGeneratedAmbient : IsScalarTower ↥(TRng F {t}) ↥(KFldT F t S) K :=
+  IsScalarTower.of_algebraMap_eq fun _ ↦ rfl
+
+/-- The integral closure of the original coordinate algebra in the generator field. -/
+abbrev RFa : Subalgebra ↥(TRng F {t}) ↥(KFldT F t S) := integralClosure ↥(TRng F {t}) ↥(KFldT F t S)
+
+/-- The native scalar structure on the actual coordinate and generator fields. -/
+scoped instance commRingRFa : CommRing ↥(RFa F t S) := inferInstance
+
+theorem KFldT_restrictScalars (htS : t ∈ S) :
+    (KFldT F t S).restrictScalars ↥F = KFld F S := by
+  rw [show KFldT F t S = IntermediateField.adjoin ↥(RFld F t) S from rfl,
+    IntermediateField.adjoin_adjoin_left]
+  congr 1
+  simp [Set.insert_eq_self.mpr htS]
+
+theorem mem_KFldT_iff (htS : t ∈ S) (z : K) : z ∈ KFldT F t S ↔ z ∈ KFld F S := by
+  rw [← KFldT_restrictScalars F t S htS, IntermediateField.mem_restrictScalars]
+
+section instances
+
+/-- The native scalar structure on the actual coordinate and generator fields. -/
+scoped instance isDomainCoordinateRing : IsDomain ↥(TRng F {t}) := Subalgebra.isDomain _
+
+/-- Polynomial evaluation identifies the transcendental coordinate algebra. -/
+def TRngEquiv (ht : Transcendental ℂ t) : (↥F)[X] ≃ₐ[↥F] ↥(TRng F {t}) :=
+  Polynomial.algEquivOfTranscendental ↥F t
+    (ht.restrictScalars (FaithfulSMul.algebraMap_injective ↥F ℂ))
+
+theorem isPrincipalIdealRing_TRng (ht : Transcendental ℂ t) :
+    IsPrincipalIdealRing ↥(TRng F {t}) :=
+  IsPrincipalIdealRing.of_surjective (TRngEquiv F t ht).toRingEquiv.toRingHom
+    (TRngEquiv F t ht).surjective
+
+theorem finiteDimensional_KFldT (hSfin : S.Finite)
+    (hSint : ∀ s ∈ S, IsIntegral ↥(TRng F {t}) s) :
+    FiniteDimensional ↥(RFld F t) ↥(KFldT F t S) := by
+  haveI : Finite ↥S := hSfin.to_subtype
+  refine IntermediateField.finiteDimensional_adjoin (fun s hs => ?_)
+  exact (hSint s hs).tower_top
+
+theorem isDedekindDomain_RFa (ht : Transcendental ℂ t) (hSfin : S.Finite)
+    (hSint : ∀ s ∈ S, IsIntegral ↥(TRng F {t}) s) : IsDedekindDomain ↥(RFa F t S) := by
+  haveI := isPrincipalIdealRing_TRng F t ht
+  haveI := finiteDimensional_KFldT F t S hSfin hSint
+  exact integralClosure.isDedekindDomain ↥(TRng F {t}) ↥(RFld F t) ↥(KFldT F t S)
+
+theorem isFractionRing_RFa (ht : Transcendental ℂ t) (hSfin : S.Finite)
+    (hSint : ∀ s ∈ S, IsIntegral ↥(TRng F {t}) s) :
+    IsFractionRing ↥(RFa F t S) ↥(KFldT F t S) := by
+  have hPID := isPrincipalIdealRing_TRng F t ht
+  haveI : IsDedekindDomain ↥(TRng F {t}) := @IsPrincipalIdealRing.isDedekindDomain _ _ _ hPID
+  haveI := finiteDimensional_KFldT F t S hSfin hSint
+  exact integralClosure.isFractionRing_of_finite_extension ↥(RFld F t) ↥(KFldT F t S)
+
+end instances
+
+theorem isIntegrallyClosed_RFa_polynomial (ht : Transcendental ℂ t) (hSfin : S.Finite)
+    (hSint : ∀ s ∈ S, IsIntegral ↥(TRng F {t}) s) :
+    IsIntegrallyClosed (Polynomial ↥(RFa F t S)) := by
+  haveI : IsDedekindDomain ↥(RFa F t S) := isDedekindDomain_RFa F t S ht hSfin hSint
+  infer_instance
+
+end
+end Dubon2026.SourceFricke.ConstantDescent

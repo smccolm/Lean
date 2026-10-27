@@ -1,0 +1,60 @@
+import SourceLaurentIntegralCoefficientImage
+import SourceFrickeLaurentGeneratorIntegrality
+import SourceFrickeComplexFractionLaurent
+import SourceFrickeLaurentIntegralSpan
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.isIntegral_adjoin_coeffMap_of_isIntegral
+#print axioms Dubon2026.SourceFricke.frickeLaurent_complex_integral
+#print axioms Dubon2026.SourceFricke.frickeLaurentK_integral
+#print axioms Dubon2026.SourceFricke.frickeLaurent_integral_original_constants
+#print axioms Dubon2026.SourceFricke.frickeLaurentGenerators_finite
+#print axioms Dubon2026.SourceFricke.frickeLaurentGenerators_coeffRange
+#print axioms Dubon2026.SourceFricke.frickeLaurentGenerators_integral
+#print axioms Dubon2026.SourceFricke.transcendental_frickeLaurent_j
+#print axioms Dubon2026.SourceFricke.levelRing_periodic
+#print axioms Dubon2026.SourceFricke.exists_complex_fricke_cusp_represents
+#print axioms Dubon2026.SourceFricke.exists_complex_fricke_fraction_represents
+#print axioms Dubon2026.SourceFricke.frickeLaurent_integral_mem_span
+#print axioms Dubon2026.SourceFricke.exists_fricke_laurent_integral_span_of_principal_invariant
+#print axioms Dubon2026.SourceFricke.frickeLaurentGenerators
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceLaurentIntegralCoefficientImage, `SourceFrickeLaurentGeneratorIntegrality, `SourceFrickeComplexFractionLaurent, `SourceFrickeLaurentIntegralSpan]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.isIntegral_adjoin_coeffMap_of_isIntegral, `Dubon2026.SourceFricke.frickeLaurent_complex_integral, `Dubon2026.SourceFricke.frickeLaurentK_integral, `Dubon2026.SourceFricke.frickeLaurent_integral_original_constants, `Dubon2026.SourceFricke.frickeLaurentGenerators_finite, `Dubon2026.SourceFricke.frickeLaurentGenerators_coeffRange, `Dubon2026.SourceFricke.frickeLaurentGenerators_integral, `Dubon2026.SourceFricke.transcendental_frickeLaurent_j, `Dubon2026.SourceFricke.levelRing_periodic, `Dubon2026.SourceFricke.exists_complex_fricke_cusp_represents, `Dubon2026.SourceFricke.exists_complex_fricke_fraction_represents, `Dubon2026.SourceFricke.frickeLaurent_integral_mem_span, `Dubon2026.SourceFricke.exists_fricke_laurent_integral_span_of_principal_invariant]
+  let constructions : Array Name := #[`Dubon2026.SourceFricke.frickeLaurentGenerators]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Actual Fricke Laurent Integral Span postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Actual Fricke Laurent Integral Span theorems discovered"
+  logInfo m!"SOURCE ACTUAL FRICKE LAURENT INTEGRAL SPAN AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceLaurentIntegralCoefficientImage
+#lint in SourceFrickeLaurentGeneratorIntegrality
+#lint in SourceFrickeComplexFractionLaurent
+#lint in SourceFrickeLaurentIntegralSpan

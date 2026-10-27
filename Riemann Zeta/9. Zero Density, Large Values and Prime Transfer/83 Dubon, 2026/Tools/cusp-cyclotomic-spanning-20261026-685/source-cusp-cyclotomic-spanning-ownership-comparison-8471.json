@@ -1,0 +1,382 @@
+{
+  "scratchSum": 174,
+  "scratchDistinct": 173,
+  "generatedNameRenamings": {},
+  "productionFocused": 173,
+  "duplicateScratchNames": {
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.eisensteinFactor.eq_1": [
+      {
+        "scope": "SourceCuspCyclotomicSpanningScratchOwnership680For8471",
+        "module": "Dubon2026.SourceCuspWeightTransformation"
+      },
+      {
+        "scope": "SourceCuspCyclotomicSpanningScratchOwnership684For8471",
+        "module": "Dubon2026.SourceEisensteinFactorCyclotomicLaurent"
+      }
+    ]
+  },
+  "missingFromFocused": {},
+  "missingFromFocusedAlreadyInPrevious": [],
+  "productionNamesNotInScratch": [],
+  "unexplainedMissing": [],
+  "scopes": [
+    {
+      "modules": [
+        "SourceCuspLaurentLinearRelations",
+        "SourceFrickeLaurentIndependence"
+      ],
+      "count": 5,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCyclotomicSpanningScratchOwnership674For8471.log",
+        "sha256": "E1E26BA831827B01C63A1C917FDDA57EE98DDE44E15F2DE8443BEB2AA9390339",
+        "sourceSha256": "5DCD4FAB52B81A380FFC4A9AD646F1A460ED8FC276E7E482588C228C6C2A0351"
+      }
+    },
+    {
+      "modules": [
+        "SourceFrickeCyclotomicHolomorphicAlgebra",
+        "SourceFrickeScalarExtensionBasis",
+        "SourceComplexBasisCoefficientTwist",
+        "SourceFrickeCoefficientTwist",
+        "SourceFrickeSpanLaurentRealization",
+        "SourceLaurentTwistOrder",
+        "SourceCuspVanishingOrder",
+        "SourceFrickeTwistCuspVanishing"
+      ],
+      "count": 52,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCyclotomicSpanningScratchOwnership675For8471.log",
+        "sha256": "3D3C97837EADDE37C3D2B17F44DF6042EAFD39BD7F599FB13DBB441285667D24",
+        "sourceSha256": "91D7C5AAD7B58A249C614991071D021F03FBE3E7726B9EFA581B37BF04F8A065"
+      }
+    },
+    {
+      "modules": [
+        "SourceFrickeCyclotomicModularAction",
+        "SourceFrickeTwistModularEquivariance",
+        "SourceFrickeSpanMultiplication",
+        "SourceFrickePrincipalInvariance",
+        "SourceFrickeTwistPowers"
+      ],
+      "count": 21,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCyclotomicSpanningScratchOwnership676For8471.log",
+        "sha256": "2AED709B6D4CA1DB42B32FD8AC059AAC3862361D1ED50A1B5D304D5135440CC7",
+        "sourceSha256": "7C097BC7887B99F77E98E97DD623D61B753C3BCB2308C6142EB5F936DB363C8D"
+      }
+    },
+    {
+      "modules": [
+        "SourceFrickeHolomorphicDivisionInvariance",
+        "SourceFrickeHolomorphicDivisionSpan",
+        "SourceFrickeHolomorphicDivisionTwist",
+        "SourceFrickeEllipticDivisibilityTwist",
+        "SourceFrickeEllipticCoordinateTwist"
+      ],
+      "count": 18,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCyclotomicSpanningScratchOwnership677For8471.log",
+        "sha256": "2D8409095FCCBA6046F883D1E620F2252C58162C2C88485C687C8964AC5AE744",
+        "sourceSha256": "DDCE4EE81E61EC7B9BB8675F8318DED620C3A6278C0101D886ADDCFE4CF95BB4"
+      }
+    },
+    {
+      "modules": [
+        "SourceHolomorphicCoprimeDivision",
+        "SourceCuspWeightFactors",
+        "SourceCuspWeightHolomorphicDivision",
+        "SourceCuspWeightTransformation",
+        "SourceCuspWeightCriterion",
+        "SourceCuspWeightImage",
+        "SourceFrickeTwistCuspConditions",
+        "SourceCuspWeightImageSpan",
+        "SourceCuspWeightImageTwist"
+      ],
+      "count": 36,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCyclotomicSpanningScratchOwnership680For8471.log",
+        "sha256": "EA23532F6A6F7D149790C699A9611AA523396676F6E66DC046E94165739D3F0A",
+        "sourceSha256": "36C86A0FB945C1C03A42B3EF5C05A575EF5E37B407A70825BD1C7DBF78E20D2E"
+      }
+    },
+    {
+      "modules": [
+        "SourcePureTranscendentalConstantIntersection",
+        "SourceAlgebraicallyClosedFixedField",
+        "SourceTwistDescentFiniteSupport",
+        "SourceTwistStableSubspaceDescent",
+        "SourceOriginalFrickeSpanDescent",
+        "SourceCuspWeightImageDescent",
+        "SourceCuspFrickeRationalSpan"
+      ],
+      "count": 25,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCyclotomicSpanningScratchOwnership683For8471.log",
+        "sha256": "C47C7CC7AB297824532D0566C520F4553B0EC267F915CDB4EAC150C44B175F8F",
+        "sourceSha256": "88AAC0F8180BB86F0A1B811169CE6250CF8D78B5EB5837200192CB5C835CC837"
+      }
+    },
+    {
+      "modules": [
+        "SourceEisensteinFactorCyclotomicLaurent",
+        "SourceCuspWeightImageFourier",
+        "SourceGammaOneCyclotomicCuspSpan"
+      ],
+      "count": 17,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCyclotomicSpanningScratchOwnership684For8471.log",
+        "sha256": "82883949E0192A7945396DE3BDD3DA89C0D6CF342D0869C9A69B8995578F7738",
+        "sourceSha256": "F62D959969F16FD4307EFDB79443C8988ADF47F73DB19836342E3D38F33D7BC5"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspCyclotomicSpanningOwnership8471.log",
+    "sha256": "5B84EDAE430194F9B03EE9DB2CF19D1E248AC6791838E2A06C8EEA616234F2F5",
+    "sourceSha256": "575107768D0E1B3A7AF653955E18055BDFF604C204E8B1761043BF19369DBE44"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-124539-115.log",
+    "sha256": "88731646EAA91074C266BAEE30C7DC7212D143003FA219E73FD2ABF6FEE599B0"
+  },
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 39 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourceCuspLaurentLinearRelations",
+        "scratchSha256": "54A9C9EF7A1DD41B3EC4B7B04A0DCBD56BFB58CEE01D6E90B4E4658701DD5E05",
+        "productionSha256": "B696677646BE83C085BB8B37DE3CDB9BD01D75B7B92ABDD0D212947EE0439B1C",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeLaurentIndependence",
+        "scratchSha256": "CE0391F790564AA0B05B234EA36661B4504BE62F7BD1119347F89C8956DE4182",
+        "productionSha256": "0A211C319C383076ED15167CE6900C53B63FC62D518E995730B8842B48F5A909",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeCyclotomicHolomorphicAlgebra",
+        "scratchSha256": "0042EB34AB89EF6038DE681FECDBCD1DA95B63F661C878CED9F21515A6412B36",
+        "productionSha256": "144DA2240EB4950249215A5574F506DEC72A465817611AC544F13EE4C71B91D0",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeScalarExtensionBasis",
+        "scratchSha256": "84901516A47EE070A70228679319B8503D7C7A9C89D2FD8F11F88590767DC241",
+        "productionSha256": "DD661D6CDC3FF650489556DE6939A54A95700DB40C90F3EA97596A5668B4D880",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceComplexBasisCoefficientTwist",
+        "scratchSha256": "4B3092F013112ADC534199D058748CD8F6FADF524F25E27E06DC5FC8A785143C",
+        "productionSha256": "05CA69AFA5E8A82BFA35F5CB6073773262C154B327C37A944D8FAE7EEA8C91AF",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeCoefficientTwist",
+        "scratchSha256": "4D53E819A53D57BA0D160A1AE474A39EB3858A406FCB274DE7297764E6161ED5",
+        "productionSha256": "ED19A00B747AA3830457CCA5F5A0FA86213A6E59F37E713D21F239C63CFC5B8A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeSpanLaurentRealization",
+        "scratchSha256": "586E654FB5610EEFB8CDF062A8C1AEF346498E1320BCC72020397ECA167C286E",
+        "productionSha256": "3866EF098271CA0452C6C322BCE1961D04FC3DD3258577FCB888DEFD5269C7FE",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceLaurentTwistOrder",
+        "scratchSha256": "C8FC69D70EAA22B7969BA962F7D47627DB374ED0D59E7DB7929761824AB6EC4F",
+        "productionSha256": "C78DC2A4AE8E4C75F8276DA68EE08D92BE05C8586265D229BF1DAF684123743A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCuspVanishingOrder",
+        "scratchSha256": "9BB414E7059F9B1CA0D488F1D2D87A9151C517DB3FB52C48D3A577D3166E0CE2",
+        "productionSha256": "AB6BC90482F843722F1CD6407C1D6055DB47C82D3EBB2A7D1B84980475960294",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeTwistCuspVanishing",
+        "scratchSha256": "5DBFB422C12ABF17FC0007C1DE0F3476B5D19A3746E9E3DE93A406BF50285520",
+        "productionSha256": "7AFD61F1B197BBA05E5821873712CF92125DAFD8F8274BCABDEDDB64D9FC5B9F",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeCyclotomicModularAction",
+        "scratchSha256": "C1EBBBBBA4BB87BC26BDCCE925042C965584BBE09DC6C4AEEFA3F0C65D1D76CD",
+        "productionSha256": "38CD8F851D8EAB1CD5022409B0119595134FD13CBB5B403A020EE2F99E5D56F4",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeTwistModularEquivariance",
+        "scratchSha256": "E09792485B8D50FF055B5B354415817FD988369CF586200CC6E4A622C31240BF",
+        "productionSha256": "568D7C570D020C8323B478200E9094D2F00A0A1195EEBAD1FB81C39ADC9550CB",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeSpanMultiplication",
+        "scratchSha256": "7CEE839D2380788A4AC4113DB84E72B8F61BC877391BBA2F9C5E4957188FD53E",
+        "productionSha256": "D3A26D49F67C2A45932FA5C1017765CE8DC45847E66C0AC5C54787C8A3D2DC2D",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickePrincipalInvariance",
+        "scratchSha256": "B50C51CB7FC773F19BAE5C7C75C9151F39F57F3EC76CE0AED0740D6C7D8638E2",
+        "productionSha256": "55714DB1AAD184E1E9B7FFCBF04E7FC8B06DD69B36C08583F8C3A5329C9AD25E",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeTwistPowers",
+        "scratchSha256": "FBEC9DF5057D8F355BDB72E64E5B3AF942425C7B702C34D3E35D35DD0F3C986E",
+        "productionSha256": "DAE5919CAB2315CA00703C7DCF4EC37F090553E3D024861A2451641DB61C7E29",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeHolomorphicDivisionInvariance",
+        "scratchSha256": "E70BFB2BD6CA80AA65C527BAE663096C2F9DB1F7843A9344C0FF93B753172877",
+        "productionSha256": "FA7F9CEC28239F61D2F4E8EEA6F24C4825068D9AB80C504A103349F028D37892",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeHolomorphicDivisionSpan",
+        "scratchSha256": "524B4A91D404F49288DCF872BC4E96E66F19846CA1C90852008F0E4DD74CB551",
+        "productionSha256": "16D259115CD46B732DBDC32D7ADB207D9457A1F1B4D9BCDEB5963B3421D91DF6",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeHolomorphicDivisionTwist",
+        "scratchSha256": "E7A203986B000872CCCF86353A99E3BE8B11DF7164A408B60D8C9AC6A46AEB9A",
+        "productionSha256": "52139CA6B15F80CB89EE40622F2FB046B1D0C0F69111F5AC40BC419860097DF3",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeEllipticDivisibilityTwist",
+        "scratchSha256": "8DE916F1C6B226265970C1B8BCE99B111EB36701C7EDE01FF9815B39155692E8",
+        "productionSha256": "AA31AB45352D758058115C4D6735709B7B7D589D3B7A8729CC8706A8BBB8AF8D",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeEllipticCoordinateTwist",
+        "scratchSha256": "6E888033F715F1268FA7FCFD1814F460982A0EA6A9A7CF5B8D6C4E7DCA4B423D",
+        "productionSha256": "05E3BF10186C13C9F0D43A28854CBBF8076945301B9E366376B1CBF040759F01",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceHolomorphicCoprimeDivision",
+        "scratchSha256": "3FB5C1E88550358F126C506F792ECAA48B083D2845B2B3C2961DE63F504CD243",
+        "productionSha256": "095A6C9007C72F2591043189B8C01B0959800F3783F14546265EC092D91C2EBB",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCuspWeightFactors",
+        "scratchSha256": "CB5BAB2BBAC3FEFD7C7CA36F022DEAFC5BA1EB763CAD5F80803F084557601B71",
+        "productionSha256": "835BDB409F98623F37D20459215EAA71C86B3294E8B4F053CDF2D19DE7FE1D4D",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCuspWeightHolomorphicDivision",
+        "scratchSha256": "A14F841B707E06DEBD34FA7C265741872AE4FC89D5318AF884830A1EA2140AC2",
+        "productionSha256": "36EE0A79ABCECF1C616C6D8EAAAE14DF7CE4BCB767F381871302D15093DE3252",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCuspWeightTransformation",
+        "scratchSha256": "1993BAF4D613589689590D731CC86EC9C22C9FEF240F1CDDE4A4577520FDD2B3",
+        "productionSha256": "3EDA719B5E98C0C501B8159264D0DED99FACDC1E35CD824AC3C079834242EBD1",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCuspWeightCriterion",
+        "scratchSha256": "FBB850247B20A4B19CB355A3F3CB20AFC1288C5DE13698519245F2D799C3550F",
+        "productionSha256": "FF07E1DCF183D2436160DF9C9A82CC4C15A587CB55E71AEB924DDDEBEACC4510",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCuspWeightImage",
+        "scratchSha256": "E76C95612608840D7B510F6BD3CD68ACC4AFBC06C6FCB956DE823E5BEAC3CE42",
+        "productionSha256": "143118103558E69D6890FDD8B3578AACB1304D06642CA7F8096D3D27CD05D08C",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceFrickeTwistCuspConditions",
+        "scratchSha256": "2B0D9C914225857CDD9C4324E527AC52E2E99F74871A615F65A0A167A97DDD23",
+        "productionSha256": "FDA500C352D2E4402CB74437725DA95C9F1556F4D1595B5CE79312721760FA73",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCuspWeightImageSpan",
+        "scratchSha256": "95B9AA1E93D0ED1F6B978ADFB77BB60BB5CF749100535B428CF4D10B67A7D328",
+        "productionSha256": "3E5D7BAD0ACE47A2DC0B584C0A99F2076C6B180C724E55F10702A8ADA26D695B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCuspWeightImageTwist",
+        "scratchSha256": "78173D9F163223C7987EB6B1A02D72C07F37BBFB71DB2B47E95ED6D19FB79875",
+        "productionSha256": "80BCF4B7C85BDF06E7C6E117C76CA61B2C0D6A0288353BE3A428C7046DF50DAA",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePureTranscendentalConstantIntersection",
+        "scratchSha256": "1AF23FC050677CA31B45EE346996497B4F65680B2CB19C9D6D25A80ADC42EAC8",
+        "productionSha256": "1AF23FC050677CA31B45EE346996497B4F65680B2CB19C9D6D25A80ADC42EAC8",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceAlgebraicallyClosedFixedField",
+        "scratchSha256": "6603606DC68A89EE382AF68F07485C86B8F34257BCAD6120D94A4580504C56C4",
+        "productionSha256": "48C777BE6CA76C6A0548D01B821608D13CED0959B9ABE4F88D5E2F91D541206F",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceTwistDescentFiniteSupport",
+        "scratchSha256": "887EE5E7EA3F6B8CA8E4BC973AE7E0216C9206E1CDC76C8071169C7D3868EAED",
+        "productionSha256": "887EE5E7EA3F6B8CA8E4BC973AE7E0216C9206E1CDC76C8071169C7D3868EAED",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceTwistStableSubspaceDescent",
+        "scratchSha256": "FA4A53E442D32277755471BE12E9F75CDCB3DF38D862AB77FDF1B1DEF79C5C2A",
+        "productionSha256": "F1294C1EB85D29A3CDFFAEB7FCF2794907A63BD89395DFEEC881991D5FE62DA3",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceOriginalFrickeSpanDescent",
+        "scratchSha256": "49DB1E2A01837699A2A7A8C4C7602FBBB0305BADEA69D8143178B4C593432A6C",
+        "productionSha256": "6087B24AF6836F974B12E29F93750E1FDB1A701D203BC189E506EDE0E567B855",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCuspWeightImageDescent",
+        "scratchSha256": "4E1428B421A719F4374D9100673F28C63DE9C0826887E977B4CB6011FB63EF30",
+        "productionSha256": "0F2CE87401427610B73512A2D7C12D779432F9568217B3C3BDB62546DF22761E",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCuspFrickeRationalSpan",
+        "scratchSha256": "9E741DD160C9413902CC185185DC46C072627609F57D349B6A9C98717B1F5BFD",
+        "productionSha256": "D3009FFD952484CBFD0F58E92A79AD4A24140A2B4D4D672BDF734FF2D1A240F9",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceEisensteinFactorCyclotomicLaurent",
+        "scratchSha256": "1348D681063873F9DA09AC859E0B4BA1C5771B8FD8EB6C1E8910AFBEAF86F242",
+        "productionSha256": "D2E0CE1CC6EEA865BE3B4075F093D5B3594B1E76BD10F935CCC8E96F89B1C4E3",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceCuspWeightImageFourier",
+        "scratchSha256": "1D3A236C96D5622E433BD23C1F04711485B1E7C420C2EAE74AF2FA990F5543FA",
+        "productionSha256": "DED8020544D003B2D85B837483C413D6D632DBD57AA76E0A4A9FFEFDFF42F1F0",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCyclotomicCuspSpan",
+        "scratchSha256": "58868C112C6DA750262A75551FDF71754FE3CF983C69C14B0609230178235D70",
+        "productionSha256": "FBF12EDCB0E4045E97A715C1CD1A3218DAE90A6E73C45AC6091E707C58C3925E",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": true
+}

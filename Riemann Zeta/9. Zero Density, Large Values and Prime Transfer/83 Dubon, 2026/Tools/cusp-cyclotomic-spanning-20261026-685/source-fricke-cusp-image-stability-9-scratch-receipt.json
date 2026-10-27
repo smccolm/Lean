@@ -1,0 +1,146 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T20:43:43.277131+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceHolomorphicCoprimeDivision",
+    "SourceCuspWeightFactors",
+    "SourceCuspWeightHolomorphicDivision",
+    "SourceCuspWeightTransformation",
+    "SourceCuspWeightCriterion",
+    "SourceCuspWeightImage",
+    "SourceFrickeTwistCuspConditions",
+    "SourceCuspWeightImageSpan",
+    "SourceCuspWeightImageTwist"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceHolomorphicCoprimeDivision.lean",
+      "sha256": "3FB5C1E88550358F126C506F792ECAA48B083D2845B2B3C2961DE63F504CD243",
+      "oleanSha256": "4B83FC8406DEA665C9E4D34DF10A432EEE1712AE214522E4066FF7D398A5B6C4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightFactors.lean",
+      "sha256": "CB5BAB2BBAC3FEFD7C7CA36F022DEAFC5BA1EB763CAD5F80803F084557601B71",
+      "oleanSha256": "F36582CF424DB6DCA08B4C6C0C64715CB5D9DA1DF17FC35CEC142244C405DA33"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightHolomorphicDivision.lean",
+      "sha256": "A14F841B707E06DEBD34FA7C265741872AE4FC89D5318AF884830A1EA2140AC2",
+      "oleanSha256": "1978732DDDFB5CC16DA7C71FFCD57A7907361B494E072006C4B6D70B1663BCE3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightTransformation.lean",
+      "sha256": "1993BAF4D613589689590D731CC86EC9C22C9FEF240F1CDDE4A4577520FDD2B3",
+      "oleanSha256": "014EA714F1038543204F34302DC6DBE56CD3E62CEECC95EE41880F66048FAB82"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightCriterion.lean",
+      "sha256": "FBB850247B20A4B19CB355A3F3CB20AFC1288C5DE13698519245F2D799C3550F",
+      "oleanSha256": "A9F21B4DAD9681A36ED7A2E8F3E91930E8B363774718DEE091CE5D1405FD6813"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightImage.lean",
+      "sha256": "E76C95612608840D7B510F6BD3CD68ACC4AFBC06C6FCB956DE823E5BEAC3CE42",
+      "oleanSha256": "17C820DA47DBAC14F5A57C2D205606E8EE98083903A790AD9D9C19256629FADA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTwistCuspConditions.lean",
+      "sha256": "2B0D9C914225857CDD9C4324E527AC52E2E99F74871A615F65A0A167A97DDD23",
+      "oleanSha256": "E137E985B2110E56B280AB283E8B0575910BFB7D18C84025AE92359232561BD9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightImageSpan.lean",
+      "sha256": "95B9AA1E93D0ED1F6B978ADFB77BB60BB5CF749100535B428CF4D10B67A7D328",
+      "oleanSha256": "3DD8B771EDBEA0F108EC71C684D048F009C1BFC2BD8D7877DA5F53997E308A20"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightImageTwist.lean",
+      "sha256": "78173D9F163223C7987EB6B1A02D72C07F37BBFB71DB2B47E95ED6D19FB79875",
+      "oleanSha256": "54DCB0F2A23653D4E35A4CA3D07E001C90EB2B8C2A19C48069F9961E61632E84"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_mul_eq_of_coprime",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.mdifferentiable_eisensteinFactor",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.E4_ne_zero_or_E6_ne_zero",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.tendsto_E6_atImInfty",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_E4_ne_zero",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_E6_ne_zero",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.tendsto_eisensteinFactor",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_eisensteinFactor_ne_zero",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.isBoundedAtImInfty_eisensteinFactor",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_div_E4",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_div_E6",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.eisensteinFactor_smul",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.discriminant_pow_smul",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.slash_mul_eisensteinFactor",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.forward",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.backward",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.main",
+    "Dubon2026.SourceFricke.cuspWeightImage_mul_discriminant",
+    "Dubon2026.SourceFricke.mdifferentiable_cuspWeightImage",
+    "Dubon2026.SourceFricke.cuspWeightImage_injective",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_preserves_all_cusps",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_preserves_subgroup_invariance",
+    "Dubon2026.SourceFricke.cuspWeightImage_mem_frickeSpan",
+    "Dubon2026.SourceFricke.exists_cuspWeightImage_eq_twist",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.eisensteinFactor",
+    "Dubon2026.SourceFricke.cuspWeightImage",
+    "Dubon2026.SourceFricke.cuspWeightImageElement"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_mul_eq_of_coprime",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.mdifferentiable_eisensteinFactor",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.E4_ne_zero_or_E6_ne_zero",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.tendsto_E6_atImInfty",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_E4_ne_zero",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_E6_ne_zero",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.tendsto_eisensteinFactor",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_eisensteinFactor_ne_zero",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.isBoundedAtImInfty_eisensteinFactor",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_div_E4",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_div_E6",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.eisensteinFactor_smul",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.discriminant_pow_smul",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.slash_mul_eisensteinFactor",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.forward",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.backward",
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.main",
+    "Dubon2026.SourceFricke.cuspWeightImage_mul_discriminant",
+    "Dubon2026.SourceFricke.mdifferentiable_cuspWeightImage",
+    "Dubon2026.SourceFricke.cuspWeightImage_injective",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_preserves_all_cusps",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_preserves_subgroup_invariance",
+    "Dubon2026.SourceFricke.cuspWeightImage_mem_frickeSpan",
+    "Dubon2026.SourceFricke.exists_cuspWeightImage_eq_twist"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.CuspWeightCriterion.eisensteinFactor",
+    "Dubon2026.SourceFricke.cuspWeightImage",
+    "Dubon2026.SourceFricke.cuspWeightImageElement"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCuspImageStabilityAudit9.log",
+  "logSha256": "89A85793AAADA0E428CE146DF4437EF25AC866735C87B0C5778CC9ED57EC2184",
+  "auditSha256": "3A3D49EADA07AD203075D0D09BDBD6BBD47A9EA525E2F15310264CA7D465DEC1",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 36,
+  "linterScopes": 9,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 37,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCuspImageStabilityDependencyAudit9.log",
+  "dependencyAuditSha256": "128B5E1EEC47AD40D73127CFB36BF622689C4B5E30C7D0E959EA47285C6DDFF2",
+  "dependencyAuditSourceSha256": "71F252CCAFBF2E18A37AAE9EC1D17F2974DEDC41BC3E95114B737C2918D9FD90",
+  "consumers": [
+    "Dubon2026.SourceFricke.exists_cuspWeightImage_eq_twist",
+    "Dubon2026.SourceFricke.cuspWeightImage_injective"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> original Picard/H1, full/parabolic, transpose and diamond comparison -> actual differential/cusp comparison -> rational cusp-form spanning -> actual cusp-image stability under coefficient twists.",
+  "discharged": "Prove the exact weight-lowering criterion for actual cusp forms of every integer weight and finite-index subgroup with k+4a+6b=12m. Construct the holomorphic quotient by the original E4/E6 factor from the two power-divisibility conditions using local monic division and coprime analytic gluing; derive its slash invariance and cusp vanishing. Prove the original weight-lowering map is holomorphic and injective. For every subgroup containing Gamma(N), derive actual Fricke-span membership and all conditions of the twisted image, then construct an actual cusp form of the same weight and subgroup realizing that twist.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Descend the proved twist-stable cusp image by the original cyclotomic fixed field and pull back the spanning statement through the injective original map. Arbitrary Gamma1 differential realization and the original finite-character arithmetic association, automorphy and higher continuation chain remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-fricke-cusp-image-stability-9-reuse-review-20261026.json",
+  "reuseReviewSha256": "F45CC8AAFC190F3D6EAC9F61B16CDF07956D9CC66E11C0EB7CD025C21BB50F95",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

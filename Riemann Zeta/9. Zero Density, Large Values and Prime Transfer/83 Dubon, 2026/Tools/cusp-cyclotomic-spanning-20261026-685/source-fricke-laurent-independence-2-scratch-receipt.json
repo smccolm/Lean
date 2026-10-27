@@ -1,0 +1,58 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T19:30:22.311566+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceCuspLaurentLinearRelations",
+    "SourceFrickeLaurentIndependence"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspLaurentLinearRelations.lean",
+      "sha256": "54A9C9EF7A1DD41B3EC4B7B04A0DCBD56BFB58CEE01D6E90B4E4658701DD5E05",
+      "oleanSha256": "B2D90C727CA991E0825A055B9FE1F23E612777436B4FB6ED5F6755709367BEB2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLaurentIndependence.lean",
+      "sha256": "CE0391F790564AA0B05B234EA36661B4504BE62F7BD1119347F89C8956DE4182",
+      "oleanSha256": "8462CE1DC0CE7A11854B91FD567812928F4971B16B957BE507B13869B8B24642"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.coeffMap_sum_smul",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_smul_sum",
+    "Dubon2026.SourceFunctionField.cusp_laurent_sum_smul_eq_zero_iff",
+    "Dubon2026.SourceFunctionField.linearIndependent_functions_of_laurent_coefficients",
+    "Dubon2026.SourceFricke.linearIndependent_holomorphic_cyclotomic_fricke_fractions"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.coeffMap_sum_smul",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_smul_sum",
+    "Dubon2026.SourceFunctionField.cusp_laurent_sum_smul_eq_zero_iff",
+    "Dubon2026.SourceFunctionField.linearIndependent_functions_of_laurent_coefficients",
+    "Dubon2026.SourceFricke.linearIndependent_holomorphic_cyclotomic_fricke_fractions"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLaurentIndependenceAudit2.log",
+  "logSha256": "BF3ADA40B6B89F0AA19F934DE99F14DA11A27C7A5938F883F830C289974F8CE0",
+  "auditSha256": "BBFE446D44019ACBD6F61745ABB276EF9216973DD33D70C64058DC5F7D4BD689",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 5,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 10,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLaurentIndependenceDependencyAudit2.log",
+  "dependencyAuditSha256": "7A1BEEC5DE09BD12EE195893382DB2FE78763AB664FB371A64AEF3C32D065DEB",
+  "dependencyAuditSourceSha256": "DE3757535AFB86F093576F5314360D9A28B74F1AF69A1F9EE14BF81872908030",
+  "consumers": [
+    "Dubon2026.SourceFricke.linearIndependent_holomorphic_cyclotomic_fricke_fractions"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> original Picard/H1, full/parabolic, transpose and diamond comparison -> actual differential/cusp comparison -> rational cusp-form spanning -> coefficient descent of the actual Fricke function span.",
+  "discharged": "For a family of actual holomorphic cyclotomic Fricke fractions, prove that linear independence over the original cyclotomic field implies complex linear independence. Literal finite linear relations are transported through the proved cusp-germ representation; no scalar-extension independence or common clearing exponent is assumed.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Coefficient twists and descent of the actual cusp-form subspace remain, including preservation of modular weight, holomorphy at elliptic points and cusp vanishing. Then arbitrary Gamma1 differential realization and the original finite-character arithmetic association, automorphy and higher continuation chain remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-fricke-laurent-independence-2-reuse-review-20261026.json",
+  "reuseReviewSha256": "DDF3FEE50F699BA0528AF6C0A4D40BC97FD53721C6A2D8EB561E0BE81975A326",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

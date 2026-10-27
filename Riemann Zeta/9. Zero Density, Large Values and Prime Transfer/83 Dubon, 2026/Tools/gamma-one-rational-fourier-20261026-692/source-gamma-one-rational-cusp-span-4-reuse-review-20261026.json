@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-26 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> original Picard/H1, full/parabolic, transpose and diamond comparison -> actual differential/cusp comparison -> rational Fourier spanning.",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspFrickeRationalSpan.lean",
+      "sha256": "9E741DD160C9413902CC185185DC46C072627609F57D349B6A9C98717B1F5BFD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicCuspSpan.lean",
+      "sha256": "58868C112C6DA750262A75551FDF71754FE3CF983C69C14B0609230178235D70"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicFourierConjugation.lean",
+      "sha256": "B6F3CCDACE4E0EF4DDE5075AA1337EF3CBE3C714D1044F6CF48A2FF18C861615"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspLaurentFunctionIdentity.lean",
+      "sha256": "DC4D20A9159A9B19D2569D9FE996E9473A33A911DDA5BA61C110E7D479D63BD8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Trace\\Basic.lean",
+      "sha256": "8067C9F3C463F5EEDA72AEB4A55298FBAEE4EAC91FFBCA837590A3C3346AE519"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\Cyclotomic\\Basic.lean",
+      "sha256": "C79101EE06877E33CD30511984EBDEBD23B3DA3A389FAEE2A981A1EF25408BE1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\QExpansion.lean",
+      "sha256": "2E6E4E3D2456AB5C8C6EAD4BA3A355F76351F82E53294946FC8616590BDC1890"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-input-reuse-633\\P2M\\Sol\\S_CuspForm_exists_basis_gamma1_qCoeff_mem_range_ratCast.lean.txt",
+      "sha256": "89341A19A217B7F2CDD97A936749773123313315728046A121A8B0A57A157FB0"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-rational-cusp-span-route-689.json",
+    "sha256": "54D23146F5B59C2C35DAB08875165F952B91FFF0BE4419FBD0B3DE9DD55339EB",
+    "review": {
+      "scope": 689,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> original Picard/H1, full/parabolic, transpose and diamond comparison -> actual differential/cusp comparison -> rational Fourier spanning.",
+      "assumptionsToDischarge": "The actual cyclotomic coefficient field is finite Galois over Q by native cyclotomic-extension theorems. The constructed actual cusp conjugates give trace sums with rational width-one Fourier coefficients. Native trace-dual basis reconstruction expresses each original-image generator as a complex linear combination of those rational forms; Fourier injectivity identifies the original cusp form. The original-image spanning theorem discharges the Fricke-image and conjugation hypotheses in the final full-space spanning consumer. Weight-two rational Fourier spanning holds at every nonzero level. General weight spanning retains the explicit source balance k+4a+6b=12m.",
+      "remaining": "Prove bounded denominators for these rational forms in the original integral-ratio field, arbitrary cusp differential realization and its converse, actual Hecke comparisons, original finite-character arithmetic realization, all-weight characteristic-zero association, arithmetic automorphy and higher continuation. No unrestricted odd-weight weight-balance claim is made. 16/20; DUB-17--20 OPEN.",
+      "shorterRouteReview": "Read the frozen primary rational-basis proof. Its trace sums are useful, but its Dedekind-independence and matrix-invertibility reconstruction can be replaced by the already proved Mathlib trace-dual basis. The original-image forms already span, so the final consumer needs only conjugation on that generating set and rational spanning, not a new finite-basis selection theorem or conjugation of every cyclotomic-coefficient form. Native Fourier linearity and the local analytic germ identity provide coefficient injectivity. An initial coercion/namespace and broad-simplification failure is preserved; explicit trace identities compile under unchanged limits.",
+      "externalImport": false,
+      "externalFullClosureVerified": false,
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspFrickeRationalSpan.lean",
+          "sha256": "9E741DD160C9413902CC185185DC46C072627609F57D349B6A9C98717B1F5BFD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicCuspSpan.lean",
+          "sha256": "58868C112C6DA750262A75551FDF71754FE3CF983C69C14B0609230178235D70"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicFourierConjugation.lean",
+          "sha256": "B6F3CCDACE4E0EF4DDE5075AA1337EF3CBE3C714D1044F6CF48A2FF18C861615"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspLaurentFunctionIdentity.lean",
+          "sha256": "DC4D20A9159A9B19D2569D9FE996E9473A33A911DDA5BA61C110E7D479D63BD8"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Trace\\Basic.lean",
+          "sha256": "8067C9F3C463F5EEDA72AEB4A55298FBAEE4EAC91FFBCA837590A3C3346AE519"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\Cyclotomic\\Basic.lean",
+          "sha256": "C79101EE06877E33CD30511984EBDEBD23B3DA3A389FAEE2A981A1EF25408BE1"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\QExpansion.lean",
+          "sha256": "2E6E4E3D2456AB5C8C6EAD4BA3A355F76351F82E53294946FC8616590BDC1890"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-input-reuse-633\\P2M\\Sol\\S_CuspForm_exists_basis_gamma1_qCoeff_mem_range_ratCast.lean.txt",
+          "sha256": "89341A19A217B7F2CDD97A936749773123313315728046A121A8B0A57A157FB0"
+        }
+      ],
+      "modules": [
+        "SourceCyclotomicTraceStructure",
+        "SourceGammaOneFourierLinear",
+        "SourceGammaOneRationalTraceSpan",
+        "SourceGammaOneRationalCuspSpan"
+      ]
+    }
+  },
+  "discharged": "The actual cyclotomic coefficient field is finite Galois over Q by native cyclotomic-extension theorems. The constructed actual cusp conjugates give trace sums with rational width-one Fourier coefficients. Native trace-dual basis reconstruction expresses each original-image generator as a complex linear combination of those rational forms; Fourier injectivity identifies the original cusp form. The original-image spanning theorem discharges the Fricke-image and conjugation hypotheses in the final full-space spanning consumer. Weight-two rational Fourier spanning holds at every nonzero level. General weight spanning retains the explicit source balance k+4a+6b=12m.",
+  "remaining": "Prove bounded denominators for these rational forms in the original integral-ratio field, arbitrary cusp differential realization and its converse, actual Hecke comparisons, original finite-character arithmetic realization, all-weight characteristic-zero association, arithmetic automorphy and higher continuation. No unrestricted odd-weight weight-balance claim is made. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

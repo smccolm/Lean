@@ -1,0 +1,45 @@
+{
+  "fetchedUTC": "2026-10-26T16:08:52.684786+00:00",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_IsIntegral_mem_span_of_adjoin_simple_constants.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_IsIntegral_mem_span_of_adjoin_simple_constants.lean",
+      "snapshot": "P2M\\Sol\\S_IsIntegral_mem_span_of_adjoin_simple_constants.lean.txt",
+      "gitBlob": "bd5b461dec141130cdcac19b8711a3ce18e304a4",
+      "sha256": "49302D5E9CB6E41812AC4B5FBF9E282163F2CF6BA2AA7470F0CB8097D6B5CC51",
+      "bytes": 21172
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_IsIntegral_mem_span_of_adjoin_simple_constants_transcendental.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_IsIntegral_mem_span_of_adjoin_simple_constants_transcendental.lean",
+      "snapshot": "P2M\\Sol\\S_IsIntegral_mem_span_of_adjoin_simple_constants_transcendental.lean.txt",
+      "gitBlob": "af99692aa6d6d000528f9de923c9339379f02f81",
+      "sha256": "B3AB91EC54374CF1DB366726AB29F1FD36A9CE17A5F7E61AB1FCE78905596D48",
+      "bytes": 29274
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_WLight_exists_mdifferentiable_div_of_monicRel.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_WLight_exists_mdifferentiable_div_of_monicRel.lean",
+      "snapshot": "P2M\\Sol\\S_WLight_exists_mdifferentiable_div_of_monicRel.lean.txt",
+      "gitBlob": "44f7776d0e2f0a1ea5a8b821aeb4c230db56355d",
+      "sha256": "BB99F0200DACBBB2F8DD9F1A0AAB1395E4DF8A50701B8CAC597AB241CDCB0E9C",
+      "bytes": 9508
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_WLight_frickeFunction_orbit_package.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_WLight_frickeFunction_orbit_package.lean",
+      "snapshot": "P2M\\Sol\\S_WLight_frickeFunction_orbit_package.lean.txt",
+      "gitBlob": "80a04744a68261ee76fc03e01638cfc46d652ad9",
+      "sha256": "7AE39C51922BCC81C596D3AAD859CB35A869BCAF06681513A00E88FAEE3EC165",
+      "bytes": 47374
+    }
+  ]
+}

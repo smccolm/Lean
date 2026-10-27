@@ -1,0 +1,1224 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-rational-structure-inputs-promotion-route-664.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-rational-structure-inputs-promotion-route-664.json",
+      "sha256": "DF7BD5D2A7A4C81F460823C901D4265CA4BEE9FD80E0BFFB654CE02E3B498B1C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicTransportAudit3.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeCyclotomicTransportAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicTransportAudit3.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeCyclotomicTransportAudit3.lean.txt",
+      "sha256": "A518E503A431EE6B644121947D2731B870014D298049C45CF968A3F7F535FFBB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicTransportAudit3.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeCyclotomicTransportAudit3.log",
+      "sha256": "952A3DA2835077C37BE251B8E961A28BA82DFEE99C123091313E36A57C160BB7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicTransportDependencyAudit3.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeCyclotomicTransportDependencyAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicTransportDependencyAudit3.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeCyclotomicTransportDependencyAudit3.lean.txt",
+      "sha256": "121A4BEC32CFFED9DC9F574548C759BCD4D9F13C455E17E02554C494E795F073"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicTransportDependencyAudit3.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeCyclotomicTransportDependencyAudit3.log",
+      "sha256": "FEB0969C38E931C3511F801C8202D660427C537DA4AF13389E8522E71E014D5C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFixedFieldJ.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFieldJ.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFixedFieldJ.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFieldJ.lean.txt",
+      "sha256": "9270ECEA3A729F7028DA2354C3EF0F895CAE24CA13B4C70F3D037AFE8774C7C7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFixedFieldJ.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFieldJ.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFixedFieldJV2.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFieldJV2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFixedFieldJV2.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFieldJV2.lean.txt",
+      "sha256": "694D78763075EAB7A39B84CADC25FCA58C7247766D44BE29570E19AD554FD453"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFixedFieldJV2.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFieldJV2.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFixedFraction.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFraction.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFixedFraction.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFraction.lean.txt",
+      "sha256": "1B5E07752165EFA8F72F6A3EAC04711A4935984AFE50500604EFD7BD4E7BBC6C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFixedFraction.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFraction.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFixedFractionV2.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFractionV2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFixedFractionV2.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFractionV2.lean.txt",
+      "sha256": "13B02266BF977D7441EBA5BF16DD1EEA436973249A4418776C1DF0FB72E179DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFixedFractionV2.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFractionV2.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicAlgebra.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeHolomorphicAlgebra.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicAlgebra.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeHolomorphicAlgebra.lean.txt",
+      "sha256": "C280A0B65FBB5337A20005E9D023A30217A37DBE97EB17CC67279962B8B99FEB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicAlgebra.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeHolomorphicAlgebra.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicAlgebraV2.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeHolomorphicAlgebraV2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicAlgebraV2.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeHolomorphicAlgebraV2.lean.txt",
+      "sha256": "D791A960A8FBE9A688E14228717C0A6A55601A6EBA22D7FA6CC0710421972130"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicAlgebraV2.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeHolomorphicAlgebraV2.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeJTranscendenceAudit1.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeJTranscendenceAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeJTranscendenceAudit1.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeJTranscendenceAudit1.lean.txt",
+      "sha256": "6C69A1A913C0D2CA962C24F73E4EBDDFD3FD0758324BEE982CBE2C1B0D67DB01"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeJTranscendenceAudit1.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeJTranscendenceAudit1.log",
+      "sha256": "05805DC55501A041C3DF7242C9A0EE0B03F6CD6A6A7EF85AE547D2415DAAC525"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeJTranscendenceDependencyAudit1.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeJTranscendenceDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeJTranscendenceDependencyAudit1.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeJTranscendenceDependencyAudit1.lean.txt",
+      "sha256": "6A1A8A731A1339D3610C2DE783ED685D0C7E7BBC2B86CDDAA9D3CCE41A8401BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeJTranscendenceDependencyAudit1.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeJTranscendenceDependencyAudit1.log",
+      "sha256": "7763788C5E57A78B3DFC3CECA97E2263D4608FBE816E314A0E0A45DC97DF174B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelAlgebra.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelAlgebra.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelAlgebra.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelAlgebra.lean.txt",
+      "sha256": "86CB3AD486D2325D80D8A269944B95995052E343F3E6771AD711C5EB9745FB1A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelAlgebra.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelAlgebra.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelAlgebraV2.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelAlgebraV2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelAlgebraV2.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelAlgebraV2.lean.txt",
+      "sha256": "63CD84A6EE6B4328C20E0833E74497DD0CCDDB8CE86A70EDE4D4DE35A1C67A90"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelAlgebraV2.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelAlgebraV2.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelField.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelField.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelField.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelField.lean.txt",
+      "sha256": "7ABF121CF143C709C254531AB3CD32C013A3F4D65412503E1807F5C3596A8364"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelField.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelField.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelFieldAudit7.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldAudit7.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelFieldAudit7.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldAudit7.lean.txt",
+      "sha256": "5075E30A60FF56CD876BCFD769535379015EDC264C225353A87AB38B92A5E5A0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelFieldAudit7.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldAudit7.log",
+      "sha256": "DB1051042D366F70E6FF3A5359B555CFA24C4FF781B9E6213052DAA233496E9E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelFieldAudit7b.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldAudit7b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelFieldAudit7b.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldAudit7b.lean.txt",
+      "sha256": "E0F456F06D526E4B869B5DAC2528F3DA4F8E1DB932EA16FAE838D0D37F4A6A3F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelFieldAudit7b.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldAudit7b.log",
+      "sha256": "60FD35976E3BBE1CBC3083500BBD1F84FE6644373A7F2D0526E66778E097623C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelFieldAudit7c.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldAudit7c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelFieldAudit7c.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldAudit7c.lean.txt",
+      "sha256": "F85A6FF694E9FED938186982B931E501E7D0217CD53D500D9B1D182C95E0AA86"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelFieldAudit7c.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldAudit7c.log",
+      "sha256": "AD2AC0B60971BA5DBB276581D27F9135D6EB33112D7B6F843A90B36A0D91014E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelFieldDependencyAudit7.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldDependencyAudit7.lean.txt",
+      "sha256": "48BD9EDC37CFB0C898705568A1D51FC41AFA8A7DEE9B992196A3916FE2C520A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelFieldDependencyAudit7b.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldDependencyAudit7b.lean.txt",
+      "sha256": "8B22F761439BBA36EE435642CC602360D4B68A0B4252CF005CF0397C885078A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelFieldDependencyAudit7c.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldDependencyAudit7c.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelFieldDependencyAudit7c.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldDependencyAudit7c.lean.txt",
+      "sha256": "2F96DC538802EB748209215F3A6AA24366B4AA662B5629188112C3B40ADDC59F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelFieldDependencyAudit7c.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldDependencyAudit7c.log",
+      "sha256": "481A1020B384BF1926B45545BD1597A96DFA8392777FC5BF901CF3C906C80FBC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelFieldDependencyAudit7d.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldDependencyAudit7d.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelFieldDependencyAudit7d.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldDependencyAudit7d.lean.txt",
+      "sha256": "B3FB97DDC5DE28D5C55585398A2B1947D073905F28D29948C5249B5EF11BBF24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelFieldDependencyAudit7d.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldDependencyAudit7d.log",
+      "sha256": "8C64E44DB5F5768EEE015E9A21C2FFE33EE2D9666028759B2B0196D685E7E093"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelFieldV2.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldV2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelFieldV2.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldV2.lean.txt",
+      "sha256": "CD594D254F8347A87167300E03326C3EEC1840248D18FB43C7F28500EE95886D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelFieldV2.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldV2.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelGroup.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelGroup.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelGroup.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelGroup.lean.txt",
+      "sha256": "AD002F85AB59C7141F436217094A70E63F3CBFB0570938A7D44660EB217A991C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelGroup.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelGroup.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelGroupV2.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelGroupV2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelGroupV2.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelGroupV2.lean.txt",
+      "sha256": "3218E1EA72F4E6CD85FD06459939A842BA5026B9D8E0F5B9DB2FCB91AF01C971"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelGroupV2.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelGroupV2.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeModularOrbit.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeModularOrbit.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeModularOrbit.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeModularOrbit.lean.txt",
+      "sha256": "D63B1D9656C35905470CACC2782AEDCAF98A32ECCE2EC5D309E4DE0525BBAAD7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeModularOrbit.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeModularOrbit.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeOrbitMonicAudit2.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeOrbitMonicAudit2.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicAudit2.lean.txt",
+      "sha256": "755BAFF259306C247509CC580363AB85E6BEF06266D50F916D806908A44A780F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeOrbitMonicAudit2.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicAudit2.log",
+      "sha256": "879B62005C2B379E7D69B0A7DB08DE41B3DB87FAEE12912466836544FA4D17F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeOrbitMonicAudit2b.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicAudit2b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeOrbitMonicAudit2b.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicAudit2b.lean.txt",
+      "sha256": "5739B9C0B468E2E0739696D2F561E756AB5DB4CE1824C980FFE959149AE9F395"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeOrbitMonicAudit2b.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicAudit2b.log",
+      "sha256": "7ABDD683DAF0484AB02041D2B043DDF17DD7EAB400F0A6AAE7D57E17A35729E6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeOrbitMonicDependencyAudit2.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeOrbitMonicDependencyAudit2.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicDependencyAudit2.lean.txt",
+      "sha256": "C997A843DD1920E40EAB316D076A2A12842A42A34AB20F14D01425B658127421"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeOrbitMonicDependencyAudit2.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicDependencyAudit2.log",
+      "sha256": "3E63E1D94151F0A57F7B541400697EC67113EC0B241BEA242B3F762DFC1F0714"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeOrbitMonicDependencyAudit2b.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicDependencyAudit2b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeOrbitMonicDependencyAudit2b.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicDependencyAudit2b.lean.txt",
+      "sha256": "6127739A626EE0D68AC9FAA8BA703E21579D125066A1AF37CF429B9265895CC3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeOrbitMonicDependencyAudit2b.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicDependencyAudit2b.log",
+      "sha256": "3E63E1D94151F0A57F7B541400697EC67113EC0B241BEA242B3F762DFC1F0714"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePoleBounded.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickePoleBounded.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePoleBounded.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickePoleBounded.lean.txt",
+      "sha256": "4763C5EDDF0F5A28926B9AF62B9AAD994B81BDA5A9E8A97962155B0152159544"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePoleBounded.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickePoleBounded.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePoleBoundedV2.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickePoleBoundedV2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePoleBoundedV2.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickePoleBoundedV2.lean.txt",
+      "sha256": "4763C5EDDF0F5A28926B9AF62B9AAD994B81BDA5A9E8A97962155B0152159544"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePoleBoundedV2.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickePoleBoundedV2.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeProductTransportAudit4.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeProductTransportAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeProductTransportAudit4.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeProductTransportAudit4.lean.txt",
+      "sha256": "4EDC653A41A530733ADF10B845D2C5010D0439C585422DD14359B34288CE8A3D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeProductTransportAudit4.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeProductTransportAudit4.log",
+      "sha256": "0342C8E6F239C67658CEFE5422AC48619C737816008F2584541D3CD7DCEFB049"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeProductTransportDependencyAudit4.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeProductTransportDependencyAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeProductTransportDependencyAudit4.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeProductTransportDependencyAudit4.lean.txt",
+      "sha256": "1F0823CB15002045C0A541A50F070A02D4EC5E9DC8360432B272502721A63EED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeProductTransportDependencyAudit4.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeProductTransportDependencyAudit4.log",
+      "sha256": "A95A8CC329404A9FDA45089D6E31DC3554B175F93EE3AF238669EA89F5FF6CFC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeSeparationAudit5.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeSeparationAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeSeparationAudit5.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeSeparationAudit5.lean.txt",
+      "sha256": "CACC36F6DFADCE9764D5C193F6C3849D3C9F81CF35004E005C4FA04A1F859B29"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeSeparationAudit5.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeSeparationAudit5.log",
+      "sha256": "18642F6D6A5FF641E9E61419F7107E89A89CB238446DD3E7FF9599D37946D1E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeSeparationDependencyAudit5.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeSeparationDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeSeparationDependencyAudit5.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeSeparationDependencyAudit5.lean.txt",
+      "sha256": "C85E394F31DFBDBEBD246EF570F8227C035BFF90C8333C98E9653EE55AA0C284"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeSeparationDependencyAudit5.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeSeparationDependencyAudit5.log",
+      "sha256": "0B2F09FEB0F932C1CF7A1360997D65D843D259F0E59B8C99C31FA56A555A4154"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableAlgebra.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableAlgebra.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableAlgebra.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableAlgebra.lean.txt",
+      "sha256": "ED6414796FF5B950D268C30E5F86D893BB026E6F7F344B5FF662CA8757997577"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableAlgebra.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableAlgebra.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableEmbedding.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableEmbedding.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableEmbedding.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableEmbedding.lean.txt",
+      "sha256": "8FDC4B7E994886DE4DA64B53F7ACE5AC37D8B496CE5869DDAD567A6105934FD6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableEmbedding.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableEmbedding.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableFamilyAudit5.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyAudit5.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableFamilyAudit5.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyAudit5.lean.txt",
+      "sha256": "0640DA8116D1D577CA58E526F93773D2778B1EC3D0F79B4D9D3246EDE2672697"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableFamilyAudit5.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyAudit5.log",
+      "sha256": "7716FC7ECCA1D657D94A9EBA6DABA5AE156AD55DAA8E97AF05CFD294C7109958"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableFamilyAudit5b.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyAudit5b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableFamilyAudit5b.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyAudit5b.lean.txt",
+      "sha256": "6489054A75745BB9AABBFD2D89D3DEF5A8A74A06E07CC603E5324889FA7F525B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableFamilyAudit5b.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyAudit5b.log",
+      "sha256": "F77CD56D33E0FF8695578F843807618A1C9F47403B539F6D5F008351F200BB1B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableFamilyDependencyAudit5.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyDependencyAudit5.lean.txt",
+      "sha256": "6540D7DB1061905F642A18B77BA83F6A2A56D92A9F6F31DFF62B45B6EE41F776"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableFamilyDependencyAudit5b.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyDependencyAudit5b.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableFamilyDependencyAudit5b.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyDependencyAudit5b.lean.txt",
+      "sha256": "07785042F12E3A2379D62D3FDC933EA572142D92814228DB924ADF48BA2D1C1E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableFamilyDependencyAudit5b.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyDependencyAudit5b.log",
+      "sha256": "681CE19D3DF588E794AC590620C558E311BD288CDC20A5A37696DFB519F58B41"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableFamilyDependencyAudit5c.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyDependencyAudit5c.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableFamilyDependencyAudit5c.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyDependencyAudit5c.lean.txt",
+      "sha256": "304F9204EDA6F7B18188B8AB9CB808C65116F7CBA8C6532FD15CA3124AA4C11A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableFamilyDependencyAudit5c.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyDependencyAudit5c.log",
+      "sha256": "4F96AFC274B448985B08A9423A7B9A9E49963711C3B36DBCE5B05AFE9448A89C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableField.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableField.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableField.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableField.lean.txt",
+      "sha256": "81475AA061B0F2B3EDBE4669A293BAC1648986445A409292A117F9DE6D143822"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableField.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableField.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableFraction.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFraction.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableFraction.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFraction.lean.txt",
+      "sha256": "CA19F3FD87F6C5B9ABE3308D429C687FC119E2ED3A87BB3BE224240A83D563A2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableFraction.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFraction.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableGroup.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableGroup.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableGroup.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableGroup.lean.txt",
+      "sha256": "8D83847A4ECD26877B813D02E3E487C22E33F053CFED08E026144B4223EB3F37"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableGroup.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableGroup.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableMonic.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableMonic.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableMonic.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableMonic.lean.txt",
+      "sha256": "F96B452D204AAE69171213C15F2F861E222DB064132C0D55CD97812DE68CAA38"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableMonic.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableMonic.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLevelOneAnalyticPolynomialAudit3.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceLevelOneAnalyticPolynomialAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLevelOneAnalyticPolynomialAudit3.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceLevelOneAnalyticPolynomialAudit3.lean.txt",
+      "sha256": "E7F0F6F851CE9555265AE56972BEA5AA8E7EAE04CE61AF5CCA09184058534E95"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLevelOneAnalyticPolynomialAudit3.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceLevelOneAnalyticPolynomialAudit3.log",
+      "sha256": "D5A83E37D027783F12EAFDED21EE870B4E7D907C6BD97260219B92E6D6480FFE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLevelOneAnalyticPolynomialDependencyAudit3.exit",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceLevelOneAnalyticPolynomialDependencyAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLevelOneAnalyticPolynomialDependencyAudit3.lean",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceLevelOneAnalyticPolynomialDependencyAudit3.lean.txt",
+      "sha256": "D4185B6D1F618462AB4D5DBDFC4C2B485462128F9A7044CDAD69EDCDF1DAF800"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLevelOneAnalyticPolynomialDependencyAudit3.log",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceLevelOneAnalyticPolynomialDependencyAudit3.log",
+      "sha256": "30014F1FC5B0C1C807C9854B55DE22373BAEC93C8A74D1004A38B1339801DD95"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers656.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/consumers656.txt",
+      "sha256": "217E891ADE142E1C9AC4562E124D74EBA595B305ABADE216728853E56373A376"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_fricke_base_change_dependencies_662.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fetch_fricke_base_change_dependencies_662.py",
+      "sha256": "48F7AAA345D2A4395BD624150195FE024CCDA3630F58E2D0B358FB1114A4832B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_fricke_level_structure_656.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fetch_fricke_level_structure_656.py",
+      "sha256": "6BEDB1133BE163804DBA8219FE71115B9B4C446E649E7508DBC981F339276468"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_fricke_rational_descent_661.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fetch_fricke_rational_descent_661.py",
+      "sha256": "C0A658D061A0B81EA6E9C0FEED4FD09CEE23DD39A73264841ED3BFD6DC6C20A3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-base-change-dependencies-reuse-assessment-662.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-base-change-dependencies-reuse-assessment-662.json",
+      "sha256": "05BB140206D29EDC5DB0AD6AACFB402F12CFE30522E86942E18BFEC783EA8582"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-cyclotomic-transport-route-652.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-cyclotomic-transport-route-652.json",
+      "sha256": "63586D1BF554FAC73E0A13E1876A06BCE95FCA2045D0BC304F90BB1F5A31E0C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-j-transcendence-local-reuse-route-663.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-j-transcendence-local-reuse-route-663.json",
+      "sha256": "DC4D46285A1E71FC88BC71097723061B1B25EBCCCB699CE4CCE4A3C3FA21BCE5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-level-field-route-658.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-field-route-658.json",
+      "sha256": "C744369ED4083C369D3D5493B9F40A8702D1BB2AAC4C4985A5584E0B83011B9B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-level-field-route-658d.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-field-route-658d.json",
+      "sha256": "9A45F845A7F92F36DF3887F81B4E564EBED5864306E93EBFB0CF189E8DEF3F48"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-level-structure-reuse-assessment-656.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-structure-reuse-assessment-656.json",
+      "sha256": "76EE3F8CDAB6B9DDD75312AC308ECBE3FE0E50A8614173CDDC49BAD3AE05C98E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-orbit-monic-local-reuse-route-660.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-orbit-monic-local-reuse-route-660.json",
+      "sha256": "FFFAFDBBE1B94CE63229F88ED729AA6E8B145051F644E5135542A04D7A142021"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-orbit-monic-local-reuse-route-660b.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-orbit-monic-local-reuse-route-660b.json",
+      "sha256": "03C7D5DEB094E1DBF4C1361B1C4B96D83945107ADC95FFBD288447815D726AFF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-product-transport-route-654.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-product-transport-route-654.json",
+      "sha256": "7E48B946A41FD536F6C7CA56EBBF00B5D13467B915232C3964B24EB75CF31CA9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-rational-descent-reuse-assessment-661.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-rational-descent-reuse-assessment-661.json",
+      "sha256": "58819BB661549FB4325DFF734F64078DAADFFD96C85586585F2EA20807A8401E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-separation-local-reuse-route-655.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-separation-local-reuse-route-655.json",
+      "sha256": "D641F69B86165D4C621635476E5B0B1B3AB169BF964D6B8738026AC01ABF87EE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-stable-family-route-659.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-family-route-659.json",
+      "sha256": "F9C919F88B90CBEAAE7A98197DE38C1B313FE90181D940F918E679E49F7DEE9C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-stable-family-route-659b.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-family-route-659b.json",
+      "sha256": "580A6B3266808FEB44D7CCFB1BF8AB17037841B543E1FFA62850E36ABD648D71"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-stable-family-route-659c.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-family-route-659c.json",
+      "sha256": "EFCE6DC837944824299EB83655BB03F7A02DC5C5E65B79F23829322F6D93B4C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\level-one-analytic-polynomial-route-657.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/level-one-analytic-polynomial-route-657.json",
+      "sha256": "2F12CD437BECC5AAB69249190765C8F98E112FA26AF29A12286B8A96016847FE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules656.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/modules656.json",
+      "sha256": "E3BCD253F4CF89EB3FBC092F341973EDB5BD0E5A8A7A01F8098CE18A1EE9E6C1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_cyclotomic_transport_652.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_cyclotomic_transport_652.py",
+      "sha256": "C0545298B9E140A4370946ED3DD8D1718BC5F4F1F75B84049AA9486FAEDE3025"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_cyclotomic_transport_audit_652.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_cyclotomic_transport_audit_652.py",
+      "sha256": "E446799DEA0AEEBE4BDF018AF8A27BD23CBBABDB69F70FACCA73E7FF944BA189"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_j_transcendence_audit_663.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_j_transcendence_audit_663.py",
+      "sha256": "A48B8A00A8D00A3818443DF43C6CDF72425AE266272CBE818AD3452154848E4A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_level_dependency_658d.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_level_dependency_658d.py",
+      "sha256": "4AF1DC938F77388E685CCDCB9CDF1BF410B755F159964EAD7A23CF3443242796"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_level_field_audit_658.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_level_field_audit_658.py",
+      "sha256": "CC4985372A4D106CC74EA7D97A6D1679EB0CB96B942BE45BCD609992F1A7CB2F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_level_field_audit_658b.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_level_field_audit_658b.py",
+      "sha256": "66C25B45F98DC38FCBA142BA1966D07A9AD2A714D21CACE3762F549ED19EA949"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_level_field_audit_658c.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_level_field_audit_658c.py",
+      "sha256": "6F02A9D6B2B7499842970923D9EB5B145FCC56AA78BD3C1B9E94A7427DF99EEC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_level_field_v2_658b.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_level_field_v2_658b.py",
+      "sha256": "3DBD11CE0686F3DE903C23CD4588BC31AE3BA3C92A34D44AE6C82ECA172C7D4C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_orbit_monic_audit_660.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_orbit_monic_audit_660.py",
+      "sha256": "D940F658EADA91C8274AB1D097522596E7F0D0347A1FE115CC5F20BF6FCA89DA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_orbit_monic_audit_660b.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_orbit_monic_audit_660b.py",
+      "sha256": "0A05E5F8A9E11A4F07912F28744EE8EF7DEF3E7C00C157DE5969FA3F083D3452"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_product_transport_audit_654.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_product_transport_audit_654.py",
+      "sha256": "FBE71CF4BAFF4499E724C40D1FB3E70AF4BEB7895C70F0D3B256C8D09259C0DA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_separation_audit_655.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_separation_audit_655.py",
+      "sha256": "728F8F0E1F427319773C1CC91C872447B18067D187BC50674CA3EFFFE8D5857F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_stable_documented_successor_659b.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_stable_documented_successor_659b.py",
+      "sha256": "53C0B634ECC46AB4DDB022F8E1DDFF4F096A9B86586C4606EE37D7B22168F644"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_stable_family_659.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_stable_family_659.py",
+      "sha256": "7533611019AF9A4BD91402BCA5EDCF263F1598EB52170D36976520A88EA3EB49"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_stable_family_audit_659.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_stable_family_audit_659.py",
+      "sha256": "AB4D694FC6CCB02FFAEBD83BA52896215CD92B50AB1D84E49F7DC15DFE18D7C9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_stable_family_audit_659b.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_stable_family_audit_659b.py",
+      "sha256": "01DA16F7636332E9352C7EEBA3943198E349E85FCB21B382E2E2DC13CE1F908C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_level_one_analytic_polynomial_audit_657.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_level_one_analytic_polynomial_audit_657.py",
+      "sha256": "26FB38D1A779422B58B72AED7C16A5B8FEBA3FBD3A12F6AD433A2CC2DF3A5537"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record656.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/record656.py",
+      "sha256": "56A01CCA2B8B58C4E9566791EEFA74752BE523D013F0D8C29A5BA8E11772342F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_fricke_cyclotomic_transport_652.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/record_fricke_cyclotomic_transport_652.py",
+      "sha256": "DA0DE2E85F7765D363C72C5C800872177E2614306980D23FFDCD1644F7B9E2DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_fricke_j_transcendence_663.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/record_fricke_j_transcendence_663.py",
+      "sha256": "19C1D171DC316CF8FA94079862CA05E014F1076DEF1EF1480E9A6CA80B83861E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_fricke_level_field_658d.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/record_fricke_level_field_658d.py",
+      "sha256": "4615B3823794469CF9455732A9BEC2F781BA9D64736210A0D74B89655ECD65B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_fricke_orbit_monic_660b.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/record_fricke_orbit_monic_660b.py",
+      "sha256": "C798E4C91020AF7C206760FEEFC01AF299F33F8E9E49D949A3DC55739BDD7B0E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_fricke_product_transport_654.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/record_fricke_product_transport_654.py",
+      "sha256": "D7EA28315EB440B8E7D47752B5B4A0D607E7DEA0D83184CE3F8716F9EB075430"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_fricke_separation_655.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/record_fricke_separation_655.py",
+      "sha256": "CA834D9159DB20A14408A8D6BE187A2911DFEA1A0D76ED9BA31ABC285AEA606D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_fricke_stable_family_659c.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/record_fricke_stable_family_659c.py",
+      "sha256": "94267185C94D16B93DFC0941B23CD9305125768FE304A2DB58F54014EDF72313"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_level_one_analytic_polynomial_657.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/record_level_one_analytic_polynomial_657.py",
+      "sha256": "21D158ADF2149375DDD776C35E126FFDCB19AD90DAB7E0DE5B9B470CB3CB8D01"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register656.py",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/register656.py",
+      "sha256": "BF3B1416D751C54303997A57B8A52DED10A9F1A5072BB2F70CA9B2B90CF77923"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations656.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/registrations656.json",
+      "sha256": "A8970B3BBAADE7FE44D8F0B11F0A96DFC9E239E995A97BB2C208E3302646BE27"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section656.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/section656.txt",
+      "sha256": "FDB3596CFB58F00FFFCEF78B38A31512382C47DE8CA147785D1F362EADE5D677"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-cyclotomic-transport-3-audit-config.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-cyclotomic-transport-3-audit-config.json",
+      "sha256": "FD60B978FF0EEB07A700AE946AB88B5ACE78942A9749A7B3E252DAEAB373D71A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-cyclotomic-transport-3-scratch-receipt.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-cyclotomic-transport-3-scratch-receipt.json",
+      "sha256": "E44D705E88DA0B3DF3AFB519601CB8AF560A459EB90284E5A3FBA5EA51C56CC1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-j-transcendence-1-audit-config.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-j-transcendence-1-audit-config.json",
+      "sha256": "C1AF89547B55C66AC41075C2A4574806A0FA0085A871135B0283F6D5F47FB5FD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-j-transcendence-1-scratch-receipt.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-j-transcendence-1-scratch-receipt.json",
+      "sha256": "7D49A44AF9BFE468AEAECEB5D8A9EC7F51E8BD4AFB1415B59FF847C3D1C48821"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-level-field-7d-audit-config.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-level-field-7d-audit-config.json",
+      "sha256": "45286D71AF2ACCEB0FF8823DCAD1028434C2A551B4338861ECE6BC0F4C645692"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-level-field-7d-scratch-receipt.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-level-field-7d-scratch-receipt.json",
+      "sha256": "DADA7AC2A4D909BEC106D53437F5F90A2054993FF1A234793972906F3649BDD2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-orbit-monic-2b-audit-config.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-orbit-monic-2b-audit-config.json",
+      "sha256": "AC4B2695B055EE4D8550BAA8C54698B1DAE8BA87181417A2237045FBB46419B8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-orbit-monic-2b-scratch-receipt.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-orbit-monic-2b-scratch-receipt.json",
+      "sha256": "46DF161D5C44AB8D5D94B89CDE615B6F63617F266587BF94D072B54CB80795A2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-product-transport-4-audit-config.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-product-transport-4-audit-config.json",
+      "sha256": "DDB1A0273570E0DECA3C351E8C4B924B3C423877D7C0ED756C7F91DCF5896EAD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-product-transport-4-scratch-receipt.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-product-transport-4-scratch-receipt.json",
+      "sha256": "4AE13D58D0745E22B3D00FCB8FABFD41E76C0B72FF85C650159C2929D4F6EA94"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-separation-5-audit-config.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-separation-5-audit-config.json",
+      "sha256": "FB38C66F332971F321A206B64E1AAB12C030EADEED6EFEA20F401537267B72EE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-separation-5-scratch-receipt.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-separation-5-scratch-receipt.json",
+      "sha256": "176B0C3D74073586D550A442319F7527B30E77DFD3D50D302E1C918B9D01597D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-stable-family-5c-audit-config.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-stable-family-5c-audit-config.json",
+      "sha256": "5C0B6148A39412699F01E3C5F36C8D7AACE2C1325EAE212D59B8D1F443C825D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-stable-family-5c-scratch-receipt.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-stable-family-5c-scratch-receipt.json",
+      "sha256": "B1DF4E3D301A85E7BA75EA3204A4239A254484895B7191DF1CF9E7530268A842"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-level-one-analytic-polynomial-3-audit-config.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-level-one-analytic-polynomial-3-audit-config.json",
+      "sha256": "B6899632253196372E716F1D95DD207980ED481C01987A116B64144619912C6C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-level-one-analytic-polynomial-3-scratch-receipt.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-level-one-analytic-polynomial-3-scratch-receipt.json",
+      "sha256": "49256FC40BD57DE11D337B120A8EB6DD987B4661D3509436CE3ACA27EFC52A1D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status656.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/status656.txt",
+      "sha256": "FA3D967B3D63E8B202BB4A67FCF311639A84680CA20796D05A115EEAA1938BD7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-level-structure-reuse-656\\P2M\\Sol\\S_WLight_exists_levelFraction_of_stable_family.lean.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-structure-reuse-656/P2M/Sol/S_WLight_exists_levelFraction_of_stable_family.lean.txt",
+      "sha256": "2E5CA4FE2711CB5A6E5E320CCE172BA1A516F54A25C8D68F8A0B08F0565B9AF7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-level-structure-reuse-656\\P2M\\Sol\\S_WLight_exists_monicRel_j_of_mdifferentiable_levelFraction.lean.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-structure-reuse-656/P2M/Sol/S_WLight_exists_monicRel_j_of_mdifferentiable_levelFraction.lean.txt",
+      "sha256": "CD6B0DA4648312099D2524D806807949F7631DE8471DE0EBD8EF6B12FF75B06C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-level-structure-reuse-656\\P2M\\Sol\\S_WLight_levelN_structure_package.lean.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-structure-reuse-656/P2M/Sol/S_WLight_levelN_structure_package.lean.txt",
+      "sha256": "CB0AFE145E66860662EAC268A3B2EAC5D4CE5887CE4EB0E9F223738C85D54446"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-level-structure-reuse-656\\snapshots.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-structure-reuse-656/snapshots.json",
+      "sha256": "83632D26BA086970EE3E395A0827DD87564A81D7C0DF4BE9CA82A7795072DFDD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-rational-descent-reuse-661\\P2M\\Sol\\S_WLight_exists_monicRel_j_K_of_mdifferentiable_frickeQuotient.lean.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-rational-descent-reuse-661/P2M/Sol/S_WLight_exists_monicRel_j_K_of_mdifferentiable_frickeQuotient.lean.txt",
+      "sha256": "8E7B9BBA549A8265AA3BC80080C19D9C388F37E5D89898C666C9A23F12E09FB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-rational-descent-reuse-661\\P2M\\Sol\\S_WLight_exists_qExpansion_coeff_mem_of_mdifferentiable_levelFraction.lean.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-rational-descent-reuse-661/P2M/Sol/S_WLight_exists_qExpansion_coeff_mem_of_mdifferentiable_levelFraction.lean.txt",
+      "sha256": "267970160C18780A2F148212BEF2529E31AFD007A8D4CE59CD1227F7871C4208"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-rational-descent-reuse-661\\P2M\\Sol\\S_WLight_frickeFunction_intBaseChange.lean.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-rational-descent-reuse-661/P2M/Sol/S_WLight_frickeFunction_intBaseChange.lean.txt",
+      "sha256": "D36D134E23EA58F5405454E3CC718B9CE70CE48457F831D8F20A100CC60C7B21"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-rational-descent-reuse-661\\snapshots.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-rational-descent-reuse-661/snapshots.json",
+      "sha256": "24AD76F4696B77BA63A0130D9FEEFE484992B8F8FE9CF144A7F8B9A6B6C61A10"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-base-change-dependencies-reuse-662\\P2M\\Sol\\S_IsIntegral_mem_span_of_adjoin_simple_constants.lean.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-base-change-dependencies-reuse-662/P2M/Sol/S_IsIntegral_mem_span_of_adjoin_simple_constants.lean.txt",
+      "sha256": "49302D5E9CB6E41812AC4B5FBF9E282163F2CF6BA2AA7470F0CB8097D6B5CC51"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-base-change-dependencies-reuse-662\\P2M\\Sol\\S_IsIntegral_mem_span_of_adjoin_simple_constants_transcendental.lean.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-base-change-dependencies-reuse-662/P2M/Sol/S_IsIntegral_mem_span_of_adjoin_simple_constants_transcendental.lean.txt",
+      "sha256": "B3AB91EC54374CF1DB366726AB29F1FD36A9CE17A5F7E61AB1FCE78905596D48"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-base-change-dependencies-reuse-662\\P2M\\Sol\\S_WLight_exists_mdifferentiable_div_of_monicRel.lean.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-base-change-dependencies-reuse-662/P2M/Sol/S_WLight_exists_mdifferentiable_div_of_monicRel.lean.txt",
+      "sha256": "BB99F0200DACBBB2F8DD9F1A0AAB1395E4DF8A50701B8CAC597AB241CDCB0E9C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-base-change-dependencies-reuse-662\\P2M\\Sol\\S_WLight_frickeFunction_orbit_package.lean.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-base-change-dependencies-reuse-662/P2M/Sol/S_WLight_frickeFunction_orbit_package.lean.txt",
+      "sha256": "7AE39C51922BCC81C596D3AAD859CB35A869BCAF06681513A00E88FAEE3EC165"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-base-change-dependencies-reuse-662\\snapshots.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-base-change-dependencies-reuse-662/snapshots.json",
+      "sha256": "D7D29446949EAB6F93DD69CD48EEB76DDF1C3815FB2D4EAC6F228E834F18E2A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-level-field-api-failure-658\\SourceFrickeLevelField.exit.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-field-api-failure-658/SourceFrickeLevelField.exit.txt",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-level-field-api-failure-658\\SourceFrickeLevelField.lean.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-field-api-failure-658/SourceFrickeLevelField.lean.txt",
+      "sha256": "580C102F295E1ADB3F78C89FAD2ED3C8B77D3DE838AF5132A8D20CB7070E10C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-level-field-api-failure-658\\SourceFrickeLevelField.log.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-field-api-failure-658/SourceFrickeLevelField.log.txt",
+      "sha256": "AAD64E0B16E3CDC4AA8C2C64CAC62B80DDB680A3F71E5469CE2C1D87DAE80242"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-level-field-instance-failure-658\\SourceFrickeLevelField.exit.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-field-instance-failure-658/SourceFrickeLevelField.exit.txt",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-level-field-instance-failure-658\\SourceFrickeLevelField.lean.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-field-instance-failure-658/SourceFrickeLevelField.lean.txt",
+      "sha256": "80A08554CB3884AE91988B3943CCC57BA581EEEAB1B917C50439E11C9231A9B1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-level-field-instance-failure-658\\SourceFrickeLevelField.log.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-field-instance-failure-658/SourceFrickeLevelField.log.txt",
+      "sha256": "DB7A0CC96391C7FDCF8DC61A92BDB9AB274881DB5F93102D3DB5E0CAF600C5CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-fixed-field-j-instance-failure-658\\SourceFrickeFixedFieldJ.exit.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-fixed-field-j-instance-failure-658/SourceFrickeFixedFieldJ.exit.txt",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-fixed-field-j-instance-failure-658\\SourceFrickeFixedFieldJ.lean.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-fixed-field-j-instance-failure-658/SourceFrickeFixedFieldJ.lean.txt",
+      "sha256": "C4B5CAAA1FD184A275A2974F1C2BAF16C8215DDB691989C9FE07C8C246B1A008"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-fixed-field-j-instance-failure-658\\SourceFrickeFixedFieldJ.log.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-fixed-field-j-instance-failure-658/SourceFrickeFixedFieldJ.log.txt",
+      "sha256": "5A67459C2AC4742C6EFC6751FAE71250108ED0C203F640414204FBDE0BA4272F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-fixed-field-j-action-failure-658\\SourceFrickeFixedFieldJ.exit.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-fixed-field-j-action-failure-658/SourceFrickeFixedFieldJ.exit.txt",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-fixed-field-j-action-failure-658\\SourceFrickeFixedFieldJ.lean.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-fixed-field-j-action-failure-658/SourceFrickeFixedFieldJ.lean.txt",
+      "sha256": "196AA1045C08D3AEE76786AE3D59A40D65049B352B4B244D5C3B8A789331F609"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-fixed-field-j-action-failure-658\\SourceFrickeFixedFieldJ.log.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-fixed-field-j-action-failure-658/SourceFrickeFixedFieldJ.log.txt",
+      "sha256": "BB0FF2ADA30E7A93F6C67D33855B058A0459FC0FE33E0E304E5762740C673FEA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-stable-field-instance-failure-659\\SourceFrickeStableField.exit.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-field-instance-failure-659/SourceFrickeStableField.exit.txt",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-stable-field-instance-failure-659\\SourceFrickeStableField.lean.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-field-instance-failure-659/SourceFrickeStableField.lean.txt",
+      "sha256": "34B1212685736BF6371F4DAA6A9142D9EFE8F4F5AC44B14083ACAE532D273EFA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-stable-field-instance-failure-659\\SourceFrickeStableField.log.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-field-instance-failure-659/SourceFrickeStableField.log.txt",
+      "sha256": "39895F2294FFE28EB64D06AA486D16E41E03C457887C68F9106DA098CCA7EA53"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-stable-v2-before-variable-cleanup-659b\\SourceFrickeStableAlgebraV2.exit.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-v2-before-variable-cleanup-659b/SourceFrickeStableAlgebraV2.exit.txt",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-stable-v2-before-variable-cleanup-659b\\SourceFrickeStableAlgebraV2.lean.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-v2-before-variable-cleanup-659b/SourceFrickeStableAlgebraV2.lean.txt",
+      "sha256": "F938827C3E4CE59296786278CE6F1BB1A03959FAEAA338DEA279C118DD438C40"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-stable-v2-before-variable-cleanup-659b\\SourceFrickeStableAlgebraV2.log.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-v2-before-variable-cleanup-659b/SourceFrickeStableAlgebraV2.log.txt",
+      "sha256": "E05490521877E83E5F17F8C9C8AD726BE2B5CA92E92F1CC87CEEE5791124272C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-stable-v2-before-variable-cleanup-659b\\SourceFrickeStableGroupV2.exit.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-v2-before-variable-cleanup-659b/SourceFrickeStableGroupV2.exit.txt",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-stable-v2-before-variable-cleanup-659b\\SourceFrickeStableGroupV2.lean.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-v2-before-variable-cleanup-659b/SourceFrickeStableGroupV2.lean.txt",
+      "sha256": "C471B94D78C28031767BE26A658663EB805E34D210C91565BACDF5EF5F2EDE8D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-stable-v2-before-variable-cleanup-659b\\SourceFrickeStableGroupV2.log.txt",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-v2-before-variable-cleanup-659b/SourceFrickeStableGroupV2.log.txt",
+      "sha256": "E15443802EE68E214607AFDCACCEEBF7DC141AF4E62D108B9B80E531B7C967C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-cyclotomic-transport-3-reuse-review-20261026.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-cyclotomic-transport-3-reuse-review-20261026.json",
+      "sha256": "359D38E656CC4CFF1BF65F1C5B136EDA52754BD4B265C47DA269001D167C14D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-product-transport-4-reuse-review-20261026.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-product-transport-4-reuse-review-20261026.json",
+      "sha256": "1C110D87B2E14D0B536F2CA7D8DEDFC49E9F7F89830E78D27B8B5D997664E9AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-separation-5-reuse-review-20261026.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-separation-5-reuse-review-20261026.json",
+      "sha256": "40832C11B4A85DEE5473555EAC55D2B510B7128B313EB5AEAD0CDE73D0A27911"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-level-one-analytic-polynomial-3-reuse-review-20261026.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-level-one-analytic-polynomial-3-reuse-review-20261026.json",
+      "sha256": "B7EB2050CBBBD8DA53CDB2F095B693FDF6EA006AC9370836639D26B2D8331C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-level-field-7d-reuse-review-20261026.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-level-field-7d-reuse-review-20261026.json",
+      "sha256": "EBA503500DA38683F3CB2C1F5368A8E03A2475E28952F4308E1B691A914FEB0A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-stable-family-5c-reuse-review-20261026.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-stable-family-5c-reuse-review-20261026.json",
+      "sha256": "52185EBDFD50A194C7E85A16879D8B48913ADC3976CBCDB5BCC96CD430B2FACA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-orbit-monic-2b-reuse-review-20261026.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-orbit-monic-2b-reuse-review-20261026.json",
+      "sha256": "7BE72ACB750EEE47DA9A55E1B124E6CE3FB343075E15F3B0892B91BBD2531923"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-j-transcendence-1-reuse-review-20261026.json",
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-j-transcendence-1-reuse-review-20261026.json",
+      "sha256": "3EAE89DE03C24C1244710B46F7B0756808D7BB23C61D28B9C210E7A7CB76DD41"
+    }
+  ]
+}

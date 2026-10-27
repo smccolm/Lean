@@ -1,0 +1,17 @@
+### Genuine first symmetric nonvanishing at one — 7 October 2026
+
+The actual formal geometric series with root w has coefficients w^n. Finite products give the literal local Euler coefficients. Formal differentiation and the actual linear-denominator identity prove Newton's recurrence `(n+1)c_(n+1)=sum_(j+l=n)c_j*trace_(l+1)`. Real nonnegative power traces therefore force every actual coefficient to be real and nonnegative. A separate geometric trace bound controls their norms. The actual Cauchy products of convergent geometric series prove absolute evaluation to the original finite reciprocal Euler denominators.
+
+At each unramified prime the augmented roots are 1, alpha, beta, with the genuine normalized Hecke roots. The nine tensor roots have power trace `(1+alpha^r+beta^r)^2`, which is real nonnegative by the already proved determinant-one real-trace recurrence. Ramified factors are omitted exactly. Thus the local coefficients are proved nonnegative, without assuming unit roots. The proved Rankin bound gives the coarse local bound `|c_p(r)| <= p^(6r)`; prime factorization constructs multiplicative actual Dirichlet coefficients with `|a(n)| <= n^6` and `a(1)=1`. These deliberately coarse convergence bounds require no Deligne input.
+
+Absolute evaluation and the true Euler products identify the L-series on Re(s)>7 with
+
+`L(1_Q,s) * R_f(s) * C_f(s) * Sym1_f(s)^2`,
+
+where the principal modulus, original Rankin convolution, exact finite ramified square correction and genuine first symmetric function are retained. This is equality with a constructed nonnegative coefficient series, not a postulated positivity field.
+
+If the actual first continuation vanished at one, its previously constructed divided-difference product would be entire and equal this L-series on the far right half-plane. Pinned Mathlib's `LSeries.positive_of_differentiable_of_eqOn` then makes it strictly positive at every real point. The already proved genuine Gamma-normalized trivial zero at `(1-k)/2` contradicts that positivity. Consequently the explicit entire first symmetric continuation is nonzero at one, and the earlier nonreal-boundary proof establishes nonvanishing throughout Re(s)>=1.
+
+The genuine Sato–Tate reduction now discharges orders one and two internally. Its remaining displayed arithmetic hypotheses are the actual good-prime norm bound and holomorphic nonvanishing continuations of the literal symmetric Euler products for orders at least three. This remains conditional and does not close DUB-17 or DUB-18. DUB-01–16 remain accepted; DUB-17–20 remain OPEN.
+
+Production files: [SpectralFormalSeries](Extension/Dubon2026/SpectralFormalSeries.lean), [SpectralFormalEvaluation](Extension/Dubon2026/SpectralFormalEvaluation.lean), [PrimitiveAugmentedTensor](Extension/Dubon2026/PrimitiveAugmentedTensor.lean), [EulerCoefficientAssembly](Extension/Dubon2026/EulerCoefficientAssembly.lean), [PrimitiveAugmentedCoefficients](Extension/Dubon2026/PrimitiveAugmentedCoefficients.lean), [PrimitiveAugmentedEuler](Extension/Dubon2026/PrimitiveAugmentedEuler.lean), [PrimitiveFirstNonvanishing](Extension/Dubon2026/PrimitiveFirstNonvanishing.lean). Four exact consumers expose the actual finite geometric coefficients, genuine factorization-assembled L-series and finite correction, explicit entire first continuation with its literal infinite Euler product, and the reduced higher-order Sato–Tate interface.

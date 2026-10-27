@@ -1,0 +1,146 @@
+{
+  "auditCorrection": {
+    "reason": "The required width-change theorem is in SourceFricke, not SourceFunctionField. The original failed VALUE-only audit is retained. Only its incorrectly qualified required name changes; no mathematical source or proof edge is removed.",
+    "originalAudit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicConjugationDependencyAudit13.lean",
+    "failedLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicConjugationDependencyAudit13.log",
+    "failedLogSha256": "6AE02C23CDCBBA84293DCB3371F8CA9A47CB374BC45E7509A2C2EDD9FA8996F0",
+    "successorAudit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicConjugationDependencyAudit13V2.lean"
+  },
+  "date": "2026-10-26 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> original Picard/H1, full/parabolic, transpose and diamond comparison -> actual differential/cusp comparison -> rational Fourier structure -> actual cyclotomic conjugate cusp forms.",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicAnalyticTransport.lean",
+      "sha256": "4514C5D651D1AE17CFF6E8659151D22616C3BB607AE08D7FB9B9EDB3137A8D67"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightCriterion.lean",
+      "sha256": "FBB850247B20A4B19CB355A3F3CB20AFC1288C5DE13698519245F2D799C3550F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightImage.lean",
+      "sha256": "E76C95612608840D7B510F6BD3CD68ACC4AFBC06C6FCB956DE823E5BEAC3CE42"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeEllipticCoordinateTwist.lean",
+      "sha256": "6E888033F715F1268FA7FCFD1814F460982A0EA6A9A7CF5B8D6C4E7DCA4B423D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeEllipticDivisibilityTwist.lean",
+      "sha256": "8DE916F1C6B226265970C1B8BCE99B111EB36701C7EDE01FF9815B39155692E8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightImageFourier.lean",
+      "sha256": "1D3A236C96D5622E433BD23C1F04711485B1E7C420C2EAE74AF2FA990F5543FA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicCuspSpan.lean",
+      "sha256": "58868C112C6DA750262A75551FDF71754FE3CF983C69C14B0609230178235D70"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspFrickeRationalSpan.lean",
+      "sha256": "9E741DD160C9413902CC185185DC46C072627609F57D349B6A9C98717B1F5BFD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SL2Reduction.lean",
+      "sha256": "9DD40DDE2439AAB39FDD9F96BACE4F866D547D14C31A1E86B2567C67598EF226"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-cusp-realization-reuse-644\\P2M\\Sol\\S_CuspForm_exists_gamma1_qCoeff_eq_algEquiv_apply_of_even.lean.txt",
+      "sha256": "7F47382FFE7793D0FD63FB6D68B2B33E26FFFC323F1A091EB99096B88536A261"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cyclotomic-transport-inputs-reuse-686\\P2M\\Sol\\S_ModularFunction_exists_mdifferentiable_sigmaTransport_of_frickeQuotient.lean.txt",
+      "sha256": "31F0D88DC16CD6FAFE2257FBF59CF1B1124F61BCC4865F779E09261C7393B711"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cyclotomic-transport-inputs-reuse-686\\P2M\\Sol\\S_CuspForm_exists_gamma1_frickeRational_sigmaTransport.lean.txt",
+      "sha256": "91908DF3C06FBE1A59F308B96F9FF7082AD2965A4D650FB83A628940F4F64A82"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cyclotomic-conjugation-route-688.json",
+    "sha256": "C209A2CB9BC6648E474681B89D45E3BAA1DF5DF1A98B057C3096F1F3ED51DFFE",
+    "review": {
+      "scope": 688,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> original Picard/H1, full/parabolic, transpose and diamond comparison -> actual differential/cusp comparison -> rational Fourier structure -> actual cyclotomic conjugate cusp forms.",
+      "assumptionsToDischarge": "Construct actual integral modular lifts using the already proved SL2 reduction surjectivity, with a direct Gamma1 translation lift preserving the original level. Adjoin induction on original j and Fricke generators transports polynomial fractions and their modular action. The analytic conjugate preserves Laurent order and all-cusp vanishing. Holomorphic division remains in the original cyclotomic fraction algebra, so the actual j and j-1728 power identities transfer both elliptic divisibilities. The already proved cusp characterization constructs an actual same-weight Gamma1 cusp form. Rational Eisenstein and discriminant expansions then transfer the literal width-one Fourier coefficients. None of these analytic, modular, cusp, elliptic or coefficient conclusions remains a premise. The source weight balance and original Fricke-image membership remain explicit; the proved original-image spanning theorem supplies the generating set.",
+      "remaining": "Descend the original-image spanning set from cyclotomic coefficients to rational Fourier coefficients using the newly constructed actual conjugates. Prove bounded denominators for the original integral-ratio field, arbitrary cusp differential realization and its converse, actual Hecke comparisons, original finite-character arithmetic realization, all-weight characteristic-zero association, arithmetic automorphy and higher continuation. No unrestricted odd-weight weight-balance claim is made. 16/20; DUB-17--20 OPEN.",
+      "shorterRouteReview": "The external coefficient-conjugation proof includes a preliminary descent for every cyclotomic-coefficient form. The existing original Fricke-image generating set already spans the actual cusp space. Construct conjugates only for that necessary generating set, preserving original image membership. Reuse local SL2 reduction, monic analytic reconstruction, cusp characterization, elliptic power identities and Laurent cancellation, avoiding a new rational-at-infinity or recursive coefficient-division framework. Two unused helpers were removed before freezing this scope. Native trace-dual basis results are reserved for the next rational-descent consumer.",
+      "externalImport": false,
+      "externalFullClosureVerified": false,
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicAnalyticTransport.lean",
+          "sha256": "4514C5D651D1AE17CFF6E8659151D22616C3BB607AE08D7FB9B9EDB3137A8D67"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightCriterion.lean",
+          "sha256": "FBB850247B20A4B19CB355A3F3CB20AFC1288C5DE13698519245F2D799C3550F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightImage.lean",
+          "sha256": "E76C95612608840D7B510F6BD3CD68ACC4AFBC06C6FCB956DE823E5BEAC3CE42"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeEllipticCoordinateTwist.lean",
+          "sha256": "6E888033F715F1268FA7FCFD1814F460982A0EA6A9A7CF5B8D6C4E7DCA4B423D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeEllipticDivisibilityTwist.lean",
+          "sha256": "8DE916F1C6B226265970C1B8BCE99B111EB36701C7EDE01FF9815B39155692E8"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightImageFourier.lean",
+          "sha256": "1D3A236C96D5622E433BD23C1F04711485B1E7C420C2EAE74AF2FA990F5543FA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicCuspSpan.lean",
+          "sha256": "58868C112C6DA750262A75551FDF71754FE3CF983C69C14B0609230178235D70"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspFrickeRationalSpan.lean",
+          "sha256": "9E741DD160C9413902CC185185DC46C072627609F57D349B6A9C98717B1F5BFD"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SL2Reduction.lean",
+          "sha256": "9DD40DDE2439AAB39FDD9F96BACE4F866D547D14C31A1E86B2567C67598EF226"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-cusp-realization-reuse-644\\P2M\\Sol\\S_CuspForm_exists_gamma1_qCoeff_eq_algEquiv_apply_of_even.lean.txt",
+          "sha256": "7F47382FFE7793D0FD63FB6D68B2B33E26FFFC323F1A091EB99096B88536A261"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cyclotomic-transport-inputs-reuse-686\\P2M\\Sol\\S_ModularFunction_exists_mdifferentiable_sigmaTransport_of_frickeQuotient.lean.txt",
+          "sha256": "31F0D88DC16CD6FAFE2257FBF59CF1B1124F61BCC4865F779E09261C7393B711"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cyclotomic-transport-inputs-reuse-686\\P2M\\Sol\\S_CuspForm_exists_gamma1_frickeRational_sigmaTransport.lean.txt",
+          "sha256": "91908DF3C06FBE1A59F308B96F9FF7082AD2965A4D650FB83A628940F4F64A82"
+        }
+      ],
+      "modules": [
+        "SourceFrickeCyclotomicConjugateRelation",
+        "SourceCyclotomicModularLift",
+        "SourceCyclotomicGammaOneLift",
+        "SourceCyclotomicLevelRingCovariance",
+        "SourceCyclotomicConjugateCancellation",
+        "SourceCyclotomicFractionCovariance",
+        "SourceCyclotomicConjugateCuspOrder",
+        "SourceCyclotomicHolomorphicDivision",
+        "SourceCyclotomicEllipticDivisibility",
+        "SourceCyclotomicEllipticCoordinates",
+        "SourceGammaOneCuspCyclotomicConjugation",
+        "SourceCyclotomicCuspFourierTransport",
+        "SourceGammaOneCyclotomicFourierConjugation"
+      ]
+    }
+  },
+  "discharged": "Construct actual integral modular lifts using the already proved SL2 reduction surjectivity, with a direct Gamma1 translation lift preserving the original level. Adjoin induction on original j and Fricke generators transports polynomial fractions and their modular action. The analytic conjugate preserves Laurent order and all-cusp vanishing. Holomorphic division remains in the original cyclotomic fraction algebra, so the actual j and j-1728 power identities transfer both elliptic divisibilities. The already proved cusp characterization constructs an actual same-weight Gamma1 cusp form. Rational Eisenstein and discriminant expansions then transfer the literal width-one Fourier coefficients. None of these analytic, modular, cusp, elliptic or coefficient conclusions remains a premise. The source weight balance and original Fricke-image membership remain explicit; the proved original-image spanning theorem supplies the generating set.",
+  "remaining": "Descend the original-image spanning set from cyclotomic coefficients to rational Fourier coefficients using the newly constructed actual conjugates. Prove bounded denominators for the original integral-ratio field, arbitrary cusp differential realization and its converse, actual Hecke comparisons, original finite-character arithmetic realization, all-weight characteristic-zero association, arithmetic automorphy and higher continuation. No unrestricted odd-weight weight-balance claim is made. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-26 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> original Picard/H1, full/parabolic, transpose and diamond comparison -> actual differential/cusp comparison -> rational cusp-form spanning -> actual cusp-image stability under coefficient twists.",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceHolomorphicMonicQuotient.lean",
+      "sha256": "94FBF4C909E298A91548D0877B0AF450875FD7EBE89BE5FED173C6513E258632"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeEllipticCoordinateTwist.lean",
+      "sha256": "6E888033F715F1268FA7FCFD1814F460982A0EA6A9A7CF5B8D6C4E7DCA4B423D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTwistModularEquivariance.lean",
+      "sha256": "E09792485B8D50FF055B5B354415817FD988369CF586200CC6E4A622C31240BF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicIntegralSpan.lean",
+      "sha256": "B2B189892B4221400AF30F3F9D95C0C284B565CC9084FD04EE553AD9EC50873A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAnalyticJTransformation.lean",
+      "sha256": "608BB5EE7C9CF1B8692E6872F637C886F29C0A8ECFCB9770A0BE9700DD7664AE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceInverseJLimits.lean",
+      "sha256": "9D2B43964E17935D27800795DB34A702BD556D89F7B61324CE24A2834CAC5C69"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Geometry\\Manifold\\MFDeriv\\Basic.lean",
+      "sha256": "0AB29927A8D32FBA9E682BB9D5462D7CDE1874E9709F8BB5E9DFC4CD29FD5137"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\fricke-cusp-descent-inputs-reuse-678\\P2M\\Sol\\S_CuspForm_exists_mul_E4_pow_mul_E6_pow_eq_iff.lean.txt",
+      "sha256": "D75D30CFCB518F77378206B0A64AE5ECA515647AE0F3E2C3A33E011DD8403B66"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-rational-structure-input-reuse-646\\P2M\\Sol\\S_CuspForm_span_frickeRational_E4_pow_E6_pow_eq_top.lean.txt",
+      "sha256": "AB40C08C057927A0E2EA6DBA8B677CB8AA4981B3C9A8104B60FBCA51CFADE4CA"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\fricke-cusp-image-stability-route-680.json",
+    "sha256": "2ACD5EC2C462157644AAB0F2F0FFEBD5AFCCCD78F58D2F98B8B8314AA6877AAD",
+    "review": {
+      "scope": 680,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> original Picard/H1, full/parabolic, transpose and diamond comparison -> actual differential/cusp comparison -> rational cusp-form spanning -> actual cusp-image stability under coefficient twists.",
+      "assumptionsToDischarge": "Prove the exact weight-lowering criterion for actual cusp forms of every integer weight and finite-index subgroup with k+4a+6b=12m. Construct the holomorphic quotient by the original E4/E6 factor from the two power-divisibility conditions using local monic division and coprime analytic gluing; derive its slash invariance and cusp vanishing. Prove the original weight-lowering map is holomorphic and injective. For every subgroup containing Gamma(N), derive actual Fricke-span membership and all conditions of the twisted image, then construct an actual cusp form of the same weight and subgroup realizing that twist.",
+      "remaining": "Descend the proved twist-stable cusp image by the original cyclotomic fixed field and pull back the spanning statement through the injective original map. Arbitrary Gamma1 differential realization and the original finite-character arithmetic association, automorphy and higher continuation chain remain. 16/20; DUB-17--20 OPEN.",
+      "shorterRouteReview": "The newly checked fixed primary cusp-image file imports a monic quotient theorem already proved locally. Reuse it, native manifold-local congruence for coprime gluing, native analytic-domain cancellation, and the existing E4/E6/discriminant transformation laws and E4 cusp limit. Only the missing E6 limit is proved from its native constant Fourier coefficient. The original cusp image consumes the exact criterion and the actual function-span theorem. Already proved elliptic transport, all-cusps vanishing and modular equivariance discharge the twist stability conditions, so no image-stability premise or externally assumed cusp form is used. The failed transformation preparer and its missing-file diagnostic are preserved under cusp-weight-transformation-preparer-failed-679a, with fresh preparer 679b.",
+      "externalImport": false,
+      "externalFullClosureVerified": false,
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceHolomorphicMonicQuotient.lean",
+          "sha256": "94FBF4C909E298A91548D0877B0AF450875FD7EBE89BE5FED173C6513E258632"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeEllipticCoordinateTwist.lean",
+          "sha256": "6E888033F715F1268FA7FCFD1814F460982A0EA6A9A7CF5B8D6C4E7DCA4B423D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTwistModularEquivariance.lean",
+          "sha256": "E09792485B8D50FF055B5B354415817FD988369CF586200CC6E4A622C31240BF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicIntegralSpan.lean",
+          "sha256": "B2B189892B4221400AF30F3F9D95C0C284B565CC9084FD04EE553AD9EC50873A"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAnalyticJTransformation.lean",
+          "sha256": "608BB5EE7C9CF1B8692E6872F637C886F29C0A8ECFCB9770A0BE9700DD7664AE"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceInverseJLimits.lean",
+          "sha256": "9D2B43964E17935D27800795DB34A702BD556D89F7B61324CE24A2834CAC5C69"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Geometry\\Manifold\\MFDeriv\\Basic.lean",
+          "sha256": "0AB29927A8D32FBA9E682BB9D5462D7CDE1874E9709F8BB5E9DFC4CD29FD5137"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\fricke-cusp-descent-inputs-reuse-678\\P2M\\Sol\\S_CuspForm_exists_mul_E4_pow_mul_E6_pow_eq_iff.lean.txt",
+          "sha256": "D75D30CFCB518F77378206B0A64AE5ECA515647AE0F3E2C3A33E011DD8403B66"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-rational-structure-input-reuse-646\\P2M\\Sol\\S_CuspForm_span_frickeRational_E4_pow_E6_pow_eq_top.lean.txt",
+          "sha256": "AB40C08C057927A0E2EA6DBA8B677CB8AA4981B3C9A8104B60FBCA51CFADE4CA"
+        }
+      ],
+      "modules": [
+        "SourceHolomorphicCoprimeDivision",
+        "SourceCuspWeightFactors",
+        "SourceCuspWeightHolomorphicDivision",
+        "SourceCuspWeightTransformation",
+        "SourceCuspWeightCriterion",
+        "SourceCuspWeightImage",
+        "SourceFrickeTwistCuspConditions",
+        "SourceCuspWeightImageSpan",
+        "SourceCuspWeightImageTwist"
+      ]
+    }
+  },
+  "discharged": "Prove the exact weight-lowering criterion for actual cusp forms of every integer weight and finite-index subgroup with k+4a+6b=12m. Construct the holomorphic quotient by the original E4/E6 factor from the two power-divisibility conditions using local monic division and coprime analytic gluing; derive its slash invariance and cusp vanishing. Prove the original weight-lowering map is holomorphic and injective. For every subgroup containing Gamma(N), derive actual Fricke-span membership and all conditions of the twisted image, then construct an actual cusp form of the same weight and subgroup realizing that twist.",
+  "remaining": "Descend the proved twist-stable cusp image by the original cyclotomic fixed field and pull back the spanning statement through the injective original map. Arbitrary Gamma1 differential realization and the original finite-character arithmetic association, automorphy and higher continuation chain remain. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

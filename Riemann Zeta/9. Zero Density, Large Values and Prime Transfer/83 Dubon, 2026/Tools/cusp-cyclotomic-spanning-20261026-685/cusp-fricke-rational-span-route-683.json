@@ -1,0 +1,58 @@
+{
+  "scope": 683,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> original Picard/H1, full/parabolic, transpose and diamond comparison -> actual differential/cusp comparison -> rational cusp-form spanning.",
+  "assumptionsToDischarge": "Prove the original characteristic-zero field is the full fixed field of the algebraically closed ambient-field automorphisms, treating both algebraic and transcendental coefficients. Prove finite-support descent of a twist-stable subspace, then derive every premise for the actual cusp-image range using the already proved original Fricke span, coefficient twist and same-weight cusp-image realization. Pull the resulting span back through the actual injective weight-lowering map: the actual cusp-form space is spanned by forms whose weight-lowered images are holomorphic fractions over the original cyclotomic Fricke ring.",
+  "remaining": "Extract cyclotomic Fourier coefficients of the original cusp forms from these actual Fricke representations, then continue arbitrary Gamma1 differential realization and the original finite-character arithmetic association, automorphy and higher continuation chain. The source balance k+4a+6b=12m remains explicit; the required geometric weight-two application has a=b=m=1. This does not assert an unrestricted odd-weight weight-lowering representation or close the all-weight arithmetic goal. 16/20; DUB-17--20 OPEN.",
+  "shorterRouteReview": "Local and pinned-native searches found no ready theorem for the full algebraically closed fixed field or twist-stable subspace descent. Adapt only the two necessary abstract primary arguments. Native fraction-ring integrality, minpoly roots, transcendence bases and InfiniteGalois.mem_bot_iff_fixed prove coefficient separation; finite scalar-support induction and finite-dimensional complements prove stable-subspace descent. The actual local basis coefficient twist eliminates the separate external flatness/twist construction and specialized function wrapper. Work in the original complex Fricke span itself, avoiding a total extension of the twist to arbitrary functions. Native Submodule.apply_mem_span_image_iff_mem_span pulls the span back through the proved original injective map.",
+  "externalImport": false,
+  "externalFullClosureVerified": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCoefficientTwist.lean",
+      "sha256": "4D53E819A53D57BA0D160A1AE474A39EB3858A406FCB274DE7297764E6161ED5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTwistModularEquivariance.lean",
+      "sha256": "E09792485B8D50FF055B5B354415817FD988369CF586200CC6E4A622C31240BF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightImage.lean",
+      "sha256": "E76C95612608840D7B510F6BD3CD68ACC4AFBC06C6FCB956DE823E5BEAC3CE42"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightImageSpan.lean",
+      "sha256": "95B9AA1E93D0ED1F6B978ADFB77BB60BB5CF749100535B428CF4D10B67A7D328"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightImageTwist.lean",
+      "sha256": "78173D9F163223C7987EB6B1A02D72C07F37BBFB71DB2B47E95ED6D19FB79875"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Span\\Basic.lean",
+      "sha256": "0C850580EEBBCCFB3507D05835E4B6A7B2ADD29F52B520C20E29B53BCFD4C426"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\Galois\\Infinite.lean",
+      "sha256": "9DC1F766742D42A7916690C302FCD2CA67E18EC859F7BE0328E03FDED0A793B6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\fricke-cusp-descent-inputs-reuse-678\\P2M\\Sol\\S_WLight_span_inter_rational_of_twist_stable.lean.txt",
+      "sha256": "FF7F35271C3F925E0FB977264C5B4CCB13E0725B49BFC8B1CB29FE6C8082621E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\fricke-cusp-descent-inputs-reuse-678\\P2M\\Sol\\S_IsAlgClosed_exists_algEquiv_apply_ne_of_notMem_range.lean.txt",
+      "sha256": "FB7ADC6D233683C1F2C115A31609F6E12E878269A015CEC8889BFDB3DCAED8D1"
+    }
+  ],
+  "modules": [
+    "SourcePureTranscendentalConstantIntersection",
+    "SourceAlgebraicallyClosedFixedField",
+    "SourceTwistDescentFiniteSupport",
+    "SourceTwistStableSubspaceDescent",
+    "SourceOriginalFrickeSpanDescent",
+    "SourceCuspWeightImageDescent",
+    "SourceCuspFrickeRationalSpan"
+  ]
+}

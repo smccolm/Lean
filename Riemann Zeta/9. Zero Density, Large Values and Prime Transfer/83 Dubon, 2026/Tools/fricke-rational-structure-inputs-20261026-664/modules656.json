@@ -1,0 +1,10 @@
+[
+  "RankinSatakeBounds",
+  "RankinSpectralTraces",
+  "EulerBoundaryNonvanishing",
+  "FiniteSpectralLog",
+  "FiniteSpectralPositivity",
+  "RankinSpectralEuler",
+  "RankinEulerPositivity",
+  "RankinBoundaryNonvanishing"
+]

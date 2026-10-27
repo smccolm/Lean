@@ -1,0 +1,33 @@
+import Dubon2026.SourceLaurentConstantTranscendence
+import Dubon2026.SourceLaurentGeneratedConstants
+import Dubon2026.SourceConstantExtensionChain
+import Dubon2026.SourceConstantExtensionMonotonicity
+import Dubon2026.SourceFiniteConstantIntegralCapture
+import Dubon2026.SourceLaurentIntegralConstantSpan
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFricke.ConstantDescent.mem_span_integral_generated_of_complex]
+  let localModules : Array Name := #[`Dubon2026.SourceAlgebraicConstantIntegralSpan, `Dubon2026.SourceAlgebraicConstantInterpolation, `Dubon2026.SourceAlgebraicConstantLift, `Dubon2026.SourceAlgebraicConstantRoots, `Dubon2026.SourceConstantExtensionChain, `Dubon2026.SourceConstantExtensionIntegralAlgebra, `Dubon2026.SourceConstantExtensionMonotonicity, `Dubon2026.SourceFiniteConstantIntegralCapture, `Dubon2026.SourceLaurentConstantTranscendence, `Dubon2026.SourceLaurentGeneratedConstants, `Dubon2026.SourceLaurentIntegralConstantSpan, `Dubon2026.SourceTranscendentalConstantAlgebraV2, `Dubon2026.SourceTranscendentalConstantDenominatorsV2, `Dubon2026.SourceTranscendentalConstantEvaluationV2, `Dubon2026.SourceTranscendentalConstantFieldRangeV2, `Dubon2026.SourceTranscendentalConstantIntegralSpanV2, `Dubon2026.SourceTranscendentalConstantNormalityV2, `Dubon2026.SourceTranscendentalConstantScaledRelationV2]
+  let required : Array Name := #[`Dubon2026.SourceFricke.ConstantDescent.constant_transcendental_of_coeff_mem, `Dubon2026.SourceFricke.ConstantDescent.constant_mem_coeffMap_fieldRange, `Dubon2026.SourceFricke.ConstantDescent.generated_mem_coeffMap_fieldRange, `Dubon2026.SourceFricke.ConstantDescent.generated_coeff_mem, `Dubon2026.SourceFricke.ConstantDescent.constant_transcendental_generated, `Dubon2026.SourceFricke.ConstantDescent.coeffMap_fieldRange_mono, `Dubon2026.SourceFricke.ConstantDescent.constantChain_le_cons, `Dubon2026.SourceFricke.ConstantDescent.le_constantChain, `Dubon2026.SourceFricke.ConstantDescent.mem_constantChain_of_mem, `Dubon2026.SourceFricke.ConstantDescent.constantChain_le, `Dubon2026.SourceFricke.ConstantDescent.constantChain_le_append_left, `Dubon2026.SourceFricke.ConstantDescent.constantChain_le_append_right, `Dubon2026.SourceFricke.ConstantDescent.adjoin_constants_mono, `Dubon2026.SourceFricke.ConstantDescent.generated_constants_mono, `Dubon2026.SourceFricke.ConstantDescent.integral_constants_mono, `Dubon2026.SourceFricke.ConstantDescent.generated_mem_iff_closure, `Dubon2026.SourceFricke.ConstantDescent.exists_list_mem_algebra, `Dubon2026.SourceFricke.ConstantDescent.exists_list_mem_field, `Dubon2026.SourceFricke.ConstantDescent.exists_list_integral_coordinates, `Dubon2026.SourceFricke.ConstantDescent.exists_list_mem_integral_generated, `Dubon2026.SourceFricke.ConstantDescent.mem_span_laurent_of_algebra_span, `Dubon2026.SourceFricke.ConstantDescent.integral_constantChain_step, `Dubon2026.SourceFricke.ConstantDescent.integral_constantChain_subset_span, `Dubon2026.SourceFricke.ConstantDescent.mem_span_integral_generated_of_complex, `Dubon2026.SourceFricke.ConstantDescent.constantChain, `Dubon2026.SourceFricke.ConstantDescent.mem_span_RSet_of_adjoin_simple, `Dubon2026.SourceFricke.ConstantDescent.mem_span_RSet_of_adjoin_simple_transcendental, `Dubon2026.SourceFricke.ConstantDescent.isIntegral_subalgebra_iff, `Dubon2026.SourceFricke.ConstantDescent.mem_KFldT_iff, `Submodule.span_induction, `IntermediateField.adjoin_induction, `Polynomial.eval₂_eq_sum_range, `Dubon2026.SourceFunctionField.coeffMap_single, `Dubon2026.SourceFunctionField.coeffMap_coeffMap]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE LAURENT INTEGRAL CONSTANT SPAN DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the assembled complex integral-span consumer. Only declaration values are traversed. Finite constant capture and induction consume both proved simple-extension descents. Laurent coefficients derive relative transcendence, and the scalar-action bridge gives the ordinary coefficientwise complex span. Actual Fricke generator instantiation, holomorphic representative recovery and rational Fourier spanning remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

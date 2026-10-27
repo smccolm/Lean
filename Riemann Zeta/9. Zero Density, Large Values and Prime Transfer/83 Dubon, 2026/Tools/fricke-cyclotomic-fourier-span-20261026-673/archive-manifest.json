@@ -1,0 +1,839 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-cyclotomic-fourier-span-promotion-route-673.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/fricke-cyclotomic-fourier-span-promotion-route-673.json",
+      "sha256": "071DFA39DD7A89777A58048017B0897EAF8E3FB29902973C5F8E2C15D9F54AA9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\LaurentIntegralSpanTypeProbe669.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/LaurentIntegralSpanTypeProbe669.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\LaurentIntegralSpanTypeProbe669.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/LaurentIntegralSpanTypeProbe669.lean.txt",
+      "sha256": "3A0959AF49743B6557B4F39AD88BCC3E922CFAA7C80563D89603C0D28E456752"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\LaurentIntegralSpanTypeProbe669.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/LaurentIntegralSpanTypeProbe669.log",
+      "sha256": "A126208FFF7A2FCC93B69F013ADC63FBE1008551C342E9B04DAC979211596C52"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualFrickeLaurentIntegralSpanAudit4.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceActualFrickeLaurentIntegralSpanAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualFrickeLaurentIntegralSpanAudit4.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceActualFrickeLaurentIntegralSpanAudit4.lean.txt",
+      "sha256": "5F93208B9ACA4444BA5C72B7FDA3E4BB42F97AAA6F3CE3028529EC33C2D9533C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualFrickeLaurentIntegralSpanAudit4.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceActualFrickeLaurentIntegralSpanAudit4.log",
+      "sha256": "0A817421D18D63304623763175953FDA6A188C0D6E624E3378D790C29B37B28C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualFrickeLaurentIntegralSpanDependencyAudit4.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceActualFrickeLaurentIntegralSpanDependencyAudit4.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualFrickeLaurentIntegralSpanDependencyAudit4.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceActualFrickeLaurentIntegralSpanDependencyAudit4.lean.txt",
+      "sha256": "6E5A7774044BAF7F6A429170E152BE1E445779658A8E24913254EABF7E00452E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceActualFrickeLaurentIntegralSpanDependencyAudit4.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceActualFrickeLaurentIntegralSpanDependencyAudit4.log",
+      "sha256": "CCD135629EF8CFDF78568F58782616F86487A2267BF2FF898690542D5225C85E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicConstantIntegralSpanAudit5.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceAlgebraicConstantIntegralSpanAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicConstantIntegralSpanAudit5.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceAlgebraicConstantIntegralSpanAudit5.lean.txt",
+      "sha256": "605145CA0218CACD02FAA6C34D1AA1255A6AE33F6677061159F7B6E92DC90712"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicConstantIntegralSpanAudit5.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceAlgebraicConstantIntegralSpanAudit5.log",
+      "sha256": "D991DBD67B3CAF5EBA2DE3940653D635B48C434D62EE0A715D033F63AD3E8382"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicConstantIntegralSpanDependencyAudit5.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceAlgebraicConstantIntegralSpanDependencyAudit5.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicConstantIntegralSpanDependencyAudit5.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceAlgebraicConstantIntegralSpanDependencyAudit5.lean.txt",
+      "sha256": "F095FBCB452909660DF7B5F82AF8322CD505BD31CA4D22D96AE530811528D624"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicConstantIntegralSpanDependencyAudit5.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceAlgebraicConstantIntegralSpanDependencyAudit5.log",
+      "sha256": "A456144B11D0439A65F321C55B54AF2A6C3800036DD5030F7A504BAD9DFC9EFF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicDescentAudit10.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicDescentAudit10.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicDescentAudit10.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicDescentAudit10.lean.txt",
+      "sha256": "AE2444981C47C377C034C49AD80DE03311A5DE8797959297D21589295FE4B0EA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicDescentAudit10.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicDescentAudit10.log",
+      "sha256": "A2124D3473C6602F63042186EBB1C8D848B4C56BE7A74DF7CFF49399786EACB1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicDescentDependencyAudit10.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicDescentDependencyAudit10.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicDescentDependencyAudit10.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicDescentDependencyAudit10.lean.txt",
+      "sha256": "33003E59A93784957AB9180B6DDA57583B7E8341F3A61EABEAFB80332B75FF9D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicDescentDependencyAudit10.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicDescentDependencyAudit10.log",
+      "sha256": "708B09214F854B9A8084BBD9136E196A4731025A13E96E9B061B31FBA3D351F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicIntegralSpanAudit8.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeHolomorphicIntegralSpanAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicIntegralSpanAudit8.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeHolomorphicIntegralSpanAudit8.lean.txt",
+      "sha256": "2F5220B3E4DB337BBFAD030DE54B78198F624362C418C2B10DC2386EC23FBE64"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicIntegralSpanAudit8.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeHolomorphicIntegralSpanAudit8.log",
+      "sha256": "6F4FBE57A2A695B39647DBC9A857256AD9DBDAC4E33EE82BA68169B0A376E4C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicIntegralSpanDependencyAudit8.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeHolomorphicIntegralSpanDependencyAudit8.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicIntegralSpanDependencyAudit8.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeHolomorphicIntegralSpanDependencyAudit8.lean.txt",
+      "sha256": "A1011ECB58FD9E44088C30F1C071E26BCDF6EF6AFE179AA6A99FF354E45ABD2F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicIntegralSpanDependencyAudit8.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeHolomorphicIntegralSpanDependencyAudit8.log",
+      "sha256": "C11DCC0B29D6A8023794006E32EB27AB31C148EC21B0338195D636578F79E5D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePoleClearedFourierSpanAudit2.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickePoleClearedFourierSpanAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePoleClearedFourierSpanAudit2.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickePoleClearedFourierSpanAudit2.lean.txt",
+      "sha256": "EC716AC088648E4AE4A87B9407DB5468E5414A0634365A4900154CA47A68814E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePoleClearedFourierSpanAudit2.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickePoleClearedFourierSpanAudit2.log",
+      "sha256": "7E248F0B1366B48CB79FBE047D4A6D27A58B52A061D7A227EF8658BBBBB8B9C6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePoleClearedFourierSpanDependencyAudit2.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickePoleClearedFourierSpanDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePoleClearedFourierSpanDependencyAudit2.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickePoleClearedFourierSpanDependencyAudit2.lean.txt",
+      "sha256": "D0015C7AAE0B11208DD4449E1B58C04604C7F1B2F51B5186ADF18538EF3BF38A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePoleClearedFourierSpanDependencyAudit2.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickePoleClearedFourierSpanDependencyAudit2.log",
+      "sha256": "F50FC8F4A1B761160632A34E21D082332A2139BE6FE0006CCC50D32B3FF68688"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentIntegralConstantSpanAudit6.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceLaurentIntegralConstantSpanAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentIntegralConstantSpanAudit6.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceLaurentIntegralConstantSpanAudit6.lean.txt",
+      "sha256": "83853559C3D1E088A5482C82916473BC9D4218ED95818E57A1CBA8F66CA48DC8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentIntegralConstantSpanAudit6.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceLaurentIntegralConstantSpanAudit6.log",
+      "sha256": "634DE01756CFEC96A456A4A66B91F9D774050216B16F57C1173512119758529A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentIntegralConstantSpanDependencyAudit6.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceLaurentIntegralConstantSpanDependencyAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentIntegralConstantSpanDependencyAudit6.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceLaurentIntegralConstantSpanDependencyAudit6.lean.txt",
+      "sha256": "7815F762D52D1AC692CBF9C203C8D45ECCA471E81E6D2181AB2647E965C69E4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentIntegralConstantSpanDependencyAudit6.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceLaurentIntegralConstantSpanDependencyAudit6.log",
+      "sha256": "1CDBA340D1107C29B90F1351CBD5E1421C625EED0AFE4A1F64AB470CB307F166"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantAlgebra.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantAlgebra.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantAlgebra.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantAlgebra.lean.txt",
+      "sha256": "9CE686099008F652E9E99D7BC8A7A49293229C71FDAB069A15232693B2CD52B9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantAlgebra.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantAlgebra.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantAlgebraV2.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantAlgebraV2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantAlgebraV2.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantAlgebraV2.lean.txt",
+      "sha256": "F6DDC95FB62FFC526DE6A59F19C2268437298FC5CC374F3375671D684FF13575"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantAlgebraV2.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantAlgebraV2.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantDenominators.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantDenominators.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantDenominators.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantDenominators.lean.txt",
+      "sha256": "16F72C05EA20BCB964AFBDF6B6B3E67DBEE9AFB04FD4996E8A3715ECF5C687CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantDenominators.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantDenominators.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantDenominatorsV2.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantDenominatorsV2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantDenominatorsV2.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantDenominatorsV2.lean.txt",
+      "sha256": "9267A1426C732EE34B0D23D3A900FD0748122CDCCA4AFE5F2B829971D8620364"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantDenominatorsV2.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantDenominatorsV2.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantDiscovery667.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantDiscovery667.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantDiscovery667.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantDiscovery667.lean.txt",
+      "sha256": "726149BF2FCA55EE6B9E1E62074138D24DBECBBC1529F50833D2A08B2E2D4050"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantDiscovery667.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantDiscovery667.log",
+      "sha256": "B9AE713D56C44F65A321EC674696DE8250D3F3A91A184A2E854129099E37AD85"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantEvaluation.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantEvaluation.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantEvaluation.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantEvaluation.lean.txt",
+      "sha256": "3595D8425F4ACC04A564148DBCD201A4CBEC02ED50F4DC8AFA5545846D9AA9CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantEvaluation.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantEvaluation.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantEvaluationV2.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantEvaluationV2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantEvaluationV2.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantEvaluationV2.lean.txt",
+      "sha256": "4AA41A40AF47D513140991D48F1FC4EEDB4AC861DD35E9448EC5E49C8F34A63A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantEvaluationV2.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantEvaluationV2.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantFieldRange.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantFieldRange.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantFieldRange.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantFieldRange.lean.txt",
+      "sha256": "EFDC2E5EA4B6D45E6286FCE2024E40CBD1CB49BF9F14CD1C5FD4012F9431C1F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantFieldRange.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantFieldRange.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantFieldRangeV2.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantFieldRangeV2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantFieldRangeV2.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantFieldRangeV2.lean.txt",
+      "sha256": "8B430315F1AE02FDD1F421F4D5E29FC89F983EA29B13B8312A6F58C96855A8FE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantFieldRangeV2.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantFieldRangeV2.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpan.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpan.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpan.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpan.lean.txt",
+      "sha256": "04876C531234BD417264EB3DA7FA9B49A9E3E1F6AA01435E94EA7B70D9177417"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpan.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpan.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpanAudit7.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanAudit7.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpanAudit7.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanAudit7.lean.txt",
+      "sha256": "6CF8BF71B5574D2A05D697B94D2171F5A3F9BCBE644905690E871352DC1886D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpanAudit7.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanAudit7.log",
+      "sha256": "7B925EF016D8B9814C8D69D3DE6FE5732BF3234EB5042D549F9A4DEC9434D34F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpanAudit7e.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanAudit7e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpanAudit7e.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanAudit7e.lean.txt",
+      "sha256": "76E892334F825E90F63527B2F2B726F2046697D755A22C72EEBD8E778B0DA7C1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpanAudit7e.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanAudit7e.log",
+      "sha256": "31ECFAB47174F7AB8D41760BB6F9939603A3ACE9179F077405B83BB5F8016F26"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpanDependencyAudit7.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanDependencyAudit7.lean.txt",
+      "sha256": "EED1B0187935E3039FD7E0C57BC2BA5FB32FDD5C7F7BD7CF012FA7E9B0D2B825"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpanDependencyAudit7e.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanDependencyAudit7e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpanDependencyAudit7e.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanDependencyAudit7e.lean.txt",
+      "sha256": "2D674A6C03314304C2AE92F4B9A64DB7CA2EC6A0F95523B59E55E7092682C151"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpanDependencyAudit7e.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanDependencyAudit7e.log",
+      "sha256": "45B01359A4A5AF035D39D692BE50A5CB1DF305E2BAD82D3B7BF26A0896586DF8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpanV2.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanV2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpanV2.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanV2.lean.txt",
+      "sha256": "513A7752D13189C0367B302BC880324F39BFE3AFCF15F8BCF3C5805B4B4A8073"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpanV2.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanV2.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantNormality.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantNormality.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantNormality.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantNormality.lean.txt",
+      "sha256": "51E3C0586DA492F4AF0F34521DE04E0A167C956D6AB6C64E6AA967335E12E45F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantNormality.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantNormality.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantNormalityV2.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantNormalityV2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantNormalityV2.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantNormalityV2.lean.txt",
+      "sha256": "EF8DF308F76BC8403A23D24CAEE7525EF06B952D7674BF5B644E30C8E3E14747"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantNormalityV2.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantNormalityV2.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantScaledRelation.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantScaledRelation.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantScaledRelation.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantScaledRelation.lean.txt",
+      "sha256": "B1B4F187305764171FFEEDA7C19CB6638178FF6F172DFC66344E101547B026D8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantScaledRelation.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantScaledRelation.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantScaledRelationV2.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantScaledRelationV2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantScaledRelationV2.lean",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantScaledRelationV2.lean.txt",
+      "sha256": "53A5BE660D7F244409A878571F2AC7A29B3CC95B2DBECE35D24548EA39258860"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantScaledRelationV2.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantScaledRelationV2.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\actual-fricke-laurent-integral-span-route-670.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/actual-fricke-laurent-integral-span-route-670.json",
+      "sha256": "FFE9215BB59729B246A6D0F79CAB5C604A3FADB70E05AFAB461094C1C7A22267"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\algebraic-constant-integral-span-route-666.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/algebraic-constant-integral-span-route-666.json",
+      "sha256": "74363607392D2B50D4196EE6B418C557BAEB6FFDE3425945ABB944B23CF2BE64"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers671.txt",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/consumers671.txt",
+      "sha256": "AD571CCF7B54AA5A919169271B15BF6CCEBED3C24EDA347763E87252105DC6E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-cyclotomic-descent-local-reuse-route-665.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/fricke-cyclotomic-descent-local-reuse-route-665.json",
+      "sha256": "F3CACEB155F5B114F0382000C39CD7B5B9E8A1F0CD53E94218C6884207631FEB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-holomorphic-integral-span-route-671.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/fricke-holomorphic-integral-span-route-671.json",
+      "sha256": "1202C7EFBEF7449C95B2C109E21D6DB555BA6D720DBC6A983A0FF3C4393BC042"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fricke-pole-cleared-fourier-span-route-672.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/fricke-pole-cleared-fourier-span-route-672.json",
+      "sha256": "3BA43570216756A3FCD057BDE93CEEA0F1422F7899A5D24A818744A50333C8F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\laurent-integral-constant-span-route-669.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/laurent-integral-constant-span-route-669.json",
+      "sha256": "7AE744A37F16FBA9F556503281F88170492A2BFF172F4CED0D6D6D58C8AE102B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules671.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/modules671.json",
+      "sha256": "9446C5102A6D73A6A480E45FF958CBDCD627270232B7DBBAEDCC6F9C89480E0F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_actual_fricke_laurent_integral_span_audit_670.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_actual_fricke_laurent_integral_span_audit_670.py",
+      "sha256": "450DD89B2DE086D90872F93C8143D6A1829C30D9B2EFEA9119C2CEF8A31F7683"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_algebraic_constant_integral_span_666.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_algebraic_constant_integral_span_666.py",
+      "sha256": "B1E9BEFAC2FEBBCF360B6F91E6AB0C07DA69CB0389D72A281CB416312015E080"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_algebraic_constant_integral_span_666b.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_algebraic_constant_integral_span_666b.py",
+      "sha256": "783740196DB4899DA4380B3CDE23A3549DE01AE759050FEA23C45322705DD9AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_algebraic_constant_integral_span_audit_666.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_algebraic_constant_integral_span_audit_666.py",
+      "sha256": "87EEDF8D18AEA39892F37458290E3D588E0DD381916C903DC6DD91DAF43743B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_cyclotomic_descent_audit_665.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_fricke_cyclotomic_descent_audit_665.py",
+      "sha256": "B564B317A0AA7100022D5C6079B7D8183FE83CDFEF071A254B8A1C91932BBA16"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_holomorphic_integral_span_audit_671.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_fricke_holomorphic_integral_span_audit_671.py",
+      "sha256": "72F892F6FA41F940215FF07B977ADC07C0F9955CED4EA3AB396D32D626BD678F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_fricke_pole_cleared_fourier_span_audit_672.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_fricke_pole_cleared_fourier_span_audit_672.py",
+      "sha256": "E97820889AB1CFC1D86E1446D22AB771659C28984FC37F4F88A435AD2E91208C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_laurent_integral_constant_span_audit_669.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_laurent_integral_constant_span_audit_669.py",
+      "sha256": "888E03C1ACF6B42FA0C7FF4B16032FA3D797708A31C1A020EA092CEE00A6DB67"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_transcendental_constant_integral_span_667.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_transcendental_constant_integral_span_667.py",
+      "sha256": "EB33AB0A0FDCC75F5EBF75D31D636DC0C0C573E81B168311F65BEF7FC07D2A3D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_transcendental_constant_integral_span_audit_667d.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_transcendental_constant_integral_span_audit_667d.py",
+      "sha256": "4F0D9FFAF3851F7930D1130F64E7BF56501EE203D87354071E661556E5F816F4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_transcendental_constant_integral_span_audit_667e.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_transcendental_constant_integral_span_audit_667e.py",
+      "sha256": "63D8929B0E972AF12C712A479F9173899D2CE8551D7D356AC2BF864C950E45CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_transcendental_constant_linter_successor_667e.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_transcendental_constant_linter_successor_667e.py",
+      "sha256": "5B4163BFC35C77684075229E214AEC62AAA8CE0A0FD19660618590A87244F0E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record671.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record671.py",
+      "sha256": "F748556B6C2EC7C5E604BE4493D18A53CED8E6DC440B6537EB3FDDF932FDC399"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_actual_fricke_laurent_integral_span_670.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record_actual_fricke_laurent_integral_span_670.py",
+      "sha256": "F10A6DA0E994E8FEFBED0951ADAA6A714F5FAD5E22C8D047C0A960C614E78589"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_algebraic_constant_integral_span_666.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record_algebraic_constant_integral_span_666.py",
+      "sha256": "3B78558D60756A462D8458CE94C92FC49563DB9EA5840586F33E11082B508FCE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_fricke_cyclotomic_descent_665.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record_fricke_cyclotomic_descent_665.py",
+      "sha256": "81FDBF7E41CB286168D37B3BE7F3F847C24F65FCE07F2F59EBD199ABE5B9CCE3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_fricke_cyclotomic_descent_665b.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record_fricke_cyclotomic_descent_665b.py",
+      "sha256": "2998DF2CDC80A6CE7620F68889909A829105153158F7EC20621FCD37EC37B065"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_fricke_holomorphic_integral_span_671.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record_fricke_holomorphic_integral_span_671.py",
+      "sha256": "7540607EF0C57C9717C84C3A1B372B4B85BC30CF4FE85EA5A9F9C8FE8FE5A868"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_fricke_holomorphic_integral_span_671b.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record_fricke_holomorphic_integral_span_671b.py",
+      "sha256": "268429B773BA002F699BB9D63D3B0B8B74290B4C81012E8A0E248D6FD841698A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_fricke_pole_cleared_fourier_span_672.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record_fricke_pole_cleared_fourier_span_672.py",
+      "sha256": "0FA5488290BE1890A3D765D7E9B97D819EEABC792BDB75939E8BC2198857810A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_laurent_integral_constant_span_669.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record_laurent_integral_constant_span_669.py",
+      "sha256": "F850BD445923850EADC63562793F684E1070AE739A981400D2995ED19AF195E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_transcendental_constant_integral_span_667e.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record_transcendental_constant_integral_span_667e.py",
+      "sha256": "66A2CA01D9676B2F033A5F3731AD319C067EDBDF659E03AC495A04DB819C5C15"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register671.py",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/register671.py",
+      "sha256": "55EA71EA294FACD221A1C236819D482CC19E89705A4783AF0B7E4272D5486A4E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations671.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/registrations671.json",
+      "sha256": "754712BE74C614EF6D1FC3B25D8D5461C1F59EB5874709CFC03C46B2A2703E26"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section671.txt",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/section671.txt",
+      "sha256": "B9989C6DF9E003105897BF02E97FCDF1349CF84CF5702ABDA2EB7C6D6781A76B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-actual-fricke-laurent-integral-span-4-audit-config.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-actual-fricke-laurent-integral-span-4-audit-config.json",
+      "sha256": "DD05199B252F718E70CCBBD1C2C2B927C8664CB8878FBC53A1840CF52D54B313"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-actual-fricke-laurent-integral-span-4-scratch-receipt.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-actual-fricke-laurent-integral-span-4-scratch-receipt.json",
+      "sha256": "1AA9BE753A398EA8006802834BD5FE08A0C5C4E71C01167E2833A04FAB9EF896"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-algebraic-constant-integral-span-5-audit-config.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-algebraic-constant-integral-span-5-audit-config.json",
+      "sha256": "61641E8621D4FFEA962F412B77FBF04E12417D4738E6B5091340A3CDAA3EEFE9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-algebraic-constant-integral-span-5-scratch-receipt.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-algebraic-constant-integral-span-5-scratch-receipt.json",
+      "sha256": "10B43BC49F115B9943B30B16E003BF9E49E899238C8D6B7056B67E4703843916"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-cyclotomic-descent-10-audit-config.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-cyclotomic-descent-10-audit-config.json",
+      "sha256": "6247FC561476C27C6A83268BF88DC81685D414A2585BB2EF4D34E26B7CCF0C96"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-cyclotomic-descent-10-scratch-receipt.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-cyclotomic-descent-10-scratch-receipt.json",
+      "sha256": "2F13189E8EC3B130D64120AA5233F0C1B5BB5ED0F18F502FB34C707C3F0CB8C7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-holomorphic-integral-span-8-audit-config.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-holomorphic-integral-span-8-audit-config.json",
+      "sha256": "C3D2B3C73389FC937F357ACB3734E915AA5266D5A77253F9578A1029654BCDF4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-holomorphic-integral-span-8-scratch-receipt.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-holomorphic-integral-span-8-scratch-receipt.json",
+      "sha256": "42312FD5920DB80060B5499758377769BD2FBCC10ECC479183FA00A789329C89"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-pole-cleared-fourier-span-2-audit-config.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-pole-cleared-fourier-span-2-audit-config.json",
+      "sha256": "5BAAC80DDA79C6EA5D73F613F375CAB6082BBCBE6FC6B295B3E398E58537D6B9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-pole-cleared-fourier-span-2-scratch-receipt.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-pole-cleared-fourier-span-2-scratch-receipt.json",
+      "sha256": "91444231DC17D0CEFFECD0187EFC8DC22B1A4C5780686625AD0C27A41F3CA29F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-laurent-integral-constant-span-6-audit-config.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-laurent-integral-constant-span-6-audit-config.json",
+      "sha256": "13C31DE092114F10A17AE031AC531E096AE1ACF790F8483BB100B0EAEF379A82"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-laurent-integral-constant-span-6-scratch-receipt.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-laurent-integral-constant-span-6-scratch-receipt.json",
+      "sha256": "A3985CA46443B6F18C4722CB81B0EA8B90DEA175ABE27A9684CCDFD4DC7E04EF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-transcendental-constant-integral-span-7e-audit-config.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-transcendental-constant-integral-span-7e-audit-config.json",
+      "sha256": "66F97613466E3BCC0215507A7621FE2A78FDC5F5EB99C8F8891BFB20A5560121"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-transcendental-constant-integral-span-7e-scratch-receipt.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-transcendental-constant-integral-span-7e-scratch-receipt.json",
+      "sha256": "BEB97FB3DFD9C350FEEA1FB6CBDA75C922820B58AFAFB6BB1F1C6A94AD8484F0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status671.txt",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/status671.txt",
+      "sha256": "23F1ACC1438EE915F4912D2077C73864BB082C081437CB7CEF26E2C400F7F691"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\transcendental-constant-discovery-667-config.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-discovery-667-config.json",
+      "sha256": "88876035115553E0528F547B85242155271FCB8DFCC24904250EBC59B490899A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\transcendental-constant-integral-span-route-667.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-integral-span-route-667.json",
+      "sha256": "8A19C10D375B562F2F9A2B6AA67A052A062FB7C6974B4EB09F894636AD615606"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\transcendental-constant-integral-span-route-667d.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-integral-span-route-667d.json",
+      "sha256": "C4E07BFD6B7B1F4F69165250102BBBDDD03435ADF238C0238568E8E05F3C6732"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\transcendental-constant-integral-span-route-667e.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-integral-span-route-667e.json",
+      "sha256": "5A391E12911E30DACC91C21089ED4B30E71284A197E88D78CC0ABE1659B54CEF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\transcendental-constant-integral-span-failed-667a\\SourceTranscendentalConstantIntegralSpan.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-integral-span-failed-667a/SourceTranscendentalConstantIntegralSpan.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\transcendental-constant-integral-span-failed-667a\\SourceTranscendentalConstantIntegralSpan.lean.txt",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-integral-span-failed-667a/SourceTranscendentalConstantIntegralSpan.lean.txt",
+      "sha256": "298C93F2334205556DA593D1A13AB6CBFB8DFC405C8FEA5F9345815B693FB8DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\transcendental-constant-integral-span-failed-667a\\SourceTranscendentalConstantIntegralSpan.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-integral-span-failed-667a/SourceTranscendentalConstantIntegralSpan.log",
+      "sha256": "A589B99830BFA2949C0166465F46949147B0CA16F9A180ED8876CE8ACBED411B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\transcendental-constant-field-range-failed-667b\\SourceTranscendentalConstantFieldRange.exit",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-field-range-failed-667b/SourceTranscendentalConstantFieldRange.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\transcendental-constant-field-range-failed-667b\\SourceTranscendentalConstantFieldRange.lean.txt",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-field-range-failed-667b/SourceTranscendentalConstantFieldRange.lean.txt",
+      "sha256": "32B768B58A9CBF22D139682CD18A25134EA4B241EED57597129BB0F924B1BF2B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\transcendental-constant-field-range-failed-667b\\SourceTranscendentalConstantFieldRange.log",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-field-range-failed-667b/SourceTranscendentalConstantFieldRange.log",
+      "sha256": "C4EE518334B05413DD8D878E14652831B2E16E2E6F73770C77A77B39249E67BD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\transcendental-constant-pretrim-667c\\SourceTranscendentalConstantAlgebra.lean.txt",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-pretrim-667c/SourceTranscendentalConstantAlgebra.lean.txt",
+      "sha256": "942CC5CA7E5C6FEF13F9DF7C90E38BCCDA36BA68430D1B5D9E2578FC93646C7F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\transcendental-constant-pretrim-667c\\SourceTranscendentalConstantDenominators.lean.txt",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-pretrim-667c/SourceTranscendentalConstantDenominators.lean.txt",
+      "sha256": "16F72C05EA20BCB964AFBDF6B6B3E67DBEE9AFB04FD4996E8A3715ECF5C687CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\transcendental-constant-pretrim-667c\\SourceTranscendentalConstantEvaluation.lean.txt",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-pretrim-667c/SourceTranscendentalConstantEvaluation.lean.txt",
+      "sha256": "FC3636671F94A2B595CFD2BBD40C63B3B058C22405BF8AE9D222630425A3C06F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\transcendental-constant-pretrim-667c\\SourceTranscendentalConstantFieldRange.lean.txt",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-pretrim-667c/SourceTranscendentalConstantFieldRange.lean.txt",
+      "sha256": "EFDC2E5EA4B6D45E6286FCE2024E40CBD1CB49BF9F14CD1C5FD4012F9431C1F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\transcendental-constant-pretrim-667c\\SourceTranscendentalConstantIntegralSpan.lean.txt",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-pretrim-667c/SourceTranscendentalConstantIntegralSpan.lean.txt",
+      "sha256": "04876C531234BD417264EB3DA7FA9B49A9E3E1F6AA01435E94EA7B70D9177417"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\transcendental-constant-pretrim-667c\\SourceTranscendentalConstantNormality.lean.txt",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-pretrim-667c/SourceTranscendentalConstantNormality.lean.txt",
+      "sha256": "51E3C0586DA492F4AF0F34521DE04E0A167C956D6AB6C64E6AA967335E12E45F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\transcendental-constant-pretrim-667c\\SourceTranscendentalConstantScaledRelation.lean.txt",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-pretrim-667c/SourceTranscendentalConstantScaledRelation.lean.txt",
+      "sha256": "B1B4F187305764171FFEEDA7C19CB6638178FF6F172DFC66344E101547B026D8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-cyclotomic-descent-10-reuse-review-20261026.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-cyclotomic-descent-10-reuse-review-20261026.json",
+      "sha256": "BC7EC70AA13E0663D200D855AFB24783AA1CFC24FD4FF9F184ECDA1F0AA9E844"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-algebraic-constant-integral-span-5-reuse-review-20261026.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-algebraic-constant-integral-span-5-reuse-review-20261026.json",
+      "sha256": "BC5082EBB3CEB2F9FDBA8EBA9A72ED0092195A9B3F50B658DEDE51E85A7F0D7B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-transcendental-constant-integral-span-7e-reuse-review-20261026.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-transcendental-constant-integral-span-7e-reuse-review-20261026.json",
+      "sha256": "980C993D919990D1A4984D7509768BF5089F28E698BC53D687068D5CD9F59FD7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-laurent-integral-constant-span-6-reuse-review-20261026.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-laurent-integral-constant-span-6-reuse-review-20261026.json",
+      "sha256": "2F718495B1B44AED78992D39AA855720D3172B283A0A12FD1372B8F6C6711E33"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-actual-fricke-laurent-integral-span-4-reuse-review-20261026.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-actual-fricke-laurent-integral-span-4-reuse-review-20261026.json",
+      "sha256": "187C540712E3C715A013677C14837CCBC443E7329BDCE985C3BE818E811D96F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-holomorphic-integral-span-8-reuse-review-20261026.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-holomorphic-integral-span-8-reuse-review-20261026.json",
+      "sha256": "E27412AF1F170F35D9CBB31A67DA58C6D69FB0B5D4D92FD1118FAD10BD6E7D32"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-fricke-pole-cleared-fourier-span-2-reuse-review-20261026.json",
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-pole-cleared-fourier-span-2-reuse-review-20261026.json",
+      "sha256": "2F654355A471A357173C76722D0F9C8B95F29D407C6C3CBA5FC82290730E9780"
+    }
+  ]
+}

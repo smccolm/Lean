@@ -1,0 +1,55 @@
+{
+  "modules": [
+    "SourceLaurentAnalyticPolynomial",
+    "SourceLevelOneAnalyticJPolynomial",
+    "SourceInvariantAnalyticJPolynomial"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.RealL.pow",
+    "Dubon2026.SourceFunctionField.RealL.aeval",
+    "Dubon2026.SourceFunctionField.realL_qExpansion",
+    "Dubon2026.SourceFunctionField.realL_jqModC",
+    "Dubon2026.SourceFunctionField.exists_levelOne_analytic_j_polynomial",
+    "Dubon2026.SourceFricke.poleClearedLevelOne_apply",
+    "Dubon2026.SourceFricke.exists_polynomial_j_of_poleBounded_invariant"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFricke.poleClearedLevelOne"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.RealL.pow",
+    "Dubon2026.SourceFunctionField.RealL.aeval",
+    "Dubon2026.SourceFunctionField.realL_qExpansion",
+    "Dubon2026.SourceFunctionField.realL_jqModC",
+    "Dubon2026.SourceFunctionField.exists_levelOne_analytic_j_polynomial",
+    "Dubon2026.SourceFricke.poleClearedLevelOne_apply",
+    "Dubon2026.SourceFricke.exists_polynomial_j_of_poleBounded_invariant",
+    "Dubon2026.SourceFricke.poleClearedLevelOne"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.RealL.pow",
+    "Dubon2026.SourceFunctionField.RealL.aeval",
+    "Dubon2026.SourceFunctionField.realL_qExpansion",
+    "Dubon2026.SourceFunctionField.realL_jqModC",
+    "Dubon2026.SourceFunctionField.exists_levelOne_analytic_j_polynomial",
+    "Dubon2026.SourceFricke.poleClearedLevelOne_apply",
+    "Dubon2026.SourceFricke.exists_polynomial_j_of_poleBounded_invariant",
+    "Dubon2026.SourceFricke.poleClearedLevelOne",
+    "Dubon2026.SourceFunctionField.exists_levelOne_j_polynomial",
+    "Dubon2026.SourceFunctionField.RealL.mul",
+    "Dubon2026.SourceFunctionField.realL_jqC",
+    "Dubon2026.SourceFunctionField.jqModC_eq_modular_quotient",
+    "UpperHalfPlane.hasSum_qExpansion",
+    "ModularForm.mul_slash_SL2"
+  ],
+  "roots": [
+    "Dubon2026.SourceFricke.exists_polynomial_j_of_poleBounded_invariant"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceLaurentAnalyticPolynomial",
+    "SourceLevelOneAnalyticJPolynomial",
+    "SourceInvariantAnalyticJPolynomial"
+  ],
+  "separateReason": "All public mathematical declarations are required in actual proof values."
+}

@@ -1,0 +1,63 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T19:13:54.742774+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceMeromorphicCuspPoleClearing",
+    "SourceFrickePoleClearedFourierSpan"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicCuspPoleClearing.lean",
+      "sha256": "2C51FDA119141C1A5CAB3AA6E346C90D236BD974273862C4FE181CEFA6BECCBA",
+      "oleanSha256": "D0E81CC032915841480FC6F45E9AAE923043AE26871A23726EA6EA506A69AAA4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePoleClearedFourierSpan.lean",
+      "sha256": "881ACD6FC414E5D1B71FA9CAEE495735E1303C2EEDBF73A8745508218DC5F70F",
+      "oleanSha256": "2FDFD122E524D261439DC419CB97524CC4861C702747DE7CFA2A8127A8E4800D"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFricke.exists_nonnegative_add_nat_mul",
+    "Dubon2026.SourceFricke.meromorphicOrderAt_discriminant_cusp_pos",
+    "Dubon2026.SourceFricke.periodic_mul_discriminant",
+    "Dubon2026.SourceFricke.exists_bounded_mul_discriminant_of_meromorphic",
+    "Dubon2026.SourceFricke.exists_pole_cleared_cyclotomic_qExpansion",
+    "Dubon2026.SourceFricke.mem_span_pole_cleared_cyclotomic_of_principal_invariant",
+    "Dubon2026.SourceFricke.cyclotomicPoleBoundedFunctions"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFricke.exists_nonnegative_add_nat_mul",
+    "Dubon2026.SourceFricke.meromorphicOrderAt_discriminant_cusp_pos",
+    "Dubon2026.SourceFricke.periodic_mul_discriminant",
+    "Dubon2026.SourceFricke.exists_bounded_mul_discriminant_of_meromorphic",
+    "Dubon2026.SourceFricke.exists_pole_cleared_cyclotomic_qExpansion",
+    "Dubon2026.SourceFricke.mem_span_pole_cleared_cyclotomic_of_principal_invariant"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFricke.cyclotomicPoleBoundedFunctions"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePoleClearedFourierSpanAudit2.log",
+  "logSha256": "7E248F0B1366B48CB79FBE047D4A6D27A58B52A061D7A227EF8658BBBBB8B9C6",
+  "auditSha256": "EC716AC088648E4AE4A87B9407DB5468E5414A0634365A4900154CA47A68814E",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 7,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 14,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePoleClearedFourierSpanDependencyAudit2.log",
+  "dependencyAuditSha256": "F50FC8F4A1B761160632A34E21D082332A2139BE6FE0006CCC50D32B3FF68688",
+  "dependencyAuditSourceSha256": "D0015C7AAE0B11208DD4449E1B58C04604C7F1B2F51B5186ADF18538EF3BF38A",
+  "consumers": [
+    "Dubon2026.SourceFricke.mem_span_pole_cleared_cyclotomic_of_principal_invariant"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> Picard/H1 and full/parabolic/diamond comparison retaining the original homogeneous coefficient endomorphism -> actual differential/cusp comparison -> rational cusp-form spanning -> pole-cleared cyclotomic Fourier span.",
+  "discharged": "For every actual holomorphic cyclotomic Fricke fraction, derive a discriminant power clearing the cusp pole and prove that every resulting Fourier coefficient belongs to the original cyclotomic field. Thus the actual principal-level holomorphic function is in the complex span of functions with these proved Fourier properties. No finite-pole bound, Fourier coefficient membership or monic-growth premise is assumed for the summands.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Rational cusp-form spanning still requires the modular-weight, cusp and coefficient-descent steps; the pole-cleared weight-zero function span alone does not construct an arbitrary Gamma1 differential. Actual Picard/H1 and finite-character comparison, original all-weight arithmetic association, automorphy and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-fricke-pole-cleared-fourier-span-2-reuse-review-20261026.json",
+  "reuseReviewSha256": "2F654355A471A357173C76722D0F9C8B95F29D407C6C3CBA5FC82290730E9780",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

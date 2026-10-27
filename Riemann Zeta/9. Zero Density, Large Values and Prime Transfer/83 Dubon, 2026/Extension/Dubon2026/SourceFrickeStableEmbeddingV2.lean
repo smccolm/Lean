@@ -1,0 +1,85 @@
+import Dubon2026.SourceFrickeStableFieldV2
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual finite Gamma1
+character realization -> Picard/H1 and diamond comparison -> cusp differential
+realization -> rational Fourier structure -> fraction realization of modularly
+stable finite-pole families. This uses the actual Fricke algebra and native
+finite fixed-field degree; no rational representation is assumed.
+Adapted from anthropics/fermats-last-theorem,
+6e837e75355538c7f80bab5b956861e86c4eacc2, Apache License 2.0. -/
+namespace Dubon2026.SourceFricke
+noncomputable section
+open UpperHalfPlane ModularForm SourceFunctionField Matrix.SpecialLinearGroup
+open scoped MatrixGroups ModularForm Manifold IntermediateField
+local notation "j" => JMultiplicity.jf
+
+namespace LevelGens
+variable {N : ℕ} [NeZero N] (D : LevelGens N)
+
+/-- The literal inclusion of the Fricke algebra into the family algebra. -/
+def incl : ↥(levelRing N) →ₐ[ℂ] ↥D.ring := Subalgebra.inclusion D.levelRing_le_ring
+
+omit [NeZero N] in
+lemma incl_injective : Function.Injective D.incl := Subalgebra.inclusion_injective _
+
+omit [NeZero N] in
+@[scoped simp] lemma coe_incl (a : ↥(levelRing N)) : ((D.incl a : ↥D.ring) : ℍ → ℂ) = a :=
+  Subalgebra.coe_inclusion _ a
+
+omit [NeZero N] in
+lemma toRingField_injective :
+    Function.Injective ((IsScalarTower.toAlgHom ℂ ↥D.ring D.field).comp D.incl) :=
+  (IsFractionRing.injective ↥D.ring D.field).comp D.incl_injective
+
+/-- The fraction-field map extending the literal algebra inclusion. -/
+noncomputable def toField : levelField N →ₐ[ℂ] D.field :=
+  IsFractionRing.liftAlgHom D.toRingField_injective
+
+lemma toField_algebraMap (a : ↥(levelRing N)) :
+    D.toField (algebraMap ↥(levelRing N) (levelField N) a) = algebraMap ↥D.ring D.field (D.incl a) :=
+  IsFractionRing.lift_algebraMap D.toRingField_injective a
+
+lemma toField_jK : D.toField (Dubon2026.SourceFricke.jK N) = D.jK := D.toField_algebraMap (Dubon2026.SourceFricke.jA N)
+
+/-- The family fraction field as an algebra over the Fricke fraction field. -/
+noncomputable scoped instance (priority := 3000) algebraField : Algebra (levelField N) D.field :=
+  D.toField.toRingHom.toAlgebra
+
+/-- The module structure induced by the actual inclusion of fraction fields. -/
+noncomputable scoped instance (priority := 3000) moduleField : Module (levelField N) D.field :=
+  Algebra.toModule
+
+/-- The scalar multiplication induced by the actual inclusion of fraction fields. -/
+noncomputable scoped instance (priority := 3000) smulField : SMul (levelField N) D.field :=
+  Algebra.toSMul
+
+/-- The actual field inclusion respects the complex scalar tower. -/
+scoped instance scalarTowerField : IsScalarTower ℂ (levelField N) D.field :=
+  IsScalarTower.of_algebraMap_eq fun c ↦ (D.toField.commutes c).symm
+
+/-- The family fraction field as an algebra over the original field C(j). -/
+noncomputable scoped instance (priority := 3000) algebraRatJ : Algebra ↥(ℂ⟮Dubon2026.SourceFricke.jK N⟯) D.field :=
+  ((algebraMap (levelField N) D.field).comp (algebraMap ↥(ℂ⟮Dubon2026.SourceFricke.jK N⟯) (levelField N))).toAlgebra
+
+/-- The module structure over the original field C(j). -/
+noncomputable scoped instance (priority := 3000) moduleRatJ : Module ↥(ℂ⟮Dubon2026.SourceFricke.jK N⟯) D.field :=
+  Algebra.toModule
+
+/-- The scalar multiplication by the original field C(j). -/
+noncomputable scoped instance (priority := 3000) smulRatJ : SMul ↥(ℂ⟮Dubon2026.SourceFricke.jK N⟯) D.field :=
+  Algebra.toSMul
+
+/-- The original C(j) and Fricke field form a scalar tower in the family field. -/
+scoped instance scalarTowerRatJ : IsScalarTower ↥(ℂ⟮Dubon2026.SourceFricke.jK N⟯) (levelField N) D.field :=
+  IsScalarTower.of_algebraMap_eq fun _ ↦ rfl
+
+lemma ratJ_map_toField : (ℂ⟮Dubon2026.SourceFricke.jK N⟯).map D.toField = D.ratJ := by
+  rw [IntermediateField.adjoin_map, Set.image_singleton, toField_jK]
+
+/-- The actual inclusion identifies the two copies of the original field C(j). -/
+noncomputable def ratJEquiv : ↥(ℂ⟮Dubon2026.SourceFricke.jK N⟯) ≃ₐ[ℂ] ↥D.ratJ :=
+  ((ℂ⟮Dubon2026.SourceFricke.jK N⟯).equivMap D.toField).trans (IntermediateField.equivOfEq D.ratJ_map_toField)
+
+end LevelGens
+end
+end Dubon2026.SourceFricke

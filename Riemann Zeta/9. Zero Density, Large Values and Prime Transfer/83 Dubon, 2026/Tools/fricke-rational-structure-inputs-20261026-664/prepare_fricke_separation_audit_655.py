@@ -1,0 +1,38 @@
+from pathlib import Path
+import re,json
+p=Path(r'E:\Lean\.tmp\dubon83')
+mods=['SourcePeriodWeierstrassSeparation','SourceFrickeTorsionLattice','SourceFrickePrefactor','SourceFrickeSeparation','SourceFrickeFaithfulness']
+ths=[];defs=[];ns='Dubon2026.SourceFricke.'
+for m in mods:
+ f=p/(m+'.lean');assert f.with_suffix('.exit').read_text().strip()=='0' and f.with_suffix('.log').stat().st_size==0,m
+ assert f.with_suffix('.olean').stat().st_mtime>=f.stat().st_mtime,m
+ s=re.sub(r'--[^\n]*','',re.sub(r'/\-.*?\-/','',f.read_text(encoding='utf-8'),flags=re.S))
+ ths += [ns+n for n in re.findall(r"^(?:@\[[^\n]*\]\s*)?(?:theorem|lemma) ([\w.']+)",s,re.M)]
+ defs += [ns+n for n in re.findall(r"^(?:noncomputable\s+)?(?:def|abbrev) ([\w.']+)",s,re.M)]
+roots=[ns+n for n in ['frickeF_faithful']]
+separate=[]
+extra=['Dubon2026.SourceEllipticPeriod.periodPoint_eq_zero_iff','Dubon2026.SourceEllipticPeriod.periodHom','Dubon2026.SourceEllipticPeriod.periodCurve_ofTau_isElliptic','WeierstrassCurve.Affine.Point.eq_or_eq_neg_of_xRep_eq_xRep']+[ns+n for n in ['e4e6QSeries_map','frickeF_slash','vecMulSL_apply','vecMulSL_ne_zero']]
+required=[n for n in ths+defs if n not in separate]+extra
+closure=mods+json.loads((p/'source-fricke-product-transport-4-audit-config.json').read_text())['scratchImportClosure']
+cfg=dict(modules=mods,theorems=ths,constructions=defs,queries=ths+defs,proofEdges=required,roots=roots,separatelyAxiomChecked=separate,scratchImportClosure=closure,separateReason='No public theorem is exempted from the required actual proof-value traversal.')
+def output(n,s):
+ f=p/n;assert not f.exists(),f;f.write_text(s,encoding='utf-8')
+output('source-fricke-separation-5-audit-config.json',json.dumps(cfg,indent=2)+'\n')
+arr=lambda ns:'#['+', '.join(chr(96)+n for n in ns)+']'
+imports=''.join('import '+m+'\n' for m in mods)+'import Mathlib.Tactic\n\nopen Lean\n\n'
+t=(p/'SourceOriginalPrimitiveTateRestrictionAudit8.lean').read_text(encoding='utf-8')
+body=t[t.index('private def runPlanarPairingAudit'):t.index('#lint in')]
+for k,ns_ in [('modules',mods),('theorems',ths),('constructions',defs)]:
+ body=re.sub(r'let '+k+r' : Array Name := #\[[^\n]*',lambda _:'let '+k+' : Array Name := '+arr(ns_),body)
+body=body.replace('SOURCE ORIGINAL PRIMITIVE TATE RESTRICTION','SOURCE FRICKE SEPARATION')
+output('SourceFrickeSeparationAudit5.lean',imports+''.join('#print axioms '+n+'\n' for n in cfg['queries'])+'\n'+body+''.join('#lint in '+m+'\n' for m in mods))
+t=(p/'SourceOriginalPrimitiveTateRestrictionDependencyAudit8.lean').read_text(encoding='utf-8')
+body=t[t.index('private def runPlanarPairingDependencyAudit'):]
+for k,ns_ in [('roots',roots),('localModules',closure),('required',required)]:
+ body=re.sub(r'let '+k+r' : Array Name := #\[[^\n]*',lambda _:'let '+k+' : Array Name := '+arr(ns_),body)
+body=body[:body.index('  logInfo m!')]+'''  logInfo m!"SOURCE FRICKE SEPARATION DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual Fricke stabilizer consumer. Only declaration values are traversed. The existing actual period homomorphism, exact lattice-zero criterion, elliptic-point x-coordinate theorem and rational prefactor expansion prove separation and the principal-congruence stabilizer up to sign. No separation or faithfulness premise remains. Rational spanning, differential realization and arithmetic comparison remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit
+'''
+output('SourceFrickeSeparationDependencyAudit5.lean',imports+body)
+print(json.dumps(dict(modules=5,queries=len(ths+defs),theorems=len(ths),constructions=len(defs),edges=len(required))))

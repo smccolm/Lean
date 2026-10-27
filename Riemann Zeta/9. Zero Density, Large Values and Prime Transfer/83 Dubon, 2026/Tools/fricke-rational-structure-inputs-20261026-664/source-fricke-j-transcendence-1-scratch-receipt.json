@@ -1,0 +1,50 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T16:22:39.099705+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceFrickeJTranscendence"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeJTranscendence.lean",
+      "sha256": "D7CC559B1B89F4262F35318B00E991FC4771984D103DBB1DE62869E5DAC2D9F0",
+      "oleanSha256": "E78AB5034388F93D4B1FF689A190E140FDF180045B671A9FDABC144311003EDC"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFricke.analytic_j_aeval_injective",
+    "Dubon2026.SourceFricke.transcendental_analytic_j",
+    "Dubon2026.SourceFricke.transcendental_jA",
+    "Dubon2026.SourceFricke.transcendental_jK"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFricke.analytic_j_aeval_injective",
+    "Dubon2026.SourceFricke.transcendental_analytic_j",
+    "Dubon2026.SourceFricke.transcendental_jA",
+    "Dubon2026.SourceFricke.transcendental_jK"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeJTranscendenceAudit1.log",
+  "logSha256": "05805DC55501A041C3DF7242C9A0EE0B03F6CD6A6A7EF85AE547D2415DAAC525",
+  "auditSha256": "6C69A1A913C0D2CA962C24F73E4EBDDFD3FD0758324BEE982CBE2C1B0D67DB01",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 4,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 8,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeJTranscendenceDependencyAudit1.log",
+  "dependencyAuditSha256": "7763788C5E57A78B3DFC3CECA97E2263D4608FBE816E314A0E0A45DC97DF174B",
+  "dependencyAuditSourceSha256": "6A1A8A731A1339D3610C2DE783ED685D0C7E7BBC2B86CDDAA9D3CCE41A8401BC",
+  "consumers": [
+    "Dubon2026.SourceFricke.transcendental_jK"
+  ],
+  "dependency": "DUB-17/18 -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 Hecke characters -> actual Picard/H1, full/parabolic and diamond comparison retaining the original homogeneous coefficient endomorphism -> cusp differential realization -> cyclotomic rational Fourier basis. -> transcendence of the actual j in the actual Fricke fraction field, needed for transcendental constant-extension descent.",
+  "discharged": "The original j in the actual Fricke algebra and its native fraction field is transcendental over C. No transcendence assumption is supplied.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Cyclotomic integral base change and Fourier spanning, actual cusp differential realization and original arithmetic comparison; 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-fricke-j-transcendence-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "3EAE89DE03C24C1244710B46F7B0756808D7BB23C61D28B9C210E7A7CB76DD41",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,57 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T16:25:57.923581+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceFrickeStableMonicV2",
+    "SourceFrickeModularOrbitV2"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeStableMonicV2.lean",
+      "sha256": "3A26BF0EDA852DEABC400B64A310153F57CFF0F48CF3EBE2FDC8A0ED372489A2",
+      "oleanSha256": "EEC71C0C75257F230AAFC7B4F28512FA6E1D9CD0A8D9367ED8EBFDCAD3D5AEE4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeModularOrbitV2.lean",
+      "sha256": "1C87B8694ED9D5016743DE0F3866847FD315A9C8FA6C08D6C83DC4283221D345",
+      "oleanSha256": "547105F8BD136896BE129F6C7D2B58B22A404C6D1ACA86E94DB8E01094EA117E"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFricke.LevelGens.ring_monic_j_relation",
+    "Dubon2026.SourceFricke.mdifferentiable_slFn",
+    "Dubon2026.SourceFricke.exists_fraction_and_monic_j_of_principal_invariant",
+    "Dubon2026.SourceFricke.modularOrbitGens"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFricke.LevelGens.ring_monic_j_relation",
+    "Dubon2026.SourceFricke.mdifferentiable_slFn",
+    "Dubon2026.SourceFricke.exists_fraction_and_monic_j_of_principal_invariant"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFricke.modularOrbitGens"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeOrbitMonicAudit2b.log",
+  "logSha256": "7ABDD683DAF0484AB02041D2B043DDF17DD7EAB400F0A6AAE7D57E17A35729E6",
+  "auditSha256": "5739B9C0B468E2E0739696D2F561E756AB5DB4CE1824C980FFE959149AE9F395",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 7,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 13,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeOrbitMonicDependencyAudit2b.log",
+  "dependencyAuditSha256": "3E63E1D94151F0A57F7B541400697EC67113EC0B241BEA242B3F762DFC1F0714",
+  "dependencyAuditSourceSha256": "6127739A626EE0D68AC9FAA8BA703E21579D125066A1AF37CF429B9265895CC3",
+  "consumers": [
+    "Dubon2026.SourceFricke.exists_fraction_and_monic_j_of_principal_invariant"
+  ],
+  "dependency": "DUB-17/18 -> original all-weight association -> actual finite Gamma1 character realization -> actual Picard/H1 comparison -> cusp differential realization -> rational Fourier structure -> integral base change of Fricke fractions -> actual monic relation over C[j].",
+  "discharged": "Any actual holomorphic principal-level invariant function with finite cusp poles at all modular translates is both an actual Fricke fraction and a root of an actual monic equation with polynomial-in-j coefficients. Neither fraction representation nor monic relation is assumed.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Cyclotomic integral base change, rational Fourier spanning and descent, actual cusp differential realization and arithmetic comparison; 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-fricke-orbit-monic-2b-reuse-review-20261026.json",
+  "reuseReviewSha256": "7BE72ACB750EEE47DA9A55E1B124E6CE3FB343075E15F3B0892B91BBD2531923",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

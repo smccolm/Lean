@@ -1,0 +1,113 @@
+{
+  "date": "2026-10-26 America/Vancouver",
+  "dependency": "DUB-17/18 -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 Hecke characters -> actual Picard/H1, full/parabolic and diamond comparison retaining the original homogeneous coefficient endomorphism -> cusp differential realization -> cyclotomic rational Fourier basis.",
+  "sourceReview": "The two adjoining-constant theorems are explicit algebraic foundations required by the selected integral-span descent. The holomorphic quotient file has a duplicated valuation engine which its final solution does not call; its final proof transfers an imported analytic quotient theorem to the upper half-plane. Reuse existing removable-chart and identity-theorem code before adapting that dependency. The Fricke orbit package provides cyclotomic monic equations; assess whether the proved Laurent coefficient-retraction theorem plus actual cyclotomic Fourier models gives a shorter route to the required integrality conclusion.",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_IsIntegral_mem_span_of_adjoin_simple_constants.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_IsIntegral_mem_span_of_adjoin_simple_constants.lean",
+      "snapshot": "P2M\\Sol\\S_IsIntegral_mem_span_of_adjoin_simple_constants.lean.txt",
+      "gitBlob": "bd5b461dec141130cdcac19b8711a3ce18e304a4",
+      "sha256": "49302D5E9CB6E41812AC4B5FBF9E282163F2CF6BA2AA7470F0CB8097D6B5CC51",
+      "bytes": 21172,
+      "lines": 437,
+      "forbiddenTokens": [],
+      "options": [
+        "set_option autoImplicit false",
+        "set_option maxHeartbeats 6400000 in"
+      ]
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_IsIntegral_mem_span_of_adjoin_simple_constants_transcendental.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_IsIntegral_mem_span_of_adjoin_simple_constants_transcendental.lean",
+      "snapshot": "P2M\\Sol\\S_IsIntegral_mem_span_of_adjoin_simple_constants_transcendental.lean.txt",
+      "gitBlob": "af99692aa6d6d000528f9de923c9339379f02f81",
+      "sha256": "B3AB91EC54374CF1DB366726AB29F1FD36A9CE17A5F7E61AB1FCE78905596D48",
+      "bytes": 29274,
+      "lines": 599,
+      "forbiddenTokens": [],
+      "options": [
+        "set_option autoImplicit false",
+        "set_option synthInstance.maxHeartbeats 1600000 in",
+        "set_option synthInstance.maxHeartbeats 800000 in",
+        "set_option synthInstance.maxHeartbeats 1600000 in",
+        "set_option synthInstance.maxHeartbeats 1600000 in",
+        "set_option synthInstance.maxHeartbeats 3200000 in",
+        "set_option maxHeartbeats 6400000 in",
+        "set_option synthInstance.maxHeartbeats 1600000 in",
+        "set_option maxHeartbeats 6400000 in",
+        "set_option synthInstance.maxHeartbeats 1600000 in",
+        "set_option synthInstance.maxHeartbeats 1600000 in",
+        "set_option maxHeartbeats 3200000 in",
+        "set_option synthInstance.maxHeartbeats 1600000 in",
+        "set_option synthInstance.maxHeartbeats 1600000 in",
+        "set_option maxHeartbeats 3200000 in",
+        "set_option synthInstance.maxHeartbeats 1600000 in",
+        "set_option maxHeartbeats 6400000 in",
+        "set_option synthInstance.maxHeartbeats 1600000 in",
+        "set_option maxHeartbeats 51200000 in",
+        "set_option synthInstance.maxHeartbeats 4000000 in",
+        "set_option maxSynthPendingDepth 3 in"
+      ]
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_WLight_exists_mdifferentiable_div_of_monicRel.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_WLight_exists_mdifferentiable_div_of_monicRel.lean",
+      "snapshot": "P2M\\Sol\\S_WLight_exists_mdifferentiable_div_of_monicRel.lean.txt",
+      "gitBlob": "44f7776d0e2f0a1ea5a8b821aeb4c230db56355d",
+      "sha256": "BB99F0200DACBBB2F8DD9F1A0AAB1395E4DF8A50701B8CAC597AB241CDCB0E9C",
+      "bytes": 9508,
+      "lines": 183,
+      "forbiddenTokens": [],
+      "options": [
+        "set_option autoImplicit false"
+      ]
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_WLight_frickeFunction_orbit_package.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_WLight_frickeFunction_orbit_package.lean",
+      "snapshot": "P2M\\Sol\\S_WLight_frickeFunction_orbit_package.lean.txt",
+      "gitBlob": "80a04744a68261ee76fc03e01638cfc46d652ad9",
+      "sha256": "7AE39C51922BCC81C596D3AAD859CB35A869BCAF06681513A00E88FAEE3EC165",
+      "bytes": 47374,
+      "lines": 1037,
+      "forbiddenTokens": [],
+      "options": [
+        "set_option autoImplicit false"
+      ]
+    }
+  ],
+  "localReuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentIntegralDescent.lean",
+      "sha256": "B69E4811A4C90E8BE66BB986C98033C88638B749E90B21C0D5AC1693745412C6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentScalarIndependence.lean",
+      "sha256": "2CB7EFCA500FBE57B6F474D706B231DDDC227CA71A0345B799B2035C7A6AA6C5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceMeromorphicRemovableCharts.lean",
+      "sha256": "8A1282C98906FD9038B5193C6D3BBD4EBAAE031E9571DD64F8FE465339C885A1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceConstantFieldRationalDescent.lean",
+      "sha256": "D1CB9749AFE93B38CAF7E13BD7F9B7619FDBE7166B3499833E33D7D686E42FC5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAnalyticJSurjectivity.lean",
+      "sha256": "C3E2EB883F3D99EB8C18D346C329640888490C758695DAE415A571A6B24ADE1E"
+    }
+  ],
+  "boundary": "Selected-file research only. No external project build, transitive proof-closure verification, import or end-theorem completion claim. Actual arithmetic comparison and DUB-17--20 remain open; 16/20.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

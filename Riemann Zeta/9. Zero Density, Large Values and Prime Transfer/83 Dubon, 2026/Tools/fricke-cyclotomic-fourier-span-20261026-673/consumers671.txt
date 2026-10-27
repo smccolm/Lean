@@ -1,0 +1,55 @@
+
+section
+open scoped ComplexOrder Topology
+
+/-- Nonnegative coefficients of the literal finite geometric products of the actual augmented tensor roots. -/
+theorem primitive_augmented_formal_coefficient_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (p : Nat.Primes) (r : ℕ) :
+    0 ≤ PowerSeries.coeff r (∏ i : Fin 3 × Fin 3,
+      PowerSeries.mk (fun n : ℕ =>
+        (primitiveAugmentedRoots f p i.1 * primitiveAugmentedRoots f p i.2) ^ n)) :=
+  primitiveAugmentedLocalCoeff_nonneg f p r
+
+/-- Actual factorization-assembled nonnegative coefficients identify the genuine mixed Rankin L-series, including the exact finite bad correction. -/
+theorem primitive_augmented_dirichlet_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    let a : ℕ → ℂ := fun n => if n = 0 then 0 else
+      n.factorization.prod (primitiveAugmentedNatLocalCoeff f)
+    (∀ n, 0 ≤ a n) ∧ a 1 = 1 ∧
+      (∀ s : ℂ, 7 < s.re → LSeries a s =
+        DirichletCharacter.LFunctionTrivChar Q s * rankinConvolutionGlobalContinuation f.toCuspForm s *
+          (∏ p ∈ ramifiedPrimeSet Q,
+            (1 - ((‖normalizedCuspCoefficients f.toCuspForm p‖ ^ 2 : ℝ) : ℂ) * (((p : ℕ) : ℂ) ^ (-s)))) *
+              primitiveSymmetricLFunction f 1 s ^ 2) :=
+  ⟨primitiveAugmentedCoefficient_nonneg f, primitiveAugmentedCoefficient_one f,
+    fun _ hs => primitiveAugmentedCoefficient_LSeries f hk hs⟩
+
+/-- The explicit original cusp function times its finite correction is entire and nonzero on every point of Re(s)≥1, and matches the literal infinite first symmetric Euler product. -/
+theorem primitive_first_full_nonvanishing_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) :
+    let F : ℂ → ℂ := fun s => normalizedCuspLFunction f.toCuspForm s *
+      ∏ p ∈ ramifiedPrimeSet Q, primitiveEulerDenominator f p s
+    Differentiable ℂ F ∧ (∀ s : ℂ, 1 ≤ s.re → F s ≠ 0) ∧
+      Set.EqOn F (fun s => (∏' v : Nat.Primes × Fin 2,
+        (1 - primitiveSymmetricSpectralRoots f 1 v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+        {s | 1 < s.re} :=
+  ⟨primitiveFirstContinuation_differentiable f (by omega),
+    fun _ hs => primitiveFirstContinuation_ne_zero f hk hs,
+    fun _ hs => primitiveFirstContinuation_eq_symmetric f (by omega) hs⟩
+
+/-- The genuine empirical Sato–Tate reduction consumes actual good-prime purity and literal symmetric Euler continuations only from order three onward. -/
+theorem primitive_sato_tate_higher_continuation_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k)
+    (hbound : ∀ p, Nat.Prime p → ¬p ∣ Q → ‖normalizedCuspCoefficients f.toCuspForm p‖ ≤ 2)
+    (hcontinuation : ∀ r : ℕ, 3 ≤ r → ∃ F : ℂ → ℂ,
+      AnalyticOnNhd ℂ F {s | 1 ≤ s.re} ∧
+      (∀ s : ℂ, 1 ≤ s.re → F s ≠ 0) ∧
+      Set.EqOn F (fun s => (∏' v : Nat.Primes × Fin (r + 1),
+        (1 - primitiveSymmetricSpectralRoots f r v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+        {s | 1 < s.re}) :
+    Filter.Tendsto (primeEmpirical (fun p => (normalizedCuspCoefficients f.toCuspForm p).re))
+      Filter.atTop (𝓝 satoTateProbability) :=
+  primitive_satoTate_of_higher_symmetric_L_continuation f hk hbound hcontinuation
+
+end
+

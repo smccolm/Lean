@@ -1,0 +1,9 @@
+[
+  "SpectralFormalSeries",
+  "SpectralFormalEvaluation",
+  "PrimitiveAugmentedTensor",
+  "EulerCoefficientAssembly",
+  "PrimitiveAugmentedCoefficients",
+  "PrimitiveAugmentedEuler",
+  "PrimitiveFirstNonvanishing"
+]

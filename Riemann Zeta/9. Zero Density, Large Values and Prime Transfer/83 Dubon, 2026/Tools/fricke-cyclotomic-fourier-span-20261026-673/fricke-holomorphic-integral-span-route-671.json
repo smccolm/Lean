@@ -1,0 +1,67 @@
+{
+  "scope": 671,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> Picard/H1 and full/parabolic/diamond comparison retaining the original homogeneous coefficient endomorphism -> actual differential/cusp comparison -> rational Fourier spanning -> holomorphic realization of the integral Fricke Laurent summands.",
+  "assumptionsToDischarge": "Derive actual holomorphic periodic cyclotomic Fricke fractions representing each integral Laurent summand, then lift the ordinary complex Laurent span to the actual principal-level holomorphic function. Neither holomorphic summand realization nor an actual cyclotomic spanning family is assumed.",
+  "remaining": "The actual holomorphic function span is proved. Pole-cleared cyclotomic Fourier coefficients and rational cusp-form spanning remain, followed by arbitrary Gamma1 differential realization and the arithmetic association, automorphy and higher continuation chain. 16/20; DUB-17--20 OPEN.",
+  "shorterRouteReview": "Before expanding the external analytic quotient development, reuse local SourceHolomorphicQuotientExtension, SourceMonicRelationRootBound and the native upper-half-plane identity theorem. They prove the required quotient extension directly from the cleared monic relation and continuity of its finitely many coefficients. Native IntermediateField fraction-ring surjectivity lifts the original Laurent fraction to actual cyclotomic numerator and denominator. Existing cusp-germ injectivity and coefficientwise scalar transport then lift the span. No general valuation engine, external analytic quotient file, new j transcendence proof, or incidental generalization is needed.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLaurentIntegralSpan.lean",
+      "sha256": "60367D17BA3C3B2CA14757677E66173707130350D756DAF341E4F5FB979E932A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspLaurentFunctionIdentity.lean",
+      "sha256": "DC4D20A9159A9B19D2569D9FE996E9473A33A911DDA5BA61C110E7D479D63BD8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspLaurentFractionIdentity.lean",
+      "sha256": "BDFDABE6460490760974FB3C4169668C36545BFF95FE0266DCF9CD5FA06869B7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFractionPeriodicity.lean",
+      "sha256": "F6B29316F4B06C5F9B20E62F0E40B55072FCF59DF508B7F2FF97BFA57F7741EF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicFractionGerm.lean",
+      "sha256": "E761C04EFA4A51687EEF11E3F4A75EC38631DDCAF911522D43A56C06F34FB7C5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHolomorphicQuotientExtension.lean",
+      "sha256": "C0FB025E337C57A31FFA67B1813BDD0853DC355C05E7EAC69328789488839D1C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceMonicRelationRootBound.lean",
+      "sha256": "FC613F63A13058B64CD46F7049DF846F718C90B4FACB1DF5BCD3DFBD6054441F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularRatioGerms.lean",
+      "sha256": "4620A3110F8687A4101EC2CE2DE81B1D319201A535A4C83B4A09CC689EC0CA53"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentEuler.lean",
+      "sha256": "F81C26F454F057BCCE8173B6C6A90F6B460DC865537E30A66E8524D84460F657"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\FieldTheory\\IntermediateField\\Adjoin\\Basic.lean",
+      "sha256": "D6D316B6CE84C8764227C7BAB52DE839D08422316C14946424C737C1FB73F40C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\CongruenceSubgroups.lean",
+      "sha256": "DF53B80B64A6DCD7B8AB7F87BD8092D77C557FCAA53857C23C507F9D894A23C0"
+    }
+  ],
+  "externalImport": false,
+  "externalFullClosureVerified": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "modules": [
+    "SourceMonicQuotientRelation",
+    "SourceHolomorphicMonicQuotient",
+    "SourceIntegralCoordinateMonic",
+    "SourceFrickeCyclotomicLaurentLifts",
+    "SourceFrickeClearedLaurentMonic",
+    "SourceFrickeIntegralHolomorphicRepresentative",
+    "SourceCuspLaurentSpan",
+    "SourceFrickeHolomorphicIntegralSpan"
+  ]
+}

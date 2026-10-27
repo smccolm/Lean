@@ -1,0 +1,271 @@
+import Dubon2026.SourceCuspLaurentLinearRelations
+import Dubon2026.SourceFrickeLaurentIndependence
+import Dubon2026.SourceFrickeCyclotomicHolomorphicAlgebra
+import Dubon2026.SourceFrickeScalarExtensionBasis
+import Dubon2026.SourceComplexBasisCoefficientTwist
+import Dubon2026.SourceFrickeCoefficientTwist
+import Dubon2026.SourceFrickeSpanLaurentRealization
+import Dubon2026.SourceLaurentTwistOrder
+import Dubon2026.SourceCuspVanishingOrder
+import Dubon2026.SourceFrickeTwistCuspVanishing
+import Dubon2026.SourceFrickeCyclotomicModularAction
+import Dubon2026.SourceFrickeTwistModularEquivariance
+import Dubon2026.SourceFrickeSpanMultiplication
+import Dubon2026.SourceFrickePrincipalInvariance
+import Dubon2026.SourceFrickeTwistPowers
+import Dubon2026.SourceFrickeHolomorphicDivisionInvariance
+import Dubon2026.SourceFrickeHolomorphicDivisionSpan
+import Dubon2026.SourceFrickeHolomorphicDivisionTwist
+import Dubon2026.SourceFrickeEllipticDivisibilityTwist
+import Dubon2026.SourceFrickeEllipticCoordinateTwist
+import Dubon2026.SourceHolomorphicCoprimeDivision
+import Dubon2026.SourceCuspWeightFactors
+import Dubon2026.SourceCuspWeightHolomorphicDivision
+import Dubon2026.SourceCuspWeightTransformation
+import Dubon2026.SourceCuspWeightCriterion
+import Dubon2026.SourceCuspWeightImage
+import Dubon2026.SourceFrickeTwistCuspConditions
+import Dubon2026.SourceCuspWeightImageSpan
+import Dubon2026.SourceCuspWeightImageTwist
+import Dubon2026.SourcePureTranscendentalConstantIntersection
+import Dubon2026.SourceAlgebraicallyClosedFixedField
+import Dubon2026.SourceTwistDescentFiniteSupport
+import Dubon2026.SourceTwistStableSubspaceDescent
+import Dubon2026.SourceOriginalFrickeSpanDescent
+import Dubon2026.SourceCuspWeightImageDescent
+import Dubon2026.SourceCuspFrickeRationalSpan
+import Dubon2026.SourceEisensteinFactorCyclotomicLaurent
+import Dubon2026.SourceCuspWeightImageFourier
+import Dubon2026.SourceGammaOneCyclotomicCuspSpan
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.coeffMap_sum_smul
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_smul_sum
+#print axioms Dubon2026.SourceFunctionField.cusp_laurent_sum_smul_eq_zero_iff
+#print axioms Dubon2026.SourceFunctionField.linearIndependent_functions_of_laurent_coefficients
+#print axioms Dubon2026.SourceFricke.linearIndependent_holomorphic_cyclotomic_fricke_fractions
+#print axioms Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_add
+#print axioms Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_mul
+#print axioms Dubon2026.SourceFricke.exists_complex_basis_of_cyclotomic_fricke_basis
+#print axioms Dubon2026.SourceFricke.cyclotomicFrickeComplexBasis_apply
+#print axioms Dubon2026.SourceFricke.basisCoefficientTwist_repr
+#print axioms Dubon2026.SourceFricke.basisCoefficientTwist_basis
+#print axioms Dubon2026.SourceFricke.basisCoefficientTwist_smul
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_fixes_original
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_smul
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_sum_original
+#print axioms Dubon2026.SourceFricke.frickeSpan_holomorphic
+#print axioms Dubon2026.SourceFricke.frickeSpan_periodic
+#print axioms Dubon2026.SourceFricke.coeffMap_cyclotomic_scalar_sum
+#print axioms Dubon2026.SourceFricke.exists_fricke_twist_laurent
+#print axioms Dubon2026.SourceFunctionField.coeffMap_order
+#print axioms Dubon2026.SourceFunctionField.coeffMap_orderTop
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.orderTop
+#print axioms Dubon2026.SourceFricke.isZeroAtImInfty_iff_cusp_order_pos
+#print axioms Dubon2026.SourceFricke.coeffMap_cyclotomic_fixed
+#print axioms Dubon2026.SourceFricke.coeffMap_discriminant_fixed
+#print axioms Dubon2026.SourceFricke.exists_fricke_twist_laurent_mul_discriminant
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_cusp_order_mul_discriminant
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_isZeroAtImInfty_mul_discriminant_iff
+#print axioms Dubon2026.SourceFricke.cyclotomicHolomorphicFrickeAlgebra
+#print axioms Dubon2026.SourceFricke.cyclotomicFrickeComplexBasis
+#print axioms Dubon2026.SourceFricke.basisCoefficientTwist
+#print axioms Dubon2026.SourceFricke.cyclotomicFrickeSpanInclusion
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist
+#print axioms Dubon2026.SourceFricke.smul_mem_cyclotomicLevelRing
+#print axioms Dubon2026.SourceFricke.smul_mem_holomorphicCyclotomicFrickeFractions
+#print axioms Dubon2026.SourceFricke.smul_mem_frickeSpan
+#print axioms Dubon2026.SourceFricke.exists_frickeSpan_sum_original
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_pullback
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_isZeroAtImInfty_sl_mul_discriminant_iff
+#print axioms Dubon2026.SourceFricke.mul_mem_frickeSpan
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_mul
+#print axioms Dubon2026.SourceFricke.smul_eq_self_cyclotomicLevelRing
+#print axioms Dubon2026.SourceFricke.smul_eq_self_holomorphicCyclotomicFrickeFractions
+#print axioms Dubon2026.SourceFricke.smul_eq_self_frickeSpan
+#print axioms Dubon2026.SourceFricke.principalInvariant_frickeSpan
+#print axioms Dubon2026.SourceFricke.pow_mem_frickeSpan
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_pow
+#print axioms Dubon2026.SourceFricke.frickeSpanPullback
+#print axioms Dubon2026.SourceFricke.frickeSpanMul
+#print axioms Dubon2026.SourceFricke.frickeSpanPow
+#print axioms Dubon2026.SourceFricke.principalInvariant_holomorphic_quotient
+#print axioms Dubon2026.SourceFricke.exists_frickeSpan_laurent
+#print axioms Dubon2026.SourceFricke.meromorphic_cusp_holomorphic_quotient
+#print axioms Dubon2026.SourceFricke.mem_frickeSpan_of_holomorphic_quotient
+#print axioms Dubon2026.SourceFricke.exists_twisted_holomorphic_quotient
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_transport_elliptic_divisibility
+#print axioms Dubon2026.SourceFricke.cyclotomicFrickeJShift_ne_zero
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_E4_divisibility
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_E6_divisibility
+#print axioms Dubon2026.SourceFricke.cyclotomicFrickeJShift
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_mul_eq_of_coprime
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.mdifferentiable_eisensteinFactor
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.E4_ne_zero_or_E6_ne_zero
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.tendsto_E6_atImInfty
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_E4_ne_zero
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_E6_ne_zero
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.tendsto_eisensteinFactor
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_eisensteinFactor_ne_zero
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.isBoundedAtImInfty_eisensteinFactor
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_div_E4
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_div_E6
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.eisensteinFactor_smul
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.discriminant_pow_smul
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.slash_mul_eisensteinFactor
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.forward
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.backward
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.main
+#print axioms Dubon2026.SourceFricke.cuspWeightImage_mul_discriminant
+#print axioms Dubon2026.SourceFricke.mdifferentiable_cuspWeightImage
+#print axioms Dubon2026.SourceFricke.cuspWeightImage_injective
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_preserves_all_cusps
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_preserves_subgroup_invariance
+#print axioms Dubon2026.SourceFricke.cuspWeightImage_mem_frickeSpan
+#print axioms Dubon2026.SourceFricke.exists_cuspWeightImage_eq_twist
+#print axioms Dubon2026.SourceFunctionField.CuspWeightCriterion.eisensteinFactor
+#print axioms Dubon2026.SourceFricke.cuspWeightImage
+#print axioms Dubon2026.SourceFricke.cuspWeightImageElement
+#print axioms Dubon2026.SourceFunctionField.ConstantFixedField.mem_bot_of_isAlgebraic_of_mem_adjoin_algebraicIndependent
+#print axioms Dubon2026.SourceFunctionField.ConstantFixedField.exists_algEquiv_apply_ne_of_exists_notMem
+#print axioms Dubon2026.SourceFunctionField.ConstantFixedField.exists_intermediateField_isAlgebraic_notMem_of_isAlgebraic
+#print axioms Dubon2026.SourceFunctionField.ConstantFixedField.notMem_adjoin_sq_of_transcendental
+#print axioms Dubon2026.SourceFunctionField.ConstantFixedField.exists_algEquiv_apply_ne_of_transcendental
+#print axioms Dubon2026.SourceFunctionField.ConstantFixedField.exists_algEquiv_apply_ne
+#print axioms Dubon2026.SourceFunctionField.ConstantFixedField.mem_range_of_fixed
+#print axioms Dubon2026.SourceFunctionField.TwistDescent.descent_core
+#print axioms Dubon2026.SourceFunctionField.TwistDescent.descent_generic
+#print axioms Dubon2026.SourceFricke.mem_originalFrickeSpan_iff
+#print axioms Dubon2026.SourceFricke.span_originalFrickeSpan_eq_top
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_fixes_original_submodule
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_sum_original_submodule
+#print axioms Dubon2026.SourceFricke.mem_span_originalFrickeSpan_of_twist_stable
+#print axioms Dubon2026.SourceFricke.cuspWeightImageIntoSpan_injective
+#print axioms Dubon2026.SourceFricke.cuspWeightImageIntoSpan_twist_mem_range
+#print axioms Dubon2026.SourceFricke.cuspWeightImageIntoSpan_descent
+#print axioms Dubon2026.SourceFricke.span_cuspWeightImage_cyclotomic_fractions_eq_top
+#print axioms Dubon2026.SourceFricke.originalFrickeSpan
+#print axioms Dubon2026.SourceFricke.cuspWeightImageIntoSpan
+#print axioms Dubon2026.SourceFricke.coeffMap_eisensteinLaurentK
+#print axioms Dubon2026.SourceFricke.periodic_eisensteinFactor
+#print axioms Dubon2026.SourceFricke.represents_eisensteinFactorLaurentK
+#print axioms Dubon2026.SourceFricke.eisensteinFactorLaurentK_ne_zero
+#print axioms Dubon2026.SourceFricke.exists_cuspWeightImage_laurent
+#print axioms Dubon2026.SourceFricke.cuspWeightImage_qExpansion_coeff_mem
+#print axioms Dubon2026.SourceFricke.gammaOne_cuspWeightImage_qExpansion_coeff_mem
+#print axioms Dubon2026.SourceFricke.span_gammaOne_cyclotomic_cuspForms_eq_top
+#print axioms Dubon2026.SourceFricke.span_gammaOne_weightTwo_cyclotomic_cuspForms_eq_top
+#print axioms Dubon2026.SourceFricke.eisensteinLaurentK
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceCuspLaurentLinearRelations, `Dubon2026.SourceFrickeLaurentIndependence, `Dubon2026.SourceFrickeCyclotomicHolomorphicAlgebra, `Dubon2026.SourceFrickeScalarExtensionBasis, `Dubon2026.SourceComplexBasisCoefficientTwist, `Dubon2026.SourceFrickeCoefficientTwist, `Dubon2026.SourceFrickeSpanLaurentRealization, `Dubon2026.SourceLaurentTwistOrder, `Dubon2026.SourceCuspVanishingOrder, `Dubon2026.SourceFrickeTwistCuspVanishing, `Dubon2026.SourceFrickeCyclotomicModularAction, `Dubon2026.SourceFrickeTwistModularEquivariance, `Dubon2026.SourceFrickeSpanMultiplication, `Dubon2026.SourceFrickePrincipalInvariance, `Dubon2026.SourceFrickeTwistPowers, `Dubon2026.SourceFrickeHolomorphicDivisionInvariance, `Dubon2026.SourceFrickeHolomorphicDivisionSpan, `Dubon2026.SourceFrickeHolomorphicDivisionTwist, `Dubon2026.SourceFrickeEllipticDivisibilityTwist, `Dubon2026.SourceFrickeEllipticCoordinateTwist, `Dubon2026.SourceHolomorphicCoprimeDivision, `Dubon2026.SourceCuspWeightFactors, `Dubon2026.SourceCuspWeightHolomorphicDivision, `Dubon2026.SourceCuspWeightTransformation, `Dubon2026.SourceCuspWeightCriterion, `Dubon2026.SourceCuspWeightImage, `Dubon2026.SourceFrickeTwistCuspConditions, `Dubon2026.SourceCuspWeightImageSpan, `Dubon2026.SourceCuspWeightImageTwist, `Dubon2026.SourcePureTranscendentalConstantIntersection, `Dubon2026.SourceAlgebraicallyClosedFixedField, `Dubon2026.SourceTwistDescentFiniteSupport, `Dubon2026.SourceTwistStableSubspaceDescent, `Dubon2026.SourceOriginalFrickeSpanDescent, `Dubon2026.SourceCuspWeightImageDescent, `Dubon2026.SourceCuspFrickeRationalSpan, `Dubon2026.SourceEisensteinFactorCyclotomicLaurent, `Dubon2026.SourceCuspWeightImageFourier, `Dubon2026.SourceGammaOneCyclotomicCuspSpan]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.coeffMap_sum_smul, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_smul_sum, `Dubon2026.SourceFunctionField.cusp_laurent_sum_smul_eq_zero_iff, `Dubon2026.SourceFunctionField.linearIndependent_functions_of_laurent_coefficients, `Dubon2026.SourceFricke.linearIndependent_holomorphic_cyclotomic_fricke_fractions, `Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_add, `Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_mul, `Dubon2026.SourceFricke.exists_complex_basis_of_cyclotomic_fricke_basis, `Dubon2026.SourceFricke.cyclotomicFrickeComplexBasis_apply, `Dubon2026.SourceFricke.basisCoefficientTwist_repr, `Dubon2026.SourceFricke.basisCoefficientTwist_basis, `Dubon2026.SourceFricke.basisCoefficientTwist_smul, `Dubon2026.SourceFricke.frickeCoefficientTwist_fixes_original, `Dubon2026.SourceFricke.frickeCoefficientTwist_smul, `Dubon2026.SourceFricke.frickeCoefficientTwist_sum_original, `Dubon2026.SourceFricke.frickeSpan_holomorphic, `Dubon2026.SourceFricke.frickeSpan_periodic, `Dubon2026.SourceFricke.coeffMap_cyclotomic_scalar_sum, `Dubon2026.SourceFricke.exists_fricke_twist_laurent, `Dubon2026.SourceFunctionField.coeffMap_order, `Dubon2026.SourceFunctionField.coeffMap_orderTop, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.orderTop, `Dubon2026.SourceFricke.isZeroAtImInfty_iff_cusp_order_pos, `Dubon2026.SourceFricke.coeffMap_cyclotomic_fixed, `Dubon2026.SourceFricke.coeffMap_discriminant_fixed, `Dubon2026.SourceFricke.exists_fricke_twist_laurent_mul_discriminant, `Dubon2026.SourceFricke.frickeCoefficientTwist_cusp_order_mul_discriminant, `Dubon2026.SourceFricke.frickeCoefficientTwist_isZeroAtImInfty_mul_discriminant_iff, `Dubon2026.SourceFricke.smul_mem_cyclotomicLevelRing, `Dubon2026.SourceFricke.smul_mem_holomorphicCyclotomicFrickeFractions, `Dubon2026.SourceFricke.smul_mem_frickeSpan, `Dubon2026.SourceFricke.exists_frickeSpan_sum_original, `Dubon2026.SourceFricke.frickeCoefficientTwist_pullback, `Dubon2026.SourceFricke.frickeCoefficientTwist_isZeroAtImInfty_sl_mul_discriminant_iff, `Dubon2026.SourceFricke.mul_mem_frickeSpan, `Dubon2026.SourceFricke.frickeCoefficientTwist_mul, `Dubon2026.SourceFricke.smul_eq_self_cyclotomicLevelRing, `Dubon2026.SourceFricke.smul_eq_self_holomorphicCyclotomicFrickeFractions, `Dubon2026.SourceFricke.smul_eq_self_frickeSpan, `Dubon2026.SourceFricke.principalInvariant_frickeSpan, `Dubon2026.SourceFricke.pow_mem_frickeSpan, `Dubon2026.SourceFricke.frickeCoefficientTwist_pow, `Dubon2026.SourceFricke.principalInvariant_holomorphic_quotient, `Dubon2026.SourceFricke.exists_frickeSpan_laurent, `Dubon2026.SourceFricke.meromorphic_cusp_holomorphic_quotient, `Dubon2026.SourceFricke.mem_frickeSpan_of_holomorphic_quotient, `Dubon2026.SourceFricke.exists_twisted_holomorphic_quotient, `Dubon2026.SourceFricke.frickeCoefficientTwist_transport_elliptic_divisibility, `Dubon2026.SourceFricke.cyclotomicFrickeJShift_ne_zero, `Dubon2026.SourceFricke.frickeCoefficientTwist_E4_divisibility, `Dubon2026.SourceFricke.frickeCoefficientTwist_E6_divisibility, `Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_mul_eq_of_coprime, `Dubon2026.SourceFunctionField.CuspWeightCriterion.mdifferentiable_eisensteinFactor, `Dubon2026.SourceFunctionField.CuspWeightCriterion.E4_ne_zero_or_E6_ne_zero, `Dubon2026.SourceFunctionField.CuspWeightCriterion.tendsto_E6_atImInfty, `Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_E4_ne_zero, `Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_E6_ne_zero, `Dubon2026.SourceFunctionField.CuspWeightCriterion.tendsto_eisensteinFactor, `Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_eisensteinFactor_ne_zero, `Dubon2026.SourceFunctionField.CuspWeightCriterion.isBoundedAtImInfty_eisensteinFactor, `Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_div_E4, `Dubon2026.SourceFunctionField.CuspWeightCriterion.exists_div_E6, `Dubon2026.SourceFunctionField.CuspWeightCriterion.eisensteinFactor_smul, `Dubon2026.SourceFunctionField.CuspWeightCriterion.discriminant_pow_smul, `Dubon2026.SourceFunctionField.CuspWeightCriterion.slash_mul_eisensteinFactor, `Dubon2026.SourceFunctionField.CuspWeightCriterion.forward, `Dubon2026.SourceFunctionField.CuspWeightCriterion.backward, `Dubon2026.SourceFunctionField.CuspWeightCriterion.main, `Dubon2026.SourceFricke.cuspWeightImage_mul_discriminant, `Dubon2026.SourceFricke.mdifferentiable_cuspWeightImage, `Dubon2026.SourceFricke.cuspWeightImage_injective, `Dubon2026.SourceFricke.frickeCoefficientTwist_preserves_all_cusps, `Dubon2026.SourceFricke.frickeCoefficientTwist_preserves_subgroup_invariance, `Dubon2026.SourceFricke.cuspWeightImage_mem_frickeSpan, `Dubon2026.SourceFricke.exists_cuspWeightImage_eq_twist, `Dubon2026.SourceFunctionField.ConstantFixedField.mem_bot_of_isAlgebraic_of_mem_adjoin_algebraicIndependent, `Dubon2026.SourceFunctionField.ConstantFixedField.exists_algEquiv_apply_ne_of_exists_notMem, `Dubon2026.SourceFunctionField.ConstantFixedField.exists_intermediateField_isAlgebraic_notMem_of_isAlgebraic, `Dubon2026.SourceFunctionField.ConstantFixedField.notMem_adjoin_sq_of_transcendental, `Dubon2026.SourceFunctionField.ConstantFixedField.exists_algEquiv_apply_ne_of_transcendental, `Dubon2026.SourceFunctionField.ConstantFixedField.exists_algEquiv_apply_ne, `Dubon2026.SourceFunctionField.ConstantFixedField.mem_range_of_fixed, `Dubon2026.SourceFunctionField.TwistDescent.descent_core, `Dubon2026.SourceFunctionField.TwistDescent.descent_generic, `Dubon2026.SourceFricke.mem_originalFrickeSpan_iff, `Dubon2026.SourceFricke.span_originalFrickeSpan_eq_top, `Dubon2026.SourceFricke.frickeCoefficientTwist_fixes_original_submodule, `Dubon2026.SourceFricke.frickeCoefficientTwist_sum_original_submodule, `Dubon2026.SourceFricke.mem_span_originalFrickeSpan_of_twist_stable, `Dubon2026.SourceFricke.cuspWeightImageIntoSpan_injective, `Dubon2026.SourceFricke.cuspWeightImageIntoSpan_twist_mem_range, `Dubon2026.SourceFricke.cuspWeightImageIntoSpan_descent, `Dubon2026.SourceFricke.span_cuspWeightImage_cyclotomic_fractions_eq_top, `Dubon2026.SourceFricke.coeffMap_eisensteinLaurentK, `Dubon2026.SourceFricke.periodic_eisensteinFactor, `Dubon2026.SourceFricke.represents_eisensteinFactorLaurentK, `Dubon2026.SourceFricke.eisensteinFactorLaurentK_ne_zero, `Dubon2026.SourceFricke.exists_cuspWeightImage_laurent, `Dubon2026.SourceFricke.cuspWeightImage_qExpansion_coeff_mem, `Dubon2026.SourceFricke.gammaOne_cuspWeightImage_qExpansion_coeff_mem, `Dubon2026.SourceFricke.span_gammaOne_cyclotomic_cuspForms_eq_top, `Dubon2026.SourceFricke.span_gammaOne_weightTwo_cyclotomic_cuspForms_eq_top]
+  let constructions : Array Name := #[`Dubon2026.SourceFricke.cyclotomicHolomorphicFrickeAlgebra, `Dubon2026.SourceFricke.cyclotomicFrickeComplexBasis, `Dubon2026.SourceFricke.basisCoefficientTwist, `Dubon2026.SourceFricke.cyclotomicFrickeSpanInclusion, `Dubon2026.SourceFricke.frickeCoefficientTwist, `Dubon2026.SourceFricke.frickeSpanPullback, `Dubon2026.SourceFricke.frickeSpanMul, `Dubon2026.SourceFricke.frickeSpanPow, `Dubon2026.SourceFricke.cyclotomicFrickeJShift, `Dubon2026.SourceFunctionField.CuspWeightCriterion.eisensteinFactor, `Dubon2026.SourceFricke.cuspWeightImage, `Dubon2026.SourceFricke.cuspWeightImageElement, `Dubon2026.SourceFricke.originalFrickeSpan, `Dubon2026.SourceFricke.cuspWeightImageIntoSpan, `Dubon2026.SourceFricke.eisensteinLaurentK]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE CUSP CYCLOTOMIC SPANNING AUDIT PASS: {count} theorems including private/generated declarations. Actual cusp-image twist stability, fixed-field descent and Gamma1 cyclotomic Fourier spanning are proved. Rational descent, differential realization and arithmetic comparison remain; 16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceCuspLaurentLinearRelations
+
+#lint in Dubon2026.SourceFrickeLaurentIndependence
+
+#lint in Dubon2026.SourceFrickeCyclotomicHolomorphicAlgebra
+
+#lint in Dubon2026.SourceFrickeScalarExtensionBasis
+
+#lint in Dubon2026.SourceComplexBasisCoefficientTwist
+
+#lint in Dubon2026.SourceFrickeCoefficientTwist
+
+#lint in Dubon2026.SourceFrickeSpanLaurentRealization
+
+#lint in Dubon2026.SourceLaurentTwistOrder
+
+#lint in Dubon2026.SourceCuspVanishingOrder
+
+#lint in Dubon2026.SourceFrickeTwistCuspVanishing
+
+#lint in Dubon2026.SourceFrickeCyclotomicModularAction
+
+#lint in Dubon2026.SourceFrickeTwistModularEquivariance
+
+#lint in Dubon2026.SourceFrickeSpanMultiplication
+
+#lint in Dubon2026.SourceFrickePrincipalInvariance
+
+#lint in Dubon2026.SourceFrickeTwistPowers
+
+#lint in Dubon2026.SourceFrickeHolomorphicDivisionInvariance
+
+#lint in Dubon2026.SourceFrickeHolomorphicDivisionSpan
+
+#lint in Dubon2026.SourceFrickeHolomorphicDivisionTwist
+
+#lint in Dubon2026.SourceFrickeEllipticDivisibilityTwist
+
+#lint in Dubon2026.SourceFrickeEllipticCoordinateTwist
+
+#lint in Dubon2026.SourceHolomorphicCoprimeDivision
+
+#lint in Dubon2026.SourceCuspWeightFactors
+
+#lint in Dubon2026.SourceCuspWeightHolomorphicDivision
+
+#lint in Dubon2026.SourceCuspWeightTransformation
+
+#lint in Dubon2026.SourceCuspWeightCriterion
+
+#lint in Dubon2026.SourceCuspWeightImage
+
+#lint in Dubon2026.SourceFrickeTwistCuspConditions
+
+#lint in Dubon2026.SourceCuspWeightImageSpan
+
+#lint in Dubon2026.SourceCuspWeightImageTwist
+
+#lint in Dubon2026.SourcePureTranscendentalConstantIntersection
+
+#lint in Dubon2026.SourceAlgebraicallyClosedFixedField
+
+#lint in Dubon2026.SourceTwistDescentFiniteSupport
+
+#lint in Dubon2026.SourceTwistStableSubspaceDescent
+
+#lint in Dubon2026.SourceOriginalFrickeSpanDescent
+
+#lint in Dubon2026.SourceCuspWeightImageDescent
+
+#lint in Dubon2026.SourceCuspFrickeRationalSpan
+
+#lint in Dubon2026.SourceEisensteinFactorCyclotomicLaurent
+
+#lint in Dubon2026.SourceCuspWeightImageFourier
+
+#lint in Dubon2026.SourceGammaOneCyclotomicCuspSpan

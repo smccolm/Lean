@@ -1,0 +1,30 @@
+{
+  "scope": 666,
+  "chain": "DUB-17/18 -> original all-weight arithmetic association -> actual Gamma1 Hecke characters -> differential/cusp and Picard/H1 comparisons -> cyclotomic rational Fourier spanning -> integral base change of actual Fricke fractions -> finite constant-list induction -> algebraic constant-adjoining descent.",
+  "assumptionsToDischarge": "At one algebraic constant-adjoining step, every integral element of the enlarged generated field lies in the complex span of elements integral over the original base algebra. The source proof derives integral coordinates through finite separable embeddings and Lagrange interpolation.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\fricke-base-change-dependencies-reuse-662\\P2M\\Sol\\S_IsIntegral_mem_span_of_adjoin_simple_constants.lean.txt",
+      "sha256": "49302D5E9CB6E41812AC4B5FBF9E282163F2CF6BA2AA7470F0CB8097D6B5CC51"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceConstantFieldRationalDescent.lean",
+      "sha256": "D1CB9749AFE93B38CAF7E13BD7F9B7619FDBE7166B3499833E33D7D686E42FC5"
+    }
+  ],
+  "shorterRouteReview": "The local coordinate-regularity descent theorem only addresses the rational coordinate subfield and requires actual place fibers and regularity; it is not a drop-in theorem for the integral closure of the whole Fricke fraction field. No pinned Mathlib normalization/base-change or integral-closure span theorem was found. Select only algebraic constant descent from the fixed primary source. Omit its subring/closure reformulation wrappers and final generic interface conversions. The separate transcendental constant step remains necessary.",
+  "sourceCommit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "sourceLicense": "Apache-2.0",
+  "externalImport": false,
+  "externalFullClosureVerified": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "modules": [
+    "SourceConstantExtensionIntegralAlgebra",
+    "SourceAlgebraicConstantRoots",
+    "SourceAlgebraicConstantLift",
+    "SourceAlgebraicConstantInterpolation",
+    "SourceAlgebraicConstantIntegralSpan"
+  ],
+  "remaining": "This is a necessary foundation, not an acceptance-gate closure. The transcendental constant step, finite constant-list induction, actual Fricke-field instantiation, holomorphic representative recovery, rational Fourier spanning, arbitrary Gamma1 differential realization and the remaining arithmetic association/automorphy/higher continuation chain remain. 16/20; DUB-17--20 OPEN."
+}

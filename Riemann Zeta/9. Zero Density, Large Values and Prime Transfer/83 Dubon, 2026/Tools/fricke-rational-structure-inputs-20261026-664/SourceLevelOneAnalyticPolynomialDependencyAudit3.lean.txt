@@ -1,0 +1,30 @@
+import SourceLaurentAnalyticPolynomial
+import SourceLevelOneAnalyticJPolynomial
+import SourceInvariantAnalyticJPolynomial
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFricke.exists_polynomial_j_of_poleBounded_invariant]
+  let localModules : Array Name := #[`SourceLaurentAnalyticPolynomial, `SourceLevelOneAnalyticJPolynomial, `SourceInvariantAnalyticJPolynomial]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.RealL.pow, `Dubon2026.SourceFunctionField.RealL.aeval, `Dubon2026.SourceFunctionField.realL_qExpansion, `Dubon2026.SourceFunctionField.realL_jqModC, `Dubon2026.SourceFunctionField.exists_levelOne_analytic_j_polynomial, `Dubon2026.SourceFricke.poleClearedLevelOne_apply, `Dubon2026.SourceFricke.exists_polynomial_j_of_poleBounded_invariant, `Dubon2026.SourceFricke.poleClearedLevelOne, `Dubon2026.SourceFunctionField.exists_levelOne_j_polynomial, `Dubon2026.SourceFunctionField.RealL.mul, `Dubon2026.SourceFunctionField.realL_jqC, `Dubon2026.SourceFunctionField.jqModC_eq_modular_quotient, `UpperHalfPlane.hasSum_qExpansion, `ModularForm.mul_slash_SL2]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE LEVEL ONE ANALYTIC POLYNOMIAL DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual invariant-polynomial consumer. Only declaration values are traversed. The existing exact level-one Laurent polynomial reduction is transferred through actual convergent expansions and products. Clearing the finite cusp pole yields a genuine modular form and a degree-bounded polynomial in the actual analytic j. Fricke fixed fractions, rational spanning, differential realization and arithmetic comparison remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

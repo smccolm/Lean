@@ -1,0 +1,63 @@
+{
+  "scope": 675,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> original Picard/H1, full/parabolic, transpose and diamond comparison -> actual differential/cusp comparison -> rational cusp-form spanning -> coefficient descent of the actual Fricke function span.",
+  "assumptionsToDischarge": "Construct the coefficient twist on the actual complex span of original holomorphic cyclotomic Fricke fractions using proved scalar-extension independence, prove its action on every original fraction and every finite complex representation, and prove that twisting preserves the cusp order and cusp vanishing after multiplication by every fixed discriminant power. No continuity of arbitrary complex field automorphisms, twist existence, Fourier threshold criterion or cusp-vanishing preservation is assumed.",
+  "remaining": "Modular equivariance and holomorphic divisibility at elliptic points must still be proved; then descend the actual cusp-form image. Arbitrary Gamma1 differential realization and the original finite-character arithmetic association, automorphy and higher continuation chain remain. 16/20; DUB-17--20 OPEN.",
+  "shorterRouteReview": "Before expanding the external flatness/twist and q-expansion threshold dependencies, reuse the proved local Laurent independence, native basis and Finsupp coefficient equivalences, existing literal cusp-germ representations, and native meromorphic order/limit theorems. Laurent order is preserved by an injective coefficient map, and the actual discriminant Laurent coefficients lie in the original cyclotomic field. This directly proves cusp-vanishing preservation without a common pole exponent, a separate coefficient-threshold engine or any assertion that the positive-weight discriminant is a weight-zero Fricke fraction. Native basis domains use the original subalgebra.toSubmodule to avoid unnecessary instance diamonds at unchanged limits.",
+  "externalImport": false,
+  "externalFullClosureVerified": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLaurentIndependence.lean",
+      "sha256": "CE0391F790564AA0B05B234EA36661B4504BE62F7BD1119347F89C8956DE4182"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspLaurentLinearRelations.lean",
+      "sha256": "54A9C9EF7A1DD41B3EC4B7B04A0DCBD56BFB58CEE01D6E90B4E4658701DD5E05"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceMeromorphicCuspPoleClearing.lean",
+      "sha256": "2C51FDA119141C1A5CAB3AA6E346C90D236BD974273862C4FE181CEFA6BECCBA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicLaurent.lean",
+      "sha256": "CAFB735C7C1A45E8A27C7CD9A387E05E7699303D829A72C5EA3F5008CC0C6D84"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspDiscRealization.lean",
+      "sha256": "71330E8C0EE0AEB04A69CA285F736BE4E9271C01887DE99D1130D0EFD6B39460"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Basis\\Submodule.lean",
+      "sha256": "F83825C20A2F9A9BA1EAD57A81898DFD8757655C0D21AC953DDAEFD008330E0A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\LinearAlgebra\\Finsupp\\Defs.lean",
+      "sha256": "2D09A0B17216B79E528C2DE68051EB68EFC668223C90759769596D43D19373E2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Meromorphic\\Order.lean",
+      "sha256": "73248808C2C3F3E543DC22191C1AA4B2E0FBA54BD0E1D1D6FF254F87FBBC4F85"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\HahnSeries\\Basic.lean",
+      "sha256": "488F2AB72A76387D262079919580CF06DBBFFD0708AE1856C66A8A14E41D1E77"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-rational-structure-input-reuse-646\\P2M\\Sol\\S_CuspForm_span_frickeRational_E4_pow_E6_pow_eq_top.lean.txt",
+      "sha256": "AB40C08C057927A0E2EA6DBA8B677CB8AA4981B3C9A8104B60FBCA51CFADE4CA"
+    }
+  ],
+  "modules": [
+    "SourceFrickeCyclotomicHolomorphicAlgebra",
+    "SourceFrickeScalarExtensionBasis",
+    "SourceComplexBasisCoefficientTwist",
+    "SourceFrickeCoefficientTwist",
+    "SourceFrickeSpanLaurentRealization",
+    "SourceLaurentTwistOrder",
+    "SourceCuspVanishingOrder",
+    "SourceFrickeTwistCuspVanishing"
+  ]
+}

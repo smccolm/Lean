@@ -1,0 +1,184 @@
+import SourceTranscendentalConstantDenominators
+import Mathlib.Tactic.LinearCombination
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual
+Gamma1 character realization -> differential/cusp comparison -> rational
+Fourier spanning -> integral base change of Fricke fractions. This is the
+transcendental constant-adjoining step of the finite constant-list induction.
+Native integral closure and polynomial normality recover integral coefficients
+after clearing scalar denominators. The original finite generator integrality
+and j transcendence are explicit inputs, supplied later by the actual Fricke field.
+Adapted from anthropics/fermats-last-theorem,
+6e837e75355538c7f80bab5b956861e86c4eacc2, Apache-2.0,
+S_IsIntegral_mem_span_of_adjoin_simple_constants_transcendental.
+All source proof-limit settings are omitted; native limits are unchanged. -/
+namespace Dubon2026.SourceFricke.ConstantDescent
+noncomputable section
+open Polynomial
+open scoped IntermediateField IntermediateField.algebraAdjoinAdjoin
+variable {K : Type*} [Field K] [Algebra ℂ K]
+variable (F : IntermediateField ℚ ℂ) (t : K) (S : Set K)
+variable {F t}
+
+theorem mem_span_RSet_of_adjoin_simple_transcendental
+    (ht : Transcendental ℂ t) (htS : t ∈ S) (hSfin : S.Finite)
+    (hSint : ∀ s ∈ S, IsIntegral ↥(TRng F {t}) s)
+    {c : ℂ} (hc : Transcendental ↥F c)
+    (htc : Transcendental ↥(KFldT F t S) (algebraMap ℂ K c))
+    {x : K}
+    (hxK : x ∈ Subfield.closure
+      (⇑(algebraMap ℂ K) '' (IntermediateField.adjoin ↥F {c} : Set ℂ) ∪ S))
+    (hxint : IsIntegral ↥(Algebra.adjoin ↥(IntermediateField.adjoin ↥F {c}) ({t} : Set K)) x) :
+    x ∈ Submodule.span ℂ (RSet F {t} S) := by
+  classical
+  set c' : K := algebraMap ℂ K c with hc'
+
+  set ψ : FractionRing ((↥(RFa F t S))[X]) →+* K :=
+    IsFractionRing.lift (rfPolyEval_injective F t S htc) with hψ
+  have hψalg : ∀ a : (↥(RFa F t S))[X], ψ (algebraMap _ _ a) = rfPolyEval F t S c a :=
+    fun a => IsFractionRing.lift_algebraMap _ _
+  have hψinj : Function.Injective ψ := ψ.injective
+  haveI hDD : IsDedekindDomain ↥(RFa F t S) := isDedekindDomain_RFa F t S ht hSfin hSint
+  haveI hFR : IsFractionRing ↥(RFa F t S) ↥(KFldT F t S) :=
+    isFractionRing_RFa F t S ht hSfin hSint
+
+  have hrange : ∀ z ∈ IntermediateField.adjoin ↥(KFldT F t S) {c'}, z ∈ ψ.fieldRange := by
+    intro z hz
+    rw [← IntermediateField.mem_toSubfield, IntermediateField.adjoin_toSubfield] at hz
+    refine Subfield.closure_le (t := ψ.fieldRange) |>.mpr ?_ hz
+    rintro w (⟨w', rfl⟩ | rfl)
+    · obtain ⟨r, s, hs, hrs⟩ := IsFractionRing.div_surjective (A := ↥(RFa F t S)) w'
+      rw [← hrs]
+      have h1 : algebraMap ↥(KFldT F t S) K (algebraMap ↥(RFa F t S) ↥(KFldT F t S) r) =
+          ψ (algebraMap _ _ (Polynomial.C r)) := by rw [hψalg]; simp [rfPolyEval]
+      have h2 : algebraMap ↥(KFldT F t S) K (algebraMap ↥(RFa F t S) ↥(KFldT F t S) s) =
+          ψ (algebraMap _ _ (Polynomial.C s)) := by rw [hψalg]; simp [rfPolyEval]
+      rw [map_div₀, h1, h2]
+      exact div_mem (RingHom.mem_fieldRange_self ψ _) (RingHom.mem_fieldRange_self ψ _)
+    · exact ⟨algebraMap _ _ Polynomial.X, by rw [hψalg, hc']; simp [rfPolyEval]⟩
+
+  have hxψ : x ∈ ψ.fieldRange := by
+    refine hrange x ?_
+    have h1 := closure_adjoin_le F (S := S) hxK
+    have heq : (IntermediateField.adjoin ↥(KFld F S) {c'}).toSubfield =
+        (IntermediateField.adjoin ↥(KFldT F t S) {c'}).toSubfield := by
+      rw [IntermediateField.adjoin_toSubfield, IntermediateField.adjoin_toSubfield]
+      have hrng : Set.range ⇑(algebraMap ↥(KFld F S) K) =
+          Set.range ⇑(algebraMap ↥(KFldT F t S) K) := by
+        ext z
+        exact ⟨fun ⟨w, hw⟩ => ⟨⟨w, (mem_KFldT_iff F t S htS w).mpr w.2⟩, hw⟩,
+          fun ⟨w, hw⟩ => ⟨⟨w, (mem_KFldT_iff F t S htS w).mp w.2⟩, hw⟩⟩
+      rw [hrng]
+    rw [← IntermediateField.mem_toSubfield, ← heq]; exact h1
+
+  obtain ⟨P, hPmonic, hPc, hPx⟩ := (isIntegral_subalgebra_iff _ x).mp hxint
+  set n := P.natDegree with hn
+  have hrel : x ^ n + ∑ k ∈ Finset.range n, (P.coeff k) * x ^ k = 0 := by
+    have h1 := hPx
+    rw [hPmonic.as_sum, Polynomial.eval_add, Polynomial.eval_pow, Polynomial.eval_X,
+      Polynomial.eval_finsetSum] at h1
+    simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_X]
+      at h1
+    linear_combination h1
+  have hn0 : 0 < n := by
+    rcases Nat.eq_zero_or_pos n with h0 | h0
+    · rw [h0] at hrel; simp at hrel
+    · exact h0
+
+  choose qd hqd0 hqdW using fun (k : ℕ) (hk : k ∈ Finset.range n) =>
+    exists_clear_denominator F t S htS (c := c) (hPc k)
+  set Q : ℕ → (↥F)[X] := fun k => if h : k ∈ Finset.range n then qd k h else 1 with hQ
+  have hQ0 : ∀ k, Q k ≠ 0 := by
+    intro k; by_cases h : k ∈ Finset.range n
+    · simp only [hQ, dif_pos h]; exact hqd0 k h
+    · simp only [hQ, dif_neg h]; exact one_ne_zero
+  set D : (↥F)[X] := ∏ k ∈ Finset.range n, Q k with hD
+  have hD0 : D ≠ 0 := Finset.prod_ne_zero_iff.mpr fun k _ => hQ0 k
+  set Dv : K := Polynomial.aeval c' D with hDv
+  have hDv0 : Dv ≠ 0 := evalF_ne_zero F hc hD0
+  have hDvrange : Dv ∈ Set.range ⇑(rfPolyEval F t S c) := evalF_mem_range_rfPolyEval F t S htS D
+
+  have hbW : ∀ k ∈ Finset.range n, Dv ^ (n - k) * (P.coeff k) ∈
+      Set.range ⇑(rfPolyEval F t S c) := by
+    intro k hk
+    have hQk : Q k = qd k hk := by simp only [hQ, dif_pos hk]
+    obtain ⟨A₁, hA₁⟩ := hqdW k hk
+    obtain ⟨B₁, hB₁⟩ := evalF_mem_range_rfPolyEval F t S htS (c := c)
+      ((∏ j ∈ (Finset.range n).erase k, Q j) * D ^ (n - k - 1))
+    refine ⟨B₁ * A₁, ?_⟩
+    rw [map_mul, hB₁, hA₁, map_mul, map_pow, ← hDv]
+    have hDvsplit : Dv ^ (n - k) = Polynomial.aeval c' (qd k hk) *
+        Polynomial.aeval c' (∏ j ∈ (Finset.range n).erase k, Q j) * Dv ^ (n - k - 1) := by
+      have h1 : Polynomial.aeval c' (qd k hk) *
+          Polynomial.aeval c' (∏ j ∈ (Finset.range n).erase k, Q j) = Dv := by
+        rw [← hQk, ← map_mul, Finset.mul_prod_erase _ _ hk, hDv, hD]
+      rw [h1, ← pow_succ']
+      congr 1
+      have hkn := Finset.mem_range.mp hk; omega
+    rw [hDvsplit]; ring
+
+  set y : K := Dv * x with hy
+  have hDψ : Dv ∈ ψ.fieldRange := by
+    obtain ⟨a, ha⟩ := hDvrange
+    exact ⟨algebraMap _ _ a, by rw [hψalg]; exact ha⟩
+  have hyψ : y ∈ ψ.fieldRange := mul_mem hDψ hxψ
+  have hyrel : y ^ n + ∑ k ∈ Finset.range n, (Dv ^ (n - k) * (P.coeff k)) * y ^ k = 0 := by
+    have h1 : ∀ k ∈ Finset.range n, (Dv ^ (n - k) * (P.coeff k)) * y ^ k =
+        Dv ^ n * ((P.coeff k) * x ^ k) := by
+      intro k hk
+      have hkn : k ≤ n := (Finset.mem_range.mp hk).le
+      rw [hy, mul_pow, show Dv ^ n = Dv ^ (n - k) * Dv ^ k from by
+        rw [← pow_add, Nat.sub_add_cancel hkn]]
+      ring
+    rw [Finset.sum_congr rfl h1, ← Finset.mul_sum, hy, mul_pow, ← mul_add, hrel, mul_zero]
+
+  choose B hB using fun k (hk : k ∈ Finset.range n) => hbW k hk
+  set BB : ℕ → (↥(RFa F t S))[X] := fun k => if h : k ∈ Finset.range n then B k h else 0 with hBB
+  obtain ⟨m, hm⟩ := RingHom.mem_fieldRange.mp hyψ
+  have hmrel : m ^ n + ∑ k ∈ Finset.range n, algebraMap _ _ (BB k) * m ^ k = 0 := by
+    apply hψinj
+    rw [map_add, map_pow, map_sum, map_zero, hm]
+    rw [show (∑ k ∈ Finset.range n, ψ (algebraMap _ _ (BB k) * m ^ k)) =
+        ∑ k ∈ Finset.range n, (Dv ^ (n - k) * (P.coeff k)) * y ^ k from
+      Finset.sum_congr rfl fun k hk => by
+        rw [map_mul, map_pow, hm, hψalg]; simp only [hBB, dif_pos hk]; rw [hB k hk]]
+    exact hyrel
+
+  have hmint : IsIntegral ((↥(RFa F t S))[X]) m := by
+    refine ⟨Polynomial.X ^ n + ∑ k ∈ Finset.range n, Polynomial.C (BB k) * Polynomial.X ^ k,
+      ?_, ?_⟩
+    · exact Polynomial.monic_X_pow_add ((Polynomial.degree_sum_le _ _).trans_lt
+        ((Finset.sup_lt_iff (WithBot.bot_lt_coe n)).mpr fun k hk =>
+          (Polynomial.degree_C_mul_X_pow_le _ _).trans_lt
+            (WithBot.coe_lt_coe.mpr (Finset.mem_range.mp hk))))
+    · rw [Polynomial.eval₂_add, Polynomial.eval₂_pow, Polynomial.eval₂_X,
+        Polynomial.eval₂_finsetSum]
+      rw [show (∑ k ∈ Finset.range n, Polynomial.eval₂ (algebraMap _ _) m
+          (Polynomial.C (BB k) * Polynomial.X ^ k)) =
+          ∑ k ∈ Finset.range n, algebraMap _ _ (BB k) * m ^ k from
+        Finset.sum_congr rfl fun k _ => by
+          rw [Polynomial.eval₂_mul, Polynomial.eval₂_C, Polynomial.eval₂_pow,
+            Polynomial.eval₂_X]]
+      exact hmrel
+  haveI hDomRFa : IsDomain ↥(RFa F t S) := Subalgebra.isDomain _
+  haveI hICR : IsIntegrallyClosed ↥(RFa F t S) := inferInstance
+  haveI hICX : IsIntegrallyClosed ((↥(RFa F t S))[X]) :=
+    isIntegrallyClosed_RFa_polynomial F t S ht hSfin hSint
+  obtain ⟨a, ha⟩ := IsIntegrallyClosed.isIntegral_iff.mp hmint
+  have hyrange : y ∈ Set.range ⇑(rfPolyEval F t S c) :=
+    ⟨a, by rw [← hψalg, ha, hm]⟩
+  have hyspan := range_rfPolyEval_subset_span F t S htS hyrange
+
+  have hsmul : (Polynomial.aeval c D : ℂ) • x = y := by
+    rw [Algebra.smul_def, hy, hDv, Polynomial.aeval_algebraMap_apply]
+  have hs0 : (Polynomial.aeval c D : ℂ) ≠ 0 := by
+    intro h0; exact hD0 ((transcendental_iff.mp hc) D h0)
+  have hsx : (Polynomial.aeval c D : ℂ) • x ∈ Submodule.span ℂ (RSet F {t} S) := by
+    rw [hsmul]; exact hyspan
+  have h2 := Submodule.smul_mem (Submodule.span ℂ (RSet F {t} S))
+    ((Polynomial.aeval c D : ℂ))⁻¹ hsx
+  rwa [← smul_assoc, smul_eq_mul, inv_mul_cancel₀ hs0, one_smul] at h2
+
+
+end
+end Dubon2026.SourceFricke.ConstantDescent

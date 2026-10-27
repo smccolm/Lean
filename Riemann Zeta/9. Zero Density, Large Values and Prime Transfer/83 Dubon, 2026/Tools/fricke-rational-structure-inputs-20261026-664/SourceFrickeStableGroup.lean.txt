@@ -1,0 +1,86 @@
+import SourceFrickeStableAlgebra
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual finite Gamma1
+character realization -> Picard/H1 and diamond comparison -> cusp differential
+realization -> rational Fourier structure -> fraction realization of modularly
+stable finite-pole families. This uses the actual Fricke algebra and native
+finite fixed-field degree; no rational representation is assumed.
+Adapted from anthropics/fermats-last-theorem,
+6e837e75355538c7f80bab5b956861e86c4eacc2, Apache License 2.0. -/
+namespace Dubon2026.SourceFricke
+noncomputable section
+open UpperHalfPlane ModularForm SourceFunctionField Matrix.SpecialLinearGroup
+open scoped MatrixGroups ModularForm Manifold IntermediateField
+local notation "j" => JMultiplicity.jf
+
+namespace LevelGens
+variable {N : ℕ} [NeZero N] (D : LevelGens N)
+
+lemma smul_eq_self_of_pm {γ : SL(2, ℤ)}
+    (hγ : γ ∈ CongruenceSubgroup.Gamma N ∨ -γ ∈ CongruenceSubgroup.Gamma N)
+    {f : ℍ → ℂ} (hf : f ∈ D.ring) : γ • f = f := by
+  induction hf using Algebra.adjoin_induction with
+  | mem x hx =>
+    funext τ
+    rw [sl_smul_apply]
+    rcases hγ with h | h
+    · exact D.invariant x hx γ⁻¹ (inv_mem h) τ
+    · have : γ⁻¹ = -(-γ)⁻¹ := by simp
+      rw [this, ModularGroup.SL_neg_smul]
+      exact D.invariant x hx (-γ)⁻¹ (inv_mem h) τ
+  | algebraMap c => rfl
+  | add x y _ _ hx hy => rw [smul_add, hx, hy]
+  | mul x y _ _ hx hy => rw [smul_mul', hx, hy]
+
+lemma levelFixer_le_ker :
+    levelFixer N ≤ (MulSemiringAction.toAlgAut SL(2, ℤ) ℂ ↥D.ring).ker := by
+  intro γ hγ
+  rw [MonoidHom.mem_ker]
+  ext f
+  exact congrFun (D.smul_eq_self_of_pm ((mem_levelFixer_iff_pm γ).mp hγ) f.2) _
+
+lemma ker_le_levelFixer :
+    (MulSemiringAction.toAlgAut SL(2, ℤ) ℂ ↥D.ring).ker ≤ levelFixer N := by
+  intro γ hγ
+  rw [MonoidHom.mem_ker, AlgEquiv.ext_iff] at hγ
+  have h' : ∀ a : ↥D.ring, γ • a = a := fun a ↦ hγ a
+  rw [mem_levelFixer_iff_frickeF]
+  intro i τ
+  set fa : ↥D.ring := ⟨frickeF N i.1, D.levelRing_le_ring (frickeF_mem_levelRing i)⟩
+  have e : γ • (γ⁻¹ • frickeF N i.1) = γ⁻¹ • frickeF N i.1 :=
+    congrArg Subtype.val (h' (γ⁻¹ • fa))
+  rw [← mul_smul, mul_inv_cancel, one_smul] at e
+  have := congrFun e τ
+  rw [sl_smul_apply, inv_inv] at this
+  exact this.symm
+
+/-- The finite quotient acts on the actual stable family algebra. -/
+noncomputable scoped instance grpRingAction : MulSemiringAction (LevelGrp N) ↥D.ring :=
+  MulSemiringAction.compHom _
+    (QuotientGroup.lift (levelFixer N) (MulSemiringAction.toAlgAut SL(2, ℤ) ℂ ↥D.ring)
+      D.levelFixer_le_ker)
+
+@[scoped simp] lemma grp_mk_smul (γ : SL(2, ℤ)) (f : ↥D.ring) :
+    (QuotientGroup.mk γ : LevelGrp N) • f = γ • f := rfl
+
+/-- The quotient action commutes with complex scalar multiplication. -/
+scoped instance grp_smulCommClass : SMulCommClass (LevelGrp N) ℂ ↥D.ring where
+  smul_comm q c f := by
+    induction q using QuotientGroup.induction_on with
+    | H γ => simp only [grp_mk_smul]; exact smul_comm γ c f
+
+/-- The quotient action is faithful since the family contains the actual Fricke functions. -/
+scoped instance grp_faithful : FaithfulSMul (LevelGrp N) ↥D.ring where
+  eq_of_smul_eq_smul {q₁ q₂} h := by
+    induction q₁ using QuotientGroup.induction_on with
+    | H γ₁ =>
+    induction q₂ using QuotientGroup.induction_on with
+    | H γ₂ =>
+    apply QuotientGroup.eq.mpr
+    apply D.ker_le_levelFixer
+    rw [MonoidHom.mem_ker, map_mul, map_inv, inv_mul_eq_one]
+    exact AlgEquiv.ext fun f ↦ h f
+
+end LevelGens
+end
+end Dubon2026.SourceFricke

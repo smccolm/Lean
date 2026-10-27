@@ -1,0 +1,182 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T17:24:21.622271+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceCuspLaurentFunctionIdentity",
+    "SourceQExpansionLaurentWidth",
+    "SourcePoleBoundedCuspLaurent",
+    "SourceFrickeCyclotomicLaurent",
+    "SourceCuspLaurentPolynomial",
+    "SourceCuspLaurentFractionIdentity",
+    "SourceFrickeCyclotomicFractionGerm",
+    "SourceFrickeLaurentIntegralDescent",
+    "SourceFrickeFractionPeriodicity",
+    "SourceFrickeCyclotomicMonic"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspLaurentFunctionIdentity.lean",
+      "sha256": "DC4D20A9159A9B19D2569D9FE996E9473A33A911DDA5BA61C110E7D479D63BD8",
+      "oleanSha256": "22636D7A6C92818BE86DF6FD1EF2C6444E20039663F681DB90E4B4CE553B2BA1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceQExpansionLaurentWidth.lean",
+      "sha256": "BF753D96B806085AAC9B3227461F647DA80C4A859A02EFF0616939CB96A2404B",
+      "oleanSha256": "A6C7DC994E55F9CB8A83BA848C1C7322CD14A41D06263E689EB7F22302F94147"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePoleBoundedCuspLaurent.lean",
+      "sha256": "76BAD0B55FCD15A0402C935AC137B001DC3EBCF0E7CFB2DC21379B1A8971409F",
+      "oleanSha256": "D6507EA29DE57838F9876B8D8CE6BCA0110BDE6B87E456F50C767E8972FAC900"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicLaurent.lean",
+      "sha256": "CAFB735C7C1A45E8A27C7CD9A387E05E7699303D829A72C5EA3F5008CC0C6D84",
+      "oleanSha256": "425EFF40A7EEC0A1D4735D11A16CF1567850AD619543A3A04E7496E6FC0AB5C9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspLaurentPolynomial.lean",
+      "sha256": "EAEA869D96EA2B36438E56F701AA9C7F8565AEB56D8D5D2F52F9753FF31158E9",
+      "oleanSha256": "1B6A3B9CA232009EF75789361E26D0685B8658A1532D6834D4C5B017338B0AF1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspLaurentFractionIdentity.lean",
+      "sha256": "BDFDABE6460490760974FB3C4169668C36545BFF95FE0266DCF9CD5FA06869B7",
+      "oleanSha256": "04A26DB9490F17C77EBC21665622377C5A4BF8034A8F677B867847949074B3A6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicFractionGerm.lean",
+      "sha256": "E761C04EFA4A51687EEF11E3F4A75EC38631DDCAF911522D43A56C06F34FB7C5",
+      "oleanSha256": "C3D8E58AFC37F1CE98CC83C238F3698EAF6B57E4A4A9A9648BD016B7BE8288C4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLaurentIntegralDescent.lean",
+      "sha256": "0EFCB66499AE813BC26EE8092E3D97BCD46D6C2FAEE6676B8536C53FF62518E3",
+      "oleanSha256": "4043ED8310E86286D06FF45E9284CD0D4754C5F11C28E5F02C1D7492B61A643B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFractionPeriodicity.lean",
+      "sha256": "F6B29316F4B06C5F9B20E62F0E40B55072FCF59DF508B7F2FF97BFA57F7741EF",
+      "oleanSha256": "D66D7CAC96990462615CCFAEBE8629B46C5BC98794A54AFA09D1D3946B81A69E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicMonic.lean",
+      "sha256": "09F8BEB3BCBF892860C0F3A88409F00621045D50771A60EC29FF25AA12CAA94A",
+      "oleanSha256": "F7281B8A407570058E7301C8EDE78A729080DD94D631F4B8630562A4FE97E498"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.mdifferentiable_eq_of_eventuallyEq_atImInfty",
+    "Dubon2026.SourceFunctionField.CuspTaylor.represents_qExpansion",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.eq_upperHalfPlane",
+    "Dubon2026.SourceFunctionField.CuspTaylor.represents_cusp_const",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_add",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_mul",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_inv",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_div",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_pow",
+    "Dubon2026.SourceFunctionField.qExpansion_eq_expand",
+    "Dubon2026.SourceFunctionField.qExpansion_laurent_width",
+    "Dubon2026.SourceFunctionField.represents_jqNModC",
+    "Dubon2026.SourceFricke.periodic_discriminant_width",
+    "Dubon2026.SourceFricke.represents_discriminant_width",
+    "Dubon2026.SourceFricke.exists_cusp_represents_of_poleBounded",
+    "Dubon2026.SourceFricke.coeffMap_discriminantLaurentK",
+    "Dubon2026.SourceFricke.coeffMap_jqNModC_kN",
+    "Dubon2026.SourceFricke.frickeF_eq_frickeH_div",
+    "Dubon2026.SourceFricke.represents_frickeLaurentK",
+    "Dubon2026.SourceFricke.periodic_frickeF",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_sum",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_aeval",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.isIntegral_of_monic_relation",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.eventually_ne_zero",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.ne_zero_of_function_ne_zero",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_of_mul_eq",
+    "Dubon2026.SourceFricke.periodic_jf_width",
+    "Dubon2026.SourceFricke.cyclotomicLevelRing_holomorphic",
+    "Dubon2026.SourceFricke.cyclotomicLevelRing_periodic",
+    "Dubon2026.SourceFricke.exists_cyclotomic_cusp_represents",
+    "Dubon2026.SourceFricke.exists_cyclotomic_fraction_represents",
+    "Dubon2026.SourceFricke.exists_integral_cyclotomic_laurent_of_monic",
+    "Dubon2026.SourceFricke.exists_polynomial_monic_relation_of_isIntegral",
+    "Dubon2026.SourceFricke.coeffMap_aeval_jqNModC_kN",
+    "Dubon2026.SourceFricke.apply_T_of_periodic",
+    "Dubon2026.SourceFricke.periodic_comp_ofComplex_of_T",
+    "Dubon2026.SourceFricke.periodic_cyclotomic_fraction",
+    "Dubon2026.SourceFricke.mdifferentiable_polynomial_jf",
+    "Dubon2026.SourceFricke.exists_cyclotomic_monic_relation",
+    "Dubon2026.SourceFricke.discriminantLaurentK",
+    "Dubon2026.SourceFricke.frickeLaurentK",
+    "Dubon2026.SourceFricke.cyclotomicLevelRing"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.mdifferentiable_eq_of_eventuallyEq_atImInfty",
+    "Dubon2026.SourceFunctionField.CuspTaylor.represents_qExpansion",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.eq_upperHalfPlane",
+    "Dubon2026.SourceFunctionField.CuspTaylor.represents_cusp_const",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_add",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_mul",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_inv",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_div",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_pow",
+    "Dubon2026.SourceFunctionField.qExpansion_eq_expand",
+    "Dubon2026.SourceFunctionField.qExpansion_laurent_width",
+    "Dubon2026.SourceFunctionField.represents_jqNModC",
+    "Dubon2026.SourceFricke.periodic_discriminant_width",
+    "Dubon2026.SourceFricke.represents_discriminant_width",
+    "Dubon2026.SourceFricke.exists_cusp_represents_of_poleBounded",
+    "Dubon2026.SourceFricke.coeffMap_discriminantLaurentK",
+    "Dubon2026.SourceFricke.coeffMap_jqNModC_kN",
+    "Dubon2026.SourceFricke.frickeF_eq_frickeH_div",
+    "Dubon2026.SourceFricke.represents_frickeLaurentK",
+    "Dubon2026.SourceFricke.periodic_frickeF",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_sum",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_aeval",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.isIntegral_of_monic_relation",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.eventually_ne_zero",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.ne_zero_of_function_ne_zero",
+    "Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_of_mul_eq",
+    "Dubon2026.SourceFricke.periodic_jf_width",
+    "Dubon2026.SourceFricke.cyclotomicLevelRing_holomorphic",
+    "Dubon2026.SourceFricke.cyclotomicLevelRing_periodic",
+    "Dubon2026.SourceFricke.exists_cyclotomic_cusp_represents",
+    "Dubon2026.SourceFricke.exists_cyclotomic_fraction_represents",
+    "Dubon2026.SourceFricke.exists_integral_cyclotomic_laurent_of_monic",
+    "Dubon2026.SourceFricke.exists_polynomial_monic_relation_of_isIntegral",
+    "Dubon2026.SourceFricke.coeffMap_aeval_jqNModC_kN",
+    "Dubon2026.SourceFricke.apply_T_of_periodic",
+    "Dubon2026.SourceFricke.periodic_comp_ofComplex_of_T",
+    "Dubon2026.SourceFricke.periodic_cyclotomic_fraction",
+    "Dubon2026.SourceFricke.mdifferentiable_polynomial_jf",
+    "Dubon2026.SourceFricke.exists_cyclotomic_monic_relation"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFricke.discriminantLaurentK",
+    "Dubon2026.SourceFricke.frickeLaurentK",
+    "Dubon2026.SourceFricke.cyclotomicLevelRing"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicDescentAudit10.log",
+  "logSha256": "A2124D3473C6602F63042186EBB1C8D848B4C56BE7A74DF7CFF49399786EACB1",
+  "auditSha256": "AE2444981C47C377C034C49AD80DE03311A5DE8797959297D21589295FE4B0EA",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 52,
+  "linterScopes": 10,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 59,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicDescentDependencyAudit10.log",
+  "dependencyAuditSha256": "708B09214F854B9A8084BBD9136E196A4731025A13E96E9B061B31FBA3D351F8",
+  "dependencyAuditSourceSha256": "33003E59A93784957AB9180B6DDA57583B7E8341F3A61EABEAFB80332B75FF9D",
+  "consumers": [
+    "Dubon2026.SourceFricke.exists_cyclotomic_monic_relation",
+    "Dubon2026.SourceFricke.exists_cusp_represents_of_poleBounded"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual finite Gamma1 character realization -> Picard/H1, full/parabolic and diamond comparison preserving the original homogeneous coefficient endomorphism -> actual differential/cusp comparison -> cyclotomic rational Fourier spanning -> integral base change of Fricke fractions -> cyclotomic monic relations.",
+  "discharged": "For an actual holomorphic fraction F*b=a with a,b in the original cyclotomic j/Fricke algebra and b nonzero, a supplied actual complex monic j-relation descends to an actual monic relation with coefficients in the cyclotomic field. The cyclotomic Laurent representation and periodicity are derived, not assumed. The literal substituted j-series is identified with the original analytic j at width N. Actual periodic holomorphic functions with finite cusp poles have Laurent representations.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The input complex monic relation is explicit; the prior modular-orbit theorem supplies it under actual principal-level invariance and finite cusp-pole hypotheses. Integral base-change spanning, rational Fourier spanning, arbitrary Gamma1 cusp differential realization and the converse remain. Picard/H1, full/parabolic/transpose/diamond, Frobenius/inertia and original all-weight arithmetic association, automorphy and literal higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-fricke-cyclotomic-descent-10-reuse-review-20261026.json",
+  "reuseReviewSha256": "BC7EC70AA13E0663D200D855AFB24783AA1CFC24FD4FF9F184ECDA1F0AA9E844",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

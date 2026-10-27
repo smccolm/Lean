@@ -1,0 +1,32 @@
+import SourceConstantExtensionIntegralAlgebra
+import SourceAlgebraicConstantRoots
+import SourceAlgebraicConstantLift
+import SourceAlgebraicConstantInterpolation
+import SourceAlgebraicConstantIntegralSpan
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFricke.ConstantDescent.mem_span_RSet_of_adjoin_simple]
+  let localModules : Array Name := #[`SourceConstantExtensionIntegralAlgebra, `SourceAlgebraicConstantRoots, `SourceAlgebraicConstantLift, `SourceAlgebraicConstantInterpolation, `SourceAlgebraicConstantIntegralSpan]
+  let required : Array Name := #[`Dubon2026.SourceFricke.ConstantDescent.isIntegral_subalgebra_iff, `Dubon2026.SourceFricke.ConstantDescent.isIntegral_of_isIntegral_adjoin_singleton, `Dubon2026.SourceFricke.ConstantDescent.algebraMap_subfield_apply', `Dubon2026.SourceFricke.ConstantDescent.charZero_KFld, `Dubon2026.SourceFricke.ConstantDescent.isIntegral_TRng_algebraMap, `Dubon2026.SourceFricke.ConstantDescent.isIntegral_KFld_algebraMap, `Dubon2026.SourceFricke.ConstantDescent.minpoly_KFld_dvd, `Dubon2026.SourceFricke.ConstantDescent.root_minpoly_KFld_eq_algebraMap, `Dubon2026.SourceFricke.ConstantDescent.card_rootFinset_minpoly_KFld, `Dubon2026.SourceFricke.ConstantDescent.algebraMap_adjoinF_mem, `Dubon2026.SourceFricke.ConstantDescent.closure_adjoin_le, `Dubon2026.SourceFricke.ConstantDescent.exists_lift_of_mem_adjoin, `Dubon2026.SourceFricke.ConstantDescent.isIntegral_coeff_lagrangeBasis, `Dubon2026.SourceFricke.ConstantDescent.mem_span_RSet_of_adjoin_simple, `Dubon2026.SourceFricke.ConstantDescent.KFld, `Dubon2026.SourceFricke.ConstantDescent.TRng, `Dubon2026.SourceFricke.ConstantDescent.RSet, `Lagrange.eq_interpolate_of_eval_eq, `Polynomial.degree_sum_fin_lt, `IntermediateField.algHomAdjoinIntegralEquiv, `IntermediateField.algHomAdjoinIntegralEquiv_symm_apply_gen, `IntermediateField.adjoin.powerBasis, `IsIntegral.sum, `IsIntegral.mul, `minpoly.dvd, `PerfectField.separable_of_irreducible]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ALGEBRAIC CONSTANT INTEGRAL SPAN DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the algebraic constant-adjoining consumer. Only declaration values are traversed. Separable finite extension embeddings and Lagrange interpolation derive integral coordinates over the original constants. The transcendental constant step, finite constant-list induction, actual Fricke-field instantiation, rational Fourier spanning and remaining arithmetic chain are open; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

@@ -1,0 +1,89 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T18:34:58.476830+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceLaurentIntegralCoefficientImage",
+    "SourceFrickeLaurentGeneratorIntegrality",
+    "SourceFrickeComplexFractionLaurent",
+    "SourceFrickeLaurentIntegralSpan"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentIntegralCoefficientImage.lean",
+      "sha256": "927EB8550A8CA2B8C059E26AE4A576610BE12B20CEC9D0FD8F4BAEDFCB960CA0",
+      "oleanSha256": "0931AE085C2DA08F86207CCF171DC1E147D85A5D45C6768B649E551B8533A7ED"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLaurentGeneratorIntegrality.lean",
+      "sha256": "3052B656C6AB52A62AFFA7E0E24DC0B81FF909DED8903C50CC190C5D08C3070C",
+      "oleanSha256": "7137B6EDD7E88F7A40F23A63A1A42C3DB884A2EA429B382FD665D1D82ED56F8A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeComplexFractionLaurent.lean",
+      "sha256": "18098E25ED5518B97110C0D388299D5D560F405AB1A324EE6FB46FC72EE92497",
+      "oleanSha256": "F85EB8716A2BE7776A294EB93D0808183E3052C40101473D53C81B4E795D1958"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLaurentIntegralSpan.lean",
+      "sha256": "60367D17BA3C3B2CA14757677E66173707130350D756DAF341E4F5FB979E932A",
+      "oleanSha256": "00D158FEF35659367FD26959F826389E105369C3C194DAB026E816896512E422"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.isIntegral_adjoin_coeffMap_of_isIntegral",
+    "Dubon2026.SourceFricke.frickeLaurent_complex_integral",
+    "Dubon2026.SourceFricke.frickeLaurentK_integral",
+    "Dubon2026.SourceFricke.frickeLaurent_integral_original_constants",
+    "Dubon2026.SourceFricke.frickeLaurentGenerators_finite",
+    "Dubon2026.SourceFricke.frickeLaurentGenerators_coeffRange",
+    "Dubon2026.SourceFricke.frickeLaurentGenerators_integral",
+    "Dubon2026.SourceFricke.transcendental_frickeLaurent_j",
+    "Dubon2026.SourceFricke.levelRing_periodic",
+    "Dubon2026.SourceFricke.exists_complex_fricke_cusp_represents",
+    "Dubon2026.SourceFricke.exists_complex_fricke_fraction_represents",
+    "Dubon2026.SourceFricke.frickeLaurent_integral_mem_span",
+    "Dubon2026.SourceFricke.exists_fricke_laurent_integral_span_of_principal_invariant",
+    "Dubon2026.SourceFricke.frickeLaurentGenerators"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.isIntegral_adjoin_coeffMap_of_isIntegral",
+    "Dubon2026.SourceFricke.frickeLaurent_complex_integral",
+    "Dubon2026.SourceFricke.frickeLaurentK_integral",
+    "Dubon2026.SourceFricke.frickeLaurent_integral_original_constants",
+    "Dubon2026.SourceFricke.frickeLaurentGenerators_finite",
+    "Dubon2026.SourceFricke.frickeLaurentGenerators_coeffRange",
+    "Dubon2026.SourceFricke.frickeLaurentGenerators_integral",
+    "Dubon2026.SourceFricke.transcendental_frickeLaurent_j",
+    "Dubon2026.SourceFricke.levelRing_periodic",
+    "Dubon2026.SourceFricke.exists_complex_fricke_cusp_represents",
+    "Dubon2026.SourceFricke.exists_complex_fricke_fraction_represents",
+    "Dubon2026.SourceFricke.frickeLaurent_integral_mem_span",
+    "Dubon2026.SourceFricke.exists_fricke_laurent_integral_span_of_principal_invariant"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFricke.frickeLaurentGenerators"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceActualFrickeLaurentIntegralSpanAudit4.log",
+  "logSha256": "0A817421D18D63304623763175953FDA6A188C0D6E624E3378D790C29B37B28C",
+  "auditSha256": "5F93208B9ACA4444BA5C72B7FDA3E4BB42F97AAA6F3CE3028529EC33C2D9533C",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 15,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 25,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceActualFrickeLaurentIntegralSpanDependencyAudit4.log",
+  "dependencyAuditSha256": "CCD135629EF8CFDF78568F58782616F86487A2267BF2FF898690542D5225C85E",
+  "dependencyAuditSourceSha256": "6E5A7774044BAF7F6A429170E152BE1E445779658A8E24913254EABF7E00452E",
+  "consumers": [
+    "Dubon2026.SourceFricke.exists_fricke_laurent_integral_span_of_principal_invariant"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> Picard/H1 and full/parabolic/diamond comparison retaining the original homogeneous coefficient endomorphism -> actual differential/cusp comparison -> rational Fourier spanning -> integral base change of original Fricke functions.",
+  "discharged": "For the original holomorphic principal-level function with finite cusp poles at every modular translate, derive a literal Laurent representation in the ordinary complex span of elements of the original cyclotomic j/Fricke field integral over its j-algebra. Actual modular-orbit fraction and monic relation are consumed. Generator integrality, finiteness, cyclotomic coefficients, j transcendence, complex fraction membership and all constant-descent premises are derived.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The formal Laurent integral-span stage is proved for the actual function. Recover holomorphic functions for the integral Laurent summands, establish pole-cleared cyclotomic Fourier coefficients and rational Fourier spanning, then arbitrary Gamma1 differential realization and the remaining arithmetic association, automorphy and higher continuation chain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-actual-fricke-laurent-integral-span-4-reuse-review-20261026.json",
+  "reuseReviewSha256": "187C540712E3C715A013677C14837CCBC443E7329BDCE985C3BE818E811D96F6",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

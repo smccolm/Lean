@@ -1,0 +1,185 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T22:08:40.721248+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceFrickeCyclotomicConjugateRelation",
+    "SourceCyclotomicModularLift",
+    "SourceCyclotomicGammaOneLift",
+    "SourceCyclotomicLevelRingCovariance",
+    "SourceCyclotomicConjugateCancellation",
+    "SourceCyclotomicFractionCovariance",
+    "SourceCyclotomicConjugateCuspOrder",
+    "SourceCyclotomicHolomorphicDivision",
+    "SourceCyclotomicEllipticDivisibility",
+    "SourceCyclotomicEllipticCoordinates",
+    "SourceGammaOneCuspCyclotomicConjugation",
+    "SourceCyclotomicCuspFourierTransport",
+    "SourceGammaOneCyclotomicFourierConjugation"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicConjugateRelation.lean",
+      "sha256": "78DD14184B1237933AC06B009A89C71F4E6F9129ACC9D3C5193EA3411097E40D",
+      "oleanSha256": "B2F94E381FBA8B4748D3746A372B517635D56A82ED85E6742396BC30D9DF8BA2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicModularLift.lean",
+      "sha256": "9936DFC147D80EFB14C57733B8A990D83EC16D0214662BEC803BEB705CD95A59",
+      "oleanSha256": "F01830BEB1C09C1842E273E2371A41FF5D8192A539BD1D8A245D835C7EBF4D29"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicGammaOneLift.lean",
+      "sha256": "E8DCC781C0BF90E58C64AE3B630A9E8C36A085529E4FFA01AE3D010BEAA29AE9",
+      "oleanSha256": "E7E865918F3C320A272ADC3790CACC6177D6082B3FA94B871D261306ABFA5A93"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicLevelRingCovariance.lean",
+      "sha256": "6C95BC2D07520594607F1592736CC812751F2C8B8593E365D78B5E789BFFBF6F",
+      "oleanSha256": "98D9FD0E7D8596E492369B14F226DDBC3FE6755BCB72F30420D8F99D68F69823"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicConjugateCancellation.lean",
+      "sha256": "C07695BF61523EBCD03D2E43D684D803600C67A2531AFE9B3AE2960AF5F1603C",
+      "oleanSha256": "EEB1412D39880250B321876E80DCB35F9CBC9DA03AAA7ADAE4931484F649A20B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicFractionCovariance.lean",
+      "sha256": "A58BB343689C804A194D55593DF7E25F3DDBE0F2729BB8D338E72D4B9562482B",
+      "oleanSha256": "DB458B2B628CE45A6DA558CDDF63E7D2A789B8A887E5C4AADCDC13DF35549F3A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicConjugateCuspOrder.lean",
+      "sha256": "42C0ED769A6098A589AFF2A8D41F18AF7E78F6A78BC6E887AC5058A3F32C03D3",
+      "oleanSha256": "370CF89701C1C81019C4A73F1452A1A8E04C14E7DDFD043E8F23A95F7E1CC5C9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHolomorphicDivision.lean",
+      "sha256": "9D9FCA5DC93CFF0A98229153700FF535F1A8F57B44689A42F7C9DD6B75D1E0BA",
+      "oleanSha256": "D25AE3722E4A83B059C4937DE3197E6A28A2342097CF84AFB8F3BF93AA1D873C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicEllipticDivisibility.lean",
+      "sha256": "B4F230F41BF000ACE8B6E11EFF33ADFD193B9D2743C7646ECB7DD2BB2CA24CD7",
+      "oleanSha256": "760E57552BC4E9D37953BFFBFCCCC3568CFDBC40FE8E5D11BDB87800E439EBE3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicEllipticCoordinates.lean",
+      "sha256": "B6C44EBBD025A1E39AA052099C6E94EEDFCBC04939C1A3FD31198ABE0C6841A9",
+      "oleanSha256": "66FA78D208A14C6538C3D48112281388DF9EB53480C13339B27574BA9F065A45"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspCyclotomicConjugation.lean",
+      "sha256": "5D37D895BBAA85921A3F4950E354B7AD9AAB0BD8B33B11A134439EB55EBE6EC2",
+      "oleanSha256": "4FA3D6A3CD78A94DE786D8C6F039091992131B7797E8ABFE5EB405358CFC5FE6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicCuspFourierTransport.lean",
+      "sha256": "26C41A61C722E1B27E48A6BBB021AEF03E88A1B86AA27D07DD368A439032B253",
+      "oleanSha256": "B65D8692242308DFF19E6CB9798C84C46E4C07F9CEF32F2BDAD5AD6F687DBBE8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicFourierConjugation.lean",
+      "sha256": "B6F3CCDACE4E0EF4DDE5075AA1337EF3CBE3C714D1044F6CF48A2FF18C861615",
+      "oleanSha256": "60C1F3B47B7238FF27058C48E68CDD3B14F14518CBCF431821CBA90B903EBA31"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFricke.exists_cyclotomicConjugates",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.unique",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.add",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.mul",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.pow",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.const",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.j",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.fricke",
+    "Dubon2026.SourceFricke.exists_modular_cyclotomic_conjugate",
+    "Dubon2026.SourceFricke.exists_gammaOne_cyclotomic_conjugate",
+    "Dubon2026.SourceFricke.exists_cyclotomic_levelRing_modular_conjugate",
+    "Dubon2026.SourceFricke.cyclotomicLevelRing_holomorphicFraction",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.of_mul_eq",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.modular",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.exists_modular",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.gammaOne_invariant",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.discriminant",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.cusp_order",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.isZeroAtImInfty_mul_discriminant_iff",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.all_cusps",
+    "Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_of_holomorphic_quotient",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.holomorphic_division",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.elliptic_divisibility",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.jShift",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.E4_divisibility",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.E6_divisibility",
+    "Dubon2026.SourceFricke.exists_gammaOne_cuspWeightImage_cyclotomic_conjugate",
+    "Dubon2026.SourceFricke.coeffMap_eisensteinLaurentK_ringHom",
+    "Dubon2026.SourceFricke.coeffMap_eisensteinFactorLaurentK_ringHom",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.cusp_forms",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.qExpansion_coeff",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.gammaOne_qExpansion_coeff",
+    "Dubon2026.SourceFricke.exists_gammaOne_cuspForm_cyclotomic_conjugate",
+    "Dubon2026.SourceFricke.CyclotomicConjugates",
+    "Dubon2026.SourceFricke.cyclotomicTorsionVector"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFricke.exists_cyclotomicConjugates",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.unique",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.add",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.mul",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.pow",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.const",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.j",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.fricke",
+    "Dubon2026.SourceFricke.exists_modular_cyclotomic_conjugate",
+    "Dubon2026.SourceFricke.exists_gammaOne_cyclotomic_conjugate",
+    "Dubon2026.SourceFricke.exists_cyclotomic_levelRing_modular_conjugate",
+    "Dubon2026.SourceFricke.cyclotomicLevelRing_holomorphicFraction",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.of_mul_eq",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.modular",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.exists_modular",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.gammaOne_invariant",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.discriminant",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.cusp_order",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.isZeroAtImInfty_mul_discriminant_iff",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.all_cusps",
+    "Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_of_holomorphic_quotient",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.holomorphic_division",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.elliptic_divisibility",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.jShift",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.E4_divisibility",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.E6_divisibility",
+    "Dubon2026.SourceFricke.exists_gammaOne_cuspWeightImage_cyclotomic_conjugate",
+    "Dubon2026.SourceFricke.coeffMap_eisensteinLaurentK_ringHom",
+    "Dubon2026.SourceFricke.coeffMap_eisensteinFactorLaurentK_ringHom",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.cusp_forms",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.qExpansion_coeff",
+    "Dubon2026.SourceFricke.CyclotomicConjugates.gammaOne_qExpansion_coeff",
+    "Dubon2026.SourceFricke.exists_gammaOne_cuspForm_cyclotomic_conjugate"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFricke.CyclotomicConjugates",
+    "Dubon2026.SourceFricke.cyclotomicTorsionVector"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicConjugationAudit13.log",
+  "logSha256": "5BF3549F62AABDAE7FD1DFE346C852105E21E9A3F7830159EF772CBC54FE9B9D",
+  "auditSha256": "A131164F8FDAF6703094372FE4043AD395FA26586B451FB64149EAD8AE92E8C7",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 50,
+  "linterScopes": 13,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 43,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicConjugationDependencyAudit13V2.log",
+  "dependencyAuditSha256": "32D20E5F22CF92B352B11DF803226E69F925323AFC1444BCE1FBEFA0832B5EBB",
+  "dependencyAuditSourceSha256": "E2D5C7D86FD334C0BFA8A6497AE0EDEFCC373DAC8A7B3054954BD1BAFD428E7A",
+  "consumers": [
+    "Dubon2026.SourceFricke.exists_gammaOne_cuspForm_cyclotomic_conjugate"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> original Picard/H1, full/parabolic, transpose and diamond comparison -> actual differential/cusp comparison -> rational Fourier structure -> actual cyclotomic conjugate cusp forms.",
+  "discharged": "Construct actual integral modular lifts using the already proved SL2 reduction surjectivity, with a direct Gamma1 translation lift preserving the original level. Adjoin induction on original j and Fricke generators transports polynomial fractions and their modular action. The analytic conjugate preserves Laurent order and all-cusp vanishing. Holomorphic division remains in the original cyclotomic fraction algebra, so the actual j and j-1728 power identities transfer both elliptic divisibilities. The already proved cusp characterization constructs an actual same-weight Gamma1 cusp form. Rational Eisenstein and discriminant expansions then transfer the literal width-one Fourier coefficients. None of these analytic, modular, cusp, elliptic or coefficient conclusions remains a premise. The source weight balance and original Fricke-image membership remain explicit; the proved original-image spanning theorem supplies the generating set.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Descend the original-image spanning set from cyclotomic coefficients to rational Fourier coefficients using the newly constructed actual conjugates. Prove bounded denominators for the original integral-ratio field, arbitrary cusp differential realization and its converse, actual Hecke comparisons, original finite-character arithmetic realization, all-weight characteristic-zero association, arithmetic automorphy and higher continuation. No unrestricted odd-weight weight-balance claim is made. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-conjugation-13-reuse-review-20261026.json",
+  "reuseReviewSha256": "78E6D69EB179A21AF5EF5D32FC13EF92F6ADF7B4A898E1844C6ED2F9B1C99F77",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

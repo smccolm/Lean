@@ -1,0 +1,82 @@
+import SourceFrickeCyclotomicHolomorphicAlgebra
+import SourceFrickeScalarExtensionBasis
+import SourceComplexBasisCoefficientTwist
+import SourceFrickeCoefficientTwist
+import SourceFrickeSpanLaurentRealization
+import SourceLaurentTwistOrder
+import SourceCuspVanishingOrder
+import SourceFrickeTwistCuspVanishing
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_add
+#print axioms Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_mul
+#print axioms Dubon2026.SourceFricke.exists_complex_basis_of_cyclotomic_fricke_basis
+#print axioms Dubon2026.SourceFricke.cyclotomicFrickeComplexBasis_apply
+#print axioms Dubon2026.SourceFricke.basisCoefficientTwist_repr
+#print axioms Dubon2026.SourceFricke.basisCoefficientTwist_basis
+#print axioms Dubon2026.SourceFricke.basisCoefficientTwist_smul
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_fixes_original
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_smul
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_sum_original
+#print axioms Dubon2026.SourceFricke.frickeSpan_holomorphic
+#print axioms Dubon2026.SourceFricke.frickeSpan_periodic
+#print axioms Dubon2026.SourceFricke.coeffMap_cyclotomic_scalar_sum
+#print axioms Dubon2026.SourceFricke.exists_fricke_twist_laurent
+#print axioms Dubon2026.SourceFunctionField.coeffMap_order
+#print axioms Dubon2026.SourceFunctionField.coeffMap_orderTop
+#print axioms Dubon2026.SourceFunctionField.CuspTaylor.Represents.orderTop
+#print axioms Dubon2026.SourceFricke.isZeroAtImInfty_iff_cusp_order_pos
+#print axioms Dubon2026.SourceFricke.coeffMap_cyclotomic_fixed
+#print axioms Dubon2026.SourceFricke.coeffMap_discriminant_fixed
+#print axioms Dubon2026.SourceFricke.exists_fricke_twist_laurent_mul_discriminant
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_cusp_order_mul_discriminant
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist_isZeroAtImInfty_mul_discriminant_iff
+#print axioms Dubon2026.SourceFricke.cyclotomicHolomorphicFrickeAlgebra
+#print axioms Dubon2026.SourceFricke.cyclotomicFrickeComplexBasis
+#print axioms Dubon2026.SourceFricke.basisCoefficientTwist
+#print axioms Dubon2026.SourceFricke.cyclotomicFrickeSpanInclusion
+#print axioms Dubon2026.SourceFricke.frickeCoefficientTwist
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceFrickeCyclotomicHolomorphicAlgebra, `SourceFrickeScalarExtensionBasis, `SourceComplexBasisCoefficientTwist, `SourceFrickeCoefficientTwist, `SourceFrickeSpanLaurentRealization, `SourceLaurentTwistOrder, `SourceCuspVanishingOrder, `SourceFrickeTwistCuspVanishing]
+  let theorems : Array Name := #[`Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_add, `Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_mul, `Dubon2026.SourceFricke.exists_complex_basis_of_cyclotomic_fricke_basis, `Dubon2026.SourceFricke.cyclotomicFrickeComplexBasis_apply, `Dubon2026.SourceFricke.basisCoefficientTwist_repr, `Dubon2026.SourceFricke.basisCoefficientTwist_basis, `Dubon2026.SourceFricke.basisCoefficientTwist_smul, `Dubon2026.SourceFricke.frickeCoefficientTwist_fixes_original, `Dubon2026.SourceFricke.frickeCoefficientTwist_smul, `Dubon2026.SourceFricke.frickeCoefficientTwist_sum_original, `Dubon2026.SourceFricke.frickeSpan_holomorphic, `Dubon2026.SourceFricke.frickeSpan_periodic, `Dubon2026.SourceFricke.coeffMap_cyclotomic_scalar_sum, `Dubon2026.SourceFricke.exists_fricke_twist_laurent, `Dubon2026.SourceFunctionField.coeffMap_order, `Dubon2026.SourceFunctionField.coeffMap_orderTop, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.orderTop, `Dubon2026.SourceFricke.isZeroAtImInfty_iff_cusp_order_pos, `Dubon2026.SourceFricke.coeffMap_cyclotomic_fixed, `Dubon2026.SourceFricke.coeffMap_discriminant_fixed, `Dubon2026.SourceFricke.exists_fricke_twist_laurent_mul_discriminant, `Dubon2026.SourceFricke.frickeCoefficientTwist_cusp_order_mul_discriminant, `Dubon2026.SourceFricke.frickeCoefficientTwist_isZeroAtImInfty_mul_discriminant_iff]
+  let constructions : Array Name := #[`Dubon2026.SourceFricke.cyclotomicHolomorphicFrickeAlgebra, `Dubon2026.SourceFricke.cyclotomicFrickeComplexBasis, `Dubon2026.SourceFricke.basisCoefficientTwist, `Dubon2026.SourceFricke.cyclotomicFrickeSpanInclusion, `Dubon2026.SourceFricke.frickeCoefficientTwist]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Fricke Coefficient Twist postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Fricke Coefficient Twist theorems discovered"
+  logInfo m!"SOURCE FRICKE COEFFICIENT TWIST AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceFrickeCyclotomicHolomorphicAlgebra
+#lint in SourceFrickeScalarExtensionBasis
+#lint in SourceComplexBasisCoefficientTwist
+#lint in SourceFrickeCoefficientTwist
+#lint in SourceFrickeSpanLaurentRealization
+#lint in SourceLaurentTwistOrder
+#lint in SourceCuspVanishingOrder
+#lint in SourceFrickeTwistCuspVanishing

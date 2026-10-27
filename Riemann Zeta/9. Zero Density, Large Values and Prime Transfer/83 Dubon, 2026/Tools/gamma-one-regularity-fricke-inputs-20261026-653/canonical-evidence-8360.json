@@ -1,0 +1,517 @@
+{
+  "status": "Canonical PASS; all failed helper evidence preserved with fresh successors. No audited source was rewritten or used audit rerun.",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_regularity_fricke_inputs_8360.ps1",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/build_gamma_one_regularity_fricke_inputs_8360.ps1",
+      "sha256": "2A8E5210C941AD34EF7EB98A436848CAFA0748567E2F49EEABAF5177BC0CEFEA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_regularity_fricke_inputs_ownership_8360.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/compare_gamma_one_regularity_fricke_inputs_ownership_8360.py",
+      "sha256": "26958AB34859C533A9486E7409476FD0044BCC5EF2547DAE425B1BC096AC4F70"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-regularity-fricke-inputs-preexecution-review-8360.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma-one-regularity-fricke-inputs-preexecution-review-8360.json",
+      "sha256": "D035CA7477705322888A132072EFB14CC0CE1BAF19B3C0577D2FB44343F990C7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_regularity_fricke_inputs_8360.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/integrate_source_gamma_one_regularity_fricke_inputs_8360.py",
+      "sha256": "79708EEE6421297D4BB7A5EEB3A9DE05B45D8E274B7EF89A01943988DAA7EE11"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_regularity_fricke_inputs_global_ownership_8360.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_gamma_one_regularity_fricke_inputs_global_ownership_8360.py",
+      "sha256": "29C7279DE67B92DFDDEF4C6D7F5C463B6BE24D832873A1ACEFE7BF8D8D72C0DF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_regularity_fricke_inputs_production_ownership_8360.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_gamma_one_regularity_fricke_inputs_production_ownership_8360.py",
+      "sha256": "1939091E5BD8D72A3B848B31275F98B20AA0AA5D2F95BB963924386A272FCE21"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_regularity_fricke_inputs_promotion_8360.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_gamma_one_regularity_fricke_inputs_promotion_8360.py",
+      "sha256": "84A2F40E8893C6F047616E8F2D823CD2E5C605B1E8A0F709104DC00CBE144457"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_regularity_fricke_inputs_scratch_ownership_8360.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_gamma_one_regularity_fricke_inputs_scratch_ownership_8360.py",
+      "sha256": "B69DA78D67083F29B5581B393053A4CBD57F6064FD0DB495BD631740A28BACA4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_regularity_fricke_inputs_8360.py",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/record_source_gamma_one_regularity_fricke_inputs_8360.py",
+      "sha256": "21614E2F49F5A8169178F6D1040E470C54093831439E52261311564B5400E1EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-regularity-fricke-inputs-ownership-comparison-8360.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/source-gamma-one-regularity-fricke-inputs-ownership-comparison-8360.json",
+      "sha256": "886ABC2AFCA87147E67D316F25BDFB0A56EAF9C08DAD7C854561824DADFE4174"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-regularity-fricke-inputs-production-build-8360.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/source-gamma-one-regularity-fricke-inputs-production-build-8360.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-regularity-fricke-inputs-production-build-8360.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/source-gamma-one-regularity-fricke-inputs-production-build-8360.log",
+      "sha256": "02B05CED9C011458FBA755BE80ABE3F6D208481605BF243CAD13870848661FDB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-regularity-fricke-inputs-scratch-ownership-8360.json",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/source-gamma-one-regularity-fricke-inputs-scratch-ownership-8360.json",
+      "sha256": "35F022E5895FD3BE8BE4E1107614547A63C535F5C9C7868033A7CE1379AC0C1D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFourierCoefficientsDependencyAudit7bProduction8360.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeFourierCoefficientsDependencyAudit7bProduction8360.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFourierCoefficientsDependencyAudit7bProduction8360.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeFourierCoefficientsDependencyAudit7bProduction8360.lean.txt",
+      "sha256": "037B878E6F0295CD13C0D1B9173E62624819E558B9B6DD3E4E3E0117D916AA1E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFourierCoefficientsDependencyAudit7bProduction8360.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeFourierCoefficientsDependencyAudit7bProduction8360.log",
+      "sha256": "AEAAE9D72C4EA84F34DBB4D2D8AC5B172D7145A41A1971B8EFC04A6C124A60C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTransformationDependencyAudit4cProduction8360.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTransformationDependencyAudit4cProduction8360.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTransformationDependencyAudit4cProduction8360.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTransformationDependencyAudit4cProduction8360.lean.txt",
+      "sha256": "3A07F8632BF64A4F4C73B15FE010F7EDD795D299AE619C2B549F3ED45168EA65"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTransformationDependencyAudit4cProduction8360.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTransformationDependencyAudit4cProduction8360.log",
+      "sha256": "884CD5E52357D5C654E7515B2A07F4755CB447F74A167E8C6C48CDE18F38A487"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityDependencyAudit6bProduction8360.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneDifferentialRegularityDependencyAudit6bProduction8360.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityDependencyAudit6bProduction8360.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneDifferentialRegularityDependencyAudit6bProduction8360.lean.txt",
+      "sha256": "0F11602875A984FAC7C51A6F29DF5B63F9A568DBF83C796DBC49E6AC7F3CC54F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialRegularityDependencyAudit6bProduction8360.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneDifferentialRegularityDependencyAudit6bProduction8360.log",
+      "sha256": "23DE143D119620F9832CDEFDE00313461008F9DAA00C34BE31DEA32A8AE19831"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsGlobalOwnership8360.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsGlobalOwnership8360.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsGlobalOwnership8360.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsGlobalOwnership8360.lean.txt",
+      "sha256": "FABB835593667526268FF53381238C3D079740A81FC4D7BEE7F2B3BC5267B9BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsGlobalOwnership8360.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsGlobalOwnership8360.log",
+      "sha256": "2D4CF20191B2BA41F98CAF75C687B9A8559EF08BB159FBEFF21223C68B2B1D22"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsOwnership8360.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsOwnership8360.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsOwnership8360.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsOwnership8360.lean.txt",
+      "sha256": "8638D2C79915DD3087715687B6B5199B7FF488E79902313189FE00C9BB19436A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsOwnership8360.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsOwnership8360.log",
+      "sha256": "43967D786048F053766CF9B1F0D255C1AB6B896BA6A03F03AD257A93C3B3CFF8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsProductionAudit8360.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsProductionAudit8360.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsProductionAudit8360.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsProductionAudit8360.lean.txt",
+      "sha256": "A0CB6CB198759951801BED19DEF9CC2260C2D6C158F60FFCCEDDE1CD6ABDDC65"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsProductionAudit8360.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsProductionAudit8360.log",
+      "sha256": "012805ED87297227978ACECCC61213533A46E76A96FA5A4ACC41B6CCAD3F09D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership643bFor8360.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership643bFor8360.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership643bFor8360.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership643bFor8360.lean.txt",
+      "sha256": "90BECFFED0BA2182E6CDFE432580D7639ED6A3C433767C4A4D996DE1299E764E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership643bFor8360.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership643bFor8360.log",
+      "sha256": "C06544FC4845486F6AE7CDC62F5ABCEFC90E082D2439E35D28AA46C93DEB07BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership647cFor8360.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership647cFor8360.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership647cFor8360.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership647cFor8360.lean.txt",
+      "sha256": "9516EF3159E4A22602DC1648181947CEA82EDF8394DFA19C309C4650D7AB649E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership647cFor8360.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership647cFor8360.log",
+      "sha256": "BB60BF7794E1B887DEB5141A4A3E835C753C6CE20C602226C19BE06FAAC95E84"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership650bFor8360.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership650bFor8360.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership650bFor8360.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership650bFor8360.lean.txt",
+      "sha256": "051E356C4B82512EE284E1A07A9DFCD918E7CF8659237A9E16A637A373DBEFEC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership650bFor8360.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership650bFor8360.log",
+      "sha256": "AA7416C8EEC214BFBE75AA4A4FB7F8F0E0390700DA20495D5C99F610623917EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership651bFor8360.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership651bFor8360.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership651bFor8360.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership651bFor8360.lean.txt",
+      "sha256": "59311F15F70FF6C39770610D7CDB084DB3F6D95BFC4A6DCF4462EE9E5BB32D80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership651bFor8360.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership651bFor8360.log",
+      "sha256": "E306D012BA2F5DE154E3B37147DDA27576264D399492F37AC54DEB1C8A58AFCA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassExpansionDependencyAudit8bProduction8360.exit",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceWeierstrassExpansionDependencyAudit8bProduction8360.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassExpansionDependencyAudit8bProduction8360.lean",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceWeierstrassExpansionDependencyAudit8bProduction8360.lean.txt",
+      "sha256": "BD684DB7F4B1FC1AFF966F99B51625DE3C1798EA9F1D3F742EE6BF8F4AD75602"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassExpansionDependencyAudit8bProduction8360.log",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceWeierstrassExpansionDependencyAudit8bProduction8360.log",
+      "sha256": "BCD201E685A0032AD93895E9E2D0ABFD99503559372A2CB6B11F13970716D64F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_regularity_fricke_inputs_8360.ps1",
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/verify_gamma_one_regularity_fricke_inputs_8360.ps1",
+      "sha256": "BEA9F4FC92FFA6912FABA37E1E89F70B5C25ED1D24B46EA3EFBBE1939FDFBAF5"
+    }
+  ],
+  "canonical": {
+    "recordedUTC": "2026-10-26T16:43:32.109940+00:00",
+    "log": "logs/dubon-build-20261026-081441-800.log",
+    "sha256": "56C90B034BF2EA93E32DFF866605BCF8B683BA6B14BF44DE31F8D04D87EFD6BF",
+    "bytes": 13639644,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8360,
+    "projectTheorems": 53007,
+    "registeredConsumers": 24150,
+    "registeredConstructions": 2351,
+    "declarations": 32447,
+    "generated": 33572,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261026_080837.log",
+    "foundationSha256": "5404B6A447D04B043E8CE2073D9F34D579C75983798CF41121091AFFD7FDB034",
+    "countReconciliation": {
+      "previousTheorems": 52743,
+      "focusedTheorems": 264,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 264,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsGlobalOwnership8360.log",
+      "globalOwnershipSha256": "2D4CF20191B2BA41F98CAF75C687B9A8559EF08BB159FBEFF21223C68B2B1D22",
+      "globalOwnershipSourceSha256": "FABB835593667526268FF53381238C3D079740A81FC4D7BEE7F2B3BC5267B9BC",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsOwnership8360.log",
+      "ownershipSha256": "43967D786048F053766CF9B1F0D255C1AB6B896BA6A03F03AD257A93C3B3CFF8"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 264,
+      "scratchDistinct": 264,
+      "generatedNameRenamings": {},
+      "productionFocused": 264,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceLaurentIntegralDescent",
+            "SourceCurveIntegralExpressionOrders",
+            "SourceCurveIntegralDifferentialOrders",
+            "SourceGammaOneDifferentialIntegralDescent",
+            "SourceCurveRegularIntegralCriterion",
+            "SourceGammaOneDifferentialRegularity"
+          ],
+          "count": 21,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership643bFor8360.log",
+            "sha256": "C06544FC4845486F6AE7CDC62F5ABCEFC90E082D2439E35D28AA46C93DEB07BF",
+            "sourceSha256": "90BECFFED0BA2182E6CDFE432580D7639ED6A3C433767C4A4D996DE1299E764E"
+          }
+        },
+        {
+          "modules": [
+            "SourceFrickePeriodHomothetyV2",
+            "SourceFrickeModularLatticeV2",
+            "SourceFrickeTorsionTransformationV2",
+            "SourceFrickeFunctionTransformationV2"
+          ],
+          "count": 78,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership647cFor8360.log",
+            "sha256": "BB60BF7794E1B887DEB5141A4A3E835C753C6CE20C602226C19BE06FAAC95E84",
+            "sourceSha256": "9516EF3159E4A22602DC1648181947CEA82EDF8394DFA19C309C4650D7AB649E"
+          }
+        },
+        {
+          "modules": [
+            "SourceLipschitzTwo",
+            "SourceLipschitzTwoRealBoundary",
+            "SourceWeierstrassRowSeries",
+            "SourceWeierstrassLatticeRows",
+            "SourceWeierstrassTorsionExpansion",
+            "SourceWeierstrassTorsionTail",
+            "SourceWeierstrassTorsionHolomorphy",
+            "SourceFrickeHolomorphy"
+          ],
+          "count": 95,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership650bFor8360.log",
+            "sha256": "AA7416C8EEC214BFBE75AA4A4FB7F8F0E0390700DA20495D5C99F610623917EB",
+            "sourceSha256": "051E356C4B82512EE284E1A07A9DFCD918E7CF8659237A9E16A637A373DBEFEC"
+          }
+        },
+        {
+          "modules": [
+            "SourceFrickeCyclotomicField",
+            "SourceWeierstrassNormalizedTorsion",
+            "SourceWeierstrassTorsionCuspBound",
+            "SourceWeierstrassTorsionFourierCoefficients",
+            "SourceWeierstrassTorsionFourierSum",
+            "SourceWeierstrassTorsionFourierExpansion",
+            "SourceFrickeCuspInputs"
+          ],
+          "count": 70,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsScratchOwnership651bFor8360.log",
+            "sha256": "E306D012BA2F5DE154E3B37147DDA27576264D399492F37AC54DEB1C8A58AFCA",
+            "sourceSha256": "59311F15F70FF6C39770610D7CDB084DB3F6D95BFC4A6DCF4462EE9E5BB32D80"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularityFrickeInputsOwnership8360.log",
+        "sha256": "43967D786048F053766CF9B1F0D255C1AB6B896BA6A03F03AD257A93C3B3CFF8",
+        "sourceSha256": "8638D2C79915DD3087715687B6B5199B7FF488E79902313189FE00C9BB19436A"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-061545-571.log",
+        "sha256": "B696E0680B634D773587DF626A7713EE7A472D4C95D5A0CC7C1789C56B700920"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 25 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceLaurentIntegralDescent",
+            "scratchSha256": "B69E4811A4C90E8BE66BB986C98033C88638B749E90B21C0D5AC1693745412C6",
+            "productionSha256": "B69E4811A4C90E8BE66BB986C98033C88638B749E90B21C0D5AC1693745412C6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCurveIntegralExpressionOrders",
+            "scratchSha256": "657F98FE0B5E6BD2EE0908090047F938FD2D9886A1FEF70F67864C91FF36FBFA",
+            "productionSha256": "657F98FE0B5E6BD2EE0908090047F938FD2D9886A1FEF70F67864C91FF36FBFA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCurveIntegralDifferentialOrders",
+            "scratchSha256": "DDB4BCD796DDFBC681165C50B06BD0AB223C24FA5C22699F41345EDA9CE38D3E",
+            "productionSha256": "3961B2FB031678909FCE61664466CDA09A26AF66E12C2B9E0197F96CD006E7F1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDifferentialIntegralDescent",
+            "scratchSha256": "32E979532DD52AB20162F966BC7733034801F60A7F8BBF84039D66159A170C43",
+            "productionSha256": "88EC62CF767D35A6050D1E598A46A4FB037657775EA7A996F142D088F6252453",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCurveRegularIntegralCriterion",
+            "scratchSha256": "37BE299421EB6AD44ECDE761F43F25564920598C3C10846909F6BFA538C84B26",
+            "productionSha256": "2AD71E9EE8DDE16D04FFB4BECCF0F4D7E3F5E23DEE354357E8E1FB6FE552BA61",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDifferentialRegularity",
+            "scratchSha256": "B43C71E332504F9B3FA0A978B25C24A334F0BE86E70972DB0334000D8D77F998",
+            "productionSha256": "584C3C0057021559BFD4DDAA63B00CEB45A3D6BE8F2B816AC86F166798328ED2",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickePeriodHomothetyV2",
+            "scratchSha256": "896E3B923D354A9CED8FD8C44FCE47073AEA669B4E5587B58A43BDA83866FF33",
+            "productionSha256": "896E3B923D354A9CED8FD8C44FCE47073AEA669B4E5587B58A43BDA83866FF33",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeModularLatticeV2",
+            "scratchSha256": "092D75B3216920F5E51C7960CFC84BFD57E6E1C73B9095621F7D192853B4204F",
+            "productionSha256": "BD33EDFD5A2B9CF786D23448F2F5FD4B7CCA7B68BE3EADA51F6419F3F0BBB7F0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeTorsionTransformationV2",
+            "scratchSha256": "3A5DB0130F60BF11013E34A6793E3679AD981834A5F6AC1FD4A17F59874AF8F8",
+            "productionSha256": "5EB63E4BD0B9C2572F2ACF484AD0810E789D537EAE58CCFDDCCE261C58DEDFD0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeFunctionTransformationV2",
+            "scratchSha256": "5BABB787F2D3D189DB22930D749DC5530ECF438593FCBF5E77D2CC3148C13B7D",
+            "productionSha256": "89F3BFBF1137F5B6F75FC355B05F3A5306B1272691D0F1A8F5E2123166B492F3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceLipschitzTwo",
+            "scratchSha256": "490C3EE77DFF924429526BAD36DF613932BE9C5BA109599FD2F07E87200237EB",
+            "productionSha256": "490C3EE77DFF924429526BAD36DF613932BE9C5BA109599FD2F07E87200237EB",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceLipschitzTwoRealBoundary",
+            "scratchSha256": "B3E74F77839BD9172F411A4089B0780E1C82BFC5E1A48CA02BD19D38C5183CF9",
+            "productionSha256": "95CBF316AD7FEF3E4090694244ABB108ADA5EAB5A27D5106C978C33D1ECBAEF5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeierstrassRowSeries",
+            "scratchSha256": "DE4FE36E54C7FCFD7C2967D7738556CF6A82CD7299EE8FC20F17B1A2AF610181",
+            "productionSha256": "05826FB23173B14762A1A83D4F729FF3124EE44E45BE754F6CC1327D44CAF46B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeierstrassLatticeRows",
+            "scratchSha256": "40E695A8965F49DB4886F45950AD033FC3585BD127A517C38AAC92B8DA0BAB68",
+            "productionSha256": "D7A22E4E030552BB9E7733087E2C5DB8D9620FBC2AF73F5BAC1FBAF7A7C1FE8D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeierstrassTorsionExpansion",
+            "scratchSha256": "766A2069D6302436819DC787318D341045A4FA9A8CB010852968369F8CE614EE",
+            "productionSha256": "8AA529140FBD35F54CAF1DD110138D056F69D24423659BBFA48D4E04B834F59B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeierstrassTorsionTail",
+            "scratchSha256": "3D95B55677C539619F72F244DF88D64559CB2EFBC87DD715415ABFB5CE9BC161",
+            "productionSha256": "08E33F8188C9B6DA914FD0C4CD09566C462CC6253859DBE9CEA081D371B0CCE0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeierstrassTorsionHolomorphy",
+            "scratchSha256": "7F1D04F8E49AD01A36D1BB0AD1B7D55E3D428F941CD18D70AB83315E42C7BD3B",
+            "productionSha256": "A7E51FE449ED3E5292129C51D070F7D2DCBFDD679F1F18A2F8801725A999DE1F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeHolomorphy",
+            "scratchSha256": "DF1494B78BCEE18F4806A9A5558BD0E18961C1EFAD71C8D30BAE9B4FE4A35C9D",
+            "productionSha256": "0F95E4A11784515A023DC6EE8D9ED9B4CD06E7588978A60314A96B2AFB9497D5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeCyclotomicField",
+            "scratchSha256": "CB552577BCC834E7EE784FABE1AD38DF2FFD7E67D8A583C34A19C4EFBA3CF519",
+            "productionSha256": "E7FE7979A9C0E3B18E92BA334EF918B73AB144EB5B6A4E9663982EFC599C75A6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeierstrassNormalizedTorsion",
+            "scratchSha256": "7FF05DCB99658FAE0286FA1391143AE0A5788CB0C1E22B026A4211CB40A9B438",
+            "productionSha256": "E00F0A22EC9E0E9A61E9F83E9376A0D68C2F83ACC9B1AA8D79082C8D012CBF29",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeierstrassTorsionCuspBound",
+            "scratchSha256": "26EC7D5B54EF49AC6DA9A9DB7C4EC2B11840F83C071541E00EE54662E448FE07",
+            "productionSha256": "69EF30FAD34352733AA82F0274CF26BD30212B9FAF21D3F792CF8DC427B8B12F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeierstrassTorsionFourierCoefficients",
+            "scratchSha256": "F65C674B7B493EE02ED099A2EBF988F605D39E5A3E0BBCBB7AD2ADE5AB0D0037",
+            "productionSha256": "206B74E47A8240861AFB07019222410BF357B5553D236F6D49B486821EB09FE0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeierstrassTorsionFourierSum",
+            "scratchSha256": "2B4687E881537A35E6CAACDB3480B4ABEC64A186BA7D708C90BA2A4517FB1456",
+            "productionSha256": "189D8519D92BAFBD5B7AC8469C79ECD43BD0C62935AB29F7E30387174EEFD185",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceWeierstrassTorsionFourierExpansion",
+            "scratchSha256": "ACA66060E70084319577839D2BC5A99337BC06C4C973509378527B71524BC4E3",
+            "productionSha256": "0F6B47AA646AE1BF54EC2F2B33FDF589AD4E203140C614101701F37E30B2C277",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeCuspInputs",
+            "scratchSha256": "C2E43F31238A86930A69B3F956400117F17340847800A7E1F5E71087F4D375B3",
+            "productionSha256": "E9F3101E3DFD98914AE371D59334511F11519CC92593A67F801F216D6E4B4F69",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 264 distinct names from 264 exhaustive scratch checks are retained: 264 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Algebraic realization of arbitrary Gamma1 cusp forms and the converse regular-differential-to-cusp construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must identify the original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of these characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Neither complex semisimplicity, finite characters, Witt coefficients nor a universal deformation ring supplies a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN."
+  }
+}

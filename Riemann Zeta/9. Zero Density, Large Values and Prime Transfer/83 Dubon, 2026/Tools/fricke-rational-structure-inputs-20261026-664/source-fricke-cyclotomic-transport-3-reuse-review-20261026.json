@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-26 America/Vancouver",
+  "sourceDependency": "DUB-17/18 -> higher continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 characters -> Picard/H1 and diamond comparison -> differential realization -> rational Fourier basis -> cyclotomic conjugation of Fricke generators.",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-fricke-fourier-coefficients-7b-scratch-receipt.json",
+      "sha256": "29B8C452DEC9110ED125AECC5DF5407322B657D179909021828AA33681AA38E5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassTorsionFourierExpansion.lean",
+      "sha256": "ACA66060E70084319577839D2BC5A99337BC06C4C973509378527B71524BC4E3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassTorsionFourierCoefficients.lean",
+      "sha256": "F65C674B7B493EE02ED099A2EBF988F605D39E5A3E0BBCBB7AD2ADE5AB0D0037"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\fricke-torsion-expansion-reuse-648\\snapshots.json",
+      "sha256": "53DBF30C92F214B189A8E4DB6653A1D061B25BC9FE0686F5F98F3115BEB0E0C7"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\fricke-cyclotomic-transport-route-652.json",
+    "sha256": "63586D1BF554FAC73E0A13E1876A06BCE95FCA2045D0BC304F90BB1F5A31E0C5",
+    "review": {
+      "chain": "DUB-17/18 -> higher continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 characters -> Picard/H1 and diamond comparison -> differential realization -> rational Fourier basis -> cyclotomic conjugation of Fricke generators.",
+      "selectedRoute": "Use the already proved finite Fourier coefficient model. Native ring-hom preservation of powers, inverses and finite sums transports coefficients directly; avoid an assumed analytic coefficient-conjugation operation. The actual analytic q-expansion is then identified using scope651.",
+      "assumptionsToDischarge": "A coefficient embedding taking the level root to its s-th power sends the actual normalized torsion Weierstrass q-expansion to that at the transformed second torsion coordinate, for s coprime to the level.",
+      "remaining": "The corresponding Fricke product coefficients, separation and rational spanning remain before actual cusp differential realization and the arithmetic comparison; 16/20; DUB-17--20 OPEN.",
+      "source": "fricke-torsion-expansion-reuse-648/snapshots.json",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "externalImport": false
+    }
+  },
+  "discharged": "A coefficient embedding taking the level root to its s-th power sends the actual normalized torsion Weierstrass q-expansion to that at the transformed second torsion coordinate, for s coprime to the level.",
+  "remaining": "The corresponding Fricke product coefficients, separation and rational spanning remain before actual cusp differential realization and the arithmetic comparison; 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,22 @@
+{
+  "chain": "DUB-17/18 -> original all-weight association -> actual finite Gamma1 character realization -> actual Picard/H1 comparison -> cusp differential realization -> rational Fourier structure -> integral base change of Fricke fractions -> actual monic relation over C[j].",
+  "selectedRoute": "Use native MulSemiringAction.charpoly, monic_charpoly, eval_charpoly and smul_coeff_charpoly in the actual stable family algebra. Reuse the proved invariant polynomial-in-j theorem for its coefficients. This replaces the external orbit-coefficient holomorphy and cusp-bound engine. Build the stable family from the modular orbit of the original function. Existing isIntegral_modular_quotient is a formal Laurent-series result at period one; it does not directly give the required arbitrary-width pointwise relation.",
+  "assumptionsToDischarge": "Any actual holomorphic principal-level invariant function with finite cusp poles at all modular translates is both an actual Fricke fraction and a root of an actual monic equation with polynomial-in-j coefficients. Neither fraction representation nor monic relation is assumed.",
+  "remaining": "Cyclotomic integral base change, rational Fourier spanning and descent, actual cusp differential realization and arithmetic comparison; 16/20; DUB-17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\fricke-level-structure-reuse-656\\P2M\\Sol\\S_WLight_exists_monicRel_j_of_mdifferentiable_levelFraction.lean.txt",
+      "sha256": "CD6B0DA4648312099D2524D806807949F7631DE8471DE0EBD8EF6B12FF75B06C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Invariant\\Basic.lean",
+      "sha256": "6F1D427171AF9D91FAD0AFF5BC89D433246F35C5C567CF5C4308A74375BD21A7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\fricke-stable-family-route-659.json",
+      "sha256": "F9C919F88B90CBEAAE7A98197DE38C1B313FE90181D940F918E679E49F7DEE9C"
+    }
+  ],
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

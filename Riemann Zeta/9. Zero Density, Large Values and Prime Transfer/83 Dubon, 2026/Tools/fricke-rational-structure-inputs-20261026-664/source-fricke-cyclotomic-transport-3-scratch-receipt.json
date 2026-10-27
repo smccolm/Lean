@@ -1,0 +1,85 @@
+{
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceFricke.coe_zetaK",
+    "Dubon2026.SourceFricke.coe_wpQCoeffK"
+  ],
+  "recordedUTC": "2026-10-26T14:32:07.899855+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceFrickeCyclotomicCoefficients",
+    "SourceFrickeCyclotomicTransport",
+    "SourceFrickeTorsionConjugation"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicCoefficients.lean",
+      "sha256": "03BDE16EA5C8516528F611BC5DA07DC36395A75A634035B5ACCA545D0691A751",
+      "oleanSha256": "CAE8320AE9CC313EE3DB1F9F81B02D74B14542E2C3C8824217EB44DE91E6C6E7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicTransport.lean",
+      "sha256": "828D52CCF2FCC0AD3C798F32CA550E132AF7FD709BCB436A43FDD255F0FD372C",
+      "oleanSha256": "F9EB2FF0DD0E913C37FAF9E3FB21BAAEA7EFA960949571B0135E8605B793A5E0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTorsionConjugation.lean",
+      "sha256": "A327A31E331F916CB92D3B05602A69DCC3FE30B9F33A88F70306187CB0FF27D7",
+      "oleanSha256": "B57D691D359CB8284E3B7613601AD24D33842A59FACE316D8BFDFE320D305CED"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFricke.isPrimitiveRoot_zetaN",
+    "Dubon2026.SourceFricke.coe_zetaK",
+    "Dubon2026.SourceFricke.zetaN_pow_N",
+    "Dubon2026.SourceFricke.pow_mul_eq_pow_mod_mul",
+    "Dubon2026.SourceFricke.coe_wpQCoeffK",
+    "Dubon2026.SourceFricke.ringHom_wpMonCoeffK",
+    "Dubon2026.SourceFricke.ringHom_wpQCoeffK",
+    "Dubon2026.SourceFricke.wpQSeriesK_map_inclusion",
+    "Dubon2026.SourceFricke.wpQSeriesK_map_cyclotomic",
+    "Dubon2026.SourceFricke.zetaK",
+    "Dubon2026.SourceFricke.wpMonCoeffK",
+    "Dubon2026.SourceFricke.wpQCoeffK",
+    "Dubon2026.SourceFricke.wpQSeriesK"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFricke.isPrimitiveRoot_zetaN",
+    "Dubon2026.SourceFricke.coe_zetaK",
+    "Dubon2026.SourceFricke.zetaN_pow_N",
+    "Dubon2026.SourceFricke.pow_mul_eq_pow_mod_mul",
+    "Dubon2026.SourceFricke.coe_wpQCoeffK",
+    "Dubon2026.SourceFricke.ringHom_wpMonCoeffK",
+    "Dubon2026.SourceFricke.ringHom_wpQCoeffK",
+    "Dubon2026.SourceFricke.wpQSeriesK_map_inclusion",
+    "Dubon2026.SourceFricke.wpQSeriesK_map_cyclotomic"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFricke.zetaK",
+    "Dubon2026.SourceFricke.wpMonCoeffK",
+    "Dubon2026.SourceFricke.wpQCoeffK",
+    "Dubon2026.SourceFricke.wpQSeriesK"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicTransportAudit3.log",
+  "logSha256": "952A3DA2835077C37BE251B8E961A28BA82DFEE99C123091313E36A57C160BB7",
+  "auditSha256": "A518E503A431EE6B644121947D2731B870014D298049C45CF968A3F7F535FFBB",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 13,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 16,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicTransportDependencyAudit3.log",
+  "dependencyAuditSha256": "FEB0969C38E931C3511F801C8202D660427C537DA4AF13389E8522E71E014D5C",
+  "dependencyAuditSourceSha256": "121A4BEC32CFFED9DC9F574548C759BCD4D9F13C455E17E02554C494E795F073",
+  "consumers": [
+    "Dubon2026.SourceFricke.wpQSeriesK_map_inclusion",
+    "Dubon2026.SourceFricke.wpQSeriesK_map_cyclotomic"
+  ],
+  "dependency": "DUB-17/18 -> higher continuation -> arithmetic automorphy -> original all-weight association -> original finite Gamma1 characters -> Picard/H1 and diamond comparison -> differential realization -> rational Fourier basis -> cyclotomic conjugation of Fricke generators.",
+  "discharged": "A coefficient embedding taking the level root to its s-th power sends the actual normalized torsion Weierstrass q-expansion to that at the transformed second torsion coordinate, for s coprime to the level.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The corresponding Fricke product coefficients, separation and rational spanning remain before actual cusp differential realization and the arithmetic comparison; 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-fricke-cyclotomic-transport-3-reuse-review-20261026.json",
+  "reuseReviewSha256": "359D38E656CC4CFF1BF65F1C5B136EDA52754BD4B265C47DA269001D167C14D5",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-26 America/Vancouver",
+  "sourceDependency": "DUB-17/18 -> original all-weight arithmetic association -> finite Gamma1 characters -> Picard/H1 and diamond comparison -> cusp differential realization -> rational Fourier structure -> faithful Fricke generators.",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticPeriodUniformization.lean",
+      "sha256": "0C9622A3547F74D2CFBC4968D931B9801FD6BBEFEFE85D88ECBF0E313C330D11"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticPeriodPoint.lean",
+      "sha256": "0EBFE226C4458BF3F6D1608C75270319AFFF926F40E0D91F505C057BC0A6AB67"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticPeriodModularCurve.lean",
+      "sha256": "B024B45E90D8E2B01303F2175A059693E6EBDCED5A632230D5C46E6813FDC95C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePeriodPairScaling.lean",
+      "sha256": "8F098E22A5DC87B82C8F2B109B9725D8A6C0A25710AA7BBD942A2E55CD32CF8D"
+    }
+  ],
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\fricke-separation-local-reuse-route-655.json",
+    "sha256": "D641F69B86165D4C621635476E5B0B1B3AB169BF964D6B8738026AC01ABF87EE",
+    "review": {
+      "chain": "DUB-17/18 -> original all-weight arithmetic association -> finite Gamma1 characters -> Picard/H1 and diamond comparison -> cusp differential realization -> rational Fourier structure -> faithful Fricke generators.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticPeriodUniformization.lean",
+          "sha256": "0C9622A3547F74D2CFBC4968D931B9801FD6BBEFEFE85D88ECBF0E313C330D11"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticPeriodPoint.lean",
+          "sha256": "0EBFE226C4458BF3F6D1608C75270319AFFF926F40E0D91F505C057BC0A6AB67"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticPeriodModularCurve.lean",
+          "sha256": "B024B45E90D8E2B01303F2175A059693E6EBDCED5A632230D5C46E6813FDC95C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePeriodPairScaling.lean",
+          "sha256": "8F098E22A5DC87B82C8F2B109B9725D8A6C0A25710AA7BBD942A2E55CD32CF8D"
+        }
+      ],
+      "selectedRoute": "The existing actual period homomorphism and exact lattice kernel, together with Mathlib Affine.Point.eq_or_eq_neg_of_xRep_eq_xRep, imply Weierstrass separation modulo sign. Integer coordinates identify its lattice congruences with the actual ZMod torsion indices. Select a point where E4 E6 is nonzero from its actual constant Fourier coefficient. This replaces upstream explicit low-coefficient and root-of-unity case analysis.",
+      "assumptionsToDischarge": "Equality of the actual Fricke functions implies equality of their nonzero torsion indices up to sign, hence the stabilizer is the principal congruence subgroup up to sign.",
+      "remaining": "Rational spanning and descent to a rational Gamma1 basis, differential realization and the original arithmetic comparison remain; 16/20, DUB-17--20 OPEN.",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": "Equality of the actual Fricke functions implies equality of their nonzero torsion indices up to sign, hence the stabilizer is the principal congruence subgroup up to sign.",
+  "remaining": "Rational spanning and descent to a rational Gamma1 basis, differential realization and the original arithmetic comparison remain; 16/20, DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

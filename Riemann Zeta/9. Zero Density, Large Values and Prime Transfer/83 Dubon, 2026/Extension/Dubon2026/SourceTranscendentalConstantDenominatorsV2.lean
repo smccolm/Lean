@@ -1,0 +1,61 @@
+import Dubon2026.SourceTranscendentalConstantEvaluationV2
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual
+Gamma1 character realization -> differential/cusp comparison -> rational
+Fourier spanning -> integral base change of Fricke fractions. This is the
+transcendental constant-adjoining step of the finite constant-list induction.
+Native integral closure and polynomial normality recover integral coefficients
+after clearing scalar denominators. The original finite generator integrality
+and j transcendence are explicit inputs, supplied later by the actual Fricke field.
+Adapted from anthropics/fermats-last-theorem,
+6e837e75355538c7f80bab5b956861e86c4eacc2, Apache-2.0,
+S_IsIntegral_mem_span_of_adjoin_simple_constants_transcendental.
+All source proof-limit settings are omitted; native limits are unchanged. -/
+namespace Dubon2026.SourceFricke.ConstantDescent
+noncomputable section
+open Polynomial
+open scoped IntermediateField IntermediateField.algebraAdjoinAdjoin
+variable {K : Type*} [Field K] [Algebra ℂ K]
+variable (F : IntermediateField ℚ ℂ) (t : K) (S : Set K)
+variable {c : ℂ}
+
+theorem exists_clear_denominator (htS : t ∈ S) {a : K}
+    (ha : a ∈ Algebra.adjoin ↥(IntermediateField.adjoin ↥F {c}) ({t} : Set K)) :
+    ∃ q : (↥F)[X], q ≠ 0 ∧
+      Polynomial.aeval (algebraMap ℂ K c) q * a ∈ Set.range ⇑(rfPolyEval F t S c) := by
+  induction ha using Algebra.adjoin_induction with
+  | mem w hw =>
+    refine ⟨1, one_ne_zero, ?_⟩
+    rw [map_one, one_mul, Set.mem_singleton_iff.mp hw]
+    exact mem_range_rfPolyEval_of_mem_RSet F t S htS (t_mem_RSet F t S htS)
+  | algebraMap z =>
+    obtain ⟨r, s, hz⟩ := (IntermediateField.mem_adjoin_simple_iff ↥F ((z : ℂ))).mp z.2
+    by_cases hs : Polynomial.aeval c s = 0
+    · refine ⟨1, one_ne_zero, ?_⟩
+      have hz0 : (z : ℂ) = 0 := by rw [hz, hs, div_zero]
+      have hmap0 : algebraMap ↥(IntermediateField.adjoin ↥F {c}) K z = 0 := by
+        rw [algebraMap_subfield_apply', hz0, map_zero]
+      rw [map_one, one_mul, hmap0]
+      exact ⟨0, map_zero _⟩
+    · refine ⟨s, fun h0 => hs (by rw [h0, map_zero]), ?_⟩
+      have hid : Polynomial.aeval (algebraMap ℂ K c) s *
+          algebraMap ↥(IntermediateField.adjoin ↥F {c}) K z =
+          Polynomial.aeval (algebraMap ℂ K c) r := by
+        rw [Polynomial.aeval_algebraMap_apply, Polynomial.aeval_algebraMap_apply,
+          algebraMap_subfield_apply', ← map_mul]
+        congr 1; rw [hz]; field_simp
+      rw [hid]; exact evalF_mem_range_rfPolyEval F t S htS r
+  | add u v _ _ ihu ihv =>
+    obtain ⟨q₁, h₁0, A₁, hA₁⟩ := ihu; obtain ⟨q₂, h₂0, A₂, hA₂⟩ := ihv
+    obtain ⟨B₁, hB₁⟩ := evalF_mem_range_rfPolyEval F t S htS (c := c) q₁
+    obtain ⟨B₂, hB₂⟩ := evalF_mem_range_rfPolyEval F t S htS (c := c) q₂
+    refine ⟨q₁ * q₂, mul_ne_zero h₁0 h₂0, B₂ * A₁ + B₁ * A₂, ?_⟩
+    rw [map_add, map_mul, map_mul, hB₁, hB₂, hA₁, hA₂, map_mul]; ring
+  | mul u v _ _ ihu ihv =>
+    obtain ⟨q₁, h₁0, A₁, hA₁⟩ := ihu; obtain ⟨q₂, h₂0, A₂, hA₂⟩ := ihv
+    refine ⟨q₁ * q₂, mul_ne_zero h₁0 h₂0, A₁ * A₂, ?_⟩
+    rw [map_mul, map_mul, hA₁, hA₂]; ring
+
+
+end
+end Dubon2026.SourceFricke.ConstantDescent

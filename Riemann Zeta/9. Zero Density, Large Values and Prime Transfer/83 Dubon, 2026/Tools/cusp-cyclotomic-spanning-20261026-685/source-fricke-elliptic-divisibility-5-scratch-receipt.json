@@ -1,0 +1,88 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T20:25:16.467366+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceFrickeHolomorphicDivisionInvariance",
+    "SourceFrickeHolomorphicDivisionSpan",
+    "SourceFrickeHolomorphicDivisionTwist",
+    "SourceFrickeEllipticDivisibilityTwist",
+    "SourceFrickeEllipticCoordinateTwist"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicDivisionInvariance.lean",
+      "sha256": "E70BFB2BD6CA80AA65C527BAE663096C2F9DB1F7843A9344C0FF93B753172877",
+      "oleanSha256": "B7BAFBC78C5C2233D0FDA756EDA026DC5D0B6110D3639D705F151AFB483F57CD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicDivisionSpan.lean",
+      "sha256": "524B4A91D404F49288DCF872BC4E96E66F19846CA1C90852008F0E4DD74CB551",
+      "oleanSha256": "EB2319DF2F095B0550BC24DFA57FA2B98EEFE0C88E867597E984A4DF95E5481F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicDivisionTwist.lean",
+      "sha256": "E7A203986B000872CCCF86353A99E3BE8B11DF7164A408B60D8C9AC6A46AEB9A",
+      "oleanSha256": "D1AF97FD7187F99A5F50FAFCA3AA9A8B68C28115E2426AD03F62AC4EC6A4F07E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeEllipticDivisibilityTwist.lean",
+      "sha256": "8DE916F1C6B226265970C1B8BCE99B111EB36701C7EDE01FF9815B39155692E8",
+      "oleanSha256": "4F59767CC6D58DDC999FC2D4FB477241BD53D066B5746C0A3B4D438B8A1B2A98"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeEllipticCoordinateTwist.lean",
+      "sha256": "6E888033F715F1268FA7FCFD1814F460982A0EA6A9A7CF5B8D6C4E7DCA4B423D",
+      "oleanSha256": "39129AF74FC2C0D050C7247DB35134146364B649AF8A3FE779F220DE68A5E752"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFricke.principalInvariant_holomorphic_quotient",
+    "Dubon2026.SourceFricke.exists_frickeSpan_laurent",
+    "Dubon2026.SourceFricke.meromorphic_cusp_holomorphic_quotient",
+    "Dubon2026.SourceFricke.mem_frickeSpan_of_holomorphic_quotient",
+    "Dubon2026.SourceFricke.exists_twisted_holomorphic_quotient",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_transport_elliptic_divisibility",
+    "Dubon2026.SourceFricke.cyclotomicFrickeJShift_ne_zero",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_E4_divisibility",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_E6_divisibility",
+    "Dubon2026.SourceFricke.cyclotomicFrickeJShift"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFricke.principalInvariant_holomorphic_quotient",
+    "Dubon2026.SourceFricke.exists_frickeSpan_laurent",
+    "Dubon2026.SourceFricke.meromorphic_cusp_holomorphic_quotient",
+    "Dubon2026.SourceFricke.mem_frickeSpan_of_holomorphic_quotient",
+    "Dubon2026.SourceFricke.exists_twisted_holomorphic_quotient",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_transport_elliptic_divisibility",
+    "Dubon2026.SourceFricke.cyclotomicFrickeJShift_ne_zero",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_E4_divisibility",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_E6_divisibility"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFricke.cyclotomicFrickeJShift"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeEllipticDivisibilityAudit5.log",
+  "logSha256": "451F3F68C2F36EA956DA9C7F2BB608863C883E0A7E6BA8FF6FD4BAAC404C45D3",
+  "auditSha256": "C0405A9E63AE7B26539858F9387C16E178B4B138A8181EA5BD2C317F49888EA2",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 18,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 22,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeEllipticDivisibilityDependencyAudit5.log",
+  "dependencyAuditSha256": "C736EF736FA5D4A7F4A550B513550EDE4B4E97246AA7FC3CB3C2235508B37EA3",
+  "dependencyAuditSourceSha256": "1CC26BBF91B11D95A5345A2968866B4FEF7893B7A168DE6E531E767B67CAEB64",
+  "consumers": [
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_E4_divisibility",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_E6_divisibility"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> original Picard/H1, full/parabolic, transpose and diamond comparison -> actual differential/cusp comparison -> rational cusp-form spanning -> actual cusp-image stability under coefficient twists.",
+  "discharged": "Prove that a holomorphic quotient of two actual complex Fricke-span functions with nonzero denominator is in the same span: derive principal invariance by analytic cancellation, all translated meromorphic cusp germs by literal Laurent quotients, and finite poles by the existing discriminant pole-clearing theorem. Transport holomorphic division by an original cyclotomic fraction under the actual coefficient twist, then instantiate the exact E4-cube and E6-square divisibility conditions using actual j and j-1728 and their proved identities and nonvanishing.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Characterize the actual cusp-form image and perform its fixed-field descent to obtain rational cusp-form spanning. Arbitrary Gamma1 differential realization and the original finite-character arithmetic association, automorphy and higher continuation chain remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-fricke-elliptic-divisibility-5-reuse-review-20261026.json",
+  "reuseReviewSha256": "D76266BCA71E291155642BFF0A6A9FDCDC902B159975858EA4972464913A95C4",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

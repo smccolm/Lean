@@ -1,0 +1,48 @@
+{
+  "scope": 676,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> original Picard/H1, full/parabolic, transpose and diamond comparison -> actual differential/cusp comparison -> rational cusp-form spanning -> coefficient descent of the actual Fricke function span.",
+  "assumptionsToDischarge": "Prove that actual modular pullbacks preserve the original cyclotomic Fricke algebra, its holomorphic fractions and their complex span; prove coefficient twists commute with those pullbacks and preserve every translated cusp-vanishing condition. Prove multiplication and power compatibility from finite original scalar expansions. Derive principal-level invariance from original generator invariance and analytic cancellation of nonzero denominators, rather than assuming it.",
+  "remaining": "Transport holomorphic divisibility at elliptic points, then descend the actual cusp-form image. Arbitrary Gamma1 differential realization and the original finite-character arithmetic association, automorphy and higher continuation chain remain. 16/20; DUB-17--20 OPEN.",
+  "shorterRouteReview": "Before expanding the external function-twist algebra, reuse the already proved modular action, literal Fricke transformation law and native submodule multiplication. The existing actual coefficient twist is a linear equivalence, so addition and scalar compatibility require no new function extension. Finite original scalar sums prove multiplication and modular commutation directly. Analytic cancellation transfers principal-level invariance from each numerator and denominator; no separate modular-invariance input is added.",
+  "externalImport": false,
+  "externalFullClosureVerified": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLevelAlgebraV3.lean",
+      "sha256": "6E12CB0B015FADC922DD85EEF9F7660B347CAE95EB0396001A701F6CFFF45E49"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeModularOrbitV2.lean",
+      "sha256": "1C87B8694ED9D5016743DE0F3866847FD315A9C8FA6C08D6C83DC4283221D345"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeFractionPeriodicity.lean",
+      "sha256": "F6B29316F4B06C5F9B20E62F0E40B55072FCF59DF508B7F2FF97BFA57F7741EF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTwistCuspVanishing.lean",
+      "sha256": "5DBFB422C12ABF17FC0007C1DE0F3476B5D19A3746E9E3DE93A406BF50285520"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCoefficientTwist.lean",
+      "sha256": "4D53E819A53D57BA0D160A1AE474A39EB3858A406FCB274DE7297764E6161ED5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Algebra\\Algebra\\Operations.lean",
+      "sha256": "E20251E16A91F0E13F477437E9C4CAEF9372E79DAA329557D605E52C3A025333"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-rational-structure-input-reuse-646\\P2M\\Sol\\S_CuspForm_span_frickeRational_E4_pow_E6_pow_eq_top.lean.txt",
+      "sha256": "AB40C08C057927A0E2EA6DBA8B677CB8AA4981B3C9A8104B60FBCA51CFADE4CA"
+    }
+  ],
+  "modules": [
+    "SourceFrickeCyclotomicModularAction",
+    "SourceFrickeTwistModularEquivariance",
+    "SourceFrickeSpanMultiplication",
+    "SourceFrickePrincipalInvariance",
+    "SourceFrickeTwistPowers"
+  ]
+}

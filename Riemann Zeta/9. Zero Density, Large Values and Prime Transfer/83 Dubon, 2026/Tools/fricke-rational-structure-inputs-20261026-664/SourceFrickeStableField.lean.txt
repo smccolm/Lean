@@ -1,0 +1,123 @@
+import SourceFrickeStableGroup
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual finite Gamma1
+character realization -> Picard/H1 and diamond comparison -> cusp differential
+realization -> rational Fourier structure -> fraction realization of modularly
+stable finite-pole families. This uses the actual Fricke algebra and native
+finite fixed-field degree; no rational representation is assumed.
+Adapted from anthropics/fermats-last-theorem,
+6e837e75355538c7f80bab5b956861e86c4eacc2, Apache License 2.0. -/
+namespace Dubon2026.SourceFricke
+noncomputable section
+open UpperHalfPlane ModularForm SourceFunctionField Matrix.SpecialLinearGroup
+open scoped MatrixGroups ModularForm Manifold IntermediateField
+local notation "j" => JMultiplicity.jf
+
+namespace LevelGens
+variable {N : ℕ} [NeZero N] (D : LevelGens N)
+
+/-- The native fraction field of the actual stable family algebra. -/
+abbrev field : Type := FractionRing ↥D.ring
+
+/-- The native multiplication of the actual family algebra on its fraction field. -/
+scoped instance (priority := 3000) fieldRingSMul : SMul ↥D.ring D.field := Algebra.toSMul
+
+/-- The actual quotient action extended to the family fraction field. -/
+noncomputable scoped instance grpFieldAction : MulSemiringAction (LevelGrp N) D.field :=
+  IsFractionRing.mulSemiringAction (LevelGrp N) ℂ ↥D.ring ℂ D.field
+
+/-- The extended action respects the original algebra embedding. -/
+scoped instance grp_smulDistribClass : SMulDistribClass (LevelGrp N) ↥D.ring D.field :=
+  IsFractionRing.smulDistribClass (LevelGrp N) ℂ ↥D.ring ℂ D.field
+
+lemma grp_smul_algebraMap (g : LevelGrp N) (a : ↥D.ring) :
+    g • algebraMap ↥D.ring D.field a = algebraMap ↥D.ring D.field (g • a) :=
+  (algebraMap.coe_smul' g a D.field).symm
+
+/-- The quotient action on the actual family fraction field is faithful. -/
+scoped instance grpField_faithful : FaithfulSMul (LevelGrp N) D.field :=
+  IsFractionRing.faithfulSMul (LevelGrp N) ↥D.ring D.field
+
+/-- The field action commutes with complex scalar multiplication. -/
+scoped instance grpField_smulCommClass : SMulCommClass (LevelGrp N) ℂ D.field :=
+  IsFractionRing.smulCommClass (LevelGrp N) ℂ ↥D.ring ℂ D.field
+
+theorem finrank_field_fixed :
+    Module.finrank (FixedPoints.subfield (LevelGrp N) D.field) D.field = (levelFixer N).index := by
+  rw [FixedPoints.finrank_eq_card, card_LevelGrp]
+
+/-- Use the already constructed finite quotient action directly. -/
+local instance fieldActionSMul : SMul (LevelGrp N) D.field :=
+  (grpFieldAction D).toSMul
+
+/-- Use the already constructed finite quotient multiplication action directly. -/
+local instance fieldMulAction : MulAction (LevelGrp N) D.field :=
+  (grpFieldAction D).toMulAction
+
+/-- Use the native self action of the actual family algebra. -/
+local instance ringSelfDistribMulAction : DistribMulAction ↥D.ring ↥D.ring := by
+  let m : Module ↥D.ring ↥D.ring := inferInstance
+  exact m.toDistribMulAction
+
+/-- The original analytic j as an element of the actual family algebra. -/
+def jA : ↥D.ring := ⟨j, D.levelRing_le_ring (j_mem_levelRing N)⟩
+
+/-- The original j embedded in the actual family fraction field. -/
+def jK : D.field := algebraMap ↥D.ring D.field D.jA
+
+lemma coe_aeval_jA (P : Polynomial ℂ) :
+    ((Polynomial.aeval D.jA P : ↥D.ring) : ℍ → ℂ) = fun τ ↦ Polynomial.eval (j τ) P := by
+  rw [Polynomial.aeval_subalgebra_coe]
+  funext τ
+  exact aeval_j_apply P τ
+
+theorem ring_fixed_eq_aeval_j (a : ↥D.ring) (ha : ∀ g : LevelGrp N, g • a = a) :
+    ∃ P : Polynomial ℂ, a = Polynomial.aeval D.jA P := by
+  have ha' : ∀ γ : SL(2, ℤ), γ • (a : ℍ → ℂ) = a :=
+    fun γ ↦ congrArg Subtype.val (ha (QuotientGroup.mk γ))
+  have hinv : ∀ γ : SL(2, ℤ), (a : ℍ → ℂ) ∣[(0 : ℤ)] γ = a := by
+    intro γ
+    funext τ
+    rw [ModularForm.SL_slash_apply, neg_zero, zpow_zero, mul_one]
+    exact (sl_smul_eq_self_iff _).mp ha' γ τ
+  obtain ⟨P, hP⟩ := eq_polynomial_j_of_invariant_of_mem_adjoin D.poleBounded a.2 hinv
+  exact ⟨P, Subtype.ext (by rw [coe_aeval_jA]; exact hP)⟩
+
+lemma smul_jK (g : LevelGrp N) : g • D.jK = D.jK := by
+  rw [jK, grp_smul_algebraMap]
+  congr 1
+  induction g using QuotientGroup.induction_on with
+  | H γ => exact Subtype.ext (smul_j γ)
+
+theorem fixedPoints_field_eq_adjoin_j :
+    (MulAction.fixedPoints (LevelGrp N) D.field : Set D.field) =
+      (IntermediateField.adjoin ℂ {D.jK} : Set D.field) := by
+  apply Set.Subset.antisymm
+  · intro x hx
+    rw [MulAction.mem_fixedPoints] at hx
+    obtain ⟨a, b, ha, hb, hb0, hab⟩ :=
+      exists_fixed_div_of_fixed (A := ↥D.ring) (K := D.field) (G := LevelGrp N)
+        D.grp_smul_algebraMap x hx
+    obtain ⟨P, rfl⟩ := D.ring_fixed_eq_aeval_j a ha
+    obtain ⟨Q, rfl⟩ := D.ring_fixed_eq_aeval_j b hb
+    rw [SetLike.mem_coe, IntermediateField.mem_adjoin_simple_iff]
+    refine ⟨P, Q, ?_⟩
+    rw [jK, Polynomial.aeval_algebraMap_apply, Polynomial.aeval_algebraMap_apply,
+      eq_div_iff hb0, hab]
+  · change (IntermediateField.adjoin ℂ {D.jK} : Set D.field) ⊆
+      (FixedPoints.intermediateField (F := ℂ) (LevelGrp N) : IntermediateField ℂ D.field)
+    exact SetLike.coe_subset_coe.mpr
+      (IntermediateField.adjoin_simple_le_iff.mpr fun g ↦ D.smul_jK g)
+
+/-- The intermediate field generated by the actual j. -/
+abbrev ratJ : IntermediateField ℂ D.field := ℂ⟮D.jK⟯
+
+theorem finrank_ratJ : Module.finrank ↥D.ratJ D.field = (levelFixer N).index := by
+  have h : (FixedPoints.intermediateField (F := ℂ) (LevelGrp N) : IntermediateField ℂ D.field) =
+      D.ratJ := SetLike.coe_injective D.fixedPoints_field_eq_adjoin_j
+  rw [← h]
+  exact D.finrank_field_fixed
+
+end LevelGens
+end
+end Dubon2026.SourceFricke

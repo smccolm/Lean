@@ -1,0 +1,14 @@
+[
+  "SpectralEulerShift",
+  "PrimitiveHigherEulerConvergence",
+  "PositiveDirichletTails",
+  "PositiveDirichletHalfPlane",
+  "SatakeTensorDecomposition",
+  "SpectralDirichletCoefficients",
+  "PrimitiveHigherTensor",
+  "PrimitiveHigherTensorEuler",
+  "SpectralDenominatorConvergence",
+  "SpectralLocalConvergence",
+  "PrimitivePurityFromContinuation",
+  "PrimitiveHigherContinuationReduction"
+]

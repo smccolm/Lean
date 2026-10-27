@@ -1,0 +1,60 @@
+import Dubon2026.SourceCuspLaurentFunctionIdentity
+import Dubon2026.SourceQExpansionLaurentWidth
+import Dubon2026.SourcePoleBoundedCuspLaurent
+import Dubon2026.SourceFrickeCyclotomicLaurent
+import Dubon2026.SourceCuspLaurentPolynomial
+import Dubon2026.SourceCuspLaurentFractionIdentity
+import Dubon2026.SourceFrickeCyclotomicFractionGerm
+import Dubon2026.SourceFrickeLaurentIntegralDescent
+import Dubon2026.SourceFrickeFractionPeriodicity
+import Dubon2026.SourceFrickeCyclotomicMonic
+import Dubon2026.SourceConstantExtensionIntegralAlgebra
+import Dubon2026.SourceAlgebraicConstantRoots
+import Dubon2026.SourceAlgebraicConstantLift
+import Dubon2026.SourceAlgebraicConstantInterpolation
+import Dubon2026.SourceAlgebraicConstantIntegralSpan
+import Dubon2026.SourceTranscendentalConstantAlgebraV2
+import Dubon2026.SourceTranscendentalConstantEvaluationV2
+import Dubon2026.SourceTranscendentalConstantDenominatorsV2
+import Dubon2026.SourceTranscendentalConstantFieldRangeV2
+import Dubon2026.SourceTranscendentalConstantScaledRelationV2
+import Dubon2026.SourceTranscendentalConstantNormalityV2
+import Dubon2026.SourceTranscendentalConstantIntegralSpanV2
+import Dubon2026.SourceLaurentConstantTranscendence
+import Dubon2026.SourceLaurentGeneratedConstants
+import Dubon2026.SourceConstantExtensionChain
+import Dubon2026.SourceConstantExtensionMonotonicity
+import Dubon2026.SourceFiniteConstantIntegralCapture
+import Dubon2026.SourceLaurentIntegralConstantSpan
+import Dubon2026.SourceLaurentIntegralCoefficientImage
+import Dubon2026.SourceFrickeLaurentGeneratorIntegrality
+import Dubon2026.SourceFrickeComplexFractionLaurent
+import Dubon2026.SourceFrickeLaurentIntegralSpan
+import Dubon2026.SourceMonicQuotientRelation
+import Dubon2026.SourceHolomorphicMonicQuotient
+import Dubon2026.SourceIntegralCoordinateMonic
+import Dubon2026.SourceFrickeCyclotomicLaurentLifts
+import Dubon2026.SourceFrickeClearedLaurentMonic
+import Dubon2026.SourceFrickeIntegralHolomorphicRepresentative
+import Dubon2026.SourceCuspLaurentSpan
+import Dubon2026.SourceFrickeHolomorphicIntegralSpan
+import Dubon2026.SourceMeromorphicCuspPoleClearing
+import Dubon2026.SourceFrickePoleClearedFourierSpan
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceCuspLaurentFunctionIdentity, `Dubon2026.SourceQExpansionLaurentWidth, `Dubon2026.SourcePoleBoundedCuspLaurent, `Dubon2026.SourceFrickeCyclotomicLaurent, `Dubon2026.SourceCuspLaurentPolynomial, `Dubon2026.SourceCuspLaurentFractionIdentity, `Dubon2026.SourceFrickeCyclotomicFractionGerm, `Dubon2026.SourceFrickeLaurentIntegralDescent, `Dubon2026.SourceFrickeFractionPeriodicity, `Dubon2026.SourceFrickeCyclotomicMonic, `Dubon2026.SourceConstantExtensionIntegralAlgebra, `Dubon2026.SourceAlgebraicConstantRoots, `Dubon2026.SourceAlgebraicConstantLift, `Dubon2026.SourceAlgebraicConstantInterpolation, `Dubon2026.SourceAlgebraicConstantIntegralSpan, `Dubon2026.SourceTranscendentalConstantAlgebraV2, `Dubon2026.SourceTranscendentalConstantEvaluationV2, `Dubon2026.SourceTranscendentalConstantDenominatorsV2, `Dubon2026.SourceTranscendentalConstantFieldRangeV2, `Dubon2026.SourceTranscendentalConstantScaledRelationV2, `Dubon2026.SourceTranscendentalConstantNormalityV2, `Dubon2026.SourceTranscendentalConstantIntegralSpanV2, `Dubon2026.SourceLaurentConstantTranscendence, `Dubon2026.SourceLaurentGeneratedConstants, `Dubon2026.SourceConstantExtensionChain, `Dubon2026.SourceConstantExtensionMonotonicity, `Dubon2026.SourceFiniteConstantIntegralCapture, `Dubon2026.SourceLaurentIntegralConstantSpan, `Dubon2026.SourceLaurentIntegralCoefficientImage, `Dubon2026.SourceFrickeLaurentGeneratorIntegrality, `Dubon2026.SourceFrickeComplexFractionLaurent, `Dubon2026.SourceFrickeLaurentIntegralSpan, `Dubon2026.SourceMonicQuotientRelation, `Dubon2026.SourceHolomorphicMonicQuotient, `Dubon2026.SourceIntegralCoordinateMonic, `Dubon2026.SourceFrickeCyclotomicLaurentLifts, `Dubon2026.SourceFrickeClearedLaurentMonic, `Dubon2026.SourceFrickeIntegralHolomorphicRepresentative, `Dubon2026.SourceCuspLaurentSpan, `Dubon2026.SourceFrickeHolomorphicIntegralSpan, `Dubon2026.SourceMeromorphicCuspPoleClearing, `Dubon2026.SourceFrickePoleClearedFourierSpan]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

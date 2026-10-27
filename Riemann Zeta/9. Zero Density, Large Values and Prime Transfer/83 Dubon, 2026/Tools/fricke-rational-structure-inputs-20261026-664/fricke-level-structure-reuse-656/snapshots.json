@@ -1,0 +1,35 @@
+{
+  "fetchedUTC": "2026-10-26T14:56:17.884379+00:00",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_WLight_levelN_structure_package.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_WLight_levelN_structure_package.lean",
+      "snapshot": "P2M\\Sol\\S_WLight_levelN_structure_package.lean.txt",
+      "gitBlob": "69229d5851b67edcc455b3c063f543d060432801",
+      "sha256": "CB0AFE145E66860662EAC268A3B2EAC5D4CE5887CE4EB0E9F223738C85D54446",
+      "bytes": 56972
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_WLight_exists_levelFraction_of_stable_family.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_WLight_exists_levelFraction_of_stable_family.lean",
+      "snapshot": "P2M\\Sol\\S_WLight_exists_levelFraction_of_stable_family.lean.txt",
+      "gitBlob": "d2a33f85dac29a8bd920c87422d27c2c3d90fb5e",
+      "sha256": "2E5CA4FE2711CB5A6E5E320CCE172BA1A516F54A25C8D68F8A0B08F0565B9AF7",
+      "bytes": 60791
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_WLight_exists_monicRel_j_of_mdifferentiable_levelFraction.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_WLight_exists_monicRel_j_of_mdifferentiable_levelFraction.lean",
+      "snapshot": "P2M\\Sol\\S_WLight_exists_monicRel_j_of_mdifferentiable_levelFraction.lean.txt",
+      "gitBlob": "89737c91535988adff914ac68d2825e6d4fe4cc4",
+      "sha256": "CD6B0DA4648312099D2524D806807949F7631DE8471DE0EBD8EF6B12FF75B06C",
+      "bytes": 32892
+    }
+  ]
+}

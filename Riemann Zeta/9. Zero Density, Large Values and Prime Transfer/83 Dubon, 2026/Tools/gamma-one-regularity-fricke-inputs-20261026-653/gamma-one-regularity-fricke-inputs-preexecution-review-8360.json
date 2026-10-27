@@ -1,0 +1,60 @@
+{
+  "status": "Prepared; require 8335 canonical PASS and archive before integration.",
+  "route": "gamma-one-regularity-fricke-inputs-promotion-route-653.json",
+  "routeSha256": "20B8220C5642B7C5F027D9164DFEFDC763752865285F1F2A25C5E6F457ECF9FC",
+  "modules": 25,
+  "queries": 152,
+  "theorems": 126,
+  "constructions": 26,
+  "exhaustiveScratchChecks": 264,
+  "proofValueEdges": 162,
+  "scopes": 4,
+  "receipts": {
+    "source-gamma-one-differential-regularity-6b-scratch-receipt.json": "9EF4347C9A2DF281E237481B678ECB69B39AFE7E5695EED82DB70603DCB9BEA7",
+    "source-fricke-transformation-4c-scratch-receipt.json": "1B089A904F7ECB171E895466FDC455922A1C2D8EBD06E3BD79EB6FC0E75C126E",
+    "source-weierstrass-expansion-8b-scratch-receipt.json": "8D69957DFF05891851A445E70D258A1014E88FC8F9D78733A17ED2BEF4FEC3AD",
+    "source-fricke-fourier-coefficients-7b-scratch-receipt.json": "29B8C452DEC9110ED125AECC5DF5407322B657D179909021828AA33681AA38E5"
+  },
+  "expectedConsumers": 24150,
+  "expectedConstructions": 2351,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_regularity_fricke_inputs_8360.py",
+      "sha256": "79708EEE6421297D4BB7A5EEB3A9DE05B45D8E274B7EF89A01943988DAA7EE11"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_regularity_fricke_inputs_production_ownership_8360.py",
+      "sha256": "1939091E5BD8D72A3B848B31275F98B20AA0AA5D2F95BB963924386A272FCE21"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_regularity_fricke_inputs_scratch_ownership_8360.py",
+      "sha256": "B69DA78D67083F29B5581B393053A4CBD57F6064FD0DB495BD631740A28BACA4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_regularity_fricke_inputs_ownership_8360.py",
+      "sha256": "26958AB34859C533A9486E7409476FD0044BCC5EF2547DAE425B1BC096AC4F70"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_regularity_fricke_inputs_global_ownership_8360.py",
+      "sha256": "29C7279DE67B92DFDDEF4C6D7F5C463B6BE24D832873A1ACEFE7BF8D8D72C0DF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_regularity_fricke_inputs_8360.py",
+      "sha256": "21614E2F49F5A8169178F6D1040E470C54093831439E52261311564B5400E1EC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_regularity_fricke_inputs_8360.ps1",
+      "sha256": "2A8E5210C941AD34EF7EB98A436848CAFA0748567E2F49EEABAF5177BC0CEFEA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_regularity_fricke_inputs_8360.ps1",
+      "sha256": "BEA9F4FC92FFA6912FABA37E1E89F70B5C25ED1D24B46EA3EFBBE1939FDFBAF5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_regularity_fricke_inputs_canonical_8360.py",
+      "sha256": "5CEBC040BEB3BA1D5B9CB5660F65D9DA74A264C9FE13298320CDF683EE064A4D"
+    }
+  ],
+  "productionMutation": false
+}

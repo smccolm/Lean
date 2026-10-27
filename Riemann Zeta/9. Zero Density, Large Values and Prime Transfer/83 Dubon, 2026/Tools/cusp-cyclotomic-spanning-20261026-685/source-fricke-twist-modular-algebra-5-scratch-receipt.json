@@ -1,0 +1,103 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T20:10:35.057405+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceFrickeCyclotomicModularAction",
+    "SourceFrickeTwistModularEquivariance",
+    "SourceFrickeSpanMultiplication",
+    "SourceFrickePrincipalInvariance",
+    "SourceFrickeTwistPowers"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicModularAction.lean",
+      "sha256": "C1EBBBBBA4BB87BC26BDCCE925042C965584BBE09DC6C4AEEFA3F0C65D1D76CD",
+      "oleanSha256": "AECFA723E375D553A6088D956FF606E4AC2528391C76DC18616D7496F6A30FFB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTwistModularEquivariance.lean",
+      "sha256": "E09792485B8D50FF055B5B354415817FD988369CF586200CC6E4A622C31240BF",
+      "oleanSha256": "BF53B028603C7227C798F7D445E636E9E6A57B75BDD9C9DB8A394933B044B49D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeSpanMultiplication.lean",
+      "sha256": "7CEE839D2380788A4AC4113DB84E72B8F61BC877391BBA2F9C5E4957188FD53E",
+      "oleanSha256": "6950A19F97C4482CF55B1A881F06BB92985B4DA60DE3F9E7078422AB3B9069B2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePrincipalInvariance.lean",
+      "sha256": "B50C51CB7FC773F19BAE5C7C75C9151F39F57F3EC76CE0AED0740D6C7D8638E2",
+      "oleanSha256": "C30E0C0F4B9A90502794F340152A8A49FBAA12217DB7270DA0F2B8B4BBEC7252"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTwistPowers.lean",
+      "sha256": "FBEC9DF5057D8F355BDB72E64E5B3AF942425C7B702C34D3E35D35DD0F3C986E",
+      "oleanSha256": "C05A1AA03D7788D6A82317AE895CA72CF2C6B0445BA0667C8EFDA58F3263791C"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFricke.smul_mem_cyclotomicLevelRing",
+    "Dubon2026.SourceFricke.smul_mem_holomorphicCyclotomicFrickeFractions",
+    "Dubon2026.SourceFricke.smul_mem_frickeSpan",
+    "Dubon2026.SourceFricke.exists_frickeSpan_sum_original",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_pullback",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_isZeroAtImInfty_sl_mul_discriminant_iff",
+    "Dubon2026.SourceFricke.mul_mem_frickeSpan",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_mul",
+    "Dubon2026.SourceFricke.smul_eq_self_cyclotomicLevelRing",
+    "Dubon2026.SourceFricke.smul_eq_self_holomorphicCyclotomicFrickeFractions",
+    "Dubon2026.SourceFricke.smul_eq_self_frickeSpan",
+    "Dubon2026.SourceFricke.principalInvariant_frickeSpan",
+    "Dubon2026.SourceFricke.pow_mem_frickeSpan",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_pow",
+    "Dubon2026.SourceFricke.frickeSpanPullback",
+    "Dubon2026.SourceFricke.frickeSpanMul",
+    "Dubon2026.SourceFricke.frickeSpanPow"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFricke.smul_mem_cyclotomicLevelRing",
+    "Dubon2026.SourceFricke.smul_mem_holomorphicCyclotomicFrickeFractions",
+    "Dubon2026.SourceFricke.smul_mem_frickeSpan",
+    "Dubon2026.SourceFricke.exists_frickeSpan_sum_original",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_pullback",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_isZeroAtImInfty_sl_mul_discriminant_iff",
+    "Dubon2026.SourceFricke.mul_mem_frickeSpan",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_mul",
+    "Dubon2026.SourceFricke.smul_eq_self_cyclotomicLevelRing",
+    "Dubon2026.SourceFricke.smul_eq_self_holomorphicCyclotomicFrickeFractions",
+    "Dubon2026.SourceFricke.smul_eq_self_frickeSpan",
+    "Dubon2026.SourceFricke.principalInvariant_frickeSpan",
+    "Dubon2026.SourceFricke.pow_mem_frickeSpan",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_pow"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFricke.frickeSpanPullback",
+    "Dubon2026.SourceFricke.frickeSpanMul",
+    "Dubon2026.SourceFricke.frickeSpanPow"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTwistModularAlgebraAudit5.log",
+  "logSha256": "45ADA1200A3D43AB8376F112C1A2A50E1AEBAE4F98899731E8E9B041F71A03D8",
+  "auditSha256": "F6667C18F74C1910ABD05FDBF0C2679EFD6F9A4AF8CA7D838EE42A1A08BBA9EA",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 21,
+  "linterScopes": 5,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 23,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTwistModularAlgebraDependencyAudit5.log",
+  "dependencyAuditSha256": "FD06451633209BD0A2FF97E064CE4F43F841E6DE6F0676AF9A79CE89765891F0",
+  "dependencyAuditSourceSha256": "46B11B945BB38E3D4666D428FFC69DD5CEE3BD188C005A809042339A470EE965",
+  "consumers": [
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_isZeroAtImInfty_sl_mul_discriminant_iff",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_pow",
+    "Dubon2026.SourceFricke.principalInvariant_frickeSpan"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> original Picard/H1, full/parabolic, transpose and diamond comparison -> actual differential/cusp comparison -> rational cusp-form spanning -> coefficient descent of the actual Fricke function span.",
+  "discharged": "Prove that actual modular pullbacks preserve the original cyclotomic Fricke algebra, its holomorphic fractions and their complex span; prove coefficient twists commute with those pullbacks and preserve every translated cusp-vanishing condition. Prove multiplication and power compatibility from finite original scalar expansions. Derive principal-level invariance from original generator invariance and analytic cancellation of nonzero denominators, rather than assuming it.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Transport holomorphic divisibility at elliptic points, then descend the actual cusp-form image. Arbitrary Gamma1 differential realization and the original finite-character arithmetic association, automorphy and higher continuation chain remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-fricke-twist-modular-algebra-5-reuse-review-20261026.json",
+  "reuseReviewSha256": "30419FBEAB2AE105E14E3701BB0B53D711AD1CE76CE3B8D38FA45E8E0C341912",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

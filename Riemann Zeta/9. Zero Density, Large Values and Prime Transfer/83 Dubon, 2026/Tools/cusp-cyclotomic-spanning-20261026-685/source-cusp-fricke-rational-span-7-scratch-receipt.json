@@ -1,0 +1,119 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T21:00:47.429112+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourcePureTranscendentalConstantIntersection",
+    "SourceAlgebraicallyClosedFixedField",
+    "SourceTwistDescentFiniteSupport",
+    "SourceTwistStableSubspaceDescent",
+    "SourceOriginalFrickeSpanDescent",
+    "SourceCuspWeightImageDescent",
+    "SourceCuspFrickeRationalSpan"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePureTranscendentalConstantIntersection.lean",
+      "sha256": "1AF23FC050677CA31B45EE346996497B4F65680B2CB19C9D6D25A80ADC42EAC8",
+      "oleanSha256": "D1A72ED3C9EC37C56FAF60F875A87AC7AF1D3BA22C5974048DD7DBBCABC05638"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicallyClosedFixedField.lean",
+      "sha256": "6603606DC68A89EE382AF68F07485C86B8F34257BCAD6120D94A4580504C56C4",
+      "oleanSha256": "8216BF40C7584BE9B770DD1B330170AC8AB46DCBCDA251C9E06AD477BFC6E914"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTwistDescentFiniteSupport.lean",
+      "sha256": "887EE5E7EA3F6B8CA8E4BC973AE7E0216C9206E1CDC76C8071169C7D3868EAED",
+      "oleanSha256": "322659A80696C7B8667742E63F86EAA6A69E7E70D2C7BD323D13885F416288DB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTwistStableSubspaceDescent.lean",
+      "sha256": "FA4A53E442D32277755471BE12E9F75CDCB3DF38D862AB77FDF1B1DEF79C5C2A",
+      "oleanSha256": "76B5DA2ABDF2B4FFD0F0657A3D881C5C38C97C9C18453905F2FB680D1236F558"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFrickeSpanDescent.lean",
+      "sha256": "49DB1E2A01837699A2A7A8C4C7602FBBB0305BADEA69D8143178B4C593432A6C",
+      "oleanSha256": "35D08B31F6CBE321615D1D5DD0FDD0F42A1957A2653F952AC812F8B86BF2C37C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightImageDescent.lean",
+      "sha256": "4E1428B421A719F4374D9100673F28C63DE9C0826887E977B4CB6011FB63EF30",
+      "oleanSha256": "E4252A945B58621C9C5A97BFB12C53690A131D1B0C8CE15A005513A9086EE3E3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCuspFrickeRationalSpan.lean",
+      "sha256": "9E741DD160C9413902CC185185DC46C072627609F57D349B6A9C98717B1F5BFD",
+      "oleanSha256": "874877A4D6DFDD85EE7B32B3A6178BAC05A2D6D379D4D65F74D2049586E80057"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.ConstantFixedField.mem_bot_of_isAlgebraic_of_mem_adjoin_algebraicIndependent",
+    "Dubon2026.SourceFunctionField.ConstantFixedField.exists_algEquiv_apply_ne_of_exists_notMem",
+    "Dubon2026.SourceFunctionField.ConstantFixedField.exists_intermediateField_isAlgebraic_notMem_of_isAlgebraic",
+    "Dubon2026.SourceFunctionField.ConstantFixedField.notMem_adjoin_sq_of_transcendental",
+    "Dubon2026.SourceFunctionField.ConstantFixedField.exists_algEquiv_apply_ne_of_transcendental",
+    "Dubon2026.SourceFunctionField.ConstantFixedField.exists_algEquiv_apply_ne",
+    "Dubon2026.SourceFunctionField.ConstantFixedField.mem_range_of_fixed",
+    "Dubon2026.SourceFunctionField.TwistDescent.descent_core",
+    "Dubon2026.SourceFunctionField.TwistDescent.descent_generic",
+    "Dubon2026.SourceFricke.mem_originalFrickeSpan_iff",
+    "Dubon2026.SourceFricke.span_originalFrickeSpan_eq_top",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_fixes_original_submodule",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_sum_original_submodule",
+    "Dubon2026.SourceFricke.mem_span_originalFrickeSpan_of_twist_stable",
+    "Dubon2026.SourceFricke.cuspWeightImageIntoSpan_injective",
+    "Dubon2026.SourceFricke.cuspWeightImageIntoSpan_twist_mem_range",
+    "Dubon2026.SourceFricke.cuspWeightImageIntoSpan_descent",
+    "Dubon2026.SourceFricke.span_cuspWeightImage_cyclotomic_fractions_eq_top",
+    "Dubon2026.SourceFricke.originalFrickeSpan",
+    "Dubon2026.SourceFricke.cuspWeightImageIntoSpan"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.ConstantFixedField.mem_bot_of_isAlgebraic_of_mem_adjoin_algebraicIndependent",
+    "Dubon2026.SourceFunctionField.ConstantFixedField.exists_algEquiv_apply_ne_of_exists_notMem",
+    "Dubon2026.SourceFunctionField.ConstantFixedField.exists_intermediateField_isAlgebraic_notMem_of_isAlgebraic",
+    "Dubon2026.SourceFunctionField.ConstantFixedField.notMem_adjoin_sq_of_transcendental",
+    "Dubon2026.SourceFunctionField.ConstantFixedField.exists_algEquiv_apply_ne_of_transcendental",
+    "Dubon2026.SourceFunctionField.ConstantFixedField.exists_algEquiv_apply_ne",
+    "Dubon2026.SourceFunctionField.ConstantFixedField.mem_range_of_fixed",
+    "Dubon2026.SourceFunctionField.TwistDescent.descent_core",
+    "Dubon2026.SourceFunctionField.TwistDescent.descent_generic",
+    "Dubon2026.SourceFricke.mem_originalFrickeSpan_iff",
+    "Dubon2026.SourceFricke.span_originalFrickeSpan_eq_top",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_fixes_original_submodule",
+    "Dubon2026.SourceFricke.frickeCoefficientTwist_sum_original_submodule",
+    "Dubon2026.SourceFricke.mem_span_originalFrickeSpan_of_twist_stable",
+    "Dubon2026.SourceFricke.cuspWeightImageIntoSpan_injective",
+    "Dubon2026.SourceFricke.cuspWeightImageIntoSpan_twist_mem_range",
+    "Dubon2026.SourceFricke.cuspWeightImageIntoSpan_descent",
+    "Dubon2026.SourceFricke.span_cuspWeightImage_cyclotomic_fractions_eq_top"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFricke.originalFrickeSpan",
+    "Dubon2026.SourceFricke.cuspWeightImageIntoSpan"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceCuspFrickeRationalSpanAudit7.log",
+  "logSha256": "F855388C03C61170428A9070BD99A72CA767B1CF947708542EA620017222392D",
+  "auditSha256": "A4D03BF901818FE132D18021CAD9F93AC35F6C335693432F97654D64AE6AAB96",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 25,
+  "linterScopes": 7,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 26,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceCuspFrickeRationalSpanDependencyAudit7.log",
+  "dependencyAuditSha256": "A9F1D00F29BEEACDA3041B0462C7E8C2E0FCFE2CB409306419F7794D1043A736",
+  "dependencyAuditSourceSha256": "AB79F194602F36CFEE124602E3E7439E40BD67EFFB5DE902361F39E9558791C0",
+  "consumers": [
+    "Dubon2026.SourceFricke.span_cuspWeightImage_cyclotomic_fractions_eq_top"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual Gamma1 character realization -> original Picard/H1, full/parabolic, transpose and diamond comparison -> actual differential/cusp comparison -> rational cusp-form spanning.",
+  "discharged": "Prove the original characteristic-zero field is the full fixed field of the algebraically closed ambient-field automorphisms, treating both algebraic and transcendental coefficients. Prove finite-support descent of a twist-stable subspace, then derive every premise for the actual cusp-image range using the already proved original Fricke span, coefficient twist and same-weight cusp-image realization. Pull the resulting span back through the actual injective weight-lowering map: the actual cusp-form space is spanned by forms whose weight-lowered images are holomorphic fractions over the original cyclotomic Fricke ring.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Extract cyclotomic Fourier coefficients of the original cusp forms from these actual Fricke representations, then continue arbitrary Gamma1 differential realization and the original finite-character arithmetic association, automorphy and higher continuation chain. The source balance k+4a+6b=12m remains explicit; the required geometric weight-two application has a=b=m=1. This does not assert an unrestricted odd-weight weight-lowering representation or close the all-weight arithmetic goal. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-cusp-fricke-rational-span-7-reuse-review-20261026.json",
+  "reuseReviewSha256": "D3BD9A358ACF2126C55AEF35CD033435326CCE2351D0B76D7DFD95FA7C293FE8",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

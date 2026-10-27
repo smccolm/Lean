@@ -1,0 +1,19 @@
+{
+    "chain":  "DUB-17/18 -\u003e original all-weight arithmetic association -\u003e actual finite Gamma1 character realization -\u003e Picard/H1 and diamond comparison -\u003e cusp differential realization -\u003e rational Fourier structure -\u003e stable-family Fricke fraction realization.",
+    "selectedRoute":  "Reuse the actual level algebra, faithful quotient, fixed-denominator product and invariant polynomial-in-j theorem. Apply the same finite quotient to the enlarged actual function algebra; equality of degrees over C(j) proves that the inclusion of fraction fields is surjective. Skip the unrelated integral-closure and j-transcendence developments. Search of production for the exact stable-family theorem found no existing implementation.",
+    "assumptionsToDischarge":  "An actual member F of a modularly stable, principal-level-invariant family of holomorphic functions with finite cusp poles equals a quotient of actual Fricke algebra functions: F*b=a with b nonzero. The rational representation is proved, not supplied.",
+    "remaining":  "Cyclotomic rational spanning and descent, actual cusp differential realization and arithmetic comparison; 16/20; DUB-17--20 OPEN.",
+    "reuseChecked":  [
+                         {
+                             "path":  "E:\\Lean\\.tmp\\dubon83\\fricke-level-structure-reuse-656\\P2M\\Sol\\S_WLight_exists_levelFraction_of_stable_family.lean.txt",
+                             "sha256":  "2E5CA4FE2711CB5A6E5E320CCE172BA1A516F54A25C8D68F8A0B08F0565B9AF7"
+                         },
+                         {
+                             "path":  "E:\\Lean\\.tmp\\dubon83\\fricke-level-field-route-658.json",
+                             "sha256":  "C744369ED4083C369D3D5493B9F40A8702D1BB2AAC4C4985A5584E0B83011B9B"
+                         }
+                     ],
+    "rootPinsChanged":  false,
+    "proofLimitsChanged":  false,
+    "sourceSuccessor":  "V2 adds the generator-set projection documentation and removes irrelevant nonzero constraints from the generator structure and section lemmas. The exact stable-family fraction conclusion is preserved. V1 source/object correspondence is not used after edits during the earlier compile chain; only the fresh sequential V2 builds, new audits and later exact production ownership checks will support promotion. Predecessor sources, audit diagnostics and warning logs are retained."
+}

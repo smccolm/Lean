@@ -1,0 +1,33 @@
+{
+  "scope": 664,
+  "scopeIds": [
+    "652",
+    "654",
+    "655",
+    "657",
+    "658d",
+    "659c",
+    "660b",
+    "663"
+  ],
+  "receipts": {
+    "source-fricke-cyclotomic-transport-3-scratch-receipt.json": "E44D705E88DA0B3DF3AFB519601CB8AF560A459EB90284E5A3FBA5EA51C56CC1",
+    "source-fricke-product-transport-4-scratch-receipt.json": "4AE13D58D0745E22B3D00FCB8FABFD41E76C0B72FF85C650159C2929D4F6EA94",
+    "source-fricke-separation-5-scratch-receipt.json": "176B0C3D74073586D550A442319F7527B30E77DFD3D50D302E1C918B9D01597D",
+    "source-level-one-analytic-polynomial-3-scratch-receipt.json": "49256FC40BD57DE11D337B120A8EB6DD987B4661D3509436CE3ACA27EFC52A1D",
+    "source-fricke-level-field-7d-scratch-receipt.json": "DADA7AC2A4D909BEC106D53437F5F90A2054993FF1A234793972906F3649BDD2",
+    "source-fricke-stable-family-5c-scratch-receipt.json": "B1DF4E3D301A85E7BA75EA3204A4239A254484895B7191DF1CF9E7530268A842",
+    "source-fricke-orbit-monic-2b-scratch-receipt.json": "46DF161D5C44AB8D5D94B89CDE615B6F63617F266587BF94D072B54CB80795A2",
+    "source-fricke-j-transcendence-1-scratch-receipt.json": "7D49A44AF9BFE468AEAECEB5D8A9EC7F51E8BD4AFB1415B59FF847C3D1C48821"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 Hecke characters -> actual Picard/H1, full/parabolic and diamond comparison retaining the original homogeneous coefficient endomorphism -> actual regular differential/cusp comparison -> cyclotomic rational Fourier spanning -> Fricke fractions and integral relations.",
+  "discharged": "Actual torsion Fourier coefficients and the actual Fricke numerator transport under cyclotomic embeddings. The proved period map separates actual torsion Weierstrass values up to sign, giving the exact Fricke action kernel. The existing level-one Laurent polynomial identity transfers to actual analytic forms: weight 12m forms are Delta^m times a polynomial in actual j of degree at most m. The fixed subfield of the actual Fricke fraction field is exactly C(j), with degree the exact stabilizer index. A holomorphic principal-level invariant function with finite cusp poles at every modular translate is an actual Fricke fraction and satisfies an actual monic equation over C[j]; its modular orbit, the surjectivity of the fraction-field inclusion and the monic relation are derived. Existing actual j surjectivity proves its transcendence in the actual Fricke field. No fraction representation, fixed-field equality, monic relation, separation or transcendence premise is supplied.",
+  "remaining": "Cyclotomic integral base change, rational Fourier spanning and the actual algebraic realization of arbitrary Gamma1 cusp forms remain; the converse regular-differential-to-cusp construction also remains. The actual Picard/H1, full/parabolic, transpose and diamond comparison must identify the original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of these characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain required. Neither complex semisimplicity, finite characters, Witt coefficients nor a universal deformation ring supplies a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN.",
+  "route": "The renewed search is recorded in Dubon Reuse Search 2026-10-26.md. Fixed-revision primary snapshots and selected-file assessments are archived here. Reuse the actual elliptic period map for separation, the existing sparse Fourier reindexing and native Eisenstein coefficients for rational prefactors, the proved level-one Laurent polynomial identity for invariant analytic functions, native finite-action characteristic polynomials for the monic relation, and actual j surjectivity for transcendence. Native fixed-field degree and a finite orbit denominator prove stable-family fraction realization. Existing Laurent coefficient retraction and scalar independence are candidates for the next descent step; their Fourier-realization bridges remain unproved. The new external integral-span and constant-extension sources are research only, with no full external import-closure verification claim. Earlier source/object evidence affected by variable cleanup is not used for promotion; the final V3/V2 sources have fresh sequential builds and audits. Failed API, typeclass, linter and named-dependency evidence is retained. Native scalar aliases absent from terminal values retain explicit axiom checks without a named-use claim. No audited source or used audit is rewritten. No external project was built or imported; pins, proof limits and all twenty acceptance gates are unchanged.",
+  "precedingCanonicalScope": 8360,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 acceptance gates unchanged.",
+  "reason": "Require preceding canonical PASS and immutable archive before production mutation."
+}

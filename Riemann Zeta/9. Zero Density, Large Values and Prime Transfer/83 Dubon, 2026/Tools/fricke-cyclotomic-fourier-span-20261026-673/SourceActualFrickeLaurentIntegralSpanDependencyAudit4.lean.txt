@@ -1,0 +1,31 @@
+import SourceLaurentIntegralCoefficientImage
+import SourceFrickeLaurentGeneratorIntegrality
+import SourceFrickeComplexFractionLaurent
+import SourceFrickeLaurentIntegralSpan
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFricke.exists_fricke_laurent_integral_span_of_principal_invariant]
+  let localModules : Array Name := #[`SourceAlgebraicConstantIntegralSpan, `SourceAlgebraicConstantInterpolation, `SourceAlgebraicConstantLift, `SourceAlgebraicConstantRoots, `SourceConstantExtensionChain, `SourceConstantExtensionIntegralAlgebra, `SourceConstantExtensionMonotonicity, `SourceCuspLaurentFractionIdentity, `SourceCuspLaurentFunctionIdentity, `SourceCuspLaurentPolynomial, `SourceEisensteinRationalSeries, `SourceFiniteConstantIntegralCapture, `SourceFrickeComplexFractionLaurent, `SourceFrickeCuspInputs, `SourceFrickeCyclotomicCoefficients, `SourceFrickeCyclotomicField, `SourceFrickeCyclotomicFractionGerm, `SourceFrickeCyclotomicLaurent, `SourceFrickeCyclotomicTransport, `SourceFrickeFaithfulness, `SourceFrickeFixedFieldJV3, `SourceFrickeFixedFractionV3, `SourceFrickeFunctionTransformationV2, `SourceFrickeHolomorphicAlgebraV3, `SourceFrickeHolomorphy, `SourceFrickeLaurentGeneratorIntegrality, `SourceFrickeLaurentIntegralSpan, `SourceFrickeLevelAlgebraV3, `SourceFrickeLevelFieldV3, `SourceFrickeLevelGroupV3, `SourceFrickeModularLatticeV2, `SourceFrickeModularOrbitV2, `SourceFrickePeriodHomothetyV2, `SourceFrickePoleBoundedV3, `SourceFrickePrefactor, `SourceFrickeProductCyclotomic, `SourceFrickeProductExpansion, `SourceFrickeSeparation, `SourceFrickeStableAlgebraV2, `SourceFrickeStableEmbeddingV2, `SourceFrickeStableFieldV2, `SourceFrickeStableFractionV2, `SourceFrickeStableGroupV2, `SourceFrickeStableMonicV2, `SourceFrickeTorsionConjugation, `SourceFrickeTorsionLattice, `SourceFrickeTorsionTransformationV2, `SourceInvariantAnalyticJPolynomial, `SourceLaurentAnalyticPolynomial, `SourceLaurentConstantTranscendence, `SourceLaurentGeneratedConstants, `SourceLaurentIntegralCoefficientImage, `SourceLaurentIntegralConstantSpan, `SourceLevelOneAnalyticJPolynomial, `SourceLipschitzTwo, `SourceLipschitzTwoRealBoundary, `SourcePeriodWeierstrassSeparation, `SourcePoleBoundedCuspLaurent, `SourceQExpansionLaurentWidth, `SourceQExpansionPeriodWidth, `SourceTranscendentalConstantAlgebraV2, `SourceTranscendentalConstantDenominatorsV2, `SourceTranscendentalConstantEvaluationV2, `SourceTranscendentalConstantFieldRangeV2, `SourceTranscendentalConstantIntegralSpanV2, `SourceTranscendentalConstantNormalityV2, `SourceTranscendentalConstantScaledRelationV2, `SourceWeierstrassLatticeRows, `SourceWeierstrassNormalizedTorsion, `SourceWeierstrassRowSeries, `SourceWeierstrassTorsionCuspBound, `SourceWeierstrassTorsionExpansion, `SourceWeierstrassTorsionFourierCoefficients, `SourceWeierstrassTorsionFourierExpansion, `SourceWeierstrassTorsionFourierSum, `SourceWeierstrassTorsionHolomorphy, `SourceWeierstrassTorsionTail]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.isIntegral_adjoin_coeffMap_of_isIntegral, `Dubon2026.SourceFricke.frickeLaurent_complex_integral, `Dubon2026.SourceFricke.frickeLaurentK_integral, `Dubon2026.SourceFricke.frickeLaurent_integral_original_constants, `Dubon2026.SourceFricke.frickeLaurentGenerators_finite, `Dubon2026.SourceFricke.frickeLaurentGenerators_coeffRange, `Dubon2026.SourceFricke.frickeLaurentGenerators_integral, `Dubon2026.SourceFricke.transcendental_frickeLaurent_j, `Dubon2026.SourceFricke.levelRing_periodic, `Dubon2026.SourceFricke.exists_complex_fricke_cusp_represents, `Dubon2026.SourceFricke.exists_complex_fricke_fraction_represents, `Dubon2026.SourceFricke.frickeLaurent_integral_mem_span, `Dubon2026.SourceFricke.exists_fricke_laurent_integral_span_of_principal_invariant, `Dubon2026.SourceFricke.frickeLaurentGenerators, `Dubon2026.SourceFricke.exists_fraction_and_monic_j_of_principal_invariant, `Dubon2026.SourceFricke.LevelGens.ring_monic_j_relation, `Dubon2026.SourceFunctionField.represents_jqNModC, `Dubon2026.SourceFricke.represents_frickeLaurentK, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.isIntegral_of_monic_relation, `Dubon2026.SourceFunctionField.isIntegral_adjoin_of_isIntegral_coeffMap, `Dubon2026.SourceFricke.ConstantDescent.mem_span_integral_generated_of_complex, `Dubon2026.SourceFunctionField.IntegralJCoordinate.transcendental_qExpand_jqModC, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.ne_zero_of_function_ne_zero, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.cusp_of_mul_eq, `IsIntegral.map_of_comp_eq]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ACTUAL FRICKE LAURENT INTEGRAL SPAN DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the original modular-function consumer. Only declaration values are traversed. Actual modular invariance and finite cusp poles supply the Fricke fraction and monic relation. Literal Laurent realization, derived generator integrality, existing expanded-j transcendence and the assembled constant descent give the ordinary complex integral span. Holomorphic summand recovery, rational Fourier spanning and arithmetic comparison remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

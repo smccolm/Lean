@@ -1,0 +1,139 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T18:06:18.390586+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceTranscendentalConstantAlgebraV2",
+    "SourceTranscendentalConstantEvaluationV2",
+    "SourceTranscendentalConstantDenominatorsV2",
+    "SourceTranscendentalConstantFieldRangeV2",
+    "SourceTranscendentalConstantScaledRelationV2",
+    "SourceTranscendentalConstantNormalityV2",
+    "SourceTranscendentalConstantIntegralSpanV2"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantAlgebraV2.lean",
+      "sha256": "F6DDC95FB62FFC526DE6A59F19C2268437298FC5CC374F3375671D684FF13575",
+      "oleanSha256": "4162D3C5109592E16AD2EDC8A1C367E04B7A41B76B2C1F3A0B276C06BDF5A69B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantEvaluationV2.lean",
+      "sha256": "4AA41A40AF47D513140991D48F1FC4EEDB4AC861DD35E9448EC5E49C8F34A63A",
+      "oleanSha256": "B4D2C165D68C0862366440332F76C5380EA0696B42FB64DF73DD5E9593DE7206"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantDenominatorsV2.lean",
+      "sha256": "9267A1426C732EE34B0D23D3A900FD0748122CDCCA4AFE5F2B829971D8620364",
+      "oleanSha256": "63AF2250059EC5EE9E09F6C0CCDB4ECF9EC5A248179DFB7F35E7DE03414B9086"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantFieldRangeV2.lean",
+      "sha256": "8B430315F1AE02FDD1F421F4D5E29FC89F983EA29B13B8312A6F58C96855A8FE",
+      "oleanSha256": "1D1C0F7C692D827C9C2617062615E646BB71C56BBC117DF9FA8ECD22C40A5E49"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantScaledRelationV2.lean",
+      "sha256": "53A5BE660D7F244409A878571F2AC7A29B3CC95B2DBECE35D24548EA39258860",
+      "oleanSha256": "B54DC6C078A25CFF3BE22F2C95FA46C85840B0A9B23DB4CD96A6584C23259C3F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantNormalityV2.lean",
+      "sha256": "EF8DF308F76BC8403A23D24CAEE7525EF06B952D7674BF5B644E30C8E3E14747",
+      "oleanSha256": "72716CFDEFCEA3A10A8009F538674310DC83B406DC1ECDF98386FBDA8857DB24"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpanV2.lean",
+      "sha256": "513A7752D13189C0367B302BC880324F39BFE3AFCF15F8BCF3C5805B4B4A8073",
+      "oleanSha256": "FCE192477940E990F7BD74C7CB04B160793E9D8916DE45D64EC2FA2683E0DE77"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFricke.ConstantDescent.scalarTowerBaseRationalGenerated",
+    "Dubon2026.SourceFricke.ConstantDescent.scalarTowerBaseGeneratedAmbient",
+    "Dubon2026.SourceFricke.ConstantDescent.KFldT_restrictScalars",
+    "Dubon2026.SourceFricke.ConstantDescent.mem_KFldT_iff",
+    "Dubon2026.SourceFricke.ConstantDescent.isDomainCoordinateRing",
+    "Dubon2026.SourceFricke.ConstantDescent.isPrincipalIdealRing_TRng",
+    "Dubon2026.SourceFricke.ConstantDescent.finiteDimensional_KFldT",
+    "Dubon2026.SourceFricke.ConstantDescent.isDedekindDomain_RFa",
+    "Dubon2026.SourceFricke.ConstantDescent.isFractionRing_RFa",
+    "Dubon2026.SourceFricke.ConstantDescent.isIntegrallyClosed_RFa_polynomial",
+    "Dubon2026.SourceFricke.ConstantDescent.t_mem_RSet",
+    "Dubon2026.SourceFricke.ConstantDescent.algebraMap_mem_RSet",
+    "Dubon2026.SourceFricke.ConstantDescent.rfPolyEval_injective",
+    "Dubon2026.SourceFricke.ConstantDescent.isIntegral_KFldT_of",
+    "Dubon2026.SourceFricke.ConstantDescent.mem_range_rfPolyEval_of_mem_RSet",
+    "Dubon2026.SourceFricke.ConstantDescent.evalF_mem_range_rfPolyEval",
+    "Dubon2026.SourceFricke.ConstantDescent.range_rfPolyEval_subset_span",
+    "Dubon2026.SourceFricke.ConstantDescent.exists_clear_denominator",
+    "Dubon2026.SourceFricke.ConstantDescent.adjoin_le_fractionPolyRange",
+    "Dubon2026.SourceFricke.ConstantDescent.mem_fractionEval_fieldRange",
+    "Dubon2026.SourceFricke.ConstantDescent.exists_scaled_monic_relation",
+    "Dubon2026.SourceFricke.ConstantDescent.mem_range_of_fraction_monic_relation",
+    "Dubon2026.SourceFricke.ConstantDescent.mem_span_RSet_of_adjoin_simple_transcendental",
+    "Dubon2026.SourceFricke.ConstantDescent.RFld",
+    "Dubon2026.SourceFricke.ConstantDescent.KFldT",
+    "Dubon2026.SourceFricke.ConstantDescent.algebraTRngKFldT",
+    "Dubon2026.SourceFricke.ConstantDescent.RFa",
+    "Dubon2026.SourceFricke.ConstantDescent.commRingRFa",
+    "Dubon2026.SourceFricke.ConstantDescent.TRngEquiv",
+    "Dubon2026.SourceFricke.ConstantDescent.rfPolyEval"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFricke.ConstantDescent.scalarTowerBaseRationalGenerated",
+    "Dubon2026.SourceFricke.ConstantDescent.scalarTowerBaseGeneratedAmbient",
+    "Dubon2026.SourceFricke.ConstantDescent.KFldT_restrictScalars",
+    "Dubon2026.SourceFricke.ConstantDescent.mem_KFldT_iff",
+    "Dubon2026.SourceFricke.ConstantDescent.isDomainCoordinateRing",
+    "Dubon2026.SourceFricke.ConstantDescent.isPrincipalIdealRing_TRng",
+    "Dubon2026.SourceFricke.ConstantDescent.finiteDimensional_KFldT",
+    "Dubon2026.SourceFricke.ConstantDescent.isDedekindDomain_RFa",
+    "Dubon2026.SourceFricke.ConstantDescent.isFractionRing_RFa",
+    "Dubon2026.SourceFricke.ConstantDescent.isIntegrallyClosed_RFa_polynomial",
+    "Dubon2026.SourceFricke.ConstantDescent.t_mem_RSet",
+    "Dubon2026.SourceFricke.ConstantDescent.algebraMap_mem_RSet",
+    "Dubon2026.SourceFricke.ConstantDescent.rfPolyEval_injective",
+    "Dubon2026.SourceFricke.ConstantDescent.isIntegral_KFldT_of",
+    "Dubon2026.SourceFricke.ConstantDescent.mem_range_rfPolyEval_of_mem_RSet",
+    "Dubon2026.SourceFricke.ConstantDescent.evalF_mem_range_rfPolyEval",
+    "Dubon2026.SourceFricke.ConstantDescent.range_rfPolyEval_subset_span",
+    "Dubon2026.SourceFricke.ConstantDescent.exists_clear_denominator",
+    "Dubon2026.SourceFricke.ConstantDescent.adjoin_le_fractionPolyRange",
+    "Dubon2026.SourceFricke.ConstantDescent.mem_fractionEval_fieldRange",
+    "Dubon2026.SourceFricke.ConstantDescent.exists_scaled_monic_relation",
+    "Dubon2026.SourceFricke.ConstantDescent.mem_range_of_fraction_monic_relation",
+    "Dubon2026.SourceFricke.ConstantDescent.mem_span_RSet_of_adjoin_simple_transcendental"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFricke.ConstantDescent.RFld",
+    "Dubon2026.SourceFricke.ConstantDescent.KFldT",
+    "Dubon2026.SourceFricke.ConstantDescent.algebraTRngKFldT",
+    "Dubon2026.SourceFricke.ConstantDescent.RFa",
+    "Dubon2026.SourceFricke.ConstantDescent.commRingRFa",
+    "Dubon2026.SourceFricke.ConstantDescent.TRngEquiv",
+    "Dubon2026.SourceFricke.ConstantDescent.rfPolyEval"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpanAudit7e.log",
+  "logSha256": "31ECFAB47174F7AB8D41760BB6F9939603A3ACE9179F077405B83BB5F8016F26",
+  "auditSha256": "76E892334F825E90F63527B2F2B726F2046697D755A22C72EEBD8E778B0DA7C1",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 38,
+  "linterScopes": 7,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 41,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceTranscendentalConstantIntegralSpanDependencyAudit7e.log",
+  "dependencyAuditSha256": "45B01359A4A5AF035D39D692BE50A5CB1DF305E2BAD82D3B7BF26A0896586DF8",
+  "dependencyAuditSourceSha256": "2D674A6C03314304C2AE92F4B9A64DB7CA2EC6A0F95523B59E55E7092682C151",
+  "consumers": [
+    "Dubon2026.SourceFricke.ConstantDescent.mem_span_RSet_of_adjoin_simple_transcendental"
+  ],
+  "dependency": "DUB-17/18 -> original all-weight arithmetic association -> actual Gamma1 characters -> Picard/H1 and differential/cusp comparison -> rational Fourier spanning -> integral base change of actual Fricke fractions -> finite constant-list induction -> transcendental constant-adjoining descent.",
+  "discharged": "At a transcendental constant-adjoining step, every integral element of the enlarged generated field lies in the complex span of elements integral over the original coordinate algebra. Derive the finite generator extension, Dedekind integral closure and polynomial integrally-closed instance from actual finite integral generators and j transcendence; clear scalar denominators and recover polynomial coefficients.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. This is a necessary foundation, not a gate closure. Finite constant-list induction, actual Fricke-field instantiation, relative transcendence from Fourier coefficient independence, holomorphic representative recovery, rational Fourier spanning, arbitrary Gamma1 differential realization and the remaining arithmetic association/automorphy/higher continuation chain remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-transcendental-constant-integral-span-7e-reuse-review-20261026.json",
+  "reuseReviewSha256": "980C993D919990D1A4984D7509768BF5089F28E698BC53D687068D5CD9F59FD7",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

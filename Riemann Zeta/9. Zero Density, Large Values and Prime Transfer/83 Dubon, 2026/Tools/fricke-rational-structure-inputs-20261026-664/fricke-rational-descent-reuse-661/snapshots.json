@@ -1,0 +1,35 @@
+{
+  "fetchedUTC": "2026-10-26T15:54:46.375748+00:00",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_WLight_frickeFunction_intBaseChange.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_WLight_frickeFunction_intBaseChange.lean",
+      "snapshot": "P2M\\Sol\\S_WLight_frickeFunction_intBaseChange.lean.txt",
+      "gitBlob": "5591ef8d02322c68825a101557b3a0ba21f694fb",
+      "sha256": "D36D134E23EA58F5405454E3CC718B9CE70CE48457F831D8F20A100CC60C7B21",
+      "bytes": 73500
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_WLight_exists_qExpansion_coeff_mem_of_mdifferentiable_levelFraction.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_WLight_exists_qExpansion_coeff_mem_of_mdifferentiable_levelFraction.lean",
+      "snapshot": "P2M\\Sol\\S_WLight_exists_qExpansion_coeff_mem_of_mdifferentiable_levelFraction.lean.txt",
+      "gitBlob": "1d52e387fbd62e2bad2b32317a25b602ca826679",
+      "sha256": "267970160C18780A2F148212BEF2529E31AFD007A8D4CE59CD1227F7871C4208",
+      "bytes": 52728
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_WLight_exists_monicRel_j_K_of_mdifferentiable_frickeQuotient.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_WLight_exists_monicRel_j_K_of_mdifferentiable_frickeQuotient.lean",
+      "snapshot": "P2M\\Sol\\S_WLight_exists_monicRel_j_K_of_mdifferentiable_frickeQuotient.lean.txt",
+      "gitBlob": "831559f03adf615a8a852810eed60a40d12dba77",
+      "sha256": "8E7B9BBA549A8265AA3BC80080C19D9C388F37E5D89898C666C9A23F12E09FB8",
+      "bytes": 66920
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-26T15:25:20.235898+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceLaurentAnalyticPolynomial",
+    "SourceLevelOneAnalyticJPolynomial",
+    "SourceInvariantAnalyticJPolynomial"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentAnalyticPolynomial.lean",
+      "sha256": "7BCCCC361D910DCB34BF90C0812F533C6A409BDFD0193F231E0D730346FCE963",
+      "oleanSha256": "88DE9A0B57A168AD9D6B87A368342D8410B165B2FBB89D35B9883DA72ABE2FF6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceLevelOneAnalyticJPolynomial.lean",
+      "sha256": "E43B71A6BAC277EC69E5175D4F1B0A50BE5D1624EE8041B85E78326D01F485F7",
+      "oleanSha256": "B1C105905C04CF75C40F083B9A4A6BBDF27FBA8BE377BCF0562E3431DFF298CC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceInvariantAnalyticJPolynomial.lean",
+      "sha256": "6A14F8D9E6A385B0704B4B3CDC9F88C1D3AAAB37303D9FD4EF9E285C015738F7",
+      "oleanSha256": "13468CBBB0EB93501DE91EA0E237FA3ED900014172D198CC98D73B95829CFE8D"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.RealL.pow",
+    "Dubon2026.SourceFunctionField.RealL.aeval",
+    "Dubon2026.SourceFunctionField.realL_qExpansion",
+    "Dubon2026.SourceFunctionField.realL_jqModC",
+    "Dubon2026.SourceFunctionField.exists_levelOne_analytic_j_polynomial",
+    "Dubon2026.SourceFricke.poleClearedLevelOne_apply",
+    "Dubon2026.SourceFricke.exists_polynomial_j_of_poleBounded_invariant",
+    "Dubon2026.SourceFricke.poleClearedLevelOne"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.RealL.pow",
+    "Dubon2026.SourceFunctionField.RealL.aeval",
+    "Dubon2026.SourceFunctionField.realL_qExpansion",
+    "Dubon2026.SourceFunctionField.realL_jqModC",
+    "Dubon2026.SourceFunctionField.exists_levelOne_analytic_j_polynomial",
+    "Dubon2026.SourceFricke.poleClearedLevelOne_apply",
+    "Dubon2026.SourceFricke.exists_polynomial_j_of_poleBounded_invariant"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFricke.poleClearedLevelOne"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceLevelOneAnalyticPolynomialAudit3.log",
+  "logSha256": "D5A83E37D027783F12EAFDED21EE870B4E7D907C6BD97260219B92E6D6480FFE",
+  "auditSha256": "E7F0F6F851CE9555265AE56972BEA5AA8E7EAE04CE61AF5CCA09184058534E95",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 16,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 14,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceLevelOneAnalyticPolynomialDependencyAudit3.log",
+  "dependencyAuditSha256": "30014F1FC5B0C1C807C9854B55DE22373BAEC93C8A74D1004A38B1339801DD95",
+  "dependencyAuditSourceSha256": "D4185B6D1F618462AB4D5DBDFC4C2B485462128F9A7044CDAD69EDCDF1DAF800",
+  "consumers": [
+    "Dubon2026.SourceFricke.exists_polynomial_j_of_poleBounded_invariant"
+  ],
+  "dependency": "DUB-17/18 -> original all-weight association -> finite Gamma1 character realization -> Picard/H1 and diamond comparison -> differential realization -> rational Fourier structure -> Fricke level field -> invariant fractions -> exact polynomial-in-j theorem.",
+  "discharged": "An actual weight 12m level-one modular form is exactly Delta^m times a degree-at-most-m polynomial in the actual analytic j. A holomorphic weight-zero invariant whose pole is cleared by Delta^m is therefore an actual polynomial in j.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Finite level-field fixed fractions, rational spanning and differential realization, then the original arithmetic comparison; 16/20, DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-level-one-analytic-polynomial-3-reuse-review-20261026.json",
+  "reuseReviewSha256": "B7EB2050CBBBD8DA53CDB2F095B693FDF6EA006AC9370836639D26B2D8331C04",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

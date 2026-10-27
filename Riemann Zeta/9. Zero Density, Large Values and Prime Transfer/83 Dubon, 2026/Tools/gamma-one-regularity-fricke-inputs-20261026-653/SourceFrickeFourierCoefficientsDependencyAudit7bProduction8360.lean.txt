@@ -1,0 +1,34 @@
+import Dubon2026.SourceFrickeCyclotomicField
+import Dubon2026.SourceWeierstrassNormalizedTorsion
+import Dubon2026.SourceWeierstrassTorsionCuspBound
+import Dubon2026.SourceWeierstrassTorsionFourierCoefficients
+import Dubon2026.SourceWeierstrassTorsionFourierSum
+import Dubon2026.SourceWeierstrassTorsionFourierExpansion
+import Dubon2026.SourceFrickeCuspInputs
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff_mem_kN, `Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff, `Dubon2026.SourceFricke.isBoundedAtImInfty_frickeF_mul_discriminant, `Dubon2026.SourceFricke.periodic_wpNormZ, `Dubon2026.SourceFricke.hasSum_qExpansion_wpNorm]
+  let localModules : Array Name := #[`Dubon2026.SourceFrickeCyclotomicField, `Dubon2026.SourceWeierstrassNormalizedTorsion, `Dubon2026.SourceWeierstrassTorsionCuspBound, `Dubon2026.SourceWeierstrassTorsionFourierCoefficients, `Dubon2026.SourceWeierstrassTorsionFourierSum, `Dubon2026.SourceWeierstrassTorsionFourierExpansion, `Dubon2026.SourceFrickeCuspInputs, `Dubon2026.SourceLipschitzTwo, `Dubon2026.SourceLipschitzTwoRealBoundary, `Dubon2026.SourceWeierstrassRowSeries, `Dubon2026.SourceWeierstrassLatticeRows, `Dubon2026.SourceWeierstrassTorsionExpansion, `Dubon2026.SourceWeierstrassTorsionTail, `Dubon2026.SourceWeierstrassTorsionHolomorphy, `Dubon2026.SourceFrickeHolomorphy, `Dubon2026.SourceFrickePeriodHomothetyV2, `Dubon2026.SourceFrickeModularLatticeV2, `Dubon2026.SourceFrickeTorsionTransformationV2, `Dubon2026.SourceFrickeFunctionTransformationV2]
+  let required : Array Name := #[`Dubon2026.SourceFricke.zetaN_mem_kN, `Dubon2026.SourceFricke.zetaN_pow_mem_kN, `Dubon2026.SourceFricke.zetaN_inv_pow_mem_kN, `Dubon2026.SourceFricke.natCast_mem_kN, `Dubon2026.SourceFricke.one_div_twelve_mem_kN, `Dubon2026.SourceFricke.wpNorm_eq, `Dubon2026.SourceFricke.qN_add_natCast, `Dubon2026.SourceFricke.wpTail_add_natCast, `Dubon2026.SourceFricke.wpNormSeries_add_natCast, `Dubon2026.SourceFricke.periodic_wpNorm, `Dubon2026.SourceFricke.mdifferentiable_wpNorm, `Dubon2026.SourceFricke.norm_wpNormSeries_le, `Dubon2026.SourceFricke.isBoundedAtImInfty_wpNorm, `Dubon2026.SourceFricke.wpMonCoeff_mem_kN, `Dubon2026.SourceFricke.le_mul_sub_of_lt, `Dubon2026.SourceFricke.le_wpMonExp_tail, `Dubon2026.SourceFricke.finite_wpMonExp_fiber, `Dubon2026.SourceFricke.wpQCoeff_mem_kN, `Dubon2026.SourceFricke.summable_comp_fst_fin, `Dubon2026.SourceFricke.hasSum_wpMon, `Dubon2026.SourceFricke.hasSum_wpQCoeff, `Dubon2026.SourceFricke.qExpansion_wpNorm_coeff, `Dubon2026.SourceFricke.qExpansion_wpNorm_coeff_mem_kN, `Dubon2026.SourceFricke.hasSum_qExpansion_wpNorm, `Dubon2026.SourceFricke.periodic_wpNormZ, `Dubon2026.SourceFricke.isBoundedAtImInfty_wpNormZ, `Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff, `Dubon2026.SourceFricke.qExpansion_wpNormZ_coeff_mem_kN, `Dubon2026.SourceFricke.frickeF_mul_discriminant, `Dubon2026.SourceFricke.isBoundedAtImInfty_frickeF_mul_discriminant, `Dubon2026.SourceFricke.kN, `Dubon2026.SourceFricke.wpNormSeries, `Dubon2026.SourceFricke.wpNorm, `Dubon2026.SourceFricke.WpIdx, `Dubon2026.SourceFricke.wpMonCoeff, `Dubon2026.SourceFricke.wpMonExp, `Dubon2026.SourceFricke.wpQCoeff, `Dubon2026.SourceFricke.weierstrassP_torsionPt_eq_tsum_prod, `Dubon2026.SourceFricke.mdifferentiable_wpTorsion, `Dubon2026.SourceFricke.norm_wpTail_le, `Dubon2026.SourceFricke.summable_wpTail_majorant, `Dubon2026.SourceFricke.frickeIdx_hyps, `summable_prod_of_nonneg, `UpperHalfPlane.qExpansion_coeff_unique]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE FRICKE FOURIER COEFFICIENTS DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual torsion-index Fourier and Fricke cusp-bound consumers. Only declaration values are traversed. Exact finite exponent fibers and native Fourier uniqueness identify cyclotomic coefficients of the actual function. Coefficient conjugation, rational spanning, differential realization and arithmetic comparison remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

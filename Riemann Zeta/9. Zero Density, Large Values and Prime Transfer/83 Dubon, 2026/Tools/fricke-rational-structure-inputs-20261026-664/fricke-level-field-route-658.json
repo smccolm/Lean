@@ -1,0 +1,22 @@
+{
+  "chain": "DUB-17/18 -> original all-weight arithmetic association -> finite Gamma1 characters -> actual Picard/H1 and diamond comparison -> cusp differential realization -> rational Fourier structure -> actual Fricke level field and invariant fractions.",
+  "selectedRoute": "Reuse proved Fricke transformation, holomorphy, cusp bounds and faithful stabilizer. Use the analytic transfer of the existing level-one polynomial reduction. The exact finite action on the actual function algebra extends to its fraction field; a finite orbit product clears an invariant denominator. Native fixed-field degree identifies the degree. Omit the unrelated integral-closure section and avoid repeating common level algebra proofs.",
+  "assumptionsToDischarge": "The fixed subfield of the actual Fricke fraction field is exactly C(j), with degree the actual stabilizer index; this is required to prove that modularly stable finite-pole families are Fricke fractions.",
+  "remaining": "Stable-family fraction realization, rational spanning/descent and actual differential realization, then arithmetic comparison; 16/20, DUB-17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\fricke-level-structure-reuse-assessment-656.json",
+      "sha256": "76EE3F8CDAB6B9DDD75312AC308ECBE3FE0E50A8614173CDDC49BAD3AE05C98E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-fricke-separation-5-scratch-receipt.json",
+      "sha256": "176B0C3D74073586D550A442319F7527B30E77DFD3D50D302E1C918B9D01597D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\level-one-analytic-polynomial-route-657.json",
+      "sha256": "2F12CD437BECC5AAB69249190765C8F98E112FA26AF29A12286B8A96016847FE"
+    }
+  ],
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -50634,6 +50634,4134 @@
     {
       "path": "Tools/source-gamma-one-regularity-fricke-inputs.json",
       "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/build_gamma_one_regularity_fricke_inputs_8360.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/compare_gamma_one_regularity_fricke_inputs_ownership_8360.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/gamma-one-regularity-fricke-inputs-preexecution-review-8360.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/integrate_source_gamma_one_regularity_fricke_inputs_8360.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_gamma_one_regularity_fricke_inputs_global_ownership_8360.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_gamma_one_regularity_fricke_inputs_production_ownership_8360.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_gamma_one_regularity_fricke_inputs_promotion_8360.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/prepare_gamma_one_regularity_fricke_inputs_scratch_ownership_8360.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/record_source_gamma_one_regularity_fricke_inputs_8360.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/source-gamma-one-regularity-fricke-inputs-ownership-comparison-8360.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/source-gamma-one-regularity-fricke-inputs-production-build-8360.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/source-gamma-one-regularity-fricke-inputs-production-build-8360.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/source-gamma-one-regularity-fricke-inputs-scratch-ownership-8360.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeFourierCoefficientsDependencyAudit7bProduction8360.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeFourierCoefficientsDependencyAudit7bProduction8360.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeFourierCoefficientsDependencyAudit7bProduction8360.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTransformationDependencyAudit4cProduction8360.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTransformationDependencyAudit4cProduction8360.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceFrickeTransformationDependencyAudit4cProduction8360.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneDifferentialRegularityDependencyAudit6bProduction8360.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneDifferentialRegularityDependencyAudit6bProduction8360.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneDifferentialRegularityDependencyAudit6bProduction8360.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsGlobalOwnership8360.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsGlobalOwnership8360.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsGlobalOwnership8360.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsOwnership8360.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsOwnership8360.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsOwnership8360.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsProductionAudit8360.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsProductionAudit8360.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsProductionAudit8360.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership643bFor8360.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership643bFor8360.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership643bFor8360.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership647cFor8360.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership647cFor8360.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership647cFor8360.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership650bFor8360.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership650bFor8360.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership650bFor8360.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership651bFor8360.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership651bFor8360.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceGammaOneRegularityFrickeInputsScratchOwnership651bFor8360.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceWeierstrassExpansionDependencyAudit8bProduction8360.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceWeierstrassExpansionDependencyAudit8bProduction8360.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/SourceWeierstrassExpansionDependencyAudit8bProduction8360.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/verify_gamma_one_regularity_fricke_inputs_8360.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-regularity-fricke-inputs-20261026-653/canonical-evidence-8360.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-rational-structure-inputs-promotion-route-664.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeCyclotomicTransportAudit3.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeCyclotomicTransportAudit3.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeCyclotomicTransportAudit3.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeCyclotomicTransportDependencyAudit3.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeCyclotomicTransportDependencyAudit3.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeCyclotomicTransportDependencyAudit3.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFieldJ.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFieldJ.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFieldJ.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFieldJV2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFieldJV2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFieldJV2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFraction.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFraction.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFraction.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFractionV2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFractionV2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeFixedFractionV2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeHolomorphicAlgebra.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeHolomorphicAlgebra.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeHolomorphicAlgebra.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeHolomorphicAlgebraV2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeHolomorphicAlgebraV2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeHolomorphicAlgebraV2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeJTranscendenceAudit1.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeJTranscendenceAudit1.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeJTranscendenceAudit1.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeJTranscendenceDependencyAudit1.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeJTranscendenceDependencyAudit1.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeJTranscendenceDependencyAudit1.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelAlgebra.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelAlgebra.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelAlgebra.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelAlgebraV2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelAlgebraV2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelAlgebraV2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelField.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelField.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelField.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldAudit7.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldAudit7.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldAudit7.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldAudit7b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldAudit7b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldAudit7b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldAudit7c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldAudit7c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldAudit7c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldDependencyAudit7.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldDependencyAudit7b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldDependencyAudit7c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldDependencyAudit7c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldDependencyAudit7c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldDependencyAudit7d.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldDependencyAudit7d.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldDependencyAudit7d.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldV2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldV2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldV2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelGroup.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelGroup.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelGroup.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelGroupV2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelGroupV2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelGroupV2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeModularOrbit.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeModularOrbit.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeModularOrbit.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicAudit2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicAudit2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicAudit2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicAudit2b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicAudit2b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicAudit2b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicDependencyAudit2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicDependencyAudit2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicDependencyAudit2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicDependencyAudit2b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicDependencyAudit2b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicDependencyAudit2b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickePoleBounded.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickePoleBounded.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickePoleBounded.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickePoleBoundedV2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickePoleBoundedV2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickePoleBoundedV2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeProductTransportAudit4.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeProductTransportAudit4.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeProductTransportAudit4.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeProductTransportDependencyAudit4.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeProductTransportDependencyAudit4.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeProductTransportDependencyAudit4.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeSeparationAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeSeparationAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeSeparationAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeSeparationDependencyAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeSeparationDependencyAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeSeparationDependencyAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableAlgebra.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableAlgebra.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableAlgebra.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableEmbedding.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableEmbedding.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableEmbedding.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyAudit5b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyAudit5b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyAudit5b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyDependencyAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyDependencyAudit5b.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyDependencyAudit5b.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyDependencyAudit5b.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyDependencyAudit5c.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyDependencyAudit5c.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyDependencyAudit5c.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableField.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableField.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableField.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFraction.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFraction.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFraction.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableGroup.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableGroup.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableGroup.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableMonic.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableMonic.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableMonic.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceLevelOneAnalyticPolynomialAudit3.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceLevelOneAnalyticPolynomialAudit3.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceLevelOneAnalyticPolynomialAudit3.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceLevelOneAnalyticPolynomialDependencyAudit3.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceLevelOneAnalyticPolynomialDependencyAudit3.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceLevelOneAnalyticPolynomialDependencyAudit3.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/consumers656.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fetch_fricke_base_change_dependencies_662.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fetch_fricke_level_structure_656.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fetch_fricke_rational_descent_661.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-base-change-dependencies-reuse-assessment-662.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-cyclotomic-transport-route-652.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-j-transcendence-local-reuse-route-663.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-field-route-658.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-field-route-658d.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-structure-reuse-assessment-656.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-orbit-monic-local-reuse-route-660.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-orbit-monic-local-reuse-route-660b.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-product-transport-route-654.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-rational-descent-reuse-assessment-661.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-separation-local-reuse-route-655.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-family-route-659.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-family-route-659b.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-family-route-659c.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/level-one-analytic-polynomial-route-657.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/modules656.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_cyclotomic_transport_652.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_cyclotomic_transport_audit_652.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_j_transcendence_audit_663.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_level_dependency_658d.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_level_field_audit_658.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_level_field_audit_658b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_level_field_audit_658c.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_level_field_v2_658b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_orbit_monic_audit_660.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_orbit_monic_audit_660b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_product_transport_audit_654.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_separation_audit_655.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_stable_documented_successor_659b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_stable_family_659.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_stable_family_audit_659.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_stable_family_audit_659b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_level_one_analytic_polynomial_audit_657.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/record656.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/record_fricke_cyclotomic_transport_652.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/record_fricke_j_transcendence_663.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/record_fricke_level_field_658d.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/record_fricke_orbit_monic_660b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/record_fricke_product_transport_654.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/record_fricke_separation_655.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/record_fricke_stable_family_659c.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/record_level_one_analytic_polynomial_657.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/register656.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/registrations656.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/section656.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-cyclotomic-transport-3-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-cyclotomic-transport-3-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-j-transcendence-1-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-j-transcendence-1-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-level-field-7d-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-level-field-7d-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-orbit-monic-2b-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-orbit-monic-2b-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-product-transport-4-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-product-transport-4-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-separation-5-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-separation-5-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-stable-family-5c-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-stable-family-5c-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-level-one-analytic-polynomial-3-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-level-one-analytic-polynomial-3-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/status656.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-structure-reuse-656/P2M/Sol/S_WLight_exists_levelFraction_of_stable_family.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-structure-reuse-656/P2M/Sol/S_WLight_exists_monicRel_j_of_mdifferentiable_levelFraction.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-structure-reuse-656/P2M/Sol/S_WLight_levelN_structure_package.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-structure-reuse-656/snapshots.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-rational-descent-reuse-661/P2M/Sol/S_WLight_exists_monicRel_j_K_of_mdifferentiable_frickeQuotient.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-rational-descent-reuse-661/P2M/Sol/S_WLight_exists_qExpansion_coeff_mem_of_mdifferentiable_levelFraction.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-rational-descent-reuse-661/P2M/Sol/S_WLight_frickeFunction_intBaseChange.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-rational-descent-reuse-661/snapshots.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-base-change-dependencies-reuse-662/P2M/Sol/S_IsIntegral_mem_span_of_adjoin_simple_constants.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-base-change-dependencies-reuse-662/P2M/Sol/S_IsIntegral_mem_span_of_adjoin_simple_constants_transcendental.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-base-change-dependencies-reuse-662/P2M/Sol/S_WLight_exists_mdifferentiable_div_of_monicRel.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-base-change-dependencies-reuse-662/P2M/Sol/S_WLight_frickeFunction_orbit_package.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-base-change-dependencies-reuse-662/snapshots.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-field-api-failure-658/SourceFrickeLevelField.exit.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-field-api-failure-658/SourceFrickeLevelField.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-field-api-failure-658/SourceFrickeLevelField.log.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-field-instance-failure-658/SourceFrickeLevelField.exit.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-field-instance-failure-658/SourceFrickeLevelField.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-level-field-instance-failure-658/SourceFrickeLevelField.log.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-fixed-field-j-instance-failure-658/SourceFrickeFixedFieldJ.exit.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-fixed-field-j-instance-failure-658/SourceFrickeFixedFieldJ.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-fixed-field-j-instance-failure-658/SourceFrickeFixedFieldJ.log.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-fixed-field-j-action-failure-658/SourceFrickeFixedFieldJ.exit.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-fixed-field-j-action-failure-658/SourceFrickeFixedFieldJ.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-fixed-field-j-action-failure-658/SourceFrickeFixedFieldJ.log.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-field-instance-failure-659/SourceFrickeStableField.exit.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-field-instance-failure-659/SourceFrickeStableField.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-field-instance-failure-659/SourceFrickeStableField.log.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-v2-before-variable-cleanup-659b/SourceFrickeStableAlgebraV2.exit.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-v2-before-variable-cleanup-659b/SourceFrickeStableAlgebraV2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-v2-before-variable-cleanup-659b/SourceFrickeStableAlgebraV2.log.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-v2-before-variable-cleanup-659b/SourceFrickeStableGroupV2.exit.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-v2-before-variable-cleanup-659b/SourceFrickeStableGroupV2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-stable-v2-before-variable-cleanup-659b/SourceFrickeStableGroupV2.log.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-cyclotomic-transport-3-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-product-transport-4-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-separation-5-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-level-one-analytic-polynomial-3-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-level-field-7d-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-stable-family-5c-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-orbit-monic-2b-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-j-transcendence-1-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/archive-manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeCyclotomicCoefficients.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeCyclotomicTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeTorsionConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceQExpansionPeriodWidth.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEisensteinRationalSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeProductExpansion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeProductCyclotomic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePeriodWeierstrassSeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeTorsionLattice.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickePrefactor.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeSeparation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeFaithfulness.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLaurentAnalyticPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLevelOneAnalyticJPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceInvariantAnalyticJPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickePoleBoundedV3.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeHolomorphicAlgebraV3.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeLevelAlgebraV3.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeLevelGroupV3.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeLevelFieldV3.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeFixedFractionV3.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeFixedFieldJV3.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeStableAlgebraV2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeStableGroupV2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeStableFieldV2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeStableEmbeddingV2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeStableFractionV2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeStableMonicV2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeModularOrbitV2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeJTranscendence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-fricke-cyclotomic-transport-3-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-fricke-product-transport-4-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-fricke-separation-5-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-level-one-analytic-polynomial-3-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-fricke-level-field-7d-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-fricke-stable-family-5c-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-fricke-orbit-monic-2b-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-fricke-j-transcendence-1-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-fricke-rational-structure-inputs.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/build_fricke_rational_structure_inputs_8390.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/compare_fricke_rational_structure_inputs_ownership_8390.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/fricke-rational-structure-inputs-preexecution-review-8390.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/integrate_source_fricke_rational_structure_inputs_8390.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_rational_structure_inputs_global_ownership_8390.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_rational_structure_inputs_production_ownership_8390.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_rational_structure_inputs_promotion_8390.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/prepare_fricke_rational_structure_inputs_scratch_ownership_8390.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/record_source_fricke_rational_structure_inputs_8390.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-rational-structure-inputs-ownership-comparison-8390.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-rational-structure-inputs-production-build-8390.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-rational-structure-inputs-production-build-8390.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/source-fricke-rational-structure-inputs-scratch-ownership-8390.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeCyclotomicTransportDependencyAudit3Production8390.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeCyclotomicTransportDependencyAudit3Production8390.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeCyclotomicTransportDependencyAudit3Production8390.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeJTranscendenceDependencyAudit1Production8390.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeJTranscendenceDependencyAudit1Production8390.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeJTranscendenceDependencyAudit1Production8390.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldDependencyAudit7dProduction8390.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldDependencyAudit7dProduction8390.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeLevelFieldDependencyAudit7dProduction8390.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicDependencyAudit2bProduction8390.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicDependencyAudit2bProduction8390.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeOrbitMonicDependencyAudit2bProduction8390.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeProductTransportDependencyAudit4Production8390.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeProductTransportDependencyAudit4Production8390.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeProductTransportDependencyAudit4Production8390.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsGlobalOwnership8390.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsGlobalOwnership8390.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsGlobalOwnership8390.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsOwnership8390.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsOwnership8390.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsOwnership8390.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsProductionAudit8390.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsProductionAudit8390.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsProductionAudit8390.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership652For8390.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership652For8390.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership652For8390.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership654For8390.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership654For8390.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership654For8390.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership655For8390.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership655For8390.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership655For8390.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership657For8390.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership657For8390.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership657For8390.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership658dFor8390.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership658dFor8390.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership658dFor8390.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership659cFor8390.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership659cFor8390.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership659cFor8390.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership660bFor8390.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership660bFor8390.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership660bFor8390.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership663For8390.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership663For8390.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeRationalStructureInputsScratchOwnership663For8390.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeSeparationDependencyAudit5Production8390.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeSeparationDependencyAudit5Production8390.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeSeparationDependencyAudit5Production8390.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyDependencyAudit5cProduction8390.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyDependencyAudit5cProduction8390.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceFrickeStableFamilyDependencyAudit5cProduction8390.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceLevelOneAnalyticPolynomialDependencyAudit3Production8390.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceLevelOneAnalyticPolynomialDependencyAudit3Production8390.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/SourceLevelOneAnalyticPolynomialDependencyAudit3Production8390.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/verify_fricke_rational_structure_inputs_8390.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-rational-structure-inputs-20261026-664/canonical-evidence-8390.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/fricke-cyclotomic-fourier-span-promotion-route-673.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/LaurentIntegralSpanTypeProbe669.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/LaurentIntegralSpanTypeProbe669.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/LaurentIntegralSpanTypeProbe669.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceActualFrickeLaurentIntegralSpanAudit4.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceActualFrickeLaurentIntegralSpanAudit4.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceActualFrickeLaurentIntegralSpanAudit4.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceActualFrickeLaurentIntegralSpanDependencyAudit4.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceActualFrickeLaurentIntegralSpanDependencyAudit4.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceActualFrickeLaurentIntegralSpanDependencyAudit4.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceAlgebraicConstantIntegralSpanAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceAlgebraicConstantIntegralSpanAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceAlgebraicConstantIntegralSpanAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceAlgebraicConstantIntegralSpanDependencyAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceAlgebraicConstantIntegralSpanDependencyAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceAlgebraicConstantIntegralSpanDependencyAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicDescentAudit10.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicDescentAudit10.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicDescentAudit10.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicDescentDependencyAudit10.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicDescentDependencyAudit10.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicDescentDependencyAudit10.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeHolomorphicIntegralSpanAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeHolomorphicIntegralSpanAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeHolomorphicIntegralSpanAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeHolomorphicIntegralSpanDependencyAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeHolomorphicIntegralSpanDependencyAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeHolomorphicIntegralSpanDependencyAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickePoleClearedFourierSpanAudit2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickePoleClearedFourierSpanAudit2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickePoleClearedFourierSpanAudit2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickePoleClearedFourierSpanDependencyAudit2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickePoleClearedFourierSpanDependencyAudit2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickePoleClearedFourierSpanDependencyAudit2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceLaurentIntegralConstantSpanAudit6.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceLaurentIntegralConstantSpanAudit6.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceLaurentIntegralConstantSpanAudit6.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceLaurentIntegralConstantSpanDependencyAudit6.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceLaurentIntegralConstantSpanDependencyAudit6.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceLaurentIntegralConstantSpanDependencyAudit6.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantAlgebra.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantAlgebra.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantAlgebra.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantAlgebraV2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantAlgebraV2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantAlgebraV2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantDenominators.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantDenominators.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantDenominators.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantDenominatorsV2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantDenominatorsV2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantDenominatorsV2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantDiscovery667.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantDiscovery667.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantDiscovery667.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantEvaluation.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantEvaluation.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantEvaluation.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantEvaluationV2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantEvaluationV2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantEvaluationV2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantFieldRange.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantFieldRange.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantFieldRange.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantFieldRangeV2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantFieldRangeV2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantFieldRangeV2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpan.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpan.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpan.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanAudit7.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanAudit7.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanAudit7.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanAudit7e.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanAudit7e.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanAudit7e.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanDependencyAudit7.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanDependencyAudit7e.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanDependencyAudit7e.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanDependencyAudit7e.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanV2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanV2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanV2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantNormality.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantNormality.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantNormality.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantNormalityV2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantNormalityV2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantNormalityV2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantScaledRelation.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantScaledRelation.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantScaledRelation.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantScaledRelationV2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantScaledRelationV2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantScaledRelationV2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/actual-fricke-laurent-integral-span-route-670.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/algebraic-constant-integral-span-route-666.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/consumers671.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/fricke-cyclotomic-descent-local-reuse-route-665.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/fricke-holomorphic-integral-span-route-671.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/fricke-pole-cleared-fourier-span-route-672.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/laurent-integral-constant-span-route-669.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/modules671.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_actual_fricke_laurent_integral_span_audit_670.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_algebraic_constant_integral_span_666.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_algebraic_constant_integral_span_666b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_algebraic_constant_integral_span_audit_666.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_fricke_cyclotomic_descent_audit_665.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_fricke_holomorphic_integral_span_audit_671.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_fricke_pole_cleared_fourier_span_audit_672.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_laurent_integral_constant_span_audit_669.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_transcendental_constant_integral_span_667.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_transcendental_constant_integral_span_audit_667d.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_transcendental_constant_integral_span_audit_667e.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_transcendental_constant_linter_successor_667e.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record671.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record_actual_fricke_laurent_integral_span_670.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record_algebraic_constant_integral_span_666.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record_fricke_cyclotomic_descent_665.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record_fricke_cyclotomic_descent_665b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record_fricke_holomorphic_integral_span_671.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record_fricke_holomorphic_integral_span_671b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record_fricke_pole_cleared_fourier_span_672.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record_laurent_integral_constant_span_669.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record_transcendental_constant_integral_span_667e.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/register671.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/registrations671.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/section671.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-actual-fricke-laurent-integral-span-4-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-actual-fricke-laurent-integral-span-4-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-algebraic-constant-integral-span-5-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-algebraic-constant-integral-span-5-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-cyclotomic-descent-10-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-cyclotomic-descent-10-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-holomorphic-integral-span-8-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-holomorphic-integral-span-8-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-pole-cleared-fourier-span-2-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-pole-cleared-fourier-span-2-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-laurent-integral-constant-span-6-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-laurent-integral-constant-span-6-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-transcendental-constant-integral-span-7e-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-transcendental-constant-integral-span-7e-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/status671.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-discovery-667-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-integral-span-route-667.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-integral-span-route-667d.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-integral-span-route-667e.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-integral-span-failed-667a/SourceTranscendentalConstantIntegralSpan.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-integral-span-failed-667a/SourceTranscendentalConstantIntegralSpan.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-integral-span-failed-667a/SourceTranscendentalConstantIntegralSpan.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-field-range-failed-667b/SourceTranscendentalConstantFieldRange.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-field-range-failed-667b/SourceTranscendentalConstantFieldRange.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-field-range-failed-667b/SourceTranscendentalConstantFieldRange.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-pretrim-667c/SourceTranscendentalConstantAlgebra.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-pretrim-667c/SourceTranscendentalConstantDenominators.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-pretrim-667c/SourceTranscendentalConstantEvaluation.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-pretrim-667c/SourceTranscendentalConstantFieldRange.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-pretrim-667c/SourceTranscendentalConstantIntegralSpan.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-pretrim-667c/SourceTranscendentalConstantNormality.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/transcendental-constant-pretrim-667c/SourceTranscendentalConstantScaledRelation.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-cyclotomic-descent-10-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-algebraic-constant-integral-span-5-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-transcendental-constant-integral-span-7e-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-laurent-integral-constant-span-6-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-actual-fricke-laurent-integral-span-4-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-holomorphic-integral-span-8-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-pole-cleared-fourier-span-2-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/archive-manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspLaurentFunctionIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceQExpansionLaurentWidth.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePoleBoundedCuspLaurent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeCyclotomicLaurent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspLaurentPolynomial.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspLaurentFractionIdentity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeCyclotomicFractionGerm.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeLaurentIntegralDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeFractionPeriodicity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeCyclotomicMonic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceConstantExtensionIntegralAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAlgebraicConstantRoots.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAlgebraicConstantLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAlgebraicConstantInterpolation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAlgebraicConstantIntegralSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTranscendentalConstantAlgebraV2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTranscendentalConstantEvaluationV2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTranscendentalConstantDenominatorsV2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTranscendentalConstantFieldRangeV2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTranscendentalConstantScaledRelationV2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTranscendentalConstantNormalityV2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTranscendentalConstantIntegralSpanV2.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLaurentConstantTranscendence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLaurentGeneratedConstants.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceConstantExtensionChain.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceConstantExtensionMonotonicity.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFiniteConstantIntegralCapture.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLaurentIntegralConstantSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLaurentIntegralCoefficientImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeLaurentGeneratorIntegrality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeComplexFractionLaurent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeLaurentIntegralSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMonicQuotientRelation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHolomorphicMonicQuotient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralCoordinateMonic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeCyclotomicLaurentLifts.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeClearedLaurentMonic.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeIntegralHolomorphicRepresentative.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspLaurentSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeHolomorphicIntegralSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceMeromorphicCuspPoleClearing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickePoleClearedFourierSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-fricke-cyclotomic-descent-10-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-algebraic-constant-integral-span-5-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-transcendental-constant-integral-span-7e-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-laurent-integral-constant-span-6-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-actual-fricke-laurent-integral-span-4-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-fricke-holomorphic-integral-span-8-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-fricke-pole-cleared-fourier-span-2-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-fricke-cyclotomic-fourier-span.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/build_fricke_cyclotomic_fourier_span_8432.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/compare_fricke_cyclotomic_fourier_span_ownership_8432.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/fricke-cyclotomic-fourier-span-preexecution-review-8432.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/integrate_source_fricke_cyclotomic_fourier_span_8432.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_fricke_cyclotomic_fourier_span_global_ownership_8432.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_fricke_cyclotomic_fourier_span_production_ownership_8432.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_fricke_cyclotomic_fourier_span_promotion_8432.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/prepare_fricke_cyclotomic_fourier_span_scratch_ownership_8432.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/record_source_fricke_cyclotomic_fourier_span_8432.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-cyclotomic-fourier-span-ownership-comparison-8432.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-cyclotomic-fourier-span-production-build-8432.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-cyclotomic-fourier-span-production-build-8432.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/source-fricke-cyclotomic-fourier-span-scratch-ownership-8432.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceActualFrickeLaurentIntegralSpanDependencyAudit4Production8432.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceActualFrickeLaurentIntegralSpanDependencyAudit4Production8432.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceActualFrickeLaurentIntegralSpanDependencyAudit4Production8432.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceAlgebraicConstantIntegralSpanDependencyAudit5Production8432.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceAlgebraicConstantIntegralSpanDependencyAudit5Production8432.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceAlgebraicConstantIntegralSpanDependencyAudit5Production8432.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicDescentDependencyAudit10Production8432.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicDescentDependencyAudit10Production8432.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicDescentDependencyAudit10Production8432.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanGlobalOwnership8432.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanGlobalOwnership8432.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanGlobalOwnership8432.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanOwnership8432.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanOwnership8432.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanOwnership8432.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanProductionAudit8432.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanProductionAudit8432.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanProductionAudit8432.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership665For8432.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership665For8432.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership665For8432.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership666For8432.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership666For8432.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership666For8432.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership667eFor8432.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership667eFor8432.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership667eFor8432.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership669For8432.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership669For8432.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership669For8432.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership670For8432.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership670For8432.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership670For8432.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership671For8432.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership671For8432.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership671For8432.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership672For8432.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership672For8432.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeCyclotomicFourierSpanScratchOwnership672For8432.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeHolomorphicIntegralSpanDependencyAudit8Production8432.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeHolomorphicIntegralSpanDependencyAudit8Production8432.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickeHolomorphicIntegralSpanDependencyAudit8Production8432.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickePoleClearedFourierSpanDependencyAudit2Production8432.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickePoleClearedFourierSpanDependencyAudit2Production8432.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceFrickePoleClearedFourierSpanDependencyAudit2Production8432.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceLaurentIntegralConstantSpanDependencyAudit6Production8432.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceLaurentIntegralConstantSpanDependencyAudit6Production8432.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceLaurentIntegralConstantSpanDependencyAudit6Production8432.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanDependencyAudit7eProduction8432.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanDependencyAudit7eProduction8432.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/SourceTranscendentalConstantIntegralSpanDependencyAudit7eProduction8432.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/verify_fricke_cyclotomic_fourier_span_8432.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/fricke-cyclotomic-fourier-span-20261026-673/canonical-evidence-8432.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/cusp-cyclotomic-spanning-promotion-route-685.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspFrickeRationalSpanAudit7.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspFrickeRationalSpanAudit7.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspFrickeRationalSpanAudit7.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspFrickeRationalSpanDependencyAudit7.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspFrickeRationalSpanDependencyAudit7.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspFrickeRationalSpanDependencyAudit7.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCoefficientTwistAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCoefficientTwistAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCoefficientTwistAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCoefficientTwistDependencyAudit8.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCoefficientTwistDependencyAudit8.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCoefficientTwistDependencyAudit8.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCuspImageStabilityAudit9.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCuspImageStabilityAudit9.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCuspImageStabilityAudit9.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCuspImageStabilityDependencyAudit9.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCuspImageStabilityDependencyAudit9.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCuspImageStabilityDependencyAudit9.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeEllipticDivisibilityAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeEllipticDivisibilityAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeEllipticDivisibilityAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeEllipticDivisibilityDependencyAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeEllipticDivisibilityDependencyAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeEllipticDivisibilityDependencyAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeLaurentIndependenceAudit2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeLaurentIndependenceAudit2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeLaurentIndependenceAudit2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeLaurentIndependenceDependencyAudit2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeLaurentIndependenceDependencyAudit2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeLaurentIndependenceDependencyAudit2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeTwistModularAlgebraAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeTwistModularAlgebraAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeTwistModularAlgebraAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeTwistModularAlgebraDependencyAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeTwistModularAlgebraDependencyAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeTwistModularAlgebraDependencyAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceGammaOneCyclotomicCuspSpanAudit3.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceGammaOneCyclotomicCuspSpanAudit3.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceGammaOneCyclotomicCuspSpanAudit3.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceGammaOneCyclotomicCuspSpanDependencyAudit3.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceGammaOneCyclotomicCuspSpanDependencyAudit3.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceGammaOneCyclotomicCuspSpanDependencyAudit3.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/consumers683.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/cusp-fricke-rational-span-route-683.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fetch_fricke_cusp_descent_inputs_678.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-coefficient-twist-route-675.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-cusp-descent-input-reuse-assessment-678.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-cusp-image-stability-route-680.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-elliptic-divisibility-route-677.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-laurent-independence-preparer-failure-674.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-laurent-independence-route-674.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-twist-modular-algebra-route-676.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/gamma-one-cyclotomic-cusp-span-route-684.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/make_cusp_fricke_rational_span_audit_683.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/make_fricke_cusp_image_stability_audit_680.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/make_fricke_elliptic_divisibility_audit_677.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/make_fricke_twist_modular_audit_676.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/make_gamma_one_cyclotomic_cusp_span_audit_684.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/make_gamma_one_cyclotomic_cusp_span_audit_684b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/make_gamma_one_cyclotomic_cusp_span_audit_684c.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/modules683.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_algebraically_closed_fixed_coefficients_681.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_algebraically_closed_fixed_field_681b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_cusp_fricke_rational_span_audit_683.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_cusp_fricke_rational_span_audit_683b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_cusp_weight_criterion_679.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_cusp_weight_division_679.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_cusp_weight_transformation_679.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_cusp_weight_transformation_679b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_fricke_coefficient_twist_audit_675.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_fricke_cusp_image_stability_audit_680.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_fricke_elliptic_divisibility_audit_677.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_fricke_laurent_independence_audit_674b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_fricke_twist_modular_algebra_audit_676.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_gamma_one_cyclotomic_cusp_span_audit_684.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_twist_stable_subspace_descent_682.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/record683.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/record_cusp_fricke_rational_span_683.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/record_fricke_coefficient_twist_675.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/record_fricke_cusp_image_stability_680.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/record_fricke_elliptic_divisibility_677.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/record_fricke_laurent_independence_674.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/record_fricke_twist_modular_algebra_676.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/record_gamma_one_cyclotomic_cusp_span_684.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/register683.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/registrations683.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/section683.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-cusp-fricke-rational-span-7-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-cusp-fricke-rational-span-7-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-coefficient-twist-8-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-coefficient-twist-8-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-cusp-image-stability-9-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-cusp-image-stability-9-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-elliptic-divisibility-5-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-elliptic-divisibility-5-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-laurent-independence-2-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-laurent-independence-2-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-twist-modular-algebra-5-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-twist-modular-algebra-5-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-gamma-one-cyclotomic-cusp-span-3-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-gamma-one-cyclotomic-cusp-span-3-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/status683.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-scalar-basis-api-failed-675a/SourceFrickeScalarExtensionBasis.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-scalar-basis-api-failed-675a/SourceFrickeScalarExtensionBasis.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-scalar-basis-api-failed-675a/SourceFrickeScalarExtensionBasis.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-scalar-basis-instance-failed-675b/SourceFrickeScalarExtensionBasis.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-scalar-basis-instance-failed-675b/SourceFrickeScalarExtensionBasis.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-scalar-basis-instance-failed-675b/SourceFrickeScalarExtensionBasis.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-elliptic-power-route-superseded-677a/SourceFrickeHolomorphicDivisionInvariance.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-elliptic-power-route-superseded-677a/SourceFrickeHolomorphicDivisionInvariance.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-elliptic-power-route-superseded-677a/SourceFrickeHolomorphicDivisionInvariance.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/cusp-weight-transformation-preparer-failed-679a/prepare_cusp_weight_transformation_679.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/cusp-weight-transformation-preparer-failed-679a/SourceCuspWeightTransformation.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/cusp-weight-transformation-preparer-failed-679a/SourceCuspWeightTransformation.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/cusp-fricke-span-api-failed-683a/prepare_cusp_fricke_rational_span_audit_683.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/cusp-fricke-span-api-failed-683a/SourceCuspFrickeRationalSpan.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/cusp-fricke-span-api-failed-683a/SourceCuspFrickeRationalSpan.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/cusp-fricke-span-api-failed-683a/SourceCuspFrickeRationalSpan.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/eisenstein-factor-laurent-diagnostic-684a/SourceEisensteinFactorCyclotomicLaurent.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/eisenstein-factor-laurent-diagnostic-684a/SourceEisensteinFactorCyclotomicLaurent.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/eisenstein-factor-laurent-diagnostic-684a/SourceEisensteinFactorCyclotomicLaurent.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-cusp-descent-inputs-reuse-678/P2M/Sol/S_CuspForm_exists_mul_E4_pow_mul_E6_pow_eq_iff.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-cusp-descent-inputs-reuse-678/P2M/Sol/S_IsAlgClosed_exists_algEquiv_apply_ne_of_notMem_range.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-cusp-descent-inputs-reuse-678/P2M/Sol/S_WLight_span_inter_rational_of_twist_stable.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/fricke-cusp-descent-inputs-reuse-678/snapshots.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-laurent-independence-2-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-coefficient-twist-8-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-twist-modular-algebra-5-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-elliptic-divisibility-5-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-fricke-cusp-image-stability-9-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-cusp-fricke-rational-span-7-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-gamma-one-cyclotomic-cusp-span-3-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/archive-manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspLaurentLinearRelations.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeLaurentIndependence.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeCyclotomicHolomorphicAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeScalarExtensionBasis.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceComplexBasisCoefficientTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeCoefficientTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeSpanLaurentRealization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLaurentTwistOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspVanishingOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeTwistCuspVanishing.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeCyclotomicModularAction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeTwistModularEquivariance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeSpanMultiplication.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickePrincipalInvariance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeTwistPowers.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeHolomorphicDivisionInvariance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeHolomorphicDivisionSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeHolomorphicDivisionTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeEllipticDivisibilityTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeEllipticCoordinateTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceHolomorphicCoprimeDivision.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspWeightFactors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspWeightHolomorphicDivision.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspWeightTransformation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspWeightCriterion.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspWeightImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeTwistCuspConditions.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspWeightImageSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspWeightImageTwist.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourcePureTranscendentalConstantIntersection.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceAlgebraicallyClosedFixedField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTwistDescentFiniteSupport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceTwistStableSubspaceDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFrickeSpanDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspWeightImageDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspFrickeRationalSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceEisensteinFactorCyclotomicLaurent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCuspWeightImageFourier.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneCyclotomicCuspSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-fricke-laurent-independence-2-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-fricke-coefficient-twist-8-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-fricke-twist-modular-algebra-5-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-fricke-elliptic-divisibility-5-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-fricke-cusp-image-stability-9-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-cusp-fricke-rational-span-7-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-gamma-one-cyclotomic-cusp-span-3-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-cusp-cyclotomic-spanning.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/build_cusp_cyclotomic_spanning_8471.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/compare_cusp_cyclotomic_spanning_ownership_8471.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/cusp-cyclotomic-spanning-preexecution-review-8471.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/integrate_source_cusp_cyclotomic_spanning_8471.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_cusp_cyclotomic_spanning_global_ownership_8471.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_cusp_cyclotomic_spanning_production_ownership_8471.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_cusp_cyclotomic_spanning_promotion_8471.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/prepare_cusp_cyclotomic_spanning_scratch_ownership_8471.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/record_source_cusp_cyclotomic_spanning_8471.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-cusp-cyclotomic-spanning-ownership-comparison-8471.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-cusp-cyclotomic-spanning-production-build-8471.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-cusp-cyclotomic-spanning-production-build-8471.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/source-cusp-cyclotomic-spanning-scratch-ownership-8471.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningGlobalOwnership8471.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningGlobalOwnership8471.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningGlobalOwnership8471.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningOwnership8471.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningOwnership8471.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningOwnership8471.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningProductionAudit8471.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningProductionAudit8471.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningProductionAudit8471.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership674For8471.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership674For8471.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership674For8471.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership675For8471.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership675For8471.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership675For8471.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership676For8471.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership676For8471.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership676For8471.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership677For8471.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership677For8471.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership677For8471.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership680For8471.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership680For8471.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership680For8471.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership683For8471.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership683For8471.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership683For8471.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership684For8471.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership684For8471.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspCyclotomicSpanningScratchOwnership684For8471.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspFrickeRationalSpanDependencyAudit7Production8471.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspFrickeRationalSpanDependencyAudit7Production8471.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceCuspFrickeRationalSpanDependencyAudit7Production8471.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCoefficientTwistDependencyAudit8Production8471.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCoefficientTwistDependencyAudit8Production8471.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCoefficientTwistDependencyAudit8Production8471.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCuspImageStabilityDependencyAudit9Production8471.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCuspImageStabilityDependencyAudit9Production8471.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeCuspImageStabilityDependencyAudit9Production8471.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeEllipticDivisibilityDependencyAudit5Production8471.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeEllipticDivisibilityDependencyAudit5Production8471.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeEllipticDivisibilityDependencyAudit5Production8471.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeLaurentIndependenceDependencyAudit2Production8471.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeLaurentIndependenceDependencyAudit2Production8471.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeLaurentIndependenceDependencyAudit2Production8471.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeTwistModularAlgebraDependencyAudit5Production8471.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeTwistModularAlgebraDependencyAudit5Production8471.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceFrickeTwistModularAlgebraDependencyAudit5Production8471.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceGammaOneCyclotomicCuspSpanDependencyAudit3Production8471.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceGammaOneCyclotomicCuspSpanDependencyAudit3Production8471.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/SourceGammaOneCyclotomicCuspSpanDependencyAudit3Production8471.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/verify_cusp_cyclotomic_spanning_8471.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/cusp-cyclotomic-spanning-20261026-685/canonical-evidence-8471.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-rational-fourier-promotion-route-692.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceFrickeCyclotomicAnalyticTransportAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceFrickeCyclotomicAnalyticTransportAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceFrickeCyclotomicAnalyticTransportAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceFrickeCyclotomicAnalyticTransportDependencyAudit5.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceFrickeCyclotomicAnalyticTransportDependencyAudit5.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceFrickeCyclotomicAnalyticTransportDependencyAudit5.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationAudit13.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationAudit13.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationAudit13.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationDependencyAudit13.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationDependencyAudit13.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationDependencyAudit13.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationDependencyAudit13V2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationDependencyAudit13V2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationDependencyAudit13V2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalCuspSpanAudit4.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalCuspSpanAudit4.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalCuspSpanAudit4.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalCuspSpanDependencyAudit4.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalCuspSpanDependencyAudit4.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalCuspSpanDependencyAudit4.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/fetch_gamma_one_cyclotomic_transport_inputs_686.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/fricke-cyclotomic-analytic-transport-route-687.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-cyclotomic-conjugation-route-688.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-cyclotomic-transport-reuse-assessment-686.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-rational-cusp-span-route-689.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/make_fricke_cyclotomic_analytic_transport_audit_687.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/make_gamma_one_cyclotomic_conjugation_audit_688.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/make_gamma_one_cyclotomic_conjugation_receipt_688.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/make_gamma_one_rational_cusp_span_audit_689.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/prepare_cyclotomic_elliptic_divisibility_688.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/prepare_fricke_cyclotomic_analytic_transport_audit_687.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/prepare_gamma_one_cyclotomic_conjugation_audit_688.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/prepare_gamma_one_cyclotomic_conjugation_dependency_688b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/prepare_gamma_one_rational_cusp_span_audit_689.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/record_fricke_cyclotomic_analytic_transport_687.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/record_gamma_one_cyclotomic_conjugation_688.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/record_gamma_one_cyclotomic_transport_review_686.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/record_gamma_one_rational_cusp_span_689.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-fricke-cyclotomic-analytic-transport-5-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-fricke-cyclotomic-analytic-transport-5-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-cyclotomic-conjugation-13-audit-config-v2.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-cyclotomic-conjugation-13-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-cyclotomic-conjugation-13-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-rational-cusp-span-4-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-rational-cusp-span-4-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/fricke-laurent-field-conjugation-api-687a/SourceFrickeLaurentFieldConjugation.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/fricke-laurent-field-conjugation-api-687a/SourceFrickeLaurentFieldConjugation.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/fricke-laurent-field-conjugation-api-687a/SourceFrickeLaurentFieldConjugation.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-cancellation-api-failed-688a/SourceCyclotomicConjugateCancellation.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-cancellation-api-failed-688a/SourceCyclotomicConjugateCancellation.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-cancellation-api-failed-688a/SourceCyclotomicConjugateCancellation.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-cancellation-api-failed-688a/SourceCyclotomicFractionCovariance.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-cancellation-api-failed-688a/SourceCyclotomicFractionCovariance.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-transport-pretrim-688b/SourceCyclotomicConjugateCancellation.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-transport-pretrim-688b/SourceCyclotomicConjugateCancellation.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-transport-pretrim-688b/SourceCyclotomicConjugateCancellation.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-transport-pretrim-688b/SourceCyclotomicModularLift.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-transport-pretrim-688b/SourceCyclotomicModularLift.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/cyclotomic-transport-pretrim-688b/SourceCyclotomicModularLift.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-trace-api-failed-689a/SourceGammaOneRationalTraceSpan.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-trace-api-failed-689a/SourceGammaOneRationalTraceSpan.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-trace-api-failed-689a/SourceGammaOneRationalTraceSpan.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-cyclotomic-transport-inputs-reuse-686/P2M/Sol/S_CuspForm_exists_gamma1_frickeRational_sigmaTransport.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-cyclotomic-transport-inputs-reuse-686/P2M/Sol/S_ModularFunction_exists_mdifferentiable_sigmaTransport_of_frickeQuotient.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-cyclotomic-transport-inputs-reuse-686/snapshots.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-fricke-cyclotomic-analytic-transport-5-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-cyclotomic-conjugation-13-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-rational-cusp-span-4-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/archive-manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclotomicFrickeIndex.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeLaurentCyclotomicConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeLaurentFieldConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceOriginalFrickeLaurentField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeCyclotomicAnalyticTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeCyclotomicConjugateRelation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclotomicModularLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclotomicGammaOneLift.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclotomicLevelRingCovariance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclotomicConjugateCancellation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclotomicFractionCovariance.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclotomicConjugateCuspOrder.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclotomicHolomorphicDivision.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclotomicEllipticDivisibility.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclotomicEllipticCoordinates.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneCuspCyclotomicConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclotomicCuspFourierTransport.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneCyclotomicFourierConjugation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclotomicTraceStructure.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneFourierLinear.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneRationalTraceSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneRationalCuspSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-fricke-cyclotomic-analytic-transport-5-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-gamma-one-cyclotomic-conjugation-13-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-gamma-one-rational-cusp-span-4-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-gamma-one-rational-fourier.json",
+      "role": "Tools"
     }
   ],
   "statusDocuments": [
@@ -59041,7 +63169,140 @@
     "SourceWeierstrassTorsionFourierCoefficients",
     "SourceWeierstrassTorsionFourierSum",
     "SourceWeierstrassTorsionFourierExpansion",
-    "SourceFrickeCuspInputs"
+    "SourceFrickeCuspInputs",
+    "SourceFrickeCyclotomicCoefficients",
+    "SourceFrickeCyclotomicTransport",
+    "SourceFrickeTorsionConjugation",
+    "SourceQExpansionPeriodWidth",
+    "SourceEisensteinRationalSeries",
+    "SourceFrickeProductExpansion",
+    "SourceFrickeProductCyclotomic",
+    "SourcePeriodWeierstrassSeparation",
+    "SourceFrickeTorsionLattice",
+    "SourceFrickePrefactor",
+    "SourceFrickeSeparation",
+    "SourceFrickeFaithfulness",
+    "SourceLaurentAnalyticPolynomial",
+    "SourceLevelOneAnalyticJPolynomial",
+    "SourceInvariantAnalyticJPolynomial",
+    "SourceFrickePoleBoundedV3",
+    "SourceFrickeHolomorphicAlgebraV3",
+    "SourceFrickeLevelAlgebraV3",
+    "SourceFrickeLevelGroupV3",
+    "SourceFrickeLevelFieldV3",
+    "SourceFrickeFixedFractionV3",
+    "SourceFrickeFixedFieldJV3",
+    "SourceFrickeStableAlgebraV2",
+    "SourceFrickeStableGroupV2",
+    "SourceFrickeStableFieldV2",
+    "SourceFrickeStableEmbeddingV2",
+    "SourceFrickeStableFractionV2",
+    "SourceFrickeStableMonicV2",
+    "SourceFrickeModularOrbitV2",
+    "SourceFrickeJTranscendence",
+    "SourceCuspLaurentFunctionIdentity",
+    "SourceQExpansionLaurentWidth",
+    "SourcePoleBoundedCuspLaurent",
+    "SourceFrickeCyclotomicLaurent",
+    "SourceCuspLaurentPolynomial",
+    "SourceCuspLaurentFractionIdentity",
+    "SourceFrickeCyclotomicFractionGerm",
+    "SourceFrickeLaurentIntegralDescent",
+    "SourceFrickeFractionPeriodicity",
+    "SourceFrickeCyclotomicMonic",
+    "SourceConstantExtensionIntegralAlgebra",
+    "SourceAlgebraicConstantRoots",
+    "SourceAlgebraicConstantLift",
+    "SourceAlgebraicConstantInterpolation",
+    "SourceAlgebraicConstantIntegralSpan",
+    "SourceTranscendentalConstantAlgebraV2",
+    "SourceTranscendentalConstantEvaluationV2",
+    "SourceTranscendentalConstantDenominatorsV2",
+    "SourceTranscendentalConstantFieldRangeV2",
+    "SourceTranscendentalConstantScaledRelationV2",
+    "SourceTranscendentalConstantNormalityV2",
+    "SourceTranscendentalConstantIntegralSpanV2",
+    "SourceLaurentConstantTranscendence",
+    "SourceLaurentGeneratedConstants",
+    "SourceConstantExtensionChain",
+    "SourceConstantExtensionMonotonicity",
+    "SourceFiniteConstantIntegralCapture",
+    "SourceLaurentIntegralConstantSpan",
+    "SourceLaurentIntegralCoefficientImage",
+    "SourceFrickeLaurentGeneratorIntegrality",
+    "SourceFrickeComplexFractionLaurent",
+    "SourceFrickeLaurentIntegralSpan",
+    "SourceMonicQuotientRelation",
+    "SourceHolomorphicMonicQuotient",
+    "SourceIntegralCoordinateMonic",
+    "SourceFrickeCyclotomicLaurentLifts",
+    "SourceFrickeClearedLaurentMonic",
+    "SourceFrickeIntegralHolomorphicRepresentative",
+    "SourceCuspLaurentSpan",
+    "SourceFrickeHolomorphicIntegralSpan",
+    "SourceMeromorphicCuspPoleClearing",
+    "SourceFrickePoleClearedFourierSpan",
+    "SourceCuspLaurentLinearRelations",
+    "SourceFrickeLaurentIndependence",
+    "SourceFrickeCyclotomicHolomorphicAlgebra",
+    "SourceFrickeScalarExtensionBasis",
+    "SourceComplexBasisCoefficientTwist",
+    "SourceFrickeCoefficientTwist",
+    "SourceFrickeSpanLaurentRealization",
+    "SourceLaurentTwistOrder",
+    "SourceCuspVanishingOrder",
+    "SourceFrickeTwistCuspVanishing",
+    "SourceFrickeCyclotomicModularAction",
+    "SourceFrickeTwistModularEquivariance",
+    "SourceFrickeSpanMultiplication",
+    "SourceFrickePrincipalInvariance",
+    "SourceFrickeTwistPowers",
+    "SourceFrickeHolomorphicDivisionInvariance",
+    "SourceFrickeHolomorphicDivisionSpan",
+    "SourceFrickeHolomorphicDivisionTwist",
+    "SourceFrickeEllipticDivisibilityTwist",
+    "SourceFrickeEllipticCoordinateTwist",
+    "SourceHolomorphicCoprimeDivision",
+    "SourceCuspWeightFactors",
+    "SourceCuspWeightHolomorphicDivision",
+    "SourceCuspWeightTransformation",
+    "SourceCuspWeightCriterion",
+    "SourceCuspWeightImage",
+    "SourceFrickeTwistCuspConditions",
+    "SourceCuspWeightImageSpan",
+    "SourceCuspWeightImageTwist",
+    "SourcePureTranscendentalConstantIntersection",
+    "SourceAlgebraicallyClosedFixedField",
+    "SourceTwistDescentFiniteSupport",
+    "SourceTwistStableSubspaceDescent",
+    "SourceOriginalFrickeSpanDescent",
+    "SourceCuspWeightImageDescent",
+    "SourceCuspFrickeRationalSpan",
+    "SourceEisensteinFactorCyclotomicLaurent",
+    "SourceCuspWeightImageFourier",
+    "SourceGammaOneCyclotomicCuspSpan",
+    "SourceCyclotomicFrickeIndex",
+    "SourceFrickeLaurentCyclotomicConjugation",
+    "SourceFrickeLaurentFieldConjugation",
+    "SourceOriginalFrickeLaurentField",
+    "SourceFrickeCyclotomicAnalyticTransport",
+    "SourceFrickeCyclotomicConjugateRelation",
+    "SourceCyclotomicModularLift",
+    "SourceCyclotomicGammaOneLift",
+    "SourceCyclotomicLevelRingCovariance",
+    "SourceCyclotomicConjugateCancellation",
+    "SourceCyclotomicFractionCovariance",
+    "SourceCyclotomicConjugateCuspOrder",
+    "SourceCyclotomicHolomorphicDivision",
+    "SourceCyclotomicEllipticDivisibility",
+    "SourceCyclotomicEllipticCoordinates",
+    "SourceGammaOneCuspCyclotomicConjugation",
+    "SourceCyclotomicCuspFourierTransport",
+    "SourceGammaOneCyclotomicFourierConjugation",
+    "SourceCyclotomicTraceStructure",
+    "SourceGammaOneFourierLinear",
+    "SourceGammaOneRationalTraceSpan",
+    "SourceGammaOneRationalCuspSpan"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

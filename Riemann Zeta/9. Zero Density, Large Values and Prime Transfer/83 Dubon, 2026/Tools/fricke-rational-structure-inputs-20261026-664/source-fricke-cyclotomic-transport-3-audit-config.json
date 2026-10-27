@@ -1,0 +1,90 @@
+{
+  "modules": [
+    "SourceFrickeCyclotomicCoefficients",
+    "SourceFrickeCyclotomicTransport",
+    "SourceFrickeTorsionConjugation"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFricke.isPrimitiveRoot_zetaN",
+    "Dubon2026.SourceFricke.coe_zetaK",
+    "Dubon2026.SourceFricke.zetaN_pow_N",
+    "Dubon2026.SourceFricke.pow_mul_eq_pow_mod_mul",
+    "Dubon2026.SourceFricke.coe_wpQCoeffK",
+    "Dubon2026.SourceFricke.ringHom_wpMonCoeffK",
+    "Dubon2026.SourceFricke.ringHom_wpQCoeffK",
+    "Dubon2026.SourceFricke.wpQSeriesK_map_inclusion",
+    "Dubon2026.SourceFricke.wpQSeriesK_map_cyclotomic"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFricke.zetaK",
+    "Dubon2026.SourceFricke.wpMonCoeffK",
+    "Dubon2026.SourceFricke.wpQCoeffK",
+    "Dubon2026.SourceFricke.wpQSeriesK"
+  ],
+  "queries": [
+    "Dubon2026.SourceFricke.isPrimitiveRoot_zetaN",
+    "Dubon2026.SourceFricke.coe_zetaK",
+    "Dubon2026.SourceFricke.zetaN_pow_N",
+    "Dubon2026.SourceFricke.pow_mul_eq_pow_mod_mul",
+    "Dubon2026.SourceFricke.coe_wpQCoeffK",
+    "Dubon2026.SourceFricke.ringHom_wpMonCoeffK",
+    "Dubon2026.SourceFricke.ringHom_wpQCoeffK",
+    "Dubon2026.SourceFricke.wpQSeriesK_map_inclusion",
+    "Dubon2026.SourceFricke.wpQSeriesK_map_cyclotomic",
+    "Dubon2026.SourceFricke.zetaK",
+    "Dubon2026.SourceFricke.wpMonCoeffK",
+    "Dubon2026.SourceFricke.wpQCoeffK",
+    "Dubon2026.SourceFricke.wpQSeriesK"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFricke.isPrimitiveRoot_zetaN",
+    "Dubon2026.SourceFricke.zetaN_pow_N",
+    "Dubon2026.SourceFricke.pow_mul_eq_pow_mod_mul",
+    "Dubon2026.SourceFricke.ringHom_wpMonCoeffK",
+    "Dubon2026.SourceFricke.ringHom_wpQCoeffK",
+    "Dubon2026.SourceFricke.wpQSeriesK_map_inclusion",
+    "Dubon2026.SourceFricke.wpQSeriesK_map_cyclotomic",
+    "Dubon2026.SourceFricke.zetaK",
+    "Dubon2026.SourceFricke.wpMonCoeffK",
+    "Dubon2026.SourceFricke.wpQCoeffK",
+    "Dubon2026.SourceFricke.wpQSeriesK",
+    "Dubon2026.SourceFricke.finite_wpMonExp_fiber",
+    "Dubon2026.SourceFricke.wpMonCoeff_mem_kN",
+    "Dubon2026.SourceFricke.wpQCoeff_mem_kN",
+    "Dubon2026.SourceFricke.qExpansion_wpNorm_coeff",
+    "Complex.isPrimitiveRoot_exp"
+  ],
+  "roots": [
+    "Dubon2026.SourceFricke.wpQSeriesK_map_inclusion",
+    "Dubon2026.SourceFricke.wpQSeriesK_map_cyclotomic"
+  ],
+  "separatelyAxiomChecked": [
+    "Dubon2026.SourceFricke.coe_zetaK",
+    "Dubon2026.SourceFricke.coe_wpQCoeffK"
+  ],
+  "scratchImportClosure": [
+    "SourceFrickeCyclotomicCoefficients",
+    "SourceFrickeCyclotomicTransport",
+    "SourceFrickeTorsionConjugation",
+    "SourceFrickeCyclotomicField",
+    "SourceWeierstrassNormalizedTorsion",
+    "SourceWeierstrassTorsionCuspBound",
+    "SourceWeierstrassTorsionFourierCoefficients",
+    "SourceWeierstrassTorsionFourierSum",
+    "SourceWeierstrassTorsionFourierExpansion",
+    "SourceFrickeCuspInputs",
+    "SourceLipschitzTwo",
+    "SourceLipschitzTwoRealBoundary",
+    "SourceWeierstrassRowSeries",
+    "SourceWeierstrassLatticeRows",
+    "SourceWeierstrassTorsionExpansion",
+    "SourceWeierstrassTorsionTail",
+    "SourceWeierstrassTorsionHolomorphy",
+    "SourceFrickeHolomorphy",
+    "SourceFrickePeriodHomothetyV2",
+    "SourceFrickeModularLatticeV2",
+    "SourceFrickeTorsionTransformationV2",
+    "SourceFrickeFunctionTransformationV2"
+  ],
+  "separateReason": "Two rfl identities expose the same native function definitions. They have explicit axiom checks; no named proof-value use is claimed when elaboration reduces those definitions."
+}
