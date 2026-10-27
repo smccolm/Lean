@@ -1,0 +1,11 @@
+from pathlib import Path
+p=Path(r'E:\Lean\.tmp\dubon83')
+s=(p/'fetch_gamma_one_cyclotomic_transport_inputs_686.py').read_text(encoding='utf-8')
+s=s.replace('gamma-one-cyclotomic-transport-inputs-reuse-686','bounded-denominator-series-inputs-reuse-690b')
+s=s.replace("paths=['P2M/Sol/S_CuspForm_exists_gamma1_frickeRational_sigmaTransport.lean','P2M/Sol/S_ModularFunction_exists_mdifferentiable_sigmaTransport_of_frickeQuotient.lean']", "paths=['P2M/Sol/S_PowerSeries_mem_range_map_of_monic_of_mul_mem_range.lean','P2M/Sol/S_ModularCurve_exists_ne_zero_forall_mul_qExpansion_coeff_fricke_mem_adjoin.lean']")
+f=p/'fetch_bounded_denominator_inputs_690b.py';assert not f.exists();f.write_text(s,encoding='utf-8')
+s=(p/'record_fricke_cyclotomic_analytic_transport_687.py').read_text(encoding='utf-8')
+s=s.replace('source-fricke-cyclotomic-analytic-transport-5','source-gamma-one-rational-cusp-span-4').replace('fricke-cyclotomic-analytic-transport-route-687','gamma-one-rational-cusp-span-route-689').replace('SourceFrickeCyclotomicAnalyticTransportAudit5','SourceGammaOneRationalCuspSpanAudit4').replace('SourceFrickeCyclotomicAnalyticTransportDependencyAudit5','SourceGammaOneRationalCuspSpanDependencyAudit4').replace('SOURCE FRICKE CYCLOTOMIC ANALYTIC TRANSPORT','SOURCE GAMMA ONE RATIONAL CUSP SPAN')
+s=s.replace('==(5,19,27)','==(4,9,17)').replace('==5','==4').replace('all 27 required','all 17 required').replace('linterScopes=5','linterScopes=4').replace('requiredProofValueEdges=27','requiredProofValueEdges=17').replace('modules=5,queries=19','modules=4,queries=9').replace('proofEdges=27','proofEdges=17')
+f=p/'record_gamma_one_rational_cusp_span_689.py';assert not f.exists();f.write_text(s,encoding='utf-8')
+print('Prepared bounded-denominator input fetcher and rational-spanning receipt recorder')

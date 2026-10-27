@@ -1,0 +1,476 @@
+{
+  "status": "Canonical PASS; all failed helper evidence preserved with fresh successors. No audited source was rewritten or used audit rerun.",
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_rational_fourier_8493.ps1",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/build_gamma_one_rational_fourier_8493.ps1",
+      "sha256": "B931583AB895ACA9407FE34E3DD0AB3D59B93AC0EC970634059D5BB74B710F47"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_rational_fourier_ownership_8493.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/compare_gamma_one_rational_fourier_ownership_8493.py",
+      "sha256": "C145F67E16974CB30704EBAA93C7FC8463F3B121855544051692E52C56D1C39E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_rational_fourier_ownership_8493b.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/compare_gamma_one_rational_fourier_ownership_8493b.py",
+      "sha256": "60407C08FE645D7BFB03F40B5291E5F62612DB2C2D5AEA94BBB79CEE956FF9DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-rational-fourier-preexecution-review-8493.json",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-rational-fourier-preexecution-review-8493.json",
+      "sha256": "19815F97AE14A7DBAB6A10A78BAF5213907209D00CE8EA6830D5C1A73FD4710C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-rational-fourier-verification-wrapper-review-8493b.json",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-rational-fourier-verification-wrapper-review-8493b.json",
+      "sha256": "3E1C7B81851CB20617C695F8CE4F305949881097C28F20CE27D100948D04E327"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_rational_fourier_8493.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/integrate_source_gamma_one_rational_fourier_8493.py",
+      "sha256": "36271C6D288B89877BEC670F0F4BE7383B2970DF127F96C190CC0A585BA04D58"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_rational_fourier_global_ownership_8493.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/prepare_gamma_one_rational_fourier_global_ownership_8493.py",
+      "sha256": "AC3DF9B9012AAB85741B26D1514DC5F0062ABD3EC21A3A0EB16F82DB10D0808F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_rational_fourier_production_ownership_8493.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/prepare_gamma_one_rational_fourier_production_ownership_8493.py",
+      "sha256": "8A9546759F12D693DE37614A0DDB8873D28D0CBDF78B2792E00C80C7699BE368"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_rational_fourier_promotion_8493.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/prepare_gamma_one_rational_fourier_promotion_8493.py",
+      "sha256": "5B4D43BC2A523C319E526596050BED2E778C77A28B809348AF0D5D1C807F5A31"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_rational_fourier_scratch_ownership_8493.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/prepare_gamma_one_rational_fourier_scratch_ownership_8493.py",
+      "sha256": "4F490A21D3514940C48C99C804AFE6529BC52B9F0D7FE819EAF36D75AC1C6964"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_rational_fourier_verification_8493b.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/prepare_gamma_one_rational_fourier_verification_8493b.py",
+      "sha256": "A39D23CE22BAC8901861F760C70117856824A9521CFBABE6E5E95F9C0A6543AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_rational_fourier_8493.py",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/record_source_gamma_one_rational_fourier_8493.py",
+      "sha256": "D7676D26E9FC554392CDFE088A02073C82AC6078696504277E92D37F3B142C7A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-rational-fourier-ownership-comparison-8493.json",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-rational-fourier-ownership-comparison-8493.json",
+      "sha256": "8A6F2EDC664110156850ED1702CEDCCB3F558B5CEB4A808F4400436C94A2FA9C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-rational-fourier-production-build-8493.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-rational-fourier-production-build-8493.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-rational-fourier-production-build-8493.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-rational-fourier-production-build-8493.log",
+      "sha256": "BAC1E9ACD539AD1B8C6BC8089111E748037A0130D964C2EFE2959E89825343D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-rational-fourier-scratch-ownership-8493.json",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-rational-fourier-scratch-ownership-8493.json",
+      "sha256": "2B0577B29FCB53297A771AED59A275DF238B95AF25908E2EFEBB070F131C69B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicAnalyticTransportDependencyAudit5Production8493.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceFrickeCyclotomicAnalyticTransportDependencyAudit5Production8493.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicAnalyticTransportDependencyAudit5Production8493.lean",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceFrickeCyclotomicAnalyticTransportDependencyAudit5Production8493.lean.txt",
+      "sha256": "692EA2BB8E7ABE0A9EDF309D0471B947A8359F262FD904479E485FE705738462"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicAnalyticTransportDependencyAudit5Production8493.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceFrickeCyclotomicAnalyticTransportDependencyAudit5Production8493.log",
+      "sha256": "6922168385DF5F85FFEAB97D51B646EEB8A5D9CF60A6C81B9C238C2DD235EB35"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicConjugationDependencyAudit13V2Production8493.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationDependencyAudit13V2Production8493.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicConjugationDependencyAudit13V2Production8493.lean",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationDependencyAudit13V2Production8493.lean.txt",
+      "sha256": "A03285C8639B54526C7881BC095B73491B05C105EABF2ED9FCCC6B2952A03D17"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicConjugationDependencyAudit13V2Production8493.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationDependencyAudit13V2Production8493.log",
+      "sha256": "32D20E5F22CF92B352B11DF803226E69F925323AFC1444BCE1FBEFA0832B5EBB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspSpanDependencyAudit4Production8493.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalCuspSpanDependencyAudit4Production8493.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspSpanDependencyAudit4Production8493.lean",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalCuspSpanDependencyAudit4Production8493.lean.txt",
+      "sha256": "F712B35C635567F9FCEBE83545E08A4ECD197F65DF7B5E5EED7420FF3F2817DF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspSpanDependencyAudit4Production8493.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalCuspSpanDependencyAudit4Production8493.log",
+      "sha256": "E4BC7F24F708F53C1B89A31FB0B165435BAA35B11B089873B8FC8706979B6536"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierGlobalOwnership8493.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierGlobalOwnership8493.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierGlobalOwnership8493.lean",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierGlobalOwnership8493.lean.txt",
+      "sha256": "454983119E0AA419E70E6ED5EE6BDBC12B11A90685407FBF601991BCDC173CB1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierGlobalOwnership8493.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierGlobalOwnership8493.log",
+      "sha256": "829A85404B0F6DECEB054D50AF95805258C1307A92ED28F7BDED2E857518F417"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierOwnership8493.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierOwnership8493.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierOwnership8493.lean",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierOwnership8493.lean.txt",
+      "sha256": "3DE9B35496551BB21C507B16BFE30380BA67876F40005E2AAA5805112F1A587C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierOwnership8493.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierOwnership8493.log",
+      "sha256": "ED4D7CAB4A0CAE8D603129E31CC5B1C9674C36429A358011E40B1DD5EC9D3487"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierProductionAudit8493.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierProductionAudit8493.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierProductionAudit8493.lean",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierProductionAudit8493.lean.txt",
+      "sha256": "0EFA2FFA47DEB7C1A1B4EE5DE72F08C0F1E73212EE9E83F1DE7CD0B9C29D8932"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierProductionAudit8493.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierProductionAudit8493.log",
+      "sha256": "F9F3DA8F799D16E38FADA30DF93047ED9805A79BD72AEA8BB120D403241C0D0B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierScratchOwnership687For8493.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierScratchOwnership687For8493.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierScratchOwnership687For8493.lean",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierScratchOwnership687For8493.lean.txt",
+      "sha256": "BC49A5DDE2CC39CADEFA9CB905B6AA719E8C0A75C4D3CF76D64BBCBAA1808207"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierScratchOwnership687For8493.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierScratchOwnership687For8493.log",
+      "sha256": "40C15BDDFA8F15205030246AFF2AE9F292E63C6F7859578C52F5E0D466D87D65"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierScratchOwnership688For8493.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierScratchOwnership688For8493.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierScratchOwnership688For8493.lean",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierScratchOwnership688For8493.lean.txt",
+      "sha256": "F4C8D108372F9EFAD4D65E856E9A40CB762F01B964A32311A2590A88CA92EAAC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierScratchOwnership688For8493.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierScratchOwnership688For8493.log",
+      "sha256": "CCB720C7E6272A664B274128DA6738E43278A7F87D995AB91E27E463E4CC3457"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierScratchOwnership689For8493.exit",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierScratchOwnership689For8493.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierScratchOwnership689For8493.lean",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierScratchOwnership689For8493.lean.txt",
+      "sha256": "7BC33ABF706A34BFA1575DD7979A34EC9F31B93CC755FE8B35E22F93EE9FD9A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierScratchOwnership689For8493.log",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierScratchOwnership689For8493.log",
+      "sha256": "10593FD690010A8BD9213B5B0196D33ACA4D6AAE30BA9A6E8984FACF2678765C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_rational_fourier_8493.ps1",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/verify_gamma_one_rational_fourier_8493.ps1",
+      "sha256": "71925353CB263E95CBF75503531899E5B086B9743EC4B39074C86193D0CA595C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_rational_fourier_8493b.ps1",
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/verify_gamma_one_rational_fourier_8493b.ps1",
+      "sha256": "DE28BF0B66737AB3F8E9F4FB23F8DB73EE01EA0635E44CFF67E57CF5ADDF7A1D"
+    }
+  ],
+  "canonical": {
+    "recordedUTC": "2026-10-27T01:43:28.096681+00:00",
+    "log": "logs/dubon-build-20261026-171724-891.log",
+    "sha256": "588325D6F0A0181F9DF45501C8E69526C7957D365268F597F965BB2B4FD3D124",
+    "bytes": 13830977,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8493,
+    "projectTheorems": 53717,
+    "registeredConsumers": 24587,
+    "registeredConstructions": 2440,
+    "declarations": 32980,
+    "generated": 33909,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261026_170935.log",
+    "foundationSha256": "92A039D3C4B1E9DA62F995B9EFB8BDBC8B44EF324F20B5CBA9A7778F055EC2B4",
+    "countReconciliation": {
+      "previousTheorems": 53628,
+      "focusedTheorems": 89,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 89,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierGlobalOwnership8493.log",
+      "globalOwnershipSha256": "829A85404B0F6DECEB054D50AF95805258C1307A92ED28F7BDED2E857518F417",
+      "globalOwnershipSourceSha256": "454983119E0AA419E70E6ED5EE6BDBC12B11A90685407FBF601991BCDC173CB1",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierOwnership8493.log",
+      "ownershipSha256": "ED4D7CAB4A0CAE8D603129E31CC5B1C9674C36429A358011E40B1DD5EC9D3487"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 89,
+      "scratchDistinct": 89,
+      "generatedNameRenamings": {},
+      "productionFocused": 89,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceCyclotomicFrickeIndex",
+            "SourceFrickeLaurentCyclotomicConjugation",
+            "SourceFrickeLaurentFieldConjugation",
+            "SourceOriginalFrickeLaurentField",
+            "SourceFrickeCyclotomicAnalyticTransport"
+          ],
+          "count": 24,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierScratchOwnership687For8493.log",
+            "sha256": "40C15BDDFA8F15205030246AFF2AE9F292E63C6F7859578C52F5E0D466D87D65",
+            "sourceSha256": "BC49A5DDE2CC39CADEFA9CB905B6AA719E8C0A75C4D3CF76D64BBCBAA1808207"
+          }
+        },
+        {
+          "modules": [
+            "SourceFrickeCyclotomicConjugateRelation",
+            "SourceCyclotomicModularLift",
+            "SourceCyclotomicGammaOneLift",
+            "SourceCyclotomicLevelRingCovariance",
+            "SourceCyclotomicConjugateCancellation",
+            "SourceCyclotomicFractionCovariance",
+            "SourceCyclotomicConjugateCuspOrder",
+            "SourceCyclotomicHolomorphicDivision",
+            "SourceCyclotomicEllipticDivisibility",
+            "SourceCyclotomicEllipticCoordinates",
+            "SourceGammaOneCuspCyclotomicConjugation",
+            "SourceCyclotomicCuspFourierTransport",
+            "SourceGammaOneCyclotomicFourierConjugation"
+          ],
+          "count": 50,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierScratchOwnership688For8493.log",
+            "sha256": "CCB720C7E6272A664B274128DA6738E43278A7F87D995AB91E27E463E4CC3457",
+            "sourceSha256": "F4C8D108372F9EFAD4D65E856E9A40CB762F01B964A32311A2590A88CA92EAAC"
+          }
+        },
+        {
+          "modules": [
+            "SourceCyclotomicTraceStructure",
+            "SourceGammaOneFourierLinear",
+            "SourceGammaOneRationalTraceSpan",
+            "SourceGammaOneRationalCuspSpan"
+          ],
+          "count": 15,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierScratchOwnership689For8493.log",
+            "sha256": "10593FD690010A8BD9213B5B0196D33ACA4D6AAE30BA9A6E8984FACF2678765C",
+            "sourceSha256": "7BC33ABF706A34BFA1575DD7979A34EC9F31B93CC755FE8B35E22F93EE9FD9A4"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalFourierOwnership8493.log",
+        "sha256": "ED4D7CAB4A0CAE8D603129E31CC5B1C9674C36429A358011E40B1DD5EC9D3487",
+        "sourceSha256": "3DE9B35496551BB21C507B16BFE30380BA67876F40005E2AAA5805112F1A587C"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-145740-380.log",
+        "sha256": "7B1F9AFDEB3896480803ED8FE3E6D731D9ACD6DF55D68A8A3405C618CD4D77A0"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 22 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceCyclotomicFrickeIndex",
+            "scratchSha256": "9F19B7CF41DE2C85A688CFBB91BA1BD10C9D7040427C83F4C3364AADA7AE52BF",
+            "productionSha256": "E0E2533DB46F1D649C503A3B7761AAC111725798D008028C8AAC9D6E77CF7F7E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeLaurentCyclotomicConjugation",
+            "scratchSha256": "A607C0D58E9EB96C0CADBC80760CDCE50C515B170AF8B074F0E589F7332829A3",
+            "productionSha256": "A8D4D0CCB66359FCFF139553A27B389C27BE7501F2F41331F184ECC0440F38CA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeLaurentFieldConjugation",
+            "scratchSha256": "B5103535D2C30A5A9E51F89F359A1A9F55B6EC959B1130020FA7ED34FB117C38",
+            "productionSha256": "CD50E4507234359B1A82DEA7024A17A77E0E4A7D4C890329B67680E2FEF2C1A0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceOriginalFrickeLaurentField",
+            "scratchSha256": "F3F6698DDE66E65A66A9355720680C56522124E5FF34409900CE6F98C656BAD2",
+            "productionSha256": "8DFD181BE142EDB61D8BF992DFD9272E10F996EA50CC34C3527F9DF1B733859C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeCyclotomicAnalyticTransport",
+            "scratchSha256": "4514C5D651D1AE17CFF6E8659151D22616C3BB607AE08D7FB9B9EDB3137A8D67",
+            "productionSha256": "78C06E7E96142AB25E78B2B1EF6F8B3BE9F28557C4CCD34781DA92D2BFB2125F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceFrickeCyclotomicConjugateRelation",
+            "scratchSha256": "78DD14184B1237933AC06B009A89C71F4E6F9129ACC9D3C5193EA3411097E40D",
+            "productionSha256": "1347F7D1EB58E1C49076D0C3682B562F58DAF038D87E151EE305C98E0A187DD7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCyclotomicModularLift",
+            "scratchSha256": "9936DFC147D80EFB14C57733B8A990D83EC16D0214662BEC803BEB705CD95A59",
+            "productionSha256": "C44AF4DAFC4B71408274A14922B15C1BD3BF61188C3CBE42653EB9BFC95DDF2D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCyclotomicGammaOneLift",
+            "scratchSha256": "E8DCC781C0BF90E58C64AE3B630A9E8C36A085529E4FFA01AE3D010BEAA29AE9",
+            "productionSha256": "F09F51D7CB590D498FB7D89FF6C3310C233AE21C81BF338ED2C96BCADBF44DBC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCyclotomicLevelRingCovariance",
+            "scratchSha256": "6C95BC2D07520594607F1592736CC812751F2C8B8593E365D78B5E789BFFBF6F",
+            "productionSha256": "1F46583F77B775B26E5469DD94A877BE45A7DECD8D7CBA16893A8F0EAE976706",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCyclotomicConjugateCancellation",
+            "scratchSha256": "C07695BF61523EBCD03D2E43D684D803600C67A2531AFE9B3AE2960AF5F1603C",
+            "productionSha256": "7051B931C1C913118A2E13988A06C48715108EDB831C0CFC9251A4B63472A29A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCyclotomicFractionCovariance",
+            "scratchSha256": "A58BB343689C804A194D55593DF7E25F3DDBE0F2729BB8D338E72D4B9562482B",
+            "productionSha256": "FE03D9E58F22A36F6934E78DB90AB022117C52D7FC8E67F88B2AB2165D6CEC73",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCyclotomicConjugateCuspOrder",
+            "scratchSha256": "42C0ED769A6098A589AFF2A8D41F18AF7E78F6A78BC6E887AC5058A3F32C03D3",
+            "productionSha256": "234DEA8EAF89BB8129F6901C41B96A048D40AFE09DE55D083BD6556D696ED85C",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCyclotomicHolomorphicDivision",
+            "scratchSha256": "9D9FCA5DC93CFF0A98229153700FF535F1A8F57B44689A42F7C9DD6B75D1E0BA",
+            "productionSha256": "6D9C4DE7CFCE2FE71656C1885FB148DB5A802EF2E2655E4C549F77A4873DC8A1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCyclotomicEllipticDivisibility",
+            "scratchSha256": "B4F230F41BF000ACE8B6E11EFF33ADFD193B9D2743C7646ECB7DD2BB2CA24CD7",
+            "productionSha256": "8D7401497B86FB13D007BC0EC4DE738BC2890F8E6CE6F53B49481E14FAE339E0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCyclotomicEllipticCoordinates",
+            "scratchSha256": "B6C44EBBD025A1E39AA052099C6E94EEDFCBC04939C1A3FD31198ABE0C6841A9",
+            "productionSha256": "9A9FC0D287BA3DF06A80A0059DEBF682670B40B3E1075DED0F14E5C426712260",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspCyclotomicConjugation",
+            "scratchSha256": "5D37D895BBAA85921A3F4950E354B7AD9AAB0BD8B33B11A134439EB55EBE6EC2",
+            "productionSha256": "F0DD7AE002BC670D78CAC3B8AC32C893D7353B1F8A40810E8DF3789727EBFA12",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCyclotomicCuspFourierTransport",
+            "scratchSha256": "26C41A61C722E1B27E48A6BBB021AEF03E88A1B86AA27D07DD368A439032B253",
+            "productionSha256": "7225D3ED07B909D4088C5952B497E978B74949BB569EFDDABA6BC1B1342F1817",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCyclotomicFourierConjugation",
+            "scratchSha256": "B6F3CCDACE4E0EF4DDE5075AA1337EF3CBE3C714D1044F6CF48A2FF18C861615",
+            "productionSha256": "A9A6DB3CE148E6D7B7A91132ECCF7B4C89EE8A19E2CC58636EBD573DF8C16678",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceCyclotomicTraceStructure",
+            "scratchSha256": "A701D8A8AF3CC8663D5F2DBD943E93ECAF422DBDCBF7AE40922E5757432A5A04",
+            "productionSha256": "0355F055AFC92AA0030F5138B09A62C391D55408D48D8FB4CBA03C77B44F82C7",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneFourierLinear",
+            "scratchSha256": "CBE3498B47174EF590A64356B81B068004DB54E5A6B7D7D4A5D16F57891A23BA",
+            "productionSha256": "23ADD4FF88B5B8792E0C831693FC9D47A1F031C8C095418F0E41048280992019",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRationalTraceSpan",
+            "scratchSha256": "B4F6F410B3CAC65CD283724B5F11766349386E512BC8B927E448DA671BEE56B1",
+            "productionSha256": "EF20EAB12E1296F6704ADD6945A26F58124F9BF16CD656910596FB5B368B36AF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRationalCuspSpan",
+            "scratchSha256": "BBD748670D9D7D65948A7B06E558C95900F77AC4D70333718F9BC913013D64D4",
+            "productionSha256": "CE99E272061CCE81B1120B4CCDE503D8148D9C90655444EB9B7B8EBFD58D3314",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 89 distinct names from 89 exhaustive scratch checks are retained: 89 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Rational Fourier spanning is proved, but bounded denominators for the original integral-ratio function field remain. Arbitrary Gamma1 cusp differential realization and the converse regular-differential construction remain. The actual Picard/H1, full/parabolic, transpose and diamond comparison must identify original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of those characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. No unrestricted odd-weight weight-lowering claim is made, and the all-weight arithmetic goal is unchanged. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN."
+  }
+}

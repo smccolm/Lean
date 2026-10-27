@@ -1,0 +1,984 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-integral-differential-promotion-route-699.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/gamma-one-integral-differential-promotion-route-699.json",
+      "sha256": "C22EB80F07E618CA4D9246B6BF349B1F8F4CE948591192427C33E723375B0E9C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspDifferentialRealizationAudit6.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneCuspDifferentialRealizationAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspDifferentialRealizationAudit6.lean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneCuspDifferentialRealizationAudit6.lean.txt",
+      "sha256": "34970BF10CB5237C1A255C7F0F7A1A5563B112262C784018B9C552EE64ED2752"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspDifferentialRealizationAudit6.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneCuspDifferentialRealizationAudit6.log",
+      "sha256": "1F3BC580C6A3DD2226E77BC462D74F4EC1347E8DE45EFA5797FC817333D18A2A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspDifferentialRealizationDependencyAudit6.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneCuspDifferentialRealizationDependencyAudit6.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspDifferentialRealizationDependencyAudit6.lean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneCuspDifferentialRealizationDependencyAudit6.lean.txt",
+      "sha256": "22E9FD949E5469C4E1B7D170DEF60FFB85A641CA28262ADFF381A33AFF4D8D77"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspDifferentialRealizationDependencyAudit6.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneCuspDifferentialRealizationDependencyAudit6.log",
+      "sha256": "7BE641E72766E6BCD613B9E08222C76E3DCE6B5C1E7CAF22FFEFBBF8B31DD879"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspDifferentialScratchOwnership697.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneCuspDifferentialScratchOwnership697.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspDifferentialScratchOwnership697.lean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneCuspDifferentialScratchOwnership697.lean.txt",
+      "sha256": "57C6E427564AD769E80A64D3D0DF76001DCC8501B7985218E628B3AE3302A145"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspDifferentialScratchOwnership697.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneCuspDifferentialScratchOwnership697.log",
+      "sha256": "A97D2B53882A930BD4C59786C69CAA43A6FE71798C59200DCE8EDCE4F91C7BAD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspScratchOwnership696.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspScratchOwnership696.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspScratchOwnership696.lean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspScratchOwnership696.lean.txt",
+      "sha256": "AAFE43B7F32E940D48D6F901F39DCDEEA17BAF53DB2E8DAD5ED75BFB86BF4DFA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspScratchOwnership696.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspScratchOwnership696.log",
+      "sha256": "189B976D40E90AB518E9C2B46030C95834C21CD3D5E3AF3C73CBD35283C0A8C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspScratchOwnership696V2.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspScratchOwnership696V2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspScratchOwnership696V2.lean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspScratchOwnership696V2.lean.txt",
+      "sha256": "A9F48F03BCCB0C9FCABA23E41BD056D0AC48FA6833345B17C192834CECDE7983"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspScratchOwnership696V2.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspScratchOwnership696V2.log",
+      "sha256": "3ABFEF71571828BC397002985D2E75CB352855859043363CEA66272DD575C789"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspSpanAudit23.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspSpanAudit23.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspSpanAudit23.lean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspSpanAudit23.lean.txt",
+      "sha256": "D90BF94AD3C284F4FAC37628DC4EE46679CDEF4BF9DD17E68E9795F1648E8FFC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspSpanAudit23.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspSpanAudit23.log",
+      "sha256": "57DE20B8A061C8F5885E3C91AB4B680DBBC5A33294FF6D3008F627D2E940FA29"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspSpanAudit23V2.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspSpanAudit23V2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspSpanAudit23V2.lean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspSpanAudit23V2.lean.txt",
+      "sha256": "D90BF94AD3C284F4FAC37628DC4EE46679CDEF4BF9DD17E68E9795F1648E8FFC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspSpanAudit23V2.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspSpanAudit23V2.log",
+      "sha256": "82958522B6C23070F2E4B29EB1FA96F14A984B11D0145D48FFA32047DA377A0E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspSpanDependencyAudit23V2.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspSpanDependencyAudit23V2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspSpanDependencyAudit23V2.lean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspSpanDependencyAudit23V2.lean.txt",
+      "sha256": "7EBCCC2F27655329A2AF9F8B4783E711D9A1EA93C5476788C327AEA3C738261F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspSpanDependencyAudit23V2.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspSpanDependencyAudit23V2.log",
+      "sha256": "3945F7DAEB70F33BD4F9CFDA0F0FDE9716EBAE659EF87DC620083D7A17ED0042"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\bounded-denominator-reuse-assessment-690.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/bounded-denominator-reuse-assessment-690.json",
+      "sha256": "44A0BF25B79691D7E986702D9C658C0BC35E5A7B8617C1A9CA846350A4C38B22"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers691.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/consumers691.txt",
+      "sha256": "07669506EC30629CF07B017A8778BC88B9203E60479C115C6B822DC17C62F302"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_bounded_denominator_inputs_690b.py",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/fetch_bounded_denominator_inputs_690b.py",
+      "sha256": "EDE837B114A1AD9EBDB2C3E5C5F47FF0E8A1575B9C9733C9E7A26FA0414414BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\fetch_gamma_one_bounded_denominator_core_690.py",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/fetch_gamma_one_bounded_denominator_core_690.py",
+      "sha256": "0D63533942559EAE250BBF1EC419B32A3D4F1ACEA0EFAC9F9E3EE2E3E5F72A66"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-differential-realization-audit-route-697.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/gamma-one-cusp-differential-realization-audit-route-697.json",
+      "sha256": "B88D45294A0A3C29F5ED60CF3EFEBEAA688519DEF363C906FA8F800CE601B5C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-differential-scratch-ownership-697.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/gamma-one-cusp-differential-scratch-ownership-697.json",
+      "sha256": "DB7F4073E532FF3C39D97AD5B6307BEA91298A2DF0DA859640F10BB93F67AC44"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-differential-realization-route-697.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/gamma-one-differential-realization-route-697.json",
+      "sha256": "2BC25E3F3876C53180AD8D9C8B358F5C232B5CBEBBFBC499C5485B951FE97BA7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-integral-cusp-span-route-696.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/gamma-one-integral-cusp-span-route-696.json",
+      "sha256": "800F02A3424B650652F95F0678CB86D1BDAEC05D54A1D9B510EA4203612D51F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-repair-696b.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-repair-696b.json",
+      "sha256": "6FE8DC0E96689CF682D1375766B68EC55261B4E73CA85EBE7EBA3BDE13D1459A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-ownership-encoding-repair-696c.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-ownership-encoding-repair-696c.json",
+      "sha256": "8E1D8911E14517BD8380D135CC215055648BD8856AF2F60B51F7AEB6D4EE2550"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-scratch-ownership-696.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-scratch-ownership-696.json",
+      "sha256": "30547F87098E5057C86486E532F22573A6312EC2A2E5656128759B1DFE8502E6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-selected-scope-696.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-selected-scope-696.json",
+      "sha256": "43E2FD31782933AC666358050670946504EB04898BF40164F03C132DCDF8DDBB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\laurent-denominator-reuse-route-695.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/laurent-denominator-reuse-route-695.json",
+      "sha256": "B117FDC2679041FC8E14F3DAA007CEB2E237F22AF082EF2592FFA8715A3AE0D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules691.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/modules691.json",
+      "sha256": "DDCEE39E475B40C50F91E33A671A05E449A3F280CAF37B2C1DC499863FA3EC4F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_bounded_denominator_inputs_690b.py",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/prepare_bounded_denominator_inputs_690b.py",
+      "sha256": "DE38340749E5E07BF548E0E9562FA5A503F3CA2E3C61E97F3AE649572CB230C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_differential_realization_audit_697.py",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/prepare_gamma_one_differential_realization_audit_697.py",
+      "sha256": "94CAC88149D8A38EC4E4494D1A8E344CB2E00A9F9EF74A218EE7E3FEEB108B4C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_integral_cusp_audit_696.py",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/prepare_integral_cusp_audit_696.py",
+      "sha256": "3A47FA930CF6BB6051CC19E87187356B67B4DDBDF267610E977454F86C2E04DF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_integral_cusp_scope_696.py",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/prepare_integral_cusp_scope_696.py",
+      "sha256": "6B91F8CF2BC7F5E4364F6BD7CC47EEA366E06D976F1F75940CCAC3391FA16CE5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record691.py",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/record691.py",
+      "sha256": "72345DEC7323EA867B475F042E047007FAFDF3A663489DB7507E4A246AEAFD9A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_bounded_denominator_reuse_review_690.py",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/record_bounded_denominator_reuse_review_690.py",
+      "sha256": "339047F3C0FC2386C347292037D8812CFCAA60ABAA5921A4719E6C5083B9673E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_differential_realization_697.py",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/record_gamma_one_differential_realization_697.py",
+      "sha256": "091151A10BA108824C2F07071CCE65FB00488FD1FA60237B1F6BA7D98F6DDBFA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_integral_cusp_span_696.py",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/record_gamma_one_integral_cusp_span_696.py",
+      "sha256": "60D889FA0BB740A55E60E2ABDF54D7B3B673B91018F386AD6DC21E78CCAF04D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_laurent_denominator_route_695.py",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/record_laurent_denominator_route_695.py",
+      "sha256": "045F22398273F45B12C9CB6EB5C88CD74ABC64340D03B7186D32052429E3E109"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_shorter_denominator_routes_693_694.py",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/record_shorter_denominator_routes_693_694.py",
+      "sha256": "841C47A0226C31A9433DABF5B573B579C4815C008C19FFE02497E05589424928"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register691.py",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/register691.py",
+      "sha256": "695EE72B2AB94180A99C80D1DEFB0DE0FFBF9ED94892546F61E656A9F56F569F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations691.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/registrations691.json",
+      "sha256": "022D26E8AB9A6CC5E4AC9A2B46301C15E820F2F7B15A467AD0D8F5D49367E4DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\restore_frozen_span_module_695.py",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/restore_frozen_span_module_695.py",
+      "sha256": "5F3D36CAFA23CA35C183AB01FCDA043D56728767F68BDA7F772B2BD752AA0503"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\restore_frozen_span_module_695b.py",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/restore_frozen_span_module_695b.py",
+      "sha256": "BE567EA06904C57EDB25772844A30E74027F0BEAE93B569FB3BC2B0AC3810860"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\scratch-name-collision-restoration-695.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/scratch-name-collision-restoration-695.json",
+      "sha256": "B5351032F2D52D0133E7242052D55A14694EA2229EFEA11EEBB73AFE47DBD41B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\scratch-name-collision-restoration-verification-695.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/scratch-name-collision-restoration-verification-695.json",
+      "sha256": "13B97FAB917996026B42F73479EE750518FC6E883AA1C7453086613FF4A8F4CA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section691.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/section691.txt",
+      "sha256": "9796A715629880848B888D265FA5C12D9B3E79D211A0D5A60007294FDBE6A4EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\shorter-denominator-route-693.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/shorter-denominator-route-693.json",
+      "sha256": "39E3B7628D75BD6CCA9CB9B82BFB925AAB35B3FD6345B86B064AB1FFF1A9D2C9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\shorter-denominator-route-694.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/shorter-denominator-route-694.json",
+      "sha256": "45C3E5A410F3E67CA00D241800133B42162FF9A29C99F1E324C1D0217B024174"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-differential-realization-6-audit-config.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/source-gamma-one-cusp-differential-realization-6-audit-config.json",
+      "sha256": "1B2269C535F4667F66B0D05908B8FD4FF24D0DC2069D7AB4F23C2D419D356E77"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-differential-realization-6-scratch-receipt.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/source-gamma-one-cusp-differential-realization-6-scratch-receipt.json",
+      "sha256": "8801725A8FAEC671A45FD3F1B9573CCE05C55EDF3780B8C1BB46BA55F1946C5D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-integral-cusp-span-23-audit-config.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/source-gamma-one-integral-cusp-span-23-audit-config.json",
+      "sha256": "F79D68DA3A65A848B054E1DE8ED6EDD960074E16A737B31CBBE4AE4CC06AA353"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-integral-cusp-span-23-scratch-receipt.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/source-gamma-one-integral-cusp-span-23-scratch-receipt.json",
+      "sha256": "C18E5C8AF9E00AA65BFE91DC91F31025F8B1227985D4FBBB70CCD63B6C7A1E80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status691.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/status691.txt",
+      "sha256": "B6BCD63355E0997FE444806A2B37B47D2DABA937863328E278F12571255D5B12"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-bounded-denominator-core-reuse-690\\P2M\\Sol\\S_ModularCurve_exists_ne_zero_forall_intCast_mul_qExpansion_coeff_of_gamma_invariant.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/gamma-one-bounded-denominator-core-reuse-690/P2M/Sol/S_ModularCurve_exists_ne_zero_forall_intCast_mul_qExpansion_coeff_of_gamma_invariant.lean.txt",
+      "sha256": "31D66307ECD14D81D003AB2152963B4C97D5330FFE38A3DD0A04DAAF1C89457A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-bounded-denominator-core-reuse-690\\snapshots.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/gamma-one-bounded-denominator-core-reuse-690/snapshots.json",
+      "sha256": "6729D25AC92FD829D0D2FEFD8E27F21590DE366267DD35805D49EEB3FA819EB0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\bounded-denominator-series-inputs-reuse-690b\\P2M\\Sol\\S_ModularCurve_exists_ne_zero_forall_mul_qExpansion_coeff_fricke_mem_adjoin.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/bounded-denominator-series-inputs-reuse-690b/P2M/Sol/S_ModularCurve_exists_ne_zero_forall_mul_qExpansion_coeff_fricke_mem_adjoin.lean.txt",
+      "sha256": "4B673F2415E1CBA900F4F8FDBB535168A6718F6B3A14B8C1E0CA4AD94C79743F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\bounded-denominator-series-inputs-reuse-690b\\P2M\\Sol\\S_PowerSeries_mem_range_map_of_monic_of_mul_mem_range.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/bounded-denominator-series-inputs-reuse-690b/P2M/Sol/S_PowerSeries_mem_range_map_of_monic_of_mul_mem_range.lean.txt",
+      "sha256": "7E1DFA3F39F90E37BD849F684D36BF8932F0FB4A1BAFC46956A70F35A7802705"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\bounded-denominator-series-inputs-reuse-690b\\snapshots.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/bounded-denominator-series-inputs-reuse-690b/snapshots.json",
+      "sha256": "6C2C2BC0D6A85607BB5050BE7DDB8713120CCFA40D992E53D6B4C29574A588DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedCyclotomicFractionTrace.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedCyclotomicFractionTrace.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedCyclotomicFractionTrace.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedCyclotomicFractionTrace.lean.txt",
+      "sha256": "C41EC4A1C1A3199001EA545876728F22F300BB3FA9FAF0C3A10B463415DFA3A1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedCyclotomicFractionTrace.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedCyclotomicFractionTrace.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedCyclotomicFractionTrace.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedCyclotomicFractionTrace.olean",
+      "sha256": "5158ABA4C2B43A2FB77E0B7BDA89410DF7D321196979140F361890EDAD80CDF0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedIntegralLaurentAlgebra.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedIntegralLaurentAlgebra.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedIntegralLaurentAlgebra.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedIntegralLaurentAlgebra.lean.txt",
+      "sha256": "77FB7F50FC533C93724D3D6E6F3539C42BBE6469C272F1D03467CEDC366D3A7B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedIntegralLaurentAlgebra.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedIntegralLaurentAlgebra.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedIntegralLaurentAlgebra.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedIntegralLaurentAlgebra.olean",
+      "sha256": "1EE0360A4EB2E22785E3B1D66C3F3EC896A8800C5DEB62816B994B3175504246"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedRationalSeriesImage.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedRationalSeriesImage.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedRationalSeriesImage.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedRationalSeriesImage.lean.txt",
+      "sha256": "7A18A19CA0CE1C94DE90BC76FD06AF91E7AD9893C8FFDEB8DEB9E515B9D8F7ED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedRationalSeriesImage.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedRationalSeriesImage.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedRationalSeriesImage.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedRationalSeriesImage.olean",
+      "sha256": "764120F988DB5D094775C5AE625144E61EF4903C2A931C9478FD969C17E90791"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedRationalSeriesIntegral.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedRationalSeriesIntegral.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedRationalSeriesIntegral.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedRationalSeriesIntegral.lean.txt",
+      "sha256": "BAC425CB96AE34468AE22F932D7918359DA3B385ABFFE728224AA8E9DA7550DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedRationalSeriesIntegral.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedRationalSeriesIntegral.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedRationalSeriesIntegral.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedRationalSeriesIntegral.olean",
+      "sha256": "598351575F7A5AD685BED2292B67DE3C0282507A5224180602D938B448AEC6ED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceCyclotomicSeriesTrace.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceCyclotomicSeriesTrace.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceCyclotomicSeriesTrace.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceCyclotomicSeriesTrace.lean.txt",
+      "sha256": "2B06FAF7DF08F8F6F60E7E8B36A1061163A3DE5793D4F466F3229939A6CD27A8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceCyclotomicSeriesTrace.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceCyclotomicSeriesTrace.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceCyclotomicSeriesTrace.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceCyclotomicSeriesTrace.olean",
+      "sha256": "CE616199C8BCBF1AF4A34E751BC0A411C3EE77374C71AAA38ADC9479F58F76C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceIntegralRationalPowerSeries.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceIntegralRationalPowerSeries.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceIntegralRationalPowerSeries.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceIntegralRationalPowerSeries.lean.txt",
+      "sha256": "F740AC59114518DF176D3BF46E4F8935BBBFD785CA03DDE4B1A5F12EC02C855D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceIntegralRationalPowerSeries.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceIntegralRationalPowerSeries.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceIntegralRationalPowerSeries.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceIntegralRationalPowerSeries.olean",
+      "sha256": "722E68123B6B0D3FBADBF5621EAA180219409E29151BE60AD5D83BE45DA186BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedCyclotomicLaurentFraction.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedCyclotomicLaurentFraction.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedCyclotomicLaurentFraction.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedCyclotomicLaurentFraction.lean.txt",
+      "sha256": "DB9758D8D3AA1C7881E2F8F868DB1E2FDE57372A310E3CD6F51BE34C4463B269"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedCyclotomicLaurentFraction.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedCyclotomicLaurentFraction.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedCyclotomicLaurentFraction.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedCyclotomicLaurentFraction.olean",
+      "sha256": "200C865F8831EA07CDE4BD2B5C1D04ADA37DF2084C1424CDA60886328965BD5C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedCyclotomicLaurentGenerators.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedCyclotomicLaurentGenerators.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedCyclotomicLaurentGenerators.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedCyclotomicLaurentGenerators.lean.txt",
+      "sha256": "D783F2CF5DEE216F70F0B867DC9E6E23983C12BE42739688271B2498DA69BEE1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedCyclotomicLaurentGenerators.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedCyclotomicLaurentGenerators.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedCyclotomicLaurentGenerators.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedCyclotomicLaurentGenerators.olean",
+      "sha256": "DD75D56ED482D6E98F2CC3C668A6A4F014B688A628876E7537B16932E444655F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedFrickeLaurentField.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedFrickeLaurentField.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedFrickeLaurentField.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedFrickeLaurentField.lean.txt",
+      "sha256": "224CBE3CD3D6B42F00159CEAD11B435FCFE31C61449A2183E76C12414BC0D105"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedFrickeLaurentField.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedFrickeLaurentField.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedFrickeLaurentField.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedFrickeLaurentField.olean",
+      "sha256": "16F808F81082067804D087E03436EBB6A01CDFCFBFFCAB304507BD19EC3B5DB3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralLaurentAlgebra.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralLaurentAlgebra.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralLaurentAlgebra.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralLaurentAlgebra.lean.txt",
+      "sha256": "9339498771C51CC16078CFAA6475D5DBDD1098CAD8E5B0F69B7D7594D7BF6065"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralLaurentAlgebra.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralLaurentAlgebra.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralLaurentAlgebra.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralLaurentAlgebra.olean",
+      "sha256": "3E2EB44CE5D84B4174B1AA29F332C243DAAE6F9B437A6E232FE135B244FF4B24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralSeriesConstant.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralSeriesConstant.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralSeriesConstant.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralSeriesConstant.lean.txt",
+      "sha256": "B122557A816E4024DACDC6968148856377BCB3C3CAB4A9A7FBEE5593EA78C89B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralSeriesConstant.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralSeriesConstant.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralSeriesConstant.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralSeriesConstant.olean",
+      "sha256": "E810C843746AE91861B1B9B50C9E6932648235291542AF94AEFC218324BA325A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralSeriesProduct.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralSeriesProduct.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralSeriesProduct.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralSeriesProduct.lean.txt",
+      "sha256": "A2BCE1DB533BC9B2D25842C5B76215D7957068F7F156008491EAF386881E3A58"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralSeriesProduct.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralSeriesProduct.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralSeriesProduct.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralSeriesProduct.olean",
+      "sha256": "810E199CBC73E90154F9B971316EB6170C255A7283B0879DDA8599963C192FE1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalCuspImage.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalCuspImage.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalCuspImage.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalCuspImage.lean.txt",
+      "sha256": "5564690DA01AF3A6C55CC11AC5735DC6653D336A097C20C006266823A79887F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalCuspImage.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalCuspImage.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalCuspImage.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalCuspImage.olean",
+      "sha256": "2314371BD62624FC36665E8238934E9BE463A065479789153113CB32791F4C3B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalJAlgebra.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalJAlgebra.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalJAlgebra.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalJAlgebra.lean.txt",
+      "sha256": "8270C736821392B04EFE04A7FDA44151EC194558C29F85554CF5117690B878F9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalJAlgebra.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalJAlgebra.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalJAlgebra.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalJAlgebra.olean",
+      "sha256": "50774733B5A121DB6756E3680F2E5D44413C4EE0E91C2271A1BDDF5ECC822FF9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalLaurentImage.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalLaurentImage.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalLaurentImage.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalLaurentImage.lean.txt",
+      "sha256": "8FFDA7D0C088DD1CB5D616D9B5ABFD4DB662D25FD6EE6DFE22707CD867FF30C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalLaurentImage.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalLaurentImage.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalLaurentImage.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalLaurentImage.olean",
+      "sha256": "3A52A9C011E9C7709CFB9B31CD8EB5A6F693011719949CABA205FD2FFFA61CAA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalLaurentIntegral.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalLaurentIntegral.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalLaurentIntegral.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalLaurentIntegral.lean.txt",
+      "sha256": "3576FDE022CF9ABB34C8C18A4E51852941F2DD1BDE29F28CA319DDE9686F720F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalLaurentIntegral.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalLaurentIntegral.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalLaurentIntegral.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalLaurentIntegral.olean",
+      "sha256": "E2772392E756E27DDFE4DA77E2F3A2C01A5F1C257A2980B7AFBF99EAA87FBD3C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalSeriesImage.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalSeriesImage.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalSeriesImage.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalSeriesImage.lean.txt",
+      "sha256": "B77CB578354F8223669144FDB4E0B166F6D31BD096C67FB7DF0CD7B9B4758B01"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalSeriesImage.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalSeriesImage.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalSeriesImage.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalSeriesImage.olean",
+      "sha256": "9B8719BD5885BFE992CB5B637253E03AE4A336ADC95A2B93EC46B458E125E56E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceCyclotomicLaurentTrace.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceCyclotomicLaurentTrace.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceCyclotomicLaurentTrace.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceCyclotomicLaurentTrace.lean.txt",
+      "sha256": "F3662518611C75412F04B7190B485DFBFC84A887D97EFBAB17AD8C1F393E9049"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceCyclotomicLaurentTrace.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceCyclotomicLaurentTrace.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceCyclotomicLaurentTrace.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceCyclotomicLaurentTrace.olean",
+      "sha256": "1CE9C32EFC74FD443234DE171D105F0CD64DE6CF2F886044763858E5ADF1FF12"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceFrickeLaurentSpanDescent.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceFrickeLaurentSpanDescent.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceFrickeLaurentSpanDescent.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceFrickeLaurentSpanDescent.lean.txt",
+      "sha256": "08A352C097340745FB6C757DF0F42650A750E5604D53DD40B04FD601828EA0AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceFrickeLaurentSpanDescent.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceFrickeLaurentSpanDescent.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceFrickeLaurentSpanDescent.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceFrickeLaurentSpanDescent.olean",
+      "sha256": "8D37398DF6E1A781AF14F4DF987E4CF363FE60FB4DCF9D42ACE04D30B248CBF9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceFrickeNumeratorIntegralBound.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceFrickeNumeratorIntegralBound.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceFrickeNumeratorIntegralBound.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceFrickeNumeratorIntegralBound.lean.txt",
+      "sha256": "F6E2DC39E21D058CD59E810DC78504C78D7D73D5E7ED9395A3CFA1A5D0F3DB6F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceFrickeNumeratorIntegralBound.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceFrickeNumeratorIntegralBound.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceFrickeNumeratorIntegralBound.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceFrickeNumeratorIntegralBound.olean",
+      "sha256": "EDDB340C9F1B3F4D6064C9949FE964C7506A27BC5298A68B2583167A8F375236"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceGammaOneRationalBoundedDenominators.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceGammaOneRationalBoundedDenominators.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceGammaOneRationalBoundedDenominators.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceGammaOneRationalBoundedDenominators.lean.txt",
+      "sha256": "AAF8744D1483B69BFB959BC16AA019E1350ECDF09208D82A81A559F08A5639E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceGammaOneRationalBoundedDenominators.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceGammaOneRationalBoundedDenominators.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceGammaOneRationalBoundedDenominators.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceGammaOneRationalBoundedDenominators.olean",
+      "sha256": "472F17C5BD9C79A10DB83D5EB1B53A2D3ABDBBB33C1DBE4C5CF04ECB3FD99D2E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralEisensteinSix.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralEisensteinSix.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralEisensteinSix.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralEisensteinSix.lean.txt",
+      "sha256": "4769B6416C12D1E99A7DE96376459AF88F37D8FC8930215FF6C7F2F4DF61B256"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralEisensteinSix.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralEisensteinSix.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralEisensteinSix.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralEisensteinSix.olean",
+      "sha256": "9DDA3C68AB19A8839E7184170FBCA427D2E299F09FB7A973B7D279CD1028538E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralLaurentWeightFactors.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralLaurentWeightFactors.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralLaurentWeightFactors.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralLaurentWeightFactors.lean.txt",
+      "sha256": "B102C06DEB92DAD1D158DF2EBD22655AE472CB2089758D930CB0D45F4E78151A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralLaurentWeightFactors.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralLaurentWeightFactors.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralLaurentWeightFactors.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralLaurentWeightFactors.olean",
+      "sha256": "19848990BD06E1F9170AF551FB27AA1D28D282079E435AF99FA44A9C6345A6AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralRationalLaurentSeries.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralRationalLaurentSeries.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralRationalLaurentSeries.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralRationalLaurentSeries.lean.txt",
+      "sha256": "A844AC7E2D6351D47D0EB0C70049908278FECC5C40EF54BE4F86BD6E9FCF074B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralRationalLaurentSeries.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralRationalLaurentSeries.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralRationalLaurentSeries.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralRationalLaurentSeries.olean",
+      "sha256": "83429DE0D32F0D000BF1262207995968D869C379684455BB8CEF8CFDA42FCED2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceLaurentSpanDescent.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceLaurentSpanDescent.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceLaurentSpanDescent.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceLaurentSpanDescent.lean.txt",
+      "sha256": "0A605E75869EB72CE09BAD590E41EC96AD9F2A1EF4CCA9859DCC0637D01BFE36"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceLaurentSpanDescent.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceLaurentSpanDescent.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceLaurentSpanDescent.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceLaurentSpanDescent.olean",
+      "sha256": "54A928C25E7E4743DE5DA83D2D3163A1C5341805DCACE397B5879CB0E2DF0DB1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightCancellation.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightCancellation.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightCancellation.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightCancellation.lean.txt",
+      "sha256": "6F2506BA8CAC62AC31AEF1725D30FE456C4D1BFF65916411093FD49347ED0FC8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightCancellation.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightCancellation.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightCancellation.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightCancellation.olean",
+      "sha256": "DB91ECF571E71BD87F515DB6BE28DDE87C4CF7708E38C36BD105CB0469F9A69B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightIntegrality.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightIntegrality.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightIntegrality.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightIntegrality.lean.txt",
+      "sha256": "EF7C4145FD04374AA95C77AA513634AB3AF5274613922434A343984F6A5DA7F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightIntegrality.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightIntegrality.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightIntegrality.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightIntegrality.olean",
+      "sha256": "356E8E5908BC546C581C6F60FB304B3AC6B7EEC20C7DB00DE3E63064FA74C056"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightLaurent.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightLaurent.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightLaurent.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightLaurent.lean.txt",
+      "sha256": "3E61B3D4D626099D5FCACEFEECEB0FA4D416525DDE150D484EA04E2A8621EA76"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightLaurent.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightLaurent.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightLaurent.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightLaurent.olean",
+      "sha256": "CEAE64782BB06B877971C9BD8B7F47B937EED97734C08C44AC04A06F2616955F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceWeierstrassIntegralDenominator.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceWeierstrassIntegralDenominator.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceWeierstrassIntegralDenominator.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceWeierstrassIntegralDenominator.lean.txt",
+      "sha256": "9B432877DBAF3791ECA81E89F247B1F3E51D5851E859DC28F8A6E8C255A6BA6B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceWeierstrassIntegralDenominator.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceWeierstrassIntegralDenominator.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceWeierstrassIntegralDenominator.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceWeierstrassIntegralDenominator.olean",
+      "sha256": "A17294B331603CEA5120F591E1DA22030CD6D6F36A51A224E9B123C09ADF1221"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integer-j-normalization-failed-697a\\SourceIntegerJEulerNormalization.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integer-j-normalization-failed-697a/SourceIntegerJEulerNormalization.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integer-j-normalization-failed-697a\\SourceIntegerJEulerNormalization.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integer-j-normalization-failed-697a/SourceIntegerJEulerNormalization.lean.txt",
+      "sha256": "E2D59AEE026D63350D1419733DDBBE73541D252BA0D69C5593456EA189879A7F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\integer-j-normalization-failed-697a\\SourceIntegerJEulerNormalization.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integer-j-normalization-failed-697a/SourceIntegerJEulerNormalization.log",
+      "sha256": "A81D7FD792AF2FF664B37877E11C9FC12326FA3495D8A22104975DAB2A40FE85"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-differential-realization-failed-697b\\SourceGammaOneCuspDifferentialRealization.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/gamma-one-differential-realization-failed-697b/SourceGammaOneCuspDifferentialRealization.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-differential-realization-failed-697b\\SourceGammaOneCuspDifferentialRealization.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/gamma-one-differential-realization-failed-697b/SourceGammaOneCuspDifferentialRealization.lean.txt",
+      "sha256": "62B5B7480A5F83CF7246CBED95B9DC2D5840FCC908E2868F33E9DDC47008D801"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-differential-realization-failed-697b\\SourceGammaOneCuspDifferentialRealization.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/gamma-one-differential-realization-failed-697b/SourceGammaOneCuspDifferentialRealization.log",
+      "sha256": "877D0E5C4B062EA9502D883E528F983CBBF1B6C9158CAC0642C8CA5103FBE9CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\scratch-name-collision-695\\SourceOriginalFrickeSpanDescent.exit",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/scratch-name-collision-695/SourceOriginalFrickeSpanDescent.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\scratch-name-collision-695\\SourceOriginalFrickeSpanDescent.lean.txt",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/scratch-name-collision-695/SourceOriginalFrickeSpanDescent.lean.txt",
+      "sha256": "08A352C097340745FB6C757DF0F42650A750E5604D53DD40B04FD601828EA0AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\scratch-name-collision-695\\SourceOriginalFrickeSpanDescent.log",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/scratch-name-collision-695/SourceOriginalFrickeSpanDescent.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\scratch-name-collision-695\\SourceOriginalFrickeSpanDescent.olean",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/scratch-name-collision-695/SourceOriginalFrickeSpanDescent.olean",
+      "sha256": "7D1A834F1B4FAABBD42C43E99E1377A2C8E8A704214D689B86BDDE9DA322DCDA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-integral-cusp-span-23-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/source-gamma-one-integral-cusp-span-23-reuse-review-20261026.json",
+      "sha256": "C8702F847285C46F347AA5BC4733F6CB9728A4FCD2C1B91736984F20C63285F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-differential-realization-6-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-integral-differential-20261026-699/source-gamma-one-cusp-differential-realization-6-reuse-review-20261026.json",
+      "sha256": "EF0471F687B83BB0C61B8C78D0F67846706EE0ED9CA622DCDE0CA068316EC81F"
+    }
+  ]
+}

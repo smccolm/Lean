@@ -1,0 +1,70 @@
+{
+  "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspDifferentialScratchOwnership697.lean",
+  "sourceSha256": "57C6E427564AD769E80A64D3D0DF76001DCC8501B7985218E628B3AE3302A145",
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspDifferentialScratchOwnership697.log",
+  "logSha256": "A97D2B53882A930BD4C59786C69CAA43A6FE71798C59200DCE8EDCE4F91C7BAD",
+  "count": 15,
+  "distinct": 15,
+  "owners": [
+    {
+      "module": "SourceGammaOneIntegralCuspRatio",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_integral_cusp_differential_coefficient._simp_1_3"
+    },
+    {
+      "module": "SourceGammaOneCuspDifferentialRealization",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_differential_of_coefficients"
+    },
+    {
+      "module": "SourceGammaOneCuspDifferentialRealization",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_regular_differential_of_coefficients"
+    },
+    {
+      "module": "SourceGammaOneCuspDifferentialCoefficient",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_cusp_differential_coefficient_of_coeffMap"
+    },
+    {
+      "module": "SourceGammaOneIntegralCuspRatio",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_integral_cusp_differential_coefficient._simp_1_4"
+    },
+    {
+      "module": "SourceGammaOneIntegralCuspRatio",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_integral_cusp_differential_coefficient._simp_1_6"
+    },
+    {
+      "module": "SourceIntegerJEulerNormalization",
+      "name": "Dubon2026.SourceFricke.qExpansion_E6_eq_map_eisenstein6"
+    },
+    {
+      "module": "SourceGammaOneIntegralCuspRatio",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_integral_cusp_differential_coefficient._simp_1_1"
+    },
+    {
+      "module": "SourceGammaOneIntegralCuspRatio",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_integral_cusp_differential_coefficient._simp_1_2"
+    },
+    {
+      "module": "SourceIntegerJEulerNormalization",
+      "name": "Dubon2026.SourceFricke.exists_integer_qEuler_jqModC_formula"
+    },
+    {
+      "module": "SourceGammaOneIntegralCuspRatio",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_integral_cusp_differential_coefficient"
+    },
+    {
+      "module": "SourceGammaOneIntegralCuspLaurentSpan",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.gammaOne_laurent_mem_span_integral_of_coeffMap"
+    },
+    {
+      "module": "SourceIntegerJEulerBaseChange",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_integer_qEuler_integral_ratio_formula"
+    },
+    {
+      "module": "SourceGammaOneIntegralCuspRatio",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_integral_cusp_differential_coefficient._simp_1_7"
+    },
+    {
+      "module": "SourceGammaOneIntegralCuspRatio",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_integral_cusp_differential_coefficient._simp_1_5"
+    }
+  ]
+}

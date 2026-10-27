@@ -1,0 +1,27 @@
+import SourceFrickeCyclotomicConjugateRelation
+import SourceCyclotomicModularLift
+import SourceCyclotomicGammaOneLift
+import SourceCyclotomicLevelRingCovariance
+import SourceCyclotomicConjugateCancellation
+import SourceCyclotomicFractionCovariance
+import SourceCyclotomicConjugateCuspOrder
+import SourceCyclotomicHolomorphicDivision
+import SourceCyclotomicEllipticDivisibility
+import SourceCyclotomicEllipticCoordinates
+import SourceGammaOneCuspCyclotomicConjugation
+import SourceCyclotomicCuspFourierTransport
+import SourceGammaOneCyclotomicFourierConjugation
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceFrickeCyclotomicConjugateRelation, `SourceCyclotomicModularLift, `SourceCyclotomicGammaOneLift, `SourceCyclotomicLevelRingCovariance, `SourceCyclotomicConjugateCancellation, `SourceCyclotomicFractionCovariance, `SourceCyclotomicConjugateCuspOrder, `SourceCyclotomicHolomorphicDivision, `SourceCyclotomicEllipticDivisibility, `SourceCyclotomicEllipticCoordinates, `SourceGammaOneCuspCyclotomicConjugation, `SourceCyclotomicCuspFourierTransport, `SourceGammaOneCyclotomicFourierConjugation]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

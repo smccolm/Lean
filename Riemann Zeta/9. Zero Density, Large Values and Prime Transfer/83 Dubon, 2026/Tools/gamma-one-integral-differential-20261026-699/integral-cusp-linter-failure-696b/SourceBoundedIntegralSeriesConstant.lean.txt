@@ -1,0 +1,32 @@
+import SourceBoundedIntegralSeriesProduct
+import Mathlib.Data.Rat.Cast.CharZero
+
+/-! DUB-17/18 -> actual Gamma1 differential realization -> original
+integral-ratio field -> bounded Fricke series. Constant series inherit an
+actual integer integral multiple. Rational constants have such a multiple
+from their denominator; this handles the literal Fricke scalar -1/2592. -/
+namespace Dubon2026.SourceFunctionField
+noncomputable section
+
+theorem hasBoundedIntegralCoefficients_C_of_multiple {K : Type*} [Field K] [CharZero K]
+    (c : K) (d : ℤ) (hd : d ≠ 0) (hc : IsIntegral ℤ ((d : K) * c)) :
+    HasBoundedIntegralCoefficients (PowerSeries.C c) := by
+  refine ⟨d, hd, fun n => ?_⟩
+  by_cases hn : n = 0
+  · subst n
+    simpa only [PowerSeries.coeff_C, if_pos rfl] using hc
+  · simp only [PowerSeries.coeff_C, if_neg hn, mul_zero]
+    exact isIntegral_zero
+
+theorem hasBoundedIntegralCoefficients_C_rat (K : Type*) [Field K] [CharZero K] (q : ℚ) :
+    HasBoundedIntegralCoefficients (PowerSeries.C (q : K)) := by
+  apply hasBoundedIntegralCoefficients_C_of_multiple (q : K) (q.den : ℤ)
+    (by exact_mod_cast q.den_nz)
+  have he : (((q.den : ℤ) : K) * (q : K)) = (q.num : K) := by
+    rw [Int.cast_natCast, Rat.cast_def]
+    field_simp [(Nat.cast_ne_zero.mpr q.den_nz : (q.den : K) ≠ 0)]
+  rw [he]
+  exact isIntegral_algebraMap (x := q.num)
+
+end
+end Dubon2026.SourceFunctionField

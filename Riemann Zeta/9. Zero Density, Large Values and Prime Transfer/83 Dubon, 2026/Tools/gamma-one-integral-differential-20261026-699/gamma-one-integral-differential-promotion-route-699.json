@@ -1,0 +1,21 @@
+{
+  "scope": 699,
+  "scopeIds": [
+    "696",
+    "697"
+  ],
+  "receipts": {
+    "source-gamma-one-integral-cusp-span-23-scratch-receipt.json": "C18E5C8AF9E00AA65BFE91DC91F31025F8B1227985D4FBBB70CCD63B6C7A1E80",
+    "source-gamma-one-cusp-differential-realization-6-scratch-receipt.json": "8801725A8FAEC671A45FD3F1B9573CCE05C55EDF3780B8C1BB46BA55F1946C5D"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 Hecke characters -> actual Picard/H1, full/parabolic, transpose and diamond comparison retaining the original homogeneous coefficient endomorphism -> actual differential/cusp comparison -> integral Fourier spanning and regular differential realization of actual Gamma1 weight-two cusp forms.",
+  "discharged": "Every rational Fourier coefficient sequence of an actual Gamma1 cusp form satisfying the source weight balance has a single nonzero integer denominator. The proof derives the original cyclotomic Fricke-field membership and monic equation, bounds the actual torsion Weierstrass numerators, descends a nonzero bounded fraction by the native field trace, and uses native Laurent-series integral closure. Exact integral Eisenstein units and the discriminant cancel the weight factors. Rational spanning therefore yields integral Fourier spanning of the entire actual Gamma1 weight-two cusp space. The existing complex j-derivative identity descends to an integral identity with a proved nonzero integer normalization. Actual same-weight integral modular ratios then construct the differential coefficient for every integral cusp generator. Coefficientwise span descent realizes every cusp form whose coefficients lie in the given field embedding as an actual differential on the original integral-ratio Gamma1 function field. Over an algebraically closed coefficient field the already proved local regularity criterion makes this differential regular. No bounded-denominator, field-membership, monic-relation or differential-existence assumption remains in these consumers.",
+  "remaining": "The converse from an actual regular Gamma1 differential to an actual cusp form remains. The actual Picard/H1, full/parabolic, transpose and diamond comparison must identify original finite homogeneous-coefficient Hecke characters with geometric characters. Frobenius/inertia, arithmetic realization of those characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. General-weight denominator and spanning statements retain the explicit balance k+4a+6b=12m; weight two derives it with a=b=m=1. The full all-weight arithmetic goal is unchanged. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN.",
+  "route": "The renewed selected-file search is recorded in Dubon Reuse Search 2026-10-26.md. Reuse the original Laurent field, native normality under localization, native trace and the proved rational cusp span. This avoids the unused power-series-only route and the external recursive coefficient division. Construct the differential directly as a multiple of D(j); reuse the existing exact complex derivative formula, integral-ratio field and regularity criterion, avoiding a new differential-expansion framework. The pinned external arguments supplied finite denominator scaling and the geometric comparison route; their full import closure was not built or certified. Only audited mathematical sources are promoted and only imports are qualified. Failed variants and audit/helper evidence remain preserved. Pins, proof limits, frozen source and all twenty acceptance gates are unchanged.",
+  "precedingCanonicalScope": 8493,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 gates unchanged.",
+  "reason": "Require preceding canonical PASS and immutable archive before production mutation."
+}

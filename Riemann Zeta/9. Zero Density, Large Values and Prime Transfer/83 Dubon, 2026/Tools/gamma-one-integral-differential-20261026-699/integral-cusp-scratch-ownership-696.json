@@ -1,0 +1,315 @@
+{
+  "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspScratchOwnership696V2.lean",
+  "sourceSha256": "A9F48F03BCCB0C9FCABA23E41BD056D0AC48FA6833345B17C192834CECDE7983",
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspScratchOwnership696V2.log",
+  "logSha256": "3ABFEF71571828BC397002985D2E75CB352855859043363CEA66272DD575C789",
+  "count": 76,
+  "distinct": 76,
+  "owners": [
+    {
+      "module": "SourceBoundedIntegralSeriesConstant",
+      "name": "Dubon2026.SourceFunctionField.hasBoundedIntegralCoefficients_C_rat._simp_1_7"
+    },
+    {
+      "module": "SourceCyclotomicLaurentTrace",
+      "name": "Dubon2026.SourceFricke.cyclotomicTraceLaurent._proof_4"
+    },
+    {
+      "module": "SourceBoundedIntegralSeriesProduct",
+      "name": "Dubon2026.SourceFunctionField.hasBoundedIntegralCoefficients_of_integral"
+    },
+    {
+      "module": "SourceWeierstrassIntegralDenominator",
+      "name": "Dubon2026.SourceFricke.exists_wpQSeriesK_integral_multiple"
+    },
+    {
+      "module": "SourceCyclotomicLaurentTrace",
+      "name": "Dubon2026.SourceFricke.cyclotomicTraceLaurent._proof_6"
+    },
+    {
+      "module": "SourceIntegralRationalLaurentSeries",
+      "name": "Dubon2026.SourceFunctionField.isIntegrallyClosed_integerLaurentSeries"
+    },
+    {
+      "module": "SourceRationalCuspWeightIntegrality",
+      "name": "Dubon2026.SourceFricke.gammaOne_cuspWeightImage_mem_original_of_rational_series._simp_1_2"
+    },
+    {
+      "module": "SourceBoundedRationalCuspImage",
+      "name": "Dubon2026.SourceFricke.exists_bounded_rational_cuspWeightImage_laurent"
+    },
+    {
+      "module": "SourceGammaOneRationalBoundedDenominators",
+      "name": "Dubon2026.SourceFricke.span_gammaOne_integral_cuspForms_eq_top"
+    },
+    {
+      "module": "SourceCyclotomicLaurentTrace",
+      "name": "Dubon2026.SourceFricke.hasBoundedIntegralLaurentCoefficients_cyclotomicTrace"
+    },
+    {
+      "module": "SourceCyclotomicLaurentTrace",
+      "name": "Dubon2026.SourceFricke.cyclotomicTraceLaurent._proof_2"
+    },
+    {
+      "module": "SourceBoundedIntegralSeriesConstant",
+      "name": "Dubon2026.SourceFunctionField.hasBoundedIntegralCoefficients_C_of_multiple"
+    },
+    {
+      "module": "SourceIntegralEisensteinSix",
+      "name": "Dubon2026.SourceFricke.eisenstein6.eq_1"
+    },
+    {
+      "module": "SourceCyclotomicLaurentTrace",
+      "name": "Dubon2026.SourceFricke.cyclotomicTraceLaurent._proof_3"
+    },
+    {
+      "module": "SourceFrickeNumeratorIntegralBound",
+      "name": "Dubon2026.SourceFricke.e4e6QSeriesK_coeff_isIntegral"
+    },
+    {
+      "module": "SourceFrickeNumeratorIntegralBound",
+      "name": "Dubon2026.SourceFricke.hasBoundedIntegralCoefficients_frickeNumerator"
+    },
+    {
+      "module": "SourceCyclotomicLaurentTrace",
+      "name": "Dubon2026.SourceFricke.cyclotomicTraceLaurent_coeff"
+    },
+    {
+      "module": "SourceRationalCuspWeightLaurent",
+      "name": "Dubon2026.SourceFricke.exists_rational_cuspWeightImage_laurent"
+    },
+    {
+      "module": "SourceIntegralEisensteinSix",
+      "name": "Dubon2026.SourceFricke.constantCoeff_eisenstein6"
+    },
+    {
+      "module": "SourceCyclotomicLaurentTrace",
+      "name": "Dubon2026.SourceFricke.cyclotomicTraceLaurent._proof_1"
+    },
+    {
+      "module": "SourceBoundedCyclotomicLaurentFraction",
+      "name": "Dubon2026.SourceFricke.exists_rational_bounded_laurent_fraction"
+    },
+    {
+      "module": "SourceBoundedCyclotomicLaurentFraction",
+      "name": "Dubon2026.SourceFricke.hasBoundedIntegralLaurentCoefficients_single_zero_kN"
+    },
+    {
+      "module": "SourceBoundedIntegralSeriesConstant",
+      "name": "Dubon2026.SourceFunctionField.hasBoundedIntegralCoefficients_C_rat._simp_1_1"
+    },
+    {
+      "module": "SourceRationalCuspWeightLaurent",
+      "name": "Dubon2026.SourceFricke.represents_qExpand_rational_series"
+    },
+    {
+      "module": "SourceBoundedRationalLaurentIntegral",
+      "name": "Dubon2026.SourceFunctionField.hasBoundedIntegralLaurentCoefficients_of_monic_relation_of_bounded_fraction"
+    },
+    {
+      "module": "SourceWeierstrassIntegralDenominator",
+      "name": "Dubon2026.SourceFricke.exists_wpQCoeff_integral_multiple"
+    },
+    {
+      "module": "SourceWeierstrassIntegralDenominator",
+      "name": "Dubon2026.SourceFricke.exists_wpMonCoeff_integral_multiple"
+    },
+    {
+      "module": "SourceBoundedIntegralLaurentAlgebra",
+      "name": "Dubon2026.SourceFunctionField.hasBoundedIntegralLaurentCoefficients_integer_map"
+    },
+    {
+      "module": "SourceWeierstrassIntegralDenominator",
+      "name": "Dubon2026.SourceFricke.wpQCoeffK.congr_simp"
+    },
+    {
+      "module": "SourceBoundedIntegralLaurentAlgebra",
+      "name": "Dubon2026.SourceFunctionField.hasBoundedIntegralLaurentCoefficients_of_integral"
+    },
+    {
+      "module": "SourceFrickeLaurentSpanDescent",
+      "name": "Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_of_represents_frickeSpan"
+    },
+    {
+      "module": "SourceRationalCuspWeightIntegrality",
+      "name": "Dubon2026.SourceFricke.exists_integral_rational_cuspWeightImage_laurent"
+    },
+    {
+      "module": "SourceBoundedRationalSeriesImage",
+      "name": "Dubon2026.SourceFunctionField.HasBoundedIntegralCoefficients.exists_integer_series"
+    },
+    {
+      "module": "SourceBoundedIntegralLaurentAlgebra",
+      "name": "Dubon2026.SourceFunctionField.HasBoundedIntegralCoefficients.laurent"
+    },
+    {
+      "module": "SourceIntegralRationalLaurentSeries",
+      "name": "Dubon2026.SourceFunctionField.rationalLaurentSeries_mem_integer_image_of_monic_of_fraction"
+    },
+    {
+      "module": "SourceFrickeNumeratorIntegralBound",
+      "name": "Dubon2026.SourceFricke.e4e6QSeries_eq_integer_map"
+    },
+    {
+      "module": "SourceLaurentSpanDescent",
+      "name": "Dubon2026.SourceFunctionField.mem_span_of_coeffMap_mem_span"
+    },
+    {
+      "module": "SourceBoundedIntegralSeriesConstant",
+      "name": "Dubon2026.SourceFunctionField.hasBoundedIntegralCoefficients_C_rat._simp_1_2"
+    },
+    {
+      "module": "SourceBoundedIntegralSeriesProduct",
+      "name": "Dubon2026.SourceFunctionField.HasBoundedIntegralCoefficients.mul"
+    },
+    {
+      "module": "SourceBoundedIntegralLaurentAlgebra",
+      "name": "Dubon2026.SourceFunctionField.HasBoundedIntegralLaurentCoefficients.mul"
+    },
+    {
+      "module": "SourceBoundedFrickeLaurentField",
+      "name": "Dubon2026.SourceFricke.exists_bounded_fraction_frickeLaurentFieldK"
+    },
+    {
+      "module": "SourceBoundedIntegralLaurentAlgebra",
+      "name": "Dubon2026.SourceFunctionField.HasBoundedIntegralLaurentCoefficients.pow"
+    },
+    {
+      "module": "SourceBoundedIntegralLaurentAlgebra",
+      "name": "Dubon2026.SourceFunctionField.HasBoundedIntegralLaurentCoefficients.add"
+    },
+    {
+      "module": "SourceGammaOneRationalBoundedDenominators",
+      "name": "Dubon2026.SourceFricke.span_gammaOne_weightTwo_integral_cuspForms_eq_top"
+    },
+    {
+      "module": "SourceFrickeLaurentSpanDescent",
+      "name": "Dubon2026.SourceFricke.mem_frickeLaurentFieldK_of_represents_frickeSpan"
+    },
+    {
+      "module": "SourceBoundedRationalLaurentImage",
+      "name": "Dubon2026.SourceFunctionField.hasBoundedIntegralLaurentCoefficients_of_integer_series"
+    },
+    {
+      "module": "SourceRationalCuspWeightIntegrality",
+      "name": "Dubon2026.SourceFricke.gammaOne_cuspWeightImage_mem_original_of_rational_series"
+    },
+    {
+      "module": "SourceGammaOneRationalBoundedDenominators",
+      "name": "Dubon2026.SourceFricke.exists_gammaOne_integralQExp_int_multiple"
+    },
+    {
+      "module": "SourceBoundedRationalJAlgebra",
+      "name": "Dubon2026.SourceFricke.hasBoundedIntegralLaurentCoefficients_jAlgebra"
+    },
+    {
+      "module": "SourceFrickeNumeratorIntegralBound",
+      "name": "Dubon2026.SourceFricke.hasBoundedIntegralCoefficients_frickeHQSeriesK"
+    },
+    {
+      "module": "SourceBoundedIntegralSeriesConstant",
+      "name": "Dubon2026.SourceFunctionField.hasBoundedIntegralCoefficients_C_rat._simp_1_4"
+    },
+    {
+      "module": "SourceCyclotomicLaurentTrace",
+      "name": "Dubon2026.SourceFricke.cyclotomicTraceLaurent._proof_8"
+    },
+    {
+      "module": "SourceRationalCuspWeightCancellation",
+      "name": "Dubon2026.SourceFricke.gammaOne_rational_series_hasBoundedIntegralCoefficients"
+    },
+    {
+      "module": "SourceRationalCuspWeightIntegrality",
+      "name": "Dubon2026.SourceFricke.gammaOne_cuspWeightImage_mem_original_of_rational_series._simp_1_1"
+    },
+    {
+      "module": "SourceIntegralEisensteinSix",
+      "name": "Dubon2026.SourceFricke.eisensteinQSeries_six_eq_integer_map"
+    },
+    {
+      "module": "SourceBoundedCyclotomicLaurentGenerators",
+      "name": "Dubon2026.SourceFricke.hasBoundedIntegralLaurentCoefficients_discriminantLaurentK"
+    },
+    {
+      "module": "SourceBoundedIntegralSeriesConstant",
+      "name": "Dubon2026.SourceFunctionField.hasBoundedIntegralCoefficients_C_rat._simp_1_5"
+    },
+    {
+      "module": "SourceWeierstrassIntegralDenominator",
+      "name": "Dubon2026.SourceFricke.wpMonCoeff_nonconstant_isIntegral"
+    },
+    {
+      "module": "SourceBoundedRationalLaurentImage",
+      "name": "Dubon2026.SourceFunctionField.HasBoundedIntegralLaurentCoefficients.exists_integer_series"
+    },
+    {
+      "module": "SourceIntegralEisensteinSix",
+      "name": "Dubon2026.SourceFricke.eisensteinQSeries_four_eq_integer_map"
+    },
+    {
+      "module": "SourceBoundedIntegralSeriesConstant",
+      "name": "Dubon2026.SourceFunctionField.hasBoundedIntegralCoefficients_C_rat"
+    },
+    {
+      "module": "SourceIntegralLaurentWeightFactors",
+      "name": "Dubon2026.SourceFricke.exists_integer_unit_eisensteinFactorLaurent"
+    },
+    {
+      "module": "SourceBoundedCyclotomicLaurentGenerators",
+      "name": "Dubon2026.SourceFricke.hasBoundedIntegralLaurentCoefficients_jqNModC"
+    },
+    {
+      "module": "SourceBoundedCyclotomicLaurentGenerators",
+      "name": "Dubon2026.SourceFricke.exists_bounded_frickeLaurentK_fraction"
+    },
+    {
+      "module": "SourceCyclotomicLaurentTrace",
+      "name": "Dubon2026.SourceFricke.coeffMap_cyclotomicTraceLaurent"
+    },
+    {
+      "module": "SourceIntegralLaurentWeightFactors",
+      "name": "Dubon2026.SourceFricke.represents_rational_discriminantLaurent"
+    },
+    {
+      "module": "SourceBoundedRationalJAlgebra",
+      "name": "Dubon2026.SourceFricke.hasBoundedIntegralLaurentCoefficients_of_integral_j_of_frickeField"
+    },
+    {
+      "module": "SourceCyclotomicLaurentTrace",
+      "name": "Dubon2026.SourceFricke.cyclotomicTraceLaurent._proof_7"
+    },
+    {
+      "module": "SourceIntegralLaurentWeightFactors",
+      "name": "Dubon2026.SourceFricke.represents_rational_eisensteinFactorLaurent"
+    },
+    {
+      "module": "SourceFrickeNumeratorIntegralBound",
+      "name": "Dubon2026.SourceFricke.e4e6IntegerSeries.eq_1"
+    },
+    {
+      "module": "SourceCyclotomicLaurentTrace",
+      "name": "Dubon2026.SourceFricke.cyclotomicTraceLaurent._proof_5"
+    },
+    {
+      "module": "SourceBoundedRationalLaurentIntegral",
+      "name": "Dubon2026.SourceFunctionField.hasBoundedIntegralLaurentCoefficients_of_monic_relation_of_bounded_fraction._proof_1_1"
+    },
+    {
+      "module": "SourceBoundedCyclotomicLaurentGenerators",
+      "name": "Dubon2026.SourceFricke.discriminantLaurentK_ne_zero"
+    },
+    {
+      "module": "SourceBoundedIntegralSeriesConstant",
+      "name": "Dubon2026.SourceFunctionField.hasBoundedIntegralCoefficients_C_rat._simp_1_3"
+    },
+    {
+      "module": "SourceCyclotomicLaurentTrace",
+      "name": "Dubon2026.SourceFricke.cyclotomicTraceLaurent_rational_mul"
+    },
+    {
+      "module": "SourceBoundedIntegralSeriesConstant",
+      "name": "Dubon2026.SourceFunctionField.hasBoundedIntegralCoefficients_C_rat._simp_1_6"
+    }
+  ],
+  "status": "Exact scratch ownership enumeration; production comparison pending."
+}

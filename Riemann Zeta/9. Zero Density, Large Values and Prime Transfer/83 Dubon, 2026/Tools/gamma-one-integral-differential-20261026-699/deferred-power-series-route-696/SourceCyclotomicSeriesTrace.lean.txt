@@ -1,0 +1,55 @@
+import SourceCyclotomicTraceStructure
+import SourceBoundedIntegralSeriesProduct
+
+/-! DUB-17/18 -> actual Gamma1 differential realization -> original
+integral-ratio field -> rational bounded-series fractions. Coefficientwise
+field trace commutes with multiplication by a rational series and preserves
+a uniform integral coefficient bound. This replaces Galois products in the
+denominator descent, using native integrality of the finite field trace. -/
+namespace Dubon2026.SourceFricke
+noncomputable section
+open SourceFunctionField
+
+/-- Coefficientwise trace from the original cyclotomic field to Q. -/
+def cyclotomicTraceSeries (N : ℕ) : PowerSeries (kN N) →ₗ[ℚ] PowerSeries ℚ where
+  toFun f := PowerSeries.mk fun n => Algebra.trace ℚ (kN N) (f.coeff n)
+  map_add' f g := by
+    ext n
+    simp only [PowerSeries.coeff_mk, map_add]
+  map_smul' c f := by
+    ext n
+    simp only [PowerSeries.coeff_mk, PowerSeries.coeff_smul, map_smul, RingHom.id_apply]
+
+theorem cyclotomicTraceSeries_coeff (N : ℕ) (f : PowerSeries (kN N)) (n : ℕ) :
+    (cyclotomicTraceSeries N f).coeff n = Algebra.trace ℚ (kN N) (f.coeff n) := by
+  change (PowerSeries.mk fun m => Algebra.trace ℚ (kN N) (f.coeff m)).coeff n = _
+  rw [PowerSeries.coeff_mk]
+
+theorem cyclotomicTraceSeries_rational_mul (N : ℕ) (y : PowerSeries ℚ)
+    (f : PowerSeries (kN N)) :
+    cyclotomicTraceSeries N (y.map (algebraMap ℚ (kN N)) * f) =
+      y * cyclotomicTraceSeries N f := by
+  ext n
+  simp only [cyclotomicTraceSeries_coeff, PowerSeries.coeff_mul, map_sum]
+  apply Finset.sum_congr rfl
+  intro ij _
+  rw [PowerSeries.coeff_map]
+  change Algebra.trace ℚ (kN N) (y.coeff ij.1 • f.coeff ij.2) =
+    y.coeff ij.1 * Algebra.trace ℚ (kN N) (f.coeff ij.2)
+  rw [map_smul, smul_eq_mul]
+
+theorem hasBoundedIntegralCoefficients_cyclotomicTrace {N : ℕ} [NeZero N]
+    {f : PowerSeries (kN N)} (hf : HasBoundedIntegralCoefficients f) :
+    HasBoundedIntegralCoefficients (cyclotomicTraceSeries N f) := by
+  letI := finiteDimensional_kN N
+  obtain ⟨d, hd, hi⟩ := hf
+  refine ⟨d, hd, fun n => ?_⟩
+  rw [cyclotomicTraceSeries_coeff]
+  have ht := Algebra.isIntegral_trace (L := ℚ) (hi n)
+  have he : (d : kN N) * f.coeff n = (d : ℚ) • f.coeff n := by
+    rw [Algebra.smul_def, map_intCast]
+  rw [he, map_smul, smul_eq_mul] at ht
+  exact ht
+
+end
+end Dubon2026.SourceFricke

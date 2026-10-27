@@ -1,0 +1,99 @@
+{
+  "recordedUTC": "2026-10-26T22:22:21.433826+00:00",
+  "scope": 690,
+  "primarySnapshots": [
+    {
+      "fetchedUTC": "2026-10-26T22:15:10.315877+00:00",
+      "files": [
+        {
+          "repo": "anthropics/fermats-last-theorem",
+          "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+          "path": "P2M/Sol/S_ModularCurve_exists_ne_zero_forall_intCast_mul_qExpansion_coeff_of_gamma_invariant.lean",
+          "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_ne_zero_forall_intCast_mul_qExpansion_coeff_of_gamma_invariant.lean",
+          "snapshot": "P2M\\Sol\\S_ModularCurve_exists_ne_zero_forall_intCast_mul_qExpansion_coeff_of_gamma_invariant.lean.txt",
+          "gitBlob": "d2f2242e6b548ae92a7660808be4a500b3c0e4c7",
+          "sha256": "31D66307ECD14D81D003AB2152963B4C97D5330FFE38A3DD0A04DAAF1C89457A",
+          "bytes": 60901
+        }
+      ]
+    },
+    {
+      "fetchedUTC": "2026-10-26T22:18:09.976690+00:00",
+      "files": [
+        {
+          "repo": "anthropics/fermats-last-theorem",
+          "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+          "path": "P2M/Sol/S_PowerSeries_mem_range_map_of_monic_of_mul_mem_range.lean",
+          "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_PowerSeries_mem_range_map_of_monic_of_mul_mem_range.lean",
+          "snapshot": "P2M\\Sol\\S_PowerSeries_mem_range_map_of_monic_of_mul_mem_range.lean.txt",
+          "gitBlob": "fb8f982a97779b09baae157909353883a89a13c8",
+          "sha256": "7E1DFA3F39F90E37BD849F684D36BF8932F0FB4A1BAFC46956A70F35A7802705",
+          "bytes": 3110
+        },
+        {
+          "repo": "anthropics/fermats-last-theorem",
+          "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+          "path": "P2M/Sol/S_ModularCurve_exists_ne_zero_forall_mul_qExpansion_coeff_fricke_mem_adjoin.lean",
+          "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_ne_zero_forall_mul_qExpansion_coeff_fricke_mem_adjoin.lean",
+          "snapshot": "P2M\\Sol\\S_ModularCurve_exists_ne_zero_forall_mul_qExpansion_coeff_fricke_mem_adjoin.lean.txt",
+          "gitBlob": "b09676b2a3400f02def84f8a46c408eecb1b657a",
+          "sha256": "4B673F2415E1CBA900F4F8FDBB535168A6718F6B3A14B8C1E0CA4AD94C79743F",
+          "bytes": 34610
+        }
+      ]
+    }
+  ],
+  "reviewedSubsections": [
+    "The rational modular-form bounded-denominator proof through its even-weight consumer; odd-weight generalization deferred for this geometric weight-two chain.",
+    "The principal-invariant bounded-denominator core import/declaration inventory, series-data construction, final integral-multiple and final denominator cancellation consumers.",
+    "The complete 3110-byte power-series normality proof, including its necessary fraction-membership premise.",
+    "The Fricke denominator proof declaration inventory; detailed analytic-series subsections have not been re-audited here."
+  ],
+  "dependency": "DUB-17/18 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual finite Gamma1 character realization -> Picard/H1 and diamond comparison -> actual cusp differential realization -> original integral-ratio function field -> bounded denominators for the rational Fourier forms.",
+  "localReuse": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceWeierstrassTorsionFourierCoefficients.lean",
+      "sha256": "F65C674B7B493EE02ED099A2EBF988F605D39E5A3E0BBCBB7AD2ADE5AB0D0037"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeProductCyclotomic.lean",
+      "sha256": "1C011979D2B6ACC97911C5A7219309BEE605C4D4B2ECC3F1022212D33A52C064"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLaurentIntegralDescent.lean",
+      "sha256": "0EFCB66499AE813BC26EE8092E3D97BCD46D6C2FAEE6676B8536C53FF62518E3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFrickeLaurentField.lean",
+      "sha256": "F3F6698DDE66E65A66A9355720680C56522124E5FF34409900CE6F98C656BAD2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicTraceStructure.lean",
+      "sha256": "A701D8A8AF3CC8663D5F2DBD943E93ECAF422DBDCBF7AE40922E5757432A5A04"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspSpan.lean",
+      "sha256": "BBD748670D9D7D65948A7B06E558C95900F77AC4D70333718F9BC913013D64D4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\NumberFieldPositiveIntegralMultiple.lean",
+      "sha256": "8E4C1E2657F7D0865A2EA8B43B66E44C3782D84628C69A730AE1A4FE759E47EE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\PowerSeries\\Ideal.lean",
+      "sha256": "BD8343197191038CE3CF639FF934B090926D64364F1AAF3632E61AD74CB1C1C0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\PowerSeries\\Basic.lean",
+      "sha256": "3CC6388E47721217662E8F5D12C29AD7928D2DBD7A018A05B70D73260C5917B5"
+    }
+  ],
+  "shorterRouteReview": "The source power-series normality proof is short and reduces to the pinned Mathlib UFD instance for integer power series and native integral closure of a fraction field. Adapt only the rational/integer series case required by the consumer. A monic equation alone does not imply uniformly bounded integer denominators: the independent fraction-membership premise must also be derived from actual Fricke fractions. Existing exact torsion Fourier coefficients, finite exponent fibers, cyclotomic conjugation, monic Laurent descent and local number-field integral-multiple results can replace the source repeated analytic expansions, constant-field retraction and explicit root-of-unity denominator formula. Assess each next bounded-series step against these existing results before adding it.",
+  "nextRequiredConsumer": "Combine an actual rational Laurent/power-series monic relation with a fraction of uniformly bounded cyclotomic series; finite Galois descent gives a rational bounded-series fraction, and integer power-series normality gives one scalar clearing all coefficients. Then cancel the integral discriminant and Eisenstein units for the actual rational cusp form.",
+  "remaining": "Rational weight-two cusp spanning is scratch-audited. Bounded denominators, actual differential realization, original Hecke and arithmetic comparisons and DUB-17--20 remain open. No all-weight scope change. Canonical promotion of scopes 687--689 awaits the running 8471 verification.",
+  "externalImport": false,
+  "externalProjectBuilt": false,
+  "externalDependencyClosureCertified": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

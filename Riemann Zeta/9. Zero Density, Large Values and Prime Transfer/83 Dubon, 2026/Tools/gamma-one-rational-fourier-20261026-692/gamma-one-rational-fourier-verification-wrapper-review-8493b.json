@@ -1,0 +1,27 @@
+{
+  "recordedUTC": "2026-10-27T00:09:33.241214+00:00",
+  "failure": "Original ownership-comparison wrapper stopped at assert len(names)==len(certs)==7. Seven was the previous promotion batch size; this batch has exactly three frozen scopes. Failure occurred before any comparison receipt, foundation run or paper run.",
+  "preserved": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_rational_fourier_ownership_8493.py",
+      "sha256": "C145F67E16974CB30704EBAA93C7FC8463F3B121855544051692E52C56D1C39E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_rational_fourier_8493.ps1",
+      "sha256": "71925353CB263E95CBF75503531899E5B086B9743EC4B39074C86193D0CA595C"
+    }
+  ],
+  "successors": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_rational_fourier_ownership_8493b.py",
+      "sha256": "60407C08FE645D7BFB03F40B5291E5F62612DB2C2D5AEA94BBB79CEE956FF9DD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_rational_fourier_8493b.ps1",
+      "sha256": "DE28BF0B66737AB3F8E9F4FB23F8DB73EE01EA0635E44CFF67E57CF5ADDF7A1D"
+    }
+  ],
+  "correction": "Require exactly three scopes and exactly 22 distinct modules. All 89 exhaustive scratch checks, exact theorem-name comparison, source-body equality, ownership checks, diagnostic checks and every other verification condition remain required.",
+  "evidence": "Aggregate, focused axiom/linter audit, all three proof-VALUE audits, focused production ownership and all three scratch ownership audits already passed. Existing audit logs are reused without rerunning or editing them.",
+  "status": "Fresh wrapper prepared; mathematical source and proof audits unchanged. Sequential foundation/paper verification pending."
+}

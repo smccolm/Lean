@@ -1,0 +1,36 @@
+import Mathlib.RingTheory.PowerSeries.Basic
+import Mathlib.RingTheory.IntegralClosure.IsIntegralClosure.Basic
+
+/-! DUB-17/18 -> actual Gamma1 differential realization -> original
+integral-ratio field -> bounded coefficients of original Fricke series.
+A single integer scales every coefficient to an algebraic integer.
+Multiplication retains a single common scalar by the finite coefficient
+convolution. This is used for the actual Eisenstein/torsion numerator. -/
+namespace Dubon2026.SourceFunctionField
+noncomputable section
+
+/-- One nonzero integer clears every coefficient into the algebraic integers. -/
+def HasBoundedIntegralCoefficients {K : Type*} [Field K] [CharZero K]
+    (f : PowerSeries K) : Prop :=
+  ∃ d : ℤ, d ≠ 0 ∧ ∀ n : ℕ, IsIntegral ℤ ((d : K) * f.coeff n)
+
+theorem hasBoundedIntegralCoefficients_of_integral {K : Type*} [Field K] [CharZero K]
+    {f : PowerSeries K} (hf : ∀ n : ℕ, IsIntegral ℤ (f.coeff n)) :
+    HasBoundedIntegralCoefficients f :=
+  ⟨1, one_ne_zero, fun n => by simpa only [Int.cast_one, one_mul] using hf n⟩
+
+theorem HasBoundedIntegralCoefficients.mul {K : Type*} [Field K] [CharZero K]
+    {f g : PowerSeries K} (hf : HasBoundedIntegralCoefficients f)
+    (hg : HasBoundedIntegralCoefficients g) : HasBoundedIntegralCoefficients (f * g) := by
+  obtain ⟨d, hd, hf⟩ := hf
+  obtain ⟨e, he, hg⟩ := hg
+  refine ⟨d * e, mul_ne_zero hd he, fun n => ?_⟩
+  rw [PowerSeries.coeff_mul, Finset.mul_sum]
+  apply IsIntegral.sum
+  intro ij _
+  convert (hf ij.1).mul (hg ij.2) using 1
+  push_cast
+  ring
+
+end
+end Dubon2026.SourceFunctionField

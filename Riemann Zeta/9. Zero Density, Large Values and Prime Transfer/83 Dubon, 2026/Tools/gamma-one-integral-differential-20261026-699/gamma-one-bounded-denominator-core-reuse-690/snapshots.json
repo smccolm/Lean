@@ -1,0 +1,15 @@
+{
+  "fetchedUTC": "2026-10-26T22:15:10.315877+00:00",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_exists_ne_zero_forall_intCast_mul_qExpansion_coeff_of_gamma_invariant.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_ne_zero_forall_intCast_mul_qExpansion_coeff_of_gamma_invariant.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_exists_ne_zero_forall_intCast_mul_qExpansion_coeff_of_gamma_invariant.lean.txt",
+      "gitBlob": "d2f2242e6b548ae92a7660808be4a500b3c0e4c7",
+      "sha256": "31D66307ECD14D81D003AB2152963B4C97D5330FFE38A3DD0A04DAAF1C89457A",
+      "bytes": 60901
+    }
+  ]
+}

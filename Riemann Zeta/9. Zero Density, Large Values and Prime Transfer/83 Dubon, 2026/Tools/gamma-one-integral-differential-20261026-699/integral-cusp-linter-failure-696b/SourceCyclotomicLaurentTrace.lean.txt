@@ -1,0 +1,63 @@
+import SourceCyclotomicTraceStructure
+import SourceBoundedIntegralLaurentAlgebra
+
+/-! DUB-17/18 -> actual Gamma1 differential realization -> original
+integral-ratio field -> rational Laurent denominator descent. Apply the
+native field trace coefficientwise. Its native sum-of-automorphisms formula
+proves compatibility with multiplication by a rational Laurent series,
+without a separate Laurent convolution or pole-clearing development. -/
+namespace Dubon2026.SourceFricke
+noncomputable section
+open SourceFunctionField
+
+/-- Coefficientwise field trace on the actual cyclotomic Laurent series. -/
+def cyclotomicTraceLaurent (N : ℕ) : LaurentSeries (kN N) →ₗ[ℚ] LaurentSeries ℚ where
+  toFun f := f.map (Algebra.trace ℚ (kN N))
+  map_add' f g := by
+    ext n
+    simp only [HahnSeries.map_coeff, HahnSeries.coeff_add, map_add]
+  map_smul' c f := by
+    ext n
+    simp only [HahnSeries.map_coeff, HahnSeries.coeff_smul, map_smul, RingHom.id_apply]
+
+theorem cyclotomicTraceLaurent_coeff (N : ℕ) (f : LaurentSeries (kN N)) (n : ℤ) :
+    (cyclotomicTraceLaurent N f).coeff n = Algebra.trace ℚ (kN N) (f.coeff n) := rfl
+
+theorem coeffMap_cyclotomicTraceLaurent (N : ℕ) [NeZero N] (f : LaurentSeries (kN N)) :
+    letI := finiteDimensional_kN N
+    coeffMap (algebraMap ℚ (kN N)) (cyclotomicTraceLaurent N f) =
+      ∑ σ : kN N ≃ₐ[ℚ] kN N, coeffMap σ.toRingEquiv.toRingHom f := by
+  letI := finiteDimensional_kN N
+  letI := isGalois_kN N
+  apply HahnSeries.ext
+  funext n
+  simp only [coeffMap_coeff, cyclotomicTraceLaurent_coeff, HahnSeries.coeff_sum]
+  exact trace_eq_sum_automorphisms (K := ℚ) (f.coeff n)
+
+theorem cyclotomicTraceLaurent_rational_mul (N : ℕ) [NeZero N]
+    (y : LaurentSeries ℚ) (f : LaurentSeries (kN N)) :
+    cyclotomicTraceLaurent N (coeffMap (algebraMap ℚ (kN N)) y * f) =
+      y * cyclotomicTraceLaurent N f := by
+  have hs (σ : kN N ≃ₐ[ℚ] kN N) :
+      coeffMap σ.toRingEquiv.toRingHom (coeffMap (algebraMap ℚ (kN N)) y) =
+        coeffMap (algebraMap ℚ (kN N)) y := by
+    ext n
+    simp only [coeffMap_coeff, eq_ratCast, map_ratCast]
+  apply (coeffMap (algebraMap ℚ (kN N))).injective
+  simp only [coeffMap_cyclotomicTraceLaurent, map_mul, hs, Finset.mul_sum]
+
+theorem hasBoundedIntegralLaurentCoefficients_cyclotomicTrace {N : ℕ} [NeZero N]
+    {f : LaurentSeries (kN N)} (hf : HasBoundedIntegralLaurentCoefficients f) :
+    HasBoundedIntegralLaurentCoefficients (cyclotomicTraceLaurent N f) := by
+  letI := finiteDimensional_kN N
+  obtain ⟨d, hd, hi⟩ := hf
+  refine ⟨d, hd, fun n => ?_⟩
+  rw [cyclotomicTraceLaurent_coeff]
+  have ht := Algebra.isIntegral_trace (L := ℚ) (hi n)
+  have he : (d : kN N) * f.coeff n = (d : ℚ) • f.coeff n := by
+    rw [Algebra.smul_def, map_intCast]
+  rw [he, map_smul, smul_eq_mul] at ht
+  exact ht
+
+end
+end Dubon2026.SourceFricke

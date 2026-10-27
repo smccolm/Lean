@@ -1,0 +1,44 @@
+{
+  "recordedUTC": "2026-10-27T01:00:19.640875+00:00",
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual finite Gamma1 Hecke-character realization -> actual Picard/H1, full/parabolic, transpose/diamond comparison retaining the homogeneous coefficient endomorphism -> actual differential/cusp comparison -> realize the original Gamma1 weight-two cusp form as a regular differential in the original integral-ratio field.",
+  "reuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneDifferentialRegularity.lean",
+      "sha256": "584C3C0057021559BFD4DDAA63B00CEB45A3D6BE8F2B816AC86F166798328ED2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneJCoordinate.lean",
+      "sha256": "242F8F0963AACD9590A94E33256D5D5725349173FF06C5758EEDB6D00A9FF810"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneScalarExtension.lean",
+      "sha256": "BE4B9BA08B1CBEA2B1C4525616C1AA8B7F19456FF0B27A2E146071830B5CA886"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceJEulerPolynomial.lean",
+      "sha256": "1EA4198786B4DF5046F7D4C75A6C00BD21A443294CBD79C94BBB96A394D180D6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceDifferentialQExpansion.lean",
+      "sha256": "62662CC240CD40D46272A8B46F39EA11CB66ED819D9D53F90E7A3CEFA18EF6FA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma1-differential-input-reuse-633\\P2M\\Sol\\S_ModularCurve_exists_coeffMap_diffQExp_x1FunctionFieldBar_eq_qExpansion.lean.txt",
+      "sha256": "8D370D3ED7D39DAAE76A8612ED3E8E6166C4BD0B1FE8251C72CEC13C4EAFB7E9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentSpanDescent.lean",
+      "sha256": "0A605E75869EB72CE09BAD590E41EC96AD9F2A1EF4CCA9859DCC0637D01BFE36"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalBoundedDenominators.lean",
+      "sha256": "AAF8744D1483B69BFB959BC16AA019E1350ECDF09208D82A81A559F08A5639E3"
+    }
+  ],
+  "route": "The existing regularity theorem already discharges every local integral and valuation condition once a matching differential exists. Integral cusp spanning supplies source generators. For an integral generator, the literal equal-weight ratio f*Delta/(E4^2*E6) belongs to the original integral-ratio field by its existing definition. The existing j-derivative identity has a nonzero integer scalar: read its constant coefficient from integer Laurent series and the unit constant coefficient of E4^2*E6. Transport that integer identity to the source coefficient field. Construct the coefficient y with y*qEuler(j)=the original cusp expansion. For arbitrary coefficient-field-valued cusp forms, descend the finite scalar span coefficientwise using the already proved Laurent retraction, then form y*D(j) and apply the existing regularity consumer.",
+  "shorterRouteReview": "The selected external differential realization file is an assembly wrapper whose upstream realization theorem was not downloaded here. The local code already supplies actual function fields, scalar extension, j-coordinate, differential expansion and regularity. No external differential carrier or qExpansionDiffAlong framework is needed. A guessed exact normalization or new Ramanujan identities are unnecessary; one nonzero integer coefficient suffices. Existing integral spanning plus coefficient retraction avoids a new rational basis selection or scalar-extension field-intersection theorem.",
+  "status": "Development route, no new production promotion or closed acceptance gate. Scope696 remains under fresh exhaustive audit after two unused definition parameters were removed; failed evidence preserved. Full scope remains 16/20; DUB-17--20 OPEN.",
+  "remaining": "Construct and audit the matching regular differential for every source coefficient-field-valued Gamma1 cusp form; prove the converse and actual Hecke/diamond comparison, then all original arithmetic and continuation obligations.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

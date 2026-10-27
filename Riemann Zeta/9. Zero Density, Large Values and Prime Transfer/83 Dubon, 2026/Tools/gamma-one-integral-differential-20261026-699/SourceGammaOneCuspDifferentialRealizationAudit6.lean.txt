@@ -1,0 +1,58 @@
+import SourceIntegerJEulerNormalization
+import SourceIntegerJEulerBaseChange
+import SourceGammaOneIntegralCuspRatio
+import SourceGammaOneIntegralCuspLaurentSpan
+import SourceGammaOneCuspDifferentialCoefficient
+import SourceGammaOneCuspDifferentialRealization
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFricke.qExpansion_E6_eq_map_eisenstein6
+#print axioms Dubon2026.SourceFricke.exists_integer_qEuler_jqModC_formula
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_integer_qEuler_integral_ratio_formula
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_integral_cusp_differential_coefficient
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOne_laurent_mem_span_integral_of_coeffMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_cusp_differential_coefficient_of_coeffMap
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_differential_of_coefficients
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_regular_differential_of_coefficients
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceIntegerJEulerNormalization, `SourceIntegerJEulerBaseChange, `SourceGammaOneIntegralCuspRatio, `SourceGammaOneIntegralCuspLaurentSpan, `SourceGammaOneCuspDifferentialCoefficient, `SourceGammaOneCuspDifferentialRealization]
+  let theorems : Array Name := #[`Dubon2026.SourceFricke.qExpansion_E6_eq_map_eisenstein6, `Dubon2026.SourceFricke.exists_integer_qEuler_jqModC_formula, `Dubon2026.SourceFunctionField.GammaOne.exists_integer_qEuler_integral_ratio_formula, `Dubon2026.SourceFunctionField.GammaOne.exists_integral_cusp_differential_coefficient, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_laurent_mem_span_integral_of_coeffMap, `Dubon2026.SourceFunctionField.GammaOne.exists_cusp_differential_coefficient_of_coeffMap, `Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_differential_of_coefficients, `Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_regular_differential_of_coefficients]
+  let constructions : Array Name := #[]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Gamma One Cusp Differential Realization postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Gamma One Cusp Differential Realization theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE CUSP DIFFERENTIAL REALIZATION AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceIntegerJEulerNormalization
+#lint in SourceIntegerJEulerBaseChange
+#lint in SourceGammaOneIntegralCuspRatio
+#lint in SourceGammaOneIntegralCuspLaurentSpan
+#lint in SourceGammaOneCuspDifferentialCoefficient
+#lint in SourceGammaOneCuspDifferentialRealization

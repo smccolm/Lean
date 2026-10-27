@@ -1,0 +1,37 @@
+import SourceWeierstrassIntegralDenominator
+import SourceBoundedIntegralSeriesProduct
+import SourceIntegralEisensteinSix
+import SourceBoundedIntegralSeriesConstant
+import SourceFrickeNumeratorIntegralBound
+import SourceBoundedRationalSeriesImage
+import SourceLaurentSpanDescent
+import SourceFrickeLaurentSpanDescent
+import SourceRationalCuspWeightLaurent
+import SourceRationalCuspWeightIntegrality
+import SourceIntegralRationalLaurentSeries
+import SourceBoundedIntegralLaurentAlgebra
+import SourceBoundedRationalLaurentImage
+import SourceCyclotomicLaurentTrace
+import SourceBoundedRationalLaurentIntegral
+import SourceBoundedCyclotomicLaurentFraction
+import SourceBoundedCyclotomicLaurentGenerators
+import SourceBoundedFrickeLaurentField
+import SourceBoundedRationalJAlgebra
+import SourceBoundedRationalCuspImage
+import SourceIntegralLaurentWeightFactors
+import SourceRationalCuspWeightCancellation
+import SourceGammaOneRationalBoundedDenominators
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ? getEnv
+  let mods : Array Name := #[`SourceWeierstrassIntegralDenominator, `SourceBoundedIntegralSeriesProduct, `SourceIntegralEisensteinSix, `SourceBoundedIntegralSeriesConstant, `SourceFrickeNumeratorIntegralBound, `SourceBoundedRationalSeriesImage, `SourceLaurentSpanDescent, `SourceFrickeLaurentSpanDescent, `SourceRationalCuspWeightLaurent, `SourceRationalCuspWeightIntegrality, `SourceIntegralRationalLaurentSeries, `SourceBoundedIntegralLaurentAlgebra, `SourceBoundedRationalLaurentImage, `SourceCyclotomicLaurentTrace, `SourceBoundedRationalLaurentIntegral, `SourceBoundedCyclotomicLaurentFraction, `SourceBoundedCyclotomicLaurentGenerators, `SourceBoundedFrickeLaurentField, `SourceBoundedRationalJAlgebra, `SourceBoundedRationalCuspImage, `SourceIntegralLaurentWeightFactors, `SourceRationalCuspWeightCancellation, `SourceGammaOneRationalBoundedDenominators]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

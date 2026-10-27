@@ -1,0 +1,53 @@
+import Mathlib.RingTheory.PowerSeries.Ideal
+import Mathlib.RingTheory.IntegralClosure.IntegrallyClosed
+import Mathlib.RingTheory.Localization.FractionRing
+import Mathlib.RingTheory.Polynomial.RationalRoot
+
+/-! DUB-17/18 -> actual Gamma1 differential realization -> original
+integral-ratio field -> bounded Fourier denominators. A rational power series
+which is both integral over integer power series and a fraction of such
+series is itself integral coefficientwise. Both independent premises remain
+explicit here and must be derived from the actual Fricke series downstream.
+Adapted from anthropics/fermats-last-theorem at
+6e837e75355538c7f80bab5b956861e86c4eacc2 (Apache License 2.0), specialized to
+the required integer/rational case; native power-series normality is reused. -/
+namespace Dubon2026.SourceFunctionField
+noncomputable section
+
+theorem rationalPowerSeries_mem_integer_image_of_monic_of_fraction
+    (g : PowerSeries ℚ) (P : Polynomial (PowerSeries ℤ)) (hP : P.Monic)
+    (hroot : Polynomial.eval₂ (PowerSeries.map (algebraMap ℤ ℚ)) g P = 0)
+    (h : PowerSeries ℤ) (h0 : h ≠ 0)
+    (hmul : PowerSeries.map (algebraMap ℤ ℚ) h * g ∈
+      (PowerSeries.map (algebraMap ℤ ℚ)).range) :
+    g ∈ (PowerSeries.map (algebraMap ℤ ℚ)).range := by
+  let ι : PowerSeries ℤ →+* PowerSeries ℚ := PowerSeries.map (algebraMap ℤ ℚ)
+  let F := FractionRing (PowerSeries ℤ)
+  let F' := FractionRing (PowerSeries ℚ)
+  let j : PowerSeries ℚ →+* F' := algebraMap (PowerSeries ℚ) F'
+  have hι : Function.Injective ι :=
+    PowerSeries.map_injective _ (IsFractionRing.injective ℤ ℚ)
+  have hj : Function.Injective j := IsFractionRing.injective (PowerSeries ℚ) F'
+  have hc : Function.Injective (j.comp ι) := hj.comp hι
+  let θ : F →+* F' := IsFractionRing.lift (A := PowerSeries ℤ) (K := F) (g := j.comp ι) hc
+  have hθ (a : PowerSeries ℤ) : θ (algebraMap (PowerSeries ℤ) F a) = j (ι a) :=
+    IsFractionRing.lift_algebraMap hc a
+  have hθc : θ.comp (algebraMap (PowerSeries ℤ) F) = j.comp ι := RingHom.ext hθ
+  obtain ⟨u, hu⟩ := hmul
+  let x : F := algebraMap (PowerSeries ℤ) F u / algebraMap (PowerSeries ℤ) F h
+  have hιh : ι h ≠ 0 := fun hz => h0 (hι (hz.trans (map_zero ι).symm))
+  have hjh : j (ι h) ≠ 0 := fun hz => hιh (hj (hz.trans (map_zero j).symm))
+  have hθx : θ x = j g := by
+    rw [show x = algebraMap (PowerSeries ℤ) F u / algebraMap (PowerSeries ℤ) F h from rfl,
+      map_div₀, hθ, hθ, div_eq_iff hjh, ← map_mul, mul_comm, ← hu]
+  have hint : IsIntegral (PowerSeries ℤ) x := by
+    refine ⟨P, hP, ?_⟩
+    apply θ.injective
+    rw [Polynomial.hom_eval₂, hθc, hθx, map_zero, ← Polynomial.hom_eval₂, hroot, map_zero]
+  obtain ⟨p, hp⟩ := IsIntegrallyClosed.algebraMap_eq_of_integral hint
+  refine ⟨p, hj ?_⟩
+  change j (ι p) = j g
+  rw [← hθ, hp, hθx]
+
+end
+end Dubon2026.SourceFunctionField

@@ -1,0 +1,25 @@
+{
+  "fetchedUTC": "2026-10-26T22:18:09.976690+00:00",
+  "files": [
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_PowerSeries_mem_range_map_of_monic_of_mul_mem_range.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_PowerSeries_mem_range_map_of_monic_of_mul_mem_range.lean",
+      "snapshot": "P2M\\Sol\\S_PowerSeries_mem_range_map_of_monic_of_mul_mem_range.lean.txt",
+      "gitBlob": "fb8f982a97779b09baae157909353883a89a13c8",
+      "sha256": "7E1DFA3F39F90E37BD849F684D36BF8932F0FB4A1BAFC46956A70F35A7802705",
+      "bytes": 3110
+    },
+    {
+      "repo": "anthropics/fermats-last-theorem",
+      "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "path": "P2M/Sol/S_ModularCurve_exists_ne_zero_forall_mul_qExpansion_coeff_fricke_mem_adjoin.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_ne_zero_forall_mul_qExpansion_coeff_fricke_mem_adjoin.lean",
+      "snapshot": "P2M\\Sol\\S_ModularCurve_exists_ne_zero_forall_mul_qExpansion_coeff_fricke_mem_adjoin.lean.txt",
+      "gitBlob": "b09676b2a3400f02def84f8a46c408eecb1b657a",
+      "sha256": "4B673F2415E1CBA900F4F8FDBB535168A6718F6B3A14B8C1E0CA4AD94C79743F",
+      "bytes": 34610
+    }
+  ]
+}

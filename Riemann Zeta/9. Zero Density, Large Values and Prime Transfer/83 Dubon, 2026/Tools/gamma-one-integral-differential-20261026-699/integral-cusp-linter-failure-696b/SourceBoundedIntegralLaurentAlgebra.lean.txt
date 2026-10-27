@@ -1,0 +1,79 @@
+import SourceBoundedIntegralSeriesProduct
+import Dubon2026.SourceLaurentIntegralDescent
+import Dubon2026.SourceModularJSeries
+
+/-! DUB-17/18 -> actual Gamma1 differential realization -> original
+integral-ratio field -> bounded coefficients of the actual Fricke Laurent
+field. Use one integer bound for every Laurent coefficient, including
+negative indices. Finite Hahn convolution preserves this uniform bound. -/
+namespace Dubon2026.SourceFunctionField
+noncomputable section
+
+/-- One nonzero integer makes every Laurent coefficient integral over the integers. -/
+def HasBoundedIntegralLaurentCoefficients {K : Type*} [Field K] [CharZero K]
+    (f : LaurentSeries K) : Prop :=
+  ∃ d : ℤ, d ≠ 0 ∧ ∀ n : ℤ, IsIntegral ℤ ((d : K) * f.coeff n)
+
+theorem hasBoundedIntegralLaurentCoefficients_of_integral {K : Type*} [Field K] [CharZero K]
+    {f : LaurentSeries K} (hf : ∀ n : ℤ, IsIntegral ℤ (f.coeff n)) :
+    HasBoundedIntegralLaurentCoefficients f :=
+  ⟨1, one_ne_zero, fun n => by simpa only [Int.cast_one, one_mul] using hf n⟩
+
+theorem HasBoundedIntegralCoefficients.laurent {K : Type*} [Field K] [CharZero K]
+    {f : PowerSeries K} (hf : HasBoundedIntegralCoefficients f) :
+    HasBoundedIntegralLaurentCoefficients (f : LaurentSeries K) := by
+  obtain ⟨d, hd, hi⟩ := hf
+  refine ⟨d, hd, fun n => ?_⟩
+  rcases le_or_gt 0 n with hn | hn
+  · lift n to ℕ using hn
+    rw [HahnSeries.ofPowerSeries_apply_coeff]
+    exact hi n
+  · rw [ofPowerSeries_coeff_of_neg _ hn, mul_zero]
+    exact isIntegral_zero
+
+theorem hasBoundedIntegralLaurentCoefficients_integer_map {K : Type*} [Field K] [CharZero K]
+    (f : LaurentSeries ℤ) :
+    HasBoundedIntegralLaurentCoefficients (coeffMap (Int.castRingHom K) f) := by
+  apply hasBoundedIntegralLaurentCoefficients_of_integral
+  intro n
+  rw [coeffMap_coeff]
+  exact isIntegral_algebraMap
+
+theorem HasBoundedIntegralLaurentCoefficients.add {K : Type*} [Field K] [CharZero K]
+    {f g : LaurentSeries K} (hf : HasBoundedIntegralLaurentCoefficients f)
+    (hg : HasBoundedIntegralLaurentCoefficients g) :
+    HasBoundedIntegralLaurentCoefficients (f + g) := by
+  obtain ⟨d, hd, hi⟩ := hf
+  obtain ⟨e, he, hj⟩ := hg
+  refine ⟨d * e, mul_ne_zero hd he, fun n => ?_⟩
+  rw [HahnSeries.coeff_add, Int.cast_mul]
+  have hdi : IsIntegral ℤ (d : K) := isIntegral_algebraMap
+  have hei : IsIntegral ℤ (e : K) := isIntegral_algebraMap
+  convert (hei.mul (hi n)).add (hdi.mul (hj n)) using 1
+  ring
+
+theorem HasBoundedIntegralLaurentCoefficients.mul {K : Type*} [Field K] [CharZero K]
+    {f g : LaurentSeries K} (hf : HasBoundedIntegralLaurentCoefficients f)
+    (hg : HasBoundedIntegralLaurentCoefficients g) :
+    HasBoundedIntegralLaurentCoefficients (f * g) := by
+  obtain ⟨d, hd, hi⟩ := hf
+  obtain ⟨e, he, hj⟩ := hg
+  refine ⟨d * e, mul_ne_zero hd he, fun n => ?_⟩
+  rw [HahnSeries.coeff_mul, Finset.mul_sum]
+  apply IsIntegral.sum
+  intro ij _
+  convert (hi ij.1).mul (hj ij.2) using 1
+  push_cast
+  ring
+
+theorem HasBoundedIntegralLaurentCoefficients.pow {K : Type*} [Field K] [CharZero K]
+    {f : LaurentSeries K} (hf : HasBoundedIntegralLaurentCoefficients f) (n : ℕ) :
+    HasBoundedIntegralLaurentCoefficients (f ^ n) := by
+  induction n with
+  | zero =>
+    simpa only [pow_zero, map_one] using
+      (hasBoundedIntegralLaurentCoefficients_integer_map (K := K) 1)
+  | succ n ih => simpa only [pow_succ] using ih.mul hf
+
+end
+end Dubon2026.SourceFunctionField

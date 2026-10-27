@@ -1,0 +1,59 @@
+import Dubon2026.SourceRationalCuspWeightLaurent
+import Dubon2026.SourceIntegralEisensteinSix
+
+/-! DUB-17/18 -> actual Gamma1 differential realization -> original
+integral-ratio field -> bounded denominators of the original cusp form.
+The literal rational E4/E6 weight factor is the image of a unit of integer
+Laurent series. Its inverse therefore has integer coefficients as well.
+The exact rational Laurent germs of that factor and the discriminant are
+identified with the original analytic functions for subsequent cancellation. -/
+namespace Dubon2026.SourceFricke
+noncomputable section
+open UpperHalfPlane SourceFunctionField ModularForm
+open SourceFunctionField.CuspWeightCriterion
+open scoped Manifold ModularForm MatrixGroups
+
+theorem exists_integer_unit_eisensteinFactorLaurent (N : ℕ) [NeZero N] (a b : ℕ) :
+    ∃ u : (LaurentSeries ℤ)ˣ,
+      coeffMap (Int.castRingHom ℚ) (u : LaurentSeries ℤ) =
+        qExpand ℚ N (eisensteinQSeries 4) ^ a * qExpand ℚ N (eisensteinQSeries 6) ^ b := by
+  have h4 : IsUnit eisenstein4 := PowerSeries.isUnit_iff_constantCoeff.mpr (by
+    rw [constantCoeff_eisenstein4]; exact isUnit_one)
+  have h6 : IsUnit eisenstein6 := PowerSeries.isUnit_iff_constantCoeff.mpr (by
+    rw [constantCoeff_eisenstein6]; exact isUnit_one)
+  let φ : PowerSeries ℤ →+* LaurentSeries ℤ :=
+    (qExpand ℤ N).comp (HahnSeries.ofPowerSeries ℤ ℤ)
+  obtain ⟨u, hu⟩ := ((h4.pow a).mul (h6.pow b)).map φ
+  refine ⟨u, ?_⟩
+  rw [hu]
+  simp only [φ, RingHom.comp_apply, map_mul, map_pow, coeffMap_qExpand, coeffMap_ofPowerSeries]
+  rw [← eisensteinQSeries_four_eq_integer_map, ← eisensteinQSeries_six_eq_integer_map]
+
+theorem represents_rational_eisensteinFactorLaurent (N : ℕ) [NeZero N] (a b : ℕ) :
+    CuspTaylor.Represents (coeffMap (algebraMap ℚ ℂ)
+      (qExpand ℚ N (eisensteinQSeries 4) ^ a * qExpand ℚ N (eisensteinQSeries 6) ^ b))
+      (cuspFunction N (eisensteinFactor a b)) := by
+  have h4 := represents_qExpand_rational_series N E₄ (eisensteinQSeries 4)
+    (eisensteinQSeries_map (by norm_num) (by decide))
+    (SlashInvariantFormClass.periodic_comp_ofComplex E₄ one_mem_strictPeriods_SL)
+    E₄.holo' (ModularFormClass.bdd_at_infty E₄)
+  have h6 := represents_qExpand_rational_series N E₆ (eisensteinQSeries 6)
+    (eisensteinQSeries_map (by norm_num) (by decide))
+    (SlashInvariantFormClass.periodic_comp_ofComplex E₆ one_mem_strictPeriods_SL)
+    E₆.holo' (ModularFormClass.bdd_at_infty E₆)
+  rw [map_mul, map_pow, map_pow]
+  exact (h4.cusp_pow a).cusp_mul (h6.cusp_pow b)
+
+theorem represents_rational_discriminantLaurent (N : ℕ) [NeZero N] :
+    CuspTaylor.Represents (coeffMap (algebraMap ℚ ℂ)
+      (qExpand ℚ N ((PowerSeries.X * dedekindEtaUnit).map (Int.castRingHom ℚ))))
+      (cuspFunction N (⇑CuspForm.discriminant : ℍ → ℂ)) := by
+  apply represents_qExpand_rational_series N CuspForm.discriminant _ ?_
+    (SlashInvariantFormClass.periodic_comp_ofComplex CuspForm.discriminant one_mem_strictPeriods_SL)
+    CuspForm.discriminant.holo' (ModularFormClass.bdd_at_infty CuspForm.discriminant)
+  rw [CuspForm.coe_discriminant, qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit]
+  ext n
+  simp only [PowerSeries.coeff_map, Int.coe_castRingHom, map_intCast]
+
+end
+end Dubon2026.SourceFricke

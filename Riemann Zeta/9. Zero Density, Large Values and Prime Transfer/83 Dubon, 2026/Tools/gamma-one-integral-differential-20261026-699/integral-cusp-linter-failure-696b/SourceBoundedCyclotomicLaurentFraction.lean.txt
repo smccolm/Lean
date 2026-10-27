@@ -1,0 +1,68 @@
+import SourceCyclotomicLaurentTrace
+import Dubon2026.NumberFieldPositiveIntegralMultiple
+
+/-! DUB-17/18 -> actual Gamma1 differential realization -> original
+integral-ratio field -> bounded rational Laurent fractions. Normalize one
+nonzero denominator coefficient before taking the native field trace.
+The resulting rational denominator has a coefficient equal to the positive
+extension degree, and the original quotient identity and uniform bounds
+are retained. No pole clearing or product of conjugate denominators is used. -/
+namespace Dubon2026.SourceFricke
+noncomputable section
+open SourceFunctionField
+
+theorem hasBoundedIntegralLaurentCoefficients_single_zero_kN
+    (N : ℕ) [NeZero N] (c : kN N) :
+    HasBoundedIntegralLaurentCoefficients (HahnSeries.single (0 : ℤ) c) := by
+  letI := finiteDimensional_kN N
+  letI : NumberField (kN N) := {}
+  obtain ⟨d, hd, hi⟩ := numberField_exists_positive_integral_multiple (fun _ : Unit => c)
+  refine ⟨d, ne_of_gt hd, fun n => ?_⟩
+  by_cases hn : n = 0
+  · subst n
+    rw [HahnSeries.coeff_single_same]
+    simpa only [zsmul_eq_mul] using hi ()
+  · rw [HahnSeries.coeff_single_of_ne hn, mul_zero]
+    exact isIntegral_zero
+
+theorem exists_rational_bounded_laurent_fraction (N : ℕ) [NeZero N]
+    (y : LaurentSeries ℚ) (q r : LaurentSeries (kN N)) (hq0 : q ≠ 0)
+    (hq : HasBoundedIntegralLaurentCoefficients q)
+    (hr : HasBoundedIntegralLaurentCoefficients r)
+    (hyq : coeffMap (algebraMap ℚ (kN N)) y * q = r) :
+    ∃ h u : LaurentSeries ℚ, h ≠ 0 ∧ HasBoundedIntegralLaurentCoefficients h ∧
+      HasBoundedIntegralLaurentCoefficients u ∧ h * y = u := by
+  classical
+  letI := finiteDimensional_kN N
+  obtain ⟨n, hn⟩ : ∃ n : ℤ, q.coeff n ≠ 0 := by
+    by_contra! hh
+    apply hq0
+    apply HahnSeries.ext
+    funext n
+    simpa only [HahnSeries.coeff_zero] using hh n
+  let x := (q.coeff n)⁻¹
+  have hx := hasBoundedIntegralLaurentCoefficients_single_zero_kN N x
+  refine ⟨cyclotomicTraceLaurent N (HahnSeries.single 0 x * q),
+    cyclotomicTraceLaurent N (HahnSeries.single 0 x * r), ?_,
+    hasBoundedIntegralLaurentCoefficients_cyclotomicTrace (hx.mul hq),
+    hasBoundedIntegralLaurentCoefficients_cyclotomicTrace (hx.mul hr), ?_⟩
+  · intro hz
+    have he := congrArg (fun f : LaurentSeries ℚ => f.coeff n) hz
+    dsimp only at he
+    rw [cyclotomicTraceLaurent_coeff, HahnSeries.coeff_single_zero_mul,
+      show x = (q.coeff n)⁻¹ from rfl, inv_mul_cancel₀ hn, HahnSeries.coeff_zero] at he
+    have ht : Algebra.trace ℚ (kN N) (1 : kN N) = (Module.finrank ℚ (kN N) : ℚ) := by
+      simpa only [map_one, nsmul_eq_mul, mul_one] using
+        Algebra.trace_algebraMap (R := ℚ) (S := kN N) (1 : ℚ)
+    rw [ht] at he
+    exact (Nat.cast_ne_zero.mpr (ne_of_gt (Module.finrank_pos : 0 < Module.finrank ℚ (kN N)))) he
+  · have hrel : coeffMap (algebraMap ℚ (kN N)) y * (HahnSeries.single 0 x * q) =
+        HahnSeries.single 0 x * r := by
+      rw [← hyq]
+      ring
+    have he := cyclotomicTraceLaurent_rational_mul N y (HahnSeries.single 0 x * q)
+    rw [hrel] at he
+    simpa only [mul_comm] using he.symm
+
+end
+end Dubon2026.SourceFricke

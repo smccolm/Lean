@@ -1,0 +1,133 @@
+{
+  "modules": [
+    "SourceWeierstrassIntegralDenominator",
+    "SourceBoundedIntegralSeriesProduct",
+    "SourceIntegralEisensteinSix",
+    "SourceBoundedIntegralSeriesConstant",
+    "SourceFrickeNumeratorIntegralBound",
+    "SourceBoundedRationalSeriesImage",
+    "SourceLaurentSpanDescent",
+    "SourceFrickeLaurentSpanDescent",
+    "SourceRationalCuspWeightLaurent",
+    "SourceRationalCuspWeightIntegrality",
+    "SourceIntegralRationalLaurentSeries",
+    "SourceBoundedIntegralLaurentAlgebra",
+    "SourceBoundedRationalLaurentImage",
+    "SourceCyclotomicLaurentTrace",
+    "SourceBoundedRationalLaurentIntegral",
+    "SourceBoundedCyclotomicLaurentFraction",
+    "SourceBoundedCyclotomicLaurentGenerators",
+    "SourceBoundedFrickeLaurentField",
+    "SourceBoundedRationalJAlgebra",
+    "SourceBoundedRationalCuspImage",
+    "SourceIntegralLaurentWeightFactors",
+    "SourceRationalCuspWeightCancellation",
+    "SourceGammaOneRationalBoundedDenominators"
+  ],
+  "deferred": [
+    "SourceIntegralRationalPowerSeries",
+    "SourceCyclotomicSeriesTrace",
+    "SourceBoundedCyclotomicFractionTrace",
+    "SourceBoundedRationalSeriesIntegral"
+  ],
+  "preserved": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceIntegralRationalPowerSeries.lean.txt",
+      "sha256": "F740AC59114518DF176D3BF46E4F8935BBBFD785CA03DDE4B1A5F12EC02C855D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceIntegralRationalPowerSeries.olean",
+      "sha256": "722E68123B6B0D3FBADBF5621EAA180219409E29151BE60AD5D83BE45DA186BB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceIntegralRationalPowerSeries.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceIntegralRationalPowerSeries.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceCyclotomicSeriesTrace.lean.txt",
+      "sha256": "2B06FAF7DF08F8F6F60E7E8B36A1061163A3DE5793D4F466F3229939A6CD27A8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceCyclotomicSeriesTrace.olean",
+      "sha256": "CE616199C8BCBF1AF4A34E751BC0A411C3EE77374C71AAA38ADC9479F58F76C0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceCyclotomicSeriesTrace.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceCyclotomicSeriesTrace.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedCyclotomicFractionTrace.lean.txt",
+      "sha256": "C41EC4A1C1A3199001EA545876728F22F300BB3FA9FAF0C3A10B463415DFA3A1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedCyclotomicFractionTrace.olean",
+      "sha256": "5158ABA4C2B43A2FB77E0B7BDA89410DF7D321196979140F361890EDAD80CDF0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedCyclotomicFractionTrace.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedCyclotomicFractionTrace.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedRationalSeriesIntegral.lean.txt",
+      "sha256": "BAC425CB96AE34468AE22F932D7918359DA3B385ABFFE728224AA8E9DA7550DD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedRationalSeriesIntegral.olean",
+      "sha256": "598351575F7A5AD685BED2292B67DE3C0282507A5224180602D938B448AEC6ED"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedRationalSeriesIntegral.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedRationalSeriesIntegral.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedRationalSeriesImage.lean.txt",
+      "sha256": "7A18A19CA0CE1C94DE90BC76FD06AF91E7AD9893C8FFDEB8DEB9E515B9D8F7ED"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedRationalSeriesImage.olean",
+      "sha256": "764120F988DB5D094775C5AE625144E61EF4903C2A931C9478FD969C17E90791"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedRationalSeriesImage.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedRationalSeriesImage.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedIntegralLaurentAlgebra.lean.txt",
+      "sha256": "77FB7F50FC533C93724D3D6E6F3539C42BBE6469C272F1D03467CEDC366D3A7B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedIntegralLaurentAlgebra.olean",
+      "sha256": "1EE0360A4EB2E22785E3B1D66C3F3EC896A8800C5DEB62816B994B3175504246"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedIntegralLaurentAlgebra.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\deferred-power-series-route-696\\SourceBoundedIntegralLaurentAlgebra.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ],
+  "status": "Unaudited development selection. Recompile changed modules and their selected consumers before exhaustive audit. No frozen or production mathematical source changed.",
+  "rationale": "Native Laurent localization avoids a duplicate power-series denominator route. The reverse rational power-series bound lemma had no consumer on the selected chain; retain only the forward integer-series construction needed for the actual cusp-form result."
+}

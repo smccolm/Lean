@@ -1,0 +1,70 @@
+import Dubon2026.SourceCyclotomicTraceStructure
+import Dubon2026.NumberFieldPositiveIntegralMultiple
+
+/-! DUB-17/18 -> actual Gamma1 differential realization -> original
+integral-ratio field -> bounded Fourier denominators of actual Fricke
+generators. The existing monomial expansion already isolates a single
+possibly nonintegral constant term. Reuse the local number-field integral
+multiple theorem for that term; all other terms are integral root-of-unity
+monomials. The same scalar therefore works for every finite Fourier fiber. -/
+namespace Dubon2026.SourceFricke
+noncomputable section
+
+theorem wpMonCoeff_nonconstant_isIntegral (N : ℕ) [NeZero N] (a₁ a₂ : ℕ)
+    (i : ℕ+ ⊕ ((ℕ+ × ℕ+) × Fin 3)) :
+    IsIntegral ℤ (wpMonCoeff N a₁ a₂ (Sum.inr i)) := by
+  have hz : IsIntegral ℤ (zetaN N) :=
+    (isPrimitiveRoot_zetaN (NeZero.ne N)).isIntegral (NeZero.pos N)
+  have hzi : IsIntegral ℤ (zetaN N)⁻¹ :=
+    (isPrimitiveRoot_zetaN (NeZero.ne N)).inv.isIntegral (NeZero.pos N)
+  have hn (n : ℕ) : IsIntegral ℤ (n : ℂ) := by
+    simpa only [Int.cast_natCast, eq_intCast] using
+      (isIntegral_algebraMap : IsIntegral ℤ (algebraMap ℤ ℂ (n : ℤ)))
+  rcases i with m | ⟨p, j⟩
+  · simp only [wpMonCoeff]
+    split_ifs
+    · exact isIntegral_zero
+    · exact (hn m).mul (hz.pow _)
+  · simp only [wpMonCoeff]
+    fin_cases j
+    · exact (hn p.2).mul (hz.pow _)
+    · exact (hn p.2).mul (hzi.pow _)
+    · exact (hn 2).neg.mul (hn p.2)
+
+theorem exists_wpMonCoeff_integral_multiple (N : ℕ) [NeZero N] (a₁ a₂ : ℕ) :
+    ∃ d : ℤ, 0 < d ∧ ∀ i : WpIdx, IsIntegral ℤ ((d : ℂ) * wpMonCoeff N a₁ a₂ i) := by
+  letI := finiteDimensional_kN N
+  letI : NumberField (kN N) := {}
+  obtain ⟨d, hd, hi⟩ := numberField_exists_positive_integral_multiple
+    (fun _ : Unit => wpMonCoeffK N a₁ a₂ (Sum.inl ()))
+  refine ⟨d, hd, ?_⟩
+  rintro (u | i)
+  · cases u
+    have hc := (hi ()).algebraMap (B := ℂ)
+    change IsIntegral ℤ (d • wpMonCoeff N a₁ a₂ (Sum.inl ())) at hc
+    simpa only [zsmul_eq_mul] using hc
+  · have hi := (wpMonCoeff_nonconstant_isIntegral N a₁ a₂ i).smul d
+    simpa only [zsmul_eq_mul] using hi
+
+theorem exists_wpQCoeff_integral_multiple {N a₁ : ℕ} [NeZero N]
+    (ha₁ : a₁ < N) (a₂ : ℕ) :
+    ∃ d : ℤ, 0 < d ∧ ∀ n : ℕ, IsIntegral ℤ ((d : ℂ) * wpQCoeff N a₁ a₂ n) := by
+  classical
+  obtain ⟨d, hd, hi⟩ := exists_wpMonCoeff_integral_multiple N a₁ a₂
+  refine ⟨d, hd, fun n => ?_⟩
+  have := (finite_wpMonExp_fiber ha₁ n).to_subtype
+  letI := Fintype.ofFinite (wpMonExp N a₁ ⁻¹' {n})
+  rw [wpQCoeff, tsum_fintype, Finset.mul_sum]
+  exact IsIntegral.sum _ (fun i _ => hi i)
+
+theorem exists_wpQSeriesK_integral_multiple {N a₁ : ℕ} [NeZero N]
+    (ha₁ : a₁ < N) (a₂ : ℕ) :
+    ∃ d : ℤ, 0 < d ∧ ∀ n : ℕ,
+      IsIntegral ℤ ((d : kN N) * (wpQSeriesK ha₁ a₂).coeff n) := by
+  obtain ⟨d, hd, hi⟩ := exists_wpQCoeff_integral_multiple ha₁ a₂
+  refine ⟨d, hd, fun n => ?_⟩
+  apply (isIntegral_algebraMap_iff (algebraMap (kN N) ℂ).injective).mp
+  simpa only [map_mul, map_intCast, wpQSeriesK, PowerSeries.coeff_mk, coe_wpQCoeffK] using hi n
+
+end
+end Dubon2026.SourceFricke

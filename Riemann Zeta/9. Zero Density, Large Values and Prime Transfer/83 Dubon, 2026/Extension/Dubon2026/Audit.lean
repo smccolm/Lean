@@ -24598,6 +24598,69 @@ private def publicConsumers : Array Name := #[
   ,``Dubon2026.SourceFricke.gammaOne_mem_span_rational_of_conjugates
   ,``Dubon2026.SourceFricke.span_gammaOne_rational_cuspForms_eq_top
   ,``Dubon2026.SourceFricke.span_gammaOne_weightTwo_rational_cuspForms_eq_top
+  ,``Dubon2026.SourceFricke.wpMonCoeff_nonconstant_isIntegral
+  ,``Dubon2026.SourceFricke.exists_wpMonCoeff_integral_multiple
+  ,``Dubon2026.SourceFricke.exists_wpQCoeff_integral_multiple
+  ,``Dubon2026.SourceFricke.exists_wpQSeriesK_integral_multiple
+  ,``Dubon2026.SourceFunctionField.hasBoundedIntegralCoefficients_of_integral
+  ,``Dubon2026.SourceFunctionField.HasBoundedIntegralCoefficients.mul
+  ,``Dubon2026.SourceFricke.constantCoeff_eisenstein6
+  ,``Dubon2026.SourceFricke.eisensteinQSeries_four_eq_integer_map
+  ,``Dubon2026.SourceFricke.eisensteinQSeries_six_eq_integer_map
+  ,``Dubon2026.SourceFunctionField.hasBoundedIntegralCoefficients_C_of_multiple
+  ,``Dubon2026.SourceFunctionField.hasBoundedIntegralCoefficients_C_rat
+  ,``Dubon2026.SourceFricke.e4e6QSeries_eq_integer_map
+  ,``Dubon2026.SourceFricke.e4e6QSeriesK_coeff_isIntegral
+  ,``Dubon2026.SourceFricke.hasBoundedIntegralCoefficients_frickeHQSeriesK
+  ,``Dubon2026.SourceFricke.hasBoundedIntegralCoefficients_frickeNumerator
+  ,``Dubon2026.SourceFunctionField.HasBoundedIntegralCoefficients.exists_integer_series
+  ,``Dubon2026.SourceFunctionField.mem_span_of_coeffMap_mem_span
+  ,``Dubon2026.SourceFricke.mem_frickeLaurentFieldK_of_represents_frickeSpan
+  ,``Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_of_represents_frickeSpan
+  ,``Dubon2026.SourceFricke.represents_qExpand_rational_series
+  ,``Dubon2026.SourceFricke.exists_rational_cuspWeightImage_laurent
+  ,``Dubon2026.SourceFricke.gammaOne_cuspWeightImage_mem_original_of_rational_series
+  ,``Dubon2026.SourceFricke.exists_integral_rational_cuspWeightImage_laurent
+  ,``Dubon2026.SourceFunctionField.isIntegrallyClosed_integerLaurentSeries
+  ,``Dubon2026.SourceFunctionField.rationalLaurentSeries_mem_integer_image_of_monic_of_fraction
+  ,``Dubon2026.SourceFunctionField.hasBoundedIntegralLaurentCoefficients_of_integral
+  ,``Dubon2026.SourceFunctionField.HasBoundedIntegralCoefficients.laurent
+  ,``Dubon2026.SourceFunctionField.hasBoundedIntegralLaurentCoefficients_integer_map
+  ,``Dubon2026.SourceFunctionField.HasBoundedIntegralLaurentCoefficients.add
+  ,``Dubon2026.SourceFunctionField.HasBoundedIntegralLaurentCoefficients.mul
+  ,``Dubon2026.SourceFunctionField.HasBoundedIntegralLaurentCoefficients.pow
+  ,``Dubon2026.SourceFunctionField.HasBoundedIntegralLaurentCoefficients.exists_integer_series
+  ,``Dubon2026.SourceFunctionField.hasBoundedIntegralLaurentCoefficients_of_integer_series
+  ,``Dubon2026.SourceFricke.cyclotomicTraceLaurent_coeff
+  ,``Dubon2026.SourceFricke.coeffMap_cyclotomicTraceLaurent
+  ,``Dubon2026.SourceFricke.cyclotomicTraceLaurent_rational_mul
+  ,``Dubon2026.SourceFricke.hasBoundedIntegralLaurentCoefficients_cyclotomicTrace
+  ,``Dubon2026.SourceFunctionField.hasBoundedIntegralLaurentCoefficients_of_monic_relation_of_bounded_fraction
+  ,``Dubon2026.SourceFricke.hasBoundedIntegralLaurentCoefficients_single_zero_kN
+  ,``Dubon2026.SourceFricke.exists_rational_bounded_laurent_fraction
+  ,``Dubon2026.SourceFricke.hasBoundedIntegralLaurentCoefficients_jqNModC
+  ,``Dubon2026.SourceFricke.hasBoundedIntegralLaurentCoefficients_discriminantLaurentK
+  ,``Dubon2026.SourceFricke.discriminantLaurentK_ne_zero
+  ,``Dubon2026.SourceFricke.exists_bounded_frickeLaurentK_fraction
+  ,``Dubon2026.SourceFricke.exists_bounded_fraction_frickeLaurentFieldK
+  ,``Dubon2026.SourceFricke.hasBoundedIntegralLaurentCoefficients_jAlgebra
+  ,``Dubon2026.SourceFricke.hasBoundedIntegralLaurentCoefficients_of_integral_j_of_frickeField
+  ,``Dubon2026.SourceFricke.exists_bounded_rational_cuspWeightImage_laurent
+  ,``Dubon2026.SourceFricke.exists_integer_unit_eisensteinFactorLaurent
+  ,``Dubon2026.SourceFricke.represents_rational_eisensteinFactorLaurent
+  ,``Dubon2026.SourceFricke.represents_rational_discriminantLaurent
+  ,``Dubon2026.SourceFricke.gammaOne_rational_series_hasBoundedIntegralCoefficients
+  ,``Dubon2026.SourceFricke.exists_gammaOne_integralQExp_int_multiple
+  ,``Dubon2026.SourceFricke.span_gammaOne_integral_cuspForms_eq_top
+  ,``Dubon2026.SourceFricke.span_gammaOne_weightTwo_integral_cuspForms_eq_top
+  ,``Dubon2026.SourceFricke.qExpansion_E6_eq_map_eisenstein6
+  ,``Dubon2026.SourceFricke.exists_integer_qEuler_jqModC_formula
+  ,``Dubon2026.SourceFunctionField.GammaOne.exists_integer_qEuler_integral_ratio_formula
+  ,``Dubon2026.SourceFunctionField.GammaOne.exists_integral_cusp_differential_coefficient
+  ,``Dubon2026.SourceFunctionField.GammaOne.gammaOne_laurent_mem_span_integral_of_coeffMap
+  ,``Dubon2026.SourceFunctionField.GammaOne.exists_cusp_differential_coefficient_of_coeffMap
+  ,``Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_differential_of_coefficients
+  ,``Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_regular_differential_of_coefficients
 ]
 
 private def publicConstructions : Array Name := #[
@@ -27040,7 +27103,12 @@ private def publicConstructions : Array Name := #[
   ``Dubon2026.SourceFricke.frickeLaurentGeneratorsK,
   ``Dubon2026.SourceFricke.CyclotomicConjugates,
   ``Dubon2026.SourceFricke.cyclotomicTorsionVector,
-  ``Dubon2026.SourceFricke.gammaOneQCoeffLinear
+  ``Dubon2026.SourceFricke.gammaOneQCoeffLinear,
+  ``Dubon2026.SourceFunctionField.HasBoundedIntegralCoefficients,
+  ``Dubon2026.SourceFricke.eisenstein6,
+  ``Dubon2026.SourceFricke.e4e6IntegerSeries,
+  ``Dubon2026.SourceFunctionField.HasBoundedIntegralLaurentCoefficients,
+  ``Dubon2026.SourceFricke.cyclotomicTraceLaurent
 ]
 
 private def runAudit : CoreM Unit := do

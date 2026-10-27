@@ -1,0 +1,374 @@
+{
+  "recordedUTC": "2026-10-26T23:46:02.625767+00:00",
+  "status": "PASS: all 61 source and olean hashes exactly match their frozen receipts after restoration.",
+  "restoration": "scratch-name-collision-restoration-695.json",
+  "freshLog": "SourceOriginalFrickeSpanDescentRestoration695.log",
+  "checks": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePureTranscendentalConstantIntersection.lean",
+      "sourceSha256": "1AF23FC050677CA31B45EE346996497B4F65680B2CB19C9D6D25A80ADC42EAC8",
+      "oleanSha256": "D1A72ED3C9EC37C56FAF60F875A87AC7AF1D3BA22C5974048DD7DBBCABC05638",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-cusp-fricke-rational-span-7-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceAlgebraicallyClosedFixedField.lean",
+      "sourceSha256": "6603606DC68A89EE382AF68F07485C86B8F34257BCAD6120D94A4580504C56C4",
+      "oleanSha256": "8216BF40C7584BE9B770DD1B330170AC8AB46DCBCDA251C9E06AD477BFC6E914",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-cusp-fricke-rational-span-7-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTwistDescentFiniteSupport.lean",
+      "sourceSha256": "887EE5E7EA3F6B8CA8E4BC973AE7E0216C9206E1CDC76C8071169C7D3868EAED",
+      "oleanSha256": "322659A80696C7B8667742E63F86EAA6A69E7E70D2C7BD323D13885F416288DB",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-cusp-fricke-rational-span-7-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceTwistStableSubspaceDescent.lean",
+      "sourceSha256": "FA4A53E442D32277755471BE12E9F75CDCB3DF38D862AB77FDF1B1DEF79C5C2A",
+      "oleanSha256": "76B5DA2ABDF2B4FFD0F0657A3D881C5C38C97C9C18453905F2FB680D1236F558",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-cusp-fricke-rational-span-7-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFrickeSpanDescent.lean",
+      "sourceSha256": "49DB1E2A01837699A2A7A8C4C7602FBBB0305BADEA69D8143178B4C593432A6C",
+      "oleanSha256": "35D08B31F6CBE321615D1D5DD0FDD0F42A1957A2653F952AC812F8B86BF2C37C",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-cusp-fricke-rational-span-7-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightImageDescent.lean",
+      "sourceSha256": "4E1428B421A719F4374D9100673F28C63DE9C0826887E977B4CB6011FB63EF30",
+      "oleanSha256": "E4252A945B58621C9C5A97BFB12C53690A131D1B0C8CE15A005513A9086EE3E3",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-cusp-fricke-rational-span-7-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspFrickeRationalSpan.lean",
+      "sourceSha256": "9E741DD160C9413902CC185185DC46C072627609F57D349B6A9C98717B1F5BFD",
+      "oleanSha256": "874877A4D6DFDD85EE7B32B3A6178BAC05A2D6D379D4D65F74D2049586E80057",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-cusp-fricke-rational-span-7-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicHolomorphicAlgebra.lean",
+      "sourceSha256": "0042EB34AB89EF6038DE681FECDBCD1DA95B63F661C878CED9F21515A6412B36",
+      "oleanSha256": "F0D8D037FAE79DB317E9445E6F5C71F80EA75A75504454A87CE5248530C0513F",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-coefficient-twist-8-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeScalarExtensionBasis.lean",
+      "sourceSha256": "84901516A47EE070A70228679319B8503D7C7A9C89D2FD8F11F88590767DC241",
+      "oleanSha256": "50643FC4AD263381C1B3F3E73EEEC6B945A1070447F84CFED4E7E4AD99749384",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-coefficient-twist-8-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceComplexBasisCoefficientTwist.lean",
+      "sourceSha256": "4B3092F013112ADC534199D058748CD8F6FADF524F25E27E06DC5FC8A785143C",
+      "oleanSha256": "62ADB84CFD0B6F38F3454D6D4D106A8F7435C605A9F02E88E6027DA6F494FB7A",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-coefficient-twist-8-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCoefficientTwist.lean",
+      "sourceSha256": "4D53E819A53D57BA0D160A1AE474A39EB3858A406FCB274DE7297764E6161ED5",
+      "oleanSha256": "E760060A307C55D3A454888CFC75C5D67ABD6B51308A12A154B51364E33B5C06",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-coefficient-twist-8-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeSpanLaurentRealization.lean",
+      "sourceSha256": "586E654FB5610EEFB8CDF062A8C1AEF346498E1320BCC72020397ECA167C286E",
+      "oleanSha256": "2C3E8CEEC2E23947BA60F163E844CF0023B528B2B1E94E7136A22F078D3F2A80",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-coefficient-twist-8-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceLaurentTwistOrder.lean",
+      "sourceSha256": "C8FC69D70EAA22B7969BA962F7D47627DB374ED0D59E7DB7929761824AB6EC4F",
+      "oleanSha256": "916277A3A289E94F364B38EEEB4F9273FAFC28E88938164A5E3DB1A02683E7BC",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-coefficient-twist-8-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspVanishingOrder.lean",
+      "sourceSha256": "9BB414E7059F9B1CA0D488F1D2D87A9151C517DB3FB52C48D3A577D3166E0CE2",
+      "oleanSha256": "61121E452D0A05F66C5E4CD1DB7BE7CE75559105D47B03FF6AFEB12495116F9B",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-coefficient-twist-8-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTwistCuspVanishing.lean",
+      "sourceSha256": "5DBFB422C12ABF17FC0007C1DE0F3476B5D19A3746E9E3DE93A406BF50285520",
+      "oleanSha256": "CEF429A3FE4BD1A94BCF2ED62F4000344D25F0FD9F0A5506E31A6A1DCEADE68F",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-coefficient-twist-8-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceHolomorphicCoprimeDivision.lean",
+      "sourceSha256": "3FB5C1E88550358F126C506F792ECAA48B083D2845B2B3C2961DE63F504CD243",
+      "oleanSha256": "4B83FC8406DEA665C9E4D34DF10A432EEE1712AE214522E4066FF7D398A5B6C4",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-cusp-image-stability-9-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightFactors.lean",
+      "sourceSha256": "CB5BAB2BBAC3FEFD7C7CA36F022DEAFC5BA1EB763CAD5F80803F084557601B71",
+      "oleanSha256": "F36582CF424DB6DCA08B4C6C0C64715CB5D9DA1DF17FC35CEC142244C405DA33",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-cusp-image-stability-9-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightHolomorphicDivision.lean",
+      "sourceSha256": "A14F841B707E06DEBD34FA7C265741872AE4FC89D5318AF884830A1EA2140AC2",
+      "oleanSha256": "1978732DDDFB5CC16DA7C71FFCD57A7907361B494E072006C4B6D70B1663BCE3",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-cusp-image-stability-9-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightTransformation.lean",
+      "sourceSha256": "1993BAF4D613589689590D731CC86EC9C22C9FEF240F1CDDE4A4577520FDD2B3",
+      "oleanSha256": "014EA714F1038543204F34302DC6DBE56CD3E62CEECC95EE41880F66048FAB82",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-cusp-image-stability-9-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightCriterion.lean",
+      "sourceSha256": "FBB850247B20A4B19CB355A3F3CB20AFC1288C5DE13698519245F2D799C3550F",
+      "oleanSha256": "A9F21B4DAD9681A36ED7A2E8F3E91930E8B363774718DEE091CE5D1405FD6813",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-cusp-image-stability-9-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightImage.lean",
+      "sourceSha256": "E76C95612608840D7B510F6BD3CD68ACC4AFBC06C6FCB956DE823E5BEAC3CE42",
+      "oleanSha256": "17C820DA47DBAC14F5A57C2D205606E8EE98083903A790AD9D9C19256629FADA",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-cusp-image-stability-9-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTwistCuspConditions.lean",
+      "sourceSha256": "2B0D9C914225857CDD9C4324E527AC52E2E99F74871A615F65A0A167A97DDD23",
+      "oleanSha256": "E137E985B2110E56B280AB283E8B0575910BFB7D18C84025AE92359232561BD9",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-cusp-image-stability-9-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightImageSpan.lean",
+      "sourceSha256": "95B9AA1E93D0ED1F6B978ADFB77BB60BB5CF749100535B428CF4D10B67A7D328",
+      "oleanSha256": "3DD8B771EDBEA0F108EC71C684D048F009C1BFC2BD8D7877DA5F53997E308A20",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-cusp-image-stability-9-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightImageTwist.lean",
+      "sourceSha256": "78173D9F163223C7987EB6B1A02D72C07F37BBFB71DB2B47E95ED6D19FB79875",
+      "oleanSha256": "54DCB0F2A23653D4E35A4CA3D07E001C90EB2B8C2A19C48069F9961E61632E84",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-cusp-image-stability-9-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicDivisionInvariance.lean",
+      "sourceSha256": "E70BFB2BD6CA80AA65C527BAE663096C2F9DB1F7843A9344C0FF93B753172877",
+      "oleanSha256": "B7BAFBC78C5C2233D0FDA756EDA026DC5D0B6110D3639D705F151AFB483F57CD",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-elliptic-divisibility-5-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicDivisionSpan.lean",
+      "sourceSha256": "524B4A91D404F49288DCF872BC4E96E66F19846CA1C90852008F0E4DD74CB551",
+      "oleanSha256": "EB2319DF2F095B0550BC24DFA57FA2B98EEFE0C88E867597E984A4DF95E5481F",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-elliptic-divisibility-5-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeHolomorphicDivisionTwist.lean",
+      "sourceSha256": "E7A203986B000872CCCF86353A99E3BE8B11DF7164A408B60D8C9AC6A46AEB9A",
+      "oleanSha256": "D1AF97FD7187F99A5F50FAFCA3AA9A8B68C28115E2426AD03F62AC4EC6A4F07E",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-elliptic-divisibility-5-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeEllipticDivisibilityTwist.lean",
+      "sourceSha256": "8DE916F1C6B226265970C1B8BCE99B111EB36701C7EDE01FF9815B39155692E8",
+      "oleanSha256": "4F59767CC6D58DDC999FC2D4FB477241BD53D066B5746C0A3B4D438B8A1B2A98",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-elliptic-divisibility-5-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeEllipticCoordinateTwist.lean",
+      "sourceSha256": "6E888033F715F1268FA7FCFD1814F460982A0EA6A9A7CF5B8D6C4E7DCA4B423D",
+      "oleanSha256": "39129AF74FC2C0D050C7247DB35134146364B649AF8A3FE779F220DE68A5E752",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-elliptic-divisibility-5-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspLaurentLinearRelations.lean",
+      "sourceSha256": "54A9C9EF7A1DD41B3EC4B7B04A0DCBD56BFB58CEE01D6E90B4E4658701DD5E05",
+      "oleanSha256": "B2D90C727CA991E0825A055B9FE1F23E612777436B4FB6ED5F6755709367BEB2",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-laurent-independence-2-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLaurentIndependence.lean",
+      "sourceSha256": "CE0391F790564AA0B05B234EA36661B4504BE62F7BD1119347F89C8956DE4182",
+      "oleanSha256": "8462CE1DC0CE7A11854B91FD567812928F4971B16B957BE507B13869B8B24642",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-laurent-independence-2-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicModularAction.lean",
+      "sourceSha256": "C1EBBBBBA4BB87BC26BDCCE925042C965584BBE09DC6C4AEEFA3F0C65D1D76CD",
+      "oleanSha256": "AECFA723E375D553A6088D956FF606E4AC2528391C76DC18616D7496F6A30FFB",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-twist-modular-algebra-5-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTwistModularEquivariance.lean",
+      "sourceSha256": "E09792485B8D50FF055B5B354415817FD988369CF586200CC6E4A622C31240BF",
+      "oleanSha256": "BF53B028603C7227C798F7D445E636E9E6A57B75BDD9C9DB8A394933B044B49D",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-twist-modular-algebra-5-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeSpanMultiplication.lean",
+      "sourceSha256": "7CEE839D2380788A4AC4113DB84E72B8F61BC877391BBA2F9C5E4957188FD53E",
+      "oleanSha256": "6950A19F97C4482CF55B1A881F06BB92985B4DA60DE3F9E7078422AB3B9069B2",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-twist-modular-algebra-5-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickePrincipalInvariance.lean",
+      "sourceSha256": "B50C51CB7FC773F19BAE5C7C75C9151F39F57F3EC76CE0AED0740D6C7D8638E2",
+      "oleanSha256": "C30E0C0F4B9A90502794F340152A8A49FBAA12217DB7270DA0F2B8B4BBEC7252",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-twist-modular-algebra-5-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeTwistPowers.lean",
+      "sourceSha256": "FBEC9DF5057D8F355BDB72E64E5B3AF942425C7B702C34D3E35D35DD0F3C986E",
+      "oleanSha256": "C05A1AA03D7788D6A82317AE895CA72CF2C6B0445BA0667C8EFDA58F3263791C",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-fricke-twist-modular-algebra-5-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceEisensteinFactorCyclotomicLaurent.lean",
+      "sourceSha256": "1348D681063873F9DA09AC859E0B4BA1C5771B8FD8EB6C1E8910AFBEAF86F242",
+      "oleanSha256": "085FF7FE71B438D66E3E076C8C1D6950FC45345C117230388787EBEDEE208308",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-gamma-one-cyclotomic-cusp-span-3-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCuspWeightImageFourier.lean",
+      "sourceSha256": "1D3A236C96D5622E433BD23C1F04711485B1E7C420C2EAE74AF2FA990F5543FA",
+      "oleanSha256": "926BDE629D10FC06F704835B96F616054713C115988EC3A7080652F68585A2EB",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-gamma-one-cyclotomic-cusp-span-3-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicCuspSpan.lean",
+      "sourceSha256": "58868C112C6DA750262A75551FDF71754FE3CF983C69C14B0609230178235D70",
+      "oleanSha256": "C51B6F50AFC9B876A1293AF1FC074631225B934FA58B7572136F2F42FAFB6BD1",
+      "receipt": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\cusp-cyclotomic-spanning-20261026-685\\source-gamma-one-cyclotomic-cusp-span-3-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicFrickeIndex.lean",
+      "sourceSha256": "9F19B7CF41DE2C85A688CFBB91BA1BD10C9D7040427C83F4C3364AADA7AE52BF",
+      "oleanSha256": "028B8140905E1EB656D3CB30A5F5DB101BCFAF90BE0C05E76E5EBB1D1829DF4B",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-fricke-cyclotomic-analytic-transport-5-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLaurentCyclotomicConjugation.lean",
+      "sourceSha256": "A607C0D58E9EB96C0CADBC80760CDCE50C515B170AF8B074F0E589F7332829A3",
+      "oleanSha256": "C2DAD419DF3AF82AFD8582351966AF10F8DB0B3E6F5B7CFC095BD73C5A7D8845",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-fricke-cyclotomic-analytic-transport-5-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLaurentFieldConjugation.lean",
+      "sourceSha256": "B5103535D2C30A5A9E51F89F359A1A9F55B6EC959B1130020FA7ED34FB117C38",
+      "oleanSha256": "8439F89AF9E21219956620B0FB41F3C12B4B8DD517039F72D66B7D4F0B8AD904",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-fricke-cyclotomic-analytic-transport-5-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFrickeLaurentField.lean",
+      "sourceSha256": "F3F6698DDE66E65A66A9355720680C56522124E5FF34409900CE6F98C656BAD2",
+      "oleanSha256": "B057CDAF07E9D604CA320615628FDF6241E10886A8E356FF29FE787D9A9373FD",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-fricke-cyclotomic-analytic-transport-5-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicAnalyticTransport.lean",
+      "sourceSha256": "4514C5D651D1AE17CFF6E8659151D22616C3BB607AE08D7FB9B9EDB3137A8D67",
+      "oleanSha256": "01F6F16A4DBA264281D2F4A63DB39CD4C03DBC82A9DCE0B8736A381A4820BCF1",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-fricke-cyclotomic-analytic-transport-5-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeCyclotomicConjugateRelation.lean",
+      "sourceSha256": "78DD14184B1237933AC06B009A89C71F4E6F9129ACC9D3C5193EA3411097E40D",
+      "oleanSha256": "B2F94E381FBA8B4748D3746A372B517635D56A82ED85E6742396BC30D9DF8BA2",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-conjugation-13-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicModularLift.lean",
+      "sourceSha256": "9936DFC147D80EFB14C57733B8A990D83EC16D0214662BEC803BEB705CD95A59",
+      "oleanSha256": "F01830BEB1C09C1842E273E2371A41FF5D8192A539BD1D8A245D835C7EBF4D29",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-conjugation-13-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicGammaOneLift.lean",
+      "sourceSha256": "E8DCC781C0BF90E58C64AE3B630A9E8C36A085529E4FFA01AE3D010BEAA29AE9",
+      "oleanSha256": "E7E865918F3C320A272ADC3790CACC6177D6082B3FA94B871D261306ABFA5A93",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-conjugation-13-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicLevelRingCovariance.lean",
+      "sourceSha256": "6C95BC2D07520594607F1592736CC812751F2C8B8593E365D78B5E789BFFBF6F",
+      "oleanSha256": "98D9FD0E7D8596E492369B14F226DDBC3FE6755BCB72F30420D8F99D68F69823",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-conjugation-13-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicConjugateCancellation.lean",
+      "sourceSha256": "C07695BF61523EBCD03D2E43D684D803600C67A2531AFE9B3AE2960AF5F1603C",
+      "oleanSha256": "EEB1412D39880250B321876E80DCB35F9CBC9DA03AAA7ADAE4931484F649A20B",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-conjugation-13-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicFractionCovariance.lean",
+      "sourceSha256": "A58BB343689C804A194D55593DF7E25F3DDBE0F2729BB8D338E72D4B9562482B",
+      "oleanSha256": "DB458B2B628CE45A6DA558CDDF63E7D2A789B8A887E5C4AADCDC13DF35549F3A",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-conjugation-13-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicConjugateCuspOrder.lean",
+      "sourceSha256": "42C0ED769A6098A589AFF2A8D41F18AF7E78F6A78BC6E887AC5058A3F32C03D3",
+      "oleanSha256": "370CF89701C1C81019C4A73F1452A1A8E04C14E7DDFD043E8F23A95F7E1CC5C9",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-conjugation-13-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicHolomorphicDivision.lean",
+      "sourceSha256": "9D9FCA5DC93CFF0A98229153700FF535F1A8F57B44689A42F7C9DD6B75D1E0BA",
+      "oleanSha256": "D25AE3722E4A83B059C4937DE3197E6A28A2342097CF84AFB8F3BF93AA1D873C",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-conjugation-13-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicEllipticDivisibility.lean",
+      "sourceSha256": "B4F230F41BF000ACE8B6E11EFF33ADFD193B9D2743C7646ECB7DD2BB2CA24CD7",
+      "oleanSha256": "760E57552BC4E9D37953BFFBFCCCC3568CFDBC40FE8E5D11BDB87800E439EBE3",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-conjugation-13-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicEllipticCoordinates.lean",
+      "sourceSha256": "B6C44EBBD025A1E39AA052099C6E94EEDFCBC04939C1A3FD31198ABE0C6841A9",
+      "oleanSha256": "66FA78D208A14C6538C3D48112281388DF9EB53480C13339B27574BA9F065A45",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-conjugation-13-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspCyclotomicConjugation.lean",
+      "sourceSha256": "5D37D895BBAA85921A3F4950E354B7AD9AAB0BD8B33B11A134439EB55EBE6EC2",
+      "oleanSha256": "4FA3D6A3CD78A94DE786D8C6F039091992131B7797E8ABFE5EB405358CFC5FE6",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-conjugation-13-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicCuspFourierTransport.lean",
+      "sourceSha256": "26C41A61C722E1B27E48A6BBB021AEF03E88A1B86AA27D07DD368A439032B253",
+      "oleanSha256": "B65D8692242308DFF19E6CB9798C84C46E4C07F9CEF32F2BDAD5AD6F687DBBE8",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-conjugation-13-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCyclotomicFourierConjugation.lean",
+      "sourceSha256": "B6F3CCDACE4E0EF4DDE5075AA1337EF3CBE3C714D1044F6CF48A2FF18C861615",
+      "oleanSha256": "60C1F3B47B7238FF27058C48E68CDD3B14F14518CBCF431821CBA90B903EBA31",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cyclotomic-conjugation-13-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceCyclotomicTraceStructure.lean",
+      "sourceSha256": "A701D8A8AF3CC8663D5F2DBD943E93ECAF422DBDCBF7AE40922E5757432A5A04",
+      "oleanSha256": "7F2C0B8CEB52E5EFD5399B9AF116E105936609B42F4BF2ED6D740EB190E6556C",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-rational-cusp-span-4-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFourierLinear.lean",
+      "sourceSha256": "CBE3498B47174EF590A64356B81B068004DB54E5A6B7D7D4A5D16F57891A23BA",
+      "oleanSha256": "C75039451782307DB87A4615321EEAE4ED63D1ED3ABA9340511AF961B36E7713",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-rational-cusp-span-4-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalTraceSpan.lean",
+      "sourceSha256": "B4F6F410B3CAC65CD283724B5F11766349386E512BC8B927E448DA671BEE56B1",
+      "oleanSha256": "E71D32956D5C71B7A0F7553A49696BDE6BB7D745E935CB840C4B03C10AC78F55",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-rational-cusp-span-4-scratch-receipt.json"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspSpan.lean",
+      "sourceSha256": "BBD748670D9D7D65948A7B06E558C95900F77AC4D70333718F9BC913013D64D4",
+      "oleanSha256": "D2B87FC9509B300101EF259A680516B81AC13B601BB1BCB0E99D1FE0D3C66065",
+      "receipt": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-rational-cusp-span-4-scratch-receipt.json"
+    }
+  ]
+}

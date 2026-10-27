@@ -1,0 +1,8 @@
+{
+  "failedSource": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspScratchOwnership696.lean",
+  "failedSha256": "AAFE43B7F32E940D48D6F901F39DCDEEA17BAF53DB2E8DAD5ED75BFB86BF4DFA",
+  "failedLogSha256": "189B976D40E90AB518E9C2B46030C95834C21CD3D5E3AF3C73CBD35283C0A8C8",
+  "successor": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspScratchOwnership696V2.lean",
+  "successorSha256": "A9F48F03BCCB0C9FCABA23E41BD056D0AC48FA6833345B17C192834CECDE7983",
+  "reason": "PowerShell pipeline altered the Unicode bind arrow in the generated ownership helper. The fresh helper copies the checked UTF-8 template body verbatim; only imports and module-name array change. No mathematical source, ownership criterion or audited theorem changed."
+}

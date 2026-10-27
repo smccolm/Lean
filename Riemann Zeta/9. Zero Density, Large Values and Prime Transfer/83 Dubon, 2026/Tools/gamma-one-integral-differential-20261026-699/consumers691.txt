@@ -1,0 +1,51 @@
+
+section
+open scoped ComplexOrder
+
+/-- Actual augmented tensor coefficients remain nonnegative and identify the literal higher Euler product. -/
+theorem primitive_higher_augmented_series_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (r : ℕ) :
+    let a : ℕ → ℂ := fun n => if n = 0 then 0 else
+      n.factorization.prod (spectralNatLocalCoeff (primitiveHigherAugmentedTensorRoots f r))
+    (∀ n, 0 ≤ a n) ∧ a 1 = 1 ∧ (∀ s : ℂ,
+      ((2 * r + (r + 2) ^ 2 + 1 : ℕ) : ℝ) + 1 < s.re →
+      LSeries a s = DirichletCharacter.LFunctionTrivChar Q s *
+        (∏ t ∈ Finset.range (r + 1), primitiveSymmetricLFunction f (2 * t) s) *
+          primitiveSymmetricLFunction f r s ^ 2) :=
+  ⟨primitiveHigherAugmentedCoefficient_nonneg f r, primitiveHigherAugmentedCoefficient_one f r,
+    fun _ hs => primitiveHigherAugmentedCoefficient_LSeries f hk r hs⟩
+
+/-- The literal divided-difference product is entire and has the actual principal trivial zero. -/
+theorem higher_actual_pole_cancellation_source (Q : ℕ) [NeZero Q]
+    (H : ℕ → ℂ → ℂ) (hH : ∀ n, 0 < n → Differentiable ℂ (H n))
+    {r : ℕ} (hr : 0 < r) :
+    let G : ℂ → ℂ := fun s => DirichletCharacter.LFunctionTrivChar₁ Q s ^ 2 *
+      (dslope (H r) 1 s) ^ 2 * ∏ t ∈ Finset.range r, H (2 * (t + 1)) s
+    Differentiable ℂ G ∧ G (-2) = 0 :=
+  ⟨higherSymmetricPoleCancellation_differentiable Q H hH hr,
+    higherSymmetricPoleCancellation_neg_two Q H r⟩
+
+/-- Entire continuations matched to the original infinite Euler products imply all actual boundary nonvanishing. -/
+theorem primitive_higher_entire_nonvanishing_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (H : ℕ → ℂ → ℂ)
+    (hH : ∀ n, 0 < n → Differentiable ℂ (H n))
+    (hmatch : ∀ n, 0 < n → Set.EqOn (H n)
+      (fun s => (∏' v : Nat.Primes × Fin (n + 1),
+        (1 - primitiveSymmetricSpectralRoots f n v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+      {s | (n : ℝ) + 1 < s.re}) {r : ℕ} (hr : 0 < r) {s : ℂ} (hs : 1 ≤ s.re) : H r s ≠ 0 :=
+  primitive_symmetric_nonvanishing_of_entire_continuation f hk H hH hmatch hr hs
+
+/-- The actual weak prime empirical law follows from entire symmetric continuation, with no independent purity or nonvanishing premise. -/
+theorem primitive_sato_tate_entire_continuation_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hk : 2 ≤ k) (H : ℕ → ℂ → ℂ)
+    (hH : ∀ n, 0 < n → Differentiable ℂ (H n))
+    (hmatch : ∀ n, 0 < n → Set.EqOn (H n)
+      (fun s => (∏' v : Nat.Primes × Fin (n + 1),
+        (1 - primitiveSymmetricSpectralRoots f n v.1 v.2 * (((v.1 : ℕ) : ℂ) ^ (-s))))⁻¹)
+      {s | (n : ℝ) + 1 < s.re}) :
+    Filter.Tendsto (primeEmpirical (fun p => (normalizedCuspCoefficients f.toCuspForm p).re))
+      Filter.atTop (𝓝 satoTateProbability) :=
+  primitive_satoTate_of_entire_symmetric_continuation f hk H hH hmatch
+
+end
+

@@ -54762,6 +54762,1106 @@
     {
       "path": "Tools/source-gamma-one-rational-fourier.json",
       "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/build_gamma_one_rational_fourier_8493.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/compare_gamma_one_rational_fourier_ownership_8493.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/compare_gamma_one_rational_fourier_ownership_8493b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-rational-fourier-preexecution-review-8493.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/gamma-one-rational-fourier-verification-wrapper-review-8493b.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/integrate_source_gamma_one_rational_fourier_8493.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/prepare_gamma_one_rational_fourier_global_ownership_8493.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/prepare_gamma_one_rational_fourier_production_ownership_8493.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/prepare_gamma_one_rational_fourier_promotion_8493.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/prepare_gamma_one_rational_fourier_scratch_ownership_8493.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/prepare_gamma_one_rational_fourier_verification_8493b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/record_source_gamma_one_rational_fourier_8493.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-rational-fourier-ownership-comparison-8493.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-rational-fourier-production-build-8493.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-rational-fourier-production-build-8493.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/source-gamma-one-rational-fourier-scratch-ownership-8493.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceFrickeCyclotomicAnalyticTransportDependencyAudit5Production8493.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceFrickeCyclotomicAnalyticTransportDependencyAudit5Production8493.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceFrickeCyclotomicAnalyticTransportDependencyAudit5Production8493.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationDependencyAudit13V2Production8493.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationDependencyAudit13V2Production8493.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneCyclotomicConjugationDependencyAudit13V2Production8493.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalCuspSpanDependencyAudit4Production8493.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalCuspSpanDependencyAudit4Production8493.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalCuspSpanDependencyAudit4Production8493.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierGlobalOwnership8493.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierGlobalOwnership8493.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierGlobalOwnership8493.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierOwnership8493.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierOwnership8493.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierOwnership8493.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierProductionAudit8493.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierProductionAudit8493.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierProductionAudit8493.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierScratchOwnership687For8493.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierScratchOwnership687For8493.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierScratchOwnership687For8493.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierScratchOwnership688For8493.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierScratchOwnership688For8493.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierScratchOwnership688For8493.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierScratchOwnership689For8493.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierScratchOwnership689For8493.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/SourceGammaOneRationalFourierScratchOwnership689For8493.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/verify_gamma_one_rational_fourier_8493.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/verify_gamma_one_rational_fourier_8493b.ps1",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-rational-fourier-20261026-692/canonical-evidence-8493.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/gamma-one-integral-differential-promotion-route-699.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneCuspDifferentialRealizationAudit6.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneCuspDifferentialRealizationAudit6.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneCuspDifferentialRealizationAudit6.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneCuspDifferentialRealizationDependencyAudit6.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneCuspDifferentialRealizationDependencyAudit6.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneCuspDifferentialRealizationDependencyAudit6.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneCuspDifferentialScratchOwnership697.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneCuspDifferentialScratchOwnership697.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneCuspDifferentialScratchOwnership697.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspScratchOwnership696.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspScratchOwnership696.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspScratchOwnership696.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspScratchOwnership696V2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspScratchOwnership696V2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspScratchOwnership696V2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspSpanAudit23.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspSpanAudit23.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspSpanAudit23.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspSpanAudit23V2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspSpanAudit23V2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspSpanAudit23V2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspSpanDependencyAudit23V2.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspSpanDependencyAudit23V2.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/SourceGammaOneIntegralCuspSpanDependencyAudit23V2.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/bounded-denominator-reuse-assessment-690.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/consumers691.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/fetch_bounded_denominator_inputs_690b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/fetch_gamma_one_bounded_denominator_core_690.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/gamma-one-cusp-differential-realization-audit-route-697.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/gamma-one-cusp-differential-scratch-ownership-697.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/gamma-one-differential-realization-route-697.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/gamma-one-integral-cusp-span-route-696.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-repair-696b.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-ownership-encoding-repair-696c.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-scratch-ownership-696.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-selected-scope-696.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/laurent-denominator-reuse-route-695.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/modules691.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/prepare_bounded_denominator_inputs_690b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/prepare_gamma_one_differential_realization_audit_697.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/prepare_integral_cusp_audit_696.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/prepare_integral_cusp_scope_696.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/record691.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/record_bounded_denominator_reuse_review_690.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/record_gamma_one_differential_realization_697.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/record_gamma_one_integral_cusp_span_696.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/record_laurent_denominator_route_695.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/record_shorter_denominator_routes_693_694.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/register691.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/registrations691.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/restore_frozen_span_module_695.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/restore_frozen_span_module_695b.py",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/scratch-name-collision-restoration-695.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/scratch-name-collision-restoration-verification-695.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/section691.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/shorter-denominator-route-693.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/shorter-denominator-route-694.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/source-gamma-one-cusp-differential-realization-6-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/source-gamma-one-cusp-differential-realization-6-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/source-gamma-one-integral-cusp-span-23-audit-config.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/source-gamma-one-integral-cusp-span-23-scratch-receipt.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/status691.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/gamma-one-bounded-denominator-core-reuse-690/P2M/Sol/S_ModularCurve_exists_ne_zero_forall_intCast_mul_qExpansion_coeff_of_gamma_invariant.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/gamma-one-bounded-denominator-core-reuse-690/snapshots.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/bounded-denominator-series-inputs-reuse-690b/P2M/Sol/S_ModularCurve_exists_ne_zero_forall_mul_qExpansion_coeff_fricke_mem_adjoin.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/bounded-denominator-series-inputs-reuse-690b/P2M/Sol/S_PowerSeries_mem_range_map_of_monic_of_mul_mem_range.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/bounded-denominator-series-inputs-reuse-690b/snapshots.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedCyclotomicFractionTrace.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedCyclotomicFractionTrace.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedCyclotomicFractionTrace.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedCyclotomicFractionTrace.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedIntegralLaurentAlgebra.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedIntegralLaurentAlgebra.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedIntegralLaurentAlgebra.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedIntegralLaurentAlgebra.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedRationalSeriesImage.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedRationalSeriesImage.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedRationalSeriesImage.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedRationalSeriesImage.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedRationalSeriesIntegral.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedRationalSeriesIntegral.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedRationalSeriesIntegral.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceBoundedRationalSeriesIntegral.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceCyclotomicSeriesTrace.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceCyclotomicSeriesTrace.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceCyclotomicSeriesTrace.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceCyclotomicSeriesTrace.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceIntegralRationalPowerSeries.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceIntegralRationalPowerSeries.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceIntegralRationalPowerSeries.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/deferred-power-series-route-696/SourceIntegralRationalPowerSeries.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedCyclotomicLaurentFraction.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedCyclotomicLaurentFraction.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedCyclotomicLaurentFraction.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedCyclotomicLaurentFraction.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedCyclotomicLaurentGenerators.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedCyclotomicLaurentGenerators.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedCyclotomicLaurentGenerators.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedCyclotomicLaurentGenerators.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedFrickeLaurentField.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedFrickeLaurentField.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedFrickeLaurentField.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedFrickeLaurentField.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralLaurentAlgebra.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralLaurentAlgebra.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralLaurentAlgebra.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralLaurentAlgebra.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralSeriesConstant.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralSeriesConstant.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralSeriesConstant.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralSeriesConstant.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralSeriesProduct.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralSeriesProduct.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralSeriesProduct.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedIntegralSeriesProduct.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalCuspImage.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalCuspImage.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalCuspImage.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalCuspImage.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalJAlgebra.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalJAlgebra.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalJAlgebra.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalJAlgebra.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalLaurentImage.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalLaurentImage.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalLaurentImage.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalLaurentImage.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalLaurentIntegral.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalLaurentIntegral.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalLaurentIntegral.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalLaurentIntegral.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalSeriesImage.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalSeriesImage.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalSeriesImage.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceBoundedRationalSeriesImage.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceCyclotomicLaurentTrace.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceCyclotomicLaurentTrace.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceCyclotomicLaurentTrace.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceCyclotomicLaurentTrace.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceFrickeLaurentSpanDescent.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceFrickeLaurentSpanDescent.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceFrickeLaurentSpanDescent.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceFrickeLaurentSpanDescent.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceFrickeNumeratorIntegralBound.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceFrickeNumeratorIntegralBound.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceFrickeNumeratorIntegralBound.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceFrickeNumeratorIntegralBound.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceGammaOneRationalBoundedDenominators.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceGammaOneRationalBoundedDenominators.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceGammaOneRationalBoundedDenominators.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceGammaOneRationalBoundedDenominators.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralEisensteinSix.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralEisensteinSix.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralEisensteinSix.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralEisensteinSix.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralLaurentWeightFactors.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralLaurentWeightFactors.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralLaurentWeightFactors.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralLaurentWeightFactors.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralRationalLaurentSeries.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralRationalLaurentSeries.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralRationalLaurentSeries.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceIntegralRationalLaurentSeries.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceLaurentSpanDescent.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceLaurentSpanDescent.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceLaurentSpanDescent.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceLaurentSpanDescent.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightCancellation.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightCancellation.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightCancellation.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightCancellation.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightIntegrality.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightIntegrality.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightIntegrality.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightIntegrality.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightLaurent.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightLaurent.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightLaurent.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceRationalCuspWeightLaurent.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceWeierstrassIntegralDenominator.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceWeierstrassIntegralDenominator.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceWeierstrassIntegralDenominator.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integral-cusp-linter-failure-696b/SourceWeierstrassIntegralDenominator.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integer-j-normalization-failed-697a/SourceIntegerJEulerNormalization.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integer-j-normalization-failed-697a/SourceIntegerJEulerNormalization.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/integer-j-normalization-failed-697a/SourceIntegerJEulerNormalization.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/gamma-one-differential-realization-failed-697b/SourceGammaOneCuspDifferentialRealization.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/gamma-one-differential-realization-failed-697b/SourceGammaOneCuspDifferentialRealization.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/gamma-one-differential-realization-failed-697b/SourceGammaOneCuspDifferentialRealization.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/scratch-name-collision-695/SourceOriginalFrickeSpanDescent.exit",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/scratch-name-collision-695/SourceOriginalFrickeSpanDescent.lean.txt",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/scratch-name-collision-695/SourceOriginalFrickeSpanDescent.log",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/scratch-name-collision-695/SourceOriginalFrickeSpanDescent.olean",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/source-gamma-one-integral-cusp-span-23-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/source-gamma-one-cusp-differential-realization-6-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/gamma-one-integral-differential-20261026-699/archive-manifest.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceWeierstrassIntegralDenominator.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBoundedIntegralSeriesProduct.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralEisensteinSix.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBoundedIntegralSeriesConstant.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeNumeratorIntegralBound.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBoundedRationalSeriesImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceLaurentSpanDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceFrickeLaurentSpanDescent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalCuspWeightLaurent.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalCuspWeightIntegrality.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralRationalLaurentSeries.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBoundedIntegralLaurentAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBoundedRationalLaurentImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceCyclotomicLaurentTrace.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBoundedRationalLaurentIntegral.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBoundedCyclotomicLaurentFraction.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBoundedCyclotomicLaurentGenerators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBoundedFrickeLaurentField.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBoundedRationalJAlgebra.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceBoundedRationalCuspImage.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegralLaurentWeightFactors.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceRationalCuspWeightCancellation.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneRationalBoundedDenominators.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegerJEulerNormalization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceIntegerJEulerBaseChange.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneIntegralCuspRatio.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneIntegralCuspLaurentSpan.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneCuspDifferentialCoefficient.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Extension/Dubon2026/SourceGammaOneCuspDifferentialRealization.lean",
+      "role": "Extension"
+    },
+    {
+      "path": "Tools/source-gamma-one-integral-cusp-span-23-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-gamma-one-cusp-differential-realization-6-reuse-review-20261026.json",
+      "role": "Tools"
+    },
+    {
+      "path": "Tools/source-gamma-one-integral-differential.json",
+      "role": "Tools"
     }
   ],
   "statusDocuments": [
@@ -63302,7 +64402,36 @@
     "SourceCyclotomicTraceStructure",
     "SourceGammaOneFourierLinear",
     "SourceGammaOneRationalTraceSpan",
-    "SourceGammaOneRationalCuspSpan"
+    "SourceGammaOneRationalCuspSpan",
+    "SourceWeierstrassIntegralDenominator",
+    "SourceBoundedIntegralSeriesProduct",
+    "SourceIntegralEisensteinSix",
+    "SourceBoundedIntegralSeriesConstant",
+    "SourceFrickeNumeratorIntegralBound",
+    "SourceBoundedRationalSeriesImage",
+    "SourceLaurentSpanDescent",
+    "SourceFrickeLaurentSpanDescent",
+    "SourceRationalCuspWeightLaurent",
+    "SourceRationalCuspWeightIntegrality",
+    "SourceIntegralRationalLaurentSeries",
+    "SourceBoundedIntegralLaurentAlgebra",
+    "SourceBoundedRationalLaurentImage",
+    "SourceCyclotomicLaurentTrace",
+    "SourceBoundedRationalLaurentIntegral",
+    "SourceBoundedCyclotomicLaurentFraction",
+    "SourceBoundedCyclotomicLaurentGenerators",
+    "SourceBoundedFrickeLaurentField",
+    "SourceBoundedRationalJAlgebra",
+    "SourceBoundedRationalCuspImage",
+    "SourceIntegralLaurentWeightFactors",
+    "SourceRationalCuspWeightCancellation",
+    "SourceGammaOneRationalBoundedDenominators",
+    "SourceIntegerJEulerNormalization",
+    "SourceIntegerJEulerBaseChange",
+    "SourceGammaOneIntegralCuspRatio",
+    "SourceGammaOneIntegralCuspLaurentSpan",
+    "SourceGammaOneCuspDifferentialCoefficient",
+    "SourceGammaOneCuspDifferentialRealization"
   ],
   "verificationModules": [
     "ArithmeticSemanticRegression",

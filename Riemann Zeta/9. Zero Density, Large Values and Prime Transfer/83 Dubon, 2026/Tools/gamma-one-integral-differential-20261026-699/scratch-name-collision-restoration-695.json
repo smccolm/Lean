@@ -1,0 +1,30 @@
+{
+  "recordedUTC": "2026-10-26T23:44:25.376177+00:00",
+  "predecessor": "restore_frozen_span_module_695.py rejected a nonmatching CRLF candidate before any write; the exact LF/no-final-newline historical bytes were identified by SHA-256.",
+  "issue": "A new unaudited scratch module reused an existing frozen scratch basename. Production was not changed.",
+  "restoredSource": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalFrickeSpanDescent.lean",
+  "restoredSourceSha256": "49DB1E2A01837699A2A7A8C4C7602FBBB0305BADEA69D8143178B4C593432A6C",
+  "expectedOleanSha256": "35D08B31F6CBE321615D1D5DD0FDD0F42A1957A2653F952AC812F8B86BF2C37C",
+  "productionSourceSha256": "6087B24AF6836F974B12E29F93750E1FDB1A701D203BC189E506EDE0E567B855",
+  "newDevelopmentSource": "E:\\Lean\\.tmp\\dubon83\\SourceFrickeLaurentSpanDescent.lean",
+  "savedCollisionEvidence": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\scratch-name-collision-695\\SourceOriginalFrickeSpanDescent.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\scratch-name-collision-695\\SourceOriginalFrickeSpanDescent.lean.txt",
+      "sha256": "08A352C097340745FB6C757DF0F42650A750E5604D53DD40B04FD601828EA0AA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\scratch-name-collision-695\\SourceOriginalFrickeSpanDescent.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\scratch-name-collision-695\\SourceOriginalFrickeSpanDescent.olean",
+      "sha256": "7D1A834F1B4FAABBD42C43E99E1377A2C8E8A704214D689B86BDDE9DA322DCDA"
+    }
+  ],
+  "next": "Recompile the exact restored source into a fresh restoration log, require the original olean hash, then recompile the distinct new module and its unaudited dependents. Verify all 8471 and prepared 8493 source/olean receipt hashes before further integration.",
+  "route694Correction": "The new two-theorem Laurent/function fraction descent belongs to SourceFrickeLaurentSpanDescent. SourceOriginalFrickeSpanDescent retains its previously audited fixed-field cusp-image descent and original bytes."
+}

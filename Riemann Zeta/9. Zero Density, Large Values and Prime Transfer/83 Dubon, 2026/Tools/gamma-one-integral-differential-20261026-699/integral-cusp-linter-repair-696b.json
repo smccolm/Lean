@@ -1,0 +1,375 @@
+{
+  "preserved": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceWeierstrassIntegralDenominator.lean.txt",
+      "sha256": "9B432877DBAF3791ECA81E89F247B1F3E51D5851E859DC28F8A6E8C255A6BA6B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceWeierstrassIntegralDenominator.olean",
+      "sha256": "A17294B331603CEA5120F591E1DA22030CD6D6F36A51A224E9B123C09ADF1221"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceWeierstrassIntegralDenominator.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceWeierstrassIntegralDenominator.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralSeriesProduct.lean.txt",
+      "sha256": "A2BCE1DB533BC9B2D25842C5B76215D7957068F7F156008491EAF386881E3A58"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralSeriesProduct.olean",
+      "sha256": "810E199CBC73E90154F9B971316EB6170C255A7283B0879DDA8599963C192FE1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralSeriesProduct.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralSeriesProduct.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralEisensteinSix.lean.txt",
+      "sha256": "4769B6416C12D1E99A7DE96376459AF88F37D8FC8930215FF6C7F2F4DF61B256"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralEisensteinSix.olean",
+      "sha256": "9DDA3C68AB19A8839E7184170FBCA427D2E299F09FB7A973B7D279CD1028538E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralEisensteinSix.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralEisensteinSix.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralSeriesConstant.lean.txt",
+      "sha256": "B122557A816E4024DACDC6968148856377BCB3C3CAB4A9A7FBEE5593EA78C89B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralSeriesConstant.olean",
+      "sha256": "E810C843746AE91861B1B9B50C9E6932648235291542AF94AEFC218324BA325A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralSeriesConstant.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralSeriesConstant.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceFrickeNumeratorIntegralBound.lean.txt",
+      "sha256": "F6E2DC39E21D058CD59E810DC78504C78D7D73D5E7ED9395A3CFA1A5D0F3DB6F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceFrickeNumeratorIntegralBound.olean",
+      "sha256": "EDDB340C9F1B3F4D6064C9949FE964C7506A27BC5298A68B2583167A8F375236"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceFrickeNumeratorIntegralBound.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceFrickeNumeratorIntegralBound.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalSeriesImage.lean.txt",
+      "sha256": "B77CB578354F8223669144FDB4E0B166F6D31BD096C67FB7DF0CD7B9B4758B01"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalSeriesImage.olean",
+      "sha256": "9B8719BD5885BFE992CB5B637253E03AE4A336ADC95A2B93EC46B458E125E56E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalSeriesImage.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalSeriesImage.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceLaurentSpanDescent.lean.txt",
+      "sha256": "0A605E75869EB72CE09BAD590E41EC96AD9F2A1EF4CCA9859DCC0637D01BFE36"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceLaurentSpanDescent.olean",
+      "sha256": "54A928C25E7E4743DE5DA83D2D3163A1C5341805DCACE397B5879CB0E2DF0DB1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceLaurentSpanDescent.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceLaurentSpanDescent.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceFrickeLaurentSpanDescent.lean.txt",
+      "sha256": "08A352C097340745FB6C757DF0F42650A750E5604D53DD40B04FD601828EA0AA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceFrickeLaurentSpanDescent.olean",
+      "sha256": "8D37398DF6E1A781AF14F4DF987E4CF363FE60FB4DCF9D42ACE04D30B248CBF9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceFrickeLaurentSpanDescent.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceFrickeLaurentSpanDescent.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightLaurent.lean.txt",
+      "sha256": "3E61B3D4D626099D5FCACEFEECEB0FA4D416525DDE150D484EA04E2A8621EA76"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightLaurent.olean",
+      "sha256": "CEAE64782BB06B877971C9BD8B7F47B937EED97734C08C44AC04A06F2616955F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightLaurent.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightLaurent.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightIntegrality.lean.txt",
+      "sha256": "EF7C4145FD04374AA95C77AA513634AB3AF5274613922434A343984F6A5DA7F6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightIntegrality.olean",
+      "sha256": "356E8E5908BC546C581C6F60FB304B3AC6B7EEC20C7DB00DE3E63064FA74C056"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightIntegrality.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightIntegrality.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralRationalLaurentSeries.lean.txt",
+      "sha256": "A844AC7E2D6351D47D0EB0C70049908278FECC5C40EF54BE4F86BD6E9FCF074B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralRationalLaurentSeries.olean",
+      "sha256": "83429DE0D32F0D000BF1262207995968D869C379684455BB8CEF8CFDA42FCED2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralRationalLaurentSeries.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralRationalLaurentSeries.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralLaurentAlgebra.lean.txt",
+      "sha256": "9339498771C51CC16078CFAA6475D5DBDD1098CAD8E5B0F69B7D7594D7BF6065"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralLaurentAlgebra.olean",
+      "sha256": "3E2EB44CE5D84B4174B1AA29F332C243DAAE6F9B437A6E232FE135B244FF4B24"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralLaurentAlgebra.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedIntegralLaurentAlgebra.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalLaurentImage.lean.txt",
+      "sha256": "8FFDA7D0C088DD1CB5D616D9B5ABFD4DB662D25FD6EE6DFE22707CD867FF30C3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalLaurentImage.olean",
+      "sha256": "3A52A9C011E9C7709CFB9B31CD8EB5A6F693011719949CABA205FD2FFFA61CAA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalLaurentImage.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalLaurentImage.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceCyclotomicLaurentTrace.lean.txt",
+      "sha256": "F3662518611C75412F04B7190B485DFBFC84A887D97EFBAB17AD8C1F393E9049"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceCyclotomicLaurentTrace.olean",
+      "sha256": "1CE9C32EFC74FD443234DE171D105F0CD64DE6CF2F886044763858E5ADF1FF12"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceCyclotomicLaurentTrace.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceCyclotomicLaurentTrace.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalLaurentIntegral.lean.txt",
+      "sha256": "3576FDE022CF9ABB34C8C18A4E51852941F2DD1BDE29F28CA319DDE9686F720F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalLaurentIntegral.olean",
+      "sha256": "E2772392E756E27DDFE4DA77E2F3A2C01A5F1C257A2980B7AFBF99EAA87FBD3C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalLaurentIntegral.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalLaurentIntegral.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedCyclotomicLaurentFraction.lean.txt",
+      "sha256": "DB9758D8D3AA1C7881E2F8F868DB1E2FDE57372A310E3CD6F51BE34C4463B269"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedCyclotomicLaurentFraction.olean",
+      "sha256": "200C865F8831EA07CDE4BD2B5C1D04ADA37DF2084C1424CDA60886328965BD5C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedCyclotomicLaurentFraction.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedCyclotomicLaurentFraction.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedCyclotomicLaurentGenerators.lean.txt",
+      "sha256": "D783F2CF5DEE216F70F0B867DC9E6E23983C12BE42739688271B2498DA69BEE1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedCyclotomicLaurentGenerators.olean",
+      "sha256": "DD75D56ED482D6E98F2CC3C668A6A4F014B688A628876E7537B16932E444655F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedCyclotomicLaurentGenerators.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedCyclotomicLaurentGenerators.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedFrickeLaurentField.lean.txt",
+      "sha256": "224CBE3CD3D6B42F00159CEAD11B435FCFE31C61449A2183E76C12414BC0D105"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedFrickeLaurentField.olean",
+      "sha256": "16F808F81082067804D087E03436EBB6A01CDFCFBFFCAB304507BD19EC3B5DB3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedFrickeLaurentField.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedFrickeLaurentField.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalJAlgebra.lean.txt",
+      "sha256": "8270C736821392B04EFE04A7FDA44151EC194558C29F85554CF5117690B878F9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalJAlgebra.olean",
+      "sha256": "50774733B5A121DB6756E3680F2E5D44413C4EE0E91C2271A1BDDF5ECC822FF9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalJAlgebra.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalJAlgebra.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalCuspImage.lean.txt",
+      "sha256": "5564690DA01AF3A6C55CC11AC5735DC6653D336A097C20C006266823A79887F3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalCuspImage.olean",
+      "sha256": "2314371BD62624FC36665E8238934E9BE463A065479789153113CB32791F4C3B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalCuspImage.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceBoundedRationalCuspImage.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralLaurentWeightFactors.lean.txt",
+      "sha256": "B102C06DEB92DAD1D158DF2EBD22655AE472CB2089758D930CB0D45F4E78151A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralLaurentWeightFactors.olean",
+      "sha256": "19848990BD06E1F9170AF551FB27AA1D28D282079E435AF99FA44A9C6345A6AF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralLaurentWeightFactors.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceIntegralLaurentWeightFactors.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightCancellation.lean.txt",
+      "sha256": "6F2506BA8CAC62AC31AEF1725D30FE456C4D1BFF65916411093FD49347ED0FC8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightCancellation.olean",
+      "sha256": "DB91ECF571E71BD87F515DB6BE28DDE87C4CF7708E38C36BD105CB0469F9A69B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightCancellation.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceRationalCuspWeightCancellation.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceGammaOneRationalBoundedDenominators.lean.txt",
+      "sha256": "AAF8744D1483B69BFB959BC16AA019E1350ECDF09208D82A81A559F08A5639E3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceGammaOneRationalBoundedDenominators.olean",
+      "sha256": "472F17C5BD9C79A10DB83D5EB1B53A2D3ABDBBB33C1DBE4C5CF04ECB3FD99D2E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceGammaOneRationalBoundedDenominators.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-failure-696b\\SourceGammaOneRationalBoundedDenominators.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    }
+  ],
+  "failedAudit": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspSpanAudit23.log",
+  "failedAuditSha256": "57DE20B8A061C8F5885E3C91AB4B680DBBC5A33294FF6D3008F627D2E940FA29",
+  "repair": "Remove only the unused CharZero parameter from the two coefficient-bound definitions. All theorem bodies and explicit source hypotheses unchanged. Fresh exhaustive and dependency audit files; original failed audit preserved."
+}

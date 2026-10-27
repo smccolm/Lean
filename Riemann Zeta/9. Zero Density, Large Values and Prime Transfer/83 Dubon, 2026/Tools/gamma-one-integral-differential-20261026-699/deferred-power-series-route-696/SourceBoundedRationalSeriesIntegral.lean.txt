@@ -1,0 +1,97 @@
+import SourceBoundedRationalSeriesImage
+import SourceIntegralRationalPowerSeries
+
+/-! DUB-17/18 -> actual Gamma1 differential realization -> original
+integral-ratio field -> bounded Fourier denominators. Clear the finitely
+many coefficient bounds in a monic relation, and independently clear the
+numerator and denominator of the original series fraction. Integer power
+series normality then supplies the required uniform bound.
+Adapted from `exists_int_multiple` in anthropics/fermats-last-theorem,
+6e837e75355538c7f80bab5b956861e86c4eacc2 (Apache License 2.0).
+The equation and fraction premises must both be proved for the original
+analytic series by the downstream modular-function argument. -/
+namespace Dubon2026.SourceFunctionField
+noncomputable section
+
+theorem hasBoundedIntegralCoefficients_of_monic_relation_of_bounded_fraction
+    {d : ℕ} (y : PowerSeries ℚ) (a : Fin d → PowerSeries ℚ)
+    (ha : ∀ i, HasBoundedIntegralCoefficients (a i))
+    (hrel : y ^ d + ∑ i : Fin d, a i * y ^ (i : ℕ) = 0)
+    (h u : PowerSeries ℚ) (hh0 : h ≠ 0)
+    (hh : HasBoundedIntegralCoefficients h) (hu : HasBoundedIntegralCoefficients u)
+    (hhy : h * y = u) : HasBoundedIntegralCoefficients y := by
+  classical
+  choose D A hD hA using fun i => (ha i).exists_integer_series
+  obtain ⟨Dh, H, hDh, hH⟩ := hh.exists_integer_series
+  obtain ⟨Du, U, hDu, hU⟩ := hu.exists_integer_series
+  let c : ℤ := ∏ i, D i
+  have hc0 : c ≠ 0 := Finset.prod_ne_zero_iff.mpr fun i _ => hD i
+  let z : Fin d → ℤ := fun i => c ^ (d - 1 - i) * ∏ j ∈ Finset.univ.erase i, D j
+  have hzid : ∀ i : Fin d, z i * D i * c ^ (i : ℕ) = c ^ d := by
+    intro i
+    have h1 : (∏ j ∈ Finset.univ.erase i, D j) * D i = c :=
+      Finset.prod_erase_mul _ _ (Finset.mem_univ i)
+    have h2 : d - 1 - (i : ℕ) + 1 + i = d := by have := i.2; omega
+    calc z i * D i * c ^ (i : ℕ) =
+        c ^ (d - 1 - i) * ((∏ j ∈ Finset.univ.erase i, D j) * D i) * c ^ (i : ℕ) := by
+          dsimp [z]; ring
+      _ = c ^ (d - 1 - i) * c * c ^ (i : ℕ) := by rw [h1]
+      _ = c ^ (d - 1 - (i : ℕ) + 1 + i) := by rw [pow_add, pow_succ]
+      _ = c ^ d := by rw [h2]
+  let ι : PowerSeries ℤ →+* PowerSeries ℚ := PowerSeries.map (algebraMap ℤ ℚ)
+  let b : Fin d → PowerSeries ℤ := fun i => PowerSeries.C (z i) * A i
+  let P : Polynomial (PowerSeries ℤ) :=
+    Polynomial.X ^ d + ∑ i : Fin d, Polynomial.C (b i) * Polynomial.X ^ (i : ℕ)
+  have hP : P.Monic := Polynomial.monic_X_pow_add (Polynomial.degree_sum_fin_lt b)
+  let g : PowerSeries ℚ := PowerSeries.C (c : ℚ) * y
+  have hib : ∀ i, ι (b i) = PowerSeries.C ((z i : ℚ) * D i) * a i := by
+    intro i
+    change ι (PowerSeries.C (z i) * A i) = _
+    rw [map_mul, hA i]
+    simp only [ι, PowerSeries.map_C, algebraMap_int_eq, Int.coe_castRingHom, map_mul]
+    ring
+  have hroot : Polynomial.eval₂ ι g P = 0 := by
+    change Polynomial.eval₂ ι g
+      (Polynomial.X ^ d + ∑ i : Fin d, Polynomial.C (b i) * Polynomial.X ^ (i : ℕ)) = 0
+    rw [Polynomial.eval₂_add, Polynomial.eval₂_X_pow, Polynomial.eval₂_finsetSum]
+    simp only [Polynomial.eval₂_mul, Polynomial.eval₂_C, Polynomial.eval₂_X_pow, hib]
+    have hterm : ∀ i : Fin d, PowerSeries.C ((z i : ℚ) * D i) * a i * g ^ (i : ℕ) =
+        PowerSeries.C ((c : ℚ) ^ d) * (a i * y ^ (i : ℕ)) := by
+      intro i
+      have hnum : (z i : ℚ) * D i * (c : ℚ) ^ (i : ℕ) = (c : ℚ) ^ d := by
+        exact_mod_cast hzid i
+      rw [show g = PowerSeries.C (c : ℚ) * y from rfl, mul_pow, ← map_pow, ← hnum]
+      simp only [map_mul, map_pow]
+      ring
+    have hlead : g ^ d = PowerSeries.C ((c : ℚ) ^ d) * y ^ d := by
+      dsimp [g]; rw [mul_pow, map_pow]
+    rw [Finset.sum_congr rfl fun i _ => hterm i, ← Finset.mul_sum,
+      hlead, ← mul_add, hrel, mul_zero]
+  let hZ : PowerSeries ℤ := PowerSeries.C Du * H
+  have hH0 : H ≠ 0 := by
+    intro h0
+    have he : PowerSeries.C (Dh : ℚ) * h = 0 := by rw [← hH, h0, map_zero]
+    rcases mul_eq_zero.mp he with h1 | h1
+    · have he := congrArg PowerSeries.constantCoeff h1
+      simp only [PowerSeries.constantCoeff_C, map_zero] at he
+      exact hDh (Int.cast_injective he)
+    · exact hh0 h1
+  have hhZ0 : hZ ≠ 0 := by
+    apply mul_ne_zero _ hH0
+    intro h0
+    have he := congrArg PowerSeries.constantCoeff h0
+    exact hDu (by simpa only [PowerSeries.constantCoeff_C, map_zero] using he)
+  have hmul : ι hZ * g ∈ ι.range := by
+    refine ⟨PowerSeries.C (c * Dh) * U, ?_⟩
+    change ι (PowerSeries.C (c * Dh) * U) = ι (PowerSeries.C Du * H) * g
+    rw [map_mul ι, map_mul ι, hU, hH]
+    dsimp [g]
+    rw [← hhy]
+    simp only [ι, PowerSeries.map_C, algebraMap_int_eq, Int.coe_castRingHom, map_mul]
+    ring
+  obtain ⟨G, hG⟩ := rationalPowerSeries_mem_integer_image_of_monic_of_fraction
+    g P hP hroot hZ hhZ0 hmul
+  exact hasBoundedIntegralCoefficients_of_integer_series c hc0 G hG
+
+end
+end Dubon2026.SourceFunctionField

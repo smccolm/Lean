@@ -1,0 +1,59 @@
+{
+  "status": "Prepared; require 8471 canonical PASS and archive before integration.",
+  "route": "gamma-one-rational-fourier-promotion-route-692.json",
+  "routeSha256": "1B98FB98F26BBA1C9F36F82B3152AF55A6E0BED1AF28CB402297A7DDC3C7CB05",
+  "modules": 22,
+  "queries": 63,
+  "theorems": 58,
+  "constructions": 5,
+  "exhaustiveScratchChecks": 89,
+  "proofValueEdges": 87,
+  "scopes": 3,
+  "receipts": {
+    "source-fricke-cyclotomic-analytic-transport-5-scratch-receipt.json": "EA8A4E86BF2EBC0C77970E18CB0F48BC533023901809C3D38FD0B77D0C4474EA",
+    "source-gamma-one-cyclotomic-conjugation-13-scratch-receipt.json": "5F58C8E699F7DF819D1238C44212F1760649FA0E5642AB2BDAF1C58B032B8C6F",
+    "source-gamma-one-rational-cusp-span-4-scratch-receipt.json": "0CAC2FADB6D241264A529DA1B438678735411E074B567CFDD60DAE9D7EE4BBFF"
+  },
+  "expectedConsumers": 24587,
+  "expectedConstructions": 2440,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_rational_fourier_8493.py",
+      "sha256": "36271C6D288B89877BEC670F0F4BE7383B2970DF127F96C190CC0A585BA04D58"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_rational_fourier_production_ownership_8493.py",
+      "sha256": "8A9546759F12D693DE37614A0DDB8873D28D0CBDF78B2792E00C80C7699BE368"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_rational_fourier_scratch_ownership_8493.py",
+      "sha256": "4F490A21D3514940C48C99C804AFE6529BC52B9F0D7FE819EAF36D75AC1C6964"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_rational_fourier_ownership_8493.py",
+      "sha256": "C145F67E16974CB30704EBAA93C7FC8463F3B121855544051692E52C56D1C39E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_rational_fourier_global_ownership_8493.py",
+      "sha256": "AC3DF9B9012AAB85741B26D1514DC5F0062ABD3EC21A3A0EB16F82DB10D0808F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_rational_fourier_8493.py",
+      "sha256": "D7676D26E9FC554392CDFE088A02073C82AC6078696504277E92D37F3B142C7A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_rational_fourier_8493.ps1",
+      "sha256": "B931583AB895ACA9407FE34E3DD0AB3D59B93AC0EC970634059D5BB74B710F47"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_rational_fourier_8493.ps1",
+      "sha256": "71925353CB263E95CBF75503531899E5B086B9743EC4B39074C86193D0CA595C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_rational_fourier_canonical_8493.py",
+      "sha256": "3BEB1EF9A5E255188C138007F072E6930E91CFFFD3A6D87CB35DEEE2B5AA0F2D"
+    }
+  ],
+  "productionMutation": false
+}

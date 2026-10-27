@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-26 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual finite Gamma1 Hecke-character realization -> actual Picard/H1, full/parabolic, transpose/diamond comparison retaining the homogeneous coefficient endomorphism -> actual differential/cusp comparison -> arbitrary cusp differential realization -> original integral-ratio field membership -> bounded denominators for rational Fourier cusp forms.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-integral-cusp-span-route-696.json",
+    "sha256": "800F02A3424B650652F95F0678CB86D1BDAEC05D54A1D9B510EA4203612D51F1",
+    "review": {
+      "scope": 696,
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual finite Gamma1 Hecke-character realization -> actual Picard/H1, full/parabolic, transpose/diamond comparison retaining the homogeneous coefficient endomorphism -> actual differential/cusp comparison -> arbitrary cusp differential realization -> original integral-ratio field membership -> bounded denominators for rational Fourier cusp forms.",
+      "assumptionsToDischarge": "For actual Gamma1 cusp forms with rational width-one Fourier coefficients and explicit balance k+4a+6b=12m, derive original cyclotomic Fricke membership and rational j-integrality. Actual Fricke generators supply bounded fractions. Normalize a nonzero denominator coefficient and take the native cyclotomic trace to obtain a nonzero rational bounded fraction. Native Laurent localization and normality, after finite integer scaling of the monic relation, give a uniform integer bound. The original E4/E6 integer units and integral discriminant cancel the auxiliary weight factors, giving one integer multiple of the original cusp form with a literal integer Fourier series. The already proved full-space rational Fourier spanning then gives integral Fourier spanning; for weight two a=b=m=1, at every nonzero level.",
+      "remaining": "Integral Fourier spanning is an inner obligation. Actual arbitrary Gamma1 cusp differential realization and its converse remain, followed by the original Picard/H1, full/parabolic, transpose and diamond comparison retaining the homogeneous coefficient endomorphism. Finite-character arithmetic realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher symmetric-power continuation remain. No characteristic-zero lift is inferred from finite characters or deformation rings. All original twenty gates remain; 16/20; DUB-17--20 OPEN.",
+      "shorterRouteReview": "The fixed-revision external bounded-denominator proof supplied the finite scaling pattern. Pinned Mathlib Laurent localization replaces its power-series fraction machinery and avoids separate pole-clearing exponents. Native trace-as-sum-of-automorphisms replaces a new convolution proof and the product of conjugate denominators. Existing original Laurent germ identity and coefficient retraction recover source function-field membership directly; existing integral E4, eta, j and torsion monomials provide the exact source generators. Four unused power-series-only development modules and one unused reverse helper are preserved as text and deferred. No general odd-weight balance theorem or alternative function-field model is introduced.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\laurent-denominator-reuse-route-695.json",
+          "sha256": "B117FDC2679041FC8E14F3DAA007CEB2E237F22AF082EF2592FFA8715A3AE0D4"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\bounded-denominator-reuse-assessment-690.json",
+          "sha256": "44A0BF25B79691D7E986702D9C658C0BC35E5A7B8617C1A9CA846350A4C38B22"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-selected-scope-696.json",
+          "sha256": "43E2FD31782933AC666358050670946504EB04898BF40164F03C132DCDF8DDBB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\scratch-name-collision-restoration-verification-695.json",
+          "sha256": "13B97FAB917996026B42F73479EE750518FC6E883AA1C7453086613FF4A8F4CA"
+        }
+      ],
+      "modules": [
+        "SourceWeierstrassIntegralDenominator",
+        "SourceBoundedIntegralSeriesProduct",
+        "SourceIntegralEisensteinSix",
+        "SourceBoundedIntegralSeriesConstant",
+        "SourceFrickeNumeratorIntegralBound",
+        "SourceBoundedRationalSeriesImage",
+        "SourceLaurentSpanDescent",
+        "SourceFrickeLaurentSpanDescent",
+        "SourceRationalCuspWeightLaurent",
+        "SourceRationalCuspWeightIntegrality",
+        "SourceIntegralRationalLaurentSeries",
+        "SourceBoundedIntegralLaurentAlgebra",
+        "SourceBoundedRationalLaurentImage",
+        "SourceCyclotomicLaurentTrace",
+        "SourceBoundedRationalLaurentIntegral",
+        "SourceBoundedCyclotomicLaurentFraction",
+        "SourceBoundedCyclotomicLaurentGenerators",
+        "SourceBoundedFrickeLaurentField",
+        "SourceBoundedRationalJAlgebra",
+        "SourceBoundedRationalCuspImage",
+        "SourceIntegralLaurentWeightFactors",
+        "SourceRationalCuspWeightCancellation",
+        "SourceGammaOneRationalBoundedDenominators"
+      ],
+      "externalImport": false,
+      "externalFullClosureVerified": false,
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": "For actual Gamma1 cusp forms with rational width-one Fourier coefficients and explicit balance k+4a+6b=12m, derive original cyclotomic Fricke membership and rational j-integrality. Actual Fricke generators supply bounded fractions. Normalize a nonzero denominator coefficient and take the native cyclotomic trace to obtain a nonzero rational bounded fraction. Native Laurent localization and normality, after finite integer scaling of the monic relation, give a uniform integer bound. The original E4/E6 integer units and integral discriminant cancel the auxiliary weight factors, giving one integer multiple of the original cusp form with a literal integer Fourier series. The already proved full-space rational Fourier spanning then gives integral Fourier spanning; for weight two a=b=m=1, at every nonzero level.",
+  "remaining": "Integral Fourier spanning is an inner obligation. Actual arbitrary Gamma1 cusp differential realization and its converse remain, followed by the original Picard/H1, full/parabolic, transpose and diamond comparison retaining the homogeneous coefficient endomorphism. Finite-character arithmetic realization, original all-weight characteristic-zero association, local/image/regularity, automorphy and literal higher symmetric-power continuation remain. No characteristic-zero lift is inferred from finite characters or deformation rings. All original twenty gates remain; 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "linterRepair": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\integral-cusp-linter-repair-696b.json",
+    "sha256": "6FE8DC0E96689CF682D1375766B68EC55261B4E73CA85EBE7EBA3BDE13D1459A",
+    "review": "Remove only the unused CharZero parameter from the two coefficient-bound definitions. All theorem bodies and explicit source hypotheses unchanged. Fresh exhaustive and dependency audit files; original failed audit preserved."
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

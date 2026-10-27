@@ -1,0 +1,166 @@
+import Dubon2026.SourceCyclotomicFrickeIndex
+import Dubon2026.SourceFrickeLaurentCyclotomicConjugation
+import Dubon2026.SourceFrickeLaurentFieldConjugation
+import Dubon2026.SourceOriginalFrickeLaurentField
+import Dubon2026.SourceFrickeCyclotomicAnalyticTransport
+import Dubon2026.SourceFrickeCyclotomicConjugateRelation
+import Dubon2026.SourceCyclotomicModularLift
+import Dubon2026.SourceCyclotomicGammaOneLift
+import Dubon2026.SourceCyclotomicLevelRingCovariance
+import Dubon2026.SourceCyclotomicConjugateCancellation
+import Dubon2026.SourceCyclotomicFractionCovariance
+import Dubon2026.SourceCyclotomicConjugateCuspOrder
+import Dubon2026.SourceCyclotomicHolomorphicDivision
+import Dubon2026.SourceCyclotomicEllipticDivisibility
+import Dubon2026.SourceCyclotomicEllipticCoordinates
+import Dubon2026.SourceGammaOneCuspCyclotomicConjugation
+import Dubon2026.SourceCyclotomicCuspFourierTransport
+import Dubon2026.SourceGammaOneCyclotomicFourierConjugation
+import Dubon2026.SourceCyclotomicTraceStructure
+import Dubon2026.SourceGammaOneFourierLinear
+import Dubon2026.SourceGammaOneRationalTraceSpan
+import Dubon2026.SourceGammaOneRationalCuspSpan
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFricke.isPrimitiveRoot_zetaK
+#print axioms Dubon2026.SourceFricke.exists_cyclotomic_aut_exponent
+#print axioms Dubon2026.SourceFricke.cyclotomicFrickeIndex_val_zero
+#print axioms Dubon2026.SourceFricke.cyclotomicFrickeIndex_val_one
+#print axioms Dubon2026.SourceFricke.coeffMap_discriminantLaurentK_ringHom
+#print axioms Dubon2026.SourceFricke.coeffMap_frickeLaurentK_cyclotomic
+#print axioms Dubon2026.SourceFricke.coeffMap_frickeLaurentK_aut
+#print axioms Dubon2026.SourceFricke.coeffMap_jqNModC_aut
+#print axioms Dubon2026.SourceFricke.coeffMap_frickeLaurentGeneratorsK_aut
+#print axioms Dubon2026.SourceFricke.coeffMap_frickeLaurentFieldK_aut
+#print axioms Dubon2026.SourceFricke.coeffMap_frickeLaurentFieldK_inclusion
+#print axioms Dubon2026.SourceFricke.coeffMap_jAlgebraK_aut
+#print axioms Dubon2026.SourceFricke.isIntegral_jAlgebraK_coeffMap_aut
+#print axioms Dubon2026.SourceFricke.exists_field_laurent_cyclotomic_levelRing
+#print axioms Dubon2026.SourceFricke.exists_field_laurent_holomorphic_fraction
+#print axioms Dubon2026.SourceFricke.isIntegral_laurent_holomorphic_fraction
+#print axioms Dubon2026.SourceFricke.exists_holomorphic_cyclotomic_conjugate
+#print axioms Dubon2026.SourceFricke.cyclotomicFrickeIndex
+#print axioms Dubon2026.SourceFricke.frickeLaurentGeneratorsK
+#print axioms Dubon2026.SourceFricke.exists_cyclotomicConjugates
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.unique
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.add
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.mul
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.pow
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.const
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.j
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.fricke
+#print axioms Dubon2026.SourceFricke.exists_modular_cyclotomic_conjugate
+#print axioms Dubon2026.SourceFricke.exists_gammaOne_cyclotomic_conjugate
+#print axioms Dubon2026.SourceFricke.exists_cyclotomic_levelRing_modular_conjugate
+#print axioms Dubon2026.SourceFricke.cyclotomicLevelRing_holomorphicFraction
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.of_mul_eq
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.modular
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.exists_modular
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.gammaOne_invariant
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.discriminant
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.cusp_order
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.isZeroAtImInfty_mul_discriminant_iff
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.all_cusps
+#print axioms Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_of_holomorphic_quotient
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.holomorphic_division
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.elliptic_divisibility
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.jShift
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.E4_divisibility
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.E6_divisibility
+#print axioms Dubon2026.SourceFricke.exists_gammaOne_cuspWeightImage_cyclotomic_conjugate
+#print axioms Dubon2026.SourceFricke.coeffMap_eisensteinLaurentK_ringHom
+#print axioms Dubon2026.SourceFricke.coeffMap_eisensteinFactorLaurentK_ringHom
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.cusp_forms
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.qExpansion_coeff
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates.gammaOne_qExpansion_coeff
+#print axioms Dubon2026.SourceFricke.exists_gammaOne_cuspForm_cyclotomic_conjugate
+#print axioms Dubon2026.SourceFricke.CyclotomicConjugates
+#print axioms Dubon2026.SourceFricke.cyclotomicTorsionVector
+#print axioms Dubon2026.SourceFricke.isCyclotomicExtension_kN
+#print axioms Dubon2026.SourceFricke.finiteDimensional_kN
+#print axioms Dubon2026.SourceFricke.isGalois_kN
+#print axioms Dubon2026.SourceFricke.gammaOne_one_mem_strictPeriods
+#print axioms Dubon2026.SourceFricke.gammaOne_eq_of_qExpansion_coeff_eq
+#print axioms Dubon2026.SourceFricke.gammaOne_mem_span_rational_of_conjugates
+#print axioms Dubon2026.SourceFricke.span_gammaOne_rational_cuspForms_eq_top
+#print axioms Dubon2026.SourceFricke.span_gammaOne_weightTwo_rational_cuspForms_eq_top
+#print axioms Dubon2026.SourceFricke.gammaOneQCoeffLinear
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceCyclotomicFrickeIndex, `Dubon2026.SourceFrickeLaurentCyclotomicConjugation, `Dubon2026.SourceFrickeLaurentFieldConjugation, `Dubon2026.SourceOriginalFrickeLaurentField, `Dubon2026.SourceFrickeCyclotomicAnalyticTransport, `Dubon2026.SourceFrickeCyclotomicConjugateRelation, `Dubon2026.SourceCyclotomicModularLift, `Dubon2026.SourceCyclotomicGammaOneLift, `Dubon2026.SourceCyclotomicLevelRingCovariance, `Dubon2026.SourceCyclotomicConjugateCancellation, `Dubon2026.SourceCyclotomicFractionCovariance, `Dubon2026.SourceCyclotomicConjugateCuspOrder, `Dubon2026.SourceCyclotomicHolomorphicDivision, `Dubon2026.SourceCyclotomicEllipticDivisibility, `Dubon2026.SourceCyclotomicEllipticCoordinates, `Dubon2026.SourceGammaOneCuspCyclotomicConjugation, `Dubon2026.SourceCyclotomicCuspFourierTransport, `Dubon2026.SourceGammaOneCyclotomicFourierConjugation, `Dubon2026.SourceCyclotomicTraceStructure, `Dubon2026.SourceGammaOneFourierLinear, `Dubon2026.SourceGammaOneRationalTraceSpan, `Dubon2026.SourceGammaOneRationalCuspSpan]
+  let theorems : Array Name := #[`Dubon2026.SourceFricke.isPrimitiveRoot_zetaK, `Dubon2026.SourceFricke.exists_cyclotomic_aut_exponent, `Dubon2026.SourceFricke.cyclotomicFrickeIndex_val_zero, `Dubon2026.SourceFricke.cyclotomicFrickeIndex_val_one, `Dubon2026.SourceFricke.coeffMap_discriminantLaurentK_ringHom, `Dubon2026.SourceFricke.coeffMap_frickeLaurentK_cyclotomic, `Dubon2026.SourceFricke.coeffMap_frickeLaurentK_aut, `Dubon2026.SourceFricke.coeffMap_jqNModC_aut, `Dubon2026.SourceFricke.coeffMap_frickeLaurentGeneratorsK_aut, `Dubon2026.SourceFricke.coeffMap_frickeLaurentFieldK_aut, `Dubon2026.SourceFricke.coeffMap_frickeLaurentFieldK_inclusion, `Dubon2026.SourceFricke.coeffMap_jAlgebraK_aut, `Dubon2026.SourceFricke.isIntegral_jAlgebraK_coeffMap_aut, `Dubon2026.SourceFricke.exists_field_laurent_cyclotomic_levelRing, `Dubon2026.SourceFricke.exists_field_laurent_holomorphic_fraction, `Dubon2026.SourceFricke.isIntegral_laurent_holomorphic_fraction, `Dubon2026.SourceFricke.exists_holomorphic_cyclotomic_conjugate, `Dubon2026.SourceFricke.exists_cyclotomicConjugates, `Dubon2026.SourceFricke.CyclotomicConjugates.unique, `Dubon2026.SourceFricke.CyclotomicConjugates.add, `Dubon2026.SourceFricke.CyclotomicConjugates.mul, `Dubon2026.SourceFricke.CyclotomicConjugates.pow, `Dubon2026.SourceFricke.CyclotomicConjugates.const, `Dubon2026.SourceFricke.CyclotomicConjugates.j, `Dubon2026.SourceFricke.CyclotomicConjugates.fricke, `Dubon2026.SourceFricke.exists_modular_cyclotomic_conjugate, `Dubon2026.SourceFricke.exists_gammaOne_cyclotomic_conjugate, `Dubon2026.SourceFricke.exists_cyclotomic_levelRing_modular_conjugate, `Dubon2026.SourceFricke.cyclotomicLevelRing_holomorphicFraction, `Dubon2026.SourceFricke.CyclotomicConjugates.of_mul_eq, `Dubon2026.SourceFricke.CyclotomicConjugates.modular, `Dubon2026.SourceFricke.CyclotomicConjugates.exists_modular, `Dubon2026.SourceFricke.CyclotomicConjugates.gammaOne_invariant, `Dubon2026.SourceFricke.CyclotomicConjugates.discriminant, `Dubon2026.SourceFricke.CyclotomicConjugates.cusp_order, `Dubon2026.SourceFricke.CyclotomicConjugates.isZeroAtImInfty_mul_discriminant_iff, `Dubon2026.SourceFricke.CyclotomicConjugates.all_cusps, `Dubon2026.SourceFricke.holomorphicCyclotomicFrickeFractions_of_holomorphic_quotient, `Dubon2026.SourceFricke.CyclotomicConjugates.holomorphic_division, `Dubon2026.SourceFricke.CyclotomicConjugates.elliptic_divisibility, `Dubon2026.SourceFricke.CyclotomicConjugates.jShift, `Dubon2026.SourceFricke.CyclotomicConjugates.E4_divisibility, `Dubon2026.SourceFricke.CyclotomicConjugates.E6_divisibility, `Dubon2026.SourceFricke.exists_gammaOne_cuspWeightImage_cyclotomic_conjugate, `Dubon2026.SourceFricke.coeffMap_eisensteinLaurentK_ringHom, `Dubon2026.SourceFricke.coeffMap_eisensteinFactorLaurentK_ringHom, `Dubon2026.SourceFricke.CyclotomicConjugates.cusp_forms, `Dubon2026.SourceFricke.CyclotomicConjugates.qExpansion_coeff, `Dubon2026.SourceFricke.CyclotomicConjugates.gammaOne_qExpansion_coeff, `Dubon2026.SourceFricke.exists_gammaOne_cuspForm_cyclotomic_conjugate, `Dubon2026.SourceFricke.isCyclotomicExtension_kN, `Dubon2026.SourceFricke.finiteDimensional_kN, `Dubon2026.SourceFricke.isGalois_kN, `Dubon2026.SourceFricke.gammaOne_one_mem_strictPeriods, `Dubon2026.SourceFricke.gammaOne_eq_of_qExpansion_coeff_eq, `Dubon2026.SourceFricke.gammaOne_mem_span_rational_of_conjugates, `Dubon2026.SourceFricke.span_gammaOne_rational_cuspForms_eq_top, `Dubon2026.SourceFricke.span_gammaOne_weightTwo_rational_cuspForms_eq_top]
+  let constructions : Array Name := #[`Dubon2026.SourceFricke.cyclotomicFrickeIndex, `Dubon2026.SourceFricke.frickeLaurentGeneratorsK, `Dubon2026.SourceFricke.CyclotomicConjugates, `Dubon2026.SourceFricke.cyclotomicTorsionVector, `Dubon2026.SourceFricke.gammaOneQCoeffLinear]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE RATIONAL FOURIER AUDIT PASS: {count} theorems including private/generated declarations. Actual same-level cyclotomic cusp conjugates and rational Fourier spanning of Gamma1 weight-two cusp forms are proved. Bounded denominators, differential realization and arithmetic comparison remain; 16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceCyclotomicFrickeIndex
+
+#lint in Dubon2026.SourceFrickeLaurentCyclotomicConjugation
+
+#lint in Dubon2026.SourceFrickeLaurentFieldConjugation
+
+#lint in Dubon2026.SourceOriginalFrickeLaurentField
+
+#lint in Dubon2026.SourceFrickeCyclotomicAnalyticTransport
+
+#lint in Dubon2026.SourceFrickeCyclotomicConjugateRelation
+
+#lint in Dubon2026.SourceCyclotomicModularLift
+
+#lint in Dubon2026.SourceCyclotomicGammaOneLift
+
+#lint in Dubon2026.SourceCyclotomicLevelRingCovariance
+
+#lint in Dubon2026.SourceCyclotomicConjugateCancellation
+
+#lint in Dubon2026.SourceCyclotomicFractionCovariance
+
+#lint in Dubon2026.SourceCyclotomicConjugateCuspOrder
+
+#lint in Dubon2026.SourceCyclotomicHolomorphicDivision
+
+#lint in Dubon2026.SourceCyclotomicEllipticDivisibility
+
+#lint in Dubon2026.SourceCyclotomicEllipticCoordinates
+
+#lint in Dubon2026.SourceGammaOneCuspCyclotomicConjugation
+
+#lint in Dubon2026.SourceCyclotomicCuspFourierTransport
+
+#lint in Dubon2026.SourceGammaOneCyclotomicFourierConjugation
+
+#lint in Dubon2026.SourceCyclotomicTraceStructure
+
+#lint in Dubon2026.SourceGammaOneFourierLinear
+
+#lint in Dubon2026.SourceGammaOneRationalTraceSpan
+
+#lint in Dubon2026.SourceGammaOneRationalCuspSpan

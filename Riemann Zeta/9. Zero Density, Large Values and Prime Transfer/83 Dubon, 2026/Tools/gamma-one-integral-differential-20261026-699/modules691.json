@@ -1,0 +1,10 @@
+[
+  "HigherAugmentedTensor",
+  "HigherAugmentedEuler",
+  "HigherPoleCancellation",
+  "HigherNonvanishingAtOne",
+  "FiniteTensorEulerInequality",
+  "HigherMixedEuler",
+  "HigherBoundaryNonvanishing",
+  "HigherEntireCriterion"
+]

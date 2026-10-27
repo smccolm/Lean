@@ -1,0 +1,88 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T01:29:41.454484+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceIntegerJEulerNormalization",
+    "SourceIntegerJEulerBaseChange",
+    "SourceGammaOneIntegralCuspRatio",
+    "SourceGammaOneIntegralCuspLaurentSpan",
+    "SourceGammaOneCuspDifferentialCoefficient",
+    "SourceGammaOneCuspDifferentialRealization"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegerJEulerNormalization.lean",
+      "sha256": "202ECF6E07A92AE5D9FEA21B708FC8CDEE9CBE44E05E6B60AA7EE1CE3A0D8D2E",
+      "oleanSha256": "F6916FE362756F1CA7A232D3300BB12CE943005261571F553EC01E07E4C5BFB1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceIntegerJEulerBaseChange.lean",
+      "sha256": "A8C4296641800B56E5298BDB5CA9001216A48C196FC635BACBE64E034E923481",
+      "oleanSha256": "F868B5A8AA2098098AEBD4D09A38DC2A652E5D65B921D2A6C7E74C665DE9D149"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspRatio.lean",
+      "sha256": "DA08A6A4AFECBC36BDB7299946C9BB29A5A3E8F9A2C838F283A590CEEF769EA1",
+      "oleanSha256": "A422121DC04D7EC987AD649DB0E6089EA1336C20C415D89A9FDA038C12FC2CA3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneIntegralCuspLaurentSpan.lean",
+      "sha256": "F9436F91DF3794A6B615AB2C42C193CFBA40DD8821A563F166F18C9A8F3F2406",
+      "oleanSha256": "7AF315910AB9A4A27F7EE08FB4947EB18D7D2278F65B638C318A7B73EE5ED052"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspDifferentialCoefficient.lean",
+      "sha256": "EB91F49FBBF474C967C090F373A4D6C5A803587323BAB5F298DF1A4C587EA3A8",
+      "oleanSha256": "C0D1E4D8CD7845B51A8C214F15CDC1F2BC24DC1688FFDE33387C0945803D8DE1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspDifferentialRealization.lean",
+      "sha256": "E7A2A05BF92E8814277BB9E73D66E7114216CFDD466A412EA17569CD1E6165C3",
+      "oleanSha256": "2465CF4195509C71F4A635D647A18D5AA7674FCE1B04CE4BB4BFECF90738B1EC"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFricke.qExpansion_E6_eq_map_eisenstein6",
+    "Dubon2026.SourceFricke.exists_integer_qEuler_jqModC_formula",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_integer_qEuler_integral_ratio_formula",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_integral_cusp_differential_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_laurent_mem_span_integral_of_coeffMap",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_cusp_differential_coefficient_of_coeffMap",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_differential_of_coefficients",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_regular_differential_of_coefficients"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFricke.qExpansion_E6_eq_map_eisenstein6",
+    "Dubon2026.SourceFricke.exists_integer_qEuler_jqModC_formula",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_integer_qEuler_integral_ratio_formula",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_integral_cusp_differential_coefficient",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_laurent_mem_span_integral_of_coeffMap",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_cusp_differential_coefficient_of_coeffMap",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_differential_of_coefficients",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_regular_differential_of_coefficients"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspDifferentialRealizationAudit6.log",
+  "logSha256": "1F3BC580C6A3DD2226E77BC462D74F4EC1347E8DE45EFA5797FC817333D18A2A",
+  "auditSha256": "34970BF10CB5237C1A255C7F0F7A1A5563B112262C784018B9C552EE64ED2752",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 15,
+  "linterScopes": 6,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 15,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspDifferentialRealizationDependencyAudit6.log",
+  "dependencyAuditSha256": "7BE641E72766E6BCD613B9E08222C76E3DCE6B5C1E7CAF22FFEFBBF8B31DD879",
+  "dependencyAuditSourceSha256": "22E9FD949E5469C4E1B7D170DEF60FFB85A641CA28262ADFF381A33AFF4D8D77",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_regular_differential_of_coefficients"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual finite Gamma1 Hecke-character realization -> actual Picard/H1, full/parabolic, transpose/diamond comparison retaining the homogeneous coefficient endomorphism -> actual differential/cusp comparison -> realize the original Gamma1 weight-two cusp form as a regular differential in the original integral-ratio field.",
+  "discharged": "Every original Gamma1 weight-two cusp form with Fourier coefficients in the specified embedded characteristic-zero field has a differential in the original integral-ratio function field with exactly that Fourier expansion. For an algebraically closed coefficient field, the constructed differential is regular at every place. The only cusp-form coefficient premise is the source condition that its Fourier coefficients lie in the chosen field embedding. No matching differential, field-membership, integral relation or local regularity certificate remains as a premise.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The converse regular-differential-to-cusp construction remains. The actual Picard/H1, full/parabolic, transpose and diamond comparison must retain the original homogeneous coefficient endomorphism. Finite-character arithmetic realization, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Full scope is unchanged; 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-differential-realization-6-reuse-review-20261026.json",
+  "reuseReviewSha256": "EF0471F687B83BB0C61B8C78D0F67846706EE0ED9CA622DCDE0CA068316EC81F",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

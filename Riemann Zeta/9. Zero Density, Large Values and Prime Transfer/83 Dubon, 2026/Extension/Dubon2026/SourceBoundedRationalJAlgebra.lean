@@ -1,0 +1,50 @@
+import Dubon2026.SourceBoundedFrickeLaurentField
+import Dubon2026.SourceBoundedRationalLaurentIntegral
+import Dubon2026.SourceBoundedIntegralSeriesConstant
+import Dubon2026.SourceIntegralCoordinateMonic
+
+/-! DUB-17/18 -> actual Gamma1 differential realization -> original
+integral-ratio field -> bounded rational Fourier denominators. Rational
+polynomials in the original integral j series have uniformly bounded
+Laurent coefficients. Combine the original j-integral equation with the
+proved bounded Fricke fraction and trace descent, then apply native Laurent
+normality. Both upstream inputs are genuinely used and are supplied by the
+actual rational cusp-image consumer. -/
+namespace Dubon2026.SourceFricke
+noncomputable section
+open SourceFunctionField
+
+theorem hasBoundedIntegralLaurentCoefficients_jAlgebra (N : ℕ) [NeZero N]
+    {X : LaurentSeries ℚ}
+    (hX : X ∈ Algebra.adjoin ℚ ({jqNModC ℚ N} : Set (LaurentSeries ℚ))) :
+    HasBoundedIntegralLaurentCoefficients X := by
+  induction hX using Algebra.adjoin_induction with
+  | mem x hx =>
+    rcases Set.mem_singleton_iff.mp hx with rfl
+    exact hasBoundedIntegralLaurentCoefficients_jqNModC ℚ N
+  | algebraMap c =>
+    have hc : HasBoundedIntegralCoefficients (PowerSeries.C c) := by
+      simpa using hasBoundedIntegralCoefficients_C_rat ℚ c
+    simpa only [PowerSeries.coe_C, HahnSeries.C_apply,
+      SourceDifferential.algebraMap_laurentSeries_apply_alt] using hc.laurent
+  | add x y _ _ hx hy => exact hx.add hy
+  | mul x y _ _ hx hy => exact hx.mul hy
+
+theorem hasBoundedIntegralLaurentCoefficients_of_integral_j_of_frickeField
+    (N : ℕ) [NeZero N] {X : LaurentSeries ℚ}
+    (hi : IsIntegral (Algebra.adjoin ℚ ({jqNModC ℚ N} : Set (LaurentSeries ℚ))) X)
+    (hfield : coeffMap (algebraMap ℚ (kN N)) X ∈
+      IntermediateField.adjoin (kN N) (frickeLaurentGeneratorsK N)) :
+    HasBoundedIntegralLaurentCoefficients X := by
+  obtain ⟨d, p, hm⟩ := exists_coordinate_monic_relation hi
+  obtain ⟨q, r, hq0, hq, hr, hqr⟩ := exists_bounded_fraction_frickeLaurentFieldK hfield
+  obtain ⟨h, u, hh0, hh, hu, hhu⟩ :=
+    exists_rational_bounded_laurent_fraction N X q r hq0 hq hr hqr
+  apply hasBoundedIntegralLaurentCoefficients_of_monic_relation_of_bounded_fraction X
+    (fun i : Fin d => Polynomial.aeval (jqNModC ℚ N) (p i))
+    (fun _ => hasBoundedIntegralLaurentCoefficients_jAlgebra N
+      (Polynomial.aeval_mem_adjoin_singleton ℚ (jqNModC ℚ N))) ?_ h u hh0 hh hu hhu
+  simpa only [Finset.sum_range] using hm
+
+end
+end Dubon2026.SourceFricke

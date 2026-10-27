@@ -1,0 +1,55 @@
+{
+  "recordedUTC": "2026-10-27T00:04:29.925480+00:00",
+  "scope": 695,
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual finite Gamma1 Hecke-character realization -> actual Picard/H1, full/parabolic, transpose/diamond comparison retaining the homogeneous coefficient endomorphism -> actual differential/cusp comparison -> arbitrary cusp differential realization -> original integral-ratio field membership -> bounded denominators for rational Fourier cusp forms.",
+  "route": "Keep the original rational Laurent germ throughout. Native localization makes integer Laurent series normal. Clear the finite integer coefficient bounds in its monic relation, descend its actual bounded cyclotomic fraction by normalized coefficientwise trace, and apply Laurent normality. Cancel the original integral Eisenstein unit factors and discriminant powers to recover the original Fourier series.",
+  "reuseAssessment": "This avoids choosing separate nonnegative pole-clearing exponents for every polynomial coefficient, developing new Laurent convolutions for trace, or taking the product of all conjugate denominators. The native sum-of-automorphisms trace identity establishes rational Laurent multiplication compatibility. Existing literal integer j, eta unit and inverse, and original Fricke numerator proofs provide the exact generator data.",
+  "nativeEvidence": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\LaurentSeries.lean",
+      "sha256": "1FEEF96EECF138CBB40923D2484BEEBA0B9A7F45AB95E1F430765B14CAB74A06"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\IntegralClosure\\IntegrallyClosed.lean",
+      "sha256": "E1A768B0B75B47604EEBDFBCCEB773F09A7E64CF51D93B7D08C5AE33CDDBB0B5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\HahnSeries\\Basic.lean",
+      "sha256": "488F2AB72A76387D262079919580CF06DBBFFD0708AE1856C66A8A14E41D1E77"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\RingTheory\\Trace\\Basic.lean",
+      "sha256": "8067C9F3C463F5EEDA72AEB4A55298FBAEE4EAC91FFBCA837590A3C3346AE519"
+    }
+  ],
+  "localEvidence": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularJSeries.lean",
+      "sha256": "61B3362CFA3F485A72BD7C4392B1AA5DFE64159164D45BA8A61746CF1847CB12"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentIntegralDescent.lean",
+      "sha256": "B69E4811A4C90E8BE66BB986C98033C88638B749E90B21C0D5AC1693745412C6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFrickeCyclotomicLaurentLifts.lean",
+      "sha256": "EA7EC2AA1E7315EB96701F427AB65DB875DC7570357DCF20D08775CBBDA4F286"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\NumberFieldPositiveIntegralMultiple.lean",
+      "sha256": "8E4C1E2657F7D0865A2EA8B43B66E44C3782D84628C69A730AE1A4FE759E47EE"
+    }
+  ],
+  "sourceEntry": "The new SourceFrickeLaurentSpanDescent, SourceRationalCuspWeightLaurent and SourceRationalCuspWeightIntegrality derive original holomorphic Fricke membership and rational j-integrality from the actual Gamma1 cusp form and its rational Fourier series. Their proofs compiled cleanly again after exact frozen-source restoration.",
+  "derivedAlgebra": "SourceIntegralRationalLaurentSeries, SourceBoundedIntegralLaurentAlgebra, SourceBoundedRationalLaurentImage, SourceCyclotomicLaurentTrace, SourceBoundedRationalLaurentIntegral and SourceBoundedCyclotomicLaurentFraction have clean direct compilation. They remain unaudited development until their exact source consumer and exhaustive audits are assembled.",
+  "next": "Finish bounded fractions for the original Fricke generators and their actual intermediate field; combine them with the already proved source monic relation; cancel the original weight factors and obtain a literal integer Fourier series after one nonzero integer scaling.",
+  "deferredPowerSeriesOnlyRoute": [
+    "SourceIntegralRationalPowerSeries",
+    "SourceCyclotomicSeriesTrace",
+    "SourceBoundedCyclotomicFractionTrace",
+    "SourceBoundedRationalSeriesIntegral"
+  ],
+  "retainedPowerSeriesInputs": "The actual torsion/E4/E6 Fricke-numerator bounds, bounded power-series product and constant results, and rational-to-integer power-series image bridge remain useful to the original generators and final Fourier-series output.",
+  "namingCorrection": "Scope 694 new Laurent/function descent is SourceFrickeLaurentSpanDescent. The frozen SourceOriginalFrickeSpanDescent was restored to its exact original source and olean hashes; all 61 frozen module pairs in 10 receipts matched. See scratch-name-collision-restoration-verification-695.json; the canonical production source and assembled 8471 verification were unaffected.",
+  "status": "Route review; no new development module in this scope has been promoted or exhaustively audited. Full scope remains 16/20; DUB-17--20 OPEN. All-weight arithmetic association and every original gate remain required. No source repair, root pin, proof limit, or linter change."
+}
