@@ -1,0 +1,22 @@
+{
+  "recordedUTC": "2026-10-27T10:34:52.466016+00:00",
+  "reason": "The byte-identical research snapshot retains links relative to the paper root. Its archival copy must be plain text; the public root Markdown report remains unchanged with working links.",
+  "failure": {
+    "sessionExit": 1,
+    "stage": "Paper inventory, before Lean compilation",
+    "console": "E:\\Lean\\.tmp\\dubon83\\paper-verification-8586-console.log",
+    "consoleSha256": "5F92D80E70606E6BF2B900D483B60A49117426928511AFDCCB1DDC9D029337F9",
+    "exitFileAbsentReason": "PowerShell stopped on native stderr before writing the exit file."
+  },
+  "predecessorManifest": {
+    "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/archive-manifest.json",
+    "sha256": "FF3A7BF277ADC5850CDE093AD62C7F31C1D290F1F952466B02F5A8091D7307A9"
+  },
+  "relocation": {
+    "oldPath": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/Dubon Reuse Refresh 2026-10-27.md",
+    "newPath": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/Dubon Reuse Refresh 2026-10-27.md.txt",
+    "unchangedSha256": "0492A53D656A52E89B93B5EB506066901BAB9507AF71E81608B394B1A338C34D"
+  },
+  "sourceProofChanges": false,
+  "verification": "Fresh sequential foundation/paper successor required; no failed run is relabeled."
+}

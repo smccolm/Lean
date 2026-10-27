@@ -1,0 +1,101 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T12:33:39.225709+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneCuspPlaceLeftInvariance",
+    "SourceGammaOneCuspTranslations",
+    "SourceGammaOneCuspPlaceRightInvariance",
+    "SourceGammaOneRationalCuspPlace"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPlaceLeftInvariance.lean",
+      "sha256": "1C68770694D2B343CEB212D76126111F8904C2007660FE9DC7ADCF2951229A72",
+      "oleanSha256": "06BD2BE6EF704577756628970845B1D0EF82741D7BAE4EA257C1E6A1F87F166E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspTranslations.lean",
+      "sha256": "F3B6CD3942F3562321009C26FE0852916A28FFE85195B568DE70E323FED04BD6",
+      "oleanSha256": "DEE61BD9CAD01245A0D43DE5DDF90AE0FC3E7E6EDFA7F49FAA142246AA2D0A4F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPlaceRightInvariance.lean",
+      "sha256": "EC90049BCD900EAEBE9C3BBD4526CB34ED3F450E9ACFE137216F6331B451EE95",
+      "oleanSha256": "0E76BC3BE874E9182F7185D51064FB3111554ED586CEDB0D784F2BCB0E34E5BF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspPlace.lean",
+      "sha256": "B597E927040E52D4E131CD5C830460F4D7FFF24362F63D1E741122010955DD90",
+      "oleanSha256": "F8E122E77BC0506BF2ED12014E2F05817E9FCE54900B515C6D24101E7E7E08B2"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_mul_left_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_mul_left",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_mul_left",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspFunction_vadd_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_neg",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_neg",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_neg",
+    "Dubon2026.SourceFunctionField.GammaOne.translated_modular_T_zpow",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_mul_T_zpow_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_mul_T_zpow",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_mul_T_zpow",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_T_zpow_or_neg_of_lower_left",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_eq_of_same_rational_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_eq_of_rational_cusp_orbit"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_mul_left_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_mul_left",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_mul_left",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspFunction_vadd_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_neg",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_neg",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_neg",
+    "Dubon2026.SourceFunctionField.GammaOne.translated_modular_T_zpow",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_mul_T_zpow_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_mul_T_zpow",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_mul_T_zpow",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_T_zpow_or_neg_of_lower_left",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_eq_of_same_rational_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_eq_of_rational_cusp_orbit"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspOrbitInvarianceAudit1.log",
+  "logSha256": "D0BF6877D71A5C39D1D55D4698B2712590F79BEE16D0AAD1135C2EE1BDE5C3DD",
+  "auditSha256": "8219E1DA409691F6BDFBABF283B222ACEAD5ED438D5BB368162443E20E01FE19",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 21,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 20,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspOrbitInvarianceDependencyAudit1.log",
+  "dependencyAuditSha256": "319540E2B63F4D7D20E1EF343A3437F0D1D745CC3573F88B5863A8BAE7EFA21A",
+  "dependencyAuditSourceSha256": "39190FE7B433D2293D14E8693774F80E8505CDB601C982425BC78550846F293C",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_mul_left_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_mul_left",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_mul_left",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspFunction_vadd_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_neg",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_neg",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_neg",
+    "Dubon2026.SourceFunctionField.GammaOne.translated_modular_T_zpow",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_mul_T_zpow_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_mul_T_zpow",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_mul_T_zpow",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_T_zpow_or_neg_of_lower_left",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_eq_of_same_rational_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_eq_of_rational_cusp_orbit"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 and Abel-Jacobi -> real period surjectivity -> matching Manin/genus dimension bounds -> actual cusp-orbit/place comparison.",
+  "discharged": "Actual modular ratios and their translated cusp germs imply left subgroup invariance. Right integral translation rotates the cusp parameter by a nonzero scalar, preserving its meromorphic order and normalized valuation subring. The central sign fixes the upper half-plane. The existing integral cusp-stabilizer classification proves that the actual normalized place depends only on the rational cusp orbit; representative invariance is not assumed.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Exact widths and cusp-orbit/place bijection, the reverse dimension inequality, real period surjectivity, reciprocity, Picard/Hecke/diamond/H1 comparisons, full all-weight characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-orbit-invariance-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "D69E7A727E4B00DD3DB0CA71F7FF61BBC64DEFF3330E2580E3F3EAEEBF825AD7",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

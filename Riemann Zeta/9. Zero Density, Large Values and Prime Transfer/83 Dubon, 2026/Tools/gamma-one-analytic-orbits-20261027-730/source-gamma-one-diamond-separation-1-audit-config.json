@@ -1,0 +1,38 @@
+{
+  "modules": [
+    "SourceGammaOneDiamondSeparation"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_cross_products",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_separating_forms_of_gamma0_orbit"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_cross_products",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_separating_forms_of_gamma0_orbit"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_cross_products",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_separating_forms_of_gamma0_orbit",
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm",
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm_slash_gamma0",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_power",
+    "Dubon2026.SourceFunctionField.ModularNormPolynomial.restrict",
+    "Dubon2026.SourceEllipticPeriod.gTwo_ofTau",
+    "Dubon2026.SourceEllipticPeriod.gThree_ofTau",
+    "ModularForm.pow"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_separating_forms_of_gamma0_orbit"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneDiamondSeparation",
+    "SourceGammaOneDivisionForms",
+    "SourceGammaOneDivisionLatticeOrbit",
+    "SourceGammaOneDivisionPowerOrbit",
+    "SourcePeriodDivisionRotations"
+  ],
+  "separateReason": "The actual separating forms consume all selected division-form and division-power theorems. The remaining non-Gamma0-related case is separate."
+}

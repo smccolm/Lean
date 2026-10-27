@@ -1,0 +1,56 @@
+{
+  "status": "Prepared; require 8522 canonical PASS and archive before integration.",
+  "route": "gamma-one-regular-cusp-promotion-route-704.json",
+  "routeSha256": "D0E4F13B72692CB7ADF1EEACC25080BA7F835FC6CEBA5D52BB158EDD84EBB4E6",
+  "modules": 26,
+  "queries": 80,
+  "theorems": 69,
+  "constructions": 11,
+  "exhaustiveScratchChecks": 132,
+  "proofValueEdges": 116,
+  "scopes": 4,
+  "receipts": {
+    "source-gamma-one-local-holomorphy-12-scratch-receipt.json": "FA3FD70DE720E7EE3293CDC2A682101E803B4903C25540687D4B8DEC4C1DF38F",
+    "source-gamma-one-cusp-vanishing-10-scratch-receipt.json": "FB9076F6E4AB51929ED0D62B4B587B1957ED227357C5DAA8668716744DF1AE4E",
+    "source-gamma-one-fourier-converse-2-scratch-receipt.json": "3502062B579879A237F3DA6B6E8043899B99BF8F18357E6FB37251CC611C7811",
+    "source-gamma-one-linear-comparison-2-scratch-receipt.json": "5A715A3A21FD94D009218A675A76EA77F6304041FC2FBDB8D2DB24AD94265F50"
+  },
+  "expectedConsumers": 24719,
+  "expectedConstructions": 2456,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_regular_cusp_8548.py",
+      "sha256": "EC18C14882D8E85A79231A08FAAEEB95EB3DEDEBE32749F5985076D7AFF58111"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_regular_cusp_production_ownership_8548.py",
+      "sha256": "F2887F52759F9E3F122C67C91DAFF657E5F815E125580BE8EC70A18C19204D00"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_regular_cusp_global_ownership_8548.py",
+      "sha256": "305CAA7C5E300A3C2CB066F0C4B1BECEEB31C532E263C05A3B6D6C10280186C0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_regular_cusp_ownership_8548.py",
+      "sha256": "1302659C536CFF0982445AFA6C19D38A5624A632E76CBFAB09EBD6441BD46E20"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_regular_cusp_8548.py",
+      "sha256": "64B6F5DF06A012F01CF8F10A3316BF1A16EAB1B0F69D0E2DEBBC360429629C41"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_regular_cusp_8548.ps1",
+      "sha256": "76D7B681331E1DB510DB274C426C93152881E024A69A2616BD87C1F26F190C6F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_regular_cusp_8548.ps1",
+      "sha256": "81AFB5B9B4418C1A50CF17FC8184FEEB2B15AE1B9C121C08AD2F0CB53CEC15B0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_regular_cusp_canonical_8548.py",
+      "sha256": "A15C7637FFC22B314CBADC2D2BFE7C4114CB5F1966747DC32CA3A3513E571800"
+    }
+  ],
+  "productionMutation": false
+}

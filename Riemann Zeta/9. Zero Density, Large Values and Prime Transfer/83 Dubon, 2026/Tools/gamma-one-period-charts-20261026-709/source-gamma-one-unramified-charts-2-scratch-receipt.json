@@ -1,0 +1,62 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T04:53:20.958425+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneRamificationIsolation",
+    "SourceGammaOneUnramifiedCharts"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationIsolation.lean",
+      "sha256": "A1F085755635E701182808EBFD7DBBEFA22EC33D2F2BE7A26F245E320EF1FF5F",
+      "oleanSha256": "4364B7042869F67CDEA52EC367593FBAD041E47A0DE26766449BFFDE9A25F777"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedCharts.lean",
+      "sha256": "56A482DEBD1D81279BEC5EE05493C7B2D670CAF6E89279C08262AFA4A4CEE725",
+      "oleanSha256": "52CD5D8A39808800D70D23852DB6D33BD0097915E0C28E502E6753AFCEB65BF1"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_dvd_full_stabilizer_half",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eq_one_of_generic",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eventually_one",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_unramified_analytic_chart",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_generic_analytic_chart"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_dvd_full_stabilizer_half",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eq_one_of_generic",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eventually_one",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_unramified_analytic_chart",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_generic_analytic_chart"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedChartsAudit2.log",
+  "logSha256": "6428D23D183B1CEF435BA0104472059294187C83306F90A50C0029B01DBC31C3",
+  "auditSha256": "91E50B5063B6247828637D5F6B467C6DC228D79BB25FF20C3FEC9077A72FBF6F",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 6,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 12,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedChartsDependencyAudit2.log",
+  "dependencyAuditSha256": "FF42E92245397E635E855747BC3DAD6FCB8CDF91290FCB99EA6BE46C3F311A0F",
+  "dependencyAuditSourceSha256": "4EF58034F87A7166A97573DF82F5DB9CEEA908F75E370EB86CA30BD480247B98",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_generic_analytic_chart"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> arithmetic automorphy and original all-weight characteristic-zero association -> realization of original finite Gamma1 Hecke characters -> Picard/H1 and full/parabolic transpose/diamond comparison -> actual global Gamma1 place charts and period comparison -> normalized local charts at unramified analytic places.",
+  "discharged": [
+    "One common neighborhood has normalized orders for every actual field element around any unramified analytic center.",
+    "Actual residue evaluation of the original uniformizer supplies an injective local chart, with no assumed parameter family or order model.",
+    "The unramified hypothesis is derived at every center with E4 and E6 nonzero."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Elliptic-center ramified descent, finite/cusp place exhaustion and global charts remain, followed by actual period, Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight characteristic-zero association, arithmetic automorphy and higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-unramified-charts-2-reuse-review-20261026.json",
+  "reuseReviewSha256": "6CC4D773231181921AC53E0E832742C6703EA8623D003BDCAC6E36C2E180BABB",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,13 @@
+### Canonical rational finite-adele approximation — 7 October 2026
+
+The actual pinned `IsDedekindDomain.FiniteAdeleRing ℤ ℚ` and its canonical rational algebra map are used throughout. No parallel restricted-product model is introduced.
+
+| Module | Kernel-checked mathematical content |
+| --- | --- |
+| [CanonicalAdicIntegralDensity](Extension/Dubon2026/CanonicalAdicIntegralDensity.lean) | Pinned continuous local algebra equivalences transport actual integral SL2 density to the canonical product of adic integer groups. Extracting the upper unipotent entry proves density of the integer diagonal in the canonical integral product. |
+| [RationalFiniteAdeleDensity](Extension/Dubon2026/RationalFiniteAdeleDensity.lean) | The integral product embeds continuously into the actual finite adele ring. One nonzero global integer clears every coordinate denominator. Closure of the actual rational diagonal is the whole adele ring. |
+| [RingSL2Elementary](Extension/Dubon2026/RingSL2Elementary.lean) | Actual continuous upper/lower elementary matrices, exact unit diagonal decomposition, and Gaussian elimination over a commutative ring at a genuine unit pivot. |
+| [FiniteAdeleUnitPivot](Extension/Dubon2026/FiniteAdeleUnitPivot.lean) | An actual adelic zero-or-one row parameter produces a unit pivot in every original determinant-one matrix; the proof uses local valuations and the original determinant identity. Consequently upper/lower elementary matrices generate the actual finite adelic group. |
+| [RationalSL2FiniteAdeleDensity](Extension/Dubon2026/RationalSL2FiniteAdeleDensity.lean) | Rational elementary matrices map exactly to their original adelic counterparts. Additive rational density and the actual generated-group theorem prove `rationalSL2_dense_finiteAdeles`; `rationalSL2_finiteAdeles_open_subgroup_factorization` gives the exact rational-times-open-subgroup decomposition. |
+
+The source consumers use the actual canonical local groups, rational adele algebra map and literal original determinant-one matrix. The subgroup factorization accepts an arbitrary genuinely open subgroup and derives the rational matrix and subgroup witness; openness of the specific level subgroup and its exact classical intersection are still to be supplied. These approximation results do not by themselves construct an adelic cuspidal representation, prove irreducibility or supply Newton–Thorne higher continuation. DUB-17–20 remain OPEN.

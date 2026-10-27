@@ -1,0 +1,73 @@
+import Dubon2026.SourceGammaOneCuspPlaces
+import Dubon2026.SourceGammaOneCuspDerivativeOrder
+import Dubon2026.SourceGammaOneDifferentialCuspGerm
+import Dubon2026.SourceCuspVanishingOrder
+
+/-! DUB-17/18 -> actual Gamma1 differential/cusp comparison -> all-cusp
+vanishing. Regularity gives ord(x) >= 1-ord(j) at the actual cusp place.
+The derivative has the same cusp pole order as j, so the slash realization
+has positive cusp order and therefore tends to zero. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane Filter ModularForm SourceCurve KaehlerDifferential
+open scoped MatrixGroups ModularForm Topology Manifold
+variable {Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)} [Γ.FiniteIndex]
+
+private local instance originalFieldAlgebra : Algebra ℂ (functionFieldOver Γ ℂ) :=
+  (functionFieldOver Γ ℂ).toSubalgebra.algebra
+
+theorem regular_differential_cusp_order_pos (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) (hT : ModularGroup.T ∈ Γ)
+    (x : functionFieldOver Γ ℂ) (hx : x ≠ 0)
+    (hreg : x • D ℂ (functionFieldOver Γ ℂ) (jCoordinateOver Γ ℂ) ∈
+      regularDifferentials ℂ (functionFieldOver Γ ℂ))
+    {k : ℤ} (g h : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) k) (hh : h ≠ 0)
+    (hr : (x : LaurentSeries ℂ) * ModularRatios.qL h = ModularRatios.qL g)
+    (F : ℍ → ℂ)
+    (he : ∀ τ, F τ * h τ = g τ * deriv (JMultiplicity.jf ∘ ofComplex) (τ : ℂ))
+    (γ : SL(2, ℤ)) : 0 < meromorphicOrderAt (cuspFunction N (F ∣[(2 : ℤ)] γ)) 0 := by
+  have hj0 : jCoordinateOver Γ ℂ ≠ 0 := by
+    intro hz
+    exact transcendental_jCoordinateOver Γ ℂ (hz ▸ isAlgebraic_zero)
+  have hc : (cuspPlace N hΓ hT γ).ord
+      (jCoordinateOver Γ ℂ - algebraMap ℂ (functionFieldOver Γ ℂ) 0) ≠ 0 := by
+    simpa only [map_zero, sub_zero] using (cuspPlace_j_neg N hΓ hT γ).ne
+  have hb := regular_coefficient_order_bound hT x hx hreg (cuspPlace N hΓ hT γ) 0 hc
+  simp only [map_zero, sub_zero] at hb
+  obtain ⟨hm, ho⟩ := cusp_raw_j_derivative_order N hT γ
+  rw [meromorphicOrderAt_congr (differential_cusp_germ N hΓ hT g h hh x hr F he γ),
+    meromorphicOrderAt_mul (meromorphicAt_cuspRealize N hΓ hT x γ) hm, ho]
+  change 0 < cuspOrder Γ N γ x + cuspOrder Γ N γ (jCoordinateOver Γ ℂ)
+  rw [cuspPlace_order N hΓ hT γ x hx, cuspPlace_order N hΓ hT γ _ hj0,
+    ← WithTop.coe_add, ← WithTop.coe_zero, WithTop.coe_lt_coe]
+  have hp : (0 : ℤ) < cuspRamification N hΓ hT γ := by
+    exact_mod_cast cuspRamification_pos N hΓ hT γ
+  nlinarith [mul_nonneg (le_of_lt hp) (sub_nonneg.mpr hb)]
+
+theorem regular_differential_cusp_decay (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) (hT : ModularGroup.T ∈ Γ)
+    (x : functionFieldOver Γ ℂ) (hx : x ≠ 0)
+    (hreg : x • D ℂ (functionFieldOver Γ ℂ) (jCoordinateOver Γ ℂ) ∈
+      regularDifferentials ℂ (functionFieldOver Γ ℂ))
+    {k : ℤ} (g h : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) k) (hh : h ≠ 0)
+    (hr : (x : LaurentSeries ℂ) * ModularRatios.qL h = ModularRatios.qL g)
+    (F : ℍ → ℂ) (hF : MDiff F)
+    (he : ∀ τ, F τ * h τ = g τ * deriv (JMultiplicity.jf ∘ ofComplex) (τ : ℂ))
+    (hs : ∀ γ ∈ Γ, F ∣[(2 : ℤ)] (γ : SL(2, ℤ)) = F) (γ : SL(2, ℤ)) :
+    IsZeroAtImInfty (F ∣[(2 : ℤ)] γ) := by
+  let f : SlashInvariantForm (Γ : Subgroup (GL (Fin 2) ℝ)) 2 :=
+    { toFun := F
+      slash_action_eq' := by
+        intro δ hδ
+        obtain ⟨δ', hδ', rfl⟩ := hδ
+        exact hs δ' hδ' }
+  have hp : Function.Periodic ((F ∣[(2 : ℤ)] γ) ∘ ofComplex) N :=
+    SlashInvariantFormClass.periodic_comp_ofComplex
+      (SlashInvariantForm.translate f (γ : GL (Fin 2) ℝ))
+      (CuspAuxiliary.natCast_mem_strictPeriods_conj N hΓ γ)
+  exact (SourceFricke.isZeroAtImInfty_iff_cusp_order_pos
+    (by exact_mod_cast NeZero.pos N) (hF.slash 2 (γ : GL (Fin 2) ℝ)) hp).mpr
+      (regular_differential_cusp_order_pos N hΓ hT x hx hreg g h hh hr F he γ)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

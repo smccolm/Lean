@@ -1,0 +1,38 @@
+{
+  "modules": [
+    "SourceGammaOneExactRamification"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.sum_analytic_fiber_orders_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.two_mul_ramification_eq_stabilizer_card"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.sum_analytic_fiber_orders_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.two_mul_ramification_eq_stabilizer_card"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.sum_analytic_fiber_orders_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.two_mul_ramification_eq_stabilizer_card",
+    "Dubon2026.SourceFunctionField.GammaOne.sum_j_fiber_orders_eq_finrank",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.exists_fiber_order_sum_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_relative_indices_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_j_order_le_relative_index",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_smul_of_mem"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.sum_analytic_fiber_orders_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.two_mul_ramification_eq_stabilizer_card"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneExactRamification"
+  ],
+  "separateReason": "Exact ramification at every actual Gamma1 analytic point follows from actual fixed-degree and generic fiber sums, termwise order bounds and actual place invariance. All nonzero levels are retained."
+}

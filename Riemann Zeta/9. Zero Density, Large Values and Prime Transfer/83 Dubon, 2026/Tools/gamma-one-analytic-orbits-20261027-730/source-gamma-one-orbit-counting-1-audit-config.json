@@ -1,0 +1,43 @@
+{
+  "modules": [
+    "SourceGammaOneOrbitCounting"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.card_stabilizer_subgroup",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_smul_of_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_mul_card_stabilizer",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finite_orbitRelQuotient_orbit",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.exists_smul_out_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finsum_relIndex_stabilizer_eq_index"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.card_stabilizer_subgroup",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_smul_of_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_mul_card_stabilizer",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finite_orbitRelQuotient_orbit",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.exists_smul_out_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finsum_relIndex_stabilizer_eq_index"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.card_stabilizer_subgroup",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_smul_of_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_mul_card_stabilizer",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finite_orbitRelQuotient_orbit",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.exists_smul_out_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finsum_relIndex_stabilizer_eq_index"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.card_stabilizer_subgroup",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_smul_of_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_mul_card_stabilizer",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finite_orbitRelQuotient_orbit",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.exists_smul_out_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finsum_relIndex_stabilizer_eq_index"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneOrbitCounting"
+  ],
+  "separateReason": "weighted subgroup orbit indices equal to the finite subgroup index, with actual quotient fibers and stabilizer cardinalities. No ramification or field degree is assumed."
+}

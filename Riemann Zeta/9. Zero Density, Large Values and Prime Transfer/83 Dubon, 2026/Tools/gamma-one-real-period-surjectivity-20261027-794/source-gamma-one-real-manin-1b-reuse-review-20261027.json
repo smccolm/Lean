@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-27 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 and Abel-Jacobi -> real period surjectivity -> reverse dimension inequality -> actual real Manin bound.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-manin-audit-route-781.json",
+    "sha256": "CDA0DF2EE6A0F9EAEFF632293B07F0E0B92F9764C6DB74B3AA89265C29974119",
+    "review": {
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 and Abel-Jacobi -> real period surjectivity -> reverse dimension inequality -> actual real Manin bound.",
+      "assumptionsToDischarge": "Actual real parabolic characters and rational cusp potentials satisfy the two and three term relations. Adding the value at infinity gives an injective map into the existing finite Manin relation space. Native finite H1 and finite cusp orbits supply finiteness. The unchanged generic relation-space theorem proves six times the real parabolic dimension plus six times the rational cusp count and the weighted elliptic fixed-point counts is at most twelve plus the subgroup index. The central-sign hypothesis is explicit for application to the signed Gamma1 subgroup.",
+      "remaining": "Match rational cusp orbits with the proved algebraic cusp bijection and assemble the actual Hurwitz/genus inequality using finite fibers. Real period surjectivity, reciprocity, Picard/Hecke/diamond/H1, full all-weight characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceManinCuspStabilizer.lean",
+          "sha256": "E68170E419FE460979D6F25532A3F5E19709949982C5C5E7C1ABA8BD00E7E051"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceManinCuspPotential.lean",
+          "sha256": "CB23D64550CCD15D04AD0513503FE1E3ACB8FEB0ADC07339F8E2A767ABE1C6E4"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceManinParabolicDimension.lean",
+          "sha256": "0F4A31AE4E32B165BF8755BC2600B39505E613DA347F217DC26F0C8C12539E1E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceManinRelationDimension.lean",
+          "sha256": "0CCFE3E71744504435942048A466C2C13B24BC4A314B60AA8FCF5A3CD7099073"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-manin-route-775.json",
+          "sha256": "2857608FDFDE5187BAB2BBF3DB4A1FC514590B541AC6C94D5379C0AEF93F93B7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-signed-parabolic-1-scratch-receipt.json",
+          "sha256": "6D3C3243B5FD1B7FCFB20C70D5EDC3F238BB40A9DFD80FB8B070C471320B2EAF"
+        }
+      ],
+      "shorterRoute": "Adapt only the coefficient and subgroup interfaces of the existing cusp potential and Manin comparison. Reuse the generic relation-space theorem unchanged; no separate homology presentation or full character isomorphism is needed."
+    }
+  },
+  "discharged": "Actual real parabolic characters and rational cusp potentials satisfy the two and three term relations. Adding the value at infinity gives an injective map into the existing finite Manin relation space. Native finite H1 and finite cusp orbits supply finiteness. The unchanged generic relation-space theorem proves six times the real parabolic dimension plus six times the rational cusp count and the weighted elliptic fixed-point counts is at most twelve plus the subgroup index. The central-sign hypothesis is explicit for application to the signed Gamma1 subgroup.",
+  "remaining": "Match rational cusp orbits with the proved algebraic cusp bijection and assemble the actual Hurwitz/genus inequality using finite fibers. Real period surjectivity, reciprocity, Picard/Hecke/diamond/H1, full all-weight characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

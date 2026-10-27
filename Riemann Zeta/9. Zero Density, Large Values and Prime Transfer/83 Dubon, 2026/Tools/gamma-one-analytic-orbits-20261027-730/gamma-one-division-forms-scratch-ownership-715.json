@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "theorems": 9,
+  "modules": 1,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionFormsScratchOwnership715.log",
+  "logSha256": "97B5EAA425B73686071B3F2266040838EC5D959306384AF7003BD0B63C443D9B",
+  "sourceSha256": "24C7D995DA8FC94A71A48EDDB76976FB482DA1A082BEFD0EF276D719A7738C48",
+  "owners": [
+    {
+      "module": "SourceGammaOneDivisionForms",
+      "name": "Dubon2026.SourceFricke.frickeTorsionPt.eq_1"
+    },
+    {
+      "module": "SourceGammaOneDivisionForms",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.divisionForm_slash_gamma0"
+    },
+    {
+      "module": "SourceGammaOneDivisionForms",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.divisionForm_apply"
+    },
+    {
+      "module": "SourceGammaOneDivisionForms",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.wpNormZ_slash_eq"
+    },
+    {
+      "module": "SourceGammaOneDivisionForms",
+      "name": "_private.SourceGammaOneDivisionForms.0.Dubon2026.SourceFunctionField.GammaOne.division_index_fixed"
+    },
+    {
+      "module": "SourceGammaOneDivisionForms",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.divisionForm._proof_3"
+    },
+    {
+      "module": "SourceGammaOneDivisionForms",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.divisionForm._proof_1"
+    },
+    {
+      "module": "SourceGammaOneDivisionForms",
+      "name": "_private.SourceGammaOneDivisionForms.0.Dubon2026.SourceFunctionField.GammaOne.division_index_ne_zero"
+    },
+    {
+      "module": "SourceGammaOneDivisionForms",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.divisionForm._proof_2"
+    }
+  ]
+}

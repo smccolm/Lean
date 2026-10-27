@@ -1,0 +1,107 @@
+{
+  "dependency": "DUB-17/18 -> original all-weight arithmetic association -> finite Gamma1 character realization -> actual Picard/H1/period/Hecke/diamond comparison -> global charts -> orbit separation and exact elliptic ramification.",
+  "externalScope": "Three selected pinned source files read in full, verified against Git tree blobs; no full closure build or foreign import. Source W-form file contains linter suppressions: none are copied.",
+  "external": [
+    {
+      "path": "P2M/Sol/S_ModularForm_exists_gammaH_apply_mul_apply_ne_of_forall_smul_ne_of_gamma0_smul_eq.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-separation-reuse-712\\S_ModularForm_exists_gammaH_apply_mul_apply_ne_of_forall_smul_ne_of_gamma0_smul_eq.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularForm_exists_gammaH_apply_mul_apply_ne_of_forall_smul_ne_of_gamma0_smul_eq.lean",
+      "bytes": 11764,
+      "gitBlob": "8917d2b4a8072a1211fb8abded3efe9d70cd9301",
+      "sha256": "83B79491C2FD0850D871C9120D71C7A89586095612790CBB060060E5E6144139"
+    },
+    {
+      "path": "P2M/Sol/S_CohCarrier_exists_mem_GammaH_smul_eq_of_forall_sum_weierstrassP_pow_eq.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-separation-reuse-712\\S_CohCarrier_exists_mem_GammaH_smul_eq_of_forall_sum_weierstrassP_pow_eq.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CohCarrier_exists_mem_GammaH_smul_eq_of_forall_sum_weierstrassP_pow_eq.lean",
+      "bytes": 16186,
+      "gitBlob": "f63450c7d4fd41b72510d1fac3f1692e34b90003",
+      "sha256": "E6257ED979B4C03CCE0122321214E1AE0C57DE2F0C21D59B4ABCD1388DAC04F2"
+    },
+    {
+      "path": "P2M/Sol/S_PeriodPair_exists_gamma1_two_eq_weierstrassP_and_slash_and_qExpansion_coeff.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-separation-reuse-712\\S_PeriodPair_exists_gamma1_two_eq_weierstrassP_and_slash_and_qExpansion_coeff.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_PeriodPair_exists_gamma1_two_eq_weierstrassP_and_slash_and_qExpansion_coeff.lean",
+      "bytes": 14638,
+      "gitBlob": "ab7621b5bf119d62eccf93f2715f2e8a8c8154a8",
+      "sha256": "6637C99D89452D243C2D8CD39A70CF6F1379B460033160146B29B3EB9D3197CB"
+    }
+  ],
+  "localReviewed": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFrickeSeparation.lean",
+      "sha256": "52FB01BBF2ABAEFC07D78086DD58D679531F2EA72D022DAB1A00BA885E712C09"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFrickeTorsionLattice.lean",
+      "sha256": "B6AAA590AB5F993D67EEB755FD2804D14067E18F55C2D79C1440461CA42AEF46"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFrickeTorsionTransformationV2.lean",
+      "sha256": "5EB63E4BD0B9C2572F2ACF484AD0810E789D537EAE58CCFDDCCE261C58DEDFD0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFrickeFunctionTransformationV2.lean",
+      "sha256": "89F3BFBF1137F5B6F75FC355B05F3A5306B1272691D0F1A8F5E2123166B492F3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFrickeHolomorphy.lean",
+      "sha256": "0F95E4A11784515A023DC6EE8D9ED9B4CD06E7588978A60314A96B2AFB9497D5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFrickeCuspInputs.lean",
+      "sha256": "E9F3101E3DFD98914AE371D59334511F11519CC92593A67F801F216D6E4B4F69"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeierstrassNormalizedTorsion.lean",
+      "sha256": "E00F0A22EC9E0E9A61E9F83E9376A0D68C2F83ACC9B1AA8D79082C8D012CBF29"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePeriodWeierstrassSeparation.lean",
+      "sha256": "76DA0CFB2C6EB9B014445AB42B0110A30A52B50625A58622AF219DF835B12238"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePeriodPairScaling.lean",
+      "sha256": "8F098E22A5DC87B82C8F2B109B9725D8A6C0A25710AA7BBD942A2E55CD32CF8D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePeriodEisensteinInvariants.lean",
+      "sha256": "1F2A8C5B14F65BA39F9B95EC20AA68C365EEF6B18CB063A0CD2EFFC23F35EF64"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePeriodLatticeInvariants.lean",
+      "sha256": "4A8B7833FF63F4E658DA89EC079CE98558A7BBDA25AA4C9BB93E43955DCACCD8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticOrbitSeparation.lean",
+      "sha256": "24DB6E31935E6C020ABAA64AF27B6E9985FC0C05CAA91F8FA24BE422B4887D45"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalOrbitFiberBijection.lean",
+      "sha256": "218D37893939CD2EC11F783453398FD427B5D6880CB1DE00DB0D53808004B873"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCosetOrbitOrder.lean",
+      "sha256": "B2176AAD6247B9765F43675B766C35F89D35DA681DC7B8A887B88DC6E74FA3B2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticRamification.lean",
+      "sha256": "F07F113D3C4F54F9306B17C3F0E994C54CC8FF9147D0F8ADDEDE191E6935679C"
+    }
+  ],
+  "readScope": "Local short modules read fully; SourcePeriodLatticeInvariants first 130 and final 58 lines and declaration list; SourceOriginalOrbitFiberBijection and SourceOriginalCosetOrbitOrder read fully.",
+  "reuseAssessment": [
+    "Actual normalized torsion Weierstrass functions, modular transformation, holomorphy and cusp bounds already exist; use these to build the required native weight-two Gamma1 forms. The external detailed width-one coefficient formula is incidental to point separation and is deferred.",
+    "For Gamma1, the subgroup H is trivial. The external general H power-sum and multiset reconstruction is unnecessary: direct division-value power comparison suffices. All elliptic cases and levels must still be covered.",
+    "The existing lattice-invariant uniqueness, exact period scaling and Weierstrass value separation replace their external dependencies. A complex square root of y/x should give the required unit rotation uniformly for powers 1, 2 and 3; this shorter route is to be kernel-checked.",
+    "The local Gamma0 orbit/fiber bijection assumes its already-proved exact ramification formula. It cannot simply supply the Gamma1 formula, and finite field dimension alone does not prove the necessary exact degree or orbit separation."
+  ],
+  "nextProofs": [
+    "Actual subgroup place invariance and stabilizer divisibility (scope713).",
+    "Unit rotations from equal division-value powers using existing lattice invariants (scope714).",
+    "Actual Gamma1 division forms, division-point orbit separation and their concrete place-map consumer."
+  ],
+  "remaining": "Reverse elliptic ramification, full orbit separation and global chart/period/Hecke/diamond/Picard/H1 arithmetic comparison remain. Full all-weight arithmetic association and higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,45 @@
+{
+  "modules": [
+    "SourceGammaOneInvariantRealPart",
+    "SourceGammaOneRealPeriodInjectivity"
+  ],
+  "theorems": [
+    "Dubon2026.sourceGamma1_exists_tile_translate",
+    "Dubon2026.sourceGamma1_realPart_constant",
+    "Dubon2026.sourceGamma1_eq_zero_of_real_periods_zero",
+    "Dubon2026.sourceGamma1_real_periods_injective"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.sourceGamma1_exists_tile_translate",
+    "Dubon2026.sourceGamma1_realPart_constant",
+    "Dubon2026.sourceGamma1_eq_zero_of_real_periods_zero",
+    "Dubon2026.sourceGamma1_real_periods_injective"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceGamma1_exists_tile_translate",
+    "Dubon2026.sourceGamma1_realPart_constant",
+    "Dubon2026.sourceGamma1_eq_zero_of_real_periods_zero",
+    "Dubon2026.sourceGamma1_real_periods_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.conj_T_pow_mem",
+    "Dubon2026.sourceUpperHalfPlane_re_eq_of_cusp_max",
+    "Dubon2026.sourceHolomorphic_re_eq_of_isMaxOn",
+    "Dubon2026.sourceHasDerivAt_comp_smul",
+    "Dubon2026.sourceWeightTwoPrimitive_period",
+    "Dubon2026.sourceWeightTwoPrimitive_hasDerivAt",
+    "Dubon2026.sourceWeightTwoPrimitive_exists_cusp_limit",
+    "Dubon2026.sourceHolomorphic_re_zero_deriv"
+  ],
+  "roots": [
+    "Dubon2026.sourceGamma1_exists_tile_translate",
+    "Dubon2026.sourceGamma1_realPart_constant",
+    "Dubon2026.sourceGamma1_eq_zero_of_real_periods_zero",
+    "Dubon2026.sourceGamma1_real_periods_injective"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneInvariantRealPart",
+    "SourceGammaOneRealPeriodInjectivity"
+  ],
+  "separateReason": "Actual Gamma1 real periods determine the cusp form. Surjectivity and reciprocity remain separate obligations."
+}

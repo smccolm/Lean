@@ -1,0 +1,65 @@
+{
+  "modules": [
+    "SourceGammaOneGenericFiberCount"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_relative_indices_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.exists_fiber_order_sum_eq_index"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_relative_indices_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.exists_fiber_order_sum_eq_index"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_relative_indices_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.exists_fiber_order_sum_eq_index",
+    "Dubon2026.SourceFunctionField.JMultiplicity.jf_surjective",
+    "Dubon2026.SourceFunctionField.JMultiplicity.case_generic",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_j_order_le_relative_index",
+    "Dubon2026.SourceFunctionField.GammaOne.two_le_card_stabilizer_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finsum_relIndex_stabilizer_eq_index"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_relative_indices_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.exists_fiber_order_sum_eq_index"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneAllModularRatioMembership",
+    "SourceGammaOneAnalyticGerms",
+    "SourceGammaOneAnalyticIntegrality",
+    "SourceGammaOneAnalyticJOrders",
+    "SourceGammaOneAnalyticOrder",
+    "SourceGammaOneAnalyticOrderNontrivial",
+    "SourceGammaOneAnalyticPlaceInvariance",
+    "SourceGammaOneAnalyticPlaceOrbits",
+    "SourceGammaOneAnalyticPlaces",
+    "SourceGammaOneAnalyticResidues",
+    "SourceGammaOneDiamondSeparation",
+    "SourceGammaOneDivisionForms",
+    "SourceGammaOneDivisionLatticeOrbit",
+    "SourceGammaOneDivisionPowerOrbit",
+    "SourceGammaOneFinitePlaceExhaustion",
+    "SourceGammaOneGenericFiberCount",
+    "SourceGammaOneHolomorphicFunctions",
+    "SourceGammaOneJFiberOrbits",
+    "SourceGammaOneJRealization",
+    "SourceGammaOneMeromorphicRealization",
+    "SourceGammaOneModularPointSeparation",
+    "SourceGammaOneNormalizedCuspRatios",
+    "SourceGammaOneOrbitCounting",
+    "SourceGammaOnePlusMinus",
+    "SourceGammaOneQuotientCuspSeries",
+    "SourceGammaOneRamificationBounds",
+    "SourceGammaOneRamificationIsolation",
+    "SourceGammaOneRatioRealization",
+    "SourceGammaOneRealizationAlgebra",
+    "SourceGammaOneStabilizerRamification",
+    "SourceGammaOneTranslatedCuspGerms",
+    "SourceOriginalModularPointSeparation",
+    "SourcePeriodDivisionRotations"
+  ],
+  "separateReason": "A genuine generic j fiber has total positive order equal to the subgroup index, using actual j-surjectivity, exact orbit-fiber comparison and the termwise ramification bound."
+}

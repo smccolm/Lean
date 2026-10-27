@@ -1,0 +1,18 @@
+{
+  "exit": 1,
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761b\\SourceGammaOneCuspPlaceRightInvariance.lean.txt",
+      "sha256": "603e058ae2de4eac1d6956f09fddc77ed1efc1c0ab1614a3cd0557d634ac1ef3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761b\\SourceGammaOneCuspPlaceRightInvariance.log",
+      "sha256": "98b63d128b45c07ee5c8c4cd371b5aa9c314373c2f8f351f22b3002b138f2d42"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761b\\SourceGammaOneCuspPlaceRightInvariance.exit",
+      "sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04"
+    }
+  ],
+  "cause": "Toolchain launcher environment absent: ELAN_HOME. Lean did not run; source unchanged."
+}

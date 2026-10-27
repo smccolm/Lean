@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "theorems": 6,
+  "modules": 1,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodDivisionRotationsScratchOwnership714.log",
+  "logSha256": "71EAC8213ED56215B3DEDD73A08FC88856B33AD475A76E81E6F2115501EE96C8",
+  "sourceSha256": "A360F947EDE43EFF8F72A5F845ACD943D268C5EE10CC3217C9A4E79078606A5D",
+  "owners": [
+    {
+      "module": "SourcePeriodDivisionRotations",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.DivisionRotations.exists_rotation_of_division_power._proof_1_1"
+    },
+    {
+      "module": "SourcePeriodDivisionRotations",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.DivisionRotations.exists_rotation_of_division_power._proof_1_3"
+    },
+    {
+      "module": "SourcePeriodDivisionRotations",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.DivisionRotations.exists_rotation_of_division_power._proof_1_4"
+    },
+    {
+      "module": "SourcePeriodDivisionRotations",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.DivisionRotations.exists_rotation_of_division_power._proof_1_2"
+    },
+    {
+      "module": "SourcePeriodDivisionRotations",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.DivisionRotations.scale_lattice_eq_of_invariant_powers"
+    },
+    {
+      "module": "SourcePeriodDivisionRotations",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.DivisionRotations.exists_rotation_of_division_power"
+    }
+  ]
+}

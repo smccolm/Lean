@@ -1,0 +1,23 @@
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem real_projective_hilbert_embedding_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k) :
+    Function.Injective (realProjectiveHilbertEmbedding f) ∧
+    DenseRange (realProjectiveHilbertEmbedding f) ∧
+    ∀ (a : PSL(2, ℝ)) (v : (realLiftCyclicRepresentation k f).toSubmodule),
+      realProjectiveHilbertRepresentation f a (realProjectiveHilbertEmbedding f v) =
+        realProjectiveHilbertEmbedding f (realProjectiveCyclicRepresentation f a v) :=
+  ⟨realProjectiveHilbertEmbedding_injective f, realProjectiveHilbertEmbedding_dense f,
+    realProjectiveHilbertEmbedding_intertwines f⟩
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem real_projective_hilbert_unitary_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k) :
+    (∀ v : RealProjectiveHilbert f,
+      Continuous (fun a : PSL(2, ℝ) => realProjectiveHilbertRepresentation f a v)) ∧
+    ∀ (a : PSL(2, ℝ)) (v w : RealProjectiveHilbert f),
+      inner ℂ (realProjectiveHilbertRepresentation f a v)
+        (realProjectiveHilbertRepresentation f a w) = inner ℂ v w :=
+  ⟨realProjectiveHilbertRepresentation_stronglyContinuous f,
+    realProjectiveHilbertRepresentation_inner f⟩
+

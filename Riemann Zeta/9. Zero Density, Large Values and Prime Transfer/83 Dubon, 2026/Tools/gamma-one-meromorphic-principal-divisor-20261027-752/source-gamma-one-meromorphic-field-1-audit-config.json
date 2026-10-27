@@ -1,0 +1,57 @@
+{
+  "modules": [
+    "SourceGammaOnePoleClearedProduct",
+    "SourceGammaOnePoleClearedCuspBounds",
+    "SourceGammaOneMeromorphicFieldRealization"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_pole_cleared_holomorphic_product",
+    "Dubon2026.SourceFunctionField.GammaOne.pole_bounds_of_local_product",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphic_cusps_of_holomorphic_pole_bounds",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_prescribed_meromorphic_orders"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_pole_cleared_holomorphic_product",
+    "Dubon2026.SourceFunctionField.GammaOne.pole_bounds_of_local_product",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphic_cusps_of_holomorphic_pole_bounds",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_prescribed_meromorphic_orders"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_pole_cleared_holomorphic_product",
+    "Dubon2026.SourceFunctionField.GammaOne.pole_bounds_of_local_product",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphic_cusps_of_holomorphic_pole_bounds",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_prescribed_meromorphic_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier_at_analytic_places",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_realization_of_mem_all_analytic_places",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_of_nonnegative_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_invariant_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_pole_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.boundedAtImInfty_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_holomorphic",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_mul_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_order",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_pos",
+    "Dubon2026.SourceFricke.exists_cusp_represents_of_poleBounded"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_pole_cleared_holomorphic_product",
+    "Dubon2026.SourceFunctionField.GammaOne.pole_bounds_of_local_product",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphic_cusps_of_holomorphic_pole_bounds",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_prescribed_meromorphic_orders"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOnePoleClearedProduct",
+    "SourceGammaOnePoleClearedCuspBounds",
+    "SourceGammaOneMeromorphicFieldRealization",
+    "SourceGammaOneOriginalPoleMultiplier",
+    "SourceGammaOnePoleClearedNormalization",
+    "SourceGammaOneUniformCuspPole",
+    "SourceGammaOneHolomorphicModularQuotient",
+    "SourceGammaOneHolomorphicFieldRealization",
+    "SourceGammaOneCuspBoundedRealization",
+    "SourceGammaOneCuspResidues"
+  ],
+  "separateReason": "Actual meromorphic field realization from the precise ramification-weighted finite-divisor orders and bounded translated cusps. Cusp-limit transfer and period existence remain."
+}

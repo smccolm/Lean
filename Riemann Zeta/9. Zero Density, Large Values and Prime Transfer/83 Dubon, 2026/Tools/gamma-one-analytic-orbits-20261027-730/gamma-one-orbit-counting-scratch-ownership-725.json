@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "theorems": 11,
+  "modules": 1,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOrbitCountingScratchOwnership725.log",
+  "logSha256": "770D0C2BC600252F645DF5CA51B952CF5D34EFACC6D34773E7C82B71CCE0FEB8",
+  "sourceSha256": "EFD1915E2AF5A17A5B465F16D8F2F64F9553A07A2CCF3108F28D3D45169B2A71",
+  "owners": [
+    {
+      "module": "SourceGammaOneOrbitCounting",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.exists_smul_out_eq"
+    },
+    {
+      "module": "SourceGammaOneOrbitCounting",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_smul_of_mem"
+    },
+    {
+      "module": "SourceGammaOneOrbitCounting",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.card_stabilizer_subgroup"
+    },
+    {
+      "module": "SourceGammaOneOrbitCounting",
+      "name": "_private.SourceGammaOneOrbitCounting.0.Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.fib._proof_1"
+    },
+    {
+      "module": "SourceGammaOneOrbitCounting",
+      "name": "_private.SourceGammaOneOrbitCounting.0.Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.fib._proof_2"
+    },
+    {
+      "module": "SourceGammaOneOrbitCounting",
+      "name": "_private.SourceGammaOneOrbitCounting.0.Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.fib_mk"
+    },
+    {
+      "module": "SourceGammaOneOrbitCounting",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_mul_card_stabilizer"
+    },
+    {
+      "module": "SourceGammaOneOrbitCounting",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finsum_relIndex_stabilizer_eq_index"
+    },
+    {
+      "module": "SourceGammaOneOrbitCounting",
+      "name": "_private.SourceGammaOneOrbitCounting.0.Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.card_fiber"
+    },
+    {
+      "module": "SourceGammaOneOrbitCounting",
+      "name": "_private.SourceGammaOneOrbitCounting.0.Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.fib_surjective"
+    },
+    {
+      "module": "SourceGammaOneOrbitCounting",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finite_orbitRelQuotient_orbit"
+    }
+  ]
+}

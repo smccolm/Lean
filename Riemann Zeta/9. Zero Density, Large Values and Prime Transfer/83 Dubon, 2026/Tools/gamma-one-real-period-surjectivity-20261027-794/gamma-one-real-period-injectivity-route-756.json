@@ -1,0 +1,24 @@
+{
+  "scope": 756,
+  "dependency": "DUB-17/18 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 -> Abel-Jacobi converse -> real period surjectivity -> real period injectivity.",
+  "reused": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceInvariantRealPart.lean",
+      "sha256": "5EC0F4BE4B5CC612A46F96EABD699DBA0CC716D0D9C2B43E28A7CB463A3F876A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoPeriods.lean"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoPrimitiveCusps.lean"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCuspAuxiliaryForm.lean"
+    }
+  ],
+  "decision": "Adapt the existing finite-tile real-part constancy argument to actual Gamma1, then consume the existing general primitive and cusp-limit theorems. This avoids a reflected complex period pair for the real-period injectivity needed by either candidate dimension route. No dimension or period-surjectivity theorem is assumed.",
+  "remaining": "Real period surjectivity, reciprocity, original Picard/Hecke/diamond/H1 comparison, all-weight association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false
+}

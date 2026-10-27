@@ -1,0 +1,37 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> actual global charts -> normalized charts at every finite j-place.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrders.lean",
+      "sha256": "1F85B7090D8BE892D5B5E06A42FBBCBF5875F3EE60BCE237A13E4B206ADC555C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFinitePlaceExhaustion.lean",
+      "sha256": "A6256F9FB46ABAEE817F5AE8CCA4C5065A357C2DE97E728EA222C5775EACCCDE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveAnalyticPlaceParameter.lean",
+      "sha256": "790A461384CFE696736F09F9C99ED4A6B733A5B69FCBFBC89E616FA521B6DD5D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveAnalyticChartOrders.lean",
+      "sha256": "984A9E8BFA0692E262D3A3BA086953F0C73981CF44165969D99A4A37FF8EDBA9"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneUnramifiedCharts.lean",
+      "sha256": "51B549E3E9789E85AC0FAC54E21D4432C5FA6BD0B8BD03F60C8090184CF574FE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFiniteChartParameters.lean",
+      "sha256": "CE971607835D4E7C939CBF4A17A5B2FD6627ADF2A0421E3A2F956348B21F0065"
+    }
+  ],
+  "shorterRoute": "Use the already proved generic exists_parameter_of_evaluation_family rather than repeat the full original inverse-function construction. Actual common-neighborhood ramified orders make the uniformizer analytic of order one; finite-place exhaustion then covers every j-regular place, and generic Orders.uniformizer_sub_order supplies exact order-one coordinate differences.",
+  "assumptionsToDischarge": [
+    "Every actual Gamma1 analytic place, including elliptic centers, has an injective uniformizer-normalized chart with exact orders and regular analyticity for all functions on a common disk.",
+    "Every actual j-regular place has such a chart, with every coordinate difference of valuation order one."
+  ],
+  "remaining": "Construct and exhaust the cusp charts, then actual global period and full Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

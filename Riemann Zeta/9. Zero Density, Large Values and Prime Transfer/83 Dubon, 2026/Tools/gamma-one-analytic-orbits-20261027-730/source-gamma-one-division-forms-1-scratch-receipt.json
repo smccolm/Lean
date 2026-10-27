@@ -1,0 +1,57 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T06:08:29.818935+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneDivisionForms"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionForms.lean",
+      "sha256": "42F48B9B89A9CDD520F2108C3EA0BEB7B10F9C6A81752C3FE4800AA19D784CC6",
+      "oleanSha256": "991F190DC0ABE0D0342356AB2D0B724892517BE5B12B73973AE6D9A95963BA95"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.wpNormZ_slash_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm_slash_gamma0",
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.wpNormZ_slash_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm_slash_gamma0"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionFormsAudit1.log",
+  "logSha256": "6451A69E962B2C59913C58129712CAF6E4127CA583E6D374CDEE0DF741C4EC8D",
+  "auditSha256": "B24C603BBF4FB3B058AEEA5AE60C17D088162077998955A02455EB9F0F5237C9",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 9,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 7,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionFormsDependencyAudit1.log",
+  "dependencyAuditSha256": "40717B11D350A251F8CAD48078C9B4723E009C01459BA61E04873759058B2806",
+  "dependencyAuditSourceSha256": "542325CD7BB7ED5F14D5943333826D66909340DC926B2C15EA090F55C9C5392D",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm_slash_gamma0",
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> actual Picard/H1/period/Hecke/diamond comparison -> global charts -> orbit separation and exact elliptic ramification -> actual weight-two Gamma1 torsion division forms.",
+  "discharged": [
+    "The actual nonzero division-point function is a native weight-two Gamma1 modular form.",
+    "Its actual slash action under Gamma0 agrees with the specified torsion-index multiplication.",
+    "Holomorphy and all cusp bounds are derived, not postulated."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Division-value comparison must produce subgroup orbit separation; reverse elliptic ramification and full global chart/period/Hecke/diamond/Picard/H1 arithmetic comparison remain. Full all-weight arithmetic association and higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-division-forms-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "34484BE7D27FD93C68530EDE5D434E7B0F112F1E44F79DAAEA7FFD44E428AB51",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

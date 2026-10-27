@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-27 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> actual ramified charts -> exact orders for all functions on a common neighborhood.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-chart-orders-audit-route-734b.json",
+    "sha256": "369FF42BF8B7A9A90F254D8DA5004C7F942C23766ABE54D60D60FD2B15E7DC04",
+    "review": {
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> actual ramified charts -> exact orders for all functions on a common neighborhood.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRamifiedMeromorphicOrder.lean",
+          "sha256": "F3740DA95BECBD037FC14AED53EA56BCD6BDB5A324139BC0FD556CFA96A63F04"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalNearbyOrders.lean",
+          "sha256": "1BFF86D26FD505315110373609AFA22E472A755B0AFAB03D116B4AE5A688CF8D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRamifiedChartOrders.lean",
+          "sha256": "ED6F13895796D030BFB5654D72F3440CC6FAEEF95871D0B928E413805DA0021E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRationalChartValues.lean",
+          "sha256": "5DCA3C47D86602865F51E1FFA7EB826EACBE6E614644ABEC62FB96CE1F65ED27"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRamificationIsolation.lean",
+          "sha256": "D32D0E9CE69408F9B7A8842C72BC6CA167621ED52B356BDBE250D0630DEF1EF1"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRamificationIsolated.lean",
+          "sha256": "999D157D57E560EFF32AC1FC4DCDE602AEFF63597252455D809F9FD4B10CD717"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePowerDescentLocalBranch.lean",
+          "sha256": "912C76E828A6D7CC15B44ACD1C4CE88DE08B22777462926390B28C9791247C8C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticParameterLocal.lean",
+          "sha256": "EEEA264399F9BEEB1B994D69D8CED90D0C869D5CCAD1DF829E128207B8EFB044"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularOrder.lean",
+          "sha256": "E7A7CE6AC845743556A328C363EDC4257FD71DB9946FE756C14860678FD8BC2B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularParameter.lean",
+          "sha256": "691A1CC3312A6F559CDEADF4F3F8E7C7013E274B43FFBDD576EFA61F08EBE72A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEllipticFibers.lean",
+          "sha256": "8AA65B672C2AA03895160CC37947FD8D6100930AB06A02C08AFC7A3770CEA1A1"
+        }
+      ],
+      "shorterRoute": "The already proved generic rational residue inversion law handles poles without repeating the original residue-ring proof. Reuse the existing analytic local power branch and centered coordinate. The previously proved Gamma1 ramification isolation supplies one radius independent of the function, so the original nearby-order argument removes the ramification factor throughout that radius.",
+      "assumptionsToDischarge": [
+        "All actual rational functions, including poles, have meromorphic residue values on the descended Gamma1 place family with exactly the normalized valuation order at the center.",
+        "One positive radius works for every nonzero function and every chart point; regular functions have analytic values throughout that common neighborhood."
+      ],
+      "remaining": "Normalize charts by actual uniformizers, construct cusp/global place charts and actual periods, discharge full Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false,
+      "dependencyRefresh": "Removed only unused NeZero binders from ramifiedPlace and its zero identity after the 733 linter failure; all 734 math source bodies are unchanged. Original 734 audit evidence and receipt are retained; final-dependency verification has fresh sources/logs."
+    }
+  },
+  "discharged": [
+    "All actual rational functions, including poles, have meromorphic residue values on the descended Gamma1 place family with exactly the normalized valuation order at the center.",
+    "One positive radius works for every nonzero function and every chart point; regular functions have analytic values throughout that common neighborhood."
+  ],
+  "remaining": "Normalize charts by actual uniformizers, construct cusp/global place charts and actual periods, discharge full Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

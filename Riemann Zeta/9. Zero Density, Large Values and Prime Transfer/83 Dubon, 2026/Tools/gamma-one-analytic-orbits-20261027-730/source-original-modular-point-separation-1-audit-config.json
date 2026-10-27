@@ -1,0 +1,39 @@
+{
+  "modules": [
+    "SourceOriginalModularPointSeparation"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.originalPlaceEval_eq_modular_ratio",
+    "Dubon2026.SourceFunctionField.exists_original_nonvanishing_modular_ratio",
+    "Dubon2026.SourceFunctionField.exists_gamma0_smul_eq_of_cross_products",
+    "Dubon2026.SourceFunctionField.exists_original_separating_modular_forms"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.originalPlaceEval_eq_modular_ratio",
+    "Dubon2026.SourceFunctionField.exists_original_nonvanishing_modular_ratio",
+    "Dubon2026.SourceFunctionField.exists_gamma0_smul_eq_of_cross_products",
+    "Dubon2026.SourceFunctionField.exists_original_separating_modular_forms"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.originalPlaceEval_eq_modular_ratio",
+    "Dubon2026.SourceFunctionField.exists_original_nonvanishing_modular_ratio",
+    "Dubon2026.SourceFunctionField.exists_gamma0_smul_eq_of_cross_products",
+    "Dubon2026.SourceFunctionField.exists_original_separating_modular_forms",
+    "Dubon2026.SourceFunctionField.original_realize_tendsto_residue",
+    "Dubon2026.SourceFunctionField.exists_original_discriminant_power",
+    "Dubon2026.SourceFunctionField.AnalyticChart.chart_mem",
+    "Dubon2026.SourceFunctionField.AnalyticChart.eq_of_center_eq",
+    "Dubon2026.SourceFunctionField.originalAnalyticPlace_eq_iff_gamma0_orbit",
+    "Dubon2026.SourceFunctionField.originalAnalyticPlace_j_mem",
+    "Dubon2026.SourceFunctionField.realize_eventuallyEq_of_ratio"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.exists_original_separating_modular_forms"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceOriginalModularPointSeparation"
+  ],
+  "separateReason": "The actual Gamma0 separating forms consume residue limits, nonvanishing-denominator modular representations, integral-closure centers and the proved place/orbit dictionary. No new separation premise is introduced."
+}

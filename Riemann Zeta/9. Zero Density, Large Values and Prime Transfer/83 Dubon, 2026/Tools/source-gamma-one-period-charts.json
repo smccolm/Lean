@@ -1,0 +1,543 @@
+{
+  "date": "26 October 2026",
+  "modules": [
+    "Dubon2026.SourceGammaOneRegularCuspGerm",
+    "Dubon2026.SourceGammaOneAnalyticResidues",
+    "Dubon2026.SourceGammaOneAnalyticEvaluation",
+    "Dubon2026.SourceGammaOneEvaluationRealizationGerms",
+    "Dubon2026.SourceGammaOneRamificationIsolation",
+    "Dubon2026.SourceGammaOneUnramifiedCharts"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 Hecke characters -> Picard/H1, full/parabolic, transpose and diamond comparison retaining the original homogeneous coefficient endomorphism -> actual differential/cusp period normalization and original analytic place charts.",
+  "discharged": "The actual Fourier-normalized regular-differential/cusp equivalence has the exact analytic integrand 2*pi*i times the cusp form, for every original regular differential including zero. Actual residue evaluation on the original Gamma field equals the regular analytic limit and the meromorphic normal form, with exact normalized-place orders and punctured-germ equality. At each unramified analytic center, one radius and the actual uniformizer construct an injective local chart with normalized orders for every original field element. Exact j-multiplicity and isolated E4/E6 zeros derive unramifiedness away from those zeros; no chart, residue comparison, order model or differential-coordinate witness is supplied.",
+  "boundary": "Elliptic-center ramified descent, finite/cusp place exhaustion and global Gamma1 charts remain, followed by actual global period and Hecke/diamond/Picard/H1 comparison. These local charts do not close the full arithmetic realization of original finite homogeneous-coefficient characters. Coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. The full all-weight arithmetic goal is unchanged. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 8,554-module scope: all thirteen retained regressions, 53,969 exhaustive theorem checks, 24,737 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_regularCuspEquiv_germ",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_analyticAt_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_meromorphicOrderAt",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_eventuallyEq_realize",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_generic_analytic_chart"
+  ],
+  "scratchCertificates": [
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T04:27:18.170667+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceGammaOneRegularCuspGerm"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularCuspGerm.lean",
+          "sha256": "F98F1F7267DC066728B4059C0FD1423F052E0AC76D1D992CE1D98D218AFC7AEA",
+          "oleanSha256": "DE406262D67EEF8D6B4C5161260CFE3BA5611813A2E5B8C2AEC1537C78AE079D"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_eq_normalized",
+        "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_germ_of_coordinate",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_regularCuspEquiv_germ"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_eq_normalized",
+        "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_germ_of_coordinate",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_regularCuspEquiv_germ"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodGermAudit1.log",
+      "logSha256": "154FE1A5542FB50723D90772F0F4AE79784632FF6365DD0097B4CEDD60DA7F7C",
+      "auditSha256": "0692346072FF66F0D98667895FEB8EE99C7691BF80EE338A17466F9104A7795A",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 6,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 12,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodGermDependencyAudit1.log",
+      "dependencyAuditSha256": "8DF9323144FBE140BADDB3B562DCA134387A0247F2069F1884934B9C8B4CA687",
+      "dependencyAuditSourceSha256": "5C26F1F0A8C6916AF03B2D5D2D1B51B3D9D6B7134810977993CB1DE03A6C78E7",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_regularCuspEquiv_germ"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> arithmetic realization of finite Gamma1 Hecke characters -> original Picard/H1 and full/parabolic transpose/diamond comparison -> actual Picard-period/cusp comparison -> literal analytic differential germ of the Fourier-normalized cusp equivalence.",
+      "discharged": [
+        "The Fourier-normalized actual equivalence agrees with the analytic differential used in period integrals, with the exact 2*pi*i factor.",
+        "A coordinate and its analytic germ are constructed for every original regular differential."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Original analytic chart and period comparison, Hecke/diamond compatibility, Picard/H1 arithmetic realization, all-weight characteristic-zero association and literal higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-period-germ-1-reuse-review-20261026.json",
+      "reuseReviewSha256": "34D49250F8A4FA358F514D758429E1EAB71C01DF2A2AF2630B5024C50A6CA1E3",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T04:39:48.553417+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceGammaOneAnalyticResidues",
+        "SourceGammaOneAnalyticEvaluation",
+        "SourceGammaOneEvaluationRealizationGerms"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResidues.lean",
+          "sha256": "A0E3E571822585A2270A54A6E7A1BD181C3D4CF9902626373A03F2B27221710A",
+          "oleanSha256": "204B55228A10C92BD2AAC60DF0ED7805AF0CF7F4805DF569C010DB2504BA4AAA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticEvaluation.lean",
+          "sha256": "6E671490A966EB8208C487C20F0D4F73F451348DDD712E1E0A65E7B432F2D830",
+          "oleanSha256": "68D1F8F2EC27269E7869491762BBD535A92A0608DFC41385ADB47A9B76812459"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEvaluationRealizationGerms.lean",
+          "sha256": "6049EBDA4DE0AAA9CD14D7BD18E3C05736EFC783A5A984D278D2DAD1575F0CFB",
+          "oleanSha256": "F3D8D36FC59AED19F5656681DDDBA22A561D46AFA1EAE9DD279D59B729CD0B82"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_mem_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.realize_sub_constant_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.place_residue_bijective",
+        "Dubon2026.SourceFunctionField.GammaOne.realize_tendsto_residue",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_analytic_representative",
+        "Dubon2026.SourceFunctionField.GammaOne.meromorphicNFAt_placeEval",
+        "Dubon2026.SourceFunctionField.GammaOne.placeEval_analyticAt_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.placeEval_meromorphicOrderAt",
+        "Dubon2026.SourceFunctionField.GammaOne.placeEval_eq_realize_of_analyticAt",
+        "Dubon2026.SourceFunctionField.GammaOne.placeEval_eventuallyEq_realize",
+        "Dubon2026.SourceFunctionField.GammaOne.placeEval"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_mem_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.realize_sub_constant_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.place_residue_bijective",
+        "Dubon2026.SourceFunctionField.GammaOne.realize_tendsto_residue",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_analytic_representative",
+        "Dubon2026.SourceFunctionField.GammaOne.meromorphicNFAt_placeEval",
+        "Dubon2026.SourceFunctionField.GammaOne.placeEval_analyticAt_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.placeEval_meromorphicOrderAt",
+        "Dubon2026.SourceFunctionField.GammaOne.placeEval_eq_realize_of_analyticAt",
+        "Dubon2026.SourceFunctionField.GammaOne.placeEval_eventuallyEq_realize"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.placeEval"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResiduesAudit3.log",
+      "logSha256": "B90E1E6F4FE5100FFB0F95D5A273773A19A29C3EEECCFB9F85ED43870CF13F37",
+      "auditSha256": "E3CC4C30574BEC42F51A283E9BCB14E04E129BF338FBB9273135C3493060CC50",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 19,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 19,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResiduesDependencyAudit3.log",
+      "dependencyAuditSha256": "7727D8E1D2D9A853C143D992B670F9C3EF987F200D9D6FB472AAACEF25337C18",
+      "dependencyAuditSourceSha256": "05B614537B5691866C4DF3CC0DF9BF6635FE3A291928EE488B050BC56578D568",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.placeEval_analyticAt_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.placeEval_meromorphicOrderAt",
+        "Dubon2026.SourceFunctionField.GammaOne.placeEval_eventuallyEq_realize"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 Hecke characters -> Picard/H1, full/parabolic and transpose/diamond comparison -> Picard-period/cusp comparison -> actual residue evaluation and analytic germs of the original Gamma field.",
+      "discharged": [
+        "Actual algebraic residue evaluation agrees with the regular analytic limit.",
+        "Actual evaluation is meromorphic normal form, analytic exactly at regular places, with its exact normalized-place order.",
+        "Actual residue evaluation and original modular-ratio realization agree on punctured germs, enabling chart pullback of the proved Fourier-normalized differential."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The actual global Gamma1 charts and period comparison, Hecke/diamond compatibility, Picard/H1 arithmetic realization, original all-weight characteristic-zero association, arithmetic automorphy and higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-analytic-residues-3-reuse-review-20261026.json",
+      "reuseReviewSha256": "5AB593C0D02F576F46BA45ABA6C6CC0DDE853A24FD5A00F26F8830C5FAC757D7",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T04:53:20.958425+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceGammaOneRamificationIsolation",
+        "SourceGammaOneUnramifiedCharts"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationIsolation.lean",
+          "sha256": "A1F085755635E701182808EBFD7DBBEFA22EC33D2F2BE7A26F245E320EF1FF5F",
+          "oleanSha256": "4364B7042869F67CDEA52EC367593FBAD041E47A0DE26766449BFFDE9A25F777"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedCharts.lean",
+          "sha256": "56A482DEBD1D81279BEC5EE05493C7B2D670CAF6E89279C08262AFA4A4CEE725",
+          "oleanSha256": "52CD5D8A39808800D70D23852DB6D33BD0097915E0C28E502E6753AFCEB65BF1"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_dvd_full_stabilizer_half",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eq_one_of_generic",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eventually_one",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_unramified_analytic_chart",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_generic_analytic_chart"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_dvd_full_stabilizer_half",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eq_one_of_generic",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eventually_one",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_unramified_analytic_chart",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_generic_analytic_chart"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedChartsAudit2.log",
+      "logSha256": "6428D23D183B1CEF435BA0104472059294187C83306F90A50C0029B01DBC31C3",
+      "auditSha256": "91E50B5063B6247828637D5F6B467C6DC228D79BB25FF20C3FEC9077A72FBF6F",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 6,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 12,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedChartsDependencyAudit2.log",
+      "dependencyAuditSha256": "FF42E92245397E635E855747BC3DAD6FCB8CDF91290FCB99EA6BE46C3F311A0F",
+      "dependencyAuditSourceSha256": "4EF58034F87A7166A97573DF82F5DB9CEEA908F75E370EB86CA30BD480247B98",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_generic_analytic_chart"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> arithmetic automorphy and original all-weight characteristic-zero association -> realization of original finite Gamma1 Hecke characters -> Picard/H1 and full/parabolic transpose/diamond comparison -> actual global Gamma1 place charts and period comparison -> normalized local charts at unramified analytic places.",
+      "discharged": [
+        "One common neighborhood has normalized orders for every actual field element around any unramified analytic center.",
+        "Actual residue evaluation of the original uniformizer supplies an injective local chart, with no assumed parameter family or order model.",
+        "The unramified hypothesis is derived at every center with E4 and E6 nonzero."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Elliptic-center ramified descent, finite/cusp place exhaustion and global charts remain, followed by actual period, Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight characteristic-zero association, arithmetic automorphy and higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-unramified-charts-2-reuse-review-20261026.json",
+      "reuseReviewSha256": "6CC4D773231181921AC53E0E832742C6703EA8623D003BDCAC6E36C2E180BABB",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-gamma-one-period-germ-1-reuse-review-20261026.json",
+    "Tools/source-gamma-one-analytic-residues-3-reuse-review-20261026.json",
+    "Tools/source-gamma-one-unramified-charts-2-reuse-review-20261026.json"
+  ],
+  "dependencyRouteAssessment": {
+    "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-period-charts-promotion-route-709.json",
+    "sha256": "49E60ABCC90A5BBB59D8499696D72375F9541FA0A674BAC49EED1E52FDE1CB73"
+  },
+  "proofEvidenceArchive": {
+    "manifest": "Tools/gamma-one-period-charts-20261026-709/archive-manifest.json",
+    "sha256": "62ECA71C06B9E0B55E428E00DD98CF6B7653B82D9789E0190BBBCB34A764C117",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt8554": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodGermDependencyAudit1Production8554.log",
+        "sha256": "8DF9323144FBE140BADDB3B562DCA134387A0247F2069F1884934B9C8B4CA687",
+        "requiredProofValueEdges": 12,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.exists_regularCuspEquiv_germ"
+        ],
+        "sourceSha256": "8F5D62AF626251602732C867A14B153CED629C0E0150397AE00DFBC1A756A54E"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResiduesDependencyAudit3Production8554.log",
+        "sha256": "7727D8E1D2D9A853C143D992B670F9C3EF987F200D9D6FB472AAACEF25337C18",
+        "requiredProofValueEdges": 19,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.placeEval_analyticAt_iff",
+          "Dubon2026.SourceFunctionField.GammaOne.placeEval_meromorphicOrderAt",
+          "Dubon2026.SourceFunctionField.GammaOne.placeEval_eventuallyEq_realize"
+        ],
+        "sourceSha256": "A2082CF898FC7C36E79916A60DC59D7BE61DE8F0E0AA2AD397E0F7D2FB6A601A"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedChartsDependencyAudit2Production8554.log",
+        "sha256": "FF42E92245397E635E855747BC3DAD6FCB8CDF91290FCB99EA6BE46C3F311A0F",
+        "requiredProofValueEdges": 12,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.exists_generic_analytic_chart"
+        ],
+        "sourceSha256": "5677209353BEF01C3BB414F29246D69FC3FECAAB98639C4B847DB8887F21404E"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodChartsProductionAudit8554.log",
+    "sha256": "F1AFD5F72C2BA5EF3FBF62DF1DCBB1E4ACB6D9F29D9B043BF87DC06DDFB85B33",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-period-charts-production-build-8554.log",
+    "aggregateSha256": "424160B7B85F10E1B5845812373626E920B783AD86296326561E386847D6999C",
+    "productionModules": 8554,
+    "incrementModules": 6,
+    "axiomChecks": 19,
+    "exhaustiveIncrementTheorems": 30,
+    "linterScopes": 6,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 31,
+    "productionReuse": "Only scratch imports are qualified. All final audited statements, proof bodies and comments remain identical. The original function field, actual regular differentials, native cusp forms, literal Fourier series and exact complex normalization are retained. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 31,
+      "scratchDistinct": 31,
+      "generatedNameRenamings": {},
+      "productionFocused": 30,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPlace.congr_simp": [
+          {
+            "scope": "SourceGammaOneAnalyticResiduesScratchOwnership706",
+            "module": "Dubon2026.SourceGammaOneAnalyticResidues"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPlace.congr_simp"
+      ],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceGammaOneRegularCuspGerm"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodGermScratchOwnership705.log",
+            "sha256": "CFB2DD0A8B0B4710A57849DEB2EA5E879AB9FA6D27E6DC39E3A27F03DFAF942F",
+            "sourceSha256": "CB357C50DE845187CB2C6102C47EEF6C3CAF66E706EFD243AA7D9CFEEC766C24"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneAnalyticResidues",
+            "SourceGammaOneAnalyticEvaluation",
+            "SourceGammaOneEvaluationRealizationGerms"
+          ],
+          "count": 19,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResiduesScratchOwnership706.log",
+            "sha256": "3DFFC306C74D56FF454AA7B68EAADCE552A39B50FE604764139AFBA50841A22B",
+            "sourceSha256": "2C56B04461657F150AFE8BE543CC7827CAB5CD0AE33BEC364CCF8C257D513AD1"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneRamificationIsolation",
+            "SourceGammaOneUnramifiedCharts"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedChartsScratchOwnership707.log",
+            "sha256": "B16D313F5C5191933B2648F75B1B5D17868C7B8771343D964C26B5958133E451",
+            "sourceSha256": "F54ECB2279CB9E29A2363634F07CE65866E7654EA4BB5DF1DC7562E01F0409FB"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodChartsOwnership8554.log",
+        "sha256": "4F9920229CAED49C6CFF18DB03C53CE3386739FCCEA82FF6523BCBEE2D7A23BA",
+        "sourceSha256": "E8D83AF0EC03E9E8B372C945FEF723BDA3671E0FC6E68D90BAA756347F21C987"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-213020-525.log",
+        "sha256": "97AD40FFEC57D9A8E6C2099F98EBA60EF8BD93D6319900E32AE67D9D57E0C154"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 6 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceGammaOneRegularCuspGerm",
+            "scratchSha256": "F98F1F7267DC066728B4059C0FD1423F052E0AC76D1D992CE1D98D218AFC7AEA",
+            "productionSha256": "E37E6B919261E479DA98C9924C6A27CA375163292D12A25F9E4E1DCE2F0D97F1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAnalyticResidues",
+            "scratchSha256": "A0E3E571822585A2270A54A6E7A1BD181C3D4CF9902626373A03F2B27221710A",
+            "productionSha256": "F5AB5657C210AF58B8CC1B89F26C68D3B80BB035ECD60CCB4950AC774F7BB3B5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAnalyticEvaluation",
+            "scratchSha256": "6E671490A966EB8208C487C20F0D4F73F451348DDD712E1E0A65E7B432F2D830",
+            "productionSha256": "DD538E907D32C70AF5A7C40F80BB5A6D6C22A204487F10DAD8A75F63F6B80D91",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneEvaluationRealizationGerms",
+            "scratchSha256": "6049EBDA4DE0AAA9CD14D7BD18E3C05736EFC783A5A984D278D2DAD1575F0CFB",
+            "productionSha256": "7B21ADD3024D1F613A8C66181A7A139C95BD548EC37D68B8932E51263FF74729",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRamificationIsolation",
+            "scratchSha256": "A1F085755635E701182808EBFD7DBBEFA22EC33D2F2BE7A26F245E320EF1FF5F",
+            "productionSha256": "D32D0E9CE69408F9B7A8842C72BC6CA167621ED52B356BDBE250D0630DEF1EF1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneUnramifiedCharts",
+            "scratchSha256": "56A482DEBD1D81279BEC5EE05493C7B2D670CAF6E89279C08262AFA4A4CEE725",
+            "productionSha256": "51B549E3E9789E85AC0FAC54E21D4432C5FA6BD0B8BD03F60C8090184CF574FE",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 31 distinct names from 31 exhaustive scratch checks are retained: 30 in the production focused scope and 1 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Elliptic-center ramified descent, finite/cusp place exhaustion and global Gamma1 charts remain, followed by actual global period and Hecke/diamond/Picard/H1 comparison. These local charts do not close the full arithmetic realization of original finite homogeneous-coefficient characters. Coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. The full all-weight arithmetic goal is unchanged. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN."
+  },
+  "receipt8554": {
+    "recordedUTC": "2026-10-27T07:46:23.174166+00:00",
+    "log": "logs/dubon-build-20261026-231627-480.log",
+    "sha256": "3F3D16BA02E17BC58BCD2BDEA5E24C4B0A1EECDCEE1186FF99202BB2EC21362E",
+    "bytes": 13902183,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8554,
+    "projectTheorems": 53969,
+    "registeredConsumers": 24737,
+    "registeredConstructions": 2457,
+    "declarations": 33147,
+    "generated": 34020,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261026_231052.log",
+    "foundationSha256": "0ACF95083F339AADC5D8EDD9DA34BAACE8A88CED9298DC15B9600A157D275849",
+    "countReconciliation": {
+      "previousTheorems": 53940,
+      "focusedTheorems": 30,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourceCurve.Place.rationalEval.eq_1"
+      ],
+      "addedTheorems": 29,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodChartsGlobalOwnership8554.log",
+      "globalOwnershipSha256": "2B76F7C33EA67C8002B969DB6C6DBADB215E7A2C7E41D14EA00BEF4734AE1A5C",
+      "globalOwnershipSourceSha256": "51F6C848DC1E660F309AE59D4F9A059C7BCAC631BCDF3D4FC49B7463540926FD",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodChartsOwnership8554.log",
+      "ownershipSha256": "4F9920229CAED49C6CFF18DB03C53CE3386739FCCEA82FF6523BCBEE2D7A23BA"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 31,
+      "scratchDistinct": 31,
+      "generatedNameRenamings": {},
+      "productionFocused": 30,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPlace.congr_simp": [
+          {
+            "scope": "SourceGammaOneAnalyticResiduesScratchOwnership706",
+            "module": "Dubon2026.SourceGammaOneAnalyticResidues"
+          }
+        ]
+      },
+      "missingFromFocusedAlreadyInPrevious": [
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPlace.congr_simp"
+      ],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceGammaOneRegularCuspGerm"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodGermScratchOwnership705.log",
+            "sha256": "CFB2DD0A8B0B4710A57849DEB2EA5E879AB9FA6D27E6DC39E3A27F03DFAF942F",
+            "sourceSha256": "CB357C50DE845187CB2C6102C47EEF6C3CAF66E706EFD243AA7D9CFEEC766C24"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneAnalyticResidues",
+            "SourceGammaOneAnalyticEvaluation",
+            "SourceGammaOneEvaluationRealizationGerms"
+          ],
+          "count": 19,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResiduesScratchOwnership706.log",
+            "sha256": "3DFFC306C74D56FF454AA7B68EAADCE552A39B50FE604764139AFBA50841A22B",
+            "sourceSha256": "2C56B04461657F150AFE8BE543CC7827CAB5CD0AE33BEC364CCF8C257D513AD1"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneRamificationIsolation",
+            "SourceGammaOneUnramifiedCharts"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedChartsScratchOwnership707.log",
+            "sha256": "B16D313F5C5191933B2648F75B1B5D17868C7B8771343D964C26B5958133E451",
+            "sourceSha256": "F54ECB2279CB9E29A2363634F07CE65866E7654EA4BB5DF1DC7562E01F0409FB"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodChartsOwnership8554.log",
+        "sha256": "4F9920229CAED49C6CFF18DB03C53CE3386739FCCEA82FF6523BCBEE2D7A23BA",
+        "sourceSha256": "E8D83AF0EC03E9E8B372C945FEF723BDA3671E0FC6E68D90BAA756347F21C987"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-213020-525.log",
+        "sha256": "97AD40FFEC57D9A8E6C2099F98EBA60EF8BD93D6319900E32AE67D9D57E0C154"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 6 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceGammaOneRegularCuspGerm",
+            "scratchSha256": "F98F1F7267DC066728B4059C0FD1423F052E0AC76D1D992CE1D98D218AFC7AEA",
+            "productionSha256": "E37E6B919261E479DA98C9924C6A27CA375163292D12A25F9E4E1DCE2F0D97F1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAnalyticResidues",
+            "scratchSha256": "A0E3E571822585A2270A54A6E7A1BD181C3D4CF9902626373A03F2B27221710A",
+            "productionSha256": "F5AB5657C210AF58B8CC1B89F26C68D3B80BB035ECD60CCB4950AC774F7BB3B5",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAnalyticEvaluation",
+            "scratchSha256": "6E671490A966EB8208C487C20F0D4F73F451348DDD712E1E0A65E7B432F2D830",
+            "productionSha256": "DD538E907D32C70AF5A7C40F80BB5A6D6C22A204487F10DAD8A75F63F6B80D91",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneEvaluationRealizationGerms",
+            "scratchSha256": "6049EBDA4DE0AAA9CD14D7BD18E3C05736EFC783A5A984D278D2DAD1575F0CFB",
+            "productionSha256": "7B21ADD3024D1F613A8C66181A7A139C95BD548EC37D68B8932E51263FF74729",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRamificationIsolation",
+            "scratchSha256": "A1F085755635E701182808EBFD7DBBEFA22EC33D2F2BE7A26F245E320EF1FF5F",
+            "productionSha256": "D32D0E9CE69408F9B7A8842C72BC6CA167621ED52B356BDBE250D0630DEF1EF1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneUnramifiedCharts",
+            "scratchSha256": "56A482DEBD1D81279BEC5EE05493C7B2D670CAF6E89279C08262AFA4A4CEE725",
+            "productionSha256": "51B549E3E9789E85AC0FAC54E21D4432C5FA6BD0B8BD03F60C8090184CF574FE",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 31 distinct names from 31 exhaustive scratch checks are retained: 30 in the production focused scope and 1 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Elliptic-center ramified descent, finite/cusp place exhaustion and global Gamma1 charts remain, followed by actual global period and Hecke/diamond/Picard/H1 comparison. These local charts do not close the full arithmetic realization of original finite homogeneous-coefficient characters. Coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. The full all-weight arithmetic goal is unchanged. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN."
+  }
+}

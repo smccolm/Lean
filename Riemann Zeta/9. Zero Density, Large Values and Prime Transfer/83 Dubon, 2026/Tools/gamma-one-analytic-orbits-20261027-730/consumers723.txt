@@ -1,0 +1,40 @@
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem original_completed_quotient_L2_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k) :
+    (∀ v : RealProjectiveHilbert f, ‖realProjectiveHilbertToL2 f v‖ = ‖v‖) ∧
+    Set.range (realProjectiveHilbertToL2 f) = closure (Set.range (realProjectiveCyclicToL2 f)) ∧
+    ∀ v : (realLiftCyclicRepresentation k f).toSubmodule,
+      realProjectiveHilbertToL2 f (realProjectiveHilbertEmbedding f v) = realProjectiveCyclicToL2 f v :=
+  ⟨realProjectiveHilbertToL2_norm f, realProjectiveHilbertToL2_range f,
+    realProjectiveHilbertToL2_embedding f⟩
+
+theorem original_cusp_period_average_source {Γ : Subgroup (GL (Fin 2) ℝ)} {k : ℤ}
+    (f : CuspForm Γ k) {h : ℝ} (hh : 0 < h) (hΓ : h ∈ Γ.strictPeriods)
+    (t : ℝ) {y : ℝ} (hy : 0 < y) :
+    (∫ x in (0 : ℝ)..1,
+      f ⟨((h * x + t : ℝ) : ℂ) + y * Complex.I, by simpa using hy⟩) = 0 :=
+  cusp_period_horizontal_shift_integral_zero f hh hΓ t hy
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem original_cyclic_integral_cusp_average_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k)
+    (v : (realLiftCyclicRepresentation k f).toSubmodule) :
+    ∀ (σ : SL(2, ℤ)) (g : SL(2, ℝ)),
+      (∫ x in (0 : ℝ)..1, v.val (integralToRealSL σ * realUpperUnipotent ((Q : ℝ) * x) * g)) = 0 :=
+  realLiftCyclic_integral_cusp_period_zero f v.property
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem original_completed_cusp_generator_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k) (hf : f ≠ 0) :
+    realProjectiveHilbertGenerator f ≠ 0 ∧
+    inner ℂ (realProjectiveHilbertGenerator f) (realProjectiveHilbertGenerator f) = cuspPetersson f f ∧
+    (∀ a : realCompactSubgroup,
+      realProjectiveHilbertRepresentation f (QuotientGroup.mk a.val) (realProjectiveHilbertGenerator f) =
+        (realCompactWeight k a : ℂ) • realProjectiveHilbertGenerator f) ∧
+    closure ((Submodule.span ℂ (Set.range (fun a : PSL(2, ℝ) =>
+      realProjectiveHilbertRepresentation f a (realProjectiveHilbertGenerator f)))) :
+        Set (RealProjectiveHilbert f)) = Set.univ :=
+  ⟨realProjectiveHilbertGenerator_ne_zero f hf, realProjectiveHilbertGenerator_inner f,
+    realProjectiveHilbertGenerator_compact_weight f, realProjectiveHilbertGenerator_cyclic f⟩
+

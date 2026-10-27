@@ -1,0 +1,57 @@
+import Dubon2026.SourceGammaOneCuspBoundedRealization
+import Dubon2026.SourceCurveFiniteCoordinateOnePole
+import Dubon2026.SourceGammaOneAnalyticJOrders
+
+/-! DUB-17/18 -> actual Gamma1 Picard/period comparison -> principal
+divisors -> order zero at every remaining j-pole place. The existing
+one-pole function and native weight-zero constancy exhaust all places
+by actual analytic and cusp places. No cusp count, full-level Galois
+field, inverse-j monic equation, or global cusp atlas is required. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceCurve Filter
+open scoped MatrixGroups Topology
+variable {Γ : Subgroup SL(2, ℤ)}
+  (N : ℕ) [NeZero N] (hΓ : CongruenceSubgroup.Gamma N ≤ Γ)
+  (hT : ModularGroup.T ∈ Γ)
+
+include hΓ hT
+
+theorem place_analytic_or_actual_cusp (P : Place ℂ (functionFieldOver Γ ℂ)) :
+    (∃ τ : ℍ, analyticPlace hT τ = P) ∨
+      ∃ γ : SL(2, ℤ), cuspPlace N hΓ hT γ = P := by
+  letI : Γ.FiniteIndex := Subgroup.finiteIndex_of_le hΓ
+  letI := finiteDimensional_jCoordinateOver hT ℂ
+  by_contra hP
+  obtain ⟨a, hac, ha⟩ := exists_nonconstant_regular_away_of_finite_coordinate
+    (jCoordinateOver Γ ℂ) (transcendental_jCoordinateOver Γ ℂ) P
+  apply hac
+  exact constant_of_mem_all_analytic_and_cusp_places N hΓ hT a
+    (fun τ => ha _ (fun he => hP (Or.inl ⟨τ, he⟩)))
+    (fun γ => ha _ (fun he => hP (Or.inr ⟨γ, he⟩)))
+
+theorem exists_cusp_place_eq_of_j_pole
+    (P : Place ℂ (functionFieldOver Γ ℂ)) (hP : P.ord (jCoordinateOver Γ ℂ) < 0) :
+    ∃ γ : SL(2, ℤ), cuspPlace N hΓ hT γ = P := by
+  rcases place_analytic_or_actual_cusp N hΓ hT P with ⟨τ, rfl⟩ | hc
+  · have hj : jCoordinateOver Γ ℂ ∈ (analyticPlace hT τ).toValuationSubring := by
+      have hm := add_mem ((analyticPlace hT τ).mem_of_ord_nonneg
+        (analyticPlace_j_sub_pos hT τ).le)
+        ((analyticPlace hT τ).algebraMap_mem' (JMultiplicity.jf τ))
+      simpa only [sub_add_cancel] using hm
+    exact False.elim ((not_le_of_gt hP) ((analyticPlace hT τ).mem_iff_ord_nonneg.mp hj))
+  · exact hc
+
+theorem order_eq_zero_at_j_poles_of_cusp_limits
+    (f : functionFieldOver Γ ℂ) (hf : f ≠ 0)
+    (hlim : ∀ γ : SL(2, ℤ), ∃ c : ℂ, c ≠ 0 ∧
+      Tendsto (cuspRealize Γ N γ (f : LaurentSeries ℂ))
+        (𝓝[≠] (0 : ℂ)) (𝓝 c))
+    (P : Place ℂ (functionFieldOver Γ ℂ)) (hP : P.ord (jCoordinateOver Γ ℂ) < 0) :
+    P.ord f = 0 := by
+  obtain ⟨γ, rfl⟩ := exists_cusp_place_eq_of_j_pole N hΓ hT P hP
+  obtain ⟨c, hc, hl⟩ := hlim γ
+  exact cuspPlace_order_eq_zero_of_tendsto N hΓ hT γ f hf hc hl
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

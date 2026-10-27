@@ -1,0 +1,4 @@
+{
+  "reason": "Avoid generic simp on the concrete integral-closure center. Use subtype injection rather than a field-only map_ne_zero theorem; center membership expects nonzero source b. Default proof limits retained.",
+  "sourceSha256": "4855169B146985C0318B6D2E185604EFAFFBDCDDC38DF1263E8B1EC552043A5B"
+}

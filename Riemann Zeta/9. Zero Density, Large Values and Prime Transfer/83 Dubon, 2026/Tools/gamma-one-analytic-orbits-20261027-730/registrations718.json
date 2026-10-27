@@ -1,0 +1,20 @@
+[
+  "Dubon2026.realProjectiveCyclic_matrixCoefficient_continuous",
+  "Dubon2026.realProjectiveCyclicRepresentation_stronglyContinuous",
+  "Dubon2026.realProjectiveRangeEquiv_coe",
+  "Dubon2026.realProjectiveRangeRepresentation_apply",
+  "Dubon2026.realProjectiveRangeRepresentation_norm",
+  "Dubon2026.realProjectiveRangeRepresentation_continuous",
+  "Dubon2026.realProjectiveHilbertOperator_coe",
+  "Dubon2026.realProjectiveHilbertOperator_norm",
+  "Dubon2026.realProjectiveHilbertOperator_one",
+  "Dubon2026.realProjectiveHilbertOperator_mul",
+  "Dubon2026.realProjectiveHilbertOperator_dist",
+  "Dubon2026.realProjectiveHilbertRepresentation_stronglyContinuous",
+  "Dubon2026.realProjectiveHilbertEmbedding_injective",
+  "Dubon2026.realProjectiveHilbertEmbedding_dense",
+  "Dubon2026.realProjectiveHilbertEmbedding_intertwines",
+  "Dubon2026.realProjectiveHilbertRepresentation_inner",
+  "Dubon2026.SemanticRegression.real_projective_hilbert_embedding_source",
+  "Dubon2026.SemanticRegression.real_projective_hilbert_unitary_source"
+]

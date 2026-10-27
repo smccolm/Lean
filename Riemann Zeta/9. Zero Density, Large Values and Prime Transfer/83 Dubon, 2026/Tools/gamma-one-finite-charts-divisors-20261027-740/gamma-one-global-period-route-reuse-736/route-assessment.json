@@ -1,0 +1,46 @@
+{
+  "status": "Candidate route assessment; not yet an adopted replacement or a locally verified external import.",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> actual Picard/H1/full-parabolic/Hecke/diamond comparison -> principal divisors and modular periods.",
+  "primaryFiles": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-route-reuse-736\\S_ModularCurve_ComplexPlaceDictionaryOf_exists_meromorphic_meromorphicOrderAt_eq_of_abelJacobi_mem_periodLatticeOf_gammaH.lean.txt",
+      "sha256": "12F5DE055DDA8E2DAA172DEC6E16291438DDC21919DF126B8F3B92F68D918182",
+      "readInFull": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-route-reuse-736\\S_ModularCurve_ComplexPlaceDictionaryOf_isPrincipal_of_abelJacobi_mem_periodLatticeOf_gammaH.lean.txt",
+      "sha256": "0AF5B5F15D11785C801D5A59ED5750E426E014568BA3B1384062B811104DBD7D",
+      "readInFull": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-route-reuse-736\\Def_ModularCurve_ComplexPlaceDictionaryOf.lean.txt",
+      "sha256": "DD65AC866F371BB1704409250C5931DBD797DFDA5686AF0A8F3557797A58A5C4",
+      "readInFull": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-route-reuse-736\\S_ModularCurve_ord_eq_zero_of_not_mem_of_realizeOf_tendsto.lean.txt",
+      "sha256": "4691669E443815F91075CC91CF2552C5A8FCC61DF61AAB323FFC8D1ADCCB3D9A",
+      "readInFull": true
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-route-reuse-736\\S_ModularCurve_ComplexPlaceDictionaryOf_exists_cuspForm_mul_exp_periodOf_eq_one_of_abelJacobi_mem_periodLatticeOf_gammaH.lean.txt",
+      "sha256": "D75B0AD15C1CFFF309D1564057247E3BFE0AB9553B352532F7DC4C12CE807500",
+      "readInFull": true
+    }
+  ],
+  "findings": [
+    "The external ComplexPlaceDictionaryOf asks for actual analytic places, positive ramification, subgroup invariance, boundedness/regularity and exact meromorphic orders; it does not ask for an explicit cusp atlas. Local actual Gamma1 results now prove the corresponding finite-place and order obligations, without importing that external structure.",
+    "The external principal-divisor converse is stated for divisors pushed from finitely supported upper-half-plane points. It cancels the actual ramification factor at finite places and proves order zero at every remaining j-pole place from nonzero limits at all modular cusps. Thus explicit cusp-chart construction is absent from this final argument, but the total Picard and period comparison still needs its other directions and finite-support moving arguments.",
+    "The cusp-order-zero lemma constructs monic equations for x and its inverse with coefficients regular in inverse j using a full-level Galois field. Local Fricke finite-action and integral-ratio results may replace that external field infrastructure; this must be checked and proved.",
+    "The multiplier-normalization lemma requires real parabolic-period surjectivity, obtained from a dimension bound and real-period injectivity, plus a unit-norm multiplier reciprocity theorem. These are not supplied by the finite charts or by complex semisimplicity. Native local group-period injection and primitive results are available; the full Gamma1 comparison is still unresolved."
+  ],
+  "decision": "Defer expansion of cusp-atlas infrastructure until the required period, multiplier-reciprocity, cusp-order and moving-divisor dependencies have been compared against proved local APIs. Keep the full all-weight arithmetic goal and every source quantifier. No missing theorem is treated as an assumption discharged by this research.",
+  "localReuseChecked": [
+    "SourcePeriodPrimitive.sourceUpperHalfPlane_exists_primitive",
+    "sourcePeriodCohomologyLinear_injective (generic finite-index subgroup)",
+    "SourceOriginalPeriodSurjectivity (Gamma0 only; not a Gamma1 drop-in)",
+    "SourceCurve.AnalyticDisc.exists_parameter_of_evaluation_family",
+    "GammaOne finite-place chart package in audited scratch scope735"
+  ],
+  "boundary": "All 20 acceptance criteria remain unchanged; 16/20 and DUB-17--20 OPEN. External files are fixed-revision Apache-2.0 research snapshots only. No external full closure has been built or audited. No pins, limits, axiom policy, source scope or owner synchronization changed."
+}

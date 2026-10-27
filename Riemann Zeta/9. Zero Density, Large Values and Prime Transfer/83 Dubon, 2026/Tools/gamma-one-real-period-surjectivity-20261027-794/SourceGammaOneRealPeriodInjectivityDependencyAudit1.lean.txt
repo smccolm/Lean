@@ -1,0 +1,29 @@
+import SourceGammaOneInvariantRealPart
+import SourceGammaOneRealPeriodInjectivity
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.sourceGamma1_exists_tile_translate, `Dubon2026.sourceGamma1_realPart_constant, `Dubon2026.sourceGamma1_eq_zero_of_real_periods_zero, `Dubon2026.sourceGamma1_real_periods_injective]
+  let localModules : Array Name := #[`SourceGammaOneInvariantRealPart, `SourceGammaOneRealPeriodInjectivity]
+  let required : Array Name := #[`Dubon2026.sourceGamma1_exists_tile_translate, `Dubon2026.sourceGamma1_realPart_constant, `Dubon2026.sourceGamma1_eq_zero_of_real_periods_zero, `Dubon2026.sourceGamma1_real_periods_injective, `Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.conj_T_pow_mem, `Dubon2026.sourceUpperHalfPlane_re_eq_of_cusp_max, `Dubon2026.sourceHolomorphic_re_eq_of_isMaxOn, `Dubon2026.sourceHasDerivAt_comp_smul, `Dubon2026.sourceWeightTwoPrimitive_period, `Dubon2026.sourceWeightTwoPrimitive_hasDerivAt, `Dubon2026.sourceWeightTwoPrimitive_exists_cusp_limit, `Dubon2026.sourceHolomorphic_re_zero_deriv]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE REAL PERIOD INJECTIVITY DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual Gamma1 real period injectivity proof. Only declaration values are traversed. Real period surjectivity, reciprocity, original Hecke/diamond/Picard/H1 arithmetic comparison, all-weight association and higher continuation remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

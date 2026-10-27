@@ -1,0 +1,23 @@
+[
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math-OAI-tree.json",
+    "url": "https://api.github.com/repos/openai/math/git/trees/e5a41abb72afe7111d5608308439bc1d66bab5a4",
+    "sha256": "6965C0DA89BA79335EF1194843CE074992E650AA68C4921E33BCCF1FF63476D3",
+    "truncated": false,
+    "entries": 31
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math-AlgebraicGeometry-tree.json",
+    "url": "https://api.github.com/repos/openai/math/git/trees/f20456a565f56a7d450cdecd6a57a7a9ada34db7?recursive=1",
+    "sha256": "74691BA8A621EF2FFA41F4E405DF61B281C42C3CCEA499006DDCEF05D488F496",
+    "truncated": false,
+    "entries": 25062
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math-NumberTheory-tree.json",
+    "url": "https://api.github.com/repos/openai/math/git/trees/bd3c9a82318e91cf69c384b116eb730ebcff20bc?recursive=1",
+    "sha256": "6F608B1658B8F868EBD9CD10E74E26CA4460C9562D630EB1B7C23E2C039689BF",
+    "truncated": false,
+    "entries": 29617
+  }
+]

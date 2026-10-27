@@ -1,0 +1,36 @@
+{
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "externalImport": false,
+  "externalClosureBuilt": false,
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_multiplier_eq_exp_of_periodAlongOf_add_petersson_mem_periodLatticeOf.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_multiplier_eq_exp_of_periodAlongOf_add_petersson_mem_periodLatticeOf.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-754\\S_ModularCurve_multiplier_eq_exp_of_periodAlongOf_add_petersson_mem_periodLatticeOf.lean.txt",
+      "bytes": 17049,
+      "sha256": "AE0F3D3C2EC6F18CB1BCA05A551B211E75FE1E505F86C11498746BE3A64C9109",
+      "gitBlob": "a6f352720cb5b5077ee0e30c88cae8a2afdeb9b8",
+      "retrievedUTC": "2026-10-27T11:27:31.765908+00:00"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_LevelN_twelve_mul_add_mul_index_le_genusFF.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_LevelN_twelve_mul_add_mul_index_le_genusFF.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-754\\S_ModularCurve_LevelN_twelve_mul_add_mul_index_le_genusFF.lean.txt",
+      "bytes": 36374,
+      "sha256": "098DC8D9C0621AE23CB28C3C01A92A76799DCA208ED36072C9A515B5211B12E2",
+      "gitBlob": "feaaf9f1f2041f63995206fa465b03f1a3c0921f",
+      "retrievedUTC": "2026-10-27T11:27:31.978470+00:00"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_LevelN_exists_linearMap_regularDifferentials_cuspForm_injective.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_LevelN_exists_linearMap_regularDifferentials_cuspForm_injective.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-754\\S_ModularCurve_LevelN_exists_linearMap_regularDifferentials_cuspForm_injective.lean.txt",
+      "bytes": 5677,
+      "sha256": "2FEED951BB0264E5F1DAD1FB3505676CD0AB2F63C71A3996B0FC385845D1A9FE",
+      "gitBlob": "3900c12998697540cbc2341b5826fa4de592d9f4",
+      "retrievedUTC": "2026-10-27T11:27:32.204338+00:00"
+    }
+  ]
+}

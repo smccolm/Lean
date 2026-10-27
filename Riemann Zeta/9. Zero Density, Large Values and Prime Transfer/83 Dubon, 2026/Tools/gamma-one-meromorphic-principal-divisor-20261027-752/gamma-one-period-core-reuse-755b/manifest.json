@@ -1,0 +1,36 @@
+{
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "externalImport": false,
+  "externalClosureBuilt": false,
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_periodAlongOf_add_petersson_mem_periodLatticeOf_of_multiplier_eq_exp.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_periodAlongOf_add_petersson_mem_periodLatticeOf_of_multiplier_eq_exp.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-755b\\S_ModularCurve_periodAlongOf_add_petersson_mem_periodLatticeOf_of_multiplier_eq_exp.lean.txt",
+      "bytes": 11497,
+      "sha256": "05BF4F675796DC1791083B0FED61F51B8A40224E40D683DB9A0FEF17997D742E",
+      "gitBlob": "88f3644359a0a1640d35b8e1f88a897faa22aa56",
+      "retrievedUTC": "2026-10-27T11:36:01.262889+00:00"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_petersson_mem_periodLatticeOf_iff_re_periodOf_int.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_petersson_mem_periodLatticeOf_iff_re_periodOf_int.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-755b\\S_ModularCurve_petersson_mem_periodLatticeOf_iff_re_periodOf_int.lean.txt",
+      "bytes": 28668,
+      "sha256": "E46017955CC62AD510416D832C9CCA908DFE2879028CBA7F2E4534D66EF621E7",
+      "gitBlob": "63fa6e0e982cc9aa1ee17c7f2732c9bda03f7718",
+      "retrievedUTC": "2026-10-27T11:36:01.506444+00:00"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_cuspForm_multiplier_eq_exp_periodOf_of_norm_eq_one.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_cuspForm_multiplier_eq_exp_periodOf_of_norm_eq_one.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-755b\\S_ModularCurve_exists_cuspForm_multiplier_eq_exp_periodOf_of_norm_eq_one.lean.txt",
+      "bytes": 39126,
+      "sha256": "EFFAA94ED1D6C7889ECDDF67781058EEEBDE475355218B929F2523DC3381CFF7",
+      "gitBlob": "dc7fe7882ec4b4d1bdf78dbbcb94fbe12983d52c",
+      "retrievedUTC": "2026-10-27T11:36:01.741476+00:00"
+    }
+  ]
+}

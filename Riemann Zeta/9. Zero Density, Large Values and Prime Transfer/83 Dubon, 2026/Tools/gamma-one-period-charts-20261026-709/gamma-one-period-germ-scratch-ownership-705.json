@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "theorems": 6,
+  "modules": 1,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodGermScratchOwnership705.log",
+  "logSha256": "CFB2DD0A8B0B4710A57849DEB2EA5E879AB9FA6D27E6DC39E3A27F03DFAF942F",
+  "sourceSha256": "CB357C50DE845187CB2C6102C47EEF6C3CAF66E706EFD243AA7D9CFEEC766C24",
+  "owners": [
+    {
+      "module": "SourceGammaOneRegularCuspGerm",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_regularCuspEquiv_germ._simp_1_1"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspGerm",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_regularCuspEquiv_germ"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspGerm",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_germ_of_coordinate._simp_1_1"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspGerm",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_germ_of_coordinate"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspGerm",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_eq_normalized"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspGerm",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_eq_normalized._simp_1_1"
+    }
+  ]
+}

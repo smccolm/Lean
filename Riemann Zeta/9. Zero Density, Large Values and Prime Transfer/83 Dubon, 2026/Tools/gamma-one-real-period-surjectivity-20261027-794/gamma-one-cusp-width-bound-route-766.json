@@ -1,0 +1,26 @@
+{
+  "chain": "DUB-17/18 -> original all-weight arithmetic association -> actual Gamma1 Picard/H1 -> real period surjectivity -> matching Manin/genus cusp terms -> exact cusp widths",
+  "target": "For each positive signed stabilizer translation w, the actual algebraic j-pole order is at most w.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStabilizerMeromorphicOrder.lean",
+      "sha256": "9BA3276FFC546E3C3ADA909DB22EC6B068905A4BAECFFA1F532E6A1B638D2AF3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentExpansionOrders.lean",
+      "sha256": "77DBD6943EAF449834674FC9CDE4FA7545F7591614CB27045299B121B08F1C4C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceQExpansionLaurentWidth.lean",
+      "sha256": "0AB9DF23828F13C0E54B61E1DF0401E2E8B97AF93C4280EC9916E8B6481B59CD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePlusMinus.lean",
+      "sha256": "D8A3E4CFDF527B83F90E6B6B3C85F779F677FAF5D6C931870AC7BE1E7A6D4567"
+    }
+  ],
+  "shorterRoute": "Reuse actual Laurent reindexing for raw j order minus N. Adapt the existing leading-term invariance argument to a scalar rotation. Exponential equality directly gives N divides w times ramification; this avoids constructing a new finite root-of-unity group or a width-rescaling analytic chart.",
+  "remaining": "Identify least positive translation with finite cusp-orbit weight, sum weights by the group index, and compare with actual j-pole degree to prove bijection and exact widths. Reverse dimension, periods, reciprocity, original arithmetic and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

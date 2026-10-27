@@ -1,0 +1,47 @@
+import Dubon2026.SourceWeierstrassIntegralDenominator
+import Dubon2026.SourceBoundedIntegralSeriesProduct
+import Dubon2026.SourceIntegralEisensteinSix
+import Dubon2026.SourceBoundedIntegralSeriesConstant
+import Dubon2026.SourceFrickeNumeratorIntegralBound
+import Dubon2026.SourceBoundedRationalSeriesImage
+import Dubon2026.SourceLaurentSpanDescent
+import Dubon2026.SourceFrickeLaurentSpanDescent
+import Dubon2026.SourceRationalCuspWeightLaurent
+import Dubon2026.SourceRationalCuspWeightIntegrality
+import Dubon2026.SourceIntegralRationalLaurentSeries
+import Dubon2026.SourceBoundedIntegralLaurentAlgebra
+import Dubon2026.SourceBoundedRationalLaurentImage
+import Dubon2026.SourceCyclotomicLaurentTrace
+import Dubon2026.SourceBoundedRationalLaurentIntegral
+import Dubon2026.SourceBoundedCyclotomicLaurentFraction
+import Dubon2026.SourceBoundedCyclotomicLaurentGenerators
+import Dubon2026.SourceBoundedFrickeLaurentField
+import Dubon2026.SourceBoundedRationalJAlgebra
+import Dubon2026.SourceBoundedRationalCuspImage
+import Dubon2026.SourceIntegralLaurentWeightFactors
+import Dubon2026.SourceRationalCuspWeightCancellation
+import Dubon2026.SourceGammaOneRationalBoundedDenominators
+import Dubon2026.SourceIntegerJEulerNormalization
+import Dubon2026.SourceIntegerJEulerBaseChange
+import Dubon2026.SourceGammaOneIntegralCuspRatio
+import Dubon2026.SourceGammaOneIntegralCuspLaurentSpan
+import Dubon2026.SourceGammaOneCuspDifferentialCoefficient
+import Dubon2026.SourceGammaOneCuspDifferentialRealization
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceWeierstrassIntegralDenominator, `Dubon2026.SourceBoundedIntegralSeriesProduct, `Dubon2026.SourceIntegralEisensteinSix, `Dubon2026.SourceBoundedIntegralSeriesConstant, `Dubon2026.SourceFrickeNumeratorIntegralBound, `Dubon2026.SourceBoundedRationalSeriesImage, `Dubon2026.SourceLaurentSpanDescent, `Dubon2026.SourceFrickeLaurentSpanDescent, `Dubon2026.SourceRationalCuspWeightLaurent, `Dubon2026.SourceRationalCuspWeightIntegrality, `Dubon2026.SourceIntegralRationalLaurentSeries, `Dubon2026.SourceBoundedIntegralLaurentAlgebra, `Dubon2026.SourceBoundedRationalLaurentImage, `Dubon2026.SourceCyclotomicLaurentTrace, `Dubon2026.SourceBoundedRationalLaurentIntegral, `Dubon2026.SourceBoundedCyclotomicLaurentFraction, `Dubon2026.SourceBoundedCyclotomicLaurentGenerators, `Dubon2026.SourceBoundedFrickeLaurentField, `Dubon2026.SourceBoundedRationalJAlgebra, `Dubon2026.SourceBoundedRationalCuspImage, `Dubon2026.SourceIntegralLaurentWeightFactors, `Dubon2026.SourceRationalCuspWeightCancellation, `Dubon2026.SourceGammaOneRationalBoundedDenominators, `Dubon2026.SourceIntegerJEulerNormalization, `Dubon2026.SourceIntegerJEulerBaseChange, `Dubon2026.SourceGammaOneIntegralCuspRatio, `Dubon2026.SourceGammaOneIntegralCuspLaurentSpan, `Dubon2026.SourceGammaOneCuspDifferentialCoefficient, `Dubon2026.SourceGammaOneCuspDifferentialRealization]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

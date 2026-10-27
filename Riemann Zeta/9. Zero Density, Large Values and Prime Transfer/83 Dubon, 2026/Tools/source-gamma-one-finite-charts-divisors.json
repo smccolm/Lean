@@ -1,0 +1,803 @@
+{
+  "date": "27 October 2026",
+  "modules": [
+    "Dubon2026.SourceGammaOneExactRamification",
+    "Dubon2026.SourceGammaOneEllipticFibers",
+    "Dubon2026.SourceGammaOneRamifiedRegularParameter",
+    "Dubon2026.SourceGammaOneRamifiedRegularOrder",
+    "Dubon2026.SourceGammaOneRamifiedMeromorphicOrder",
+    "Dubon2026.SourceGammaOneNearbyOrders",
+    "Dubon2026.SourceGammaOneRamifiedChartOrders",
+    "Dubon2026.SourceGammaOneFiniteChartParameters",
+    "Dubon2026.SourceGammaOnePrescribedPlaceOrders",
+    "Dubon2026.SourceGammaOneAnalyticDivisorMoving"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 Hecke characters -> Picard/H1, full/parabolic, transpose and diamond comparison retaining the original homogeneous coefficient endomorphism -> actual differential and period geometry -> exact normalized charts at all finite places, including elliptic points, and analytic representatives of all original degree-zero divisor classes.",
+  "discharged": "The actual coordinate extension degree equals the index of Gamma1 enlarged by the central negative identity. Equality of finite-fiber sums with the termwise bounds proves twice the actual analytic ramification equals the actual enlarged stabilizer cardinality. Actual places are constant on centered-coordinate power fibers, so regular residue values descend analytically with their exact normalized orders. Inversion extends the result to all meromorphic functions. One disk works for every function and every nearby point. Every actual place where j is regular has an injective uniformizer-normalized chart, exact function orders, regular analyticity and coordinate differences of order one. Every nonzero level and elliptic center is retained. No ramification equality, normalized finite chart, analytic descent or function-order comparison remains a supplied hypothesis. Actual finite-place indicators prescribe arbitrary orders without an approximation input. Subtracting the resulting principal divisor moves every actual divisor class to a finite analytic divisor; degree-zero classes have analytic coefficient sum zero.",
+  "boundary": "Actual global period and Hecke/diamond/Picard/H1 comparison remain. Cusp/global-chart construction and a possible modular-period alternative are being compared; the pinned alternative still requires genuine period surjectivity, reciprocity, meromorphic field realization and cusp-order control. The present results do not close arithmetic realization of original finite homogeneous-coefficient characters. Coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. The full all-weight arithmetic goal is unchanged. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 8,586-module scope: all thirteen retained regressions, 54,109 exhaustive theorem checks, 24,813 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.sum_analytic_fiber_orders_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.two_mul_ramification_eq_stabilizer_card",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_stabilizer_multiplier",
+    "Dubon2026.SourceFunctionField.GammaOne.place_eq_of_coord_power_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_order",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_ramifiedPlace_eval",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_meromorphicOrderAt",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_nearby_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_param_eventually_one",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_chart_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_place_chart_parameter",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_place_chart_parameter",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_place_parameter_package",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_polar_regular_separator",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_prescribed_place_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_divisor_analytic_decomposition",
+    "Dubon2026.SourceFunctionField.GammaOne.degree_mapDomain_analyticPlace",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_degree_zero_analytic_representative"
+  ],
+  "scratchCertificates": [
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T08:21:27.024331+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceGammaOneExactRamification"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamification.lean",
+          "sha256": "37AEF9E754763EEAF8270134114A2B6B9A2BA0296689AF1D07DD2B320B91D396",
+          "oleanSha256": "54356CCC0DCB79DB488EDEBCEEBDB8711A9E2CFF472E18A48CA91AA102D05D70"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_eq_index",
+        "Dubon2026.SourceFunctionField.GammaOne.sum_analytic_fiber_orders_eq_index",
+        "Dubon2026.SourceFunctionField.GammaOne.two_mul_ramification_eq_stabilizer_card"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_eq_index",
+        "Dubon2026.SourceFunctionField.GammaOne.sum_analytic_fiber_orders_eq_index",
+        "Dubon2026.SourceFunctionField.GammaOne.two_mul_ramification_eq_stabilizer_card"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamificationAudit1.log",
+      "logSha256": "F22CA7A16FDF37BC183FA7E0A99418119730E15BE0A91BA230BB41E43886BDE1",
+      "auditSha256": "A85163DF39CCB787C56702D2FB1FD1FE7A323A6B0C3BC4DBAF80564651C1EF8E",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 3,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 10,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamificationDependencyAudit1.log",
+      "dependencyAuditSha256": "9DE9DFF887970C6FC6844010844EF893C4E1DCC8E19D61644991B0AFB6C27FD4",
+      "dependencyAuditSourceSha256": "D90B98BA7F7AD30703D931EE6304C27A424F12AFAFD80A949D92EDC8F6EDD71B",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_eq_index",
+        "Dubon2026.SourceFunctionField.GammaOne.sum_analytic_fiber_orders_eq_index",
+        "Dubon2026.SourceFunctionField.GammaOne.two_mul_ramification_eq_stabilizer_card"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact ramification -> native Gamma1 modular forms separate every distinct Gamma1 orbit.",
+      "discharged": [
+        "For every nonzero Gamma1 level and every analytic point, twice the actual normalized analytic ramification equals the stabilizer cardinality after adjoining the central negative identity.",
+        "The original complex function-field degree over j equals the actual subgroup index, derived from actual fibers and their proved orbit bijection."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Apply the existing ramified power-fiber descent and local chart machinery at every analytic center, then cusp charts/global places, actual periods and full Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-exact-ramification-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "2AED1597603E60917BABB46E154941F0A6408178D002FA2F831410E509F24AC6",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T08:47:41.469321+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceGammaOneEllipticFibers",
+        "SourceGammaOneRamifiedRegularParameter",
+        "SourceGammaOneRamifiedRegularOrder"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEllipticFibers.lean",
+          "sha256": "8AA65B672C2AA03895160CC37947FD8D6100930AB06A02C08AFC7A3770CEA1A1",
+          "oleanSha256": "24CACC7033FB40E53AFBB14B1973B2BF6DCEC61A71A7E23608A099F263200C9F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularParameter.lean",
+          "sha256": "691A1CC3312A6F559CDEADF4F3F8E7C7013E274B43FFBDD576EFA61F08EBE72A",
+          "oleanSha256": "C487CC158E65BF34C1F9C339291829EF963493E534F6CBA72D521A414F3AF6C5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularOrder.lean",
+          "sha256": "E7A7CE6AC845743556A328C363EDC4257FD71DB9946FE756C14860678FD8BC2B",
+          "oleanSha256": "1793935B0EEFB726D0202BF7E6F93BF04B2D488A387918B727759FF9875C45EA"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_stabilizer_multiplier",
+        "Dubon2026.SourceFunctionField.GammaOne.place_eq_of_coord_power_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_zero",
+        "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_analytic",
+        "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_order",
+        "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_stabilizer_multiplier",
+        "Dubon2026.SourceFunctionField.GammaOne.place_eq_of_coord_power_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_zero",
+        "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_analytic",
+        "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_order"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularAudit1b.log",
+      "logSha256": "02C65F9209C71E294705365FA1CCC49C143A2FC1529FE833A8537BE376F26C99",
+      "auditSha256": "073104C3E1EBC0A4A10B5109DC181530625620FFA0D27803A7DAFE818220F8F9",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 9,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 12,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularDependencyAudit1b.log",
+      "dependencyAuditSha256": "9C58F982DFC5AC6DE68CB2FDB347C933650CF10AED6BB3FC7DD3144F03E96187",
+      "dependencyAuditSourceSha256": "B6F801378D8DFD2B34C5C3ACF4D2891D4948632D60B09DF9872C0F790BE83ED0",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_stabilizer_multiplier",
+        "Dubon2026.SourceFunctionField.GammaOne.place_eq_of_coord_power_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_zero",
+        "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_analytic",
+        "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_order"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> actual ramified charts -> analytic regular descent and exact normalized order.",
+      "discharged": [
+        "Actual Gamma1 places are constant on every centered-coordinate power fiber, at all nonzero levels and all analytic centers.",
+        "Every actual function regular at the center has analytic residue values on the descended actual-place family, whose order is exactly the original normalized valuation order."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Extend the exact descended order to poles and to one common chart neighborhood, then cusp/global charts and actual periods, full Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-ramified-regular-1b-reuse-review-20261027.json",
+      "reuseReviewSha256": "AE5B045FAF3C82CCC84D747002C81229B915F297E6976F4882C513B386AAEEFD",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T08:53:41.136079+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceGammaOneRamifiedMeromorphicOrder",
+        "SourceGammaOneNearbyOrders",
+        "SourceGammaOneRamifiedChartOrders"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedMeromorphicOrder.lean",
+          "sha256": "CFE079129198AC1E9893E773A117FBBA11379E37D9719C27D7000395AE5AF758",
+          "oleanSha256": "7898368D132DBF546F8E06D2FC0F4BFB7152FD244259FE183200571DCFEA1919"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNearbyOrders.lean",
+          "sha256": "53F7AF0C849D1B91E4D91D73F02347981FE65678C6715C4CC9B5E8A8C048E760",
+          "oleanSha256": "DC40AC0AF489D1C47AE5CB2BD18E3B48B8DD301CF775098D70730C9C49D15036"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrders.lean",
+          "sha256": "1F85B7090D8BE892D5B5E06A42FBBCBF5875F3EE60BCE237A13E4B206ADC555C",
+          "oleanSha256": "12A2CC77507B775CBC3BF1249D76959815C79F7C7993149D39709845F4A41E84"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_ramifiedPlace_eval",
+        "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_meromorphicOrderAt",
+        "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_nearby_orders",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_param_eventually_one",
+        "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_chart_orders"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_ramifiedPlace_eval",
+        "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_meromorphicOrderAt",
+        "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_nearby_orders",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_param_eventually_one",
+        "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_chart_orders"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersAudit1b.log",
+      "logSha256": "FC335AC6E2E23306BAD565113562D1D9FCCE06E19B4194AB81132EB2493EB84F",
+      "auditSha256": "70E94B169D64918CCEB5739278F7299636CF30BE77D64059E4301B7955C6628F",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 8,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 12,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersDependencyAudit1b.log",
+      "dependencyAuditSha256": "A5AE695522DFD7940700614B4F380254D0FC1D1304DD4768C2EECF9E3A879C33",
+      "dependencyAuditSourceSha256": "8A16AF8EC84BA70F4F114C6ABD3A8416FD0A51B9FA9451AE1877197AE8522F7E",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_ramifiedPlace_eval",
+        "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_meromorphicOrderAt",
+        "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_nearby_orders",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_param_eventually_one",
+        "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_chart_orders"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> actual ramified charts -> exact orders for all functions on a common neighborhood.",
+      "discharged": [
+        "All actual rational functions, including poles, have meromorphic residue values on the descended Gamma1 place family with exactly the normalized valuation order at the center.",
+        "One positive radius works for every nonzero function and every chart point; regular functions have analytic values throughout that common neighborhood."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Normalize charts by actual uniformizers, construct cusp/global place charts and actual periods, discharge full Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-ramified-chart-orders-1b-reuse-review-20261027.json",
+      "reuseReviewSha256": "FEF2169C2437159AEF5AA4A527781277A0A7F26C5D5C58AB627D5CAF8A952D9C",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T08:48:22.541474+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceGammaOneFiniteChartParameters"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParameters.lean",
+          "sha256": "F14310C6387FECC826A00627EC0CB80EB46FC9EEB6431B62F66B00BAE4CCB321",
+          "oleanSha256": "075B49EE01D063195C53714F5AF8EFEF8D8A648807D29475A7D7683F98213D09"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.analytic_place_chart_parameter",
+        "Dubon2026.SourceFunctionField.GammaOne.finite_place_chart_parameter",
+        "Dubon2026.SourceFunctionField.GammaOne.finite_place_parameter_package"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.analytic_place_chart_parameter",
+        "Dubon2026.SourceFunctionField.GammaOne.finite_place_chart_parameter",
+        "Dubon2026.SourceFunctionField.GammaOne.finite_place_parameter_package"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParametersAudit1.log",
+      "logSha256": "2B7813310C52EA9CB712ABE7373B2F4B28A4AD1617B5ADA21C789C36BDBE01F3",
+      "auditSha256": "1E57046C11DA8EEE875B34D0B748EF9D3D428D14C82EE8BC0FDB1FC8FCAF7989",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 6,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 10,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParametersDependencyAudit1.log",
+      "dependencyAuditSha256": "6F3ADEB773FE8EBF39D8ADBE725322009B0F1C199AF1E6A9B5C0830A3427DEB5",
+      "dependencyAuditSourceSha256": "B3DE456516DA224D0AF0303CBEA8C0B2513E01484A75D8AF80D9F93BED72FE55",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.analytic_place_chart_parameter",
+        "Dubon2026.SourceFunctionField.GammaOne.finite_place_chart_parameter",
+        "Dubon2026.SourceFunctionField.GammaOne.finite_place_parameter_package"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> actual global charts -> normalized charts at every finite j-place.",
+      "discharged": [
+        "Every actual Gamma1 analytic place, including elliptic centers, has an injective uniformizer-normalized chart with exact orders and regular analyticity for all functions on a common disk.",
+        "Every actual j-regular place has such a chart, with every coordinate difference of valuation order one."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Construct and exhaust the cusp charts, then actual global period and full Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-finite-chart-parameters-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "265EF4E0DF18837568938D0BC4A3395DE8BB8B4A0B86DA23879C383A2E1E5889",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T09:33:19.260190+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceGammaOnePrescribedPlaceOrders",
+        "SourceGammaOneAnalyticDivisorMoving"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrescribedPlaceOrders.lean",
+          "sha256": "71FC01EA242FD8CB40C348D0D91A7009EAF576CCE1D667831C34085777C90B6D",
+          "oleanSha256": "027C40A9FC67C6B196454B84F41F29C76CAAF1EA50B81259A45E88A4376ED2C5"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticDivisorMoving.lean",
+          "sha256": "72C4FC0809ADBC9039AEB2924B63B85888B0EC2B0ED915A280852B07EE42E949",
+          "oleanSha256": "16E38EC6197C4701BB58626C27C54E59B712A04272643818EB9ECC22C99A6228"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_polar_regular_separator",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_prescribed_place_orders",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_divisor_analytic_decomposition",
+        "Dubon2026.SourceFunctionField.GammaOne.degree_mapDomain_analyticPlace",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_degree_zero_analytic_representative"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_polar_regular_separator",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_prescribed_place_orders",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_divisor_analytic_decomposition",
+        "Dubon2026.SourceFunctionField.GammaOne.degree_mapDomain_analyticPlace",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_degree_zero_analytic_representative"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorMovingAudit1.log",
+      "logSha256": "932815C124E29EA3B9DC81252C932C6C70DFF67850ADDFE60B4A75F02D344F96",
+      "auditSha256": "E434CE62AFCD01C5CCA822847634E35E18B8FF299F2AB62F1CE881948D2DECE4",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 22,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 11,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorMovingDependencyAudit1.log",
+      "dependencyAuditSha256": "6091565D943AE99FC2D0F27D00AFDD3B325110866E3F6639079752444118744D",
+      "dependencyAuditSourceSha256": "348425CE7394B763A85E5DA21AC88BB86CB1C350C96A716EFB84FEEF4F628C94",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_polar_regular_separator",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_prescribed_place_orders",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_divisor_analytic_decomposition",
+        "Dubon2026.SourceFunctionField.GammaOne.degree_mapDomain_analyticPlace",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_degree_zero_analytic_representative"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> full Picard/H1/Hecke/diamond comparison -> reduction of every actual degree-zero divisor class to a finite analytic divisor.",
+      "discharged": [
+        "Prescribe arbitrary integral orders at a finite set of actual Gamma1 places without an approximation certificate.",
+        "Every actual divisor is a principal degree-zero divisor plus a pushforward from upper-half-plane points; if the original degree is zero then the analytic coefficient sum is zero."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Actual Picard/period isomorphism, Hecke/diamond/full-parabolic arithmetic comparison, original all-weight characteristic-zero association and literal higher symmetric-power continuation. The candidate modular-period route still requires proved period surjectivity, reciprocity, field realization and cusp-order control. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-moving-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "99B1167D0ED36B83F4122BC2C078E4B7EAC599C5A1006351EB80E88AB6E8ECC0",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-gamma-one-exact-ramification-1-reuse-review-20261027.json",
+    "Tools/source-gamma-one-ramified-regular-1b-reuse-review-20261027.json",
+    "Tools/source-gamma-one-ramified-chart-orders-1b-reuse-review-20261027.json",
+    "Tools/source-gamma-one-finite-chart-parameters-1-reuse-review-20261027.json",
+    "Tools/source-gamma-one-divisor-moving-1-reuse-review-20261027.json"
+  ],
+  "dependencyRouteAssessment": {
+    "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-finite-charts-divisors-promotion-route-740.json",
+    "sha256": "ABB411F16D2524CBD3BD8A872699E0E75B13E6F1B985F2BB676CE1690AD3D6E2"
+  },
+  "proofEvidenceArchive": {
+    "manifest": "Tools/gamma-one-finite-charts-divisors-20261027-740/archive-manifest-8586d.json",
+    "sha256": "0ECF99F5C5A9F69657937A99E03972FAC51CE96D9BC3F2FB8951748D986FED85",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt8586": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamificationDependencyAudit1Production8586.log",
+        "sha256": "9DE9DFF887970C6FC6844010844EF893C4E1DCC8E19D61644991B0AFB6C27FD4",
+        "requiredProofValueEdges": 10,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_eq_index",
+          "Dubon2026.SourceFunctionField.GammaOne.sum_analytic_fiber_orders_eq_index",
+          "Dubon2026.SourceFunctionField.GammaOne.two_mul_ramification_eq_stabilizer_card"
+        ],
+        "sourceSha256": "30A32750AD8F0C46BF39BE38D153D6E7B8730E38B3AC7C02BB22BB7093C8F708"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularDependencyAudit1bProduction8586.log",
+        "sha256": "9C58F982DFC5AC6DE68CB2FDB347C933650CF10AED6BB3FC7DD3144F03E96187",
+        "requiredProofValueEdges": 12,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.exists_stabilizer_multiplier",
+          "Dubon2026.SourceFunctionField.GammaOne.place_eq_of_coord_power_eq",
+          "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_zero",
+          "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_analytic",
+          "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_order"
+        ],
+        "sourceSha256": "412B4203D21909169DF276703B964F208B0F5000F1D70B97EDFBA57D430B8854"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersDependencyAudit1bProduction8586.log",
+        "sha256": "A5AE695522DFD7940700614B4F380254D0FC1D1304DD4768C2EECF9E3A879C33",
+        "requiredProofValueEdges": 12,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_ramifiedPlace_eval",
+          "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_meromorphicOrderAt",
+          "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_nearby_orders",
+          "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_param_eventually_one",
+          "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_chart_orders"
+        ],
+        "sourceSha256": "801F15D121935F3AB8502A143F7EF997061A6190D122F7B29ABE9453E3F5DBA7"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParametersDependencyAudit1Production8586.log",
+        "sha256": "6F3ADEB773FE8EBF39D8ADBE725322009B0F1C199AF1E6A9B5C0830A3427DEB5",
+        "requiredProofValueEdges": 10,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.analytic_place_chart_parameter",
+          "Dubon2026.SourceFunctionField.GammaOne.finite_place_chart_parameter",
+          "Dubon2026.SourceFunctionField.GammaOne.finite_place_parameter_package"
+        ],
+        "sourceSha256": "89DC351ECEBD7D79F808452784AA605B0C9D5428A3D1349341E4E594D7D5F6E0"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorMovingDependencyAudit1Production8586.log",
+        "sha256": "6091565D943AE99FC2D0F27D00AFDD3B325110866E3F6639079752444118744D",
+        "requiredProofValueEdges": 11,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.exists_polar_regular_separator",
+          "Dubon2026.SourceFunctionField.GammaOne.exists_prescribed_place_orders",
+          "Dubon2026.SourceFunctionField.GammaOne.exists_divisor_analytic_decomposition",
+          "Dubon2026.SourceFunctionField.GammaOne.degree_mapDomain_analyticPlace",
+          "Dubon2026.SourceFunctionField.GammaOne.exists_degree_zero_analytic_representative"
+        ],
+        "sourceSha256": "48CAFFC0887C187961F29E8C5B6618C88C42C1C626AB9013DC60AA1F1AD4D468"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartsDivisorsProductionAudit8586.log",
+    "sha256": "E9FC6608687D682F4EDB232B6C3A56F377EB35B7561918F6B04A4B902DE09B56",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-finite-charts-divisors-production-build-8586.log",
+    "aggregateSha256": "2F17C54FF40F527AC27C2CBFA08D16C9EDFAE5036651192D4540CB0EEB425EE1",
+    "productionModules": 8586,
+    "incrementModules": 10,
+    "axiomChecks": 22,
+    "exhaustiveIncrementTheorems": 48,
+    "linterScopes": 10,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 48,
+    "productionReuse": "Only scratch imports are qualified. All final audited statements, proof bodies and comments remain identical. The actual original integral-ratio field, all nonzero levels, elliptic stabilizers, residue values and normalized place orders are retained.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 48,
+      "scratchDistinct": 48,
+      "generatedNameRenamings": {},
+      "productionFocused": 48,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceGammaOneExactRamification"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamificationScratchOwnership731.log",
+            "sha256": "0AE989B53D795A7CAB6215A3515B87EAB73BD74AF36B737970823E9E35623293",
+            "sourceSha256": "F491767540E56E52D655075A704AF7F3F5CC5DB8E05564EE355D81684C9ACE2E"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneEllipticFibers",
+            "SourceGammaOneRamifiedRegularParameter",
+            "SourceGammaOneRamifiedRegularOrder"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularScratchOwnership733b.log",
+            "sha256": "F51892F87CED077F97899D203D7F8B29163DDEAABA20F17916A1ACECDD3C51CF",
+            "sourceSha256": "60DFA0FE52233DB999240A947BAB72BC365789D2581D49EE7FE04021A22712A9"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneRamifiedMeromorphicOrder",
+            "SourceGammaOneNearbyOrders",
+            "SourceGammaOneRamifiedChartOrders"
+          ],
+          "count": 8,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersScratchOwnership734b.log",
+            "sha256": "E2A3FC11D367E6E755C9BB8AC67ACA022F375EAE54B57C20ED47064CB40BED63",
+            "sourceSha256": "FD8D21BBE73F356289FCB8ADBAC0BDF1E89BDB41E8504128E83A48F4DB74AA0A"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneFiniteChartParameters"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParametersScratchOwnership735.log",
+            "sha256": "2FBBB1CF48990D14BBE3F74150631FAFE357CDA2841CBA553DFA6D2E40871A8C",
+            "sourceSha256": "B3A2135AE701F9A5FD424C5B64B47CCD00CB40A56DC6B29FEEC8AC1C4B031AE5"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOnePrescribedPlaceOrders",
+            "SourceGammaOneAnalyticDivisorMoving"
+          ],
+          "count": 22,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorMovingScratchOwnership738.log",
+            "sha256": "8CF4D86476899B71B0041C672445D312D782874B7307EAEB98426D6C39AD3AEF",
+            "sourceSha256": "B57AE30397A7A646DADAD657134439A9621FE5FD8398B8BF58B5D13DA2DE43F8"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartsDivisorsOwnership8586.log",
+        "sha256": "EA7575B60A1CBE31A292296651CEDCEE050C9FB185E5C5DBAF8D54E51E4BA018",
+        "sourceSha256": "F9EF72BFB4D5C8F484A7678763061FA3B4D289D8AFD16945C4EA8540235B7F9F"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-012207-005.log",
+        "sha256": "0F843570BD36807A14FD3622D7D2823AB0040503249BBC818703DDF7D599A307"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 10 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceGammaOneExactRamification",
+            "scratchSha256": "37AEF9E754763EEAF8270134114A2B6B9A2BA0296689AF1D07DD2B320B91D396",
+            "productionSha256": "10E7EB57948F059803A87BC61B846D618160FB6AFE4A59CA0A9CD6B635513D8B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneEllipticFibers",
+            "scratchSha256": "8AA65B672C2AA03895160CC37947FD8D6100930AB06A02C08AFC7A3770CEA1A1",
+            "productionSha256": "B6D3ABC0945581A73C19CC96342B822D9CCAB7762C7C731937DFB38E8C4DF11A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRamifiedRegularParameter",
+            "scratchSha256": "691A1CC3312A6F559CDEADF4F3F8E7C7013E274B43FFBDD576EFA61F08EBE72A",
+            "productionSha256": "8148024F3AF830DBC84F4356127C05AC4E88F2444E71A302173E2A531C510C65",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRamifiedRegularOrder",
+            "scratchSha256": "E7A7CE6AC845743556A328C363EDC4257FD71DB9946FE756C14860678FD8BC2B",
+            "productionSha256": "024EF26D63A703EB0B69AD62E02F9712266EF82C150C4838E7A02B80E290FFBF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRamifiedMeromorphicOrder",
+            "scratchSha256": "CFE079129198AC1E9893E773A117FBBA11379E37D9719C27D7000395AE5AF758",
+            "productionSha256": "70B101F9DFC52F269ED9DD66E7036B9B7891F64A0CFFF0FAB4CBB60E87800A97",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneNearbyOrders",
+            "scratchSha256": "53F7AF0C849D1B91E4D91D73F02347981FE65678C6715C4CC9B5E8A8C048E760",
+            "productionSha256": "801334F293C3F665C1EEFE87A18FDB3E544A43B785A71F6628E27B31AFB36B88",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRamifiedChartOrders",
+            "scratchSha256": "1F85B7090D8BE892D5B5E06A42FBBCBF5875F3EE60BCE237A13E4B206ADC555C",
+            "productionSha256": "3960CB85C80A3E9DCF1B6C7DDA885149AE6D34A8AAE53381F78AC9FB634251F4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneFiniteChartParameters",
+            "scratchSha256": "F14310C6387FECC826A00627EC0CB80EB46FC9EEB6431B62F66B00BAE4CCB321",
+            "productionSha256": "6259AD49DC64D9900E4A063A55B7BF81D4AE61DC7CE4413D4DB1688629D3BD06",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOnePrescribedPlaceOrders",
+            "scratchSha256": "71FC01EA242FD8CB40C348D0D91A7009EAF576CCE1D667831C34085777C90B6D",
+            "productionSha256": "71FC01EA242FD8CB40C348D0D91A7009EAF576CCE1D667831C34085777C90B6D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAnalyticDivisorMoving",
+            "scratchSha256": "72C4FC0809ADBC9039AEB2924B63B85888B0EC2B0ED915A280852B07EE42E949",
+            "productionSha256": "944EEE186D0A72456EB17FF15828E33F291F6BA6F817A56692F3B027F49A69CF",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 48 distinct names from 48 exhaustive scratch checks are retained: 48 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Actual global period and Hecke/diamond/Picard/H1 comparison remain. Cusp/global-chart construction and a possible modular-period alternative are being compared; the pinned alternative still requires genuine period surjectivity, reciprocity, meromorphic field realization and cusp-order control. The present results do not close arithmetic realization of original finite homogeneous-coefficient characters. Coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. The full all-weight arithmetic goal is unchanged. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN."
+  },
+  "archivePackagingRepair8586b": {
+    "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/archive-packaging-repair-8586b.json",
+    "sha256": "68BE98D5DC8EB807C8BF908C82B36B83DA0D1976E0B6F929C93F18A478ADD559"
+  },
+  "externalMarkdownPackagingRepair8586d": {
+    "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/external-markdown-packaging-repair-8586d.json",
+    "sha256": "30E509439699BB46BA40DF3724D700508B5B956BE7E76930D97828FA89AD3EE1"
+  },
+  "receipt8586": {
+    "recordedUTC": "2026-10-27T12:23:28.259250+00:00",
+    "log": "logs/dubon-build-20261027-034612-601.log",
+    "sha256": "16FA3C97F458D7CB5691FBE649F6EB5C6DC1AE09393F8CB4308E898EBFBC45AF",
+    "bytes": 13945091,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8586,
+    "projectTheorems": 54109,
+    "registeredConsumers": 24813,
+    "registeredConstructions": 2465,
+    "declarations": 33231,
+    "generated": 34088,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261027_034012.log",
+    "foundationSha256": "B238D382522074239A1AF8D1EABB43621D17659EBE0A4860D955E4849EFA6BD5",
+    "countReconciliation": {
+      "previousTheorems": 54062,
+      "focusedTheorems": 48,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourceFunctionField.PowerDescent.root.congr_simp"
+      ],
+      "addedTheorems": 47,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartsDivisorsGlobalOwnership8586b.log",
+      "globalOwnershipSha256": "A98FC8DC4F583F1DB847532E4774DE7849F4161E01AF9BFABCA0FF1E94BAD9C5",
+      "globalOwnershipSourceSha256": "0DABCBFDF77D0C5F1DD9C590D87314DA5F97A26D53C1F0B704C166A7E55BF6BD",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartsDivisorsOwnership8586.log",
+      "ownershipSha256": "EA7575B60A1CBE31A292296651CEDCEE050C9FB185E5C5DBAF8D54E51E4BA018"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 48,
+      "scratchDistinct": 48,
+      "generatedNameRenamings": {},
+      "productionFocused": 48,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceGammaOneExactRamification"
+          ],
+          "count": 3,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamificationScratchOwnership731.log",
+            "sha256": "0AE989B53D795A7CAB6215A3515B87EAB73BD74AF36B737970823E9E35623293",
+            "sourceSha256": "F491767540E56E52D655075A704AF7F3F5CC5DB8E05564EE355D81684C9ACE2E"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneEllipticFibers",
+            "SourceGammaOneRamifiedRegularParameter",
+            "SourceGammaOneRamifiedRegularOrder"
+          ],
+          "count": 9,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularScratchOwnership733b.log",
+            "sha256": "F51892F87CED077F97899D203D7F8B29163DDEAABA20F17916A1ACECDD3C51CF",
+            "sourceSha256": "60DFA0FE52233DB999240A947BAB72BC365789D2581D49EE7FE04021A22712A9"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneRamifiedMeromorphicOrder",
+            "SourceGammaOneNearbyOrders",
+            "SourceGammaOneRamifiedChartOrders"
+          ],
+          "count": 8,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersScratchOwnership734b.log",
+            "sha256": "E2A3FC11D367E6E755C9BB8AC67ACA022F375EAE54B57C20ED47064CB40BED63",
+            "sourceSha256": "FD8D21BBE73F356289FCB8ADBAC0BDF1E89BDB41E8504128E83A48F4DB74AA0A"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneFiniteChartParameters"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParametersScratchOwnership735.log",
+            "sha256": "2FBBB1CF48990D14BBE3F74150631FAFE357CDA2841CBA553DFA6D2E40871A8C",
+            "sourceSha256": "B3A2135AE701F9A5FD424C5B64B47CCD00CB40A56DC6B29FEEC8AC1C4B031AE5"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOnePrescribedPlaceOrders",
+            "SourceGammaOneAnalyticDivisorMoving"
+          ],
+          "count": 22,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorMovingScratchOwnership738.log",
+            "sha256": "8CF4D86476899B71B0041C672445D312D782874B7307EAEB98426D6C39AD3AEF",
+            "sourceSha256": "B57AE30397A7A646DADAD657134439A9621FE5FD8398B8BF58B5D13DA2DE43F8"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartsDivisorsOwnership8586.log",
+        "sha256": "EA7575B60A1CBE31A292296651CEDCEE050C9FB185E5C5DBAF8D54E51E4BA018",
+        "sourceSha256": "F9EF72BFB4D5C8F484A7678763061FA3B4D289D8AFD16945C4EA8540235B7F9F"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-012207-005.log",
+        "sha256": "0F843570BD36807A14FD3622D7D2823AB0040503249BBC818703DDF7D599A307"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 10 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceGammaOneExactRamification",
+            "scratchSha256": "37AEF9E754763EEAF8270134114A2B6B9A2BA0296689AF1D07DD2B320B91D396",
+            "productionSha256": "10E7EB57948F059803A87BC61B846D618160FB6AFE4A59CA0A9CD6B635513D8B",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneEllipticFibers",
+            "scratchSha256": "8AA65B672C2AA03895160CC37947FD8D6100930AB06A02C08AFC7A3770CEA1A1",
+            "productionSha256": "B6D3ABC0945581A73C19CC96342B822D9CCAB7762C7C731937DFB38E8C4DF11A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRamifiedRegularParameter",
+            "scratchSha256": "691A1CC3312A6F559CDEADF4F3F8E7C7013E274B43FFBDD576EFA61F08EBE72A",
+            "productionSha256": "8148024F3AF830DBC84F4356127C05AC4E88F2444E71A302173E2A531C510C65",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRamifiedRegularOrder",
+            "scratchSha256": "E7A7CE6AC845743556A328C363EDC4257FD71DB9946FE756C14860678FD8BC2B",
+            "productionSha256": "024EF26D63A703EB0B69AD62E02F9712266EF82C150C4838E7A02B80E290FFBF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRamifiedMeromorphicOrder",
+            "scratchSha256": "CFE079129198AC1E9893E773A117FBBA11379E37D9719C27D7000395AE5AF758",
+            "productionSha256": "70B101F9DFC52F269ED9DD66E7036B9B7891F64A0CFFF0FAB4CBB60E87800A97",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneNearbyOrders",
+            "scratchSha256": "53F7AF0C849D1B91E4D91D73F02347981FE65678C6715C4CC9B5E8A8C048E760",
+            "productionSha256": "801334F293C3F665C1EEFE87A18FDB3E544A43B785A71F6628E27B31AFB36B88",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRamifiedChartOrders",
+            "scratchSha256": "1F85B7090D8BE892D5B5E06A42FBBCBF5875F3EE60BCE237A13E4B206ADC555C",
+            "productionSha256": "3960CB85C80A3E9DCF1B6C7DDA885149AE6D34A8AAE53381F78AC9FB634251F4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneFiniteChartParameters",
+            "scratchSha256": "F14310C6387FECC826A00627EC0CB80EB46FC9EEB6431B62F66B00BAE4CCB321",
+            "productionSha256": "6259AD49DC64D9900E4A063A55B7BF81D4AE61DC7CE4413D4DB1688629D3BD06",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOnePrescribedPlaceOrders",
+            "scratchSha256": "71FC01EA242FD8CB40C348D0D91A7009EAF576CCE1D667831C34085777C90B6D",
+            "productionSha256": "71FC01EA242FD8CB40C348D0D91A7009EAF576CCE1D667831C34085777C90B6D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAnalyticDivisorMoving",
+            "scratchSha256": "72C4FC0809ADBC9039AEB2924B63B85888B0EC2B0ED915A280852B07EE42E949",
+            "productionSha256": "944EEE186D0A72456EB17FF15828E33F291F6BA6F817A56692F3B027F49A69CF",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 48 distinct names from 48 exhaustive scratch checks are retained: 48 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Actual global period and Hecke/diamond/Picard/H1 comparison remain. Cusp/global-chart construction and a possible modular-period alternative are being compared; the pinned alternative still requires genuine period surjectivity, reciprocity, meromorphic field realization and cusp-order control. The present results do not close arithmetic realization of original finite homogeneous-coefficient characters. Coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. The full all-weight arithmetic goal is unchanged. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN."
+  }
+}

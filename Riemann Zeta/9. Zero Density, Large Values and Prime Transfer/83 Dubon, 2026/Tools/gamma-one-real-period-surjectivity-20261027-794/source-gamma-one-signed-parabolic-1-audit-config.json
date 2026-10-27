@@ -1,0 +1,89 @@
+{
+  "modules": [
+    "SourceGammaOneCentralSignCharacters",
+    "SourceGammaOneSignedParabolicCharacters"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.exists_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_spec",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.real_character_eq_of_square_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_mul_square",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_member_square",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_of_member",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_parabolic",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_parabolic_finrank_le_signed"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.exists_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_spec",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.real_character_eq_of_square_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_mul_square",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_member_square",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_of_member",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_parabolic",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_parabolic_finrank_le_signed",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.exists_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_spec",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.real_character_eq_of_square_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_mul_square",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_member_square",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_of_member",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_parabolic",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_parabolic_finrank_le_signed",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift",
+    "Dubon2026.SourceFunctionField.GammaOne.mem_plusMinus_iff",
+    "Dubon2026.sourceH1Finite",
+    "SpecialLinearGroup.SL2Z_generators"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.exists_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_spec",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.real_character_eq_of_square_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_mul_square",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_member_square",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_of_member",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_parabolic",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_parabolic_finrank_le_signed",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneCentralSignCharacters",
+    "SourceGammaOneSignedParabolicCharacters",
+    "SourceGammaOneRealParabolicPeriods",
+    "SourceGammaOneRealPeriodMap",
+    "SourceGammaOneRealPeriodInjectivity",
+    "SourceGammaOneInvariantRealPart"
+  ],
+  "separateReason": "Actual real Gamma1 parabolic characters inject linearly into the finite real parabolic character space of the central-sign enlargement. The needed finrank inequality follows; Manin and genus dimension comparison remain."
+}

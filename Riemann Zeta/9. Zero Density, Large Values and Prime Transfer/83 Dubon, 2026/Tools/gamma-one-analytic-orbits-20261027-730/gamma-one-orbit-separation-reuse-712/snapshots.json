@@ -1,0 +1,16 @@
+{
+  "repository": "anthropics/fermats-last-theorem",
+  "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "scope": "Selected pinned source files only. No full closure, local build, import or pin change.",
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularForm_exists_gammaH_apply_mul_apply_ne_of_forall_smul_ne_of_gamma0_smul_eq.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-separation-reuse-712\\S_ModularForm_exists_gammaH_apply_mul_apply_ne_of_forall_smul_ne_of_gamma0_smul_eq.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularForm_exists_gammaH_apply_mul_apply_ne_of_forall_smul_ne_of_gamma0_smul_eq.lean",
+      "bytes": 11764,
+      "gitBlob": "8917d2b4a8072a1211fb8abded3efe9d70cd9301",
+      "sha256": "83B79491C2FD0850D871C9120D71C7A89586095612790CBB060060E5E6144139"
+    }
+  ]
+}

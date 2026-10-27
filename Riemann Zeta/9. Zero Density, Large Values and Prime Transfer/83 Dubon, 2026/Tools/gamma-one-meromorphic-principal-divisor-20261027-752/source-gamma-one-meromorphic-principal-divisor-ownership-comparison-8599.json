@@ -1,0 +1,179 @@
+{
+  "scratchSum": 40,
+  "scratchDistinct": 40,
+  "generatedNameRenamings": {},
+  "productionFocused": 40,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {},
+  "missingFromFocusedAlreadyInPrevious": [],
+  "productionNamesNotInScratch": [],
+  "unexplainedMissing": [],
+  "scopes": [
+    {
+      "modules": [
+        "SourceGammaOneCuspResidues"
+      ],
+      "count": 6,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResiduesScratchOwnership742.log",
+        "sha256": "56D3458B9DB45DE5C8019C75586BF2B352F775782441081DD3898CCE250EA50F",
+        "sourceSha256": "8302FCCFDAE8A4D3907614D2C16C594E49C5A06D5B7BB646930BC5AF00E08E79"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneCuspBoundedRealization",
+        "SourceGammaOneCuspPlaceExhaustion"
+      ],
+      "count": 6,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspExhaustionScratchOwnership743.log",
+        "sha256": "DE30B35F449027BD019A658752EC94C34C86532191EBA536BE82E1B0FE3FCDC6",
+        "sourceSha256": "B68178469EDEF05D76F73464A720610B019C7CC86871FDC238A1203404D88B88"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneUniformCuspPole",
+        "SourceGammaOneHolomorphicModularQuotient",
+        "SourceGammaOneHolomorphicFieldRealization"
+      ],
+      "count": 7,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldScratchOwnership744.log",
+        "sha256": "B1BE6DA9AD7F80DEBF44908476C981E58C3D21A47D5C7AC36224976268B30F5E",
+        "sourceSha256": "333275DA8ABBD622055F2A250C568C77F04774B7430547DA1737CDEB19CF0A79"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneOriginalPoleMultiplier",
+        "SourceGammaOnePoleClearedNormalization"
+      ],
+      "count": 7,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearingNormalizationScratchOwnership746.log",
+        "sha256": "D6B1297EAC0FA648A1485888EE6A48E02875FDF1B628ADE88CEB0A01D2888AC8",
+        "sourceSha256": "B3358E9394F4DBFC97A86B1C3DAA95D1340D165406BB701F3AFF4DA29CF803C6"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOnePoleClearedProduct",
+        "SourceGammaOnePoleClearedCuspBounds",
+        "SourceGammaOneMeromorphicFieldRealization"
+      ],
+      "count": 6,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldScratchOwnership749.log",
+        "sha256": "25A43FCE450B7EE46AF61736E0D3B19F50BC008123501309D91F0F26B455381F",
+        "sourceSha256": "0067E5C1E311F639AC05BC357E44CA3E8DF5BF44FECFAA0E78BF642BB7BB310A"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneMeromorphicCuspLimits",
+        "SourceGammaOneMeromorphicPrincipalDivisor"
+      ],
+      "count": 8,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorScratchOwnership751.log",
+        "sha256": "43245126112C73FA181266EE77DF360A697CC9048F4147E99BD336B6F0C52EA5",
+        "sourceSha256": "B72D7CD751017715EEF156C9CE8B73033E84C5BBC00D39BA3E8A46C6F035632D"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorOwnership8599.log",
+    "sha256": "64FA379D459E2547C2F14888CC879A9556625BFC29B042E79FC6673C625E15FC",
+    "sourceSha256": "D3F70CAD96A3ADCF8C124BF08ED9CF3F7BC316E9FCE6E6E4723581F5B1DD9F29"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-034612-601.log",
+    "sha256": "16FA3C97F458D7CB5691FBE649F6EB5C6DC1AE09393F8CB4308E898EBFBC45AF"
+  },
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 13 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourceGammaOneCuspResidues",
+        "scratchSha256": "8758D75A8136557A54075839F03773133574AF5076DCB28CCFB4C16123D6846F",
+        "productionSha256": "8758D75A8136557A54075839F03773133574AF5076DCB28CCFB4C16123D6846F",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspBoundedRealization",
+        "scratchSha256": "D1D7F873E802C2C3E91D75E6C21C75A20568389334A87F9E28D86E5B8DBCAC69",
+        "productionSha256": "7D53F2360902DE331614E23282BDBFCFC0C554E02977EAD57E189FF2D5000314",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspPlaceExhaustion",
+        "scratchSha256": "EA2A0681688AEA7BEAE678FAC085668A85A719E7FE0565BFFD6D9783A3D97BD5",
+        "productionSha256": "4B7E1A0E384F97BCB5492787AB30B91CD3A2AEB1DC77D8DB1A2C904C9851DC18",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneUniformCuspPole",
+        "scratchSha256": "EB744105EA29F866EAC2BA40D19305A41B9A4CB8B54BBF09C99B6A1F2A5A57D3",
+        "productionSha256": "95834F5B1AA14D441C6735AE04CC990D5E8886BE5FC26F86CD3B97DB198EC949",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHolomorphicModularQuotient",
+        "scratchSha256": "3615B6B5798C4BBE514257FB679706B6502B9E96FFC5C4788487F384641745A4",
+        "productionSha256": "0543EF5DA870BB01A462C7619F91D5010BA2F6ED5BB7D21002D2C6300B4E58E3",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHolomorphicFieldRealization",
+        "scratchSha256": "30042838C4B2CB48621A0E736D94673375B2B22ADD0EDF0E72A49EA5DCF40FB0",
+        "productionSha256": "89DE3104F4AF2FC84AC79F7454BB6404185B3A2568EB5CCEFF6BB2A9D498F6D1",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneOriginalPoleMultiplier",
+        "scratchSha256": "309B6DA1385D0E447E82C90498F98048939C4958C83B78DE04954BFE8C1C1A08",
+        "productionSha256": "309B6DA1385D0E447E82C90498F98048939C4958C83B78DE04954BFE8C1C1A08",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOnePoleClearedNormalization",
+        "scratchSha256": "4EA0F5A259ABB716451A0267977811EB4FFDFD0249514BB89C4505DD94697508",
+        "productionSha256": "4EA0F5A259ABB716451A0267977811EB4FFDFD0249514BB89C4505DD94697508",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOnePoleClearedProduct",
+        "scratchSha256": "B195357EDAD0105292EDA8A18E2CCB0BFA916DAC14DA5DE1C436029F0584FD4B",
+        "productionSha256": "AFED125C528703C8E5EB4A09E19C3B968E8A8F78A38F5D65F2016444FF82E444",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOnePoleClearedCuspBounds",
+        "scratchSha256": "1B24464405C3C418046C46C38BEEA5C1172CAB150D4E37D80BE90B562DC4E253",
+        "productionSha256": "EAC5DF8F29943D565A2E3E5DEBDA37B63B41A57ED143BC2BA4A5436C5281193A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneMeromorphicFieldRealization",
+        "scratchSha256": "DC94E0CFCA7F6A03B5A70B2DAAE0ADC18B0573DCF26241698BEBA331A8B9A9CB",
+        "productionSha256": "349453DC40DEAC555B569EF7E19E61F28ABB4A24DAA92291BF41C672FCDF390D",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneMeromorphicCuspLimits",
+        "scratchSha256": "67169F583ACFA9C4F6AA8515A473FAF472B4042DE13D63B1411A94928EBD871C",
+        "productionSha256": "ED185486CADEF91FF4D97AB6529A27177AD048011E05C9BBED4B227F532E7FD0",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneMeromorphicPrincipalDivisor",
+        "scratchSha256": "06E5FFDB66F99ECCC1FAE95EDCFC0FF26CC81694D462B87605745D7860D0E3EB",
+        "productionSha256": "BFC520DEBDB84C434C29A2118559A4DB86211E8491926EA708A0399672BE89EA",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": true
+}

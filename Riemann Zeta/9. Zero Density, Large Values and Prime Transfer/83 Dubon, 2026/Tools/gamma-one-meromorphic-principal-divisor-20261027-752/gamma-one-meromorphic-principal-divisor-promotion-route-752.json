@@ -1,0 +1,38 @@
+{
+  "scope": 752,
+  "scopeIds": [
+    742,
+    743,
+    744,
+    745,
+    746,
+    747,
+    748,
+    749,
+    750,
+    751
+  ],
+  "researchScopes": [
+    753,
+    754,
+    755
+  ],
+  "receipts": {
+    "source-gamma-one-cusp-residues-1-scratch-receipt.json": "2F1EACCE6E23FDFFE316865260110175EA89ABA52C305803C7EB157D0D43B12F",
+    "source-gamma-one-cusp-exhaustion-1-scratch-receipt.json": "028C916EE20AD07A96B06F1AEB6F83C494D1A94FFC3B379066512A64801AA883",
+    "source-gamma-one-holomorphic-field-1-scratch-receipt.json": "32E41826F238016A886D15A69C61C38ECF954A56CB6EA71D9A4ABCF708D83AA8",
+    "source-gamma-one-pole-clearing-normalization-1-scratch-receipt.json": "7C5F0099EB393DC9052EE6BE5EDAEBB0D6B0F895155217BC73DD061D378B4F7A",
+    "source-gamma-one-meromorphic-field-1-scratch-receipt.json": "FADC57811E5FCDBAEFC7F70DB4081EAE46685E6E3DCC1524A07A56A799AF6BF7",
+    "source-gamma-one-meromorphic-principal-divisor-1-scratch-receipt.json": "CBFF760F67E11EA122C34E4604CCBEE59C9C032DBB22480205A75545D052B15C"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 homogeneous-coefficient Hecke characters -> full/parabolic, transpose, diamond, Picard/H1 comparison -> actual differential and period geometry -> Abel-Jacobi principal-divisor converse.",
+  "discharged": "The exact invariant meromorphic-function contract gives a literal principal divisor in the original Gamma1 integral-ratio field. Actual cusp exhaustion follows from existing one-pole functions and weight-zero constancy. Finite-coordinate pole clearing and native meromorphic normalization construct a holomorphic product; discriminant powers control every translated cusp and actual modular-ratio membership returns the original field element. Exact analytic orders and every cusp order are derived. Nonzero translated limits force order zero at all j-pole places. No field-realization, cusp-exhaustion or cusp-order hypothesis is supplied to the final consumer.",
+  "remaining": "Constructing the meromorphic function from the Abel-Jacobi period condition still requires genuine real period surjectivity and reciprocity. Actual global periods and Hecke/diamond/Picard/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged.",
+  "route": "The renewed search is recorded in Dubon Reuse Refresh 2026-10-27.md and Dubon Reuse Route Assessment 2026-10-27.md. Nine further pinned primary proof files were inspected. Existing local pole clearing, actual field membership and cusp functions give a shorter conversion than the candidate inverse-j/full-level-Galois cusp-order argument. The direct Gamma1 genus/Manin route and candidate principal-level period route are compared before expanding either. External import closures are not locally built. Only imports are qualified on promotion; audited statements and proof bodies remain identical. All failures and research snapshots are retained. Root pins, proof limits, source and full all-weight contract are unchanged.",
+  "precedingCanonicalScope": 8586,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all twenty gates unchanged.",
+  "productionMutation": false
+}

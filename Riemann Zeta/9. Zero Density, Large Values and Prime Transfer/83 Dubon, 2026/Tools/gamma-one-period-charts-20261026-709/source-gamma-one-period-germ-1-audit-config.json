@@ -1,0 +1,64 @@
+{
+  "modules": [
+    "SourceGammaOneRegularCuspGerm"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_eq_normalized",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_germ_of_coordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_regularCuspEquiv_germ"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_eq_normalized",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_germ_of_coordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_regularCuspEquiv_germ"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_eq_normalized",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_germ_of_coordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_regularCuspEquiv_germ",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_qExpansion",
+    "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_qExpansion",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspQExpansion_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_form_realization",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_eventuallyEq_of_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_isCurveOver",
+    "Dubon2026.SourceFunctionField.GammaOne.D_jCoordinateOver_ne_zero",
+    "Dubon2026.SourceCurve.RegularDifferentialsComparison.exists_smul_eq"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_regularCuspEquiv_germ"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneAnalyticDifferentialRegularity",
+    "SourceGammaOneAnalyticGerms",
+    "SourceGammaOneAnalyticJOrders",
+    "SourceGammaOneAnalyticOrder",
+    "SourceGammaOneAnalyticOrderNontrivial",
+    "SourceGammaOneAnalyticPlaces",
+    "SourceGammaOneCuspDerivativeOrder",
+    "SourceGammaOneCuspFourierNormalization",
+    "SourceGammaOneCuspJOrder",
+    "SourceGammaOneCuspOrder",
+    "SourceGammaOneCuspPlaces",
+    "SourceGammaOneCuspRatioRealization",
+    "SourceGammaOneCuspRealizationAlgebra",
+    "SourceGammaOneDifferentialCuspGerm",
+    "SourceGammaOneHolomorphicDifferentials",
+    "SourceGammaOneJRealization",
+    "SourceGammaOneMeromorphicRealization",
+    "SourceGammaOneRatioRealization",
+    "SourceGammaOneRealizationAlgebra",
+    "SourceGammaOneRegularCoefficientOrders",
+    "SourceGammaOneRegularCuspEquiv",
+    "SourceGammaOneRegularCuspForms",
+    "SourceGammaOneRegularCuspGerm",
+    "SourceGammaOneRegularCuspOrder",
+    "SourceGammaOneRegularCuspQExpansion",
+    "SourceGammaOneRegularFourierRealization",
+    "SourceGammaOneTranslatedCuspGerms"
+  ],
+  "separateReason": "All selected declarations are consumed by the actual analytic germ of every original regular differential, with the exact 2*pi*i factor."
+}

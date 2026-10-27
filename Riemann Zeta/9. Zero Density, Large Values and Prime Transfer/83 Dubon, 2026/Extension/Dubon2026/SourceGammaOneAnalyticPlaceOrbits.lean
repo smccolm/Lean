@@ -1,0 +1,82 @@
+import Dubon2026.SourceGammaOneAllModularRatioMembership
+import Dubon2026.SourceGammaOneModularPointSeparation
+import Dubon2026.SourceGammaOneAnalyticPlaceInvariance
+
+/-! DUB-17/18 -> actual Gamma1 global charts -> exact ramification.
+Actual analytic places are equal exactly on actual Gamma1 orbits. The
+separating modular ratio belongs to the original integral-ratio field.
+A regular analytic representative cannot have a nonzero numerator and
+a vanishing denominator. No abstract orbit dictionary is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup Filter
+open scoped MatrixGroups Topology
+
+private theorem place_ne_of_separating_ratio (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N) {k : ℤ}
+    (g h : ModularForm (Gamma1 N) k) (τ τ' : ℍ)
+    (hτ : h τ ≠ 0) (hτ' : h τ' = 0) (hgτ' : g τ' ≠ 0) :
+    analyticPlace hT τ ≠ analyticPlace hT τ' := by
+  have hh : h ≠ 0 := by
+    intro he
+    exact hτ (by simp only [he, ModularForm.coe_zero, Pi.zero_apply])
+  let x : functionFieldOver (Gamma1 N) ℂ :=
+    ⟨ModularRatios.qL g / ModularRatios.qL h, modular_ratio_mem N g h hh⟩
+  have hr : (x : LaurentSeries ℂ) * ModularRatios.qL h = ModularRatios.qL g :=
+    div_mul_cancel₀ _ (ModularRatios.qL_ne_zero hT h hh)
+  have hx : x ∈ (analyticPlace hT τ).toValuationSubring := by
+    rw [analyticPlace_mem_iff]
+    unfold analyticOrder
+    rw [meromorphicOrderAt_congr (realize_eventuallyEq_of_ratio hT g h x hh hr τ)]
+    exact ((ModularRatios.analyticAt_comp_ofComplex g τ).div
+      (ModularRatios.analyticAt_comp_ofComplex h τ)
+      (by simpa only [ofComplex_apply] using hτ)).meromorphicOrderAt_nonneg
+  intro he
+  rw [he] at hx
+  obtain ⟨w, hw, _, hwe⟩ := regular_analytic_representative hT τ' x hx
+  have hprod : (fun z : ℂ => w z * h (ofComplex z)) =ᶠ[𝓝[≠] (τ' : ℂ)]
+      fun z => g (ofComplex z) := by
+    filter_upwards [hwe, realize_eventuallyEq_of_ratio hT g h x hh hr τ',
+      ModularRatios.eventually_ne_zero_ofComplex h hh τ'] with z hwz hrz hhz
+    rw [hwz, hrz, div_mul_cancel₀ _ hhz]
+  have hvalue := tendsto_nhds_unique_of_eventuallyEq
+    ((hw.continuousAt.mul (ModularRatios.analyticAt_comp_ofComplex h τ').continuousAt).tendsto.mono_left
+      nhdsWithin_le_nhds)
+    ((ModularRatios.analyticAt_comp_ofComplex g τ').continuousAt.tendsto.mono_left
+      nhdsWithin_le_nhds) hprod
+  have hz : g τ' = 0 := by
+    simpa only [Pi.mul_apply, ofComplex_apply, hτ', mul_zero] using hvalue.symm
+  exact hgτ' hz
+
+theorem analyticPlace_eq_iff_gamma1_orbit (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N) (τ τ' : ℍ) :
+    analyticPlace hT τ = analyticPlace hT τ' ↔
+      ∃ γ : Gamma1 N, (γ : SL(2, ℤ)) • τ = τ' := by
+  classical
+  constructor
+  · intro he
+    by_contra hno
+    have hno' : ∀ γ ∈ Gamma1 N, γ • τ ≠ τ' := by
+      intro γ hγ hs
+      exact hno ⟨⟨γ, hγ⟩, hs⟩
+    obtain ⟨k, g, h, hsep⟩ := exists_separating_modular_forms N τ τ' hno'
+    let r : ModularForm (Gamma1 N) k := h τ' • g - g τ' • h
+    have hrτ : r τ ≠ 0 := by
+      change h τ' * g τ - g τ' * h τ ≠ 0
+      rw [mul_comm (h τ')]
+      exact sub_ne_zero.mpr hsep
+    have hrτ' : r τ' = 0 := by
+      change h τ' * g τ' - g τ' * h τ' = 0
+      ring
+    by_cases hg : g τ' = 0
+    · have hh : h τ' ≠ 0 := by
+        intro hh
+        apply hsep
+        rw [hg, hh, mul_zero, zero_mul]
+      exact place_ne_of_separating_ratio N hT h r τ τ' hrτ hrτ' hh he
+    · exact place_ne_of_separating_ratio N hT g r τ τ' hrτ hrτ' hg he
+  · rintro ⟨γ, rfl⟩
+    exact (analyticPlace_smul hT γ τ).symm
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

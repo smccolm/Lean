@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "theorems": 2,
+  "modules": 1,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationBoundsScratchOwnership727.log",
+  "logSha256": "B2E339DFCF867F787EAD960CA8E1029B85622D2B83E70D23F9D5E69CEBB116AD",
+  "sourceSha256": "6D8ED54CC78AE2D813723106D4E27A1ACABBAAAEA3D6F7C91BDA6F4ECF88DFA5",
+  "owners": [
+    {
+      "module": "SourceGammaOneRamificationBounds",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.analytic_j_order_le_relative_index"
+    },
+    {
+      "module": "SourceGammaOneRamificationBounds",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.analytic_j_multiplicity"
+    }
+  ]
+}

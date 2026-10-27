@@ -1,0 +1,24 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite homogeneous-coefficient Gamma1 Hecke-character realization -> Picard/H1/full-parabolic/transpose/diamond comparison -> modular periods -> actual meromorphic field realization.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateDimensionBounds.lean",
+      "sha256": "EEFF334AC86A99E1B83854881B29B7479523F021290AA7A05551292451256923"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCuspPlaces.lean",
+      "sha256": "4257F1370F419FC9BDA8038C021717725DA8606311169F980F0DB1805371B6F4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneAnalyticJOrders.lean",
+      "sha256": "88DAA8FA39C64F041832F3EC929912885D3746230E571ADD26AB47A78FFA067E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneHolomorphicFunctions.lean",
+      "sha256": "C366F939DFC8BF22ED767AD3D86D80F3053CD5751906B6DB61A2D1E9FBE8395F"
+    }
+  ],
+  "shorterRoute": "Use the existing finite-coordinate pole-clearing function with permitted pole at a proved actual cusp and effective negative part of the prescribed divisor. This replaces individual j-products and compact enumeration. It applies to the finite analytic divisor already returned by the divisor-moving proof and the exact ramification-weighted orders in the pinned period-function contract.",
+  "assumptionsToDischarge": "An original nonzero field multiplier regular at every finite j-place, whose order plus the prescribed finite divisor is nonnegative there. The analytic-place consumer derives both regularity and the required pole-cancellation bound.",
+  "remaining": "Holomorphic normalization of the meromorphic product, preservation of actual invariance and cusp bounds, quotient back into the original field, real period surjectivity, reciprocity, full period/Hecke/diamond/H1 and all-weight arithmetic association remain; 16/20; DUB-17--20 OPEN."
+}

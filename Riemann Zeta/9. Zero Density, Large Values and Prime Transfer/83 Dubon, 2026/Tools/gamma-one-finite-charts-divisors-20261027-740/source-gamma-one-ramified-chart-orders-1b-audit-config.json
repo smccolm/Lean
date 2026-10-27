@@ -1,0 +1,54 @@
+{
+  "modules": [
+    "SourceGammaOneRamifiedMeromorphicOrder",
+    "SourceGammaOneNearbyOrders",
+    "SourceGammaOneRamifiedChartOrders"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_ramifiedPlace_eval",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_meromorphicOrderAt",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_nearby_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_param_eventually_one",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_chart_orders"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_ramifiedPlace_eval",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_meromorphicOrderAt",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_nearby_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_param_eventually_one",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_chart_orders"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_ramifiedPlace_eval",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_meromorphicOrderAt",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_nearby_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_param_eventually_one",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_chart_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_order",
+    "Dubon2026.SourceFunctionField.GammaOne.place_eq_of_coord_power_eq",
+    "Dubon2026.SourceFunctionField.PowerDescent.exists_local_branch",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eventually_one",
+    "Dubon2026.SourceCurve.Place.rationalEval_inv",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_meromorphicOrderAt"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_ramifiedPlace_eval",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_meromorphicOrderAt",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_nearby_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_param_eventually_one",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_chart_orders"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneEllipticFibers",
+    "SourceGammaOneExactRamification",
+    "SourceGammaOneNearbyOrders",
+    "SourceGammaOneRamifiedChartOrders",
+    "SourceGammaOneRamifiedMeromorphicOrder",
+    "SourceGammaOneRamifiedRegularOrder",
+    "SourceGammaOneRamifiedRegularParameter"
+  ],
+  "separateReason": "Generic rational residue inversion extends the exact order to poles. The actual local analytic power branch and existing ramification isolation give one positive neighborhood with exact normalized orders for every nonzero function."
+}

@@ -1,0 +1,44 @@
+{
+  "modules": [
+    "SourceGammaOneCuspResidues"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_mem_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_sub_constant_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order_eq_zero_of_tendsto",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_residue",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_cusp_analytic_representative"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_mem_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_sub_constant_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order_eq_zero_of_tendsto",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_residue",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_cusp_analytic_representative"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_mem_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_sub_constant_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order_eq_zero_of_tendsto",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_residue",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_cusp_analytic_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRamification_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_cuspRealize",
+    "Dubon2026.SourceFunctionField.GammaOne.place_residue_bijective",
+    "Dubon2026.SourceCurve.Place.rationalEval_eq_zero_iff_ord_pos"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_mem_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_sub_constant_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order_eq_zero_of_tendsto",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_residue",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_cusp_analytic_representative"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneCuspResidues"
+  ],
+  "separateReason": "The actual cusp-place limit and residue comparison is proved; exhaustion of j-pole places remains separate."
+}

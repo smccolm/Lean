@@ -1,0 +1,53 @@
+{
+  "modules": [
+    "SourceGammaOneUniformCuspPole",
+    "SourceGammaOneHolomorphicModularQuotient",
+    "SourceGammaOneHolomorphicFieldRealization"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFricke.finite_modular_orbit_of_invariant",
+    "Dubon2026.SourceFricke.exists_uniform_discriminant_pole_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient_of_meromorphic_cusps",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_holomorphic"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFricke.finite_modular_orbit_of_invariant",
+    "Dubon2026.SourceFricke.exists_uniform_discriminant_pole_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient_of_meromorphic_cusps",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_holomorphic"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFricke.finite_modular_orbit_of_invariant",
+    "Dubon2026.SourceFricke.exists_uniform_discriminant_pole_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient_of_meromorphic_cusps",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_holomorphic",
+    "MulAction.orbitEquivQuotientStabilizer",
+    "Dubon2026.SourceFricke.IsBoundedAtImInfty.mul_discPow_mono",
+    "Dubon2026.SourceFricke.exists_bounded_mul_discriminant_of_meromorphic",
+    "Dubon2026.SourceFricke.periodic_of_principal_invariant",
+    "Dubon2026.SourceFunctionField.GammaOne.modular_ratio_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_eq_div",
+    "Dubon2026.SourceFunctionField.GammaOne.quotient_cusp_represents",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_eventuallyEq"
+  ],
+  "roots": [
+    "Dubon2026.SourceFricke.finite_modular_orbit_of_invariant",
+    "Dubon2026.SourceFricke.exists_uniform_discriminant_pole_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient_of_meromorphic_cusps",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_holomorphic"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneUniformCuspPole",
+    "SourceGammaOneHolomorphicModularQuotient",
+    "SourceGammaOneHolomorphicFieldRealization",
+    "SourceGammaOneCuspBoundedRealization",
+    "SourceGammaOneCuspResidues"
+  ],
+  "separateReason": "Finite orbit, common discriminant exponent, actual modular quotient and original field membership with literal analytic/cusp realizations. Finite analytic-pole clearing and global periods remain."
+}

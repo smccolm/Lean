@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "theorems": 4,
+  "modules": 1,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalModularPointSeparationScratchOwnership719.log",
+  "logSha256": "15FD4AB59CC06051BEBC90A5B0907F6749FB17E6165BF6F05B0A17F7830A87C2",
+  "sourceSha256": "E3A8D5C6F4D3A8C6F475FD93423B0A52D9BDA2C5977C40DF57003DD6722D3C0E",
+  "owners": [
+    {
+      "module": "SourceOriginalModularPointSeparation",
+      "name": "Dubon2026.SourceFunctionField.exists_original_separating_modular_forms"
+    },
+    {
+      "module": "SourceOriginalModularPointSeparation",
+      "name": "Dubon2026.SourceFunctionField.exists_gamma0_smul_eq_of_cross_products"
+    },
+    {
+      "module": "SourceOriginalModularPointSeparation",
+      "name": "Dubon2026.SourceFunctionField.exists_original_nonvanishing_modular_ratio"
+    },
+    {
+      "module": "SourceOriginalModularPointSeparation",
+      "name": "Dubon2026.SourceFunctionField.originalPlaceEval_eq_modular_ratio"
+    }
+  ]
+}

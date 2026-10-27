@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-26 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> orbit separation and exact elliptic ramification -> native modular forms separate Gamma1 orbits inside a Gamma0 orbit.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-diamond-separation-audit-route-718.json",
+    "sha256": "C5DF9882822167F3D93FD9C31DBC5EDB1AF2929CF753A78F82B33394A68375F6",
+    "review": {
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> orbit separation and exact elliptic ramification -> native modular forms separate Gamma1 orbits inside a Gamma0 orbit.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionPowerOrbit.lean",
+          "sha256": "C63422A72A5968B8676E1F01C81543A45058CD9DE1D48FF9FD305C3AF397A8AB"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionForms.lean",
+          "sha256": "42F48B9B89A9CDD520F2108C3EA0BEB7B10F9C6A81752C3FE4800AA19D784CC6"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularNormPolynomial.lean",
+          "sha256": "CD66E1DBF537A518EA1F268B575987233B3553AE6AC9370AA322EAB472DF92A4"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFrickeFunctionTransformationV2.lean",
+          "sha256": "89F3BFBF1137F5B6F75FC355B05F3A5306B1272691D0F1A8F5E2123166B492F3"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\Basic.lean",
+          "sha256": "AFD03B5B2A2A4E494F43DFAA00772869A29980FBC899F561E1DB611B00B1A2AD"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-separation-reuse-712\\S_ModularForm_exists_gammaH_apply_mul_apply_ne_of_forall_smul_ne_of_gamma0_smul_eq.lean.txt",
+          "sha256": "83B79491C2FD0850D871C9120D71C7A89586095612790CBB060060E5E6144139"
+        }
+      ],
+      "shorterRoute": "Use the already constructed single division form W at 1/N, its native square and cube, existing modular-form restriction and E4/E6 anchors. Equal cross products force the required second/third Weierstrass powers; where both anchors are nonzero these imply equality. The audited division-power orbit theorem yields Gamma1 membership. No general H power sums, new modular-form power construction or new subgroup restriction are needed.",
+      "assumptionsToDischarge": [
+        "Produce actual same-weight native Gamma1 forms with unequal cross determinants when points are Gamma0-related but not Gamma1-related.",
+        "Derive division-value power equalities from cross products, actual slash laws and nonvanishing E4/E6 anchors.",
+        "Include elliptic points and level one; do not assume generic E4 E6 nonvanishing."
+      ],
+      "remaining": "Combine with existing Gamma0 orbit separation for all point pairs, then derive exact elliptic ramification and global charts. Full period/Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": [
+    "Produce actual same-weight native Gamma1 forms with unequal cross determinants when points are Gamma0-related but not Gamma1-related.",
+    "Derive division-value power equalities from cross products, actual slash laws and nonvanishing E4/E6 anchors.",
+    "Include elliptic points and level one; do not assume generic E4 E6 nonvanishing."
+  ],
+  "remaining": "Combine with existing Gamma0 orbit separation for all point pairs, then derive exact elliptic ramification and global charts. Full period/Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,93 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T13:13:53.496394+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneCentralSignCharacters",
+    "SourceGammaOneSignedParabolicCharacters"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCentralSignCharacters.lean",
+      "sha256": "FBBCE8F7ABEC651C67A29B45758D65A1227F47491112C51AF7080249AC2DA529",
+      "oleanSha256": "948C8D2513A1564092CC84FF3227D6D93BEA0808A53434CAEE3C8980D6A86C62"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedParabolicCharacters.lean",
+      "sha256": "5CBE07661A7099E305A986984E91043124C1C2EC315499AB169BB6F6442DD750",
+      "oleanSha256": "959EA9A75B27E2B73AD6F6BF20A5566A3207518ADF5A71C02D64C20F9411F536"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.exists_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_spec",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.real_character_eq_of_square_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_mul_square",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_member_square",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_of_member",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_parabolic",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_parabolic_finrank_le_signed",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.exists_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_spec",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.real_character_eq_of_square_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_mul_square",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_member_square",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_of_member",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_parabolic",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_parabolic_finrank_le_signed"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedParabolicAudit1.log",
+  "logSha256": "D9F92815E0BADB402F5AE2E6CB6E0ACEFE734F51AB0638C456F1717FB35EF498",
+  "auditSha256": "D339FD2F0F7E17E243AEDE001D7B92FBF21366B316045223E2EAF91A7AEEF8EF",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 21,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 18,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedParabolicDependencyAudit1.log",
+  "dependencyAuditSha256": "8A68BBEBE37918CF4637124D87CDD8A0069DC17778B82572375B91E39757895B",
+  "dependencyAuditSourceSha256": "82DCA49E8493EF4AB7C6EC033B22506249D30FBFE88D4AC5BF51D4E18E7B3AA8",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.exists_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_spec",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.real_character_eq_of_square_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_mul_square",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_member_square",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_of_member",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_parabolic",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters_finite",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_parabolic_finrank_le_signed",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative",
+    "Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend",
+    "Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 and Abel-Jacobi -> real period surjectivity -> reverse dimension inequality -> real Manin relations on signed cosets.",
+  "discharged": "Every enlarged-group element has an actual original-subgroup representative up to central sign. Equality of squares forces equality of real additive-character values, proving additivity and independence of sign. The extension agrees with the original character and is injective. Squared trace is unchanged by central sign, so the actual original real parabolic characters embed linearly in the signed parabolic space. Native finite H1 proves target finiteness; the required finrank inequality is derived without an extension or torsion-vanishing hypothesis.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Adapt the exact real Manin dimension bound and assemble the actual Hurwitz/genus inequality using the proved finite and cusp fibers. Real period surjectivity, reciprocity, Picard/Hecke/diamond/H1, full all-weight characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-signed-parabolic-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "2DE1474162BF6AF14B9290DF099DCE665E2F9DECBA43C88D895AD901053F569D",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

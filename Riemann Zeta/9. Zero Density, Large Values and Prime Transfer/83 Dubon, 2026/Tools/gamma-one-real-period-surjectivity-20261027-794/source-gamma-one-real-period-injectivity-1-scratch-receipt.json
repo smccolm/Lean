@@ -1,0 +1,59 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T11:54:37.412414+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneInvariantRealPart",
+    "SourceGammaOneRealPeriodInjectivity"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantRealPart.lean",
+      "sha256": "DEAF5453D84154349BFE79D821F5CB9EE05F130AB7D09CD205CAD2F829485D60",
+      "oleanSha256": "1FB0E396A0742DEC9EFA0953C22463C097C5F98BB6FF8DE0AADBC7A12CF0AF47"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodInjectivity.lean",
+      "sha256": "D79E746BDEC9F184D6250107AFDA717C3BFD59EB4237698CD4530255C55FB92E",
+      "oleanSha256": "47063B41D830D74426816FDC4ACB0656155E5C96DCC87CFEF42212645F0C815C"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceGamma1_exists_tile_translate",
+    "Dubon2026.sourceGamma1_realPart_constant",
+    "Dubon2026.sourceGamma1_eq_zero_of_real_periods_zero",
+    "Dubon2026.sourceGamma1_real_periods_injective"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceGamma1_exists_tile_translate",
+    "Dubon2026.sourceGamma1_realPart_constant",
+    "Dubon2026.sourceGamma1_eq_zero_of_real_periods_zero",
+    "Dubon2026.sourceGamma1_real_periods_injective"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodInjectivityAudit1.log",
+  "logSha256": "5783061F3B31A40B84606AA11B71D3873D43074E2461C77E40742E747461BD89",
+  "auditSha256": "C6FB8A8D1C613542ABAEDBAC66EDA0362036B401688AB0AB12CEE4CBF9F68E51",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 21,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 12,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodInjectivityDependencyAudit1.log",
+  "dependencyAuditSha256": "BFF904AA7FF4C860A83A10A8AA43586D14137368460C659DE3280BDACBFAF33A",
+  "dependencyAuditSourceSha256": "6A95F25429F687C3E698C5345244DB6B3C8E49513AC1BD42B43888445A22BBB6",
+  "consumers": [
+    "Dubon2026.sourceGamma1_exists_tile_translate",
+    "Dubon2026.sourceGamma1_realPart_constant",
+    "Dubon2026.sourceGamma1_eq_zero_of_real_periods_zero",
+    "Dubon2026.sourceGamma1_real_periods_injective"
+  ],
+  "dependency": "DUB-17/18 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 -> Abel-Jacobi converse -> real period surjectivity -> real period injectivity.",
+  "discharged": "The actual real Gamma1 periods determine the cusp form. Primitive derivative normalization and every translated cusp limit are constructed from the original form. The principal-congruence normality theorem supplies the missing cusp translations. No real-period injectivity, reflected-form relation, dimension inequality or surjectivity is assumed.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Real period surjectivity, reciprocity, original Picard/Hecke/diamond/H1 comparison, all-weight association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-period-injectivity-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "B6F0B0F79F282FBF83D5116274166C37AFA51BAF0E4AFC9A0EDF25B1D658AFAB",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

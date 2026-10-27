@@ -1,0 +1,74 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T08:47:41.469321+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneEllipticFibers",
+    "SourceGammaOneRamifiedRegularParameter",
+    "SourceGammaOneRamifiedRegularOrder"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEllipticFibers.lean",
+      "sha256": "8AA65B672C2AA03895160CC37947FD8D6100930AB06A02C08AFC7A3770CEA1A1",
+      "oleanSha256": "24CACC7033FB40E53AFBB14B1973B2BF6DCEC61A71A7E23608A099F263200C9F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularParameter.lean",
+      "sha256": "691A1CC3312A6F559CDEADF4F3F8E7C7013E274B43FFBDD576EFA61F08EBE72A",
+      "oleanSha256": "C487CC158E65BF34C1F9C339291829EF963493E534F6CBA72D521A414F3AF6C5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularOrder.lean",
+      "sha256": "E7A7CE6AC845743556A328C363EDC4257FD71DB9946FE756C14860678FD8BC2B",
+      "oleanSha256": "1793935B0EEFB726D0202BF7E6F93BF04B2D488A387918B727759FF9875C45EA"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_stabilizer_multiplier",
+    "Dubon2026.SourceFunctionField.GammaOne.place_eq_of_coord_power_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_order",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_stabilizer_multiplier",
+    "Dubon2026.SourceFunctionField.GammaOne.place_eq_of_coord_power_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_order"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularAudit1b.log",
+  "logSha256": "02C65F9209C71E294705365FA1CCC49C143A2FC1529FE833A8537BE376F26C99",
+  "auditSha256": "073104C3E1EBC0A4A10B5109DC181530625620FFA0D27803A7DAFE818220F8F9",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 9,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 12,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularDependencyAudit1b.log",
+  "dependencyAuditSha256": "9C58F982DFC5AC6DE68CB2FDB347C933650CF10AED6BB3FC7DD3144F03E96187",
+  "dependencyAuditSourceSha256": "B6F801378D8DFD2B34C5C3ACF4D2891D4948632D60B09DF9872C0F790BE83ED0",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_stabilizer_multiplier",
+    "Dubon2026.SourceFunctionField.GammaOne.place_eq_of_coord_power_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_order"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> actual ramified charts -> analytic regular descent and exact normalized order.",
+  "discharged": [
+    "Actual Gamma1 places are constant on every centered-coordinate power fiber, at all nonzero levels and all analytic centers.",
+    "Every actual function regular at the center has analytic residue values on the descended actual-place family, whose order is exactly the original normalized valuation order."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Extend the exact descended order to poles and to one common chart neighborhood, then cusp/global charts and actual periods, full Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-ramified-regular-1b-reuse-review-20261027.json",
+  "reuseReviewSha256": "AE5B045FAF3C82CCC84D747002C81229B915F297E6976F4882C513B386AAEEFD",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,36 @@
+{
+  "chain": "DUB-17/18 -> original all-weight arithmetic association -> actual finite homogeneous-coefficient Gamma1 characters -> Picard/H1/full-parabolic/transpose/diamond comparison -> modular periods -> original meromorphic field realization.",
+  "assumptionsToDischarge": [
+    "Consume the original algebraic multiplier and the precise ramification-weighted finite-divisor orders to derive a holomorphic product, actual subgroup invariance, literal local realization and multiplier cusp bounds.",
+    "Cusp pole bounds and meromorphic cusp germs for the actual normalized product, derived from boundedness of the original meromorphic function and the actual multiplier bounds.",
+    "Actual original-field realization of a meromorphic invariant function with the prescribed finite ramification-weighted divisor and bounded translated cusps; nonvanishing and exact normalized analytic-place orders are conclusions."
+  ],
+  "remaining": "Transfer nonzero cusp limits to the actual field element, then compose with actual global period existence and reciprocity. Full Picard/Hecke/diamond/H1 and original all-weight arithmetic association remain; 16/20; DUB-17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-pole-cleared-product-route-747.json",
+      "sha256": "23845BC02B53F4ECBD01FC1BBB8C1436F9D1C3BDE8BD04F9917FC21175913814"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-pole-cleared-cusp-route-748.json",
+      "sha256": "747804959A5F39FA3BC0D1C8A1933ACB8B16E0E3F6BC758A72921CA68080A3DF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-field-assembly-route-749.json",
+      "sha256": "BE636A275CC3C0775A62DE4AAC1EECF040456F81B5B62BB8DC42EE8EC406069E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-holomorphic-field-1-scratch-receipt.json",
+      "sha256": "32E41826F238016A886D15A69C61C38ECF954A56CB6EA71D9A4ABCF708D83AA8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-pole-clearing-normalization-1-scratch-receipt.json",
+      "sha256": "7C5F0099EB393DC9052EE6BE5EDAEBB0D6B0F895155217BC73DD061D378B4F7A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-route-reuse-736\\S_ModularCurve_ComplexPlaceDictionaryOf_exists_meromorphic_meromorphicOrderAt_eq_of_abelJacobi_mem_periodLatticeOf_gammaH.lean.txt",
+      "sha256": "12F5DE055DDA8E2DAA172DEC6E16291438DDC21919DF126B8F3B92F68D918182"
+    }
+  ],
+  "sourceContract": "The frozen scope736 exists_meromorphic_meromorphicOrderAt_eq_of_abelJacobi_mem_periodLatticeOf_gammaH returns actual meromorphy, invariance, nonzero limits at every translated cusp, and exactly these ramification-weighted orders. Function construction from the period condition remains unproved locally."
+}

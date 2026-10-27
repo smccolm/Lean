@@ -1,0 +1,68 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T10:58:35.600475+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneUniformCuspPole",
+    "SourceGammaOneHolomorphicModularQuotient",
+    "SourceGammaOneHolomorphicFieldRealization"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUniformCuspPole.lean",
+      "sha256": "EB744105EA29F866EAC2BA40D19305A41B9A4CB8B54BBF09C99B6A1F2A5A57D3",
+      "oleanSha256": "274B83A6AE28D35411C035BA42704A1CD147735797FC853DDD4DFFDEDFDE1D2A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicModularQuotient.lean",
+      "sha256": "3615B6B5798C4BBE514257FB679706B6502B9E96FFC5C4788487F384641745A4",
+      "oleanSha256": "5DC0D13197A7A3AA6B9031DCDD8B64CB3FF220E892281505CA1A53061064A17E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldRealization.lean",
+      "sha256": "30042838C4B2CB48621A0E736D94673375B2B22ADD0EDF0E72A49EA5DCF40FB0",
+      "oleanSha256": "D1D8DAAE45D9A0E9E5C92E7504AA68C890C59743BE9596A917916230391E8A1F"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFricke.finite_modular_orbit_of_invariant",
+    "Dubon2026.SourceFricke.exists_uniform_discriminant_pole_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient_of_meromorphic_cusps",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_holomorphic"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFricke.finite_modular_orbit_of_invariant",
+    "Dubon2026.SourceFricke.exists_uniform_discriminant_pole_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient_of_meromorphic_cusps",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_holomorphic"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldAudit1.log",
+  "logSha256": "E1C48D0B7D48E09B4FC244BD95D4C0BDAC55EA058A567C9D0BBF6170943EE0B6",
+  "auditSha256": "9518967CA83784DF9749C2D002D37D699318A96E3635D2A5C0230EDB8AB3D925",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 7,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 13,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldDependencyAudit1.log",
+  "dependencyAuditSha256": "B24C64FF98AE05C5F0EEADBE73744A5D95A77F2299FD92AB0267377A2E109B0E",
+  "dependencyAuditSourceSha256": "41F99B8088BBAC990B0C99EE4DC60F444C2BF69C27DE69598DBD695D198A5248",
+  "consumers": [
+    "Dubon2026.SourceFricke.finite_modular_orbit_of_invariant",
+    "Dubon2026.SourceFricke.exists_uniform_discriminant_pole_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient_of_meromorphic_cusps",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_holomorphic"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of actual finite Gamma1 homogeneous-coefficient Hecke characters -> Picard/H1/full-parabolic/transpose/diamond comparison -> modular periods -> original field realization of the constructed meromorphic function.",
+  "discharged": "Common exponent for all actual cusp poles, genuine holomorphic modular quotient, membership in the original integral-ratio field, pointwise analytic realization and all translated cusp germs. These are derived from holomorphy, actual Gamma1 invariance and meromorphic cusp germs. Finite analytic-pole clearing is not part of this proved increment.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Real parabolic period surjectivity, Abel-Petersson reciprocity, complete actual period/Picard/Hecke/diamond/H1 comparison and all-weight arithmetic association remain; 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-holomorphic-field-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "9EAE9029B029A8A0B7DB9DA49F4C0FCD5DF51FC04A7CDE0CD39DE2D31592E324",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,65 @@
+{
+  "modules": [
+    "SourceGammaOneMeromorphicCuspLimits",
+    "SourceGammaOneMeromorphicPrincipalDivisor"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.tendsto_atImInfty_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.eventually_continuousAt_realize_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.tendsto_cuspFunction_of_tendsto",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.isPrincipal_of_prescribed_meromorphic_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_function"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.tendsto_atImInfty_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.eventually_continuousAt_realize_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.tendsto_cuspFunction_of_tendsto",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.isPrincipal_of_prescribed_meromorphic_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_function"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.tendsto_atImInfty_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.eventually_continuousAt_realize_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.tendsto_cuspFunction_of_tendsto",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.isPrincipal_of_prescribed_meromorphic_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_function",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_prescribed_meromorphic_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.order_eq_zero_at_j_poles_of_cusp_limits",
+    "Dubon2026.SourceFunctionField.GammaOne.place_analytic_or_actual_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order_eq_zero_of_tendsto",
+    "Dubon2026.SourceFunctionField.GammaOne.eventually_ne_zero_translated_cuspFunction",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_smul_eq_translated_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_eq",
+    "Function.Periodic.invQParam_tendsto",
+    "Dubon2026.SourceCurve.exists_nonconstant_regular_away_of_finite_coordinate"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.tendsto_atImInfty_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.eventually_continuousAt_realize_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.tendsto_cuspFunction_of_tendsto",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.isPrincipal_of_prescribed_meromorphic_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_function"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneMeromorphicCuspLimits",
+    "SourceGammaOneMeromorphicPrincipalDivisor",
+    "SourceGammaOnePoleClearedProduct",
+    "SourceGammaOnePoleClearedCuspBounds",
+    "SourceGammaOneMeromorphicFieldRealization",
+    "SourceGammaOneOriginalPoleMultiplier",
+    "SourceGammaOnePoleClearedNormalization",
+    "SourceGammaOneUniformCuspPole",
+    "SourceGammaOneHolomorphicModularQuotient",
+    "SourceGammaOneHolomorphicFieldRealization",
+    "SourceGammaOneCuspBoundedRealization",
+    "SourceGammaOneCuspResidues",
+    "SourceGammaOneCuspPlaceExhaustion"
+  ],
+  "separateReason": "Exact meromorphic function contract gives a literal principal analytic divisor in the original Gamma1 field. Period-function existence is still required."
+}

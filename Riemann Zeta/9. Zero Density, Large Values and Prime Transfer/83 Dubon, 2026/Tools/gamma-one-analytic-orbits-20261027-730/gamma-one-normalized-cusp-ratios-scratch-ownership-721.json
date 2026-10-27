@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "theorems": 1,
+  "modules": 1,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormalizedCuspRatiosScratchOwnership721.log",
+  "logSha256": "464C4CFCB03408F6ED4ACF0D436C2A34075206DA6E05DD21823F2D909D40983E",
+  "sourceSha256": "C530C32C0BEC313AD77F77D50EFC931C41EF6BFCBC41506201A01E7D8BA77A38",
+  "owners": [
+    {
+      "module": "SourceGammaOneNormalizedCuspRatios",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_ratio_mem"
+    }
+  ]
+}

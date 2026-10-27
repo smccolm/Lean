@@ -1,0 +1,4 @@
+{
+  "reason": "The fresh generator created valid config, axiom/linter audit, VALUE audit and route, then its recorder-template substitution expected an already-renumbered string in the unchanged source template. No mathematics or existing audit was overwritten. A fresh successor creates only the missing recorder.",
+  "sourceSha256": "E81CE6E6D599AE07F740AE64CD11D52D29CDDC5ACAFBD3B03431E24F86E9A0BB"
+}

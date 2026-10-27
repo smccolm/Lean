@@ -1,0 +1,18 @@
+{
+  "exit": 1,
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-j-exact-order-failed-764a\\SourceGammaOneCuspJExactOrder.lean.txt",
+      "sha256": "ca9e1025512ed64c5d639302b7e9b9ff64b8879037d5d59ab71f210e5355a7c3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-j-exact-order-failed-764a\\SourceGammaOneCuspJExactOrder.log",
+      "sha256": "ece6c3c9c29a64c8387d90877f35da3ed85aacd342dc611c09ef1cdb7d05883a"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-j-exact-order-failed-764a\\SourceGammaOneCuspJExactOrder.exit",
+      "sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04"
+    }
+  ],
+  "cause": "Ring-hom zero reduction and coercion of integer negation into WithTop."
+}

@@ -1,0 +1,28 @@
+import SourceOriginalModularPointSeparation
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.exists_original_separating_modular_forms]
+  let localModules : Array Name := #[`SourceOriginalModularPointSeparation]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.originalPlaceEval_eq_modular_ratio, `Dubon2026.SourceFunctionField.exists_original_nonvanishing_modular_ratio, `Dubon2026.SourceFunctionField.exists_gamma0_smul_eq_of_cross_products, `Dubon2026.SourceFunctionField.exists_original_separating_modular_forms, `Dubon2026.SourceFunctionField.original_realize_tendsto_residue, `Dubon2026.SourceFunctionField.exists_original_discriminant_power, `Dubon2026.SourceFunctionField.AnalyticChart.chart_mem, `Dubon2026.SourceFunctionField.AnalyticChart.eq_of_center_eq, `Dubon2026.SourceFunctionField.originalAnalyticPlace_eq_iff_gamma0_orbit, `Dubon2026.SourceFunctionField.originalAnalyticPlace_j_mem, `Dubon2026.SourceFunctionField.realize_eventuallyEq_of_ratio]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE ORIGINAL MODULAR POINT SEPARATION DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in actual native Gamma0 modular forms separating distinct Gamma0 orbits. Only declaration values are traversed. Existing discriminant-power representations give nowhere-zero denominators; residue limits identify center evaluations, and actual integral-closure centers and the proved place/orbit dictionary produce the orbit matrix. Combination with the Gamma1 within-Gamma0 separation remains. Original chart/period, Hecke/diamond/Picard/H1 arithmetic comparison, all-weight characteristic-zero association and literal higher symmetric-power continuation remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

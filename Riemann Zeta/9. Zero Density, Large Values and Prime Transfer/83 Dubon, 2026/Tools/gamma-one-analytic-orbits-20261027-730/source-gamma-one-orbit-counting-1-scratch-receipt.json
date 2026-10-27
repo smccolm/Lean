@@ -1,0 +1,62 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T07:23:30.403899+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneOrbitCounting"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOrbitCounting.lean",
+      "sha256": "D1C431ABA6FE9E5AE3FCE6ACA6AB6BE4FA1163E5C75F27E4F4E69F62931EA5FF",
+      "oleanSha256": "730E37290DB7456BEAF9663952216EA0CC759BA85FAEF74975F4347E37C67BE3"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.card_stabilizer_subgroup",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_smul_of_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_mul_card_stabilizer",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finite_orbitRelQuotient_orbit",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.exists_smul_out_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finsum_relIndex_stabilizer_eq_index"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.card_stabilizer_subgroup",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_smul_of_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_mul_card_stabilizer",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finite_orbitRelQuotient_orbit",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.exists_smul_out_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finsum_relIndex_stabilizer_eq_index"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOrbitCountingAudit1.log",
+  "logSha256": "B9F7C715115052404C7AAD368C09233687DE531EF7056D1E86512A6EC57B1C8C",
+  "auditSha256": "412846CA457E05FA6D11A49749EDF206FCC51B853B20588CA289B9A60ECA353C",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 11,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 6,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOrbitCountingDependencyAudit1.log",
+  "dependencyAuditSha256": "00C005E924FA235D549D19A8FA2A354D1303BDA8657EE99825978F10FCD0F9DF",
+  "dependencyAuditSourceSha256": "F89F8F0C46999513E94EC876ECC6C240FA4F4A42ABEC13A12FB64874FDFC27BA",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.card_stabilizer_subgroup",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_smul_of_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_mul_card_stabilizer",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finite_orbitRelQuotient_orbit",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.exists_smul_out_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finsum_relIndex_stabilizer_eq_index"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact elliptic ramification -> compare weighted analytic j fibers with subgroup orbit indices.",
+  "discharged": [
+    "The sum of relative stabilizer indices over subgroup orbits in one full modular orbit equals the subgroup index.",
+    "Subgroup stabilizer cardinality and relative index multiply to the full stabilizer cardinality, and this index is unchanged within subgroup orbits."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Exact ramification at elliptic points, global charts, actual periods and complete Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight characteristic-zero association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-orbit-counting-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "B59C94B14602870DD1987A8F250E4F8F8723417FF3F60291E562E89DDD7ABFB6",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

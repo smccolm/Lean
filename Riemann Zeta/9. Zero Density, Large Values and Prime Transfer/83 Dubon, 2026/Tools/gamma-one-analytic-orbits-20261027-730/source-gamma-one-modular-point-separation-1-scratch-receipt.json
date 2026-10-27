@@ -1,0 +1,47 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T06:44:43.320386+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneModularPointSeparation"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularPointSeparation.lean",
+      "sha256": "3D6B716337BC99AB342258DA75FACA9B8F4985EDAABE530F70CC9CC46110FBAD",
+      "oleanSha256": "840D234355D58201D9FD2646F2C1D6349A94C5CCBC17A128050CCB3711CFFC81"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_separating_modular_forms"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_separating_modular_forms"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularPointSeparationAudit1.log",
+  "logSha256": "EB5A1874FD9CE8418D9DEDA99A8C1D47DADB492516BF2F1B939C4882833E1947",
+  "auditSha256": "C9E067EF60D1F965E278DE3DEEA4D17C1DB5801B4FBB415E207CF2AF59639784",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 2,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 4,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularPointSeparationDependencyAudit1.log",
+  "dependencyAuditSha256": "D261F24F3EEBD0958154305D1BFDE327ACBFE9D41449D45FDB7B4CA91AB339ED",
+  "dependencyAuditSourceSha256": "DAF8DF5A6B49A0DFB4DBD192E2CC27618F899DFCBA2189233A7F4368B9E7D1BB",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_separating_modular_forms"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact ramification -> native Gamma1 modular forms separate every distinct Gamma1 orbit.",
+  "discharged": [
+    "For every pair of points in different Gamma1 orbits, construct actual native same-weight Gamma1 modular forms with unequal cross determinants.",
+    "All levels and elliptic points are included through the proved two branches."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Use the separating ratio in the actual Gamma1 complex function field to prove equality of analytic places iff Gamma1 orbit; then exact ramification, global charts, full period/Hecke/diamond/Picard/H1 arithmetic comparison, all-weight association and higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-modular-point-separation-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "094542226E3C45F3C39DB5AD69E7F211B338C4E1894E549E760A7F07B873A473",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

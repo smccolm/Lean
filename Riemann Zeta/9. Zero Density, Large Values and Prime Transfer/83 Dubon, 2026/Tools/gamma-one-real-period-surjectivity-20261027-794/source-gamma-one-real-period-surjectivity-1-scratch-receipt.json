@@ -1,0 +1,111 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T14:02:02.613733+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneEllipticCosetFiber",
+    "SourceGammaOneEllipticFiberBounds",
+    "SourceGammaOneRealPeriodSurjectivity"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEllipticCosetFiber.lean",
+      "sha256": "C93890F8473D5D1A22C830D9D3B07137AC1AAEDA84C8686DC05A3DE3D21AB110",
+      "oleanSha256": "AA2E7FB0054E11C5606DBBA6865149E615401F566BAFC5536B1BC1E654D1B7DB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEllipticFiberBounds.lean",
+      "sha256": "14A7DC51F83CC50E97EDFBA9CD4A682C5693C4C603D7072D2F4F14362F3BAE55",
+      "oleanSha256": "5C668DB5CB9588259E5B5D11F8ACFBF0B5112F285215871983E69F9EBD7B5AE4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodSurjectivity.lean",
+      "sha256": "3E9CA101B8E1CABEADF38B7EC9D86A647170BEACB5F162E58AA11AB46CDFC624",
+      "oleanSha256": "C35EB8AAC97D03E763C21C5C2604A2F6650A325651901CBE62C0D6D992739A8B"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.point_eq_of_leftRel",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.cosetToFiber_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.cosetToFiber_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.cosetToFiber_stabilizer_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.cyclicToFiber_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.card_fiber_le_cyclic_orbits",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.two_mul_card_fiber_I_le",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.three_mul_card_fiber_rho_le",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.two_mul_card_j_1728_fiber_le",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.three_mul_card_j_zero_fiber_le",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_real_parabolic_dimension_le_twice_cusp",
+    "Dubon2026.sourceGamma1_real_parabolic_dimension_eq",
+    "Dubon2026.sourceGamma1RealParabolicPeriodHom_surjective",
+    "Dubon2026.sourceGamma1RealPeriodEquiv_apply",
+    "Dubon2026.sourceGamma1_exists_cuspForm_of_real_parabolic_character",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.point",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.cosetToFiber",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.cyclicToFiber",
+    "Dubon2026.sourceGamma1RealPeriodEquiv"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.point_eq_of_leftRel",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.cosetToFiber_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.cosetToFiber_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.cosetToFiber_stabilizer_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.cyclicToFiber_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.card_fiber_le_cyclic_orbits",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.two_mul_card_fiber_I_le",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.three_mul_card_fiber_rho_le",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.two_mul_card_j_1728_fiber_le",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.three_mul_card_j_zero_fiber_le",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_real_parabolic_dimension_le_twice_cusp",
+    "Dubon2026.sourceGamma1_real_parabolic_dimension_eq",
+    "Dubon2026.sourceGamma1RealParabolicPeriodHom_surjective",
+    "Dubon2026.sourceGamma1RealPeriodEquiv_apply",
+    "Dubon2026.sourceGamma1_exists_cuspForm_of_real_parabolic_character"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.point",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.cosetToFiber",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.cyclicToFiber",
+    "Dubon2026.sourceGamma1RealPeriodEquiv"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodSurjectivityAudit1.log",
+  "logSha256": "DB6067FDD238C5F8778CC2834E617DF61927BF9B046E010AFDDC01162DBE028D",
+  "auditSha256": "F3F875FBF2BE040C17E40295EF61F033340D3EDC69125E6B36E122C9C8926908",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 34,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 32,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodSurjectivityDependencyAudit1.log",
+  "dependencyAuditSha256": "7CF93DFB75C4C3357E54CCC7D8E3EDB58D7A7D025D97C348D307E9954A700033",
+  "dependencyAuditSourceSha256": "0341276AD57ED50CB58143712A728608C76957F5E36EA8FD672582246F49D499",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.point_eq_of_leftRel",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.cosetToFiber_mk",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.cosetToFiber_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.cosetToFiber_stabilizer_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.cyclicToFiber_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.card_fiber_le_cyclic_orbits",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.two_mul_card_fiber_I_le",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.three_mul_card_fiber_rho_le",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.two_mul_card_j_1728_fiber_le",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.three_mul_card_j_zero_fiber_le",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_real_parabolic_dimension_le_twice_cusp",
+    "Dubon2026.sourceGamma1_real_parabolic_dimension_eq",
+    "Dubon2026.sourceGamma1RealParabolicPeriodHom_surjective",
+    "Dubon2026.sourceGamma1RealPeriodEquiv_apply",
+    "Dubon2026.sourceGamma1_exists_cuspForm_of_real_parabolic_character",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.point",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.cosetToFiber",
+    "Dubon2026.SourceFunctionField.GammaOne.EllipticCounting.cyclicToFiber",
+    "Dubon2026.sourceGamma1RealPeriodEquiv"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 and Abel-Jacobi -> actual real period realization.",
+  "discharged": "Actual signed cosets map onto each original finite j fiber and descend through cyclic actions fixing its analytic value. The existing S/ST orbit counts give the required elliptic fiber bounds. These close the canonical-degree/Manin dimension comparison for the ORIGINAL Gamma1 real parabolic-character space. Its dimension equals the real dimension of weight-two cusp forms. The already proved injective real-period map is therefore surjective, giving an actual linear equivalence and a cusp form realizing EVERY original real parabolic character. No period-surjectivity, genus, dimension, fiber-cardinality or character-extension premise remains.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Promote and run assembled verification. Reciprocity and construction of meromorphic functions from Abel-Jacobi periods, Picard/Hecke/diamond/H1, full all-weight characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-period-surjectivity-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "BA8D62915FB85A8CA727837432D42475F4B297EFDC1D119222E62E21866BA393",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

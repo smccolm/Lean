@@ -1,0 +1,28 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 and Abel-Jacobi -> real period surjectivity -> matching Manin/genus cusp terms -> actual cusp-orbit bijection and orders.",
+  "assumptionsToDischarge": "Native cyclic orbit-stabilizer and power-index theorems make each finite orbit cardinality a positive signed stabilizer translation. The proved algebraic cusp pole bound applies. Orbit decomposition sums these sizes to the subgroup index. The original field degree and inverse-coordinate positive-order theorem independently sum all actual j-pole orders to that same index. Surjectivity and positive weights then prove injectivity and exact equality term by term. The exported actual Gamma1 map derives congruence containment and translation membership for every nonzero level; no bijection, count, width or field-degree premise remains.",
+  "remaining": "Adapt the exact Manin real parabolic dimension bound to the central-sign enlargement of Gamma1 and assemble the actual Hurwitz/genus bound from the proved finite and cusp fiber formulas. Real period surjectivity, reciprocity, Picard/Hecke/diamond/H1, original all-weight characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalOrbitFiberBijection.lean",
+      "sha256": "218D37893939CD2EC11F783453398FD427B5D6880CB1DE00DB0D53808004B873"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneExactRamification.lean",
+      "sha256": "10E7EB57948F059803A87BC61B846D618160FB6AFE4A59CA0A9CD6B635513D8B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveTranscendentalDegree.lean",
+      "sha256": "4B44C99DC5ED85621D2014F442803F621B8A5DBFB8919C3546264DCA1C2CFB48"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-route-766.json",
+      "sha256": "6F743FCE685A31F14E70A9588BE2E39C2573E8E2240A45995D941982C51E4FA1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-width-bound-1-scratch-receipt.json",
+      "sha256": "B1A53936BB93C534FE13D9A084DA915001D546A3006752ED597B0CB4E81C4010"
+    }
+  ],
+  "shorterRoute": "Use the native cyclic orbit power-index return time instead of developing minimal-period coordinates. Reuse the original positive-weight finite-fiber argument with the already proved upper bound and exact total degree. Original Gamma1 function fields and all nonzero levels are retained."
+}

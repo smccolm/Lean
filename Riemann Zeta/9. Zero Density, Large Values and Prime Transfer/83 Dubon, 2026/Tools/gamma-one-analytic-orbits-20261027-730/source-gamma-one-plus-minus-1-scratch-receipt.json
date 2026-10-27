@@ -1,0 +1,72 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T07:33:36.924019+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOnePlusMinus"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlusMinus.lean",
+      "sha256": "DC8F925EF43228A59D2AE87503C3404B63049785B6F11A5040FED82372D4460D",
+      "oleanSha256": "81E054C913D28E22E150E97B43377768253B75F5528396171A76555F8D123D9C"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.le_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.neg_one_mem_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.mem_plusMinus_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma_smul_eq_of_mem_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.two_le_card_stabilizer_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinus_stabilizer_card_dvd_two_mul_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinusFiniteIndex"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.le_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.neg_one_mem_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.mem_plusMinus_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma_smul_eq_of_mem_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.two_le_card_stabilizer_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinus_stabilizer_card_dvd_two_mul_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinusFiniteIndex"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinus"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlusMinusAudit1b.log",
+  "logSha256": "23DE39AD32E24949C84B07E58AB2DDE0872C9A008FE879EE30DA302269BB6E5E",
+  "auditSha256": "05152CE003ABAB1B86771A2AA1431263200912820B0FC9D4C18568B14D0BCD18",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 11,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 12,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlusMinusDependencyAudit1b.log",
+  "dependencyAuditSha256": "F2B632A2AA30C7A7CB2959A51EE4F58B567ABAF957AF08FFF2427E92E843B5BC",
+  "dependencyAuditSourceSha256": "F890B867F995E02CEB3C52741BB4D28BDDB7C1327CDDA1BC4E0BE4248AC18725",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.le_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.neg_one_mem_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.mem_plusMinus_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma_smul_eq_of_mem_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.two_le_card_stabilizer_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinus_stabilizer_card_dvd_two_mul_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinusFiniteIndex"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact elliptic ramification -> compare weighted analytic j fibers with subgroup orbit indices.",
+  "discharged": [
+    "The subgroup enlarged by negative identity has the same actual point orbits and analytic places.",
+    "Its stabilizer cardinality divides twice the actual analytic ramification, and its stabilizers have cardinality at least two."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Exact ramification at elliptic points, global charts, actual periods and complete Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight characteristic-zero association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-plus-minus-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "B0AB50703D16D9C8173C617787AB6E4BA6874D59F61EDD01DF625DC520F2C5C0",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

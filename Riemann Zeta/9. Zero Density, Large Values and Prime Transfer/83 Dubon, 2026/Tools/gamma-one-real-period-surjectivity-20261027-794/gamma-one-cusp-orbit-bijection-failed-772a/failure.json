@@ -1,0 +1,18 @@
+{
+  "exit": 1,
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-orbit-bijection-failed-772a\\SourceGammaOneCuspOrbitBijection.lean.txt",
+      "sha256": "12a53517168c86d8bd092955f893f4cdf17220007823bba0d733853778f0453d"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-orbit-bijection-failed-772a\\SourceGammaOneCuspOrbitBijection.log",
+      "sha256": "1926118a771a54e9c461e2389becbc2382c7c9f0588762c7d18bd44f48bc964b"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-orbit-bijection-failed-772a\\SourceGammaOneCuspOrbitBijection.exit",
+      "sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04"
+    }
+  ],
+  "cause": "Finite-target theorem must explicitly include its congruence and translation section hypotheses."
+}

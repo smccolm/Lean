@@ -1,0 +1,2789 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-orbits-promotion-route-730.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-orbits-promotion-route-730.json",
+      "sha256": "22E8A1F432B2733B9EA1F91A9478E1FA990356D7BF2379B990712A66AE67EF77"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAllModularRatioMembership.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAllModularRatioMembership.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAllModularRatioMembership.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAllModularRatioMembership.lean.txt",
+      "sha256": "DD4BB8E035E9668AD5D8FA1582FBF405972C0C60C8EB9D62A1EA1101C173DB88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAllModularRatioMembership.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAllModularRatioMembership.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAllModularRatioMembershipAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAllModularRatioMembershipAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAllModularRatioMembershipAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAllModularRatioMembershipAudit1.lean.txt",
+      "sha256": "E91B2DA6B747A3F442F38D6A19EE9149ADA4BDC663E78E97AD168244DFCDBB33"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAllModularRatioMembershipAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAllModularRatioMembershipAudit1.log",
+      "sha256": "4FFFFA17AB31D811B52AA554FA2FCAEB0D3F14C83E1DCE7DB4357AEDCF3ADBEB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAllModularRatioMembershipDependencyAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAllModularRatioMembershipDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAllModularRatioMembershipDependencyAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAllModularRatioMembershipDependencyAudit1.lean.txt",
+      "sha256": "63F117EAF5F3775669E25E9A846778F05866075412AB34B3EF78A06CBDD2A98F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAllModularRatioMembershipDependencyAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAllModularRatioMembershipDependencyAudit1.log",
+      "sha256": "970C05792BA6CD083D24BD49BE43AD7635CDC8AB0D32A0688AF7A6A1F7B5B3C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAllModularRatioMembershipScratchOwnership722.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAllModularRatioMembershipScratchOwnership722.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAllModularRatioMembershipScratchOwnership722.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAllModularRatioMembershipScratchOwnership722.lean.txt",
+      "sha256": "19267A3289E154AE32565E21CA387FB8E6E0B1DA8B25B5AD1545F8C3EB1805CA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAllModularRatioMembershipScratchOwnership722.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAllModularRatioMembershipScratchOwnership722.log",
+      "sha256": "701DE03B9A0C87F04C2B807B00A1BC7E2AAA1C673584DE898F3C7E281272B36E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticIntegrality.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticIntegrality.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticIntegrality.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticIntegrality.lean.txt",
+      "sha256": "C23A959AD1DBD5A9D95D330E772120193BBA3F913DC27338FA3DE27E7B3BDC49"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticIntegrality.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticIntegrality.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticIntegralityAudit3.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticIntegralityAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticIntegralityAudit3.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticIntegralityAudit3.lean.txt",
+      "sha256": "2BB24ADF9D4190F1F988648B56ADE3671081948623C05EBC8664CD601BD9A857"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticIntegralityAudit3.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticIntegralityAudit3.log",
+      "sha256": "F665D297A5854294E4D4770D00604FDE208BCFDF97DE1B143D2FD407BEE46DB3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticIntegralityDependencyAudit3.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticIntegralityDependencyAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticIntegralityDependencyAudit3.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticIntegralityDependencyAudit3.lean.txt",
+      "sha256": "259E229D60DEECA6ED4EC14A63C39BFBEA43D5074FC93A289D15C3C34C387AE9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticIntegralityDependencyAudit3.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticIntegralityDependencyAudit3.log",
+      "sha256": "E687005248E45AFDBF8E9CCB64262B5BF621B68949DE2844BD38AAB8B13ED4AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticIntegralityScratchOwnership710.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticIntegralityScratchOwnership710.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticIntegralityScratchOwnership710.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticIntegralityScratchOwnership710.lean.txt",
+      "sha256": "CBFEE778D0E26D8DD656163CD0CACA076D1D87951ED4048598D67EB27ADF1CE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticIntegralityScratchOwnership710.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticIntegralityScratchOwnership710.log",
+      "sha256": "25A6F972C4452B08C77CFC9F19826E474C0C4FCA0A68C73FD8ACBD245122AA24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceInvariance.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticPlaceInvariance.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceInvariance.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticPlaceInvariance.lean.txt",
+      "sha256": "845B8EAFA716496B045C6DC00614EA18971DC3827EDDFB3935E0A493A4DC306B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceInvariance.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticPlaceInvariance.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceOrbits.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticPlaceOrbits.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceOrbits.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticPlaceOrbits.lean.txt",
+      "sha256": "8B6C9BCD3AB0C0336CD140D440628D66666A653475A31BE7DB00D55DE46E5A7D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceOrbits.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticPlaceOrbits.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceOrbitsAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticPlaceOrbitsAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceOrbitsAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticPlaceOrbitsAudit1.lean.txt",
+      "sha256": "74A49F09A787788386C84BF56CBC808D81A040A100EC301190EFDDB58ACA42E4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceOrbitsAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticPlaceOrbitsAudit1.log",
+      "sha256": "E898879A4C59C009599A3F876FAE279DA95A3DF247BFE477FE08A82FAFA0EAD4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceOrbitsDependencyAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticPlaceOrbitsDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceOrbitsDependencyAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticPlaceOrbitsDependencyAudit1.lean.txt",
+      "sha256": "F73F1D64232E4F52EFEEF31DFD8161E31E3CF8CEE0D1C0A4C91BF093E9158476"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceOrbitsDependencyAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticPlaceOrbitsDependencyAudit1.log",
+      "sha256": "D26D388E2B6A5EDC1327567ACB313B35A6207DDCE32AE4C4024F4AF09350C724"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceOrbitsScratchOwnership723.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticPlaceOrbitsScratchOwnership723.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceOrbitsScratchOwnership723.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticPlaceOrbitsScratchOwnership723.lean.txt",
+      "sha256": "5D2B2243830995397D8A6F1080D975FF80B44B8B988F94DE31557AAE475B9C6D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceOrbitsScratchOwnership723.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneAnalyticPlaceOrbitsScratchOwnership723.log",
+      "sha256": "F8DA2FB4EE83748DC5E63856A12E5495D44F6C473FD940EC9104F7EEC1A2243D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSeparation.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDiamondSeparation.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSeparation.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDiamondSeparation.lean.txt",
+      "sha256": "ED5648A7663EDC4B36DF5E4D9E908E2A3EE06C794742E30B62F37C9009F6A9B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSeparation.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDiamondSeparation.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSeparationAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDiamondSeparationAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSeparationAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDiamondSeparationAudit1.lean.txt",
+      "sha256": "217F4D1A56F05C04756AA221A2C83F0199300521AAE99A09B5E1A6CD15BF8CD0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSeparationAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDiamondSeparationAudit1.log",
+      "sha256": "F979A9D814469218C84B3CA7734166EBF24C87B7F2DBF9C02675F657237C7CD7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSeparationDependencyAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDiamondSeparationDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSeparationDependencyAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDiamondSeparationDependencyAudit1.lean.txt",
+      "sha256": "AC743B2CA3C06BF3CB6E25EAC06A4E8C03456FDADD021C554B3DCA15B292C4EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSeparationDependencyAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDiamondSeparationDependencyAudit1.log",
+      "sha256": "84476224DCA17C56D9C887C686C4FC2B51EB792F48061686A26BE8C41557B4DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSeparationScratchOwnership718.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDiamondSeparationScratchOwnership718.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSeparationScratchOwnership718.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDiamondSeparationScratchOwnership718.lean.txt",
+      "sha256": "E03225E6B7C4E7525F6E8C318C2CD14B00D761A59B644A4DD52E2FE784F86F20"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSeparationScratchOwnership718.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDiamondSeparationScratchOwnership718.log",
+      "sha256": "2C8F220A8E5B8259B31FC1828BD29782B98981BD085D07BA5F662DADA636C7F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionForms.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionForms.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionForms.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionForms.lean.txt",
+      "sha256": "42F48B9B89A9CDD520F2108C3EA0BEB7B10F9C6A81752C3FE4800AA19D784CC6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionForms.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionForms.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionFormsAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionFormsAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionFormsAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionFormsAudit1.lean.txt",
+      "sha256": "B24C603BBF4FB3B058AEEA5AE60C17D088162077998955A02455EB9F0F5237C9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionFormsAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionFormsAudit1.log",
+      "sha256": "6451A69E962B2C59913C58129712CAF6E4127CA583E6D374CDEE0DF741C4EC8D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionFormsDependencyAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionFormsDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionFormsDependencyAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionFormsDependencyAudit1.lean.txt",
+      "sha256": "542325CD7BB7ED5F14D5943333826D66909340DC926B2C15EA090F55C9C5392D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionFormsDependencyAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionFormsDependencyAudit1.log",
+      "sha256": "40717B11D350A251F8CAD48078C9B4723E009C01459BA61E04873759058B2806"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionFormsScratchOwnership715.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionFormsScratchOwnership715.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionFormsScratchOwnership715.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionFormsScratchOwnership715.lean.txt",
+      "sha256": "24C7D995DA8FC94A71A48EDDB76976FB482DA1A082BEFD0EF276D719A7738C48"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionFormsScratchOwnership715.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionFormsScratchOwnership715.log",
+      "sha256": "97B5EAA425B73686071B3F2266040838EC5D959306384AF7003BD0B63C443D9B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionLatticeOrbit.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionLatticeOrbit.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionLatticeOrbit.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionLatticeOrbit.lean.txt",
+      "sha256": "70F72E6AB74BC87B514498E5F23F6B5C9E1358EDFDCF7D872DC1D39A308BE4B1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionLatticeOrbit.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionLatticeOrbit.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionLatticeOrbitAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionLatticeOrbitAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionLatticeOrbitAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionLatticeOrbitAudit1.lean.txt",
+      "sha256": "544FE3A32A3F07DA799B69472472F336BDF106EC513B779580EF5A8A6F84A5D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionLatticeOrbitAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionLatticeOrbitAudit1.log",
+      "sha256": "9577D59FBC8AC57BFC786B20B26EBF688D4817CDBCBF4EBE289A3682A783DA8F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionLatticeOrbitDependencyAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionLatticeOrbitDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionLatticeOrbitDependencyAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionLatticeOrbitDependencyAudit1.lean.txt",
+      "sha256": "D0B0D71B5C5C2459B501B3010C827EA02439D019076F9963F488B8D3F4E2B66F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionLatticeOrbitDependencyAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionLatticeOrbitDependencyAudit1.log",
+      "sha256": "F6CCB5402F8AAAB988FA8D0B07D43D85395F1E51EF6A12BCD48E14BA4E673DC1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionLatticeOrbitScratchOwnership716.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionLatticeOrbitScratchOwnership716.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionLatticeOrbitScratchOwnership716.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionLatticeOrbitScratchOwnership716.lean.txt",
+      "sha256": "CB65E1B439808E8258240684D698D07E0EBAC8E4D87267E4F304DE43870F19ED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionLatticeOrbitScratchOwnership716.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionLatticeOrbitScratchOwnership716.log",
+      "sha256": "45048790E49CB89E7F241519300AB32A41B9294E6CE4CFB66FD47C59371267BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionPowerOrbit.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionPowerOrbit.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionPowerOrbit.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionPowerOrbit.lean.txt",
+      "sha256": "C63422A72A5968B8676E1F01C81543A45058CD9DE1D48FF9FD305C3AF397A8AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionPowerOrbit.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionPowerOrbit.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionPowerOrbitAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionPowerOrbitAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionPowerOrbitAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionPowerOrbitAudit1.lean.txt",
+      "sha256": "A898DD71C0643EC41D199AC18F06A9C5FEFD338F5DE872CA3A22570DBD27FBEA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionPowerOrbitAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionPowerOrbitAudit1.log",
+      "sha256": "EC76D4892CD24D37F93592E5DE08DFFB243F7C2700EE4368F14141CFD7038614"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionPowerOrbitDependencyAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionPowerOrbitDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionPowerOrbitDependencyAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionPowerOrbitDependencyAudit1.lean.txt",
+      "sha256": "E1466C13EE5986ABBB00F82C1DD384B7BF6C47A22149A95E8A338990DEF5885F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionPowerOrbitDependencyAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionPowerOrbitDependencyAudit1.log",
+      "sha256": "5C1F8DBDBA3361B076CA195CCAB1FC8F57F59D9A1D8A67D4F9E4C135B395E3E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionPowerOrbitScratchOwnership717.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionPowerOrbitScratchOwnership717.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionPowerOrbitScratchOwnership717.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionPowerOrbitScratchOwnership717.lean.txt",
+      "sha256": "7D3F48DDD828477281F75D1F6E7515D51270451621F0380D4BC1F30921BD877B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionPowerOrbitScratchOwnership717.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneDivisionPowerOrbitScratchOwnership717.log",
+      "sha256": "5E4A66BA4956EF1385FA43C8F35089AEB9B08FAAB3DD54C4C2FFB97075774795"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceExhaustion.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneFinitePlaceExhaustion.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceExhaustion.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneFinitePlaceExhaustion.lean.txt",
+      "sha256": "2EF1C1C6B8C632143DD3A0E1466275E8A4AD423009828FCE0AD98F6E404655F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceExhaustion.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneFinitePlaceExhaustion.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceExhaustionAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneFinitePlaceExhaustionAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceExhaustionAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneFinitePlaceExhaustionAudit1.lean.txt",
+      "sha256": "D9346D3C56DD6AC3EC194BEB4D185E96E31624119BD2F47698036BAD51B6EF45"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceExhaustionAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneFinitePlaceExhaustionAudit1.log",
+      "sha256": "B02D52AB188C3254FEEA6E0DAE424BDC3E50BD8020D3712B0B2D3BFF735443DE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceExhaustionDependencyAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneFinitePlaceExhaustionDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceExhaustionDependencyAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneFinitePlaceExhaustionDependencyAudit1.lean.txt",
+      "sha256": "17BFB4F0B1C783DF22A4DD053580CE0F96C707FE8E70359C0657CDA372A77522"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceExhaustionDependencyAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneFinitePlaceExhaustionDependencyAudit1.log",
+      "sha256": "6899E73EADF7D4745E2A87342CEF3239EBA127C939095852D310C9C7369EA53F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceExhaustionScratchOwnership711.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneFinitePlaceExhaustionScratchOwnership711.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceExhaustionScratchOwnership711.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneFinitePlaceExhaustionScratchOwnership711.lean.txt",
+      "sha256": "EAFF847A474B903407B540EA3D2DCC1EF2B21D8C87C28E6E3A40325FED14F5C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceExhaustionScratchOwnership711.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneFinitePlaceExhaustionScratchOwnership711.log",
+      "sha256": "31480DD664AC821A242023E75FFEC35059196671E2930D55C51136FD0FF56F77"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenericFiberCount.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneGenericFiberCount.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenericFiberCount.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneGenericFiberCount.lean.txt",
+      "sha256": "D6B7D892DC0D0F547AAEED407BDBA5A024486B3FEE4C6F784ED58B5CF3D7B2BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenericFiberCount.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneGenericFiberCount.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenericFiberCountAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneGenericFiberCountAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenericFiberCountAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneGenericFiberCountAudit1.lean.txt",
+      "sha256": "46585E3ABA32F578264C23D22EC08400F3ADED6E1E37CFEFBAE719DDFA6855FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenericFiberCountAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneGenericFiberCountAudit1.log",
+      "sha256": "43F7C3B03FF4853394C096E6FE93433F7D934CF3EE5C25B187F5F9AE0849DA19"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenericFiberCountDependencyAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneGenericFiberCountDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenericFiberCountDependencyAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneGenericFiberCountDependencyAudit1.lean.txt",
+      "sha256": "AEF349136EBA4C1AA6A02AD4537E3F7D1697BEE474C208C40812089D74E573D2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenericFiberCountDependencyAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneGenericFiberCountDependencyAudit1.log",
+      "sha256": "216DC85281B3CF4724F275A442BFAC04EF88FDE66BCF1B68204DE7E806B3EADB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenericFiberCountScratchOwnership729.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneGenericFiberCountScratchOwnership729.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenericFiberCountScratchOwnership729.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneGenericFiberCountScratchOwnership729.lean.txt",
+      "sha256": "4B6094FA805C3DF4FCD609AB235EF60D56BCAA48C89D310C27BE5FDBA391BDCF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenericFiberCountScratchOwnership729.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneGenericFiberCountScratchOwnership729.log",
+      "sha256": "5FD70633B3188A9F648DB7EA97F6F4F29F4DE8701B51ABCF79A83ED4F5084CDF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFunctions.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneHolomorphicFunctions.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFunctions.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneHolomorphicFunctions.lean.txt",
+      "sha256": "47B217E183F5C1A5826E2BED9224D33C212B3534313F8462DD2D8E606FE34D28"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFunctions.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneHolomorphicFunctions.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberDegree.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberDegree.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberDegree.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberDegree.lean.txt",
+      "sha256": "82ECBE8176F9FBE98A13AE44A379EE3FA76ADBAB7CF08D64A244DD9AE6ABD9E0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberDegree.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberDegree.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberDegreeAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberDegreeAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberDegreeAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberDegreeAudit1.lean.txt",
+      "sha256": "E66A67ED7082B7B33A2A2236C5709BC8751B7D8B5E33BD789B891603A9D97920"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberDegreeAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberDegreeAudit1.log",
+      "sha256": "0EE1A7465244398A8498CCAC0CFE08516A78532CCA304F5699690367710B57C7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberDegreeDependencyAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberDegreeDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberDegreeDependencyAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberDegreeDependencyAudit1.lean.txt",
+      "sha256": "5B1392B0E504F3FFD4218B1A2A8819BDBB26B151E8D63942ACCB4D35D39DFEC4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberDegreeDependencyAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberDegreeDependencyAudit1.log",
+      "sha256": "7B8CAE89B248506CB66E62C4AF6949299AD5ADC021EA6B1CDDE82B752E3171AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberDegreeScratchOwnership724.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberDegreeScratchOwnership724.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberDegreeScratchOwnership724.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberDegreeScratchOwnership724.lean.txt",
+      "sha256": "54E89C0C31E6FFDEE3E3F7649613C2C69444B806C8535ECA2EFFCD8C80F206A3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberDegreeScratchOwnership724.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberDegreeScratchOwnership724.log",
+      "sha256": "13CBAD8D1B24A415D8A31C9B7267E8E7F0A4FD36BE452E96D9C35F376C4EF05E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberOrbits.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberOrbits.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberOrbits.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberOrbits.lean.txt",
+      "sha256": "D0251076EDA7909BC3323635B276218B54A0EDC1D58AC03DDCC45926A37626CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberOrbits.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberOrbits.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberOrbitsAudit1b.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberOrbitsAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberOrbitsAudit1b.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberOrbitsAudit1b.lean.txt",
+      "sha256": "E2CA1D9F48671100FE2F5722B0E9DDF7E80AE46772006C7F732249A990A4878D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberOrbitsAudit1b.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberOrbitsAudit1b.log",
+      "sha256": "ADF28167F971F102C0E027FE5FEF5EB609418992B14B66F14C5B7C6B040D1F7D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberOrbitsDependencyAudit1b.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberOrbitsDependencyAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberOrbitsDependencyAudit1b.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberOrbitsDependencyAudit1b.lean.txt",
+      "sha256": "B59A87BE6808149762D0D5E88C6C1487A80127F720DFDCDBA5111FEE569BE5F0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberOrbitsDependencyAudit1b.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberOrbitsDependencyAudit1b.log",
+      "sha256": "FEDEE534BFFC05C28C2B3C58BFB5C1C64031D1CFAB4C275EB7C96A6C93146374"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberOrbitsScratchOwnership728.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberOrbitsScratchOwnership728.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberOrbitsScratchOwnership728.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberOrbitsScratchOwnership728.lean.txt",
+      "sha256": "2686037D622C2F60451EEE77819305D13349BFA042EA5B9870D61CC649859AA1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberOrbitsScratchOwnership728.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneJFiberOrbitsScratchOwnership728.log",
+      "sha256": "EDA8922CC8911F7D10E41AD1AE73C962A7A87CD3CF4D936901472E6AAB7A044C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularPointSeparation.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneModularPointSeparation.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularPointSeparation.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneModularPointSeparation.lean.txt",
+      "sha256": "3D6B716337BC99AB342258DA75FACA9B8F4985EDAABE530F70CC9CC46110FBAD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularPointSeparation.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneModularPointSeparation.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularPointSeparationAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneModularPointSeparationAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularPointSeparationAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneModularPointSeparationAudit1.lean.txt",
+      "sha256": "C9E067EF60D1F965E278DE3DEEA4D17C1DB5801B4FBB415E207CF2AF59639784"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularPointSeparationAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneModularPointSeparationAudit1.log",
+      "sha256": "EB5A1874FD9CE8418D9DEDA99A8C1D47DADB492516BF2F1B939C4882833E1947"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularPointSeparationDependencyAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneModularPointSeparationDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularPointSeparationDependencyAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneModularPointSeparationDependencyAudit1.lean.txt",
+      "sha256": "DAF8DF5A6B49A0DFB4DBD192E2CC27618F899DFCBA2189233A7F4368B9E7D1BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularPointSeparationDependencyAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneModularPointSeparationDependencyAudit1.log",
+      "sha256": "D261F24F3EEBD0958154305D1BFDE327ACBFE9D41449D45FDB7B4CA91AB339ED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularPointSeparationScratchOwnership720.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneModularPointSeparationScratchOwnership720.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularPointSeparationScratchOwnership720.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneModularPointSeparationScratchOwnership720.lean.txt",
+      "sha256": "EA5F0912F555D83768F55CB7399F5AF4A101295F843B09F79B59FE4451234746"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularPointSeparationScratchOwnership720.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneModularPointSeparationScratchOwnership720.log",
+      "sha256": "69040686E117E4C28813A8A81E45EA90E0394D8EC2F1E8ECFE26D77364E2485E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormalizedCuspRatios.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneNormalizedCuspRatios.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormalizedCuspRatios.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneNormalizedCuspRatios.lean.txt",
+      "sha256": "BA97EF5C8A396F8B5450C88F0E851DBD5B1EE4B687DCA903A41755CA92353B01"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormalizedCuspRatios.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneNormalizedCuspRatios.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormalizedCuspRatiosAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneNormalizedCuspRatiosAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormalizedCuspRatiosAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneNormalizedCuspRatiosAudit1.lean.txt",
+      "sha256": "7FCFB142910A3ABBB1503731A6D611E47642C9E8DA0009B60F63C6A0539DF075"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormalizedCuspRatiosAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneNormalizedCuspRatiosAudit1.log",
+      "sha256": "FF39E413CB4CC1C99BF9060A04ABEF5DF3247739F0A4B055663DE637AC1D9714"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormalizedCuspRatiosDependencyAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneNormalizedCuspRatiosDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormalizedCuspRatiosDependencyAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneNormalizedCuspRatiosDependencyAudit1.lean.txt",
+      "sha256": "62EAC6ACFFE6CD5D09795AC879146B7AC7C3D0926CFBC09932A4C25521D94C2B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormalizedCuspRatiosDependencyAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneNormalizedCuspRatiosDependencyAudit1.log",
+      "sha256": "72D6CE5FA4DA87B77A060E2CDF5FEE1B719D210D1A7FE978F4BBC95E9B5F97F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormalizedCuspRatiosScratchOwnership721.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneNormalizedCuspRatiosScratchOwnership721.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormalizedCuspRatiosScratchOwnership721.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneNormalizedCuspRatiosScratchOwnership721.lean.txt",
+      "sha256": "C530C32C0BEC313AD77F77D50EFC931C41EF6BFCBC41506201A01E7D8BA77A38"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormalizedCuspRatiosScratchOwnership721.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneNormalizedCuspRatiosScratchOwnership721.log",
+      "sha256": "464C4CFCB03408F6ED4ACF0D436C2A34075206DA6E05DD21823F2D909D40983E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOrbitCounting.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneOrbitCounting.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOrbitCounting.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneOrbitCounting.lean.txt",
+      "sha256": "D1C431ABA6FE9E5AE3FCE6ACA6AB6BE4FA1163E5C75F27E4F4E69F62931EA5FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOrbitCounting.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneOrbitCounting.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOrbitCountingAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneOrbitCountingAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOrbitCountingAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneOrbitCountingAudit1.lean.txt",
+      "sha256": "412846CA457E05FA6D11A49749EDF206FCC51B853B20588CA289B9A60ECA353C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOrbitCountingAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneOrbitCountingAudit1.log",
+      "sha256": "B9F7C715115052404C7AAD368C09233687DE531EF7056D1E86512A6EC57B1C8C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOrbitCountingDependencyAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneOrbitCountingDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOrbitCountingDependencyAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneOrbitCountingDependencyAudit1.lean.txt",
+      "sha256": "F89F8F0C46999513E94EC876ECC6C240FA4F4A42ABEC13A12FB64874FDFC27BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOrbitCountingDependencyAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneOrbitCountingDependencyAudit1.log",
+      "sha256": "00C005E924FA235D549D19A8FA2A354D1303BDA8657EE99825978F10FCD0F9DF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOrbitCountingScratchOwnership725.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneOrbitCountingScratchOwnership725.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOrbitCountingScratchOwnership725.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneOrbitCountingScratchOwnership725.lean.txt",
+      "sha256": "EFD1915E2AF5A17A5B465F16D8F2F64F9553A07A2CCF3108F28D3D45169B2A71"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOrbitCountingScratchOwnership725.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneOrbitCountingScratchOwnership725.log",
+      "sha256": "770D0C2BC600252F645DF5CA51B952CF5D34EFACC6D34773E7C82B71CCE0FEB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceInvarianceAudit2.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlaceInvarianceAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceInvarianceAudit2.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlaceInvarianceAudit2.lean.txt",
+      "sha256": "3CFAAEB995840CA0E27DCAF41B9284553036BB7856279C08D133BA602C46BF6B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceInvarianceAudit2.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlaceInvarianceAudit2.log",
+      "sha256": "54740DD386175D2A9F4BA23DEC8D6B1CE8F457D8C4F79C868517F5F1821AD18A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceInvarianceDependencyAudit2.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlaceInvarianceDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceInvarianceDependencyAudit2.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlaceInvarianceDependencyAudit2.lean.txt",
+      "sha256": "FDE93980E4244A9E558FE0D1A8564A7412CC03DCB39E804230CFB0EC5E222E4F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceInvarianceDependencyAudit2.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlaceInvarianceDependencyAudit2.log",
+      "sha256": "B9A43C18E670EA98418CA81D6A51D6845D3C248ABD2E59B96C37CF2FE985AB3A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceInvarianceScratchOwnership713.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlaceInvarianceScratchOwnership713.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceInvarianceScratchOwnership713.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlaceInvarianceScratchOwnership713.lean.txt",
+      "sha256": "9AC3A5F837AD0DD17E5015FF4C19225DF39F0D22CF234D940DA06C86D91E964D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceInvarianceScratchOwnership713.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlaceInvarianceScratchOwnership713.log",
+      "sha256": "C9F2C723965B25A84062A3989E267111FC1C14DE3FE544DEF0CDB612C555E971"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlusMinus.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlusMinus.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlusMinus.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlusMinus.lean.txt",
+      "sha256": "DC8F925EF43228A59D2AE87503C3404B63049785B6F11A5040FED82372D4460D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlusMinus.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlusMinus.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlusMinusAudit1b.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlusMinusAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlusMinusAudit1b.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlusMinusAudit1b.lean.txt",
+      "sha256": "05152CE003ABAB1B86771A2AA1431263200912820B0FC9D4C18568B14D0BCD18"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlusMinusAudit1b.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlusMinusAudit1b.log",
+      "sha256": "23DE39AD32E24949C84B07E58AB2DDE0872C9A008FE879EE30DA302269BB6E5E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlusMinusDependencyAudit1b.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlusMinusDependencyAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlusMinusDependencyAudit1b.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlusMinusDependencyAudit1b.lean.txt",
+      "sha256": "F890B867F995E02CEB3C52741BB4D28BDDB7C1327CDDA1BC4E0BE4248AC18725"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlusMinusDependencyAudit1b.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlusMinusDependencyAudit1b.log",
+      "sha256": "F2B632A2AA30C7A7CB2959A51EE4F58B567ABAF957AF08FFF2427E92E843B5BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlusMinusScratchOwnership726.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlusMinusScratchOwnership726.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlusMinusScratchOwnership726.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlusMinusScratchOwnership726.lean.txt",
+      "sha256": "FC2729B42520E891946776FF1B94CA654516E20B8BF296012533A050DF019E68"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlusMinusScratchOwnership726.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOnePlusMinusScratchOwnership726.log",
+      "sha256": "9279FE06040CD7113F5F7918DD4FBBA54EB355330DDA3812D6B36B071C9445B9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneQuotientCuspSeries.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneQuotientCuspSeries.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneQuotientCuspSeries.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneQuotientCuspSeries.lean.txt",
+      "sha256": "1CAD5294C564FCFA9AB4C4C0EB85F93D87ED680CC7291C442951DDEF38C93954"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneQuotientCuspSeries.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneQuotientCuspSeries.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationBounds.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneRamificationBounds.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationBounds.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneRamificationBounds.lean.txt",
+      "sha256": "593C657495E8A2FB347B371F2BFB32C01383C54584221CE5D4022FC3E8333D6B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationBounds.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneRamificationBounds.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationBoundsAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneRamificationBoundsAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationBoundsAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneRamificationBoundsAudit1.lean.txt",
+      "sha256": "DC7D3B7E7EA14D2D11904686F5EF3ADA7FBBF6CF093F03D34C832162B1D65FF8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationBoundsAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneRamificationBoundsAudit1.log",
+      "sha256": "96736001FF781EA8ABB23E19208CA12E385E54BD433E8EC199DB0F372206B43A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationBoundsDependencyAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneRamificationBoundsDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationBoundsDependencyAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneRamificationBoundsDependencyAudit1.lean.txt",
+      "sha256": "C55245B10B785DFC4ADBEE458E8B12679F96CF35452BA09F779033AD9AD50CED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationBoundsDependencyAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneRamificationBoundsDependencyAudit1.log",
+      "sha256": "B145D460B8054968EBD9414E7C0D01ED5EE4D0356A76C41FB9A22EAE41E213F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationBoundsScratchOwnership727.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneRamificationBoundsScratchOwnership727.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationBoundsScratchOwnership727.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneRamificationBoundsScratchOwnership727.lean.txt",
+      "sha256": "6D8ED54CC78AE2D813723106D4E27A1ACABBAAAEA3D6F7C91BDA6F4ECF88DFA5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationBoundsScratchOwnership727.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneRamificationBoundsScratchOwnership727.log",
+      "sha256": "B2E339DFCF867F787EAD960CA8E1029B85622D2B83E70D23F9D5E69CEBB116AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneStabilizerRamification.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneStabilizerRamification.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneStabilizerRamification.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneStabilizerRamification.lean.txt",
+      "sha256": "74A9B93F04B95697872F310DC260110682283D911BC44314251F9929650646A3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneStabilizerRamification.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceGammaOneStabilizerRamification.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalModularPointSeparation.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceOriginalModularPointSeparation.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalModularPointSeparation.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceOriginalModularPointSeparation.lean.txt",
+      "sha256": "01F5B9FD4ED1EC15BDD566CBC69621B0F30A0C8D79B7E529FB69B0D438C9FDC6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalModularPointSeparation.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceOriginalModularPointSeparation.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalModularPointSeparationAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceOriginalModularPointSeparationAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalModularPointSeparationAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceOriginalModularPointSeparationAudit1.lean.txt",
+      "sha256": "03FEC2B403C8CACAFF769DC22AE01D0B35F4DDA4ED48F797AF50A4E58CAF3C05"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalModularPointSeparationAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceOriginalModularPointSeparationAudit1.log",
+      "sha256": "89CE54E1261A78092A55A50D5C71A605025DFDEE64471B887B56685B26542C2A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalModularPointSeparationDependencyAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceOriginalModularPointSeparationDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalModularPointSeparationDependencyAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceOriginalModularPointSeparationDependencyAudit1.lean.txt",
+      "sha256": "B17C904E25332B646D58712C80B79A9B43CC2811D5B2C961E4E6816A6964A4CE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalModularPointSeparationDependencyAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceOriginalModularPointSeparationDependencyAudit1.log",
+      "sha256": "1E5E053D39D02B74E80E79ACE7C63756A813D6790F29054B1AF8144D81DC9F4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalModularPointSeparationScratchOwnership719.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceOriginalModularPointSeparationScratchOwnership719.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalModularPointSeparationScratchOwnership719.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceOriginalModularPointSeparationScratchOwnership719.lean.txt",
+      "sha256": "E3A8D5C6F4D3A8C6F475FD93423B0A52D9BDA2C5977C40DF57003DD6722D3C0E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalModularPointSeparationScratchOwnership719.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourceOriginalModularPointSeparationScratchOwnership719.log",
+      "sha256": "15FD4AB59CC06051BEBC90A5B0907F6749FB17E6165BF6F05B0A17F7830A87C2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodDivisionRotations.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourcePeriodDivisionRotations.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodDivisionRotations.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourcePeriodDivisionRotations.lean.txt",
+      "sha256": "4F4C449CF4A03B03EC9A28ED41CE53E84DA4B1991E33B0D9846A4D9E3759A1DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodDivisionRotations.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourcePeriodDivisionRotations.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodDivisionRotationsAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourcePeriodDivisionRotationsAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodDivisionRotationsAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourcePeriodDivisionRotationsAudit1.lean.txt",
+      "sha256": "622B880529F3C8D2ED8918A2880F932668EC6CE34240535F26504377C1EC9D56"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodDivisionRotationsAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourcePeriodDivisionRotationsAudit1.log",
+      "sha256": "F53766A7E644D0E0215599329F2A7D2444A1D7E5728AB6C0A0322996EE9F1C27"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodDivisionRotationsDependencyAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourcePeriodDivisionRotationsDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodDivisionRotationsDependencyAudit1.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourcePeriodDivisionRotationsDependencyAudit1.lean.txt",
+      "sha256": "0D0E87E52F3E3C8DE2FFF5E514852DEE17696C1576F480C67FFECADE676973E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodDivisionRotationsDependencyAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourcePeriodDivisionRotationsDependencyAudit1.log",
+      "sha256": "A89D86E9A5610F2D4C31ACC18469AFBE80517137F2BAEECA5C3ED4C36D4F0B75"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodDivisionRotationsScratchOwnership714.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourcePeriodDivisionRotationsScratchOwnership714.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodDivisionRotationsScratchOwnership714.lean",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourcePeriodDivisionRotationsScratchOwnership714.lean.txt",
+      "sha256": "A360F947EDE43EFF8F72A5F845ACD943D268C5EE10CC3217C9A4E79078606A5D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodDivisionRotationsScratchOwnership714.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/SourcePeriodDivisionRotationsScratchOwnership714.log",
+      "sha256": "71EAC8213ED56215B3DEDD73A08FC88856B33AD475A76E81E6F2115501EE96C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers715.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/consumers715.txt",
+      "sha256": "56E95E7251247062137B89D2512BBEF51B8D426B31505BC02979E792FC0C9A4D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers718.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/consumers718.txt",
+      "sha256": "B3330E3F1C8528BC4D4DA3E034EED9A7D28C406CA53CF68510EB4059D1AB3390"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers723.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/consumers723.txt",
+      "sha256": "4F33575CAC80A5874F02F9F60D8D5BCCD6998FC3377D037512092950AA3BBE23"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers729.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/consumers729.txt",
+      "sha256": "0DE529DBFDDD23B4C7412BA3032C1AD61142AA7841BF459EBF33C764C7DA9F18"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_orbit_inputs_712.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/download_gamma_one_orbit_inputs_712.py",
+      "sha256": "77AF350382CB2984F814BA630C12AC0C569C6CD16EABB9482924D38DE0D9F3C1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_orbit_separation_712.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/download_gamma_one_orbit_separation_712.py",
+      "sha256": "AB39670B4B37AD7CF1D3C28BA89910D0686E0481E38DE655B640CFF502BC7242"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation715-console.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/foundation715-console.log",
+      "sha256": "CD40B8260FF5E9B7172D738B9F5A98EC3556ED9D9D4DA9A157C541CE010C7A45"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation718-console.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/foundation718-console.log",
+      "sha256": "E513D2634779B2F12F199F20C0E222179183B0C8BDF827017CADE7B425B28A25"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation723-console.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/foundation723-console.log",
+      "sha256": "552E944F8809020599143993DDFDBD83118B60D362D783DCD99E70985019A1F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation729-console.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/foundation729-console.log",
+      "sha256": "35746FAD83E3453A1C795049074A718C859C3AED244D1089737072BF8A1C2547"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-all-modular-ratio-membership-audit-route-722.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-all-modular-ratio-membership-audit-route-722.json",
+      "sha256": "65BF8941A68292D1A97CAAF41426F82017ADB75558E7EAC8118C7B59998FAEDC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-all-modular-ratio-membership-route-722.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-all-modular-ratio-membership-route-722.json",
+      "sha256": "65BF8941A68292D1A97CAAF41426F82017ADB75558E7EAC8118C7B59998FAEDC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-all-modular-ratio-membership-scratch-ownership-722.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-all-modular-ratio-membership-scratch-ownership-722.json",
+      "sha256": "D8FAAC8589B980EB4722F84182D2F428D880687A66361DAD050C6AF0689308FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-integrality-audit-route-710.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-integrality-audit-route-710.json",
+      "sha256": "E995039C404D3946239C621DA3BC49387E5AA20E0ABC0B32C55A57D05417730B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-integrality-route-710.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-integrality-route-710.json",
+      "sha256": "CC42D403200F998F1E1496DE48D181AFD78639EC2E93FD399C5CA662815EB896"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-integrality-scratch-ownership-710.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-integrality-scratch-ownership-710.json",
+      "sha256": "599259B8DF23C2E3334FECC0C260D31682139733D3218D11584D27E0E37F0E78"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-place-orbits-audit-route-723.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-place-orbits-audit-route-723.json",
+      "sha256": "E291303552B1AB6BBE8B984F7F16DD1E2C9BB178E20F18A1571B76EFA1D011B9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-place-orbits-route-723.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-place-orbits-route-723.json",
+      "sha256": "45182589AE376F76BAF2F66B94FC9644BF21B89C7D7591096616A8D9B93B5F6A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-place-orbits-scratch-ownership-723.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-place-orbits-scratch-ownership-723.json",
+      "sha256": "87640429958B2A793D68B64E8157659283B52D42D7D1677D8E452CA5FB0ABAFB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-diamond-separation-audit-route-718.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-diamond-separation-audit-route-718.json",
+      "sha256": "C5DF9882822167F3D93FD9C31DBC5EDB1AF2929CF753A78F82B33394A68375F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-diamond-separation-route-718.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-diamond-separation-route-718.json",
+      "sha256": "859DD6EC81BED4F59ADC199F9B69E096E0C038521F0BEFB641EB4CD50A3A0C39"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-diamond-separation-scratch-ownership-718.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-diamond-separation-scratch-ownership-718.json",
+      "sha256": "D82B27FEE858FDE031211ECEF3E3C91AA817C66B4E12C93DC165D6BC3EFF612D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-forms-audit-route-715.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-forms-audit-route-715.json",
+      "sha256": "6071BD55572C69D0F7EF189E827D5B448844849E4772544C79976FCF375E1E0C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-forms-route-715.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-forms-route-715.json",
+      "sha256": "ACDA72DF0FB868B108D6EB8C6AB150D9E9A7E4890C53AEC908EC5DD899D4E53D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-forms-scratch-ownership-715.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-forms-scratch-ownership-715.json",
+      "sha256": "854E8B97E71E884050E2D07A00D31FF678AE5B0A704F15FD3BB44A5D615C8038"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-lattice-orbit-audit-route-716.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-lattice-orbit-audit-route-716.json",
+      "sha256": "B3BCA87A32F3379FD6FF225AE5BA7B0D08770CB3E5B3CA11146F92B3007A9135"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-lattice-orbit-route-716.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-lattice-orbit-route-716.json",
+      "sha256": "E5A26B80EA1564A39AFB3760D311BD33E0D199CEF3B3F0E4CB83ABB29701589D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-lattice-orbit-scratch-ownership-716.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-lattice-orbit-scratch-ownership-716.json",
+      "sha256": "8ACF27EB1E9A91E731B1A28D8D93CC9AB8396AFFD8CF2BDFF175DE7BDC003166"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-power-orbit-audit-route-717.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-power-orbit-audit-route-717.json",
+      "sha256": "2625B167B1FD9F9482722A313294A8B4A8C5C2308B096B88BA30F2A387D06EBB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-power-orbit-route-717.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-power-orbit-route-717.json",
+      "sha256": "D79E0B049EF9132EF754D4895BB794DFCDF9892455C53D1A30081823FC025C3A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-power-orbit-scratch-ownership-717.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-power-orbit-scratch-ownership-717.json",
+      "sha256": "D57E31AB47EC642F0FC43D5370A3B34682A2076EC5D2D67033BDA7BD356F6270"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-place-exhaustion-audit-route-711.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-finite-place-exhaustion-audit-route-711.json",
+      "sha256": "725ABDF3A42ED5AAE07A7BF63BC8130295044AFE5AD9A58AB920E8B0FB354E98"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-place-exhaustion-route-711.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-finite-place-exhaustion-route-711.json",
+      "sha256": "0C8163B788996128063A43B42508ED5623F8F0C9831D4DAC279383D96114597E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-place-exhaustion-scratch-ownership-711.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-finite-place-exhaustion-scratch-ownership-711.json",
+      "sha256": "90B43704C8304C97B6BD0761683F8E91D7B80808354939CAF49A2AC423FD5EF7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-generic-fiber-count-audit-route-729.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-generic-fiber-count-audit-route-729.json",
+      "sha256": "D04EE1210B3C19E365A9B93B734530BEB2E322FD6C1C24D8F2A0C726BDA74AD5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-generic-fiber-count-route-729.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-generic-fiber-count-route-729.json",
+      "sha256": "EFEC345F8861CCDFDE6CE8ED89DD7A9373FFEF9BE3198C0A36BB53FDC4868770"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-generic-fiber-count-route-729b.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-generic-fiber-count-route-729b.json",
+      "sha256": "D04EE1210B3C19E365A9B93B734530BEB2E322FD6C1C24D8F2A0C726BDA74AD5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-generic-fiber-count-scratch-ownership-729.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-generic-fiber-count-scratch-ownership-729.json",
+      "sha256": "7DAFD79908913038952776C352D489D6557CA04330C1306CACEBB62A5D361736"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-j-fiber-degree-audit-route-724.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-j-fiber-degree-audit-route-724.json",
+      "sha256": "342E88E7471A75D323468C933828FDB5DF6239D0B5D8CF6907CD4C011EE9C0F6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-j-fiber-degree-route-724.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-j-fiber-degree-route-724.json",
+      "sha256": "497A099084D3EFCB1D32AC19A85A3E08E65AEF5C66CF91ABBBEFE214750A3F6F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-j-fiber-degree-scratch-ownership-724.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-j-fiber-degree-scratch-ownership-724.json",
+      "sha256": "5EA5DA43B3028ACDFAC6C574B4973648A7C9E4F1278A9132A001FACB651246F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-j-fiber-orbits-audit-route-728.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-j-fiber-orbits-audit-route-728.json",
+      "sha256": "E8121EBF1688F99EF939BDCE0DAB8271DECA2F1AEB83A312FF58038A722E83EE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-j-fiber-orbits-route-728.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-j-fiber-orbits-route-728.json",
+      "sha256": "E8121EBF1688F99EF939BDCE0DAB8271DECA2F1AEB83A312FF58038A722E83EE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-j-fiber-orbits-scratch-ownership-728.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-j-fiber-orbits-scratch-ownership-728.json",
+      "sha256": "40901E290422904BF905A3EEB5C4897CD8100B59B74D7DF80734000DCFA36BCC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-modular-point-separation-audit-route-720.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-modular-point-separation-audit-route-720.json",
+      "sha256": "F130C5B02C6944FCC1BF89D720353ADCA0D9C9FD401B8CFF2AAAC84BC0B94AD9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-modular-point-separation-route-720.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-modular-point-separation-route-720.json",
+      "sha256": "C22E81C61045BF8C45495540D9E1470243C8519CAC81D9B765AB5688C33955AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-modular-point-separation-scratch-ownership-720.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-modular-point-separation-scratch-ownership-720.json",
+      "sha256": "8C340994094BDD1E50152207B7FBB406C9ECAD08018938B0211374BAF8C5C986"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-normalized-cusp-ratios-audit-route-721.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-normalized-cusp-ratios-audit-route-721.json",
+      "sha256": "63F8C3119F9E1F87999C41E951A44DB6D2AB7E84EC51499F6787C60585A69F6F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-normalized-cusp-ratios-route-721.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-normalized-cusp-ratios-route-721.json",
+      "sha256": "19AF90E4CF6F9E665152C2068E287AE0AC4BC9C89F9E3D870885059287CD7573"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-normalized-cusp-ratios-scratch-ownership-721.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-normalized-cusp-ratios-scratch-ownership-721.json",
+      "sha256": "42F7CD6CED440CB4A7C6C5B130BFDCF130E6B222C893FD758A938E06B17E761C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-counting-audit-route-725.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-orbit-counting-audit-route-725.json",
+      "sha256": "68CB2FF9FEB845D29592C4D2D287E7B59BA0DA7B855104622272069C72B957CF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-counting-route-725.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-orbit-counting-route-725.json",
+      "sha256": "398975171A4FFF1D698BD5FF057BB89BA550FF6A6640D66C0D7808EBE327E930"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-counting-scratch-ownership-725.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-orbit-counting-scratch-ownership-725.json",
+      "sha256": "7C3669C98A46E5E7B8E999AC2FF162529DCA54D332A03AC302EB3363C2D39F79"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-place-invariance-audit-route-713.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-place-invariance-audit-route-713.json",
+      "sha256": "72F75E729561C3F6F539921D0A008A7F64DA9F84E2A8947641A217FC26039E02"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-place-invariance-route-713.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-place-invariance-route-713.json",
+      "sha256": "32176823CB8759FCDF1B500063276D0C6454A4F1F8F5034F9470F164B0922A25"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-place-invariance-scratch-ownership-713.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-place-invariance-scratch-ownership-713.json",
+      "sha256": "5762D4DBE3ABEAE813505CE2D2F3C25010C361E3F4C5A9AE7BB0B339A5A2E07E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-plus-minus-audit-route-726.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-plus-minus-audit-route-726.json",
+      "sha256": "4217DB1A144DF4DA803398EDE940917EC1CE5D41AB7EBB314FED847DC09EF8B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-plus-minus-route-726.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-plus-minus-route-726.json",
+      "sha256": "02F6E07C67DCFEADC7D991035333EECE1EB2800897918566ADEC44B911454F94"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-plus-minus-scratch-ownership-726.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-plus-minus-scratch-ownership-726.json",
+      "sha256": "06485832422E5E2EAE930DF71F04E6494384DC8863D51107ED396C2E97607D47"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-bounds-audit-route-727.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-ramification-bounds-audit-route-727.json",
+      "sha256": "26D6FBF7FD3BD35BCC128C1D8F875AF191233CD7309FDDA607A050544D7B1577"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-bounds-route-727.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-ramification-bounds-route-727.json",
+      "sha256": "A1ACFBC8286A6E828DA30FF9A393BCD873D1755BFE8F90D02D30134498BB2FDC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-bounds-route-727b.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-ramification-bounds-route-727b.json",
+      "sha256": "26D6FBF7FD3BD35BCC128C1D8F875AF191233CD7309FDDA607A050544D7B1577"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-bounds-scratch-ownership-727.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-ramification-bounds-scratch-ownership-727.json",
+      "sha256": "355908F8BAAD3B810FE0C412118896B54B97FBCB37129BE904D8F3F16622DA57"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules715.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/modules715.json",
+      "sha256": "BC882C24BA52D9956D8F23A68E3ABD4187D3009277D9C8AACD3F00AB385B507C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules718.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/modules718.json",
+      "sha256": "98A53E8CEC14B15BDFEE9204AA06345EA63604323E2048E4EE7DC87C9BA7B09D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules723.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/modules723.json",
+      "sha256": "B8B81536BB63081CB113F295879B32C1FB3DB20704AD3A1E95DD48793CA5B5CF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules729.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/modules729.json",
+      "sha256": "2890EFF106B6B1B7913847335E04069EF544238B0789CAE5B2BDF036EA7F331D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-modular-point-separation-audit-route-719.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/original-modular-point-separation-audit-route-719.json",
+      "sha256": "5141BDDDA98F9C79F944FC590B92072F40B3CFED9869D4373D7F47B6B7AB6E07"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-modular-point-separation-route-719.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/original-modular-point-separation-route-719.json",
+      "sha256": "68C106FD87D8A25BF29054DA6BE2DF308B3F5BDA816928F18A3DB3E4221E6676"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-modular-point-separation-scratch-ownership-719.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/original-modular-point-separation-scratch-ownership-719.json",
+      "sha256": "C86BE6362FBC27067B27CD9C7B569B83B6A318A0DEC194A39C1C151E5BD9C5BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper715-console.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/paper715-console.log",
+      "sha256": "6DEDF9456BDC6DEC1925857C0F4776C8EB1436EB574FCD360D150DDD1BF7DC48"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper718-console.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/paper718-console.log",
+      "sha256": "1754C0135585483E5626F365B5D1D406603B040306AC5247E390034EE9300C22"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper723-console.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/paper723-console.log",
+      "sha256": "EDE9951A1B881738B482E6FCB45A945602B0024919314AACB565DDEF837EEC5F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper729-console.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/paper729-console.log",
+      "sha256": "D56B4B304BA87C4C1B8549BF29AAE6BF58830DE3F5EC8C4B71521D8BAE3C9578"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\period-division-rotations-audit-route-714.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/period-division-rotations-audit-route-714.json",
+      "sha256": "BA6D2085EC6FC257018385357BAA573E1A3E28EF170D9CC85F4EC4D59A9B7B71"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\period-division-rotations-route-714.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/period-division-rotations-route-714.json",
+      "sha256": "30E179449471E8C6079F605E0BDB0B82F86FAFEC279F65E41D4BA5674DA4744B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\period-division-rotations-scratch-ownership-714.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/period-division-rotations-scratch-ownership-714.json",
+      "sha256": "4A218E98F5E53C43E35476D2FB39A485ADA6371EC5223EF40CE66A5BFC9A9DF9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_all_modular_ratio_membership_audit_722.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/prepare_gamma_one_all_modular_ratio_membership_audit_722.py",
+      "sha256": "CF08DE97C7FF945512CA6E27E0FAF24215D458FF4F1651879CD98242200B1F0D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_analytic_integrality_audit_710.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/prepare_gamma_one_analytic_integrality_audit_710.py",
+      "sha256": "83AADEC21302534670915872CCE258201CA2253E1F4EF4EBD83D78A8FC0DBBE7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_analytic_place_orbits_audit_723.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/prepare_gamma_one_analytic_place_orbits_audit_723.py",
+      "sha256": "2FF943AA82434D6C9BAFEE99874EAE48C9ACE8C39238437C5FD3D6CD4BC9E955"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_diamond_separation_audit_718.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/prepare_gamma_one_diamond_separation_audit_718.py",
+      "sha256": "AF0F8D9C9EE28DC715AA59FF5FDE3A5BCE35711A6C23E0F642E0745B748ADA67"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_division_forms_audit_715.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/prepare_gamma_one_division_forms_audit_715.py",
+      "sha256": "7E1322CC55EA5116A1368BAC0D8B8E18741001ABB3596A66557046869336BF7B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_division_lattice_orbit_audit_716.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/prepare_gamma_one_division_lattice_orbit_audit_716.py",
+      "sha256": "173A5F7F7FEAFDF9189E69DE6BD6E91AD9E91DCAE478951E5476128A0B97A561"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_division_power_orbit_audit_717.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/prepare_gamma_one_division_power_orbit_audit_717.py",
+      "sha256": "B0D087698714A554DF246A6CDBCEB47DB4701ABF152A4B3C22228B4551294C71"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_finite_place_exhaustion_audit_711.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/prepare_gamma_one_finite_place_exhaustion_audit_711.py",
+      "sha256": "A8C6C14194DA4B4A7D8703F2A25BAE85F072314810541CD9929BA593722E3DE9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_generic_fiber_count_audit_729.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/prepare_gamma_one_generic_fiber_count_audit_729.py",
+      "sha256": "15D041649EDBA32A59C77EE9194AF2F72BE61E22F956674CC505F55A22C71149"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_j_fiber_degree_audit_724.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/prepare_gamma_one_j_fiber_degree_audit_724.py",
+      "sha256": "4A9F82304F633B17B0DA62AF556F8945C431E22E5E4A3983454EE84E357C58C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_j_fiber_orbits_audit_728.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/prepare_gamma_one_j_fiber_orbits_audit_728.py",
+      "sha256": "78A104A4C23D1DFA6F2209E2BF3D1F59875C11A8AA2FA12112F025BC16783D07"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_modular_point_separation_audit_720.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/prepare_gamma_one_modular_point_separation_audit_720.py",
+      "sha256": "FAFC238F3825B15CFFE1990B0A1451A125DF1D3264BC585334E7CAF495EFC615"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_normalized_cusp_ratios_audit_721.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/prepare_gamma_one_normalized_cusp_ratios_audit_721.py",
+      "sha256": "6832ABF3B68F63A7E5E977B2AAA3CC762FF842A002E556E1881603CC444CA2D2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_orbit_counting_audit_725.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/prepare_gamma_one_orbit_counting_audit_725.py",
+      "sha256": "9A2953F71F95B21AECEB3CF4D9F491B373CED42B8907BEB98DA30D7B65EBE6A6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_place_invariance_audit_713.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/prepare_gamma_one_place_invariance_audit_713.py",
+      "sha256": "68549C8EDA2E1AD8413B788FF6D9AAA983545AA6CA043C0F61029AE67331B7E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_plus_minus_audit_726.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/prepare_gamma_one_plus_minus_audit_726.py",
+      "sha256": "77C8F225A65F330F588242D4D79940245B93FBA1F4F56054F5FE7E6109AB365A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_ramification_bounds_audit_727.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/prepare_gamma_one_ramification_bounds_audit_727.py",
+      "sha256": "CD06E20C93B435DADE71096D559F04877BFA312DB74315F9D80EBABF7ADB79CE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_original_modular_point_separation_audit_719.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/prepare_original_modular_point_separation_audit_719.py",
+      "sha256": "E81CE6E6D599AE07F740AE64CD11D52D29CDDC5ACAFBD3B03431E24F86E9A0BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_original_modular_point_separation_recorder_719c.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/prepare_original_modular_point_separation_recorder_719c.py",
+      "sha256": "49ACC10D4F8A12C82DCADCFA84A07C53896AF8D5004E2E79C7F3C8D9A61BB999"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_period_division_rotations_audit_714.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/prepare_period_division_rotations_audit_714.py",
+      "sha256": "80089760CD0CE076AF330279E198201C31B2AA392FCD26414E67CBB8E7C5E947"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record715.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record715.py",
+      "sha256": "AC8308D2575304A80EE36E4599E84F680C1242F9F403FD0E9B65E955B3DD6B21"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record718.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record718.py",
+      "sha256": "E379A6041AE42D049138B4FBE9DFD73D8AC610AF9DC9FDDAA5347EF8D22409EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record723.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record723.py",
+      "sha256": "27F2799A2A27A297DE724674F40CFD68AE7088339524880CC87730F7A79A12BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record729.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record729.py",
+      "sha256": "6571C9BFA869BAB78EF866F601A192316741D65802F8B02318C4F366D6F24C46"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_all_modular_ratio_membership_722.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_gamma_one_all_modular_ratio_membership_722.py",
+      "sha256": "08940FE237251C01A9FBF62647029B857EE2389A2B110BFD750A2B9CA085AC13"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_analytic_integrality_710.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_gamma_one_analytic_integrality_710.py",
+      "sha256": "34F2D2CA3AD03C1C1778BAA112F6E0B8DF5014B6525BD336733BBEC2F5C41871"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_analytic_place_orbits_723.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_gamma_one_analytic_place_orbits_723.py",
+      "sha256": "BEBDA0B69378CB257595BEB0EA186BBDA3AFE2047D7F6B3CF79B3FAB335C7918"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_diamond_separation_718.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_gamma_one_diamond_separation_718.py",
+      "sha256": "DB8D06CE04BE3F4101175B0C15FE140D5282707DDCD45669B558C92FD8B6A5C9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_division_forms_715.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_gamma_one_division_forms_715.py",
+      "sha256": "712CA354555A772288BE88E1C2ABCD238A4A966F02FDB9E656122F299374E895"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_division_lattice_orbit_716.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_gamma_one_division_lattice_orbit_716.py",
+      "sha256": "4748F63EA88AEE8CB929D3E4E3AB7F041439BE9C1DAA87A42F21DCD8C615C361"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_division_power_orbit_717.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_gamma_one_division_power_orbit_717.py",
+      "sha256": "657956A5CF263DA43A7FAC418C9E1AFF4CB593A3854281A680E0A3530D2AF598"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_finite_place_exhaustion_711.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_gamma_one_finite_place_exhaustion_711.py",
+      "sha256": "FBED92F46191A0CD468E8F5C64F4EC16EDCF3FE3A756521940CF07F4F95DD64F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_generic_fiber_count_729.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_gamma_one_generic_fiber_count_729.py",
+      "sha256": "5806A5D43CC2F1A998686EC791AE0EE7A7F00F6907E8EAEDC69AB2B9359CA8E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_j_fiber_degree_724.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_gamma_one_j_fiber_degree_724.py",
+      "sha256": "13A540D5535177723D8C7DFFB1D67565B011D08AA8194F4B16D79834A98A1BE7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_j_fiber_orbits_728.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_gamma_one_j_fiber_orbits_728.py",
+      "sha256": "55C4F1AD01955DCB88D3CBDE7E47634C77000310A0DF49CD7151D832A2F457BD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_j_fiber_orbits_728b.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_gamma_one_j_fiber_orbits_728b.py",
+      "sha256": "B86F46533B974E0A9DF4C52D115533402BAC66391FAD40415DDB1CA13172F26D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_modular_point_separation_720.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_gamma_one_modular_point_separation_720.py",
+      "sha256": "2CDB58F06CBF6D0A016CA357E9A62001D69D42E37BAF16CF91ACD5357D2C4788"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_normalized_cusp_ratios_721.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_gamma_one_normalized_cusp_ratios_721.py",
+      "sha256": "73E84BF9C9140752E1D50B935522B7EF049508E2C9E21AF8BDFF6BA200E19144"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_orbit_counting_725.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_gamma_one_orbit_counting_725.py",
+      "sha256": "D302B3C831E1087931E3A80130EACA8C575E96B4B3A11B3F713FA92C3EAA77DF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_place_invariance_713.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_gamma_one_place_invariance_713.py",
+      "sha256": "30AAB07C5B647AF3EADB0E11852F05770A36577917030AFAAA76DF56F10E8205"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_plus_minus_726.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_gamma_one_plus_minus_726.py",
+      "sha256": "7F5AED75DBBA5925DCE593DA3CFC94AA602D004D3E5084DF08D71435F446EBBA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_plus_minus_726b.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_gamma_one_plus_minus_726b.py",
+      "sha256": "9120F48D8E942C25AC5180EB23B8207D73ED4E20D7C02E6C56E06281A2DE9991"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_ramification_bounds_727.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_gamma_one_ramification_bounds_727.py",
+      "sha256": "B6882D5A47ADD5052B60B81831E2626AF0BAA3B5C6FB925A5D3A2B185213541B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_original_modular_point_separation_719.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_original_modular_point_separation_719.py",
+      "sha256": "E769573BDE7DC74267A2C7529F85BB367AF85111EAEA4A2ECF24C020CE7393BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_period_division_rotations_714.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/record_period_division_rotations_714.py",
+      "sha256": "CEC1B22C1BF86352F6A573C9B0D3A37D301AB4E0CC58A9390028A0C0E4D4D985"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register715.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/register715.py",
+      "sha256": "776BC6FA65EF64B8C3910780B2BF52B6CAEF504B74C5084E5A67782CBF38E822"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register718.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/register718.py",
+      "sha256": "8D48B1AB5448BC6E992A3AAAF9DEA601B7A3E5B5C57A7029D27C26ADA53A3095"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register723.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/register723.py",
+      "sha256": "01D6FF002ABD32775F609D4AA24EE4FFAC4123E2BB50EA9C717C1E540AFA21A6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register729.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/register729.py",
+      "sha256": "271892384EF57E1AFF11645323B4949C458D4042582FB205C16263AD685A03F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations715.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/registrations715.json",
+      "sha256": "344D1619CC86398CCA1A178FE6F63FFC30670B71FE7280E27BF063F029EFB8DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations718.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/registrations718.json",
+      "sha256": "CDCF818C21DAA79573A7223F55BE6A13EF95B013E8765EAD6FE4402CE300B953"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations723.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/registrations723.json",
+      "sha256": "0604C5B37C257358032CB1DEF12CD51C1544500326E6A210325A5A150C0B8C70"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations729.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/registrations729.json",
+      "sha256": "44E2CFE3B6AE13973852F0B3E189EFD917093E086428ABD87E11085CD810307C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section715.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/section715.txt",
+      "sha256": "8E44B688C6C98D12AAC1FD5F1AA993C8C32288E1A34500F4FA5CB63CB0F8459E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section718.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/section718.txt",
+      "sha256": "5F33EF98FCF7B3875226A7B6687769CFDA4CC6A628EF2AC4E632EFD11D233161"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section723.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/section723.txt",
+      "sha256": "AAE4F346F878707D81DCB6AEA9A4A063562C4B894227BEDF13D39F4A77FD59DB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section729.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/section729.txt",
+      "sha256": "0D45E6CD97AC472E78233EE017B7D507C61C783710F92C47FB629C52189C00B1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-all-modular-ratio-membership-1-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-all-modular-ratio-membership-1-audit-config.json",
+      "sha256": "55E3F95C181FBCFD00990F86DA43E7D3AB9689DC104E679CF6A56DED8D4DC6F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-all-modular-ratio-membership-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-all-modular-ratio-membership-1-scratch-receipt.json",
+      "sha256": "9D7D4F6B76F1EB1A6EA9E70FF839B711879CF29E01627A2397B0D557956AD650"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-analytic-integrality-3-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-analytic-integrality-3-audit-config.json",
+      "sha256": "D2120D35AF29417E5F9AAF633C70C3FCC51F6CC50E69C33D442739F54E5A0AE0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-analytic-integrality-3-scratch-receipt.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-analytic-integrality-3-scratch-receipt.json",
+      "sha256": "DE02F3372BD9B59906C0789B6216036878E01A3DF7AE2521F76F5BBF01A4168D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-analytic-place-orbits-1-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-analytic-place-orbits-1-audit-config.json",
+      "sha256": "882224220C4FCCCE74677BC1F593E1101618C93EBBE8DEF77A9EF9330ED81942"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-analytic-place-orbits-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-analytic-place-orbits-1-scratch-receipt.json",
+      "sha256": "D52D4331D09869EB85F20229D34019F2F31B50432C198A4C689C2404B1E8D6B9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-separation-1-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-diamond-separation-1-audit-config.json",
+      "sha256": "3F585774FD476A65662A1E1F97C2181D49AB08034A2E3DA30CBED33E385B4CA3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-separation-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-diamond-separation-1-scratch-receipt.json",
+      "sha256": "517813D4345F31C96A98B3DE808C4FBB79CEF3ECACA7FFC634392BBF885DA4CE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-division-forms-1-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-division-forms-1-audit-config.json",
+      "sha256": "4BFF3D319914A65318473406F04A705687F0B5889FF42672BB75E6C2917E0E38"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-division-forms-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-division-forms-1-scratch-receipt.json",
+      "sha256": "67A2A455EA1489E8E70FA2DC6BB040EF75FABB413740476585EF12D6C27D32EE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-division-lattice-orbit-1-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-division-lattice-orbit-1-audit-config.json",
+      "sha256": "83AB9B77DF67437064BB383D45679ADA61B2EAE558813C00D4594B1375EC6FF2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-division-lattice-orbit-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-division-lattice-orbit-1-scratch-receipt.json",
+      "sha256": "32FAE029F6C85A6674F82D0DBEC95FE5BF024878EB149827FCA22182DCDAC7D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-division-power-orbit-1-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-division-power-orbit-1-audit-config.json",
+      "sha256": "ECF93C1B3AD1C460B9B4C10F340990F0C5F496592A834B260753CBD56DAF7C13"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-division-power-orbit-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-division-power-orbit-1-scratch-receipt.json",
+      "sha256": "96F84FF2A813BA0004ADD24646450143483EB550B8EDFAB31741F035D86AB39E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-finite-place-exhaustion-1-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-finite-place-exhaustion-1-audit-config.json",
+      "sha256": "155F1F93938D0ABA567581315D961CE238E3CF280A3392755344907E353E462A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-finite-place-exhaustion-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-finite-place-exhaustion-1-scratch-receipt.json",
+      "sha256": "E6ABA2BC1900AF8FC78F2971B769058177725787F34615E098D407D9395ECCAB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-generic-fiber-count-1-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-generic-fiber-count-1-audit-config.json",
+      "sha256": "F16D68C7E08EB0C250C65F68ED130F1F25E56A946E3D8862DEF3BCDBDC4EB43E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-generic-fiber-count-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-generic-fiber-count-1-scratch-receipt.json",
+      "sha256": "111594BF58E3B4E90AF2CB9A96E24D70B2660283A3410EBA057CF22420CA2977"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-j-fiber-degree-1-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-j-fiber-degree-1-audit-config.json",
+      "sha256": "DD49F1FABB3938FADC5735103E5871437BEE823E73D3DE3B90A445644DE64B9D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-j-fiber-degree-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-j-fiber-degree-1-scratch-receipt.json",
+      "sha256": "943E77399FF995F37355E06EDA98162D973C727DCB20B3E0B1495633042DACCE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-j-fiber-orbits-1-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-j-fiber-orbits-1-audit-config.json",
+      "sha256": "822AAB99AF62994B3F67DC71B5FD6DB909D9C9825F41C07B4715B38F82F66119"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-j-fiber-orbits-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-j-fiber-orbits-1-scratch-receipt.json",
+      "sha256": "EF215FD0B404AB2A819AFEBF0F9D0DBD4061B8B10B7DB6F8AA39C5FDCCD412EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-modular-point-separation-1-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-modular-point-separation-1-audit-config.json",
+      "sha256": "B049AFC7B902B1DD3B7852CF91F8B5318E5238E20E454763997E6C29C78712B9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-modular-point-separation-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-modular-point-separation-1-scratch-receipt.json",
+      "sha256": "1449BDB83A3C1E4D85CFA28BFE4891E0AA58D9078792D5E53DA8214389B4A432"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-normalized-cusp-ratios-1-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-normalized-cusp-ratios-1-audit-config.json",
+      "sha256": "851C01D4CD573360FEAD548A639C11FD7F6FC2B0DFBD6CE11AE795B34D618EC2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-normalized-cusp-ratios-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-normalized-cusp-ratios-1-scratch-receipt.json",
+      "sha256": "6FFE06FBAE7EFF5C61EBA4930EDCA9337CF676EE77C23DCFFE7078464B576D31"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-orbit-counting-1-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-orbit-counting-1-audit-config.json",
+      "sha256": "214B91F28AFE1A34F5DFD4F2AB36AE0E66E3CEB87C2F40DAA497482E0B35D32F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-orbit-counting-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-orbit-counting-1-scratch-receipt.json",
+      "sha256": "C89C2847D212987771C58DB12BFC1B2D9844DDB176D2ECFD35A0F149F85E9DC7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-place-invariance-2-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-place-invariance-2-audit-config.json",
+      "sha256": "97A1088E0F6B917485CFD7E5DB9331BD8EF20A659E0724A1A842A099F3F289CA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-place-invariance-2-scratch-receipt.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-place-invariance-2-scratch-receipt.json",
+      "sha256": "CAF1D5DE07912D6B1048E62B935AD1CF75F04DB1020E5090992235289A3B7728"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-plus-minus-1-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-plus-minus-1-audit-config.json",
+      "sha256": "26682B3E801EA3843F4E746F9AE7EA7CCB51CCA01EBB481FCD796998C5ADF510"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-plus-minus-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-plus-minus-1-scratch-receipt.json",
+      "sha256": "773B88EB4C09248847B30BD0097C0179E1E282FC837E32BB8D1B2AA2E312960C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-plus-minus-1b-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-plus-minus-1b-audit-config.json",
+      "sha256": "8BF6DF4644EE0E455FAADC57CCDE8C2C20E638F6B87EE876E4ADD4289EBD19C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-ramification-bounds-1-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-ramification-bounds-1-audit-config.json",
+      "sha256": "BD81309BBA3A61D7471C9140013ACDBD6BB389F1662C37F88EB6BBA0A89D1A9E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-ramification-bounds-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-ramification-bounds-1-scratch-receipt.json",
+      "sha256": "1E199DC17E2C99AD8CD8BEF854D08DCC688B8C237435959B7B7BF3757AB06055"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-modular-point-separation-1-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-original-modular-point-separation-1-audit-config.json",
+      "sha256": "F83D13B77ADE8E837EFEF0DACBD27093CE13D26821665D1E041F1F83DE865C5D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-modular-point-separation-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-original-modular-point-separation-1-scratch-receipt.json",
+      "sha256": "98D205F22A03C26BA0175429CDAC130CDF4D7AE4436FEF1B1FD21BB747BB02C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-period-division-rotations-1-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-period-division-rotations-1-audit-config.json",
+      "sha256": "322436B13FF4944CCCC32CD3119328A014F0A8B4C2B9343362303F6C2EEDBA04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-period-division-rotations-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-period-division-rotations-1-scratch-receipt.json",
+      "sha256": "6B135B560212A73DA7A79997FFD3D4F1FAB82AD0AF8196A78182D500D5BF0E59"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status715.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/status715.txt",
+      "sha256": "C83FA073033517116508AA223CD41C9CFFC39E500FE90051E29D53E65D927C96"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status718.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/status718.txt",
+      "sha256": "6AEDFCFBDDB52BA86CEFA33DFFBFCE7297F164332817E66A4A0CD2B12BC527C1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status723.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/status723.txt",
+      "sha256": "1114D8954F28D424B62361BE2C745F791D5ABF91D0976349863A6EA043A2044D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status729.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/status729.txt",
+      "sha256": "985B588437C9AE747AAF414E2A0A1C20C3E60310A7D3B2604A8580E794B26769"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\update715.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/update715.py",
+      "sha256": "59CEA42363A513A494E3A4709DC37A1AC998CACAC53234E3733EAB0BA2772D31"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\update718.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/update718.py",
+      "sha256": "988512AF53FE79772A6659559D6FF121A757552EA3F6BC83AA6E3BCD34CDE722"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\update723.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/update723.py",
+      "sha256": "0D2FF9820CD0899C90788432DB6DCE3092A8E3AFA3B8B82CE6706E1D65896A28"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\update729.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/update729.py",
+      "sha256": "54C6DA1DA9AA0AE6805AAAB7DBD8BE65E4529478E70F11C42113E9104158F91A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-all-modular-ratio-membership-failed-722a\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-all-modular-ratio-membership-failed-722a/failure.json",
+      "sha256": "9C09DF599E7A49D538A2863E3E2E591157FF0FA4635437E767191CDEBD1D24DA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-all-modular-ratio-membership-failed-722a\\SourceGammaOneAllModularRatioMembership.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-all-modular-ratio-membership-failed-722a/SourceGammaOneAllModularRatioMembership.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-all-modular-ratio-membership-failed-722a\\SourceGammaOneAllModularRatioMembership.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-all-modular-ratio-membership-failed-722a/SourceGammaOneAllModularRatioMembership.lean.txt",
+      "sha256": "AA31570694F048CB27F9B9CFB168A9953DCAA255E837945D0F4295886900473C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-all-modular-ratio-membership-failed-722a\\SourceGammaOneAllModularRatioMembership.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-all-modular-ratio-membership-failed-722a/SourceGammaOneAllModularRatioMembership.log",
+      "sha256": "41C40A0A8C7370D1287CF475926F03EB1201B15E751A2D724C93EB1DCE45ECB1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-integrality-failed-710a\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-integrality-failed-710a/failure.json",
+      "sha256": "5B7E7A0ED8E4C7F75EFE7DCA8FE0F0020A5BDA97EDDFF6CD6502D0F88EFBDF71"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-integrality-failed-710a\\SourceGammaOneQuotientCuspSeries.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-integrality-failed-710a/SourceGammaOneQuotientCuspSeries.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-integrality-failed-710a\\SourceGammaOneQuotientCuspSeries.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-integrality-failed-710a/SourceGammaOneQuotientCuspSeries.lean.txt",
+      "sha256": "CBEF19B8C21A8CF37151BB96831FA7840936499EC3DC220ADA8A112DF40C5EF7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-integrality-failed-710a\\SourceGammaOneQuotientCuspSeries.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-integrality-failed-710a/SourceGammaOneQuotientCuspSeries.log",
+      "sha256": "A276474A5E59AEC19E36A3CB1E2A8DEA8B3909200ED0D75C6F1265DF143DD610"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-integrality-failed-710b\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-integrality-failed-710b/failure.json",
+      "sha256": "3005A1431E285ED579F676559741D4456C7058B03C4B9E194309E5D51656B208"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-integrality-failed-710b\\SourceGammaOneQuotientCuspSeries.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-integrality-failed-710b/SourceGammaOneQuotientCuspSeries.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-integrality-failed-710b\\SourceGammaOneQuotientCuspSeries.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-integrality-failed-710b/SourceGammaOneQuotientCuspSeries.lean.txt",
+      "sha256": "F886A705D201050DF6E345468E241E2331968975B547C973A77D2AA6B81FD27C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-integrality-failed-710b\\SourceGammaOneQuotientCuspSeries.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-integrality-failed-710b/SourceGammaOneQuotientCuspSeries.log",
+      "sha256": "F8BF34AD384A084B65B65D16E17BC43F3A2326B97193D71BDE2F688B04EB74DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-integrality-failed-710c\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-integrality-failed-710c/failure.json",
+      "sha256": "77DDA63BF2AAA99B6689C1CD711EF5E7B031374053FF4B8864B6A793EC23074D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-integrality-failed-710c\\SourceGammaOneQuotientCuspSeries.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-integrality-failed-710c/SourceGammaOneQuotientCuspSeries.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-integrality-failed-710c\\SourceGammaOneQuotientCuspSeries.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-integrality-failed-710c/SourceGammaOneQuotientCuspSeries.lean.txt",
+      "sha256": "F886A705D201050DF6E345468E241E2331968975B547C973A77D2AA6B81FD27C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-integrality-failed-710c\\SourceGammaOneQuotientCuspSeries.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-integrality-failed-710c/SourceGammaOneQuotientCuspSeries.log",
+      "sha256": "9A358784E913700ED7B96CF1E84E6E0ABD673877F2CC2CF44A83CBE00198F260"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-integrality-failed-710d\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-integrality-failed-710d/failure.json",
+      "sha256": "A8FB753A5369A8EDE4C22522A6DDEB360FE337BC67A0E9AB5D2659A0D0488460"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-integrality-failed-710d\\SourceGammaOneAnalyticIntegrality.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-integrality-failed-710d/SourceGammaOneAnalyticIntegrality.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-integrality-failed-710d\\SourceGammaOneAnalyticIntegrality.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-integrality-failed-710d/SourceGammaOneAnalyticIntegrality.lean.txt",
+      "sha256": "C1DD036C6DA5047513D8FD78D961F8778804A57DB05EF3EA3DD1B27C91ECB9AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-integrality-failed-710d\\SourceGammaOneAnalyticIntegrality.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-integrality-failed-710d/SourceGammaOneAnalyticIntegrality.log",
+      "sha256": "CB26B748779E19B9A454EA0479B4B61882C6D7AE670E7EBD4B3034B52962C5D8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-place-orbits-failed-723a\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-place-orbits-failed-723a/failure.json",
+      "sha256": "7F8247B86CC5FE0B00FF5129E8250356CE91C35B8B885596639C753DF2509C38"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-place-orbits-failed-723a\\SourceGammaOneAnalyticPlaceOrbits.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-place-orbits-failed-723a/SourceGammaOneAnalyticPlaceOrbits.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-place-orbits-failed-723a\\SourceGammaOneAnalyticPlaceOrbits.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-place-orbits-failed-723a/SourceGammaOneAnalyticPlaceOrbits.lean.txt",
+      "sha256": "02BB2A9C48BCB1C0EE2FBF275AFF591F30BD454B43B6BA4E7361766012CECE80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-place-orbits-failed-723a\\SourceGammaOneAnalyticPlaceOrbits.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-analytic-place-orbits-failed-723a/SourceGammaOneAnalyticPlaceOrbits.log",
+      "sha256": "06496882C9E8263875FF1A01E13ECE74A502CCF5BCE9000002E7548A3DEE4B89"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-diamond-separation-failed-718a\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-diamond-separation-failed-718a/failure.json",
+      "sha256": "EFCE1B95B867AC16239B0D0A2BC9A9872249BA654112FC2A99481C37191AA737"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-diamond-separation-failed-718a\\SourceGammaOneDiamondSeparation.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-diamond-separation-failed-718a/SourceGammaOneDiamondSeparation.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-diamond-separation-failed-718a\\SourceGammaOneDiamondSeparation.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-diamond-separation-failed-718a/SourceGammaOneDiamondSeparation.lean.txt",
+      "sha256": "F25525849D0B5E841C387C50E4CF7F2AD8714A6DBB7C37B3429DADD62573A36A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-diamond-separation-failed-718a\\SourceGammaOneDiamondSeparation.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-diamond-separation-failed-718a/SourceGammaOneDiamondSeparation.log",
+      "sha256": "4175D977034ADEDA5B84CA2D271BF1F6C39BC3D91F96B1BE1FC2FCD1E2AA14CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-diamond-separation-failed-718b\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-diamond-separation-failed-718b/failure.json",
+      "sha256": "B4ED3C231BC150ED2592D8F44D70A48547774C9993FCD5AAE5540831E9354B0C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-diamond-separation-failed-718b\\SourceGammaOneDiamondSeparation.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-diamond-separation-failed-718b/SourceGammaOneDiamondSeparation.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-diamond-separation-failed-718b\\SourceGammaOneDiamondSeparation.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-diamond-separation-failed-718b/SourceGammaOneDiamondSeparation.lean.txt",
+      "sha256": "36EBDAEF534E95264004B142CC2258566A614920D3D587AAD9CB5EAE8463D8A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-diamond-separation-failed-718b\\SourceGammaOneDiamondSeparation.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-diamond-separation-failed-718b/SourceGammaOneDiamondSeparation.log",
+      "sha256": "51A63AE12C7DCDD5F32F26B941FA7D7D99F0FE9EC246E882B42DB493332F37C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-forms-failed-715a\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-forms-failed-715a/failure.json",
+      "sha256": "DE843B4E109E9E9EEF27AD9B3CD22EAD557B80F2838FA5BAE06538F5828A84EE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-forms-failed-715a\\SourceGammaOneDivisionForms.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-forms-failed-715a/SourceGammaOneDivisionForms.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-forms-failed-715a\\SourceGammaOneDivisionForms.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-forms-failed-715a/SourceGammaOneDivisionForms.lean.txt",
+      "sha256": "77E80DBBF13D5B8A7A3899872C86A15AAA58D5E803ADA7454D8C64D900D3E5A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-forms-failed-715a\\SourceGammaOneDivisionForms.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-forms-failed-715a/SourceGammaOneDivisionForms.log",
+      "sha256": "73DA26CC0828768E26E21F14614A11619169EE37BEDFDE28F3E3D4390587AF9C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-lattice-orbit-failed-716a\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-lattice-orbit-failed-716a/failure.json",
+      "sha256": "4450C567DB15383D9ECA006254E7DF49FCD803E41BDC93293958A7D9CC9DEE97"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-lattice-orbit-failed-716a\\SourceGammaOneDivisionLatticeOrbit.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-lattice-orbit-failed-716a/SourceGammaOneDivisionLatticeOrbit.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-lattice-orbit-failed-716a\\SourceGammaOneDivisionLatticeOrbit.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-lattice-orbit-failed-716a/SourceGammaOneDivisionLatticeOrbit.lean.txt",
+      "sha256": "F2E37087BC39DADF5B4E951F0AC10E0525DB44B36303E1CD6D7F5BE7C693F676"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-lattice-orbit-failed-716a\\SourceGammaOneDivisionLatticeOrbit.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-lattice-orbit-failed-716a/SourceGammaOneDivisionLatticeOrbit.log",
+      "sha256": "AC5CD2240C0771A4BC46AF9D85409090ADA2C30DF06C7039D4DF2E61D02A42AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-power-orbit-failed-717a\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-power-orbit-failed-717a/failure.json",
+      "sha256": "125EF2C64F962CA051FBC4F7EB5AFB323E296BD8379A8F770EE66B293ED9C04D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-power-orbit-failed-717a\\SourceGammaOneDivisionPowerOrbit.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-power-orbit-failed-717a/SourceGammaOneDivisionPowerOrbit.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-power-orbit-failed-717a\\SourceGammaOneDivisionPowerOrbit.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-power-orbit-failed-717a/SourceGammaOneDivisionPowerOrbit.lean.txt",
+      "sha256": "340C1E96F93E6E5340D4BEECDE5FB90A67D815B41252D9F82289E7E4A6B91006"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-power-orbit-failed-717a\\SourceGammaOneDivisionPowerOrbit.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-power-orbit-failed-717a/SourceGammaOneDivisionPowerOrbit.log",
+      "sha256": "0D8AB9DE27AB887106608B39A54C0A1DDAC543440B65FEB8856A94112C04A050"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-power-orbit-failed-717b\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-power-orbit-failed-717b/failure.json",
+      "sha256": "D38880C0BBD151634C9466D3FF6B96A3755297420FAAA71D27C7DB5E77F39ABF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-power-orbit-failed-717b\\SourceGammaOneDivisionPowerOrbit.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-power-orbit-failed-717b/SourceGammaOneDivisionPowerOrbit.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-power-orbit-failed-717b\\SourceGammaOneDivisionPowerOrbit.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-power-orbit-failed-717b/SourceGammaOneDivisionPowerOrbit.lean.txt",
+      "sha256": "C963F3B70E2D33A1EF5A4842353DB6868E22249092AD116CB871EE6E75A21FDC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-division-power-orbit-failed-717b\\SourceGammaOneDivisionPowerOrbit.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-division-power-orbit-failed-717b/SourceGammaOneDivisionPowerOrbit.log",
+      "sha256": "C605A609D21F8ADDCABA95687A82FD6FFF874E9476341E0D355D69B9B9F6ED2D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-place-exhaustion-failed-711a\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-finite-place-exhaustion-failed-711a/failure.json",
+      "sha256": "DEC3DA10839674C863B9DC1FFD0F7D9018E8339C40A139148FF2241577EEBAFE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-place-exhaustion-failed-711a\\SourceGammaOneFinitePlaceExhaustion.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-finite-place-exhaustion-failed-711a/SourceGammaOneFinitePlaceExhaustion.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-place-exhaustion-failed-711a\\SourceGammaOneFinitePlaceExhaustion.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-finite-place-exhaustion-failed-711a/SourceGammaOneFinitePlaceExhaustion.lean.txt",
+      "sha256": "AEA01A36D7D8BBBE8B7B91BE28D43FBBDA7B0594ADBB85F7A8F05A0CAC3753B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-place-exhaustion-failed-711a\\SourceGammaOneFinitePlaceExhaustion.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-finite-place-exhaustion-failed-711a/SourceGammaOneFinitePlaceExhaustion.log",
+      "sha256": "A8160611F0FD1176EB9F1EEE16FA8CE34AC08937B7DC319E742C3B627CD2B66B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-place-exhaustion-failed-711b\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-finite-place-exhaustion-failed-711b/failure.json",
+      "sha256": "3B01811CD5A7FDB608D36896E765140D5D31943D7BEB8F51309E8EF9EAB99E96"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-place-exhaustion-failed-711b\\SourceGammaOneFinitePlaceExhaustion.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-finite-place-exhaustion-failed-711b/SourceGammaOneFinitePlaceExhaustion.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-place-exhaustion-failed-711b\\SourceGammaOneFinitePlaceExhaustion.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-finite-place-exhaustion-failed-711b/SourceGammaOneFinitePlaceExhaustion.lean.txt",
+      "sha256": "386AF5EED6A1C4EB3BCFD356D0B9F853D238F7206393798D921148D1188369D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-place-exhaustion-failed-711b\\SourceGammaOneFinitePlaceExhaustion.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-finite-place-exhaustion-failed-711b/SourceGammaOneFinitePlaceExhaustion.log",
+      "sha256": "DB0E2B239B171AD6E26D1F93C9CA7BBD440F0E21F538C04426196C637D677CA5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-place-exhaustion-failed-711c\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-finite-place-exhaustion-failed-711c/failure.json",
+      "sha256": "35D3E8214CE76031728FA187F217C70C4EE89D74B1B9A7CC324E58F1607C60A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-place-exhaustion-failed-711c\\SourceGammaOneFinitePlaceExhaustion.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-finite-place-exhaustion-failed-711c/SourceGammaOneFinitePlaceExhaustion.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-place-exhaustion-failed-711c\\SourceGammaOneFinitePlaceExhaustion.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-finite-place-exhaustion-failed-711c/SourceGammaOneFinitePlaceExhaustion.lean.txt",
+      "sha256": "6C2D16F3B0DD79A792AEE2749FA0EF4BD5634935904B6C78073516457643D8A5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-place-exhaustion-failed-711c\\SourceGammaOneFinitePlaceExhaustion.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-finite-place-exhaustion-failed-711c/SourceGammaOneFinitePlaceExhaustion.log",
+      "sha256": "BAA564FB75EED97EE9DB4A0D2196CD8B4B91DF05435A5E63600B1F74DE77DDFF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-generic-fiber-count-failed-729a\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-generic-fiber-count-failed-729a/failure.json",
+      "sha256": "36B24F5E1F77293DB15F7D109F3E66C0540AE71DC4470281FBDF5FBBD535A20A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-generic-fiber-count-failed-729a\\SourceGammaOneGenericFiberCount.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-generic-fiber-count-failed-729a/SourceGammaOneGenericFiberCount.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-generic-fiber-count-failed-729a\\SourceGammaOneGenericFiberCount.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-generic-fiber-count-failed-729a/SourceGammaOneGenericFiberCount.lean.txt",
+      "sha256": "E4B8408FB645FC3A2D3C5DE1349907A30B9CA913FCE65C3B05B4B7732EA46262"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-generic-fiber-count-failed-729a\\SourceGammaOneGenericFiberCount.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-generic-fiber-count-failed-729a/SourceGammaOneGenericFiberCount.log",
+      "sha256": "97ED94CAC072A7158A23CF1F74AA6FB3C81DD1176B6C390827769F454768C80C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-j-fiber-orbits-failed-728a\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-j-fiber-orbits-failed-728a/failure.json",
+      "sha256": "14D902108D3722A9A59EFCAB677953C0B19BE9264D870E1DA9FC15E269C69BBF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-j-fiber-orbits-failed-728a\\SourceGammaOneJFiberOrbits.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-j-fiber-orbits-failed-728a/SourceGammaOneJFiberOrbits.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-j-fiber-orbits-failed-728a\\SourceGammaOneJFiberOrbits.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-j-fiber-orbits-failed-728a/SourceGammaOneJFiberOrbits.lean.txt",
+      "sha256": "432EFD2750CA437E112EC4DAAE23204A51E646E17663AF8F557A015B47B88635"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-j-fiber-orbits-failed-728a\\SourceGammaOneJFiberOrbits.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-j-fiber-orbits-failed-728a/SourceGammaOneJFiberOrbits.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-j-fiber-orbits-failed-728a\\SourceGammaOneJFiberOrbitsAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-j-fiber-orbits-failed-728a/SourceGammaOneJFiberOrbitsAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-j-fiber-orbits-failed-728a\\SourceGammaOneJFiberOrbitsAudit1.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-j-fiber-orbits-failed-728a/SourceGammaOneJFiberOrbitsAudit1.lean.txt",
+      "sha256": "E2CA1D9F48671100FE2F5722B0E9DDF7E80AE46772006C7F732249A990A4878D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-j-fiber-orbits-failed-728a\\SourceGammaOneJFiberOrbitsAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-j-fiber-orbits-failed-728a/SourceGammaOneJFiberOrbitsAudit1.log",
+      "sha256": "B23443F52D50824004EF39649F8878C8BA1B19335B2F6034FF6B44003C2F2E4D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-normalized-cusp-ratios-failed-721a\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-normalized-cusp-ratios-failed-721a/failure.json",
+      "sha256": "552EA8406B3E65A652CAA2F8970FDDD5242BD7C20EA96368786BB7750FCCA018"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-normalized-cusp-ratios-failed-721a\\SourceGammaOneNormalizedCuspRatios.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-normalized-cusp-ratios-failed-721a/SourceGammaOneNormalizedCuspRatios.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-normalized-cusp-ratios-failed-721a\\SourceGammaOneNormalizedCuspRatios.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-normalized-cusp-ratios-failed-721a/SourceGammaOneNormalizedCuspRatios.lean.txt",
+      "sha256": "52854457EA51EA516AF8F2F3BE198FC777CDBA7996805D083057ADCB733FDB24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-normalized-cusp-ratios-failed-721a\\SourceGammaOneNormalizedCuspRatios.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-normalized-cusp-ratios-failed-721a/SourceGammaOneNormalizedCuspRatios.log",
+      "sha256": "39B8FADB8E6DF3BBFD5EF5275543555128963F8A6C09EBEC921CEB577E546770"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-normalized-cusp-ratios-failed-721b\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-normalized-cusp-ratios-failed-721b/failure.json",
+      "sha256": "9F896527EC9C5817EBCA79CD8B0E9A756BDF6C33C581EB99932C548B150C0EFA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-normalized-cusp-ratios-failed-721b\\SourceGammaOneNormalizedCuspRatios.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-normalized-cusp-ratios-failed-721b/SourceGammaOneNormalizedCuspRatios.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-normalized-cusp-ratios-failed-721b\\SourceGammaOneNormalizedCuspRatios.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-normalized-cusp-ratios-failed-721b/SourceGammaOneNormalizedCuspRatios.lean.txt",
+      "sha256": "A932C7ADF5147D8884849A24D4BF74C4CFFCFA7711909AC89B6FAFCB0294361A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-normalized-cusp-ratios-failed-721b\\SourceGammaOneNormalizedCuspRatios.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-normalized-cusp-ratios-failed-721b/SourceGammaOneNormalizedCuspRatios.log",
+      "sha256": "109034604C78D4DB8BC0632D6EF3B9D5BA305DA25E7680EFF8953CD795B3AB57"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-separation-reuse-712\\followup-snapshots.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-orbit-separation-reuse-712/followup-snapshots.json",
+      "sha256": "6936AFA8AE4E6E007C4067D49B0B7F5BEFB04A331FBCC9E518483DB3E7890AA9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-separation-reuse-712\\route-assessment.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-orbit-separation-reuse-712/route-assessment.json",
+      "sha256": "639352E6B16DD102843962FF196FF8F31E35F1BECA7707A9F6F902B7BD34F921"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-separation-reuse-712\\S_CohCarrier_exists_mem_GammaH_smul_eq_of_forall_sum_weierstrassP_pow_eq.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-orbit-separation-reuse-712/S_CohCarrier_exists_mem_GammaH_smul_eq_of_forall_sum_weierstrassP_pow_eq.lean.txt",
+      "sha256": "E6257ED979B4C03CCE0122321214E1AE0C57DE2F0C21D59B4ABCD1388DAC04F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-separation-reuse-712\\S_ModularForm_exists_gammaH_apply_mul_apply_ne_of_forall_smul_ne_of_gamma0_smul_eq.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-orbit-separation-reuse-712/S_ModularForm_exists_gammaH_apply_mul_apply_ne_of_forall_smul_ne_of_gamma0_smul_eq.lean.txt",
+      "sha256": "83B79491C2FD0850D871C9120D71C7A89586095612790CBB060060E5E6144139"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-separation-reuse-712\\S_PeriodPair_exists_gamma1_two_eq_weierstrassP_and_slash_and_qExpansion_coeff.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-orbit-separation-reuse-712/S_PeriodPair_exists_gamma1_two_eq_weierstrassP_and_slash_and_qExpansion_coeff.lean.txt",
+      "sha256": "6637C99D89452D243C2D8CD39A70CF6F1379B460033160146B29B3EB9D3197CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-separation-reuse-712\\snapshots.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-orbit-separation-reuse-712/snapshots.json",
+      "sha256": "8BA2CE88682B8A9147EB3AC4575DA15F0CDBD392248B0E072B4D37869713AC19"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-place-invariance-failed-713a\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-place-invariance-failed-713a/failure.json",
+      "sha256": "66FEAF094B8E1D4A4E47D5374E3FB1914320748297835C04DF4E0A15FAF18E23"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-place-invariance-failed-713a\\SourceGammaOneAnalyticPlaceInvariance.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-place-invariance-failed-713a/SourceGammaOneAnalyticPlaceInvariance.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-place-invariance-failed-713a\\SourceGammaOneAnalyticPlaceInvariance.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-place-invariance-failed-713a/SourceGammaOneAnalyticPlaceInvariance.lean.txt",
+      "sha256": "A40977740CDA9C7D2B4247ABF57A3720A968BD45AC120631CE7959C8B208E5B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-place-invariance-failed-713a\\SourceGammaOneAnalyticPlaceInvariance.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-place-invariance-failed-713a/SourceGammaOneAnalyticPlaceInvariance.log",
+      "sha256": "5659D025DCB11995FD85D85ED3C0E76902A0460BCA433B774D9E1FF05A4C28A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-plus-minus-failed-726a\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-plus-minus-failed-726a/failure.json",
+      "sha256": "8C257B19994E12332D52F7471AC3F65F19FFD7AB1EC5706965A59D2635D98830"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-plus-minus-failed-726a\\source-gamma-one-plus-minus-1-audit-config.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-plus-minus-failed-726a/source-gamma-one-plus-minus-1-audit-config.json",
+      "sha256": "26682B3E801EA3843F4E746F9AE7EA7CCB51CCA01EBB481FCD796998C5ADF510"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-plus-minus-failed-726a\\SourceGammaOnePlusMinus.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-plus-minus-failed-726a/SourceGammaOnePlusMinus.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-plus-minus-failed-726a\\SourceGammaOnePlusMinus.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-plus-minus-failed-726a/SourceGammaOnePlusMinus.lean.txt",
+      "sha256": "6929B74D4881326027D485C095F597D193DE6D30233FBE5A4A6530DFE9849880"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-plus-minus-failed-726a\\SourceGammaOnePlusMinus.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-plus-minus-failed-726a/SourceGammaOnePlusMinus.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-plus-minus-failed-726a\\SourceGammaOnePlusMinusAudit1.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-plus-minus-failed-726a/SourceGammaOnePlusMinusAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-plus-minus-failed-726a\\SourceGammaOnePlusMinusAudit1.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-plus-minus-failed-726a/SourceGammaOnePlusMinusAudit1.lean.txt",
+      "sha256": "5A0EB007DA717B21E78CD97F3C8494EE131E0C1888499C34DDDAEAFF395ACF25"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-plus-minus-failed-726a\\SourceGammaOnePlusMinusAudit1.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-plus-minus-failed-726a/SourceGammaOnePlusMinusAudit1.log",
+      "sha256": "787CD4F86682B2B51196AF66ACE1A84552DAFBF1BB31A102A169DB855B4FC963"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-bounds-dependency-refresh-727c\\refresh.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-ramification-bounds-dependency-refresh-727c/refresh.json",
+      "sha256": "F080CEAEA650ACC1A6D255BCE7418BF9BFFCD57E4EF502242DAC54D051FEFF3C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-bounds-dependency-refresh-727c\\SourceGammaOneRamificationBounds.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-ramification-bounds-dependency-refresh-727c/SourceGammaOneRamificationBounds.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-bounds-dependency-refresh-727c\\SourceGammaOneRamificationBounds.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-ramification-bounds-dependency-refresh-727c/SourceGammaOneRamificationBounds.lean.txt",
+      "sha256": "593C657495E8A2FB347B371F2BFB32C01383C54584221CE5D4022FC3E8333D6B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-bounds-dependency-refresh-727c\\SourceGammaOneRamificationBounds.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-ramification-bounds-dependency-refresh-727c/SourceGammaOneRamificationBounds.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-bounds-failed-727a\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-ramification-bounds-failed-727a/failure.json",
+      "sha256": "7DA0DA2DB3744A5D6C9049F298F501178D91AEF966699AC4628C3E0020396D7F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-bounds-failed-727a\\SourceGammaOneRamificationBounds.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-ramification-bounds-failed-727a/SourceGammaOneRamificationBounds.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-bounds-failed-727a\\SourceGammaOneRamificationBounds.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-ramification-bounds-failed-727a/SourceGammaOneRamificationBounds.lean.txt",
+      "sha256": "6960130EAD3F80F2F9F166E92F0EB4370F6C887D38DE47ED506E87B10B74171E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-bounds-failed-727a\\SourceGammaOneRamificationBounds.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-ramification-bounds-failed-727a/SourceGammaOneRamificationBounds.log",
+      "sha256": "23FA7E3A7DA1746BFB4576FE092474AAE7EFD30D0207230142EEA9038FF6E1AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-bounds-failed-727b\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-ramification-bounds-failed-727b/failure.json",
+      "sha256": "D81CECDFE6400E0E439E5BEC68E4217C77A05EAD52BBC98A262C4A1FDEF515B1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-bounds-failed-727b\\SourceGammaOneRamificationBounds.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-ramification-bounds-failed-727b/SourceGammaOneRamificationBounds.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-bounds-failed-727b\\SourceGammaOneRamificationBounds.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-ramification-bounds-failed-727b/SourceGammaOneRamificationBounds.lean.txt",
+      "sha256": "242FC911F8D7D4AA3379A97EF3199DC22FD7BCE61A7054C6A1ACD3AC617E03CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-bounds-failed-727b\\SourceGammaOneRamificationBounds.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/gamma-one-ramification-bounds-failed-727b/SourceGammaOneRamificationBounds.log",
+      "sha256": "E052868178EE885BC76BB923273C49400BF9483BC0E33A362D95194216D1A424"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-modular-point-separation-audit-preparation-failed-719b\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/original-modular-point-separation-audit-preparation-failed-719b/failure.json",
+      "sha256": "305C6ACA38E29307068B8642A08D88B21CD2DF246011CBEC843EACB98B226DA9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-modular-point-separation-audit-preparation-failed-719b\\prepare_original_modular_point_separation_audit_719.py",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/original-modular-point-separation-audit-preparation-failed-719b/prepare_original_modular_point_separation_audit_719.py",
+      "sha256": "E81CE6E6D599AE07F740AE64CD11D52D29CDDC5ACAFBD3B03431E24F86E9A0BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-modular-point-separation-failed-719a\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/original-modular-point-separation-failed-719a/failure.json",
+      "sha256": "15FB153D033ACA0A3FF74ED23A8DF01DB07A819890D36476CF04A354A750966D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-modular-point-separation-failed-719a\\SourceOriginalModularPointSeparation.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/original-modular-point-separation-failed-719a/SourceOriginalModularPointSeparation.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-modular-point-separation-failed-719a\\SourceOriginalModularPointSeparation.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/original-modular-point-separation-failed-719a/SourceOriginalModularPointSeparation.lean.txt",
+      "sha256": "4855169B146985C0318B6D2E185604EFAFFBDCDDC38DF1263E8B1EC552043A5B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\original-modular-point-separation-failed-719a\\SourceOriginalModularPointSeparation.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/original-modular-point-separation-failed-719a/SourceOriginalModularPointSeparation.log",
+      "sha256": "E87734543CA2585C9A1584828953557C8700A9EF9E895B4066542801DDC91CEB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\period-division-rotations-failed-714a\\failure.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/period-division-rotations-failed-714a/failure.json",
+      "sha256": "A971B4DD05D69B83FD63148A0D20595804565DD230F335C9D6083926C25E5442"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\period-division-rotations-failed-714a\\SourcePeriodDivisionRotations.exit",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/period-division-rotations-failed-714a/SourcePeriodDivisionRotations.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\period-division-rotations-failed-714a\\SourcePeriodDivisionRotations.lean.txt",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/period-division-rotations-failed-714a/SourcePeriodDivisionRotations.lean.txt",
+      "sha256": "59B64AFCA959117E54CBC9B02EAF58B586E8B3079D35039A429722A4FD7167D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\period-division-rotations-failed-714a\\SourcePeriodDivisionRotations.log",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/period-division-rotations-failed-714a/SourcePeriodDivisionRotations.log",
+      "sha256": "B2F9831416D995AC208940147809F1E3E3BD844746F985D8794580D27D50BB81"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-analytic-integrality-3-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-analytic-integrality-3-reuse-review-20261026.json",
+      "sha256": "4A2F57A83DEB9C323B3D0841747B720714AD0EE4BE2FD649E347140D0CB47056"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-finite-place-exhaustion-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-finite-place-exhaustion-1-reuse-review-20261026.json",
+      "sha256": "E3817C9DB499BF7F36CC457FBBA155F12E4EB8C41BE73D44DEC4F91FD96A3FE3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-place-invariance-2-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-place-invariance-2-reuse-review-20261026.json",
+      "sha256": "ADEE5D53769679277AE41812695F1BA1CE29BD713029CA751636C31F7343DE96"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-period-division-rotations-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-period-division-rotations-1-reuse-review-20261026.json",
+      "sha256": "BC98AA8ABB43D78EFEC71ADE29EA71864BBB233B0CE37CD9084279B62A01CEA5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-division-forms-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-division-forms-1-reuse-review-20261026.json",
+      "sha256": "34484BE7D27FD93C68530EDE5D434E7B0F112F1E44F79DAAEA7FFD44E428AB51"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-division-lattice-orbit-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-division-lattice-orbit-1-reuse-review-20261026.json",
+      "sha256": "497F6969A08CF485BB013B5843EEB8C7F83BF85C7203E055A60B877CDEF01D8D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-division-power-orbit-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-division-power-orbit-1-reuse-review-20261026.json",
+      "sha256": "435044414299C94D65C2797301220CD44CBBC9658540266A8D6953DB051829C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-separation-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-diamond-separation-1-reuse-review-20261026.json",
+      "sha256": "77768D1DB6C20655262194BBD0670ACC2D6E4A9706D52448EBF36F98A4D363FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-original-modular-point-separation-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-original-modular-point-separation-1-reuse-review-20261026.json",
+      "sha256": "7A03B1B4D45500A8551E2F7CA6806D1AB7A67A8DECE1E8E1ED786AD34E227CFE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-modular-point-separation-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-modular-point-separation-1-reuse-review-20261026.json",
+      "sha256": "094542226E3C45F3C39DB5AD69E7F211B338C4E1894E549E760A7F07B873A473"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-normalized-cusp-ratios-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-normalized-cusp-ratios-1-reuse-review-20261026.json",
+      "sha256": "26A1390305F26A724669139E6AF7FFB412B3790FAF9F47EA31080B7A82B8A049"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-all-modular-ratio-membership-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-all-modular-ratio-membership-1-reuse-review-20261026.json",
+      "sha256": "5385B2F8F057E005A32F146FBD72205C9A8329FDA4E5AB2F18D3CBD00CE1C8E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-analytic-place-orbits-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-analytic-place-orbits-1-reuse-review-20261026.json",
+      "sha256": "0C9C5F817F2FDF50F701BEE215032376B2B331C75E478818D797A94788C06B77"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-j-fiber-degree-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-j-fiber-degree-1-reuse-review-20261026.json",
+      "sha256": "DE414E12853E17097C6C21DFB818C2A318C7E180E33E7B1954CFE320E2E6CC5C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-orbit-counting-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-orbit-counting-1-reuse-review-20261026.json",
+      "sha256": "B59C94B14602870DD1987A8F250E4F8F8723417FF3F60291E562E89DDD7ABFB6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-plus-minus-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-plus-minus-1-reuse-review-20261026.json",
+      "sha256": "B0AB50703D16D9C8173C617787AB6E4BA6874D59F61EDD01DF625DC520F2C5C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-ramification-bounds-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-ramification-bounds-1-reuse-review-20261026.json",
+      "sha256": "AD1B53A0DB162D019F993171B565C5351ADBE4388D9887E0522CD099FC0E1709"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-j-fiber-orbits-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-j-fiber-orbits-1-reuse-review-20261026.json",
+      "sha256": "6CB1E8F8ECC7A7E72BF5A1D59FD6C2944AF757DAC9F748F2C6CD7716E98DDC13"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-generic-fiber-count-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-analytic-orbits-20261027-730/source-gamma-one-generic-fiber-count-1-reuse-review-20261026.json",
+      "sha256": "5D6E13517ECCE64353657E7B7C5C61658BE4E5722DF063BB5ADDA4147E6DA03F"
+    }
+  ]
+}

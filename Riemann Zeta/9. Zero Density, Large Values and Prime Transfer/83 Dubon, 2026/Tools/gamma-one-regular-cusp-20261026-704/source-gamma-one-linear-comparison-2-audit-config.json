@@ -1,0 +1,76 @@
+{
+  "modules": [
+    "SourceGammaOneRegularCuspQExpansion",
+    "SourceGammaOneRegularCuspEquiv"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspQExpansion_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_cusp_qExpansion_range_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_qExpansion"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspQExpansion",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspQExpansion_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_cusp_qExpansion_range_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_qExpansion",
+    "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspQExpansion",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspQExpansion_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_cusp_qExpansion_range_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_qExpansion",
+    "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspQExpansion",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_cuspForm_of_regular_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gammaOne_regular_differential_of_coefficients",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_diffQExp_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.gamma1_regular_of_diffQExp_matches_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_decay",
+    "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_qExpansion",
+    "Dubon2026.SourceFricke.span_gammaOne_weightTwo_integral_cuspForms_eq_top"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_qExpansion"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneAnalyticDifferentialRegularity",
+    "SourceGammaOneAnalyticGerms",
+    "SourceGammaOneAnalyticJOrders",
+    "SourceGammaOneAnalyticOrder",
+    "SourceGammaOneAnalyticOrderNontrivial",
+    "SourceGammaOneAnalyticPlaces",
+    "SourceGammaOneCuspDerivativeOrder",
+    "SourceGammaOneCuspFourierNormalization",
+    "SourceGammaOneCuspJOrder",
+    "SourceGammaOneCuspOrder",
+    "SourceGammaOneCuspPlaces",
+    "SourceGammaOneCuspRatioRealization",
+    "SourceGammaOneCuspRealizationAlgebra",
+    "SourceGammaOneDifferentialCuspGerm",
+    "SourceGammaOneHolomorphicDifferentials",
+    "SourceGammaOneJRealization",
+    "SourceGammaOneMeromorphicRealization",
+    "SourceGammaOneRatioRealization",
+    "SourceGammaOneRealizationAlgebra",
+    "SourceGammaOneRegularCoefficientOrders",
+    "SourceGammaOneRegularCuspEquiv",
+    "SourceGammaOneRegularCuspForms",
+    "SourceGammaOneRegularCuspOrder",
+    "SourceGammaOneRegularCuspQExpansion",
+    "SourceGammaOneRegularFourierRealization",
+    "SourceGammaOneTranslatedCuspGerms"
+  ],
+  "separateReason": "The actual linear equivalence and its exact Fourier identity are the two required outputs. Both are VALUE traversal roots; no type-only dependency is substituted for the construction."
+}

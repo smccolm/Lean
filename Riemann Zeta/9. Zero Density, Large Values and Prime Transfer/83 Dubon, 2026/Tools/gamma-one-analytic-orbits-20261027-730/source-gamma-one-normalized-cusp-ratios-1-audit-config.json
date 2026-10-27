@@ -1,0 +1,26 @@
+{
+  "modules": [
+    "SourceGammaOneNormalizedCuspRatios"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_ratio_mem"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_ratio_mem"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_ratio_mem",
+    "Dubon2026.SourceFricke.span_gammaOne_integral_cuspForms_eq_top",
+    "Dubon2026.SourceFunctionField.GammaOne.div_mem_qExpFunctionFieldC",
+    "Dubon2026.SourceDifferential.algebraMap_laurentSeries_apply_alt"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_ratio_mem"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneNormalizedCuspRatios"
+  ],
+  "separateReason": "The literal normalized cusp ratio consumes integral cusp spanning and the existing integral-ratio field construction."
+}

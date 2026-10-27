@@ -1,0 +1,3 @@
+{
+  "cause": "Represents has multiplication and inverse, not a div theorem. Rewriting at a hypothesis also exposed its existential body. Preserve typed representation and reuse mul/inv."
+}

@@ -1,0 +1,53 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T08:21:27.024331+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneExactRamification"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamification.lean",
+      "sha256": "37AEF9E754763EEAF8270134114A2B6B9A2BA0296689AF1D07DD2B320B91D396",
+      "oleanSha256": "54356CCC0DCB79DB488EDEBCEEBDB8711A9E2CFF472E18A48CA91AA102D05D70"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.sum_analytic_fiber_orders_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.two_mul_ramification_eq_stabilizer_card"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.sum_analytic_fiber_orders_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.two_mul_ramification_eq_stabilizer_card"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamificationAudit1.log",
+  "logSha256": "F22CA7A16FDF37BC183FA7E0A99418119730E15BE0A91BA230BB41E43886BDE1",
+  "auditSha256": "A85163DF39CCB787C56702D2FB1FD1FE7A323A6B0C3BC4DBAF80564651C1EF8E",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 3,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 10,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamificationDependencyAudit1.log",
+  "dependencyAuditSha256": "9DE9DFF887970C6FC6844010844EF893C4E1DCC8E19D61644991B0AFB6C27FD4",
+  "dependencyAuditSourceSha256": "D90B98BA7F7AD30703D931EE6304C27A424F12AFAFD80A949D92EDC8F6EDD71B",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.sum_analytic_fiber_orders_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.two_mul_ramification_eq_stabilizer_card"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact ramification -> native Gamma1 modular forms separate every distinct Gamma1 orbit.",
+  "discharged": [
+    "For every nonzero Gamma1 level and every analytic point, twice the actual normalized analytic ramification equals the stabilizer cardinality after adjoining the central negative identity.",
+    "The original complex function-field degree over j equals the actual subgroup index, derived from actual fibers and their proved orbit bijection."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Apply the existing ramified power-fiber descent and local chart machinery at every analytic center, then cusp charts/global places, actual periods and full Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-exact-ramification-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "2AED1597603E60917BABB46E154941F0A6408178D002FA2F831410E509F24AC6",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

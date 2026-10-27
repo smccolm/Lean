@@ -1,0 +1,214 @@
+{
+  "status": "PASS",
+  "theorems": 51,
+  "modules": 10,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspVanishingScratchOwnership701.log",
+  "logSha256": "AC87F8BA312DC88154243D4E40BDD1405A048BC88F71E43035A07023B5CF9DF0",
+  "sourceSha256": "43F1C4E02690CE6FA2F39273ABB1A35AFEF58E065861C88438E20FA2CD58B14A",
+  "owners": [
+    {
+      "module": "SourceGammaOneCuspDerivativeOrder",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cusp_raw_j_derivative_order"
+    },
+    {
+      "module": "SourceGammaOneTranslatedCuspGerms",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.eventually_ne_zero_translated_cuspFunction"
+    },
+    {
+      "module": "SourceGammaOneCuspRatioRealization",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_eventuallyEq_of_ratio"
+    },
+    {
+      "module": "SourceGammaOneCuspRealizationAlgebra",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_const_eventuallyEq"
+    },
+    {
+      "module": "SourceGammaOneCuspRatioRealization",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.realize_smul_eq_translated_ratio"
+    },
+    {
+      "module": "SourceGammaOneCuspJOrder",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_jCoordinate"
+    },
+    {
+      "module": "SourceGammaOneCuspRealizationAlgebra",
+      "name": "_private.SourceGammaOneCuspRealizationAlgebra.0.Dubon2026.SourceFunctionField.GammaOne.cusp_translate_add"
+    },
+    {
+      "module": "SourceGammaOneCuspRatioRealization",
+      "name": "ModularForm.translate.congr_simp"
+    },
+    {
+      "module": "SourceGammaOneCuspRealizationAlgebra",
+      "name": "_private.SourceGammaOneCuspRealizationAlgebra.0.Dubon2026.SourceFunctionField.GammaOne.cusp_translate_mul"
+    },
+    {
+      "module": "SourceGammaOneCuspJOrder",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_jCoordinate_neg"
+    },
+    {
+      "module": "SourceGammaOneCuspRatioRealization",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspRealize.eq_1"
+    },
+    {
+      "module": "SourceGammaOneCuspOrder",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_one"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspOrder",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_decay"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspForms",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_form_realization"
+    },
+    {
+      "module": "SourceGammaOneCuspRealizationAlgebra",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_mul_eventuallyEq"
+    },
+    {
+      "module": "SourceGammaOneDifferentialCuspGerm",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.differential_cusp_germ._simp_1_1"
+    },
+    {
+      "module": "SourceGammaOneTranslatedCuspGerms",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.translated_modular_ne_zero"
+    },
+    {
+      "module": "SourceGammaOneCuspJOrder",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_cuspOrder_pos._proof_1_1"
+    },
+    {
+      "module": "SourceGammaOneCuspOrder",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_ne_top"
+    },
+    {
+      "module": "SourceGammaOneDifferentialCuspGerm",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.differential_cusp_germ._simp_1_4"
+    },
+    {
+      "module": "SourceGammaOneDifferentialCuspGerm",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.differential_cusp_germ"
+    },
+    {
+      "module": "SourceGammaOneCuspPlaces",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspRamification._proof_1"
+    },
+    {
+      "module": "SourceGammaOneCuspPlaces",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspPlace._proof_4"
+    },
+    {
+      "module": "SourceGammaOneDifferentialCuspGerm",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.differential_cusp_germ._simp_1_3"
+    },
+    {
+      "module": "SourceGammaOneDifferentialCuspGerm",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.differential_cusp_germ._simp_1_2"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspForms",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_regular_cusp_form"
+    },
+    {
+      "module": "SourceGammaOneCuspPlaces",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspPlace._proof_1"
+    },
+    {
+      "module": "SourceGammaOneCuspPlaces",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_j_neg"
+    },
+    {
+      "module": "SourceGammaOneCuspJOrder",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_cuspOrder_pos"
+    },
+    {
+      "module": "SourceGammaOneCuspOrder",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_algebraMap"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspOrder",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_order_pos"
+    },
+    {
+      "module": "SourceGammaOneCuspPlaces",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspPlace._proof_3"
+    },
+    {
+      "module": "SourceGammaOneCuspPlaces",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order"
+    },
+    {
+      "module": "SourceGammaOneCuspOrder",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_add"
+    },
+    {
+      "module": "SourceGammaOneCuspOrder",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_zero"
+    },
+    {
+      "module": "SourceGammaOneCuspOrder",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_eq_top_iff"
+    },
+    {
+      "module": "SourceGammaOneDifferentialCuspGerm",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.differential_cusp_germ._simp_1_7"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspOrder",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspPlace.congr_simp"
+    },
+    {
+      "module": "SourceGammaOneCuspJOrder",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cusp_order_zero_of_tendsto_one"
+    },
+    {
+      "module": "SourceGammaOneCuspJOrder",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.analyticAt_levelOne_cuspFunction"
+    },
+    {
+      "module": "SourceGammaOneDifferentialCuspGerm",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.differential_cusp_germ._simp_1_6"
+    },
+    {
+      "module": "SourceGammaOneTranslatedCuspGerms",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.analyticAt_translated_cuspFunction"
+    },
+    {
+      "module": "SourceGammaOneCuspPlaces",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspRamification_pos"
+    },
+    {
+      "module": "SourceGammaOneCuspRealizationAlgebra",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_add_eventuallyEq"
+    },
+    {
+      "module": "SourceGammaOneCuspRatioRealization",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_cuspRealize"
+    },
+    {
+      "module": "SourceGammaOneDifferentialCuspGerm",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.differential_cusp_germ._simp_1_5"
+    },
+    {
+      "module": "SourceGammaOneCuspOrder",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_mul"
+    },
+    {
+      "module": "SourceGammaOneCuspPlaces",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspRamification.congr_simp"
+    },
+    {
+      "module": "SourceGammaOneCuspPlaces",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_cusp_place"
+    },
+    {
+      "module": "SourceGammaOneCuspPlaces",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspPlace._proof_2"
+    },
+    {
+      "module": "SourceGammaOneCuspRatioRealization",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.meromorphicOrderAt_cuspRealize_ne_top"
+    }
+  ]
+}

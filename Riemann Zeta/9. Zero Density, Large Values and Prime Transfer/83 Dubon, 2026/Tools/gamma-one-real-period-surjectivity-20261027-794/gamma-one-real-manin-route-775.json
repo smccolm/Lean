@@ -1,0 +1,29 @@
+{
+  "chain": "DUB-17/18 -> original all-weight arithmetic association -> actual Gamma1 Picard/H1 -> real period surjectivity -> reverse dimension inequality -> real Manin relations on the original central-sign cosets",
+  "exactTarget": "finrank R (sourceGamma1RealParabolicHoms N) <= 2 * finrank C (CuspForm (Gamma1 N) 2)",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePlusMinus.lean",
+      "sha256": "D8A3E4CFDF527B83F90E6B6B3C85F779F677FAF5D6C931870AC7BE1E7A6D4567"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceManinRelationDimension.lean",
+      "sha256": "0CCFE3E71744504435942048A466C2C13B24BC4A314B60AA8FCF5A3CD7099073"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceManinParabolicDimension.lean",
+      "sha256": "0F4A31AE4E32B165BF8755BC2600B39505E613DA347F217DC26F0C8C12539E1E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicPeriods.lean",
+      "sha256": "F28255F16B106E6019118D8E4C714869E334E3C553A3CD0D6835113826E9CFF9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactCuspOrbits.lean",
+      "sha256": "A8FE05A876EE992BD00E95255BC18A2893C4FA6565BAA4ABC1C26739DB2838D1"
+    }
+  ],
+  "next": "Inject actual real parabolic Gamma1 characters into those of the central-sign enlargement. This permits the same finite cosets and cusp counts as the proved field geometry.",
+  "shorterRoute": "Only injectivity of central-sign character extension is needed for the upper bound; defer an unnecessary full linear equivalence. Equality of squares makes real character values independent of sign and avoids abelianization, transfer or divisible-module extension infrastructure. Reuse the existing generic Manin relation-space dimension theorem, adapting only the original cusp-potential assembly from complex Gamma0 to real signed Gamma1.",
+  "remaining": "Real Manin character dimension bound, matching actual Hurwitz/genus bound, period surjectivity, reciprocity and original arithmetic/higher continuation remain. 16/20; DUB-17--20 OPEN."
+}

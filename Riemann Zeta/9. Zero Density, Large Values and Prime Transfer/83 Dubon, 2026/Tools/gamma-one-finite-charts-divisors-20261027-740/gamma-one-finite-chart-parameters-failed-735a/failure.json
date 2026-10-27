@@ -1,0 +1,3 @@
+{
+  "reason": "The actual order hypothesis had the ramified family unfolded, so simp did not match the local gamma0 abbreviation. Change the hypothesis to the local T and gamma0 form before rewriting the proved center identity."
+}

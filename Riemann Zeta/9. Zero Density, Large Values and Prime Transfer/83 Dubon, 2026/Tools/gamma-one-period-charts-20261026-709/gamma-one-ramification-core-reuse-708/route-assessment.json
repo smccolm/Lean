@@ -1,0 +1,20 @@
+{
+  "scope": 708,
+  "source": "anthropics/fermats-last-theorem at 6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "manifests": [
+    "snapshots.json",
+    "followup-snapshots.json",
+    "route-input-snapshots.json"
+  ],
+  "inspection": "The dictionary definition, GammaH wrapper, GammaH orbit-separation proof and separating-form wrapper were read in full. The Gamma1 ramification-one result and both algebraic multiplicity transports were inspected at their imports, principal statements and final proof chains. The general stabilizer proof was inspected at its dependency list, helper signatures and concluding orbit/fundamental-identity argument. This is selected-source route assessment, not a full dependency audit or build.",
+  "findings": [
+    "The dictionary exposes actual places, positive ramification, group invariance, valuation-ring membership and exact analytic orders. Our local construction already supplies the order and membership content; group invariance remains to be assembled.",
+    "The Gamma1 ramification-one theorem requires level at least four and algebraic j multiplicities. Its upstream algebraic proof uses the full-level Fricke field, actual Galois fixer identification, elliptic place stabilizers and coefficient-field transport. It cannot be imported as a consequence of torsion-freeness alone.",
+    "The all-level stabilizer route requires actual finite-place exhaustion and analytic orbit separation. The separation proof reduces to an equal-weight modular-form pair distinguishing points, then an actual quotient regular at one point and singular at the other.",
+    "The local repository already proves the Fricke level field and faithful principal-sign quotient, fixed-field equality, modular ratios, finite coordinate geometry and exact analytic j orders. These should be reused before expanding either route."
+  ],
+  "decision": "The new local chart theorem closes the unramified case. Next inspect and reuse the exact separating-pair and finite-place-exhaustion inputs before expanding the all-level chart route. Do not replace all levels by the level-at-least-four branch or assume elliptic-center descent.",
+  "boundary": "No external Lean imported or full closure certified. External proof-limit increases and instance/simp suppression are not adopted. All original source gates and the all-weight arithmetic branch remain; 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

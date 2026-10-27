@@ -1,0 +1,53 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T05:35:43.141682+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneFinitePlaceExhaustion"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceExhaustion.lean",
+      "sha256": "2EF1C1C6B8C632143DD3A0E1466275E8A4AD423009828FCE0AD98F6E404655F8",
+      "oleanSha256": "46321C3197A48E20658DA59C8DA53A96F305EEA1F012B6A23AF53FC59EFDFEF5"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.place_cusp_or_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_fiber_realization"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.place_cusp_or_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_fiber_realization"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceExhaustionAudit1.log",
+  "logSha256": "B02D52AB188C3254FEEA6E0DAE424BDC3E50BD8020D3712B0B2D3BFF735443DE",
+  "auditSha256": "D9346D3C56DD6AC3EC194BEB4D185E96E31624119BD2F47698036BAD51B6EF45",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 4,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 16,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceExhaustionDependencyAudit1.log",
+  "dependencyAuditSha256": "6899E73EADF7D4745E2A87342CEF3239EBA127C939095852D310C9C7369EA53F",
+  "dependencyAuditSourceSha256": "17BFB4F0B1C783DF22A4DD053580CE0F96C707FE8E70359C0657CDA372A77522",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.finite_fiber_realization",
+    "Dubon2026.SourceFunctionField.GammaOne.place_cusp_or_analytic"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual Gamma1 finite Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> original global analytic charts -> every original finite-j place is an actual analytic place.",
+  "discharged": [
+    "Every finite-j original place is attained by the constructed analytic place map.",
+    "Every original place is either a j-pole or analytic.",
+    "Every positive-order j-c fiber has an actual upper-half-plane point with j value c."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Orbit separation, exact elliptic ramification and elliptic charts, cusp exhaustion/global charts and the full original period/Hecke/diamond/Picard/H1 arithmetic comparison remain; original all-weight characteristic-zero association and higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-finite-place-exhaustion-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "E3817C9DB499BF7F36CC457FBBA155F12E4EB8C41BE73D44DEC4F91FD96A3FE3",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

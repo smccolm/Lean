@@ -1,0 +1,41 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> actual ramified charts -> analytic regular descent and exact normalized order.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRamifiedRegularParameter.lean",
+      "sha256": "CA97D8CE2DF24139E4CD14DEBABC895435566EE6ABEFE44B7CDD288E6E4B9DE8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRamifiedRegularOrder.lean",
+      "sha256": "936C9258EB6EF590FE4F8DE82BD5EDBA64A08B9F70EA055F52DD22E8BA198F79"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalEllipticFibers.lean",
+      "sha256": "68B05D2B2B4ECC2B7949CE32A93D7AB0E9784635F85DCDAC1E3D18DAE86DA35F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePowerFiberAnalyticDescent.lean",
+      "sha256": "8B3E0EB410114127B4FFB8460C02F819CA4348D33AC8A4C95FDD99C4AFCE25FF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneAnalyticEvaluation.lean",
+      "sha256": "DD538E907D32C70AF5A7C40F80BB5A6D6C22A204487F10DAD8A75F63F6B80D91"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePlusMinus.lean",
+      "sha256": "D8A3E4CFDF527B83F90E6B6B3C85F779F677FAF5D6C931870AC7BE1E7A6D4567"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamification.lean",
+      "sha256": "37AEF9E754763EEAF8270134114A2B6B9A2BA0296689AF1D07DD2B320B91D396"
+    }
+  ],
+  "shorterRoute": "Reuse the existing centered elliptic coordinate and analytic power descent. Exact all-level Gamma1 ramification makes stabilizer multipliers exhaust all roots of unity; actual plus/minus place invariance discharges power-fiber invariance. Apply the existing analytic descent and cancel the proved positive ramification factor in the actual residue-value order identity. No new analytic descent framework or level restriction is needed.",
+  "assumptionsToDischarge": [
+    "Actual Gamma1 places are constant on every centered-coordinate power fiber, at all nonzero levels and all analytic centers.",
+    "Every actual function regular at the center has analytic residue values on the descended actual-place family, whose order is exactly the original normalized valuation order."
+  ],
+  "remaining": "Extend the exact descended order to poles and to one common chart neighborhood, then cusp/global charts and actual periods, full Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,49 @@
+{
+  "modules": [
+    "SourceGammaOneAnalyticPlaceInvariance",
+    "SourceGammaOneStabilizerRamification"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.realize_smul_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.stabilizer_card_dvd_two_mul_ramification"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.realize_smul_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.stabilizer_card_dvd_two_mul_ramification"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.realize_smul_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.stabilizer_card_dvd_two_mul_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_eq_div",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_mem_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_order",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_eventuallyEq_of_ratio",
+    "Dubon2026.SourceFunctionField.SubgroupStabilizer.main"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.stabilizer_card_dvd_two_mul_ramification"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneAnalyticGerms",
+    "SourceGammaOneAnalyticOrder",
+    "SourceGammaOneAnalyticOrderNontrivial",
+    "SourceGammaOneAnalyticPlaceInvariance",
+    "SourceGammaOneAnalyticPlaces",
+    "SourceGammaOneAnalyticResidues",
+    "SourceGammaOneMeromorphicRealization",
+    "SourceGammaOneRatioRealization",
+    "SourceGammaOneRealizationAlgebra",
+    "SourceGammaOneStabilizerRamification"
+  ],
+  "separateReason": "All selected declarations are consumed by actual analytic-place invariance or by the subgroup stabilizer divisibility bound for the actual uniformizer."
+}

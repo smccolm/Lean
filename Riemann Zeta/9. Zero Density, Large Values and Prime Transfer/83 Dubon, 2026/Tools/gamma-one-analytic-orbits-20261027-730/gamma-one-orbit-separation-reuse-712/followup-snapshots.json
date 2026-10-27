@@ -1,0 +1,24 @@
+{
+  "repository": "anthropics/fermats-last-theorem",
+  "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "scope": "Selected pinned source files only. No full closure, local build, import or pin change.",
+  "files": [
+    {
+      "path": "P2M/Sol/S_CohCarrier_exists_mem_GammaH_smul_eq_of_forall_sum_weierstrassP_pow_eq.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-separation-reuse-712\\S_CohCarrier_exists_mem_GammaH_smul_eq_of_forall_sum_weierstrassP_pow_eq.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_CohCarrier_exists_mem_GammaH_smul_eq_of_forall_sum_weierstrassP_pow_eq.lean",
+      "bytes": 16186,
+      "gitBlob": "f63450c7d4fd41b72510d1fac3f1692e34b90003",
+      "sha256": "E6257ED979B4C03CCE0122321214E1AE0C57DE2F0C21D59B4ABCD1388DAC04F2"
+    },
+    {
+      "path": "P2M/Sol/S_PeriodPair_exists_gamma1_two_eq_weierstrassP_and_slash_and_qExpansion_coeff.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-separation-reuse-712\\S_PeriodPair_exists_gamma1_two_eq_weierstrassP_and_slash_and_qExpansion_coeff.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_PeriodPair_exists_gamma1_two_eq_weierstrassP_and_slash_and_qExpansion_coeff.lean",
+      "bytes": 14638,
+      "gitBlob": "ab7621b5bf119d62eccf93f2715f2e8a8c8154a8",
+      "sha256": "6637C99D89452D243C2D8CD39A70CF6F1379B460033160146B29B3EB9D3197CB"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "theorems": 4,
+  "modules": 1,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionPowerOrbitScratchOwnership717.log",
+  "logSha256": "5E4A66BA4956EF1385FA43C8F35089AEB9B08FAAB3DD54C4C2FFB97075774795",
+  "sourceSha256": "7D3F48DDD828477281F75D1F6E7515D51270451621F0380D4BC1F30921BD877B",
+  "owners": [
+    {
+      "module": "SourceGammaOneDivisionPowerOrbit",
+      "name": "_private.SourceGammaOneDivisionPowerOrbit.0.Dubon2026.SourceFunctionField.GammaOne.division_point_notMem"
+    },
+    {
+      "module": "SourceGammaOneDivisionPowerOrbit",
+      "name": "PeriodPair.mk.congr_simp"
+    },
+    {
+      "module": "SourceGammaOneDivisionPowerOrbit",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_power"
+    },
+    {
+      "module": "SourceGammaOneDivisionPowerOrbit",
+      "name": "Dubon2026.SourceFunctionField.PeriodLattice.ofTau.eq_1"
+    }
+  ]
+}

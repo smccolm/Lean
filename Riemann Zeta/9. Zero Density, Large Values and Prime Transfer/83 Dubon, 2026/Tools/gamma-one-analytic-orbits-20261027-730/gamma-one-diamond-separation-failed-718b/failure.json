@@ -1,0 +1,4 @@
+{
+  "reason": "Fold the literal normalization and actual period value before the final commutativity rewrite.",
+  "sourceSha256": "36EBDAEF534E95264004B142CC2258566A614920D3D587AAD9CB5EAE8463D8A4"
+}

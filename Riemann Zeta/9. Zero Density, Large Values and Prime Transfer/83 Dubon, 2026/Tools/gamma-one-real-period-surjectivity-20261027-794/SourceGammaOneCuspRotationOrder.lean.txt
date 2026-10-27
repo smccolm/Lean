@@ -1,0 +1,44 @@
+import SourceGammaOneCuspPlaceRightInvariance
+
+/-! DUB-17/18 -> actual Gamma1 real period surjectivity -> matching
+Manin/genus cusp terms -> the cusp-width bound. An invariant nonzero
+meromorphic germ forces its leading-order rotation character to be one.
+This adapts the already proved stabilizer leading-term argument to the
+actual cusp coordinate; no order divisibility is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open Filter Function
+open scoped Topology
+
+theorem rotation_zpow_eq_one_of_meromorphic_order
+    {F : ℂ → ℂ} (hF : MeromorphicAt F 0) {n : ℤ}
+    (hn : meromorphicOrderAt F 0 = (n : WithTop ℤ))
+    {ζ : ℂ} (hζ : ζ ≠ 0)
+    (hinv : (fun q => F (ζ * q)) =ᶠ[𝓝[≠] (0 : ℂ)] F) :
+    ζ ^ n = 1 := by
+  obtain ⟨g, hg, hg0, hfg⟩ := (meromorphicOrderAt_eq_int_iff hF).mp hn
+  have hc : Continuous (fun q : ℂ => ζ * q) := continuous_const.mul continuous_id
+  have ht : Tendsto (fun q : ℂ => ζ * q) (𝓝[≠] (0 : ℂ)) (𝓝[≠] (0 : ℂ)) := by
+    rw [tendsto_nhdsWithin_iff]
+    constructor
+    · simpa only [mul_zero] using (hc.tendsto 0).mono_left nhdsWithin_le_nhds
+    · filter_upwards [self_mem_nhdsWithin] with q hq
+      exact mul_ne_zero hζ hq
+  have he : (fun q => ζ ^ n * g (ζ * q)) =ᶠ[𝓝[≠] (0 : ℂ)] g := by
+    filter_upwards [hfg, ht.eventually hfg, hinv, self_mem_nhdsWithin]
+      with q hq hr hi hq0
+    simp only [sub_zero, smul_eq_mul] at hq hr
+    rw [hr, hq, mul_zpow] at hi
+    apply mul_left_cancel₀ (zpow_ne_zero n hq0)
+    calc
+      q ^ n * (ζ ^ n * g (ζ * q)) = (ζ ^ n * q ^ n) * g (ζ * q) := by ring
+      _ = q ^ n * g q := hi
+  have hl : Tendsto g (𝓝[≠] (0 : ℂ)) (𝓝 (g 0)) :=
+    hg.continuousAt.tendsto.mono_left nhdsWithin_le_nhds
+  have hr : Tendsto (fun q => ζ ^ n * g (ζ * q)) (𝓝[≠] (0 : ℂ))
+      (𝓝 (ζ ^ n * g 0)) := tendsto_const_nhds.mul (hl.comp ht)
+  have hv : ζ ^ n * g 0 = g 0 := tendsto_nhds_unique (hr.congr' he) hl
+  exact (mul_eq_right₀ hg0).mp hv
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,80 @@
+[
+  {
+    "repository": "openai/math",
+    "kind": "recursive tree",
+    "url": "https://api.github.com/repos/openai/math/git/trees/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a?recursive=1",
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math-tree.json",
+    "sha256": "0E06F02B571D2347C8DA1A799E5FF522665DBFC3B37F95A0A003B04A5CCB5C99",
+    "truncated": true,
+    "entries": 55173
+  },
+  {
+    "repository": "leanprover-community/mathlib4",
+    "kind": "recursive tree",
+    "url": "https://api.github.com/repos/leanprover-community/mathlib4/git/trees/116662aa4c1e9106ab5c609b3214b02f6e11a65a?recursive=1",
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\leanprover-community__mathlib4-tree.json",
+    "sha256": "CBA0B2EB28E1436DD28D031308B4F336240D0FBC1ECE946BBB2E744DA4E03B58",
+    "truncated": false,
+    "entries": 10797
+  },
+  {
+    "repository": "openai/math",
+    "kind": "selected primary file",
+    "source": "CONTENTS.md",
+    "url": "https://raw.githubusercontent.com/openai/math/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/CONTENTS.md",
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__CONTENTS.md",
+    "sha256": "080BADCB677FB80BE0E695C21A8EC88BCB3A46DD3E3078CA10061E6B289BE175",
+    "gitBlob": "7e1ed90ac5a666f1bbecb22027387c4ad79e9d03",
+    "bytes": 640943
+  },
+  {
+    "repository": "openai/math",
+    "kind": "selected primary file",
+    "source": "README.md",
+    "url": "https://raw.githubusercontent.com/openai/math/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/README.md",
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__README.md",
+    "sha256": "6CB7F0E387B67C051227C6BA27ACA87EE82D9DD2530B6452B86B8681A2E2743A",
+    "gitBlob": "cc5b0a03bca6c742f045d683b6647a6f44ef2cae",
+    "bytes": 4417
+  },
+  {
+    "repository": "openai/math",
+    "kind": "selected primary file",
+    "source": "history.md",
+    "url": "https://raw.githubusercontent.com/openai/math/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/history.md",
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__history.md",
+    "sha256": "AC688A38EB9AFDB1F3C339C1DF251CDB1AA7D8F18067B3CE5D668A96D690F5FB",
+    "gitBlob": "ff52ee4dba7ac9a2f145b934f282f582525a4c0d",
+    "bytes": 3888
+  },
+  {
+    "repository": "teal-sea/zeta-lab",
+    "kind": "selected primary file",
+    "source": "lean/ZetaLean/DavenportHeilbronn.lean",
+    "url": "https://raw.githubusercontent.com/teal-sea/zeta-lab/9c492e8a8b91c6a8787a4536102194f511478c6b/lean/ZetaLean/DavenportHeilbronn.lean",
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\teal-sea__zeta-lab__DavenportHeilbronn.lean.txt",
+    "sha256": "28A8868C2A7A206714F96886EB848DBDDF09009BEF728413E868F3C271FF33DD",
+    "gitBlob": "b08ce96e00ada3353fccb6a6c655a1df0a7f545b",
+    "bytes": 7373
+  },
+  {
+    "repository": "teal-sea/zeta-lab",
+    "kind": "selected primary file",
+    "source": "lean/ZetaLean/DHTrivialZero.lean",
+    "url": "https://raw.githubusercontent.com/teal-sea/zeta-lab/9c492e8a8b91c6a8787a4536102194f511478c6b/lean/ZetaLean/DHTrivialZero.lean",
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\teal-sea__zeta-lab__DHTrivialZero.lean.txt",
+    "sha256": "AEFC0900444D81CDA23B287075C41ADA488357BB3F1DF0EFB28019A91B860B1D",
+    "gitBlob": "e5ba4a30475a65bd482bcff29afa08323f7263f4",
+    "bytes": 3555
+  },
+  {
+    "repository": "teal-sea/zeta-lab",
+    "kind": "selected primary file",
+    "source": "docs/47-the-davenport-heilbronn-zero.md",
+    "url": "https://raw.githubusercontent.com/teal-sea/zeta-lab/9c492e8a8b91c6a8787a4536102194f511478c6b/docs/47-the-davenport-heilbronn-zero.md",
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\teal-sea__zeta-lab__47-the-davenport-heilbronn-zero.md",
+    "sha256": "537ACB03B96D77C44355C59D910128C6C15AE08E25E792B68E3EBBC6B8CE9B46",
+    "gitBlob": "890091fc2d5d385c5c00d8f7cd65386a559e1a92",
+    "bytes": 7190
+  }
+]

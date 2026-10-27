@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "theorems": 6,
+  "modules": 2,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedChartsScratchOwnership707.log",
+  "logSha256": "B16D313F5C5191933B2648F75B1B5D17868C7B8771343D964C26B5958133E451",
+  "sourceSha256": "F54ECB2279CB9E29A2363634F07CE65866E7654EA4BB5DF1DC7562E01F0409FB",
+  "owners": [
+    {
+      "module": "SourceGammaOneRamificationIsolation",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eq_one_of_generic"
+    },
+    {
+      "module": "SourceGammaOneUnramifiedCharts",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_unramified_analytic_chart"
+    },
+    {
+      "module": "SourceGammaOneRamificationIsolation",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_dvd_full_stabilizer_half"
+    },
+    {
+      "module": "SourceGammaOneUnramifiedCharts",
+      "name": "_private.SourceGammaOneUnramifiedCharts.0.Dubon2026.SourceFunctionField.GammaOne.deriv_ne_zero_of_order_one"
+    },
+    {
+      "module": "SourceGammaOneRamificationIsolation",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eventually_one"
+    },
+    {
+      "module": "SourceGammaOneUnramifiedCharts",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_generic_analytic_chart"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "status": "Dependency assessment of the scope-736 candidate; no alternate global-period route is adopted or locally verified by this research record.",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/Hecke/diamond comparison -> exact full Picard/period comparison.",
+  "primarySources": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_multiplier_eq_one_of_norm_eq_one_of_abelJacobi_mem_periodLatticeOf_gammaH.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_ComplexPlaceDictionaryOf_multiplier_eq_one_of_norm_eq_one_of_abelJacobi_mem_periodLatticeOf_gammaH.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_multiplier_eq_one_of_norm_eq_one_of_abelJacobi_mem_periodLatticeOf_gammaH.lean",
+      "bytes": 24076,
+      "gitBlob": "ef1b730b59ad0870e5f03cf2158c353fbb659975",
+      "sha256": "7AF7BB7BCFF7509EC7E0C5CF32FC959D6639086E310D1ECF514A9766E108234F"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_realizeOf_eventuallyEq_of_meromorphic_gammaH.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_exists_realizeOf_eventuallyEq_of_meromorphic_gammaH.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_realizeOf_eventuallyEq_of_meromorphic_gammaH.lean",
+      "bytes": 4527,
+      "gitBlob": "6f70dcd7d8dec26df52527a437af5cd6a856cc7c",
+      "sha256": "C6561CE077162CE6B659C29A56C0554B30797D659854945AD6B4A1451008399E"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_finrank_parabolicHoms_le_two_mul_finrank_cuspForm_of_isCongruenceSubgroup.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_finrank_parabolicHoms_le_two_mul_finrank_cuspForm_of_isCongruenceSubgroup.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_finrank_parabolicHoms_le_two_mul_finrank_cuspForm_of_isCongruenceSubgroup.lean",
+      "bytes": 14023,
+      "gitBlob": "609d2fb2df05f1af2ed15e7ed775735123978022",
+      "sha256": "65F2D05FB4763D4E5899AF278EAAF4F90D1521A1441D40B8295669B8CA10CCAB"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_exists_norm_multiplier_eq_one_and_abelJacobi_add_petersson_mem_periodLatticeOf_gammaH.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_ComplexPlaceDictionaryOf_exists_norm_multiplier_eq_one_and_abelJacobi_add_petersson_mem_periodLatticeOf_gammaH.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_exists_norm_multiplier_eq_one_and_abelJacobi_add_petersson_mem_periodLatticeOf_gammaH.lean",
+      "bytes": 37356,
+      "gitBlob": "7a0b14efb23dc9ae4a790390d4491d3012fef5f8",
+      "sha256": "856065DE6C18961515A875C6E8CFAB56438A824162F336F54EFBC81D44162E9E"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_modularForm_eventuallyEq_div_of_meromorphic_of_finiteIndex.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_exists_modularForm_eventuallyEq_div_of_meromorphic_of_finiteIndex.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_modularForm_eventuallyEq_div_of_meromorphic_of_finiteIndex.lean",
+      "bytes": 29703,
+      "gitBlob": "215317a4b77952a32bde955fb080d8686051d7b8",
+      "sha256": "F28EFDE829862B74E9C16279DC3A663AB2177EA9EA393974782E32DA2C250C08"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_finrank_parabolicHoms_Gamma_le_two_mul_finrank_cuspForm.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_finrank_parabolicHoms_Gamma_le_two_mul_finrank_cuspForm.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_finrank_parabolicHoms_Gamma_le_two_mul_finrank_cuspForm.lean",
+      "bytes": 16237,
+      "gitBlob": "7a8bb469318d0b4f1e71f07a632891a22afa4740",
+      "sha256": "52DD8425F4C6B77660DF53462B9986033FC0768068FD5E525BE1EF10A4EB223A"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_finrank_parabolicHoms_le_two_mul_finrank_cuspForm_of_le_of_normal.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_finrank_parabolicHoms_le_two_mul_finrank_cuspForm_of_le_of_normal.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_finrank_parabolicHoms_le_two_mul_finrank_cuspForm_of_le_of_normal.lean",
+      "bytes": 20627,
+      "gitBlob": "2fb5347e56c6629605d19fd2d7bb0eeeb349ce91",
+      "sha256": "EAA570F7264CF3DE01970E18B2310D2CB5A0BFA1AF24B2835F0FCC75E709E27F"
+    }
+  ],
+  "readScope": "Read all seven mathematical statements, imports and proof bodies. Large upstream attribute-deactivation lists in the four followup files were excluded from the display; they are preserved verbatim in snapshots. No upstream option, instance suppression or linter suppression is copied.",
+  "findings": [
+    "The general congruence-subgroup dimension inequality descends from principal level through normal-subgroup restriction and real-period injectivity/surjectivity. Its principal-level input uses separate exact parabolic-rank and cusp-form lower-bound results. The local proved Gamma0 dimension theorem does not discharge those Gamma1/principal-level inputs.",
+    "The unit-norm multiplier argument reduces to an Abel-Petersson reciprocity identity and the characterization of Petersson pairings in the period lattice. These are additional substantial modular-polygon/period dependencies; the inspected wrapper is not a proof of them in the local original field.",
+    "The meromorphic quotient construction is self-contained over native modular forms: a compact truncated fundamental set gives finitely many pole representatives, a product of weight-12 forms vanishing there clears poles, and a discriminant power controls cusp growth. The chosen real exponent and normalization are genuine. A narrower adaptation to a supplied finite analytic divisor may avoid repeating the general compact-pole enumeration, but must be proved under the exact source hypotheses.",
+    "The actual local Gamma1 modular-ratio membership theorem already provides the integral-ratio field inclusion once such a quotient is built; a separate external integral-ratio field framework is unnecessary.",
+    "The full principal-divisor argument still requires order-zero at every remaining j-pole place, proved externally using inverse-j monic equations and a full-level Galois field. Its local replacement is unresolved.",
+    "The existing local divisor-moving argument provides a route-independent reduction from every divisor class to analytic divisors. Scope738 adapts that argument using already proved indicators, actual curve geometry and finite-place exhaustion; its final scratch audit passes."
+  ],
+  "decision": "Preserve the candidate and its exact dependencies. No claim of reduced global-period closure cost is justified yet. Continue with obligations shared by both routes and compare a concrete cusp/global-chart construction with the remaining modular-period foundations before selecting another substantial expansion.",
+  "stillOpen": "All original Picard/period/Hecke/diamond/full-parabolic arithmetic comparisons, characteristic-zero association and literal higher symmetric-power continuation not yet discharged remain required. 16/20; DUB-17--20 OPEN; all-weight contract unchanged.",
+  "scope738Receipt": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-moving-1-scratch-receipt.json",
+    "sha256": "A88376EC334AB34572E6E20E05245BAE932A7E0FAEFC77F87480E28E18AEA1B7"
+  },
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false,
+  "externalClosureBuilt": false
+}

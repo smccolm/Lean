@@ -1,0 +1,42 @@
+
+open scoped MatrixGroups in
+theorem real_group_haar_source :
+    (Measure.map realIwasawaHomeomorph.symm
+      ((volume : Measure UpperHalfPlane).prod realCompactHaar)).IsHaarMeasure ∧
+    ∀ g : SL(2, ℝ),
+      MeasurePreserving (fun h : SL(2, ℝ) => g * h) realGroupMeasure realGroupMeasure ∧
+      MeasurePreserving (fun h : SL(2, ℝ) => h * g) realGroupMeasure realGroupMeasure :=
+  ⟨realGroupMeasure_isHaarMeasure,
+    fun g => ⟨realGroupMeasure_left_invariant g, realGroupMeasure_right_invariant g⟩⟩
+
+open scoped MatrixGroups ModularForm CongruenceSubgroup in
+theorem real_group_petersson_integral_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f f' : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k) :
+    cuspPetersson f f' = ∫ g : SL(2, ℝ) in {g | g • UpperHalfPlane.I ∈ gamma0FundamentalDomain Q},
+      starRingEnd ℂ ((⇑f ∣[k] (Matrix.SpecialLinearGroup.mapGL ℝ g)) UpperHalfPlane.I) *
+        ((⇑f' ∣[k] (Matrix.SpecialLinearGroup.mapGL ℝ g)) UpperHalfPlane.I) ∂realGroupMeasure :=
+  cuspPetersson_eq_realGroup_integral f f'
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem real_group_generated_hecke_source {Q p : ℕ} [NeZero Q] [NeZero p] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hp : Nat.Prime p) {v : SL(2, ℝ) → ℂ}
+    (hv : v ∈ Submodule.span ℂ (Set.range (fun h : SL(2, ℝ) =>
+      fun g : SL(2, ℝ) => realWeightLift k f.toCuspForm (g * h)))) :
+    (∀ γ : SL(2, ℝ), Matrix.SpecialLinearGroup.mapGL ℝ γ ∈
+      (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) →
+        ∀ g : SL(2, ℝ), v (γ * g) = v g) ∧
+    ∀ g : SL(2, ℝ), realPrimeHecke Q p v g = normalizedCuspCoefficients f.toCuspForm p * v g := by
+  refine ⟨fun γ hγ g => realLiftCyclic_left_invariant f.toCuspForm hv γ hγ g, fun g => ?_⟩
+  exact congrFun (primitive_realPrimeHecke_cyclic_eigenvalue f hp hv) g
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem real_group_generated_L2_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k)
+    {v : SL(2, ℝ) → ℂ}
+    (hv : v ∈ Submodule.span ℂ (Set.range (fun h : SL(2, ℝ) =>
+      fun g : SL(2, ℝ) => realWeightLift k f (g * h)))) :
+    Continuous v ∧ (∃ C : ℝ, 0 ≤ C ∧ ∀ g : SL(2, ℝ), ‖v g‖ ≤ C) ∧
+      MemLp v 2 (realGroupMeasure.restrict
+        {g : SL(2, ℝ) | g • UpperHalfPlane.I ∈ gamma0FundamentalDomain Q}) :=
+  ⟨realLiftCyclic_continuous f hv, realLiftCyclic_bounded f hv, realLiftCyclic_memLp_two f hv⟩
+

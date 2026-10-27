@@ -1,0 +1,3 @@
+{
+  "cause": "Slash cancellation requires commuting the denominator factor; native form coercion needs an explicit change before unfolding the analytic value. Remove a redundant cusp-bound change tactic and all resulting unused simp arguments."
+}

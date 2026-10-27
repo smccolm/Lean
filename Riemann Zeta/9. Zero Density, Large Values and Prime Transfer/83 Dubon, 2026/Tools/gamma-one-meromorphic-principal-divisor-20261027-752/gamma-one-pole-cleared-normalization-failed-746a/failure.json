@@ -1,0 +1,4 @@
+{
+  "exit": 1,
+  "cause": "The native continuous action instance is on real GL(2), not integer SL(2). Use the existing mapped real action homeomorphism."
+}

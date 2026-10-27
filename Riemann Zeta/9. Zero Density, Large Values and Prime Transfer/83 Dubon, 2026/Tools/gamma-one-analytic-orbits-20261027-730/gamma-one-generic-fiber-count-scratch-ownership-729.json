@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "theorems": 4,
+  "modules": 1,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenericFiberCountScratchOwnership729.log",
+  "logSha256": "5FD70633B3188A9F648DB7EA97F6F4F29F4DE8701B51ABCF79A83ED4F5084CDF",
+  "sourceSha256": "4B6094FA805C3DF4FCD609AB235EF60D56BCAA48C89D310C27BE5FDBA391BDCF",
+  "owners": [
+    {
+      "module": "SourceGammaOneGenericFiberCount",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.exists_fiber_order_sum_eq_index._proof_1_1"
+    },
+    {
+      "module": "SourceGammaOneGenericFiberCount",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_relative_indices_eq_index"
+    },
+    {
+      "module": "SourceGammaOneGenericFiberCount",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.exists_fiber_order_sum_eq_index"
+    },
+    {
+      "module": "SourceGammaOneGenericFiberCount",
+      "name": "_private.SourceGammaOneGenericFiberCount.0.Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.exists_card_stabilizer_two"
+    }
+  ]
+}

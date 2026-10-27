@@ -1,0 +1,109 @@
+import SourceGammaOneRegularCuspEquiv
+
+/-! DUB-17/18 -> original Gamma1 Picard-period/cusp comparison -> actual
+analytic integrand. Fourier injectivity identifies the constructed linear
+equivalence with the proved cusp-form realization. Its exact quotient identity
+then gives the original differential germ, retaining the factor 2*pi*i. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceDifferential SourceCurve KaehlerDifferential Filter CongruenceSubgroup
+open scoped MatrixGroups ModularForm Topology
+
+private local instance complexLaurentAlgebra : Algebra ℂ (LaurentSeries ℂ) :=
+  HahnSeries.powerSeriesAlgebra ℤ ℂ
+
+private local instance complexLaurentModule : Module ℂ (LaurentSeries ℂ) :=
+  HahnSeries.instModule
+
+variable (N : ℕ)
+
+private local instance originalFieldAlgebra : Algebra ℂ (functionFieldOver (Gamma1 N) ℂ) :=
+  (functionFieldOver (Gamma1 N) ℂ).toSubalgebra.algebra
+
+variable [NeZero N]
+
+theorem regularCuspEquiv_eq_normalized
+    (ω : regularDifferentials ℂ (functionFieldOver (Gamma1 N) ℂ))
+    (x : functionFieldOver (Gamma1 N) ℂ)
+    (hxω : x • D ℂ (functionFieldOver (Gamma1 N) ℂ) (jCoordinateOver (Gamma1 N) ℂ) = ω.val)
+    {k : ℤ} (g h : ModularForm (Gamma1 N) k) (hh : h ≠ 0)
+    (hr : (x : LaurentSeries ℂ) * ModularRatios.qL h = ModularRatios.qL g)
+    (F : CuspForm (Gamma1 N) 2)
+    (he : ∀ τ : ℍ, F τ * h τ = g τ * deriv (JMultiplicity.jf ∘ ofComplex) (τ : ℂ)) :
+    regularCuspEquiv N ω = (2 * Real.pi * Complex.I)⁻¹ • F := by
+  have hT : ModularGroup.T ∈ Gamma1 N := by simp [Gamma1_mem, ModularGroup.T]
+  apply cuspQExpansion_injective hT
+  change (qExpansion 1 (regularCuspEquiv N ω) : LaurentSeries ℂ) =
+    (qExpansion 1 ((2 * Real.pi * Complex.I)⁻¹ • F : CuspForm (Gamma1 N) 2) : LaurentSeries ℂ)
+  rw [regularCuspEquiv_qExpansion, normalized_cusp_qExpansion hT g h hh x hr F he]
+  have hd := diffQExp_smul_D (functionFieldOver (Gamma1 N) ℂ) x (jCoordinateOver (Gamma1 N) ℂ)
+  change diffQExp (functionFieldOver (Gamma1 N) ℂ)
+    (x • D ℂ (functionFieldOver (Gamma1 N) ℂ) (jCoordinateOver (Gamma1 N) ℂ)) =
+      (x : LaurentSeries ℂ) * qEuler ℂ (coeffEmb ℂ jq) at hd
+  rw [coeffEmb_jq, hxω] at hd
+  exact hd
+
+theorem regularCuspEquiv_germ_of_coordinate
+    (ω : regularDifferentials ℂ (functionFieldOver (Gamma1 N) ℂ))
+    (x : functionFieldOver (Gamma1 N) ℂ)
+    (hxω : x • D ℂ (functionFieldOver (Gamma1 N) ℂ) (jCoordinateOver (Gamma1 N) ℂ) = ω.val)
+    (τ : ℍ) :
+    (fun z : ℂ => (2 * Real.pi * Complex.I) * regularCuspEquiv N ω (ofComplex z))
+      =ᶠ[𝓝[≠] (τ : ℂ)] fun z =>
+        realize (Gamma1 N) (x : LaurentSeries ℂ) (ofComplex z) *
+          deriv (JMultiplicity.jf ∘ ofComplex) z := by
+  have hT : ModularGroup.T ∈ Gamma1 N := by simp [Gamma1_mem, ModularGroup.T]
+  by_cases hx : x = 0
+  · subst x
+    have hω0 : ω = 0 := by
+      apply Subtype.ext
+      simpa only [zero_smul] using hxω.symm
+    apply Filter.Eventually.of_forall
+    intro z
+    rw [hω0, (regularCuspEquiv N).map_zero]
+    change (2 * Real.pi * Complex.I) * 0 =
+      realize (Gamma1 N) (0 : LaurentSeries ℂ) (ofComplex z) * _
+    have hz := realize_algebraMap hT 0 (ofComplex z)
+    rw [map_zero] at hz
+    rw [hz, zero_mul, mul_zero]
+  · have hΓ : Gamma N ≤ Gamma1 N := by
+      intro A hA
+      rw [Gamma_mem] at hA
+      rw [Gamma1_mem]
+      exact ⟨hA.1, hA.2.2.2, hA.2.2.1⟩
+    have hreg : x • D ℂ (functionFieldOver (Gamma1 N) ℂ) (jCoordinateOver (Gamma1 N) ℂ) ∈
+        regularDifferentials ℂ (functionFieldOver (Gamma1 N) ℂ) := hxω ▸ ω.property
+    obtain ⟨k, g, h, F, hh, hr, he⟩ :=
+      regular_differential_cusp_form_realization N hΓ hT x hx hreg
+    have hF := regularCuspEquiv_eq_normalized N ω x hxω g h hh hr F he
+    let c : ℂ := 2 * Real.pi * Complex.I
+    have hc : c ≠ 0 :=
+      mul_ne_zero (mul_ne_zero (by norm_num) (by exact_mod_cast Real.pi_ne_zero)) Complex.I_ne_zero
+    filter_upwards [realize_eventuallyEq_of_ratio hT g h x hh hr τ,
+      ModularRatios.eventually_ne_zero_ofComplex h hh τ,
+      mem_nhdsWithin_of_mem_nhds (isOpen_upperHalfPlaneSet.mem_nhds τ.im_pos)] with z hz hhZ hp
+    have hzc : ((ofComplex z : ℍ) : ℂ) = z := by rw [ofComplex_apply_of_im_pos hp]
+    have heZ := he (ofComplex z)
+    rw [hzc] at heZ
+    rw [hF]
+    change c * (c⁻¹ * F (ofComplex z)) = _
+    rw [← mul_assoc, mul_inv_cancel₀ hc, one_mul, hz, div_mul_eq_mul_div]
+    exact (eq_div_iff hhZ).mpr heZ
+
+theorem exists_regularCuspEquiv_germ
+    (ω : regularDifferentials ℂ (functionFieldOver (Gamma1 N) ℂ)) :
+    ∃ x : functionFieldOver (Gamma1 N) ℂ,
+      x • D ℂ (functionFieldOver (Gamma1 N) ℂ) (jCoordinateOver (Gamma1 N) ℂ) = ω.val ∧
+      ∀ τ : ℍ,
+        (fun z : ℂ => (2 * Real.pi * Complex.I) * regularCuspEquiv N ω (ofComplex z))
+          =ᶠ[𝓝[≠] (τ : ℂ)] fun z =>
+            realize (Gamma1 N) (x : LaurentSeries ℂ) (ofComplex z) *
+              deriv (JMultiplicity.jf ∘ ofComplex) z := by
+  have hT : ModularGroup.T ∈ Gamma1 N := by simp [Gamma1_mem, ModularGroup.T]
+  letI := functionFieldOver_isCurveOver (Gamma1 N) ℂ hT
+  obtain ⟨x, hx⟩ := RegularDifferentialsComparison.exists_smul_eq
+    (D_jCoordinateOver_ne_zero (Gamma1 N) ℂ) ω.val
+  exact ⟨x, hx, fun τ => regularCuspEquiv_germ_of_coordinate N ω x hx τ⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

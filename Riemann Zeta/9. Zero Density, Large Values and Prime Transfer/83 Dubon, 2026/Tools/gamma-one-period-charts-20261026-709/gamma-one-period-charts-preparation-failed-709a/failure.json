@@ -1,0 +1,8 @@
+{
+  "stage": "Preparation only; no production mutation.",
+  "error": "Archive folder-count assertion failed because the explicitly selected scope-708 research folder was also matched by the directory enumeration.",
+  "created": [
+    "gamma-one-period-charts-promotion-route-709.json"
+  ],
+  "repair": "Fresh successor deduplicates the archive directory list, retains this failure evidence and verifies the already emitted route byte-for-byte."
+}

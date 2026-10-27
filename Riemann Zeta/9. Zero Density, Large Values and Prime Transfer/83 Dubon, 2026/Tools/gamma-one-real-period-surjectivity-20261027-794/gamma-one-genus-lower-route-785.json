@@ -1,0 +1,49 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 and Abel-Jacobi -> real period surjectivity -> reverse dimension inequality -> actual genus lower bound matching the real Manin upper bound.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateRegularGenus.lean",
+      "sha256": "84BF512262102860CC83F30AF3AB28D12066A1130B83ABBFC8F3CDD289E238CF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveExactDerivativeOrder.lean",
+      "sha256": "DDBEC9CA3FE003784331E009920F73D2D6644EDFB707029E1624773E84A90A36"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCurveGeometry.lean",
+      "sha256": "D63E405202426AB42499AA8AC4D90DC3751E07ACA04C3EF8361098A8B1336C2A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRegularCuspEquiv.lean",
+      "sha256": "DF051D1554A8612503C66097EE69D4B2D4092E791B54953E294C285C0D948788"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCanonicalFiberDegree.lean",
+      "sha256": "E333F86C014CCEF61CEFE4B991079DAE783FFAEBBD96FF1E2FB52053738804AF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCosetFiber.lean",
+      "sha256": "4813D63703A1F861F35862706F68CCE481FC1C7B5708C2C166FFDE5B9EE79F5B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticStabilizerOrbits.lean",
+      "sha256": "D20A48A3F25F871843E246DF99C410B014FFBBFB1464B60B31A9795B63BFEAFB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceManinOrbitCount.lean",
+      "sha256": "9337C9AB742D19EA2AD277E4685581C9C43C1EE5214E1A3925DE5E32BD011CF8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneJFiberDegree.lean",
+      "sha256": "A1FFAD8B3640C91317F528FFED07A1A531404592D729278306D30DA8C7090DC1"
+    }
+  ],
+  "shorterRoute": "Only a lower bound for the original regular-differential dimension is required. Reuse the generic finite-coordinate canonical-degree identity. Local exact derivative orders give the three exceptional fiber contributions; every other finite-place contribution is nonnegative, so no off-exceptional vanishing theorem or exact genus formula is needed. Existing signed cosets map surjectively onto actual elliptic fibers; surjectivity bounds their cardinalities by the already counted S/ST cyclic orbits. No new elliptic orbit-place injectivity or arithmetic enumeration is required.",
+  "obligations": [
+    "Apply canonical degree and exact derivative orders to the actual original Gamma1 j field, discharging local differential and residue instances.",
+    "Sum the three disjoint exceptional fibers as a lower bound for the actual canonical divisor degree; reuse actual total j-fiber and pole orders.",
+    "Construct actual signed-coset elliptic-fiber surjections and descend through S/ST cycles; reuse generic two/three orbit counts.",
+    "Combine with the already proved real Manin upper bound and actual regularCuspEquiv, then finite-dimensional injectivity gives real period surjectivity."
+  ],
+  "boundary": "The subsequent reciprocity, Picard/Hecke/diamond/H1, all-weight characteristic-zero association and higher continuation remain. DUB-17--20 OPEN; 16/20. No source contract changed."
+}

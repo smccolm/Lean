@@ -1,0 +1,60 @@
+import Dubon2026.SourceGammaOnePoleClearedProduct
+import Dubon2026.SourceGammaOneHolomorphicFieldRealization
+
+/-! DUB-17/18 -> actual Gamma1 period comparison -> original meromorphic
+field realization. Local equality of the constructed holomorphic product
+preserves the actual cusp pole bounds. Native Laurent realization then
+supplies meromorphic cusp germs, so the proved original-field theorem applies. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane Filter
+open scoped MatrixGroups Topology Manifold ModularForm
+
+theorem pole_bounds_of_local_product {F A G : ℍ → ℂ}
+    (hG : MDiff G)
+    (he : ∀ τ : ℍ, (G ∘ ofComplex) =ᶠ[𝓝[≠] (τ : ℂ)] ((F * A) ∘ ofComplex))
+    (hF : ∀ γ : SL(2, ℤ), IsBoundedAtImInfty (F ∘ (γ • ·)))
+    (hA : ∀ γ : SL(2, ℤ), ∃ m : ℕ,
+      IsBoundedAtImInfty ((A ∘ (γ • ·)) * ⇑CuspForm.discriminant ^ m)) :
+    ∀ γ : SL(2, ℤ), ∃ m : ℕ,
+      IsBoundedAtImInfty ((G ∘ (γ • ·)) * ⇑CuspForm.discriminant ^ m) := by
+  have heH (τ : ℍ) : G =ᶠ[𝓝[≠] τ] F * A :=
+    SourceFunctionField.ModularRatios.eventually_nhdsNE_coe_iff.mp (he τ)
+  intro γ
+  obtain ⟨m, hm⟩ := hA γ
+  refine ⟨m, boundedAtImInfty_of_local_eq
+    ((hG.continuous.comp (Homeomorph.smul (γ : GL (Fin 2) ℝ)).continuous).mul
+      (CuspForm.discriminant.holo'.continuous.pow m)) ?_ ((hF γ).mul hm)⟩
+  intro τ
+  have ht : Tendsto (fun w : ℍ => γ • w) (𝓝[≠] τ) (𝓝[≠] (γ • τ)) :=
+    le_of_eq ((Homeomorph.smul (γ : GL (Fin 2) ℝ)).map_punctured_nhds_eq τ)
+  filter_upwards [(heH (γ • τ)).comp_tendsto ht] with w hw
+  change G (γ • w) * CuspForm.discriminant w ^ m =
+    F (γ • w) * (A (γ • w) * CuspForm.discriminant w ^ m)
+  change G (γ • w) = F (γ • w) * A (γ • w) at hw
+  rw [hw]
+  exact mul_assoc _ _ _
+
+theorem meromorphic_cusps_of_holomorphic_pole_bounds
+    {Γ : Subgroup SL(2, ℤ)} (N : ℕ) [NeZero N] (hΓ : CongruenceSubgroup.Gamma N ≤ Γ)
+    (G : ℍ → ℂ) (hG : MDiff G)
+    (hinv : ∀ γ ∈ Γ, ∀ τ : ℍ, G (γ • τ) = G τ)
+    (hpb : ∀ γ : SL(2, ℤ), ∃ m : ℕ,
+      IsBoundedAtImInfty ((G ∘ (γ • ·)) * ⇑CuspForm.discriminant ^ m))
+    (γ : SL(2, ℤ)) : MeromorphicAt (cuspFunction N (G ∘ (γ • ·))) 0 := by
+  have hhol : MDiff (G ∘ (γ • ·)) := by
+    simpa only [SourceFricke.sl_smul_def, inv_inv, Function.comp_def] using
+      SourceFricke.mdifferentiable_slFn hG γ⁻¹
+  have hp : Function.Periodic ((G ∘ (γ • ·)) ∘ ofComplex) N := by
+    apply SourceFricke.periodic_of_principal_invariant
+    intro δ hδ τ
+    have hc : γ * δ * γ⁻¹ ∈ Γ := hΓ ((CongruenceSubgroup.Gamma_normal N).conj_mem δ hδ γ)
+    change G (γ • (δ • τ)) = G (γ • τ)
+    calc
+      _ = G ((γ * δ * γ⁻¹) • (γ • τ)) := by simp only [mul_smul, inv_smul_smul]
+      _ = _ := hinv _ hc _
+  obtain ⟨B, hB⟩ := SourceFricke.exists_cusp_represents_of_poleBounded ⟨hhol, hpb γ⟩ hp
+  exact hB.meromorphicAt
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,8 @@
+{
+  "reason": "Pre-execution review caught a transformed dependency-closure name for the signed-character module. Original generated files retained unused; fresh 1b config, dependency audit and recorder correct the name. No mathematical source changed.",
+  "unused": [
+    "source-gamma-one-real-manin-1-audit-config.json",
+    "SourceGammaOneRealManinDependencyAudit1.lean",
+    "record_gamma_one_real_manin_781.py"
+  ]
+}

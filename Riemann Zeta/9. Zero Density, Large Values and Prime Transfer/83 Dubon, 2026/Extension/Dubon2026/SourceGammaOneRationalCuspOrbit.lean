@@ -1,0 +1,104 @@
+import Dubon2026.SourceGammaOneRationalCuspPlace
+import Dubon2026.SourceGammaOneCuspPlaceExhaustion
+
+/-! DUB-17/18 -> actual Gamma1 Picard/H1 -> real period surjectivity ->
+matching Manin/genus cusp terms. The actual rational cusp orbit space is
+finite and maps onto every algebraic j-pole place. The map is constructed
+from the proved invariance, and surjectivity uses actual cusp exhaustion.
+Injectivity and the exact width formula remain separate obligations. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open Matrix.SpecialLinearGroup ModularGroup OnePoint SourceCurve
+open scoped MatrixGroups
+variable (Γ : Subgroup SL(2, ℤ))
+
+/-- Actual rational cusps modulo the rational image of the original integral subgroup. -/
+abbrev RationalCuspOrbit : Type :=
+  MulAction.orbitRel.Quotient (Γ.map (mapGL ℚ)) (OnePoint ℚ)
+
+/-- Send a rational cusp to its actual subgroup orbit. -/
+def rationalCuspOrbitMk (x : OnePoint ℚ) : RationalCuspOrbit Γ := ⟦x⟧
+
+theorem rationalCuspOrbitMk_eq_iff {x y : OnePoint ℚ} :
+    rationalCuspOrbitMk Γ x = rationalCuspOrbitMk Γ y ↔
+      ∃ γ ∈ Γ, mapGL ℚ γ • y = x := by
+  rw [rationalCuspOrbitMk, rationalCuspOrbitMk, Quotient.eq,
+    MulAction.orbitRel_apply, MulAction.mem_orbit_iff]
+  constructor
+  · rintro ⟨⟨g, γ, hγ, rfl⟩, hg⟩
+    exact ⟨γ, hγ, hg⟩
+  · rintro ⟨γ, hγ, hg⟩
+    exact ⟨⟨mapGL ℚ γ, γ, hγ, rfl⟩, hg⟩
+
+theorem rationalCuspOrbitMk_smul {γ : SL(2, ℤ)} (hγ : γ ∈ Γ) (x : OnePoint ℚ) :
+    rationalCuspOrbitMk Γ (mapGL ℚ γ • x) = rationalCuspOrbitMk Γ x :=
+  (rationalCuspOrbitMk_eq_iff Γ).mpr ⟨γ, hγ, rfl⟩
+
+/-- Map an integral left coset to the cusp represented by its inverse at infinity. -/
+def rationalCuspOrbitFromCoset : SL(2, ℤ) ⧸ Γ → RationalCuspOrbit Γ :=
+  Quotient.lift (fun g => rationalCuspOrbitMk Γ (mapGL ℚ g⁻¹ • ∞)) (by
+    intro a b hab
+    change rationalCuspOrbitMk Γ (mapGL ℚ a⁻¹ • ∞) = rationalCuspOrbitMk Γ (mapGL ℚ b⁻¹ • ∞)
+    have hm := QuotientGroup.leftRel_apply.mp hab
+    have he : mapGL ℚ b⁻¹ • (∞ : OnePoint ℚ) =
+        mapGL ℚ (a⁻¹ * b)⁻¹ • (mapGL ℚ a⁻¹ • ∞) := by
+      have hi : (a⁻¹ * b)⁻¹ * a⁻¹ = b⁻¹ := by group
+      rw [← mul_smul, ← map_mul, hi]
+    rw [he]
+    exact (rationalCuspOrbitMk_smul Γ (inv_mem hm) _).symm)
+
+theorem rationalCuspOrbitFromCoset_surjective :
+    Function.Surjective (rationalCuspOrbitFromCoset Γ) := by
+  rintro ⟨x⟩
+  obtain ⟨g, hg⟩ := OnePoint.exists_mem_SL2 ℤ x
+  refine ⟨(g⁻¹ : SL(2, ℤ)), ?_⟩
+  change rationalCuspOrbitMk Γ (mapGL ℚ (g⁻¹)⁻¹ • ∞) = _
+  rw [inv_inv, hg]
+  rfl
+
+theorem rationalCuspOrbit_finite [Γ.FiniteIndex] : Finite (RationalCuspOrbit Γ) :=
+  Finite.of_surjective _ (rationalCuspOrbitFromCoset_surjective Γ)
+
+variable {Γ} (N : ℕ) [NeZero N]
+  (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) (hT : T ∈ Γ)
+
+/-- The normalized algebraic place represented by an actual rational cusp. -/
+def rationalCuspPlace (x : OnePoint ℚ) : Place ℂ (functionFieldOver Γ ℂ) :=
+  cuspPlace N hΓ hT (OnePoint.exists_mem_SL2 ℤ x).choose
+
+theorem rationalCuspPlace_smul_infty (δ : SL(2, ℤ)) :
+    rationalCuspPlace N hΓ hT (mapGL ℚ δ • ∞) = cuspPlace N hΓ hT δ :=
+  cuspPlace_eq_of_same_rational_cusp N hΓ hT _ δ
+    (OnePoint.exists_mem_SL2 ℤ (mapGL ℚ δ • ∞)).choose_spec
+
+theorem rationalCuspPlace_smul (γ : Γ) (x : OnePoint ℚ) :
+    rationalCuspPlace N hΓ hT (mapGL ℚ γ.val • x) = rationalCuspPlace N hΓ hT x := by
+  obtain ⟨δ, rfl⟩ := OnePoint.exists_mem_SL2 ℤ x
+  rw [← mul_smul, ← map_mul, rationalCuspPlace_smul_infty,
+    rationalCuspPlace_smul_infty, cuspPlace_mul_left N hΓ hT γ]
+
+/-- The actual algebraic cusp place, descended through proved rational orbit invariance. -/
+def rationalCuspOrbitPlace : RationalCuspOrbit Γ → Place ℂ (functionFieldOver Γ ℂ) :=
+  Quotient.lift (rationalCuspPlace N hΓ hT) (by
+    intro x y hxy
+    have he : rationalCuspOrbitMk Γ x = rationalCuspOrbitMk Γ y := Quotient.sound hxy
+    obtain ⟨γ, hγ, rfl⟩ := (rationalCuspOrbitMk_eq_iff Γ).mp he
+    exact rationalCuspPlace_smul N hΓ hT ⟨γ, hγ⟩ y)
+
+theorem rationalCuspOrbitPlace_mk (x : OnePoint ℚ) :
+    rationalCuspOrbitPlace N hΓ hT (rationalCuspOrbitMk Γ x) =
+      rationalCuspPlace N hΓ hT x := rfl
+
+theorem rationalCuspOrbitPlace_j_neg (c : RationalCuspOrbit Γ) :
+    (rationalCuspOrbitPlace N hΓ hT c).ord (jCoordinateOver Γ ℂ) < 0 := by
+  induction c using Quotient.inductionOn with
+  | h x => exact cuspPlace_j_neg N hΓ hT _
+
+theorem exists_rationalCuspOrbitPlace_of_j_pole
+    (P : Place ℂ (functionFieldOver Γ ℂ)) (hP : P.ord (jCoordinateOver Γ ℂ) < 0) :
+    ∃ c : RationalCuspOrbit Γ, rationalCuspOrbitPlace N hΓ hT c = P := by
+  obtain ⟨δ, rfl⟩ := exists_cusp_place_eq_of_j_pole N hΓ hT P hP
+  exact ⟨rationalCuspOrbitMk Γ (mapGL ℚ δ • ∞), rationalCuspPlace_smul_infty N hΓ hT δ⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

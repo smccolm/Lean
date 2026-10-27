@@ -1,0 +1,165 @@
+import Dubon2026.SourceGammaOneHolomorphicFunctions
+import Dubon2026.SourceGammaOneQuotientCuspSeries
+import Dubon2026.SourceGammaOneAnalyticIntegrality
+import Dubon2026.SourceGammaOneFinitePlaceExhaustion
+import Dubon2026.SourceGammaOneAnalyticPlaceInvariance
+import Dubon2026.SourceGammaOneStabilizerRamification
+import Dubon2026.SourcePeriodDivisionRotations
+import Dubon2026.SourceGammaOneDivisionForms
+import Dubon2026.SourceGammaOneDivisionLatticeOrbit
+import Dubon2026.SourceGammaOneDivisionPowerOrbit
+import Dubon2026.SourceGammaOneDiamondSeparation
+import Dubon2026.SourceOriginalModularPointSeparation
+import Dubon2026.SourceGammaOneModularPointSeparation
+import Dubon2026.SourceGammaOneNormalizedCuspRatios
+import Dubon2026.SourceGammaOneAllModularRatioMembership
+import Dubon2026.SourceGammaOneAnalyticPlaceOrbits
+import Dubon2026.SourceGammaOneJFiberDegree
+import Dubon2026.SourceGammaOneOrbitCounting
+import Dubon2026.SourceGammaOnePlusMinus
+import Dubon2026.SourceGammaOneRamificationBounds
+import Dubon2026.SourceGammaOneJFiberOrbits
+import Dubon2026.SourceGammaOneGenericFiberCount
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_invariant
+#print axioms Dubon2026.SourceFunctionField.GammaOne.holomorphic_realization_of_mem_all_analytic_places
+#print axioms Dubon2026.SourceFunctionField.GammaOne.quotient_cusp_represents
+#print axioms Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_meromorphic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_pole_bound
+#print axioms Dubon2026.SourceFunctionField.GammaOne.isIntegral_of_mem_all_analytic_places
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.place_cusp_or_analytic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finite_fiber_realization
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realize_smul_eventuallyEq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticOrder_smul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul
+#print axioms Dubon2026.SourceFunctionField.GammaOne.stabilizer_card_dvd_two_mul_ramification
+#print axioms Dubon2026.SourceFunctionField.GammaOne.DivisionRotations.scale_lattice_eq_of_invariant_powers
+#print axioms Dubon2026.SourceFunctionField.GammaOne.DivisionRotations.exists_rotation_of_division_power
+#print axioms Dubon2026.SourceFunctionField.GammaOne.wpNormZ_slash_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.divisionForm_apply
+#print axioms Dubon2026.SourceFunctionField.GammaOne.divisionForm_slash_gamma0
+#print axioms Dubon2026.SourceFunctionField.GammaOne.divisionForm
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_lattice
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_power
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_cross_products
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_separating_forms_of_gamma0_orbit
+#print axioms Dubon2026.SourceFunctionField.originalPlaceEval_eq_modular_ratio
+#print axioms Dubon2026.SourceFunctionField.exists_original_nonvanishing_modular_ratio
+#print axioms Dubon2026.SourceFunctionField.exists_gamma0_smul_eq_of_cross_products
+#print axioms Dubon2026.SourceFunctionField.exists_original_separating_modular_forms
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_separating_modular_forms
+#print axioms Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_ratio_mem
+#print axioms Dubon2026.SourceFunctionField.GammaOne.modular_ratio_mem
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPlace_eq_iff_gamma1_orbit
+#print axioms Dubon2026.SourceFunctionField.GammaOne.sum_j_fiber_orders_eq_finrank
+#print axioms Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.card_stabilizer_subgroup
+#print axioms Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_smul_of_mem
+#print axioms Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_mul_card_stabilizer
+#print axioms Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finite_orbitRelQuotient_orbit
+#print axioms Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.exists_smul_out_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finsum_relIndex_stabilizer_eq_index
+#print axioms Dubon2026.SourceFunctionField.GammaOne.le_plusMinus
+#print axioms Dubon2026.SourceFunctionField.GammaOne.neg_one_mem_plusMinus
+#print axioms Dubon2026.SourceFunctionField.GammaOne.mem_plusMinus_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_gamma_smul_eq_of_mem_plusMinus
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul_plusMinus
+#print axioms Dubon2026.SourceFunctionField.GammaOne.two_le_card_stabilizer_plusMinus
+#print axioms Dubon2026.SourceFunctionField.GammaOne.plusMinus_stabilizer_card_dvd_two_mul_ramification
+#print axioms Dubon2026.SourceFunctionField.GammaOne.plusMinus
+#print axioms Dubon2026.SourceFunctionField.GammaOne.plusMinusFiniteIndex
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analytic_j_multiplicity
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analytic_j_order_le_relative_index
+#print axioms Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.j_rep
+#print axioms Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.card_stabilizer_rep
+#print axioms Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.finite_orbitQuot
+#print axioms Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber_injective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber_surjective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_orders
+#print axioms Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.OrbitQuot
+#print axioms Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.rep
+#print axioms Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.Fiber
+#print axioms Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber
+#print axioms Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.equiv
+#print axioms Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_relative_indices_eq_index
+#print axioms Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.exists_fiber_order_sum_eq_index
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceGammaOneHolomorphicFunctions, `Dubon2026.SourceGammaOneQuotientCuspSeries, `Dubon2026.SourceGammaOneAnalyticIntegrality, `Dubon2026.SourceGammaOneFinitePlaceExhaustion, `Dubon2026.SourceGammaOneAnalyticPlaceInvariance, `Dubon2026.SourceGammaOneStabilizerRamification, `Dubon2026.SourcePeriodDivisionRotations, `Dubon2026.SourceGammaOneDivisionForms, `Dubon2026.SourceGammaOneDivisionLatticeOrbit, `Dubon2026.SourceGammaOneDivisionPowerOrbit, `Dubon2026.SourceGammaOneDiamondSeparation, `Dubon2026.SourceOriginalModularPointSeparation, `Dubon2026.SourceGammaOneModularPointSeparation, `Dubon2026.SourceGammaOneNormalizedCuspRatios, `Dubon2026.SourceGammaOneAllModularRatioMembership, `Dubon2026.SourceGammaOneAnalyticPlaceOrbits, `Dubon2026.SourceGammaOneJFiberDegree, `Dubon2026.SourceGammaOneOrbitCounting, `Dubon2026.SourceGammaOnePlusMinus, `Dubon2026.SourceGammaOneRamificationBounds, `Dubon2026.SourceGammaOneJFiberOrbits, `Dubon2026.SourceGammaOneGenericFiberCount]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_invariant, `Dubon2026.SourceFunctionField.GammaOne.holomorphic_realization_of_mem_all_analytic_places, `Dubon2026.SourceFunctionField.GammaOne.quotient_cusp_represents, `Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_meromorphic, `Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_pole_bound, `Dubon2026.SourceFunctionField.GammaOne.isIntegral_of_mem_all_analytic_places, `Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_eq, `Dubon2026.SourceFunctionField.GammaOne.place_cusp_or_analytic, `Dubon2026.SourceFunctionField.GammaOne.finite_fiber_realization, `Dubon2026.SourceFunctionField.GammaOne.realize_smul_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.analyticOrder_smul, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul, `Dubon2026.SourceFunctionField.GammaOne.stabilizer_card_dvd_two_mul_ramification, `Dubon2026.SourceFunctionField.GammaOne.DivisionRotations.scale_lattice_eq_of_invariant_powers, `Dubon2026.SourceFunctionField.GammaOne.DivisionRotations.exists_rotation_of_division_power, `Dubon2026.SourceFunctionField.GammaOne.wpNormZ_slash_eq, `Dubon2026.SourceFunctionField.GammaOne.divisionForm_apply, `Dubon2026.SourceFunctionField.GammaOne.divisionForm_slash_gamma0, `Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_lattice, `Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_power, `Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_cross_products, `Dubon2026.SourceFunctionField.GammaOne.exists_separating_forms_of_gamma0_orbit, `Dubon2026.SourceFunctionField.originalPlaceEval_eq_modular_ratio, `Dubon2026.SourceFunctionField.exists_original_nonvanishing_modular_ratio, `Dubon2026.SourceFunctionField.exists_gamma0_smul_eq_of_cross_products, `Dubon2026.SourceFunctionField.exists_original_separating_modular_forms, `Dubon2026.SourceFunctionField.GammaOne.exists_separating_modular_forms, `Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_ratio_mem, `Dubon2026.SourceFunctionField.GammaOne.modular_ratio_mem, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_eq_iff_gamma1_orbit, `Dubon2026.SourceFunctionField.GammaOne.sum_j_fiber_orders_eq_finrank, `Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.card_stabilizer_subgroup, `Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_smul_of_mem, `Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_mul_card_stabilizer, `Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finite_orbitRelQuotient_orbit, `Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.exists_smul_out_eq, `Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finsum_relIndex_stabilizer_eq_index, `Dubon2026.SourceFunctionField.GammaOne.le_plusMinus, `Dubon2026.SourceFunctionField.GammaOne.neg_one_mem_plusMinus, `Dubon2026.SourceFunctionField.GammaOne.mem_plusMinus_iff, `Dubon2026.SourceFunctionField.GammaOne.exists_gamma_smul_eq_of_mem_plusMinus, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul_plusMinus, `Dubon2026.SourceFunctionField.GammaOne.two_le_card_stabilizer_plusMinus, `Dubon2026.SourceFunctionField.GammaOne.plusMinus_stabilizer_card_dvd_two_mul_ramification, `Dubon2026.SourceFunctionField.GammaOne.plusMinusFiniteIndex, `Dubon2026.SourceFunctionField.GammaOne.analytic_j_multiplicity, `Dubon2026.SourceFunctionField.GammaOne.analytic_j_order_le_relative_index, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.j_rep, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.card_stabilizer_rep, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.finite_orbitQuot, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber_injective, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber_surjective, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_orders, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_relative_indices_eq_index, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.exists_fiber_order_sum_eq_index]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.divisionForm, `Dubon2026.SourceFunctionField.GammaOne.plusMinus, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.OrbitQuot, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.rep, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.Fiber, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.equiv]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE ANALYTIC ORBITS AUDIT PASS: {count} theorems including private/generated declarations. Actual finite-place exhaustion, exact Gamma1 analytic-place orbits, integral-ratio membership and finite j-fiber comparisons are proved. Composition to exact elliptic ramification and global chart/period obligations remains. Original Hecke/diamond/Picard/H1 arithmetic comparison remains; 16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceGammaOneHolomorphicFunctions
+
+#lint in Dubon2026.SourceGammaOneQuotientCuspSeries
+
+#lint in Dubon2026.SourceGammaOneAnalyticIntegrality
+
+#lint in Dubon2026.SourceGammaOneFinitePlaceExhaustion
+
+#lint in Dubon2026.SourceGammaOneAnalyticPlaceInvariance
+
+#lint in Dubon2026.SourceGammaOneStabilizerRamification
+
+#lint in Dubon2026.SourcePeriodDivisionRotations
+
+#lint in Dubon2026.SourceGammaOneDivisionForms
+
+#lint in Dubon2026.SourceGammaOneDivisionLatticeOrbit
+
+#lint in Dubon2026.SourceGammaOneDivisionPowerOrbit
+
+#lint in Dubon2026.SourceGammaOneDiamondSeparation
+
+#lint in Dubon2026.SourceOriginalModularPointSeparation
+
+#lint in Dubon2026.SourceGammaOneModularPointSeparation
+
+#lint in Dubon2026.SourceGammaOneNormalizedCuspRatios
+
+#lint in Dubon2026.SourceGammaOneAllModularRatioMembership
+
+#lint in Dubon2026.SourceGammaOneAnalyticPlaceOrbits
+
+#lint in Dubon2026.SourceGammaOneJFiberDegree
+
+#lint in Dubon2026.SourceGammaOneOrbitCounting
+
+#lint in Dubon2026.SourceGammaOnePlusMinus
+
+#lint in Dubon2026.SourceGammaOneRamificationBounds
+
+#lint in Dubon2026.SourceGammaOneJFiberOrbits
+
+#lint in Dubon2026.SourceGammaOneGenericFiberCount

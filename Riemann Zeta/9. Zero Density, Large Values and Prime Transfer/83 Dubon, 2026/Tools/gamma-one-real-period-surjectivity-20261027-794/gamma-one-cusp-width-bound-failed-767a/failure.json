@@ -1,0 +1,67 @@
+{
+  "exit": 1,
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneRationalCuspOrbit.lean.txt",
+      "sha256": "9719e9317cabf1e895e2768ab0d57d714a0d62039c0c33afba71055e04a0aa73"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneRationalCuspOrbit.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneRationalCuspOrbit.exit",
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspJExactOrder.lean.txt",
+      "sha256": "7fe51ee11c1f50050400fe947524d1f6970945979cca3d730eac6236ae3f6c5e"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspJExactOrder.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspJExactOrder.exit",
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspRotationOrder.lean.txt",
+      "sha256": "519a22335b592db8b85ee63ad6efeff098dbb9c984bce2c798de67a6a435f6dc"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspRotationOrder.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspRotationOrder.exit",
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspTranslationRamification.lean.txt",
+      "sha256": "51328f8c1d0ab2aad038e0ee3238d8f9ce31e05ec0da11e58fe374a99a8d6eb7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspTranslationRamification.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspTranslationRamification.exit",
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspWidthBoundAudit1.lean.txt",
+      "sha256": "688fca825cfd682cc55057316dd562f2c07d8fd27b1bd3e400e82e5d721fe400"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspWidthBoundAudit1.log",
+      "sha256": "984753c32d301021495606762ab9d28d4a2abd75ddbe4f1558ae329c7d167c42"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspWidthBoundAudit1.exit",
+      "sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04"
+    }
+  ],
+  "cause": "All 38 exhaustive theorem checks passed, but five actual cusp-orbit definitions lacked required documentation strings. No proof failure or warning suppression.",
+  "repair": "Add documentation, recompile changed source, use a fresh complete audit and recorder; preserve original failed audit."
+}

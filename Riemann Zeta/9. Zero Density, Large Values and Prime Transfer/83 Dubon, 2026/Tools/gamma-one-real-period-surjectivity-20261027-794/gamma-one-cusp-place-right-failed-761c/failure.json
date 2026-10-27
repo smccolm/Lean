@@ -1,0 +1,18 @@
+{
+  "exit": 1,
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761c\\SourceGammaOneCuspPlaceRightInvariance.lean.txt",
+      "sha256": "603e058ae2de4eac1d6956f09fddc77ed1efc1c0ab1614a3cd0557d634ac1ef3"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761c\\SourceGammaOneCuspPlaceRightInvariance.log",
+      "sha256": "fbe80f460821ab7b5e619c947d31c5b8ae67733c755fc99085d794e46cf40709"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761c\\SourceGammaOneCuspPlaceRightInvariance.exit",
+      "sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04"
+    }
+  ],
+  "cause": "Continuity filter base point must be explicit."
+}

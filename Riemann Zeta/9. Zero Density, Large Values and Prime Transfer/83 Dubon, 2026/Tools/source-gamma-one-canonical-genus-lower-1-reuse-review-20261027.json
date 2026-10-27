@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-27 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 and Abel-Jacobi -> real period surjectivity -> reverse dimension inequality -> actual genus lower bound.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-canonical-genus-lower-audit-route-789.json",
+    "sha256": "D218A954C89FA5D48BFCF8B8016F60A9D44A547D5B7B670F3E1DB44A2D5312FA",
+    "review": {
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 and Abel-Jacobi -> real period surjectivity -> reverse dimension inequality -> actual genus lower bound.",
+      "assumptionsToDischarge": "The actual j differential has its literal finite canonical divisor and degree twice the regular-differential dimension minus two. All local differential, residue and finite-coordinate prerequisites are derived. At poles and finite values its coefficient is the corresponding j-coordinate order minus one; other finite contributions are nonnegative. The actual three finite exceptional sets exist and their order sums are derived, so the field degree minus their cardinalities is a lower bound for canonical degree. The literal Fourier equivalence converts this into the original Gamma1 weight-two cusp-form dimension bound, with no canonical-degree, genus or local-order premise.",
+      "remaining": "Bound the two finite elliptic fiber cardinalities by the already counted signed S/ST cyclic orbits, then combine with the audited real Manin upper bound. Real period surjectivity, reciprocity, Picard/Hecke/diamond/H1, full all-weight characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateRegularGenus.lean",
+          "sha256": "84BF512262102860CC83F30AF3AB28D12066A1130B83ABBFC8F3CDD289E238CF"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveExactDerivativeOrder.lean",
+          "sha256": "DDBEC9CA3FE003784331E009920F73D2D6644EDFB707029E1624773E84A90A36"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCurveGeometry.lean",
+          "sha256": "D63E405202426AB42499AA8AC4D90DC3751E07ACA04C3EF8361098A8B1336C2A"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRegularCuspEquiv.lean",
+          "sha256": "DF051D1554A8612503C66097EE69D4B2D4092E791B54953E294C285C0D948788"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCanonicalFiberDegree.lean",
+          "sha256": "E333F86C014CCEF61CEFE4B991079DAE783FFAEBBD96FF1E2FB52053738804AF"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalJDegreeSums.lean",
+          "sha256": "F7CB2239C24474AD970DC86A02AF1139E1DC45C09873ED25AB6C5C5D7480D0C3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-genus-lower-route-785.json",
+          "sha256": "9ED6F120EA8E504221025E0199EED525F0056153EA997455A1B0E6FC713D3118"
+        }
+      ],
+      "shorterRoute": "Reuse the existing generic finite-coordinate canonical-degree and exact derivative-order theorems. A lower bound suffices, so retain nonnegative off-exceptional contributions and avoid an exact genus formula or new off-exceptional vanishing proof. Reuse the actual field degree and literal Fourier equivalence."
+    }
+  },
+  "discharged": "The actual j differential has its literal finite canonical divisor and degree twice the regular-differential dimension minus two. All local differential, residue and finite-coordinate prerequisites are derived. At poles and finite values its coefficient is the corresponding j-coordinate order minus one; other finite contributions are nonnegative. The actual three finite exceptional sets exist and their order sums are derived, so the field degree minus their cardinalities is a lower bound for canonical degree. The literal Fourier equivalence converts this into the original Gamma1 weight-two cusp-form dimension bound, with no canonical-degree, genus or local-order premise.",
+  "remaining": "Bound the two finite elliptic fiber cardinalities by the already counted signed S/ST cyclic orbits, then combine with the audited real Manin upper bound. Real period surjectivity, reciprocity, Picard/Hecke/diamond/H1, full all-weight characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

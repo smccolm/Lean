@@ -1,0 +1,174 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T03:24:43.898021+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneTranslatedCuspGerms",
+    "SourceGammaOneCuspRatioRealization",
+    "SourceGammaOneCuspRealizationAlgebra",
+    "SourceGammaOneCuspOrder",
+    "SourceGammaOneCuspJOrder",
+    "SourceGammaOneCuspPlaces",
+    "SourceGammaOneCuspDerivativeOrder",
+    "SourceGammaOneDifferentialCuspGerm",
+    "SourceGammaOneRegularCuspOrder",
+    "SourceGammaOneRegularCuspForms"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTranslatedCuspGerms.lean",
+      "sha256": "FFA8618260E6FE71D032CC18D3AAD6BA19D8D4FD16F2293471D4AA690D2D05E6",
+      "oleanSha256": "44D91D69BB6A33939D00DAF6065D6789AF8814959B928E6F64F26A8634A354A0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspRatioRealization.lean",
+      "sha256": "4A19147FBEE7B1454604E807B5FCD2D9C266DA3669D626E2A08A9F5C6AB5AF7E",
+      "oleanSha256": "80F11C84D88AE8BA2B784721ADDD4D9C2CC899858C99581BA9E80A44F0C003BA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspRealizationAlgebra.lean",
+      "sha256": "3CA79D3489DA3C0575B87157F82A0159C8B83D42409F6D1D2BC9F268A2227540",
+      "oleanSha256": "5D6E801AA1ED0675C0931D7C5311EBBA1BE6230598FDAA2175BF15D60D9AF83C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspOrder.lean",
+      "sha256": "2045E0F02F8C705DB5EE0A3145EB015EE4DF9047221E3B8AD9C32BC908D880B3",
+      "oleanSha256": "605CF819E6711A71DDB7F110ABE2F21A0A6EE5366D49F4BBA9F735252C33D9DC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspJOrder.lean",
+      "sha256": "3C7CE228AFE887057076EB71F118212E94ED2C9D0293B060703205654ACBF4C0",
+      "oleanSha256": "DBFF2564233BBB7E4B8E75475D59B0C15BEF5CDD86A90EBFD8BE5E5BB73F9F8F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPlaces.lean",
+      "sha256": "923C3B29D1BD08C1E6AC57ADA16E48AA7446832907483E3C78296A99BDF625B9",
+      "oleanSha256": "7EF9E31988EA368CFF680F967E619D93282635C549D587A620D505C8C9037D97"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspDerivativeOrder.lean",
+      "sha256": "D875623F10EB4835C3B4588749FEC36997450588B9DECA20634FF0F97972B932",
+      "oleanSha256": "098BED6D08007A5FBA0BC25E8F22F5B3889B6E37F626A4742E67721B4DCF9170"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialCuspGerm.lean",
+      "sha256": "314508D3CA2BFE6BB9C882BEE002EA9A7AEED4FEDE73C604BE9EBF554F20D834",
+      "oleanSha256": "0D77511E1570A0ACF0DDFE86E5E3E4C0A1E91224A17ACEE24AE35A6769570984"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularCuspOrder.lean",
+      "sha256": "A571C9894ADE87BABBD26AAADBB3604DEC78EB6450FF978F6238C7F8ADB4F708",
+      "oleanSha256": "2AA3307CFBE82D2F09C62FB82746E606040A5F935C62DFCB4C76E3399318DF2E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularCuspForms.lean",
+      "sha256": "5DFEF81C63DEB210A5CEFD47C0BD3A1AE963D7E1F65D099CAF4BF8ED8DC7C7AC",
+      "oleanSha256": "F2954D131672F80AE77A64BD2B69832D72E062CBCDC6BBA790E0DB4E22C32A2B"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.translated_modular_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticAt_translated_cuspFunction",
+    "Dubon2026.SourceFunctionField.GammaOne.eventually_ne_zero_translated_cuspFunction",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_smul_eq_translated_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_eventuallyEq_of_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_cuspRealize",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicOrderAt_cuspRealize_ne_top",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_const_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_mul_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_add_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_ne_top",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_eq_top_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_algebraMap",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_one",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_mul",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_add",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticAt_levelOne_cuspFunction",
+    "Dubon2026.SourceFunctionField.GammaOne.cusp_order_zero_of_tendsto_one",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_jCoordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_jCoordinate_neg",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_cuspOrder_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_cusp_place",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRamification_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_j_neg",
+    "Dubon2026.SourceFunctionField.GammaOne.cusp_raw_j_derivative_order",
+    "Dubon2026.SourceFunctionField.GammaOne.differential_cusp_germ",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_order_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_decay",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_regular_cusp_form",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_form_realization",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRamification"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.translated_modular_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticAt_translated_cuspFunction",
+    "Dubon2026.SourceFunctionField.GammaOne.eventually_ne_zero_translated_cuspFunction",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_smul_eq_translated_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_eventuallyEq_of_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_cuspRealize",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicOrderAt_cuspRealize_ne_top",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_const_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_mul_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_add_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_ne_top",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_eq_top_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_algebraMap",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_one",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_mul",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_add",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticAt_levelOne_cuspFunction",
+    "Dubon2026.SourceFunctionField.GammaOne.cusp_order_zero_of_tendsto_one",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_jCoordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_jCoordinate_neg",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_cuspOrder_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_cusp_place",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRamification_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_j_neg",
+    "Dubon2026.SourceFunctionField.GammaOne.cusp_raw_j_derivative_order",
+    "Dubon2026.SourceFunctionField.GammaOne.differential_cusp_germ",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_order_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_decay",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_regular_cusp_form",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_form_realization"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspOrder",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRamification"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspVanishingAudit10.log",
+  "logSha256": "191C3CB43D9B63D93491F4AD9219A842AE3A7FBFF4BA30AEFC7B6862988D6E52",
+  "auditSha256": "8AD8B7C33C7968E80BF28D3351929D552827728A5EBDA117929F577CB94E0A0F",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 51,
+  "linterScopes": 10,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 46,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspVanishingDependencyAudit10.log",
+  "dependencyAuditSha256": "A7FF611A6EA86D0CE8D810EBE4270B55CB357B96B217D6177EE6870FC5D999AD",
+  "dependencyAuditSourceSha256": "476953C5029CCC89DCA0F51BC0074D5BD3299EF66FAD883CA9ECE3FE82AE11DF",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_form_realization"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual finite Gamma1 Hecke-character realization -> actual Picard/H1 and full/parabolic transpose/diamond comparison retaining the original homogeneous coefficient endomorphism -> actual differential/cusp comparison -> native cusp-form realization of regular differentials.",
+  "discharged": [
+    "Actual translated modular quotient germs are meromorphic and define a nontrivial normalized place.",
+    "The actual j coordinate and its literal analytic derivative have the same negative cusp order.",
+    "Original regularity implies positive cusp order of the holomorphic slash realization at every cusp.",
+    "Finite holomorphy and all-cusp vanishing construct an actual native cusp form without supplied decay or cusp-form witnesses."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Exact Fourier normalization, coefficient-field transport, complete differential/cusp equivalence, original Hecke/diamond/Picard/H1 arithmetic comparison, all-weight characteristic-zero association and literal higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-vanishing-10-reuse-review-20261026.json",
+  "reuseReviewSha256": "2A224ABABEA9F36EE934C1F554F49F1C7998A95EA29DD086B7A33789A580E5ED",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

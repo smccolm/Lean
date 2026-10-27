@@ -1,0 +1,54 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> arithmetic automorphy and original all-weight characteristic-zero association -> realization of original finite Gamma1 Hecke characters -> actual Picard/H1 and period/Hecke/diamond comparison -> global original Gamma1 analytic charts -> finite-place exhaustion -> integrality over C[j] of every original element regular at all analytic places.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalBoundedIntegral.lean",
+      "sha256": "DB36560BD4DCCE24D833928EFD2633539FCF1639A0F6710BB4362D5005C0409D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFinitePlaceExhaustion.lean",
+      "sha256": "79DDDF86772C0D03A0559340E146A19D16D519A864742848D5B41138BD6E5AEB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalHolomorphicQuotient.lean",
+      "sha256": "3FF5C6F621F60CD8392D3A4115E0FC899D94A73D33BB03E5D364E2D3D329BA57"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFrickeModularOrbitV2.lean",
+      "sha256": "CFFE48C0E5ABC6AE06B66BC8CEDB7D1EE5EE2B3BC49D61DB329C2A03B3DE043E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceMeromorphicCuspPoleClearing.lean",
+      "sha256": "A07D5836CE2DF5859630B3DF0B0F42C6897BC3238511EA283C88827807C53B4E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspLaurentFunctionIdentity.lean",
+      "sha256": "FFCF94431B3026BC65A21B2C9A84A5550B068E7912F1C1EC6B7176EF0AAC46F0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspLaurentPolynomial.lean",
+      "sha256": "2E197B55970B01ABB5AD00E10A752AA2D1581D3D0D11642962F90E26A10BB31F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalQuotientIntegral.lean",
+      "sha256": "67D71EA5D47040FF80A4B96FDC3F42DEB0BAC201D58D0949BBA84026BBEE4046"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTranslatedCuspGerms.lean",
+      "sha256": "FFA8618260E6FE71D032CC18D3AAD6BA19D8D4FD16F2293471D4AA690D2D05E6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResidues.lean",
+      "sha256": "A0E3E571822585A2270A54A6E7A1BD181C3D4CF9902626373A03F2B27221710A"
+    }
+  ],
+  "shorterRoute": "Reuse actual modular ratios and removable singularities for a holomorphic realization. Literal quotient cusp series give meromorphic germs and the already proved discriminant-pole-clearing theorem gives each translated cusp bound. Feed the existing Fricke modular-orbit monic relation and transport it through the actual width-one Laurent representation. This avoids adapting the old uniform cusp-order supremum and discriminant-power modular-form construction. The common global radius and finite-place exhaustion are not assumed.",
+  "assumptionsToDischarge": [
+    "A holomorphic modular-invariant realization is constructed from regularity at all actual analytic places.",
+    "The cusp pole bounds and monic integral equation are derived from the actual modular quotient.",
+    "The integral relation is transferred to the original Laurent field element over its original j-coordinate."
+  ],
+  "remaining": "Finite-place exhaustion must consume this integrality theorem. Orbit separation, elliptic-center charts, cusp exhaustion/global charts, actual period/Hecke/diamond/Picard/H1 comparison, original all-weight arithmetic association and higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

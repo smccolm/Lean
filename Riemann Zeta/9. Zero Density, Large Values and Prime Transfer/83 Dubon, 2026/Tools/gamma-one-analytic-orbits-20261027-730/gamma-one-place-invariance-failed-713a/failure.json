@@ -1,0 +1,3 @@
+{
+  "cause": "Zero-warning gate failed: explicit change after the membership rewrite was a no-op. Remove that redundant tactic; do not suppress the linter."
+}

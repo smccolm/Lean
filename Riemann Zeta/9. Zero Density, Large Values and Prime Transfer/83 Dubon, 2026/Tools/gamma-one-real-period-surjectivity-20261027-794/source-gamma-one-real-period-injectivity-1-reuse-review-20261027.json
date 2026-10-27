@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-27 America/Vancouver",
+  "sourceDependency": "DUB-17/18 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 -> Abel-Jacobi converse -> real period surjectivity -> real period injectivity.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-injectivity-audit-route-756.json",
+    "sha256": "2EB9CAEC6BD0B6F8BAB1BEEEC41E647C1B4707F8D83726172ACDDA61FF570C78",
+    "review": {
+      "chain": "DUB-17/18 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 -> Abel-Jacobi converse -> real period surjectivity -> real period injectivity.",
+      "assumptionsToDischarge": "The actual real Gamma1 periods determine the cusp form. Primitive derivative normalization and every translated cusp limit are constructed from the original form. The principal-congruence normality theorem supplies the missing cusp translations. No real-period injectivity, reflected-form relation, dimension inequality or surjectivity is assumed.",
+      "remaining": "Real period surjectivity, reciprocity, original Picard/Hecke/diamond/H1 comparison, all-weight association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceInvariantRealPart.lean",
+          "sha256": "5EC0F4BE4B5CC612A46F96EABD699DBA0CC716D0D9C2B43E28A7CB463A3F876A"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoPeriods.lean",
+          "sha256": "5628D0F3EA57748E9108482A68BE4C9057E3B750C305C2D1A51896540C624A6E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoPrimitiveCusps.lean",
+          "sha256": "2C8AE73A6B8419A38F761566F5175C3B41F96AE236FFCBD43331B39522C73A56"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCuspAuxiliaryForm.lean",
+          "sha256": "41EDB3674B214E70AEFF9874A11572D6E119E4C7FE728BADA425C6371F483FC6"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-injectivity-route-756.json",
+          "sha256": "7A988E1899FE38DA7121A846DDA0AC38D9685E65F0E366809651996FDD2A065F"
+        }
+      ],
+      "shorterRoute": "Adapt the existing finite-tile real-part constancy argument to actual Gamma1, then consume the existing general primitive and cusp-limit theorems. This avoids a reflected complex period pair for the real-period injectivity needed by either candidate dimension route. No dimension or period-surjectivity theorem is assumed."
+    }
+  },
+  "discharged": "The actual real Gamma1 periods determine the cusp form. Primitive derivative normalization and every translated cusp limit are constructed from the original form. The principal-congruence normality theorem supplies the missing cusp translations. No real-period injectivity, reflected-form relation, dimension inequality or surjectivity is assumed.",
+  "remaining": "Real period surjectivity, reciprocity, original Picard/Hecke/diamond/H1 comparison, all-weight association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

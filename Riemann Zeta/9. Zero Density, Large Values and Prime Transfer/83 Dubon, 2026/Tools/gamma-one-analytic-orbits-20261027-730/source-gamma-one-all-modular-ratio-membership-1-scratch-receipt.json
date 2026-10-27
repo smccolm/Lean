@@ -1,0 +1,47 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T07:12:24.747823+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneAllModularRatioMembership"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAllModularRatioMembership.lean",
+      "sha256": "DD4BB8E035E9668AD5D8FA1582FBF405972C0C60C8EB9D62A1EA1101C173DB88",
+      "oleanSha256": "670A2A17F878FD2ECC444384114301C733C6F08B424707BA29494A7AD9BBE9D7"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.modular_ratio_mem"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.modular_ratio_mem"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAllModularRatioMembershipAudit1.log",
+  "logSha256": "4FFFFA17AB31D811B52AA554FA2FCAEB0D3F14C83E1DCE7DB4357AEDCF3ADBEB",
+  "auditSha256": "E91B2DA6B747A3F442F38D6A19EE9149ADA4BDC663E78E97AD168244DFCDBB33",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 2,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 4,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAllModularRatioMembershipDependencyAudit1.log",
+  "dependencyAuditSha256": "970C05792BA6CD083D24BD49BE43AD7635CDC8AB0D32A0688AF7A6A1F7B5B3C4",
+  "dependencyAuditSourceSha256": "63F117EAF5F3775669E25E9A846778F05866075412AB34B3EF78A06CBDD2A98F",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.modular_ratio_mem"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact ramification -> analytic-place orbit separation -> actual complex modular ratios belong to the original integral-ratio function field.",
+  "discharged": [
+    "Every actual same-weight complex Gamma1 modular ratio lies in the original scalar-extended integral-ratio function field.",
+    "All weights and all nonzero levels are included; negative weights are excluded only by the actual nonzero denominator."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Use membership and proved full modular-form separation to prove actual analytic-place equality iff Gamma1 orbit, then exact ramification/global charts and period/Hecke/diamond/Picard/H1 arithmetic comparison, all-weight association and higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-all-modular-ratio-membership-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "5385B2F8F057E005A32F146FBD72205C9A8329FDA4E5AB2F18D3CBD00CE1C8E7",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

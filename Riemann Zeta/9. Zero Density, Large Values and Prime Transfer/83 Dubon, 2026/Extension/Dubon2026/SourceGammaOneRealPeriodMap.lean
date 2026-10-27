@@ -1,0 +1,59 @@
+import Dubon2026.SourceGammaOneRealPeriodInjectivity
+import Dubon2026.SourceIntegralCohomologyFinite
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual Gamma1
+Hecke characters -> Picard/H1 and Abel-Jacobi -> real period surjectivity.
+The existing finite native H1 theorem supplies finiteness of the literal
+real character space. The actual real period map is linear and injective,
+so the cusp-form space is finite without a dimension hypothesis. -/
+namespace Dubon2026
+noncomputable section
+open CongruenceSubgroup Matrix.SpecialLinearGroup groupCohomology
+open scoped MatrixGroups
+
+theorem sourceGamma1RealCharacter_finite (N : ℕ) [NeZero N] :
+    Module.Finite ℝ (Additive (Gamma1 N) →+ ℝ) := by
+  letI : Group.FG SL(2, ℤ) :=
+    Group.fg_iff.mpr ⟨{ModularGroup.S, ModularGroup.T},
+      SpecialLinearGroup.SL2Z_generators, Set.toFinite _⟩
+  letI := sourceH1Finite (Rep.trivial ℝ (Gamma1 N) ℝ)
+  let e := H1IsoOfIsTrivial (Rep.trivial ℝ (Gamma1 N) ℝ)
+  apply Module.Finite.of_surjective e.hom.hom
+  intro φ
+  exact ⟨e.inv φ, CategoryTheory.Iso.inv_hom_id_apply e φ⟩
+
+/-- Real parts of the actual weight-two periods as a real linear map. -/
+def sourceGamma1RealPeriodHom (N : ℕ) [NeZero N] :
+    CuspForm ((Gamma1 N).map (mapGL ℝ)) 2 →ₗ[ℝ] (Additive (Gamma1 N) →+ ℝ) where
+  toFun f := Complex.reAddGroupHom.comp (sourceWeightTwoPeriodHom (Gamma1 N) f)
+  map_add' f g := by
+    ext γ
+    change (sourceWeightTwoPeriodValue (Gamma1 N) (f + g) γ).re = _
+    rw [map_add, Pi.add_apply, Complex.add_re]
+    rfl
+  map_smul' c f := by
+    ext γ
+    change (sourceWeightTwoPeriodValue (Gamma1 N) (c • f) γ).re =
+      c * (sourceWeightTwoPeriodValue (Gamma1 N) f γ).re
+    rw [← Complex.coe_smul, map_smul, Pi.smul_apply, smul_eq_mul, Complex.re_ofReal_mul]
+
+theorem sourceGamma1RealPeriodHom_apply (N : ℕ) [NeZero N]
+    (f : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2) (γ : Gamma1 N) :
+    sourceGamma1RealPeriodHom N f (Additive.ofMul γ) =
+      (sourceWeightTwoPeriodValue (Gamma1 N) f γ).re := rfl
+
+theorem sourceGamma1RealPeriodHom_injective (N : ℕ) [NeZero N] :
+    Function.Injective (sourceGamma1RealPeriodHom N) := by
+  intro f g h
+  apply sourceGamma1_real_periods_injective N
+  funext γ
+  exact congrArg (fun φ : Additive (Gamma1 N) →+ ℝ => φ (Additive.ofMul γ)) h
+
+theorem sourceGamma1CuspForm_finite_real (N : ℕ) [NeZero N] :
+    Module.Finite ℝ (CuspForm ((Gamma1 N).map (mapGL ℝ)) 2) := by
+  letI := sourceGamma1RealCharacter_finite N
+  exact Module.Finite.of_injective (sourceGamma1RealPeriodHom N)
+    (sourceGamma1RealPeriodHom_injective N)
+
+end
+end Dubon2026

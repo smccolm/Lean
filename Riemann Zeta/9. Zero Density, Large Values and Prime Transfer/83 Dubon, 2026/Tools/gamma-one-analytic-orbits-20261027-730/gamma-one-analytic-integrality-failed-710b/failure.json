@@ -1,0 +1,3 @@
+{
+  "cause": "Compiler launched from root package rather than Extension; Dubon2026 import path absent. No mathematical source change. Restart from correct package."
+}

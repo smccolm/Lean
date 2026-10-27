@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "theorems": 10,
+  "modules": 2,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFourierConverseScratchOwnership702.log",
+  "logSha256": "FDBDA24731CA8B50B849871988B915B2F0CFF558E612AF778BA8BA2689C4F2D7",
+  "sourceSha256": "ED743658F1B2E0CDAC3350B0AE893C074EA0FA5C893EDE3C7EB77B20F8C3F5D6",
+  "owners": [
+    {
+      "module": "SourceGammaOneCuspFourierNormalization",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_qExpansion._simp_1_4"
+    },
+    {
+      "module": "SourceGammaOneCuspFourierNormalization",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_qExpansion._simp_1_8"
+    },
+    {
+      "module": "SourceGammaOneCuspFourierNormalization",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_qExpansion._simp_1_3"
+    },
+    {
+      "module": "SourceGammaOneCuspFourierNormalization",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_qExpansion._simp_1_6"
+    },
+    {
+      "module": "SourceGammaOneRegularFourierRealization",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_cuspForm_of_regular_differential"
+    },
+    {
+      "module": "SourceGammaOneCuspFourierNormalization",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_qExpansion._proof_1_1"
+    },
+    {
+      "module": "SourceGammaOneCuspFourierNormalization",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_qExpansion._simp_1_7"
+    },
+    {
+      "module": "SourceGammaOneCuspFourierNormalization",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_qExpansion._simp_1_2"
+    },
+    {
+      "module": "SourceGammaOneCuspFourierNormalization",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_qExpansion._simp_1_5"
+    },
+    {
+      "module": "SourceGammaOneCuspFourierNormalization",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_qExpansion"
+    }
+  ]
+}

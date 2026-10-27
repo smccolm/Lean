@@ -1,0 +1,28 @@
+import SourceGammaOneModularPointSeparation
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.exists_separating_modular_forms]
+  let localModules : Array Name := #[`SourceGammaOneDiamondSeparation, `SourceGammaOneDivisionForms, `SourceGammaOneDivisionLatticeOrbit, `SourceGammaOneDivisionPowerOrbit, `SourceGammaOneModularPointSeparation, `SourceOriginalModularPointSeparation, `SourcePeriodDivisionRotations]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.exists_separating_modular_forms, `Dubon2026.SourceFunctionField.GammaOne.exists_separating_forms_of_gamma0_orbit, `Dubon2026.SourceFunctionField.exists_original_separating_modular_forms, `Dubon2026.SourceFunctionField.ModularNormPolynomial.restrict]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE MODULAR POINT SEPARATION DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in actual native Gamma1 modular forms separating every pair of distinct Gamma1 orbits. Only declaration values are traversed. The existing Gamma0 integral-closure center argument and actual division-form argument inside a Gamma0 orbit are both consumed, including elliptic points and all nonzero levels. Exact analytic-place orbit identification remains. Original chart/period, Hecke/diamond/Picard/H1 arithmetic comparison, all-weight characteristic-zero association and literal higher symmetric-power continuation remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

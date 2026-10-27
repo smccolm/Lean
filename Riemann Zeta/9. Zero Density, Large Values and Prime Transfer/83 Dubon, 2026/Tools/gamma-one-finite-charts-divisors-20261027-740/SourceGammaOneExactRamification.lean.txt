@@ -1,0 +1,63 @@
+import Dubon2026.SourceGammaOneJFiberDegree
+import Dubon2026.SourceGammaOneGenericFiberCount
+
+/-! DUB-17/18 -> actual Gamma1 global charts -> exact elliptic ramification.
+The actual generic fiber identifies the coordinate degree with the subgroup
+index. Every fiber has that same total; equality of sums and the proved
+termwise bound give exact ramification at every analytic point. All
+nonzero levels are retained, with the required central-sign factor. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup AnalyticFiberOrbits
+open scoped MatrixGroups IntermediateField GammaOne
+
+theorem finrank_over_j_eq_index (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N) :
+    Module.finrank ℂ⟮jCoordinateOver (Gamma1 N) ℂ⟯ (functionFieldOver (Gamma1 N) ℂ) =
+      (plusMinus (Gamma1 N)).index := by
+  obtain ⟨τ, hτ⟩ := exists_fiber_order_sum_eq_index N hT
+  have h := sum_j_fiber_orders_eq_finrank hT (JMultiplicity.jf τ)
+  exact_mod_cast h.symm.trans hτ
+
+theorem sum_analytic_fiber_orders_eq_index (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N) (τ : ℍ) [Fintype (OrbitQuot N τ)] :
+    (∑ q : OrbitQuot N τ, (analyticPlace hT (AnalyticFiberOrbits.rep N τ q)).ord
+      (jCoordinateOver (Gamma1 N) ℂ -
+        algebraMap ℂ (functionFieldOver (Gamma1 N) ℂ) (JMultiplicity.jf τ))) =
+      ((plusMinus (Gamma1 N)).index : ℤ) := by
+  rw [sum_orders N hT τ, sum_j_fiber_orders_eq_finrank hT, finrank_over_j_eq_index N hT]
+
+theorem two_mul_ramification_eq_stabilizer_card (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N) (τ : ℍ) :
+    2 * analyticRamification hT τ = Nat.card (MulAction.stabilizer (plusMinus (Gamma1 N)) τ) := by
+  classical
+  haveI := finite_orbitQuot N τ
+  letI : Fintype (OrbitQuot N τ) := Fintype.ofFinite _
+  have hle : ∀ q ∈ (Finset.univ : Finset (OrbitQuot N τ)),
+      (analyticPlace hT (AnalyticFiberOrbits.rep N τ q)).ord
+        (jCoordinateOver (Gamma1 N) ℂ -
+          algebraMap ℂ (functionFieldOver (Gamma1 N) ℂ) (JMultiplicity.jf τ)) ≤
+        ((plusMinus (Gamma1 N)).relIndex (MulAction.stabilizer SL(2, ℤ) (AnalyticFiberOrbits.rep N τ q)) : ℤ) := by
+    intro q _
+    have h := (analytic_j_order_le_relative_index hT (AnalyticFiberOrbits.rep N τ q)).2.1
+    rwa [j_rep] at h
+  have hsum := (sum_analytic_fiber_orders_eq_index N hT τ).trans
+    (sum_relative_indices_eq_index N τ).symm
+  have heq := (Finset.sum_eq_sum_iff_of_le hle).mp hsum
+  let q₀ : OrbitQuot N τ := Quotient.mk _ ⟨τ, MulAction.mem_orbit_self τ⟩
+  obtain ⟨γ, hγ, hγτ⟩ := OrbitCounting.exists_smul_out_eq
+    (plusMinus (Gamma1 N)) τ ⟨τ, MulAction.mem_orbit_self τ⟩
+  have hsm : γ • AnalyticFiberOrbits.rep N τ q₀ = τ := hγτ
+  have hplace : analyticPlace hT (AnalyticFiberOrbits.rep N τ q₀) = analyticPlace hT τ := by
+    rw [← analyticPlace_smul_plusMinus hT hγ (AnalyticFiberOrbits.rep N τ q₀), hsm]
+  have hrel : (plusMinus (Gamma1 N)).relIndex
+      (MulAction.stabilizer SL(2, ℤ) (AnalyticFiberOrbits.rep N τ q₀)) =
+      (plusMinus (Gamma1 N)).relIndex (MulAction.stabilizer SL(2, ℤ) τ) := by
+    rw [← OrbitCounting.relIndex_stabilizer_smul_of_mem
+      (plusMinus (Gamma1 N)) hγ (AnalyticFiberOrbits.rep N τ q₀), hsm]
+  apply (analytic_j_order_le_relative_index hT τ).2.2
+  have h := heq q₀ (Finset.mem_univ _)
+  rwa [hplace, hrel] at h
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

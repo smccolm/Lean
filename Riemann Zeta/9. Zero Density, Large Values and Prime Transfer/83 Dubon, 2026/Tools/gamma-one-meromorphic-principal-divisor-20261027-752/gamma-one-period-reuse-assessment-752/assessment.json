@@ -1,0 +1,142 @@
+{
+  "recordedUTC": "2026-10-27T11:41:11.262339+00:00",
+  "status": "Nine pinned primary proof files inspected; six local scratch scopes pass. Production promotion and assembled verification of those thirteen modules are pending.",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 homogeneous-coefficient Hecke characters -> full/parabolic, transpose, diamond, Picard/H1 comparison -> actual differential and period geometry -> Abel-Jacobi principal-divisor converse.",
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "primarySources": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_multiplier_eq_exp_of_abelJacobi_add_petersson_eq_zero_gammaH.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_multiplier_eq_exp_of_abelJacobi_add_petersson_eq_zero_gammaH.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-753\\S_ModularCurve_ComplexPlaceDictionaryOf_multiplier_eq_exp_of_abelJacobi_add_petersson_eq_zero_gammaH.lean.txt",
+      "bytes": 23573,
+      "sha256": "AB4A915C46F78D34EC577A51175BD4EEF533150F6AAF9BF87F963ECACDA50891",
+      "gitBlob": "7780543d04c9a48c94e07bdc5aebc3466e504374",
+      "retrievedUTC": "2026-10-27T11:25:21.916727+00:00"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_six_mul_level_mul_finrank_parabolicHoms_Gamma_add_eq.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_six_mul_level_mul_finrank_parabolicHoms_Gamma_add_eq.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-753\\S_ModularCurve_six_mul_level_mul_finrank_parabolicHoms_Gamma_add_eq.lean.txt",
+      "bytes": 25641,
+      "sha256": "203A9628B153000F8B0E310BAADF4218AAA5134A03B2B059AA605DD21B92950D",
+      "gitBlob": "8ae5eb9c958b1e8389cceebf00e0c0e41b0160b8",
+      "retrievedUTC": "2026-10-27T11:25:22.195798+00:00"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_twelve_mul_add_mul_index_le_finrank_cuspForm_Gamma.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_twelve_mul_add_mul_index_le_finrank_cuspForm_Gamma.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-753\\S_ModularCurve_twelve_mul_add_mul_index_le_finrank_cuspForm_Gamma.lean.txt",
+      "bytes": 16319,
+      "sha256": "CA4F39E051A71A6E95A43BFD5344525CB73783EF38C1419413C499F14D54F21B",
+      "gitBlob": "0038349c35b68797a233250f1f305813695b8b38",
+      "retrievedUTC": "2026-10-27T11:25:22.436366+00:00"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_multiplier_eq_exp_of_periodAlongOf_add_petersson_mem_periodLatticeOf.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_multiplier_eq_exp_of_periodAlongOf_add_petersson_mem_periodLatticeOf.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-754\\S_ModularCurve_multiplier_eq_exp_of_periodAlongOf_add_petersson_mem_periodLatticeOf.lean.txt",
+      "bytes": 17049,
+      "sha256": "AE0F3D3C2EC6F18CB1BCA05A551B211E75FE1E505F86C11498746BE3A64C9109",
+      "gitBlob": "a6f352720cb5b5077ee0e30c88cae8a2afdeb9b8",
+      "retrievedUTC": "2026-10-27T11:27:31.765908+00:00"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_LevelN_twelve_mul_add_mul_index_le_genusFF.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_LevelN_twelve_mul_add_mul_index_le_genusFF.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-754\\S_ModularCurve_LevelN_twelve_mul_add_mul_index_le_genusFF.lean.txt",
+      "bytes": 36374,
+      "sha256": "098DC8D9C0621AE23CB28C3C01A92A76799DCA208ED36072C9A515B5211B12E2",
+      "gitBlob": "feaaf9f1f2041f63995206fa465b03f1a3c0921f",
+      "retrievedUTC": "2026-10-27T11:27:31.978470+00:00"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_LevelN_exists_linearMap_regularDifferentials_cuspForm_injective.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_LevelN_exists_linearMap_regularDifferentials_cuspForm_injective.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-754\\S_ModularCurve_LevelN_exists_linearMap_regularDifferentials_cuspForm_injective.lean.txt",
+      "bytes": 5677,
+      "sha256": "2FEED951BB0264E5F1DAD1FB3505676CD0AB2F63C71A3996B0FC385845D1A9FE",
+      "gitBlob": "3900c12998697540cbc2341b5826fa4de592d9f4",
+      "retrievedUTC": "2026-10-27T11:27:32.204338+00:00"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_periodAlongOf_add_petersson_mem_periodLatticeOf_of_multiplier_eq_exp.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_periodAlongOf_add_petersson_mem_periodLatticeOf_of_multiplier_eq_exp.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-755b\\S_ModularCurve_periodAlongOf_add_petersson_mem_periodLatticeOf_of_multiplier_eq_exp.lean.txt",
+      "bytes": 11497,
+      "sha256": "05BF4F675796DC1791083B0FED61F51B8A40224E40D683DB9A0FEF17997D742E",
+      "gitBlob": "88f3644359a0a1640d35b8e1f88a897faa22aa56",
+      "retrievedUTC": "2026-10-27T11:36:01.262889+00:00"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_petersson_mem_periodLatticeOf_iff_re_periodOf_int.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_petersson_mem_periodLatticeOf_iff_re_periodOf_int.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-755b\\S_ModularCurve_petersson_mem_periodLatticeOf_iff_re_periodOf_int.lean.txt",
+      "bytes": 28668,
+      "sha256": "E46017955CC62AD510416D832C9CCA908DFE2879028CBA7F2E4534D66EF621E7",
+      "gitBlob": "63fa6e0e982cc9aa1ee17c7f2732c9bda03f7718",
+      "retrievedUTC": "2026-10-27T11:36:01.506444+00:00"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_cuspForm_multiplier_eq_exp_periodOf_of_norm_eq_one.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_cuspForm_multiplier_eq_exp_periodOf_of_norm_eq_one.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-755b\\S_ModularCurve_exists_cuspForm_multiplier_eq_exp_periodOf_of_norm_eq_one.lean.txt",
+      "bytes": 39126,
+      "sha256": "EFFAA94ED1D6C7889ECDDF67781058EEEBDE475355218B929F2523DC3381CFF7",
+      "gitBlob": "dc7fe7882ec4b4d1bdf78dbbcb94fbe12983d52c",
+      "retrievedUTC": "2026-10-27T11:36:01.741476+00:00"
+    }
+  ],
+  "readScope": "Full mathematical contents of all nine sources were read. Only large attribute-deactivation/reactivation lists were excluded from display; snapshots preserve all bytes. External heartbeat and linter suppressions were observed and are not copied.",
+  "findings": [
+    "The new local principal-divisor consumer proves literal principality in the original Gamma1 integral-ratio field from the exact invariant meromorphic-function contract. Both the field realization and the order-zero conclusion at every j-pole place are derived, not supplied. Actual one-pole functions and weight-zero constancy give cusp exhaustion; finite-coordinate pole clearing and native meromorphic normalization give field realization. This replaces the candidate inverse-j/full-level-Galois cusp-order argument for this conversion only.",
+    "The candidate general congruence-subgroup period-surjectivity proof reduces to a principal-level dimension inequality, then normal-subgroup descent. Its principal-level inequality combines an exact parabolic rank with a cusp-form lower bound. The latter uses the full Fricke field, three ramification fibers, a Riemann-Hurwitz inequality and regular-differential realization.",
+    "Already proved local Fricke APIs supply the exact action kernel (Gamma N up to sign), the fixed field C(j), and its degree. Already proved local Gamma1 APIs supply the actual regular-differential/cusp-form equivalence, exact finite-place ramification and normalized charts. Those are distinct fields; transporting the principal-level argument is additional work and is not silently assumed.",
+    "Local sourceWeightTwoPeriodValue, sourceWeightTwoPeriodHom and sourceWeightTwoPrimitive_period already work for arbitrary finite-index subgroups. The local assembled period-pair surjectivity and numerical genus theorems are for Gamma0; they are not Gamma1 results. Before rebuilding the principal-level tower, compare direct Gamma1 genus/Manin bounds using existing finite fibers and cusp geometry.",
+    "The inspected Abel-Petersson necessity theorem still invokes a meromorphic chain/boundary-integral theorem. Its integral-period characterization invokes Petersson/edge bilinear identities, integral parabolic characters and real period surjectivity. The unit-norm multiplier theorem additionally uses elliptic/parabolic triviality and a real character logarithm. The nine wrapper/core files are proof-bearing candidates, not locally verified import closures.",
+    "No inspected upstream update or proof supplies the missing original all-weight characteristic-zero association or the literal higher symmetric-power continuation. Finite characters, complex semisimplicity, Witt coefficients and universal deformation rings do not establish a characteristic-zero lift."
+  ],
+  "decision": "Adopt the proved shorter original-field conversion. Retain both period routes under comparison; expand only a necessary dependency after checking existing local proofs. No general congruence or principal-level theory is adopted wholesale.",
+  "scratchReceipts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-residues-1-scratch-receipt.json",
+      "sha256": "2F1EACCE6E23FDFFE316865260110175EA89ABA52C305803C7EB157D0D43B12F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-exhaustion-1-scratch-receipt.json",
+      "sha256": "028C916EE20AD07A96B06F1AEB6F83C494D1A94FFC3B379066512A64801AA883"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-holomorphic-field-1-scratch-receipt.json",
+      "sha256": "32E41826F238016A886D15A69C61C38ECF954A56CB6EA71D9A4ABCF708D83AA8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-pole-clearing-normalization-1-scratch-receipt.json",
+      "sha256": "7C5F0099EB393DC9052EE6BE5EDAEBB0D6B0F895155217BC73DD061D378B4F7A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-meromorphic-field-1-scratch-receipt.json",
+      "sha256": "FADC57811E5FCDBAEFC7F70DB4081EAE46685E6E3DCC1524A07A56A799AF6BF7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-meromorphic-principal-divisor-1-scratch-receipt.json",
+      "sha256": "CBFF760F67E11EA122C34E4604CCBEE59C9C032DBB22480205A75545D052B15C"
+    }
+  ],
+  "modules": 13,
+  "publicQueries": 31,
+  "exhaustiveScratchChecks": 40,
+  "proofValueEdges": 79,
+  "lintersPerModule": 16,
+  "externalImport": false,
+  "externalClosureBuilt": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "fullGoal": "16/20; DUB-17--20 OPEN. Full original all-weight arithmetic/modular branch and all twenty acceptance conditions unchanged.",
+  "downloadFailurePreserved": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-755\\download-failure.json",
+  "headRefresh": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\assessment.json",
+    "sha256": "6E25C050F739B99FAFA2BD2928F1CD82E021169F95B5BFEAA2970CCF8A3D62B5"
+  }
+}

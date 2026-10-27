@@ -1,0 +1,27 @@
+{
+  "modules": [
+    "SourceGammaOneAllModularRatioMembership"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.modular_ratio_mem"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.modular_ratio_mem"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.modular_ratio_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_ratio_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_eq_qExpFunctionFieldC",
+    "Dubon2026.cuspRestrictSubgroup"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.modular_ratio_mem"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneAllModularRatioMembership",
+    "SourceGammaOneNormalizedCuspRatios"
+  ],
+  "separateReason": "Arbitrary actual complex modular ratios enter the original field by the normalized integral cusp theorem and actual discriminant multiplication."
+}

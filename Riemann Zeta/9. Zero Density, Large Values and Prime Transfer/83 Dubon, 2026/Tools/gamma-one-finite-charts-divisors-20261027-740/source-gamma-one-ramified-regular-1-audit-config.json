@@ -1,0 +1,54 @@
+{
+  "modules": [
+    "SourceGammaOneEllipticFibers",
+    "SourceGammaOneRamifiedRegularParameter",
+    "SourceGammaOneRamifiedRegularOrder"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_stabilizer_multiplier",
+    "Dubon2026.SourceFunctionField.GammaOne.place_eq_of_coord_power_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_order"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_stabilizer_multiplier",
+    "Dubon2026.SourceFunctionField.GammaOne.place_eq_of_coord_power_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_order",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_stabilizer_multiplier",
+    "Dubon2026.SourceFunctionField.GammaOne.place_eq_of_coord_power_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_order",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace",
+    "Dubon2026.SourceFunctionField.GammaOne.two_mul_ramification_eq_stabilizer_card",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul_plusMinus",
+    "Dubon2026.SourceFunctionField.EllipticCoordinate.multiplier_eq_inv_square",
+    "Dubon2026.SourceFunctionField.PowerDescent.analyticAt_root_composite",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_meromorphicOrderAt",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_analyticAt_iff"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_stabilizer_multiplier",
+    "Dubon2026.SourceFunctionField.GammaOne.place_eq_of_coord_power_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_order"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneEllipticFibers",
+    "SourceGammaOneExactRamification",
+    "SourceGammaOneRamifiedRegularOrder",
+    "SourceGammaOneRamifiedRegularParameter"
+  ],
+  "separateReason": "Exact all-level Gamma1 ramification supplies every stabilizer multiplier and actual-place invariance discharges power-fiber invariance. Analytic descent and the actual residue-value order identity give analytic regular values of exactly the normalized valuation order."
+}

@@ -1,0 +1,28 @@
+import Dubon2026.SourceGammaOneJFiberOrbits
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.j_rep, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.card_stabilizer_rep, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.finite_orbitQuot, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber_injective, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber_surjective, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_orders, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.OrbitQuot, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.rep, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.Fiber, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.equiv]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneAllModularRatioMembership, `Dubon2026.SourceGammaOneAnalyticGerms, `Dubon2026.SourceGammaOneAnalyticIntegrality, `Dubon2026.SourceGammaOneAnalyticJOrders, `Dubon2026.SourceGammaOneAnalyticOrder, `Dubon2026.SourceGammaOneAnalyticOrderNontrivial, `Dubon2026.SourceGammaOneAnalyticPlaceInvariance, `Dubon2026.SourceGammaOneAnalyticPlaceOrbits, `Dubon2026.SourceGammaOneAnalyticPlaces, `Dubon2026.SourceGammaOneAnalyticResidues, `Dubon2026.SourceGammaOneDiamondSeparation, `Dubon2026.SourceGammaOneDivisionForms, `Dubon2026.SourceGammaOneDivisionLatticeOrbit, `Dubon2026.SourceGammaOneDivisionPowerOrbit, `Dubon2026.SourceGammaOneFinitePlaceExhaustion, `Dubon2026.SourceGammaOneHolomorphicFunctions, `Dubon2026.SourceGammaOneJFiberOrbits, `Dubon2026.SourceGammaOneJRealization, `Dubon2026.SourceGammaOneMeromorphicRealization, `Dubon2026.SourceGammaOneModularPointSeparation, `Dubon2026.SourceGammaOneNormalizedCuspRatios, `Dubon2026.SourceGammaOneOrbitCounting, `Dubon2026.SourceGammaOnePlusMinus, `Dubon2026.SourceGammaOneQuotientCuspSeries, `Dubon2026.SourceGammaOneRatioRealization, `Dubon2026.SourceGammaOneRealizationAlgebra, `Dubon2026.SourceGammaOneStabilizerRamification, `Dubon2026.SourceGammaOneTranslatedCuspGerms, `Dubon2026.SourceOriginalModularPointSeparation, `Dubon2026.SourcePeriodDivisionRotations]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.j_rep, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.card_stabilizer_rep, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.finite_orbitQuot, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber_injective, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber_surjective, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_orders, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.OrbitQuot, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.rep, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.Fiber, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.equiv, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_eq_iff_gamma1_orbit, `Dubon2026.SourceFunctionField.GammaOne.finite_fiber_realization, `Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.exists_smul_out_eq, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul_plusMinus, `Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.finite_orbitRelQuotient_orbit]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE J FIBER ORBITS DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual bijection from Gamma1 orbit classes to each positive-order j fiber and exact transport of its order sum, consuming proved exhaustion and exact analytic-place orbit equality. Only declaration values are traversed. The weighted finite-fiber comparison must still establish exact elliptic ramification; global charts remain. Original chart/period, Hecke/diamond/Picard/H1 arithmetic comparison, all-weight characteristic-zero association and literal higher symmetric-power continuation remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

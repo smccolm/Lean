@@ -1,0 +1,6 @@
+{
+  "chain": "DUB-17/18 -> original all-weight arithmetic association -> actual finite homogeneous-coefficient Gamma1 characters -> Picard/H1/full-parabolic/transpose/diamond comparison -> modular periods -> original meromorphic field realization.",
+  "reuse": "Consumes scopes744,745,746,747,748 and canonical actual modular-ratio evaluation, analytic-place orders and field multiplication of germs.",
+  "assumptionsToDischarge": "Actual original-field realization of a meromorphic invariant function with the prescribed finite ramification-weighted divisor and bounded translated cusps; nonvanishing and exact normalized analytic-place orders are conclusions.",
+  "remaining": "Transfer nonzero cusp limits to the actual field element, then compose with actual global period existence and reciprocity. Full Picard/Hecke/diamond/H1 and original all-weight arithmetic association remain; 16/20; DUB-17--20 OPEN."
+}

@@ -1,0 +1,81 @@
+import SourceGammaOneRealParabolicPeriods
+import Dubon2026.SourceGammaOnePlusMinus
+
+/-! DUB-17/18 -> actual Gamma1 real period surjectivity -> reverse
+dimension bound -> Manin relations on signed cosets. Real characters
+extend across the central negative identity, which has order two.
+The representative is an actual subgroup element differing only by
+central sign. Equality of squares proves equality of real character
+values, so no extension or torsion-vanishing hypothesis is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CentralSign
+noncomputable section
+open scoped MatrixGroups
+variable (Γ : Subgroup SL(2, ℤ))
+
+theorem exists_representative (γ : plusMinus Γ) :
+    ∃ δ : Γ, δ.val = γ.val ∨ δ.val = -γ.val := by
+  rcases (mem_plusMinus_iff Γ γ.val).mp γ.property with h | h
+  · exact ⟨⟨γ.val, h⟩, Or.inl rfl⟩
+  · exact ⟨⟨-γ.val, h⟩, Or.inr rfl⟩
+
+/-- An actual subgroup representative differing from the enlarged-group element by central sign. -/
+def representative (γ : plusMinus Γ) : Γ := (exists_representative Γ γ).choose
+
+theorem representative_spec (γ : plusMinus Γ) :
+    (representative Γ γ).val = γ.val ∨ (representative Γ γ).val = -γ.val :=
+  (exists_representative Γ γ).choose_spec
+
+theorem real_character_eq_of_square_eq (φ : Additive Γ →+ ℝ) (a b : Γ)
+    (hab : a ^ 2 = b ^ 2) :
+    φ (Additive.ofMul a) = φ (Additive.ofMul b) := by
+  have he := congrArg (fun c : Γ => φ (Additive.ofMul c)) hab
+  simp only [sq] at he
+  change φ (Additive.ofMul a + Additive.ofMul a) =
+    φ (Additive.ofMul b + Additive.ofMul b) at he
+  rw [map_add, map_add] at he
+  linarith
+
+theorem representative_mul_square (γ δ : plusMinus Γ) :
+    representative Γ (γ * δ) ^ 2 =
+      (representative Γ γ * representative Γ δ) ^ 2 := by
+  apply Subtype.ext
+  change (representative Γ (γ * δ)).val ^ 2 =
+    ((representative Γ γ).val * (representative Γ δ).val) ^ 2
+  rcases representative_spec Γ (γ * δ) with hc | hc <;>
+    rcases representative_spec Γ γ with ha | ha <;>
+    rcases representative_spec Γ δ with hb | hb <;>
+    simp only [hc, ha, hb, Subgroup.coe_mul, sq, neg_mul, mul_neg, neg_neg]
+
+theorem representative_member_square (γ : Γ) :
+    representative Γ (⟨γ.val, le_plusMinus Γ γ.property⟩ : plusMinus Γ) ^ 2 = γ ^ 2 := by
+  apply Subtype.ext
+  rcases representative_spec Γ ⟨γ.val, le_plusMinus Γ γ.property⟩ with h | h <;>
+    simp only [Subgroup.coe_pow, h, sq, neg_mul, mul_neg, neg_neg]
+
+/-- The actual real character extended across central sign. -/
+def extend (φ : Additive Γ →+ ℝ) : Additive (plusMinus Γ) →+ ℝ where
+  toFun γ := φ (Additive.ofMul (representative Γ γ.toMul))
+  map_zero' := by
+    have hs : representative Γ (1 : plusMinus Γ) ^ 2 = (1 : Γ) ^ 2 :=
+      representative_member_square Γ 1
+    exact (real_character_eq_of_square_eq Γ φ _ _ hs).trans (map_zero φ)
+  map_add' γ δ := by
+    change φ (Additive.ofMul (representative Γ (γ.toMul * δ.toMul))) = _
+    rw [real_character_eq_of_square_eq Γ φ _ _
+      (representative_mul_square Γ γ.toMul δ.toMul)]
+    exact map_add φ _ _
+
+theorem extend_of_member (φ : Additive Γ →+ ℝ) (γ : Γ) :
+    extend Γ φ (Additive.ofMul ⟨γ.val, le_plusMinus Γ γ.property⟩) =
+      φ (Additive.ofMul γ) :=
+  real_character_eq_of_square_eq Γ φ _ _ (representative_member_square Γ γ)
+
+theorem extend_injective : Function.Injective (extend Γ) := by
+  intro φ ψ he
+  ext γ
+  have hh := congrArg (fun f : Additive (plusMinus Γ) →+ ℝ =>
+    f (Additive.ofMul ⟨γ.toMul.val, le_plusMinus Γ γ.toMul.property⟩)) he
+  simpa only [extend_of_member] using hh
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CentralSign

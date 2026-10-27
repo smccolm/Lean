@@ -1,0 +1,4 @@
+{
+  "status": "FAILED",
+  "reason": "Rewrite matching did not unfold the actual j function in the multiplicity theorem. Compose the two literal order equalities as in the existing proved ramification-isolation module."
+}

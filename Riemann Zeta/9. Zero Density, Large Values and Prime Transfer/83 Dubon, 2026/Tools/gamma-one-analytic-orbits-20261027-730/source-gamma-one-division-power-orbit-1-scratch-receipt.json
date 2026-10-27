@@ -1,0 +1,48 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T06:18:25.584666+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneDivisionPowerOrbit"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionPowerOrbit.lean",
+      "sha256": "C63422A72A5968B8676E1F01C81543A45058CD9DE1D48FF9FD305C3AF397A8AB",
+      "oleanSha256": "7D44885B13ED3B37BFA9366FBB047C282C1A543747DDFB9B27C19AD9188D7BD0"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_power"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_power"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionPowerOrbitAudit1.log",
+  "logSha256": "EC76D4892CD24D37F93592E5DE08DFFB243F7C2700EE4368F14141CFD7038614",
+  "auditSha256": "A898DD71C0643EC41D199AC18F06A9C5FEFD338F5DE872CA3A22570DBD27FBEA",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 4,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 7,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionPowerOrbitDependencyAudit1.log",
+  "dependencyAuditSha256": "5C1F8DBDBA3361B076CA195CCAB1FC8F57F59D9A1D8A67D4F9E4C135B395E3E5",
+  "dependencyAuditSourceSha256": "E1466C13EE5986ABBB00F82C1DD384B7BF6C47A22149A95E8A338990DEF5885F",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_power"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> orbit separation and exact elliptic ramification -> division-value powers imply an actual Gamma1 orbit.",
+  "discharged": [
+    "Derive the actual division-point lattice relation from equality of the appropriate first, second or third powers of Weierstrass values.",
+    "Prove both division points avoid the period lattice and derive period preservation and unit norm from the rotation theorem.",
+    "Produce an actual Gamma1 matrix, not an abstract orbit assumption."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The modular-form cross-determinant argument must supply these division-value power equalities. Full orbit separation, reverse elliptic ramification, global charts and period/Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and literal higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-division-power-orbit-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "435044414299C94D65C2797301220CD44CBBC9658540266A8D6953DB051829C4",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

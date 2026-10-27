@@ -1,0 +1,49 @@
+{
+  "modules": [
+    "SourceGammaOneOriginalPoleMultiplier",
+    "SourceGammaOnePoleClearedNormalization"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier_at_analytic_places",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_of_nonnegative_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_invariant_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.boundedAtImInfty_of_local_eq"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier_at_analytic_places",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_of_nonnegative_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_invariant_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.boundedAtImInfty_of_local_eq"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier_at_analytic_places",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_of_nonnegative_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_invariant_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.boundedAtImInfty_of_local_eq",
+    "Dubon2026.SourceCurve.exists_pole_clearing_function_of_finite_coordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteDimensional_jCoordinateOver",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_j_neg",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_j_sub_pos",
+    "meromorphicNFOn_toMeromorphicNFOn",
+    "meromorphicOrderAt_toMeromorphicNFOn",
+    "Homeomorph.map_punctured_nhds_eq",
+    "UpperHalfPlane.isBoundedAtImInfty_iff"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier_at_analytic_places",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_of_nonnegative_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_invariant_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.boundedAtImInfty_of_local_eq"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneOriginalPoleMultiplier",
+    "SourceGammaOnePoleClearedNormalization"
+  ],
+  "separateReason": "Actual algebraic pole multiplier and native analytic normalization, with invariance and cusp boundedness preserved. The consumer forming the actual meromorphic product remains separate."
+}

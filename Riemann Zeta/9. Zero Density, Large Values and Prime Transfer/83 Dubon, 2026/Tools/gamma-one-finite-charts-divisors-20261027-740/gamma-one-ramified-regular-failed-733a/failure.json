@@ -1,0 +1,3 @@
+{
+  "reason": "Exhaustive linter reports unused NeZero N on ramifiedPlace. Remove that redundant binder from the definition and its zero identity. Actual regular evaluation, exact elliptic ramification and all source-scope theorems retain nonzero-level assumptions where needed. Prior audit/log sources retained; new audit successor uses the same full checks."
+}

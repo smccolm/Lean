@@ -1,0 +1,18 @@
+{
+  "exit": 1,
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-rational-cusp-orbit-failed-763a\\SourceGammaOneRationalCuspOrbit.lean.txt",
+      "sha256": "9aefeaec6899448235b0819bc2de2965c159f90607fb728d0961843b9230e9c1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-rational-cusp-orbit-failed-763a\\SourceGammaOneRationalCuspOrbit.log",
+      "sha256": "2539b38d86e93ada3a354bc7468731f6d96fea313e0521e66712dcddec355a2e"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-rational-cusp-orbit-failed-763a\\SourceGammaOneRationalCuspOrbit.exit",
+      "sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04"
+    }
+  ],
+  "cause": "Beta reduction of quotient-lift representative function before rewriting."
+}

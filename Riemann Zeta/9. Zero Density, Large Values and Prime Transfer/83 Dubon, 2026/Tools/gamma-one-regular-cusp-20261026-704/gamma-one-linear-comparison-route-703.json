@@ -1,0 +1,33 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> finite Gamma1 arithmetic Hecke-character realization -> original Picard/H1 and full/parabolic transpose/diamond comparison -> actual complex regular-differential/cusp linear equivalence with literal Fourier matching.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularFourierRealization.lean",
+      "sha256": "8F1F5DF3BF9B81643AAB19DA6B21FA47434B528F8B8DB8D037C222F0BB82AA7C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCuspDifferentialRealization.lean",
+      "sha256": "E4A0EB79377780873F1DB44C76E7222322E33E928FCF7EBEA4F1236C180E1B36"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCurveGeometry.lean",
+      "sha256": "D63E405202426AB42499AA8AC4D90DC3751E07ACA04C3EF8361098A8B1336C2A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneIntegralCuspLaurentSpan.lean",
+      "sha256": "984B669B890AC82A30A9E783CFD1F56B800B35862E44790090344E39D4FE2476"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRegularCuspEquiv.lean",
+      "sha256": "A4BA46BE6E8ACE81A6592D5ECA3FA36327C01B96087A35080E6488E2B19866E7"
+    }
+  ],
+  "shorterRoute": "Use the two proved Fourier realization directions and existing differential q-expansion injectivity. Construct the two linear expansion maps and identify their actual ranges. Native LinearEquiv.ofInjective and LinearEquiv.ofEq give the equivalence. No dimension formula, new period-germ infrastructure or assumed matching witness is required.",
+  "assumptionsToDischarge": [
+    "The analytic and algebraic realizations assemble into an actual linear equivalence.",
+    "The equivalence retains the literal Fourier series needed to compare original Hecke and diamond operators."
+  ],
+  "remaining": "Hecke/diamond compatibility, original Picard/H1 arithmetic realization and all-weight characteristic-zero association and literal higher symmetric-power continuation remain. Coefficient-field transport is assessed when its exact downstream use is reached. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

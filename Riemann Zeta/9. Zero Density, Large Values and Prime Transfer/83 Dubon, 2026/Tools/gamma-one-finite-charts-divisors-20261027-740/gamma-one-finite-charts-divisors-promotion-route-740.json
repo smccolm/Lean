@@ -1,0 +1,33 @@
+{
+  "scope": 740,
+  "scopeIds": [
+    731,
+    732,
+    733,
+    734,
+    735,
+    738
+  ],
+  "researchScopes": [
+    736,
+    739,
+    741
+  ],
+  "receipts": {
+    "source-gamma-one-exact-ramification-1-scratch-receipt.json": "D538B51BD02993D8333DC989DCEED95AF9A699A50B5A21014A8A5B445645E0B3",
+    "source-gamma-one-ramified-regular-1b-scratch-receipt.json": "9F93976A802868C297AE919E66CCF5AB1F2EFA6BECC002013F7C66965838E6D6",
+    "source-gamma-one-ramified-chart-orders-1b-scratch-receipt.json": "45F9005E2039F1FADD28CDC047729D1B40163BBC090BCE5D5AE995D3AFE84035",
+    "source-gamma-one-finite-chart-parameters-1-scratch-receipt.json": "97484611A1C2F818629C37CE7D2711BF99E99A6EEAEE8F7F39541CBB2B2B13C2",
+    "source-gamma-one-divisor-moving-1-scratch-receipt.json": "A88376EC334AB34572E6E20E05245BAE932A7E0FAEFC77F87480E28E18AEA1B7"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 Hecke characters -> Picard/H1, full/parabolic, transpose and diamond comparison retaining the original homogeneous coefficient endomorphism -> actual differential and period geometry -> exact normalized charts at all finite places, including elliptic points, and analytic representatives of all original degree-zero divisor classes.",
+  "discharged": "The actual coordinate extension degree equals the index of Gamma1 enlarged by the central negative identity. Equality of finite-fiber sums with the termwise bounds proves twice the actual analytic ramification equals the actual enlarged stabilizer cardinality. Actual places are constant on centered-coordinate power fibers, so regular residue values descend analytically with their exact normalized orders. Inversion extends the result to all meromorphic functions. One disk works for every function and every nearby point. Every actual place where j is regular has an injective uniformizer-normalized chart, exact function orders, regular analyticity and coordinate differences of order one. Every nonzero level and elliptic center is retained. No ramification equality, normalized finite chart, analytic descent or function-order comparison remains a supplied hypothesis. Actual finite-place indicators prescribe arbitrary orders without an approximation input. Subtracting the resulting principal divisor moves every actual divisor class to a finite analytic divisor; degree-zero classes have analytic coefficient sum zero.",
+  "remaining": "Actual global period and Hecke/diamond/Picard/H1 comparison remain. Cusp/global-chart construction and a possible modular-period alternative are being compared; the pinned alternative still requires genuine period surjectivity, reciprocity, meromorphic field realization and cusp-order control. The present results do not close arithmetic realization of original finite homogeneous-coefficient characters. Coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. The full all-weight arithmetic goal is unchanged. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN.",
+  "route": "Selected pinned Apache-2.0 elliptic and ramified-chart arguments are adapted using already proved local exact fiber counts, native power descent, local root branches, rational residue inversion and the existing inverse-function parameter theorem. Actual curve geometry and finite-place indicators supply the required divisor-moving argument. This avoids rebuilding those foundations. The renewed search also identifies an alternative principal-divisor proof using nonzero cusp limits; its full dependencies are under assessment in the preserved scope-736 and scope-739 research and are not claimed proved. The live 27 October refresh of seven repositories and the inspected new Mathlib, OpenAI and zeta-lab changes are recorded in [Dubon Reuse Refresh 2026-10-27.md](Dubon%20Reuse%20Refresh%202026-10-27.md); none of the inspected updates closes the missing arithmetic or global-period obligation. Only audited mathematical sources are promoted, with imports qualified and proof bodies unchanged. The unused-argument correction, completed predecessor checks and every failure are preserved. Pins, proof limits, frozen paper and all twenty acceptance gates are unchanged.",
+  "precedingCanonicalScope": 8576,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 gates unchanged.",
+  "reason": "Preceding canonical PASS and immutable archive verified before preparing production mutation."
+}

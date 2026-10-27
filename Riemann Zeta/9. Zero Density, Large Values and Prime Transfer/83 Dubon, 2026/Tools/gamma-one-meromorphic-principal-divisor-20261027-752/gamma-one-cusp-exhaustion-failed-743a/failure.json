@@ -1,0 +1,5 @@
+{
+  "exit": 1,
+  "reason": "Pointwise slash simplification does not rewrite the function-valued boundedness argument. Supply the exact function equality by extensionality.",
+  "sourceSha256": "15C25DCA71BF082A9CFCE0333A2018AAEE77F02565A6378D93A9B7AF8E2ECB75"
+}

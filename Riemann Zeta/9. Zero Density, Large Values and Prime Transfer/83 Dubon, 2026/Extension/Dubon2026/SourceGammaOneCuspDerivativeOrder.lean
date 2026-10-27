@@ -1,0 +1,49 @@
+import Dubon2026.SourceGammaOneCuspJOrder
+import Dubon2026.SourceInverseJDerivativePower
+
+/-! DUB-17/18 -> actual Gamma1 differential/cusp comparison -> cusp
+vanishing. The literal analytic derivative of j has the same cusp pole
+order as j, from its existing E4^2 E6/Delta formula. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane Filter ModularForm
+open scoped MatrixGroups ModularForm Topology
+variable {Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)}
+
+theorem cusp_raw_j_derivative_order (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Γ) (γ : SL(2, ℤ)) :
+    MeromorphicAt (cuspFunction N (fun τ : ℍ =>
+      deriv (JMultiplicity.jf ∘ ofComplex) (τ : ℂ))) 0 ∧
+    meromorphicOrderAt (cuspFunction N (fun τ : ℍ =>
+      deriv (JMultiplicity.jf ∘ ofComplex) (τ : ℂ))) 0 =
+        cuspOrder Γ N γ (jCoordinateOver Γ ℂ) := by
+  obtain ⟨c, hc, he⟩ := exists_raw_j_derivative_formula
+  have hg : cuspFunction N (fun τ : ℍ => deriv (JMultiplicity.jf ∘ ofComplex) (τ : ℂ))
+      =ᶠ[𝓝[≠] (0 : ℂ)]
+        (fun q => c * cuspFunction N (E₄ : ℍ → ℂ) q ^ 2 *
+          cuspFunction N (E₆ : ℍ → ℂ) q / cuspFunction N ModularForm.discriminant q) := by
+    filter_upwards [self_mem_nhdsWithin] with q hq
+    simp only [cuspFunction, Function.Periodic.cuspFunction_eq_of_nonzero _ _ hq,
+      Function.comp_apply]
+    exact he _
+  have h4 := (analyticAt_levelOne_cuspFunction N E₄).meromorphicAt
+  have h6 := (analyticAt_levelOne_cuspFunction N E₆).meromorphicAt
+  have hd : MeromorphicAt (cuspFunction N ModularForm.discriminant) 0 := by
+    simpa only [CuspForm.coe_discriminant] using
+      (analyticAt_levelOne_cuspFunction N (CuspForm.discriminant : ModularForm 𝒮ℒ 12)).meromorphicAt
+  have hm := (((MeromorphicAt.const c 0).mul (h4.pow 2)).mul h6).div hd
+  refine ⟨hm.congr hg.symm, ?_⟩
+  rw [meromorphicOrderAt_congr hg]
+  change meromorphicOrderAt (((fun _ : ℂ => c) * (cuspFunction N (E₄ : ℍ → ℂ)) ^ 2 *
+    cuspFunction N (E₆ : ℍ → ℂ)) / cuspFunction N ModularForm.discriminant) 0 = _
+  rw [meromorphicOrderAt_div (((MeromorphicAt.const c 0).mul (h4.pow 2)).mul h6) hd,
+    meromorphicOrderAt_mul ((MeromorphicAt.const c 0).mul (h4.pow 2)) h6,
+    meromorphicOrderAt_mul (MeromorphicAt.const c 0) (h4.pow 2), meromorphicOrderAt_pow h4,
+    meromorphicOrderAt_const, if_neg hc,
+    cusp_order_zero_of_tendsto_one N E₄ JMultiplicity.tendsto_E₄_atImInfty,
+    cusp_order_zero_of_tendsto_one N E₆ CuspWeightCriterion.tendsto_E6_atImInfty,
+    cuspOrder_jCoordinate N hT γ]
+  simp
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

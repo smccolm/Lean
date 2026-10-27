@@ -1,0 +1,1399 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-charts-divisors-promotion-route-740.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-finite-charts-divisors-promotion-route-740.json",
+      "sha256": "ABB411F16D2524CBD3BD8A872699E0E75B13E6F1B985F2BB676CE1690AD3D6E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticDivisorMoving.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneAnalyticDivisorMoving.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticDivisorMoving.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneAnalyticDivisorMoving.lean.txt",
+      "sha256": "72C4FC0809ADBC9039AEB2924B63B85888B0EC2B0ED915A280852B07EE42E949"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticDivisorMoving.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneAnalyticDivisorMoving.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorMovingAudit1.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneDivisorMovingAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorMovingAudit1.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneDivisorMovingAudit1.lean.txt",
+      "sha256": "E434CE62AFCD01C5CCA822847634E35E18B8FF299F2AB62F1CE881948D2DECE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorMovingAudit1.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneDivisorMovingAudit1.log",
+      "sha256": "932815C124E29EA3B9DC81252C932C6C70DFF67850ADDFE60B4A75F02D344F96"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorMovingDependencyAudit1.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneDivisorMovingDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorMovingDependencyAudit1.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneDivisorMovingDependencyAudit1.lean.txt",
+      "sha256": "348425CE7394B763A85E5DA21AC88BB86CB1C350C96A716EFB84FEEF4F628C94"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorMovingDependencyAudit1.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneDivisorMovingDependencyAudit1.log",
+      "sha256": "6091565D943AE99FC2D0F27D00AFDD3B325110866E3F6639079752444118744D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorMovingScratchOwnership738.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneDivisorMovingScratchOwnership738.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorMovingScratchOwnership738.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneDivisorMovingScratchOwnership738.lean.txt",
+      "sha256": "B57AE30397A7A646DADAD657134439A9621FE5FD8398B8BF58B5D13DA2DE43F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorMovingScratchOwnership738.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneDivisorMovingScratchOwnership738.log",
+      "sha256": "8CF4D86476899B71B0041C672445D312D782874B7307EAEB98426D6C39AD3AEF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEllipticFibers.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneEllipticFibers.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEllipticFibers.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneEllipticFibers.lean.txt",
+      "sha256": "8AA65B672C2AA03895160CC37947FD8D6100930AB06A02C08AFC7A3770CEA1A1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEllipticFibers.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneEllipticFibers.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamification.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneExactRamification.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamification.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneExactRamification.lean.txt",
+      "sha256": "37AEF9E754763EEAF8270134114A2B6B9A2BA0296689AF1D07DD2B320B91D396"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamification.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneExactRamification.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamificationAudit1.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneExactRamificationAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamificationAudit1.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneExactRamificationAudit1.lean.txt",
+      "sha256": "A85163DF39CCB787C56702D2FB1FD1FE7A323A6B0C3BC4DBAF80564651C1EF8E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamificationAudit1.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneExactRamificationAudit1.log",
+      "sha256": "F22CA7A16FDF37BC183FA7E0A99418119730E15BE0A91BA230BB41E43886BDE1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamificationDependencyAudit1.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneExactRamificationDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamificationDependencyAudit1.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneExactRamificationDependencyAudit1.lean.txt",
+      "sha256": "D90B98BA7F7AD30703D931EE6304C27A424F12AFAFD80A949D92EDC8F6EDD71B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamificationDependencyAudit1.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneExactRamificationDependencyAudit1.log",
+      "sha256": "9DE9DFF887970C6FC6844010844EF893C4E1DCC8E19D61644991B0AFB6C27FD4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamificationScratchOwnership731.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneExactRamificationScratchOwnership731.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamificationScratchOwnership731.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneExactRamificationScratchOwnership731.lean.txt",
+      "sha256": "F491767540E56E52D655075A704AF7F3F5CC5DB8E05564EE355D81684C9ACE2E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamificationScratchOwnership731.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneExactRamificationScratchOwnership731.log",
+      "sha256": "0AE989B53D795A7CAB6215A3515B87EAB73BD74AF36B737970823E9E35623293"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParameters.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneFiniteChartParameters.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParameters.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneFiniteChartParameters.lean.txt",
+      "sha256": "F14310C6387FECC826A00627EC0CB80EB46FC9EEB6431B62F66B00BAE4CCB321"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParameters.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneFiniteChartParameters.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParametersAudit1.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneFiniteChartParametersAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParametersAudit1.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneFiniteChartParametersAudit1.lean.txt",
+      "sha256": "1E57046C11DA8EEE875B34D0B748EF9D3D428D14C82EE8BC0FDB1FC8FCAF7989"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParametersAudit1.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneFiniteChartParametersAudit1.log",
+      "sha256": "2B7813310C52EA9CB712ABE7373B2F4B28A4AD1617B5ADA21C789C36BDBE01F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParametersDependencyAudit1.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneFiniteChartParametersDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParametersDependencyAudit1.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneFiniteChartParametersDependencyAudit1.lean.txt",
+      "sha256": "B3DE456516DA224D0AF0303CBEA8C0B2513E01484A75D8AF80D9F93BED72FE55"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParametersDependencyAudit1.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneFiniteChartParametersDependencyAudit1.log",
+      "sha256": "6F3ADEB773FE8EBF39D8ADBE725322009B0F1C199AF1E6A9B5C0830A3427DEB5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParametersScratchOwnership735.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneFiniteChartParametersScratchOwnership735.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParametersScratchOwnership735.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneFiniteChartParametersScratchOwnership735.lean.txt",
+      "sha256": "B3A2135AE701F9A5FD424C5B64B47CCD00CB40A56DC6B29FEEC8AC1C4B031AE5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParametersScratchOwnership735.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneFiniteChartParametersScratchOwnership735.log",
+      "sha256": "2FBBB1CF48990D14BBE3F74150631FAFE357CDA2841CBA553DFA6D2E40871A8C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNearbyOrders.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneNearbyOrders.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNearbyOrders.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneNearbyOrders.lean.txt",
+      "sha256": "53F7AF0C849D1B91E4D91D73F02347981FE65678C6715C4CC9B5E8A8C048E760"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNearbyOrders.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneNearbyOrders.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrescribedPlaceOrders.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOnePrescribedPlaceOrders.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrescribedPlaceOrders.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOnePrescribedPlaceOrders.lean.txt",
+      "sha256": "71FC01EA242FD8CB40C348D0D91A7009EAF576CCE1D667831C34085777C90B6D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrescribedPlaceOrders.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOnePrescribedPlaceOrders.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrders.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrders.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrders.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrders.lean.txt",
+      "sha256": "1F85B7090D8BE892D5B5E06A42FBBCBF5875F3EE60BCE237A13E4B206ADC555C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrders.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrders.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersAudit1.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrdersAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersAudit1.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrdersAudit1.lean.txt",
+      "sha256": "70E94B169D64918CCEB5739278F7299636CF30BE77D64059E4301B7955C6628F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersAudit1.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrdersAudit1.log",
+      "sha256": "FC335AC6E2E23306BAD565113562D1D9FCCE06E19B4194AB81132EB2493EB84F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersAudit1b.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrdersAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersAudit1b.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrdersAudit1b.lean.txt",
+      "sha256": "70E94B169D64918CCEB5739278F7299636CF30BE77D64059E4301B7955C6628F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersAudit1b.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrdersAudit1b.log",
+      "sha256": "FC335AC6E2E23306BAD565113562D1D9FCCE06E19B4194AB81132EB2493EB84F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersDependencyAudit1.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrdersDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersDependencyAudit1.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrdersDependencyAudit1.lean.txt",
+      "sha256": "8A16AF8EC84BA70F4F114C6ABD3A8416FD0A51B9FA9451AE1877197AE8522F7E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersDependencyAudit1.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrdersDependencyAudit1.log",
+      "sha256": "A5AE695522DFD7940700614B4F380254D0FC1D1304DD4768C2EECF9E3A879C33"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersDependencyAudit1b.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrdersDependencyAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersDependencyAudit1b.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrdersDependencyAudit1b.lean.txt",
+      "sha256": "8A16AF8EC84BA70F4F114C6ABD3A8416FD0A51B9FA9451AE1877197AE8522F7E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersDependencyAudit1b.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrdersDependencyAudit1b.log",
+      "sha256": "A5AE695522DFD7940700614B4F380254D0FC1D1304DD4768C2EECF9E3A879C33"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersScratchOwnership734.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrdersScratchOwnership734.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersScratchOwnership734.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrdersScratchOwnership734.lean.txt",
+      "sha256": "FD8D21BBE73F356289FCB8ADBAC0BDF1E89BDB41E8504128E83A48F4DB74AA0A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersScratchOwnership734.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrdersScratchOwnership734.log",
+      "sha256": "E2A3FC11D367E6E755C9BB8AC67ACA022F375EAE54B57C20ED47064CB40BED63"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersScratchOwnership734b.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrdersScratchOwnership734b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersScratchOwnership734b.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrdersScratchOwnership734b.lean.txt",
+      "sha256": "FD8D21BBE73F356289FCB8ADBAC0BDF1E89BDB41E8504128E83A48F4DB74AA0A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersScratchOwnership734b.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedChartOrdersScratchOwnership734b.log",
+      "sha256": "E2A3FC11D367E6E755C9BB8AC67ACA022F375EAE54B57C20ED47064CB40BED63"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedMeromorphicOrder.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedMeromorphicOrder.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedMeromorphicOrder.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedMeromorphicOrder.lean.txt",
+      "sha256": "CFE079129198AC1E9893E773A117FBBA11379E37D9719C27D7000395AE5AF758"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedMeromorphicOrder.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedMeromorphicOrder.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularAudit1.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedRegularAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularAudit1.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedRegularAudit1.lean.txt",
+      "sha256": "073104C3E1EBC0A4A10B5109DC181530625620FFA0D27803A7DAFE818220F8F9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularAudit1.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedRegularAudit1.log",
+      "sha256": "3152660F469C7E1DE1E5B2EA0DADA8D34EE1481AF4655D2A70AE9511E39F2426"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularAudit1b.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedRegularAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularAudit1b.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedRegularAudit1b.lean.txt",
+      "sha256": "073104C3E1EBC0A4A10B5109DC181530625620FFA0D27803A7DAFE818220F8F9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularAudit1b.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedRegularAudit1b.log",
+      "sha256": "02C65F9209C71E294705365FA1CCC49C143A2FC1529FE833A8537BE376F26C99"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularDependencyAudit1.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedRegularDependencyAudit1.lean.txt",
+      "sha256": "B6F801378D8DFD2B34C5C3ACF4D2891D4948632D60B09DF9872C0F790BE83ED0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularDependencyAudit1b.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedRegularDependencyAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularDependencyAudit1b.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedRegularDependencyAudit1b.lean.txt",
+      "sha256": "B6F801378D8DFD2B34C5C3ACF4D2891D4948632D60B09DF9872C0F790BE83ED0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularDependencyAudit1b.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedRegularDependencyAudit1b.log",
+      "sha256": "9C58F982DFC5AC6DE68CB2FDB347C933650CF10AED6BB3FC7DD3144F03E96187"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularOrder.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedRegularOrder.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularOrder.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedRegularOrder.lean.txt",
+      "sha256": "E7A7CE6AC845743556A328C363EDC4257FD71DB9946FE756C14860678FD8BC2B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularOrder.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedRegularOrder.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularParameter.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedRegularParameter.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularParameter.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedRegularParameter.lean.txt",
+      "sha256": "691A1CC3312A6F559CDEADF4F3F8E7C7013E274B43FFBDD576EFA61F08EBE72A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularParameter.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedRegularParameter.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularScratchOwnership733b.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedRegularScratchOwnership733b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularScratchOwnership733b.lean",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedRegularScratchOwnership733b.lean.txt",
+      "sha256": "60DFA0FE52233DB999240A947BAB72BC365789D2581D49EE7FE04021A22712A9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularScratchOwnership733b.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/SourceGammaOneRamifiedRegularScratchOwnership733b.log",
+      "sha256": "F51892F87CED077F97899D203D7F8B29163DDEAABA20F17916A1ACECDD3C51CF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\compare_reuse_heads_741.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/compare_reuse_heads_741.py",
+      "sha256": "E7A5254AEC31DF9F7992AD2D26C7E939E99667F716344EE201282A0515FB7282"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers734.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/consumers734.txt",
+      "sha256": "BFBDC07CD41991B9B551E3E74C9C1301E3F84D588DB9AEFB54C48741557879E6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_global_period_inputs_736c.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/download_gamma_one_global_period_inputs_736c.py",
+      "sha256": "87D5EF85BA923C89F0FDB271F685247E6F2D8B3B93855DAE76533A729D61326D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_global_period_route_736.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/download_gamma_one_global_period_route_736.py",
+      "sha256": "300BD9654CC075AC58CB4669BA8D062A4A98256FFD027C63E385D423ED681251"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_global_period_route_736b.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/download_gamma_one_global_period_route_736b.py",
+      "sha256": "151079665DFD7ED5E11042093B08A46E8D9D3CED17E4BA15CCEE743E24C9F4D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_period_alternative_739.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/download_gamma_one_period_alternative_739.py",
+      "sha256": "0F862813D130669902F037D7B6FE68FA32EA6BA7B0C87F7D19C80BE792DB7B42"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_period_alternative_739b.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/download_gamma_one_period_alternative_739b.py",
+      "sha256": "28B1449358CCB785981CB83120BB2CE5E4BAF191898BA850110538AE42B7868E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation734-console.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/foundation734-console.log",
+      "sha256": "CB5CE054F188AE93B2973C904B3979556117E61E47B53D7CBB177CA2B64F36D8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-audit-route-738.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-audit-route-738.json",
+      "sha256": "924EE176F9C1F45DA0D3DE704162E70CF93C80B420133B953876FE1C177EFA28"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-route-738.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-route-738.json",
+      "sha256": "C83FAEDF420057E2A7FB7B8D2BB7EFB9D2B6B82F1FCAB160D7CBC58773482B04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-exact-ramification-audit-route-731.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-exact-ramification-audit-route-731.json",
+      "sha256": "F3B9D11AF73EFA23A28D56953286931EA68BD9DFDC3E0297D938B294D32852EE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-exact-ramification-route-731.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-exact-ramification-route-731.json",
+      "sha256": "50A00E7158D12EA3229B3D7A97365B3257C48B357E4FE7FB7911B81086F1B2B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-chart-parameters-audit-route-735.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-finite-chart-parameters-audit-route-735.json",
+      "sha256": "71986E7ADABC3C9DBF32EF04124979AAADD78019A8A962BB5106ADC06210B5D8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-chart-parameters-route-735.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-finite-chart-parameters-route-735.json",
+      "sha256": "864834C80B18CAC1E71F69E015A1150BC7871A85C93AFFC5D9A05E8CF0548CF8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-chart-orders-audit-route-734.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-chart-orders-audit-route-734.json",
+      "sha256": "BAEC84AAA0E4E3214618FD35F18C21E6DF5863CEC5A8097FA4009616E1482543"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-chart-orders-audit-route-734b.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-chart-orders-audit-route-734b.json",
+      "sha256": "369FF42BF8B7A9A90F254D8DA5004C7F942C23766ABE54D60D60FD2B15E7DC04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-chart-orders-route-734.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-chart-orders-route-734.json",
+      "sha256": "A53DE2C71AB00CCF6BEE885448EDFD8983EB51EE98A5FC6C35CCF0F0D2324E26"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-regular-audit-route-733.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-regular-audit-route-733.json",
+      "sha256": "82EDCBF834084D1EFDEC73A2DA67D156E54E83C605887580A0F1A26114E4CD22"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-regular-route-733.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-regular-route-733.json",
+      "sha256": "487D57CE836B7061C4CDD7050257D7E2F6468286817649EE9C0B5843F27D8344"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\inspect_reuse_primary_741c.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/inspect_reuse_primary_741c.py",
+      "sha256": "02D446B5C228259E9CB4B367AB52CC5D92F491356C8CB30BDC962888CD15A57B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\inspect_reuse_subtrees_741b.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/inspect_reuse_subtrees_741b.py",
+      "sha256": "176F996720BB8C0B413AB4AAB55C8BF1B29DB69427461CAB7D2984373ABE7E2C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\inspect_reuse_updates_741.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/inspect_reuse_updates_741.py",
+      "sha256": "C1B365CD2A843EF4FA3CEA3735E6E9E5955D13EEBE235ACB501C945F4653B619"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules734.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/modules734.json",
+      "sha256": "5B1F42CC6FF4E4BA11647753CC6CF75458498459A610D81D492C27BCC43F1605"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper734-console.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/paper734-console.log",
+      "sha256": "92E26C58175462D4986BFF6496DB4DF74FACA081CB12EC56F0BB799FDB82D0E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_divisor_moving_738.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/prepare_gamma_one_divisor_moving_738.py",
+      "sha256": "4D1591E7C930EF20091C0C9B21D50D33BE5C67746C323814D44B821EC6AA7DCE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_divisor_moving_audit_738.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/prepare_gamma_one_divisor_moving_audit_738.py",
+      "sha256": "879B880BCF73F9E5CA490275E62B996FBA146127B8744C10BB1986E98A548598"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_exact_ramification_audit_731.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/prepare_gamma_one_exact_ramification_audit_731.py",
+      "sha256": "2D017EAED683B19DA4E3CAA1A7CC08F82B4C9A4B3C8805BEA2AE1249E538FE33"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_finite_chart_parameters_audit_735.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/prepare_gamma_one_finite_chart_parameters_audit_735.py",
+      "sha256": "5B42234B4BDE629D79DF6A4B5F1EB88A0F09A162AA9E0072EBDA46F887136023"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_ramified_chart_orders_734.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/prepare_gamma_one_ramified_chart_orders_734.py",
+      "sha256": "F7014B654D46A8E085B163007C01A35F05EECDDAC9DC735F68C73F1DE9913061"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_ramified_chart_orders_audit_734.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/prepare_gamma_one_ramified_chart_orders_audit_734.py",
+      "sha256": "C0E545BFA2BEE9B641B8333685E65C142AE21E6EA64E52F9BEC5A436B9269D4A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_ramified_finite_charts_promotion_8584.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/prepare_gamma_one_ramified_finite_charts_promotion_8584.py",
+      "sha256": "5680ABEE0BE1C4737DA75F4D0146AF325EA1F55274F9B6AAC892626D3DF0CF99"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_ramified_regular_733.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/prepare_gamma_one_ramified_regular_733.py",
+      "sha256": "FCFBB4C717EFE2FE1BEAA67169D9E33BCF159DD7FD4628AC38CA774A8AFBAFFD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_ramified_regular_audit_733.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/prepare_gamma_one_ramified_regular_audit_733.py",
+      "sha256": "5D1F01C0861169F9CC7D0BA8CEC8068277AB3799BE1D0F6BFC37FAD920134797"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record734.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/record734.py",
+      "sha256": "556DC289849860643DE147F201FB37A6D4851901305D85FE4D933CDB393856B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_divisor_moving_738.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/record_gamma_one_divisor_moving_738.py",
+      "sha256": "7AB730C333753A5DB6B9D2C3C25FC8FD6BEA81120E92C7DBF7DF400B85149DDF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_exact_ramification_731.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/record_gamma_one_exact_ramification_731.py",
+      "sha256": "1F5D1DAB7AD6D61F3EC83E8ABC32C3308798D470D32DB3F30BE7D202A1B04574"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_finite_chart_parameters_735.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/record_gamma_one_finite_chart_parameters_735.py",
+      "sha256": "0A93EC8ED24D41D7FECFF448370DFDB5B92DFEE62B59F0013C13B4D53690CFD8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_ramified_chart_orders_734.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/record_gamma_one_ramified_chart_orders_734.py",
+      "sha256": "6F139F5BA4813B928522E95A04CD789F894B5F3BBD20D7F152FCDC44E6A12970"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_ramified_chart_orders_734b.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/record_gamma_one_ramified_chart_orders_734b.py",
+      "sha256": "52448B322FBC8576D21F93E5EBE204CAE6483FD7BFE9321BFDAEC6DB3391155A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_ramified_regular_733.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/record_gamma_one_ramified_regular_733.py",
+      "sha256": "6267171AC1E653ABE4E1434CADAC67A6978522CEF0AA3D90714C05EA830E68CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_ramified_regular_733b.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/record_gamma_one_ramified_regular_733b.py",
+      "sha256": "A69EA08C793DF0D2CC120E6ED9554694F1A12478964B3224BB2389198F29D0C0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_reuse_refresh_741.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/record_reuse_refresh_741.py",
+      "sha256": "69487A4C66C2838B626836B8690F014EA1FE68D24FBE5F12DEB36B40A4BDB0E0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\refresh_reuse_heads_741.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/refresh_reuse_heads_741.py",
+      "sha256": "729CB6FDA500DD67E12CF69D3A6DFC7C998C319344032AFF36DB77E9A1A1126E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations734.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/registrations734.json",
+      "sha256": "8C3C1ED9F16341BA4DA7C3C3032013D88FD0F07EEA294E4546847F02654DA823"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section734.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/section734.txt",
+      "sha256": "694467642ADAA42E868D85046F1D12D0558F5C844D42F4A7A3D1F32D460C321E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-moving-1-audit-config.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/source-gamma-one-divisor-moving-1-audit-config.json",
+      "sha256": "0ACE39F4672D3DBE0CAFDE61FC9B513993CCC7D75CE83D7381F712E75E06E986"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-moving-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/source-gamma-one-divisor-moving-1-scratch-receipt.json",
+      "sha256": "A88376EC334AB34572E6E20E05245BAE932A7E0FAEFC77F87480E28E18AEA1B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-exact-ramification-1-audit-config.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/source-gamma-one-exact-ramification-1-audit-config.json",
+      "sha256": "F5FCDF280D69A18AB0E765AE637C2B9C427C1DC6E97B87DAC21AB87F8D11FBA3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-exact-ramification-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/source-gamma-one-exact-ramification-1-scratch-receipt.json",
+      "sha256": "D538B51BD02993D8333DC989DCEED95AF9A699A50B5A21014A8A5B445645E0B3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-finite-chart-parameters-1-audit-config.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/source-gamma-one-finite-chart-parameters-1-audit-config.json",
+      "sha256": "375F1EBE3663FBE7EAE710BD45EC6CDBC269E2E104FFAE001639317C7407694A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-finite-chart-parameters-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/source-gamma-one-finite-chart-parameters-1-scratch-receipt.json",
+      "sha256": "97484611A1C2F818629C37CE7D2711BF99E99A6EEAEE8F7F39541CBB2B2B13C2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-ramified-chart-orders-1-audit-config.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/source-gamma-one-ramified-chart-orders-1-audit-config.json",
+      "sha256": "308DAB27F0F84961C6945DE32CEA61BFB4F736B76735427EAD83C93AE8456BF0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-ramified-chart-orders-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/source-gamma-one-ramified-chart-orders-1-scratch-receipt.json",
+      "sha256": "802D1709BBC69125B52597031CCD22553AB7967FB3F8722DDA1969B318359FD5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-ramified-chart-orders-1b-audit-config.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/source-gamma-one-ramified-chart-orders-1b-audit-config.json",
+      "sha256": "308DAB27F0F84961C6945DE32CEA61BFB4F736B76735427EAD83C93AE8456BF0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-ramified-chart-orders-1b-scratch-receipt.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/source-gamma-one-ramified-chart-orders-1b-scratch-receipt.json",
+      "sha256": "45F9005E2039F1FADD28CDC047729D1B40163BBC090BCE5D5AE995D3AFE84035"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-ramified-regular-1-audit-config.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/source-gamma-one-ramified-regular-1-audit-config.json",
+      "sha256": "0B450D3BB1974C3CF72A212C8474D1ECA15A5AA528E1E2565CE1A951AAF37D82"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-ramified-regular-1b-audit-config.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/source-gamma-one-ramified-regular-1b-audit-config.json",
+      "sha256": "0B450D3BB1974C3CF72A212C8474D1ECA15A5AA528E1E2565CE1A951AAF37D82"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-ramified-regular-1b-scratch-receipt.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/source-gamma-one-ramified-regular-1b-scratch-receipt.json",
+      "sha256": "9F93976A802868C297AE919E66CCF5AB1F2EFA6BECC002013F7C66965838E6D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status734.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/status734.txt",
+      "sha256": "AE893AEE32F43614F8C1869495E51BE419B7DD5FC922CEE4449265934F0DEB5F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-failed-738a\\failure.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-failed-738a/failure.json",
+      "sha256": "408392894BC9B94B947285174C02A3C41CF57DDC25922D61CE1B13FDAEB75153"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-failed-738a\\SourceGammaOnePrescribedPlaceOrders.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-failed-738a/SourceGammaOnePrescribedPlaceOrders.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-failed-738a\\SourceGammaOnePrescribedPlaceOrders.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-failed-738a/SourceGammaOnePrescribedPlaceOrders.lean.txt",
+      "sha256": "ADB5330C3638D34B24AE08688171180F067C2C00FB85DED57B23A3601533E1D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-failed-738a\\SourceGammaOnePrescribedPlaceOrders.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-failed-738a/SourceGammaOnePrescribedPlaceOrders.log",
+      "sha256": "E97E13498FC9002452395E2029D4FFC7F28D9AFDD777AC9C5FAB9B2C845FD510"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-failed-738b\\failure.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-failed-738b/failure.json",
+      "sha256": "25563C08DACB6E5A30E92441E254C74D9FBE27167C56F4C022A13E251598B015"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-failed-738b\\SourceGammaOneAnalyticDivisorMoving.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-failed-738b/SourceGammaOneAnalyticDivisorMoving.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-failed-738b\\SourceGammaOneAnalyticDivisorMoving.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-failed-738b/SourceGammaOneAnalyticDivisorMoving.lean.txt",
+      "sha256": "04A79AE9197902FBC67AABF1228C57E5A6BF30C9EA1A84D2B82C7D364D829112"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-failed-738b\\SourceGammaOneAnalyticDivisorMoving.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-failed-738b/SourceGammaOneAnalyticDivisorMoving.log",
+      "sha256": "94C2D667408D0E676C165FA15C0DB38DC9F53690B9DF1AA8AE5BF2FE0609C17E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-failed-738c\\failure.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-failed-738c/failure.json",
+      "sha256": "6E7A4AF871C2BBADFCB8DAAE411B9D442FDC40F6DBC9D25116C59875F3F07348"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-failed-738c\\SourceGammaOneAnalyticDivisorMoving.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-failed-738c/SourceGammaOneAnalyticDivisorMoving.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-failed-738c\\SourceGammaOneAnalyticDivisorMoving.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-failed-738c/SourceGammaOneAnalyticDivisorMoving.lean.txt",
+      "sha256": "34B03FF3237F4E7CAD594980CAE86E3148E09E9B7597FE025F3F20CBB60D2E92"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-failed-738c\\SourceGammaOneAnalyticDivisorMoving.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-failed-738c/SourceGammaOneAnalyticDivisorMoving.log",
+      "sha256": "D448F47D6B382D9E22F2FD3F63893583AB15AEC530179068F9D0B861053EEA1D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-failed-738d\\failure.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-failed-738d/failure.json",
+      "sha256": "35F189AD8E6DE4B70BD693C636551B8FA7D42DD2AA128E1568D563D74E65F70F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-failed-738d\\SourceGammaOneAnalyticDivisorMoving.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-failed-738d/SourceGammaOneAnalyticDivisorMoving.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-failed-738d\\SourceGammaOneAnalyticDivisorMoving.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-failed-738d/SourceGammaOneAnalyticDivisorMoving.lean.txt",
+      "sha256": "A7562C98BE75D2838CF9E19719908D852AEEBEDB6D018B233649A0443820D1AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-failed-738d\\SourceGammaOneAnalyticDivisorMoving.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-failed-738d/SourceGammaOneAnalyticDivisorMoving.log",
+      "sha256": "BBC96A2422928DA3507CEA430ED1442077525B9AF7D9D7F50974C0A366ECFD23"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-failed-738e\\failure.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-failed-738e/failure.json",
+      "sha256": "1EBD1ADE73104E9525C3C680F9454C9C8A239974ACE1F134214AADECF79B81B5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-failed-738e\\SourceGammaOneAnalyticDivisorMoving.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-failed-738e/SourceGammaOneAnalyticDivisorMoving.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-failed-738e\\SourceGammaOneAnalyticDivisorMoving.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-failed-738e/SourceGammaOneAnalyticDivisorMoving.lean.txt",
+      "sha256": "CA16F5D62E7EA1BCD8D548FE9987C28DB1F2D371E346003B708044AE52A6FAB0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-divisor-moving-failed-738e\\SourceGammaOneAnalyticDivisorMoving.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-divisor-moving-failed-738e/SourceGammaOneAnalyticDivisorMoving.log",
+      "sha256": "C37BDA596122FDCB37C79AAB14976CE83182D0344B71351E4A11ED947584C4E9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-exact-ramification-failed-731a\\failure.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-exact-ramification-failed-731a/failure.json",
+      "sha256": "164A1E9562071F2F7C0A71C4AE6C0ACB123D49BDFD2C465F0C13681024FF0FFA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-exact-ramification-failed-731a\\SourceGammaOneExactRamification.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-exact-ramification-failed-731a/SourceGammaOneExactRamification.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-exact-ramification-failed-731a\\SourceGammaOneExactRamification.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-exact-ramification-failed-731a/SourceGammaOneExactRamification.lean.txt",
+      "sha256": "1386BD4B94A64378497AAA45FF43B79A23E9431FF6EA0E32B2C002626346A7DE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-exact-ramification-failed-731a\\SourceGammaOneExactRamification.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-exact-ramification-failed-731a/SourceGammaOneExactRamification.log",
+      "sha256": "2F071954076957DEF23B81B5FF97C18B9F406477BDE6402F8A21CD7FDECFB1E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-exact-ramification-failed-731b\\failure.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-exact-ramification-failed-731b/failure.json",
+      "sha256": "0423249A0A2F295547DE65E9690EF8F7615CA1BC0ECBB035BF6DFC1029149968"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-exact-ramification-failed-731b\\SourceGammaOneExactRamification.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-exact-ramification-failed-731b/SourceGammaOneExactRamification.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-exact-ramification-failed-731b\\SourceGammaOneExactRamification.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-exact-ramification-failed-731b/SourceGammaOneExactRamification.lean.txt",
+      "sha256": "636DB2B17ADEA6F1932795D0CB6344F344E34D9AA64F68DD07319E56B722CC35"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-exact-ramification-failed-731b\\SourceGammaOneExactRamification.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-exact-ramification-failed-731b/SourceGammaOneExactRamification.log",
+      "sha256": "FD08A75C456298FBF27DA1F1D00CB3B0567CC3622B5F26D2081DFE06A5FB87BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-chart-parameters-failed-735a\\failure.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-finite-chart-parameters-failed-735a/failure.json",
+      "sha256": "54C45295BACD3C24B5FB983C3DF8D886B32D0EFC2AD0A455CC997D36D8F92DE3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-chart-parameters-failed-735a\\SourceGammaOneFiniteChartParameters.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-finite-chart-parameters-failed-735a/SourceGammaOneFiniteChartParameters.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-chart-parameters-failed-735a\\SourceGammaOneFiniteChartParameters.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-finite-chart-parameters-failed-735a/SourceGammaOneFiniteChartParameters.lean.txt",
+      "sha256": "10B8BAC59EFE51D6704029B992F2BA5471748DE9ED32B0BBC9F8314B940FEA2A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-finite-chart-parameters-failed-735a\\SourceGammaOneFiniteChartParameters.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-finite-chart-parameters-failed-735a/SourceGammaOneFiniteChartParameters.log",
+      "sha256": "CB405438D1FB5218AEB5639FA0B8810707B03D5B95C90AE8BC8BABCDD06B498A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-download-failed-736a\\download_gamma_one_global_period_route_736.py",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-global-period-download-failed-736a/download_gamma_one_global_period_route_736.py",
+      "sha256": "300BD9654CC075AC58CB4669BA8D062A4A98256FFD027C63E385D423ED681251"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-download-failed-736a\\failure.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-global-period-download-failed-736a/failure.json",
+      "sha256": "243C57EF86679E7E747AB3A88EFFFD9CC8EBD81EE6F7BD26BC17A77831BD2F8B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-route-reuse-736\\Def_ModularCurve_ComplexPlaceDictionaryOf.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-global-period-route-reuse-736/Def_ModularCurve_ComplexPlaceDictionaryOf.lean.txt",
+      "sha256": "DD65AC866F371BB1704409250C5931DBD797DFDA5686AF0A8F3557797A58A5C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-route-reuse-736\\followup-snapshots.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-global-period-route-reuse-736/followup-snapshots.json",
+      "sha256": "F66D8061A994CFEEB5D9F16C54DEF02626066E234B2FFF18553506385AEE2561"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-route-reuse-736\\route-assessment.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-global-period-route-reuse-736/route-assessment.json",
+      "sha256": "F17F3CCF3228BEC97548BF60236DD8FBCDA4345F49AB517394CC310ABCA6136C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-route-reuse-736\\S_ModularCurve_ComplexPlaceDictionaryOf_exists_cuspForm_mul_exp_periodOf_eq_one_of_abelJacobi_mem_periodLatticeOf_gammaH.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-global-period-route-reuse-736/S_ModularCurve_ComplexPlaceDictionaryOf_exists_cuspForm_mul_exp_periodOf_eq_one_of_abelJacobi_mem_periodLatticeOf_gammaH.lean.txt",
+      "sha256": "D75B0AD15C1CFFF309D1564057247E3BFE0AB9553B352532F7DC4C12CE807500"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-route-reuse-736\\S_ModularCurve_ComplexPlaceDictionaryOf_exists_meromorphic_meromorphicOrderAt_eq_of_abelJacobi_mem_periodLatticeOf_gammaH.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-global-period-route-reuse-736/S_ModularCurve_ComplexPlaceDictionaryOf_exists_meromorphic_meromorphicOrderAt_eq_of_abelJacobi_mem_periodLatticeOf_gammaH.lean.txt",
+      "sha256": "12F5DE055DDA8E2DAA172DEC6E16291438DDC21919DF126B8F3B92F68D918182"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-route-reuse-736\\S_ModularCurve_ComplexPlaceDictionaryOf_isPrincipal_of_abelJacobi_mem_periodLatticeOf_gammaH.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-global-period-route-reuse-736/S_ModularCurve_ComplexPlaceDictionaryOf_isPrincipal_of_abelJacobi_mem_periodLatticeOf_gammaH.lean.txt",
+      "sha256": "0AF5B5F15D11785C801D5A59ED5750E426E014568BA3B1384062B811104DBD7D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-route-reuse-736\\S_ModularCurve_ord_eq_zero_of_not_mem_of_realizeOf_tendsto.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-global-period-route-reuse-736/S_ModularCurve_ord_eq_zero_of_not_mem_of_realizeOf_tendsto.lean.txt",
+      "sha256": "4691669E443815F91075CC91CF2552C5A8FCC61DF61AAB323FFC8D1ADCCB3D9A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-route-reuse-736\\snapshots.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-global-period-route-reuse-736/snapshots.json",
+      "sha256": "908AAF488765C053B2A64F4FB4AE64B7B7C5312A7EB1D5FEF5D6A1CBA00AAF60"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\followup-snapshots.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-period-alternative-reuse-739/followup-snapshots.json",
+      "sha256": "ADE7682735C8887BF2E3C0E23EBA44A1B67D0DAB5ECBE557421A28DDD1CAB294"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\route-assessment.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-period-alternative-reuse-739/route-assessment.json",
+      "sha256": "3605562C3363C79E1414FFBF059E904987B26E9C91401410DEB19D4B6744ED71"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_ComplexPlaceDictionaryOf_exists_norm_multiplier_eq_one_and_abelJacobi_add_petersson_mem_periodLatticeOf_gammaH.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-period-alternative-reuse-739/S_ModularCurve_ComplexPlaceDictionaryOf_exists_norm_multiplier_eq_one_and_abelJacobi_add_petersson_mem_periodLatticeOf_gammaH.lean.txt",
+      "sha256": "856065DE6C18961515A875C6E8CFAB56438A824162F336F54EFBC81D44162E9E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_ComplexPlaceDictionaryOf_multiplier_eq_one_of_norm_eq_one_of_abelJacobi_mem_periodLatticeOf_gammaH.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-period-alternative-reuse-739/S_ModularCurve_ComplexPlaceDictionaryOf_multiplier_eq_one_of_norm_eq_one_of_abelJacobi_mem_periodLatticeOf_gammaH.lean.txt",
+      "sha256": "7AF7BB7BCFF7509EC7E0C5CF32FC959D6639086E310D1ECF514A9766E108234F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_exists_modularForm_eventuallyEq_div_of_meromorphic_of_finiteIndex.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-period-alternative-reuse-739/S_ModularCurve_exists_modularForm_eventuallyEq_div_of_meromorphic_of_finiteIndex.lean.txt",
+      "sha256": "F28EFDE829862B74E9C16279DC3A663AB2177EA9EA393974782E32DA2C250C08"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_exists_realizeOf_eventuallyEq_of_meromorphic_gammaH.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-period-alternative-reuse-739/S_ModularCurve_exists_realizeOf_eventuallyEq_of_meromorphic_gammaH.lean.txt",
+      "sha256": "C6561CE077162CE6B659C29A56C0554B30797D659854945AD6B4A1451008399E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_finrank_parabolicHoms_Gamma_le_two_mul_finrank_cuspForm.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-period-alternative-reuse-739/S_ModularCurve_finrank_parabolicHoms_Gamma_le_two_mul_finrank_cuspForm.lean.txt",
+      "sha256": "52DD8425F4C6B77660DF53462B9986033FC0768068FD5E525BE1EF10A4EB223A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_finrank_parabolicHoms_le_two_mul_finrank_cuspForm_of_isCongruenceSubgroup.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-period-alternative-reuse-739/S_ModularCurve_finrank_parabolicHoms_le_two_mul_finrank_cuspForm_of_isCongruenceSubgroup.lean.txt",
+      "sha256": "65F2D05FB4763D4E5899AF278EAAF4F90D1521A1441D40B8295669B8CA10CCAB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_finrank_parabolicHoms_le_two_mul_finrank_cuspForm_of_le_of_normal.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-period-alternative-reuse-739/S_ModularCurve_finrank_parabolicHoms_le_two_mul_finrank_cuspForm_of_le_of_normal.lean.txt",
+      "sha256": "EAA570F7264CF3DE01970E18B2310D2CB5A0BFA1AF24B2835F0FCC75E709E27F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\snapshots.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-period-alternative-reuse-739/snapshots.json",
+      "sha256": "0ABD40E8D45E0FC74095A674E60BE47F71F1D71E4887E3F18680F6AC1A2221E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-audit-wrapper-failed-733b\\failure.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-audit-wrapper-failed-733b/failure.json",
+      "sha256": "E8DAD664406375209D96F2EAC071C356E3A9028C750E125B1FE5B5B5F2BE98EA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-audit-wrapper-failed-733b\\wrapper.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-audit-wrapper-failed-733b/wrapper.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-audit-wrapper-failed-733b\\wrapper.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-audit-wrapper-failed-733b/wrapper.log",
+      "sha256": "68D34BA13632FE8727F68E1F77B07A2CDA00ECA7C4EC6022A22647258448D4F7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-chart-orders-dependency-refresh-734b\\refresh.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-chart-orders-dependency-refresh-734b/refresh.json",
+      "sha256": "23B961E6F0A2C5C61F663A29A8E43CBD5651E1EF971D2EDA34841C3853E02CA5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-chart-orders-dependency-refresh-734b\\SourceGammaOneNearbyOrders.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-chart-orders-dependency-refresh-734b/SourceGammaOneNearbyOrders.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-chart-orders-dependency-refresh-734b\\SourceGammaOneNearbyOrders.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-chart-orders-dependency-refresh-734b/SourceGammaOneNearbyOrders.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-chart-orders-dependency-refresh-734b\\SourceGammaOneRamifiedChartOrders.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-chart-orders-dependency-refresh-734b/SourceGammaOneRamifiedChartOrders.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-chart-orders-dependency-refresh-734b\\SourceGammaOneRamifiedChartOrders.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-chart-orders-dependency-refresh-734b/SourceGammaOneRamifiedChartOrders.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-chart-orders-dependency-refresh-734b\\SourceGammaOneRamifiedMeromorphicOrder.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-chart-orders-dependency-refresh-734b/SourceGammaOneRamifiedMeromorphicOrder.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-chart-orders-dependency-refresh-734b\\SourceGammaOneRamifiedMeromorphicOrder.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-chart-orders-dependency-refresh-734b/SourceGammaOneRamifiedMeromorphicOrder.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-regular-failed-733a\\failure.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-regular-failed-733a/failure.json",
+      "sha256": "663EADA5E8E5EA98D7614651A5A3ED857689C8221C5CAEBB5EF5333B9B3FB988"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-regular-failed-733a\\source-gamma-one-ramified-regular-1-audit-config.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-regular-failed-733a/source-gamma-one-ramified-regular-1-audit-config.json",
+      "sha256": "0B450D3BB1974C3CF72A212C8474D1ECA15A5AA528E1E2565CE1A951AAF37D82"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-regular-failed-733a\\SourceGammaOneRamifiedRegularAudit1.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-regular-failed-733a/SourceGammaOneRamifiedRegularAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-regular-failed-733a\\SourceGammaOneRamifiedRegularAudit1.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-regular-failed-733a/SourceGammaOneRamifiedRegularAudit1.lean.txt",
+      "sha256": "073104C3E1EBC0A4A10B5109DC181530625620FFA0D27803A7DAFE818220F8F9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-regular-failed-733a\\SourceGammaOneRamifiedRegularAudit1.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-regular-failed-733a/SourceGammaOneRamifiedRegularAudit1.log",
+      "sha256": "3152660F469C7E1DE1E5B2EA0DADA8D34EE1481AF4655D2A70AE9511E39F2426"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-regular-failed-733a\\SourceGammaOneRamifiedRegularOrder.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-regular-failed-733a/SourceGammaOneRamifiedRegularOrder.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-regular-failed-733a\\SourceGammaOneRamifiedRegularOrder.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-regular-failed-733a/SourceGammaOneRamifiedRegularOrder.lean.txt",
+      "sha256": "E7A7CE6AC845743556A328C363EDC4257FD71DB9946FE756C14860678FD8BC2B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-regular-failed-733a\\SourceGammaOneRamifiedRegularOrder.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-regular-failed-733a/SourceGammaOneRamifiedRegularOrder.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-regular-failed-733a\\SourceGammaOneRamifiedRegularParameter.exit",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-regular-failed-733a/SourceGammaOneRamifiedRegularParameter.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-regular-failed-733a\\SourceGammaOneRamifiedRegularParameter.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-regular-failed-733a/SourceGammaOneRamifiedRegularParameter.lean.txt",
+      "sha256": "B939487B93CFFE40E3DAD97DBD2AEDA5C504456F76A72BC6499DB549E2D84A9B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramified-regular-failed-733a\\SourceGammaOneRamifiedRegularParameter.log",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/gamma-one-ramified-regular-failed-733a/SourceGammaOneRamifiedRegularParameter.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\additional-primary-snapshots.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/additional-primary-snapshots.json",
+      "sha256": "CDB67E29CF7AA634041ACF77F6D829F9D0A30B0E70652867781008FC2B3E51DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\anthropics__fermats-last-theorem-head.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/anthropics__fermats-last-theorem-head.json",
+      "sha256": "FC08B60306920193475EA35ECF401AC893BC58D9AA50BB8FE9EEF55FFEC50A29"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\assessment.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/assessment.json",
+      "sha256": "6E25C050F739B99FAFA2BD2928F1CD82E021169F95B5BFEAA2970CCF8A3D62B5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\comparisons.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/comparisons.json",
+      "sha256": "C5E7BDD65B4D85F4C14D0B5066ED4691C685EEB3036B39AC0DE2D5306088E191"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\dozenalist__LeanModularForms-head.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/dozenalist__LeanModularForms-head.json",
+      "sha256": "7BB5F8FAFDE8C631BE61CAD9FEAFADDFD45FDFFFAC93A606B7D50C4BA9E5DE81"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\dozenalist__ModularFormsMod-head.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/dozenalist__ModularFormsMod-head.json",
+      "sha256": "A2DF1C99A7D41D445929E0750992F8904B281AE2D9ABFA400D1100415B60EECE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\Dubon Reuse Refresh 2026-10-27.md",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/Dubon Reuse Refresh 2026-10-27.md.txt",
+      "sha256": "0492A53D656A52E89B93B5EB506066901BAB9507AF71E81608B394B1A338C34D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\ImperialCollegeLondon__FLT-head.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/ImperialCollegeLondon__FLT-head.json",
+      "sha256": "5F3BE845851A24221C79839B849A42EC37A2CE9FE1B4F158780F053E50342CBF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\leanprover-community__mathlib4-compare.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/leanprover-community__mathlib4-compare.json",
+      "sha256": "AACE7117B21839A06840DCCF773C1646A239D94A13FC8B4BA14409D24213EB5D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\leanprover-community__mathlib4-head.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/leanprover-community__mathlib4-head.json",
+      "sha256": "F593E0AFD2E05820047B03B8792D62084C9F56543DB9BE36086619FC966A6DC4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\leanprover-community__mathlib4-tree.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/leanprover-community__mathlib4-tree.json",
+      "sha256": "CBA0B2EB28E1436DD28D031308B4F336240D0FBC1ECE946BBB2E744DA4E03B58"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\leanprover-community__mathlib4-visible-delta.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/leanprover-community__mathlib4-visible-delta.json",
+      "sha256": "7F75E2C954E17CE59A89362AB2A54F28A885819D2A256C0F5F7D9B082EC5A6AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\leanprover-community__mathlib4__Mathlib__NumberTheory__ModularForms__Discriminant.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/leanprover-community__mathlib4__Mathlib__NumberTheory__ModularForms__Discriminant.lean.txt",
+      "sha256": "AE0E9F7AA2BE4B499882256D98A2FBF88010D09BA01CA157991FDCD0DE2FBCED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\leanprover-community__mathlib4__Mathlib__NumberTheory__ModularForms__LevelOne__DimensionFormula.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/leanprover-community__mathlib4__Mathlib__NumberTheory__ModularForms__LevelOne__DimensionFormula.lean.txt",
+      "sha256": "355555C4854B5B97E4D3A12A37D56A102BBB79ACE31B9EF53633D4B474EC0A25"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\leanprover-community__mathlib4__Mathlib__NumberTheory__ModularForms__QExpansion.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/leanprover-community__mathlib4__Mathlib__NumberTheory__ModularForms__QExpansion.lean.txt",
+      "sha256": "BA7239AF5AA386AD2478F4AABC6F0490E9A02A2F005A5129823BD32827C4D936"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\leanprover-community__mathlib4__Mathlib__NumberTheory__ModularForms__RamanujanFormula.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/leanprover-community__mathlib4__Mathlib__NumberTheory__ModularForms__RamanujanFormula.lean.txt",
+      "sha256": "98425E4043AE3559A46BDEE1AAB6C52C3631F54B01174AA61EEB869DCC934BE9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\manifest.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/manifest.json",
+      "sha256": "D07E4B2D1951FC8B8BB30725D7BD90DE6AEFE7076CCDDF15EE6CDB9D7F19725C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\mathlib-Discriminant.diff.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/mathlib-Discriminant.diff.txt",
+      "sha256": "DEB3D4E36C08C323E9B6871F4427D219D048FB4039D676C21EAC4E41DE51790A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\mathlib-LevelOne__DimensionFormula.diff.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/mathlib-LevelOne__DimensionFormula.diff.txt",
+      "sha256": "ACBC9328989B6C93CBF844E3E95DCC6EBC6C976690A3EA06EEA2E24923ABA5E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\mathlib-previous-Discriminant.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/mathlib-previous-Discriminant.lean.txt",
+      "sha256": "E9F9D979462E077180CB741DE9BC25DF01430476D8142B5D91676D4F26304531"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\mathlib-previous-LevelOne__DimensionFormula.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/mathlib-previous-LevelOne__DimensionFormula.lean.txt",
+      "sha256": "4FF93926225FD33F5C3AAA0ADD074933EB5E0443A96A1C6D411A4234D7D0D438"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\mathlib-previous-QExpansion.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/mathlib-previous-QExpansion.lean.txt",
+      "sha256": "22CCDEA40DD4B4E014C7F35A658600819763D4F7AE82DFAB1575D1EF3A87C7D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\mathlib-previous-RamanujanFormula.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/mathlib-previous-RamanujanFormula.lean.txt",
+      "sha256": "E7FFDE968CD1B18A5309535F44DCFCE38F9206695CAF48EDA31BA6557641141D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\mathlib-QExpansion.diff.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/mathlib-QExpansion.diff.txt",
+      "sha256": "9B55636BEB7969B2CEB8BBE9CB5D75D824C66E7AB73268BB29DBD589CD67439C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\mathlib-RamanujanFormula.diff.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/mathlib-RamanujanFormula.diff.txt",
+      "sha256": "DB7B2F7BAAE79C2B69F4DB65C11CD618EF4886C8A94A54EAA47E4FE3CE677390"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math-AlgebraicGeometry-tree.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math-AlgebraicGeometry-tree.json",
+      "sha256": "74691BA8A621EF2FFA41F4E405DF61B281C42C3CCEA499006DDCEF05D488F496"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math-ArithmeticGeometry-tree.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math-ArithmeticGeometry-tree.json",
+      "sha256": "F39341968F9A15E5754FE0D85CA8E41103F008199E5B5E4BB175DF8288422673"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math-compare.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math-compare.json",
+      "sha256": "E9FCD8F724BC02074C6CF4998EA6C9F35EDF35F8F8F7D2A78633977239645880"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math-head.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math-head.json",
+      "sha256": "6CA38558150E5428A6AB89342338EDBBEDC7EB5CF1D5DCC3752DD34B0AD91760"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math-NumberTheory-tree.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math-NumberTheory-tree.json",
+      "sha256": "6F608B1658B8F868EBD9CD10E74E26CA4460C9562D630EB1B7C23E2C039689BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math-OAI-tree.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math-OAI-tree.json",
+      "sha256": "6965C0DA89BA79335EF1194843CE074992E650AA68C4921E33BCCF1FF63476D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math-RepresentationTheory-tree.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math-RepresentationTheory-tree.json",
+      "sha256": "5BFB2A8C565DB580B2927FEFDDE12B62541504B3DD67218604D4291B2520101D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math-tree.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math-tree.json",
+      "sha256": "0E06F02B571D2347C8DA1A799E5FF522665DBFC3B37F95A0A003B04A5CCB5C99"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math-visible-delta.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math-visible-delta.json",
+      "sha256": "A266189C11157336BDAB843CABE7CC3A908CE0A82C9AFB7B604EA5104F59D82A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__CONTENTS.md",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math__CONTENTS.md.txt",
+      "sha256": "080BADCB677FB80BE0E695C21A8EC88BCB3A46DD3E3078CA10061E6B289BE175"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__history.md",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math__history.md.txt",
+      "sha256": "AC688A38EB9AFDB1F3C339C1DF251CDB1AA7D8F18067B3CE5D668A96D690F5FB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__lean__formalization.yaml.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math__lean__formalization.yaml.txt",
+      "sha256": "B8E7072AB9AC195A290110D78C3A3497608CE76AC5B67D307685F38408299B39"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__lean__lake-manifest.json.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math__lean__lake-manifest.json.txt",
+      "sha256": "CF6105A25D9DCA2F166B241D9191BD12C7E13305890DC9C4D0952351CCCC0794"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__lean__lean-toolchain.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math__lean__lean-toolchain.txt",
+      "sha256": "D5EDBA4E4B8FAAD9C1BAEADB265716D20D03BE4D1A2647DC5E35B0C0325BEA7B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__lean__OAI__AlgebraicGeometry__ClosedImmersion__HolomorphicCharts.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math__lean__OAI__AlgebraicGeometry__ClosedImmersion__HolomorphicCharts.lean.txt",
+      "sha256": "6496145E1945FA2F233E99AE1803C5C415390B885EFF081A16FE480D2F27BC10"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__lean__OAI__AlgebraicGeometry__ClosedImmersion__NormalCoordinates.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math__lean__OAI__AlgebraicGeometry__ClosedImmersion__NormalCoordinates.lean.txt",
+      "sha256": "A42A7EA56135A0F8B1246D7123C2A2B5772BBADBA12F23BBC344F056364AAD45"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__lean__OAI__AlgebraicGeometry__ComplexPoint__AnalyticMap.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math__lean__OAI__AlgebraicGeometry__ComplexPoint__AnalyticMap.lean.txt",
+      "sha256": "BCE8C20F9546F07E66571D0069BE97703FCD4027B23310C43580B93D847F03E5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__lean__OAI__AlgebraicGeometry__Seshadri__Analytic__ConvergentSeries.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math__lean__OAI__AlgebraicGeometry__Seshadri__Analytic__ConvergentSeries.lean.txt",
+      "sha256": "0A30D77D6EDF5DE2196CEFEADCA03441B0906EA3B53A2D605C54D1F4DE1B8267"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__lean__README.md.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math__lean__README.md.txt",
+      "sha256": "292FF9D539F494158DFBF68D989BA85A82782A4343B2FE43088F8FA62525BF1B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__LICENSE.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math__LICENSE.txt",
+      "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__README.md",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math__README.md.txt",
+      "sha256": "6CB7F0E387B67C051227C6BA27ACA87EE82D9DD2530B6452B86B8681A2E2743A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\selected-snapshots.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/selected-snapshots.json",
+      "sha256": "AC891320DC8D7561BC47011E957E85AD15F4E6FBE1A1664972EAFCB3C12816C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\subtree-snapshots.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/subtree-snapshots.json",
+      "sha256": "7F3F7FFC715E4D24DF337D0C1C85FD3A96ADE05DC618E4FEA2C36D23526DE79D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\teal-sea__zeta-lab-compare.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/teal-sea__zeta-lab-compare.json",
+      "sha256": "CC521E5FBFDE85A6B8FABD4630DBA342225E9BD013F428B8F386B3EC1B199301"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\teal-sea__zeta-lab-head.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/teal-sea__zeta-lab-head.json",
+      "sha256": "5F2A2014A6F2196EA07524B7902D2B2F5E70224F8DB047F36084B9A0F290D7B3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\teal-sea__zeta-lab__47-the-davenport-heilbronn-zero.md",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/teal-sea__zeta-lab__47-the-davenport-heilbronn-zero.md.txt",
+      "sha256": "537ACB03B96D77C44355C59D910128C6C15AE08E25E792B68E3EBBC6B8CE9B46"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\teal-sea__zeta-lab__DavenportHeilbronn.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/teal-sea__zeta-lab__DavenportHeilbronn.lean.txt",
+      "sha256": "28A8868C2A7A206714F96886EB848DBDDF09009BEF728413E868F3C271FF33DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\teal-sea__zeta-lab__DHTrivialZero.lean.txt",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/teal-sea__zeta-lab__DHTrivialZero.lean.txt",
+      "sha256": "AEFC0900444D81CDA23B287075C41ADA488357BB3F1DF0EFB28019A91B860B1D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-exact-ramification-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/source-gamma-one-exact-ramification-1-reuse-review-20261027.json",
+      "sha256": "2AED1597603E60917BABB46E154941F0A6408178D002FA2F831410E509F24AC6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-ramified-regular-1b-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/source-gamma-one-ramified-regular-1b-reuse-review-20261027.json",
+      "sha256": "AE5B045FAF3C82CCC84D747002C81229B915F297E6976F4882C513B386AAEEFD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-ramified-chart-orders-1b-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/source-gamma-one-ramified-chart-orders-1b-reuse-review-20261027.json",
+      "sha256": "FEF2169C2437159AEF5AA4A527781277A0A7F26C5D5C58AB627D5CAF8A952D9C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-finite-chart-parameters-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/source-gamma-one-finite-chart-parameters-1-reuse-review-20261027.json",
+      "sha256": "265EF4E0DF18837568938D0BC4A3395DE8BB8B4A0B86DA23879C383A2E1E5889"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-moving-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/source-gamma-one-divisor-moving-1-reuse-review-20261027.json",
+      "sha256": "99B1167D0ED36B83F4122BC2C078E4B7EAC599C5A1006351EB80E88AB6E8ECC0"
+    }
+  ]
+}

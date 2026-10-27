@@ -1,0 +1,83 @@
+import SourceGammaOneCentralSignCharacters
+
+/-! DUB-17/18 -> actual Gamma1 real period surjectivity -> real Manin
+dimension bound on signed cosets. The actual real parabolic characters
+embed linearly after adjoining the central negative identity. The map
+preserves the squared-trace-four condition, and native finite H1 supplies
+the finite target. Only the needed dimension inequality is exported. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup Matrix.SpecialLinearGroup groupCohomology
+open scoped MatrixGroups GammaOne
+
+/-- Actual real subgroup characters vanishing on every squared-trace-four element. -/
+def realParabolicCharacters (Γ : Subgroup SL(2, ℤ)) :
+    Submodule ℝ (Additive Γ →+ ℝ) where
+  carrier := {φ | ∀ γ : Γ, γ.val.val.trace ^ 2 = 4 → φ (Additive.ofMul γ) = 0}
+  zero_mem' := fun _ _ => rfl
+  add_mem' := by
+    intro φ ψ hφ hψ γ hγ
+    simp only [AddMonoidHom.add_apply, hφ γ hγ, hψ γ hγ, add_zero]
+  smul_mem' := by
+    intro c φ hφ γ hγ
+    simp only [AddMonoidHom.smul_apply, hφ γ hγ, smul_zero]
+
+theorem CentralSign.extend_parabolic (Γ : Subgroup SL(2, ℤ))
+    (φ : Additive Γ →+ ℝ) (hφ : φ ∈ realParabolicCharacters Γ) :
+    CentralSign.extend Γ φ ∈ realParabolicCharacters (plusMinus Γ) := by
+  intro γ hγ
+  change φ (Additive.ofMul (CentralSign.representative Γ γ)) = 0
+  apply hφ (CentralSign.representative Γ γ)
+  rcases CentralSign.representative_spec Γ γ with h | h
+  · change ((CentralSign.representative Γ γ).val : Matrix (Fin 2) (Fin 2) ℤ).trace ^ 2 = 4
+    rw [h]
+    exact hγ
+  · change ((CentralSign.representative Γ γ).val : Matrix (Fin 2) (Fin 2) ℤ).trace ^ 2 = 4
+    rw [h, Matrix.SpecialLinearGroup.coe_neg, Matrix.trace_neg, neg_sq]
+    exact hγ
+
+/-- The actual real Gamma1 parabolic characters extended across central sign. -/
+def gammaOneParabolicSignLift (N : ℕ) :
+    sourceGamma1RealParabolicHoms N →ₗ[ℝ] realParabolicCharacters (plusMinus (Gamma1 N)) where
+  toFun φ := ⟨CentralSign.extend (Gamma1 N) φ.val,
+    CentralSign.extend_parabolic (Gamma1 N) φ.val φ.property⟩
+  map_add' φ ψ := by
+    apply Subtype.ext
+    apply AddMonoidHom.ext
+    intro γ
+    rfl
+  map_smul' c φ := by
+    apply Subtype.ext
+    apply AddMonoidHom.ext
+    intro γ
+    rfl
+
+theorem gammaOneParabolicSignLift_injective (N : ℕ) :
+    Function.Injective (gammaOneParabolicSignLift N) := by
+  intro φ ψ he
+  apply Subtype.ext
+  apply CentralSign.extend_injective (Gamma1 N)
+  exact congrArg Subtype.val he
+
+theorem realParabolicCharacters_finite (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex] :
+    Module.Finite ℝ (realParabolicCharacters Γ) := by
+  letI : Group.FG SL(2, ℤ) :=
+    Group.fg_iff.mpr ⟨{ModularGroup.S, ModularGroup.T},
+      SpecialLinearGroup.SL2Z_generators, Set.toFinite _⟩
+  letI := sourceH1Finite (Rep.trivial ℝ Γ ℝ)
+  let e := H1IsoOfIsTrivial (Rep.trivial ℝ Γ ℝ)
+  haveI : Module.Finite ℝ (Additive Γ →+ ℝ) := by
+    apply Module.Finite.of_surjective e.hom.hom
+    intro φ
+    exact ⟨e.inv φ, CategoryTheory.Iso.inv_hom_id_apply e φ⟩
+  infer_instance
+
+theorem gammaOne_parabolic_finrank_le_signed (N : ℕ) [NeZero N] :
+    Module.finrank ℝ (sourceGamma1RealParabolicHoms N) ≤
+      Module.finrank ℝ (realParabolicCharacters (plusMinus (Gamma1 N))) := by
+  letI := realParabolicCharacters_finite (plusMinus (Gamma1 N))
+  exact LinearMap.finrank_le_finrank_of_injective
+    (gammaOneParabolicSignLift_injective N)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

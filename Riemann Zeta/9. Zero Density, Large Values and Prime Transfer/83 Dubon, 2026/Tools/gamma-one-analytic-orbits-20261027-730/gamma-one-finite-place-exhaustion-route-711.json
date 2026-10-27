@@ -1,0 +1,62 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual Gamma1 finite Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> original global analytic charts -> every original finite-j place is an actual analytic place.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFinitePlaceExhaustion.lean",
+      "sha256": "79DDDF86772C0D03A0559340E146A19D16D519A864742848D5B41138BD6E5AEB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticChart.lean",
+      "sha256": "EC618B19CAFD128F23C288544FA47DDE5AF45C8DE6F4A0C524466D193856DA20"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticChartPlaces.lean",
+      "sha256": "0844391C2636386F2E1A747E71DFA2C7D75B9165EDAA70B2BE94DC1184A65353"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveChartIntegralCriterion.lean",
+      "sha256": "91A044217E5BEDD485BF6C8309A1DB42018E41E4666CCFCBA8B3E0BA1E263BD8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveIntegralChartPlaceEquality.lean",
+      "sha256": "5CA23520554F9CFA8FF8198569F023EE1B435E27FFE861CBFE0DBC7D5D7F9A28"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePlaceCenters.lean",
+      "sha256": "F2746CA61E2DB176D765788BD8A0CEFCCFD507F79D98ED96A2FFCA4A3DFDAC2B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePrimePlaces.lean",
+      "sha256": "98648C9DC97C53AF09099B394F2604127931CCFCD9F5A78F9F9D6CD1642DA40B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralChartPoleBound.lean",
+      "sha256": "2D5310B986B919A02E30DA674DC0E7F76A77C7688128B37DACC6ABC8DF55778E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRationalResidueValues.lean",
+      "sha256": "6867EEF679E559185D713F8EAAF414EA0ACD302069B8767AC95A0ED732F69DEB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFunctionFieldBaseChange.lean",
+      "sha256": "FF3926FC60F98AACEBA430B405ACC1674F9A4BC7845A16D19DDF95A00288E7EE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticIntegrality.lean",
+      "sha256": "C23A959AD1DBD5A9D95D330E772120193BBA3F913DC27338FA3DE27E7B3BDC49"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticJOrders.lean",
+      "sha256": "F823AB56C1F8CF239B8EC8121C7524D81EAEECB0663469666495FB57CE728330"
+    }
+  ],
+  "shorterRoute": "Consume the proved all-analytic-place integrality theorem and the existing Dedekind center/localization and fractional inverse-ideal results. Use local instances for the actual C[j] integral closure inside the actual Gamma function field; avoid introducing a parallel chart-instance framework. Native residue evaluation determines the exact j value in every finite fiber. Finite index is derived from the principal congruence inclusion.",
+  "assumptionsToDischarge": [
+    "Every finite-j original place is attained by the constructed analytic place map.",
+    "Every original place is either a j-pole or analytic.",
+    "Every positive-order j-c fiber has an actual upper-half-plane point with j value c."
+  ],
+  "remaining": "Orbit separation, exact elliptic ramification and elliptic charts, cusp exhaustion/global charts and the full original period/Hecke/diamond/Picard/H1 arithmetic comparison remain; original all-weight characteristic-zero association and higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

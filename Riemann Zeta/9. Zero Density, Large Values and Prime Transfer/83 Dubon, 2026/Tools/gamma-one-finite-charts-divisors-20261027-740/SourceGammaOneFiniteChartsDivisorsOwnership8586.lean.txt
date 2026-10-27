@@ -1,0 +1,28 @@
+import Dubon2026.SourceGammaOneExactRamification
+import Dubon2026.SourceGammaOneEllipticFibers
+import Dubon2026.SourceGammaOneRamifiedRegularParameter
+import Dubon2026.SourceGammaOneRamifiedRegularOrder
+import Dubon2026.SourceGammaOneRamifiedMeromorphicOrder
+import Dubon2026.SourceGammaOneNearbyOrders
+import Dubon2026.SourceGammaOneRamifiedChartOrders
+import Dubon2026.SourceGammaOneFiniteChartParameters
+import Dubon2026.SourceGammaOnePrescribedPlaceOrders
+import Dubon2026.SourceGammaOneAnalyticDivisorMoving
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceGammaOneExactRamification, `Dubon2026.SourceGammaOneEllipticFibers, `Dubon2026.SourceGammaOneRamifiedRegularParameter, `Dubon2026.SourceGammaOneRamifiedRegularOrder, `Dubon2026.SourceGammaOneRamifiedMeromorphicOrder, `Dubon2026.SourceGammaOneNearbyOrders, `Dubon2026.SourceGammaOneRamifiedChartOrders, `Dubon2026.SourceGammaOneFiniteChartParameters, `Dubon2026.SourceGammaOnePrescribedPlaceOrders, `Dubon2026.SourceGammaOneAnalyticDivisorMoving]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

@@ -1,0 +1,37 @@
+import SourceGammaOneRealManinDimension
+import SourceGammaOneRationalCyclicCusps
+import SourceGammaOneExactCuspOrbits
+
+/-! DUB-17/18 -> actual Gamma1 real period surjectivity -> reverse
+dimension inequality. Assemble the real Manin bound for the original
+parabolic characters. Discharge central sign using the proved extension,
+and identify its rational cusp term with the actual algebraic j poles.
+The remaining lower bound is the genus of this same function field. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open Matrix.SpecialLinearGroup ModularGroup CongruenceSubgroup SourceCurve
+open scoped MatrixGroups GammaOne
+variable (N : ℕ) [NeZero N]
+
+theorem gammaOne_rational_cusp_card_eq_j_poles :
+    Nat.card (RationalCuspOrbit (plusMinus (Gamma1 N))) =
+      Nat.card {P : Place ℂ (functionFieldOver (Gamma1 N) ℂ) //
+        P.ord (jCoordinateOver (Gamma1 N) ℂ) < 0} := by
+  rw [CuspCounting.card_rationalCuspOrbit_eq_translation_orbits,
+    gammaOne_j_pole_card_eq_translation_orbits]
+
+theorem gammaOne_real_parabolic_dimension_upper :
+    6 * Module.finrank ℝ (sourceGamma1RealParabolicHoms N)
+      + 6 * Nat.card {P : Place ℂ (functionFieldOver (Gamma1 N) ℂ) //
+          P.ord (jCoordinateOver (Gamma1 N) ℂ) < 0}
+      + 3 * Nat.card {x : SL(2, ℤ) ⧸ plusMinus (Gamma1 N) // S • x = x}
+      + 4 * Nat.card {x : SL(2, ℤ) ⧸ plusMinus (Gamma1 N) // (S * T) • x = x} ≤
+        12 + (plusMinus (Gamma1 N)).index := by
+  have hm := RealManin.parabolic_dimension_bound (plusMinus (Gamma1 N))
+    (neg_one_mem_plusMinus (Gamma1 N))
+  have hs := gammaOne_parabolic_finrank_le_signed N
+  rw [gammaOne_rational_cusp_card_eq_j_poles N] at hm
+  omega
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

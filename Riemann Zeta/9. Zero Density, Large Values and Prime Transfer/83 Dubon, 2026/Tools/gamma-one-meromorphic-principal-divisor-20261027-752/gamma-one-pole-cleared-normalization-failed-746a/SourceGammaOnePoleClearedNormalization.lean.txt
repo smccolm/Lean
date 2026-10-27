@@ -1,0 +1,67 @@
+import Dubon2026.SourceGammaOneAnalyticEvaluation
+import Mathlib.Topology.Homeomorph.Lemmas
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual finite
+Gamma1 characters -> Picard/H1 and modular periods -> meromorphic field
+realization. Native normal form removes the poles already cancelled by the
+actual multiplier. Local equality preserves subgroup invariance and cusp
+bounds, so exceptional point values cannot obstruct the modular quotient. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane Filter
+open scoped Topology Manifold MatrixGroups ModularForm
+
+theorem exists_holomorphic_of_nonnegative_orders (F : ℍ → ℂ)
+    (hm : ∀ τ : ℍ, MeromorphicAt (F ∘ ofComplex) (τ : ℂ))
+    (ho : ∀ τ : ℍ, 0 ≤ meromorphicOrderAt (F ∘ ofComplex) (τ : ℂ)) :
+    ∃ G : ℍ → ℂ, MDiff G ∧ ∀ τ : ℍ,
+      (G ∘ ofComplex) =ᶠ[𝓝[≠] (τ : ℂ)] (F ∘ ofComplex) := by
+  let U : Set ℂ := {z | 0 < z.im}
+  have hmer : MeromorphicOn (F ∘ ofComplex) U := fun z hz => hm ⟨z, hz⟩
+  let H := toMeromorphicNFOn (F ∘ ofComplex) U
+  have hH : AnalyticOnNhd ℂ H U := by
+    intro z hz
+    apply ((meromorphicNFOn_toMeromorphicNFOn (F ∘ ofComplex) U) hz).meromorphicOrderAt_nonneg_iff_analyticAt.mp
+    rw [meromorphicOrderAt_toMeromorphicNFOn hmer hz]
+    exact ho ⟨z, hz⟩
+  refine ⟨fun τ => H τ, ?_, ?_⟩
+  · refine UpperHalfPlane.mdifferentiable_iff.mpr (hH.differentiableOn.congr ?_)
+    intro z hz
+    simp only [Function.comp_apply, ofComplex_apply_of_im_pos hz, UpperHalfPlane.coe_mk]
+  · intro τ
+    filter_upwards [hmer.toMeromorphicNFOn_eq_self_on_nhdsNE τ.im_pos,
+      mem_nhdsWithin_of_mem_nhds (isOpen_upperHalfPlaneSet.mem_nhds τ.im_pos)] with z he hz
+    simpa only [Function.comp_apply, ofComplex_apply_of_im_pos hz, UpperHalfPlane.coe_mk] using he
+
+theorem holomorphic_invariant_of_local_eq {Γ : Subgroup SL(2, ℤ)} {F G : ℍ → ℂ}
+    (hG : MDiff G)
+    (he : ∀ τ : ℍ, (G ∘ ofComplex) =ᶠ[𝓝[≠] (τ : ℂ)] (F ∘ ofComplex))
+    (hinv : ∀ γ ∈ Γ, ∀ τ : ℍ, F (γ • τ) = F τ) :
+    ∀ γ ∈ Γ, ∀ τ : ℍ, G (γ • τ) = G τ := by
+  have heH (τ : ℍ) : G =ᶠ[𝓝[≠] τ] F :=
+    SourceFunctionField.ModularRatios.eventually_nhdsNE_coe_iff.mp (he τ)
+  intro γ hγ τ
+  have ht : Tendsto (fun w : ℍ => γ • w) (𝓝[≠] τ) (𝓝[≠] (γ • τ)) :=
+    le_of_eq ((Homeomorph.smul γ).map_punctured_nhds_eq τ)
+  have hev : (fun w : ℍ => G (γ • w)) =ᶠ[𝓝[≠] τ] G := by
+    filter_upwards [(heH (γ • τ)).comp_tendsto ht, heH τ] with w hw hw'
+    exact hw.trans ((hinv γ hγ w).trans hw'.symm)
+  exact tendsto_nhds_unique_of_eventuallyEq
+    ((hG.continuous.comp (Homeomorph.smul γ).continuous).continuousAt.tendsto.mono_left nhdsWithin_le_nhds)
+    (hG.continuous.continuousAt.tendsto.mono_left nhdsWithin_le_nhds) hev
+
+theorem boundedAtImInfty_of_local_eq {F G : ℍ → ℂ} (hG : Continuous G)
+    (he : ∀ τ : ℍ, G =ᶠ[𝓝[≠] τ] F) (hb : IsBoundedAtImInfty F) :
+    IsBoundedAtImInfty G := by
+  obtain ⟨M, A, hA⟩ := isBoundedAtImInfty_iff.mp hb
+  refine isBoundedAtImInfty_iff.mpr ⟨M, A + 1, fun τ hτ => ?_⟩
+  have hnear : ∀ᶠ w in 𝓝 τ, A < w.im :=
+    continuous_im.continuousAt.tendsto.eventually (Ioi_mem_nhds (by linarith))
+  apply le_of_tendsto (hG.continuousAt.norm.tendsto.mono_left
+    (show 𝓝[≠] τ ≤ 𝓝 τ from nhdsWithin_le_nhds))
+  filter_upwards [he τ, hnear.filter_mono nhdsWithin_le_nhds] with w hew hw
+  rw [hew]
+  exact hA w hw.le
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

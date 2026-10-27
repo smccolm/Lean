@@ -1,0 +1,24 @@
+{
+  "repository": "anthropics/fermats-last-theorem",
+  "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "scope": "Selected pinned source files only. No full closure, local build, import or pin change.",
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_pt_eq_pt_iff_gammaH.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\S_ModularCurve_ComplexPlaceDictionaryOf_pt_eq_pt_iff_gammaH.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_pt_eq_pt_iff_gammaH.lean",
+      "bytes": 10246,
+      "gitBlob": "f6597f4695e24338411649e214f99e68a2e85e1a",
+      "sha256": "85F03A4B8818DDFF6354306C8A1E5425B02376FE892C51961889EB0191659674"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_ord_eq_three_of_ord_pos_and_ord_sub_eq_two_laurentBaseChange_gamma1.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\S_ModularCurve_ord_eq_three_of_ord_pos_and_ord_sub_eq_two_laurentBaseChange_gamma1.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_ord_eq_three_of_ord_pos_and_ord_sub_eq_two_laurentBaseChange_gamma1.lean",
+      "bytes": 16228,
+      "gitBlob": "1653dafc8a7a7d182ede76edec6d125127f8c82e",
+      "sha256": "79952A148A87933DCFC1C8CFF009D14AF9C7F5E7B09D07ACF8C28346932C9976"
+    }
+  ]
+}

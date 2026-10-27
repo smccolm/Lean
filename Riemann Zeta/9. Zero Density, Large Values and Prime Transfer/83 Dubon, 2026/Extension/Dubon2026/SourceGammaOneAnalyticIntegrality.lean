@@ -1,0 +1,45 @@
+import Dubon2026.SourceGammaOneQuotientCuspSeries
+import Dubon2026.SourceOriginalQuotientIntegral
+import Dubon2026.SourceFrickeModularOrbitV2
+import Dubon2026.SourceCuspLaurentPolynomial
+import Dubon2026.SourceQExpansionLaurentWidth
+
+/-! DUB-17/18 -> original Gamma1 Picard-period comparison -> finite-place
+exhaustion. The existing Fricke modular-orbit theorem gives a monic relation
+for the actual holomorphic realization. Its literal width-one Laurent
+representative transfers this relation to the original field over C[j].
+Regularity at every analytic place derives all holomorphy, invariance and
+cusp-growth inputs; no integral equation or missing-place conclusion is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane
+open scoped MatrixGroups Manifold
+variable {Γ : Subgroup SL(2, ℤ)}
+
+theorem isIntegral_of_mem_all_analytic_places (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) (hT : ModularGroup.T ∈ Γ)
+    (x : functionFieldOver Γ ℂ)
+    (hx : ∀ τ : ℍ, x ∈ (analyticPlace hT τ).toValuationSubring) :
+    IsIntegral (Algebra.adjoin ℂ {jCoordinateOver Γ ℂ}) x := by
+  obtain ⟨k, g, h, F, hh, hr, hF, he, hinv⟩ :=
+    holomorphic_realization_of_mem_all_analytic_places hT x hx
+  obtain ⟨_, d, p, hmonic⟩ :=
+    SourceFricke.exists_fraction_and_monic_j_of_principal_invariant (N := N) F hF
+      (fun γ hγ τ => hinv γ (hΓ hγ) τ)
+      (fun γ => holomorphic_quotient_cusp_pole_bound N hΓ g h hh F hF he γ)
+  have hrep : CuspTaylor.Represents (x : LaurentSeries ℂ) (cuspFunction 1 F) := by
+    have hd : (x : LaurentSeries ℂ) = ModularRatios.qL g / ModularRatios.qL h :=
+      (eq_div_iff (ModularRatios.qL_ne_zero hT h hh)).mpr hr
+    rw [hd]
+    exact quotient_cusp_represents one_pos (hper hT) g h hh F he
+  have hj : CuspTaylor.Represents (jqModC ℂ) (cuspFunction 1 JMultiplicity.jf) := by
+    simpa only [jqNModC_one, Nat.cast_one] using represents_jqNModC 1
+  have hI := hrep.isIntegral_of_monic_relation hj d p hmonic
+  have hI' : IsIntegral (Algebra.adjoin ℂ {coeffEmb ℂ jq}) (x : LaurentSeries ℂ) := by
+    rw [← coeffEmb_jq] at hI
+    exact hI
+  exact isIntegral_adjoin_subfield (functionFieldOver Γ ℂ) (jCoordinateOver Γ ℂ).property
+    x.property hI'
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

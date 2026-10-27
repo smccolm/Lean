@@ -1,0 +1,63 @@
+
+open scoped MatrixGroups ModularForm in
+theorem real_group_original_pairing_source (k : ℤ)
+    (f f' : UpperHalfPlane → ℂ) (g : SL(2, ℝ)) :
+    starRingEnd ℂ ((f ∣[k] (Matrix.SpecialLinearGroup.mapGL ℝ g)) UpperHalfPlane.I) *
+      ((f' ∣[k] (Matrix.SpecialLinearGroup.mapGL ℝ g)) UpperHalfPlane.I) =
+      starRingEnd ℂ (f (g • UpperHalfPlane.I)) * f' (g • UpperHalfPlane.I) *
+        ((g • UpperHalfPlane.I).im : ℂ) ^ k := by
+  exact realWeightLift_pairing k f f' g
+
+open scoped MatrixGroups in
+theorem real_group_compact_orbit_source (k : ℤ)
+    (f : UpperHalfPlane → ℂ) (hf : f ≠ 0) :
+    IsCompact (realCompactSubgroup : Set SL(2, ℝ)) ∧
+      Module.finrank ℂ (Submodule.span ℂ (Set.range (fun h : realCompactSubgroup =>
+        TannakaDuality.FiniteGroup.rightRegular (k := ℂ) h.val (realWeightLift k f)))) = 1 :=
+  ⟨realCompactSubgroup_isCompact, realWeightLift_compact_finrank k hf⟩
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem real_group_whittaker_normalization_source {Q : ℕ} {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k)
+    {y : ℝ} (hy : 0 < y) {n : ℕ} (hn : 0 < n) :
+    (∫ x in (0 : ℝ)..1, fourier (-(n : ℤ)) (x : UnitAddCircle) *
+      realWeightLift k f
+        (⟨(x : ℂ) + y * Complex.I, by simpa using hy⟩ : UpperHalfPlane).toSL2R) =
+      normalizedCuspCoefficients f n * (((n : ℝ) ^ (-(1 : ℝ) / 2) : ℝ) : ℂ) *
+        (((((n : ℝ) * y) ^ ((k : ℝ) / 2) : ℝ) : ℂ) *
+          (Real.exp (-2 * Real.pi * ((n : ℝ) * y)) : ℂ)) :=
+  realWhittakerCoefficient_normalized f hy hn
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem real_group_cuspidal_frequencies_source {Q : ℕ} {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k)
+    {y : ℝ} (hy : 0 < y) {n : ℤ} (hn : n ≤ 0) :
+    (∫ x in (0 : ℝ)..1, fourier (-n) (x : UnitAddCircle) *
+      realWeightLift k f
+        (⟨(x : ℂ) + y * Complex.I, by simpa using hy⟩ : UpperHalfPlane).toSL2R) = 0 := by
+  rcases lt_or_eq_of_le hn with h | h
+  · exact realWhittakerCoefficient_neg f hy h
+  · subst n
+    exact realWhittakerCoefficient_zero f hy
+
+open scoped MatrixGroups in
+theorem real_group_primitive_hecke_source {Q p : ℕ} [NeZero Q] [NeZero p] {k : ℤ}
+    (f : PrimitiveCuspForm Q k) (hp : Nat.Prime p) (g : SL(2, ℝ)) :
+    (((p : ℝ) ^ (-(1 : ℝ) / 2) : ℝ) : ℂ) *
+      ((∑ b ∈ Finset.range p, realWeightLift k f.toCuspForm
+        (realAffineMatrix ((b : ℝ) / p)
+          (one_div_pos.mpr (Nat.cast_pos.mpr (Nat.pos_of_neZero p))) * g)) +
+        if Nat.Coprime p Q then realWeightLift k f.toCuspForm
+          (realAffineMatrix 0 (Nat.cast_pos.mpr (Nat.pos_of_neZero p)) * g) else 0) =
+      normalizedCuspCoefficients f.toCuspForm p * realWeightLift k f.toCuspForm g :=
+  primitive_realPrimeHecke_eigenvalue f hp g
+
+open scoped MatrixGroups in
+theorem real_group_iwasawa_source (k : ℤ) (f : UpperHalfPlane → ℂ) :
+    Function.Bijective (fun g : SL(2, ℝ) =>
+      (g • UpperHalfPlane.I, realIwasawaCompact g)) ∧
+    ∀ g : SL(2, ℝ), realWeightLift k f g =
+      f (g • UpperHalfPlane.I) * ((Real.sqrt (g • UpperHalfPlane.I).im : ℝ) : ℂ) ^ k *
+        (realCompactWeight k (realIwasawaCompact g) : ℂ) :=
+  ⟨realIwasawaHomeomorph.bijective, realWeightLift_iwasawa k f⟩
+

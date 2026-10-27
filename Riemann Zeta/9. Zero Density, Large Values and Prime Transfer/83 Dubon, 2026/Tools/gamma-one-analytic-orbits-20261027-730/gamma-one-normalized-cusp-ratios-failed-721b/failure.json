@@ -1,0 +1,5 @@
+﻿{
+    "scope":  "721",
+    "status":  "FAILED",
+    "reason":  "The constant Laurent algebra-map identity was referenced without its SourceDifferential namespace. Preserve this failed source and compiler evidence before qualifying the existing proved lemma."
+}

@@ -1,0 +1,50 @@
+import SourceGammaOneInvariantRealPart
+import Dubon2026.SourceWeightTwoPeriods
+import Dubon2026.SourceWeightTwoPrimitiveCusps
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual Gamma1
+Hecke characters -> Picard/H1 and the Abel-Jacobi converse -> real period
+surjectivity. The existing genuine scalar periods determine the cusp form.
+The normalized primitive, its derivative, and every cusp limit are derived
+from the actual form. No reflection, dimension or surjectivity premise is
+used. -/
+namespace Dubon2026
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup Matrix.SpecialLinearGroup
+open scoped MatrixGroups
+
+theorem sourceGamma1_eq_zero_of_real_periods_zero
+    (N : ℕ) [NeZero N] (f : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2)
+    (h : ∀ γ : Gamma1 N, (sourceWeightTwoPeriodValue (Gamma1 N) f γ).re = 0) :
+    f = 0 := by
+  let H := (Gamma1 N).map (mapGL ℝ)
+  let F := sourceWeightTwoPrimitive H.strictWidthInfty f
+  have hF := sourceWeightTwoPrimitive_hasDerivAt f
+    H.strictWidthInfty_pos H.strictWidthInfty_mem_strictPeriods
+  have hinv (γ : SL(2, ℤ)) (hγ : γ ∈ Gamma1 N) (z : ℍ) :
+      (F (γ • z)).re = (F z).re := by
+    change (sourceWeightTwoPrimitive H.strictWidthInfty f (γ • z)).re = _
+    rw [sourceWeightTwoPrimitive_period (Gamma1 N) f ⟨γ, hγ⟩ z, Complex.add_re, h, add_zero]
+  have hc := sourceGamma1_realPart_constant hF hinv
+    (sourceWeightTwoPrimitive_exists_cusp_limit f
+      H.strictWidthInfty_pos H.strictWidthInfty_mem_strictPeriods)
+  apply DFunLike.ext
+  intro τ
+  change f τ = 0
+  apply sourceHolomorphic_re_zero_deriv ((hF τ).sub_const (F UpperHalfPlane.I))
+  intro z
+  simp only [Function.comp_apply, ofComplex_apply, Complex.sub_re]
+  exact sub_eq_zero.mpr (hc z UpperHalfPlane.I)
+
+theorem sourceGamma1_real_periods_injective (N : ℕ) [NeZero N] :
+    Function.Injective (fun f : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2 =>
+      fun γ : Gamma1 N => (sourceWeightTwoPeriodValue (Gamma1 N) f γ).re) := by
+  intro f g h
+  apply sub_eq_zero.mp
+  apply sourceGamma1_eq_zero_of_real_periods_zero N
+  intro γ
+  simp only [map_sub, Pi.sub_apply, Complex.sub_re, sub_eq_zero]
+  exact congrFun h γ
+
+end
+end Dubon2026

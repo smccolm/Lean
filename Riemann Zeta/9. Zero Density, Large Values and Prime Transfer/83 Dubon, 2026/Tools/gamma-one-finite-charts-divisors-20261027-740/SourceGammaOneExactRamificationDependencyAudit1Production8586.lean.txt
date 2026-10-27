@@ -1,0 +1,28 @@
+import Dubon2026.SourceGammaOneExactRamification
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_eq_index, `Dubon2026.SourceFunctionField.GammaOne.sum_analytic_fiber_orders_eq_index, `Dubon2026.SourceFunctionField.GammaOne.two_mul_ramification_eq_stabilizer_card]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneExactRamification]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_eq_index, `Dubon2026.SourceFunctionField.GammaOne.sum_analytic_fiber_orders_eq_index, `Dubon2026.SourceFunctionField.GammaOne.two_mul_ramification_eq_stabilizer_card, `Dubon2026.SourceFunctionField.GammaOne.sum_j_fiber_orders_eq_finrank, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.exists_fiber_order_sum_eq_index, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_orders, `Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_relative_indices_eq_index, `Dubon2026.SourceFunctionField.GammaOne.analytic_j_order_le_relative_index, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul_plusMinus, `Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_smul_of_mem]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE EXACT RAMIFICATION DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in exact ramification at every actual Gamma1 analytic place. Only declaration values are traversed. Fixed-degree and actual generic fiber sums identify the degree; equality of finite sums forces each termwise bound to be equality. All nonzero levels and elliptic points are covered. Ramified and cusp global charts, actual period and Hecke/diamond/Picard/H1 arithmetic comparison, all-weight characteristic-zero association and literal higher symmetric-power continuation remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

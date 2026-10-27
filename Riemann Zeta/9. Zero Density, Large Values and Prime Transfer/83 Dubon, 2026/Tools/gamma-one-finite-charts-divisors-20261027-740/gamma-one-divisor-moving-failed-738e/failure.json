@@ -1,0 +1,4 @@
+{
+  "reason": "Principal-divisor extraction still triggers expensive implicit scalar-instance synthesis. Supply the full existential expected type so the scalar structure is fixed before projection elaboration.",
+  "sourceSha256": "CA16F5D62E7EA1BCD8D548FE9987C28DB1F2D371E346003B708044AE52A6FAB0"
+}

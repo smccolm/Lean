@@ -1,0 +1,91 @@
+import Dubon2026.SourceGammaOneCuspCosetPlaces
+import Dubon2026.SourceGammaOneRationalCuspOrbit
+
+/-! DUB-17/18 -> actual Gamma1 real period surjectivity -> matching the
+Manin cusp term with the algebraic genus term. Rational cusp orbits are
+exactly the translation orbits of signed integral cosets. Reuse the
+proved integral infinity stabilizer classification and actual quotient
+maps; no double-coset theory or cusp-count formula is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CuspCounting
+noncomputable section
+open Matrix.SpecialLinearGroup ModularGroup OnePoint SourceManin
+open scoped MatrixGroups
+variable (Γ : Subgroup SL(2, ℤ))
+
+theorem rationalCuspOrbitFromCoset_translation (n : ℤ) (x : Cosets Γ) :
+    rationalCuspOrbitFromCoset (plusMinus Γ) ((translation Γ ^ n) x) =
+      rationalCuspOrbitFromCoset (plusMinus Γ) x := by
+  rw [translation_zpow_apply]
+  induction x using QuotientGroup.induction_on with
+  | H g =>
+    rw [MulAction.Quotient.smul_mk, smul_eq_mul]
+    change rationalCuspOrbitMk (plusMinus Γ) (mapGL ℚ ((T ^ n) * g)⁻¹ • ∞) =
+      rationalCuspOrbitMk (plusMinus Γ) (mapGL ℚ g⁻¹ • ∞)
+    rw [mul_inv_rev, ← zpow_neg, map_mul, mul_smul]
+    have hfix : mapGL ℚ (T ^ (-n)) • (∞ : OnePoint ℚ) = ∞ := by
+      apply (SourceManin.smul_infty_eq_iff _).mpr
+      simp [ModularGroup.coe_T_zpow]
+    rw [hfix]
+
+theorem exists_translation_of_same_rational_cusp (a b : SL(2, ℤ))
+    (h : rationalCuspOrbitMk (plusMinus Γ) (mapGL ℚ a⁻¹ • ∞) =
+      rationalCuspOrbitMk (plusMinus Γ) (mapGL ℚ b⁻¹ • ∞)) :
+    ∃ n : ℤ, (translation Γ ^ n) (b : Cosets Γ) = (a : Cosets Γ) := by
+  obtain ⟨γ, hγ, he⟩ := (rationalCuspOrbitMk_eq_iff (plusMinus Γ)).mp h
+  have hfix : mapGL ℚ (a * γ * b⁻¹) • (∞ : OnePoint ℚ) = ∞ := by
+    rw [map_mul, map_mul, mul_smul, mul_smul, he, ← mul_smul, ← map_mul,
+      mul_inv_cancel, map_one, one_smul]
+  obtain ⟨n, hn | hn⟩ := exists_T_zpow_or_neg_of_lower_left _
+    ((SourceManin.smul_infty_eq_iff _).mp hfix)
+  · refine ⟨n, ?_⟩
+    rw [translation_zpow_apply, MulAction.Quotient.smul_mk, smul_eq_mul]
+    have heq : T ^ n * b = a * γ := by rw [← hn]; group
+    rw [heq]
+    apply QuotientGroup.eq.mpr
+    simpa only [mul_inv_rev, mul_assoc, inv_mul_cancel, mul_one] using inv_mem hγ
+  · refine ⟨n, ?_⟩
+    rw [translation_zpow_apply, MulAction.Quotient.smul_mk, smul_eq_mul]
+    have heq : T ^ n * b = a * (-γ) := by
+      have ht : T ^ n = -(a * γ * b⁻¹) := by rw [hn, neg_neg]
+      rw [ht, neg_mul, inv_mul_cancel_right, mul_neg]
+    rw [heq]
+    apply QuotientGroup.eq.mpr
+    have hm : -γ ∈ plusMinus Γ := by
+      rw [← neg_one_mul]
+      exact mul_mem (neg_one_mem_plusMinus Γ) hγ
+    simpa only [mul_inv_rev, mul_assoc, inv_mul_cancel, mul_one] using inv_mem hm
+
+/-- Send a translation orbit of signed cosets to its actual rational cusp orbit. -/
+def orbitToRationalCusp : Orbits (Γ := Γ) → RationalCuspOrbit (plusMinus Γ) :=
+  Quotient.lift (rationalCuspOrbitFromCoset (plusMinus Γ)) (by
+    intro x y hxy
+    obtain ⟨g, hg⟩ := MulAction.mem_orbit_iff.mp hxy
+    obtain ⟨n, hn⟩ := Subgroup.mem_zpowers_iff.mp g.2
+    change (g.val : Equiv.Perm (Cosets Γ)) y = x at hg
+    rw [← hg, ← hn]
+    exact rationalCuspOrbitFromCoset_translation Γ n y)
+
+theorem orbitToRationalCusp_bijective : Function.Bijective (orbitToRationalCusp Γ) := by
+  constructor
+  · intro x y h
+    induction x using Quotient.inductionOn with
+    | h x =>
+      induction y using Quotient.inductionOn with
+      | h y =>
+        induction x using QuotientGroup.induction_on with
+        | H a =>
+          induction y using QuotientGroup.induction_on with
+          | H b =>
+            obtain ⟨n, hn⟩ := exists_translation_of_same_rational_cusp Γ a b h
+            apply Quotient.sound
+            exact ⟨⟨translation Γ ^ n, Subgroup.zpow_mem _ (Subgroup.mem_zpowers _) n⟩, hn⟩
+  · intro c
+    obtain ⟨x, hx⟩ := rationalCuspOrbitFromCoset_surjective (plusMinus Γ) c
+    exact ⟨orbQ (translation Γ) x, hx⟩
+
+theorem card_rationalCuspOrbit_eq_translation_orbits :
+    Nat.card (RationalCuspOrbit (plusMinus Γ)) = Nat.card (Orbits (Γ := Γ)) :=
+  (Nat.card_congr (Equiv.ofBijective _ (orbitToRationalCusp_bijective Γ))).symm
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CuspCounting

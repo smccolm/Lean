@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-27 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 and Abel-Jacobi -> real period surjectivity -> reverse dimension inequality -> real Manin relations on signed cosets.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-signed-parabolic-audit-route-777.json",
+    "sha256": "EC41B31370833BBC3B0E75191310077ECFFA0281F52EF1CDA62A7E2C8F954B72",
+    "review": {
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 and Abel-Jacobi -> real period surjectivity -> reverse dimension inequality -> real Manin relations on signed cosets.",
+      "assumptionsToDischarge": "Every enlarged-group element has an actual original-subgroup representative up to central sign. Equality of squares forces equality of real additive-character values, proving additivity and independence of sign. The extension agrees with the original character and is injective. Squared trace is unchanged by central sign, so the actual original real parabolic characters embed linearly in the signed parabolic space. Native finite H1 proves target finiteness; the required finrank inequality is derived without an extension or torsion-vanishing hypothesis.",
+      "remaining": "Adapt the exact real Manin dimension bound and assemble the actual Hurwitz/genus inequality using the proved finite and cusp fibers. Real period surjectivity, reciprocity, Picard/Hecke/diamond/H1, full all-weight characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePlusMinus.lean",
+          "sha256": "D8A3E4CFDF527B83F90E6B6B3C85F779F677FAF5D6C931870AC7BE1E7A6D4567"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralCohomologyFinite.lean",
+          "sha256": "5685ECC8D472414277A6B1F949F19211D6A02E516744631CF51965DC97FB5980"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceManinRelationDimension.lean",
+          "sha256": "0CCFE3E71744504435942048A466C2C13B24BC4A314B60AA8FCF5A3CD7099073"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-manin-route-775.json",
+          "sha256": "2857608FDFDE5187BAB2BBF3DB4A1FC514590B541AC6C94D5379C0AEF93F93B7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-parabolic-periods-1-scratch-receipt.json",
+          "sha256": "4E47B11D4AC61078C31B8FC1BD0CC369081E78CDD95B679EAB4F397534CE9473"
+        }
+      ],
+      "shorterRoute": "Construct only the injection and dimension comparison needed downstream. Equality of squares avoids transfer, abelianization and divisible-character extension infrastructure. Native finite H1 replaces a new finite-generator character argument."
+    }
+  },
+  "discharged": "Every enlarged-group element has an actual original-subgroup representative up to central sign. Equality of squares forces equality of real additive-character values, proving additivity and independence of sign. The extension agrees with the original character and is injective. Squared trace is unchanged by central sign, so the actual original real parabolic characters embed linearly in the signed parabolic space. Native finite H1 proves target finiteness; the required finrank inequality is derived without an extension or torsion-vanishing hypothesis.",
+  "remaining": "Adapt the exact real Manin dimension bound and assemble the actual Hurwitz/genus inequality using the proved finite and cusp fibers. Real period surjectivity, reciprocity, Picard/Hecke/diamond/H1, full all-weight characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

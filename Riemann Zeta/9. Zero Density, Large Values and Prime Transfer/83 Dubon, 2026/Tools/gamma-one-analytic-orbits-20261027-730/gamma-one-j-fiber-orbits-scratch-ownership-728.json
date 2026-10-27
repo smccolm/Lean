@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "theorems": 14,
+  "modules": 1,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberOrbitsScratchOwnership728.log",
+  "logSha256": "EDA8922CC8911F7D10E41AD1AE73C962A7A87CD3CF4D936901472E6AAB7A044C",
+  "sourceSha256": "2686037D622C2F60451EEE77819305D13349BFA042EA5B9870D61CC649859AA1",
+  "owners": [
+    {
+      "module": "SourceGammaOneJFiberOrbits",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.Fiber._proof_4"
+    },
+    {
+      "module": "SourceGammaOneJFiberOrbits",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber._proof_1"
+    },
+    {
+      "module": "SourceGammaOneJFiberOrbits",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.card_stabilizer_rep"
+    },
+    {
+      "module": "SourceGammaOneJFiberOrbits",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber_surjective._simp_1_2"
+    },
+    {
+      "module": "SourceGammaOneJFiberOrbits",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_orders"
+    },
+    {
+      "module": "SourceGammaOneJFiberOrbits",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.Fiber._proof_3"
+    },
+    {
+      "module": "SourceGammaOneJFiberOrbits",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.Fiber._proof_2"
+    },
+    {
+      "module": "SourceGammaOneJFiberOrbits",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.Fiber._proof_1"
+    },
+    {
+      "module": "SourceGammaOneJFiberOrbits",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber_surjective"
+    },
+    {
+      "module": "SourceGammaOneJFiberOrbits",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber_injective"
+    },
+    {
+      "module": "SourceGammaOneJFiberOrbits",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber_surjective._simp_1_1"
+    },
+    {
+      "module": "SourceGammaOneJFiberOrbits",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.j_rep"
+    },
+    {
+      "module": "SourceGammaOneJFiberOrbits",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.finite_orbitQuot"
+    },
+    {
+      "module": "SourceGammaOneJFiberOrbits",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.equiv._proof_1"
+    }
+  ]
+}

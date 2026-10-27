@@ -1,0 +1,5 @@
+{
+  "stage": "In-memory preflight, before any source or audit file write",
+  "failure": "AST parse rejected UTF-8 BOM from template",
+  "repair": "Read template as utf-8-sig; preserve Lean and frozen proof sources"
+}

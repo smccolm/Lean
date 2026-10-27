@@ -1,0 +1,964 @@
+{
+  "date": "27 October 2026",
+  "modules": [
+    "Dubon2026.SourceGammaOneCuspResidues",
+    "Dubon2026.SourceGammaOneCuspBoundedRealization",
+    "Dubon2026.SourceGammaOneCuspPlaceExhaustion",
+    "Dubon2026.SourceGammaOneUniformCuspPole",
+    "Dubon2026.SourceGammaOneHolomorphicModularQuotient",
+    "Dubon2026.SourceGammaOneHolomorphicFieldRealization",
+    "Dubon2026.SourceGammaOneOriginalPoleMultiplier",
+    "Dubon2026.SourceGammaOnePoleClearedNormalization",
+    "Dubon2026.SourceGammaOnePoleClearedProduct",
+    "Dubon2026.SourceGammaOnePoleClearedCuspBounds",
+    "Dubon2026.SourceGammaOneMeromorphicFieldRealization",
+    "Dubon2026.SourceGammaOneMeromorphicCuspLimits",
+    "Dubon2026.SourceGammaOneMeromorphicPrincipalDivisor"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 homogeneous-coefficient Hecke characters -> full/parabolic, transpose, diamond, Picard/H1 comparison -> actual differential and period geometry -> Abel-Jacobi principal-divisor converse.",
+  "discharged": "The exact invariant meromorphic-function contract gives a literal principal divisor in the original Gamma1 integral-ratio field. Actual cusp exhaustion follows from existing one-pole functions and weight-zero constancy. Finite-coordinate pole clearing and native meromorphic normalization construct a holomorphic product; discriminant powers control every translated cusp and actual modular-ratio membership returns the original field element. Exact analytic orders and every cusp order are derived. Nonzero translated limits force order zero at all j-pole places. No field-realization, cusp-exhaustion or cusp-order hypothesis is supplied to the final consumer.",
+  "boundary": "Constructing the meromorphic function from the Abel-Jacobi period condition still requires genuine real period surjectivity and reciprocity. Actual global periods and Hecke/diamond/Picard/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 8,599-module scope: all thirteen retained regressions, 54,148 exhaustive theorem checks, 24,844 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_mem_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_sub_constant_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order_eq_zero_of_tendsto",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_residue",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_cusp_analytic_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_bounded_of_cusp_regular",
+    "Dubon2026.SourceFunctionField.GammaOne.constant_of_mem_all_analytic_and_cusp_places",
+    "Dubon2026.SourceFunctionField.GammaOne.place_analytic_or_actual_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_cusp_place_eq_of_j_pole",
+    "Dubon2026.SourceFunctionField.GammaOne.order_eq_zero_at_j_poles_of_cusp_limits",
+    "Dubon2026.SourceFricke.finite_modular_orbit_of_invariant",
+    "Dubon2026.SourceFricke.exists_uniform_discriminant_pole_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient_of_meromorphic_cusps",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_holomorphic",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier_at_analytic_places",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_of_nonnegative_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_invariant_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.boundedAtImInfty_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_pole_cleared_holomorphic_product",
+    "Dubon2026.SourceFunctionField.GammaOne.pole_bounds_of_local_product",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphic_cusps_of_holomorphic_pole_bounds",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_prescribed_meromorphic_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.tendsto_atImInfty_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.eventually_continuousAt_realize_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.tendsto_cuspFunction_of_tendsto",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.isPrincipal_of_prescribed_meromorphic_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_function"
+  ],
+  "scratchCertificates": [
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T10:20:03.215746+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceGammaOneCuspResidues"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResidues.lean",
+          "sha256": "8758D75A8136557A54075839F03773133574AF5076DCB28CCFB4C16123D6846F",
+          "oleanSha256": "8D2D7AEFE43E157F20223E70C7AFFB77124B6A58CB4487001D1737CB1BF1220D"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_mem_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_sub_constant_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order_eq_zero_of_tendsto",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_residue",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_cusp_analytic_representative"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_mem_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_sub_constant_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order_eq_zero_of_tendsto",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_residue",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_cusp_analytic_representative"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResiduesAudit1.log",
+      "logSha256": "194F6FC748F8DB7C764DBD935959A5ACF565D70F216AEDFBB846A84DCE21DAC7",
+      "auditSha256": "5821BBAABC96266EF2ACC377DEB4AB586CBA9650FC9A02B2ABA3C8F2540BE49D",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 6,
+      "linterScopes": 1,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 10,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResiduesDependencyAudit1.log",
+      "dependencyAuditSha256": "5935B07C99DF51EA9D3B6B393A173A185329E60E87B9A99D6C58EB2E00F214BB",
+      "dependencyAuditSourceSha256": "8A8E1369254E0D5161CF936C68E8AC31AF4571D156E43E1E279CB8EB68EAC26E",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_mem_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_sub_constant_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order_eq_zero_of_tendsto",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_residue",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_cusp_analytic_representative"
+      ],
+      "dependency": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1 and period comparison -> principal-divisor cusp-order control.",
+      "discharged": "Actual regular translated cusp germs have limits equal to their rational residues, with analytic representatives at the center. A nonzero limit of an actual field element forces normalized order zero at the corresponding cusp place.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. This does not exhaust every j-pole place by a cusp and does not construct a normalized cusp atlas. Global Picard/period, Hecke/diamond/H1 comparison, characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-residues-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "433CB3A3B4060E99C3620EFA5A92ED0B80A4713342858696993FCA68CA0FBF12",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T10:31:28.367544+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceGammaOneCuspBoundedRealization",
+        "SourceGammaOneCuspPlaceExhaustion"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspBoundedRealization.lean",
+          "sha256": "D1D7F873E802C2C3E91D75E6C21C75A20568389334A87F9E28D86E5B8DBCAC69",
+          "oleanSha256": "D539B330A09B175F578881CD26DF541AEEDAE3C91C102B5DE74792556367682B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPlaceExhaustion.lean",
+          "sha256": "EA2A0681688AEA7BEAE678FAC085668A85A719E7FE0565BFFD6D9783A3D97BD5",
+          "oleanSha256": "F42ADC376C949A5C14EA63C342019D9D0092F6EB821CA935E7BD6064D9CF54C7"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_bounded_of_cusp_regular",
+        "Dubon2026.SourceFunctionField.GammaOne.constant_of_mem_all_analytic_and_cusp_places",
+        "Dubon2026.SourceFunctionField.GammaOne.place_analytic_or_actual_cusp",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_cusp_place_eq_of_j_pole",
+        "Dubon2026.SourceFunctionField.GammaOne.order_eq_zero_at_j_poles_of_cusp_limits"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_bounded_of_cusp_regular",
+        "Dubon2026.SourceFunctionField.GammaOne.constant_of_mem_all_analytic_and_cusp_places",
+        "Dubon2026.SourceFunctionField.GammaOne.place_analytic_or_actual_cusp",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_cusp_place_eq_of_j_pole",
+        "Dubon2026.SourceFunctionField.GammaOne.order_eq_zero_at_j_poles_of_cusp_limits"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspExhaustionAudit1.log",
+      "logSha256": "665139A99BD5704B1F7E91E71209A4C5BDD3CA6048542E559798B062C4AF04BC",
+      "auditSha256": "A31A56384397BA43A818065F09C32FCFC7A156425C4FA0B51160569625CDC336",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 6,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspExhaustionDependencyAudit1.log",
+      "dependencyAuditSha256": "A08E48DF8C3501C33884F23F6C564C31A659C684C90D88190E295D023D361C81",
+      "dependencyAuditSourceSha256": "B948F88F6F4B0ECAB2FB6713A44F87CCFDC0D8CE7A5F69484006EEEF8A02BCCF",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_bounded_of_cusp_regular",
+        "Dubon2026.SourceFunctionField.GammaOne.constant_of_mem_all_analytic_and_cusp_places",
+        "Dubon2026.SourceFunctionField.GammaOne.place_analytic_or_actual_cusp",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_cusp_place_eq_of_j_pole",
+        "Dubon2026.SourceFunctionField.GammaOne.order_eq_zero_at_j_poles_of_cusp_limits"
+      ],
+      "dependency": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> original all-weight arithmetic association -> arithmetic realization of actual finite Gamma1 homogeneous Hecke characters -> Picard/H1 and period comparison -> principal-divisor cusp-order control -> exhaustion of every j-pole place by an actual translated cusp.",
+      "discharged": "Every original field element regular at all analytic places and all actual cusp places is constant. Every place is analytic or an actual cusp; consequently every j-pole place is a cusp. Nonzero limits at all translated cusps then give normalized order zero at every j-pole place.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Actual global Picard/period, full/parabolic, transpose, Hecke/diamond comparisons and arithmetic realization, characteristic-zero association, automorphy and literal higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-exhaustion-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "3984F38D14F2D1AE61BFDFBFBD3B48822A8EC05D89F7E0F7A1850DB8E52A774A",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T10:58:35.600475+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceGammaOneUniformCuspPole",
+        "SourceGammaOneHolomorphicModularQuotient",
+        "SourceGammaOneHolomorphicFieldRealization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUniformCuspPole.lean",
+          "sha256": "EB744105EA29F866EAC2BA40D19305A41B9A4CB8B54BBF09C99B6A1F2A5A57D3",
+          "oleanSha256": "274B83A6AE28D35411C035BA42704A1CD147735797FC853DDD4DFFDEDFDE1D2A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicModularQuotient.lean",
+          "sha256": "3615B6B5798C4BBE514257FB679706B6502B9E96FFC5C4788487F384641745A4",
+          "oleanSha256": "5DC0D13197A7A3AA6B9031DCDD8B64CB3FF220E892281505CA1A53061064A17E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldRealization.lean",
+          "sha256": "30042838C4B2CB48621A0E736D94673375B2B22ADD0EDF0E72A49EA5DCF40FB0",
+          "oleanSha256": "D1D8DAAE45D9A0E9E5C92E7504AA68C890C59743BE9596A917916230391E8A1F"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFricke.finite_modular_orbit_of_invariant",
+        "Dubon2026.SourceFricke.exists_uniform_discriminant_pole_bound",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient_of_meromorphic_cusps",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_holomorphic"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFricke.finite_modular_orbit_of_invariant",
+        "Dubon2026.SourceFricke.exists_uniform_discriminant_pole_bound",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient_of_meromorphic_cusps",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_holomorphic"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldAudit1.log",
+      "logSha256": "E1C48D0B7D48E09B4FC244BD95D4C0BDAC55EA058A567C9D0BBF6170943EE0B6",
+      "auditSha256": "9518967CA83784DF9749C2D002D37D699318A96E3635D2A5C0230EDB8AB3D925",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 7,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldDependencyAudit1.log",
+      "dependencyAuditSha256": "B24C64FF98AE05C5F0EEADBE73744A5D95A77F2299FD92AB0267377A2E109B0E",
+      "dependencyAuditSourceSha256": "41F99B8088BBAC990B0C99EE4DC60F444C2BF69C27DE69598DBD695D198A5248",
+      "consumers": [
+        "Dubon2026.SourceFricke.finite_modular_orbit_of_invariant",
+        "Dubon2026.SourceFricke.exists_uniform_discriminant_pole_bound",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient_of_meromorphic_cusps",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_holomorphic"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of actual finite Gamma1 homogeneous-coefficient Hecke characters -> Picard/H1/full-parabolic/transpose/diamond comparison -> modular periods -> original field realization of the constructed meromorphic function.",
+      "discharged": "Common exponent for all actual cusp poles, genuine holomorphic modular quotient, membership in the original integral-ratio field, pointwise analytic realization and all translated cusp germs. These are derived from holomorphy, actual Gamma1 invariance and meromorphic cusp germs. Finite analytic-pole clearing is not part of this proved increment.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Real parabolic period surjectivity, Abel-Petersson reciprocity, complete actual period/Picard/Hecke/diamond/H1 comparison and all-weight arithmetic association remain; 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-holomorphic-field-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "9EAE9029B029A8A0B7DB9DA49F4C0FCD5DF51FC04A7CDE0CD39DE2D31592E324",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T11:10:25.496551+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceGammaOneOriginalPoleMultiplier",
+        "SourceGammaOnePoleClearedNormalization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalPoleMultiplier.lean",
+          "sha256": "309B6DA1385D0E447E82C90498F98048939C4958C83B78DE04954BFE8C1C1A08",
+          "oleanSha256": "F28C670A24736E92BF72EFEDA3DE28BF879E9FE12A35AA09012831E70BC82AE0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearedNormalization.lean",
+          "sha256": "4EA0F5A259ABB716451A0267977811EB4FFDFD0249514BB89C4505DD94697508",
+          "oleanSha256": "39B7F03C7AD94D8695B3C0ECAA5C60AAA2BBA960F0ECAD3AA9FD95B53754A153"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier_at_analytic_places",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_of_nonnegative_orders",
+        "Dubon2026.SourceFunctionField.GammaOne.holomorphic_invariant_of_local_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.boundedAtImInfty_of_local_eq"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier_at_analytic_places",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_of_nonnegative_orders",
+        "Dubon2026.SourceFunctionField.GammaOne.holomorphic_invariant_of_local_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.boundedAtImInfty_of_local_eq"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearingNormalizationAudit1.log",
+      "logSha256": "9190DB895A9DBEA200D34995B1937DF7D14F7D3AE61749955126326F5C4A05B2",
+      "auditSha256": "E63E02C18BA6F0BB4CDB2CBCB13D3915FA7073DB741C74A430B5764C30CA97C9",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 7,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 13,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearingNormalizationDependencyAudit1.log",
+      "dependencyAuditSha256": "BE93DFA9DD3323BBF66BD9F77B0FC51712EFC8A58BB51FB8A739CCC6062DE2BF",
+      "dependencyAuditSourceSha256": "641501626A851308F02AF902A43AC28C10845D78BAE31907C2DB4C33CD768449",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier_at_analytic_places",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_of_nonnegative_orders",
+        "Dubon2026.SourceFunctionField.GammaOne.holomorphic_invariant_of_local_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.boundedAtImInfty_of_local_eq"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite homogeneous-coefficient Gamma1 Hecke-character realization -> Picard/H1/full-parabolic/transpose/diamond comparison -> modular periods -> actual meromorphic field realization.",
+      "discharged": [
+        "An original nonzero field multiplier regular at every finite j-place, whose order plus the prescribed finite divisor is nonnegative there. The analytic-place consumer derives both regularity and the required pole-cancellation bound.",
+        "Existence of a holomorphic representative from nonnegative meromorphic orders; preservation of the actual subgroup invariance and cusp boundedness under local punctured equality. These permit the genuine pole-cleared product to enter the already proved holomorphic modular quotient."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Consumer for the actual pole-cleared product and division back into the original field, real period surjectivity, Abel-Petersson reciprocity, complete period/Hecke/diamond/H1 comparison, all-weight association and higher continuation remain; 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-pole-clearing-normalization-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "790640CE8CE6EBCA8A13890E294BAC19D15931F3FB013BB82D95CC612D55A947",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T11:19:56.552079+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceGammaOnePoleClearedProduct",
+        "SourceGammaOnePoleClearedCuspBounds",
+        "SourceGammaOneMeromorphicFieldRealization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearedProduct.lean",
+          "sha256": "B195357EDAD0105292EDA8A18E2CCB0BFA916DAC14DA5DE1C436029F0584FD4B",
+          "oleanSha256": "35A6D26D9FD62BAAE1ECA095EBBFC23D5340F536289CA13DF8F0803180C68E0B"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearedCuspBounds.lean",
+          "sha256": "1B24464405C3C418046C46C38BEEA5C1172CAB150D4E37D80BE90B562DC4E253",
+          "oleanSha256": "CEA256DDCD239195666FA109DFA4AA27BA76719020389FCD68D38573CFAAEE6C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldRealization.lean",
+          "sha256": "DC94E0CFCA7F6A03B5A70B2DAAE0ADC18B0573DCF26241698BEBA331A8B9A9CB",
+          "oleanSha256": "DDE7A18CA0519F380C99CA289F3D3BE3077DE239CACC14E9C451B9E2F31B1E85"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_pole_cleared_holomorphic_product",
+        "Dubon2026.SourceFunctionField.GammaOne.pole_bounds_of_local_product",
+        "Dubon2026.SourceFunctionField.GammaOne.meromorphic_cusps_of_holomorphic_pole_bounds",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_prescribed_meromorphic_orders"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_pole_cleared_holomorphic_product",
+        "Dubon2026.SourceFunctionField.GammaOne.pole_bounds_of_local_product",
+        "Dubon2026.SourceFunctionField.GammaOne.meromorphic_cusps_of_holomorphic_pole_bounds",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_prescribed_meromorphic_orders"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldAudit1.log",
+      "logSha256": "7A9460FC156499A968DB52EA8120F14F94762F0312C6EE1FB8337A9DD91E6E0A",
+      "auditSha256": "8C220AA7298BB1D8B5C0B446F38316D3B0E780D0481C2467D07587EAEA6E644E",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 6,
+      "linterScopes": 3,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 15,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldDependencyAudit1.log",
+      "dependencyAuditSha256": "932C4B462081C739AEFFFA3BF3F16583EA1390B4B1FD37EB18F4D20216CBB427",
+      "dependencyAuditSourceSha256": "217043CF757133E109447E5B0A9D3C466D54BD39C743420B10126CA6CB8403BA",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_pole_cleared_holomorphic_product",
+        "Dubon2026.SourceFunctionField.GammaOne.pole_bounds_of_local_product",
+        "Dubon2026.SourceFunctionField.GammaOne.meromorphic_cusps_of_holomorphic_pole_bounds",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_prescribed_meromorphic_orders"
+      ],
+      "dependency": "DUB-17/18 -> original all-weight arithmetic association -> actual finite homogeneous-coefficient Gamma1 characters -> Picard/H1/full-parabolic/transpose/diamond comparison -> modular periods -> original meromorphic field realization.",
+      "discharged": [
+        "Consume the original algebraic multiplier and the precise ramification-weighted finite-divisor orders to derive a holomorphic product, actual subgroup invariance, literal local realization and multiplier cusp bounds.",
+        "Cusp pole bounds and meromorphic cusp germs for the actual normalized product, derived from boundedness of the original meromorphic function and the actual multiplier bounds.",
+        "Actual original-field realization of a meromorphic invariant function with the prescribed finite ramification-weighted divisor and bounded translated cusps; nonvanishing and exact normalized analytic-place orders are conclusions."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Transfer nonzero cusp limits to the actual field element, then compose with actual global period existence and reciprocity. Full Picard/Hecke/diamond/H1 and original all-weight arithmetic association remain; 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-meromorphic-field-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "38C9322AD8BAE95C74E76AC90AD262D75EEB82EA69A04A457353C4B77D0C5293",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T11:29:17.978953+00:00",
+      "date": "2026-10-27 America/Vancouver",
+      "modules": [
+        "SourceGammaOneMeromorphicCuspLimits",
+        "SourceGammaOneMeromorphicPrincipalDivisor"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicCuspLimits.lean",
+          "sha256": "67169F583ACFA9C4F6AA8515A473FAF472B4042DE13D63B1411A94928EBD871C",
+          "oleanSha256": "0D9AA2800D5816C93D3B8A65D0BF5AC5D121FF544000BF9B22D801C2E3F2C700"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisor.lean",
+          "sha256": "06E5FFDB66F99ECCC1FAE95EDCFC0FF26CC81694D462B87605745D7860D0E3EB",
+          "oleanSha256": "76F940919C238A005C87645EC79AAB0CFB96284612E8344F214EE10F24F70EBC"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.tendsto_atImInfty_of_local_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.eventually_continuousAt_realize_cusp",
+        "Dubon2026.SourceFunctionField.GammaOne.tendsto_cuspFunction_of_tendsto",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_of_local_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.isPrincipal_of_prescribed_meromorphic_orders",
+        "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_function"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.tendsto_atImInfty_of_local_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.eventually_continuousAt_realize_cusp",
+        "Dubon2026.SourceFunctionField.GammaOne.tendsto_cuspFunction_of_tendsto",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_of_local_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.isPrincipal_of_prescribed_meromorphic_orders",
+        "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_function"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorAudit1.log",
+      "logSha256": "DACD3C7A1ACEE47976D5BA5DE63291A2377E2E176469259719BE1993CE16DA44",
+      "auditSha256": "C8EB575217FAABCE624DDA6851BE9FC58A65336D9CC52327C6EA98095B4C070A",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 8,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 15,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorDependencyAudit1.log",
+      "dependencyAuditSha256": "63656E01E765C8D46660F0610EC366A885CCB65BB08141E6B690927A39367D87",
+      "dependencyAuditSourceSha256": "C9F856F41CE9B16F56F7035DF6B7D5AB405DC658F6ED90CC339F01CC94284077",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.tendsto_atImInfty_of_local_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.eventually_continuousAt_realize_cusp",
+        "Dubon2026.SourceFunctionField.GammaOne.tendsto_cuspFunction_of_tendsto",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_of_local_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.isPrincipal_of_prescribed_meromorphic_orders",
+        "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_function"
+      ],
+      "dependency": "DUB-17/18 -> original all-weight arithmetic association -> actual finite homogeneous-coefficient Gamma1 characters -> Picard/H1/full-parabolic/transpose/diamond comparison -> modular periods -> principal-divisor converse.",
+      "discharged": [
+        "Transfer the actual nonzero translated cusp limits through the local meromorphic field realization. Derive eventual continuity from the actual modular denominator; use native inverse-q convergence. This supplies scope743 order-zero-at-every-j-pole consumer.",
+        "A supplied invariant meromorphic function with the exact ramification-weighted finite analytic divisor and nonzero limits at all translated cusps determines a literal principal divisor of the original Gamma1 field. Field realization, nonvanishing, all analytic orders, cusp exhaustion and all j-pole orders are conclusions, not supplied hypotheses."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. The meromorphic function must still be constructed from the actual Abel-Jacobi period condition. Real parabolic period surjectivity, Abel-Petersson reciprocity, complete global Picard/Hecke/diamond/H1 comparison and original all-weight arithmetic association remain; 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-meromorphic-principal-divisor-1-reuse-review-20261027.json",
+      "reuseReviewSha256": "085C6A4EA50FBD88DC7C4AC667A3953C999862CA155DF6B6A64BF21CE0206EB8",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-gamma-one-cusp-residues-1-reuse-review-20261027.json",
+    "Tools/source-gamma-one-cusp-exhaustion-1-reuse-review-20261027.json",
+    "Tools/source-gamma-one-holomorphic-field-1-reuse-review-20261027.json",
+    "Tools/source-gamma-one-pole-clearing-normalization-1-reuse-review-20261027.json",
+    "Tools/source-gamma-one-meromorphic-field-1-reuse-review-20261027.json",
+    "Tools/source-gamma-one-meromorphic-principal-divisor-1-reuse-review-20261027.json"
+  ],
+  "dependencyRouteAssessment": {
+    "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-meromorphic-principal-divisor-promotion-route-752.json",
+    "sha256": "4D76F4FEBC9BF11B31766DBE9DDD134E91818BF83A6A92AF4B6D6146F706FA79"
+  },
+  "proofEvidenceArchive": {
+    "manifest": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/archive-manifest.json",
+    "sha256": "78E7D2A58CA165BE72B6B10DD44588EF5D1079C3CC805CDCD14DFB31E28BC5BA",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt8599": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResiduesDependencyAudit1Production8599.log",
+        "sha256": "5935B07C99DF51EA9D3B6B393A173A185329E60E87B9A99D6C58EB2E00F214BB",
+        "requiredProofValueEdges": 10,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_mem_iff",
+          "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_sub_constant_eventuallyEq",
+          "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order_eq_zero_of_tendsto",
+          "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_residue",
+          "Dubon2026.SourceFunctionField.GammaOne.regular_cusp_analytic_representative"
+        ],
+        "sourceSha256": "9FAF93CB5B1542E4C1D5518B5C94A680B538C77E487EDF25949BF72BC2DC85E8"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspExhaustionDependencyAudit1Production8599.log",
+        "sha256": "A08E48DF8C3501C33884F23F6C564C31A659C684C90D88190E295D023D361C81",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_eventuallyEq",
+          "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_bounded_of_cusp_regular",
+          "Dubon2026.SourceFunctionField.GammaOne.constant_of_mem_all_analytic_and_cusp_places",
+          "Dubon2026.SourceFunctionField.GammaOne.place_analytic_or_actual_cusp",
+          "Dubon2026.SourceFunctionField.GammaOne.exists_cusp_place_eq_of_j_pole",
+          "Dubon2026.SourceFunctionField.GammaOne.order_eq_zero_at_j_poles_of_cusp_limits"
+        ],
+        "sourceSha256": "47178482390159F152B3D2B44538E88DF279E179FBE549EEC003BD381579DACA"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldDependencyAudit1Production8599.log",
+        "sha256": "B24C64FF98AE05C5F0EEADBE73744A5D95A77F2299FD92AB0267377A2E109B0E",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceFricke.finite_modular_orbit_of_invariant",
+          "Dubon2026.SourceFricke.exists_uniform_discriminant_pole_bound",
+          "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient",
+          "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_modular_quotient_of_meromorphic_cusps",
+          "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_holomorphic"
+        ],
+        "sourceSha256": "17542AFF35085AEC40693B89234BE9B809ABF5DA34B9C2D4D9664E25777844F1"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearingNormalizationDependencyAudit1Production8599.log",
+        "sha256": "BE93DFA9DD3323BBF66BD9F77B0FC51712EFC8A58BB51FB8A739CCC6062DE2BF",
+        "requiredProofValueEdges": 13,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier",
+          "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier_at_analytic_places",
+          "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_of_nonnegative_orders",
+          "Dubon2026.SourceFunctionField.GammaOne.holomorphic_invariant_of_local_eq",
+          "Dubon2026.SourceFunctionField.GammaOne.boundedAtImInfty_of_local_eq"
+        ],
+        "sourceSha256": "137A96CCDB16C70E11C4F49B701F7C080459BA338D9222E6EA7753F5332B9B5E"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldDependencyAudit1Production8599.log",
+        "sha256": "932C4B462081C739AEFFFA3BF3F16583EA1390B4B1FD37EB18F4D20216CBB427",
+        "requiredProofValueEdges": 15,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.exists_pole_cleared_holomorphic_product",
+          "Dubon2026.SourceFunctionField.GammaOne.pole_bounds_of_local_product",
+          "Dubon2026.SourceFunctionField.GammaOne.meromorphic_cusps_of_holomorphic_pole_bounds",
+          "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_prescribed_meromorphic_orders"
+        ],
+        "sourceSha256": "76FC647D5EE78FCFBF7E1F2C22B5E3A5DF830B4B176C4608BDEA41838E1DEA5D"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorDependencyAudit1Production8599.log",
+        "sha256": "63656E01E765C8D46660F0610EC366A885CCB65BB08141E6B690927A39367D87",
+        "requiredProofValueEdges": 15,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.tendsto_atImInfty_of_local_eq",
+          "Dubon2026.SourceFunctionField.GammaOne.eventually_continuousAt_realize_cusp",
+          "Dubon2026.SourceFunctionField.GammaOne.tendsto_cuspFunction_of_tendsto",
+          "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_of_local_eq",
+          "Dubon2026.SourceFunctionField.GammaOne.isPrincipal_of_prescribed_meromorphic_orders",
+          "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_function"
+        ],
+        "sourceSha256": "A98EA863132EE114A4C656DF58D40902E0E50532AF3B77DF53248ED8738B59EB"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorProductionAudit8599.log",
+    "sha256": "E5E8368AA4AF30226AFCF49BD4F8683B8A335D2E3683047FC839A3522F4C353A",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-meromorphic-principal-divisor-production-build-8599.log",
+    "aggregateSha256": "11AFCAEBBBD1F59A018BE431E11B208968B55514D28A13F7E2588B5E1130EED2",
+    "productionModules": 8599,
+    "incrementModules": 13,
+    "axiomChecks": 31,
+    "exhaustiveIncrementTheorems": 40,
+    "linterScopes": 13,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 40,
+    "productionReuse": "Only scratch imports are qualified. All audited statements, proof bodies and comments remain identical. Exact actual field elements, normalized place orders, all nonzero Gamma1 levels and translated cusp limits are retained.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 40,
+      "scratchDistinct": 40,
+      "generatedNameRenamings": {},
+      "productionFocused": 40,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceGammaOneCuspResidues"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResiduesScratchOwnership742.log",
+            "sha256": "56D3458B9DB45DE5C8019C75586BF2B352F775782441081DD3898CCE250EA50F",
+            "sourceSha256": "8302FCCFDAE8A4D3907614D2C16C594E49C5A06D5B7BB646930BC5AF00E08E79"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneCuspBoundedRealization",
+            "SourceGammaOneCuspPlaceExhaustion"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspExhaustionScratchOwnership743.log",
+            "sha256": "DE30B35F449027BD019A658752EC94C34C86532191EBA536BE82E1B0FE3FCDC6",
+            "sourceSha256": "B68178469EDEF05D76F73464A720610B019C7CC86871FDC238A1203404D88B88"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneUniformCuspPole",
+            "SourceGammaOneHolomorphicModularQuotient",
+            "SourceGammaOneHolomorphicFieldRealization"
+          ],
+          "count": 7,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldScratchOwnership744.log",
+            "sha256": "B1BE6DA9AD7F80DEBF44908476C981E58C3D21A47D5C7AC36224976268B30F5E",
+            "sourceSha256": "333275DA8ABBD622055F2A250C568C77F04774B7430547DA1737CDEB19CF0A79"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneOriginalPoleMultiplier",
+            "SourceGammaOnePoleClearedNormalization"
+          ],
+          "count": 7,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearingNormalizationScratchOwnership746.log",
+            "sha256": "D6B1297EAC0FA648A1485888EE6A48E02875FDF1B628ADE88CEB0A01D2888AC8",
+            "sourceSha256": "B3358E9394F4DBFC97A86B1C3DAA95D1340D165406BB701F3AFF4DA29CF803C6"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOnePoleClearedProduct",
+            "SourceGammaOnePoleClearedCuspBounds",
+            "SourceGammaOneMeromorphicFieldRealization"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldScratchOwnership749.log",
+            "sha256": "25A43FCE450B7EE46AF61736E0D3B19F50BC008123501309D91F0F26B455381F",
+            "sourceSha256": "0067E5C1E311F639AC05BC357E44CA3E8DF5BF44FECFAA0E78BF642BB7BB310A"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneMeromorphicCuspLimits",
+            "SourceGammaOneMeromorphicPrincipalDivisor"
+          ],
+          "count": 8,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorScratchOwnership751.log",
+            "sha256": "43245126112C73FA181266EE77DF360A697CC9048F4147E99BD336B6F0C52EA5",
+            "sourceSha256": "B72D7CD751017715EEF156C9CE8B73033E84C5BBC00D39BA3E8A46C6F035632D"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorOwnership8599.log",
+        "sha256": "64FA379D459E2547C2F14888CC879A9556625BFC29B042E79FC6673C625E15FC",
+        "sourceSha256": "D3F70CAD96A3ADCF8C124BF08ED9CF3F7BC316E9FCE6E6E4723581F5B1DD9F29"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-034612-601.log",
+        "sha256": "16FA3C97F458D7CB5691FBE649F6EB5C6DC1AE09393F8CB4308E898EBFBC45AF"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 13 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceGammaOneCuspResidues",
+            "scratchSha256": "8758D75A8136557A54075839F03773133574AF5076DCB28CCFB4C16123D6846F",
+            "productionSha256": "8758D75A8136557A54075839F03773133574AF5076DCB28CCFB4C16123D6846F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspBoundedRealization",
+            "scratchSha256": "D1D7F873E802C2C3E91D75E6C21C75A20568389334A87F9E28D86E5B8DBCAC69",
+            "productionSha256": "7D53F2360902DE331614E23282BDBFCFC0C554E02977EAD57E189FF2D5000314",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspPlaceExhaustion",
+            "scratchSha256": "EA2A0681688AEA7BEAE678FAC085668A85A719E7FE0565BFFD6D9783A3D97BD5",
+            "productionSha256": "4B7E1A0E384F97BCB5492787AB30B91CD3A2AEB1DC77D8DB1A2C904C9851DC18",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneUniformCuspPole",
+            "scratchSha256": "EB744105EA29F866EAC2BA40D19305A41B9A4CB8B54BBF09C99B6A1F2A5A57D3",
+            "productionSha256": "95834F5B1AA14D441C6735AE04CC990D5E8886BE5FC26F86CD3B97DB198EC949",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHolomorphicModularQuotient",
+            "scratchSha256": "3615B6B5798C4BBE514257FB679706B6502B9E96FFC5C4788487F384641745A4",
+            "productionSha256": "0543EF5DA870BB01A462C7619F91D5010BA2F6ED5BB7D21002D2C6300B4E58E3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHolomorphicFieldRealization",
+            "scratchSha256": "30042838C4B2CB48621A0E736D94673375B2B22ADD0EDF0E72A49EA5DCF40FB0",
+            "productionSha256": "89DE3104F4AF2FC84AC79F7454BB6404185B3A2568EB5CCEFF6BB2A9D498F6D1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneOriginalPoleMultiplier",
+            "scratchSha256": "309B6DA1385D0E447E82C90498F98048939C4958C83B78DE04954BFE8C1C1A08",
+            "productionSha256": "309B6DA1385D0E447E82C90498F98048939C4958C83B78DE04954BFE8C1C1A08",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOnePoleClearedNormalization",
+            "scratchSha256": "4EA0F5A259ABB716451A0267977811EB4FFDFD0249514BB89C4505DD94697508",
+            "productionSha256": "4EA0F5A259ABB716451A0267977811EB4FFDFD0249514BB89C4505DD94697508",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOnePoleClearedProduct",
+            "scratchSha256": "B195357EDAD0105292EDA8A18E2CCB0BFA916DAC14DA5DE1C436029F0584FD4B",
+            "productionSha256": "AFED125C528703C8E5EB4A09E19C3B968E8A8F78A38F5D65F2016444FF82E444",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOnePoleClearedCuspBounds",
+            "scratchSha256": "1B24464405C3C418046C46C38BEEA5C1172CAB150D4E37D80BE90B562DC4E253",
+            "productionSha256": "EAC5DF8F29943D565A2E3E5DEBDA37B63B41A57ED143BC2BA4A5436C5281193A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneMeromorphicFieldRealization",
+            "scratchSha256": "DC94E0CFCA7F6A03B5A70B2DAAE0ADC18B0573DCF26241698BEBA331A8B9A9CB",
+            "productionSha256": "349453DC40DEAC555B569EF7E19E61F28ABB4A24DAA92291BF41C672FCDF390D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneMeromorphicCuspLimits",
+            "scratchSha256": "67169F583ACFA9C4F6AA8515A473FAF472B4042DE13D63B1411A94928EBD871C",
+            "productionSha256": "ED185486CADEF91FF4D97AB6529A27177AD048011E05C9BBED4B227F532E7FD0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneMeromorphicPrincipalDivisor",
+            "scratchSha256": "06E5FFDB66F99ECCC1FAE95EDCFC0FF26CC81694D462B87605745D7860D0E3EB",
+            "productionSha256": "BFC520DEBDB84C434C29A2118559A4DB86211E8491926EA708A0399672BE89EA",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 40 distinct names from 40 exhaustive scratch checks are retained: 40 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Constructing the meromorphic function from the Abel-Jacobi period condition still requires genuine real period surjectivity and reciprocity. Actual global periods and Hecke/diamond/Picard/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged."
+  },
+  "receipt8599": {
+    "recordedUTC": "2026-10-27T14:23:16.582384+00:00",
+    "log": "logs/dubon-build-20261027-054603-942.log",
+    "sha256": "2F7A6B70D31EBC5C430ADAD15B1686C4241CA8F116E7910F1CC3705302F09FED",
+    "bytes": 13956517,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8599,
+    "projectTheorems": 54148,
+    "registeredConsumers": 24844,
+    "registeredConstructions": 2465,
+    "declarations": 33262,
+    "generated": 34096,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261027_053812.log",
+    "foundationSha256": "C819B78EC41E93B9D65A171A4C906D69B5D0D834375174C10A8575D094195CA1",
+    "countReconciliation": {
+      "previousTheorems": 54109,
+      "focusedTheorems": 40,
+      "sharedGeneratedNames": [
+        "Dubon2026.SourceFunctionField.GammaOne.cuspPlace.congr_simp"
+      ],
+      "addedTheorems": 39,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorGlobalOwnership8599.log",
+      "globalOwnershipSha256": "C7488884D4B17F0AC4810B538B611F867BBFD96EF8C4C05F3B7B4F4196FFB5DF",
+      "globalOwnershipSourceSha256": "BE92BEEDE7939CD2AF000D2A1B316A8108B8B0DA0CE020761721055E11D0C017",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorOwnership8599.log",
+      "ownershipSha256": "64FA379D459E2547C2F14888CC879A9556625BFC29B042E79FC6673C625E15FC"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 40,
+      "scratchDistinct": 40,
+      "generatedNameRenamings": {},
+      "productionFocused": 40,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceGammaOneCuspResidues"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResiduesScratchOwnership742.log",
+            "sha256": "56D3458B9DB45DE5C8019C75586BF2B352F775782441081DD3898CCE250EA50F",
+            "sourceSha256": "8302FCCFDAE8A4D3907614D2C16C594E49C5A06D5B7BB646930BC5AF00E08E79"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneCuspBoundedRealization",
+            "SourceGammaOneCuspPlaceExhaustion"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspExhaustionScratchOwnership743.log",
+            "sha256": "DE30B35F449027BD019A658752EC94C34C86532191EBA536BE82E1B0FE3FCDC6",
+            "sourceSha256": "B68178469EDEF05D76F73464A720610B019C7CC86871FDC238A1203404D88B88"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneUniformCuspPole",
+            "SourceGammaOneHolomorphicModularQuotient",
+            "SourceGammaOneHolomorphicFieldRealization"
+          ],
+          "count": 7,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldScratchOwnership744.log",
+            "sha256": "B1BE6DA9AD7F80DEBF44908476C981E58C3D21A47D5C7AC36224976268B30F5E",
+            "sourceSha256": "333275DA8ABBD622055F2A250C568C77F04774B7430547DA1737CDEB19CF0A79"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneOriginalPoleMultiplier",
+            "SourceGammaOnePoleClearedNormalization"
+          ],
+          "count": 7,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearingNormalizationScratchOwnership746.log",
+            "sha256": "D6B1297EAC0FA648A1485888EE6A48E02875FDF1B628ADE88CEB0A01D2888AC8",
+            "sourceSha256": "B3358E9394F4DBFC97A86B1C3DAA95D1340D165406BB701F3AFF4DA29CF803C6"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOnePoleClearedProduct",
+            "SourceGammaOnePoleClearedCuspBounds",
+            "SourceGammaOneMeromorphicFieldRealization"
+          ],
+          "count": 6,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldScratchOwnership749.log",
+            "sha256": "25A43FCE450B7EE46AF61736E0D3B19F50BC008123501309D91F0F26B455381F",
+            "sourceSha256": "0067E5C1E311F639AC05BC357E44CA3E8DF5BF44FECFAA0E78BF642BB7BB310A"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneMeromorphicCuspLimits",
+            "SourceGammaOneMeromorphicPrincipalDivisor"
+          ],
+          "count": 8,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorScratchOwnership751.log",
+            "sha256": "43245126112C73FA181266EE77DF360A697CC9048F4147E99BD336B6F0C52EA5",
+            "sourceSha256": "B72D7CD751017715EEF156C9CE8B73033E84C5BBC00D39BA3E8A46C6F035632D"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorOwnership8599.log",
+        "sha256": "64FA379D459E2547C2F14888CC879A9556625BFC29B042E79FC6673C625E15FC",
+        "sourceSha256": "D3F70CAD96A3ADCF8C124BF08ED9CF3F7BC316E9FCE6E6E4723581F5B1DD9F29"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-034612-601.log",
+        "sha256": "16FA3C97F458D7CB5691FBE649F6EB5C6DC1AE09393F8CB4308E898EBFBC45AF"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 13 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceGammaOneCuspResidues",
+            "scratchSha256": "8758D75A8136557A54075839F03773133574AF5076DCB28CCFB4C16123D6846F",
+            "productionSha256": "8758D75A8136557A54075839F03773133574AF5076DCB28CCFB4C16123D6846F",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspBoundedRealization",
+            "scratchSha256": "D1D7F873E802C2C3E91D75E6C21C75A20568389334A87F9E28D86E5B8DBCAC69",
+            "productionSha256": "7D53F2360902DE331614E23282BDBFCFC0C554E02977EAD57E189FF2D5000314",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspPlaceExhaustion",
+            "scratchSha256": "EA2A0681688AEA7BEAE678FAC085668A85A719E7FE0565BFFD6D9783A3D97BD5",
+            "productionSha256": "4B7E1A0E384F97BCB5492787AB30B91CD3A2AEB1DC77D8DB1A2C904C9851DC18",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneUniformCuspPole",
+            "scratchSha256": "EB744105EA29F866EAC2BA40D19305A41B9A4CB8B54BBF09C99B6A1F2A5A57D3",
+            "productionSha256": "95834F5B1AA14D441C6735AE04CC990D5E8886BE5FC26F86CD3B97DB198EC949",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHolomorphicModularQuotient",
+            "scratchSha256": "3615B6B5798C4BBE514257FB679706B6502B9E96FFC5C4788487F384641745A4",
+            "productionSha256": "0543EF5DA870BB01A462C7619F91D5010BA2F6ED5BB7D21002D2C6300B4E58E3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHolomorphicFieldRealization",
+            "scratchSha256": "30042838C4B2CB48621A0E736D94673375B2B22ADD0EDF0E72A49EA5DCF40FB0",
+            "productionSha256": "89DE3104F4AF2FC84AC79F7454BB6404185B3A2568EB5CCEFF6BB2A9D498F6D1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneOriginalPoleMultiplier",
+            "scratchSha256": "309B6DA1385D0E447E82C90498F98048939C4958C83B78DE04954BFE8C1C1A08",
+            "productionSha256": "309B6DA1385D0E447E82C90498F98048939C4958C83B78DE04954BFE8C1C1A08",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOnePoleClearedNormalization",
+            "scratchSha256": "4EA0F5A259ABB716451A0267977811EB4FFDFD0249514BB89C4505DD94697508",
+            "productionSha256": "4EA0F5A259ABB716451A0267977811EB4FFDFD0249514BB89C4505DD94697508",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOnePoleClearedProduct",
+            "scratchSha256": "B195357EDAD0105292EDA8A18E2CCB0BFA916DAC14DA5DE1C436029F0584FD4B",
+            "productionSha256": "AFED125C528703C8E5EB4A09E19C3B968E8A8F78A38F5D65F2016444FF82E444",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOnePoleClearedCuspBounds",
+            "scratchSha256": "1B24464405C3C418046C46C38BEEA5C1172CAB150D4E37D80BE90B562DC4E253",
+            "productionSha256": "EAC5DF8F29943D565A2E3E5DEBDA37B63B41A57ED143BC2BA4A5436C5281193A",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneMeromorphicFieldRealization",
+            "scratchSha256": "DC94E0CFCA7F6A03B5A70B2DAAE0ADC18B0573DCF26241698BEBA331A8B9A9CB",
+            "productionSha256": "349453DC40DEAC555B569EF7E19E61F28ABB4A24DAA92291BF41C672FCDF390D",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneMeromorphicCuspLimits",
+            "scratchSha256": "67169F583ACFA9C4F6AA8515A473FAF472B4042DE13D63B1411A94928EBD871C",
+            "productionSha256": "ED185486CADEF91FF4D97AB6529A27177AD048011E05C9BBED4B227F532E7FD0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneMeromorphicPrincipalDivisor",
+            "scratchSha256": "06E5FFDB66F99ECCC1FAE95EDCFC0FF26CC81694D462B87605745D7860D0E3EB",
+            "productionSha256": "BFC520DEBDB84C434C29A2118559A4DB86211E8491926EA708A0399672BE89EA",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 40 distinct names from 40 exhaustive scratch checks are retained: 40 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "Constructing the meromorphic function from the Abel-Jacobi period condition still requires genuine real period surjectivity and reciprocity. Actual global periods and Hecke/diamond/Picard/H1, full/parabolic and transpose comparisons remain. Arithmetic realization of original finite homogeneous-coefficient Gamma1 characters, coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift. 16/20; DUB-17--20 OPEN; all twenty gates unchanged."
+  }
+}

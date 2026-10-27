@@ -1,0 +1,68 @@
+import Dubon2026.SourceGammaOneOriginalPoleMultiplier
+import Dubon2026.SourceGammaOnePoleClearedNormalization
+import Dubon2026.SourceGammaOneQuotientCuspSeries
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual finite
+Gamma1 characters -> Picard/H1 and modular periods -> original meromorphic
+field realization. Consume the actual pole multiplier and the exact
+ramification-weighted divisor orders to construct the holomorphic product.
+All regularity, invariance and multiplier cusp bounds are derived. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceCurve Filter
+open scoped Topology Manifold MatrixGroups ModularForm
+variable {Γ : Subgroup SL(2, ℤ)}
+  (N : ℕ) [NeZero N] (hΓ : CongruenceSubgroup.Gamma N ≤ Γ)
+  (hT : ModularGroup.T ∈ Γ)
+
+include hΓ hT
+
+theorem exists_pole_cleared_holomorphic_product
+    (D : Divisor ℂ (functionFieldOver Γ ℂ)) (F : ℍ → ℂ)
+    (hm : ∀ τ : ℍ, MeromorphicAt (F ∘ ofComplex) (τ : ℂ))
+    (hinv : ∀ γ ∈ Γ, ∀ τ : ℍ, F (γ • τ) = F τ)
+    (ho : ∀ τ : ℍ, meromorphicOrderAt (F ∘ ofComplex) (τ : ℂ) =
+      (((analyticRamification hT τ : ℤ) * D (analyticPlace hT τ) : ℤ) : WithTop ℤ)) :
+    ∃ (a : functionFieldOver Γ ℂ) (A G : ℍ → ℂ),
+      a ≠ 0 ∧ MDiff A ∧ MDiff G ∧
+      (∀ τ : ℍ, (A ∘ ofComplex) =ᶠ[𝓝[≠] (τ : ℂ)]
+        fun z : ℂ => realize Γ (a : LaurentSeries ℂ) (ofComplex z)) ∧
+      (∀ τ : ℍ, (G ∘ ofComplex) =ᶠ[𝓝[≠] (τ : ℂ)] ((F * A) ∘ ofComplex)) ∧
+      (∀ γ ∈ Γ, ∀ τ : ℍ, A (γ • τ) = A τ) ∧
+      (∀ γ ∈ Γ, ∀ τ : ℍ, G (γ • τ) = G τ) ∧
+      ∀ γ : SL(2, ℤ), ∃ m : ℕ,
+        IsBoundedAtImInfty ((A ∘ (γ • ·)) * ⇑CuspForm.discriminant ^ m) := by
+  obtain ⟨a, ha0, hareg, haord⟩ := exists_original_pole_multiplier_at_analytic_places N hΓ hT D
+  obtain ⟨k, g, h, A, hh, hr, hA, heA, hAinv⟩ :=
+    holomorphic_realization_of_mem_all_analytic_places hT a hareg
+  have hAr (τ : ℍ) : (A ∘ ofComplex) =ᶠ[𝓝[≠] (τ : ℂ)]
+      fun z : ℂ => realize Γ (a : LaurentSeries ℂ) (ofComplex z) := by
+    filter_upwards [realize_eventuallyEq_of_ratio hT g h a hh hr τ,
+      ModularRatios.eventually_ne_zero_ofComplex h hh τ] with z hz hden
+    rw [hz]
+    exact (eq_div_iff hden).mpr (heA _)
+  have hAm (τ : ℍ) : MeromorphicAt (A ∘ ofComplex) (τ : ℂ) :=
+    (JMultiplicity.analyticAt_comp hA τ).meromorphicAt
+  have hAo (τ : ℍ) : meromorphicOrderAt (A ∘ ofComplex) (τ : ℂ) =
+      (((analyticRamification hT τ : ℤ) * (analyticPlace hT τ).ord a : ℤ) : WithTop ℤ) := by
+    rw [meromorphicOrderAt_congr (hAr τ)]
+    exact analyticPlace_order hT τ a ha0
+  have hprod (τ : ℍ) : MeromorphicAt ((F * A) ∘ ofComplex) (τ : ℂ) :=
+    (hm τ).mul (hAm τ)
+  have hprodOrder (τ : ℍ) : 0 ≤ meromorphicOrderAt ((F * A) ∘ ofComplex) (τ : ℂ) := by
+    change 0 ≤ meromorphicOrderAt ((F ∘ ofComplex) * (A ∘ ofComplex)) (τ : ℂ)
+    rw [meromorphicOrderAt_mul (hm τ) (hAm τ), ho τ, hAo τ, ← WithTop.coe_add]
+    have hp : 0 ≤ (analyticRamification hT τ : ℤ) * D (analyticPlace hT τ) +
+        (analyticRamification hT τ : ℤ) * (analyticPlace hT τ).ord a := by
+      have hn := mul_nonneg (Int.natCast_nonneg (analyticRamification hT τ)) (haord τ)
+      nlinarith
+    exact_mod_cast hp
+  obtain ⟨G, hG, hGr⟩ := exists_holomorphic_of_nonnegative_orders (F * A) hprod hprodOrder
+  have hGinv := holomorphic_invariant_of_local_eq hG hGr (fun γ hγ τ => by
+    change F (γ • τ) * A (γ • τ) = F τ * A τ
+    rw [hinv γ hγ, hAinv γ hγ])
+  exact ⟨a, A, G, ha0, hA, hG, hAr, hGr, hAinv, hGinv,
+    holomorphic_quotient_cusp_pole_bound N hΓ g h hh A hA heA⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

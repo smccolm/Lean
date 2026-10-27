@@ -1,0 +1,73 @@
+{
+  "modules": [
+    "SourceGammaOneRealPeriodMap",
+    "SourceGammaOneRealParabolicPeriods"
+  ],
+  "theorems": [
+    "Dubon2026.sourceGamma1RealCharacter_finite",
+    "Dubon2026.sourceGamma1RealPeriodHom_apply",
+    "Dubon2026.sourceGamma1RealPeriodHom_injective",
+    "Dubon2026.sourceGamma1CuspForm_finite_real",
+    "Dubon2026.sourceGamma1_period_eq_zero_of_trace",
+    "Dubon2026.sourceGamma1RealPeriodHom_parabolic",
+    "Dubon2026.sourceGamma1RealParabolicPeriodHom_injective",
+    "Dubon2026.sourceGamma1RealParabolicHoms_finite"
+  ],
+  "constructions": [
+    "Dubon2026.sourceGamma1RealPeriodHom",
+    "Dubon2026.sourceGamma1RealParabolicHoms",
+    "Dubon2026.sourceGamma1RealParabolicPeriodHom"
+  ],
+  "queries": [
+    "Dubon2026.sourceGamma1RealCharacter_finite",
+    "Dubon2026.sourceGamma1RealPeriodHom_apply",
+    "Dubon2026.sourceGamma1RealPeriodHom_injective",
+    "Dubon2026.sourceGamma1CuspForm_finite_real",
+    "Dubon2026.sourceGamma1_period_eq_zero_of_trace",
+    "Dubon2026.sourceGamma1RealPeriodHom_parabolic",
+    "Dubon2026.sourceGamma1RealParabolicPeriodHom_injective",
+    "Dubon2026.sourceGamma1RealParabolicHoms_finite",
+    "Dubon2026.sourceGamma1RealPeriodHom",
+    "Dubon2026.sourceGamma1RealParabolicHoms",
+    "Dubon2026.sourceGamma1RealParabolicPeriodHom"
+  ],
+  "proofEdges": [
+    "Dubon2026.sourceGamma1RealCharacter_finite",
+    "Dubon2026.sourceGamma1RealPeriodHom_apply",
+    "Dubon2026.sourceGamma1RealPeriodHom_injective",
+    "Dubon2026.sourceGamma1CuspForm_finite_real",
+    "Dubon2026.sourceGamma1_period_eq_zero_of_trace",
+    "Dubon2026.sourceGamma1RealPeriodHom_parabolic",
+    "Dubon2026.sourceGamma1RealParabolicPeriodHom_injective",
+    "Dubon2026.sourceGamma1RealParabolicHoms_finite",
+    "Dubon2026.sourceGamma1RealPeriodHom",
+    "Dubon2026.sourceGamma1RealParabolicHoms",
+    "Dubon2026.sourceGamma1RealParabolicPeriodHom",
+    "Dubon2026.sourceGamma1_real_periods_injective",
+    "Dubon2026.sourceH1Finite",
+    "Dubon2026.sourceWeightTwoPrimitive_period",
+    "Dubon2026.sourceWeightTwoPrimitive_exists_cusp_limit",
+    "Dubon2026.SourceParabolic.classification"
+  ],
+  "roots": [
+    "Dubon2026.sourceGamma1RealCharacter_finite",
+    "Dubon2026.sourceGamma1RealPeriodHom_apply",
+    "Dubon2026.sourceGamma1RealPeriodHom_injective",
+    "Dubon2026.sourceGamma1CuspForm_finite_real",
+    "Dubon2026.sourceGamma1_period_eq_zero_of_trace",
+    "Dubon2026.sourceGamma1RealPeriodHom_parabolic",
+    "Dubon2026.sourceGamma1RealParabolicPeriodHom_injective",
+    "Dubon2026.sourceGamma1RealParabolicHoms_finite",
+    "Dubon2026.sourceGamma1RealPeriodHom",
+    "Dubon2026.sourceGamma1RealParabolicHoms",
+    "Dubon2026.sourceGamma1RealParabolicPeriodHom"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneRealPeriodMap",
+    "SourceGammaOneRealParabolicPeriods",
+    "SourceGammaOneRealPeriodInjectivity",
+    "SourceGammaOneInvariantRealPart"
+  ],
+  "separateReason": "Actual real Gamma1 periods give an injective map to the finite real parabolic character space. The upper dimension inequality and reciprocity remain."
+}

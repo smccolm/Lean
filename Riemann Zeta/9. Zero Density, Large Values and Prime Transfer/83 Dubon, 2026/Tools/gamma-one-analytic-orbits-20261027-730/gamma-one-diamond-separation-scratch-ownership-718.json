@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "theorems": 3,
+  "modules": 1,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSeparationScratchOwnership718.log",
+  "logSha256": "2C8F220A8E5B8259B31FC1828BD29782B98981BD085D07BA5F662DADA636C7F2",
+  "sourceSha256": "E03225E6B7C4E7525F6E8C318C2CD14B00D761A59B644A4DD52E2FE784F86F20",
+  "owners": [
+    {
+      "module": "SourceGammaOneDiamondSeparation",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_separating_forms_of_gamma0_orbit"
+    },
+    {
+      "module": "SourceGammaOneDiamondSeparation",
+      "name": "_private.SourceGammaOneDiamondSeparation.0.Dubon2026.SourceFunctionField.GammaOne.eq_of_cross_product"
+    },
+    {
+      "module": "SourceGammaOneDiamondSeparation",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_cross_products"
+    }
+  ]
+}

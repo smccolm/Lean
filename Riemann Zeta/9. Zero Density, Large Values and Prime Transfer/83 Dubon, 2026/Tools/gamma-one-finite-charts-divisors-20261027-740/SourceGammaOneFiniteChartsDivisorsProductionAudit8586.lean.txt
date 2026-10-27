@@ -1,0 +1,89 @@
+import Dubon2026.SourceGammaOneExactRamification
+import Dubon2026.SourceGammaOneEllipticFibers
+import Dubon2026.SourceGammaOneRamifiedRegularParameter
+import Dubon2026.SourceGammaOneRamifiedRegularOrder
+import Dubon2026.SourceGammaOneRamifiedMeromorphicOrder
+import Dubon2026.SourceGammaOneNearbyOrders
+import Dubon2026.SourceGammaOneRamifiedChartOrders
+import Dubon2026.SourceGammaOneFiniteChartParameters
+import Dubon2026.SourceGammaOnePrescribedPlaceOrders
+import Dubon2026.SourceGammaOneAnalyticDivisorMoving
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_eq_index
+#print axioms Dubon2026.SourceFunctionField.GammaOne.sum_analytic_fiber_orders_eq_index
+#print axioms Dubon2026.SourceFunctionField.GammaOne.two_mul_ramification_eq_stabilizer_card
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_stabilizer_multiplier
+#print axioms Dubon2026.SourceFunctionField.GammaOne.place_eq_of_coord_power_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_zero
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_analytic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_order
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_ramifiedPlace_eval
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_meromorphicOrderAt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_nearby_orders
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticRamification_param_eventually_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_chart_orders
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analytic_place_chart_parameter
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finite_place_chart_parameter
+#print axioms Dubon2026.SourceFunctionField.GammaOne.finite_place_parameter_package
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_polar_regular_separator
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_prescribed_place_orders
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_divisor_analytic_decomposition
+#print axioms Dubon2026.SourceFunctionField.GammaOne.degree_mapDomain_analyticPlace
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_degree_zero_analytic_representative
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceGammaOneExactRamification, `Dubon2026.SourceGammaOneEllipticFibers, `Dubon2026.SourceGammaOneRamifiedRegularParameter, `Dubon2026.SourceGammaOneRamifiedRegularOrder, `Dubon2026.SourceGammaOneRamifiedMeromorphicOrder, `Dubon2026.SourceGammaOneNearbyOrders, `Dubon2026.SourceGammaOneRamifiedChartOrders, `Dubon2026.SourceGammaOneFiniteChartParameters, `Dubon2026.SourceGammaOnePrescribedPlaceOrders, `Dubon2026.SourceGammaOneAnalyticDivisorMoving]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.finrank_over_j_eq_index, `Dubon2026.SourceFunctionField.GammaOne.sum_analytic_fiber_orders_eq_index, `Dubon2026.SourceFunctionField.GammaOne.two_mul_ramification_eq_stabilizer_card, `Dubon2026.SourceFunctionField.GammaOne.exists_stabilizer_multiplier, `Dubon2026.SourceFunctionField.GammaOne.place_eq_of_coord_power_eq, `Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_zero, `Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_analytic, `Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_order, `Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_ramifiedPlace_eval, `Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_meromorphicOrderAt, `Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_nearby_orders, `Dubon2026.SourceFunctionField.GammaOne.analyticRamification_param_eventually_one, `Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_chart_orders, `Dubon2026.SourceFunctionField.GammaOne.analytic_place_chart_parameter, `Dubon2026.SourceFunctionField.GammaOne.finite_place_chart_parameter, `Dubon2026.SourceFunctionField.GammaOne.finite_place_parameter_package, `Dubon2026.SourceFunctionField.GammaOne.exists_polar_regular_separator, `Dubon2026.SourceFunctionField.GammaOne.exists_prescribed_place_orders, `Dubon2026.SourceFunctionField.GammaOne.exists_divisor_analytic_decomposition, `Dubon2026.SourceFunctionField.GammaOne.degree_mapDomain_analyticPlace, `Dubon2026.SourceFunctionField.GammaOne.exists_degree_zero_analytic_representative]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE FINITE CHARTS AND DIVISORS AUDIT PASS: {count} theorems including private/generated declarations. Exact elliptic ramification, normalized finite charts and analytic representatives of every divisor class are proved. Global periods and original Hecke/diamond/Picard/H1 arithmetic comparison remain; 16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceGammaOneExactRamification
+
+#lint in Dubon2026.SourceGammaOneEllipticFibers
+
+#lint in Dubon2026.SourceGammaOneRamifiedRegularParameter
+
+#lint in Dubon2026.SourceGammaOneRamifiedRegularOrder
+
+#lint in Dubon2026.SourceGammaOneRamifiedMeromorphicOrder
+
+#lint in Dubon2026.SourceGammaOneNearbyOrders
+
+#lint in Dubon2026.SourceGammaOneRamifiedChartOrders
+
+#lint in Dubon2026.SourceGammaOneFiniteChartParameters
+
+#lint in Dubon2026.SourceGammaOnePrescribedPlaceOrders
+
+#lint in Dubon2026.SourceGammaOneAnalyticDivisorMoving

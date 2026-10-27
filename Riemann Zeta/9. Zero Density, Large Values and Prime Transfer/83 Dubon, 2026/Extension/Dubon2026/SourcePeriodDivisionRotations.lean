@@ -1,0 +1,70 @@
+import Dubon2026.SourcePeriodEisensteinInvariants
+import Dubon2026.SourcePeriodLatticeInvariants
+import Mathlib.Analysis.Complex.Polynomial.Basic
+
+/-! DUB-17/18 -> original Gamma1 global charts -> orbit separation ->
+division-value powers. Existing invariant scaling and lattice uniqueness
+give the required lattice-preserving rotations. A complex square root
+replaces the explicit cubic-root casework in the selected Apache-2.0 source:
+anthropics/fermats-last-theorem, 6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_CohCarrier_exists_mem_GammaH_smul_eq_of_forall_sum_weierstrassP_pow_eq.
+These rotations still must be applied to the actual division forms. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.DivisionRotations
+noncomputable section
+open Complex
+open scoped ComplexConjugate
+
+theorem scale_lattice_eq_of_invariant_powers (L : PeriodPair) (a : ℂˣ)
+    (h4 : (a : ℂ) ^ 4 = 1 ∨ L.g₂ = 0)
+    (h6 : (a : ℂ) ^ 6 = 1 ∨ L.g₃ = 0) :
+    (PeriodLattice.scale L a).lattice = L.lattice := by
+  apply LatticeInvariants.lattice_eq_of_invariants
+  · rw [JOrbitSeparation.g₂_scale]
+    rcases h4 with h | h
+    · rw [h, inv_one, one_mul]
+    · rw [h, mul_zero]
+  · rw [JOrbitSeparation.g₃_scale]
+    rcases h6 with h | h
+    · rw [h, inv_one, one_mul]
+    · rw [h, mul_zero]
+
+theorem exists_rotation_of_division_power (L : PeriodPair) (d : ℕ)
+    (hd : d = 1 ∨ (d = 2 ∧ L.g₃ = 0) ∨ (d = 3 ∧ L.g₂ = 0))
+    {x y : ℂ} (hxy : x ^ d = y ^ d) :
+    ∃ (a : ℂ) (ha : a ≠ 0), a * conj a = 1 ∧
+      (PeriodLattice.scale L (Units.mk0 a ha)).lattice = L.lattice ∧
+      x = (a ^ 2)⁻¹ * y := by
+  have hdpos : 0 < d := by rcases hd with h | h | h <;> omega
+  by_cases hx : x = 0
+  · have hy : y = 0 := by
+      apply (pow_eq_zero_iff hdpos.ne').mp
+      rw [← hxy, hx, zero_pow hdpos.ne']
+    refine ⟨1, one_ne_zero, by simp, ?_, by simp [hx, hy]⟩
+    exact scale_lattice_eq_of_invariant_powers L _ (Or.inl (by simp)) (Or.inl (by simp))
+  have hy : y ≠ 0 := by
+    intro hy
+    exact pow_ne_zero d hx (by rw [hxy, hy, zero_pow hdpos.ne'])
+  obtain ⟨a, ha2⟩ := IsAlgClosed.exists_pow_nat_eq (y / x) (by norm_num : 0 < (2 : ℕ))
+  have ha : a ≠ 0 := by
+    intro ha
+    exact (div_ne_zero hy hx) (ha2.symm.trans (by rw [ha, zero_pow two_ne_zero]))
+  have hroot : a ^ (2 * d) = 1 := by
+    rw [pow_mul, ha2, div_pow, ← hxy, div_self (pow_ne_zero d hx)]
+  have hnorm : ‖a‖ = 1 := Complex.norm_eq_one_of_pow_eq_one hroot (by omega)
+  have hconditions : (a ^ 4 = 1 ∨ L.g₂ = 0) ∧ (a ^ 6 = 1 ∨ L.g₃ = 0) := by
+    rcases hd with rfl | ⟨rfl, hg3⟩ | ⟨rfl, hg2⟩
+    · have h2 : a ^ 2 = 1 := by simpa only [mul_one] using hroot
+      constructor
+      · left
+        rw [show 4 = 2 * 2 from rfl, pow_mul, h2, one_pow]
+      · left
+        rw [show 6 = 2 * 3 from rfl, pow_mul, h2, one_pow]
+    · exact ⟨Or.inl hroot, Or.inr hg3⟩
+    · exact ⟨Or.inr hg2, Or.inl hroot⟩
+  refine ⟨a, ha, ?_, scale_lattice_eq_of_invariant_powers L _ hconditions.1 hconditions.2, ?_⟩
+  · rw [Complex.mul_conj, Complex.normSq_eq_norm_sq, hnorm]
+    norm_num
+  · rw [ha2, inv_div, div_mul_cancel₀ _ hy]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.DivisionRotations

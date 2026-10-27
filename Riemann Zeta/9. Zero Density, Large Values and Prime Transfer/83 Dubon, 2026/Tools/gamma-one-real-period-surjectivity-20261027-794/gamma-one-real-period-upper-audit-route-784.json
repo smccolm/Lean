@@ -1,0 +1,36 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 and Abel-Jacobi -> real period surjectivity -> reverse dimension inequality -> real Manin bound with actual algebraic cusp count.",
+  "assumptionsToDischarge": "Rational cusp orbits of the signed subgroup are proved bijective with cyclic translation orbits of its integral cosets, using the actual integral infinity stabilizer. The already proved cyclic-cusp-place bijection identifies this count with the actual j poles. The signed extension and real Manin theorem then bound the ORIGINAL Gamma1 real parabolic-character dimension, with the original field cusp term and the signed elliptic fixed-point terms; the central-sign hypothesis is derived.",
+  "remaining": "The corresponding actual genus lower bound must be assembled from canonical degree and elliptic fiber counts. Real period surjectivity, reciprocity, Picard/Hecke/diamond/H1, full all-weight characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspPlace.lean",
+      "sha256": "B597E927040E52D4E131CD5C830460F4D7FFF24362F63D1E741122010955DD90"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspOrbit.lean",
+      "sha256": "5529F764D486BDD243ACE54267AB0205972C5B45B1013F21730F440597DB5D00"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspCosetPlaces.lean",
+      "sha256": "C77F32802B386087676AEFD131D9A6182413BF21FB1CA37DBAB69A4DA3572573"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactCuspOrbits.lean",
+      "sha256": "A8FE05A876EE992BD00E95255BC18A2893C4FA6565BAA4ABC1C26739DB2838D1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealManinDimension.lean",
+      "sha256": "E7064B836348E8BD1B73F7C9E7185D65C5D58FE1E945BC990FFF076733C5A63A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedParabolicCharacters.lean",
+      "sha256": "5CBE07661A7099E305A986984E91043124C1C2EC315499AB169BB6F6442DD750"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-manin-route-775.json",
+      "sha256": "2857608FDFDE5187BAB2BBF3DB4A1FC514590B541AC6C94D5379C0AEF93F93B7"
+    }
+  ],
+  "shorterRoute": "Use the exact infinity stabilizer and the existing cyclic cusp-place bijection. No independent arithmetic cusp enumeration or general double-coset development is needed. The only character extension needed is the already proved injection."
+}

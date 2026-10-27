@@ -1,0 +1,24 @@
+{
+  "modules": [
+    "SourceGammaOneDivisionLatticeOrbit"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_lattice"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_lattice"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_lattice",
+    "Dubon2026.SourceFunctionField.JOrbitSeparation.int_indep"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_lattice"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneDivisionLatticeOrbit"
+  ],
+  "separateReason": "The actual Gamma1 orbit matrix is constructed from the rotation and division-point lattice relation. The division-value consumer must still supply these narrower hypotheses."
+}

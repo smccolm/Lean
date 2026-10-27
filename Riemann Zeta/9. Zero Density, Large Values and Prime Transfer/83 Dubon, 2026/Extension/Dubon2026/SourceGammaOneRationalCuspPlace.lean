@@ -1,0 +1,59 @@
+import Dubon2026.SourceGammaOneCuspPlaceRightInvariance
+import Dubon2026.SourceManinCuspStabilizer
+import Dubon2026.SourceParabolicClassification
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual
+Gamma1 Picard/H1 -> real period surjectivity -> matching cusp terms in
+the Manin/genus bounds. The actual normalized cusp place depends only on
+the rational cusp orbit. Reuse the existing rational stabilizer and
+integral translation classification; no orbit/place bijection is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open Matrix Matrix.SpecialLinearGroup ModularGroup OnePoint SourceCurve
+open scoped MatrixGroups
+
+theorem exists_T_zpow_or_neg_of_lower_left (g : SL(2, ℤ)) (hg : g 1 0 = 0) :
+    ∃ n : ℤ, g = T ^ n ∨ g = -(T ^ n) := by
+  have hd := g.det_coe
+  rw [Matrix.det_fin_two, hg, mul_zero, sub_zero] at hd
+  rcases Int.eq_one_or_neg_one_of_mul_eq_one' hd with ⟨ha, _⟩ | ⟨ha, _⟩
+  · exact ⟨g 0 1, Or.inl (SourceParabolic.eq_T_zpow_of_col ha hg)⟩
+  · have hna : (-g) 0 0 = 1 := by simp [ha]
+    have hnc : (-g) 1 0 = 0 := by simp [hg]
+    have he := SourceParabolic.eq_T_zpow_of_col hna hnc
+    exact ⟨(-g) 0 1, Or.inr (by simpa using congrArg Neg.neg he)⟩
+
+theorem cuspPlace_eq_of_same_rational_cusp
+    {Γ : Subgroup SL(2, ℤ)} (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) (hT : T ∈ Γ)
+    (a b : SL(2, ℤ))
+    (hab : mapGL ℚ a • (∞ : OnePoint ℚ) = mapGL ℚ b • ∞) :
+    cuspPlace N hΓ hT a = cuspPlace N hΓ hT b := by
+  have hf : mapGL ℚ (a⁻¹ * b) • (∞ : OnePoint ℚ) = ∞ := by
+    rw [map_mul, map_inv, mul_smul, ← hab, inv_smul_smul]
+  obtain ⟨n, hn | hn⟩ :=
+    exists_T_zpow_or_neg_of_lower_left _ ((SourceManin.smul_infty_eq_iff _).mp hf)
+  · have hb : b = a * T ^ n := by
+      calc b = a * (a⁻¹ * b) := by group
+           _ = _ := by rw [hn]
+    rw [hb, cuspPlace_mul_T_zpow N hΓ hT]
+  · have hb : b = -(a * T ^ n) := by
+      calc b = a * (a⁻¹ * b) := by group
+           _ = _ := by rw [hn, mul_neg]
+    rw [hb, cuspPlace_neg, cuspPlace_mul_T_zpow N hΓ hT]
+
+theorem cuspPlace_eq_of_rational_cusp_orbit
+    {Γ : Subgroup SL(2, ℤ)} (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) (hT : T ∈ Γ)
+    (a b : SL(2, ℤ))
+    (hab : ∃ γ : Γ, mapGL ℚ γ.val • (mapGL ℚ b • (∞ : OnePoint ℚ)) =
+      mapGL ℚ a • ∞) :
+    cuspPlace N hΓ hT a = cuspPlace N hΓ hT b := by
+  obtain ⟨γ, hγ⟩ := hab
+  calc
+    cuspPlace N hΓ hT a = cuspPlace N hΓ hT (γ.val * b) :=
+      cuspPlace_eq_of_same_rational_cusp N hΓ hT a _ (by rw [map_mul, mul_smul]; exact hγ.symm)
+    _ = _ := cuspPlace_mul_left N hΓ hT γ b
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

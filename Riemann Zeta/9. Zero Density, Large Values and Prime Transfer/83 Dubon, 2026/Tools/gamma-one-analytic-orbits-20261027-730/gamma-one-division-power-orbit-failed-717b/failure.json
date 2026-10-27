@@ -1,0 +1,4 @@
+{
+  "reason": "Two unnecessary sequence-focus linter warnings; replace with ordinary tactic sequence without suppression.",
+  "sourceSha256": "C963F3B70E2D33A1EF5A4842353DB6868E22249092AD116CB871EE6E75A21FDC"
+}

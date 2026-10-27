@@ -1,0 +1,28 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 and Abel-Jacobi -> real period surjectivity -> actual finite real parabolic period map.",
+  "assumptionsToDischarge": "Existing finite native H1 proves finiteness of actual real Gamma1 characters. The actual linear real period map is injective, so cusp forms are finite over the reals. Signed translation classification, the primitive shift and finite translated cusp limits prove that every squared-trace-four element has zero period. The resulting exact parabolic character target is finite; none of these properties is assumed.",
+  "remaining": "The reverse dimension inequality and real period surjectivity, reciprocity, original Picard/Hecke/diamond/H1 comparisons, full all-weight characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceIntegralCohomologyFinite.lean",
+      "sha256": "5685ECC8D472414277A6B1F949F19211D6A02E516744631CF51965DC97FB5980"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoPeriods.lean",
+      "sha256": "5628D0F3EA57748E9108482A68BE4C9057E3B750C305C2D1A51896540C624A6E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceWeightTwoPrimitiveCusps.lean",
+      "sha256": "2C8AE73A6B8419A38F761566F5175C3B41F96AE236FFCBD43331B39522C73A56"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceParabolicClassification.lean",
+      "sha256": "B5A4956F75E621AB8E8B684ED38F2AE693844077462876CBCC420E9D77ACE602"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-period-injectivity-1-scratch-receipt.json",
+      "sha256": "93A114CB4E9D70E5A451CB5383C49DFE670E7E4DB702FF83A3F3CFFA8349715A"
+    }
+  ],
+  "shorterRoute": "Reuse the existing native finite-H1 theorem instead of reproving finite-generator character coordinates. Reuse exact signed-parabolic classification and existing primitive limits to discharge parabolicity. No new representation, reflected period pair or principal-level field is introduced."
+}

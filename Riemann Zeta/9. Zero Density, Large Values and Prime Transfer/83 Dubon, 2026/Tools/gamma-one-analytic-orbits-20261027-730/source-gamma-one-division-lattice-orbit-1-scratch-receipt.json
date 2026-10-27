@@ -1,0 +1,48 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T06:12:00.954438+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneDivisionLatticeOrbit"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionLatticeOrbit.lean",
+      "sha256": "70F72E6AB74BC87B514498E5F23F6B5C9E1358EDFDCF7D872DC1D39A308BE4B1",
+      "oleanSha256": "AE6368CD0B21E5DD378BD6EAA973A167141E519DA73ED0723522247E0A8A2076"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_lattice"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_lattice"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionLatticeOrbitAudit1.log",
+  "logSha256": "9577D59FBC8AC57BFC786B20B26EBF688D4817CDBCBF4EBE289A3682A783DA8F",
+  "auditSha256": "544FE3A32A3F07DA799B69472472F336BDF106EC513B779580EF5A8A6F84A5D5",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 3,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 2,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionLatticeOrbitDependencyAudit1.log",
+  "dependencyAuditSha256": "F6CCB5402F8AAAB988FA8D0B07D43D85395F1E51EF6A12BCD48E14BA4E673DC1",
+  "dependencyAuditSourceSha256": "D0B0D71B5C5C2459B501B3010C827EA02439D019076F9963F488B8D3F4E2B66F",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_lattice"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> orbit separation and exact elliptic ramification -> lattice rotation gives an actual Gamma1 orbit matrix.",
+  "discharged": [
+    "Construct an actual determinant-one integral matrix fixing tau from a unit-norm rotation preserving its two periods.",
+    "Derive Gamma1 congruences from the actual division-point lattice relation and the native lower-right Gamma0 homomorphism.",
+    "The division-value consumer must derive the rotation and lattice hypotheses; they remain explicit upstream hypotheses here."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Actual division-value equalities must imply these lattice relations, then full subgroup orbit separation and exact elliptic ramification. Global analytic charts and period/Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and literal higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-division-lattice-orbit-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "497F6969A08CF485BB013B5843EEB8C7F83BF85C7203E055A60B877CDEF01D8D",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

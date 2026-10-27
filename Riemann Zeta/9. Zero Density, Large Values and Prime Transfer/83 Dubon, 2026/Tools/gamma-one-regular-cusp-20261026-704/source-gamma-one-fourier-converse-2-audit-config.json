@@ -1,0 +1,58 @@
+{
+  "modules": [
+    "SourceGammaOneCuspFourierNormalization",
+    "SourceGammaOneRegularFourierRealization"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_qExpansion",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_cuspForm_of_regular_differential"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_qExpansion",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_cuspForm_of_regular_differential"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_qExpansion",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_cuspForm_of_regular_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_form_realization",
+    "Dubon2026.SourceFunctionField.ModularQDerivative.qEuler_jqModC_mul_discriminant",
+    "Dubon2026.SourceDifferential.span_D_eq_top_of_transcendental",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteDimensional_jCoordinateOver",
+    "Dubon2026.SourceFunctionField.GammaOne.transcendental_jCoordinateOver",
+    "Dubon2026.SourceDifferential.diffQExp_smul_D",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_decay"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_cuspForm_of_regular_differential"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneAnalyticDifferentialRegularity",
+    "SourceGammaOneAnalyticGerms",
+    "SourceGammaOneAnalyticJOrders",
+    "SourceGammaOneAnalyticOrder",
+    "SourceGammaOneAnalyticOrderNontrivial",
+    "SourceGammaOneAnalyticPlaces",
+    "SourceGammaOneCuspDerivativeOrder",
+    "SourceGammaOneCuspFourierNormalization",
+    "SourceGammaOneCuspJOrder",
+    "SourceGammaOneCuspOrder",
+    "SourceGammaOneCuspPlaces",
+    "SourceGammaOneCuspRatioRealization",
+    "SourceGammaOneCuspRealizationAlgebra",
+    "SourceGammaOneDifferentialCuspGerm",
+    "SourceGammaOneHolomorphicDifferentials",
+    "SourceGammaOneJRealization",
+    "SourceGammaOneMeromorphicRealization",
+    "SourceGammaOneRatioRealization",
+    "SourceGammaOneRealizationAlgebra",
+    "SourceGammaOneRegularCoefficientOrders",
+    "SourceGammaOneRegularCuspForms",
+    "SourceGammaOneRegularCuspOrder",
+    "SourceGammaOneRegularFourierRealization",
+    "SourceGammaOneTranslatedCuspGerms"
+  ],
+  "separateReason": "Both declarations are required by the exact Fourier realization of every original complex regular differential."
+}

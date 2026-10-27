@@ -1,0 +1,11 @@
+### Actual Hilbert completion and strong continuity — 7 October 2026
+
+The original continuous quotient cusp functions have actual global bounds on the genuine finite-volume projective arithmetic domain. Dominated integration proves joint continuity of their genuine L2 matrix coefficients. The norm-distance identity gives strong continuity of the original cyclic action in its faithful L2 realization.
+
+The original injective L2 map identifies the algebraic cyclic representation with its actual normed range. The original right action acts by genuine linear isometries there. Completing these continuous linear maps constructs operators on the actual Hilbert completion of that range. Density proves the identity and multiplication laws; norm preservation and the original inner product extend to all completed vectors. Approximation by original range vectors, combined with the proved isometries, proves strong continuity on every completed vector.
+
+The original cyclic vectors embed linearly and injectively into this particular Hilbert space, have dense image and intertwine the exact original representation. The new exact consumers check that embedding and the completed strongly continuous unitary action. This is an actual real-group representation attached to the original form, without an assumed Hilbert norm, abstract replacement representation or unproved continuity certificate.
+
+Adelic globalization, actual cuspidal realization at every place, irreducibility and higher symmetric automorphic continuation are still missing. In particular, real-group unitarity does not imply the good-prime Deligne bound. The existing higher-continuation criterion remains conditional, and DUB-17–20 remain OPEN.
+
+Production files: [RealProjectiveStrongContinuity](Extension/Dubon2026/RealProjectiveStrongContinuity.lean), [RealProjectiveHilbertRange](Extension/Dubon2026/RealProjectiveHilbertRange.lean), [RealProjectiveHilbertCompletion](Extension/Dubon2026/RealProjectiveHilbertCompletion.lean).

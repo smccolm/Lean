@@ -1,0 +1,119 @@
+import SourceGammaOneStabilizerRamification
+import SourceGammaOneAnalyticPlaceInvariance
+
+/-! DUB-17/18 -> actual Gamma1 global charts -> exact elliptic ramification.
+The central negative identity fixes every analytic point. Enlarge the
+subgroup by it only for orbit counting; preserve the original field and
+actual ramification. The factor of two is essential for Gamma1 levels
+where negative identity is absent. The subgroup membership argument is
+adapted from anthropics/fermats-last-theorem, Apache-2.0, commit
+6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_ComplexPlaceDictionaryOf_two_mul_ramification_eq_card_stabilizer. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane Filter
+open scoped MatrixGroups Topology StabilizerCharacter SubgroupStabilizer
+
+abbrev plusMinus (Γ : Subgroup SL(2, ℤ)) : Subgroup SL(2, ℤ) := Γ ⊔ Subgroup.zpowers (-1 : SL(2, ℤ))
+
+theorem le_plusMinus (Γ : Subgroup SL(2, ℤ)) : Γ ≤ plusMinus Γ := le_sup_left
+
+theorem neg_one_mem_plusMinus (Γ : Subgroup SL(2, ℤ)) : (-1 : SL(2, ℤ)) ∈ plusMinus Γ :=
+  Subgroup.mem_sup_right (Subgroup.mem_zpowers _)
+
+private local instance normal_zpowers_neg_one : (Subgroup.zpowers (-1 : SL(2, ℤ))).Normal := by
+  refine ⟨fun a ha g => ?_⟩
+  obtain ⟨k, rfl⟩ := Subgroup.mem_zpowers_iff.mp ha
+  have hc : g * (-1 : SL(2, ℤ)) ^ k * g⁻¹ = (-1) ^ k := by
+    rw [((Commute.neg_one_right g).zpow_right k).eq, mul_assoc, mul_inv_cancel, mul_one]
+  rw [hc]
+  exact Subgroup.zpow_mem _ (Subgroup.mem_zpowers _) k
+
+private theorem mem_zpowers_neg_one_iff (a : SL(2, ℤ)) :
+    a ∈ Subgroup.zpowers (-1 : SL(2, ℤ)) ↔ a = 1 ∨ a = -1 := by
+  constructor
+  · intro ha
+    obtain ⟨k, rfl⟩ := Subgroup.mem_zpowers_iff.mp ha
+    rcases Int.even_or_odd k with hk | hk
+    · left; rw [hk.neg_one_zpow]
+    · right; rw [hk.neg_one_zpow]
+  · rintro (rfl | rfl)
+    · exact one_mem _
+    · exact Subgroup.mem_zpowers _
+
+theorem mem_plusMinus_iff (Γ : Subgroup SL(2, ℤ)) (γ : SL(2, ℤ)) : γ ∈ plusMinus Γ ↔ γ ∈ Γ ∨ -γ ∈ Γ := by
+  constructor
+  · intro h
+    have h' : γ ∈ ((plusMinus Γ : Subgroup SL(2, ℤ)) : Set SL(2, ℤ)) := h
+    rw [plusMinus, Subgroup.mul_normal] at h'
+    obtain ⟨a, ha, b, hb, rfl⟩ := Set.mem_mul.mp h'
+    rcases (mem_zpowers_neg_one_iff b).mp hb with rfl | rfl
+    · left; simpa using ha
+    · right; simpa using ha
+  · rintro (h | h)
+    · exact le_plusMinus Γ h
+    · have : γ = -γ * (-1) := by simp
+      rw [this]
+      exact mul_mem (le_plusMinus Γ h) (neg_one_mem_plusMinus Γ)
+
+scoped instance plusMinusFiniteIndex (Γ : Subgroup SL(2, ℤ)) [Γ.FiniteIndex] : (plusMinus Γ).FiniteIndex :=
+  Subgroup.finiteIndex_of_le (le_plusMinus Γ)
+
+theorem exists_gamma_smul_eq_of_mem_plusMinus (Γ : Subgroup SL(2, ℤ))
+    {γ : SL(2, ℤ)} (hγ : γ ∈ plusMinus Γ) (τ : ℍ) :
+    ∃ δ : Γ, (δ : SL(2, ℤ)) • τ = γ • τ := by
+  rcases (mem_plusMinus_iff Γ γ).mp hγ with h | h
+  · exact ⟨⟨γ, h⟩, rfl⟩
+  · exact ⟨⟨-γ, h⟩, ModularGroup.SL_neg_smul γ τ⟩
+
+theorem analyticPlace_smul_plusMinus {Γ : Subgroup SL(2, ℤ)}
+    (hT : ModularGroup.T ∈ Γ) {γ : SL(2, ℤ)} (hγ : γ ∈ plusMinus Γ) (τ : ℍ) :
+    analyticPlace hT (γ • τ) = analyticPlace hT τ := by
+  obtain ⟨δ, hδ⟩ := exists_gamma_smul_eq_of_mem_plusMinus Γ hγ τ
+  rw [← hδ]
+  exact analyticPlace_smul hT δ τ
+
+theorem two_le_card_stabilizer_plusMinus (Γ : Subgroup SL(2, ℤ)) (τ : ℍ) :
+    2 ≤ Nat.card (MulAction.stabilizer (plusMinus Γ) τ) := by
+  let n : MulAction.stabilizer (plusMinus Γ) τ :=
+    ⟨⟨-1, neg_one_mem_plusMinus Γ⟩, by
+      rw [MulAction.mem_stabilizer_iff]
+      show ((-1 : SL(2, ℤ))) • τ = τ
+      rw [ModularGroup.SL_neg_smul, one_smul]⟩
+  have hn : orderOf n = 2 := by
+    apply orderOf_eq_prime
+    · apply Subtype.ext; apply Subtype.ext
+      simp [n]
+    · intro h
+      have := congrArg
+        (fun γ : MulAction.stabilizer (plusMinus Γ) τ => (((γ : plusMinus Γ) : SL(2, ℤ)) 0 0)) h
+      simp [n] at this
+  have h := orderOf_dvd_natCard n
+  rw [hn] at h
+  exact Nat.le_of_dvd Nat.card_pos h
+
+theorem plusMinus_stabilizer_card_dvd_two_mul_ramification
+    {Γ : Subgroup SL(2, ℤ)} (hT : ModularGroup.T ∈ Γ) (τ : ℍ) :
+    Nat.card (MulAction.stabilizer (plusMinus Γ) τ) ∣ 2 * analyticRamification hT τ := by
+  let P := analyticPlace hT τ
+  obtain ⟨k, g, h, hh, hx⟩ := functionFieldOver_modular_ratio hT P.uniformizer
+  have hF : ∀ γ ∈ plusMinus Γ, ∀ z : ℍ,
+      g (γ • z) / h (γ • z) = g z / h z := by
+    intro γ hγ z
+    obtain ⟨δ, hδ⟩ := exists_gamma_smul_eq_of_mem_plusMinus Γ hγ z
+    rw [← hδ, SlashInvariantForm.slash_action_eqn_SL'' g δ.2 z,
+      SlashInvariantForm.slash_action_eqn_SL'' h δ.2 z]
+    exact mul_div_mul_left _ _ (zpow_ne_zero k (denom_ne_zero _ _))
+  have he : meromorphicOrderAt (fun z : ℂ => g (ofComplex z) / h (ofComplex z)) (τ : ℂ) =
+      ((analyticRamification hT τ : ℤ) : WithTop ℤ) := by
+    rw [← meromorphicOrderAt_congr (realize_eventuallyEq_of_ratio hT g h P.uniformizer hh hx τ)]
+    change analyticOrder Γ τ P.uniformizer = _
+    rw [analyticPlace_order hT τ _ P.uniformizer_ne_zero]
+    change (((analyticRamification hT τ : ℤ) * P.ord P.uniformizer : ℤ) : WithTop ℤ) = _
+    rw [P.ord_uniformizer, mul_one]
+  have hd := SubgroupStabilizer.main (plusMinus Γ)
+    (fun z => g z / h z) hF τ (analyticRamification hT τ) he
+  exact_mod_cast hd
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

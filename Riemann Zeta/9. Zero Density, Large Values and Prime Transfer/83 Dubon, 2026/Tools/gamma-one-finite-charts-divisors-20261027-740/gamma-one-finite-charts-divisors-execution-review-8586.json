@@ -1,0 +1,61 @@
+{
+  "status": "Execution review PASS. Every generated script inspected; all 10 audited mathematical source bodies remain unchanged. Five scratch scopes supply 48 exhaustive checks, 22 public queries, 55 VALUE dependencies, 21 registered theorems and one construction. Canonical8576 PASS and immutable archive verified. No global-period or arithmetic acceptance gate inferred.",
+  "route": "gamma-one-finite-charts-divisors-promotion-route-740.json",
+  "routeSha256": "ABB411F16D2524CBD3BD8A872699E0E75B13E6F1B985F2BB676CE1690AD3D6E2",
+  "modules": 10,
+  "queries": 22,
+  "theorems": 21,
+  "constructions": 1,
+  "exhaustiveScratchChecks": 48,
+  "proofValueEdges": 55,
+  "scopes": 5,
+  "receipts": {
+    "source-gamma-one-exact-ramification-1-scratch-receipt.json": "D538B51BD02993D8333DC989DCEED95AF9A699A50B5A21014A8A5B445645E0B3",
+    "source-gamma-one-ramified-regular-1b-scratch-receipt.json": "9F93976A802868C297AE919E66CCF5AB1F2EFA6BECC002013F7C66965838E6D6",
+    "source-gamma-one-ramified-chart-orders-1b-scratch-receipt.json": "45F9005E2039F1FADD28CDC047729D1B40163BBC090BCE5D5AE995D3AFE84035",
+    "source-gamma-one-finite-chart-parameters-1-scratch-receipt.json": "97484611A1C2F818629C37CE7D2711BF99E99A6EEAEE8F7F39541CBB2B2B13C2",
+    "source-gamma-one-divisor-moving-1-scratch-receipt.json": "A88376EC334AB34572E6E20E05245BAE932A7E0FAEFC77F87480E28E18AEA1B7"
+  },
+  "expectedConsumers": 24813,
+  "expectedConstructions": 2465,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_finite_charts_divisors_8586.py",
+      "sha256": "2A2C5355044B82C552A3A32B964F67A2B82F1ACBDA7B5667488BBB8D03C7C45A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_finite_charts_divisors_production_ownership_8586.py",
+      "sha256": "57DB68ECE4107B316C51E1E668F74DA4E3C897614C9F265D92D5861DC901AEE1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_finite_charts_divisors_global_ownership_8586.py",
+      "sha256": "3C0AF2480B9F3E3C4C2763331D698CA5EC74C7D2BE8F3D4C5A297EA37FCD47E6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_finite_charts_divisors_ownership_8586.py",
+      "sha256": "A3C6D6E36BB4EF47DB688B0508BE646BF043776FB63B53B47A00B8028FCF5435"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_finite_charts_divisors_8586.py",
+      "sha256": "F5BBCE44F5B0B634378AF19A2551B448DCF0DCE3E84E928469A23F3E1A627D36"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_finite_charts_divisors_8586.ps1",
+      "sha256": "001D79DC3046E1A974EE9A03C55501D383287B2BC1CA0D141E11E2AE3A9619A9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_finite_charts_divisors_8586.ps1",
+      "sha256": "06ADF8E588950F5058E4EA6687266EA8ADCB825AE2FCC9EFCD824E392F6BBEAD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_finite_charts_divisors_canonical_8586.py",
+      "sha256": "380F455C76B05050E86AA477D583D43965CB44D6154CA6DE4EC1F8BDB408D2FE"
+    }
+  ],
+  "productionMutation": false,
+  "unusedIntegratorReview": {
+    "previousSha256": "5FA27803A8B930B594537D99FFB0AAAF06AC24E1C9F96CD1839D07A729937FDE",
+    "changes": "Match existing root documentation role; use a plain report filename in shared status paragraphs so subdirectory documents have no incorrect relative link; move report preconditions before production mutation."
+  }
+}

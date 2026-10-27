@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "theorems": 3,
+  "modules": 1,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionLatticeOrbitScratchOwnership716.log",
+  "logSha256": "45048790E49CB89E7F241519300AB32A41B9294E6CE4CFB66FD47C59371267BB",
+  "sourceSha256": "CB65E1B439808E8258240684D698D07E0EBAC8E4D87267E4F304DE43870F19ED",
+  "owners": [
+    {
+      "module": "SourceGammaOneDivisionLatticeOrbit",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_lattice"
+    },
+    {
+      "module": "SourceGammaOneDivisionLatticeOrbit",
+      "name": "_private.SourceGammaOneDivisionLatticeOrbit.0.Dubon2026.SourceFunctionField.GammaOne.mem_tau_lattice"
+    },
+    {
+      "module": "SourceGammaOneDivisionLatticeOrbit",
+      "name": "_private.SourceGammaOneDivisionLatticeOrbit.0.Dubon2026.SourceFunctionField.GammaOne.gamma1_mul_inv_mem_of_bottom_right_eq"
+    }
+  ]
+}

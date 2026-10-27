@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-26 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact elliptic ramification -> compare weighted analytic j fibers with subgroup orbit indices.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-counting-audit-route-725.json",
+    "sha256": "68CB2FF9FEB845D29592C4D2D287E7B59BA0DA7B855104622272069C72B957CF",
+    "review": {
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact elliptic ramification -> compare weighted analytic j fibers with subgroup orbit indices.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\gamma-one-period-charts-20261026-709\\gamma-one-ramification-core-reuse-708\\S_ModularCurve_ComplexPlaceDictionaryOf_two_mul_ramification_eq_card_stabilizer.lean.txt",
+          "sha256": "B84ABD61C547D3D894F4EE8E1E50D4F7819B6B7714FFD87F6681764F9F073652"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCosetFiber.lean",
+          "sha256": "4813D63703A1F861F35862706F68CCE481FC1C7B5708C2C166FFDE5B9EE79F5B"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalCosetOrbitOrder.lean",
+          "sha256": "B2176AAD6247B9765F43675B766C35F89D35DA681DC7B8A887B88DC6E74FA3B2"
+        }
+      ],
+      "shorterRoute": "Native Mathlib and existing project searches found no weighted subgroup-orbit index identity. Adapt only the upstream finite coset-fiber argument and the stabilizer-index identities needed for the actual Gamma1 elliptic ramification comparison; reuse native quotient, orbit-stabilizer and finite-cardinality APIs.",
+      "assumptionsToDischarge": [
+        "The sum of relative stabilizer indices over subgroup orbits in one full modular orbit equals the subgroup index.",
+        "Subgroup stabilizer cardinality and relative index multiply to the full stabilizer cardinality, and this index is unchanged within subgroup orbits."
+      ],
+      "remaining": "Exact ramification at elliptic points, global charts, actual periods and complete Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight characteristic-zero association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": [
+    "The sum of relative stabilizer indices over subgroup orbits in one full modular orbit equals the subgroup index.",
+    "Subgroup stabilizer cardinality and relative index multiply to the full stabilizer cardinality, and this index is unchanged within subgroup orbits."
+  ],
+  "remaining": "Exact ramification at elliptic points, global charts, actual periods and complete Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight characteristic-zero association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

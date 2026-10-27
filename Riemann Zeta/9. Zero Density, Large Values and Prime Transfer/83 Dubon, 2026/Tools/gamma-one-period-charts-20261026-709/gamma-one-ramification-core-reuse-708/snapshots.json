@@ -1,0 +1,48 @@
+{
+  "repository": "anthropics/fermats-last-theorem",
+  "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "scope": "Selected pinned source files only. No full closure, local build, import or pin change.",
+  "files": [
+    {
+      "path": "Definitions/Def_ModularCurve_ComplexPlaceDictionaryOf.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\Def_ModularCurve_ComplexPlaceDictionaryOf.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/Definitions/Def_ModularCurve_ComplexPlaceDictionaryOf.lean",
+      "bytes": 4486,
+      "gitBlob": "50664e5eddc294a5e2d4d7bb076b57ef0f19777d",
+      "sha256": "DD65AC866F371BB1704409250C5931DBD797DFDA5686AF0A8F3557797A58A5C4"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_ramification_eq_one_gamma1.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\S_ModularCurve_ComplexPlaceDictionaryOf_ramification_eq_one_gamma1.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_ramification_eq_one_gamma1.lean",
+      "bytes": 28633,
+      "gitBlob": "e3761f1fbfe5edbe3dcd3ad94d58221abc111a51",
+      "sha256": "1C970DF479352336DC64401FE12D565137877183CEE657F6488357796D6C45E3"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_two_mul_ramification_eq_card_stabilizer.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\S_ModularCurve_ComplexPlaceDictionaryOf_two_mul_ramification_eq_card_stabilizer.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_two_mul_ramification_eq_card_stabilizer.lean",
+      "bytes": 60498,
+      "gitBlob": "7974228b51a44aa3f0bb00bdf7645197a9b8f10f",
+      "sha256": "B84ABD61C547D3D894F4EE8E1E50D4F7819B6B7714FFD87F6681764F9F073652"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_two_mul_ramification_eq_card_stabilizer_gammaH.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\S_ModularCurve_ComplexPlaceDictionaryOf_two_mul_ramification_eq_card_stabilizer_gammaH.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_two_mul_ramification_eq_card_stabilizer_gammaH.lean",
+      "bytes": 7215,
+      "gitBlob": "970819b77bd1a0fbc17435b6eb3ff9c7259031d0",
+      "sha256": "04343F1EEB1FE2B7E2DC185F7E705649D9387CDF1E4A8F5EC1298529BB979241"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_card_stabilizer_dvd_two_mul_ramification.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\S_ModularCurve_ComplexPlaceDictionaryOf_card_stabilizer_dvd_two_mul_ramification.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_card_stabilizer_dvd_two_mul_ramification.lean",
+      "bytes": 5765,
+      "gitBlob": "bb9bba87038cff58665217914eedd95faf9c11b7",
+      "sha256": "C0A989B7DC0E7E831522D62CD27E4B2E3293F0E4B20C350565EFF8938DE95781"
+    }
+  ]
+}

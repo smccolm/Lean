@@ -1,0 +1,4 @@
+{
+  "status": "FAILED",
+  "reason": "The retained scratch chain and canonical copy of earlier promoted realization declarations cannot both be imported into one Lean environment. Use the already audited scratch ramification module consistently for this scratch chain. Production promotion will canonicalize imports without changing proof bodies."
+}

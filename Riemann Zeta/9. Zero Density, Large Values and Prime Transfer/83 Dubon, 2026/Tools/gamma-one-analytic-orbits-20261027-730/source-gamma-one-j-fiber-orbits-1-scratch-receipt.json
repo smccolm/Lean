@@ -1,0 +1,78 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T07:48:45.494064+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneJFiberOrbits"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberOrbits.lean",
+      "sha256": "D0251076EDA7909BC3323635B276218B54A0EDC1D58AC03DDCC45926A37626CB",
+      "oleanSha256": "2CA3A8D3E79901930D653BCB3AD66EE9BC309935B0F6EBFACD9A9166A5626F5B"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.j_rep",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.card_stabilizer_rep",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.finite_orbitQuot",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.OrbitQuot",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.rep",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.Fiber",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.equiv"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.j_rep",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.card_stabilizer_rep",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.finite_orbitQuot",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_orders"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.OrbitQuot",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.rep",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.Fiber",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.equiv"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberOrbitsAudit1b.log",
+  "logSha256": "ADF28167F971F102C0E027FE5FEF5EB609418992B14B66F14C5B7C6B040D1F7D",
+  "auditSha256": "E2CA1D9F48671100FE2F5722B0E9DDF7E80AE46772006C7F732249A990A4878D",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 14,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 16,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberOrbitsDependencyAudit1b.log",
+  "dependencyAuditSha256": "FEDEE534BFFC05C28C2B3C58BFB5C1C64031D1CFAB4C275EB7C96A6C93146374",
+  "dependencyAuditSourceSha256": "B59A87BE6808149762D0D5E88C6C1487A80127F720DFDCDBA5111FEE569BE5F0",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.j_rep",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.card_stabilizer_rep",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.finite_orbitQuot",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.OrbitQuot",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.rep",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.Fiber",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.toFiber",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.equiv"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact ramification -> native Gamma1 modular forms separate every distinct Gamma1 orbit.",
+  "discharged": [
+    "Actual finite j fibers are in bijection with the enlarged Gamma1 orbits inside the full modular orbit.",
+    "The sum over analytic orbit representatives equals the literal sum of positive place orders, with no missing or duplicated places."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Exact ramification at elliptic points, global charts, actual periods and complete Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight characteristic-zero association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-j-fiber-orbits-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "6CB1E8F8ECC7A7E72BF5A1D59FD6C2944AF757DAC9F748F2C6CD7716E98DDC13",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

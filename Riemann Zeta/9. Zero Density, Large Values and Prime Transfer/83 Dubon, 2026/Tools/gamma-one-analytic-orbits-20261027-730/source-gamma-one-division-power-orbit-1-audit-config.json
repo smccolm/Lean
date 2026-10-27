@@ -1,0 +1,31 @@
+{
+  "modules": [
+    "SourceGammaOneDivisionPowerOrbit"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_power"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_power"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_power",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_lattice",
+    "Dubon2026.SourceFunctionField.GammaOne.DivisionRotations.exists_rotation_of_division_power",
+    "Dubon2026.SourceFricke.weierstrassP_eq_imp_lattice",
+    "Dubon2026.SourceFricke.torsion_lift_mem_lattice_iff",
+    "Dubon2026.SourceFricke.weierstrassP_smulPeriodPair",
+    "Dubon2026.SourceEllipticPeriod.periodCurve_ofTau_isElliptic"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_power"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneDivisionLatticeOrbit",
+    "SourceGammaOneDivisionPowerOrbit",
+    "SourcePeriodDivisionRotations"
+  ],
+  "separateReason": "Actual division-value powers now supply the rotation and lattice hypotheses of the actual Gamma1 orbit matrix. Modular-form cross determinants must supply these power equalities."
+}

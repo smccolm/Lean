@@ -1,0 +1,40 @@
+import Dubon2026.SourceGammaOneHolomorphicFunctions
+import Dubon2026.SourceGammaOneQuotientCuspSeries
+import Dubon2026.SourceGammaOneAnalyticIntegrality
+import Dubon2026.SourceGammaOneFinitePlaceExhaustion
+import Dubon2026.SourceGammaOneAnalyticPlaceInvariance
+import Dubon2026.SourceGammaOneStabilizerRamification
+import Dubon2026.SourcePeriodDivisionRotations
+import Dubon2026.SourceGammaOneDivisionForms
+import Dubon2026.SourceGammaOneDivisionLatticeOrbit
+import Dubon2026.SourceGammaOneDivisionPowerOrbit
+import Dubon2026.SourceGammaOneDiamondSeparation
+import Dubon2026.SourceOriginalModularPointSeparation
+import Dubon2026.SourceGammaOneModularPointSeparation
+import Dubon2026.SourceGammaOneNormalizedCuspRatios
+import Dubon2026.SourceGammaOneAllModularRatioMembership
+import Dubon2026.SourceGammaOneAnalyticPlaceOrbits
+import Dubon2026.SourceGammaOneJFiberDegree
+import Dubon2026.SourceGammaOneOrbitCounting
+import Dubon2026.SourceGammaOnePlusMinus
+import Dubon2026.SourceGammaOneRamificationBounds
+import Dubon2026.SourceGammaOneJFiberOrbits
+import Dubon2026.SourceGammaOneGenericFiberCount
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceGammaOneHolomorphicFunctions, `Dubon2026.SourceGammaOneQuotientCuspSeries, `Dubon2026.SourceGammaOneAnalyticIntegrality, `Dubon2026.SourceGammaOneFinitePlaceExhaustion, `Dubon2026.SourceGammaOneAnalyticPlaceInvariance, `Dubon2026.SourceGammaOneStabilizerRamification, `Dubon2026.SourcePeriodDivisionRotations, `Dubon2026.SourceGammaOneDivisionForms, `Dubon2026.SourceGammaOneDivisionLatticeOrbit, `Dubon2026.SourceGammaOneDivisionPowerOrbit, `Dubon2026.SourceGammaOneDiamondSeparation, `Dubon2026.SourceOriginalModularPointSeparation, `Dubon2026.SourceGammaOneModularPointSeparation, `Dubon2026.SourceGammaOneNormalizedCuspRatios, `Dubon2026.SourceGammaOneAllModularRatioMembership, `Dubon2026.SourceGammaOneAnalyticPlaceOrbits, `Dubon2026.SourceGammaOneJFiberDegree, `Dubon2026.SourceGammaOneOrbitCounting, `Dubon2026.SourceGammaOnePlusMinus, `Dubon2026.SourceGammaOneRamificationBounds, `Dubon2026.SourceGammaOneJFiberOrbits, `Dubon2026.SourceGammaOneGenericFiberCount]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

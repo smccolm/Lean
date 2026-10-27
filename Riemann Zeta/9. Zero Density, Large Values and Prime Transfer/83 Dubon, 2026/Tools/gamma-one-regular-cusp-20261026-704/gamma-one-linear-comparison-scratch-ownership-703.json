@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "theorems": 25,
+  "modules": 2,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLinearComparisonScratchOwnership703.log",
+  "logSha256": "8F73F1C899C3F36268B394C94ED602EA445E8CE74EB3CA24AB4DC54F8251010A",
+  "sourceSha256": "A8C891D00F7CDB1C8074E8E2A4184DE7DDBD765B00F7D1A99FE57AFB1227D2B6",
+  "owners": [
+    {
+      "module": "SourceGammaOneRegularCuspQExpansion",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion._proof_9"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspEquiv",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv._proof_6"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspEquiv",
+      "name": "_private.SourceGammaOneRegularCuspEquiv.0.Dubon2026.SourceFunctionField.GammaOne.gammaOne_translation_mem._simp_1_1"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspEquiv",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv._proof_3"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspQExpansion",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion_injective"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspEquiv",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv._proof_1"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspEquiv",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv._proof_5"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspQExpansion",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspQExpansion_injective"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspQExpansion",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspQExpansion.congr_simp"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspQExpansion",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion._proof_7"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspEquiv",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regular_cusp_qExpansion_range_eq"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspEquiv",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv._proof_4"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspEquiv",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv._proof_2"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspQExpansion",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspQExpansion._proof_1"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspEquiv",
+      "name": "_private.SourceGammaOneRegularCuspEquiv.0.Dubon2026.SourceFunctionField.GammaOne.gammaOne_translation_mem"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspQExpansion",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion._proof_4"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspQExpansion",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion._proof_8"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspQExpansion",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion._proof_1"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspQExpansion",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion._proof_5"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspQExpansion",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspQExpansion._proof_3"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspQExpansion",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.cuspQExpansion._proof_2"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspQExpansion",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion._proof_2"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspEquiv",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_qExpansion"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspQExpansion",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion._proof_6"
+    },
+    {
+      "module": "SourceGammaOneRegularCuspQExpansion",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion._proof_3"
+    }
+  ]
+}

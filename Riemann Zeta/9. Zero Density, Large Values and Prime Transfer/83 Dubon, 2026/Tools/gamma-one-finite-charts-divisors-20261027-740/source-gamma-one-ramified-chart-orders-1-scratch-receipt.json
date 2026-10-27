@@ -1,0 +1,71 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T08:32:29.838765+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneRamifiedMeromorphicOrder",
+    "SourceGammaOneNearbyOrders",
+    "SourceGammaOneRamifiedChartOrders"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedMeromorphicOrder.lean",
+      "sha256": "CFE079129198AC1E9893E773A117FBBA11379E37D9719C27D7000395AE5AF758",
+      "oleanSha256": "87AB2ADCF5D6012EDA384A1832ECF36AFFD51311B075F29B070DCA0181D58BD8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNearbyOrders.lean",
+      "sha256": "53F7AF0C849D1B91E4D91D73F02347981FE65678C6715C4CC9B5E8A8C048E760",
+      "oleanSha256": "42B9D9B11AAE59BBC222DD10263DBCB7DEDEF76C8C95C21336BCC6BE0FF68E7B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrders.lean",
+      "sha256": "1F85B7090D8BE892D5B5E06A42FBBCBF5875F3EE60BCE237A13E4B206ADC555C",
+      "oleanSha256": "0D965C34D6BE6A3D49C653A8BFE22B58505B61397244DC4916319353CACC992B"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_ramifiedPlace_eval",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_meromorphicOrderAt",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_nearby_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_param_eventually_one",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_chart_orders"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_ramifiedPlace_eval",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_meromorphicOrderAt",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_nearby_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_param_eventually_one",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_chart_orders"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersAudit1.log",
+  "logSha256": "FC335AC6E2E23306BAD565113562D1D9FCCE06E19B4194AB81132EB2493EB84F",
+  "auditSha256": "70E94B169D64918CCEB5739278F7299636CF30BE77D64059E4301B7955C6628F",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 8,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 12,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersDependencyAudit1.log",
+  "dependencyAuditSha256": "A5AE695522DFD7940700614B4F380254D0FC1D1304DD4768C2EECF9E3A879C33",
+  "dependencyAuditSourceSha256": "8A16AF8EC84BA70F4F114C6ABD3A8416FD0A51B9FA9451AE1877197AE8522F7E",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_ramifiedPlace_eval",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_meromorphicOrderAt",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_nearby_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_param_eventually_one",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_chart_orders"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> actual ramified charts -> exact orders for all functions on a common neighborhood.",
+  "discharged": [
+    "All actual rational functions, including poles, have meromorphic residue values on the descended Gamma1 place family with exactly the normalized valuation order at the center.",
+    "One positive radius works for every nonzero function and every chart point; regular functions have analytic values throughout that common neighborhood."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Normalize charts by actual uniformizers, construct cusp/global place charts and actual periods, discharge full Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-ramified-chart-orders-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "995C358B690ACB442B0B0614E052FF458B7BE5A11BA49144A780ABA2666645B1",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,29 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact ramification -> native Gamma1 modular forms separate every distinct Gamma1 orbit.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceOrbits.lean",
+      "sha256": "8B6C9BCD3AB0C0336CD140D440628D66666A653475A31BE7DB00D55DE46E5A7D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceExhaustion.lean",
+      "sha256": "2EF1C1C6B8C632143DD3A0E1466275E8A4AD423009828FCE0AD98F6E404655F8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOrbitCounting.lean",
+      "sha256": "D1C431ABA6FE9E5AE3FCE6ACA6AB6BE4FA1163E5C75F27E4F4E69F62931EA5FF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlusMinus.lean",
+      "sha256": "DC8F925EF43228A59D2AE87503C3404B63049785B6F11A5040FED82372D4460D"
+    }
+  ],
+  "shorterRoute": "Identify the actual positive j fiber with subgroup orbits inside one full modular orbit using the proved finite-place exhaustion and exact Gamma1 analytic-place orbit equality. Push finite sums through this explicit equivalence. The existing positive-order degree formula will be composed after canonical import assembly; no fresh degree or abstract place dictionary is assumed.",
+  "assumptionsToDischarge": [
+    "Actual finite j fibers are in bijection with the enlarged Gamma1 orbits inside the full modular orbit.",
+    "The sum over analytic orbit representatives equals the literal sum of positive place orders, with no missing or duplicated places."
+  ],
+  "remaining": "Exact ramification at elliptic points, global charts, actual periods and complete Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight characteristic-zero association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

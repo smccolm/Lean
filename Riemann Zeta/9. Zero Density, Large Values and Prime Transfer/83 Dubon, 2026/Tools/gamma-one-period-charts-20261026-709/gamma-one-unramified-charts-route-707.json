@@ -1,0 +1,46 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> arithmetic automorphy and original all-weight characteristic-zero association -> realization of original finite Gamma1 Hecke characters -> Picard/H1 and full/parabolic transpose/diamond comparison -> actual global Gamma1 place charts and period comparison -> normalized local charts at unramified analytic places.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticJMultiplicity.lean",
+      "sha256": "1A04AF6929C874B531B4E748EF2A15A354A02F3CD79B830AA285634EF4383E3F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRamificationIsolated.lean",
+      "sha256": "999D157D57E560EFF32AC1FC4DCDE602AEFF63597252455D809F9FD4B10CD717"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFiniteChartParameters.lean",
+      "sha256": "CE971607835D4E7C939CBF4A17A5B2FD6627ADF2A0421E3A2F956348B21F0065"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveAnalyticPlaceParameter.lean",
+      "sha256": "790A461384CFE696736F09F9C99ED4A6B733A5B69FCBFBC89E616FA521B6DD5D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRamifiedRegularParameter.lean",
+      "sha256": "CA97D8CE2DF24139E4CD14DEBABC895435566EE6ABEFE44B7CDD288E6E4B9DE8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalEllipticFibers.lean",
+      "sha256": "68B05D2B2B4ECC2B7949CE32A93D7AB0E9784635F85DCDAC1E3D18DAE86DA35F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticJOrders.lean",
+      "sha256": "F823AB56C1F8CF239B8EC8121C7524D81EAEECB0663469666495FB57CE728330"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticEvaluation.lean",
+      "sha256": "6E671490A966EB8208C487C20F0D4F73F451348DDD712E1E0A65E7B432F2D830"
+    }
+  ],
+  "shorterRoute": "The exact j-germ order already bounds the original analytic ramification by the full modular stabilizer. Native E4/E6 isolated-zero results therefore give ramification one on punctured neighborhoods. At an unramified center, shift the actual residue family and apply the existing generic inverse-function parameter theorem. This avoids a new inverse-function argument and postpones stabilizer identification to the elliptic centers that actually require it.",
+  "assumptionsToDischarge": [
+    "One common neighborhood has normalized orders for every actual field element around any unramified analytic center.",
+    "Actual residue evaluation of the original uniformizer supplies an injective local chart, with no assumed parameter family or order model.",
+    "The unramified hypothesis is derived at every center with E4 and E6 nonzero."
+  ],
+  "remaining": "Elliptic-center ramified descent, finite/cusp place exhaustion and global charts remain, followed by actual period, Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight characteristic-zero association, arithmetic automorphy and higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

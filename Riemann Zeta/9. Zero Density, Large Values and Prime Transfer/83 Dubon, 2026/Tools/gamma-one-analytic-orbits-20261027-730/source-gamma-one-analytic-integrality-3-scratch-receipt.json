@@ -1,0 +1,70 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T05:25:14.230047+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneHolomorphicFunctions",
+    "SourceGammaOneQuotientCuspSeries",
+    "SourceGammaOneAnalyticIntegrality"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFunctions.lean",
+      "sha256": "47B217E183F5C1A5826E2BED9224D33C212B3534313F8462DD2D8E606FE34D28",
+      "oleanSha256": "AA733CBAFCA61434DE9C8EA266C993647ED94702DCFA04CC88BC8253894B1D72"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneQuotientCuspSeries.lean",
+      "sha256": "1CAD5294C564FCFA9AB4C4C0EB85F93D87ED680CC7291C442951DDEF38C93954",
+      "oleanSha256": "137C3AE85CEBF296272B45BFFE5125246D7DA14EAF2AD0149E661478556507CA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticIntegrality.lean",
+      "sha256": "C23A959AD1DBD5A9D95D330E772120193BBA3F913DC27338FA3DE27E7B3BDC49",
+      "oleanSha256": "F12A70FED1E252CE679A40AA3996321697A65E33DA1D054FBFEC57383FBD257F"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_invariant",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_realization_of_mem_all_analytic_places",
+    "Dubon2026.SourceFunctionField.GammaOne.quotient_cusp_represents",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_meromorphic",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_pole_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.isIntegral_of_mem_all_analytic_places"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_invariant",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_realization_of_mem_all_analytic_places",
+    "Dubon2026.SourceFunctionField.GammaOne.quotient_cusp_represents",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_meromorphic",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_pole_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.isIntegral_of_mem_all_analytic_places"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticIntegralityAudit3.log",
+  "logSha256": "F665D297A5854294E4D4770D00604FDE208BCFDF97DE1B143D2FD407BEE46DB3",
+  "auditSha256": "2BB24ADF9D4190F1F988648B56ADE3671081948623C05EBC8664CD601BD9A857",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 6,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 16,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticIntegralityDependencyAudit3.log",
+  "dependencyAuditSha256": "E687005248E45AFDBF8E9CCB64262B5BF621B68949DE2844BD38AAB8B13ED4AA",
+  "dependencyAuditSourceSha256": "259E229D60DEECA6ED4EC14A63C39BFBEA43D5074FC93A289D15C3C34C387AE9",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.isIntegral_of_mem_all_analytic_places"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> arithmetic automorphy and original all-weight characteristic-zero association -> realization of original finite Gamma1 Hecke characters -> actual Picard/H1 and period/Hecke/diamond comparison -> global original Gamma1 analytic charts -> finite-place exhaustion -> integrality over C[j] of every original element regular at all analytic places.",
+  "discharged": [
+    "A holomorphic modular-invariant realization is constructed from regularity at all actual analytic places.",
+    "The cusp pole bounds and monic integral equation are derived from the actual modular quotient.",
+    "The integral relation is transferred to the original Laurent field element over its original j-coordinate."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Finite-place exhaustion must consume this integrality theorem. Orbit separation, elliptic-center charts, cusp exhaustion/global charts, actual period/Hecke/diamond/Picard/H1 comparison, original all-weight arithmetic association and higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-analytic-integrality-3-reuse-review-20261026.json",
+  "reuseReviewSha256": "4A2F57A83DEB9C323B3D0841747B720714AD0EE4BE2FD649E347140D0CB47056",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

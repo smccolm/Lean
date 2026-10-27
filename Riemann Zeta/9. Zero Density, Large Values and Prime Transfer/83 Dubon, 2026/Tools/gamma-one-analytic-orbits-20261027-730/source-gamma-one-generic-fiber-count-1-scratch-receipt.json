@@ -1,0 +1,50 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T07:52:30.093070+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneGenericFiberCount"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenericFiberCount.lean",
+      "sha256": "D6B7D892DC0D0F547AAEED407BDBA5A024486B3FEE4C6F784ED58B5CF3D7B2BC",
+      "oleanSha256": "103A89D374874C95A01C62C51970618F64C66F34427E57A7A73588D47AA4263D"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_relative_indices_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.exists_fiber_order_sum_eq_index"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_relative_indices_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.exists_fiber_order_sum_eq_index"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenericFiberCountAudit1.log",
+  "logSha256": "43F7C3B03FF4853394C096E6FE93433F7D934CF3EE5C25B187F5F9AE0849DA19",
+  "auditSha256": "46585E3ABA32F578264C23D22EC08400F3ADED6E1E37CFEFBAE719DDFA6855FC",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 4,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 8,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenericFiberCountDependencyAudit1.log",
+  "dependencyAuditSha256": "216DC85281B3CF4724F275A442BFAC04EF88FDE66BCF1B68204DE7E806B3EADB",
+  "dependencyAuditSourceSha256": "AEF349136EBA4C1AA6A02AD4537E3F7D1697BEE474C208C40812089D74E573D2",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.sum_relative_indices_eq_index",
+    "Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits.exists_fiber_order_sum_eq_index"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact ramification -> native Gamma1 modular forms separate every distinct Gamma1 orbit.",
+  "discharged": [
+    "An actual generic j fiber has total positive place order equal to the subgroup index, with its point and multiplicities constructed from proved results.",
+    "The weighted relative-index sum is expressed for the actual Gamma1 orbit representatives used by the fiber bijection."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Exact ramification at elliptic points, global charts, actual periods and complete Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight characteristic-zero association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-generic-fiber-count-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "5D6E13517ECCE64353657E7B7C5C61658BE4E5722DF063BB5ADDA4147E6DA03F",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

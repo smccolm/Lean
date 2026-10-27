@@ -1,0 +1,71 @@
+import SourceGammaOneCuspPositiveWeight
+
+/-! DUB-17/18 -> actual Gamma1 period dimension comparison -> exact cusp
+terms. The actual cyclic coset-orbit map is onto the j-pole places.
+Positivity, the orbit-size bound and equality of the two total degrees
+prove that this map is bijective and that every pole order equals its
+coset-orbit size. All nonzero Gamma1 levels and the central sign remain. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CuspCounting
+noncomputable section
+open SourceCurve CongruenceSubgroup ModularGroup
+open scoped MatrixGroups GammaOne
+variable {Γ : Subgroup SL(2, ℤ)}
+
+/-- The actual algebraic poles of the original j coordinate. -/
+abbrev PolePlaces (Γ : Subgroup SL(2, ℤ)) :=
+  {P : Place ℂ (functionFieldOver Γ ℂ) // P.ord (jCoordinateOver Γ ℂ) < 0}
+
+variable (N : ℕ) [NeZero N] (hΓ : Gamma N ≤ Γ) (hT : T ∈ Γ)
+
+/-- The literal pole place attached to a cyclic orbit of original cosets. -/
+def orbitToPole (q : Orbits (Γ := Γ)) : PolePlaces Γ :=
+  ⟨orbitPlace N hΓ hT q, orbitPlace_j_neg N hΓ hT q⟩
+
+theorem orbitToPole_surjective : Function.Surjective (orbitToPole N hΓ hT) := by
+  intro P
+  obtain ⟨q, hq⟩ := exists_orbitPlace_of_j_pole N hΓ hT P.val P.property
+  exact ⟨q, Subtype.ext hq⟩
+
+include hΓ hT in
+theorem polePlaces_finite : Finite (PolePlaces Γ) := by
+  letI : Γ.FiniteIndex := Subgroup.finiteIndex_of_le hΓ
+  exact Finite.of_surjective _ (orbitToPole_surjective N hΓ hT)
+
+theorem orbitPlace_out (q : Orbits (Γ := Γ)) :
+    cosetPlace N hΓ hT q.out = orbitPlace N hΓ hT q :=
+  congrArg (orbitPlace N hΓ hT) q.out_eq'
+
+theorem orbitToPole_order_le_card (q : Orbits (Γ := Γ)) :
+    -(orbitToPole N hΓ hT q).val.ord (jCoordinateOver Γ ℂ) ≤
+      (Nat.card (MulAction.orbit (Subgroup.zpowers (translation Γ)) q.out) : ℤ) := by
+  change -(orbitPlace N hΓ hT q).ord (jCoordinateOver Γ ℂ) ≤ _
+  rw [← orbitPlace_out]
+  exact j_pole_order_le_coset_orbit_card N hΓ hT q.out
+
+theorem gammaOne_orbitToPole_bijective_and_order
+    (hΓ₁ : Gamma N ≤ Gamma1 N) (hT₁ : T ∈ Gamma1 N) :
+    Function.Bijective (orbitToPole N hΓ₁ hT₁) ∧
+      ∀ q : Orbits (Γ := Gamma1 N),
+        -(orbitToPole N hΓ₁ hT₁ q).val.ord (jCoordinateOver (Gamma1 N) ℂ) =
+          (Nat.card (MulAction.orbit (Subgroup.zpowers (translation (Gamma1 N))) q.out) : ℤ) := by
+  classical
+  letI : Fintype (Orbits (Γ := Gamma1 N)) := Fintype.ofFinite _
+  letI : Finite (PolePlaces (Gamma1 N)) := polePlaces_finite N hΓ₁ hT₁
+  letI : Fintype (PolePlaces (Gamma1 N)) := Fintype.ofFinite _
+  apply bijective_and_eq_of_positive_weight_bound (orbitToPole N hΓ₁ hT₁)
+    (orbitToPole_surjective N hΓ₁ hT₁)
+    (fun P => -P.val.ord (jCoordinateOver (Gamma1 N) ℂ))
+    (fun P => neg_pos.mpr P.property)
+    (fun q => (Nat.card (MulAction.orbit
+      (Subgroup.zpowers (translation (Gamma1 N))) q.out) : ℤ))
+    (orbitToPole_order_le_card N hΓ₁ hT₁)
+  have hs : (∑ q : Orbits (Γ := Gamma1 N),
+      (Nat.card (MulAction.orbit (Subgroup.zpowers (translation (Gamma1 N))) q.out) : ℤ)) =
+        ((plusMinus (Gamma1 N)).index : ℤ) := by
+    exact_mod_cast sum_cyclic_orbit_cards_eq_index (Γ := Gamma1 N)
+  have hp := sum_j_pole_orders_eq_index N hT₁
+  rw [finsum_eq_sum_of_fintype] at hp
+  exact hs.trans hp.symm
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CuspCounting

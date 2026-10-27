@@ -1,0 +1,25 @@
+{
+  "scope": 704,
+  "scopeIds": [
+    "700",
+    "701",
+    "702",
+    "703"
+  ],
+  "receipts": {
+    "source-gamma-one-local-holomorphy-12-scratch-receipt.json": "FA3FD70DE720E7EE3293CDC2A682101E803B4903C25540687D4B8DEC4C1DF38F",
+    "source-gamma-one-cusp-vanishing-10-scratch-receipt.json": "FB9076F6E4AB51929ED0D62B4B587B1957ED227357C5DAA8668716744DF1AE4E",
+    "source-gamma-one-fourier-converse-2-scratch-receipt.json": "3502062B579879A237F3DA6B6E8043899B99BF8F18357E6FB37251CC611C7811",
+    "source-gamma-one-linear-comparison-2-scratch-receipt.json": "5A715A3A21FD94D009218A675A76EA77F6304041FC2FBDB8D2DB24AD94265F50"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 Hecke characters -> actual Picard/H1, full/parabolic, transpose and diamond comparison retaining the original homogeneous coefficient endomorphism -> actual regular-differential/cusp equivalence with literal Fourier normalization.",
+  "discharged": "The actual original complex Gamma1 regular differential space is now linearly equivalent to native weight-two cusp forms, with exact equality of their literal Fourier expansions. Actual modular quotient germs define normalized finite and cusp places. Original regularity and exact j-derivative orders give finite holomorphy and positive order at every cusp, deriving all analytic and decay hypotheses. The existing modular q-Euler identity removes the precise 2*pi*i factor. The proved differential spanning theorem covers every regular differential. Both Fourier realization directions and injectivity identify the actual linear ranges; no dimension formula, matching-series witness or cusp-form-existence assumption is supplied.",
+  "remaining": "The actual Picard/H1, full/parabolic, transpose and diamond comparison must still identify original finite homogeneous-coefficient Hecke characters with geometric characters. Exact analytic period normalization and compatibility with the original Hecke/diamond operators remain. Coefficient-field transport is still required wherever used by the arithmetic comparison. Frobenius/inertia, arithmetic realization of those characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. The full all-weight arithmetic goal is unchanged. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN.",
+  "route": "The renewed selected-file search is recorded in Dubon Reuse Search 2026-10-26.md. Reuse actual modular ratios, normalized place construction, exact local differential orders, native removable singularities, the existing j-derivative and q-Euler identities, original integral Fourier spanning and differential expansion injectivity. This gives the required complex equivalence without a new global Gamma1 ramification classification, cusp-width dictionary, numerical degree bound, period-germ framework or dimension formula. The external comparison files were inspected at the pinned commit; their full import closure was not built or certified. Only audited mathematical sources are promoted and only imports are qualified. Failed variants and audit/helper evidence remain preserved. Pins, proof limits, frozen source and all twenty acceptance gates are unchanged.",
+  "precedingCanonicalScope": 8522,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 gates unchanged.",
+  "reason": "Require preceding canonical PASS and immutable archive before production mutation."
+}

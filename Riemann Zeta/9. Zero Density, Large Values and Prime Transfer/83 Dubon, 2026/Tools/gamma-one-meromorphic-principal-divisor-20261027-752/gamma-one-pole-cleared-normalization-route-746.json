@@ -1,0 +1,24 @@
+{
+  "chain": "DUB-17/18 -> original all-weight arithmetic association -> actual finite homogeneous-coefficient Gamma1 characters -> Picard/H1/full-parabolic/transpose/diamond comparison -> modular periods -> original meromorphic field realization -> holomorphic normalization after actual algebraic pole clearing.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Meromorphic\\NormalForm.lean",
+      "sha256": "00B7D509728CE960D4F829753706112D8F657D034882CBFC73D698507E51E86F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Topology\\Homeomorph\\Lemmas.lean",
+      "sha256": "56CEAECA43AC4F7F4D75415B02FD9374FDF48BE46333ACA3EDD7A7ED2BA5AEC0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Complex\\UpperHalfPlane\\FunctionsBoundedAtInfty.lean",
+      "sha256": "692FB3CF1667C8D5C7AD24F9BE34E7FA3EC5BE8B49E28F9A4735E5FF00E0F73C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneAnalyticEvaluation.lean",
+      "sha256": "DD538E907D32C70AF5A7C40F80BB5A6D6C22A204487F10DAD8A75F63F6B80D91"
+    }
+  ],
+  "assumptionsToDischarge": "Existence of a holomorphic representative from nonnegative meromorphic orders; preservation of the actual subgroup invariance and cusp boundedness under local punctured equality. These permit the genuine pole-cleared product to enter the already proved holomorphic modular quotient.",
+  "shorterRoute": "Native meromorphic normal form and continuity replace a fresh removable-singularity or meromorphic compactification framework. Scope745 already clears finite analytic poles algebraically.",
+  "remaining": "Consumer for the actual pole-cleared product and division back into the original field, real period surjectivity, Abel-Petersson reciprocity, complete period/Hecke/diamond/H1 comparison, all-weight association and higher continuation remain; 16/20; DUB-17--20 OPEN."
+}

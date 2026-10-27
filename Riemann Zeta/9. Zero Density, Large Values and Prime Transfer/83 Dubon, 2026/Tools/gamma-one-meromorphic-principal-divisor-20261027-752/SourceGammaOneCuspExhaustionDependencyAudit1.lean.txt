@@ -1,0 +1,29 @@
+import SourceGammaOneCuspBoundedRealization
+import SourceGammaOneCuspPlaceExhaustion
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_bounded_of_cusp_regular, `Dubon2026.SourceFunctionField.GammaOne.constant_of_mem_all_analytic_and_cusp_places, `Dubon2026.SourceFunctionField.GammaOne.place_analytic_or_actual_cusp, `Dubon2026.SourceFunctionField.GammaOne.exists_cusp_place_eq_of_j_pole, `Dubon2026.SourceFunctionField.GammaOne.order_eq_zero_at_j_poles_of_cusp_limits]
+  let localModules : Array Name := #[`SourceGammaOneCuspBoundedRealization, `SourceGammaOneCuspPlaceExhaustion, `SourceGammaOneCuspResidues]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_bounded_of_cusp_regular, `Dubon2026.SourceFunctionField.GammaOne.constant_of_mem_all_analytic_and_cusp_places, `Dubon2026.SourceFunctionField.GammaOne.place_analytic_or_actual_cusp, `Dubon2026.SourceFunctionField.GammaOne.exists_cusp_place_eq_of_j_pole, `Dubon2026.SourceFunctionField.GammaOne.order_eq_zero_at_j_poles_of_cusp_limits, `Dubon2026.SourceCurve.exists_nonconstant_regular_away_of_finite_coordinate, `ModularForm.eq_const_of_weight_zero, `Dubon2026.SourceFunctionField.GammaOne.holomorphic_realization_of_mem_all_analytic_places, `Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order_eq_zero_of_tendsto, `Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_residue, `Dubon2026.SourceFunctionField.GammaOne.quotient_cusp_represents, `Dubon2026.SourceFunctionField.GammaOne.finiteDimensional_jCoordinateOver]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE CUSP EXHAUSTION DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in actual cusp exhaustion and order zero at every j-pole place from nonzero cusp limits. Only declaration values are traversed. Native weight-zero constancy and the proved one-pole function are consumed. Global periods, Hecke/diamond/H1 arithmetic comparison, all-weight association and higher continuation remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

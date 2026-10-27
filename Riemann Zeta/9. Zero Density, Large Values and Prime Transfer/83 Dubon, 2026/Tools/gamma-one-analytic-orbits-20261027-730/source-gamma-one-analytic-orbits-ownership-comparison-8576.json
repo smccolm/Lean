@@ -1,0 +1,381 @@
+{
+  "scratchSum": 94,
+  "scratchDistinct": 94,
+  "generatedNameRenamings": {},
+  "productionFocused": 93,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification.congr_simp": [
+      {
+        "scope": "SourceGammaOnePlaceInvarianceScratchOwnership713",
+        "module": "Dubon2026.SourceGammaOneStabilizerRamification"
+      }
+    ]
+  },
+  "missingFromFocusedAlreadyInPrevious": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification.congr_simp"
+  ],
+  "productionNamesNotInScratch": [],
+  "unexplainedMissing": [],
+  "scopes": [
+    {
+      "modules": [
+        "SourceGammaOneHolomorphicFunctions",
+        "SourceGammaOneQuotientCuspSeries",
+        "SourceGammaOneAnalyticIntegrality"
+      ],
+      "count": 6,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticIntegralityScratchOwnership710.log",
+        "sha256": "25A6F972C4452B08C77CFC9F19826E474C0C4FCA0A68C73FD8ACBD245122AA24",
+        "sourceSha256": "CBFEE778D0E26D8DD656163CD0CACA076D1D87951ED4048598D67EB27ADF1CE4"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneFinitePlaceExhaustion"
+      ],
+      "count": 4,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceExhaustionScratchOwnership711.log",
+        "sha256": "31480DD664AC821A242023E75FFEC35059196671E2930D55C51136FD0FF56F77",
+        "sourceSha256": "EAFF847A474B903407B540EA3D2DCC1EF2B21D8C87C28E6E3A40325FED14F5C0"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneAnalyticPlaceInvariance",
+        "SourceGammaOneStabilizerRamification"
+      ],
+      "count": 5,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceInvarianceScratchOwnership713.log",
+        "sha256": "C9F2C723965B25A84062A3989E267111FC1C14DE3FE544DEF0CDB612C555E971",
+        "sourceSha256": "9AC3A5F837AD0DD17E5015FF4C19225DF39F0D22CF234D940DA06C86D91E964D"
+      }
+    },
+    {
+      "modules": [
+        "SourcePeriodDivisionRotations"
+      ],
+      "count": 6,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodDivisionRotationsScratchOwnership714.log",
+        "sha256": "71EAC8213ED56215B3DEDD73A08FC88856B33AD475A76E81E6F2115501EE96C8",
+        "sourceSha256": "A360F947EDE43EFF8F72A5F845ACD943D268C5EE10CC3217C9A4E79078606A5D"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneDivisionForms"
+      ],
+      "count": 9,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionFormsScratchOwnership715.log",
+        "sha256": "97B5EAA425B73686071B3F2266040838EC5D959306384AF7003BD0B63C443D9B",
+        "sourceSha256": "24C7D995DA8FC94A71A48EDDB76976FB482DA1A082BEFD0EF276D719A7738C48"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneDivisionLatticeOrbit"
+      ],
+      "count": 3,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionLatticeOrbitScratchOwnership716.log",
+        "sha256": "45048790E49CB89E7F241519300AB32A41B9294E6CE4CFB66FD47C59371267BB",
+        "sourceSha256": "CB65E1B439808E8258240684D698D07E0EBAC8E4D87267E4F304DE43870F19ED"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneDivisionPowerOrbit"
+      ],
+      "count": 4,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionPowerOrbitScratchOwnership717.log",
+        "sha256": "5E4A66BA4956EF1385FA43C8F35089AEB9B08FAAB3DD54C4C2FFB97075774795",
+        "sourceSha256": "7D3F48DDD828477281F75D1F6E7515D51270451621F0380D4BC1F30921BD877B"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneDiamondSeparation"
+      ],
+      "count": 3,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSeparationScratchOwnership718.log",
+        "sha256": "2C8F220A8E5B8259B31FC1828BD29782B98981BD085D07BA5F662DADA636C7F2",
+        "sourceSha256": "E03225E6B7C4E7525F6E8C318C2CD14B00D761A59B644A4DD52E2FE784F86F20"
+      }
+    },
+    {
+      "modules": [
+        "SourceOriginalModularPointSeparation"
+      ],
+      "count": 4,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalModularPointSeparationScratchOwnership719.log",
+        "sha256": "15FD4AB59CC06051BEBC90A5B0907F6749FB17E6165BF6F05B0A17F7830A87C2",
+        "sourceSha256": "E3A8D5C6F4D3A8C6F475FD93423B0A52D9BDA2C5977C40DF57003DD6722D3C0E"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneModularPointSeparation"
+      ],
+      "count": 2,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularPointSeparationScratchOwnership720.log",
+        "sha256": "69040686E117E4C28813A8A81E45EA90E0394D8EC2F1E8ECFE26D77364E2485E",
+        "sourceSha256": "EA5F0912F555D83768F55CB7399F5AF4A101295F843B09F79B59FE4451234746"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneNormalizedCuspRatios"
+      ],
+      "count": 1,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormalizedCuspRatiosScratchOwnership721.log",
+        "sha256": "464C4CFCB03408F6ED4ACF0D436C2A34075206DA6E05DD21823F2D909D40983E",
+        "sourceSha256": "C530C32C0BEC313AD77F77D50EFC931C41EF6BFCBC41506201A01E7D8BA77A38"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneAllModularRatioMembership"
+      ],
+      "count": 2,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAllModularRatioMembershipScratchOwnership722.log",
+        "sha256": "701DE03B9A0C87F04C2B807B00A1BC7E2AAA1C673584DE898F3C7E281272B36E",
+        "sourceSha256": "19267A3289E154AE32565E21CA387FB8E6E0B1DA8B25B5AD1545F8C3EB1805CA"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneAnalyticPlaceOrbits"
+      ],
+      "count": 2,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceOrbitsScratchOwnership723.log",
+        "sha256": "F8DA2FB4EE83748DC5E63856A12E5495D44F6C473FD940EC9104F7EEC1A2243D",
+        "sourceSha256": "5D2B2243830995397D8A6F1080D975FF80B44B8B988F94DE31557AAE475B9C6D"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneJFiberDegree"
+      ],
+      "count": 1,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberDegreeScratchOwnership724.log",
+        "sha256": "13CBAD8D1B24A415D8A31C9B7267E8E7F0A4FD36BE452E96D9C35F376C4EF05E",
+        "sourceSha256": "54E89C0C31E6FFDEE3E3F7649613C2C69444B806C8535ECA2EFFCD8C80F206A3"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneOrbitCounting"
+      ],
+      "count": 11,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOrbitCountingScratchOwnership725.log",
+        "sha256": "770D0C2BC600252F645DF5CA51B952CF5D34EFACC6D34773E7C82B71CCE0FEB8",
+        "sourceSha256": "EFD1915E2AF5A17A5B465F16D8F2F64F9553A07A2CCF3108F28D3D45169B2A71"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOnePlusMinus"
+      ],
+      "count": 11,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlusMinusScratchOwnership726.log",
+        "sha256": "9279FE06040CD7113F5F7918DD4FBBA54EB355330DDA3812D6B36B071C9445B9",
+        "sourceSha256": "FC2729B42520E891946776FF1B94CA654516E20B8BF296012533A050DF019E68"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneRamificationBounds"
+      ],
+      "count": 2,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationBoundsScratchOwnership727.log",
+        "sha256": "B2E339DFCF867F787EAD960CA8E1029B85622D2B83E70D23F9D5E69CEBB116AD",
+        "sourceSha256": "6D8ED54CC78AE2D813723106D4E27A1ACABBAAAEA3D6F7C91BDA6F4ECF88DFA5"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneJFiberOrbits"
+      ],
+      "count": 14,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberOrbitsScratchOwnership728.log",
+        "sha256": "EDA8922CC8911F7D10E41AD1AE73C962A7A87CD3CF4D936901472E6AAB7A044C",
+        "sourceSha256": "2686037D622C2F60451EEE77819305D13349BFA042EA5B9870D61CC649859AA1"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneGenericFiberCount"
+      ],
+      "count": 4,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenericFiberCountScratchOwnership729.log",
+        "sha256": "5FD70633B3188A9F648DB7EA97F6F4F29F4DE8701B51ABCF79A83ED4F5084CDF",
+        "sourceSha256": "4B6094FA805C3DF4FCD609AB235EF60D56BCAA48C89D310C27BE5FDBA391BDCF"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticOrbitsOwnership8576.log",
+    "sha256": "2712216E52B8AF0D369BDC71BA1057BAC9B3FC31D56286F8D57851600F6BC0D8",
+    "sourceSha256": "323458AF8E9690E9DE010FA1A477FB5A1D8B1C698C17EB164A6B5F99157CA7E6"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-231627-480.log",
+    "sha256": "3F3D16BA02E17BC58BCD2BDEA5E24C4B0A1EECDCEE1186FF99202BB2EC21362E"
+  },
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 22 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourceGammaOneHolomorphicFunctions",
+        "scratchSha256": "47B217E183F5C1A5826E2BED9224D33C212B3534313F8462DD2D8E606FE34D28",
+        "productionSha256": "C366F939DFC8BF22ED767AD3D86D80F3053CD5751906B6DB61A2D1E9FBE8395F",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneQuotientCuspSeries",
+        "scratchSha256": "1CAD5294C564FCFA9AB4C4C0EB85F93D87ED680CC7291C442951DDEF38C93954",
+        "productionSha256": "ED7A8CFCF5396045663088E1D2242812157CB741E17EA7F37DFF265F87804311",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneAnalyticIntegrality",
+        "scratchSha256": "C23A959AD1DBD5A9D95D330E772120193BBA3F913DC27338FA3DE27E7B3BDC49",
+        "productionSha256": "8C72A356A93F73E2657CE54707471246E7DFCC23849876C3DBA56998F055BCD6",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneFinitePlaceExhaustion",
+        "scratchSha256": "2EF1C1C6B8C632143DD3A0E1466275E8A4AD423009828FCE0AD98F6E404655F8",
+        "productionSha256": "A6256F9FB46ABAEE817F5AE8CCA4C5065A357C2DE97E728EA222C5775EACCCDE",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneAnalyticPlaceInvariance",
+        "scratchSha256": "845B8EAFA716496B045C6DC00614EA18971DC3827EDDFB3935E0A493A4DC306B",
+        "productionSha256": "FE2C884244A4A0EB037BCCDBA0C27E106D8D5319013802C5E9B2801E03D1F1BA",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneStabilizerRamification",
+        "scratchSha256": "74A9B93F04B95697872F310DC260110682283D911BC44314251F9929650646A3",
+        "productionSha256": "FC000EBCF95446BF2ECF256CE129155F263A27E86DBC829E4DE876D5E85B93C7",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourcePeriodDivisionRotations",
+        "scratchSha256": "4F4C449CF4A03B03EC9A28ED41CE53E84DA4B1991E33B0D9846A4D9E3759A1DC",
+        "productionSha256": "4F4C449CF4A03B03EC9A28ED41CE53E84DA4B1991E33B0D9846A4D9E3759A1DC",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneDivisionForms",
+        "scratchSha256": "42F48B9B89A9CDD520F2108C3EA0BEB7B10F9C6A81752C3FE4800AA19D784CC6",
+        "productionSha256": "42F48B9B89A9CDD520F2108C3EA0BEB7B10F9C6A81752C3FE4800AA19D784CC6",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneDivisionLatticeOrbit",
+        "scratchSha256": "70F72E6AB74BC87B514498E5F23F6B5C9E1358EDFDCF7D872DC1D39A308BE4B1",
+        "productionSha256": "70F72E6AB74BC87B514498E5F23F6B5C9E1358EDFDCF7D872DC1D39A308BE4B1",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneDivisionPowerOrbit",
+        "scratchSha256": "C63422A72A5968B8676E1F01C81543A45058CD9DE1D48FF9FD305C3AF397A8AB",
+        "productionSha256": "FCB9AEED1002C64F62EE38B97C3A66FDB2548B5D5DDDB89DAB99CC641F7E5B3B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneDiamondSeparation",
+        "scratchSha256": "ED5648A7663EDC4B36DF5E4D9E908E2A3EE06C794742E30B62F37C9009F6A9B0",
+        "productionSha256": "6E436F3E4CAE6991CF3E47D1A3A86761CC414CB9CEB883CF7A0CE23B1D49AE7F",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceOriginalModularPointSeparation",
+        "scratchSha256": "01F5B9FD4ED1EC15BDD566CBC69621B0F30A0C8D79B7E529FB69B0D438C9FDC6",
+        "productionSha256": "01F5B9FD4ED1EC15BDD566CBC69621B0F30A0C8D79B7E529FB69B0D438C9FDC6",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneModularPointSeparation",
+        "scratchSha256": "3D6B716337BC99AB342258DA75FACA9B8F4985EDAABE530F70CC9CC46110FBAD",
+        "productionSha256": "69EDFA0582D4D8B82454EDA73E7720B3C5ED891A67029DACC55F8FE65047CB35",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneNormalizedCuspRatios",
+        "scratchSha256": "BA97EF5C8A396F8B5450C88F0E851DBD5B1EE4B687DCA903A41755CA92353B01",
+        "productionSha256": "2AD04EC293856EA28F013503BB4622E9E1334ED4E18932C7E6D4F231332ED6F6",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneAllModularRatioMembership",
+        "scratchSha256": "DD4BB8E035E9668AD5D8FA1582FBF405972C0C60C8EB9D62A1EA1101C173DB88",
+        "productionSha256": "95850C3B199D189FCBAF8E2365E8F8DA06642CB391F6BB179E768A802D902B73",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneAnalyticPlaceOrbits",
+        "scratchSha256": "8B6C9BCD3AB0C0336CD140D440628D66666A653475A31BE7DB00D55DE46E5A7D",
+        "productionSha256": "335DD0E645DD7D107555DA0DA010E7D7A9DFF744F0B77B2BE5AB976E3818F263",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneJFiberDegree",
+        "scratchSha256": "82ECBE8176F9FBE98A13AE44A379EE3FA76ADBAB7CF08D64A244DD9AE6ABD9E0",
+        "productionSha256": "A1FFAD8B3640C91317F528FFED07A1A531404592D729278306D30DA8C7090DC1",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneOrbitCounting",
+        "scratchSha256": "D1C431ABA6FE9E5AE3FCE6ACA6AB6BE4FA1163E5C75F27E4F4E69F62931EA5FF",
+        "productionSha256": "C7DA94819B2EFB94C73B59495707D1141C400BEF845D86E426479D2F8DAF9150",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOnePlusMinus",
+        "scratchSha256": "DC8F925EF43228A59D2AE87503C3404B63049785B6F11A5040FED82372D4460D",
+        "productionSha256": "D8A3E4CFDF527B83F90E6B6B3C85F779F677FAF5D6C931870AC7BE1E7A6D4567",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRamificationBounds",
+        "scratchSha256": "593C657495E8A2FB347B371F2BFB32C01383C54584221CE5D4022FC3E8333D6B",
+        "productionSha256": "AC532614D2488EB408F9E2A9CF3FACF7C12B1F2D283161620C8C70541BDE89FC",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneJFiberOrbits",
+        "scratchSha256": "D0251076EDA7909BC3323635B276218B54A0EDC1D58AC03DDCC45926A37626CB",
+        "productionSha256": "14126BB02AB91C1AB45E37A4E8095A4D6294E5DE21E88A79FF5E7F8C106C6057",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneGenericFiberCount",
+        "scratchSha256": "D6B7D892DC0D0F547AAEED407BDBA5A024486B3FEE4C6F784ED58B5CF3D7B2BC",
+        "productionSha256": "35AD3141E085E6B0DFD3753E7C5762F32F6C72E4A44CBE603345A52974E94BC5",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": true
+}

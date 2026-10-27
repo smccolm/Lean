@@ -1,0 +1,56 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T10:20:03.215746+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneCuspResidues"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResidues.lean",
+      "sha256": "8758D75A8136557A54075839F03773133574AF5076DCB28CCFB4C16123D6846F",
+      "oleanSha256": "8D2D7AEFE43E157F20223E70C7AFFB77124B6A58CB4487001D1737CB1BF1220D"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_mem_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_sub_constant_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order_eq_zero_of_tendsto",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_residue",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_cusp_analytic_representative"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_mem_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_sub_constant_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order_eq_zero_of_tendsto",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_residue",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_cusp_analytic_representative"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResiduesAudit1.log",
+  "logSha256": "194F6FC748F8DB7C764DBD935959A5ACF565D70F216AEDFBB846A84DCE21DAC7",
+  "auditSha256": "5821BBAABC96266EF2ACC377DEB4AB586CBA9650FC9A02B2ABA3C8F2540BE49D",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 6,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 10,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResiduesDependencyAudit1.log",
+  "dependencyAuditSha256": "5935B07C99DF51EA9D3B6B393A173A185329E60E87B9A99D6C58EB2E00F214BB",
+  "dependencyAuditSourceSha256": "8A8E1369254E0D5161CF936C68E8AC31AF4571D156E43E1E279CB8EB68EAC26E",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_mem_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_sub_constant_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order_eq_zero_of_tendsto",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_residue",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_cusp_analytic_representative"
+  ],
+  "dependency": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1 and period comparison -> principal-divisor cusp-order control.",
+  "discharged": "Actual regular translated cusp germs have limits equal to their rational residues, with analytic representatives at the center. A nonzero limit of an actual field element forces normalized order zero at the corresponding cusp place.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. This does not exhaust every j-pole place by a cusp and does not construct a normalized cusp atlas. Global Picard/period, Hecke/diamond/H1 comparison, characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-residues-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "433CB3A3B4060E99C3620EFA5A92ED0B80A4713342858696993FCA68CA0FBF12",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

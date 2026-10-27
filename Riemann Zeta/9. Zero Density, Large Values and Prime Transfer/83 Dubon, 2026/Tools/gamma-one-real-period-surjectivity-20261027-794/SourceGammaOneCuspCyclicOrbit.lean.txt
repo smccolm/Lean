@@ -1,0 +1,30 @@
+import SourceGammaOneRationalCuspOrbit
+import SourceGammaOneCuspTranslationRamification
+import Mathlib.GroupTheory.SpecificGroups.Cyclic
+
+/-! DUB-17/18 -> actual Gamma1 real period surjectivity -> exact cusp
+widths -> finite coset counting. Native orbit-stabilizer and the power-index
+theorem show that the cardinality of a finite cyclic orbit is a positive
+return time. This is the precise upper bound consumed by the proved
+algebraic cusp pole inequality; no minimal-period infrastructure is needed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CuspCounting
+noncomputable section
+open MulAction
+variable {X : Type*}
+
+theorem pow_card_cyclic_orbit (σ : Equiv.Perm X) (x : X) :
+    (σ ^ Nat.card (orbit (Subgroup.zpowers σ) x)) x = x := by
+  let H := stabilizer (Subgroup.zpowers σ) x
+  have hc : Nat.card (orbit (Subgroup.zpowers σ) x) = H.index :=
+    Nat.card_congr (orbitEquivQuotientStabilizer (Subgroup.zpowers σ) x)
+  have hh := H.pow_index_mem (⟨σ, Subgroup.mem_zpowers σ⟩ : Subgroup.zpowers σ)
+  rw [← hc] at hh
+  exact hh
+
+theorem card_cyclic_orbit_pos [Finite X] (σ : Equiv.Perm X) (x : X) :
+    0 < Nat.card (orbit (Subgroup.zpowers σ) x) := by
+  letI : Nonempty (orbit (Subgroup.zpowers σ) x) := ⟨⟨x, mem_orbit_self x⟩⟩
+  exact Nat.card_pos
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CuspCounting

@@ -1,0 +1,54 @@
+{
+  "status": "Prepared; require 8493 canonical PASS and archive before integration.",
+  "route": "gamma-one-integral-differential-promotion-route-699.json",
+  "routeSha256": "C22EB80F07E618CA4D9246B6BF349B1F8F4CE948591192427C33E723375B0E9C",
+  "modules": 29,
+  "queries": 68,
+  "theorems": 63,
+  "constructions": 5,
+  "exhaustiveScratchChecks": 91,
+  "proofValueEdges": 87,
+  "scopes": 2,
+  "receipts": {
+    "source-gamma-one-integral-cusp-span-23-scratch-receipt.json": "C18E5C8AF9E00AA65BFE91DC91F31025F8B1227985D4FBBB70CCD63B6C7A1E80",
+    "source-gamma-one-cusp-differential-realization-6-scratch-receipt.json": "8801725A8FAEC671A45FD3F1B9573CCE05C55EDF3780B8C1BB46BA55F1946C5D"
+  },
+  "expectedConsumers": 24650,
+  "expectedConstructions": 2445,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_integral_differential_8522.py",
+      "sha256": "C11BCBC14889257578076D0238AB393905D937304EB16A9078A149E0ECFDE8D9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_integral_differential_production_ownership_8522.py",
+      "sha256": "C2F7B82F5A38CC0628970DAE285EDF82C8B99A80B370DD92A4DE2FF0DC9467C4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_integral_differential_global_ownership_8522.py",
+      "sha256": "4886DE71CAC3987AE48C4F2577ECA3D4CA98A5B084E5F67435CEFC45544AFD93"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_integral_differential_ownership_8522.py",
+      "sha256": "ED8662DF5B034B68656EC1D4452BAA9F823B2719C2E53C52E65183C4388817AD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_integral_differential_8522.py",
+      "sha256": "B8CE05E39A20A2B2DB3DC7489D4C89AB2B53984E282C1FB4A71BFAE18D2B3E59"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_integral_differential_8522.ps1",
+      "sha256": "D62B036D85FDD1CBA37527A51E2836301131964D999CCD2F617246E6AB088738"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_integral_differential_8522.ps1",
+      "sha256": "73F185FFFF75DD55311F9779F337D140F5339656223B4C7812F201CE7141E429"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_integral_differential_canonical_8522.py",
+      "sha256": "0F5EF277B81D112E2E54AF2FE651202EEDDD36986B46942BD8DF86324952FC1C"
+    }
+  ],
+  "productionMutation": false
+}

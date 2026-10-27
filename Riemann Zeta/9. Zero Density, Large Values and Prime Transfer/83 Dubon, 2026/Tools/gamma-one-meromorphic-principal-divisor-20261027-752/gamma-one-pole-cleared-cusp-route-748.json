@@ -1,0 +1,6 @@
+{
+  "chain": "DUB-17/18 -> original all-weight arithmetic association -> actual finite homogeneous-coefficient Gamma1 characters -> Picard/H1/full-parabolic/transpose/diamond comparison -> modular periods -> original meromorphic field realization.",
+  "reuse": "Scope746 local-equality boundedness, existing holomorphic modular-orbit action, native periodic cusp Laurent representation. This connects the actual scope747 product to the scope744 original-field theorem.",
+  "assumptionsToDischarge": "Cusp pole bounds and meromorphic cusp germs for the actual normalized product, derived from boundedness of the original meromorphic function and the actual multiplier bounds.",
+  "remaining": "Divide the field element of the holomorphic product by its actual nonzero multiplier and transfer the cusp limits; global periods, comparison and original all-weight arithmetic association remain; 16/20; DUB-17--20 OPEN."
+}

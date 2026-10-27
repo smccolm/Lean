@@ -1,0 +1,4 @@
+{
+  "status": "FAILED AUDIT",
+  "reason": "The exhaustive linter found an unused NeZero parameter on the actual representative-to-place definition. Remove just that redundant parameter; the nonzero-level hypotheses remain on the theorems that need them."
+}

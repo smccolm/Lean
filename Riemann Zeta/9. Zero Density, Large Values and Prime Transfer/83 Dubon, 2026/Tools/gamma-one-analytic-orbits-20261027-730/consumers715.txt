@@ -1,0 +1,46 @@
+
+open scoped MatrixGroups in
+theorem real_projective_haar_domain_source (Q : ℕ) [NeZero Q] :
+    (Measure.map (QuotientGroup.mk : SL(2, ℝ) → PSL(2, ℝ)) realGroupMeasure).IsHaarMeasure ∧
+    IsFundamentalDomain (projectiveGamma0 Q)
+      {q : PSL(2, ℝ) | realProjectiveOrbit q ∈ gamma0FundamentalDomain Q}
+      (Measure.map (QuotientGroup.mk : SL(2, ℝ) → PSL(2, ℝ)) realGroupMeasure) ∧
+    realProjectiveMeasure {q | realProjectiveOrbit q ∈ gamma0FundamentalDomain Q} =
+      volume (gamma0FundamentalDomain Q) :=
+  ⟨realProjectiveMeasure_isHaarMeasure, realProjectiveGamma0Domain_isFundamental Q,
+    realProjectiveGamma0Domain_volume Q⟩
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem real_projective_cyclic_L2_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k)
+    (v : (realLiftCyclicRepresentation k f).toSubmodule) :
+    (∀ g : SL(2, ℝ), realProjectiveCyclicVector f v (QuotientGroup.mk g) = v.val g) ∧
+    MemLp (realProjectiveCyclicVector f v) 2
+      (realProjectiveMeasure.restrict {q | realProjectiveOrbit q ∈ gamma0FundamentalDomain Q}) ∧
+    Function.Injective (realProjectiveCyclicToL2 f) :=
+  ⟨realProjectiveCyclicVector_mk f v, realProjectiveCyclicVector_memLp_two f v,
+    realProjectiveCyclicToL2_injective f⟩
+
+open scoped MatrixGroups CongruenceSubgroup ModularForm in
+theorem real_projective_petersson_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f f' : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k) :
+    (∀ g : SL(2, ℝ), realProjectiveCuspLift f (QuotientGroup.mk g) =
+      (⇑f ∣[k] (Matrix.SpecialLinearGroup.mapGL ℝ g)) UpperHalfPlane.I) ∧
+    cuspPetersson f f' = ∫ q : PSL(2, ℝ) in
+      {q | realProjectiveOrbit q ∈ gamma0FundamentalDomain Q},
+      starRingEnd ℂ (realProjectiveCuspLift f q) * realProjectiveCuspLift f' q
+        ∂realProjectiveMeasure :=
+  ⟨fun _ => rfl, cuspPetersson_eq_projectiveGroup_integral f f'⟩
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem real_projective_unitary_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k)
+    (a : PSL(2, ℝ)) (v w : (realLiftCyclicRepresentation k f).toSubmodule) :
+    (∀ q : PSL(2, ℝ), realProjectiveCyclicVector f
+      (realProjectiveCyclicRepresentation f a v) q = realProjectiveCyclicVector f v (q * a)) ∧
+    inner ℂ (realProjectiveCyclicToL2 f (realProjectiveCyclicRepresentation f a v))
+      (realProjectiveCyclicToL2 f (realProjectiveCyclicRepresentation f a w)) =
+        inner ℂ (realProjectiveCyclicToL2 f v) (realProjectiveCyclicToL2 f w) :=
+  ⟨fun q => realProjectiveCyclicRepresentation_apply f a q v,
+    realProjectiveCyclicRepresentation_inner f a v w⟩
+

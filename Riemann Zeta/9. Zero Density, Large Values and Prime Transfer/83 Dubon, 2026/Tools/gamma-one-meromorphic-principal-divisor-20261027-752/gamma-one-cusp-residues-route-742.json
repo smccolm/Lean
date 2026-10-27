@@ -1,0 +1,16 @@
+{
+  "scope": 742,
+  "dependency": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1 and period comparison -> principal-divisor cusp-order control.",
+  "intendedDischarge": "Actual regular translated cusp germs have limits equal to their rational residues, with analytic representatives at the center. A nonzero limit of an actual field element forces normalized order zero at the corresponding cusp place.",
+  "reuseChecked": [
+    "SourceGammaOneAnalyticResidues.realize_tendsto_residue and regular_analytic_representative: same rational residue argument applies to the already proved cusp germs.",
+    "SourceGammaOneCuspPlaces.cuspPlace_order and cuspRamification_pos: normalized orders already derived.",
+    "Mathlib.Analysis.Meromorphic.Order.tendsto_ne_zero_iff_meromorphicOrderAt_eq_zero: use the existing exact limit criterion.",
+    "SourceMeromorphicCuspPoleClearing and SourceFrickeHolomorphicDivisionSpan: existing pole clearing and principal-level function spanning remain candidates for a later meromorphic realization step; no duplicate framework added."
+  ],
+  "shorterRoute": "Derive the actual cusp-place limit/order comparison directly from native meromorphic-order and existing residue APIs. No new Laurent coefficient framework or smooth scheme is needed for this obligation.",
+  "remaining": "This does not exhaust every j-pole place by a cusp and does not construct a normalized cusp atlas. Global Picard/period, Hecke/diamond/H1 comparison, characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "externalImport": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

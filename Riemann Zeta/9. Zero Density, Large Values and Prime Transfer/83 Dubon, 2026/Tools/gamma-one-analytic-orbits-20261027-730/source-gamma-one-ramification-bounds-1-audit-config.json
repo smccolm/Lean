@@ -1,0 +1,47 @@
+{
+  "modules": [
+    "SourceGammaOneRamificationBounds"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_j_multiplicity",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_j_order_le_relative_index"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_j_multiplicity",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_j_order_le_relative_index"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_j_multiplicity",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_j_order_le_relative_index",
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinus_stabilizer_card_dvd_two_mul_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.OrbitCounting.relIndex_stabilizer_mul_card_stabilizer",
+    "Dubon2026.SourceFunctionField.StabilizerCharacter.two_dvd_card_stabilizer",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_order",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_j_sub"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_j_multiplicity",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_j_order_le_relative_index"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneAnalyticGerms",
+    "SourceGammaOneAnalyticJOrders",
+    "SourceGammaOneAnalyticOrder",
+    "SourceGammaOneAnalyticOrderNontrivial",
+    "SourceGammaOneAnalyticPlaceInvariance",
+    "SourceGammaOneAnalyticPlaces",
+    "SourceGammaOneAnalyticResidues",
+    "SourceGammaOneJRealization",
+    "SourceGammaOneMeromorphicRealization",
+    "SourceGammaOneOrbitCounting",
+    "SourceGammaOnePlusMinus",
+    "SourceGammaOneRamificationBounds",
+    "SourceGammaOneRamificationIsolation",
+    "SourceGammaOneRatioRealization",
+    "SourceGammaOneRealizationAlgebra",
+    "SourceGammaOneStabilizerRamification"
+  ],
+  "separateReason": "actual finite j-fiber orders bounded by subgroup relative stabilizer indices, with equality implying the exact ramification formula."
+}

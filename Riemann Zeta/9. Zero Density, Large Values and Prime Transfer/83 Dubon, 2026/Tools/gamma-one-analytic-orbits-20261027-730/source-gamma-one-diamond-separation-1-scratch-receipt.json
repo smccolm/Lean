@@ -1,0 +1,50 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T06:29:27.923634+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneDiamondSeparation"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSeparation.lean",
+      "sha256": "ED5648A7663EDC4B36DF5E4D9E908E2A3EE06C794742E30B62F37C9009F6A9B0",
+      "oleanSha256": "D5CA4D6EDB811EAB396964CEADC856D2A0A06175EBF475F38428F1FD6AB21C2D"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_cross_products",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_separating_forms_of_gamma0_orbit"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_cross_products",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_separating_forms_of_gamma0_orbit"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSeparationAudit1.log",
+  "logSha256": "F979A9D814469218C84B3CA7734166EBF24C87B7F2DBF9C02675F657237C7CD7",
+  "auditSha256": "217F4D1A56F05C04756AA221A2C83F0199300521AAE99A09B5E1A6CD15BF8CD0",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 3,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 10,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSeparationDependencyAudit1.log",
+  "dependencyAuditSha256": "84476224DCA17C56D9C887C686C4FC2B51EB792F48061686A26BE8C41557B4DC",
+  "dependencyAuditSourceSha256": "AC743B2CA3C06BF3CB6E25EAC06A4E8C03456FDADD021C554B3DCA15B292C4EB",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_separating_forms_of_gamma0_orbit"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> orbit separation and exact elliptic ramification -> native modular forms separate Gamma1 orbits inside a Gamma0 orbit.",
+  "discharged": [
+    "Produce actual same-weight native Gamma1 forms with unequal cross determinants when points are Gamma0-related but not Gamma1-related.",
+    "Derive division-value power equalities from cross products, actual slash laws and nonvanishing E4/E6 anchors.",
+    "Include elliptic points and level one; do not assume generic E4 E6 nonvanishing."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Combine with existing Gamma0 orbit separation for all point pairs, then derive exact elliptic ramification and global charts. Full period/Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-diamond-separation-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "77768D1DB6C20655262194BBD0670ACC2D6E4A9706D52448EBF36F98A4D363FF",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

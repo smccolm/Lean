@@ -1,0 +1,4 @@
+{
+  "reason": "Typeclass synthesis timed out while inferring the actual field in principal-divisor extraction. Specify the actual field and curve instance explicitly; no limit change.",
+  "sourceSha256": "04A79AE9197902FBC67AABF1228C57E5A6BF30C9EA1A84D2B82C7D364D829112"
+}

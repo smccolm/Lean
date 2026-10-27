@@ -1,0 +1,4 @@
+{
+  "reason": "Include the genuine subgroup/translation hypotheses in the cusp-germ statements and annotate the upper-half-plane argument of denom to prevent coercion-driven complex scalar-action inference.",
+  "proofLimitsChanged": false
+}

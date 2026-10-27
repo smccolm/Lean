@@ -1,0 +1,74 @@
+import Dubon2026.SourceGammaOneRegularCuspGerm
+import Dubon2026.SourceGammaOneAnalyticResidues
+import Dubon2026.SourceGammaOneAnalyticEvaluation
+import Dubon2026.SourceGammaOneEvaluationRealizationGerms
+import Dubon2026.SourceGammaOneRamificationIsolation
+import Dubon2026.SourceGammaOneUnramifiedCharts
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_eq_normalized
+#print axioms Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_germ_of_coordinate
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_regularCuspEquiv_germ
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticPlace_mem_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realize_sub_constant_eventuallyEq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.place_residue_bijective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realize_tendsto_residue
+#print axioms Dubon2026.SourceFunctionField.GammaOne.regular_analytic_representative
+#print axioms Dubon2026.SourceFunctionField.GammaOne.meromorphicNFAt_placeEval
+#print axioms Dubon2026.SourceFunctionField.GammaOne.placeEval_analyticAt_iff
+#print axioms Dubon2026.SourceFunctionField.GammaOne.placeEval_meromorphicOrderAt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.placeEval_eq_realize_of_analyticAt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.placeEval_eventuallyEq_realize
+#print axioms Dubon2026.SourceFunctionField.GammaOne.placeEval
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticRamification_dvd_full_stabilizer_half
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eq_one_of_generic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eventually_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_unramified_analytic_chart
+#print axioms Dubon2026.SourceFunctionField.GammaOne.exists_generic_analytic_chart
+
+private def runSourceResidueFunctionalAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`Dubon2026.SourceGammaOneRegularCuspGerm, `Dubon2026.SourceGammaOneAnalyticResidues, `Dubon2026.SourceGammaOneAnalyticEvaluation, `Dubon2026.SourceGammaOneEvaluationRealizationGerms, `Dubon2026.SourceGammaOneRamificationIsolation, `Dubon2026.SourceGammaOneUnramifiedCharts]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_eq_normalized, `Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_germ_of_coordinate, `Dubon2026.SourceFunctionField.GammaOne.exists_regularCuspEquiv_germ, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_mem_iff, `Dubon2026.SourceFunctionField.GammaOne.realize_sub_constant_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.place_residue_bijective, `Dubon2026.SourceFunctionField.GammaOne.realize_tendsto_residue, `Dubon2026.SourceFunctionField.GammaOne.regular_analytic_representative, `Dubon2026.SourceFunctionField.GammaOne.meromorphicNFAt_placeEval, `Dubon2026.SourceFunctionField.GammaOne.placeEval_analyticAt_iff, `Dubon2026.SourceFunctionField.GammaOne.placeEval_meromorphicOrderAt, `Dubon2026.SourceFunctionField.GammaOne.placeEval_eq_realize_of_analyticAt, `Dubon2026.SourceFunctionField.GammaOne.placeEval_eventuallyEq_realize, `Dubon2026.SourceFunctionField.GammaOne.analyticRamification_dvd_full_stabilizer_half, `Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eq_one_of_generic, `Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eventually_one, `Dubon2026.SourceFunctionField.GammaOne.exists_unramified_analytic_chart, `Dubon2026.SourceFunctionField.GammaOne.exists_generic_analytic_chart]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.placeEval]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Original residue functional postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Original residue functional theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE PERIOD CHARTS AUDIT PASS: {count} theorems including private/generated declarations. The exact actual Gamma1 differential integrand, residue comparison and unramified charts are proved. Elliptic and global chart/period obligations remain. Original Hecke/diamond/Picard/H1 arithmetic comparison remains; 16/20 gates."
+
+#eval runSourceResidueFunctionalAudit
+
+#lint in Dubon2026.SourceGammaOneRegularCuspGerm
+
+#lint in Dubon2026.SourceGammaOneAnalyticResidues
+
+#lint in Dubon2026.SourceGammaOneAnalyticEvaluation
+
+#lint in Dubon2026.SourceGammaOneEvaluationRealizationGerms
+
+#lint in Dubon2026.SourceGammaOneRamificationIsolation
+
+#lint in Dubon2026.SourceGammaOneUnramifiedCharts

@@ -1,0 +1,1131 @@
+{
+  "date": "26 October 2026",
+  "modules": [
+    "Dubon2026.SourceGammaOneRatioRealization",
+    "Dubon2026.SourceGammaOneAnalyticGerms",
+    "Dubon2026.SourceGammaOneMeromorphicRealization",
+    "Dubon2026.SourceGammaOneRealizationAlgebra",
+    "Dubon2026.SourceGammaOneAnalyticOrder",
+    "Dubon2026.SourceGammaOneAnalyticOrderNontrivial",
+    "Dubon2026.SourceGammaOneAnalyticPlaces",
+    "Dubon2026.SourceGammaOneJRealization",
+    "Dubon2026.SourceGammaOneRegularCoefficientOrders",
+    "Dubon2026.SourceGammaOneAnalyticJOrders",
+    "Dubon2026.SourceGammaOneAnalyticDifferentialRegularity",
+    "Dubon2026.SourceGammaOneHolomorphicDifferentials",
+    "Dubon2026.SourceGammaOneTranslatedCuspGerms",
+    "Dubon2026.SourceGammaOneCuspRatioRealization",
+    "Dubon2026.SourceGammaOneCuspRealizationAlgebra",
+    "Dubon2026.SourceGammaOneCuspOrder",
+    "Dubon2026.SourceGammaOneCuspJOrder",
+    "Dubon2026.SourceGammaOneCuspPlaces",
+    "Dubon2026.SourceGammaOneCuspDerivativeOrder",
+    "Dubon2026.SourceGammaOneDifferentialCuspGerm",
+    "Dubon2026.SourceGammaOneRegularCuspOrder",
+    "Dubon2026.SourceGammaOneRegularCuspForms",
+    "Dubon2026.SourceGammaOneCuspFourierNormalization",
+    "Dubon2026.SourceGammaOneRegularFourierRealization",
+    "Dubon2026.SourceGammaOneRegularCuspQExpansion",
+    "Dubon2026.SourceGammaOneRegularCuspEquiv"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 Hecke characters -> actual Picard/H1, full/parabolic, transpose and diamond comparison retaining the original homogeneous coefficient endomorphism -> actual regular-differential/cusp equivalence with literal Fourier normalization.",
+  "discharged": "The actual original complex Gamma1 regular differential space is now linearly equivalent to native weight-two cusp forms, with exact equality of their literal Fourier expansions. Actual modular quotient germs define normalized finite and cusp places. Original regularity and exact j-derivative orders give finite holomorphy and positive order at every cusp, deriving all analytic and decay hypotheses. The existing modular q-Euler identity removes the precise 2*pi*i factor. The proved differential spanning theorem covers every regular differential. Both Fourier realization directions and injectivity identify the actual linear ranges; no dimension formula, matching-series witness or cusp-form-existence assumption is supplied.",
+  "boundary": "The actual Picard/H1, full/parabolic, transpose and diamond comparison must still identify original finite homogeneous-coefficient Hecke characters with geometric characters. Exact analytic period normalization and compatibility with the original Hecke/diamond operators remain. Coefficient-field transport is still required wherever used by the arithmetic comparison. Frobenius/inertia, arithmetic realization of those characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. The full all-weight arithmetic goal is unchanged. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN.",
+  "status": "Sequential foundation/paper verification passes with zero diagnostics for the 8,548-module scope: all thirteen retained regressions, 53,940 exhaustive theorem checks, 24,719 registered consumers and sixteen linters. The reproduction manifest records the receipt; acceptance remains 16/20 and DUB-17-20 remain open.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "frozenReceiptProseCorrections": [],
+  "sourceConsumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.regular_differential_holomorphic_realization",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_form_realization",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_cuspForm_of_regular_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_qExpansion"
+  ],
+  "scratchCertificates": [
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T02:17:59.778711+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceGammaOneRatioRealization",
+        "SourceGammaOneAnalyticGerms",
+        "SourceGammaOneMeromorphicRealization",
+        "SourceGammaOneRealizationAlgebra",
+        "SourceGammaOneAnalyticOrder",
+        "SourceGammaOneAnalyticOrderNontrivial",
+        "SourceGammaOneAnalyticPlaces",
+        "SourceGammaOneJRealization",
+        "SourceGammaOneRegularCoefficientOrders",
+        "SourceGammaOneAnalyticJOrders",
+        "SourceGammaOneAnalyticDifferentialRegularity",
+        "SourceGammaOneHolomorphicDifferentials"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRatioRealization.lean",
+          "sha256": "1124F4A25E5E42D92133232C19ACA5EB610537FE1C9789D70CB6488537D9A32D",
+          "oleanSha256": "9C1AA5AD62B6078FB2069032C6F2A061EF6D9EAD89E5557BADEF171DF1CD218A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticGerms.lean",
+          "sha256": "12469B97F67441640D64B2C5901F51B508CB06D66F4C7BBF50BDD822824DBC8D",
+          "oleanSha256": "A75980EE29D0916B9B6A0152AF3E626351CF33AF043738114A810C9230C47283"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicRealization.lean",
+          "sha256": "29AC164DBD2CF3EAF56331836E79E90B8C62A907AE85AADC3ED32A42183B5E08",
+          "oleanSha256": "213797FC0A42923BABF7002679FFB3DC5A28291392C62B03780E81E487468E9F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealizationAlgebra.lean",
+          "sha256": "1ADB334C909BF4565370856777EF8030E35E26B28090F1D706CA3FCB5A3859DE",
+          "oleanSha256": "724C36D3CC5D390E182F2DD7BAD28739E2BF2B8C2F5C97F354FD56DFD92A0EB7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticOrder.lean",
+          "sha256": "0325483B4F3FB5590FD5946CFF8643656A3FEE44171B6EAD67F4138CFFB00F9C",
+          "oleanSha256": "BE8CF2FC6F565BB79AB42B0518C397BFE91318BEBE531DB954B7D853442C9FC0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticOrderNontrivial.lean",
+          "sha256": "53818F9D41E11EA7652BDEEAC9724E4E44016803F75FC36128B1A6BBF210D0F8",
+          "oleanSha256": "6E9D2286B6F2D84CF36BCEC29E826F130501843E6D1C3DA92162DF0E1B93C672"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaces.lean",
+          "sha256": "2A684120F5449B169C539E1BD568C00CDF40572BBCC54E183DCE8F169378AA84",
+          "oleanSha256": "95E0BCAFDBA37077A2E52FFD0E915A7BFEC794B9EF3174ACE3ACE70311A179AA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJRealization.lean",
+          "sha256": "792BF0BC9A862AC39297D0D42EE3734A854D1419F617F84B42CF103511954209",
+          "oleanSha256": "13583778351357B1DDFD2D391928B87E460430F0A638ACEA56CCE550BF26114D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularCoefficientOrders.lean",
+          "sha256": "87F6E926C281A5C7056EA72FCC74A1B53BC1C500FC786E2FC3B896C0DDFDA973",
+          "oleanSha256": "CE030A1A32F698ADA6E1CDA0F0336F61DB12FD302570F7C1FD60F3A95C2301A7"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticJOrders.lean",
+          "sha256": "F823AB56C1F8CF239B8EC8121C7524D81EAEECB0663469666495FB57CE728330",
+          "oleanSha256": "1ABB72A4905A050039C82860E95BDADD20361D084001D05BDED8317BB0FDB25A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticDifferentialRegularity.lean",
+          "sha256": "DC55B2BDC351C25901EB9D1C14A6F76F489CFFE7DE5CC87FB1DAA7565DD1F1F2",
+          "oleanSha256": "098D0657BB78B9BB0FE6E768369E3602F911FFB74689E2170A3DA86C5F0CDE96"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicDifferentials.lean",
+          "sha256": "FE3D1B67F3993113A3C7437A990C63B2CC6C447C7A387227167B9F7EE0A3A518",
+          "oleanSha256": "55D6627C24E0B857A3EA37E9BD040CB1AFE0DD193988568BAB8994BEE291E0ED"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.realize_eq_div",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.analyticAt_comp_ofComplex",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.coe_eq_zero_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.eventually_ne_zero",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.eventually_ne_zero_ofComplex",
+        "Dubon2026.SourceFunctionField.GammaOne.realize_eventuallyEq_of_ratio",
+        "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_realize",
+        "Dubon2026.SourceFunctionField.GammaOne.meromorphicOrderAt_realize_ne_top",
+        "Dubon2026.SourceFunctionField.GammaOne.realize_algebraMap",
+        "Dubon2026.SourceFunctionField.GammaOne.realize_mul_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.realize_add_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_ne_top",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_zero",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_eq_top_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_algebraMap",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_one",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_mul",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_add",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_analyticOrder_pos",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_pos",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_order",
+        "Dubon2026.SourceFunctionField.GammaOne.realize_jCoordinateOver",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_coefficient_order_bound",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_j_sub",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_j_sub_pos",
+        "Dubon2026.SourceFunctionField.GammaOne.analytic_derivative_order",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_analytic_differential_order",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_analytic_differential_bounded",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_differential",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_differential_holomorphic_realization",
+        "Dubon2026.SourceFunctionField.GammaOne.realize",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPlace",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticRamification"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.realize_eq_div",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.analyticAt_comp_ofComplex",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.coe_eq_zero_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.eventually_ne_zero",
+        "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.eventually_ne_zero_ofComplex",
+        "Dubon2026.SourceFunctionField.GammaOne.realize_eventuallyEq_of_ratio",
+        "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_realize",
+        "Dubon2026.SourceFunctionField.GammaOne.meromorphicOrderAt_realize_ne_top",
+        "Dubon2026.SourceFunctionField.GammaOne.realize_algebraMap",
+        "Dubon2026.SourceFunctionField.GammaOne.realize_mul_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.realize_add_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_ne_top",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_zero",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_eq_top_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_algebraMap",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_one",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_mul",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_add",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_analyticOrder_pos",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_pos",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_order",
+        "Dubon2026.SourceFunctionField.GammaOne.realize_jCoordinateOver",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_coefficient_order_bound",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_j_sub",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_j_sub_pos",
+        "Dubon2026.SourceFunctionField.GammaOne.analytic_derivative_order",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_analytic_differential_order",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_analytic_differential_bounded",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_differential",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_differential_holomorphic_realization"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.realize",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticOrder",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticPlace",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticRamification"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalHolomorphyAudit12.log",
+      "logSha256": "7FE7409AEF6ADD8FEA456EF522EFE535DCED0DD9357133462FB841B5AE8A9B29",
+      "auditSha256": "26C2D8752EE9F39E952A505ABB0763886786F97C6EF6F688E25FB4910BD842BE",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 46,
+      "linterScopes": 12,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 46,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalHolomorphyDependencyAudit12.log",
+      "dependencyAuditSha256": "31989F5079B91BF6A69A0EF4495697D3028C56D6CF20E6EEC220843794B7E074",
+      "dependencyAuditSourceSha256": "3F6AE29508878C5FA45E64221CBAAC859A8209688AD9E0869F04D009339CD347",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.regular_differential_holomorphic_realization"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> actual finite Gamma1 character arithmetic realization -> Picard/H1 and full/parabolic/transpose/diamond comparison -> actual regular-differential/cusp comparison -> converse regular differential to cusp form.",
+      "discharged": "Every nonzero coefficient x of an actual regular differential x D(j) on the original complex Gamma1 integral-ratio field has a native holomorphic weight-two realization with the exact modular quotient identity and Gamma covariance. No analytic realization, local place, normalization factor, finite-point regularity, local ramification bound or removable-singularity certificate remains assumed. Translation membership and finite index are source group conditions, automatic for Gamma1 at nonzero level.",
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. All-cusp vanishing and exact differential Fourier matching remain before the complete regular-differential-to-cusp converse. Coefficient-field transport, actual Picard/H1, full/parabolic, transpose and diamond comparison, original finite character arithmetic realization, original all-weight association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. The full goal and all twenty acceptance gates are unchanged; 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-local-holomorphy-12-reuse-review-20261026.json",
+      "reuseReviewSha256": "9C216F571C69D9AAA9A662056539E3D9F968649EC70FF5639134172401207653",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T03:24:43.898021+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceGammaOneTranslatedCuspGerms",
+        "SourceGammaOneCuspRatioRealization",
+        "SourceGammaOneCuspRealizationAlgebra",
+        "SourceGammaOneCuspOrder",
+        "SourceGammaOneCuspJOrder",
+        "SourceGammaOneCuspPlaces",
+        "SourceGammaOneCuspDerivativeOrder",
+        "SourceGammaOneDifferentialCuspGerm",
+        "SourceGammaOneRegularCuspOrder",
+        "SourceGammaOneRegularCuspForms"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneTranslatedCuspGerms.lean",
+          "sha256": "FFA8618260E6FE71D032CC18D3AAD6BA19D8D4FD16F2293471D4AA690D2D05E6",
+          "oleanSha256": "44D91D69BB6A33939D00DAF6065D6789AF8814959B928E6F64F26A8634A354A0"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspRatioRealization.lean",
+          "sha256": "4A19147FBEE7B1454604E807B5FCD2D9C266DA3669D626E2A08A9F5C6AB5AF7E",
+          "oleanSha256": "80F11C84D88AE8BA2B784721ADDD4D9C2CC899858C99581BA9E80A44F0C003BA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspRealizationAlgebra.lean",
+          "sha256": "3CA79D3489DA3C0575B87157F82A0159C8B83D42409F6D1D2BC9F268A2227540",
+          "oleanSha256": "5D6E801AA1ED0675C0931D7C5311EBBA1BE6230598FDAA2175BF15D60D9AF83C"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspOrder.lean",
+          "sha256": "2045E0F02F8C705DB5EE0A3145EB015EE4DF9047221E3B8AD9C32BC908D880B3",
+          "oleanSha256": "605CF819E6711A71DDB7F110ABE2F21A0A6EE5366D49F4BBA9F735252C33D9DC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspJOrder.lean",
+          "sha256": "3C7CE228AFE887057076EB71F118212E94ED2C9D0293B060703205654ACBF4C0",
+          "oleanSha256": "DBFF2564233BBB7E4B8E75475D59B0C15BEF5CDD86A90EBFD8BE5E5BB73F9F8F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPlaces.lean",
+          "sha256": "923C3B29D1BD08C1E6AC57ADA16E48AA7446832907483E3C78296A99BDF625B9",
+          "oleanSha256": "7EF9E31988EA368CFF680F967E619D93282635C549D587A620D505C8C9037D97"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspDerivativeOrder.lean",
+          "sha256": "D875623F10EB4835C3B4588749FEC36997450588B9DECA20634FF0F97972B932",
+          "oleanSha256": "098BED6D08007A5FBA0BC25E8F22F5B3889B6E37F626A4742E67721B4DCF9170"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDifferentialCuspGerm.lean",
+          "sha256": "314508D3CA2BFE6BB9C882BEE002EA9A7AEED4FEDE73C604BE9EBF554F20D834",
+          "oleanSha256": "0D77511E1570A0ACF0DDFE86E5E3E4C0A1E91224A17ACEE24AE35A6769570984"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularCuspOrder.lean",
+          "sha256": "A571C9894ADE87BABBD26AAADBB3604DEC78EB6450FF978F6238C7F8ADB4F708",
+          "oleanSha256": "2AA3307CFBE82D2F09C62FB82746E606040A5F935C62DFCB4C76E3399318DF2E"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularCuspForms.lean",
+          "sha256": "5DFEF81C63DEB210A5CEFD47C0BD3A1AE963D7E1F65D099CAF4BF8ED8DC7C7AC",
+          "oleanSha256": "F2954D131672F80AE77A64BD2B69832D72E062CBCDC6BBA790E0DB4E22C32A2B"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.translated_modular_ne_zero",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticAt_translated_cuspFunction",
+        "Dubon2026.SourceFunctionField.GammaOne.eventually_ne_zero_translated_cuspFunction",
+        "Dubon2026.SourceFunctionField.GammaOne.realize_smul_eq_translated_ratio",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_eventuallyEq_of_ratio",
+        "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_cuspRealize",
+        "Dubon2026.SourceFunctionField.GammaOne.meromorphicOrderAt_cuspRealize_ne_top",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_const_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_mul_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_add_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_ne_top",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_zero",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_eq_top_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_algebraMap",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_one",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_mul",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_add",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticAt_levelOne_cuspFunction",
+        "Dubon2026.SourceFunctionField.GammaOne.cusp_order_zero_of_tendsto_one",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_jCoordinate",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_jCoordinate_neg",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_cuspOrder_pos",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_cusp_place",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRamification_pos",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_j_neg",
+        "Dubon2026.SourceFunctionField.GammaOne.cusp_raw_j_derivative_order",
+        "Dubon2026.SourceFunctionField.GammaOne.differential_cusp_germ",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_order_pos",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_decay",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_regular_cusp_form",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_form_realization",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRealize",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspOrder",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspPlace",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRamification"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.translated_modular_ne_zero",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticAt_translated_cuspFunction",
+        "Dubon2026.SourceFunctionField.GammaOne.eventually_ne_zero_translated_cuspFunction",
+        "Dubon2026.SourceFunctionField.GammaOne.realize_smul_eq_translated_ratio",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_eventuallyEq_of_ratio",
+        "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_cuspRealize",
+        "Dubon2026.SourceFunctionField.GammaOne.meromorphicOrderAt_cuspRealize_ne_top",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_const_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_mul_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_add_eventuallyEq",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_ne_top",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_zero",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_eq_top_iff",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_algebraMap",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_one",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_mul",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_add",
+        "Dubon2026.SourceFunctionField.GammaOne.analyticAt_levelOne_cuspFunction",
+        "Dubon2026.SourceFunctionField.GammaOne.cusp_order_zero_of_tendsto_one",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_jCoordinate",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspOrder_jCoordinate_neg",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_cuspOrder_pos",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_cusp_place",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRamification_pos",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspPlace_j_neg",
+        "Dubon2026.SourceFunctionField.GammaOne.cusp_raw_j_derivative_order",
+        "Dubon2026.SourceFunctionField.GammaOne.differential_cusp_germ",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_order_pos",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_decay",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_regular_cusp_form",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_form_realization"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRealize",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspOrder",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspPlace",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspRamification"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspVanishingAudit10.log",
+      "logSha256": "191C3CB43D9B63D93491F4AD9219A842AE3A7FBFF4BA30AEFC7B6862988D6E52",
+      "auditSha256": "8AD8B7C33C7968E80BF28D3351929D552827728A5EBDA117929F577CB94E0A0F",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 51,
+      "linterScopes": 10,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 46,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspVanishingDependencyAudit10.log",
+      "dependencyAuditSha256": "A7FF611A6EA86D0CE8D810EBE4270B55CB357B96B217D6177EE6870FC5D999AD",
+      "dependencyAuditSourceSha256": "476953C5029CCC89DCA0F51BC0074D5BD3299EF66FAD883CA9ECE3FE82AE11DF",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_form_realization"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> actual finite Gamma1 Hecke-character realization -> actual Picard/H1 and full/parabolic transpose/diamond comparison retaining the original homogeneous coefficient endomorphism -> actual differential/cusp comparison -> native cusp-form realization of regular differentials.",
+      "discharged": [
+        "Actual translated modular quotient germs are meromorphic and define a nontrivial normalized place.",
+        "The actual j coordinate and its literal analytic derivative have the same negative cusp order.",
+        "Original regularity implies positive cusp order of the holomorphic slash realization at every cusp.",
+        "Finite holomorphy and all-cusp vanishing construct an actual native cusp form without supplied decay or cusp-form witnesses."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Exact Fourier normalization, coefficient-field transport, complete differential/cusp equivalence, original Hecke/diamond/Picard/H1 arithmetic comparison, all-weight characteristic-zero association and literal higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-vanishing-10-reuse-review-20261026.json",
+      "reuseReviewSha256": "2A224ABABEA9F36EE934C1F554F49F1C7998A95EA29DD086B7A33789A580E5ED",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T03:36:27.053891+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceGammaOneCuspFourierNormalization",
+        "SourceGammaOneRegularFourierRealization"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspFourierNormalization.lean",
+          "sha256": "421C148EA7164B827FCCB1461DC1030A5FEC21FA1EEF69109AF7B5DF20587C6E",
+          "oleanSha256": "DA29AFF7566E0406CFFE9019DFAB8DE1B01B57720B2CA561D19420BC259E44BC"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularFourierRealization.lean",
+          "sha256": "8F1F5DF3BF9B81643AAB19DA6B21FA47434B528F8B8DB8D037C222F0BB82AA7C",
+          "oleanSha256": "9CD9CEC48C81A48CDA3CAAC2AB20969A3B47694DEAB93E26CAE0F2C6E63ABAB6"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_qExpansion",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_cuspForm_of_regular_differential"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_qExpansion",
+        "Dubon2026.SourceFunctionField.GammaOne.exists_cuspForm_of_regular_differential"
+      ],
+      "constructionRegistrations": [],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFourierConverseAudit2.log",
+      "logSha256": "FAB8FDD917F668975A55766D690241B5E0FDC3ECA853674233648214E61CA493",
+      "auditSha256": "587C27A592128F42F28EF373589E4EB343BC8BB73BB742EC21CA9DA350E29A30",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 10,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 10,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFourierConverseDependencyAudit2.log",
+      "dependencyAuditSha256": "181CB82D7B94FA0DD01EF918DFE02E4595EC6A4B1E3737C78C494A0799F84A42",
+      "dependencyAuditSourceSha256": "147A43F699D6F8EDE139AF25222E11B2C6EFBCF1AA7AB3E5D9CAADBB9B0931D6",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.exists_cuspForm_of_regular_differential"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> finite Gamma1 arithmetic Hecke-character realization -> original Picard/H1 and full/parabolic transpose/diamond comparison -> actual differential/cusp equivalence -> exact Fourier realization of each original regular differential.",
+      "discharged": [
+        "Exact Fourier normalization is derived from the literal derivative identity, with no matching-series hypothesis.",
+        "Every actual complex regular differential is realized, not only a supplied nonzero coefficient times D(j)."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Coefficient-field transport, complete linear differential/cusp equivalence and original Hecke/diamond/Picard/H1 arithmetic comparison, all-weight characteristic-zero association and literal higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-fourier-converse-2-reuse-review-20261026.json",
+      "reuseReviewSha256": "6EAA1B9AC957826CB11AD2C215F38385C19E5FFAF8991A203E9234CAB72D2AF5",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    },
+    {
+      "separatelyAxiomChecked": [],
+      "recordedUTC": "2026-10-27T04:02:59.483359+00:00",
+      "date": "2026-10-26 America/Vancouver",
+      "modules": [
+        "SourceGammaOneRegularCuspQExpansion",
+        "SourceGammaOneRegularCuspEquiv"
+      ],
+      "files": [
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularCuspQExpansion.lean",
+          "sha256": "AC980BEEE2690406373BCE5B5F9509F3935A974BB8A71957D4E90966320C1A27",
+          "oleanSha256": "E5B391746AF600D3FA47E766DB86CF3810F395BBDD8A5FBC3C95965871388BAA"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularCuspEquiv.lean",
+          "sha256": "F29048D46B91333C0F2D8B9B1CE0FB87873F37078CB9AFFB8E88A77B4B323D5E",
+          "oleanSha256": "B50A8CB84552BB675437E2637A08454C8573B75FB1DCDB9078453D107F45D24F"
+        }
+      ],
+      "queries": [
+        "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion_injective",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspQExpansion_injective",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_cusp_qExpansion_range_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_qExpansion",
+        "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspQExpansion",
+        "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv"
+      ],
+      "theoremRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion_injective",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspQExpansion_injective",
+        "Dubon2026.SourceFunctionField.GammaOne.regular_cusp_qExpansion_range_eq",
+        "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_qExpansion"
+      ],
+      "constructionRegistrations": [
+        "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion",
+        "Dubon2026.SourceFunctionField.GammaOne.cuspQExpansion",
+        "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv"
+      ],
+      "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLinearComparisonAudit2.log",
+      "logSha256": "83F8D45C054B741FA3566324E51CE02172217D01B3669CE40C25C1A45E4698A3",
+      "auditSha256": "AAA0A0E92F53978CDEB8658CB2817C8E8A29572CCB8B21FC09213D9507C73B0B",
+      "exit": 0,
+      "diagnostics": 0,
+      "exhaustiveTheorems": 25,
+      "linterScopes": 2,
+      "lintersPerScope": 16,
+      "requiredProofValueEdges": 14,
+      "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLinearComparisonDependencyAudit2.log",
+      "dependencyAuditSha256": "FB844267AE6686BF363A086431B4EF01F4312F3654AB66905E437DE29EF60CD4",
+      "dependencyAuditSourceSha256": "0B81A72E45E0572C0BB79B04AFE893A3DEE7A4185A30C543788F5CA8415BD59A",
+      "consumers": [
+        "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv",
+        "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_qExpansion"
+      ],
+      "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> finite Gamma1 arithmetic Hecke-character realization -> original Picard/H1 and full/parabolic transpose/diamond comparison -> actual complex regular-differential/cusp linear equivalence with literal Fourier matching.",
+      "discharged": [
+        "The analytic and algebraic realizations assemble into an actual linear equivalence.",
+        "The equivalence retains the literal Fourier series needed to compare original Hecke and diamond operators."
+      ],
+      "boundary": "Scratch-audited only; promotion and assembled verification pending. Hecke/diamond compatibility, original Picard/H1 arithmetic realization and all-weight characteristic-zero association and literal higher symmetric-power continuation remain. Coefficient-field transport is assessed when its exact downstream use is reached. 16/20; DUB-17--20 OPEN.",
+      "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-linear-comparison-2-reuse-review-20261026.json",
+      "reuseReviewSha256": "63445A6AA907725EFB3EB27C4AB099BDB50C26C8A027AAB5E6D38BBB035479CD",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  ],
+  "reviews": [
+    "Tools/source-gamma-one-local-holomorphy-12-reuse-review-20261026.json",
+    "Tools/source-gamma-one-cusp-vanishing-10-reuse-review-20261026.json",
+    "Tools/source-gamma-one-fourier-converse-2-reuse-review-20261026.json",
+    "Tools/source-gamma-one-linear-comparison-2-reuse-review-20261026.json"
+  ],
+  "dependencyRouteAssessment": {
+    "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-regular-cusp-promotion-route-704.json",
+    "sha256": "D0E4F13B72692CB7ADF1EEACC25080BA7F835FC6CEBA5D52BB158EDD84EBB4E6"
+  },
+  "proofEvidenceArchive": {
+    "manifest": "Tools/gamma-one-regular-cusp-20261026-704/archive-manifest.json",
+    "sha256": "91E8DB3B3A2CF25CECA203630E5FA181C77651FECD8C62BBF24491A7A436021D",
+    "externalLocalBuild": false,
+    "externalImport": false
+  },
+  "productionFocusedReceipt8548": {
+    "proofDependencyAudits": [
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalHolomorphyDependencyAudit12Production8548.log",
+        "sha256": "31989F5079B91BF6A69A0EF4495697D3028C56D6CF20E6EEC220843794B7E074",
+        "requiredProofValueEdges": 46,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.regular_differential_holomorphic_realization"
+        ],
+        "sourceSha256": "CE3691D70320ED681FD464B19B1F983D89215C676C6A98F3DC19A024E4E3DB2D"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspVanishingDependencyAudit10Production8548.log",
+        "sha256": "A7FF611A6EA86D0CE8D810EBE4270B55CB357B96B217D6177EE6870FC5D999AD",
+        "requiredProofValueEdges": 46,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_form_realization"
+        ],
+        "sourceSha256": "C8A82BA7BD138E6CEFD4FB47BA3E3D6937CB540720D5EE52B7B0EFA4041750D3"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFourierConverseDependencyAudit2Production8548.log",
+        "sha256": "181CB82D7B94FA0DD01EF918DFE02E4595EC6A4B1E3737C78C494A0799F84A42",
+        "requiredProofValueEdges": 10,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.exists_cuspForm_of_regular_differential"
+        ],
+        "sourceSha256": "AEA04DCAC86D623F3166EA5D65325051013E697087C7A48AB07A91F096374891"
+      },
+      {
+        "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLinearComparisonDependencyAudit2Production8548.log",
+        "sha256": "FB844267AE6686BF363A086431B4EF01F4312F3654AB66905E437DE29EF60CD4",
+        "requiredProofValueEdges": 14,
+        "consumers": [
+          "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv",
+          "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_qExpansion"
+        ],
+        "sourceSha256": "126D45E3595160E24DC3B2F683FCF907B6732706B6DF02B5EEC596E5059E8501"
+      }
+    ],
+    "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularCuspProductionAudit8548.log",
+    "sha256": "851BE59C39E2A2DC0A2E3F6B393D82A19FF347A37C9F180ACD116856DDB60A76",
+    "aggregateLog": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-regular-cusp-production-build-8548.log",
+    "aggregateSha256": "B978BFEFAE0A9A5A0352DEBA2D8C342BB409EDB6BCA49C0DB3CBA1E0222E88C9",
+    "productionModules": 8548,
+    "incrementModules": 26,
+    "axiomChecks": 80,
+    "exhaustiveIncrementTheorems": 132,
+    "linterScopes": 26,
+    "lintersPerScope": 16,
+    "exit": 0,
+    "diagnostics": 0,
+    "scratchExhaustiveTheorems": 132,
+    "productionReuse": "Only scratch imports are qualified. All final audited statements, proof bodies and comments remain identical. The original function field, actual regular differentials, native cusp forms, literal Fourier series and exact complex normalization are retained. No source contract is weakened.",
+    "omittedScratchTheorems": [],
+    "existingReuseTheorems": [],
+    "scratchToProductionOwnership": {
+      "scratchSum": 132,
+      "scratchDistinct": 132,
+      "generatedNameRenamings": {},
+      "productionFocused": 132,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceGammaOneRatioRealization",
+            "SourceGammaOneAnalyticGerms",
+            "SourceGammaOneMeromorphicRealization",
+            "SourceGammaOneRealizationAlgebra",
+            "SourceGammaOneAnalyticOrder",
+            "SourceGammaOneAnalyticOrderNontrivial",
+            "SourceGammaOneAnalyticPlaces",
+            "SourceGammaOneJRealization",
+            "SourceGammaOneRegularCoefficientOrders",
+            "SourceGammaOneAnalyticJOrders",
+            "SourceGammaOneAnalyticDifferentialRegularity",
+            "SourceGammaOneHolomorphicDifferentials"
+          ],
+          "count": 46,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalHolomorphyScratchOwnership700.log",
+            "sha256": "3C07E28E073ECDE29AFCB0E5E396B8D8A942F843890FEB904653924F2D06810B",
+            "sourceSha256": "CF233C06030822555445E413A74B64A5A9DA7DF38DCDD3DB1EE4987961F8B764"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneTranslatedCuspGerms",
+            "SourceGammaOneCuspRatioRealization",
+            "SourceGammaOneCuspRealizationAlgebra",
+            "SourceGammaOneCuspOrder",
+            "SourceGammaOneCuspJOrder",
+            "SourceGammaOneCuspPlaces",
+            "SourceGammaOneCuspDerivativeOrder",
+            "SourceGammaOneDifferentialCuspGerm",
+            "SourceGammaOneRegularCuspOrder",
+            "SourceGammaOneRegularCuspForms"
+          ],
+          "count": 51,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspVanishingScratchOwnership701.log",
+            "sha256": "AC87F8BA312DC88154243D4E40BDD1405A048BC88F71E43035A07023B5CF9DF0",
+            "sourceSha256": "43F1C4E02690CE6FA2F39273ABB1A35AFEF58E065861C88438E20FA2CD58B14A"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneCuspFourierNormalization",
+            "SourceGammaOneRegularFourierRealization"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFourierConverseScratchOwnership702.log",
+            "sha256": "FDBDA24731CA8B50B849871988B915B2F0CFF558E612AF778BA8BA2689C4F2D7",
+            "sourceSha256": "ED743658F1B2E0CDAC3350B0AE893C074EA0FA5C893EDE3C7EB77B20F8C3F5D6"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneRegularCuspQExpansion",
+            "SourceGammaOneRegularCuspEquiv"
+          ],
+          "count": 25,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLinearComparisonScratchOwnership703.log",
+            "sha256": "8F73F1C899C3F36268B394C94ED602EA445E8CE74EB3CA24AB4DC54F8251010A",
+            "sourceSha256": "A8C891D00F7CDB1C8074E8E2A4184DE7DDBD765B00F7D1A99FE57AFB1227D2B6"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularCuspOwnership8548.log",
+        "sha256": "50EFE23D668B037D2E60F901826FCB003ADA25C286E7DADCA6F3206CCF16DFB6",
+        "sourceSha256": "75242F6A6E543BEBE1DD3D9A0FD8474A0A282A2D55EA3723C81453B9F681C132"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-201814-510.log",
+        "sha256": "EA8CDFB29F4C2C9E405E0F38BB5D6C51218EFF4CF286C90C16AACCB115459BB1"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 26 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceGammaOneRatioRealization",
+            "scratchSha256": "1124F4A25E5E42D92133232C19ACA5EB610537FE1C9789D70CB6488537D9A32D",
+            "productionSha256": "DBEAB89A2AEB8EAAB02B3802BB36DA7A2276EF61AC153564B15CC3CD613F9806",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAnalyticGerms",
+            "scratchSha256": "12469B97F67441640D64B2C5901F51B508CB06D66F4C7BBF50BDD822824DBC8D",
+            "productionSha256": "5E1F23587988C0458437DB4080EAFA263AF07D8518151DDE1C2224F8961FC5C1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneMeromorphicRealization",
+            "scratchSha256": "29AC164DBD2CF3EAF56331836E79E90B8C62A907AE85AADC3ED32A42183B5E08",
+            "productionSha256": "25EFB38C4C22F86FF6ED94D4E405BC68CE23E8AA09BBB0B02B2E1DB0510E5BA3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRealizationAlgebra",
+            "scratchSha256": "1ADB334C909BF4565370856777EF8030E35E26B28090F1D706CA3FCB5A3859DE",
+            "productionSha256": "B429A45716AED0A153BD06B5F0F4417CAB1C6EE89FE4E76537902C5D8C76B2AA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAnalyticOrder",
+            "scratchSha256": "0325483B4F3FB5590FD5946CFF8643656A3FEE44171B6EAD67F4138CFFB00F9C",
+            "productionSha256": "2DB86DD9FEC4D6853F8006DC7B096247259EE70E1FE7DEE9EBEF0003F2718A43",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAnalyticOrderNontrivial",
+            "scratchSha256": "53818F9D41E11EA7652BDEEAC9724E4E44016803F75FC36128B1A6BBF210D0F8",
+            "productionSha256": "D4D892123FF99D84C30E1D86A774B429CC87369213DC1338D649F7D7569DA761",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAnalyticPlaces",
+            "scratchSha256": "2A684120F5449B169C539E1BD568C00CDF40572BBCC54E183DCE8F169378AA84",
+            "productionSha256": "E23BFF6137CD0725C8548942D84C0151A1816C17FF95DB590441890A1A7B59EE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneJRealization",
+            "scratchSha256": "792BF0BC9A862AC39297D0D42EE3734A854D1419F617F84B42CF103511954209",
+            "productionSha256": "9F279298B12E16549ABA5AC45E154BCA90AC4E0D5575FC432120AFDE6500A3F8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRegularCoefficientOrders",
+            "scratchSha256": "87F6E926C281A5C7056EA72FCC74A1B53BC1C500FC786E2FC3B896C0DDFDA973",
+            "productionSha256": "87F6E926C281A5C7056EA72FCC74A1B53BC1C500FC786E2FC3B896C0DDFDA973",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAnalyticJOrders",
+            "scratchSha256": "F823AB56C1F8CF239B8EC8121C7524D81EAEECB0663469666495FB57CE728330",
+            "productionSha256": "88DAA8FA39C64F041832F3EC929912885D3746230E571ADD26AB47A78FFA067E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAnalyticDifferentialRegularity",
+            "scratchSha256": "DC55B2BDC351C25901EB9D1C14A6F76F489CFFE7DE5CC87FB1DAA7565DD1F1F2",
+            "productionSha256": "5DBA1CC59D953B5AB3C2E1D68EFFFE0AECFAC3365CFD715257DF88A9116D48DF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHolomorphicDifferentials",
+            "scratchSha256": "FE3D1B67F3993113A3C7437A990C63B2CC6C447C7A387227167B9F7EE0A3A518",
+            "productionSha256": "05C2F867B80C0910FE0CE78E0C0CD5E0F8635CC3D04B01F56C3DDD2B9A36AEA1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneTranslatedCuspGerms",
+            "scratchSha256": "FFA8618260E6FE71D032CC18D3AAD6BA19D8D4FD16F2293471D4AA690D2D05E6",
+            "productionSha256": "FFA8618260E6FE71D032CC18D3AAD6BA19D8D4FD16F2293471D4AA690D2D05E6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspRatioRealization",
+            "scratchSha256": "4A19147FBEE7B1454604E807B5FCD2D9C266DA3669D626E2A08A9F5C6AB5AF7E",
+            "productionSha256": "B38E2DF84980F3546A2C86001BD036A1CEF18A571FF2FD79FEAEB61BABF15AE6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspRealizationAlgebra",
+            "scratchSha256": "3CA79D3489DA3C0575B87157F82A0159C8B83D42409F6D1D2BC9F268A2227540",
+            "productionSha256": "0680420B858B8C345208EDC841A7057916E276167B45C175978D66F050E3AD96",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspOrder",
+            "scratchSha256": "2045E0F02F8C705DB5EE0A3145EB015EE4DF9047221E3B8AD9C32BC908D880B3",
+            "productionSha256": "3374E0F9E8CA1550993B2E73A782F8E45231912A798F0E9E95AAF46C1CA9BFFC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspJOrder",
+            "scratchSha256": "3C7CE228AFE887057076EB71F118212E94ED2C9D0293B060703205654ACBF4C0",
+            "productionSha256": "B8FD506BEC40BF583524E12070D35F8BCFAC779E887E84CB7355B420CEEB9E72",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspPlaces",
+            "scratchSha256": "923C3B29D1BD08C1E6AC57ADA16E48AA7446832907483E3C78296A99BDF625B9",
+            "productionSha256": "4257F1370F419FC9BDA8038C021717725DA8606311169F980F0DB1805371B6F4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspDerivativeOrder",
+            "scratchSha256": "D875623F10EB4835C3B4588749FEC36997450588B9DECA20634FF0F97972B932",
+            "productionSha256": "376F8109740F5D327E27348A61CE992BB9B3B861967838869923F02470C8A5C6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDifferentialCuspGerm",
+            "scratchSha256": "314508D3CA2BFE6BB9C882BEE002EA9A7AEED4FEDE73C604BE9EBF554F20D834",
+            "productionSha256": "860F85A3B2F83A652C716C7C4676A91C2F059D56EC7511096FCF13AC3F7C80A0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRegularCuspOrder",
+            "scratchSha256": "A571C9894ADE87BABBD26AAADBB3604DEC78EB6450FF978F6238C7F8ADB4F708",
+            "productionSha256": "64C79F714DF0DB0FEA2DF3E7954A16DB7E440CC46A17E402218A5D679156C855",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRegularCuspForms",
+            "scratchSha256": "5DFEF81C63DEB210A5CEFD47C0BD3A1AE963D7E1F65D099CAF4BF8ED8DC7C7AC",
+            "productionSha256": "3EB3F0232672CBD1BE56BC74D7374541A8D49B21014F39A6DC7170E7D60265A8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspFourierNormalization",
+            "scratchSha256": "421C148EA7164B827FCCB1461DC1030A5FEC21FA1EEF69109AF7B5DF20587C6E",
+            "productionSha256": "438FB12E61F06D4DA63B10BDA9B281A858D123AEB5C2B2E50E180C54534EE472",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRegularFourierRealization",
+            "scratchSha256": "8F1F5DF3BF9B81643AAB19DA6B21FA47434B528F8B8DB8D037C222F0BB82AA7C",
+            "productionSha256": "8A7ED09C5EA95917D135715DE987F9D2A2948FD9B3B46C04D2FD93A22134C7C4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRegularCuspQExpansion",
+            "scratchSha256": "AC980BEEE2690406373BCE5B5F9509F3935A974BB8A71957D4E90966320C1A27",
+            "productionSha256": "72BA62FC37EF35E8B2BCB4D8BFC90BB2893688E1FDBBD91D13773E4F5E771DB1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRegularCuspEquiv",
+            "scratchSha256": "F29048D46B91333C0F2D8B9B1CE0FB87873F37078CB9AFFB8E88A77B4B323D5E",
+            "productionSha256": "DF051D1554A8612503C66097EE69D4B2D4092E791B54953E294C285C0D948788",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 132 distinct names from 132 exhaustive scratch checks are retained: 132 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The actual Picard/H1, full/parabolic, transpose and diamond comparison must still identify original finite homogeneous-coefficient Hecke characters with geometric characters. Exact analytic period normalization and compatibility with the original Hecke/diamond operators remain. Coefficient-field transport is still required wherever used by the arithmetic comparison. Frobenius/inertia, arithmetic realization of those characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. The full all-weight arithmetic goal is unchanged. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN."
+  },
+  "receipt8548": {
+    "recordedUTC": "2026-10-27T06:00:00.885505+00:00",
+    "log": "logs/dubon-build-20261026-213020-525.log",
+    "sha256": "97AD40FFEC57D9A8E6C2099F98EBA60EF8BD93D6319900E32AE67D9D57E0C154",
+    "bytes": 13893822,
+    "exit": 0,
+    "diagnostics": 0,
+    "productionModules": 8548,
+    "projectTheorems": 53940,
+    "registeredConsumers": 24719,
+    "registeredConstructions": 2456,
+    "declarations": 33128,
+    "generated": 34006,
+    "linters": 16,
+    "regressions": 13,
+    "foundationLog": "logs/foundation_freeze_20261026_212303.log",
+    "foundationSha256": "AEC403A79E8D2F28614E7B87FA088FAA28CA66666A42500F9D045DD4FDD28CA2",
+    "countReconciliation": {
+      "previousTheorems": 53808,
+      "focusedTheorems": 132,
+      "sharedGeneratedNames": [],
+      "addedTheorems": 132,
+      "removedTheorems": [],
+      "upstreamOwnedGeneratedNames": [],
+      "globalOwnershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularCuspGlobalOwnership8548.log",
+      "globalOwnershipSha256": "C350D67D6573D8F2A7FE59A9CCBFCAE98C3F606FB9B9B8D6F8229DF3584FC47B",
+      "globalOwnershipSourceSha256": "2DD6825F9CA0CAAA0F685BCF404FA8375BF8EDE77FAF328C876F2400523ECA47",
+      "globalOwnershipReason": "Every focused theorem is retained with the same type and value hashes and standard logical axioms in the exact full import environment. Generated names owned by upstream modules there are recorded separately from the project-owned exhaustive count.",
+      "ownershipLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularCuspOwnership8548.log",
+      "ownershipSha256": "50EFE23D668B037D2E60F901826FCB003ADA25C286E7DADCA6F3206CCF16DFB6"
+    },
+    "scratchToProductionOwnership": {
+      "scratchSum": 132,
+      "scratchDistinct": 132,
+      "generatedNameRenamings": {},
+      "productionFocused": 132,
+      "duplicateScratchNames": {},
+      "missingFromFocused": {},
+      "missingFromFocusedAlreadyInPrevious": [],
+      "productionNamesNotInScratch": [],
+      "unexplainedMissing": [],
+      "scopes": [
+        {
+          "modules": [
+            "SourceGammaOneRatioRealization",
+            "SourceGammaOneAnalyticGerms",
+            "SourceGammaOneMeromorphicRealization",
+            "SourceGammaOneRealizationAlgebra",
+            "SourceGammaOneAnalyticOrder",
+            "SourceGammaOneAnalyticOrderNontrivial",
+            "SourceGammaOneAnalyticPlaces",
+            "SourceGammaOneJRealization",
+            "SourceGammaOneRegularCoefficientOrders",
+            "SourceGammaOneAnalyticJOrders",
+            "SourceGammaOneAnalyticDifferentialRegularity",
+            "SourceGammaOneHolomorphicDifferentials"
+          ],
+          "count": 46,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalHolomorphyScratchOwnership700.log",
+            "sha256": "3C07E28E073ECDE29AFCB0E5E396B8D8A942F843890FEB904653924F2D06810B",
+            "sourceSha256": "CF233C06030822555445E413A74B64A5A9DA7DF38DCDD3DB1EE4987961F8B764"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneTranslatedCuspGerms",
+            "SourceGammaOneCuspRatioRealization",
+            "SourceGammaOneCuspRealizationAlgebra",
+            "SourceGammaOneCuspOrder",
+            "SourceGammaOneCuspJOrder",
+            "SourceGammaOneCuspPlaces",
+            "SourceGammaOneCuspDerivativeOrder",
+            "SourceGammaOneDifferentialCuspGerm",
+            "SourceGammaOneRegularCuspOrder",
+            "SourceGammaOneRegularCuspForms"
+          ],
+          "count": 51,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspVanishingScratchOwnership701.log",
+            "sha256": "AC87F8BA312DC88154243D4E40BDD1405A048BC88F71E43035A07023B5CF9DF0",
+            "sourceSha256": "43F1C4E02690CE6FA2F39273ABB1A35AFEF58E065861C88438E20FA2CD58B14A"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneCuspFourierNormalization",
+            "SourceGammaOneRegularFourierRealization"
+          ],
+          "count": 10,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFourierConverseScratchOwnership702.log",
+            "sha256": "FDBDA24731CA8B50B849871988B915B2F0CFF558E612AF778BA8BA2689C4F2D7",
+            "sourceSha256": "ED743658F1B2E0CDAC3350B0AE893C074EA0FA5C893EDE3C7EB77B20F8C3F5D6"
+          }
+        },
+        {
+          "modules": [
+            "SourceGammaOneRegularCuspQExpansion",
+            "SourceGammaOneRegularCuspEquiv"
+          ],
+          "count": 25,
+          "log": {
+            "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLinearComparisonScratchOwnership703.log",
+            "sha256": "8F73F1C899C3F36268B394C94ED602EA445E8CE74EB3CA24AB4DC54F8251010A",
+            "sourceSha256": "A8C891D00F7CDB1C8074E8E2A4184DE7DDBD765B00F7D1A99FE57AFB1227D2B6"
+          }
+        }
+      ],
+      "productionOwnership": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularCuspOwnership8548.log",
+        "sha256": "50EFE23D668B037D2E60F901826FCB003ADA25C286E7DADCA6F3206CCF16DFB6",
+        "sourceSha256": "75242F6A6E543BEBE1DD3D9A0FD8474A0A282A2D55EA3723C81453B9F681C132"
+      },
+      "previousGlobal": {
+        "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-201814-510.log",
+        "sha256": "EA8CDFB29F4C2C9E405E0F38BB5D6C51218EFF4CF286C90C16AACCB115459BB1"
+      },
+      "renameEvidence": {
+        "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 26 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+        "sourceChecks": [
+          {
+            "module": "SourceGammaOneRatioRealization",
+            "scratchSha256": "1124F4A25E5E42D92133232C19ACA5EB610537FE1C9789D70CB6488537D9A32D",
+            "productionSha256": "DBEAB89A2AEB8EAAB02B3802BB36DA7A2276EF61AC153564B15CC3CD613F9806",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAnalyticGerms",
+            "scratchSha256": "12469B97F67441640D64B2C5901F51B508CB06D66F4C7BBF50BDD822824DBC8D",
+            "productionSha256": "5E1F23587988C0458437DB4080EAFA263AF07D8518151DDE1C2224F8961FC5C1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneMeromorphicRealization",
+            "scratchSha256": "29AC164DBD2CF3EAF56331836E79E90B8C62A907AE85AADC3ED32A42183B5E08",
+            "productionSha256": "25EFB38C4C22F86FF6ED94D4E405BC68CE23E8AA09BBB0B02B2E1DB0510E5BA3",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRealizationAlgebra",
+            "scratchSha256": "1ADB334C909BF4565370856777EF8030E35E26B28090F1D706CA3FCB5A3859DE",
+            "productionSha256": "B429A45716AED0A153BD06B5F0F4417CAB1C6EE89FE4E76537902C5D8C76B2AA",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAnalyticOrder",
+            "scratchSha256": "0325483B4F3FB5590FD5946CFF8643656A3FEE44171B6EAD67F4138CFFB00F9C",
+            "productionSha256": "2DB86DD9FEC4D6853F8006DC7B096247259EE70E1FE7DEE9EBEF0003F2718A43",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAnalyticOrderNontrivial",
+            "scratchSha256": "53818F9D41E11EA7652BDEEAC9724E4E44016803F75FC36128B1A6BBF210D0F8",
+            "productionSha256": "D4D892123FF99D84C30E1D86A774B429CC87369213DC1338D649F7D7569DA761",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAnalyticPlaces",
+            "scratchSha256": "2A684120F5449B169C539E1BD568C00CDF40572BBCC54E183DCE8F169378AA84",
+            "productionSha256": "E23BFF6137CD0725C8548942D84C0151A1816C17FF95DB590441890A1A7B59EE",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneJRealization",
+            "scratchSha256": "792BF0BC9A862AC39297D0D42EE3734A854D1419F617F84B42CF103511954209",
+            "productionSha256": "9F279298B12E16549ABA5AC45E154BCA90AC4E0D5575FC432120AFDE6500A3F8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRegularCoefficientOrders",
+            "scratchSha256": "87F6E926C281A5C7056EA72FCC74A1B53BC1C500FC786E2FC3B896C0DDFDA973",
+            "productionSha256": "87F6E926C281A5C7056EA72FCC74A1B53BC1C500FC786E2FC3B896C0DDFDA973",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAnalyticJOrders",
+            "scratchSha256": "F823AB56C1F8CF239B8EC8121C7524D81EAEECB0663469666495FB57CE728330",
+            "productionSha256": "88DAA8FA39C64F041832F3EC929912885D3746230E571ADD26AB47A78FFA067E",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneAnalyticDifferentialRegularity",
+            "scratchSha256": "DC55B2BDC351C25901EB9D1C14A6F76F489CFFE7DE5CC87FB1DAA7565DD1F1F2",
+            "productionSha256": "5DBA1CC59D953B5AB3C2E1D68EFFFE0AECFAC3365CFD715257DF88A9116D48DF",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneHolomorphicDifferentials",
+            "scratchSha256": "FE3D1B67F3993113A3C7437A990C63B2CC6C447C7A387227167B9F7EE0A3A518",
+            "productionSha256": "05C2F867B80C0910FE0CE78E0C0CD5E0F8635CC3D04B01F56C3DDD2B9A36AEA1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneTranslatedCuspGerms",
+            "scratchSha256": "FFA8618260E6FE71D032CC18D3AAD6BA19D8D4FD16F2293471D4AA690D2D05E6",
+            "productionSha256": "FFA8618260E6FE71D032CC18D3AAD6BA19D8D4FD16F2293471D4AA690D2D05E6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspRatioRealization",
+            "scratchSha256": "4A19147FBEE7B1454604E807B5FCD2D9C266DA3669D626E2A08A9F5C6AB5AF7E",
+            "productionSha256": "B38E2DF84980F3546A2C86001BD036A1CEF18A571FF2FD79FEAEB61BABF15AE6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspRealizationAlgebra",
+            "scratchSha256": "3CA79D3489DA3C0575B87157F82A0159C8B83D42409F6D1D2BC9F268A2227540",
+            "productionSha256": "0680420B858B8C345208EDC841A7057916E276167B45C175978D66F050E3AD96",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspOrder",
+            "scratchSha256": "2045E0F02F8C705DB5EE0A3145EB015EE4DF9047221E3B8AD9C32BC908D880B3",
+            "productionSha256": "3374E0F9E8CA1550993B2E73A782F8E45231912A798F0E9E95AAF46C1CA9BFFC",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspJOrder",
+            "scratchSha256": "3C7CE228AFE887057076EB71F118212E94ED2C9D0293B060703205654ACBF4C0",
+            "productionSha256": "B8FD506BEC40BF583524E12070D35F8BCFAC779E887E84CB7355B420CEEB9E72",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspPlaces",
+            "scratchSha256": "923C3B29D1BD08C1E6AC57ADA16E48AA7446832907483E3C78296A99BDF625B9",
+            "productionSha256": "4257F1370F419FC9BDA8038C021717725DA8606311169F980F0DB1805371B6F4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspDerivativeOrder",
+            "scratchSha256": "D875623F10EB4835C3B4588749FEC36997450588B9DECA20634FF0F97972B932",
+            "productionSha256": "376F8109740F5D327E27348A61CE992BB9B3B861967838869923F02470C8A5C6",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneDifferentialCuspGerm",
+            "scratchSha256": "314508D3CA2BFE6BB9C882BEE002EA9A7AEED4FEDE73C604BE9EBF554F20D834",
+            "productionSha256": "860F85A3B2F83A652C716C7C4676A91C2F059D56EC7511096FCF13AC3F7C80A0",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRegularCuspOrder",
+            "scratchSha256": "A571C9894ADE87BABBD26AAADBB3604DEC78EB6450FF978F6238C7F8ADB4F708",
+            "productionSha256": "64C79F714DF0DB0FEA2DF3E7954A16DB7E440CC46A17E402218A5D679156C855",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRegularCuspForms",
+            "scratchSha256": "5DFEF81C63DEB210A5CEFD47C0BD3A1AE963D7E1F65D099CAF4BF8ED8DC7C7AC",
+            "productionSha256": "3EB3F0232672CBD1BE56BC74D7374541A8D49B21014F39A6DC7170E7D60265A8",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneCuspFourierNormalization",
+            "scratchSha256": "421C148EA7164B827FCCB1461DC1030A5FEC21FA1EEF69109AF7B5DF20587C6E",
+            "productionSha256": "438FB12E61F06D4DA63B10BDA9B281A858D123AEB5C2B2E50E180C54534EE472",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRegularFourierRealization",
+            "scratchSha256": "8F1F5DF3BF9B81643AAB19DA6B21FA47434B528F8B8DB8D037C222F0BB82AA7C",
+            "productionSha256": "8A7ED09C5EA95917D135715DE987F9D2A2948FD9B3B46C04D2FD93A22134C7C4",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRegularCuspQExpansion",
+            "scratchSha256": "AC980BEEE2690406373BCE5B5F9509F3935A974BB8A71957D4E90966320C1A27",
+            "productionSha256": "72BA62FC37EF35E8B2BCB4D8BFC90BB2893688E1FDBBD91D13773E4F5E771DB1",
+            "bodyIdentical": true
+          },
+          {
+            "module": "SourceGammaOneRegularCuspEquiv",
+            "scratchSha256": "F29048D46B91333C0F2D8B9B1CE0FB87873F37078CB9AFFB8E88A77B4B323D5E",
+            "productionSha256": "DF051D1554A8612503C66097EE69D4B2D4092E791B54953E294C285C0D948788",
+            "bodyIdentical": true
+          }
+        ]
+      },
+      "passed": true
+    },
+    "scratchToProductionCountReason": "All 132 distinct names from 132 exhaustive scratch checks are retained: 132 in the production focused scope and 0 previously audited generated names. Exact name-set comparison explains any ownership changes; no unaccounted theorem is missing.",
+    "boundary": "The actual Picard/H1, full/parabolic, transpose and diamond comparison must still identify original finite homogeneous-coefficient Hecke characters with geometric characters. Exact analytic period normalization and compatibility with the original Hecke/diamond operators remain. Coefficient-field transport is still required wherever used by the arithmetic comparison. Frobenius/inertia, arithmetic realization of those characters, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. The full all-weight arithmetic goal is unchanged. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN."
+  }
+}

@@ -1,0 +1,29 @@
+import Dubon2026.SourceGammaOneOriginalPoleMultiplier
+import Dubon2026.SourceGammaOnePoleClearedNormalization
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier, `Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier_at_analytic_places, `Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_of_nonnegative_orders, `Dubon2026.SourceFunctionField.GammaOne.holomorphic_invariant_of_local_eq, `Dubon2026.SourceFunctionField.GammaOne.boundedAtImInfty_of_local_eq]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneOriginalPoleMultiplier, `Dubon2026.SourceGammaOnePoleClearedNormalization]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier, `Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier_at_analytic_places, `Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_of_nonnegative_orders, `Dubon2026.SourceFunctionField.GammaOne.holomorphic_invariant_of_local_eq, `Dubon2026.SourceFunctionField.GammaOne.boundedAtImInfty_of_local_eq, `Dubon2026.SourceCurve.exists_pole_clearing_function_of_finite_coordinate, `Dubon2026.SourceFunctionField.GammaOne.finiteDimensional_jCoordinateOver, `Dubon2026.SourceFunctionField.GammaOne.cuspPlace_j_neg, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_j_sub_pos, `meromorphicNFOn_toMeromorphicNFOn, `meromorphicOrderAt_toMeromorphicNFOn, `Homeomorph.map_punctured_nhds_eq, `UpperHalfPlane.isBoundedAtImInfty_iff]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE POLE CLEARING NORMALIZATION DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the original algebraic pole multiplier and native holomorphic normalization, subgroup invariance and cusp bound preservation. Only declaration values are traversed. Actual product assembly, global periods, Hecke/diamond/H1 arithmetic comparison, all-weight association and higher continuation remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

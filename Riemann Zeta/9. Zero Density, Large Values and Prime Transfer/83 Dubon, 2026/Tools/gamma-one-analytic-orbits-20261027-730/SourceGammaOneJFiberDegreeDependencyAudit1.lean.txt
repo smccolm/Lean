@@ -1,0 +1,28 @@
+import SourceGammaOneJFiberDegree
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.sum_j_fiber_orders_eq_finrank]
+  let localModules : Array Name := #[`SourceGammaOneJFiberDegree]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.sum_j_fiber_orders_eq_finrank, `Dubon2026.SourceCurve.sum_positive_orders_eq_finrank_adjoin, `Dubon2026.SourceFunctionField.GammaOne.place_residue_bijective, `Dubon2026.SourceFunctionField.GammaOne.finiteDimensional_jCoordinateOver]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE J FIBER DEGREE DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in literal actual finite j-fiber total orders equal to the existing coordinate extension degree. Native positive-order sums and residue bijectivity are consumed. No exact field degree is assumed. Only declaration values are traversed. Exact elliptic ramification and global charts remain. Original chart/period, Hecke/diamond/Picard/H1 arithmetic comparison, all-weight characteristic-zero association and literal higher symmetric-power continuation remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

@@ -1,0 +1,83 @@
+import Dubon2026.SourceGammaOneRamifiedChartOrders
+import Dubon2026.SourceGammaOneFinitePlaceExhaustion
+import Dubon2026.SourceCurveAnalyticPlaceParameter
+import Dubon2026.SourceCurveAnalyticChartOrders
+
+/-! DUB-17/18 -> actual Gamma1 period comparison -> finite-place charts.
+The actual ramified chart orders supply a uniformizer of analytic order one.
+The existing inverse-function parameter theorem normalizes that chart.
+Actual finite-place exhaustion then covers every place at which j is regular,
+including elliptic centers at every nonzero level. Cusp charts remain. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup SourceCurve Metric
+open scoped Topology
+
+private theorem deriv_ne_zero_of_order_one {F : ℂ → ℂ} {a : ℂ}
+    (hF : AnalyticAt ℂ F a) (ho : meromorphicOrderAt F a = (1 : ℤ)) : deriv F a ≠ 0 := by
+  have ha : analyticOrderAt F a = (1 : ℕ∞) := by
+    apply WithTop.map_injective (Nat.cast_injective (R := ℤ))
+    change (analyticOrderAt F a).map (Nat.cast : ℕ → ℤ) = (1 : ℕ∞).map (Nat.cast : ℕ → ℤ)
+    rw [← hF.meromorphicOrderAt_eq, ho]
+    rfl
+  exact hF.deriv.analyticOrderAt_eq_zero.mp
+    (analyticOrderAt_deriv_of_pos hF (n := 0) (by simpa only [Nat.cast_zero, zero_add] using ha))
+
+theorem analytic_place_chart_parameter (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N) (τ : ℍ) :
+    ∃ (ρ : ℝ) (γ : ℂ → Place ℂ (functionFieldOver (Gamma1 N) ℂ)),
+      0 < ρ ∧ γ 0 = analyticPlace hT τ ∧ Set.InjOn γ (ball 0 ρ) ∧
+      (∀ z ∈ ball 0 ρ, placeEval hT (γ z) (analyticPlace hT τ).uniformizer = z) ∧
+      AnalyticChart.Orders (place_residue_bijective hT) γ (ball 0 ρ) := by
+  let v := analyticPlace hT τ
+  let γ₀ := ramifiedPlace N hT τ
+  let T : ℂ → ℂ := fun z => placeEval hT (γ₀ z) v.uniformizer
+  have hγ₀ : γ₀ 0 = v := ramifiedPlace_zero N hT τ
+  obtain ⟨δ, hδ, horders⟩ := ramifiedPlace_chart_orders N hT τ
+  have hmem : v.uniformizer ∈ (γ₀ 0).toValuationSubring := by
+    rw [hγ₀]
+    exact v.uniformizerSubring.property
+  obtain ⟨_, ho, hregular⟩ := horders 0 (mem_ball_self hδ) v.uniformizer v.uniformizer_ne_zero
+  have hTa : AnalyticAt ℂ T 0 := hregular hmem
+  have hT0 : T 0 = 0 := by
+    change placeEval hT (γ₀ 0) v.uniformizer = 0
+    rw [hγ₀]
+    exact (v.rationalEval_eq_zero_iff_ord_pos (place_residue_bijective hT v)
+      v.uniformizerSubring.property v.uniformizer_ne_zero).mpr (by
+        change 0 < v.ord v.uniformizer
+        rw [v.ord_uniformizer]
+        norm_num)
+  have hd : deriv T 0 ≠ 0 := by
+    apply deriv_ne_zero_of_order_one hTa
+    change meromorphicOrderAt T 0 = ((γ₀ 0).ord v.uniformizer : WithTop ℤ) at ho
+    simpa only [hγ₀, v.ord_uniformizer] using ho
+  exact AnalyticDisc.exists_parameter_of_evaluation_family (place_residue_bijective hT)
+    v T hTa hT0 hd hδ γ₀ hγ₀ (fun _ _ => rfl) horders
+
+theorem finite_place_chart_parameter (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N) (v : Place ℂ (functionFieldOver (Gamma1 N) ℂ))
+    (hv : jCoordinateOver (Gamma1 N) ℂ ∈ v.toValuationSubring) :
+    ∃ (ρ : ℝ) (γ : ℂ → Place ℂ (functionFieldOver (Gamma1 N) ℂ)),
+      0 < ρ ∧ γ 0 = v ∧ Set.InjOn γ (ball 0 ρ) ∧
+      (∀ z ∈ ball 0 ρ, placeEval hT (γ z) v.uniformizer = z) ∧
+      AnalyticChart.Orders (place_residue_bijective hT) γ (ball 0 ρ) := by
+  have hΓ : Gamma N ≤ Gamma1 N := by
+    intro A hA
+    simp_all [Gamma1_mem, Gamma_mem]
+  obtain ⟨τ, rfl⟩ := exists_analytic_place_eq N hΓ hT v hv
+  exact analytic_place_chart_parameter N hT τ
+
+theorem finite_place_parameter_package (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N) (v : Place ℂ (functionFieldOver (Gamma1 N) ℂ))
+    (hv : jCoordinateOver (Gamma1 N) ℂ ∈ v.toValuationSubring) :
+    ∃ (ρ : ℝ) (γ : ℂ → Place ℂ (functionFieldOver (Gamma1 N) ℂ)),
+      0 < ρ ∧ γ 0 = v ∧ AnalyticChart.Orders (place_residue_bijective hT) γ (ball 0 ρ) ∧
+      (∀ z ∈ ball 0 ρ,
+        (γ z).ord (v.uniformizer - algebraMap ℂ (functionFieldOver (Gamma1 N) ℂ) z) = 1) := by
+  obtain ⟨ρ, γ, hρ, h0, _, heval, ho⟩ := finite_place_chart_parameter N hT v hv
+  refine ⟨ρ, γ, hρ, h0, ho, ?_⟩
+  intro z hz
+  exact AnalyticChart.Orders.uniformizer_sub_order ho (isOpen_ball.mem_nhds hz) v heval
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

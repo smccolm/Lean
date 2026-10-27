@@ -1,0 +1,29 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact elliptic ramification -> compare weighted analytic j fibers with subgroup orbit indices.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlusMinus.lean",
+      "sha256": "DC8F925EF43228A59D2AE87503C3404B63049785B6F11A5040FED82372D4460D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOrbitCounting.lean",
+      "sha256": "D1C431ABA6FE9E5AE3FCE6ACA6AB6BE4FA1163E5C75F27E4F4E69F62931EA5FF"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneAnalyticJOrders.lean",
+      "sha256": "88DAA8FA39C64F041832F3EC929912885D3746230E571ADD26AB47A78FFA067E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularStabilizerCharacter.lean",
+      "sha256": "C4E7079BACCF6A87BFD5B555F7FB321AE92DD6B4AB54CCEE6128A4711BA5B081"
+    }
+  ],
+  "shorterRoute": "Combine the already proved actual normalized analytic order of j-j(tau), full stabilizer multiplicity and the central-sign stabilizer divisibility with native integer arithmetic. This gives the termwise bound and identifies the exact equality condition for the forthcoming weighted fiber comparison; no standalone degree estimate or elliptic classification is added.",
+  "assumptionsToDischarge": [
+    "Each actual finite j-fiber order is positive and at most the corresponding subgroup relative stabilizer index.",
+    "Equality in that bound implies twice actual analytic ramification equals the enlarged subgroup stabilizer cardinality."
+  ],
+  "remaining": "Exact ramification at elliptic points, global charts, actual periods and complete Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight characteristic-zero association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

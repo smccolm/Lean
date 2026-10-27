@@ -1,0 +1,37 @@
+import SourceGammaOneTranslatedCuspGerms
+import SourceGammaOneCuspRatioRealization
+import SourceGammaOneCuspRealizationAlgebra
+import SourceGammaOneCuspOrder
+import SourceGammaOneCuspJOrder
+import SourceGammaOneCuspPlaces
+import SourceGammaOneCuspDerivativeOrder
+import SourceGammaOneDifferentialCuspGerm
+import SourceGammaOneRegularCuspOrder
+import SourceGammaOneRegularCuspForms
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_form_realization]
+  let localModules : Array Name := #[`SourceGammaOneAnalyticDifferentialRegularity, `SourceGammaOneAnalyticGerms, `SourceGammaOneAnalyticJOrders, `SourceGammaOneAnalyticOrder, `SourceGammaOneAnalyticOrderNontrivial, `SourceGammaOneAnalyticPlaces, `SourceGammaOneCuspDerivativeOrder, `SourceGammaOneCuspJOrder, `SourceGammaOneCuspOrder, `SourceGammaOneCuspPlaces, `SourceGammaOneCuspRatioRealization, `SourceGammaOneCuspRealizationAlgebra, `SourceGammaOneDifferentialCuspGerm, `SourceGammaOneHolomorphicDifferentials, `SourceGammaOneJRealization, `SourceGammaOneMeromorphicRealization, `SourceGammaOneRatioRealization, `SourceGammaOneRealizationAlgebra, `SourceGammaOneRegularCoefficientOrders, `SourceGammaOneRegularCuspForms, `SourceGammaOneRegularCuspOrder, `SourceGammaOneTranslatedCuspGerms]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.translated_modular_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.analyticAt_translated_cuspFunction, `Dubon2026.SourceFunctionField.GammaOne.eventually_ne_zero_translated_cuspFunction, `Dubon2026.SourceFunctionField.GammaOne.realize_smul_eq_translated_ratio, `Dubon2026.SourceFunctionField.GammaOne.cuspRealize_eventuallyEq_of_ratio, `Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_cuspRealize, `Dubon2026.SourceFunctionField.GammaOne.meromorphicOrderAt_cuspRealize_ne_top, `Dubon2026.SourceFunctionField.GammaOne.cuspRealize_const_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.cuspRealize_mul_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.cuspRealize_add_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.cuspOrder_ne_top, `Dubon2026.SourceFunctionField.GammaOne.cuspOrder_zero, `Dubon2026.SourceFunctionField.GammaOne.cuspOrder_eq_top_iff, `Dubon2026.SourceFunctionField.GammaOne.cuspOrder_algebraMap, `Dubon2026.SourceFunctionField.GammaOne.cuspOrder_one, `Dubon2026.SourceFunctionField.GammaOne.cuspOrder_mul, `Dubon2026.SourceFunctionField.GammaOne.cuspOrder_add, `Dubon2026.SourceFunctionField.GammaOne.analyticAt_levelOne_cuspFunction, `Dubon2026.SourceFunctionField.GammaOne.cusp_order_zero_of_tendsto_one, `Dubon2026.SourceFunctionField.GammaOne.cuspOrder_jCoordinate, `Dubon2026.SourceFunctionField.GammaOne.cuspOrder_jCoordinate_neg, `Dubon2026.SourceFunctionField.GammaOne.exists_cuspOrder_pos, `Dubon2026.SourceFunctionField.GammaOne.exists_cusp_place, `Dubon2026.SourceFunctionField.GammaOne.cuspRamification_pos, `Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order, `Dubon2026.SourceFunctionField.GammaOne.cuspPlace_j_neg, `Dubon2026.SourceFunctionField.GammaOne.cusp_raw_j_derivative_order, `Dubon2026.SourceFunctionField.GammaOne.differential_cusp_germ, `Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_order_pos, `Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_decay, `Dubon2026.SourceFunctionField.GammaOne.exists_regular_cusp_form, `Dubon2026.SourceFunctionField.GammaOne.regular_differential_cusp_form_realization, `Dubon2026.SourceFunctionField.GammaOne.cuspRealize, `Dubon2026.SourceFunctionField.GammaOne.cuspOrder, `Dubon2026.SourceFunctionField.GammaOne.cuspPlace, `Dubon2026.SourceFunctionField.GammaOne.cuspRamification, `Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_differential, `Dubon2026.SourceFunctionField.GammaOne.regular_coefficient_order_bound, `Dubon2026.SourceFunctionField.GammaOne.realize_jCoordinateOver, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio, `Dubon2026.SourceFunctionField.exists_raw_j_derivative_formula, `Dubon2026.SourceFunctionField.raw_j_derivative_smul, `Dubon2026.SourceFricke.isZeroAtImInfty_iff_cusp_order_pos, `Dubon2026.SourceCurve.Place.exists_place_of_orderMap, `Dubon2026.SourceCurve.Place.ordDifferential_D_eq_ord_sub_one, `Dubon2026.SourceFunctionField.GammaOne.CuspAuxiliary.natCast_mem_strictPeriods_conj]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE CUSP VANISHING DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in actual regular-differential cusp-form realization. Only declaration values are traversed. Translated modular quotient germs define actual normalized cusp places. The pole of j and exact derivative order turn regularity into positive cusp order. Existing finite holomorphy and all-cusp vanishing construct the native weight-two cusp form. Exact Fourier normalization, coefficient transport, Hecke/diamond arithmetic comparison and literal higher symmetric-power continuation remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

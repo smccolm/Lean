@@ -1,0 +1,4 @@
+{
+  "reason": "The existing primitive period theorem takes the subgroup explicitly. Finish real-part equality with the definitional primitive rather than a mismatched simp expression. All failed source and diagnostic evidence preserved.",
+  "proofLimitsChanged": false
+}

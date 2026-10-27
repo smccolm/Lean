@@ -1,0 +1,39 @@
+import Dubon2026.SourceGammaOneRatioRealization
+import Dubon2026.SourceGammaOneAnalyticGerms
+import Dubon2026.SourceGammaOneMeromorphicRealization
+import Dubon2026.SourceGammaOneRealizationAlgebra
+import Dubon2026.SourceGammaOneAnalyticOrder
+import Dubon2026.SourceGammaOneAnalyticOrderNontrivial
+import Dubon2026.SourceGammaOneAnalyticPlaces
+import Dubon2026.SourceGammaOneJRealization
+import Dubon2026.SourceGammaOneRegularCoefficientOrders
+import Dubon2026.SourceGammaOneAnalyticJOrders
+import Dubon2026.SourceGammaOneAnalyticDifferentialRegularity
+import Dubon2026.SourceGammaOneHolomorphicDifferentials
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.regular_differential_holomorphic_realization]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneAnalyticDifferentialRegularity, `Dubon2026.SourceGammaOneAnalyticGerms, `Dubon2026.SourceGammaOneAnalyticJOrders, `Dubon2026.SourceGammaOneAnalyticOrder, `Dubon2026.SourceGammaOneAnalyticOrderNontrivial, `Dubon2026.SourceGammaOneAnalyticPlaces, `Dubon2026.SourceGammaOneHolomorphicDifferentials, `Dubon2026.SourceGammaOneJRealization, `Dubon2026.SourceGammaOneMeromorphicRealization, `Dubon2026.SourceGammaOneRatioRealization, `Dubon2026.SourceGammaOneRealizationAlgebra, `Dubon2026.SourceGammaOneRegularCoefficientOrders]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.realize_eq_div, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.analyticAt_comp_ofComplex, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.coe_eq_zero_iff, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.eventually_ne_zero, `Dubon2026.SourceFunctionField.GammaOne.ModularRatios.eventually_ne_zero_ofComplex, `Dubon2026.SourceFunctionField.GammaOne.realize_eventuallyEq_of_ratio, `Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_realize, `Dubon2026.SourceFunctionField.GammaOne.meromorphicOrderAt_realize_ne_top, `Dubon2026.SourceFunctionField.GammaOne.realize_algebraMap, `Dubon2026.SourceFunctionField.GammaOne.realize_mul_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.realize_add_eventuallyEq, `Dubon2026.SourceFunctionField.GammaOne.analyticOrder_ne_top, `Dubon2026.SourceFunctionField.GammaOne.analyticOrder_zero, `Dubon2026.SourceFunctionField.GammaOne.analyticOrder_eq_top_iff, `Dubon2026.SourceFunctionField.GammaOne.analyticOrder_algebraMap, `Dubon2026.SourceFunctionField.GammaOne.analyticOrder_one, `Dubon2026.SourceFunctionField.GammaOne.analyticOrder_mul, `Dubon2026.SourceFunctionField.GammaOne.analyticOrder_add, `Dubon2026.SourceFunctionField.GammaOne.exists_analyticOrder_pos, `Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place, `Dubon2026.SourceFunctionField.GammaOne.analyticRamification_pos, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_order, `Dubon2026.SourceFunctionField.GammaOne.realize_jCoordinateOver, `Dubon2026.SourceFunctionField.GammaOne.regular_coefficient_order_bound, `Dubon2026.SourceFunctionField.GammaOne.analyticOrder_j_sub, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_j_sub_pos, `Dubon2026.SourceFunctionField.GammaOne.analytic_derivative_order, `Dubon2026.SourceFunctionField.GammaOne.regular_analytic_differential_order, `Dubon2026.SourceFunctionField.GammaOne.regular_analytic_differential_bounded, `Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_differential, `Dubon2026.SourceFunctionField.GammaOne.regular_differential_holomorphic_realization, `Dubon2026.SourceFunctionField.GammaOne.realize, `Dubon2026.SourceFunctionField.GammaOne.analyticOrder, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace, `Dubon2026.SourceFunctionField.GammaOne.analyticRamification, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_dCoordGenerates, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_localDifferentials, `Dubon2026.SourceFunctionField.jqModC_mul_discriminant_expansion, `Dubon2026.SourceFunctionField.meromorphicOrderAt_deriv_jf_add_one, `Dubon2026.SourceCurve.Place.exists_place_of_orderMap, `Dubon2026.SourceCurve.Place.ordDifferential_D_eq_ord_sub_one, `Dubon2026.SourceFunctionField.HolomorphicQuotient.exists_mdifferentiable_mul_eq, `Dubon2026.SourceFunctionField.raw_j_derivative_smul, `Dubon2026.SourceFunctionField.mdifferentiable_raw_j_derivative, `Dubon2026.SourceFunctionField.GammaOne.D_jCoordinateOver_ne_zero]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE LOCAL HOLOMORPHY DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in actual finite-point holomorphic differential realization. Only declaration values are traversed. Actual modular quotient germs supply normalized places. Exact local differential order and the analytic derivative order remove every finite pole. Native removable singularities construct the actual holomorphic weight-two function and its Gamma covariance. All-cusp vanishing, complete Fourier matching, arithmetic comparison and literal higher symmetric-power continuation remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

@@ -1,0 +1,24 @@
+{
+  "repository": "anthropics/fermats-last-theorem",
+  "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "scope": "Selected pinned source files only. Assess whether the exact actual Gamma1 period/Picard contract has a shorter rigorous route before expanding cusp/global chart infrastructure. No full closure, local build, import or pin change.",
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_exists_meromorphic_meromorphicOrderAt_eq_of_abelJacobi_mem_periodLatticeOf_gammaH.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-route-reuse-736\\S_ModularCurve_ComplexPlaceDictionaryOf_exists_meromorphic_meromorphicOrderAt_eq_of_abelJacobi_mem_periodLatticeOf_gammaH.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_exists_meromorphic_meromorphicOrderAt_eq_of_abelJacobi_mem_periodLatticeOf_gammaH.lean",
+      "bytes": 16363,
+      "gitBlob": "08947faa40b3bd773246a7942f47ae132d65e0e7",
+      "sha256": "12F5DE055DDA8E2DAA172DEC6E16291438DDC21919DF126B8F3B92F68D918182"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_isPrincipal_of_abelJacobi_mem_periodLatticeOf_gammaH.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-route-reuse-736\\S_ModularCurve_ComplexPlaceDictionaryOf_isPrincipal_of_abelJacobi_mem_periodLatticeOf_gammaH.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_isPrincipal_of_abelJacobi_mem_periodLatticeOf_gammaH.lean",
+      "bytes": 17221,
+      "gitBlob": "c03bfb2d4f789a812551491ae9d584f3ba0390ef",
+      "sha256": "0AF5B5F15D11785C801D5A59ED5750E426E014568BA3B1384062B811104DBD7D"
+    }
+  ]
+}

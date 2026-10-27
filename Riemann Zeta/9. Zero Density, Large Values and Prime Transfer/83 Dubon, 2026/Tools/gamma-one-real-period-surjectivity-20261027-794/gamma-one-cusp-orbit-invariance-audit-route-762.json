@@ -1,0 +1,28 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 and Abel-Jacobi -> real period surjectivity -> matching Manin/genus dimension bounds -> actual cusp-orbit/place comparison.",
+  "assumptionsToDischarge": "Actual modular ratios and their translated cusp germs imply left subgroup invariance. Right integral translation rotates the cusp parameter by a nonzero scalar, preserving its meromorphic order and normalized valuation subring. The central sign fixes the upper half-plane. The existing integral cusp-stabilizer classification proves that the actual normalized place depends only on the rational cusp orbit; representative invariance is not assumed.",
+  "remaining": "Exact widths and cusp-orbit/place bijection, the reverse dimension inequality, real period surjectivity, reciprocity, Picard/Hecke/diamond/H1 comparisons, full all-weight characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceManinCuspStabilizer.lean",
+      "sha256": "E68170E419FE460979D6F25532A3F5E19709949982C5C5E7C1ABA8BD00E7E051"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceParabolicClassification.lean",
+      "sha256": "B5A4956F75E621AB8E8B684ED38F2AE693844077462876CBCC420E9D77ACE602"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCuspAuxiliaryForm.lean",
+      "sha256": "41EDB3674B214E70AEFF9874A11572D6E119E4C7FE728BADA425C6371F483FC6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\CuspSparseLowering.lean",
+      "sha256": "190271E7F3A3BAB494FDA1C7F4F4C2E65D6023E4E7A26372C6B72772C0B939FF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-period-dimension-route-759.json",
+      "sha256": "B4CA82520EEE2C565AE66D62B7A2107CC8233D3CA43A1696DDAF79B2847D6C65"
+    }
+  ],
+  "shorterRoute": "Reuse the existing rational cusp stabilizer, integral parabolic classification, native cusp periodicity and meromorphic-order composition theorem. No new cusp uniformization or full-level Galois field is introduced."
+}

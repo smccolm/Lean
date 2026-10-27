@@ -1,0 +1,6 @@
+{
+  "chain": "DUB-17/18 -> original all-weight arithmetic association -> actual finite homogeneous-coefficient Gamma1 characters -> Picard/H1/full-parabolic/transpose/diamond comparison -> modular periods -> original meromorphic field realization.",
+  "assumptionsToDischarge": "Consume the original algebraic multiplier and the precise ramification-weighted finite-divisor orders to derive a holomorphic product, actual subgroup invariance, literal local realization and multiplier cusp bounds.",
+  "sourceContract": "The frozen scope736 exists_meromorphic_meromorphicOrderAt_eq_of_abelJacobi_mem_periodLatticeOf_gammaH returns actual meromorphy, invariance, nonzero limits at every translated cusp, and exactly these ramification-weighted orders. Function construction from the period condition remains unproved locally.",
+  "remaining": "Use cusp limits to bound the pole-cleared product, realize it in the original field, divide by the nonzero actual multiplier, and transfer cusp limits. Period existence, reciprocity, full comparison and original all-weight arithmetic association remain; 16/20; DUB-17--20 OPEN."
+}

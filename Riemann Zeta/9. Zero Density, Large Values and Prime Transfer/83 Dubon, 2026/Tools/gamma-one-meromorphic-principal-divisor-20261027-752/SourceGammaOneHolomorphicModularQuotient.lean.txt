@@ -1,0 +1,92 @@
+import SourceGammaOneUniformCuspPole
+import Dubon2026.SourceMeromorphicCuspPoleClearing
+import Dubon2026.SourceGammaOneAllModularRatioMembership
+import Dubon2026.SourceGammaOneQuotientCuspSeries
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual finite
+Gamma1 character realization -> Picard/H1 comparison -> modular periods ->
+meromorphic field realization. Clear all cusp poles by one discriminant
+power, construct actual modular forms, and retain their literal quotient. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup ModularForm
+open scoped MatrixGroups ModularForm Manifold
+variable {Γ : Subgroup SL(2, ℤ)} [Γ.FiniteIndex]
+
+theorem exists_holomorphic_modular_quotient
+    (F : ℍ → ℂ) (hF : MDiff F)
+    (hinv : ∀ γ ∈ Γ, ∀ τ : ℍ, F (γ • τ) = F τ)
+    (hpb : ∀ γ : SL(2, ℤ), ∃ m : ℕ,
+      IsBoundedAtImInfty ((F ∘ (γ • ·)) * ⇑CuspForm.discriminant ^ m)) :
+    ∃ (m : ℕ) (g h : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) (12 * (m : ℤ))),
+      h ≠ 0 ∧ (∀ τ : ℍ, h τ ≠ 0) ∧ ∀ τ : ℍ, F τ * h τ = g τ := by
+  obtain ⟨m, hm⟩ := SourceFricke.exists_uniform_discriminant_pole_bound F hinv hpb
+  let D0 : CuspForm (Γ : Subgroup (GL (Fin 2) ℝ)) 12 :=
+    cuspRestrictSubgroup (Subgroup.map_le_range _ Γ) CuspForm.discriminant
+  let D : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) (12 * (m : ℤ)) :=
+    ((D0 : ModularForm _ 12).pow m).mcast (by ring)
+  let Dfull : ModularForm 𝒮ℒ (12 * (m : ℤ)) :=
+    ((CuspForm.discriminant : ModularForm 𝒮ℒ 12).pow m).mcast (by ring)
+  have hD : (D : ℍ → ℂ) = ⇑CuspForm.discriminant ^ m := by
+    simp only [D, ModularForm.coe_mcast, ModularForm.coe_pow]
+    rfl
+  have hDfull : (Dfull : ℍ → ℂ) = (D : ℍ → ℂ) := by
+    rw [hD]
+    simp only [Dfull, ModularForm.coe_mcast, ModularForm.coe_pow]
+    rfl
+  have hs (γ : SL(2, ℤ)) :
+      (F * ⇑D) ∣[(12 * (m : ℤ))] γ = (fun τ : ℍ => F (γ • τ)) * ⇑D := by
+    have he := ModularForm.mul_slash_SL2 0 (12 * (m : ℤ)) γ F (D : ℍ → ℂ)
+    rw [zero_add] at he
+    have hd : (D : ℍ → ℂ) ∣[(12 * (m : ℤ))] γ = D := by
+      rw [← hDfull]
+      exact SlashInvariantFormClass.slash_action_eq (Γ := 𝒮ℒ) (k := 12 * (m : ℤ)) Dfull
+        (Matrix.SpecialLinearGroup.mapGL ℝ γ) ⟨γ, rfl⟩
+    rw [he, hd]
+    congr 1
+    funext τ
+    rw [ModularForm.SL_slash_apply, neg_zero, zpow_zero, mul_one]
+  let G : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) (12 * (m : ℤ)) :=
+    { toFun := F * ⇑D
+      slash_action_eq' := by
+        intro A hA
+        obtain ⟨γ, hγ, rfl⟩ : ∃ γ ∈ Γ, (γ : GL (Fin 2) ℝ) = A := by
+          simpa using hA
+        rw [← ModularForm.SL_slash, hs]
+        congr 1
+        exact funext (hinv γ hγ)
+      holo' := hF.mul D.holo'
+      bdd_at_cusps' := fun {c} hc => by
+        rw [OnePoint.isBoundedAt_iff_forall_SL2Z
+          ((Subgroup.IsArithmetic.isCusp_iff_isCusp_SL2Z _).mp hc)]
+        intro γ _
+        rw [hs, hD]
+        exact hm γ }
+  have hDne (τ : ℍ) : D τ ≠ 0 := by
+    change (D : ℍ → ℂ) τ ≠ 0
+    rw [hD]
+    exact pow_ne_zero m (discriminant_ne_zero τ)
+  refine ⟨m, G, D, ?_, hDne, fun _ => rfl⟩
+  intro hz
+  exact hDne default (by rw [hz]; rfl)
+
+theorem exists_holomorphic_modular_quotient_of_meromorphic_cusps
+    (N : ℕ) [NeZero N] (hΓ : Gamma N ≤ Γ)
+    (F : ℍ → ℂ) (hF : MDiff F)
+    (hinv : ∀ γ ∈ Γ, ∀ τ : ℍ, F (γ • τ) = F τ)
+    (hmer : ∀ γ : SL(2, ℤ), MeromorphicAt (cuspFunction N (F ∘ (γ • ·))) 0) :
+    ∃ (m : ℕ) (g h : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) (12 * (m : ℤ))),
+      h ≠ 0 ∧ (∀ τ : ℍ, h τ ≠ 0) ∧ ∀ τ : ℍ, F τ * h τ = g τ := by
+  apply exists_holomorphic_modular_quotient F hF hinv
+  intro γ
+  apply SourceFricke.exists_bounded_mul_discriminant_of_meromorphic _ (hmer γ)
+  apply SourceFricke.periodic_of_principal_invariant
+  intro δ hδ τ
+  have hconj : γ * δ * γ⁻¹ ∈ Γ := hΓ ((Gamma_normal N).conj_mem δ hδ γ)
+  change F (γ • (δ • τ)) = F (γ • τ)
+  calc
+    _ = F ((γ * δ * γ⁻¹) • (γ • τ)) := by simp only [mul_smul, inv_smul_smul]
+    _ = _ := hinv _ hconj _
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

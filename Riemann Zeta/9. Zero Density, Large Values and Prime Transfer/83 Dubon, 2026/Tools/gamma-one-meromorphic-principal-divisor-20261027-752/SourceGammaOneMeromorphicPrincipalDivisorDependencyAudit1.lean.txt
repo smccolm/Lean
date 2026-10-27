@@ -1,0 +1,29 @@
+import SourceGammaOneMeromorphicCuspLimits
+import SourceGammaOneMeromorphicPrincipalDivisor
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.tendsto_atImInfty_of_local_eq, `Dubon2026.SourceFunctionField.GammaOne.eventually_continuousAt_realize_cusp, `Dubon2026.SourceFunctionField.GammaOne.tendsto_cuspFunction_of_tendsto, `Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_of_local_eq, `Dubon2026.SourceFunctionField.GammaOne.isPrincipal_of_prescribed_meromorphic_orders, `Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_function]
+  let localModules : Array Name := #[`SourceGammaOneMeromorphicCuspLimits, `SourceGammaOneMeromorphicPrincipalDivisor, `SourceGammaOnePoleClearedProduct, `SourceGammaOnePoleClearedCuspBounds, `SourceGammaOneMeromorphicFieldRealization, `SourceGammaOneOriginalPoleMultiplier, `SourceGammaOnePoleClearedNormalization, `SourceGammaOneUniformCuspPole, `SourceGammaOneHolomorphicModularQuotient, `SourceGammaOneHolomorphicFieldRealization, `SourceGammaOneCuspBoundedRealization, `SourceGammaOneCuspResidues, `SourceGammaOneCuspPlaceExhaustion]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.tendsto_atImInfty_of_local_eq, `Dubon2026.SourceFunctionField.GammaOne.eventually_continuousAt_realize_cusp, `Dubon2026.SourceFunctionField.GammaOne.tendsto_cuspFunction_of_tendsto, `Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_of_local_eq, `Dubon2026.SourceFunctionField.GammaOne.isPrincipal_of_prescribed_meromorphic_orders, `Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_function, `Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_prescribed_meromorphic_orders, `Dubon2026.SourceFunctionField.GammaOne.order_eq_zero_at_j_poles_of_cusp_limits, `Dubon2026.SourceFunctionField.GammaOne.place_analytic_or_actual_cusp, `Dubon2026.SourceFunctionField.GammaOne.cuspPlace_order_eq_zero_of_tendsto, `Dubon2026.SourceFunctionField.GammaOne.eventually_ne_zero_translated_cuspFunction, `Dubon2026.SourceFunctionField.GammaOne.realize_smul_eq_translated_ratio, `Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_eq, `Function.Periodic.invQParam_tendsto, `Dubon2026.SourceCurve.exists_nonconstant_regular_away_of_finite_coordinate]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE MEROMORPHIC PRINCIPAL DIVISOR DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual original-field principal divisor, including cusp-limit transfer, actual cusp exhaustion and every j-pole order. Only declaration values are traversed. Actual period-function existence, real period surjectivity, reciprocity, Hecke/diamond/H1 arithmetic comparison, all-weight association and higher continuation remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

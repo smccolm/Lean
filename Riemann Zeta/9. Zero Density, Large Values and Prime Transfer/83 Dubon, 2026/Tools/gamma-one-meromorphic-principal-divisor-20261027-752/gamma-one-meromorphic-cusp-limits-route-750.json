@@ -1,0 +1,20 @@
+{
+  "chain": "DUB-17/18 -> original all-weight arithmetic association -> actual finite homogeneous-coefficient Gamma1 characters -> Picard/H1/full-parabolic/transpose/diamond comparison -> modular periods -> original meromorphic field realization -> order zero at every j-pole place.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Complex\\Periodic.lean",
+      "sha256": "75A10B2EA9BDF2197DA78B1576AB50D156182143960F567709DA9E6444AB1179"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCuspRatioRealization.lean",
+      "sha256": "B38E2DF84980F3546A2C86001BD036A1CEF18A571FF2FD79FEAEB61BABF15AE6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneTranslatedCuspGerms.lean",
+      "sha256": "FFA8618260E6FE71D032CC18D3AAD6BA19D8D4FD16F2293471D4AA690D2D05E6"
+    }
+  ],
+  "assumptionsToDischarge": "Transfer the actual nonzero translated cusp limits through the local meromorphic field realization. Derive eventual continuity from the actual modular denominator; use native inverse-q convergence. This supplies scope743 order-zero-at-every-j-pole consumer.",
+  "shorterRoute": "Preserve the limit under punctured local equality, avoiding global cusp charts, full-level Galois fields and inverse-j equations.",
+  "remaining": "Assemble the full divisor identity and then provide actual period-function existence/reciprocity and all original global/arithmetic comparisons; 16/20; DUB-17--20 OPEN."
+}

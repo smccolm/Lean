@@ -1,0 +1,39 @@
+import Dubon2026.SourceGammaOneHolomorphicModularQuotient
+import Dubon2026.SourceGammaOneCuspBoundedRealization
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual finite
+Gamma1 characters -> Picard/H1 and modular periods -> meromorphic field
+realization. The holomorphic case now belongs to the original integral-ratio
+field, with its actual pointwise and translated cusp realizations. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup Filter
+open scoped MatrixGroups ModularForm Manifold Topology
+
+theorem exists_original_field_of_holomorphic
+    (N : ℕ) [NeZero N] (F : ℍ → ℂ) (hF : MDiff F)
+    (hinv : ∀ γ ∈ Gamma1 N, ∀ τ : ℍ, F (γ • τ) = F τ)
+    (hmer : ∀ γ : SL(2, ℤ), MeromorphicAt (cuspFunction N (F ∘ (γ • ·))) 0) :
+    ∃ x : functionFieldOver (Gamma1 N) ℂ,
+      (∀ τ : ℍ, realize (Gamma1 N) (x : LaurentSeries ℂ) τ = F τ) ∧
+      CuspTaylor.Represents (x : LaurentSeries ℂ) (cuspFunction 1 F) ∧
+      ∀ γ : SL(2, ℤ), cuspRealize (Gamma1 N) N γ (x : LaurentSeries ℂ) =ᶠ[𝓝[≠] (0 : ℂ)]
+        cuspFunction N (fun τ : ℍ => F (γ • τ)) := by
+  have hΓ : Gamma N ≤ Gamma1 N := by
+    intro γ hγ
+    simp_all [Gamma1_mem, Gamma_mem]
+  have hT : ModularGroup.T ∈ Gamma1 N := by simp [Gamma1_mem, ModularGroup.T]
+  obtain ⟨m, g, h, hh, hne, he⟩ :=
+    exists_holomorphic_modular_quotient_of_meromorphic_cusps N hΓ F hF hinv hmer
+  let x : functionFieldOver (Gamma1 N) ℂ :=
+    ⟨ModularRatios.qL g / ModularRatios.qL h, modular_ratio_mem N g h hh⟩
+  have hr : (x : LaurentSeries ℂ) * ModularRatios.qL h = ModularRatios.qL g :=
+    div_mul_cancel₀ _ (ModularRatios.qL_ne_zero hT h hh)
+  refine ⟨x, ?_, quotient_cusp_represents one_pos (hper hT) g h hh F he, ?_⟩
+  · intro τ
+    rw [realize_eq_div (Gamma1 N) hT g h x hr τ (hne τ)]
+    exact ((eq_div_iff (hne τ)).mpr (he τ)).symm
+  · exact holomorphic_quotient_cusp_eventuallyEq N hΓ hT g h hh x hr F he
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

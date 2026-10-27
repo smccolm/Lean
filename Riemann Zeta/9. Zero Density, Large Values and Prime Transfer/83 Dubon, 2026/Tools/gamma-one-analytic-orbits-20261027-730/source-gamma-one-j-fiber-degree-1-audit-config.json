@@ -1,0 +1,26 @@
+{
+  "modules": [
+    "SourceGammaOneJFiberDegree"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.sum_j_fiber_orders_eq_finrank"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.sum_j_fiber_orders_eq_finrank"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.sum_j_fiber_orders_eq_finrank",
+    "Dubon2026.SourceCurve.sum_positive_orders_eq_finrank_adjoin",
+    "Dubon2026.SourceFunctionField.GammaOne.place_residue_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteDimensional_jCoordinateOver"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.sum_j_fiber_orders_eq_finrank"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneJFiberDegree"
+  ],
+  "separateReason": "literal actual finite j-fiber total orders equal to the existing coordinate extension degree. Native positive-order sums and residue bijectivity are consumed. No exact field degree is assumed."
+}

@@ -1,0 +1,42 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> actual Picard/H1/period/Hecke/diamond comparison -> global charts -> orbit separation and exact elliptic ramification -> actual weight-two Gamma1 torsion division forms.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFrickeFunctionTransformationV2.lean",
+      "sha256": "89F3BFBF1137F5B6F75FC355B05F3A5306B1272691D0F1A8F5E2123166B492F3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFrickeHolomorphy.lean",
+      "sha256": "0F95E4A11784515A023DC6EE8D9ED9B4CD06E7588978A60314A96B2AFB9497D5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFrickeCuspInputs.lean",
+      "sha256": "E9F3101E3DFD98914AE371D59334511F11519CC92593A67F801F216D6E4B4F69"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHolomorphicDiscriminantLift.lean",
+      "sha256": "A212BA8D9511E23DF75B4826202D1C4FAD523B0317B349B664057155E9833C26"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCuspAuxiliaryForm.lean",
+      "sha256": "41EDB3674B214E70AEFF9874A11572D6E119E4C7FE728BADA425C6371F483FC6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-separation-reuse-712\\S_PeriodPair_exists_gamma1_two_eq_weierstrassP_and_slash_and_qExpansion_coeff.lean.txt",
+      "sha256": "6637C99D89452D243C2D8CD39A70CF6F1379B460033160146B29B3EB9D3197CB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-separation-reuse-712\\route-assessment.json",
+      "sha256": "639352E6B16DD102843962FF196FF8F31E35F1BECA7707A9F6F902B7BD34F921"
+    }
+  ],
+  "shorterRoute": "Construct the native Gamma1 modular form directly from existing wpNormZ torsion transformation, holomorphy, all translated cusp bounds and invertibility of the torsion-index action. Nonzero torsion indices are the only ones needed for orbit separation; level one is handled separately there. Use wpNormZ normalization, exactly one twelfth of the external W form, and state the literal analytic value. The incidental explicit width-one coefficient formula and general H power-sum construction are deferred.",
+  "assumptionsToDischarge": [
+    "The actual nonzero division-point function is a native weight-two Gamma1 modular form.",
+    "Its actual slash action under Gamma0 agrees with the specified torsion-index multiplication.",
+    "Holomorphy and all cusp bounds are derived, not postulated."
+  ],
+  "remaining": "Division-value comparison must produce subgroup orbit separation; reverse elliptic ramification and full global chart/period/Hecke/diamond/Picard/H1 arithmetic comparison remain. Full all-weight arithmetic association and higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

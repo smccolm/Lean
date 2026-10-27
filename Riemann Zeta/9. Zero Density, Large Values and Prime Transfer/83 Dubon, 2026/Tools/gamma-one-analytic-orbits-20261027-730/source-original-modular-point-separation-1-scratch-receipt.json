@@ -1,0 +1,54 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T06:38:32.600798+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceOriginalModularPointSeparation"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalModularPointSeparation.lean",
+      "sha256": "01F5B9FD4ED1EC15BDD566CBC69621B0F30A0C8D79B7E529FB69B0D438C9FDC6",
+      "oleanSha256": "B55A99EE2D8D8FB76A50D35ABC4F27B53987C850869382AFD7ACFFBE71331485"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.originalPlaceEval_eq_modular_ratio",
+    "Dubon2026.SourceFunctionField.exists_original_nonvanishing_modular_ratio",
+    "Dubon2026.SourceFunctionField.exists_gamma0_smul_eq_of_cross_products",
+    "Dubon2026.SourceFunctionField.exists_original_separating_modular_forms"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.originalPlaceEval_eq_modular_ratio",
+    "Dubon2026.SourceFunctionField.exists_original_nonvanishing_modular_ratio",
+    "Dubon2026.SourceFunctionField.exists_gamma0_smul_eq_of_cross_products",
+    "Dubon2026.SourceFunctionField.exists_original_separating_modular_forms"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalModularPointSeparationAudit1.log",
+  "logSha256": "89CE54E1261A78092A55A50D5C71A605025DFDEE64471B887B56685B26542C2A",
+  "auditSha256": "03FEC2B403C8CACAFF769DC22AE01D0B35F4DDA4ED48F797AF50A4E58CAF3C05",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 4,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 11,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalModularPointSeparationDependencyAudit1.log",
+  "dependencyAuditSha256": "1E5E053D39D02B74E80E79ACE7C63756A813D6790F29054B1AF8144D81DC9F4B",
+  "dependencyAuditSourceSha256": "B17C904E25332B646D58712C80B79A9B43CC2811D5B2C961E4E6816A6964A4CE",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.exists_original_separating_modular_forms"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> full Gamma1 orbit separation -> native Gamma0 forms separate its orbits.",
+  "discharged": [
+    "Represent every function regular at all analytic places using actual same-weight forms with denominator nowhere zero on the upper half plane.",
+    "Identify actual residue evaluation with the analytic quotient at a point with nonzero denominator.",
+    "Derive Gamma0 orbit equivalence and actual separating modular forms from the existing integral-closure centers; no point separation premise is introduced."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Restrict the Gamma0 separating forms to Gamma1 and combine with the audited within-Gamma0 separation. Then exact Gamma1 elliptic ramification and global charts, full period/Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-original-modular-point-separation-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "7A03B1B4D45500A8551E2F7CA6806D1AB7A67A8DECE1E8E1ED786AD34E227CFE",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

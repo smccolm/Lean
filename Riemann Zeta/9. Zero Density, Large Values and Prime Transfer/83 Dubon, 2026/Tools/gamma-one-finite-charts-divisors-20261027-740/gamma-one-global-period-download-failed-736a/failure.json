@@ -1,0 +1,3 @@
+{
+  "reason": "Sandbox network socket denied with WinError 10013 before any source download. No file or snapshot was written. Request a read-only network exception for the two exact primary-source URLs already selected."
+}

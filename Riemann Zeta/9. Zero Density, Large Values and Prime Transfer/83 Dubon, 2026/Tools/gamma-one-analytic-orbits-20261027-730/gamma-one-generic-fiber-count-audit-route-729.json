@@ -1,0 +1,29 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact ramification -> native Gamma1 modular forms separate every distinct Gamma1 orbit.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceAnalyticJSurjectivity.lean",
+      "sha256": "C3E2EB883F3D99EB8C18D346C329640888490C758695DAE415A571A6B24ADE1E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberOrbits.lean",
+      "sha256": "D0251076EDA7909BC3323635B276218B54A0EDC1D58AC03DDCC45926A37626CB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationBounds.lean",
+      "sha256": "593C657495E8A2FB347B371F2BFB32C01383C54584221CE5D4022FC3E8333D6B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOrbitCounting.lean",
+      "sha256": "D1C431ABA6FE9E5AE3FCE6ACA6AB6BE4FA1163E5C75F27E4F4E69F62931EA5FF"
+    }
+  ],
+  "shorterRoute": "Use the existing analytic j-surjectivity theorem at j=1 to obtain a generic point with full stabilizer cardinality two. This avoids the upstream separate 2*i fundamental-domain analysis. Positive actual fiber orders, the termwise index bound and native orbit counting then identify one actual fiber total with the subgroup index. The existing fixed-degree fiber theorem will transfer this equality to every fiber after canonical import assembly.",
+  "assumptionsToDischarge": [
+    "An actual generic j fiber has total positive place order equal to the subgroup index, with its point and multiplicities constructed from proved results.",
+    "The weighted relative-index sum is expressed for the actual Gamma1 orbit representatives used by the fiber bijection."
+  ],
+  "remaining": "Exact ramification at elliptic points, global charts, actual periods and complete Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight characteristic-zero association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

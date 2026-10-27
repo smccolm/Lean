@@ -1,0 +1,32 @@
+{
+  "recordedUTC": "2026-10-27T10:38:26.045166+00:00",
+  "reason": "Four downloaded upstream Markdown snapshots also retain upstream-relative links. Store their identical bytes as plain-text research snapshots, while keeping all historical manifests immutable.",
+  "preflightFailure": "INVENTORY FAIL: Broken local link in Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math__CONTENTS.md: overview.pdf",
+  "preflightExit": 1,
+  "predecessorManifest": {
+    "path": "Tools/gamma-one-finite-charts-divisors-20261027-740/archive-manifest-8586b.json",
+    "sha256": "3515158E51E976729C704C5DDF8A0467638B3E89CDF2DC161C71780126D44C41"
+  },
+  "relocations": [
+    {
+      "oldPath": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math__CONTENTS.md",
+      "newPath": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math__CONTENTS.md.txt",
+      "sha256": "080BADCB677FB80BE0E695C21A8EC88BCB3A46DD3E3078CA10061E6B289BE175"
+    },
+    {
+      "oldPath": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math__history.md",
+      "newPath": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math__history.md.txt",
+      "sha256": "AC688A38EB9AFDB1F3C339C1DF251CDB1AA7D8F18067B3CE5D668A96D690F5FB"
+    },
+    {
+      "oldPath": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math__README.md",
+      "newPath": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/openai__math__README.md.txt",
+      "sha256": "6CB7F0E387B67C051227C6BA27ACA87EE82D9DD2530B6452B86B8681A2E2743A"
+    },
+    {
+      "oldPath": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/teal-sea__zeta-lab__47-the-davenport-heilbronn-zero.md",
+      "newPath": "Tools/gamma-one-finite-charts-divisors-20261027-740/reuse-head-refresh-741/teal-sea__zeta-lab__47-the-davenport-heilbronn-zero.md.txt",
+      "sha256": "537ACB03B96D77C44355C59D910128C6C15AE08E25E792B68E3EBBC6B8CE9B46"
+    }
+  ]
+}

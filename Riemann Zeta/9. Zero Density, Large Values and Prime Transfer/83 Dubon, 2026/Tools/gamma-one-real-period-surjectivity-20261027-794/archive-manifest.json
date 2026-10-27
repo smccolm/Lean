@@ -1,0 +1,1789 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-surjectivity-promotion-route-794.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-surjectivity-promotion-route-794.json",
+      "sha256": "2BA0DFA8963CAED4C065DC4DB8A74D68FB2E7C750C779BCD47CC904029CD2A76"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCanonicalCoordinates.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCanonicalCoordinates.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCanonicalCoordinates.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCanonicalCoordinates.lean.txt",
+      "sha256": "5AF75D4DE63D2E3E7C1E7D3F05C1A9DCA1FB86F5776CE7D2F3044ABBEA417FFC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCanonicalCoordinates.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCanonicalCoordinates.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCanonicalFiberLower.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCanonicalFiberLower.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCanonicalFiberLower.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCanonicalFiberLower.lean.txt",
+      "sha256": "FBE6B1F857251413C8445F26A90C791700E50F932248C47F93D4A3829C696BA0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCanonicalFiberLower.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCanonicalFiberLower.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCanonicalGenusLowerAudit1.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCanonicalGenusLowerAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCanonicalGenusLowerAudit1.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCanonicalGenusLowerAudit1.lean.txt",
+      "sha256": "38C897AF667C3C993186F7058EF3AE7CD334C56EF42E64C7ED218038F4CA96E4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCanonicalGenusLowerAudit1.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCanonicalGenusLowerAudit1.log",
+      "sha256": "3E32D243ED86422C2EBF9BDEE27FA2D18A032076350C3519CB2123955DBF419F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCanonicalGenusLowerDependencyAudit1.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCanonicalGenusLowerDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCanonicalGenusLowerDependencyAudit1.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCanonicalGenusLowerDependencyAudit1.lean.txt",
+      "sha256": "65AB1F5A57BA1CEFF1496544247371256429867DF4592EA5E7D7D5FE01A4863E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCanonicalGenusLowerDependencyAudit1.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCanonicalGenusLowerDependencyAudit1.log",
+      "sha256": "C2D72BA12A414293365303B31CE77592393DF5B178B987774A293FE1C27EC547"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCanonicalGenusLowerScratchOwnership789.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCanonicalGenusLowerScratchOwnership789.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCanonicalGenusLowerScratchOwnership789.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCanonicalGenusLowerScratchOwnership789.lean.txt",
+      "sha256": "47B91FC6A2CFCCFEDAEF8118DD4C1C5DD276265D904A0419A750B146166D2F61"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCanonicalGenusLowerScratchOwnership789.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCanonicalGenusLowerScratchOwnership789.log",
+      "sha256": "486D672FAE1C065A02BBA8A945A9B3B96A603157FB0695DE0C10D208F3E21ECB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCentralSignCharacters.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCentralSignCharacters.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCentralSignCharacters.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCentralSignCharacters.lean.txt",
+      "sha256": "FBBCE8F7ABEC651C67A29B45758D65A1227F47491112C51AF7080249AC2DA529"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCentralSignCharacters.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCentralSignCharacters.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspCosetBound.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspCosetBound.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspCosetBound.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspCosetBound.lean.txt",
+      "sha256": "2A0834B3DA3B8F6F674D975D5A34570B28ECAE6FF7BB5739C5FA9B5238F49CDE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspCosetBound.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspCosetBound.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspCosetPlaces.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspCosetPlaces.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspCosetPlaces.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspCosetPlaces.lean.txt",
+      "sha256": "C77F32802B386087676AEFD131D9A6182413BF21FB1CA37DBAB69A4DA3572573"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspCosetPlaces.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspCosetPlaces.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspCyclicOrbit.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspCyclicOrbit.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspCyclicOrbit.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspCyclicOrbit.lean.txt",
+      "sha256": "35671B03884BA8AB59346927AA14539165D1C171EA666B4A5360CED9E491A5FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspCyclicOrbit.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspCyclicOrbit.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspJExactOrder.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspJExactOrder.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspJExactOrder.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspJExactOrder.lean.txt",
+      "sha256": "7FE51EE11C1F50050400FE947524D1F6970945979CCA3D730EAC6236AE3F6C5E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspJExactOrder.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspJExactOrder.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspOrbitBijection.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspOrbitBijection.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspOrbitBijection.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspOrbitBijection.lean.txt",
+      "sha256": "9E1C037FFAD0BB49A23FC5B7352538E0A732038F62409163F15C239D2FC3FAA5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspOrbitBijection.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspOrbitBijection.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspOrbitInvarianceAudit1.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspOrbitInvarianceAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspOrbitInvarianceAudit1.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspOrbitInvarianceAudit1.lean.txt",
+      "sha256": "8219E1DA409691F6BDFBABF283B222ACEAD5ED438D5BB368162443E20E01FE19"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspOrbitInvarianceAudit1.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspOrbitInvarianceAudit1.log",
+      "sha256": "D0BF6877D71A5C39D1D55D4698B2712590F79BEE16D0AAD1135C2EE1BDE5C3DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspOrbitInvarianceDependencyAudit1.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspOrbitInvarianceDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspOrbitInvarianceDependencyAudit1.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspOrbitInvarianceDependencyAudit1.lean.txt",
+      "sha256": "39190FE7B433D2293D14E8693774F80E8505CDB601C982425BC78550846F293C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspOrbitInvarianceDependencyAudit1.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspOrbitInvarianceDependencyAudit1.log",
+      "sha256": "319540E2B63F4D7D20E1EF343A3437F0D1D745CC3573F88B5863A8BAE7EFA21A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspOrbitInvarianceScratchOwnership762.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspOrbitInvarianceScratchOwnership762.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspOrbitInvarianceScratchOwnership762.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspOrbitInvarianceScratchOwnership762.lean.txt",
+      "sha256": "BAE40B2AD6858BB89FD54117DAC5E2AD2768144F51C9FA6F9B32A23091457F47"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspOrbitInvarianceScratchOwnership762.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspOrbitInvarianceScratchOwnership762.log",
+      "sha256": "D0B729BCED2D098489A1BEF5F07D58FEE63034A821EC4D8BDCAA4207ECBBA3F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPlaceLeftInvariance.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspPlaceLeftInvariance.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPlaceLeftInvariance.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspPlaceLeftInvariance.lean.txt",
+      "sha256": "1C68770694D2B343CEB212D76126111F8904C2007660FE9DC7ADCF2951229A72"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPlaceLeftInvariance.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspPlaceLeftInvariance.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPlaceRightInvariance.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspPlaceRightInvariance.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPlaceRightInvariance.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspPlaceRightInvariance.lean.txt",
+      "sha256": "EC90049BCD900EAEBE9C3BBD4526CB34ED3F450E9ACFE137216F6331B451EE95"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPlaceRightInvariance.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspPlaceRightInvariance.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPoleDegree.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspPoleDegree.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPoleDegree.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspPoleDegree.lean.txt",
+      "sha256": "08ABB7B65EC425592AA976D0E5C66E6806A1AD1A5CDD1438BA79BBEBA195DE10"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPoleDegree.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspPoleDegree.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPositiveWeight.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspPositiveWeight.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPositiveWeight.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspPositiveWeight.lean.txt",
+      "sha256": "D89209C437E37BF7FE12A7D45D14FA7CC611E2EC28144B795BB62D1E5E57C4F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPositiveWeight.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspPositiveWeight.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspRotationOrder.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspRotationOrder.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspRotationOrder.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspRotationOrder.lean.txt",
+      "sha256": "519A22335B592DB8B85EE63AD6EFEFF098DBB9C984BCE2C798DE67A6A435F6DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspRotationOrder.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspRotationOrder.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspTranslationRamification.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspTranslationRamification.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspTranslationRamification.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspTranslationRamification.lean.txt",
+      "sha256": "51328F8C1D0AB2AAD038E0EE3238D8F9CE31E05EC0DA11E58FE374A99A8D6EB7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspTranslationRamification.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspTranslationRamification.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspTranslations.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspTranslations.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspTranslations.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspTranslations.lean.txt",
+      "sha256": "F3B6CD3942F3562321009C26FE0852916A28FFE85195B568DE70E323FED04BD6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspTranslations.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspTranslations.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspWidthBoundAudit1b.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspWidthBoundAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspWidthBoundAudit1b.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspWidthBoundAudit1b.lean.txt",
+      "sha256": "5EAC9CE08C32532ED6291E4FD3B04A85C78D37130800CDD125929D5CA3C92C15"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspWidthBoundAudit1b.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspWidthBoundAudit1b.log",
+      "sha256": "9B75D52BDB39975CE8EBA89D77630591A949ED429A5F3F92A07E65A2541170C1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspWidthBoundDependencyAudit1.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspWidthBoundDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspWidthBoundDependencyAudit1.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspWidthBoundDependencyAudit1.lean.txt",
+      "sha256": "98286EE93784A92D09A1B5FABF5C2E782138C2742044B91EE8DC0AD944F8FA19"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspWidthBoundDependencyAudit1.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspWidthBoundDependencyAudit1.log",
+      "sha256": "27D8CD80434181F093001F92107705D99E28C268673A024F89E5EA4EF376C0EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspWidthBoundScratchOwnership767.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspWidthBoundScratchOwnership767.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspWidthBoundScratchOwnership767.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspWidthBoundScratchOwnership767.lean.txt",
+      "sha256": "29EF9958824F99F914B83F191EA3BC0D58222B314769F334DC2F8F4D6C3BF3CA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspWidthBoundScratchOwnership767.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneCuspWidthBoundScratchOwnership767.log",
+      "sha256": "A840A5502D8A35E78CE33D1C30B02B2DCE2444BF20132BABCB5C5B9BE029107B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEllipticCosetFiber.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneEllipticCosetFiber.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEllipticCosetFiber.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneEllipticCosetFiber.lean.txt",
+      "sha256": "C93890F8473D5D1A22C830D9D3B07137AC1AAEDA84C8686DC05A3DE3D21AB110"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEllipticCosetFiber.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneEllipticCosetFiber.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEllipticFiberBounds.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneEllipticFiberBounds.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEllipticFiberBounds.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneEllipticFiberBounds.lean.txt",
+      "sha256": "14A7DC51F83CC50E97EDFBA9CD4A682C5693C4C603D7072D2F4F14362F3BAE55"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEllipticFiberBounds.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneEllipticFiberBounds.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactCuspOrbits.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneExactCuspOrbits.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactCuspOrbits.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneExactCuspOrbits.lean.txt",
+      "sha256": "A8FE05A876EE992BD00E95255BC18A2893C4FA6565BAA4ABC1C26739DB2838D1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactCuspOrbits.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneExactCuspOrbits.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactCuspOrbitsAudit1.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneExactCuspOrbitsAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactCuspOrbitsAudit1.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneExactCuspOrbitsAudit1.lean.txt",
+      "sha256": "5D29175523C3065E6F2491A79CB3B9BFA8DB248D987727B20BD4A00B8C28A863"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactCuspOrbitsAudit1.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneExactCuspOrbitsAudit1.log",
+      "sha256": "BC38E8C24C3A555EA9EF12CDF230113154EDEA3A3E53AA1CB9BEE29FB19DDB10"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactCuspOrbitsDependencyAudit1.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneExactCuspOrbitsDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactCuspOrbitsDependencyAudit1.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneExactCuspOrbitsDependencyAudit1.lean.txt",
+      "sha256": "9652E86A50DBA197A8C9369304C38CB756F1530029F399BDE3FDF155910BB798"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactCuspOrbitsDependencyAudit1.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneExactCuspOrbitsDependencyAudit1.log",
+      "sha256": "7C768F6440BD41939FF4220D7E91C8576D6043AAB3161D20205D32318E5E1710"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactCuspOrbitsScratchOwnership774.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneExactCuspOrbitsScratchOwnership774.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactCuspOrbitsScratchOwnership774.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneExactCuspOrbitsScratchOwnership774.lean.txt",
+      "sha256": "D613A7DE881113FA33BFAD254C27BAE57C82A3305677BA0158E6894754E68121"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactCuspOrbitsScratchOwnership774.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneExactCuspOrbitsScratchOwnership774.log",
+      "sha256": "FC12A73038F0F3FCE1A7262F52BF1E94EE023D7D0AD90400F9CE887BDF3E5F5F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusFiberLower.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneGenusFiberLower.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusFiberLower.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneGenusFiberLower.lean.txt",
+      "sha256": "EDAB490D2BA0F7EF102262A5E80A0BF167B6033D437460AC97DF3BBAD2EDCB2C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusFiberLower.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneGenusFiberLower.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantRealPart.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneInvariantRealPart.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantRealPart.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneInvariantRealPart.lean.txt",
+      "sha256": "DEAF5453D84154349BFE79D821F5CB9EE05F130AB7D09CD205CAD2F829485D60"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneInvariantRealPart.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneInvariantRealPart.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJDegreeFinsets.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneJDegreeFinsets.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJDegreeFinsets.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneJDegreeFinsets.lean.txt",
+      "sha256": "B9D0963DCC2A2592B1B58A30AF2647E44050E3741F71A91851133D7F63A08142"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJDegreeFinsets.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneJDegreeFinsets.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspOrbit.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRationalCuspOrbit.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspOrbit.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRationalCuspOrbit.lean.txt",
+      "sha256": "5529F764D486BDD243ACE54267AB0205972C5B45B1013F21730F440597DB5D00"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspOrbit.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRationalCuspOrbit.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspPlace.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRationalCuspPlace.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspPlace.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRationalCuspPlace.lean.txt",
+      "sha256": "B597E927040E52D4E131CD5C830460F4D7FFF24362F63D1E741122010955DD90"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCuspPlace.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRationalCuspPlace.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCyclicCusps.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRationalCyclicCusps.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCyclicCusps.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRationalCyclicCusps.lean.txt",
+      "sha256": "812AEB44009D87B5B46E61A0F8B766D3467FB68A4D12FE7BF7DC5658231B600B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCyclicCusps.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRationalCyclicCusps.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealCuspPotential.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealCuspPotential.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealCuspPotential.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealCuspPotential.lean.txt",
+      "sha256": "CF2A1AD225DD124176E10F63BDAD9515050D93E735F41C356DA8CBA9618EFAA3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealCuspPotential.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealCuspPotential.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealManinAudit1.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealManinAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealManinAudit1.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealManinAudit1.lean.txt",
+      "sha256": "87D93256152654CC9BD138C21157FCD9AC113E2CCBE3FB5E2339EC7D56A0E1F4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealManinAudit1.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealManinAudit1.log",
+      "sha256": "992A6A1F8F0563FF980CF7D10901AEFE7369A1DDA89F7384BCF6B13C14764565"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealManinCharacter.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealManinCharacter.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealManinCharacter.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealManinCharacter.lean.txt",
+      "sha256": "C06020E3FD67CD80E00900CD40F5C88D0E6DC4158647826A62719434554D587D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealManinCharacter.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealManinCharacter.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealManinDependencyAudit1b.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealManinDependencyAudit1b.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealManinDependencyAudit1b.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealManinDependencyAudit1b.lean.txt",
+      "sha256": "A172420A924E0B361B3A047DD8FA32AECEE7CE771F1C257003BD0AFCEE97F464"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealManinDependencyAudit1b.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealManinDependencyAudit1b.log",
+      "sha256": "ECBB5986300C3CCA6EFEC7E429EE1BF1791FBD447880B9BFAE5D931007CE93A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealManinDimension.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealManinDimension.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealManinDimension.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealManinDimension.lean.txt",
+      "sha256": "E7064B836348E8BD1B73F7C9E7185D65C5D58FE1E945BC990FFF076733C5A63A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealManinDimension.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealManinDimension.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealManinScratchOwnership781.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealManinScratchOwnership781.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealManinScratchOwnership781.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealManinScratchOwnership781.lean.txt",
+      "sha256": "D3D60F29D7ABEECB2DB4E4BAF1D12B10222D70F4013A1D40F4A22D24DB725E24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealManinScratchOwnership781.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealManinScratchOwnership781.log",
+      "sha256": "394EB6C011171FD4E382485E8D6927ED9846F79BF2BB892AF1E2F8E11ED2D2A0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicPeriods.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealParabolicPeriods.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicPeriods.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealParabolicPeriods.lean.txt",
+      "sha256": "F28255F16B106E6019118D8E4C714869E334E3C553A3CD0D6835113826E9CFF9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicPeriods.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealParabolicPeriods.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicPeriodsAudit1.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealParabolicPeriodsAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicPeriodsAudit1.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealParabolicPeriodsAudit1.lean.txt",
+      "sha256": "896288997189FEF341A879AE32A3CC36FDC57119B0F99B1E6BE30CAB23FBFECA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicPeriodsAudit1.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealParabolicPeriodsAudit1.log",
+      "sha256": "9C44DA1A624F236B0F12F12A06589B62AA3AD52F74BF68752AE668EB94A6C290"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicPeriodsDependencyAudit1.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealParabolicPeriodsDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicPeriodsDependencyAudit1.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealParabolicPeriodsDependencyAudit1.lean.txt",
+      "sha256": "8278159B8F9EF49AFF02EB4C07782AA40463AB79FBA3FCCAC42C1C9A5D03D7D9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicPeriodsDependencyAudit1.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealParabolicPeriodsDependencyAudit1.log",
+      "sha256": "43E7E7D4E8F3B74DA786BFC5CC456DC2D9E15EA67C8077DCBE9CDEF6B1F346B2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicPeriodsScratchOwnership758.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealParabolicPeriodsScratchOwnership758.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicPeriodsScratchOwnership758.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealParabolicPeriodsScratchOwnership758.lean.txt",
+      "sha256": "9DF583096C8C7F76A77DBDE0C316267044BF1E40C2A9D436E0F946CFF1D5A3B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicPeriodsScratchOwnership758.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealParabolicPeriodsScratchOwnership758.log",
+      "sha256": "F7CF2014C69FD0F3AB9A04E1C2F51FBEBF2E846E83CBA441075704E1A3A5BDFE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodDimensionUpper.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodDimensionUpper.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodDimensionUpper.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodDimensionUpper.lean.txt",
+      "sha256": "FE5AEDED921C954C369B106A7344DD1F1DF7B7C511024C879E5FC50609D5929F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodDimensionUpper.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodDimensionUpper.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodInjectivity.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodInjectivity.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodInjectivity.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodInjectivity.lean.txt",
+      "sha256": "D79E746BDEC9F184D6250107AFDA717C3BFD59EB4237698CD4530255C55FB92E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodInjectivity.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodInjectivity.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodInjectivityAudit1.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodInjectivityAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodInjectivityAudit1.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodInjectivityAudit1.lean.txt",
+      "sha256": "C6FB8A8D1C613542ABAEDBAC66EDA0362036B401688AB0AB12CEE4CBF9F68E51"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodInjectivityAudit1.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodInjectivityAudit1.log",
+      "sha256": "5783061F3B31A40B84606AA11B71D3873D43074E2461C77E40742E747461BD89"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodInjectivityDependencyAudit1.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodInjectivityDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodInjectivityDependencyAudit1.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodInjectivityDependencyAudit1.lean.txt",
+      "sha256": "6A95F25429F687C3E698C5345244DB6B3C8E49513AC1BD42B43888445A22BBB6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodInjectivityDependencyAudit1.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodInjectivityDependencyAudit1.log",
+      "sha256": "BFF904AA7FF4C860A83A10A8AA43586D14137368460C659DE3280BDACBFAF33A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodInjectivityScratchOwnership756.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodInjectivityScratchOwnership756.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodInjectivityScratchOwnership756.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodInjectivityScratchOwnership756.lean.txt",
+      "sha256": "9768197C39C6E9F5C213B9B8B61EC59A31A3EC5A15538B941F35C404DDFDB80F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodInjectivityScratchOwnership756.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodInjectivityScratchOwnership756.log",
+      "sha256": "577A3E9AA11B72A100B8BC3DDD335A6444B2270E6B952D243C3200AEF5EE7434"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodMap.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodMap.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodMap.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodMap.lean.txt",
+      "sha256": "B561EC0923BACA616D34ED5F7EBCB42EA3C2EDC5832B095FDFACEC1F652A6225"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodMap.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodMap.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodSurjectivity.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodSurjectivity.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodSurjectivity.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodSurjectivity.lean.txt",
+      "sha256": "3E9CA101B8E1CABEADF38B7EC9D86A647170BEACB5F162E58AA11AB46CDFC624"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodSurjectivity.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodSurjectivity.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodSurjectivityAudit1.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodSurjectivityAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodSurjectivityAudit1.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodSurjectivityAudit1.lean.txt",
+      "sha256": "F3F875FBF2BE040C17E40295EF61F033340D3EDC69125E6B36E122C9C8926908"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodSurjectivityAudit1.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodSurjectivityAudit1.log",
+      "sha256": "DB6067FDD238C5F8778CC2834E617DF61927BF9B046E010AFDDC01162DBE028D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodSurjectivityDependencyAudit1.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodSurjectivityDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodSurjectivityDependencyAudit1.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodSurjectivityDependencyAudit1.lean.txt",
+      "sha256": "0341276AD57ED50CB58143712A728608C76957F5E36EA8FD672582246F49D499"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodSurjectivityDependencyAudit1.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodSurjectivityDependencyAudit1.log",
+      "sha256": "7CF93DFB75C4C3357E54CCC7D8E3EDB58D7A7D025D97C348D307E9954A700033"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodSurjectivityScratchOwnership793.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodSurjectivityScratchOwnership793.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodSurjectivityScratchOwnership793.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodSurjectivityScratchOwnership793.lean.txt",
+      "sha256": "F0C65EFF24FA755FF0EC26E0F4AA0DBC614BA2FD5C733F06E2D643023E0B0FE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodSurjectivityScratchOwnership793.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodSurjectivityScratchOwnership793.log",
+      "sha256": "D57EDD8BEEAC3599C1E9034AD0D531A2F299238D6BEDA5E4A69B6BA9F2F10DC2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodUpperAudit1.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodUpperAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodUpperAudit1.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodUpperAudit1.lean.txt",
+      "sha256": "F13D73036D4AD9ECCA02D839F76B5AE8C4543DD6A8148B2A2ADD0E169F4746A3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodUpperAudit1.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodUpperAudit1.log",
+      "sha256": "DA858AA82FF758CF7F12B53D2051CA68B9E9C72D5D60BA954752D7E72226F290"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodUpperDependencyAudit1.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodUpperDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodUpperDependencyAudit1.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodUpperDependencyAudit1.lean.txt",
+      "sha256": "A248D033BFC8B0C3A23D2E6739FB1ACA3E1B9F330A1D3B975BA0A560583A8DBB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodUpperDependencyAudit1.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodUpperDependencyAudit1.log",
+      "sha256": "7E0CE5F5D7B9835B4B7BFE33CFA762D881792CE94DA44802CA39C4EE93C8B04A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodUpperScratchOwnership784.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodUpperScratchOwnership784.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodUpperScratchOwnership784.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodUpperScratchOwnership784.lean.txt",
+      "sha256": "8CADCB3440EED861F50AF124DD138B8BA4C2A89E04633CC47BDDFB93FFB1C825"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodUpperScratchOwnership784.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneRealPeriodUpperScratchOwnership784.log",
+      "sha256": "4956725BA1A77477B455E677F06103C93790AE92469FA14AEB74A13064B42BBE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedParabolicAudit1.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneSignedParabolicAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedParabolicAudit1.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneSignedParabolicAudit1.lean.txt",
+      "sha256": "D339FD2F0F7E17E243AEDE001D7B92FBF21366B316045223E2EAF91A7AEEF8EF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedParabolicAudit1.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneSignedParabolicAudit1.log",
+      "sha256": "D9F92815E0BADB402F5AE2E6CB6E0ACEFE734F51AB0638C456F1717FB35EF498"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedParabolicCharacters.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneSignedParabolicCharacters.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedParabolicCharacters.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneSignedParabolicCharacters.lean.txt",
+      "sha256": "5CBE07661A7099E305A986984E91043124C1C2EC315499AB169BB6F6442DD750"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedParabolicCharacters.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneSignedParabolicCharacters.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedParabolicDependencyAudit1.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneSignedParabolicDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedParabolicDependencyAudit1.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneSignedParabolicDependencyAudit1.lean.txt",
+      "sha256": "82DCA49E8493EF4AB7C6EC033B22506249D30FBFE88D4AC5BF51D4E18E7B3AA8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedParabolicDependencyAudit1.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneSignedParabolicDependencyAudit1.log",
+      "sha256": "8A68BBEBE37918CF4637124D87CDD8A0069DC17778B82572375B91E39757895B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedParabolicScratchOwnership777.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneSignedParabolicScratchOwnership777.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedParabolicScratchOwnership777.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneSignedParabolicScratchOwnership777.lean.txt",
+      "sha256": "8809A5A1B274CB0CEE19757336A40543D26F87C390536D0B13A3A638D18F76A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneSignedParabolicScratchOwnership777.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/SourceGammaOneSignedParabolicScratchOwnership777.log",
+      "sha256": "A8C1C53A7F8ACE84C70ECF0091AA3F84889E59683F892CEEF4465171657A48F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_period_core_795.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/download_gamma_one_period_core_795.py",
+      "sha256": "9EEE93D345DE300C1D8692F0FF25144C1415CCF261FB63A6425FD5362FC4DDF9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_period_core_795b.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/download_gamma_one_period_core_795b.py",
+      "sha256": "2F71ED2A116AEA26A0E074F8ED644DC7242D7BE75F4551BF03996D0C706A43EE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-canonical-genus-lower-audit-route-789.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-canonical-genus-lower-audit-route-789.json",
+      "sha256": "D218A954C89FA5D48BFCF8B8016F60A9D44A547D5B7B670F3E1DB44A2D5312FA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-orbit-invariance-audit-route-762.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-orbit-invariance-audit-route-762.json",
+      "sha256": "C709650D1EEE07D186DB8463F123F088164568E4A3BCB5201ABBD350ABD42F78"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-orbit-preparer-failure-762a.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-orbit-preparer-failure-762a.json",
+      "sha256": "1B8138C41E75BE58688B8AB77E40E181BDB9DCDE628848D2E1155D0DCC9C3DC9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-period-dimension-route-759.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-period-dimension-route-759.json",
+      "sha256": "B4CA82520EEE2C565AE66D62B7A2107CC8233D3CA43A1696DDAF79B2847D6C65"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-audit-route-767.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-width-bound-audit-route-767.json",
+      "sha256": "3FF18DA5A8C993E48D1C74CA26E9624BAF784B546F60CC119D345A3CC93B8573"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-route-766.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-width-bound-route-766.json",
+      "sha256": "6F743FCE685A31F14E70A9588BE2E39C2573E8E2240A45995D941982C51E4FA1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-exact-cusp-orbits-audit-route-774.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-exact-cusp-orbits-audit-route-774.json",
+      "sha256": "576FAE1104750BBFB30C5B8AADB93B5F98110A7BE46255993722B76F361A33D5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-genus-lower-route-785.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-genus-lower-route-785.json",
+      "sha256": "9ED6F120EA8E504221025E0199EED525F0056153EA997455A1B0E6FC713D3118"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-manin-audit-route-781.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-manin-audit-route-781.json",
+      "sha256": "CDA0DF2EE6A0F9EAEFF632293B07F0E0B92F9764C6DB74B3AA89265C29974119"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-manin-preflight-781b.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-manin-preflight-781b.json",
+      "sha256": "4F5B47C95A7A00C572D8CB2FFE3E5D903D80C73D9AE5DA6B993A6443DFEBE0F8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-manin-route-775.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-manin-route-775.json",
+      "sha256": "2857608FDFDE5187BAB2BBF3DB4A1FC514590B541AC6C94D5379C0AEF93F93B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-parabolic-periods-audit-route-758.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-parabolic-periods-audit-route-758.json",
+      "sha256": "73001E43702EB1C4A54096A22BAA62E8974A2D9E6DD45B3DD3C67246E0704953"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-injectivity-audit-route-756.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-injectivity-audit-route-756.json",
+      "sha256": "2EB9CAEC6BD0B6F8BAB1BEEEC41E647C1B4707F8D83726172ACDDA61FF570C78"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-injectivity-route-756.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-injectivity-route-756.json",
+      "sha256": "7A988E1899FE38DA7121A846DDA0AC38D9685E65F0E366809651996FDD2A065F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-surjectivity-audit-route-793.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-surjectivity-audit-route-793.json",
+      "sha256": "5483448BB7F93458E35E816D36662F42D6F5A6CD70AFEF2BA2FAAE36EA282A0F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-upper-audit-route-784.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-upper-audit-route-784.json",
+      "sha256": "CD512066CC7C3B5EB9554E77DE47A52A0A32ED437B79DACA6591433B177AC873"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-signed-parabolic-audit-route-777.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-signed-parabolic-audit-route-777.json",
+      "sha256": "EC41B31370833BBC3B0E75191310077ECFFA0281F52EF1CDA62A7E2C8F954B72"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_canonical_genus_lower_audit_789.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/prepare_gamma_one_canonical_genus_lower_audit_789.py",
+      "sha256": "E6FE6568045B6B3A0530EE736FFBF8ADA604395B87B9A7586344E80B4150DB44"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_cusp_orbit_invariance_audit_762b.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/prepare_gamma_one_cusp_orbit_invariance_audit_762b.py",
+      "sha256": "5FFBAF9C03A50F3115B9502E1402EE2602A293A7946DA18F10579A2C27D05E35"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_cusp_width_bound_audit_767.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/prepare_gamma_one_cusp_width_bound_audit_767.py",
+      "sha256": "CF3448662A860EB5D3BF5AAF03653248DDF91496CF83722C83D3CE6B1D3C2EDD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_exact_cusp_orbits_audit_774.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/prepare_gamma_one_exact_cusp_orbits_audit_774.py",
+      "sha256": "4EF7C3A84D1449E7DC31852D52F458364AD06D33CC1CF5099DB52DED5785D2BD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_real_manin_audit_781.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/prepare_gamma_one_real_manin_audit_781.py",
+      "sha256": "233F39D606A945D05CDBD603ADF33962C32A8454F59E55C98DBAF2913D4CAF4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_real_parabolic_periods_audit_758.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/prepare_gamma_one_real_parabolic_periods_audit_758.py",
+      "sha256": "69190AD40162710815792F52BF1A07394CDF2039ECC30FF6BDE08F7D3072D953"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_real_period_injectivity_audit_756.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/prepare_gamma_one_real_period_injectivity_audit_756.py",
+      "sha256": "E4C40CE8E881C8F469590876779D2071ED999E2ADDE4A3555108467AF581ED53"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_real_period_surjectivity_audit_793.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/prepare_gamma_one_real_period_surjectivity_audit_793.py",
+      "sha256": "A4487325EAF059197078775801AF964A9DA384FBDBE5ACBF63D1FEAE091614F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_real_period_upper_audit_784.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/prepare_gamma_one_real_period_upper_audit_784.py",
+      "sha256": "82D3F8CBAD787DDC66E9272570B196FEA69ACAF2897310C03430E472433BBDB3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_signed_parabolic_audit_777.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/prepare_gamma_one_signed_parabolic_audit_777.py",
+      "sha256": "3371E42C60247B454C941140B75653A9464AF8D1C3DB2107B2A9E1374BBF2845"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_canonical_genus_lower_789.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/record_gamma_one_canonical_genus_lower_789.py",
+      "sha256": "FA2C3588B4FE364BE544BD5BB569A5901F0413334E02BA42950B2215E674D210"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_cusp_orbit_invariance_762.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/record_gamma_one_cusp_orbit_invariance_762.py",
+      "sha256": "41062E6773CD7E28FFFFF46D1340801BCE865C8FB3123808A322AAFDB6048CE9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_cusp_width_bound_767.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/record_gamma_one_cusp_width_bound_767.py",
+      "sha256": "42D3C466080A0BE175C4AC80B0C5C9816447129C7EBDAB152762F31826462D79"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_cusp_width_bound_767b.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/record_gamma_one_cusp_width_bound_767b.py",
+      "sha256": "F40B657DED9CCAD015353CB08265D6207C10F127A6FD727940494060F3EF6193"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_exact_cusp_orbits_774.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/record_gamma_one_exact_cusp_orbits_774.py",
+      "sha256": "7C992F9C6DCBB87C7CAEFFCE55A7C150E0DF9ABA468C79EDC3013D89B092194B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_real_manin_781.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/record_gamma_one_real_manin_781.py",
+      "sha256": "DE18E1FF7963E3D28C0706757FDB0D743510D78CDCA41C0A3CC09D3A60BF7626"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_real_manin_781b.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/record_gamma_one_real_manin_781b.py",
+      "sha256": "F2CCBECF7267AC6AE1346D721FF9A34A37690A350C869E666B5E906C686A780A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_real_parabolic_periods_758.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/record_gamma_one_real_parabolic_periods_758.py",
+      "sha256": "AC5A872E85C2B58C1BC5398E0F0AC14FC23596EE36DC9DEBECBC854A35715C4D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_real_period_injectivity_756.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/record_gamma_one_real_period_injectivity_756.py",
+      "sha256": "AE7AF55339CC1A5BA808028E6958829545821929398E81E08AECA2C6639ECB2E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_real_period_surjectivity_793.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/record_gamma_one_real_period_surjectivity_793.py",
+      "sha256": "A453BADE0EB1DDC94425890777CAC2CDA57D1F68DEE4928F3CB74638736B76AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_real_period_upper_784.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/record_gamma_one_real_period_upper_784.py",
+      "sha256": "CB266230A9B969D18B9A9FD094948913762C88156C4624030B723A57097CFF11"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_signed_parabolic_777.py",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/record_gamma_one_signed_parabolic_777.py",
+      "sha256": "9A38AE6288793566330D2FBAD3317C5E154EB9ABC43E9ADFC1BD95051FA106FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-canonical-genus-lower-1-audit-config.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-canonical-genus-lower-1-audit-config.json",
+      "sha256": "3AAFFA260DDB1AE866B40131920442E4AFD6ABFF590536BA7F5A8742D243E7AB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-canonical-genus-lower-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-canonical-genus-lower-1-reuse-review-20261027.json",
+      "sha256": "E0E418F3F6605BF7CAF830CE8A5283164A37F17E72BFE97E8C8189B659D1DB63"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-canonical-genus-lower-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-canonical-genus-lower-1-scratch-receipt.json",
+      "sha256": "3B0FDADD90B047D3FC7B9B155158CA07A85726F2F40EE66641DC5245EBB29ED3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-orbit-invariance-1-audit-config.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-cusp-orbit-invariance-1-audit-config.json",
+      "sha256": "4101CB3EAF0FE7B36DAFC8E64D3393078283A6DC502CF32ADDCCC7BFCD02070E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-orbit-invariance-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-cusp-orbit-invariance-1-reuse-review-20261027.json",
+      "sha256": "D69E7A727E4B00DD3DB0CA71F7FF61BBC64DEFF3330E2580E3F3EAEEBF825AD7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-orbit-invariance-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-cusp-orbit-invariance-1-scratch-receipt.json",
+      "sha256": "FC0A369D24F80013562DC0A6E54DDDF77834C4DBC11BEBE6B849BE4314D19437"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-width-bound-1-audit-config.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-cusp-width-bound-1-audit-config.json",
+      "sha256": "4121199D663EEFCD34FA83CD96F2D2488AB405050B399BB2B957D9BDE2716D26"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-width-bound-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-cusp-width-bound-1-reuse-review-20261027.json",
+      "sha256": "3820D14EFE02F3AA0879B6C2C3D966F9E503264A2511E2A5FECE8DF6D71905FB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-width-bound-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-cusp-width-bound-1-scratch-receipt.json",
+      "sha256": "B1A53936BB93C534FE13D9A084DA915001D546A3006752ED597B0CB4E81C4010"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-exact-cusp-orbits-1-audit-config.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-exact-cusp-orbits-1-audit-config.json",
+      "sha256": "881F1432E6F5509E0A60B74C1C5ED6581CE31B16DE814CE77357E19B72C267C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-exact-cusp-orbits-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-exact-cusp-orbits-1-reuse-review-20261027.json",
+      "sha256": "51E0E603FDF76E1F893457F18CD306451DF1E8BA14665AED85C7F1217C075996"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-exact-cusp-orbits-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-exact-cusp-orbits-1-scratch-receipt.json",
+      "sha256": "CE5000CF2CC90359306A813F3FD26B58C8773504537EC97EEA7BCD6425811369"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-manin-1b-audit-config.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-real-manin-1b-audit-config.json",
+      "sha256": "C3669367C05FFC9D92390F9FA12BBE95A573768CD3AC60DC0C798E5B66611C7A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-manin-1b-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-real-manin-1b-reuse-review-20261027.json",
+      "sha256": "A81966624390EA13070E08DBD82A996BD1BD04AD0C1440E6CAD754F75F755A88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-manin-1b-scratch-receipt.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-real-manin-1b-scratch-receipt.json",
+      "sha256": "A50C04818EC3CB957D3EB19AF1A1836A6F4D589F8ACC45AE5604FBD8C79C0D00"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-parabolic-periods-1-audit-config.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-real-parabolic-periods-1-audit-config.json",
+      "sha256": "B58395572641F88E8AA763791431947DDDD73D668057DCA00F30AEBDF48CAC25"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-parabolic-periods-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-real-parabolic-periods-1-reuse-review-20261027.json",
+      "sha256": "F7D30938CC6031C5F5358B44C0609F17D716A27E7DAD9D9975ED6F22E6877234"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-parabolic-periods-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-real-parabolic-periods-1-scratch-receipt.json",
+      "sha256": "4E47B11D4AC61078C31B8FC1BD0CC369081E78CDD95B679EAB4F397534CE9473"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-period-injectivity-1-audit-config.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-real-period-injectivity-1-audit-config.json",
+      "sha256": "10F05240FACDCAD4A512FA205E02AD8FDBEDF86114E9A12DCB9F07A45CCA676E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-period-injectivity-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-real-period-injectivity-1-reuse-review-20261027.json",
+      "sha256": "B6F0B0F79F282FBF83D5116274166C37AFA51BAF0E4AFC9A0EDF25B1D658AFAB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-period-injectivity-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-real-period-injectivity-1-scratch-receipt.json",
+      "sha256": "93A114CB4E9D70E5A451CB5383C49DFE670E7E4DB702FF83A3F3CFFA8349715A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-period-surjectivity-1-audit-config.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-real-period-surjectivity-1-audit-config.json",
+      "sha256": "2DF6FAEB9C2AE31AE02E0D72B26682D47941DCAEB065D259CA329FCEDCA01950"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-period-surjectivity-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-real-period-surjectivity-1-reuse-review-20261027.json",
+      "sha256": "BA8D62915FB85A8CA727837432D42475F4B297EFDC1D119222E62E21866BA393"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-period-surjectivity-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-real-period-surjectivity-1-scratch-receipt.json",
+      "sha256": "3FE2AF35E6932AD06505601DBFAE89029645967837DAAADDE19651BFC850E49F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-period-upper-1-audit-config.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-real-period-upper-1-audit-config.json",
+      "sha256": "B64E1087E6A035F86FC55F9D3DC2AFE9CFF8A79864661874AF50D1074F72B483"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-period-upper-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-real-period-upper-1-reuse-review-20261027.json",
+      "sha256": "1B1E34EAD29951DAD0AD82DCEAFFF07F355B8586201C60BD76DBB2DD4F346EAF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-period-upper-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-real-period-upper-1-scratch-receipt.json",
+      "sha256": "5FB38D889956491A7EE828B8AE2006CDA1EBE7656F64B6429C62DEFAF1D67909"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-signed-parabolic-1-audit-config.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-signed-parabolic-1-audit-config.json",
+      "sha256": "4402ACCAE04788BA34BB74EDC7808B34EC8C0D445A791D22006E9E2B7CA661AA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-signed-parabolic-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-signed-parabolic-1-reuse-review-20261027.json",
+      "sha256": "2DE1474162BF6AF14B9290DF099DCE665E2F9DECBA43C88D895AD901053F569D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-signed-parabolic-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/source-gamma-one-signed-parabolic-1-scratch-receipt.json",
+      "sha256": "6D3C3243B5FD1B7FCFB20C70D5EDC3F238BB40A9DFD80FB8B070C471320B2EAF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-canonical-coordinates-failed-785a\\SourceGammaOneCanonicalCoordinates.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-canonical-coordinates-failed-785a/SourceGammaOneCanonicalCoordinates.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-canonical-coordinates-failed-785a\\SourceGammaOneCanonicalCoordinates.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-canonical-coordinates-failed-785a/SourceGammaOneCanonicalCoordinates.lean.txt",
+      "sha256": "51D30468F97E9E2728CD5B2A34429899CD425CB452173998EAEF019604C2A510"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-canonical-coordinates-failed-785a\\SourceGammaOneCanonicalCoordinates.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-canonical-coordinates-failed-785a/SourceGammaOneCanonicalCoordinates.log",
+      "sha256": "990E8093C18A9C6D284978E49B4B21B9D62727A820C795CA5C1BDA86712D1A16"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-canonical-fiber-lower-failed-787a\\SourceGammaOneCanonicalFiberLower.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-canonical-fiber-lower-failed-787a/SourceGammaOneCanonicalFiberLower.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-canonical-fiber-lower-failed-787a\\SourceGammaOneCanonicalFiberLower.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-canonical-fiber-lower-failed-787a/SourceGammaOneCanonicalFiberLower.lean.txt",
+      "sha256": "47A4C93995D565675FCC53ACBCE21D4ED5870F2C2FFCB07004858757281795F9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-canonical-fiber-lower-failed-787a\\SourceGammaOneCanonicalFiberLower.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-canonical-fiber-lower-failed-787a/SourceGammaOneCanonicalFiberLower.log",
+      "sha256": "78A71FFF466324D3E5CE651234A345DC9216DAA7ABCDD94E233056A64E39B857"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-central-sign-characters-failed-775a\\failure.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-central-sign-characters-failed-775a/failure.json",
+      "sha256": "85424D154110927FB2D952FDBC3EDE86C148B2B3C3CF019968E037720FB27F24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-central-sign-characters-failed-775a\\SourceGammaOneCentralSignCharacters.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-central-sign-characters-failed-775a/SourceGammaOneCentralSignCharacters.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-central-sign-characters-failed-775a\\SourceGammaOneCentralSignCharacters.lean.txt",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-central-sign-characters-failed-775a/SourceGammaOneCentralSignCharacters.lean.txt",
+      "sha256": "1966B233C2300B35B48C454A70D525F1370E3C6FBABB91B0330AD5D01520452F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-central-sign-characters-failed-775a\\SourceGammaOneCentralSignCharacters.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-central-sign-characters-failed-775a/SourceGammaOneCentralSignCharacters.log",
+      "sha256": "5440C3041C2F24FCEB322370558F0EB83972E814567022B05DE7C579A45453C8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-j-exact-order-failed-764a\\failure.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-j-exact-order-failed-764a/failure.json",
+      "sha256": "2CFC2E70EE4A58D59977AAC7CC07282A3FFFD7A1CCE72427F828FFBEE63259B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-j-exact-order-failed-764a\\SourceGammaOneCuspJExactOrder.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-j-exact-order-failed-764a/SourceGammaOneCuspJExactOrder.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-j-exact-order-failed-764a\\SourceGammaOneCuspJExactOrder.lean.txt",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-j-exact-order-failed-764a/SourceGammaOneCuspJExactOrder.lean.txt",
+      "sha256": "CA9E1025512ED64C5D639302B7E9B9FF64B8879037D5D59AB71F210E5355A7C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-j-exact-order-failed-764a\\SourceGammaOneCuspJExactOrder.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-j-exact-order-failed-764a/SourceGammaOneCuspJExactOrder.log",
+      "sha256": "ECE6C3C9C29A64C8387D90877F35DA3ED85AACD342DC611C09EF1CDB7D05883A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-orbit-bijection-failed-772a\\failure.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-orbit-bijection-failed-772a/failure.json",
+      "sha256": "2FF4961DE2025AE371292A0FF8352D87EECDCA51C9A214BD39288D1501DB21D0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-orbit-bijection-failed-772a\\SourceGammaOneCuspOrbitBijection.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-orbit-bijection-failed-772a/SourceGammaOneCuspOrbitBijection.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-orbit-bijection-failed-772a\\SourceGammaOneCuspOrbitBijection.lean.txt",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-orbit-bijection-failed-772a/SourceGammaOneCuspOrbitBijection.lean.txt",
+      "sha256": "12A53517168C86D8BD092955F893F4CDF17220007823BBA0D733853778F0453D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-orbit-bijection-failed-772a\\SourceGammaOneCuspOrbitBijection.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-orbit-bijection-failed-772a/SourceGammaOneCuspOrbitBijection.log",
+      "sha256": "1926118A771A54E9C461E2389BECBC2382C7C9F0588762C7D18BD44F48BC964B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-left-failed-759a\\repair.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-place-left-failed-759a/repair.json",
+      "sha256": "C3423291F1F897300723C6AF5850AC2EDA5CAE0C34E75D81DEB71D903C9AE904"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-left-failed-759a\\SourceGammaOneCuspPlaceLeftInvariance.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-place-left-failed-759a/SourceGammaOneCuspPlaceLeftInvariance.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-left-failed-759a\\SourceGammaOneCuspPlaceLeftInvariance.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-place-left-failed-759a/SourceGammaOneCuspPlaceLeftInvariance.lean.txt",
+      "sha256": "71DB5FE0067E14BB362B544742DE2856B2559A6E6F548F9FD8ED4140567AA422"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-left-failed-759a\\SourceGammaOneCuspPlaceLeftInvariance.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-place-left-failed-759a/SourceGammaOneCuspPlaceLeftInvariance.log",
+      "sha256": "DE760B0A31BCEE79EA5AF1CBE50DB4085A7D9F2880B2B7D2FA71B06C3911BFB7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761a\\failure.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-place-right-failed-761a/failure.json",
+      "sha256": "C40DC583AF70AA806F32B6F290309747D9642C82DCA0BFDD8F1D48C1F4B65F4F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761a\\SourceGammaOneCuspPlaceRightInvariance.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-place-right-failed-761a/SourceGammaOneCuspPlaceRightInvariance.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761a\\SourceGammaOneCuspPlaceRightInvariance.lean.txt",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-place-right-failed-761a/SourceGammaOneCuspPlaceRightInvariance.lean.txt",
+      "sha256": "5B404E7BB0F9162005026DD730D2D75A7506B4E0B611405F9A21FC3FAC510AD4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761a\\SourceGammaOneCuspPlaceRightInvariance.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-place-right-failed-761a/SourceGammaOneCuspPlaceRightInvariance.log",
+      "sha256": "8B8FB91B23E1892900CCC5350DDC56EEDD232DEADF2821B17E2EEEBE629AF145"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761b\\failure.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-place-right-failed-761b/failure.json",
+      "sha256": "B3C18EE9155EB74D98D27C6B370764C4380F25D71F64D3DA1515D85255CF9A24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761b\\SourceGammaOneCuspPlaceRightInvariance.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-place-right-failed-761b/SourceGammaOneCuspPlaceRightInvariance.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761b\\SourceGammaOneCuspPlaceRightInvariance.lean.txt",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-place-right-failed-761b/SourceGammaOneCuspPlaceRightInvariance.lean.txt",
+      "sha256": "603E058AE2DE4EAC1D6956F09FDDC77ED1EFC1C0AB1614A3CD0557D634AC1EF3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761b\\SourceGammaOneCuspPlaceRightInvariance.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-place-right-failed-761b/SourceGammaOneCuspPlaceRightInvariance.log",
+      "sha256": "98B63D128B45C07EE5C8C4CD371B5AA9C314373C2F8F351F22B3002B138F2D42"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761c\\failure.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-place-right-failed-761c/failure.json",
+      "sha256": "C1B2844ECE885D14BF2C465D531E4C4B29696915198DC89C58BF7BC7AD4151E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761c\\SourceGammaOneCuspPlaceRightInvariance.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-place-right-failed-761c/SourceGammaOneCuspPlaceRightInvariance.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761c\\SourceGammaOneCuspPlaceRightInvariance.lean.txt",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-place-right-failed-761c/SourceGammaOneCuspPlaceRightInvariance.lean.txt",
+      "sha256": "603E058AE2DE4EAC1D6956F09FDDC77ED1EFC1C0AB1614A3CD0557D634AC1EF3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761c\\SourceGammaOneCuspPlaceRightInvariance.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-place-right-failed-761c/SourceGammaOneCuspPlaceRightInvariance.log",
+      "sha256": "FBE80F460821AB7B5E619C947D31C5B8AE67733C755FC99085D794E46CF40709"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-pole-degree-failed-770a\\failure.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-pole-degree-failed-770a/failure.json",
+      "sha256": "D03F328CB5E586FBD9CB8386E6DCE28748A82E6F66FA201395EF8A9F249DF8CE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-pole-degree-failed-770a\\SourceGammaOneCuspPoleDegree.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-pole-degree-failed-770a/SourceGammaOneCuspPoleDegree.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-pole-degree-failed-770a\\SourceGammaOneCuspPoleDegree.lean.txt",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-pole-degree-failed-770a/SourceGammaOneCuspPoleDegree.lean.txt",
+      "sha256": "B7336A1701A14CB174680DF7C9300408ADBB4413EDAB339D80DFC20344435752"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-pole-degree-failed-770a\\SourceGammaOneCuspPoleDegree.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-pole-degree-failed-770a/SourceGammaOneCuspPoleDegree.log",
+      "sha256": "5E38CEE19DDE20C0A5413A402BB41C5DB872FB6CEC46A6E0EF96018ADA1C22FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\failure.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-width-bound-failed-767a/failure.json",
+      "sha256": "BCE34C397A1C1BDCA6D390B0110C48839C4D8500E2409EBA965A69E7211DA500"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspJExactOrder.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-width-bound-failed-767a/SourceGammaOneCuspJExactOrder.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspJExactOrder.lean.txt",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-width-bound-failed-767a/SourceGammaOneCuspJExactOrder.lean.txt",
+      "sha256": "7FE51EE11C1F50050400FE947524D1F6970945979CCA3D730EAC6236AE3F6C5E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspJExactOrder.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-width-bound-failed-767a/SourceGammaOneCuspJExactOrder.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspRotationOrder.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-width-bound-failed-767a/SourceGammaOneCuspRotationOrder.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspRotationOrder.lean.txt",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-width-bound-failed-767a/SourceGammaOneCuspRotationOrder.lean.txt",
+      "sha256": "519A22335B592DB8B85EE63AD6EFEFF098DBB9C984BCE2C798DE67A6A435F6DC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspRotationOrder.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-width-bound-failed-767a/SourceGammaOneCuspRotationOrder.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspTranslationRamification.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-width-bound-failed-767a/SourceGammaOneCuspTranslationRamification.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspTranslationRamification.lean.txt",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-width-bound-failed-767a/SourceGammaOneCuspTranslationRamification.lean.txt",
+      "sha256": "51328F8C1D0AB2AAD038E0EE3238D8F9CE31E05EC0DA11E58FE374A99A8D6EB7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspTranslationRamification.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-width-bound-failed-767a/SourceGammaOneCuspTranslationRamification.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspWidthBoundAudit1.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-width-bound-failed-767a/SourceGammaOneCuspWidthBoundAudit1.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspWidthBoundAudit1.lean.txt",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-width-bound-failed-767a/SourceGammaOneCuspWidthBoundAudit1.lean.txt",
+      "sha256": "688FCA825CFD682CC55057316DD562F2C07D8FD27B1BD3E400E82E5D721FE400"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneCuspWidthBoundAudit1.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-width-bound-failed-767a/SourceGammaOneCuspWidthBoundAudit1.log",
+      "sha256": "984753C32D301021495606762AB9D28D4A2ABD75DDBE4F1558AE329C7D167C42"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneRationalCuspOrbit.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-width-bound-failed-767a/SourceGammaOneRationalCuspOrbit.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneRationalCuspOrbit.lean.txt",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-width-bound-failed-767a/SourceGammaOneRationalCuspOrbit.lean.txt",
+      "sha256": "9719E9317CABF1E895E2768AB0D57D714A0D62039C0C33AFBA71055E04A0AA73"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-failed-767a\\SourceGammaOneRationalCuspOrbit.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-cusp-width-bound-failed-767a/SourceGammaOneRationalCuspOrbit.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-elliptic-coset-fiber-failed-790a\\SourceGammaOneEllipticCosetFiber.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-elliptic-coset-fiber-failed-790a/SourceGammaOneEllipticCosetFiber.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-elliptic-coset-fiber-failed-790a\\SourceGammaOneEllipticCosetFiber.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-elliptic-coset-fiber-failed-790a/SourceGammaOneEllipticCosetFiber.lean.txt",
+      "sha256": "03C6EB2CBE326AA2681B9F9C6D4C22187A34B6D9CAD413BE2890C1FB9CDAFA84"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-elliptic-coset-fiber-failed-790a\\SourceGammaOneEllipticCosetFiber.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-elliptic-coset-fiber-failed-790a/SourceGammaOneEllipticCosetFiber.log",
+      "sha256": "386B3B55C7808AB0E78C2CEE4DD816F5C1BDEAC57C71DD5E9567A56C4298B444"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-795\\download-failure.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-period-core-reuse-795/download-failure.json",
+      "sha256": "8DCB63E29DE796739E83D32F178F13204FFC27A8420747EE053ECE6BC13AD114"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-795b\\manifest.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-period-core-reuse-795b/manifest.json",
+      "sha256": "99A5E3EC5E17231AF9D80AA26102DF9C3E3F328DD572BF5C8DF379515375509D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-795b\\S_ModularCurve_exists_addMonoidHom_exp_eq_of_norm_eq_one_of_trace_sq_le_four_of_finiteIndex.lean.txt",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-period-core-reuse-795b/S_ModularCurve_exists_addMonoidHom_exp_eq_of_norm_eq_one_of_trace_sq_le_four_of_finiteIndex.lean.txt",
+      "sha256": "DB1503C338F05420D058818A6A94DC1EE81D84338C78775F0BDB81C8BF8E1DE7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-795b\\S_ModularCurve_exists_chain_periodAlongOf_add_petersson_eq_zero_of_multiplier_eq_exp.lean.txt",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-period-core-reuse-795b/S_ModularCurve_exists_chain_periodAlongOf_add_petersson_eq_zero_of_multiplier_eq_exp.lean.txt",
+      "sha256": "B70E670FF5969408D353C8CB9FA361B4925196DC68CF4B8A6195413EC011395C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-795b\\S_ModularCurve_sum_periodAlongOf_mem_periodLatticeOf_of_boundary_eq_zero.lean.txt",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-period-core-reuse-795b/S_ModularCurve_sum_periodAlongOf_mem_periodLatticeOf_of_boundary_eq_zero.lean.txt",
+      "sha256": "2479666672A237625C525F47E9066002757913F4889831BBC8B3A144EEA35AC8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-rational-cusp-orbit-failed-763a\\failure.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-rational-cusp-orbit-failed-763a/failure.json",
+      "sha256": "E748FAD7565C69B6FB503333BF0E458ECFC40BDA1625CA77966FA5B249E76D64"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-rational-cusp-orbit-failed-763a\\SourceGammaOneRationalCuspOrbit.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-rational-cusp-orbit-failed-763a/SourceGammaOneRationalCuspOrbit.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-rational-cusp-orbit-failed-763a\\SourceGammaOneRationalCuspOrbit.lean.txt",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-rational-cusp-orbit-failed-763a/SourceGammaOneRationalCuspOrbit.lean.txt",
+      "sha256": "9AEFEAEC6899448235B0819BC2DE2965C159F90607FB728D0961843B9230E9C1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-rational-cusp-orbit-failed-763a\\SourceGammaOneRationalCuspOrbit.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-rational-cusp-orbit-failed-763a/SourceGammaOneRationalCuspOrbit.log",
+      "sha256": "2539B38D86E93ADA3A354BC7468731F6D96FEA313E0521E66712DCDDEC355A2E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-rational-cyclic-cusps-failed-782a\\SourceGammaOneRationalCyclicCusps.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-rational-cyclic-cusps-failed-782a/SourceGammaOneRationalCyclicCusps.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-rational-cyclic-cusps-failed-782a\\SourceGammaOneRationalCyclicCusps.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-rational-cyclic-cusps-failed-782a/SourceGammaOneRationalCyclicCusps.lean.txt",
+      "sha256": "B0F080BDAE8CF53E8ECE22EF7FD704E8D80A8BCB23860F9CDD52B115B269E4B7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-rational-cyclic-cusps-failed-782a\\SourceGammaOneRationalCyclicCusps.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-rational-cyclic-cusps-failed-782a/SourceGammaOneRationalCyclicCusps.log",
+      "sha256": "D2DB355E9F82A5FF64B38325871BA8434050BF63771A14B34A034830F102065D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-manin-dimension-failed-780a\\SourceGammaOneRealManinDimension.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-manin-dimension-failed-780a/SourceGammaOneRealManinDimension.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-manin-dimension-failed-780a\\SourceGammaOneRealManinDimension.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-manin-dimension-failed-780a/SourceGammaOneRealManinDimension.lean.txt",
+      "sha256": "FA2CA87E7D6CD3855B71CD474DB1059DE89F395365B983E1530F932BF0450904"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-manin-dimension-failed-780a\\SourceGammaOneRealManinDimension.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-manin-dimension-failed-780a/SourceGammaOneRealManinDimension.log",
+      "sha256": "D9541FD064F4D0F38AC32219D0A2E60C8A8FE79F163B63169E15FD43CAAC2A5E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-manin-dimension-failed-780b\\SourceGammaOneRealManinDimension.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-manin-dimension-failed-780b/SourceGammaOneRealManinDimension.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-manin-dimension-failed-780b\\SourceGammaOneRealManinDimension.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-manin-dimension-failed-780b/SourceGammaOneRealManinDimension.lean.txt",
+      "sha256": "41F7C334F1F42AF3064E41D3A6E06D0D1984F00F74F5CC1FCDBBF582A906637B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-manin-dimension-failed-780b\\SourceGammaOneRealManinDimension.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-manin-dimension-failed-780b/SourceGammaOneRealManinDimension.log",
+      "sha256": "9F413EB6284C3F38F9126679EC3F3D79B03DB56B9372D927C421B6A015A59130"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-injectivity-failed-756a\\repair.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-injectivity-failed-756a/repair.json",
+      "sha256": "EF48DAC57053A4DDA600F12A8BBABBEBBBADDA9837953EE7F8662FAFC244754C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-injectivity-failed-756a\\SourceGammaOneRealPeriodInjectivity.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-injectivity-failed-756a/SourceGammaOneRealPeriodInjectivity.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-injectivity-failed-756a\\SourceGammaOneRealPeriodInjectivity.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-injectivity-failed-756a/SourceGammaOneRealPeriodInjectivity.lean.txt",
+      "sha256": "41FFC4F97F2171CDE071F5AA659A3854A03307A3B3DB3DC5970D006011394A18"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-injectivity-failed-756a\\SourceGammaOneRealPeriodInjectivity.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-injectivity-failed-756a/SourceGammaOneRealPeriodInjectivity.log",
+      "sha256": "AE2107163479F7E12DBEAFB6D75564D6F0770453D795AA87D9DDA5F1E5987754"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-map-failed-757a\\repair.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-map-failed-757a/repair.json",
+      "sha256": "0A43F3649D02781E2F338C2D3D6A3397009A4EDA388715EFE7BF0CB5351ACAB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-map-failed-757a\\SourceGammaOneRealPeriodMap.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-map-failed-757a/SourceGammaOneRealPeriodMap.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-map-failed-757a\\SourceGammaOneRealPeriodMap.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-map-failed-757a/SourceGammaOneRealPeriodMap.lean.txt",
+      "sha256": "BE76FDA6D84FF4CF3F00E53A68025C500B1E945C0383C4A4A502F1CDD97898DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-map-failed-757a\\SourceGammaOneRealPeriodMap.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-map-failed-757a/SourceGammaOneRealPeriodMap.log",
+      "sha256": "E7F379928429FB49CE924A706982C27B48DF6D69CEA62499BD73E9556F147CF7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-surjectivity-failed-792a\\SourceGammaOneRealPeriodSurjectivity.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-surjectivity-failed-792a/SourceGammaOneRealPeriodSurjectivity.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-surjectivity-failed-792a\\SourceGammaOneRealPeriodSurjectivity.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-surjectivity-failed-792a/SourceGammaOneRealPeriodSurjectivity.lean.txt",
+      "sha256": "8DEBA747893670404D43F97803339F3CBE9561950EA5FC88C63152F1A40B3B4F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-surjectivity-failed-792a\\SourceGammaOneRealPeriodSurjectivity.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-surjectivity-failed-792a/SourceGammaOneRealPeriodSurjectivity.log",
+      "sha256": "4D58E32213782E02AF3EBE85727CB388D92FA0DFBA80004DD23818B548014079"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-surjectivity-failed-792b\\SourceGammaOneRealPeriodSurjectivity.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-surjectivity-failed-792b/SourceGammaOneRealPeriodSurjectivity.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-surjectivity-failed-792b\\SourceGammaOneRealPeriodSurjectivity.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-surjectivity-failed-792b/SourceGammaOneRealPeriodSurjectivity.lean.txt",
+      "sha256": "EA7032DA344DB37290B298D3E37415AB45CDE65C1955F16A4868401C34B4F093"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-surjectivity-failed-792b\\SourceGammaOneRealPeriodSurjectivity.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-surjectivity-failed-792b/SourceGammaOneRealPeriodSurjectivity.log",
+      "sha256": "20E38713187C50792F42F40E85AED50FFAE23DA394F4313CD0838F84DAA53735"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-surjectivity-failed-792c\\SourceGammaOneRealPeriodSurjectivity.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-surjectivity-failed-792c/SourceGammaOneRealPeriodSurjectivity.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-surjectivity-failed-792c\\SourceGammaOneRealPeriodSurjectivity.lean",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-surjectivity-failed-792c/SourceGammaOneRealPeriodSurjectivity.lean.txt",
+      "sha256": "3136A2C0B8ECBC68F3F03815D140A2C2427C6AA0A8E51680B63F3DEAEAA73E75"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-real-period-surjectivity-failed-792c\\SourceGammaOneRealPeriodSurjectivity.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-real-period-surjectivity-failed-792c/SourceGammaOneRealPeriodSurjectivity.log",
+      "sha256": "D298000C5A10F4E95DCD2566EDD28926F2A0F753F184E31FC5F9C72858832542"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-signed-parabolic-characters-failed-776a\\failure.json",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-signed-parabolic-characters-failed-776a/failure.json",
+      "sha256": "CB669C439931B7AC57102B0A83B15C6B2A1A002B85E69ED5682117CA5765A5C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-signed-parabolic-characters-failed-776a\\SourceGammaOneSignedParabolicCharacters.exit",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-signed-parabolic-characters-failed-776a/SourceGammaOneSignedParabolicCharacters.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-signed-parabolic-characters-failed-776a\\SourceGammaOneSignedParabolicCharacters.lean.txt",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-signed-parabolic-characters-failed-776a/SourceGammaOneSignedParabolicCharacters.lean.txt",
+      "sha256": "106F86E8DD1930BEBEA8FA2DAD78AF75FD80E3B595391155D693B63C13F81152"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-signed-parabolic-characters-failed-776a\\SourceGammaOneSignedParabolicCharacters.log",
+      "path": "Tools/gamma-one-real-period-surjectivity-20261027-794/gamma-one-signed-parabolic-characters-failed-776a/SourceGammaOneSignedParabolicCharacters.log",
+      "sha256": "2064BC5DF5B3533525B2D4D69B6756743263ED31476204AEA49FFED2648964BC"
+    }
+  ]
+}

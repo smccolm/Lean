@@ -1,0 +1,4 @@
+{
+  "reason": "Explicit field argument alone did not avoid typeclass timeout. Localize the finite-coordinate instance to the support lemma and provide the principal-divisor superclass directly. No proof limit change.",
+  "sourceSha256": "A7562C98BE75D2838CF9E19719908D852AEEBEDB6D018B233649A0443820D1AB"
+}

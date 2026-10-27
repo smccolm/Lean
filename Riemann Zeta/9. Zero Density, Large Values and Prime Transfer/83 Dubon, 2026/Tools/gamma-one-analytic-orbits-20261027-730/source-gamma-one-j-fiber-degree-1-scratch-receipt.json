@@ -1,0 +1,46 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T07:23:30.251958+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneJFiberDegree"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberDegree.lean",
+      "sha256": "82ECBE8176F9FBE98A13AE44A379EE3FA76ADBAB7CF08D64A244DD9AE6ABD9E0",
+      "oleanSha256": "8F024EF2C83D5A38F2AA1B51B0598110F4778469ACBF124F03A2EB195885FB6D"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.sum_j_fiber_orders_eq_finrank"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.sum_j_fiber_orders_eq_finrank"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberDegreeAudit1.log",
+  "logSha256": "0EE1A7465244398A8498CCAC0CFE08516A78532CCA304F5699690367710B57C7",
+  "auditSha256": "E66A67ED7082B7B33A2A2236C5709BC8751B7D8B5E33BD789B891603A9D97920",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 1,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 4,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberDegreeDependencyAudit1.log",
+  "dependencyAuditSha256": "7B8CAE89B248506CB66E62C4AF6949299AD5ADC021EA6B1CDDE82B752E3171AF",
+  "dependencyAuditSourceSha256": "5B1392B0E504F3FFD4218B1A2A8819BDBB26B151E8D63942ACCB4D35D39DFEC4",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.sum_j_fiber_orders_eq_finrank"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact elliptic ramification -> compare weighted analytic j fibers with subgroup orbit indices.",
+  "discharged": [
+    "The total order of every finite actual Gamma1 j fiber equals one fixed finite extension degree, without a supplied fiber-degree identity."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Exact ramification at elliptic points, global charts, actual periods and complete Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight characteristic-zero association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-j-fiber-degree-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "DE414E12853E17097C6C21DFB818C2A318C7E180E33E7B1954CFE320E2E6CC5C",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

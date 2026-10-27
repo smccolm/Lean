@@ -1,0 +1,65 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T10:31:28.367544+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneCuspBoundedRealization",
+    "SourceGammaOneCuspPlaceExhaustion"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspBoundedRealization.lean",
+      "sha256": "D1D7F873E802C2C3E91D75E6C21C75A20568389334A87F9E28D86E5B8DBCAC69",
+      "oleanSha256": "D539B330A09B175F578881CD26DF541AEEDAE3C91C102B5DE74792556367682B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPlaceExhaustion.lean",
+      "sha256": "EA2A0681688AEA7BEAE678FAC085668A85A719E7FE0565BFFD6D9783A3D97BD5",
+      "oleanSha256": "F42ADC376C949A5C14EA63C342019D9D0092F6EB821CA935E7BD6064D9CF54C7"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_bounded_of_cusp_regular",
+    "Dubon2026.SourceFunctionField.GammaOne.constant_of_mem_all_analytic_and_cusp_places",
+    "Dubon2026.SourceFunctionField.GammaOne.place_analytic_or_actual_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_cusp_place_eq_of_j_pole",
+    "Dubon2026.SourceFunctionField.GammaOne.order_eq_zero_at_j_poles_of_cusp_limits"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_bounded_of_cusp_regular",
+    "Dubon2026.SourceFunctionField.GammaOne.constant_of_mem_all_analytic_and_cusp_places",
+    "Dubon2026.SourceFunctionField.GammaOne.place_analytic_or_actual_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_cusp_place_eq_of_j_pole",
+    "Dubon2026.SourceFunctionField.GammaOne.order_eq_zero_at_j_poles_of_cusp_limits"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspExhaustionAudit1.log",
+  "logSha256": "665139A99BD5704B1F7E91E71209A4C5BDD3CA6048542E559798B062C4AF04BC",
+  "auditSha256": "A31A56384397BA43A818065F09C32FCFC7A156425C4FA0B51160569625CDC336",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 6,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 13,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspExhaustionDependencyAudit1.log",
+  "dependencyAuditSha256": "A08E48DF8C3501C33884F23F6C564C31A659C684C90D88190E295D023D361C81",
+  "dependencyAuditSourceSha256": "B948F88F6F4B0ECAB2FB6713A44F87CCFDC0D8CE7A5F69484006EEEF8A02BCCF",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_bounded_of_cusp_regular",
+    "Dubon2026.SourceFunctionField.GammaOne.constant_of_mem_all_analytic_and_cusp_places",
+    "Dubon2026.SourceFunctionField.GammaOne.place_analytic_or_actual_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_cusp_place_eq_of_j_pole",
+    "Dubon2026.SourceFunctionField.GammaOne.order_eq_zero_at_j_poles_of_cusp_limits"
+  ],
+  "dependency": "DUB-17 Theorem2.6 / DUB-18 Corollary8.2 -> original all-weight arithmetic association -> arithmetic realization of actual finite Gamma1 homogeneous Hecke characters -> Picard/H1 and period comparison -> principal-divisor cusp-order control -> exhaustion of every j-pole place by an actual translated cusp.",
+  "discharged": "Every original field element regular at all analytic places and all actual cusp places is constant. Every place is analytic or an actual cusp; consequently every j-pole place is a cusp. Nonzero limits at all translated cusps then give normalized order zero at every j-pole place.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Actual global Picard/period, full/parabolic, transpose, Hecke/diamond comparisons and arithmetic realization, characteristic-zero association, automorphy and literal higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-exhaustion-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "3984F38D14F2D1AE61BFDFBFBD3B48822A8EC05D89F7E0F7A1850DB8E52A774A",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

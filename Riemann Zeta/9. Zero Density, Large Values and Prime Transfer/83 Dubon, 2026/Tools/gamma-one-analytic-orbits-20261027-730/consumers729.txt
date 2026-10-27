@@ -1,0 +1,39 @@
+
+open scoped MatrixGroups ModularForm in
+theorem positive_real_unitary_normalization_source (k : ℤ) (f : UpperHalfPlane → ℂ) (g : GL(2, ℝ)⁺) :
+    realPositiveUnitaryLift k f g =
+      (realPositiveDetRoot g : ℂ) ^ k * f (g.val • UpperHalfPlane.I) *
+        UpperHalfPlane.denom g.val UpperHalfPlane.I ^ (-k) ∧
+    realPositiveUnitaryLift k f g =
+      (realPositiveDetRoot g : ℂ) ^ (2 - k) * (f ∣[k] g.val) UpperHalfPlane.I ∧
+    Function.Injective (realPositiveUnitaryLift k) :=
+  ⟨realPositiveUnitaryLift_apply k f g, realPositiveUnitaryLift_slash_correction k f g,
+    realPositiveUnitaryLift_injective k⟩
+
+open scoped MatrixGroups CongruenceSubgroup in
+theorem original_positive_real_representation_source {Q : ℕ} [NeZero Q] {k : ℤ}
+    (f : CuspForm (CongruenceSubgroup.Gamma0 Q : Subgroup (GL (Fin 2) ℝ)) k)
+    (v : RealProjectiveHilbert f) :
+    Continuous (fun g : GL(2, ℝ)⁺ => realPositiveHilbertRepresentation f g v) ∧
+    (∀ (r : ℝ) (hr : r ≠ 0), realPositiveHilbertRepresentation f (realPositiveScalar r hr) v = v) ∧
+    ∀ g : SL(2, ℝ), realPositiveHilbertRepresentation f (Matrix.SpecialLinearGroup.toGLPos g) v =
+      realProjectiveHilbertRepresentation f (QuotientGroup.mk g) v :=
+  ⟨realPositiveHilbertRepresentation_stronglyContinuous f v,
+    fun r hr => realPositiveHilbertRepresentation_scalar f r hr v,
+    fun g => realPositiveHilbertRepresentation_toGLPos f g v⟩
+
+open scoped MatrixGroups in
+theorem actual_simultaneous_padic_SL2_source {ι : Type*} [Fintype ι]
+    (p : ι → ℕ) [∀ i, Fact (p i).Prime] (hp : Function.Injective p)
+    (g : ∀ i, SL(2, ℤ_[p i])) (n : ι → ℕ) :
+    ∃ γ : SL(2, ℤ), ∀ t : ι, ∀ i j : Fin 2,
+      ‖g t i j - ((γ i j : ℤ) : ℤ_[p t])‖ ≤ (p t : ℝ) ^ (-(n t : ℤ)) :=
+  integralSL2_finite_padic_approximation p hp g n
+
+open scoped MatrixGroups in
+theorem actual_integral_SL2_prime_product_source {ι : Type*}
+    (p : ι → ℕ) [∀ i, Fact (p i).Prime] (hp : Function.Injective p) :
+    DenseRange (fun γ : SL(2, ℤ) => fun i : ι =>
+      Matrix.SpecialLinearGroup.map (Int.castRingHom ℤ_[p i]) γ) :=
+  integralSL2_dense_prime_product p hp
+

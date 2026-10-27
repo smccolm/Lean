@@ -1,0 +1,37 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> finite Gamma1 arithmetic Hecke-character realization -> original Picard/H1 and full/parabolic transpose/diamond comparison -> actual differential/cusp equivalence -> exact Fourier realization of each original regular differential.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularCuspForms.lean",
+      "sha256": "5DFEF81C63DEB210A5CEFD47C0BD3A1AE963D7E1F65D099CAF4BF8ED8DC7C7AC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceJEulerModularIdentity.lean",
+      "sha256": "2C15FCF36845E80CE6858EC031CD3D080DE7C8D517803464B888CF9CA86A9CCC"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceDifferentialTranscendence.lean",
+      "sha256": "54FD3C1FC45638446CAA54D03B4B0F2D166449D54F6610A3B9722D94A095BEB8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalDifferentialGerm.lean",
+      "sha256": "BAE8A84CCFE734C9B03465314A6AD72738DF0F708222322792AC2D8F99842065"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCurveGeometry.lean",
+      "sha256": "D63E405202426AB42499AA8AC4D90DC3751E07ACA04C3EF8361098A8B1336C2A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneModularRatios.lean",
+      "sha256": "B34AF80ADA42AA962AA7E6BE5026F79A71A67DC6EF2C1ECF289FFF7F760C89EF"
+    }
+  ],
+  "shorterRoute": "Clear the actual modular denominator and Delta in the cusp-form identity. Reuse the proved q-Euler-j/Delta modular identity. Divide the analytic factor 2*pi*i explicitly. Reuse the generic proved span-of-D theorem to cover every original differential; no new coordinate equivalence or analytic series infrastructure is needed.",
+  "assumptionsToDischarge": [
+    "Exact Fourier normalization is derived from the literal derivative identity, with no matching-series hypothesis.",
+    "Every actual complex regular differential is realized, not only a supplied nonzero coefficient times D(j)."
+  ],
+  "remaining": "Coefficient-field scalar transport, full differential/cusp and original Hecke/diamond/Picard comparison, all-weight characteristic-zero association and literal higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

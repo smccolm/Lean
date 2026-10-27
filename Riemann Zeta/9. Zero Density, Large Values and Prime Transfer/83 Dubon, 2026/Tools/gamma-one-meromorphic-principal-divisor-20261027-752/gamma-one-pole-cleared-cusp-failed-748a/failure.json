@@ -1,0 +1,4 @@
+{
+  "exit": 1,
+  "cause": "Unfold the function composition and pointwise product in the local equality before rewriting."
+}

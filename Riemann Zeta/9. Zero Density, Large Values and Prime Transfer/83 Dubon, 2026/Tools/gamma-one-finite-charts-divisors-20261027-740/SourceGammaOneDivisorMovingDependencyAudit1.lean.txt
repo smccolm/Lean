@@ -1,0 +1,29 @@
+import SourceGammaOnePrescribedPlaceOrders
+import SourceGammaOneAnalyticDivisorMoving
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.exists_polar_regular_separator, `Dubon2026.SourceFunctionField.GammaOne.exists_prescribed_place_orders, `Dubon2026.SourceFunctionField.GammaOne.exists_divisor_analytic_decomposition, `Dubon2026.SourceFunctionField.GammaOne.degree_mapDomain_analyticPlace, `Dubon2026.SourceFunctionField.GammaOne.exists_degree_zero_analytic_representative]
+  let localModules : Array Name := #[`SourceGammaOneAnalyticDivisorMoving, `SourceGammaOnePrescribedPlaceOrders]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.exists_polar_regular_separator, `Dubon2026.SourceFunctionField.GammaOne.exists_prescribed_place_orders, `Dubon2026.SourceFunctionField.GammaOne.exists_divisor_analytic_decomposition, `Dubon2026.SourceFunctionField.GammaOne.degree_mapDomain_analyticPlace, `Dubon2026.SourceFunctionField.GammaOne.exists_degree_zero_analytic_representative, `Dubon2026.SourceCurve.Place.exists_order_separating_function, `Dubon2026.SourceCurve.Place.exists_forall_ord_eq_of_sep, `Dubon2026.SourceCurve.finite_function_support_of_separating_coordinate, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_isCurveOver, `Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_eq, `Dubon2026.SourceFunctionField.GammaOne.place_residue_bijective]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE DIVISOR MOVING DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in actual prescribed orders and analytic representatives of degree-zero divisor classes. Only declaration values are traversed. The actual principal-divisor and finite-exhaustion theorems are consumed; no approximation or moving certificate is supplied. Actual Picard/period and Hecke/diamond/H1 arithmetic comparison, all-weight association and literal higher symmetric-power continuation remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

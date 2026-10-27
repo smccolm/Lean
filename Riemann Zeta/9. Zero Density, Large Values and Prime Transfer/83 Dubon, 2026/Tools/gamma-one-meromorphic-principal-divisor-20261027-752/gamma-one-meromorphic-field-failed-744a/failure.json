@@ -1,0 +1,4 @@
+{
+  "exit": 1,
+  "cause": "ModularFormClass coercion needs definitional equality and discriminant nonvanishing needs its namespace."
+}

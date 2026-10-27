@@ -1,0 +1,345 @@
+{
+  "recordedUTC": "2026-10-27T09:56:44.987146+00:00",
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 homogeneous-coefficient Hecke characters -> actual Picard/H1, full/parabolic, transpose and diamond comparison -> differential and period geometry.",
+  "repositories": [
+    {
+      "repository": "anthropics/fermats-last-theorem",
+      "previousHead": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "head": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "changed": false,
+      "commitDate": "2026-09-24T14:06:36Z",
+      "url": "https://github.com/anthropics/fermats-last-theorem/commit/6e837e75355538c7f80bab5b956861e86c4eacc2",
+      "retrievedUTC": "2026-10-27T09:40:44.528399+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\anthropics__fermats-last-theorem-head.json",
+      "sha256": "FC08B60306920193475EA35ECF401AC893BC58D9AA50BB8FE9EEF55FFEC50A29"
+    },
+    {
+      "repository": "ImperialCollegeLondon/FLT",
+      "previousHead": "a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "head": "a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "changed": false,
+      "commitDate": "2026-10-22T16:15:55Z",
+      "url": "https://github.com/ImperialCollegeLondon/FLT/commit/a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+      "retrievedUTC": "2026-10-27T09:40:44.911969+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\ImperialCollegeLondon__FLT-head.json",
+      "sha256": "5F3BE845851A24221C79839B849A42EC37A2CE9FE1B4F158780F053E50342CBF"
+    },
+    {
+      "repository": "dozenalist/ModularFormsMod",
+      "previousHead": "bc16671d6781a26216b378773502ba5583845cbf",
+      "head": "bc16671d6781a26216b378773502ba5583845cbf",
+      "changed": false,
+      "commitDate": "2026-10-21T19:30:15Z",
+      "url": "https://github.com/dozenalist/ModularFormsMod/commit/bc16671d6781a26216b378773502ba5583845cbf",
+      "retrievedUTC": "2026-10-27T09:40:45.395034+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\dozenalist__ModularFormsMod-head.json",
+      "sha256": "A2DF1C99A7D41D445929E0750992F8904B281AE2D9ABFA400D1100415B60EECE"
+    },
+    {
+      "repository": "dozenalist/LeanModularForms",
+      "previousHead": "f737ca88e0887ecbaad3510b30e37042c243fd17",
+      "head": "f737ca88e0887ecbaad3510b30e37042c243fd17",
+      "changed": false,
+      "commitDate": "2026-10-05T21:41:24Z",
+      "url": "https://github.com/dozenalist/LeanModularForms/commit/f737ca88e0887ecbaad3510b30e37042c243fd17",
+      "retrievedUTC": "2026-10-27T09:40:45.933133+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\dozenalist__LeanModularForms-head.json",
+      "sha256": "7BB5F8FAFDE8C631BE61CAD9FEAFADDFD45FDFFFAC93A606B7D50C4BA9E5DE81"
+    },
+    {
+      "repository": "leanprover-community/mathlib4",
+      "previousHead": "8d14a32337a069dbae9b92875aeb697de357b5ac",
+      "head": "116662aa4c1e9106ab5c609b3214b02f6e11a65a",
+      "changed": true,
+      "commitDate": "2026-10-27T05:50:01Z",
+      "url": "https://github.com/leanprover-community/mathlib4/commit/116662aa4c1e9106ab5c609b3214b02f6e11a65a",
+      "retrievedUTC": "2026-10-27T09:40:46.293201+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\leanprover-community__mathlib4-head.json",
+      "sha256": "F593E0AFD2E05820047B03B8792D62084C9F56543DB9BE36086619FC966A6DC4"
+    },
+    {
+      "repository": "openai/math",
+      "previousHead": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "head": "7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a",
+      "changed": true,
+      "commitDate": "2026-10-26T21:18:03Z",
+      "url": "https://github.com/openai/math/commit/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a",
+      "retrievedUTC": "2026-10-27T09:40:46.687943+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math-head.json",
+      "sha256": "6CA38558150E5428A6AB89342338EDBBEDC7EB5CF1D5DCC3752DD34B0AD91760"
+    },
+    {
+      "repository": "teal-sea/zeta-lab",
+      "previousHead": "558eee037f954989986abad4b25851d9a41604ca",
+      "head": "9c492e8a8b91c6a8787a4536102194f511478c6b",
+      "changed": true,
+      "commitDate": "2026-10-27T08:18:49Z",
+      "url": "https://github.com/teal-sea/zeta-lab/commit/9c492e8a8b91c6a8787a4536102194f511478c6b",
+      "retrievedUTC": "2026-10-27T09:40:47.146561+00:00",
+      "snapshot": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\teal-sea__zeta-lab-head.json",
+      "sha256": "5F2A2014A6F2196EA07524B7902D2B2F5E70224F8DB047F36084B9A0F290D7B3"
+    }
+  ],
+  "findings": [
+    {
+      "source": "leanprover-community/mathlib4",
+      "decision": "No new required input in the inspected modular-form changes.",
+      "evidence": "The complete current tree was compared with the previous tree. All four changed modular-form files were retrieved at both revisions and their complete diffs read. Discriminant, LevelOne/DimensionFormula, QExpansion and RamanujanFormula only change nonzero API names to ne_zero API names in these diffs."
+    },
+    {
+      "source": "openai/math",
+      "decision": "No inspected result discharges the original Gamma1 field-to-period comparison or the non-CM arithmetic continuation requirement.",
+      "evidence": "The new CM Hodge formalization is catalogued, but a theorem about CM abelian varieties is not the required non-CM all-weight modular association. Complete NumberTheory, AlgebraicGeometry, ArithmeticGeometry and RepresentationTheory path inventories were inspected, along with the catalogue and selected full primary proof files. The inspected smooth-scheme chart constructions require actual smooth complex schemes and their algebraic coordinate machinery. They do not construct the needed Gamma1 model or compare its places with the existing integral-ratio function field. The bivariate convergent-series file assumes convergence and proves differentiated-series identities; it does not construct a normalized place embedding."
+    },
+    {
+      "source": "teal-sea/zeta-lab",
+      "decision": "No reduction of the open modular acceptance gates from the inspected update.",
+      "evidence": "The new work concerns a Davenport-Heilbronn function, a linear combination of two character L-functions. The original named statement also admits a trivial zero; the source explicitly distinguishes the stronger strip results. The numerical strip assembly was not downloaded, built or audited here. Neither version provides the required modular symmetric-power continuation. Existing fixed-character Dubon gates are already closed."
+    },
+    {
+      "source": "anthropics/fermats-last-theorem",
+      "decision": "Retain the precise period alternative as a candidate; its prerequisites are not yet locally discharged.",
+      "evidence": "The live head is unchanged. Scope736 and scope739 inspect the actual principal-divisor converse, meromorphic realization, real-period dimension bound, multiplier normalization and reciprocity dependencies. Reusing local all-modular-ratio membership avoids rebuilding the external field framework. Specializing meromorphic pole clearing to a finite analytic divisor may avoid the general compact-pole enumeration. Real-period surjectivity, Abel-Petersson reciprocity and order-zero control at all j-pole places still require proof."
+    },
+    {
+      "source": "ImperialCollegeLondon/FLT; dozenalist/ModularFormsMod; dozenalist/LeanModularForms",
+      "decision": "Heads unchanged; previous exact source-contract assessments remain applicable.",
+      "evidence": "Live GitHub default-branch commit responses are preserved with retrieval timestamps and SHA-256 hashes."
+    }
+  ],
+  "coverage": [
+    "Seven live repository heads checked at 2026-10-27 09:40:44--47 UTC; three changed.",
+    "GitHub compare file lists cap at 300. The OpenAI root recursive tree is truncated, and so is the previous root tree. Visible delta entries are not evidence that a file was newly added or absent previously.",
+    "Fresh targeted recursive subtrees for NumberTheory (29617 entries), AlgebraicGeometry (25062), ArithmeticGeometry (631) and RepresentationTheory (3390) are complete and untruncated. This is not a complete content search of every external file.",
+    "Full selected primary files and the four Mathlib modular-form diffs were read; file-path matches and repository catalogues alone are not counted as proved reusable theorems.",
+    "Broad web queries: Lean formalization symmetric power automorphy GitHub 2026; Lean Eichler Shimura GitHub; Lean modular curves Picard formalization. These did not identify an additional verified matching proof. Search absence is not a universal nonexistence claim.",
+    "No external dependency closure was compiled or axiom-audited. No new external import or root-pin change. OpenAI uses Lean 4.34.1 and mathlib d13f23b723b8a846827a245b89c10fc7d3f11612; local Lean 4.30 and mathlib c5ea00351c28e24afc9f0f84379aa41082b1188f remain unchanged. OpenAI source license is Apache-2.0."
+  ],
+  "routeDecision": "Promote the already audited exact finite charts and divisor-moving results common to the required Picard/period comparison. Before further global geometry expansion, continue comparing the concrete cusp route and the pinned modular-period alternative. Defer unrelated zero-free, Hodge, broad scheme and bivariate-series infrastructure.",
+  "actualProgress": "Scope738 discharges the finite prescribed-order and divisor-moving obligations using existing local closed residues, separator indicators, curve principal divisors and actual finite-place exhaustion. Every degree-zero divisor class now has a finite analytic representative with coefficient sum zero. Its scratch receipt passes; production integration remains pending.",
+  "boundary": "16/20; DUB-17--20 OPEN. Every original source quantifier, all-weight arithmetic obligation and acceptance gate remains unchanged. Finite characters, complex semisimplicity, Witt coefficients and universal deformation rings are not characteristic-zero lifts.",
+  "relatedAssessments": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-route-reuse-736\\route-assessment.json",
+      "sha256": "F17F3CCF3228BEC97548BF60236DD8FBCDA4345F49AB517394CC310ABCA6136C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\route-assessment.json",
+      "sha256": "3605562C3363C79E1414FFBF059E904987B26E9C91401410DEB19D4B6744ED71"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-moving-1-scratch-receipt.json",
+      "sha256": "A88376EC334AB34572E6E20E05245BAE932A7E0FAEFC77F87480E28E18AEA1B7"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "additional-primary-snapshots.json",
+      "sha256": "CDB67E29CF7AA634041ACF77F6D829F9D0A30B0E70652867781008FC2B3E51DC"
+    },
+    {
+      "path": "anthropics__fermats-last-theorem-head.json",
+      "sha256": "FC08B60306920193475EA35ECF401AC893BC58D9AA50BB8FE9EEF55FFEC50A29"
+    },
+    {
+      "path": "comparisons.json",
+      "sha256": "C5E7BDD65B4D85F4C14D0B5066ED4691C685EEB3036B39AC0DE2D5306088E191"
+    },
+    {
+      "path": "dozenalist__LeanModularForms-head.json",
+      "sha256": "7BB5F8FAFDE8C631BE61CAD9FEAFADDFD45FDFFFAC93A606B7D50C4BA9E5DE81"
+    },
+    {
+      "path": "dozenalist__ModularFormsMod-head.json",
+      "sha256": "A2DF1C99A7D41D445929E0750992F8904B281AE2D9ABFA400D1100415B60EECE"
+    },
+    {
+      "path": "ImperialCollegeLondon__FLT-head.json",
+      "sha256": "5F3BE845851A24221C79839B849A42EC37A2CE9FE1B4F158780F053E50342CBF"
+    },
+    {
+      "path": "leanprover-community__mathlib4-compare.json",
+      "sha256": "AACE7117B21839A06840DCCF773C1646A239D94A13FC8B4BA14409D24213EB5D"
+    },
+    {
+      "path": "leanprover-community__mathlib4-head.json",
+      "sha256": "F593E0AFD2E05820047B03B8792D62084C9F56543DB9BE36086619FC966A6DC4"
+    },
+    {
+      "path": "leanprover-community__mathlib4-tree.json",
+      "sha256": "CBA0B2EB28E1436DD28D031308B4F336240D0FBC1ECE946BBB2E744DA4E03B58"
+    },
+    {
+      "path": "leanprover-community__mathlib4-visible-delta.json",
+      "sha256": "7F75E2C954E17CE59A89362AB2A54F28A885819D2A256C0F5F7D9B082EC5A6AB"
+    },
+    {
+      "path": "leanprover-community__mathlib4__Mathlib__NumberTheory__ModularForms__Discriminant.lean.txt",
+      "sha256": "AE0E9F7AA2BE4B499882256D98A2FBF88010D09BA01CA157991FDCD0DE2FBCED"
+    },
+    {
+      "path": "leanprover-community__mathlib4__Mathlib__NumberTheory__ModularForms__LevelOne__DimensionFormula.lean.txt",
+      "sha256": "355555C4854B5B97E4D3A12A37D56A102BBB79ACE31B9EF53633D4B474EC0A25"
+    },
+    {
+      "path": "leanprover-community__mathlib4__Mathlib__NumberTheory__ModularForms__QExpansion.lean.txt",
+      "sha256": "BA7239AF5AA386AD2478F4AABC6F0490E9A02A2F005A5129823BD32827C4D936"
+    },
+    {
+      "path": "leanprover-community__mathlib4__Mathlib__NumberTheory__ModularForms__RamanujanFormula.lean.txt",
+      "sha256": "98425E4043AE3559A46BDEE1AAB6C52C3631F54B01174AA61EEB869DCC934BE9"
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "D07E4B2D1951FC8B8BB30725D7BD90DE6AEFE7076CCDDF15EE6CDB9D7F19725C"
+    },
+    {
+      "path": "mathlib-Discriminant.diff.txt",
+      "sha256": "DEB3D4E36C08C323E9B6871F4427D219D048FB4039D676C21EAC4E41DE51790A"
+    },
+    {
+      "path": "mathlib-LevelOne__DimensionFormula.diff.txt",
+      "sha256": "ACBC9328989B6C93CBF844E3E95DCC6EBC6C976690A3EA06EEA2E24923ABA5E8"
+    },
+    {
+      "path": "mathlib-previous-Discriminant.lean.txt",
+      "sha256": "E9F9D979462E077180CB741DE9BC25DF01430476D8142B5D91676D4F26304531"
+    },
+    {
+      "path": "mathlib-previous-LevelOne__DimensionFormula.lean.txt",
+      "sha256": "4FF93926225FD33F5C3AAA0ADD074933EB5E0443A96A1C6D411A4234D7D0D438"
+    },
+    {
+      "path": "mathlib-previous-QExpansion.lean.txt",
+      "sha256": "22CCDEA40DD4B4E014C7F35A658600819763D4F7AE82DFAB1575D1EF3A87C7D6"
+    },
+    {
+      "path": "mathlib-previous-RamanujanFormula.lean.txt",
+      "sha256": "E7FFDE968CD1B18A5309535F44DCFCE38F9206695CAF48EDA31BA6557641141D"
+    },
+    {
+      "path": "mathlib-QExpansion.diff.txt",
+      "sha256": "9B55636BEB7969B2CEB8BBE9CB5D75D824C66E7AB73268BB29DBD589CD67439C"
+    },
+    {
+      "path": "mathlib-RamanujanFormula.diff.txt",
+      "sha256": "DB7B2F7BAAE79C2B69F4DB65C11CD618EF4886C8A94A54EAA47E4FE3CE677390"
+    },
+    {
+      "path": "openai__math-AlgebraicGeometry-tree.json",
+      "sha256": "74691BA8A621EF2FFA41F4E405DF61B281C42C3CCEA499006DDCEF05D488F496"
+    },
+    {
+      "path": "openai__math-ArithmeticGeometry-tree.json",
+      "sha256": "F39341968F9A15E5754FE0D85CA8E41103F008199E5B5E4BB175DF8288422673"
+    },
+    {
+      "path": "openai__math-compare.json",
+      "sha256": "E9FCD8F724BC02074C6CF4998EA6C9F35EDF35F8F8F7D2A78633977239645880"
+    },
+    {
+      "path": "openai__math-head.json",
+      "sha256": "6CA38558150E5428A6AB89342338EDBBEDC7EB5CF1D5DCC3752DD34B0AD91760"
+    },
+    {
+      "path": "openai__math-NumberTheory-tree.json",
+      "sha256": "6F608B1658B8F868EBD9CD10E74E26CA4460C9562D630EB1B7C23E2C039689BF"
+    },
+    {
+      "path": "openai__math-OAI-tree.json",
+      "sha256": "6965C0DA89BA79335EF1194843CE074992E650AA68C4921E33BCCF1FF63476D3"
+    },
+    {
+      "path": "openai__math-RepresentationTheory-tree.json",
+      "sha256": "5BFB2A8C565DB580B2927FEFDDE12B62541504B3DD67218604D4291B2520101D"
+    },
+    {
+      "path": "openai__math-tree.json",
+      "sha256": "0E06F02B571D2347C8DA1A799E5FF522665DBFC3B37F95A0A003B04A5CCB5C99"
+    },
+    {
+      "path": "openai__math-visible-delta.json",
+      "sha256": "A266189C11157336BDAB843CABE7CC3A908CE0A82C9AFB7B604EA5104F59D82A"
+    },
+    {
+      "path": "openai__math__CONTENTS.md",
+      "sha256": "080BADCB677FB80BE0E695C21A8EC88BCB3A46DD3E3078CA10061E6B289BE175"
+    },
+    {
+      "path": "openai__math__history.md",
+      "sha256": "AC688A38EB9AFDB1F3C339C1DF251CDB1AA7D8F18067B3CE5D668A96D690F5FB"
+    },
+    {
+      "path": "openai__math__lean__formalization.yaml.txt",
+      "sha256": "B8E7072AB9AC195A290110D78C3A3497608CE76AC5B67D307685F38408299B39"
+    },
+    {
+      "path": "openai__math__lean__lake-manifest.json.txt",
+      "sha256": "CF6105A25D9DCA2F166B241D9191BD12C7E13305890DC9C4D0952351CCCC0794"
+    },
+    {
+      "path": "openai__math__lean__lean-toolchain.txt",
+      "sha256": "D5EDBA4E4B8FAAD9C1BAEADB265716D20D03BE4D1A2647DC5E35B0C0325BEA7B"
+    },
+    {
+      "path": "openai__math__lean__OAI__AlgebraicGeometry__ClosedImmersion__HolomorphicCharts.lean.txt",
+      "sha256": "6496145E1945FA2F233E99AE1803C5C415390B885EFF081A16FE480D2F27BC10"
+    },
+    {
+      "path": "openai__math__lean__OAI__AlgebraicGeometry__ClosedImmersion__NormalCoordinates.lean.txt",
+      "sha256": "A42A7EA56135A0F8B1246D7123C2A2B5772BBADBA12F23BBC344F056364AAD45"
+    },
+    {
+      "path": "openai__math__lean__OAI__AlgebraicGeometry__ComplexPoint__AnalyticMap.lean.txt",
+      "sha256": "BCE8C20F9546F07E66571D0069BE97703FCD4027B23310C43580B93D847F03E5"
+    },
+    {
+      "path": "openai__math__lean__OAI__AlgebraicGeometry__Seshadri__Analytic__ConvergentSeries.lean.txt",
+      "sha256": "0A30D77D6EDF5DE2196CEFEADCA03441B0906EA3B53A2D605C54D1F4DE1B8267"
+    },
+    {
+      "path": "openai__math__lean__README.md.txt",
+      "sha256": "292FF9D539F494158DFBF68D989BA85A82782A4343B2FE43088F8FA62525BF1B"
+    },
+    {
+      "path": "openai__math__LICENSE.txt",
+      "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4"
+    },
+    {
+      "path": "openai__math__README.md",
+      "sha256": "6CB7F0E387B67C051227C6BA27ACA87EE82D9DD2530B6452B86B8681A2E2743A"
+    },
+    {
+      "path": "selected-snapshots.json",
+      "sha256": "AC891320DC8D7561BC47011E957E85AD15F4E6FBE1A1664972EAFCB3C12816C5"
+    },
+    {
+      "path": "subtree-snapshots.json",
+      "sha256": "7F3F7FFC715E4D24DF337D0C1C85FD3A96ADE05DC618E4FEA2C36D23526DE79D"
+    },
+    {
+      "path": "teal-sea__zeta-lab-compare.json",
+      "sha256": "CC521E5FBFDE85A6B8FABD4630DBA342225E9BD013F428B8F386B3EC1B199301"
+    },
+    {
+      "path": "teal-sea__zeta-lab-head.json",
+      "sha256": "5F2A2014A6F2196EA07524B7902D2B2F5E70224F8DB047F36084B9A0F290D7B3"
+    },
+    {
+      "path": "teal-sea__zeta-lab__47-the-davenport-heilbronn-zero.md",
+      "sha256": "537ACB03B96D77C44355C59D910128C6C15AE08E25E792B68E3EBBC6B8CE9B46"
+    },
+    {
+      "path": "teal-sea__zeta-lab__DavenportHeilbronn.lean.txt",
+      "sha256": "28A8868C2A7A206714F96886EB848DBDDF09009BEF728413E868F3C271FF33DD"
+    },
+    {
+      "path": "teal-sea__zeta-lab__DHTrivialZero.lean.txt",
+      "sha256": "AEFC0900444D81CDA23B287075C41ADA488357BB3F1DF0EFB28019A91B860B1D"
+    }
+  ],
+  "rootPinsChanged": false,
+  "externalImport": false,
+  "externalClosureBuilt": false,
+  "acceptanceGatesClosed": 0
+}

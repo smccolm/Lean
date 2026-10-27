@@ -1,0 +1,86 @@
+{
+  "reason": "Defer the unused analyticPlace_mem_iff wrapper; the required normalized order construction and all hypotheses remain. The complete finite-holomorphy consumer compiled before trimming. Recompile its changed dependency chain before exhaustive audit.",
+  "removedTheorem": "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_mem_iff",
+  "archives": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaces.lean",
+      "archive": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticPlaces.lean.txt",
+      "sha256": "A992F11D440E41818EBD9F63D56B8E5950CD83011ED09B3CD75A3522C44932B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaces.log",
+      "archive": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticPlaces.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaces.exit",
+      "archive": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticPlaces.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaces.olean",
+      "archive": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticPlaces.olean",
+      "sha256": "076D307330A6BAE13362A5EF9E3FABA9090D63CBA48B96EB8678C078322EE5EF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticJOrders.lean",
+      "archive": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticJOrders.lean.txt",
+      "sha256": "F823AB56C1F8CF239B8EC8121C7524D81EAEECB0663469666495FB57CE728330"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticJOrders.log",
+      "archive": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticJOrders.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticJOrders.exit",
+      "archive": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticJOrders.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticJOrders.olean",
+      "archive": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticJOrders.olean",
+      "sha256": "0AE821E8BFC12D7D18041DDBE73112EAD1ACF7AE99A8DAAD30D800B5A0F451F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticDifferentialRegularity.lean",
+      "archive": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticDifferentialRegularity.lean.txt",
+      "sha256": "DC55B2BDC351C25901EB9D1C14A6F76F489CFFE7DE5CC87FB1DAA7565DD1F1F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticDifferentialRegularity.log",
+      "archive": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticDifferentialRegularity.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticDifferentialRegularity.exit",
+      "archive": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticDifferentialRegularity.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticDifferentialRegularity.olean",
+      "archive": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticDifferentialRegularity.olean",
+      "sha256": "098D0657BB78B9BB0FE6E768369E3602F911FFB74689E2170A3DA86C5F0CDE96"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicDifferentials.lean",
+      "archive": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneHolomorphicDifferentials.lean.txt",
+      "sha256": "FE3D1B67F3993113A3C7437A990C63B2CC6C447C7A387227167B9F7EE0A3A518"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicDifferentials.log",
+      "archive": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneHolomorphicDifferentials.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicDifferentials.exit",
+      "archive": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneHolomorphicDifferentials.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicDifferentials.olean",
+      "archive": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneHolomorphicDifferentials.olean",
+      "sha256": "55D6627C24E0B857A3EA37E9BD040CB1AFE0DD193988568BAB8994BEE291E0ED"
+    }
+  ]
+}

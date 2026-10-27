@@ -1,0 +1,67 @@
+import Dubon2026.SourceGammaOneRationalBoundedDenominators
+import Dubon2026.SourceGammaOneScalarExtension
+
+/-! DUB-17/18 -> original Gamma1 global charts -> analytic-place orbits.
+The already proved integral cusp spanning theorem, at weights divisible
+by twelve, places every normalized complex cusp expansion in the actual
+integral-ratio field. This is the membership input for separating ratios;
+the field is not enlarged to include arbitrary complex modular forms. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceFricke CongruenceSubgroup
+open scoped MatrixGroups ModularForm
+
+theorem normalized_cusp_ratio_mem (N : ℕ) [NeZero N] (m : ℕ)
+    (f : CuspForm (Gamma1 N) ((m : ℤ) * 12)) :
+    (qExpansion 1 f : LaurentSeries ℂ) /
+      (qExpansion 1 ModularForm.discriminant : LaurentSeries ℂ) ^ m ∈
+        qExpFunctionFieldC ℂ (Gamma1 N) := by
+  let D₀ : ModularForm (Gamma1 N) 12 :=
+    ModularNormPolynomial.restrict (Subgroup.map_le_range _ (Gamma1 N))
+      (CuspForm.discriminant : ModularForm 𝒮ℒ 12)
+  let D := D₀.pow m
+  have hD : IsIntegralQExp D ((PowerSeries.X * dedekindEtaUnit) ^ m) := by
+    change ((PowerSeries.X * dedekindEtaUnit) ^ m).map (Int.castRingHom ℂ) =
+      qExpansion 1 ((D₀.pow m) : ℍ → ℂ)
+    rw [map_pow, ModularForm.qExpansion_pow one_pos (gammaOne_one_mem_strictPeriods N)]
+    exact congrArg (fun p : PowerSeries ℂ => p ^ m)
+      qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit.symm
+  have hqD : (qExpansion 1 (D : ℍ → ℂ) : LaurentSeries ℂ) =
+      (qExpansion 1 ModularForm.discriminant : LaurentSeries ℂ) ^ m := by
+    rw [show (D : ℍ → ℂ) = ⇑(D₀.pow m) from rfl,
+      ModularForm.qExpansion_pow one_pos (gammaOne_one_mem_strictPeriods N), PowerSeries.coe_pow]
+    rfl
+  have hDseries : intSeriesC ℂ ((PowerSeries.X * dedekindEtaUnit) ^ m) =
+      (qExpansion 1 (D : ℍ → ℂ) : LaurentSeries ℂ) :=
+    congrArg (HahnSeries.ofPowerSeries ℤ ℂ) hD
+  have hD0 : intSeriesC ℂ ((PowerSeries.X * dedekindEtaUnit) ^ m) ≠ 0 := by
+    rw [hDseries, hqD]
+    exact pow_ne_zero _ discriminant_expansion_ne_zero
+  have hf : f ∈ Submodule.span ℂ {g : CuspForm (Gamma1 N) ((m : ℤ) * 12) |
+      ∃ p : PowerSeries ℤ, IsIntegralQExp g p} := by
+    rw [span_gammaOne_integral_cuspForms_eq_top N ((m : ℤ) * 12) 0 0 m (by ring)]
+    trivial
+  induction hf using Submodule.span_induction with
+  | mem g hg =>
+      obtain ⟨p, hp⟩ := hg
+      have hpg : intSeriesC ℂ p = (qExpansion 1 g : LaurentSeries ℂ) :=
+        congrArg (HahnSeries.ofPowerSeries ℤ ℂ) hp
+      have hm := div_mem_qExpFunctionFieldC (g : ModularForm (Gamma1 N) ((m : ℤ) * 12)) D
+        hp hD hD0
+      rwa [hpg, hDseries, hqD] at hm
+  | zero =>
+      simp only [CuspForm.coe_zero, qExpansion_zero, PowerSeries.coe_zero, zero_div]
+      exact zero_mem _
+  | add g h _ _ hg hh =>
+      rw [CuspForm.coe_add,
+        ModularForm.qExpansion_add one_pos (gammaOne_one_mem_strictPeriods N),
+        PowerSeries.coe_add, add_div]
+      exact add_mem hg hh
+  | smul c g _ hg =>
+      rw [CuspForm.IsGLPos.coe_smul,
+        ModularForm.qExpansion_smul one_pos (gammaOne_one_mem_strictPeriods N),
+        PowerSeries.coe_smul, smul_div_assoc]
+      exact (qExpFunctionFieldC ℂ (Gamma1 N)).toSubalgebra.toSubmodule.smul_mem c hg
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,83 @@
+import SourceGammaOneCuspRotationOrder
+import SourceGammaOneCuspJExactOrder
+import Dubon2026.SourceGammaOnePlusMinus
+
+/-! DUB-17/18 -> actual Gamma1 real period surjectivity -> matching
+Manin/genus cusp terms -> cusp width. Every signed stabilizer translation
+forces divisibility of the normalized cusp ramification. Applying this to
+the actual uniformizer, together with the exact raw j order, bounds the
+algebraic j-pole order by every positive stabilizer translation. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open Filter Function SourceCurve
+open scoped Topology MatrixGroups
+
+theorem level_dvd_mul_of_qParam_zpow_eq_one
+    (N : ℕ) [NeZero N] (w e : ℤ)
+    (he : Periodic.qParam N (w : ℝ) ^ e = 1) : (N : ℤ) ∣ w * e := by
+  have hN : (N : ℂ) ≠ 0 := by exact_mod_cast NeZero.ne N
+  have hp : (2 * Real.pi * Complex.I : ℂ) ≠ 0 :=
+    mul_ne_zero (mul_ne_zero (by norm_num) (by exact_mod_cast Real.pi_ne_zero)) Complex.I_ne_zero
+  simp only [Periodic.qParam, Complex.ofReal_intCast, Complex.ofReal_natCast,
+    ← Complex.exp_int_mul] at he
+  obtain ⟨m, hm⟩ := Complex.exp_eq_one_iff.mp he
+  have hm' : (e : ℂ) * (2 * Real.pi * Complex.I * w) =
+      (m * (2 * Real.pi * Complex.I)) * N :=
+    (div_eq_iff hN).mp (by simpa only [mul_div_assoc] using hm)
+  have hz : (w : ℂ) * e = (N : ℂ) * m := by
+    apply mul_left_cancel₀ hp
+    calc
+      (2 * Real.pi * Complex.I) * (w * e) = e * (2 * Real.pi * Complex.I * w) := by ring
+      _ = (m * (2 * Real.pi * Complex.I)) * N := hm'
+      _ = (2 * Real.pi * Complex.I) * (N * m) := by ring
+  exact ⟨m, by exact_mod_cast hz⟩
+
+theorem cuspRealize_mul_left_plusMinus_eventuallyEq
+    {Γ : Subgroup SL(2, ℤ)} (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) (hT : ModularGroup.T ∈ Γ)
+    (x : functionFieldOver Γ ℂ) {γ : SL(2, ℤ)} (hγ : γ ∈ plusMinus Γ) (δ : SL(2, ℤ)) :
+    cuspRealize Γ N (γ * δ) (x : LaurentSeries ℂ) =ᶠ[𝓝[≠] (0 : ℂ)]
+      cuspRealize Γ N δ (x : LaurentSeries ℂ) := by
+  rcases (mem_plusMinus_iff Γ γ).mp hγ with hh | hh
+  · exact cuspRealize_mul_left_eventuallyEq N hΓ hT x ⟨γ, hh⟩ δ
+  · have he := cuspRealize_mul_left_eventuallyEq N hΓ hT x ⟨-γ, hh⟩ δ
+    simpa only [neg_mul, cuspRealize_neg] using he
+
+theorem level_dvd_translation_mul_cuspRamification
+    {Γ : Subgroup SL(2, ℤ)} (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) (hT : ModularGroup.T ∈ Γ)
+    (δ : SL(2, ℤ)) (w : ℤ)
+    (hw : δ * ModularGroup.T ^ w * δ⁻¹ ∈ plusMinus Γ) :
+    (N : ℤ) ∣ w * (cuspRamification N hΓ hT δ : ℤ) := by
+  let P := cuspPlace N hΓ hT δ
+  let F := cuspRealize Γ N δ (P.uniformizer : LaurentSeries ℂ)
+  have ho : meromorphicOrderAt F 0 = ((cuspRamification N hΓ hT δ : ℤ) : WithTop ℤ) := by
+    change cuspOrder Γ N δ P.uniformizer = _
+    rw [cuspPlace_order N hΓ hT δ _ P.uniformizer_ne_zero]
+    change (((cuspRamification N hΓ hT δ : ℤ) * P.ord P.uniformizer : ℤ) : WithTop ℤ) = _
+    rw [P.ord_uniformizer, mul_one]
+  have hl := cuspRealize_mul_left_plusMinus_eventuallyEq N hΓ hT P.uniformizer hw δ
+  have hm : (δ * ModularGroup.T ^ w * δ⁻¹) * δ = δ * ModularGroup.T ^ w := by group
+  rw [hm] at hl
+  have hr := cuspRealize_mul_T_zpow_eventuallyEq N hΓ hT P.uniformizer δ w
+  have hc := rotation_zpow_eq_one_of_meromorphic_order
+    (meromorphicAt_cuspRealize N hΓ hT P.uniformizer δ) ho
+    (Periodic.qParam_ne_zero (h := (N : ℝ)) (w : ℝ)) (hr.symm.trans hl)
+  exact level_dvd_mul_of_qParam_zpow_eq_one N w _ hc
+
+theorem j_pole_order_le_positive_translation
+    {Γ : Subgroup SL(2, ℤ)} (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) (hT : ModularGroup.T ∈ Γ)
+    (δ : SL(2, ℤ)) (w : ℤ) (hw0 : 0 < w)
+    (hw : δ * ModularGroup.T ^ w * δ⁻¹ ∈ plusMinus Γ) :
+    -(cuspPlace N hΓ hT δ).ord (jCoordinateOver Γ ℂ) ≤ w := by
+  have hd := level_dvd_translation_mul_cuspRamification N hΓ hT δ w hw
+  have he : (0 : ℤ) < cuspRamification N hΓ hT δ := by
+    exact_mod_cast cuspRamification_pos N hΓ hT δ
+  have hb : (N : ℤ) ≤ w * (cuspRamification N hΓ hT δ : ℤ) :=
+    Int.le_of_dvd (mul_pos hw0 he) hd
+  have hj := cuspRamification_mul_j_pole_order N hΓ hT δ
+  nlinarith
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

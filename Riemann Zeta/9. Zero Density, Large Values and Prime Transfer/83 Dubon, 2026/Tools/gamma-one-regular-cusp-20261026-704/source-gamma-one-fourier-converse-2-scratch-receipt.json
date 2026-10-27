@@ -1,0 +1,55 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T03:36:27.053891+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneCuspFourierNormalization",
+    "SourceGammaOneRegularFourierRealization"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspFourierNormalization.lean",
+      "sha256": "421C148EA7164B827FCCB1461DC1030A5FEC21FA1EEF69109AF7B5DF20587C6E",
+      "oleanSha256": "DA29AFF7566E0406CFFE9019DFAB8DE1B01B57720B2CA561D19420BC259E44BC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularFourierRealization.lean",
+      "sha256": "8F1F5DF3BF9B81643AAB19DA6B21FA47434B528F8B8DB8D037C222F0BB82AA7C",
+      "oleanSha256": "9CD9CEC48C81A48CDA3CAAC2AB20969A3B47694DEAB93E26CAE0F2C6E63ABAB6"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_qExpansion",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_cuspForm_of_regular_differential"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.normalized_cusp_qExpansion",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_cuspForm_of_regular_differential"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFourierConverseAudit2.log",
+  "logSha256": "FAB8FDD917F668975A55766D690241B5E0FDC3ECA853674233648214E61CA493",
+  "auditSha256": "587C27A592128F42F28EF373589E4EB343BC8BB73BB742EC21CA9DA350E29A30",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 10,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 10,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFourierConverseDependencyAudit2.log",
+  "dependencyAuditSha256": "181CB82D7B94FA0DD01EF918DFE02E4595EC6A4B1E3737C78C494A0799F84A42",
+  "dependencyAuditSourceSha256": "147A43F699D6F8EDE139AF25222E11B2C6EFBCF1AA7AB3E5D9CAADBB9B0931D6",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_cuspForm_of_regular_differential"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> finite Gamma1 arithmetic Hecke-character realization -> original Picard/H1 and full/parabolic transpose/diamond comparison -> actual differential/cusp equivalence -> exact Fourier realization of each original regular differential.",
+  "discharged": [
+    "Exact Fourier normalization is derived from the literal derivative identity, with no matching-series hypothesis.",
+    "Every actual complex regular differential is realized, not only a supplied nonzero coefficient times D(j)."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Coefficient-field transport, complete linear differential/cusp equivalence and original Hecke/diamond/Picard/H1 arithmetic comparison, all-weight characteristic-zero association and literal higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-fourier-converse-2-reuse-review-20261026.json",
+  "reuseReviewSha256": "6EAA1B9AC957826CB11AD2C215F38385C19E5FFAF8991A203E9234CAB72D2AF5",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

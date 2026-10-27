@@ -1,0 +1,29 @@
+{
+  "modules": [
+    "SourcePeriodDivisionRotations"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.DivisionRotations.scale_lattice_eq_of_invariant_powers",
+    "Dubon2026.SourceFunctionField.GammaOne.DivisionRotations.exists_rotation_of_division_power"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.DivisionRotations.scale_lattice_eq_of_invariant_powers",
+    "Dubon2026.SourceFunctionField.GammaOne.DivisionRotations.exists_rotation_of_division_power"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.DivisionRotations.scale_lattice_eq_of_invariant_powers",
+    "Dubon2026.SourceFunctionField.GammaOne.DivisionRotations.exists_rotation_of_division_power",
+    "Dubon2026.SourceFunctionField.JOrbitSeparation.g\u2082_scale",
+    "Dubon2026.SourceFunctionField.JOrbitSeparation.g\u2083_scale",
+    "Dubon2026.SourceFunctionField.LatticeInvariants.lattice_eq_of_invariants"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.DivisionRotations.exists_rotation_of_division_power"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourcePeriodDivisionRotations"
+  ],
+  "separateReason": "All selected declarations are consumed by lattice-preserving rotations from division-value powers. Actual division forms and the orbit-separation consumer remain."
+}

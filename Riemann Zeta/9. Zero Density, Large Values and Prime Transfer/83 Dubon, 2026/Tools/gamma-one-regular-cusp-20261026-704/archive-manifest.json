@@ -1,0 +1,804 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-regular-cusp-promotion-route-704.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-regular-cusp-promotion-route-704.json",
+      "sha256": "D0E4F13B72692CB7ADF1EEACC25080BA7F835FC6CEBA5D52BB158EDD84EBB4E6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticDifferentialRegularity-pretrim-700e.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneAnalyticDifferentialRegularity-pretrim-700e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticDifferentialRegularity-pretrim-700e.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneAnalyticDifferentialRegularity-pretrim-700e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticJOrders-pretrim-700e.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneAnalyticJOrders-pretrim-700e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticJOrders-pretrim-700e.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneAnalyticJOrders-pretrim-700e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaces-pretrim-700e.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneAnalyticPlaces-pretrim-700e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaces-pretrim-700e.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneAnalyticPlaces-pretrim-700e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspVanishingAudit10.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneCuspVanishingAudit10.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspVanishingAudit10.lean",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneCuspVanishingAudit10.lean.txt",
+      "sha256": "8AD8B7C33C7968E80BF28D3351929D552827728A5EBDA117929F577CB94E0A0F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspVanishingAudit10.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneCuspVanishingAudit10.log",
+      "sha256": "191C3CB43D9B63D93491F4AD9219A842AE3A7FBFF4BA30AEFC7B6862988D6E52"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspVanishingDependencyAudit10.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneCuspVanishingDependencyAudit10.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspVanishingDependencyAudit10.lean",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneCuspVanishingDependencyAudit10.lean.txt",
+      "sha256": "476953C5029CCC89DCA0F51BC0074D5BD3299EF66FAD883CA9ECE3FE82AE11DF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspVanishingDependencyAudit10.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneCuspVanishingDependencyAudit10.log",
+      "sha256": "A7FF611A6EA86D0CE8D810EBE4270B55CB357B96B217D6177EE6870FC5D999AD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspVanishingScratchOwnership701.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneCuspVanishingScratchOwnership701.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspVanishingScratchOwnership701.lean",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneCuspVanishingScratchOwnership701.lean.txt",
+      "sha256": "43F1C4E02690CE6FA2F39273ABB1A35AFEF58E065861C88438E20FA2CD58B14A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspVanishingScratchOwnership701.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneCuspVanishingScratchOwnership701.log",
+      "sha256": "AC87F8BA312DC88154243D4E40BDD1405A048BC88F71E43035A07023B5CF9DF0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFourierConverseAudit2.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneFourierConverseAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFourierConverseAudit2.lean",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneFourierConverseAudit2.lean.txt",
+      "sha256": "587C27A592128F42F28EF373589E4EB343BC8BB73BB742EC21CA9DA350E29A30"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFourierConverseAudit2.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneFourierConverseAudit2.log",
+      "sha256": "FAB8FDD917F668975A55766D690241B5E0FDC3ECA853674233648214E61CA493"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFourierConverseDependencyAudit2.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneFourierConverseDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFourierConverseDependencyAudit2.lean",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneFourierConverseDependencyAudit2.lean.txt",
+      "sha256": "147A43F699D6F8EDE139AF25222E11B2C6EFBCF1AA7AB3E5D9CAADBB9B0931D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFourierConverseDependencyAudit2.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneFourierConverseDependencyAudit2.log",
+      "sha256": "181CB82D7B94FA0DD01EF918DFE02E4595EC6A4B1E3737C78C494A0799F84A42"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFourierConverseScratchOwnership702.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneFourierConverseScratchOwnership702.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFourierConverseScratchOwnership702.lean",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneFourierConverseScratchOwnership702.lean.txt",
+      "sha256": "ED743658F1B2E0CDAC3350B0AE893C074EA0FA5C893EDE3C7EB77B20F8C3F5D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFourierConverseScratchOwnership702.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneFourierConverseScratchOwnership702.log",
+      "sha256": "FDBDA24731CA8B50B849871988B915B2F0CFF558E612AF778BA8BA2689C4F2D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicDifferentials-pretrim-700e.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneHolomorphicDifferentials-pretrim-700e.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicDifferentials-pretrim-700e.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneHolomorphicDifferentials-pretrim-700e.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLinearComparisonAudit2.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneLinearComparisonAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLinearComparisonAudit2.lean",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneLinearComparisonAudit2.lean.txt",
+      "sha256": "AAA0A0E92F53978CDEB8658CB2817C8E8A29572CCB8B21FC09213D9507C73B0B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLinearComparisonAudit2.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneLinearComparisonAudit2.log",
+      "sha256": "83F8D45C054B741FA3566324E51CE02172217D01B3669CE40C25C1A45E4698A3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLinearComparisonDependencyAudit2.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneLinearComparisonDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLinearComparisonDependencyAudit2.lean",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneLinearComparisonDependencyAudit2.lean.txt",
+      "sha256": "0B81A72E45E0572C0BB79B04AFE893A3DEE7A4185A30C543788F5CA8415BD59A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLinearComparisonDependencyAudit2.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneLinearComparisonDependencyAudit2.log",
+      "sha256": "FB844267AE6686BF363A086431B4EF01F4312F3654AB66905E437DE29EF60CD4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLinearComparisonScratchOwnership703.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneLinearComparisonScratchOwnership703.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLinearComparisonScratchOwnership703.lean",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneLinearComparisonScratchOwnership703.lean.txt",
+      "sha256": "A8C891D00F7CDB1C8074E8E2A4184DE7DDBD765B00F7D1A99FE57AFB1227D2B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLinearComparisonScratchOwnership703.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneLinearComparisonScratchOwnership703.log",
+      "sha256": "8F73F1C899C3F36268B394C94ED602EA445E8CE74EB3CA24AB4DC54F8251010A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalHolomorphyAudit12.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneLocalHolomorphyAudit12.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalHolomorphyAudit12.lean",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneLocalHolomorphyAudit12.lean.txt",
+      "sha256": "26C2D8752EE9F39E952A505ABB0763886786F97C6EF6F688E25FB4910BD842BE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalHolomorphyAudit12.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneLocalHolomorphyAudit12.log",
+      "sha256": "7FE7409AEF6ADD8FEA456EF522EFE535DCED0DD9357133462FB841B5AE8A9B29"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalHolomorphyDependencyAudit12.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneLocalHolomorphyDependencyAudit12.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalHolomorphyDependencyAudit12.lean",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneLocalHolomorphyDependencyAudit12.lean.txt",
+      "sha256": "3F6AE29508878C5FA45E64221CBAAC859A8209688AD9E0869F04D009339CD347"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalHolomorphyDependencyAudit12.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneLocalHolomorphyDependencyAudit12.log",
+      "sha256": "31989F5079B91BF6A69A0EF4495697D3028C56D6CF20E6EEC220843794B7E074"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalHolomorphyScratchOwnership700.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneLocalHolomorphyScratchOwnership700.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalHolomorphyScratchOwnership700.lean",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneLocalHolomorphyScratchOwnership700.lean.txt",
+      "sha256": "CF233C06030822555445E413A74B64A5A9DA7DF38DCDD3DB1EE4987961F8B764"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalHolomorphyScratchOwnership700.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/SourceGammaOneLocalHolomorphyScratchOwnership700.log",
+      "sha256": "3C07E28E073ECDE29AFCB0E5E396B8D8A942F843890FEB904653924F2D06810B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers700.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/consumers700.txt",
+      "sha256": "32C47F4527CF8EF74C335E6B700809DBA38999C73A958507917AB8A4B1B8812C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-vanishing-audit-route-701.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-cusp-vanishing-audit-route-701.json",
+      "sha256": "86725A715B0D9895758D62D1B6FE557E68CAF5B7408BC122D7E287812045D296"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-vanishing-route-701.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-cusp-vanishing-route-701.json",
+      "sha256": "9A45FE596440435866D21BD2F91AEDA325A94C5EF6B21ABA45D77269AB07D0E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-vanishing-scratch-ownership-701.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-cusp-vanishing-scratch-ownership-701.json",
+      "sha256": "EDB72FBDC90F3E8BE95D296DC25D9C18D6CF0AC2C86260F6B5FF76993DC78096"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-fourier-converse-audit-route-702.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-fourier-converse-audit-route-702.json",
+      "sha256": "765D4E0C73407727AC97A0544A48160E4062AF71ED17C2233E68F180901ED029"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-fourier-converse-route-702.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-fourier-converse-route-702.json",
+      "sha256": "20CF7378D200F35E57901B5C057A63461CBB2E9F6C847A2C17525CCEA86A5952"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-fourier-converse-scratch-ownership-702.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-fourier-converse-scratch-ownership-702.json",
+      "sha256": "98625D1C7DAF942A407648BF9023A2F00F0DB8B114A7523AD7081DCBA04D5546"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-comparison-audit-route-703.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-comparison-audit-route-703.json",
+      "sha256": "C2E35FD0A266AC36B440675F93A0E8B11CFB3E1FE2252B6AD9E24B7B7ADA0D88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-comparison-route-703.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-comparison-route-703.json",
+      "sha256": "1636F8B3DE2582D0376884FA5149664EDE6426086E2F2507135964D82EB6545C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-comparison-scratch-ownership-703.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-comparison-scratch-ownership-703.json",
+      "sha256": "92CC25C610952A3F113ED093213119BBFC686EBC949C69051BC0B40B4353DB20"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-converse-route-700.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-local-converse-route-700.json",
+      "sha256": "E2249796502DD9C211DDEC39B0816304C865BDF6C914B7DF1799521E4AA3E7A7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-audit-route-700.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-local-holomorphy-audit-route-700.json",
+      "sha256": "634997ACA09405130668496C7DDEC90B1E89937E1459D66DD9A01AB09A8D8A79"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-scratch-ownership-700.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-local-holomorphy-scratch-ownership-700.json",
+      "sha256": "A3236707E6CFC84668277B872A21B925DA4E364065034BC2EC1D77FDC689522B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-selected-scope-700e.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-local-holomorphy-selected-scope-700e.json",
+      "sha256": "472858E7796BA871A32994E364B8588DA6F3A64748C78925FCC47674C913BBB4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules700.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/modules700.json",
+      "sha256": "730BF4897280ADD98FB5393343F63545D19F2461E21E6C70ECEF31CD685C834E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_cusp_vanishing_audit_701.py",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/prepare_gamma_one_cusp_vanishing_audit_701.py",
+      "sha256": "2E69438407B29356E8F57651ABBACFFCDA205ED91A9C8063BF0667D2F0F85BC4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_fourier_converse_audit_702.py",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/prepare_gamma_one_fourier_converse_audit_702.py",
+      "sha256": "3DBEFBE974F28485600C4FE5C8EA79340D6CC55C382DF004C5D47850563F87CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_holomorphic_realization_700.py",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/prepare_gamma_one_holomorphic_realization_700.py",
+      "sha256": "9F4777A80202564FE672FF28AAED22C73EE541DE6F5882FBB5F720EBDCDF7BA6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_linear_comparison_audit_703.py",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/prepare_gamma_one_linear_comparison_audit_703.py",
+      "sha256": "6F6759635EF573293F307769949DFD67A4806810D74A0A8E61EFAD5EE32677DD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_local_holomorphy_audit_700.py",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/prepare_gamma_one_local_holomorphy_audit_700.py",
+      "sha256": "B5B8AC5D3E7AF28114842D6C0AC8F0D94D369E05B9EBED5007BC86EEF6178303"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_local_holomorphy_receipt_700.py",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/prepare_gamma_one_local_holomorphy_receipt_700.py",
+      "sha256": "F3D7515A9D204C5FEE35933B9ACDCB8373F85F38D9A892191850698C9178BFC0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_local_orders_700.py",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/prepare_gamma_one_local_orders_700.py",
+      "sha256": "F6E6C99FF54A1D5C6F9768A25D6163B37B5A55332F1C106BA26D59BEA0A22601"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_local_realization_700.py",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/prepare_gamma_one_local_realization_700.py",
+      "sha256": "139D0D6EC5288DA2D5DEF57E1DA261F8793C4404E6697CF283D6D83787AA3020"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record700.py",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/record700.py",
+      "sha256": "DF391569AA5EFCBF22950A592572BA0FBCEED1CCA7EEA20F9522ECE591D11BC1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_cusp_vanishing_701.py",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/record_gamma_one_cusp_vanishing_701.py",
+      "sha256": "BBA8F1A3A9F6FB205C4746DF1BBFE87AD239D82E5D9E28E623B923A7BBCAA9EC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_fourier_converse_702.py",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/record_gamma_one_fourier_converse_702.py",
+      "sha256": "A4962C77837F21F69A177EECBA565C39769E8171E478819B5208DC77410C2B23"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_linear_comparison_703.py",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/record_gamma_one_linear_comparison_703.py",
+      "sha256": "6DEAE19AA07F7680B31B751D30871CD5E61BE80622DFE2622CAED091A28FAF52"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_local_holomorphy_700.py",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/record_gamma_one_local_holomorphy_700.py",
+      "sha256": "D85BFD31CB59E93DC359ED0DD5F09E748CD108F6BBE0324478EA4B24A8946202"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register700.py",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/register700.py",
+      "sha256": "A7481B78307404BBB5E0D436C9AEDCE47992C6C644B09E1858EFC5F984C7D268"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations700.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/registrations700.json",
+      "sha256": "522404E589C5D79FC1569678A5138A8704C258004733C96F3DCC82CF8706DB6B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section700.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/section700.txt",
+      "sha256": "215927680B0C30823A7A13421A842333BF98BC9418B7165C9BEB9D97D584B81B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-vanishing-10-audit-config.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/source-gamma-one-cusp-vanishing-10-audit-config.json",
+      "sha256": "35C464003A4E12EA9775A9E0E934EB1D3BC8168643D01408DB7A7EEFC1E45CC3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-vanishing-10-scratch-receipt.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/source-gamma-one-cusp-vanishing-10-scratch-receipt.json",
+      "sha256": "FB9076F6E4AB51929ED0D62B4B587B1957ED227357C5DAA8668716744DF1AE4E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-fourier-converse-2-audit-config.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/source-gamma-one-fourier-converse-2-audit-config.json",
+      "sha256": "32354B2CFA03C2B9924EF67B3BFDC757A7733F14B6F334949786E07CDCEDB3DF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-fourier-converse-2-scratch-receipt.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/source-gamma-one-fourier-converse-2-scratch-receipt.json",
+      "sha256": "3502062B579879A237F3DA6B6E8043899B99BF8F18357E6FB37251CC611C7811"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-linear-comparison-2-audit-config.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/source-gamma-one-linear-comparison-2-audit-config.json",
+      "sha256": "49139123A716D80577B117DBDDA5EEA6D7C79A4BC0619F96FAEC83641E7BF6AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-linear-comparison-2-scratch-receipt.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/source-gamma-one-linear-comparison-2-scratch-receipt.json",
+      "sha256": "5A715A3A21FD94D009218A675A76EA77F6304041FC2FBDB8D2DB24AD94265F50"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-local-holomorphy-12-audit-config.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/source-gamma-one-local-holomorphy-12-audit-config.json",
+      "sha256": "8536A4B5736913B21669D6ECC8A5881F2C00DEAAE8069199ABAE053695FDC4D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-local-holomorphy-12-scratch-receipt.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/source-gamma-one-local-holomorphy-12-scratch-receipt.json",
+      "sha256": "FA3FD70DE720E7EE3293CDC2A682101E803B4903C25540687D4B8DEC4C1DF38F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status700.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/status700.txt",
+      "sha256": "97E72B917FD1703284BD326C155EFA0DEDEEC7FF6B66E5552E2C55C97E5E082D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\update700.py",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/update700.py",
+      "sha256": "EDA12037712C6CE3CE5A5E48FB0B717D166C437586DBA430FCA13619B1BDC880"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-converse-core-reuse-698\\P2M\\Sol\\S_ModularCurve_exists_cuspForm_qExpansion_eq_mul_thetaL_pow_of_isIntegral_qExpFunctionFieldC.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-converse-core-reuse-698/P2M/Sol/S_ModularCurve_exists_cuspForm_qExpansion_eq_mul_thetaL_pow_of_isIntegral_qExpFunctionFieldC.lean.txt",
+      "sha256": "64F74B4492C3BAEF179D997F56BE120021789E0107349039B1737184D65DFBB4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-converse-core-reuse-698\\P2M\\Sol\\S_ModularCurve_isIntegral_and_isIntegral_of_smul_D_mem_regularDifferentials_qExpFunctionFieldC.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-converse-core-reuse-698/P2M/Sol/S_ModularCurve_isIntegral_and_isIntegral_of_smul_D_mem_regularDifferentials_qExpFunctionFieldC.lean.txt",
+      "sha256": "9B7E90A09D7EF5EE2B1134FB090B8BE225813FC9FEBF3EF2C6AA7A98F6E88188"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-converse-core-reuse-698\\snapshots.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-converse-core-reuse-698/snapshots.json",
+      "sha256": "948F269AB4B39E66EB30A73D9E7FCB6B0F64B70A36134745946F15C5A7A12AD9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-order-failed-700a\\SourceGammaOneAnalyticOrder.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-analytic-order-failed-700a/SourceGammaOneAnalyticOrder.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-order-failed-700a\\SourceGammaOneAnalyticOrder.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-analytic-order-failed-700a/SourceGammaOneAnalyticOrder.lean.txt",
+      "sha256": "0DE1965725CD52F560ACB4BC6B4E7C24F080B21B3C18399B8EC30BA5A515019D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-order-failed-700a\\SourceGammaOneAnalyticOrder.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-analytic-order-failed-700a/SourceGammaOneAnalyticOrder.log",
+      "sha256": "27B9B0204AF4990D4A23FE2BAC4534D1430C173FC2891A0CF51C823F67CDD4C7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-places-failed-700b\\SourceGammaOneAnalyticPlaces.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-analytic-places-failed-700b/SourceGammaOneAnalyticPlaces.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-places-failed-700b\\SourceGammaOneAnalyticPlaces.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-analytic-places-failed-700b/SourceGammaOneAnalyticPlaces.lean.txt",
+      "sha256": "3291BDD63E3574E25D9272C76143197BFDA4CD7BDA9C41726356F39A4819FA37"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-places-failed-700b\\SourceGammaOneAnalyticPlaces.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-analytic-places-failed-700b/SourceGammaOneAnalyticPlaces.log",
+      "sha256": "F71972DCBA83805149D01262B5D609BBB52DA581079814A2A4176045C8479D84"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-derivative-failed-701c\\SourceGammaOneCuspDerivativeOrder.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-cusp-derivative-failed-701c/SourceGammaOneCuspDerivativeOrder.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-derivative-failed-701c\\SourceGammaOneCuspDerivativeOrder.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-cusp-derivative-failed-701c/SourceGammaOneCuspDerivativeOrder.lean.txt",
+      "sha256": "F0B39A888CB7A061422F5565DEA38CEA5BCCE27F76353773D73ED5CEB2935A3E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-derivative-failed-701c\\SourceGammaOneCuspDerivativeOrder.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-cusp-derivative-failed-701c/SourceGammaOneCuspDerivativeOrder.log",
+      "sha256": "EB3FF8A17275552748EA99D138F3CB328D27896AAC9147B87C57D69A80C37254"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-order-failed-701b\\SourceGammaOneCuspOrder.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-cusp-order-failed-701b/SourceGammaOneCuspOrder.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-order-failed-701b\\SourceGammaOneCuspOrder.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-cusp-order-failed-701b/SourceGammaOneCuspOrder.lean.txt",
+      "sha256": "B19B85A718D186974E637BF52528A5154C210362BA7F4A1D26E9A9E0039DCDE8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-order-failed-701b\\SourceGammaOneCuspOrder.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-cusp-order-failed-701b/SourceGammaOneCuspOrder.log",
+      "sha256": "08E46EC2019CF27149BF214C653A523A908208601D4EDCC33E6AB2D0574002CD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-fourier-realization-failed-702a\\SourceGammaOneRegularFourierRealization.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-fourier-realization-failed-702a/SourceGammaOneRegularFourierRealization.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-fourier-realization-failed-702a\\SourceGammaOneRegularFourierRealization.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-fourier-realization-failed-702a/SourceGammaOneRegularFourierRealization.lean.txt",
+      "sha256": "CCB684E30BCF83EF07C699C92001AC2EB3AAD7897C878A6BBA0587BA047CC38D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-fourier-realization-failed-702a\\SourceGammaOneRegularFourierRealization.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-fourier-realization-failed-702a/SourceGammaOneRegularFourierRealization.log",
+      "sha256": "7A302DECE00829CF9D76440CA9EAE2C5AB456F2EC6770A3D95C5E51DCD661B0B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-fourier-realization-failed-702b\\SourceGammaOneRegularFourierRealization.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-fourier-realization-failed-702b/SourceGammaOneRegularFourierRealization.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-fourier-realization-failed-702b\\SourceGammaOneRegularFourierRealization.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-fourier-realization-failed-702b/SourceGammaOneRegularFourierRealization.lean.txt",
+      "sha256": "D652640F011EE8135537176B66E5C11F4365F16589BDB14F1AE4C58FD9E8ADCD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-fourier-realization-failed-702b\\SourceGammaOneRegularFourierRealization.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-fourier-realization-failed-702b/SourceGammaOneRegularFourierRealization.log",
+      "sha256": "C2CA7001072C17DFF57585035BB7BAA040AF234D67CF2C8B137215F56061FA4C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-j-orders-failed-700d\\SourceGammaOneAnalyticJOrders.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-j-orders-failed-700d/SourceGammaOneAnalyticJOrders.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-j-orders-failed-700d\\SourceGammaOneAnalyticJOrders.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-j-orders-failed-700d/SourceGammaOneAnalyticJOrders.lean.txt",
+      "sha256": "15C2019C1335B474F72BCD920B13F88F1A36E44BCE438E48AD9EA0934563828C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-j-orders-failed-700d\\SourceGammaOneAnalyticJOrders.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-j-orders-failed-700d/SourceGammaOneAnalyticJOrders.log",
+      "sha256": "DFC7A74796D7580BE276A28590D50A509CAEE8DA178DCF68D514D69CF7EE56BD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-equivalence-warning-703g\\SourceGammaOneRegularCuspEquiv.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-equivalence-warning-703g/SourceGammaOneRegularCuspEquiv.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-equivalence-warning-703g\\SourceGammaOneRegularCuspEquiv.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-equivalence-warning-703g/SourceGammaOneRegularCuspEquiv.lean.txt",
+      "sha256": "85F98DDA00464AA48AEDD91609D410E3E95CF1FC9D8D8E7A510634106AD11D6E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-equivalence-warning-703g\\SourceGammaOneRegularCuspEquiv.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-equivalence-warning-703g/SourceGammaOneRegularCuspEquiv.log",
+      "sha256": "0E67D456B8E9E423B5D696EDDDD99F924BE2C2FFDCD6743C66C4AEEA1FCCBDFB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-expansion-failed-703a\\SourceGammaOneRegularCuspQExpansion.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-expansion-failed-703a/SourceGammaOneRegularCuspQExpansion.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-expansion-failed-703a\\SourceGammaOneRegularCuspQExpansion.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-expansion-failed-703a/SourceGammaOneRegularCuspQExpansion.lean.txt",
+      "sha256": "5A0C549BD125D72BC1E66C6DFA70FFF96726DD66E7B8844BFEA23E821E4A8925"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-expansion-failed-703a\\SourceGammaOneRegularCuspQExpansion.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-expansion-failed-703a/SourceGammaOneRegularCuspQExpansion.log",
+      "sha256": "5B4B19AB811BD99E03498F5A98AADA883F247A2B7B592FB0ED6EB180C8BAFCE4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-expansion-failed-703b\\SourceGammaOneRegularCuspQExpansion.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-expansion-failed-703b/SourceGammaOneRegularCuspQExpansion.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-expansion-failed-703b\\SourceGammaOneRegularCuspQExpansion.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-expansion-failed-703b/SourceGammaOneRegularCuspQExpansion.lean.txt",
+      "sha256": "438E9303F2118DDA2BD0E29BEE99AAA191CE3EBFD51669FA81F4F53BD14BD88B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-expansion-failed-703b\\SourceGammaOneRegularCuspQExpansion.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-expansion-failed-703b/SourceGammaOneRegularCuspQExpansion.log",
+      "sha256": "858407A62AF4BF44832DD38EEBC1BF79CB83CEAF74BE952A354B8679B4CDDFC1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-expansion-failed-703c\\SourceGammaOneRegularCuspQExpansion.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-expansion-failed-703c/SourceGammaOneRegularCuspQExpansion.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-expansion-failed-703c\\SourceGammaOneRegularCuspQExpansion.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-expansion-failed-703c/SourceGammaOneRegularCuspQExpansion.lean.txt",
+      "sha256": "939B4EDA3F3999183CFD8C988926EFBF49B673179BDC696715DB59B237B9BAF4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-expansion-failed-703c\\SourceGammaOneRegularCuspQExpansion.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-expansion-failed-703c/SourceGammaOneRegularCuspQExpansion.log",
+      "sha256": "459B12A0D73E787BF5E25D28889EFBA51AE5627D346A6BD65010138F5DC43743"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-expansion-failed-703d\\SourceGammaOneRegularCuspQExpansion.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-expansion-failed-703d/SourceGammaOneRegularCuspQExpansion.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-expansion-failed-703d\\SourceGammaOneRegularCuspQExpansion.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-expansion-failed-703d/SourceGammaOneRegularCuspQExpansion.lean.txt",
+      "sha256": "7E09023CE192FBBB0A0FF460908BD726135B2D8EDDC84710D84CEC91F64DA2F1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-expansion-failed-703d\\SourceGammaOneRegularCuspQExpansion.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-expansion-failed-703d/SourceGammaOneRegularCuspQExpansion.log",
+      "sha256": "D3241B4A74B380A4E1790106B9C1BEB7325A2E21EBA182547650AD449D6CE65B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-expansion-failed-703e\\SourceGammaOneRegularCuspQExpansion.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-expansion-failed-703e/SourceGammaOneRegularCuspQExpansion.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-expansion-failed-703e\\SourceGammaOneRegularCuspQExpansion.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-expansion-failed-703e/SourceGammaOneRegularCuspQExpansion.lean.txt",
+      "sha256": "E29292A015CA7F5F8E891F1CA18CE561B56587EAB3711EAC70FCEDA8B6950609"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-expansion-failed-703e\\SourceGammaOneRegularCuspQExpansion.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-expansion-failed-703e/SourceGammaOneRegularCuspQExpansion.log",
+      "sha256": "DE5569247F7E6162CCA16A364CCD790289B63DE4830BB5294622F1559DE61DBD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-expansion-failed-703f\\SourceGammaOneRegularCuspQExpansion.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-expansion-failed-703f/SourceGammaOneRegularCuspQExpansion.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-expansion-failed-703f\\SourceGammaOneRegularCuspQExpansion.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-expansion-failed-703f/SourceGammaOneRegularCuspQExpansion.lean.txt",
+      "sha256": "8668BEC6990F01814E3DE8999B1E14BCC2F2B7B187C102972F55A36B5139F9E8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-linear-expansion-failed-703f\\SourceGammaOneRegularCuspQExpansion.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-linear-expansion-failed-703f/SourceGammaOneRegularCuspQExpansion.log",
+      "sha256": "CE13C48BC152D1405B170EB337967466F376F242D8038727E3815BF87CBC0D78"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticDifferentialRegularity.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-local-holomorphy-pretrim-700e/SourceGammaOneAnalyticDifferentialRegularity.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticDifferentialRegularity.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-local-holomorphy-pretrim-700e/SourceGammaOneAnalyticDifferentialRegularity.lean.txt",
+      "sha256": "DC55B2BDC351C25901EB9D1C14A6F76F489CFFE7DE5CC87FB1DAA7565DD1F1F2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticDifferentialRegularity.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-local-holomorphy-pretrim-700e/SourceGammaOneAnalyticDifferentialRegularity.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticDifferentialRegularity.olean",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-local-holomorphy-pretrim-700e/SourceGammaOneAnalyticDifferentialRegularity.olean",
+      "sha256": "098D0657BB78B9BB0FE6E768369E3602F911FFB74689E2170A3DA86C5F0CDE96"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticJOrders.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-local-holomorphy-pretrim-700e/SourceGammaOneAnalyticJOrders.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticJOrders.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-local-holomorphy-pretrim-700e/SourceGammaOneAnalyticJOrders.lean.txt",
+      "sha256": "F823AB56C1F8CF239B8EC8121C7524D81EAEECB0663469666495FB57CE728330"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticJOrders.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-local-holomorphy-pretrim-700e/SourceGammaOneAnalyticJOrders.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticJOrders.olean",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-local-holomorphy-pretrim-700e/SourceGammaOneAnalyticJOrders.olean",
+      "sha256": "0AE821E8BFC12D7D18041DDBE73112EAD1ACF7AE99A8DAAD30D800B5A0F451F5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticPlaces.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-local-holomorphy-pretrim-700e/SourceGammaOneAnalyticPlaces.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticPlaces.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-local-holomorphy-pretrim-700e/SourceGammaOneAnalyticPlaces.lean.txt",
+      "sha256": "A992F11D440E41818EBD9F63D56B8E5950CD83011ED09B3CD75A3522C44932B0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticPlaces.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-local-holomorphy-pretrim-700e/SourceGammaOneAnalyticPlaces.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneAnalyticPlaces.olean",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-local-holomorphy-pretrim-700e/SourceGammaOneAnalyticPlaces.olean",
+      "sha256": "076D307330A6BAE13362A5EF9E3FABA9090D63CBA48B96EB8678C078322EE5EF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneHolomorphicDifferentials.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-local-holomorphy-pretrim-700e/SourceGammaOneHolomorphicDifferentials.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneHolomorphicDifferentials.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-local-holomorphy-pretrim-700e/SourceGammaOneHolomorphicDifferentials.lean.txt",
+      "sha256": "FE3D1B67F3993113A3C7437A990C63B2CC6C447C7A387227167B9F7EE0A3A518"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneHolomorphicDifferentials.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-local-holomorphy-pretrim-700e/SourceGammaOneHolomorphicDifferentials.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-holomorphy-pretrim-700e\\SourceGammaOneHolomorphicDifferentials.olean",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-local-holomorphy-pretrim-700e/SourceGammaOneHolomorphicDifferentials.olean",
+      "sha256": "55D6627C24E0B857A3EA37E9BD040CB1AFE0DD193988568BAB8994BEE291E0ED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-regular-cusp-order-failed-701d\\SourceGammaOneRegularCuspOrder.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-regular-cusp-order-failed-701d/SourceGammaOneRegularCuspOrder.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-regular-cusp-order-failed-701d\\SourceGammaOneRegularCuspOrder.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-regular-cusp-order-failed-701d/SourceGammaOneRegularCuspOrder.lean.txt",
+      "sha256": "9129B753DDA39D8E9E6FCBF423136CDA68F7DCEC27314C458229DFB371F0F110"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-regular-cusp-order-failed-701d\\SourceGammaOneRegularCuspOrder.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-regular-cusp-order-failed-701d/SourceGammaOneRegularCuspOrder.log",
+      "sha256": "CBE943DB1AC3953958FCB3F6837484FFE4CF0B2F3FE77CE0A928BF0BA8BA1512"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-regular-orders-failed-700c\\SourceGammaOneRegularCoefficientOrders.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-regular-orders-failed-700c/SourceGammaOneRegularCoefficientOrders.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-regular-orders-failed-700c\\SourceGammaOneRegularCoefficientOrders.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-regular-orders-failed-700c/SourceGammaOneRegularCoefficientOrders.lean.txt",
+      "sha256": "5089E75C4EC90617E79B46D70CEEEBD955F928DBCCCE1ACCE588F822D07866AE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-regular-orders-failed-700c\\SourceGammaOneRegularCoefficientOrders.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-regular-orders-failed-700c/SourceGammaOneRegularCoefficientOrders.log",
+      "sha256": "6F66E0BB3FC4347D86A860515CE94BF6A42E0DA5B0D5F5562B0BB4D83D293694"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-translated-cusp-failed-701a\\SourceGammaOneTranslatedCuspGerms.exit",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-translated-cusp-failed-701a/SourceGammaOneTranslatedCuspGerms.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-translated-cusp-failed-701a\\SourceGammaOneTranslatedCuspGerms.lean.txt",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-translated-cusp-failed-701a/SourceGammaOneTranslatedCuspGerms.lean.txt",
+      "sha256": "13FEAA1C39BF9BAEAAC61FCEE9ACC7C91F1DB5AB677B5A66D64DB5DB82F522AF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-translated-cusp-failed-701a\\SourceGammaOneTranslatedCuspGerms.log",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/gamma-one-translated-cusp-failed-701a/SourceGammaOneTranslatedCuspGerms.log",
+      "sha256": "AED064F722E6CE5EC6FD7D64E7AF9DC64B9EA2870E83F4111F062B6A526D089D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-local-holomorphy-12-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/source-gamma-one-local-holomorphy-12-reuse-review-20261026.json",
+      "sha256": "9C216F571C69D9AAA9A662056539E3D9F968649EC70FF5639134172401207653"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-vanishing-10-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/source-gamma-one-cusp-vanishing-10-reuse-review-20261026.json",
+      "sha256": "2A224ABABEA9F36EE934C1F554F49F1C7998A95EA29DD086B7A33789A580E5ED"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-fourier-converse-2-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/source-gamma-one-fourier-converse-2-reuse-review-20261026.json",
+      "sha256": "6EAA1B9AC957826CB11AD2C215F38385C19E5FFAF8991A203E9234CAB72D2AF5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-linear-comparison-2-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-regular-cusp-20261026-704/source-gamma-one-linear-comparison-2-reuse-review-20261026.json",
+      "sha256": "63445A6AA907725EFB3EB27C4AB099BDB50C26C8A027AAB5E6D38BBB035479CD"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+{
+  "reason": "PowerShell concatenation and comma precedence made one combined audit filename. Lean reported file not found; no audit source was executed. Use explicit audit-name arrays for the first actual invocation of the already prepared 1b audit sources."
+}

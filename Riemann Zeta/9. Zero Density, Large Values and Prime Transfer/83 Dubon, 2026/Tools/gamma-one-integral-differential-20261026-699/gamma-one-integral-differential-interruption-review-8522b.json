@@ -1,0 +1,28 @@
+{
+  "reason": "Original process handle missing; no Lean or Lake process remains. Original paper log ends during PrimeReciprocitySemanticRegression without exit receipt. Preserve incomplete evidence; fresh sequential ROOT/PAPER run, no focused/scratch audit rerun.",
+  "sourceHashesVerified": 29,
+  "freshScripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_integral_differential_8522b.py",
+      "sha256": "662F790089E12FF1D72794A633204E8622E211A2D36720328F83DF0D2106C334"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_integral_differential_8522b.ps1",
+      "sha256": "22919B7FDB44F3F91731623806EA1050DE917B3F9BCEA1C3EB7346639B7CD43E"
+    }
+  ],
+  "originalEvidence": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\paper-verification-8522-console.log",
+      "sha256": "B9F4E7501F3482A6CB97E31B6F1EA07216ADE6FA04948F05BB14124C781CFB36"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\root-verification-8522-console.log",
+      "sha256": "00ED76371A2270138181D4CDA9498DFCB8BE75B12F85CB4B7442C0F6EB01AC01"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verification-wrapper-8522-console.log",
+      "sha256": "244B46A1A0AB92CF13EF964E5B18F2EE830BBABB1BEB954B6EFEB25219B27BBF"
+    }
+  ]
+}

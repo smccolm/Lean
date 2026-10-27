@@ -1,0 +1,82 @@
+import SourcePeriodDivisionRotations
+import SourceGammaOneDivisionLatticeOrbit
+import Dubon2026.SourceFrickeTorsionLattice
+import Dubon2026.SourceFrickePeriodHomothetyV2
+import Dubon2026.SourceEllipticPeriodModularCurve
+
+/-! DUB-17/18 -> original Gamma1 global charts -> orbit separation.
+Specialize the division-value orbit argument of anthropics/fermats-last-theorem,
+Apache-2.0, commit 6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_CohCarrier_exists_mem_GammaH_smul_eq_of_forall_sum_weierstrassP_pow_eq.
+For Gamma1, one actual division-value comparison replaces general subgroup
+power sums. Native torsion nonlattice and existing Weierstrass separation
+supply the lattice relation consumed by the integral matrix construction. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane Complex PeriodLattice SourceFricke CongruenceSubgroup
+open scoped MatrixGroups ComplexConjugate
+
+private theorem division_point_notMem (N : ℕ) [NeZero N] (τ : ℍ)
+    (t : ZMod N) (ht : t ≠ 0) :
+    ((t.val : ℂ) / N) ∉ (ofTau τ).lattice := by
+  intro hm
+  have he := (torsion_lift_mem_lattice_iff τ (0 : ℤ) (t.val : ℤ)).mp
+    (by simpa using hm)
+  exact ht (by simpa using he.2)
+
+theorem exists_gamma1_smul_eq_of_division_power (N : ℕ) [NeZero N]
+    (τ : ℍ) (γ₀ : SL(2, ℤ)) (hγ₀ : γ₀ ∈ Gamma0 N) (d : ℕ)
+    (hd : d = 1 ∨ (d = 2 ∧ (ofTau τ).g₃ = 0) ∨ (d = 3 ∧ (ofTau τ).g₂ = 0))
+    (hpow : (ofTau τ).weierstrassP ((((γ₀ 1 1 : ℤ) : ZMod N).val : ℂ) / N) ^ d =
+      (ofTau τ).weierstrassP (1 / N) ^ d) :
+    ∃ γ ∈ Gamma1 N, γ • τ = γ₀ • τ := by
+  by_cases hN : N = 1
+  · subst N
+    exact ⟨γ₀, (Gamma1_mem 1 γ₀).mpr ⟨Subsingleton.elim _ _,
+      Subsingleton.elim _ _, Subsingleton.elim _ _⟩, rfl⟩
+  haveI : Fact (1 < N) := ⟨lt_of_le_of_ne NeZero.one_le (Ne.symm hN)⟩
+  let L := ofTau τ
+  let t : ZMod N := γ₀ 1 1
+  have ht : t ≠ 0 := by
+    let g : Gamma0 N := ⟨γ₀, hγ₀⟩
+    have he : Gamma0Map N g * Gamma0Map N g⁻¹ = 1 := by
+      rw [← map_mul, mul_inv_cancel, map_one]
+    change t * Gamma0Map N g⁻¹ = 1 at he
+    intro hz
+    rw [hz, zero_mul] at he
+    exact zero_ne_one he
+  obtain ⟨a, ha, han, hlat, hav⟩ :=
+    DivisionRotations.exists_rotation_of_division_power L d hd hpow
+  have hscaled : (smulPeriodPair a ha L).lattice = L.lattice := hlat
+  have hscale : L.weierstrassP (a * (1 / N)) = (a ^ 2)⁻¹ * L.weierstrassP (1 / N) := by
+    have he := weierstrassP_smulPeriodPair a ha L (1 / N)
+    rw [weierstrassP_of_lattice_eq hscaled] at he
+    simpa only [inv_pow] using he
+  have heqP : L.weierstrassP ((t.val : ℂ) / N) = L.weierstrassP (a * (1 / N)) := by
+    rw [hscale]
+    exact hav
+  have hleft : ((t.val : ℂ) / N) ∉ L.lattice := division_point_notMem N τ t ht
+  have hone : (1 / (N : ℂ)) ∉ L.lattice := by
+    simpa using division_point_notMem N τ (1 : ZMod N) one_ne_zero
+  have hright : a * (1 / (N : ℂ)) ∉ L.lattice := by
+    intro hm
+    rw [← hscaled] at hm
+    obtain ⟨y, hy, he⟩ := (mem_smulPeriodPair_lattice ha L).mp hm
+    exact hone ((mul_left_cancel₀ ha he) ▸ hy)
+  have ha1 : a ∈ L.lattice := by
+    have hm := (smulPeriodPair a ha L).ω₂_mem_lattice
+    rw [hscaled] at hm
+    simpa [L, ofTau] using hm
+  have haτ : a * τ ∈ L.lattice := by
+    have hm := (smulPeriodPair a ha L).ω₁_mem_lattice
+    rw [hscaled] at hm
+    exact hm
+  rcases weierstrassP_eq_imp_lattice L hleft hright heqP with hminus | hplus
+  · apply exists_gamma1_smul_eq_of_division_lattice N τ γ₀ hγ₀ a han ha1 haτ
+    convert hminus using 1 <;> ring
+  · apply exists_gamma1_smul_eq_of_division_lattice N τ γ₀ hγ₀ (-a)
+      (by simpa using han) (neg_mem ha1) (by simpa using neg_mem haτ)
+    convert hplus using 1 <;> ring
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

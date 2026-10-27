@@ -1,0 +1,250 @@
+{
+  "scratchSum": 132,
+  "scratchDistinct": 132,
+  "generatedNameRenamings": {},
+  "productionFocused": 132,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {},
+  "missingFromFocusedAlreadyInPrevious": [],
+  "productionNamesNotInScratch": [],
+  "unexplainedMissing": [],
+  "scopes": [
+    {
+      "modules": [
+        "SourceGammaOneRatioRealization",
+        "SourceGammaOneAnalyticGerms",
+        "SourceGammaOneMeromorphicRealization",
+        "SourceGammaOneRealizationAlgebra",
+        "SourceGammaOneAnalyticOrder",
+        "SourceGammaOneAnalyticOrderNontrivial",
+        "SourceGammaOneAnalyticPlaces",
+        "SourceGammaOneJRealization",
+        "SourceGammaOneRegularCoefficientOrders",
+        "SourceGammaOneAnalyticJOrders",
+        "SourceGammaOneAnalyticDifferentialRegularity",
+        "SourceGammaOneHolomorphicDifferentials"
+      ],
+      "count": 46,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalHolomorphyScratchOwnership700.log",
+        "sha256": "3C07E28E073ECDE29AFCB0E5E396B8D8A942F843890FEB904653924F2D06810B",
+        "sourceSha256": "CF233C06030822555445E413A74B64A5A9DA7DF38DCDD3DB1EE4987961F8B764"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneTranslatedCuspGerms",
+        "SourceGammaOneCuspRatioRealization",
+        "SourceGammaOneCuspRealizationAlgebra",
+        "SourceGammaOneCuspOrder",
+        "SourceGammaOneCuspJOrder",
+        "SourceGammaOneCuspPlaces",
+        "SourceGammaOneCuspDerivativeOrder",
+        "SourceGammaOneDifferentialCuspGerm",
+        "SourceGammaOneRegularCuspOrder",
+        "SourceGammaOneRegularCuspForms"
+      ],
+      "count": 51,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspVanishingScratchOwnership701.log",
+        "sha256": "AC87F8BA312DC88154243D4E40BDD1405A048BC88F71E43035A07023B5CF9DF0",
+        "sourceSha256": "43F1C4E02690CE6FA2F39273ABB1A35AFEF58E065861C88438E20FA2CD58B14A"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneCuspFourierNormalization",
+        "SourceGammaOneRegularFourierRealization"
+      ],
+      "count": 10,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFourierConverseScratchOwnership702.log",
+        "sha256": "FDBDA24731CA8B50B849871988B915B2F0CFF558E612AF778BA8BA2689C4F2D7",
+        "sourceSha256": "ED743658F1B2E0CDAC3350B0AE893C074EA0FA5C893EDE3C7EB77B20F8C3F5D6"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneRegularCuspQExpansion",
+        "SourceGammaOneRegularCuspEquiv"
+      ],
+      "count": 25,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLinearComparisonScratchOwnership703.log",
+        "sha256": "8F73F1C899C3F36268B394C94ED602EA445E8CE74EB3CA24AB4DC54F8251010A",
+        "sourceSha256": "A8C891D00F7CDB1C8074E8E2A4184DE7DDBD765B00F7D1A99FE57AFB1227D2B6"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularCuspOwnership8548.log",
+    "sha256": "50EFE23D668B037D2E60F901826FCB003ADA25C286E7DADCA6F3206CCF16DFB6",
+    "sourceSha256": "75242F6A6E543BEBE1DD3D9A0FD8474A0A282A2D55EA3723C81453B9F681C132"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-201814-510.log",
+    "sha256": "EA8CDFB29F4C2C9E405E0F38BB5D6C51218EFF4CF286C90C16AACCB115459BB1"
+  },
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 26 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourceGammaOneRatioRealization",
+        "scratchSha256": "1124F4A25E5E42D92133232C19ACA5EB610537FE1C9789D70CB6488537D9A32D",
+        "productionSha256": "DBEAB89A2AEB8EAAB02B3802BB36DA7A2276EF61AC153564B15CC3CD613F9806",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneAnalyticGerms",
+        "scratchSha256": "12469B97F67441640D64B2C5901F51B508CB06D66F4C7BBF50BDD822824DBC8D",
+        "productionSha256": "5E1F23587988C0458437DB4080EAFA263AF07D8518151DDE1C2224F8961FC5C1",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneMeromorphicRealization",
+        "scratchSha256": "29AC164DBD2CF3EAF56331836E79E90B8C62A907AE85AADC3ED32A42183B5E08",
+        "productionSha256": "25EFB38C4C22F86FF6ED94D4E405BC68CE23E8AA09BBB0B02B2E1DB0510E5BA3",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRealizationAlgebra",
+        "scratchSha256": "1ADB334C909BF4565370856777EF8030E35E26B28090F1D706CA3FCB5A3859DE",
+        "productionSha256": "B429A45716AED0A153BD06B5F0F4417CAB1C6EE89FE4E76537902C5D8C76B2AA",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneAnalyticOrder",
+        "scratchSha256": "0325483B4F3FB5590FD5946CFF8643656A3FEE44171B6EAD67F4138CFFB00F9C",
+        "productionSha256": "2DB86DD9FEC4D6853F8006DC7B096247259EE70E1FE7DEE9EBEF0003F2718A43",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneAnalyticOrderNontrivial",
+        "scratchSha256": "53818F9D41E11EA7652BDEEAC9724E4E44016803F75FC36128B1A6BBF210D0F8",
+        "productionSha256": "D4D892123FF99D84C30E1D86A774B429CC87369213DC1338D649F7D7569DA761",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneAnalyticPlaces",
+        "scratchSha256": "2A684120F5449B169C539E1BD568C00CDF40572BBCC54E183DCE8F169378AA84",
+        "productionSha256": "E23BFF6137CD0725C8548942D84C0151A1816C17FF95DB590441890A1A7B59EE",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneJRealization",
+        "scratchSha256": "792BF0BC9A862AC39297D0D42EE3734A854D1419F617F84B42CF103511954209",
+        "productionSha256": "9F279298B12E16549ABA5AC45E154BCA90AC4E0D5575FC432120AFDE6500A3F8",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRegularCoefficientOrders",
+        "scratchSha256": "87F6E926C281A5C7056EA72FCC74A1B53BC1C500FC786E2FC3B896C0DDFDA973",
+        "productionSha256": "87F6E926C281A5C7056EA72FCC74A1B53BC1C500FC786E2FC3B896C0DDFDA973",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneAnalyticJOrders",
+        "scratchSha256": "F823AB56C1F8CF239B8EC8121C7524D81EAEECB0663469666495FB57CE728330",
+        "productionSha256": "88DAA8FA39C64F041832F3EC929912885D3746230E571ADD26AB47A78FFA067E",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneAnalyticDifferentialRegularity",
+        "scratchSha256": "DC55B2BDC351C25901EB9D1C14A6F76F489CFFE7DE5CC87FB1DAA7565DD1F1F2",
+        "productionSha256": "5DBA1CC59D953B5AB3C2E1D68EFFFE0AECFAC3365CFD715257DF88A9116D48DF",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneHolomorphicDifferentials",
+        "scratchSha256": "FE3D1B67F3993113A3C7437A990C63B2CC6C447C7A387227167B9F7EE0A3A518",
+        "productionSha256": "05C2F867B80C0910FE0CE78E0C0CD5E0F8635CC3D04B01F56C3DDD2B9A36AEA1",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneTranslatedCuspGerms",
+        "scratchSha256": "FFA8618260E6FE71D032CC18D3AAD6BA19D8D4FD16F2293471D4AA690D2D05E6",
+        "productionSha256": "FFA8618260E6FE71D032CC18D3AAD6BA19D8D4FD16F2293471D4AA690D2D05E6",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspRatioRealization",
+        "scratchSha256": "4A19147FBEE7B1454604E807B5FCD2D9C266DA3669D626E2A08A9F5C6AB5AF7E",
+        "productionSha256": "B38E2DF84980F3546A2C86001BD036A1CEF18A571FF2FD79FEAEB61BABF15AE6",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspRealizationAlgebra",
+        "scratchSha256": "3CA79D3489DA3C0575B87157F82A0159C8B83D42409F6D1D2BC9F268A2227540",
+        "productionSha256": "0680420B858B8C345208EDC841A7057916E276167B45C175978D66F050E3AD96",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspOrder",
+        "scratchSha256": "2045E0F02F8C705DB5EE0A3145EB015EE4DF9047221E3B8AD9C32BC908D880B3",
+        "productionSha256": "3374E0F9E8CA1550993B2E73A782F8E45231912A798F0E9E95AAF46C1CA9BFFC",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspJOrder",
+        "scratchSha256": "3C7CE228AFE887057076EB71F118212E94ED2C9D0293B060703205654ACBF4C0",
+        "productionSha256": "B8FD506BEC40BF583524E12070D35F8BCFAC779E887E84CB7355B420CEEB9E72",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspPlaces",
+        "scratchSha256": "923C3B29D1BD08C1E6AC57ADA16E48AA7446832907483E3C78296A99BDF625B9",
+        "productionSha256": "4257F1370F419FC9BDA8038C021717725DA8606311169F980F0DB1805371B6F4",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspDerivativeOrder",
+        "scratchSha256": "D875623F10EB4835C3B4588749FEC36997450588B9DECA20634FF0F97972B932",
+        "productionSha256": "376F8109740F5D327E27348A61CE992BB9B3B861967838869923F02470C8A5C6",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneDifferentialCuspGerm",
+        "scratchSha256": "314508D3CA2BFE6BB9C882BEE002EA9A7AEED4FEDE73C604BE9EBF554F20D834",
+        "productionSha256": "860F85A3B2F83A652C716C7C4676A91C2F059D56EC7511096FCF13AC3F7C80A0",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRegularCuspOrder",
+        "scratchSha256": "A571C9894ADE87BABBD26AAADBB3604DEC78EB6450FF978F6238C7F8ADB4F708",
+        "productionSha256": "64C79F714DF0DB0FEA2DF3E7954A16DB7E440CC46A17E402218A5D679156C855",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRegularCuspForms",
+        "scratchSha256": "5DFEF81C63DEB210A5CEFD47C0BD3A1AE963D7E1F65D099CAF4BF8ED8DC7C7AC",
+        "productionSha256": "3EB3F0232672CBD1BE56BC74D7374541A8D49B21014F39A6DC7170E7D60265A8",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneCuspFourierNormalization",
+        "scratchSha256": "421C148EA7164B827FCCB1461DC1030A5FEC21FA1EEF69109AF7B5DF20587C6E",
+        "productionSha256": "438FB12E61F06D4DA63B10BDA9B281A858D123AEB5C2B2E50E180C54534EE472",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRegularFourierRealization",
+        "scratchSha256": "8F1F5DF3BF9B81643AAB19DA6B21FA47434B528F8B8DB8D037C222F0BB82AA7C",
+        "productionSha256": "8A7ED09C5EA95917D135715DE987F9D2A2948FD9B3B46C04D2FD93A22134C7C4",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRegularCuspQExpansion",
+        "scratchSha256": "AC980BEEE2690406373BCE5B5F9509F3935A974BB8A71957D4E90966320C1A27",
+        "productionSha256": "72BA62FC37EF35E8B2BCB4D8BFC90BB2893688E1FDBBD91D13773E4F5E771DB1",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRegularCuspEquiv",
+        "scratchSha256": "F29048D46B91333C0F2D8B9B1CE0FB87873F37078CB9AFFB8E88A77B4B323D5E",
+        "productionSha256": "DF051D1554A8612503C66097EE69D4B2D4092E791B54953E294C285C0D948788",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": true
+}

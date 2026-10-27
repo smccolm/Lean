@@ -1,0 +1,102 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T13:49:59.357033+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneCanonicalCoordinates",
+    "SourceGammaOneJDegreeFinsets",
+    "SourceGammaOneCanonicalFiberLower",
+    "SourceGammaOneGenusFiberLower"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCanonicalCoordinates.lean",
+      "sha256": "5AF75D4DE63D2E3E7C1E7D3F05C1A9DCA1FB86F5776CE7D2F3044ABBEA417FFC",
+      "oleanSha256": "5DCFFD4BF9E1C15C4AFD84F7D436BB37E5313656201A2FE26903E85822921BA9"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJDegreeFinsets.lean",
+      "sha256": "B9D0963DCC2A2592B1B58A30AF2647E44050E3741F71A91851133D7F63A08142",
+      "oleanSha256": "6C488C032D26FE894635FE6778CAA97A9323A5A671284F301C5D70891191E290"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCanonicalFiberLower.lean",
+      "sha256": "FBE6B1F857251413C8445F26A90C791700E50F932248C47F93D4A3829C696BA0",
+      "oleanSha256": "F2E95182E7AD62505E372F4AB9BEE731D7D662B7C4806417B92819DBBC77AE4E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneGenusFiberLower.lean",
+      "sha256": "EDAB490D2BA0F7EF102262A5E80A0BF167B6033D437460AC97DF3BBAD2EDCB2C",
+      "oleanSha256": "83444FDAE49F89282BC0BE152612E6B57D56DD402539085D8AD9100DE91F1637"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonicalDivisor_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonicalDivisor_degree",
+    "Dubon2026.SourceFunctionField.GammaOne.ordDifferential_D_eq_order_sub_one",
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonicalDivisor_at_pole",
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonicalDivisor_at_value",
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonicalDivisor_nonneg_of_j_nonneg",
+    "Dubon2026.SourceFunctionField.GammaOne.sum_j_fiber_orders_finset",
+    "Dubon2026.SourceFunctionField.GammaOne.sum_j_pole_orders_finset",
+    "Dubon2026.SourceFunctionField.GammaOne.j_fiber_nonneg",
+    "Dubon2026.SourceFunctionField.GammaOne.j_fiber_value_unique",
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonical_degree_lower_finsets",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_dimension_lower_fiber_cards",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_cusp_dimension_lower_fiber_cards",
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonicalDivisor"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonicalDivisor_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonicalDivisor_degree",
+    "Dubon2026.SourceFunctionField.GammaOne.ordDifferential_D_eq_order_sub_one",
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonicalDivisor_at_pole",
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonicalDivisor_at_value",
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonicalDivisor_nonneg_of_j_nonneg",
+    "Dubon2026.SourceFunctionField.GammaOne.sum_j_fiber_orders_finset",
+    "Dubon2026.SourceFunctionField.GammaOne.sum_j_pole_orders_finset",
+    "Dubon2026.SourceFunctionField.GammaOne.j_fiber_nonneg",
+    "Dubon2026.SourceFunctionField.GammaOne.j_fiber_value_unique",
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonical_degree_lower_finsets",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_dimension_lower_fiber_cards",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_cusp_dimension_lower_fiber_cards"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonicalDivisor"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCanonicalGenusLowerAudit1.log",
+  "logSha256": "3E32D243ED86422C2EBF9BDEE27FA2D18A032076350C3519CB2123955DBF419F",
+  "auditSha256": "38C897AF667C3C993186F7058EF3AE7CD334C56EF42E64C7ED218038F4CA96E4",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 25,
+  "linterScopes": 4,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 25,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCanonicalGenusLowerDependencyAudit1.log",
+  "dependencyAuditSha256": "C2D72BA12A414293365303B31CE77592393DF5B178B987774A293FE1C27EC547",
+  "dependencyAuditSourceSha256": "65AB1F5A57BA1CEFF1496544247371256429867DF4592EA5E7D7D5FE01A4863E",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonicalDivisor_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonicalDivisor_degree",
+    "Dubon2026.SourceFunctionField.GammaOne.ordDifferential_D_eq_order_sub_one",
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonicalDivisor_at_pole",
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonicalDivisor_at_value",
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonicalDivisor_nonneg_of_j_nonneg",
+    "Dubon2026.SourceFunctionField.GammaOne.sum_j_fiber_orders_finset",
+    "Dubon2026.SourceFunctionField.GammaOne.sum_j_pole_orders_finset",
+    "Dubon2026.SourceFunctionField.GammaOne.j_fiber_nonneg",
+    "Dubon2026.SourceFunctionField.GammaOne.j_fiber_value_unique",
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonical_degree_lower_finsets",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_dimension_lower_fiber_cards",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_cusp_dimension_lower_fiber_cards",
+    "Dubon2026.SourceFunctionField.GammaOne.jCanonicalDivisor"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 and Abel-Jacobi -> real period surjectivity -> reverse dimension inequality -> actual genus lower bound.",
+  "discharged": "The actual j differential has its literal finite canonical divisor and degree twice the regular-differential dimension minus two. All local differential, residue and finite-coordinate prerequisites are derived. At poles and finite values its coefficient is the corresponding j-coordinate order minus one; other finite contributions are nonnegative. The actual three finite exceptional sets exist and their order sums are derived, so the field degree minus their cardinalities is a lower bound for canonical degree. The literal Fourier equivalence converts this into the original Gamma1 weight-two cusp-form dimension bound, with no canonical-degree, genus or local-order premise.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Bound the two finite elliptic fiber cardinalities by the already counted signed S/ST cyclic orbits, then combine with the audited real Manin upper bound. Real period surjectivity, reciprocity, Picard/Hecke/diamond/H1, full all-weight characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-canonical-genus-lower-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "E0E418F3F6605BF7CAF830CE8A5283164A37F17E72BFE97E8C8189B659D1DB63",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

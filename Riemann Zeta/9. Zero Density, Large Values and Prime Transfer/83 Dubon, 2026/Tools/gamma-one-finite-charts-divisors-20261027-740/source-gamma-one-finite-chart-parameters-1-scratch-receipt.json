@@ -1,0 +1,53 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T08:48:22.541474+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneFiniteChartParameters"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParameters.lean",
+      "sha256": "F14310C6387FECC826A00627EC0CB80EB46FC9EEB6431B62F66B00BAE4CCB321",
+      "oleanSha256": "075B49EE01D063195C53714F5AF8EFEF8D8A648807D29475A7D7683F98213D09"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_place_chart_parameter",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_place_chart_parameter",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_place_parameter_package"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_place_chart_parameter",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_place_chart_parameter",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_place_parameter_package"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParametersAudit1.log",
+  "logSha256": "2B7813310C52EA9CB712ABE7373B2F4B28A4AD1617B5ADA21C789C36BDBE01F3",
+  "auditSha256": "1E57046C11DA8EEE875B34D0B748EF9D3D428D14C82EE8BC0FDB1FC8FCAF7989",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 6,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 10,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParametersDependencyAudit1.log",
+  "dependencyAuditSha256": "6F3ADEB773FE8EBF39D8ADBE725322009B0F1C199AF1E6A9B5C0830A3427DEB5",
+  "dependencyAuditSourceSha256": "B3DE456516DA224D0AF0303CBEA8C0B2513E01484A75D8AF80D9F93BED72FE55",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_place_chart_parameter",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_place_chart_parameter",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_place_parameter_package"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> actual global charts -> normalized charts at every finite j-place.",
+  "discharged": [
+    "Every actual Gamma1 analytic place, including elliptic centers, has an injective uniformizer-normalized chart with exact orders and regular analyticity for all functions on a common disk.",
+    "Every actual j-regular place has such a chart, with every coordinate difference of valuation order one."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Construct and exhaust the cusp charts, then actual global period and full Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-finite-chart-parameters-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "265EF4E0DF18837568938D0BC4A3395DE8BB8B4A0B86DA23879C383A2E1E5889",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

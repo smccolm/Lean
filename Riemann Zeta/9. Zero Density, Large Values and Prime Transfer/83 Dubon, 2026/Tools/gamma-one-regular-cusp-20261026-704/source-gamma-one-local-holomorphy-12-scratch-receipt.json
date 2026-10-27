@@ -1,0 +1,179 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T02:17:59.778711+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneRatioRealization",
+    "SourceGammaOneAnalyticGerms",
+    "SourceGammaOneMeromorphicRealization",
+    "SourceGammaOneRealizationAlgebra",
+    "SourceGammaOneAnalyticOrder",
+    "SourceGammaOneAnalyticOrderNontrivial",
+    "SourceGammaOneAnalyticPlaces",
+    "SourceGammaOneJRealization",
+    "SourceGammaOneRegularCoefficientOrders",
+    "SourceGammaOneAnalyticJOrders",
+    "SourceGammaOneAnalyticDifferentialRegularity",
+    "SourceGammaOneHolomorphicDifferentials"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRatioRealization.lean",
+      "sha256": "1124F4A25E5E42D92133232C19ACA5EB610537FE1C9789D70CB6488537D9A32D",
+      "oleanSha256": "9C1AA5AD62B6078FB2069032C6F2A061EF6D9EAD89E5557BADEF171DF1CD218A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticGerms.lean",
+      "sha256": "12469B97F67441640D64B2C5901F51B508CB06D66F4C7BBF50BDD822824DBC8D",
+      "oleanSha256": "A75980EE29D0916B9B6A0152AF3E626351CF33AF043738114A810C9230C47283"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicRealization.lean",
+      "sha256": "29AC164DBD2CF3EAF56331836E79E90B8C62A907AE85AADC3ED32A42183B5E08",
+      "oleanSha256": "213797FC0A42923BABF7002679FFB3DC5A28291392C62B03780E81E487468E9F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealizationAlgebra.lean",
+      "sha256": "1ADB334C909BF4565370856777EF8030E35E26B28090F1D706CA3FCB5A3859DE",
+      "oleanSha256": "724C36D3CC5D390E182F2DD7BAD28739E2BF2B8C2F5C97F354FD56DFD92A0EB7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticOrder.lean",
+      "sha256": "0325483B4F3FB5590FD5946CFF8643656A3FEE44171B6EAD67F4138CFFB00F9C",
+      "oleanSha256": "BE8CF2FC6F565BB79AB42B0518C397BFE91318BEBE531DB954B7D853442C9FC0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticOrderNontrivial.lean",
+      "sha256": "53818F9D41E11EA7652BDEEAC9724E4E44016803F75FC36128B1A6BBF210D0F8",
+      "oleanSha256": "6E9D2286B6F2D84CF36BCEC29E826F130501843E6D1C3DA92162DF0E1B93C672"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaces.lean",
+      "sha256": "2A684120F5449B169C539E1BD568C00CDF40572BBCC54E183DCE8F169378AA84",
+      "oleanSha256": "95E0BCAFDBA37077A2E52FFD0E915A7BFEC794B9EF3174ACE3ACE70311A179AA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJRealization.lean",
+      "sha256": "792BF0BC9A862AC39297D0D42EE3734A854D1419F617F84B42CF103511954209",
+      "oleanSha256": "13583778351357B1DDFD2D391928B87E460430F0A638ACEA56CCE550BF26114D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularCoefficientOrders.lean",
+      "sha256": "87F6E926C281A5C7056EA72FCC74A1B53BC1C500FC786E2FC3B896C0DDFDA973",
+      "oleanSha256": "CE030A1A32F698ADA6E1CDA0F0336F61DB12FD302570F7C1FD60F3A95C2301A7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticJOrders.lean",
+      "sha256": "F823AB56C1F8CF239B8EC8121C7524D81EAEECB0663469666495FB57CE728330",
+      "oleanSha256": "1ABB72A4905A050039C82860E95BDADD20361D084001D05BDED8317BB0FDB25A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticDifferentialRegularity.lean",
+      "sha256": "DC55B2BDC351C25901EB9D1C14A6F76F489CFFE7DE5CC87FB1DAA7565DD1F1F2",
+      "oleanSha256": "098D0657BB78B9BB0FE6E768369E3602F911FFB74689E2170A3DA86C5F0CDE96"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicDifferentials.lean",
+      "sha256": "FE3D1B67F3993113A3C7437A990C63B2CC6C447C7A387227167B9F7EE0A3A518",
+      "oleanSha256": "55D6627C24E0B857A3EA37E9BD040CB1AFE0DD193988568BAB8994BEE291E0ED"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.realize_eq_div",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.analyticAt_comp_ofComplex",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.coe_eq_zero_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.eventually_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.eventually_ne_zero_ofComplex",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_eventuallyEq_of_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_realize",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicOrderAt_realize_ne_top",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_algebraMap",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_mul_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_add_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_ne_top",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_eq_top_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_algebraMap",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_one",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_mul",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_add",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analyticOrder_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_order",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_jCoordinateOver",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_coefficient_order_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_j_sub",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_j_sub_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_derivative_order",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_analytic_differential_order",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_analytic_differential_bounded",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_differential_holomorphic_realization",
+    "Dubon2026.SourceFunctionField.GammaOne.realize",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.realize_eq_div",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.analyticAt_comp_ofComplex",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.coe_eq_zero_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.eventually_ne_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.ModularRatios.eventually_ne_zero_ofComplex",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_eventuallyEq_of_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_realize",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicOrderAt_realize_ne_top",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_algebraMap",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_mul_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_add_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_ne_top",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_zero",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_eq_top_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_algebraMap",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_one",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_mul",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_add",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analyticOrder_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_order",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_jCoordinateOver",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_coefficient_order_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_j_sub",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_j_sub_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_derivative_order",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_analytic_differential_order",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_analytic_differential_bounded",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_differential",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_differential_holomorphic_realization"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.realize",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalHolomorphyAudit12.log",
+  "logSha256": "7FE7409AEF6ADD8FEA456EF522EFE535DCED0DD9357133462FB841B5AE8A9B29",
+  "auditSha256": "26C2D8752EE9F39E952A505ABB0763886786F97C6EF6F688E25FB4910BD842BE",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 46,
+  "linterScopes": 12,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 46,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLocalHolomorphyDependencyAudit12.log",
+  "dependencyAuditSha256": "31989F5079B91BF6A69A0EF4495697D3028C56D6CF20E6EEC220843794B7E074",
+  "dependencyAuditSourceSha256": "3F6AE29508878C5FA45E64221CBAAC859A8209688AD9E0869F04D009339CD347",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.regular_differential_holomorphic_realization"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> actual finite Gamma1 character arithmetic realization -> Picard/H1 and full/parabolic/transpose/diamond comparison -> actual regular-differential/cusp comparison -> converse regular differential to cusp form.",
+  "discharged": "Every nonzero coefficient x of an actual regular differential x D(j) on the original complex Gamma1 integral-ratio field has a native holomorphic weight-two realization with the exact modular quotient identity and Gamma covariance. No analytic realization, local place, normalization factor, finite-point regularity, local ramification bound or removable-singularity certificate remains assumed. Translation membership and finite index are source group conditions, automatic for Gamma1 at nonzero level.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. All-cusp vanishing and exact differential Fourier matching remain before the complete regular-differential-to-cusp converse. Coefficient-field transport, actual Picard/H1, full/parabolic, transpose and diamond comparison, original finite character arithmetic realization, original all-weight association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. The full goal and all twenty acceptance gates are unchanged; 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-local-holomorphy-12-reuse-review-20261026.json",
+  "reuseReviewSha256": "9C216F571C69D9AAA9A662056539E3D9F968649EC70FF5639134172401207653",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

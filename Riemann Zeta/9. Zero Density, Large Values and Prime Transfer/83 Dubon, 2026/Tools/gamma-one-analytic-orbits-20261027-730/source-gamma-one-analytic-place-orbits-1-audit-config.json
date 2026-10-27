@@ -1,0 +1,47 @@
+{
+  "modules": [
+    "SourceGammaOneAnalyticPlaceOrbits"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_eq_iff_gamma1_orbit"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_eq_iff_gamma1_orbit"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_eq_iff_gamma1_orbit",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_separating_modular_forms",
+    "Dubon2026.SourceFunctionField.GammaOne.modular_ratio_mem",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_analytic_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_eventuallyEq_of_ratio",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_mem_iff"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_eq_iff_gamma1_orbit"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneAllModularRatioMembership",
+    "SourceGammaOneAnalyticGerms",
+    "SourceGammaOneAnalyticOrder",
+    "SourceGammaOneAnalyticOrderNontrivial",
+    "SourceGammaOneAnalyticPlaceInvariance",
+    "SourceGammaOneAnalyticPlaceOrbits",
+    "SourceGammaOneAnalyticPlaces",
+    "SourceGammaOneAnalyticResidues",
+    "SourceGammaOneDiamondSeparation",
+    "SourceGammaOneDivisionForms",
+    "SourceGammaOneDivisionLatticeOrbit",
+    "SourceGammaOneDivisionPowerOrbit",
+    "SourceGammaOneMeromorphicRealization",
+    "SourceGammaOneModularPointSeparation",
+    "SourceGammaOneNormalizedCuspRatios",
+    "SourceGammaOneRatioRealization",
+    "SourceGammaOneRealizationAlgebra",
+    "SourceOriginalModularPointSeparation",
+    "SourcePeriodDivisionRotations"
+  ],
+  "separateReason": "Actual analytic-place orbit equality consumes full separating forms, literal ratio membership, analytic representatives and modular invariance."
+}

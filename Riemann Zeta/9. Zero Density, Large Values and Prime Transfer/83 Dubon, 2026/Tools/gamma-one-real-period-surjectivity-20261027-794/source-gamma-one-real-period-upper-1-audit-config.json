@@ -1,0 +1,65 @@
+{
+  "modules": [
+    "SourceGammaOneRationalCyclicCusps",
+    "SourceGammaOneRealPeriodDimensionUpper"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.rationalCuspOrbitFromCoset_translation",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.exists_translation_of_same_rational_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.orbitToRationalCusp_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.card_rationalCuspOrbit_eq_translation_orbits",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_rational_cusp_card_eq_j_poles",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_real_parabolic_dimension_upper"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.orbitToRationalCusp"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.rationalCuspOrbitFromCoset_translation",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.exists_translation_of_same_rational_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.orbitToRationalCusp_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.card_rationalCuspOrbit_eq_translation_orbits",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_rational_cusp_card_eq_j_poles",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_real_parabolic_dimension_upper",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.orbitToRationalCusp"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.rationalCuspOrbitFromCoset_translation",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.exists_translation_of_same_rational_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.orbitToRationalCusp_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.card_rationalCuspOrbit_eq_translation_orbits",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_rational_cusp_card_eq_j_poles",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_real_parabolic_dimension_upper",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.orbitToRationalCusp",
+    "Dubon2026.SourceManin.smul_infty_eq_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_T_zpow_or_neg_of_lower_left",
+    "Dubon2026.SourceFunctionField.GammaOne.rationalCuspOrbitMk_eq_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.rationalCuspOrbitFromCoset_surjective",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_j_pole_card_eq_translation_orbits",
+    "Dubon2026.SourceFunctionField.GammaOne.RealManin.parabolic_dimension_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_parabolic_finrank_le_signed"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.rationalCuspOrbitFromCoset_translation",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.exists_translation_of_same_rational_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.orbitToRationalCusp_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.card_rationalCuspOrbit_eq_translation_orbits",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_rational_cusp_card_eq_j_poles",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_real_parabolic_dimension_upper",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.orbitToRationalCusp"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneRationalCyclicCusps",
+    "SourceGammaOneRealPeriodDimensionUpper",
+    "SourceGammaOneRationalCuspOrbit",
+    "SourceGammaOneRationalCuspPlace",
+    "SourceGammaOneCuspCosetPlaces",
+    "SourceGammaOneExactCuspOrbits",
+    "SourceGammaOneRealManinDimension",
+    "SourceGammaOneRealCuspPotential",
+    "SourceGammaOneRealManinCharacter",
+    "SourceGammaOneSignedParabolicCharacters"
+  ],
+  "separateReason": "The actual original Gamma1 real parabolic dimension satisfies the Manin upper bound with the actual algebraic cusp count. The genus lower bound remains."
+}

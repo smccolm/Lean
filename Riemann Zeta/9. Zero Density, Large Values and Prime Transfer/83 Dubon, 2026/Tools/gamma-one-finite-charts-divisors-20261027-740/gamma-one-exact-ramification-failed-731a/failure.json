@@ -1,0 +1,3 @@
+{
+  "reason": "Unqualified rep resolves to the ambient Hecke coset representative rather than AnalyticFiberOrbits.rep. Qualify the existing actual orbit representative; no statement change."
+}

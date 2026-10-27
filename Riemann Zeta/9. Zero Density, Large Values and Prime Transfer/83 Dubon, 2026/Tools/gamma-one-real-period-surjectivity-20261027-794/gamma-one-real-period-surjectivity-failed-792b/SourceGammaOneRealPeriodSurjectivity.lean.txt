@@ -1,0 +1,77 @@
+import SourceGammaOneGenusFiberLower
+import SourceGammaOneEllipticFiberBounds
+import SourceGammaOneRealPeriodDimensionUpper
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual
+Gamma1 Picard/H1 and Abel-Jacobi -> real period realization. The actual
+canonical-degree lower bound and real Manin upper bound match. Together
+with the proved real-period injectivity they give surjectivity onto every
+original parabolic character, with no genus, dimension or period premise. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup ModularGroup
+open scoped MatrixGroups GammaOne
+
+theorem gammaOne_real_parabolic_dimension_le_twice_cusp (N : ℕ) [NeZero N] :
+    Module.finrank ℝ (sourceGamma1RealParabolicHoms N) ≤
+      2 * Module.finrank ℂ (CuspForm (Gamma1 N) 2) := by
+  have ht : T ∈ Gamma1 N := by simp [Gamma1_mem, T]
+  have hg := gammaOne_cusp_dimension_lower_fiber_cards N
+  have h2 := EllipticCounting.two_mul_card_j_1728_fiber_le N ht
+  have h3 := EllipticCounting.three_mul_card_j_zero_fiber_le N ht
+  have hu := gammaOne_real_parabolic_dimension_upper N
+  dsimp only [CuspCounting.Cosets] at h2 h3
+  omega
+
+end
+end Dubon2026.SourceFunctionField.GammaOne
+
+namespace Dubon2026
+noncomputable section
+open CongruenceSubgroup Matrix.SpecialLinearGroup
+open scoped MatrixGroups
+variable (N : ℕ) [NeZero N]
+
+theorem sourceGamma1_real_parabolic_dimension_eq :
+    Module.finrank ℝ (sourceGamma1RealParabolicHoms N) =
+      Module.finrank ℝ (CuspForm ((Gamma1 N).map (mapGL ℝ)) 2) := by
+  letI := sourceGamma1RealParabolicHoms_finite N
+  apply le_antisymm
+  · rw [finrank_real_of_complex]
+    exact SourceFunctionField.GammaOne.gammaOne_real_parabolic_dimension_le_twice_cusp N
+  · exact LinearMap.finrank_le_finrank_of_injective
+      (sourceGamma1RealParabolicPeriodHom_injective N)
+
+theorem sourceGamma1RealParabolicPeriodHom_surjective :
+    Function.Surjective (sourceGamma1RealParabolicPeriodHom N) := by
+  letI := sourceGamma1RealParabolicHoms_finite N
+  apply LinearMap.range_eq_top.mp
+  apply Submodule.eq_top_of_finrank_eq (K := ℝ)
+  rw [LinearMap.finrank_range_of_inj (sourceGamma1RealParabolicPeriodHom_injective N),
+    sourceGamma1_real_parabolic_dimension_eq N]
+
+/-- The actual real period equivalence onto all original Gamma1 parabolic characters. -/
+def sourceGamma1RealPeriodEquiv :
+    CuspForm ((Gamma1 N).map (mapGL ℝ)) 2 ≃ₗ[ℝ] sourceGamma1RealParabolicHoms N :=
+  LinearEquiv.ofBijective (sourceGamma1RealParabolicPeriodHom N)
+    ⟨sourceGamma1RealParabolicPeriodHom_injective N,
+      sourceGamma1RealParabolicPeriodHom_surjective N⟩
+
+theorem sourceGamma1RealPeriodEquiv_apply
+    (f : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2) (γ : Gamma1 N) :
+    (sourceGamma1RealPeriodEquiv N f).val (Additive.ofMul γ) =
+      (sourceWeightTwoPeriodValue (Gamma1 N) f γ).re := rfl
+
+theorem sourceGamma1_exists_cuspForm_of_real_parabolic_character
+    (φ : Additive (Gamma1 N) →+ ℝ)
+    (hφ : ∀ γ : Gamma1 N, γ.val.val.trace ^ 2 = 4 → φ (Additive.ofMul γ) = 0) :
+    ∃ f : CuspForm ((Gamma1 N).map (mapGL ℝ)) 2,
+      ∀ γ : Gamma1 N,
+        (sourceWeightTwoPeriodValue (Gamma1 N) f γ).re = φ (Additive.ofMul γ) := by
+  obtain ⟨f, hf⟩ := sourceGamma1RealParabolicPeriodHom_surjective N ⟨φ, hφ⟩
+  refine ⟨f, fun γ => ?_⟩
+  exact congrArg (fun ψ : sourceGamma1RealParabolicHoms N =>
+    ψ.val (Additive.ofMul γ)) hf
+
+end
+end Dubon2026

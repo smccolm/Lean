@@ -1,0 +1,4 @@
+{
+  "reason": "Use the proved single-zero multiplication formula for coefficient scalar action instead of asking Lean to synthesize a Hahn-series scalar tower with conflicting algebra presentations.",
+  "sourceSha256": "52854457EA51EA516AF8F2F3BE198FC777CDBA7996805D083057ADCB733FDB24"
+}

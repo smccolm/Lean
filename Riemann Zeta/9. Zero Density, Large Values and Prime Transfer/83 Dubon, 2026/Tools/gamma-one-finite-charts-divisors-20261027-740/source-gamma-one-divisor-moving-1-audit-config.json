@@ -1,0 +1,47 @@
+{
+  "modules": [
+    "SourceGammaOnePrescribedPlaceOrders",
+    "SourceGammaOneAnalyticDivisorMoving"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_polar_regular_separator",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_prescribed_place_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_divisor_analytic_decomposition",
+    "Dubon2026.SourceFunctionField.GammaOne.degree_mapDomain_analyticPlace",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_degree_zero_analytic_representative"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_polar_regular_separator",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_prescribed_place_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_divisor_analytic_decomposition",
+    "Dubon2026.SourceFunctionField.GammaOne.degree_mapDomain_analyticPlace",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_degree_zero_analytic_representative"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_polar_regular_separator",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_prescribed_place_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_divisor_analytic_decomposition",
+    "Dubon2026.SourceFunctionField.GammaOne.degree_mapDomain_analyticPlace",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_degree_zero_analytic_representative",
+    "Dubon2026.SourceCurve.Place.exists_order_separating_function",
+    "Dubon2026.SourceCurve.Place.exists_forall_ord_eq_of_sep",
+    "Dubon2026.SourceCurve.finite_function_support_of_separating_coordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_isCurveOver",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.place_residue_bijective"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_polar_regular_separator",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_prescribed_place_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_divisor_analytic_decomposition",
+    "Dubon2026.SourceFunctionField.GammaOne.degree_mapDomain_analyticPlace",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_degree_zero_analytic_representative"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneAnalyticDivisorMoving",
+    "SourceGammaOnePrescribedPlaceOrders"
+  ],
+  "separateReason": "Actual principal-divisor subtraction and finite-place exhaustion realize every degree-zero divisor class by a finite analytic divisor of coefficient sum zero. Actual order prescription is proved, not assumed."
+}

@@ -1,0 +1,33 @@
+{
+  "chain": "DUB-17/18 -> original all-weight arithmetic association -> finite Gamma1 character realization -> actual Picard/H1/period/Hecke/diamond comparison -> global charts -> orbit separation and exact elliptic ramification. -> division-value power comparison -> actual lattice-preserving unit rotations.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePeriodEisensteinInvariants.lean",
+      "sha256": "1F2A8C5B14F65BA39F9B95EC20AA68C365EEF6B18CB063A0CD2EFFC23F35EF64"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePeriodLatticeInvariants.lean",
+      "sha256": "4A8B7833FF63F4E658DA89EC079CE98558A7BBDA25AA4C9BB93E43955DCACCD8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePeriodPairScaling.lean",
+      "sha256": "8F098E22A5DC87B82C8F2B109B9725D8A6C0A25710AA7BBD942A2E55CD32CF8D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-separation-reuse-712\\S_CohCarrier_exists_mem_GammaH_smul_eq_of_forall_sum_weierstrassP_pow_eq.lean.txt",
+      "sha256": "E6257ED979B4C03CCE0122321214E1AE0C57DE2F0C21D59B4ABCD1388DAC04F2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-separation-reuse-712\\route-assessment.json",
+      "sha256": "639352E6B16DD102843962FF196FF8F31E35F1BECA7707A9F6F902B7BD34F921"
+    }
+  ],
+  "shorterRoute": "Reuse exact g2/g3 scaling and lattice uniqueness. For x^d=y^d with d=1,2,3 and the corresponding vanishing invariant, take a complex square root a of y/x (zero case separately). Then a^(2d)=1 gives unit norm, and existing invariants imply lattice preservation. This avoids the external explicit cubic root and factorization casework while retaining its exact conclusion.",
+  "assumptionsToDischarge": [
+    "A lattice-preserving rotation is derived from the actual invariant conditions.",
+    "The rotation has unit norm and identifies the two actual division values; it is not assumed as a witness."
+  ],
+  "remaining": "Reverse elliptic ramification, full orbit separation and global chart/period/Hecke/diamond/Picard/H1 arithmetic comparison remain. Full all-weight arithmetic association and higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

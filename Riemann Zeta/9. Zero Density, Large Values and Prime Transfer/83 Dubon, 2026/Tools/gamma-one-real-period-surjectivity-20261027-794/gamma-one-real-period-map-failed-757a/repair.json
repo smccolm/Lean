@@ -1,0 +1,3 @@
+{
+  "reason": "The ext tactic already introduces a Gamma1 element rather than its Additive wrapper; remove the invalid toMul projection. Source and diagnostic evidence retained."
+}

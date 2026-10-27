@@ -1,0 +1,45 @@
+{
+  "modules": [
+    "SourceGammaOneFiniteChartParameters"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_place_chart_parameter",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_place_chart_parameter",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_place_parameter_package"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_place_chart_parameter",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_place_chart_parameter",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_place_parameter_package"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_place_chart_parameter",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_place_chart_parameter",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_place_parameter_package",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_chart_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_eq",
+    "Dubon2026.SourceCurve.AnalyticDisc.exists_parameter_of_evaluation_family",
+    "Dubon2026.SourceCurve.AnalyticChart.Orders.uniformizer_sub_order",
+    "Dubon2026.SourceFunctionField.GammaOne.place_residue_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_regular_order",
+    "Dubon2026.SourceFunctionField.GammaOne.two_mul_ramification_eq_stabilizer_card"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_place_chart_parameter",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_place_chart_parameter",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_place_parameter_package"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneEllipticFibers",
+    "SourceGammaOneExactRamification",
+    "SourceGammaOneFiniteChartParameters",
+    "SourceGammaOneNearbyOrders",
+    "SourceGammaOneRamifiedChartOrders",
+    "SourceGammaOneRamifiedMeromorphicOrder",
+    "SourceGammaOneRamifiedRegularOrder",
+    "SourceGammaOneRamifiedRegularParameter"
+  ],
+  "separateReason": "Actual common-neighborhood ramified orders feed the existing generic uniformizer inverse-function theorem. Finite-place exhaustion covers every actual j-regular place; generic chart-order comparison gives order-one coordinate differences. All nonzero levels and elliptic centers are retained."
+}

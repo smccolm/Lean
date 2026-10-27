@@ -1,0 +1,148 @@
+{
+  "scratchSum": 48,
+  "scratchDistinct": 48,
+  "generatedNameRenamings": {},
+  "productionFocused": 48,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {},
+  "missingFromFocusedAlreadyInPrevious": [],
+  "productionNamesNotInScratch": [],
+  "unexplainedMissing": [],
+  "scopes": [
+    {
+      "modules": [
+        "SourceGammaOneExactRamification"
+      ],
+      "count": 3,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneExactRamificationScratchOwnership731.log",
+        "sha256": "0AE989B53D795A7CAB6215A3515B87EAB73BD74AF36B737970823E9E35623293",
+        "sourceSha256": "F491767540E56E52D655075A704AF7F3F5CC5DB8E05564EE355D81684C9ACE2E"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneEllipticFibers",
+        "SourceGammaOneRamifiedRegularParameter",
+        "SourceGammaOneRamifiedRegularOrder"
+      ],
+      "count": 9,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedRegularScratchOwnership733b.log",
+        "sha256": "F51892F87CED077F97899D203D7F8B29163DDEAABA20F17916A1ACECDD3C51CF",
+        "sourceSha256": "60DFA0FE52233DB999240A947BAB72BC365789D2581D49EE7FE04021A22712A9"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneRamifiedMeromorphicOrder",
+        "SourceGammaOneNearbyOrders",
+        "SourceGammaOneRamifiedChartOrders"
+      ],
+      "count": 8,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamifiedChartOrdersScratchOwnership734b.log",
+        "sha256": "E2A3FC11D367E6E755C9BB8AC67ACA022F375EAE54B57C20ED47064CB40BED63",
+        "sourceSha256": "FD8D21BBE73F356289FCB8ADBAC0BDF1E89BDB41E8504128E83A48F4DB74AA0A"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneFiniteChartParameters"
+      ],
+      "count": 6,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartParametersScratchOwnership735.log",
+        "sha256": "2FBBB1CF48990D14BBE3F74150631FAFE357CDA2841CBA553DFA6D2E40871A8C",
+        "sourceSha256": "B3A2135AE701F9A5FD424C5B64B47CCD00CB40A56DC6B29FEEC8AC1C4B031AE5"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOnePrescribedPlaceOrders",
+        "SourceGammaOneAnalyticDivisorMoving"
+      ],
+      "count": 22,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorMovingScratchOwnership738.log",
+        "sha256": "8CF4D86476899B71B0041C672445D312D782874B7307EAEB98426D6C39AD3AEF",
+        "sourceSha256": "B57AE30397A7A646DADAD657134439A9621FE5FD8398B8BF58B5D13DA2DE43F8"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFiniteChartsDivisorsOwnership8586.log",
+    "sha256": "EA7575B60A1CBE31A292296651CEDCEE050C9FB185E5C5DBAF8D54E51E4BA018",
+    "sourceSha256": "F9EF72BFB4D5C8F484A7678763061FA3B4D289D8AFD16945C4EA8540235B7F9F"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261027-012207-005.log",
+    "sha256": "0F843570BD36807A14FD3622D7D2823AB0040503249BBC818703DDF7D599A307"
+  },
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 10 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourceGammaOneExactRamification",
+        "scratchSha256": "37AEF9E754763EEAF8270134114A2B6B9A2BA0296689AF1D07DD2B320B91D396",
+        "productionSha256": "10E7EB57948F059803A87BC61B846D618160FB6AFE4A59CA0A9CD6B635513D8B",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneEllipticFibers",
+        "scratchSha256": "8AA65B672C2AA03895160CC37947FD8D6100930AB06A02C08AFC7A3770CEA1A1",
+        "productionSha256": "B6D3ABC0945581A73C19CC96342B822D9CCAB7762C7C731937DFB38E8C4DF11A",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRamifiedRegularParameter",
+        "scratchSha256": "691A1CC3312A6F559CDEADF4F3F8E7C7013E274B43FFBDD576EFA61F08EBE72A",
+        "productionSha256": "8148024F3AF830DBC84F4356127C05AC4E88F2444E71A302173E2A531C510C65",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRamifiedRegularOrder",
+        "scratchSha256": "E7A7CE6AC845743556A328C363EDC4257FD71DB9946FE756C14860678FD8BC2B",
+        "productionSha256": "024EF26D63A703EB0B69AD62E02F9712266EF82C150C4838E7A02B80E290FFBF",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRamifiedMeromorphicOrder",
+        "scratchSha256": "CFE079129198AC1E9893E773A117FBBA11379E37D9719C27D7000395AE5AF758",
+        "productionSha256": "70B101F9DFC52F269ED9DD66E7036B9B7891F64A0CFFF0FAB4CBB60E87800A97",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneNearbyOrders",
+        "scratchSha256": "53F7AF0C849D1B91E4D91D73F02347981FE65678C6715C4CC9B5E8A8C048E760",
+        "productionSha256": "801334F293C3F665C1EEFE87A18FDB3E544A43B785A71F6628E27B31AFB36B88",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRamifiedChartOrders",
+        "scratchSha256": "1F85B7090D8BE892D5B5E06A42FBBCBF5875F3EE60BCE237A13E4B206ADC555C",
+        "productionSha256": "3960CB85C80A3E9DCF1B6C7DDA885149AE6D34A8AAE53381F78AC9FB634251F4",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneFiniteChartParameters",
+        "scratchSha256": "F14310C6387FECC826A00627EC0CB80EB46FC9EEB6431B62F66B00BAE4CCB321",
+        "productionSha256": "6259AD49DC64D9900E4A063A55B7BF81D4AE61DC7CE4413D4DB1688629D3BD06",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOnePrescribedPlaceOrders",
+        "scratchSha256": "71FC01EA242FD8CB40C348D0D91A7009EAF576CCE1D667831C34085777C90B6D",
+        "productionSha256": "71FC01EA242FD8CB40C348D0D91A7009EAF576CCE1D667831C34085777C90B6D",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneAnalyticDivisorMoving",
+        "scratchSha256": "72C4FC0809ADBC9039AEB2924B63B85888B0EC2B0ED915A280852B07EE42E949",
+        "productionSha256": "944EEE186D0A72456EB17FF15828E33F291F6BA6F817A56692F3B027F49A69CF",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": true
+}

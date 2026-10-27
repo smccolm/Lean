@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "theorems": 11,
+  "modules": 1,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlusMinusScratchOwnership726.log",
+  "logSha256": "9279FE06040CD7113F5F7918DD4FBBA54EB355330DDA3812D6B36B071C9445B9",
+  "sourceSha256": "FC2729B42520E891946776FF1B94CA654516E20B8BF296012533A050DF019E68",
+  "owners": [
+    {
+      "module": "SourceGammaOnePlusMinus",
+      "name": "_private.SourceGammaOnePlusMinus.0.Dubon2026.SourceFunctionField.GammaOne.mem_zpowers_neg_one_iff"
+    },
+    {
+      "module": "SourceGammaOnePlusMinus",
+      "name": "_private.SourceGammaOnePlusMinus.0.Dubon2026.SourceFunctionField.GammaOne.normal_zpowers_neg_one"
+    },
+    {
+      "module": "SourceGammaOnePlusMinus",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.le_plusMinus"
+    },
+    {
+      "module": "SourceGammaOnePlusMinus",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul_plusMinus"
+    },
+    {
+      "module": "SourceGammaOnePlusMinus",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_gamma_smul_eq_of_mem_plusMinus"
+    },
+    {
+      "module": "SourceGammaOnePlusMinus",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.plusMinus_stabilizer_card_dvd_two_mul_ramification"
+    },
+    {
+      "module": "SourceGammaOnePlusMinus",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.neg_one_mem_plusMinus"
+    },
+    {
+      "module": "SourceGammaOnePlusMinus",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.plusMinusFiniteIndex"
+    },
+    {
+      "module": "SourceGammaOnePlusMinus",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.mem_plusMinus_iff"
+    },
+    {
+      "module": "SourceGammaOnePlusMinus",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.two_le_card_stabilizer_plusMinus"
+    },
+    {
+      "module": "SourceGammaOnePlusMinus",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.plusMinus.eq_1"
+    }
+  ]
+}

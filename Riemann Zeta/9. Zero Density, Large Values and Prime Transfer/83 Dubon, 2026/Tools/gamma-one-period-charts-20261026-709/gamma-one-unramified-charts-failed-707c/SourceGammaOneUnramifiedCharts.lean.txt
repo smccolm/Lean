@@ -1,0 +1,107 @@
+import SourceGammaOneRamificationIsolation
+import SourceGammaOneAnalyticEvaluation
+import Dubon2026.SourceCurveAnalyticPlaceParameter
+
+/-! DUB-17/18 -> original Gamma1 Picard-period comparison -> actual local
+charts. At an unramified analytic place, one neighborhood supplies the
+normalized orders of every original function. The actual uniformizer
+then feeds the existing inverse-function parameter theorem. The final
+consumer derives unramifiedness away from the E4/E6 zeros. Elliptic centers
+and global finite/cusp exhaustion remain separate obligations. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane Filter Metric SourceCurve
+open scoped Topology MatrixGroups
+variable {Γ : Subgroup SL(2, ℤ)} [Γ.FiniteIndex] (hT : ModularGroup.T ∈ Γ)
+
+private theorem deriv_ne_zero_of_order_one {F : ℂ → ℂ} {a : ℂ}
+    (hF : AnalyticAt ℂ F a) (ho : meromorphicOrderAt F a = (1 : ℤ)) : deriv F a ≠ 0 := by
+  have ha : analyticOrderAt F a = (1 : ℕ∞) := by
+    apply WithTop.map_injective (Nat.cast_injective (R := ℤ))
+    change (analyticOrderAt F a).map (Nat.cast : ℕ → ℤ) = (1 : ℕ∞).map (Nat.cast : ℕ → ℤ)
+    rw [← hF.meromorphicOrderAt_eq, ho]
+    rfl
+  exact hF.deriv.analyticOrderAt_eq_zero.mp
+    (analyticOrderAt_deriv_of_pos hF (n := 0) (by simpa only [Nat.cast_zero, zero_add] using ha))
+
+theorem exists_unramified_analytic_chart (τ : ℍ) (hτ : analyticRamification hT τ = 1) :
+    ∃ (ρ : ℝ) (γ : ℂ → Place ℂ (functionFieldOver Γ ℂ)),
+      0 < ρ ∧ γ 0 = analyticPlace hT τ ∧ Set.InjOn γ (ball 0 ρ) ∧
+      (∀ z ∈ ball 0 ρ, placeEval hT (γ z) (analyticPlace hT τ).uniformizer = z) ∧
+      ∀ z ∈ ball 0 ρ, ∀ f : functionFieldOver Γ ℂ, f ≠ 0 →
+        MeromorphicAt (fun t => placeEval hT (γ t) f) z ∧
+        meromorphicOrderAt (fun t => placeEval hT (γ t) f) z = ((γ z).ord f : WithTop ℤ) ∧
+        (f ∈ (γ z).toValuationSubring → AnalyticAt ℂ (fun t => placeEval hT (γ t) f) z) := by
+  let v := analyticPlace hT τ
+  let γ₀ : ℂ → Place ℂ (functionFieldOver Γ ℂ) :=
+    fun z => analyticPlace hT (ofComplex (z + τ))
+  have hγ₀ : γ₀ 0 = v := by simp only [γ₀, zero_add, ofComplex_apply, v]
+  have hi := analyticRamification_eventually_one hT τ
+  rw [eventually_nhdsWithin_iff] at hi
+  have he : ∀ᶠ z in 𝓝 (τ : ℂ), analyticRamification hT (ofComplex z) = 1 := by
+    filter_upwards [hi] with z hz
+    by_cases hz0 : z = (τ : ℂ)
+    · subst z
+      simpa only [ofComplex_apply] using hτ
+    · exact hz hz0
+  have hs : Tendsto (fun z : ℂ => z + τ) (𝓝 0) (𝓝 (τ : ℂ)) := by
+    simpa only [zero_add] using (tendsto_id.add_const (τ : ℂ) :
+      Tendsto (fun z : ℂ => z + τ) (𝓝 0) (𝓝 (0 + (τ : ℂ))))
+  obtain ⟨δ, hδ, hδall⟩ := Metric.eventually_nhds_iff_ball.mp
+    (hs.eventually (he.and (isOpen_upperHalfPlaneSet.mem_nhds τ.im_pos)))
+  have horders : ∀ z ∈ ball 0 δ, ∀ f : functionFieldOver Γ ℂ, f ≠ 0 →
+      MeromorphicAt (fun t => placeEval hT (γ₀ t) f) z ∧
+      meromorphicOrderAt (fun t => placeEval hT (γ₀ t) f) z = ((γ₀ z).ord f : WithTop ℤ) ∧
+      (f ∈ (γ₀ z).toValuationSubring → AnalyticAt ℂ (fun t => placeEval hT (γ₀ t) f) z) := by
+    intro z hz f hf
+    obtain ⟨heq, hpos⟩ := hδall z hz
+    let w : ℍ := ⟨z + τ, hpos⟩
+    have hw : ofComplex (z + τ) = w := ofComplex_apply_of_im_pos hpos
+    have ha : AnalyticAt ℂ (fun t : ℂ => t + τ) z := analyticAt_id.add analyticAt_const
+    have hm := (meromorphicNFAt_placeEval hT f w).meromorphicAt
+    change MeromorphicAt (fun u : ℂ => placeEval hT (analyticPlace hT (ofComplex u)) f)
+      (z + τ) at hm
+    refine ⟨hm.comp_analyticAt ha, ?_, ?_⟩
+    · change meromorphicOrderAt
+        ((fun u => placeEval hT (analyticPlace hT (ofComplex u)) f) ∘ (fun t : ℂ => t + τ)) z = _
+      rw [meromorphicOrderAt_comp_of_deriv_ne_zero ha (by simp)]
+      have ho := placeEval_meromorphicOrderAt hT f hf w
+      have heq' : analyticRamification hT w = 1 := by rwa [hw] at heq
+      simpa only [heq', Nat.cast_one, one_mul, γ₀, hw] using ho
+    · intro hmem
+      have hm' : f ∈ (analyticPlace hT w).toValuationSubring := by
+        simpa only [γ₀, hw] using hmem
+      have haf := (placeEval_analyticAt_iff hT f w).mpr hm'
+      change AnalyticAt ℂ (fun u : ℂ => placeEval hT (analyticPlace hT (ofComplex u)) f)
+        (z + τ) at haf
+      exact haf.comp ha
+  let T : ℂ → ℂ := fun z => placeEval hT (γ₀ z) v.uniformizer
+  have hmem : v.uniformizer ∈ (γ₀ 0).toValuationSubring := by
+    rw [hγ₀]
+    exact v.uniformizerSubring.property
+  obtain ⟨_, ho, hregular⟩ := horders 0 (mem_ball_self hδ) v.uniformizer v.uniformizer_ne_zero
+  have hTa : AnalyticAt ℂ T 0 := hregular hmem
+  have hT0 : T 0 = 0 := by
+    change placeEval hT (γ₀ 0) v.uniformizer = 0
+    rw [hγ₀]
+    exact (v.rationalEval_eq_zero_iff_ord_pos (place_residue_bijective hT v)
+      v.uniformizerSubring.property v.uniformizer_ne_zero).mpr (by change 0 < v.ord v.uniformizer; rw [v.ord_uniformizer]; norm_num)
+  have hd : deriv T 0 ≠ 0 := by
+    apply deriv_ne_zero_of_order_one hTa
+    simpa only [hγ₀, v.ord_uniformizer] using ho
+  exact AnalyticDisc.exists_parameter_of_evaluation_family (place_residue_bijective hT)
+    v T hTa hT0 hd hδ γ₀ hγ₀ (fun _ _ => rfl) horders
+
+theorem exists_generic_analytic_chart (τ : ℍ)
+    (h4 : ModularForm.E₄ τ ≠ 0) (h6 : ModularForm.E₆ τ ≠ 0) :
+    ∃ (ρ : ℝ) (γ : ℂ → Place ℂ (functionFieldOver Γ ℂ)),
+      0 < ρ ∧ γ 0 = analyticPlace hT τ ∧ Set.InjOn γ (ball 0 ρ) ∧
+      (∀ z ∈ ball 0 ρ, placeEval hT (γ z) (analyticPlace hT τ).uniformizer = z) ∧
+      ∀ z ∈ ball 0 ρ, ∀ f : functionFieldOver Γ ℂ, f ≠ 0 →
+        MeromorphicAt (fun t => placeEval hT (γ t) f) z ∧
+        meromorphicOrderAt (fun t => placeEval hT (γ t) f) z = ((γ z).ord f : WithTop ℤ) ∧
+        (f ∈ (γ z).toValuationSubring → AnalyticAt ℂ (fun t => placeEval hT (γ t) f) z) :=
+  exists_unramified_analytic_chart hT τ (analyticRamification_eq_one_of_generic hT τ h4 h6)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

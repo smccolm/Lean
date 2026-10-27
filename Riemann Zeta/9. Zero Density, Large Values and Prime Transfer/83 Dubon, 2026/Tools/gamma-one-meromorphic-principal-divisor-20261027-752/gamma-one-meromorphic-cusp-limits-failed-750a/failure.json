@@ -1,0 +1,4 @@
+{
+  "exit": 1,
+  "cause": "Give the distance convergence its explicit type; use Tendsto.eventually for a proposition rather than the eventually-equality composition method."
+}

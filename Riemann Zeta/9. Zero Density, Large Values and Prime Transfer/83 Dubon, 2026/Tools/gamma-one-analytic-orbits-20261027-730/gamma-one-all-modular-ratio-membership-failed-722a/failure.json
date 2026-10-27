@@ -1,0 +1,4 @@
+{
+  "status": "FAILED",
+  "reason": "dsimp already normalized the natural-number cast of the sum; remove redundant rewrite steps and retain the substantive weight proof."
+}

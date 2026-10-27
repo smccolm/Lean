@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "theorems": 6,
+  "modules": 3,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticIntegralityScratchOwnership710.log",
+  "logSha256": "25A6F972C4452B08C77CFC9F19826E474C0C4FCA0A68C73FD8ACBD245122AA24",
+  "sourceSha256": "CBFEE778D0E26D8DD656163CD0CACA076D1D87951ED4048598D67EB27ADF1CE4",
+  "owners": [
+    {
+      "module": "SourceGammaOneQuotientCuspSeries",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.quotient_cusp_represents"
+    },
+    {
+      "module": "SourceGammaOneHolomorphicFunctions",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_invariant"
+    },
+    {
+      "module": "SourceGammaOneQuotientCuspSeries",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_meromorphic"
+    },
+    {
+      "module": "SourceGammaOneQuotientCuspSeries",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_pole_bound"
+    },
+    {
+      "module": "SourceGammaOneHolomorphicFunctions",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.holomorphic_realization_of_mem_all_analytic_places"
+    },
+    {
+      "module": "SourceGammaOneAnalyticIntegrality",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.isIntegral_of_mem_all_analytic_places"
+    }
+  ]
+}

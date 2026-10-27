@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-26 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact ramification -> analytic-place orbit separation -> actual complex modular ratios belong to the original integral-ratio function field.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-all-modular-ratio-membership-audit-route-722.json",
+    "sha256": "65BF8941A68292D1A97CAAF41426F82017ADB75558E7EAC8118C7B59998FAEDC",
+    "review": {
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact ramification -> analytic-place orbit separation -> actual complex modular ratios belong to the original integral-ratio function field.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneComplexRatio.lean",
+          "sha256": "4A560908041A56A607DD35B4A6CABF60C8E28F39F91E694FDE3CDDE41495A6C4"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\ModularDegeneracy.lean",
+          "sha256": "5D04F34CFDFF8993DA27B553691DEA2212F68E154537120AAF46E5FA3B20F0C4"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneModularRatios.lean",
+          "sha256": "B34AF80ADA42AA962AA7E6BE5026F79A71A67DC6EF2C1ECF289FFF7F760C89EF"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneNormalizedCuspRatios.lean",
+          "sha256": "BA97EF5C8A396F8B5450C88F0E851DBD5B1EE4B687DCA903A41755CA92353B01"
+        }
+      ],
+      "shorterRoute": "Reuse the existing eleventh-power weight conversion. Multiply numerator and denominator by the actual discriminant cusp form, normalize both by the same discriminant power, and cancel their literal Laurent ratios. Native cusp multiplication and restriction suffice; no new weight-balancing or coefficient descent infrastructure.",
+      "assumptionsToDischarge": [
+        "Every actual same-weight complex Gamma1 modular ratio lies in the original scalar-extended integral-ratio function field.",
+        "All weights and all nonzero levels are included; negative weights are excluded only by the actual nonzero denominator."
+      ],
+      "remaining": "Use membership and proved full modular-form separation to prove actual analytic-place equality iff Gamma1 orbit, then exact ramification/global charts and period/Hecke/diamond/Picard/H1 arithmetic comparison, all-weight association and higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": [
+    "Every actual same-weight complex Gamma1 modular ratio lies in the original scalar-extended integral-ratio function field.",
+    "All weights and all nonzero levels are included; negative weights are excluded only by the actual nonzero denominator."
+  ],
+  "remaining": "Use membership and proved full modular-form separation to prove actual analytic-place equality iff Gamma1 orbit, then exact ramification/global charts and period/Hecke/diamond/Picard/H1 arithmetic comparison, all-weight association and higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

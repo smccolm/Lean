@@ -1,0 +1,56 @@
+import Dubon2026.SourceGammaOneAnalyticJOrders
+import Dubon2026.SourceGammaOneRegularCoefficientOrders
+
+/-! DUB-17/18 -> actual Gamma1 differential/cusp converse -> finite
+holomorphy. The exact order of the analytic derivative cancels the possible
+coefficient pole of a regular differential. The resulting order is at least
+the positive ramification minus one, so every finite singularity is removable.
+All-cusp decay remains a separate obligation. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceCurve KaehlerDifferential Filter
+open scoped Topology
+variable {Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)} [Γ.FiniteIndex]
+  (hT : ModularGroup.T ∈ Γ)
+include hT
+
+theorem regular_analytic_differential_order
+    (x : functionFieldOver Γ ℂ) (hx : x ≠ 0)
+    (hreg : x • D ℂ (functionFieldOver Γ ℂ) (jCoordinateOver Γ ℂ) ∈
+      regularDifferentials ℂ (functionFieldOver Γ ℂ)) (τ : ℍ) :
+    (((analyticRamification hT τ : ℤ) - 1 : ℤ) : WithTop ℤ) ≤
+      meromorphicOrderAt
+        ((fun z : ℂ => realize Γ (x : LaurentSeries ℂ) (ofComplex z)) *
+          deriv (JMultiplicity.jf ∘ ofComplex)) (τ : ℂ) := by
+  have ha := JMultiplicity.analyticAt_comp JMultiplicity.mdifferentiable_jf τ
+  rw [meromorphicOrderAt_mul (meromorphicAt_realize hT x τ) ha.deriv.meromorphicAt]
+  change _ ≤ analyticOrder Γ τ x + _
+  rw [analyticPlace_order hT τ x hx, analytic_derivative_order hT τ,
+    ← WithTop.coe_add, WithTop.coe_le_coe]
+  have h := regular_coefficient_order_bound hT x hx hreg (analyticPlace hT τ)
+    (JMultiplicity.jf τ) (analyticPlace_j_sub_pos hT τ).ne'
+  have he : (0 : ℤ) ≤ analyticRamification hT τ := Int.natCast_nonneg _
+  nlinarith [mul_nonneg he (sub_nonneg.mpr h)]
+
+theorem regular_analytic_differential_bounded
+    (x : functionFieldOver Γ ℂ) (hx : x ≠ 0)
+    (hreg : x • D ℂ (functionFieldOver Γ ℂ) (jCoordinateOver Γ ℂ) ∈
+      regularDifferentials ℂ (functionFieldOver Γ ℂ)) (τ : ℍ) :
+    ∃ M : ℝ, ∀ᶠ z in 𝓝[≠] (τ : ℂ),
+      ‖realize Γ (x : LaurentSeries ℂ) (ofComplex z) *
+        deriv (JMultiplicity.jf ∘ ofComplex) z‖ ≤ M := by
+  have ha := JMultiplicity.analyticAt_comp JMultiplicity.mdifferentiable_jf τ
+  have hmer := (meromorphicAt_realize hT x τ).mul ha.deriv.meromorphicAt
+  have he : (0 : ℤ) ≤ (analyticRamification hT τ : ℤ) - 1 := by
+    have := analyticRamification_pos hT τ
+    omega
+  have hord : 0 ≤ meromorphicOrderAt
+      ((fun z : ℂ => realize Γ (x : LaurentSeries ℂ) (ofComplex z)) *
+        deriv (JMultiplicity.jf ∘ ofComplex)) (τ : ℂ) :=
+    (show (0 : WithTop ℤ) ≤ (((analyticRamification hT τ : ℤ) - 1 : ℤ) : WithTop ℤ)
+      by exact_mod_cast he).trans (regular_analytic_differential_order hT x hx hreg τ)
+  obtain ⟨c, hc⟩ := (tendsto_nhds_iff_meromorphicOrderAt_nonneg hmer).mpr hord
+  exact ⟨‖c‖ + 1, (hc.norm.eventually (eventually_le_nhds (by linarith : ‖c‖ < ‖c‖ + 1)))⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

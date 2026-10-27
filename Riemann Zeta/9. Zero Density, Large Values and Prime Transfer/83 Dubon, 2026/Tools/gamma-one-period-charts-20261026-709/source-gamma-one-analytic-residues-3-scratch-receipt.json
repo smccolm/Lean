@@ -1,0 +1,83 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T04:39:48.553417+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneAnalyticResidues",
+    "SourceGammaOneAnalyticEvaluation",
+    "SourceGammaOneEvaluationRealizationGerms"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResidues.lean",
+      "sha256": "A0E3E571822585A2270A54A6E7A1BD181C3D4CF9902626373A03F2B27221710A",
+      "oleanSha256": "204B55228A10C92BD2AAC60DF0ED7805AF0CF7F4805DF569C010DB2504BA4AAA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticEvaluation.lean",
+      "sha256": "6E671490A966EB8208C487C20F0D4F73F451348DDD712E1E0A65E7B432F2D830",
+      "oleanSha256": "68D1F8F2EC27269E7869491762BBD535A92A0608DFC41385ADB47A9B76812459"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneEvaluationRealizationGerms.lean",
+      "sha256": "6049EBDA4DE0AAA9CD14D7BD18E3C05736EFC783A5A984D278D2DAD1575F0CFB",
+      "oleanSha256": "F3D8D36FC59AED19F5656681DDDBA22A561D46AFA1EAE9DD279D59B729CD0B82"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_mem_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_sub_constant_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.place_residue_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_tendsto_residue",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_analytic_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicNFAt_placeEval",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_analyticAt_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_meromorphicOrderAt",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_eq_realize_of_analyticAt",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_eventuallyEq_realize",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_mem_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_sub_constant_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.place_residue_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_tendsto_residue",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_analytic_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicNFAt_placeEval",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_analyticAt_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_meromorphicOrderAt",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_eq_realize_of_analyticAt",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_eventuallyEq_realize"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResiduesAudit3.log",
+  "logSha256": "B90E1E6F4FE5100FFB0F95D5A273773A19A29C3EEECCFB9F85ED43870CF13F37",
+  "auditSha256": "E3CC4C30574BEC42F51A283E9BCB14E04E129BF338FBB9273135C3493060CC50",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 19,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 19,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResiduesDependencyAudit3.log",
+  "dependencyAuditSha256": "7727D8E1D2D9A853C143D992B670F9C3EF987F200D9D6FB472AAACEF25337C18",
+  "dependencyAuditSourceSha256": "05B614537B5691866C4DF3CC0DF9BF6635FE3A291928EE488B050BC56578D568",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_analyticAt_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_meromorphicOrderAt",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_eventuallyEq_realize"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 Hecke characters -> Picard/H1, full/parabolic and transpose/diamond comparison -> Picard-period/cusp comparison -> actual residue evaluation and analytic germs of the original Gamma field.",
+  "discharged": [
+    "Actual algebraic residue evaluation agrees with the regular analytic limit.",
+    "Actual evaluation is meromorphic normal form, analytic exactly at regular places, with its exact normalized-place order.",
+    "Actual residue evaluation and original modular-ratio realization agree on punctured germs, enabling chart pullback of the proved Fourier-normalized differential."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The actual global Gamma1 charts and period comparison, Hecke/diamond compatibility, Picard/H1 arithmetic realization, original all-weight characteristic-zero association, arithmetic automorphy and higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-analytic-residues-3-reuse-review-20261026.json",
+  "reuseReviewSha256": "5AB593C0D02F576F46BA45ABA6C6CC0DDE853A24FD5A00F26F8830C5FAC757D7",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

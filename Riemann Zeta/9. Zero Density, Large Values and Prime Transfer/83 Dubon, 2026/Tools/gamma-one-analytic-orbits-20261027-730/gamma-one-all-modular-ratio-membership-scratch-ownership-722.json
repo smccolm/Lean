@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "theorems": 2,
+  "modules": 1,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAllModularRatioMembershipScratchOwnership722.log",
+  "logSha256": "701DE03B9A0C87F04C2B807B00A1BC7E2AAA1C673584DE898F3C7E281272B36E",
+  "sourceSha256": "19267A3289E154AE32565E21CA387FB8E6E0B1DA8B25B5AD1545F8C3EB1805CA",
+  "owners": [
+    {
+      "module": "SourceGammaOneAllModularRatioMembership",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.modular_ratio_mem"
+    },
+    {
+      "module": "SourceGammaOneAllModularRatioMembership",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.modular_ratio_mem._simp_1_1"
+    }
+  ]
+}

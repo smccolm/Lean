@@ -1,0 +1,74 @@
+import Dubon2026.SourceGammaOneCuspRealizationAlgebra
+
+/-! DUB-17/18 -> actual Gamma1 regular-differential/cusp converse ->
+normalized cusp place. The actual translated meromorphic germ defines
+an integer-valued order map. All valuation laws, the zero fiber and
+triviality on constants are proved for the original function field. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane
+open scoped MatrixGroups Topology
+variable {Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)}
+
+/-- The order of the actual original field element at the translated cusp. -/
+def cuspOrder (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ))
+    (N : ℕ) (γ : SL(2, ℤ)) (x : functionFieldOver Γ ℂ) : WithTop ℤ :=
+  meromorphicOrderAt (cuspRealize Γ N γ (x : LaurentSeries ℂ)) 0
+
+theorem cuspOrder_ne_top (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) (hT : ModularGroup.T ∈ Γ)
+    (γ : SL(2, ℤ)) {x : functionFieldOver Γ ℂ} (hx : x ≠ 0) :
+    cuspOrder Γ N γ x ≠ ⊤ := meromorphicOrderAt_cuspRealize_ne_top N hΓ hT x hx γ
+
+theorem cuspOrder_zero (N : ℕ) (hT : ModularGroup.T ∈ Γ) (γ : SL(2, ℤ)) :
+    cuspOrder Γ N γ 0 = ⊤ := by
+  unfold cuspOrder
+  change meromorphicOrderAt (cuspRealize Γ N γ (0 : LaurentSeries ℂ)) 0 = ⊤
+  have he := cuspRealize_const_eventuallyEq N hT γ 0
+  rw [map_zero] at he
+  rw [meromorphicOrderAt_congr he]
+  simp only [meromorphicOrderAt_const, if_true]
+
+theorem cuspOrder_eq_top_iff (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) (hT : ModularGroup.T ∈ Γ)
+    (γ : SL(2, ℤ)) (x : functionFieldOver Γ ℂ) :
+    cuspOrder Γ N γ x = ⊤ ↔ x = 0 := by
+  constructor
+  · intro he
+    by_contra hx
+    exact cuspOrder_ne_top N hΓ hT γ hx he
+  · rintro rfl
+    exact cuspOrder_zero N hT γ
+
+theorem cuspOrder_algebraMap (N : ℕ) (hT : ModularGroup.T ∈ Γ) (γ : SL(2, ℤ))
+    (c : ℂ) (hc : c ≠ 0) :
+    cuspOrder Γ N γ (algebraMap ℂ (functionFieldOver Γ ℂ) c) = 0 := by
+  unfold cuspOrder
+  change meromorphicOrderAt (cuspRealize Γ N γ (algebraMap ℂ (LaurentSeries ℂ) c)) 0 = 0
+  rw [meromorphicOrderAt_congr (cuspRealize_const_eventuallyEq N hT γ c)]
+  simp only [meromorphicOrderAt_const, if_neg hc]
+
+theorem cuspOrder_one (N : ℕ) (hT : ModularGroup.T ∈ Γ) (γ : SL(2, ℤ)) :
+    cuspOrder Γ N γ 1 = 0 := by
+  simpa only [map_one] using cuspOrder_algebraMap N hT γ 1 one_ne_zero
+
+theorem cuspOrder_mul (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) (hT : ModularGroup.T ∈ Γ)
+    (γ : SL(2, ℤ)) (x y : functionFieldOver Γ ℂ) :
+    cuspOrder Γ N γ (x * y) = cuspOrder Γ N γ x + cuspOrder Γ N γ y := by
+  unfold cuspOrder
+  rw [meromorphicOrderAt_congr (cuspRealize_mul_eventuallyEq N hΓ hT x y γ),
+    meromorphicOrderAt_mul (meromorphicAt_cuspRealize N hΓ hT x γ)
+      (meromorphicAt_cuspRealize N hΓ hT y γ)]
+
+theorem cuspOrder_add (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) (hT : ModularGroup.T ∈ Γ)
+    (γ : SL(2, ℤ)) (x y : functionFieldOver Γ ℂ) :
+    min (cuspOrder Γ N γ x) (cuspOrder Γ N γ y) ≤ cuspOrder Γ N γ (x + y) := by
+  unfold cuspOrder
+  rw [meromorphicOrderAt_congr (cuspRealize_add_eventuallyEq N hΓ hT x y γ)]
+  exact meromorphicOrderAt_add (meromorphicAt_cuspRealize N hΓ hT x γ)
+    (meromorphicAt_cuspRealize N hΓ hT y γ)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

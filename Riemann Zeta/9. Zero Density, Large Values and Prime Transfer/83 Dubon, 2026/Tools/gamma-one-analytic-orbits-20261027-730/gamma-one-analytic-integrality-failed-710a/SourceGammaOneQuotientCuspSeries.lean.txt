@@ -1,0 +1,73 @@
+import SourceGammaOneHolomorphicFunctions
+import SourceGammaOneTranslatedCuspGerms
+import Dubon2026.SourceMeromorphicCuspPoleClearing
+import Dubon2026.SourceFrickeHolomorphicIntegralSpan
+
+/-! DUB-17/18 -> original Gamma1 finite-place exhaustion -> integrality
+of functions regular at every analytic place. Actual modular quotients
+have literal Laurent cusp representatives. Existing meromorphic pole
+clearing therefore supplies each translated cusp bound, without another
+uniform cusp-order or discriminant-power modular-form construction. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane Filter
+open scoped Topology Manifold MatrixGroups ModularForm
+
+theorem quotient_cusp_represents {Σ : Subgroup (GL (Fin 2) ℝ)} {w : ℝ}
+    (hw : 0 < w) (hp : w ∈ Σ.strictPeriods) {k : ℤ}
+    (g h : ModularForm Σ k) (hh : h ≠ 0) (F : ℍ → ℂ)
+    (he : ∀ τ, F τ * h τ = g τ) :
+    CuspTaylor.Represents
+      ((qExpansion w g : LaurentSeries ℂ) / (qExpansion w h : LaurentSeries ℂ))
+      (cuspFunction w F) := by
+  have hg := CuspTaylor.represents_analytic (ModularFormClass.analyticAt_cuspFunction_zero g hw hp)
+  have hd := CuspTaylor.represents_analytic (ModularFormClass.analyticAt_cuspFunction_zero h hw hp)
+  rw [CuspTaylor.series_cuspFunction] at hg hd
+  have hn : ∀ᶠ q in 𝓝[≠] (0 : ℂ), cuspFunction w h q ≠ 0 := by
+    apply CuspTaylor.eventually_ne_zero_of_series_ne_zero
+      (ModularFormClass.analyticAt_cuspFunction_zero h hw hp)
+    rw [CuspTaylor.series_cuspFunction]
+    exact fun hz => hh ((ModularForm.qExpansion_eq_zero_iff hw hp h).mp hz)
+  apply (hg.div hd).congr
+  filter_upwards [self_mem_nhdsWithin, hn] with q hq hden
+  simp only [cuspFunction, Function.Periodic.cuspFunction_eq_of_nonzero _ _ hq,
+    Function.comp_apply, Pi.div_apply] at hden ⊢
+  exact (eq_div_iff hden).mpr (he _)
+
+variable {Γ : Subgroup SL(2, ℤ)}
+
+theorem holomorphic_quotient_cusp_meromorphic (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) {k : ℤ}
+    (g h : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) k) (hh : h ≠ 0)
+    (F : ℍ → ℂ) (he : ∀ τ, F τ * h τ = g τ) (γ : SL(2, ℤ)) :
+    MeromorphicAt (cuspFunction N (fun τ : ℍ => F (γ • τ))) 0 := by
+  apply (quotient_cusp_represents (by exact_mod_cast NeZero.pos N)
+    (CuspAuxiliary.natCast_mem_strictPeriods_conj N hΓ γ)
+    (ModularForm.translate g (γ : GL (Fin 2) ℝ))
+    (ModularForm.translate h (γ : GL (Fin 2) ℝ))
+    (translated_modular_ne_zero h hh γ) (fun τ => F (γ • τ)) ?_).meromorphicAt
+  intro τ
+  change F (γ • τ) * ((h : ℍ → ℂ) ∣[k] γ) τ = ((g : ℍ → ℂ) ∣[k] γ) τ
+  rw [ModularForm.SL_slash_apply, ModularForm.SL_slash_apply, ← mul_assoc, he]
+
+theorem holomorphic_quotient_cusp_pole_bound (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) {k : ℤ}
+    (g h : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) k) (hh : h ≠ 0)
+    (F : ℍ → ℂ) (hF : MDiff F) (he : ∀ τ, F τ * h τ = g τ) (γ : SL(2, ℤ)) :
+    ∃ m : ℕ, IsBoundedAtImInfty
+      ((F ∘ (γ • ·)) * ⇑CuspForm.discriminant ^ m : ℍ → ℂ) := by
+  have hinv := holomorphic_quotient_invariant g h hh F hF he
+  have hp : Function.Periodic ((F ∘ (γ • ·)) ∘ ofComplex) N := by
+    apply SourceFricke.periodic_of_principal_invariant
+    intro δ hδ τ
+    have hconj : γ * δ * γ⁻¹ ∈ Γ :=
+      hΓ ((CongruenceSubgroup.Gamma_normal N).conj_mem δ hδ γ)
+    change F (γ • (δ • τ)) = F (γ • τ)
+    calc
+      _ = F ((γ * δ * γ⁻¹) • (γ • τ)) := by simp only [mul_smul, inv_smul_smul]
+      _ = _ := hinv _ hconj _
+  exact SourceFricke.exists_bounded_mul_discriminant_of_meromorphic hp
+    (holomorphic_quotient_cusp_meromorphic N hΓ g h hh F he γ)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

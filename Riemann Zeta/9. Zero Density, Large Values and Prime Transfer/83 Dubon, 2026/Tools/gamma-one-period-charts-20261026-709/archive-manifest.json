@@ -1,0 +1,504 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-charts-promotion-route-709.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-period-charts-promotion-route-709.json",
+      "sha256": "49E60ABCC90A5BBB59D8499696D72375F9541FA0A674BAC49EED1E52FDE1CB73"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResiduesAudit3.exit",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOneAnalyticResiduesAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResiduesAudit3.lean",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOneAnalyticResiduesAudit3.lean.txt",
+      "sha256": "E3CC4C30574BEC42F51A283E9BCB14E04E129BF338FBB9273135C3493060CC50"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResiduesAudit3.log",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOneAnalyticResiduesAudit3.log",
+      "sha256": "B90E1E6F4FE5100FFB0F95D5A273773A19A29C3EEECCFB9F85ED43870CF13F37"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResiduesDependencyAudit3.exit",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOneAnalyticResiduesDependencyAudit3.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResiduesDependencyAudit3.lean",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOneAnalyticResiduesDependencyAudit3.lean.txt",
+      "sha256": "05B614537B5691866C4DF3CC0DF9BF6635FE3A291928EE488B050BC56578D568"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResiduesDependencyAudit3.log",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOneAnalyticResiduesDependencyAudit3.log",
+      "sha256": "7727D8E1D2D9A853C143D992B670F9C3EF987F200D9D6FB472AAACEF25337C18"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResiduesScratchOwnership706.exit",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOneAnalyticResiduesScratchOwnership706.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResiduesScratchOwnership706.lean",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOneAnalyticResiduesScratchOwnership706.lean.txt",
+      "sha256": "2C56B04461657F150AFE8BE543CC7827CAB5CD0AE33BEC364CCF8C257D513AD1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResiduesScratchOwnership706.log",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOneAnalyticResiduesScratchOwnership706.log",
+      "sha256": "3DFFC306C74D56FF454AA7B68EAADCE552A39B50FE604764139AFBA50841A22B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodGermAudit1.exit",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOnePeriodGermAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodGermAudit1.lean",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOnePeriodGermAudit1.lean.txt",
+      "sha256": "0692346072FF66F0D98667895FEB8EE99C7691BF80EE338A17466F9104A7795A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodGermAudit1.log",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOnePeriodGermAudit1.log",
+      "sha256": "154FE1A5542FB50723D90772F0F4AE79784632FF6365DD0097B4CEDD60DA7F7C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodGermDependencyAudit1.exit",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOnePeriodGermDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodGermDependencyAudit1.lean",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOnePeriodGermDependencyAudit1.lean.txt",
+      "sha256": "5C26F1F0A8C6916AF03B2D5D2D1B51B3D9D6B7134810977993CB1DE03A6C78E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodGermDependencyAudit1.log",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOnePeriodGermDependencyAudit1.log",
+      "sha256": "8DF9323144FBE140BADDB3B562DCA134387A0247F2069F1884934B9C8B4CA687"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodGermScratchOwnership705.exit",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOnePeriodGermScratchOwnership705.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodGermScratchOwnership705.lean",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOnePeriodGermScratchOwnership705.lean.txt",
+      "sha256": "CB357C50DE845187CB2C6102C47EEF6C3CAF66E706EFD243AA7D9CFEEC766C24"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodGermScratchOwnership705.log",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOnePeriodGermScratchOwnership705.log",
+      "sha256": "CFB2DD0A8B0B4710A57849DEB2EA5E879AB9FA6D27E6DC39E3A27F03DFAF942F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedChartsAudit2.exit",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOneUnramifiedChartsAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedChartsAudit2.lean",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOneUnramifiedChartsAudit2.lean.txt",
+      "sha256": "91E50B5063B6247828637D5F6B467C6DC228D79BB25FF20C3FEC9077A72FBF6F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedChartsAudit2.log",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOneUnramifiedChartsAudit2.log",
+      "sha256": "6428D23D183B1CEF435BA0104472059294187C83306F90A50C0029B01DBC31C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedChartsDependencyAudit2.exit",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOneUnramifiedChartsDependencyAudit2.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedChartsDependencyAudit2.lean",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOneUnramifiedChartsDependencyAudit2.lean.txt",
+      "sha256": "4EF58034F87A7166A97573DF82F5DB9CEEA908F75E370EB86CA30BD480247B98"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedChartsDependencyAudit2.log",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOneUnramifiedChartsDependencyAudit2.log",
+      "sha256": "FF42E92245397E635E855747BC3DAD6FCB8CDF91290FCB99EA6BE46C3F311A0F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedChartsScratchOwnership707.exit",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOneUnramifiedChartsScratchOwnership707.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedChartsScratchOwnership707.lean",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOneUnramifiedChartsScratchOwnership707.lean.txt",
+      "sha256": "F54ECB2279CB9E29A2363634F07CE65866E7654EA4BB5DF1DC7562E01F0409FB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedChartsScratchOwnership707.log",
+      "path": "Tools/gamma-one-period-charts-20261026-709/SourceGammaOneUnramifiedChartsScratchOwnership707.log",
+      "sha256": "B16D313F5C5191933B2648F75B1B5D17868C7B8771343D964C26B5958133E451"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\consumers707.txt",
+      "path": "Tools/gamma-one-period-charts-20261026-709/consumers707.txt",
+      "sha256": "8A90F4C1013E891E15D13922C26E4B7666FDA76BCC96CA0B989554BA6ACBAB81"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_ramification_core_708.py",
+      "path": "Tools/gamma-one-period-charts-20261026-709/download_gamma_one_ramification_core_708.py",
+      "sha256": "8FF36EDD6B35523BCC591CA46D0F24AA80CCD5718C76937C381A9402096D96B2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_ramification_followup_708.py",
+      "path": "Tools/gamma-one-period-charts-20261026-709/download_gamma_one_ramification_followup_708.py",
+      "sha256": "2AE44A5513912BA0620BAE8E1AEBDB5A3FCA958D37F0F8A53A0F6CD53E2A8787"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_ramification_inputs_708.py",
+      "path": "Tools/gamma-one-period-charts-20261026-709/download_gamma_one_ramification_inputs_708.py",
+      "sha256": "E944489E28A5F3A465BF5B28DC14A0432C20F8B7E104BEAB6A233D887CDE98D4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation707-console.log",
+      "path": "Tools/gamma-one-period-charts-20261026-709/foundation707-console.log",
+      "sha256": "E8106B6F3510192059FECB164AF3035D97EF3D4996CE1A9DE7B5718FD9763904"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\foundation707-retry-console.log",
+      "path": "Tools/gamma-one-period-charts-20261026-709/foundation707-retry-console.log",
+      "sha256": "1E1CF4F27E946BA323A4659A7B2F65D1020448650CA0841CF20605685DF10F26"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-residues-audit-route-706.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-analytic-residues-audit-route-706.json",
+      "sha256": "98FAF2DD6D1E7E32071DF203423162F61480CAD4DD532E720BEB4003B71ED2C6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-residues-route-706.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-analytic-residues-route-706.json",
+      "sha256": "11B72B2E08F007DFD48F37CDF2B3CAEBE43A65E3FE354584560C6031572D278D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-residues-scratch-ownership-706.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-analytic-residues-scratch-ownership-706.json",
+      "sha256": "CAE77C353D3E433C140DAE6DADD3A18B149D4CD0DFE0CB75473999C538ED9562"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-germ-audit-route-705.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-period-germ-audit-route-705.json",
+      "sha256": "B8C7887FE79AB5FD79F68606D1F9D4805F838F9759FE1B42A2996639FDED85A0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-germ-route-705.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-period-germ-route-705.json",
+      "sha256": "902E11CB0230F5E9A474418EF83F8FC9F8643CFDBEAEB10801DDDC96340A7B9F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-germ-scratch-ownership-705.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-period-germ-scratch-ownership-705.json",
+      "sha256": "75D60A1CBD12A0A8DAD0106737EAE505D6DD59CE90C988F498FDC42B869AFF44"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-unramified-charts-audit-route-707.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-unramified-charts-audit-route-707.json",
+      "sha256": "CC6CCCAC64068022F3E687EAF2B65AA1DA9D4D2CDDEE8CCCAB359C049CAE4A1B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-unramified-charts-route-707.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-unramified-charts-route-707.json",
+      "sha256": "5CF8A045FD437C22F00F313E3E6DA0736405177E6941B16AF017D73EDA8148FB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-unramified-charts-scratch-ownership-707.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-unramified-charts-scratch-ownership-707.json",
+      "sha256": "35B92265A53DB66F5BC4AD0745CCAC1BB38CD24DCFFFFA117FD52334A483A192"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\modules707.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/modules707.json",
+      "sha256": "F2AFD6F93EA4F7A48226686433A71688943DE9EE50F521C29F3B1842A033A42D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper707-console.log",
+      "path": "Tools/gamma-one-period-charts-20261026-709/paper707-console.log",
+      "sha256": "9539DE9BF865728AE3DA2C3B4744B5A40ED4DEFA8F0A8991287B42506296E03D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\paper707-retry-console.log",
+      "path": "Tools/gamma-one-period-charts-20261026-709/paper707-retry-console.log",
+      "sha256": "8A4D79AE6C9BC203308F2A75503035EB6BF63E375D723EFC7A540019D9E2A6B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_period_germ_audit_705.py",
+      "path": "Tools/gamma-one-period-charts-20261026-709/prepare_gamma_one_period_germ_audit_705.py",
+      "sha256": "87402ACC36BE5B834D31A3C7C8AB524FBCB9FFD6CAC55184D8BB986289CD3BEF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record707.py",
+      "path": "Tools/gamma-one-period-charts-20261026-709/record707.py",
+      "sha256": "954ED52DC4BF36D106BB51D25947C1C33F342C4FC1F7595512208141D1AA7FDA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_analytic_residues_706.py",
+      "path": "Tools/gamma-one-period-charts-20261026-709/record_gamma_one_analytic_residues_706.py",
+      "sha256": "726D41C0280EA9D172ABAAFF89E8C7ED573563E1DFB5AA732ED2AB245963BA31"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_period_germ_705.py",
+      "path": "Tools/gamma-one-period-charts-20261026-709/record_gamma_one_period_germ_705.py",
+      "sha256": "985BD7A811D58586735B77FBE58F357FCFD1F3AB8CF9846976752D2F4F78D331"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_unramified_charts_707.py",
+      "path": "Tools/gamma-one-period-charts-20261026-709/record_gamma_one_unramified_charts_707.py",
+      "sha256": "D9FD05387B8DEC6DDA428ACEB56F7A6580D83D962EF8A31ECDFB44730110F2BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\register707.py",
+      "path": "Tools/gamma-one-period-charts-20261026-709/register707.py",
+      "sha256": "A146A64C12D355F9255BB594971B3EAB1507206AA2D4D70E9B8D0BBDEFC6F639"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\registrations707.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/registrations707.json",
+      "sha256": "32E9551323795648174954D11B790DA5F71B05AA00B87F69A77862C736494EEA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\section707.txt",
+      "path": "Tools/gamma-one-period-charts-20261026-709/section707.txt",
+      "sha256": "1FBD9781D4E15FC0DB2B6801BD7BD1D5955E15BE74CD08D879A0D7D2FB620560"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-analytic-residues-3-audit-config.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/source-gamma-one-analytic-residues-3-audit-config.json",
+      "sha256": "E9D6FE262347BB219FACE5F39715188C3DDCBE0031E086397BCF1A360D47623D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-analytic-residues-3-scratch-receipt.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/source-gamma-one-analytic-residues-3-scratch-receipt.json",
+      "sha256": "4AF476A43C86FA83B7570B5BD31E8BE82E27C782D100B7EBCCFB72FF93756918"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-period-germ-1-audit-config.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/source-gamma-one-period-germ-1-audit-config.json",
+      "sha256": "CCAC29530FFB3EBD9C3C8C0C7C780703E209C766CC02AB6597033FAF24F5994B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-period-germ-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/source-gamma-one-period-germ-1-scratch-receipt.json",
+      "sha256": "69518C1D18858B6E6DBFC11B5FE2F939FFAEDE31100388FADAEB39379D22EDBE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-unramified-charts-2-audit-config.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/source-gamma-one-unramified-charts-2-audit-config.json",
+      "sha256": "BD1962243A4BDBA4D7CDF6F2F178A3271572B110F1C8646FB267354A9F46192E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-unramified-charts-2-scratch-receipt.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/source-gamma-one-unramified-charts-2-scratch-receipt.json",
+      "sha256": "724D35DA2C0ED9ED8975FEF2E366A18910FDB36B310E0C4BBDFF301FD6206165"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\status707.txt",
+      "path": "Tools/gamma-one-period-charts-20261026-709/status707.txt",
+      "sha256": "2086CD06D0CFD6A355458831C1353137AABD15D9D197A36C5023611C9E6B6F96"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\update707.py",
+      "path": "Tools/gamma-one-period-charts-20261026-709/update707.py",
+      "sha256": "4E91E5EADBB6DF91918D462606E6EEAE698BE85A5DC79212D7AFD3D9C1E56BDD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\Def_ModularCurve_ComplexPlaceDictionaryOf.lean.txt",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-ramification-core-reuse-708/Def_ModularCurve_ComplexPlaceDictionaryOf.lean.txt",
+      "sha256": "DD65AC866F371BB1704409250C5931DBD797DFDA5686AF0A8F3557797A58A5C4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\followup-snapshots.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-ramification-core-reuse-708/followup-snapshots.json",
+      "sha256": "512231D6DB04CF34F43118E8123A7EE42A35D6B60541A381A41C3D803B13A80F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\route-assessment.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-ramification-core-reuse-708/route-assessment.json",
+      "sha256": "21880E4E1264D3DB9ADAC4B7597A1BA72560EA30B78AFAC986BEDF365E045566"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\route-input-snapshots.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-ramification-core-reuse-708/route-input-snapshots.json",
+      "sha256": "ACB6D52D921D58D819796D46334D8BF06E33C0C90D8828F6BDDAC7410F8AA1FC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\S_ModularCurve_ComplexPlaceDictionaryOf_card_stabilizer_dvd_two_mul_ramification.lean.txt",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-ramification-core-reuse-708/S_ModularCurve_ComplexPlaceDictionaryOf_card_stabilizer_dvd_two_mul_ramification.lean.txt",
+      "sha256": "C0A989B7DC0E7E831522D62CD27E4B2E3293F0E4B20C350565EFF8938DE95781"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\S_ModularCurve_ComplexPlaceDictionaryOf_pt_eq_pt_iff_gammaH.lean.txt",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-ramification-core-reuse-708/S_ModularCurve_ComplexPlaceDictionaryOf_pt_eq_pt_iff_gammaH.lean.txt",
+      "sha256": "85F03A4B8818DDFF6354306C8A1E5425B02376FE892C51961889EB0191659674"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\S_ModularCurve_ComplexPlaceDictionaryOf_ramification_eq_one_gamma1.lean.txt",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-ramification-core-reuse-708/S_ModularCurve_ComplexPlaceDictionaryOf_ramification_eq_one_gamma1.lean.txt",
+      "sha256": "1C970DF479352336DC64401FE12D565137877183CEE657F6488357796D6C45E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\S_ModularCurve_ComplexPlaceDictionaryOf_two_mul_ramification_eq_card_stabilizer.lean.txt",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-ramification-core-reuse-708/S_ModularCurve_ComplexPlaceDictionaryOf_two_mul_ramification_eq_card_stabilizer.lean.txt",
+      "sha256": "B84ABD61C547D3D894F4EE8E1E50D4F7819B6B7714FFD87F6681764F9F073652"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\S_ModularCurve_ComplexPlaceDictionaryOf_two_mul_ramification_eq_card_stabilizer_gammaH.lean.txt",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-ramification-core-reuse-708/S_ModularCurve_ComplexPlaceDictionaryOf_two_mul_ramification_eq_card_stabilizer_gammaH.lean.txt",
+      "sha256": "04343F1EEB1FE2B7E2DC185F7E705649D9387CDF1E4A8F5EC1298529BB979241"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\S_ModularCurve_ord_eq_three_of_ord_pos_and_ord_sub_eq_two_laurentBaseChange_gamma1.lean.txt",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-ramification-core-reuse-708/S_ModularCurve_ord_eq_three_of_ord_pos_and_ord_sub_eq_two_laurentBaseChange_gamma1.lean.txt",
+      "sha256": "79952A148A87933DCFC1C8CFF009D14AF9C7F5E7B09D07ACF8C28346932C9976"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\S_ModularCurve_ord_eq_three_of_ord_pos_and_ord_sub_eq_two_laurentBaseChange_gamma1_algebraicClosure.lean.txt",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-ramification-core-reuse-708/S_ModularCurve_ord_eq_three_of_ord_pos_and_ord_sub_eq_two_laurentBaseChange_gamma1_algebraicClosure.lean.txt",
+      "sha256": "D55C38FB15261E90648D96128FC828E8AA6C67F4A003EE456964D80D6A2150E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\S_ModularForm_exists_gammaH_apply_mul_apply_ne_of_forall_smul_ne.lean.txt",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-ramification-core-reuse-708/S_ModularForm_exists_gammaH_apply_mul_apply_ne_of_forall_smul_ne.lean.txt",
+      "sha256": "192E6397FC8095D35FE8F00E8A2D701E351CE88507C087E167F360534C7BB828"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\sandbox-download-failure.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-ramification-core-reuse-708/sandbox-download-failure.json",
+      "sha256": "C97FB92F7BCCB4331825D4D8FD6A356456EF8D01D90C8890F7AEF6DDAEE85FFD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\snapshots.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-ramification-core-reuse-708/snapshots.json",
+      "sha256": "AF8B11C4F52BEA4E195B2412FC68F14BC20B0DB018056CF0575FD00C3E3F30C5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-evaluation-failed-706a\\SourceGammaOneAnalyticEvaluation.exit",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-analytic-evaluation-failed-706a/SourceGammaOneAnalyticEvaluation.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-evaluation-failed-706a\\SourceGammaOneAnalyticEvaluation.lean.txt",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-analytic-evaluation-failed-706a/SourceGammaOneAnalyticEvaluation.lean.txt",
+      "sha256": "5012EE7171F1EB8DDA96CE39B15227D6E5C7989C978CCF8ADA2C009709BA32F3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-analytic-evaluation-failed-706a\\SourceGammaOneAnalyticEvaluation.log",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-analytic-evaluation-failed-706a/SourceGammaOneAnalyticEvaluation.log",
+      "sha256": "3C1694F502098ED6A4788B5F7C7FC0E1EA6759317DF147874821509A44813A6D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-germ-failed-705a\\SourceGammaOneRegularCuspGerm.exit",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-period-germ-failed-705a/SourceGammaOneRegularCuspGerm.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-germ-failed-705a\\SourceGammaOneRegularCuspGerm.lean.txt",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-period-germ-failed-705a/SourceGammaOneRegularCuspGerm.lean.txt",
+      "sha256": "5B7A6F1C37541AE0AEDDA1E9330997B52F0B59CD945415D4B281A63FCE64ACB1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-germ-failed-705a\\SourceGammaOneRegularCuspGerm.log",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-period-germ-failed-705a/SourceGammaOneRegularCuspGerm.log",
+      "sha256": "FDBE922A6E9BC9DBAFD349D83A61F310BB0C0631118D17231E89939537C5A7E6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-germ-failed-705b\\SourceGammaOneRegularCuspGerm.exit",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-period-germ-failed-705b/SourceGammaOneRegularCuspGerm.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-germ-failed-705b\\SourceGammaOneRegularCuspGerm.lean.txt",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-period-germ-failed-705b/SourceGammaOneRegularCuspGerm.lean.txt",
+      "sha256": "A194AFA89F4C23E812D34D010F75304B2307AF981BF2BD16DA453C88943741C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-germ-failed-705b\\SourceGammaOneRegularCuspGerm.log",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-period-germ-failed-705b/SourceGammaOneRegularCuspGerm.log",
+      "sha256": "418E3CDD2C25539EAF2999648CE5A6715E3737B16DFDBBCFDF525E83ACBAA059"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-isolation-failed-707a\\SourceGammaOneRamificationIsolation.exit",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-ramification-isolation-failed-707a/SourceGammaOneRamificationIsolation.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-isolation-failed-707a\\SourceGammaOneRamificationIsolation.lean.txt",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-ramification-isolation-failed-707a/SourceGammaOneRamificationIsolation.lean.txt",
+      "sha256": "B2A6BB70A93FD55B4EA0515038313CFC2ECBB2B3D0A4D961CBF37583640BF1B9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-isolation-failed-707a\\SourceGammaOneRamificationIsolation.log",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-ramification-isolation-failed-707a/SourceGammaOneRamificationIsolation.log",
+      "sha256": "E1B97FC662054B0C46F4E5AF8458088DFFDA8205F97AAE31A4E77DC6AA3CB897"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-unramified-charts-failed-707b\\SourceGammaOneUnramifiedCharts.exit",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-unramified-charts-failed-707b/SourceGammaOneUnramifiedCharts.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-unramified-charts-failed-707b\\SourceGammaOneUnramifiedCharts.lean.txt",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-unramified-charts-failed-707b/SourceGammaOneUnramifiedCharts.lean.txt",
+      "sha256": "8F5911FB2379FDF25A70926A4192A256244E3531AC48FCDA51AB9693C91068C3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-unramified-charts-failed-707b\\SourceGammaOneUnramifiedCharts.log",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-unramified-charts-failed-707b/SourceGammaOneUnramifiedCharts.log",
+      "sha256": "946E8BD47209457725C2B4ED734FBBC7E30110285B0B23AF61DC46D3A696220C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-unramified-charts-failed-707c\\SourceGammaOneUnramifiedCharts.exit",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-unramified-charts-failed-707c/SourceGammaOneUnramifiedCharts.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-unramified-charts-failed-707c\\SourceGammaOneUnramifiedCharts.lean.txt",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-unramified-charts-failed-707c/SourceGammaOneUnramifiedCharts.lean.txt",
+      "sha256": "BD19A055F9478B053548AC652FB88A942CD1B020A3559633DEC35DF4570EAF7A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-unramified-charts-failed-707c\\SourceGammaOneUnramifiedCharts.log",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-unramified-charts-failed-707c/SourceGammaOneUnramifiedCharts.log",
+      "sha256": "BEB5B29FAF4EFF19F057BB9784E6FC5F16AC3ED056F4DA0A45551171938E545E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-charts-preparation-failed-709a\\failure.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-period-charts-preparation-failed-709a/failure.json",
+      "sha256": "549C4CF78E888C41C4E6DBD4D0B2CDC60F7A4E9F4EC1E9502F11B08F6D8E4E62"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-charts-preparation-failed-709a\\gamma-one-period-charts-promotion-route-709.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-period-charts-preparation-failed-709a/gamma-one-period-charts-promotion-route-709.json",
+      "sha256": "49E60ABCC90A5BBB59D8499696D72375F9541FA0A674BAC49EED1E52FDE1CB73"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-charts-preparation-failed-709a\\prepare_gamma_one_period_charts_promotion_8554.py",
+      "path": "Tools/gamma-one-period-charts-20261026-709/gamma-one-period-charts-preparation-failed-709a/prepare_gamma_one_period_charts_promotion_8554.py",
+      "sha256": "4BD1E101B54552AB4FFD4332EF2FA2139E30DE0B82A2CD425AD01E7C8C8407B5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-period-germ-1-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/source-gamma-one-period-germ-1-reuse-review-20261026.json",
+      "sha256": "34D49250F8A4FA358F514D758429E1EAB71C01DF2A2AF2630B5024C50A6CA1E3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-analytic-residues-3-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/source-gamma-one-analytic-residues-3-reuse-review-20261026.json",
+      "sha256": "5AB593C0D02F576F46BA45ABA6C6CC0DDE853A24FD5A00F26F8830C5FAC757D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-unramified-charts-2-reuse-review-20261026.json",
+      "path": "Tools/gamma-one-period-charts-20261026-709/source-gamma-one-unramified-charts-2-reuse-review-20261026.json",
+      "sha256": "6CC4D773231181921AC53E0E832742C6703EA8623D003BDCAC6E36C2E180BABB"
+    }
+  ]
+}

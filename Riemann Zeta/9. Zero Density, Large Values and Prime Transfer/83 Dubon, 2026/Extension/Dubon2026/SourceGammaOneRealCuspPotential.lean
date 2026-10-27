@@ -1,0 +1,150 @@
+import Dubon2026.SourceGammaOneRealManinCharacter
+import Dubon2026.SourceGammaOneRationalCuspOrbit
+import Dubon2026.SourceManinCuspPotential
+
+/-! DUB-17/18 -> original Gamma1 real periods -> Manin upper dimension bound.
+Adapt the existing cusp-potential proof to actual real parabolic characters
+and actual rational cusp orbits. This supplies the two and three term
+relations without assuming a modular-symbol comparison or any dimension bound.
+The inherited proof was adapted from anthropics/fermats-last-theorem,
+Apache-2.0, commit 6e837e75355538c7f80bab5b956861e86c4eacc2,
+P2M/Sol/S_ModularCurve_Period_six_mul_finrank_parabolicHoms_add_le_index.lean. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.RealManin
+noncomputable section
+open Matrix Matrix.SpecialLinearGroup ModularGroup CongruenceSubgroup OnePoint SourceManin
+open scoped MatrixGroups
+
+variable (Γ : Subgroup SL(2, ℤ))
+
+/-- Choose an original rational cusp representing each actual level cusp orbit. -/
+noncomputable def rep (C : RationalCuspOrbit Γ) : OnePoint ℚ := (Quotient.mk''_surjective C).choose
+
+theorem mk_rep (C : RationalCuspOrbit Γ) : rationalCuspOrbitMk Γ (rep Γ C) = C :=
+  (Quotient.mk''_surjective C).choose_spec
+
+theorem exists_gam (a : OnePoint ℚ) :
+    ∃ γ ∈ Γ, mapGL ℚ γ • rep Γ (rationalCuspOrbitMk Γ a) = a :=
+  (rationalCuspOrbitMk_eq_iff Γ).mp (mk_rep Γ _).symm
+
+/-- Choose a genuine level element carrying the orbit representative to the given cusp. -/
+noncomputable def gam (a : OnePoint ℚ) : SL(2, ℤ) := (exists_gam Γ a).choose
+
+theorem gam_mem (a : OnePoint ℚ) : gam Γ a ∈ Γ := (exists_gam Γ a).choose_spec.1
+
+theorem gam_smul (a : OnePoint ℚ) : mapGL ℚ (gam Γ a) • rep Γ (rationalCuspOrbitMk Γ a) = a :=
+  (exists_gam Γ a).choose_spec.2
+
+/-- Cusp potential from the original character and one value per actual cusp orbit. -/
+noncomputable def Gpot (φ : Additive (Γ) →+ ℝ) (c : RationalCuspOrbit Γ → ℝ) (a : OnePoint ℚ) : ℝ :=
+  Phi (Γ) φ (gam Γ a) + c (rationalCuspOrbitMk Γ a)
+
+variable {Γ}
+
+theorem Phi_eq_zero_of_fix {φ : Additive (Γ) →+ ℝ} (hφ : φ ∈ realParabolicCharacters Γ)
+    {δ : SL(2, ℤ)} (hδ : δ ∈ Γ) {r : OnePoint ℚ} (hfix : mapGL ℚ δ • r = r) :
+    Phi (Γ) φ δ = 0 := by
+  classical
+  obtain ⟨σ, rfl⟩ := OnePoint.exists_mem_SL2 ℤ r
+  have h10 : (σ⁻¹ * δ * σ) 1 0 = 0 := by
+    rw [← smul_infty_eq_iff, map_mul, map_mul, mul_smul, mul_smul, hfix, ← mul_smul, ← map_mul,
+      inv_mul_cancel, map_one, one_smul]
+  have htr := trace_sq_of_lower_left _ h10
+  rw [trace_conj] at htr
+  exact Phi_parabolic _ hφ hδ htr
+
+theorem Gpot_smul {φ : Additive (Γ) →+ ℝ} (hφ : φ ∈ realParabolicCharacters Γ)
+    (c : RationalCuspOrbit Γ → ℝ) {γ : SL(2, ℤ)} (hγ : γ ∈ Γ) (a : OnePoint ℚ) :
+    Gpot Γ φ c (mapGL ℚ γ • a) = Phi (Γ) φ γ + Gpot Γ φ c a := by
+  have hmk : rationalCuspOrbitMk Γ (mapGL ℚ γ • a) = rationalCuspOrbitMk Γ a := rationalCuspOrbitMk_smul Γ hγ a
+  unfold Gpot
+  rw [hmk]
+  have ha := gam_smul Γ a
+  have hb := gam_smul Γ (mapGL ℚ γ • a)
+  rw [hmk] at hb
+  have hfix : mapGL ℚ ((gam Γ (mapGL ℚ γ • a))⁻¹ * γ * gam Γ a) • rep Γ (rationalCuspOrbitMk Γ a) =
+      rep Γ (rationalCuspOrbitMk Γ a) := by
+    rw [map_mul, map_mul, mul_smul, mul_smul, ha, map_inv, inv_smul_eq_iff]
+    exact hb.symm
+  have h0 := Phi_eq_zero_of_fix hφ
+    (mul_mem (mul_mem (inv_mem (gam_mem Γ _)) hγ) (gam_mem Γ a)) hfix
+  rw [Phi_mul _ _ (mul_mem (inv_mem (gam_mem Γ _)) hγ) (gam_mem Γ a),
+    Phi_mul _ _ (inv_mem (gam_mem Γ _)) hγ, Phi_inv _ _ (gam_mem Γ _)] at h0
+  linear_combination (-1 : ℝ) * h0
+
+variable (Γ)
+
+/-- Pull the actual cusp potential back along the integral action at infinity. -/
+noncomputable def Ppot (φ : Additive (Γ) →+ ℝ) (c : RationalCuspOrbit Γ → ℝ) (g : SL(2, ℤ)) : ℝ :=
+  Gpot Γ φ c (mapGL ℚ g • ∞)
+
+variable {Γ}
+
+theorem Ppot_mul_left {φ : Additive (Γ) →+ ℝ} (hφ : φ ∈ realParabolicCharacters Γ)
+    (c : RationalCuspOrbit Γ → ℝ) {γ : SL(2, ℤ)} (hγ : γ ∈ Γ) (g : SL(2, ℤ)) :
+    Ppot Γ φ c (γ * g) = Phi (Γ) φ γ + Ppot Γ φ c g := by
+  unfold Ppot
+  rw [map_mul, mul_smul, Gpot_smul hφ c hγ]
+
+theorem Ppot_mul_right (φ : Additive (Γ) →+ ℝ) (c : RationalCuspOrbit Γ → ℝ) (g : SL(2, ℤ))
+    {k : SL(2, ℤ)} (hk : k 1 0 = 0) : Ppot Γ φ c (g * k) = Ppot Γ φ c g := by
+  unfold Ppot
+  rw [map_mul, mul_smul, (smul_infty_eq_iff k).mpr hk]
+
+variable (Γ)
+
+/-- The difference of potential values on the two endpoints of an original Manin symbol. -/
+noncomputable def nSL (φ : Additive (Γ) →+ ℝ) (c : RationalCuspOrbit Γ → ℝ) (g : SL(2, ℤ)) : ℝ :=
+  Ppot Γ φ c g⁻¹ - Ppot Γ φ c (g⁻¹ * S)
+
+/-- The Manin-symbol difference evaluated on the chosen actual level-coset representative. -/
+noncomputable def nX (φ : Additive (Γ) →+ ℝ) (c : RationalCuspOrbit Γ → ℝ)
+    (x : SL(2, ℤ) ⧸ Γ) : ℝ :=
+  nSL Γ φ c (Quotient.out x)
+
+variable {Γ}
+
+theorem nX_mk {φ : Additive (Γ) →+ ℝ} (hφ : φ ∈ realParabolicCharacters Γ)
+    (c : RationalCuspOrbit Γ → ℝ) (g : SL(2, ℤ)) :
+    nX Γ φ c (g : SL(2, ℤ) ⧸ Γ) = nSL Γ φ c g := by
+  obtain ⟨γ, hγ⟩ := QuotientGroup.mk_out_eq_mul (Γ) g
+  unfold nX
+  rw [hγ]
+  unfold nSL
+  rw [_root_.mul_inv_rev, mul_assoc, Ppot_mul_left hφ c (inv_mem γ.2), Ppot_mul_left hφ c (inv_mem γ.2)]
+  ring
+
+theorem nSL_two_term (φ : Additive (Γ) →+ ℝ) (c : RationalCuspOrbit Γ → ℝ) (g : SL(2, ℤ)) :
+    nSL Γ φ c (S * g) + nSL Γ φ c g = 0 := by
+  unfold nSL
+  rw [_root_.mul_inv_rev, inv_mul_cancel_right, S_inv_eq, ← mul_assoc,
+    Ppot_mul_right φ c _ neg_one_lower]
+  ring
+
+theorem nSL_three_term (φ : Additive (Γ) →+ ℝ) (c : RationalCuspOrbit Γ → ℝ) (g : SL(2, ℤ)) :
+    nSL Γ φ c g + nSL Γ φ c (S * T * g) + nSL Γ φ c (S * T * (S * T * g)) = 0 := by
+  unfold nSL
+  have e1 : (S * T * g)⁻¹ = g⁻¹ * (S * T)⁻¹ := by group
+  have e2 : (S * T * (S * T * g))⁻¹ = g⁻¹ * (S * T)⁻¹ * (S * T)⁻¹ := by group
+  have hA : Ppot Γ φ c (g⁻¹ * (S * T)⁻¹ * S) = Ppot Γ φ c g⁻¹ := by
+    rw [mul_assoc, ST_inv_mul_S, Ppot_mul_right φ c _ T_inv_lower]
+  have hB : Ppot Γ φ c (g⁻¹ * (S * T)⁻¹ * (S * T)⁻¹ * S) = Ppot Γ φ c (g⁻¹ * (S * T)⁻¹) := by
+    rw [mul_assoc _ _ S, ST_inv_mul_S, Ppot_mul_right φ c _ T_inv_lower]
+  have hC : Ppot Γ φ c (g⁻¹ * (S * T)⁻¹ * (S * T)⁻¹) = Ppot Γ φ c (g⁻¹ * S) := by
+    rw [mul_assoc g⁻¹, ST_inv_mul_ST_inv, ← mul_assoc, Ppot_mul_right φ c _ neg_one_lower,
+      ← mul_assoc, Ppot_mul_right φ c _ T_lower]
+  rw [e1, e2, hA, hB, hC]
+  ring
+
+theorem nX_add (φ ψ : Additive (Γ) →+ ℝ) (c d : RationalCuspOrbit Γ → ℝ) (x : SL(2, ℤ) ⧸ Γ) :
+    nX Γ (φ + ψ) (c + d) x = nX Γ φ c x + nX Γ ψ d x := by
+  simp only [nX, nSL, Ppot, Gpot, Phi_add, Pi.add_apply]
+  ring
+
+theorem nX_smul (r : ℝ) (φ : Additive (Γ) →+ ℝ) (c : RationalCuspOrbit Γ → ℝ)
+    (x : SL(2, ℤ) ⧸ Γ) :
+    nX Γ (r • φ) (r • c) x = r * nX Γ φ c x := by
+  simp only [nX, nSL, Ppot, Gpot, Phi_smul, Pi.smul_apply, smul_eq_mul]
+  ring
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.RealManin

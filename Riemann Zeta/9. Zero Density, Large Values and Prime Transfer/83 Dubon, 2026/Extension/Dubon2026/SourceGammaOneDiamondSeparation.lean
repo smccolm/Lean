@@ -1,0 +1,118 @@
+import Dubon2026.SourceGammaOneDivisionForms
+import Dubon2026.SourceGammaOneDivisionPowerOrbit
+import Dubon2026.SourceModularNormPolynomial
+
+/-! DUB-17/18 -> original Gamma1 global charts -> orbit separation.
+Adapt the separating-form argument of anthropics/fermats-last-theorem,
+Apache-2.0, commit 6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularForm_exists_gammaH_apply_mul_apply_ne_of_forall_smul_ne_of_gamma0_smul_eq.
+The single actual division form and its native square and cube suffice for
+Gamma1. Existing restriction, slash laws and E4/E6 anchors are reused. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane ModularForm SourceFricke CongruenceSubgroup
+open scoped MatrixGroups ModularForm
+
+private theorem eq_of_cross_product {N : ℕ} {k : ℤ} (τ : ℍ) (γ₀ : SL(2, ℤ))
+    (g : ModularForm (Gamma1 N : Subgroup (GL (Fin 2) ℝ)) k)
+    (A : ModularForm 𝒮ℒ k) (y : ℂ)
+    (hcross : g τ * A (γ₀ • τ) = g (γ₀ • τ) * A τ)
+    (hg : g (γ₀ • τ) = denomZ γ₀ τ ^ k * y) (hA : A τ ≠ 0) : g τ = y := by
+  have hγ : (Matrix.SpecialLinearGroup.mapGL ℝ γ₀ : GL (Fin 2) ℝ) ∈ 𝒮ℒ := ⟨γ₀, rfl⟩
+  have hAγ := SlashInvariantForm.slash_action_eqn'' A hγ τ
+  rw [show (Matrix.SpecialLinearGroup.mapGL ℝ γ₀) • τ = γ₀ • τ from rfl,
+    denom_mapGL_eq_denomZ] at hAγ
+  rw [hAγ, hg] at hcross
+  have he : (g τ - y) * (denomZ γ₀ τ ^ k * A τ) = 0 := by
+    linear_combination hcross
+  exact sub_eq_zero.mp ((mul_eq_zero.mp he).resolve_right
+    (mul_ne_zero (zpow_ne_zero _ (denomZ_ne_zero γ₀ τ)) hA))
+
+theorem exists_gamma1_smul_eq_of_cross_products (N : ℕ) [NeZero N]
+    (τ : ℍ) (γ₀ : SL(2, ℤ)) (hγ₀ : γ₀ ∈ Gamma0 N)
+    (hc : ∀ (k : ℤ) (g h : ModularForm (Gamma1 N : Subgroup (GL (Fin 2) ℝ)) k),
+      g τ * h (γ₀ • τ) = g (γ₀ • τ) * h τ) :
+    ∃ γ ∈ Gamma1 N, γ • τ = γ₀ • τ := by
+  by_cases hN : N = 1
+  · subst N
+    exact ⟨γ₀, (Gamma1_mem 1 γ₀).mpr ⟨Subsingleton.elim _ _,
+      Subsingleton.elim _ _, Subsingleton.elim _ _⟩, rfl⟩
+  haveI : Fact (1 < N) := ⟨lt_of_le_of_ne NeZero.one_le (Ne.symm hN)⟩
+  let W := divisionForm N 1 (one_ne_zero : (1 : ZMod N) ≠ 0)
+  let c : ℂ := ((2 * (Real.pi : ℂ) * Complex.I) ^ 2)⁻¹
+  let x := (PeriodLattice.ofTau τ).weierstrassP ((((γ₀ 1 1 : ℤ) : ZMod N).val : ℂ) / N)
+  let y := (PeriodLattice.ofTau τ).weierstrassP (1 / N)
+  have hc0 : c ≠ 0 := inv_ne_zero (pow_ne_zero _
+    (mul_ne_zero (mul_ne_zero two_ne_zero (by exact_mod_cast Real.pi_ne_zero)) Complex.I_ne_zero))
+  have hW : W τ = c * y := by
+    dsimp [W]
+    rw [divisionForm_apply, ZMod.val_one, Nat.cast_one]
+    rfl
+  have hWγ : W (γ₀ • τ) = denomZ γ₀ τ ^ 2 * (c * x) := by
+    have hs := congrFun (divisionForm_slash_gamma0 N 1 one_ne_zero γ₀ hγ₀) τ
+    rw [ModularForm.SL_slash_apply] at hs
+    change W (γ₀ • τ) * denomZ γ₀ τ ^ (-(2 : ℤ)) =
+      wpNormZ N ![0, 1 * (γ₀ 1 1 : ZMod N)] τ at hs
+    rw [zpow_neg,
+      mul_inv_eq_iff_eq_mul₀ (zpow_ne_zero _ (denomZ_ne_zero γ₀ τ))] at hs
+    simp only [one_mul, wpNormZ, frickeTorsionPt, Matrix.cons_val_zero,
+      Matrix.cons_val_one, Matrix.cons_val_fin_one, ZMod.val_zero, Nat.cast_zero,
+      zero_mul, zero_add, zpow_ofNat] at hs
+    change W (γ₀ • τ) = c * x * denomZ γ₀ τ ^ 2 at hs
+    rw [hs, mul_comm]
+  have hle : (Gamma1 N : Subgroup (GL (Fin 2) ℝ)) ≤ 𝒮ℒ := Subgroup.map_le_range _ _
+  have h2 (h4 : E₄ τ ≠ 0) : y ^ 2 = x ^ 2 := by
+    have hh := eq_of_cross_product τ γ₀ (W.pow 2) E₄ ((c * x) ^ 2)
+      (hc 4 (W.pow 2) (ModularNormPolynomial.restrict hle E₄))
+      (by
+        simp only [ModularForm.coe_pow, Pi.pow_apply]
+        change W (γ₀ • τ) ^ 2 = denomZ γ₀ τ ^ (4 : ℤ) * (c * x) ^ 2
+        rw [hWγ, zpow_ofNat]
+        ring) h4
+    simp only [ModularForm.coe_pow, Pi.pow_apply, hW, mul_pow] at hh
+    exact mul_left_cancel₀ (pow_ne_zero _ hc0) hh
+  have h3 (h6 : E₆ τ ≠ 0) : y ^ 3 = x ^ 3 := by
+    have hh := eq_of_cross_product τ γ₀ (W.pow 3) E₆ ((c * x) ^ 3)
+      (hc 6 (W.pow 3) (ModularNormPolynomial.restrict hle E₆))
+      (by
+        simp only [ModularForm.coe_pow, Pi.pow_apply]
+        change W (γ₀ • τ) ^ 3 = denomZ γ₀ τ ^ (6 : ℤ) * (c * x) ^ 3
+        rw [hWγ, zpow_ofNat]
+        ring) h6
+    simp only [ModularForm.coe_pow, Pi.pow_apply, hW, mul_pow] at hh
+    exact mul_left_cancel₀ (pow_ne_zero _ hc0) hh
+  have hE := JOrbitSeparation.E₄_cube_sub_E₆_sq_ne_zero τ
+  by_cases h6 : E₆ τ = 0
+  · have h4 : E₄ τ ≠ 0 := fun h4 => hE (by rw [h4, h6]; ring)
+    apply exists_gamma1_smul_eq_of_division_power N τ γ₀ hγ₀ 2
+      (Or.inr (Or.inl ⟨rfl, ?_⟩)) (h2 h4).symm
+    rw [SourceEllipticPeriod.gThree_ofTau, h6, mul_zero]
+  · by_cases h4 : E₄ τ = 0
+    · apply exists_gamma1_smul_eq_of_division_power N τ γ₀ hγ₀ 3
+        (Or.inr (Or.inr ⟨rfl, ?_⟩)) (h3 h6).symm
+      rw [SourceEllipticPeriod.gTwo_ofTau, h4, mul_zero]
+    · have he : y = x := by
+        rcases sq_eq_sq_iff_eq_or_eq_neg.mp (h2 h4) with he | he
+        · exact he
+        · have hh := h3 h6
+          rw [he] at hh
+          have hx3 : x ^ 3 = 0 := by linear_combination (-1 / 2 : ℂ) * hh
+          have hx : x = 0 := (pow_eq_zero_iff (by norm_num : (3 : ℕ) ≠ 0)).mp hx3
+          simpa [hx] using he
+      apply exists_gamma1_smul_eq_of_division_power N τ γ₀ hγ₀ 1 (Or.inl rfl)
+      simpa only [pow_one] using he.symm
+
+theorem exists_separating_forms_of_gamma0_orbit (N : ℕ) [NeZero N]
+    (τ τ' : ℍ) (hτ : ∀ γ ∈ Gamma1 N, γ • τ ≠ τ')
+    (γ₀ : SL(2, ℤ)) (hγ₀ : γ₀ ∈ Gamma0 N) (hτ' : γ₀ • τ = τ') :
+    ∃ (k : ℤ) (g h : ModularForm (Gamma1 N : Subgroup (GL (Fin 2) ℝ)) k),
+      g τ * h τ' ≠ g τ' * h τ := by
+  classical
+  by_contra hn
+  push Not at hn
+  obtain ⟨γ, hγ, he⟩ := exists_gamma1_smul_eq_of_cross_products N τ γ₀ hγ₀
+    (by simpa only [hτ'] using hn)
+  exact hτ γ hγ (he.trans hτ')
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

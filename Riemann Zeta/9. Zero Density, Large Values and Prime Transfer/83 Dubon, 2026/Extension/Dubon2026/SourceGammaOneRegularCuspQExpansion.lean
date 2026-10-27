@@ -1,0 +1,73 @@
+import Dubon2026.SourceGammaOneRegularFourierRealization
+import Dubon2026.SourceGammaOneCuspDifferentialRealization
+
+/-! DUB-17/18 -> actual Gamma1 differential/cusp comparison -> linear
+equivalence. Use the literal Fourier maps on the actual regular differential
+and native cusp-form spaces. Both maps are injective by existing q-expansion
+theorems; no dimension formula or substitute vector space is introduced. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceDifferential SourceCurve
+open scoped MatrixGroups ModularForm
+variable {Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)}
+
+private local instance complexLaurentAlgebra : Algebra ℂ (LaurentSeries ℂ) :=
+  HahnSeries.powerSeriesAlgebra ℤ ℂ
+
+private local instance complexLaurentModule : Module ℂ (LaurentSeries ℂ) :=
+  HahnSeries.instModule
+
+private local instance originalFieldAlgebra : Algebra ℂ (functionFieldOver Γ ℂ) :=
+  (functionFieldOver Γ ℂ).toSubalgebra.algebra
+
+/-- The original regular differential's literal q-expansion, as a complex-linear map. -/
+def regularQExpansion (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)) :
+    regularDifferentials ℂ (functionFieldOver Γ ℂ) →ₗ[ℂ] LaurentSeries ℂ where
+  toFun ω := diffQExp (functionFieldOver Γ ℂ) ω.val
+  map_add' ω ω' := (diffQExp (functionFieldOver Γ ℂ)).map_add ω.val ω'.val
+  map_smul' c ω := by
+    change diffQExp (functionFieldOver Γ ℂ) (c • ω.val) =
+      c • diffQExp (functionFieldOver Γ ℂ) ω.val
+    rw [← algebraMap_smul (functionFieldOver Γ ℂ) c ω.val]
+    calc
+      _ = (algebraMap ℂ (functionFieldOver Γ ℂ) c) •
+          diffQExp (functionFieldOver Γ ℂ) ω.val :=
+        (diffQExp (functionFieldOver Γ ℂ)).map_smul _ _
+      _ = _ := by
+        change algebraMap ℂ (LaurentSeries ℂ) c * diffQExp (functionFieldOver Γ ℂ) ω.val = _
+        rw [algebraMap_laurentSeries_apply_alt, HahnSeries.single_zero_mul_eq_smul]
+
+/-- The native weight-two cusp form's literal Laurent q-expansion. -/
+def cuspQExpansion (hT : ModularGroup.T ∈ Γ) :
+    CuspForm (Γ : Subgroup (GL (Fin 2) ℝ)) 2 →ₗ[ℂ] LaurentSeries ℂ where
+  toFun f := (qExpansion 1 f : LaurentSeries ℂ)
+  map_add' f g := by
+    rw [CuspForm.coe_add, ModularForm.qExpansion_add one_pos (hper hT) f g,
+      PowerSeries.coe_add]
+  map_smul' c f := by
+    rw [CuspForm.IsGLPos.coe_smul,
+      ModularForm.qExpansion_smul one_pos (hper hT) c f,
+      PowerSeries.coe_smul, RingHom.id_apply]
+
+theorem regularQExpansion_injective [Γ.FiniteIndex] (hT : ModularGroup.T ∈ Γ) :
+    Function.Injective (regularQExpansion Γ) := by
+  intro ω η' he
+  apply Subtype.ext
+  exact functionFieldOver_diffQExp_injective Γ ℂ hT he
+
+theorem cuspQExpansion_injective (hT : ModularGroup.T ∈ Γ) :
+    Function.Injective (cuspQExpansion hT) := by
+  intro f g he
+  have hz : cuspQExpansion hT (f - g) = 0 := by rw [map_sub, he, sub_self]
+  have hq : qExpansion 1 (f - g) = 0 := by
+    apply HahnSeries.ofPowerSeries_injective (Γ := ℤ) (R := ℂ)
+    simpa only [map_zero] using hz
+  have hm : ((f - g : CuspForm (Γ : Subgroup (GL (Fin 2) ℝ)) 2) :
+      ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) 2) = 0 :=
+    (ModularForm.qExpansion_eq_zero_iff one_pos (hper hT) _).mp hq
+  ext τ
+  have hv := congrArg (fun a : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) 2 => a τ) hm
+  exact sub_eq_zero.mp hv
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

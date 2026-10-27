@@ -1,0 +1,20 @@
+{
+  "exit": 0,
+  "diagnostics": 2,
+  "status": "FAIL: zero-warning requirement",
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-signed-parabolic-characters-failed-776a\\SourceGammaOneSignedParabolicCharacters.lean.txt",
+      "sha256": "106f86e8dd1930bebea8fa2dad78af75fd80e3b595391155d693b63c13f81152"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-signed-parabolic-characters-failed-776a\\SourceGammaOneSignedParabolicCharacters.log",
+      "sha256": "2064bc5df5b3533525b2d4d69b6756743263ed31476204aea49ffed2648964bc"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-signed-parabolic-characters-failed-776a\\SourceGammaOneSignedParabolicCharacters.exit",
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    }
+  ],
+  "cause": "Two redundant change tactics in squared-trace preservation proof."
+}

@@ -1,0 +1,5 @@
+{
+  "reason": "Subtraction statement does not mention section hypotheses syntactically; add explicit include for the genuinely required congruence and translation hypotheses before recompilation.",
+  "exit": 1,
+  "sourceSha256": "3DB8196905736FD1C0C6C527AE199F65F8DDB543EAB1D19554B9D1D94ABB5D3A"
+}

@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-26 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global original analytic charts -> exact elliptic ramification and orbit/place comparison -> actual place invariance and stabilizer divisibility.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-place-invariance-audit-route-713.json",
+    "sha256": "72F75E729561C3F6F539921D0A008A7F64DA9F84E2A8947641A217FC26039E02",
+    "review": {
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global original analytic charts -> exact elliptic ramification and orbit/place comparison -> actual place invariance and stabilizer divisibility.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticPlaceInvariance.lean",
+          "sha256": "4AFE259D5859BCBB46F82438CE532D478572BFC0F4828BB8ACA0725F9B89648F"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticRamification.lean",
+          "sha256": "F07F113D3C4F54F9306B17C3F0E994C54CC8FF9147D0F8ADDEDE191E6935679C"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStabilizerMeromorphicOrder.lean",
+          "sha256": "9BA3276FFC546E3C3ADA909DB22EC6B068905A4BAECFFA1F532E6A1B638D2AF3"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceSubgroupStabilizerCharacter.lean",
+          "sha256": "7C8B81A7136494B9A96F12DE836AB421D0CAFB18DDD382C6CFC26F2B7A735364"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRatioRealization.lean",
+          "sha256": "1124F4A25E5E42D92133232C19ACA5EB610537FE1C9789D70CB6488537D9A32D"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResidues.lean",
+          "sha256": "A0E3E571822585A2270A54A6E7A1BD181C3D4CF9902626373A03F2B27221710A"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationIsolation.lean",
+          "sha256": "A1F085755635E701182808EBFD7DBBEFA22EC33D2F2BE7A26F245E320EF1FF5F"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceExhaustion.lean",
+          "sha256": "2EF1C1C6B8C632143DD3A0E1466275E8A4AD423009828FCE0AD98F6E404655F8"
+        }
+      ],
+      "shorterRoute": "Reuse SourceOriginalAnalyticPlaceInvariance and the uniformizer modular-quotient proof from SourceOriginalAnalyticRamification. The native Mobius order invariance and SubgroupStabilizer.main already provide the analytic foundations. Generalize only the subgroup parameter to match the actual Gamma1 field and consume its existing ratio realization; no separate orbit model or new analytic transformation theory.",
+      "assumptionsToDischarge": [
+        "The actual modular-quotient germ is invariant under the given subgroup.",
+        "Actual analytic order and normalized place are invariant under the subgroup action.",
+        "The actual subgroup point-stabilizer cardinal divides twice the normalized analytic ramification, using the actual place uniformizer."
+      ],
+      "remaining": "The reverse ramification bound, orbit separation, elliptic/cusp global charts and actual period/Hecke/diamond/Picard/H1 arithmetic comparison remain; original all-weight association and higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": [
+    "The actual modular-quotient germ is invariant under the given subgroup.",
+    "Actual analytic order and normalized place are invariant under the subgroup action.",
+    "The actual subgroup point-stabilizer cardinal divides twice the normalized analytic ramification, using the actual place uniformizer."
+  ],
+  "remaining": "The reverse ramification bound, orbit separation, elliptic/cusp global charts and actual period/Hecke/diamond/Picard/H1 arithmetic comparison remain; original all-weight association and higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

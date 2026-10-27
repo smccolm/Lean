@@ -1,0 +1,28 @@
+import SourceGammaOnePlusMinus
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.le_plusMinus, `Dubon2026.SourceFunctionField.GammaOne.neg_one_mem_plusMinus, `Dubon2026.SourceFunctionField.GammaOne.mem_plusMinus_iff, `Dubon2026.SourceFunctionField.GammaOne.exists_gamma_smul_eq_of_mem_plusMinus, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul_plusMinus, `Dubon2026.SourceFunctionField.GammaOne.two_le_card_stabilizer_plusMinus, `Dubon2026.SourceFunctionField.GammaOne.plusMinus_stabilizer_card_dvd_two_mul_ramification, `Dubon2026.SourceFunctionField.GammaOne.plusMinus, `Dubon2026.SourceFunctionField.GammaOne.plusMinusFiniteIndex]
+  let localModules : Array Name := #[`SourceGammaOneAnalyticGerms, `SourceGammaOneAnalyticOrder, `SourceGammaOneAnalyticOrderNontrivial, `SourceGammaOneAnalyticPlaceInvariance, `SourceGammaOneAnalyticPlaces, `SourceGammaOneAnalyticResidues, `SourceGammaOneMeromorphicRealization, `SourceGammaOnePlusMinus, `SourceGammaOneRatioRealization, `SourceGammaOneRealizationAlgebra, `SourceGammaOneStabilizerRamification]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.le_plusMinus, `Dubon2026.SourceFunctionField.GammaOne.neg_one_mem_plusMinus, `Dubon2026.SourceFunctionField.GammaOne.mem_plusMinus_iff, `Dubon2026.SourceFunctionField.GammaOne.exists_gamma_smul_eq_of_mem_plusMinus, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul_plusMinus, `Dubon2026.SourceFunctionField.GammaOne.two_le_card_stabilizer_plusMinus, `Dubon2026.SourceFunctionField.GammaOne.plusMinus_stabilizer_card_dvd_two_mul_ramification, `Dubon2026.SourceFunctionField.GammaOne.plusMinus, `Dubon2026.SourceFunctionField.GammaOne.plusMinusFiniteIndex, `Dubon2026.SourceFunctionField.SubgroupStabilizer.main, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE PLUS MINUS DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in the actual central-sign subgroup enlargement, identical point orbits and analytic places, and its stabilizer divisibility for the original field uniformizer. Only declaration values are traversed. The field is unchanged and the factor of two is retained. Exact elliptic ramification and global charts remain. Original chart/period, Hecke/diamond/Picard/H1 arithmetic comparison, all-weight characteristic-zero association and literal higher symmetric-power continuation remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

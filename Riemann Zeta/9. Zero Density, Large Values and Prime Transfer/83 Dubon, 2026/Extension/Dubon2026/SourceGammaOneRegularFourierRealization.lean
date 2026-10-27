@@ -1,0 +1,53 @@
+import Dubon2026.SourceGammaOneCuspFourierNormalization
+
+/-! DUB-17/18 -> actual Gamma1 differential/cusp comparison. Every original
+complex regular differential has exactly the Fourier expansion of a native
+weight-two cusp form. The generic proved j-differential spanning theorem
+supplies its coefficient; no coordinate witness or matching series is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceDifferential SourceCurve KaehlerDifferential
+open scoped MatrixGroups ModularForm
+variable {Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)} [Γ.FiniteIndex]
+
+private local instance originalFieldAlgebra : Algebra ℂ (functionFieldOver Γ ℂ) :=
+  (functionFieldOver Γ ℂ).toSubalgebra.algebra
+
+theorem exists_cuspForm_of_regular_differential (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) (hT : ModularGroup.T ∈ Γ)
+    (ω : Ω[functionFieldOver Γ ℂ⁄ℂ])
+    (hω : ω ∈ regularDifferentials ℂ (functionFieldOver Γ ℂ)) :
+    ∃ f : CuspForm (Γ : Subgroup (GL (Fin 2) ℝ)) 2,
+      (qExpansion 1 f : LaurentSeries ℂ) = diffQExp (functionFieldOver Γ ℂ) ω := by
+  let B := IntermediateField.adjoin ℂ ({jCoordinateOver Γ ℂ} : Set (functionFieldOver Γ ℂ))
+  letI : Algebra ℂ B := B.toSubalgebra.algebra
+  letI : CharZero B := charZero_of_injective_algebraMap (algebraMap ℂ B).injective
+  letI : FiniteDimensional B (functionFieldOver Γ ℂ) := finiteDimensional_jCoordinateOver hT ℂ
+  letI : Algebra.IsSeparable B (functionFieldOver Γ ℂ) := inferInstance
+  have hs := span_D_eq_top_of_transcendental ℂ (jCoordinateOver Γ ℂ)
+    (transcendental_jCoordinateOver Γ ℂ)
+  have hm : ω ∈ Submodule.span (functionFieldOver Γ ℂ)
+      ({D ℂ (functionFieldOver Γ ℂ) (jCoordinateOver Γ ℂ)} : Set Ω[functionFieldOver Γ ℂ⁄ℂ]) := by
+    rw [hs]
+    exact Submodule.mem_top
+  obtain ⟨x, hxω⟩ := Submodule.mem_span_singleton.mp hm
+  by_cases hx : x = 0
+  · have hz : ω = 0 := by simpa only [hx, zero_smul] using hxω.symm
+    refine ⟨0, ?_⟩
+    simp only [hz, CuspForm.coe_zero, qExpansion_zero, map_zero]
+    exact (map_zero (diffQExp (functionFieldOver Γ ℂ))).symm
+  · have hr : x • D ℂ (functionFieldOver Γ ℂ) (jCoordinateOver Γ ℂ) ∈
+        regularDifferentials ℂ (functionFieldOver Γ ℂ) := hxω ▸ hω
+    obtain ⟨k, g, h, F, hh, hratio, he⟩ :=
+      regular_differential_cusp_form_realization N hΓ hT x hx hr
+    refine ⟨(2 * Real.pi * Complex.I)⁻¹ • F, ?_⟩
+    rw [normalized_cusp_qExpansion hT g h hh x hratio F he, ← hxω]
+    have hd := diffQExp_smul_D (functionFieldOver Γ ℂ) x (jCoordinateOver Γ ℂ)
+    change diffQExp (functionFieldOver Γ ℂ)
+      (x • D ℂ (functionFieldOver Γ ℂ) (jCoordinateOver Γ ℂ)) =
+        (x : LaurentSeries ℂ) * qEuler ℂ (coeffEmb ℂ jq) at hd
+    rw [coeffEmb_jq] at hd
+    exact hd.symm
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

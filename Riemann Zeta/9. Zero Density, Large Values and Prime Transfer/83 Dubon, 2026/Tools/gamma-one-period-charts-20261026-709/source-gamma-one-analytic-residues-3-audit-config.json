@@ -1,0 +1,75 @@
+{
+  "modules": [
+    "SourceGammaOneAnalyticResidues",
+    "SourceGammaOneAnalyticEvaluation",
+    "SourceGammaOneEvaluationRealizationGerms"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_mem_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_sub_constant_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.place_residue_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_tendsto_residue",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_analytic_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicNFAt_placeEval",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_analyticAt_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_meromorphicOrderAt",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_eq_realize_of_analyticAt",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_eventuallyEq_realize"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_mem_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_sub_constant_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.place_residue_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_tendsto_residue",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_analytic_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicNFAt_placeEval",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_analyticAt_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_meromorphicOrderAt",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_eq_realize_of_analyticAt",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_eventuallyEq_realize",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_mem_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_sub_constant_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.place_residue_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_tendsto_residue",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_analytic_representative",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicNFAt_placeEval",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_analyticAt_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_meromorphicOrderAt",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_eq_realize_of_analyticAt",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_eventuallyEq_realize",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteDimensional_jCoordinateOver",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_order",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_realize",
+    "Dubon2026.SourceFunctionField.GammaOne.realize_add_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_pos",
+    "Dubon2026.SourceCurve.place_residue_bijective_of_finite_coordinate",
+    "Dubon2026.SourceCurve.Place.rationalEval_sub_algebraMap",
+    "Dubon2026.SourceCurve.Place.rationalEval_eq_zero_iff_ord_pos"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_analyticAt_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_meromorphicOrderAt",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_eventuallyEq_realize"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneAnalyticEvaluation",
+    "SourceGammaOneAnalyticGerms",
+    "SourceGammaOneAnalyticOrder",
+    "SourceGammaOneAnalyticOrderNontrivial",
+    "SourceGammaOneAnalyticPlaces",
+    "SourceGammaOneAnalyticResidues",
+    "SourceGammaOneEvaluationRealizationGerms",
+    "SourceGammaOneMeromorphicRealization",
+    "SourceGammaOneRatioRealization",
+    "SourceGammaOneRealizationAlgebra"
+  ],
+  "separateReason": "All selected declarations are consumed by the actual residue-evaluation normal form, exact order, or punctured-germ identity needed for original Gamma1 charts."
+}

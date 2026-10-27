@@ -1,0 +1,39 @@
+{
+  "chain": "DUB-17/18 -> original all-weight arithmetic association -> actual finite homogeneous-coefficient Gamma1 characters -> Picard/H1/full-parabolic/transpose/diamond comparison -> modular periods -> principal-divisor converse.",
+  "assumptionsToDischarge": [
+    "Transfer the actual nonzero translated cusp limits through the local meromorphic field realization. Derive eventual continuity from the actual modular denominator; use native inverse-q convergence. This supplies scope743 order-zero-at-every-j-pole consumer.",
+    "A supplied invariant meromorphic function with the exact ramification-weighted finite analytic divisor and nonzero limits at all translated cusps determines a literal principal divisor of the original Gamma1 field. Field realization, nonvanishing, all analytic orders, cusp exhaustion and all j-pole orders are conclusions, not supplied hypotheses."
+  ],
+  "remaining": "The meromorphic function must still be constructed from the actual Abel-Jacobi period condition. Real parabolic period surjectivity, Abel-Petersson reciprocity, complete global Picard/Hecke/diamond/H1 comparison and original all-weight arithmetic association remain; 16/20; DUB-17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\Analysis\\Complex\\Periodic.lean",
+      "sha256": "75A10B2EA9BDF2197DA78B1576AB50D156182143960F567709DA9E6444AB1179"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCuspRatioRealization.lean",
+      "sha256": "B38E2DF84980F3546A2C86001BD036A1CEF18A571FF2FD79FEAEB61BABF15AE6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneTranslatedCuspGerms.lean",
+      "sha256": "FFA8618260E6FE71D032CC18D3AAD6BA19D8D4FD16F2293471D4AA690D2D05E6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-cusp-limits-route-750.json",
+      "sha256": "6E6E5602633B05E2DA83ECAE3C501A7EC2AAD7B947E739F32CF4ADC62B75C65A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-principal-divisor-route-751.json",
+      "sha256": "238BB1194BA053DA10B001200524A3A09CF3ADFB57717B250923B13664D62D80"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-meromorphic-field-1-scratch-receipt.json",
+      "sha256": "FADC57811E5FCDBAEFC7F70DB4081EAE46685E6E3DCC1524A07A56A799AF6BF7"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-exhaustion-1-scratch-receipt.json",
+      "sha256": "028C916EE20AD07A96B06F1AEB6F83C494D1A94FFC3B379066512A64801AA883"
+    }
+  ],
+  "shorterRoute": "Preserve the limit under punctured local equality, avoiding global cusp charts, full-level Galois fields and inverse-j equations."
+}

@@ -1,0 +1,69 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T13:38:18.918384+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneRationalCyclicCusps",
+    "SourceGammaOneRealPeriodDimensionUpper"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRationalCyclicCusps.lean",
+      "sha256": "812AEB44009D87B5B46E61A0F8B766D3467FB68A4D12FE7BF7DC5658231B600B",
+      "oleanSha256": "66ED50E29CCF47389167F9F70B2D512827946379E515EB4FDE4E0C6EC6B44974"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodDimensionUpper.lean",
+      "sha256": "FE5AEDED921C954C369B106A7344DD1F1DF7B7C511024C879E5FC50609D5929F",
+      "oleanSha256": "1C9C1FF3E03A3480678620E195CEE6198EE5D469A6B43AD7FE6E747CC9FA7302"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.rationalCuspOrbitFromCoset_translation",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.exists_translation_of_same_rational_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.orbitToRationalCusp_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.card_rationalCuspOrbit_eq_translation_orbits",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_rational_cusp_card_eq_j_poles",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_real_parabolic_dimension_upper",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.orbitToRationalCusp"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.rationalCuspOrbitFromCoset_translation",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.exists_translation_of_same_rational_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.orbitToRationalCusp_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.card_rationalCuspOrbit_eq_translation_orbits",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_rational_cusp_card_eq_j_poles",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_real_parabolic_dimension_upper"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.orbitToRationalCusp"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodUpperAudit1.log",
+  "logSha256": "DA858AA82FF758CF7F12B53D2051CA68B9E9C72D5D60BA954752D7E72226F290",
+  "auditSha256": "F13D73036D4AD9ECCA02D839F76B5AE8C4543DD6A8148B2A2ADD0E169F4746A3",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 15,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 14,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodUpperDependencyAudit1.log",
+  "dependencyAuditSha256": "7E0CE5F5D7B9835B4B7BFE33CFA762D881792CE94DA44802CA39C4EE93C8B04A",
+  "dependencyAuditSourceSha256": "A248D033BFC8B0C3A23D2E6739FB1ACA3E1B9F330A1D3B975BA0A560583A8DBB",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.rationalCuspOrbitFromCoset_translation",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.exists_translation_of_same_rational_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.orbitToRationalCusp_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.card_rationalCuspOrbit_eq_translation_orbits",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_rational_cusp_card_eq_j_poles",
+    "Dubon2026.SourceFunctionField.GammaOne.gammaOne_real_parabolic_dimension_upper",
+    "Dubon2026.SourceFunctionField.GammaOne.CuspCounting.orbitToRationalCusp"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 and Abel-Jacobi -> real period surjectivity -> reverse dimension inequality -> real Manin bound with actual algebraic cusp count.",
+  "discharged": "Rational cusp orbits of the signed subgroup are proved bijective with cyclic translation orbits of its integral cosets, using the actual integral infinity stabilizer. The already proved cyclic-cusp-place bijection identifies this count with the actual j poles. The signed extension and real Manin theorem then bound the ORIGINAL Gamma1 real parabolic-character dimension, with the original field cusp term and the signed elliptic fixed-point terms; the central-sign hypothesis is derived.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The corresponding actual genus lower bound must be assembled from canonical degree and elliptic fiber counts. Real period surjectivity, reciprocity, Picard/Hecke/diamond/H1, full all-weight characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-period-upper-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "1B1E34EAD29951DAD0AD82DCEAFFF07F355B8586201C60BD76DBB2DD4F346EAF",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

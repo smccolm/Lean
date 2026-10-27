@@ -1,0 +1,67 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T04:02:59.483359+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneRegularCuspQExpansion",
+    "SourceGammaOneRegularCuspEquiv"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularCuspQExpansion.lean",
+      "sha256": "AC980BEEE2690406373BCE5B5F9509F3935A974BB8A71957D4E90966320C1A27",
+      "oleanSha256": "E5B391746AF600D3FA47E766DB86CF3810F395BBDD8A5FBC3C95965871388BAA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularCuspEquiv.lean",
+      "sha256": "F29048D46B91333C0F2D8B9B1CE0FB87873F37078CB9AFFB8E88A77B4B323D5E",
+      "oleanSha256": "B50A8CB84552BB675437E2637A08454C8573B75FB1DCDB9078453D107F45D24F"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspQExpansion_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_cusp_qExpansion_range_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_qExpansion",
+    "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspQExpansion",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspQExpansion_injective",
+    "Dubon2026.SourceFunctionField.GammaOne.regular_cusp_qExpansion_range_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_qExpansion"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.regularQExpansion",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspQExpansion",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLinearComparisonAudit2.log",
+  "logSha256": "83F8D45C054B741FA3566324E51CE02172217D01B3669CE40C25C1A45E4698A3",
+  "auditSha256": "AAA0A0E92F53978CDEB8658CB2817C8E8A29572CCB8B21FC09213D9507C73B0B",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 25,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 14,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneLinearComparisonDependencyAudit2.log",
+  "dependencyAuditSha256": "FB844267AE6686BF363A086431B4EF01F4312F3654AB66905E437DE29EF60CD4",
+  "dependencyAuditSourceSha256": "0B81A72E45E0572C0BB79B04AFE893A3DEE7A4185A30C543788F5CA8415BD59A",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_qExpansion"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> finite Gamma1 arithmetic Hecke-character realization -> original Picard/H1 and full/parabolic transpose/diamond comparison -> actual complex regular-differential/cusp linear equivalence with literal Fourier matching.",
+  "discharged": [
+    "The analytic and algebraic realizations assemble into an actual linear equivalence.",
+    "The equivalence retains the literal Fourier series needed to compare original Hecke and diamond operators."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Hecke/diamond compatibility, original Picard/H1 arithmetic realization and all-weight characteristic-zero association and literal higher symmetric-power continuation remain. Coefficient-field transport is assessed when its exact downstream use is reached. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-linear-comparison-2-reuse-review-20261026.json",
+  "reuseReviewSha256": "63445A6AA907725EFB3EB27C4AB099BDB50C26C8A027AAB5E6D38BBB035479CD",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

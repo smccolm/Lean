@@ -1,0 +1,44 @@
+import Dubon2026.SourceGammaOneRatioRealization
+import Dubon2026.SourceGammaOneAnalyticGerms
+import Dubon2026.SourceGammaOneMeromorphicRealization
+import Dubon2026.SourceGammaOneRealizationAlgebra
+import Dubon2026.SourceGammaOneAnalyticOrder
+import Dubon2026.SourceGammaOneAnalyticOrderNontrivial
+import Dubon2026.SourceGammaOneAnalyticPlaces
+import Dubon2026.SourceGammaOneJRealization
+import Dubon2026.SourceGammaOneRegularCoefficientOrders
+import Dubon2026.SourceGammaOneAnalyticJOrders
+import Dubon2026.SourceGammaOneAnalyticDifferentialRegularity
+import Dubon2026.SourceGammaOneHolomorphicDifferentials
+import Dubon2026.SourceGammaOneTranslatedCuspGerms
+import Dubon2026.SourceGammaOneCuspRatioRealization
+import Dubon2026.SourceGammaOneCuspRealizationAlgebra
+import Dubon2026.SourceGammaOneCuspOrder
+import Dubon2026.SourceGammaOneCuspJOrder
+import Dubon2026.SourceGammaOneCuspPlaces
+import Dubon2026.SourceGammaOneCuspDerivativeOrder
+import Dubon2026.SourceGammaOneDifferentialCuspGerm
+import Dubon2026.SourceGammaOneRegularCuspOrder
+import Dubon2026.SourceGammaOneRegularCuspForms
+import Dubon2026.SourceGammaOneCuspFourierNormalization
+import Dubon2026.SourceGammaOneRegularFourierRealization
+import Dubon2026.SourceGammaOneRegularCuspQExpansion
+import Dubon2026.SourceGammaOneRegularCuspEquiv
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceGammaOneRatioRealization, `Dubon2026.SourceGammaOneAnalyticGerms, `Dubon2026.SourceGammaOneMeromorphicRealization, `Dubon2026.SourceGammaOneRealizationAlgebra, `Dubon2026.SourceGammaOneAnalyticOrder, `Dubon2026.SourceGammaOneAnalyticOrderNontrivial, `Dubon2026.SourceGammaOneAnalyticPlaces, `Dubon2026.SourceGammaOneJRealization, `Dubon2026.SourceGammaOneRegularCoefficientOrders, `Dubon2026.SourceGammaOneAnalyticJOrders, `Dubon2026.SourceGammaOneAnalyticDifferentialRegularity, `Dubon2026.SourceGammaOneHolomorphicDifferentials, `Dubon2026.SourceGammaOneTranslatedCuspGerms, `Dubon2026.SourceGammaOneCuspRatioRealization, `Dubon2026.SourceGammaOneCuspRealizationAlgebra, `Dubon2026.SourceGammaOneCuspOrder, `Dubon2026.SourceGammaOneCuspJOrder, `Dubon2026.SourceGammaOneCuspPlaces, `Dubon2026.SourceGammaOneCuspDerivativeOrder, `Dubon2026.SourceGammaOneDifferentialCuspGerm, `Dubon2026.SourceGammaOneRegularCuspOrder, `Dubon2026.SourceGammaOneRegularCuspForms, `Dubon2026.SourceGammaOneCuspFourierNormalization, `Dubon2026.SourceGammaOneRegularFourierRealization, `Dubon2026.SourceGammaOneRegularCuspQExpansion, `Dubon2026.SourceGammaOneRegularCuspEquiv]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

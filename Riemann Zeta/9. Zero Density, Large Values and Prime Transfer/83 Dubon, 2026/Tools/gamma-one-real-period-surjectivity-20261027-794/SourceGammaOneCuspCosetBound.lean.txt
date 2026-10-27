@@ -1,0 +1,46 @@
+import SourceGammaOneCuspCosetPlaces
+
+/-! DUB-17/18 -> actual Gamma1 period dimension bound -> exact cusp widths.
+Every translation orbit of original cosets has positive finite size.
+Its size is a stabilizer translation, so it bounds the actual j-pole
+order. Native orbit decomposition sums these sizes to the subgroup index. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.CuspCounting
+noncomputable section
+open Matrix.SpecialLinearGroup ModularGroup MulAction
+open scoped MatrixGroups GammaOne
+variable {Γ : Subgroup SL(2, ℤ)}
+  (N : ℕ) [NeZero N] (hΓ : CongruenceSubgroup.Gamma N ≤ Γ)
+  (hT : T ∈ Γ)
+
+theorem j_pole_order_le_coset_orbit_card (x : Cosets Γ) :
+    -(cosetPlace N hΓ hT x).ord (jCoordinateOver Γ ℂ) ≤
+      (Nat.card (orbit (Subgroup.zpowers (translation Γ)) x) : ℤ) := by
+  letI : Γ.FiniteIndex := Subgroup.finiteIndex_of_le hΓ
+  induction x using QuotientGroup.induction_on with
+  | H g =>
+    let d := Nat.card (orbit (Subgroup.zpowers (translation Γ)) (g : Cosets Γ))
+    have hd : 0 < d := card_cyclic_orbit_pos (translation Γ) (g : Cosets Γ)
+    have hf := pow_card_cyclic_orbit (translation Γ) (g : Cosets Γ)
+    have he : ((T ^ d * g : SL(2, ℤ)) : Cosets Γ) = (g : Cosets Γ) := by
+      change (T ^ d : SL(2, ℤ)) • (g : Cosets Γ) = _
+      rw [← zpow_natCast, ← translation_zpow_apply]
+      simpa only [zpow_natCast] using hf
+    have hm := QuotientGroup.eq.mp he.symm
+    exact j_pole_order_le_positive_translation N hΓ hT g⁻¹ d
+      (by exact_mod_cast hd) (by simpa only [inv_inv, zpow_natCast, mul_assoc] using hm)
+
+theorem sum_cyclic_orbit_cards_eq_index [Γ.FiniteIndex]
+    [Fintype (Orbits (Γ := Γ))] :
+    (∑ q : Orbits (Γ := Γ),
+      Nat.card (orbit (Subgroup.zpowers (translation Γ)) q.out)) = (plusMinus Γ).index := by
+  classical
+  letI : Fintype (Cosets Γ) := Fintype.ofFinite _
+  letI : ∀ q : Orbits (Γ := Γ),
+      Fintype (orbit (Subgroup.zpowers (translation Γ)) q.out) := fun _ => Fintype.ofFinite _
+  have hc := Fintype.card_congr
+    (MulAction.selfEquivSigmaOrbits (Subgroup.zpowers (translation Γ)) (Cosets Γ))
+  rw [Fintype.card_sigma] at hc
+  simpa only [← Nat.card_eq_fintype_card, Subgroup.index] using hc.symm
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.CuspCounting

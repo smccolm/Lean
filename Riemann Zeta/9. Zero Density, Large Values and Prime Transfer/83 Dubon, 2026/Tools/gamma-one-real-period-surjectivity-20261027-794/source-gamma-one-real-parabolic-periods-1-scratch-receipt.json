@@ -1,0 +1,81 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T12:04:39.921611+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneRealPeriodMap",
+    "SourceGammaOneRealParabolicPeriods"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealPeriodMap.lean",
+      "sha256": "B561EC0923BACA616D34ED5F7EBCB42EA3C2EDC5832B095FDFACEC1F652A6225",
+      "oleanSha256": "7E672F05D981839151219F21FEB94F8ECA0A1BDDE269FC0892AD63072EEB9F1D"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicPeriods.lean",
+      "sha256": "F28255F16B106E6019118D8E4C714869E334E3C553A3CD0D6835113826E9CFF9",
+      "oleanSha256": "281ADF45D8414B1AB1A7D071864D75318F899D3C35D03E70CB4040034D0F899D"
+    }
+  ],
+  "queries": [
+    "Dubon2026.sourceGamma1RealCharacter_finite",
+    "Dubon2026.sourceGamma1RealPeriodHom_apply",
+    "Dubon2026.sourceGamma1RealPeriodHom_injective",
+    "Dubon2026.sourceGamma1CuspForm_finite_real",
+    "Dubon2026.sourceGamma1_period_eq_zero_of_trace",
+    "Dubon2026.sourceGamma1RealPeriodHom_parabolic",
+    "Dubon2026.sourceGamma1RealParabolicPeriodHom_injective",
+    "Dubon2026.sourceGamma1RealParabolicHoms_finite",
+    "Dubon2026.sourceGamma1RealPeriodHom",
+    "Dubon2026.sourceGamma1RealParabolicHoms",
+    "Dubon2026.sourceGamma1RealParabolicPeriodHom"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.sourceGamma1RealCharacter_finite",
+    "Dubon2026.sourceGamma1RealPeriodHom_apply",
+    "Dubon2026.sourceGamma1RealPeriodHom_injective",
+    "Dubon2026.sourceGamma1CuspForm_finite_real",
+    "Dubon2026.sourceGamma1_period_eq_zero_of_trace",
+    "Dubon2026.sourceGamma1RealPeriodHom_parabolic",
+    "Dubon2026.sourceGamma1RealParabolicPeriodHom_injective",
+    "Dubon2026.sourceGamma1RealParabolicHoms_finite"
+  ],
+  "constructionRegistrations": [
+    "Dubon2026.sourceGamma1RealPeriodHom",
+    "Dubon2026.sourceGamma1RealParabolicHoms",
+    "Dubon2026.sourceGamma1RealParabolicPeriodHom"
+  ],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicPeriodsAudit1.log",
+  "logSha256": "9C44DA1A624F236B0F12F12A06589B62AA3AD52F74BF68752AE668EB94A6C290",
+  "auditSha256": "896288997189FEF341A879AE32A3CC36FDC57119B0F99B1E6BE30CAB23FBFECA",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 15,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 16,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRealParabolicPeriodsDependencyAudit1.log",
+  "dependencyAuditSha256": "43E7E7D4E8F3B74DA786BFC5CC456DC2D9E15EA67C8077DCBE9CDEF6B1F346B2",
+  "dependencyAuditSourceSha256": "8278159B8F9EF49AFF02EB4C07782AA40463AB79FBA3FCCAC42C1C9A5D03D7D9",
+  "consumers": [
+    "Dubon2026.sourceGamma1RealCharacter_finite",
+    "Dubon2026.sourceGamma1RealPeriodHom_apply",
+    "Dubon2026.sourceGamma1RealPeriodHom_injective",
+    "Dubon2026.sourceGamma1CuspForm_finite_real",
+    "Dubon2026.sourceGamma1_period_eq_zero_of_trace",
+    "Dubon2026.sourceGamma1RealPeriodHom_parabolic",
+    "Dubon2026.sourceGamma1RealParabolicPeriodHom_injective",
+    "Dubon2026.sourceGamma1RealParabolicHoms_finite",
+    "Dubon2026.sourceGamma1RealPeriodHom",
+    "Dubon2026.sourceGamma1RealParabolicHoms",
+    "Dubon2026.sourceGamma1RealParabolicPeriodHom"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 and Abel-Jacobi -> real period surjectivity -> actual finite real parabolic period map.",
+  "discharged": "Existing finite native H1 proves finiteness of actual real Gamma1 characters. The actual linear real period map is injective, so cusp forms are finite over the reals. Signed translation classification, the primitive shift and finite translated cusp limits prove that every squared-trace-four element has zero period. The resulting exact parabolic character target is finite; none of these properties is assumed.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The reverse dimension inequality and real period surjectivity, reciprocity, original Picard/Hecke/diamond/H1 comparisons, full all-weight characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-parabolic-periods-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "F7D30938CC6031C5F5358B44C0609F17D716A27E7DAD9D9975ED6F22E6877234",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

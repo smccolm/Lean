@@ -1,0 +1,24 @@
+
+open scoped MatrixGroups
+
+/-- The original integer determinant-one group is dense in the canonical compact local product. -/
+theorem canonical_integer_matrix_density_source :
+    DenseRange (fun γ : SL(2, ℤ) => fun v : IsDedekindDomain.HeightOneSpectrum ℤ =>
+      Matrix.SpecialLinearGroup.map (Int.castRingHom (v.adicCompletionIntegers ℚ)) γ) :=
+  integralSL2_dense_adic_integer_product
+
+/-- Rational approximation concerns the pinned finite adele ring and its canonical diagonal. -/
+theorem actual_rational_adele_density_source :
+    DenseRange (algebraMap ℚ (IsDedekindDomain.FiniteAdeleRing ℤ ℚ)) :=
+  rational_dense_finiteAdeles
+
+/-- Actual rational matrices give the exact finite-level adelic factorization. -/
+theorem actual_rational_SL2_strong_approximation_source
+    (K : Subgroup SL(2, IsDedekindDomain.FiniteAdeleRing ℤ ℚ))
+    (hK : IsOpen (K : Set SL(2, IsDedekindDomain.FiniteAdeleRing ℤ ℚ)))
+    (g : SL(2, IsDedekindDomain.FiniteAdeleRing ℤ ℚ)) :
+    ∃ γ : SL(2, ℚ), ∃ k : K,
+      g = Matrix.SpecialLinearGroup.map
+        (algebraMap ℚ (IsDedekindDomain.FiniteAdeleRing ℤ ℚ)) γ * k.val :=
+  rationalSL2_finiteAdeles_open_subgroup_factorization K hK g
+

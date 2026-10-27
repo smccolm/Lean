@@ -1,0 +1,5 @@
+{
+  "action": "Download five pinned primary source files over HTTPS from raw.githubusercontent.com, verify exact Git blobs, and archive in task scratch.",
+  "failure": "Python urllib network connection denied with WinError 10013 in workspace sandbox before any source file was downloaded.",
+  "filesWritten": []
+}

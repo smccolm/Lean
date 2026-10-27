@@ -1,0 +1,28 @@
+import Dubon2026.SourceGammaOneDiamondSeparation
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.exists_separating_forms_of_gamma0_orbit]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneDiamondSeparation, `Dubon2026.SourceGammaOneDivisionForms, `Dubon2026.SourceGammaOneDivisionLatticeOrbit, `Dubon2026.SourceGammaOneDivisionPowerOrbit, `Dubon2026.SourcePeriodDivisionRotations]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_cross_products, `Dubon2026.SourceFunctionField.GammaOne.exists_separating_forms_of_gamma0_orbit, `Dubon2026.SourceFunctionField.GammaOne.divisionForm, `Dubon2026.SourceFunctionField.GammaOne.divisionForm_apply, `Dubon2026.SourceFunctionField.GammaOne.divisionForm_slash_gamma0, `Dubon2026.SourceFunctionField.GammaOne.exists_gamma1_smul_eq_of_division_power, `Dubon2026.SourceFunctionField.ModularNormPolynomial.restrict, `Dubon2026.SourceEllipticPeriod.gTwo_ofTau, `Dubon2026.SourceEllipticPeriod.gThree_ofTau, `ModularForm.pow]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE DIAMOND SEPARATION DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in actual native Gamma1 forms separating points in the same Gamma0 orbit. Only declaration values are traversed. Native squares and cubes, existing restriction, actual division-form slash law and E4/E6 anchors derive the division-value hypotheses, including elliptic points and level one. Non-Gamma0-related points remain. Original chart/period, Hecke/diamond/Picard/H1 arithmetic comparison, all-weight characteristic-zero association and literal higher symmetric-power continuation remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

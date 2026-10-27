@@ -1,0 +1,30 @@
+import Dubon2026.SourceGammaOneHolomorphicFunctions
+import Dubon2026.SourceGammaOneQuotientCuspSeries
+import Dubon2026.SourceGammaOneAnalyticIntegrality
+import Mathlib.Tactic
+
+open Lean
+
+private def runPlanarPairingDependencyAudit : CoreM Unit := do
+  let env ← getEnv
+  let roots : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.isIntegral_of_mem_all_analytic_places]
+  let localModules : Array Name := #[`Dubon2026.SourceGammaOneAnalyticGerms, `Dubon2026.SourceGammaOneAnalyticIntegrality, `Dubon2026.SourceGammaOneAnalyticOrder, `Dubon2026.SourceGammaOneAnalyticOrderNontrivial, `Dubon2026.SourceGammaOneAnalyticPlaces, `Dubon2026.SourceGammaOneAnalyticResidues, `Dubon2026.SourceGammaOneHolomorphicFunctions, `Dubon2026.SourceGammaOneMeromorphicRealization, `Dubon2026.SourceGammaOneQuotientCuspSeries, `Dubon2026.SourceGammaOneRatioRealization, `Dubon2026.SourceGammaOneRealizationAlgebra, `Dubon2026.SourceGammaOneTranslatedCuspGerms]
+  let required : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_invariant, `Dubon2026.SourceFunctionField.GammaOne.holomorphic_realization_of_mem_all_analytic_places, `Dubon2026.SourceFunctionField.GammaOne.quotient_cusp_represents, `Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_meromorphic, `Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_pole_bound, `Dubon2026.SourceFunctionField.GammaOne.isIntegral_of_mem_all_analytic_places, `Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio, `Dubon2026.SourceFunctionField.GammaOne.analyticPlace_mem_iff, `Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_realize, `Dubon2026.SourceFunctionField.GammaOne.realize_eventuallyEq_of_ratio, `Dubon2026.SourceFunctionField.HolomorphicQuotient.exists_mdifferentiable_mul_eq, `Dubon2026.SourceFricke.exists_bounded_mul_discriminant_of_meromorphic, `Dubon2026.SourceFricke.exists_fraction_and_monic_j_of_principal_invariant, `Dubon2026.SourceFunctionField.CuspTaylor.Represents.isIntegral_of_monic_relation, `Dubon2026.SourceFunctionField.represents_jqNModC, `Dubon2026.SourceFunctionField.isIntegral_adjoin_subfield]
+  let mut pending := roots
+  let mut seen : Std.HashSet Name := {}
+  while !pending.isEmpty do
+    let name := pending.back!
+    pending := pending.pop
+    if seen.contains name then continue
+    seen := seen.insert name
+    if let some info := env.find? name then
+      if let some idx := env.getModuleIdxFor? name then
+        let mod := env.allImportedModuleNames[idx.toNat]!
+        if mod.getRoot == `Dubon2026 || localModules.contains mod then
+          if let some value := info.value? (allowOpaque := true) then
+            pending := pending ++ value.getUsedConstants
+  let missing := required.filter fun name => !seen.contains name
+  unless missing.isEmpty do throwError "Missing original source proof dependencies: {missing}"
+  logInfo m!"SOURCE GAMMA ONE ANALYTIC INTEGRALITY DEPENDENCY AUDIT PASS: all {required.size} required proof dependencies occur in integrality of the actual original field element over C[j]. Only declaration values are traversed. Actual analytic-place regularity derives a holomorphic invariant quotient, literal cusp representatives and translated pole bounds; the existing monic modular-orbit relation transfers through the literal Laurent representation. Finite-place exhaustion still must consume this theorem. Original chart/period, Hecke/diamond/Picard/H1 arithmetic comparison, all-weight characteristic-zero association and literal higher symmetric-power continuation remain; 16/20; DUB-17--20 OPEN."
+
+#eval runPlanarPairingDependencyAudit

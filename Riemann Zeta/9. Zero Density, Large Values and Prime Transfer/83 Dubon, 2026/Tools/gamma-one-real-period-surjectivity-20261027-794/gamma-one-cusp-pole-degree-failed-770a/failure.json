@@ -1,0 +1,18 @@
+{
+  "exit": 1,
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-pole-degree-failed-770a\\SourceGammaOneCuspPoleDegree.lean.txt",
+      "sha256": "b7336a1701a14cb174680df7c9300408adbb4413edab339d80dfc20344435752"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-pole-degree-failed-770a\\SourceGammaOneCuspPoleDegree.log",
+      "sha256": "5e38cee19dde20c0a5413a402bb41c5db872fb6cec46a6e0ef96018ada1c22ff"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-pole-degree-failed-770a\\SourceGammaOneCuspPoleDegree.exit",
+      "sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04"
+    }
+  ],
+  "cause": "Dependent subtype and coordinate-field equality require explicit reindexing rather than simplification."
+}

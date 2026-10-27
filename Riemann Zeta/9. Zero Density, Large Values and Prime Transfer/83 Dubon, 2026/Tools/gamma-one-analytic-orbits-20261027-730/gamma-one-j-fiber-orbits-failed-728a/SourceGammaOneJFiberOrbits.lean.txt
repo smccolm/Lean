@@ -1,0 +1,107 @@
+import SourceGammaOneAnalyticPlaceOrbits
+import SourceGammaOneFinitePlaceExhaustion
+import SourceGammaOneOrbitCounting
+import SourceGammaOnePlusMinus
+
+/-! DUB-17/18 -> actual Gamma1 global charts -> exact elliptic ramification.
+Identify the actual finite j fiber with the subgroup orbits in a full
+modular orbit. Both exhaustion and exact analytic-place orbit equality
+are proved inputs. The literal fiber sum is transported through this
+bijection, without assuming a field degree or ramification formula. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup SourceCurve
+open scoped MatrixGroups StabilizerCharacter GammaOne
+
+/-- Subgroup orbits inside the actual full modular orbit. -/
+abbrev OrbitQuot (N : ℕ) (τ : ℍ) :=
+  MulAction.orbitRel.Quotient (plusMinus (Gamma1 N)) (MulAction.orbit SL(2, ℤ) τ)
+
+/-- The actual upper-half-plane representative of an orbit class. -/
+def rep (N : ℕ) (τ : ℍ) (q : OrbitQuot N τ) : ℍ :=
+  ((q.out : MulAction.orbit SL(2, ℤ) τ) : ℍ)
+
+theorem j_rep (N : ℕ) (τ : ℍ) (q : OrbitQuot N τ) :
+    JMultiplicity.jf (rep N τ q) = JMultiplicity.jf τ := by
+  obtain ⟨g, hg⟩ := MulAction.mem_orbit_iff.mp
+    (q.out : MulAction.orbit SL(2, ℤ) τ).property
+  change JMultiplicity.jf (q.out : ℍ) = _
+  rw [← hg, JMultiplicity.jf_smul]
+
+theorem card_stabilizer_rep (N : ℕ) (τ : ℍ) (q : OrbitQuot N τ) :
+    Nat.card (MulAction.stabilizer SL(2, ℤ) (rep N τ q)) =
+      Nat.card (MulAction.stabilizer SL(2, ℤ) τ) := by
+  obtain ⟨g, hg⟩ := MulAction.mem_orbit_iff.mp
+    (q.out : MulAction.orbit SL(2, ℤ) τ).property
+  change Nat.card (MulAction.stabilizer SL(2, ℤ) (q.out : ℍ)) = _
+  rw [← hg, JMultiplicity.natCard_stabilizer_smul]
+
+theorem finite_orbitQuot (N : ℕ) [NeZero N] (τ : ℍ) : Finite (OrbitQuot N τ) :=
+  OrbitCounting.finite_orbitRelQuotient_orbit (plusMinus (Gamma1 N)) τ
+
+/-- The literal positive-order fiber of the original j coordinate. -/
+abbrev Fiber (N : ℕ) (τ : ℍ) :=
+  {P : Place ℂ (functionFieldOver (Gamma1 N) ℂ) //
+    0 < P.ord (jCoordinateOver (Gamma1 N) ℂ -
+      algebraMap ℂ (functionFieldOver (Gamma1 N) ℂ) (JMultiplicity.jf τ))}
+
+/-- The actual analytic place of the orbit representative. -/
+def toFiber (N : ℕ) [NeZero N] (hT : ModularGroup.T ∈ Gamma1 N)
+    (τ : ℍ) (q : OrbitQuot N τ) : Fiber N τ :=
+  ⟨analyticPlace hT (rep N τ q), by
+    rw [← j_rep N τ q]
+    exact analyticPlace_j_sub_pos hT (rep N τ q)⟩
+
+theorem toFiber_injective (N : ℕ) [NeZero N] (hT : ModularGroup.T ∈ Gamma1 N) (τ : ℍ) :
+    Function.Injective (toFiber N hT τ) := by
+  intro q₁ q₂ he
+  have he' : analyticPlace hT (rep N τ q₁) = analyticPlace hT (rep N τ q₂) :=
+    congrArg Subtype.val he
+  obtain ⟨γ, hγ⟩ := (analyticPlace_eq_iff_gamma1_orbit N hT _ _).mp he'
+  have hrel : (MulAction.orbitRel (plusMinus (Gamma1 N)) (MulAction.orbit SL(2, ℤ) τ))
+      q₂.out q₁.out := by
+    show q₂.out ∈ MulAction.orbit (plusMinus (Gamma1 N)) q₁.out
+    refine MulAction.mem_orbit_iff.mpr ⟨⟨γ, le_plusMinus _ γ.2⟩, ?_⟩
+    exact Subtype.ext hγ
+  calc q₁ = Quotient.mk _ q₁.out := (Quotient.out_eq q₁).symm
+    _ = Quotient.mk _ q₂.out := (Quotient.sound hrel).symm
+    _ = q₂ := Quotient.out_eq q₂
+
+theorem toFiber_surjective (N : ℕ) [NeZero N] (hT : ModularGroup.T ∈ Gamma1 N) (τ : ℍ) :
+    Function.Surjective (toFiber N hT τ) := by
+  rintro ⟨P, hP⟩
+  have hΓ : Gamma N ≤ Gamma1 N := by
+    intro A hA
+    simp_all [Gamma1_mem, Gamma_mem]
+  obtain ⟨σ, hσ, hj⟩ := finite_fiber_realization N hΓ hT P (JMultiplicity.jf τ) hP
+  obtain ⟨g, hg⟩ := JOrbitSeparation.exists_smul_eq_of_j_eq τ σ hj.symm
+  have horb : σ ∈ MulAction.orbit SL(2, ℤ) τ := MulAction.mem_orbit_iff.mpr ⟨g, hg⟩
+  let q : OrbitQuot N τ := Quotient.mk _ ⟨σ, horb⟩
+  obtain ⟨δ, hδ, hδσ⟩ :=
+    OrbitCounting.exists_smul_out_eq (plusMinus (Gamma1 N)) τ ⟨σ, horb⟩
+  refine ⟨q, Subtype.ext ?_⟩
+  change analyticPlace hT (rep N τ q) = P
+  calc analyticPlace hT (rep N τ q) = analyticPlace hT (δ • rep N τ q) :=
+      (analyticPlace_smul_plusMinus hT hδ _).symm
+    _ = analyticPlace hT σ := by rw [show δ • rep N τ q = σ from hδσ]
+    _ = P := hσ
+
+/-- The proved bijection between analytic orbit classes and the actual finite fiber. -/
+def equiv (N : ℕ) [NeZero N] (hT : ModularGroup.T ∈ Gamma1 N) (τ : ℍ) :
+    OrbitQuot N τ ≃ Fiber N τ :=
+  Equiv.ofBijective (toFiber N hT τ) ⟨toFiber_injective N hT τ, toFiber_surjective N hT τ⟩
+
+theorem sum_orders (N : ℕ) [NeZero N] (hT : ModularGroup.T ∈ Gamma1 N) (τ : ℍ)
+    [Fintype (OrbitQuot N τ)] :
+    (∑ q : OrbitQuot N τ, (analyticPlace hT (rep N τ q)).ord
+      (jCoordinateOver (Gamma1 N) ℂ -
+        algebraMap ℂ (functionFieldOver (Gamma1 N) ℂ) (JMultiplicity.jf τ))) =
+      ∑ᶠ P : Fiber N τ, P.1.ord (jCoordinateOver (Gamma1 N) ℂ -
+        algebraMap ℂ (functionFieldOver (Gamma1 N) ℂ) (JMultiplicity.jf τ)) := by
+  letI : Finite (Fiber N τ) := Finite.of_equiv (OrbitQuot N τ) (equiv N hT τ)
+  letI : Fintype (Fiber N τ) := Fintype.ofFinite _
+  rw [finsum_eq_sum_of_fintype]
+  exact Fintype.sum_equiv (equiv N hT τ) _ _ (fun _ => rfl)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits

@@ -1,0 +1,4 @@
+{
+  "status": "PASSED PREDECESSOR COMPILE",
+  "reason": "Recompile the unchanged mathematical source after the prerequisite public docstring correction, before its first audit. No used audit is rerun."
+}

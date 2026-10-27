@@ -1,0 +1,40 @@
+{
+  "repository": "anthropics/fermats-last-theorem",
+  "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "scope": "Assess the exact unresolved dimension/reciprocity/function-realization dependencies of the candidate principal-divisor route before adopting it. Selected primary source only; no full closure, local proof claim, import or pin change.",
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_exists_norm_multiplier_eq_one_and_abelJacobi_add_petersson_mem_periodLatticeOf_gammaH.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_ComplexPlaceDictionaryOf_exists_norm_multiplier_eq_one_and_abelJacobi_add_petersson_mem_periodLatticeOf_gammaH.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_exists_norm_multiplier_eq_one_and_abelJacobi_add_petersson_mem_periodLatticeOf_gammaH.lean",
+      "bytes": 37356,
+      "gitBlob": "7a0b14efb23dc9ae4a790390d4491d3012fef5f8",
+      "sha256": "856065DE6C18961515A875C6E8CFAB56438A824162F336F54EFBC81D44162E9E"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_modularForm_eventuallyEq_div_of_meromorphic_of_finiteIndex.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_exists_modularForm_eventuallyEq_div_of_meromorphic_of_finiteIndex.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_modularForm_eventuallyEq_div_of_meromorphic_of_finiteIndex.lean",
+      "bytes": 29703,
+      "gitBlob": "215317a4b77952a32bde955fb080d8686051d7b8",
+      "sha256": "F28EFDE829862B74E9C16279DC3A663AB2177EA9EA393974782E32DA2C250C08"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_finrank_parabolicHoms_Gamma_le_two_mul_finrank_cuspForm.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_finrank_parabolicHoms_Gamma_le_two_mul_finrank_cuspForm.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_finrank_parabolicHoms_Gamma_le_two_mul_finrank_cuspForm.lean",
+      "bytes": 16237,
+      "gitBlob": "7a8bb469318d0b4f1e71f07a632891a22afa4740",
+      "sha256": "52DD8425F4C6B77660DF53462B9986033FC0768068FD5E525BE1EF10A4EB223A"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_finrank_parabolicHoms_le_two_mul_finrank_cuspForm_of_le_of_normal.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_finrank_parabolicHoms_le_two_mul_finrank_cuspForm_of_le_of_normal.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_finrank_parabolicHoms_le_two_mul_finrank_cuspForm_of_le_of_normal.lean",
+      "bytes": 20627,
+      "gitBlob": "2fb5347e56c6629605d19fd2d7bb0eeeb349ce91",
+      "sha256": "EAA570F7264CF3DE01970E18B2310D2CB5A0BFA1AF24B2835F0FCC75E709E27F"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+import Dubon2026.SourceGammaOneRegularCuspGerm
+import Dubon2026.SourceGammaOneAnalyticResidues
+import Dubon2026.SourceGammaOneAnalyticEvaluation
+import Dubon2026.SourceGammaOneEvaluationRealizationGerms
+import Dubon2026.SourceGammaOneRamificationIsolation
+import Dubon2026.SourceGammaOneUnramifiedCharts
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceGammaOneRegularCuspGerm, `Dubon2026.SourceGammaOneAnalyticResidues, `Dubon2026.SourceGammaOneAnalyticEvaluation, `Dubon2026.SourceGammaOneEvaluationRealizationGerms, `Dubon2026.SourceGammaOneRamificationIsolation, `Dubon2026.SourceGammaOneUnramifiedCharts]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

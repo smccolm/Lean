@@ -1,0 +1,71 @@
+import Dubon2026.SourceGammaOneAnalyticDifferentialRegularity
+import Dubon2026.SourceOriginalHolomorphicDifferentials
+
+/-! DUB-17/18 -> actual Gamma1 differential/cusp converse -> finite holomorphy.
+The actual regular differential has a native holomorphic weight-two realization.
+The exact quotient identity and Gamma covariance are derived, using existing
+removable-singularity and derivative transformation theorems. Cusp vanishing
+and the complete differential/cusp converse remain separate obligations. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceCurve KaehlerDifferential Filter
+open scoped Topology Manifold MatrixGroups ModularForm
+
+theorem exists_holomorphic_differential {Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)} [Γ.FiniteIndex] (hT : ModularGroup.T ∈ Γ)
+    (x : functionFieldOver Γ ℂ) (hx : x ≠ 0)
+    (hreg : x • D ℂ (functionFieldOver Γ ℂ) (jCoordinateOver Γ ℂ) ∈
+      regularDifferentials ℂ (functionFieldOver Γ ℂ))
+    {k : ℤ} (g h : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) k) (hh : h ≠ 0)
+    (hratio : (x : LaurentSeries ℂ) * ModularRatios.qL h = ModularRatios.qL g) :
+    ∃ F : ℍ → ℂ, MDiff F ∧
+      (∀ τ, F τ * h τ = g τ * deriv (JMultiplicity.jf ∘ ofComplex) (τ : ℂ)) ∧
+      ∀ γ ∈ Γ, F ∣[(2 : ℤ)] (γ : SL(2, ℤ)) = F := by
+  obtain ⟨F, hF, hFg⟩ := HolomorphicQuotient.exists_mdifferentiable_mul_eq
+    (g.holo'.mul mdifferentiable_raw_j_derivative) h.holo'
+    (fun c hc => ModularRatios.eventually_ne_zero_ofComplex h hh ⟨c, hc⟩) (by
+      intro τ
+      obtain ⟨M, hM⟩ := regular_analytic_differential_bounded hT x hx hreg τ
+      refine ⟨M, ?_⟩
+      filter_upwards [hM, realize_eventuallyEq_of_ratio hT g h x hh hratio τ,
+        mem_nhdsWithin_of_mem_nhds (isOpen_upperHalfPlaneSet.mem_nhds τ.im_pos)] with z hz he hp
+      change ‖g (ofComplex z) * deriv (JMultiplicity.jf ∘ ofComplex) (ofComplex z) / h (ofComplex z)‖ ≤ M
+      rw [he] at hz
+      have hzc : ((ofComplex z : ℍ) : ℂ) = z := by
+        rw [ofComplex_apply_of_im_pos hp]
+      simpa only [mul_div_right_comm, hzc] using hz)
+  change ∀ τ, F τ * h τ = g τ * deriv (JMultiplicity.jf ∘ ofComplex) (τ : ℂ) at hFg
+  refine ⟨F, hF, hFg, ?_⟩
+  intro γ hγ
+  apply HolomorphicQuotient.eq_of_eq_off_zeros
+    (fun c hc => ModularRatios.eventually_ne_zero_ofComplex h hh ⟨c, hc⟩)
+    (hF.slash 2 (γ : GL (Fin 2) ℝ)).continuous hF.continuous
+  intro τ hτ
+  have eh := SlashInvariantForm.slash_action_eqn_SL'' h hγ τ
+  have eg := SlashInvariantForm.slash_action_eqn_SL'' g hγ τ
+  have hd := zpow_ne_zero k (denom_ne_zero γ τ)
+  have eγ := hFg (γ • τ)
+  rw [eh, eg, raw_j_derivative_smul] at eγ
+  have hFt : F (γ • τ) = denom γ τ ^ (2 : ℤ) * F τ := by
+    apply mul_right_cancel₀ hτ
+    apply mul_left_cancel₀ hd
+    linear_combination eγ - denom γ τ ^ k * denom γ τ ^ (2 : ℤ) * hFg τ
+  change (F ∣[(2 : ℤ)] γ) τ = F τ
+  rw [ModularForm.SL_slash_apply, hFt, mul_right_comm,
+    ← zpow_add₀ (denom_ne_zero γ τ)]
+  norm_num
+
+theorem regular_differential_holomorphic_realization {Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)} [Γ.FiniteIndex] (hT : ModularGroup.T ∈ Γ)
+    (x : functionFieldOver Γ ℂ) (hx : x ≠ 0)
+    (hreg : x • D ℂ (functionFieldOver Γ ℂ) (jCoordinateOver Γ ℂ) ∈
+      regularDifferentials ℂ (functionFieldOver Γ ℂ)) :
+    ∃ (k : ℤ) (g h : ModularForm (Γ : Subgroup (GL (Fin 2) ℝ)) k) (F : ℍ → ℂ),
+      h ≠ 0 ∧ (x : LaurentSeries ℂ) * ModularRatios.qL h = ModularRatios.qL g ∧
+      MDiff F ∧
+      (∀ τ, F τ * h τ = g τ * deriv (JMultiplicity.jf ∘ ofComplex) (τ : ℂ)) ∧
+      ∀ γ ∈ Γ, F ∣[(2 : ℤ)] (γ : SL(2, ℤ)) = F := by
+  obtain ⟨k, g, h, hh, hr⟩ := functionFieldOver_modular_ratio hT x
+  obtain ⟨F, hF, he, hs⟩ := exists_holomorphic_differential hT x hx hreg g h hh hr
+  exact ⟨k, g, h, F, hh, hr, hF, he, hs⟩
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

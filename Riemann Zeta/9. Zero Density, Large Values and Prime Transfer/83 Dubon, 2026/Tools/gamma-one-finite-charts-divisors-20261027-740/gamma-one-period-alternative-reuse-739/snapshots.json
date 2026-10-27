@@ -1,0 +1,32 @@
+{
+  "repository": "anthropics/fermats-last-theorem",
+  "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "scope": "Assess the exact unresolved dimension/reciprocity/function-realization dependencies of the candidate principal-divisor route before adopting it. Selected primary source only; no full closure, local proof claim, import or pin change.",
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_multiplier_eq_one_of_norm_eq_one_of_abelJacobi_mem_periodLatticeOf_gammaH.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_ComplexPlaceDictionaryOf_multiplier_eq_one_of_norm_eq_one_of_abelJacobi_mem_periodLatticeOf_gammaH.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_multiplier_eq_one_of_norm_eq_one_of_abelJacobi_mem_periodLatticeOf_gammaH.lean",
+      "bytes": 24076,
+      "gitBlob": "ef1b730b59ad0870e5f03cf2158c353fbb659975",
+      "sha256": "7AF7BB7BCFF7509EC7E0C5CF32FC959D6639086E310D1ECF514A9766E108234F"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_exists_realizeOf_eventuallyEq_of_meromorphic_gammaH.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_exists_realizeOf_eventuallyEq_of_meromorphic_gammaH.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_exists_realizeOf_eventuallyEq_of_meromorphic_gammaH.lean",
+      "bytes": 4527,
+      "gitBlob": "6f70dcd7d8dec26df52527a437af5cd6a856cc7c",
+      "sha256": "C6561CE077162CE6B659C29A56C0554B30797D659854945AD6B4A1451008399E"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_finrank_parabolicHoms_le_two_mul_finrank_cuspForm_of_isCongruenceSubgroup.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-alternative-reuse-739\\S_ModularCurve_finrank_parabolicHoms_le_two_mul_finrank_cuspForm_of_isCongruenceSubgroup.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_finrank_parabolicHoms_le_two_mul_finrank_cuspForm_of_isCongruenceSubgroup.lean",
+      "bytes": 14023,
+      "gitBlob": "609d2fb2df05f1af2ed15e7ed775735123978022",
+      "sha256": "65F2D05FB4763D4E5899AF278EAAF4F90D1521A1441D40B8295669B8CA10CCAB"
+    }
+  ]
+}

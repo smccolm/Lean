@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-26 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> full Gamma1 orbit separation -> native Gamma0 forms separate its orbits.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\original-modular-point-separation-audit-route-719.json",
+    "sha256": "5141BDDDA98F9C79F944FC590B92072F40B3CFED9869D4373D7F47B6B7AB6E07",
+    "review": {
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> full Gamma1 orbit separation -> native Gamma0 forms separate its orbits.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticChart.lean",
+          "sha256": "EC618B19CAFD128F23C288544FA47DDE5AF45C8DE6F4A0C524466D193856DA20"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticChartPlaces.lean",
+          "sha256": "0844391C2636386F2E1A747E71DFA2C7D75B9165EDAA70B2BE94DC1184A65353"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticOrbitSeparation.lean",
+          "sha256": "24DB6E31935E6C020ABAA64AF27B6E9985FC0C05CAA91F8FA24BE422B4887D45"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalBoundedIntegral.lean",
+          "sha256": "DB36560BD4DCCE24D833928EFD2633539FCF1639A0F6710BB4362D5005C0409D"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticResidueValues.lean",
+          "sha256": "BC3E036A411CC2671EF15AD73FC199F5F8BFDFACF8C6BBE200C945F88C9A410E"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicRealization.lean",
+          "sha256": "11B1A7D188C9B68D9A8BFCC7F3A3D322D0396797B0FCD07604867BFE8373C360"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalInverseJAnalyticRelation.lean",
+          "sha256": "9641CD8D90E188E603D396410FFBDF21573417F881540E9286B9AD5DA7218BD3"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceHolomorphicDiscriminantLift.lean",
+          "sha256": "A212BA8D9511E23DF75B4826202D1C4FAD523B0317B349B664057155E9833C26"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\anthropic-flt-residual-closure-20261020\\P2M\\Sol\\S_ModularForm_exists_gamma0_apply_mul_apply_ne_of_forall_smul_ne.lean.txt",
+          "sha256": "06FE8CA7C8D913299B82A405E4648B03E17DDEA06C0CEAB16298E520F51E7F78"
+        }
+      ],
+      "shorterRoute": "Reused proved original Gamma0 place/orbit dictionary, integral-closure chart containment and center injectivity, residue-limit identity and discriminant-power modular representation. Equal modular cross products imply equal residues of every element of the actual integral closure C[j]; hence equal centers, equal actual places and a Gamma0 orbit matrix. This avoids redoing the selected external simultaneous E4/E6 scaling, a second scaled lattice construction and the Gamma0 lattice-matrix proof. The dependency is not circular: the existing dictionary uses positive-degree orbit/fiber bijection, with no separating-form premise.",
+      "assumptionsToDischarge": [
+        "Represent every function regular at all analytic places using actual same-weight forms with denominator nowhere zero on the upper half plane.",
+        "Identify actual residue evaluation with the analytic quotient at a point with nonzero denominator.",
+        "Derive Gamma0 orbit equivalence and actual separating modular forms from the existing integral-closure centers; no point separation premise is introduced."
+      ],
+      "remaining": "Restrict the Gamma0 separating forms to Gamma1 and combine with the audited within-Gamma0 separation. Then exact Gamma1 elliptic ramification and global charts, full period/Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": [
+    "Represent every function regular at all analytic places using actual same-weight forms with denominator nowhere zero on the upper half plane.",
+    "Identify actual residue evaluation with the analytic quotient at a point with nonzero denominator.",
+    "Derive Gamma0 orbit equivalence and actual separating modular forms from the existing integral-closure centers; no point separation premise is introduced."
+  ],
+  "remaining": "Restrict the Gamma0 separating forms to Gamma1 and combine with the audited within-Gamma0 separation. Then exact Gamma1 elliptic ramification and global charts, full period/Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

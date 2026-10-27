@@ -1,0 +1,226 @@
+import SourceGammaOneRealCuspPotential
+import Dubon2026.SourceManinRelationDimension
+
+/-! DUB-17/18 -> original Gamma1 real period surjectivity -> reverse dimension
+inequality. Real parabolic characters and actual rational cusp potentials
+inject into the existing finite Manin relation space with one constant value.
+Reuse the proved generic relation-space bound unchanged. The central-sign
+condition is explicit and will be discharged for the signed Gamma1 subgroup.
+Adapted from the existing SourceManinParabolicDimension proof, itself derived
+from anthropics/fermats-last-theorem (Apache-2.0), commit
+6e837e75355538c7f80bab5b956861e86c4eacc2, P2M/Sol/
+S_ModularCurve_Period_six_mul_finrank_parabolicHoms_add_le_index.lean. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.RealManin
+noncomputable section
+open Matrix Matrix.SpecialLinearGroup ModularGroup CongruenceSubgroup OnePoint SourceManin
+open scoped MatrixGroups
+
+variable (Γ : Subgroup SL(2, ℤ))
+
+/-- The finite original level-coset space. -/
+abbrev X : Type := SL(2, ℤ) ⧸ Γ
+
+/-- The original elliptic involution acting on level cosets. -/
+noncomputable def sig2 : Equiv.Perm (X Γ) := MulAction.toPerm (S : SL(2, ℤ))
+
+/-- The original order-three elliptic action on level cosets. -/
+noncomputable def sig3 : Equiv.Perm (X Γ) := MulAction.toPerm (S * T : SL(2, ℤ))
+
+theorem sig2_apply (x : X Γ) : sig2 Γ x = (S : SL(2, ℤ)) • x := rfl
+
+theorem sig3_apply (x : X Γ) : sig3 Γ x = (S * T : SL(2, ℤ)) • x := rfl
+
+theorem mk_neg_one_mul (hneg : (-1 : SL(2, ℤ)) ∈ Γ) (g : SL(2, ℤ)) : ((-1 * g : SL(2, ℤ)) : X Γ) = (g : X Γ) := by
+  rw [neg_one_mul, ← mul_neg_one]
+  symm
+  rw [QuotientGroup.eq, inv_mul_cancel_left]
+  exact hneg
+
+theorem sig2_sq (hneg : (-1 : SL(2, ℤ)) ∈ Γ) : sig2 Γ ^ 2 = 1 := by
+  ext x
+  induction x using QuotientGroup.induction_on with
+  | H g =>
+    rw [sq, Equiv.Perm.mul_apply, sig2_apply, sig2_apply, MulAction.Quotient.smul_mk,
+      MulAction.Quotient.smul_mk, Equiv.Perm.one_apply, smul_eq_mul, smul_eq_mul, ← mul_assoc,
+      show (S : SL(2, ℤ)) * S = -1 by decide, mk_neg_one_mul Γ hneg]
+
+theorem sig3_cube (hneg : (-1 : SL(2, ℤ)) ∈ Γ) : sig3 Γ ^ 3 = 1 := by
+  ext x
+  induction x using QuotientGroup.induction_on with
+  | H g =>
+    rw [pow_three, Equiv.Perm.mul_apply, Equiv.Perm.mul_apply, sig3_apply, sig3_apply, sig3_apply,
+      MulAction.Quotient.smul_mk, MulAction.Quotient.smul_mk, MulAction.Quotient.smul_mk,
+      Equiv.Perm.one_apply, smul_eq_mul, smul_eq_mul, smul_eq_mul, ← mul_assoc, ← mul_assoc,
+      ST_cube, mk_neg_one_mul Γ hneg]
+
+
+theorem connected : Connected (sig2 Γ) (sig3 Γ) ℝ := by
+  intro f h2 h3 x y
+  have hS : ∀ x : X Γ, f ((S : SL(2, ℤ)) • x) = f x := h2
+  have hSinv : ∀ x : X Γ, f ((S : SL(2, ℤ))⁻¹ • x) = f x := fun x => by
+    rw [← hS ((S : SL(2, ℤ))⁻¹ • x), smul_inv_smul]
+  have hT : ∀ x : X Γ, f ((T : SL(2, ℤ)) • x) = f x := fun x => by
+    have : (T : SL(2, ℤ)) = S⁻¹ * (S * T) := by group
+    rw [this, mul_smul, hSinv]
+    exact h3 x
+  have key : ∀ k : SL(2, ℤ), k ∈ Subgroup.closure ({S, T} : Set SL(2, ℤ)) →
+      ∀ x : X Γ, f (k • x) = f x := by
+    intro k hk
+    refine Subgroup.closure_induction (p := fun k _ => ∀ x : X Γ, f (k • x) = f x)
+      ?_ ?_ ?_ ?_ hk
+    · intro k hk x
+      rcases hk with rfl | rfl
+      · exact hS x
+      · exact hT x
+    · intro x; rw [one_smul]
+    · intro a b _ _ ha hb x
+      rw [mul_smul, ha, hb]
+    · intro a _ ha x
+      rw [← ha (a⁻¹ • x), smul_inv_smul]
+  have hall : ∀ k : SL(2, ℤ), ∀ x : X Γ, f (k • x) = f x := fun k =>
+    key k (SpecialLinearGroup.SL2Z_generators ▸ Subgroup.mem_top k)
+  induction x using QuotientGroup.induction_on with
+  | H g =>
+    induction y using QuotientGroup.induction_on with
+    | H g' =>
+      have e1 := hall g ((1 : SL(2, ℤ)) : X Γ)
+      have e2 := hall g' ((1 : SL(2, ℤ)) : X Γ)
+      rw [MulAction.Quotient.smul_mk, smul_eq_mul, mul_one] at e1 e2
+      rw [e1, e2]
+
+
+/-- Actual parabolic characters together with one complex value per original cusp orbit. -/
+abbrev W : Type _ := ↥(realParabolicCharacters Γ) × (RationalCuspOrbit Γ → ℝ)
+
+/-- Map original parabolic cusp data to its actual Manin-symbol differences. -/
+noncomputable def theta : W Γ →ₗ[ℝ] (X Γ → ℝ) where
+  toFun w := fun x => nX Γ (w.1 : Additive (Γ) →+ ℝ) w.2 x
+  map_add' w w' := by
+    ext x
+    simp only [Prod.fst_add, Prod.snd_add, Submodule.coe_add, Pi.add_apply, nX_add]
+  map_smul' r w := by
+    ext x
+    simp only [Prod.smul_fst, Prod.smul_snd, Submodule.coe_smul, Pi.smul_apply, smul_eq_mul,
+      RingHom.id_apply, nX_smul]
+
+theorem theta_apply (w : W Γ) (x : X Γ) :
+    theta Γ w x = nX Γ (w.1 : Additive (Γ) →+ ℝ) w.2 x := rfl
+
+theorem theta_mem (w : W Γ) : theta Γ w ∈ relSpace ℝ (sig2 Γ) (sig3 Γ) := by
+  have hφ : (w.1 : Additive (Γ) →+ ℝ) ∈ realParabolicCharacters Γ := w.1.2
+  rw [mem_relSpace]
+  constructor
+  · intro x
+    induction x using QuotientGroup.induction_on with
+    | H g =>
+      rw [sig2_apply, MulAction.Quotient.smul_mk, smul_eq_mul, theta_apply, theta_apply,
+        nX_mk hφ, nX_mk hφ, add_comm]
+      exact nSL_two_term _ _ g
+  · intro x
+    induction x using QuotientGroup.induction_on with
+    | H g =>
+      rw [sig3_apply, MulAction.Quotient.smul_mk, smul_eq_mul, sig3_apply,
+        MulAction.Quotient.smul_mk, smul_eq_mul, theta_apply, theta_apply, theta_apply,
+        nX_mk hφ, nX_mk hφ, nX_mk hφ]
+      exact nSL_three_term _ _ g
+
+/-- Add the value at infinity to the Manin relations, fixing the constant-potential ambiguity. -/
+noncomputable def thetaPlus : W Γ →ₗ[ℝ] ↥(relSpace ℝ (sig2 Γ) (sig3 Γ)) × ℝ :=
+  (LinearMap.codRestrict _ (theta Γ) (theta_mem Γ)).prod
+    ((LinearMap.proj (rationalCuspOrbitMk Γ ∞)).comp (LinearMap.snd ℝ _ _))
+
+theorem thetaPlus_injective : Function.Injective (thetaPlus Γ) := by
+  classical
+  rw [injective_iff_map_eq_zero]
+  rintro ⟨⟨φ, hφmem⟩, c⟩ hw
+  have hφ : φ ∈ realParabolicCharacters Γ := hφmem
+  have hθx : ∀ x : X Γ, nX Γ φ c x = 0 := fun x =>
+    congr_arg (fun p : ↥(relSpace ℝ (sig2 Γ) (sig3 Γ)) × ℝ => (p.1 : X Γ → ℝ) x) hw
+  have hcinf : c (rationalCuspOrbitMk Γ ∞) = 0 :=
+    congr_arg (fun p : ↥(relSpace ℝ (sig2 Γ) (sig3 Γ)) × ℝ => p.2) hw
+
+  have hPS : ∀ h : SL(2, ℤ), Ppot Γ φ c (h * S) = Ppot Γ φ c h := fun h => by
+    have e := hθx ((h⁻¹ : SL(2, ℤ)) : X Γ)
+    rw [nX_mk hφ, nSL, inv_inv] at e
+    linear_combination -e
+  have hPT : ∀ h : SL(2, ℤ), Ppot Γ φ c (h * T) = Ppot Γ φ c h := fun h =>
+    Ppot_mul_right φ c h T_lower
+
+  have key : ∀ k : SL(2, ℤ), k ∈ Subgroup.closure ({S, T} : Set SL(2, ℤ)) →
+      ∀ h : SL(2, ℤ), Ppot Γ φ c (h * k) = Ppot Γ φ c h := by
+    intro k hk
+    refine Subgroup.closure_induction (p := fun k _ => ∀ h : SL(2, ℤ), Ppot Γ φ c (h * k) = Ppot Γ φ c h)
+      ?_ ?_ ?_ ?_ hk
+    · intro k hk h
+      rcases hk with rfl | rfl
+      · exact hPS h
+      · exact hPT h
+    · intro h; rw [mul_one]
+    · intro a b _ _ ha hb h
+      rw [← mul_assoc, hb, ha]
+    · intro a _ ha h
+      rw [← ha (h * a⁻¹), inv_mul_cancel_right]
+  have hconst : ∀ k : SL(2, ℤ), Ppot Γ φ c k = Ppot Γ φ c 1 := fun k => by
+    have := key k (SpecialLinearGroup.SL2Z_generators ▸ Subgroup.mem_top k) 1
+    rwa [one_mul] at this
+
+  have hPhi : ∀ γ : SL(2, ℤ), γ ∈ Γ → Phi (Γ) φ γ = 0 := fun γ hγ => by
+    have e := Ppot_mul_left hφ c hγ 1
+    rw [mul_one, hconst γ] at e
+    linear_combination -e
+  have hφ0 : φ = 0 := AddMonoidHom.ext fun a => by
+    have e := hPhi ((Additive.toMul a : Γ) : SL(2, ℤ)) (Additive.toMul a).2
+    rw [Phi_of_mem] at e
+    exact e
+
+  have hcval : ∀ σ : SL(2, ℤ), c (rationalCuspOrbitMk Γ (mapGL ℚ σ • ∞)) = Ppot Γ φ c 1 := fun σ => by
+    rw [← hconst σ, Ppot, Gpot, hPhi _ (gam_mem Γ _), zero_add]
+  have hP1 : Ppot Γ φ c 1 = 0 := by
+    rw [← hcinf, ← hcval 1, map_one, one_smul]
+  have hc0 : c = 0 := by
+    funext C
+    obtain ⟨a, rfl⟩ := Quotient.mk''_surjective C
+    obtain ⟨σ, rfl⟩ := OnePoint.exists_mem_SL2 ℤ a
+    change c (rationalCuspOrbitMk Γ (mapGL ℚ σ • ∞)) = 0
+    rw [hcval σ, hP1]
+  subst hφ0 hc0
+  rfl
+
+variable [Γ.FiniteIndex]
+
+theorem finrank_W_le :
+    Module.finrank ℝ ↥(realParabolicCharacters Γ) + Nat.card (RationalCuspOrbit Γ) ≤
+      Module.finrank ℝ ↥(relSpace ℝ (sig2 Γ) (sig3 Γ)) + 1 := by
+  classical
+  letI := realParabolicCharacters_finite Γ
+  letI := rationalCuspOrbit_finite Γ
+  letI := Fintype.ofFinite (RationalCuspOrbit Γ)
+  letI : Module.Free ℝ (realParabolicCharacters Γ) := Module.Free.of_divisionRing ℝ (realParabolicCharacters Γ)
+  have h := LinearMap.finrank_le_finrank_of_injective (thetaPlus_injective Γ)
+  rw [Module.finrank_prod, Module.finrank_prod, Module.finrank_self,
+    Module.finrank_fintype_fun_eq_card, ← Nat.card_eq_fintype_card] at h
+  exact h
+
+theorem parabolic_dimension_bound (hneg : (-1 : SL(2, ℤ)) ∈ Γ) :
+    6 * Module.finrank ℝ (realParabolicCharacters Γ)
+        + 6 * Nat.card (RationalCuspOrbit Γ)
+        + 3 * Nat.card {x : SL(2, ℤ) ⧸ Γ // ModularGroup.S • x = x}
+        + 4 * Nat.card {x : SL(2, ℤ) ⧸ Γ //
+            (ModularGroup.S * ModularGroup.T) • x = x} ≤
+      12 + (Γ).index := by
+  classical
+  letI : Fintype (X Γ) := Fintype.ofFinite _
+  have hR := relSpace_rank_bound ℝ (sig2 Γ) (sig3 Γ) (sig2_sq Γ hneg) (sig3_cube Γ hneg) (connected Γ)
+  have hW := finrank_W_le Γ
+  have hidx : (Γ).index = Nat.card (X Γ) := rfl
+  have e2 : Nat.card {x : X Γ // sig2 Γ x = x} =
+      Nat.card {x : SL(2, ℤ) ⧸ Γ // ModularGroup.S • x = x} := rfl
+  have e3 : Nat.card {x : X Γ // sig3 Γ x = x} =
+      Nat.card {x : SL(2, ℤ) ⧸ Γ //
+        (ModularGroup.S * ModularGroup.T) • x = x} := rfl
+  rw [e2, e3] at hR
+  rw [hidx]
+  omega
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.RealManin

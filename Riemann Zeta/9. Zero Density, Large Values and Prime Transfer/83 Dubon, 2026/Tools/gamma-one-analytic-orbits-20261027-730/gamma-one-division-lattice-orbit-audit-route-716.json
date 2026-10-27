@@ -1,0 +1,30 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> orbit separation and exact elliptic ramification -> lattice rotation gives an actual Gamma1 orbit matrix.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceJScalarAndLatticeRelations.lean",
+      "sha256": "9FC0DAFAB3DEA3EE85E2B13D2C289B26E15F76B77B5CBC2B5463AD491441FDA8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePeriodPairScaling.lean",
+      "sha256": "8F098E22A5DC87B82C8F2B109B9725D8A6C0A25710AA7BBD942A2E55CD32CF8D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\CongruenceSubgroups.lean",
+      "sha256": "DF53B80B64A6DCD7B8AB7F87BD8092D77C557FCAA53857C23C507F9D894A23C0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-separation-reuse-712\\S_CohCarrier_exists_mem_GammaH_smul_eq_of_forall_sum_weierstrassP_pow_eq.lean.txt",
+      "sha256": "E6257ED979B4C03CCE0122321214E1AE0C57DE2F0C21D59B4ABCD1388DAC04F2"
+    }
+  ],
+  "shorterRoute": "Specialize the pinned external DivisionValuesCore.finish to Gamma1. Reuse proved integer independence of tau and one, actual period lattice membership and native Gamma0Map/Gamma1 kernel characterization. No general subgroup of units, power-sum reconstruction, new unit-valued homomorphism or abstract orbit certificate is needed.",
+  "assumptionsToDischarge": [
+    "Construct an actual determinant-one integral matrix fixing tau from a unit-norm rotation preserving its two periods.",
+    "Derive Gamma1 congruences from the actual division-point lattice relation and the native lower-right Gamma0 homomorphism.",
+    "The division-value consumer must derive the rotation and lattice hypotheses; they remain explicit upstream hypotheses here."
+  ],
+  "remaining": "Actual division-value equalities must imply these lattice relations, then full subgroup orbit separation and exact elliptic ramification. Global analytic charts and period/Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and literal higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

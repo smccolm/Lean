@@ -1,0 +1,63 @@
+import Dubon2026.SourceGammaOneCuspResidues
+import Dubon2026.SourceGammaOneAnalyticPlaceInvariance
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual Gamma1
+Hecke characters -> Picard/H1 and Abel-Jacobi -> real period surjectivity
+-> matching Manin/genus bounds -> actual cusp-orbit/place comparison.
+Equal modular weights cancel in every translated cusp germ. This proves
+left subgroup invariance of the actual normalized cusp place, using the
+existing modular-ratio and nonzero translated cusp-germ theorems. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane Filter SourceCurve
+open scoped MatrixGroups Topology ModularForm Manifold
+variable {Γ : Subgroup SL(2, ℤ)}
+  (N : ℕ) [NeZero N] (hΓ : CongruenceSubgroup.Gamma N ≤ Γ)
+  (hT : ModularGroup.T ∈ Γ)
+
+include hΓ hT
+
+theorem cuspRealize_mul_left_eventuallyEq
+    (x : functionFieldOver Γ ℂ) (γ : Γ) (δ : SL(2, ℤ)) :
+    cuspRealize Γ N (γ.val * δ) (x : LaurentSeries ℂ) =ᶠ[𝓝[≠] (0 : ℂ)]
+      cuspRealize Γ N δ (x : LaurentSeries ℂ) := by
+  obtain ⟨k, g, h, hh, hx⟩ := functionFieldOver_modular_ratio hT x
+  filter_upwards [self_mem_nhdsWithin,
+    eventually_ne_zero_translated_cuspFunction N hΓ h hh δ] with q hq hden
+  simp only [cuspRealize, cuspFunction,
+    Function.Periodic.cuspFunction_eq_of_nonzero _ _ hq,
+    Function.comp_apply] at hden ⊢
+  let τ : ℍ := ofComplex (Function.Periodic.invQParam N q)
+  have hhτ : h (δ • τ) ≠ 0 := by
+    intro hz
+    apply hden
+    change ((h : ℍ → ℂ) ∣[k] δ) τ = 0
+    rw [ModularForm.SL_slash_apply, hz, zero_mul]
+  have hhs : h (γ.val • (δ • τ)) = denom γ.val (δ • τ : ℍ) ^ k * h (δ • τ) :=
+    SlashInvariantForm.slash_action_eqn_SL'' h γ.2 _
+  have hgs : g (γ.val • (δ • τ)) = denom γ.val (δ • τ : ℍ) ^ k * g (δ • τ) :=
+    SlashInvariantForm.slash_action_eqn_SL'' g γ.2 _
+  have hd : (denom γ.val (δ • τ : ℍ) : ℂ) ^ k ≠ 0 :=
+    zpow_ne_zero _ (denom_ne_zero _ _)
+  have hhγτ : h (γ.val • (δ • τ)) ≠ 0 := by
+    rw [hhs]
+    exact mul_ne_zero hd hhτ
+  change realize Γ (x : LaurentSeries ℂ) ((γ.val * δ) • τ) =
+    realize Γ (x : LaurentSeries ℂ) (δ • τ)
+  rw [mul_smul, realize_eq_div Γ hT g h x hx _ hhγτ,
+    realize_eq_div Γ hT g h x hx _ hhτ, hgs, hhs, mul_div_mul_left _ _ hd]
+
+theorem cuspOrder_mul_left
+    (x : functionFieldOver Γ ℂ) (γ : Γ) (δ : SL(2, ℤ)) :
+    cuspOrder Γ N (γ.val * δ) x = cuspOrder Γ N δ x :=
+  meromorphicOrderAt_congr (cuspRealize_mul_left_eventuallyEq N hΓ hT x γ δ)
+
+theorem cuspPlace_mul_left (γ : Γ) (δ : SL(2, ℤ)) :
+    cuspPlace N hΓ hT (γ.val * δ) = cuspPlace N hΓ hT δ := by
+  apply Place.ext
+  apply SetLike.ext
+  intro x
+  rw [cuspPlace_mem_iff, cuspPlace_mem_iff, cuspOrder_mul_left N hΓ hT]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,49 @@
+import SourceGammaOneRamifiedMeromorphicOrder
+import SourceGammaOneNearbyOrders
+import SourceGammaOneRamifiedChartOrders
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_ramifiedPlace_eval
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_meromorphicOrderAt
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_nearby_orders
+#print axioms Dubon2026.SourceFunctionField.GammaOne.analyticRamification_param_eventually_one
+#print axioms Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_chart_orders
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceGammaOneRamifiedMeromorphicOrder, `SourceGammaOneNearbyOrders, `SourceGammaOneRamifiedChartOrders]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.meromorphicAt_ramifiedPlace_eval, `Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_meromorphicOrderAt, `Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_nearby_orders, `Dubon2026.SourceFunctionField.GammaOne.analyticRamification_param_eventually_one, `Dubon2026.SourceFunctionField.GammaOne.ramifiedPlace_chart_orders]
+  let constructions : Array Name := #[]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Gamma One Ramified Chart Orders postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Gamma One Ramified Chart Orders theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE RAMIFIED CHART ORDERS AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceGammaOneRamifiedMeromorphicOrder
+#lint in SourceGammaOneNearbyOrders
+#lint in SourceGammaOneRamifiedChartOrders

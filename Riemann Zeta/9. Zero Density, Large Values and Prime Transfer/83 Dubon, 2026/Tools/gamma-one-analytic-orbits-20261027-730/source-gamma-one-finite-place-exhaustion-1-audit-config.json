@@ -1,0 +1,57 @@
+{
+  "modules": [
+    "SourceGammaOneFinitePlaceExhaustion"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.place_cusp_or_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_fiber_realization"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.place_cusp_or_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_fiber_realization"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.place_cusp_or_analytic",
+    "Dubon2026.SourceFunctionField.GammaOne.finite_fiber_realization",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_invariant",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_realization_of_mem_all_analytic_places",
+    "Dubon2026.SourceFunctionField.GammaOne.quotient_cusp_represents",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_meromorphic",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_quotient_cusp_pole_bound",
+    "Dubon2026.SourceFunctionField.GammaOne.isIntegral_of_mem_all_analytic_places",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_j_sub_pos",
+    "Dubon2026.SourceFunctionField.GammaOne.place_residue_bijective",
+    "Dubon2026.SourceFunctionField.GammaOne.finiteDimensional_jCoordinateOver",
+    "Dubon2026.SourceFunctionField.GammaOne.transcendental_jCoordinateOver",
+    "Dubon2026.SourceCurve.Place.mem_of_integral_adjoin",
+    "Dubon2026.SourceCurve.Place.toValuationSubring_eq_of_forall_mem",
+    "Dubon2026.SourceCurve.Place.rationalEval_eq_of_ord_sub_pos"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.finite_fiber_realization",
+    "Dubon2026.SourceFunctionField.GammaOne.place_cusp_or_analytic"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneAnalyticGerms",
+    "SourceGammaOneAnalyticIntegrality",
+    "SourceGammaOneAnalyticJOrders",
+    "SourceGammaOneAnalyticOrder",
+    "SourceGammaOneAnalyticOrderNontrivial",
+    "SourceGammaOneAnalyticPlaces",
+    "SourceGammaOneAnalyticResidues",
+    "SourceGammaOneFinitePlaceExhaustion",
+    "SourceGammaOneHolomorphicFunctions",
+    "SourceGammaOneJRealization",
+    "SourceGammaOneMeromorphicRealization",
+    "SourceGammaOneQuotientCuspSeries",
+    "SourceGammaOneRatioRealization",
+    "SourceGammaOneRealizationAlgebra",
+    "SourceGammaOneTranslatedCuspGerms"
+  ],
+  "separateReason": "All selected declarations are consumed by actual finite-j place and fiber realization, and by the cusp-or-analytic dichotomy. No surjectivity or integral-equation premise remains."
+}

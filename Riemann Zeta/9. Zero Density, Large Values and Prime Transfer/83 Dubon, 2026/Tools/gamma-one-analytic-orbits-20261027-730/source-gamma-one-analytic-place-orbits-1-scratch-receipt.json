@@ -1,0 +1,47 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T07:14:46.104518+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneAnalyticPlaceOrbits"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceOrbits.lean",
+      "sha256": "8B6C9BCD3AB0C0336CD140D440628D66666A653475A31BE7DB00D55DE46E5A7D",
+      "oleanSha256": "9C44409E01B9A84A6B58A5307EDC37F3CF0C74F322C24486B38F18B4C8BF5996"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_eq_iff_gamma1_orbit"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_eq_iff_gamma1_orbit"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceOrbitsAudit1.log",
+  "logSha256": "E898879A4C59C009599A3F876FAE279DA95A3DF247BFE477FE08A82FAFA0EAD4",
+  "auditSha256": "74A49F09A787788386C84BF56CBC808D81A040A100EC301190EFDDB58ACA42E4",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 2,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 7,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceOrbitsDependencyAudit1.log",
+  "dependencyAuditSha256": "D26D388E2B6A5EDC1327567ACB313B35A6207DDCE32AE4C4024F4AF09350C724",
+  "dependencyAuditSourceSha256": "F73F1D64232E4F52EFEEF31DFD8161E31E3CF8CEE0D1C0A4C91BF093E9158476",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_eq_iff_gamma1_orbit"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact ramification -> native Gamma1 modular forms separate every distinct Gamma1 orbit.",
+  "discharged": [
+    "Equality of actual Gamma1 analytic places implies that the points lie in the same actual Gamma1 orbit.",
+    "The reverse implication consumes the already proved actual modular invariance; all nonzero levels and elliptic points remain included."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Exact ramification at elliptic points, global charts, actual periods and complete Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight characteristic-zero association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-analytic-place-orbits-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "0C9C5F817F2FDF50F701BEE215032376B2B331C75E478818D797A94788C06B77",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

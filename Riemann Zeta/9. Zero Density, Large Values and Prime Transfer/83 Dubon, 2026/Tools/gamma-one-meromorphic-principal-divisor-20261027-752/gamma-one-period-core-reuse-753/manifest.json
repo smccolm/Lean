@@ -1,0 +1,36 @@
+{
+  "repository": "anthropics/fermats-last-theorem",
+  "revision": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "externalImport": false,
+  "externalClosureBuilt": false,
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_multiplier_eq_exp_of_abelJacobi_add_petersson_eq_zero_gammaH.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_multiplier_eq_exp_of_abelJacobi_add_petersson_eq_zero_gammaH.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-753\\S_ModularCurve_ComplexPlaceDictionaryOf_multiplier_eq_exp_of_abelJacobi_add_petersson_eq_zero_gammaH.lean.txt",
+      "bytes": 23573,
+      "sha256": "AB4A915C46F78D34EC577A51175BD4EEF533150F6AAF9BF87F963ECACDA50891",
+      "gitBlob": "7780543d04c9a48c94e07bdc5aebc3466e504374",
+      "retrievedUTC": "2026-10-27T11:25:21.916727+00:00"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_six_mul_level_mul_finrank_parabolicHoms_Gamma_add_eq.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_six_mul_level_mul_finrank_parabolicHoms_Gamma_add_eq.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-753\\S_ModularCurve_six_mul_level_mul_finrank_parabolicHoms_Gamma_add_eq.lean.txt",
+      "bytes": 25641,
+      "sha256": "203A9628B153000F8B0E310BAADF4218AAA5134A03B2B059AA605DD21B92950D",
+      "gitBlob": "8ae5eb9c958b1e8389cceebf00e0c0e41b0160b8",
+      "retrievedUTC": "2026-10-27T11:25:22.195798+00:00"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_twelve_mul_add_mul_index_le_finrank_cuspForm_Gamma.lean",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_twelve_mul_add_mul_index_le_finrank_cuspForm_Gamma.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-753\\S_ModularCurve_twelve_mul_add_mul_index_le_finrank_cuspForm_Gamma.lean.txt",
+      "bytes": 16319,
+      "sha256": "CA4F39E051A71A6E95A43BFD5344525CB73783EF38C1419413C499F14D54F21B",
+      "gitBlob": "0038349c35b68797a233250f1f305813695b8b38",
+      "retrievedUTC": "2026-10-27T11:25:22.436366+00:00"
+    }
+  ]
+}

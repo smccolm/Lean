@@ -1,0 +1,46 @@
+import SourceGammaOneCuspPlaceRightInvariance
+import Dubon2026.SourceQExpansionLaurentWidth
+import Dubon2026.SourceLaurentExpansionOrders
+
+/-! DUB-17/18 -> actual Gamma1 period dimension comparison -> exact cusp
+widths. The existing Laurent reindexing and actual cusp-germ realization
+give the exact raw j pole order. Normalization relates it to the actual
+algebraic j-pole order; no cusp-width formula is assumed. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane SourceCurve
+open scoped MatrixGroups
+variable {Γ : Subgroup SL(2, ℤ)}
+
+theorem cuspOrder_jCoordinate_eq_neg_level
+    (N : ℕ) [NeZero N] (hT : ModularGroup.T ∈ Γ) (δ : SL(2, ℤ)) :
+    cuspOrder Γ N δ (jCoordinateOver Γ ℂ) = (-(N : ℤ) : WithTop ℤ) := by
+  have he : cuspRealize Γ N δ (jCoordinateOver Γ ℂ : LaurentSeries ℂ) =
+      cuspFunction N JMultiplicity.jf := by
+    unfold cuspRealize
+    congr 1
+    funext τ
+    rw [realize_jCoordinateOver hT, JMultiplicity.jf_smul]
+  have hn : jqNModC ℂ N ≠ 0 := by
+    simpa only [jqNModC, map_zero] using (qExpand ℂ N).injective.ne (jqModC_ne_zero ℂ)
+  unfold cuspOrder
+  rw [he, (represents_jqNModC N).order hn, jqNModC,
+    laurent_order_qExpand, order_jqModC, mul_neg_one]
+  rfl
+
+theorem cuspRamification_mul_j_pole_order
+    (N : ℕ) [NeZero N] (hΓ : CongruenceSubgroup.Gamma N ≤ Γ)
+    (hT : ModularGroup.T ∈ Γ) (δ : SL(2, ℤ)) :
+    (cuspRamification N hΓ hT δ : ℤ) *
+      (-(cuspPlace N hΓ hT δ).ord (jCoordinateOver Γ ℂ)) = N := by
+  have hn : jCoordinateOver Γ ℂ ≠ 0 := by
+    intro he
+    exact transcendental_jCoordinateOver Γ ℂ (he ▸ isAlgebraic_zero)
+  have ho := cuspPlace_order N hΓ hT δ _ hn
+  rw [cuspOrder_jCoordinate_eq_neg_level N hT δ] at ho
+  have hz : -(N : ℤ) = (cuspRamification N hΓ hT δ : ℤ) *
+      (cuspPlace N hΓ hT δ).ord (jCoordinateOver Γ ℂ) := WithTop.coe_injective ho
+  nlinarith
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

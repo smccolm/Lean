@@ -1,0 +1,69 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T11:19:56.552079+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOnePoleClearedProduct",
+    "SourceGammaOnePoleClearedCuspBounds",
+    "SourceGammaOneMeromorphicFieldRealization"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearedProduct.lean",
+      "sha256": "B195357EDAD0105292EDA8A18E2CCB0BFA916DAC14DA5DE1C436029F0584FD4B",
+      "oleanSha256": "35A6D26D9FD62BAAE1ECA095EBBFC23D5340F536289CA13DF8F0803180C68E0B"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearedCuspBounds.lean",
+      "sha256": "1B24464405C3C418046C46C38BEEA5C1172CAB150D4E37D80BE90B562DC4E253",
+      "oleanSha256": "CEA256DDCD239195666FA109DFA4AA27BA76719020389FCD68D38573CFAAEE6C"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldRealization.lean",
+      "sha256": "DC94E0CFCA7F6A03B5A70B2DAAE0ADC18B0573DCF26241698BEBA331A8B9A9CB",
+      "oleanSha256": "DDE7A18CA0519F380C99CA289F3D3BE3077DE239CACC14E9C451B9E2F31B1E85"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_pole_cleared_holomorphic_product",
+    "Dubon2026.SourceFunctionField.GammaOne.pole_bounds_of_local_product",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphic_cusps_of_holomorphic_pole_bounds",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_prescribed_meromorphic_orders"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_pole_cleared_holomorphic_product",
+    "Dubon2026.SourceFunctionField.GammaOne.pole_bounds_of_local_product",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphic_cusps_of_holomorphic_pole_bounds",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_prescribed_meromorphic_orders"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldAudit1.log",
+  "logSha256": "7A9460FC156499A968DB52EA8120F14F94762F0312C6EE1FB8337A9DD91E6E0A",
+  "auditSha256": "8C220AA7298BB1D8B5C0B446F38316D3B0E780D0481C2467D07587EAEA6E644E",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 6,
+  "linterScopes": 3,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 15,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldDependencyAudit1.log",
+  "dependencyAuditSha256": "932C4B462081C739AEFFFA3BF3F16583EA1390B4B1FD37EB18F4D20216CBB427",
+  "dependencyAuditSourceSha256": "217043CF757133E109447E5B0A9D3C466D54BD39C743420B10126CA6CB8403BA",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_pole_cleared_holomorphic_product",
+    "Dubon2026.SourceFunctionField.GammaOne.pole_bounds_of_local_product",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphic_cusps_of_holomorphic_pole_bounds",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_field_of_prescribed_meromorphic_orders"
+  ],
+  "dependency": "DUB-17/18 -> original all-weight arithmetic association -> actual finite homogeneous-coefficient Gamma1 characters -> Picard/H1/full-parabolic/transpose/diamond comparison -> modular periods -> original meromorphic field realization.",
+  "discharged": [
+    "Consume the original algebraic multiplier and the precise ramification-weighted finite-divisor orders to derive a holomorphic product, actual subgroup invariance, literal local realization and multiplier cusp bounds.",
+    "Cusp pole bounds and meromorphic cusp germs for the actual normalized product, derived from boundedness of the original meromorphic function and the actual multiplier bounds.",
+    "Actual original-field realization of a meromorphic invariant function with the prescribed finite ramification-weighted divisor and bounded translated cusps; nonvanishing and exact normalized analytic-place orders are conclusions."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Transfer nonzero cusp limits to the actual field element, then compose with actual global period existence and reciprocity. Full Picard/Hecke/diamond/H1 and original all-weight arithmetic association remain; 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-meromorphic-field-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "38C9322AD8BAE95C74E76AC90AD262D75EEB82EA69A04A457353C4B77D0C5293",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

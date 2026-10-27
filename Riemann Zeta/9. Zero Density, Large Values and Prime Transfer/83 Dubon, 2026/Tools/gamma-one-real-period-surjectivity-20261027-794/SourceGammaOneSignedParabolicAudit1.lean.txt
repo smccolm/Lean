@@ -1,0 +1,57 @@
+import SourceGammaOneCentralSignCharacters
+import SourceGammaOneSignedParabolicCharacters
+import Mathlib.Tactic
+
+open Lean
+
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CentralSign.exists_representative
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_spec
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CentralSign.real_character_eq_of_square_eq
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_mul_square
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_member_square
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_of_member
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_injective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_parabolic
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift_injective
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters_finite
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOne_parabolic_finrank_le_signed
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative
+#print axioms Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend
+#print axioms Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters
+#print axioms Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift
+
+private def runPlanarPairingAudit : CoreM Unit := do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let modules : Array Name := #[`SourceGammaOneCentralSignCharacters, `SourceGammaOneSignedParabolicCharacters]
+  let theorems : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CentralSign.exists_representative, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_spec, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.real_character_eq_of_square_eq, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_mul_square, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative_member_square, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_of_member, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_injective, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend_parabolic, `Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift_injective, `Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters_finite, `Dubon2026.SourceFunctionField.GammaOne.gammaOne_parabolic_finrank_le_signed]
+  let constructions : Array Name := #[`Dubon2026.SourceFunctionField.GammaOne.CentralSign.representative, `Dubon2026.SourceFunctionField.GammaOne.CentralSign.extend, `Dubon2026.SourceFunctionField.GammaOne.realParabolicCharacters, `Dubon2026.SourceFunctionField.GammaOne.gammaOneParabolicSignLift]
+  for name in theorems do
+    match env.find? name with
+    | none => throwError "Missing theorem: {name}"
+    | some info => if !info.isTheorem then throwError "Incorrect theorem kind: {name}"
+  for name in constructions do
+    match env.find? name with
+    | none => throwError "Missing construction: {name}"
+    | some info =>
+      if info.isTheorem || info.isAxiom then throwError "Incorrect construction kind: {name}"
+      let axioms ← Lean.collectAxioms name
+      if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+        throwError "Forbidden construction dependencies: {name}: {axioms}"
+  let mut count := 0
+  for (name, info) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      if modules.contains env.allImportedModuleNames[idx.toNat]! then
+        if info.isAxiom then throwError "Gamma One Signed Parabolic postulate: {name}"
+        if info.isTheorem then
+          let axioms ← Lean.collectAxioms name
+          if !(axioms.filter fun a => !allowed.contains a).isEmpty then
+            throwError "Forbidden dependencies: {name}: {axioms}"
+          count := count + 1
+  if count == 0 then throwError "No Gamma One Signed Parabolic theorems discovered"
+  logInfo m!"SOURCE GAMMA ONE SIGNED PARABOLIC AUDIT PASS: {count} theorems, {theorems.size} registered consumers and {constructions.size} constructions; standard logical axioms only."
+
+#eval runPlanarPairingAudit
+
+#lint in SourceGammaOneCentralSignCharacters
+#lint in SourceGammaOneSignedParabolicCharacters

@@ -1,0 +1,47 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> full Picard/H1/Hecke/diamond comparison -> reduction of every actual degree-zero divisor class to a finite analytic divisor.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalFinitePlaceSeparation.lean",
+      "sha256": "70269C1296BCFE7AC2B146A8B515559FB918C5313C9FF2170B99CCF6467D3195"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRationalPlaceSeparation.lean",
+      "sha256": "777690747D0911253AC6434A84C54EAB851CD76601E7B70C3DC55992D886071E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurvePrescribedOrders.lean",
+      "sha256": "1BB2FFADCEBA4A7C1D381629741B182AFE03E460F16CC8F482B3FF15ED7E54E0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticDivisorMoving.lean",
+      "sha256": "95AD6879BBBD6FA4527BAD35E5E241B5C8F8C43986D12EF3328D0D6C42AF52DB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFinitePlaceExhaustion.lean",
+      "sha256": "A6256F9FB46ABAEE817F5AE8CCA4C5065A357C2DE97E728EA222C5775EACCCDE"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCurveGeometry.lean",
+      "sha256": "D63E405202426AB42499AA8AC4D90DC3751E07ACA04C3EF8361098A8B1336C2A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteSupport.lean",
+      "sha256": "D040EC3436A75A12FFF1CE1941E96101951C3228D7AD703923E46911BC45320F"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneAnalyticResidues.lean",
+      "sha256": "F5AB5657C210AF58B8CC1B89F26C68D3B80BB035ECD60CCB4950AC774F7BB3B5"
+    }
+  ],
+  "reuseSearch": "Inspected the existing original divisor-moving proof, generic rational residue separation and prescribed-order indicators, actual Gamma1 finite-place exhaustion and finite-coordinate curve geometry. Searched pinned Mathlib valuation/approximation files; the existing proved project indicators directly satisfy the required order contract. No new general valuation approximation theory is needed.",
+  "shorterRoute": "Reuse actual closed residues for pairwise separation, adapt the finite induction already proved for the original Gamma0 field, and apply the generic prescribed-order indicators. Subtract the actual principal divisor with the prescribed orders on the finite support of j, then use actual finite-place exhaustion. This serves both the existing global-chart route and the candidate modular-period route; no cusp atlas is required for this moving step.",
+  "assumptionsToDischarge": [
+    "Prescribe arbitrary integral orders at a finite set of actual Gamma1 places without an approximation certificate.",
+    "Every actual divisor is a principal degree-zero divisor plus a pushforward from upper-half-plane points; if the original degree is zero then the analytic coefficient sum is zero."
+  ],
+  "remaining": "Actual Picard/period isomorphism, Hecke/diamond/full-parabolic arithmetic comparison, original all-weight characteristic-zero association and literal higher symmetric-power continuation. The candidate modular-period route still requires proved period surjectivity, reciprocity, field realization and cusp-order control. 16/20; DUB-17--20 OPEN.",
+  "sourceContract": "Actual integral-ratio function fields and places, all nonzero levels, original divisor degrees and principal relation. No supplied divisor-moving result, approximation or analytic exhaustion.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

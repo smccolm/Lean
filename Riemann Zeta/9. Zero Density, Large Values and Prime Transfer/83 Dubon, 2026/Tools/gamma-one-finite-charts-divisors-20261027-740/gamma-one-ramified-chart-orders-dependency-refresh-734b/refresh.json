@@ -1,0 +1,24 @@
+{
+  "reason": "Previous successful math, linter, VALUE and ownership checks retained. Refresh unchanged 734 proof bodies after removing an unused binder in the previously failed 733 dependency scope. New audit and receipt successor will recheck the final dependency chain.",
+  "modules": [
+    {
+      "module": "SourceGammaOneRamifiedMeromorphicOrder",
+      "sourceSha256": "CFE079129198AC1E9893E773A117FBBA11379E37D9719C27D7000395AE5AF758",
+      "compileExit": "0",
+      "compileLogSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "module": "SourceGammaOneNearbyOrders",
+      "sourceSha256": "53F7AF0C849D1B91E4D91D73F02347981FE65678C6715C4CC9B5E8A8C048E760",
+      "compileExit": "0",
+      "compileLogSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "module": "SourceGammaOneRamifiedChartOrders",
+      "sourceSha256": "1F85B7090D8BE892D5B5E06A42FBBCBF5875F3EE60BCE237A13E4B206ADC555C",
+      "compileExit": "0",
+      "compileLogSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ],
+  "previousReceiptSha256": "802D1709BBC69125B52597031CCD22553AB7967FB3F8722DDA1969B318359FD5"
+}

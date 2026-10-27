@@ -1,0 +1,38 @@
+{
+  "modules": [
+    "SourceGammaOneDivisionForms"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.wpNormZ_slash_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm_slash_gamma0"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.wpNormZ_slash_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm_slash_gamma0",
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.wpNormZ_slash_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm_slash_gamma0",
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm",
+    "Dubon2026.SourceFricke.wpNormZ_slash",
+    "Dubon2026.SourceFricke.mdifferentiable_wpNormZ",
+    "Dubon2026.SourceFricke.isBoundedAtImInfty_wpNormZ"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm_apply",
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm_slash_gamma0",
+    "Dubon2026.SourceFunctionField.GammaOne.divisionForm"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneDivisionForms"
+  ],
+  "separateReason": "The actual native division form is a root as well as its analytic evaluation and Gamma0 slash identity. Its holomorphy and cusp bounds are proved from existing torsion-function results. Orbit separation remains."
+}

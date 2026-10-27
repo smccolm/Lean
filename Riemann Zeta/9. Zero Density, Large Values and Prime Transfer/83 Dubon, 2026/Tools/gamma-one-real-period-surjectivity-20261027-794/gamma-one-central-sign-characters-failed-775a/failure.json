@@ -1,0 +1,18 @@
+{
+  "exit": 1,
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-central-sign-characters-failed-775a\\SourceGammaOneCentralSignCharacters.lean.txt",
+      "sha256": "1966b233c2300b35b48c454a70d525f1370e3c6fbabb91b0330ad5d01520452f"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-central-sign-characters-failed-775a\\SourceGammaOneCentralSignCharacters.log",
+      "sha256": "5440c3041c2f24fceb322370558f0eb83972e814567022b05de7c579a45453c8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-central-sign-characters-failed-775a\\SourceGammaOneCentralSignCharacters.exit",
+      "sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04"
+    }
+  ],
+  "cause": "Explicit subtype-square coercion and extensionality binder already unwrapped Additive."
+}

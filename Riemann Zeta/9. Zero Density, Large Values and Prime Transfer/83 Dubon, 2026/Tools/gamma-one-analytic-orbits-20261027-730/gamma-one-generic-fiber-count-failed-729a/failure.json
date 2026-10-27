@@ -1,0 +1,4 @@
+{
+  "status": "FAILED COMPILE",
+  "reason": "The existing generic multiplicity theorem already gives full stabilizer cardinality two, so no additional division-by-two conversion is needed."
+}

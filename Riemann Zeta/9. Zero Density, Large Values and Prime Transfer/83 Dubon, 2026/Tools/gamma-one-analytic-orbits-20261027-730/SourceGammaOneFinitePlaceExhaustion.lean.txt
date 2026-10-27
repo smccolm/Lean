@@ -1,0 +1,132 @@
+import SourceGammaOneAnalyticIntegrality
+import SourceGammaOneAnalyticJOrders
+import Dubon2026.SourceOriginalFinitePlaceExhaustion
+import Dubon2026.SourceIntegralChartPoleBound
+
+/-! DUB-17/18 -> actual Gamma1 Picard-period comparison -> global charts.
+The actual integral closure of C[j] and the existing inverse-center-ideal
+argument exclude a missing finite place. The new analytic integrality theorem
+supplies the contradiction. Local instances suffice; no duplicate chart
+framework or analytic-place surjectivity assumption is introduced.
+The inverse-center argument reuses SourceOriginalFinitePlaceExhaustion,
+adapted there from anthropics/fermats-last-theorem, Apache-2.0,
+commit 6e837e75355538c7f80bab5b956861e86c4eacc2,
+S_ModularCurve_ComplexPlaceDictionary_exists_pt_eq_of_mem. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve UpperHalfPlane
+open scoped IntermediateField.algebraAdjoinAdjoin nonZeroDivisors MatrixGroups
+variable {Γ : Subgroup SL(2, ℤ)}
+
+private theorem exists_family_place_of_chart
+    {K F : Type*} [Field K] [Field F] [Algebra K F]
+    (B : Type*) [CommRing B] [IsDedekindDomain B] [Algebra B F] [IsFractionRing B F]
+    {I : Type*} (family : I → Place K F)
+    (hw : ∀ i, ∀ b : B, algebraMap B F b ∈ (family i).toValuationSubring)
+    (hclosure : ∀ x : F, (∀ i, x ∈ (family i).toValuationSubring) →
+      x ∈ (algebraMap B F).range)
+    (P : Place K F) (hwP : ∀ b : B, algebraMap B F b ∈ P.toValuationSubring) :
+    ∃ i, family i = P := by
+  by_contra hne
+  push Not at hne
+  have h𝔭0 : Place.center B P hwP ≠ ⊥ := Place.center_ne_bot P hwP
+  have h𝔭max : (Place.center B P hwP).IsMaximal :=
+    (Place.centerHeightOneSpectrum B P hwP).isPrime.isMaximal h𝔭0
+  obtain ⟨x, hx𝔭, hxB⟩ :=
+    FractionalIdeal.exists_notMem_one_of_ne_bot (K := F) h𝔭0 h𝔭max.ne_top
+  have hxall : ∀ i, x ∈ (family i).toValuationSubring := by
+    intro i
+    let Q := family i
+    have hwQ : ∀ b : B, algebraMap B F b ∈ Q.toValuationSubring := hw i
+    have hneq : ¬ Place.center B P hwP ≤ Place.center B Q hwQ := by
+      intro hle
+      have hc := h𝔭max.eq_of_le
+        (Place.centerHeightOneSpectrum B Q hwQ).isPrime.ne_top hle
+      apply hne i
+      apply Place.ext
+      rw [Place.toValuationSubring_eq_of_forall_mem Q hwQ,
+        Place.toValuationSubring_eq_of_forall_mem P hwP]
+      rw [show Place.centerHeightOneSpectrum B Q hwQ =
+        Place.centerHeightOneSpectrum B P hwP from
+          IsDedekindDomain.HeightOneSpectrum.ext hc.symm]
+    obtain ⟨s, hs𝔭, hsQ⟩ := Set.not_subset.mp hneq
+    have hxs : x * algebraMap B F s ∈ (1 : FractionalIdeal B⁰ F) := by
+      have hmem : x * algebraMap B F s ∈
+          ((Place.center B P hwP : FractionalIdeal B⁰ F)⁻¹ *
+            (Place.center B P hwP : FractionalIdeal B⁰ F)) :=
+        FractionalIdeal.mul_mem_mul hx𝔭 (FractionalIdeal.mem_coeIdeal_of_mem _ hs𝔭)
+      rwa [inv_mul_cancel₀ (FractionalIdeal.coeIdeal_ne_zero.mpr h𝔭0)] at hmem
+    obtain ⟨b, hb⟩ := (FractionalIdeal.mem_one_iff _).mp hxs
+    let O := Q.toValuationSubring
+    have hsunit : IsUnit (⟨algebraMap B F s, hwQ s⟩ : O) :=
+      IsLocalRing.notMem_maximalIdeal.mp (fun hm => hsQ ((Place.mem_center_iff Q hwQ).mpr hm))
+    have hv1 : O.valuation (algebraMap B F s) = 1 := (O.valuation_eq_one_iff _).mp hsunit
+    have hs0 : algebraMap B F s ≠ 0 := by
+      intro h0
+      rw [h0, map_zero] at hv1
+      exact zero_ne_one hv1
+    have hxeq : x = algebraMap B F b * (algebraMap B F s)⁻¹ := by
+      rw [hb, mul_inv_cancel_right₀ hs0]
+    rw [← O.valuation_le_one_iff, hxeq, map_mul, map_inv₀, hv1, inv_one, mul_one]
+    exact O.valuation_le_one ⟨_, hwQ b⟩
+  obtain ⟨b, hb⟩ := hclosure x hxall
+  exact hxB ((FractionalIdeal.mem_one_iff _).mpr ⟨b, hb⟩)
+
+theorem exists_analytic_place_eq (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) (hT : ModularGroup.T ∈ Γ)
+    (P : Place ℂ (functionFieldOver Γ ℂ))
+    (hP : jCoordinateOver Γ ℂ ∈ P.toValuationSubring) :
+    ∃ τ : ℍ, analyticPlace hT τ = P := by
+  letI : Γ.FiniteIndex := Subgroup.finiteIndex_of_le hΓ
+  let F := functionFieldOver Γ ℂ
+  let A := Algebra.adjoin ℂ ({jCoordinateOver Γ ℂ} : Set F)
+  let Kj := IntermediateField.adjoin ℂ ({jCoordinateOver Γ ℂ} : Set F)
+  let e := Polynomial.algEquivOfTranscendental ℂ (jCoordinateOver Γ ℂ)
+    (transcendental_jCoordinateOver Γ ℂ)
+  letI : IsPrincipalIdealRing A :=
+    IsPrincipalIdealRing.of_surjective e.toRingEquiv.toRingHom e.surjective
+  letI : FiniteDimensional Kj F := finiteDimensional_jCoordinateOver hT ℂ
+  let B := integralClosure A F
+  haveI : IsDedekindDomain B := integralClosure.isDedekindDomain A Kj F
+  haveI : IsFractionRing B F := integralClosure.isFractionRing_of_finite_extension Kj F
+  apply exists_family_place_of_chart B (analyticPlace hT)
+  · intro τ b
+    have hj : jCoordinateOver Γ ℂ ∈ (analyticPlace hT τ).toValuationSubring := by
+      have h := add_mem ((analyticPlace hT τ).mem_of_ord_nonneg
+        (analyticPlace_j_sub_pos hT τ).le)
+        ((analyticPlace hT τ).algebraMap_mem' (JMultiplicity.jf τ))
+      simpa only [sub_add_cancel] using h
+    exact (analyticPlace hT τ).mem_of_integral_adjoin hj b.property
+  · intro x hx
+    exact ⟨⟨x, isIntegral_of_mem_all_analytic_places N hΓ hT x hx⟩, rfl⟩
+  · exact fun b => P.mem_of_integral_adjoin hP b.property
+
+
+theorem place_cusp_or_analytic (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) (hT : ModularGroup.T ∈ Γ)
+    (P : Place ℂ (functionFieldOver Γ ℂ)) :
+    P.ord (jCoordinateOver Γ ℂ) < 0 ∨ ∃ τ : ℍ, analyticPlace hT τ = P := by
+  rcases lt_or_ge (P.ord (jCoordinateOver Γ ℂ)) 0 with hc | hf
+  · exact Or.inl hc
+  · exact Or.inr (exists_analytic_place_eq N hΓ hT P (P.mem_of_ord_nonneg hf))
+
+theorem finite_fiber_realization (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) (hT : ModularGroup.T ∈ Γ)
+    (P : Place ℂ (functionFieldOver Γ ℂ)) (c : ℂ)
+    (hc : 0 < P.ord (jCoordinateOver Γ ℂ - algebraMap ℂ (functionFieldOver Γ ℂ) c)) :
+    ∃ τ : ℍ, analyticPlace hT τ = P ∧ JMultiplicity.jf τ = c := by
+  letI : Γ.FiniteIndex := Subgroup.finiteIndex_of_le hΓ
+  have hP : jCoordinateOver Γ ℂ ∈ P.toValuationSubring := by
+    simpa only [sub_add_cancel] using add_mem (P.mem_of_ord_nonneg hc.le) (P.algebraMap_mem' c)
+  obtain ⟨τ, hτ⟩ := exists_analytic_place_eq N hΓ hT P hP
+  refine ⟨τ, hτ, ?_⟩
+  have hpos := analyticPlace_j_sub_pos hT τ
+  rw [hτ] at hpos
+  have he := P.rationalEval_eq_of_ord_sub_pos (place_residue_bijective hT P)
+    (jCoordinateOver Γ ℂ) c hc
+  have he' := P.rationalEval_eq_of_ord_sub_pos (place_residue_bijective hT P)
+    (jCoordinateOver Γ ℂ) (JMultiplicity.jf τ) hpos
+  exact he'.symm.trans he
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

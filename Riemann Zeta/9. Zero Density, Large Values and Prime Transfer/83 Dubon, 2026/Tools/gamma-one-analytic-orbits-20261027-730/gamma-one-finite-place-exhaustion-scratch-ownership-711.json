@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "theorems": 4,
+  "modules": 1,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneFinitePlaceExhaustionScratchOwnership711.log",
+  "logSha256": "31480DD664AC821A242023E75FFEC35059196671E2930D55C51136FD0FF56F77",
+  "sourceSha256": "EAFF847A474B903407B540EA3D2DCC1EF2B21D8C87C28E6E3A40325FED14F5C0",
+  "owners": [
+    {
+      "module": "SourceGammaOneFinitePlaceExhaustion",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_analytic_place_eq"
+    },
+    {
+      "module": "SourceGammaOneFinitePlaceExhaustion",
+      "name": "_private.SourceGammaOneFinitePlaceExhaustion.0.Dubon2026.SourceFunctionField.GammaOne.exists_family_place_of_chart"
+    },
+    {
+      "module": "SourceGammaOneFinitePlaceExhaustion",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.finite_fiber_realization"
+    },
+    {
+      "module": "SourceGammaOneFinitePlaceExhaustion",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.place_cusp_or_analytic"
+    }
+  ]
+}

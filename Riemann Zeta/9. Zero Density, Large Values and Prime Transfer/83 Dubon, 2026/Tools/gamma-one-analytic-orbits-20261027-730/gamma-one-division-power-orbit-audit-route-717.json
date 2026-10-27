@@ -1,0 +1,46 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> orbit separation and exact elliptic ramification -> division-value powers imply an actual Gamma1 orbit.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourcePeriodDivisionRotations.lean",
+      "sha256": "4F4C449CF4A03B03EC9A28ED41CE53E84DA4B1991E33B0D9846A4D9E3759A1DC"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisionLatticeOrbit.lean",
+      "sha256": "70F72E6AB74BC87B514498E5F23F6B5C9E1358EDFDCF7D872DC1D39A308BE4B1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFrickePeriodHomothetyV2.lean",
+      "sha256": "896E3B923D354A9CED8FD8C44FCE47073AEA669B4E5587B58A43BDA83866FF33"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFrickeTorsionLattice.lean",
+      "sha256": "B6AAA590AB5F993D67EEB755FD2804D14067E18F55C2D79C1440461CA42AEF46"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourcePeriodWeierstrassSeparation.lean",
+      "sha256": "76DA0CFB2C6EB9B014445AB42B0110A30A52B50625A58622AF219DF835B12238"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceEllipticPeriodModularCurve.lean",
+      "sha256": "B024B45E90D8E2B01303F2175A059693E6EBDCED5A632230D5C46E6813FDC95C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceFrickeSeparation.lean",
+      "sha256": "52FB01BBF2ABAEFC07D78086DD58D679531F2EA72D022DAB1A00BA885E712C09"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-orbit-separation-reuse-712\\S_CohCarrier_exists_mem_GammaH_smul_eq_of_forall_sum_weierstrassP_pow_eq.lean.txt",
+      "sha256": "E6257ED979B4C03CCE0122321214E1AE0C57DE2F0C21D59B4ABCD1388DAC04F2"
+    }
+  ],
+  "shorterRoute": "For Gamma1 only compare the bottom-right division value with the point 1/N. Reuse actual Weierstrass separation, torsion nonlattice criterion, period scaling, ellipticity of the tau period curve, audited rotation lemma and the actual matrix construction. Avoid the general H multiset power-sum argument and new elliptic-curve uniformization. Level one is immediate from native Gamma1 congruences; the substantive nontrivial level case uses the nonzero division points.",
+  "assumptionsToDischarge": [
+    "Derive the actual division-point lattice relation from equality of the appropriate first, second or third powers of Weierstrass values.",
+    "Prove both division points avoid the period lattice and derive period preservation and unit norm from the rotation theorem.",
+    "Produce an actual Gamma1 matrix, not an abstract orbit assumption."
+  ],
+  "remaining": "The modular-form cross-determinant argument must supply these division-value power equalities. Full orbit separation, reverse elliptic ramification, global charts and period/Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and literal higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

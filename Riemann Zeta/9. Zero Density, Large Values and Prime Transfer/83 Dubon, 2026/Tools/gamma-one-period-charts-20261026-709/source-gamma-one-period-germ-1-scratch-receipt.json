@@ -1,0 +1,51 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T04:27:18.170667+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneRegularCuspGerm"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularCuspGerm.lean",
+      "sha256": "F98F1F7267DC066728B4059C0FD1423F052E0AC76D1D992CE1D98D218AFC7AEA",
+      "oleanSha256": "DE406262D67EEF8D6B4C5161260CFE3BA5611813A2E5B8C2AEC1537C78AE079D"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_eq_normalized",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_germ_of_coordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_regularCuspEquiv_germ"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_eq_normalized",
+    "Dubon2026.SourceFunctionField.GammaOne.regularCuspEquiv_germ_of_coordinate",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_regularCuspEquiv_germ"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodGermAudit1.log",
+  "logSha256": "154FE1A5542FB50723D90772F0F4AE79784632FF6365DD0097B4CEDD60DA7F7C",
+  "auditSha256": "0692346072FF66F0D98667895FEB8EE99C7691BF80EE338A17466F9104A7795A",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 6,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 12,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodGermDependencyAudit1.log",
+  "dependencyAuditSha256": "8DF9323144FBE140BADDB3B562DCA134387A0247F2069F1884934B9C8B4CA687",
+  "dependencyAuditSourceSha256": "5C26F1F0A8C6916AF03B2D5D2D1B51B3D9D6B7134810977993CB1DE03A6C78E7",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_regularCuspEquiv_germ"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> arithmetic realization of finite Gamma1 Hecke characters -> original Picard/H1 and full/parabolic transpose/diamond comparison -> actual Picard-period/cusp comparison -> literal analytic differential germ of the Fourier-normalized cusp equivalence.",
+  "discharged": [
+    "The Fourier-normalized actual equivalence agrees with the analytic differential used in period integrals, with the exact 2*pi*i factor.",
+    "A coordinate and its analytic germ are constructed for every original regular differential."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Original analytic chart and period comparison, Hecke/diamond compatibility, Picard/H1 arithmetic realization, all-weight characteristic-zero association and literal higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-period-germ-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "34D49250F8A4FA358F514D758429E1EAB71C01DF2A2AF2630B5024C50A6CA1E3",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,32 @@
+{
+  "repository": "anthropics/fermats-last-theorem",
+  "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "scope": "Selected pinned source files only. Assess whether the exact actual Gamma1 period/Picard contract has a shorter rigorous route before expanding cusp/global chart infrastructure. No full closure, local build, import or pin change.",
+  "files": [
+    {
+      "path": "Definitions/Def_ModularCurve_ComplexPlaceDictionaryOf.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-route-reuse-736\\Def_ModularCurve_ComplexPlaceDictionaryOf.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/Definitions/Def_ModularCurve_ComplexPlaceDictionaryOf.lean",
+      "bytes": 4486,
+      "gitBlob": "50664e5eddc294a5e2d4d7bb076b57ef0f19777d",
+      "sha256": "DD65AC866F371BB1704409250C5931DBD797DFDA5686AF0A8F3557797A58A5C4"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_ord_eq_zero_of_not_mem_of_realizeOf_tendsto.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-route-reuse-736\\S_ModularCurve_ord_eq_zero_of_not_mem_of_realizeOf_tendsto.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_ord_eq_zero_of_not_mem_of_realizeOf_tendsto.lean",
+      "bytes": 14804,
+      "gitBlob": "ee61c54135d430da69cdacd0d34c0adbf604b158",
+      "sha256": "4691669E443815F91075CC91CF2552C5A8FCC61DF61AAB323FFC8D1ADCCB3D9A"
+    },
+    {
+      "path": "P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_exists_cuspForm_mul_exp_periodOf_eq_one_of_abelJacobi_mem_periodLatticeOf_gammaH.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-global-period-route-reuse-736\\S_ModularCurve_ComplexPlaceDictionaryOf_exists_cuspForm_mul_exp_periodOf_eq_one_of_abelJacobi_mem_periodLatticeOf_gammaH.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_ComplexPlaceDictionaryOf_exists_cuspForm_mul_exp_periodOf_eq_one_of_abelJacobi_mem_periodLatticeOf_gammaH.lean",
+      "bytes": 34069,
+      "gitBlob": "a8c52c89d9b0255fcf4d36d5571bfff6a5246590",
+      "sha256": "D75B0AD15C1CFFF309D1564057247E3BFE0AB9553B352532F7DC4C12CE807500"
+    }
+  ]
+}

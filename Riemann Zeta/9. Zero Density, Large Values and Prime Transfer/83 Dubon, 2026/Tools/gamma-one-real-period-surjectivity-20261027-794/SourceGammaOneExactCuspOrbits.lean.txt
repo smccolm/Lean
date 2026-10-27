@@ -1,0 +1,36 @@
+import SourceGammaOneCuspOrbitBijection
+
+/-! DUB-17/18 -> actual Gamma1 period dimension comparison -> exact cusp
+terms. Discharge both elementary subgroup hypotheses for every nonzero
+Gamma1 level, and export the actual cusp-orbit/pole bijection and exact
+orbit-size formula. This is geometry of the original function field;
+real period surjectivity and the arithmetic comparison remain open. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open CongruenceSubgroup CuspCounting
+open scoped MatrixGroups
+
+/-- The actual map from integral translation orbits to original Gamma1 j-pole places. -/
+def gammaOneCuspOrbitPlaceMap (N : ℕ) [NeZero N] :
+    Orbits (Γ := Gamma1 N) → PolePlaces (Gamma1 N) :=
+  orbitToPole N (by intro A hA; simp_all [Gamma1_mem, Gamma_mem])
+    (by simp [Gamma1_mem, ModularGroup.T])
+
+theorem gammaOneCuspOrbitPlaceMap_bijective (N : ℕ) [NeZero N] :
+    Function.Bijective (gammaOneCuspOrbitPlaceMap N) := by
+  unfold gammaOneCuspOrbitPlaceMap
+  exact (gammaOne_orbitToPole_bijective_and_order N _ _).1
+
+theorem gammaOneCuspOrbitPlaceMap_order (N : ℕ) [NeZero N]
+    (q : Orbits (Γ := Gamma1 N)) :
+    -(gammaOneCuspOrbitPlaceMap N q).val.ord (jCoordinateOver (Gamma1 N) ℂ) =
+      (Nat.card (MulAction.orbit (Subgroup.zpowers (translation (Gamma1 N))) q.out) : ℤ) := by
+  unfold gammaOneCuspOrbitPlaceMap
+  exact (gammaOne_orbitToPole_bijective_and_order N _ _).2 q
+
+theorem gammaOne_j_pole_card_eq_translation_orbits (N : ℕ) [NeZero N] :
+    Nat.card (PolePlaces (Gamma1 N)) = Nat.card (Orbits (Γ := Gamma1 N)) :=
+  (Nat.card_eq_of_bijective _ (gammaOneCuspOrbitPlaceMap_bijective N)).symm
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

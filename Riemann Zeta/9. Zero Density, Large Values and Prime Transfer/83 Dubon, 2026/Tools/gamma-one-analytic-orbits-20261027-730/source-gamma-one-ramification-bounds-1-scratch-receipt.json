@@ -1,0 +1,50 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T07:40:28.640020+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneRamificationBounds"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationBounds.lean",
+      "sha256": "593C657495E8A2FB347B371F2BFB32C01383C54584221CE5D4022FC3E8333D6B",
+      "oleanSha256": "312C875216EF14E80D3CA57E31B966CC7E58975D0E96E1CE1A3581F545BC14A2"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_j_multiplicity",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_j_order_le_relative_index"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_j_multiplicity",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_j_order_le_relative_index"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationBoundsAudit1.log",
+  "logSha256": "96736001FF781EA8ABB23E19208CA12E385E54BD433E8EC199DB0F372206B43A",
+  "auditSha256": "DC7D3B7E7EA14D2D11904686F5EF3ADA7FBBF6CF093F03D34C832162B1D65FF8",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 2,
+  "linterScopes": 1,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 7,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRamificationBoundsDependencyAudit1.log",
+  "dependencyAuditSha256": "B145D460B8054968EBD9414E7C0D01ED5EE4D0356A76C41FB9A22EAE41E213F3",
+  "dependencyAuditSourceSha256": "C55245B10B785DFC4ADBEE458E8B12679F96CF35452BA09F779033AD9AD50CED",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_j_multiplicity",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_j_order_le_relative_index"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact elliptic ramification -> compare weighted analytic j fibers with subgroup orbit indices.",
+  "discharged": [
+    "Each actual finite j-fiber order is positive and at most the corresponding subgroup relative stabilizer index.",
+    "Equality in that bound implies twice actual analytic ramification equals the enlarged subgroup stabilizer cardinality."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Exact ramification at elliptic points, global charts, actual periods and complete Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight characteristic-zero association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-ramification-bounds-1-reuse-review-20261026.json",
+  "reuseReviewSha256": "AD1B53A0DB162D019F993171B565C5351ADBE4388D9887E0522CD099FC0E1709",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

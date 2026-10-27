@@ -1,0 +1,48 @@
+from pathlib import Path
+p=Path(__file__).parent
+r=Path(r'E:\Lean\Riemann Zeta\9. Zero Density, Large Values and Prime Transfer\83 Dubon, 2026\Extension\Dubon2026')
+group='Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)'
+def output(n,s):
+    assert not (r/(n+'.lean')).exists()
+    with (p/(n+'.lean')).open('x',encoding='utf-8',newline='\n') as f:f.write(s)
+def body(n):
+    s=(r/(n+'.lean')).read_text(encoding='utf-8')
+    return s[s.index('namespace Dubon2026.SourceFunctionField'):]
+def common(s):
+    s=s.replace('namespace Dubon2026.SourceFunctionField','namespace Dubon2026.SourceFunctionField.GammaOne').replace('end Dubon2026.SourceFunctionField','end Dubon2026.SourceFunctionField.GammaOne')
+    s=s.replace('(CongruenceSubgroup.Gamma0 N)', '(Γ : Subgroup (GL (Fin 2) ℝ))')
+    s=s.replace('modularFunctionFieldOver N ℂ','functionFieldOver Γ ℂ')
+    s=s.replace('original_field_modular_ratio N','functionFieldOver_modular_ratio hT')
+    s=s.replace('realize N','realize Γ').replace('realize_eq_div N','realize_eq_div Γ hT')
+    return s
+s=common(body('SourceOriginalRealizationAlgebra'))
+s=s.replace('(N : ℕ) [NeZero N]', '{Γ : '+group+'} (hT : ModularGroup.T ∈ Γ)')
+s=s.replace('(N : ℕ)', '{Γ : '+group+'} (hT : ModularGroup.T ∈ Γ)')
+s=s.replace('original_realize_', 'realize_')
+s=s.replace('qL_const]', 'qL_const hT]')
+s=s.replace('qL_mul', 'qL_mul hT').replace('qL_add', 'qL_add hT')
+s=s.replace('realize_eventuallyEq_of_ratio ', 'realize_eventuallyEq_of_ratio hT ')
+s=s.replace('mul_ne_zero\' h h\'', 'mul_ne_zero\' hT h h\'')
+output('SourceGammaOneRealizationAlgebra','import SourceGammaOneMeromorphicRealization\n\n/-! DUB-17/18 -> actual Gamma1 differential/cusp converse -> normalized\nanalytic places. Actual modular quotient realization preserves constants\nand the addition and multiplication of punctured germs. Adapt the proved\nSourceOriginalRealizationAlgebra; no germ homomorphism is assumed. -/\n'+s)
+s=common(body('SourceOriginalAnalyticOrder'))
+s=s.replace('variable (N : ℕ) [NeZero N]', 'variable {Γ : '+group+'} (hT : ModularGroup.T ∈ Γ)')
+s=s.replace('omit [NeZero N] in\n', '')
+s=s.replace('originalAnalyticOrder','analyticOrder')
+s=s.replace('def analyticOrder (τ', 'def analyticOrder (Γ : '+group+') (τ')
+s=s.replace('analyticOrder N','analyticOrder Γ')
+s=s.replace('meromorphicOrderAt_original_realize_ne_top N', 'meromorphicOrderAt_realize_ne_top hT')
+s=s.replace('original_realize_', 'realize_')
+s=s.replace('realize_mul_eventuallyEq N', 'realize_mul_eventuallyEq hT').replace('realize_add_eventuallyEq N', 'realize_add_eventuallyEq hT')
+s=s.replace('meromorphicAt_original_realize N', 'meromorphicAt_realize hT')
+s=s.replace('analyticOrder_ne_top N', 'analyticOrder_ne_top hT').replace('analyticOrder_zero N', 'analyticOrder_zero hT').replace('analyticOrder_algebraMap N', 'analyticOrder_algebraMap hT')
+s=s.replace('realize_algebraMap,', 'realize_algebraMap hT,')
+output('SourceGammaOneAnalyticOrder','import SourceGammaOneRealizationAlgebra\n\n/-! DUB-17/18 -> actual Gamma1 differential/cusp converse -> local regularity.\nThe actual meromorphic quotient defines an integer order map with proved\nzero fiber, multiplication, ultrametric addition and constant laws. -/\n'+s)
+s=common(body('SourceOriginalAnalyticOrderNontrivial'))
+s=s.replace('(N : ℕ) [NeZero N]', '{Γ : '+group+'} (hT : ModularGroup.T ∈ Γ)')
+s=s.replace('jOver N ℂ','jCoordinateOver Γ ℂ').replace('transcendental_jOver N ℂ','transcendental_jCoordinateOver Γ ℂ')
+s=s.replace('originalAnalyticOrder','analyticOrder').replace('analyticOrder N','analyticOrder Γ')
+s=s.replace('analyticOrder_ne_top N','analyticOrder_ne_top hT').replace('analyticOrder_mul,','analyticOrder_mul hT,').replace('analyticOrder_one]', 'analyticOrder_one hT]')
+s=s.replace('meromorphicAt_original_realize N', 'meromorphicAt_realize hT')
+s=s.replace('original_realize_add_eventuallyEq N', 'realize_add_eventuallyEq hT').replace('realize_algebraMap N','realize_algebraMap hT')
+output('SourceGammaOneAnalyticOrderNontrivial','import SourceGammaOneAnalyticOrder\n\n/-! DUB-17/18 -> actual Gamma1 differential/cusp converse -> genuine\nnormalized analytic places. The existing transcendental j coordinate\nproves nontriviality of the actual order map. No local ramification\nprofile or place dictionary is assumed. -/\n'+s)
+print('Prepared actual Gamma1 germ algebra, order and nontriviality modules.')

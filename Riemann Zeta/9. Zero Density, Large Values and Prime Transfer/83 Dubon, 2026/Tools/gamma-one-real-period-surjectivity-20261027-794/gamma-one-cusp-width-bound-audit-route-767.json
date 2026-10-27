@@ -1,0 +1,36 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 and Abel-Jacobi -> real period surjectivity -> matching Manin/genus cusp terms -> exact cusp widths.",
+  "assumptionsToDischarge": "The actual rational cusp orbit space is finite and maps onto every j-pole place, by proved invariance and actual cusp exhaustion. Laurent reindexing gives raw j order minus N. The exact nonzero meromorphic uniformizer and translation invariance force N to divide the product of the signed stabilizer translation and the cusp ramification. Thus the algebraic j-pole order is at most every positive signed stabilizer translation. Finiteness, surjectivity, the raw pole order and this bound are derived, not assumed.",
+  "remaining": "Identify the least positive signed stabilizer translation with its finite coset-orbit size; sum sizes to the subgroup index and compare with the j-pole degree to prove injectivity and exact widths. Reverse dimension, real period surjectivity, reciprocity, Picard/Hecke/diamond/H1, full all-weight characteristic-zero association and higher continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceManinCuspSpace.lean",
+      "sha256": "60B451E13D7553A17B000CE60611C3E16BA92D25EB9C665676A02E69C875CC7B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceStabilizerMeromorphicOrder.lean",
+      "sha256": "9BA3276FFC546E3C3ADA909DB22EC6B068905A4BAECFFA1F532E6A1B638D2AF3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceLaurentExpansionOrders.lean",
+      "sha256": "77DBD6943EAF449834674FC9CDE4FA7545F7591614CB27045299B121B08F1C4C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceQExpansionLaurentWidth.lean",
+      "sha256": "0AB9DF23828F13C0E54B61E1DF0401E2E8B97AF93C4280EC9916E8B6481B59CD"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePlusMinus.lean",
+      "sha256": "D8A3E4CFDF527B83F90E6B6B3C85F779F677FAF5D6C931870AC7BE1E7A6D4567"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-width-bound-route-766.json",
+      "sha256": "6F743FCE685A31F14E70A9588BE2E39C2573E8E2240A45995D941982C51E4FA1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-orbit-invariance-1-scratch-receipt.json",
+      "sha256": "FC0A369D24F80013562DC0A6E54DDDF77834C4DBC11BEBE6B849BE4314D19437"
+    }
+  ],
+  "shorterRoute": "Reuse native Laurent-order substitution, actual cusp exhaustion and the existing leading-term stabilizer proof. Direct exponential equality supplies the integer divisibility, avoiding construction of a root-of-unity group or a new width-rescaling analytic chart."
+}

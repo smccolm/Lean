@@ -1,0 +1,53 @@
+{
+  "scope": 759,
+  "chain": "DUB-17/18 -> original all-weight arithmetic association -> actual Gamma1 Hecke-character realization -> Picard/H1 and Abel-Jacobi -> real period surjectivity -> matching dimension bound -> actual Gamma1 cusp-orbit/place comparison.",
+  "exactTarget": "finrank R (sourceGamma1RealParabolicHoms N) <= 2 * finrank C (CuspForm (Gamma1 N) 2), for every nonzero N; consume proved real-period injectivity and finite character target to obtain genuine surjectivity.",
+  "routeAssessment": "The direct Gamma1 route uses its already proved differential/cusp equivalence and exact finite ramification; only actual cusp-orbit/width comparison and the Manin dimension bound need adaptation. The external principal-level route would additionally require full Fricke-field differential realization and normal-subgroup descent. Continue with actual cusp equivalence, also required by the existing global-chart route, before expanding either full dimension proof.",
+  "nextObligation": "Derive invariance of the actual normalized cusp place under left Gamma1 multiplication, then right signed-translation invariance and cusp-width/degree comparison. This identifies the algebraic j-pole places with the cusp terms in the exact Manin inequality.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRegularCuspEquiv.lean",
+      "sha256": "DF051D1554A8612503C66097EE69D4B2D4092E791B54953E294C285C0D948788"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneExactRamification.lean",
+      "sha256": "10E7EB57948F059803A87BC61B846D618160FB6AFE4A59CA0A9CD6B635513D8B"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneJFiberDegree.lean",
+      "sha256": "A1FFAD8B3640C91317F528FFED07A1A531404592D729278306D30DA8C7090DC1"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceManinParabolicDimension.lean",
+      "sha256": "0F4A31AE4E32B165BF8755BC2600B39505E613DA347F217DC26F0C8C12539E1E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceManinRelationDimension.lean",
+      "sha256": "0CCFE3E71744504435942048A466C2C13B24BC4A314B60AA8FCF5A3CD7099073"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePlusMinus.lean",
+      "sha256": "D8A3E4CFDF527B83F90E6B6B3C85F779F677FAF5D6C931870AC7BE1E7A6D4567"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCuspRatioRealization.lean",
+      "sha256": "B38E2DF84980F3546A2C86001BD036A1CEF18A571FF2FD79FEAEB61BABF15AE6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneAnalyticPlaceInvariance.lean",
+      "sha256": "FE2C884244A4A0EB037BCCDBA0C27E106D8D5319013802C5E9B2801E03D1F1BA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-exhaustion-1-scratch-receipt.json",
+      "sha256": "028C916EE20AD07A96B06F1AEB6F83C494D1A94FFC3B379066512A64801AA883"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-real-period-injectivity-1-scratch-receipt.json",
+      "sha256": "93A114CB4E9D70E5A451CB5383C49DFE670E7E4DB702FF83A3F3CFFA8349715A"
+    }
+  ],
+  "remaining": "Cusp-orbit bijection and exact widths, reverse dimension inequality, real-period surjectivity, reciprocity and original arithmetic comparisons remain. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false
+}

@@ -1,0 +1,32 @@
+{
+  "modules": [
+    "SourceGammaOneModularPointSeparation"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_separating_modular_forms"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_separating_modular_forms"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_separating_modular_forms",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_separating_forms_of_gamma0_orbit",
+    "Dubon2026.SourceFunctionField.exists_original_separating_modular_forms",
+    "Dubon2026.SourceFunctionField.ModularNormPolynomial.restrict"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_separating_modular_forms"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneDiamondSeparation",
+    "SourceGammaOneDivisionForms",
+    "SourceGammaOneDivisionLatticeOrbit",
+    "SourceGammaOneDivisionPowerOrbit",
+    "SourceGammaOneModularPointSeparation",
+    "SourceOriginalModularPointSeparation",
+    "SourcePeriodDivisionRotations"
+  ],
+  "separateReason": "The full Gamma1 separating-form theorem consumes both orbit-separation branches and native form restriction."
+}

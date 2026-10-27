@@ -1,0 +1,63 @@
+{
+  "scope": 700,
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> actual finite Gamma1 character arithmetic realization -> Picard/H1 and full/parabolic/transpose/diamond comparison -> actual regular-differential/cusp comparison -> converse regular differential to cusp form.",
+  "modules": [
+    "SourceGammaOneRatioRealization",
+    "SourceGammaOneAnalyticGerms",
+    "SourceGammaOneMeromorphicRealization",
+    "SourceGammaOneRealizationAlgebra",
+    "SourceGammaOneAnalyticOrder",
+    "SourceGammaOneAnalyticOrderNontrivial",
+    "SourceGammaOneAnalyticPlaces",
+    "SourceGammaOneJRealization",
+    "SourceGammaOneRegularCoefficientOrders",
+    "SourceGammaOneAnalyticJOrders",
+    "SourceGammaOneAnalyticDifferentialRegularity",
+    "SourceGammaOneHolomorphicDifferentials"
+  ],
+  "assumptionsToDischarge": "Every nonzero coefficient x of an actual regular differential x D(j) on the original complex Gamma1 integral-ratio field has a native holomorphic weight-two realization with the exact modular quotient identity and Gamma covariance. No analytic realization, local place, normalization factor, finite-point regularity, local ramification bound or removable-singularity certificate remains assumed. Translation membership and finite index are source group conditions, automatic for Gamma1 at nonzero level.",
+  "remaining": "All-cusp vanishing and exact differential Fourier matching remain before the complete regular-differential-to-cusp converse. Coefficient-field transport, actual Picard/H1, full/parabolic, transpose and diamond comparison, original finite character arithmetic realization, original all-weight association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. The full goal and all twenty acceptance gates are unchanged; 16/20; DUB-17--20 OPEN.",
+  "shorterRouteReview": "Use the proved actual Gamma1 modular quotient, native analytic identity theorem, existing normalized order-map-to-place theorem and existing exact local derivative order. At an actual complex point, regularity gives ord(x)>=1-ord(j-j(tau)); multiplying by the positive analytic ramification and the exact derivative order gives ord(x*j-prime)>=e-1>=0. This proves finite holomorphy without constructing a global finite-place dictionary or proving a global Gamma1 ramification profile. Cusp decay still needs a corresponding actual slash-expansion order argument. The existing Gamma0 analytic proof supplies the local pattern; no Gamma0-specific place or bound is assumed for Gamma1.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-local-converse-route-700.json",
+      "sha256": "E2249796502DD9C211DDEC39B0816304C865BDF6C914B7DF1799521E4AA3E7A7"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularRatioEvaluation.lean",
+      "sha256": "A626E503597FA63B665378CA1B9D28D72FD18B6F38B1A6D98E30751EAD4166A2"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularRatioGerms.lean",
+      "sha256": "4620A3110F8687A4101EC2CE2DE81B1D319201A535A4C83B4A09CC689EC0CA53"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalMeromorphicRealization.lean",
+      "sha256": "11B1A7D188C9B68D9A8BFCC7F3A3D322D0396797B0FCD07604867BFE8373C360"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalRealizationAlgebra.lean",
+      "sha256": "CDC14D0CF0FC9DCC2E3AF474EE870FEA71DC8E28FC9A389A9F349E14EFB69F70"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveOrderMapPlaces.lean",
+      "sha256": "A7BD95E34295CB5DE135FA25F4B19FF3763DD97B12F9185FD171AD7C480C062D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveExactDerivativeOrder.lean",
+      "sha256": "DDBEC9CA3FE003784331E009920F73D2D6644EDFB707029E1624773E84A90A36"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCurveGeometry.lean",
+      "sha256": "D63E405202426AB42499AA8AC4D90DC3751E07ACA04C3EF8361098A8B1336C2A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneFieldModularRatio.lean",
+      "sha256": "E5BB6FDB3C0786077E35745193EE1EFED126C629209FC2BC1E96815EBA546133"
+    }
+  ],
+  "externalImport": false,
+  "externalFullClosureVerified": false,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,55 @@
+{
+  "modules": [
+    "SourceGammaOneRamificationIsolation",
+    "SourceGammaOneUnramifiedCharts"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_dvd_full_stabilizer_half",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eq_one_of_generic",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eventually_one",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_unramified_analytic_chart",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_generic_analytic_chart"
+  ],
+  "constructions": [],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_dvd_full_stabilizer_half",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eq_one_of_generic",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eventually_one",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_unramified_analytic_chart",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_generic_analytic_chart"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_dvd_full_stabilizer_half",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eq_one_of_generic",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticRamification_eventually_one",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_unramified_analytic_chart",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_generic_analytic_chart",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_order",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_j_sub",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_meromorphicOrderAt",
+    "Dubon2026.SourceFunctionField.GammaOne.placeEval_analyticAt_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.meromorphicNFAt_placeEval",
+    "Dubon2026.SourceFunctionField.JMultiplicity.main",
+    "Dubon2026.SourceCurve.AnalyticDisc.exists_parameter_of_evaluation_family"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_generic_analytic_chart"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneAnalyticEvaluation",
+    "SourceGammaOneAnalyticGerms",
+    "SourceGammaOneAnalyticJOrders",
+    "SourceGammaOneAnalyticOrder",
+    "SourceGammaOneAnalyticOrderNontrivial",
+    "SourceGammaOneAnalyticPlaces",
+    "SourceGammaOneAnalyticResidues",
+    "SourceGammaOneJRealization",
+    "SourceGammaOneMeromorphicRealization",
+    "SourceGammaOneRamificationIsolation",
+    "SourceGammaOneRatioRealization",
+    "SourceGammaOneRealizationAlgebra",
+    "SourceGammaOneUnramifiedCharts"
+  ],
+  "separateReason": "All selected declarations feed the actual generic analytic place chart, whose radius and normalized orders are constructed."
+}

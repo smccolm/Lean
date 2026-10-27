@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "theorems": 5,
+  "modules": 2,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceInvarianceScratchOwnership713.log",
+  "logSha256": "C9F2C723965B25A84062A3989E267111FC1C14DE3FE544DEF0CDB612C555E971",
+  "sourceSha256": "9AC3A5F837AD0DD17E5015FF4C19225DF39F0D22CF234D940DA06C86D91E964D",
+  "owners": [
+    {
+      "module": "SourceGammaOneStabilizerRamification",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.analyticRamification.congr_simp"
+    },
+    {
+      "module": "SourceGammaOneAnalyticPlaceInvariance",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.realize_smul_eventuallyEq"
+    },
+    {
+      "module": "SourceGammaOneStabilizerRamification",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.stabilizer_card_dvd_two_mul_ramification"
+    },
+    {
+      "module": "SourceGammaOneAnalyticPlaceInvariance",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul"
+    },
+    {
+      "module": "SourceGammaOneAnalyticPlaceInvariance",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_smul"
+    }
+  ]
+}

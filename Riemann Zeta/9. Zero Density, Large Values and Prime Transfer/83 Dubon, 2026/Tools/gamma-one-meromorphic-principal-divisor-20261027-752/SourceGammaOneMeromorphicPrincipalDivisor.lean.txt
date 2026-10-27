@@ -1,0 +1,69 @@
+import SourceGammaOneMeromorphicCuspLimits
+import SourceGammaOneCuspPlaceExhaustion
+import Dubon2026.SourceCurvePicardGroup
+
+/-! DUB-17/18 -> original all-weight arithmetic association -> actual finite
+Gamma1 characters -> Picard/H1 and modular periods -> principal-divisor
+converse. The exact meromorphic function contract now gives a literal
+principal divisor in the original field. Nonzero limits control every
+j-pole place using proved actual cusp exhaustion. Constructing the function
+from an Abel-Jacobi period condition remains a separate obligation. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup SourceCurve Filter
+open scoped MatrixGroups Topology
+
+theorem isPrincipal_of_prescribed_meromorphic_orders
+    (N : ℕ) [NeZero N] (hT : ModularGroup.T ∈ Gamma1 N)
+    (D : Divisor ℂ (functionFieldOver (Gamma1 N) ℂ))
+    (hD : ∀ P : Place ℂ (functionFieldOver (Gamma1 N) ℂ),
+      P.ord (jCoordinateOver (Gamma1 N) ℂ) < 0 → D P = 0)
+    (F : ℍ → ℂ)
+    (hm : ∀ τ : ℍ, MeromorphicAt (F ∘ ofComplex) (τ : ℂ))
+    (hinv : ∀ γ ∈ Gamma1 N, ∀ τ : ℍ, F (γ • τ) = F τ)
+    (hcusp : ∀ γ : SL(2, ℤ), ∃ c : ℂ, c ≠ 0 ∧
+      Tendsto (F ∘ (γ • ·)) atImInfty (𝓝 c))
+    (ho : ∀ τ : ℍ, meromorphicOrderAt (F ∘ ofComplex) (τ : ℂ) =
+      (((analyticRamification hT τ : ℤ) * D (analyticPlace hT τ) : ℤ) : WithTop ℤ)) :
+    Divisor.IsPrincipal D := by
+  have hΓ : Gamma N ≤ Gamma1 N := by
+    intro γ hγ
+    simp_all [Gamma1_mem, Gamma_mem]
+  have hbounded (γ : SL(2, ℤ)) : IsBoundedAtImInfty (F ∘ (γ • ·)) := by
+    obtain ⟨c, _, hc⟩ := hcusp γ
+    exact hc.isBigO_one ℝ
+  obtain ⟨x, hx0, hxr, hxo⟩ :=
+    exists_original_field_of_prescribed_meromorphic_orders N hT D F hm hinv hbounded ho
+  have hlim (γ : SL(2, ℤ)) : ∃ c : ℂ, c ≠ 0 ∧
+      Tendsto (cuspRealize (Gamma1 N) N γ (x : LaurentSeries ℂ)) (𝓝[≠] (0 : ℂ)) (𝓝 c) := by
+    obtain ⟨c, hc, hl⟩ := hcusp γ
+    exact ⟨c, hc, cuspRealize_tendsto_of_local_eq N hΓ hT x F hxr γ hl⟩
+  refine ⟨x, hx0, fun P => ?_⟩
+  by_cases hP : P.ord (jCoordinateOver (Gamma1 N) ℂ) < 0
+  · rw [hD P hP, order_eq_zero_at_j_poles_of_cusp_limits N hΓ hT x hx0 hlim P hP]
+  · obtain ⟨τ, rfl⟩ := exists_analytic_place_eq N hΓ hT P
+      (P.mem_of_ord_nonneg (le_of_not_gt hP))
+    exact (hxo τ).symm
+
+theorem analytic_divisor_isPrincipal_of_meromorphic_function
+    (N : ℕ) [NeZero N] (hT : ModularGroup.T ∈ Gamma1 N) (c : ℍ →₀ ℤ) (F : ℍ → ℂ)
+    (hm : ∀ τ : ℍ, MeromorphicAt (F ∘ ofComplex) (τ : ℂ))
+    (hinv : ∀ γ ∈ Gamma1 N, ∀ τ : ℍ, F (γ • τ) = F τ)
+    (hcusp : ∀ γ : SL(2, ℤ), ∃ L : ℂ, L ≠ 0 ∧
+      Tendsto (F ∘ (γ • ·)) atImInfty (𝓝 L))
+    (ho : ∀ τ : ℍ, meromorphicOrderAt (F ∘ ofComplex) (τ : ℂ) =
+      (((analyticRamification hT τ : ℤ) *
+        Finsupp.mapDomain (analyticPlace hT) c (analyticPlace hT τ) : ℤ) : WithTop ℤ)) :
+    Divisor.IsPrincipal (Finsupp.mapDomain (analyticPlace hT) c) := by
+  apply isPrincipal_of_prescribed_meromorphic_orders N hT _ _ F hm hinv hcusp ho
+  intro P hP
+  apply Finsupp.mapDomain_notin_range
+  rintro ⟨τ, rfl⟩
+  have hj : jCoordinateOver (Gamma1 N) ℂ ∈ (analyticPlace hT τ).toValuationSubring := by
+    have hh := add_mem ((analyticPlace hT τ).mem_of_ord_nonneg (analyticPlace_j_sub_pos hT τ).le)
+      ((analyticPlace hT τ).algebraMap_mem' (JMultiplicity.jf τ))
+    simpa only [sub_add_cancel] using hh
+  exact (not_le_of_gt hP) ((analyticPlace hT τ).mem_iff_ord_nonneg.mp hj)
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

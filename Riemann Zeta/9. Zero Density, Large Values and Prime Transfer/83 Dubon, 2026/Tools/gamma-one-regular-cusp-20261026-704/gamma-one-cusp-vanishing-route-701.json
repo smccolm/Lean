@@ -1,0 +1,46 @@
+{
+  "scope": 701,
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight association -> actual finite Gamma1 character arithmetic realization -> actual Picard/H1 and full/parabolic/transpose/diamond comparison -> regular differential/cusp converse -> vanishing at every cusp.",
+  "precedingFiniteHolomorphy": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-local-holomorphy-12-scratch-receipt.json",
+    "sha256": "FA3FD70DE720E7EE3293CDC2A682101E803B4903C25540687D4B8DEC4C1DF38F"
+  },
+  "shorterRoute": "Reuse the native translated modular forms and the proved principal-congruence translation width. Their analytic cusp functions give actual meromorphic quotient germs for the original function field. Normalize the cusp order by the existing order-map place theorem. The already proved regular coefficient bound applies with c=0 at the pole of j. The existing nonzero raw j-derivative formula and the unit cusp values of E4/E6 give the same pole order as j, so the realized differential has positive cusp order. The existing positive-order criterion yields cusp vanishing. This avoids a global Gamma1 ramification classification, inverse-j monic reconstruction and numerical degree bound.",
+  "assumptionsToDischarge": [
+    "Analytic nonzero denominator germs for every translated actual modular quotient",
+    "Actual cusp order valuation laws and nontriviality",
+    "Positive cusp order of every slash translate of the actual regular differential",
+    "Actual cusp-form construction and exact Fourier matching; coefficient-field transport remains"
+  ],
+  "existingReuse": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCuspAuxiliaryForm.lean",
+      "sha256": "41EDB3674B214E70AEFF9874A11572D6E119E4C7FE728BADA425C6371F483FC6"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspVanishingOrder.lean",
+      "sha256": "AB6BC90482F843722F1CD6407C1D6055DB47C82D3EBB2A7D1B84980475960294"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspLaurentFunctionIdentity.lean",
+      "sha256": "FFCF94431B3026BC65A21B2C9A84A5550B068E7912F1C1EC6B7176EF0AAC46F0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCuspMeromorphicGerms.lean",
+      "sha256": "A75421FC5D89D6B695F1D12A44CAF0D2562EF7A3CAD0E413AF5FACDA02C41C6A"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveOrderMapPlaces.lean",
+      "sha256": "A7BD95E34295CB5DE135FA25F4B19FF3763DD97B12F9185FD171AD7C480C062D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceInverseJDerivativePower.lean",
+      "sha256": "8ADD1C5E8E742F46AF3D18CD2E26237F5B62040353FAE637568785AD469B5469"
+    }
+  ],
+  "status": "Development route; finite holomorphy is scratch-audited, cusp vanishing is not yet proved.",
+  "gates": "16/20; DUB-17--20 OPEN; full all-weight goal unchanged.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false
+}

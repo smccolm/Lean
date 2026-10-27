@@ -1,0 +1,61 @@
+import Dubon2026.SourceGammaOneCuspPlaceLeftInvariance
+
+/-! DUB-17/18 -> actual Gamma1 Picard/period comparison -> real period
+surjectivity -> matching cusp terms in the Manin/genus bounds.
+A real translation rotates the actual cusp parameter, and the central
+negative identity fixes the actual cusp place. These are the remaining
+actions needed to descend cusp places to rational cusp orbits. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open UpperHalfPlane Filter Function SourceCurve
+open scoped MatrixGroups Topology
+
+theorem cuspFunction_vadd_eventuallyEq {h : ℝ} (hh : 0 < h)
+    (f : ℍ → ℂ) (hf : Periodic (f ∘ ofComplex) h) (a : ℝ) :
+    cuspFunction h (fun τ : ℍ => f (a +ᵥ τ)) =ᶠ[𝓝[≠] (0 : ℂ)]
+      fun q => cuspFunction h f (Periodic.qParam h a * q) := by
+  have hn : ∀ᶠ q in 𝓝[≠] (0 : ℂ), ‖q‖ < 1 :=
+    eventually_nhdsWithin_of_eventually_nhds (by
+      simpa using (continuous_norm.tendsto (0 : ℂ)).eventually (gt_mem_nhds (by norm_num : ‖(0 : ℂ)‖ < 1)))
+  filter_upwards [self_mem_nhdsWithin, hn] with q hq hnq
+  let z := Periodic.invQParam h q
+  have hz : 0 < z.im := Periodic.im_invQParam_pos_of_norm_lt_one hh hnq hq
+  have he : Periodic.qParam h ((a +ᵥ ofComplex z : ℍ) : ℂ) =
+      Periodic.qParam h a * q := by
+    rw [coe_vadd, ofComplex_apply_of_im_pos hz]
+    change Periodic.qParam h ((a : ℂ) + z) = _
+    calc
+      Periodic.qParam h ((a : ℂ) + z) =
+          Periodic.qParam h a * Periodic.qParam h z := by
+        simp only [Periodic.qParam, mul_add, add_div, Complex.exp_add]
+      _ = _ := by rw [Periodic.qParam_right_inv hh.ne' hq]
+  change Periodic.cuspFunction h ((fun τ : ℍ => f (a +ᵥ τ)) ∘ ofComplex) q = _
+  rw [Periodic.cuspFunction_eq_of_nonzero _ _ hq]
+  change f (a +ᵥ ofComplex z) = _
+  rw [← he, eq_cuspFunction _ hh.ne' hf]
+
+theorem cuspRealize_neg {Γ : Subgroup SL(2, ℤ)} (N : ℕ)
+    (x : LaurentSeries ℂ) (δ : SL(2, ℤ)) :
+    cuspRealize Γ N (-δ) x = cuspRealize Γ N δ x := by
+  unfold cuspRealize
+  congr 1
+  funext τ
+  rw [ModularGroup.SL_neg_smul]
+
+theorem cuspOrder_neg {Γ : Subgroup SL(2, ℤ)} (N : ℕ)
+    (x : functionFieldOver Γ ℂ) (δ : SL(2, ℤ)) :
+    cuspOrder Γ N (-δ) x = cuspOrder Γ N δ x := by
+  unfold cuspOrder
+  rw [cuspRealize_neg]
+
+theorem cuspPlace_neg {Γ : Subgroup SL(2, ℤ)} (N : ℕ) [NeZero N]
+    (hΓ : CongruenceSubgroup.Gamma N ≤ Γ) (hT : ModularGroup.T ∈ Γ)
+    (δ : SL(2, ℤ)) :
+    cuspPlace N hΓ hT (-δ) = cuspPlace N hΓ hT δ := by
+  apply Place.ext
+  apply SetLike.ext
+  intro x
+  rw [cuspPlace_mem_iff, cuspPlace_mem_iff, cuspOrder_neg]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "theorems": 2,
+  "modules": 1,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceOrbitsScratchOwnership723.log",
+  "logSha256": "F8DA2FB4EE83748DC5E63856A12E5495D44F6C473FD940EC9104F7EEC1A2243D",
+  "sourceSha256": "5D2B2243830995397D8A6F1080D975FF80B44B8B988F94DE31557AAE475B9C6D",
+  "owners": [
+    {
+      "module": "SourceGammaOneAnalyticPlaceOrbits",
+      "name": "_private.SourceGammaOneAnalyticPlaceOrbits.0.Dubon2026.SourceFunctionField.GammaOne.place_ne_of_separating_ratio"
+    },
+    {
+      "module": "SourceGammaOneAnalyticPlaceOrbits",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_eq_iff_gamma1_orbit"
+    }
+  ]
+}

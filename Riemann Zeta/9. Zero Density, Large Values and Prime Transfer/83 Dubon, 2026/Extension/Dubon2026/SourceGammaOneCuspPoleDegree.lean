@@ -1,0 +1,49 @@
+import Dubon2026.SourceGammaOneCuspCosetPlaces
+import Dubon2026.SourceGammaOneExactRamification
+
+/-! DUB-17/18 -> actual Gamma1 period dimension comparison -> exact cusp
+widths. The existing positive-order degree theorem, applied to inverse j,
+computes the total of all actual j-pole orders. The proved original
+field degree identifies this total with the central-sign subgroup index. -/
+namespace Dubon2026.SourceFunctionField.GammaOne
+noncomputable section
+open SourceCurve IntermediateField
+open scoped MatrixGroups IntermediateField
+
+theorem sum_j_pole_orders_eq_finrank
+    {Γ : Subgroup SL(2, ℤ)} [Γ.FiniteIndex] (hT : ModularGroup.T ∈ Γ) :
+    (∑ᶠ P : {P : Place ℂ (functionFieldOver Γ ℂ) // P.ord (jCoordinateOver Γ ℂ) < 0},
+      -P.val.ord (jCoordinateOver Γ ℂ)) =
+        (Module.finrank ℂ⟮jCoordinateOver Γ ℂ⟯ (functionFieldOver Γ ℂ) : ℤ) := by
+  have ht : Transcendental ℂ (jCoordinateOver Γ ℂ)⁻¹ :=
+    fun h => transcendental_jCoordinateOver Γ ℂ (IsAlgebraic.inv_iff.mp h)
+  letI := finiteDimensional_jCoordinateOver hT ℂ
+  haveI : FiniteDimensional ℂ⟮(jCoordinateOver Γ ℂ)⁻¹⟯ (functionFieldOver Γ ℂ) := by
+    rw [adjoin_singleton_inv_eq]
+    infer_instance
+  have he := sum_positive_orders_eq_finrank_adjoin (jCoordinateOver Γ ℂ)⁻¹ ht
+  have hr (P : Place ℂ (functionFieldOver Γ ℂ)) :
+      Module.finrank ℂ P.ResidueField = 1 :=
+    Module.finrank_of_bijective_algebraMap (place_residue_bijective hT P)
+  rw [SourceCurve.adjoin_singleton_inv_eq] at he
+  simp only [hr, Nat.cast_one, mul_one] at he
+  let e : {P : Place ℂ (functionFieldOver Γ ℂ) // P.ord (jCoordinateOver Γ ℂ) < 0} ≃
+      {P : Place ℂ (functionFieldOver Γ ℂ) // 0 < P.ord (jCoordinateOver Γ ℂ)⁻¹} :=
+    Equiv.subtypeEquivRight (fun P => by rw [P.ord_inv]; omega)
+  rw [← finsum_comp_equiv e] at he
+  convert he using 1
+  apply finsum_congr
+  intro P
+  change -P.val.ord (jCoordinateOver Γ ℂ) = P.val.ord (jCoordinateOver Γ ℂ)⁻¹
+  rw [P.val.ord_inv]
+
+theorem sum_j_pole_orders_eq_index (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ CongruenceSubgroup.Gamma1 N) :
+    (∑ᶠ P : {P : Place ℂ (functionFieldOver (CongruenceSubgroup.Gamma1 N) ℂ) //
+        P.ord (jCoordinateOver (CongruenceSubgroup.Gamma1 N) ℂ) < 0},
+      -P.val.ord (jCoordinateOver (CongruenceSubgroup.Gamma1 N) ℂ)) =
+        ((plusMinus (CongruenceSubgroup.Gamma1 N)).index : ℤ) := by
+  rw [sum_j_pole_orders_eq_finrank hT, finrank_over_j_eq_index N hT]
+
+end
+end Dubon2026.SourceFunctionField.GammaOne

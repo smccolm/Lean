@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "theorems": 19,
+  "modules": 3,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResiduesScratchOwnership706.log",
+  "logSha256": "3DFFC306C74D56FF454AA7B68EAADCE552A39B50FE604764139AFBA50841A22B",
+  "sourceSha256": "2C56B04461657F150AFE8BE543CC7827CAB5CD0AE33BEC364CCF8C257D513AD1",
+  "owners": [
+    {
+      "module": "SourceGammaOneAnalyticResidues",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_mem_iff"
+    },
+    {
+      "module": "SourceGammaOneAnalyticResidues",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.analyticPlace.congr_simp"
+    },
+    {
+      "module": "SourceGammaOneAnalyticResidues",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.placeEval._proof_2"
+    },
+    {
+      "module": "SourceGammaOneAnalyticEvaluation",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.meromorphicNFAt_placeEval"
+    },
+    {
+      "module": "SourceGammaOneEvaluationRealizationGerms",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.placeEval_eq_realize_of_analyticAt"
+    },
+    {
+      "module": "SourceGammaOneAnalyticEvaluation",
+      "name": "_private.SourceGammaOneAnalyticEvaluation.0.Dubon2026.SourceFunctionField.GammaOne.eval_germ_normalForm"
+    },
+    {
+      "module": "SourceGammaOneAnalyticResidues",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.place_residue_bijective"
+    },
+    {
+      "module": "SourceGammaOneAnalyticResidues",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.regular_analytic_representative"
+    },
+    {
+      "module": "SourceGammaOneAnalyticEvaluation",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.placeEval_analyticAt_iff"
+    },
+    {
+      "module": "SourceGammaOneAnalyticEvaluation",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.placeEval.eq_1"
+    },
+    {
+      "module": "SourceGammaOneAnalyticResidues",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.realize_sub_constant_eventuallyEq"
+    },
+    {
+      "module": "SourceGammaOneAnalyticEvaluation",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.placeEval_meromorphicOrderAt"
+    },
+    {
+      "module": "SourceGammaOneAnalyticResidues",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.placeEval._proof_3"
+    },
+    {
+      "module": "SourceGammaOneAnalyticResidues",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.realize_tendsto_residue"
+    },
+    {
+      "module": "SourceGammaOneAnalyticEvaluation",
+      "name": "_private.SourceGammaOneAnalyticEvaluation.0.Dubon2026.SourceFunctionField.GammaOne.eval_eq_normalForm"
+    },
+    {
+      "module": "SourceGammaOneAnalyticResidues",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.placeEval.congr_simp"
+    },
+    {
+      "module": "SourceGammaOneEvaluationRealizationGerms",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.placeEval_eventuallyEq_realize"
+    },
+    {
+      "module": "SourceGammaOneAnalyticEvaluation",
+      "name": "Dubon2026.SourceCurve.Place.rationalEval.eq_1"
+    },
+    {
+      "module": "SourceGammaOneAnalyticResidues",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.placeEval._proof_1"
+    }
+  ]
+}

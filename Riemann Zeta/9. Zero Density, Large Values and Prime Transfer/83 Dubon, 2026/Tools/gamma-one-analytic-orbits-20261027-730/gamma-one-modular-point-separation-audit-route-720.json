@@ -1,0 +1,29 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact ramification -> native Gamma1 modular forms separate every distinct Gamma1 orbit.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceOriginalModularPointSeparation.lean",
+      "sha256": "01F5B9FD4ED1EC15BDD566CBC69621B0F30A0C8D79B7E529FB69B0D438C9FDC6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDiamondSeparation.lean",
+      "sha256": "ED5648A7663EDC4B36DF5E4D9E908E2A3EE06C794742E30B62F37C9009F6A9B0"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularNormPolynomial.lean",
+      "sha256": "CD66E1DBF537A518EA1F268B575987233B3553AE6AC9370AA322EAB472DF92A4"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\.lake\\packages\\mathlib\\Mathlib\\NumberTheory\\ModularForms\\CongruenceSubgroups.lean",
+      "sha256": "DF53B80B64A6DCD7B8AB7F87BD8092D77C557FCAA53857C23C507F9D894A23C0"
+    }
+  ],
+  "shorterRoute": "Combine the actual Gamma0 orbit separation via existing integral-closure centers with the division-form separation inside a Gamma0 orbit. Restrict actual Gamma0 forms to Gamma1 with existing ModularNormPolynomial.restrict and native Gamma1_in_Gamma0; no new analytic or algebraic infrastructure.",
+  "assumptionsToDischarge": [
+    "For every pair of points in different Gamma1 orbits, construct actual native same-weight Gamma1 modular forms with unequal cross determinants.",
+    "All levels and elliptic points are included through the proved two branches."
+  ],
+  "remaining": "Use the separating ratio in the actual Gamma1 complex function field to prove equality of analytic places iff Gamma1 orbit; then exact ramification, global charts, full period/Hecke/diamond/Picard/H1 arithmetic comparison, all-weight association and higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

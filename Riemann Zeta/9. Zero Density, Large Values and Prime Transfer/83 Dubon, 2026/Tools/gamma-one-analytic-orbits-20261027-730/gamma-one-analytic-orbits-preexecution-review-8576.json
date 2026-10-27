@@ -1,0 +1,71 @@
+{
+  "status": "Prepared; preceding 8554 canonical PASS and archive verified. Review before integration.",
+  "route": "gamma-one-analytic-orbits-promotion-route-730.json",
+  "routeSha256": "22E8A1F432B2733B9EA1F91A9478E1FA990356D7BF2379B990712A66AE67EF77",
+  "modules": 22,
+  "queries": 62,
+  "theorems": 55,
+  "constructions": 7,
+  "exhaustiveScratchChecks": 94,
+  "proofValueEdges": 156,
+  "scopes": 19,
+  "receipts": {
+    "source-gamma-one-analytic-integrality-3-scratch-receipt.json": "DE02F3372BD9B59906C0789B6216036878E01A3DF7AE2521F76F5BBF01A4168D",
+    "source-gamma-one-finite-place-exhaustion-1-scratch-receipt.json": "E6ABA2BC1900AF8FC78F2971B769058177725787F34615E098D407D9395ECCAB",
+    "source-gamma-one-place-invariance-2-scratch-receipt.json": "CAF1D5DE07912D6B1048E62B935AD1CF75F04DB1020E5090992235289A3B7728",
+    "source-period-division-rotations-1-scratch-receipt.json": "6B135B560212A73DA7A79997FFD3D4F1FAB82AD0AF8196A78182D500D5BF0E59",
+    "source-gamma-one-division-forms-1-scratch-receipt.json": "67A2A455EA1489E8E70FA2DC6BB040EF75FABB413740476585EF12D6C27D32EE",
+    "source-gamma-one-division-lattice-orbit-1-scratch-receipt.json": "32FAE029F6C85A6674F82D0DBEC95FE5BF024878EB149827FCA22182DCDAC7D3",
+    "source-gamma-one-division-power-orbit-1-scratch-receipt.json": "96F84FF2A813BA0004ADD24646450143483EB550B8EDFAB31741F035D86AB39E",
+    "source-gamma-one-diamond-separation-1-scratch-receipt.json": "517813D4345F31C96A98B3DE808C4FBB79CEF3ECACA7FFC634392BBF885DA4CE",
+    "source-original-modular-point-separation-1-scratch-receipt.json": "98D205F22A03C26BA0175429CDAC130CDF4D7AE4436FEF1B1FD21BB747BB02C3",
+    "source-gamma-one-modular-point-separation-1-scratch-receipt.json": "1449BDB83A3C1E4D85CFA28BFE4891E0AA58D9078792D5E53DA8214389B4A432",
+    "source-gamma-one-normalized-cusp-ratios-1-scratch-receipt.json": "6FFE06FBAE7EFF5C61EBA4930EDCA9337CF676EE77C23DCFFE7078464B576D31",
+    "source-gamma-one-all-modular-ratio-membership-1-scratch-receipt.json": "9D7D4F6B76F1EB1A6EA9E70FF839B711879CF29E01627A2397B0D557956AD650",
+    "source-gamma-one-analytic-place-orbits-1-scratch-receipt.json": "D52D4331D09869EB85F20229D34019F2F31B50432C198A4C689C2404B1E8D6B9",
+    "source-gamma-one-j-fiber-degree-1-scratch-receipt.json": "943E77399FF995F37355E06EDA98162D973C727DCB20B3E0B1495633042DACCE",
+    "source-gamma-one-orbit-counting-1-scratch-receipt.json": "C89C2847D212987771C58DB12BFC1B2D9844DDB176D2ECFD35A0F149F85E9DC7",
+    "source-gamma-one-plus-minus-1-scratch-receipt.json": "773B88EB4C09248847B30BD0097C0179E1E282FC837E32BB8D1B2AA2E312960C",
+    "source-gamma-one-ramification-bounds-1-scratch-receipt.json": "1E199DC17E2C99AD8CD8BEF854D08DCC688B8C237435959B7B7BF3757AB06055",
+    "source-gamma-one-j-fiber-orbits-1-scratch-receipt.json": "EF215FD0B404AB2A819AFEBF0F9D0DBD4061B8B10B7DB6F8AA39C5FDCCD412EB",
+    "source-gamma-one-generic-fiber-count-1-scratch-receipt.json": "111594BF58E3B4E90AF2CB9A96E24D70B2660283A3410EBA057CF22420CA2977"
+  },
+  "expectedConsumers": 24792,
+  "expectedConstructions": 2464,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_analytic_orbits_8576.py",
+      "sha256": "CB353ABBA76BC18B07DC53E3AEEC67B229F1EA8F7071DA46F15A3F298810F1C6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_analytic_orbits_production_ownership_8576.py",
+      "sha256": "55FE4340D980BAE6D1E0A18366EE6CC4D0A3A10DEBC67F723F10588B746218EA"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_analytic_orbits_global_ownership_8576.py",
+      "sha256": "051D3A5CB1F343CD953AFE7D57BC5DBE30D2F83171E84F9029C1BF61A7E401B6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_analytic_orbits_ownership_8576.py",
+      "sha256": "32E6C06B020F04815CDF3DE92680C240102E155EAC41B9EC14824F7DC090B7F8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_analytic_orbits_8576.py",
+      "sha256": "04D3347A4DC908C3EC0D131439CE9BA3D85A755992C5F729EC69FB57E49212E2"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_analytic_orbits_8576.ps1",
+      "sha256": "04F0EA3A26DBDCFE434D783F7E566CB1A899C15AB3BFA748B8FA05013C50704E"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_analytic_orbits_8576.ps1",
+      "sha256": "88199B9B373CF715EF8AC3842DEAC2CDF7287C666703114050795A0633329142"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_analytic_orbits_canonical_8576.py",
+      "sha256": "3172F4F8C0E1D51596381AF742B0B240CD20B56167CFFD85B940BAD309E747EE"
+    }
+  ],
+  "productionMutation": false
+}

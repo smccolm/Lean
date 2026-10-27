@@ -1,0 +1,24 @@
+{
+  "repository": "anthropics/fermats-last-theorem",
+  "commit": "6e837e75355538c7f80bab5b956861e86c4eacc2",
+  "license": "Apache-2.0",
+  "scope": "Selected pinned source files only. No full closure, local build, import or pin change.",
+  "files": [
+    {
+      "path": "P2M/Sol/S_ModularCurve_ord_eq_three_of_ord_pos_and_ord_sub_eq_two_laurentBaseChange_gamma1_algebraicClosure.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\S_ModularCurve_ord_eq_three_of_ord_pos_and_ord_sub_eq_two_laurentBaseChange_gamma1_algebraicClosure.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularCurve_ord_eq_three_of_ord_pos_and_ord_sub_eq_two_laurentBaseChange_gamma1_algebraicClosure.lean",
+      "bytes": 29940,
+      "gitBlob": "5c6284a5c2f183452db84b07cc279a76ce182f17",
+      "sha256": "D55C38FB15261E90648D96128FC828E8AA6C67F4A003EE456964D80D6A2150E3"
+    },
+    {
+      "path": "P2M/Sol/S_ModularForm_exists_gammaH_apply_mul_apply_ne_of_forall_smul_ne.lean",
+      "file": "E:\\Lean\\.tmp\\dubon83\\gamma-one-ramification-core-reuse-708\\S_ModularForm_exists_gammaH_apply_mul_apply_ne_of_forall_smul_ne.lean.txt",
+      "url": "https://raw.githubusercontent.com/anthropics/fermats-last-theorem/6e837e75355538c7f80bab5b956861e86c4eacc2/P2M/Sol/S_ModularForm_exists_gammaH_apply_mul_apply_ne_of_forall_smul_ne.lean",
+      "bytes": 2136,
+      "gitBlob": "37dd66ae28f2d4bf52f6b2d2810943b12fa3e734",
+      "sha256": "192E6397FC8095D35FE8F00E8A2D701E351CE88507C087E167F360534C7BB828"
+    }
+  ]
+}

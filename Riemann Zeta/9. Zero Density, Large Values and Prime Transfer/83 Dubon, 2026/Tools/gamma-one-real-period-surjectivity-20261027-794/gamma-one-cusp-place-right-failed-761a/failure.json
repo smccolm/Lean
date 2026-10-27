@@ -1,0 +1,18 @@
+{
+  "exit": 1,
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761a\\SourceGammaOneCuspPlaceRightInvariance.lean.txt",
+      "sha256": "5b404e7bb0f9162005026dd730d2d75a7506b4e0b611405f9a21fc3fac510ad4"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761a\\SourceGammaOneCuspPlaceRightInvariance.log",
+      "sha256": "8b8fb91b23e1892900ccc5350ddc56eedd232deadf2821b17e2eeebe629af145"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-place-right-failed-761a\\SourceGammaOneCuspPlaceRightInvariance.exit",
+      "sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04"
+    }
+  ],
+  "cause": "SL denominator coercion simplification; implicit q-parameter width; scalar continuity inference; composed eventual-equality reduction."
+}

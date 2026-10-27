@@ -1,0 +1,69 @@
+{
+  "modules": [
+    "SourceGammaOnePlusMinus"
+  ],
+  "theorems": [
+    "Dubon2026.SourceFunctionField.GammaOne.le_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.neg_one_mem_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.mem_plusMinus_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma_smul_eq_of_mem_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.two_le_card_stabilizer_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinus_stabilizer_card_dvd_two_mul_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinusFiniteIndex"
+  ],
+  "constructions": [
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinus"
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.le_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.neg_one_mem_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.mem_plusMinus_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma_smul_eq_of_mem_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.two_le_card_stabilizer_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinus_stabilizer_card_dvd_two_mul_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinusFiniteIndex"
+  ],
+  "proofEdges": [
+    "Dubon2026.SourceFunctionField.GammaOne.le_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.neg_one_mem_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.mem_plusMinus_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma_smul_eq_of_mem_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.two_le_card_stabilizer_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinus_stabilizer_card_dvd_two_mul_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinusFiniteIndex",
+    "Dubon2026.SourceFunctionField.SubgroupStabilizer.main",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.functionFieldOver_modular_ratio"
+  ],
+  "roots": [
+    "Dubon2026.SourceFunctionField.GammaOne.le_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.neg_one_mem_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.mem_plusMinus_iff",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_gamma_smul_eq_of_mem_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.two_le_card_stabilizer_plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinus_stabilizer_card_dvd_two_mul_ramification",
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinus",
+    "Dubon2026.SourceFunctionField.GammaOne.plusMinusFiniteIndex"
+  ],
+  "separatelyAxiomChecked": [],
+  "scratchImportClosure": [
+    "SourceGammaOneAnalyticGerms",
+    "SourceGammaOneAnalyticOrder",
+    "SourceGammaOneAnalyticOrderNontrivial",
+    "SourceGammaOneAnalyticPlaceInvariance",
+    "SourceGammaOneAnalyticPlaces",
+    "SourceGammaOneAnalyticResidues",
+    "SourceGammaOneMeromorphicRealization",
+    "SourceGammaOnePlusMinus",
+    "SourceGammaOneRatioRealization",
+    "SourceGammaOneRealizationAlgebra",
+    "SourceGammaOneStabilizerRamification"
+  ],
+  "separateReason": "The central-sign enlargement preserves actual orbits and analytic places and supplies stabilizer divisibility for the original field uniformizer."
+}

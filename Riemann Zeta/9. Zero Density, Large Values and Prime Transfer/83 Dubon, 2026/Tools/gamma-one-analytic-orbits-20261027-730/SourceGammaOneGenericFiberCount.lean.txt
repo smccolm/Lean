@@ -1,0 +1,65 @@
+import SourceGammaOneJFiberOrbits
+import SourceGammaOneRamificationBounds
+import Dubon2026.SourceAnalyticJSurjectivity
+
+/-! DUB-17/18 -> actual Gamma1 global charts -> exact elliptic ramification.
+The existing surjectivity of j supplies a genuine generic point at j=1.
+The actual fiber there has total order equal to the subgroup index.
+This replaces a new fundamental-domain calculation for a chosen point.
+The fixed-degree fiber theorem will transfer the total to every fiber. -/
+namespace Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits
+noncomputable section
+open UpperHalfPlane CongruenceSubgroup
+open scoped MatrixGroups StabilizerCharacter SubgroupStabilizer GammaOne
+
+private theorem exists_card_stabilizer_two :
+    ∃ τ : ℍ, Nat.card (MulAction.stabilizer SL(2, ℤ) τ) = 2 := by
+  obtain ⟨τ, hj⟩ := JMultiplicity.jf_surjective 1
+  have h4 : ModularForm.E₄ τ ≠ 0 := by
+    intro hz
+    have h := hj
+    change ModularForm.E₄ τ ^ 3 / ModularForm.discriminant τ = 1 at h
+    rw [hz, zero_pow (by decide : 3 ≠ 0), zero_div] at h
+    exact zero_ne_one h
+  have h6 : ModularForm.E₆ τ ≠ 0 := by
+    intro hz
+    have h := (JMultiplicity.jf_eq_of_E₆_eq_zero hz).symm.trans hj
+    norm_num at h
+  exact ⟨τ, (JMultiplicity.case_generic h4 h6).2⟩
+
+theorem sum_relative_indices_eq_index (N : ℕ) [NeZero N] (τ : ℍ)
+    [Fintype (OrbitQuot N τ)] :
+    (∑ q : OrbitQuot N τ,
+      ((plusMinus (Gamma1 N)).relIndex (MulAction.stabilizer SL(2, ℤ) (rep N τ q)) : ℤ)) =
+        ((plusMinus (Gamma1 N)).index : ℤ) := by
+  have h := OrbitCounting.finsum_relIndex_stabilizer_eq_index (plusMinus (Gamma1 N)) τ
+  rw [finsum_eq_sum_of_fintype] at h
+  exact_mod_cast h
+
+theorem exists_fiber_order_sum_eq_index (N : ℕ) [NeZero N]
+    (hT : ModularGroup.T ∈ Gamma1 N) :
+    ∃ τ : ℍ, (∑ᶠ P : Fiber N τ, P.1.ord (jCoordinateOver (Gamma1 N) ℂ -
+      algebraMap ℂ (functionFieldOver (Gamma1 N) ℂ) (JMultiplicity.jf τ))) =
+        ((plusMinus (Gamma1 N)).index : ℤ) := by
+  classical
+  obtain ⟨τ, hτ⟩ := exists_card_stabilizer_two
+  haveI := finite_orbitQuot N τ
+  letI : Fintype (OrbitQuot N τ) := Fintype.ofFinite _
+  refine ⟨τ, ?_⟩
+  rw [← sum_orders N hT τ, ← sum_relative_indices_eq_index N τ]
+  apply Finset.sum_congr rfl
+  intro q _
+  have hs := two_le_card_stabilizer_plusMinus (Gamma1 N) (rep N τ q)
+  have hb := OrbitCounting.relIndex_stabilizer_mul_card_stabilizer
+    (plusMinus (Gamma1 N)) (rep N τ q)
+  rw [card_stabilizer_rep, hτ] at hb
+  have hle : (plusMinus (Gamma1 N)).relIndex
+      (MulAction.stabilizer SL(2, ℤ) (rep N τ q)) ≤ 1 := by nlinarith
+  have hle' : ((plusMinus (Gamma1 N)).relIndex
+      (MulAction.stabilizer SL(2, ℤ) (rep N τ q)) : ℤ) ≤ 1 := by exact_mod_cast hle
+  have hp := analytic_j_order_le_relative_index hT (rep N τ q)
+  rw [j_rep] at hp
+  omega
+
+end
+end Dubon2026.SourceFunctionField.GammaOne.AnalyticFiberOrbits

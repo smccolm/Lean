@@ -1,0 +1,52 @@
+{
+  "status": "Prepared only. Integration requires preceding canonical PASS and archive.",
+  "modules": 13,
+  "queries": 31,
+  "theorems": 31,
+  "constructions": 0,
+  "exhaustiveScratchChecks": 40,
+  "proofValueEdges": 79,
+  "scopes": 6,
+  "receipts": {
+    "source-gamma-one-cusp-residues-1-scratch-receipt.json": "2F1EACCE6E23FDFFE316865260110175EA89ABA52C305803C7EB157D0D43B12F",
+    "source-gamma-one-cusp-exhaustion-1-scratch-receipt.json": "028C916EE20AD07A96B06F1AEB6F83C494D1A94FFC3B379066512A64801AA883",
+    "source-gamma-one-holomorphic-field-1-scratch-receipt.json": "32E41826F238016A886D15A69C61C38ECF954A56CB6EA71D9A4ABCF708D83AA8",
+    "source-gamma-one-pole-clearing-normalization-1-scratch-receipt.json": "7C5F0099EB393DC9052EE6BE5EDAEBB0D6B0F895155217BC73DD061D378B4F7A",
+    "source-gamma-one-meromorphic-field-1-scratch-receipt.json": "FADC57811E5FCDBAEFC7F70DB4081EAE46685E6E3DCC1524A07A56A799AF6BF7",
+    "source-gamma-one-meromorphic-principal-divisor-1-scratch-receipt.json": "CBFF760F67E11EA122C34E4604CCBEE59C9C032DBB22480205A75545D052B15C"
+  },
+  "expectedConsumers": 24844,
+  "expectedConstructions": 2465,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all twenty gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_meromorphic_principal_divisor_8599.py",
+      "sha256": "AC431A7ABEC4D995395F56A08517783B7C4204871137D0954954459EA505074A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_meromorphic_principal_divisor_production_ownership_8599.py",
+      "sha256": "9A9E4F7CC572F06C45064484A151C324597AD73D5AA70F2D5BDEBCBEE606B348"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_meromorphic_principal_divisor_global_ownership_8599.py",
+      "sha256": "D557C04C5D847B2BD7B6C484FA5EC1C828DBB8A462B31F980EEFE483EB05F083"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_meromorphic_principal_divisor_ownership_8599.py",
+      "sha256": "8E6FA5380D3AD1B372F25633ACAE683E0D63993006A97B04B4656A84631E5CAB"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_meromorphic_principal_divisor_8599.py",
+      "sha256": "6C2E07998AD905ED83F2A2F18A074ABA1FA3E8FE8D2CC85CD910FB79BDC89C86"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_meromorphic_principal_divisor_8599.ps1",
+      "sha256": "A663FD741A2B450CD5CC8B3DEB387701A30996ED62017B56841729B9941707CE"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_meromorphic_principal_divisor_8599.ps1",
+      "sha256": "E464C417B70DD62169E3B84034D9A44AB78C11B0BA50CD4342359786BDA36A0A"
+    }
+  ],
+  "productionMutation": false
+}

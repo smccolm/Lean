@@ -1,0 +1,979 @@
+{
+  "files": [
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-principal-divisor-promotion-route-752.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-meromorphic-principal-divisor-promotion-route-752.json",
+      "sha256": "4D76F4FEBC9BF11B31766DBE9DDD134E91818BF83A6A92AF4B6D6146F706FA79"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspBoundedRealization.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspBoundedRealization.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspBoundedRealization.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspBoundedRealization.lean.txt",
+      "sha256": "D1D7F873E802C2C3E91D75E6C21C75A20568389334A87F9E28D86E5B8DBCAC69"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspBoundedRealization.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspBoundedRealization.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspExhaustionAudit1.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspExhaustionAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspExhaustionAudit1.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspExhaustionAudit1.lean.txt",
+      "sha256": "A31A56384397BA43A818065F09C32FCFC7A156425C4FA0B51160569625CDC336"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspExhaustionAudit1.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspExhaustionAudit1.log",
+      "sha256": "665139A99BD5704B1F7E91E71209A4C5BDD3CA6048542E559798B062C4AF04BC"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspExhaustionDependencyAudit1.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspExhaustionDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspExhaustionDependencyAudit1.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspExhaustionDependencyAudit1.lean.txt",
+      "sha256": "B948F88F6F4B0ECAB2FB6713A44F87CCFDC0D8CE7A5F69484006EEEF8A02BCCF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspExhaustionDependencyAudit1.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspExhaustionDependencyAudit1.log",
+      "sha256": "A08E48DF8C3501C33884F23F6C564C31A659C684C90D88190E295D023D361C81"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspExhaustionScratchOwnership743.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspExhaustionScratchOwnership743.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspExhaustionScratchOwnership743.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspExhaustionScratchOwnership743.lean.txt",
+      "sha256": "B68178469EDEF05D76F73464A720610B019C7CC86871FDC238A1203404D88B88"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspExhaustionScratchOwnership743.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspExhaustionScratchOwnership743.log",
+      "sha256": "DE30B35F449027BD019A658752EC94C34C86532191EBA536BE82E1B0FE3FCDC6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPlaceExhaustion.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspPlaceExhaustion.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPlaceExhaustion.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspPlaceExhaustion.lean.txt",
+      "sha256": "EA2A0681688AEA7BEAE678FAC085668A85A719E7FE0565BFFD6D9783A3D97BD5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspPlaceExhaustion.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspPlaceExhaustion.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResidues.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspResidues.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResidues.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspResidues.lean.txt",
+      "sha256": "8758D75A8136557A54075839F03773133574AF5076DCB28CCFB4C16123D6846F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResidues.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspResidues.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResiduesAudit1.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspResiduesAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResiduesAudit1.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspResiduesAudit1.lean.txt",
+      "sha256": "5821BBAABC96266EF2ACC377DEB4AB586CBA9650FC9A02B2ABA3C8F2540BE49D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResiduesAudit1.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspResiduesAudit1.log",
+      "sha256": "194F6FC748F8DB7C764DBD935959A5ACF565D70F216AEDFBB846A84DCE21DAC7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResiduesDependencyAudit1.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspResiduesDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResiduesDependencyAudit1.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspResiduesDependencyAudit1.lean.txt",
+      "sha256": "8A8E1369254E0D5161CF936C68E8AC31AF4571D156E43E1E279CB8EB68EAC26E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResiduesDependencyAudit1.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspResiduesDependencyAudit1.log",
+      "sha256": "5935B07C99DF51EA9D3B6B393A173A185329E60E87B9A99D6C58EB2E00F214BB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResiduesScratchOwnership742.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspResiduesScratchOwnership742.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResiduesScratchOwnership742.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspResiduesScratchOwnership742.lean.txt",
+      "sha256": "8302FCCFDAE8A4D3907614D2C16C594E49C5A06D5B7BB646930BC5AF00E08E79"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneCuspResiduesScratchOwnership742.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneCuspResiduesScratchOwnership742.log",
+      "sha256": "56D3458B9DB45DE5C8019C75586BF2B352F775782441081DD3898CCE250EA50F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldAudit1.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneHolomorphicFieldAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldAudit1.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneHolomorphicFieldAudit1.lean.txt",
+      "sha256": "9518967CA83784DF9749C2D002D37D699318A96E3635D2A5C0230EDB8AB3D925"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldAudit1.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneHolomorphicFieldAudit1.log",
+      "sha256": "E1C48D0B7D48E09B4FC244BD95D4C0BDAC55EA058A567C9D0BBF6170943EE0B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldDependencyAudit1.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneHolomorphicFieldDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldDependencyAudit1.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneHolomorphicFieldDependencyAudit1.lean.txt",
+      "sha256": "41F99B8088BBAC990B0C99EE4DC60F444C2BF69C27DE69598DBD695D198A5248"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldDependencyAudit1.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneHolomorphicFieldDependencyAudit1.log",
+      "sha256": "B24C64FF98AE05C5F0EEADBE73744A5D95A77F2299FD92AB0267377A2E109B0E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldRealization.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneHolomorphicFieldRealization.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldRealization.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneHolomorphicFieldRealization.lean.txt",
+      "sha256": "30042838C4B2CB48621A0E736D94673375B2B22ADD0EDF0E72A49EA5DCF40FB0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldRealization.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneHolomorphicFieldRealization.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldScratchOwnership744.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneHolomorphicFieldScratchOwnership744.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldScratchOwnership744.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneHolomorphicFieldScratchOwnership744.lean.txt",
+      "sha256": "333275DA8ABBD622055F2A250C568C77F04774B7430547DA1737CDEB19CF0A79"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicFieldScratchOwnership744.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneHolomorphicFieldScratchOwnership744.log",
+      "sha256": "B1BE6DA9AD7F80DEBF44908476C981E58C3D21A47D5C7AC36224976268B30F5E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicModularQuotient.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneHolomorphicModularQuotient.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicModularQuotient.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneHolomorphicModularQuotient.lean.txt",
+      "sha256": "3615B6B5798C4BBE514257FB679706B6502B9E96FFC5C4788487F384641745A4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneHolomorphicModularQuotient.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneHolomorphicModularQuotient.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicCuspLimits.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicCuspLimits.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicCuspLimits.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicCuspLimits.lean.txt",
+      "sha256": "67169F583ACFA9C4F6AA8515A473FAF472B4042DE13D63B1411A94928EBD871C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicCuspLimits.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicCuspLimits.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldAudit1.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicFieldAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldAudit1.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicFieldAudit1.lean.txt",
+      "sha256": "8C220AA7298BB1D8B5C0B446F38316D3B0E780D0481C2467D07587EAEA6E644E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldAudit1.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicFieldAudit1.log",
+      "sha256": "7A9460FC156499A968DB52EA8120F14F94762F0312C6EE1FB8337A9DD91E6E0A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldDependencyAudit1.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicFieldDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldDependencyAudit1.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicFieldDependencyAudit1.lean.txt",
+      "sha256": "217043CF757133E109447E5B0A9D3C466D54BD39C743420B10126CA6CB8403BA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldDependencyAudit1.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicFieldDependencyAudit1.log",
+      "sha256": "932C4B462081C739AEFFFA3BF3F16583EA1390B4B1FD37EB18F4D20216CBB427"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldRealization.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicFieldRealization.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldRealization.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicFieldRealization.lean.txt",
+      "sha256": "DC94E0CFCA7F6A03B5A70B2DAAE0ADC18B0573DCF26241698BEBA331A8B9A9CB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldRealization.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicFieldRealization.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldScratchOwnership749.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicFieldScratchOwnership749.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldScratchOwnership749.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicFieldScratchOwnership749.lean.txt",
+      "sha256": "0067E5C1E311F639AC05BC357E44CA3E8DF5BF44FECFAA0E78BF642BB7BB310A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicFieldScratchOwnership749.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicFieldScratchOwnership749.log",
+      "sha256": "25A43FCE450B7EE46AF61736E0D3B19F50BC008123501309D91F0F26B455381F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisor.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicPrincipalDivisor.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisor.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicPrincipalDivisor.lean.txt",
+      "sha256": "06E5FFDB66F99ECCC1FAE95EDCFC0FF26CC81694D462B87605745D7860D0E3EB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisor.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicPrincipalDivisor.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorAudit1.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicPrincipalDivisorAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorAudit1.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicPrincipalDivisorAudit1.lean.txt",
+      "sha256": "C8EB575217FAABCE624DDA6851BE9FC58A65336D9CC52327C6EA98095B4C070A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorAudit1.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicPrincipalDivisorAudit1.log",
+      "sha256": "DACD3C7A1ACEE47976D5BA5DE63291A2377E2E176469259719BE1993CE16DA44"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorDependencyAudit1.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicPrincipalDivisorDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorDependencyAudit1.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicPrincipalDivisorDependencyAudit1.lean.txt",
+      "sha256": "C9F856F41CE9B16F56F7035DF6B7D5AB405DC658F6ED90CC339F01CC94284077"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorDependencyAudit1.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicPrincipalDivisorDependencyAudit1.log",
+      "sha256": "63656E01E765C8D46660F0610EC366A885CCB65BB08141E6B690927A39367D87"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorScratchOwnership751.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicPrincipalDivisorScratchOwnership751.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorScratchOwnership751.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicPrincipalDivisorScratchOwnership751.lean.txt",
+      "sha256": "B72D7CD751017715EEF156C9CE8B73033E84C5BBC00D39BA3E8A46C6F035632D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorScratchOwnership751.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneMeromorphicPrincipalDivisorScratchOwnership751.log",
+      "sha256": "43245126112C73FA181266EE77DF360A697CC9048F4147E99BD336B6F0C52EA5"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalPoleMultiplier.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneOriginalPoleMultiplier.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalPoleMultiplier.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneOriginalPoleMultiplier.lean.txt",
+      "sha256": "309B6DA1385D0E447E82C90498F98048939C4958C83B78DE04954BFE8C1C1A08"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalPoleMultiplier.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneOriginalPoleMultiplier.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearedCuspBounds.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOnePoleClearedCuspBounds.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearedCuspBounds.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOnePoleClearedCuspBounds.lean.txt",
+      "sha256": "1B24464405C3C418046C46C38BEEA5C1172CAB150D4E37D80BE90B562DC4E253"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearedCuspBounds.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOnePoleClearedCuspBounds.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearedNormalization.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOnePoleClearedNormalization.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearedNormalization.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOnePoleClearedNormalization.lean.txt",
+      "sha256": "4EA0F5A259ABB716451A0267977811EB4FFDFD0249514BB89C4505DD94697508"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearedNormalization.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOnePoleClearedNormalization.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearedProduct.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOnePoleClearedProduct.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearedProduct.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOnePoleClearedProduct.lean.txt",
+      "sha256": "B195357EDAD0105292EDA8A18E2CCB0BFA916DAC14DA5DE1C436029F0584FD4B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearedProduct.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOnePoleClearedProduct.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearingNormalizationAudit1.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOnePoleClearingNormalizationAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearingNormalizationAudit1.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOnePoleClearingNormalizationAudit1.lean.txt",
+      "sha256": "E63E02C18BA6F0BB4CDB2CBCB13D3915FA7073DB741C74A430B5764C30CA97C9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearingNormalizationAudit1.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOnePoleClearingNormalizationAudit1.log",
+      "sha256": "9190DB895A9DBEA200D34995B1937DF7D14F7D3AE61749955126326F5C4A05B2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearingNormalizationDependencyAudit1.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOnePoleClearingNormalizationDependencyAudit1.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearingNormalizationDependencyAudit1.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOnePoleClearingNormalizationDependencyAudit1.lean.txt",
+      "sha256": "641501626A851308F02AF902A43AC28C10845D78BAE31907C2DB4C33CD768449"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearingNormalizationDependencyAudit1.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOnePoleClearingNormalizationDependencyAudit1.log",
+      "sha256": "BE93DFA9DD3323BBF66BD9F77B0FC51712EFC8A58BB51FB8A739CCC6062DE2BF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearingNormalizationScratchOwnership746.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOnePoleClearingNormalizationScratchOwnership746.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearingNormalizationScratchOwnership746.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOnePoleClearingNormalizationScratchOwnership746.lean.txt",
+      "sha256": "B3358E9394F4DBFC97A86B1C3DAA95D1340D165406BB701F3AFF4DA29CF803C6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearingNormalizationScratchOwnership746.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOnePoleClearingNormalizationScratchOwnership746.log",
+      "sha256": "D6B1297EAC0FA648A1485888EE6A48E02875FDF1B628ADE88CEB0A01D2888AC8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUniformCuspPole.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneUniformCuspPole.exit",
+      "sha256": "13BF7B3039C63BF5A50491FA3CFD8EB4E699D1BA1436315AEF9CBE5711530354"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUniformCuspPole.lean",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneUniformCuspPole.lean.txt",
+      "sha256": "EB744105EA29F866EAC2BA40D19305A41B9A4CB8B54BBF09C99B6A1F2A5A57D3"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUniformCuspPole.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/SourceGammaOneUniformCuspPole.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_period_core_753.py",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/download_gamma_one_period_core_753.py",
+      "sha256": "5FC77D7438EEAA44B9A2410C1EC7585D547389FD3237C2BEF156BD82B97A0888"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_period_core_754.py",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/download_gamma_one_period_core_754.py",
+      "sha256": "C7987AA6208726DC0EF625025F01C376ABCA9277AB24AD4DFEE96FF20AD2AE0F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_period_core_755.py",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/download_gamma_one_period_core_755.py",
+      "sha256": "3FA473DFBA3B2D5EF32FB5FE5E19BE950620EEEDB42052256A44852F90198A3C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\download_gamma_one_period_core_755b.py",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/download_gamma_one_period_core_755b.py",
+      "sha256": "227E685837F2ABDAADB30AA46632137B4DC093DF65D06AF7DBB674E92363F74D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-exhaustion-audit-route-743.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-cusp-exhaustion-audit-route-743.json",
+      "sha256": "F9090D805E74A60D77D2DDA27AFB7EFDD5C688CC93A30D103A89110B7B82A478"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-exhaustion-route-743.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-cusp-exhaustion-route-743.json",
+      "sha256": "B9A9A463E6BADB786DE3721BB1306EDF562A8A00ADAF6E624A5CCFC06EA0EB51"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-residues-audit-route-742.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-cusp-residues-audit-route-742.json",
+      "sha256": "1315BE86CE1F4A2228E447E75ED428B4402206B85D844C09AA12EC3A05451BC7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-residues-route-742.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-cusp-residues-route-742.json",
+      "sha256": "F049AC323F1015D5B777ACB2F1B9FD2A5FDC179914A4612E43A17E83FEC9C571"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-holomorphic-field-audit-route-744.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-holomorphic-field-audit-route-744.json",
+      "sha256": "864A178FADC8BDD2E7334F54BB9372EAC7079054F2DD6457B6639E046846C4C7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-cusp-limits-route-750.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-meromorphic-cusp-limits-route-750.json",
+      "sha256": "6E6E5602633B05E2DA83ECAE3C501A7EC2AAD7B947E739F32CF4ADC62B75C65A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-field-assembly-route-749.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-meromorphic-field-assembly-route-749.json",
+      "sha256": "BE636A275CC3C0775A62DE4AAC1EECF040456F81B5B62BB8DC42EE8EC406069E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-field-audit-route-749.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-meromorphic-field-audit-route-749.json",
+      "sha256": "4BF0EBA5198197A65CF54570631F5D3D28FDB39A25AC7D2D6AFDF6380FBB8B3A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-field-route-744.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-meromorphic-field-route-744.json",
+      "sha256": "8E24F7B7DF60F621ED6A964EF11101E23694EEBB18FFC1DD096E3600E1F009B6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-principal-divisor-audit-route-751.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-meromorphic-principal-divisor-audit-route-751.json",
+      "sha256": "426EEF0A9E92EB467318D5666E85EBE634FAE052AAF975DE39DDF3BF38302AB2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-principal-divisor-route-751.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-meromorphic-principal-divisor-route-751.json",
+      "sha256": "238BB1194BA053DA10B001200524A3A09CF3ADFB57717B250923B13664D62D80"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-original-pole-multiplier-route-745.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-original-pole-multiplier-route-745.json",
+      "sha256": "FA90ED890241DEC9A8BC4E38DD35BC96181BFB63141EF0912BD43A2BC66F97D7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-pole-cleared-cusp-route-748.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-pole-cleared-cusp-route-748.json",
+      "sha256": "747804959A5F39FA3BC0D1C8A1933ACB8B16E0E3F6BC758A72921CA68080A3DF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-pole-cleared-normalization-route-746.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-pole-cleared-normalization-route-746.json",
+      "sha256": "BAC08777ECB0360F87E6D9ECAC0F644633EF8F376063386057400E84F112E00E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-pole-cleared-product-route-747.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-pole-cleared-product-route-747.json",
+      "sha256": "23845BC02B53F4ECBD01FC1BBB8C1436F9D1C3BDE8BD04F9917FC21175913814"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-pole-clearing-normalization-audit-route-746.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-pole-clearing-normalization-audit-route-746.json",
+      "sha256": "064B008881E8311BACF3F5BB1EADA104BAB38CE3288F19A60F7D7E970EBCA10F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_cusp_exhaustion_audit_743.py",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/prepare_gamma_one_cusp_exhaustion_audit_743.py",
+      "sha256": "10CDCCD352F8ADABE1AF0736DC9AD30488F9836CD09A4F9B7D5009EB48760754"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_cusp_residues_audit_742.py",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/prepare_gamma_one_cusp_residues_audit_742.py",
+      "sha256": "E2EA4BC1DA0E6DBE413C4222ABD4B840144CB9F25FBC2B8F539F743F00265E3C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_holomorphic_field_audit_744.py",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/prepare_gamma_one_holomorphic_field_audit_744.py",
+      "sha256": "0FEB919F26F62FFD9636938AD192727183D3040EDF316963DEC36D4752EA8BBD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_meromorphic_field_audit_749.py",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/prepare_gamma_one_meromorphic_field_audit_749.py",
+      "sha256": "6FEB6B68FAC4BDA88B7BCF87264EA91DB9DDB5A60C171398E71489D199BB0FA2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_meromorphic_principal_divisor_audit_751.py",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/prepare_gamma_one_meromorphic_principal_divisor_audit_751.py",
+      "sha256": "CBD1F0703B075CBDC424023DF44974E7ED4581E03095CAA16C144713BF58E05B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_pole_clearing_normalization_audit_746.py",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/prepare_gamma_one_pole_clearing_normalization_audit_746.py",
+      "sha256": "58A1AA76D2C83F22C72A2B62BD4E6192A14CC75DC7C78B6902CB83046F76C46C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_cusp_exhaustion_743.py",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/record_gamma_one_cusp_exhaustion_743.py",
+      "sha256": "EDF3AEECDFAF6355A520E4EB9B73DB36893E9B71C3BC26B142BC907BF40C6EE0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_cusp_residues_742.py",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/record_gamma_one_cusp_residues_742.py",
+      "sha256": "C2ADF6CDEF5DE7B9ED5D275C46520821E70B60AA9095907E722C66FF611D6171"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_holomorphic_field_744.py",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/record_gamma_one_holomorphic_field_744.py",
+      "sha256": "58B8C5B415C8DF039C5AAE2898B9AC35018A0CCE575AB45431F66421742A5C72"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_meromorphic_field_749.py",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/record_gamma_one_meromorphic_field_749.py",
+      "sha256": "5BBDEE704928962E888DBE2ED222ACED9AEBA79EBDBBBE3643CCF677E1415134"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_meromorphic_principal_divisor_751.py",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/record_gamma_one_meromorphic_principal_divisor_751.py",
+      "sha256": "2E9593C20D220C39D73EB7C16F0965C22FC5639A5D3C0A9523FC71F6D7823986"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\record_gamma_one_pole_clearing_normalization_746.py",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/record_gamma_one_pole_clearing_normalization_746.py",
+      "sha256": "5FA8D8FA5C38351A236C5DF2EEC0978ABAE8046FE2672DB672BA446A9BB2C184"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-exhaustion-1-audit-config.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/source-gamma-one-cusp-exhaustion-1-audit-config.json",
+      "sha256": "55C1BBAF0947CF3D448C1B64924976DAB0A4BA531DFFF1B1AC6A03EA78BAB086"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-exhaustion-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/source-gamma-one-cusp-exhaustion-1-reuse-review-20261027.json",
+      "sha256": "3984F38D14F2D1AE61BFDFBFBD3B48822A8EC05D89F7E0F7A1850DB8E52A774A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-exhaustion-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/source-gamma-one-cusp-exhaustion-1-scratch-receipt.json",
+      "sha256": "028C916EE20AD07A96B06F1AEB6F83C494D1A94FFC3B379066512A64801AA883"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-residues-1-audit-config.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/source-gamma-one-cusp-residues-1-audit-config.json",
+      "sha256": "AF438AF5BD014F8D109ED59A7E55224FA581A091964917D2D1B019C8BBF1120D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-residues-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/source-gamma-one-cusp-residues-1-reuse-review-20261027.json",
+      "sha256": "433CB3A3B4060E99C3620EFA5A92ED0B80A4713342858696993FCA68CA0FBF12"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-cusp-residues-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/source-gamma-one-cusp-residues-1-scratch-receipt.json",
+      "sha256": "2F1EACCE6E23FDFFE316865260110175EA89ABA52C305803C7EB157D0D43B12F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-holomorphic-field-1-audit-config.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/source-gamma-one-holomorphic-field-1-audit-config.json",
+      "sha256": "D49AE372390DF65BE3B0D629A5E4F83BE94DA672F522B81ABD8A0BF7403727C7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-holomorphic-field-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/source-gamma-one-holomorphic-field-1-reuse-review-20261027.json",
+      "sha256": "9EAE9029B029A8A0B7DB9DA49F4C0FCD5DF51FC04A7CDE0CD39DE2D31592E324"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-holomorphic-field-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/source-gamma-one-holomorphic-field-1-scratch-receipt.json",
+      "sha256": "32E41826F238016A886D15A69C61C38ECF954A56CB6EA71D9A4ABCF708D83AA8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-meromorphic-field-1-audit-config.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/source-gamma-one-meromorphic-field-1-audit-config.json",
+      "sha256": "1214E9E2EE4F184EF995EC50647A28F68C2DAC8D6FDCB4266B3A51F0F715FAE9"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-meromorphic-field-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/source-gamma-one-meromorphic-field-1-reuse-review-20261027.json",
+      "sha256": "38C9322AD8BAE95C74E76AC90AD262D75EEB82EA69A04A457353C4B77D0C5293"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-meromorphic-field-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/source-gamma-one-meromorphic-field-1-scratch-receipt.json",
+      "sha256": "FADC57811E5FCDBAEFC7F70DB4081EAE46685E6E3DCC1524A07A56A799AF6BF7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-meromorphic-principal-divisor-1-audit-config.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/source-gamma-one-meromorphic-principal-divisor-1-audit-config.json",
+      "sha256": "54BB210E2DB9DADBC3C1C9830FC18902B6557C24B48F4CD50D6F73DA2FD954B4"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-meromorphic-principal-divisor-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/source-gamma-one-meromorphic-principal-divisor-1-reuse-review-20261027.json",
+      "sha256": "085C6A4EA50FBD88DC7C4AC667A3953C999862CA155DF6B6A64BF21CE0206EB8"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-meromorphic-principal-divisor-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/source-gamma-one-meromorphic-principal-divisor-1-scratch-receipt.json",
+      "sha256": "CBFF760F67E11EA122C34E4604CCBEE59C9C032DBB22480205A75545D052B15C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-pole-clearing-normalization-1-audit-config.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/source-gamma-one-pole-clearing-normalization-1-audit-config.json",
+      "sha256": "49899BE5644D436C0B115818AE17137B7CBA073C99CFF16F7F8C8C92914364CE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-pole-clearing-normalization-1-reuse-review-20261027.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/source-gamma-one-pole-clearing-normalization-1-reuse-review-20261027.json",
+      "sha256": "790640CE8CE6EBCA8A13890E294BAC19D15931F3FB013BB82D95CC612D55A947"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-pole-clearing-normalization-1-scratch-receipt.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/source-gamma-one-pole-clearing-normalization-1-scratch-receipt.json",
+      "sha256": "7C5F0099EB393DC9052EE6BE5EDAEBB0D6B0F895155217BC73DD061D378B4F7A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-exhaustion-failed-743a\\failure.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-cusp-exhaustion-failed-743a/failure.json",
+      "sha256": "6AB16F0C908E6CF7D42A50A9C7A2430CC9208C153CC4EC6CD0A28CE096C4D370"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-exhaustion-failed-743a\\SourceGammaOneCuspBoundedRealization.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-cusp-exhaustion-failed-743a/SourceGammaOneCuspBoundedRealization.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-exhaustion-failed-743a\\SourceGammaOneCuspBoundedRealization.lean.txt",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-cusp-exhaustion-failed-743a/SourceGammaOneCuspBoundedRealization.lean.txt",
+      "sha256": "15C25DCA71BF082A9CFCE0333A2018AAEE77F02565A6378D93A9B7AF8E2ECB75"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-exhaustion-failed-743a\\SourceGammaOneCuspBoundedRealization.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-cusp-exhaustion-failed-743a/SourceGammaOneCuspBoundedRealization.log",
+      "sha256": "59E01673FD1BEB9B744B0909681237E424915F7E6A314B3B4211FE61DFE2C5D6"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-exhaustion-failed-743b\\failure.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-cusp-exhaustion-failed-743b/failure.json",
+      "sha256": "0C1E5756B3FFE3E0710A74DE68C1A186AB98DB693DFB0C46E3AD4FB76FFEE923"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-exhaustion-failed-743b\\SourceGammaOneCuspPlaceExhaustion.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-cusp-exhaustion-failed-743b/SourceGammaOneCuspPlaceExhaustion.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-exhaustion-failed-743b\\SourceGammaOneCuspPlaceExhaustion.lean.txt",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-cusp-exhaustion-failed-743b/SourceGammaOneCuspPlaceExhaustion.lean.txt",
+      "sha256": "F1055B4593B6FF1344414F9BB94F162523DB1C03DBEA4250F652A444221BD257"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-exhaustion-failed-743b\\SourceGammaOneCuspPlaceExhaustion.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-cusp-exhaustion-failed-743b/SourceGammaOneCuspPlaceExhaustion.log",
+      "sha256": "A7A502DBD2CD43C457B4990FD681BBAFD486119B950B7FC8711A48C2640838FF"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-residues-failed-742a\\failure.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-cusp-residues-failed-742a/failure.json",
+      "sha256": "A408D3E397D225FE87C8C7D973B0A4E946169D7A98F36E00457CDEC9F20F78FB"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-residues-failed-742a\\SourceGammaOneCuspResidues.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-cusp-residues-failed-742a/SourceGammaOneCuspResidues.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-residues-failed-742a\\SourceGammaOneCuspResidues.lean.txt",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-cusp-residues-failed-742a/SourceGammaOneCuspResidues.lean.txt",
+      "sha256": "3DB8196905736FD1C0C6C527AE199F65F8DDB543EAB1D19554B9D1D94ABB5D3A"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-residues-failed-742a\\SourceGammaOneCuspResidues.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-cusp-residues-failed-742a/SourceGammaOneCuspResidues.log",
+      "sha256": "07D1605620DED8C6FF01528C88FC81C10B604D04F5FBDB7C4F297E789837C4E1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-residues-failed-742b\\failure.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-cusp-residues-failed-742b/failure.json",
+      "sha256": "B95A39B41FF2039971C6252A9AB6DCA1445C6731D2F70CF7DAB615DF6F486B2E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-residues-failed-742b\\SourceGammaOneCuspResidues.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-cusp-residues-failed-742b/SourceGammaOneCuspResidues.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-residues-failed-742b\\SourceGammaOneCuspResidues.lean.txt",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-cusp-residues-failed-742b/SourceGammaOneCuspResidues.lean.txt",
+      "sha256": "CC39A64CA886B5BCF6484B15E88B00EAC080BEF6CBE31D90BB84D2251E21B309"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-cusp-residues-failed-742b\\SourceGammaOneCuspResidues.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-cusp-residues-failed-742b/SourceGammaOneCuspResidues.log",
+      "sha256": "96B1E7104D43601ACFD5157A6243AB2A9DD60B0928653A3C7468CECE756E6744"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-cusp-limits-failed-750a\\failure.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-meromorphic-cusp-limits-failed-750a/failure.json",
+      "sha256": "369FCA6FF607B7D158679496803BC0A9FF00CD17A88D54B3FEE7FA08C9682933"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-cusp-limits-failed-750a\\SourceGammaOneMeromorphicCuspLimits.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-meromorphic-cusp-limits-failed-750a/SourceGammaOneMeromorphicCuspLimits.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-cusp-limits-failed-750a\\SourceGammaOneMeromorphicCuspLimits.lean.txt",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-meromorphic-cusp-limits-failed-750a/SourceGammaOneMeromorphicCuspLimits.lean.txt",
+      "sha256": "DBA3CFCFE1A5BFEB1D83929F3B8E5DD1328814472EDD09BFB985D2D00EE63DE2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-cusp-limits-failed-750a\\SourceGammaOneMeromorphicCuspLimits.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-meromorphic-cusp-limits-failed-750a/SourceGammaOneMeromorphicCuspLimits.log",
+      "sha256": "FB8C2E1655F2DBA7B4808D3A7830B9E6D2753ADB433B6CA763A37583EC31DFD0"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-field-failed-744a\\failure.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-meromorphic-field-failed-744a/failure.json",
+      "sha256": "0758139E8D7627E74F42BB8043F78741A1BEB6968103F4E2B96B76AC93EBACD2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-field-failed-744a\\SourceGammaOneHolomorphicModularQuotient.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-meromorphic-field-failed-744a/SourceGammaOneHolomorphicModularQuotient.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-field-failed-744a\\SourceGammaOneHolomorphicModularQuotient.lean.txt",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-meromorphic-field-failed-744a/SourceGammaOneHolomorphicModularQuotient.lean.txt",
+      "sha256": "A72214343C8437B77A9A6853425A2AF6C154007D9F3F5F71A30253E865C47300"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-meromorphic-field-failed-744a\\SourceGammaOneHolomorphicModularQuotient.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-meromorphic-field-failed-744a/SourceGammaOneHolomorphicModularQuotient.log",
+      "sha256": "305DA0FD2B02A30CC4FDA4E59620ED46113A83168A1F909CB91F41378B37C400"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-753\\manifest.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-period-core-reuse-753/manifest.json",
+      "sha256": "1D64B994D93E7FA7A90EEF894267F42B3AE5463A8AAC3CBCB92AC0730032ECDD"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-753\\S_ModularCurve_ComplexPlaceDictionaryOf_multiplier_eq_exp_of_abelJacobi_add_petersson_eq_zero_gammaH.lean.txt",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-period-core-reuse-753/S_ModularCurve_ComplexPlaceDictionaryOf_multiplier_eq_exp_of_abelJacobi_add_petersson_eq_zero_gammaH.lean.txt",
+      "sha256": "AB4A915C46F78D34EC577A51175BD4EEF533150F6AAF9BF87F963ECACDA50891"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-753\\S_ModularCurve_six_mul_level_mul_finrank_parabolicHoms_Gamma_add_eq.lean.txt",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-period-core-reuse-753/S_ModularCurve_six_mul_level_mul_finrank_parabolicHoms_Gamma_add_eq.lean.txt",
+      "sha256": "203A9628B153000F8B0E310BAADF4218AAA5134A03B2B059AA605DD21B92950D"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-753\\S_ModularCurve_twelve_mul_add_mul_index_le_finrank_cuspForm_Gamma.lean.txt",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-period-core-reuse-753/S_ModularCurve_twelve_mul_add_mul_index_le_finrank_cuspForm_Gamma.lean.txt",
+      "sha256": "CA4F39E051A71A6E95A43BFD5344525CB73783EF38C1419413C499F14D54F21B"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-754\\manifest.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-period-core-reuse-754/manifest.json",
+      "sha256": "6D47FEE74CE580CD28C65C93E1CD4BEEE81AD3E6474B09C68E6F1EEBE8818BE1"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-754\\S_ModularCurve_LevelN_exists_linearMap_regularDifferentials_cuspForm_injective.lean.txt",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-period-core-reuse-754/S_ModularCurve_LevelN_exists_linearMap_regularDifferentials_cuspForm_injective.lean.txt",
+      "sha256": "2FEED951BB0264E5F1DAD1FB3505676CD0AB2F63C71A3996B0FC385845D1A9FE"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-754\\S_ModularCurve_LevelN_twelve_mul_add_mul_index_le_genusFF.lean.txt",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-period-core-reuse-754/S_ModularCurve_LevelN_twelve_mul_add_mul_index_le_genusFF.lean.txt",
+      "sha256": "098DC8D9C0621AE23CB28C3C01A92A76799DCA208ED36072C9A515B5211B12E2"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-754\\S_ModularCurve_multiplier_eq_exp_of_periodAlongOf_add_petersson_mem_periodLatticeOf.lean.txt",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-period-core-reuse-754/S_ModularCurve_multiplier_eq_exp_of_periodAlongOf_add_petersson_mem_periodLatticeOf.lean.txt",
+      "sha256": "AE0F3D3C2EC6F18CB1BCA05A551B211E75FE1E505F86C11498746BE3A64C9109"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-755\\download-failure.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-period-core-reuse-755/download-failure.json",
+      "sha256": "E1280B6BE4BF1B3ABED2DA3E605921F8A5684A9262035F62FE6F8AFC97282FCA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-755b\\manifest.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-period-core-reuse-755b/manifest.json",
+      "sha256": "53332BE63CCC2597686D28AA59C51437B3E7F109B4EF6A59D7B32B76C24B1330"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-755b\\S_ModularCurve_exists_cuspForm_multiplier_eq_exp_periodOf_of_norm_eq_one.lean.txt",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-period-core-reuse-755b/S_ModularCurve_exists_cuspForm_multiplier_eq_exp_periodOf_of_norm_eq_one.lean.txt",
+      "sha256": "EFFAA94ED1D6C7889ECDDF67781058EEEBDE475355218B929F2523DC3381CFF7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-755b\\S_ModularCurve_periodAlongOf_add_petersson_mem_periodLatticeOf_of_multiplier_eq_exp.lean.txt",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-period-core-reuse-755b/S_ModularCurve_periodAlongOf_add_petersson_mem_periodLatticeOf_of_multiplier_eq_exp.lean.txt",
+      "sha256": "05BF4F675796DC1791083B0FED61F51B8A40224E40D683DB9A0FEF17997D742E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-core-reuse-755b\\S_ModularCurve_petersson_mem_periodLatticeOf_iff_re_periodOf_int.lean.txt",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-period-core-reuse-755b/S_ModularCurve_petersson_mem_periodLatticeOf_iff_re_periodOf_int.lean.txt",
+      "sha256": "E46017955CC62AD510416D832C9CCA908DFE2879028CBA7F2E4534D66EF621E7"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-pole-cleared-cusp-failed-748a\\failure.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-pole-cleared-cusp-failed-748a/failure.json",
+      "sha256": "BB23703F89BAB1E6D1B42DBA74414074E6B946B4F0C8A112E67C9BCD264F4702"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-pole-cleared-cusp-failed-748a\\SourceGammaOnePoleClearedCuspBounds.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-pole-cleared-cusp-failed-748a/SourceGammaOnePoleClearedCuspBounds.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-pole-cleared-cusp-failed-748a\\SourceGammaOnePoleClearedCuspBounds.lean.txt",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-pole-cleared-cusp-failed-748a/SourceGammaOnePoleClearedCuspBounds.lean.txt",
+      "sha256": "E18555397AC41D1A7D2ACA64CC307DE6166D8F3057ED5ABB7006942562205EAA"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-pole-cleared-cusp-failed-748a\\SourceGammaOnePoleClearedCuspBounds.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-pole-cleared-cusp-failed-748a/SourceGammaOnePoleClearedCuspBounds.log",
+      "sha256": "C6D7557E5E901C1663BE773BAD08AB23F16AE635815768476422E9A21A7A748F"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-pole-cleared-normalization-failed-746a\\failure.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-pole-cleared-normalization-failed-746a/failure.json",
+      "sha256": "9D8EBDB57FD1D719785BB72F77B14F6639F50B34DE213AAA2873CC7E9A2EB795"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-pole-cleared-normalization-failed-746a\\SourceGammaOnePoleClearedNormalization.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-pole-cleared-normalization-failed-746a/SourceGammaOnePoleClearedNormalization.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-pole-cleared-normalization-failed-746a\\SourceGammaOnePoleClearedNormalization.lean.txt",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-pole-cleared-normalization-failed-746a/SourceGammaOnePoleClearedNormalization.lean.txt",
+      "sha256": "B95DBC5F3E4A61CBC53E345049FAF0E3E142080D4EBF440BBFD3C95D951FBC71"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-pole-cleared-normalization-failed-746a\\SourceGammaOnePoleClearedNormalization.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-pole-cleared-normalization-failed-746a/SourceGammaOnePoleClearedNormalization.log",
+      "sha256": "758CD57F947E1E1DAE4F41ECFE1C91F48C44A4C2FFAA3200DB658E878E325D8C"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-pole-cleared-product-failed-747a\\failure.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-pole-cleared-product-failed-747a/failure.json",
+      "sha256": "1D12EC6D37BD1EC70AF7A6F668F9ED6FCB4AC52C99D0CF448B02524E4A58EB18"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-pole-cleared-product-failed-747a\\SourceGammaOnePoleClearedProduct.exit",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-pole-cleared-product-failed-747a/SourceGammaOnePoleClearedProduct.exit",
+      "sha256": "F1B2F662800122BED0FF255693DF89C4487FBDCF453D3524A42D4EC20C3D9C04"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-pole-cleared-product-failed-747a\\SourceGammaOnePoleClearedProduct.lean.txt",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-pole-cleared-product-failed-747a/SourceGammaOnePoleClearedProduct.lean.txt",
+      "sha256": "66186D0474D60D199F10699EC0C2BEA28CF3423D9E60147195A5B046674B1D51"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-pole-cleared-product-failed-747a\\SourceGammaOnePoleClearedProduct.log",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-pole-cleared-product-failed-747a/SourceGammaOnePoleClearedProduct.log",
+      "sha256": "3016C9E22ECCAF261330E840206F3279E1AFAE8D4143067EA674384A4D54FB96"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-reuse-assessment-752\\assessment.json",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-period-reuse-assessment-752/assessment.json",
+      "sha256": "7504E8D92EA153AE5CF550BBBECD5F0E6F32E81265B4634A6DCB57958D9FED2E"
+    },
+    {
+      "source": "E:\\Lean\\.tmp\\dubon83\\gamma-one-period-reuse-assessment-752\\Dubon Reuse Route Assessment 2026-10-27.md",
+      "path": "Tools/gamma-one-meromorphic-principal-divisor-20261027-752/gamma-one-period-reuse-assessment-752/Dubon Reuse Route Assessment 2026-10-27.md.txt",
+      "sha256": "5265FE0DF0B08207082C35A1B752D0568235A098823C87BFA9B0433230EB7D72"
+    }
+  ]
+}

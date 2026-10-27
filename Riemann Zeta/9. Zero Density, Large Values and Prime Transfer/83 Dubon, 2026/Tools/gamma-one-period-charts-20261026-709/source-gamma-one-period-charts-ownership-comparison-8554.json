@@ -1,0 +1,109 @@
+{
+  "scratchSum": 31,
+  "scratchDistinct": 31,
+  "generatedNameRenamings": {},
+  "productionFocused": 30,
+  "duplicateScratchNames": {},
+  "missingFromFocused": {
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace.congr_simp": [
+      {
+        "scope": "SourceGammaOneAnalyticResiduesScratchOwnership706",
+        "module": "Dubon2026.SourceGammaOneAnalyticResidues"
+      }
+    ]
+  },
+  "missingFromFocusedAlreadyInPrevious": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace.congr_simp"
+  ],
+  "productionNamesNotInScratch": [],
+  "unexplainedMissing": [],
+  "scopes": [
+    {
+      "modules": [
+        "SourceGammaOneRegularCuspGerm"
+      ],
+      "count": 6,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodGermScratchOwnership705.log",
+        "sha256": "CFB2DD0A8B0B4710A57849DEB2EA5E879AB9FA6D27E6DC39E3A27F03DFAF942F",
+        "sourceSha256": "CB357C50DE845187CB2C6102C47EEF6C3CAF66E706EFD243AA7D9CFEEC766C24"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneAnalyticResidues",
+        "SourceGammaOneAnalyticEvaluation",
+        "SourceGammaOneEvaluationRealizationGerms"
+      ],
+      "count": 19,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticResiduesScratchOwnership706.log",
+        "sha256": "3DFFC306C74D56FF454AA7B68EAADCE552A39B50FE604764139AFBA50841A22B",
+        "sourceSha256": "2C56B04461657F150AFE8BE543CC7827CAB5CD0AE33BEC364CCF8C257D513AD1"
+      }
+    },
+    {
+      "modules": [
+        "SourceGammaOneRamificationIsolation",
+        "SourceGammaOneUnramifiedCharts"
+      ],
+      "count": 6,
+      "log": {
+        "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneUnramifiedChartsScratchOwnership707.log",
+        "sha256": "B16D313F5C5191933B2648F75B1B5D17868C7B8771343D964C26B5958133E451",
+        "sourceSha256": "F54ECB2279CB9E29A2363634F07CE65866E7654EA4BB5DF1DC7562E01F0409FB"
+      }
+    }
+  ],
+  "productionOwnership": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePeriodChartsOwnership8554.log",
+    "sha256": "4F9920229CAED49C6CFF18DB03C53CE3386739FCCEA82FF6523BCBEE2D7A23BA",
+    "sourceSha256": "E8D83AF0EC03E9E8B372C945FEF723BDA3671E0FC6E68D90BAA756347F21C987"
+  },
+  "previousGlobal": {
+    "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\logs\\dubon-build-20261026-213020-525.log",
+    "sha256": "97AD40FFEC57D9A8E6C2099F98EBA60EF8BD93D6319900E32AE67D9D57E0C154"
+  },
+  "renameEvidence": {
+    "reason": "Only exact owner-preserving automatic private module suffix changes are normalized. All 6 mathematical source bodies are identical after stripping imports; every public and private theorem remains accounted for.",
+    "sourceChecks": [
+      {
+        "module": "SourceGammaOneRegularCuspGerm",
+        "scratchSha256": "F98F1F7267DC066728B4059C0FD1423F052E0AC76D1D992CE1D98D218AFC7AEA",
+        "productionSha256": "E37E6B919261E479DA98C9924C6A27CA375163292D12A25F9E4E1DCE2F0D97F1",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneAnalyticResidues",
+        "scratchSha256": "A0E3E571822585A2270A54A6E7A1BD181C3D4CF9902626373A03F2B27221710A",
+        "productionSha256": "F5AB5657C210AF58B8CC1B89F26C68D3B80BB035ECD60CCB4950AC774F7BB3B5",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneAnalyticEvaluation",
+        "scratchSha256": "6E671490A966EB8208C487C20F0D4F73F451348DDD712E1E0A65E7B432F2D830",
+        "productionSha256": "DD538E907D32C70AF5A7C40F80BB5A6D6C22A204487F10DAD8A75F63F6B80D91",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneEvaluationRealizationGerms",
+        "scratchSha256": "6049EBDA4DE0AAA9CD14D7BD18E3C05736EFC783A5A984D278D2DAD1575F0CFB",
+        "productionSha256": "7B21ADD3024D1F613A8C66181A7A139C95BD548EC37D68B8932E51263FF74729",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneRamificationIsolation",
+        "scratchSha256": "A1F085755635E701182808EBFD7DBBEFA22EC33D2F2BE7A26F245E320EF1FF5F",
+        "productionSha256": "D32D0E9CE69408F9B7A8842C72BC6CA167621ED52B356BDBE250D0630DEF1EF1",
+        "bodyIdentical": true
+      },
+      {
+        "module": "SourceGammaOneUnramifiedCharts",
+        "scratchSha256": "56A482DEBD1D81279BEC5EE05493C7B2D670CAF6E89279C08262AFA4A4CEE725",
+        "productionSha256": "51B549E3E9789E85AC0FAC54E21D4432C5FA6BD0B8BD03F60C8090184CF574FE",
+        "bodyIdentical": true
+      }
+    ]
+  },
+  "passed": true
+}

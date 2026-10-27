@@ -1,0 +1,5 @@
+{
+  "reason": "Rewrite requires the constant map into the actual intermediate field before Laurent coercion; explicitly type the definitionally equal constant identity.",
+  "exit": 1,
+  "sourceSha256": "CC39A64CA886B5BCF6484B15E88B00EAC080BEF6CBE31D90BB84D2251E21B309"
+}

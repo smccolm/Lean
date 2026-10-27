@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-26 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact elliptic ramification -> compare weighted analytic j fibers with subgroup orbit indices.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-plus-minus-audit-route-726.json",
+    "sha256": "4217DB1A144DF4DA803398EDE940917EC1CE5D41AB7EBB314FED847DC09EF8B4",
+    "review": {
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact elliptic ramification -> compare weighted analytic j fibers with subgroup orbit indices.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Tools\\gamma-one-period-charts-20261026-709\\gamma-one-ramification-core-reuse-708\\S_ModularCurve_ComplexPlaceDictionaryOf_two_mul_ramification_eq_card_stabilizer.lean.txt",
+          "sha256": "B84ABD61C547D3D894F4EE8E1E50D4F7819B6B7714FFD87F6681764F9F073652"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceModularStabilizerCharacter.lean",
+          "sha256": "C4E7079BACCF6A87BFD5B555F7FB321AE92DD6B4AB54CCEE6128A4711BA5B081"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceSubgroupStabilizerCharacter.lean",
+          "sha256": "7C8B81A7136494B9A96F12DE836AB421D0CAFB18DDD382C6CFC26F2B7A735364"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneStabilizerRamification.lean",
+          "sha256": "74A9B93F04B95697872F310DC260110682283D911BC44314251F9929650646A3"
+        },
+        {
+          "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceInvariance.lean",
+          "sha256": "845B8EAFA716496B045C6DC00614EA18971DC3827EDDFB3935E0A493A4DC306B"
+        }
+      ],
+      "shorterRoute": "Adjoin only the central negative identity to the actual subgroup, preserving every orbit and modular ratio. Reuse native negated matrix actions and the existing actual uniformizer argument to prove stabilizer divisibility for this group. Existing finite-stabilizer instances are reused. The factor of two is retained; Gamma1 itself need not contain negative identity.",
+      "assumptionsToDischarge": [
+        "The subgroup enlarged by negative identity has the same actual point orbits and analytic places.",
+        "Its stabilizer cardinality divides twice the actual analytic ramification, and its stabilizers have cardinality at least two."
+      ],
+      "remaining": "Exact ramification at elliptic points, global charts, actual periods and complete Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight characteristic-zero association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": [
+    "The subgroup enlarged by negative identity has the same actual point orbits and analytic places.",
+    "Its stabilizer cardinality divides twice the actual analytic ramification, and its stabilizers have cardinality at least two."
+  ],
+  "remaining": "Exact ramification at elliptic points, global charts, actual periods and complete Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight characteristic-zero association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

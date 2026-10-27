@@ -1,0 +1,54 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 Hecke characters -> Picard/H1, full/parabolic and transpose/diamond comparison -> Picard-period/cusp comparison -> actual residue evaluation and analytic germs of the original Gamma field.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticResidueValues.lean",
+      "sha256": "BC3E036A411CC2671EF15AD73FC199F5F8BFDFACF8C6BBE200C945F88C9A410E"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalAnalyticEvaluation.lean",
+      "sha256": "BF8F20485E6888AEA8B93762C0CDC6679039E4A1ADD4A54E365036DC906892B8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceOriginalEvaluationRealizationGerms.lean",
+      "sha256": "908BF4F4123612BD5956695205657B4703009CFF70F4DA8FAA24D552D114D0E8"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveFiniteCoordinateResidues.lean",
+      "sha256": "356DDF30E51274536FA6B3478789CADBA4CC77CFCC2C2C1873017015C476416C"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRationalFunctionEvaluation.lean",
+      "sha256": "530ED4333262D527C5121F216E52E5966CDCAFBFDC0A968AA4CF08F1AE0FDD1D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveRationalResidueValues.lean",
+      "sha256": "6867EEF679E559185D713F8EAAF414EA0ACD302069B8767AC95A0ED732F69DEB"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceCurveAnalyticPlaceParameter.lean",
+      "sha256": "790A461384CFE696736F09F9C99ED4A6B733A5B69FCBFBC89E616FA521B6DD5D"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneCurveGeometry.lean",
+      "sha256": "D63E405202426AB42499AA8AC4D90DC3751E07ACA04C3EF8361098A8B1336C2A"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaces.lean",
+      "sha256": "2A684120F5449B169C539E1BD568C00CDF40572BBCC54E183DCE8F169378AA84"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneRegularCuspGerm.lean",
+      "sha256": "F98F1F7267DC066728B4059C0FD1423F052E0AC76D1D992CE1D98D218AFC7AEA"
+    }
+  ],
+  "shorterRoute": "Reuse generic rational residue evaluation and finite-coordinate closed residue fields. Adapt the already proved original analytic normal-form comparison to the actual Gamma integral-ratio field. Existing Kummer-cover chart packages require a radicand with prescribed divisible divisor and do not directly instantiate the original Gamma1 field. No new residue equivalence, germ ring, or global ramification classification is needed.",
+  "assumptionsToDischarge": [
+    "Actual algebraic residue evaluation agrees with the regular analytic limit.",
+    "Actual evaluation is meromorphic normal form, analytic exactly at regular places, with its exact normalized-place order.",
+    "Actual residue evaluation and original modular-ratio realization agree on punctured germs, enabling chart pullback of the proved Fourier-normalized differential."
+  ],
+  "remaining": "The actual global Gamma1 charts and period comparison, Hecke/diamond compatibility, Picard/H1 arithmetic realization, original all-weight characteristic-zero association, arithmetic automorphy and higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

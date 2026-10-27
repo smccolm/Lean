@@ -1,0 +1,65 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T11:10:25.496551+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneOriginalPoleMultiplier",
+    "SourceGammaOnePoleClearedNormalization"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneOriginalPoleMultiplier.lean",
+      "sha256": "309B6DA1385D0E447E82C90498F98048939C4958C83B78DE04954BFE8C1C1A08",
+      "oleanSha256": "F28C670A24736E92BF72EFEDA3DE28BF879E9FE12A35AA09012831E70BC82AE0"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearedNormalization.lean",
+      "sha256": "4EA0F5A259ABB716451A0267977811EB4FFDFD0249514BB89C4505DD94697508",
+      "oleanSha256": "39B7F03C7AD94D8695B3C0ECAA5C60AAA2BBA960F0ECAD3AA9FD95B53754A153"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier_at_analytic_places",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_of_nonnegative_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_invariant_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.boundedAtImInfty_of_local_eq"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier_at_analytic_places",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_of_nonnegative_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_invariant_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.boundedAtImInfty_of_local_eq"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearingNormalizationAudit1.log",
+  "logSha256": "9190DB895A9DBEA200D34995B1937DF7D14F7D3AE61749955126326F5C4A05B2",
+  "auditSha256": "E63E02C18BA6F0BB4CDB2CBCB13D3915FA7073DB741C74A430B5764C30CA97C9",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 7,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 13,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePoleClearingNormalizationDependencyAudit1.log",
+  "dependencyAuditSha256": "BE93DFA9DD3323BBF66BD9F77B0FC51712EFC8A58BB51FB8A739CCC6062DE2BF",
+  "dependencyAuditSourceSha256": "641501626A851308F02AF902A43AC28C10845D78BAE31907C2DB4C33CD768449",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_original_pole_multiplier_at_analytic_places",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_holomorphic_of_nonnegative_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.holomorphic_invariant_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.boundedAtImInfty_of_local_eq"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> original finite homogeneous-coefficient Gamma1 Hecke-character realization -> Picard/H1/full-parabolic/transpose/diamond comparison -> modular periods -> actual meromorphic field realization.",
+  "discharged": [
+    "An original nonzero field multiplier regular at every finite j-place, whose order plus the prescribed finite divisor is nonnegative there. The analytic-place consumer derives both regularity and the required pole-cancellation bound.",
+    "Existence of a holomorphic representative from nonnegative meromorphic orders; preservation of the actual subgroup invariance and cusp boundedness under local punctured equality. These permit the genuine pole-cleared product to enter the already proved holomorphic modular quotient."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Consumer for the actual pole-cleared product and division back into the original field, real period surjectivity, Abel-Petersson reciprocity, complete period/Hecke/diamond/H1 comparison, all-weight association and higher continuation remain; 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-pole-clearing-normalization-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "790640CE8CE6EBCA8A13890E294BAC19D15931F3FB013BB82D95CC612D55A947",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

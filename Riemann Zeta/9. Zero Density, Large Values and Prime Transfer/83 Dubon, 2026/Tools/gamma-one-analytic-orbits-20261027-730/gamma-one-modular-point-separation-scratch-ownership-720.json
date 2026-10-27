@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "theorems": 2,
+  "modules": 1,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularPointSeparationScratchOwnership720.log",
+  "logSha256": "69040686E117E4C28813A8A81E45EA90E0394D8EC2F1E8ECFE26D77364E2485E",
+  "sourceSha256": "EA5F0912F555D83768F55CB7399F5AF4A101295F843B09F79B59FE4451234746",
+  "owners": [
+    {
+      "module": "SourceGammaOneModularPointSeparation",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_separating_modular_forms._simp_1_1"
+    },
+    {
+      "module": "SourceGammaOneModularPointSeparation",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.exists_separating_modular_forms"
+    }
+  ]
+}

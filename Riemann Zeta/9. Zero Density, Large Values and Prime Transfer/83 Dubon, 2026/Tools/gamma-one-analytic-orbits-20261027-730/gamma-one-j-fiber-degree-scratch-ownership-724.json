@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "theorems": 1,
+  "modules": 1,
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneJFiberDegreeScratchOwnership724.log",
+  "logSha256": "13CBAD8D1B24A415D8A31C9B7267E8E7F0A4FD36BE452E96D9C35F376C4EF05E",
+  "sourceSha256": "54E89C0C31E6FFDEE3E3F7649613C2C69444B806C8535ECA2EFFCD8C80F206A3",
+  "owners": [
+    {
+      "module": "SourceGammaOneJFiberDegree",
+      "name": "Dubon2026.SourceFunctionField.GammaOne.sum_j_fiber_orders_eq_finrank"
+    }
+  ]
+}

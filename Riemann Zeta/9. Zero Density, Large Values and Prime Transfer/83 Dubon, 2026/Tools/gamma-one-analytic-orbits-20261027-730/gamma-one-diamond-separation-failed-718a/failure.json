@@ -1,0 +1,4 @@
+{
+  "reason": "Make GL slash denominator and concrete integer power weights explicit before rewriting. Replace deprecated push_neg; no warning suppression.",
+  "sourceSha256": "F25525849D0B5E841C387C50E4CF7F2AD8714A6DBB7C37B3429DADD62573A36A"
+}

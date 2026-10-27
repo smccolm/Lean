@@ -1,0 +1,6 @@
+{
+  "script": "repair_gamma_one_finite_charts_archive_8586b.py",
+  "exit": 1,
+  "cause": "Research status metadata does not have the archive pointer field. Preflight failed before any mutation.",
+  "successor": "repair_gamma_one_finite_charts_archive_8586c.py"
+}

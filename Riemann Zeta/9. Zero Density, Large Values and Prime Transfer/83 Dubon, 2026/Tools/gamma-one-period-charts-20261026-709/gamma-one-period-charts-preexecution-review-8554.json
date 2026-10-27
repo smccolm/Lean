@@ -1,0 +1,55 @@
+{
+  "status": "Prepared; require 8548 canonical PASS and archive before integration.",
+  "route": "gamma-one-period-charts-promotion-route-709.json",
+  "routeSha256": "49E60ABCC90A5BBB59D8499696D72375F9541FA0A674BAC49EED1E52FDE1CB73",
+  "modules": 6,
+  "queries": 19,
+  "theorems": 18,
+  "constructions": 1,
+  "exhaustiveScratchChecks": 31,
+  "proofValueEdges": 43,
+  "scopes": 3,
+  "receipts": {
+    "source-gamma-one-period-germ-1-scratch-receipt.json": "69518C1D18858B6E6DBFC11B5FE2F939FFAEDE31100388FADAEB39379D22EDBE",
+    "source-gamma-one-analytic-residues-3-scratch-receipt.json": "4AF476A43C86FA83B7570B5BD31E8BE82E27C782D100B7EBCCFB72FF93756918",
+    "source-gamma-one-unramified-charts-2-scratch-receipt.json": "724D35DA2C0ED9ED8975FEF2E366A18910FDB36B310E0C4BBDFF301FD6206165"
+  },
+  "expectedConsumers": 24737,
+  "expectedConstructions": 2457,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 gates unchanged.",
+  "scripts": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\integrate_source_gamma_one_period_charts_8554.py",
+      "sha256": "354356CC5B723AD36C62A3C56E981F640DA4B9A508E935EB96C650FA1C8FE18F"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_period_charts_production_ownership_8554.py",
+      "sha256": "453B31CD32280DC7355F7866FC6609A44F05654F765187FECA8AEA9995272022"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\prepare_gamma_one_period_charts_global_ownership_8554.py",
+      "sha256": "E2B221E11D6386126BFABB3560BA83D5C4FC6FC5AF35D208EA768AF5D68CA2E8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\compare_gamma_one_period_charts_ownership_8554.py",
+      "sha256": "EFD27DC16E8BDC01297C37C212F13AD59E69F7C7A5B5DAAECB8B6F361CD750F8"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\record_source_gamma_one_period_charts_8554.py",
+      "sha256": "90A9D1E3258EAA363F334D5775722A64820F4AEB448597B9DDB822E28108F0B6"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\verify_gamma_one_period_charts_8554.ps1",
+      "sha256": "3D62ED15ACC280BB99A76CB04BAFAB9C480DBDC3A947B6E530FC7E5FE9D47DAF"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\build_gamma_one_period_charts_8554.ps1",
+      "sha256": "56FDABA1D0934306B3A72815F72806E9785F4DA6E97E1296E0B451FADA5DF363"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\archive_gamma_one_period_charts_canonical_8554.py",
+      "sha256": "346E48E459F8E59EBFD7061F5093F899912C6206DC1729EFFDF9FF8269E73E3D"
+    }
+  ],
+  "productionMutation": false
+}

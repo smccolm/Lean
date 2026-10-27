@@ -1,0 +1,21 @@
+import SourceGammaOneCuspCyclicOrbit
+import SourceGammaOneCuspCosetPlaces
+import SourceGammaOneCuspCosetBound
+import SourceGammaOneCuspPoleDegree
+import SourceGammaOneCuspPositiveWeight
+import SourceGammaOneCuspOrbitBijection
+import SourceGammaOneExactCuspOrbits
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`SourceGammaOneCuspCyclicOrbit, `SourceGammaOneCuspCosetPlaces, `SourceGammaOneCuspCosetBound, `SourceGammaOneCuspPoleDegree, `SourceGammaOneCuspPositiveWeight, `SourceGammaOneCuspOrbitBijection, `SourceGammaOneExactCuspOrbits]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then logInfo m!"OWNER {m}: {name}"
+
+#eval inspectOwnership

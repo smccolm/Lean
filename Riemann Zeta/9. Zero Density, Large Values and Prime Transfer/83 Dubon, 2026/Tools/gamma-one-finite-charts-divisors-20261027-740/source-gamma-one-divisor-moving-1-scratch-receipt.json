@@ -1,0 +1,65 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T09:33:19.260190+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOnePrescribedPlaceOrders",
+    "SourceGammaOneAnalyticDivisorMoving"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePrescribedPlaceOrders.lean",
+      "sha256": "71FC01EA242FD8CB40C348D0D91A7009EAF576CCE1D667831C34085777C90B6D",
+      "oleanSha256": "027C40A9FC67C6B196454B84F41F29C76CAAF1EA50B81259A45E88A4376ED2C5"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticDivisorMoving.lean",
+      "sha256": "72C4FC0809ADBC9039AEB2924B63B85888B0EC2B0ED915A280852B07EE42E949",
+      "oleanSha256": "16E38EC6197C4701BB58626C27C54E59B712A04272643818EB9ECC22C99A6228"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_polar_regular_separator",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_prescribed_place_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_divisor_analytic_decomposition",
+    "Dubon2026.SourceFunctionField.GammaOne.degree_mapDomain_analyticPlace",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_degree_zero_analytic_representative"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_polar_regular_separator",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_prescribed_place_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_divisor_analytic_decomposition",
+    "Dubon2026.SourceFunctionField.GammaOne.degree_mapDomain_analyticPlace",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_degree_zero_analytic_representative"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorMovingAudit1.log",
+  "logSha256": "932815C124E29EA3B9DC81252C932C6C70DFF67850ADDFE60B4A75F02D344F96",
+  "auditSha256": "E434CE62AFCD01C5CCA822847634E35E18B8FF299F2AB62F1CE881948D2DECE4",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 22,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 11,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneDivisorMovingDependencyAudit1.log",
+  "dependencyAuditSha256": "6091565D943AE99FC2D0F27D00AFDD3B325110866E3F6639079752444118744D",
+  "dependencyAuditSourceSha256": "348425CE7394B763A85E5DA21AC88BB86CB1C350C96A716EFB84FEEF4F628C94",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.exists_polar_regular_separator",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_prescribed_place_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_divisor_analytic_decomposition",
+    "Dubon2026.SourceFunctionField.GammaOne.degree_mapDomain_analyticPlace",
+    "Dubon2026.SourceFunctionField.GammaOne.exists_degree_zero_analytic_representative"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> full Picard/H1/Hecke/diamond comparison -> reduction of every actual degree-zero divisor class to a finite analytic divisor.",
+  "discharged": [
+    "Prescribe arbitrary integral orders at a finite set of actual Gamma1 places without an approximation certificate.",
+    "Every actual divisor is a principal degree-zero divisor plus a pushforward from upper-half-plane points; if the original degree is zero then the analytic coefficient sum is zero."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. Actual Picard/period isomorphism, Hecke/diamond/full-parabolic arithmetic comparison, original all-weight characteristic-zero association and literal higher symmetric-power continuation. The candidate modular-period route still requires proved period surjectivity, reciprocity, field realization and cusp-order control. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-divisor-moving-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "99B1167D0ED36B83F4122BC2C078E4B7EAC599C5A1006351EB80E88AB6E8ECC0",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

@@ -1,0 +1,31 @@
+import Dubon2026.SourceGammaOneCuspResidues
+import Dubon2026.SourceGammaOneCuspBoundedRealization
+import Dubon2026.SourceGammaOneCuspPlaceExhaustion
+import Dubon2026.SourceGammaOneUniformCuspPole
+import Dubon2026.SourceGammaOneHolomorphicModularQuotient
+import Dubon2026.SourceGammaOneHolomorphicFieldRealization
+import Dubon2026.SourceGammaOneOriginalPoleMultiplier
+import Dubon2026.SourceGammaOnePoleClearedNormalization
+import Dubon2026.SourceGammaOnePoleClearedProduct
+import Dubon2026.SourceGammaOnePoleClearedCuspBounds
+import Dubon2026.SourceGammaOneMeromorphicFieldRealization
+import Dubon2026.SourceGammaOneMeromorphicCuspLimits
+import Dubon2026.SourceGammaOneMeromorphicPrincipalDivisor
+import Lean
+
+open Lean
+
+private def inspectOwnership : CoreM Unit := do
+  let env ← getEnv
+  let mods : Array Name := #[`Dubon2026.SourceGammaOneCuspResidues, `Dubon2026.SourceGammaOneCuspBoundedRealization, `Dubon2026.SourceGammaOneCuspPlaceExhaustion, `Dubon2026.SourceGammaOneUniformCuspPole, `Dubon2026.SourceGammaOneHolomorphicModularQuotient, `Dubon2026.SourceGammaOneHolomorphicFieldRealization, `Dubon2026.SourceGammaOneOriginalPoleMultiplier, `Dubon2026.SourceGammaOnePoleClearedNormalization, `Dubon2026.SourceGammaOnePoleClearedProduct, `Dubon2026.SourceGammaOnePoleClearedCuspBounds, `Dubon2026.SourceGammaOneMeromorphicFieldRealization, `Dubon2026.SourceGammaOneMeromorphicCuspLimits, `Dubon2026.SourceGammaOneMeromorphicPrincipalDivisor]
+  for (name, info) in env.constants.toList do
+    if info.isTheorem then
+      if let some idx := env.getModuleIdxFor? name then
+        let m := env.allImportedModuleNames[idx.toNat]!
+        if mods.contains m then
+          logInfo m!"OWNER {m}: {name}"
+          match info with
+          | .thmInfo th => logInfo m!"FINGERPRINT {name}: {hash th.type} {hash th.value}"
+          | _ => throwError "Expected theorem"
+
+#eval inspectOwnership

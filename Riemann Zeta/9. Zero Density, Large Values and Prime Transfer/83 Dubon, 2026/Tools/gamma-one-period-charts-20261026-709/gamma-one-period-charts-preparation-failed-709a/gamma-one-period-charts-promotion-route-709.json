@@ -1,0 +1,23 @@
+{
+  "scope": 709,
+  "scopeIds": [
+    "705",
+    "706",
+    "707"
+  ],
+  "receipts": {
+    "source-gamma-one-period-germ-1-scratch-receipt.json": "69518C1D18858B6E6DBFC11B5FE2F939FFAEDE31100388FADAEB39379D22EDBE",
+    "source-gamma-one-analytic-residues-3-scratch-receipt.json": "4AF476A43C86FA83B7570B5BD31E8BE82E27C782D100B7EBCCFB72FF93756918",
+    "source-gamma-one-unramified-charts-2-scratch-receipt.json": "724D35DA2C0ED9ED8975FEF2E366A18910FDB36B310E0C4BBDFF301FD6206165"
+  },
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> literal higher symmetric-power continuation -> arithmetic automorphy -> original all-weight characteristic-zero association -> arithmetic realization of original finite Gamma1 Hecke characters -> Picard/H1, full/parabolic, transpose and diamond comparison retaining the original homogeneous coefficient endomorphism -> actual differential/cusp period normalization and original analytic place charts.",
+  "discharged": "The actual Fourier-normalized regular-differential/cusp equivalence has the exact analytic integrand 2*pi*i times the cusp form, for every original regular differential including zero. Actual residue evaluation on the original Gamma field equals the regular analytic limit and the meromorphic normal form, with exact normalized-place orders and punctured-germ equality. At each unramified analytic center, one radius and the actual uniformizer construct an injective local chart with normalized orders for every original field element. Exact j-multiplicity and isolated E4/E6 zeros derive unramifiedness away from those zeros; no chart, residue comparison, order model or differential-coordinate witness is supplied.",
+  "remaining": "Elliptic-center ramified descent, finite/cusp place exhaustion and global Gamma1 charts remain, followed by actual global period and Hecke/diamond/Picard/H1 comparison. These local charts do not close the full arithmetic realization of original finite homogeneous-coefficient characters. Coefficient-field transport, Frobenius/inertia, original all-weight characteristic-zero association, local/image/regularity, arithmetic automorphy and literal higher symmetric-power continuation remain. The full all-weight arithmetic goal is unchanged. Complex semisimplicity, finite characters, Witt coefficients and universal deformation rings do not supply a characteristic-zero lift or point. 16/20; DUB-17--20 OPEN.",
+  "route": "Reuse the proved Fourier equivalence and quotient normalization to identify the analytic integrand. Reuse generic rational residue evaluation, finite-coordinate closed residue fields and native meromorphic normal form. Reuse the exact j-multiplicity theorem and generic inverse-function parameter theorem for actual unramified charts. Selected pinned FLT ramification files are archived for route assessment; they do not supply a locally certified import closure. Only audited mathematical sources are promoted and only imports are qualified. Failed variants and audit/helper evidence remain preserved. Pins, proof limits, frozen paper and all twenty acceptance gates are unchanged.",
+  "precedingCanonicalScope": 8548,
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false,
+  "externalImport": false,
+  "fullGoal": "16/20; DUB-17--20 OPEN; all 20 gates unchanged.",
+  "reason": "Require preceding canonical PASS and immutable archive before production mutation."
+}

@@ -1,0 +1,4 @@
+{
+  "status": "FAILED AUDIT",
+  "reason": "Missing docstring on the public subgroup abbreviation; the proposition-valued finite-index instance must be registered as a theorem, not a data construction. Preserve the used audit and prepare fresh corrected audits. No mathematical statement or proof is weakened."
+}

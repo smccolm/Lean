@@ -1,0 +1,61 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T05:44:41.392202+00:00",
+  "date": "2026-10-26 America/Vancouver",
+  "modules": [
+    "SourceGammaOneAnalyticPlaceInvariance",
+    "SourceGammaOneStabilizerRamification"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceInvariance.lean",
+      "sha256": "845B8EAFA716496B045C6DC00614EA18971DC3827EDDFB3935E0A493A4DC306B",
+      "oleanSha256": "4174E913F2411A947C432AF0412AC159B0FA2AE93BE6A648432D842E59E0E846"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneStabilizerRamification.lean",
+      "sha256": "74A9B93F04B95697872F310DC260110682283D911BC44314251F9929650646A3",
+      "oleanSha256": "BFC8592905FD339589D764C4FB1CE88C0BF79E0325F41F6C1FD84FF0E354776B"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.realize_smul_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.stabilizer_card_dvd_two_mul_ramification"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.realize_smul_eventuallyEq",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticOrder_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.stabilizer_card_dvd_two_mul_ramification"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceInvarianceAudit2.log",
+  "logSha256": "54740DD386175D2A9F4BA23DEC8D6B1CE8F457D8C4F79C868517F5F1821AD18A",
+  "auditSha256": "3CFAAEB995840CA0E27DCAF41B9284553036BB7856279C08D133BA602C46BF6B",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 5,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 10,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOnePlaceInvarianceDependencyAudit2.log",
+  "dependencyAuditSha256": "B9A43C18E670EA98418CA81D6A51D6845D3C248ABD2E59B96C37CF2FE985AB3A",
+  "dependencyAuditSourceSha256": "FDE93980E4244A9E558FE0D1A8564A7412CC03DCB39E804230CFB0EC5E222E4F",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.analyticPlace_smul",
+    "Dubon2026.SourceFunctionField.GammaOne.stabilizer_card_dvd_two_mul_ramification"
+  ],
+  "dependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global original analytic charts -> exact elliptic ramification and orbit/place comparison -> actual place invariance and stabilizer divisibility.",
+  "discharged": [
+    "The actual modular-quotient germ is invariant under the given subgroup.",
+    "Actual analytic order and normalized place are invariant under the subgroup action.",
+    "The actual subgroup point-stabilizer cardinal divides twice the normalized analytic ramification, using the actual place uniformizer."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The reverse ramification bound, orbit separation, elliptic/cusp global charts and actual period/Hecke/diamond/Picard/H1 arithmetic comparison remain; original all-weight association and higher symmetric-power continuation remain. 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-place-invariance-2-reuse-review-20261026.json",
+  "reuseReviewSha256": "ADEE5D53769679277AE41812695F1BA1CE29BD713029CA751636C31F7343DE96",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

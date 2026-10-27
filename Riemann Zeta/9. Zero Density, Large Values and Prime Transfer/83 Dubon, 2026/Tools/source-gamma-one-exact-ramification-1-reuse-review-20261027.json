@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-27 America/Vancouver",
+  "sourceDependency": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact ramification -> native Gamma1 modular forms separate every distinct Gamma1 orbit.",
+  "routeAssessment": {
+    "path": "E:\\Lean\\.tmp\\dubon83\\gamma-one-exact-ramification-audit-route-731.json",
+    "sha256": "F3B9D11AF73EFA23A28D56953286931EA68BD9DFDC3E0297D938B294D32852EE",
+    "review": {
+      "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact ramification -> native Gamma1 modular forms separate every distinct Gamma1 orbit.",
+      "reuseChecked": [
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneJFiberDegree.lean",
+          "sha256": "A1FFAD8B3640C91317F528FFED07A1A531404592D729278306D30DA8C7090DC1"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneGenericFiberCount.lean",
+          "sha256": "35AD3141E085E6B0DFD3753E7C5762F32F6C72E4A44CBE603345A52974E94BC5"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneJFiberOrbits.lean",
+          "sha256": "14126BB02AB91C1AB45E37A4E8095A4D6294E5DE21E88A79FF5E7F8C106C6057"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneRamificationBounds.lean",
+          "sha256": "AC532614D2488EB408F9E2A9CF3FACF7C12B1F2D283161620C8C70541BDE89FC"
+        },
+        {
+          "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOnePlusMinus.lean",
+          "sha256": "D8A3E4CFDF527B83F90E6B6B3C85F779F677FAF5D6C931870AC7BE1E7A6D4567"
+        }
+      ],
+      "shorterRoute": "Compose the actual fixed-degree fiber sum with the already constructed generic fiber to identify the coordinate extension degree with the subgroup index. For every fiber, equal finite sums and the proved termwise inequalities force equality at every orbit representative. Transport to the chosen center by actual subgroup invariance. No separate degree estimate, new elliptic-point classification, or restriction to levels at least four is required.",
+      "assumptionsToDischarge": [
+        "For every nonzero Gamma1 level and every analytic point, twice the actual normalized analytic ramification equals the stabilizer cardinality after adjoining the central negative identity.",
+        "The original complex function-field degree over j equals the actual subgroup index, derived from actual fibers and their proved orbit bijection."
+      ],
+      "remaining": "Apply the existing ramified power-fiber descent and local chart machinery at every analytic center, then cusp charts/global places, actual periods and full Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+      "rootPinsChanged": false,
+      "proofLimitsChanged": false
+    }
+  },
+  "discharged": [
+    "For every nonzero Gamma1 level and every analytic point, twice the actual normalized analytic ramification equals the stabilizer cardinality after adjoining the central negative identity.",
+    "The original complex function-field degree over j equals the actual subgroup index, derived from actual fibers and their proved orbit bijection."
+  ],
+  "remaining": "Apply the existing ramified power-fiber descent and local chart machinery at every analytic center, then cusp charts/global places, actual periods and full Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "boundary": "Scratch-audited only; promotion and assembled verification pending.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

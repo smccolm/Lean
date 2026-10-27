@@ -1,0 +1,4 @@
+{
+  "reason": "Use explicit ZMod.val_one before simplification; unrestricted ZMod cast to C is not a ring homomorphism.",
+  "sourceSha256": "340C1E96F93E6E5340D4BEECDE5FB90A67D815B41252D9F82289E7E4A6B91006"
+}

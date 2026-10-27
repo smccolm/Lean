@@ -1,0 +1,3 @@
+{
+  "cause": "Concrete consumer still exceeds default limits after local scalar setup. Reuse the scoped native adjoin-algebra instances directly, as in the already-proved SourceCurveIntegralChartPlaceEquality, instead of overriding them with redundant local algebras."
+}

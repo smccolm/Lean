@@ -1,0 +1,169 @@
+[
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math-ArithmeticGeometry-tree.json",
+    "url": "https://api.github.com/repos/openai/math/git/trees/87d83a4ec3679189dfdc8b5bbd8e7e5faa89692a?recursive=1",
+    "sha256": "F39341968F9A15E5754FE0D85CA8E41103F008199E5B5E4BB175DF8288422673",
+    "entries": 631,
+    "truncated": false
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math-RepresentationTheory-tree.json",
+    "url": "https://api.github.com/repos/openai/math/git/trees/5782a864385557f904f8674a9ea89e8cd9fe89d0?recursive=1",
+    "sha256": "5BFB2A8C565DB580B2927FEFDDE12B62541504B3DD67218604D4291B2520101D",
+    "entries": 3390,
+    "truncated": false
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__lean__OAI__AlgebraicGeometry__ClosedImmersion__HolomorphicCharts.lean.txt",
+    "source": "lean/OAI/AlgebraicGeometry/ClosedImmersion/HolomorphicCharts.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/lean/OAI/AlgebraicGeometry/ClosedImmersion/HolomorphicCharts.lean",
+    "sha256": "6496145E1945FA2F233E99AE1803C5C415390B885EFF081A16FE480D2F27BC10",
+    "gitBlob": "e13a32d2b34e5a6430e7e3c4049a0a23bed94f8b",
+    "blobVerified": true,
+    "bytes": 5033
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__lean__OAI__AlgebraicGeometry__ClosedImmersion__NormalCoordinates.lean.txt",
+    "source": "lean/OAI/AlgebraicGeometry/ClosedImmersion/NormalCoordinates.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/lean/OAI/AlgebraicGeometry/ClosedImmersion/NormalCoordinates.lean",
+    "sha256": "A42A7EA56135A0F8B1246D7123C2A2B5772BBADBA12F23BBC344F056364AAD45",
+    "gitBlob": "ffa995be24178f3f8389259639d116c605f5845f",
+    "blobVerified": true,
+    "bytes": 16025
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__lean__OAI__AlgebraicGeometry__ComplexPoint__AnalyticMap.lean.txt",
+    "source": "lean/OAI/AlgebraicGeometry/ComplexPoint/AnalyticMap.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/lean/OAI/AlgebraicGeometry/ComplexPoint/AnalyticMap.lean",
+    "sha256": "BCE8C20F9546F07E66571D0069BE97703FCD4027B23310C43580B93D847F03E5",
+    "gitBlob": "51c7ee89b243919917d3cf4e2dc1225a4717542f",
+    "blobVerified": true,
+    "bytes": 5048
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__lean__OAI__AlgebraicGeometry__Seshadri__Analytic__ConvergentSeries.lean.txt",
+    "source": "lean/OAI/AlgebraicGeometry/Seshadri/Analytic/ConvergentSeries.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/lean/OAI/AlgebraicGeometry/Seshadri/Analytic/ConvergentSeries.lean",
+    "sha256": "0A30D77D6EDF5DE2196CEFEADCA03441B0906EA3B53A2D605C54D1F4DE1B8267",
+    "gitBlob": "d61f41fdd7db397589bb90767c15374cede6910d",
+    "blobVerified": true,
+    "bytes": 9235
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__lean__README.md.txt",
+    "source": "lean/README.md",
+    "url": "https://raw.githubusercontent.com/openai/math/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/lean/README.md",
+    "sha256": "292FF9D539F494158DFBF68D989BA85A82782A4343B2FE43088F8FA62525BF1B",
+    "gitBlob": "f1ab618366051a4b3683b14ed2a0ac4bb7c620fb",
+    "blobVerified": false,
+    "bytes": 650
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__lean__lean-toolchain.txt",
+    "source": "lean/lean-toolchain",
+    "url": "https://raw.githubusercontent.com/openai/math/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/lean/lean-toolchain",
+    "sha256": "D5EDBA4E4B8FAAD9C1BAEADB265716D20D03BE4D1A2647DC5E35B0C0325BEA7B",
+    "gitBlob": "ba8ebf2dbaf6a668cd2a0e086186d6d569b69ff5",
+    "blobVerified": false,
+    "bytes": 25
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__lean__lake-manifest.json.txt",
+    "source": "lean/lake-manifest.json",
+    "url": "https://raw.githubusercontent.com/openai/math/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/lean/lake-manifest.json",
+    "sha256": "CF6105A25D9DCA2F166B241D9191BD12C7E13305890DC9C4D0952351CCCC0794",
+    "gitBlob": "67d01d2717d0aaff59fb8814bb53581b961f42b4",
+    "blobVerified": false,
+    "bytes": 14622
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__lean__formalization.yaml.txt",
+    "source": "lean/formalization.yaml",
+    "url": "https://raw.githubusercontent.com/openai/math/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/lean/formalization.yaml",
+    "sha256": "B8E7072AB9AC195A290110D78C3A3497608CE76AC5B67D307685F38408299B39",
+    "gitBlob": "372bcd714cd3a186a9139ac8e0f3318961fb2df1",
+    "blobVerified": false,
+    "bytes": 81913
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\openai__math__LICENSE.txt",
+    "source": "LICENSE",
+    "url": "https://raw.githubusercontent.com/openai/math/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/LICENSE",
+    "sha256": "C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4",
+    "gitBlob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+    "blobVerified": false,
+    "bytes": 11357
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\leanprover-community__mathlib4__Mathlib__NumberTheory__ModularForms__Discriminant.lean.txt",
+    "source": "Mathlib/NumberTheory/ModularForms/Discriminant.lean",
+    "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/116662aa4c1e9106ab5c609b3214b02f6e11a65a/Mathlib/NumberTheory/ModularForms/Discriminant.lean",
+    "sha256": "AE0E9F7AA2BE4B499882256D98A2FBF88010D09BA01CA157991FDCD0DE2FBCED",
+    "gitBlob": "dcd357ab8bff7f81c667a2c058a489a0238d881a",
+    "blobVerified": true,
+    "bytes": 12304
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\mathlib-previous-Discriminant.lean.txt",
+    "source": "Mathlib/NumberTheory/ModularForms/Discriminant.lean",
+    "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/8d14a32337a069dbae9b92875aeb697de357b5ac/Mathlib/NumberTheory/ModularForms/Discriminant.lean",
+    "sha256": "E9F9D979462E077180CB741DE9BC25DF01430476D8142B5D91676D4F26304531",
+    "gitBlob": "42d12e22ab25481c69d31a5e7b6ddb1f4c19b07e",
+    "blobVerified": false,
+    "bytes": 12304
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\leanprover-community__mathlib4__Mathlib__NumberTheory__ModularForms__LevelOne__DimensionFormula.lean.txt",
+    "source": "Mathlib/NumberTheory/ModularForms/LevelOne/DimensionFormula.lean",
+    "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/116662aa4c1e9106ab5c609b3214b02f6e11a65a/Mathlib/NumberTheory/ModularForms/LevelOne/DimensionFormula.lean",
+    "sha256": "355555C4854B5B97E4D3A12A37D56A102BBB79ACE31B9EF53633D4B474EC0A25",
+    "gitBlob": "a9f497ed4d2fb042183683f43bc6333b1c261cfc",
+    "blobVerified": true,
+    "bytes": 16582
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\mathlib-previous-LevelOne__DimensionFormula.lean.txt",
+    "source": "Mathlib/NumberTheory/ModularForms/LevelOne/DimensionFormula.lean",
+    "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/8d14a32337a069dbae9b92875aeb697de357b5ac/Mathlib/NumberTheory/ModularForms/LevelOne/DimensionFormula.lean",
+    "sha256": "4FF93926225FD33F5C3AAA0ADD074933EB5E0443A96A1C6D411A4234D7D0D438",
+    "gitBlob": "20f264372850715d7a5c1a8ab3095da6eaab7501",
+    "blobVerified": false,
+    "bytes": 16582
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\leanprover-community__mathlib4__Mathlib__NumberTheory__ModularForms__QExpansion.lean.txt",
+    "source": "Mathlib/NumberTheory/ModularForms/QExpansion.lean",
+    "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/116662aa4c1e9106ab5c609b3214b02f6e11a65a/Mathlib/NumberTheory/ModularForms/QExpansion.lean",
+    "sha256": "BA7239AF5AA386AD2478F4AABC6F0490E9A02A2F005A5129823BD32827C4D936",
+    "gitBlob": "4006032805d7c0fd33393b9694ebe68e8a39d3af",
+    "blobVerified": true,
+    "bytes": 40450
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\mathlib-previous-QExpansion.lean.txt",
+    "source": "Mathlib/NumberTheory/ModularForms/QExpansion.lean",
+    "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/8d14a32337a069dbae9b92875aeb697de357b5ac/Mathlib/NumberTheory/ModularForms/QExpansion.lean",
+    "sha256": "22CCDEA40DD4B4E014C7F35A658600819763D4F7AE82DFAB1575D1EF3A87C7D6",
+    "gitBlob": "ea8b3e19982b94f3c6d1ff9b19ba6cc48ca3be99",
+    "blobVerified": false,
+    "bytes": 40450
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\leanprover-community__mathlib4__Mathlib__NumberTheory__ModularForms__RamanujanFormula.lean.txt",
+    "source": "Mathlib/NumberTheory/ModularForms/RamanujanFormula.lean",
+    "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/116662aa4c1e9106ab5c609b3214b02f6e11a65a/Mathlib/NumberTheory/ModularForms/RamanujanFormula.lean",
+    "sha256": "98425E4043AE3559A46BDEE1AAB6C52C3631F54B01174AA61EEB869DCC934BE9",
+    "gitBlob": "3c8b8a060237f84b96b645c063fa0af801716dd4",
+    "blobVerified": true,
+    "bytes": 7023
+  },
+  {
+    "path": "E:\\Lean\\.tmp\\dubon83\\reuse-head-refresh-741\\mathlib-previous-RamanujanFormula.lean.txt",
+    "source": "Mathlib/NumberTheory/ModularForms/RamanujanFormula.lean",
+    "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/8d14a32337a069dbae9b92875aeb697de357b5ac/Mathlib/NumberTheory/ModularForms/RamanujanFormula.lean",
+    "sha256": "E7FFDE968CD1B18A5309535F44DCFCE38F9206695CAF48EDA31BA6557641141D",
+    "gitBlob": "79524d002883ac7e8e861d6480922360ef61b660",
+    "blobVerified": false,
+    "bytes": 7023
+  }
+]

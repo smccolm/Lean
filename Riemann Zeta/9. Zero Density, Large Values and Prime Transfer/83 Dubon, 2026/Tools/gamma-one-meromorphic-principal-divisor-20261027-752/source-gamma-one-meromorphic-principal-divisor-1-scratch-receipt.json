@@ -1,0 +1,68 @@
+{
+  "separatelyAxiomChecked": [],
+  "recordedUTC": "2026-10-27T11:29:17.978953+00:00",
+  "date": "2026-10-27 America/Vancouver",
+  "modules": [
+    "SourceGammaOneMeromorphicCuspLimits",
+    "SourceGammaOneMeromorphicPrincipalDivisor"
+  ],
+  "files": [
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicCuspLimits.lean",
+      "sha256": "67169F583ACFA9C4F6AA8515A473FAF472B4042DE13D63B1411A94928EBD871C",
+      "oleanSha256": "0D9AA2800D5816C93D3B8A65D0BF5AC5D121FF544000BF9B22D801C2E3F2C700"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisor.lean",
+      "sha256": "06E5FFDB66F99ECCC1FAE95EDCFC0FF26CC81694D462B87605745D7860D0E3EB",
+      "oleanSha256": "76F940919C238A005C87645EC79AAB0CFB96284612E8344F214EE10F24F70EBC"
+    }
+  ],
+  "queries": [
+    "Dubon2026.SourceFunctionField.GammaOne.tendsto_atImInfty_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.eventually_continuousAt_realize_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.tendsto_cuspFunction_of_tendsto",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.isPrincipal_of_prescribed_meromorphic_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_function"
+  ],
+  "theoremRegistrations": [
+    "Dubon2026.SourceFunctionField.GammaOne.tendsto_atImInfty_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.eventually_continuousAt_realize_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.tendsto_cuspFunction_of_tendsto",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.isPrincipal_of_prescribed_meromorphic_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_function"
+  ],
+  "constructionRegistrations": [],
+  "log": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorAudit1.log",
+  "logSha256": "DACD3C7A1ACEE47976D5BA5DE63291A2377E2E176469259719BE1993CE16DA44",
+  "auditSha256": "C8EB575217FAABCE624DDA6851BE9FC58A65336D9CC52327C6EA98095B4C070A",
+  "exit": 0,
+  "diagnostics": 0,
+  "exhaustiveTheorems": 8,
+  "linterScopes": 2,
+  "lintersPerScope": 16,
+  "requiredProofValueEdges": 15,
+  "dependencyAuditLog": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneMeromorphicPrincipalDivisorDependencyAudit1.log",
+  "dependencyAuditSha256": "63656E01E765C8D46660F0610EC366A885CCB65BB08141E6B690927A39367D87",
+  "dependencyAuditSourceSha256": "C9F856F41CE9B16F56F7035DF6B7D5AB405DC658F6ED90CC339F01CC94284077",
+  "consumers": [
+    "Dubon2026.SourceFunctionField.GammaOne.tendsto_atImInfty_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.eventually_continuousAt_realize_cusp",
+    "Dubon2026.SourceFunctionField.GammaOne.tendsto_cuspFunction_of_tendsto",
+    "Dubon2026.SourceFunctionField.GammaOne.cuspRealize_tendsto_of_local_eq",
+    "Dubon2026.SourceFunctionField.GammaOne.isPrincipal_of_prescribed_meromorphic_orders",
+    "Dubon2026.SourceFunctionField.GammaOne.analytic_divisor_isPrincipal_of_meromorphic_function"
+  ],
+  "dependency": "DUB-17/18 -> original all-weight arithmetic association -> actual finite homogeneous-coefficient Gamma1 characters -> Picard/H1/full-parabolic/transpose/diamond comparison -> modular periods -> principal-divisor converse.",
+  "discharged": [
+    "Transfer the actual nonzero translated cusp limits through the local meromorphic field realization. Derive eventual continuity from the actual modular denominator; use native inverse-q convergence. This supplies scope743 order-zero-at-every-j-pole consumer.",
+    "A supplied invariant meromorphic function with the exact ramification-weighted finite analytic divisor and nonzero limits at all translated cusps determines a literal principal divisor of the original Gamma1 field. Field realization, nonvanishing, all analytic orders, cusp exhaustion and all j-pole orders are conclusions, not supplied hypotheses."
+  ],
+  "boundary": "Scratch-audited only; promotion and assembled verification pending. The meromorphic function must still be constructed from the actual Abel-Jacobi period condition. Real parabolic period surjectivity, Abel-Petersson reciprocity, complete global Picard/Hecke/diamond/H1 comparison and original all-weight arithmetic association remain; 16/20; DUB-17--20 OPEN.",
+  "reuseReview": "E:\\Lean\\.tmp\\dubon83\\source-gamma-one-meromorphic-principal-divisor-1-reuse-review-20261027.json",
+  "reuseReviewSha256": "085C6A4EA50FBD88DC7C4AC667A3953C999862CA155DF6B6A64BF21CE0206EB8",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}

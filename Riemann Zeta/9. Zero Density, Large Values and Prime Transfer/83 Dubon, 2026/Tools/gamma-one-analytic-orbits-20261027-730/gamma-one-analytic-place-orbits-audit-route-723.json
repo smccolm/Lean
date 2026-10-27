@@ -1,0 +1,33 @@
+{
+  "chain": "DUB-17 Theorem 2.6 / DUB-18 Corollary 8.2 -> original all-weight arithmetic association -> actual finite Gamma1 Hecke-character realization -> Picard/H1/period/Hecke/diamond comparison -> global charts -> exact ramification -> native Gamma1 modular forms separate every distinct Gamma1 orbit.",
+  "reuseChecked": [
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneAnalyticResidues.lean",
+      "sha256": "F5AB5657C210AF58B8CC1B89F26C68D3B80BB035ECD60CCB4950AC774F7BB3B5"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneMeromorphicRealization.lean",
+      "sha256": "25EFB38C4C22F86FF6ED94D4E405BC68CE23E8AA09BBB0B02B2E1DB0510E5BA3"
+    },
+    {
+      "path": "E:\\Lean\\Riemann Zeta\\9. Zero Density, Large Values and Prime Transfer\\83 Dubon, 2026\\Extension\\Dubon2026\\SourceGammaOneAnalyticGerms.lean",
+      "sha256": "5E1F23587988C0458437DB4080EAFA263AF07D8518151DDE1C2224F8961FC5C1"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneModularPointSeparation.lean",
+      "sha256": "3D6B716337BC99AB342258DA75FACA9B8F4985EDAABE530F70CC9CC46110FBAD"
+    },
+    {
+      "path": "E:\\Lean\\.tmp\\dubon83\\SourceGammaOneAnalyticPlaceInvariance.lean",
+      "sha256": "845B8EAFA716496B045C6DC00614EA18971DC3827EDDFB3935E0A493A4DC306B"
+    }
+  ],
+  "shorterRoute": "Use a native same-weight separating pair to construct a ratio regular at one point and with a genuine pole at the other. Existing normalized analytic representatives and punctured modular quotient germs yield the contradiction by continuity. This avoids duplicating the upstream bounded-filter framework or a new Laurent-order calculation.",
+  "assumptionsToDischarge": [
+    "Equality of actual Gamma1 analytic places implies that the points lie in the same actual Gamma1 orbit.",
+    "The reverse implication consumes the already proved actual modular invariance; all nonzero levels and elliptic points remain included."
+  ],
+  "remaining": "Exact ramification at elliptic points, global charts, actual periods and complete Hecke/diamond/Picard/H1 arithmetic comparison, original all-weight characteristic-zero association and literal higher symmetric-power continuation. 16/20; DUB-17--20 OPEN.",
+  "rootPinsChanged": false,
+  "proofLimitsChanged": false
+}
